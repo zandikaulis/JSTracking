@@ -1,4 +1,4 @@
-webpackJsonp([49], {
+webpackJsonp([48], {
     "/LBW": function(e, t, n) {
         "use strict";
         t.h = function(e) {
@@ -1687,6 +1687,7 @@ webpackJsonp([49], {
                     }));
                 else t = e.videos.map(function(t, n) {
                     return i.createElement(l.U, {
+                        "data-a-target": "video-tower-card-" + n,
                         key: "video-" + n,
                         padding: {
                             bottom: .5
@@ -6930,4 +6931,4 @@ webpackJsonp([49], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.event-landing-f5442f9905e1679bc9902e30641f0213.js.map
+//# sourceMappingURL=pages.event-landing-c9efcf0ae525d73e53a691983d5eefbc.js.map

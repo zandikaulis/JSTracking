@@ -1,4 +1,4 @@
-webpackJsonp([48], {
+webpackJsonp([47], {
     "+GT7": function(e, t, n) {
         "use strict";
         var i = n("TToO"),
@@ -2657,6 +2657,7 @@ webpackJsonp([48], {
                     }));
                 else t = e.videos.map(function(t, n) {
                     return i.createElement(o.U, {
+                        "data-a-target": "video-tower-card-" + n,
                         key: "video-" + n,
                         padding: {
                             bottom: .5
@@ -8394,4 +8395,4 @@ webpackJsonp([48], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.following-2b051cdf6a6b816723f88b30c0f4466b.js.map
+//# sourceMappingURL=pages.following-cbf082b70938b5b5db07dd3952d05971.js.map

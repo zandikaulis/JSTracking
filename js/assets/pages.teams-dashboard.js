@@ -1,19 +1,19 @@
-webpackJsonp([35], {
-    "+/J2": function(e, t, a) {
-        var n = a("xA5w");
+webpackJsonp([34], {
+    "+/J2": function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e, t) {
-            var a = n(e),
+            var n = a(e),
                 r = Number(t);
-            return a.setMilliseconds(r), a
+            return n.setMilliseconds(r), n
         }
     },
-    "+27R": function(e, t, a) {
+    "+27R": function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
 
-            function t(e, t, a, n) {
+            function t(e, t, n, a) {
                 var r = {
                     s: ["thodde secondanim", "thodde second"],
                     m: ["eka mintan", "ek minute"],
@@ -27,7 +27,7 @@ webpackJsonp([35], {
                     y: ["eka vorsan", "ek voros"],
                     yy: [e + " vorsanim", e + " vorsam"]
                 };
-                return t ? r[a][0] : r[a][1]
+                return t ? r[n][0] : r[n][1]
             }
             return e.defineLocale("gom-latn", {
                 months: "Janer_Febrer_Mars_Abril_Mai_Jun_Julai_Agost_Setembr_Otubr_Novembr_Dezembr".split("_"),
@@ -92,15 +92,15 @@ webpackJsonp([35], {
                 meridiemHour: function(e, t) {
                     return 12 === e && (e = 0), "rati" === t ? e < 4 ? e : e + 12 : "sokalli" === t ? e : "donparam" === t ? e > 12 ? e : e + 12 : "sanje" === t ? e + 12 : void 0
                 },
-                meridiem: function(e, t, a) {
+                meridiem: function(e, t, n) {
                     return e < 4 ? "rati" : e < 12 ? "sokalli" : e < 16 ? "donparam" : e < 20 ? "sanje" : "rati"
                 }
             })
         })
     },
-    "+7/x": function(e, t, a) {
+    "+7/x": function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -115,7 +115,7 @@ webpackJsonp([35], {
                     9: "௯",
                     0: "௦"
                 },
-                a = {
+                n = {
                     "௧": "1",
                     "௨": "2",
                     "௩": "3",
@@ -170,7 +170,7 @@ webpackJsonp([35], {
                 },
                 preparse: function(e) {
                     return e.replace(/[௧௨௩௪௫௬௭௮௯௦]/g, function(e) {
-                        return a[e]
+                        return n[e]
                     })
                 },
                 postformat: function(e) {
@@ -179,7 +179,7 @@ webpackJsonp([35], {
                     })
                 },
                 meridiemParse: /யாமம்|வைகறை|காலை|நண்பகல்|எற்பாடு|மாலை/,
-                meridiem: function(e, t, a) {
+                meridiem: function(e, t, n) {
                     return e < 2 ? " யாமம்" : e < 6 ? " வைகறை" : e < 10 ? " காலை" : e < 14 ? " நண்பகல்" : e < 18 ? " எற்பாடு" : e < 22 ? " மாலை" : " யாமம்"
                 },
                 meridiemHour: function(e, t) {
@@ -192,9 +192,9 @@ webpackJsonp([35], {
             })
         })
     },
-    "+ItH": function(e, t, a) {
+    "+ItH": function(e, t, n) {
         "use strict";
-        a("k7DW")._set("global", {
+        n("k7DW")._set("global", {
             responsive: !0,
             responsiveAnimationDuration: 0,
             maintainAspectRatio: !0,
@@ -228,34 +228,34 @@ webpackJsonp([35], {
             return e.Chart = e, e
         }
     },
-    "+sSA": function(e, t, a) {
-        var n = a("xA5w");
+    "+sSA": function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e) {
-            var t = n(e);
+            var t = a(e);
             return t.setMilliseconds(999), t
         }
     },
-    "/6P1": function(e, t, a) {
+    "/6P1": function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
 
-            function t(e, t, a, r) {
-                return t ? n(a)[0] : r ? n(a)[1] : n(a)[2]
-            }
-
-            function a(e) {
-                return e % 10 == 0 || e > 10 && e < 20
+            function t(e, t, n, r) {
+                return t ? a(n)[0] : r ? a(n)[1] : a(n)[2]
             }
 
             function n(e) {
+                return e % 10 == 0 || e > 10 && e < 20
+            }
+
+            function a(e) {
                 return i[e].split("_")
             }
 
             function r(e, r, i, s) {
                 var o = e + " ";
-                return 1 === e ? o + t(0, r, i[0], s) : r ? o + (a(e) ? n(i)[1] : n(i)[0]) : s ? o + n(i)[1] : o + (a(e) ? n(i)[1] : n(i)[2])
+                return 1 === e ? o + t(0, r, i[0], s) : r ? o + (n(e) ? a(i)[1] : a(i)[0]) : s ? o + a(i)[1] : o + (n(e) ? a(i)[1] : a(i)[2])
             }
             var i = {
                 m: "minutė_minutės_minutę",
@@ -307,8 +307,8 @@ webpackJsonp([35], {
                 relativeTime: {
                     future: "po %s",
                     past: "prieš %s",
-                    s: function(e, t, a, n) {
-                        return t ? "kelios sekundės" : n ? "kelių sekundžių" : "kelias sekundes"
+                    s: function(e, t, n, a) {
+                        return t ? "kelios sekundės" : a ? "kelių sekundžių" : "kelias sekundes"
                     },
                     m: t,
                     mm: r,
@@ -332,9 +332,9 @@ webpackJsonp([35], {
             })
         })
     },
-    "/bsm": function(e, t, a) {
+    "/bsm": function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("uz-latn", {
@@ -381,20 +381,20 @@ webpackJsonp([35], {
             })
         })
     },
-    "/dIK": function(e, t, a) {
-        var n = a("xA5w");
+    "/dIK": function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e, t) {
-            var a = n(e),
+            var n = a(e),
                 r = Number(t);
-            return a.setDate(r), a
+            return n.setDate(r), n
         }
     },
-    "/jKm": function(e, t, a) {
+    "/jKm": function(e, t, n) {
         "use strict";
-        var n = a("k7DW"),
-            r = a("wGD1"),
-            i = a("iO9N");
-        n._set("global", {
+        var a = n("k7DW"),
+            r = n("wGD1"),
+            i = n("iO9N");
+        a._set("global", {
             tooltips: {
                 enabled: !0,
                 custom: null,
@@ -427,27 +427,27 @@ webpackJsonp([35], {
                 callbacks: {
                     beforeTitle: i.noop,
                     title: function(e, t) {
-                        var a = "",
-                            n = t.labels,
-                            r = n ? n.length : 0;
+                        var n = "",
+                            a = t.labels,
+                            r = a ? a.length : 0;
                         if (e.length > 0) {
                             var i = e[0];
-                            i.xLabel ? a = i.xLabel : r > 0 && i.index < r && (a = n[i.index])
+                            i.xLabel ? n = i.xLabel : r > 0 && i.index < r && (n = a[i.index])
                         }
-                        return a
+                        return n
                     },
                     afterTitle: i.noop,
                     beforeBody: i.noop,
                     beforeLabel: i.noop,
                     label: function(e, t) {
-                        var a = t.datasets[e.datasetIndex].label || "";
-                        return a && (a += ": "), a += e.yLabel
+                        var n = t.datasets[e.datasetIndex].label || "";
+                        return n && (n += ": "), n += e.yLabel
                     },
                     labelColor: function(e, t) {
-                        var a = t.getDatasetMeta(e.datasetIndex).data[e.index]._view;
+                        var n = t.getDatasetMeta(e.datasetIndex).data[e.index]._view;
                         return {
-                            borderColor: a.borderColor,
-                            backgroundColor: a.backgroundColor
+                            borderColor: n.borderColor,
+                            backgroundColor: n.backgroundColor
                         }
                     },
                     labelTextColor: function() {
@@ -462,23 +462,23 @@ webpackJsonp([35], {
             }
         }), e.exports = function(e) {
             function t(e, t) {
-                var a = i.color(e);
-                return a.alpha(t * a.alpha()).rgbaString()
+                var n = i.color(e);
+                return n.alpha(t * n.alpha()).rgbaString()
             }
 
-            function a(e, t) {
+            function n(e, t) {
                 return t && (i.isArray(t) ? Array.prototype.push.apply(e, t) : e.push(t)), e
             }
 
             function s(e) {
                 var t = e._xScale,
-                    a = e._yScale || e._scale,
-                    n = e._index,
+                    n = e._yScale || e._scale,
+                    a = e._index,
                     r = e._datasetIndex;
                 return {
-                    xLabel: t ? t.getLabelForIndex(n, r) : "",
-                    yLabel: a ? a.getLabelForIndex(n, r) : "",
-                    index: n,
+                    xLabel: t ? t.getLabelForIndex(a, r) : "",
+                    yLabel: n ? n.getLabelForIndex(a, r) : "",
+                    index: a,
                     datasetIndex: r,
                     x: e._model.x,
                     y: e._model.y
@@ -486,30 +486,30 @@ webpackJsonp([35], {
             }
 
             function o(e) {
-                var t = n.global,
-                    a = i.valueOrDefault;
+                var t = a.global,
+                    n = i.valueOrDefault;
                 return {
                     xPadding: e.xPadding,
                     yPadding: e.yPadding,
                     xAlign: e.xAlign,
                     yAlign: e.yAlign,
                     bodyFontColor: e.bodyFontColor,
-                    _bodyFontFamily: a(e.bodyFontFamily, t.defaultFontFamily),
-                    _bodyFontStyle: a(e.bodyFontStyle, t.defaultFontStyle),
+                    _bodyFontFamily: n(e.bodyFontFamily, t.defaultFontFamily),
+                    _bodyFontStyle: n(e.bodyFontStyle, t.defaultFontStyle),
                     _bodyAlign: e.bodyAlign,
-                    bodyFontSize: a(e.bodyFontSize, t.defaultFontSize),
+                    bodyFontSize: n(e.bodyFontSize, t.defaultFontSize),
                     bodySpacing: e.bodySpacing,
                     titleFontColor: e.titleFontColor,
-                    _titleFontFamily: a(e.titleFontFamily, t.defaultFontFamily),
-                    _titleFontStyle: a(e.titleFontStyle, t.defaultFontStyle),
-                    titleFontSize: a(e.titleFontSize, t.defaultFontSize),
+                    _titleFontFamily: n(e.titleFontFamily, t.defaultFontFamily),
+                    _titleFontStyle: n(e.titleFontStyle, t.defaultFontStyle),
+                    titleFontSize: n(e.titleFontSize, t.defaultFontSize),
                     _titleAlign: e.titleAlign,
                     titleSpacing: e.titleSpacing,
                     titleMarginBottom: e.titleMarginBottom,
                     footerFontColor: e.footerFontColor,
-                    _footerFontFamily: a(e.footerFontFamily, t.defaultFontFamily),
-                    _footerFontStyle: a(e.footerFontStyle, t.defaultFontStyle),
-                    footerFontSize: a(e.footerFontSize, t.defaultFontSize),
+                    _footerFontFamily: n(e.footerFontFamily, t.defaultFontFamily),
+                    _footerFontStyle: n(e.footerFontStyle, t.defaultFontStyle),
+                    footerFontSize: n(e.footerFontSize, t.defaultFontSize),
                     _footerAlign: e.footerAlign,
                     footerSpacing: e.footerSpacing,
                     footerMarginTop: e.footerMarginTop,
@@ -530,18 +530,18 @@ webpackJsonp([35], {
                 getTitle: function() {
                     var e = this._options.callbacks,
                         t = e.beforeTitle.apply(this, arguments),
-                        n = e.title.apply(this, arguments),
+                        a = e.title.apply(this, arguments),
                         r = e.afterTitle.apply(this, arguments),
                         i = [];
-                    return i = a(i, t), i = a(i, n), i = a(i, r)
+                    return i = n(i, t), i = n(i, a), i = n(i, r)
                 },
                 getBeforeBody: function() {
                     var e = this._options.callbacks.beforeBody.apply(this, arguments);
                     return i.isArray(e) ? e : void 0 !== e ? [e] : []
                 },
                 getBody: function(e, t) {
-                    var n = this,
-                        r = n._options.callbacks,
+                    var a = this,
+                        r = a._options.callbacks,
                         s = [];
                     return i.each(e, function(e) {
                         var i = {
@@ -549,7 +549,7 @@ webpackJsonp([35], {
                             lines: [],
                             after: []
                         };
-                        a(i.before, r.beforeLabel.call(n, e, t)), a(i.lines, r.label.call(n, e, t)), a(i.after, r.afterLabel.call(n, e, t)), s.push(i)
+                        n(i.before, r.beforeLabel.call(a, e, t)), n(i.lines, r.label.call(a, e, t)), n(i.after, r.afterLabel.call(a, e, t)), s.push(i)
                     }), s
                 },
                 getAfterBody: function() {
@@ -559,13 +559,13 @@ webpackJsonp([35], {
                 getFooter: function() {
                     var e = this._options.callbacks,
                         t = e.beforeFooter.apply(this, arguments),
-                        n = e.footer.apply(this, arguments),
+                        a = e.footer.apply(this, arguments),
                         r = e.afterFooter.apply(this, arguments),
                         i = [];
-                    return i = a(i, t), i = a(i, n), i = a(i, r)
+                    return i = n(i, t), i = n(i, a), i = n(i, r)
                 },
                 update: function(t) {
-                    var a, n, r = this,
+                    var n, a, r = this,
                         d = r._options,
                         u = r._model,
                         l = r._model = o(d),
@@ -593,30 +593,30 @@ webpackJsonp([35], {
                             y = [];
                         p = e.Tooltip.positioners[d.position](c, r._eventPosition);
                         var M = [];
-                        for (a = 0, n = c.length; a < n; ++a) M.push(s(c[a]));
+                        for (n = 0, a = c.length; n < a; ++n) M.push(s(c[n]));
                         d.filter && (M = M.filter(function(e) {
                             return d.filter(e, h)
                         })), d.itemSort && (M = M.sort(function(e, t) {
                             return d.itemSort(e, t, h)
                         })), i.each(M, function(e) {
                             g.push(d.callbacks.labelColor.call(r, e, r._chart)), y.push(d.callbacks.labelTextColor.call(r, e, r._chart))
-                        }), l.title = r.getTitle(M, h), l.beforeBody = r.getBeforeBody(M, h), l.body = r.getBody(M, h), l.afterBody = r.getAfterBody(M, h), l.footer = r.getFooter(M, h), l.x = Math.round(p.x), l.y = Math.round(p.y), l.caretPadding = d.caretPadding, l.labelColors = g, l.labelTextColors = y, l.dataPoints = M, _ = function(e, t, a) {
-                            var n = e.x,
+                        }), l.title = r.getTitle(M, h), l.beforeBody = r.getBeforeBody(M, h), l.body = r.getBody(M, h), l.afterBody = r.getAfterBody(M, h), l.footer = r.getFooter(M, h), l.x = Math.round(p.x), l.y = Math.round(p.y), l.caretPadding = d.caretPadding, l.labelColors = g, l.labelTextColors = y, l.dataPoints = M, _ = function(e, t, n) {
+                            var a = e.x,
                                 r = e.y,
                                 i = e.caretSize,
                                 s = e.caretPadding,
                                 o = e.cornerRadius,
-                                d = a.xAlign,
-                                u = a.yAlign,
+                                d = n.xAlign,
+                                u = n.yAlign,
                                 l = i + s,
                                 c = o + s;
-                            return "right" === d ? n -= t.width : "center" === d && (n -= t.width / 2), "top" === u ? r += l : r -= "bottom" === u ? t.height + l : t.height / 2, "center" === u ? "left" === d ? n += l : "right" === d && (n -= l) : "left" === d ? n -= c : "right" === d && (n += c), {
-                                x: n,
+                            return "right" === d ? a -= t.width : "center" === d && (a -= t.width / 2), "top" === u ? r += l : r -= "bottom" === u ? t.height + l : t.height / 2, "center" === u ? "left" === d ? a += l : "right" === d && (a -= l) : "left" === d ? a -= c : "right" === d && (a += c), {
+                                x: a,
                                 y: r
                             }
                         }(l, f = function(e, t) {
-                            var a = e._chart.ctx,
-                                n = 2 * t.yPadding,
+                            var n = e._chart.ctx,
+                                a = 2 * t.yPadding,
                                 r = 0,
                                 s = t.body,
                                 o = s.reduce(function(e, t) {
@@ -628,24 +628,24 @@ webpackJsonp([35], {
                                 l = t.titleFontSize,
                                 c = t.bodyFontSize,
                                 h = t.footerFontSize;
-                            n += d * l, n += d ? (d - 1) * t.titleSpacing : 0, n += d ? t.titleMarginBottom : 0, n += o * c, n += o ? (o - 1) * t.bodySpacing : 0, n += u ? t.footerMarginTop : 0, n += u * h, n += u ? (u - 1) * t.footerSpacing : 0;
+                            a += d * l, a += d ? (d - 1) * t.titleSpacing : 0, a += d ? t.titleMarginBottom : 0, a += o * c, a += o ? (o - 1) * t.bodySpacing : 0, a += u ? t.footerMarginTop : 0, a += u * h, a += u ? (u - 1) * t.footerSpacing : 0;
                             var m = 0,
                                 _ = function(e) {
-                                    r = Math.max(r, a.measureText(e).width + m)
+                                    r = Math.max(r, n.measureText(e).width + m)
                                 };
-                            return a.font = i.fontString(l, t._titleFontStyle, t._titleFontFamily), i.each(t.title, _), a.font = i.fontString(c, t._bodyFontStyle, t._bodyFontFamily), i.each(t.beforeBody.concat(t.afterBody), _), m = t.displayColors ? c + 2 : 0, i.each(s, function(e) {
+                            return n.font = i.fontString(l, t._titleFontStyle, t._titleFontFamily), i.each(t.title, _), n.font = i.fontString(c, t._bodyFontStyle, t._bodyFontFamily), i.each(t.beforeBody.concat(t.afterBody), _), m = t.displayColors ? c + 2 : 0, i.each(s, function(e) {
                                 i.each(e.before, _), i.each(e.lines, _), i.each(e.after, _)
-                            }), m = 0, a.font = i.fontString(h, t._footerFontStyle, t._footerFontFamily), i.each(t.footer, _), r += 2 * t.xPadding, {
+                            }), m = 0, n.font = i.fontString(h, t._footerFontStyle, t._footerFontFamily), i.each(t.footer, _), r += 2 * t.xPadding, {
                                 width: r,
-                                height: n
+                                height: a
                             }
                         }(this, l), m = function(e, t) {
-                            var a = e._model,
-                                n = e._chart,
+                            var n = e._model,
+                                a = e._chart,
                                 r = e._chart.chartArea,
                                 i = "center",
                                 s = "center";
-                            a.y < t.height ? s = "top" : a.y > n.height - t.height && (s = "bottom");
+                            n.y < t.height ? s = "top" : n.y > a.height - t.height && (s = "bottom");
                             var o, d, u, l, c, h = (r.left + r.right) / 2,
                                 m = (r.top + r.bottom) / 2;
                             "center" === s ? (o = function(e) {
@@ -655,14 +655,14 @@ webpackJsonp([35], {
                             }) : (o = function(e) {
                                 return e <= t.width / 2
                             }, d = function(e) {
-                                return e >= n.width - t.width / 2
+                                return e >= a.width - t.width / 2
                             }), u = function(e) {
-                                return e + t.width > n.width
+                                return e + t.width > a.width
                             }, l = function(e) {
                                 return e - t.width < 0
                             }, c = function(e) {
                                 return e <= m ? "top" : "bottom"
-                            }, o(a.x) ? (i = "left", u(a.x) && (i = "center", s = c(a.y))) : d(a.x) && (i = "right", l(a.x) && (i = "center", s = c(a.y)));
+                            }, o(n.x) ? (i = "left", u(n.x) && (i = "center", s = c(n.y))) : d(n.x) && (i = "right", l(n.x) && (i = "center", s = c(n.y)));
                             var _ = e._options;
                             return {
                                 xAlign: _.xAlign ? _.xAlign : i,
@@ -673,29 +673,29 @@ webpackJsonp([35], {
                     return l.xAlign = m.xAlign, l.yAlign = m.yAlign, l.x = _.x, l.y = _.y, l.width = f.width, l.height = f.height, l.caretX = p.x, l.caretY = p.y, r._model = l, t && d.custom && d.custom.call(r, l), r
                 },
                 drawCaret: function(e, t) {
-                    var a = this._chart.ctx,
-                        n = this._view,
-                        r = this.getCaretPosition(e, t, n);
-                    a.lineTo(r.x1, r.y1), a.lineTo(r.x2, r.y2), a.lineTo(r.x3, r.y3)
+                    var n = this._chart.ctx,
+                        a = this._view,
+                        r = this.getCaretPosition(e, t, a);
+                    n.lineTo(r.x1, r.y1), n.lineTo(r.x2, r.y2), n.lineTo(r.x3, r.y3)
                 },
-                getCaretPosition: function(e, t, a) {
-                    var n, r, i, s, o, d, u = a.caretSize,
-                        l = a.cornerRadius,
-                        c = a.xAlign,
-                        h = a.yAlign,
+                getCaretPosition: function(e, t, n) {
+                    var a, r, i, s, o, d, u = n.caretSize,
+                        l = n.cornerRadius,
+                        c = n.xAlign,
+                        h = n.yAlign,
                         m = e.x,
                         _ = e.y,
                         f = t.width,
                         p = t.height;
-                    if ("center" === h) o = _ + p / 2, "left" === c ? (r = (n = m) - u, i = n, s = o + u, d = o - u) : (r = (n = m + f) + u, i = n, s = o - u, d = o + u);
-                    else if ("left" === c ? (n = (r = m + l + u) - u, i = r + u) : "right" === c ? (n = (r = m + f - l - u) - u, i = r + u) : (n = (r = m + f / 2) - u, i = r + u), "top" === h) o = (s = _) - u, d = s;
+                    if ("center" === h) o = _ + p / 2, "left" === c ? (r = (a = m) - u, i = a, s = o + u, d = o - u) : (r = (a = m + f) + u, i = a, s = o - u, d = o + u);
+                    else if ("left" === c ? (a = (r = m + l + u) - u, i = r + u) : "right" === c ? (a = (r = m + f - l - u) - u, i = r + u) : (a = (r = m + f / 2) - u, i = r + u), "top" === h) o = (s = _) - u, d = s;
                     else {
                         o = (s = _ + p) + u, d = s;
                         var g = i;
-                        i = n, n = g
+                        i = a, a = g
                     }
                     return {
-                        x1: n,
+                        x1: a,
                         x2: r,
                         x3: i,
                         y1: s,
@@ -703,111 +703,111 @@ webpackJsonp([35], {
                         y3: d
                     }
                 },
-                drawTitle: function(e, a, n, r) {
-                    var s = a.title;
+                drawTitle: function(e, n, a, r) {
+                    var s = n.title;
                     if (s.length) {
-                        n.textAlign = a._titleAlign, n.textBaseline = "top";
-                        var o = a.titleFontSize,
-                            d = a.titleSpacing;
-                        n.fillStyle = t(a.titleFontColor, r), n.font = i.fontString(o, a._titleFontStyle, a._titleFontFamily);
+                        a.textAlign = n._titleAlign, a.textBaseline = "top";
+                        var o = n.titleFontSize,
+                            d = n.titleSpacing;
+                        a.fillStyle = t(n.titleFontColor, r), a.font = i.fontString(o, n._titleFontStyle, n._titleFontFamily);
                         var u, l;
-                        for (u = 0, l = s.length; u < l; ++u) n.fillText(s[u], e.x, e.y), e.y += o + d, u + 1 === s.length && (e.y += a.titleMarginBottom - d)
+                        for (u = 0, l = s.length; u < l; ++u) a.fillText(s[u], e.x, e.y), e.y += o + d, u + 1 === s.length && (e.y += n.titleMarginBottom - d)
                     }
                 },
-                drawBody: function(e, a, n, r) {
-                    var s = a.bodyFontSize,
-                        o = a.bodySpacing,
-                        d = a.body;
-                    n.textAlign = a._bodyAlign, n.textBaseline = "top", n.font = i.fontString(s, a._bodyFontStyle, a._bodyFontFamily);
+                drawBody: function(e, n, a, r) {
+                    var s = n.bodyFontSize,
+                        o = n.bodySpacing,
+                        d = n.body;
+                    a.textAlign = n._bodyAlign, a.textBaseline = "top", a.font = i.fontString(s, n._bodyFontStyle, n._bodyFontFamily);
                     var u = 0,
                         l = function(t) {
-                            n.fillText(t, e.x + u, e.y), e.y += s + o
+                            a.fillText(t, e.x + u, e.y), e.y += s + o
                         };
-                    i.each(a.beforeBody, l);
-                    var c = a.displayColors;
+                    i.each(n.beforeBody, l);
+                    var c = n.displayColors;
                     u = c ? s + 2 : 0, i.each(d, function(o, d) {
                         i.each(o.before, l), i.each(o.lines, function(i) {
                             if (c) {
-                                n.fillStyle = t(a.legendColorBackground, r), n.fillRect(e.x, e.y, s, s), n.lineWidth = 1, n.strokeStyle = t(a.labelColors[d].borderColor, r), n.strokeRect(e.x, e.y, s, s), n.fillStyle = t(a.labelColors[d].backgroundColor, r), n.fillRect(e.x + 1, e.y + 1, s - 2, s - 2);
-                                var o = t(a.labelTextColors[d], r);
-                                n.fillStyle = o
+                                a.fillStyle = t(n.legendColorBackground, r), a.fillRect(e.x, e.y, s, s), a.lineWidth = 1, a.strokeStyle = t(n.labelColors[d].borderColor, r), a.strokeRect(e.x, e.y, s, s), a.fillStyle = t(n.labelColors[d].backgroundColor, r), a.fillRect(e.x + 1, e.y + 1, s - 2, s - 2);
+                                var o = t(n.labelTextColors[d], r);
+                                a.fillStyle = o
                             }
                             l(i)
                         }), i.each(o.after, l)
-                    }), u = 0, i.each(a.afterBody, l), e.y -= o
+                    }), u = 0, i.each(n.afterBody, l), e.y -= o
                 },
-                drawFooter: function(e, a, n, r) {
-                    var s = a.footer;
-                    s.length && (e.y += a.footerMarginTop, n.textAlign = a._footerAlign, n.textBaseline = "top", n.fillStyle = t(a.footerFontColor, r), n.font = i.fontString(a.footerFontSize, a._footerFontStyle, a._footerFontFamily), i.each(s, function(t) {
-                        n.fillText(t, e.x, e.y), e.y += a.footerFontSize + a.footerSpacing
+                drawFooter: function(e, n, a, r) {
+                    var s = n.footer;
+                    s.length && (e.y += n.footerMarginTop, a.textAlign = n._footerAlign, a.textBaseline = "top", a.fillStyle = t(n.footerFontColor, r), a.font = i.fontString(n.footerFontSize, n._footerFontStyle, n._footerFontFamily), i.each(s, function(t) {
+                        a.fillText(t, e.x, e.y), e.y += n.footerFontSize + n.footerSpacing
                     }))
                 },
-                drawBackground: function(e, a, n, r, i) {
-                    n.fillStyle = t(a.backgroundColor, i), n.strokeStyle = t(a.borderColor, i), n.lineWidth = a.borderWidth;
-                    var s = a.xAlign,
-                        o = a.yAlign,
+                drawBackground: function(e, n, a, r, i) {
+                    a.fillStyle = t(n.backgroundColor, i), a.strokeStyle = t(n.borderColor, i), a.lineWidth = n.borderWidth;
+                    var s = n.xAlign,
+                        o = n.yAlign,
                         d = e.x,
                         u = e.y,
                         l = r.width,
                         c = r.height,
-                        h = a.cornerRadius;
-                    n.beginPath(), n.moveTo(d + h, u), "top" === o && this.drawCaret(e, r), n.lineTo(d + l - h, u), n.quadraticCurveTo(d + l, u, d + l, u + h), "center" === o && "right" === s && this.drawCaret(e, r), n.lineTo(d + l, u + c - h), n.quadraticCurveTo(d + l, u + c, d + l - h, u + c), "bottom" === o && this.drawCaret(e, r), n.lineTo(d + h, u + c), n.quadraticCurveTo(d, u + c, d, u + c - h), "center" === o && "left" === s && this.drawCaret(e, r), n.lineTo(d, u + h), n.quadraticCurveTo(d, u, d + h, u), n.closePath(), n.fill(), a.borderWidth > 0 && n.stroke()
+                        h = n.cornerRadius;
+                    a.beginPath(), a.moveTo(d + h, u), "top" === o && this.drawCaret(e, r), a.lineTo(d + l - h, u), a.quadraticCurveTo(d + l, u, d + l, u + h), "center" === o && "right" === s && this.drawCaret(e, r), a.lineTo(d + l, u + c - h), a.quadraticCurveTo(d + l, u + c, d + l - h, u + c), "bottom" === o && this.drawCaret(e, r), a.lineTo(d + h, u + c), a.quadraticCurveTo(d, u + c, d, u + c - h), "center" === o && "left" === s && this.drawCaret(e, r), a.lineTo(d, u + h), a.quadraticCurveTo(d, u, d + h, u), a.closePath(), a.fill(), n.borderWidth > 0 && a.stroke()
                 },
                 draw: function() {
                     var e = this._chart.ctx,
                         t = this._view;
                     if (0 !== t.opacity) {
-                        var a = {
+                        var n = {
                                 width: t.width,
                                 height: t.height
                             },
-                            n = {
+                            a = {
                                 x: t.x,
                                 y: t.y
                             },
                             r = Math.abs(t.opacity < .001) ? 0 : t.opacity,
                             i = t.title.length || t.beforeBody.length || t.body.length || t.afterBody.length || t.footer.length;
-                        this._options.enabled && i && (this.drawBackground(n, t, e, a, r), n.x += t.xPadding, n.y += t.yPadding, this.drawTitle(n, t, e, r), this.drawBody(n, t, e, r), this.drawFooter(n, t, e, r))
+                        this._options.enabled && i && (this.drawBackground(a, t, e, n, r), a.x += t.xPadding, a.y += t.yPadding, this.drawTitle(a, t, e, r), this.drawBody(a, t, e, r), this.drawFooter(a, t, e, r))
                     }
                 },
                 handleEvent: function(e) {
                     var t = this._options,
-                        a = !1;
-                    if (this._lastActive = this._lastActive || [], "mouseout" === e.type ? this._active = [] : this._active = this._chart.getElementsAtEventForMode(e, t.mode, t), !(a = !i.arrayEquals(this._active, this._lastActive))) return !1;
+                        n = !1;
+                    if (this._lastActive = this._lastActive || [], "mouseout" === e.type ? this._active = [] : this._active = this._chart.getElementsAtEventForMode(e, t.mode, t), !(n = !i.arrayEquals(this._active, this._lastActive))) return !1;
                     if (this._lastActive = this._active, t.enabled || t.custom) {
                         this._eventPosition = {
                             x: e.x,
                             y: e.y
                         };
-                        var n = this._model;
-                        this.update(!0), this.pivot(), a |= n.x !== this._model.x || n.y !== this._model.y
+                        var a = this._model;
+                        this.update(!0), this.pivot(), n |= a.x !== this._model.x || a.y !== this._model.y
                     }
-                    return a
+                    return n
                 }
             }), e.Tooltip.positioners = {
                 average: function(e) {
                     if (!e.length) return !1;
-                    var t, a, n = 0,
+                    var t, n, a = 0,
                         r = 0,
                         i = 0;
-                    for (t = 0, a = e.length; t < a; ++t) {
+                    for (t = 0, n = e.length; t < n; ++t) {
                         var s = e[t];
                         if (s && s.hasValue()) {
                             var o = s.tooltipPosition();
-                            n += o.x, r += o.y, ++i
+                            a += o.x, r += o.y, ++i
                         }
                     }
                     return {
-                        x: Math.round(n / i),
+                        x: Math.round(a / i),
                         y: Math.round(r / i)
                     }
                 },
                 nearest: function(e, t) {
-                    var a, n, r, s = t.x,
+                    var n, a, r, s = t.x,
                         o = t.y,
                         d = Number.POSITIVE_INFINITY;
-                    for (a = 0, n = e.length; a < n; ++a) {
-                        var u = e[a];
+                    for (n = 0, a = e.length; n < a; ++n) {
+                        var u = e[n];
                         if (u && u.hasValue()) {
                             var l = u.getCenterPoint(),
                                 c = i.distanceBetweenPoints(t, l);
@@ -826,9 +826,9 @@ webpackJsonp([35], {
             }
         }
     },
-    "/mhn": function(e, t, a) {
+    "/mhn": function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -843,7 +843,7 @@ webpackJsonp([35], {
                     9: "९",
                     0: "०"
                 },
-                a = {
+                n = {
                     "१": "1",
                     "२": "2",
                     "३": "3",
@@ -873,7 +873,7 @@ webpackJsonp([35], {
                 },
                 preparse: function(e) {
                     return e.replace(/[१२३४५६७८९०]/g, function(e) {
-                        return a[e]
+                        return n[e]
                     })
                 },
                 postformat: function(e) {
@@ -885,7 +885,7 @@ webpackJsonp([35], {
                 meridiemHour: function(e, t) {
                     return 12 === e && (e = 0), "राति" === t ? e < 4 ? e : e + 12 : "बिहान" === t ? e : "दिउँसो" === t ? e >= 10 ? e : e + 12 : "साँझ" === t ? e + 12 : void 0
                 },
-                meridiem: function(e, t, a) {
+                meridiem: function(e, t, n) {
                     return e < 3 ? "राति" : e < 12 ? "बिहान" : e < 16 ? "दिउँसो" : e < 20 ? "साँझ" : "राति"
                 },
                 calendar: {
@@ -918,36 +918,36 @@ webpackJsonp([35], {
             })
         })
     },
-    "024F": function(e, t, a) {
-        var n = a("xA5w");
+    "024F": function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e) {
-            return n(e).getMilliseconds()
+            return a(e).getMilliseconds()
         }
     },
-    "0C1O": function(e, t, a) {
+    "0C1O": function(e, t, n) {
         "use strict";
         e.exports = function(e) {
-            e.Radar = function(t, a) {
-                return a.type = "radar", new e(t, a)
+            e.Radar = function(t, n) {
+                return n.type = "radar", new e(t, n)
             }
         }
     },
-    "0LAu": function(e, t, a) {
-        var n = a("MIQa");
+    "0LAu": function(e, t, n) {
+        var a = n("MIQa");
         e.exports = function() {
-            return n(new Date)
+            return a(new Date)
         }
     },
-    "0UyA": function(e, t, a) {
-        var n = a("4Z4o");
+    "0UyA": function(e, t, n) {
+        var a = n("4Z4o");
         e.exports = function(e, t) {
-            var a = Number(t);
-            return n(e, -a)
+            var n = Number(t);
+            return a(e, -n)
         }
     },
-    "0X8Q": function(e, t, a) {
+    "0X8Q": function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("vi", {
@@ -962,8 +962,8 @@ webpackJsonp([35], {
                 isPM: function(e) {
                     return /^ch$/i.test(e)
                 },
-                meridiem: function(e, t, a) {
-                    return e < 12 ? a ? "sa" : "SA" : a ? "ch" : "CH"
+                meridiem: function(e, t, n) {
+                    return e < 12 ? n ? "sa" : "SA" : n ? "ch" : "CH"
                 },
                 longDateFormat: {
                     LT: "HH:mm",
@@ -1015,55 +1015,55 @@ webpackJsonp([35], {
         e.exports = function() {
             var e = new Date,
                 t = e.getFullYear(),
-                a = e.getMonth(),
-                n = e.getDate(),
+                n = e.getMonth(),
+                a = e.getDate(),
                 r = new Date(0);
-            return r.setFullYear(t, a, n - 1), r.setHours(23, 59, 59, 999), r
+            return r.setFullYear(t, n, a - 1), r.setHours(23, 59, 59, 999), r
         }
     },
-    "0aH9": function(e, t, a) {
-        var n = a("3znZ"),
+    "0aH9": function(e, t, n) {
+        var a = n("3znZ"),
             r = 6e4,
             i = 6048e5;
         e.exports = function(e, t) {
-            var a = n(e),
-                s = n(t),
-                o = a.getTime() - a.getTimezoneOffset() * r,
+            var n = a(e),
+                s = a(t),
+                o = n.getTime() - n.getTimezoneOffset() * r,
                 d = s.getTime() - s.getTimezoneOffset() * r;
             return Math.round((o - d) / i)
         }
     },
-    "0gJx": function(e, t, a) {
+    "0gJx": function(e, t, n) {
         "use strict";
         e.exports = function(e) {
-            e.Line = function(t, a) {
-                return a.type = "line", new e(t, a)
+            e.Line = function(t, n) {
+                return n.type = "line", new e(t, n)
             }
         }
     },
-    "0oN5": function(e, t, a) {
-        var n = a("WNGz");
+    "0oN5": function(e, t, n) {
+        var a = n("WNGz");
         e.exports = function(e) {
             var t = new Date;
-            return t.setDate(t.getDate() + 1), n(e).getTime() === n(t).getTime()
+            return t.setDate(t.getDate() + 1), a(e).getTime() === a(t).getTime()
         }
     },
-    "11Bn": function(e, t, a) {
-        var n = a("xA5w");
+    "11Bn": function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function() {
             var e = Array.prototype.slice.call(arguments).map(function(e) {
-                    return n(e)
+                    return a(e)
                 }),
                 t = Math.max.apply(null, e);
             return new Date(t)
         }
     },
-    "19SQ": function(e, t, a) {
+    "19SQ": function(e, t, n) {
         "use strict";
-        var n = a("k7DW"),
-            r = a("L5rj"),
-            i = a("iO9N");
-        n._set("bubble", {
+        var a = n("k7DW"),
+            r = n("L5rj"),
+            i = n("iO9N");
+        a._set("bubble", {
             hover: {
                 mode: "single"
             },
@@ -1085,9 +1085,9 @@ webpackJsonp([35], {
                         return ""
                     },
                     label: function(e, t) {
-                        var a = t.datasets[e.datasetIndex].label || "",
-                            n = t.datasets[e.datasetIndex].data[e.index];
-                        return a + ": (" + e.xLabel + ", " + e.yLabel + ", " + n.r + ")"
+                        var n = t.datasets[e.datasetIndex].label || "",
+                            a = t.datasets[e.datasetIndex].data[e.index];
+                        return n + ": (" + e.xLabel + ", " + e.yLabel + ", " + a.r + ")"
                     }
                 }
             }
@@ -1096,28 +1096,28 @@ webpackJsonp([35], {
                 dataElementType: r.Point,
                 update: function(e) {
                     var t = this,
-                        a = t.getMeta().data;
-                    i.each(a, function(a, n) {
-                        t.updateElement(a, n, e)
+                        n = t.getMeta().data;
+                    i.each(n, function(n, a) {
+                        t.updateElement(n, a, e)
                     })
                 },
-                updateElement: function(e, t, a) {
-                    var n = this.getMeta(),
+                updateElement: function(e, t, n) {
+                    var a = this.getMeta(),
                         r = e.custom || {},
-                        i = this.getScaleForId(n.xAxisID),
-                        s = this.getScaleForId(n.yAxisID),
+                        i = this.getScaleForId(a.xAxisID),
+                        s = this.getScaleForId(a.yAxisID),
                         o = this._resolveElementOptions(e, t),
                         d = this.getDataset().data[t],
                         u = this.index,
-                        l = a ? i.getPixelForDecimal(.5) : i.getPixelForValue("object" == typeof d ? d : NaN, t, u),
-                        c = a ? s.getBasePixel() : s.getPixelForValue(d, t, u);
+                        l = n ? i.getPixelForDecimal(.5) : i.getPixelForValue("object" == typeof d ? d : NaN, t, u),
+                        c = n ? s.getBasePixel() : s.getPixelForValue(d, t, u);
                     e._xScale = i, e._yScale = s, e._options = o, e._datasetIndex = u, e._index = t, e._model = {
                         backgroundColor: o.backgroundColor,
                         borderColor: o.borderColor,
                         borderWidth: o.borderWidth,
                         hitRadius: o.hitRadius,
                         pointStyle: o.pointStyle,
-                        radius: a ? 0 : o.radius,
+                        radius: n ? 0 : o.radius,
                         skip: r.skip || isNaN(l) || isNaN(c),
                         x: l,
                         y: c
@@ -1125,16 +1125,16 @@ webpackJsonp([35], {
                 },
                 setHoverStyle: function(e) {
                     var t = e._model,
-                        a = e._options;
-                    t.backgroundColor = i.valueOrDefault(a.hoverBackgroundColor, i.getHoverColor(a.backgroundColor)), t.borderColor = i.valueOrDefault(a.hoverBorderColor, i.getHoverColor(a.borderColor)), t.borderWidth = i.valueOrDefault(a.hoverBorderWidth, a.borderWidth), t.radius = a.radius + a.hoverRadius
+                        n = e._options;
+                    t.backgroundColor = i.valueOrDefault(n.hoverBackgroundColor, i.getHoverColor(n.backgroundColor)), t.borderColor = i.valueOrDefault(n.hoverBorderColor, i.getHoverColor(n.borderColor)), t.borderWidth = i.valueOrDefault(n.hoverBorderWidth, n.borderWidth), t.radius = n.radius + n.hoverRadius
                 },
                 removeHoverStyle: function(e) {
                     var t = e._model,
-                        a = e._options;
-                    t.backgroundColor = a.backgroundColor, t.borderColor = a.borderColor, t.borderWidth = a.borderWidth, t.radius = a.radius
+                        n = e._options;
+                    t.backgroundColor = n.backgroundColor, t.borderColor = n.borderColor, t.borderWidth = n.borderWidth, t.radius = n.radius
                 },
                 _resolveElementOptions: function(e, t) {
-                    var a, n, r, s = this.chart,
+                    var n, a, r, s = this.chart,
                         o = s.data.datasets[this.index],
                         d = e.custom || {},
                         u = s.options.elements.point,
@@ -1148,16 +1148,16 @@ webpackJsonp([35], {
                             datasetIndex: this.index
                         },
                         _ = ["backgroundColor", "borderColor", "borderWidth", "hoverBackgroundColor", "hoverBorderColor", "hoverBorderWidth", "hoverRadius", "hitRadius", "pointStyle"];
-                    for (a = 0, n = _.length; a < n; ++a) h[r = _[a]] = l([d[r], o[r], u[r]], m, t);
+                    for (n = 0, a = _.length; n < a; ++n) h[r = _[n]] = l([d[r], o[r], u[r]], m, t);
                     return h.radius = l([d.radius, c ? c.r : void 0, o.radius, u.radius], m, t), h
                 }
             })
         }
     },
-    "1Nt4": function(e, t, a) {
+    "1Nt4": function(e, t, n) {
         "use strict";
-        var n = a("iO9N"),
-            r = a("IbXy");
+        var a = n("iO9N"),
+            r = n("IbXy");
         e.exports = function(e) {
             var t = {
                     position: "left",
@@ -1165,48 +1165,48 @@ webpackJsonp([35], {
                         callback: r.formatters.logarithmic
                     }
                 },
-                a = e.Scale.extend({
+                n = e.Scale.extend({
                     determineDataLimits: function() {
                         function e(e) {
                             return d ? e.xAxisID === t.id : e.yAxisID === t.id
                         }
                         var t = this,
-                            a = t.options,
-                            r = a.ticks,
+                            n = t.options,
+                            r = n.ticks,
                             i = t.chart,
                             s = i.data.datasets,
-                            o = n.valueOrDefault,
+                            o = a.valueOrDefault,
                             d = t.isHorizontal();
                         t.min = null, t.max = null, t.minNotZero = null;
-                        var u = a.stacked;
-                        if (void 0 === u && n.each(s, function(t, a) {
+                        var u = n.stacked;
+                        if (void 0 === u && a.each(s, function(t, n) {
                                 if (!u) {
-                                    var n = i.getDatasetMeta(a);
-                                    i.isDatasetVisible(a) && e(n) && void 0 !== n.stack && (u = !0)
+                                    var a = i.getDatasetMeta(n);
+                                    i.isDatasetVisible(n) && e(a) && void 0 !== a.stack && (u = !0)
                                 }
-                            }), a.stacked || u) {
+                            }), n.stacked || u) {
                             var l = {};
-                            n.each(s, function(r, s) {
+                            a.each(s, function(r, s) {
                                 var o = i.getDatasetMeta(s),
-                                    d = [o.type, void 0 === a.stacked && void 0 === o.stack ? s : "", o.stack].join(".");
-                                i.isDatasetVisible(s) && e(o) && (void 0 === l[d] && (l[d] = []), n.each(r.data, function(e, n) {
+                                    d = [o.type, void 0 === n.stacked && void 0 === o.stack ? s : "", o.stack].join(".");
+                                i.isDatasetVisible(s) && e(o) && (void 0 === l[d] && (l[d] = []), a.each(r.data, function(e, a) {
                                     var r = l[d],
                                         i = +t.getRightValue(e);
-                                    isNaN(i) || o.data[n].hidden || (r[n] = r[n] || 0, a.relativePoints ? r[n] = 100 : r[n] += i)
+                                    isNaN(i) || o.data[a].hidden || (r[a] = r[a] || 0, n.relativePoints ? r[a] = 100 : r[a] += i)
                                 }))
-                            }), n.each(l, function(e) {
-                                var a = n.min(e),
-                                    r = n.max(e);
-                                t.min = null === t.min ? a : Math.min(t.min, a), t.max = null === t.max ? r : Math.max(t.max, r)
+                            }), a.each(l, function(e) {
+                                var n = a.min(e),
+                                    r = a.max(e);
+                                t.min = null === t.min ? n : Math.min(t.min, n), t.max = null === t.max ? r : Math.max(t.max, r)
                             })
-                        } else n.each(s, function(a, r) {
+                        } else a.each(s, function(n, r) {
                             var s = i.getDatasetMeta(r);
-                            i.isDatasetVisible(r) && e(s) && n.each(a.data, function(e, a) {
-                                var n = +t.getRightValue(e);
-                                isNaN(n) || s.data[a].hidden || (null === t.min ? t.min = n : n < t.min && (t.min = n), null === t.max ? t.max = n : n > t.max && (t.max = n), 0 !== n && (null === t.minNotZero || n < t.minNotZero) && (t.minNotZero = n))
+                            i.isDatasetVisible(r) && e(s) && a.each(n.data, function(e, n) {
+                                var a = +t.getRightValue(e);
+                                isNaN(a) || s.data[n].hidden || (null === t.min ? t.min = a : a < t.min && (t.min = a), null === t.max ? t.max = a : a > t.max && (t.max = a), 0 !== a && (null === t.minNotZero || a < t.minNotZero) && (t.minNotZero = a))
                             })
                         });
-                        t.min = o(r.min, t.min), t.max = o(r.max, t.max), t.min === t.max && (0 !== t.min && null !== t.min ? (t.min = Math.pow(10, Math.floor(n.log10(t.min)) - 1), t.max = Math.pow(10, Math.floor(n.log10(t.max)) + 1)) : (t.min = 1, t.max = 10))
+                        t.min = o(r.min, t.min), t.max = o(r.max, t.max), t.min === t.max && (0 !== t.min && null !== t.min ? (t.min = Math.pow(10, Math.floor(a.log10(t.min)) - 1), t.max = Math.pow(10, Math.floor(a.log10(t.max)) + 1)) : (t.min = 1, t.max = 10))
                     },
                     buildTicks: function() {
                         var e = this.options.ticks,
@@ -1214,8 +1214,8 @@ webpackJsonp([35], {
                                 min: e.min,
                                 max: e.max
                             },
-                            a = this.ticks = r.generators.logarithmic(t, this);
-                        this.isHorizontal() || a.reverse(), this.max = n.max(a), this.min = n.min(a), e.reverse ? (a.reverse(), this.start = this.max, this.end = this.min) : (this.start = this.min, this.end = this.max)
+                            n = this.ticks = r.generators.logarithmic(t, this);
+                        this.isHorizontal() || n.reverse(), this.max = a.max(n), this.min = a.min(n), e.reverse ? (n.reverse(), this.start = this.max, this.end = this.min) : (this.start = this.min, this.end = this.max)
                     },
                     convertTicksToLabels: function() {
                         this.tickValues = this.ticks.slice(), e.Scale.prototype.convertTicksToLabels.call(this)
@@ -1227,52 +1227,52 @@ webpackJsonp([35], {
                         return this.getPixelForValue(this.tickValues[e])
                     },
                     getPixelForValue: function(e) {
-                        var t, a, r, i = this.start,
+                        var t, n, r, i = this.start,
                             s = +this.getRightValue(e),
                             o = this.options.ticks;
-                        return this.isHorizontal() ? (r = n.log10(this.end) - n.log10(i), 0 === s ? a = this.left : (t = this.width, a = this.left + t / r * (n.log10(s) - n.log10(i)))) : (t = this.height, 0 !== i || o.reverse ? 0 === this.end && o.reverse ? (r = n.log10(this.start) - n.log10(this.minNotZero), a = s === this.end ? this.top : s === this.minNotZero ? this.top + .02 * t : this.top + .02 * t + .98 * t / r * (n.log10(s) - n.log10(this.minNotZero))) : 0 === s ? a = o.reverse ? this.top : this.bottom : (r = n.log10(this.end) - n.log10(i), t = this.height, a = this.bottom - t / r * (n.log10(s) - n.log10(i))) : (r = n.log10(this.end) - n.log10(this.minNotZero), a = s === i ? this.bottom : s === this.minNotZero ? this.bottom - .02 * t : this.bottom - .02 * t - .98 * t / r * (n.log10(s) - n.log10(this.minNotZero)))), a
+                        return this.isHorizontal() ? (r = a.log10(this.end) - a.log10(i), 0 === s ? n = this.left : (t = this.width, n = this.left + t / r * (a.log10(s) - a.log10(i)))) : (t = this.height, 0 !== i || o.reverse ? 0 === this.end && o.reverse ? (r = a.log10(this.start) - a.log10(this.minNotZero), n = s === this.end ? this.top : s === this.minNotZero ? this.top + .02 * t : this.top + .02 * t + .98 * t / r * (a.log10(s) - a.log10(this.minNotZero))) : 0 === s ? n = o.reverse ? this.top : this.bottom : (r = a.log10(this.end) - a.log10(i), t = this.height, n = this.bottom - t / r * (a.log10(s) - a.log10(i))) : (r = a.log10(this.end) - a.log10(this.minNotZero), n = s === i ? this.bottom : s === this.minNotZero ? this.bottom - .02 * t : this.bottom - .02 * t - .98 * t / r * (a.log10(s) - a.log10(this.minNotZero)))), n
                     },
                     getValueForPixel: function(e) {
-                        var t, a, r = n.log10(this.end) - n.log10(this.start);
-                        return this.isHorizontal() ? (a = this.width, t = this.start * Math.pow(10, (e - this.left) * r / a)) : (a = this.height, t = Math.pow(10, (this.bottom - e) * r / a) / this.start), t
+                        var t, n, r = a.log10(this.end) - a.log10(this.start);
+                        return this.isHorizontal() ? (n = this.width, t = this.start * Math.pow(10, (e - this.left) * r / n)) : (n = this.height, t = Math.pow(10, (this.bottom - e) * r / n) / this.start), t
                     }
                 });
-            e.scaleService.registerScaleType("logarithmic", a, t)
+            e.scaleService.registerScaleType("logarithmic", n, t)
         }
     },
-    "1gtq": function(e, t, a) {
-        var n = a("WNGz");
+    "1gtq": function(e, t, n) {
+        var a = n("WNGz");
         e.exports = function(e) {
             var t = new Date;
-            return t.setDate(t.getDate() - 1), n(e).getTime() === n(t).getTime()
+            return t.setDate(t.getDate() - 1), a(e).getTime() === a(t).getTime()
         }
     },
-    "1rLR": function(e, t, a) {
-        var n = a("3EIC");
+    "1rLR": function(e, t, n) {
+        var a = n("3EIC");
         e.exports = function(e, t) {
-            var a = Number(t);
-            return n(e, 3 * a)
+            var n = Number(t);
+            return a(e, 3 * n)
         }
     },
-    "1udo": function(e, t, a) {
-        var n = a("WNGz");
+    "1udo": function(e, t, n) {
+        var a = n("WNGz");
         e.exports = function() {
-            return n(new Date)
+            return a(new Date)
         }
     },
-    "25hp": function(e, t, a) {
-        var n = a("G7No");
+    "25hp": function(e, t, n) {
+        var a = n("G7No");
         e.exports = function(e, t) {
-            var a = n(e, t) / 1e3;
-            return a > 0 ? Math.floor(a) : Math.ceil(a)
+            var n = a(e, t) / 1e3;
+            return n > 0 ? Math.floor(n) : Math.ceil(n)
         }
     },
-    "2ddL": function(e, t, a) {
+    "2ddL": function(e, t, n) {
         "use strict";
-        var n = a("k7DW"),
-            r = a("L5rj"),
-            i = a("iO9N");
-        n._set("radar", {
+        var a = n("k7DW"),
+            r = n("L5rj"),
+            i = n("iO9N");
+        a._set("radar", {
             scale: {
                 type: "radialLinear"
             },
@@ -1288,14 +1288,14 @@ webpackJsonp([35], {
                 linkScales: i.noop,
                 update: function(e) {
                     var t = this,
-                        a = t.getMeta(),
-                        n = a.dataset,
-                        r = a.data,
-                        s = n.custom || {},
+                        n = t.getMeta(),
+                        a = n.dataset,
+                        r = n.data,
+                        s = a.custom || {},
                         o = t.getDataset(),
                         d = t.chart.options.elements.line,
                         u = t.chart.scale;
-                    void 0 !== o.tension && void 0 === o.lineTension && (o.lineTension = o.tension), i.extend(a.dataset, {
+                    void 0 !== o.tension && void 0 === o.lineTension && (o.lineTension = o.tension), i.extend(n.dataset, {
                         _datasetIndex: t.index,
                         _scale: u,
                         _children: r,
@@ -1311,12 +1311,12 @@ webpackJsonp([35], {
                             borderDashOffset: s.borderDashOffset ? s.borderDashOffset : o.borderDashOffset || d.borderDashOffset,
                             borderJoinStyle: s.borderJoinStyle ? s.borderJoinStyle : o.borderJoinStyle || d.borderJoinStyle
                         }
-                    }), a.dataset.pivot(), i.each(r, function(a, n) {
-                        t.updateElement(a, n, e)
+                    }), n.dataset.pivot(), i.each(r, function(n, a) {
+                        t.updateElement(n, a, e)
                     }, t), t.updateBezierControlPoints()
                 },
-                updateElement: function(e, t, a) {
-                    var n = e.custom || {},
+                updateElement: function(e, t, n) {
+                    var a = e.custom || {},
                         r = this.getDataset(),
                         s = this.chart.scale,
                         o = this.chart.options.elements.point,
@@ -1326,59 +1326,59 @@ webpackJsonp([35], {
                         _index: t,
                         _scale: s,
                         _model: {
-                            x: a ? s.xCenter : d.x,
-                            y: a ? s.yCenter : d.y,
-                            tension: n.tension ? n.tension : i.valueOrDefault(r.lineTension, this.chart.options.elements.line.tension),
-                            radius: n.radius ? n.radius : i.valueAtIndexOrDefault(r.pointRadius, t, o.radius),
-                            backgroundColor: n.backgroundColor ? n.backgroundColor : i.valueAtIndexOrDefault(r.pointBackgroundColor, t, o.backgroundColor),
-                            borderColor: n.borderColor ? n.borderColor : i.valueAtIndexOrDefault(r.pointBorderColor, t, o.borderColor),
-                            borderWidth: n.borderWidth ? n.borderWidth : i.valueAtIndexOrDefault(r.pointBorderWidth, t, o.borderWidth),
-                            pointStyle: n.pointStyle ? n.pointStyle : i.valueAtIndexOrDefault(r.pointStyle, t, o.pointStyle),
-                            hitRadius: n.hitRadius ? n.hitRadius : i.valueAtIndexOrDefault(r.pointHitRadius, t, o.hitRadius)
+                            x: n ? s.xCenter : d.x,
+                            y: n ? s.yCenter : d.y,
+                            tension: a.tension ? a.tension : i.valueOrDefault(r.lineTension, this.chart.options.elements.line.tension),
+                            radius: a.radius ? a.radius : i.valueAtIndexOrDefault(r.pointRadius, t, o.radius),
+                            backgroundColor: a.backgroundColor ? a.backgroundColor : i.valueAtIndexOrDefault(r.pointBackgroundColor, t, o.backgroundColor),
+                            borderColor: a.borderColor ? a.borderColor : i.valueAtIndexOrDefault(r.pointBorderColor, t, o.borderColor),
+                            borderWidth: a.borderWidth ? a.borderWidth : i.valueAtIndexOrDefault(r.pointBorderWidth, t, o.borderWidth),
+                            pointStyle: a.pointStyle ? a.pointStyle : i.valueAtIndexOrDefault(r.pointStyle, t, o.pointStyle),
+                            hitRadius: a.hitRadius ? a.hitRadius : i.valueAtIndexOrDefault(r.pointHitRadius, t, o.hitRadius)
                         }
-                    }), e._model.skip = n.skip ? n.skip : isNaN(e._model.x) || isNaN(e._model.y)
+                    }), e._model.skip = a.skip ? a.skip : isNaN(e._model.x) || isNaN(e._model.y)
                 },
                 updateBezierControlPoints: function() {
                     var e = this.chart.chartArea,
                         t = this.getMeta();
-                    i.each(t.data, function(a, n) {
-                        var r = a._model,
-                            s = i.splineCurve(i.previousItem(t.data, n, !0)._model, r, i.nextItem(t.data, n, !0)._model, r.tension);
-                        r.controlPointPreviousX = Math.max(Math.min(s.previous.x, e.right), e.left), r.controlPointPreviousY = Math.max(Math.min(s.previous.y, e.bottom), e.top), r.controlPointNextX = Math.max(Math.min(s.next.x, e.right), e.left), r.controlPointNextY = Math.max(Math.min(s.next.y, e.bottom), e.top), a.pivot()
+                    i.each(t.data, function(n, a) {
+                        var r = n._model,
+                            s = i.splineCurve(i.previousItem(t.data, a, !0)._model, r, i.nextItem(t.data, a, !0)._model, r.tension);
+                        r.controlPointPreviousX = Math.max(Math.min(s.previous.x, e.right), e.left), r.controlPointPreviousY = Math.max(Math.min(s.previous.y, e.bottom), e.top), r.controlPointNextX = Math.max(Math.min(s.next.x, e.right), e.left), r.controlPointNextY = Math.max(Math.min(s.next.y, e.bottom), e.top), n.pivot()
                     })
                 },
                 setHoverStyle: function(e) {
                     var t = this.chart.data.datasets[e._datasetIndex],
-                        a = e.custom || {},
-                        n = e._index,
+                        n = e.custom || {},
+                        a = e._index,
                         r = e._model;
-                    r.radius = a.hoverRadius ? a.hoverRadius : i.valueAtIndexOrDefault(t.pointHoverRadius, n, this.chart.options.elements.point.hoverRadius), r.backgroundColor = a.hoverBackgroundColor ? a.hoverBackgroundColor : i.valueAtIndexOrDefault(t.pointHoverBackgroundColor, n, i.getHoverColor(r.backgroundColor)), r.borderColor = a.hoverBorderColor ? a.hoverBorderColor : i.valueAtIndexOrDefault(t.pointHoverBorderColor, n, i.getHoverColor(r.borderColor)), r.borderWidth = a.hoverBorderWidth ? a.hoverBorderWidth : i.valueAtIndexOrDefault(t.pointHoverBorderWidth, n, r.borderWidth)
+                    r.radius = n.hoverRadius ? n.hoverRadius : i.valueAtIndexOrDefault(t.pointHoverRadius, a, this.chart.options.elements.point.hoverRadius), r.backgroundColor = n.hoverBackgroundColor ? n.hoverBackgroundColor : i.valueAtIndexOrDefault(t.pointHoverBackgroundColor, a, i.getHoverColor(r.backgroundColor)), r.borderColor = n.hoverBorderColor ? n.hoverBorderColor : i.valueAtIndexOrDefault(t.pointHoverBorderColor, a, i.getHoverColor(r.borderColor)), r.borderWidth = n.hoverBorderWidth ? n.hoverBorderWidth : i.valueAtIndexOrDefault(t.pointHoverBorderWidth, a, r.borderWidth)
                 },
                 removeHoverStyle: function(e) {
                     var t = this.chart.data.datasets[e._datasetIndex],
-                        a = e.custom || {},
-                        n = e._index,
+                        n = e.custom || {},
+                        a = e._index,
                         r = e._model,
                         s = this.chart.options.elements.point;
-                    r.radius = a.radius ? a.radius : i.valueAtIndexOrDefault(t.pointRadius, n, s.radius), r.backgroundColor = a.backgroundColor ? a.backgroundColor : i.valueAtIndexOrDefault(t.pointBackgroundColor, n, s.backgroundColor), r.borderColor = a.borderColor ? a.borderColor : i.valueAtIndexOrDefault(t.pointBorderColor, n, s.borderColor), r.borderWidth = a.borderWidth ? a.borderWidth : i.valueAtIndexOrDefault(t.pointBorderWidth, n, s.borderWidth)
+                    r.radius = n.radius ? n.radius : i.valueAtIndexOrDefault(t.pointRadius, a, s.radius), r.backgroundColor = n.backgroundColor ? n.backgroundColor : i.valueAtIndexOrDefault(t.pointBackgroundColor, a, s.backgroundColor), r.borderColor = n.borderColor ? n.borderColor : i.valueAtIndexOrDefault(t.pointBorderColor, a, s.borderColor), r.borderWidth = n.borderWidth ? n.borderWidth : i.valueAtIndexOrDefault(t.pointBorderWidth, a, s.borderWidth)
                 }
             })
         }
     },
-    "2lB6": function(e, t, a) {
-        var n = a("xA5w");
-        e.exports = function(e, t, a, r) {
-            var i = n(e).getTime(),
-                s = n(t).getTime(),
-                o = n(a).getTime(),
-                d = n(r).getTime();
+    "2lB6": function(e, t, n) {
+        var a = n("xA5w");
+        e.exports = function(e, t, n, r) {
+            var i = a(e).getTime(),
+                s = a(t).getTime(),
+                o = a(n).getTime(),
+                d = a(r).getTime();
             if (i > s || o > d) throw new Error("The start of the range cannot be after the end of the range");
             return i < d && o < s
         }
     },
-    "2pmY": function(e, t, a) {
+    "2pmY": function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -1393,7 +1393,7 @@ webpackJsonp([35], {
                     9: "۹",
                     0: "۰"
                 },
-                a = {
+                n = {
                     "۱": "1",
                     "۲": "2",
                     "۳": "3",
@@ -1424,7 +1424,7 @@ webpackJsonp([35], {
                 isPM: function(e) {
                     return /بعد از ظهر/.test(e)
                 },
-                meridiem: function(e, t, a) {
+                meridiem: function(e, t, n) {
                     return e < 12 ? "قبل از ظهر" : "بعد از ظهر"
                 },
                 calendar: {
@@ -1452,7 +1452,7 @@ webpackJsonp([35], {
                 },
                 preparse: function(e) {
                     return e.replace(/[۰-۹]/g, function(e) {
-                        return a[e]
+                        return n[e]
                     }).replace(/،/g, ",")
                 },
                 postformat: function(e) {
@@ -1469,37 +1469,37 @@ webpackJsonp([35], {
             })
         })
     },
-    "2s1U": function(e, t, a) {
+    "2s1U": function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
 
-            function t(e, t, a, n) {
+            function t(e, t, n, a) {
                 var r = e + " ";
-                switch (a) {
+                switch (n) {
                     case "s":
-                        return t || n ? "nekaj sekund" : "nekaj sekundami";
+                        return t || a ? "nekaj sekund" : "nekaj sekundami";
                     case "m":
                         return t ? "ena minuta" : "eno minuto";
                     case "mm":
-                        return r += 1 === e ? t ? "minuta" : "minuto" : 2 === e ? t || n ? "minuti" : "minutama" : e < 5 ? t || n ? "minute" : "minutami" : t || n ? "minut" : "minutami";
+                        return r += 1 === e ? t ? "minuta" : "minuto" : 2 === e ? t || a ? "minuti" : "minutama" : e < 5 ? t || a ? "minute" : "minutami" : t || a ? "minut" : "minutami";
                     case "h":
                         return t ? "ena ura" : "eno uro";
                     case "hh":
-                        return r += 1 === e ? t ? "ura" : "uro" : 2 === e ? t || n ? "uri" : "urama" : e < 5 ? t || n ? "ure" : "urami" : t || n ? "ur" : "urami";
+                        return r += 1 === e ? t ? "ura" : "uro" : 2 === e ? t || a ? "uri" : "urama" : e < 5 ? t || a ? "ure" : "urami" : t || a ? "ur" : "urami";
                     case "d":
-                        return t || n ? "en dan" : "enim dnem";
+                        return t || a ? "en dan" : "enim dnem";
                     case "dd":
-                        return r += 1 === e ? t || n ? "dan" : "dnem" : 2 === e ? t || n ? "dni" : "dnevoma" : t || n ? "dni" : "dnevi";
+                        return r += 1 === e ? t || a ? "dan" : "dnem" : 2 === e ? t || a ? "dni" : "dnevoma" : t || a ? "dni" : "dnevi";
                     case "M":
-                        return t || n ? "en mesec" : "enim mesecem";
+                        return t || a ? "en mesec" : "enim mesecem";
                     case "MM":
-                        return r += 1 === e ? t || n ? "mesec" : "mesecem" : 2 === e ? t || n ? "meseca" : "mesecema" : e < 5 ? t || n ? "mesece" : "meseci" : t || n ? "mesecev" : "meseci";
+                        return r += 1 === e ? t || a ? "mesec" : "mesecem" : 2 === e ? t || a ? "meseca" : "mesecema" : e < 5 ? t || a ? "mesece" : "meseci" : t || a ? "mesecev" : "meseci";
                     case "y":
-                        return t || n ? "eno leto" : "enim letom";
+                        return t || a ? "eno leto" : "enim letom";
                     case "yy":
-                        return r += 1 === e ? t || n ? "leto" : "letom" : 2 === e ? t || n ? "leti" : "letoma" : e < 5 ? t || n ? "leta" : "leti" : t || n ? "let" : "leti"
+                        return r += 1 === e ? t || a ? "leto" : "letom" : 2 === e ? t || a ? "leti" : "letoma" : e < 5 ? t || a ? "leta" : "leti" : t || a ? "let" : "leti"
                 }
             }
             return e.defineLocale("sl", {
@@ -1578,13 +1578,13 @@ webpackJsonp([35], {
             })
         })
     },
-    "2xI1": function(e, t, a) {
+    "2xI1": function(e, t, n) {
         "use strict";
-        var n = a("iO9N"),
-            r = a("rGYv"),
-            i = a("DN1M"),
+        var a = n("iO9N"),
+            r = n("rGYv"),
+            i = n("DN1M"),
             s = i._enabled ? i : r;
-        e.exports = n.extend({
+        e.exports = a.extend({
             initialize: function() {},
             acquireContext: function() {},
             releaseContext: function() {},
@@ -1592,9 +1592,9 @@ webpackJsonp([35], {
             removeEventListener: function() {}
         }, s)
     },
-    "3CJN": function(e, t, a) {
+    "3CJN": function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("af", {
@@ -1607,8 +1607,8 @@ webpackJsonp([35], {
                 isPM: function(e) {
                     return /^nm$/i.test(e)
                 },
-                meridiem: function(e, t, a) {
-                    return e < 12 ? a ? "vm" : "VM" : a ? "nm" : "NM"
+                meridiem: function(e, t, n) {
+                    return e < 12 ? n ? "vm" : "VM" : n ? "nm" : "NM"
                 },
                 longDateFormat: {
                     LT: "HH:mm",
@@ -1652,40 +1652,40 @@ webpackJsonp([35], {
             })
         })
     },
-    "3EIC": function(e, t, a) {
-        var n = a("xA5w"),
-            r = a("Mdww");
+    "3EIC": function(e, t, n) {
+        var a = n("xA5w"),
+            r = n("Mdww");
         e.exports = function(e, t) {
-            var a = n(e),
+            var n = a(e),
                 i = Number(t),
-                s = a.getMonth() + i,
+                s = n.getMonth() + i,
                 o = new Date(0);
-            o.setFullYear(a.getFullYear(), s, 1), o.setHours(0, 0, 0, 0);
+            o.setFullYear(n.getFullYear(), s, 1), o.setHours(0, 0, 0, 0);
             var d = r(o);
-            return a.setMonth(s, Math.min(d, a.getDate())), a
+            return n.setMonth(s, Math.min(d, n.getDate())), n
         }
     },
-    "3K28": function(e, t, a) {
+    "3K28": function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             var t = "jan._feb._mrt._apr._mei_jun._jul._aug._sep._okt._nov._dec.".split("_"),
-                a = "jan_feb_mrt_apr_mei_jun_jul_aug_sep_okt_nov_dec".split("_"),
-                n = [/^jan/i, /^feb/i, /^maart|mrt.?$/i, /^apr/i, /^mei$/i, /^jun[i.]?$/i, /^jul[i.]?$/i, /^aug/i, /^sep/i, /^okt/i, /^nov/i, /^dec/i],
+                n = "jan_feb_mrt_apr_mei_jun_jul_aug_sep_okt_nov_dec".split("_"),
+                a = [/^jan/i, /^feb/i, /^maart|mrt.?$/i, /^apr/i, /^mei$/i, /^jun[i.]?$/i, /^jul[i.]?$/i, /^aug/i, /^sep/i, /^okt/i, /^nov/i, /^dec/i],
                 r = /^(januari|februari|maart|april|mei|april|ju[nl]i|augustus|september|oktober|november|december|jan\.?|feb\.?|mrt\.?|apr\.?|ju[nl]\.?|aug\.?|sep\.?|okt\.?|nov\.?|dec\.?)/i;
             return e.defineLocale("nl", {
                 months: "januari_februari_maart_april_mei_juni_juli_augustus_september_oktober_november_december".split("_"),
-                monthsShort: function(e, n) {
-                    return e ? /-MMM-/.test(n) ? a[e.month()] : t[e.month()] : t
+                monthsShort: function(e, a) {
+                    return e ? /-MMM-/.test(a) ? n[e.month()] : t[e.month()] : t
                 },
                 monthsRegex: r,
                 monthsShortRegex: r,
                 monthsStrictRegex: /^(januari|februari|maart|mei|ju[nl]i|april|augustus|september|oktober|november|december)/i,
                 monthsShortStrictRegex: /^(jan\.?|feb\.?|mrt\.?|apr\.?|mei|ju[nl]\.?|aug\.?|sep\.?|okt\.?|nov\.?|dec\.?)/i,
-                monthsParse: n,
-                longMonthsParse: n,
-                shortMonthsParse: n,
+                monthsParse: a,
+                longMonthsParse: a,
+                shortMonthsParse: a,
                 weekdays: "zondag_maandag_dinsdag_woensdag_donderdag_vrijdag_zaterdag".split("_"),
                 weekdaysShort: "zo._ma._di._wo._do._vr._za.".split("_"),
                 weekdaysMin: "Zo_Ma_Di_Wo_Do_Vr_Za".split("_"),
@@ -1732,9 +1732,9 @@ webpackJsonp([35], {
             })
         })
     },
-    "3LKG": function(e, t, a) {
+    "3LKG": function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("tl-ph", {
@@ -1785,9 +1785,9 @@ webpackJsonp([35], {
             })
         })
     },
-    "3MVc": function(e, t, a) {
+    "3MVc": function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -1802,7 +1802,7 @@ webpackJsonp([35], {
                     9: "٩",
                     0: "٠"
                 },
-                a = {
+                n = {
                     "١": "1",
                     "٢": "2",
                     "٣": "3",
@@ -1814,7 +1814,7 @@ webpackJsonp([35], {
                     "٩": "9",
                     "٠": "0"
                 },
-                n = function(e) {
+                a = function(e) {
                     return 0 === e ? 0 : 1 === e ? 1 : 2 === e ? 2 : e % 100 >= 3 && e % 100 <= 10 ? 3 : e % 100 >= 11 ? 4 : 5
                 },
                 r = {
@@ -1826,10 +1826,10 @@ webpackJsonp([35], {
                     y: ["أقل من عام", "عام واحد", ["عامان", "عامين"], "%d أعوام", "%d عامًا", "%d عام"]
                 },
                 i = function(e) {
-                    return function(t, a, i, s) {
-                        var o = n(t),
-                            d = r[e][n(t)];
-                        return 2 === o && (d = d[a ? 0 : 1]), d.replace(/%d/i, t)
+                    return function(t, n, i, s) {
+                        var o = a(t),
+                            d = r[e][a(t)];
+                        return 2 === o && (d = d[n ? 0 : 1]), d.replace(/%d/i, t)
                     }
                 },
                 s = ["كانون الثاني يناير", "شباط فبراير", "آذار مارس", "نيسان أبريل", "أيار مايو", "حزيران يونيو", "تموز يوليو", "آب أغسطس", "أيلول سبتمبر", "تشرين الأول أكتوبر", "تشرين الثاني نوفمبر", "كانون الأول ديسمبر"];
@@ -1852,7 +1852,7 @@ webpackJsonp([35], {
                 isPM: function(e) {
                     return "م" === e
                 },
-                meridiem: function(e, t, a) {
+                meridiem: function(e, t, n) {
                     return e < 12 ? "ص" : "م"
                 },
                 calendar: {
@@ -1880,7 +1880,7 @@ webpackJsonp([35], {
                 },
                 preparse: function(e) {
                     return e.replace(/\u200f/g, "").replace(/[١٢٣٤٥٦٧٨٩٠]/g, function(e) {
-                        return a[e]
+                        return n[e]
                     }).replace(/،/g, ",")
                 },
                 postformat: function(e) {
@@ -1895,29 +1895,29 @@ webpackJsonp([35], {
             })
         })
     },
-    "3g9B": function(e, t, a) {
-        var n = a("xA5w");
+    "3g9B": function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e) {
-            return n(e).getDate()
+            return a(e).getDate()
         }
     },
-    "3hfc": function(e, t, a) {
+    "3hfc": function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
 
-            function t(e, t, a) {
-                return "m" === a ? t ? "хвіліна" : "хвіліну" : "h" === a ? t ? "гадзіна" : "гадзіну" : e + " " + function(e, t) {
-                    var a = e.split("_");
-                    return t % 10 == 1 && t % 100 != 11 ? a[0] : t % 10 >= 2 && t % 10 <= 4 && (t % 100 < 10 || t % 100 >= 20) ? a[1] : a[2]
+            function t(e, t, n) {
+                return "m" === n ? t ? "хвіліна" : "хвіліну" : "h" === n ? t ? "гадзіна" : "гадзіну" : e + " " + function(e, t) {
+                    var n = e.split("_");
+                    return t % 10 == 1 && t % 100 != 11 ? n[0] : t % 10 >= 2 && t % 10 <= 4 && (t % 100 < 10 || t % 100 >= 20) ? n[1] : n[2]
                 }({
                     mm: t ? "хвіліна_хвіліны_хвілін" : "хвіліну_хвіліны_хвілін",
                     hh: t ? "гадзіна_гадзіны_гадзін" : "гадзіну_гадзіны_гадзін",
                     dd: "дзень_дні_дзён",
                     MM: "месяц_месяцы_месяцаў",
                     yy: "год_гады_гадоў"
-                }[a], +e)
+                }[n], +e)
             }
             return e.defineLocale("be", {
                 months: {
@@ -1981,7 +1981,7 @@ webpackJsonp([35], {
                 isPM: function(e) {
                     return /^(дня|вечара)$/.test(e)
                 },
-                meridiem: function(e, t, a) {
+                meridiem: function(e, t, n) {
                     return e < 4 ? "ночы" : e < 12 ? "раніцы" : e < 17 ? "дня" : "вечара"
                 },
                 dayOfMonthOrdinalParse: /\d{1,2}-(і|ы|га)/,
@@ -2006,9 +2006,9 @@ webpackJsonp([35], {
             })
         })
     },
-    "3n1n": function(e, t, a) {
+    "3n1n": function(e, t, n) {
         "use strict";
-        var n = {
+        var a = {
             noop: function() {},
             uid: function() {
                 var e = 0;
@@ -2028,85 +2028,85 @@ webpackJsonp([35], {
             valueOrDefault: function(e, t) {
                 return void 0 === e ? t : e
             },
-            valueAtIndexOrDefault: function(e, t, a) {
-                return n.valueOrDefault(n.isArray(e) ? e[t] : e, a)
+            valueAtIndexOrDefault: function(e, t, n) {
+                return a.valueOrDefault(a.isArray(e) ? e[t] : e, n)
             },
-            callback: function(e, t, a) {
-                if (e && "function" == typeof e.call) return e.apply(a, t)
+            callback: function(e, t, n) {
+                if (e && "function" == typeof e.call) return e.apply(n, t)
             },
-            each: function(e, t, a, r) {
+            each: function(e, t, n, r) {
                 var i, s, o;
-                if (n.isArray(e))
+                if (a.isArray(e))
                     if (s = e.length, r)
-                        for (i = s - 1; i >= 0; i--) t.call(a, e[i], i);
+                        for (i = s - 1; i >= 0; i--) t.call(n, e[i], i);
                     else
-                        for (i = 0; i < s; i++) t.call(a, e[i], i);
-                else if (n.isObject(e))
-                    for (s = (o = Object.keys(e)).length, i = 0; i < s; i++) t.call(a, e[o[i]], o[i])
+                        for (i = 0; i < s; i++) t.call(n, e[i], i);
+                else if (a.isObject(e))
+                    for (s = (o = Object.keys(e)).length, i = 0; i < s; i++) t.call(n, e[o[i]], o[i])
             },
             arrayEquals: function(e, t) {
-                var a, r, i, s;
+                var n, r, i, s;
                 if (!e || !t || e.length !== t.length) return !1;
-                for (a = 0, r = e.length; a < r; ++a)
-                    if (i = e[a], s = t[a], i instanceof Array && s instanceof Array) {
-                        if (!n.arrayEquals(i, s)) return !1
+                for (n = 0, r = e.length; n < r; ++n)
+                    if (i = e[n], s = t[n], i instanceof Array && s instanceof Array) {
+                        if (!a.arrayEquals(i, s)) return !1
                     } else if (i !== s) return !1;
                 return !0
             },
             clone: function(e) {
-                if (n.isArray(e)) return e.map(n.clone);
-                if (n.isObject(e)) {
-                    for (var t = {}, a = Object.keys(e), r = a.length, i = 0; i < r; ++i) t[a[i]] = n.clone(e[a[i]]);
+                if (a.isArray(e)) return e.map(a.clone);
+                if (a.isObject(e)) {
+                    for (var t = {}, n = Object.keys(e), r = n.length, i = 0; i < r; ++i) t[n[i]] = a.clone(e[n[i]]);
                     return t
                 }
                 return e
             },
-            _merger: function(e, t, a, r) {
+            _merger: function(e, t, n, r) {
                 var i = t[e],
-                    s = a[e];
-                n.isObject(i) && n.isObject(s) ? n.merge(i, s, r) : t[e] = n.clone(s)
+                    s = n[e];
+                a.isObject(i) && a.isObject(s) ? a.merge(i, s, r) : t[e] = a.clone(s)
             },
-            _mergerIf: function(e, t, a) {
+            _mergerIf: function(e, t, n) {
                 var r = t[e],
-                    i = a[e];
-                n.isObject(r) && n.isObject(i) ? n.mergeIf(r, i) : t.hasOwnProperty(e) || (t[e] = n.clone(i))
+                    i = n[e];
+                a.isObject(r) && a.isObject(i) ? a.mergeIf(r, i) : t.hasOwnProperty(e) || (t[e] = a.clone(i))
             },
-            merge: function(e, t, a) {
-                var r, i, s, o, d, u = n.isArray(t) ? t : [t],
+            merge: function(e, t, n) {
+                var r, i, s, o, d, u = a.isArray(t) ? t : [t],
                     l = u.length;
-                if (!n.isObject(e)) return e;
-                for (r = (a = a || {}).merger || n._merger, i = 0; i < l; ++i)
-                    if (t = u[i], n.isObject(t))
-                        for (d = 0, o = (s = Object.keys(t)).length; d < o; ++d) r(s[d], e, t, a);
+                if (!a.isObject(e)) return e;
+                for (r = (n = n || {}).merger || a._merger, i = 0; i < l; ++i)
+                    if (t = u[i], a.isObject(t))
+                        for (d = 0, o = (s = Object.keys(t)).length; d < o; ++d) r(s[d], e, t, n);
                 return e
             },
             mergeIf: function(e, t) {
-                return n.merge(e, t, {
-                    merger: n._mergerIf
+                return a.merge(e, t, {
+                    merger: a._mergerIf
                 })
             }
         };
-        e.exports = n, n.callCallback = n.callback, n.indexOf = function(e, t, a) {
-            return Array.prototype.indexOf.call(e, t, a)
-        }, n.getValueOrDefault = n.valueOrDefault, n.getValueAtIndexOrDefault = n.valueAtIndexOrDefault
+        e.exports = a, a.callCallback = a.callback, a.indexOf = function(e, t, n) {
+            return Array.prototype.indexOf.call(e, t, n)
+        }, a.getValueOrDefault = a.valueOrDefault, a.getValueAtIndexOrDefault = a.valueAtIndexOrDefault
     },
-    "3nPg": function(e, t, a) {
-        var n = a("G7No"),
+    "3nPg": function(e, t, n) {
+        var a = n("G7No"),
             r = 6e4;
         e.exports = function(e, t) {
-            var a = n(e, t) / r;
-            return a > 0 ? Math.floor(a) : Math.ceil(a)
+            var n = a(e, t) / r;
+            return n > 0 ? Math.floor(n) : Math.ceil(n)
         }
     },
-    "3znZ": function(e, t, a) {
-        var n = a("u/4p");
+    "3znZ": function(e, t, n) {
+        var a = n("u/4p");
         e.exports = function(e) {
-            return n(e, {
+            return a(e, {
                 weekStartsOn: 1
             })
         }
     },
-    "40fB": function(e, t, a) {
+    "40fB": function(e, t, n) {
         "use strict";
         e.exports = function(e) {
             var t = e.Scale.extend({
@@ -2125,37 +2125,37 @@ webpackJsonp([35], {
                     this.ticks = 0 === this.minIndex && this.maxIndex === e.length - 1 ? e : e.slice(this.minIndex, this.maxIndex + 1)
                 },
                 getLabelForIndex: function(e, t) {
-                    var a = this.chart.data,
-                        n = this.isHorizontal();
-                    return a.yLabels && !n ? this.getRightValue(a.datasets[t].data[e]) : this.ticks[e - this.minIndex]
+                    var n = this.chart.data,
+                        a = this.isHorizontal();
+                    return n.yLabels && !a ? this.getRightValue(n.datasets[t].data[e]) : this.ticks[e - this.minIndex]
                 },
                 getPixelForValue: function(e, t) {
-                    var a, n = this.options.offset,
-                        r = Math.max(this.maxIndex + 1 - this.minIndex - (n ? 0 : 1), 1);
-                    if (void 0 !== e && null !== e && (a = this.isHorizontal() ? e.x : e.y), void 0 !== a || void 0 !== e && isNaN(t)) {
+                    var n, a = this.options.offset,
+                        r = Math.max(this.maxIndex + 1 - this.minIndex - (a ? 0 : 1), 1);
+                    if (void 0 !== e && null !== e && (n = this.isHorizontal() ? e.x : e.y), void 0 !== n || void 0 !== e && isNaN(t)) {
                         var i = this.getLabels();
-                        e = a || e;
+                        e = n || e;
                         var s = i.indexOf(e);
                         t = -1 !== s ? s : t
                     }
                     if (this.isHorizontal()) {
                         var o = this.width / r,
                             d = o * (t - this.minIndex);
-                        return n && (d += o / 2), this.left + Math.round(d)
+                        return a && (d += o / 2), this.left + Math.round(d)
                     }
                     var u = this.height / r,
                         l = u * (t - this.minIndex);
-                    return n && (l += u / 2), this.top + Math.round(l)
+                    return a && (l += u / 2), this.top + Math.round(l)
                 },
                 getPixelForTick: function(e) {
                     return this.getPixelForValue(this.ticks[e], e + this.minIndex, null)
                 },
                 getValueForPixel: function(e) {
                     var t = this.options.offset,
-                        a = Math.max(this._ticks.length - (t ? 0 : 1), 1),
-                        n = this.isHorizontal(),
-                        r = (n ? this.width : this.height) / a;
-                    return e -= n ? this.left : this.top, t && (e -= r / 2), (e <= 0 ? 0 : Math.round(e / r)) + this.minIndex
+                        n = Math.max(this._ticks.length - (t ? 0 : 1), 1),
+                        a = this.isHorizontal(),
+                        r = (a ? this.width : this.height) / n;
+                    return e -= a ? this.left : this.top, t && (e -= r / 2), (e <= 0 ? 0 : Math.round(e / r)) + this.minIndex
                 },
                 getBasePixel: function() {
                     return this.bottom
@@ -2166,27 +2166,27 @@ webpackJsonp([35], {
             })
         }
     },
-    "4LxA": function(e, t, a) {
-        var n = a("iRXW");
+    "4LxA": function(e, t, n) {
+        var a = n("iRXW");
         e.exports = function(e, t) {
-            var a = n(e),
-                r = n(t);
-            return a.getTime() === r.getTime()
+            var n = a(e),
+                r = a(t);
+            return n.getTime() === r.getTime()
         }
     },
-    "4OFc": function(e, t, a) {
-        var n = a("xA5w");
+    "4OFc": function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e) {
-            var t = n(e).getDay();
+            var t = a(e).getDay();
             return 0 === t || 6 === t
         }
     },
-    "4Uxm": function(e, t, a) {
+    "4Uxm": function(e, t, n) {
         "use strict";
-        var n = a("k7DW"),
-            r = a("wGD1"),
-            i = a("iO9N");
-        n._set("global", {
+        var a = n("k7DW"),
+            r = n("wGD1"),
+            i = n("iO9N");
+        a._set("global", {
             plugins: {}
         }), e.exports = function(e) {
             e.plugins = {
@@ -2201,7 +2201,7 @@ webpackJsonp([35], {
                 unregister: function(e) {
                     var t = this._plugins;
                     [].concat(e).forEach(function(e) {
-                        var a = t.indexOf(e); - 1 !== a && t.splice(a, 1)
+                        var n = t.indexOf(e); - 1 !== n && t.splice(n, 1)
                     }), this._cacheId++
                 },
                 clear: function() {
@@ -2213,25 +2213,25 @@ webpackJsonp([35], {
                 getAll: function() {
                     return this._plugins
                 },
-                notify: function(e, t, a) {
-                    var n, r, i, s, o, d = this.descriptors(e),
+                notify: function(e, t, n) {
+                    var a, r, i, s, o, d = this.descriptors(e),
                         u = d.length;
-                    for (n = 0; n < u; ++n)
-                        if (r = d[n], i = r.plugin, "function" == typeof(o = i[t]) && ((s = [e].concat(a || [])).push(r.options), !1 === o.apply(i, s))) return !1;
+                    for (a = 0; a < u; ++a)
+                        if (r = d[a], i = r.plugin, "function" == typeof(o = i[t]) && ((s = [e].concat(n || [])).push(r.options), !1 === o.apply(i, s))) return !1;
                     return !0
                 },
                 descriptors: function(e) {
                     var t = e._plugins || (e._plugins = {});
                     if (t.id === this._cacheId) return t.descriptors;
-                    var a = [],
+                    var n = [],
                         r = [],
                         s = e && e.config || {},
                         o = s.options && s.options.plugins || {};
                     return this._plugins.concat(s.plugins || []).forEach(function(e) {
-                        if (-1 === a.indexOf(e)) {
+                        if (-1 === n.indexOf(e)) {
                             var t = e.id,
                                 s = o[t];
-                            !1 !== s && (!0 === s && (s = i.clone(n.global.plugins[t])), a.push(e), r.push({
+                            !1 !== s && (!0 === s && (s = i.clone(a.global.plugins[t])), n.push(e), r.push({
                                 plugin: e,
                                 options: s || {}
                             }))
@@ -2241,32 +2241,32 @@ webpackJsonp([35], {
             }, e.pluginService = e.plugins, e.PluginBase = r.extend({})
         }
     },
-    "4Z4o": function(e, t, a) {
-        var n = a("3EIC");
+    "4Z4o": function(e, t, n) {
+        var a = n("3EIC");
         e.exports = function(e, t) {
-            var a = Number(t);
-            return n(e, 12 * a)
+            var n = Number(t);
+            return a(e, 12 * n)
         }
     },
-    "4zIR": function(e, t, a) {
-        var n = a("xA5w");
-        e.exports = function(e, t, a) {
-            var r = n(e).getTime(),
-                i = n(t).getTime(),
-                s = n(a).getTime();
+    "4zIR": function(e, t, n) {
+        var a = n("xA5w");
+        e.exports = function(e, t, n) {
+            var r = a(e).getTime(),
+                i = a(t).getTime(),
+                s = a(n).getTime();
             if (i > s) throw new Error("The start of the range cannot be after the end of the range");
             return r >= i && r <= s
         }
     },
-    "5ImO": function(e, t, a) {
+    "5ImO": function(e, t, n) {
         "use strict";
-        var n = a("k7DW"),
-            r = a("wGD1"),
-            i = a("iO9N");
-        n._set("global", {
+        var a = n("k7DW"),
+            r = n("wGD1"),
+            i = n("iO9N");
+        a._set("global", {
             elements: {
                 arc: {
-                    backgroundColor: n.global.defaultColor,
+                    backgroundColor: a.global.defaultColor,
                     borderColor: "#fff",
                     borderWidth: 2
                 }
@@ -2277,16 +2277,16 @@ webpackJsonp([35], {
                 return !!t && Math.pow(e - t.x, 2) < Math.pow(t.radius + t.hoverRadius, 2)
             },
             inRange: function(e, t) {
-                var a = this._view;
-                if (a) {
-                    for (var n = i.getAngleFromPoint(a, {
+                var n = this._view;
+                if (n) {
+                    for (var a = i.getAngleFromPoint(n, {
                             x: e,
                             y: t
-                        }), r = n.angle, s = n.distance, o = a.startAngle, d = a.endAngle; d < o;) d += 2 * Math.PI;
+                        }), r = a.angle, s = a.distance, o = n.startAngle, d = n.endAngle; d < o;) d += 2 * Math.PI;
                     for (; r > d;) r -= 2 * Math.PI;
                     for (; r < o;) r += 2 * Math.PI;
                     var u = r >= o && r <= d,
-                        l = s >= a.innerRadius && s <= a.outerRadius;
+                        l = s >= n.innerRadius && s <= n.outerRadius;
                     return u && l
                 }
                 return !1
@@ -2294,10 +2294,10 @@ webpackJsonp([35], {
             getCenterPoint: function() {
                 var e = this._view,
                     t = (e.startAngle + e.endAngle) / 2,
-                    a = (e.innerRadius + e.outerRadius) / 2;
+                    n = (e.innerRadius + e.outerRadius) / 2;
                 return {
-                    x: e.x + Math.cos(t) * a,
-                    y: e.y + Math.sin(t) * a
+                    x: e.x + Math.cos(t) * n,
+                    y: e.y + Math.sin(t) * n
                 }
             },
             getArea: function() {
@@ -2307,24 +2307,24 @@ webpackJsonp([35], {
             tooltipPosition: function() {
                 var e = this._view,
                     t = e.startAngle + (e.endAngle - e.startAngle) / 2,
-                    a = (e.outerRadius - e.innerRadius) / 2 + e.innerRadius;
+                    n = (e.outerRadius - e.innerRadius) / 2 + e.innerRadius;
                 return {
-                    x: e.x + Math.cos(t) * a,
-                    y: e.y + Math.sin(t) * a
+                    x: e.x + Math.cos(t) * n,
+                    y: e.y + Math.sin(t) * n
                 }
             },
             draw: function() {
                 var e = this._chart.ctx,
                     t = this._view,
-                    a = t.startAngle,
-                    n = t.endAngle;
-                e.beginPath(), e.arc(t.x, t.y, t.outerRadius, a, n), e.arc(t.x, t.y, t.innerRadius, n, a, !0), e.closePath(), e.strokeStyle = t.borderColor, e.lineWidth = t.borderWidth, e.fillStyle = t.backgroundColor, e.fill(), e.lineJoin = "bevel", t.borderWidth && e.stroke()
+                    n = t.startAngle,
+                    a = t.endAngle;
+                e.beginPath(), e.arc(t.x, t.y, t.outerRadius, n, a), e.arc(t.x, t.y, t.innerRadius, a, n, !0), e.closePath(), e.strokeStyle = t.borderColor, e.lineWidth = t.borderWidth, e.fillStyle = t.backgroundColor, e.fill(), e.lineJoin = "bevel", t.borderWidth && e.stroke()
             }
         })
     },
-    "5Omq": function(e, t, a) {
+    "5Omq": function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("se", {
@@ -2373,9 +2373,9 @@ webpackJsonp([35], {
             })
         })
     },
-    "5j66": function(e, t, a) {
+    "5j66": function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("km", {
@@ -2422,23 +2422,23 @@ webpackJsonp([35], {
             })
         })
     },
-    "5qwL": function(e, t, a) {
-        var n = a("VaeB");
+    "5qwL": function(e, t, n) {
+        var a = n("VaeB");
         e.exports = function(e, t) {
-            var a = n(e),
-                r = n(t);
-            return a.getTime() === r.getTime()
+            var n = a(e),
+                r = a(t);
+            return n.getTime() === r.getTime()
         }
     },
-    "5vPg": function(e, t, a) {
+    "5vPg": function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
 
-            function t(e, t, a, n) {
+            function t(e, t, n, a) {
                 var r = "";
-                if (t) switch (a) {
+                if (t) switch (n) {
                     case "s":
                         r = "काही सेकंद";
                         break;
@@ -2471,7 +2471,7 @@ webpackJsonp([35], {
                         break;
                     case "yy":
                         r = "%d वर्षे"
-                } else switch (a) {
+                } else switch (n) {
                     case "s":
                         r = "काही सेकंदां";
                         break;
@@ -2507,7 +2507,7 @@ webpackJsonp([35], {
                 }
                 return r.replace(/%d/i, e)
             }
-            var a = {
+            var n = {
                     1: "१",
                     2: "२",
                     3: "३",
@@ -2519,7 +2519,7 @@ webpackJsonp([35], {
                     9: "९",
                     0: "०"
                 },
-                n = {
+                a = {
                     "१": "1",
                     "२": "2",
                     "३": "3",
@@ -2571,19 +2571,19 @@ webpackJsonp([35], {
                 },
                 preparse: function(e) {
                     return e.replace(/[१२३४५६७८९०]/g, function(e) {
-                        return n[e]
+                        return a[e]
                     })
                 },
                 postformat: function(e) {
                     return e.replace(/\d/g, function(e) {
-                        return a[e]
+                        return n[e]
                     })
                 },
                 meridiemParse: /रात्री|सकाळी|दुपारी|सायंकाळी/,
                 meridiemHour: function(e, t) {
                     return 12 === e && (e = 0), "रात्री" === t ? e < 4 ? e : e + 12 : "सकाळी" === t ? e : "दुपारी" === t ? e >= 10 ? e : e + 12 : "सायंकाळी" === t ? e + 12 : void 0
                 },
-                meridiem: function(e, t, a) {
+                meridiem: function(e, t, n) {
                     return e < 4 ? "रात्री" : e < 10 ? "सकाळी" : e < 17 ? "दुपारी" : e < 20 ? "सायंकाळी" : "रात्री"
                 },
                 week: {
@@ -2598,36 +2598,36 @@ webpackJsonp([35], {
             return e instanceof Date
         }
     },
-    "6CZb": function(e, t, a) {
-        var n = a("xA5w");
+    "6CZb": function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e) {
-            return n(e).getTime() > (new Date).getTime()
+            return a(e).getTime() > (new Date).getTime()
         }
     },
-    "6SO/": function(e, t, a) {
-        var n = a("gAt4");
+    "6SO/": function(e, t, n) {
+        var a = n("gAt4");
         e.exports = function(e, t) {
-            var a = n(e, t) / 7;
-            return a > 0 ? Math.floor(a) : Math.ceil(a)
+            var n = a(e, t) / 7;
+            return n > 0 ? Math.floor(n) : Math.ceil(n)
         }
     },
-    "6Zhv": function(e, t, a) {
-        var n = a("xA5w");
+    "6Zhv": function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e, t) {
-            var a = n(e).getTime(),
+            var n = a(e).getTime(),
                 r = Number(t);
-            return new Date(a + r)
+            return new Date(n + r)
         }
     },
-    "6axH": function(e, t, a) {
-        var n = a("xA5w");
+    "6axH": function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e) {
-            return 6 === n(e).getDay()
+            return 6 === a(e).getDay()
         }
     },
-    "6cf8": function(e, t, a) {
+    "6cf8": function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -2700,12 +2700,12 @@ webpackJsonp([35], {
             })
         })
     },
-    "6rMk": function(e, t, a) {
+    "6rMk": function(e, t, n) {
         "use strict";
-        var n = a("k7DW"),
-            r = a("wGD1"),
-            i = a("iO9N");
-        n._set("global", {
+        var a = n("k7DW"),
+            r = n("wGD1"),
+            i = n("iO9N");
+        a._set("global", {
             animation: {
                 duration: 1e3,
                 easing: "easeOutQuart",
@@ -2726,9 +2726,9 @@ webpackJsonp([35], {
                 animations: [],
                 dropFrames: 0,
                 request: null,
-                addAnimation: function(e, t, a, n) {
+                addAnimation: function(e, t, n, a) {
                     var r, i, s = this.animations;
-                    for (t.chart = e, n || (e.animating = !0), r = 0, i = s.length; r < i; ++r)
+                    for (t.chart = e, a || (e.animating = !0), r = 0, i = s.length; r < i; ++r)
                         if (s[r].chart === e) return void(s[r] = t);
                     s.push(t), 1 === s.length && this.requestAnimationFrame()
                 },
@@ -2747,11 +2747,11 @@ webpackJsonp([35], {
                     var e = Date.now(),
                         t = 0;
                     this.dropFrames > 1 && (t = Math.floor(this.dropFrames), this.dropFrames = this.dropFrames % 1), this.advance(1 + t);
-                    var a = Date.now();
-                    this.dropFrames += (a - e) / this.frameDuration, this.animations.length > 0 && this.requestAnimationFrame()
+                    var n = Date.now();
+                    this.dropFrames += (n - e) / this.frameDuration, this.animations.length > 0 && this.requestAnimationFrame()
                 },
                 advance: function(e) {
-                    for (var t, a, n = this.animations, r = 0; r < n.length;) a = (t = n[r]).chart, t.currentStep = (t.currentStep || 0) + e, t.currentStep = Math.min(t.currentStep, t.numSteps), i.callback(t.render, [a, t], a), i.callback(t.onAnimationProgress, [t], a), t.currentStep >= t.numSteps ? (i.callback(t.onAnimationComplete, [t], a), a.animating = !1, n.splice(r, 1)) : ++r
+                    for (var t, n, a = this.animations, r = 0; r < a.length;) n = (t = a[r]).chart, t.currentStep = (t.currentStep || 0) + e, t.currentStep = Math.min(t.currentStep, t.numSteps), i.callback(t.render, [n, t], n), i.callback(t.onAnimationProgress, [t], n), t.currentStep >= t.numSteps ? (i.callback(t.onAnimationComplete, [t], n), n.animating = !1, a.splice(r, 1)) : ++r
                 }
             }, Object.defineProperty(e.Animation.prototype, "animationObject", {
                 get: function() {
@@ -2767,29 +2767,29 @@ webpackJsonp([35], {
             })
         }
     },
-    "6udH": function(e, t, a) {
-        var n = a("xA5w");
+    "6udH": function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e) {
-            return 1 === n(e).getDate()
+            return 1 === a(e).getDate()
         }
     },
-    "6w0d": function(e, t, a) {
+    "6w0d": function(e, t, n) {
         "use strict";
         t.a = function(e) {
-            return n.__awaiter(this, void 0, void 0, function() {
+            return a.__awaiter(this, void 0, void 0, function() {
                 var t;
-                return n.__generator(this, function(a) {
-                    switch (a.label) {
+                return a.__generator(this, function(n) {
+                    switch (n.label) {
                         case 0:
                             return [4, r.a.request(e.path, e)];
                         case 1:
-                            return t = a.sent(), [2, new i(t, e)]
+                            return t = n.sent(), [2, new i(t, e)]
                     }
                 })
             })
         };
-        var n = a("TToO"),
-            r = a("9u8h"),
+        var a = n("TToO"),
+            r = n("9u8h"),
             i = function() {
                 function e(e, t) {
                     this.status = e.status, this.body = e.body, this.error = e.error, this.requestError = e.requestError, this.request = t
@@ -2953,16 +2953,16 @@ webpackJsonp([35], {
             yellowgreen: [154, 205, 50]
         }
     },
-    "7EGB": function(e, t, a) {
-        var n = a("Jvcu");
+    "7EGB": function(e, t, n) {
+        var a = n("Jvcu");
         e.exports = function(e, t) {
-            var a = Number(t);
-            return n(e, 7 * a)
+            var n = Number(t);
+            return a(e, 7 * n)
         }
     },
-    "7LV+": function(e, t, a) {
+    "7LV+": function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
 
@@ -2970,15 +2970,15 @@ webpackJsonp([35], {
                 return e % 10 < 5 && e % 10 > 1 && ~~(e / 10) % 10 != 1
             }
 
-            function a(e, a, n) {
+            function n(e, n, a) {
                 var r = e + " ";
-                switch (n) {
+                switch (a) {
                     case "m":
-                        return a ? "minuta" : "minutę";
+                        return n ? "minuta" : "minutę";
                     case "mm":
                         return r + (t(e) ? "minuty" : "minut");
                     case "h":
-                        return a ? "godzina" : "godzinę";
+                        return n ? "godzina" : "godzinę";
                     case "hh":
                         return r + (t(e) ? "godziny" : "godzin");
                     case "MM":
@@ -2987,11 +2987,11 @@ webpackJsonp([35], {
                         return r + (t(e) ? "lata" : "lat")
                 }
             }
-            var n = "styczeń_luty_marzec_kwiecień_maj_czerwiec_lipiec_sierpień_wrzesień_październik_listopad_grudzień".split("_"),
+            var a = "styczeń_luty_marzec_kwiecień_maj_czerwiec_lipiec_sierpień_wrzesień_październik_listopad_grudzień".split("_"),
                 r = "stycznia_lutego_marca_kwietnia_maja_czerwca_lipca_sierpnia_września_października_listopada_grudnia".split("_");
             return e.defineLocale("pl", {
                 months: function(e, t) {
-                    return e ? "" === t ? "(" + r[e.month()] + "|" + n[e.month()] + ")" : /D MMMM/.test(t) ? r[e.month()] : n[e.month()] : n
+                    return e ? "" === t ? "(" + r[e.month()] + "|" + a[e.month()] + ")" : /D MMMM/.test(t) ? r[e.month()] : a[e.month()] : a
                 },
                 monthsShort: "sty_lut_mar_kwi_maj_cze_lip_sie_wrz_paź_lis_gru".split("_"),
                 weekdays: "niedziela_poniedziałek_wtorek_środa_czwartek_piątek_sobota".split("_"),
@@ -3028,16 +3028,16 @@ webpackJsonp([35], {
                     future: "za %s",
                     past: "%s temu",
                     s: "kilka sekund",
-                    m: a,
-                    mm: a,
-                    h: a,
-                    hh: a,
+                    m: n,
+                    mm: n,
+                    h: n,
+                    hh: n,
                     d: "1 dzień",
                     dd: "%d dni",
                     M: "miesiąc",
-                    MM: a,
+                    MM: n,
                     y: "rok",
-                    yy: a
+                    yy: n
                 },
                 dayOfMonthOrdinalParse: /\d{1,2}\./,
                 ordinal: "%d.",
@@ -3048,17 +3048,17 @@ webpackJsonp([35], {
             })
         })
     },
-    "7MHZ": function(e, t, a) {
+    "7MHZ": function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             var t = "ene._feb._mar._abr._may._jun._jul._ago._sep._oct._nov._dic.".split("_"),
-                a = "ene_feb_mar_abr_may_jun_jul_ago_sep_oct_nov_dic".split("_");
+                n = "ene_feb_mar_abr_may_jun_jul_ago_sep_oct_nov_dic".split("_");
             return e.defineLocale("es-do", {
                 months: "enero_febrero_marzo_abril_mayo_junio_julio_agosto_septiembre_octubre_noviembre_diciembre".split("_"),
-                monthsShort: function(e, n) {
-                    return e ? /-MMM-/.test(n) ? a[e.month()] : t[e.month()] : t
+                monthsShort: function(e, a) {
+                    return e ? /-MMM-/.test(a) ? n[e.month()] : t[e.month()] : t
                 },
                 monthsParseExact: !0,
                 weekdays: "domingo_lunes_martes_miércoles_jueves_viernes_sábado".split("_"),
@@ -3115,9 +3115,9 @@ webpackJsonp([35], {
             })
         })
     },
-    "7OnE": function(e, t, a) {
+    "7OnE": function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -3132,7 +3132,7 @@ webpackJsonp([35], {
                     9: "٩",
                     0: "٠"
                 },
-                a = {
+                n = {
                     "١": "1",
                     "٢": "2",
                     "٣": "3",
@@ -3163,7 +3163,7 @@ webpackJsonp([35], {
                 isPM: function(e) {
                     return "م" === e
                 },
-                meridiem: function(e, t, a) {
+                meridiem: function(e, t, n) {
                     return e < 12 ? "ص" : "م"
                 },
                 calendar: {
@@ -3191,7 +3191,7 @@ webpackJsonp([35], {
                 },
                 preparse: function(e) {
                     return e.replace(/[١٢٣٤٥٦٧٨٩٠]/g, function(e) {
-                        return a[e]
+                        return n[e]
                     }).replace(/،/g, ",")
                 },
                 postformat: function(e) {
@@ -3206,9 +3206,9 @@ webpackJsonp([35], {
             })
         })
     },
-    "7Q8x": function(e, t, a) {
+    "7Q8x": function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("ss", {
@@ -3250,7 +3250,7 @@ webpackJsonp([35], {
                     yy: "%d iminyaka"
                 },
                 meridiemParse: /ekuseni|emini|entsambama|ebusuku/,
-                meridiem: function(e, t, a) {
+                meridiem: function(e, t, n) {
                     return e < 11 ? "ekuseni" : e < 15 ? "emini" : e < 19 ? "entsambama" : "ebusuku"
                 },
                 meridiemHour: function(e, t) {
@@ -3265,62 +3265,62 @@ webpackJsonp([35], {
             })
         })
     },
-    "7Swd": function(e, t, a) {
-        var n = a("3EIC");
+    "7Swd": function(e, t, n) {
+        var a = n("3EIC");
         e.exports = function(e, t) {
-            var a = Number(t);
-            return n(e, -a)
+            var n = Number(t);
+            return a(e, -n)
         }
     },
-    "7Xwz": function(e, t, a) {
-        var n = a("xA5w");
+    "7Xwz": function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e) {
-            var t = n(e);
+            var t = a(e);
             return t.setDate(1), t.setHours(0, 0, 0, 0), t
         }
     },
-    "7yyf": function(e, t, a) {
-        var n = a("rBmI");
+    "7yyf": function(e, t, n) {
+        var a = n("rBmI");
         e.exports = function(e, t) {
-            var a = n(e),
-                r = n(t);
-            return a.getTime() === r.getTime()
+            var n = a(e),
+                r = a(t);
+            return n.getTime() === r.getTime()
         }
     },
-    "8Gpr": function(e, t, a) {
-        var n = a("xA5w");
+    "8Gpr": function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e) {
-            return n(e).getHours()
+            return a(e).getHours()
         }
     },
-    "8KV+": function(e, t, a) {
-        var n = a("u/4p");
-        e.exports = function(e, t, a) {
-            var r = n(e, a),
-                i = n(t, a);
+    "8KV+": function(e, t, n) {
+        var a = n("u/4p");
+        e.exports = function(e, t, n) {
+            var r = a(e, n),
+                i = a(t, n);
             return r.getTime() === i.getTime()
         }
     },
-    "8QR2": function(e, t, a) {
-        var n = a("xA5w"),
+    "8QR2": function(e, t, n) {
+        var a = n("xA5w"),
             r = 864e5;
-        e.exports = function(e, t, a, i) {
-            var s = n(e).getTime(),
-                o = n(t).getTime(),
-                d = n(a).getTime(),
-                u = n(i).getTime();
+        e.exports = function(e, t, n, i) {
+            var s = a(e).getTime(),
+                o = a(t).getTime(),
+                d = a(n).getTime(),
+                u = a(i).getTime();
             if (s > o || d > u) throw new Error("The start of the range cannot be after the end of the range");
             if (!(s < u && d < o)) return 0;
             var l = (u > o ? o : u) - (d < s ? s : d);
             return Math.ceil(l / r)
         }
     },
-    "8uqi": function(e, t, a) {
+    "8uqi": function(e, t, n) {
         "use strict";
-        var n = a("k7DW"),
-            r = a("L5rj"),
-            i = a("iO9N");
-        n._set("line", {
+        var a = n("k7DW"),
+            r = n("L5rj"),
+            i = n("iO9N");
+        a._set("line", {
             showLines: !0,
             spanGaps: !1,
             hover: {
@@ -3344,7 +3344,7 @@ webpackJsonp([35], {
                 datasetElementType: r.Line,
                 dataElementType: r.Point,
                 update: function(e) {
-                    var a, n, r, s = this.getMeta(),
+                    var n, a, r, s = this.getMeta(),
                         o = s.dataset,
                         d = s.data || [],
                         u = this.chart.options,
@@ -3365,29 +3365,29 @@ webpackJsonp([35], {
                             fill: r.fill ? r.fill : void 0 !== h.fill ? h.fill : l.fill,
                             steppedLine: r.steppedLine ? r.steppedLine : i.valueOrDefault(h.steppedLine, l.stepped),
                             cubicInterpolationMode: r.cubicInterpolationMode ? r.cubicInterpolationMode : i.valueOrDefault(h.cubicInterpolationMode, l.cubicInterpolationMode)
-                        }, o.pivot()), a = 0, n = d.length; a < n; ++a) this.updateElement(d[a], a, e);
-                    for (m && 0 !== o._model.tension && this.updateBezierControlPoints(), a = 0, n = d.length; a < n; ++a) d[a].pivot()
+                        }, o.pivot()), n = 0, a = d.length; n < a; ++n) this.updateElement(d[n], n, e);
+                    for (m && 0 !== o._model.tension && this.updateBezierControlPoints(), n = 0, a = d.length; n < a; ++n) d[n].pivot()
                 },
                 getPointBackgroundColor: function(e, t) {
-                    var a = this.chart.options.elements.point.backgroundColor,
-                        n = this.getDataset(),
+                    var n = this.chart.options.elements.point.backgroundColor,
+                        a = this.getDataset(),
                         r = e.custom || {};
-                    return r.backgroundColor ? a = r.backgroundColor : n.pointBackgroundColor ? a = i.valueAtIndexOrDefault(n.pointBackgroundColor, t, a) : n.backgroundColor && (a = n.backgroundColor), a
+                    return r.backgroundColor ? n = r.backgroundColor : a.pointBackgroundColor ? n = i.valueAtIndexOrDefault(a.pointBackgroundColor, t, n) : a.backgroundColor && (n = a.backgroundColor), n
                 },
                 getPointBorderColor: function(e, t) {
-                    var a = this.chart.options.elements.point.borderColor,
-                        n = this.getDataset(),
+                    var n = this.chart.options.elements.point.borderColor,
+                        a = this.getDataset(),
                         r = e.custom || {};
-                    return r.borderColor ? a = r.borderColor : n.pointBorderColor ? a = i.valueAtIndexOrDefault(n.pointBorderColor, t, a) : n.borderColor && (a = n.borderColor), a
+                    return r.borderColor ? n = r.borderColor : a.pointBorderColor ? n = i.valueAtIndexOrDefault(a.pointBorderColor, t, n) : a.borderColor && (n = a.borderColor), n
                 },
                 getPointBorderWidth: function(e, t) {
-                    var a = this.chart.options.elements.point.borderWidth,
-                        n = this.getDataset(),
+                    var n = this.chart.options.elements.point.borderWidth,
+                        a = this.getDataset(),
                         r = e.custom || {};
-                    return isNaN(r.borderWidth) ? !isNaN(n.pointBorderWidth) || i.isArray(n.pointBorderWidth) ? a = i.valueAtIndexOrDefault(n.pointBorderWidth, t, a) : isNaN(n.borderWidth) || (a = n.borderWidth) : a = r.borderWidth, a
+                    return isNaN(r.borderWidth) ? !isNaN(a.pointBorderWidth) || i.isArray(a.pointBorderWidth) ? n = i.valueAtIndexOrDefault(a.pointBorderWidth, t, n) : isNaN(a.borderWidth) || (n = a.borderWidth) : n = r.borderWidth, n
                 },
-                updateElement: function(e, t, a) {
-                    var n, r, s = this.getMeta(),
+                updateElement: function(e, t, n) {
+                    var a, r, s = this.getMeta(),
                         o = e.custom || {},
                         d = this.getDataset(),
                         u = this.index,
@@ -3395,10 +3395,10 @@ webpackJsonp([35], {
                         c = this.getScaleForId(s.yAxisID),
                         h = this.getScaleForId(s.xAxisID),
                         m = this.chart.options.elements.point;
-                    void 0 !== d.radius && void 0 === d.pointRadius && (d.pointRadius = d.radius), void 0 !== d.hitRadius && void 0 === d.pointHitRadius && (d.pointHitRadius = d.hitRadius), n = h.getPixelForValue("object" == typeof l ? l : NaN, t, u), r = a ? c.getBasePixel() : this.calculatePointY(l, t, u), e._xScale = h, e._yScale = c, e._datasetIndex = u, e._index = t, e._model = {
-                        x: n,
+                    void 0 !== d.radius && void 0 === d.pointRadius && (d.pointRadius = d.radius), void 0 !== d.hitRadius && void 0 === d.pointHitRadius && (d.pointHitRadius = d.hitRadius), a = h.getPixelForValue("object" == typeof l ? l : NaN, t, u), r = n ? c.getBasePixel() : this.calculatePointY(l, t, u), e._xScale = h, e._yScale = c, e._datasetIndex = u, e._index = t, e._model = {
+                        x: a,
                         y: r,
-                        skip: o.skip || isNaN(n) || isNaN(r),
+                        skip: o.skip || isNaN(a) || isNaN(r),
                         radius: o.radius || i.valueAtIndexOrDefault(d.pointRadius, t, m.radius),
                         pointStyle: o.pointStyle || i.valueAtIndexOrDefault(d.pointStyle, t, m.pointStyle),
                         backgroundColor: this.getPointBackgroundColor(e, t),
@@ -3409,15 +3409,15 @@ webpackJsonp([35], {
                         hitRadius: o.hitRadius || i.valueAtIndexOrDefault(d.pointHitRadius, t, m.hitRadius)
                     }
                 },
-                calculatePointY: function(e, t, a) {
-                    var n, r, i, s = this.chart,
+                calculatePointY: function(e, t, n) {
+                    var a, r, i, s = this.chart,
                         o = this.getMeta(),
                         d = this.getScaleForId(o.yAxisID),
                         u = 0,
                         l = 0;
                     if (d.options.stacked) {
-                        for (n = 0; n < a; n++)
-                            if (r = s.data.datasets[n], "line" === (i = s.getDatasetMeta(n)).type && i.yAxisID === d.id && s.isDatasetVisible(n)) {
+                        for (a = 0; a < n; a++)
+                            if (r = s.data.datasets[a], "line" === (i = s.getDatasetMeta(a)).type && i.yAxisID === d.id && s.isDatasetVisible(a)) {
                                 var c = Number(d.getRightValue(r.data[t]));
                                 c < 0 ? l += c || 0 : u += c || 0
                             }
@@ -3427,53 +3427,53 @@ webpackJsonp([35], {
                     return d.getPixelForValue(e)
                 },
                 updateBezierControlPoints: function() {
-                    function e(e, t, a) {
-                        return Math.max(Math.min(e, a), t)
+                    function e(e, t, n) {
+                        return Math.max(Math.min(e, n), t)
                     }
-                    var t, a, n, r, s = this.getMeta(),
+                    var t, n, a, r, s = this.getMeta(),
                         o = this.chart.chartArea,
                         d = s.data || [];
                     if (s.dataset._model.spanGaps && (d = d.filter(function(e) {
                             return !e._model.skip
                         })), "monotone" === s.dataset._model.cubicInterpolationMode) i.splineCurveMonotone(d);
                     else
-                        for (t = 0, a = d.length; t < a; ++t) n = d[t]._model, r = i.splineCurve(i.previousItem(d, t)._model, n, i.nextItem(d, t)._model, s.dataset._model.tension), n.controlPointPreviousX = r.previous.x, n.controlPointPreviousY = r.previous.y, n.controlPointNextX = r.next.x, n.controlPointNextY = r.next.y;
+                        for (t = 0, n = d.length; t < n; ++t) a = d[t]._model, r = i.splineCurve(i.previousItem(d, t)._model, a, i.nextItem(d, t)._model, s.dataset._model.tension), a.controlPointPreviousX = r.previous.x, a.controlPointPreviousY = r.previous.y, a.controlPointNextX = r.next.x, a.controlPointNextY = r.next.y;
                     if (this.chart.options.elements.line.capBezierPoints)
-                        for (t = 0, a = d.length; t < a; ++t)(n = d[t]._model).controlPointPreviousX = e(n.controlPointPreviousX, o.left, o.right), n.controlPointPreviousY = e(n.controlPointPreviousY, o.top, o.bottom), n.controlPointNextX = e(n.controlPointNextX, o.left, o.right), n.controlPointNextY = e(n.controlPointNextY, o.top, o.bottom)
+                        for (t = 0, n = d.length; t < n; ++t)(a = d[t]._model).controlPointPreviousX = e(a.controlPointPreviousX, o.left, o.right), a.controlPointPreviousY = e(a.controlPointPreviousY, o.top, o.bottom), a.controlPointNextX = e(a.controlPointNextX, o.left, o.right), a.controlPointNextY = e(a.controlPointNextY, o.top, o.bottom)
                 },
                 draw: function() {
                     var e = this.chart,
-                        a = this.getMeta(),
-                        n = a.data || [],
+                        n = this.getMeta(),
+                        a = n.data || [],
                         r = e.chartArea,
-                        s = n.length,
+                        s = a.length,
                         o = 0;
-                    for (i.canvas.clipArea(e.ctx, r), t(this.getDataset(), e.options) && a.dataset.draw(), i.canvas.unclipArea(e.ctx); o < s; ++o) n[o].draw(r)
+                    for (i.canvas.clipArea(e.ctx, r), t(this.getDataset(), e.options) && n.dataset.draw(), i.canvas.unclipArea(e.ctx); o < s; ++o) a[o].draw(r)
                 },
                 setHoverStyle: function(e) {
                     var t = this.chart.data.datasets[e._datasetIndex],
-                        a = e._index,
-                        n = e.custom || {},
+                        n = e._index,
+                        a = e.custom || {},
                         r = e._model;
-                    r.radius = n.hoverRadius || i.valueAtIndexOrDefault(t.pointHoverRadius, a, this.chart.options.elements.point.hoverRadius), r.backgroundColor = n.hoverBackgroundColor || i.valueAtIndexOrDefault(t.pointHoverBackgroundColor, a, i.getHoverColor(r.backgroundColor)), r.borderColor = n.hoverBorderColor || i.valueAtIndexOrDefault(t.pointHoverBorderColor, a, i.getHoverColor(r.borderColor)), r.borderWidth = n.hoverBorderWidth || i.valueAtIndexOrDefault(t.pointHoverBorderWidth, a, r.borderWidth)
+                    r.radius = a.hoverRadius || i.valueAtIndexOrDefault(t.pointHoverRadius, n, this.chart.options.elements.point.hoverRadius), r.backgroundColor = a.hoverBackgroundColor || i.valueAtIndexOrDefault(t.pointHoverBackgroundColor, n, i.getHoverColor(r.backgroundColor)), r.borderColor = a.hoverBorderColor || i.valueAtIndexOrDefault(t.pointHoverBorderColor, n, i.getHoverColor(r.borderColor)), r.borderWidth = a.hoverBorderWidth || i.valueAtIndexOrDefault(t.pointHoverBorderWidth, n, r.borderWidth)
                 },
                 removeHoverStyle: function(e) {
                     var t = this.chart.data.datasets[e._datasetIndex],
-                        a = e._index,
-                        n = e.custom || {},
+                        n = e._index,
+                        a = e.custom || {},
                         r = e._model;
-                    void 0 !== t.radius && void 0 === t.pointRadius && (t.pointRadius = t.radius), r.radius = n.radius || i.valueAtIndexOrDefault(t.pointRadius, a, this.chart.options.elements.point.radius), r.backgroundColor = this.getPointBackgroundColor(e, a), r.borderColor = this.getPointBorderColor(e, a), r.borderWidth = this.getPointBorderWidth(e, a)
+                    void 0 !== t.radius && void 0 === t.pointRadius && (t.pointRadius = t.radius), r.radius = a.radius || i.valueAtIndexOrDefault(t.pointRadius, n, this.chart.options.elements.point.radius), r.backgroundColor = this.getPointBackgroundColor(e, n), r.borderColor = this.getPointBorderColor(e, n), r.borderWidth = this.getPointBorderWidth(e, n)
                 }
             })
         }
     },
-    "8v14": function(e, t, a) {
+    "8v14": function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
 
-            function t(e, t, a, n) {
+            function t(e, t, n, a) {
                 var r = {
                     m: ["eine Minute", "einer Minute"],
                     h: ["eine Stunde", "einer Stunde"],
@@ -3484,7 +3484,7 @@ webpackJsonp([35], {
                     y: ["ein Jahr", "einem Jahr"],
                     yy: [e + " Jahre", e + " Jahren"]
                 };
-                return t ? r[a][0] : r[a][1]
+                return t ? r[n][0] : r[n][1]
             }
             return e.defineLocale("de-at", {
                 months: "Jänner_Februar_März_April_Mai_Juni_Juli_August_September_Oktober_November_Dezember".split("_"),
@@ -3534,175 +3534,175 @@ webpackJsonp([35], {
             })
         })
     },
-    "9Jn5": function(e, t, a) {
-        var n = a("zZbG");
+    "9Jn5": function(e, t, n) {
+        var a = n("zZbG");
         e.exports = function(e, t) {
-            return n(e) - n(t)
+            return a(e) - a(t)
         }
     },
-    "9r5b": function(e, t, a) {
-        var n = a("nfOx");
+    "9r5b": function(e, t, n) {
+        var a = n("nfOx");
         e.exports = function(e, t) {
-            var a = Number(t);
-            return n(e, -a)
+            var n = Number(t);
+            return a(e, -n)
         }
     },
-    "9u8h": function(e, t, a) {
+    "9u8h": function(e, t, n) {
         "use strict";
-        a.d(t, "a", function() {
+        n.d(t, "a", function() {
             return o
         });
-        var n = a("TToO"),
-            r = a("6sO2"),
-            i = a("Aj/L"),
+        var a = n("TToO"),
+            r = n("6sO2"),
+            i = n("Aj/L"),
             s = "application/json; charset=UTF-8",
             o = function() {
                 function e() {}
-                return e.get = function(e, t, a) {
-                    return void 0 === t && (t = {}), void 0 === a && (a = {}), n.__awaiter(this, void 0, void 0, function() {
-                        return n.__generator(this, function(r) {
+                return e.get = function(e, t, n) {
+                    return void 0 === t && (t = {}), void 0 === n && (n = {}), a.__awaiter(this, void 0, void 0, function() {
+                        return a.__generator(this, function(r) {
                             switch (r.label) {
                                 case 0:
-                                    return [4, this.request(e, n.__assign({}, t, {
+                                    return [4, this.request(e, a.__assign({}, t, {
                                         method: "GET"
-                                    }), a)];
+                                    }), n)];
                                 case 1:
                                     return [2, r.sent()]
                             }
                         })
                     })
-                }, e.put = function(e, t, a) {
-                    return void 0 === t && (t = {}), void 0 === a && (a = {}), n.__awaiter(this, void 0, void 0, function() {
-                        return n.__generator(this, function(r) {
+                }, e.put = function(e, t, n) {
+                    return void 0 === t && (t = {}), void 0 === n && (n = {}), a.__awaiter(this, void 0, void 0, function() {
+                        return a.__generator(this, function(r) {
                             switch (r.label) {
                                 case 0:
-                                    return [4, this.request(e, n.__assign({}, t, {
+                                    return [4, this.request(e, a.__assign({}, t, {
                                         method: "PUT"
-                                    }), a)];
+                                    }), n)];
                                 case 1:
                                     return [2, r.sent()]
                             }
                         })
                     })
-                }, e.post = function(e, t, a) {
-                    return void 0 === t && (t = {}), void 0 === a && (a = {}), n.__awaiter(this, void 0, void 0, function() {
-                        return n.__generator(this, function(r) {
+                }, e.post = function(e, t, n) {
+                    return void 0 === t && (t = {}), void 0 === n && (n = {}), a.__awaiter(this, void 0, void 0, function() {
+                        return a.__generator(this, function(r) {
                             switch (r.label) {
                                 case 0:
-                                    return [4, this.request(e, n.__assign({}, t, {
+                                    return [4, this.request(e, a.__assign({}, t, {
                                         method: "POST"
-                                    }), a)];
+                                    }), n)];
                                 case 1:
                                     return [2, r.sent()]
                             }
                         })
                     })
-                }, e.delete = function(e, t, a) {
-                    return void 0 === t && (t = {}), void 0 === a && (a = {}), n.__awaiter(this, void 0, void 0, function() {
-                        return n.__generator(this, function(r) {
+                }, e.delete = function(e, t, n) {
+                    return void 0 === t && (t = {}), void 0 === n && (n = {}), a.__awaiter(this, void 0, void 0, function() {
+                        return a.__generator(this, function(r) {
                             switch (r.label) {
                                 case 0:
-                                    return [4, this.request(e, n.__assign({}, t, {
+                                    return [4, this.request(e, a.__assign({}, t, {
                                         method: "DELETE"
-                                    }), a)];
+                                    }), n)];
                                 case 1:
                                     return [2, r.sent()]
                             }
                         })
                     })
-                }, e.request = function(e, t, a) {
-                    return void 0 === t && (t = {}), void 0 === a && (a = {}), n.__awaiter(this, void 0, void 0, function() {
+                }, e.request = function(e, t, n) {
+                    return void 0 === t && (t = {}), void 0 === n && (n = {}), a.__awaiter(this, void 0, void 0, function() {
                         var r, i;
-                        return n.__generator(this, function(n) {
-                            switch (n.label) {
+                        return a.__generator(this, function(a) {
+                            switch (a.label) {
                                 case 0:
-                                    return t = this.constructOptions(t, a), r = t.headers ? t.headers["Content-Type"] : void 0, t.body = this.serialize(t.body, r), [4, this._fetch(e, t)];
+                                    return t = this.constructOptions(t, n), r = t.headers ? t.headers["Content-Type"] : void 0, t.body = this.serialize(t.body, r), [4, this._fetch(e, t)];
                                 case 1:
-                                    return i = n.sent(), [4, this.constructLegacyAPIResponse(i)];
+                                    return i = a.sent(), [4, this.constructLegacyAPIResponse(i)];
                                 case 2:
-                                    return [2, n.sent()]
+                                    return [2, a.sent()]
                             }
                         })
                     })
                 }, e.getAPIURL = function(e) {
                     return new URL(e, r.n.config.apiBaseURL)
                 }, e.constructLegacyAPIResponse = function(e) {
-                    return n.__awaiter(this, void 0, void 0, function() {
-                        var t, a, r;
-                        return n.__generator(this, function(n) {
-                            switch (n.label) {
+                    return a.__awaiter(this, void 0, void 0, function() {
+                        var t, n, r;
+                        return a.__generator(this, function(a) {
+                            switch (a.label) {
                                 case 0:
                                     t = {
                                         status: e.status
-                                    }, n.label = 1;
+                                    }, a.label = 1;
                                 case 1:
-                                    return n.trys.push([1, 3, , 4]), [4, e.json()];
+                                    return a.trys.push([1, 3, , 4]), [4, e.json()];
                                 case 2:
-                                    return a = n.sent(), e.ok ? t.body = a : t.error = a, [3, 4];
+                                    return n = a.sent(), e.ok ? t.body = n : t.error = n, [3, 4];
                                 case 3:
-                                    return r = n.sent(), t.requestError = r, [3, 4];
+                                    return r = a.sent(), t.requestError = r, [3, 4];
                                 case 4:
                                     return [2, t]
                             }
                         })
                     })
                 }, e._fetch = function(e, t) {
-                    return void 0 === t && (t = {}), n.__awaiter(this, void 0, void 0, function() {
-                        return n.__generator(this, function(a) {
-                            switch (a.label) {
+                    return void 0 === t && (t = {}), a.__awaiter(this, void 0, void 0, function() {
+                        return a.__generator(this, function(n) {
+                            switch (n.label) {
                                 case 0:
                                     return [4, fetch(this.getAPIURL(e).toString(), t)];
                                 case 1:
-                                    return [2, a.sent()]
+                                    return [2, n.sent()]
                             }
                         })
                     })
                 }, e.constructOptions = function(e, t) {
                     return e = Object.assign({}, e, {
-                        headers: n.__assign({}, this.getDefaultHeaders(e, t), e.headers)
+                        headers: a.__assign({}, this.getDefaultHeaders(e, t), e.headers)
                     })
                 }, e.serialize = function(e, t) {
                     return t === s ? JSON.stringify(e) : e
                 }, e.getDefaultHeaders = function(e, t) {
-                    var a = r.n.store.getState(),
-                        n = {
+                    var n = r.n.store.getState(),
+                        a = {
                             Accept: "application/vnd.twitchtv.v" + (t.version || 5) + "+json; charset=UTF-8",
                             "Accept-Language": "en-us",
                             "Client-ID": r.n.config.legacyClientID,
                             "X-Requested-With": "XMLHttpRequest"
                         };
-                    e.body && FormData.prototype.isPrototypeOf(e.body) || (n["Content-Type"] = s);
-                    var o = Object(i.c)(a);
-                    return o && (n.Authorization = "OAuth " + o.authToken, o.legacyCSRFToken && (n["Twitch-Api-Token"] = o.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
-                        n[e] && delete n[e]
-                    }), n
+                    e.body && FormData.prototype.isPrototypeOf(e.body) || (a["Content-Type"] = s);
+                    var o = Object(i.c)(n);
+                    return o && (a.Authorization = "OAuth " + o.authToken, o.legacyCSRFToken && (a["Twitch-Api-Token"] = o.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
+                        a[e] && delete a[e]
+                    }), a
                 }, e
             }()
     },
-    A2zO: function(e, t, a) {
-        var n = a("Be26");
+    A2zO: function(e, t, n) {
+        var a = n("Be26");
         e.exports = function(e) {
-            return n(new Date, e)
+            return a(new Date, e)
         }
     },
-    A5K1: function(e, t, a) {
+    A5K1: function(e, t, n) {
         "use strict";
-        var n = a("k7DW"),
-            r = a("L5rj"),
-            i = a("iO9N");
-        n._set("global", {
+        var a = n("k7DW"),
+            r = n("L5rj"),
+            i = n("iO9N");
+        a._set("global", {
             plugins: {
                 filler: {
                     propagate: !0
                 }
             }
         }), e.exports = function() {
-            function e(e, t, a) {
-                var n, r = e._model || {},
+            function e(e, t, n) {
+                var a, r = e._model || {},
                     i = r.fill;
                 if (void 0 === i && (i = !!r.backgroundColor), !1 === i || null === i) return !1;
                 if (!0 === i) return "origin";
-                if (n = parseFloat(i, 10), isFinite(n) && Math.floor(n) === n) return "-" !== i[0] && "+" !== i[0] || (n = t + n), !(n === t || n < 0 || n >= a) && n;
+                if (a = parseFloat(i, 10), isFinite(a) && Math.floor(a) === a) return "-" !== i[0] && "+" !== i[0] || (a = t + a), !(a === t || a < 0 || a >= n) && a;
                 switch (i) {
                     case "bottom":
                         return "start";
@@ -3720,14 +3720,14 @@ webpackJsonp([35], {
             }
 
             function t(e) {
-                var t, a = e.el._model || {},
-                    n = e.el._scale || {},
+                var t, n = e.el._model || {},
+                    a = e.el._scale || {},
                     r = e.fill,
                     i = null;
                 if (isFinite(r)) return null;
-                if ("start" === r ? i = void 0 === a.scaleBottom ? n.bottom : a.scaleBottom : "end" === r ? i = void 0 === a.scaleTop ? n.top : a.scaleTop : void 0 !== a.scaleZero ? i = a.scaleZero : n.getBasePosition ? i = n.getBasePosition() : n.getBasePixel && (i = n.getBasePixel()), void 0 !== i && null !== i) {
+                if ("start" === r ? i = void 0 === n.scaleBottom ? a.bottom : n.scaleBottom : "end" === r ? i = void 0 === n.scaleTop ? a.top : n.scaleTop : void 0 !== n.scaleZero ? i = n.scaleZero : a.getBasePosition ? i = a.getBasePosition() : a.getBasePixel && (i = a.getBasePixel()), void 0 !== i && null !== i) {
                     if (void 0 !== i.x && void 0 !== i.y) return i;
-                    if ("number" == typeof i && isFinite(i)) return t = n.isHorizontal(), {
+                    if ("number" == typeof i && isFinite(i)) return t = a.isHorizontal(), {
                         x: t ? i : null,
                         y: t ? null : i
                     }
@@ -3735,42 +3735,42 @@ webpackJsonp([35], {
                 return null
             }
 
-            function a(e, t, a) {
-                var n, r = e[t].fill,
+            function n(e, t, n) {
+                var a, r = e[t].fill,
                     i = [t];
-                if (!a) return r;
+                if (!n) return r;
                 for (; !1 !== r && -1 === i.indexOf(r);) {
                     if (!isFinite(r)) return r;
-                    if (!(n = e[r])) return !1;
-                    if (n.visible) return r;
-                    i.push(r), r = n.fill
+                    if (!(a = e[r])) return !1;
+                    if (a.visible) return r;
+                    i.push(r), r = a.fill
                 }
                 return !1
             }
 
             function s(e) {
                 var t = e.fill,
-                    a = "dataset";
-                return !1 === t ? null : (isFinite(t) || (a = "boundary"), u[a](e))
+                    n = "dataset";
+                return !1 === t ? null : (isFinite(t) || (n = "boundary"), u[n](e))
             }
 
             function o(e) {
                 return e && !e.skip
             }
 
-            function d(e, t, a, n, r) {
+            function d(e, t, n, a, r) {
                 var s;
-                if (n && r) {
-                    for (e.moveTo(t[0].x, t[0].y), s = 1; s < n; ++s) i.canvas.lineTo(e, t[s - 1], t[s]);
-                    for (e.lineTo(a[r - 1].x, a[r - 1].y), s = r - 1; s > 0; --s) i.canvas.lineTo(e, a[s], a[s - 1], !0)
+                if (a && r) {
+                    for (e.moveTo(t[0].x, t[0].y), s = 1; s < a; ++s) i.canvas.lineTo(e, t[s - 1], t[s]);
+                    for (e.lineTo(n[r - 1].x, n[r - 1].y), s = r - 1; s > 0; --s) i.canvas.lineTo(e, n[s], n[s - 1], !0)
                 }
             }
             var u = {
                 dataset: function(e) {
                     var t = e.fill,
-                        a = e.chart,
-                        n = a.getDatasetMeta(t),
-                        r = n && a.isDatasetVisible(t) && n.dataset._children || [],
+                        n = e.chart,
+                        a = n.getDatasetMeta(t),
+                        r = a && n.isDatasetVisible(t) && a.dataset._children || [],
                         i = r.length || 0;
                     return i ? function(e, t) {
                         return t < i && r[t]._view || null
@@ -3778,47 +3778,47 @@ webpackJsonp([35], {
                 },
                 boundary: function(e) {
                     var t = e.boundary,
-                        a = t ? t.x : null,
-                        n = t ? t.y : null;
+                        n = t ? t.x : null,
+                        a = t ? t.y : null;
                     return function(e) {
                         return {
-                            x: null === a ? e.x : a,
-                            y: null === n ? e.y : n
+                            x: null === n ? e.x : n,
+                            y: null === a ? e.y : a
                         }
                     }
                 }
             };
             return {
                 id: "filler",
-                afterDatasetsUpdate: function(n, i) {
-                    var o, d, u, l, c = (n.data.datasets || []).length,
+                afterDatasetsUpdate: function(a, i) {
+                    var o, d, u, l, c = (a.data.datasets || []).length,
                         h = i.propagate,
                         m = [];
-                    for (d = 0; d < c; ++d) l = null, (u = (o = n.getDatasetMeta(d)).dataset) && u._model && u instanceof r.Line && (l = {
-                        visible: n.isDatasetVisible(d),
+                    for (d = 0; d < c; ++d) l = null, (u = (o = a.getDatasetMeta(d)).dataset) && u._model && u instanceof r.Line && (l = {
+                        visible: a.isDatasetVisible(d),
                         fill: e(u, d, c),
-                        chart: n,
+                        chart: a,
                         el: u
                     }), o.$filler = l, m.push(l);
-                    for (d = 0; d < c; ++d)(l = m[d]) && (l.fill = a(m, d, h), l.boundary = t(l), l.mapper = s(l))
+                    for (d = 0; d < c; ++d)(l = m[d]) && (l.fill = n(m, d, h), l.boundary = t(l), l.mapper = s(l))
                 },
                 beforeDatasetDraw: function(e, t) {
-                    var a = t.meta.$filler;
-                    if (a) {
+                    var n = t.meta.$filler;
+                    if (n) {
                         var r = e.ctx,
-                            s = a.el,
+                            s = n.el,
                             u = s._view,
                             l = s._children || [],
-                            c = a.mapper,
-                            h = u.backgroundColor || n.global.defaultColor;
-                        c && h && l.length && (i.canvas.clipArea(r, e.chartArea), function(e, t, a, n, r, i) {
+                            c = n.mapper,
+                            h = u.backgroundColor || a.global.defaultColor;
+                        c && h && l.length && (i.canvas.clipArea(r, e.chartArea), function(e, t, n, a, r, i) {
                             var s, u, l, c, h, m, _, f = t.length,
-                                p = n.spanGaps,
+                                p = a.spanGaps,
                                 g = [],
                                 y = [],
                                 M = 0,
                                 v = 0;
-                            for (e.beginPath(), s = 0, u = f + !!i; s < u; ++s) h = a(c = t[l = s % f]._view, l, n), m = o(c), _ = o(h), m && _ ? (M = g.push(c), v = y.push(h)) : M && v && (p ? (m && g.push(c), _ && y.push(h)) : (d(e, g, y, M, v), M = v = 0, g = [], y = []));
+                            for (e.beginPath(), s = 0, u = f + !!i; s < u; ++s) h = n(c = t[l = s % f]._view, l, a), m = o(c), _ = o(h), m && _ ? (M = g.push(c), v = y.push(h)) : M && v && (p ? (m && g.push(c), _ && y.push(h)) : (d(e, g, y, M, v), M = v = 0, g = [], y = []));
                             d(e, g, y, M, v), e.closePath(), e.fillStyle = r, e.fill()
                         }(r, l, c, u, h, s._loop), i.canvas.unclipArea(r))
                     }
@@ -3827,31 +3827,31 @@ webpackJsonp([35], {
         }
     },
     A5K9: function(e, t) {},
-    AFDx: function(e, t, a) {
+    AFDx: function(e, t, n) {
         "use strict";
 
-        function n(e) {
+        function a(e) {
             return void 0 !== e._view.width
         }
 
         function r(e) {
-            var t, a, r, i, s = e._view;
-            if (n(e)) {
+            var t, n, r, i, s = e._view;
+            if (a(e)) {
                 var o = s.width / 2;
-                t = s.x - o, a = s.x + o, r = Math.min(s.y, s.base), i = Math.max(s.y, s.base)
+                t = s.x - o, n = s.x + o, r = Math.min(s.y, s.base), i = Math.max(s.y, s.base)
             } else {
                 var d = s.height / 2;
-                t = Math.min(s.x, s.base), a = Math.max(s.x, s.base), r = s.y - d, i = s.y + d
+                t = Math.min(s.x, s.base), n = Math.max(s.x, s.base), r = s.y - d, i = s.y + d
             }
             return {
                 left: t,
                 top: r,
-                right: a,
+                right: n,
                 bottom: i
             }
         }
-        var i = a("k7DW"),
-            s = a("wGD1");
+        var i = n("k7DW"),
+            s = n("wGD1");
         i._set("global", {
             elements: {
                 rectangle: {
@@ -3866,24 +3866,24 @@ webpackJsonp([35], {
                 function e(e) {
                     return g[(y + e) % 4]
                 }
-                var t, a, n, r, i, s, o, d = this._chart.ctx,
+                var t, n, a, r, i, s, o, d = this._chart.ctx,
                     u = this._view,
                     l = u.borderWidth;
-                if (u.horizontal ? (t = u.base, a = u.x, n = u.y - u.height / 2, r = u.y + u.height / 2, i = a > t ? 1 : -1, s = 1, o = u.borderSkipped || "left") : (t = u.x - u.width / 2, a = u.x + u.width / 2, n = u.y, i = 1, s = (r = u.base) > n ? 1 : -1, o = u.borderSkipped || "bottom"), l) {
-                    var c = Math.min(Math.abs(t - a), Math.abs(n - r)),
+                if (u.horizontal ? (t = u.base, n = u.x, a = u.y - u.height / 2, r = u.y + u.height / 2, i = n > t ? 1 : -1, s = 1, o = u.borderSkipped || "left") : (t = u.x - u.width / 2, n = u.x + u.width / 2, a = u.y, i = 1, s = (r = u.base) > a ? 1 : -1, o = u.borderSkipped || "bottom"), l) {
+                    var c = Math.min(Math.abs(t - n), Math.abs(a - r)),
                         h = (l = l > c ? c : l) / 2,
                         m = t + ("left" !== o ? h * i : 0),
-                        _ = a + ("right" !== o ? -h * i : 0),
-                        f = n + ("top" !== o ? h * s : 0),
+                        _ = n + ("right" !== o ? -h * i : 0),
+                        f = a + ("top" !== o ? h * s : 0),
                         p = r + ("bottom" !== o ? -h * s : 0);
-                    m !== _ && (n = f, r = p), f !== p && (t = m, a = _)
+                    m !== _ && (a = f, r = p), f !== p && (t = m, n = _)
                 }
                 d.beginPath(), d.fillStyle = u.backgroundColor, d.strokeStyle = u.borderColor, d.lineWidth = l;
                 var g = [
                         [t, r],
-                        [t, n],
-                        [a, n],
-                        [a, r]
+                        [t, a],
+                        [n, a],
+                        [n, r]
                     ],
                     y = ["bottom", "left", "top", "right"].indexOf(o, 0); - 1 === y && (y = 0);
                 var M = e(0);
@@ -3896,17 +3896,17 @@ webpackJsonp([35], {
                 return e.base - e.y
             },
             inRange: function(e, t) {
-                var a = !1;
+                var n = !1;
                 if (this._view) {
-                    var n = r(this);
-                    a = e >= n.left && e <= n.right && t >= n.top && t <= n.bottom
+                    var a = r(this);
+                    n = e >= a.left && e <= a.right && t >= a.top && t <= a.bottom
                 }
-                return a
+                return n
             },
             inLabelRange: function(e, t) {
                 if (!this._view) return !1;
-                var a = r(this);
-                return n(this) ? e >= a.left && e <= a.right : t >= a.top && t <= a.bottom
+                var n = r(this);
+                return a(this) ? e >= n.left && e <= n.right : t >= n.top && t <= n.bottom
             },
             inXRange: function(e) {
                 var t = r(this);
@@ -3917,8 +3917,8 @@ webpackJsonp([35], {
                 return e >= t.top && e <= t.bottom
             },
             getCenterPoint: function() {
-                var e, t, a = this._view;
-                return n(this) ? (e = a.x, t = (a.y + a.base) / 2) : (e = (a.x + a.base) / 2, t = a.y), {
+                var e, t, n = this._view;
+                return a(this) ? (e = n.x, t = (n.y + n.base) / 2) : (e = (n.x + n.base) / 2, t = n.y), {
                     x: e,
                     y: t
                 }
@@ -3936,9 +3936,9 @@ webpackJsonp([35], {
             }
         })
     },
-    ALEw: function(e, t, a) {
+    ALEw: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("en-ie", {
@@ -3990,16 +3990,16 @@ webpackJsonp([35], {
             })
         })
     },
-    AZvW: function(e, t, a) {
-        var n = a("xA5w");
+    AZvW: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e) {
-            var t = n(e).getDay();
+            var t = a(e).getDay();
             return 0 === t && (t = 7), t
         }
     },
-    Ab7C: function(e, t, a) {
+    Ab7C: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("mk", {
@@ -4054,8 +4054,8 @@ webpackJsonp([35], {
                 dayOfMonthOrdinalParse: /\d{1,2}-(ев|ен|ти|ви|ри|ми)/,
                 ordinal: function(e) {
                     var t = e % 10,
-                        a = e % 100;
-                    return 0 === e ? e + "-ев" : 0 === a ? e + "-ен" : a > 10 && a < 20 ? e + "-ти" : 1 === t ? e + "-ви" : 2 === t ? e + "-ри" : 7 === t || 8 === t ? e + "-ми" : e + "-ти"
+                        n = e % 100;
+                    return 0 === e ? e + "-ев" : 0 === n ? e + "-ен" : n > 10 && n < 20 ? e + "-ти" : 1 === t ? e + "-ви" : 2 === t ? e + "-ри" : 7 === t || 8 === t ? e + "-ми" : e + "-ти"
                 },
                 week: {
                     dow: 1,
@@ -4064,17 +4064,17 @@ webpackJsonp([35], {
             })
         })
     },
-    Akl5: function(e, t, a) {
-        var n = a("xA5w");
+    Akl5: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e) {
-            var t = n(e),
-                a = t.getMonth();
-            return t.setFullYear(t.getFullYear(), a + 1, 0), t.setHours(0, 0, 0, 0), t
+            var t = a(e),
+                n = t.getMonth();
+            return t.setFullYear(t.getFullYear(), n + 1, 0), t.setHours(0, 0, 0, 0), t
         }
     },
-    AoDM: function(e, t, a) {
+    AoDM: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("pt-br", {
@@ -4122,9 +4122,9 @@ webpackJsonp([35], {
             })
         })
     },
-    BEem: function(e, t, a) {
+    BEem: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("ar-tn", {
@@ -4172,17 +4172,17 @@ webpackJsonp([35], {
             })
         })
     },
-    Bb5e: function(e, t, a) {
-        var n = a("xA5w");
+    Bb5e: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e, t) {
-            var a = n(e),
-                r = n(t);
-            return a.getFullYear() - r.getFullYear()
+            var n = a(e),
+                r = a(t);
+            return n.getFullYear() - r.getFullYear()
         }
     },
-    BbgG: function(e, t, a) {
+    BbgG: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("zh-tw", {
@@ -4207,9 +4207,9 @@ webpackJsonp([35], {
                 meridiemHour: function(e, t) {
                     return 12 === e && (e = 0), "凌晨" === t || "早上" === t || "上午" === t ? e : "中午" === t ? e >= 11 ? e : e + 12 : "下午" === t || "晚上" === t ? e + 12 : void 0
                 },
-                meridiem: function(e, t, a) {
-                    var n = 100 * e + t;
-                    return n < 600 ? "凌晨" : n < 900 ? "早上" : n < 1130 ? "上午" : n < 1230 ? "中午" : n < 1800 ? "下午" : "晚上"
+                meridiem: function(e, t, n) {
+                    var a = 100 * e + t;
+                    return a < 600 ? "凌晨" : a < 900 ? "早上" : a < 1130 ? "上午" : a < 1230 ? "中午" : a < 1800 ? "下午" : "晚上"
                 },
                 calendar: {
                     sameDay: "[今天]LT",
@@ -4253,35 +4253,35 @@ webpackJsonp([35], {
             })
         })
     },
-    Be26: function(e, t, a) {
-        var n = a("8KV+");
+    Be26: function(e, t, n) {
+        var a = n("8KV+");
         e.exports = function(e, t) {
-            return n(e, t, {
+            return a(e, t, {
                 weekStartsOn: 1
             })
         }
     },
-    Bp2f: function(e, t, a) {
+    Bp2f: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             var t = "jan._feb._mrt._apr._mei_jun._jul._aug._sep._okt._nov._dec.".split("_"),
-                a = "jan_feb_mrt_apr_mei_jun_jul_aug_sep_okt_nov_dec".split("_"),
-                n = [/^jan/i, /^feb/i, /^maart|mrt.?$/i, /^apr/i, /^mei$/i, /^jun[i.]?$/i, /^jul[i.]?$/i, /^aug/i, /^sep/i, /^okt/i, /^nov/i, /^dec/i],
+                n = "jan_feb_mrt_apr_mei_jun_jul_aug_sep_okt_nov_dec".split("_"),
+                a = [/^jan/i, /^feb/i, /^maart|mrt.?$/i, /^apr/i, /^mei$/i, /^jun[i.]?$/i, /^jul[i.]?$/i, /^aug/i, /^sep/i, /^okt/i, /^nov/i, /^dec/i],
                 r = /^(januari|februari|maart|april|mei|april|ju[nl]i|augustus|september|oktober|november|december|jan\.?|feb\.?|mrt\.?|apr\.?|ju[nl]\.?|aug\.?|sep\.?|okt\.?|nov\.?|dec\.?)/i;
             return e.defineLocale("nl-be", {
                 months: "januari_februari_maart_april_mei_juni_juli_augustus_september_oktober_november_december".split("_"),
-                monthsShort: function(e, n) {
-                    return e ? /-MMM-/.test(n) ? a[e.month()] : t[e.month()] : t
+                monthsShort: function(e, a) {
+                    return e ? /-MMM-/.test(a) ? n[e.month()] : t[e.month()] : t
                 },
                 monthsRegex: r,
                 monthsShortRegex: r,
                 monthsStrictRegex: /^(januari|februari|maart|mei|ju[nl]i|april|augustus|september|oktober|november|december)/i,
                 monthsShortStrictRegex: /^(jan\.?|feb\.?|mrt\.?|apr\.?|mei|ju[nl]\.?|aug\.?|sep\.?|okt\.?|nov\.?|dec\.?)/i,
-                monthsParse: n,
-                longMonthsParse: n,
-                shortMonthsParse: n,
+                monthsParse: a,
+                longMonthsParse: a,
+                shortMonthsParse: a,
                 weekdays: "zondag_maandag_dinsdag_woensdag_donderdag_vrijdag_zaterdag".split("_"),
                 weekdaysShort: "zo._ma._di._wo._do._vr._za.".split("_"),
                 weekdaysMin: "Zo_Ma_Di_Wo_Do_Vr_Za".split("_"),
@@ -4328,9 +4328,9 @@ webpackJsonp([35], {
             })
         })
     },
-    C7av: function(e, t, a) {
+    C7av: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("nn", {
@@ -4379,9 +4379,9 @@ webpackJsonp([35], {
             })
         })
     },
-    CFqe: function(e, t, a) {
+    CFqe: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("el", {
@@ -4394,8 +4394,8 @@ webpackJsonp([35], {
                 weekdays: "Κυριακή_Δευτέρα_Τρίτη_Τετάρτη_Πέμπτη_Παρασκευή_Σάββατο".split("_"),
                 weekdaysShort: "Κυρ_Δευ_Τρι_Τετ_Πεμ_Παρ_Σαβ".split("_"),
                 weekdaysMin: "Κυ_Δε_Τρ_Τε_Πε_Πα_Σα".split("_"),
-                meridiem: function(e, t, a) {
-                    return e > 11 ? a ? "μμ" : "ΜΜ" : a ? "πμ" : "ΠΜ"
+                meridiem: function(e, t, n) {
+                    return e > 11 ? n ? "μμ" : "ΜΜ" : n ? "πμ" : "ΠΜ"
                 },
                 isPM: function(e) {
                     return "μ" === (e + "").toLowerCase()[0]
@@ -4425,11 +4425,11 @@ webpackJsonp([35], {
                     sameElse: "L"
                 },
                 calendar: function(e, t) {
-                    var a = this._calendarEl[e],
-                        n = t && t.hours();
+                    var n = this._calendarEl[e],
+                        a = t && t.hours();
                     return function(e) {
                         return e instanceof Function || "[object Function]" === Object.prototype.toString.call(e)
-                    }(a) && (a = a.apply(t)), a.replace("{}", n % 12 == 1 ? "στη" : "στις")
+                    }(n) && (n = n.apply(t)), n.replace("{}", a % 12 == 1 ? "στη" : "στις")
                 },
                 relativeTime: {
                     future: "σε %s",
@@ -4455,59 +4455,59 @@ webpackJsonp([35], {
             })
         })
     },
-    CVNg: function(e, t, a) {
-        var n = a("xA5w");
+    CVNg: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e, t) {
-            var a = n(e),
+            var n = a(e),
                 r = Number(t);
-            return a.setMonth(0), a.setDate(r), a
+            return n.setMonth(0), n.setDate(r), n
         }
     },
-    D6ie: function(e, t, a) {
-        var n = a("xA5w"),
-            r = a("3znZ"),
-            i = a("iRXW"),
+    D6ie: function(e, t, n) {
+        var a = n("xA5w"),
+            r = n("3znZ"),
+            i = n("iRXW"),
             s = 6048e5;
         e.exports = function(e) {
-            var t = n(e),
-                a = r(t).getTime() - i(t).getTime();
-            return Math.round(a / s) + 1
+            var t = a(e),
+                n = r(t).getTime() - i(t).getTime();
+            return Math.round(n / s) + 1
         }
     },
-    DN1M: function(e, t, a) {
+    DN1M: function(e, t, n) {
         "use strict";
 
-        function n(e, t) {
-            var a = u.getStyle(e, t),
-                n = a && a.match(/^(\d+)(\.\d+)?px$/);
-            return n ? Number(n[1]) : void 0
+        function a(e, t) {
+            var n = u.getStyle(e, t),
+                a = n && n.match(/^(\d+)(\.\d+)?px$/);
+            return a ? Number(a[1]) : void 0
         }
 
-        function r(e, t, a) {
-            e.addEventListener(t, a, p)
+        function r(e, t, n) {
+            e.addEventListener(t, n, p)
         }
 
-        function i(e, t, a) {
-            e.removeEventListener(t, a, p)
+        function i(e, t, n) {
+            e.removeEventListener(t, n, p)
         }
 
-        function s(e, t, a, n, r) {
+        function s(e, t, n, a, r) {
             return {
                 type: e,
                 chart: t,
                 native: r || null,
-                x: void 0 !== a ? a : null,
-                y: void 0 !== n ? n : null
+                x: void 0 !== n ? n : null,
+                y: void 0 !== a ? a : null
             }
         }
 
-        function o(e, t, a) {
-            var n = e[l] || (e[l] = {}),
-                i = n.resizer = function(e) {
+        function o(e, t, n) {
+            var a = e[l] || (e[l] = {}),
+                i = a.resizer = function(e) {
                     var t = document.createElement("div"),
-                        a = c + "size-monitor",
-                        n = "position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;";
-                    t.style.cssText = n, t.className = a, t.innerHTML = '<div class="' + a + '-expand" style="' + n + '"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="' + a + '-shrink" style="' + n + '"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div>';
+                        n = c + "size-monitor",
+                        a = "position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;";
+                    t.style.cssText = a, t.className = n, t.innerHTML = '<div class="' + n + '-expand" style="' + a + '"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="' + n + '-shrink" style="' + a + '"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div>';
                     var i = t.childNodes[0],
                         s = t.childNodes[1];
                     t._reset = function() {
@@ -4518,25 +4518,25 @@ webpackJsonp([35], {
                     };
                     return r(i, "scroll", o.bind(i, "expand")), r(s, "scroll", o.bind(s, "shrink")), t
                 }(function(e, t) {
-                    var a = !1,
-                        n = [];
+                    var n = !1,
+                        a = [];
                     return function() {
-                        n = Array.prototype.slice.call(arguments), t = t || this, a || (a = !0, u.requestAnimFrame.call(window, function() {
-                            a = !1, e.apply(t, n)
+                        a = Array.prototype.slice.call(arguments), t = t || this, n || (n = !0, u.requestAnimFrame.call(window, function() {
+                            n = !1, e.apply(t, a)
                         }))
                     }
                 }(function() {
-                    if (n.resizer) return t(s("resize", a))
+                    if (a.resizer) return t(s("resize", n))
                 }));
             ! function(e, t) {
-                var a = (e[l] || (e[l] = {})).renderProxy = function(e) {
+                var n = (e[l] || (e[l] = {})).renderProxy = function(e) {
                     e.animationName === m && t()
                 };
                 u.each(_, function(t) {
-                    r(e, t, a)
+                    r(e, t, n)
                 }), e.classList.add(h)
             }(e, function() {
-                if (n.resizer) {
+                if (a.resizer) {
                     var t = e.parentNode;
                     t && t !== i.parentNode && t.insertBefore(i, t.firstChild), i._reset()
                 }
@@ -4545,17 +4545,17 @@ webpackJsonp([35], {
 
         function d(e) {
             var t = e[l] || {},
-                a = t.resizer;
+                n = t.resizer;
             delete t.resizer,
                 function(e) {
                     var t = e[l] || {},
-                        a = t.renderProxy;
-                    a && (u.each(_, function(t) {
-                        i(e, t, a)
+                        n = t.renderProxy;
+                    n && (u.each(_, function(t) {
+                        i(e, t, n)
                     }), delete t.renderProxy), e.classList.remove(h)
-                }(e), a && a.parentNode && a.parentNode.removeChild(a)
+                }(e), n && n.parentNode && n.parentNode.removeChild(n)
         }
-        var u = a("iO9N"),
+        var u = n("iO9N"),
             l = "$chartjs",
             c = "chartjs-",
             h = c + "render-monitor",
@@ -4591,15 +4591,15 @@ webpackJsonp([35], {
             initialize: function() {
                 var e = "from{opacity:0.99}to{opacity:1}";
                 ! function(e, t) {
-                    var a = e._style || document.createElement("style");
-                    e._style || (e._style = a, t = "/* Chart.js */\n" + t, a.setAttribute("type", "text/css"), document.getElementsByTagName("head")[0].appendChild(a)), a.appendChild(document.createTextNode(t))
+                    var n = e._style || document.createElement("style");
+                    e._style || (e._style = n, t = "/* Chart.js */\n" + t, n.setAttribute("type", "text/css"), document.getElementsByTagName("head")[0].appendChild(n)), n.appendChild(document.createTextNode(t))
                 }(this, "@-webkit-keyframes " + m + "{" + e + "}@keyframes " + m + "{" + e + "}." + h + "{-webkit-animation:" + m + " 0.001s;animation:" + m + " 0.001s;}")
             },
             acquireContext: function(e, t) {
                 "string" == typeof e ? e = document.getElementById(e) : e.length && (e = e[0]), e && e.canvas && (e = e.canvas);
-                var a = e && e.getContext && e.getContext("2d");
-                return a && a.canvas === e ? (function(e, t) {
-                    var a = e.style,
+                var n = e && e.getContext && e.getContext("2d");
+                return n && n.canvas === e ? (function(e, t) {
+                    var n = e.style,
                         r = e.getAttribute("height"),
                         i = e.getAttribute("width");
                     if (e[l] = {
@@ -4607,64 +4607,64 @@ webpackJsonp([35], {
                                 height: r,
                                 width: i,
                                 style: {
-                                    display: a.display,
-                                    height: a.height,
-                                    width: a.width
+                                    display: n.display,
+                                    height: n.height,
+                                    width: n.width
                                 }
                             }
-                        }, a.display = a.display || "block", null === i || "" === i) {
-                        var s = n(e, "width");
+                        }, n.display = n.display || "block", null === i || "" === i) {
+                        var s = a(e, "width");
                         void 0 !== s && (e.width = s)
                     }
                     if (null === r || "" === r)
                         if ("" === e.style.height) e.height = e.width / (t.options.aspectRatio || 2);
                         else {
-                            var o = n(e, "height");
+                            var o = a(e, "height");
                             void 0 !== s && (e.height = o)
                         }
-                }(e, t), a) : null
+                }(e, t), n) : null
             },
             releaseContext: function(e) {
                 var t = e.canvas;
                 if (t[l]) {
-                    var a = t[l].initial;
+                    var n = t[l].initial;
                     ["height", "width"].forEach(function(e) {
-                        var n = a[e];
-                        u.isNullOrUndef(n) ? t.removeAttribute(e) : t.setAttribute(e, n)
-                    }), u.each(a.style || {}, function(e, a) {
-                        t.style[a] = e
+                        var a = n[e];
+                        u.isNullOrUndef(a) ? t.removeAttribute(e) : t.setAttribute(e, a)
+                    }), u.each(n.style || {}, function(e, n) {
+                        t.style[n] = e
                     }), t.width = t.width, delete t[l]
                 }
             },
-            addEventListener: function(e, t, a) {
-                var n = e.canvas;
+            addEventListener: function(e, t, n) {
+                var a = e.canvas;
                 if ("resize" !== t) {
-                    var i = a[l] || (a[l] = {});
-                    r(n, t, (i.proxies || (i.proxies = {}))[e.id + "_" + t] = function(t) {
-                        a(function(e, t) {
-                            var a = f[e.type] || e.type,
-                                n = u.getRelativePosition(e, t);
-                            return s(a, t, n.x, n.y, e)
+                    var i = n[l] || (n[l] = {});
+                    r(a, t, (i.proxies || (i.proxies = {}))[e.id + "_" + t] = function(t) {
+                        n(function(e, t) {
+                            var n = f[e.type] || e.type,
+                                a = u.getRelativePosition(e, t);
+                            return s(n, t, a.x, a.y, e)
                         }(t, e))
                     })
-                } else o(n, a, e)
+                } else o(a, n, e)
             },
-            removeEventListener: function(e, t, a) {
-                var n = e.canvas;
+            removeEventListener: function(e, t, n) {
+                var a = e.canvas;
                 if ("resize" !== t) {
-                    var r = ((a[l] || {}).proxies || {})[e.id + "_" + t];
-                    r && i(n, t, r)
-                } else d(n)
+                    var r = ((n[l] || {}).proxies || {})[e.id + "_" + t];
+                    r && i(a, t, r)
+                } else d(a)
             }
         }, u.addEvent = r, u.removeEvent = i
     },
-    DOkx: function(e, t, a) {
+    DOkx: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
 
-            function t(e, t, a, n) {
+            function t(e, t, n, a) {
                 var r = {
                     m: ["eine Minute", "einer Minute"],
                     h: ["eine Stunde", "einer Stunde"],
@@ -4675,7 +4675,7 @@ webpackJsonp([35], {
                     y: ["ein Jahr", "einem Jahr"],
                     yy: [e + " Jahre", e + " Jahren"]
                 };
-                return t ? r[a][0] : r[a][1]
+                return t ? r[n][0] : r[n][1]
             }
             return e.defineLocale("de", {
                 months: "Januar_Februar_März_April_Mai_Juni_Juli_August_September_Oktober_November_Dezember".split("_"),
@@ -4725,9 +4725,9 @@ webpackJsonp([35], {
             })
         })
     },
-    DSXN: function(e, t, a) {
+    DSXN: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("sw", {
@@ -4775,86 +4775,86 @@ webpackJsonp([35], {
             })
         })
     },
-    Db81: function(e, t, a) {
+    Db81: function(e, t, n) {
         "use strict";
 
-        function n(e, t) {
+        function a(e, t) {
             return e - t
         }
 
         function r(e) {
-            var t, a, n, r = {},
+            var t, n, a, r = {},
                 i = [];
-            for (t = 0, a = e.length; t < a; ++t) r[n = e[t]] || (r[n] = !0, i.push(n));
+            for (t = 0, n = e.length; t < n; ++t) r[a = e[t]] || (r[a] = !0, i.push(a));
             return i
         }
 
-        function i(e, t, a, n) {
-            var r = function(e, t, a) {
-                    for (var n, r, i, s = 0, o = e.length - 1; s >= 0 && s <= o;) {
-                        if (n = s + o >> 1, r = e[n - 1] || null, i = e[n], !r) return {
+        function i(e, t, n, a) {
+            var r = function(e, t, n) {
+                    for (var a, r, i, s = 0, o = e.length - 1; s >= 0 && s <= o;) {
+                        if (a = s + o >> 1, r = e[a - 1] || null, i = e[a], !r) return {
                             lo: null,
                             hi: i
                         };
-                        if (i[t] < a) s = n + 1;
+                        if (i[t] < n) s = a + 1;
                         else {
-                            if (!(r[t] > a)) return {
+                            if (!(r[t] > n)) return {
                                 lo: r,
                                 hi: i
                             };
-                            o = n - 1
+                            o = a - 1
                         }
                     }
                     return {
                         lo: i,
                         hi: null
                     }
-                }(e, t, a),
+                }(e, t, n),
                 i = r.lo ? r.hi ? r.lo : e[e.length - 2] : e[0],
                 s = r.lo ? r.hi ? r.hi : e[e.length - 1] : e[1],
                 o = s[t] - i[t],
-                d = o ? (a - i[t]) / o : 0,
-                u = (s[n] - i[n]) * d;
-            return i[n] + u
+                d = o ? (n - i[t]) / o : 0,
+                u = (s[a] - i[a]) * d;
+            return i[a] + u
         }
 
         function s(e, t) {
-            var a = t.parser,
-                n = t.parser || t.format;
-            return "function" == typeof a ? a(e) : "string" == typeof e && "string" == typeof n ? u(e, n) : (e instanceof u || (e = u(e)), e.isValid() ? e : "function" == typeof n ? n(e) : e)
+            var n = t.parser,
+                a = t.parser || t.format;
+            return "function" == typeof n ? n(e) : "string" == typeof e && "string" == typeof a ? u(e, a) : (e instanceof u || (e = u(e)), e.isValid() ? e : "function" == typeof a ? a(e) : e)
         }
 
         function o(e, t) {
             if (c.isNullOrUndef(e)) return null;
-            var a = t.options.time,
-                n = s(t.getRightValue(e), a);
-            return n.isValid() ? (a.round && n.startOf(a.round), n.valueOf()) : null
+            var n = t.options.time,
+                a = s(t.getRightValue(e), n);
+            return a.isValid() ? (n.round && a.startOf(n.round), a.valueOf()) : null
         }
 
-        function d(e, t, a, n, r, i) {
+        function d(e, t, n, a, r, i) {
             var s, o = i.time,
                 d = c.valueOrDefault(o.stepSize, o.unitStepSize),
-                l = "week" === a && o.isoWeekday,
+                l = "week" === n && o.isoWeekday,
                 h = i.ticks.major.enabled,
-                m = _[a],
+                m = _[n],
                 f = u(e),
                 p = u(t),
                 g = [];
-            for (d || (d = function(e, t, a, n) {
+            for (d || (d = function(e, t, n, a) {
                     var r, i, s, o = t - e,
-                        d = _[a],
+                        d = _[n],
                         u = d.size,
                         l = d.steps;
-                    if (!l) return Math.ceil(o / ((n || 1) * u));
-                    for (r = 0, i = l.length; r < i && (s = l[r], !(Math.ceil(o / (u * s)) <= n)); ++r);
+                    if (!l) return Math.ceil(o / ((a || 1) * u));
+                    for (r = 0, i = l.length; r < i && (s = l[r], !(Math.ceil(o / (u * s)) <= a)); ++r);
                     return s
-                }(e, t, a, r)), l && (f = f.isoWeekday(l), p = p.isoWeekday(l)), f = f.startOf(l ? "day" : a), (p = p.startOf(l ? "day" : a)) < t && p.add(1, a), s = u(f), h && n && !l && !o.round && (s.startOf(n), s.add(~~((f - s) / (m.size * d)) * d, a)); s < p; s.add(d, a)) g.push(+s);
+                }(e, t, n, r)), l && (f = f.isoWeekday(l), p = p.isoWeekday(l)), f = f.startOf(l ? "day" : n), (p = p.startOf(l ? "day" : n)) < t && p.add(1, n), s = u(f), h && a && !l && !o.round && (s.startOf(a), s.add(~~((f - s) / (m.size * d)) * d, n)); s < p; s.add(d, n)) g.push(+s);
             return g.push(+s), g
         }
-        var u = a("PJh5");
+        var u = n("PJh5");
         u = "function" == typeof u ? u : window.moment;
-        var l = a("k7DW"),
-            c = a("iO9N"),
+        var l = n("k7DW"),
+            c = n("iO9N"),
             h = Number.MIN_SAFE_INTEGER || -9007199254740991,
             m = Number.MAX_SAFE_INTEGER || 9007199254740991,
             _ = {
@@ -4918,41 +4918,41 @@ webpackJsonp([35], {
                     return t && void 0 !== t.t && (t = t.t), e.Scale.prototype.getRightValue.call(this, t)
                 },
                 determineDataLimits: function() {
-                    var e, t, a, i, s, d, l = this.chart,
+                    var e, t, n, i, s, d, l = this.chart,
                         _ = this.options.time,
                         f = o(_.min, this) || m,
                         p = o(_.max, this) || h,
                         g = [],
                         y = [],
                         M = [];
-                    for (e = 0, a = l.data.labels.length; e < a; ++e) M.push(o(l.data.labels[e], this));
-                    for (e = 0, a = (l.data.datasets || []).length; e < a; ++e)
+                    for (e = 0, n = l.data.labels.length; e < n; ++e) M.push(o(l.data.labels[e], this));
+                    for (e = 0, n = (l.data.datasets || []).length; e < n; ++e)
                         if (l.isDatasetVisible(e))
                             if (s = l.data.datasets[e].data, c.isObject(s[0]))
                                 for (y[e] = [], t = 0, i = s.length; t < i; ++t) d = o(s[t], this), g.push(d), y[e][t] = d;
                             else g.push.apply(g, M), y[e] = M.slice(0);
                     else y[e] = [];
-                    M.length && (M = r(M).sort(n), f = Math.min(f, M[0]), p = Math.max(p, M[M.length - 1])), g.length && (g = r(g).sort(n), f = Math.min(f, g[0]), p = Math.max(p, g[g.length - 1])), f = f === m ? +u().startOf("day") : f, p = p === h ? +u().endOf("day") + 1 : p, this.min = Math.min(f, p), this.max = Math.max(f + 1, p), this._horizontal = this.isHorizontal(), this._table = [], this._timestamps = {
+                    M.length && (M = r(M).sort(a), f = Math.min(f, M[0]), p = Math.max(p, M[M.length - 1])), g.length && (g = r(g).sort(a), f = Math.min(f, g[0]), p = Math.max(p, g[g.length - 1])), f = f === m ? +u().startOf("day") : f, p = p === h ? +u().endOf("day") + 1 : p, this.min = Math.min(f, p), this.max = Math.max(f + 1, p), this._horizontal = this.isHorizontal(), this._table = [], this._timestamps = {
                         data: g,
                         datasets: y,
                         labels: M
                     }
                 },
                 buildTicks: function() {
-                    var e, t, a, n = this.min,
+                    var e, t, n, a = this.min,
                         r = this.max,
                         s = this.options,
                         l = s.time,
                         c = l.displayFormats,
-                        h = this.getLabelCapacity(n),
-                        p = l.unit || function(e, t, a, n) {
+                        h = this.getLabelCapacity(a),
+                        p = l.unit || function(e, t, n, a) {
                             var r, i, s, o = f.length;
                             for (r = f.indexOf(e); r < o - 1; ++r)
-                                if (i = _[f[r]], s = i.steps ? i.steps[i.steps.length - 1] : m, Math.ceil((a - t) / (s * i.size)) <= n) return f[r];
+                                if (i = _[f[r]], s = i.steps ? i.steps[i.steps.length - 1] : m, Math.ceil((n - t) / (s * i.size)) <= a) return f[r];
                             return f[o - 1]
-                        }(l.minUnit, n, r, h),
+                        }(l.minUnit, a, r, h),
                         g = function(e) {
-                            for (var t = f.indexOf(e) + 1, a = f.length; t < a; ++t)
+                            for (var t = f.indexOf(e) + 1, n = f.length; t < n; ++t)
                                 if (_[f[t]].major) return f[t]
                         }(p),
                         y = [],
@@ -4966,36 +4966,36 @@ webpackJsonp([35], {
                             break;
                         case "auto":
                         default:
-                            y = d(n, r, p, g, h, s)
+                            y = d(a, r, p, g, h, s)
                     }
-                    for ("ticks" === s.bounds && y.length && (n = y[0], r = y[y.length - 1]), n = o(l.min, this) || n, r = o(l.max, this) || r, e = 0, t = y.length; e < t; ++e)(a = y[e]) >= n && a <= r && M.push(a);
-                    return this.min = n, this.max = r, this._unit = p, this._majorUnit = g, this._minorFormat = c[p], this._majorFormat = c[g], this._table = function(e, t, a, n) {
-                            if ("linear" === n || !e.length) return [{
+                    for ("ticks" === s.bounds && y.length && (a = y[0], r = y[y.length - 1]), a = o(l.min, this) || a, r = o(l.max, this) || r, e = 0, t = y.length; e < t; ++e)(n = y[e]) >= a && n <= r && M.push(n);
+                    return this.min = a, this.max = r, this._unit = p, this._majorUnit = g, this._minorFormat = c[p], this._majorFormat = c[g], this._table = function(e, t, n, a) {
+                            if ("linear" === a || !e.length) return [{
                                 time: t,
                                 pos: 0
                             }, {
-                                time: a,
+                                time: n,
                                 pos: 1
                             }];
                             var r, i, s, o, d, u = [],
                                 l = [t];
-                            for (r = 0, i = e.length; r < i; ++r)(o = e[r]) > t && o < a && l.push(o);
-                            for (l.push(a), r = 0, i = l.length; r < i; ++r) d = l[r + 1], s = l[r - 1], o = l[r], void 0 !== s && void 0 !== d && Math.round((d + s) / 2) === o || u.push({
+                            for (r = 0, i = e.length; r < i; ++r)(o = e[r]) > t && o < n && l.push(o);
+                            for (l.push(n), r = 0, i = l.length; r < i; ++r) d = l[r + 1], s = l[r - 1], o = l[r], void 0 !== s && void 0 !== d && Math.round((d + s) / 2) === o || u.push({
                                 time: o,
                                 pos: r / (i - 1)
                             });
                             return u
-                        }(this._timestamps.data, n, r, s.distribution), this._offsets = function(e, t, a, n, r) {
+                        }(this._timestamps.data, a, r, s.distribution), this._offsets = function(e, t, n, a, r) {
                             var s, o, d = 0,
                                 u = 0;
-                            return r.offset && t.length && (r.time.min || (s = t.length > 1 ? t[1] : n, o = t[0], d = (i(e, "time", s, "pos") - i(e, "time", o, "pos")) / 2), r.time.max || (s = t[t.length - 1], o = t.length > 1 ? t[t.length - 2] : a, u = (i(e, "time", s, "pos") - i(e, "time", o, "pos")) / 2)), {
+                            return r.offset && t.length && (r.time.min || (s = t.length > 1 ? t[1] : a, o = t[0], d = (i(e, "time", s, "pos") - i(e, "time", o, "pos")) / 2), r.time.max || (s = t[t.length - 1], o = t.length > 1 ? t[t.length - 2] : n, u = (i(e, "time", s, "pos") - i(e, "time", o, "pos")) / 2)), {
                                 left: d,
                                 right: u
                             }
-                        }(this._table, M, n, r, s),
+                        }(this._table, M, a, r, s),
                         function(e, t) {
-                            var a, n, r, i, s = [];
-                            for (a = 0, n = e.length; a < n; ++a) r = e[a], i = !!t && r === +u(r).startOf(t), s.push({
+                            var n, a, r, i, s = [];
+                            for (n = 0, a = e.length; n < a; ++n) r = e[n], i = !!t && r === +u(r).startOf(t), s.push({
                                 value: r,
                                 major: i
                             });
@@ -5003,39 +5003,39 @@ webpackJsonp([35], {
                         }(M, g)
                 },
                 getLabelForIndex: function(e, t) {
-                    var a = this.chart.data,
-                        n = this.options.time,
-                        r = a.labels && e < a.labels.length ? a.labels[e] : "",
-                        i = a.datasets[t].data[e];
-                    return c.isObject(i) && (r = this.getRightValue(i)), n.tooltipFormat && (r = s(r, n).format(n.tooltipFormat)), r
+                    var n = this.chart.data,
+                        a = this.options.time,
+                        r = n.labels && e < n.labels.length ? n.labels[e] : "",
+                        i = n.datasets[t].data[e];
+                    return c.isObject(i) && (r = this.getRightValue(i)), a.tooltipFormat && (r = s(r, a).format(a.tooltipFormat)), r
                 },
-                tickFormatFunction: function(e, t, a) {
-                    var n = this.options,
+                tickFormatFunction: function(e, t, n) {
+                    var a = this.options,
                         r = e.valueOf(),
                         i = this._majorUnit,
                         s = this._majorFormat,
                         o = e.clone().startOf(this._majorUnit).valueOf(),
-                        d = n.ticks.major,
+                        d = a.ticks.major,
                         u = d.enabled && i && s && r === o,
                         l = e.format(u ? s : this._minorFormat),
-                        h = u ? d : n.ticks.minor,
+                        h = u ? d : a.ticks.minor,
                         m = c.valueOrDefault(h.callback, h.userCallback);
-                    return m ? m(l, t, a) : l
+                    return m ? m(l, t, n) : l
                 },
                 convertTicksToLabels: function(e) {
-                    var t, a, n = [];
-                    for (t = 0, a = e.length; t < a; ++t) n.push(this.tickFormatFunction(u(e[t].value), t, e));
-                    return n
+                    var t, n, a = [];
+                    for (t = 0, n = e.length; t < n; ++t) a.push(this.tickFormatFunction(u(e[t].value), t, e));
+                    return a
                 },
                 getPixelForOffset: function(e) {
                     var t = this._horizontal ? this.width : this.height,
-                        a = this._horizontal ? this.left : this.top,
-                        n = i(this._table, "time", e, "pos");
-                    return a + t * (this._offsets.left + n) / (this._offsets.left + 1 + this._offsets.right)
+                        n = this._horizontal ? this.left : this.top,
+                        a = i(this._table, "time", e, "pos");
+                    return n + t * (this._offsets.left + a) / (this._offsets.left + 1 + this._offsets.right)
                 },
-                getPixelForValue: function(e, t, a) {
-                    var n = null;
-                    if (void 0 !== t && void 0 !== a && (n = this._timestamps.datasets[a][t]), null === n && (n = o(e, this)), null !== n) return this.getPixelForOffset(n)
+                getPixelForValue: function(e, t, n) {
+                    var a = null;
+                    if (void 0 !== t && void 0 !== n && (a = this._timestamps.datasets[n][t]), null === a && (a = o(e, this)), null !== a) return this.getPixelForOffset(a)
                 },
                 getPixelForTick: function(e) {
                     var t = this.getTicks();
@@ -5043,25 +5043,25 @@ webpackJsonp([35], {
                 },
                 getValueForPixel: function(e) {
                     var t = this._horizontal ? this.width : this.height,
-                        a = this._horizontal ? this.left : this.top,
-                        n = (t ? (e - a) / t : 0) * (this._offsets.left + 1 + this._offsets.left) - this._offsets.right,
-                        r = i(this._table, "pos", n, "time");
+                        n = this._horizontal ? this.left : this.top,
+                        a = (t ? (e - n) / t : 0) * (this._offsets.left + 1 + this._offsets.left) - this._offsets.right,
+                        r = i(this._table, "pos", a, "time");
                     return u(r)
                 },
                 getLabelWidth: function(e) {
                     var t = this.options.ticks,
-                        a = this.ctx.measureText(e).width,
-                        n = c.toRadians(t.maxRotation),
-                        r = Math.cos(n),
-                        i = Math.sin(n);
-                    return a * r + c.valueOrDefault(t.fontSize, l.global.defaultFontSize) * i
+                        n = this.ctx.measureText(e).width,
+                        a = c.toRadians(t.maxRotation),
+                        r = Math.cos(a),
+                        i = Math.sin(a);
+                    return n * r + c.valueOrDefault(t.fontSize, l.global.defaultFontSize) * i
                 },
                 getLabelCapacity: function(e) {
                     this._minorFormat = this.options.time.displayFormats.millisecond;
                     var t = this.tickFormatFunction(u(e), 0, []),
-                        a = this.getLabelWidth(t),
-                        n = this.isHorizontal() ? this.width : this.height;
-                    return Math.floor(n / a)
+                        n = this.getLabelWidth(t),
+                        a = this.isHorizontal() ? this.width : this.height;
+                    return Math.floor(a / n)
                 }
             });
             e.scaleService.registerScaleType("time", t, {
@@ -5098,9 +5098,9 @@ webpackJsonp([35], {
             })
         }
     },
-    ETHv: function(e, t, a) {
+    ETHv: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -5115,7 +5115,7 @@ webpackJsonp([35], {
                     9: "९",
                     0: "०"
                 },
-                a = {
+                n = {
                     "१": "1",
                     "२": "2",
                     "३": "3",
@@ -5167,7 +5167,7 @@ webpackJsonp([35], {
                 },
                 preparse: function(e) {
                     return e.replace(/[१२३४५६७८९०]/g, function(e) {
-                        return a[e]
+                        return n[e]
                     })
                 },
                 postformat: function(e) {
@@ -5179,7 +5179,7 @@ webpackJsonp([35], {
                 meridiemHour: function(e, t) {
                     return 12 === e && (e = 0), "रात" === t ? e < 4 ? e : e + 12 : "सुबह" === t ? e : "दोपहर" === t ? e >= 10 ? e : e + 12 : "शाम" === t ? e + 12 : void 0
                 },
-                meridiem: function(e, t, a) {
+                meridiem: function(e, t, n) {
                     return e < 4 ? "रात" : e < 10 ? "सुबह" : e < 17 ? "दोपहर" : e < 20 ? "शाम" : "रात"
                 },
                 week: {
@@ -5189,25 +5189,25 @@ webpackJsonp([35], {
             })
         })
     },
-    "Eoz/": function(e, t, a) {
-        function n(e, t) {
+    "Eoz/": function(e, t, n) {
+        function a(e, t) {
             t = t || "";
-            var a = e > 0 ? "-" : "+",
-                n = Math.abs(e),
-                i = n % 60;
-            return a + r(Math.floor(n / 60), 2) + t + r(i, 2)
+            var n = e > 0 ? "-" : "+",
+                a = Math.abs(e),
+                i = a % 60;
+            return n + r(Math.floor(a / 60), 2) + t + r(i, 2)
         }
 
         function r(e, t) {
-            for (var a = Math.abs(e).toString(); a.length < t;) a = "0" + a;
-            return a
+            for (var n = Math.abs(e).toString(); n.length < t;) n = "0" + n;
+            return n
         }
-        var i = a("ymQ7"),
-            s = a("D6ie"),
-            o = a("zZbG"),
-            d = a("xA5w"),
-            u = a("dH3X"),
-            l = a("uyaC"),
+        var i = n("ymQ7"),
+            s = n("D6ie"),
+            o = n("zZbG"),
+            d = n("xA5w"),
+            u = n("dH3X"),
+            l = n("uyaC"),
             c = {
                 M: function(e) {
                     return e.getMonth() + 1
@@ -5289,10 +5289,10 @@ webpackJsonp([35], {
                     return r(e.getMilliseconds(), 3)
                 },
                 Z: function(e) {
-                    return n(e.getTimezoneOffset(), ":")
+                    return a(e.getTimezoneOffset(), ":")
                 },
                 ZZ: function(e) {
-                    return n(e.getTimezoneOffset())
+                    return a(e.getTimezoneOffset())
                 },
                 X: function(e) {
                     return Math.floor(e.getTime() / 1e3)
@@ -5301,37 +5301,37 @@ webpackJsonp([35], {
                     return e.getTime()
                 }
             };
-        e.exports = function(e, t, a) {
-            var n = t ? String(t) : "YYYY-MM-DDTHH:mm:ss.SSSZ",
-                r = (a || {}).locale,
+        e.exports = function(e, t, n) {
+            var a = t ? String(t) : "YYYY-MM-DDTHH:mm:ss.SSSZ",
+                r = (n || {}).locale,
                 i = l.format.formatters,
                 s = l.format.formattingTokensRegExp;
             r && r.format && r.format.formatters && (i = r.format.formatters, r.format.formattingTokensRegExp && (s = r.format.formattingTokensRegExp));
             var o = d(e);
-            return u(o) ? function(e, t, a) {
-                var n, r, i = e.match(a),
+            return u(o) ? function(e, t, n) {
+                var a, r, i = e.match(n),
                     s = i.length;
-                for (n = 0; n < s; n++) r = t[i[n]] || c[i[n]], i[n] = r || function(e) {
+                for (a = 0; a < s; a++) r = t[i[a]] || c[i[a]], i[a] = r || function(e) {
                     return e.match(/\[[\s\S]/) ? e.replace(/^\[|]$/g, "") : e.replace(/\\/g, "")
-                }(i[n]);
+                }(i[a]);
                 return function(e) {
-                    for (var t = "", a = 0; a < s; a++) i[a] instanceof Function ? t += i[a](e, c) : t += i[a];
+                    for (var t = "", n = 0; n < s; n++) i[n] instanceof Function ? t += i[n](e, c) : t += i[n];
                     return t
                 }
-            }(n, i, s)(o) : "Invalid Date"
+            }(a, i, s)(o) : "Invalid Date"
         }
     },
-    Epw6: function(e, t, a) {
-        var n = a("xA5w");
+    Epw6: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e) {
-            var t = n(e),
-                a = t.getFullYear();
-            return t.setFullYear(a + 1, 0, 0), t.setHours(23, 59, 59, 999), t
+            var t = a(e),
+                n = t.getFullYear();
+            return t.setFullYear(n + 1, 0, 0), t.setHours(23, 59, 59, 999), t
         }
     },
-    "F+2e": function(e, t, a) {
+    "F+2e": function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -5346,7 +5346,7 @@ webpackJsonp([35], {
                     9: "၉",
                     0: "၀"
                 },
-                a = {
+                n = {
                     "၁": "1",
                     "၂": "2",
                     "၃": "3",
@@ -5397,7 +5397,7 @@ webpackJsonp([35], {
                 },
                 preparse: function(e) {
                     return e.replace(/[၁၂၃၄၅၆၇၈၉၀]/g, function(e) {
-                        return a[e]
+                        return n[e]
                     })
                 },
                 postformat: function(e) {
@@ -5412,111 +5412,111 @@ webpackJsonp([35], {
             })
         })
     },
-    F4U8: function(e, t, a) {
+    F4U8: function(e, t, n) {
         "use strict";
-        var n = a("3n1n");
+        var a = n("3n1n");
         t = e.exports = {
             clear: function(e) {
                 e.ctx.clearRect(0, 0, e.width, e.height)
             },
-            roundedRect: function(e, t, a, n, r, i) {
+            roundedRect: function(e, t, n, a, r, i) {
                 if (i) {
-                    var s = Math.min(i, n / 2),
+                    var s = Math.min(i, a / 2),
                         o = Math.min(i, r / 2);
-                    e.moveTo(t + s, a), e.lineTo(t + n - s, a), e.quadraticCurveTo(t + n, a, t + n, a + o), e.lineTo(t + n, a + r - o), e.quadraticCurveTo(t + n, a + r, t + n - s, a + r), e.lineTo(t + s, a + r), e.quadraticCurveTo(t, a + r, t, a + r - o), e.lineTo(t, a + o), e.quadraticCurveTo(t, a, t + s, a)
-                } else e.rect(t, a, n, r)
+                    e.moveTo(t + s, n), e.lineTo(t + a - s, n), e.quadraticCurveTo(t + a, n, t + a, n + o), e.lineTo(t + a, n + r - o), e.quadraticCurveTo(t + a, n + r, t + a - s, n + r), e.lineTo(t + s, n + r), e.quadraticCurveTo(t, n + r, t, n + r - o), e.lineTo(t, n + o), e.quadraticCurveTo(t, n, t + s, n)
+                } else e.rect(t, n, a, r)
             },
-            drawPoint: function(e, t, a, n, r) {
+            drawPoint: function(e, t, n, a, r) {
                 var i, s, o, d, u, l;
                 if ("object" != typeof t || "[object HTMLImageElement]" !== (i = t.toString()) && "[object HTMLCanvasElement]" !== i) {
-                    if (!(isNaN(a) || a <= 0)) {
+                    if (!(isNaN(n) || n <= 0)) {
                         switch (t) {
                             default: e.beginPath(),
-                            e.arc(n, r, a, 0, 2 * Math.PI),
+                            e.arc(a, r, n, 0, 2 * Math.PI),
                             e.closePath(),
                             e.fill();
                             break;
                             case "triangle":
                                     e.beginPath(),
-                                u = (s = 3 * a / Math.sqrt(3)) * Math.sqrt(3) / 2,
-                                e.moveTo(n - s / 2, r + u / 3),
-                                e.lineTo(n + s / 2, r + u / 3),
-                                e.lineTo(n, r - 2 * u / 3),
+                                u = (s = 3 * n / Math.sqrt(3)) * Math.sqrt(3) / 2,
+                                e.moveTo(a - s / 2, r + u / 3),
+                                e.lineTo(a + s / 2, r + u / 3),
+                                e.lineTo(a, r - 2 * u / 3),
                                 e.closePath(),
                                 e.fill();
                                 break;
                             case "rect":
-                                    l = 1 / Math.SQRT2 * a,
+                                    l = 1 / Math.SQRT2 * n,
                                 e.beginPath(),
-                                e.fillRect(n - l, r - l, 2 * l, 2 * l),
-                                e.strokeRect(n - l, r - l, 2 * l, 2 * l);
+                                e.fillRect(a - l, r - l, 2 * l, 2 * l),
+                                e.strokeRect(a - l, r - l, 2 * l, 2 * l);
                                 break;
                             case "rectRounded":
-                                    var c = a / Math.SQRT2,
-                                    h = n - c,
+                                    var c = n / Math.SQRT2,
+                                    h = a - c,
                                     m = r - c,
-                                    _ = Math.SQRT2 * a;e.beginPath(),
-                                this.roundedRect(e, h, m, _, _, a / 2),
+                                    _ = Math.SQRT2 * n;e.beginPath(),
+                                this.roundedRect(e, h, m, _, _, n / 2),
                                 e.closePath(),
                                 e.fill();
                                 break;
                             case "rectRot":
-                                    l = 1 / Math.SQRT2 * a,
+                                    l = 1 / Math.SQRT2 * n,
                                 e.beginPath(),
-                                e.moveTo(n - l, r),
-                                e.lineTo(n, r + l),
-                                e.lineTo(n + l, r),
-                                e.lineTo(n, r - l),
+                                e.moveTo(a - l, r),
+                                e.lineTo(a, r + l),
+                                e.lineTo(a + l, r),
+                                e.lineTo(a, r - l),
                                 e.closePath(),
                                 e.fill();
                                 break;
                             case "cross":
                                     e.beginPath(),
-                                e.moveTo(n, r + a),
-                                e.lineTo(n, r - a),
-                                e.moveTo(n - a, r),
-                                e.lineTo(n + a, r),
+                                e.moveTo(a, r + n),
+                                e.lineTo(a, r - n),
+                                e.moveTo(a - n, r),
+                                e.lineTo(a + n, r),
                                 e.closePath();
                                 break;
                             case "crossRot":
                                     e.beginPath(),
-                                o = Math.cos(Math.PI / 4) * a,
-                                d = Math.sin(Math.PI / 4) * a,
-                                e.moveTo(n - o, r - d),
-                                e.lineTo(n + o, r + d),
-                                e.moveTo(n - o, r + d),
-                                e.lineTo(n + o, r - d),
+                                o = Math.cos(Math.PI / 4) * n,
+                                d = Math.sin(Math.PI / 4) * n,
+                                e.moveTo(a - o, r - d),
+                                e.lineTo(a + o, r + d),
+                                e.moveTo(a - o, r + d),
+                                e.lineTo(a + o, r - d),
                                 e.closePath();
                                 break;
                             case "star":
                                     e.beginPath(),
-                                e.moveTo(n, r + a),
-                                e.lineTo(n, r - a),
-                                e.moveTo(n - a, r),
-                                e.lineTo(n + a, r),
-                                o = Math.cos(Math.PI / 4) * a,
-                                d = Math.sin(Math.PI / 4) * a,
-                                e.moveTo(n - o, r - d),
-                                e.lineTo(n + o, r + d),
-                                e.moveTo(n - o, r + d),
-                                e.lineTo(n + o, r - d),
+                                e.moveTo(a, r + n),
+                                e.lineTo(a, r - n),
+                                e.moveTo(a - n, r),
+                                e.lineTo(a + n, r),
+                                o = Math.cos(Math.PI / 4) * n,
+                                d = Math.sin(Math.PI / 4) * n,
+                                e.moveTo(a - o, r - d),
+                                e.lineTo(a + o, r + d),
+                                e.moveTo(a - o, r + d),
+                                e.lineTo(a + o, r - d),
                                 e.closePath();
                                 break;
                             case "line":
                                     e.beginPath(),
-                                e.moveTo(n - a, r),
-                                e.lineTo(n + a, r),
+                                e.moveTo(a - n, r),
+                                e.lineTo(a + n, r),
                                 e.closePath();
                                 break;
                             case "dash":
                                     e.beginPath(),
-                                e.moveTo(n, r),
-                                e.lineTo(n + a, r),
+                                e.moveTo(a, r),
+                                e.lineTo(a + n, r),
                                 e.closePath()
                         }
                         e.stroke()
                     }
-                } else e.drawImage(t, n - t.width / 2, r - t.height / 2, t.width, t.height)
+                } else e.drawImage(t, a - t.width / 2, r - t.height / 2, t.width, t.height)
             },
             clipArea: function(e, t) {
                 e.save(), e.beginPath(), e.rect(t.left, t.top, t.right - t.left, t.bottom - t.top), e.clip()
@@ -5524,22 +5524,22 @@ webpackJsonp([35], {
             unclipArea: function(e) {
                 e.restore()
             },
-            lineTo: function(e, t, a, n) {
-                if (a.steppedLine) return "after" === a.steppedLine && !n || "after" !== a.steppedLine && n ? e.lineTo(t.x, a.y) : e.lineTo(a.x, t.y), void e.lineTo(a.x, a.y);
-                a.tension ? e.bezierCurveTo(n ? t.controlPointPreviousX : t.controlPointNextX, n ? t.controlPointPreviousY : t.controlPointNextY, n ? a.controlPointNextX : a.controlPointPreviousX, n ? a.controlPointNextY : a.controlPointPreviousY, a.x, a.y) : e.lineTo(a.x, a.y)
+            lineTo: function(e, t, n, a) {
+                if (n.steppedLine) return "after" === n.steppedLine && !a || "after" !== n.steppedLine && a ? e.lineTo(t.x, n.y) : e.lineTo(n.x, t.y), void e.lineTo(n.x, n.y);
+                n.tension ? e.bezierCurveTo(a ? t.controlPointPreviousX : t.controlPointNextX, a ? t.controlPointPreviousY : t.controlPointNextY, a ? n.controlPointNextX : n.controlPointPreviousX, a ? n.controlPointNextY : n.controlPointPreviousY, n.x, n.y) : e.lineTo(n.x, n.y)
             }
         };
-        n.clear = t.clear, n.drawRoundedRectangle = function(e) {
+        a.clear = t.clear, a.drawRoundedRectangle = function(e) {
             e.beginPath(), t.roundedRect.apply(t, arguments), e.closePath()
         }
     },
-    FDK5: function(e, t, a) {
+    FDK5: function(e, t, n) {
         "use strict";
-        var n = a("k7DW"),
-            r = a("wGD1"),
-            i = a("iO9N"),
-            s = n.global;
-        n._set("global", {
+        var a = n("k7DW"),
+            r = n("wGD1"),
+            i = n("iO9N"),
+            s = a.global;
+        a._set("global", {
             elements: {
                 line: {
                     tension: .4,
@@ -5556,20 +5556,20 @@ webpackJsonp([35], {
             }
         }), e.exports = r.extend({
             draw: function() {
-                var e, t, a, n, r = this._view,
+                var e, t, n, a, r = this._view,
                     o = this._chart.ctx,
                     d = r.spanGaps,
                     u = this._children.slice(),
                     l = s.elements.line,
                     c = -1;
-                for (this._loop && u.length && u.push(u[0]), o.save(), o.lineCap = r.borderCapStyle || l.borderCapStyle, o.setLineDash && o.setLineDash(r.borderDash || l.borderDash), o.lineDashOffset = r.borderDashOffset || l.borderDashOffset, o.lineJoin = r.borderJoinStyle || l.borderJoinStyle, o.lineWidth = r.borderWidth || l.borderWidth, o.strokeStyle = r.borderColor || s.defaultColor, o.beginPath(), c = -1, e = 0; e < u.length; ++e) t = u[e], a = i.previousItem(u, e), n = t._view, 0 === e ? n.skip || (o.moveTo(n.x, n.y), c = e) : (a = -1 === c ? a : u[c], n.skip || (c !== e - 1 && !d || -1 === c ? o.moveTo(n.x, n.y) : i.canvas.lineTo(o, a._view, t._view), c = e));
+                for (this._loop && u.length && u.push(u[0]), o.save(), o.lineCap = r.borderCapStyle || l.borderCapStyle, o.setLineDash && o.setLineDash(r.borderDash || l.borderDash), o.lineDashOffset = r.borderDashOffset || l.borderDashOffset, o.lineJoin = r.borderJoinStyle || l.borderJoinStyle, o.lineWidth = r.borderWidth || l.borderWidth, o.strokeStyle = r.borderColor || s.defaultColor, o.beginPath(), c = -1, e = 0; e < u.length; ++e) t = u[e], n = i.previousItem(u, e), a = t._view, 0 === e ? a.skip || (o.moveTo(a.x, a.y), c = e) : (n = -1 === c ? n : u[c], a.skip || (c !== e - 1 && !d || -1 === c ? o.moveTo(a.x, a.y) : i.canvas.lineTo(o, n._view, t._view), c = e));
                 o.stroke(), o.restore()
             }
         })
     },
-    FKXc: function(e, t, a) {
+    FKXc: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("it", {
@@ -5627,9 +5627,9 @@ webpackJsonp([35], {
             })
         })
     },
-    FRPF: function(e, t, a) {
+    FRPF: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("tzm", {
@@ -5676,9 +5676,9 @@ webpackJsonp([35], {
             })
         })
     },
-    FlzV: function(e, t, a) {
+    FlzV: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("nb", {
@@ -5729,9 +5729,9 @@ webpackJsonp([35], {
             })
         })
     },
-    Fpqq: function(e, t, a) {
+    Fpqq: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("sv", {
@@ -5785,13 +5785,13 @@ webpackJsonp([35], {
             })
         })
     },
-    Frex: function(e, t, a) {
+    Frex: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
 
-            function t(e, t, a, n) {
+            function t(e, t, n, a) {
                 var r = {
                     m: ["eine Minute", "einer Minute"],
                     h: ["eine Stunde", "einer Stunde"],
@@ -5802,7 +5802,7 @@ webpackJsonp([35], {
                     y: ["ein Jahr", "einem Jahr"],
                     yy: [e + " Jahre", e + " Jahren"]
                 };
-                return t ? r[a][0] : r[a][1]
+                return t ? r[n][0] : r[n][1]
             }
             return e.defineLocale("de-ch", {
                 months: "Januar_Februar_März_April_Mai_Juni_Juli_August_September_Oktober_November_Dezember".split("_"),
@@ -5852,9 +5852,9 @@ webpackJsonp([35], {
             })
         })
     },
-    FuaP: function(e, t, a) {
+    FuaP: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("gl", {
@@ -5917,12 +5917,12 @@ webpackJsonp([35], {
             })
         })
     },
-    Fv8P: function(e, t, a) {
+    Fv8P: function(e, t, n) {
         "use strict";
-        var n = a("k7DW"),
-            r = a("L5rj"),
-            i = a("iO9N");
-        n._set("polarArea", {
+        var a = n("k7DW"),
+            r = n("L5rj"),
+            i = n("iO9N");
+        a._set("polarArea", {
             scale: {
                 type: "radialLinear",
                 angleLines: {
@@ -5946,38 +5946,38 @@ webpackJsonp([35], {
             legendCallback: function(e) {
                 var t = [];
                 t.push('<ul class="' + e.id + '-legend">');
-                var a = e.data,
-                    n = a.datasets,
-                    r = a.labels;
-                if (n.length)
-                    for (var i = 0; i < n[0].data.length; ++i) t.push('<li><span style="background-color:' + n[0].backgroundColor[i] + '"></span>'), r[i] && t.push(r[i]), t.push("</li>");
+                var n = e.data,
+                    a = n.datasets,
+                    r = n.labels;
+                if (a.length)
+                    for (var i = 0; i < a[0].data.length; ++i) t.push('<li><span style="background-color:' + a[0].backgroundColor[i] + '"></span>'), r[i] && t.push(r[i]), t.push("</li>");
                 return t.push("</ul>"), t.join("")
             },
             legend: {
                 labels: {
                     generateLabels: function(e) {
                         var t = e.data;
-                        return t.labels.length && t.datasets.length ? t.labels.map(function(a, n) {
+                        return t.labels.length && t.datasets.length ? t.labels.map(function(n, a) {
                             var r = e.getDatasetMeta(0),
                                 s = t.datasets[0],
-                                o = r.data[n].custom || {},
+                                o = r.data[a].custom || {},
                                 d = i.valueAtIndexOrDefault,
                                 u = e.options.elements.arc;
                             return {
-                                text: a,
-                                fillStyle: o.backgroundColor ? o.backgroundColor : d(s.backgroundColor, n, u.backgroundColor),
-                                strokeStyle: o.borderColor ? o.borderColor : d(s.borderColor, n, u.borderColor),
-                                lineWidth: o.borderWidth ? o.borderWidth : d(s.borderWidth, n, u.borderWidth),
-                                hidden: isNaN(s.data[n]) || r.data[n].hidden,
-                                index: n
+                                text: n,
+                                fillStyle: o.backgroundColor ? o.backgroundColor : d(s.backgroundColor, a, u.backgroundColor),
+                                strokeStyle: o.borderColor ? o.borderColor : d(s.borderColor, a, u.borderColor),
+                                lineWidth: o.borderWidth ? o.borderWidth : d(s.borderWidth, a, u.borderWidth),
+                                hidden: isNaN(s.data[a]) || r.data[a].hidden,
+                                index: a
                             }
                         }) : []
                     }
                 },
                 onClick: function(e, t) {
-                    var a, n, r, i = t.index,
+                    var n, a, r, i = t.index,
                         s = this.chart;
-                    for (a = 0, n = (s.data.datasets || []).length; a < n; ++a)(r = s.getDatasetMeta(a)).data[i].hidden = !r.data[i].hidden;
+                    for (n = 0, a = (s.data.datasets || []).length; n < a; ++n)(r = s.getDatasetMeta(n)).data[i].hidden = !r.data[i].hidden;
                     s.update()
                 }
             },
@@ -5997,18 +5997,18 @@ webpackJsonp([35], {
                 linkScales: i.noop,
                 update: function(e) {
                     var t = this,
-                        a = t.chart,
-                        n = a.chartArea,
+                        n = t.chart,
+                        a = n.chartArea,
                         r = t.getMeta(),
-                        s = a.options,
+                        s = n.options,
                         o = s.elements.arc,
-                        d = Math.min(n.right - n.left, n.bottom - n.top);
-                    a.outerRadius = Math.max((d - o.borderWidth / 2) / 2, 0), a.innerRadius = Math.max(s.cutoutPercentage ? a.outerRadius / 100 * s.cutoutPercentage : 1, 0), a.radiusLength = (a.outerRadius - a.innerRadius) / a.getVisibleDatasetCount(), t.outerRadius = a.outerRadius - a.radiusLength * t.index, t.innerRadius = t.outerRadius - a.radiusLength, r.count = t.countVisibleElements(), i.each(r.data, function(a, n) {
-                        t.updateElement(a, n, e)
+                        d = Math.min(a.right - a.left, a.bottom - a.top);
+                    n.outerRadius = Math.max((d - o.borderWidth / 2) / 2, 0), n.innerRadius = Math.max(s.cutoutPercentage ? n.outerRadius / 100 * s.cutoutPercentage : 1, 0), n.radiusLength = (n.outerRadius - n.innerRadius) / n.getVisibleDatasetCount(), t.outerRadius = n.outerRadius - n.radiusLength * t.index, t.innerRadius = t.outerRadius - n.radiusLength, r.count = t.countVisibleElements(), i.each(r.data, function(n, a) {
+                        t.updateElement(n, a, e)
                     })
                 },
-                updateElement: function(e, t, a) {
-                    for (var n = this.chart, r = this.getDataset(), s = n.options, o = s.animation, d = n.scale, u = n.data.labels, l = this.calculateCircumference(r.data[t]), c = d.xCenter, h = d.yCenter, m = 0, _ = this.getMeta(), f = 0; f < t; ++f) isNaN(r.data[f]) || _.data[f].hidden || ++m;
+                updateElement: function(e, t, n) {
+                    for (var a = this.chart, r = this.getDataset(), s = a.options, o = s.animation, d = a.scale, u = a.data.labels, l = this.calculateCircumference(r.data[t]), c = d.xCenter, h = d.yCenter, m = 0, _ = this.getMeta(), f = 0; f < t; ++f) isNaN(r.data[f]) || _.data[f].hidden || ++m;
                     var p = s.startAngle,
                         g = e.hidden ? 0 : d.getDistanceFromCenterForValue(r.data[t]),
                         y = p + l * m,
@@ -6022,9 +6022,9 @@ webpackJsonp([35], {
                             x: c,
                             y: h,
                             innerRadius: 0,
-                            outerRadius: a ? v : g,
-                            startAngle: a && o.animateRotate ? p : y,
-                            endAngle: a && o.animateRotate ? p : M,
+                            outerRadius: n ? v : g,
+                            startAngle: n && o.animateRotate ? p : y,
+                            endAngle: n && o.animateRotate ? p : M,
                             label: i.valueAtIndexOrDefault(u, t, u[t])
                         }
                     }), this.removeHoverStyle(e), e.pivot()
@@ -6035,10 +6035,10 @@ webpackJsonp([35], {
                 countVisibleElements: function() {
                     var e = this.getDataset(),
                         t = this.getMeta(),
-                        a = 0;
-                    return i.each(t.data, function(t, n) {
-                        isNaN(e.data[n]) || t.hidden || a++
-                    }), a
+                        n = 0;
+                    return i.each(t.data, function(t, a) {
+                        isNaN(e.data[a]) || t.hidden || n++
+                    }), n
                 },
                 calculateCircumference: function(e) {
                     var t = this.getMeta().count;
@@ -6047,9 +6047,9 @@ webpackJsonp([35], {
             })
         }
     },
-    "G++c": function(e, t, a) {
+    "G++c": function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("ms-my", {
@@ -6070,7 +6070,7 @@ webpackJsonp([35], {
                 meridiemHour: function(e, t) {
                     return 12 === e && (e = 0), "pagi" === t ? e : "tengahari" === t ? e >= 11 ? e : e + 12 : "petang" === t || "malam" === t ? e + 12 : void 0
                 },
-                meridiem: function(e, t, a) {
+                meridiem: function(e, t, n) {
                     return e < 11 ? "pagi" : e < 15 ? "tengahari" : e < 19 ? "petang" : "malam"
                 },
                 calendar: {
@@ -6103,20 +6103,20 @@ webpackJsonp([35], {
             })
         })
     },
-    G7No: function(e, t, a) {
-        var n = a("xA5w");
+    G7No: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e, t) {
-            var a = n(e),
-                r = n(t);
-            return a.getTime() - r.getTime()
+            var n = a(e),
+                r = a(t);
+            return n.getTime() - r.getTime()
         }
     },
-    GBuA: function(e, t, a) {
+    GBuA: function(e, t, n) {
         "use strict";
-        var n = a("k7DW"),
-            r = a("L5rj"),
-            i = a("iO9N");
-        n._set("bar", {
+        var a = n("k7DW"),
+            r = n("L5rj"),
+            i = n("iO9N");
+        a._set("bar", {
             hover: {
                 mode: "label"
             },
@@ -6134,7 +6134,7 @@ webpackJsonp([35], {
                     type: "linear"
                 }]
             }
-        }), n._set("horizontalBar", {
+        }), a._set("horizontalBar", {
             hover: {
                 mode: "index",
                 axis: "y"
@@ -6163,8 +6163,8 @@ webpackJsonp([35], {
             tooltips: {
                 callbacks: {
                     title: function(e, t) {
-                        var a = "";
-                        return e.length > 0 && (e[0].yLabel ? a = e[0].yLabel : t.labels.length > 0 && e[0].index < t.labels.length && (a = t.labels[e[0].index])), a
+                        var n = "";
+                        return e.length > 0 && (e[0].yLabel ? n = e[0].yLabel : t.labels.length > 0 && e[0].index < t.labels.length && (n = t.labels[e[0].index])), n
                     },
                     label: function(e, t) {
                         return (t.datasets[e.datasetIndex].label || "") + ": " + e.xLabel
@@ -6181,33 +6181,33 @@ webpackJsonp([35], {
                     e.DatasetController.prototype.initialize.apply(this, arguments), (t = this.getMeta()).stack = this.getDataset().stack, t.bar = !0
                 },
                 update: function(e) {
-                    var t, a, n = this.getMeta().data;
-                    for (this._ruler = this.getRuler(), t = 0, a = n.length; t < a; ++t) this.updateElement(n[t], t, e)
+                    var t, n, a = this.getMeta().data;
+                    for (this._ruler = this.getRuler(), t = 0, n = a.length; t < n; ++t) this.updateElement(a[t], t, e)
                 },
-                updateElement: function(e, t, a) {
-                    var n = this.chart,
+                updateElement: function(e, t, n) {
+                    var a = this.chart,
                         r = this.getMeta(),
                         s = this.getDataset(),
                         o = e.custom || {},
-                        d = n.options.elements.rectangle;
+                        d = a.options.elements.rectangle;
                     e._xScale = this.getScaleForId(r.xAxisID), e._yScale = this.getScaleForId(r.yAxisID), e._datasetIndex = this.index, e._index = t, e._model = {
                         datasetLabel: s.label,
-                        label: n.data.labels[t],
+                        label: a.data.labels[t],
                         borderSkipped: o.borderSkipped ? o.borderSkipped : d.borderSkipped,
                         backgroundColor: o.backgroundColor ? o.backgroundColor : i.valueAtIndexOrDefault(s.backgroundColor, t, d.backgroundColor),
                         borderColor: o.borderColor ? o.borderColor : i.valueAtIndexOrDefault(s.borderColor, t, d.borderColor),
                         borderWidth: o.borderWidth ? o.borderWidth : i.valueAtIndexOrDefault(s.borderWidth, t, d.borderWidth)
-                    }, this.updateElementGeometry(e, t, a), e.pivot()
+                    }, this.updateElementGeometry(e, t, n), e.pivot()
                 },
-                updateElementGeometry: function(e, t, a) {
-                    var n = e._model,
+                updateElementGeometry: function(e, t, n) {
+                    var a = e._model,
                         r = this.getValueScale(),
                         i = r.getBasePixel(),
                         s = r.isHorizontal(),
                         o = this._ruler || this.getRuler(),
                         d = this.calculateBarValuePixels(this.index, t),
                         u = this.calculateBarIndexPixels(this.index, t, o);
-                    n.horizontal = s, n.base = a ? i : d.base, n.x = s ? a ? i : d.head : u.center, n.y = s ? u.center : a ? i : d.head, n.height = s ? u.size : void 0, n.width = s ? void 0 : u.size
+                    a.horizontal = s, a.base = n ? i : d.base, a.x = s ? n ? i : d.head : u.center, a.y = s ? u.center : n ? i : d.head, a.height = s ? u.size : void 0, a.width = s ? void 0 : u.size
                 },
                 getValueScaleId: function() {
                     return this.getMeta().yAxisID
@@ -6222,35 +6222,35 @@ webpackJsonp([35], {
                     return this.getScaleForId(this.getIndexScaleId())
                 },
                 getStackCount: function(e) {
-                    var t, a, n = this.chart,
+                    var t, n, a = this.chart,
                         r = this.getIndexScale().options.stacked,
-                        i = void 0 === e ? n.data.datasets.length : e + 1,
+                        i = void 0 === e ? a.data.datasets.length : e + 1,
                         s = [];
-                    for (t = 0; t < i; ++t)(a = n.getDatasetMeta(t)).bar && n.isDatasetVisible(t) && (!1 === r || !0 === r && -1 === s.indexOf(a.stack) || void 0 === r && (void 0 === a.stack || -1 === s.indexOf(a.stack))) && s.push(a.stack);
+                    for (t = 0; t < i; ++t)(n = a.getDatasetMeta(t)).bar && a.isDatasetVisible(t) && (!1 === r || !0 === r && -1 === s.indexOf(n.stack) || void 0 === r && (void 0 === n.stack || -1 === s.indexOf(n.stack))) && s.push(n.stack);
                     return s.length
                 },
                 getStackIndex: function(e) {
                     return this.getStackCount(e) - 1
                 },
                 getRuler: function() {
-                    var e, t, a = this.getIndexScale(),
-                        n = this.getStackCount(),
+                    var e, t, n = this.getIndexScale(),
+                        a = this.getStackCount(),
                         r = this.index,
                         i = [],
-                        s = a.isHorizontal(),
-                        o = s ? a.left : a.top,
-                        d = o + (s ? a.width : a.height);
-                    for (e = 0, t = this.getMeta().data.length; e < t; ++e) i.push(a.getPixelForValue(null, e, r));
+                        s = n.isHorizontal(),
+                        o = s ? n.left : n.top,
+                        d = o + (s ? n.width : n.height);
+                    for (e = 0, t = this.getMeta().data.length; e < t; ++e) i.push(n.getPixelForValue(null, e, r));
                     return {
                         pixels: i,
                         start: o,
                         end: d,
-                        stackCount: n,
-                        scale: a
+                        stackCount: a,
+                        scale: n
                     }
                 },
                 calculateBarValuePixels: function(e, t) {
-                    var a, n, r, i, s, o, d = this.chart,
+                    var n, a, r, i, s, o, d = this.chart,
                         u = this.getMeta(),
                         l = this.getValueScale(),
                         c = d.data.datasets,
@@ -6259,7 +6259,7 @@ webpackJsonp([35], {
                         _ = u.stack,
                         f = 0;
                     if (m || void 0 === m && void 0 !== _)
-                        for (a = 0; a < e; ++a)(n = d.getDatasetMeta(a)).bar && n.stack === _ && n.controller.getValueScaleId() === l.id && d.isDatasetVisible(a) && (r = l.getRightValue(c[a].data[t]), (h < 0 && r < 0 || h >= 0 && r > 0) && (f += r));
+                        for (n = 0; n < e; ++n)(a = d.getDatasetMeta(n)).bar && a.stack === _ && a.controller.getValueScaleId() === l.id && d.isDatasetVisible(n) && (r = l.getRightValue(c[n].data[t]), (h < 0 && r < 0 || h >= 0 && r > 0) && (f += r));
                     return i = l.getPixelForValue(f), s = l.getPixelForValue(f + h), o = (s - i) / 2, {
                         size: o,
                         base: i,
@@ -6267,15 +6267,15 @@ webpackJsonp([35], {
                         center: s + o / 2
                     }
                 },
-                calculateBarIndexPixels: function(e, t, a) {
-                    var n, r, s, o, d, u, l = a.scale.options,
+                calculateBarIndexPixels: function(e, t, n) {
+                    var a, r, s, o, d, u, l = n.scale.options,
                         c = this.getStackIndex(e),
-                        h = a.pixels,
+                        h = n.pixels,
                         m = h[t],
                         _ = h.length,
-                        f = a.start,
-                        p = a.end;
-                    return 1 === _ ? (n = m > f ? m - f : p - m, r = m < p ? p - m : m - f) : (t > 0 && (n = (m - h[t - 1]) / 2, t === _ - 1 && (r = n)), t < _ - 1 && (r = (h[t + 1] - m) / 2, 0 === t && (n = r))), s = n * l.categoryPercentage, o = r * l.categoryPercentage, d = (s + o) / a.stackCount, u = d * l.barPercentage, u = Math.min(i.valueOrDefault(l.barThickness, u), i.valueOrDefault(l.maxBarThickness, 1 / 0)), m -= s, m += d * c, m += (d - u) / 2, {
+                        f = n.start,
+                        p = n.end;
+                    return 1 === _ ? (a = m > f ? m - f : p - m, r = m < p ? p - m : m - f) : (t > 0 && (a = (m - h[t - 1]) / 2, t === _ - 1 && (r = a)), t < _ - 1 && (r = (h[t + 1] - m) / 2, 0 === t && (a = r))), s = a * l.categoryPercentage, o = r * l.categoryPercentage, d = (s + o) / n.stackCount, u = d * l.barPercentage, u = Math.min(i.valueOrDefault(l.barThickness, u), i.valueOrDefault(l.maxBarThickness, 1 / 0)), m -= s, m += d * c, m += (d - u) / 2, {
                         size: u,
                         base: m,
                         head: m + u,
@@ -6285,27 +6285,27 @@ webpackJsonp([35], {
                 draw: function() {
                     var e = this.chart,
                         t = this.getValueScale(),
-                        a = this.getMeta().data,
-                        n = this.getDataset(),
-                        r = a.length,
+                        n = this.getMeta().data,
+                        a = this.getDataset(),
+                        r = n.length,
                         s = 0;
-                    for (i.canvas.clipArea(e.ctx, e.chartArea); s < r; ++s) isNaN(t.getRightValue(n.data[s])) || a[s].draw();
+                    for (i.canvas.clipArea(e.ctx, e.chartArea); s < r; ++s) isNaN(t.getRightValue(a.data[s])) || n[s].draw();
                     i.canvas.unclipArea(e.ctx)
                 },
                 setHoverStyle: function(e) {
                     var t = this.chart.data.datasets[e._datasetIndex],
-                        a = e._index,
-                        n = e.custom || {},
+                        n = e._index,
+                        a = e.custom || {},
                         r = e._model;
-                    r.backgroundColor = n.hoverBackgroundColor ? n.hoverBackgroundColor : i.valueAtIndexOrDefault(t.hoverBackgroundColor, a, i.getHoverColor(r.backgroundColor)), r.borderColor = n.hoverBorderColor ? n.hoverBorderColor : i.valueAtIndexOrDefault(t.hoverBorderColor, a, i.getHoverColor(r.borderColor)), r.borderWidth = n.hoverBorderWidth ? n.hoverBorderWidth : i.valueAtIndexOrDefault(t.hoverBorderWidth, a, r.borderWidth)
+                    r.backgroundColor = a.hoverBackgroundColor ? a.hoverBackgroundColor : i.valueAtIndexOrDefault(t.hoverBackgroundColor, n, i.getHoverColor(r.backgroundColor)), r.borderColor = a.hoverBorderColor ? a.hoverBorderColor : i.valueAtIndexOrDefault(t.hoverBorderColor, n, i.getHoverColor(r.borderColor)), r.borderWidth = a.hoverBorderWidth ? a.hoverBorderWidth : i.valueAtIndexOrDefault(t.hoverBorderWidth, n, r.borderWidth)
                 },
                 removeHoverStyle: function(e) {
                     var t = this.chart.data.datasets[e._datasetIndex],
-                        a = e._index,
-                        n = e.custom || {},
+                        n = e._index,
+                        a = e.custom || {},
                         r = e._model,
                         s = this.chart.options.elements.rectangle;
-                    r.backgroundColor = n.backgroundColor ? n.backgroundColor : i.valueAtIndexOrDefault(t.backgroundColor, a, s.backgroundColor), r.borderColor = n.borderColor ? n.borderColor : i.valueAtIndexOrDefault(t.borderColor, a, s.borderColor), r.borderWidth = n.borderWidth ? n.borderWidth : i.valueAtIndexOrDefault(t.borderWidth, a, s.borderWidth)
+                    r.backgroundColor = a.backgroundColor ? a.backgroundColor : i.valueAtIndexOrDefault(t.backgroundColor, n, s.backgroundColor), r.borderColor = a.borderColor ? a.borderColor : i.valueAtIndexOrDefault(t.borderColor, n, s.borderColor), r.borderWidth = a.borderWidth ? a.borderWidth : i.valueAtIndexOrDefault(t.borderWidth, n, s.borderWidth)
                 }
             }), e.controllers.horizontalBar = e.controllers.bar.extend({
                 getValueScaleId: function() {
@@ -6317,29 +6317,29 @@ webpackJsonp([35], {
             })
         }
     },
-    GI7G: function(e, t, a) {
-        var n = a("xA5w"),
-            r = a("orNa"),
-            i = a("NKE6");
+    GI7G: function(e, t, n) {
+        var a = n("xA5w"),
+            r = n("orNa"),
+            i = n("NKE6");
         e.exports = function(e, t) {
-            var a = n(e),
-                s = n(t),
-                o = i(a, s),
-                d = Math.abs(r(a, s));
-            return a.setMonth(a.getMonth() - o * d), o * (d - (i(a, s) === -o))
+            var n = a(e),
+                s = a(t),
+                o = i(n, s),
+                d = Math.abs(r(n, s));
+            return n.setMonth(n.getMonth() - o * d), o * (d - (i(n, s) === -o))
         }
     },
-    GqGk: function(e, t, a) {
+    GqGk: function(e, t, n) {
         "use strict";
         e.exports = function(e) {
-            e.Scatter = function(t, a) {
-                return a.type = "scatter", new e(t, a)
+            e.Scatter = function(t, n) {
+                return n.type = "scatter", new e(t, n)
             }
         }
     },
-    GrS7: function(e, t, a) {
+    GrS7: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("hy-am", {
@@ -6412,74 +6412,74 @@ webpackJsonp([35], {
             })
         })
     },
-    GvNH: function(e, t, a) {
-        var n = a("WNGz");
+    GvNH: function(e, t, n) {
+        var a = n("WNGz");
         e.exports = function(e) {
-            return n(e).getTime() === n(new Date).getTime()
+            return a(e).getTime() === a(new Date).getTime()
         }
     },
     HXCM: function(e, t) {
         e.exports = function() {
             var e = new Date,
                 t = e.getFullYear(),
-                a = e.getMonth(),
-                n = e.getDate(),
+                n = e.getMonth(),
+                a = e.getDate(),
                 r = new Date(0);
-            return r.setFullYear(t, a, n + 1), r.setHours(23, 59, 59, 999), r
+            return r.setFullYear(t, n, a + 1), r.setHours(23, 59, 59, 999), r
         }
     },
-    I7cV: function(e, t, a) {
-        var n = a("xA5w");
+    I7cV: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e, t) {
-            var a = t ? Number(t.weekStartsOn) || 0 : 0,
-                r = n(e),
+            var n = t ? Number(t.weekStartsOn) || 0 : 0,
+                r = a(e),
                 i = r.getDay(),
-                s = 6 + (i < a ? -7 : 0) - (i - a);
+                s = 6 + (i < n ? -7 : 0) - (i - n);
             return r.setDate(r.getDate() + s), r.setHours(23, 59, 59, 999), r
         }
     },
-    IbXy: function(e, t, a) {
+    IbXy: function(e, t, n) {
         "use strict";
-        var n = a("iO9N");
+        var a = n("iO9N");
         e.exports = {
             generators: {
                 linear: function(e, t) {
-                    var a, r = [];
-                    if (e.stepSize && e.stepSize > 0) a = e.stepSize;
+                    var n, r = [];
+                    if (e.stepSize && e.stepSize > 0) n = e.stepSize;
                     else {
-                        var i = n.niceNum(t.max - t.min, !1);
-                        a = n.niceNum(i / (e.maxTicks - 1), !0)
+                        var i = a.niceNum(t.max - t.min, !1);
+                        n = a.niceNum(i / (e.maxTicks - 1), !0)
                     }
-                    var s = Math.floor(t.min / a) * a,
-                        o = Math.ceil(t.max / a) * a;
-                    e.min && e.max && e.stepSize && n.almostWhole((e.max - e.min) / e.stepSize, a / 1e3) && (s = e.min, o = e.max);
-                    var d = (o - s) / a;
-                    d = n.almostEquals(d, Math.round(d), a / 1e3) ? Math.round(d) : Math.ceil(d), r.push(void 0 !== e.min ? e.min : s);
-                    for (var u = 1; u < d; ++u) r.push(s + u * a);
+                    var s = Math.floor(t.min / n) * n,
+                        o = Math.ceil(t.max / n) * n;
+                    e.min && e.max && e.stepSize && a.almostWhole((e.max - e.min) / e.stepSize, n / 1e3) && (s = e.min, o = e.max);
+                    var d = (o - s) / n;
+                    d = a.almostEquals(d, Math.round(d), n / 1e3) ? Math.round(d) : Math.ceil(d), r.push(void 0 !== e.min ? e.min : s);
+                    for (var u = 1; u < d; ++u) r.push(s + u * n);
                     return r.push(void 0 !== e.max ? e.max : o), r
                 },
                 logarithmic: function(e, t) {
-                    var a, r, i = [],
-                        s = n.valueOrDefault,
-                        o = s(e.min, Math.pow(10, Math.floor(n.log10(t.min)))),
-                        d = Math.floor(n.log10(t.max)),
+                    var n, r, i = [],
+                        s = a.valueOrDefault,
+                        o = s(e.min, Math.pow(10, Math.floor(a.log10(t.min)))),
+                        d = Math.floor(a.log10(t.max)),
                         u = Math.ceil(t.max / Math.pow(10, d));
-                    0 === o ? (a = Math.floor(n.log10(t.minNotZero)), r = Math.floor(t.minNotZero / Math.pow(10, a)), i.push(o), o = r * Math.pow(10, a)) : (a = Math.floor(n.log10(o)), r = Math.floor(o / Math.pow(10, a)));
+                    0 === o ? (n = Math.floor(a.log10(t.minNotZero)), r = Math.floor(t.minNotZero / Math.pow(10, n)), i.push(o), o = r * Math.pow(10, n)) : (n = Math.floor(a.log10(o)), r = Math.floor(o / Math.pow(10, n)));
                     do {
-                        i.push(o), 10 === ++r && (r = 1, ++a), o = r * Math.pow(10, a)
-                    } while (a < d || a === d && r < u);
+                        i.push(o), 10 === ++r && (r = 1, ++n), o = r * Math.pow(10, n)
+                    } while (n < d || n === d && r < u);
                     var l = s(e.max, o);
                     return i.push(l), i
                 }
             },
             formatters: {
                 values: function(e) {
-                    return n.isArray(e) ? e : "" + e
+                    return a.isArray(e) ? e : "" + e
                 },
-                linear: function(e, t, a) {
-                    var r = a.length > 3 ? a[2] - a[1] : a[1] - a[0];
+                linear: function(e, t, n) {
+                    var r = n.length > 3 ? n[2] - n[1] : n[1] - n[0];
                     Math.abs(r) > 1 && e !== Math.floor(e) && (r = e - Math.floor(e));
-                    var i = n.log10(Math.abs(r)),
+                    var i = a.log10(Math.abs(r)),
                         s = "";
                     if (0 !== e) {
                         var o = -1 * Math.floor(i);
@@ -6487,53 +6487,53 @@ webpackJsonp([35], {
                     } else s = "0";
                     return s
                 },
-                logarithmic: function(e, t, a) {
-                    var r = e / Math.pow(10, Math.floor(n.log10(e)));
-                    return 0 === e ? "0" : 1 === r || 2 === r || 5 === r || 0 === t || t === a.length - 1 ? e.toExponential() : ""
+                logarithmic: function(e, t, n) {
+                    var r = e / Math.pow(10, Math.floor(a.log10(e)));
+                    return 0 === e ? "0" : 1 === r || 2 === r || 5 === r || 0 === t || t === n.length - 1 ? e.toExponential() : ""
                 }
             }
         }
     },
-    JNsx: function(e, t, a) {
-        var n = a("xA5w");
+    JNsx: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e) {
-            return n(e).getMinutes()
+            return a(e).getMinutes()
         }
     },
-    JURy: function(e, t, a) {
-        var n = a("xA5w");
+    JURy: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e) {
-            var t = n(e),
-                a = new Date(0);
-            return a.setFullYear(t.getFullYear(), 0, 1), a.setHours(0, 0, 0, 0), a
+            var t = a(e),
+                n = new Date(0);
+            return n.setFullYear(t.getFullYear(), 0, 1), n.setHours(0, 0, 0, 0), n
         }
     },
-    Javx: function(e, t, a) {
-        var n = a("b7g8");
+    Javx: function(e, t, n) {
+        var a = n("b7g8");
         e.exports = function(e) {
-            return n(e) ? 366 : 365
+            return a(e) ? 366 : 365
         }
     },
-    Jtuq: function(e, t, a) {
-        var n = a("lQzg"),
-            r = a("xA5w");
+    Jtuq: function(e, t, n) {
+        var a = n("lQzg"),
+            r = n("xA5w");
         e.exports = function(e, t) {
-            var a = r(e),
+            var n = r(e),
                 i = r(t);
-            return 4 * (a.getFullYear() - i.getFullYear()) + (n(a) - n(i))
+            return 4 * (n.getFullYear() - i.getFullYear()) + (a(n) - a(i))
         }
     },
-    Jvcu: function(e, t, a) {
-        var n = a("xA5w");
+    Jvcu: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e, t) {
-            var a = n(e),
+            var n = a(e),
                 r = Number(t);
-            return a.setDate(a.getDate() + r), a
+            return n.setDate(n.getDate() + r), n
         }
     },
-    JwiF: function(e, t, a) {
+    JwiF: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("jv", {
@@ -6554,7 +6554,7 @@ webpackJsonp([35], {
                 meridiemHour: function(e, t) {
                     return 12 === e && (e = 0), "enjing" === t ? e : "siyang" === t ? e >= 11 ? e : e + 12 : "sonten" === t || "ndalu" === t ? e + 12 : void 0
                 },
-                meridiem: function(e, t, a) {
+                meridiem: function(e, t, n) {
                     return e < 11 ? "enjing" : e < 15 ? "siyang" : e < 19 ? "sonten" : "ndalu"
                 },
                 calendar: {
@@ -6587,21 +6587,21 @@ webpackJsonp([35], {
             })
         })
     },
-    K7ZZ: function(e, t, a) {
-        var n = a("zZbG"),
-            r = a("3znZ");
+    K7ZZ: function(e, t, n) {
+        var a = n("zZbG"),
+            r = n("3znZ");
         e.exports = function(e) {
-            var t = n(e),
-                a = new Date(0);
-            a.setFullYear(t + 1, 0, 4), a.setHours(0, 0, 0, 0);
-            var i = r(a);
+            var t = a(e),
+                n = new Date(0);
+            n.setFullYear(t + 1, 0, 4), n.setHours(0, 0, 0, 0);
+            var i = r(n);
             return i.setMilliseconds(i.getMilliseconds() - 1), i
         }
     },
-    KC8c: function(e, t, a) {
+    KC8c: function(e, t, n) {
         "use strict";
 
-        function n(e, t) {
+        function a(e, t) {
             return e.native ? {
                 x: e.x,
                 y: e.y
@@ -6609,29 +6609,29 @@ webpackJsonp([35], {
         }
 
         function r(e, t) {
-            var a, n, r, i, s;
-            for (n = 0, i = e.data.datasets.length; n < i; ++n)
-                if (e.isDatasetVisible(n))
-                    for (r = 0, s = (a = e.getDatasetMeta(n)).data.length; r < s; ++r) {
-                        var o = a.data[r];
+            var n, a, r, i, s;
+            for (a = 0, i = e.data.datasets.length; a < i; ++a)
+                if (e.isDatasetVisible(a))
+                    for (r = 0, s = (n = e.getDatasetMeta(a)).data.length; r < s; ++r) {
+                        var o = n.data[r];
                         o._view.skip || t(o)
                     }
         }
 
         function i(e, t) {
-            var a = [];
+            var n = [];
             return r(e, function(e) {
-                e.inRange(t.x, t.y) && a.push(e)
-            }), a
+                e.inRange(t.x, t.y) && n.push(e)
+            }), n
         }
 
-        function s(e, t, a, n) {
+        function s(e, t, n, a) {
             var i = Number.POSITIVE_INFINITY,
                 s = [];
             return r(e, function(e) {
-                if (!a || e.inRange(t.x, t.y)) {
+                if (!n || e.inRange(t.x, t.y)) {
                     var r = e.getCenterPoint(),
-                        o = n(t, r);
+                        o = a(t, r);
                     o < i ? (s = [e], i = o) : o === i && s.push(e)
                 }
             }), s
@@ -6639,44 +6639,44 @@ webpackJsonp([35], {
 
         function o(e) {
             var t = -1 !== e.indexOf("x"),
-                a = -1 !== e.indexOf("y");
-            return function(e, n) {
-                var r = t ? Math.abs(e.x - n.x) : 0,
-                    i = a ? Math.abs(e.y - n.y) : 0;
+                n = -1 !== e.indexOf("y");
+            return function(e, a) {
+                var r = t ? Math.abs(e.x - a.x) : 0,
+                    i = n ? Math.abs(e.y - a.y) : 0;
                 return Math.sqrt(Math.pow(r, 2) + Math.pow(i, 2))
             }
         }
 
-        function d(e, t, a) {
-            var r = n(t, e);
-            a.axis = a.axis || "x";
-            var d = o(a.axis),
-                u = a.intersect ? i(e, r) : s(e, r, !1, d),
+        function d(e, t, n) {
+            var r = a(t, e);
+            n.axis = n.axis || "x";
+            var d = o(n.axis),
+                u = n.intersect ? i(e, r) : s(e, r, !1, d),
                 l = [];
-            return u.length ? (e.data.datasets.forEach(function(t, a) {
-                if (e.isDatasetVisible(a)) {
-                    var n = e.getDatasetMeta(a).data[u[0]._index];
-                    n && !n._view.skip && l.push(n)
+            return u.length ? (e.data.datasets.forEach(function(t, n) {
+                if (e.isDatasetVisible(n)) {
+                    var a = e.getDatasetMeta(n).data[u[0]._index];
+                    a && !a._view.skip && l.push(a)
                 }
             }), l) : []
         }
-        var u = a("iO9N");
+        var u = n("iO9N");
         e.exports = {
             modes: {
                 single: function(e, t) {
-                    var a = n(t, e),
+                    var n = a(t, e),
                         i = [];
                     return r(e, function(e) {
-                        if (e.inRange(a.x, a.y)) return i.push(e), i
+                        if (e.inRange(n.x, n.y)) return i.push(e), i
                     }), i.slice(0, 1)
                 },
                 label: d,
                 index: d,
-                dataset: function(e, t, a) {
-                    var r = n(t, e);
-                    a.axis = a.axis || "xy";
-                    var d = o(a.axis),
-                        u = a.intersect ? i(e, r) : s(e, r, !1, d);
+                dataset: function(e, t, n) {
+                    var r = a(t, e);
+                    n.axis = n.axis || "xy";
+                    var d = o(n.axis),
+                        u = n.intersect ? i(e, r) : s(e, r, !1, d);
                     return u.length > 0 && (u = e.getDatasetMeta(u[0]._datasetIndex).data), u
                 },
                 "x-axis": function(e, t) {
@@ -6685,59 +6685,59 @@ webpackJsonp([35], {
                     })
                 },
                 point: function(e, t) {
-                    return i(e, n(t, e))
+                    return i(e, a(t, e))
                 },
-                nearest: function(e, t, a) {
-                    var r = n(t, e);
-                    a.axis = a.axis || "xy";
-                    var i = o(a.axis),
-                        d = s(e, r, a.intersect, i);
+                nearest: function(e, t, n) {
+                    var r = a(t, e);
+                    n.axis = n.axis || "xy";
+                    var i = o(n.axis),
+                        d = s(e, r, n.intersect, i);
                     return d.length > 1 && d.sort(function(e, t) {
-                        var a = e.getArea() - t.getArea();
-                        return 0 === a && (a = e._datasetIndex - t._datasetIndex), a
+                        var n = e.getArea() - t.getArea();
+                        return 0 === n && (n = e._datasetIndex - t._datasetIndex), n
                     }), d.slice(0, 1)
                 },
-                x: function(e, t, a) {
-                    var i = n(t, e),
+                x: function(e, t, n) {
+                    var i = a(t, e),
                         s = [],
                         o = !1;
                     return r(e, function(e) {
                         e.inXRange(i.x) && s.push(e), e.inRange(i.x, i.y) && (o = !0)
-                    }), a.intersect && !o && (s = []), s
+                    }), n.intersect && !o && (s = []), s
                 },
-                y: function(e, t, a) {
-                    var i = n(t, e),
+                y: function(e, t, n) {
+                    var i = a(t, e),
                         s = [],
                         o = !1;
                     return r(e, function(e) {
                         e.inYRange(i.y) && s.push(e), e.inRange(i.x, i.y) && (o = !0)
-                    }), a.intersect && !o && (s = []), s
+                    }), n.intersect && !o && (s = []), s
                 }
             }
         }
     },
-    L5rj: function(e, t, a) {
+    L5rj: function(e, t, n) {
         "use strict";
-        e.exports = {}, e.exports.Arc = a("5ImO"), e.exports.Line = a("FDK5"), e.exports.Point = a("Qor1"), e.exports.Rectangle = a("AFDx")
+        e.exports = {}, e.exports.Arc = n("5ImO"), e.exports.Line = n("FDK5"), e.exports.Point = n("Qor1"), e.exports.Rectangle = n("AFDx")
     },
-    LLTj: function(e, t, a) {
-        var n = a("xA5w");
+    LLTj: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e) {
-            var t = n(e);
+            var t = a(e);
             return t.setMinutes(0, 0, 0), t
         }
     },
-    LT9G: function(e, t, a) {
+    LT9G: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             var t = "ene._feb._mar._abr._may._jun._jul._ago._sep._oct._nov._dic.".split("_"),
-                a = "ene_feb_mar_abr_may_jun_jul_ago_sep_oct_nov_dic".split("_");
+                n = "ene_feb_mar_abr_may_jun_jul_ago_sep_oct_nov_dic".split("_");
             return e.defineLocale("es", {
                 months: "enero_febrero_marzo_abril_mayo_junio_julio_agosto_septiembre_octubre_noviembre_diciembre".split("_"),
-                monthsShort: function(e, n) {
-                    return e ? /-MMM-/.test(n) ? a[e.month()] : t[e.month()] : t
+                monthsShort: function(e, a) {
+                    return e ? /-MMM-/.test(a) ? n[e.month()] : t[e.month()] : t
                 },
                 monthsParseExact: !0,
                 weekdays: "domingo_lunes_martes_miércoles_jueves_viernes_sábado".split("_"),
@@ -6794,16 +6794,16 @@ webpackJsonp([35], {
             })
         })
     },
-    LU20: function(e, t, a) {
-        var n = a("xA5w");
+    LU20: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e) {
-            var t = n(e);
+            var t = a(e);
             return t.setSeconds(59, 999), t
         }
     },
-    Lgqo: function(e, t, a) {
+    Lgqo: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("si", {
@@ -6852,72 +6852,72 @@ webpackJsonp([35], {
                 isPM: function(e) {
                     return "ප.ව." === e || "පස් වරු" === e
                 },
-                meridiem: function(e, t, a) {
-                    return e > 11 ? a ? "ප.ව." : "පස් වරු" : a ? "පෙ.ව." : "පෙර වරු"
+                meridiem: function(e, t, n) {
+                    return e > 11 ? n ? "ප.ව." : "පස් වරු" : n ? "පෙ.ව." : "පෙර වරු"
                 }
             })
         })
     },
-    M5Oo: function(e, t, a) {
-        var n = a("xA5w");
+    M5Oo: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e) {
-            var t = n(e);
+            var t = a(e);
             return t.setSeconds(0, 0), t
         }
     },
-    M9Ev: function(e, t, a) {
-        var n = a("xA5w");
+    M9Ev: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e, t) {
-            var a = n(e),
-                r = n(t).getTime();
-            if (a.getTime() > r) throw new Error("The first date cannot be after the second date");
+            var n = a(e),
+                r = a(t).getTime();
+            if (n.getTime() > r) throw new Error("The first date cannot be after the second date");
             var i = [],
-                s = a;
-            for (s.setHours(0, 0, 0, 0); s.getTime() <= r;) i.push(n(s)), s.setDate(s.getDate() + 1);
+                s = n;
+            for (s.setHours(0, 0, 0, 0); s.getTime() <= r;) i.push(a(s)), s.setDate(s.getDate() + 1);
             return i
         }
     },
-    MIQa: function(e, t, a) {
-        var n = a("xA5w");
+    MIQa: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e) {
-            var t = n(e);
+            var t = a(e);
             return t.setHours(23, 59, 59, 999), t
         }
     },
-    "MKc+": function(e, t, a) {
-        var n = a("oNnY");
+    "MKc+": function(e, t, n) {
+        var a = n("oNnY");
         e.exports = function(e, t) {
-            var a = Number(t);
-            return n(e, -a)
+            var n = Number(t);
+            return a(e, -n)
         }
     },
-    Mbb9: function(e, t, a) {
-        var n = a("xA5w");
+    Mbb9: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e) {
-            return n(e).getDay()
+            return a(e).getDay()
         }
     },
-    Mdww: function(e, t, a) {
-        var n = a("xA5w");
+    Mdww: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e) {
-            var t = n(e),
-                a = t.getFullYear(),
+            var t = a(e),
+                n = t.getFullYear(),
                 r = t.getMonth(),
                 i = new Date(0);
-            return i.setFullYear(a, r + 1, 0), i.setHours(0, 0, 0, 0), i.getDate()
+            return i.setFullYear(n, r + 1, 0), i.setHours(0, 0, 0, 0), i.getDate()
         }
     },
-    Moxe: function(e, t, a) {
-        var n = a("M5Oo");
+    Moxe: function(e, t, n) {
+        var a = n("M5Oo");
         e.exports = function(e, t) {
-            var a = n(e),
-                r = n(t);
-            return a.getTime() === r.getTime()
+            var n = a(e),
+                r = a(t);
+            return n.getTime() === r.getTime()
         }
     },
-    N3vo: function(e, t, a) {
+    N3vo: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("cv", {
@@ -6968,25 +6968,25 @@ webpackJsonp([35], {
             })
         })
     },
-    NKE6: function(e, t, a) {
-        var n = a("xA5w");
+    NKE6: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e, t) {
-            var a = n(e).getTime(),
-                r = n(t).getTime();
-            return a < r ? -1 : a > r ? 1 : 0
+            var n = a(e).getTime(),
+                r = a(t).getTime();
+            return n < r ? -1 : n > r ? 1 : 0
         }
     },
-    NSOL: function(e, t, a) {
-        var n = a("6Zhv"),
+    NSOL: function(e, t, n) {
+        var a = n("6Zhv"),
             r = 6e4;
         e.exports = function(e, t) {
-            var a = Number(t);
-            return n(e, a * r)
+            var n = Number(t);
+            return a(e, n * r)
         }
     },
-    Nd3h: function(e, t, a) {
+    Nd3h: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("eo", {
@@ -7007,8 +7007,8 @@ webpackJsonp([35], {
                 isPM: function(e) {
                     return "p" === e.charAt(0).toLowerCase()
                 },
-                meridiem: function(e, t, a) {
-                    return e > 11 ? a ? "p.t.m." : "P.T.M." : a ? "a.t.m." : "A.T.M."
+                meridiem: function(e, t, n) {
+                    return e > 11 ? n ? "p.t.m." : "P.T.M." : n ? "a.t.m." : "A.T.M."
                 },
                 calendar: {
                     sameDay: "[Hodiaŭ je] LT",
@@ -7042,9 +7042,9 @@ webpackJsonp([35], {
             })
         })
     },
-    Nlnz: function(e, t, a) {
+    Nlnz: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("te", {
@@ -7091,7 +7091,7 @@ webpackJsonp([35], {
                 meridiemHour: function(e, t) {
                     return 12 === e && (e = 0), "రాత్రి" === t ? e < 4 ? e : e + 12 : "ఉదయం" === t ? e : "మధ్యాహ్నం" === t ? e >= 10 ? e : e + 12 : "సాయంత్రం" === t ? e + 12 : void 0
                 },
-                meridiem: function(e, t, a) {
+                meridiem: function(e, t, n) {
                     return e < 4 ? "రాత్రి" : e < 10 ? "ఉదయం" : e < 17 ? "మధ్యాహ్నం" : e < 20 ? "సాయంత్రం" : "రాత్రి"
                 },
                 week: {
@@ -7101,9 +7101,9 @@ webpackJsonp([35], {
             })
         })
     },
-    Nzt2: function(e, t, a) {
+    Nzt2: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("he", {
@@ -7159,15 +7159,15 @@ webpackJsonp([35], {
                 isPM: function(e) {
                     return /^(אחה"צ|אחרי הצהריים|בערב)$/.test(e)
                 },
-                meridiem: function(e, t, a) {
-                    return e < 5 ? "לפנות בוקר" : e < 10 ? "בבוקר" : e < 12 ? a ? 'לפנה"צ' : "לפני הצהריים" : e < 18 ? a ? 'אחה"צ' : "אחרי הצהריים" : "בערב"
+                meridiem: function(e, t, n) {
+                    return e < 5 ? "לפנות בוקר" : e < 10 ? "בבוקר" : e < 12 ? n ? 'לפנה"צ' : "לפני הצהריים" : e < 18 ? n ? 'אחה"צ' : "אחרי הצהריים" : "בערב"
                 }
             })
         })
     },
-    ORgI: function(e, t, a) {
+    ORgI: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("ja", {
@@ -7192,7 +7192,7 @@ webpackJsonp([35], {
                 isPM: function(e) {
                     return "午後" === e
                 },
-                meridiem: function(e, t, a) {
+                meridiem: function(e, t, n) {
                     return e < 12 ? "午前" : "午後"
                 },
                 calendar: {
@@ -7232,13 +7232,13 @@ webpackJsonp([35], {
             })
         })
     },
-    OSsP: function(e, t, a) {
+    OSsP: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
 
-            function t(e, t, a) {
+            function t(e, t, n) {
                 return e + " " + function(e, t) {
                     if (2 === t) return function(e) {
                         var t = {
@@ -7254,11 +7254,11 @@ webpackJsonp([35], {
                     mm: "munutenn",
                     MM: "miz",
                     dd: "devezh"
-                }[a], e)
+                }[n], e)
             }
 
-            function a(e) {
-                return e > 9 ? a(e % 10) : e
+            function n(e) {
+                return e > 9 ? n(e % 10) : e
             }
             return e.defineLocale("br", {
                 months: "Genver_C'hwevrer_Meurzh_Ebrel_Mae_Mezheven_Gouere_Eost_Gwengolo_Here_Du_Kerzu".split("_"),
@@ -7297,7 +7297,7 @@ webpackJsonp([35], {
                     MM: t,
                     y: "ur bloaz",
                     yy: function(e) {
-                        switch (a(e)) {
+                        switch (n(e)) {
                             case 1:
                             case 3:
                             case 4:
@@ -7320,9 +7320,9 @@ webpackJsonp([35], {
             })
         })
     },
-    OUMt: function(e, t, a) {
+    OUMt: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
 
@@ -7330,37 +7330,37 @@ webpackJsonp([35], {
                 return e > 1 && e < 5
             }
 
-            function a(e, a, n, r) {
+            function n(e, n, a, r) {
                 var i = e + " ";
-                switch (n) {
+                switch (a) {
                     case "s":
-                        return a || r ? "pár sekúnd" : "pár sekundami";
+                        return n || r ? "pár sekúnd" : "pár sekundami";
                     case "m":
-                        return a ? "minúta" : r ? "minútu" : "minútou";
+                        return n ? "minúta" : r ? "minútu" : "minútou";
                     case "mm":
-                        return a || r ? i + (t(e) ? "minúty" : "minút") : i + "minútami";
+                        return n || r ? i + (t(e) ? "minúty" : "minút") : i + "minútami";
                     case "h":
-                        return a ? "hodina" : r ? "hodinu" : "hodinou";
+                        return n ? "hodina" : r ? "hodinu" : "hodinou";
                     case "hh":
-                        return a || r ? i + (t(e) ? "hodiny" : "hodín") : i + "hodinami";
+                        return n || r ? i + (t(e) ? "hodiny" : "hodín") : i + "hodinami";
                     case "d":
-                        return a || r ? "deň" : "dňom";
+                        return n || r ? "deň" : "dňom";
                     case "dd":
-                        return a || r ? i + (t(e) ? "dni" : "dní") : i + "dňami";
+                        return n || r ? i + (t(e) ? "dni" : "dní") : i + "dňami";
                     case "M":
-                        return a || r ? "mesiac" : "mesiacom";
+                        return n || r ? "mesiac" : "mesiacom";
                     case "MM":
-                        return a || r ? i + (t(e) ? "mesiace" : "mesiacov") : i + "mesiacmi";
+                        return n || r ? i + (t(e) ? "mesiace" : "mesiacov") : i + "mesiacmi";
                     case "y":
-                        return a || r ? "rok" : "rokom";
+                        return n || r ? "rok" : "rokom";
                     case "yy":
-                        return a || r ? i + (t(e) ? "roky" : "rokov") : i + "rokmi"
+                        return n || r ? i + (t(e) ? "roky" : "rokov") : i + "rokmi"
                 }
             }
-            var n = "január_február_marec_apríl_máj_jún_júl_august_september_október_november_december".split("_"),
+            var a = "január_február_marec_apríl_máj_jún_júl_august_september_október_november_december".split("_"),
                 r = "jan_feb_mar_apr_máj_jún_júl_aug_sep_okt_nov_dec".split("_");
             return e.defineLocale("sk", {
-                months: n,
+                months: a,
                 monthsShort: r,
                 weekdays: "nedeľa_pondelok_utorok_streda_štvrtok_piatok_sobota".split("_"),
                 weekdaysShort: "ne_po_ut_st_št_pi_so".split("_"),
@@ -7415,17 +7415,17 @@ webpackJsonp([35], {
                 relativeTime: {
                     future: "za %s",
                     past: "pred %s",
-                    s: a,
-                    m: a,
-                    mm: a,
-                    h: a,
-                    hh: a,
-                    d: a,
-                    dd: a,
-                    M: a,
-                    MM: a,
-                    y: a,
-                    yy: a
+                    s: n,
+                    m: n,
+                    mm: n,
+                    h: n,
+                    hh: n,
+                    d: n,
+                    dd: n,
+                    M: n,
+                    MM: n,
+                    y: n,
+                    yy: n
                 },
                 dayOfMonthOrdinalParse: /\d{1,2}\./,
                 ordinal: "%d.",
@@ -7436,9 +7436,9 @@ webpackJsonp([35], {
             })
         })
     },
-    OVPi: function(e, t, a) {
+    OVPi: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("fo", {
@@ -7487,10 +7487,10 @@ webpackJsonp([35], {
             })
         })
     },
-    PGY2: function(e, t, a) {
+    PGY2: function(e, t, n) {
         "use strict";
 
-        function n(e) {
+        function a(e) {
             return "/" + e + "/dashboard/achievements/"
         }
 
@@ -7504,20 +7504,36 @@ webpackJsonp([35], {
                 end_time: t.toJSON()
             }
         }
-        var s = {};
-        a.d(s, "channelAchievements", function() {
-            return n
-        }), a.d(s, "achievement", function() {
+
+        function s(e, t, n) {
+            return e.sort(function(e, a) {
+                for (var r = 0; r < t.length; r++) {
+                    var i = t[r],
+                        s = n[r] || d.Ascending,
+                        o = function(e, t) {
+                            var n = null !== e && void 0 !== e,
+                                a = null !== t && void 0 !== t;
+                            return n && a ? e > t ? 1 : e < t ? -1 : 0 : n ? -1 : a ? 1 : 0
+                        }(i(e), i(a)) * s;
+                    if (0 !== o) return o
+                }
+                return 0
+            })
+        }
+        var o = {};
+        n.d(o, "channelAchievements", function() {
+            return a
+        }), n.d(o, "achievement", function() {
             return r
         });
-        var o = a("6w0d"),
-            d = a("b9IH"),
-            u = a("wuJz"),
-            l = 6e4,
-            c = 60 * l,
-            h = function() {
+        var d, u = n("6w0d"),
+            l = n("b9IH"),
+            c = n("wuJz"),
+            h = 6e4,
+            m = 60 * h,
+            _ = function() {
                 function e(e) {
-                    this.totalMilliseconds = e, this.hours = Math.floor(e / c), this.minutes = Math.floor(e % c / l)
+                    this.totalMilliseconds = e, this.hours = Math.floor(e / m), this.minutes = Math.floor(e % m / h)
                 }
                 return e.prototype.isSameLengthAs = function(e) {
                     return this.minutes === e.minutes && this.hours === e.hours
@@ -7525,36 +7541,42 @@ webpackJsonp([35], {
                     return new e(this.totalMilliseconds - t.totalMilliseconds)
                 }, e
             }(),
-            m = function() {
+            f = function() {
                 function e(e, t) {
-                    this.start = "string" == typeof e ? new Date(e) : e, this.end = "string" == typeof t ? new Date(t) : t, this.duration = new h(this.end.getTime() - this.start.getTime()), this.hours = this.duration.hours, this.minutes = this.duration.minutes
+                    this.start = "string" == typeof e ? new Date(e) : e, this.end = "string" == typeof t ? new Date(t) : t, this.duration = new _(this.end.getTime() - this.start.getTime()), this.hours = this.duration.hours, this.minutes = this.duration.minutes
                 }
-                return e.lastNDays = function(t, a) {
-                    return void 0 === a && (a = new Date), new e(Object(u.subDays)(a, t), a)
+                return e.lastNDays = function(t, n) {
+                    return void 0 === n && (n = new Date), new e(Object(c.subDays)(n, t), n)
                 }, e.prototype.isSameLengthAs = function(e) {
                     return this.duration.isSameLengthAs(e.duration)
                 }, e.prototype.diff = function(e) {
                     return this.duration.diff(e.duration)
                 }, e
             }();
-        a.d(t, "b", function() {
-            return s
-        }), a.d(t, "c", function() {
-            return o.a
-        }), a.d(t, !1, function() {}), a.d(t, !1, function() {
-            return d.a
-        }), a.d(t, "a", function() {
-            return m
-        }), a.d(t, "d", function() {
+        ! function(e) {
+            e[e.Ascending = 1] = "Ascending", e[e.Descending = -1] = "Descending"
+        }(d || (d = {})), n.d(t, "c", function() {
+            return o
+        }), n.d(t, "d", function() {
+            return u.a
+        }), n.d(t, !1, function() {}), n.d(t, !1, function() {
+            return l.a
+        }), n.d(t, "b", function() {
+            return f
+        }), n.d(t, "f", function() {
             return i
-        }), a.d(t, !1, function() {
-            return h
+        }), n.d(t, !1, function() {
+            return _
+        }), n.d(t, "a", function() {
+            return d
+        }), n.d(t, "e", function() {
+            return s
         })
     },
-    PJh5: function(e, t, a) {
+    PJh5: function(e, t, n) {
         (function(e) {
-            ! function(t, a) {
-                e.exports = a()
+            ! function(t, n) {
+                e.exports = n()
             }(0, function() {
                 "use strict";
 
@@ -7562,7 +7584,7 @@ webpackJsonp([35], {
                     return Ke.apply(null, arguments)
                 }
 
-                function n(e) {
+                function a(e) {
                     return e instanceof Array || "[object Array]" === Object.prototype.toString.call(e)
                 }
 
@@ -7583,9 +7605,9 @@ webpackJsonp([35], {
                 }
 
                 function d(e, t) {
-                    var a, n = [];
-                    for (a = 0; a < e.length; ++a) n.push(t(e[a], a));
-                    return n
+                    var n, a = [];
+                    for (n = 0; n < e.length; ++n) a.push(t(e[n], n));
+                    return a
                 }
 
                 function u(e, t) {
@@ -7593,12 +7615,12 @@ webpackJsonp([35], {
                 }
 
                 function l(e, t) {
-                    for (var a in t) u(t, a) && (e[a] = t[a]);
+                    for (var n in t) u(t, n) && (e[n] = t[n]);
                     return u(t, "toString") && (e.toString = t.toString), u(t, "valueOf") && (e.valueOf = t.valueOf), e
                 }
 
-                function c(e, t, a, n) {
-                    return ye(e, t, a, n, !0).utc()
+                function c(e, t, n, a) {
+                    return ye(e, t, n, a, !0).utc()
                 }
 
                 function h(e) {
@@ -7623,12 +7645,12 @@ webpackJsonp([35], {
                 function m(e) {
                     if (null == e._isValid) {
                         var t = h(e),
-                            a = Xe.call(t.parsedDateParts, function(e) {
+                            n = Xe.call(t.parsedDateParts, function(e) {
                                 return null != e
                             }),
-                            n = !isNaN(e._d.getTime()) && t.overflow < 0 && !t.empty && !t.invalidMonth && !t.invalidWeekday && !t.nullInput && !t.invalidFormat && !t.userInvalidated && (!t.meridiem || t.meridiem && a);
-                        if (e._strict && (n = n && 0 === t.charsLeftOver && 0 === t.unusedTokens.length && void 0 === t.bigHour), null != Object.isFrozen && Object.isFrozen(e)) return n;
-                        e._isValid = n
+                            a = !isNaN(e._d.getTime()) && t.overflow < 0 && !t.empty && !t.invalidMonth && !t.invalidWeekday && !t.nullInput && !t.invalidFormat && !t.userInvalidated && (!t.meridiem || t.meridiem && n);
+                        if (e._strict && (a = a && 0 === t.charsLeftOver && 0 === t.unusedTokens.length && void 0 === t.bigHour), null != Object.isFrozen && Object.isFrozen(e)) return a;
+                        e._isValid = a
                     }
                     return e._isValid
                 }
@@ -7639,9 +7661,9 @@ webpackJsonp([35], {
                 }
 
                 function f(e, t) {
-                    var a, n, r;
+                    var n, a, r;
                     if (i(t._isAMomentObject) || (e._isAMomentObject = t._isAMomentObject), i(t._i) || (e._i = t._i), i(t._f) || (e._f = t._f), i(t._l) || (e._l = t._l), i(t._strict) || (e._strict = t._strict), i(t._tzm) || (e._tzm = t._tzm), i(t._isUTC) || (e._isUTC = t._isUTC), i(t._offset) || (e._offset = t._offset), i(t._pf) || (e._pf = h(t)), i(t._locale) || (e._locale = t._locale), Qe.length > 0)
-                        for (a = 0; a < Qe.length; a++) i(r = t[n = Qe[a]]) || (e[n] = r);
+                        for (n = 0; n < Qe.length; n++) i(r = t[a = Qe[n]]) || (e[a] = r);
                     return e
                 }
 
@@ -7659,15 +7681,15 @@ webpackJsonp([35], {
 
                 function M(e) {
                     var t = +e,
-                        a = 0;
-                    return 0 !== t && isFinite(t) && (a = y(t)), a
+                        n = 0;
+                    return 0 !== t && isFinite(t) && (n = y(t)), n
                 }
 
-                function v(e, t, a) {
-                    var n, r = Math.min(e.length, t.length),
+                function v(e, t, n) {
+                    var a, r = Math.min(e.length, t.length),
                         i = Math.abs(e.length - t.length),
                         s = 0;
-                    for (n = 0; n < r; n++)(a && e[n] !== t[n] || !a && M(e[n]) !== M(t[n])) && s++;
+                    for (a = 0; a < r; a++)(n && e[a] !== t[a] || !n && M(e[a]) !== M(t[a])) && s++;
                     return s + i
                 }
 
@@ -7675,10 +7697,10 @@ webpackJsonp([35], {
                     !1 === t.suppressDeprecationWarnings && "undefined" != typeof console && console.warn && console.warn("Deprecation warning: " + e)
                 }
 
-                function L(e, a) {
-                    var n = !0;
+                function L(e, n) {
+                    var a = !0;
                     return l(function() {
-                        if (null != t.deprecationHandler && t.deprecationHandler(null, e), n) {
+                        if (null != t.deprecationHandler && t.deprecationHandler(null, e), a) {
                             for (var r, i = [], s = 0; s < arguments.length; s++) {
                                 if (r = "", "object" == typeof arguments[s]) {
                                     r += "\n[" + s + "] ";
@@ -7687,14 +7709,14 @@ webpackJsonp([35], {
                                 } else r = arguments[s];
                                 i.push(r)
                             }
-                            b(e + "\nArguments: " + Array.prototype.slice.call(i).join("") + "\n" + (new Error).stack), n = !1
+                            b(e + "\nArguments: " + Array.prototype.slice.call(i).join("") + "\n" + (new Error).stack), a = !1
                         }
-                        return a.apply(this, arguments)
-                    }, a)
+                        return n.apply(this, arguments)
+                    }, n)
                 }
 
-                function Y(e, a) {
-                    null != t.deprecationHandler && t.deprecationHandler(e, a), et[e] || (b(a), et[e] = !0)
+                function Y(e, n) {
+                    null != t.deprecationHandler && t.deprecationHandler(e, n), et[e] || (b(n), et[e] = !0)
                 }
 
                 function D(e) {
@@ -7702,10 +7724,10 @@ webpackJsonp([35], {
                 }
 
                 function k(e, t) {
-                    var a, n = l({}, e);
-                    for (a in t) u(t, a) && (r(e[a]) && r(t[a]) ? (n[a] = {}, l(n[a], e[a]), l(n[a], t[a])) : null != t[a] ? n[a] = t[a] : delete n[a]);
-                    for (a in e) u(e, a) && !u(t, a) && r(e[a]) && (n[a] = l({}, n[a]));
-                    return n
+                    var n, a = l({}, e);
+                    for (n in t) u(t, n) && (r(e[n]) && r(t[n]) ? (a[n] = {}, l(a[n], e[n]), l(a[n], t[n])) : null != t[n] ? a[n] = t[n] : delete a[n]);
+                    for (n in e) u(e, n) && !u(t, n) && r(e[n]) && (a[n] = l({}, a[n]));
+                    return a
                 }
 
                 function w(e) {
@@ -7713,27 +7735,27 @@ webpackJsonp([35], {
                 }
 
                 function x(e, t) {
-                    var a = e.toLowerCase();
-                    at[a] = at[a + "s"] = at[t] = e
+                    var n = e.toLowerCase();
+                    nt[n] = nt[n + "s"] = nt[t] = e
                 }
 
                 function T(e) {
-                    return "string" == typeof e ? at[e] || at[e.toLowerCase()] : void 0
+                    return "string" == typeof e ? nt[e] || nt[e.toLowerCase()] : void 0
                 }
 
                 function S(e) {
-                    var t, a, n = {};
-                    for (a in e) u(e, a) && (t = T(a)) && (n[t] = e[a]);
-                    return n
+                    var t, n, a = {};
+                    for (n in e) u(e, n) && (t = T(n)) && (a[t] = e[n]);
+                    return a
                 }
 
                 function O(e, t) {
-                    nt[e] = t
+                    at[e] = t
                 }
 
-                function j(e, a) {
-                    return function(n) {
-                        return null != n ? (P(this, e, n), t.updateOffset(this, a), this) : H(this, e)
+                function j(e, n) {
+                    return function(a) {
+                        return null != a ? (P(this, e, a), t.updateOffset(this, n), this) : H(this, e)
                     }
                 }
 
@@ -7741,23 +7763,23 @@ webpackJsonp([35], {
                     return e.isValid() ? e._d["get" + (e._isUTC ? "UTC" : "") + t]() : NaN
                 }
 
-                function P(e, t, a) {
-                    e.isValid() && e._d["set" + (e._isUTC ? "UTC" : "") + t](a)
+                function P(e, t, n) {
+                    e.isValid() && e._d["set" + (e._isUTC ? "UTC" : "") + t](n)
                 }
 
-                function C(e, t, a) {
-                    var n = "" + Math.abs(e),
-                        r = t - n.length;
-                    return (e >= 0 ? a ? "+" : "" : "-") + Math.pow(10, Math.max(0, r)).toString().substr(1) + n
+                function C(e, t, n) {
+                    var a = "" + Math.abs(e),
+                        r = t - a.length;
+                    return (e >= 0 ? n ? "+" : "" : "-") + Math.pow(10, Math.max(0, r)).toString().substr(1) + a
                 }
 
-                function A(e, t, a, n) {
-                    var r = n;
-                    "string" == typeof n && (r = function() {
-                        return this[n]()
+                function A(e, t, n, a) {
+                    var r = a;
+                    "string" == typeof a && (r = function() {
+                        return this[a]()
                     }), e && (ot[e] = r), t && (ot[t[0]] = function() {
                         return C(r.apply(this, arguments), t[1], t[2])
-                    }), a && (ot[a] = function() {
+                    }), n && (ot[n] = function() {
                         return this.localeData().ordinal(r.apply(this, arguments), e)
                     })
                 }
@@ -7768,35 +7790,35 @@ webpackJsonp([35], {
 
                 function W(e, t) {
                     return e.isValid() ? (t = E(t, e.localeData()), st[t] = st[t] || function(e) {
-                        var t, a, n = e.match(rt);
-                        for (t = 0, a = n.length; t < a; t++) ot[n[t]] ? n[t] = ot[n[t]] : n[t] = F(n[t]);
+                        var t, n, a = e.match(rt);
+                        for (t = 0, n = a.length; t < n; t++) ot[a[t]] ? a[t] = ot[a[t]] : a[t] = F(a[t]);
                         return function(t) {
                             var r, i = "";
-                            for (r = 0; r < a; r++) i += D(n[r]) ? n[r].call(t, e) : n[r];
+                            for (r = 0; r < n; r++) i += D(a[r]) ? a[r].call(t, e) : a[r];
                             return i
                         }
                     }(t), st[t](e)) : e.localeData().invalidDate()
                 }
 
                 function E(e, t) {
-                    function a(e) {
+                    function n(e) {
                         return t.longDateFormat(e) || e
                     }
-                    var n = 5;
-                    for (it.lastIndex = 0; n >= 0 && it.test(e);) e = e.replace(it, a), it.lastIndex = 0, n -= 1;
+                    var a = 5;
+                    for (it.lastIndex = 0; a >= 0 && it.test(e);) e = e.replace(it, n), it.lastIndex = 0, a -= 1;
                     return e
                 }
 
-                function I(e, t, a) {
-                    Dt[e] = D(t) ? t : function(e, n) {
-                        return e && a ? a : t
+                function I(e, t, n) {
+                    Dt[e] = D(t) ? t : function(e, a) {
+                        return e && n ? n : t
                     }
                 }
 
                 function z(e, t) {
                     return u(Dt, e) ? Dt[e](t._strict, t._locale) : new RegExp(function(e) {
-                        return N(e.replace("\\", "").replace(/\\(\[)|\\(\])|\[([^\]\[]*)\]|\\(.)/g, function(e, t, a, n, r) {
-                            return t || a || n || r
+                        return N(e.replace("\\", "").replace(/\\(\[)|\\(\])|\[([^\]\[]*)\]|\\(.)/g, function(e, t, n, a, r) {
+                            return t || n || a || r
                         }))
                     }(e))
                 }
@@ -7806,20 +7828,20 @@ webpackJsonp([35], {
                 }
 
                 function R(e, t) {
-                    var a, n = t;
-                    for ("string" == typeof e && (e = [e]), s(t) && (n = function(e, a) {
-                            a[t] = M(e)
-                        }), a = 0; a < e.length; a++) kt[e[a]] = n
+                    var n, a = t;
+                    for ("string" == typeof e && (e = [e]), s(t) && (a = function(e, n) {
+                            n[t] = M(e)
+                        }), n = 0; n < e.length; n++) kt[e[n]] = a
                 }
 
                 function B(e, t) {
-                    R(e, function(e, a, n, r) {
-                        n._w = n._w || {}, t(e, n._w, n, r)
+                    R(e, function(e, n, a, r) {
+                        a._w = a._w || {}, t(e, a._w, a, r)
                     })
                 }
 
-                function J(e, t, a) {
-                    null != t && u(kt, e) && kt[e](t, a._a, a, e)
+                function J(e, t, n) {
+                    null != t && u(kt, e) && kt[e](t, n._a, n, e)
                 }
 
                 function V(e, t) {
@@ -7827,12 +7849,12 @@ webpackJsonp([35], {
                 }
 
                 function U(e, t) {
-                    var a;
+                    var n;
                     if (!e.isValid()) return e;
                     if ("string" == typeof t)
                         if (/^\d+$/.test(t)) t = M(t);
                         else if (t = e.localeData().monthsParse(t), !s(t)) return e;
-                    return a = Math.min(e.date(), V(e.year(), t)), e._d["set" + (e._isUTC ? "UTC" : "") + "Month"](t, a), e
+                    return n = Math.min(e.date(), V(e.year(), t)), e._d["set" + (e._isUTC ? "UTC" : "") + "Month"](t, n), e
                 }
 
                 function G(e) {
@@ -7843,13 +7865,13 @@ webpackJsonp([35], {
                     function e(e, t) {
                         return t.length - e.length
                     }
-                    var t, a, n = [],
+                    var t, n, a = [],
                         r = [],
                         i = [];
-                    for (t = 0; t < 12; t++) a = c([2e3, t]), n.push(this.monthsShort(a, "")), r.push(this.months(a, "")), i.push(this.months(a, "")), i.push(this.monthsShort(a, ""));
-                    for (n.sort(e), r.sort(e), i.sort(e), t = 0; t < 12; t++) n[t] = N(n[t]), r[t] = N(r[t]);
+                    for (t = 0; t < 12; t++) n = c([2e3, t]), a.push(this.monthsShort(n, "")), r.push(this.months(n, "")), i.push(this.months(n, "")), i.push(this.monthsShort(n, ""));
+                    for (a.sort(e), r.sort(e), i.sort(e), t = 0; t < 12; t++) a[t] = N(a[t]), r[t] = N(r[t]);
                     for (t = 0; t < 24; t++) i[t] = N(i[t]);
-                    this._monthsRegex = new RegExp("^(" + i.join("|") + ")", "i"), this._monthsShortRegex = this._monthsRegex, this._monthsStrictRegex = new RegExp("^(" + r.join("|") + ")", "i"), this._monthsShortStrictRegex = new RegExp("^(" + n.join("|") + ")", "i")
+                    this._monthsRegex = new RegExp("^(" + i.join("|") + ")", "i"), this._monthsShortRegex = this._monthsRegex, this._monthsStrictRegex = new RegExp("^(" + r.join("|") + ")", "i"), this._monthsShortStrictRegex = new RegExp("^(" + a.join("|") + ")", "i")
                 }
 
                 function q(e) {
@@ -7865,48 +7887,48 @@ webpackJsonp([35], {
                     return e < 100 && e >= 0 && isFinite(t.getUTCFullYear()) && t.setUTCFullYear(e), t
                 }
 
-                function Q(e, t, a) {
-                    var n = 7 + t - a;
-                    return -((7 + X(e, 0, n).getUTCDay() - t) % 7) + n - 1
+                function Q(e, t, n) {
+                    var a = 7 + t - n;
+                    return -((7 + X(e, 0, a).getUTCDay() - t) % 7) + a - 1
                 }
 
-                function $(e, t, a, n, r) {
-                    var i, s, o = 1 + 7 * (t - 1) + (7 + a - n) % 7 + Q(e, n, r);
+                function $(e, t, n, a, r) {
+                    var i, s, o = 1 + 7 * (t - 1) + (7 + n - a) % 7 + Q(e, a, r);
                     return o <= 0 ? s = q(i = e - 1) + o : o > q(e) ? (i = e + 1, s = o - q(e)) : (i = e, s = o), {
                         year: i,
                         dayOfYear: s
                     }
                 }
 
-                function ee(e, t, a) {
-                    var n, r, i = Q(e.year(), t, a),
+                function ee(e, t, n) {
+                    var a, r, i = Q(e.year(), t, n),
                         s = Math.floor((e.dayOfYear() - i - 1) / 7) + 1;
-                    return s < 1 ? n = s + te(r = e.year() - 1, t, a) : s > te(e.year(), t, a) ? (n = s - te(e.year(), t, a), r = e.year() + 1) : (r = e.year(), n = s), {
-                        week: n,
+                    return s < 1 ? a = s + te(r = e.year() - 1, t, n) : s > te(e.year(), t, n) ? (a = s - te(e.year(), t, n), r = e.year() + 1) : (r = e.year(), a = s), {
+                        week: a,
                         year: r
                     }
                 }
 
-                function te(e, t, a) {
-                    var n = Q(e, t, a),
-                        r = Q(e + 1, t, a);
-                    return (q(e) - n + r) / 7
+                function te(e, t, n) {
+                    var a = Q(e, t, n),
+                        r = Q(e + 1, t, n);
+                    return (q(e) - a + r) / 7
                 }
 
-                function ae() {
+                function ne() {
                     function e(e, t) {
                         return t.length - e.length
                     }
-                    var t, a, n, r, i, s = [],
+                    var t, n, a, r, i, s = [],
                         o = [],
                         d = [],
                         u = [];
-                    for (t = 0; t < 7; t++) a = c([2e3, 1]).day(t), n = this.weekdaysMin(a, ""), r = this.weekdaysShort(a, ""), i = this.weekdays(a, ""), s.push(n), o.push(r), d.push(i), u.push(n), u.push(r), u.push(i);
+                    for (t = 0; t < 7; t++) n = c([2e3, 1]).day(t), a = this.weekdaysMin(n, ""), r = this.weekdaysShort(n, ""), i = this.weekdays(n, ""), s.push(a), o.push(r), d.push(i), u.push(a), u.push(r), u.push(i);
                     for (s.sort(e), o.sort(e), d.sort(e), u.sort(e), t = 0; t < 7; t++) o[t] = N(o[t]), d[t] = N(d[t]), u[t] = N(u[t]);
                     this._weekdaysRegex = new RegExp("^(" + u.join("|") + ")", "i"), this._weekdaysShortRegex = this._weekdaysRegex, this._weekdaysMinRegex = this._weekdaysRegex, this._weekdaysStrictRegex = new RegExp("^(" + d.join("|") + ")", "i"), this._weekdaysShortStrictRegex = new RegExp("^(" + o.join("|") + ")", "i"), this._weekdaysMinStrictRegex = new RegExp("^(" + s.join("|") + ")", "i")
                 }
 
-                function ne() {
+                function ae() {
                     return this.hours() % 12 || 12
                 }
 
@@ -7925,30 +7947,30 @@ webpackJsonp([35], {
                 }
 
                 function oe(t) {
-                    var n = null;
+                    var a = null;
                     if (!Xt[t] && void 0 !== e && e && e.exports) try {
-                        n = Zt._abbr, a("uslO")("./" + t), de(n)
+                        a = Zt._abbr, n("uslO")("./" + t), de(a)
                     } catch (e) {}
                     return Xt[t]
                 }
 
                 function de(e, t) {
-                    var a;
-                    return e && (a = i(t) ? le(e) : ue(e, t)) && (Zt = a), Zt._abbr
+                    var n;
+                    return e && (n = i(t) ? le(e) : ue(e, t)) && (Zt = n), Zt._abbr
                 }
 
                 function ue(e, t) {
                     if (null !== t) {
-                        var a = Kt;
-                        if (t.abbr = e, null != Xt[e]) Y("defineLocaleOverride", "use moment.updateLocale(localeName, config) to change an existing locale. moment.defineLocale(localeName, config) should only be used for creating a new locale See http://momentjs.com/guides/#/warnings/define-locale/ for more info."), a = Xt[e]._config;
+                        var n = Kt;
+                        if (t.abbr = e, null != Xt[e]) Y("defineLocaleOverride", "use moment.updateLocale(localeName, config) to change an existing locale. moment.defineLocale(localeName, config) should only be used for creating a new locale See http://momentjs.com/guides/#/warnings/define-locale/ for more info."), n = Xt[e]._config;
                         else if (null != t.parentLocale) {
                             if (null == Xt[t.parentLocale]) return Qt[t.parentLocale] || (Qt[t.parentLocale] = []), Qt[t.parentLocale].push({
                                 name: e,
                                 config: t
                             }), null;
-                            a = Xt[t.parentLocale]._config
+                            n = Xt[t.parentLocale]._config
                         }
-                        return Xt[e] = new w(k(a, t)), Qt[e] && Qt[e].forEach(function(e) {
+                        return Xt[e] = new w(k(n, t)), Qt[e] && Qt[e].forEach(function(e) {
                             ue(e.name, e.config)
                         }), de(e), Xt[e]
                     }
@@ -7958,15 +7980,15 @@ webpackJsonp([35], {
                 function le(e) {
                     var t;
                     if (e && e._locale && e._locale._abbr && (e = e._locale._abbr), !e) return Zt;
-                    if (!n(e)) {
+                    if (!a(e)) {
                         if (t = oe(e)) return t;
                         e = [e]
                     }
                     return function(e) {
-                        for (var t, a, n, r, i = 0; i < e.length;) {
-                            for (t = (r = se(e[i]).split("-")).length, a = (a = se(e[i + 1])) ? a.split("-") : null; t > 0;) {
-                                if (n = oe(r.slice(0, t).join("-"))) return n;
-                                if (a && a.length >= t && v(r, a, !0) >= t - 1) break;
+                        for (var t, n, a, r, i = 0; i < e.length;) {
+                            for (t = (r = se(e[i]).split("-")).length, n = (n = se(e[i + 1])) ? n.split("-") : null; t > 0;) {
+                                if (a = oe(r.slice(0, t).join("-"))) return a;
+                                if (n && n.length >= t && v(r, n, !0) >= t - 1) break;
                                 t--
                             }
                             i++
@@ -7976,31 +7998,31 @@ webpackJsonp([35], {
                 }
 
                 function ce(e) {
-                    var t, a = e._a;
-                    return a && -2 === h(e).overflow && (t = a[xt] < 0 || a[xt] > 11 ? xt : a[Tt] < 1 || a[Tt] > V(a[wt], a[xt]) ? Tt : a[St] < 0 || a[St] > 24 || 24 === a[St] && (0 !== a[Ot] || 0 !== a[jt] || 0 !== a[Ht]) ? St : a[Ot] < 0 || a[Ot] > 59 ? Ot : a[jt] < 0 || a[jt] > 59 ? jt : a[Ht] < 0 || a[Ht] > 999 ? Ht : -1, h(e)._overflowDayOfYear && (t < wt || t > Tt) && (t = Tt), h(e)._overflowWeeks && -1 === t && (t = Pt), h(e)._overflowWeekday && -1 === t && (t = Ct), h(e).overflow = t), e
+                    var t, n = e._a;
+                    return n && -2 === h(e).overflow && (t = n[xt] < 0 || n[xt] > 11 ? xt : n[Tt] < 1 || n[Tt] > V(n[wt], n[xt]) ? Tt : n[St] < 0 || n[St] > 24 || 24 === n[St] && (0 !== n[Ot] || 0 !== n[jt] || 0 !== n[Ht]) ? St : n[Ot] < 0 || n[Ot] > 59 ? Ot : n[jt] < 0 || n[jt] > 59 ? jt : n[Ht] < 0 || n[Ht] > 999 ? Ht : -1, h(e)._overflowDayOfYear && (t < wt || t > Tt) && (t = Tt), h(e)._overflowWeeks && -1 === t && (t = Pt), h(e)._overflowWeekday && -1 === t && (t = Ct), h(e).overflow = t), e
                 }
 
                 function he(e) {
-                    var t, a, n, r, i, s, o = e._i,
-                        d = $t.exec(o) || ea.exec(o);
+                    var t, n, a, r, i, s, o = e._i,
+                        d = $t.exec(o) || en.exec(o);
                     if (d) {
-                        for (h(e).iso = !0, t = 0, a = aa.length; t < a; t++)
-                            if (aa[t][1].exec(d[1])) {
-                                r = aa[t][0], n = !1 !== aa[t][2];
+                        for (h(e).iso = !0, t = 0, n = nn.length; t < n; t++)
+                            if (nn[t][1].exec(d[1])) {
+                                r = nn[t][0], a = !1 !== nn[t][2];
                                 break
                             }
                         if (null == r) return void(e._isValid = !1);
                         if (d[3]) {
-                            for (t = 0, a = na.length; t < a; t++)
-                                if (na[t][1].exec(d[3])) {
-                                    i = (d[2] || " ") + na[t][0];
+                            for (t = 0, n = an.length; t < n; t++)
+                                if (an[t][1].exec(d[3])) {
+                                    i = (d[2] || " ") + an[t][0];
                                     break
                                 }
                             if (null == i) return void(e._isValid = !1)
                         }
-                        if (!n && null != i) return void(e._isValid = !1);
+                        if (!a && null != i) return void(e._isValid = !1);
                         if (d[4]) {
-                            if (!ta.exec(d[4])) return void(e._isValid = !1);
+                            if (!tn.exec(d[4])) return void(e._isValid = !1);
                             s = "Z"
                         }
                         e._f = r + (i || "") + (s || ""), pe(e)
@@ -8008,7 +8030,7 @@ webpackJsonp([35], {
                 }
 
                 function me(e) {
-                    var t, a, n, r, i, s, o, d, u = {
+                    var t, n, a, r, i, s, o, d, u = {
                         " GMT": " +0000",
                         " EDT": " -0400",
                         " EST": " -0500",
@@ -8019,48 +8041,48 @@ webpackJsonp([35], {
                         " PDT": " -0700",
                         " PST": " -0800"
                     };
-                    if (t = e._i.replace(/\([^\)]*\)|[\n\t]/g, " ").replace(/(\s\s+)/g, " ").replace(/^\s|\s$/g, ""), a = ia.exec(t)) {
-                        if (n = a[1] ? "ddd" + (5 === a[1].length ? ", " : " ") : "", r = "D MMM " + (a[2].length > 10 ? "YYYY " : "YY "), i = "HH:mm" + (a[4] ? ":ss" : ""), a[1]) {
-                            var l = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][new Date(a[2]).getDay()];
-                            if (a[1].substr(0, 3) !== l) return h(e).weekdayMismatch = !0, void(e._isValid = !1)
+                    if (t = e._i.replace(/\([^\)]*\)|[\n\t]/g, " ").replace(/(\s\s+)/g, " ").replace(/^\s|\s$/g, ""), n = sn.exec(t)) {
+                        if (a = n[1] ? "ddd" + (5 === n[1].length ? ", " : " ") : "", r = "D MMM " + (n[2].length > 10 ? "YYYY " : "YY "), i = "HH:mm" + (n[4] ? ":ss" : ""), n[1]) {
+                            var l = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][new Date(n[2]).getDay()];
+                            if (n[1].substr(0, 3) !== l) return h(e).weekdayMismatch = !0, void(e._isValid = !1)
                         }
-                        switch (a[5].length) {
+                        switch (n[5].length) {
                             case 2:
-                                o = 0 === d ? " +0000" : ((d = "YXWVUTSRQPONZABCDEFGHIKLM".indexOf(a[5][1].toUpperCase()) - 12) < 0 ? " -" : " +") + ("" + d).replace(/^-?/, "0").match(/..$/)[0] + "00";
+                                o = 0 === d ? " +0000" : ((d = "YXWVUTSRQPONZABCDEFGHIKLM".indexOf(n[5][1].toUpperCase()) - 12) < 0 ? " -" : " +") + ("" + d).replace(/^-?/, "0").match(/..$/)[0] + "00";
                                 break;
                             case 4:
-                                o = u[a[5]];
+                                o = u[n[5]];
                                 break;
                             default:
                                 o = u[" GMT"]
                         }
-                        a[5] = o, e._i = a.splice(1).join(""), s = " ZZ", e._f = n + r + i + s, pe(e), h(e).rfc2822 = !0
+                        n[5] = o, e._i = n.splice(1).join(""), s = " ZZ", e._f = a + r + i + s, pe(e), h(e).rfc2822 = !0
                     } else e._isValid = !1
                 }
 
-                function _e(e, t, a) {
-                    return null != e ? e : null != t ? t : a
+                function _e(e, t, n) {
+                    return null != e ? e : null != t ? t : n
                 }
 
                 function fe(e) {
-                    var a, n, r, i, s = [];
+                    var n, a, r, i, s = [];
                     if (!e._d) {
                         for (r = function(e) {
-                                var a = new Date(t.now());
-                                return e._useUTC ? [a.getUTCFullYear(), a.getUTCMonth(), a.getUTCDate()] : [a.getFullYear(), a.getMonth(), a.getDate()]
+                                var n = new Date(t.now());
+                                return e._useUTC ? [n.getUTCFullYear(), n.getUTCMonth(), n.getUTCDate()] : [n.getFullYear(), n.getMonth(), n.getDate()]
                             }(e), e._w && null == e._a[Tt] && null == e._a[xt] && function(e) {
-                                var t, a, n, r, i, s, o, d;
-                                if (null != (t = e._w).GG || null != t.W || null != t.E) i = 1, s = 4, a = _e(t.GG, e._a[wt], ee(Me(), 1, 4).year), n = _e(t.W, 1), ((r = _e(t.E, 1)) < 1 || r > 7) && (d = !0);
+                                var t, n, a, r, i, s, o, d;
+                                if (null != (t = e._w).GG || null != t.W || null != t.E) i = 1, s = 4, n = _e(t.GG, e._a[wt], ee(Me(), 1, 4).year), a = _e(t.W, 1), ((r = _e(t.E, 1)) < 1 || r > 7) && (d = !0);
                                 else {
                                     i = e._locale._week.dow, s = e._locale._week.doy;
                                     var u = ee(Me(), i, s);
-                                    a = _e(t.gg, e._a[wt], u.year), n = _e(t.w, u.week), null != t.d ? ((r = t.d) < 0 || r > 6) && (d = !0) : null != t.e ? (r = t.e + i, (t.e < 0 || t.e > 6) && (d = !0)) : r = i
+                                    n = _e(t.gg, e._a[wt], u.year), a = _e(t.w, u.week), null != t.d ? ((r = t.d) < 0 || r > 6) && (d = !0) : null != t.e ? (r = t.e + i, (t.e < 0 || t.e > 6) && (d = !0)) : r = i
                                 }
-                                n < 1 || n > te(a, i, s) ? h(e)._overflowWeeks = !0 : null != d ? h(e)._overflowWeekday = !0 : (o = $(a, n, r, i, s), e._a[wt] = o.year, e._dayOfYear = o.dayOfYear)
-                            }(e), null != e._dayOfYear && (i = _e(e._a[wt], r[wt]), (e._dayOfYear > q(i) || 0 === e._dayOfYear) && (h(e)._overflowDayOfYear = !0), n = X(i, 0, e._dayOfYear), e._a[xt] = n.getUTCMonth(), e._a[Tt] = n.getUTCDate()), a = 0; a < 3 && null == e._a[a]; ++a) e._a[a] = s[a] = r[a];
-                        for (; a < 7; a++) e._a[a] = s[a] = null == e._a[a] ? 2 === a ? 1 : 0 : e._a[a];
-                        24 === e._a[St] && 0 === e._a[Ot] && 0 === e._a[jt] && 0 === e._a[Ht] && (e._nextDay = !0, e._a[St] = 0), e._d = (e._useUTC ? X : function(e, t, a, n, r, i, s) {
-                            var o = new Date(e, t, a, n, r, i, s);
+                                a < 1 || a > te(n, i, s) ? h(e)._overflowWeeks = !0 : null != d ? h(e)._overflowWeekday = !0 : (o = $(n, a, r, i, s), e._a[wt] = o.year, e._dayOfYear = o.dayOfYear)
+                            }(e), null != e._dayOfYear && (i = _e(e._a[wt], r[wt]), (e._dayOfYear > q(i) || 0 === e._dayOfYear) && (h(e)._overflowDayOfYear = !0), a = X(i, 0, e._dayOfYear), e._a[xt] = a.getUTCMonth(), e._a[Tt] = a.getUTCDate()), n = 0; n < 3 && null == e._a[n]; ++n) e._a[n] = s[n] = r[n];
+                        for (; n < 7; n++) e._a[n] = s[n] = null == e._a[n] ? 2 === n ? 1 : 0 : e._a[n];
+                        24 === e._a[St] && 0 === e._a[Ot] && 0 === e._a[jt] && 0 === e._a[Ht] && (e._nextDay = !0, e._a[St] = 0), e._d = (e._useUTC ? X : function(e, t, n, a, r, i, s) {
+                            var o = new Date(e, t, n, a, r, i, s);
                             return e < 100 && e >= 0 && isFinite(o.getFullYear()) && o.setFullYear(e), o
                         }).apply(null, s), null != e._tzm && e._d.setUTCMinutes(e._d.getUTCMinutes() - e._tzm), e._nextDay && (e._a[St] = 24)
                     }
@@ -8070,75 +8092,75 @@ webpackJsonp([35], {
                     if (e._f !== t.ISO_8601)
                         if (e._f !== t.RFC_2822) {
                             e._a = [], h(e).empty = !0;
-                            var a, n, r, i, s, o = "" + e._i,
+                            var n, a, r, i, s, o = "" + e._i,
                                 d = o.length,
                                 u = 0;
-                            for (r = E(e._f, e._locale).match(rt) || [], a = 0; a < r.length; a++) i = r[a], (n = (o.match(z(i, e)) || [])[0]) && ((s = o.substr(0, o.indexOf(n))).length > 0 && h(e).unusedInput.push(s), o = o.slice(o.indexOf(n) + n.length), u += n.length), ot[i] ? (n ? h(e).empty = !1 : h(e).unusedTokens.push(i), J(i, n, e)) : e._strict && !n && h(e).unusedTokens.push(i);
-                            h(e).charsLeftOver = d - u, o.length > 0 && h(e).unusedInput.push(o), e._a[St] <= 12 && !0 === h(e).bigHour && e._a[St] > 0 && (h(e).bigHour = void 0), h(e).parsedDateParts = e._a.slice(0), h(e).meridiem = e._meridiem, e._a[St] = function(e, t, a) {
-                                var n;
-                                if (null == a) return t;
-                                return null != e.meridiemHour ? e.meridiemHour(t, a) : null != e.isPM ? ((n = e.isPM(a)) && t < 12 && (t += 12), n || 12 !== t || (t = 0), t) : t
+                            for (r = E(e._f, e._locale).match(rt) || [], n = 0; n < r.length; n++) i = r[n], (a = (o.match(z(i, e)) || [])[0]) && ((s = o.substr(0, o.indexOf(a))).length > 0 && h(e).unusedInput.push(s), o = o.slice(o.indexOf(a) + a.length), u += a.length), ot[i] ? (a ? h(e).empty = !1 : h(e).unusedTokens.push(i), J(i, a, e)) : e._strict && !a && h(e).unusedTokens.push(i);
+                            h(e).charsLeftOver = d - u, o.length > 0 && h(e).unusedInput.push(o), e._a[St] <= 12 && !0 === h(e).bigHour && e._a[St] > 0 && (h(e).bigHour = void 0), h(e).parsedDateParts = e._a.slice(0), h(e).meridiem = e._meridiem, e._a[St] = function(e, t, n) {
+                                var a;
+                                if (null == n) return t;
+                                return null != e.meridiemHour ? e.meridiemHour(t, n) : null != e.isPM ? ((a = e.isPM(n)) && t < 12 && (t += 12), a || 12 !== t || (t = 0), t) : t
                             }(e._locale, e._a[St], e._meridiem), fe(e), ce(e)
                         } else me(e);
                     else he(e)
                 }
 
                 function ge(e) {
-                    var a = e._i,
+                    var n = e._i,
                         u = e._f;
-                    return e._locale = e._locale || le(e._l), null === a || void 0 === u && "" === a ? _({
+                    return e._locale = e._locale || le(e._l), null === n || void 0 === u && "" === n ? _({
                         nullInput: !0
-                    }) : ("string" == typeof a && (e._i = a = e._locale.preparse(a)), g(a) ? new p(ce(a)) : (o(a) ? e._d = a : n(u) ? function(e) {
-                        var t, a, n, r, i;
+                    }) : ("string" == typeof n && (e._i = n = e._locale.preparse(n)), g(n) ? new p(ce(n)) : (o(n) ? e._d = n : a(u) ? function(e) {
+                        var t, n, a, r, i;
                         if (0 === e._f.length) return h(e).invalidFormat = !0, void(e._d = new Date(NaN));
-                        for (r = 0; r < e._f.length; r++) i = 0, t = f({}, e), null != e._useUTC && (t._useUTC = e._useUTC), t._f = e._f[r], pe(t), m(t) && (i += h(t).charsLeftOver, i += 10 * h(t).unusedTokens.length, h(t).score = i, (null == n || i < n) && (n = i, a = t));
-                        l(e, a || t)
+                        for (r = 0; r < e._f.length; r++) i = 0, t = f({}, e), null != e._useUTC && (t._useUTC = e._useUTC), t._f = e._f[r], pe(t), m(t) && (i += h(t).charsLeftOver, i += 10 * h(t).unusedTokens.length, h(t).score = i, (null == a || i < a) && (a = i, n = t));
+                        l(e, n || t)
                     }(e) : u ? pe(e) : function(e) {
-                        var a = e._i;
-                        i(a) ? e._d = new Date(t.now()) : o(a) ? e._d = new Date(a.valueOf()) : "string" == typeof a ? function(e) {
-                            var a = ra.exec(e._i);
-                            null === a ? (he(e), !1 === e._isValid && (delete e._isValid, me(e), !1 === e._isValid && (delete e._isValid, t.createFromInputFallback(e)))) : e._d = new Date(+a[1])
-                        }(e) : n(a) ? (e._a = d(a.slice(0), function(e) {
+                        var n = e._i;
+                        i(n) ? e._d = new Date(t.now()) : o(n) ? e._d = new Date(n.valueOf()) : "string" == typeof n ? function(e) {
+                            var n = rn.exec(e._i);
+                            null === n ? (he(e), !1 === e._isValid && (delete e._isValid, me(e), !1 === e._isValid && (delete e._isValid, t.createFromInputFallback(e)))) : e._d = new Date(+n[1])
+                        }(e) : a(n) ? (e._a = d(n.slice(0), function(e) {
                             return parseInt(e, 10)
-                        }), fe(e)) : r(a) ? function(e) {
+                        }), fe(e)) : r(n) ? function(e) {
                             if (!e._d) {
                                 var t = S(e._i);
                                 e._a = d([t.year, t.month, t.day || t.date, t.hour, t.minute, t.second, t.millisecond], function(e) {
                                     return e && parseInt(e, 10)
                                 }), fe(e)
                             }
-                        }(e) : s(a) ? e._d = new Date(a) : t.createFromInputFallback(e)
+                        }(e) : s(n) ? e._d = new Date(n) : t.createFromInputFallback(e)
                     }(e), m(e) || (e._d = null), e))
                 }
 
-                function ye(e, t, a, i, s) {
+                function ye(e, t, n, i, s) {
                     var o = {};
-                    return !0 !== a && !1 !== a || (i = a, a = void 0), (r(e) && function(e) {
+                    return !0 !== n && !1 !== n || (i = n, n = void 0), (r(e) && function(e) {
                             var t;
                             for (t in e) return !1;
                             return !0
-                        }(e) || n(e) && 0 === e.length) && (e = void 0), o._isAMomentObject = !0, o._useUTC = o._isUTC = s, o._l = a, o._i = e, o._f = t, o._strict = i,
+                        }(e) || a(e) && 0 === e.length) && (e = void 0), o._isAMomentObject = !0, o._useUTC = o._isUTC = s, o._l = n, o._i = e, o._f = t, o._strict = i,
                         function(e) {
                             var t = new p(ce(ge(e)));
                             return t._nextDay && (t.add(1, "d"), t._nextDay = void 0), t
                         }(o)
                 }
 
-                function Me(e, t, a, n) {
-                    return ye(e, t, a, n, !1)
+                function Me(e, t, n, a) {
+                    return ye(e, t, n, a, !1)
                 }
 
                 function ve(e, t) {
-                    var a, r;
-                    if (1 === t.length && n(t[0]) && (t = t[0]), !t.length) return Me();
-                    for (a = t[0], r = 1; r < t.length; ++r) t[r].isValid() && !t[r][e](a) || (a = t[r]);
-                    return a
+                    var n, r;
+                    if (1 === t.length && a(t[0]) && (t = t[0]), !t.length) return Me();
+                    for (n = t[0], r = 1; r < t.length; ++r) t[r].isValid() && !t[r][e](n) || (n = t[r]);
+                    return n
                 }
 
                 function be(e) {
                     var t = S(e),
-                        a = t.year || 0,
-                        n = t.quarter || 0,
+                        n = t.year || 0,
+                        a = t.quarter || 0,
                         r = t.month || 0,
                         i = t.week || 0,
                         s = t.day || 0,
@@ -8148,14 +8170,14 @@ webpackJsonp([35], {
                         l = t.millisecond || 0;
                     this._isValid = function(e) {
                         for (var t in e)
-                            if (-1 === da.indexOf(t) || null != e[t] && isNaN(e[t])) return !1;
-                        for (var a = !1, n = 0; n < da.length; ++n)
-                            if (e[da[n]]) {
-                                if (a) return !1;
-                                parseFloat(e[da[n]]) !== M(e[da[n]]) && (a = !0)
+                            if (-1 === un.indexOf(t) || null != e[t] && isNaN(e[t])) return !1;
+                        for (var n = !1, a = 0; a < un.length; ++a)
+                            if (e[un[a]]) {
+                                if (n) return !1;
+                                parseFloat(e[un[a]]) !== M(e[un[a]]) && (n = !0)
                             }
                         return !0
-                    }(t), this._milliseconds = +l + 1e3 * u + 6e4 * d + 1e3 * o * 60 * 60, this._days = +s + 7 * i, this._months = +r + 3 * n + 12 * a, this._data = {}, this._locale = le(), this._bubble()
+                    }(t), this._milliseconds = +l + 1e3 * u + 6e4 * d + 1e3 * o * 60 * 60, this._days = +s + 7 * i, this._months = +r + 3 * a + 12 * n, this._data = {}, this._locale = le(), this._bubble()
                 }
 
                 function Le(e) {
@@ -8169,22 +8191,22 @@ webpackJsonp([35], {
                 function De(e, t) {
                     A(e, 0, 0, function() {
                         var e = this.utcOffset(),
-                            a = "+";
-                        return e < 0 && (e = -e, a = "-"), a + C(~~(e / 60), 2) + t + C(~~e % 60, 2)
+                            n = "+";
+                        return e < 0 && (e = -e, n = "-"), n + C(~~(e / 60), 2) + t + C(~~e % 60, 2)
                     })
                 }
 
                 function ke(e, t) {
-                    var a = (t || "").match(e);
-                    if (null === a) return null;
-                    var n = ((a[a.length - 1] || []) + "").match(ua) || ["-", 0, 0],
-                        r = 60 * n[1] + M(n[2]);
-                    return 0 === r ? 0 : "+" === n[0] ? r : -r
+                    var n = (t || "").match(e);
+                    if (null === n) return null;
+                    var a = ((n[n.length - 1] || []) + "").match(ln) || ["-", 0, 0],
+                        r = 60 * a[1] + M(a[2]);
+                    return 0 === r ? 0 : "+" === a[0] ? r : -r
                 }
 
-                function we(e, a) {
-                    var n, r;
-                    return a._isUTC ? (n = a.clone(), r = (g(e) || o(e) ? e.valueOf() : Me(e).valueOf()) - n.valueOf(), n._d.setTime(n._d.valueOf() + r), t.updateOffset(n, !1), n) : Me(e).local()
+                function we(e, n) {
+                    var a, r;
+                    return n._isUTC ? (a = n.clone(), r = (g(e) || o(e) ? e.valueOf() : Me(e).valueOf()) - a.valueOf(), a._d.setTime(a._d.valueOf() + r), t.updateOffset(a, !1), a) : Me(e).local()
                 }
 
                 function xe(e) {
@@ -8196,63 +8218,63 @@ webpackJsonp([35], {
                 }
 
                 function Se(e, t) {
-                    var a, n, r, i = e,
+                    var n, a, r, i = e,
                         o = null;
                     return Le(e) ? i = {
                         ms: e._milliseconds,
                         d: e._days,
                         M: e._months
-                    } : s(e) ? (i = {}, t ? i[t] = e : i.milliseconds = e) : (o = la.exec(e)) ? (a = "-" === o[1] ? -1 : 1, i = {
+                    } : s(e) ? (i = {}, t ? i[t] = e : i.milliseconds = e) : (o = cn.exec(e)) ? (n = "-" === o[1] ? -1 : 1, i = {
                         y: 0,
-                        d: M(o[Tt]) * a,
-                        h: M(o[St]) * a,
-                        m: M(o[Ot]) * a,
-                        s: M(o[jt]) * a,
-                        ms: M(Ye(1e3 * o[Ht])) * a
-                    }) : (o = ca.exec(e)) ? (a = "-" === o[1] ? -1 : 1, i = {
-                        y: Oe(o[2], a),
-                        M: Oe(o[3], a),
-                        w: Oe(o[4], a),
-                        d: Oe(o[5], a),
-                        h: Oe(o[6], a),
-                        m: Oe(o[7], a),
-                        s: Oe(o[8], a)
+                        d: M(o[Tt]) * n,
+                        h: M(o[St]) * n,
+                        m: M(o[Ot]) * n,
+                        s: M(o[jt]) * n,
+                        ms: M(Ye(1e3 * o[Ht])) * n
+                    }) : (o = hn.exec(e)) ? (n = "-" === o[1] ? -1 : 1, i = {
+                        y: Oe(o[2], n),
+                        M: Oe(o[3], n),
+                        w: Oe(o[4], n),
+                        d: Oe(o[5], n),
+                        h: Oe(o[6], n),
+                        m: Oe(o[7], n),
+                        s: Oe(o[8], n)
                     }) : null == i ? i = {} : "object" == typeof i && ("from" in i || "to" in i) && (r = function(e, t) {
-                        var a;
+                        var n;
                         if (!e.isValid() || !t.isValid()) return {
                             milliseconds: 0,
                             months: 0
                         };
-                        t = we(t, e), e.isBefore(t) ? a = je(e, t) : ((a = je(t, e)).milliseconds = -a.milliseconds, a.months = -a.months);
-                        return a
-                    }(Me(i.from), Me(i.to)), (i = {}).ms = r.milliseconds, i.M = r.months), n = new be(i), Le(e) && u(e, "_locale") && (n._locale = e._locale), n
+                        t = we(t, e), e.isBefore(t) ? n = je(e, t) : ((n = je(t, e)).milliseconds = -n.milliseconds, n.months = -n.months);
+                        return n
+                    }(Me(i.from), Me(i.to)), (i = {}).ms = r.milliseconds, i.M = r.months), a = new be(i), Le(e) && u(e, "_locale") && (a._locale = e._locale), a
                 }
 
                 function Oe(e, t) {
-                    var a = e && parseFloat(e.replace(",", "."));
-                    return (isNaN(a) ? 0 : a) * t
+                    var n = e && parseFloat(e.replace(",", "."));
+                    return (isNaN(n) ? 0 : n) * t
                 }
 
                 function je(e, t) {
-                    var a = {
+                    var n = {
                         milliseconds: 0,
                         months: 0
                     };
-                    return a.months = t.month() - e.month() + 12 * (t.year() - e.year()), e.clone().add(a.months, "M").isAfter(t) && --a.months, a.milliseconds = +t - +e.clone().add(a.months, "M"), a
+                    return n.months = t.month() - e.month() + 12 * (t.year() - e.year()), e.clone().add(n.months, "M").isAfter(t) && --n.months, n.milliseconds = +t - +e.clone().add(n.months, "M"), n
                 }
 
                 function He(e, t) {
-                    return function(a, n) {
+                    return function(n, a) {
                         var r, i;
-                        return null === n || isNaN(+n) || (Y(t, "moment()." + t + "(period, number) is deprecated. Please use moment()." + t + "(number, period). See http://momentjs.com/guides/#/warnings/add-inverted-param/ for more info."), i = a, a = n, n = i), a = "string" == typeof a ? +a : a, r = Se(a, n), Pe(this, r, e), this
+                        return null === a || isNaN(+a) || (Y(t, "moment()." + t + "(period, number) is deprecated. Please use moment()." + t + "(number, period). See http://momentjs.com/guides/#/warnings/add-inverted-param/ for more info."), i = n, n = a, a = i), n = "string" == typeof n ? +n : n, r = Se(n, a), Pe(this, r, e), this
                     }
                 }
 
-                function Pe(e, a, n, r) {
-                    var i = a._milliseconds,
-                        s = Ye(a._days),
-                        o = Ye(a._months);
-                    e.isValid() && (r = null == r || r, i && e._d.setTime(e._d.valueOf() + i * n), s && P(e, "Date", H(e, "Date") + s * n), o && U(e, H(e, "Month") + o * n), r && t.updateOffset(e, s || o))
+                function Pe(e, n, a, r) {
+                    var i = n._milliseconds,
+                        s = Ye(n._days),
+                        o = Ye(n._months);
+                    e.isValid() && (r = null == r || r, i && e._d.setTime(e._d.valueOf() + i * a), s && P(e, "Date", H(e, "Date") + s * a), o && U(e, H(e, "Month") + o * a), r && t.updateOffset(e, s || o))
                 }
 
                 function Ce(e) {
@@ -8268,13 +8290,13 @@ webpackJsonp([35], {
                     A(0, [e, e.length], 0, t)
                 }
 
-                function We(e, t, a, n, r) {
+                function We(e, t, n, a, r) {
                     var i;
-                    return null == e ? ee(this, n, r).year : (i = te(e, n, r), t > i && (t = i), function(e, t, a, n, r) {
-                        var i = $(e, t, a, n, r),
+                    return null == e ? ee(this, a, r).year : (i = te(e, a, r), t > i && (t = i), function(e, t, n, a, r) {
+                        var i = $(e, t, n, a, r),
                             s = X(i.year, 0, i.dayOfYear);
                         return this.year(s.getUTCFullYear()), this.month(s.getUTCMonth()), this.date(s.getUTCDate()), this
-                    }.call(this, e, t, a, n, r))
+                    }.call(this, e, t, n, a, r))
                 }
 
                 function Ee(e, t) {
@@ -8285,32 +8307,32 @@ webpackJsonp([35], {
                     return e
                 }
 
-                function ze(e, t, a, n) {
+                function ze(e, t, n, a) {
                     var r = le(),
-                        i = c().set(n, t);
-                    return r[a](i, e)
+                        i = c().set(a, t);
+                    return r[n](i, e)
                 }
 
-                function Ne(e, t, a) {
-                    if (s(e) && (t = e, e = void 0), e = e || "", null != t) return ze(e, t, a, "month");
-                    var n, r = [];
-                    for (n = 0; n < 12; n++) r[n] = ze(e, n, a, "month");
+                function Ne(e, t, n) {
+                    if (s(e) && (t = e, e = void 0), e = e || "", null != t) return ze(e, t, n, "month");
+                    var a, r = [];
+                    for (a = 0; a < 12; a++) r[a] = ze(e, a, n, "month");
                     return r
                 }
 
-                function Re(e, t, a, n) {
-                    "boolean" == typeof e ? (s(t) && (a = t, t = void 0), t = t || "") : (a = t = e, e = !1, s(t) && (a = t, t = void 0), t = t || "");
+                function Re(e, t, n, a) {
+                    "boolean" == typeof e ? (s(t) && (n = t, t = void 0), t = t || "") : (n = t = e, e = !1, s(t) && (n = t, t = void 0), t = t || "");
                     var r = le(),
                         i = e ? r._week.dow : 0;
-                    if (null != a) return ze(t, (a + i) % 7, n, "day");
+                    if (null != n) return ze(t, (n + i) % 7, a, "day");
                     var o, d = [];
-                    for (o = 0; o < 7; o++) d[o] = ze(t, (o + i) % 7, n, "day");
+                    for (o = 0; o < 7; o++) d[o] = ze(t, (o + i) % 7, a, "day");
                     return d
                 }
 
-                function Be(e, t, a, n) {
-                    var r = Se(t, a);
-                    return e._milliseconds += n * r._milliseconds, e._days += n * r._days, e._months += n * r._months, e._bubble()
+                function Be(e, t, n, a) {
+                    var r = Se(t, n);
+                    return e._milliseconds += a * r._milliseconds, e._days += a * r._days, e._months += a * r._months, e._bubble()
                 }
 
                 function Je(e) {
@@ -8339,22 +8361,22 @@ webpackJsonp([35], {
 
                 function qe() {
                     if (!this.isValid()) return this.localeData().invalidDate();
-                    var e, t, a = za(this._milliseconds) / 1e3,
-                        n = za(this._days),
-                        r = za(this._months);
-                    t = y((e = y(a / 60)) / 60), a %= 60, e %= 60;
+                    var e, t, n = Nn(this._milliseconds) / 1e3,
+                        a = Nn(this._days),
+                        r = Nn(this._months);
+                    t = y((e = y(n / 60)) / 60), n %= 60, e %= 60;
                     var i = y(r / 12),
                         s = r %= 12,
-                        o = n,
+                        o = a,
                         d = t,
                         u = e,
-                        l = a,
+                        l = n,
                         c = this.asSeconds();
                     return c ? (c < 0 ? "-" : "") + "P" + (i ? i + "Y" : "") + (s ? s + "M" : "") + (o ? o + "D" : "") + (d || u || l ? "T" : "") + (d ? d + "H" : "") + (u ? u + "M" : "") + (l ? l + "S" : "") : "P0D"
                 }
                 var Ke, Xe = Array.prototype.some ? Array.prototype.some : function(e) {
-                        for (var t = Object(this), a = t.length >>> 0, n = 0; n < a; n++)
-                            if (n in t && e.call(this, t[n], n, t)) return !0;
+                        for (var t = Object(this), n = t.length >>> 0, a = 0; a < n; a++)
+                            if (a in t && e.call(this, t[a], a, t)) return !0;
                         return !1
                     },
                     Qe = t.momentProperties = [],
@@ -8362,12 +8384,12 @@ webpackJsonp([35], {
                     et = {};
                 t.suppressDeprecationWarnings = !1, t.deprecationHandler = null;
                 var tt = Object.keys ? Object.keys : function(e) {
-                        var t, a = [];
-                        for (t in e) u(e, t) && a.push(t);
-                        return a
+                        var t, n = [];
+                        for (t in e) u(e, t) && n.push(t);
+                        return n
                     },
-                    at = {},
                     nt = {},
+                    at = {},
                     rt = /(\[[^\[]*\])|(\\)?([Hh]mm(ss)?|Mo|MM?M?M?|Do|DDDo|DD?D?D?|ddd?d?|do?|w[o|w]?|W[o|W]?|Qo?|YYYYYY|YYYYY|YYYY|YY|gg(ggg?)?|GG(GGG?)?|e|E|a|A|hh?|HH?|kk?|mm?|ss?|S{1,9}|x|X|zz?|ZZ?|.)/g,
                     it = /(\[[^\[]*\])|(\\)?(LTS|LT|LL?L?L?|l{1,4})/g,
                     st = {},
@@ -8417,9 +8439,9 @@ webpackJsonp([35], {
                     return t.monthsRegex(e)
                 }), R(["M", "MM"], function(e, t) {
                     t[xt] = M(e) - 1
-                }), R(["MMM", "MMMM"], function(e, t, a, n) {
-                    var r = a._locale.monthsParse(e, n, a._strict);
-                    null != r ? t[xt] = r : h(a).invalidMonth = e
+                }), R(["MMM", "MMMM"], function(e, t, n, a) {
+                    var r = n._locale.monthsParse(e, a, n._strict);
+                    null != r ? t[xt] = r : h(n).invalidMonth = e
                 });
                 var Ft = /D[oD]?(\[[^\[\]]*\]|\s)+MMMM?/,
                     Wt = "January_February_March_April_May_June_July_August_September_October_November_December".split("_"),
@@ -8431,18 +8453,18 @@ webpackJsonp([35], {
                     return e <= 9999 ? "" + e : "+" + e
                 }), A(0, ["YY", 2], 0, function() {
                     return this.year() % 100
-                }), A(0, ["YYYY", 4], 0, "year"), A(0, ["YYYYY", 5], 0, "year"), A(0, ["YYYYYY", 6, !0], 0, "year"), x("year", "y"), O("year", 1), I("Y", vt), I("YY", mt, ut), I("YYYY", gt, ct), I("YYYYY", yt, ht), I("YYYYYY", yt, ht), R(["YYYYY", "YYYYYY"], wt), R("YYYY", function(e, a) {
-                    a[wt] = 2 === e.length ? t.parseTwoDigitYear(e) : M(e)
-                }), R("YY", function(e, a) {
-                    a[wt] = t.parseTwoDigitYear(e)
+                }), A(0, ["YYYY", 4], 0, "year"), A(0, ["YYYYY", 5], 0, "year"), A(0, ["YYYYYY", 6, !0], 0, "year"), x("year", "y"), O("year", 1), I("Y", vt), I("YY", mt, ut), I("YYYY", gt, ct), I("YYYYY", yt, ht), I("YYYYYY", yt, ht), R(["YYYYY", "YYYYYY"], wt), R("YYYY", function(e, n) {
+                    n[wt] = 2 === e.length ? t.parseTwoDigitYear(e) : M(e)
+                }), R("YY", function(e, n) {
+                    n[wt] = t.parseTwoDigitYear(e)
                 }), R("Y", function(e, t) {
                     t[wt] = parseInt(e, 10)
                 }), t.parseTwoDigitYear = function(e) {
                     return M(e) + (M(e) > 68 ? 1900 : 2e3)
                 };
                 var Nt = j("FullYear", !0);
-                A("w", ["ww", 2], "wo", "week"), A("W", ["WW", 2], "Wo", "isoWeek"), x("week", "w"), x("isoWeek", "W"), O("week", 5), O("isoWeek", 5), I("w", mt), I("ww", mt, ut), I("W", mt), I("WW", mt, ut), B(["w", "ww", "W", "WW"], function(e, t, a, n) {
-                    t[n.substr(0, 1)] = M(e)
+                A("w", ["ww", 2], "wo", "week"), A("W", ["WW", 2], "Wo", "isoWeek"), x("week", "w"), x("isoWeek", "W"), O("week", 5), O("isoWeek", 5), I("w", mt), I("ww", mt, ut), I("W", mt), I("WW", mt, ut), B(["w", "ww", "W", "WW"], function(e, t, n, a) {
+                    t[a.substr(0, 1)] = M(e)
                 });
                 A("d", 0, "do", "day"), A("dd", 0, 0, function(e) {
                     return this.localeData().weekdaysMin(this, e)
@@ -8456,11 +8478,11 @@ webpackJsonp([35], {
                     return t.weekdaysShortRegex(e)
                 }), I("dddd", function(e, t) {
                     return t.weekdaysRegex(e)
-                }), B(["dd", "ddd", "dddd"], function(e, t, a, n) {
-                    var r = a._locale.weekdaysParse(e, n, a._strict);
-                    null != r ? t.d = r : h(a).invalidWeekday = e
-                }), B(["d", "e", "E"], function(e, t, a, n) {
-                    t[n] = M(e)
+                }), B(["dd", "ddd", "dddd"], function(e, t, n, a) {
+                    var r = n._locale.weekdaysParse(e, a, n._strict);
+                    null != r ? t.d = r : h(n).invalidWeekday = e
+                }), B(["d", "e", "E"], function(e, t, n, a) {
+                    t[a] = M(e)
                 });
                 var Rt = "Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday".split("_"),
                     Bt = "Sun_Mon_Tue_Wed_Thu_Fri_Sat".split("_"),
@@ -8468,37 +8490,37 @@ webpackJsonp([35], {
                     Vt = Yt,
                     Ut = Yt,
                     Gt = Yt;
-                A("H", ["HH", 2], 0, "hour"), A("h", ["hh", 2], 0, ne), A("k", ["kk", 2], 0, function() {
+                A("H", ["HH", 2], 0, "hour"), A("h", ["hh", 2], 0, ae), A("k", ["kk", 2], 0, function() {
                     return this.hours() || 24
                 }), A("hmm", 0, 0, function() {
-                    return "" + ne.apply(this) + C(this.minutes(), 2)
+                    return "" + ae.apply(this) + C(this.minutes(), 2)
                 }), A("hmmss", 0, 0, function() {
-                    return "" + ne.apply(this) + C(this.minutes(), 2) + C(this.seconds(), 2)
+                    return "" + ae.apply(this) + C(this.minutes(), 2) + C(this.seconds(), 2)
                 }), A("Hmm", 0, 0, function() {
                     return "" + this.hours() + C(this.minutes(), 2)
                 }), A("Hmmss", 0, 0, function() {
                     return "" + this.hours() + C(this.minutes(), 2) + C(this.seconds(), 2)
-                }), re("a", !0), re("A", !1), x("hour", "h"), O("hour", 13), I("a", ie), I("A", ie), I("H", mt), I("h", mt), I("k", mt), I("HH", mt, ut), I("hh", mt, ut), I("kk", mt, ut), I("hmm", _t), I("hmmss", ft), I("Hmm", _t), I("Hmmss", ft), R(["H", "HH"], St), R(["k", "kk"], function(e, t, a) {
-                    var n = M(e);
-                    t[St] = 24 === n ? 0 : n
-                }), R(["a", "A"], function(e, t, a) {
-                    a._isPm = a._locale.isPM(e), a._meridiem = e
-                }), R(["h", "hh"], function(e, t, a) {
-                    t[St] = M(e), h(a).bigHour = !0
-                }), R("hmm", function(e, t, a) {
-                    var n = e.length - 2;
-                    t[St] = M(e.substr(0, n)), t[Ot] = M(e.substr(n)), h(a).bigHour = !0
-                }), R("hmmss", function(e, t, a) {
-                    var n = e.length - 4,
+                }), re("a", !0), re("A", !1), x("hour", "h"), O("hour", 13), I("a", ie), I("A", ie), I("H", mt), I("h", mt), I("k", mt), I("HH", mt, ut), I("hh", mt, ut), I("kk", mt, ut), I("hmm", _t), I("hmmss", ft), I("Hmm", _t), I("Hmmss", ft), R(["H", "HH"], St), R(["k", "kk"], function(e, t, n) {
+                    var a = M(e);
+                    t[St] = 24 === a ? 0 : a
+                }), R(["a", "A"], function(e, t, n) {
+                    n._isPm = n._locale.isPM(e), n._meridiem = e
+                }), R(["h", "hh"], function(e, t, n) {
+                    t[St] = M(e), h(n).bigHour = !0
+                }), R("hmm", function(e, t, n) {
+                    var a = e.length - 2;
+                    t[St] = M(e.substr(0, a)), t[Ot] = M(e.substr(a)), h(n).bigHour = !0
+                }), R("hmmss", function(e, t, n) {
+                    var a = e.length - 4,
                         r = e.length - 2;
-                    t[St] = M(e.substr(0, n)), t[Ot] = M(e.substr(n, 2)), t[jt] = M(e.substr(r)), h(a).bigHour = !0
-                }), R("Hmm", function(e, t, a) {
-                    var n = e.length - 2;
-                    t[St] = M(e.substr(0, n)), t[Ot] = M(e.substr(n))
-                }), R("Hmmss", function(e, t, a) {
-                    var n = e.length - 4,
+                    t[St] = M(e.substr(0, a)), t[Ot] = M(e.substr(a, 2)), t[jt] = M(e.substr(r)), h(n).bigHour = !0
+                }), R("Hmm", function(e, t, n) {
+                    var a = e.length - 2;
+                    t[St] = M(e.substr(0, a)), t[Ot] = M(e.substr(a))
+                }), R("Hmmss", function(e, t, n) {
+                    var a = e.length - 4,
                         r = e.length - 2;
-                    t[St] = M(e.substr(0, n)), t[Ot] = M(e.substr(n, 2)), t[jt] = M(e.substr(r))
+                    t[St] = M(e.substr(0, a)), t[Ot] = M(e.substr(a, 2)), t[jt] = M(e.substr(r))
                 });
                 var Zt, qt = j("Hours", !0),
                     Kt = {
@@ -8551,9 +8573,9 @@ webpackJsonp([35], {
                     Xt = {},
                     Qt = {},
                     $t = /^\s*((?:[+-]\d{6}|\d{4})-(?:\d\d-\d\d|W\d\d-\d|W\d\d|\d\d\d|\d\d))(?:(T| )(\d\d(?::\d\d(?::\d\d(?:[.,]\d+)?)?)?)([\+\-]\d\d(?::?\d\d)?|\s*Z)?)?$/,
-                    ea = /^\s*((?:[+-]\d{6}|\d{4})(?:\d\d\d\d|W\d\d\d|W\d\d|\d\d\d|\d\d))(?:(T| )(\d\d(?:\d\d(?:\d\d(?:[.,]\d+)?)?)?)([\+\-]\d\d(?::?\d\d)?|\s*Z)?)?$/,
-                    ta = /Z|[+-]\d\d(?::?\d\d)?/,
-                    aa = [
+                    en = /^\s*((?:[+-]\d{6}|\d{4})(?:\d\d\d\d|W\d\d\d|W\d\d|\d\d\d|\d\d))(?:(T| )(\d\d(?:\d\d(?:\d\d(?:[.,]\d+)?)?)?)([\+\-]\d\d(?::?\d\d)?|\s*Z)?)?$/,
+                    tn = /Z|[+-]\d\d(?::?\d\d)?/,
+                    nn = [
                         ["YYYYYY-MM-DD", /[+-]\d{6}-\d\d-\d\d/],
                         ["YYYY-MM-DD", /\d{4}-\d\d-\d\d/],
                         ["GGGG-[W]WW-E", /\d{4}-W\d\d-\d/],
@@ -8566,7 +8588,7 @@ webpackJsonp([35], {
                         ["GGGG[W]WW", /\d{4}W\d{2}/, !1],
                         ["YYYYDDD", /\d{7}/]
                     ],
-                    na = [
+                    an = [
                         ["HH:mm:ss.SSSS", /\d\d:\d\d:\d\d\.\d+/],
                         ["HH:mm:ss,SSSS", /\d\d:\d\d:\d\d,\d+/],
                         ["HH:mm:ss", /\d\d:\d\d:\d\d/],
@@ -8577,44 +8599,44 @@ webpackJsonp([35], {
                         ["HHmm", /\d\d\d\d/],
                         ["HH", /\d\d/]
                     ],
-                    ra = /^\/?Date\((\-?\d+)/i,
-                    ia = /^((?:Mon|Tue|Wed|Thu|Fri|Sat|Sun),?\s)?(\d?\d\s(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s(?:\d\d)?\d\d\s)(\d\d:\d\d)(\:\d\d)?(\s(?:UT|GMT|[ECMP][SD]T|[A-IK-Za-ik-z]|[+-]\d{4}))$/;
+                    rn = /^\/?Date\((\-?\d+)/i,
+                    sn = /^((?:Mon|Tue|Wed|Thu|Fri|Sat|Sun),?\s)?(\d?\d\s(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s(?:\d\d)?\d\d\s)(\d\d:\d\d)(\:\d\d)?(\s(?:UT|GMT|[ECMP][SD]T|[A-IK-Za-ik-z]|[+-]\d{4}))$/;
                 t.createFromInputFallback = L("value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged and will be removed in an upcoming major release. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.", function(e) {
                     e._d = new Date(e._i + (e._useUTC ? " UTC" : ""))
                 }), t.ISO_8601 = function() {}, t.RFC_2822 = function() {};
-                var sa = L("moment().min is deprecated, use moment.max instead. http://momentjs.com/guides/#/warnings/min-max/", function() {
+                var on = L("moment().min is deprecated, use moment.max instead. http://momentjs.com/guides/#/warnings/min-max/", function() {
                         var e = Me.apply(null, arguments);
                         return this.isValid() && e.isValid() ? e < this ? this : e : _()
                     }),
-                    oa = L("moment().max is deprecated, use moment.min instead. http://momentjs.com/guides/#/warnings/min-max/", function() {
+                    dn = L("moment().max is deprecated, use moment.min instead. http://momentjs.com/guides/#/warnings/min-max/", function() {
                         var e = Me.apply(null, arguments);
                         return this.isValid() && e.isValid() ? e > this ? this : e : _()
                     }),
-                    da = ["year", "quarter", "month", "week", "day", "hour", "minute", "second", "millisecond"];
-                De("Z", ":"), De("ZZ", ""), I("Z", Lt), I("ZZ", Lt), R(["Z", "ZZ"], function(e, t, a) {
-                    a._useUTC = !0, a._tzm = ke(Lt, e)
+                    un = ["year", "quarter", "month", "week", "day", "hour", "minute", "second", "millisecond"];
+                De("Z", ":"), De("ZZ", ""), I("Z", Lt), I("ZZ", Lt), R(["Z", "ZZ"], function(e, t, n) {
+                    n._useUTC = !0, n._tzm = ke(Lt, e)
                 });
-                var ua = /([\+\-]|\d\d)/gi;
+                var ln = /([\+\-]|\d\d)/gi;
                 t.updateOffset = function() {};
-                var la = /^(\-)?(?:(\d*)[. ])?(\d+)\:(\d+)(?:\:(\d+)(\.\d*)?)?$/,
-                    ca = /^(-)?P(?:(-?[0-9,.]*)Y)?(?:(-?[0-9,.]*)M)?(?:(-?[0-9,.]*)W)?(?:(-?[0-9,.]*)D)?(?:T(?:(-?[0-9,.]*)H)?(?:(-?[0-9,.]*)M)?(?:(-?[0-9,.]*)S)?)?$/;
+                var cn = /^(\-)?(?:(\d*)[. ])?(\d+)\:(\d+)(?:\:(\d+)(\.\d*)?)?$/,
+                    hn = /^(-)?P(?:(-?[0-9,.]*)Y)?(?:(-?[0-9,.]*)M)?(?:(-?[0-9,.]*)W)?(?:(-?[0-9,.]*)D)?(?:T(?:(-?[0-9,.]*)H)?(?:(-?[0-9,.]*)M)?(?:(-?[0-9,.]*)S)?)?$/;
                 Se.fn = be.prototype, Se.invalid = function() {
                     return Se(NaN)
                 };
-                var ha = He(1, "add"),
-                    ma = He(-1, "subtract");
+                var mn = He(1, "add"),
+                    _n = He(-1, "subtract");
                 t.defaultFormat = "YYYY-MM-DDTHH:mm:ssZ", t.defaultFormatUtc = "YYYY-MM-DDTHH:mm:ss[Z]";
-                var _a = L("moment().lang() is deprecated. Instead, use moment().localeData() to get the language configuration. Use moment().locale() to change languages.", function(e) {
+                var fn = L("moment().lang() is deprecated. Instead, use moment().localeData() to get the language configuration. Use moment().locale() to change languages.", function(e) {
                     return void 0 === e ? this.localeData() : this.locale(e)
                 });
                 A(0, ["gg", 2], 0, function() {
                     return this.weekYear() % 100
                 }), A(0, ["GG", 2], 0, function() {
                     return this.isoWeekYear() % 100
-                }), Fe("gggg", "weekYear"), Fe("ggggg", "weekYear"), Fe("GGGG", "isoWeekYear"), Fe("GGGGG", "isoWeekYear"), x("weekYear", "gg"), x("isoWeekYear", "GG"), O("weekYear", 1), O("isoWeekYear", 1), I("G", vt), I("g", vt), I("GG", mt, ut), I("gg", mt, ut), I("GGGG", gt, ct), I("gggg", gt, ct), I("GGGGG", yt, ht), I("ggggg", yt, ht), B(["gggg", "ggggg", "GGGG", "GGGGG"], function(e, t, a, n) {
-                    t[n.substr(0, 2)] = M(e)
-                }), B(["gg", "GG"], function(e, a, n, r) {
-                    a[r] = t.parseTwoDigitYear(e)
+                }), Fe("gggg", "weekYear"), Fe("ggggg", "weekYear"), Fe("GGGG", "isoWeekYear"), Fe("GGGGG", "isoWeekYear"), x("weekYear", "gg"), x("isoWeekYear", "GG"), O("weekYear", 1), O("isoWeekYear", 1), I("G", vt), I("g", vt), I("GG", mt, ut), I("gg", mt, ut), I("GGGG", gt, ct), I("gggg", gt, ct), I("GGGGG", yt, ht), I("ggggg", yt, ht), B(["gggg", "ggggg", "GGGG", "GGGGG"], function(e, t, n, a) {
+                    t[a.substr(0, 2)] = M(e)
+                }), B(["gg", "GG"], function(e, n, a, r) {
+                    n[r] = t.parseTwoDigitYear(e)
                 }), A("Q", 0, "Qo", "quarter"), x("quarter", "Q"), O("quarter", 7), I("Q", dt), R("Q", function(e, t) {
                     t[xt] = 3 * (M(e) - 1)
                 }), A("D", ["DD", 2], "Do", "date"), x("date", "D"), O("date", 9), I("D", mt), I("DD", mt, ut), I("Do", function(e, t) {
@@ -8622,13 +8644,13 @@ webpackJsonp([35], {
                 }), R(["D", "DD"], Tt), R("Do", function(e, t) {
                     t[Tt] = M(e.match(mt)[0])
                 });
-                var fa = j("Date", !0);
-                A("DDD", ["DDDD", 3], "DDDo", "dayOfYear"), x("dayOfYear", "DDD"), O("dayOfYear", 4), I("DDD", pt), I("DDDD", lt), R(["DDD", "DDDD"], function(e, t, a) {
-                    a._dayOfYear = M(e)
+                var pn = j("Date", !0);
+                A("DDD", ["DDDD", 3], "DDDo", "dayOfYear"), x("dayOfYear", "DDD"), O("dayOfYear", 4), I("DDD", pt), I("DDDD", lt), R(["DDD", "DDDD"], function(e, t, n) {
+                    n._dayOfYear = M(e)
                 }), A("m", ["mm", 2], 0, "minute"), x("minute", "m"), O("minute", 14), I("m", mt), I("mm", mt, ut), R(["m", "mm"], Ot);
-                var pa = j("Minutes", !1);
+                var gn = j("Minutes", !1);
                 A("s", ["ss", 2], 0, "second"), x("second", "s"), O("second", 15), I("s", mt), I("ss", mt, ut), R(["s", "ss"], jt);
-                var ga = j("Seconds", !1);
+                var yn = j("Seconds", !1);
                 A("S", 0, 0, function() {
                     return ~~(this.millisecond() / 100)
                 }), A(0, ["SS", 2], 0, function() {
@@ -8646,85 +8668,85 @@ webpackJsonp([35], {
                 }), A(0, ["SSSSSSSSS", 9], 0, function() {
                     return 1e6 * this.millisecond()
                 }), x("millisecond", "ms"), O("millisecond", 16), I("S", pt, dt), I("SS", pt, ut), I("SSS", pt, lt);
-                var ya;
-                for (ya = "SSSS"; ya.length <= 9; ya += "S") I(ya, Mt);
-                for (ya = "S"; ya.length <= 9; ya += "S") R(ya, Ee);
-                var Ma = j("Milliseconds", !1);
+                var Mn;
+                for (Mn = "SSSS"; Mn.length <= 9; Mn += "S") I(Mn, Mt);
+                for (Mn = "S"; Mn.length <= 9; Mn += "S") R(Mn, Ee);
+                var vn = j("Milliseconds", !1);
                 A("z", 0, 0, "zoneAbbr"), A("zz", 0, 0, "zoneName");
-                var va = p.prototype;
-                va.add = ha, va.calendar = function(e, a) {
-                    var n = e || Me(),
-                        r = we(n, this).startOf("day"),
+                var bn = p.prototype;
+                bn.add = mn, bn.calendar = function(e, n) {
+                    var a = e || Me(),
+                        r = we(a, this).startOf("day"),
                         i = t.calendarFormat(this, r) || "sameElse",
-                        s = a && (D(a[i]) ? a[i].call(this, n) : a[i]);
-                    return this.format(s || this.localeData().calendar(i, this, Me(n)))
-                }, va.clone = function() {
+                        s = n && (D(n[i]) ? n[i].call(this, a) : n[i]);
+                    return this.format(s || this.localeData().calendar(i, this, Me(a)))
+                }, bn.clone = function() {
                     return new p(this)
-                }, va.diff = function(e, t, a) {
-                    var n, r, i, s;
-                    return this.isValid() && (n = we(e, this)).isValid() ? (r = 6e4 * (n.utcOffset() - this.utcOffset()), "year" === (t = T(t)) || "month" === t || "quarter" === t ? (s = function(e, t) {
-                        var a, n, r = 12 * (t.year() - e.year()) + (t.month() - e.month()),
+                }, bn.diff = function(e, t, n) {
+                    var a, r, i, s;
+                    return this.isValid() && (a = we(e, this)).isValid() ? (r = 6e4 * (a.utcOffset() - this.utcOffset()), "year" === (t = T(t)) || "month" === t || "quarter" === t ? (s = function(e, t) {
+                        var n, a, r = 12 * (t.year() - e.year()) + (t.month() - e.month()),
                             i = e.clone().add(r, "months");
-                        return t - i < 0 ? (a = e.clone().add(r - 1, "months"), n = (t - i) / (i - a)) : (a = e.clone().add(r + 1, "months"), n = (t - i) / (a - i)), -(r + n) || 0
-                    }(this, n), "quarter" === t ? s /= 3 : "year" === t && (s /= 12)) : (i = this - n, s = "second" === t ? i / 1e3 : "minute" === t ? i / 6e4 : "hour" === t ? i / 36e5 : "day" === t ? (i - r) / 864e5 : "week" === t ? (i - r) / 6048e5 : i), a ? s : y(s)) : NaN
-                }, va.endOf = function(e) {
+                        return t - i < 0 ? (n = e.clone().add(r - 1, "months"), a = (t - i) / (i - n)) : (n = e.clone().add(r + 1, "months"), a = (t - i) / (n - i)), -(r + a) || 0
+                    }(this, a), "quarter" === t ? s /= 3 : "year" === t && (s /= 12)) : (i = this - a, s = "second" === t ? i / 1e3 : "minute" === t ? i / 6e4 : "hour" === t ? i / 36e5 : "day" === t ? (i - r) / 864e5 : "week" === t ? (i - r) / 6048e5 : i), n ? s : y(s)) : NaN
+                }, bn.endOf = function(e) {
                     return void 0 === (e = T(e)) || "millisecond" === e ? this : ("date" === e && (e = "day"), this.startOf(e).add(1, "isoWeek" === e ? "week" : e).subtract(1, "ms"))
-                }, va.format = function(e) {
+                }, bn.format = function(e) {
                     e || (e = this.isUtc() ? t.defaultFormatUtc : t.defaultFormat);
-                    var a = W(this, e);
-                    return this.localeData().postformat(a)
-                }, va.from = function(e, t) {
+                    var n = W(this, e);
+                    return this.localeData().postformat(n)
+                }, bn.from = function(e, t) {
                     return this.isValid() && (g(e) && e.isValid() || Me(e).isValid()) ? Se({
                         to: this,
                         from: e
                     }).locale(this.locale()).humanize(!t) : this.localeData().invalidDate()
-                }, va.fromNow = function(e) {
+                }, bn.fromNow = function(e) {
                     return this.from(Me(), e)
-                }, va.to = function(e, t) {
+                }, bn.to = function(e, t) {
                     return this.isValid() && (g(e) && e.isValid() || Me(e).isValid()) ? Se({
                         from: this,
                         to: e
                     }).locale(this.locale()).humanize(!t) : this.localeData().invalidDate()
-                }, va.toNow = function(e) {
+                }, bn.toNow = function(e) {
                     return this.to(Me(), e)
-                }, va.get = function(e) {
+                }, bn.get = function(e) {
                     return e = T(e), D(this[e]) ? this[e]() : this
-                }, va.invalidAt = function() {
+                }, bn.invalidAt = function() {
                     return h(this).overflow
-                }, va.isAfter = function(e, t) {
-                    var a = g(e) ? e : Me(e);
-                    return !(!this.isValid() || !a.isValid()) && ("millisecond" === (t = T(i(t) ? "millisecond" : t)) ? this.valueOf() > a.valueOf() : a.valueOf() < this.clone().startOf(t).valueOf())
-                }, va.isBefore = function(e, t) {
-                    var a = g(e) ? e : Me(e);
-                    return !(!this.isValid() || !a.isValid()) && ("millisecond" === (t = T(i(t) ? "millisecond" : t)) ? this.valueOf() < a.valueOf() : this.clone().endOf(t).valueOf() < a.valueOf())
-                }, va.isBetween = function(e, t, a, n) {
-                    return ("(" === (n = n || "()")[0] ? this.isAfter(e, a) : !this.isBefore(e, a)) && (")" === n[1] ? this.isBefore(t, a) : !this.isAfter(t, a))
-                }, va.isSame = function(e, t) {
-                    var a, n = g(e) ? e : Me(e);
-                    return !(!this.isValid() || !n.isValid()) && ("millisecond" === (t = T(t || "millisecond")) ? this.valueOf() === n.valueOf() : (a = n.valueOf(), this.clone().startOf(t).valueOf() <= a && a <= this.clone().endOf(t).valueOf()))
-                }, va.isSameOrAfter = function(e, t) {
+                }, bn.isAfter = function(e, t) {
+                    var n = g(e) ? e : Me(e);
+                    return !(!this.isValid() || !n.isValid()) && ("millisecond" === (t = T(i(t) ? "millisecond" : t)) ? this.valueOf() > n.valueOf() : n.valueOf() < this.clone().startOf(t).valueOf())
+                }, bn.isBefore = function(e, t) {
+                    var n = g(e) ? e : Me(e);
+                    return !(!this.isValid() || !n.isValid()) && ("millisecond" === (t = T(i(t) ? "millisecond" : t)) ? this.valueOf() < n.valueOf() : this.clone().endOf(t).valueOf() < n.valueOf())
+                }, bn.isBetween = function(e, t, n, a) {
+                    return ("(" === (a = a || "()")[0] ? this.isAfter(e, n) : !this.isBefore(e, n)) && (")" === a[1] ? this.isBefore(t, n) : !this.isAfter(t, n))
+                }, bn.isSame = function(e, t) {
+                    var n, a = g(e) ? e : Me(e);
+                    return !(!this.isValid() || !a.isValid()) && ("millisecond" === (t = T(t || "millisecond")) ? this.valueOf() === a.valueOf() : (n = a.valueOf(), this.clone().startOf(t).valueOf() <= n && n <= this.clone().endOf(t).valueOf()))
+                }, bn.isSameOrAfter = function(e, t) {
                     return this.isSame(e, t) || this.isAfter(e, t)
-                }, va.isSameOrBefore = function(e, t) {
+                }, bn.isSameOrBefore = function(e, t) {
                     return this.isSame(e, t) || this.isBefore(e, t)
-                }, va.isValid = function() {
+                }, bn.isValid = function() {
                     return m(this)
-                }, va.lang = _a, va.locale = Ce, va.localeData = Ae, va.max = oa, va.min = sa, va.parsingFlags = function() {
+                }, bn.lang = fn, bn.locale = Ce, bn.localeData = Ae, bn.max = dn, bn.min = on, bn.parsingFlags = function() {
                     return l({}, h(this))
-                }, va.set = function(e, t) {
+                }, bn.set = function(e, t) {
                     if ("object" == typeof e)
-                        for (var a = function(e) {
+                        for (var n = function(e) {
                                 var t = [];
-                                for (var a in e) t.push({
-                                    unit: a,
-                                    priority: nt[a]
+                                for (var n in e) t.push({
+                                    unit: n,
+                                    priority: at[n]
                                 });
                                 return t.sort(function(e, t) {
                                     return e.priority - t.priority
                                 }), t
-                            }(e = S(e)), n = 0; n < a.length; n++) this[a[n].unit](e[a[n].unit]);
+                            }(e = S(e)), a = 0; a < n.length; a++) this[n[a].unit](e[n[a].unit]);
                     else if (e = T(e), D(this[e])) return this[e](t);
                     return this
-                }, va.startOf = function(e) {
+                }, bn.startOf = function(e) {
                     switch (e = T(e)) {
                         case "year":
                             this.month(0);
@@ -8744,9 +8766,9 @@ webpackJsonp([35], {
                             this.milliseconds(0)
                     }
                     return "week" === e && this.weekday(0), "isoWeek" === e && this.isoWeekday(1), "quarter" === e && this.month(3 * Math.floor(this.month() / 3)), this
-                }, va.subtract = ma, va.toArray = function() {
+                }, bn.subtract = _n, bn.toArray = function() {
                     return [this.year(), this.month(), this.date(), this.hour(), this.minute(), this.second(), this.millisecond()]
-                }, va.toObject = function() {
+                }, bn.toObject = function() {
                     return {
                         years: this.year(),
                         months: this.month(),
@@ -8756,30 +8778,30 @@ webpackJsonp([35], {
                         seconds: this.seconds(),
                         milliseconds: this.milliseconds()
                     }
-                }, va.toDate = function() {
+                }, bn.toDate = function() {
                     return new Date(this.valueOf())
-                }, va.toISOString = function() {
+                }, bn.toISOString = function() {
                     if (!this.isValid()) return null;
                     var e = this.clone().utc();
                     return e.year() < 0 || e.year() > 9999 ? W(e, "YYYYYY-MM-DD[T]HH:mm:ss.SSS[Z]") : D(Date.prototype.toISOString) ? this.toDate().toISOString() : W(e, "YYYY-MM-DD[T]HH:mm:ss.SSS[Z]")
-                }, va.inspect = function() {
+                }, bn.inspect = function() {
                     if (!this.isValid()) return "moment.invalid(/* " + this._i + " */)";
                     var e = "moment",
                         t = "";
                     this.isLocal() || (e = 0 === this.utcOffset() ? "moment.utc" : "moment.parseZone", t = "Z");
-                    var a = "[" + e + '("]',
-                        n = 0 <= this.year() && this.year() <= 9999 ? "YYYY" : "YYYYYY",
+                    var n = "[" + e + '("]',
+                        a = 0 <= this.year() && this.year() <= 9999 ? "YYYY" : "YYYYYY",
                         r = t + '[")]';
-                    return this.format(a + n + "-MM-DD[T]HH:mm:ss.SSS" + r)
-                }, va.toJSON = function() {
+                    return this.format(n + a + "-MM-DD[T]HH:mm:ss.SSS" + r)
+                }, bn.toJSON = function() {
                     return this.isValid() ? this.toISOString() : null
-                }, va.toString = function() {
+                }, bn.toString = function() {
                     return this.clone().locale("en").format("ddd MMM DD YYYY HH:mm:ss [GMT]ZZ")
-                }, va.unix = function() {
+                }, bn.unix = function() {
                     return Math.floor(this.valueOf() / 1e3)
-                }, va.valueOf = function() {
+                }, bn.valueOf = function() {
                     return this._d.valueOf() - 6e4 * (this._offset || 0)
-                }, va.creationData = function() {
+                }, bn.creationData = function() {
                     return {
                         input: this._i,
                         format: this._f,
@@ -8787,38 +8809,38 @@ webpackJsonp([35], {
                         isUTC: this._isUTC,
                         strict: this._strict
                     }
-                }, va.year = Nt, va.isLeapYear = function() {
+                }, bn.year = Nt, bn.isLeapYear = function() {
                     return K(this.year())
-                }, va.weekYear = function(e) {
+                }, bn.weekYear = function(e) {
                     return We.call(this, e, this.week(), this.weekday(), this.localeData()._week.dow, this.localeData()._week.doy)
-                }, va.isoWeekYear = function(e) {
+                }, bn.isoWeekYear = function(e) {
                     return We.call(this, e, this.isoWeek(), this.isoWeekday(), 1, 4)
-                }, va.quarter = va.quarters = function(e) {
+                }, bn.quarter = bn.quarters = function(e) {
                     return null == e ? Math.ceil((this.month() + 1) / 3) : this.month(3 * (e - 1) + this.month() % 3)
-                }, va.month = G, va.daysInMonth = function() {
+                }, bn.month = G, bn.daysInMonth = function() {
                     return V(this.year(), this.month())
-                }, va.week = va.weeks = function(e) {
+                }, bn.week = bn.weeks = function(e) {
                     var t = this.localeData().week(this);
                     return null == e ? t : this.add(7 * (e - t), "d")
-                }, va.isoWeek = va.isoWeeks = function(e) {
+                }, bn.isoWeek = bn.isoWeeks = function(e) {
                     var t = ee(this, 1, 4).week;
                     return null == e ? t : this.add(7 * (e - t), "d")
-                }, va.weeksInYear = function() {
+                }, bn.weeksInYear = function() {
                     var e = this.localeData()._week;
                     return te(this.year(), e.dow, e.doy)
-                }, va.isoWeeksInYear = function() {
+                }, bn.isoWeeksInYear = function() {
                     return te(this.year(), 1, 4)
-                }, va.date = fa, va.day = va.days = function(e) {
+                }, bn.date = pn, bn.day = bn.days = function(e) {
                     if (!this.isValid()) return null != e ? this : NaN;
                     var t = this._isUTC ? this._d.getUTCDay() : this._d.getDay();
                     return null != e ? (e = function(e, t) {
                         return "string" != typeof e ? e : isNaN(e) ? "number" == typeof(e = t.weekdaysParse(e)) ? e : null : parseInt(e, 10)
                     }(e, this.localeData()), this.add(e - t, "d")) : t
-                }, va.weekday = function(e) {
+                }, bn.weekday = function(e) {
                     if (!this.isValid()) return null != e ? this : NaN;
                     var t = (this.day() + 7 - this.localeData()._week.dow) % 7;
                     return null == e ? t : this.add(e - t, "d")
-                }, va.isoWeekday = function(e) {
+                }, bn.isoWeekday = function(e) {
                     if (!this.isValid()) return null != e ? this : NaN;
                     if (null != e) {
                         var t = function(e, t) {
@@ -8827,45 +8849,45 @@ webpackJsonp([35], {
                         return this.day(this.day() % 7 ? t : t - 7)
                     }
                     return this.day() || 7
-                }, va.dayOfYear = function(e) {
+                }, bn.dayOfYear = function(e) {
                     var t = Math.round((this.clone().startOf("day") - this.clone().startOf("year")) / 864e5) + 1;
                     return null == e ? t : this.add(e - t, "d")
-                }, va.hour = va.hours = qt, va.minute = va.minutes = pa, va.second = va.seconds = ga, va.millisecond = va.milliseconds = Ma, va.utcOffset = function(e, a, n) {
+                }, bn.hour = bn.hours = qt, bn.minute = bn.minutes = gn, bn.second = bn.seconds = yn, bn.millisecond = bn.milliseconds = vn, bn.utcOffset = function(e, n, a) {
                     var r, i = this._offset || 0;
                     if (!this.isValid()) return null != e ? this : NaN;
                     if (null != e) {
                         if ("string" == typeof e) {
                             if (null === (e = ke(Lt, e))) return this
-                        } else Math.abs(e) < 16 && !n && (e *= 60);
-                        return !this._isUTC && a && (r = xe(this)), this._offset = e, this._isUTC = !0, null != r && this.add(r, "m"), i !== e && (!a || this._changeInProgress ? Pe(this, Se(e - i, "m"), 1, !1) : this._changeInProgress || (this._changeInProgress = !0, t.updateOffset(this, !0), this._changeInProgress = null)), this
+                        } else Math.abs(e) < 16 && !a && (e *= 60);
+                        return !this._isUTC && n && (r = xe(this)), this._offset = e, this._isUTC = !0, null != r && this.add(r, "m"), i !== e && (!n || this._changeInProgress ? Pe(this, Se(e - i, "m"), 1, !1) : this._changeInProgress || (this._changeInProgress = !0, t.updateOffset(this, !0), this._changeInProgress = null)), this
                     }
                     return this._isUTC ? i : xe(this)
-                }, va.utc = function(e) {
+                }, bn.utc = function(e) {
                     return this.utcOffset(0, e)
-                }, va.local = function(e) {
+                }, bn.local = function(e) {
                     return this._isUTC && (this.utcOffset(0, e), this._isUTC = !1, e && this.subtract(xe(this), "m")), this
-                }, va.parseZone = function() {
+                }, bn.parseZone = function() {
                     if (null != this._tzm) this.utcOffset(this._tzm, !1, !0);
                     else if ("string" == typeof this._i) {
                         var e = ke(bt, this._i);
                         null != e ? this.utcOffset(e) : this.utcOffset(0, !0)
                     }
                     return this
-                }, va.hasAlignedHourOffset = function(e) {
+                }, bn.hasAlignedHourOffset = function(e) {
                     return !!this.isValid() && (e = e ? Me(e).utcOffset() : 0, (this.utcOffset() - e) % 60 == 0)
-                }, va.isDST = function() {
+                }, bn.isDST = function() {
                     return this.utcOffset() > this.clone().month(0).utcOffset() || this.utcOffset() > this.clone().month(5).utcOffset()
-                }, va.isLocal = function() {
+                }, bn.isLocal = function() {
                     return !!this.isValid() && !this._isUTC
-                }, va.isUtcOffset = function() {
+                }, bn.isUtcOffset = function() {
                     return !!this.isValid() && this._isUTC
-                }, va.isUtc = Te, va.isUTC = Te, va.zoneAbbr = function() {
+                }, bn.isUtc = Te, bn.isUTC = Te, bn.zoneAbbr = function() {
                     return this._isUTC ? "UTC" : ""
-                }, va.zoneName = function() {
+                }, bn.zoneName = function() {
                     return this._isUTC ? "Coordinated Universal Time" : ""
-                }, va.dates = L("dates accessor is deprecated. Use date instead.", fa), va.months = L("months accessor is deprecated. Use month instead", G), va.years = L("years accessor is deprecated. Use year instead", Nt), va.zone = L("moment().zone is deprecated, use moment().utcOffset instead. http://momentjs.com/guides/#/warnings/zone/", function(e, t) {
+                }, bn.dates = L("dates accessor is deprecated. Use date instead.", pn), bn.months = L("months accessor is deprecated. Use month instead", G), bn.years = L("years accessor is deprecated. Use year instead", Nt), bn.zone = L("moment().zone is deprecated, use moment().utcOffset instead. http://momentjs.com/guides/#/warnings/zone/", function(e, t) {
                     return null != e ? ("string" != typeof e && (e = -e), this.utcOffset(e, t), this) : -this.utcOffset()
-                }), va.isDSTShifted = L("isDSTShifted is deprecated. See http://momentjs.com/guides/#/warnings/dst-shifted/ for more information", function() {
+                }), bn.isDSTShifted = L("isDSTShifted is deprecated. See http://momentjs.com/guides/#/warnings/dst-shifted/ for more information", function() {
                     if (!i(this._isDSTShifted)) return this._isDSTShifted;
                     var e = {};
                     if (f(e, this), (e = ge(e))._a) {
@@ -8874,87 +8896,87 @@ webpackJsonp([35], {
                     } else this._isDSTShifted = !1;
                     return this._isDSTShifted
                 });
-                var ba = w.prototype;
-                ba.calendar = function(e, t, a) {
-                    var n = this._calendar[e] || this._calendar.sameElse;
-                    return D(n) ? n.call(t, a) : n
-                }, ba.longDateFormat = function(e) {
+                var Ln = w.prototype;
+                Ln.calendar = function(e, t, n) {
+                    var a = this._calendar[e] || this._calendar.sameElse;
+                    return D(a) ? a.call(t, n) : a
+                }, Ln.longDateFormat = function(e) {
                     var t = this._longDateFormat[e],
-                        a = this._longDateFormat[e.toUpperCase()];
-                    return t || !a ? t : (this._longDateFormat[e] = a.replace(/MMMM|MM|DD|dddd/g, function(e) {
+                        n = this._longDateFormat[e.toUpperCase()];
+                    return t || !n ? t : (this._longDateFormat[e] = n.replace(/MMMM|MM|DD|dddd/g, function(e) {
                         return e.slice(1)
                     }), this._longDateFormat[e])
-                }, ba.invalidDate = function() {
+                }, Ln.invalidDate = function() {
                     return this._invalidDate
-                }, ba.ordinal = function(e) {
+                }, Ln.ordinal = function(e) {
                     return this._ordinal.replace("%d", e)
-                }, ba.preparse = Ie, ba.postformat = Ie, ba.relativeTime = function(e, t, a, n) {
-                    var r = this._relativeTime[a];
-                    return D(r) ? r(e, t, a, n) : r.replace(/%d/i, e)
-                }, ba.pastFuture = function(e, t) {
-                    var a = this._relativeTime[e > 0 ? "future" : "past"];
-                    return D(a) ? a(t) : a.replace(/%s/i, t)
-                }, ba.set = function(e) {
-                    var t, a;
-                    for (a in e) D(t = e[a]) ? this[a] = t : this["_" + a] = t;
+                }, Ln.preparse = Ie, Ln.postformat = Ie, Ln.relativeTime = function(e, t, n, a) {
+                    var r = this._relativeTime[n];
+                    return D(r) ? r(e, t, n, a) : r.replace(/%d/i, e)
+                }, Ln.pastFuture = function(e, t) {
+                    var n = this._relativeTime[e > 0 ? "future" : "past"];
+                    return D(n) ? n(t) : n.replace(/%s/i, t)
+                }, Ln.set = function(e) {
+                    var t, n;
+                    for (n in e) D(t = e[n]) ? this[n] = t : this["_" + n] = t;
                     this._config = e, this._dayOfMonthOrdinalParseLenient = new RegExp((this._dayOfMonthOrdinalParse.source || this._ordinalParse.source) + "|" + /\d{1,2}/.source)
-                }, ba.months = function(e, t) {
-                    return e ? n(this._months) ? this._months[e.month()] : this._months[(this._months.isFormat || Ft).test(t) ? "format" : "standalone"][e.month()] : n(this._months) ? this._months : this._months.standalone
-                }, ba.monthsShort = function(e, t) {
-                    return e ? n(this._monthsShort) ? this._monthsShort[e.month()] : this._monthsShort[Ft.test(t) ? "format" : "standalone"][e.month()] : n(this._monthsShort) ? this._monthsShort : this._monthsShort.standalone
-                }, ba.monthsParse = function(e, t, a) {
-                    var n, r, i;
-                    if (this._monthsParseExact) return function(e, t, a) {
-                        var n, r, i, s = e.toLocaleLowerCase();
+                }, Ln.months = function(e, t) {
+                    return e ? a(this._months) ? this._months[e.month()] : this._months[(this._months.isFormat || Ft).test(t) ? "format" : "standalone"][e.month()] : a(this._months) ? this._months : this._months.standalone
+                }, Ln.monthsShort = function(e, t) {
+                    return e ? a(this._monthsShort) ? this._monthsShort[e.month()] : this._monthsShort[Ft.test(t) ? "format" : "standalone"][e.month()] : a(this._monthsShort) ? this._monthsShort : this._monthsShort.standalone
+                }, Ln.monthsParse = function(e, t, n) {
+                    var a, r, i;
+                    if (this._monthsParseExact) return function(e, t, n) {
+                        var a, r, i, s = e.toLocaleLowerCase();
                         if (!this._monthsParse)
-                            for (this._monthsParse = [], this._longMonthsParse = [], this._shortMonthsParse = [], n = 0; n < 12; ++n) i = c([2e3, n]), this._shortMonthsParse[n] = this.monthsShort(i, "").toLocaleLowerCase(), this._longMonthsParse[n] = this.months(i, "").toLocaleLowerCase();
-                        return a ? "MMM" === t ? -1 !== (r = At.call(this._shortMonthsParse, s)) ? r : null : -1 !== (r = At.call(this._longMonthsParse, s)) ? r : null : "MMM" === t ? -1 !== (r = At.call(this._shortMonthsParse, s)) ? r : -1 !== (r = At.call(this._longMonthsParse, s)) ? r : null : -1 !== (r = At.call(this._longMonthsParse, s)) ? r : -1 !== (r = At.call(this._shortMonthsParse, s)) ? r : null
-                    }.call(this, e, t, a);
-                    for (this._monthsParse || (this._monthsParse = [], this._longMonthsParse = [], this._shortMonthsParse = []), n = 0; n < 12; n++) {
-                        if (r = c([2e3, n]), a && !this._longMonthsParse[n] && (this._longMonthsParse[n] = new RegExp("^" + this.months(r, "").replace(".", "") + "$", "i"), this._shortMonthsParse[n] = new RegExp("^" + this.monthsShort(r, "").replace(".", "") + "$", "i")), a || this._monthsParse[n] || (i = "^" + this.months(r, "") + "|^" + this.monthsShort(r, ""), this._monthsParse[n] = new RegExp(i.replace(".", ""), "i")), a && "MMMM" === t && this._longMonthsParse[n].test(e)) return n;
-                        if (a && "MMM" === t && this._shortMonthsParse[n].test(e)) return n;
-                        if (!a && this._monthsParse[n].test(e)) return n
+                            for (this._monthsParse = [], this._longMonthsParse = [], this._shortMonthsParse = [], a = 0; a < 12; ++a) i = c([2e3, a]), this._shortMonthsParse[a] = this.monthsShort(i, "").toLocaleLowerCase(), this._longMonthsParse[a] = this.months(i, "").toLocaleLowerCase();
+                        return n ? "MMM" === t ? -1 !== (r = At.call(this._shortMonthsParse, s)) ? r : null : -1 !== (r = At.call(this._longMonthsParse, s)) ? r : null : "MMM" === t ? -1 !== (r = At.call(this._shortMonthsParse, s)) ? r : -1 !== (r = At.call(this._longMonthsParse, s)) ? r : null : -1 !== (r = At.call(this._longMonthsParse, s)) ? r : -1 !== (r = At.call(this._shortMonthsParse, s)) ? r : null
+                    }.call(this, e, t, n);
+                    for (this._monthsParse || (this._monthsParse = [], this._longMonthsParse = [], this._shortMonthsParse = []), a = 0; a < 12; a++) {
+                        if (r = c([2e3, a]), n && !this._longMonthsParse[a] && (this._longMonthsParse[a] = new RegExp("^" + this.months(r, "").replace(".", "") + "$", "i"), this._shortMonthsParse[a] = new RegExp("^" + this.monthsShort(r, "").replace(".", "") + "$", "i")), n || this._monthsParse[a] || (i = "^" + this.months(r, "") + "|^" + this.monthsShort(r, ""), this._monthsParse[a] = new RegExp(i.replace(".", ""), "i")), n && "MMMM" === t && this._longMonthsParse[a].test(e)) return a;
+                        if (n && "MMM" === t && this._shortMonthsParse[a].test(e)) return a;
+                        if (!n && this._monthsParse[a].test(e)) return a
                     }
-                }, ba.monthsRegex = function(e) {
+                }, Ln.monthsRegex = function(e) {
                     return this._monthsParseExact ? (u(this, "_monthsRegex") || Z.call(this), e ? this._monthsStrictRegex : this._monthsRegex) : (u(this, "_monthsRegex") || (this._monthsRegex = zt), this._monthsStrictRegex && e ? this._monthsStrictRegex : this._monthsRegex)
-                }, ba.monthsShortRegex = function(e) {
+                }, Ln.monthsShortRegex = function(e) {
                     return this._monthsParseExact ? (u(this, "_monthsRegex") || Z.call(this), e ? this._monthsShortStrictRegex : this._monthsShortRegex) : (u(this, "_monthsShortRegex") || (this._monthsShortRegex = It), this._monthsShortStrictRegex && e ? this._monthsShortStrictRegex : this._monthsShortRegex)
-                }, ba.week = function(e) {
+                }, Ln.week = function(e) {
                     return ee(e, this._week.dow, this._week.doy).week
-                }, ba.firstDayOfYear = function() {
+                }, Ln.firstDayOfYear = function() {
                     return this._week.doy
-                }, ba.firstDayOfWeek = function() {
+                }, Ln.firstDayOfWeek = function() {
                     return this._week.dow
-                }, ba.weekdays = function(e, t) {
-                    return e ? n(this._weekdays) ? this._weekdays[e.day()] : this._weekdays[this._weekdays.isFormat.test(t) ? "format" : "standalone"][e.day()] : n(this._weekdays) ? this._weekdays : this._weekdays.standalone
-                }, ba.weekdaysMin = function(e) {
+                }, Ln.weekdays = function(e, t) {
+                    return e ? a(this._weekdays) ? this._weekdays[e.day()] : this._weekdays[this._weekdays.isFormat.test(t) ? "format" : "standalone"][e.day()] : a(this._weekdays) ? this._weekdays : this._weekdays.standalone
+                }, Ln.weekdaysMin = function(e) {
                     return e ? this._weekdaysMin[e.day()] : this._weekdaysMin
-                }, ba.weekdaysShort = function(e) {
+                }, Ln.weekdaysShort = function(e) {
                     return e ? this._weekdaysShort[e.day()] : this._weekdaysShort
-                }, ba.weekdaysParse = function(e, t, a) {
-                    var n, r, i;
-                    if (this._weekdaysParseExact) return function(e, t, a) {
-                        var n, r, i, s = e.toLocaleLowerCase();
+                }, Ln.weekdaysParse = function(e, t, n) {
+                    var a, r, i;
+                    if (this._weekdaysParseExact) return function(e, t, n) {
+                        var a, r, i, s = e.toLocaleLowerCase();
                         if (!this._weekdaysParse)
-                            for (this._weekdaysParse = [], this._shortWeekdaysParse = [], this._minWeekdaysParse = [], n = 0; n < 7; ++n) i = c([2e3, 1]).day(n), this._minWeekdaysParse[n] = this.weekdaysMin(i, "").toLocaleLowerCase(), this._shortWeekdaysParse[n] = this.weekdaysShort(i, "").toLocaleLowerCase(), this._weekdaysParse[n] = this.weekdays(i, "").toLocaleLowerCase();
-                        return a ? "dddd" === t ? -1 !== (r = At.call(this._weekdaysParse, s)) ? r : null : "ddd" === t ? -1 !== (r = At.call(this._shortWeekdaysParse, s)) ? r : null : -1 !== (r = At.call(this._minWeekdaysParse, s)) ? r : null : "dddd" === t ? -1 !== (r = At.call(this._weekdaysParse, s)) ? r : -1 !== (r = At.call(this._shortWeekdaysParse, s)) ? r : -1 !== (r = At.call(this._minWeekdaysParse, s)) ? r : null : "ddd" === t ? -1 !== (r = At.call(this._shortWeekdaysParse, s)) ? r : -1 !== (r = At.call(this._weekdaysParse, s)) ? r : -1 !== (r = At.call(this._minWeekdaysParse, s)) ? r : null : -1 !== (r = At.call(this._minWeekdaysParse, s)) ? r : -1 !== (r = At.call(this._weekdaysParse, s)) ? r : -1 !== (r = At.call(this._shortWeekdaysParse, s)) ? r : null
-                    }.call(this, e, t, a);
-                    for (this._weekdaysParse || (this._weekdaysParse = [], this._minWeekdaysParse = [], this._shortWeekdaysParse = [], this._fullWeekdaysParse = []), n = 0; n < 7; n++) {
-                        if (r = c([2e3, 1]).day(n), a && !this._fullWeekdaysParse[n] && (this._fullWeekdaysParse[n] = new RegExp("^" + this.weekdays(r, "").replace(".", ".?") + "$", "i"), this._shortWeekdaysParse[n] = new RegExp("^" + this.weekdaysShort(r, "").replace(".", ".?") + "$", "i"), this._minWeekdaysParse[n] = new RegExp("^" + this.weekdaysMin(r, "").replace(".", ".?") + "$", "i")), this._weekdaysParse[n] || (i = "^" + this.weekdays(r, "") + "|^" + this.weekdaysShort(r, "") + "|^" + this.weekdaysMin(r, ""), this._weekdaysParse[n] = new RegExp(i.replace(".", ""), "i")), a && "dddd" === t && this._fullWeekdaysParse[n].test(e)) return n;
-                        if (a && "ddd" === t && this._shortWeekdaysParse[n].test(e)) return n;
-                        if (a && "dd" === t && this._minWeekdaysParse[n].test(e)) return n;
-                        if (!a && this._weekdaysParse[n].test(e)) return n
+                            for (this._weekdaysParse = [], this._shortWeekdaysParse = [], this._minWeekdaysParse = [], a = 0; a < 7; ++a) i = c([2e3, 1]).day(a), this._minWeekdaysParse[a] = this.weekdaysMin(i, "").toLocaleLowerCase(), this._shortWeekdaysParse[a] = this.weekdaysShort(i, "").toLocaleLowerCase(), this._weekdaysParse[a] = this.weekdays(i, "").toLocaleLowerCase();
+                        return n ? "dddd" === t ? -1 !== (r = At.call(this._weekdaysParse, s)) ? r : null : "ddd" === t ? -1 !== (r = At.call(this._shortWeekdaysParse, s)) ? r : null : -1 !== (r = At.call(this._minWeekdaysParse, s)) ? r : null : "dddd" === t ? -1 !== (r = At.call(this._weekdaysParse, s)) ? r : -1 !== (r = At.call(this._shortWeekdaysParse, s)) ? r : -1 !== (r = At.call(this._minWeekdaysParse, s)) ? r : null : "ddd" === t ? -1 !== (r = At.call(this._shortWeekdaysParse, s)) ? r : -1 !== (r = At.call(this._weekdaysParse, s)) ? r : -1 !== (r = At.call(this._minWeekdaysParse, s)) ? r : null : -1 !== (r = At.call(this._minWeekdaysParse, s)) ? r : -1 !== (r = At.call(this._weekdaysParse, s)) ? r : -1 !== (r = At.call(this._shortWeekdaysParse, s)) ? r : null
+                    }.call(this, e, t, n);
+                    for (this._weekdaysParse || (this._weekdaysParse = [], this._minWeekdaysParse = [], this._shortWeekdaysParse = [], this._fullWeekdaysParse = []), a = 0; a < 7; a++) {
+                        if (r = c([2e3, 1]).day(a), n && !this._fullWeekdaysParse[a] && (this._fullWeekdaysParse[a] = new RegExp("^" + this.weekdays(r, "").replace(".", ".?") + "$", "i"), this._shortWeekdaysParse[a] = new RegExp("^" + this.weekdaysShort(r, "").replace(".", ".?") + "$", "i"), this._minWeekdaysParse[a] = new RegExp("^" + this.weekdaysMin(r, "").replace(".", ".?") + "$", "i")), this._weekdaysParse[a] || (i = "^" + this.weekdays(r, "") + "|^" + this.weekdaysShort(r, "") + "|^" + this.weekdaysMin(r, ""), this._weekdaysParse[a] = new RegExp(i.replace(".", ""), "i")), n && "dddd" === t && this._fullWeekdaysParse[a].test(e)) return a;
+                        if (n && "ddd" === t && this._shortWeekdaysParse[a].test(e)) return a;
+                        if (n && "dd" === t && this._minWeekdaysParse[a].test(e)) return a;
+                        if (!n && this._weekdaysParse[a].test(e)) return a
                     }
-                }, ba.weekdaysRegex = function(e) {
-                    return this._weekdaysParseExact ? (u(this, "_weekdaysRegex") || ae.call(this), e ? this._weekdaysStrictRegex : this._weekdaysRegex) : (u(this, "_weekdaysRegex") || (this._weekdaysRegex = Vt), this._weekdaysStrictRegex && e ? this._weekdaysStrictRegex : this._weekdaysRegex)
-                }, ba.weekdaysShortRegex = function(e) {
-                    return this._weekdaysParseExact ? (u(this, "_weekdaysRegex") || ae.call(this), e ? this._weekdaysShortStrictRegex : this._weekdaysShortRegex) : (u(this, "_weekdaysShortRegex") || (this._weekdaysShortRegex = Ut), this._weekdaysShortStrictRegex && e ? this._weekdaysShortStrictRegex : this._weekdaysShortRegex)
-                }, ba.weekdaysMinRegex = function(e) {
-                    return this._weekdaysParseExact ? (u(this, "_weekdaysRegex") || ae.call(this), e ? this._weekdaysMinStrictRegex : this._weekdaysMinRegex) : (u(this, "_weekdaysMinRegex") || (this._weekdaysMinRegex = Gt), this._weekdaysMinStrictRegex && e ? this._weekdaysMinStrictRegex : this._weekdaysMinRegex)
-                }, ba.isPM = function(e) {
+                }, Ln.weekdaysRegex = function(e) {
+                    return this._weekdaysParseExact ? (u(this, "_weekdaysRegex") || ne.call(this), e ? this._weekdaysStrictRegex : this._weekdaysRegex) : (u(this, "_weekdaysRegex") || (this._weekdaysRegex = Vt), this._weekdaysStrictRegex && e ? this._weekdaysStrictRegex : this._weekdaysRegex)
+                }, Ln.weekdaysShortRegex = function(e) {
+                    return this._weekdaysParseExact ? (u(this, "_weekdaysRegex") || ne.call(this), e ? this._weekdaysShortStrictRegex : this._weekdaysShortRegex) : (u(this, "_weekdaysShortRegex") || (this._weekdaysShortRegex = Ut), this._weekdaysShortStrictRegex && e ? this._weekdaysShortStrictRegex : this._weekdaysShortRegex)
+                }, Ln.weekdaysMinRegex = function(e) {
+                    return this._weekdaysParseExact ? (u(this, "_weekdaysRegex") || ne.call(this), e ? this._weekdaysMinStrictRegex : this._weekdaysMinRegex) : (u(this, "_weekdaysMinRegex") || (this._weekdaysMinRegex = Gt), this._weekdaysMinStrictRegex && e ? this._weekdaysMinStrictRegex : this._weekdaysMinRegex)
+                }, Ln.isPM = function(e) {
                     return "p" === (e + "").toLowerCase().charAt(0)
-                }, ba.meridiem = function(e, t, a) {
-                    return e > 11 ? a ? "pm" : "PM" : a ? "am" : "AM"
+                }, Ln.meridiem = function(e, t, n) {
+                    return e > 11 ? n ? "pm" : "PM" : n ? "am" : "AM"
                 }, de("en", {
                     dayOfMonthOrdinalParse: /\d{1,2}(th|st|nd|rd)/,
                     ordinal: function(e) {
@@ -8962,24 +8984,24 @@ webpackJsonp([35], {
                         return e + (1 === M(e % 100 / 10) ? "th" : 1 === t ? "st" : 2 === t ? "nd" : 3 === t ? "rd" : "th")
                     }
                 }), t.lang = L("moment.lang is deprecated. Use moment.locale instead.", de), t.langData = L("moment.langData is deprecated. Use moment.localeData instead.", le);
-                var La = Math.abs,
-                    Ya = Ge("ms"),
-                    Da = Ge("s"),
-                    ka = Ge("m"),
-                    wa = Ge("h"),
-                    xa = Ge("d"),
-                    Ta = Ge("w"),
-                    Sa = Ge("M"),
-                    Oa = Ge("y"),
-                    ja = Ze("milliseconds"),
-                    Ha = Ze("seconds"),
-                    Pa = Ze("minutes"),
-                    Ca = Ze("hours"),
-                    Aa = Ze("days"),
-                    Fa = Ze("months"),
-                    Wa = Ze("years"),
-                    Ea = Math.round,
-                    Ia = {
+                var Yn = Math.abs,
+                    Dn = Ge("ms"),
+                    kn = Ge("s"),
+                    wn = Ge("m"),
+                    xn = Ge("h"),
+                    Tn = Ge("d"),
+                    Sn = Ge("w"),
+                    On = Ge("M"),
+                    jn = Ge("y"),
+                    Hn = Ze("milliseconds"),
+                    Pn = Ze("seconds"),
+                    Cn = Ze("minutes"),
+                    An = Ze("hours"),
+                    Fn = Ze("days"),
+                    Wn = Ze("months"),
+                    En = Ze("years"),
+                    In = Math.round,
+                    zn = {
                         ss: 44,
                         s: 45,
                         m: 45,
@@ -8987,75 +9009,75 @@ webpackJsonp([35], {
                         d: 26,
                         M: 11
                     },
-                    za = Math.abs,
-                    Na = be.prototype;
-                return Na.isValid = function() {
+                    Nn = Math.abs,
+                    Rn = be.prototype;
+                return Rn.isValid = function() {
                         return this._isValid
-                    }, Na.abs = function() {
+                    }, Rn.abs = function() {
                         var e = this._data;
-                        return this._milliseconds = La(this._milliseconds), this._days = La(this._days), this._months = La(this._months), e.milliseconds = La(e.milliseconds), e.seconds = La(e.seconds), e.minutes = La(e.minutes), e.hours = La(e.hours), e.months = La(e.months), e.years = La(e.years), this
-                    }, Na.add = function(e, t) {
+                        return this._milliseconds = Yn(this._milliseconds), this._days = Yn(this._days), this._months = Yn(this._months), e.milliseconds = Yn(e.milliseconds), e.seconds = Yn(e.seconds), e.minutes = Yn(e.minutes), e.hours = Yn(e.hours), e.months = Yn(e.months), e.years = Yn(e.years), this
+                    }, Rn.add = function(e, t) {
                         return Be(this, e, t, 1)
-                    }, Na.subtract = function(e, t) {
+                    }, Rn.subtract = function(e, t) {
                         return Be(this, e, t, -1)
-                    }, Na.as = function(e) {
+                    }, Rn.as = function(e) {
                         if (!this.isValid()) return NaN;
-                        var t, a, n = this._milliseconds;
-                        if ("month" === (e = T(e)) || "year" === e) return t = this._days + n / 864e5, a = this._months + Ve(t), "month" === e ? a : a / 12;
+                        var t, n, a = this._milliseconds;
+                        if ("month" === (e = T(e)) || "year" === e) return t = this._days + a / 864e5, n = this._months + Ve(t), "month" === e ? n : n / 12;
                         switch (t = this._days + Math.round(Ue(this._months)), e) {
                             case "week":
-                                return t / 7 + n / 6048e5;
+                                return t / 7 + a / 6048e5;
                             case "day":
-                                return t + n / 864e5;
+                                return t + a / 864e5;
                             case "hour":
-                                return 24 * t + n / 36e5;
+                                return 24 * t + a / 36e5;
                             case "minute":
-                                return 1440 * t + n / 6e4;
+                                return 1440 * t + a / 6e4;
                             case "second":
-                                return 86400 * t + n / 1e3;
+                                return 86400 * t + a / 1e3;
                             case "millisecond":
-                                return Math.floor(864e5 * t) + n;
+                                return Math.floor(864e5 * t) + a;
                             default:
                                 throw new Error("Unknown unit " + e)
                         }
-                    }, Na.asMilliseconds = Ya, Na.asSeconds = Da, Na.asMinutes = ka, Na.asHours = wa, Na.asDays = xa, Na.asWeeks = Ta, Na.asMonths = Sa, Na.asYears = Oa, Na.valueOf = function() {
+                    }, Rn.asMilliseconds = Dn, Rn.asSeconds = kn, Rn.asMinutes = wn, Rn.asHours = xn, Rn.asDays = Tn, Rn.asWeeks = Sn, Rn.asMonths = On, Rn.asYears = jn, Rn.valueOf = function() {
                         return this.isValid() ? this._milliseconds + 864e5 * this._days + this._months % 12 * 2592e6 + 31536e6 * M(this._months / 12) : NaN
-                    }, Na._bubble = function() {
-                        var e, t, a, n, r, i = this._milliseconds,
+                    }, Rn._bubble = function() {
+                        var e, t, n, a, r, i = this._milliseconds,
                             s = this._days,
                             o = this._months,
                             d = this._data;
-                        return i >= 0 && s >= 0 && o >= 0 || i <= 0 && s <= 0 && o <= 0 || (i += 864e5 * Je(Ue(o) + s), s = 0, o = 0), d.milliseconds = i % 1e3, e = y(i / 1e3), d.seconds = e % 60, t = y(e / 60), d.minutes = t % 60, a = y(t / 60), d.hours = a % 24, s += y(a / 24), r = y(Ve(s)), o += r, s -= Je(Ue(r)), n = y(o / 12), o %= 12, d.days = s, d.months = o, d.years = n, this
-                    }, Na.get = function(e) {
+                        return i >= 0 && s >= 0 && o >= 0 || i <= 0 && s <= 0 && o <= 0 || (i += 864e5 * Je(Ue(o) + s), s = 0, o = 0), d.milliseconds = i % 1e3, e = y(i / 1e3), d.seconds = e % 60, t = y(e / 60), d.minutes = t % 60, n = y(t / 60), d.hours = n % 24, s += y(n / 24), r = y(Ve(s)), o += r, s -= Je(Ue(r)), a = y(o / 12), o %= 12, d.days = s, d.months = o, d.years = a, this
+                    }, Rn.get = function(e) {
                         return e = T(e), this.isValid() ? this[e + "s"]() : NaN
-                    }, Na.milliseconds = ja, Na.seconds = Ha, Na.minutes = Pa, Na.hours = Ca, Na.days = Aa, Na.weeks = function() {
+                    }, Rn.milliseconds = Hn, Rn.seconds = Pn, Rn.minutes = Cn, Rn.hours = An, Rn.days = Fn, Rn.weeks = function() {
                         return y(this.days() / 7)
-                    }, Na.months = Fa, Na.years = Wa, Na.humanize = function(e) {
+                    }, Rn.months = Wn, Rn.years = En, Rn.humanize = function(e) {
                         if (!this.isValid()) return this.localeData().invalidDate();
                         var t = this.localeData(),
-                            a = function(e, t, a) {
-                                var n = Se(e).abs(),
-                                    r = Ea(n.as("s")),
-                                    i = Ea(n.as("m")),
-                                    s = Ea(n.as("h")),
-                                    o = Ea(n.as("d")),
-                                    d = Ea(n.as("M")),
-                                    u = Ea(n.as("y")),
-                                    l = r <= Ia.ss && ["s", r] || r < Ia.s && ["ss", r] || i <= 1 && ["m"] || i < Ia.m && ["mm", i] || s <= 1 && ["h"] || s < Ia.h && ["hh", s] || o <= 1 && ["d"] || o < Ia.d && ["dd", o] || d <= 1 && ["M"] || d < Ia.M && ["MM", d] || u <= 1 && ["y"] || ["yy", u];
-                                return l[2] = t, l[3] = +e > 0, l[4] = a,
-                                    function(e, t, a, n, r) {
-                                        return r.relativeTime(t || 1, !!a, e, n)
+                            n = function(e, t, n) {
+                                var a = Se(e).abs(),
+                                    r = In(a.as("s")),
+                                    i = In(a.as("m")),
+                                    s = In(a.as("h")),
+                                    o = In(a.as("d")),
+                                    d = In(a.as("M")),
+                                    u = In(a.as("y")),
+                                    l = r <= zn.ss && ["s", r] || r < zn.s && ["ss", r] || i <= 1 && ["m"] || i < zn.m && ["mm", i] || s <= 1 && ["h"] || s < zn.h && ["hh", s] || o <= 1 && ["d"] || o < zn.d && ["dd", o] || d <= 1 && ["M"] || d < zn.M && ["MM", d] || u <= 1 && ["y"] || ["yy", u];
+                                return l[2] = t, l[3] = +e > 0, l[4] = n,
+                                    function(e, t, n, a, r) {
+                                        return r.relativeTime(t || 1, !!n, e, a)
                                     }.apply(null, l)
                             }(this, !e, t);
-                        return e && (a = t.pastFuture(+this, a)), t.postformat(a)
-                    }, Na.toISOString = qe, Na.toString = qe, Na.toJSON = qe, Na.locale = Ce, Na.localeData = Ae, Na.toIsoString = L("toIsoString() is deprecated. Please use toISOString() instead (notice the capitals)", qe), Na.lang = _a, A("X", 0, 0, "unix"), A("x", 0, 0, "valueOf"), I("x", vt), I("X", /[+-]?\d+(\.\d{1,3})?/), R("X", function(e, t, a) {
-                        a._d = new Date(1e3 * parseFloat(e, 10))
-                    }), R("x", function(e, t, a) {
-                        a._d = new Date(M(e))
+                        return e && (n = t.pastFuture(+this, n)), t.postformat(n)
+                    }, Rn.toISOString = qe, Rn.toString = qe, Rn.toJSON = qe, Rn.locale = Ce, Rn.localeData = Ae, Rn.toIsoString = L("toIsoString() is deprecated. Please use toISOString() instead (notice the capitals)", qe), Rn.lang = fn, A("X", 0, 0, "unix"), A("x", 0, 0, "valueOf"), I("x", vt), I("X", /[+-]?\d+(\.\d{1,3})?/), R("X", function(e, t, n) {
+                        n._d = new Date(1e3 * parseFloat(e, 10))
+                    }), R("x", function(e, t, n) {
+                        n._d = new Date(M(e))
                     }), t.version = "2.18.1",
                     function(e) {
                         Ke = e
-                    }(Me), t.fn = va, t.min = function() {
+                    }(Me), t.fn = bn, t.min = function() {
                         return ve("isBefore", [].slice.call(arguments, 0))
                     }, t.max = function() {
                         return ve("isAfter", [].slice.call(arguments, 0))
@@ -9065,34 +9087,34 @@ webpackJsonp([35], {
                         return Me(1e3 * e)
                     }, t.months = function(e, t) {
                         return Ne(e, t, "months")
-                    }, t.isDate = o, t.locale = de, t.invalid = _, t.duration = Se, t.isMoment = g, t.weekdays = function(e, t, a) {
-                        return Re(e, t, a, "weekdays")
+                    }, t.isDate = o, t.locale = de, t.invalid = _, t.duration = Se, t.isMoment = g, t.weekdays = function(e, t, n) {
+                        return Re(e, t, n, "weekdays")
                     }, t.parseZone = function() {
                         return Me.apply(null, arguments).parseZone()
                     }, t.localeData = le, t.isDuration = Le, t.monthsShort = function(e, t) {
                         return Ne(e, t, "monthsShort")
-                    }, t.weekdaysMin = function(e, t, a) {
-                        return Re(e, t, a, "weekdaysMin")
+                    }, t.weekdaysMin = function(e, t, n) {
+                        return Re(e, t, n, "weekdaysMin")
                     }, t.defineLocale = ue, t.updateLocale = function(e, t) {
                         if (null != t) {
-                            var a, n = Kt;
-                            null != Xt[e] && (n = Xt[e]._config), (a = new w(t = k(n, t))).parentLocale = Xt[e], Xt[e] = a, de(e)
+                            var n, a = Kt;
+                            null != Xt[e] && (a = Xt[e]._config), (n = new w(t = k(a, t))).parentLocale = Xt[e], Xt[e] = n, de(e)
                         } else null != Xt[e] && (null != Xt[e].parentLocale ? Xt[e] = Xt[e].parentLocale : null != Xt[e] && delete Xt[e]);
                         return Xt[e]
                     }, t.locales = function() {
                         return tt(Xt)
-                    }, t.weekdaysShort = function(e, t, a) {
-                        return Re(e, t, a, "weekdaysShort")
+                    }, t.weekdaysShort = function(e, t, n) {
+                        return Re(e, t, n, "weekdaysShort")
                     }, t.normalizeUnits = T, t.relativeTimeRounding = function(e) {
-                        return void 0 === e ? Ea : "function" == typeof e && (Ea = e, !0)
+                        return void 0 === e ? In : "function" == typeof e && (In = e, !0)
                     }, t.relativeTimeThreshold = function(e, t) {
-                        return void 0 !== Ia[e] && (void 0 === t ? Ia[e] : (Ia[e] = t, "s" === e && (Ia.ss = t - 1), !0))
+                        return void 0 !== zn[e] && (void 0 === t ? zn[e] : (zn[e] = t, "s" === e && (zn.ss = t - 1), !0))
                     }, t.calendarFormat = function(e, t) {
-                        var a = e.diff(t, "days", !0);
-                        return a < -6 ? "sameElse" : a < -1 ? "lastWeek" : a < 0 ? "lastDay" : a < 1 ? "sameDay" : a < 2 ? "nextDay" : a < 7 ? "nextWeek" : "sameElse"
-                    }, t.prototype = va, t
+                        var n = e.diff(t, "days", !0);
+                        return n < -6 ? "sameElse" : n < -1 ? "lastWeek" : n < 0 ? "lastDay" : n < 1 ? "sameDay" : n < 2 ? "nextDay" : n < 7 ? "nextWeek" : "sameElse"
+                    }, t.prototype = bn, t
             })
-        }).call(t, a("3IRH")(e))
+        }).call(t, n("3IRH")(e))
     },
     Ptqd: function(e, t) {
         e.exports = function() {
@@ -9152,32 +9174,32 @@ webpackJsonp([35], {
                 }
             };
             return {
-                localize: function(t, a, n) {
-                    n = n || {};
+                localize: function(t, n, a) {
+                    a = a || {};
                     var r;
-                    return r = "string" == typeof e[t] ? e[t] : 1 === a ? e[t].one : e[t].other.replace("{{count}}", a), n.addSuffix ? n.comparison > 0 ? "in " + r : r + " ago" : r
+                    return r = "string" == typeof e[t] ? e[t] : 1 === n ? e[t].one : e[t].other.replace("{{count}}", n), a.addSuffix ? a.comparison > 0 ? "in " + r : r + " ago" : r
                 }
             }
         }
     },
-    Q2rx: function(e, t, a) {
-        var n = a("u/4p"),
+    Q2rx: function(e, t, n) {
+        var a = n("u/4p"),
             r = 6e4,
             i = 6048e5;
-        e.exports = function(e, t, a) {
-            var s = n(e, a),
-                o = n(t, a),
+        e.exports = function(e, t, n) {
+            var s = a(e, n),
+                o = a(t, n),
                 d = s.getTime() - s.getTimezoneOffset() * r,
                 u = o.getTime() - o.getTimezoneOffset() * r;
             return Math.round((d - u) / i)
         }
     },
-    QV34: function(e, t, a) {
+    QV34: function(e, t, n) {
         "use strict";
-        var n = a("iO9N"),
-            r = a("IbXy");
+        var a = n("iO9N"),
+            r = n("IbXy");
         e.exports = function(e) {
-            var t = n.noop;
+            var t = a.noop;
             e.LinearScaleBase = e.Scale.extend({
                 getRightValue: function(t) {
                     return "string" == typeof t ? +t : e.Scale.prototype.getRightValue.call(this, t)
@@ -9185,9 +9207,9 @@ webpackJsonp([35], {
                 handleTickRangeOptions: function() {
                     var e = this.options.ticks;
                     if (e.beginAtZero) {
-                        var t = n.sign(this.min),
-                            a = n.sign(this.max);
-                        t < 0 && a < 0 ? this.max = 0 : t > 0 && a > 0 && (this.min = 0)
+                        var t = a.sign(this.min),
+                            n = a.sign(this.max);
+                        t < 0 && n < 0 ? this.max = 0 : t > 0 && n > 0 && (this.min = 0)
                     }
                     var r = void 0 !== e.min || void 0 !== e.suggestedMin,
                         i = void 0 !== e.max || void 0 !== e.suggestedMax;
@@ -9198,14 +9220,14 @@ webpackJsonp([35], {
                 buildTicks: function() {
                     var e = this.options.ticks,
                         t = this.getTickLimit(),
-                        a = {
+                        n = {
                             maxTicks: t = Math.max(2, t),
                             min: e.min,
                             max: e.max,
-                            stepSize: n.valueOrDefault(e.fixedStepSize, e.stepSize)
+                            stepSize: a.valueOrDefault(e.fixedStepSize, e.stepSize)
                         },
-                        i = this.ticks = r.generators.linear(a, this);
-                    this.handleDirectionalChanges(), this.max = n.max(i), this.min = n.min(i), e.reverse ? (i.reverse(), this.start = this.max, this.end = this.min) : (this.start = this.min, this.end = this.max)
+                        i = this.ticks = r.generators.linear(n, this);
+                    this.handleDirectionalChanges(), this.max = a.max(i), this.min = a.min(i), e.reverse ? (i.reverse(), this.start = this.max, this.end = this.min) : (this.start = this.min, this.end = this.max)
                 },
                 convertTicksToLabels: function() {
                     this.ticksAsNumbers = this.ticks.slice(), this.zeroLineIndex = this.ticks.indexOf(0), e.Scale.prototype.convertTicksToLabels.call(this)
@@ -9213,22 +9235,22 @@ webpackJsonp([35], {
             })
         }
     },
-    Qbo9: function(e, t, a) {
-        var n = a("Moxe");
+    Qbo9: function(e, t, n) {
+        var a = n("Moxe");
         e.exports = function(e) {
-            return n(new Date, e)
+            return a(new Date, e)
         }
     },
-    Qor1: function(e, t, a) {
+    Qor1: function(e, t, n) {
         "use strict";
 
-        function n(e) {
+        function a(e) {
             var t = this._view;
             return !!t && Math.pow(e - t.x, 2) < Math.pow(t.radius + t.hitRadius, 2)
         }
-        var r = a("k7DW"),
-            i = a("wGD1"),
-            s = a("iO9N"),
+        var r = n("k7DW"),
+            i = n("wGD1"),
+            s = n("iO9N"),
             o = r.global.defaultColor;
         r._set("global", {
             elements: {
@@ -9245,11 +9267,11 @@ webpackJsonp([35], {
             }
         }), e.exports = i.extend({
             inRange: function(e, t) {
-                var a = this._view;
-                return !!a && Math.pow(e - a.x, 2) + Math.pow(t - a.y, 2) < Math.pow(a.hitRadius + a.radius, 2)
+                var n = this._view;
+                return !!n && Math.pow(e - n.x, 2) + Math.pow(t - n.y, 2) < Math.pow(n.hitRadius + n.radius, 2)
             },
-            inLabelRange: n,
-            inXRange: n,
+            inLabelRange: a,
+            inXRange: a,
             inYRange: function(e) {
                 var t = this._view;
                 return !!t && Math.pow(e - t.y, 2) < Math.pow(t.radius + t.hitRadius, 2)
@@ -9274,29 +9296,29 @@ webpackJsonp([35], {
             },
             draw: function(e) {
                 var t = this._view,
-                    a = this._model,
-                    n = this._chart.ctx,
+                    n = this._model,
+                    a = this._chart.ctx,
                     i = t.pointStyle,
                     d = t.radius,
                     u = t.x,
                     l = t.y,
                     c = s.color,
                     h = 0;
-                t.skip || (n.strokeStyle = t.borderColor || o, n.lineWidth = s.valueOrDefault(t.borderWidth, r.global.elements.point.borderWidth), n.fillStyle = t.backgroundColor || o, void 0 !== e && (a.x < e.left || 1.01 * e.right < a.x || a.y < e.top || 1.01 * e.bottom < a.y) && (a.x < e.left ? h = (u - a.x) / (e.left - a.x) : 1.01 * e.right < a.x ? h = (a.x - u) / (a.x - e.right) : a.y < e.top ? h = (l - a.y) / (e.top - a.y) : 1.01 * e.bottom < a.y && (h = (a.y - l) / (a.y - e.bottom)), h = Math.round(100 * h) / 100, n.strokeStyle = c(n.strokeStyle).alpha(h).rgbString(), n.fillStyle = c(n.fillStyle).alpha(h).rgbString()), s.canvas.drawPoint(n, i, d, u, l))
+                t.skip || (a.strokeStyle = t.borderColor || o, a.lineWidth = s.valueOrDefault(t.borderWidth, r.global.elements.point.borderWidth), a.fillStyle = t.backgroundColor || o, void 0 !== e && (n.x < e.left || 1.01 * e.right < n.x || n.y < e.top || 1.01 * e.bottom < n.y) && (n.x < e.left ? h = (u - n.x) / (e.left - n.x) : 1.01 * e.right < n.x ? h = (n.x - u) / (n.x - e.right) : n.y < e.top ? h = (l - n.y) / (e.top - n.y) : 1.01 * e.bottom < n.y && (h = (n.y - l) / (n.y - e.bottom)), h = Math.round(100 * h) / 100, a.strokeStyle = c(a.strokeStyle).alpha(h).rgbString(), a.fillStyle = c(a.fillStyle).alpha(h).rgbString()), s.canvas.drawPoint(a, i, d, u, l))
             }
         })
     },
-    Qxz6: function(e, t, a) {
-        var n = a("xA5w");
+    Qxz6: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e, t) {
-            var a = n(e),
-                r = n(t);
-            return a.getFullYear() === r.getFullYear()
+            var n = a(e),
+                r = a(t);
+            return n.getFullYear() === r.getFullYear()
         }
     },
-    RnJI: function(e, t, a) {
+    RnJI: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("ka", {
@@ -9358,37 +9380,37 @@ webpackJsonp([35], {
             })
         })
     },
-    SHOI: function(e, t, a) {
-        var n = a("xA5w"),
-            r = a("Jvcu");
-        e.exports = function(e, t, a) {
-            var i = a ? Number(a.weekStartsOn) || 0 : 0,
-                s = n(e),
+    SHOI: function(e, t, n) {
+        var a = n("xA5w"),
+            r = n("Jvcu");
+        e.exports = function(e, t, n) {
+            var i = n ? Number(n.weekStartsOn) || 0 : 0,
+                s = a(e),
                 o = Number(t),
                 d = s.getDay();
             return r(s, ((o % 7 + 7) % 7 < i ? 7 : 0) + o - d)
         }
     },
     SJLv: function(e, t) {
-        var a = ["M", "MM", "Q", "D", "DD", "DDD", "DDDD", "d", "E", "W", "WW", "YY", "YYYY", "GG", "GGGG", "H", "HH", "h", "hh", "m", "mm", "s", "ss", "S", "SS", "SSS", "Z", "ZZ", "X", "x"];
+        var n = ["M", "MM", "Q", "D", "DD", "DDD", "DDDD", "d", "E", "W", "WW", "YY", "YYYY", "GG", "GGGG", "H", "HH", "h", "hh", "m", "mm", "s", "ss", "S", "SS", "SSS", "Z", "ZZ", "X", "x"];
         e.exports = function(e) {
             var t = [];
-            for (var n in e) e.hasOwnProperty(n) && t.push(n);
-            var r = a.concat(t).sort().reverse();
+            for (var a in e) e.hasOwnProperty(a) && t.push(a);
+            var r = n.concat(t).sort().reverse();
             return new RegExp("(\\[[^\\[]*\\])|(\\\\)?(" + r.join("|") + "|.)", "g")
         }
     },
-    SZZR: function(e, t, a) {
-        var n = a("I7cV");
+    SZZR: function(e, t, n) {
+        var a = n("I7cV");
         e.exports = function(e) {
-            return n(e, {
+            return a(e, {
                 weekStartsOn: 1
             })
         }
     },
-    Sjoy: function(e, t, a) {
+    Sjoy: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("en-au", {
@@ -9440,24 +9462,24 @@ webpackJsonp([35], {
             })
         })
     },
-    "T/Ln": function(e, t, a) {
-        var n = a("xA5w");
+    "T/Ln": function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e) {
-            var t = n(e),
-                a = t.getMonth(),
-                r = a - a % 3 + 3;
+            var t = a(e),
+                n = t.getMonth(),
+                r = n - n % 3 + 3;
             return t.setMonth(r, 0), t.setHours(0, 0, 0, 0), t
         }
     },
-    TWHA: function(e, t, a) {
-        var n = a("YjuW"),
+    TWHA: function(e, t, n) {
+        var a = n("YjuW"),
             r = function() {
                 return new u
             };
-        for (var i in n) {
+        for (var i in a) {
             r[i + "Raw"] = function(e) {
                 return function(t) {
-                    return "number" == typeof t && (t = Array.prototype.slice.call(arguments)), n[e](t)
+                    return "number" == typeof t && (t = Array.prototype.slice.call(arguments)), a[e](t)
                 }
             }(i);
             var s = /(\w+)2(\w+)/.exec(i),
@@ -9466,10 +9488,10 @@ webpackJsonp([35], {
             (r[o] = r[o] || {})[d] = r[i] = function(e) {
                 return function(t) {
                     "number" == typeof t && (t = Array.prototype.slice.call(arguments));
-                    var a = n[e](t);
-                    if ("string" == typeof a || void 0 === a) return a;
-                    for (var r = 0; r < a.length; r++) a[r] = Math.round(a[r]);
-                    return a
+                    var n = a[e](t);
+                    if ("string" == typeof n || void 0 === n) return n;
+                    for (var r = 0; r < n.length; r++) n[r] = Math.round(n[r]);
+                    return n
                 }
             }(i)
         }
@@ -9477,16 +9499,16 @@ webpackJsonp([35], {
             this.convs = {}
         };
         u.prototype.routeSpace = function(e, t) {
-            var a = t[0];
-            return void 0 === a ? this.getValues(e) : ("number" == typeof a && (a = Array.prototype.slice.call(t)), this.setValues(e, a))
+            var n = t[0];
+            return void 0 === n ? this.getValues(e) : ("number" == typeof n && (n = Array.prototype.slice.call(t)), this.setValues(e, n))
         }, u.prototype.setValues = function(e, t) {
             return this.space = e, this.convs = {}, this.convs[e] = t, this
         }, u.prototype.getValues = function(e) {
             var t = this.convs[e];
             if (!t) {
-                var a = this.space,
-                    n = this.convs[a];
-                t = r[a][e](n), this.convs[e] = t
+                var n = this.space,
+                    a = this.convs[n];
+                t = r[n][e](a), this.convs[e] = t
             }
             return t
         }, ["rgb", "hsl", "hsv", "cmyk", "keyword"].forEach(function(e) {
@@ -9495,17 +9517,17 @@ webpackJsonp([35], {
             }
         }), e.exports = r
     },
-    ToRI: function(e, t, a) {
-        var n = a("xA5w");
+    ToRI: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e, t) {
-            var a = n(e),
+            var n = a(e),
                 r = Number(t);
-            return a.setSeconds(r), a
+            return n.setSeconds(r), n
         }
     },
-    Tqun: function(e, t, a) {
+    Tqun: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("en-ca", {
@@ -9553,33 +9575,33 @@ webpackJsonp([35], {
             })
         })
     },
-    Tv4R: function(e, t, a) {
-        var n = a("xA5w");
+    Tv4R: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e, t) {
             if (!(t instanceof Array)) throw new TypeError(toString.call(t) + " is not an instance of Array");
-            var a, r, i = n(e).getTime();
+            var n, r, i = a(e).getTime();
             return t.forEach(function(e) {
-                var t = n(e),
+                var t = a(e),
                     s = Math.abs(i - t.getTime());
-                (void 0 === a || s < r) && (a = t, r = s)
-            }), a
+                (void 0 === n || s < r) && (n = t, r = s)
+            }), n
         }
     },
-    "Uu+E": function(e, t, a) {
-        var n = a("xA5w"),
-            r = a("iRXW"),
-            i = a("nizW");
+    "Uu+E": function(e, t, n) {
+        var a = n("xA5w"),
+            r = n("iRXW"),
+            i = n("nizW");
         e.exports = function(e, t) {
-            var a = n(e),
+            var n = a(e),
                 s = Number(t),
-                o = i(a, r(a)),
+                o = i(n, r(n)),
                 d = new Date(0);
-            return d.setFullYear(s, 0, 4), d.setHours(0, 0, 0, 0), (a = r(d)).setDate(a.getDate() + o), a
+            return d.setFullYear(s, 0, 4), d.setHours(0, 0, 0, 0), (n = r(d)).setDate(n.getDate() + o), n
         }
     },
-    V0td: function(e, t, a) {
+    V0td: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("sq", {
@@ -9593,7 +9615,7 @@ webpackJsonp([35], {
                 isPM: function(e) {
                     return "M" === e.charAt(0)
                 },
-                meridiem: function(e, t, a) {
+                meridiem: function(e, t, n) {
                     return e < 12 ? "PD" : "MD"
                 },
                 longDateFormat: {
@@ -9636,29 +9658,29 @@ webpackJsonp([35], {
             })
         })
     },
-    V4qH: function(e, t, a) {
+    V4qH: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
 
-            function t(e, t, a) {
-                var n = e + " ";
-                switch (a) {
+            function t(e, t, n) {
+                var a = e + " ";
+                switch (n) {
                     case "m":
                         return t ? "jedna minuta" : "jedne minute";
                     case "mm":
-                        return n += 1 === e ? "minuta" : 2 === e || 3 === e || 4 === e ? "minute" : "minuta";
+                        return a += 1 === e ? "minuta" : 2 === e || 3 === e || 4 === e ? "minute" : "minuta";
                     case "h":
                         return t ? "jedan sat" : "jednog sata";
                     case "hh":
-                        return n += 1 === e ? "sat" : 2 === e || 3 === e || 4 === e ? "sata" : "sati";
+                        return a += 1 === e ? "sat" : 2 === e || 3 === e || 4 === e ? "sata" : "sati";
                     case "dd":
-                        return n += 1 === e ? "dan" : "dana";
+                        return a += 1 === e ? "dan" : "dana";
                     case "MM":
-                        return n += 1 === e ? "mjesec" : 2 === e || 3 === e || 4 === e ? "mjeseca" : "mjeseci";
+                        return a += 1 === e ? "mjesec" : 2 === e || 3 === e || 4 === e ? "mjeseca" : "mjeseci";
                     case "yy":
-                        return n += 1 === e ? "godina" : 2 === e || 3 === e || 4 === e ? "godine" : "godina"
+                        return a += 1 === e ? "godina" : 2 === e || 3 === e || 4 === e ? "godine" : "godina"
                 }
             }
             return e.defineLocale("hr", {
@@ -9739,9 +9761,9 @@ webpackJsonp([35], {
             })
         })
     },
-    VK9h: function(e, t, a) {
+    VK9h: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("fr-ch", {
@@ -9805,23 +9827,23 @@ webpackJsonp([35], {
             })
         })
     },
-    VRu6: function(e, t, a) {
+    VRu6: function(e, t, n) {
         "use strict";
 
-        function n(e) {
-            var t, a, n = [];
-            for (t = 0, a = e.length; t < a; ++t) n.push(e[t].label);
-            return n
+        function a(e) {
+            var t, n, a = [];
+            for (t = 0, n = e.length; t < n; ++t) a.push(e[t].label);
+            return a
         }
 
-        function r(e, t, a) {
-            var n = e.getPixelForTick(t);
-            return a && (n -= 0 === t ? (e.getPixelForTick(1) - n) / 2 : (n - e.getPixelForTick(t - 1)) / 2), n
+        function r(e, t, n) {
+            var a = e.getPixelForTick(t);
+            return n && (a -= 0 === t ? (e.getPixelForTick(1) - a) / 2 : (a - e.getPixelForTick(t - 1)) / 2), a
         }
-        var i = a("k7DW"),
-            s = a("wGD1"),
-            o = a("iO9N"),
-            d = a("IbXy");
+        var i = n("k7DW"),
+            s = n("wGD1"),
+            o = n("iO9N"),
+            d = n("IbXy");
         i._set("scale", {
             display: !0,
             position: "left",
@@ -9867,21 +9889,21 @@ webpackJsonp([35], {
                 major: {}
             }
         }), e.exports = function(e) {
-            function t(e, t, a) {
-                return o.isArray(t) ? o.longestText(e, a, t) : e.measureText(t).width
+            function t(e, t, n) {
+                return o.isArray(t) ? o.longestText(e, n, t) : e.measureText(t).width
             }
 
-            function a(e) {
+            function n(e) {
                 var t = o.valueOrDefault,
-                    a = i.global,
-                    n = t(e.fontSize, a.defaultFontSize),
-                    r = t(e.fontStyle, a.defaultFontStyle),
-                    s = t(e.fontFamily, a.defaultFontFamily);
+                    n = i.global,
+                    a = t(e.fontSize, n.defaultFontSize),
+                    r = t(e.fontStyle, n.defaultFontStyle),
+                    s = t(e.fontFamily, n.defaultFontFamily);
                 return {
-                    size: n,
+                    size: a,
                     style: r,
                     family: s,
-                    font: o.fontString(n, r, s)
+                    font: o.fontString(a, r, s)
                 }
             }
 
@@ -9912,14 +9934,14 @@ webpackJsonp([35], {
                 beforeUpdate: function() {
                     o.callback(this.options.beforeUpdate, [this])
                 },
-                update: function(e, t, a) {
-                    var n, r, i, s, d, u;
+                update: function(e, t, n) {
+                    var a, r, i, s, d, u;
                     for (this.beforeUpdate(), this.maxWidth = e, this.maxHeight = t, this.margins = o.extend({
                             left: 0,
                             right: 0,
                             top: 0,
                             bottom: 0
-                        }, a), this.longestTextCache = this.longestTextCache || {}, this.beforeSetDimensions(), this.setDimensions(), this.afterSetDimensions(), this.beforeDataLimits(), this.determineDataLimits(), this.afterDataLimits(), this.beforeBuildTicks(), d = this.buildTicks() || [], this.afterBuildTicks(), this.beforeTickToLabelConversion(), i = this.convertTicksToLabels(d) || this.ticks, this.afterTickToLabelConversion(), this.ticks = i, n = 0, r = i.length; n < r; ++n) s = i[n], (u = d[n]) ? u.label = s : d.push(u = {
+                        }, n), this.longestTextCache = this.longestTextCache || {}, this.beforeSetDimensions(), this.setDimensions(), this.afterSetDimensions(), this.beforeDataLimits(), this.determineDataLimits(), this.afterDataLimits(), this.beforeBuildTicks(), d = this.buildTicks() || [], this.afterBuildTicks(), this.beforeTickToLabelConversion(), i = this.convertTicksToLabels(d) || this.ticks, this.afterTickToLabelConversion(), this.ticks = i, a = 0, r = i.length; a < r; ++a) s = i[a], (u = d[a]) ? u.label = s : d.push(u = {
                         label: s,
                         major: !1
                     });
@@ -9967,8 +9989,8 @@ webpackJsonp([35], {
                 calculateTickRotation: function() {
                     var e = this.ctx,
                         t = this.options.ticks,
-                        r = n(this._ticks),
-                        i = a(t);
+                        r = a(this._ticks),
+                        i = n(t);
                     e.font = i.font;
                     var s = t.minRotation || 0;
                     if (r.length && this.options.display && this.isHorizontal())
@@ -9993,14 +10015,14 @@ webpackJsonp([35], {
                             width: 0,
                             height: 0
                         },
-                        r = n(this._ticks),
+                        r = a(this._ticks),
                         i = this.options,
                         s = i.ticks,
                         u = i.scaleLabel,
                         l = i.gridLines,
                         c = i.display,
                         h = this.isHorizontal(),
-                        m = a(s),
+                        m = n(s),
                         _ = i.gridLines.tickMarkLength;
                     if (e.width = h ? this.isFullWidth() ? this.maxWidth - this.margins.left - this.margins.right : this.maxWidth : c && l.drawTicks ? _ : 0, e.height = h ? c && l.drawTicks ? _ : 0 : this.maxHeight, u.display && c) {
                         var f = d(u) + o.options.toPadding(u.padding).height;
@@ -10051,10 +10073,10 @@ webpackJsonp([35], {
                 getPixelForTick: function(e) {
                     var t = this.options.offset;
                     if (this.isHorizontal()) {
-                        var a = (this.width - (this.paddingLeft + this.paddingRight)) / Math.max(this._ticks.length - (t ? 0 : 1), 1),
-                            n = a * e + this.paddingLeft;
-                        t && (n += a / 2);
-                        var r = this.left + Math.round(n);
+                        var n = (this.width - (this.paddingLeft + this.paddingRight)) / Math.max(this._ticks.length - (t ? 0 : 1), 1),
+                            a = n * e + this.paddingLeft;
+                        t && (a += n / 2);
+                        var r = this.left + Math.round(a);
                         return r += this.isFullWidth() ? this.margins.left : 0
                     }
                     var i = this.height - (this.paddingTop + this.paddingBottom);
@@ -10063,8 +10085,8 @@ webpackJsonp([35], {
                 getPixelForDecimal: function(e) {
                     if (this.isHorizontal()) {
                         var t = (this.width - (this.paddingLeft + this.paddingRight)) * e + this.paddingLeft,
-                            a = this.left + Math.round(t);
-                        return a += this.isFullWidth() ? this.margins.left : 0
+                            n = this.left + Math.round(t);
+                        return n += this.isFullWidth() ? this.margins.left : 0
                     }
                     return this.top + e * this.height
                 },
@@ -10077,57 +10099,57 @@ webpackJsonp([35], {
                     return this.beginAtZero ? 0 : e < 0 && t < 0 ? t : e > 0 && t > 0 ? e : 0
                 },
                 _autoSkip: function(e) {
-                    var t, a, n, r, i = this.isHorizontal(),
+                    var t, n, a, r, i = this.isHorizontal(),
                         s = this.options.ticks.minor,
                         d = e.length,
                         u = o.toRadians(this.labelRotation),
                         l = Math.cos(u),
                         c = this.longestLabelWidth * l,
                         h = [];
-                    for (s.maxTicksLimit && (r = s.maxTicksLimit), i && (t = !1, (c + s.autoSkipPadding) * d > this.width - (this.paddingLeft + this.paddingRight) && (t = 1 + Math.floor((c + s.autoSkipPadding) * d / (this.width - (this.paddingLeft + this.paddingRight)))), r && d > r && (t = Math.max(t, Math.floor(d / r)))), a = 0; a < d; a++) n = e[a], ((t > 1 && a % t > 0 || a % t == 0 && a + t >= d) && a !== d - 1 || o.isNullOrUndef(n.label)) && delete n.label, h.push(n);
+                    for (s.maxTicksLimit && (r = s.maxTicksLimit), i && (t = !1, (c + s.autoSkipPadding) * d > this.width - (this.paddingLeft + this.paddingRight) && (t = 1 + Math.floor((c + s.autoSkipPadding) * d / (this.width - (this.paddingLeft + this.paddingRight)))), r && d > r && (t = Math.max(t, Math.floor(d / r)))), n = 0; n < d; n++) a = e[n], ((t > 1 && n % t > 0 || n % t == 0 && n + t >= d) && n !== d - 1 || o.isNullOrUndef(a.label)) && delete a.label, h.push(a);
                     return h
                 },
                 draw: function(e) {
                     var t = this,
-                        n = t.options;
-                    if (n.display) {
+                        a = t.options;
+                    if (a.display) {
                         var s = t.ctx,
                             u = i.global,
-                            l = n.ticks.minor,
-                            c = n.ticks.major || l,
-                            h = n.gridLines,
-                            m = n.scaleLabel,
+                            l = a.ticks.minor,
+                            c = a.ticks.major || l,
+                            h = a.gridLines,
+                            m = a.scaleLabel,
                             _ = 0 !== t.labelRotation,
                             f = t.isHorizontal(),
                             p = l.autoSkip ? t._autoSkip(t.getTicks()) : t.getTicks(),
                             g = o.valueOrDefault(l.fontColor, u.defaultFontColor),
-                            y = a(l),
+                            y = n(l),
                             M = o.valueOrDefault(c.fontColor, u.defaultFontColor),
-                            v = a(c),
+                            v = n(c),
                             b = h.drawTicks ? h.tickMarkLength : 0,
                             L = o.valueOrDefault(m.fontColor, u.defaultFontColor),
-                            Y = a(m),
+                            Y = n(m),
                             D = o.options.toPadding(m.padding),
                             k = o.toRadians(t.labelRotation),
                             w = [],
-                            x = "right" === n.position ? t.left : t.right - b,
-                            T = "right" === n.position ? t.left + b : t.right,
-                            S = "bottom" === n.position ? t.top : t.bottom - b,
-                            O = "bottom" === n.position ? t.top + b : t.bottom;
-                        if (o.each(p, function(a, i) {
-                                if (void 0 !== a.label) {
-                                    var s, d, c, m, g = a.label;
-                                    i === t.zeroLineIndex && n.offset === h.offsetGridLines ? (s = h.zeroLineWidth, d = h.zeroLineColor, c = h.zeroLineBorderDash, m = h.zeroLineBorderDashOffset) : (s = o.valueAtIndexOrDefault(h.lineWidth, i), d = o.valueAtIndexOrDefault(h.color, i), c = o.valueOrDefault(h.borderDash, u.borderDash), m = o.valueOrDefault(h.borderDashOffset, u.borderDashOffset));
+                            x = "right" === a.position ? t.left : t.right - b,
+                            T = "right" === a.position ? t.left + b : t.right,
+                            S = "bottom" === a.position ? t.top : t.bottom - b,
+                            O = "bottom" === a.position ? t.top + b : t.bottom;
+                        if (o.each(p, function(n, i) {
+                                if (void 0 !== n.label) {
+                                    var s, d, c, m, g = n.label;
+                                    i === t.zeroLineIndex && a.offset === h.offsetGridLines ? (s = h.zeroLineWidth, d = h.zeroLineColor, c = h.zeroLineBorderDash, m = h.zeroLineBorderDashOffset) : (s = o.valueAtIndexOrDefault(h.lineWidth, i), d = o.valueAtIndexOrDefault(h.color, i), c = o.valueOrDefault(h.borderDash, u.borderDash), m = o.valueOrDefault(h.borderDashOffset, u.borderDashOffset));
                                     var y, M, v, L, Y, D, j, H, P, C, A = "middle",
                                         F = "middle",
                                         W = l.padding;
                                     if (f) {
                                         var E = b + W;
-                                        "bottom" === n.position ? (F = _ ? "middle" : "top", A = _ ? "right" : "center", C = t.top + E) : (F = _ ? "middle" : "bottom", A = _ ? "left" : "center", C = t.bottom - E);
+                                        "bottom" === a.position ? (F = _ ? "middle" : "top", A = _ ? "right" : "center", C = t.top + E) : (F = _ ? "middle" : "bottom", A = _ ? "left" : "center", C = t.bottom - E);
                                         var I = r(t, i, h.offsetGridLines && p.length > 1);
                                         I < t.left && (d = "rgba(0,0,0,0)"), I += o.aliasPixel(s), P = t.getPixelForTick(i) + l.labelOffset, y = v = Y = j = I, M = S, L = O, D = e.top, H = e.bottom
                                     } else {
-                                        var z, N = "left" === n.position;
+                                        var z, N = "left" === a.position;
                                         l.mirror ? (A = N ? "left" : "right", z = W) : (A = N ? "right" : "left", z = b + W), P = N ? t.right - z : t.left + z;
                                         var R = r(t, i, h.offsetGridLines && p.length > 1);
                                         R < t.top && (d = "rgba(0,0,0,0)"), R += o.aliasPixel(s), C = t.getPixelForTick(i) + l.labelOffset, y = x, v = T, Y = e.left, j = e.right, M = L = D = H = R
@@ -10149,7 +10171,7 @@ webpackJsonp([35], {
                                         glBorderDashOffset: m,
                                         rotation: -1 * k,
                                         label: g,
-                                        major: a.major,
+                                        major: n.major,
                                         textBaseline: F,
                                         textAlign: A
                                     })
@@ -10159,16 +10181,16 @@ webpackJsonp([35], {
                                     s.save(), s.translate(e.labelX, e.labelY), s.rotate(e.rotation), s.font = e.major ? v.font : y.font, s.fillStyle = e.major ? M : g, s.textBaseline = e.textBaseline, s.textAlign = e.textAlign;
                                     var t = e.label;
                                     if (o.isArray(t))
-                                        for (var a = 0, n = 0; a < t.length; ++a) s.fillText("" + t[a], 0, n), n += 1.5 * y.size;
+                                        for (var n = 0, a = 0; n < t.length; ++n) s.fillText("" + t[n], 0, a), a += 1.5 * y.size;
                                     else s.fillText(t, 0, 0);
                                     s.restore()
                                 }
                             }), m.display) {
                             var j, H, P = 0,
                                 C = d(m) / 2;
-                            if (f) j = t.left + (t.right - t.left) / 2, H = "bottom" === n.position ? t.bottom - C - D.bottom : t.top + C + D.top;
+                            if (f) j = t.left + (t.right - t.left) / 2, H = "bottom" === a.position ? t.bottom - C - D.bottom : t.top + C + D.top;
                             else {
-                                var A = "left" === n.position;
+                                var A = "left" === a.position;
                                 j = A ? t.left + C + D.top : t.right - C - D.top, H = t.top + (t.bottom - t.top) / 2, P = A ? -.5 * Math.PI : .5 * Math.PI
                             }
                             s.save(), s.translate(j, H), s.rotate(P), s.textAlign = "center", s.textBaseline = "middle", s.fillStyle = L, s.font = Y.font, s.fillText(m.labelString, 0, 0), s.restore()
@@ -10180,23 +10202,23 @@ webpackJsonp([35], {
                                 E = t.top,
                                 I = t.bottom,
                                 z = o.aliasPixel(s.lineWidth);
-                            f ? (E = I = "top" === n.position ? t.bottom : t.top, E += z, I += z) : (F = W = "left" === n.position ? t.right : t.left, F += z, W += z), s.beginPath(), s.moveTo(F, E), s.lineTo(W, I), s.stroke()
+                            f ? (E = I = "top" === a.position ? t.bottom : t.top, E += z, I += z) : (F = W = "left" === a.position ? t.right : t.left, F += z, W += z), s.beginPath(), s.moveTo(F, E), s.lineTo(W, I), s.stroke()
                         }
                     }
                 }
             })
         }
     },
-    VaeB: function(e, t, a) {
-        var n = a("xA5w");
+    VaeB: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e) {
-            var t = n(e);
+            var t = a(e);
             return t.setMilliseconds(0), t
         }
     },
-    Vz2w: function(e, t, a) {
+    Vz2w: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("zh-cn", {
@@ -10221,9 +10243,9 @@ webpackJsonp([35], {
                 meridiemHour: function(e, t) {
                     return 12 === e && (e = 0), "凌晨" === t || "早上" === t || "上午" === t ? e : "下午" === t || "晚上" === t ? e + 12 : e >= 11 ? e : e + 12
                 },
-                meridiem: function(e, t, a) {
-                    var n = 100 * e + t;
-                    return n < 600 ? "凌晨" : n < 900 ? "早上" : n < 1130 ? "上午" : n < 1230 ? "中午" : n < 1800 ? "下午" : "晚上"
+                meridiem: function(e, t, n) {
+                    var a = 100 * e + t;
+                    return a < 600 ? "凌晨" : a < 900 ? "早上" : a < 1130 ? "上午" : a < 1230 ? "中午" : a < 1800 ? "下午" : "晚上"
                 },
                 calendar: {
                     sameDay: "[今天]LT",
@@ -10271,29 +10293,29 @@ webpackJsonp([35], {
             })
         })
     },
-    WNGz: function(e, t, a) {
-        var n = a("xA5w");
+    WNGz: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e) {
-            var t = n(e);
+            var t = a(e);
             return t.setHours(0, 0, 0, 0), t
         }
     },
-    WaEV: function(e, t, a) {
-        var n = a("+ItH")();
-        n.helpers = a("iO9N"), a("lG75")(n), n.defaults = a("k7DW"), n.Element = a("wGD1"), n.elements = a("L5rj"), n.Interaction = a("KC8c"), n.platform = a("2xI1"), a("4Uxm")(n), a("6rMk")(n), a("ghsk")(n), a("oQMP")(n), a("hAmm")(n), a("jJ84")(n), a("VRu6")(n), a("/jKm")(n), a("QV34")(n), a("40fB")(n), a("XhZS")(n), a("1Nt4")(n), a("sFo6")(n), a("Db81")(n), a("GBuA")(n), a("19SQ")(n), a("sFj2")(n), a("8uqi")(n), a("Fv8P")(n), a("2ddL")(n), a("mC8W")(n), a("vvdA")(n), a("wPWQ")(n), a("mg6x")(n), a("0gJx")(n), a("gCP2")(n), a("0C1O")(n), a("GqGk")(n);
+    WaEV: function(e, t, n) {
+        var a = n("+ItH")();
+        a.helpers = n("iO9N"), n("lG75")(a), a.defaults = n("k7DW"), a.Element = n("wGD1"), a.elements = n("L5rj"), a.Interaction = n("KC8c"), a.platform = n("2xI1"), n("4Uxm")(a), n("6rMk")(a), n("ghsk")(a), n("oQMP")(a), n("hAmm")(a), n("jJ84")(a), n("VRu6")(a), n("/jKm")(a), n("QV34")(a), n("40fB")(a), n("XhZS")(a), n("1Nt4")(a), n("sFo6")(a), n("Db81")(a), n("GBuA")(a), n("19SQ")(a), n("sFj2")(a), n("8uqi")(a), n("Fv8P")(a), n("2ddL")(a), n("mC8W")(a), n("vvdA")(a), n("wPWQ")(a), n("mg6x")(a), n("0gJx")(a), n("gCP2")(a), n("0C1O")(a), n("GqGk")(a);
         var r = [];
-        r.push(a("A5K1")(n), a("ZmvM")(n), a("lRs/")(n)), n.plugins.register(r), n.platform.initialize(), e.exports = n, "undefined" != typeof window && (window.Chart = n), n.canvasHelpers = n.helpers.canvas
+        r.push(n("A5K1")(a), n("ZmvM")(a), n("lRs/")(a)), a.plugins.register(r), a.platform.initialize(), e.exports = a, "undefined" != typeof window && (window.Chart = a), a.canvasHelpers = a.helpers.canvas
     },
-    XFzU: function(e, t, a) {
-        var n = a("GI7G");
+    XFzU: function(e, t, n) {
+        var a = n("GI7G");
         e.exports = function(e, t) {
-            var a = n(e, t) / 3;
-            return a > 0 ? Math.floor(a) : Math.ceil(a)
+            var n = a(e, t) / 3;
+            return n > 0 ? Math.floor(n) : Math.ceil(n)
         }
     },
-    XU1s: function(e, t, a) {
+    XU1s: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("uz", {
@@ -10340,11 +10362,11 @@ webpackJsonp([35], {
             })
         })
     },
-    XhZS: function(e, t, a) {
+    XhZS: function(e, t, n) {
         "use strict";
-        var n = a("k7DW"),
-            r = a("iO9N"),
-            i = a("IbXy");
+        var a = n("k7DW"),
+            r = n("iO9N"),
+            i = n("IbXy");
         e.exports = function(e) {
             var t = {
                     position: "left",
@@ -10352,49 +10374,49 @@ webpackJsonp([35], {
                         callback: i.formatters.linear
                     }
                 },
-                a = e.LinearScaleBase.extend({
+                n = e.LinearScaleBase.extend({
                     determineDataLimits: function() {
                         function e(e) {
                             return s ? e.xAxisID === t.id : e.yAxisID === t.id
                         }
                         var t = this,
-                            a = t.options,
-                            n = t.chart,
-                            i = n.data.datasets,
+                            n = t.options,
+                            a = t.chart,
+                            i = a.data.datasets,
                             s = t.isHorizontal();
                         t.min = null, t.max = null;
-                        var o = a.stacked;
-                        if (void 0 === o && r.each(i, function(t, a) {
+                        var o = n.stacked;
+                        if (void 0 === o && r.each(i, function(t, n) {
                                 if (!o) {
-                                    var r = n.getDatasetMeta(a);
-                                    n.isDatasetVisible(a) && e(r) && void 0 !== r.stack && (o = !0)
+                                    var r = a.getDatasetMeta(n);
+                                    a.isDatasetVisible(n) && e(r) && void 0 !== r.stack && (o = !0)
                                 }
-                            }), a.stacked || o) {
+                            }), n.stacked || o) {
                             var d = {};
                             r.each(i, function(i, s) {
-                                var o = n.getDatasetMeta(s),
-                                    u = [o.type, void 0 === a.stacked && void 0 === o.stack ? s : "", o.stack].join(".");
+                                var o = a.getDatasetMeta(s),
+                                    u = [o.type, void 0 === n.stacked && void 0 === o.stack ? s : "", o.stack].join(".");
                                 void 0 === d[u] && (d[u] = {
                                     positiveValues: [],
                                     negativeValues: []
                                 });
                                 var l = d[u].positiveValues,
                                     c = d[u].negativeValues;
-                                n.isDatasetVisible(s) && e(o) && r.each(i.data, function(e, n) {
+                                a.isDatasetVisible(s) && e(o) && r.each(i.data, function(e, a) {
                                     var r = +t.getRightValue(e);
-                                    isNaN(r) || o.data[n].hidden || (l[n] = l[n] || 0, c[n] = c[n] || 0, a.relativePoints ? l[n] = 100 : r < 0 ? c[n] += r : l[n] += r)
+                                    isNaN(r) || o.data[a].hidden || (l[a] = l[a] || 0, c[a] = c[a] || 0, n.relativePoints ? l[a] = 100 : r < 0 ? c[a] += r : l[a] += r)
                                 })
                             }), r.each(d, function(e) {
-                                var a = e.positiveValues.concat(e.negativeValues),
-                                    n = r.min(a),
-                                    i = r.max(a);
-                                t.min = null === t.min ? n : Math.min(t.min, n), t.max = null === t.max ? i : Math.max(t.max, i)
+                                var n = e.positiveValues.concat(e.negativeValues),
+                                    a = r.min(n),
+                                    i = r.max(n);
+                                t.min = null === t.min ? a : Math.min(t.min, a), t.max = null === t.max ? i : Math.max(t.max, i)
                             })
-                        } else r.each(i, function(a, i) {
-                            var s = n.getDatasetMeta(i);
-                            n.isDatasetVisible(i) && e(s) && r.each(a.data, function(e, a) {
-                                var n = +t.getRightValue(e);
-                                isNaN(n) || s.data[a].hidden || (null === t.min ? t.min = n : n < t.min && (t.min = n), null === t.max ? t.max = n : n > t.max && (t.max = n))
+                        } else r.each(i, function(n, i) {
+                            var s = a.getDatasetMeta(i);
+                            a.isDatasetVisible(i) && e(s) && r.each(n.data, function(e, n) {
+                                var a = +t.getRightValue(e);
+                                isNaN(a) || s.data[n].hidden || (null === t.min ? t.min = a : a < t.min && (t.min = a), null === t.max ? t.max = a : a > t.max && (t.max = a))
                             })
                         });
                         t.min = isFinite(t.min) && !isNaN(t.min) ? t.min : 0, t.max = isFinite(t.max) && !isNaN(t.max) ? t.max : 1, this.handleTickRangeOptions()
@@ -10403,8 +10425,8 @@ webpackJsonp([35], {
                         var e, t = this.options.ticks;
                         if (this.isHorizontal()) e = Math.min(t.maxTicksLimit ? t.maxTicksLimit : 11, Math.ceil(this.width / 50));
                         else {
-                            var a = r.valueOrDefault(t.fontSize, n.global.defaultFontSize);
-                            e = Math.min(t.maxTicksLimit ? t.maxTicksLimit : 11, Math.ceil(this.height / (2 * a)))
+                            var n = r.valueOrDefault(t.fontSize, a.global.defaultFontSize);
+                            e = Math.min(t.maxTicksLimit ? t.maxTicksLimit : 11, Math.ceil(this.height / (2 * n)))
                         }
                         return e
                     },
@@ -10415,31 +10437,31 @@ webpackJsonp([35], {
                         return +this.getRightValue(this.chart.data.datasets[t].data[e])
                     },
                     getPixelForValue: function(e) {
-                        var t, a = this.start,
-                            n = +this.getRightValue(e),
-                            r = this.end - a;
-                        return this.isHorizontal() ? (t = this.left + this.width / r * (n - a), Math.round(t)) : (t = this.bottom - this.height / r * (n - a), Math.round(t))
+                        var t, n = this.start,
+                            a = +this.getRightValue(e),
+                            r = this.end - n;
+                        return this.isHorizontal() ? (t = this.left + this.width / r * (a - n), Math.round(t)) : (t = this.bottom - this.height / r * (a - n), Math.round(t))
                     },
                     getValueForPixel: function(e) {
                         var t = this.isHorizontal(),
-                            a = t ? this.width : this.height,
-                            n = (t ? e - this.left : this.bottom - e) / a;
-                        return this.start + (this.end - this.start) * n
+                            n = t ? this.width : this.height,
+                            a = (t ? e - this.left : this.bottom - e) / n;
+                        return this.start + (this.end - this.start) * a
                     },
                     getPixelForTick: function(e) {
                         return this.getPixelForValue(this.ticksAsNumbers[e])
                     }
                 });
-            e.scaleService.registerScaleType("linear", a, t)
+            e.scaleService.registerScaleType("linear", n, t)
         }
     },
-    XlWM: function(e, t, a) {
+    XlWM: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
 
-            function t(e, t, a, n) {
+            function t(e, t, n, a) {
                 var r = {
                     s: ["mõne sekundi", "mõni sekund", "paar sekundit"],
                     m: ["ühe minuti", "üks minut"],
@@ -10452,7 +10474,7 @@ webpackJsonp([35], {
                     y: ["ühe aasta", "aasta", "üks aasta"],
                     yy: [e + " aasta", e + " aastat"]
                 };
-                return t ? r[a][2] ? r[a][2] : r[a][1] : n ? r[a][0] : r[a][1]
+                return t ? r[n][2] ? r[n][2] : r[n][1] : a ? r[n][0] : r[n][1]
             }
             return e.defineLocale("et", {
                 months: "jaanuar_veebruar_märts_aprill_mai_juuni_juuli_august_september_oktoober_november_detsember".split("_"),
@@ -10500,9 +10522,9 @@ webpackJsonp([35], {
             })
         })
     },
-    "XzD+": function(e, t, a) {
+    "XzD+": function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("th", {
@@ -10525,7 +10547,7 @@ webpackJsonp([35], {
                 isPM: function(e) {
                     return "หลังเที่ยง" === e
                 },
-                meridiem: function(e, t, a) {
+                meridiem: function(e, t, n) {
                     return e < 12 ? "ก่อนเที่ยง" : "หลังเที่ยง"
                 },
                 calendar: {
@@ -10554,9 +10576,9 @@ webpackJsonp([35], {
             })
         })
     },
-    "YBA/": function(e, t, a) {
+    "YBA/": function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("da", {
@@ -10605,34 +10627,34 @@ webpackJsonp([35], {
             })
         })
     },
-    YPf8: function(e, t, a) {
-        var n = a("xA5w");
+    YPf8: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e) {
-            return 5 === n(e).getDay()
+            return 5 === a(e).getDay()
         }
     },
-    YPjl: function(e, t, a) {
-        var n = a("xA5w"),
-            r = a("Jvcu"),
-            i = a("AZvW");
+    YPjl: function(e, t, n) {
+        var a = n("xA5w"),
+            r = n("Jvcu"),
+            i = n("AZvW");
         e.exports = function(e, t) {
-            var a = n(e),
+            var n = a(e),
                 s = Number(t),
-                o = i(a);
-            return r(a, s - o)
+                o = i(n);
+            return r(n, s - o)
         }
     },
-    YRFD: function(e, t, a) {
-        var n = a("xA5w");
+    YRFD: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e, t) {
-            var a = n(e).getTime(),
-                r = n(t).getTime();
-            return a > r ? -1 : a < r ? 1 : 0
+            var n = a(e).getTime(),
+                r = a(t).getTime();
+            return n > r ? -1 : n < r ? 1 : 0
         }
     },
-    YXlc: function(e, t, a) {
+    YXlc: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("yo", {
@@ -10682,38 +10704,38 @@ webpackJsonp([35], {
         })
     },
     YjuW: function(e, t) {
-        function a(e) {
-            var t, a, n, r = e[0] / 255,
+        function n(e) {
+            var t, n, a, r = e[0] / 255,
                 i = e[1] / 255,
                 s = e[2] / 255,
                 o = Math.min(r, i, s),
                 d = Math.max(r, i, s),
                 u = d - o;
-            return d == o ? t = 0 : r == d ? t = (i - s) / u : i == d ? t = 2 + (s - r) / u : s == d && (t = 4 + (r - i) / u), (t = Math.min(60 * t, 360)) < 0 && (t += 360), n = (o + d) / 2, a = d == o ? 0 : n <= .5 ? u / (d + o) : u / (2 - d - o), [t, 100 * a, 100 * n]
+            return d == o ? t = 0 : r == d ? t = (i - s) / u : i == d ? t = 2 + (s - r) / u : s == d && (t = 4 + (r - i) / u), (t = Math.min(60 * t, 360)) < 0 && (t += 360), a = (o + d) / 2, n = d == o ? 0 : a <= .5 ? u / (d + o) : u / (2 - d - o), [t, 100 * n, 100 * a]
         }
 
-        function n(e) {
-            var t, a, n, r = e[0],
+        function a(e) {
+            var t, n, a, r = e[0],
                 i = e[1],
                 s = e[2],
                 o = Math.min(r, i, s),
                 d = Math.max(r, i, s),
                 u = d - o;
-            return a = 0 == d ? 0 : u / d * 1e3 / 10, d == o ? t = 0 : r == d ? t = (i - s) / u : i == d ? t = 2 + (s - r) / u : s == d && (t = 4 + (r - i) / u), (t = Math.min(60 * t, 360)) < 0 && (t += 360), n = d / 255 * 1e3 / 10, [t, a, n]
+            return n = 0 == d ? 0 : u / d * 1e3 / 10, d == o ? t = 0 : r == d ? t = (i - s) / u : i == d ? t = 2 + (s - r) / u : s == d && (t = 4 + (r - i) / u), (t = Math.min(60 * t, 360)) < 0 && (t += 360), a = d / 255 * 1e3 / 10, [t, n, a]
         }
 
         function i(e) {
             var t = e[0],
-                n = e[1],
+                a = e[1],
                 r = e[2];
-            return [a(e)[0], 100 * (1 / 255 * Math.min(t, Math.min(n, r))), 100 * (r = 1 - 1 / 255 * Math.max(t, Math.max(n, r)))]
+            return [n(e)[0], 100 * (1 / 255 * Math.min(t, Math.min(a, r))), 100 * (r = 1 - 1 / 255 * Math.max(t, Math.max(a, r)))]
         }
 
         function s(e) {
-            var t, a, n, r, i = e[0] / 255,
+            var t, n, a, r, i = e[0] / 255,
                 s = e[1] / 255,
                 o = e[2] / 255;
-            return r = Math.min(1 - i, 1 - s, 1 - o), t = (1 - i - r) / (1 - r) || 0, a = (1 - s - r) / (1 - r) || 0, n = (1 - o - r) / (1 - r) || 0, [100 * t, 100 * a, 100 * n, 100 * r]
+            return r = Math.min(1 - i, 1 - s, 1 - o), t = (1 - i - r) / (1 - r) || 0, n = (1 - s - r) / (1 - r) || 0, a = (1 - o - r) / (1 - r) || 0, [100 * t, 100 * n, 100 * a, 100 * r]
         }
 
         function o(e) {
@@ -10722,90 +10744,90 @@ webpackJsonp([35], {
 
         function d(e) {
             var t = e[0] / 255,
-                a = e[1] / 255,
-                n = e[2] / 255;
-            return [100 * (.4124 * (t = t > .04045 ? Math.pow((t + .055) / 1.055, 2.4) : t / 12.92) + .3576 * (a = a > .04045 ? Math.pow((a + .055) / 1.055, 2.4) : a / 12.92) + .1805 * (n = n > .04045 ? Math.pow((n + .055) / 1.055, 2.4) : n / 12.92)), 100 * (.2126 * t + .7152 * a + .0722 * n), 100 * (.0193 * t + .1192 * a + .9505 * n)]
+                n = e[1] / 255,
+                a = e[2] / 255;
+            return [100 * (.4124 * (t = t > .04045 ? Math.pow((t + .055) / 1.055, 2.4) : t / 12.92) + .3576 * (n = n > .04045 ? Math.pow((n + .055) / 1.055, 2.4) : n / 12.92) + .1805 * (a = a > .04045 ? Math.pow((a + .055) / 1.055, 2.4) : a / 12.92)), 100 * (.2126 * t + .7152 * n + .0722 * a), 100 * (.0193 * t + .1192 * n + .9505 * a)]
         }
 
         function u(e) {
-            var t, a, n, r = d(e),
+            var t, n, a, r = d(e),
                 i = r[0],
                 s = r[1],
                 o = r[2];
-            return i /= 95.047, s /= 100, o /= 108.883, i = i > .008856 ? Math.pow(i, 1 / 3) : 7.787 * i + 16 / 116, s = s > .008856 ? Math.pow(s, 1 / 3) : 7.787 * s + 16 / 116, o = o > .008856 ? Math.pow(o, 1 / 3) : 7.787 * o + 16 / 116, t = 116 * s - 16, a = 500 * (i - s), n = 200 * (s - o), [t, a, n]
+            return i /= 95.047, s /= 100, o /= 108.883, i = i > .008856 ? Math.pow(i, 1 / 3) : 7.787 * i + 16 / 116, s = s > .008856 ? Math.pow(s, 1 / 3) : 7.787 * s + 16 / 116, o = o > .008856 ? Math.pow(o, 1 / 3) : 7.787 * o + 16 / 116, t = 116 * s - 16, n = 500 * (i - s), a = 200 * (s - o), [t, n, a]
         }
 
         function l(e) {
-            var t, a, n, r, i, s = e[0] / 360,
+            var t, n, a, r, i, s = e[0] / 360,
                 o = e[1] / 100,
                 d = e[2] / 100;
             if (0 == o) return i = 255 * d, [i, i, i];
-            t = 2 * d - (a = d < .5 ? d * (1 + o) : d + o - d * o), r = [0, 0, 0];
-            for (var u = 0; u < 3; u++)(n = s + 1 / 3 * -(u - 1)) < 0 && n++, n > 1 && n--, i = 6 * n < 1 ? t + 6 * (a - t) * n : 2 * n < 1 ? a : 3 * n < 2 ? t + (a - t) * (2 / 3 - n) * 6 : t, r[u] = 255 * i;
+            t = 2 * d - (n = d < .5 ? d * (1 + o) : d + o - d * o), r = [0, 0, 0];
+            for (var u = 0; u < 3; u++)(a = s + 1 / 3 * -(u - 1)) < 0 && a++, a > 1 && a--, i = 6 * a < 1 ? t + 6 * (n - t) * a : 2 * a < 1 ? n : 3 * a < 2 ? t + (n - t) * (2 / 3 - a) * 6 : t, r[u] = 255 * i;
             return r
         }
 
         function c(e) {
             var t = e[0] / 60,
-                a = e[1] / 100,
-                n = e[2] / 100,
+                n = e[1] / 100,
+                a = e[2] / 100,
                 r = Math.floor(t) % 6,
                 i = t - Math.floor(t),
-                s = 255 * n * (1 - a),
-                o = 255 * n * (1 - a * i),
-                d = 255 * n * (1 - a * (1 - i));
-            n *= 255;
+                s = 255 * a * (1 - n),
+                o = 255 * a * (1 - n * i),
+                d = 255 * a * (1 - n * (1 - i));
+            a *= 255;
             switch (r) {
                 case 0:
-                    return [n, d, s];
+                    return [a, d, s];
                 case 1:
-                    return [o, n, s];
+                    return [o, a, s];
                 case 2:
-                    return [s, n, d];
+                    return [s, a, d];
                 case 3:
-                    return [s, o, n];
+                    return [s, o, a];
                 case 4:
-                    return [d, s, n];
+                    return [d, s, a];
                 case 5:
-                    return [n, s, o]
+                    return [a, s, o]
             }
         }
 
         function h(e) {
-            var t, a, n, i, s = e[0] / 360,
+            var t, n, a, i, s = e[0] / 360,
                 o = e[1] / 100,
                 d = e[2] / 100,
                 u = o + d;
-            switch (u > 1 && (o /= u, d /= u), t = Math.floor(6 * s), a = 1 - d, n = 6 * s - t, 0 != (1 & t) && (n = 1 - n), i = o + n * (a - o), t) {
+            switch (u > 1 && (o /= u, d /= u), t = Math.floor(6 * s), n = 1 - d, a = 6 * s - t, 0 != (1 & t) && (a = 1 - a), i = o + a * (n - o), t) {
                 default:
                     case 6:
                     case 0:
-                    r = a,
+                    r = n,
                 g = i,
                 b = o;
                 break;
                 case 1:
                         r = i,
-                    g = a,
+                    g = n,
                     b = o;
                     break;
                 case 2:
                         r = o,
-                    g = a,
+                    g = n,
                     b = i;
                     break;
                 case 3:
                         r = o,
                     g = i,
-                    b = a;
+                    b = n;
                     break;
                 case 4:
                         r = i,
                     g = o,
-                    b = a;
+                    b = n;
                     break;
                 case 5:
-                        r = a,
+                        r = n,
                     g = o,
                     b = i
             }
@@ -10813,39 +10835,39 @@ webpackJsonp([35], {
         }
 
         function m(e) {
-            var t, a, n, r = e[0] / 100,
+            var t, n, a, r = e[0] / 100,
                 i = e[1] / 100,
                 s = e[2] / 100,
                 o = e[3] / 100;
-            return t = 1 - Math.min(1, r * (1 - o) + o), a = 1 - Math.min(1, i * (1 - o) + o), n = 1 - Math.min(1, s * (1 - o) + o), [255 * t, 255 * a, 255 * n]
+            return t = 1 - Math.min(1, r * (1 - o) + o), n = 1 - Math.min(1, i * (1 - o) + o), a = 1 - Math.min(1, s * (1 - o) + o), [255 * t, 255 * n, 255 * a]
         }
 
         function _(e) {
-            var t, a, n, r = e[0] / 100,
+            var t, n, a, r = e[0] / 100,
                 i = e[1] / 100,
                 s = e[2] / 100;
-            return t = 3.2406 * r + -1.5372 * i + -.4986 * s, a = -.9689 * r + 1.8758 * i + .0415 * s, n = .0557 * r + -.204 * i + 1.057 * s, t = t > .0031308 ? 1.055 * Math.pow(t, 1 / 2.4) - .055 : t *= 12.92, a = a > .0031308 ? 1.055 * Math.pow(a, 1 / 2.4) - .055 : a *= 12.92, n = n > .0031308 ? 1.055 * Math.pow(n, 1 / 2.4) - .055 : n *= 12.92, t = Math.min(Math.max(0, t), 1), a = Math.min(Math.max(0, a), 1), n = Math.min(Math.max(0, n), 1), [255 * t, 255 * a, 255 * n]
+            return t = 3.2406 * r + -1.5372 * i + -.4986 * s, n = -.9689 * r + 1.8758 * i + .0415 * s, a = .0557 * r + -.204 * i + 1.057 * s, t = t > .0031308 ? 1.055 * Math.pow(t, 1 / 2.4) - .055 : t *= 12.92, n = n > .0031308 ? 1.055 * Math.pow(n, 1 / 2.4) - .055 : n *= 12.92, a = a > .0031308 ? 1.055 * Math.pow(a, 1 / 2.4) - .055 : a *= 12.92, t = Math.min(Math.max(0, t), 1), n = Math.min(Math.max(0, n), 1), a = Math.min(Math.max(0, a), 1), [255 * t, 255 * n, 255 * a]
         }
 
         function f(e) {
-            var t, a, n, r = e[0],
+            var t, n, a, r = e[0],
                 i = e[1],
                 s = e[2];
-            return r /= 95.047, i /= 100, s /= 108.883, r = r > .008856 ? Math.pow(r, 1 / 3) : 7.787 * r + 16 / 116, i = i > .008856 ? Math.pow(i, 1 / 3) : 7.787 * i + 16 / 116, s = s > .008856 ? Math.pow(s, 1 / 3) : 7.787 * s + 16 / 116, t = 116 * i - 16, a = 500 * (r - i), n = 200 * (i - s), [t, a, n]
+            return r /= 95.047, i /= 100, s /= 108.883, r = r > .008856 ? Math.pow(r, 1 / 3) : 7.787 * r + 16 / 116, i = i > .008856 ? Math.pow(i, 1 / 3) : 7.787 * i + 16 / 116, s = s > .008856 ? Math.pow(s, 1 / 3) : 7.787 * s + 16 / 116, t = 116 * i - 16, n = 500 * (r - i), a = 200 * (i - s), [t, n, a]
         }
 
         function p(e) {
-            var t, a, n, r, i = e[0],
+            var t, n, a, r, i = e[0],
                 s = e[1],
                 o = e[2];
-            return i <= 8 ? r = (a = 100 * i / 903.3) / 100 * 7.787 + 16 / 116 : (a = 100 * Math.pow((i + 16) / 116, 3), r = Math.pow(a / 100, 1 / 3)), t = t / 95.047 <= .008856 ? t = 95.047 * (s / 500 + r - 16 / 116) / 7.787 : 95.047 * Math.pow(s / 500 + r, 3), n = n / 108.883 <= .008859 ? n = 108.883 * (r - o / 200 - 16 / 116) / 7.787 : 108.883 * Math.pow(r - o / 200, 3), [t, a, n]
+            return i <= 8 ? r = (n = 100 * i / 903.3) / 100 * 7.787 + 16 / 116 : (n = 100 * Math.pow((i + 16) / 116, 3), r = Math.pow(n / 100, 1 / 3)), t = t / 95.047 <= .008856 ? t = 95.047 * (s / 500 + r - 16 / 116) / 7.787 : 95.047 * Math.pow(s / 500 + r, 3), a = a / 108.883 <= .008859 ? a = 108.883 * (r - o / 200 - 16 / 116) / 7.787 : 108.883 * Math.pow(r - o / 200, 3), [t, n, a]
         }
 
         function y(e) {
-            var t, a, n, r = e[0],
+            var t, n, a, r = e[0],
                 i = e[1],
                 s = e[2];
-            return t = Math.atan2(s, i), (a = 360 * t / 2 / Math.PI) < 0 && (a += 360), n = Math.sqrt(i * i + s * s), [r, n, a]
+            return t = Math.atan2(s, i), (n = 360 * t / 2 / Math.PI) < 0 && (n += 360), a = Math.sqrt(i * i + s * s), [r, a, n]
         }
 
         function M(e) {
@@ -10853,17 +10875,17 @@ webpackJsonp([35], {
         }
 
         function v(e) {
-            var t, a, n, r = e[0],
+            var t, n, a, r = e[0],
                 i = e[1];
-            return n = e[2] / 360 * 2 * Math.PI, t = i * Math.cos(n), a = i * Math.sin(n), [r, t, a]
+            return a = e[2] / 360 * 2 * Math.PI, t = i * Math.cos(a), n = i * Math.sin(a), [r, t, n]
         }
 
         function L(e) {
             return Y[e]
         }
         e.exports = {
-            rgb2hsl: a,
-            rgb2hsv: n,
+            rgb2hsl: n,
+            rgb2hsv: a,
             rgb2hwb: i,
             rgb2cmyk: s,
             rgb2keyword: o,
@@ -10874,10 +10896,10 @@ webpackJsonp([35], {
             },
             hsl2rgb: l,
             hsl2hsv: function(e) {
-                var t, a, n = e[0],
+                var t, n, a = e[0],
                     r = e[1] / 100,
                     i = e[2] / 100;
-                return 0 === i ? [0, 0, 0] : (i *= 2, r *= i <= 1 ? i : 2 - i, a = (i + r) / 2, t = 2 * r / (i + r), [n, 100 * t, 100 * a])
+                return 0 === i ? [0, 0, 0] : (i *= 2, r *= i <= 1 ? i : 2 - i, n = (i + r) / 2, t = 2 * r / (i + r), [a, 100 * t, 100 * n])
             },
             hsl2hwb: function(e) {
                 return i(l(e))
@@ -10890,10 +10912,10 @@ webpackJsonp([35], {
             },
             hsv2rgb: c,
             hsv2hsl: function(e) {
-                var t, a, n = e[0],
+                var t, n, a = e[0],
                     r = e[1] / 100,
                     i = e[2] / 100;
-                return a = (2 - r) * i, t = r * i, t /= a <= 1 ? a : 2 - a, t = t || 0, a /= 2, [n, 100 * t, 100 * a]
+                return n = (2 - r) * i, t = r * i, t /= n <= 1 ? n : 2 - n, t = t || 0, n /= 2, [a, 100 * t, 100 * n]
             },
             hsv2hwb: function(e) {
                 return i(c(e))
@@ -10906,10 +10928,10 @@ webpackJsonp([35], {
             },
             hwb2rgb: h,
             hwb2hsl: function(e) {
-                return a(h(e))
+                return n(h(e))
             },
             hwb2hsv: function(e) {
-                return n(h(e))
+                return a(h(e))
             },
             hwb2cmyk: function(e) {
                 return s(h(e))
@@ -10919,10 +10941,10 @@ webpackJsonp([35], {
             },
             cmyk2rgb: m,
             cmyk2hsl: function(e) {
-                return a(m(e))
+                return n(m(e))
             },
             cmyk2hsv: function(e) {
-                return n(m(e))
+                return a(m(e))
             },
             cmyk2hwb: function(e) {
                 return i(m(e))
@@ -10932,10 +10954,10 @@ webpackJsonp([35], {
             },
             keyword2rgb: L,
             keyword2hsl: function(e) {
-                return a(L(e))
+                return n(L(e))
             },
             keyword2hsv: function(e) {
-                return n(L(e))
+                return a(L(e))
             },
             keyword2hwb: function(e) {
                 return i(L(e))
@@ -11118,9 +11140,9 @@ webpackJsonp([35], {
             D = {};
         for (var k in Y) D[JSON.stringify(Y[k])] = k
     },
-    ZFGz: function(e, t, a) {
+    ZFGz: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("cy", {
@@ -11173,15 +11195,15 @@ webpackJsonp([35], {
             })
         })
     },
-    ZUMa: function(e, t, a) {
-        var n = a("xA5w");
+    ZUMa: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e) {
-            return 0 === n(e).getDay()
+            return 0 === a(e).getDay()
         }
     },
-    ZUyn: function(e, t, a) {
+    ZUyn: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("zh-hk", {
@@ -11206,9 +11228,9 @@ webpackJsonp([35], {
                 meridiemHour: function(e, t) {
                     return 12 === e && (e = 0), "凌晨" === t || "早上" === t || "上午" === t ? e : "中午" === t ? e >= 11 ? e : e + 12 : "下午" === t || "晚上" === t ? e + 12 : void 0
                 },
-                meridiem: function(e, t, a) {
-                    var n = 100 * e + t;
-                    return n < 600 ? "凌晨" : n < 900 ? "早上" : n < 1130 ? "上午" : n < 1230 ? "中午" : n < 1800 ? "下午" : "晚上"
+                meridiem: function(e, t, n) {
+                    var a = 100 * e + t;
+                    return a < 600 ? "凌晨" : a < 900 ? "早上" : a < 1130 ? "上午" : a < 1230 ? "中午" : a < 1800 ? "下午" : "晚上"
                 },
                 calendar: {
                     sameDay: "[今天]LT",
@@ -11252,12 +11274,12 @@ webpackJsonp([35], {
             })
         })
     },
-    ZmvM: function(e, t, a) {
+    ZmvM: function(e, t, n) {
         "use strict";
-        var n = a("k7DW"),
-            r = a("wGD1"),
-            i = a("iO9N");
-        n._set("global", {
+        var a = n("k7DW"),
+            r = n("wGD1"),
+            i = n("iO9N");
+        a._set("global", {
             legend: {
                 display: !0,
                 position: "top",
@@ -11265,10 +11287,10 @@ webpackJsonp([35], {
                 reverse: !1,
                 weight: 1e3,
                 onClick: function(e, t) {
-                    var a = t.datasetIndex,
-                        n = this.chart,
-                        r = n.getDatasetMeta(a);
-                    r.hidden = null === r.hidden ? !n.data.datasets[a].hidden : null, n.update()
+                    var n = t.datasetIndex,
+                        a = this.chart,
+                        r = a.getDatasetMeta(n);
+                    r.hidden = null === r.hidden ? !a.data.datasets[n].hidden : null, a.update()
                 },
                 onHover: null,
                 labels: {
@@ -11276,11 +11298,11 @@ webpackJsonp([35], {
                     padding: 10,
                     generateLabels: function(e) {
                         var t = e.data;
-                        return i.isArray(t.datasets) ? t.datasets.map(function(t, a) {
+                        return i.isArray(t.datasets) ? t.datasets.map(function(t, n) {
                             return {
                                 text: t.label,
                                 fillStyle: i.isArray(t.backgroundColor) ? t.backgroundColor[0] : t.backgroundColor,
-                                hidden: !e.isDatasetVisible(a),
+                                hidden: !e.isDatasetVisible(n),
                                 lineCap: t.borderCapStyle,
                                 lineDash: t.borderDash,
                                 lineDashOffset: t.borderDashOffset,
@@ -11288,7 +11310,7 @@ webpackJsonp([35], {
                                 lineWidth: t.borderWidth,
                                 strokeStyle: t.borderColor,
                                 pointStyle: t.pointStyle,
-                                datasetIndex: a
+                                datasetIndex: n
                             }
                         }, this) : []
                     }
@@ -11297,7 +11319,7 @@ webpackJsonp([35], {
             legendCallback: function(e) {
                 var t = [];
                 t.push('<ul class="' + e.id + '-legend">');
-                for (var a = 0; a < e.data.datasets.length; a++) t.push('<li><span style="background-color:' + e.data.datasets[a].backgroundColor + '"></span>'), e.data.datasets[a].label && t.push(e.data.datasets[a].label), t.push("</li>");
+                for (var n = 0; n < e.data.datasets.length; n++) t.push('<li><span style="background-color:' + e.data.datasets[n].backgroundColor + '"></span>'), e.data.datasets[n].label && t.push(e.data.datasets[n].label), t.push("</li>");
                 return t.push("</ul>"), t.join("")
             }
         }), e.exports = function(e) {
@@ -11305,13 +11327,13 @@ webpackJsonp([35], {
                 return e.usePointStyle ? t * Math.SQRT2 : e.boxWidth
             }
 
-            function a(t, a) {
-                var n = new e.Legend({
+            function n(t, n) {
+                var a = new e.Legend({
                     ctx: t.ctx,
-                    options: a,
+                    options: n,
                     chart: t
                 });
-                s.configure(t, n, a), s.addBox(t, n), t.legend = n
+                s.configure(t, a, n), s.addBox(t, a), t.legend = a
             }
             var s = e.layoutService,
                 o = i.noop;
@@ -11320,8 +11342,8 @@ webpackJsonp([35], {
                     i.extend(this, e), this.legendHitBoxes = [], this.doughnutMode = !1
                 },
                 beforeUpdate: o,
-                update: function(e, t, a) {
-                    return this.beforeUpdate(), this.maxWidth = e, this.maxHeight = t, this.margins = a, this.beforeSetDimensions(), this.setDimensions(), this.afterSetDimensions(), this.beforeBuildLabels(), this.buildLabels(), this.afterBuildLabels(), this.beforeFit(), this.fit(), this.afterFit(), this.afterUpdate(), this.minSize
+                update: function(e, t, n) {
+                    return this.beforeUpdate(), this.maxWidth = e, this.maxHeight = t, this.margins = n, this.beforeSetDimensions(), this.setDimensions(), this.afterSetDimensions(), this.beforeBuildLabels(), this.buildLabels(), this.afterBuildLabels(), this.beforeFit(), this.fit(), this.afterFit(), this.afterUpdate(), this.minSize
                 },
                 afterUpdate: o,
                 beforeSetDimensions: o,
@@ -11336,20 +11358,20 @@ webpackJsonp([35], {
                 buildLabels: function() {
                     var e = this,
                         t = e.options.labels || {},
-                        a = i.callback(t.generateLabels, [e.chart], e) || [];
-                    t.filter && (a = a.filter(function(a) {
-                        return t.filter(a, e.chart.data)
-                    })), e.options.reverse && a.reverse(), e.legendItems = a
+                        n = i.callback(t.generateLabels, [e.chart], e) || [];
+                    t.filter && (n = n.filter(function(n) {
+                        return t.filter(n, e.chart.data)
+                    })), e.options.reverse && n.reverse(), e.legendItems = n
                 },
                 afterBuildLabels: o,
                 beforeFit: o,
                 fit: function() {
                     var e = this,
-                        a = e.options,
-                        r = a.labels,
-                        s = a.display,
+                        n = e.options,
+                        r = n.labels,
+                        s = n.display,
                         o = e.ctx,
-                        d = n.global,
+                        d = a.global,
                         u = i.valueOrDefault,
                         l = u(r.fontSize, d.defaultFontSize),
                         c = u(r.fontStyle, d.defaultFontStyle),
@@ -11362,9 +11384,9 @@ webpackJsonp([35], {
                         if (o.font = m, p) {
                             var g = e.lineWidths = [0],
                                 y = e.legendItems.length ? l + r.padding : 0;
-                            o.textAlign = "left", o.textBaseline = "top", i.each(e.legendItems, function(a, n) {
-                                var i = t(r, l) + l / 2 + o.measureText(a.text).width;
-                                g[g.length - 1] + i + r.padding >= e.width && (y += l + r.padding, g[g.length] = e.left), _[n] = {
+                            o.textAlign = "left", o.textBaseline = "top", i.each(e.legendItems, function(n, a) {
+                                var i = t(r, l) + l / 2 + o.measureText(n.text).width;
+                                g[g.length - 1] + i + r.padding >= e.width && (y += l + r.padding, g[g.length] = e.left), _[a] = {
                                     left: 0,
                                     top: 0,
                                     width: i,
@@ -11378,12 +11400,12 @@ webpackJsonp([35], {
                                 L = 0,
                                 Y = 0,
                                 D = l + M;
-                            i.each(e.legendItems, function(e, a) {
-                                var n = t(r, l) + l / 2 + o.measureText(e.text).width;
-                                Y + D > f.height && (b += L + r.padding, v.push(L), L = 0, Y = 0), L = Math.max(L, n), Y += D, _[a] = {
+                            i.each(e.legendItems, function(e, n) {
+                                var a = t(r, l) + l / 2 + o.measureText(e.text).width;
+                                Y + D > f.height && (b += L + r.padding, v.push(L), L = 0, Y = 0), L = Math.max(L, a), Y += D, _[n] = {
                                     left: 0,
                                     top: 0,
-                                    width: n,
+                                    width: a,
                                     height: l
                                 }
                             }), b += L, v.push(L), f.width += b
@@ -11396,13 +11418,13 @@ webpackJsonp([35], {
                 },
                 draw: function() {
                     var e = this,
-                        a = e.options,
-                        r = a.labels,
-                        s = n.global,
+                        n = e.options,
+                        r = n.labels,
+                        s = a.global,
                         o = s.elements.line,
                         d = e.width,
                         u = e.lineWidths;
-                    if (a.display) {
+                    if (n.display) {
                         var l, c = e.ctx,
                             h = i.valueOrDefault,
                             m = h(r.fontColor, s.defaultFontColor),
@@ -11424,43 +11446,43 @@ webpackJsonp([35], {
                             line: 0
                         };
                         var b = _ + r.padding;
-                        i.each(e.legendItems, function(t, n) {
+                        i.each(e.legendItems, function(t, a) {
                             var m = c.measureText(t.text).width,
                                 f = y + _ / 2 + m,
                                 p = l.x,
                                 g = l.y;
                             v ? p + f >= d && (g = l.y += b, l.line++, p = l.x = e.left + (d - u[l.line]) / 2) : g + b > e.bottom && (p = l.x = p + e.columnWidths[l.line] + r.padding, g = l.y = e.top + r.padding, l.line++),
-                                function(e, t, n) {
+                                function(e, t, a) {
                                     if (!(isNaN(y) || y <= 0)) {
-                                        c.save(), c.fillStyle = h(n.fillStyle, s.defaultColor), c.lineCap = h(n.lineCap, o.borderCapStyle), c.lineDashOffset = h(n.lineDashOffset, o.borderDashOffset), c.lineJoin = h(n.lineJoin, o.borderJoinStyle), c.lineWidth = h(n.lineWidth, o.borderWidth), c.strokeStyle = h(n.strokeStyle, s.defaultColor);
-                                        var r = 0 === h(n.lineWidth, o.borderWidth);
-                                        if (c.setLineDash && c.setLineDash(h(n.lineDash, o.borderDash)), a.labels && a.labels.usePointStyle) {
+                                        c.save(), c.fillStyle = h(a.fillStyle, s.defaultColor), c.lineCap = h(a.lineCap, o.borderCapStyle), c.lineDashOffset = h(a.lineDashOffset, o.borderDashOffset), c.lineJoin = h(a.lineJoin, o.borderJoinStyle), c.lineWidth = h(a.lineWidth, o.borderWidth), c.strokeStyle = h(a.strokeStyle, s.defaultColor);
+                                        var r = 0 === h(a.lineWidth, o.borderWidth);
+                                        if (c.setLineDash && c.setLineDash(h(a.lineDash, o.borderDash)), n.labels && n.labels.usePointStyle) {
                                             var d = _ * Math.SQRT2 / 2,
                                                 u = d / Math.SQRT2,
                                                 l = e + u,
                                                 m = t + u;
-                                            i.canvas.drawPoint(c, n.pointStyle, d, l, m)
+                                            i.canvas.drawPoint(c, a.pointStyle, d, l, m)
                                         } else r || c.strokeRect(e, t, y, _), c.fillRect(e, t, y, _);
                                         c.restore()
                                     }
-                                }(p, g, t), M[n].left = p, M[n].top = g,
-                                function(e, t, a, n) {
+                                }(p, g, t), M[a].left = p, M[a].top = g,
+                                function(e, t, n, a) {
                                     var r = _ / 2,
                                         i = y + r + e,
                                         s = t + r;
-                                    c.fillText(a.text, i, s), a.hidden && (c.beginPath(), c.lineWidth = 2, c.moveTo(i, s), c.lineTo(i + n, s), c.stroke())
+                                    c.fillText(n.text, i, s), n.hidden && (c.beginPath(), c.lineWidth = 2, c.moveTo(i, s), c.lineTo(i + a, s), c.stroke())
                                 }(p, g, t, m), v ? l.x += f + r.padding : l.y += b
                         })
                     }
                 },
                 handleEvent: function(e) {
                     var t = this.options,
-                        a = "mouseup" === e.type ? "click" : e.type,
-                        n = !1;
-                    if ("mousemove" === a) {
+                        n = "mouseup" === e.type ? "click" : e.type,
+                        a = !1;
+                    if ("mousemove" === n) {
                         if (!t.onHover) return
                     } else {
-                        if ("click" !== a) return;
+                        if ("click" !== n) return;
                         if (!t.onClick) return
                     }
                     var r = e.x,
@@ -11469,39 +11491,39 @@ webpackJsonp([35], {
                         for (var s = this.legendHitBoxes, o = 0; o < s.length; ++o) {
                             var d = s[o];
                             if (r >= d.left && r <= d.left + d.width && i >= d.top && i <= d.top + d.height) {
-                                if ("click" === a) {
-                                    t.onClick.call(this, e.native, this.legendItems[o]), n = !0;
+                                if ("click" === n) {
+                                    t.onClick.call(this, e.native, this.legendItems[o]), a = !0;
                                     break
                                 }
-                                if ("mousemove" === a) {
-                                    t.onHover.call(this, e.native, this.legendItems[o]), n = !0;
+                                if ("mousemove" === n) {
+                                    t.onHover.call(this, e.native, this.legendItems[o]), a = !0;
                                     break
                                 }
                             }
                         }
-                    return n
+                    return a
                 }
             }), {
                 id: "legend",
                 beforeInit: function(e) {
                     var t = e.options.legend;
-                    t && a(e, t)
+                    t && n(e, t)
                 },
                 beforeUpdate: function(e) {
                     var t = e.options.legend,
                         r = e.legend;
-                    t ? (i.mergeIf(t, n.global.legend), r ? (s.configure(e, r, t), r.options = t) : a(e, t)) : r && (s.removeBox(e, r), delete e.legend)
+                    t ? (i.mergeIf(t, a.global.legend), r ? (s.configure(e, r, t), r.options = t) : n(e, t)) : r && (s.removeBox(e, r), delete e.legend)
                 },
                 afterEvent: function(e, t) {
-                    var a = e.legend;
-                    a && a.handleEvent(t)
+                    var n = e.legend;
+                    n && n.handleEvent(t)
                 }
             }
         }
     },
-    ZoSI: function(e, t, a) {
+    ZoSI: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("pt", {
@@ -11553,27 +11575,27 @@ webpackJsonp([35], {
             })
         })
     },
-    a7Cs: function(e, t, a) {
-        var n = a("xA5w");
+    a7Cs: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e, t) {
-            var a = n(e),
+            var n = a(e),
                 r = Number(t);
-            return a.setFullYear(r), a
+            return n.setFullYear(r), n
         }
     },
-    aHtT: function(e, t, a) {
-        var n = a("xA5w");
+    aHtT: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function() {
             var e = Array.prototype.slice.call(arguments).map(function(e) {
-                    return n(e)
+                    return a(e)
                 }),
                 t = Math.min.apply(null, e);
             return new Date(t)
         }
     },
-    aM0x: function(e, t, a) {
+    aM0x: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -11588,7 +11610,7 @@ webpackJsonp([35], {
                     9: "৯",
                     0: "০"
                 },
-                a = {
+                n = {
                     "১": "1",
                     "২": "2",
                     "৩": "3",
@@ -11639,7 +11661,7 @@ webpackJsonp([35], {
                 },
                 preparse: function(e) {
                     return e.replace(/[১২৩৪৫৬৭৮৯০]/g, function(e) {
-                        return a[e]
+                        return n[e]
                     })
                 },
                 postformat: function(e) {
@@ -11651,7 +11673,7 @@ webpackJsonp([35], {
                 meridiemHour: function(e, t) {
                     return 12 === e && (e = 0), "রাত" === t && e >= 4 || "দুপুর" === t && e < 5 || "বিকাল" === t ? e + 12 : e
                 },
-                meridiem: function(e, t, a) {
+                meridiem: function(e, t, n) {
                     return e < 4 ? "রাত" : e < 10 ? "সকাল" : e < 17 ? "দুপুর" : e < 20 ? "বিকাল" : "রাত"
                 },
                 week: {
@@ -11661,30 +11683,30 @@ webpackJsonp([35], {
             })
         })
     },
-    ajDi: function(e, t, a) {
-        function n(e) {
+    ajDi: function(e, t, n) {
+        function a(e) {
             if (e) {
                 var t = [0, 0, 0],
-                    a = 1,
-                    n = e.match(/^#([a-fA-F0-9]{3})$/i);
-                if (n) {
-                    n = n[1];
-                    for (var r = 0; r < t.length; r++) t[r] = parseInt(n[r] + n[r], 16)
-                } else if (n = e.match(/^#([a-fA-F0-9]{6})$/i)) {
-                    n = n[1];
-                    for (r = 0; r < t.length; r++) t[r] = parseInt(n.slice(2 * r, 2 * r + 2), 16)
-                } else if (n = e.match(/^rgba?\(\s*([+-]?\d+)\s*,\s*([+-]?\d+)\s*,\s*([+-]?\d+)\s*(?:,\s*([+-]?[\d\.]+)\s*)?\)$/i)) {
-                    for (r = 0; r < t.length; r++) t[r] = parseInt(n[r + 1]);
-                    a = parseFloat(n[4])
-                } else if (n = e.match(/^rgba?\(\s*([+-]?[\d\.]+)\%\s*,\s*([+-]?[\d\.]+)\%\s*,\s*([+-]?[\d\.]+)\%\s*(?:,\s*([+-]?[\d\.]+)\s*)?\)$/i)) {
-                    for (r = 0; r < t.length; r++) t[r] = Math.round(2.55 * parseFloat(n[r + 1]));
-                    a = parseFloat(n[4])
-                } else if (n = e.match(/(\w+)/)) {
-                    if ("transparent" == n[1]) return [0, 0, 0, 0];
-                    if (!(t = c[n[1]])) return
+                    n = 1,
+                    a = e.match(/^#([a-fA-F0-9]{3})$/i);
+                if (a) {
+                    a = a[1];
+                    for (var r = 0; r < t.length; r++) t[r] = parseInt(a[r] + a[r], 16)
+                } else if (a = e.match(/^#([a-fA-F0-9]{6})$/i)) {
+                    a = a[1];
+                    for (r = 0; r < t.length; r++) t[r] = parseInt(a.slice(2 * r, 2 * r + 2), 16)
+                } else if (a = e.match(/^rgba?\(\s*([+-]?\d+)\s*,\s*([+-]?\d+)\s*,\s*([+-]?\d+)\s*(?:,\s*([+-]?[\d\.]+)\s*)?\)$/i)) {
+                    for (r = 0; r < t.length; r++) t[r] = parseInt(a[r + 1]);
+                    n = parseFloat(a[4])
+                } else if (a = e.match(/^rgba?\(\s*([+-]?[\d\.]+)\%\s*,\s*([+-]?[\d\.]+)\%\s*,\s*([+-]?[\d\.]+)\%\s*(?:,\s*([+-]?[\d\.]+)\s*)?\)$/i)) {
+                    for (r = 0; r < t.length; r++) t[r] = Math.round(2.55 * parseFloat(a[r + 1]));
+                    n = parseFloat(a[4])
+                } else if (a = e.match(/(\w+)/)) {
+                    if ("transparent" == a[1]) return [0, 0, 0, 0];
+                    if (!(t = c[a[1]])) return
                 }
                 for (r = 0; r < t.length; r++) t[r] = u(t[r], 0, 255);
-                return a = a || 0 == a ? u(a, 0, 1) : 1, t[3] = a, t
+                return n = n || 0 == n ? u(n, 0, 1) : 1, t[3] = n, t
             }
         }
 
@@ -11692,8 +11714,8 @@ webpackJsonp([35], {
             if (e) {
                 var t = e.match(/^hsla?\(\s*([+-]?\d+)(?:deg)?\s*,\s*([+-]?[\d\.]+)%\s*,\s*([+-]?[\d\.]+)%\s*(?:,\s*([+-]?[\d\.]+)\s*)?\)/);
                 if (t) {
-                    var a = parseFloat(t[4]);
-                    return [u(parseInt(t[1]), 0, 360), u(parseFloat(t[2]), 0, 100), u(parseFloat(t[3]), 0, 100), u(isNaN(a) ? 1 : a, 0, 1)]
+                    var n = parseFloat(t[4]);
+                    return [u(parseInt(t[1]), 0, 360), u(parseFloat(t[2]), 0, 100), u(parseFloat(t[3]), 0, 100), u(isNaN(n) ? 1 : n, 0, 1)]
                 }
             }
         }
@@ -11702,8 +11724,8 @@ webpackJsonp([35], {
             if (e) {
                 var t = e.match(/^hwb\(\s*([+-]?\d+)(?:deg)?\s*,\s*([+-]?[\d\.]+)%\s*,\s*([+-]?[\d\.]+)%\s*(?:,\s*([+-]?[\d\.]+)\s*)?\)/);
                 if (t) {
-                    var a = parseFloat(t[4]);
-                    return [u(parseInt(t[1]), 0, 360), u(parseFloat(t[2]), 0, 100), u(parseFloat(t[3]), 0, 100), u(isNaN(a) ? 1 : a, 0, 1)]
+                    var n = parseFloat(t[4]);
+                    return [u(parseInt(t[1]), 0, 360), u(parseFloat(t[2]), 0, 100), u(parseFloat(t[3]), 0, 100), u(isNaN(n) ? 1 : n, 0, 1)]
                 }
             }
         }
@@ -11720,20 +11742,20 @@ webpackJsonp([35], {
             return void 0 === t && (t = void 0 !== e[3] ? e[3] : 1), "hsla(" + e[0] + ", " + e[1] + "%, " + e[2] + "%, " + t + ")"
         }
 
-        function u(e, t, a) {
-            return Math.min(Math.max(t, e), a)
+        function u(e, t, n) {
+            return Math.min(Math.max(t, e), n)
         }
 
         function l(e) {
             var t = e.toString(16).toUpperCase();
             return t.length < 2 ? "0" + t : t
         }
-        var c = a("72Lu");
+        var c = n("72Lu");
         e.exports = {
-            getRgba: n,
+            getRgba: a,
             getHsla: r,
             getRgb: function(e) {
-                var t = n(e);
+                var t = a(e);
                 return t && t.slice(0, 3)
             },
             getHsl: function(e) {
@@ -11742,7 +11764,7 @@ webpackJsonp([35], {
             },
             getHwb: i,
             getAlpha: function(e) {
-                var t = n(e);
+                var t = a(e);
                 return t ? t[3] : (t = r(e)) ? t[3] : (t = i(e)) ? t[3] : void 0
             },
             hexString: function(e) {
@@ -11770,29 +11792,29 @@ webpackJsonp([35], {
         var h = {};
         for (var m in c) h[c[m]] = m
     },
-    aqvp: function(e, t, a) {
+    aqvp: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
 
-            function t(e, t, a) {
-                var n = e + " ";
-                switch (a) {
+            function t(e, t, n) {
+                var a = e + " ";
+                switch (n) {
                     case "m":
                         return t ? "jedna minuta" : "jedne minute";
                     case "mm":
-                        return n += 1 === e ? "minuta" : 2 === e || 3 === e || 4 === e ? "minute" : "minuta";
+                        return a += 1 === e ? "minuta" : 2 === e || 3 === e || 4 === e ? "minute" : "minuta";
                     case "h":
                         return t ? "jedan sat" : "jednog sata";
                     case "hh":
-                        return n += 1 === e ? "sat" : 2 === e || 3 === e || 4 === e ? "sata" : "sati";
+                        return a += 1 === e ? "sat" : 2 === e || 3 === e || 4 === e ? "sata" : "sati";
                     case "dd":
-                        return n += 1 === e ? "dan" : "dana";
+                        return a += 1 === e ? "dan" : "dana";
                     case "MM":
-                        return n += 1 === e ? "mjesec" : 2 === e || 3 === e || 4 === e ? "mjeseca" : "mjeseci";
+                        return a += 1 === e ? "mjesec" : 2 === e || 3 === e || 4 === e ? "mjeseca" : "mjeseci";
                     case "yy":
-                        return n += 1 === e ? "godina" : 2 === e || 3 === e || 4 === e ? "godine" : "godina"
+                        return a += 1 === e ? "godina" : 2 === e || 3 === e || 4 === e ? "godine" : "godina"
                 }
             }
             return e.defineLocale("bs", {
@@ -11870,17 +11892,17 @@ webpackJsonp([35], {
             })
         })
     },
-    b7g8: function(e, t, a) {
-        var n = a("xA5w");
+    b7g8: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e) {
-            var t = n(e).getFullYear();
+            var t = a(e).getFullYear();
             return t % 400 == 0 || t % 4 == 0 && t % 100 != 0
         }
     },
-    b9IH: function(e, t, a) {
+    b9IH: function(e, t, n) {
         "use strict";
 
-        function n(e, t) {
+        function a(e, t) {
             requestAnimationFrame(function() {
                 e.scrollIntoView(t)
             })
@@ -11896,18 +11918,18 @@ webpackJsonp([35], {
             if (e) {
                 var t = r(e);
                 if (t) {
-                    var a = e.getBoundingClientRect(),
+                    var n = e.getBoundingClientRect(),
                         o = t.getBoundingClientRect();
-                    a.bottom > o.bottom && n(e, s), a.top < o.top && n(e, i)
+                    n.bottom > o.bottom && a(e, s), n.top < o.top && a(e, i)
                 }
             }
         };
         var i = !0,
             s = !1
     },
-    bXQP: function(e, t, a) {
+    bXQP: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("fr-ca", {
@@ -11967,30 +11989,30 @@ webpackJsonp([35], {
             })
         })
     },
-    balU: function(e, t, a) {
-        var n = a("xA5w"),
-            r = a("Mdww");
+    balU: function(e, t, n) {
+        var a = n("xA5w"),
+            r = n("Mdww");
         e.exports = function(e, t) {
-            var a = n(e),
+            var n = a(e),
                 i = Number(t),
-                s = a.getFullYear(),
-                o = a.getDate(),
+                s = n.getFullYear(),
+                o = n.getDate(),
                 d = new Date(0);
             d.setFullYear(s, i, 15), d.setHours(0, 0, 0, 0);
             var u = r(d);
-            return a.setMonth(i, Math.min(o, u)), a
+            return n.setMonth(i, Math.min(o, u)), n
         }
     },
-    bbdo: function(e, t, a) {
-        var n = a("xA5w");
+    bbdo: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e) {
-            var t = n(e);
+            var t = a(e);
             return t.setMinutes(59, 59, 999), t
         }
     },
-    c1x4: function(e, t, a) {
+    c1x4: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -12006,9 +12028,9 @@ webpackJsonp([35], {
                 correctGrammaticalCase: function(e, t) {
                     return 1 === e ? t[0] : e >= 2 && e <= 4 ? t[1] : t[2]
                 },
-                translate: function(e, a, n) {
-                    var r = t.words[n];
-                    return 1 === n.length ? a ? r[0] : r[1] : e + " " + t.correctGrammaticalCase(e, r)
+                translate: function(e, n, a) {
+                    var r = t.words[a];
+                    return 1 === a.length ? n ? r[0] : r[1] : e + " " + t.correctGrammaticalCase(e, r)
                 }
             };
             return e.defineLocale("sr-cyrl", {
@@ -12075,35 +12097,35 @@ webpackJsonp([35], {
             })
         })
     },
-    "cA+x": function(e, t, a) {
-        var n = a("Jvcu");
+    "cA+x": function(e, t, n) {
+        var a = n("Jvcu");
         e.exports = function(e, t) {
-            var a = Number(t);
-            return n(e, -a)
+            var n = Number(t);
+            return a(e, -n)
         }
     },
-    cONr: function(e, t, a) {
-        var n = a("f+sD");
+    cONr: function(e, t, n) {
+        var a = n("f+sD");
         e.exports = function(e) {
-            return n(new Date, e)
+            return a(new Date, e)
         }
     },
-    cw9o: function(e, t, a) {
-        var n = a("7EGB");
+    cw9o: function(e, t, n) {
+        var a = n("7EGB");
         e.exports = function(e, t) {
-            var a = Number(t);
-            return n(e, -a)
+            var n = Number(t);
+            return a(e, -n)
         }
     },
-    cwv1: function(e, t, a) {
-        var n = a("xA5w");
+    cwv1: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e) {
-            return n(e).getTime()
+            return a(e).getTime()
         }
     },
-    "d1/4": function(e, t, a) {
+    "d1/4": function(e, t, n) {
         "use strict";
-        var n = a("3n1n"),
+        var a = n("3n1n"),
             r = {
                 linear: function(e) {
                     return e
@@ -12173,21 +12195,21 @@ webpackJsonp([35], {
                 },
                 easeInElastic: function(e) {
                     var t = 1.70158,
-                        a = 0,
-                        n = 1;
-                    return 0 === e ? 0 : 1 === e ? 1 : (a || (a = .3), n < 1 ? (n = 1, t = a / 4) : t = a / (2 * Math.PI) * Math.asin(1 / n), -n * Math.pow(2, 10 * (e -= 1)) * Math.sin((e - t) * (2 * Math.PI) / a))
+                        n = 0,
+                        a = 1;
+                    return 0 === e ? 0 : 1 === e ? 1 : (n || (n = .3), a < 1 ? (a = 1, t = n / 4) : t = n / (2 * Math.PI) * Math.asin(1 / a), -a * Math.pow(2, 10 * (e -= 1)) * Math.sin((e - t) * (2 * Math.PI) / n))
                 },
                 easeOutElastic: function(e) {
                     var t = 1.70158,
-                        a = 0,
-                        n = 1;
-                    return 0 === e ? 0 : 1 === e ? 1 : (a || (a = .3), n < 1 ? (n = 1, t = a / 4) : t = a / (2 * Math.PI) * Math.asin(1 / n), n * Math.pow(2, -10 * e) * Math.sin((e - t) * (2 * Math.PI) / a) + 1)
+                        n = 0,
+                        a = 1;
+                    return 0 === e ? 0 : 1 === e ? 1 : (n || (n = .3), a < 1 ? (a = 1, t = n / 4) : t = n / (2 * Math.PI) * Math.asin(1 / a), a * Math.pow(2, -10 * e) * Math.sin((e - t) * (2 * Math.PI) / n) + 1)
                 },
                 easeInOutElastic: function(e) {
                     var t = 1.70158,
-                        a = 0,
-                        n = 1;
-                    return 0 === e ? 0 : 2 == (e /= .5) ? 1 : (a || (a = .45), n < 1 ? (n = 1, t = a / 4) : t = a / (2 * Math.PI) * Math.asin(1 / n), e < 1 ? n * Math.pow(2, 10 * (e -= 1)) * Math.sin((e - t) * (2 * Math.PI) / a) * -.5 : n * Math.pow(2, -10 * (e -= 1)) * Math.sin((e - t) * (2 * Math.PI) / a) * .5 + 1)
+                        n = 0,
+                        a = 1;
+                    return 0 === e ? 0 : 2 == (e /= .5) ? 1 : (n || (n = .45), a < 1 ? (a = 1, t = n / 4) : t = n / (2 * Math.PI) * Math.asin(1 / a), e < 1 ? a * Math.pow(2, 10 * (e -= 1)) * Math.sin((e - t) * (2 * Math.PI) / n) * -.5 : a * Math.pow(2, -10 * (e -= 1)) * Math.sin((e - t) * (2 * Math.PI) / n) * .5 + 1)
                 },
                 easeInBack: function(e) {
                     return e * e * (2.70158 * e - 1.70158)
@@ -12211,18 +12233,18 @@ webpackJsonp([35], {
             };
         e.exports = {
             effects: r
-        }, n.easingEffects = r
+        }, a.easingEffects = r
     },
-    dH3X: function(e, t, a) {
-        var n = a("607n");
+    dH3X: function(e, t, n) {
+        var a = n("607n");
         e.exports = function(e) {
-            if (n(e)) return !isNaN(e);
+            if (a(e)) return !isNaN(e);
             throw new TypeError(toString.call(e) + " is not an instance of Date")
         }
     },
-    dURR: function(e, t, a) {
+    dURR: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("ar-ma", {
@@ -12270,17 +12292,17 @@ webpackJsonp([35], {
             })
         })
     },
-    danj: function(e, t, a) {
-        var n = a("xA5w");
+    danj: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e, t) {
-            var a = n(e),
+            var n = a(e),
                 r = Number(t);
-            return a.setMinutes(r), a
+            return n.setMinutes(r), n
         }
     },
-    dyB6: function(e, t, a) {
+    dyB6: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("en-nz", {
@@ -12332,15 +12354,15 @@ webpackJsonp([35], {
             })
         })
     },
-    "e/EH": function(e, t, a) {
-        var n = a("xA5w");
+    "e/EH": function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e) {
-            return 3 === n(e).getDay()
+            return 3 === a(e).getDay()
         }
     },
-    "e/KL": function(e, t, a) {
+    "e/KL": function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("x-pseudo", {
@@ -12393,9 +12415,9 @@ webpackJsonp([35], {
             })
         })
     },
-    "eBB/": function(e, t, a) {
+    "eBB/": function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("ko", {
@@ -12446,21 +12468,21 @@ webpackJsonp([35], {
                 isPM: function(e) {
                     return "오후" === e
                 },
-                meridiem: function(e, t, a) {
+                meridiem: function(e, t, n) {
                     return e < 12 ? "오전" : "오후"
                 }
             })
         })
     },
-    eCZG: function(e, t, a) {
-        var n = a("xA5w");
+    eCZG: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e) {
-            return n(e).getTime() < (new Date).getTime()
+            return a(e).getTime() < (new Date).getTime()
         }
     },
-    eHwN: function(e, t, a) {
+    eHwN: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -12525,14 +12547,14 @@ webpackJsonp([35], {
                 isPM: function(e) {
                     return /^(gündüz|axşam)$/.test(e)
                 },
-                meridiem: function(e, t, a) {
+                meridiem: function(e, t, n) {
                     return e < 4 ? "gecə" : e < 12 ? "səhər" : e < 17 ? "gündüz" : "axşam"
                 },
                 dayOfMonthOrdinalParse: /\d{1,2}-(ıncı|inci|nci|üncü|ncı|uncu)/,
                 ordinal: function(e) {
                     if (0 === e) return e + "-ıncı";
-                    var a = e % 10;
-                    return e + (t[a] || t[e % 100 - a] || t[e >= 100 ? 100 : null])
+                    var n = e % 10;
+                    return e + (t[n] || t[e % 100 - n] || t[e >= 100 ? 100 : null])
                 },
                 week: {
                     dow: 1,
@@ -12541,23 +12563,23 @@ webpackJsonp([35], {
             })
         })
     },
-    eKpK: function(e, t, a) {
-        var n = a("xA5w");
+    eKpK: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e) {
-            return n(e).getSeconds()
+            return a(e).getSeconds()
         }
     },
-    "f+sD": function(e, t, a) {
-        var n = a("xA5w");
+    "f+sD": function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e, t) {
-            var a = n(e),
-                r = n(t);
-            return a.getFullYear() === r.getFullYear() && a.getMonth() === r.getMonth()
+            var n = a(e),
+                r = a(t);
+            return n.getFullYear() === r.getFullYear() && n.getMonth() === r.getMonth()
         }
     },
-    f4W3: function(e, t, a) {
+    f4W3: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -12573,9 +12595,9 @@ webpackJsonp([35], {
                 correctGrammaticalCase: function(e, t) {
                     return 1 === e ? t[0] : e >= 2 && e <= 4 ? t[1] : t[2]
                 },
-                translate: function(e, a, n) {
-                    var r = t.words[n];
-                    return 1 === n.length ? a ? r[0] : r[1] : e + " " + t.correctGrammaticalCase(e, r)
+                translate: function(e, n, a) {
+                    var r = t.words[a];
+                    return 1 === a.length ? n ? r[0] : r[1] : e + " " + t.correctGrammaticalCase(e, r)
                 }
             };
             return e.defineLocale("sr", {
@@ -12642,45 +12664,45 @@ webpackJsonp([35], {
             })
         })
     },
-    f4ga: function(e, t, a) {
-        var n = a("WNGz");
+    f4ga: function(e, t, n) {
+        var a = n("WNGz");
         e.exports = function(e, t) {
-            var a = n(e),
-                r = n(t);
-            return a.getTime() === r.getTime()
+            var n = a(e),
+                r = a(t);
+            return n.getTime() === r.getTime()
         }
     },
-    fK0I: function(e, t, a) {
-        var n = a("xA5w");
+    fK0I: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e, t) {
-            var a = n(e),
-                r = n(t);
-            return a.getTime() > r.getTime()
+            var n = a(e),
+                r = a(t);
+            return n.getTime() > r.getTime()
         }
     },
-    fUo1: function(e, t, a) {
-        var n = a("iRXW"),
-            r = a("7EGB"),
+    fUo1: function(e, t, n) {
+        var a = n("iRXW"),
+            r = n("7EGB"),
             i = 6048e5;
         e.exports = function(e) {
-            var t = n(e),
-                a = n(r(t, 60)).valueOf() - t.valueOf();
-            return Math.round(a / i)
+            var t = a(e),
+                n = a(r(t, 60)).valueOf() - t.valueOf();
+            return Math.round(n / i)
         }
     },
-    fW1y: function(e, t, a) {
+    fW1y: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             var t = ["جنوري", "فيبروري", "مارچ", "اپريل", "مئي", "جون", "جولاءِ", "آگسٽ", "سيپٽمبر", "آڪٽوبر", "نومبر", "ڊسمبر"],
-                a = ["آچر", "سومر", "اڱارو", "اربع", "خميس", "جمع", "ڇنڇر"];
+                n = ["آچر", "سومر", "اڱارو", "اربع", "خميس", "جمع", "ڇنڇر"];
             return e.defineLocale("sd", {
                 months: t,
                 monthsShort: t,
-                weekdays: a,
-                weekdaysShort: a,
-                weekdaysMin: a,
+                weekdays: n,
+                weekdaysShort: n,
+                weekdaysMin: n,
                 longDateFormat: {
                     LT: "HH:mm",
                     LTS: "HH:mm:ss",
@@ -12693,7 +12715,7 @@ webpackJsonp([35], {
                 isPM: function(e) {
                     return "شام" === e
                 },
-                meridiem: function(e, t, a) {
+                meridiem: function(e, t, n) {
                     return e < 12 ? "صبح" : "شام"
                 },
                 calendar: {
@@ -12732,24 +12754,24 @@ webpackJsonp([35], {
             })
         })
     },
-    fo7E: function(e, t, a) {
-        var n = a("w4by");
+    fo7E: function(e, t, n) {
+        var a = n("w4by");
         e.exports = function(e, t) {
-            var a = Number(t);
-            return n(e, -a)
+            var n = Number(t);
+            return a(e, -n)
         }
     },
-    g7KF: function(e, t, a) {
+    g7KF: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             var t = "jan._feb._mrt._apr._mai_jun._jul._aug._sep._okt._nov._des.".split("_"),
-                a = "jan_feb_mrt_apr_mai_jun_jul_aug_sep_okt_nov_des".split("_");
+                n = "jan_feb_mrt_apr_mai_jun_jul_aug_sep_okt_nov_des".split("_");
             return e.defineLocale("fy", {
                 months: "jannewaris_febrewaris_maart_april_maaie_juny_july_augustus_septimber_oktober_novimber_desimber".split("_"),
-                monthsShort: function(e, n) {
-                    return e ? /-MMM-/.test(n) ? a[e.month()] : t[e.month()] : t
+                monthsShort: function(e, a) {
+                    return e ? /-MMM-/.test(a) ? n[e.month()] : t[e.month()] : t
                 },
                 monthsParseExact: !0,
                 weekdays: "snein_moandei_tiisdei_woansdei_tongersdei_freed_sneon".split("_"),
@@ -12798,37 +12820,37 @@ webpackJsonp([35], {
             })
         })
     },
-    gAt4: function(e, t, a) {
-        var n = a("xA5w"),
-            r = a("nizW"),
-            i = a("NKE6");
+    gAt4: function(e, t, n) {
+        var a = n("xA5w"),
+            r = n("nizW"),
+            i = n("NKE6");
         e.exports = function(e, t) {
-            var a = n(e),
-                s = n(t),
-                o = i(a, s),
-                d = Math.abs(r(a, s));
-            return a.setDate(a.getDate() - o * d), o * (d - (i(a, s) === -o))
+            var n = a(e),
+                s = a(t),
+                o = i(n, s),
+                d = Math.abs(r(n, s));
+            return n.setDate(n.getDate() - o * d), o * (d - (i(n, s) === -o))
         }
     },
-    gCP2: function(e, t, a) {
+    gCP2: function(e, t, n) {
         "use strict";
         e.exports = function(e) {
-            e.PolarArea = function(t, a) {
-                return a.type = "polarArea", new e(t, a)
+            e.PolarArea = function(t, n) {
+                return n.type = "polarArea", new e(t, n)
             }
         }
     },
-    gDPd: function(e, t, a) {
-        var n = a("xA5w");
+    gDPd: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e, t) {
-            var a = n(e),
-                r = n(t);
-            return a.getTime() < r.getTime()
+            var n = a(e),
+                r = a(t);
+            return n.getTime() < r.getTime()
         }
     },
-    gEQe: function(e, t, a) {
+    gEQe: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -12843,7 +12865,7 @@ webpackJsonp([35], {
                     9: "೯",
                     0: "೦"
                 },
-                a = {
+                n = {
                     "೧": "1",
                     "೨": "2",
                     "೩": "3",
@@ -12895,7 +12917,7 @@ webpackJsonp([35], {
                 },
                 preparse: function(e) {
                     return e.replace(/[೧೨೩೪೫೬೭೮೯೦]/g, function(e) {
-                        return a[e]
+                        return n[e]
                     })
                 },
                 postformat: function(e) {
@@ -12907,7 +12929,7 @@ webpackJsonp([35], {
                 meridiemHour: function(e, t) {
                     return 12 === e && (e = 0), "ರಾತ್ರಿ" === t ? e < 4 ? e : e + 12 : "ಬೆಳಿಗ್ಗೆ" === t ? e : "ಮಧ್ಯಾಹ್ನ" === t ? e >= 10 ? e : e + 12 : "ಸಂಜೆ" === t ? e + 12 : void 0
                 },
-                meridiem: function(e, t, a) {
+                meridiem: function(e, t, n) {
                     return e < 4 ? "ರಾತ್ರಿ" : e < 10 ? "ಬೆಳಿಗ್ಗೆ" : e < 17 ? "ಮಧ್ಯಾಹ್ನ" : e < 20 ? "ಸಂಜೆ" : "ರಾತ್ರಿ"
                 },
                 dayOfMonthOrdinalParse: /\d{1,2}(ನೇ)/,
@@ -12921,9 +12943,9 @@ webpackJsonp([35], {
             })
         })
     },
-    gEU3: function(e, t, a) {
+    gEU3: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("mi", {
@@ -12980,15 +13002,15 @@ webpackJsonp([35], {
         e.exports = function() {
             var e = new Date,
                 t = e.getFullYear(),
-                a = e.getMonth(),
-                n = e.getDate(),
+                n = e.getMonth(),
+                a = e.getDate(),
                 r = new Date(0);
-            return r.setFullYear(t, a, n + 1), r.setHours(0, 0, 0, 0), r
+            return r.setFullYear(t, n, a + 1), r.setHours(0, 0, 0, 0), r
         }
     },
-    gUgh: function(e, t, a) {
+    gUgh: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("tet", {
@@ -13040,29 +13062,29 @@ webpackJsonp([35], {
             })
         })
     },
-    ghsk: function(e, t, a) {
+    ghsk: function(e, t, n) {
         "use strict";
-        var n = a("k7DW"),
-            r = a("iO9N"),
-            i = a("KC8c"),
-            s = a("2xI1");
+        var a = n("k7DW"),
+            r = n("iO9N"),
+            i = n("KC8c"),
+            s = n("2xI1");
         e.exports = function(e) {
             function t(e) {
                 return "top" === e || "bottom" === e
             }
-            var a = e.plugins;
+            var n = e.plugins;
             e.types = {}, e.instances = {}, e.controllers = {}, r.extend(e.prototype, {
-                construct: function(t, a) {
+                construct: function(t, n) {
                     var i = this;
-                    a = function(e) {
+                    n = function(e) {
                         var t = (e = e || {}).data = e.data || {};
-                        return t.datasets = t.datasets || [], t.labels = t.labels || [], e.options = r.configMerge(n.global, n[e.type], e.options || {}), e
-                    }(a);
-                    var o = s.acquireContext(t, a),
+                        return t.datasets = t.datasets || [], t.labels = t.labels || [], e.options = r.configMerge(a.global, a[e.type], e.options || {}), e
+                    }(n);
+                    var o = s.acquireContext(t, n),
                         d = o && o.canvas,
                         u = d && d.height,
                         l = d && d.width;
-                    i.id = r.uid(), i.ctx = o, i.canvas = d, i.config = a, i.width = l, i.height = u, i.aspectRatio = u ? l / u : null, i.options = a.options, i._bufferedRender = !1, i.chart = i, i.controller = i, e.instances[i.id] = i, Object.defineProperty(i, "data", {
+                    i.id = r.uid(), i.ctx = o, i.canvas = d, i.config = n, i.width = l, i.height = u, i.aspectRatio = u ? l / u : null, i.options = n.options, i._bufferedRender = !1, i.chart = i, i.controller = i, e.instances[i.id] = i, Object.defineProperty(i, "data", {
                         get: function() {
                             return i.config.data
                         },
@@ -13072,7 +13094,7 @@ webpackJsonp([35], {
                     }), o && d ? (i.initialize(), i.update()) : console.error("Failed to create chart: can't acquire context from the given item")
                 },
                 initialize: function() {
-                    return a.notify(this, "beforeInit"), r.retinaScale(this, this.options.devicePixelRatio), this.bindEvents(), this.options.responsive && this.resize(!0), this.ensureScalesHaveIDs(), this.buildScales(), this.initToolTip(), a.notify(this, "afterInit"), this
+                    return n.notify(this, "beforeInit"), r.retinaScale(this, this.options.devicePixelRatio), this.bindEvents(), this.options.responsive && this.resize(!0), this.ensureScalesHaveIDs(), this.buildScales(), this.initToolTip(), n.notify(this, "afterInit"), this
                 },
                 clear: function() {
                     return r.canvas.clear(this), this
@@ -13082,85 +13104,85 @@ webpackJsonp([35], {
                 },
                 resize: function(e) {
                     var t = this.options,
-                        n = this.canvas,
+                        a = this.canvas,
                         i = t.maintainAspectRatio && this.aspectRatio || null,
-                        s = Math.max(0, Math.floor(r.getMaximumWidth(n))),
-                        o = Math.max(0, Math.floor(i ? s / i : r.getMaximumHeight(n)));
-                    if ((this.width !== s || this.height !== o) && (n.width = this.width = s, n.height = this.height = o, n.style.width = s + "px", n.style.height = o + "px", r.retinaScale(this, t.devicePixelRatio), !e)) {
+                        s = Math.max(0, Math.floor(r.getMaximumWidth(a))),
+                        o = Math.max(0, Math.floor(i ? s / i : r.getMaximumHeight(a)));
+                    if ((this.width !== s || this.height !== o) && (a.width = this.width = s, a.height = this.height = o, a.style.width = s + "px", a.style.height = o + "px", r.retinaScale(this, t.devicePixelRatio), !e)) {
                         var d = {
                             width: s,
                             height: o
                         };
-                        a.notify(this, "resize", [d]), this.options.onResize && this.options.onResize(this, d), this.stop(), this.update(this.options.responsiveAnimationDuration)
+                        n.notify(this, "resize", [d]), this.options.onResize && this.options.onResize(this, d), this.stop(), this.update(this.options.responsiveAnimationDuration)
                     }
                 },
                 ensureScalesHaveIDs: function() {
                     var e = this.options,
                         t = e.scales || {},
-                        a = e.scale;
+                        n = e.scale;
                     r.each(t.xAxes, function(e, t) {
                         e.id = e.id || "x-axis-" + t
                     }), r.each(t.yAxes, function(e, t) {
                         e.id = e.id || "y-axis-" + t
-                    }), a && (a.id = a.id || "scale")
+                    }), n && (n.id = n.id || "scale")
                 },
                 buildScales: function() {
-                    var a = this,
-                        n = a.options,
-                        i = a.scales = {},
+                    var n = this,
+                        a = n.options,
+                        i = n.scales = {},
                         s = [];
-                    n.scales && (s = s.concat((n.scales.xAxes || []).map(function(e) {
+                    a.scales && (s = s.concat((a.scales.xAxes || []).map(function(e) {
                         return {
                             options: e,
                             dtype: "category",
                             dposition: "bottom"
                         }
-                    }), (n.scales.yAxes || []).map(function(e) {
+                    }), (a.scales.yAxes || []).map(function(e) {
                         return {
                             options: e,
                             dtype: "linear",
                             dposition: "left"
                         }
-                    }))), n.scale && s.push({
-                        options: n.scale,
+                    }))), a.scale && s.push({
+                        options: a.scale,
                         dtype: "radialLinear",
                         isDefault: !0,
                         dposition: "chartArea"
-                    }), r.each(s, function(n) {
-                        var s = n.options,
-                            o = r.valueOrDefault(s.type, n.dtype),
+                    }), r.each(s, function(a) {
+                        var s = a.options,
+                            o = r.valueOrDefault(s.type, a.dtype),
                             d = e.scaleService.getScaleConstructor(o);
                         if (d) {
-                            t(s.position) !== t(n.dposition) && (s.position = n.dposition);
+                            t(s.position) !== t(a.dposition) && (s.position = a.dposition);
                             var u = new d({
                                 id: s.id,
                                 options: s,
-                                ctx: a.ctx,
-                                chart: a
+                                ctx: n.ctx,
+                                chart: n
                             });
-                            i[u.id] = u, u.mergeTicksOptions(), n.isDefault && (a.scale = u)
+                            i[u.id] = u, u.mergeTicksOptions(), a.isDefault && (n.scale = u)
                         }
                     }), e.scaleService.addScalesToLayout(this)
                 },
                 buildOrUpdateControllers: function() {
                     var t = this,
-                        a = [],
-                        n = [];
+                        n = [],
+                        a = [];
                     return r.each(t.data.datasets, function(r, i) {
                         var s = t.getDatasetMeta(i),
                             o = r.type || t.config.type;
-                        if (s.type && s.type !== o && (t.destroyDatasetMeta(i), s = t.getDatasetMeta(i)), s.type = o, a.push(s.type), s.controller) s.controller.updateIndex(i);
+                        if (s.type && s.type !== o && (t.destroyDatasetMeta(i), s = t.getDatasetMeta(i)), s.type = o, n.push(s.type), s.controller) s.controller.updateIndex(i);
                         else {
                             var d = e.controllers[s.type];
                             if (void 0 === d) throw new Error('"' + s.type + '" is not a chart type.');
-                            s.controller = new d(t, i), n.push(s.controller)
+                            s.controller = new d(t, i), a.push(s.controller)
                         }
-                    }, t), n
+                    }, t), a
                 },
                 resetElements: function() {
                     var e = this;
-                    r.each(e.data.datasets, function(t, a) {
-                        e.getDatasetMeta(a).controller.reset()
+                    r.each(e.data.datasets, function(t, n) {
+                        e.getDatasetMeta(n).controller.reset()
                     }, e)
                 },
                 reset: function() {
@@ -13176,14 +13198,14 @@ webpackJsonp([35], {
                             t.scale ? e.scale.options = t.scale : t.scales && t.scales.xAxes.concat(t.scales.yAxes).forEach(function(t) {
                                 e.scales[t.id].options = t
                             }), e.tooltip._options = t.tooltips
-                        }(t), !1 !== a.notify(t, "beforeUpdate")) {
+                        }(t), !1 !== n.notify(t, "beforeUpdate")) {
                         t.tooltip._data = t.data;
-                        var n = t.buildOrUpdateControllers();
-                        r.each(t.data.datasets, function(e, a) {
-                            t.getDatasetMeta(a).controller.buildOrUpdateElements()
-                        }, t), t.updateLayout(), r.each(n, function(e) {
+                        var a = t.buildOrUpdateControllers();
+                        r.each(t.data.datasets, function(e, n) {
+                            t.getDatasetMeta(n).controller.buildOrUpdateElements()
+                        }, t), t.updateLayout(), r.each(a, function(e) {
                             e.reset()
-                        }), t.updateDatasets(), a.notify(t, "afterUpdate"), t._bufferedRender ? t._bufferedRequest = {
+                        }), t.updateDatasets(), n.notify(t, "afterUpdate"), t._bufferedRender ? t._bufferedRequest = {
                             duration: e.duration,
                             easing: e.easing,
                             lazy: e.lazy
@@ -13191,80 +13213,80 @@ webpackJsonp([35], {
                     }
                 },
                 updateLayout: function() {
-                    !1 !== a.notify(this, "beforeLayout") && (e.layoutService.update(this, this.width, this.height), a.notify(this, "afterScaleUpdate"), a.notify(this, "afterLayout"))
+                    !1 !== n.notify(this, "beforeLayout") && (e.layoutService.update(this, this.width, this.height), n.notify(this, "afterScaleUpdate"), n.notify(this, "afterLayout"))
                 },
                 updateDatasets: function() {
-                    if (!1 !== a.notify(this, "beforeDatasetsUpdate")) {
+                    if (!1 !== n.notify(this, "beforeDatasetsUpdate")) {
                         for (var e = 0, t = this.data.datasets.length; e < t; ++e) this.updateDataset(e);
-                        a.notify(this, "afterDatasetsUpdate")
+                        n.notify(this, "afterDatasetsUpdate")
                     }
                 },
                 updateDataset: function(e) {
                     var t = this.getDatasetMeta(e),
-                        n = {
+                        a = {
                             meta: t,
                             index: e
                         };
-                    !1 !== a.notify(this, "beforeDatasetUpdate", [n]) && (t.controller.update(), a.notify(this, "afterDatasetUpdate", [n]))
+                    !1 !== n.notify(this, "beforeDatasetUpdate", [a]) && (t.controller.update(), n.notify(this, "afterDatasetUpdate", [a]))
                 },
                 render: function(t) {
-                    var n = this;
+                    var a = this;
                     t && "object" == typeof t || (t = {
                         duration: t,
                         lazy: arguments[1]
                     });
                     var i = t.duration,
                         s = t.lazy;
-                    if (!1 !== a.notify(n, "beforeRender")) {
-                        var o = n.options.animation,
+                    if (!1 !== n.notify(a, "beforeRender")) {
+                        var o = a.options.animation,
                             d = function(e) {
-                                a.notify(n, "afterRender"), r.callback(o && o.onComplete, [e], n)
+                                n.notify(a, "afterRender"), r.callback(o && o.onComplete, [e], a)
                             };
                         if (o && (void 0 !== i && 0 !== i || void 0 === i && 0 !== o.duration)) {
                             var u = new e.Animation({
                                 numSteps: (i || o.duration) / 16.66,
                                 easing: t.easing || o.easing,
                                 render: function(e, t) {
-                                    var a = r.easing.effects[t.easing],
-                                        n = t.currentStep,
-                                        i = n / t.numSteps;
-                                    e.draw(a(i), i, n)
+                                    var n = r.easing.effects[t.easing],
+                                        a = t.currentStep,
+                                        i = a / t.numSteps;
+                                    e.draw(n(i), i, a)
                                 },
                                 onAnimationProgress: o.onProgress,
                                 onAnimationComplete: d
                             });
-                            e.animationService.addAnimation(n, u, i, s)
-                        } else n.draw(), d(new e.Animation({
+                            e.animationService.addAnimation(a, u, i, s)
+                        } else a.draw(), d(new e.Animation({
                             numSteps: 0,
-                            chart: n
+                            chart: a
                         }));
-                        return n
+                        return a
                     }
                 },
                 draw: function(e) {
                     var t = this;
-                    t.clear(), r.isNullOrUndef(e) && (e = 1), t.transition(e), !1 !== a.notify(t, "beforeDraw", [e]) && (r.each(t.boxes, function(e) {
+                    t.clear(), r.isNullOrUndef(e) && (e = 1), t.transition(e), !1 !== n.notify(t, "beforeDraw", [e]) && (r.each(t.boxes, function(e) {
                         e.draw(t.chartArea)
-                    }, t), t.scale && t.scale.draw(), t.drawDatasets(e), t.tooltip.draw(), a.notify(t, "afterDraw", [e]))
+                    }, t), t.scale && t.scale.draw(), t.drawDatasets(e), t.tooltip.draw(), n.notify(t, "afterDraw", [e]))
                 },
                 transition: function(e) {
-                    for (var t = 0, a = (this.data.datasets || []).length; t < a; ++t) this.isDatasetVisible(t) && this.getDatasetMeta(t).controller.transition(e);
+                    for (var t = 0, n = (this.data.datasets || []).length; t < n; ++t) this.isDatasetVisible(t) && this.getDatasetMeta(t).controller.transition(e);
                     this.tooltip.transition(e)
                 },
                 drawDatasets: function(e) {
-                    if (!1 !== a.notify(this, "beforeDatasetsDraw", [e])) {
+                    if (!1 !== n.notify(this, "beforeDatasetsDraw", [e])) {
                         for (var t = (this.data.datasets || []).length - 1; t >= 0; --t) this.isDatasetVisible(t) && this.drawDataset(t, e);
-                        a.notify(this, "afterDatasetsDraw", [e])
+                        n.notify(this, "afterDatasetsDraw", [e])
                     }
                 },
                 drawDataset: function(e, t) {
-                    var n = this.getDatasetMeta(e),
+                    var a = this.getDatasetMeta(e),
                         r = {
-                            meta: n,
+                            meta: a,
                             index: e,
                             easingValue: t
                         };
-                    !1 !== a.notify(this, "beforeDatasetDraw", [r]) && (n.controller.draw(t), a.notify(this, "afterDatasetDraw", [r]))
+                    !1 !== n.notify(this, "beforeDatasetDraw", [r]) && (a.controller.draw(t), n.notify(this, "afterDatasetDraw", [r]))
                 },
                 getElementAtEvent: function(e) {
                     return i.modes.single(this, e)
@@ -13279,9 +13301,9 @@ webpackJsonp([35], {
                         intersect: !0
                     })
                 },
-                getElementsAtEventForMode: function(e, t, a) {
-                    var n = i.modes[t];
-                    return "function" == typeof n ? n(this, e, a) : []
+                getElementsAtEventForMode: function(e, t, n) {
+                    var a = i.modes[t];
+                    return "function" == typeof a ? a(this, e, n) : []
                 },
                 getDatasetAtEvent: function(e) {
                     return i.modes.dataset(this, e, {
@@ -13291,8 +13313,8 @@ webpackJsonp([35], {
                 getDatasetMeta: function(e) {
                     var t = this.data.datasets[e];
                     t._meta || (t._meta = {});
-                    var a = t._meta[this.id];
-                    return a || (a = t._meta[this.id] = {
+                    var n = t._meta[this.id];
+                    return n || (n = t._meta[this.id] = {
                         type: null,
                         data: [],
                         dataset: null,
@@ -13300,10 +13322,10 @@ webpackJsonp([35], {
                         hidden: null,
                         xAxisID: null,
                         yAxisID: null
-                    }), a
+                    }), n
                 },
                 getVisibleDatasetCount: function() {
-                    for (var e = 0, t = 0, a = this.data.datasets.length; t < a; ++t) this.isDatasetVisible(t) && e++;
+                    for (var e = 0, t = 0, n = this.data.datasets.length; t < n; ++t) this.isDatasetVisible(t) && e++;
                     return e
                 },
                 isDatasetVisible: function(e) {
@@ -13315,14 +13337,14 @@ webpackJsonp([35], {
                 },
                 destroyDatasetMeta: function(e) {
                     var t = this.id,
-                        a = this.data.datasets[e],
-                        n = a._meta && a._meta[t];
-                    n && (n.controller.destroy(), delete a._meta[t])
+                        n = this.data.datasets[e],
+                        a = n._meta && n._meta[t];
+                    a && (a.controller.destroy(), delete n._meta[t])
                 },
                 destroy: function() {
-                    var t, n, i = this.canvas;
-                    for (this.stop(), t = 0, n = this.data.datasets.length; t < n; ++t) this.destroyDatasetMeta(t);
-                    i && (this.unbindEvents(), r.canvas.clear(this), s.releaseContext(this.ctx), this.canvas = null, this.ctx = null), a.notify(this, "destroy"), delete e.instances[this.id]
+                    var t, a, i = this.canvas;
+                    for (this.stop(), t = 0, a = this.data.datasets.length; t < a; ++t) this.destroyDatasetMeta(t);
+                    i && (this.unbindEvents(), r.canvas.clear(this), s.releaseContext(this.ctx), this.canvas = null, this.ctx = null), n.notify(this, "destroy"), delete e.instances[this.id]
                 },
                 toBase64Image: function() {
                     return this.canvas.toDataURL.apply(this.canvas, arguments)
@@ -13338,62 +13360,62 @@ webpackJsonp([35], {
                 bindEvents: function() {
                     var e = this,
                         t = e._listeners = {},
-                        a = function() {
+                        n = function() {
                             e.eventHandler.apply(e, arguments)
                         };
-                    r.each(e.options.events, function(n) {
-                        s.addEventListener(e, n, a), t[n] = a
-                    }), e.options.responsive && (a = function() {
+                    r.each(e.options.events, function(a) {
+                        s.addEventListener(e, a, n), t[a] = n
+                    }), e.options.responsive && (n = function() {
                         e.resize()
-                    }, s.addEventListener(e, "resize", a), t.resize = a)
+                    }, s.addEventListener(e, "resize", n), t.resize = n)
                 },
                 unbindEvents: function() {
                     var e = this,
                         t = e._listeners;
-                    t && (delete e._listeners, r.each(t, function(t, a) {
-                        s.removeEventListener(e, a, t)
+                    t && (delete e._listeners, r.each(t, function(t, n) {
+                        s.removeEventListener(e, n, t)
                     }))
                 },
-                updateHoverStyle: function(e, t, a) {
-                    var n, r, i, s = a ? "setHoverStyle" : "removeHoverStyle";
-                    for (r = 0, i = e.length; r < i; ++r)(n = e[r]) && this.getDatasetMeta(n._datasetIndex).controller[s](n)
+                updateHoverStyle: function(e, t, n) {
+                    var a, r, i, s = n ? "setHoverStyle" : "removeHoverStyle";
+                    for (r = 0, i = e.length; r < i; ++r)(a = e[r]) && this.getDatasetMeta(a._datasetIndex).controller[s](a)
                 },
                 eventHandler: function(e) {
                     var t = this.tooltip;
-                    if (!1 !== a.notify(this, "beforeEvent", [e])) {
+                    if (!1 !== n.notify(this, "beforeEvent", [e])) {
                         this._bufferedRender = !0, this._bufferedRequest = null;
-                        var n = this.handleEvent(e);
-                        n |= t && t.handleEvent(e), a.notify(this, "afterEvent", [e]);
+                        var a = this.handleEvent(e);
+                        a |= t && t.handleEvent(e), n.notify(this, "afterEvent", [e]);
                         var r = this._bufferedRequest;
-                        return r ? this.render(r) : n && !this.animating && (this.stop(), this.render(this.options.hover.animationDuration, !0)), this._bufferedRender = !1, this._bufferedRequest = null, this
+                        return r ? this.render(r) : a && !this.animating && (this.stop(), this.render(this.options.hover.animationDuration, !0)), this._bufferedRender = !1, this._bufferedRequest = null, this
                     }
                 },
                 handleEvent: function(e) {
                     var t = this.options || {},
-                        a = t.hover,
-                        n = !1;
-                    return this.lastActive = this.lastActive || [], "mouseout" === e.type ? this.active = [] : this.active = this.getElementsAtEventForMode(e, a.mode, a), r.callback(t.onHover || t.hover.onHover, [e.native, this.active], this), "mouseup" !== e.type && "click" !== e.type || t.onClick && t.onClick.call(this, e.native, this.active), this.lastActive.length && this.updateHoverStyle(this.lastActive, a.mode, !1), this.active.length && a.mode && this.updateHoverStyle(this.active, a.mode, !0), n = !r.arrayEquals(this.active, this.lastActive), this.lastActive = this.active, n
+                        n = t.hover,
+                        a = !1;
+                    return this.lastActive = this.lastActive || [], "mouseout" === e.type ? this.active = [] : this.active = this.getElementsAtEventForMode(e, n.mode, n), r.callback(t.onHover || t.hover.onHover, [e.native, this.active], this), "mouseup" !== e.type && "click" !== e.type || t.onClick && t.onClick.call(this, e.native, this.active), this.lastActive.length && this.updateHoverStyle(this.lastActive, n.mode, !1), this.active.length && n.mode && this.updateHoverStyle(this.active, n.mode, !0), a = !r.arrayEquals(this.active, this.lastActive), this.lastActive = this.active, a
                 }
             }), e.Controller = e
         }
     },
-    hAmm: function(e, t, a) {
+    hAmm: function(e, t, n) {
         "use strict";
-        var n = a("iO9N");
+        var a = n("iO9N");
         e.exports = function(e) {
             function t(e, t) {
-                return n.where(e, function(e) {
+                return a.where(e, function(e) {
                     return e.position === t
                 })
             }
 
-            function a(e, t) {
+            function n(e, t) {
                 e.forEach(function(e, t) {
                     return e._tmpIndex_ = t, e
-                }), e.sort(function(e, a) {
-                    var n = t ? a : e,
-                        r = t ? e : a;
-                    return n.weight === r.weight ? n._tmpIndex_ - r._tmpIndex_ : n.weight - r.weight
+                }), e.sort(function(e, n) {
+                    var a = t ? n : e,
+                        r = t ? e : n;
+                    return a.weight === r.weight ? a._tmpIndex_ - r._tmpIndex_ : a.weight - r.weight
                 }), e.forEach(function(e) {
                     delete e._tmpIndex_
                 })
@@ -13404,25 +13426,25 @@ webpackJsonp([35], {
                     e.boxes || (e.boxes = []), t.fullWidth = t.fullWidth || !1, t.position = t.position || "top", t.weight = t.weight || 0, e.boxes.push(t)
                 },
                 removeBox: function(e, t) {
-                    var a = e.boxes ? e.boxes.indexOf(t) : -1; - 1 !== a && e.boxes.splice(a, 1)
+                    var n = e.boxes ? e.boxes.indexOf(t) : -1; - 1 !== n && e.boxes.splice(n, 1)
                 },
-                configure: function(e, t, a) {
-                    for (var n, r = ["fullWidth", "position", "weight"], i = r.length, s = 0; s < i; ++s) n = r[s], a.hasOwnProperty(n) && (t[n] = a[n])
+                configure: function(e, t, n) {
+                    for (var a, r = ["fullWidth", "position", "weight"], i = r.length, s = 0; s < i; ++s) a = r[s], n.hasOwnProperty(a) && (t[a] = n[a])
                 },
                 update: function(e, r, i) {
                     function s(e) {
-                        var t = n.findNextWhere(w, function(t) {
+                        var t = a.findNextWhere(w, function(t) {
                             return t.box === e
                         });
                         if (t)
                             if (e.isHorizontal()) {
-                                var a = {
+                                var n = {
                                     left: Math.max(j, x),
                                     right: Math.max(H, T),
                                     top: 0,
                                     bottom: 0
                                 };
-                                e.update(e.fullWidth ? M : D, v / 2, a)
+                                e.update(e.fullWidth ? M : D, v / 2, n)
                             } else e.update(t.minSize.width, k)
                     }
 
@@ -13431,7 +13453,7 @@ webpackJsonp([35], {
                     }
                     if (e) {
                         var d = e.options.layout || {},
-                            u = n.options.toPadding(d.padding),
+                            u = a.options.toPadding(d.padding),
                             l = u.left,
                             c = u.right,
                             h = u.top,
@@ -13441,7 +13463,7 @@ webpackJsonp([35], {
                             p = t(e.boxes, "top"),
                             g = t(e.boxes, "bottom"),
                             y = t(e.boxes, "chartArea");
-                        a(_, !0), a(f, !1), a(p, !0), a(g, !1);
+                        n(_, !0), n(f, !1), n(p, !0), n(g, !1);
                         var M = r - l - c,
                             v = i - h - m,
                             b = v / 2,
@@ -13450,10 +13472,10 @@ webpackJsonp([35], {
                             D = M,
                             k = v,
                             w = [];
-                        n.each(_.concat(f, p, g), function(e) {
-                            var t, a = e.isHorizontal();
-                            a ? (t = e.update(e.fullWidth ? M : D, Y), k -= t.height) : (t = e.update(L, b), D -= t.width), w.push({
-                                horizontal: a,
+                        a.each(_.concat(f, p, g), function(e) {
+                            var t, n = e.isHorizontal();
+                            n ? (t = e.update(e.fullWidth ? M : D, Y), k -= t.height) : (t = e.update(L, b), D -= t.width), w.push({
+                                horizontal: n,
                                 minSize: t,
                                 box: e
                             })
@@ -13462,12 +13484,12 @@ webpackJsonp([35], {
                             T = 0,
                             S = 0,
                             O = 0;
-                        n.each(p.concat(g), function(e) {
+                        a.each(p.concat(g), function(e) {
                             if (e.getPadding) {
                                 var t = e.getPadding();
                                 x = Math.max(x, t.left), T = Math.max(T, t.right)
                             }
-                        }), n.each(_.concat(f), function(e) {
+                        }), a.each(_.concat(f), function(e) {
                             if (e.getPadding) {
                                 var t = e.getPadding();
                                 S = Math.max(S, t.top), O = Math.max(O, t.bottom)
@@ -13477,32 +13499,32 @@ webpackJsonp([35], {
                             H = c,
                             P = h,
                             C = m;
-                        n.each(_.concat(f), s), n.each(_, function(e) {
+                        a.each(_.concat(f), s), a.each(_, function(e) {
                             j += e.width
-                        }), n.each(f, function(e) {
+                        }), a.each(f, function(e) {
                             H += e.width
-                        }), n.each(p.concat(g), s), n.each(p, function(e) {
+                        }), a.each(p.concat(g), s), a.each(p, function(e) {
                             P += e.height
-                        }), n.each(g, function(e) {
+                        }), a.each(g, function(e) {
                             C += e.height
-                        }), n.each(_.concat(f), function(e) {
-                            var t = n.findNextWhere(w, function(t) {
+                        }), a.each(_.concat(f), function(e) {
+                            var t = a.findNextWhere(w, function(t) {
                                     return t.box === e
                                 }),
-                                a = {
+                                n = {
                                     left: 0,
                                     right: 0,
                                     top: P,
                                     bottom: C
                                 };
-                            t && e.update(t.minSize.width, k, a)
-                        }), j = l, H = c, P = h, C = m, n.each(_, function(e) {
+                            t && e.update(t.minSize.width, k, n)
+                        }), j = l, H = c, P = h, C = m, a.each(_, function(e) {
                             j += e.width
-                        }), n.each(f, function(e) {
+                        }), a.each(f, function(e) {
                             H += e.width
-                        }), n.each(p, function(e) {
+                        }), a.each(p, function(e) {
                             P += e.height
-                        }), n.each(g, function(e) {
+                        }), a.each(g, function(e) {
                             C += e.height
                         });
                         var A = Math.max(x - j, 0);
@@ -13511,23 +13533,23 @@ webpackJsonp([35], {
                         P += F, C += Math.max(O - C, 0);
                         var W = i - P - C,
                             E = r - j - H;
-                        E === D && W === k || (n.each(_, function(e) {
+                        E === D && W === k || (a.each(_, function(e) {
                             e.height = W
-                        }), n.each(f, function(e) {
+                        }), a.each(f, function(e) {
                             e.height = W
-                        }), n.each(p, function(e) {
+                        }), a.each(p, function(e) {
                             e.fullWidth || (e.width = E)
-                        }), n.each(g, function(e) {
+                        }), a.each(g, function(e) {
                             e.fullWidth || (e.width = E)
                         }), k = W, D = E);
                         var I = l + A,
                             z = h + F;
-                        n.each(_.concat(p), o), I += D, z += k, n.each(f, o), n.each(g, o), e.chartArea = {
+                        a.each(_.concat(p), o), I += D, z += k, a.each(f, o), a.each(g, o), e.chartArea = {
                             left: j,
                             top: P,
                             right: j + D,
                             bottom: P + k
-                        }, n.each(y, function(t) {
+                        }, a.each(y, function(t) {
                             t.left = e.chartArea.left, t.top = e.chartArea.top, t.right = e.chartArea.right, t.bottom = e.chartArea.bottom, t.update(D, k)
                         })
                     }
@@ -13535,9 +13557,9 @@ webpackJsonp([35], {
             }
         }
     },
-    hPuz: function(e, t, a) {
+    hPuz: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("en-gb", {
@@ -13589,36 +13611,36 @@ webpackJsonp([35], {
             })
         })
     },
-    hUHO: function(e, t, a) {
-        var n = a("4LxA");
+    hUHO: function(e, t, n) {
+        var a = n("4LxA");
         e.exports = function(e) {
-            return n(new Date, e)
+            return a(new Date, e)
         }
     },
-    hico: function(e, t, a) {
-        var n = a("zZbG"),
-            r = a("3znZ");
+    hico: function(e, t, n) {
+        var a = n("zZbG"),
+            r = n("3znZ");
         e.exports = function(e) {
-            var t = n(e),
-                a = new Date(0);
-            a.setFullYear(t + 1, 0, 4), a.setHours(0, 0, 0, 0);
-            var i = r(a);
+            var t = a(e),
+                n = new Date(0);
+            n.setFullYear(t + 1, 0, 4), n.setHours(0, 0, 0, 0);
+            var i = r(n);
             return i.setDate(i.getDate() - 1), i
         }
     },
-    hj5Y: function(e, t, a) {
-        var n = a("5qwL");
+    hj5Y: function(e, t, n) {
+        var a = n("5qwL");
         e.exports = function(e) {
-            return n(new Date, e)
+            return a(new Date, e)
         }
     },
-    iNtv: function(e, t, a) {
+    iNtv: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
 
-            function t(e, t, a, n) {
+            function t(e, t, n, a) {
                 var r = {
                     s: ["viensas secunds", "'iensas secunds"],
                     m: ["'n míut", "'iens míut"],
@@ -13632,7 +13654,7 @@ webpackJsonp([35], {
                     y: ["'n ar", "'iens ar"],
                     yy: [e + " ars", e + " ars"]
                 };
-                return n ? r[a][0] : t ? r[a][0] : r[a][1]
+                return a ? r[n][0] : t ? r[n][0] : r[n][1]
             }
             return e.defineLocale("tzl", {
                 months: "Januar_Fevraglh_Març_Avrïu_Mai_Gün_Julia_Guscht_Setemvar_Listopäts_Noemvar_Zecemvar".split("_"),
@@ -13652,8 +13674,8 @@ webpackJsonp([35], {
                 isPM: function(e) {
                     return "d'o" === e.toLowerCase()
                 },
-                meridiem: function(e, t, a) {
-                    return e > 11 ? a ? "d'o" : "D'O" : a ? "d'a" : "D'A"
+                meridiem: function(e, t, n) {
+                    return e > 11 ? n ? "d'o" : "D'O" : n ? "d'a" : "D'A"
                 },
                 calendar: {
                     sameDay: "[oxhi à] LT",
@@ -13687,22 +13709,22 @@ webpackJsonp([35], {
             })
         })
     },
-    iO9N: function(e, t, a) {
+    iO9N: function(e, t, n) {
         "use strict";
-        e.exports = a("3n1n"), e.exports.easing = a("d1/4"), e.exports.canvas = a("F4U8"), e.exports.options = a("u1o0")
+        e.exports = n("3n1n"), e.exports.easing = n("d1/4"), e.exports.canvas = n("F4U8"), e.exports.options = n("u1o0")
     },
-    iRXW: function(e, t, a) {
-        var n = a("zZbG"),
-            r = a("3znZ");
+    iRXW: function(e, t, n) {
+        var a = n("zZbG"),
+            r = n("3znZ");
         e.exports = function(e) {
-            var t = n(e),
-                a = new Date(0);
-            return a.setFullYear(t, 0, 4), a.setHours(0, 0, 0, 0), r(a)
+            var t = a(e),
+                n = new Date(0);
+            return n.setFullYear(t, 0, 4), n.setHours(0, 0, 0, 0), r(n)
         }
     },
-    "j+vx": function(e, t, a) {
+    "j+vx": function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -13775,9 +13797,9 @@ webpackJsonp([35], {
             })
         })
     },
-    j8cJ: function(e, t, a) {
+    j8cJ: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("ar-kw", {
@@ -13825,40 +13847,40 @@ webpackJsonp([35], {
             })
         })
     },
-    jJ84: function(e, t, a) {
+    jJ84: function(e, t, n) {
         "use strict";
-        var n = a("k7DW"),
-            r = a("iO9N");
+        var a = n("k7DW"),
+            r = n("iO9N");
         e.exports = function(e) {
             e.scaleService = {
                 constructors: {},
                 defaults: {},
-                registerScaleType: function(e, t, a) {
-                    this.constructors[e] = t, this.defaults[e] = r.clone(a)
+                registerScaleType: function(e, t, n) {
+                    this.constructors[e] = t, this.defaults[e] = r.clone(n)
                 },
                 getScaleConstructor: function(e) {
                     return this.constructors.hasOwnProperty(e) ? this.constructors[e] : void 0
                 },
                 getScaleDefaults: function(e) {
-                    return this.defaults.hasOwnProperty(e) ? r.merge({}, [n.scale, this.defaults[e]]) : {}
+                    return this.defaults.hasOwnProperty(e) ? r.merge({}, [a.scale, this.defaults[e]]) : {}
                 },
                 updateScaleDefaults: function(e, t) {
                     this.defaults.hasOwnProperty(e) && (this.defaults[e] = r.extend(this.defaults[e], t))
                 },
                 addScalesToLayout: function(t) {
-                    r.each(t.scales, function(a) {
-                        a.fullWidth = a.options.fullWidth, a.position = a.options.position, a.weight = a.options.weight, e.layoutService.addBox(t, a)
+                    r.each(t.scales, function(n) {
+                        n.fullWidth = n.options.fullWidth, n.position = n.options.position, n.weight = n.options.weight, e.layoutService.addBox(t, n)
                     })
                 }
             }
         }
     },
-    jQas: function(e, t, a) {
-        var n = a("SJLv");
+    jQas: function(e, t, n) {
+        var a = n("SJLv");
         e.exports = function() {
             var e = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
                 t = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-                a = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
+                n = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
                 r = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
                 i = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
                 s = ["AM", "PM"],
@@ -13872,7 +13894,7 @@ webpackJsonp([35], {
                         return t[e.getMonth()]
                     },
                     dd: function(e) {
-                        return a[e.getDay()]
+                        return n[e.getDay()]
                     },
                     ddd: function(e) {
                         return r[e.getDay()]
@@ -13891,7 +13913,7 @@ webpackJsonp([35], {
                     }
                 };
             return ["M", "D", "DDD", "d", "Q", "W"].forEach(function(e) {
-                u[e + "o"] = function(t, a) {
+                u[e + "o"] = function(t, n) {
                     return function(e) {
                         var t = e % 100;
                         if (t > 20 || t < 10) switch (t % 10) {
@@ -13903,30 +13925,30 @@ webpackJsonp([35], {
                                 return e + "rd"
                         }
                         return e + "th"
-                    }(a[e](t))
+                    }(n[e](t))
                 }
             }), {
                 formatters: u,
-                formattingTokensRegExp: n(u)
+                formattingTokensRegExp: a(u)
             }
         }
     },
-    jxEH: function(e, t, a) {
+    jxEH: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
 
-            function t(e, t, a) {
-                return a ? t % 10 == 1 && t % 100 != 11 ? e[2] : e[3] : t % 10 == 1 && t % 100 != 11 ? e[0] : e[1]
+            function t(e, t, n) {
+                return n ? t % 10 == 1 && t % 100 != 11 ? e[2] : e[3] : t % 10 == 1 && t % 100 != 11 ? e[0] : e[1]
             }
 
-            function a(e, a, n) {
-                return e + " " + t(r[n], e, a)
+            function n(e, n, a) {
+                return e + " " + t(r[a], e, n)
             }
 
-            function n(e, a, n) {
-                return t(r[n], e, a)
+            function a(e, n, a) {
+                return t(r[a], e, n)
             }
             var r = {
                 m: "minūtes_minūtēm_minūte_minūtes".split("_"),
@@ -13969,16 +13991,16 @@ webpackJsonp([35], {
                     s: function(e, t) {
                         return t ? "dažas sekundes" : "dažām sekundēm"
                     },
-                    m: n,
-                    mm: a,
-                    h: n,
-                    hh: a,
-                    d: n,
-                    dd: a,
-                    M: n,
-                    MM: a,
-                    y: n,
-                    yy: a
+                    m: a,
+                    mm: n,
+                    h: a,
+                    hh: n,
+                    d: a,
+                    dd: n,
+                    M: a,
+                    MM: n,
+                    y: a,
+                    yy: n
                 },
                 dayOfMonthOrdinalParse: /\d{1,2}\./,
                 ordinal: "%d.",
@@ -13989,18 +14011,18 @@ webpackJsonp([35], {
             })
         })
     },
-    jy2q: function(e, t, a) {
-        var n = a("xA5w"),
-            r = a("balU");
+    jy2q: function(e, t, n) {
+        var a = n("xA5w"),
+            r = n("balU");
         e.exports = function(e, t) {
-            var a = n(e),
-                i = Number(t) - (Math.floor(a.getMonth() / 3) + 1);
-            return r(a, a.getMonth() + 3 * i)
+            var n = a(e),
+                i = Number(t) - (Math.floor(n.getMonth() / 3) + 1);
+            return r(n, n.getMonth() + 3 * i)
         }
     },
-    "k+5o": function(e, t, a) {
+    "k+5o": function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -14063,8 +14085,8 @@ webpackJsonp([35], {
                 dayOfMonthOrdinalParse: /\d{1,2}'(inci|nci|üncü|ncı|uncu|ıncı)/,
                 ordinal: function(e) {
                     if (0 === e) return e + "'ıncı";
-                    var a = e % 10;
-                    return e + (t[a] || t[e % 100 - a] || t[e >= 100 ? 100 : null])
+                    var n = e % 10;
+                    return e + (t[n] || t[e % 100 - n] || t[e >= 100 ? 100 : null])
                 },
                 week: {
                     dow: 1,
@@ -14073,54 +14095,54 @@ webpackJsonp([35], {
             })
         })
     },
-    k7DW: function(e, t, a) {
+    k7DW: function(e, t, n) {
         "use strict";
-        var n = a("iO9N");
+        var a = n("iO9N");
         e.exports = {
             _set: function(e, t) {
-                return n.merge(this[e] || (this[e] = {}), t)
+                return a.merge(this[e] || (this[e] = {}), t)
             }
         }
     },
-    kDuD: function(e, t, a) {
-        var n = a("xA5w"),
-            r = a("MIQa"),
-            i = a("xKy+");
+    kDuD: function(e, t, n) {
+        var a = n("xA5w"),
+            r = n("MIQa"),
+            i = n("xKy+");
         e.exports = function(e) {
-            var t = n(e);
+            var t = a(e);
             return r(t).getTime() === i(t).getTime()
         }
     },
-    kIFi: function(e, t, a) {
-        var n = a("NSOL");
+    kIFi: function(e, t, n) {
+        var a = n("NSOL");
         e.exports = function(e, t) {
-            var a = Number(t);
-            return n(e, -a)
+            var n = Number(t);
+            return a(e, -n)
         }
     },
-    kRs6: function(e, t, a) {
-        var n = a("Qxz6");
+    kRs6: function(e, t, n) {
+        var a = n("Qxz6");
         e.exports = function(e) {
-            return n(new Date, e)
+            return a(new Date, e)
         }
     },
-    kjlQ: function(e, t, a) {
-        var n = a("G7No"),
+    kjlQ: function(e, t, n) {
+        var a = n("G7No"),
             r = 36e5;
         e.exports = function(e, t) {
-            var a = n(e, t) / r;
-            return a > 0 ? Math.floor(a) : Math.ceil(a)
+            var n = a(e, t) / r;
+            return n > 0 ? Math.floor(n) : Math.ceil(n)
         }
     },
-    kkVd: function(e, t, a) {
-        var n = a("xA5w");
+    kkVd: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e) {
-            return 1 === n(e).getDay()
+            return 1 === a(e).getDay()
         }
     },
-    krPU: function(e, t, a) {
+    krPU: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("tzm-latn", {
@@ -14167,100 +14189,100 @@ webpackJsonp([35], {
             })
         })
     },
-    l85J: function(e, t, a) {
-        var n = a("xA5w");
+    l85J: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e) {
-            return n(e).getMonth()
+            return a(e).getMonth()
         }
     },
-    lG75: function(e, t, a) {
+    lG75: function(e, t, n) {
         "use strict";
-        var n = a("rWJA"),
-            r = a("k7DW"),
-            i = a("iO9N");
+        var a = n("rWJA"),
+            r = n("k7DW"),
+            i = n("iO9N");
         e.exports = function(e) {
-            function t(e, t, a) {
-                var n;
-                return "string" == typeof e ? (n = parseInt(e, 10), -1 !== e.indexOf("%") && (n = n / 100 * t.parentNode[a])) : n = e, n
+            function t(e, t, n) {
+                var a;
+                return "string" == typeof e ? (a = parseInt(e, 10), -1 !== e.indexOf("%") && (a = a / 100 * t.parentNode[n])) : a = e, a
             }
 
-            function a(e) {
+            function n(e) {
                 return void 0 !== e && null !== e && "none" !== e
             }
 
-            function s(e, n, r) {
+            function s(e, a, r) {
                 var i = document.defaultView,
                     s = e.parentNode,
-                    o = i.getComputedStyle(e)[n],
-                    d = i.getComputedStyle(s)[n],
-                    u = a(o),
-                    l = a(d),
+                    o = i.getComputedStyle(e)[a],
+                    d = i.getComputedStyle(s)[a],
+                    u = n(o),
+                    l = n(d),
                     c = Number.POSITIVE_INFINITY;
                 return u || l ? Math.min(u ? t(o, e, r) : c, l ? t(d, s, r) : c) : "none"
             }
             i.extend = function(e) {
-                for (var t = function(t, a) {
-                        e[a] = t
-                    }, a = 1, n = arguments.length; a < n; a++) i.each(arguments[a], t);
+                for (var t = function(t, n) {
+                        e[n] = t
+                    }, n = 1, a = arguments.length; n < a; n++) i.each(arguments[n], t);
                 return e
             }, i.configMerge = function() {
                 return i.merge(i.clone(arguments[0]), [].slice.call(arguments, 1), {
-                    merger: function(t, a, n, r) {
-                        var s = a[t] || {},
-                            o = n[t];
-                        "scales" === t ? a[t] = i.scaleMerge(s, o) : "scale" === t ? a[t] = i.merge(s, [e.scaleService.getScaleDefaults(o.type), o]) : i._merger(t, a, n, r)
+                    merger: function(t, n, a, r) {
+                        var s = n[t] || {},
+                            o = a[t];
+                        "scales" === t ? n[t] = i.scaleMerge(s, o) : "scale" === t ? n[t] = i.merge(s, [e.scaleService.getScaleDefaults(o.type), o]) : i._merger(t, n, a, r)
                     }
                 })
             }, i.scaleMerge = function() {
                 return i.merge(i.clone(arguments[0]), [].slice.call(arguments, 1), {
-                    merger: function(t, a, n, r) {
+                    merger: function(t, n, a, r) {
                         if ("xAxes" === t || "yAxes" === t) {
-                            var s, o, d, u = n[t].length;
-                            for (a[t] || (a[t] = []), s = 0; s < u; ++s) d = n[t][s], o = i.valueOrDefault(d.type, "xAxes" === t ? "category" : "linear"), s >= a[t].length && a[t].push({}), !a[t][s].type || d.type && d.type !== a[t][s].type ? i.merge(a[t][s], [e.scaleService.getScaleDefaults(o), d]) : i.merge(a[t][s], d)
-                        } else i._merger(t, a, n, r)
+                            var s, o, d, u = a[t].length;
+                            for (n[t] || (n[t] = []), s = 0; s < u; ++s) d = a[t][s], o = i.valueOrDefault(d.type, "xAxes" === t ? "category" : "linear"), s >= n[t].length && n[t].push({}), !n[t][s].type || d.type && d.type !== n[t][s].type ? i.merge(n[t][s], [e.scaleService.getScaleDefaults(o), d]) : i.merge(n[t][s], d)
+                        } else i._merger(t, n, a, r)
                     }
                 })
             }, i.where = function(e, t) {
                 if (i.isArray(e) && Array.prototype.filter) return e.filter(t);
-                var a = [];
+                var n = [];
                 return i.each(e, function(e) {
-                    t(e) && a.push(e)
-                }), a
-            }, i.findIndex = Array.prototype.findIndex ? function(e, t, a) {
-                return e.findIndex(t, a)
-            } : function(e, t, a) {
-                a = void 0 === a ? e : a;
-                for (var n = 0, r = e.length; n < r; ++n)
-                    if (t.call(a, e[n], n, e)) return n;
+                    t(e) && n.push(e)
+                }), n
+            }, i.findIndex = Array.prototype.findIndex ? function(e, t, n) {
+                return e.findIndex(t, n)
+            } : function(e, t, n) {
+                n = void 0 === n ? e : n;
+                for (var a = 0, r = e.length; a < r; ++a)
+                    if (t.call(n, e[a], a, e)) return a;
                 return -1
-            }, i.findNextWhere = function(e, t, a) {
-                i.isNullOrUndef(a) && (a = -1);
-                for (var n = a + 1; n < e.length; n++) {
-                    var r = e[n];
+            }, i.findNextWhere = function(e, t, n) {
+                i.isNullOrUndef(n) && (n = -1);
+                for (var a = n + 1; a < e.length; a++) {
+                    var r = e[a];
                     if (t(r)) return r
                 }
-            }, i.findPreviousWhere = function(e, t, a) {
-                i.isNullOrUndef(a) && (a = e.length);
-                for (var n = a - 1; n >= 0; n--) {
-                    var r = e[n];
+            }, i.findPreviousWhere = function(e, t, n) {
+                i.isNullOrUndef(n) && (n = e.length);
+                for (var a = n - 1; a >= 0; a--) {
+                    var r = e[a];
                     if (t(r)) return r
                 }
             }, i.inherits = function(e) {
                 var t = this,
-                    a = e && e.hasOwnProperty("constructor") ? e.constructor : function() {
+                    n = e && e.hasOwnProperty("constructor") ? e.constructor : function() {
                         return t.apply(this, arguments)
                     },
-                    n = function() {
-                        this.constructor = a
+                    a = function() {
+                        this.constructor = n
                     };
-                return n.prototype = t.prototype, a.prototype = new n, a.extend = i.inherits, e && i.extend(a.prototype, e), a.__super__ = t.prototype, a
+                return a.prototype = t.prototype, n.prototype = new a, n.extend = i.inherits, e && i.extend(n.prototype, e), n.__super__ = t.prototype, n
             }, i.isNumber = function(e) {
                 return !isNaN(parseFloat(e)) && isFinite(e)
-            }, i.almostEquals = function(e, t, a) {
-                return Math.abs(e - t) < a
+            }, i.almostEquals = function(e, t, n) {
+                return Math.abs(e - t) < n
             }, i.almostWhole = function(e, t) {
-                var a = Math.round(e);
-                return a - t < e && a + t > e
+                var n = Math.round(e);
+                return n - t < e && n + t > e
             }, i.max = function(e) {
                 return e.reduce(function(e, t) {
                     return isNaN(t) ? e : Math.max(e, t)
@@ -14282,10 +14304,10 @@ webpackJsonp([35], {
             }, i.toDegrees = function(e) {
                 return e * (180 / Math.PI)
             }, i.getAngleFromPoint = function(e, t) {
-                var a = t.x - e.x,
-                    n = t.y - e.y,
-                    r = Math.sqrt(a * a + n * n),
-                    i = Math.atan2(n, a);
+                var n = t.x - e.x,
+                    a = t.y - e.y,
+                    r = Math.sqrt(n * n + a * a),
+                    i = Math.atan2(a, n);
                 return i < -.5 * Math.PI && (i += 2 * Math.PI), {
                     angle: i,
                     distance: r
@@ -14294,16 +14316,16 @@ webpackJsonp([35], {
                 return Math.sqrt(Math.pow(t.x - e.x, 2) + Math.pow(t.y - e.y, 2))
             }, i.aliasPixel = function(e) {
                 return e % 2 == 0 ? 0 : .5
-            }, i.splineCurve = function(e, t, a, n) {
+            }, i.splineCurve = function(e, t, n, a) {
                 var r = e.skip ? t : e,
                     i = t,
-                    s = a.skip ? t : a,
+                    s = n.skip ? t : n,
                     o = Math.sqrt(Math.pow(i.x - r.x, 2) + Math.pow(i.y - r.y, 2)),
                     d = Math.sqrt(Math.pow(s.x - i.x, 2) + Math.pow(s.y - i.y, 2)),
                     u = o / (o + d),
                     l = d / (o + d),
-                    c = n * (u = isNaN(u) ? 0 : u),
-                    h = n * (l = isNaN(l) ? 0 : l);
+                    c = a * (u = isNaN(u) ? 0 : u),
+                    h = a * (l = isNaN(l) ? 0 : l);
                 return {
                     previous: {
                         x: i.x - c * (s.x - r.x),
@@ -14315,7 +14337,7 @@ webpackJsonp([35], {
                     }
                 }
             }, i.EPSILON = Number.EPSILON || 1e-14, i.splineCurveMonotone = function(e) {
-                var t, a, n, r, s = (e || []).map(function(e) {
+                var t, n, a, r, s = (e || []).map(function(e) {
                         return {
                             model: e._model,
                             deltaK: 0,
@@ -14324,43 +14346,43 @@ webpackJsonp([35], {
                     }),
                     o = s.length;
                 for (t = 0; t < o; ++t)
-                    if (!(n = s[t]).model.skip) {
-                        if (a = t > 0 ? s[t - 1] : null, (r = t < o - 1 ? s[t + 1] : null) && !r.model.skip) {
-                            var d = r.model.x - n.model.x;
-                            n.deltaK = 0 !== d ? (r.model.y - n.model.y) / d : 0
-                        }!a || a.model.skip ? n.mK = n.deltaK : !r || r.model.skip ? n.mK = a.deltaK : this.sign(a.deltaK) !== this.sign(n.deltaK) ? n.mK = 0 : n.mK = (a.deltaK + n.deltaK) / 2
+                    if (!(a = s[t]).model.skip) {
+                        if (n = t > 0 ? s[t - 1] : null, (r = t < o - 1 ? s[t + 1] : null) && !r.model.skip) {
+                            var d = r.model.x - a.model.x;
+                            a.deltaK = 0 !== d ? (r.model.y - a.model.y) / d : 0
+                        }!n || n.model.skip ? a.mK = a.deltaK : !r || r.model.skip ? a.mK = n.deltaK : this.sign(n.deltaK) !== this.sign(a.deltaK) ? a.mK = 0 : a.mK = (n.deltaK + a.deltaK) / 2
                     }
                 var u, l, c, h;
-                for (t = 0; t < o - 1; ++t) n = s[t], r = s[t + 1], n.model.skip || r.model.skip || (i.almostEquals(n.deltaK, 0, this.EPSILON) ? n.mK = r.mK = 0 : (u = n.mK / n.deltaK, l = r.mK / n.deltaK, (h = Math.pow(u, 2) + Math.pow(l, 2)) <= 9 || (c = 3 / Math.sqrt(h), n.mK = u * c * n.deltaK, r.mK = l * c * n.deltaK)));
+                for (t = 0; t < o - 1; ++t) a = s[t], r = s[t + 1], a.model.skip || r.model.skip || (i.almostEquals(a.deltaK, 0, this.EPSILON) ? a.mK = r.mK = 0 : (u = a.mK / a.deltaK, l = r.mK / a.deltaK, (h = Math.pow(u, 2) + Math.pow(l, 2)) <= 9 || (c = 3 / Math.sqrt(h), a.mK = u * c * a.deltaK, r.mK = l * c * a.deltaK)));
                 var m;
-                for (t = 0; t < o; ++t)(n = s[t]).model.skip || (a = t > 0 ? s[t - 1] : null, r = t < o - 1 ? s[t + 1] : null, a && !a.model.skip && (m = (n.model.x - a.model.x) / 3, n.model.controlPointPreviousX = n.model.x - m, n.model.controlPointPreviousY = n.model.y - m * n.mK), r && !r.model.skip && (m = (r.model.x - n.model.x) / 3, n.model.controlPointNextX = n.model.x + m, n.model.controlPointNextY = n.model.y + m * n.mK))
-            }, i.nextItem = function(e, t, a) {
-                return a ? t >= e.length - 1 ? e[0] : e[t + 1] : t >= e.length - 1 ? e[e.length - 1] : e[t + 1]
-            }, i.previousItem = function(e, t, a) {
-                return a ? t <= 0 ? e[e.length - 1] : e[t - 1] : t <= 0 ? e[0] : e[t - 1]
+                for (t = 0; t < o; ++t)(a = s[t]).model.skip || (n = t > 0 ? s[t - 1] : null, r = t < o - 1 ? s[t + 1] : null, n && !n.model.skip && (m = (a.model.x - n.model.x) / 3, a.model.controlPointPreviousX = a.model.x - m, a.model.controlPointPreviousY = a.model.y - m * a.mK), r && !r.model.skip && (m = (r.model.x - a.model.x) / 3, a.model.controlPointNextX = a.model.x + m, a.model.controlPointNextY = a.model.y + m * a.mK))
+            }, i.nextItem = function(e, t, n) {
+                return n ? t >= e.length - 1 ? e[0] : e[t + 1] : t >= e.length - 1 ? e[e.length - 1] : e[t + 1]
+            }, i.previousItem = function(e, t, n) {
+                return n ? t <= 0 ? e[e.length - 1] : e[t - 1] : t <= 0 ? e[0] : e[t - 1]
             }, i.niceNum = function(e, t) {
-                var a = Math.floor(i.log10(e)),
-                    n = e / Math.pow(10, a);
-                return (t ? n < 1.5 ? 1 : n < 3 ? 2 : n < 7 ? 5 : 10 : n <= 1 ? 1 : n <= 2 ? 2 : n <= 5 ? 5 : 10) * Math.pow(10, a)
+                var n = Math.floor(i.log10(e)),
+                    a = e / Math.pow(10, n);
+                return (t ? a < 1.5 ? 1 : a < 3 ? 2 : a < 7 ? 5 : 10 : a <= 1 ? 1 : a <= 2 ? 2 : a <= 5 ? 5 : 10) * Math.pow(10, n)
             }, i.requestAnimFrame = "undefined" == typeof window ? function(e) {
                 e()
             } : window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function(e) {
                 return window.setTimeout(e, 1e3 / 60)
             }, i.getRelativePosition = function(e, t) {
-                var a, n, r = e.originalEvent || e,
+                var n, a, r = e.originalEvent || e,
                     s = e.currentTarget || e.srcElement,
                     o = s.getBoundingClientRect(),
                     d = r.touches;
-                d && d.length > 0 ? (a = d[0].clientX, n = d[0].clientY) : (a = r.clientX, n = r.clientY);
+                d && d.length > 0 ? (n = d[0].clientX, a = d[0].clientY) : (n = r.clientX, a = r.clientY);
                 var u = parseFloat(i.getStyle(s, "padding-left")),
                     l = parseFloat(i.getStyle(s, "padding-top")),
                     c = parseFloat(i.getStyle(s, "padding-right")),
                     h = parseFloat(i.getStyle(s, "padding-bottom")),
                     m = o.right - o.left - u - c,
                     _ = o.bottom - o.top - l - h;
-                return a = Math.round((a - o.left - u) / m * s.width / t.currentDevicePixelRatio), n = Math.round((n - o.top - l) / _ * s.height / t.currentDevicePixelRatio), {
-                    x: a,
-                    y: n
+                return n = Math.round((n - o.left - u) / m * s.width / t.currentDevicePixelRatio), a = Math.round((a - o.top - l) / _ * s.height / t.currentDevicePixelRatio), {
+                    x: n,
+                    y: a
                 }
             }, i.getConstraintWidth = function(e) {
                 return s(e, "max-width", "clientWidth")
@@ -14369,57 +14391,57 @@ webpackJsonp([35], {
             }, i.getMaximumWidth = function(e) {
                 var t = e.parentNode;
                 if (!t) return e.clientWidth;
-                var a = parseInt(i.getStyle(t, "padding-left"), 10),
-                    n = parseInt(i.getStyle(t, "padding-right"), 10),
-                    r = t.clientWidth - a - n,
+                var n = parseInt(i.getStyle(t, "padding-left"), 10),
+                    a = parseInt(i.getStyle(t, "padding-right"), 10),
+                    r = t.clientWidth - n - a,
                     s = i.getConstraintWidth(e);
                 return isNaN(s) ? r : Math.min(r, s)
             }, i.getMaximumHeight = function(e) {
                 var t = e.parentNode;
                 if (!t) return e.clientHeight;
-                var a = parseInt(i.getStyle(t, "padding-top"), 10),
-                    n = parseInt(i.getStyle(t, "padding-bottom"), 10),
-                    r = t.clientHeight - a - n,
+                var n = parseInt(i.getStyle(t, "padding-top"), 10),
+                    a = parseInt(i.getStyle(t, "padding-bottom"), 10),
+                    r = t.clientHeight - n - a,
                     s = i.getConstraintHeight(e);
                 return isNaN(s) ? r : Math.min(r, s)
             }, i.getStyle = function(e, t) {
                 return e.currentStyle ? e.currentStyle[t] : document.defaultView.getComputedStyle(e, null).getPropertyValue(t)
             }, i.retinaScale = function(e, t) {
-                var a = e.currentDevicePixelRatio = t || window.devicePixelRatio || 1;
-                if (1 !== a) {
-                    var n = e.canvas,
+                var n = e.currentDevicePixelRatio = t || window.devicePixelRatio || 1;
+                if (1 !== n) {
+                    var a = e.canvas,
                         r = e.height,
                         i = e.width;
-                    n.height = r * a, n.width = i * a, e.ctx.scale(a, a), n.style.height = r + "px", n.style.width = i + "px"
+                    a.height = r * n, a.width = i * n, e.ctx.scale(n, n), a.style.height = r + "px", a.style.width = i + "px"
                 }
-            }, i.fontString = function(e, t, a) {
-                return t + " " + e + "px " + a
-            }, i.longestText = function(e, t, a, n) {
-                var r = (n = n || {}).data = n.data || {},
-                    s = n.garbageCollect = n.garbageCollect || [];
-                n.font !== t && (r = n.data = {}, s = n.garbageCollect = [], n.font = t), e.font = t;
+            }, i.fontString = function(e, t, n) {
+                return t + " " + e + "px " + n
+            }, i.longestText = function(e, t, n, a) {
+                var r = (a = a || {}).data = a.data || {},
+                    s = a.garbageCollect = a.garbageCollect || [];
+                a.font !== t && (r = a.data = {}, s = a.garbageCollect = [], a.font = t), e.font = t;
                 var o = 0;
-                i.each(a, function(t) {
+                i.each(n, function(t) {
                     void 0 !== t && null !== t && !0 !== i.isArray(t) ? o = i.measureText(e, r, s, o, t) : i.isArray(t) && i.each(t, function(t) {
                         void 0 === t || null === t || i.isArray(t) || (o = i.measureText(e, r, s, o, t))
                     })
                 });
                 var d = s.length / 2;
-                if (d > a.length) {
+                if (d > n.length) {
                     for (var u = 0; u < d; u++) delete r[s[u]];
                     s.splice(0, d)
                 }
                 return o
-            }, i.measureText = function(e, t, a, n, r) {
+            }, i.measureText = function(e, t, n, a, r) {
                 var i = t[r];
-                return i || (i = t[r] = e.measureText(r).width, a.push(r)), i > n && (n = i), n
+                return i || (i = t[r] = e.measureText(r).width, n.push(r)), i > a && (a = i), a
             }, i.numberOfLabelLines = function(e) {
                 var t = 1;
                 return i.each(e, function(e) {
                     i.isArray(e) && e.length > t && (t = e.length)
                 }), t
-            }, i.color = n ? function(e) {
-                return e instanceof CanvasGradient && (e = r.global.defaultColor), n(e)
+            }, i.color = a ? function(e) {
+                return e instanceof CanvasGradient && (e = r.global.defaultColor), a(e)
             } : function(e) {
                 return console.error("Color.js not found!"), e
             }, i.getHoverColor = function(e) {
@@ -14427,9 +14449,9 @@ webpackJsonp([35], {
             }
         }
     },
-    lOED: function(e, t, a) {
+    lOED: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("bg", {
@@ -14484,8 +14506,8 @@ webpackJsonp([35], {
                 dayOfMonthOrdinalParse: /\d{1,2}-(ев|ен|ти|ви|ри|ми)/,
                 ordinal: function(e) {
                     var t = e % 10,
-                        a = e % 100;
-                    return 0 === e ? e + "-ев" : 0 === a ? e + "-ен" : a > 10 && a < 20 ? e + "-ти" : 1 === t ? e + "-ви" : 2 === t ? e + "-ри" : 7 === t || 8 === t ? e + "-ми" : e + "-ти"
+                        n = e % 100;
+                    return 0 === e ? e + "-ев" : 0 === n ? e + "-ен" : n > 10 && n < 20 ? e + "-ти" : 1 === t ? e + "-ви" : 2 === t ? e + "-ри" : 7 === t || 8 === t ? e + "-ми" : e + "-ти"
                 },
                 week: {
                     dow: 1,
@@ -14494,19 +14516,19 @@ webpackJsonp([35], {
             })
         })
     },
-    lQzg: function(e, t, a) {
-        var n = a("xA5w");
+    lQzg: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e) {
-            var t = n(e);
+            var t = a(e);
             return Math.floor(t.getMonth() / 3) + 1
         }
     },
-    "lRs/": function(e, t, a) {
+    "lRs/": function(e, t, n) {
         "use strict";
-        var n = a("k7DW"),
-            r = a("wGD1"),
-            i = a("iO9N");
-        n._set("global", {
+        var a = n("k7DW"),
+            r = n("wGD1"),
+            i = n("iO9N");
+        a._set("global", {
             title: {
                 display: !1,
                 fontStyle: "bold",
@@ -14518,23 +14540,23 @@ webpackJsonp([35], {
                 weight: 2e3
             }
         }), e.exports = function(e) {
-            function t(t, n) {
+            function t(t, a) {
                 var r = new e.Title({
                     ctx: t.ctx,
-                    options: n,
+                    options: a,
                     chart: t
                 });
-                a.configure(t, r, n), a.addBox(t, r), t.titleBlock = r
+                n.configure(t, r, a), n.addBox(t, r), t.titleBlock = r
             }
-            var a = e.layoutService,
+            var n = e.layoutService,
                 s = i.noop;
             return e.Title = r.extend({
                 initialize: function(e) {
                     i.extend(this, e), this.legendHitBoxes = []
                 },
                 beforeUpdate: s,
-                update: function(e, t, a) {
-                    return this.beforeUpdate(), this.maxWidth = e, this.maxHeight = t, this.margins = a, this.beforeSetDimensions(), this.setDimensions(), this.afterSetDimensions(), this.beforeBuildLabels(), this.buildLabels(), this.afterBuildLabels(), this.beforeFit(), this.fit(), this.afterFit(), this.afterUpdate(), this.minSize
+                update: function(e, t, n) {
+                    return this.beforeUpdate(), this.maxWidth = e, this.maxHeight = t, this.margins = n, this.beforeSetDimensions(), this.setDimensions(), this.afterSetDimensions(), this.beforeBuildLabels(), this.buildLabels(), this.afterBuildLabels(), this.beforeFit(), this.fit(), this.afterFit(), this.afterUpdate(), this.minSize
                 },
                 afterUpdate: s,
                 beforeSetDimensions: s,
@@ -14552,12 +14574,12 @@ webpackJsonp([35], {
                 fit: function() {
                     var e = i.valueOrDefault,
                         t = this.options,
-                        a = t.display,
-                        r = e(t.fontSize, n.global.defaultFontSize),
+                        n = t.display,
+                        r = e(t.fontSize, a.global.defaultFontSize),
                         s = this.minSize,
                         o = i.isArray(t.text) ? t.text.length : 1,
                         d = i.options.toLineHeight(t.lineHeight, r),
-                        u = a ? o * d + 2 * t.padding : 0;
+                        u = n ? o * d + 2 * t.padding : 0;
                     this.isHorizontal() ? (s.width = this.maxWidth, s.height = u) : (s.width = u, s.height = this.maxHeight), this.width = s.width, this.height = s.height
                 },
                 afterFit: s,
@@ -14568,22 +14590,22 @@ webpackJsonp([35], {
                 draw: function() {
                     var e = this.ctx,
                         t = i.valueOrDefault,
-                        a = this.options,
-                        r = n.global;
-                    if (a.display) {
-                        var s, o, d, u = t(a.fontSize, r.defaultFontSize),
-                            l = t(a.fontStyle, r.defaultFontStyle),
-                            c = t(a.fontFamily, r.defaultFontFamily),
+                        n = this.options,
+                        r = a.global;
+                    if (n.display) {
+                        var s, o, d, u = t(n.fontSize, r.defaultFontSize),
+                            l = t(n.fontStyle, r.defaultFontStyle),
+                            c = t(n.fontFamily, r.defaultFontFamily),
                             h = i.fontString(u, l, c),
-                            m = i.options.toLineHeight(a.lineHeight, u),
-                            _ = m / 2 + a.padding,
+                            m = i.options.toLineHeight(n.lineHeight, u),
+                            _ = m / 2 + n.padding,
                             f = 0,
                             p = this.top,
                             g = this.left,
                             y = this.bottom,
                             M = this.right;
-                        e.fillStyle = t(a.fontColor, r.defaultFontColor), e.font = h, this.isHorizontal() ? (o = g + (M - g) / 2, d = p + _, s = M - g) : (o = "left" === a.position ? g + _ : M - _, d = p + (y - p) / 2, s = y - p, f = Math.PI * ("left" === a.position ? -.5 : .5)), e.save(), e.translate(o, d), e.rotate(f), e.textAlign = "center", e.textBaseline = "middle";
-                        var v = a.text;
+                        e.fillStyle = t(n.fontColor, r.defaultFontColor), e.font = h, this.isHorizontal() ? (o = g + (M - g) / 2, d = p + _, s = M - g) : (o = "left" === n.position ? g + _ : M - _, d = p + (y - p) / 2, s = y - p, f = Math.PI * ("left" === n.position ? -.5 : .5)), e.save(), e.translate(o, d), e.rotate(f), e.textAlign = "center", e.textBaseline = "middle";
+                        var v = n.text;
                         if (i.isArray(v))
                             for (var b = 0, L = 0; L < v.length; ++L) e.fillText(v[L], 0, b, s), b += m;
                         else e.fillText(v, 0, 0, s);
@@ -14593,35 +14615,35 @@ webpackJsonp([35], {
             }), {
                 id: "title",
                 beforeInit: function(e) {
-                    var a = e.options.title;
-                    a && t(e, a)
+                    var n = e.options.title;
+                    n && t(e, n)
                 },
                 beforeUpdate: function(r) {
                     var s = r.options.title,
                         o = r.titleBlock;
-                    s ? (i.mergeIf(s, n.global.title), o ? (a.configure(r, o, s), o.options = s) : t(r, s)) : o && (e.layoutService.removeBox(r, o), delete r.titleBlock)
+                    s ? (i.mergeIf(s, a.global.title), o ? (n.configure(r, o, s), o.options = s) : t(r, s)) : o && (e.layoutService.removeBox(r, o), delete r.titleBlock)
                 }
             }
         }
     },
-    m7yE: function(e, t, a) {
+    m7yE: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
 
-            function t(e, t, n, r) {
+            function t(e, t, a, r) {
                 var i = function(e) {
                     var t = Math.floor(e % 1e3 / 100),
-                        n = Math.floor(e % 100 / 10),
+                        a = Math.floor(e % 100 / 10),
                         r = e % 10,
                         i = "";
-                    t > 0 && (i += a[t] + "vatlh");
-                    n > 0 && (i += ("" !== i ? " " : "") + a[n] + "maH");
-                    r > 0 && (i += ("" !== i ? " " : "") + a[r]);
+                    t > 0 && (i += n[t] + "vatlh");
+                    a > 0 && (i += ("" !== i ? " " : "") + n[a] + "maH");
+                    r > 0 && (i += ("" !== i ? " " : "") + n[r]);
                     return "" === i ? "pagh" : i
                 }(e);
-                switch (n) {
+                switch (a) {
                     case "mm":
                         return i + " tup";
                     case "hh":
@@ -14634,7 +14656,7 @@ webpackJsonp([35], {
                         return i + " DIS"
                 }
             }
-            var a = "pagh_wa’_cha’_wej_loS_vagh_jav_Soch_chorgh_Hut".split("_");
+            var n = "pagh_wa’_cha’_wej_loS_vagh_jav_Soch_chorgh_Hut".split("_");
             return e.defineLocale("tlh", {
                 months: "tera’ jar wa’_tera’ jar cha’_tera’ jar wej_tera’ jar loS_tera’ jar vagh_tera’ jar jav_tera’ jar Soch_tera’ jar chorgh_tera’ jar Hut_tera’ jar wa’maH_tera’ jar wa’maH wa’_tera’ jar wa’maH cha’".split("_"),
                 monthsShort: "jar wa’_jar cha’_jar wej_jar loS_jar vagh_jar jav_jar Soch_jar chorgh_jar Hut_jar wa’maH_jar wa’maH wa’_jar wa’maH cha’".split("_"),
@@ -14688,9 +14710,9 @@ webpackJsonp([35], {
             })
         })
     },
-    mC8W: function(e, t, a) {
+    mC8W: function(e, t, n) {
         "use strict";
-        a("k7DW")._set("scatter", {
+        n("k7DW")._set("scatter", {
             hover: {
                 mode: "single"
             },
@@ -14725,25 +14747,25 @@ webpackJsonp([35], {
         e.exports = function() {
             var e = new Date,
                 t = e.getFullYear(),
-                a = e.getMonth(),
-                n = e.getDate(),
+                n = e.getMonth(),
+                a = e.getDate(),
                 r = new Date(0);
-            return r.setFullYear(t, a, n - 1), r.setHours(0, 0, 0, 0), r
+            return r.setFullYear(t, n, a - 1), r.setHours(0, 0, 0, 0), r
         }
     },
-    mXYp: function(e, t, a) {
-        var n = a("YRFD"),
-            r = a("xA5w"),
-            i = a("25hp"),
-            s = a("GI7G"),
-            o = a("uyaC"),
+    mXYp: function(e, t, n) {
+        var a = n("YRFD"),
+            r = n("xA5w"),
+            i = n("25hp"),
+            s = n("GI7G"),
+            o = n("uyaC"),
             d = 1440,
             u = 2520,
             l = 43200,
             c = 86400;
-        e.exports = function(e, t, a) {
-            var h = a || {},
-                m = n(e, t),
+        e.exports = function(e, t, n) {
+            var h = n || {},
+                m = a(e, t),
                 _ = h.locale,
                 f = o.distanceInWords.localize;
             _ && _.distanceInWords && _.distanceInWords.localize && (f = _.distanceInWords.localize);
@@ -14768,17 +14790,17 @@ webpackJsonp([35], {
             return Y < 3 ? f("aboutXYears", D, y) : Y < 9 ? f("overXYears", D, y) : f("almostXYears", D + 1, y)
         }
     },
-    mg6x: function(e, t, a) {
+    mg6x: function(e, t, n) {
         "use strict";
         e.exports = function(e) {
-            e.Doughnut = function(t, a) {
-                return a.type = "doughnut", new e(t, a)
+            e.Doughnut = function(t, n) {
+                return n.type = "doughnut", new e(t, n)
             }
         }
     },
-    nE8X: function(e, t, a) {
+    nE8X: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("lo", {
@@ -14800,7 +14822,7 @@ webpackJsonp([35], {
                 isPM: function(e) {
                     return "ຕອນແລງ" === e
                 },
-                meridiem: function(e, t, a) {
+                meridiem: function(e, t, n) {
                     return e < 12 ? "ຕອນເຊົ້າ" : "ຕອນແລງ"
                 },
                 calendar: {
@@ -14833,9 +14855,9 @@ webpackJsonp([35], {
             })
         })
     },
-    nLOz: function(e, t, a) {
+    nLOz: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("gd", {
@@ -14887,9 +14909,9 @@ webpackJsonp([35], {
             })
         })
     },
-    nS2h: function(e, t, a) {
+    nS2h: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
 
@@ -14924,11 +14946,11 @@ webpackJsonp([35], {
                         s = i ? "vuoden" : "vuotta"
                 }
                 return s = function(e, t) {
-                    return e < 10 ? t ? n[e] : a[e] : e
+                    return e < 10 ? t ? a[e] : n[e] : e
                 }(e, i) + " " + s
             }
-            var a = "nolla yksi kaksi kolme neljä viisi kuusi seitsemän kahdeksan yhdeksän".split(" "),
-                n = ["nolla", "yhden", "kahden", "kolmen", "neljän", "viiden", "kuuden", a[7], a[8], a[9]];
+            var n = "nolla yksi kaksi kolme neljä viisi kuusi seitsemän kahdeksan yhdeksän".split(" "),
+                a = ["nolla", "yhden", "kahden", "kolmen", "neljän", "viiden", "kuuden", n[7], n[8], n[9]];
             return e.defineLocale("fi", {
                 months: "tammikuu_helmikuu_maaliskuu_huhtikuu_toukokuu_kesäkuu_heinäkuu_elokuu_syyskuu_lokakuu_marraskuu_joulukuu".split("_"),
                 monthsShort: "tammi_helmi_maalis_huhti_touko_kesä_heinä_elo_syys_loka_marras_joulu".split("_"),
@@ -14979,61 +15001,61 @@ webpackJsonp([35], {
             })
         })
     },
-    nZeo: function(e, t, a) {
-        var n = a("xA5w");
+    nZeo: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e) {
-            return n(e).getFullYear()
+            return a(e).getFullYear()
         }
     },
-    nfOx: function(e, t, a) {
-        var n = a("6Zhv");
+    nfOx: function(e, t, n) {
+        var a = n("6Zhv");
         e.exports = function(e, t) {
-            var a = Number(t);
-            return n(e, 1e3 * a)
+            var n = Number(t);
+            return a(e, 1e3 * n)
         }
     },
-    nizW: function(e, t, a) {
-        var n = a("WNGz"),
+    nizW: function(e, t, n) {
+        var a = n("WNGz"),
             r = 6e4,
             i = 864e5;
         e.exports = function(e, t) {
-            var a = n(e),
-                s = n(t),
-                o = a.getTime() - a.getTimezoneOffset() * r,
+            var n = a(e),
+                s = a(t),
+                o = n.getTime() - n.getTimezoneOffset() * r,
                 d = s.getTime() - s.getTimezoneOffset() * r;
             return Math.round((o - d) / i)
         }
     },
-    nk30: function(e, t, a) {
-        var n = a("xA5w");
+    nk30: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e, t) {
-            var a = t ? Number(t.weekStartsOn) || 0 : 0,
-                r = n(e),
+            var n = t ? Number(t.weekStartsOn) || 0 : 0,
+                r = a(e),
                 i = r.getDay(),
-                s = 6 + (i < a ? -7 : 0) - (i - a);
+                s = 6 + (i < n ? -7 : 0) - (i - n);
             return r.setHours(0, 0, 0, 0), r.setDate(r.getDate() + s), r
         }
     },
-    ntHu: function(e, t, a) {
+    ntHu: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
 
-            function t(e, t, a) {
-                return "m" === a ? t ? "хвилина" : "хвилину" : "h" === a ? t ? "година" : "годину" : e + " " + function(e, t) {
-                    var a = e.split("_");
-                    return t % 10 == 1 && t % 100 != 11 ? a[0] : t % 10 >= 2 && t % 10 <= 4 && (t % 100 < 10 || t % 100 >= 20) ? a[1] : a[2]
+            function t(e, t, n) {
+                return "m" === n ? t ? "хвилина" : "хвилину" : "h" === n ? t ? "година" : "годину" : e + " " + function(e, t) {
+                    var n = e.split("_");
+                    return t % 10 == 1 && t % 100 != 11 ? n[0] : t % 10 >= 2 && t % 10 <= 4 && (t % 100 < 10 || t % 100 >= 20) ? n[1] : n[2]
                 }({
                     mm: t ? "хвилина_хвилини_хвилин" : "хвилину_хвилини_хвилин",
                     hh: t ? "година_години_годин" : "годину_години_годин",
                     dd: "день_дні_днів",
                     MM: "місяць_місяці_місяців",
                     yy: "рік_роки_років"
-                }[a], +e)
+                }[n], +e)
             }
 
-            function a(e) {
+            function n(e) {
                 return function() {
                     return e + "о" + (11 === this.hours() ? "б" : "") + "] LT"
                 }
@@ -15045,12 +15067,12 @@ webpackJsonp([35], {
                 },
                 monthsShort: "січ_лют_бер_квіт_трав_черв_лип_серп_вер_жовт_лист_груд".split("_"),
                 weekdays: function(e, t) {
-                    var a = {
+                    var n = {
                         nominative: "неділя_понеділок_вівторок_середа_четвер_п’ятниця_субота".split("_"),
                         accusative: "неділю_понеділок_вівторок_середу_четвер_п’ятницю_суботу".split("_"),
                         genitive: "неділі_понеділка_вівторка_середи_четверга_п’ятниці_суботи".split("_")
                     };
-                    return e ? a[/(\[[ВвУу]\]) ?dddd/.test(t) ? "accusative" : /\[?(?:минулої|наступної)? ?\] ?dddd/.test(t) ? "genitive" : "nominative"][e.day()] : a.nominative
+                    return e ? n[/(\[[ВвУу]\]) ?dddd/.test(t) ? "accusative" : /\[?(?:минулої|наступної)? ?\] ?dddd/.test(t) ? "genitive" : "nominative"][e.day()] : n.nominative
                 },
                 weekdaysShort: "нд_пн_вт_ср_чт_пт_сб".split("_"),
                 weekdaysMin: "нд_пн_вт_ср_чт_пт_сб".split("_"),
@@ -15063,21 +15085,21 @@ webpackJsonp([35], {
                     LLLL: "dddd, D MMMM YYYY р., HH:mm"
                 },
                 calendar: {
-                    sameDay: a("[Сьогодні "),
-                    nextDay: a("[Завтра "),
-                    lastDay: a("[Вчора "),
-                    nextWeek: a("[У] dddd ["),
+                    sameDay: n("[Сьогодні "),
+                    nextDay: n("[Завтра "),
+                    lastDay: n("[Вчора "),
+                    nextWeek: n("[У] dddd ["),
                     lastWeek: function() {
                         switch (this.day()) {
                             case 0:
                             case 3:
                             case 5:
                             case 6:
-                                return a("[Минулої] dddd [").call(this);
+                                return n("[Минулої] dddd [").call(this);
                             case 1:
                             case 2:
                             case 4:
-                                return a("[Минулого] dddd [").call(this)
+                                return n("[Минулого] dddd [").call(this)
                         }
                     },
                     sameElse: "L"
@@ -15101,7 +15123,7 @@ webpackJsonp([35], {
                 isPM: function(e) {
                     return /^(дня|вечора)$/.test(e)
                 },
-                meridiem: function(e, t, a) {
+                meridiem: function(e, t, n) {
                     return e < 4 ? "ночі" : e < 12 ? "ранку" : e < 17 ? "дня" : "вечора"
                 },
                 dayOfMonthOrdinalParse: /\d{1,2}-(й|го)/,
@@ -15126,31 +15148,31 @@ webpackJsonp([35], {
             })
         })
     },
-    oNnY: function(e, t, a) {
-        var n = a("zZbG"),
-            r = a("Uu+E");
+    oNnY: function(e, t, n) {
+        var a = n("zZbG"),
+            r = n("Uu+E");
         e.exports = function(e, t) {
-            var a = Number(t);
-            return r(e, n(e) + a)
+            var n = Number(t);
+            return r(e, a(e) + n)
         }
     },
-    oQMP: function(e, t, a) {
+    oQMP: function(e, t, n) {
         "use strict";
-        var n = a("iO9N");
+        var a = n("iO9N");
         e.exports = function(e) {
             function t(e, t) {
-                var n = e._chartjs;
-                if (n) {
-                    var r = n.listeners,
-                        i = r.indexOf(t); - 1 !== i && r.splice(i, 1), r.length > 0 || (a.forEach(function(t) {
+                var a = e._chartjs;
+                if (a) {
+                    var r = a.listeners,
+                        i = r.indexOf(t); - 1 !== i && r.splice(i, 1), r.length > 0 || (n.forEach(function(t) {
                         delete e[t]
                     }), delete e._chartjs)
                 }
             }
-            var a = ["push", "pop", "shift", "splice", "unshift"];
+            var n = ["push", "pop", "shift", "splice", "unshift"];
             e.DatasetController = function(e, t) {
                 this.initialize(e, t)
-            }, n.extend(e.DatasetController.prototype, {
+            }, a.extend(e.DatasetController.prototype, {
                 datasetElementType: null,
                 dataElementType: null,
                 initialize: function(e, t) {
@@ -15195,11 +15217,11 @@ webpackJsonp([35], {
                     })
                 },
                 addElements: function() {
-                    var e, t, a = this.getMeta(),
-                        n = this.getDataset().data || [],
-                        r = a.data;
-                    for (e = 0, t = n.length; e < t; ++e) r[e] = r[e] || this.createMetaData(e);
-                    a.dataset = a.dataset || this.createMetaDataset()
+                    var e, t, n = this.getMeta(),
+                        a = this.getDataset().data || [],
+                        r = n.data;
+                    for (e = 0, t = a.length; e < t; ++e) r[e] = r[e] || this.createMetaData(e);
+                    n.dataset = n.dataset || this.createMetaDataset()
                 },
                 addElementAndReset: function(e) {
                     var t = this.createMetaData(e);
@@ -15215,8 +15237,8 @@ webpackJsonp([35], {
                             value: {
                                 listeners: [t]
                             }
-                        }), a.forEach(function(t) {
-                            var a = "onData" + t.charAt(0).toUpperCase() + t.slice(1),
+                        }), n.forEach(function(t) {
+                            var n = "onData" + t.charAt(0).toUpperCase() + t.slice(1),
                                 r = e[t];
                             Object.defineProperty(e, t, {
                                 configurable: !0,
@@ -15224,52 +15246,52 @@ webpackJsonp([35], {
                                 value: function() {
                                     var t = Array.prototype.slice.call(arguments),
                                         i = r.apply(this, t);
-                                    return n.each(e._chartjs.listeners, function(e) {
-                                        "function" == typeof e[a] && e[a].apply(e, t)
+                                    return a.each(e._chartjs.listeners, function(e) {
+                                        "function" == typeof e[n] && e[n].apply(e, t)
                                     }), i
                                 }
                             })
                         }))
                     }(r, this), this._data = r), this.resyncElements()
                 },
-                update: n.noop,
+                update: a.noop,
                 transition: function(e) {
-                    for (var t = this.getMeta(), a = t.data || [], n = a.length, r = 0; r < n; ++r) a[r].transition(e);
+                    for (var t = this.getMeta(), n = t.data || [], a = n.length, r = 0; r < a; ++r) n[r].transition(e);
                     t.dataset && t.dataset.transition(e)
                 },
                 draw: function() {
                     var e = this.getMeta(),
                         t = e.data || [],
-                        a = t.length,
-                        n = 0;
-                    for (e.dataset && e.dataset.draw(); n < a; ++n) t[n].draw()
+                        n = t.length,
+                        a = 0;
+                    for (e.dataset && e.dataset.draw(); a < n; ++a) t[a].draw()
                 },
                 removeHoverStyle: function(e, t) {
-                    var a = this.chart.data.datasets[e._datasetIndex],
+                    var n = this.chart.data.datasets[e._datasetIndex],
                         r = e._index,
                         i = e.custom || {},
-                        s = n.valueAtIndexOrDefault,
+                        s = a.valueAtIndexOrDefault,
                         o = e._model;
-                    o.backgroundColor = i.backgroundColor ? i.backgroundColor : s(a.backgroundColor, r, t.backgroundColor), o.borderColor = i.borderColor ? i.borderColor : s(a.borderColor, r, t.borderColor), o.borderWidth = i.borderWidth ? i.borderWidth : s(a.borderWidth, r, t.borderWidth)
+                    o.backgroundColor = i.backgroundColor ? i.backgroundColor : s(n.backgroundColor, r, t.backgroundColor), o.borderColor = i.borderColor ? i.borderColor : s(n.borderColor, r, t.borderColor), o.borderWidth = i.borderWidth ? i.borderWidth : s(n.borderWidth, r, t.borderWidth)
                 },
                 setHoverStyle: function(e) {
                     var t = this.chart.data.datasets[e._datasetIndex],
-                        a = e._index,
+                        n = e._index,
                         r = e.custom || {},
-                        i = n.valueAtIndexOrDefault,
-                        s = n.getHoverColor,
+                        i = a.valueAtIndexOrDefault,
+                        s = a.getHoverColor,
                         o = e._model;
-                    o.backgroundColor = r.hoverBackgroundColor ? r.hoverBackgroundColor : i(t.hoverBackgroundColor, a, s(o.backgroundColor)), o.borderColor = r.hoverBorderColor ? r.hoverBorderColor : i(t.hoverBorderColor, a, s(o.borderColor)), o.borderWidth = r.hoverBorderWidth ? r.hoverBorderWidth : i(t.hoverBorderWidth, a, o.borderWidth)
+                    o.backgroundColor = r.hoverBackgroundColor ? r.hoverBackgroundColor : i(t.hoverBackgroundColor, n, s(o.backgroundColor)), o.borderColor = r.hoverBorderColor ? r.hoverBorderColor : i(t.hoverBorderColor, n, s(o.borderColor)), o.borderWidth = r.hoverBorderWidth ? r.hoverBorderWidth : i(t.hoverBorderWidth, n, o.borderWidth)
                 },
                 resyncElements: function() {
                     var e = this.getMeta(),
                         t = this.getDataset().data,
-                        a = e.data.length,
-                        n = t.length;
-                    n < a ? e.data.splice(n, a - n) : n > a && this.insertElements(a, n - a)
+                        n = e.data.length,
+                        a = t.length;
+                    a < n ? e.data.splice(a, n - a) : a > n && this.insertElements(n, a - n)
                 },
                 insertElements: function(e, t) {
-                    for (var a = 0; a < t; ++a) this.addElementAndReset(e + a)
+                    for (var n = 0; n < t; ++n) this.addElementAndReset(e + n)
                 },
                 onDataPush: function() {
                     this.insertElements(this.getDataset().data.length - 1, arguments.length)
@@ -15286,19 +15308,19 @@ webpackJsonp([35], {
                 onDataUnshift: function() {
                     this.insertElements(0, arguments.length)
                 }
-            }), e.DatasetController.extend = n.inherits
+            }), e.DatasetController.extend = a.inherits
         }
     },
-    oke8: function(e, t, a) {
-        var n = a("1rLR");
+    oke8: function(e, t, n) {
+        var a = n("1rLR");
         e.exports = function(e, t) {
-            var a = Number(t);
-            return n(e, -a)
+            var n = Number(t);
+            return a(e, -n)
         }
     },
-    oo1B: function(e, t, a) {
+    oo1B: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("ml", {
@@ -15343,15 +15365,15 @@ webpackJsonp([35], {
                 meridiemHour: function(e, t) {
                     return 12 === e && (e = 0), "രാത്രി" === t && e >= 4 || "ഉച്ച കഴിഞ്ഞ്" === t || "വൈകുന്നേരം" === t ? e + 12 : e
                 },
-                meridiem: function(e, t, a) {
+                meridiem: function(e, t, n) {
                     return e < 4 ? "രാത്രി" : e < 12 ? "രാവിലെ" : e < 17 ? "ഉച്ച കഴിഞ്ഞ്" : e < 20 ? "വൈകുന്നേരം" : "രാത്രി"
                 }
             })
         })
     },
-    ooba: function(e, t, a) {
+    ooba: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("ms", {
@@ -15372,7 +15394,7 @@ webpackJsonp([35], {
                 meridiemHour: function(e, t) {
                     return 12 === e && (e = 0), "pagi" === t ? e : "tengahari" === t ? e >= 11 ? e : e + 12 : "petang" === t || "malam" === t ? e + 12 : void 0
                 },
-                meridiem: function(e, t, a) {
+                meridiem: function(e, t, n) {
                     return e < 11 ? "pagi" : e < 15 ? "tengahari" : e < 19 ? "petang" : "malam"
                 },
                 calendar: {
@@ -15405,23 +15427,23 @@ webpackJsonp([35], {
             })
         })
     },
-    orNa: function(e, t, a) {
-        var n = a("xA5w");
+    orNa: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e, t) {
-            var a = n(e),
-                r = n(t);
-            return 12 * (a.getFullYear() - r.getFullYear()) + (a.getMonth() - r.getMonth())
+            var n = a(e),
+                r = a(t);
+            return 12 * (n.getFullYear() - r.getFullYear()) + (n.getMonth() - r.getMonth())
         }
     },
-    pe7V: function(e, t, a) {
-        var n = a("8KV+");
+    pe7V: function(e, t, n) {
+        var a = n("8KV+");
         e.exports = function(e, t) {
-            return n(new Date, e, t)
+            return a(new Date, e, t)
         }
     },
-    pfs9: function(e, t, a) {
+    pfs9: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -15436,7 +15458,7 @@ webpackJsonp([35], {
                     9: "੯",
                     0: "੦"
                 },
-                a = {
+                n = {
                     "੧": "1",
                     "੨": "2",
                     "੩": "3",
@@ -15487,7 +15509,7 @@ webpackJsonp([35], {
                 },
                 preparse: function(e) {
                     return e.replace(/[੧੨੩੪੫੬੭੮੯੦]/g, function(e) {
-                        return a[e]
+                        return n[e]
                     })
                 },
                 postformat: function(e) {
@@ -15499,7 +15521,7 @@ webpackJsonp([35], {
                 meridiemHour: function(e, t) {
                     return 12 === e && (e = 0), "ਰਾਤ" === t ? e < 4 ? e : e + 12 : "ਸਵੇਰ" === t ? e : "ਦੁਪਹਿਰ" === t ? e >= 10 ? e : e + 12 : "ਸ਼ਾਮ" === t ? e + 12 : void 0
                 },
-                meridiem: function(e, t, a) {
+                meridiem: function(e, t, n) {
                     return e < 4 ? "ਰਾਤ" : e < 10 ? "ਸਵੇਰ" : e < 17 ? "ਦੁਪਹਿਰ" : e < 20 ? "ਸ਼ਾਮ" : "ਰਾਤ"
                 },
                 week: {
@@ -15509,31 +15531,31 @@ webpackJsonp([35], {
             })
         })
     },
-    qNYo: function(e, t, a) {
-        var n = a("xA5w"),
-            r = a("9Jn5"),
-            i = a("NKE6"),
-            s = a("MKc+");
+    qNYo: function(e, t, n) {
+        var a = n("xA5w"),
+            r = n("9Jn5"),
+            i = n("NKE6"),
+            s = n("MKc+");
         e.exports = function(e, t) {
-            var a = n(e),
-                o = n(t),
-                d = i(a, o),
-                u = Math.abs(r(a, o));
-            return a = s(a, d * u), d * (u - (i(a, o) === -d))
+            var n = a(e),
+                o = a(t),
+                d = i(n, o),
+                u = Math.abs(r(n, o));
+            return n = s(n, d * u), d * (u - (i(n, o) === -d))
         }
     },
-    qPxx: function(e, t, a) {
-        var n = a("LLTj");
+    qPxx: function(e, t, n) {
+        var a = n("LLTj");
         e.exports = function(e, t) {
-            var a = n(e),
-                r = n(t);
-            return a.getTime() === r.getTime()
+            var n = a(e),
+                r = a(t);
+            return n.getTime() === r.getTime()
         }
     },
-    r7VP: function(e, t, a) {
+    r7VP: function(e, t, n) {
         "use strict";
 
-        function n(e) {
+        function a(e) {
             switch (e.toUpperCase()) {
                 case "A1":
                     return Object(M.d)("Anonymous Proxy", "format-country");
@@ -16050,18 +16072,18 @@ webpackJsonp([35], {
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var r, i = a("RH2O"),
-            s = a("2KeS"),
-            o = a("+xm8"),
-            d = a("f2i/"),
-            u = a("Aj/L"),
-            l = a("TToO"),
-            c = a("U7vG"),
-            h = a("CIox"),
-            m = a("w9tK"),
-            _ = a("CSlQ"),
-            f = a("zCIC"),
-            p = a("Odds"),
+        var r, i = n("RH2O"),
+            s = n("2KeS"),
+            o = n("+xm8"),
+            d = n("f2i/"),
+            u = n("Aj/L"),
+            l = n("TToO"),
+            c = n("U7vG"),
+            h = n("CIox"),
+            m = n("w9tK"),
+            _ = n("CSlQ"),
+            f = n("zCIC"),
+            p = n("Odds"),
             g = function(e) {
                 return c.createElement(f.b, null, c.createElement(p.U, {
                     display: p.H.Flex,
@@ -16082,7 +16104,7 @@ webpackJsonp([35], {
         ! function(e) {
             e.BasicInfo = "basic-info", e.Customize = "customize", e.Members = "members", e.FeaturedChannels = "featured-channels", e.Stats = "stats", e.Revenue = "revenue"
         }(r || (r = {}));
-        var y, M = a("6sO2"),
+        var y, M = n("6sO2"),
             v = function(e) {
                 switch (e) {
                     case r.BasicInfo:
@@ -16128,7 +16150,7 @@ webpackJsonp([35], {
                     titleSelector: "featured-channels-page-title"
                 })
             }),
-            D = (a("A5K9"), function(e) {
+            D = (n("A5K9"), function(e) {
                 var t = function(e) {
                     var t = Object(M.d)("{displayName}'s Avatar Image", {
                         displayName: e.member.displayName
@@ -16171,19 +16193,19 @@ webpackJsonp([35], {
                     })))
                 }(e.members) : c.createElement(p._22, null, "No team members yet."))
             }),
-            k = a("PGY2"),
+            k = n("PGY2"),
             w = this;
         ! function(e) {
             e.StatsRevealed = "stats_revealed", e.RevenueRevealed = "revenue_revealed"
         }(y || (y = {}));
         var x, T = function(e, t) {
                 return l.__awaiter(w, void 0, void 0, function() {
-                    var a, n, r, i;
+                    var n, a, r, i;
                     return l.__generator(this, function(s) {
                         switch (s.label) {
                             case 0:
-                                return a = t ? "?" + t + "=true" : "", n = "/v5/teams/" + e + "/dashboard/members" + a, [4, Object(k.c)({
-                                    path: n
+                                return n = t ? "?" + t + "=true" : "", a = "/v5/teams/" + e + "/dashboard/members" + n, [4, Object(k.d)({
+                                    path: a
                                 })];
                             case 1:
                                 return r = s.sent(), i = r.body ? r.body.channels : [], [2, function(e) {
@@ -16252,8 +16274,8 @@ webpackJsonp([35], {
                 return new Date(Date.UTC(e.getUTCFullYear(), e.getUTCMonth()))
             },
             j = function(e, t) {
-                var a = new Date(Date.UTC(e.getUTCFullYear(), e.getUTCMonth() + 1));
-                return a.getTime() > t.getTime() ? t : a
+                var n = new Date(Date.UTC(e.getUTCFullYear(), e.getUTCMonth() + 1));
+                return n.getTime() > t.getTime() ? t : n
             },
             H = function(e) {
                 return new Date(Date.UTC(e.getUTCFullYear(), e.getUTCMonth() - 1))
@@ -16264,26 +16286,26 @@ webpackJsonp([35], {
             },
             C = function(e) {
                 function t(t) {
-                    var a = e.call(this, t) || this;
-                    return a.handleChange = function(e) {
+                    var n = e.call(this, t) || this;
+                    return n.handleChange = function(e) {
                         var t = new Date(e.currentTarget.value),
-                            n = O(t),
-                            r = j(n, a.validatedCurrentDate);
-                        a.props.onMonthSelection(n, r)
-                    }, a.getDropdownOptions = function(e, t) {
-                        for (var a = [], n = O(e); n >= t; n = H(n)) {
-                            var r = n.toISOString();
-                            a.push(c.createElement("option", {
+                            a = O(t),
+                            r = j(a, n.validatedCurrentDate);
+                        n.props.onMonthSelection(a, r)
+                    }, n.getDropdownOptions = function(e, t) {
+                        for (var n = [], a = O(e); a >= t; a = H(a)) {
+                            var r = a.toISOString();
+                            n.push(c.createElement("option", {
                                 key: r,
                                 value: r
-                            }, Object(M.c)(n, {
+                            }, Object(M.c)(a, {
                                 month: "long",
                                 year: "numeric",
                                 timeZone: "UTC"
                             })))
                         }
-                        return a
-                    }, a.validatedCurrentDate = t.currentDate < t.earliestDate ? t.earliestDate : t.currentDate, a
+                        return n
+                    }, n.validatedCurrentDate = t.currentDate < t.earliestDate ? t.earliestDate : t.currentDate, n
                 }
                 return l.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
@@ -16296,7 +16318,7 @@ webpackJsonp([35], {
                 }, t = l.__decorate([Object(_.c)("MonthSelectMenuComponent")], t)
             }(c.Component),
             A = function(e) {
-                var t, a = e.isLoading ? c.createElement(p._2, {
+                var t, n = e.isLoading ? c.createElement(p._2, {
                     width: 90
                 }) : e.title;
                 if (e.isLoading) t = c.createElement(p.U, null, c.createElement(p._2, {
@@ -16304,7 +16326,7 @@ webpackJsonp([35], {
                     height: e.magnified ? 40 : 30
                 }));
                 else {
-                    var n = Math.floor(e.amount),
+                    var a = Math.floor(e.amount),
                         r = Math.round(e.amount % 1 * 100);
                     t = c.createElement(p.U, {
                         alignItems: p.c.Start,
@@ -16314,7 +16336,7 @@ webpackJsonp([35], {
                         type: e.magnified ? p._27.H4 : p._27.H5
                     }, "$ "), c.createElement(p._22, {
                         type: e.magnified ? p._27.H1 : p._27.H2
-                    }, Object(M.e)(n)), c.createElement(p._22, {
+                    }, Object(M.e)(a)), c.createElement(p._22, {
                         type: e.magnified ? p._27.H4 : p._27.H5
                     }, Object(M.e)(r, {
                         minimumIntegerDigits: 2
@@ -16332,15 +16354,15 @@ webpackJsonp([35], {
                 }, c.createElement(p._22, {
                     color: p.F.Alt2,
                     type: p._27.H5
-                }, a)), t)
+                }, n)), t)
             },
             F = function(e) {
                 var t = e.revenues.reduce(function(e, t) {
                         return e + t.amount
                     }, 0),
-                    a = e.revenues.map(function(t, a) {
+                    n = e.revenues.map(function(t, n) {
                         return c.createElement(A, {
-                            key: a,
+                            key: n,
                             isLoading: e.isLoading,
                             title: t.title + " " + e.summaryItemTitleSuffix,
                             amount: t.amount
@@ -16360,9 +16382,9 @@ webpackJsonp([35], {
                     title: e.totalTitle + " " + e.summaryItemTitleSuffix,
                     amount: t,
                     magnified: !0
-                }), a)
+                }), n)
             },
-            W = a("+Znq"),
+            W = n("+Znq"),
             E = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -16374,7 +16396,7 @@ webpackJsonp([35], {
                         var e = t.props.members.filter(function(e) {
                                 return e.checked
                             }).length,
-                            a = t.props.members.length > 100 ? "Select First 100" : "Select All";
+                            n = t.props.members.length > 100 ? "Select First 100" : "Select All";
                         return c.createElement(W.a, {
                             onToggle: t.toggleOpenClose
                         }, c.createElement(p.u, {
@@ -16396,23 +16418,23 @@ webpackJsonp([35], {
                                 bottom: .5
                             }
                         }, c.createElement(p.E, {
-                            label: a,
+                            label: n,
                             checked: t.props.groupChecked,
                             onChange: t.props.toggleGroupChecked
-                        })), t.props.members.map(function(a) {
-                            var n = {
-                                label: a.displayName,
-                                checked: a.checked,
-                                onChange: t.props.toggleMemberChecked.bind(t, a),
-                                disabled: e >= 100 && !a.checked
+                        })), t.props.members.map(function(n) {
+                            var a = {
+                                label: n.displayName,
+                                checked: n.checked,
+                                onChange: t.props.toggleMemberChecked.bind(t, n),
+                                disabled: e >= 100 && !n.checked
                             };
                             return c.createElement(p._18, {
                                 margin: {
                                     x: .5,
                                     y: 0
                                 },
-                                key: a.id
-                            }, c.createElement(p.E, l.__assign({}, n)))
+                                key: n.id
+                            }, c.createElement(p.E, l.__assign({}, a)))
                         })))))
                     }, t.toggleOpenClose = function(e) {
                         e && JSON.stringify(t.props.members) !== t.membersPreviouslyCheckedJSON ? t.props.fetchMembersData(t.props.members) : t.membersPreviouslyCheckedJSON = JSON.stringify(t.props.members)
@@ -16428,8 +16450,8 @@ webpackJsonp([35], {
             }(c.Component),
             I = this,
             z = function(e) {
-                for (var t = {}, a = 0, n = Object.keys(e); a < n.length; a++)
-                    for (var r = n[a], i = 0, s = Object.keys(e[r]); i < s.length; i++)
+                for (var t = {}, n = 0, a = Object.keys(e); n < a.length; n++)
+                    for (var r = a[n], i = 0, s = Object.keys(e[r]); i < s.length; i++)
                         for (var o = s[i], d = N(e[r][o]), u = 0, l = Object.keys(d); u < l.length; u++) {
                             var c = l[u];
                             t.hasOwnProperty(c) ? t[c].hasOwnProperty(o) ? t[c][o] += d[c] : t[c][o] = d[c] : (t[c] = {}, t[c][o] = d[c])
@@ -16439,13 +16461,13 @@ webpackJsonp([35], {
             N = function(e) {
                 var t = {};
                 return e.forEach(function(e) {
-                    var a = new Date(e.timestamp),
-                        n = new Date(Date.UTC(a.getUTCFullYear(), a.getUTCMonth(), a.getUTCDate())).toISOString();
-                    t.hasOwnProperty(n) ? t[n] += e.amount : t[n] = e.amount
+                    var n = new Date(e.timestamp),
+                        a = new Date(Date.UTC(n.getUTCFullYear(), n.getUTCMonth(), n.getUTCDate())).toISOString();
+                    t.hasOwnProperty(a) ? t[a] += e.amount : t[a] = e.amount
                 }), t
             },
             R = function(e) {
-                for (var t = [], a = {
+                for (var t = [], n = {
                         twitch_subscriptions: {
                             categoryLabel: "Sub Revenue",
                             color: "#7752ba",
@@ -16466,19 +16488,19 @@ webpackJsonp([35], {
                             color: "#059bdc",
                             data: []
                         }
-                    }, n = 0, r = Object.keys(e).sort(); n < r.length; n++) {
-                    var i = r[n];
+                    }, a = 0, r = Object.keys(e).sort(); a < r.length; a++) {
+                    var i = r[a];
                     t.push(i);
-                    for (var s = e[i], o = 0, d = Object.keys(a); o < d.length; o++) {
+                    for (var s = e[i], o = 0, d = Object.keys(n); o < d.length; o++) {
                         var u = d[o];
-                        a[u].data.push(s[u] ? s[u] : 0)
+                        n[u].data.push(s[u] ? s[u] : 0)
                     }
                 }
                 return {
-                    twitch_subscriptions: a.twitch_subscriptions,
-                    ads: a.ads,
-                    bits: a.bits,
-                    prime_subscriptions: a.prime_subscriptions,
+                    twitch_subscriptions: n.twitch_subscriptions,
+                    ads: n.ads,
+                    bits: n.bits,
+                    prime_subscriptions: n.prime_subscriptions,
                     timestampLabels: t
                 }
             },
@@ -16610,7 +16632,7 @@ webpackJsonp([35], {
                     }]
                 }
             },
-            J = a("WaEV"),
+            J = n("WaEV"),
             V = 800,
             U = 380,
             G = function(e) {
@@ -16720,8 +16742,8 @@ webpackJsonp([35], {
                 }, t.prototype.setCanvasResolution = function() {
                     var e = V,
                         t = U,
-                        a = Z(this.canvas.getContext("2d"));
-                    this.canvas.width = e * a, this.canvas.height = t * a, this.canvas.style.width = e + "px", this.canvas.style.height = t + "px", this.canvas.getContext("2d").setTransform(a, 0, 0, a, 0, 0)
+                        n = Z(this.canvas.getContext("2d"));
+                    this.canvas.width = e * n, this.canvas.height = t * n, this.canvas.style.width = e + "px", this.canvas.style.height = t + "px", this.canvas.getContext("2d").setTransform(n, 0, 0, n, 0, 0)
                 }, t = l.__decorate([Object(_.c)("RevenueChart")], t)
             }(c.Component),
             Z = function(e) {
@@ -16788,27 +16810,27 @@ webpackJsonp([35], {
                             timestampLabels: []
                         }
                     }, t.toggleMemberChecked = function(e) {
-                        var a = t.state.members.slice(),
-                            n = a.find(function(t) {
+                        var n = t.state.members.slice(),
+                            a = n.find(function(t) {
                                 return t.id === e.id
                             });
-                        n.checked = !n.checked, t.setState({
-                            members: a,
+                        a.checked = !a.checked, t.setState({
+                            members: n,
                             groupChecked: !1
                         })
                     }, t.toggleGroupChecked = function() {
                         var e = !t.state.groupChecked,
-                            a = t.state.members.map(function(t, a) {
-                                return t.checked = e && a < 100, t
+                            n = t.state.members.map(function(t, n) {
+                                return t.checked = e && n < 100, t
                             });
                         t.setState({
                             groupChecked: e,
-                            members: a
+                            members: n
                         })
-                    }, t.handleTimeRangeChange = function(e, a) {
+                    }, t.handleTimeRangeChange = function(e, n) {
                         t.setState({
                             startTime: e,
-                            endTime: a
+                            endTime: n
                         })
                     }, t.fetchMembersData = function() {
                         return l.__awaiter(t, void 0, void 0, function() {
@@ -16820,7 +16842,7 @@ webpackJsonp([35], {
                 }
                 return l.__extends(t, e), t.prototype.componentDidMount = function() {
                     return l.__awaiter(this, void 0, void 0, function() {
-                        var e, t, a, n;
+                        var e, t, n, a;
                         return l.__generator(this, function(r) {
                             switch (r.label) {
                                 case 0:
@@ -16837,7 +16859,7 @@ webpackJsonp([35], {
                                     }), this.setState({
                                         isLoadingMembers: !1,
                                         members: t
-                                    }), a = this.setState, n = {
+                                    }), n = this.setState, a = {
                                         isLoadingRevenues: !1
                                     }, [4, l.__awaiter(I, void 0, void 0, function() {
                                         var e;
@@ -16846,7 +16868,7 @@ webpackJsonp([35], {
                                         })
                                     })];
                                 case 4:
-                                    return a.apply(this, [(n.revenues = r.sent(), n)]), [2]
+                                    return n.apply(this, [(a.revenues = r.sent(), a)]), [2]
                             }
                         })
                     })
@@ -16915,7 +16937,7 @@ webpackJsonp([35], {
                     destination: m.a.TeamsDashboardRevenue
                 })], t)
             }(c.Component),
-            Q = a("HW6M"),
+            Q = n("HW6M"),
             $ = {
                 "side-nav-bar__option": !0,
                 "side-nav-bar__option--active": !0
@@ -16997,8 +17019,8 @@ webpackJsonp([35], {
         ! function(e) {
             e.AverageViewers = "AverageViewers", e.NewFollowers = "NewFollowers", e.AverageChatters = "AverageChatters", e.ChatMessages = "ChatMessages", e.AdBreakDuration = "AdBreakDuration", e.AdBreaks = "AdBreaks"
         }(x || (x = {}));
-        var te, ae, ne = (te = {}, te[x.AverageViewers] = "concurrent_viewers", te[x.NewFollowers] = "follows", te[x.AverageChatters] = "chat_activities", te[x.ChatMessages] = "chat_activities", te[x.AdBreakDuration] = "commercials", te),
-            re = (ae = {}, ae[x.AverageViewers] = "line", ae[x.NewFollowers] = "line", ae[x.AverageChatters] = "bar", ae[x.ChatMessages] = "bar", ae[x.AdBreakDuration] = "bar", ae),
+        var te, ne, ae = (te = {}, te[x.AverageViewers] = "concurrent_viewers", te[x.NewFollowers] = "follows", te[x.AverageChatters] = "chat_activities", te[x.ChatMessages] = "chat_activities", te[x.AdBreakDuration] = "commercials", te),
+            re = (ne = {}, ne[x.AverageViewers] = "line", ne[x.NewFollowers] = "line", ne[x.AverageChatters] = "bar", ne[x.ChatMessages] = "bar", ne[x.AdBreakDuration] = "bar", ne),
             ie = function(e) {
                 switch (e) {
                     case x.AverageViewers:
@@ -17092,9 +17114,9 @@ webpackJsonp([35], {
                             tooltips: {
                                 callbacks: {
                                     title: function(e, t) {
-                                        var a = "",
-                                            n = e[0];
-                                        return t && t.labels && (a = t.labels[n.index || 0]),
+                                        var n = "",
+                                            a = e[0];
+                                        return t && t.labels && (n = t.labels[a.index || 0]),
                                             function(e) {
                                                 var t = P(e);
                                                 return Object(M.c)(e, {
@@ -17110,14 +17132,14 @@ webpackJsonp([35], {
                                                     hour: "numeric",
                                                     timeZone: "UTC"
                                                 }) + " (4h)"
-                                            }(new Date(a))
+                                            }(new Date(n))
                                     },
                                     label: function(e) {
                                         return t.props.chartData.dataLabels[e.index || 0]
                                     },
                                     footer: function(e) {
-                                        var a = e[0];
-                                        return t.props.chartData.dataFooters[a.index || 0]
+                                        var n = e[0];
+                                        return t.props.chartData.dataFooters[n.index || 0]
                                     }
                                 }
                             },
@@ -17171,8 +17193,8 @@ webpackJsonp([35], {
                 }, t.prototype.setCanvasResolution = function() {
                     var e = oe,
                         t = de,
-                        a = le(this.canvas.getContext("2d"));
-                    this.canvas.width = e * a, this.canvas.height = t * a, this.canvas.style.width = e + "px", this.canvas.style.height = t + "px", this.canvas.getContext("2d").setTransform(a, 0, 0, a, 0, 0)
+                        n = le(this.canvas.getContext("2d"));
+                    this.canvas.width = e * n, this.canvas.height = t * n, this.canvas.style.width = e + "px", this.canvas.style.height = t + "px", this.canvas.getContext("2d").setTransform(n, 0, 0, n, 0, 0)
                 }, t = l.__decorate([Object(_.c)("StatsCanvas")], t)
             }(c.Component),
             le = function(e) {
@@ -17186,10 +17208,10 @@ webpackJsonp([35], {
                 return l.__extends(t, e), t.prototype.render = function() {
                     var e = this.props,
                         t = e.data,
-                        a = e.dataType,
-                        n = {
-                            chartType: re[a],
-                            chartLabel: ie(a),
+                        n = e.dataType,
+                        a = {
+                            chartType: re[n],
+                            chartLabel: ie(n),
                             timeLabels: Object.keys(t).sort(function(e, t) {
                                 return e.localeCompare(t, void 0, {
                                     numeric: !0
@@ -17199,44 +17221,44 @@ webpackJsonp([35], {
                             dataLabels: [],
                             dataFooters: []
                         };
-                    switch (a) {
+                    switch (n) {
                         case x.AverageViewers:
                         case x.ChatMessages:
                         case x.AverageChatters:
-                            n.data = n.timeLabels.map(function(e) {
+                            a.data = a.timeLabels.map(function(e) {
                                 return t[e].count
-                            }), n.dataLabels = n.data.map(function(e) {
+                            }), a.dataLabels = a.data.map(function(e) {
                                 return "" + Math.floor(e)
-                            }), n.dataFooters = Array(n.data.length).fill("");
+                            }), a.dataFooters = Array(a.data.length).fill("");
                             break;
                         case x.AdBreakDuration:
-                            n.data = n.timeLabels.map(function(e) {
+                            a.data = a.timeLabels.map(function(e) {
                                 return t[e].count
-                            }), n.dataLabels = n.data.map(function(e) {
+                            }), a.dataLabels = a.data.map(function(e) {
                                 return function(e) {
                                     var t = Math.floor(e / 3600),
-                                        a = Math.floor(e % 3600 / 60),
-                                        n = e % 60 + "s";
-                                    return a && (n = a + "m" + n), t && (n = t + "h" + n), n
+                                        n = Math.floor(e % 3600 / 60),
+                                        a = e % 60 + "s";
+                                    return n && (a = n + "m" + a), t && (a = t + "h" + a), a
                                 }(e)
-                            }), n.dataFooters = n.timeLabels.map(function(e) {
+                            }), a.dataFooters = a.timeLabels.map(function(e) {
                                 return Object(M.d)("{adBreakCount, plural, one {# Ad Break} other {# Ad Breaks}}", {
                                     adBreakCount: t[e].numberOfDatapoints
                                 }, "TeamsDashboard")
                             });
                             break;
                         case x.NewFollowers:
-                            n.data = n.timeLabels.reduce(function(e, a) {
-                                return e.push(t[a].count + (e.length ? e[e.length - 1] : 0)), e
-                            }, []), n.dataLabels = n.data.map(function(e) {
+                            a.data = a.timeLabels.reduce(function(e, n) {
+                                return e.push(t[n].count + (e.length ? e[e.length - 1] : 0)), e
+                            }, []), a.dataLabels = a.data.map(function(e) {
                                 return "" + Math.floor(e)
-                            }), n.dataFooters = Array(n.data.length).fill("");
+                            }), a.dataFooters = Array(a.data.length).fill("");
                             break;
                         default:
-                            throw new Error("Data type: " + a + " is unrecognized")
+                            throw new Error("Data type: " + n + " is unrecognized")
                     }
                     return c.createElement(ce, {
-                        chartData: n
+                        chartData: a
                     })
                 }, t
             }(c.PureComponent),
@@ -17295,8 +17317,8 @@ webpackJsonp([35], {
                     }
                 }, c.createElement(p._22, null, Object(M.e)(t.percent), "%")))
             },
-            fe = function(e, t, a, n) {
-                return 0 === e.length ? ge() : n && 1 === e.length ? ye(e[0].name) : Me(e, a, t)
+            fe = function(e, t, n, a) {
+                return 0 === e.length ? ge() : a && 1 === e.length ? ye(e[0].name) : Me(e, n, t)
             },
             pe = function(e, t) {
                 return t > 10 ? Object(M.d)("{tableName} (Top 10)", {
@@ -17317,15 +17339,15 @@ webpackJsonp([35], {
                     name: e
                 }, "TeamsDashboard"))
             },
-            Me = function(e, t, a) {
-                var n = e.slice(0, 10).map(function(e, t) {
-                    var n = e.name,
+            Me = function(e, t, n) {
+                var a = e.slice(0, 10).map(function(e, t) {
+                    var a = e.name,
                         r = e.views,
-                        i = Math.round(r / a * 100);
+                        i = Math.round(r / n * 100);
                     return c.createElement(_e, {
                         key: t,
                         rowContent: {
-                            name: n,
+                            name: a,
                             views: r,
                             percent: i
                         }
@@ -17333,20 +17355,20 @@ webpackJsonp([35], {
                 });
                 return c.createElement(p.U, null, c.createElement(me, {
                     columnName: t
-                }), n)
+                }), a)
             },
             ve = function(e) {
-                var t, a = e.rowData.reduce(function(e, t) {
+                var t, n = e.rowData.reduce(function(e, t) {
                         return e + t.views
                     }, 0),
-                    n = e.rowData.sort(function(e, t) {
+                    a = e.rowData.sort(function(e, t) {
                         return t.views - e.views || e.name.localeCompare(t.name)
                     });
                 t = e.isLoading ? c.createElement(p._2, {
                     width: 180
-                }) : pe(e.tableName, n.length);
+                }) : pe(e.tableName, a.length);
                 var r;
-                return r = e.isLoading ? c.createElement(p.U, null, c.createElement(p._22, null, c.createElement(p._2, null)), c.createElement(p._22, null, c.createElement(p._2, null))) : fe(n, a, e.columnName, e.isGeo), c.createElement(p.U, {
+                return r = e.isLoading ? c.createElement(p.U, null, c.createElement(p._22, null, c.createElement(p._2, null)), c.createElement(p._22, null, c.createElement(p._2, null))) : fe(a, n, e.columnName, e.isGeo), c.createElement(p.U, {
                     display: p.H.Flex,
                     flexDirection: p.J.Column,
                     padding: 2,
@@ -17364,8 +17386,8 @@ webpackJsonp([35], {
             be = Object(M.d)("Referrer", "TeamsDashboard"),
             Le = function(e) {
                 var t = Object(M.d)("Views by Referrer", "TeamsDashboard"),
-                    a = "";
-                return e.internalReferral && e.internalReferral.length && (t = Object(M.d)("Views from Outside Twitch", "TeamsDashboard"), a = c.createElement(p._18, {
+                    n = "";
+                return e.internalReferral && e.internalReferral.length && (t = Object(M.d)("Views from Outside Twitch", "TeamsDashboard"), n = c.createElement(p._18, {
                     display: p.H.Flex,
                     flexGrow: 1,
                     borderBottom: !0,
@@ -17408,7 +17430,7 @@ webpackJsonp([35], {
                     flexGrow: 1,
                     flexDirection: p.J.Column,
                     flexWrap: p.K.NoWrap
-                }, a, c.createElement(p._18, {
+                }, n, c.createElement(p._18, {
                     display: p.H.Flex,
                     flexGrow: 1,
                     borderLeft: !0
@@ -17420,14 +17442,14 @@ webpackJsonp([35], {
                 }))))
             },
             Ye = this,
-            De = function(e, t, a, n, r) {
+            De = function(e, t, n, a, r) {
                 return l.__awaiter(Ye, void 0, void 0, function() {
                     var i, s, o, d, u, c, h;
                     return l.__generator(this, function(l) {
                         switch (l.label) {
                             case 0:
-                                if (0 === a.length) return [2, Promise.resolve({})];
-                                switch (i = "/v5/teams/" + t + "/stats/" + ne[e] + "?channel_ids=" + a + "&start_time=" + n + "&end_time=" + r, e) {
+                                if (0 === n.length) return [2, Promise.resolve({})];
+                                switch (i = "/v5/teams/" + t + "/stats/" + ae[e] + "?channel_ids=" + n + "&start_time=" + a + "&end_time=" + r, e) {
                                     case x.AverageViewers:
                                         return [3, 1];
                                     case x.NewFollowers:
@@ -17443,23 +17465,23 @@ webpackJsonp([35], {
                             case 1:
                                 return o = Oe, [4, ke(i)];
                             case 2:
-                                return s = o.apply(void 0, [l.sent(), n, r, He]), [3, 12];
+                                return s = o.apply(void 0, [l.sent(), a, r, He]), [3, 12];
                             case 3:
                                 return d = Oe, [4, xe(i)];
                             case 4:
-                                return s = d.apply(void 0, [l.sent(), n, r, Pe]), [3, 12];
+                                return s = d.apply(void 0, [l.sent(), a, r, Pe]), [3, 12];
                             case 5:
                                 return u = Oe, [4, we(i)];
                             case 6:
-                                return s = u.apply(void 0, [l.sent(), n, r, Ce]), [3, 12];
+                                return s = u.apply(void 0, [l.sent(), a, r, Ce]), [3, 12];
                             case 7:
                                 return c = Oe, [4, we(i)];
                             case 8:
-                                return s = c.apply(void 0, [l.sent(), n, r, Ae]), [3, 12];
+                                return s = c.apply(void 0, [l.sent(), a, r, Ae]), [3, 12];
                             case 9:
                                 return h = je, [4, Te(i)];
                             case 10:
-                                return s = h.apply(void 0, [l.sent(), n, r, Fe]), [3, 12];
+                                return s = h.apply(void 0, [l.sent(), a, r, Fe]), [3, 12];
                             case 11:
                                 throw new Error("fetch type is not in StatsMetric enum");
                             case 12:
@@ -17471,14 +17493,14 @@ webpackJsonp([35], {
             ke = function(e) {
                 return l.__awaiter(Ye, void 0, void 0, function() {
                     var t;
-                    return l.__generator(this, function(a) {
-                        switch (a.label) {
+                    return l.__generator(this, function(n) {
+                        switch (n.label) {
                             case 0:
-                                return [4, Object(k.c)({
+                                return [4, Object(k.d)({
                                     path: e
                                 })];
                             case 1:
-                                return t = a.sent(), [2, t.body ? t.body.concurrent_viewers : {}]
+                                return t = n.sent(), [2, t.body ? t.body.concurrent_viewers : {}]
                         }
                     })
                 })
@@ -17486,14 +17508,14 @@ webpackJsonp([35], {
             we = function(e) {
                 return l.__awaiter(Ye, void 0, void 0, function() {
                     var t;
-                    return l.__generator(this, function(a) {
-                        switch (a.label) {
+                    return l.__generator(this, function(n) {
+                        switch (n.label) {
                             case 0:
-                                return [4, Object(k.c)({
+                                return [4, Object(k.d)({
                                     path: e
                                 })];
                             case 1:
-                                return t = a.sent(), [2, t.body ? t.body.chat_activities : {}]
+                                return t = n.sent(), [2, t.body ? t.body.chat_activities : {}]
                         }
                     })
                 })
@@ -17501,14 +17523,14 @@ webpackJsonp([35], {
             xe = function(e) {
                 return l.__awaiter(Ye, void 0, void 0, function() {
                     var t;
-                    return l.__generator(this, function(a) {
-                        switch (a.label) {
+                    return l.__generator(this, function(n) {
+                        switch (n.label) {
                             case 0:
-                                return [4, Object(k.c)({
+                                return [4, Object(k.d)({
                                     path: e
                                 })];
                             case 1:
-                                return t = a.sent(), [2, t.body ? t.body.follows : {}]
+                                return t = n.sent(), [2, t.body ? t.body.follows : {}]
                         }
                     })
                 })
@@ -17516,21 +17538,21 @@ webpackJsonp([35], {
             Te = function(e) {
                 return l.__awaiter(Ye, void 0, void 0, function() {
                     var t;
-                    return l.__generator(this, function(a) {
-                        switch (a.label) {
+                    return l.__generator(this, function(n) {
+                        switch (n.label) {
                             case 0:
-                                return [4, Object(k.c)({
+                                return [4, Object(k.d)({
                                     path: e
                                 })];
                             case 1:
-                                return t = a.sent(), [2, t.body ? t.body.commercials : {}]
+                                return t = n.sent(), [2, t.body ? t.body.commercials : {}]
                         }
                     })
                 })
             },
             Se = function(e) {
-                for (var t = {}, a = 0, n = Object.keys(e); a < n.length; a++)
-                    for (var r = 0, i = e[n[a]]; r < i.length; r++) {
+                for (var t = {}, n = 0, a = Object.keys(e); n < a.length; n++)
+                    for (var r = 0, i = e[a[n]]; r < i.length; r++) {
                         var s = i[r],
                             o = s.timestamp,
                             d = s.count,
@@ -17542,35 +17564,35 @@ webpackJsonp([35], {
                     }
                 return t
             },
-            Oe = function(e, t, a, n) {
+            Oe = function(e, t, n, a) {
                 for (var r = {}, i = 0, s = Object.keys(e); i < s.length; i++) {
                     var o = s[i];
-                    r[o] = n(t, a, e[o])
+                    r[o] = a(t, n, e[o])
                 }
                 return r
             },
-            je = function(e, t, a, n) {
+            je = function(e, t, n, a) {
                 for (var r = {}, i = 0, s = Object.keys(e); i < s.length; i++) {
                     var o = s[i];
-                    r[o] = n(t, a, e[o])
+                    r[o] = a(t, n, e[o])
                 }
                 return r
             },
-            He = function(e, t, a) {
-                for (var n = We(e, t).map(function(e) {
+            He = function(e, t, n) {
+                for (var a = We(e, t).map(function(e) {
                         return l.__assign({}, e, {
                             sampleSize: 0
                         })
                     }), r = function(e, t) {
-                        var a = n.find(function(t) {
+                        var n = a.find(function(t) {
                             return t.timestamp === Ee(e)
                         });
-                        a && 0 !== t && (a.count += t, a.sampleSize += 1)
-                    }, i = 0, s = a; i < s.length; i++) {
+                        n && 0 !== t && (n.count += t, n.sampleSize += 1)
+                    }, i = 0, s = n; i < s.length; i++) {
                     var o = s[i];
                     r(o.timestamp, o.count)
                 }
-                return n.map(function(e) {
+                return a.map(function(e) {
                     return {
                         timestamp: e.timestamp,
                         count: e.sampleSize ? Math.floor(e.count / e.sampleSize) : 0,
@@ -17578,33 +17600,33 @@ webpackJsonp([35], {
                     }
                 })
             },
-            Pe = function(e, t, a) {
-                for (var n = We(e, t), r = function(e, t) {
-                        var a = n.find(function(t) {
+            Pe = function(e, t, n) {
+                for (var a = We(e, t), r = function(e, t) {
+                        var n = a.find(function(t) {
                             return t.timestamp === Ee(e)
                         });
-                        a && (a.count += t)
-                    }, i = 0, s = a; i < s.length; i++) {
+                        n && (n.count += t)
+                    }, i = 0, s = n; i < s.length; i++) {
                     var o = s[i];
                     r(o.timestamp, o.count)
                 }
-                return n
+                return a
             },
-            Ce = function(e, t, a) {
-                for (var n = We(e, t).map(function(e) {
+            Ce = function(e, t, n) {
+                for (var a = We(e, t).map(function(e) {
                         return l.__assign({}, e, {
                             sampleSize: 0
                         })
                     }), r = function(e, t) {
-                        var a = n.find(function(t) {
+                        var n = a.find(function(t) {
                             return t.timestamp === Ee(e)
                         });
-                        a && 0 !== t && (a.count += t, a.sampleSize += 1)
-                    }, i = 0, s = a; i < s.length; i++) {
+                        n && 0 !== t && (n.count += t, n.sampleSize += 1)
+                    }, i = 0, s = n; i < s.length; i++) {
                     var o = s[i];
                     r(o.timestamp, o.participant_count)
                 }
-                return n.map(function(e) {
+                return a.map(function(e) {
                     return {
                         timestamp: e.timestamp,
                         count: e.sampleSize ? Math.floor(e.count / e.sampleSize) : 0,
@@ -17612,70 +17634,70 @@ webpackJsonp([35], {
                     }
                 })
             },
-            Ae = function(e, t, a) {
-                for (var n = We(e, t), r = function(e, t) {
-                        var a = n.find(function(t) {
+            Ae = function(e, t, n) {
+                for (var a = We(e, t), r = function(e, t) {
+                        var n = a.find(function(t) {
                             return t.timestamp === Ee(e)
                         });
-                        a && (a.count += t)
-                    }, i = 0, s = a; i < s.length; i++) {
+                        n && (n.count += t)
+                    }, i = 0, s = n; i < s.length; i++) {
                     var o = s[i];
                     r(o.timestamp, o.message_count)
                 }
-                return n
+                return a
             },
-            Fe = function(e, t, a) {
-                for (var n = We(e, t), r = function(e, t) {
-                        var a = n.find(function(t) {
+            Fe = function(e, t, n) {
+                for (var a = We(e, t), r = function(e, t) {
+                        var n = a.find(function(t) {
                             return t.timestamp === Ee(e)
                         });
-                        a && (a.count += t, a.numberOfDatapoints += 1)
-                    }, i = 0, s = a; i < s.length; i++) {
+                        n && (n.count += t, n.numberOfDatapoints += 1)
+                    }, i = 0, s = n; i < s.length; i++) {
                     var o = s[i];
                     r(o.timestamp, o.duration_seconds)
                 }
-                return n
+                return a
             },
             We = function(e, t) {
-                for (var a = [], n = new Date(Ee(e)), r = new Date(t); n < r;) a.push({
-                    timestamp: n.toISOString(),
+                for (var n = [], a = new Date(Ee(e)), r = new Date(t); a < r;) n.push({
+                    timestamp: a.toISOString(),
                     count: 0,
                     numberOfDatapoints: 0
-                }), n = P(n);
-                return a
+                }), a = P(a);
+                return n
             },
             Ee = function(e) {
                 var t = new Date(e),
-                    a = t.getUTCHours() - t.getUTCHours() % 4;
-                return new Date(Date.UTC(t.getUTCFullYear(), t.getUTCMonth(), t.getUTCDate(), a)).toISOString()
+                    n = t.getUTCHours() - t.getUTCHours() % 4;
+                return new Date(Date.UTC(t.getUTCFullYear(), t.getUTCMonth(), t.getUTCDate(), n)).toISOString()
             },
             Ie = this,
             ze = [x.AverageViewers, x.NewFollowers, x.AverageChatters, x.ChatMessages, x.AdBreaks, x.AdBreakDuration],
-            Ne = Object.keys(ne),
+            Ne = Object.keys(ae),
             Re = function(e) {
                 var t = encodeURIComponent(e),
-                    a = document.createElement("a");
-                a.href = "data:text/csv;charset=utf-8," + t, a.download = "views.csv", document.body.appendChild(a), a.click(), document.body.removeChild(a)
+                    n = document.createElement("a");
+                n.href = "data:text/csv;charset=utf-8," + t, n.download = "views.csv", document.body.appendChild(n), n.click(), document.body.removeChild(n)
             },
             Be = function(e) {
-                return Object.keys(e).reduce(function(t, a) {
-                    return t += Ue(new Date(a), e[a])
+                return Object.keys(e).reduce(function(t, n) {
+                    return t += Ue(new Date(n), e[n])
                 }, Ve())
             },
-            Je = function(e, t, a, n) {
+            Je = function(e, t, n, a) {
                 return l.__awaiter(Ie, void 0, void 0, function() {
                     var r, i, s;
                     return l.__generator(this, function(o) {
                         switch (o.label) {
                             case 0:
                                 return r = {}, i = !1, s = [], Ne.forEach(function(r) {
-                                    s.push(De(r, e, t, a, n))
+                                    s.push(De(r, e, t, n, a))
                                 }), [4, Promise.all(s).then(function(e) {
                                     e.forEach(function(e, t) {
                                         0 === Object.keys(e).length && (i = !0);
-                                        for (var a = Ne[t], n = 0, s = Object.keys(e); n < s.length; n++) {
-                                            var o = s[n];
-                                            r[o] || (r[o] = {}), r[o][a] = e[o].count, a === x.AdBreakDuration && (r[o][x.AdBreaks] = e[o].numberOfDatapoints)
+                                        for (var n = Ne[t], a = 0, s = Object.keys(e); a < s.length; a++) {
+                                            var o = s[a];
+                                            r[o] || (r[o] = {}), r[o][n] = e[o].count, n === x.AdBreakDuration && (r[o][x.AdBreaks] = e[o].numberOfDatapoints)
                                         }
                                     })
                                 })];
@@ -17688,16 +17710,16 @@ webpackJsonp([35], {
             Ve = function() {
                 var e = Object(M.d)("Start Time", "TeamsDashboard"),
                     t = Object(M.d)("End Time", "TeamsDashboard"),
-                    a = Object(M.d)("Time Zone", "TeamsDashboard");
+                    n = Object(M.d)("Time Zone", "TeamsDashboard");
                 return ze.reduce(function(e, t) {
                     return e + "," + ie(t)
-                }, e + "," + t + "," + a) + "\n"
+                }, e + "," + t + "," + n) + "\n"
             },
             Ue = function(e, t) {
-                var a = P(e);
-                return ze.reduce(function(e, a) {
-                    return e + "," + t[a]
-                }, Ge(e) + "," + Ge(a) + ",UTC") + "\n"
+                var n = P(e);
+                return ze.reduce(function(e, n) {
+                    return e + "," + t[n]
+                }, Ge(e) + "," + Ge(n) + ",UTC") + "\n"
             },
             Ge = function(e) {
                 return e.getUTCFullYear() + "-" + Ze(e.getUTCMonth() + 1) + "-" + Ze(e.getUTCDate()) + " " + Ze(e.getUTCHours()) + ":" + Ze(e.getUTCMinutes()) + ":" + Ze(e.getUTCSeconds())
@@ -17712,13 +17734,13 @@ webpackJsonp([35], {
                 internalReferral: [],
                 externalReferral: []
             },
-            Xe = function(e, t, a, n) {
+            Xe = function(e, t, n, a) {
                 return l.__awaiter(qe, void 0, void 0, function() {
                     var r, i, s, o;
                     return l.__generator(this, function(d) {
                         switch (d.label) {
                             case 0:
-                                return r = Ke, t.length < 1 ? [2, r] : (i = t.join(","), s = "/v5/teams/" + e + "/stats/video_play_demographics?channel_ids=" + i + "&start_time=" + a + "&end_time=" + n, [4, Object(k.c)({
+                                return r = Ke, t.length < 1 ? [2, r] : (i = t.join(","), s = "/v5/teams/" + e + "/stats/video_play_demographics?channel_ids=" + i + "&start_time=" + n + "&end_time=" + a, [4, Object(k.d)({
                                     path: s
                                 })]);
                             case 1:
@@ -17728,40 +17750,40 @@ webpackJsonp([35], {
                 })
             },
             Qe = function(e) {
-                for (var t = e.video_play_demographics, a = {
+                for (var t = e.video_play_demographics, n = {
                         geographical: [],
                         platform: [],
                         internalReferral: [],
                         externalReferral: []
                     }, r = 0, i = Object.keys(t.geo); r < i.length; r++) {
                     var s = i[r];
-                    a.geographical.push({
-                        name: n(s),
+                    n.geographical.push({
+                        name: a(s),
                         views: t.geo[s]
                     })
                 }
                 for (var o = 0, d = Object.keys(t.platform); o < d.length; o++) {
                     s = d[o];
-                    a.platform.push({
+                    n.platform.push({
                         name: et(s),
                         views: t.platform[s]
                     })
                 }
                 for (var u = 0, l = Object.keys(t.referrer.internal); u < l.length; u++) {
                     s = l[u];
-                    a.internalReferral.push({
+                    n.internalReferral.push({
                         name: tt(s),
                         views: t.referrer.internal[s]
                     })
                 }
                 for (var c = 0, h = Object.keys(t.referrer.external); c < h.length; c++) {
                     s = h[c];
-                    a.externalReferral.push({
-                        name: at(s),
+                    n.externalReferral.push({
+                        name: nt(s),
                         views: t.referrer.external[s]
                     })
                 }
-                return a
+                return n
             },
             $e = Object(M.d)("Other", "TeamsDashboard"),
             et = function(e) {
@@ -17797,7 +17819,7 @@ webpackJsonp([35], {
                     name: e
                 }, "TeamsDashboard")
             },
-            at = function(e) {
+            nt = function(e) {
                 return (t = {
                     facebook: Object(M.d)("Facebook", "TeamsDashboard"),
                     google: Object(M.d)("Google", "TeamsDashboard"),
@@ -17806,133 +17828,133 @@ webpackJsonp([35], {
                 }, t["t.co"] = Object(M.d)("Twitter", "TeamsDashboard"), t.unknown = Object(M.d)("Direct/Unknown", "TeamsDashboard"), t.twitch_aggregate = Object(M.d)("Twitch", "TeamsDashboard"), t.external_aggregate = Object(M.d)("External", "TeamsDashboard"), t)[e] || e;
                 var t
             },
-            nt = function(e) {
+            at = function(e) {
                 function t(t) {
-                    var a = e.call(this, t) || this;
-                    return a.toggleMemberChecked = function(e) {
-                        var t = a.state.members.slice(),
-                            n = t.find(function(t) {
+                    var n = e.call(this, t) || this;
+                    return n.toggleMemberChecked = function(e) {
+                        var t = n.state.members.slice(),
+                            a = t.find(function(t) {
                                 return t.id === e.id
                             });
-                        n.checked = !n.checked, a.setState({
+                        a.checked = !a.checked, n.setState({
                             members: t,
                             groupChecked: !1
                         })
-                    }, a.toggleGroupChecked = function() {
-                        var e = !a.state.groupChecked,
-                            t = a.state.members.map(function(t, a) {
-                                return t.checked = e && a < 100, t
+                    }, n.toggleGroupChecked = function() {
+                        var e = !n.state.groupChecked,
+                            t = n.state.members.map(function(t, n) {
+                                return t.checked = e && n < 100, t
                             });
-                        a.setState({
+                        n.setState({
                             groupChecked: e,
                             members: t
                         })
-                    }, a.fetchMembersData = function() {
-                        return l.__awaiter(a, void 0, void 0, function() {
+                    }, n.fetchMembersData = function() {
+                        return l.__awaiter(n, void 0, void 0, function() {
                             var e, t;
-                            return l.__generator(this, function(a) {
-                                switch (a.label) {
+                            return l.__generator(this, function(n) {
+                                switch (n.label) {
                                     case 0:
                                         return e = this.setState, t = [{}], [4, this.fetchStats(this.state.startTime, this.state.endTime, this.state.metric)];
                                     case 1:
-                                        return [2, e.apply(this, [l.__assign.apply(void 0, t.concat([a.sent()]))])]
+                                        return [2, e.apply(this, [l.__assign.apply(void 0, t.concat([n.sent()]))])]
                                 }
                             })
                         })
-                    }, a.fetchStats = function(e, t, n) {
-                        return l.__awaiter(a, void 0, void 0, function() {
-                            var a, r, i, s, o, d;
+                    }, n.fetchStats = function(e, t, a) {
+                        return l.__awaiter(n, void 0, void 0, function() {
+                            var n, r, i, s, o, d;
                             return l.__generator(this, function(u) {
                                 switch (u.label) {
                                     case 0:
-                                        return a = this.selectedMemberIDs(), r = e.toISOString(), i = t.toISOString(), s = {
+                                        return n = this.selectedMemberIDs(), r = e.toISOString(), i = t.toISOString(), s = {
                                             isLoadingDemographics: !1,
                                             demographics: Ke,
                                             data: {}
-                                        }, n !== x.AverageViewers ? [3, 2] : (this.setState({
+                                        }, a !== x.AverageViewers ? [3, 2] : (this.setState({
                                             isLoadingDemographics: !0
-                                        }), o = s, [4, Xe(this.props.teamName, a, r, i)]);
+                                        }), o = s, [4, Xe(this.props.teamName, n, r, i)]);
                                     case 1:
                                         o.demographics = u.sent(), u.label = 2;
                                     case 2:
-                                        return d = s, [4, De(n, this.props.teamName, a, r, i)];
+                                        return d = s, [4, De(a, this.props.teamName, n, r, i)];
                                     case 3:
                                         return d.data = u.sent(), [2, s]
                                 }
                             })
                         })
-                    }, a.handleCSVClick = function() {
-                        return l.__awaiter(a, void 0, void 0, function() {
+                    }, n.handleCSVClick = function() {
+                        return l.__awaiter(n, void 0, void 0, function() {
                             var e, t;
-                            return l.__generator(this, function(a) {
-                                switch (a.label) {
-                                    case 0:
-                                        return [4, Je(this.props.teamName, this.selectedMemberIDs(), this.state.startTime.toISOString(), this.state.endTime.toISOString())];
-                                    case 1:
-                                        return e = a.sent(), 0 === Object.keys(e).length ? [2] : (t = Be(e), Re(t), [2])
-                                }
-                            })
-                        })
-                    }, a.handleTimeRangeChange = function(e, t) {
-                        return l.__awaiter(a, void 0, void 0, function() {
-                            var a;
                             return l.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
-                                        return [4, this.fetchStats(e, t, this.state.metric)];
+                                        return [4, Je(this.props.teamName, this.selectedMemberIDs(), this.state.startTime.toISOString(), this.state.endTime.toISOString())];
                                     case 1:
-                                        return a = n.sent(), this.setState(l.__assign({
-                                            startTime: e,
-                                            endTime: t
-                                        }, a)), [2]
+                                        return e = n.sent(), 0 === Object.keys(e).length ? [2] : (t = Be(e), Re(t), [2])
                                 }
                             })
                         })
-                    }, a.onMetricChange = function(e) {
-                        return l.__awaiter(a, void 0, void 0, function() {
-                            var t;
+                    }, n.handleTimeRangeChange = function(e, t) {
+                        return l.__awaiter(n, void 0, void 0, function() {
+                            var n;
                             return l.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
+                                        return [4, this.fetchStats(e, t, this.state.metric)];
+                                    case 1:
+                                        return n = a.sent(), this.setState(l.__assign({
+                                            startTime: e,
+                                            endTime: t
+                                        }, n)), [2]
+                                }
+                            })
+                        })
+                    }, n.onMetricChange = function(e) {
+                        return l.__awaiter(n, void 0, void 0, function() {
+                            var t;
+                            return l.__generator(this, function(n) {
+                                switch (n.label) {
+                                    case 0:
                                         return [4, this.fetchStats(this.state.startTime, this.state.endTime, e)];
                                     case 1:
-                                        return t = a.sent(), this.setState(l.__assign({
+                                        return t = n.sent(), this.setState(l.__assign({
                                             metric: e
                                         }, t)), [2]
                                 }
                             })
                         })
-                    }, a.renderViewershipTables = function() {
+                    }, n.renderViewershipTables = function() {
                         return c.createElement(Le, l.__assign({
-                            isLoading: a.state.isLoadingDemographics
-                        }, a.state.demographics))
-                    }, a.selectedMemberIDs = function() {
-                        return a.state.members.filter(function(e) {
+                            isLoading: n.state.isLoadingDemographics
+                        }, n.state.demographics))
+                    }, n.selectedMemberIDs = function() {
+                        return n.state.members.filter(function(e) {
                             return e.checked
                         }).map(function(e) {
                             return e.id
                         })
-                    }, a.state = {
+                    }, n.state = {
                         isLoadingMembers: !0,
                         members: [],
                         data: {},
                         isLoadingDemographics: !0,
                         demographics: Ke,
-                        startTime: O(a.props.currentDate),
-                        endTime: a.props.currentDate,
+                        startTime: O(n.props.currentDate),
+                        endTime: n.props.currentDate,
                         groupChecked: !0,
                         metric: x.AverageViewers
-                    }, a
+                    }, n
                 }
                 return l.__extends(t, e), t.prototype.componentDidMount = function() {
                     return l.__awaiter(this, void 0, void 0, function() {
-                        var e, t, a = this;
-                        return l.__generator(this, function(n) {
-                            switch (n.label) {
+                        var e, t, n = this;
+                        return l.__generator(this, function(a) {
+                            switch (a.label) {
                                 case 0:
                                     return [4, T(this.props.teamName, y.StatsRevealed)];
                                 case 1:
-                                    return e = n.sent(), t = e.map(function(e, t) {
+                                    return e = a.sent(), t = e.map(function(e, t) {
                                         return l.__assign({}, e, {
                                             checked: t < 100
                                         })
@@ -17940,7 +17962,7 @@ webpackJsonp([35], {
                                         isLoadingMembers: !1,
                                         members: t
                                     }, function() {
-                                        return l.__awaiter(a, void 0, void 0, function() {
+                                        return l.__awaiter(n, void 0, void 0, function() {
                                             var e;
                                             return l.__generator(this, function(t) {
                                                 switch (t.label) {
@@ -18005,30 +18027,30 @@ webpackJsonp([35], {
             rt = new Date(Date.UTC(2016, 0)),
             it = function(e) {
                 function t(t) {
-                    var a = e.call(this, t) || this;
-                    return a.renderStatsPage = function() {
-                        return c.createElement(nt, {
-                            teamName: a.props.match.params.teamName,
-                            earliestDataDate: a.earliestDataDate,
-                            currentDate: a.currentDate
+                    var n = e.call(this, t) || this;
+                    return n.renderStatsPage = function() {
+                        return c.createElement(at, {
+                            teamName: n.props.match.params.teamName,
+                            earliestDataDate: n.earliestDataDate,
+                            currentDate: n.currentDate
                         })
-                    }, a.renderBasicInfoPage = function() {
+                    }, n.renderBasicInfoPage = function() {
                         return c.createElement(b, null)
-                    }, a.renderCustomizePage = function() {
+                    }, n.renderCustomizePage = function() {
                         return c.createElement(L, null)
-                    }, a.renderMembersPage = function() {
+                    }, n.renderMembersPage = function() {
                         return c.createElement(S, {
-                            teamName: a.props.match.params.teamName
+                            teamName: n.props.match.params.teamName
                         })
-                    }, a.renderFeaturedChannelsPage = function() {
+                    }, n.renderFeaturedChannelsPage = function() {
                         return c.createElement(Y, null)
-                    }, a.renderRevenuePage = function() {
+                    }, n.renderRevenuePage = function() {
                         return c.createElement(X, {
-                            teamName: a.props.match.params.teamName,
-                            earliestDataDate: a.earliestDataDate,
-                            currentDate: a.currentDate
+                            teamName: n.props.match.params.teamName,
+                            earliestDataDate: n.earliestDataDate,
+                            currentDate: n.currentDate
                         })
-                    }, a.earliestDataDate = rt, a.currentDate = t.currentDate || new Date, a.currentDate < a.earliestDataDate && (a.currentDate = a.earliestDataDate), a
+                    }, n.earliestDataDate = rt, n.currentDate = t.currentDate || new Date, n.currentDate < n.earliestDataDate && (n.currentDate = n.earliestDataDate), n
                 }
                 return l.__extends(t, e), t.prototype.render = function() {
                     return this.props.isLoggedIn ? c.createElement(p.U, {
@@ -18077,16 +18099,16 @@ webpackJsonp([35], {
                     }
                 }, e)
             })(it);
-        a.d(t, "TeamsDashboardRoot", function() {
+        n.d(t, "TeamsDashboardRoot", function() {
             return st
         })
     },
-    rBmI: function(e, t, a) {
-        var n = a("xA5w");
+    rBmI: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e) {
-            var t = n(e),
-                a = t.getMonth(),
-                r = a - a % 3;
+            var t = a(e),
+                n = t.getMonth(),
+                r = n - n % 3;
             return t.setMonth(r, 1), t.setHours(0, 0, 0, 0), t
         }
     },
@@ -18097,18 +18119,18 @@ webpackJsonp([35], {
             }
         }
     },
-    rIuo: function(e, t, a) {
+    rIuo: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             var t = ["ޖެނުއަރީ", "ފެބްރުއަރީ", "މާރިޗު", "އޭޕްރީލު", "މޭ", "ޖޫން", "ޖުލައި", "އޯގަސްޓު", "ސެޕްޓެމްބަރު", "އޮކްޓޯބަރު", "ނޮވެމްބަރު", "ޑިސެމްބަރު"],
-                a = ["އާދިއްތަ", "ހޯމަ", "އަންގާރަ", "ބުދަ", "ބުރާސްފަތި", "ހުކުރު", "ހޮނިހިރު"];
+                n = ["އާދިއްތަ", "ހޯމަ", "އަންގާރަ", "ބުދަ", "ބުރާސްފަތި", "ހުކުރު", "ހޮނިހިރު"];
             return e.defineLocale("dv", {
                 months: t,
                 monthsShort: t,
-                weekdays: a,
-                weekdaysShort: a,
+                weekdays: n,
+                weekdaysShort: n,
                 weekdaysMin: "އާދި_ހޯމަ_އަން_ބުދަ_ބުރާ_ހުކު_ހޮނި".split("_"),
                 longDateFormat: {
                     LT: "HH:mm",
@@ -18122,7 +18144,7 @@ webpackJsonp([35], {
                 isPM: function(e) {
                     return "މފ" === e
                 },
-                meridiem: function(e, t, a) {
+                meridiem: function(e, t, n) {
                     return e < 12 ? "މކ" : "މފ"
                 },
                 calendar: {
@@ -18161,21 +18183,21 @@ webpackJsonp([35], {
             })
         })
     },
-    rO5X: function(e, t, a) {
-        var n = a("xA5w"),
-            r = a("Bb5e"),
-            i = a("NKE6");
+    rO5X: function(e, t, n) {
+        var a = n("xA5w"),
+            r = n("Bb5e"),
+            i = n("NKE6");
         e.exports = function(e, t) {
-            var a = n(e),
-                s = n(t),
-                o = i(a, s),
-                d = Math.abs(r(a, s));
-            return a.setFullYear(a.getFullYear() - o * d), o * (d - (i(a, s) === -o))
+            var n = a(e),
+                s = a(t),
+                o = i(n, s),
+                d = Math.abs(r(n, s));
+            return n.setFullYear(n.getFullYear() - o * d), o * (d - (i(n, s) === -o))
         }
     },
-    rWJA: function(e, t, a) {
-        var n = a("TWHA"),
-            r = a("ajDi"),
+    rWJA: function(e, t, n) {
+        var a = n("TWHA"),
+            r = n("ajDi"),
             i = function(e) {
                 if (e instanceof i) return e;
                 if (!(this instanceof i)) return new i(e);
@@ -18307,16 +18329,16 @@ webpackJsonp([35], {
                 return e[0] << 16 | e[1] << 8 | e[2]
             },
             luminosity: function() {
-                for (var e = this.values.rgb, t = [], a = 0; a < e.length; a++) {
-                    var n = e[a] / 255;
-                    t[a] = n <= .03928 ? n / 12.92 : Math.pow((n + .055) / 1.055, 2.4)
+                for (var e = this.values.rgb, t = [], n = 0; n < e.length; n++) {
+                    var a = e[n] / 255;
+                    t[n] = a <= .03928 ? a / 12.92 : Math.pow((a + .055) / 1.055, 2.4)
                 }
                 return .2126 * t[0] + .7152 * t[1] + .0722 * t[2]
             },
             contrast: function(e) {
                 var t = this.luminosity(),
-                    a = e.luminosity();
-                return t > a ? (t + .05) / (a + .05) : (a + .05) / (t + .05)
+                    n = e.luminosity();
+                return t > n ? (t + .05) / (n + .05) : (n + .05) / (t + .05)
             },
             level: function(e) {
                 var t = this.contrast(e);
@@ -18372,27 +18394,27 @@ webpackJsonp([35], {
             },
             rotate: function(e) {
                 var t = this.values.hsl,
-                    a = (t[0] + e) % 360;
-                return t[0] = a < 0 ? 360 + a : a, this.setValues("hsl", t), this
+                    n = (t[0] + e) % 360;
+                return t[0] = n < 0 ? 360 + n : n, this.setValues("hsl", t), this
             },
             mix: function(e, t) {
-                var a = e,
-                    n = void 0 === t ? .5 : t,
-                    r = 2 * n - 1,
-                    i = this.alpha() - a.alpha(),
+                var n = e,
+                    a = void 0 === t ? .5 : t,
+                    r = 2 * a - 1,
+                    i = this.alpha() - n.alpha(),
                     s = ((r * i == -1 ? r : (r + i) / (1 + r * i)) + 1) / 2,
                     o = 1 - s;
-                return this.rgb(s * this.red() + o * a.red(), s * this.green() + o * a.green(), s * this.blue() + o * a.blue()).alpha(this.alpha() * n + a.alpha() * (1 - n))
+                return this.rgb(s * this.red() + o * n.red(), s * this.green() + o * n.green(), s * this.blue() + o * n.blue()).alpha(this.alpha() * a + n.alpha() * (1 - a))
             },
             toJSON: function() {
                 return this.rgb()
             },
             clone: function() {
-                var e, t, a = new i,
-                    n = this.values,
-                    r = a.values;
-                for (var s in n) n.hasOwnProperty(s) && (e = n[s], "[object Array]" === (t = {}.toString.call(e)) ? r[s] = e.slice(0) : "[object Number]" === t ? r[s] = e : console.error("unexpected color value:", e));
-                return a
+                var e, t, n = new i,
+                    a = this.values,
+                    r = n.values;
+                for (var s in a) a.hasOwnProperty(s) && (e = a[s], "[object Array]" === (t = {}.toString.call(e)) ? r[s] = e.slice(0) : "[object Number]" === t ? r[s] = e : console.error("unexpected color value:", e));
+                return n
             }
         }, i.prototype.spaces = {
             rgb: ["red", "green", "blue"],
@@ -18407,42 +18429,42 @@ webpackJsonp([35], {
             hwb: [360, 100, 100],
             cmyk: [100, 100, 100, 100]
         }, i.prototype.getValues = function(e) {
-            for (var t = this.values, a = {}, n = 0; n < e.length; n++) a[e.charAt(n)] = t[e][n];
-            return 1 !== t.alpha && (a.a = t.alpha), a
+            for (var t = this.values, n = {}, a = 0; a < e.length; a++) n[e.charAt(a)] = t[e][a];
+            return 1 !== t.alpha && (n.a = t.alpha), n
         }, i.prototype.setValues = function(e, t) {
-            var a, r = this.values,
+            var n, r = this.values,
                 i = this.spaces,
                 s = this.maxes,
                 o = 1;
             if (this.valid = !0, "alpha" === e) o = t;
             else if (t.length) r[e] = t.slice(0, e.length), o = t[e.length];
             else if (void 0 !== t[e.charAt(0)]) {
-                for (a = 0; a < e.length; a++) r[e][a] = t[e.charAt(a)];
+                for (n = 0; n < e.length; n++) r[e][n] = t[e.charAt(n)];
                 o = t.a
             } else if (void 0 !== t[i[e][0]]) {
                 var d = i[e];
-                for (a = 0; a < e.length; a++) r[e][a] = t[d[a]];
+                for (n = 0; n < e.length; n++) r[e][n] = t[d[n]];
                 o = t.alpha
             }
             if (r.alpha = Math.max(0, Math.min(1, void 0 === o ? r.alpha : o)), "alpha" === e) return !1;
             var u;
-            for (a = 0; a < e.length; a++) u = Math.max(0, Math.min(s[e][a], r[e][a])), r[e][a] = Math.round(u);
-            for (var l in i) l !== e && (r[l] = n[e][l](r[e]));
+            for (n = 0; n < e.length; n++) u = Math.max(0, Math.min(s[e][n], r[e][n])), r[e][n] = Math.round(u);
+            for (var l in i) l !== e && (r[l] = a[e][l](r[e]));
             return !0
         }, i.prototype.setSpace = function(e, t) {
-            var a = t[0];
-            return void 0 === a ? this.getValues(e) : ("number" == typeof a && (a = Array.prototype.slice.call(t)), this.setValues(e, a), this)
-        }, i.prototype.setChannel = function(e, t, a) {
-            var n = this.values[e];
-            return void 0 === a ? n[t] : a === n[t] ? this : (n[t] = a, this.setValues(e, n), this)
+            var n = t[0];
+            return void 0 === n ? this.getValues(e) : ("number" == typeof n && (n = Array.prototype.slice.call(t)), this.setValues(e, n), this)
+        }, i.prototype.setChannel = function(e, t, n) {
+            var a = this.values[e];
+            return void 0 === n ? a[t] : n === a[t] ? this : (a[t] = n, this.setValues(e, a), this)
         }, "undefined" != typeof window && (window.Color = i), e.exports = i
     },
-    sFj2: function(e, t, a) {
+    sFj2: function(e, t, n) {
         "use strict";
-        var n = a("k7DW"),
-            r = a("L5rj"),
-            i = a("iO9N");
-        n._set("doughnut", {
+        var a = n("k7DW"),
+            r = n("L5rj"),
+            i = n("iO9N");
+        a._set("doughnut", {
             animation: {
                 animateRotate: !0,
                 animateScale: !1
@@ -18453,39 +18475,39 @@ webpackJsonp([35], {
             legendCallback: function(e) {
                 var t = [];
                 t.push('<ul class="' + e.id + '-legend">');
-                var a = e.data,
-                    n = a.datasets,
-                    r = a.labels;
-                if (n.length)
-                    for (var i = 0; i < n[0].data.length; ++i) t.push('<li><span style="background-color:' + n[0].backgroundColor[i] + '"></span>'), r[i] && t.push(r[i]), t.push("</li>");
+                var n = e.data,
+                    a = n.datasets,
+                    r = n.labels;
+                if (a.length)
+                    for (var i = 0; i < a[0].data.length; ++i) t.push('<li><span style="background-color:' + a[0].backgroundColor[i] + '"></span>'), r[i] && t.push(r[i]), t.push("</li>");
                 return t.push("</ul>"), t.join("")
             },
             legend: {
                 labels: {
                     generateLabels: function(e) {
                         var t = e.data;
-                        return t.labels.length && t.datasets.length ? t.labels.map(function(a, n) {
+                        return t.labels.length && t.datasets.length ? t.labels.map(function(n, a) {
                             var r = e.getDatasetMeta(0),
                                 s = t.datasets[0],
-                                o = r.data[n],
+                                o = r.data[a],
                                 d = o && o.custom || {},
                                 u = i.valueAtIndexOrDefault,
                                 l = e.options.elements.arc;
                             return {
-                                text: a,
-                                fillStyle: d.backgroundColor ? d.backgroundColor : u(s.backgroundColor, n, l.backgroundColor),
-                                strokeStyle: d.borderColor ? d.borderColor : u(s.borderColor, n, l.borderColor),
-                                lineWidth: d.borderWidth ? d.borderWidth : u(s.borderWidth, n, l.borderWidth),
-                                hidden: isNaN(s.data[n]) || r.data[n].hidden,
-                                index: n
+                                text: n,
+                                fillStyle: d.backgroundColor ? d.backgroundColor : u(s.backgroundColor, a, l.backgroundColor),
+                                strokeStyle: d.borderColor ? d.borderColor : u(s.borderColor, a, l.borderColor),
+                                lineWidth: d.borderWidth ? d.borderWidth : u(s.borderWidth, a, l.borderWidth),
+                                hidden: isNaN(s.data[a]) || r.data[a].hidden,
+                                index: a
                             }
                         }) : []
                     }
                 },
                 onClick: function(e, t) {
-                    var a, n, r, i = t.index,
+                    var n, a, r, i = t.index,
                         s = this.chart;
-                    for (a = 0, n = (s.data.datasets || []).length; a < n; ++a)(r = s.getDatasetMeta(a)).data[i] && (r.data[i].hidden = !r.data[i].hidden);
+                    for (n = 0, a = (s.data.datasets || []).length; n < a; ++n)(r = s.getDatasetMeta(n)).data[i] && (r.data[i].hidden = !r.data[i].hidden);
                     s.update()
                 }
             },
@@ -18498,30 +18520,30 @@ webpackJsonp([35], {
                         return ""
                     },
                     label: function(e, t) {
-                        var a = t.labels[e.index],
-                            n = ": " + t.datasets[e.datasetIndex].data[e.index];
-                        return i.isArray(a) ? (a = a.slice())[0] += n : a += n, a
+                        var n = t.labels[e.index],
+                            a = ": " + t.datasets[e.datasetIndex].data[e.index];
+                        return i.isArray(n) ? (n = n.slice())[0] += a : n += a, n
                     }
                 }
             }
-        }), n._set("pie", i.clone(n.doughnut)), n._set("pie", {
+        }), a._set("pie", i.clone(a.doughnut)), a._set("pie", {
             cutoutPercentage: 0
         }), e.exports = function(e) {
             e.controllers.doughnut = e.controllers.pie = e.DatasetController.extend({
                 dataElementType: r.Arc,
                 linkScales: i.noop,
                 getRingIndex: function(e) {
-                    for (var t = 0, a = 0; a < e; ++a) this.chart.isDatasetVisible(a) && ++t;
+                    for (var t = 0, n = 0; n < e; ++n) this.chart.isDatasetVisible(n) && ++t;
                     return t
                 },
                 update: function(e) {
                     var t = this,
-                        a = t.chart,
-                        n = a.chartArea,
-                        r = a.options,
+                        n = t.chart,
+                        a = n.chartArea,
+                        r = n.options,
                         s = r.elements.arc,
-                        o = n.right - n.left - s.borderWidth,
-                        d = n.bottom - n.top - s.borderWidth,
+                        o = a.right - a.left - s.borderWidth,
+                        d = a.bottom - a.top - s.borderWidth,
                         u = Math.min(o, d),
                         l = {
                             x: 0,
@@ -18563,107 +18585,107 @@ webpackJsonp([35], {
                             y: -.5 * (D.y + Y.y)
                         }
                     }
-                    a.borderWidth = t.getMaxBorderWidth(c.data), a.outerRadius = Math.max((u - a.borderWidth) / 2, 0), a.innerRadius = Math.max(h ? a.outerRadius / 100 * h : 0, 0), a.radiusLength = (a.outerRadius - a.innerRadius) / a.getVisibleDatasetCount(), a.offsetX = l.x * a.outerRadius, a.offsetY = l.y * a.outerRadius, c.total = t.calculateTotal(), t.outerRadius = a.outerRadius - a.radiusLength * t.getRingIndex(t.index), t.innerRadius = Math.max(t.outerRadius - a.radiusLength, 0), i.each(c.data, function(a, n) {
-                        t.updateElement(a, n, e)
+                    n.borderWidth = t.getMaxBorderWidth(c.data), n.outerRadius = Math.max((u - n.borderWidth) / 2, 0), n.innerRadius = Math.max(h ? n.outerRadius / 100 * h : 0, 0), n.radiusLength = (n.outerRadius - n.innerRadius) / n.getVisibleDatasetCount(), n.offsetX = l.x * n.outerRadius, n.offsetY = l.y * n.outerRadius, c.total = t.calculateTotal(), t.outerRadius = n.outerRadius - n.radiusLength * t.getRingIndex(t.index), t.innerRadius = Math.max(t.outerRadius - n.radiusLength, 0), i.each(c.data, function(n, a) {
+                        t.updateElement(n, a, e)
                     })
                 },
-                updateElement: function(e, t, a) {
-                    var n = this.chart,
-                        r = n.chartArea,
-                        s = n.options,
+                updateElement: function(e, t, n) {
+                    var a = this.chart,
+                        r = a.chartArea,
+                        s = a.options,
                         o = s.animation,
                         d = (r.left + r.right) / 2,
                         u = (r.top + r.bottom) / 2,
                         l = s.rotation,
                         c = s.rotation,
                         h = this.getDataset(),
-                        m = a && o.animateRotate ? 0 : e.hidden ? 0 : this.calculateCircumference(h.data[t]) * (s.circumference / (2 * Math.PI)),
-                        _ = a && o.animateScale ? 0 : this.innerRadius,
-                        f = a && o.animateScale ? 0 : this.outerRadius,
+                        m = n && o.animateRotate ? 0 : e.hidden ? 0 : this.calculateCircumference(h.data[t]) * (s.circumference / (2 * Math.PI)),
+                        _ = n && o.animateScale ? 0 : this.innerRadius,
+                        f = n && o.animateScale ? 0 : this.outerRadius,
                         p = i.valueAtIndexOrDefault;
                     i.extend(e, {
                         _datasetIndex: this.index,
                         _index: t,
                         _model: {
-                            x: d + n.offsetX,
-                            y: u + n.offsetY,
+                            x: d + a.offsetX,
+                            y: u + a.offsetY,
                             startAngle: l,
                             endAngle: c,
                             circumference: m,
                             outerRadius: f,
                             innerRadius: _,
-                            label: p(h.label, t, n.data.labels[t])
+                            label: p(h.label, t, a.data.labels[t])
                         }
                     });
                     var g = e._model;
-                    this.removeHoverStyle(e), a && o.animateRotate || (g.startAngle = 0 === t ? s.rotation : this.getMeta().data[t - 1]._model.endAngle, g.endAngle = g.startAngle + g.circumference), e.pivot()
+                    this.removeHoverStyle(e), n && o.animateRotate || (g.startAngle = 0 === t ? s.rotation : this.getMeta().data[t - 1]._model.endAngle, g.endAngle = g.startAngle + g.circumference), e.pivot()
                 },
                 removeHoverStyle: function(t) {
                     e.DatasetController.prototype.removeHoverStyle.call(this, t, this.chart.options.elements.arc)
                 },
                 calculateTotal: function() {
                     var e, t = this.getDataset(),
-                        a = this.getMeta(),
-                        n = 0;
-                    return i.each(a.data, function(a, r) {
-                        e = t.data[r], isNaN(e) || a.hidden || (n += Math.abs(e))
-                    }), n
+                        n = this.getMeta(),
+                        a = 0;
+                    return i.each(n.data, function(n, r) {
+                        e = t.data[r], isNaN(e) || n.hidden || (a += Math.abs(e))
+                    }), a
                 },
                 calculateCircumference: function(e) {
                     var t = this.getMeta().total;
                     return t > 0 && !isNaN(e) ? 2 * Math.PI * (e / t) : 0
                 },
                 getMaxBorderWidth: function(e) {
-                    for (var t, a, n = 0, r = this.index, i = e.length, s = 0; s < i; s++) t = e[s]._model ? e[s]._model.borderWidth : 0, n = (a = e[s]._chart ? e[s]._chart.config.data.datasets[r].hoverBorderWidth : 0) > (n = t > n ? t : n) ? a : n;
-                    return n
+                    for (var t, n, a = 0, r = this.index, i = e.length, s = 0; s < i; s++) t = e[s]._model ? e[s]._model.borderWidth : 0, a = (n = e[s]._chart ? e[s]._chart.config.data.datasets[r].hoverBorderWidth : 0) > (a = t > a ? t : a) ? n : a;
+                    return a
                 }
             })
         }
     },
-    sFo6: function(e, t, a) {
+    sFo6: function(e, t, n) {
         "use strict";
-        var n = a("k7DW"),
-            r = a("iO9N"),
-            i = a("IbXy");
+        var a = n("k7DW"),
+            r = n("iO9N"),
+            i = n("IbXy");
         e.exports = function(e) {
             function t(e) {
                 var t = e.options;
                 return t.angleLines.display || t.pointLabels.display ? e.chart.data.labels.length : 0
             }
 
-            function a(e) {
+            function n(e) {
                 var t = e.options.pointLabels,
-                    a = r.valueOrDefault(t.fontSize, h.defaultFontSize),
-                    n = r.valueOrDefault(t.fontStyle, h.defaultFontStyle),
+                    n = r.valueOrDefault(t.fontSize, h.defaultFontSize),
+                    a = r.valueOrDefault(t.fontStyle, h.defaultFontStyle),
                     i = r.valueOrDefault(t.fontFamily, h.defaultFontFamily);
                 return {
-                    size: a,
-                    style: n,
+                    size: n,
+                    style: a,
                     family: i,
-                    font: r.fontString(a, n, i)
+                    font: r.fontString(n, a, i)
                 }
             }
 
-            function s(e, t, a) {
-                return r.isArray(a) ? {
-                    w: r.longestText(e, e.font, a),
-                    h: a.length * t + 1.5 * (a.length - 1) * t
+            function s(e, t, n) {
+                return r.isArray(n) ? {
+                    w: r.longestText(e, e.font, n),
+                    h: n.length * t + 1.5 * (n.length - 1) * t
                 } : {
-                    w: e.measureText(a).width,
+                    w: e.measureText(n).width,
                     h: t
                 }
             }
 
-            function o(e, t, a, n, r) {
-                return e === n || e === r ? {
-                    start: t - a / 2,
-                    end: t + a / 2
-                } : e < n || e > r ? {
-                    start: t - a - 5,
+            function o(e, t, n, a, r) {
+                return e === a || e === r ? {
+                    start: t - n / 2,
+                    end: t + n / 2
+                } : e < a || e > r ? {
+                    start: t - n - 5,
                     end: t
                 } : {
                     start: t,
-                    end: t + a + 5
+                    end: t + n + 5
                 }
             }
 
@@ -18671,20 +18693,20 @@ webpackJsonp([35], {
                 return 0 === e || 180 === e ? "center" : e < 180 ? "left" : "right"
             }
 
-            function u(e, t, a, n) {
+            function u(e, t, n, a) {
                 if (r.isArray(t))
-                    for (var i = a.y, s = 1.5 * n, o = 0; o < t.length; ++o) e.fillText(t[o], a.x, i), i += s;
-                else e.fillText(t, a.x, a.y)
+                    for (var i = n.y, s = 1.5 * a, o = 0; o < t.length; ++o) e.fillText(t[o], n.x, i), i += s;
+                else e.fillText(t, n.x, n.y)
             }
 
-            function l(e, t, a) {
-                90 === e || 270 === e ? a.y -= t.h / 2 : (e > 270 || e < 90) && (a.y -= t.h)
+            function l(e, t, n) {
+                90 === e || 270 === e ? n.y -= t.h / 2 : (e > 270 || e < 90) && (n.y -= t.h)
             }
 
             function c(e) {
                 return r.isNumber(e) ? e : 0
             }
-            var h = n.global,
+            var h = a.global,
                 m = {
                     display: !0,
                     animate: !0,
@@ -18717,24 +18739,24 @@ webpackJsonp([35], {
                         var e = this.options,
                             t = e.ticks;
                         this.width = this.maxWidth, this.height = this.maxHeight, this.xCenter = Math.round(this.width / 2), this.yCenter = Math.round(this.height / 2);
-                        var a = r.min([this.height, this.width]),
-                            n = r.valueOrDefault(t.fontSize, h.defaultFontSize);
-                        this.drawingArea = e.display ? a / 2 - (n / 2 + t.backdropPaddingY) : a / 2
+                        var n = r.min([this.height, this.width]),
+                            a = r.valueOrDefault(t.fontSize, h.defaultFontSize);
+                        this.drawingArea = e.display ? n / 2 - (a / 2 + t.backdropPaddingY) : n / 2
                     },
                     determineDataLimits: function() {
                         var e = this,
                             t = e.chart,
-                            a = Number.POSITIVE_INFINITY,
-                            n = Number.NEGATIVE_INFINITY;
+                            n = Number.POSITIVE_INFINITY,
+                            a = Number.NEGATIVE_INFINITY;
                         r.each(t.data.datasets, function(i, s) {
                             if (t.isDatasetVisible(s)) {
                                 var o = t.getDatasetMeta(s);
                                 r.each(i.data, function(t, r) {
                                     var i = +e.getRightValue(t);
-                                    isNaN(i) || o.data[r].hidden || (a = Math.min(i, a), n = Math.max(i, n))
+                                    isNaN(i) || o.data[r].hidden || (n = Math.min(i, n), a = Math.max(i, a))
                                 })
                             }
-                        }), e.min = a === Number.POSITIVE_INFINITY ? 0 : a, e.max = n === Number.NEGATIVE_INFINITY ? 0 : n, e.handleTickRangeOptions()
+                        }), e.min = n === Number.POSITIVE_INFINITY ? 0 : n, e.max = a === Number.NEGATIVE_INFINITY ? 0 : a, e.handleTickRangeOptions()
                     },
                     getTickLimit: function() {
                         var e = this.options.ticks,
@@ -18749,7 +18771,7 @@ webpackJsonp([35], {
                     },
                     fit: function() {
                         this.options.pointLabels.display ? function(e) {
-                            var n, i, d, u = a(e),
+                            var a, i, d, u = n(e),
                                 l = Math.min(e.height / 2, e.width / 2),
                                 c = {
                                     r: e.width,
@@ -18760,9 +18782,9 @@ webpackJsonp([35], {
                                 h = {};
                             e.ctx.font = u.font, e._pointLabelSizes = [];
                             var m = t(e);
-                            for (n = 0; n < m; n++) {
-                                d = e.getPointPosition(n, l), i = s(e.ctx, u.size, e.pointLabels[n] || ""), e._pointLabelSizes[n] = i;
-                                var _ = e.getIndexAngle(n),
+                            for (a = 0; a < m; a++) {
+                                d = e.getPointPosition(a, l), i = s(e.ctx, u.size, e.pointLabels[a] || ""), e._pointLabelSizes[a] = i;
+                                var _ = e.getIndexAngle(a),
                                     f = r.toDegrees(_) % 360,
                                     p = o(f, d.x, i.w, 0, 180),
                                     g = o(f, d.y, i.h, 90, 270);
@@ -18774,18 +18796,18 @@ webpackJsonp([35], {
                             e.drawingArea = Math.round(t), e.setCenterPoint(0, 0, 0, 0)
                         }(this)
                     },
-                    setReductions: function(e, t, a) {
-                        var n = t.l / Math.sin(a.l),
-                            r = Math.max(t.r - this.width, 0) / Math.sin(a.r),
-                            i = -t.t / Math.cos(a.t),
-                            s = -Math.max(t.b - this.height, 0) / Math.cos(a.b);
-                        n = c(n), r = c(r), i = c(i), s = c(s), this.drawingArea = Math.min(Math.round(e - (n + r) / 2), Math.round(e - (i + s) / 2)), this.setCenterPoint(n, r, i, s)
+                    setReductions: function(e, t, n) {
+                        var a = t.l / Math.sin(n.l),
+                            r = Math.max(t.r - this.width, 0) / Math.sin(n.r),
+                            i = -t.t / Math.cos(n.t),
+                            s = -Math.max(t.b - this.height, 0) / Math.cos(n.b);
+                        a = c(a), r = c(r), i = c(i), s = c(s), this.drawingArea = Math.min(Math.round(e - (a + r) / 2), Math.round(e - (i + s) / 2)), this.setCenterPoint(a, r, i, s)
                     },
-                    setCenterPoint: function(e, t, a, n) {
+                    setCenterPoint: function(e, t, n, a) {
                         var r = this.width - t - this.drawingArea,
                             i = e + this.drawingArea,
-                            s = a + this.drawingArea,
-                            o = this.height - n - this.drawingArea;
+                            s = n + this.drawingArea,
+                            o = this.height - a - this.drawingArea;
                         this.xCenter = Math.round((i + r) / 2 + this.left), this.yCenter = Math.round((s + o) / 2 + this.top)
                     },
                     getIndexAngle: function(e) {
@@ -18797,10 +18819,10 @@ webpackJsonp([35], {
                         return this.options.ticks.reverse ? (this.max - e) * t : (e - this.min) * t
                     },
                     getPointPosition: function(e, t) {
-                        var a = this.getIndexAngle(e) - Math.PI / 2;
+                        var n = this.getIndexAngle(e) - Math.PI / 2;
                         return {
-                            x: Math.round(Math.cos(a) * t) + this.xCenter,
-                            y: Math.round(Math.sin(a) * t) + this.yCenter
+                            x: Math.round(Math.cos(n) * t) + this.xCenter,
+                            y: Math.round(Math.sin(n) * t) + this.yCenter
                         }
                     },
                     getPointPositionForValue: function(e, t) {
@@ -18813,63 +18835,63 @@ webpackJsonp([35], {
                     },
                     draw: function() {
                         var e = this,
-                            n = e.options,
-                            i = n.gridLines,
-                            s = n.ticks,
+                            a = e.options,
+                            i = a.gridLines,
+                            s = a.ticks,
                             o = r.valueOrDefault;
-                        if (n.display) {
+                        if (a.display) {
                             var c = e.ctx,
                                 m = this.getIndexAngle(0),
                                 _ = o(s.fontSize, h.defaultFontSize),
                                 f = o(s.fontStyle, h.defaultFontStyle),
                                 p = o(s.fontFamily, h.defaultFontFamily),
                                 g = r.fontString(_, f, p);
-                            r.each(e.ticks, function(a, n) {
-                                if (n > 0 || s.reverse) {
-                                    var d = e.getDistanceFromCenterForValue(e.ticksAsNumbers[n]);
-                                    if (i.display && 0 !== n && function(e, a, n, i) {
+                            r.each(e.ticks, function(n, a) {
+                                if (a > 0 || s.reverse) {
+                                    var d = e.getDistanceFromCenterForValue(e.ticksAsNumbers[a]);
+                                    if (i.display && 0 !== a && function(e, n, a, i) {
                                             var s = e.ctx;
-                                            if (s.strokeStyle = r.valueAtIndexOrDefault(a.color, i - 1), s.lineWidth = r.valueAtIndexOrDefault(a.lineWidth, i - 1), e.options.gridLines.circular) s.beginPath(), s.arc(e.xCenter, e.yCenter, n, 0, 2 * Math.PI), s.closePath(), s.stroke();
+                                            if (s.strokeStyle = r.valueAtIndexOrDefault(n.color, i - 1), s.lineWidth = r.valueAtIndexOrDefault(n.lineWidth, i - 1), e.options.gridLines.circular) s.beginPath(), s.arc(e.xCenter, e.yCenter, a, 0, 2 * Math.PI), s.closePath(), s.stroke();
                                             else {
                                                 var o = t(e);
                                                 if (0 === o) return;
                                                 s.beginPath();
-                                                var d = e.getPointPosition(0, n);
+                                                var d = e.getPointPosition(0, a);
                                                 s.moveTo(d.x, d.y);
-                                                for (var u = 1; u < o; u++) d = e.getPointPosition(u, n), s.lineTo(d.x, d.y);
+                                                for (var u = 1; u < o; u++) d = e.getPointPosition(u, a), s.lineTo(d.x, d.y);
                                                 s.closePath(), s.stroke()
                                             }
-                                        }(e, i, d, n), s.display) {
+                                        }(e, i, d, a), s.display) {
                                         var u = o(s.fontColor, h.defaultFontColor);
                                         if (c.font = g, c.save(), c.translate(e.xCenter, e.yCenter), c.rotate(m), s.showLabelBackdrop) {
-                                            var l = c.measureText(a).width;
+                                            var l = c.measureText(n).width;
                                             c.fillStyle = s.backdropColor, c.fillRect(-l / 2 - s.backdropPaddingX, -d - _ / 2 - s.backdropPaddingY, l + 2 * s.backdropPaddingX, _ + 2 * s.backdropPaddingY)
                                         }
-                                        c.textAlign = "center", c.textBaseline = "middle", c.fillStyle = u, c.fillText(a, 0, -d), c.restore()
+                                        c.textAlign = "center", c.textBaseline = "middle", c.fillStyle = u, c.fillText(n, 0, -d), c.restore()
                                     }
                                 }
-                            }), (n.angleLines.display || n.pointLabels.display) && function(e) {
-                                var n = e.ctx,
+                            }), (a.angleLines.display || a.pointLabels.display) && function(e) {
+                                var a = e.ctx,
                                     i = r.valueOrDefault,
                                     s = e.options,
                                     o = s.angleLines,
                                     c = s.pointLabels;
-                                n.lineWidth = o.lineWidth, n.strokeStyle = o.color;
+                                a.lineWidth = o.lineWidth, a.strokeStyle = o.color;
                                 var m = e.getDistanceFromCenterForValue(s.ticks.reverse ? e.min : e.max),
-                                    _ = a(e);
-                                n.textBaseline = "top";
+                                    _ = n(e);
+                                a.textBaseline = "top";
                                 for (var f = t(e) - 1; f >= 0; f--) {
                                     if (o.display) {
                                         var p = e.getPointPosition(f, m);
-                                        n.beginPath(), n.moveTo(e.xCenter, e.yCenter), n.lineTo(p.x, p.y), n.stroke(), n.closePath()
+                                        a.beginPath(), a.moveTo(e.xCenter, e.yCenter), a.lineTo(p.x, p.y), a.stroke(), a.closePath()
                                     }
                                     if (c.display) {
                                         var g = e.getPointPosition(f, m + 5),
                                             y = i(c.fontColor, h.defaultFontColor);
-                                        n.font = _.font, n.fillStyle = y;
+                                        a.font = _.font, a.fillStyle = y;
                                         var M = e.getIndexAngle(f),
                                             v = r.toDegrees(M);
-                                        n.textAlign = d(v), l(v, e._pointLabelSizes[f], g), u(n, e.pointLabels[f] || "", g, _.size)
+                                        a.textAlign = d(v), l(v, e._pointLabelSizes[f], g), u(a, e.pointLabels[f] || "", g, _.size)
                                     }
                                 }
                             }(e)
@@ -18879,17 +18901,17 @@ webpackJsonp([35], {
             e.scaleService.registerScaleType("radialLinear", _, m)
         }
     },
-    sdTe: function(e, t, a) {
-        var n = a("xA5w");
+    sdTe: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e, t) {
-            var a = n(e),
-                r = n(t);
-            return a.getTime() === r.getTime()
+            var n = a(e),
+                r = a(t);
+            return n.getTime() === r.getTime()
         }
     },
-    sqLM: function(e, t, a) {
+    sqLM: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("eu", {
@@ -18944,9 +18966,9 @@ webpackJsonp([35], {
             })
         })
     },
-    ssxj: function(e, t, a) {
+    ssxj: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
 
@@ -18954,53 +18976,53 @@ webpackJsonp([35], {
                 return e > 1 && e < 5 && 1 != ~~(e / 10)
             }
 
-            function a(e, a, n, r) {
+            function n(e, n, a, r) {
                 var i = e + " ";
-                switch (n) {
+                switch (a) {
                     case "s":
-                        return a || r ? "pár sekund" : "pár sekundami";
+                        return n || r ? "pár sekund" : "pár sekundami";
                     case "m":
-                        return a ? "minuta" : r ? "minutu" : "minutou";
+                        return n ? "minuta" : r ? "minutu" : "minutou";
                     case "mm":
-                        return a || r ? i + (t(e) ? "minuty" : "minut") : i + "minutami";
+                        return n || r ? i + (t(e) ? "minuty" : "minut") : i + "minutami";
                     case "h":
-                        return a ? "hodina" : r ? "hodinu" : "hodinou";
+                        return n ? "hodina" : r ? "hodinu" : "hodinou";
                     case "hh":
-                        return a || r ? i + (t(e) ? "hodiny" : "hodin") : i + "hodinami";
+                        return n || r ? i + (t(e) ? "hodiny" : "hodin") : i + "hodinami";
                     case "d":
-                        return a || r ? "den" : "dnem";
+                        return n || r ? "den" : "dnem";
                     case "dd":
-                        return a || r ? i + (t(e) ? "dny" : "dní") : i + "dny";
+                        return n || r ? i + (t(e) ? "dny" : "dní") : i + "dny";
                     case "M":
-                        return a || r ? "měsíc" : "měsícem";
+                        return n || r ? "měsíc" : "měsícem";
                     case "MM":
-                        return a || r ? i + (t(e) ? "měsíce" : "měsíců") : i + "měsíci";
+                        return n || r ? i + (t(e) ? "měsíce" : "měsíců") : i + "měsíci";
                     case "y":
-                        return a || r ? "rok" : "rokem";
+                        return n || r ? "rok" : "rokem";
                     case "yy":
-                        return a || r ? i + (t(e) ? "roky" : "let") : i + "lety"
+                        return n || r ? i + (t(e) ? "roky" : "let") : i + "lety"
                 }
             }
-            var n = "leden_únor_březen_duben_květen_červen_červenec_srpen_září_říjen_listopad_prosinec".split("_"),
+            var a = "leden_únor_březen_duben_květen_červen_červenec_srpen_září_říjen_listopad_prosinec".split("_"),
                 r = "led_úno_bře_dub_kvě_čvn_čvc_srp_zář_říj_lis_pro".split("_");
             return e.defineLocale("cs", {
-                months: n,
+                months: a,
                 monthsShort: r,
                 monthsParse: function(e, t) {
-                    var a, n = [];
-                    for (a = 0; a < 12; a++) n[a] = new RegExp("^" + e[a] + "$|^" + t[a] + "$", "i");
-                    return n
-                }(n, r),
-                shortMonthsParse: function(e) {
-                    var t, a = [];
-                    for (t = 0; t < 12; t++) a[t] = new RegExp("^" + e[t] + "$", "i");
+                    var n, a = [];
+                    for (n = 0; n < 12; n++) a[n] = new RegExp("^" + e[n] + "$|^" + t[n] + "$", "i");
                     return a
+                }(a, r),
+                shortMonthsParse: function(e) {
+                    var t, n = [];
+                    for (t = 0; t < 12; t++) n[t] = new RegExp("^" + e[t] + "$", "i");
+                    return n
                 }(r),
                 longMonthsParse: function(e) {
-                    var t, a = [];
-                    for (t = 0; t < 12; t++) a[t] = new RegExp("^" + e[t] + "$", "i");
-                    return a
-                }(n),
+                    var t, n = [];
+                    for (t = 0; t < 12; t++) n[t] = new RegExp("^" + e[t] + "$", "i");
+                    return n
+                }(a),
                 weekdays: "neděle_pondělí_úterý_středa_čtvrtek_pátek_sobota".split("_"),
                 weekdaysShort: "ne_po_út_st_čt_pá_so".split("_"),
                 weekdaysMin: "ne_po_út_st_čt_pá_so".split("_"),
@@ -19055,17 +19077,17 @@ webpackJsonp([35], {
                 relativeTime: {
                     future: "za %s",
                     past: "před %s",
-                    s: a,
-                    m: a,
-                    mm: a,
-                    h: a,
-                    hh: a,
-                    d: a,
-                    dd: a,
-                    M: a,
-                    MM: a,
-                    y: a,
-                    yy: a
+                    s: n,
+                    m: n,
+                    mm: n,
+                    h: n,
+                    hh: n,
+                    d: n,
+                    dd: n,
+                    M: n,
+                    MM: n,
+                    y: n,
+                    yy: n
                 },
                 dayOfMonthOrdinalParse: /\d{1,2}\./,
                 ordinal: "%d.",
@@ -19076,9 +19098,9 @@ webpackJsonp([35], {
             })
         })
     },
-    svD2: function(e, t, a) {
+    svD2: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -19094,9 +19116,9 @@ webpackJsonp([35], {
                 correctGrammaticalCase: function(e, t) {
                     return 1 === e ? t[0] : e >= 2 && e <= 4 ? t[1] : t[2]
                 },
-                translate: function(e, a, n) {
-                    var r = t.words[n];
-                    return 1 === n.length ? a ? r[0] : r[1] : e + " " + t.correctGrammaticalCase(e, r)
+                translate: function(e, n, a) {
+                    var r = t.words[a];
+                    return 1 === a.length ? n ? r[0] : r[1] : e + " " + t.correctGrammaticalCase(e, r)
                 }
             };
             return e.defineLocale("me", {
@@ -19163,17 +19185,17 @@ webpackJsonp([35], {
             })
         })
     },
-    t6pj: function(e, t, a) {
-        var n = a("YRFD"),
-            r = a("xA5w"),
-            i = a("25hp"),
-            s = a("uyaC"),
+    t6pj: function(e, t, n) {
+        var a = n("YRFD"),
+            r = n("xA5w"),
+            i = n("25hp"),
+            s = n("uyaC"),
             o = 1440,
             d = 43200,
             u = 525600;
-        e.exports = function(e, t, a) {
-            var l = a || {},
-                c = n(e, t),
+        e.exports = function(e, t, n) {
+            var l = n || {},
+                c = a(e, t),
                 h = l.locale,
                 m = s.distanceInWords.localize;
             h && h.distanceInWords && h.distanceInWords.localize && (m = h.distanceInWords.localize);
@@ -19195,17 +19217,17 @@ webpackJsonp([35], {
             throw new Error("Unknown unit: " + g)
         }
     },
-    t8zS: function(e, t, a) {
-        var n = a("nk30");
+    t8zS: function(e, t, n) {
+        var a = n("nk30");
         e.exports = function(e) {
-            return n(e, {
+            return a(e, {
                 weekStartsOn: 1
             })
         }
     },
-    tkWw: function(e, t, a) {
+    tkWw: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("ar-dz", {
@@ -19253,9 +19275,9 @@ webpackJsonp([35], {
             })
         })
     },
-    tzHd: function(e, t, a) {
+    tzHd: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("fr", {
@@ -19320,24 +19342,24 @@ webpackJsonp([35], {
             })
         })
     },
-    "u/4p": function(e, t, a) {
-        var n = a("xA5w");
+    "u/4p": function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e, t) {
-            var a = t ? Number(t.weekStartsOn) || 0 : 0,
-                r = n(e),
+            var n = t ? Number(t.weekStartsOn) || 0 : 0,
+                r = a(e),
                 i = r.getDay(),
-                s = (i < a ? 7 : 0) + i - a;
+                s = (i < n ? 7 : 0) + i - n;
             return r.setDate(r.getDate() - s), r.setHours(0, 0, 0, 0), r
         }
     },
-    u1o0: function(e, t, a) {
+    u1o0: function(e, t, n) {
         "use strict";
-        var n = a("3n1n");
+        var a = n("3n1n");
         e.exports = {
             toLineHeight: function(e, t) {
-                var a = ("" + e).match(/^(normal|(\d+(?:\.\d+)?)(px|em|%)?)$/);
-                if (!a || "normal" === a[1]) return 1.2 * t;
-                switch (e = +a[2], a[3]) {
+                var n = ("" + e).match(/^(normal|(\d+(?:\.\d+)?)(px|em|%)?)$/);
+                if (!n || "normal" === n[1]) return 1.2 * t;
+                switch (e = +n[2], n[3]) {
                     case "px":
                         return e;
                     case "%":
@@ -19346,36 +19368,36 @@ webpackJsonp([35], {
                 return t * e
             },
             toPadding: function(e) {
-                var t, a, r, i;
-                return n.isObject(e) ? (t = +e.top || 0, a = +e.right || 0, r = +e.bottom || 0, i = +e.left || 0) : t = a = r = i = +e || 0, {
+                var t, n, r, i;
+                return a.isObject(e) ? (t = +e.top || 0, n = +e.right || 0, r = +e.bottom || 0, i = +e.left || 0) : t = n = r = i = +e || 0, {
                     top: t,
-                    right: a,
+                    right: n,
                     bottom: r,
                     left: i,
                     height: t + r,
-                    width: i + a
+                    width: i + n
                 }
             },
-            resolve: function(e, t, a) {
+            resolve: function(e, t, n) {
                 var r, i, s;
                 for (r = 0, i = e.length; r < i; ++r)
-                    if (void 0 !== (s = e[r]) && (void 0 !== t && "function" == typeof s && (s = s(t)), void 0 !== a && n.isArray(s) && (s = s[a]), void 0 !== s)) return s
+                    if (void 0 !== (s = e[r]) && (void 0 !== t && "function" == typeof s && (s = s(t)), void 0 !== n && a.isArray(s) && (s = s[n]), void 0 !== s)) return s
             }
         }
     },
-    uSe8: function(e, t, a) {
+    uSe8: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             var t = ["جنوری", "فروری", "مارچ", "اپریل", "مئی", "جون", "جولائی", "اگست", "ستمبر", "اکتوبر", "نومبر", "دسمبر"],
-                a = ["اتوار", "پیر", "منگل", "بدھ", "جمعرات", "جمعہ", "ہفتہ"];
+                n = ["اتوار", "پیر", "منگل", "بدھ", "جمعرات", "جمعہ", "ہفتہ"];
             return e.defineLocale("ur", {
                 months: t,
                 monthsShort: t,
-                weekdays: a,
-                weekdaysShort: a,
-                weekdaysMin: a,
+                weekdays: n,
+                weekdaysShort: n,
+                weekdaysMin: n,
                 longDateFormat: {
                     LT: "HH:mm",
                     LTS: "HH:mm:ss",
@@ -19388,7 +19410,7 @@ webpackJsonp([35], {
                 isPM: function(e) {
                     return "شام" === e
                 },
-                meridiem: function(e, t, a) {
+                meridiem: function(e, t, n) {
                     return e < 12 ? "صبح" : "شام"
                 },
                 calendar: {
@@ -19427,25 +19449,25 @@ webpackJsonp([35], {
             })
         })
     },
-    ulq9: function(e, t, a) {
+    ulq9: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
 
-            function t(e, t, a) {
-                return "m" === a ? t ? "минута" : "минуту" : e + " " + function(e, t) {
-                    var a = e.split("_");
-                    return t % 10 == 1 && t % 100 != 11 ? a[0] : t % 10 >= 2 && t % 10 <= 4 && (t % 100 < 10 || t % 100 >= 20) ? a[1] : a[2]
+            function t(e, t, n) {
+                return "m" === n ? t ? "минута" : "минуту" : e + " " + function(e, t) {
+                    var n = e.split("_");
+                    return t % 10 == 1 && t % 100 != 11 ? n[0] : t % 10 >= 2 && t % 10 <= 4 && (t % 100 < 10 || t % 100 >= 20) ? n[1] : n[2]
                 }({
                     mm: t ? "минута_минуты_минут" : "минуту_минуты_минут",
                     hh: "час_часа_часов",
                     dd: "день_дня_дней",
                     MM: "месяц_месяца_месяцев",
                     yy: "год_года_лет"
-                }[a], +e)
+                }[n], +e)
             }
-            var a = [/^янв/i, /^фев/i, /^мар/i, /^апр/i, /^ма[йя]/i, /^июн/i, /^июл/i, /^авг/i, /^сен/i, /^окт/i, /^ноя/i, /^дек/i];
+            var n = [/^янв/i, /^фев/i, /^мар/i, /^апр/i, /^ма[йя]/i, /^июн/i, /^июл/i, /^авг/i, /^сен/i, /^окт/i, /^ноя/i, /^дек/i];
             return e.defineLocale("ru", {
                 months: {
                     format: "января_февраля_марта_апреля_мая_июня_июля_августа_сентября_октября_ноября_декабря".split("_"),
@@ -19462,9 +19484,9 @@ webpackJsonp([35], {
                 },
                 weekdaysShort: "вс_пн_вт_ср_чт_пт_сб".split("_"),
                 weekdaysMin: "вс_пн_вт_ср_чт_пт_сб".split("_"),
-                monthsParse: a,
-                longMonthsParse: a,
-                shortMonthsParse: a,
+                monthsParse: n,
+                longMonthsParse: n,
+                shortMonthsParse: n,
                 monthsRegex: /^(январ[ья]|янв\.?|феврал[ья]|февр?\.?|марта?|мар\.?|апрел[ья]|апр\.?|ма[йя]|июн[ья]|июн\.?|июл[ья]|июл\.?|августа?|авг\.?|сентябр[ья]|сент?\.?|октябр[ья]|окт\.?|ноябр[ья]|нояб?\.?|декабр[ья]|дек\.?)/i,
                 monthsShortRegex: /^(январ[ья]|янв\.?|феврал[ья]|февр?\.?|марта?|мар\.?|апрел[ья]|апр\.?|ма[йя]|июн[ья]|июн\.?|июл[ья]|июл\.?|августа?|авг\.?|сентябр[ья]|сент?\.?|октябр[ья]|окт\.?|ноябр[ья]|нояб?\.?|декабр[ья]|дек\.?)/i,
                 monthsStrictRegex: /^(январ[яь]|феврал[яь]|марта?|апрел[яь]|ма[яй]|июн[яь]|июл[яь]|августа?|сентябр[яь]|октябр[яь]|ноябр[яь]|декабр[яь])/i,
@@ -19532,7 +19554,7 @@ webpackJsonp([35], {
                 isPM: function(e) {
                     return /^(дня|вечера)$/.test(e)
                 },
-                meridiem: function(e, t, a) {
+                meridiem: function(e, t, n) {
                     return e < 4 ? "ночи" : e < 12 ? "утра" : e < 17 ? "дня" : "вечера"
                 },
                 dayOfMonthOrdinalParse: /\d{1,2}-(й|го|я)/,
@@ -19558,9 +19580,9 @@ webpackJsonp([35], {
             })
         })
     },
-    upln: function(e, t, a) {
+    upln: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
 
@@ -19568,29 +19590,29 @@ webpackJsonp([35], {
                 return e % 100 == 11 || e % 10 != 1
             }
 
-            function a(e, a, n, r) {
+            function n(e, n, a, r) {
                 var i = e + " ";
-                switch (n) {
+                switch (a) {
                     case "s":
-                        return a || r ? "nokkrar sekúndur" : "nokkrum sekúndum";
+                        return n || r ? "nokkrar sekúndur" : "nokkrum sekúndum";
                     case "m":
-                        return a ? "mínúta" : "mínútu";
+                        return n ? "mínúta" : "mínútu";
                     case "mm":
-                        return t(e) ? i + (a || r ? "mínútur" : "mínútum") : a ? i + "mínúta" : i + "mínútu";
+                        return t(e) ? i + (n || r ? "mínútur" : "mínútum") : n ? i + "mínúta" : i + "mínútu";
                     case "hh":
-                        return t(e) ? i + (a || r ? "klukkustundir" : "klukkustundum") : i + "klukkustund";
+                        return t(e) ? i + (n || r ? "klukkustundir" : "klukkustundum") : i + "klukkustund";
                     case "d":
-                        return a ? "dagur" : r ? "dag" : "degi";
+                        return n ? "dagur" : r ? "dag" : "degi";
                     case "dd":
-                        return t(e) ? a ? i + "dagar" : i + (r ? "daga" : "dögum") : a ? i + "dagur" : i + (r ? "dag" : "degi");
+                        return t(e) ? n ? i + "dagar" : i + (r ? "daga" : "dögum") : n ? i + "dagur" : i + (r ? "dag" : "degi");
                     case "M":
-                        return a ? "mánuður" : r ? "mánuð" : "mánuði";
+                        return n ? "mánuður" : r ? "mánuð" : "mánuði";
                     case "MM":
-                        return t(e) ? a ? i + "mánuðir" : i + (r ? "mánuði" : "mánuðum") : a ? i + "mánuður" : i + (r ? "mánuð" : "mánuði");
+                        return t(e) ? n ? i + "mánuðir" : i + (r ? "mánuði" : "mánuðum") : n ? i + "mánuður" : i + (r ? "mánuð" : "mánuði");
                     case "y":
-                        return a || r ? "ár" : "ári";
+                        return n || r ? "ár" : "ári";
                     case "yy":
-                        return t(e) ? i + (a || r ? "ár" : "árum") : i + (a || r ? "ár" : "ári")
+                        return t(e) ? i + (n || r ? "ár" : "árum") : i + (n || r ? "ár" : "ári")
                 }
             }
             return e.defineLocale("is", {
@@ -19618,17 +19640,17 @@ webpackJsonp([35], {
                 relativeTime: {
                     future: "eftir %s",
                     past: "fyrir %s síðan",
-                    s: a,
-                    m: a,
-                    mm: a,
+                    s: n,
+                    m: n,
+                    mm: n,
                     h: "klukkustund",
-                    hh: a,
-                    d: a,
-                    dd: a,
-                    M: a,
-                    MM: a,
-                    y: a,
-                    yy: a
+                    hh: n,
+                    d: n,
+                    dd: n,
+                    M: n,
+                    MM: n,
+                    y: n,
+                    yy: n
                 },
                 dayOfMonthOrdinalParse: /\d{1,2}\./,
                 ordinal: "%d.",
@@ -19639,9 +19661,9 @@ webpackJsonp([35], {
             })
         })
     },
-    uslO: function(e, t, a) {
-        function n(e) {
-            return a(r(e))
+    uslO: function(e, t, n) {
+        function a(e) {
+            return n(r(e))
         }
 
         function r(e) {
@@ -19881,47 +19903,47 @@ webpackJsonp([35], {
             "./zh-tw": "BbgG",
             "./zh-tw.js": "BbgG"
         };
-        n.keys = function() {
+        a.keys = function() {
             return Object.keys(i)
-        }, n.resolve = r, e.exports = n, n.id = "uslO"
+        }, a.resolve = r, e.exports = a, a.id = "uslO"
     },
-    uwZN: function(e, t, a) {
-        var n = a("7yyf");
+    uwZN: function(e, t, n) {
+        var a = n("7yyf");
         e.exports = function(e) {
-            return n(new Date, e)
+            return a(new Date, e)
         }
     },
-    uyaC: function(e, t, a) {
-        var n = a("Ptqd"),
-            r = a("jQas");
+    uyaC: function(e, t, n) {
+        var a = n("Ptqd"),
+            r = n("jQas");
         e.exports = {
-            distanceInWords: n(),
+            distanceInWords: a(),
             format: r()
         }
     },
-    vBvW: function(e, t, a) {
-        var n = a("mXYp");
+    vBvW: function(e, t, n) {
+        var a = n("mXYp");
         e.exports = function(e, t) {
-            return n(Date.now(), e, t)
+            return a(Date.now(), e, t)
         }
     },
-    ve2D: function(e, t, a) {
-        var n = a("xA5w");
+    ve2D: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e) {
-            return 2 === n(e).getDay()
+            return 2 === a(e).getDay()
         }
     },
-    vvdA: function(e, t, a) {
+    vvdA: function(e, t, n) {
         "use strict";
         e.exports = function(e) {
-            e.Bar = function(t, a) {
-                return a.type = "bar", new e(t, a)
+            e.Bar = function(t, n) {
+                return n.type = "bar", new e(t, n)
             }
         }
     },
-    w2Hs: function(e, t, a) {
+    w2Hs: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -19936,7 +19958,7 @@ webpackJsonp([35], {
                     9: "༩",
                     0: "༠"
                 },
-                a = {
+                n = {
                     "༡": "1",
                     "༢": "2",
                     "༣": "3",
@@ -19987,7 +20009,7 @@ webpackJsonp([35], {
                 },
                 preparse: function(e) {
                     return e.replace(/[༡༢༣༤༥༦༧༨༩༠]/g, function(e) {
-                        return a[e]
+                        return n[e]
                     })
                 },
                 postformat: function(e) {
@@ -19999,7 +20021,7 @@ webpackJsonp([35], {
                 meridiemHour: function(e, t) {
                     return 12 === e && (e = 0), "མཚན་མོ" === t && e >= 4 || "ཉིན་གུང" === t && e < 5 || "དགོང་དག" === t ? e + 12 : e
                 },
-                meridiem: function(e, t, a) {
+                meridiem: function(e, t, n) {
                     return e < 4 ? "མཚན་མོ" : e < 10 ? "ཞོགས་ཀས" : e < 17 ? "ཉིན་གུང" : e < 20 ? "དགོང་དག" : "མཚན་མོ"
                 },
                 week: {
@@ -20009,20 +20031,20 @@ webpackJsonp([35], {
             })
         })
     },
-    w4by: function(e, t, a) {
-        var n = a("6Zhv"),
+    w4by: function(e, t, n) {
+        var a = n("6Zhv"),
             r = 36e5;
         e.exports = function(e, t) {
-            var a = Number(t);
-            return n(e, a * r)
+            var n = Number(t);
+            return a(e, n * r)
         }
     },
-    w9tK: function(e, t, a) {
+    w9tK: function(e, t, n) {
         "use strict";
-        a.d(t, "a", function() {
-            return n
+        n.d(t, "a", function() {
+            return a
         });
-        var n = {
+        var a = {
             BrowseCommunities: "browse.communities",
             BrowseCreative: "browse.creative",
             BrowseGamesAndCommunities: "browse.games-and-communities",
@@ -20078,17 +20100,17 @@ webpackJsonp([35], {
             VideoManagerUploadListPage: "videoManager.upload-list"
         }
     },
-    wAFH: function(e, t, a) {
-        var n = a("6Zhv");
+    wAFH: function(e, t, n) {
+        var a = n("6Zhv");
         e.exports = function(e, t) {
-            var a = Number(t);
-            return n(e, -a)
+            var n = Number(t);
+            return a(e, -n)
         }
     },
-    wGD1: function(e, t, a) {
+    wGD1: function(e, t, n) {
         "use strict";
-        var n = a("rWJA"),
-            r = a("iO9N"),
+        var a = n("rWJA"),
+            r = n("iO9N"),
             i = function(e) {
                 r.extend(this, e), this.initialize.apply(this, arguments)
             };
@@ -20101,15 +20123,15 @@ webpackJsonp([35], {
             },
             transition: function(e) {
                 var t = this._model,
-                    a = this._start,
+                    n = this._start,
                     r = this._view;
-                return t && 1 !== e ? (r || (r = this._view = {}), a || (a = this._start = {}), function(e, t, a, r) {
-                    var i, s, o, d, u, l, c, h, m, _ = Object.keys(a);
+                return t && 1 !== e ? (r || (r = this._view = {}), n || (n = this._start = {}), function(e, t, n, r) {
+                    var i, s, o, d, u, l, c, h, m, _ = Object.keys(n);
                     for (i = 0, s = _.length; i < s; ++i)
-                        if (o = _[i], l = a[o], t.hasOwnProperty(o) || (t[o] = l), (d = t[o]) !== l && "_" !== o[0]) {
+                        if (o = _[i], l = n[o], t.hasOwnProperty(o) || (t[o] = l), (d = t[o]) !== l && "_" !== o[0]) {
                             if (e.hasOwnProperty(o) || (e[o] = d), u = e[o], (c = typeof l) == typeof u)
                                 if ("string" === c) {
-                                    if ((h = n(u)).valid && (m = n(l)).valid) {
+                                    if ((h = a(u)).valid && (m = a(l)).valid) {
                                         t[o] = m.mix(h, r).rgbString();
                                         continue
                                     }
@@ -20119,7 +20141,7 @@ webpackJsonp([35], {
                             }
                             t[o] = l
                         }
-                }(a, r, t, e), this) : (this._view = t, this._start = null, this)
+                }(n, r, t, e), this) : (this._view = t, this._start = null, this)
             },
             tooltipPosition: function() {
                 return {
@@ -20132,9 +20154,9 @@ webpackJsonp([35], {
             }
         }), i.extend = r.inherits, e.exports = i
     },
-    wIgY: function(e, t, a) {
+    wIgY: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("ca", {
@@ -20195,8 +20217,8 @@ webpackJsonp([35], {
                 },
                 dayOfMonthOrdinalParse: /\d{1,2}(r|n|t|è|a)/,
                 ordinal: function(e, t) {
-                    var a = 1 === e ? "r" : 2 === e ? "n" : 3 === e ? "r" : 4 === e ? "t" : "è";
-                    return "w" !== t && "W" !== t || (a = "a"), e + a
+                    var n = 1 === e ? "r" : 2 === e ? "n" : 3 === e ? "r" : 4 === e ? "t" : "è";
+                    return "w" !== t && "W" !== t || (n = "a"), e + n
                 },
                 week: {
                     dow: 1,
@@ -20205,25 +20227,25 @@ webpackJsonp([35], {
             })
         })
     },
-    wPWQ: function(e, t, a) {
+    wPWQ: function(e, t, n) {
         "use strict";
         e.exports = function(e) {
-            e.Bubble = function(t, a) {
-                return a.type = "bubble", new e(t, a)
+            e.Bubble = function(t, n) {
+                return n.type = "bubble", new e(t, n)
             }
         }
     },
-    wPo5: function(e, t, a) {
-        var n = a("xA5w");
+    wPo5: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e, t) {
-            var a = n(e),
+            var n = a(e),
                 r = Number(t);
-            return a.setHours(r), a
+            return n.setHours(r), n
         }
     },
-    wPpW: function(e, t, a) {
+    wPpW: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             var t = {
@@ -20238,10 +20260,10 @@ webpackJsonp([35], {
                     9: "9",
                     0: "0"
                 },
-                a = function(e) {
+                n = function(e) {
                     return 0 === e ? 0 : 1 === e ? 1 : 2 === e ? 2 : e % 100 >= 3 && e % 100 <= 10 ? 3 : e % 100 >= 11 ? 4 : 5
                 },
-                n = {
+                a = {
                     s: ["أقل من ثانية", "ثانية واحدة", ["ثانيتان", "ثانيتين"], "%d ثوان", "%d ثانية", "%d ثانية"],
                     m: ["أقل من دقيقة", "دقيقة واحدة", ["دقيقتان", "دقيقتين"], "%d دقائق", "%d دقيقة", "%d دقيقة"],
                     h: ["أقل من ساعة", "ساعة واحدة", ["ساعتان", "ساعتين"], "%d ساعات", "%d ساعة", "%d ساعة"],
@@ -20251,8 +20273,8 @@ webpackJsonp([35], {
                 },
                 r = function(e) {
                     return function(t, r, i, s) {
-                        var o = a(t),
-                            d = n[e][a(t)];
+                        var o = n(t),
+                            d = a[e][n(t)];
                         return 2 === o && (d = d[r ? 0 : 1]), d.replace(/%d/i, t)
                     }
                 },
@@ -20276,7 +20298,7 @@ webpackJsonp([35], {
                 isPM: function(e) {
                     return "م" === e
                 },
-                meridiem: function(e, t, a) {
+                meridiem: function(e, t, n) {
                     return e < 12 ? "ص" : "م"
                 },
                 calendar: {
@@ -20317,21 +20339,21 @@ webpackJsonp([35], {
             })
         })
     },
-    wT5f: function(e, t, a) {
+    wT5f: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
 
-            function t(e, t, a) {
-                var n = " ";
-                return (e % 100 >= 20 || e >= 100 && e % 100 == 0) && (n = " de "), e + n + {
+            function t(e, t, n) {
+                var a = " ";
+                return (e % 100 >= 20 || e >= 100 && e % 100 == 0) && (a = " de "), e + a + {
                     mm: "minute",
                     hh: "ore",
                     dd: "zile",
                     MM: "luni",
                     yy: "ani"
-                }[a]
+                }[n]
             }
             return e.defineLocale("ro", {
                 months: "ianuarie_februarie_martie_aprilie_mai_iunie_iulie_august_septembrie_octombrie_noiembrie_decembrie".split("_"),
@@ -20378,195 +20400,195 @@ webpackJsonp([35], {
             })
         })
     },
-    wajf: function(e, t, a) {
-        var n = a("xA5w"),
-            r = a("D6ie");
+    wajf: function(e, t, n) {
+        var a = n("xA5w"),
+            r = n("D6ie");
         e.exports = function(e, t) {
-            var a = n(e),
+            var n = a(e),
                 i = Number(t),
-                s = r(a) - i;
-            return a.setDate(a.getDate() - 7 * s), a
+                s = r(n) - i;
+            return n.setDate(n.getDate() - 7 * s), n
         }
     },
-    wiYS: function(e, t, a) {
-        var n = a("xA5w");
+    wiYS: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e, t) {
             if (!(t instanceof Array)) throw new TypeError(toString.call(t) + " is not an instance of Array");
-            var a, r, i = n(e).getTime();
+            var n, r, i = a(e).getTime();
             return t.forEach(function(e, t) {
-                var s = n(e),
+                var s = a(e),
                     o = Math.abs(i - s.getTime());
-                (void 0 === a || o < r) && (a = t, r = o)
-            }), a
+                (void 0 === n || o < r) && (n = t, r = o)
+            }), n
         }
     },
-    wuJz: function(e, t, a) {
+    wuJz: function(e, t, n) {
         e.exports = {
-            addDays: a("Jvcu"),
-            addHours: a("w4by"),
-            addISOYears: a("oNnY"),
-            addMilliseconds: a("6Zhv"),
-            addMinutes: a("NSOL"),
-            addMonths: a("3EIC"),
-            addQuarters: a("1rLR"),
-            addSeconds: a("nfOx"),
-            addWeeks: a("7EGB"),
-            addYears: a("4Z4o"),
-            areRangesOverlapping: a("2lB6"),
-            closestIndexTo: a("wiYS"),
-            closestTo: a("Tv4R"),
-            compareAsc: a("NKE6"),
-            compareDesc: a("YRFD"),
-            differenceInCalendarDays: a("nizW"),
-            differenceInCalendarISOWeeks: a("0aH9"),
-            differenceInCalendarISOYears: a("9Jn5"),
-            differenceInCalendarMonths: a("orNa"),
-            differenceInCalendarQuarters: a("Jtuq"),
-            differenceInCalendarWeeks: a("Q2rx"),
-            differenceInCalendarYears: a("Bb5e"),
-            differenceInDays: a("gAt4"),
-            differenceInHours: a("kjlQ"),
-            differenceInISOYears: a("qNYo"),
-            differenceInMilliseconds: a("G7No"),
-            differenceInMinutes: a("3nPg"),
-            differenceInMonths: a("GI7G"),
-            differenceInQuarters: a("XFzU"),
-            differenceInSeconds: a("25hp"),
-            differenceInWeeks: a("6SO/"),
-            differenceInYears: a("rO5X"),
-            distanceInWords: a("mXYp"),
-            distanceInWordsStrict: a("t6pj"),
-            distanceInWordsToNow: a("vBvW"),
-            eachDay: a("M9Ev"),
-            endOfDay: a("MIQa"),
-            endOfHour: a("bbdo"),
-            endOfISOWeek: a("SZZR"),
-            endOfISOYear: a("K7ZZ"),
-            endOfMinute: a("LU20"),
-            endOfMonth: a("xKy+"),
-            endOfQuarter: a("zQFw"),
-            endOfSecond: a("+sSA"),
-            endOfToday: a("0LAu"),
-            endOfTomorrow: a("HXCM"),
-            endOfWeek: a("I7cV"),
-            endOfYear: a("Epw6"),
-            endOfYesterday: a("0YGC"),
-            format: a("Eoz/"),
-            getDate: a("3g9B"),
-            getDay: a("Mbb9"),
-            getDayOfYear: a("ymQ7"),
-            getDaysInMonth: a("Mdww"),
-            getDaysInYear: a("Javx"),
-            getHours: a("8Gpr"),
-            getISODay: a("AZvW"),
-            getISOWeek: a("D6ie"),
-            getISOWeeksInYear: a("fUo1"),
-            getISOYear: a("zZbG"),
-            getMilliseconds: a("024F"),
-            getMinutes: a("JNsx"),
-            getMonth: a("l85J"),
-            getOverlappingDaysInRanges: a("8QR2"),
-            getQuarter: a("lQzg"),
-            getSeconds: a("eKpK"),
-            getTime: a("cwv1"),
-            getYear: a("nZeo"),
-            isAfter: a("fK0I"),
-            isBefore: a("gDPd"),
-            isDate: a("607n"),
-            isEqual: a("sdTe"),
-            isFirstDayOfMonth: a("6udH"),
-            isFriday: a("YPf8"),
-            isFuture: a("6CZb"),
-            isLastDayOfMonth: a("kDuD"),
-            isLeapYear: a("b7g8"),
-            isMonday: a("kkVd"),
-            isPast: a("eCZG"),
-            isSameDay: a("f4ga"),
-            isSameHour: a("qPxx"),
-            isSameISOWeek: a("Be26"),
-            isSameISOYear: a("4LxA"),
-            isSameMinute: a("Moxe"),
-            isSameMonth: a("f+sD"),
-            isSameQuarter: a("7yyf"),
-            isSameSecond: a("5qwL"),
-            isSameWeek: a("8KV+"),
-            isSameYear: a("Qxz6"),
-            isSaturday: a("6axH"),
-            isSunday: a("ZUMa"),
-            isThisHour: a("z3wv"),
-            isThisISOWeek: a("A2zO"),
-            isThisISOYear: a("hUHO"),
-            isThisMinute: a("Qbo9"),
-            isThisMonth: a("cONr"),
-            isThisQuarter: a("uwZN"),
-            isThisSecond: a("hj5Y"),
-            isThisWeek: a("pe7V"),
-            isThisYear: a("kRs6"),
-            isThursday: a("yu3m"),
-            isToday: a("GvNH"),
-            isTomorrow: a("0oN5"),
-            isTuesday: a("ve2D"),
-            isValid: a("dH3X"),
-            isWednesday: a("e/EH"),
-            isWeekend: a("4OFc"),
-            isWithinRange: a("4zIR"),
-            isYesterday: a("1gtq"),
-            lastDayOfISOWeek: a("t8zS"),
-            lastDayOfISOYear: a("hico"),
-            lastDayOfMonth: a("Akl5"),
-            lastDayOfQuarter: a("T/Ln"),
-            lastDayOfWeek: a("nk30"),
-            lastDayOfYear: a("xLg3"),
-            max: a("11Bn"),
-            min: a("aHtT"),
-            parse: a("xA5w"),
-            setDate: a("/dIK"),
-            setDay: a("SHOI"),
-            setDayOfYear: a("CVNg"),
-            setHours: a("wPo5"),
-            setISODay: a("YPjl"),
-            setISOWeek: a("wajf"),
-            setISOYear: a("Uu+E"),
-            setMilliseconds: a("+/J2"),
-            setMinutes: a("danj"),
-            setMonth: a("balU"),
-            setQuarter: a("jy2q"),
-            setSeconds: a("ToRI"),
-            setYear: a("a7Cs"),
-            startOfDay: a("WNGz"),
-            startOfHour: a("LLTj"),
-            startOfISOWeek: a("3znZ"),
-            startOfISOYear: a("iRXW"),
-            startOfMinute: a("M5Oo"),
-            startOfMonth: a("7Xwz"),
-            startOfQuarter: a("rBmI"),
-            startOfSecond: a("VaeB"),
-            startOfToday: a("1udo"),
-            startOfTomorrow: a("gUEJ"),
-            startOfWeek: a("u/4p"),
-            startOfYear: a("JURy"),
-            startOfYesterday: a("mSFb"),
-            subDays: a("cA+x"),
-            subHours: a("fo7E"),
-            subISOYears: a("MKc+"),
-            subMilliseconds: a("wAFH"),
-            subMinutes: a("kIFi"),
-            subMonths: a("7Swd"),
-            subQuarters: a("oke8"),
-            subSeconds: a("9r5b"),
-            subWeeks: a("cw9o"),
-            subYears: a("0UyA")
+            addDays: n("Jvcu"),
+            addHours: n("w4by"),
+            addISOYears: n("oNnY"),
+            addMilliseconds: n("6Zhv"),
+            addMinutes: n("NSOL"),
+            addMonths: n("3EIC"),
+            addQuarters: n("1rLR"),
+            addSeconds: n("nfOx"),
+            addWeeks: n("7EGB"),
+            addYears: n("4Z4o"),
+            areRangesOverlapping: n("2lB6"),
+            closestIndexTo: n("wiYS"),
+            closestTo: n("Tv4R"),
+            compareAsc: n("NKE6"),
+            compareDesc: n("YRFD"),
+            differenceInCalendarDays: n("nizW"),
+            differenceInCalendarISOWeeks: n("0aH9"),
+            differenceInCalendarISOYears: n("9Jn5"),
+            differenceInCalendarMonths: n("orNa"),
+            differenceInCalendarQuarters: n("Jtuq"),
+            differenceInCalendarWeeks: n("Q2rx"),
+            differenceInCalendarYears: n("Bb5e"),
+            differenceInDays: n("gAt4"),
+            differenceInHours: n("kjlQ"),
+            differenceInISOYears: n("qNYo"),
+            differenceInMilliseconds: n("G7No"),
+            differenceInMinutes: n("3nPg"),
+            differenceInMonths: n("GI7G"),
+            differenceInQuarters: n("XFzU"),
+            differenceInSeconds: n("25hp"),
+            differenceInWeeks: n("6SO/"),
+            differenceInYears: n("rO5X"),
+            distanceInWords: n("mXYp"),
+            distanceInWordsStrict: n("t6pj"),
+            distanceInWordsToNow: n("vBvW"),
+            eachDay: n("M9Ev"),
+            endOfDay: n("MIQa"),
+            endOfHour: n("bbdo"),
+            endOfISOWeek: n("SZZR"),
+            endOfISOYear: n("K7ZZ"),
+            endOfMinute: n("LU20"),
+            endOfMonth: n("xKy+"),
+            endOfQuarter: n("zQFw"),
+            endOfSecond: n("+sSA"),
+            endOfToday: n("0LAu"),
+            endOfTomorrow: n("HXCM"),
+            endOfWeek: n("I7cV"),
+            endOfYear: n("Epw6"),
+            endOfYesterday: n("0YGC"),
+            format: n("Eoz/"),
+            getDate: n("3g9B"),
+            getDay: n("Mbb9"),
+            getDayOfYear: n("ymQ7"),
+            getDaysInMonth: n("Mdww"),
+            getDaysInYear: n("Javx"),
+            getHours: n("8Gpr"),
+            getISODay: n("AZvW"),
+            getISOWeek: n("D6ie"),
+            getISOWeeksInYear: n("fUo1"),
+            getISOYear: n("zZbG"),
+            getMilliseconds: n("024F"),
+            getMinutes: n("JNsx"),
+            getMonth: n("l85J"),
+            getOverlappingDaysInRanges: n("8QR2"),
+            getQuarter: n("lQzg"),
+            getSeconds: n("eKpK"),
+            getTime: n("cwv1"),
+            getYear: n("nZeo"),
+            isAfter: n("fK0I"),
+            isBefore: n("gDPd"),
+            isDate: n("607n"),
+            isEqual: n("sdTe"),
+            isFirstDayOfMonth: n("6udH"),
+            isFriday: n("YPf8"),
+            isFuture: n("6CZb"),
+            isLastDayOfMonth: n("kDuD"),
+            isLeapYear: n("b7g8"),
+            isMonday: n("kkVd"),
+            isPast: n("eCZG"),
+            isSameDay: n("f4ga"),
+            isSameHour: n("qPxx"),
+            isSameISOWeek: n("Be26"),
+            isSameISOYear: n("4LxA"),
+            isSameMinute: n("Moxe"),
+            isSameMonth: n("f+sD"),
+            isSameQuarter: n("7yyf"),
+            isSameSecond: n("5qwL"),
+            isSameWeek: n("8KV+"),
+            isSameYear: n("Qxz6"),
+            isSaturday: n("6axH"),
+            isSunday: n("ZUMa"),
+            isThisHour: n("z3wv"),
+            isThisISOWeek: n("A2zO"),
+            isThisISOYear: n("hUHO"),
+            isThisMinute: n("Qbo9"),
+            isThisMonth: n("cONr"),
+            isThisQuarter: n("uwZN"),
+            isThisSecond: n("hj5Y"),
+            isThisWeek: n("pe7V"),
+            isThisYear: n("kRs6"),
+            isThursday: n("yu3m"),
+            isToday: n("GvNH"),
+            isTomorrow: n("0oN5"),
+            isTuesday: n("ve2D"),
+            isValid: n("dH3X"),
+            isWednesday: n("e/EH"),
+            isWeekend: n("4OFc"),
+            isWithinRange: n("4zIR"),
+            isYesterday: n("1gtq"),
+            lastDayOfISOWeek: n("t8zS"),
+            lastDayOfISOYear: n("hico"),
+            lastDayOfMonth: n("Akl5"),
+            lastDayOfQuarter: n("T/Ln"),
+            lastDayOfWeek: n("nk30"),
+            lastDayOfYear: n("xLg3"),
+            max: n("11Bn"),
+            min: n("aHtT"),
+            parse: n("xA5w"),
+            setDate: n("/dIK"),
+            setDay: n("SHOI"),
+            setDayOfYear: n("CVNg"),
+            setHours: n("wPo5"),
+            setISODay: n("YPjl"),
+            setISOWeek: n("wajf"),
+            setISOYear: n("Uu+E"),
+            setMilliseconds: n("+/J2"),
+            setMinutes: n("danj"),
+            setMonth: n("balU"),
+            setQuarter: n("jy2q"),
+            setSeconds: n("ToRI"),
+            setYear: n("a7Cs"),
+            startOfDay: n("WNGz"),
+            startOfHour: n("LLTj"),
+            startOfISOWeek: n("3znZ"),
+            startOfISOYear: n("iRXW"),
+            startOfMinute: n("M5Oo"),
+            startOfMonth: n("7Xwz"),
+            startOfQuarter: n("rBmI"),
+            startOfSecond: n("VaeB"),
+            startOfToday: n("1udo"),
+            startOfTomorrow: n("gUEJ"),
+            startOfWeek: n("u/4p"),
+            startOfYear: n("JURy"),
+            startOfYesterday: n("mSFb"),
+            subDays: n("cA+x"),
+            subHours: n("fo7E"),
+            subISOYears: n("MKc+"),
+            subMilliseconds: n("wAFH"),
+            subMinutes: n("kIFi"),
+            subMonths: n("7Swd"),
+            subQuarters: n("oke8"),
+            subSeconds: n("9r5b"),
+            subWeeks: n("cw9o"),
+            subYears: n("0UyA")
         }
     },
-    xA5w: function(e, t, a) {
-        function n(e, t, a) {
-            t = t || 0, a = a || 0;
-            var n = new Date(0);
-            n.setUTCFullYear(e, 0, 4);
-            var r = 7 * t + a + 1 - (n.getUTCDay() || 7);
-            return n.setUTCDate(n.getUTCDate() + r), n
+    xA5w: function(e, t, n) {
+        function a(e, t, n) {
+            t = t || 0, n = n || 0;
+            var a = new Date(0);
+            a.setUTCFullYear(e, 0, 4);
+            var r = 7 * t + n + 1 - (a.getUTCDay() || 7);
+            return a.setUTCDate(a.getUTCDate() + r), a
         }
-        var r = a("607n"),
+        var r = n("607n"),
             i = 36e5,
             s = 6e4,
             o = 2,
@@ -20591,29 +20613,29 @@ webpackJsonp([35], {
         e.exports = function(e, t) {
             if (r(e)) return new Date(e.getTime());
             if ("string" != typeof e) return new Date(e);
-            var a = (t || {}).additionalDigits;
-            a = null == a ? o : Number(a);
+            var n = (t || {}).additionalDigits;
+            n = null == n ? o : Number(n);
             var w = function(e) {
-                    var t, a = {},
-                        n = e.split(d);
-                    if (u.test(n[0]) ? (a.date = null, t = n[0]) : (a.date = n[0], t = n[1]), t) {
+                    var t, n = {},
+                        a = e.split(d);
+                    if (u.test(a[0]) ? (n.date = null, t = a[0]) : (n.date = a[0], t = a[1]), t) {
                         var r = L.exec(t);
-                        r ? (a.time = t.replace(r[1], ""), a.timezone = r[1]) : a.time = t
+                        r ? (n.time = t.replace(r[1], ""), n.timezone = r[1]) : n.time = t
                     }
-                    return a
+                    return n
                 }(e),
                 x = function(e, t) {
-                    var a, n = c[t],
+                    var n, a = c[t],
                         r = m[t];
-                    if (a = h.exec(e) || r.exec(e)) {
-                        var i = a[1];
+                    if (n = h.exec(e) || r.exec(e)) {
+                        var i = n[1];
                         return {
                             year: parseInt(i, 10),
                             restDateString: e.slice(i.length)
                         }
                     }
-                    if (a = l.exec(e) || n.exec(e)) {
-                        var s = a[1];
+                    if (n = l.exec(e) || a.exec(e)) {
+                        var s = n[1];
                         return {
                             year: 100 * parseInt(s, 10),
                             restDateString: e.slice(s.length)
@@ -20622,28 +20644,28 @@ webpackJsonp([35], {
                     return {
                         year: null
                     }
-                }(w.date, a),
+                }(w.date, n),
                 T = x.year,
                 S = function(e, t) {
                     if (null === t) return null;
-                    var a, r, i, s;
+                    var n, r, i, s;
                     if (0 === e.length) return (r = new Date(0)).setUTCFullYear(t), r;
-                    if (a = _.exec(e)) return r = new Date(0), i = parseInt(a[1], 10) - 1, r.setUTCFullYear(t, i), r;
-                    if (a = f.exec(e)) {
+                    if (n = _.exec(e)) return r = new Date(0), i = parseInt(n[1], 10) - 1, r.setUTCFullYear(t, i), r;
+                    if (n = f.exec(e)) {
                         r = new Date(0);
-                        var o = parseInt(a[1], 10);
+                        var o = parseInt(n[1], 10);
                         return r.setUTCFullYear(t, 0, o), r
                     }
-                    if (a = p.exec(e)) {
-                        r = new Date(0), i = parseInt(a[1], 10) - 1;
-                        var d = parseInt(a[2], 10);
+                    if (n = p.exec(e)) {
+                        r = new Date(0), i = parseInt(n[1], 10) - 1;
+                        var d = parseInt(n[2], 10);
                         return r.setUTCFullYear(t, i, d), r
                     }
-                    if (a = g.exec(e)) return s = parseInt(a[1], 10) - 1, n(t, s);
-                    if (a = y.exec(e)) {
-                        s = parseInt(a[1], 10) - 1;
-                        var u = parseInt(a[2], 10) - 1;
-                        return n(t, s, u)
+                    if (n = g.exec(e)) return s = parseInt(n[1], 10) - 1, a(t, s);
+                    if (n = y.exec(e)) {
+                        s = parseInt(n[1], 10) - 1;
+                        var u = parseInt(n[2], 10) - 1;
+                        return a(t, s, u)
                     }
                     return null
                 }(x.restDateString, T);
@@ -20651,78 +20673,78 @@ webpackJsonp([35], {
                 var O, j = S.getTime(),
                     H = 0;
                 return w.time && (H = function(e) {
-                    var t, a, n;
-                    if (t = M.exec(e)) return (a = parseFloat(t[1].replace(",", "."))) % 24 * i;
-                    if (t = v.exec(e)) return a = parseInt(t[1], 10), n = parseFloat(t[2].replace(",", ".")), a % 24 * i + n * s;
+                    var t, n, a;
+                    if (t = M.exec(e)) return (n = parseFloat(t[1].replace(",", "."))) % 24 * i;
+                    if (t = v.exec(e)) return n = parseInt(t[1], 10), a = parseFloat(t[2].replace(",", ".")), n % 24 * i + a * s;
                     if (t = b.exec(e)) {
-                        a = parseInt(t[1], 10), n = parseInt(t[2], 10);
+                        n = parseInt(t[1], 10), a = parseInt(t[2], 10);
                         var r = parseFloat(t[3].replace(",", "."));
-                        return a % 24 * i + n * s + 1e3 * r
+                        return n % 24 * i + a * s + 1e3 * r
                     }
                     return null
                 }(w.time)), w.timezone ? O = function(e) {
-                    var t, a;
-                    return (t = Y.exec(e)) ? 0 : (t = D.exec(e)) ? (a = 60 * parseInt(t[2], 10), "+" === t[1] ? -a : a) : (t = k.exec(e)) ? (a = 60 * parseInt(t[2], 10) + parseInt(t[3], 10), "+" === t[1] ? -a : a) : 0
+                    var t, n;
+                    return (t = Y.exec(e)) ? 0 : (t = D.exec(e)) ? (n = 60 * parseInt(t[2], 10), "+" === t[1] ? -n : n) : (t = k.exec(e)) ? (n = 60 * parseInt(t[2], 10) + parseInt(t[3], 10), "+" === t[1] ? -n : n) : 0
                 }(w.timezone) : (O = new Date(j + H).getTimezoneOffset(), O = new Date(j + H + O * s).getTimezoneOffset()), new Date(j + H + O * s)
             }
             return new Date(e)
         }
     },
-    "xKy+": function(e, t, a) {
-        var n = a("xA5w");
+    "xKy+": function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e) {
-            var t = n(e),
-                a = t.getMonth();
-            return t.setFullYear(t.getFullYear(), a + 1, 0), t.setHours(23, 59, 59, 999), t
+            var t = a(e),
+                n = t.getMonth();
+            return t.setFullYear(t.getFullYear(), n + 1, 0), t.setHours(23, 59, 59, 999), t
         }
     },
-    xLg3: function(e, t, a) {
-        var n = a("xA5w");
+    xLg3: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e) {
-            var t = n(e),
-                a = t.getFullYear();
-            return t.setFullYear(a + 1, 0, 0), t.setHours(0, 0, 0, 0), t
+            var t = a(e),
+                n = t.getFullYear();
+            return t.setFullYear(n + 1, 0, 0), t.setHours(0, 0, 0, 0), t
         }
     },
-    "xne+": function(e, t, a) {
+    "xne+": function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
 
-            function t(e, t, a, n) {
+            function t(e, t, n, a) {
                 var r = e;
-                switch (a) {
+                switch (n) {
                     case "s":
-                        return n || t ? "néhány másodperc" : "néhány másodperce";
+                        return a || t ? "néhány másodperc" : "néhány másodperce";
                     case "m":
-                        return "egy" + (n || t ? " perc" : " perce");
+                        return "egy" + (a || t ? " perc" : " perce");
                     case "mm":
-                        return r + (n || t ? " perc" : " perce");
+                        return r + (a || t ? " perc" : " perce");
                     case "h":
-                        return "egy" + (n || t ? " óra" : " órája");
+                        return "egy" + (a || t ? " óra" : " órája");
                     case "hh":
-                        return r + (n || t ? " óra" : " órája");
+                        return r + (a || t ? " óra" : " órája");
                     case "d":
-                        return "egy" + (n || t ? " nap" : " napja");
+                        return "egy" + (a || t ? " nap" : " napja");
                     case "dd":
-                        return r + (n || t ? " nap" : " napja");
+                        return r + (a || t ? " nap" : " napja");
                     case "M":
-                        return "egy" + (n || t ? " hónap" : " hónapja");
+                        return "egy" + (a || t ? " hónap" : " hónapja");
                     case "MM":
-                        return r + (n || t ? " hónap" : " hónapja");
+                        return r + (a || t ? " hónap" : " hónapja");
                     case "y":
-                        return "egy" + (n || t ? " év" : " éve");
+                        return "egy" + (a || t ? " év" : " éve");
                     case "yy":
-                        return r + (n || t ? " év" : " éve")
+                        return r + (a || t ? " év" : " éve")
                 }
                 return ""
             }
 
-            function a(e) {
-                return (e ? "" : "[múlt] ") + "[" + n[this.day()] + "] LT[-kor]"
+            function n(e) {
+                return (e ? "" : "[múlt] ") + "[" + a[this.day()] + "] LT[-kor]"
             }
-            var n = "vasárnap hétfőn kedden szerdán csütörtökön pénteken szombaton".split(" ");
+            var a = "vasárnap hétfőn kedden szerdán csütörtökön pénteken szombaton".split(" ");
             return e.defineLocale("hu", {
                 months: "január_február_március_április_május_június_július_augusztus_szeptember_október_november_december".split("_"),
                 monthsShort: "jan_feb_márc_ápr_máj_jún_júl_aug_szept_okt_nov_dec".split("_"),
@@ -20741,18 +20763,18 @@ webpackJsonp([35], {
                 isPM: function(e) {
                     return "u" === e.charAt(1).toLowerCase()
                 },
-                meridiem: function(e, t, a) {
-                    return e < 12 ? !0 === a ? "de" : "DE" : !0 === a ? "du" : "DU"
+                meridiem: function(e, t, n) {
+                    return e < 12 ? !0 === n ? "de" : "DE" : !0 === n ? "du" : "DU"
                 },
                 calendar: {
                     sameDay: "[ma] LT[-kor]",
                     nextDay: "[holnap] LT[-kor]",
                     nextWeek: function() {
-                        return a.call(this, !0)
+                        return n.call(this, !0)
                     },
                     lastDay: "[tegnap] LT[-kor]",
                     lastWeek: function() {
-                        return a.call(this, !1)
+                        return n.call(this, !1)
                     },
                     sameElse: "L"
                 },
@@ -20780,9 +20802,9 @@ webpackJsonp([35], {
             })
         })
     },
-    yRTJ: function(e, t, a) {
+    yRTJ: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
             return e.defineLocale("id", {
@@ -20803,7 +20825,7 @@ webpackJsonp([35], {
                 meridiemHour: function(e, t) {
                     return 12 === e && (e = 0), "pagi" === t ? e : "siang" === t ? e >= 11 ? e : e + 12 : "sore" === t || "malam" === t ? e + 12 : void 0
                 },
-                meridiem: function(e, t, a) {
+                meridiem: function(e, t, n) {
                     return e < 11 ? "pagi" : e < 15 ? "siang" : e < 19 ? "sore" : "malam"
                 },
                 calendar: {
@@ -20836,28 +20858,28 @@ webpackJsonp([35], {
             })
         })
     },
-    ymQ7: function(e, t, a) {
-        var n = a("xA5w"),
-            r = a("JURy"),
-            i = a("nizW");
+    ymQ7: function(e, t, n) {
+        var a = n("xA5w"),
+            r = n("JURy"),
+            i = n("nizW");
         e.exports = function(e) {
-            var t = n(e);
+            var t = a(e);
             return i(t, r(t)) + 1
         }
     },
-    yu3m: function(e, t, a) {
-        var n = a("xA5w");
+    yu3m: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e) {
-            return 4 === n(e).getDay()
+            return 4 === a(e).getDay()
         }
     },
-    z3hR: function(e, t, a) {
+    z3hR: function(e, t, n) {
         ! function(e, t) {
-            t(a("PJh5"))
+            t(n("PJh5"))
         }(0, function(e) {
             "use strict";
 
-            function t(e, t, a, n) {
+            function t(e, t, n, a) {
                 var r = {
                     m: ["eng Minutt", "enger Minutt"],
                     h: ["eng Stonn", "enger Stonn"],
@@ -20865,22 +20887,22 @@ webpackJsonp([35], {
                     M: ["ee Mount", "engem Mount"],
                     y: ["ee Joer", "engem Joer"]
                 };
-                return t ? r[a][0] : r[a][1]
+                return t ? r[n][0] : r[n][1]
             }
 
-            function a(e) {
+            function n(e) {
                 if (e = parseInt(e, 10), isNaN(e)) return !1;
                 if (e < 0) return !0;
                 if (e < 10) return 4 <= e && e <= 7;
                 if (e < 100) {
                     var t = e % 10;
-                    return a(0 === t ? e / 10 : t)
+                    return n(0 === t ? e / 10 : t)
                 }
                 if (e < 1e4) {
                     for (; e >= 10;) e /= 10;
-                    return a(e)
+                    return n(e)
                 }
-                return e /= 1e3, a(e)
+                return e /= 1e3, n(e)
             }
             return e.defineLocale("lb", {
                 months: "Januar_Februar_Mäerz_Abrëll_Mee_Juni_Juli_August_September_Oktober_November_Dezember".split("_"),
@@ -20916,10 +20938,10 @@ webpackJsonp([35], {
                 },
                 relativeTime: {
                     future: function(e) {
-                        return a(e.substr(0, e.indexOf(" "))) ? "a " + e : "an " + e
+                        return n(e.substr(0, e.indexOf(" "))) ? "a " + e : "an " + e
                     },
                     past: function(e) {
-                        return a(e.substr(0, e.indexOf(" "))) ? "viru " + e : "virun " + e
+                        return n(e.substr(0, e.indexOf(" "))) ? "viru " + e : "virun " + e
                     },
                     s: "e puer Sekonnen",
                     m: t,
@@ -20942,35 +20964,35 @@ webpackJsonp([35], {
             })
         })
     },
-    z3wv: function(e, t, a) {
-        var n = a("qPxx");
+    z3wv: function(e, t, n) {
+        var a = n("qPxx");
         e.exports = function(e) {
-            return n(new Date, e)
+            return a(new Date, e)
         }
     },
-    zQFw: function(e, t, a) {
-        var n = a("xA5w");
+    zQFw: function(e, t, n) {
+        var a = n("xA5w");
         e.exports = function(e) {
-            var t = n(e),
-                a = t.getMonth(),
-                r = a - a % 3 + 3;
+            var t = a(e),
+                n = t.getMonth(),
+                r = n - n % 3 + 3;
             return t.setMonth(r, 0), t.setHours(23, 59, 59, 999), t
         }
     },
-    zZbG: function(e, t, a) {
-        var n = a("xA5w"),
-            r = a("3znZ");
+    zZbG: function(e, t, n) {
+        var a = n("xA5w"),
+            r = n("3znZ");
         e.exports = function(e) {
-            var t = n(e),
-                a = t.getFullYear(),
+            var t = a(e),
+                n = t.getFullYear(),
                 i = new Date(0);
-            i.setFullYear(a + 1, 0, 4), i.setHours(0, 0, 0, 0);
+            i.setFullYear(n + 1, 0, 4), i.setHours(0, 0, 0, 0);
             var s = r(i),
                 o = new Date(0);
-            o.setFullYear(a, 0, 4), o.setHours(0, 0, 0, 0);
+            o.setFullYear(n, 0, 4), o.setHours(0, 0, 0, 0);
             var d = r(o);
-            return t.getTime() >= s.getTime() ? a + 1 : t.getTime() >= d.getTime() ? a : a - 1
+            return t.getTime() >= s.getTime() ? n + 1 : t.getTime() >= d.getTime() ? n : n - 1
         }
     }
 });
-//# sourceMappingURL=pages.teams-dashboard-1667694903f7d3480e5e337dc3fb3b58.js.map
+//# sourceMappingURL=pages.teams-dashboard-b6897aa669674feefc146b020054195c.js.map

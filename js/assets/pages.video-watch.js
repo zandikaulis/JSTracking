@@ -1,4 +1,4 @@
-webpackJsonp([40], {
+webpackJsonp([39], {
     "+DHI": function(e, t, n) {
         var i = {
             kind: "Document",
@@ -10823,7 +10823,7 @@ webpackJsonp([40], {
                         return c.__generator(this, function(i) {
                             switch (i.label) {
                                 case 0:
-                                    return m.a.buildType !== g.a.Production && d.parse(window.location.search).onsite_test_data ? [4, n.e(32).then(n.bind(null, "SFZn"))] : [3, 2];
+                                    return m.a.buildType !== g.a.Production && d.parse(window.location.search).onsite_test_data ? [4, n.e(31).then(n.bind(null, "SFZn"))] : [3, 2];
                                 case 1:
                                     e = i.sent().MockOnsiteNotifications, t = e.getMockOnsiteNotificationModels(3), this.setState({
                                         notifications: t
@@ -10914,7 +10914,7 @@ webpackJsonp([40], {
                             return c.__generator(this, function(t) {
                                 switch (t.label) {
                                     case 0:
-                                        return this.listDataLoaded() && !this.hasInsertedListNotificationsData && m.a.buildType !== g.a.Production && d.parse(window.location.search).onsite_test_data ? (this.hasInsertedListNotificationsData = !0, [4, n.e(32).then(n.bind(null, "SFZn"))]) : [3, 2];
+                                        return this.listDataLoaded() && !this.hasInsertedListNotificationsData && m.a.buildType !== g.a.Production && d.parse(window.location.search).onsite_test_data ? (this.hasInsertedListNotificationsData = !0, [4, n.e(31).then(n.bind(null, "SFZn"))]) : [3, 2];
                                     case 1:
                                         e = t.sent().MockOnsiteNotifications, Object(k.d)(ae, c.__assign({}, this.props.listData.variables), function(t) {
                                             return t.currentUser.notifications.edges = e.getMockOnsiteNotificationEdges(d.parse(window.location.search).onsite_test_data), t
@@ -24940,4 +24940,4 @@ webpackJsonp([40], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.video-watch-bd1cda602c4b0b3a16865b072b4dee5e.js.map
+//# sourceMappingURL=pages.video-watch-1db5e8ff0b3b7614083479909e3a7849.js.map

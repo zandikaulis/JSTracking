@@ -1,4 +1,4 @@
-webpackJsonp([38], {
+webpackJsonp([37], {
     "+5Qw": function(e, t) {},
     "+DHI": function(e, t, n) {
         var i = {
@@ -12322,6 +12322,7 @@ webpackJsonp([38], {
                     }));
                 else t = e.videos.map(function(t, n) {
                     return i.createElement(o.U, {
+                        "data-a-target": "video-tower-card-" + n,
                         key: "video-" + n,
                         padding: {
                             bottom: .5
@@ -20131,7 +20132,7 @@ webpackJsonp([38], {
                         return c.__generator(this, function(i) {
                             switch (i.label) {
                                 case 0:
-                                    return m.a.buildType !== f.a.Production && d.parse(window.location.search).onsite_test_data ? [4, n.e(32).then(n.bind(null, "SFZn"))] : [3, 2];
+                                    return m.a.buildType !== f.a.Production && d.parse(window.location.search).onsite_test_data ? [4, n.e(31).then(n.bind(null, "SFZn"))] : [3, 2];
                                 case 1:
                                     e = i.sent().MockOnsiteNotifications, t = e.getMockOnsiteNotificationModels(3), this.setState({
                                         notifications: t
@@ -20222,7 +20223,7 @@ webpackJsonp([38], {
                             return c.__generator(this, function(t) {
                                 switch (t.label) {
                                     case 0:
-                                        return this.listDataLoaded() && !this.hasInsertedListNotificationsData && m.a.buildType !== f.a.Production && d.parse(window.location.search).onsite_test_data ? (this.hasInsertedListNotificationsData = !0, [4, n.e(32).then(n.bind(null, "SFZn"))]) : [3, 2];
+                                        return this.listDataLoaded() && !this.hasInsertedListNotificationsData && m.a.buildType !== f.a.Production && d.parse(window.location.search).onsite_test_data ? (this.hasInsertedListNotificationsData = !0, [4, n.e(31).then(n.bind(null, "SFZn"))]) : [3, 2];
                                     case 1:
                                         e = t.sent().MockOnsiteNotifications, Object(b.d)(ae, c.__assign({}, this.props.listData.variables), function(t) {
                                             return t.currentUser.notifications.edges = e.getMockOnsiteNotificationEdges(d.parse(window.location.search).onsite_test_data), t
@@ -30545,4 +30546,4 @@ webpackJsonp([38], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-videos-4bc992fbe096e9053727cf13f7136b20.js.map
+//# sourceMappingURL=pages.channel-videos-25771ea1039f85c28a61746df3c1c08e.js.map

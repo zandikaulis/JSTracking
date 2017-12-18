@@ -1,4 +1,4 @@
-webpackJsonp([36], {
+webpackJsonp([35], {
     "+5Qw": function(e, t) {},
     "+V/3": function(e, t, n) {
         "use strict";
@@ -10946,9 +10946,9 @@ webpackJsonp([36], {
                 }, t.prototype.getTopPage = function() {
                     var e = null,
                         t = null,
-                        n = null;
-                    this.messages.tier1Price;
-                    Object(A.d)(this.props.subscriptionProducts) && Object(A.a)(this.props.subscriptionProducts[0]), (this.props.inPrimeRegion || this.props.userHasPrime) && (n = this.renderPrimeSection()), this.props.isNonStandardSub || (e = s.createElement(w.U, {
+                        n = null,
+                        i = this.messages.tier1Price;
+                    Object(A.d)(this.props.subscriptionProducts) && (i = Object(A.a)(this.props.subscriptionProducts[0])), (this.props.inPrimeRegion || this.props.userHasPrime) && (n = this.renderPrimeSection()), this.props.isNonStandardSub || (e = s.createElement(w.U, {
                         margin: {
                             right: 1
                         },
@@ -10967,10 +10967,10 @@ webpackJsonp([36], {
                         type: w.z.Hollow,
                         "data-test-selector": "subscribe-button__gift"
                     }, this.messages.giftSubscription)));
-                    var i = null;
-                    return this.props.subscriptionProducts && (i = s.createElement(D.a, {
+                    var a = null;
+                    return this.props.subscriptionProducts && (a = s.createElement(D.a, {
                         subscriptionProducts: this.props.subscriptionProducts
-                    })), s.createElement(w.U, null, i, s.createElement(w.U, {
+                    })), s.createElement(w.U, null, a, s.createElement(w.U, {
                         padding: 2
                     }, n, s.createElement(w.U, null, s.createElement(w._22, {
                         type: w._27.H4,
@@ -10986,7 +10986,7 @@ webpackJsonp([36], {
                         }
                     }, s.createElement(j.a, {
                         isSubbedToTier: !1,
-                        tierPrice: this.props.subscriptionProducts[0].price,
+                        tierPrice: i,
                         reportSubAction: this.props.reportSubMenuAction,
                         url: this.props.subscriptionProducts[0].url,
                         "data-test-selector": "subscribe-button__top-page-sub-button",
@@ -31425,4 +31425,4 @@ webpackJsonp([36], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.popout-chat-1bc47260d957e7667fa60eba845befce.js.map
+//# sourceMappingURL=pages.popout-chat-783cb15499c946c2c4932d4bb4110a41.js.map

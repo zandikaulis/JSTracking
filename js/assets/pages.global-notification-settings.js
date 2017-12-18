@@ -1,4 +1,4 @@
-webpackJsonp([51], {
+webpackJsonp([50], {
     "0ERg": function(e, t) {},
     "7KN8": function(e, t) {},
     "9pUU": function(e, t) {},
@@ -536,8 +536,8 @@ webpackJsonp([51], {
                         description: Object(r.d)("When a streamer I follow goes Live", "PlatformNotificationSettings")
                     }, {
                         category: "VIDEOS",
-                        name: Object(r.d)("Videos", "PlatformNotificationSettings"),
-                        description: Object(r.d)("When a channel I follow posts a video", "PlatformNotificationSettings")
+                        name: Object(r.d)("Video Broadcast", "PlatformNotificationSettings"),
+                        description: Object(r.d)("When a channel I follow starts a Vodcast. This also includes Video Comment notifications", "PlatformNotificationSettings")
                     }, {
                         category: "CLIPS",
                         name: Object(r.d)("Clips", "PlatformNotificationSettings"),
@@ -1626,4 +1626,4 @@ webpackJsonp([51], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.global-notification-settings-1578e461b41b9f2ebb55276ecaeb5b5a.js.map
+//# sourceMappingURL=pages.global-notification-settings-eaa32e028f55d98a5e4bd582f7f2644b.js.map

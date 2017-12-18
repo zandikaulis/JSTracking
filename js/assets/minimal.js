@@ -1,4 +1,4 @@
-webpackJsonp([60], {
+webpackJsonp([59], {
     "+8VM": function(e, t, n) {
         "use strict";
         var i = n("RH2O"),
@@ -652,19 +652,19 @@ webpackJsonp([60], {
             b = n("c8Is"),
             y = n("Odds"),
             _ = (n("pYhL"), p.a.wrap(function() {
-                return n.e(36).then(n.bind(null, "swra"))
+                return n.e(35).then(n.bind(null, "swra"))
             }, "PopoutChatPage")),
             E = p.a.wrap(function() {
-                return n.e(52).then(n.bind(null, "JeT+"))
+                return n.e(51).then(n.bind(null, "JeT+"))
             }, "BitsRoot"),
             k = p.a.wrap(function() {
-                return n.e(42).then(n.bind(null, "RY+8"))
+                return n.e(41).then(n.bind(null, "RY+8"))
             }, "SubsRoot"),
             C = p.a.wrap(function() {
-                return n.e(37).then(n.bind(null, "2FAx"))
+                return n.e(36).then(n.bind(null, "2FAx"))
             }, "EmbeddedChatPage"),
             S = p.a.wrap(function() {
-                return n.e(41).then(n.bind(null, "lI8O"))
+                return n.e(40).then(n.bind(null, "lI8O"))
             }, "CommunitySelectionPage"),
             L = function(e) {
                 function t() {
@@ -8739,4 +8739,4 @@ webpackJsonp([60], {
     },
     zF1n: function(e, t) {}
 }, [5]);
-//# sourceMappingURL=minimal-9cf35e744ca32e70997e702499a80fda.js.map
+//# sourceMappingURL=minimal-ffacbbb8f91c7d99e2221aa07e14c11f.js.map
