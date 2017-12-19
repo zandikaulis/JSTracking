@@ -4626,7 +4626,7 @@ window.SiteOptions = {
         },
         "feb4fffb-c997-47f7-a2e4-25d463f125ba": {
             "name": "Mobile Web Muted Autoplay",
-            "v": 2700,
+            "v": 2701,
             "t": 1,
             "groups": [{
                 "weight": 50,
