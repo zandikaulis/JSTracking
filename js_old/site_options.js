@@ -848,13 +848,13 @@ window.SiteOptions = {
         },
         "2e735d16-3892-462e-8ce7-833fa5ff8309": {
             "name": "clips_gooey",
-            "v": 2704,
+            "v": 2707,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 90,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 10,
                 "value": "variant1"
             }]
         },
