@@ -4625,8 +4625,8 @@ window.SiteOptions = {
             }]
         },
         "feb4fffb-c997-47f7-a2e4-25d463f125ba": {
-            "name": "mweb_muted_autoplay",
-            "v": 2699,
+            "name": "Mobile Web Muted Autoplay",
+            "v": 2700,
             "t": 1,
             "groups": [{
                 "weight": 50,
