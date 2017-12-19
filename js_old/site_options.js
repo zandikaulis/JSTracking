@@ -4624,6 +4624,18 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
+        "feb4fffb-c997-47f7-a2e4-25d463f125ba": {
+            "name": "mweb_muted_autoplay",
+            "v": 2699,
+            "t": 1,
+            "groups": [{
+                "weight": 50,
+                "value": "Auto Play "
+            }, {
+                "weight": 50,
+                "value": "No Auto Play"
+            }]
+        },
         "ffe0c67b-19e4-43fe-8193-8897dbf4b8ed": {
             "name": "extensions_kill_switch_on_event_channels",
             "v": 1675,
