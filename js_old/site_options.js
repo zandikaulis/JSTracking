@@ -791,13 +791,13 @@ window.SiteOptions = {
         },
         "29a37cfd-6a34-4624-970f-6b155b40636b": {
             "name": "twilight_web_onboarding_randomized_games",
-            "v": 2663,
+            "v": 2709,
             "t": 2,
             "groups": [{
-                "weight": 1,
+                "weight": 98,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 2,
                 "value": "enabled"
             }]
         },
