@@ -1,4 +1,4 @@
-webpackJsonp([68], {
+webpackJsonp([69], {
     "e/M0": function(e, i) {
         e.exports = [{
             Class: [{
@@ -86,4 +86,4 @@ webpackJsonp([68], {
         }]
     }
 });
-//# sourceMappingURL=assets.data.directory-game.hearthstone-classes.json-e1b8b02c0d26db34425849cddd22fec8.js.map
+//# sourceMappingURL=assets.data.directory-game.hearthstone-classes.json-556e56bdd68f702c4ac8de1e89391f62.js.map

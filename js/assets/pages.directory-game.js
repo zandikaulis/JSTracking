@@ -983,7 +983,7 @@ webpackJsonp([43], {
                     location: o
                 });
                 var c = "";
-                t && t.isCommerceRevShareEnabled && (c = "&br_id=" + t.id),
+                t && t.settings.isCommerceRevShareEnabled && (c = "&br_id=" + t.id),
                     function(e, t) {
                         var n = window.open(e, "Twitch", "width=1024,height=600,scrollbars=yes");
                         n && !Object(i.a)() && (n.focus(), Object(a.a)(n, function(e) {
@@ -3458,7 +3458,7 @@ webpackJsonp([43], {
                                             isLoading: !0
                                         }), i.label = 1;
                                     case 1:
-                                        return i.trys.push([1, 3, , 4]), [4, n.e(68).then(n.bind(null, "e/M0"))];
+                                        return i.trys.push([1, 3, , 4]), [4, n.e(69).then(n.bind(null, "e/M0"))];
                                     case 2:
                                         return e = i.sent(), this.setState({
                                             content: e,
@@ -3574,7 +3574,7 @@ webpackJsonp([43], {
                                             isLoading: !0
                                         }), i.label = 1;
                                     case 1:
-                                        return i.trys.push([1, 3, , 4]), [4, n.e(67).then(n.bind(null, "Dan5"))];
+                                        return i.trys.push([1, 3, , 4]), [4, n.e(68).then(n.bind(null, "Dan5"))];
                                     case 2:
                                         return e = i.sent(), this.setState({
                                             content: e,
@@ -3859,7 +3859,7 @@ webpackJsonp([43], {
                                             isLoading: !0
                                         }), i.label = 1;
                                     case 1:
-                                        return i.trys.push([1, 3, , 4]), [4, n.e(66).then(n.bind(null, "sQp1"))];
+                                        return i.trys.push([1, 3, , 4]), [4, n.e(67).then(n.bind(null, "sQp1"))];
                                     case 2:
                                         return e = i.sent(), this.setState({
                                             content: e,
@@ -5854,7 +5854,7 @@ webpackJsonp([43], {
                             })
                         }),
                         o = null;
-                    if (this.props.referrer && this.props.referrer.isCommerceRevShareEnabled) {
+                    if (this.props.referrer && this.props.referrer.settings.isCommerceRevShareEnabled) {
                         var l = Object(p.d)("Purchase revenue <x:link>will be shared</x:link> with {channel}", {
                             channel: d.createElement(U._22, {
                                 bold: !0,
@@ -9107,11 +9107,24 @@ webpackJsonp([43], {
                                 alias: null,
                                 name: {
                                     kind: "Name",
-                                    value: "isCommerceRevShareEnabled"
+                                    value: "settings"
                                 },
                                 arguments: [],
                                 directives: [],
-                                selectionSet: null
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "isCommerceRevShareEnabled"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }]
+                                }
                             }, {
                                 kind: "Field",
                                 alias: null,
@@ -9129,11 +9142,11 @@ webpackJsonp([43], {
             }],
             loc: {
                 start: 0,
-                end: 129
+                end: 142
             }
         };
         n.loc.source = {
-            body: "query DirectoryGameDetails($login: String! $id: ID!) {\nuser(login: $login id: $id) {\ndisplayName\nisCommerceRevShareEnabled\nid\n}\n}",
+            body: "query DirectoryGameDetails($login: String! $id: ID!) {\nuser(login: $login id: $id) {\ndisplayName\nsettings {\nisCommerceRevShareEnabled\n}\nid\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -14980,7 +14993,7 @@ webpackJsonp([43], {
         });
         var i;
         ! function(e) {
-            e[e.Post = 0] = "Post", e[e.Action = 1] = "Action", e[e.PostWithMention = 2] = "PostWithMention", e[e.Ban = 3] = "Ban", e[e.Timeout = 4] = "Timeout", e[e.AutoModRejectedPrompt = 5] = "AutoModRejectedPrompt", e[e.AutoModMessageRejected = 6] = "AutoModMessageRejected", e[e.AutoModMessageAllowed = 7] = "AutoModMessageAllowed", e[e.AutoModMessageDenied = 8] = "AutoModMessageDenied", e[e.Connected = 9] = "Connected", e[e.Disconnected = 10] = "Disconnected", e[e.Reconnect = 11] = "Reconnect", e[e.Hosting = 12] = "Hosting", e[e.Unhost = 13] = "Unhost", e[e.Subscription = 14] = "Subscription", e[e.Resubscription = 15] = "Resubscription", e[e.SubGift = 16] = "SubGift", e[e.Clear = 17] = "Clear", e[e.SubscriberOnlyMode = 18] = "SubscriberOnlyMode", e[e.FollowerOnlyMode = 19] = "FollowerOnlyMode", e[e.SlowMode = 20] = "SlowMode", e[e.EmoteOnlyMode = 21] = "EmoteOnlyMode", e[e.RoomMods = 22] = "RoomMods", e[e.RoomState = 23] = "RoomState", e[e.Raid = 24] = "Raid", e[e.Unraid = 25] = "Unraid", e[e.Notice = 26] = "Notice", e[e.Info = 27] = "Info", e[e.BadgesUpdated = 28] = "BadgesUpdated", e[e.Purchase = 29] = "Purchase", e[e.BitsCharity = 30] = "BitsCharity", e[e.CrateGift = 31] = "CrateGift"
+            e[e.Post = 0] = "Post", e[e.Action = 1] = "Action", e[e.PostWithMention = 2] = "PostWithMention", e[e.Ban = 3] = "Ban", e[e.Timeout = 4] = "Timeout", e[e.AutoModRejectedPrompt = 5] = "AutoModRejectedPrompt", e[e.AutoModMessageRejected = 6] = "AutoModMessageRejected", e[e.AutoModMessageAllowed = 7] = "AutoModMessageAllowed", e[e.AutoModMessageDenied = 8] = "AutoModMessageDenied", e[e.Connected = 9] = "Connected", e[e.Disconnected = 10] = "Disconnected", e[e.Reconnect = 11] = "Reconnect", e[e.Hosting = 12] = "Hosting", e[e.Unhost = 13] = "Unhost", e[e.Subscription = 14] = "Subscription", e[e.Resubscription = 15] = "Resubscription", e[e.SubGift = 16] = "SubGift", e[e.Clear = 17] = "Clear", e[e.SubscriberOnlyMode = 18] = "SubscriberOnlyMode", e[e.FollowerOnlyMode = 19] = "FollowerOnlyMode", e[e.SlowMode = 20] = "SlowMode", e[e.EmoteOnlyMode = 21] = "EmoteOnlyMode", e[e.RoomMods = 22] = "RoomMods", e[e.RoomState = 23] = "RoomState", e[e.Raid = 24] = "Raid", e[e.Unraid = 25] = "Unraid", e[e.Ritual = 26] = "Ritual", e[e.Notice = 27] = "Notice", e[e.Info = 28] = "Info", e[e.BadgesUpdated = 29] = "BadgesUpdated", e[e.Purchase = 30] = "Purchase", e[e.BitsCharity = 31] = "BitsCharity", e[e.CrateGift = 32] = "CrateGift"
         }(i || (i = {}))
     },
     qw9S: function(e, t) {
@@ -17544,4 +17557,4 @@ webpackJsonp([43], {
     zSAx: function(e, t) {},
     zu64: function(e, t) {}
 });
-//# sourceMappingURL=pages.directory-game-443188c817f5fbf9932b9632bcce73d3.js.map
+//# sourceMappingURL=pages.directory-game-853fcd29feee3def251163b637810068.js.map

@@ -98,13 +98,13 @@ webpackJsonp([50], {
         var i, a = n("TToO"),
             o = n("U7vG"),
             r = n("6sO2"),
-            l = n("zCIC"),
-            s = n("czpb"),
+            s = n("zCIC"),
+            l = n("czpb"),
             c = n("NY9D"),
             d = n("CSlQ"),
             u = n("Odds");
         (i || (i = {})).Notifications = "notifications";
-        var m, g = function(e) {
+        var g, p = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -124,44 +124,47 @@ webpackJsonp([50], {
                             bottom: 2
                         }
                     }, o.createElement(u._20, null, o.createElement(u._19, {
-                        targetBlank: Object(s.b)(),
-                        linkTo: Object(s.a)("/settings/profile"),
+                        targetBlank: Object(l.b)(),
+                        linkTo: Object(l.a)("/settings/profile"),
                         active: !1
                     }, Object(r.d)("Profile", "SettingsTabs")), o.createElement(u._19, {
                         linkTo: "https://twitch.amazon.com/prime?ref_=sm_w_tsp_p_t",
                         active: !1
                     }, Object(r.d)("Prime", "SettingsTabs")), o.createElement(u._19, {
-                        targetBlank: Object(s.b)(),
-                        linkTo: Object(s.a)("/settings/channel"),
+                        targetBlank: Object(l.b)(),
+                        linkTo: Object(l.a)("/settings/channel"),
                         active: !1
                     }, Object(r.d)("Channel and Videos", "SettingsTabs")), o.createElement(u._19, {
-                        targetBlank: Object(s.b)(),
-                        linkTo: Object(s.a)("/settings/security"),
+                        targetBlank: Object(l.b)(),
+                        linkTo: Object(l.a)("/settings/security"),
                         active: !1
                     }, Object(r.d)("Security and Privacy", "SettingsTabs")), o.createElement(u._19, {
                         linkTo: Object(c.d)(i.Notifications),
                         active: this.props.activeTab === i.Notifications,
                         "data-a-target": "following-channels-tab"
                     }, Object(r.d)("Notifications", "SettingsTab")), o.createElement(u._19, {
-                        targetBlank: Object(s.b)(),
-                        linkTo: Object(s.a)("/settings/connections"),
+                        targetBlank: Object(l.b)(),
+                        linkTo: Object(l.a)("/settings/connections"),
                         active: !1
                     }, Object(r.d)("Connections", "SettingsTabs")), o.createElement(u._19, {
-                        targetBlank: Object(s.b)(),
-                        linkTo: Object(s.a)("/subscriptions"),
+                        targetBlank: Object(l.b)(),
+                        linkTo: Object(l.a)("/subscriptions"),
                         active: !1
                     }, Object(r.d)("Subscriptions", "SettingsTabs")))))
                 }, t = a.__decorate([Object(d.c)("SettingsTabs")], t)
             }(o.Component),
-            p = n("j7/Y"),
+            m = n("j7/Y"),
             f = n("w9tK"),
             h = n("vH/s"),
-            b = n("2KeS"),
-            v = n("yWCw"),
-            S = n("7vx8"),
-            y = n("oIkB"),
-            k = n("F8kA"),
-            N = (n("0ERg"), function(e) {
+            b = n("WbwR"),
+            v = n("LBNC"),
+            S = n("UbVv"),
+            y = n("2KeS"),
+            k = n("yWCw"),
+            N = n("7vx8"),
+            w = n("oIkB"),
+            _ = n("F8kA"),
+            E = (n("0ERg"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.changeHandler = function() {
@@ -208,7 +211,7 @@ webpackJsonp([50], {
                         flexDirection: u.J.Column
                     }, o.createElement(u._22, {
                         fontSize: u.L.Size5
-                    }, o.createElement(k.a, {
+                    }, o.createElement(_.a, {
                         to: "/" + this.props.login
                     }, this.props.text)), o.createElement(u._22, {
                         type: u._27.Span,
@@ -237,9 +240,9 @@ webpackJsonp([50], {
                     }, Object(r.d)("Saved", "AdvancedNotificationSettingsToggle"))))))
                 }, t
             }(o.Component)),
-            _ = n("RcGI"),
-            E = (n("9pUU"), n("aTeI")),
-            w = function(e) {
+            O = n("RcGI"),
+            x = (n("9pUU"), n("aTeI")),
+            P = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -257,7 +260,7 @@ webpackJsonp([50], {
                             return a.__generator(this, function(r) {
                                 switch (r.label) {
                                     case 0:
-                                        return this.props.data && this.props.data.currentUser && this.props.setAdvancedNotificationSetting ? (t = a.__assign({}, Object(y.a)({
+                                        return this.props.data && this.props.data.currentUser && this.props.setAdvancedNotificationSetting ? (t = a.__assign({}, Object(w.a)({
                                             disableNotifications: n,
                                             targetID: e
                                         }), {
@@ -278,7 +281,7 @@ webpackJsonp([50], {
                                                 o.node.id === e && (o.notificationSettings.isEnabled = !i.data.followUser.follow.disableNotifications)
                                             }
                                             return t
-                                        }, Object(y.d)(E, {
+                                        }, Object(w.d)(x, {
                                             limit: 50
                                         }, o), this.markSaved(e), [2]
                                 }
@@ -297,7 +300,7 @@ webpackJsonp([50], {
                     }, o.createElement(u.Y, {
                         fillContent: !0
                     }));
-                    if (this.props.data.error) return o.createElement(v.a, {
+                    if (this.props.data.error) return o.createElement(k.a, {
                         message: Object(r.d)("Error loading data.", "AdvancedNotificationSettings")
                     });
                     if (!this.props.data.currentUser) return o.createElement(u._18, {
@@ -305,7 +308,7 @@ webpackJsonp([50], {
                             y: 1
                         },
                         borderBottom: !0
-                    }, o.createElement(v.a, {
+                    }, o.createElement(k.a, {
                         message: Object(r.d)("You must be logged in to update your settings", "AdvancedNotificationSettings")
                     }));
                     var e = Object(r.d)("{followCount, plural, one {You follow # channel} other {You follow # channels}}", {
@@ -376,7 +379,7 @@ webpackJsonp([50], {
                         margin: {
                             bottom: .5
                         }
-                    }, this.renderToggles(), o.createElement(l.a, {
+                    }, this.renderToggles(), o.createElement(s.a, {
                         loadMore: this.props.loadMore,
                         enabled: n,
                         pixelThreshold: 200
@@ -385,7 +388,7 @@ webpackJsonp([50], {
                     if (this.props.data && (!this.props.data.loading || this.props.data.currentUser)) {
                         for (var e = [], t = 0, n = this.props.data.currentUser.follows.edges; t < n.length; t++) {
                             var i = n[t];
-                            i.node && i.node.id && i.node.followers && e.push(o.createElement(N, {
+                            i.node && i.node.id && i.node.followers && e.push(o.createElement(E, {
                                 userId: i.node.id,
                                 text: i.node.displayName,
                                 login: i.node.login,
@@ -420,7 +423,7 @@ webpackJsonp([50], {
                     }
                 }, t
             }(o.Component),
-            O = Object(b.compose)(Object(S.a)(E, {
+            C = Object(y.compose)(Object(N.a)(x, {
                 options: function() {
                     return {
                         fetchPolicy: "cache-and-network",
@@ -433,7 +436,7 @@ webpackJsonp([50], {
                     return a.__assign({}, e, {
                         loadMore: function() {
                             return e.data.fetchMore({
-                                query: E,
+                                query: x,
                                 variables: a.__assign({}, e.data.variables, {
                                     cursor: e.data.currentUser.follows.edges[e.data.currentUser.follows.edges.length - 1].cursor
                                 }),
@@ -442,7 +445,7 @@ webpackJsonp([50], {
                                     return {
                                         currentUser: a.__assign({}, n.currentUser, {
                                             follows: a.__assign({}, n.currentUser.follows, {
-                                                edges: Object(y.b)(e.currentUser.follows.edges, n.currentUser.follows.edges)
+                                                edges: Object(w.b)(e.currentUser.follows.edges, n.currentUser.follows.edges)
                                             })
                                         })
                                     }
@@ -451,10 +454,153 @@ webpackJsonp([50], {
                         }
                     })
                 }
-            }), Object(S.a)(_, {
+            }), Object(N.a)(O, {
                 name: "setAdvancedNotificationSetting"
-            }), Object(d.c)("AdvancedNotificationSettings"))(w),
-            x = (n("7KN8"), function(e) {
+            }), Object(d.c)("AdvancedNotificationSettings"))(P),
+            j = n("BhyV"),
+            U = n("OOv5"),
+            T = n("JBcW"),
+            F = (n("RVY0"), r.n.logger.withCategory("browser-push-notifications-settings")),
+            D = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        hide: !1,
+                        loading: !0,
+                        deciding: !0,
+                        hasSubscription: !1
+                    }, t.toggle = function() {
+                        return a.__awaiter(t, void 0, void 0, function() {
+                            var e, t;
+                            return a.__generator(this, function(n) {
+                                switch (n.label) {
+                                    case 0:
+                                        return this.setState({
+                                            deciding: !0
+                                        }), [4, U.a.hasPushSubscription()];
+                                    case 1:
+                                        if (!n.sent()) return [3, 6];
+                                        n.label = 2;
+                                    case 2:
+                                        return n.trys.push([2, 4, , 5]), [4, U.a.userUnsubscribe(T.a.Settings)];
+                                    case 3:
+                                        return n.sent(), [3, 5];
+                                    case 4:
+                                        return e = n.sent(), F.error(e, "user unsubscribe failed"), [3, 5];
+                                    case 5:
+                                        return [3, 9];
+                                    case 6:
+                                        return n.trys.push([6, 8, , 9]), [4, U.a.userSubscribe(T.a.Settings)];
+                                    case 7:
+                                        return n.sent(), [3, 9];
+                                    case 8:
+                                        return t = n.sent(), Object(S.a)() ? (this.setState({
+                                            hide: !0
+                                        }), [2]) : (F.error(t, "user subscribe failed"), [3, 9]);
+                                    case 9:
+                                        return [4, this.updateSubscriptionState()];
+                                    case 10:
+                                        return n.sent(), this.setState({
+                                            deciding: !1
+                                        }), [2]
+                                }
+                            })
+                        })
+                    }, t
+                }
+                return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return a.__awaiter(this, void 0, void 0, function() {
+                        var e;
+                        return a.__generator(this, function(t) {
+                            switch (t.label) {
+                                case 0:
+                                    return t.trys.push([0, 3, , 4]), [4, U.a.initialize()];
+                                case 1:
+                                    return t.sent(), [4, this.updateSubscriptionState()];
+                                case 2:
+                                    return t.sent(), [3, 4];
+                                case 3:
+                                    return e = t.sent(), F.error(e, "unexpected error initializing push manager"), this.setState({
+                                        hide: !0
+                                    }), [2];
+                                case 4:
+                                    return this.setState({
+                                        loading: !1,
+                                        deciding: !1
+                                    }), [2]
+                            }
+                        })
+                    })
+                }, t.prototype.componentDidUpdate = function(e, t) {
+                    t.loading && !this.state.loading && this.props.latencyTracking.reportInteractive()
+                }, t.prototype.render = function() {
+                    if (this.state.hide || this.state.loading) return null;
+                    var e = this.state.hasSubscription ? Object(r.d)("Turn Off", "BrowserPushNotificationsSettings") : Object(r.d)("Turn On", "BrowserPushNotificationsSettings");
+                    return o.createElement(u._18, {
+                        borderTop: !0,
+                        padding: {
+                            right: 2,
+                            y: 1
+                        },
+                        margin: {
+                            top: 1
+                        },
+                        "data-test-selector": "qa-browser-push-notifications-settings"
+                    }, o.createElement(u._18, {
+                        className: "browser-push-notification-settings",
+                        padding: {
+                            left: 5,
+                            right: 4
+                        },
+                        display: u.H.Flex,
+                        margin: {
+                            x: 5
+                        }
+                    }, o.createElement(u.U, {
+                        className: "browser-push-notification-settings__body",
+                        display: u.H.Flex,
+                        flexWrap: u.K.NoWrap,
+                        flexGrow: 1
+                    }, o.createElement(u.U, {
+                        margin: {
+                            right: 1
+                        },
+                        flexGrow: 1
+                    }, o.createElement(u._22, {
+                        fontSize: u.L.Size4,
+                        color: u.F.Alt
+                    }, Object(r.d)("Receive Browser Notifications for this Device", "BrowserPushNotificationsSettings")), o.createElement(u.U, {
+                        padding: {
+                            top: .5
+                        }
+                    }, o.createElement(u._22, {
+                        fontSize: u.L.Size5,
+                        color: u.F.Alt2
+                    }, Object(r.d)("See notifications at the corner of your screen, even when you’re not on Twitch", "BrowserPushNotificationsSettings")))), o.createElement(u.U, {
+                        flexShrink: 0
+                    }, o.createElement(u.u, {
+                        "data-test-selector": "qa-browser-push-notifications-settings-toggle",
+                        disabled: this.state.deciding,
+                        onClick: this.toggle
+                    }, e)))))
+                }, t.prototype.updateSubscriptionState = function() {
+                    return a.__awaiter(this, void 0, void 0, function() {
+                        var e;
+                        return a.__generator(this, function(t) {
+                            switch (t.label) {
+                                case 0:
+                                    return [4, U.a.hasPushSubscription()];
+                                case 1:
+                                    return e = t.sent(), this.setState({
+                                        hasSubscription: e
+                                    }), [2]
+                            }
+                        })
+                    })
+                }, t
+            }(o.Component),
+            A = Object(j.compose)(Object(d.c)("BrowserPushNotificationsSettings"))(D),
+            G = (n("7KN8"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.changeHandler = function() {
@@ -519,12 +665,12 @@ webpackJsonp([50], {
                     }, Object(r.d)("Saved", "PlatformNotificationSettingsToggle")))))
                 }, t
             }(o.Component)),
-            C = n("CGjl"),
-            j = (n("jchl"), n("xZqu"));
+            L = n("CGjl"),
+            B = (n("jchl"), n("xZqu"));
         ! function(e) {
             e.onsite = "onsite", e.email = "email", e.push = "push"
-        }(m || (m = {}));
-        var P = function(e) {
+        }(g || (g = {}));
+        var M = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -580,11 +726,11 @@ webpackJsonp([50], {
                         })
                     }, t.toggleSettingCategory = function(e, n) {
                         return a.__awaiter(t, void 0, void 0, function() {
-                            var t, i, o, r, l = this;
-                            return a.__generator(this, function(s) {
-                                switch (s.label) {
+                            var t, i, o, r, s = this;
+                            return a.__generator(this, function(l) {
+                                switch (l.label) {
                                     case 0:
-                                        return this.props.data && this.props.data.currentUser && this.props.setNotificationSetting ? (t = n ? "off" : "on", i = a.__assign({}, Object(y.a)({
+                                        return this.props.data && this.props.data.currentUser && this.props.setNotificationSetting ? (t = n ? "off" : "on", i = a.__assign({}, Object(w.a)({
                                             category: e,
                                             platform: this.props.platformName,
                                             settingState: t
@@ -597,13 +743,13 @@ webpackJsonp([50], {
                                             }
                                         }), [4, this.props.setNotificationSetting(i)]) : [2];
                                     case 1:
-                                        return o = s.sent(), r = function(t) {
+                                        return o = l.sent(), r = function(t) {
                                             return t.currentUser.notificationSettings = t.currentUser.notificationSettings.map(function(t) {
                                                 return t.category === e && (t.platforms = t.platforms.map(function(e) {
-                                                    return e.platformName === l.props.platformName && (e.isEnabled = "on" === o.data.setNotificationSetting.settingState, e.settingState = o.data.setNotificationSetting.settingState), e
+                                                    return e.platformName === s.props.platformName && (e.isEnabled = "on" === o.data.setNotificationSetting.settingState, e.settingState = o.data.setNotificationSetting.settingState), e
                                                 })), t
                                             }), t
-                                        }, Object(y.d)(j, {}, r), this.markSaved(e), [2]
+                                        }, Object(w.d)(B, {}, r), this.markSaved(e), [2]
                                 }
                             })
                         })
@@ -617,14 +763,14 @@ webpackJsonp([50], {
                     }, o.createElement(u.Y, {
                         fillContent: !0
                     }));
-                    if (this.props.data.error) return o.createElement(v.a, {
+                    if (this.props.data.error) return o.createElement(k.a, {
                         message: Object(r.d)("Error loading data.", "PlatformNotificationSettings")
                     });
                     if (!this.props.data.currentUser) return o.createElement(u._18, {
                         margin: {
                             top: 1
                         }
-                    }, o.createElement(v.a, {
+                    }, o.createElement(k.a, {
                         message: Object(r.d)("You must be logged in to update your settings.", "PlatformNotificationSettings")
                     }));
                     var e = o.createElement(u._18, {
@@ -734,7 +880,7 @@ webpackJsonp([50], {
                         padding: {
                             left: 5
                         }
-                    }, this.renderToggles())))
+                    }, this.renderToggles()), this.props.extraSettings))
                 }, t.prototype.getSettingByCategory = function(e) {
                     var t = null;
                     if (!this.props.data) return null;
@@ -744,8 +890,8 @@ webpackJsonp([50], {
                     }
                     if (!t) return null;
                     for (var o = 0, r = t; o < r.length; o++) {
-                        var l = r[o];
-                        if (l.platformName === this.props.platformName) return l
+                        var s = r[o];
+                        if (s.platformName === this.props.platformName) return s
                     }
                     return null
                 }, t.prototype.getSettingTurnedOnMessage = function() {
@@ -762,7 +908,7 @@ webpackJsonp([50], {
                     for (var e = [], t = 0, n = this.VisibleSettings; t < n.length; t++) {
                         var i = n[t],
                             a = this.getSettingByCategory(i.category);
-                        a && e.push(o.createElement(x, {
+                        a && e.push(o.createElement(G, {
                             category: i.category,
                             text: i.name,
                             description: i.description,
@@ -793,16 +939,16 @@ webpackJsonp([50], {
                     }
                 }, t
             }(o.Component),
-            U = Object(b.compose)(Object(d.c)("PlatformNotificationSettings"), Object(S.a)(j, {
+            I = Object(y.compose)(Object(d.c)("PlatformNotificationSettings"), Object(N.a)(B, {
                 options: function() {
                     return {
                         fetchPolicy: "cache-and-network"
                     }
                 }
-            }), Object(S.a)(C, {
+            }), Object(N.a)(L, {
                 name: "setNotificationSetting"
-            }))(P),
-            T = (n("H7Zw"), function(e) {
+            }))(M),
+            z = (n("H7Zw"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -811,11 +957,11 @@ webpackJsonp([50], {
                 }, t.prototype.componentDidUpdate = function() {
                     this.onRender()
                 }, t.prototype.render = function() {
-                    return o.createElement(l.b, {
+                    return o.createElement(s.b, {
                         className: "notification-settings"
                     }, o.createElement(u.U, {
                         padding: 3
-                    }, o.createElement(g, {
+                    }, o.createElement(p, {
                         activeTab: i.Notifications
                     }), o.createElement(u._18, {
                         className: "notification-settings__body",
@@ -839,49 +985,71 @@ webpackJsonp([50], {
                     }, Object(r.d)("Notifications", "GlobalNotificationSettingsPage"))), o.createElement(u.U, null, o.createElement(u._22, {
                         fontSize: u.L.Size5,
                         color: u.F.Alt2
-                    }, Object(r.d)("Get the notifications you care about, where you want to see them.", "GlobalNotificationSettingsPage")))), o.createElement(U, {
+                    }, Object(r.d)("Get the notifications you care about, where you want to see them.", "GlobalNotificationSettingsPage")))), o.createElement(I, {
                         startCollapsed: !1,
-                        platformName: m.onsite,
+                        platformName: g.onsite,
                         displayName: Object(r.d)("On Twitch", "GlobalNotificationSettingsPage"),
                         description: Object(r.d)("We'll always keep you informed on important updates to Twitch and your account.", "GlobalNotificationSettingsPage"),
                         explanation: Object(r.d)("Send me notifications on Twitch about", "GlobalNotificationSettingsPage"),
-                        key: "onsite"
-                    }), o.createElement(U, {
+                        key: "onsite",
+                        extraSettings: this.renderBrowserPushNotifications()
+                    }), o.createElement(I, {
                         startCollapsed: !0,
-                        platformName: m.email,
+                        platformName: g.email,
                         displayName: Object(r.d)("By Email", "GlobalNotificationSettingsPage"),
                         description: Object(r.d)("Receive important notifications through email. You may receive additional emails about features and content on Twitch. You can turn off specific emails using the unsubscribe link included in each message.", "GlobalNotificationSettingsPage"),
                         explanation: Object(r.d)("Send me emails about", "GlobalNotificationSettingsPage"),
                         key: "email"
-                    }), o.createElement(U, {
-                        platformName: m.push,
+                    }), o.createElement(I, {
+                        platformName: g.push,
                         startCollapsed: !0,
                         displayName: Object(r.d)("On Mobile", "GlobalNotificationSettingsPage"),
                         description: Object(r.d)("Get Twitch updates on the go. Receive notifications right on your phone's home screen.", "GlobalNotificationSettingsPage"),
                         explanation: Object(r.d)("Send me push notifications", "GlobalNotificationSettingsPage"),
                         key: "push"
-                    }), o.createElement(O, null))))
+                    }), o.createElement(C, null))))
+                }, t.prototype.renderBrowserPushNotifications = function() {
+                    return r.b.get(b.b, !1) && Object(v.a)() && !Object(S.a)() ? o.createElement(A, null) : null
                 }, t.prototype.onRender = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t = a.__decorate([Object(d.c)("GlobalNotificationSettingsPage", {
                     destination: f.a.NotificationSettingsPage
-                }), Object(p.a)({
+                }), Object(m.a)({
                     location: h.PageviewLocation.SettingsPage
                 })], t)
             }(o.Component));
         n.d(t, "GlobalNotificationSettingsPage", function() {
-            return T
+            return z
         })
     },
     H7Zw: function(e, t) {},
+    JBcW: function(e, t, n) {
+        "use strict";
+        n.d(t, "a", function() {
+            return i
+        }), t.c = function(e) {
+            a.m.track(o.SpadeEventType.BrowserPushNotificationPrompt, e)
+        }, t.b = function(e) {
+            a.m.track(o.SpadeEventType.BrowserPushNotificationDisable, e)
+        };
+        var i, a = n("6sO2"),
+            o = n("vH/s");
+        (i || (i = {})).Settings = "settings"
+    },
+    LBNC: function(e, t, n) {
+        "use strict";
+        t.a = function() {
+            return "serviceWorker" in window.navigator && "PushManager" in window
+        }
+    },
     MSvX: function(e, t, n) {
         "use strict";
         var i = n("TToO"),
             a = n("OAwv"),
             o = n("U7vG"),
             r = n("6sO2"),
-            l = n("Ejve"),
-            s = "legacy_routes_enabled",
+            s = n("Ejve"),
+            l = "legacy_routes_enabled",
             c = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
@@ -895,8 +1063,8 @@ webpackJsonp([50], {
                                     var i = "" !== e.search ? a.parse(e.search) : {};
                                     i["from-redirect"] = "true";
                                     var o = a.stringify(i),
-                                        s = r.a.buildType === l.a.Dev ? window.location.host : window.location.hostname,
-                                        c = window.location.protocol + "//" + s + e.pathname + "?" + o;
+                                        l = r.a.buildType === s.a.Dev ? window.location.host : window.location.hostname,
+                                        c = window.location.protocol + "//" + l + e.pathname + "?" + o;
                                     return n.logger.debug("Redirecting to legacy route", {
                                         newUrl: c
                                     }), void window.location.replace(c)
@@ -921,7 +1089,7 @@ webpackJsonp([50], {
                                 })
                             }
                         }
-                    }, n.isEnabled = r.b.get(s, !1), n.logger = r.i.withCategory("legacy-routes"), n.legacyRoutes = n.buildRoutes(), n.props.history.listen(n.onHistoryChange), n
+                    }, n.isEnabled = r.b.get(l, !1), n.logger = r.i.withCategory("legacy-routes"), n.legacyRoutes = n.buildRoutes(), n.props.history.listen(n.onHistoryChange), n
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
                     return null
@@ -951,13 +1119,220 @@ webpackJsonp([50], {
                 }, t
             }(o.Component);
         n.d(t, "a", function() {
-            return s
+            return l
         }), n.d(t, !1, function() {
             return "legacy_routes"
         }), n.d(t, "b", function() {
             return c
         })
     },
+    OOv5: function(e, t, n) {
+        "use strict";
+
+        function i() {
+            if (f) return f;
+            var e = m.register({
+                scope: "/"
+            });
+            return f = e || Promise.reject(new Error("service worker runtime not available"))
+        }
+        var a, o = n("TToO"),
+            r = n("6sO2"),
+            s = n("oIkB"),
+            l = n("Aj/L");
+        ! function(e) {
+            e.NewSession = "new-session", e.ClearSession = "clear-session"
+        }(a || (a = {}));
+        var c = r.n.logger.withCategory("host-service-worker-messenger"),
+            d = function() {
+                function e() {}
+                return e.syncSession = function() {
+                    var e = Object(l.c)(r.n.store.getState());
+                    if (e) {
+                        var t = e.id;
+                        this.sendMessage({
+                            type: a.NewSession,
+                            userId: t
+                        })
+                    } else this.sendMessage({
+                        type: a.ClearSession
+                    })
+                }, e.sendMessage = function(e) {
+                    var t = this;
+                    if (navigator.serviceWorker.controller) this.postMessage(e);
+                    else {
+                        c.debug("cannot postMessage immediately. waiting for a service worker to take control");
+                        var n = function() {
+                            c.debug("controller changed", {
+                                controllerExists: !!navigator.serviceWorker.controller
+                            }), navigator.serviceWorker.removeEventListener("controllerchange", n), t.postMessage(e)
+                        };
+                        navigator.serviceWorker.addEventListener("controllerchange", n)
+                    }
+                }, e.postMessage = function(e) {
+                    navigator.serviceWorker.controller ? (c.debug("postMessage", e), navigator.serviceWorker.controller.postMessage(JSON.stringify(e))) : c.error(new Error("navigator.serviceWorker.controller is null"), "postMessage called with no controlling service worker")
+                }, e
+            }(),
+            u = "browserPushNotificationsEnabled",
+            g = function() {
+                function e() {}
+                return e.exists = function() {
+                    return null !== r.n.storage.getOptional(u)
+                }, e.isEnabled = function() {
+                    return r.n.storage.get(u, !1)
+                }, e.setEnabled = function() {
+                    r.n.storage.set(u, !0)
+                }, e.setDisabled = function() {
+                    r.n.storage.set(u, !1)
+                }, e
+            }(),
+            p = n("UbVv"),
+            m = n("F2sf"),
+            f = null,
+            h = n("JBcW"),
+            b = n("TbkX");
+        n.d(t, "a", function() {
+            return S
+        });
+        var v = r.n.logger.withCategory("browser-push-notifications-manager"),
+            S = function() {
+                function e() {}
+                return e.initialize = function() {
+                    return this.initPromise ? this.initPromise : (this.initPromise = this.initializationLogic(), this.initPromise)
+                }, e.initializationLogic = function() {
+                    return o.__awaiter(this, void 0, void 0, function() {
+                        var e, t, n, a;
+                        return o.__generator(this, function(o) {
+                            switch (o.label) {
+                                case 0:
+                                    return Object(p.a)() ? (v.debug("permissions have been denied. nothing to do here."), [2]) : [4, i()];
+                                case 1:
+                                    return o.sent(), e = Object(l.d)(r.n.store.getState()), [4, this.hasPushSubscription()];
+                                case 2:
+                                    return t = o.sent(), d.syncSession(), t ? (n = g.exists() && !g.isEnabled(), a = !e, n || a ? [4, this.unsubscribe()] : [3, 4]) : [3, 5];
+                                case 3:
+                                    o.sent(), o.label = 4;
+                                case 4:
+                                    return [3, 7];
+                                case 5:
+                                    return l.d ? !Object(p.b)() || g.exists() && !g.isEnabled() ? [3, 7] : [4, this.subscribe()] : [3, 7];
+                                case 6:
+                                    o.sent(), o.label = 7;
+                                case 7:
+                                    return [2]
+                            }
+                        })
+                    })
+                }, e.userSubscribe = function(e) {
+                    return o.__awaiter(this, void 0, void 0, function() {
+                        return o.__generator(this, function(t) {
+                            switch (t.label) {
+                                case 0:
+                                    return g.setEnabled(), [4, this.subscribe()];
+                                case 1:
+                                    return t.sent(), Object(h.c)({
+                                        allowed: Object(p.b)(),
+                                        context: e
+                                    }), [2]
+                            }
+                        })
+                    })
+                }, e.userUnsubscribe = function(e) {
+                    return o.__awaiter(this, void 0, void 0, function() {
+                        return o.__generator(this, function(t) {
+                            switch (t.label) {
+                                case 0:
+                                    return g.setDisabled(), [4, this.unsubscribe()];
+                                case 1:
+                                    return t.sent(), Object(h.b)({
+                                        context: e
+                                    }), [2]
+                            }
+                        })
+                    })
+                }, e.hasPushSubscription = function() {
+                    return o.__awaiter(this, void 0, void 0, function() {
+                        return o.__generator(this, function(e) {
+                            switch (e.label) {
+                                case 0:
+                                    return [4, this.getPushSubscription()];
+                                case 1:
+                                    return [2, null !== e.sent()]
+                            }
+                        })
+                    })
+                }, e.subscribe = function() {
+                    return o.__awaiter(this, void 0, void 0, function() {
+                        var e, t, n, a, c, d;
+                        return o.__generator(this, function(u) {
+                            switch (u.label) {
+                                case 0:
+                                    if (Object(p.a)()) throw new Error("notification permission is denied");
+                                    if (!Object(l.d)(r.n.store.getState())) throw new Error("cannot be enabled logged out");
+                                    if (!(e = r.b.get("notification_app_server_public_key", ""))) throw new Error("application server public key is blank");
+                                    return [4, i()];
+                                case 1:
+                                    return t = u.sent(), [4, this.getPushSubscription()];
+                                case 2:
+                                    return (n = u.sent()) ? [3, 4] : (a = function(e) {
+                                        for (var t = (e + "=".repeat((4 - e.length % 4) % 4)).replace(/\-/g, "+").replace(/_/g, "/"), n = atob(t), i = new Uint8Array(n.length), a = 0; a < n.length; ++a) i[a] = n.charCodeAt(a);
+                                        return i
+                                    }(e), [4, t.pushManager.subscribe({
+                                        userVisibleOnly: !0,
+                                        applicationServerKey: a
+                                    })]);
+                                case 3:
+                                    n = u.sent(), u.label = 4;
+                                case 4:
+                                    if (!(c = n.toJSON()).endpoint) throw new Error("push subscription 'endpoint' missing");
+                                    if (!c.keys) throw new Error("push subscription 'keys' missing");
+                                    if (!c.keys.auth) throw new Error("push subscription 'keys.auth' missing");
+                                    if (!c.keys.p256dh) throw new Error("push subscription 'keys.p256dh' missing");
+                                    return d = Object(s.a)({
+                                        endpoint: c.endpoint,
+                                        auth: c.keys.auth,
+                                        p256DH: c.keys.p256dh
+                                    }), [4, r.n.apollo.client.mutate(o.__assign({
+                                        mutation: b
+                                    }, d))];
+                                case 5:
+                                    return u.sent(), [2]
+                            }
+                        })
+                    })
+                }, e.unsubscribe = function() {
+                    return o.__awaiter(this, void 0, void 0, function() {
+                        var e;
+                        return o.__generator(this, function(t) {
+                            switch (t.label) {
+                                case 0:
+                                    return [4, this.getPushSubscription()];
+                                case 1:
+                                    return (e = t.sent()) ? [4, e.unsubscribe()] : [2];
+                                case 2:
+                                    if (!t.sent()) throw new Error("push subscription unsubscribe unexpectedly failed");
+                                    return [2]
+                            }
+                        })
+                    })
+                }, e.getPushSubscription = function() {
+                    return o.__awaiter(this, void 0, void 0, function() {
+                        var e, t;
+                        return o.__generator(this, function(n) {
+                            switch (n.label) {
+                                case 0:
+                                    return [4, i()];
+                                case 1:
+                                    return e = n.sent(), [4, e.pushManager.getSubscription()];
+                                case 2:
+                                    return (t = n.sent()) ? [2, t] : [2, null]
+                            }
+                        })
+                    })
+                }, e
+            }()
+    },
+    RVY0: function(e, t) {},
     RcGI: function(e, t) {
         var n = {
             kind: "Document",
@@ -1058,6 +1433,145 @@ webpackJsonp([50], {
             }
         };
         e.exports = n
+    },
+    TbkX: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "mutation",
+                name: {
+                    kind: "Name",
+                    value: "BrowserPushNotifications_AddBrowserPushSubscription"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "input"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "AddBrowserPushSubscriptionInput"
+                            }
+                        }
+                    },
+                    defaultValue: null
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "addBrowserPushSubscription"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "input"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "input"
+                                }
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "browserPushSubscriptionID"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 178
+            }
+        };
+        n.loc.source = {
+            body: "mutation BrowserPushNotifications_AddBrowserPushSubscription($input: AddBrowserPushSubscriptionInput!) {\naddBrowserPushSubscription(input: $input) {\nbrowserPushSubscriptionID\n}\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
+    UbVv: function(e, t, n) {
+        "use strict";
+        t.a = function() {
+            return window.Notification && "denied" === window.Notification.permission
+        }, t.b = function() {
+            return window.Notification && "granted" === window.Notification.permission
+        }
+    },
+    WbwR: function(e, t, n) {
+        "use strict";
+        var i = n("TToO"),
+            a = n("U7vG"),
+            o = n("6sO2"),
+            r = n("OOv5"),
+            s = n("LBNC"),
+            l = "browser_notifications_launch",
+            c = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.logger = o.n.logger.withCategory("browser-push-notifications"), t
+                }
+                return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return i.__awaiter(this, void 0, void 0, function() {
+                        var e;
+                        return i.__generator(this, function(t) {
+                            switch (t.label) {
+                                case 0:
+                                    if (!o.b.get(l, !1)) return [2];
+                                    if (!Object(s.a)()) return this.logger.debug("unsupported browser"), [2];
+                                    t.label = 1;
+                                case 1:
+                                    return t.trys.push([1, 3, , 4]), [4, r.a.initialize()];
+                                case 2:
+                                    return t.sent(), [3, 4];
+                                case 3:
+                                    return e = t.sent(), this.logger.error(e, "push manager initialization unexpectedly failed"), [3, 4];
+                                case 4:
+                                    return [2]
+                            }
+                        })
+                    })
+                }, t.prototype.render = function() {
+                    return null
+                }, t
+            }(a.Component);
+        n.d(t, "b", function() {
+            return l
+        }), n.d(t, "a", function() {
+            return c
+        })
     },
     aTeI: function(e, t) {
         var n = {
@@ -1374,23 +1888,23 @@ webpackJsonp([50], {
                         var i = n.call(this, t) || this;
                         return i.tracked = !1, i.referenceTracking = {}, i.trackPageview = function() {
                             if (!(i.tracked || e.skip && e.skip(i.props))) {
-                                i.tracked = !0, s.n.adBlockSentinel.pageTransition();
+                                i.tracked = !0, l.n.adBlockSentinel.pageTransition();
                                 var t = {};
                                 "function" == typeof e.properties ? t = e.properties(i.props) : e.properties && (t = a.__assign({}, e.properties));
                                 var n = a.__assign({}, i.props);
                                 n.location && n.location.state && (t.medium = n.location.state.medium, t.content = n.location.state.content, t.content_index = n.location.state.content_index);
                                 var o = i.referenceTracking,
                                     r = o.content,
-                                    l = o.medium,
+                                    s = o.medium,
                                     c = o.content_index;
-                                s.n.tracking.trackPageview(a.__assign({
+                                l.n.tracking.trackPageview(a.__assign({
                                     content: r,
-                                    medium: l,
+                                    medium: s,
                                     content_index: c,
                                     location: e.location
                                 }, t))
                             }
-                        }, s.i.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : s.i.warn("No latency tracker exists! This means no data will be sent to Spade.", e), i
+                        }, l.i.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : l.i.warn("No latency tracker exists! This means no data will be sent to Spade.", e), i
                     }
                     return a.__extends(i, n), i.prototype.componentDidMount = function() {
                         var e = this;
@@ -1420,14 +1934,14 @@ webpackJsonp([50], {
                         return n
                     }, i
                 }(r.Component);
-                return Object(l.f)(n)
+                return Object(s.f)(n)
             }
         }
         var a = n("TToO"),
             o = n("OAwv"),
             r = n("U7vG"),
-            l = n("F8kA"),
-            s = n("6sO2");
+            s = n("F8kA"),
+            l = n("6sO2");
         n.d(t, "a", function() {
             return i
         })
@@ -1626,4 +2140,4 @@ webpackJsonp([50], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.global-notification-settings-eaa32e028f55d98a5e4bd582f7f2644b.js.map
+//# sourceMappingURL=pages.global-notification-settings-cb348e951daddca2b2e161f39c52a4cc.js.map

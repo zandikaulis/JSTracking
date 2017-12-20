@@ -10475,6 +10475,17 @@ webpackJsonp([57], {
             }
         })
     },
+    F2sf: function(e, t) {
+        var n = "/service-worker.js";
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), t.default = {
+            register: function() {
+                var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+                return !!navigator.serviceWorker && navigator.serviceWorker.register(n, e)
+            }
+        }, e.exports = t.default
+    },
     F8kA: function(e, t, n) {
         "use strict";
 
@@ -11704,6 +11715,8 @@ webpackJsonp([57], {
                     this.raise("crate", e)
                 }, e.prototype.raid = function(e) {
                     this.raise("raid", e)
+                }, e.prototype.ritual = function(e) {
+                    this.raise("ritual", e)
                 }, e.prototype.r9kmode = function(e) {
                     this.raise("r9kmode", e)
                 }, e.prototype.resub = function(e) {
@@ -12248,14 +12261,14 @@ webpackJsonp([57], {
                                                     crateLoot: []
                                                 },
                                                 P = S["msg-param-emoticons"];
-                                            P && (G = A.crateLoot).push.apply(G, P.split(",").map(function(e) {
+                                            P && (Y = A.crateLoot).push.apply(Y, P.split(",").map(function(e) {
                                                 return {
                                                     id: e,
                                                     type: f.a.Emote
                                                 }
                                             }));
                                             var I = S["msg-param-badges"];
-                                            I && (Y = A.crateLoot).push.apply(Y, I.split(",").map(function(e) {
+                                            I && (X = A.crateLoot).push.apply(X, I.split(",").map(function(e) {
                                                 return {
                                                     img: e,
                                                     type: f.a.Badge
@@ -12267,7 +12280,7 @@ webpackJsonp([57], {
                                                 type: f.a.Bits
                                             });
                                             var M = S["msg-param-inGameContent"];
-                                            M && (X = A.crateLoot).push.apply(X, M.split(",").map(function(e) {
+                                            M && (J = A.crateLoot).push.apply(J, M.split(",").map(function(e) {
                                                 return {
                                                     img: e,
                                                     type: f.a.InGameContent
@@ -12284,48 +12297,59 @@ webpackJsonp([57], {
                                                 timestamp: Date.now(),
                                                 type: u.Purchase
                                             })
+                                        } else if ("ritual" === r) {
+                                            var N = e.tags["msg-param-ritual-name"];
+                                            T = {
+                                                user: this.createUser(e),
+                                                timestamp: +e.tags["tmi-sent-ts"],
+                                                body: n
+                                            };
+                                            this.events.ritual({
+                                                type: N,
+                                                message: T
+                                            })
                                         } else {
                                             T = this.createChatMessage(e, n);
                                             this.events.usernotice(this.createChatMessageEvent(u.UserNotice, r, t, T, !1))
                                         }
                                         break;
                                     case "HOSTTARGET":
-                                        var N = +n.split(" ")[1] || 0;
+                                        var L = +n.split(" ")[1] || 0;
                                         if ("-" === n.split(" ")[0]) this.commands.unhost.signal({
                                             channel: t,
                                             msgid: r,
                                             succeeded: !0
                                         }), this.events.unhost({
                                             channel: t,
-                                            viewers: N
+                                            viewers: L
                                         });
                                         else {
-                                            var L = n.split(" ")[0];
+                                            var j = n.split(" ")[0];
                                             this.commands.host.signal({
                                                 channel: t,
                                                 msgid: r,
                                                 succeeded: !0
                                             }), this.events.hosting({
                                                 channel: t,
-                                                target: L,
-                                                viewers: N
+                                                target: j,
+                                                viewers: L
                                             })
                                         }
                                         break;
                                     case "CLEARCHAT":
                                         if (e.params.length > 1) {
-                                            var j = +e.tags["ban-duration"] || null,
-                                                D = s.decodeTag(e.tags["ban-reason"]);
-                                            null === j ? this.events.ban({
+                                            var D = +e.tags["ban-duration"] || null,
+                                                F = s.decodeTag(e.tags["ban-reason"]);
+                                            null === D ? this.events.ban({
                                                 channel: t,
-                                                reason: D,
+                                                reason: F,
                                                 userLogin: n,
                                                 duration: null
                                             }) : this.events.timeout({
                                                 channel: t,
-                                                reason: D,
+                                                reason: F,
                                                 userLogin: n,
-                                                duration: j
+                                                duration: D
                                             })
                                         } else this.events.clearchat({
                                             channel: t
@@ -12342,19 +12366,19 @@ webpackJsonp([57], {
                                         break;
                                     case "USERSTATE":
                                         e.tags.username = this.session.username;
-                                        var F = this.createUser(e);
+                                        var q = this.createUser(e);
                                         this.commands.sendMessage.signal({
                                             channel: t,
                                             msgid: r,
                                             succeeded: !0
-                                        }), "mod" === e.tags["user-type"] && this.session.addChannelModerator(t, this.session.username), s.isJustinfan(this.session.username) || this.session.hasJoinedChannel(t) || (this.session.onJoinedChannel(t, F), this.events.joined({
+                                        }), "mod" === e.tags["user-type"] && this.session.addChannelModerator(t, this.session.username), s.isJustinfan(this.session.username) || this.session.hasJoinedChannel(t) || (this.session.onJoinedChannel(t, q), this.events.joined({
                                             channel: t,
                                             username: this.session.username,
                                             gotUsername: !0
                                         })), this.session.updateBadges(t, e.badges) && this.events.badgesupdated({
                                             badges: e.badges,
                                             username: s.username(this.session.username)
-                                        }), this.session.updateUserState(t, F);
+                                        }), this.session.updateUserState(t, q);
                                         break;
                                     case "GLOBALUSERSTATE":
                                         this.logger.debug("Updated global user state", {
@@ -12362,27 +12386,27 @@ webpackJsonp([57], {
                                         }), this.session.globaluserstate = e.tags;
                                         break;
                                     case "ROOMSTATE":
-                                        var q = s.channel(e.params[0]),
-                                            U = this.createRoomState(e);
-                                        this.commands.join.currentRequest && this.commands.join.currentRequest.joinChannel === q && this.commands.join.signal({
+                                        var U = s.channel(e.params[0]),
+                                            B = this.createRoomState(e);
+                                        this.commands.join.currentRequest && this.commands.join.currentRequest.joinChannel === U && this.commands.join.signal({
                                             channel: t,
                                             msgid: r,
                                             succeeded: !0
                                         }), this.events.roomstate({
                                             channel: t,
-                                            state: U
-                                        }), e.tags.hasOwnProperty("slow") && !e.tags.hasOwnProperty("subs-only") && (U.slowMode ? this.events.slowmode({
+                                            state: B
+                                        }), e.tags.hasOwnProperty("slow") && !e.tags.hasOwnProperty("subs-only") && (B.slowMode ? this.events.slowmode({
                                             channel: t,
                                             enabled: !0,
-                                            length: U.slowModeDuration
+                                            length: B.slowModeDuration
                                         }) : this.events.slowmode({
                                             channel: t,
                                             enabled: !1,
                                             length: 0
-                                        })), e.tags.hasOwnProperty("followers-only") && !e.tags.hasOwnProperty("subs-only") && (U.followersOnly ? this.events.followersonly({
+                                        })), e.tags.hasOwnProperty("followers-only") && !e.tags.hasOwnProperty("subs-only") && (B.followersOnly ? this.events.followersonly({
                                             channel: t,
                                             enabled: !0,
-                                            length: U.followersOnlyRequirement
+                                            length: B.followersOnlyRequirement
                                         }) : this.events.followersonly({
                                             channel: t,
                                             enabled: !1,
@@ -12393,12 +12417,12 @@ webpackJsonp([57], {
                                         this.logger.warn("Could not parse message from tmi.twitch.tv:\n" + JSON.stringify(e, null, 4))
                                 } else if ("jtv" === e.prefix) switch (e.command) {
                                     case "MODE":
-                                        var B = e.params[2];
-                                        "+o" === n ? (this.session.addChannelModerator(t, B), this.events.mod({
-                                            username: B,
+                                        var H = e.params[2];
+                                        "+o" === n ? (this.session.addChannelModerator(t, H), this.events.mod({
+                                            username: H,
                                             channel: t
-                                        })) : "-o" === n && (this.session.removeChannelModerator(t, B), this.events.unmod({
-                                            username: B,
+                                        })) : "-o" === n && (this.session.removeChannelModerator(t, H), this.events.unmod({
+                                            username: H,
                                             channel: t
                                         }));
                                         break;
@@ -12414,28 +12438,28 @@ webpackJsonp([57], {
                                     case "366":
                                         break;
                                     case "JOIN":
-                                        var H = e.prefix.split("!")[0];
-                                        s.isJustinfan(this.session.username) && this.session.username === H && (this.session.onJoinedChannel(t, this.createUser(e)), this.events.joined({
+                                        var Q = e.prefix.split("!")[0];
+                                        s.isJustinfan(this.session.username) && this.session.username === Q && (this.session.onJoinedChannel(t, this.createUser(e)), this.events.joined({
                                             channel: t,
-                                            username: H,
+                                            username: Q,
                                             gotUsername: !0
-                                        })), this.session.username !== H && this.events.joined({
+                                        })), this.session.username !== Q && this.events.joined({
                                             channel: t,
-                                            username: H,
+                                            username: Q,
                                             gotUsername: !1
                                         });
                                         break;
                                     case "PART":
-                                        var Q = e.prefix.split("!")[0],
-                                            V = this.session.username === Q;
-                                        V && (this.session.onPartedChannel(t), this.commands.part.signal({
+                                        var V = e.prefix.split("!")[0],
+                                            W = this.session.username === V;
+                                        W && (this.session.onPartedChannel(t), this.commands.part.signal({
                                             channel: t,
                                             msgid: r,
                                             succeeded: !0
                                         })), this.events.parted({
                                             channel: t,
-                                            username: Q,
-                                            isSelf: V
+                                            username: V,
+                                            isSelf: W
                                         });
                                         break;
                                     case "WHISPER":
@@ -12447,31 +12471,31 @@ webpackJsonp([57], {
                                         break;
                                     case "PRIVMSG":
                                         if (e.tags.username = e.prefix.split("!")[0], "jtv" === e.tags.username) {
-                                            var W = s.username(n.split(" ")[0]);
+                                            var K = s.username(n.split(" ")[0]);
                                             if (n.includes("hosting you for")) {
-                                                N = s.extractNumber(n);
+                                                L = s.extractNumber(n);
                                                 this.events.hosted({
                                                     channel: t,
-                                                    from: W,
+                                                    from: K,
                                                     isAuto: n.includes("auto"),
-                                                    viewers: N
+                                                    viewers: L
                                                 })
                                             } else n.includes("hosting you") && this.events.hosted({
                                                 channel: t,
-                                                from: W,
+                                                from: K,
                                                 isAuto: n.includes("auto"),
                                                 viewers: 0
                                             })
                                         } else {
-                                            var K = n.match(/^\u0001ACTION ([^\u0001]+)\u0001$/);
+                                            var z = n.match(/^\u0001ACTION ([^\u0001]+)\u0001$/);
                                             T = this.createChatMessage(e, n);
-                                            if (K && K.length >= 2) {
+                                            if (z && z.length >= 2) {
                                                 e.tags["message-type"] = "action";
-                                                var z = K[1];
+                                                var G = z[1];
                                                 this.events.action({
                                                     type: u.Action,
                                                     timestamp: Date.now(),
-                                                    action: z,
+                                                    action: G,
                                                     channel: t,
                                                     message: T,
                                                     sentByCurrentUser: !1
@@ -12494,7 +12518,7 @@ webpackJsonp([57], {
                                     default:
                                         this.logger.warn("Could not parse message with no prefix:\n" + JSON.stringify(e, null, 4))
                                 }
-                                var G, Y, X
+                                var Y, X, J
                     }
                 }, e
             }(),
@@ -13145,6 +13169,8 @@ webpackJsonp([57], {
                     this.add("unraid", e)
                 }, e.prototype.raid = function(e) {
                     this.add("raid", e)
+                }, e.prototype.ritual = function(e) {
+                    this.add("ritual", e)
                 }, e.prototype.notice = function(e) {
                     this.add("notice", e)
                 }, e.prototype.badgesupdated = function(e) {
@@ -37130,4 +37156,4 @@ webpackJsonp([57], {
         }
     }
 });
-//# sourceMappingURL=vendor-6ebe0784a89ef24580afe4f4422fda55.js.map
+//# sourceMappingURL=vendor-fd255c6c45516a7a49dd70fafdd42327.js.map

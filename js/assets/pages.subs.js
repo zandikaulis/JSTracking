@@ -4414,7 +4414,7 @@ webpackJsonp([41], {
                         type: C.z.Hollow,
                         "data-test-selector": "subscribe-button__more-sub-options-button",
                         "data-a-target": "see-more-sub-options-button"
-                    }, this.messages.seeMoreSubOptions))), this.state.giftingEnabled && (t = s.createElement(C.U, {
+                    }, this.messages.seeMoreSubOptions))), this.state.giftingEnabled && this.props.subscriptionProducts.length > 1 && (t = s.createElement(C.U, {
                         display: C.H.Inline
                     }, s.createElement(C.u, {
                         ariaLabel: this.messages.giftSubscription,
@@ -4423,9 +4423,16 @@ webpackJsonp([41], {
                         "data-test-selector": "subscribe-button__gift"
                     }, this.messages.giftSubscription)));
                     var a = null;
-                    return this.props.subscriptionProducts && (a = s.createElement(O.a, {
+                    this.props.subscriptionProducts && (a = s.createElement(O.a, {
                         subscriptionProducts: this.props.subscriptionProducts
-                    })), s.createElement(C.U, null, a, s.createElement(C.U, {
+                    }));
+                    var r = null;
+                    return (e || t) && (r = s.createElement(C.U, {
+                        margin: {
+                            right: 1,
+                            top: 2
+                        }
+                    }, e, t)), s.createElement(C.U, null, a, s.createElement(C.U, {
                         padding: 2
                     }, n, s.createElement(C.U, null, s.createElement(C._22, {
                         type: C._27.H4,
@@ -4446,12 +4453,7 @@ webpackJsonp([41], {
                         url: this.props.subscriptionProducts[0].url,
                         "data-test-selector": "subscribe-button__top-page-sub-button",
                         "data-a-target": "tier1-subscribe-button"
-                    })))), s.createElement(C.U, {
-                        margin: {
-                            right: 1,
-                            top: 2
-                        }
-                    }, e, t)))
+                    })))), r))
                 }, t.prototype.renderPrimeSection = function() {
                     var e = this.props.userHasPrime ? this.messages.useFreeChannelSub : this.messages.primeUpsell;
                     return s.createElement(C.U, {
@@ -4596,9 +4598,7 @@ webpackJsonp([41], {
                         giftShortcut: !1
                     }, n.tabToSubProduct = i(t.subscriptionProducts), n
                 }
-                return r.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive()
-                }, t.prototype.componentWillReceiveProps = function(e) {
+                return r.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
                     if (!e.data.error && void 0 === e.subscriptionProducts[0].self && this.isDiscountDataReady(e)) {
                         var t = Object.assign({}, e.data.user.subscriptionProducts);
                         this.props.setPromotionData(t)
@@ -4636,6 +4636,7 @@ webpackJsonp([41], {
                         isSubscribed: !0
                     })
                 }, t.prototype.getTopPageGiftSection = function() {
+                    if (this.props.subscriptionProducts.length < u.a) return null;
                     var e = this.props.subscriptionProducts[0].price;
                     return Object(j.c)(this.props.subscriptionProducts) && (e = Object(j.a)(this.props.subscriptionProducts[0], !0)), s.createElement(C.U, null, s.createElement(C._22, {
                         type: C._27.H4,
@@ -4660,7 +4661,7 @@ webpackJsonp([41], {
                         type: C.z.Hollow
                     }, this.messages.giftOptions))))
                 }, t.prototype.getTopPageUpgradeSection = function() {
-                    var e = this.props.subbedTier !== u.a.Tier3 ? this.messages.changeSubscription : this.messages.yourSubscription;
+                    var e = this.props.subbedTier !== u.b.Tier3 ? this.messages.changeSubscription : this.messages.yourSubscription;
                     return s.createElement(C.U, null, s.createElement(C._22, {
                         type: C._27.H4,
                         bold: !0
@@ -4758,13 +4759,13 @@ webpackJsonp([41], {
                 }, t.prototype.setMessages = function() {
                     var e;
                     switch (this.props.subbedTier) {
-                        case u.a.Tier1:
+                        case u.b.Tier1:
                             e = this.props.subscriptionProducts[0].price;
                             break;
-                        case u.a.Tier2:
+                        case u.b.Tier2:
                             e = this.props.subscriptionProducts[1].price;
                             break;
-                        case u.a.Tier3:
+                        case u.b.Tier3:
                             e = this.props.subscriptionProducts[2].price;
                             break;
                         default:
@@ -4838,7 +4839,9 @@ webpackJsonp([41], {
                     skip: function(e) {
                         return !e.subLogin
                     }
-                }), Object(g.c)("BalloonSubbedUser")], t)
+                }), Object(g.c)("BalloonSubbedUser", {
+                    autoReportInteractive: !0
+                })], t)
             }(s.Component)),
             G = (n("tck0"), n("4MRZ"));
         n.d(t, "a", function() {
@@ -4891,7 +4894,7 @@ webpackJsonp([41], {
                             action: E.a.SubWithPrime
                         }), t.modalLevel = "", t.setState({
                             isSubscribed: !0,
-                            subbedTier: u.a.Prime
+                            subbedTier: u.b.Prime
                         }), Object(m.d)(G, {
                             login: t.props.channelLogin
                         }, function(e) {
@@ -4911,7 +4914,7 @@ webpackJsonp([41], {
                         })
                     }, t.setMessages = function() {
                         var e;
-                        e = t.state.subGiftingEnabled ? Object(o.d)("Gift A Sub", "SubscribeButton") : Object(o.d)("Subscribed", "SubscribeButton"), t.messages = {
+                        e = t.state.subGiftingEnabled && !t.state.isNonStandardSub ? Object(o.d)("Gift A Sub", "SubscribeButton") : Object(o.d)("Subscribed", "SubscribeButton"), t.messages = {
                             subscribe: t.props.hostChannelID ? Object(o.d)("Subscribe to {username}", {
                                 username: t.props.data.user.displayName
                             }, "SubscribeButton") : Object(o.d)("Subscribe", "SubscribeButton"),
@@ -4985,7 +4988,7 @@ webpackJsonp([41], {
                         ariaLabel: this.messages.subscribed,
                         icon: C._10.Star
                     }, this.messages.subscribed);
-                    var e = this.state.subbedTier === u.a.Prime ? C._10.Crown : C._10.Star,
+                    var e = this.state.subbedTier === u.b.Prime ? C._10.Crown : C._10.Star,
                         t = this.state.isSubscribed ? this.messages.subscribed : this.messages.subscribe,
                         n = this.state.isSubscribed ? "subscribed-button" : "subscribe-button",
                         i = s.createElement(C.u, {
@@ -12798,7 +12801,7 @@ webpackJsonp([41], {
                     })
                 }, e.prototype.queryVideos = function(e, t, n) {
                     return a.__awaiter(this, void 0, void 0, function() {
-                        var i, r, c, d;
+                        var i, r, l, c;
                         return a.__generator(this, function(a) {
                             switch (a.label) {
                                 case 0:
@@ -12817,32 +12820,32 @@ webpackJsonp([41], {
                                         case o.a.Long:
                                             r.push("length>900")
                                     }
-                                    switch (c = {
+                                    switch (l = {
                                         indexName: i,
                                         query: e,
                                         params: {
                                             page: 0,
-                                            hitsPerPage: l.videos.hitsPerPage,
+                                            hitsPerPage: 50,
                                             numericFilters: r,
                                             facets: "*",
                                             facetFilters: ""
                                         }
                                     }, n.type) {
                                         case o.c.PastBroadcasts:
-                                            c.params.facetFilters = "broadcast_type:archive";
+                                            l.params.facetFilters = "broadcast_type:archive";
                                             break;
                                         case o.c.Uploads:
-                                            c.params.facetFilters = "broadcast_type:upload";
+                                            l.params.facetFilters = "broadcast_type:upload";
                                             break;
                                         case o.c.Highlights:
-                                            c.params.facetFilters = "broadcast_type:highlight"
+                                            l.params.facetFilters = "broadcast_type:highlight"
                                     }
-                                    return [4, this.client.search([c])];
+                                    return [4, this.client.search([l])];
                                 case 1:
-                                    return d = a.sent(), [2, {
+                                    return c = a.sent(), [2, {
                                         id: t,
-                                        totalHits: d.results[0].nbHits,
-                                        hits: d.results[0].hits
+                                        totalHits: c.results[0].nbHits,
+                                        hits: c.results[0].hits
                                     }]
                             }
                         })
@@ -15741,16 +15744,16 @@ webpackJsonp([41], {
                         checkoutButtonTier: n.state.currentPurchasePrice
                     }), n.props.onGiftSelect && n.props.onGiftSelect()
                 }, n.mapSubbedTierToTabs = function(e) {
-                    e.subbedTier === l.a.Prime ? (n.setState({
+                    e.subbedTier === l.b.Prime ? (n.setState({
                         activeTab: a.Prime,
                         subbedTier: a.Prime
-                    }), e.onSelectTierTab(a.Prime)) : e.subbedTier === l.a.Tier1 ? (n.setState({
+                    }), e.onSelectTierTab(a.Prime)) : e.subbedTier === l.b.Tier1 ? (n.setState({
                         activeTab: a.Tier1,
                         subbedTier: a.Tier1
-                    }), e.onSelectTierTab(a.Tier1)) : e.subbedTier === l.a.Tier2 ? (n.setState({
+                    }), e.onSelectTierTab(a.Tier1)) : e.subbedTier === l.b.Tier2 ? (n.setState({
                         activeTab: a.Tier2,
                         subbedTier: a.Tier2
-                    }), e.onSelectTierTab(a.Tier2)) : e.subbedTier === l.a.Tier3 ? (n.setState({
+                    }), e.onSelectTierTab(a.Tier2)) : e.subbedTier === l.b.Tier3 ? (n.setState({
                         activeTab: a.Tier3,
                         subbedTier: a.Tier3
                     }), e.onSelectTierTab(a.Tier3)) : e.isGift ? e.onSelectTierTab(n.state.activeTab) : e.onSelectTierTab(a.Prime)
@@ -15795,7 +15798,7 @@ webpackJsonp([41], {
                         "data-a-target": i(a.Tier3),
                         onClick: this.toggleActiveTab
                     }, this.messages.tier3TabName));
-                this.props.subbedTier !== l.a.Prime || this.props.isGift || (t = s.createElement(b.U, {
+                this.props.subbedTier !== l.b.Prime || this.props.isGift || (t = s.createElement(b.U, {
                     display: b.H.InlineFlex,
                     margin: {
                         right: 2
@@ -15812,7 +15815,7 @@ webpackJsonp([41], {
                     active: this.state.activeTab === a.Prime,
                     "data-a-target": i(a.Prime),
                     onClick: this.toggleActiveTab
-                }, this.messages.prime))), this.props.subbedTier && this.props.subbedTier !== l.a.Tier1 || (n = s.createElement(b.U, {
+                }, this.messages.prime))), this.props.subbedTier && this.props.subbedTier !== l.b.Tier1 || (n = s.createElement(b.U, {
                     display: b.H.InlineFlex,
                     margin: {
                         right: 2
@@ -15821,7 +15824,7 @@ webpackJsonp([41], {
                     active: this.state.activeTab === a.Tier1,
                     "data-a-target": i(a.Tier1),
                     onClick: this.toggleActiveTab
-                }, this.messages.tier1TabName))), this.props.subbedTier && this.props.subbedTier !== l.a.Prime && this.props.subbedTier !== l.a.Tier1 && this.props.subbedTier !== l.a.Tier2 || (r = s.createElement(b.U, {
+                }, this.messages.tier1TabName))), this.props.subbedTier && this.props.subbedTier !== l.b.Prime && this.props.subbedTier !== l.b.Tier1 && this.props.subbedTier !== l.b.Tier2 || (r = s.createElement(b.U, {
                     display: b.H.InlineFlex,
                     margin: {
                         right: 2
@@ -19299,7 +19302,7 @@ webpackJsonp([41], {
                     path: "/following",
                     component: ye
                 }), o.createElement(Z.d, {
-                    path: "/popout",
+                    path: "/popout/:channelName/chat",
                     render: _e
                 }), o.createElement(Z.d, {
                     path: "/videos/v:videoID",
@@ -22544,19 +22547,22 @@ webpackJsonp([41], {
     },
     vBst: function(e, t, n) {
         "use strict";
-        n.d(t, "a", function() {
+        n.d(t, "b", function() {
             return a
+        }), n.d(t, "a", function() {
+            return r
         });
         var i;
         ! function(e) {
             e[e.PercentOff = 0] = "PercentOff"
         }(i || (i = {}));
         var a = {
-            Prime: "prime",
-            Tier1: "1000",
-            Tier2: "2000",
-            Tier3: "3000"
-        }
+                Prime: "prime",
+                Tier1: "1000",
+                Tier2: "2000",
+                Tier3: "3000"
+            },
+            r = 3
     },
     "vKN/": function(e, t) {
         var n = {
@@ -23423,4 +23429,4 @@ webpackJsonp([41], {
         }
     }
 });
-//# sourceMappingURL=pages.subs-3703543cf6a2ec4b528425acee5314c5.js.map
+//# sourceMappingURL=pages.subs-25a33a18148347649a477762e9753973.js.map
