@@ -4293,13 +4293,13 @@ window.SiteOptions = {
         },
         "e9fe3136-84bc-4a61-9079-0c7df78abeb3": {
             "name": "twilight_web_onboarding_categories",
-            "v": 2615,
+            "v": 2711,
             "t": 2,
             "groups": [{
-                "weight": 100,
+                "weight": 50,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 50,
                 "value": "yes"
             }]
         },
