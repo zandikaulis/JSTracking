@@ -36296,7 +36296,7 @@ webpackJsonp([58], {
                     else {
                         var k = (l[2] ? "" : "https://") + e.slice(d, b);
                         if (function(e) {
-                                return void 0 === e && (e = ""), m.test(e)
+                                return void 0 === e && (e = ""), m.test(e) && !e.includes("clips.twitch.tv/2017/")
                             }(k)) {
                             var S = function(e) {
                                 void 0 === e && (e = "");
@@ -40455,4 +40455,4 @@ webpackJsonp([58], {
         }
     }
 }, [4]);
-//# sourceMappingURL=core-2fbe652dd169946fb663e7c29e7f3b43.js.map
+//# sourceMappingURL=core-97fe19440425af43f0148d546411ce66.js.map

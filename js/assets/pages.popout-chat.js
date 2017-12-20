@@ -28033,7 +28033,7 @@ webpackJsonp([35], {
                     else {
                         var S = (l[2] ? "" : "https://") + e.slice(d, v);
                         if (function(e) {
-                                return void 0 === e && (e = ""), m.test(e)
+                                return void 0 === e && (e = ""), m.test(e) && !e.includes("clips.twitch.tv/2017/")
                             }(S)) {
                             var y = function(e) {
                                 void 0 === e && (e = "");
@@ -31501,4 +31501,4 @@ webpackJsonp([35], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.popout-chat-bd6500ab0e54e89f3ade6e2ef6b987d4.js.map
+//# sourceMappingURL=pages.popout-chat-f70aba4da9f8855e26a73d759e7067d7.js.map
