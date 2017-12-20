@@ -1,4 +1,4 @@
-webpackJsonp([47], {
+webpackJsonp([45], {
     "+GT7": function(e, t, n) {
         "use strict";
         var a = n("TToO"),
@@ -2398,58 +2398,65 @@ webpackJsonp([47], {
     },
     DBTH: function(e, t, n) {
         "use strict";
-        n.d(t, "d", function() {
+        n.d(t, "e", function() {
             return i
         }), n.d(t, "f", function() {
             return l
-        }), n.d(t, "e", function() {
+        }), n.d(t, "h", function() {
             return r
         }), n.d(t, "g", function() {
             return o
-        }), n.d(t, "a", function() {
+        }), n.d(t, "i", function() {
             return s
-        }), n.d(t, "b", function() {
+        }), n.d(t, "a", function() {
             return d
         }), n.d(t, "c", function() {
-            return p
-        }), n.d(t, "i", function() {
+            return u
+        }), n.d(t, "b", function() {
             return g
-        }), n.d(t, "j", function() {
+        }), n.d(t, "d", function() {
             return v
-        }), n.d(t, "h", function() {
-            return h
         }), n.d(t, "k", function() {
+            return h
+        }), n.d(t, "l", function() {
             return k
+        }), n.d(t, "j", function() {
+            return f
+        }), n.d(t, "m", function() {
+            return y
         });
-        var a, i = "TWILIGHT_WEB_ONBOARDING_CHANNEL_RANKING",
-            l = "TWILIGHT_WEB_ONBOARDING_FOLLOWING_FOR_YOU",
-            r = "TWILIGHT_WEB_ONBOARDING",
-            o = "TWILIGHT_WEB_ONBOARDING_RANDOMIZED_GAMES",
-            s = "control";
+        var a, i = "TWILIGHT_WEB_ONBOARDING_CATEGORIES",
+            l = "TWILIGHT_WEB_ONBOARDING_CHANNEL_RANKING",
+            r = "TWILIGHT_WEB_ONBOARDING_FOLLOWING_FOR_YOU",
+            o = "TWILIGHT_WEB_ONBOARDING",
+            s = "TWILIGHT_WEB_ONBOARDING_RANDOMIZED_GAMES",
+            d = "control";
         ! function(e) {
             e.Skip = "skip", e.NoSkip = "no_skip"
         }(a || (a = {}));
-        var d, u = new Set([a.Skip.toString(), a.NoSkip.toString()]);
+        var u, c = new Set([a.Skip.toString(), a.NoSkip.toString()]);
         ! function(e) {
             e.First = "first", e.Last = "last"
-        }(d || (d = {}));
-        var c, m = new Set([d.First.toString(), d.Last.toString()]);
-        (c || (c = {})).Yes = "yes";
-        var p;
-        (p || (p = {})).ENABLED = "enabled";
-        var g = function(e) {
-                return !!e && m.has(e)
+        }(u || (u = {}));
+        var m, p = new Set([u.First.toString(), u.Last.toString()]);
+        (m || (m = {})).Yes = "yes";
+        var g;
+        (g || (g = {})).Yes = "yes";
+        var v;
+        (v || (v = {})).ENABLED = "enabled";
+        var h = function(e) {
+                return !!e && p.has(e)
             },
-            v = function(e, t) {
-                return !!e && u.has(e) && g(t)
+            k = function(e, t) {
+                return !!e && c.has(e) && h(t)
             },
-            h = function(e, t, n) {
-                return !!e && u.has(e) && g(t) && n === c.Yes
+            f = function(e, t, n) {
+                return !!e && c.has(e) && h(t) && n === m.Yes
             },
-            k = function(e) {
-                return e.getTime() >= f().getTime()
+            y = function(e) {
+                return e.getTime() >= S().getTime()
             },
-            f = function() {
+            S = function() {
                 return new Date((new Date).getTime() - 12096e5)
             }
     },
@@ -3060,11 +3067,11 @@ webpackJsonp([47], {
                         return m.__generator(this, function(n) {
                             switch (n.label) {
                                 case 0:
-                                    return [4, v.n.experiments.getAssignment(N.e)];
+                                    return [4, v.n.experiments.getAssignment(N.g)];
                                 case 1:
-                                    return e = n.sent(), [4, v.n.experiments.getAssignment(N.f)];
+                                    return e = n.sent(), [4, v.n.experiments.getAssignment(N.h)];
                                 case 2:
-                                    return t = n.sent(), Object(N.j)(e, t) ? this.setState({
+                                    return t = n.sent(), Object(N.l)(e, t) ? this.setState({
                                         forYouAssignment: t
                                     }) : this.setState({
                                         forYouAssignment: null
@@ -3104,7 +3111,7 @@ webpackJsonp([47], {
                             targetBlank: Object(_.b)(),
                             "data-a-target": "following-communities-tab"
                         }, Object(v.d)("Communities", "FollowingPage"))];
-                    if (this.state.forYouAssignment && !this.props.data.error && this.props.data.currentUser && Object(N.k)(new Date(this.props.data.currentUser.createdAt))) {
+                    if (this.state.forYouAssignment && !this.props.data.error && this.props.data.currentUser && Object(N.m)(new Date(this.props.data.currentUser.createdAt))) {
                         var n = p.createElement(C._19, {
                             key: "following-foryou-tab",
                             "data-test-selector": "for-you-tab",
@@ -3112,7 +3119,7 @@ webpackJsonp([47], {
                             linkTo: "/directory/following/foryou",
                             "data-a-target": "following-foryou-tab"
                         }, Object(v.d)("For You", "FollowingHeaderTabs"));
-                        this.state.forYouAssignment === N.b.First ? t.unshift(n) : this.state.forYouAssignment === N.b.Last && t.push(n)
+                        this.state.forYouAssignment === N.c.First ? t.unshift(n) : this.state.forYouAssignment === N.c.Last && t.push(n)
                     }
                     return p.createElement(C.U, {
                         className: "following__header-tabs",
@@ -3748,7 +3755,7 @@ webpackJsonp([47], {
                 })], t)
             }(p.Component),
             ae = function() {
-                return n.e(66).then(n.bind(null, "oms2"))
+                return n.e(68).then(n.bind(null, "oms2"))
             },
             ie = n("54wg"),
             le = n("F8kA"),
@@ -4079,22 +4086,22 @@ webpackJsonp([47], {
                         return m.__generator(this, function(a) {
                             switch (a.label) {
                                 case 0:
-                                    return v.n.setPageTitle(Object(v.d)("For You", "ForYouPage")), [4, v.n.experiments.getAssignment(N.e)];
+                                    return v.n.setPageTitle(Object(v.d)("For You", "ForYouPage")), [4, v.n.experiments.getAssignment(N.g)];
                                 case 1:
-                                    return e = a.sent(), [4, v.n.experiments.getAssignment(N.f)];
+                                    return e = a.sent(), [4, v.n.experiments.getAssignment(N.h)];
                                 case 2:
-                                    return t = a.sent(), Object(N.j)(e, t) ? [3, 3] : (this.redirectToFollowing(), [3, 5]);
+                                    return t = a.sent(), Object(N.l)(e, t) ? [3, 3] : (this.redirectToFollowing(), [3, 5]);
                                 case 3:
-                                    return [4, v.n.experiments.getAssignment(N.d)];
+                                    return [4, v.n.experiments.getAssignment(N.f)];
                                 case 4:
-                                    n = a.sent(), Object(N.h)(e, t, n) && this.loadChannelRankingsByGameData(), a.label = 5;
+                                    n = a.sent(), Object(N.j)(e, t, n) && this.loadChannelRankingsByGameData(), a.label = 5;
                                 case 5:
                                     return [2]
                             }
                         })
                     })
                 }, t.prototype.componentWillReceiveProps = function(e) {
-                    this.userFollowedGamesDataLoaded(e) && !Object(N.k)(new Date(e.data.currentUser.createdAt)) && this.redirectToFollowing()
+                    this.userFollowedGamesDataLoaded(e) && !Object(N.m)(new Date(e.data.currentUser.createdAt)) && this.redirectToFollowing()
                 }, t.prototype.componentDidUpdate = function() {
                     this.userFollowedGamesDataLoaded(this.props) && !this.state.loadingRankedChannelData && this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
@@ -8402,4 +8409,4 @@ webpackJsonp([47], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.following-bb33d343612287c10445624cebd3cf39.js.map
+//# sourceMappingURL=pages.following-fe5e4ececb3e0d6d3d127ce0b5357abe.js.map

@@ -1,4 +1,4 @@
-webpackJsonp([33], {
+webpackJsonp([32], {
     "+/J2": function(e, t, n) {
         var a = n("xA5w");
         e.exports = function(e, t) {
@@ -11177,11 +11177,12 @@ webpackJsonp([33], {
                     size: xt.r.Small,
                     "data-a-target": "feedback-balloon",
                     offsetX: "6px"
-                }, ot.createElement(xt.U, {
+                }, ot.createElement(xt._18, {
                     padding: {
                         top: .5,
                         bottom: .5
-                    }
+                    },
+                    color: xt.F.Base
                 }, ot.createElement(xt.S, {
                     linkTo: "https://help.twitch.tv/customer/portal/articles/2877822",
                     targetBlank: !0
@@ -12660,11 +12661,12 @@ webpackJsonp([33], {
                     size: xt.r.Small,
                     "data-a-target": "feedback-balloon",
                     offsetX: "6px"
-                }, ot.createElement(xt.U, {
+                }, ot.createElement(xt._18, {
                     padding: {
                         top: .5,
                         bottom: .5
-                    }
+                    },
+                    color: xt.F.Base
                 }, ot.createElement(xt.S, {
                     linkTo: "https://help.twitch.tv/customer/portal/articles/2877822",
                     targetBlank: !0
@@ -15175,14 +15177,27 @@ webpackJsonp([33], {
             Cs = "data:image/jpg;base64,",
             Es = "default:town";
         ! function(e) {
-            e.ImagePreview = "ImagePreview", e.RemoveButton = "RemoveButton"
+            e.ImagePreview = "ImagePreview", e.RemoveButton = "RemoveButton", e.DragDropWrapper = "DragDropWrapper"
         }(Ds || (Ds = {}));
         var Ys, Os = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.state = {
                         srcString: null,
+                        isDraggingOver: !1,
                         isResetting: !1
+                    }, n.dragOverDepth = 0, n.onDragEnter = function() {
+                        n.dragOverDepth++, 1 === n.dragOverDepth && n.setState({
+                            isDraggingOver: !0
+                        })
+                    }, n.onDragLeave = function() {
+                        n.dragOverDepth--, 0 === n.dragOverDepth && n.setState({
+                            isDraggingOver: !1
+                        })
+                    }, n.onDrop = function() {
+                        n.dragOverDepth = 0, n.setState({
+                            isDraggingOver: !1
+                        })
                     }, n.onFinishUploading = function(e, t) {
                         !t || t instanceof FormData || !t.event_cover_image || n.setState({
                             srcString: "" + Cs + t.event_cover_image
@@ -15200,38 +15215,46 @@ webpackJsonp([33], {
                         })
                     }, n.state.srcString = t.initialImageData && t.initialImageData.toString(), n
                 }
-                return it.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive()
-                }, t.prototype.render = function() {
+                return it.__extends(t, e), t.prototype.render = function() {
                     var e = null,
                         t = null;
-                    this.state.srcString && (e = ot.createElement(xt._18, {
-                        display: xt.H.Flex,
-                        justifyContent: xt.T.Center,
-                        alignItems: xt.c.Center,
-                        background: xt.m.Alt,
-                        position: xt._3.Absolute,
-                        attachBottom: !0,
-                        attachLeft: !0,
-                        attachRight: !0,
-                        attachTop: !0
-                    }, ot.createElement("img", {
-                        "data-test-selector": Ds.ImagePreview,
-                        className: "event-modal-image-uploader__preview-image",
-                        src: this.state.srcString
-                    })), t = ot.createElement(xt.U, {
-                        justifyContent: xt.T.Center,
-                        display: xt.H.Flex,
-                        margin: {
-                            y: 1
-                        }
-                    }, ot.createElement(xt.u, {
-                        "data-test-selector": Ds.RemoveButton,
-                        type: xt.z.Hollow,
-                        onClick: this.removeImage,
-                        icon: xt._10.RemoveTag
-                    }, Object(dt.d)("Remove", "EventModalImageUploader"))));
-                    var n = new Ss("https://api.twitch.tv/v5/channels/" + this.props.user.id + "/event_cover_images", !0, gs.EventCoverImage, this.onFinishUploading);
+                    if (this.state.srcString) {
+                        var n = Yt({
+                            "event-modal-image-uploader__preview-image": !0,
+                            "event-modal-image-uploader__preview-image--preview-mode": !1 === this.state.isDraggingOver
+                        });
+                        e = ot.createElement(xt._18, {
+                            display: xt.H.Flex,
+                            justifyContent: xt.T.Center,
+                            alignItems: xt.c.Center,
+                            background: xt.m.Alt,
+                            position: xt._3.Absolute,
+                            attachBottom: !0,
+                            attachLeft: !0,
+                            attachRight: !0,
+                            attachTop: !0
+                        }, ot.createElement("img", {
+                            "data-test-selector": Ds.ImagePreview,
+                            className: n,
+                            src: this.state.srcString
+                        })), t = ot.createElement(xt.U, {
+                            justifyContent: xt.T.Center,
+                            display: xt.H.Flex,
+                            margin: {
+                                y: 1
+                            }
+                        }, ot.createElement(xt.u, {
+                            "data-test-selector": Ds.RemoveButton,
+                            type: xt.z.Hollow,
+                            onClick: this.removeImage,
+                            icon: xt._10.RemoveTag
+                        }, Object(dt.d)("Remove", "EventModalImageUploader")))
+                    }
+                    var a = Yt({
+                            "event-modal-image-uploader__uploader": !0,
+                            "event-modal-image-uploader__uploader--preview-mode": null !== e && !1 === this.state.isDraggingOver
+                        }),
+                        r = new Ss("https://api.twitch.tv/v5/channels/" + this.props.user.id + "/event_cover_images", !0, gs.EventCoverImage, this.onFinishUploading);
                     return ot.createElement(xt.U, {
                         className: "event-modal-image-uploader",
                         margin: {
@@ -15247,18 +15270,29 @@ webpackJsonp([33], {
                         className: "event-modal-image-uploader__uploader"
                     }, ot.createElement(xt.j, {
                         ratio: xt.k.Aspect16x9
+                    }, ot.createElement(xt.P, {
+                        className: a,
+                        position: xt._3.Absolute,
+                        fullWidth: !0,
+                        fullHeight: !0
+                    }, ot.createElement("div", {
+                        onDragEnter: this.onDragEnter,
+                        onDragLeave: this.onDragLeave,
+                        onDrop: this.onDrop,
+                        "data-test-selector": Ds.DragDropWrapper
                     }, !this.state.isResetting && ot.createElement(bs.a, {
                         allowedFileTypes: [Ls.a.JPEG],
-                        "data-test-selector": "FooBar",
                         imageDimensions: Ts + "x" + xs,
                         iconHeight: 36,
                         iconWidth: 36,
                         maxFileSizeMegabytes: 1,
-                        provider: n
-                    }), e), t))))
+                        provider: r
+                    }))), e))), t))
                 }, t
             }(ot.Component),
-            As = Object(kt.c)("EventModalImageUploader")(Os),
+            As = Object(kt.c)("EventModalImageUploader", {
+                autoReportInteractive: !0
+            })(Os),
             js = n("uTyw"),
             Is = n("6BvN"),
             Fs = n("7Nlu"),
@@ -18771,10 +18805,10 @@ webpackJsonp([33], {
                 }, e)
             })(cc),
             mc = ct.a.wrap(function() {
-                return n.e(61).then(n.bind(null, "aeDV"))
+                return n.e(62).then(n.bind(null, "aeDV"))
             }, "ChannelClipsManagerPage"),
             hc = ct.a.wrap(function() {
-                return n.e(61).then(n.bind(null, "aeDV"))
+                return n.e(62).then(n.bind(null, "aeDV"))
             }, "MyClipsManagerPage"),
             pc = function(e) {
                 var t = e.match.params.pageName,
@@ -18882,8 +18916,8 @@ webpackJsonp([33], {
                     onAnonymousVisit: function() {
                         return Object(nt.f)(tt.a.DashboardPage)
                     },
-                    collapseSideNav: at.n,
-                    expandSideNav: at.r
+                    collapseSideNav: at.m,
+                    expandSideNav: at.q
                 }, e)
             })(fc);
         n.d(t, "DashboardRoot", function() {
@@ -20582,21 +20616,18 @@ webpackJsonp([33], {
     J8WN: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
-            return o
+            return s
         });
         var a = n("TToO"),
             r = n("U7vG"),
             i = (n.n(r), n("Odds")),
-            o = function(e) {
+            o = n("yU6t"),
+            s = (n.n(o), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         isDraggingOver: !1
-                    }, t.refHandler = function(e) {
-                        t.fileInputRef = e
-                    }, t.onFilePickerClick = function() {
-                        t.fileInputRef.click()
-                    }, t.onDragOver = function(e) {
+                    }, t.onDragEnter = function(e) {
                         e.preventDefault(), t.setState({
                             isDraggingOver: !0
                         })
@@ -20613,27 +20644,31 @@ webpackJsonp([33], {
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement("div", {
-                        "data-test-selector": "file-picker-root",
-                        onClick: this.onFilePickerClick,
-                        onDragLeave: this.onDragLeave,
-                        onDragOver: this.onDragOver,
-                        onDrop: this.onFileDrop
-                    }, r.createElement(i.I, {
-                        dragOver: this.state.isDraggingOver
+                    return r.createElement(i.I, {
+                        dragOver: this.state.isDraggingOver,
+                        error: this.props.error
                     }, r.createElement(i.P, {
-                        display: i.H.Hide
+                        position: i._3.Absolute,
+                        attachTop: !0,
+                        attachLeft: !0,
+                        fullWidth: !0,
+                        fullHeight: !0,
+                        zIndex: i._38.Above
                     }, r.createElement("input", {
+                        "data-test-selector": "file-picker-input",
+                        className: "drag-and-drop-file-picker__input",
                         accept: this.props.allowedFileTypes.join(","),
                         multiple: this.props.multiFile || !1,
                         onChange: this.onFileInputChange,
-                        ref: this.refHandler,
-                        type: "file"
-                    })), this.props.children))
+                        type: "file",
+                        onDragLeave: this.onDragLeave,
+                        onDragEnter: this.onDragEnter,
+                        onDrop: this.onFileDrop
+                    })), this.props.children)
                 }, t.prototype.finalizeSelections = function(e) {
                     e && this.props.onFilesSubmitted(Array.from(e))
                 }, t
-            }(r.Component)
+            }(r.Component))
     },
     JNsx: function(e, t, n) {
         var a = n("xA5w");
@@ -30220,12 +30255,13 @@ webpackJsonp([33], {
                 display: w.H.Flex,
                 alignItems: w.c.Center,
                 flexWrap: w.K.NoWrap
+            }, d.createElement(w.P, {
+                flexShrink: 0
             }, d.createElement("img", {
                 src: m.a,
                 height: "32",
-                width: "32",
-                className: "chat-line__crate-image"
-            }), d.createElement(w.U, {
+                width: "32"
+            })), d.createElement(w.U, {
                 margin: {
                     left: .5
                 }
@@ -41931,6 +41967,7 @@ webpackJsonp([33], {
             })
         })
     },
+    yU6t: function(e, t) {},
     ymQ7: function(e, t, n) {
         var a = n("xA5w"),
             r = n("JURy"),
@@ -42305,4 +42342,4 @@ webpackJsonp([33], {
         }
     }
 });
-//# sourceMappingURL=pages.dashboard-d7aa58537c5ab74b302f0b6d491a0665.js.map
+//# sourceMappingURL=pages.dashboard-17cc8cf18ce8e0b2417130f3311db372.js.map

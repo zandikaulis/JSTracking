@@ -231,7 +231,7 @@ webpackJsonp([51], {
             p = n("tnNl"),
             u = n("Odds"),
             m = s.a.wrap(function() {
-                return n.e(62).then(n.bind(null, "HQb3"))
+                return n.e(63).then(n.bind(null, "HQb3"))
             }, "BitsLandingPage"),
             h = function(e) {
                 function t() {
@@ -374,7 +374,7 @@ webpackJsonp([51], {
         }), t.b = function(e, t, n) {
             return void 0 === n && (n = !0),
                 function(a) {
-                    a(Object(i.t)(e)), n && Object(r.d)(e), t && Object(o.b)(e, t)
+                    a(Object(i.s)(e)), n && Object(r.d)(e), t && Object(o.b)(e, t)
                 }
         };
         var a, r = n("VAT8"),
@@ -531,4 +531,4 @@ webpackJsonp([51], {
             l = n("vH/s")
     }
 });
-//# sourceMappingURL=pages.bits-0eee749b61cad337ad287997cfe0e9e5.js.map
+//# sourceMappingURL=pages.bits-07316159d7c091e770ed07f635cdeee4.js.map
