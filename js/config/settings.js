@@ -32,7 +32,7 @@ window.__twilightSettings = {
     "ivw_url": "https://script.ioam.de/iam.js",
     "krux_countries": ["AT", "BE", "BG", "CY", "CZ", "DE", "DK", "EE", "FI", "FR", "GR", "GL", "HU", "IS", "IT", "LT", "LU", "NL", "NO", "PL", "PT", "RO", "RU", "SK", "SI", "ES", "SE", "CH", "TR", "LV", "MT", "RS", "AL", "AD", "AM", "AZ", "BY", "BA", "HR", "GE", "IL", "LI", "MK", "MD", "MC", "ME", "QA", "SM", "UA", "UK", "GB", "IE", "US"],
     "krux_url": "https://cdn.krxd.net/controltag?confid=JYk8LCsC",
-    "legacy_routes": ["^/broadcast$", "^/broadcast/dashboards(/.+)?$", "^/broadcast/stats(/get)?$", "^/bug_reports/new$", "^/[a-zA-Z0-9_\\-%]+/dashboard$", "^/[a-zA-Z0-9_\\-%]+/dashboard/action_log$", "^/[a-zA-Z0-9_\\-%]+/dashboard/activity$", "^/[a-zA-Z0-9_\\-%]+/dashboard/commercial$", "^/[a-zA-Z0-9_\\-%]+/dashboard/delay$", "^/[a-zA-Z0-9_\\-%]+/dashboard/events$", "^/[a-zA-Z0-9_\\-%]+/dashboard/extensions(/.+)?$", "^/[a-zA-Z0-9_\\-%]+/dashboard/permissions$", "^/[a-zA-Z0-9_\\-%]+/dashboard/revenue$", "^/[a-zA-Z0-9_\\-%]+/dashboard/settings(/.+)?$", "^/[a-zA-Z0-9_\\-%]+/dashboard/stats$", "^/[a-zA-Z0-9_\\-%]+/dashboard/streamkey$", "^/[a-zA-Z0-9_\\-%]+/dashboard/subscription(/.+)?$", "^/[a-zA-Z0-9_\\-%]+/dashboard/video-stats(/.+)?$", "^/[a-zA-Z0-9_\\-%]+/esports/.+$", "^/[a-zA-Z0-9_\\-%]+/followers$", "^/(?!directory/)[a-zA-Z0-9_\\-%]+/following$", "^/[a-zA-Z0-9_\\-%]*/inbox$", "^/[a-zA-Z0-9_\\-%]+/manager$", "^/[a-zA-Z0-9_\\-%]+/manager/.+$", "^/[a-zA-Z0-9_\\-%]*/outbox$", "^/[a-zA-Z0-9_\\-%]+/popout$", "^/[a-zA-Z0-9_\\-%]+/profile(/.+)?$", "^/[a-zA-Z0-9_\\-%]+/report_form$", "^/[a-zA-Z0-9_\\-%]+/settings(/.+)?$", "^/[a-zA-Z0-9_\\-%]+/subscribe(/.+)?$", "^/[a-zA-Z0-9_\\-%]+/v/.+$", "^/chat/embed$", "^/chromecast/", "^/communities/.+/moderation(/.*)?$", "^/communities/create$", "^/communities$", "^/dashboard/?$", "^/directory/game/[a-zA-Z0-9_,\\.\\:;'\\-\\!%&]+/details$", "^/directory/random$", "^/ext(/.+)?$", "^/friends(/requests)?$", "^/health_check$", "^/inbox$", "^/inventory$", "^/manager(/.+)?$", "^/messages?/.+$", "^/outbox$", "^/partner/.+$", "^/_?products/.+$", "^/profile$", "^/search$", "^/settings$", "^/settings/notifications$", "^/settings/[a-zA-Z0-9_\\-]+$", "^/settings/profile$", "^/p/.+$", "^/store/games(/.+)?$", "^/streams/[0-9]+/channel/[a-zA-Z0-9]+$", "^/subscriptions$", "^/team/.+$", "^/team_invitation/.+$", "^/team_permission/.+$", "^/year(/[0-9]{4})?$", "^/year/2016(/.+)?$", "^/upload$", "^/user/.+$", "^/yt/.+$"],
+    "legacy_routes": ["^/broadcast$", "^/broadcast/dashboards(/.+)?$", "^/broadcast/stats(/get)?$", "^/bug_reports/new$", "^/[a-zA-Z0-9_\\-%]+/dashboard$", "^/[a-zA-Z0-9_\\-%]+/dashboard/action_log$", "^/[a-zA-Z0-9_\\-%]+/dashboard/activity$", "^/[a-zA-Z0-9_\\-%]+/dashboard/commercial$", "^/[a-zA-Z0-9_\\-%]+/dashboard/delay$", "^/[a-zA-Z0-9_\\-%]+/dashboard/events$", "^/[a-zA-Z0-9_\\-%]+/dashboard/extensions(/.+)?$", "^/[a-zA-Z0-9_\\-%]+/dashboard/permissions$", "^/[a-zA-Z0-9_\\-%]+/dashboard/revenue$", "^/[a-zA-Z0-9_\\-%]+/dashboard/settings(/.+)?$", "^/[a-zA-Z0-9_\\-%]+/dashboard/stats$", "^/[a-zA-Z0-9_\\-%]+/dashboard/streamkey$", "^/[a-zA-Z0-9_\\-%]+/dashboard/subscription(/.+)?$", "^/[a-zA-Z0-9_\\-%]+/dashboard/video-stats(/.+)?$", "^/[a-zA-Z0-9_\\-%]+/esports/.+$", "^/[a-zA-Z0-9_\\-%]+/followers$", "^/(?!directory/)[a-zA-Z0-9_\\-%]+/following$", "^/[a-zA-Z0-9_\\-%]*/inbox$", "^/[a-zA-Z0-9_\\-%]+/manager$", "^/[a-zA-Z0-9_\\-%]+/manager/.+$", "^/[a-zA-Z0-9_\\-%]*/outbox$", "^/[a-zA-Z0-9_\\-%]+/popout$", "^/[a-zA-Z0-9_\\-%]+/profile(/.+)?$", "^/[a-zA-Z0-9_\\-%]+/report_form$", "^/[a-zA-Z0-9_\\-%]+/settings(/.+)?$", "^/[a-zA-Z0-9_\\-%]+/subscribe(/.+)?$", "^/[a-zA-Z0-9_\\-%]+/v/.+$", "^/chat/embed$", "^/chromecast/", "^/communities/.+/moderation(/.*)?$", "^/communities/create$", "^/communities$", "^/dashboard/?$", "^/directory/random$", "^/ext(/.+)?$", "^/friends(/requests)?$", "^/health_check$", "^/inbox$", "^/inventory$", "^/manager(/.+)?$", "^/messages?/.+$", "^/outbox$", "^/partner/.+$", "^/_?products/.+$", "^/profile$", "^/search$", "^/settings$", "^/settings/notifications$", "^/settings/[a-zA-Z0-9_\\-]+$", "^/settings/profile$", "^/p/.+$", "^/store/games(/.+)?$", "^/streams/[0-9]+/channel/[a-zA-Z0-9]+$", "^/subscriptions$", "^/team/.+$", "^/team_invitation/.+$", "^/team_permission/.+$", "^/year(/[0-9]{4})?$", "^/year/2016(/.+)?$", "^/upload$", "^/user/.+$", "^/yt/.+$"],
     "legacy_routes_enabled": true,
     "live_event_banner_whitelist": [],
     "live_event_poll_interval": 300000,
@@ -58,7 +58,7 @@ window.__twilightSettings = {
     "store_merch_promo": "off",
     "store_merch_seasonal": "on",
     "streamer_trailers_start_date": "2017-10-12T23:00:25.75536206Z",
-    "twilight_routes": ["channel", "channelEvents", "clips", "collections", "community", "dashboardAchievements", "dashboardModeration", "dashboardStreamSummary", "directoryAllChannels", "directoryCommunities", "directoryCreative", "directoryFollowing", "directoryFollowingCommunities", "directoryFollowingChannels", "directoryFollowingGames", "directoryFollowingHosts", "directoryGame", "directoryGames", "directoryGameClips", "directoryGameVideos", "directoryVideos", "event", "index", "merchStore", "settingsNotifications", "video", "videos"],
+    "twilight_routes": ["channel", "channelEvents", "clips", "collections", "community", "dashboardAchievements", "dashboardModeration", "dashboardStreamSummary", "directoryAllChannels", "directoryCommunities", "directoryCreative", "directoryFollowing", "directoryFollowingCommunities", "directoryFollowingChannels", "directoryFollowingGames", "directoryFollowingHosts", "directoryGame", "directoryGames", "directoryGameDetails", "directoryGameClips", "directoryGameVideos", "directoryVideos", "event", "index", "merchStore", "settingsNotifications", "video", "videos"],
     "twilight_routes_enabled": true,
     "twilight_routes_test_users": ["tanexion", "codecrshr", "adamar", "major_mosey", "kashinwins", "legypsy", "cathadan", "zenhaplo", "diresqrl", "kugleburg", "polygoose", "r_demerzel", "digisaint", "molu", "bennyguitar", "cresseye", "lunacyhatter", "lawls544", "delthios"],
     "twilight_video_manager_public": false,
@@ -274,6 +274,18 @@ window.__twilightSettings = {
             }, {
                 "weight": 0,
                 "value": "no"
+            }]
+        },
+        "6f822381-f41d-445e-bf88-36fb9095a7b5": {
+            "name": "twilight_v_ember",
+            "v": 2720,
+            "t": 1,
+            "groups": [{
+                "weight": 10,
+                "value": "control"
+            }, {
+                "weight": 90,
+                "value": "treatment"
             }]
         },
         "73fd722c-5197-4677-9a89-bb61a6aadc1d": {
