@@ -78,6 +78,18 @@ window.__twilightSettings = {
                 "value": "no"
             }]
         },
+        "0dc9a9c9-fee5-4b5f-a462-f07675713e5e": {
+            "name": "TWILIGHT_FOLLOWING_INDEX_LATEST_VIDEOS_V2",
+            "v": 2719,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "enabled"
+            }]
+        },
         "1318509a-bf97-475d-acdc-df6a24ef6e3e": {
             "name": "twilight_videos_in_sidenav",
             "v": 2689,
