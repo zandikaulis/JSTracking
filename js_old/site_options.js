@@ -2715,25 +2715,25 @@ window.SiteOptions = {
         },
         "953e4d90-2463-4caf-8f55-2884b7e34fa4": {
             "name": "clips_let_it_go",
-            "v": 2455,
+            "v": 2712,
             "t": 1,
             "groups": [{
-                "weight": 16,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 16,
+                "weight": 0,
                 "value": "variant1"
             }, {
-                "weight": 16,
+                "weight": 100,
                 "value": "variant2"
             }, {
-                "weight": 16,
+                "weight": 0,
                 "value": "variant3"
             }, {
-                "weight": 16,
+                "weight": 0,
                 "value": "variant4"
             }, {
-                "weight": 16,
+                "weight": 0,
                 "value": "variant5"
             }]
         },
