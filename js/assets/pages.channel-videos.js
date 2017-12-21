@@ -3432,8 +3432,8 @@ webpackJsonp([38], {
                         if (t.props.event.ritualType === ae.NewChatter) {
                             var e = t.props.event.message,
                                 n = e.user.isIntl ? e.user.userDisplayName + " (" + e.user.userLogin + ")" : e.user.userDisplayName;
-                            return Object(u.d)("@{userName} is new here. Say hello!", {
-                                userName: n
+                            return Object(u.d)("{user} is new here. Say hello!", {
+                                user: "@" + n
                             }, "NewChatterRitual")
                         }
                         return ""
@@ -6727,8 +6727,8 @@ webpackJsonp([38], {
                         t = (s = {}, s[Object(St.c)(_.a.Dark)] = e, s);
                     if (this.props.isHidden) return k.createElement(V._18, {
                         alignItems: V.c.Center,
-                        background: V.m.Alt,
-                        className: R("chat-room__pane", t),
+                        background: V.m.Alt2,
+                        borderLeft: !0,
                         display: V.H.Flex,
                         flexDirection: V.J.Column,
                         fullHeight: !0,
@@ -6778,7 +6778,8 @@ webpackJsonp([38], {
                         fullWidth: !0,
                         fullHeight: !0
                     }, k.createElement(V._18, {
-                        className: "chat-room__pane",
+                        background: V.m.Alt2,
+                        borderLeft: !0,
                         display: V.H.Flex,
                         flexDirection: V.J.Column,
                         flexWrap: V.K.NoWrap,
@@ -6787,7 +6788,9 @@ webpackJsonp([38], {
                         fullHeight: !0,
                         overflow: V.Z.Hidden,
                         color: V.F.Base
-                    }, k.createElement(V.U, {
+                    }, k.createElement(V._18, {
+                        background: V.m.Alt2,
+                        borderBottom: !0,
                         className: "chat-room__header",
                         display: V.H.Flex,
                         justifyContent: V.T.Center,
@@ -23805,4 +23808,4 @@ webpackJsonp([38], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-videos-b32a52cf52726551f95af077f73d2034.js.map
+//# sourceMappingURL=pages.channel-videos-1d8b1da3dd1d4e92d4e5be8dafcd71de.js.map

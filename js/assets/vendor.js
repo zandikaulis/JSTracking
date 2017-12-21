@@ -827,8 +827,9 @@ webpackJsonp([58], {
             v = n("7Y0d"),
             y = n("Pi7Q"),
             g = n("46lB"),
-            b = n("MSsg"),
-            _ = function() {
+            b = n("tuK6"),
+            _ = n("MSsg"),
+            w = function() {
                 var e = Object.setPrototypeOf || {
                     __proto__: []
                 }
@@ -844,10 +845,10 @@ webpackJsonp([58], {
                     e(t, n), t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r)
                 }
             }(),
-            w = ["allow-forms", "allow-scripts", "allow-same-origin"],
-            E = 700,
-            x = 300,
-            C = function(e) {
+            E = ["allow-forms", "allow-scripts", "allow-same-origin"],
+            x = 700,
+            C = 300,
+            k = function(e) {
                 function t(t) {
                     var n = e.call(this) || this;
                     return n.handleUserAction = {
@@ -954,11 +955,11 @@ webpackJsonp([58], {
                     }, n.buildCoordinator = function() {
                         return n.params.extensionCoordinator || new f.ExtensionCoordinator(n.iframe)
                     }, n.buildFunctionManager = function() {
-                        return new h.FunctionManager(n.coordinator, n.emitConfirmationRequest)
+                        return n.params.functionManager || new h.FunctionManager(n.coordinator, n.emitConfirmationRequest)
                     }, n.buildPurchaseService = function() {
                         return n.params.purchaseService || new m.PurchaseService
                     }, n.getExtensionHeight = function() {
-                        return "config" === n.params.mode ? E : n.extension.panelHeight ? Number(n.extension.panelHeight) : x
+                        return "config" === n.params.mode ? x : n.extension.panelHeight ? Number(n.extension.panelHeight) : C
                     }, n.getAnchorAttributes = function() {
                         var e = n.params.mode,
                             t = {};
@@ -978,7 +979,7 @@ webpackJsonp([58], {
                     }, n.createSupervisorIFrame = function(e, t, r) {
                         var o = n.params.mode,
                             i = document.createElement("iframe");
-                        switch (i.setAttribute("class", e), i.setAttribute("sandbox", w.join(" ")), i.setAttribute("frameBorder", "0"), i.setAttribute("scrolling", "no"), i.setAttribute("src", d.supervisor.supervisorURL), o) {
+                        switch (i.setAttribute("class", e), i.setAttribute("sandbox", E.join(" ")), i.setAttribute("frameBorder", "0"), i.setAttribute("scrolling", "no"), i.setAttribute("src", d.supervisor.supervisorURL), o) {
                             case "viewer":
                                 n.applyAnchorAttributes(i, t), n.applyViewerPanelWhitelist(i);
                                 break;
@@ -987,7 +988,7 @@ webpackJsonp([58], {
                                 i.setAttribute("style", "height: " + s + "px;"), n.applyConfigWhitelist(i);
                                 break;
                             case "config":
-                                i.setAttribute("style", "width: 100%; height: " + E + "px;"), n.applyConfigWhitelist(i)
+                                i.setAttribute("style", "width: 100%; height: " + x + "px;"), n.applyConfigWhitelist(i)
                         }
                         return i.style.display = "none", i
                     }, n.initSupervisedExtension = function() {
@@ -1003,7 +1004,7 @@ webpackJsonp([58], {
                                 e = n.extension.configUrl, t = n.getConfigWhitelist()
                         }
                         var r = n.getAnchorAttributes();
-                        r.sandbox = t || w.join(" ");
+                        r.sandbox = t || E.join(" ");
                         var i = {
                             extensionURL: (0, o.appendQueryParams)(e, n.extensionOptions),
                             hostOrigin: window.location.origin,
@@ -1089,7 +1090,7 @@ webpackJsonp([58], {
                             e.target.removeEventListener(e.event, e.callback)
                         }), n.contextManager.off("context", n.coordinator.sendContext), n.coordinator.off(u.ExtensionAction.TwitchExtLoaded, n.onExtensionLoaded), n.coordinator.off(u.ExtensionAction.TwitchExtNetworkTiming, n.onExtensionNetworkTraffic), n.coordinator.off(u.ExtensionAction.TwitchExtUserAction, n.onExtensionUserAction), n.unregisterFunctionModals(), a.tokenManager.unsubscribe(n.extension.clientId, n.handleToken)
                     }, n.registerFunctionModals = function() {
-                        n.functionManager.registerFunctionModal(u.FunctionAction.FollowAction, new g.FollowModal(n.params.loginId, n.tracker))
+                        n.functionManager.registerFunctionModal(u.FunctionAction.FollowAction, new g.FollowModal(n.params.loginId, n.tracker)), n.extension.requestIdentityLink && n.functionManager.registerFunctionModal(u.FunctionAction.IdShareRequest, new b.SimpleRequestModal)
                     }, n.unregisterFunctionModals = function() {
                         n.functionManager.unregisterFunctionModal(u.FunctionAction.FollowAction)
                     }, n.handlePurchaseCompleted = function(e) {
@@ -1099,9 +1100,9 @@ webpackJsonp([58], {
                                 return e.sku === t
                             }) && n.coordinator.sendExtensionReloadEntitlementsMessage()
                         })
-                    }, n.params = t, n.iframe = n.createSupervisorIFrame(t.iframeClassName, n.extension.anchor, n.extensionOptions), void 0 !== t.onBeginPurchase && (n.onBeginPurchase = t.onBeginPurchase), n.setupListeners(), n.tracker.trackEvent("extension_render", {}), t.parentElement.appendChild(n.iframe), n.visibilityChanged(), n.params.loginId && b.extensionService.onPurchaseCompleted(n.params.loginId, n.handlePurchaseCompleted), n
+                    }, n.params = t, n.iframe = n.createSupervisorIFrame(t.iframeClassName, n.extension.anchor, n.extensionOptions), void 0 !== t.onBeginPurchase && (n.onBeginPurchase = t.onBeginPurchase), n.setupListeners(), n.tracker.trackEvent("extension_render", {}), t.parentElement.appendChild(n.iframe), n.visibilityChanged(), n.params.loginId && _.extensionService.onPurchaseCompleted(n.params.loginId, n.handlePurchaseCompleted), n
                 }
-                return _(t, e), Object.defineProperty(t.prototype, "tracker", {
+                return w(t, e), Object.defineProperty(t.prototype, "tracker", {
                     get: function() {
                         return (0, y.memoize)(this.buildTracker)
                     },
@@ -1164,9 +1165,9 @@ webpackJsonp([58], {
                     var e = this.params.mode,
                         t = this.extension,
                         n = t.whitelistedPanelUrls;
-                    return "panel" === t.anchor && n.length && "viewer" === e ? w.concat(["allow-popups", "allow-popups-to-escape-sandbox"]).join(" ") : w.join(" ")
+                    return "panel" === t.anchor && n.length && "viewer" === e ? E.concat(["allow-popups", "allow-popups-to-escape-sandbox"]).join(" ") : E.join(" ")
                 }, t.prototype.getConfigWhitelist = function() {
-                    return this.extension.whitelistedConfigUrls.length ? w.concat(["allow-popups", "allow-popups-to-escape-sandbox"]).join(" ") : w.join(" ")
+                    return this.extension.whitelistedConfigUrls.length ? E.concat(["allow-popups", "allow-popups-to-escape-sandbox"]).join(" ") : E.join(" ")
                 }, t.prototype.applyViewerPanelWhitelist = function(e) {
                     e.setAttribute("sandbox", this.getViewerPanelWhiteList())
                 }, t.prototype.applyConfigWhitelist = function(e) {
@@ -1201,7 +1202,7 @@ webpackJsonp([58], {
                     })
                 }, t
             }(r.EventEmitter2);
-        t.ExtensionFrame = C
+        t.ExtensionFrame = k
     },
     "1J/j": function(e, t, n) {
         function r() {
@@ -24083,7 +24084,7 @@ webpackJsonp([58], {
         });
         var r = t.FunctionAction = void 0;
         ! function(e) {
-            e.FollowAction = "twitch-ext-follow-action", e.FollowComplete = "twitch-ext-follow-complete", e.FollowStatusRequest = "twitch-ext-follow-status", e.FollowStatusResponse = "twitch-ext-follow-status-response"
+            e.FollowAction = "twitch-ext-follow-action", e.FollowComplete = "twitch-ext-follow-complete", e.FollowStatusRequest = "twitch-ext-follow-status", e.FollowStatusResponse = "twitch-ext-follow-status-response", e.IdShareRequest = "twitch-ext-id-share-request"
         }(r || (t.FunctionAction = r = {}))
     },
     awF4: function(e, t, n) {
@@ -29629,13 +29630,13 @@ webpackJsonp([58], {
                     var n = this;
                     this.coordinator = e, this.emitConfirmationRequest = t, this.functionActionMap = (0, r.dict)(), this.functionModalMap = (0, r.dict)(), this.registerFunctionModal = function(e, t) {
                         t.onOpen(function(r) {
-                            n.requestConfirmation({
+                            var o = {
                                 action: e,
-                                options: r,
                                 resultCallback: t.resultCallback,
                                 defaultResult: t.defaultResult
-                            })
-                        }), t.onModalResult(function(e) {
+                            };
+                            r && (o.options = r), n.requestConfirmation(o)
+                        }), t.onModalResult && t.onModalResult(function(e) {
                             n.sendFunctionReply(e)
                         }), n.functionModalMap[e] = t, n.functionActionMap[e] = n.functionActionHandler(e), n.coordinator.on(e, n.functionActionMap[e])
                     }, this.unregisterFunctionModal = function(e) {
@@ -31498,7 +31499,7 @@ webpackJsonp([58], {
                 }
             })
         });
-        t.ExtensionEventActions = [o.SupervisorAction.SupervisorReady, r.ExtensionAction.TwitchExtLoaded, r.ExtensionAction.TwitchExtUserAction, r.ExtensionAction.TwitchExtNetworkTiming, r.ExtensionAction.TwitchExtBeginPurchase, i.FunctionAction.FollowAction, i.FunctionAction.FollowStatusRequest]
+        t.ExtensionEventActions = [o.SupervisorAction.SupervisorReady, r.ExtensionAction.TwitchExtLoaded, r.ExtensionAction.TwitchExtUserAction, r.ExtensionAction.TwitchExtNetworkTiming, r.ExtensionAction.TwitchExtBeginPurchase, i.FunctionAction.FollowAction, i.FunctionAction.FollowStatusRequest, i.FunctionAction.IdShareRequest]
     },
     rbSI: function(e, t, n) {
         "use strict";
@@ -32572,6 +32573,30 @@ webpackJsonp([58], {
         }, a.disableFragmentWarnings = function() {
             p = !1
         }, e.exports = a
+    },
+    tuK6: function(e, t, n) {
+        "use strict";
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        });
+        var r = function() {
+            function e() {
+                var e = this;
+                this.close = function() {}, this.onOpen = function(t) {
+                    e.openCallback = t
+                }, this.onModalResult = function(e) {}, this.resultCallback = function(e) {}
+            }
+            return Object.defineProperty(e.prototype, "defaultResult", {
+                get: function() {
+                    return null
+                },
+                enumerable: !0,
+                configurable: !0
+            }), e.prototype.open = function() {
+                this.openCallback()
+            }, e
+        }();
+        t.SimpleRequestModal = r
     },
     "u1/p": function(e, t, n) {
         "use strict";
@@ -37156,4 +37181,4 @@ webpackJsonp([58], {
         }
     }
 });
-//# sourceMappingURL=vendor-868354d8e21974063cacfc0140aed5a6.js.map
+//# sourceMappingURL=vendor-4dbb576bd2720319f63907f9e8f6fcfd.js.map

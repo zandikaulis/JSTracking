@@ -161,8 +161,8 @@ webpackJsonp([50], {
             S = n("UbVv"),
             y = n("2KeS"),
             k = n("yWCw"),
-            N = n("7vx8"),
-            w = n("oIkB"),
+            w = n("7vx8"),
+            N = n("oIkB"),
             _ = n("F8kA"),
             E = (n("0ERg"), function(e) {
                 function t() {
@@ -260,7 +260,7 @@ webpackJsonp([50], {
                             return a.__generator(this, function(r) {
                                 switch (r.label) {
                                     case 0:
-                                        return this.props.data && this.props.data.currentUser && this.props.setAdvancedNotificationSetting ? (t = a.__assign({}, Object(w.a)({
+                                        return this.props.data && this.props.data.currentUser && this.props.setAdvancedNotificationSetting ? (t = a.__assign({}, Object(N.a)({
                                             disableNotifications: n,
                                             targetID: e
                                         }), {
@@ -281,7 +281,7 @@ webpackJsonp([50], {
                                                 o.node.id === e && (o.notificationSettings.isEnabled = !i.data.followUser.follow.disableNotifications)
                                             }
                                             return t
-                                        }, Object(w.d)(x, {
+                                        }, Object(N.d)(x, {
                                             limit: 50
                                         }, o), this.markSaved(e), [2]
                                 }
@@ -423,7 +423,7 @@ webpackJsonp([50], {
                     }
                 }, t
             }(o.Component),
-            C = Object(y.compose)(Object(N.a)(x, {
+            C = Object(y.compose)(Object(w.a)(x, {
                 options: function() {
                     return {
                         fetchPolicy: "cache-and-network",
@@ -445,7 +445,7 @@ webpackJsonp([50], {
                                     return {
                                         currentUser: a.__assign({}, n.currentUser, {
                                             follows: a.__assign({}, n.currentUser.follows, {
-                                                edges: Object(w.b)(e.currentUser.follows.edges, n.currentUser.follows.edges)
+                                                edges: Object(N.b)(e.currentUser.follows.edges, n.currentUser.follows.edges)
                                             })
                                         })
                                     }
@@ -454,7 +454,7 @@ webpackJsonp([50], {
                         }
                     })
                 }
-            }), Object(N.a)(O, {
+            }), Object(w.a)(O, {
                 name: "setAdvancedNotificationSetting"
             }), Object(d.c)("AdvancedNotificationSettings"))(P),
             j = n("BhyV"),
@@ -709,13 +709,9 @@ webpackJsonp([50], {
                         name: Object(r.d)("Moderator", "PlatformNotificationSettings"),
                         description: Object(r.d)("Any time I get a notification as a moderator", "PlatformNotificationSettings")
                     }, {
-                        category: "DEVELOPERS",
-                        name: Object(r.d)("Third-Party Applications", "PlatformNotificationSettings"),
-                        description: Object(r.d)("Receive notifications for drops", "PlatformNotificationSettings")
-                    }, {
                         category: "COMMERCE",
-                        name: Object(r.d)("Gifts", "PlatformNotificationSettings"),
-                        description: Object(r.d)("Any time someone gifts me a Subscription", "PlatformNotificationSettings")
+                        name: Object(r.d)("Gifts and Rewards", "PlatformNotificationSettings"),
+                        description: Object(r.d)("Receive notifications for drops, crates, and subscription gifts", "PlatformNotificationSettings")
                     }], t.toggleAll = function() {
                         t.toggleSettingCategory("ALL", t.getGlobalStateForPlatform())
                     }, t.toggleCollapse = function() {
@@ -730,7 +726,7 @@ webpackJsonp([50], {
                             return a.__generator(this, function(l) {
                                 switch (l.label) {
                                     case 0:
-                                        return this.props.data && this.props.data.currentUser && this.props.setNotificationSetting ? (t = n ? "off" : "on", i = a.__assign({}, Object(w.a)({
+                                        return this.props.data && this.props.data.currentUser && this.props.setNotificationSetting ? (t = n ? "off" : "on", i = a.__assign({}, Object(N.a)({
                                             category: e,
                                             platform: this.props.platformName,
                                             settingState: t
@@ -749,7 +745,7 @@ webpackJsonp([50], {
                                                     return e.platformName === s.props.platformName && (e.isEnabled = "on" === o.data.setNotificationSetting.settingState, e.settingState = o.data.setNotificationSetting.settingState), e
                                                 })), t
                                             }), t
-                                        }, Object(w.d)(B, {}, r), this.markSaved(e), [2]
+                                        }, Object(N.d)(B, {}, r), this.markSaved(e), [2]
                                 }
                             })
                         })
@@ -939,13 +935,13 @@ webpackJsonp([50], {
                     }
                 }, t
             }(o.Component),
-            I = Object(y.compose)(Object(d.c)("PlatformNotificationSettings"), Object(N.a)(B, {
+            I = Object(y.compose)(Object(d.c)("PlatformNotificationSettings"), Object(w.a)(B, {
                 options: function() {
                     return {
                         fetchPolicy: "cache-and-network"
                     }
                 }
-            }), Object(N.a)(L, {
+            }), Object(w.a)(L, {
                 name: "setNotificationSetting"
             }))(M),
             z = (n("H7Zw"), function(e) {
@@ -2140,4 +2136,4 @@ webpackJsonp([50], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.global-notification-settings-cb348e951daddca2b2e161f39c52a4cc.js.map
+//# sourceMappingURL=pages.global-notification-settings-8dc2c2e9d7c81ab62deaa24af89d46f5.js.map

@@ -13637,6 +13637,7 @@ webpackJsonp([42], {
                     }), Lt.createElement(Rt._18, {
                         className: Bn("video-chat", "qa-vod-chat"),
                         display: Rt.H.Flex,
+                        background: Rt.m.Alt2,
                         borderLeft: !0,
                         color: Rt.F.Alt,
                         flexDirection: Rt.J.Column,
@@ -17099,4 +17100,4 @@ webpackJsonp([42], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.video-watch-e5e6140f5f99b1c0b88f8602fb92452c.js.map
+//# sourceMappingURL=pages.video-watch-68341091b9713399056c37271fbc26dd.js.map

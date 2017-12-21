@@ -36518,6 +36518,7 @@ webpackJsonp([32], {
                     }), It.createElement(Ft._18, {
                         className: Hn("video-chat", "qa-vod-chat"),
                         display: Ft.H.Flex,
+                        background: Ft.m.Alt2,
                         borderLeft: !0,
                         color: Ft.F.Alt,
                         flexDirection: Ft.J.Column,
@@ -42342,4 +42343,4 @@ webpackJsonp([32], {
         }
     }
 });
-//# sourceMappingURL=pages.dashboard-17cc8cf18ce8e0b2417130f3311db372.js.map
+//# sourceMappingURL=pages.dashboard-cef98b9bf74ddcee410904980406d63f.js.map

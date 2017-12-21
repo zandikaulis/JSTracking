@@ -1506,13 +1506,13 @@ webpackJsonp([43], {
                     })
                 }, t
             }(a.Component)),
-            x = Object(l.c)("ClipsViewModalNavigation")(j),
-            P = Object(s.a)(null, function(e) {
+            P = Object(l.c)("ClipsViewModalNavigation")(j),
+            x = Object(s.a)(null, function(e) {
                 return Object(c.bindActionCreators)({
                     showModal: d.d,
                     closeModal: d.c
                 }, e)
-            })(x),
+            })(P),
             M = (n("/+aa"), "clips-modal-view--wide"),
             V = function(e) {
                 function t() {
@@ -1553,7 +1553,7 @@ webpackJsonp([43], {
                         clip: this.props.clip,
                         isTemporary: !0,
                         onClose: this.setToViewState
-                    }) : (e = a.createElement(P, {
+                    }) : (e = a.createElement(x, {
                         getClips: this.props.getClips,
                         clip: this.props.clip,
                         clipIndex: this.props.clipIndex,
@@ -2388,7 +2388,7 @@ webpackJsonp([43], {
 
         function r() {
             return {
-                type: xe
+                type: Pe
             }
         }
 
@@ -2734,8 +2734,8 @@ webpackJsonp([43], {
                     firstPageLoaded: e.session.firstPageLoaded
                 }
             })(R),
-            x = n("iOr9"),
-            P = n("HW6M"),
+            P = n("iOr9"),
+            x = n("HW6M"),
             M = function() {
                 var e = function() {
                     return d.createElement(U.U, {
@@ -2946,7 +2946,7 @@ webpackJsonp([43], {
                                 }, d.createElement(U.U, {
                                     className: "event__broadcast-wrapper"
                                 }, d.createElement(U.U, {
-                                    className: P("event__broadcast", {
+                                    className: x("event__broadcast", {
                                         "event__broadcast-last": i === e.broadcasts.length - 1
                                     }),
                                     padding: {
@@ -3069,7 +3069,7 @@ webpackJsonp([43], {
                     }, Object(p.d)("Recent Events", "Events"))), d.createElement(U.U, null, d.createElement(H, {
                         events: s
                     })))), d.createElement(U.U, {
-                        className: P({
+                        className: x({
                             "featured-events-layout__column": e
                         })
                     }, t, i, o)
@@ -3313,7 +3313,7 @@ webpackJsonp([43], {
                                 fallback: this.renderGrid
                             },
                             t = this.renderAdLessGrid;
-                        return d.createElement(x.a, {
+                        return d.createElement(P.a, {
                             name: "TWILIGHT_EVENT_GAME_DIRECTORY",
                             assignments: e,
                             loader: t
@@ -4208,7 +4208,7 @@ webpackJsonp([43], {
             Ae = n("CIox"),
             Re = n("Ejve"),
             je = "header.DIRECTORY_HEADER_EDIT_ENABLED",
-            xe = "header.DIRECTORY_HEADER_EDIT_DISABLED";
+            Pe = "header.DIRECTORY_HEADER_EDIT_DISABLED";
         p.n.store.registerReducer("directoryHeader", function(e, t) {
             switch (void 0 === e && (e = {
                 isEditingEnabled: !1
@@ -4217,7 +4217,7 @@ webpackJsonp([43], {
                     return c.__assign({}, e, {
                         isEditingEnabled: !0
                     });
-                case xe:
+                case Pe:
                     return c.__assign({}, e, {
                         isEditingEnabled: !1
                     });
@@ -4225,12 +4225,12 @@ webpackJsonp([43], {
                     return e
             }
         });
-        var Pe, Me = n("2KeS"),
+        var xe, Me = n("2KeS"),
             Ve = n("V5M+"),
             Be = n("5eRk");
         ! function(e) {
             e.AVATAR = "AVATAR", e.BANNER = "BANNER"
-        }(Pe || (Pe = {}));
+        }(xe || (xe = {}));
         var Ge, He = "directory-avatar-edit-menu",
             We = "directory-avatar-overlay",
             ze = "directory-avatar-remover",
@@ -4445,7 +4445,7 @@ webpackJsonp([43], {
                                     case 0:
                                         t = 0, n = dt.b, a.label = 1;
                                     case 1:
-                                        return t < n.length ? (i = n[t], e.type !== i ? [3, 3] : [4, this.props.createUploadURLMutation(this.props.data.directory.id, Pe.AVATAR, i)]) : [3, 4];
+                                        return t < n.length ? (i = n[t], e.type !== i ? [3, 3] : [4, this.props.createUploadURLMutation(this.props.data.directory.id, xe.AVATAR, i)]) : [3, 4];
                                     case 2:
                                         return [2, a.sent()];
                                     case 3:
@@ -4652,7 +4652,7 @@ webpackJsonp([43], {
                                     case 0:
                                         t = 0, n = dt.b, a.label = 1;
                                     case 1:
-                                        return t < n.length ? (i = n[t], e.type !== i ? [3, 3] : [4, this.props.createUploadURLMutation(this.props.data.directory.id, Pe.BANNER, i)]) : [3, 4];
+                                        return t < n.length ? (i = n[t], e.type !== i ? [3, 3] : [4, this.props.createUploadURLMutation(this.props.data.directory.id, xe.BANNER, i)]) : [3, 4];
                                     case 2:
                                         return [2, a.sent()];
                                     case 3:
@@ -4701,7 +4701,7 @@ webpackJsonp([43], {
                             backgroundImage: "url(" + t.previewImageURL + ")"
                         }
                     }));
-                    var r = P("directory-header__banner", {
+                    var r = x("directory-header__banner", {
                         "directory-header__banner--blur": i
                     });
                     return d.createElement(U.U, {
@@ -4913,14 +4913,13 @@ webpackJsonp([43], {
                     }
                 }, e)
             })(Ot),
-            Tt = n("QRuM"),
+            Tt = n("jetF"),
             Ut = n("czpb"),
-            It = n("jetF"),
-            Lt = n("oSFp"),
-            At = n("LjAQ"),
-            Rt = n("mw/a"),
-            jt = n("BhyV"),
-            xt = (n("vxr0"), n("0zzo")),
+            It = n("oSFp"),
+            Lt = n("LjAQ"),
+            At = n("mw/a"),
+            Rt = n("BhyV"),
+            jt = (n("vxr0"), n("0zzo")),
             Pt = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -4995,26 +4994,26 @@ webpackJsonp([43], {
                     })))
                 }, t
             }(d.Component),
-            Mt = Object(jt.compose)(Object(f.a)(xt, {
+            xt = Object(Rt.compose)(Object(f.a)(jt, {
                 name: "tosBanCommunity"
             }))(Pt),
-            Vt = Object(u.a)(null, function(e) {
+            Mt = Object(u.a)(null, function(e) {
                 return Object(Me.bindActionCreators)({
                     onCloseModal: Ve.c
                 }, e)
-            })(Mt),
-            Bt = n("9VER"),
-            Gt = function(e) {
+            })(xt),
+            Vt = n("9VER"),
+            Bt = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         isEditingCommunity: !1
                     }, t.openReportModal = function() {
-                        t.props.isLoggedIn ? t.props.onShowModal(Lt.a, {
+                        t.props.isLoggedIn ? t.props.onShowModal(It.a, {
                             onClose: t.handleReportModalClose,
                             reportContext: {
                                 contentID: t.props.data.community.id,
-                                contentType: Rt.a.Community,
+                                contentType: At.a.Community,
                                 targetUserID: t.props.data.community.owner.id,
                                 extra: t.props.communityName
                             },
@@ -5023,20 +5022,20 @@ webpackJsonp([43], {
                             }, "CommunitiesSettingsCog")
                         }) : t.props.login()
                     }, t.openBanModal = function() {
-                        t.props.onShowModal(Vt, {
+                        t.props.onShowModal(Mt, {
                             communityID: t.props.data.community.id,
                             communityName: t.props.communityName
                         })
                     }, t.onEditModeToggle = function() {
                         t.props.isHeaderEditEnabled ? t.props.onDisableDirectoryHeaderEdit() : (p.n.history.push(Object(re.a)(t.props.communityName) + "/details"), t.props.onEnableDirectoryHeaderEdit())
                     }, t.handleReportModalClose = function(e) {
-                        (e === At.b.MutationError || e === At.b.Success) && t.props.history.push("/")
+                        (e === Lt.b.MutationError || e === Lt.b.Success) && t.props.history.push("/")
                     }, t
                 }
                 return c.__extends(t, e), t.prototype.render = function() {
                     return this.props.data && this.props.data.error ? null : d.createElement(U.U, {
                         position: U._3.Relative
-                    }, d.createElement(It.a, null, d.createElement(U.v, {
+                    }, d.createElement(Tt.a, null, d.createElement(U.v, {
                         ariaLabel: Object(p.d)("Settings", "CommunitiesSettingsCog"),
                         icon: U._10.Gear
                     }), d.createElement(U.p, {
@@ -5083,7 +5082,7 @@ webpackJsonp([43], {
                             x: 1
                         }
                     }, Object(p.d)("Ban", "CommunitiesSettingsCog"))) : null
-                }, t = c.__decorate([Object(f.a)(Bt, {
+                }, t = c.__decorate([Object(f.a)(Vt, {
                     options: function(e) {
                         return {
                             fetchPolicy: "network-only",
@@ -5099,7 +5098,7 @@ webpackJsonp([43], {
                     autoReportInteractive: !0
                 })], t)
             }(d.Component),
-            Ht = Object(u.a)(function(e) {
+            Gt = Object(u.a)(function(e) {
                 return {
                     isHeaderEditEnabled: o(e),
                     isLoggedIn: Object(W.d)(e)
@@ -5114,15 +5113,15 @@ webpackJsonp([43], {
                     onEnableDirectoryHeaderEdit: a,
                     onDisableDirectoryHeaderEdit: r
                 }, e)
-            })(Object(ft.f)(Gt)),
-            Wt = n("/XPz"),
-            zt = n("D88i"),
-            qt = (n("5yZy"), "directory-tabs__item"),
-            $t = qt + "--selected";
+            })(Object(ft.f)(Bt)),
+            Ht = n("/XPz"),
+            Wt = n("D88i"),
+            zt = (n("5yZy"), "directory-tabs__item"),
+            qt = zt + "--selected";
         ! function(e) {
             e[e.DirectoryPage = 0] = "DirectoryPage", e[e.DirectoryVideosPage = 1] = "DirectoryVideosPage", e[e.DirectoryClipsPage = 2] = "DirectoryClipsPage", e[e.DirectoryDetailsPage = 3] = "DirectoryDetailsPage"
         }(Ge || (Ge = {}));
-        var Qt, Jt = function(e) {
+        var $t, Qt = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -5155,9 +5154,9 @@ webpackJsonp([43], {
                         t = this.props.directoryType === D.a.Games ? Object(re.c)(this.props.directoryName) : Object(re.a)(this.props.directoryName);
                     return this.getDirectoryTabs().map(function(n, i) {
                         var a = n.label.replace(/ /g, "-").toLowerCase(),
-                            r = P(qt, (o = {}, o["directory-tabs__item--first"] = 0 === i, o[$t] = n.isSelected, o));
+                            r = x(zt, (o = {}, o["directory-tabs__item--first"] = 0 === i, o[qt] = n.isSelected, o));
                         return d.createElement(U.P, {
-                            key: qt + "--" + n.label,
+                            key: zt + "--" + n.label,
                             display: U.H.Flex,
                             alignItems: U.c.Center,
                             flexShrink: 0,
@@ -5183,24 +5182,20 @@ webpackJsonp([43], {
                     if (this.props.data.loading && !this.props.data.directory) return null;
                     if (this.props.data.error || !this.props.data.directory) return null;
                     if (this.props.data.directory && !this.props.data.directory.product) return null;
-                    var e, t = P(qt, (a = {}, a[$t] = this.props.activeTab === Ge.DirectoryDetailsPage, a)),
-                        n = Object(p.d)("Game Details", "DirectoryGameTabs"),
-                        i = Object(re.c)(this.props.directoryName) + "/details";
-                    return e = p.b.get("commerce_gdp_launch", Tt.a.Off) !== Tt.a.On ? d.createElement("a", {
-                        className: t,
-                        href: Object(Ut.a)(i),
-                        target: Object(Ut.b)() ? "_blank" : ""
-                    }, this.renderTabData(n)) : d.createElement(ft.a, {
-                        className: t,
-                        to: i
-                    }, this.renderTabData(n)), d.createElement(U.P, {
+                    var e = x(zt, (i = {}, i[qt] = this.props.activeTab === Ge.DirectoryDetailsPage, i)),
+                        t = Object(p.d)("Game Details", "DirectoryGameTabs"),
+                        n = Object(re.c)(this.props.directoryName) + "/details";
+                    return d.createElement(U.P, {
                         display: U.H.Flex,
                         alignItems: U.c.Center,
                         flexShrink: 0
-                    }, e);
-                    var a
+                    }, d.createElement(ft.a, {
+                        className: e,
+                        to: n
+                    }, this.renderTabData(t)));
+                    var i
                 }, t.prototype.renderSettingsCog = function() {
-                    return this.props.directoryType !== D.a.Communities ? null : d.createElement(Ht, {
+                    return this.props.directoryType !== D.a.Communities ? null : d.createElement(Gt, {
                         communityName: this.props.directoryName
                     })
                 }, t.prototype.renderFollowButton = function() {
@@ -5218,7 +5213,7 @@ webpackJsonp([43], {
                                 margin: {
                                     left: 1
                                 }
-                            }, d.createElement(Wt.a, {
+                            }, d.createElement(Ht.a, {
                                 gameName: this.props.directoryName,
                                 src: "directory"
                             }));
@@ -5250,7 +5245,7 @@ webpackJsonp([43], {
                     }].filter(function(t) {
                         return t.whitelistDirectories.includes(e.props.directoryType)
                     })
-                }, t = c.__decorate([Object(f.a)(zt, {
+                }, t = c.__decorate([Object(f.a)(Wt, {
                     options: function(e) {
                         return {
                             fetchPolicy: "network-only",
@@ -5262,7 +5257,7 @@ webpackJsonp([43], {
                     }
                 }), Object(N.c)("DirectoryGameTabs")], t)
             }(d.Component),
-            Yt = function(e) {
+            Jt = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -5275,7 +5270,7 @@ webpackJsonp([43], {
                     }), d.createElement(vt, {
                         directoryType: this.props.directoryType,
                         directoryName: this.props.directoryName
-                    }), d.createElement(Jt, {
+                    }), d.createElement(Qt, {
                         directoryType: this.props.directoryType,
                         directoryName: this.props.directoryName,
                         activeTab: this.props.activeTab
@@ -5284,13 +5279,13 @@ webpackJsonp([43], {
                     autoReportInteractive: !0
                 })], t)
             }(d.Component),
-            Kt = n("eXld"),
-            Xt = n("lfvs"),
-            Zt = n("dH4b"),
-            en = n("J4ib"),
-            tn = n("QYm2"),
-            nn = n("2nSg"),
-            an = function(e) {
+            Yt = n("eXld"),
+            Kt = n("lfvs"),
+            Xt = n("dH4b"),
+            Zt = n("J4ib"),
+            en = n("QYm2"),
+            tn = n("2nSg"),
+            nn = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -5339,7 +5334,7 @@ webpackJsonp([43], {
                             t.setState({
                                 buttonState: U.y.Loading
                             }), t.props.editCommunity(a).then(function(e) {
-                                Object(k.d)(tn, {
+                                Object(k.d)(en, {
                                     name: decodeURIComponent(t.props.communityName)
                                 }, function(n) {
                                     return ["description", "summary", "rules"].forEach(function(i) {
@@ -5378,18 +5373,18 @@ webpackJsonp([43], {
                     }, this.renderPlaceholder(), this.renderPlaceholder()) : this.props.data.error ? null : d.createElement(U._33, {
                         childWidth: U._34.Large
                     }, d.createElement(U.U, null, this.renderSummary(), this.renderDetailsPanel({
-                        title: Object(en.d)("Description", "DirectoryCommunityDetailsContent"),
+                        title: Object(Zt.d)("Description", "DirectoryCommunityDetailsContent"),
                         data: this.props.data.community.description,
                         onChangeHandler: this.onDescriptionChange
                     })), d.createElement(U.U, null, this.renderDetailsPanel({
-                        title: Object(en.d)("Rules", "DirectoryCommunityDetailsContent"),
+                        title: Object(Zt.d)("Rules", "DirectoryCommunityDetailsContent"),
                         data: this.props.data.community.rules,
                         onChangeHandler: this.onRulesChange
                     }), this.props.isHeaderEditEnabled ? this.renderSaveButton() : null))
                 }, t.prototype.renderDetailsPanel = function(e) {
-                    var t = d.createElement(U._36, null, d.createElement(Xt, c.__assign({
+                    var t = d.createElement(U._36, null, d.createElement(Kt, c.__assign({
                         source: e.data
-                    }, Zt.a)));
+                    }, Xt.a)));
                     return this.props.isHeaderEditEnabled && (t = d.createElement(U._24, {
                         defaultValue: e.data,
                         onChange: e.onChangeHandler,
@@ -5413,7 +5408,7 @@ webpackJsonp([43], {
                     }, t))
                 }, t.prototype.renderSummary = function() {
                     return this.props.isHeaderEditEnabled ? this.renderDetailsPanel({
-                        title: Object(en.d)("Summary", "DirectoryCommunityDetailsContent"),
+                        title: Object(Zt.d)("Summary", "DirectoryCommunityDetailsContent"),
                         data: this.props.data.community.summary,
                         onChangeHandler: this.onSummaryChange,
                         rows: 5,
@@ -5430,7 +5425,7 @@ webpackJsonp([43], {
                         onClick: this.onSaveClick,
                         disabled: !this.state.description || !this.state.rules || !this.state.summary,
                         "data-test-selector": "save-button"
-                    }, Object(en.d)("Save", "DirectoryCommunityDetailsContent")))
+                    }, Object(Zt.d)("Save", "DirectoryCommunityDetailsContent")))
                 }, t.prototype.renderPlaceholder = function() {
                     return d.createElement(U.U, null, d.createElement(U._18, {
                         background: U.m.Base,
@@ -5442,7 +5437,7 @@ webpackJsonp([43], {
                     }, d.createElement(U._2, {
                         lineCount: 6
                     })))))
-                }, t = c.__decorate([Object(f.a)(tn, {
+                }, t = c.__decorate([Object(f.a)(en, {
                     options: function(e) {
                         return {
                             fetchPolicy: "network-only",
@@ -5451,13 +5446,13 @@ webpackJsonp([43], {
                             }
                         }
                     }
-                }), Object(f.a)(nn, {
+                }), Object(f.a)(tn, {
                     name: "editCommunity"
                 }), Object(N.c)("DirectoryCommunityDetailsComponent", {
                     autoReportInteractive: !0
                 })], t)
             }(d.Component),
-            rn = Object(u.a)(function(e) {
+            an = Object(u.a)(function(e) {
                 return {
                     isHeaderEditEnabled: o(e)
                 }
@@ -5465,8 +5460,8 @@ webpackJsonp([43], {
                 return Object(Me.bindActionCreators)({
                     onDisableDirectoryHeaderEdit: r
                 }, e)
-            })(an),
-            on = function(e) {
+            })(nn),
+            rn = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.state = {
@@ -5482,18 +5477,18 @@ webpackJsonp([43], {
                             bottom: 3,
                             x: 3
                         }
-                    }, d.createElement(rn, {
+                    }, d.createElement(an, {
                         communityName: decodeURIComponent(this.props.match.params.encodedCommunityName)
                     }))
                 }, t = c.__decorate([Object(N.c)("DirectoryCommunityDetailsPage", {
                     destination: b.a.DirectoryCommunityDetails
                 })], t)
             }(d.Component),
-            ln = n("QAcM"),
-            sn = n("5bwi"),
-            cn = n("WNmM"),
-            dn = n("TLUY"),
-            un = function(e) {
+            on = n("QAcM"),
+            ln = n("5bwi"),
+            sn = n("WNmM"),
+            cn = n("TLUY"),
+            dn = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.loadMoreTopClips = function() {
@@ -5512,21 +5507,21 @@ webpackJsonp([43], {
                         fillContent: !0
                     });
                     if (this.props.data.error) return d.createElement(h.a, {
-                        message: Object(en.d)("Error loading data.", "DirectoryGameClipsContent")
+                        message: Object(Zt.d)("Error loading data.", "DirectoryGameClipsContent")
                     });
                     if (this.props.data.game) {
-                        var e = ln.a[this.props.timeFilterValue];
+                        var e = on.a[this.props.timeFilterValue];
                         return d.createElement(U.U, {
                             padding: {
                                 top: 2,
                                 bottom: 3,
                                 x: 3
                             }
-                        }, d.createElement(sn.a, {
+                        }, d.createElement(ln.a, {
                             clips: this.props.data.game.clips.edges.map(function(e) {
                                 return e.node
                             }),
-                            pageType: cn.b.Game,
+                            pageType: sn.b.Game,
                             timeFilterValue: this.props.timeFilterValue,
                             updateTimeFilter: this.props.updateTimeFilter,
                             loadMoreClips: this.loadMoreTopClips,
@@ -5538,11 +5533,11 @@ webpackJsonp([43], {
                         }))
                     }
                     return d.createElement(h.a, {
-                        message: Object(en.d)("Game does not exist", "DirectoryGameClipsContent")
+                        message: Object(Zt.d)("Game does not exist", "DirectoryGameClipsContent")
                     })
                 }, t = c.__decorate([Object(N.c)("DirectoryGameClipsContent", {
                     autoReportInteractive: !0
-                }), Object(f.a)(dn, {
+                }), Object(f.a)(cn, {
                     options: function(e) {
                         return {
                             variables: {
@@ -5550,7 +5545,7 @@ webpackJsonp([43], {
                                 limit: 20,
                                 criteria: {
                                     languages: e.languagePreferences,
-                                    filter: ln.a[e.timeFilterValue]
+                                    filter: on.a[e.timeFilterValue]
                                 }
                             }
                         }
@@ -5559,7 +5554,7 @@ webpackJsonp([43], {
                         return c.__assign({}, e, {
                             loadMore: function() {
                                 return e.data.fetchMore({
-                                    query: dn,
+                                    query: cn,
                                     variables: c.__assign({}, e.data.variables, {
                                         cursor: e.data.game.clips.edges[e.data.game.clips.edges.length - 1].cursor
                                     }),
@@ -5579,12 +5574,12 @@ webpackJsonp([43], {
                     }
                 })], t)
             }(d.Component),
-            mn = Object(u.a)(function(e) {
+            un = Object(u.a)(function(e) {
                 return {
                     languagePreferences: Object(m.a)(e)
                 }
-            })(un),
-            pn = function(e) {
+            })(dn),
+            mn = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.updateTimeFilter = function(e) {
@@ -5593,13 +5588,13 @@ webpackJsonp([43], {
                         })
                     }, n.state = {
                         directoryType: O(t.match.path),
-                        timeFilterValue: ln.b.Day
+                        timeFilterValue: on.b.Day
                     }, n
                 }
                 return c.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive(), p.n.setPageTitle(decodeURIComponent(this.props.match.params.encodedCommunityName))
                 }, t.prototype.render = function() {
-                    return d.createElement(mn, {
+                    return d.createElement(un, {
                         gameName: decodeURIComponent(this.props.match.params.encodedCommunityName),
                         updateTimeFilter: this.updateTimeFilter,
                         timeFilterValue: this.state.timeFilterValue
@@ -5610,16 +5605,16 @@ webpackJsonp([43], {
                     location: _.PageviewLocation.ClipsGame
                 })], t)
             }(d.Component),
-            gn = n("68hr"),
-            hn = n("oAfo"),
-            vn = n("4Tv+"),
-            fn = n("J5Bm"),
-            yn = function(e) {
+            pn = n("68hr"),
+            gn = n("oAfo"),
+            hn = n("4Tv+"),
+            vn = n("J5Bm"),
+            fn = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onBuyInGameContentNow = function() {
                         var e = t.props && t.props.referrer;
-                        Object(vn.a)(t.props.content.info, e, t.props.game, _.PageviewLocation.GameDetail, t.onPopupClose)
+                        Object(hn.a)(t.props.content.info, e, t.props.game, _.PageviewLocation.GameDetail, t.onPopupClose)
                     }, t.onPopupClose = function() {
                         t.props.refetchData && t.props.refetchData()
                     }, t
@@ -5639,7 +5634,6 @@ webpackJsonp([43], {
                             info: n,
                             countryCode: this.props.countryCode,
                             crates: n.crateASINs,
-                            gameID: this.props.game.id,
                             isInGameContent: !0,
                             userHasPrime: this.props.hasPrime
                         };
@@ -5682,16 +5676,16 @@ webpackJsonp([43], {
                             bottom: 1,
                             top: 2
                         }
-                    }, d.createElement(fn.a, {
+                    }, d.createElement(vn.a, {
                         onClickBuyNow: this.onBuyInGameContentNow,
                         options: s
-                    })), d.createElement(U._36, null, d.createElement(Xt, {
+                    })), d.createElement(U._36, null, d.createElement(Kt, {
                         source: a || t
                     }))))))
                 }, t
             }(d.Component),
-            kn = Object(N.c)("FeaturedContent")(yn),
-            bn = function(e) {
+            yn = Object(N.c)("FeaturedContent")(fn),
+            kn = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -5709,8 +5703,8 @@ webpackJsonp([43], {
                     }, this.props.children)
                 }, t
             }(d.Component),
-            Sn = Object(N.c)("GameDetailsSection")(bn),
-            _n = function(e) {
+            bn = Object(N.c)("GameDetailsSection")(kn),
+            Sn = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -5726,8 +5720,8 @@ webpackJsonp([43], {
                     }, this.props.title))
                 }, t
             }(d.Component),
-            Cn = Object(N.c)("GameDetailsTitle")(_n),
-            En = function(e) {
+            _n = Object(N.c)("GameDetailsTitle")(Sn),
+            Cn = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -5738,7 +5732,7 @@ webpackJsonp([43], {
                         t = this.props.contentList;
                     if (0 === t.length) return null;
                     var n = t.map(function(t, n) {
-                        return d.createElement(kn, {
+                        return d.createElement(yn, {
                             content: t,
                             countryCode: e.props.countryCode,
                             game: e.props.game,
@@ -5748,18 +5742,18 @@ webpackJsonp([43], {
                             referrer: e.props.referrer
                         })
                     });
-                    return d.createElement(Sn, {
+                    return d.createElement(bn, {
                         alt: !0
-                    }, d.createElement(Cn, {
+                    }, d.createElement(_n, {
                         title: Object(p.d)("Game Add-Ons", "FeaturedContentRow")
                     }), d.createElement(U.N, {
                         gutterSize: U.O.Large
                     }, n))
                 }, t
             }(d.Component),
-            Nn = Object(N.c)("FeaturedContentRow")(En),
-            wn = n("aFoJ"),
-            Dn = (n("nAt9"), function(e) {
+            En = Object(N.c)("FeaturedContentRow")(Cn),
+            Nn = n("aFoJ"),
+            wn = (n("nAt9"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderSeparator = function() {
@@ -5776,9 +5770,9 @@ webpackJsonp([43], {
                     }, t.onBuyNowClick = function() {
                         var e = t.props && t.props.referrer,
                             n = t.props && t.props.game && t.props.game.product && t.props.game.product.info;
-                        n && Object(vn.a)(n, e, t.props.game, _.PageviewLocation.GameDetail, t.onPopupClose)
-                    }, t.onClaimOffer = function(e) {
-                        t.props.claimOffer && t.props.claimOffer(Object(k.a)({
+                        n && Object(hn.a)(n, e, t.props.game, _.PageviewLocation.GameDetail, t.onPopupClose)
+                    }, t.onClaimPrimeOffer = function(e) {
+                        t.props.claimPrimeOffer && t.props.claimPrimeOffer(Object(k.a)({
                             offerID: e
                         })).then(function(e) {
                             t.props.refetchData && t.props.refetchData()
@@ -5803,7 +5797,7 @@ webpackJsonp([43], {
                 }, t.prototype.render = function() {
                     var e = this.props.game,
                         t = e ? e.product : void 0;
-                    if (!e || !t) return d.createElement(Sn, {
+                    if (!e || !t) return d.createElement(bn, {
                         alt: !0
                     }, d.createElement(U._18, {
                         className: "game-details-box",
@@ -5838,7 +5832,6 @@ webpackJsonp([43], {
                         i = !(!this.props.currentUser || !this.props.currentUser.hasPrime),
                         a = {
                             info: t.info,
-                            gameID: e.id,
                             crates: t.info.crateASINs,
                             size: U.x.Large,
                             externalAcquisition: t.acquisition,
@@ -5866,7 +5859,7 @@ webpackJsonp([43], {
                             "data-test-selector": "fuel-shared-revenue"
                         }, l)
                     }
-                    return d.createElement(Sn, {
+                    return d.createElement(bn, {
                         alt: !0
                     }, d.createElement(U._18, {
                         className: "game-details-box",
@@ -5884,9 +5877,9 @@ webpackJsonp([43], {
                         display: U.H.Flex,
                         flexDirection: U.J.Row,
                         alignItems: U.c.Center
-                    }, d.createElement(fn.a, {
+                    }, d.createElement(vn.a, {
                         onClickBuyNow: this.onBuyNowClick,
-                        onClickClaimOffer: this.onClaimOffer,
+                        onClickClaimPrimeOffer: this.onClaimPrimeOffer,
                         options: a,
                         "data-test-selector": "game-details-box-fuel-buy-button"
                     }), this.renderSeparator(), d.createElement("img", {
@@ -5894,7 +5887,7 @@ webpackJsonp([43], {
                         src: t.esrbRating.iconURL,
                         "data-test-selector": "game-details-box-rating",
                         className: "game-details-box__rating"
-                    }), r, d.createElement(Xt, {
+                    }), r, d.createElement(Kt, {
                         "data-test-selector": "game-details-box-launch-platform",
                         source: t.launchPlatform.description,
                         renderers: {
@@ -5903,11 +5896,11 @@ webpackJsonp([43], {
                     })), o))
                 }, t
             }(d.Component)),
-            On = Object(N.c)("GameDetailBox")(Dn),
-            Fn = Object(f.a)(wn, {
-                name: "claimOffer"
-            })(On),
-            Tn = function(e) {
+            Dn = Object(N.c)("GameDetailBox")(wn),
+            On = Object(f.a)(Nn, {
+                name: "claimPrimeOffer"
+            })(Dn),
+            Fn = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -5924,7 +5917,7 @@ webpackJsonp([43], {
                         o = n.map(function(e, t) {
                             return d.createElement("li", {
                                 key: t
-                            }, d.createElement(Xt, {
+                            }, d.createElement(Kt, {
                                 source: e
                             }))
                         }),
@@ -5970,7 +5963,7 @@ webpackJsonp([43], {
                         }),
                         s = this.renderSystemRequirements(a),
                         c = this.renderSystemRequirements(r);
-                    return d.createElement(Sn, null, d.createElement(U.N, {
+                    return d.createElement(bn, null, d.createElement(U.N, {
                         gutterSize: U.O.Large
                     }, d.createElement(U.G, {
                         cols: {
@@ -5982,22 +5975,22 @@ webpackJsonp([43], {
                         margin: {
                             top: 4
                         }
-                    }, d.createElement(Cn, {
+                    }, d.createElement(_n, {
                         title: Object(p.d)("Description", "DirectoryGameDetailsPage")
-                    }), d.createElement(U._36, null, d.createElement(Xt, {
+                    }), d.createElement(U._36, null, d.createElement(Kt, {
                         source: t.description
                     }))), d.createElement(U.U, {
                         margin: {
                             top: 4
                         }
-                    }, d.createElement(Cn, {
+                    }, d.createElement(_n, {
                         title: Object(p.d)("Features", "DirectoryGameDetailsPage")
                     }), d.createElement(U._36, null, d.createElement("ul", null, o))), d.createElement(U._18, {
                         margin: {
                             top: 4
                         },
                         fontSize: U.L.Size6
-                    }, d.createElement(Cn, {
+                    }, d.createElement(_n, {
                         title: Object(p.d)("Information", "DirectoryGameDetailsPage")
                     }), this.renderRow(Object(p.d)("Title: ", "DirectoryGameDetailsPage"), t.title), this.renderRow(Object(p.d)("Developer: ", "DirectoryGameDetailsPage"), e.developer), this.renderRow(Object(p.d)("Publisher: ", "DirectoryGameDetailsPage"), e.publisher), this.renderRowLink(Object(p.d)("More Info: ", "DirectoryGameDetailsPage"), Object(p.d)("Website", "DirectoryGameDetailsPage"), e.websiteURL), this.renderRowLink(Object(p.d)("License Agreement: ", "DirectoryGameDetailsPage"), Object(p.d)("Check out the EULA", "DirectoryGameDetailsPage"), e.eulaURL), this.renderRowLink(Object(p.d)("Need Help? ", "DirectoryGameDetailsPage"), Object(p.d)("Contact Support", "DirectoryGameDetailsPage"), e.supportURL))), d.createElement(U.G, {
                         cols: {
@@ -6009,7 +6002,7 @@ webpackJsonp([43], {
                         margin: {
                             top: 4
                         }
-                    }, d.createElement(Cn, {
+                    }, d.createElement(_n, {
                         title: Object(p.d)("Hardware Requirements", "DirectoryGameDetailsPage")
                     }), d.createElement(U.U, {
                         padding: {
@@ -6030,7 +6023,7 @@ webpackJsonp([43], {
                         margin: {
                             top: 4
                         }
-                    }, d.createElement(Cn, {
+                    }, d.createElement(_n, {
                         title: Object(p.d)("Language Support", "DirectoryGameDetailsPage")
                     }), d.createElement(U.N, null, d.createElement(U.G, {
                         cols: 3
@@ -6086,8 +6079,8 @@ webpackJsonp([43], {
                     }, t))
                 }, t
             }(d.Component),
-            Un = Object(N.c)("GameInfoSection")(Tn),
-            In = function(e) {
+            Tn = Object(N.c)("GameInfoSection")(Fn),
+            Un = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -6105,14 +6098,14 @@ webpackJsonp([43], {
                     }))
                 }, t
             }(d.Component),
-            Ln = Object(Me.compose)(Object(u.a)(null, function(e) {
+            In = Object(Me.compose)(Object(u.a)(null, function(e) {
                 return Object(Me.bindActionCreators)({
                     closeModal: Ve.c
                 }, e)
-            }))(In),
-            An = n("Ervg"),
-            Rn = n("KqsW"),
-            jn = (n("OOh8"), function(e) {
+            }))(Un),
+            Ln = n("Ervg"),
+            An = n("KqsW"),
+            Rn = (n("OOh8"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderItems = function() {
@@ -6134,7 +6127,7 @@ webpackJsonp([43], {
                                         right: 2
                                     },
                                     key: e.id
-                                }, d.createElement(An.a, {
+                                }, d.createElement(Ln.a, {
                                     video: e
                                 }))
                             }),
@@ -6167,34 +6160,34 @@ webpackJsonp([43], {
                 return c.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return d.createElement(Sn, null, d.createElement(Cn, {
+                    return d.createElement(bn, null, d.createElement(_n, {
                         title: Object(p.d)("Videos and Screenshots", "DirectoryGameDetailsPage")
                     }), d.createElement(U.P, {
                         margin: {
                             bottom: 3,
                             top: 1
                         }
-                    }, d.createElement(Rn.a, {
+                    }, d.createElement(An.a, {
                         items: this.renderItems()
                     })))
                 }, t = c.__decorate([Object(N.c)("GameMedia")], t)
             }(d.Component)),
-            xn = Object(u.a)(function() {
+            jn = Object(u.a)(function() {
                 return {}
             }, function(e) {
                 return Object(Me.bindActionCreators)({
                     showImageViewerModal: function(e) {
                         var t = c.__rest(e, []);
-                        return Object(Ve.d)(Ln, t)
+                        return Object(Ve.d)(In, t)
                     }
                 }, e)
-            })(jn),
+            })(Rn),
             Pn = (n("UJ+F"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onBuyInGameContentNow = function() {
                         var e = t.props && t.props.referrer;
-                        Object(vn.a)(t.props.content.info, e, t.props.game, _.PageviewLocation.GameDetail, t.onPopupClose)
+                        Object(hn.a)(t.props.content.info, e, t.props.game, _.PageviewLocation.GameDetail, t.onPopupClose)
                     }, t.onPopupClose = function() {
                         t.props.refetchData && t.props.refetchData()
                     }, t
@@ -6214,11 +6207,10 @@ webpackJsonp([43], {
                             info: n,
                             countryCode: this.props.countryCode,
                             crates: n.crateASINs,
-                            gameID: this.props.game.id,
                             isInGameContent: !0,
                             userHasPrime: this.props.hasPrime
                         },
-                        u = d.createElement(fn.a, {
+                        u = d.createElement(vn.a, {
                             onClickBuyNow: this.onBuyInGameContentNow,
                             options: c
                         });
@@ -6283,8 +6275,8 @@ webpackJsonp([43], {
                     }, u))))
                 }, t
             }(d.Component)),
-            Mn = Object(N.c)("InGameContent")(Pn),
-            Vn = function(e) {
+            xn = Object(N.c)("InGameContent")(Pn),
+            Mn = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -6295,7 +6287,7 @@ webpackJsonp([43], {
                         t = this.props.contentList;
                     if (0 === t.length) return null;
                     var n = t.map(function(t, n) {
-                        return d.createElement(Mn, {
+                        return d.createElement(xn, {
                             content: t,
                             countryCode: e.props.countryCode,
                             game: e.props.game,
@@ -6305,9 +6297,9 @@ webpackJsonp([43], {
                             referrer: e.props.referrer
                         })
                     });
-                    return d.createElement(Sn, {
+                    return d.createElement(bn, {
                         alt: !0
-                    }, d.createElement(Cn, {
+                    }, d.createElement(_n, {
                         title: Object(p.d)("In-Game Content", "FeaturedContentRow")
                     }), d.createElement(U._33, {
                         childWidth: U._34.Medium,
@@ -6316,10 +6308,10 @@ webpackJsonp([43], {
                     }, n))
                 }, t
             }(d.Component),
-            Bn = Object(N.c)("InGameContentRow")(Vn),
-            Gn = n("FEHb"),
-            Hn = n("xCTX"),
-            Wn = function(e) {
+            Vn = Object(N.c)("InGameContentRow")(Mn),
+            Bn = n("FEHb"),
+            Gn = n("xCTX"),
+            Hn = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -6334,7 +6326,7 @@ webpackJsonp([43], {
                     var t = e.data && e.data.game,
                         n = t && t.product;
                     if (n) {
-                        var i = n.inGameContent.slice().sort(hn.a);
+                        var i = n.inGameContent.slice().sort(gn.a);
                         this.setState({
                             sortedInGameContent: i
                         })
@@ -6344,7 +6336,7 @@ webpackJsonp([43], {
                         if (this.props.data.error) return d.createElement(h.a, {
                             message: Object(p.d)("Error loading data.", "DirectoryGameDetailsPage")
                         });
-                        if (!this.props.data.game || !this.props.data.game.product || !this.props.data.game.product.id) return d.createElement(gn.PageNotFound, null)
+                        if (!this.props.data.game || !this.props.data.game.product || !this.props.data.game.product.id) return d.createElement(pn.PageNotFound, null)
                     }
                     var e = null,
                         t = null,
@@ -6361,37 +6353,37 @@ webpackJsonp([43], {
                         u = [];
                     return this.state.sortedInGameContent.forEach(function(e) {
                         e.info.isFeatured ? c.push(e) : u.push(e)
-                    }), d.createElement(U.U, null, d.createElement(Fn, {
+                    }), d.createElement(U.U, null, d.createElement(On, {
                         game: this.props.data.game,
                         referrer: l,
                         countryCode: s,
                         currentUser: this.props.data.currentUser,
                         refetchData: this.refetchData
-                    }), d.createElement(xn, {
+                    }), d.createElement(jn, {
                         screenshotURLs: e,
                         thumbnailURLs: t,
                         videos: n
-                    }), d.createElement(Nn, {
+                    }), d.createElement(En, {
                         contentList: c,
                         countryCode: s,
                         game: r,
                         hasPrime: o,
                         refetchData: this.refetchData,
                         referrer: l
-                    }), d.createElement(Bn, {
+                    }), d.createElement(Vn, {
                         contentList: u,
                         countryCode: s,
                         game: r,
                         hasPrime: o,
                         refetchData: this.refetchData,
                         referrer: l
-                    }), d.createElement(Un, {
+                    }), d.createElement(Tn, {
                         game: this.props.data.game
                     }))
                 }, t
             }(d.Component),
-            zn = Object(N.c)("DirectoryGameDetails")(Wn),
-            qn = Object(f.a)(Hn, {
+            Wn = Object(N.c)("DirectoryGameDetails")(Hn),
+            zn = Object(f.a)(Gn, {
                 options: function(e) {
                     return {
                         variables: {
@@ -6399,8 +6391,8 @@ webpackJsonp([43], {
                         }
                     }
                 }
-            })(zn),
-            $n = Object(f.a)(Gn, {
+            })(Wn),
+            qn = Object(f.a)(Bn, {
                 name: "referrerData",
                 skip: function(e) {
                     var t = be.parse(e.location.search),
@@ -6419,23 +6411,23 @@ webpackJsonp([43], {
                         }
                     }
                 }
-            })(qn),
-            Qn = Object(y.a)({
+            })(zn),
+            $n = Object(y.a)({
                 location: _.PageviewLocation.GameDetail
-            })($n),
-            Jn = n("JpYe"),
-            Yn = n("n2E0"),
-            Kn = n("VDV3"),
-            Xn = n("3yQz"),
-            Zn = n("JtGN"),
-            ei = Xn.b,
-            ti = function(e) {
+            })(qn),
+            Qn = n("JpYe"),
+            Jn = n("n2E0"),
+            Yn = n("VDV3"),
+            Kn = n("3yQz"),
+            Xn = n("JtGN"),
+            Zn = Kn.b,
+            ei = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.onVideoSortChange = function(e) {
-                        Object(Jn.d)("/directory/game/" + n.props.match.params.encodedCommunityName + "/videos", n.props, void 0, e)
+                        Object(Qn.d)("/directory/game/" + n.props.match.params.encodedCommunityName + "/videos", n.props, void 0, e)
                     }, n.onVideoFilterChange = function(e) {
-                        Object(Jn.d)("/directory/game/" + n.props.match.params.encodedCommunityName + "/videos", n.props, e)
+                        Object(Qn.d)("/directory/game/" + n.props.match.params.encodedCommunityName + "/videos", n.props, e)
                     }, n.state = {
                         directoryType: O(t.match.path)
                     }, n
@@ -6445,8 +6437,8 @@ webpackJsonp([43], {
                 }, t.prototype.render = function() {
                     var e = null,
                         t = decodeURIComponent(this.props.match.params.encodedCommunityName),
-                        n = Object(Jn.c)(this.props) || ei,
-                        i = Object(Jn.b)(this.props);
+                        n = Object(Qn.c)(this.props) || Zn,
+                        i = Object(Qn.b)(this.props);
                     if (this.props.data.error) {
                         var a = Object(p.d)("{gameName} videos are temporarily unavailable.", {
                             gameName: t
@@ -6471,14 +6463,14 @@ webpackJsonp([43], {
                             bottom: 3,
                             x: 3
                         }
-                    }, d.createElement(Kn.a, {
+                    }, d.createElement(Yn.a, {
                         onVideoSortChange: this.onVideoSortChange,
                         onVideoFilterChange: this.onVideoFilterChange,
                         selectedSort: n,
                         broadcastType: i
-                    }), d.createElement(Kn.b, {
+                    }), d.createElement(Yn.b, {
                         hideGameArt: !0,
-                        trackingContent: Object(Yn.a)(n),
+                        trackingContent: Object(Jn.a)(n),
                         trackingMedium: _.PageviewMedium.GameVideos,
                         videos: e
                     }), d.createElement(F.a, {
@@ -6488,7 +6480,7 @@ webpackJsonp([43], {
                     }))
                 }, t.prototype.enablePagination = function() {
                     return this.props.data && !this.props.data.loading && !this.props.data.error && this.props.data.game && this.props.data.game.videos && !!this.props.data.game.videos.pageInfo.hasNextPage
-                }, t = c.__decorate([Object(f.a)(Zn, {
+                }, t = c.__decorate([Object(f.a)(Xn, {
                     options: function(e) {
                         return {
                             fetchPolicy: "network-only",
@@ -6497,7 +6489,7 @@ webpackJsonp([43], {
                                 videoLimit: 30,
                                 languages: e.languagePreferences,
                                 broadcastTypes: e.match.params.filter && "all" !== e.match.params.filter ? [e.match.params.filter] : void 0,
-                                videoSort: Object(Jn.c)(e) || Xn.b
+                                videoSort: Object(Qn.c)(e) || Kn.b
                             }
                         }
                     },
@@ -6505,7 +6497,7 @@ webpackJsonp([43], {
                         return c.__assign({}, e, {
                             loadMore: function() {
                                 return e.data.fetchMore({
-                                    query: Zn,
+                                    query: Xn,
                                     variables: c.__assign({}, e.data.variables, {
                                         followedCursor: e.data.game && e.data.game.videos.edges.length > 0 ? e.data.game.videos.edges[e.data.game.videos.edges.length - 1].cursor : void 0
                                     }),
@@ -6535,15 +6527,15 @@ webpackJsonp([43], {
                     }
                 })], t)
             }(d.Component),
-            ni = Object(u.a)(function(e) {
+            ti = Object(u.a)(function(e) {
                 return {
                     languagePreferences: Object(m.a)(e)
                 }
-            })(ti);
+            })(ei);
         ! function(e) {
             e.CLIPS = "clips-scroller", e.DEFAULT = "directory-root-scroller", e.GAME = "game-scroller"
-        }(Qt || (Qt = {}));
-        var ii = function(e) {
+        }($t || ($t = {}));
+        var ni = function(e) {
             function t() {
                 return null !== e && e.apply(this, arguments) || this
             }
@@ -6551,16 +6543,16 @@ webpackJsonp([43], {
                 var e = this.props.match.path.startsWith("/communities") ? D.a.Communities : D.a.Games;
                 return d.createElement(U.U, {
                     "data-a-target": this.getScrollerName()
-                }, d.createElement(Kt.b, {
+                }, d.createElement(Yt.b, {
                     suppressScrollX: !0,
                     addPaddingWhenPlayerIsPersisting: !0
-                }), d.createElement(Yt, {
+                }), d.createElement(Jt, {
                     directoryType: e,
                     directoryName: decodeURIComponent(this.props.match.params.encodedCommunityName),
                     activeTab: this.getActiveTab()
                 }), d.createElement(Ae.d, null, d.createElement(Ae.b, {
                     path: "/communities/:encodedCommunityName/details",
-                    component: on
+                    component: rn
                 }), d.createElement(Ae.b, {
                     path: "/communities/:encodedCommunityName/:encodedLanguage",
                     component: Le
@@ -6569,13 +6561,13 @@ webpackJsonp([43], {
                     component: Le
                 }), d.createElement(Ae.b, {
                     path: "/directory/game/:encodedCommunityName/clips",
-                    component: pn
+                    component: mn
                 }), p.a.buildType !== Re.a.Production && d.createElement(Ae.b, {
                     path: "/directory/game/:encodedCommunityName/details",
-                    component: Qn
+                    component: $n
                 }), d.createElement(Ae.b, {
                     path: "/directory/game/:encodedCommunityName/videos/:filter",
-                    component: ni
+                    component: ti
                 }), d.createElement(Ae.b, {
                     path: "/directory/game/:encodedCommunityName/:encodedLanguage",
                     component: Le
@@ -6587,8 +6579,8 @@ webpackJsonp([43], {
                 var e = void 0;
                 return this.isClipsPage() ? e = Ge.DirectoryClipsPage : this.isDetailsPage() ? e = Ge.DirectoryDetailsPage : this.isVideosPage() ? e = Ge.DirectoryVideosPage : this.isMainPage() && (e = Ge.DirectoryPage), e
             }, t.prototype.getScrollerName = function() {
-                var e = Qt.DEFAULT;
-                return this.isClipsPage() ? e = Qt.CLIPS : this.isMainPage() && (e = Qt.GAME), e
+                var e = $t.DEFAULT;
+                return this.isClipsPage() ? e = $t.CLIPS : this.isMainPage() && (e = $t.GAME), e
             }, t.prototype.isMainPage = function() {
                 return "/communities/:encodedCommunityName" === this.props.match.path || "/directory/game/:encodedCommunityName" === this.props.match.path
             }, t.prototype.isClipsPage = function() {
@@ -6602,7 +6594,7 @@ webpackJsonp([43], {
         n.d(t, "DirectoryGamePage", function() {
             return Le
         }), n.d(t, "DirectoryRootPage", function() {
-            return ii
+            return ni
         })
     },
     "81qH": function(e, t, n) {
@@ -7962,8 +7954,8 @@ webpackJsonp([43], {
                 }, e)
             })(A),
             j = n("PLRK"),
-            x = (n("GiGb"), "directory-game__card_container"),
-            P = function(e) {
+            P = (n("GiGb"), "directory-game__card_container"),
+            x = function(e) {
                 function t() {
                     var t = e.call(this) || this;
                     return t.getLinkTo = function(e, n) {
@@ -8034,7 +8026,7 @@ webpackJsonp([43], {
                         margin: {
                             bottom: 2
                         },
-                        "data-target": x
+                        "data-target": P
                     }, a.createElement(_.U, {
                         position: _._3.Relative
                     }, a.createElement(o.a, {
@@ -8057,9 +8049,9 @@ webpackJsonp([43], {
         n.d(t, "a", function() {
             return "directory-first-item"
         }), n.d(t, !1, function() {
-            return x
-        }), n.d(t, "b", function() {
             return P
+        }), n.d(t, "b", function() {
+            return x
         })
     },
     Ajho: function(e, t) {},
@@ -8187,6 +8179,29 @@ webpackJsonp([43], {
                         alias: null,
                         name: {
                             kind: "Name",
+                            value: "primeOffer"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }]
+                        }
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
                             value: "purchaseURL"
                         },
                         arguments: [],
@@ -8207,11 +8222,11 @@ webpackJsonp([43], {
             }],
             loc: {
                 start: 0,
-                end: 146
+                end: 164
             }
         };
         n.loc.source = {
-            body: "fragment productInfo on ProductInfo {\nid\nasin\ncrateASINs\ndescription\nimageURL(size: 256)\nisEntitled\nisFeatured\nisForSale\nprice\npurchaseURL\ntitle\n}",
+            body: "fragment productInfo on ProductInfo {\nid\nasin\ncrateASINs\ndescription\nimageURL(size: 256)\nisEntitled\nisFeatured\nisForSale\nprice\nprimeOffer {\nid\n}\npurchaseURL\ntitle\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -9157,109 +9172,6 @@ webpackJsonp([43], {
     },
     GOrw: function(e, t) {},
     GiGb: function(e, t) {},
-    "I+dL": function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "FragmentDefinition",
-                name: {
-                    kind: "Name",
-                    value: "fuelPrimeOffer"
-                },
-                typeCondition: {
-                    kind: "NamedType",
-                    name: {
-                        kind: "Name",
-                        value: "PrimeOffer"
-                    }
-                },
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "id"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: null
-                    }, {
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "deliveryMethod"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: null
-                    }, {
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "content"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "game"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "id"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "name"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }]
-                                }
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 88
-            }
-        };
-        n.loc.source = {
-            body: "fragment fuelPrimeOffer on PrimeOffer {\nid\ndeliveryMethod\ncontent {\ngame {\nid\nname\n}\n}\n}",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
     IDLB: function(e, t) {},
     IMj1: function(e, t) {},
     INp2: function(e, t, n) {
@@ -9727,49 +9639,65 @@ webpackJsonp([43], {
             r = n("lfvs"),
             o = n("6sO2"),
             l = n("S1vB"),
-            s = "DIRECT_ENTITLEMENT",
-            c = n("Odds"),
-            d = (n("PlCc"), function(e) {
+            s = n("Odds"),
+            c = (n("PlCc"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
-                    return t.renderUnavailableText = function() {
+                    return t.state = {
+                        balloonOpen: !1
+                    }, t.renderUnavailableText = function() {
                         var e = t.props.options.isInGameContent ? Object(o.d)("This content is currently unavailable", "FuelBuyButton") : Object(o.d)("This game is currently unavailable", "FuelBuyButton");
-                        return a.createElement(c._22, {
+                        return a.createElement(s._22, {
                             italic: !0,
                             "data-target": "fuel-buy-button-unavailable"
                         }, e)
                     }, t.renderBuyNowButton = function(e, n, i, r) {
-                        void 0 === r && (r = c.x.Default);
+                        void 0 === r && (r = s.x.Default);
                         var l = null;
                         if (n && n.length > 1) {
-                            var s = Object(o.d)("Includes {crates} Twitch Crates!", {
+                            var c = Object(o.d)("Includes {crates} Twitch Crates!", {
                                 crates: n.length
                             }, "FuelBuyButton");
-                            l = a.createElement(c._22, {
+                            l = a.createElement(s._22, {
                                 className: "fuel-buy-button__crates",
                                 "data-target": "fuel-buy-button-crates"
-                            }, s)
+                            }, c)
                         }
                         var d = i ? "fuel-buy-button-content" : "fuel-buy-button";
-                        return a.createElement(c.U, {
-                            alignItems: c.c.Center
-                        }, a.createElement(c.u, {
+                        return a.createElement(s.U, {
+                            alignItems: s.c.Center
+                        }, a.createElement(s.u, {
                             fullWidth: !0,
-                            icon: n && n.length > 0 ? c._10.Crate : void 0,
+                            icon: n && n.length > 0 ? s._10.Crate : void 0,
                             purchase: e,
                             onClick: t.props.onClickBuyNow,
                             "data-target": d,
                             size: r
                         }, Object(o.d)("Buy Now", "FuelBuyButton")), l)
-                    }, t.onClickClaimOffer = function() {
-                        if (t.props.onClickClaimOffer) {
-                            var e = t.props.options,
-                                n = e.primeOffers,
-                                i = e.gameID,
-                                a = n && n.find(function(e) {
-                                    return !!e.content && !!e.content.game && e.content.game.id === i && e.deliveryMethod === s
-                                });
-                            a && t.props.onClickClaimOffer(a.id)
+                    }, t.renderPrimeTreatment = function(e, n) {
+                        var i = [],
+                            r = a.createElement(s._9, {
+                                asset: s._10.Crown,
+                                type: s._11.Prime,
+                                width: 16,
+                                height: 16,
+                                key: "fuel-crown"
+                            });
+                        return e ? i = [r, a.createElement("div", {
+                            className: "fuel-buy-button__prime-button",
+                            key: "fuel-claim"
+                        }, a.createElement(s.u, {
+                            onClick: t.onClickClaimPrimeOffer
+                        }, Object(o.d)("Claim Offer", "FuelBuyButton")))] : n && (i = [n]), a.createElement(s.U, {
+                            flexDirection: s.J.Row,
+                            display: s.H.Flex,
+                            alignItems: s.c.Center,
+                            "data-target": "fuel-buy-button-prime"
+                        }, i)
+                    }, t.onClickClaimPrimeOffer = function() {
+                        if (t.props.onClickClaimPrimeOffer) {
+                            var e = t.props.options.info.primeOffer;
+                            e && t.props.onClickClaimPrimeOffer(e.id)
                         }
                     }, t.renderExternalAcquisitionLink = function(e) {
                         return a.createElement("a", {
@@ -9781,66 +9709,29 @@ webpackJsonp([43], {
                 return i.__extends(t, e), t.prototype.render = function() {
                     var e = this.props.options,
                         t = e.info,
-                        n = e.primeOffers,
-                        i = e.gameID,
-                        d = e.countryCode,
-                        u = e.externalAcquisition,
-                        m = e.crates,
-                        p = e.userHasPrime,
-                        g = e.isInGameContent,
-                        h = e.size,
-                        v = n && n.find(function(e) {
-                            return !!e.content && !!e.content.game && e.content.game.id === i && e.deliveryMethod === s
-                        }),
-                        f = d && Object(l.a)(d),
-                        y = !v || !f;
-                    if (t.isEntitled) return a.createElement(c._22, {
+                        n = e.countryCode,
+                        i = e.externalAcquisition,
+                        c = e.crates,
+                        d = e.userHasPrime,
+                        u = e.isInGameContent,
+                        m = e.size,
+                        p = t.primeOffer,
+                        g = n && Object(l.a)(n),
+                        h = !p || !g;
+                    return t.isEntitled ? a.createElement(s._22, {
                         "data-target": "fuel-buy-button-purchased"
-                    }, Object(o.d)("Purchased", "FuelBuyButton"));
-                    if (0 === t.price.length && u && u.isExternal) return a.createElement("div", {
+                    }, Object(o.d)("Purchased", "FuelBuyButton")) : 0 === t.price.length && i && i.isExternal ? a.createElement("div", {
                         "data-target": "fuel-buy-button-external"
                     }, a.createElement(r, {
-                        source: u.description,
+                        source: i.description,
                         renderers: {
                             Link: this.renderExternalAcquisitionLink
                         }
-                    }));
-                    if (!t.isForSale && y) return this.renderUnavailableText();
-                    if (!v) return this.renderBuyNowButton(t.price, m, g, h);
-                    var k = [],
-                        b = a.createElement("div", {
-                            className: "fuel-buy-button__prime-button",
-                            key: "fuel-claim"
-                        }, a.createElement(c.u, {
-                            onClick: this.onClickClaimOffer
-                        }, Object(o.d)("Claim Offer", "FuelBuyButton"))),
-                        S = a.createElement(c._9, {
-                            asset: c._10.Crown,
-                            type: c._11.Prime,
-                            width: 16,
-                            height: 16,
-                            key: "fuel-crown"
-                        });
-                    if (p) k = [S, b];
-                    else {
-                        var _ = v ? Object(o.d)("Free", "FuelBuyButton") : t.price;
-                        k = [S, a.createElement(c._22, {
-                            bold: !0,
-                            className: "fuel-buy-button__prime-price",
-                            "data-target": "fuel-buy-button-prime-price",
-                            key: "fuel-price"
-                        }, _), b]
-                    }
-                    return a.createElement(c.U, {
-                        flexDirection: c.J.Row,
-                        display: c.H.Flex,
-                        alignItems: c.c.Center,
-                        "data-target": "fuel-buy-button-prime"
-                    }, k)
+                    })) : !t.isForSale && h ? this.renderUnavailableText() : p && !d ? this.renderPrimeTreatment(d, this.renderBuyNowButton(t.price, c, u, m)) : p ? this.renderPrimeTreatment(d) : this.renderBuyNowButton(t.price, c, u, m)
                 }, t
             }(a.Component));
         n.d(t, "a", function() {
-            return d
+            return c
         })
     },
     J8WN: function(e, t, n) {
@@ -11192,32 +11083,6 @@ webpackJsonp([43], {
             c = "ads.slot-render-end",
             d = "ads.slot-ready",
             u = new i.EventEmitter
-    },
-    QRuM: function(e, t, n) {
-        "use strict";
-        var i, a = n("TToO"),
-            r = n("U7vG"),
-            o = n("6sO2");
-        ! function(e) {
-            e.On = "on", e.Off = "off", e.StaffOnly = "staff"
-        }(i || (i = {}));
-        var l = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return a.__extends(t, e), t.prototype.render = function() {
-                    var e = o.b.get(this.props.name, i.Off);
-                    return e === i.On || e === i.StaffOnly && this.props.isStaff ? r.Children.only(this.props.children) : null
-                }, t
-            }(r.Component),
-            s = l;
-        n.d(t, "a", function() {
-            return i
-        }), n.d(t, !1, function() {
-            return l
-        }), n.d(t, "b", function() {
-            return s
-        })
     },
     QYm2: function(e, t) {
         var n = {
@@ -13107,7 +12972,7 @@ webpackJsonp([43], {
                         alias: null,
                         name: {
                             kind: "Name",
-                            value: "claimOffer"
+                            value: "claimPrimeOffer"
                         },
                         arguments: [{
                             kind: "Argument",
@@ -13166,11 +13031,11 @@ webpackJsonp([43], {
             }],
             loc: {
                 start: 0,
-                end: 128
+                end: 133
             }
         };
         n.loc.source = {
-            body: "mutation Fuel_ClaimPrimeOffer($input: ClaimPrimeOfferInput!) {\nclaimOffer(input: $input) {\nself {\nhasEntitlement\nclaimData\n}\n}\n}",
+            body: "mutation Fuel_ClaimPrimeOffer($input: ClaimPrimeOfferInput!) {\nclaimPrimeOffer(input: $input) {\nself {\nhasEntitlement\nclaimData\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -17338,26 +17203,6 @@ webpackJsonp([43], {
                         alias: null,
                         name: {
                             kind: "Name",
-                            value: "primeOffers"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "FragmentSpread",
-                                name: {
-                                    kind: "Name",
-                                    value: "fuelPrimeOffer"
-                                },
-                                directives: []
-                            }]
-                        }
-                    }, {
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
                             value: "requestInfo"
                         },
                         arguments: [],
@@ -17414,11 +17259,11 @@ webpackJsonp([43], {
             }],
             loc: {
                 start: 0,
-                end: 378
+                end: 283
             }
         };
         a.loc.source = {
-            body: '#import "twilight/features/fuel/models/fuel-product-full.gql"\n#import "twilight/features/fuel/models/fuel-game.gql"\n#import "twilight/features/fuel/models/fuel-prime-offer.gql"\nquery DirectoryGameDetails($name: String!) {\ngame(name: $name) {\nproduct {\n...fuelProductFull\n}\n...fuelGame\n}\nprimeOffers {\n...fuelPrimeOffer\n}\nrequestInfo {\ncountryCode\n}\ncurrentUser {\nid\nhasPrime\n}\n}',
+            body: '#import "twilight/features/fuel/models/fuel-product-full.gql"\n#import "twilight/features/fuel/models/fuel-game.gql"\nquery DirectoryGameDetails($name: String!) {\ngame(name: $name) {\nproduct {\n...fuelProductFull\n}\n...fuelGame\n}\nrequestInfo {\ncountryCode\n}\ncurrentUser {\nid\nhasPrime\n}\n}',
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -17426,7 +17271,7 @@ webpackJsonp([43], {
             }
         };
         var r = {};
-        a.definitions = a.definitions.concat(i(n("IWzU").definitions)), a.definitions = a.definitions.concat(i(n("+lUI").definitions)), a.definitions = a.definitions.concat(i(n("I+dL").definitions)), e.exports = a
+        a.definitions = a.definitions.concat(i(n("IWzU").definitions)), a.definitions = a.definitions.concat(i(n("+lUI").definitions)), e.exports = a
     },
     yU6t: function(e, t) {},
     z4nH: function(e, t) {
@@ -17559,4 +17404,4 @@ webpackJsonp([43], {
     zSAx: function(e, t) {},
     zu64: function(e, t) {}
 });
-//# sourceMappingURL=pages.directory-game-dab158d2895c4741ae597a6c6b9a16e2.js.map
+//# sourceMappingURL=pages.directory-game-2cb1c946b093cfc0b1db6b1d7c6c28a5.js.map
