@@ -288,6 +288,18 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
+        "0dc9a9c9-fee5-4b5f-a462-f07675713e5e": {
+            "name": "TWILIGHT_FOLLOWING_INDEX_LATEST_VIDEOS_V2",
+            "v": 2719,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "enabled"
+            }]
+        },
         "0ff4ccc4-fb0f-41c0-b195-db9ccdb712d5": {
             "name": "Bismol",
             "v": 1414,
