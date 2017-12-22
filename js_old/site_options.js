@@ -2355,13 +2355,13 @@ window.SiteOptions = {
         },
         "7aa589f3-34d8-425f-8227-29007d50757e": {
             "name": "twilight_growth_email_verify_bar",
-            "v": 2618,
+            "v": 2721,
             "t": 2,
             "groups": [{
-                "weight": 1,
+                "weight": 95,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 5,
                 "value": "enabled"
             }]
         },
