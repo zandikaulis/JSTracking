@@ -1782,7 +1782,6 @@ webpackJsonp([60], {
                 "74156eb2-ed95-482c-b006-60c1428e8846": "control",
                 "e9fe3136-84bc-4a61-9079-0c7df78abeb3": "control",
                 "29a37cfd-6a34-4624-970f-6b155b40636b": "control",
-                "9452d9e2-6588-408c-b8aa-1e54ff1e2f4a": "control",
                 "011d1499-61b3-49b2-92b2-b2ffd353ef00": "no",
                 "afc307f3-4011-40ba-9406-56c474b5922b": "control",
                 "1318509a-bf97-475d-acdc-df6a24ef6e3e": "none",
@@ -1793,7 +1792,8 @@ webpackJsonp([60], {
                 "f866f89d-85de-4a5b-9b00-d97c791bc16d": "no",
                 "47597570-dd4e-4996-85eb-86db164cae9c": "control",
                 "50ac9a2b-63c2-46ed-9e7d-123363195dfd": "control",
-                "7aa589f3-34d8-425f-8227-29007d50757e": "control"
+                "7aa589f3-34d8-425f-8227-29007d50757e": "control",
+                "0dc9a9c9-fee5-4b5f-a462-f07675713e5e": "control"
             },
             y = {
                 TWILIGHT_PREMIERE_UPLOAD_FLOW: "4d3d19a7-38c5-4328-9730-7d99565d5edd",
@@ -1803,7 +1803,6 @@ webpackJsonp([60], {
                 TWILIGHT_WEB_ONBOARDING_CHANNEL_RANKING: "74156eb2-ed95-482c-b006-60c1428e8846",
                 TWILIGHT_WEB_ONBOARDING_CATEGORIES: "e9fe3136-84bc-4a61-9079-0c7df78abeb3",
                 TWILIGHT_WEB_ONBOARDING_RANDOMIZED_GAMES: "29a37cfd-6a34-4624-970f-6b155b40636b",
-                TWILIGHT_EXPANDO_FEATURO: "9452d9e2-6588-408c-b8aa-1e54ff1e2f4a",
                 TWILIGHT_SUB_GIFTING: "011d1499-61b3-49b2-92b2-b2ffd353ef00",
                 TWILIGHT_VIDEO_FEATURO_EN: "afc307f3-4011-40ba-9406-56c474b5922b",
                 TWILIGHT_VIDEOS_IN_SIDENAV: "1318509a-bf97-475d-acdc-df6a24ef6e3e",
@@ -1814,7 +1813,8 @@ webpackJsonp([60], {
                 TWILIGHT_RAID_AUTO_JOIN: "f866f89d-85de-4a5b-9b00-d97c791bc16d",
                 TWILIGHT_AML_RANKING_FOLLOWS: "47597570-dd4e-4996-85eb-86db164cae9c",
                 TWILIGHT_NEW_BROWSE: "50ac9a2b-63c2-46ed-9e7d-123363195dfd",
-                TWILIGHT_GROWTH_EMAIL_VERIFY_BAR: "7aa589f3-34d8-425f-8227-29007d50757e"
+                TWILIGHT_GROWTH_EMAIL_VERIFY_BAR: "7aa589f3-34d8-425f-8227-29007d50757e",
+                TWILIGHT_FOLLOWING_INDEX_LATEST_VIDEOS_V2: "0dc9a9c9-fee5-4b5f-a462-f07675713e5e"
             },
             _ = {
                 TWILIGHT_PREMIERE_UPLOAD_FLOW: "yes",
@@ -1840,7 +1840,11 @@ webpackJsonp([60], {
                                     if (n = y[e], !this.experiments[n]) return this.logger.warn("Unable to find experiment configuration", {
                                         name: e,
                                         id: n
-                                    }), [2, null];
+                                    }), b[n] && this.overrides[n] ? (this.logger.warn("Using experiment override despite missing experiment configuration", {
+                                        name: e,
+                                        id: n,
+                                        assignment: this.overrides[n]
+                                    }), [2, this.overrides[n]]) : [2, null];
                                     if (i = this.experiments[n], !this.assignments[n]) return this.logger.warn("Unable to determine default assignment", {
                                         name: e,
                                         id: n,
@@ -8729,4 +8733,4 @@ webpackJsonp([60], {
     },
     zF1n: function(e, t) {}
 }, [5]);
-//# sourceMappingURL=minimal-e56dcf9f41936a0fada25043b9ba5c24.js.map
+//# sourceMappingURL=minimal-f533ca198871aba579278c3cdb03083c.js.map

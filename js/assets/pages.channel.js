@@ -34097,7 +34097,7 @@ webpackJsonp([33], {
                             display: O.H.Flex,
                             flexShrink: 1,
                             flexDirection: O.J.Column,
-                            fullWidth: !0
+                            className: "commerce-content-item__content--balloon"
                         }, u.createElement(O._22, {
                             type: O._27.H4,
                             ellipsis: !0,
@@ -34283,18 +34283,14 @@ webpackJsonp([33], {
                         display: O.H.Flex,
                         flexDirection: O.J.Row,
                         flexShrink: 0
-                    }, this.getBoxArt(this.props.offer), u.createElement(O.P, {
+                    }, this.getBoxArt(this.props.offer), u.createElement(O.U, {
                         display: O.H.Flex,
                         flexDirection: O.J.Column,
                         padding: {
                             left: 1
                         },
                         flexGrow: 0,
-                        fullWidth: !0
-                    }, u.createElement("div", {
-                        style: {
-                            maxWidth: "200px"
-                        }
+                        className: "commerce-content-item__content"
                     }, u.createElement(O._22, {
                         type: O._27.H5,
                         ellipsis: !0,
@@ -34326,7 +34322,7 @@ webpackJsonp([33], {
                     })) : null, this.props.offer.info.crateASINs.length ? u.createElement(O._22, {
                         color: O.F.Link,
                         fontSize: O.L.Size5
-                    }, this.props.offer.info.crateASINs.length) : null))))))
+                    }, this.props.offer.info.crateASINs.length) : null)))))
                 }, t
             }(u.Component)),
             ue = n("KqsW"),
@@ -34335,6 +34331,7 @@ webpackJsonp([33], {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderRetailOffers = function(e) {
                         return [u.createElement(O.U, {
+                            flexShrink: 0,
                             padding: {
                                 top: 1,
                                 right: 2,
@@ -34352,12 +34349,14 @@ webpackJsonp([33], {
                         })))].concat(e.map(t.buildOfferCard))
                     }, t.buildOfferCard = function(e) {
                         var n = t.trackers[e.id];
-                        return u.createElement(de, {
+                        return u.createElement(O.U, {
+                            flexShrink: 0
+                        }, u.createElement(de, {
                             offer: e,
                             tracking: n,
                             getParentRect: t.getRect,
                             key: "offer:" + e.id
-                        })
+                        }))
                     }, t.setRefDelegate = function(e) {
                         return t.ref = e
                     }, t.getRect = function() {
@@ -34430,7 +34429,7 @@ webpackJsonp([33], {
                         refDelegate: this.setRefDelegate
                     }, u.createElement(O.P, {
                         flexGrow: 1,
-                        fullWidth: !0
+                        className: "commerce-content__carousel-container"
                     }, u.createElement(ue.a, {
                         insetStyle: !0,
                         items: this.renderRetailOffers(this.props.retailOffers)
@@ -34480,7 +34479,7 @@ webpackJsonp([33], {
                             display: O.H.Flex,
                             flexShrink: 1,
                             flexDirection: O.J.Column,
-                            fullWidth: !0
+                            className: "fuel-in-game-content__details"
                         }, u.createElement(O._22, {
                             fontSize: O.L.Size4
                         }, e.info.title), u.createElement(O._22, null, u.createElement("a", {
@@ -42580,4 +42579,4 @@ webpackJsonp([33], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-f28c6df049cfb945aec6cd9170f4c0cd.js.map
+//# sourceMappingURL=pages.channel-f61b6b444fe038c4f43cb038d97a82b0.js.map

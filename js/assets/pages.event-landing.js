@@ -1,4 +1,4 @@
-webpackJsonp([46], {
+webpackJsonp([45], {
     "/LBW": function(e, t, n) {
         "use strict";
         t.h = function(e) {
@@ -9,15 +9,15 @@ webpackJsonp([46], {
                 displayed_balance: e.displayedBalance,
                 emote_level: e.emoteLevel,
                 emote_type: e.emoteType,
-                bits_location: e.location || o.ChatTooltip
+                bits_location: e.location || l.ChatTooltip
             };
             a.m.track(r.SpadeEventType.BitsCardInteraction, t)
         }, n.d(t, "b", function() {
-            return o
-        }), n.d(t, "a", function() {
             return l
+        }), n.d(t, "a", function() {
+            return o
         }), t.d = function(e) {
-            return e && s[e] ? s[e] : (a.i.error(new Error('Buy Bits card contains improperly rendered offers, or offers unknown to Science. Tracking as "buy_100"'), 'Buy Bits card contains improperly rendered offers, or offers unknown to Science. Tracking as "buy_100"'), l.Buy100)
+            return e && s[e] ? s[e] : (a.i.error(new Error('Buy Bits card contains improperly rendered offers, or offers unknown to Science. Tracking as "buy_100"'), 'Buy Bits card contains improperly rendered offers, or offers unknown to Science. Tracking as "buy_100"'), o.Buy100)
         }, t.e = function(e) {
             var t = {
                 channel: e.channel,
@@ -52,12 +52,12 @@ webpackJsonp([46], {
         };
         var i, a = n("6sO2"),
             r = n("vH/s"),
-            o = {
+            l = {
                 ChatTooltip: "card",
                 GetBitsButton: "get_bits_button",
                 BitsLandingPage: "bits_landing_page"
             },
-            l = {
+            o = {
                 BuyMain: "buy_main",
                 Buy100: "buy_100",
                 Buy500: "buy_500",
@@ -73,13 +73,13 @@ webpackJsonp([46], {
                 WatchAnotherAd: "watch_another_ad"
             },
             s = {
-                100: l.Buy100,
-                500: l.Buy500,
-                1e3: l.Buy1000,
-                1500: l.Buy1500,
-                5e3: l.Buy5000,
-                1e4: l.Buy10000,
-                25e3: l.Buy25000
+                100: o.Buy100,
+                500: o.Buy500,
+                1e3: o.Buy1000,
+                1500: o.Buy1500,
+                5e3: o.Buy5000,
+                1e4: o.Buy10000,
+                25e3: o.Buy25000
             };
         (i || (i = {})).ShowAdButton = "show_ad_button"
     },
@@ -322,7 +322,7 @@ webpackJsonp([46], {
         var i = n("U7vG"),
             a = n("6sO2"),
             r = n("Odds"),
-            o = (n("6suJ"), function(e) {
+            l = (n("6suJ"), function(e) {
                 var t = Object(a.c)(e.date, {
                         month: "short"
                     }),
@@ -361,7 +361,7 @@ webpackJsonp([46], {
                 }, n)))
             });
         n.d(t, "a", function() {
-            return o
+            return l
         })
     },
     "6Rwu": function(e, t) {},
@@ -384,23 +384,23 @@ webpackJsonp([46], {
         var i = n("TToO"),
             a = n("U7vG"),
             r = n("6sO2"),
-            o = n("2hJ3"),
-            l = n("yDzg"),
+            l = n("2hJ3"),
+            o = n("yDzg"),
             s = "https://www.facebook.com/sharer/sharer.php",
             d = "https://www.twitter.com/share",
             c = "https://www.reddit.com/submit",
             u = "https://vk.com/share.php",
-            p = n("Odds");
+            m = n("Odds");
         n("bdk8");
         n.d(t, "b", function() {
-            return m
+            return p
         }), n.d(t, "a", function() {
             return h
         });
-        var m;
+        var p;
         ! function(e) {
             e[e.Twitter = 0] = "Twitter", e[e.Reddit = 1] = "Reddit", e[e.VKontakte = 2] = "VKontakte", e[e.Facebook = 3] = "Facebook", e[e.Copy = 4] = "Copy", e[e.CopyInput = 5] = "CopyInput"
-        }(m || (m = {}));
+        }(p || (p = {}));
         var h = function(e) {
             function t(t) {
                 var n = e.call(this, t) || this;
@@ -411,11 +411,11 @@ webpackJsonp([46], {
                         target: "_blank",
                         className: e,
                         onClick: n.onShareClickHandler
-                    }, Object(p._39)(n.props)), n.renderIcon()) : a.createElement("button", i.__assign({
+                    }, Object(m._39)(n.props)), n.renderIcon()) : a.createElement("button", i.__assign({
                         onClick: n.copyPageUrl,
                         onMouseLeave: n.clearIsCopiedStatus,
                         className: e
-                    }, Object(p._39)(n.props)), n.renderIcon())
+                    }, Object(m._39)(n.props)), n.renderIcon())
                 }, n.onShareClickHandler = function() {
                     n.props.onShareClick && n.props.onShareClick(n.props.type)
                 }, n.clearIsCopiedStatus = function() {
@@ -425,60 +425,60 @@ webpackJsonp([46], {
                 }, n.getUrl = function() {
                     return n.props.url || window.location.href
                 }, n.copyPageUrl = function(e) {
-                    e && e.preventDefault(), n.props.onShareClick && n.props.onShareClick(n.props.type), Object(o.a)(n.getUrl()), n.setState({
+                    e && e.preventDefault(), n.props.onShareClick && n.props.onShareClick(n.props.type), Object(l.a)(n.getUrl()), n.setState({
                         isCopied: !0
                     })
                 }, n.renderIcon = function() {
                     var e = n.getAssetFromType();
-                    return a.createElement(p.U, {
+                    return a.createElement(m.U, {
                         className: "social-button__icon " + n.addSocialClassModifier("social-button__icon")
-                    }, a.createElement(p._9, {
+                    }, a.createElement(m._9, {
                         asset: e,
                         width: 30,
                         height: 30
                     }))
                 }, n.isLink = function() {
-                    return n.props.type !== m.Copy
+                    return n.props.type !== p.Copy
                 }, n.getTooltipFromType = function() {
                     switch (n.props.type) {
-                        case m.Twitter:
+                        case p.Twitter:
                             return "Twitter";
-                        case m.Reddit:
+                        case p.Reddit:
                             return "Reddit";
-                        case m.Facebook:
+                        case p.Facebook:
                             return "Facebook";
-                        case m.VKontakte:
+                        case p.VKontakte:
                             return "VKontakte";
-                        case m.Copy:
+                        case p.Copy:
                             return n.state.isCopied ? Object(r.d)("Copied", "SocialButton") : Object(r.d)("Copy to clipboard", "SocialButton");
                         default:
                             return ""
                     }
                 }, n.getAssetFromType = function() {
                     switch (n.props.type) {
-                        case m.Twitter:
-                            return p._10.Twitter;
-                        case m.Facebook:
-                            return p._10.Facebook;
-                        case m.VKontakte:
-                            return p._10.VKontakte;
-                        case m.Reddit:
-                            return p._10.Reddit;
-                        case m.Copy:
+                        case p.Twitter:
+                            return m._10.Twitter;
+                        case p.Facebook:
+                            return m._10.Facebook;
+                        case p.VKontakte:
+                            return m._10.VKontakte;
+                        case p.Reddit:
+                            return m._10.Reddit;
+                        case p.Copy:
                         default:
-                            return p._10.Copy
+                            return m._10.Copy
                     }
                 }, n.addSocialClassModifier = function(e) {
                     switch (n.props.type) {
-                        case m.Twitter:
+                        case p.Twitter:
                             return e + "--twitter";
-                        case m.Reddit:
+                        case p.Reddit:
                             return e + "--reddit";
-                        case m.Facebook:
+                        case p.Facebook:
                             return e + "--facebook";
-                        case m.VKontakte:
+                        case p.VKontakte:
                             return e + "--vkontakte";
-                        case m.Copy:
+                        case p.Copy:
                             return e + "--copy";
                         default:
                             return ""
@@ -490,28 +490,28 @@ webpackJsonp([46], {
                         a = n.getUrl(),
                         r = t || "";
                     switch (i) {
-                        case m.Reddit:
+                        case p.Reddit:
                             return function(e, t) {
-                                return Object(l.a)(c, {
+                                return Object(o.a)(c, {
                                     url: e,
                                     title: t
                                 })
                             }(a, r);
-                        case m.VKontakte:
+                        case p.VKontakte:
                             return function(e) {
-                                return Object(l.a)(u, {
+                                return Object(o.a)(u, {
                                     url: e
                                 })
                             }(a);
-                        case m.Facebook:
+                        case p.Facebook:
                             return function(e) {
-                                return Object(l.a)(s, {
+                                return Object(o.a)(s, {
                                     u: e
                                 })
                             }(a);
-                        case m.Twitter:
+                        case p.Twitter:
                             return function(e, t) {
-                                return Object(l.a)(d, {
+                                return Object(o.a)(d, {
                                     url: e,
                                     text: t
                                 })
@@ -524,14 +524,534 @@ webpackJsonp([46], {
                 }, n
             }
             return i.__extends(t, e), t.prototype.render = function() {
-                return a.createElement(p.U, {
+                return a.createElement(m.U, {
                     className: "social-button"
-                }, a.createElement(p._30, {
+                }, a.createElement(m._30, {
                     label: this.getTooltipFromType(),
-                    direction: p._32.Top
+                    direction: m._32.Top
                 }, this.renderLink()))
             }, t
         }(a.Component)
+    },
+    "8naI": function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "FragmentDefinition",
+                name: {
+                    kind: "Name",
+                    value: "TimetableLanding"
+                },
+                typeCondition: {
+                    kind: "NamedType",
+                    name: {
+                        kind: "Name",
+                        value: "TimetableEvent"
+                    }
+                },
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "id"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "title"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "description"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null
+                    }, {
+                        kind: "Field",
+                        alias: {
+                            kind: "Name",
+                            value: "bannerImageURL"
+                        },
+                        name: {
+                            kind: "Name",
+                            value: "imageURL"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "width"
+                            },
+                            value: {
+                                kind: "IntValue",
+                                value: "360"
+                            }
+                        }, {
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "height"
+                            },
+                            value: {
+                                kind: "IntValue",
+                                value: "202"
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: null
+                    }, {
+                        kind: "Field",
+                        alias: {
+                            kind: "Name",
+                            value: "thumbImageURL"
+                        },
+                        name: {
+                            kind: "Name",
+                            value: "imageURL"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "width"
+                            },
+                            value: {
+                                kind: "IntValue",
+                                value: "160"
+                            }
+                        }, {
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "height"
+                            },
+                            value: {
+                                kind: "IntValue",
+                                value: "90"
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: null
+                    }, {
+                        kind: "Field",
+                        alias: {
+                            kind: "Name",
+                            value: "timetableStart"
+                        },
+                        name: {
+                            kind: "Name",
+                            value: "startAt"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null
+                    }, {
+                        kind: "Field",
+                        alias: {
+                            kind: "Name",
+                            value: "timetableEnd"
+                        },
+                        name: {
+                            kind: "Name",
+                            value: "endAt"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "owner"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "displayName"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }]
+                        }
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "self"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "isFollowing"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }]
+                        }
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "children"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "first"
+                            },
+                            value: {
+                                kind: "IntValue",
+                                value: "10"
+                            }
+                        }, {
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "after"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "childrenCursor"
+                                }
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "edges"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "cursor"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "node"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "InlineFragment",
+                                                typeCondition: {
+                                                    kind: "NamedType",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "SegmentEvent"
+                                                    }
+                                                },
+                                                directives: [],
+                                                selectionSet: {
+                                                    kind: "SelectionSet",
+                                                    selections: [{
+                                                        kind: "Field",
+                                                        alias: null,
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "id"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: null
+                                                    }, {
+                                                        kind: "Field",
+                                                        alias: null,
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "title"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: null
+                                                    }, {
+                                                        kind: "Field",
+                                                        alias: null,
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "description"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: null
+                                                    }, {
+                                                        kind: "Field",
+                                                        alias: null,
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "startAt"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: null
+                                                    }, {
+                                                        kind: "Field",
+                                                        alias: null,
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "endAt"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: null
+                                                    }, {
+                                                        kind: "Field",
+                                                        alias: null,
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "imageURL"
+                                                        },
+                                                        arguments: [{
+                                                            kind: "Argument",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "width"
+                                                            },
+                                                            value: {
+                                                                kind: "IntValue",
+                                                                value: "600"
+                                                            }
+                                                        }, {
+                                                            kind: "Argument",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "height"
+                                                            },
+                                                            value: {
+                                                                kind: "IntValue",
+                                                                value: "337"
+                                                            }
+                                                        }],
+                                                        directives: [],
+                                                        selectionSet: null
+                                                    }, {
+                                                        kind: "Field",
+                                                        alias: null,
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "game"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: {
+                                                            kind: "SelectionSet",
+                                                            selections: [{
+                                                                kind: "Field",
+                                                                alias: null,
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "id"
+                                                                },
+                                                                arguments: [],
+                                                                directives: [],
+                                                                selectionSet: null
+                                                            }, {
+                                                                kind: "Field",
+                                                                alias: null,
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "name"
+                                                                },
+                                                                arguments: [],
+                                                                directives: [],
+                                                                selectionSet: null
+                                                            }, {
+                                                                kind: "Field",
+                                                                alias: null,
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "displayName"
+                                                                },
+                                                                arguments: [],
+                                                                directives: [],
+                                                                selectionSet: null
+                                                            }, {
+                                                                kind: "Field",
+                                                                alias: null,
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "boxArtURL"
+                                                                },
+                                                                arguments: [{
+                                                                    kind: "Argument",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "width"
+                                                                    },
+                                                                    value: {
+                                                                        kind: "IntValue",
+                                                                        value: "97"
+                                                                    }
+                                                                }, {
+                                                                    kind: "Argument",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "height"
+                                                                    },
+                                                                    value: {
+                                                                        kind: "IntValue",
+                                                                        value: "130"
+                                                                    }
+                                                                }],
+                                                                directives: [],
+                                                                selectionSet: null
+                                                            }]
+                                                        }
+                                                    }, {
+                                                        kind: "Field",
+                                                        alias: null,
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "channel"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: {
+                                                            kind: "SelectionSet",
+                                                            selections: [{
+                                                                kind: "Field",
+                                                                alias: null,
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "id"
+                                                                },
+                                                                arguments: [],
+                                                                directives: [],
+                                                                selectionSet: null
+                                                            }, {
+                                                                kind: "Field",
+                                                                alias: null,
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "login"
+                                                                },
+                                                                arguments: [],
+                                                                directives: [],
+                                                                selectionSet: null
+                                                            }, {
+                                                                kind: "Field",
+                                                                alias: null,
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "displayName"
+                                                                },
+                                                                arguments: [],
+                                                                directives: [],
+                                                                selectionSet: null
+                                                            }]
+                                                        }
+                                                    }, {
+                                                        kind: "Field",
+                                                        alias: null,
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "self"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: {
+                                                            kind: "SelectionSet",
+                                                            selections: [{
+                                                                kind: "Field",
+                                                                alias: null,
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "isFollowing"
+                                                                },
+                                                                arguments: [],
+                                                                directives: [],
+                                                                selectionSet: null
+                                                            }]
+                                                        }
+                                                    }]
+                                                }
+                                            }]
+                                        }
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 528
+            }
+        };
+        n.loc.source = {
+            body: "fragment TimetableLanding on TimetableEvent {\nid\ntitle\ndescription\nbannerImageURL: imageURL(width:360 height:202)\nthumbImageURL: imageURL(width:160 height: 90)\ntimetableStart: startAt\ntimetableEnd: endAt\nowner {\nid\ndisplayName\n}\nself {\nisFollowing\n}\nchildren(first: 10 after: $childrenCursor) {\nedges {\ncursor\nnode {\n...on SegmentEvent {\nid\ntitle\ndescription\nstartAt\nendAt\nimageURL(width:600 height: 337)\ngame {\nid\nname\ndisplayName\nboxArtURL(width:97 height:130)\n}\nchannel {\nid\nlogin\ndisplayName\n}\nself {\nisFollowing\n}\n}\n}\n}\n}\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
     },
     "9SRT": function(e, t) {
         var n = {
@@ -659,8 +1179,15 @@ webpackJsonp([46], {
     },
     AL3x: function(e, t) {},
     "Cb/j": function(e, t) {},
-    DP4t: function(e, t) {
-        var n = {
+    DP4t: function(e, t, n) {
+        function i(e) {
+            return e.filter(function(e) {
+                if ("FragmentDefinition" !== e.kind) return !0;
+                var t = e.name.value;
+                return !r[t] && (r[t] = !0, !0)
+            })
+        }
+        var a = {
             kind: "Document",
             definitions: [{
                 kind: "OperationDefinition",
@@ -686,6 +1213,23 @@ webpackJsonp([46], {
                                 kind: "Name",
                                 value: "ID"
                             }
+                        }
+                    },
+                    defaultValue: null
+                }, {
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "childrenCursor"
+                        }
+                    },
+                    type: {
+                        kind: "NamedType",
+                        name: {
+                            kind: "Name",
+                            value: "Cursor"
                         }
                     },
                     defaultValue: null
@@ -718,6 +1262,16 @@ webpackJsonp([46], {
                         selectionSet: {
                             kind: "SelectionSet",
                             selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "__typename"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
                                 kind: "InlineFragment",
                                 typeCondition: {
                                     kind: "NamedType",
@@ -730,244 +1284,12 @@ webpackJsonp([46], {
                                 selectionSet: {
                                     kind: "SelectionSet",
                                     selections: [{
-                                        kind: "Field",
-                                        alias: null,
+                                        kind: "FragmentSpread",
                                         name: {
                                             kind: "Name",
-                                            value: "id"
+                                            value: "SingleLanding"
                                         },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "title"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "description"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "startAt"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "endAt"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "game"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "id"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }, {
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "displayName"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }, {
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "boxArtURL"
-                                                },
-                                                arguments: [{
-                                                    kind: "Argument",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "width"
-                                                    },
-                                                    value: {
-                                                        kind: "IntValue",
-                                                        value: "285"
-                                                    }
-                                                }, {
-                                                    kind: "Argument",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "height"
-                                                    },
-                                                    value: {
-                                                        kind: "IntValue",
-                                                        value: "380"
-                                                    }
-                                                }],
-                                                directives: [],
-                                                selectionSet: null
-                                            }]
-                                        }
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "channel"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "id"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }, {
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "login"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }, {
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "displayName"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }, {
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "profileImageURL"
-                                                },
-                                                arguments: [{
-                                                    kind: "Argument",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "width"
-                                                    },
-                                                    value: {
-                                                        kind: "IntValue",
-                                                        value: "300"
-                                                    }
-                                                }],
-                                                directives: [],
-                                                selectionSet: null
-                                            }]
-                                        }
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "imageURL"
-                                        },
-                                        arguments: [{
-                                            kind: "Argument",
-                                            name: {
-                                                kind: "Name",
-                                                value: "width"
-                                            },
-                                            value: {
-                                                kind: "IntValue",
-                                                value: "320"
-                                            }
-                                        }, {
-                                            kind: "Argument",
-                                            name: {
-                                                kind: "Name",
-                                                value: "height"
-                                            },
-                                            value: {
-                                                kind: "IntValue",
-                                                value: "180"
-                                            }
-                                        }],
-                                        directives: [],
-                                        selectionSet: null
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "self"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "isFollowing"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }]
-                                        }
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "__typename"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }]
                                 }
                             }, {
@@ -983,6 +1305,48 @@ webpackJsonp([46], {
                                 selectionSet: {
                                     kind: "SelectionSet",
                                     selections: [{
+                                        kind: "FragmentSpread",
+                                        name: {
+                                            kind: "Name",
+                                            value: "PremiereLanding"
+                                        },
+                                        directives: []
+                                    }]
+                                }
+                            }, {
+                                kind: "InlineFragment",
+                                typeCondition: {
+                                    kind: "NamedType",
+                                    name: {
+                                        kind: "Name",
+                                        value: "TimetableEvent"
+                                    }
+                                },
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "FragmentSpread",
+                                        name: {
+                                            kind: "Name",
+                                            value: "TimetableLanding"
+                                        },
+                                        directives: []
+                                    }]
+                                }
+                            }, {
+                                kind: "InlineFragment",
+                                typeCondition: {
+                                    kind: "NamedType",
+                                    name: {
+                                        kind: "Name",
+                                        value: "SegmentEvent"
+                                    }
+                                },
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
                                         kind: "Field",
                                         alias: null,
                                         name: {
@@ -1007,538 +1371,35 @@ webpackJsonp([46], {
                                         alias: null,
                                         name: {
                                             kind: "Name",
-                                            value: "description"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "startAt"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "endAt"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "game"
+                                            value: "parent"
                                         },
                                         arguments: [],
                                         directives: [],
                                         selectionSet: {
                                             kind: "SelectionSet",
                                             selections: [{
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "id"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }, {
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "displayName"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }, {
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "boxArtURL"
-                                                },
-                                                arguments: [{
-                                                    kind: "Argument",
+                                                kind: "InlineFragment",
+                                                typeCondition: {
+                                                    kind: "NamedType",
                                                     name: {
                                                         kind: "Name",
-                                                        value: "width"
-                                                    },
-                                                    value: {
-                                                        kind: "IntValue",
-                                                        value: "285"
+                                                        value: "TimetableEvent"
                                                     }
-                                                }, {
-                                                    kind: "Argument",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "height"
-                                                    },
-                                                    value: {
-                                                        kind: "IntValue",
-                                                        value: "380"
-                                                    }
-                                                }],
-                                                directives: [],
-                                                selectionSet: null
-                                            }]
-                                        }
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "channel"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "id"
                                                 },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }, {
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "login"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }, {
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "displayName"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }, {
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "profileImageURL"
-                                                },
-                                                arguments: [{
-                                                    kind: "Argument",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "width"
-                                                    },
-                                                    value: {
-                                                        kind: "IntValue",
-                                                        value: "300"
-                                                    }
-                                                }],
-                                                directives: [],
-                                                selectionSet: null
-                                            }]
-                                        }
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "premiere"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "status"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }, {
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "pastPremiere"
-                                                },
-                                                arguments: [],
                                                 directives: [],
                                                 selectionSet: {
                                                     kind: "SelectionSet",
                                                     selections: [{
-                                                        kind: "Field",
-                                                        alias: null,
+                                                        kind: "FragmentSpread",
                                                         name: {
                                                             kind: "Name",
-                                                            value: "id"
+                                                            value: "TimetableLanding"
                                                         },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "broadcastType"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "description"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "thumbnailURLs"
-                                                        },
-                                                        arguments: [{
-                                                            kind: "Argument",
-                                                            name: {
-                                                                kind: "Name",
-                                                                value: "width"
-                                                            },
-                                                            value: {
-                                                                kind: "IntValue",
-                                                                value: "320"
-                                                            }
-                                                        }, {
-                                                            kind: "Argument",
-                                                            name: {
-                                                                kind: "Name",
-                                                                value: "height"
-                                                            },
-                                                            value: {
-                                                                kind: "IntValue",
-                                                                value: "180"
-                                                            }
-                                                        }],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "viewCount"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "title"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "animatedPreviewURL"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "previewThumbnailURL"
-                                                        },
-                                                        arguments: [{
-                                                            kind: "Argument",
-                                                            name: {
-                                                                kind: "Name",
-                                                                value: "width"
-                                                            },
-                                                            value: {
-                                                                kind: "IntValue",
-                                                                value: "320"
-                                                            }
-                                                        }, {
-                                                            kind: "Argument",
-                                                            name: {
-                                                                kind: "Name",
-                                                                value: "height"
-                                                            },
-                                                            value: {
-                                                                kind: "IntValue",
-                                                                value: "180"
-                                                            }
-                                                        }],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "publishedAt"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "lengthSeconds"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "owner"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: {
-                                                            kind: "SelectionSet",
-                                                            selections: [{
-                                                                kind: "Field",
-                                                                alias: null,
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "id"
-                                                                },
-                                                                arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
-                                                            }, {
-                                                                kind: "Field",
-                                                                alias: null,
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "login"
-                                                                },
-                                                                arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
-                                                            }, {
-                                                                kind: "Field",
-                                                                alias: null,
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "displayName"
-                                                                },
-                                                                arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
-                                                            }]
-                                                        }
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "game"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: {
-                                                            kind: "SelectionSet",
-                                                            selections: [{
-                                                                kind: "Field",
-                                                                alias: null,
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "id"
-                                                                },
-                                                                arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
-                                                            }, {
-                                                                kind: "Field",
-                                                                alias: null,
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "name"
-                                                                },
-                                                                arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
-                                                            }, {
-                                                                kind: "Field",
-                                                                alias: null,
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "boxArtURL"
-                                                                },
-                                                                arguments: [{
-                                                                    kind: "Argument",
-                                                                    name: {
-                                                                        kind: "Name",
-                                                                        value: "width"
-                                                                    },
-                                                                    value: {
-                                                                        kind: "IntValue",
-                                                                        value: "285"
-                                                                    }
-                                                                }, {
-                                                                    kind: "Argument",
-                                                                    name: {
-                                                                        kind: "Name",
-                                                                        value: "height"
-                                                                    },
-                                                                    value: {
-                                                                        kind: "IntValue",
-                                                                        value: "380"
-                                                                    }
-                                                                }],
-                                                                directives: [],
-                                                                selectionSet: null
-                                                            }]
-                                                        }
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "self"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: {
-                                                            kind: "SelectionSet",
-                                                            selections: [{
-                                                                kind: "Field",
-                                                                alias: null,
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "viewingHistory"
-                                                                },
-                                                                arguments: [],
-                                                                directives: [],
-                                                                selectionSet: {
-                                                                    kind: "SelectionSet",
-                                                                    selections: [{
-                                                                        kind: "Field",
-                                                                        alias: null,
-                                                                        name: {
-                                                                            kind: "Name",
-                                                                            value: "position"
-                                                                        },
-                                                                        arguments: [],
-                                                                        directives: [],
-                                                                        selectionSet: null
-                                                                    }]
-                                                                }
-                                                            }]
-                                                        }
+                                                        directives: []
                                                     }]
                                                 }
                                             }]
                                         }
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "imageURL"
-                                        },
-                                        arguments: [{
-                                            kind: "Argument",
-                                            name: {
-                                                kind: "Name",
-                                                value: "width"
-                                            },
-                                            value: {
-                                                kind: "IntValue",
-                                                value: "320"
-                                            }
-                                        }, {
-                                            kind: "Argument",
-                                            name: {
-                                                kind: "Name",
-                                                value: "height"
-                                            },
-                                            value: {
-                                                kind: "IntValue",
-                                                value: "180"
-                                            }
-                                        }],
-                                        directives: [],
-                                        selectionSet: null
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "self"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "isFollowing"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }]
-                                        }
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "__typename"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
                                     }]
                                 }
                             }]
@@ -1548,32 +1409,33 @@ webpackJsonp([46], {
             }],
             loc: {
                 start: 0,
-                end: 877
+                end: 522
             }
         };
-        n.loc.source = {
-            body: "query EventLandingPage_Event($eventName: ID!) {\nevent(id: $eventName) {\n...on SingleEvent {\nid\ntitle\ndescription\nstartAt\nendAt\ngame {\nid\ndisplayName\nboxArtURL(width:285 height:380)\n}\nchannel {\nid\nlogin\ndisplayName\nprofileImageURL(width:300)\n}\nimageURL(width:320 height:180)\nself {\nisFollowing\n}\n__typename\n}\n...on PremiereEvent {\nid\ntitle\ndescription\nstartAt\nendAt\ngame {\nid\ndisplayName\nboxArtURL(width:285 height:380)\n}\nchannel {\nid\nlogin\ndisplayName\nprofileImageURL(width:300)\n}\npremiere {\nstatus\npastPremiere {\nid\nbroadcastType\ndescription\nthumbnailURLs(width: 320 height: 180)\nviewCount\ntitle\nanimatedPreviewURL\npreviewThumbnailURL(width: 320 height: 180)\npublishedAt\nlengthSeconds\nowner {\nid\nlogin\ndisplayName\n}\ngame {\nid\nname\nboxArtURL(width: 285 height: 380)\n}\nself {\nviewingHistory {\nposition\n}\n}\n}\n}\nimageURL(width:320 height:180)\nself {\nisFollowing\n}\n__typename\n}\n}\n}",
+        a.loc.source = {
+            body: '#import "twilight/pages/event-landing/models/_timetable-event.gql"\n#import "twilight/pages/event-landing/models/_single-event.gql"\n#import "twilight/pages/event-landing/models/_premiere-event.gql"\nquery EventLandingPage_Event($eventName: ID! $childrenCursor: Cursor) {\nevent(id: $eventName) {\n__typename\n...on SingleEvent {\n...SingleLanding\n}\n...on PremiereEvent {\n...PremiereLanding\n}\n...on TimetableEvent {\n...TimetableLanding\n}\n...on SegmentEvent {\nid\ntitle\nparent {\n...on TimetableEvent {\n...TimetableLanding\n}\n}\n}\n}\n}',
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
                 column: 1
             }
         };
-        e.exports = n
+        var r = {};
+        a.definitions = a.definitions.concat(i(n("8naI").definitions)), a.definitions = a.definitions.concat(i(n("thRY").definitions)), a.definitions = a.definitions.concat(i(n("qdmu").definitions)), e.exports = a
     },
     "E+X/": function(e, t, n) {
         "use strict";
         var i = n("TToO"),
             a = n("RH2O"),
             r = n("2KeS"),
-            o = n("+xm8"),
-            l = n("V5M+"),
+            l = n("+xm8"),
+            o = n("V5M+"),
             s = n("f2i/"),
             d = n("Aj/L"),
             c = n("oSFp"),
             u = n("U7vG"),
-            p = n("6sO2"),
-            m = n("+Znq"),
+            m = n("6sO2"),
+            p = n("+Znq"),
             h = n("mw/a"),
             g = n("Odds"),
             v = function(e) {
@@ -1587,7 +1449,7 @@ webpackJsonp([46], {
                                 contentType: h.a.User,
                                 targetUserID: t.props.targetUser.id
                             },
-                            title: Object(p.d)("Report {channelName}", {
+                            title: Object(m.d)("Report {channelName}", {
                                 channelName: t.props.targetUser.displayName
                             }, "EventMoreMenu"),
                             defaultDescription: "Report event: " + e
@@ -1595,7 +1457,7 @@ webpackJsonp([46], {
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return u.createElement(m.a, null, u.createElement(g.u, {
+                    return u.createElement(p.a, null, u.createElement(g.u, {
                         icon: g._10.More,
                         type: g.z.Hollow
                     }), u.createElement(g.p, {
@@ -1611,7 +1473,7 @@ webpackJsonp([46], {
                             x: 1,
                             y: .5
                         }
-                    }, Object(p.d)("Report", "EventMoreMenu"))))))
+                    }, Object(m.d)("Report", "EventMoreMenu"))))))
                 }, t
             }(u.Component),
             f = Object(a.a)(function(e) {
@@ -1621,11 +1483,11 @@ webpackJsonp([46], {
             }, function(e) {
                 return Object(r.bindActionCreators)({
                     login: function() {
-                        return Object(s.f)(o.a.ReportChannel)
+                        return Object(s.f)(l.a.ReportChannel)
                     },
                     showReportUserModal: function(e) {
                         var t = i.__rest(e, []);
-                        return Object(l.d)(c.a, t)
+                        return Object(o.d)(c.a, t)
                     }
                 }, e)
             })(v);
@@ -1658,13 +1520,13 @@ webpackJsonp([46], {
             if (t < 60) return n ? i(a.MINUTE, t) + " " + i(a.SECOND, n) : i(a.MINUTE, t);
             var r = Math.floor(t / 60);
             if (t %= 60, r < 24) return t ? i(a.HOUR, r) + " " + i(a.MINUTE, t) : i(a.HOUR, r);
-            var o = Math.floor(r / 24);
-            if (r %= 24, o < 7) return r ? i(a.DAY, o) + " " + i(a.HOUR, r) : i(a.DAY, o);
-            if (o <= 26) {
-                var l = Math.floor(o / 7);
-                return (o %= 7) ? i(a.WEEK, l) + " " + i(a.DAY, o) : i(a.WEEK, l)
+            var l = Math.floor(r / 24);
+            if (r %= 24, l < 7) return r ? i(a.DAY, l) + " " + i(a.HOUR, r) : i(a.DAY, l);
+            if (l <= 26) {
+                var o = Math.floor(l / 7);
+                return (l %= 7) ? i(a.WEEK, o) + " " + i(a.DAY, l) : i(a.WEEK, o)
             }
-            var s = Math.round((o + 3) / 30);
+            var s = Math.round((l + 3) / 30);
             return i(a.MONTH, s)
         };
         var a, r = n("6sO2");
@@ -1677,16 +1539,16 @@ webpackJsonp([46], {
         var i = n("U7vG"),
             a = n("CSlQ"),
             r = n("81qH"),
-            o = n("XYqD"),
-            l = n("Odds"),
+            l = n("XYqD"),
+            o = n("Odds"),
             s = function(e) {
                 var t = [];
                 if (null === e.videos)
-                    for (var n = void 0 === e.placeholderCount ? 20 : e.placeholderCount, a = 0; a < n; a++) t.push(i.createElement(o.a, {
+                    for (var n = void 0 === e.placeholderCount ? 20 : e.placeholderCount, a = 0; a < n; a++) t.push(i.createElement(l.a, {
                         key: a
                     }));
                 else t = e.videos.map(function(t, n) {
-                    return i.createElement(l.U, {
+                    return i.createElement(o.U, {
                         "data-a-target": "video-tower-card-" + n,
                         key: "video-" + n,
                         padding: {
@@ -1702,9 +1564,9 @@ webpackJsonp([46], {
                         video: t
                     }))
                 });
-                return i.createElement(l._33, {
-                    gutterSize: l._35.Small,
-                    childWidth: l._34.Large,
+                return i.createElement(o._33, {
+                    gutterSize: o._35.Small,
+                    childWidth: o._34.Large,
                     placeholderItems: 20
                 }, t)
             },
@@ -1722,13 +1584,13 @@ webpackJsonp([46], {
     J8WN: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
-            return l
+            return o
         });
         var i = n("TToO"),
             a = n("U7vG"),
             r = (n.n(a), n("Odds")),
-            o = n("yU6t"),
-            l = (n.n(o), function(e) {
+            l = n("yU6t"),
+            o = (n.n(l), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -1781,7 +1643,7 @@ webpackJsonp([46], {
         n.d(t, "a", function() {
             return i
         }), n.d(t, "b", function() {
-            return o
+            return l
         }), t.c = function(e) {
             var t = {
                 share_medium: e.shareMedium,
@@ -1806,18 +1668,18 @@ webpackJsonp([46], {
         ! function(e) {
             e.ChannelEvents = "channel_events", e.EventDetails = "event_details", e.EventManagment = "event_managment"
         }(i || (i = {}));
-        var o;
+        var l;
         ! function(e) {
             e.RemindMeOpen = "remind_me_open_modal", e.EmailReminderOn = "email_reminder_on", e.EmailReminderOff = "email_reminder_off"
-        }(o || (o = {}))
+        }(l || (l = {}))
     },
     MSvX: function(e, t, n) {
         "use strict";
         var i = n("TToO"),
             a = n("OAwv"),
             r = n("U7vG"),
-            o = n("6sO2"),
-            l = n("Ejve"),
+            l = n("6sO2"),
+            o = n("Ejve"),
             s = "legacy_routes_enabled",
             d = function(e) {
                 function t(t) {
@@ -1832,14 +1694,14 @@ webpackJsonp([46], {
                                     var i = "" !== e.search ? a.parse(e.search) : {};
                                     i["from-redirect"] = "true";
                                     var r = a.stringify(i),
-                                        s = o.a.buildType === l.a.Dev ? window.location.host : window.location.hostname,
+                                        s = l.a.buildType === o.a.Dev ? window.location.host : window.location.hostname,
                                         d = window.location.protocol + "//" + s + e.pathname + "?" + r;
                                     return n.logger.debug("Redirecting to legacy route", {
                                         newUrl: d
                                     }), void window.location.replace(d)
                                 }
                             } catch (e) {
-                                o.i.withCategory("legacy").error(e, "Unable to determine legacy reload match", {
+                                l.i.withCategory("legacy").error(e, "Unable to determine legacy reload match", {
                                     regex: t
                                 })
                             }
@@ -1858,7 +1720,7 @@ webpackJsonp([46], {
                                 })
                             }
                         }
-                    }, n.isEnabled = o.b.get(s, !1), n.logger = o.i.withCategory("legacy-routes"), n.legacyRoutes = n.buildRoutes(), n.props.history.listen(n.onHistoryChange), n
+                    }, n.isEnabled = l.b.get(s, !1), n.logger = l.i.withCategory("legacy-routes"), n.legacyRoutes = n.buildRoutes(), n.props.history.listen(n.onHistoryChange), n
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
                     return null
@@ -1867,7 +1729,7 @@ webpackJsonp([46], {
                 }, t.prototype.buildRoutes = function() {
                     if (!this.isEnabled) return [];
                     this.logger.debug("Building legacy routes...");
-                    var e = o.b.get("legacy_routes", []),
+                    var e = l.b.get("legacy_routes", []),
                         t = [];
                     if (!e || 0 === e.length) return this.logger.debug("No legacy routes found in settings."), t;
                     for (var n = 0, i = e; n < i.length; n++) {
@@ -1903,44 +1765,117 @@ webpackJsonp([46], {
             return t && (n = t),
                 function(e, t) {
                     if (t < e.endAt) {
-                        if (e.eventType === b.PREMIERE_EVENT) return !!e.premiere && e.premiere.status === a.STARTED;
-                        if (e.eventType === b.SINGLE_EVENT) return t > e.startAt
+                        if (e.eventType === _.PREMIERE_EVENT) return !!e.premiere && e.premiere.status === d.STARTED;
+                        if (e.eventType === _.SINGLE_EVENT) return t > e.startAt
                     }
                     return !1
-                }(e, n) ? f.LIVE : function(e, t) {
-                    if (e.eventType === b.PREMIERE_EVENT) return t < e.endAt;
-                    if (e.eventType === b.SINGLE_EVENT) return t < e.startAt;
+                }(e, n) ? S.LIVE : function(e, t) {
+                    if (e.eventType === _.PREMIERE_EVENT) return t < e.endAt;
+                    if (e.eventType === _.SINGLE_EVENT) return t < e.startAt;
                     return !1
-                }(e, n) ? f.FUTURE : f.PAST
+                }(e, n) ? S.FUTURE : S.PAST
+        }
+
+        function a(e) {
+            return null !== e
+        }
+
+        function r(e) {
+            var t = [];
+            e.children && e.children.edges && (t = e.children.edges.map(function(e) {
+                var t = e.node;
+                return t && t.game && t.channel && t.channel.id && t.channel.login ? {
+                    id: t.id,
+                    title: t.title,
+                    description: t.description,
+                    startAt: new Date(t.startAt),
+                    endAt: new Date(t.endAt),
+                    game: {
+                        id: t.game.id,
+                        name: t.game.name,
+                        displayName: t.game.displayName,
+                        boxArtURL: t.game.boxArtURL || ""
+                    },
+                    imageURL: t.imageURL,
+                    channel: {
+                        id: t.channel.id,
+                        login: t.channel.login,
+                        displayName: t.channel.displayName || t.channel.login
+                    },
+                    self: {
+                        isFollowing: t.self && t.self.isFollowing || !1
+                    }
+                } : null
+            }).filter(a));
+            var n = null,
+                i = null;
+            null !== e.timetableStart && (n = new Date(e.timetableStart)), null !== e.timetableEnd && (i = new Date(e.timetableEnd));
+            var r = null;
+            return null !== e.owner && (r = {
+                id: e.owner.id || "",
+                displayName: e.owner.displayName || "-"
+            }), {
+                id: e.id,
+                title: e.title,
+                description: e.description,
+                imageURL: e.bannerImageURL,
+                thumbImageURL: e.thumbImageURL,
+                startAt: n,
+                endAt: i,
+                owner: r,
+                self: {
+                    isFollowing: e.self && e.self.isFollowing || !1
+                },
+                children: t
+            }
+        }
+
+        function l(e, t) {
+            var n = e && e.children && e.children.edges || [];
+            t && t.children && t.children.edges && (n = n.concat(t.children.edges));
+            var i = Object.assign({}, e.children, {
+                edges: n
+            });
+            return c.__assign({}, e, {
+                children: i
+            })
+        }
+
+        function o(e) {
+            return !!e && "TimetableEvent" === e.__typename
+        }
+
+        function s(e) {
+            return !!e && "SegmentEvent" === e.__typename
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var a, r = n("TToO"),
-            o = n("U7vG"),
-            l = n("6sO2"),
-            s = n("yWCw"),
-            d = n("zCIC"),
-            c = n("7vx8"),
-            u = n("j7/Y"),
-            p = n("w9tK"),
-            m = n("vH/s"),
-            h = n("SI0h"),
-            g = n("CSlQ"),
-            v = n("HW6M");
+        var d, c = n("TToO"),
+            u = n("U7vG"),
+            m = n("6sO2"),
+            p = n("yWCw"),
+            h = n("7vx8"),
+            g = n("j7/Y"),
+            v = n("w9tK"),
+            f = n("vH/s"),
+            k = n("SI0h"),
+            b = n("CSlQ"),
+            y = n("2aoH"),
+            E = n("HW6M");
         ! function(e) {
             e.UNSCHEDULED = "UNSCHEDULED", e.SCHEDULED = "SCHEDULED", e.CANCELLED = "CANCELLED", e.STARTED = "STARTED", e.SUCCESS = "SUCCESS", e.FAILED = "FAILED"
-        }(a || (a = {}));
-        var f;
+        }(d || (d = {}));
+        var S;
         ! function(e) {
             e.LIVE = "LIVE", e.FUTURE = "FUTURE", e.PAST = "PAST"
-        }(f || (f = {}));
-        var b;
+        }(S || (S = {}));
+        var _;
         ! function(e) {
-            e.SINGLE_EVENT = "SingleEvent", e.PREMIERE_EVENT = "PremiereEvent"
-        }(b || (b = {}));
-        var k = n("Odds"),
-            y = (n("ioX4"), function(e) {
+            e.SINGLE_EVENT = "SingleEvent", e.PREMIERE_EVENT = "PremiereEvent", e.TIMETABLE_EVENT = "TimetableEvent", e.SEGMENT_EVENT = "SegmentEvent"
+        }(_ || (_ = {}));
+        var w = n("Odds"),
+            N = (n("ioX4"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -1951,19 +1886,19 @@ webpackJsonp([46], {
                         })
                     }, t
                 }
-                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                return c.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    var e = v({
+                    var e = E({
                             "event-landing-action__progress": this.state.countdownActive
                         }),
                         t = "";
-                    "function" == typeof l.d && (t = Object(l.d)("This event is Live! Head to the channel page to watch and chat.", "EventLandingAction"), this.state.countdownActive && (t = Object(l.d)("This event is Live! Redirecting to the channel page in 5 seconds.", "EventLandingAction")));
-                    var n = o.createElement(k.U, {
+                    "function" == typeof m.d && (t = Object(m.d)("This event is Live! Head to the channel page to watch and chat.", "EventLandingAction"), this.state.countdownActive && (t = Object(m.d)("This event is Live! Redirecting to the channel page in 5 seconds.", "EventLandingAction")));
+                    var n = u.createElement(w.U, {
                             margin: {
                                 left: 1
                             }
-                        }, o.createElement(k.u, {
+                        }, u.createElement(w.u, {
                             linkTo: {
                                 pathname: "/" + this.props.login,
                                 state: {
@@ -1971,88 +1906,88 @@ webpackJsonp([46], {
                                     medium: "event_page"
                                 }
                             }
-                        }, Object(l.d)("Go to Channel", "EventLandingAction"))),
+                        }, Object(m.d)("Go to Channel", "EventLandingAction"))),
                         i = null;
-                    this.state.countdownActive && (n = o.createElement(k.U, {
+                    this.state.countdownActive && (n = u.createElement(w.U, {
                         margin: {
                             left: 1
                         }
-                    }, o.createElement(k.u, {
+                    }, u.createElement(w.u, {
                         onClick: this.cancelCountdown
-                    }, Object(l.d)("Cancel", "EventLandingAction"))), i = o.createElement(k._6, {
+                    }, Object(m.d)("Cancel", "EventLandingAction"))), i = u.createElement(w._6, {
                         countdown: 5,
                         onCountdownEnd: this.props.onCountdownSuccess,
-                        size: k._7.Small
+                        size: w._7.Small
                     }));
-                    var a = o.createElement(k.W, null);
-                    return this.props.eventType === b.PREMIERE_EVENT && (a = o.createElement(k._9, {
-                        asset: k._10.VideoPremiere,
-                        type: k._11.Live,
+                    var a = u.createElement(w.W, null);
+                    return this.props.eventType === _.PREMIERE_EVENT && (a = u.createElement(w._9, {
+                        asset: w._10.VideoPremiere,
+                        type: w._11.Live,
                         width: 10
-                    })), o.createElement(k.U, null, o.createElement(k._18, {
-                        display: k.H.Flex,
-                        flexWrap: k.K.NoWrap,
+                    })), u.createElement(w.U, null, u.createElement(w._18, {
+                        display: w.H.Flex,
+                        flexWrap: w.K.NoWrap,
                         border: !0,
                         margin: {
                             top: 2
                         },
-                        alignItems: k.c.Center,
+                        alignItems: w.c.Center,
                         className: "event-landing-action__strip",
-                        background: k.m.Base
-                    }, o.createElement(k.U, {
-                        display: k.H.InlineFlex,
+                        background: w.m.Base
+                    }, u.createElement(w.U, {
+                        display: w.H.InlineFlex,
                         flexShrink: 0,
                         margin: {
                             right: 1
                         }
-                    }, a), o.createElement(k.U, {
+                    }, a), u.createElement(w.U, {
                         className: "event-landing-action__message",
-                        display: k.H.InlineFlex,
-                        flexWrap: k.K.Wrap,
+                        display: w.H.InlineFlex,
+                        flexWrap: w.K.Wrap,
                         flexGrow: 1
-                    }, t), o.createElement(k.U, {
-                        display: k.H.InlineFlex,
+                    }, t), u.createElement(w.U, {
+                        display: w.H.InlineFlex,
                         flexShrink: 0
-                    }, n)), o.createElement(k.U, {
+                    }, n)), u.createElement(w.U, {
                         className: e
                     }, i))
                 }, t
-            }(o.Component)),
-            _ = Object(g.c)("EventLandingAction")(y),
-            E = function(e) {
+            }(u.Component)),
+            C = Object(b.c)("EventLandingAction")(N),
+            A = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                return c.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    var e = Object(l.d)("No description listed", "EventLandingDescription");
-                    return "" !== this.props.description && (e = this.props.description), o.createElement(k._18, {
+                    var e = Object(m.d)("No description listed", "EventLandingDescription");
+                    return "" !== this.props.description && (e = this.props.description), u.createElement(w._18, {
                         padding: {
                             top: 2
                         }
-                    }, o.createElement(k._22, {
-                        transform: k._26.Uppercase,
-                        type: k._27.H5,
-                        color: k.F.Alt2
-                    }, Object(l.d)("Description", "EventLandingDescription")), o.createElement(k.U, {
+                    }, u.createElement(w._22, {
+                        transform: w._26.Uppercase,
+                        type: w._27.H5,
+                        color: w.F.Alt2
+                    }, Object(m.d)("Description", "EventLandingDescription")), u.createElement(w.U, {
                         margin: {
                             top: 1
                         }
-                    }, o.createElement(k.U, null, o.createElement(k._22, {
-                        fontSize: k.L.Size5
+                    }, u.createElement(w.U, null, u.createElement(w._22, {
+                        fontSize: w.L.Size5
                     }, e))))
-                }, t = r.__decorate([Object(g.c)("EventLandingDescription")], t)
-            }(o.Component),
-            S = n("OFFm"),
-            w = n("E+X/"),
-            C = n("QdVH"),
-            N = n("MQiv"),
-            A = (n("ea40"), function(e) {
+                }, t = c.__decorate([Object(b.c)("EventLandingDescription")], t)
+            }(u.Component),
+            F = n("OFFm"),
+            x = n("E+X/"),
+            U = n("QdVH"),
+            I = n("MQiv"),
+            O = (n("ea40"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                return c.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     var e = i({
@@ -2063,10 +1998,10 @@ webpackJsonp([46], {
                             },
                             eventType: this.props.eventType
                         }),
-                        t = o.createElement(k.u, {
+                        t = u.createElement(w.u, {
                             disabled: !0
-                        }, Object(l.d)("Past Event", "EventLandingTitle"));
-                    return e === f.LIVE ? t = o.createElement(k.u, {
+                        }, Object(m.d)("Past Event", "EventLandingTitle"));
+                    return e === S.LIVE ? t = u.createElement(w.u, {
                         linkTo: {
                             pathname: "/" + this.props.channel.login,
                             state: {
@@ -2074,50 +2009,50 @@ webpackJsonp([46], {
                                 medium: "event_page"
                             }
                         }
-                    }, Object(l.d)("Watch Now", "EventLandingTitle")) : e === f.FUTURE && (t = o.createElement(S.a, {
+                    }, Object(m.d)("Watch Now", "EventLandingTitle")) : e === S.FUTURE && (t = u.createElement(F.a, {
                         eventID: this.props.id,
                         areNotificationsEnabled: !(!this.props.self || !this.props.self.isFollowing),
                         channelID: this.props.channel.id,
                         channelLogin: this.props.channel.login,
-                        eventLocation: N.a.EventDetails
-                    })), o.createElement(k._18, {
+                        eventLocation: I.a.EventDetails
+                    })), u.createElement(w._18, {
                         borderBottom: !0
-                    }, o.createElement(k._22, {
-                        type: k._27.H2,
+                    }, u.createElement(w._22, {
+                        type: w._27.H2,
                         className: "event-landing-title__heading"
-                    }, this.props.title), o.createElement(k.U, {
-                        display: k.H.Flex,
+                    }, this.props.title), u.createElement(w.U, {
+                        display: w.H.Flex,
                         margin: {
                             top: 2,
                             bottom: 3
                         }
-                    }, o.createElement(k.U, {
+                    }, u.createElement(w.U, {
                         margin: {
                             right: 1
                         }
-                    }, t), o.createElement(k.U, {
+                    }, t), u.createElement(w.U, {
                         margin: {
                             right: 1
                         }
-                    }, o.createElement(C.a, {
+                    }, u.createElement(U.a, {
                         id: this.props.id,
                         title: this.props.title,
                         channelID: this.props.channel.id,
                         channelLogin: this.props.channel.login,
-                        eventLocation: N.a.EventDetails
-                    })), o.createElement(w.a, {
+                        eventLocation: I.a.EventDetails
+                    })), u.createElement(x.a, {
                         targetUser: {
                             id: this.props.channel.id,
                             displayName: this.props.channel.displayName || this.props.channel.login
                         },
                         eventID: this.props.id,
-                        balloonDirection: k.q.Bottom
+                        balloonDirection: w.q.Bottom
                     })))
                 }, t
-            }(o.Component)),
-            F = Object(g.c)("EventLandingTitle")(A),
-            O = n("ISok"),
-            I = function(e) {
+            }(u.Component)),
+            T = Object(b.c)("EventLandingTitle")(O),
+            L = n("ISok"),
+            D = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.pastPremiereToPreviewCardVideo = function(e) {
@@ -2147,37 +2082,37 @@ webpackJsonp([46], {
                         }
                     }, t
                 }
-                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                return c.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     var e = null;
-                    return this.props.pastPremiere && (e = o.createElement(O.a, {
-                        trackingContent: m.PageviewContent.EventPast,
-                        trackingMedium: m.PageviewMedium.EventDetails,
+                    return this.props.pastPremiere && (e = u.createElement(L.a, {
+                        trackingContent: f.PageviewContent.EventPast,
+                        trackingMedium: f.PageviewMedium.EventDetails,
                         videos: [this.pastPremiereToPreviewCardVideo(this.props.pastPremiere)]
-                    })), o.createElement(k._18, {
+                    })), u.createElement(w._18, {
                         padding: {
                             top: 2
                         }
-                    }, o.createElement(k._22, {
-                        transform: k._26.Uppercase,
-                        type: k._27.H5,
-                        color: k.F.Alt2
-                    }, Object(l.d)("Videos", "EventLandingVideos")), o.createElement(k.U, {
+                    }, u.createElement(w._22, {
+                        transform: w._26.Uppercase,
+                        type: w._27.H5,
+                        color: w.F.Alt2
+                    }, Object(m.d)("Videos", "EventLandingVideos")), u.createElement(w.U, {
                         margin: {
                             top: 1
                         }
-                    }, o.createElement(k.U, null, e)))
-                }, t = r.__decorate([Object(g.c)("EventLandingVideos")], t)
-            }(o.Component),
-            x = function(e) {
+                    }, u.createElement(w.U, null, e)))
+                }, t = c.__decorate([Object(b.c)("EventLandingVideos")], t)
+            }(u.Component),
+            B = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onCountdownSuccess = function() {
                         t.props.goToVideo(t.props.channel.login)
                     }, t
                 }
-                return r.__extends(t, e), t.prototype.render = function() {
+                return c.__extends(t, e), t.prototype.render = function() {
                     var e = null;
                     i({
                         startAt: new Date(this.props.startAt),
@@ -2186,16 +2121,16 @@ webpackJsonp([46], {
                             status: this.props.premiere ? this.props.premiere.status : ""
                         },
                         eventType: this.props.eventType
-                    }) === f.LIVE && (e = o.createElement(_, {
+                    }) === S.LIVE && (e = u.createElement(C, {
                         id: this.props.id,
                         login: this.props.channel.login,
                         eventType: this.props.eventType,
                         onCountdownSuccess: this.onCountdownSuccess
                     }));
                     var t = null;
-                    return this.props.eventType === b.PREMIERE_EVENT && this.props.premiere && this.props.premiere.pastPremiere && (t = o.createElement(I, {
+                    return this.props.eventType === _.PREMIERE_EVENT && this.props.premiere && this.props.premiere.pastPremiere && (t = u.createElement(D, {
                         pastPremiere: this.props.premiere.pastPremiere
-                    })), o.createElement(k.U, null, o.createElement(F, {
+                    })), u.createElement(w.U, null, u.createElement(T, {
                         id: this.props.id,
                         title: this.props.title,
                         startAt: this.props.startAt,
@@ -2204,52 +2139,52 @@ webpackJsonp([46], {
                         self: this.props.self,
                         premiere: this.props.premiere,
                         eventType: this.props.eventType
-                    }), e, t, o.createElement(E, {
+                    }), e, t, u.createElement(A, {
                         description: this.props.description
                     }))
-                }, t = r.__decorate([Object(g.c)("EventLandingBody", {
+                }, t = c.__decorate([Object(b.c)("EventLandingBody", {
                     autoReportInteractive: !0
                 })], t)
-            }(o.Component),
-            U = n("5GFz"),
-            T = function(e) {
+            }(u.Component),
+            j = n("5GFz"),
+            R = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return r.__extends(t, e), t.prototype.render = function() {
+                return c.__extends(t, e), t.prototype.render = function() {
                     var e = new Date(this.props.startAt);
-                    return o.createElement(k.A, {
+                    return u.createElement(w.A, {
                         row: !0
-                    }, o.createElement(k.P, {
+                    }, u.createElement(w.P, {
                         flexShrink: 0
-                    }, o.createElement(k.C, {
-                        size: k.D.Size32,
-                        aspect: k.k.Aspect16x9,
+                    }, u.createElement(w.C, {
+                        size: w.D.Size32,
+                        aspect: w.k.Aspect16x9,
                         imageSrc: this.props.imageURL,
                         imageAlt: "" !== this.props.imageURL ? this.props.title : ""
-                    }, o.createElement(U.a, {
+                    }, u.createElement(j.a, {
                         date: e
                     }))))
-                }, t = r.__decorate([Object(g.c)("EventLandingImage", {
+                }, t = c.__decorate([Object(b.c)("EventLandingImage", {
                     autoReportInteractive: !0
                 })], t)
-            }(o.Component),
-            L = n("F8kA"),
-            B = n("NY9D"),
-            D = n("FsFC"),
-            j = function(e) {
+            }(u.Component),
+            P = n("F8kA"),
+            H = n("NY9D"),
+            W = n("FsFC"),
+            M = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderGameBoxArt = function(e, t) {
-                        return o.createElement(k.C, {
+                        return u.createElement(w.C, {
                             imageSrc: e,
                             imageAlt: t,
-                            aspect: k.k.Aspect3x4,
-                            size: k.D.Size4
+                            aspect: w.k.Aspect3x4,
+                            size: w.D.Size4
                         })
                     }, t
                 }
-                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                return c.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     var e = new Date(this.props.startAt),
@@ -2257,91 +2192,91 @@ webpackJsonp([46], {
                         n = null,
                         i = null,
                         a = null,
-                        s = null;
+                        r = null;
                     if (function(e) {
-                            for (var t in b)
-                                if (isNaN(Number(t)) && b[t] === e) return !0;
+                            for (var t in _)
+                                if (isNaN(Number(t)) && _[t] === e) return !0;
                             return !1
                         }(this.props.eventType)) {
-                        var d = void 0;
+                        var l = void 0;
                         switch (this.props.eventType) {
-                            case b.PREMIERE_EVENT:
-                                d = Object(l.d)("Premiere", "EventLandingInfo");
+                            case _.PREMIERE_EVENT:
+                                l = Object(m.d)("Premiere", "EventLandingInfo");
                                 break;
                             default:
-                                d = Object(l.d)("Live Stream", "EventLandingInfo")
+                                l = Object(m.d)("Live Stream", "EventLandingInfo")
                         }
-                        n = o.createElement(k.U, {
+                        n = u.createElement(w.U, {
                             margin: {
                                 top: 3
                             }
-                        }, o.createElement(k._22, {
-                            transform: k._26.Uppercase,
-                            type: k._27.H5,
-                            color: k.F.Alt2
-                        }, Object(l.d)("Event Type", "EventLandingInfo")), o.createElement(k.U, {
+                        }, u.createElement(w._22, {
+                            transform: w._26.Uppercase,
+                            type: w._27.H5,
+                            color: w.F.Alt2
+                        }, Object(m.d)("Event Type", "EventLandingInfo")), u.createElement(w.U, {
                             margin: {
                                 top: 1
                             }
-                        }, o.createElement(k._22, {
-                            fontSize: k.L.Size5
-                        }, d)))
+                        }, u.createElement(w._22, {
+                            fontSize: w.L.Size5
+                        }, l)))
                     }
-                    return this.props.game && (this.props.game.boxArtURL && this.props.game.displayName && (a = o.createElement(k.U, {
-                        display: k.H.InlineFlex
-                    }, this.renderGameBoxArt(this.props.game.boxArtURL, this.props.game.displayName))), i = o.createElement(k.U, {
+                    return this.props.game && (this.props.game.boxArtURL && this.props.game.displayName && (a = u.createElement(w.U, {
+                        display: w.H.InlineFlex
+                    }, this.renderGameBoxArt(this.props.game.boxArtURL, this.props.game.displayName))), i = u.createElement(w.U, {
                         margin: {
                             top: 3
                         }
-                    }, o.createElement(k._22, {
-                        transform: k._26.Uppercase,
-                        type: k._27.H5,
-                        color: k.F.Alt2
-                    }, Object(l.d)("Streaming", "EventLandingInfo")), o.createElement(L.a, {
+                    }, u.createElement(w._22, {
+                        transform: w._26.Uppercase,
+                        type: w._27.H5,
+                        color: w.F.Alt2
+                    }, Object(m.d)("Streaming", "EventLandingInfo")), u.createElement(P.a, {
                         to: {
-                            pathname: Object(B.c)(this.props.game.displayName),
+                            pathname: Object(H.c)(this.props.game.displayName),
                             state: {
                                 content: "event_game",
                                 medium: "event_page"
                             }
                         }
-                    }, o.createElement(k.U, {
-                        display: k.H.Flex,
-                        flexWrap: k.K.Wrap,
-                        alignItems: k.c.Center,
+                    }, u.createElement(w.U, {
+                        display: w.H.Flex,
+                        flexWrap: w.K.Wrap,
+                        alignItems: w.c.Center,
                         margin: {
                             top: 1
                         }
-                    }, a, o.createElement(k.U, {
-                        display: k.H.InlineFlex,
+                    }, a, u.createElement(w.U, {
+                        display: w.H.InlineFlex,
                         margin: {
                             left: 1
                         }
-                    }, o.createElement(k._22, {
-                        fontSize: k.L.Size5
-                    }, this.props.game.displayName)))))), this.props.channel.profileImageURL && (s = o.createElement(k.U, {
-                        display: k.H.InlineFlex
-                    }, o.createElement(k.l, {
+                    }, u.createElement(w._22, {
+                        fontSize: w.L.Size5
+                    }, this.props.game.displayName)))))), this.props.channel.profileImageURL && (r = u.createElement(w.U, {
+                        display: w.H.InlineFlex
+                    }, u.createElement(w.l, {
                         size: 40,
                         imageSrc: this.props.channel.profileImageURL,
                         imageAlt: "User profile picture"
-                    }))), o.createElement(k.U, {
+                    }))), u.createElement(w.U, {
                         margin: {
                             x: 3
                         },
                         padding: {
                             y: 2
                         }
-                    }, o.createElement(k.U, null, o.createElement(k._22, {
-                        transform: k._26.Uppercase,
-                        type: k._27.H5,
-                        color: k.F.Alt2
-                    }, Object(l.d)("Date & Time", "EventLandingInfo")), o.createElement(k.U, {
+                    }, u.createElement(w.U, null, u.createElement(w._22, {
+                        transform: w._26.Uppercase,
+                        type: w._27.H5,
+                        color: w.F.Alt2
+                    }, Object(m.d)("Date & Time", "EventLandingInfo")), u.createElement(w.U, {
                         margin: {
                             top: 1
                         }
-                    }, o.createElement(k._22, {
-                        fontSize: k.L.Size5
+                    }, u.createElement(w._22, {
+                        fontSize: w.L.Size5
                     }, function(e, t) {
                         var n = new Date;
                         t && (n = t);
@@ -2350,37 +2285,37 @@ webpackJsonp([46], {
                             month: "short",
                             day: "numeric"
                         };
-                        return n.getFullYear() !== e.getFullYear() && (i = r.__assign({}, i, {
+                        return n.getFullYear() !== e.getFullYear() && (i = c.__assign({}, i, {
                             year: "numeric"
-                        })), Object(l.c)(e, i)
-                    }(e))), o.createElement(k.U, {
+                        })), Object(m.c)(e, i)
+                    }(e))), u.createElement(w.U, {
                         margin: {
                             top: 1
                         }
-                    }, o.createElement(k._22, {
-                        fontSize: k.L.Size5
+                    }, u.createElement(w._22, {
+                        fontSize: w.L.Size5
                     }, function(e) {
-                        return Object(l.h)(e, {
+                        return Object(m.h)(e, {
                             timeZoneName: "short"
                         })
-                    }(e))), o.createElement(k.U, {
+                    }(e))), u.createElement(w.U, {
                         margin: {
                             top: 1
                         }
-                    }, o.createElement(k._22, {
-                        fontSize: k.L.Size5
+                    }, u.createElement(w._22, {
+                        fontSize: w.L.Size5
                     }, function(e, t) {
                         var n = Math.abs(e.getTime() / 1e3 - t.getTime() / 1e3);
-                        return Object(D.a)(n)
-                    }(e, t)))), n, o.createElement(k.U, {
+                        return Object(W.a)(n)
+                    }(e, t)))), n, u.createElement(w.U, {
                         margin: {
                             top: 3
                         }
-                    }, o.createElement(k._22, {
-                        transform: k._26.Uppercase,
-                        type: k._27.H5,
-                        color: k.F.Alt2
-                    }, Object(l.d)("Starring", "EventLandingInfo")), o.createElement(L.a, {
+                    }, u.createElement(w._22, {
+                        transform: w._26.Uppercase,
+                        type: w._27.H5,
+                        color: w.F.Alt2
+                    }, Object(m.d)("Starring", "EventLandingInfo")), u.createElement(P.a, {
                         to: {
                             pathname: "/" + this.props.channel.login,
                             state: {
@@ -2388,150 +2323,604 @@ webpackJsonp([46], {
                                 medium: "event_page"
                             }
                         }
-                    }, o.createElement(k.U, {
-                        display: k.H.Flex,
-                        flexWrap: k.K.Wrap,
-                        alignItems: k.c.Center,
+                    }, u.createElement(w.U, {
+                        display: w.H.Flex,
+                        flexWrap: w.K.Wrap,
+                        alignItems: w.c.Center,
                         margin: {
                             top: 1
                         }
-                    }, s, o.createElement(k.U, {
-                        display: k.H.InlineFlex,
+                    }, r, u.createElement(w.U, {
+                        display: w.H.InlineFlex,
                         margin: {
                             left: 1
                         }
-                    }, o.createElement(k._22, {
-                        fontSize: k.L.Size5
+                    }, u.createElement(w._22, {
+                        fontSize: w.L.Size5
                     }, "" !== this.props.channel.displayName ? this.props.channel.displayName : this.props.channel.login))))), i)
-                }, t = r.__decorate([Object(g.c)("EventLandingInfo")], t)
-            }(o.Component),
-            P = function(e) {
+                }, t = c.__decorate([Object(b.c)("EventLandingInfo")], t)
+            }(u.Component),
+            V = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                return c.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return o.createElement(k._18, {
-                        background: k.m.Base
-                    }, o.createElement(k._18, {
+                    return u.createElement(w._18, {
+                        background: w.m.Base
+                    }, u.createElement(w._18, {
                         border: !0
-                    }, o.createElement(T, {
+                    }, u.createElement(R, {
                         title: this.props.title,
                         imageURL: this.props.imageURL,
                         startAt: this.props.startAt
-                    })), o.createElement(k._18, {
+                    })), u.createElement(w._18, {
                         borderRight: !0,
                         borderLeft: !0,
                         borderBottom: !0
-                    }, o.createElement(j, {
+                    }, u.createElement(M, {
                         startAt: this.props.startAt,
                         endAt: this.props.endAt,
                         channel: this.props.channel,
                         game: this.props.game,
                         eventType: this.props.eventType
                     })))
-                }, t = r.__decorate([Object(g.c)("EventLandingSidePanel")], t)
-            }(o.Component),
-            R = n("DP4t"),
-            H = (n("Cb/j"), function(e) {
+                }, t = c.__decorate([Object(b.c)("EventLandingSidePanel")], t)
+            }(u.Component),
+            z = n("zCIC"),
+            G = Object(b.c)("TimetableHeader", {
+                autoReportInteractive: !0
+            })(function(e) {
+                var t = {
+                        weekday: "long",
+                        month: "short",
+                        day: "numeric",
+                        timeZoneName: "short"
+                    },
+                    n = u.createElement(w.U, {
+                        display: w.H.Flex
+                    }, u.createElement(w.U, {
+                        margin: {
+                            right: .5
+                        }
+                    }, u.createElement(F.a, {
+                        eventID: e.id,
+                        areNotificationsEnabled: e.isFollowing,
+                        channelID: "",
+                        channelLogin: "",
+                        eventLocation: I.a.EventDetails
+                    })), u.createElement(w.U, {
+                        margin: {
+                            right: .5
+                        }
+                    }, u.createElement(U.a, {
+                        id: e.id,
+                        title: e.title,
+                        channelID: "",
+                        channelLogin: "",
+                        eventLocation: I.a.EventDetails
+                    })), e.owner && u.createElement(x.a, {
+                        targetUser: e.owner,
+                        eventID: e.id,
+                        balloonDirection: w.q.Bottom
+                    })),
+                    i = Object(m.d)("To Be Announced", "EventLandingPage");
+                return e.startAt && (i = Object(m.h)(e.startAt, t)), u.createElement(w.U, {
+                    margin: .5
+                }, u.createElement(w._18, {
+                    border: !0,
+                    background: w.m.Base
+                }, u.createElement(w.U, null, u.createElement("img", {
+                    src: e.imageURL
+                })), u.createElement(w.U, {
+                    margin: 1
+                }, u.createElement(w._18, {
+                    borderBottom: !0,
+                    padding: 1
+                }, u.createElement(w._22, {
+                    type: w._27.H3
+                }, e.title)), u.createElement(w._18, {
+                    borderBottom: !0,
+                    padding: 1
+                }, u.createElement(w._22, null, Object(m.d)("Starts {startDate}", {
+                    startDate: i
+                }, "EventLandingPage"))), u.createElement(w.U, {
+                    margin: 1
+                }, n))), u.createElement(w._18, {
+                    border: !0,
+                    padding: {
+                        x: 2,
+                        y: 1
+                    },
+                    background: w.m.Base,
+                    margin: {
+                        top: 2
+                    }
+                }, u.createElement(w.U, {
+                    margin: {
+                        bottom: .5
+                    }
+                }, u.createElement(w._22, {
+                    transform: w._26.Uppercase,
+                    color: w.F.Alt2,
+                    type: w._27.H5
+                }, Object(m.d)("Description", "EventLandingPage"))), u.createElement(w._22, null, e.description)))
+            }),
+            q = n("cSst"),
+            K = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.localizedGame = function() {
+                        return Object(m.d)("Game", "TimetableSegment")
+                    }, t.onExpandClick = function() {
+                        return t.props.onExpand(t.props.event.id)
+                    }, t
+                }
+                return c.__extends(t, e), t.prototype.render = function() {
+                    return this.props.expanded ? this.expandedSegment() : this.collapsedSegment()
+                }, t.prototype.collapsedSegment = function() {
+                    var e = Object(m.c)(this.props.event.startAt, {
+                            month: "short"
+                        }),
+                        t = Object(m.c)(this.props.event.startAt, {
+                            day: "numeric"
+                        });
+                    return u.createElement("div", {
+                        onClick: this.onExpandClick
+                    }, u.createElement(w._18, {
+                        border: !0,
+                        fullWidth: !0,
+                        margin: {
+                            y: 1
+                        },
+                        display: w.H.Flex,
+                        flexWrap: w.K.NoWrap,
+                        background: w.m.Base
+                    }, u.createElement(w.U, {
+                        className: "events-landing__calendar-date",
+                        margin: {
+                            x: 1
+                        },
+                        display: w.H.Flex,
+                        flexDirection: w.J.Column,
+                        justifyContent: w.T.Center,
+                        alignItems: w.c.Center
+                    }, u.createElement(w._22, {
+                        fontSize: w.L.Size6,
+                        transform: w._26.Uppercase
+                    }, e), u.createElement(w._22, {
+                        fontSize: w.L.Size3
+                    }, t)), u.createElement(w.U, {
+                        flexGrow: 1
+                    }, u.createElement(w._18, {
+                        borderBottom: !0,
+                        padding: {
+                            y: .5
+                        },
+                        margin: {
+                            right: .5
+                        }
+                    }, u.createElement(w._22, {
+                        bold: !0,
+                        type: w._27.H5,
+                        ellipsis: !0
+                    }, this.props.event.title)), u.createElement(w.U, {
+                        display: w.H.Flex,
+                        justifyContent: w.T.Between,
+                        flexWrap: w.K.NoWrap
+                    }, u.createElement(w.U, {
+                        padding: {
+                            y: .5
+                        },
+                        display: w.H.Flex,
+                        alignItems: w.c.Center
+                    }, u.createElement(w.U, {
+                        flexShrink: 0
+                    }, u.createElement(w._22, {
+                        type: w._27.H5
+                    }, Object(m.h)(this.props.event.startAt, {
+                        weekday: "long",
+                        timezoneName: "short"
+                    }))), u.createElement(w.U, {
+                        margin: {
+                            x: .5
+                        }
+                    }, "•"), u.createElement(q.a, {
+                        linkTo: "/directory/game/" + encodeURIComponent(this.props.event.game.name),
+                        tooltip: this.localizedGame(),
+                        svgAsset: w._10.NavGames,
+                        title: this.props.event.game.displayName
+                    })), u.createElement(F.a, {
+                        eventID: this.props.event.id,
+                        areNotificationsEnabled: this.props.event.self.isFollowing,
+                        channelID: this.props.event.channel.id,
+                        channelLogin: this.props.event.channel.login,
+                        eventLocation: I.a.EventDetails,
+                        small: !0
+                    })))))
+                }, t.prototype.expandedSegment = function() {
+                    var e = {
+                        backgroundImage: "url(" + this.props.event.imageURL + ")"
+                    };
+                    return u.createElement(w._18, {
+                        border: !0,
+                        elevation: 2,
+                        fullWidth: !0,
+                        margin: {
+                            y: 1
+                        },
+                        background: w.m.Base,
+                        position: w._3.Relative
+                    }, u.createElement(w.U, {
+                        position: w._3.Absolute,
+                        attachTop: !0,
+                        attachRight: !0,
+                        padding: {
+                            top: .5,
+                            right: .5
+                        }
+                    }, u.createElement(w.u, {
+                        overlay: !0,
+                        type: w.z.Text,
+                        icon: w._10.Close,
+                        onClick: this.props.onDismissExpand
+                    })), u.createElement(w._18, {
+                        borderBottom: !0
+                    }, u.createElement("div", {
+                        style: e
+                    }, u.createElement("div", {
+                        className: "events-landing__expanded-segment-header"
+                    }, u.createElement(w.U, {
+                        display: w.H.Flex,
+                        alignItems: w.c.End,
+                        flexWrap: w.K.NoWrap,
+                        padding: {
+                            top: 3,
+                            x: 1,
+                            bottom: 1
+                        }
+                    }, u.createElement(w.U, {
+                        flexShrink: 0
+                    }, u.createElement("img", {
+                        src: this.props.event.game.boxArtURL,
+                        height: 130,
+                        width: 93
+                    })), u.createElement(w.U, {
+                        flexGrow: 1,
+                        margin: {
+                            left: 1
+                        }
+                    }, u.createElement(w.U, {
+                        margin: {
+                            bottom: 2
+                        }
+                    }, u.createElement(w.U, {
+                        margin: {
+                            bottom: 1
+                        }
+                    }, u.createElement(w._22, {
+                        color: w.F.Overlay,
+                        type: w._27.H3
+                    }, this.props.event.title)), u.createElement(w._22, {
+                        color: w.F.Overlay
+                    }, Object(m.h)(this.props.event.startAt, {
+                        weekday: "long",
+                        month: "long",
+                        day: "numeric",
+                        timeZoneName: "short"
+                    }))), u.createElement(w.U, {
+                        display: w.H.Flex,
+                        alignItems: w.c.Center,
+                        flexWrap: w.K.NoWrap,
+                        justifyContent: w.T.Between
+                    }, u.createElement(q.a, {
+                        linkTo: "/directory/game/" + encodeURIComponent(this.props.event.game.name),
+                        tooltip: this.localizedGame(),
+                        svgAsset: w._10.NavGames,
+                        title: this.props.event.game.displayName
+                    }), u.createElement(w.U, {
+                        display: w.H.Flex,
+                        flexWrap: w.K.NoWrap,
+                        flexShrink: 0
+                    }, u.createElement(w.U, {
+                        margin: {
+                            right: .5
+                        }
+                    }, u.createElement(F.a, {
+                        eventID: this.props.event.id,
+                        areNotificationsEnabled: this.props.event.self.isFollowing,
+                        channelID: this.props.event.channel.id,
+                        channelLogin: this.props.event.channel.login,
+                        eventLocation: I.a.EventDetails
+                    })), u.createElement(w.U, {
+                        margin: {
+                            right: .5
+                        }
+                    }, u.createElement(U.a, {
+                        id: this.props.event.id,
+                        title: this.props.event.title,
+                        channelID: this.props.event.channel.id,
+                        channelLogin: this.props.event.channel.login,
+                        eventLocation: I.a.EventDetails
+                    })), u.createElement(x.a, {
+                        targetUser: this.props.event.channel,
+                        eventID: this.props.event.id,
+                        balloonDirection: w.q.Bottom
+                    })))))))), u.createElement(w.U, {
+                        margin: 1
+                    }, u.createElement(w.U, {
+                        margin: {
+                            bottom: .5
+                        }
+                    }, u.createElement(w._22, {
+                        transform: w._26.Uppercase,
+                        color: w.F.Alt2,
+                        type: w._27.H5
+                    }, Object(m.d)("Description", "TimetableSegment"))), u.createElement(w._22, null, this.props.event.description)))
+                }, t
+            }(u.PureComponent),
+            J = Object(b.c)("TimetableSegment", {
+                autoReportInteractive: !0
+            })(K),
+            Y = function(e) {
+                function t(t) {
+                    var n = e.call(this, t) || this;
+                    return n.unexpand = function() {
+                        n.setState({
+                            expandedEvent: null
+                        })
+                    }, n.setExpanded = function(e) {
+                        n.setState({
+                            expandedEvent: e
+                        })
+                    }, n.state = {
+                        expandedEvent: n.props.segments.length ? n.props.segments[0].id : null
+                    }, n
+                }
+                return c.__extends(t, e), t.prototype.render = function() {
+                    var e = this,
+                        t = this.props.segments.map(function(t) {
+                            return u.createElement(J, {
+                                key: t.id,
+                                event: t,
+                                expanded: t.id === e.state.expandedEvent,
+                                onDismissExpand: e.unexpand,
+                                onExpand: e.setExpanded
+                            })
+                        }),
+                        n = this.props.segments.length && this.props.segments[0].startAt || new Date;
+                    return u.createElement(w.U, {
+                        className: "events-landing__main-col",
+                        position: w._3.Relative,
+                        margin: {
+                            left: 3
+                        }
+                    }, u.createElement(w.U, {
+                        display: w.H.Flex,
+                        justifyContent: w.T.Between,
+                        margin: {
+                            top: 1
+                        }
+                    }, u.createElement(w._22, {
+                        transform: w._26.Uppercase,
+                        color: w.F.Alt2,
+                        type: w._27.H5
+                    }, Object(m.d)("Schedule", "TimetableSchedule")), u.createElement(w.U, {
+                        display: w.H.Flex
+                    }, u.createElement(w.U, {
+                        margin: {
+                            right: .5
+                        }
+                    }, u.createElement(w.u, {
+                        type: w.z.Hollow,
+                        size: w.x.Small
+                    }, Object(m.d)("All Games", "TimetableSchedule"))), u.createElement(w.U, {
+                        margin: {
+                            right: .5
+                        }
+                    }, u.createElement(w.u, {
+                        type: w.z.Hollow,
+                        size: w.x.Small
+                    }, Object(m.c)(n, "medium"))), u.createElement(w.u, {
+                        type: w.z.Hollow,
+                        size: w.x.Small,
+                        disabled: !0
+                    }, Object(m.d)("Today", "TimetableSchedule")))), u.createElement(w.U, null, t, u.createElement(z.a, {
+                        enabled: !0,
+                        loadMore: this.props.getNextSegments
+                    })))
+                }, t
+            }(u.PureComponent),
+            Q = Object(b.c)("TimetableSchedule", {
+                autoReportInteractive: !0
+            })(Y),
+            $ = (n("ynGC"), Object(b.c)("TimeablePageComponent", {
+                autoReportInteractive: !0
+            })(function(e) {
+                return u.createElement(w.U, {
+                    display: w.H.Flex,
+                    justifyContent: w.T.Center,
+                    margin: {
+                        top: 3
+                    }
+                }, u.createElement(w.U, {
+                    className: "events-landing__info-col"
+                }, u.createElement(z.c, null, u.createElement(G, {
+                    id: e.event.id,
+                    title: e.event.title,
+                    description: e.event.description,
+                    startAt: e.event.startAt,
+                    endAt: e.event.endAt,
+                    imageURL: e.event.imageURL,
+                    thumbImageURL: e.event.thumbImageURL,
+                    owner: e.event.owner,
+                    isFollowing: e.event.self.isFollowing
+                }))), u.createElement(Q, {
+                    parentID: e.event.id,
+                    segments: e.event.children,
+                    getNextSegments: e.loadNextChildren
+                }))
+            })),
+            X = n("DP4t"),
+            Z = (n("Cb/j"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.goToVideo = function(e) {
                         t.props.history.push("/" + e)
                     }, t
                 }
-                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                return c.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.onRender()
                 }, t.prototype.componentDidUpdate = function() {
                     this.onRender()
                 }, t.prototype.render = function() {
-                    var e = o.createElement(k.U, {
+                    if (this.props.data.loading) return u.createElement(w.U, {
                         margin: {
                             top: 3
                         }
-                    }, o.createElement(k.Y, {
+                    }, u.createElement(w.Y, {
                         fillContent: !0
                     }));
-                    if (this.props.data.error || !this.props.data.loading && !this.props.data.event || this.props.data.event && this.missingRequiredEventField()) return o.createElement(s.a, {
-                        message: Object(l.d)("Error loading data.", "EventLandingPage")
-                    });
-                    if (this.props.data.event && this.props.data.event.channel && this.props.data.event.channel.login && this.props.data.event.channel.id) {
-                        var t = {
-                            id: this.props.data.event.channel.id,
-                            login: this.props.data.event.channel.login,
-                            displayName: this.props.data.event.channel && this.props.data.event.channel.displayName ? this.props.data.event.channel.displayName : "",
-                            profileImageURL: this.props.data.event.channel && this.props.data.event.channel.profileImageURL ? this.props.data.event.channel.profileImageURL : ""
-                        };
-                        e = o.createElement(k.U, null, o.createElement(h.a, {
-                            currentPage: h.b.Events,
-                            channelLogin: this.props.data.event && this.props.data.event.channel && this.props.data.event.channel.login ? this.props.data.event.channel.login : ""
-                        }), o.createElement(k.U, {
-                            display: k.H.Flex,
-                            flexWrap: k.K.NoWrap,
-                            margin: {
-                                left: 3,
-                                top: 3,
-                                right: 3
-                            },
-                            className: "event-landing-page__wrapper"
-                        }, o.createElement(k.U, {
-                            flexShrink: 0,
-                            flexGrow: 0,
-                            margin: {
-                                right: 3
-                            }
-                        }, o.createElement(P, {
-                            title: this.props.data.event.title,
-                            imageURL: this.props.data.event.imageURL,
-                            startAt: this.props.data.event.startAt,
-                            endAt: this.props.data.event.endAt,
-                            channel: t,
-                            game: this.props.data.event.game,
-                            eventType: this.props.data.event.__typename
-                        })), o.createElement(k.U, {
-                            flexGrow: 1
-                        }, o.createElement(x, {
-                            id: this.props.data.event.id,
-                            title: this.props.data.event.title,
-                            description: this.props.data.event.description,
-                            startAt: this.props.data.event.startAt,
-                            endAt: this.props.data.event.endAt,
-                            channel: t,
-                            self: this.props.data.event.self,
-                            eventType: this.props.data.event.__typename,
-                            premiere: "PremiereEvent" === this.props.data.event.__typename ? this.props.data.event.premiere : null,
-                            goToVideo: this.goToVideo
-                        }))))
+                    if (this.props.data.error || !this.props.data.loading && !this.props.data.event) return this.errorPage();
+                    if (s(this.props.data.event)) {
+                        if (!this.props.data.event.parent) return this.errorPage();
+                        return (e = r(this.props.data.event.parent)) ? u.createElement($, {
+                            event: e,
+                            loadNextChildren: this.props.getNextChildren
+                        }) : this.errorPage()
                     }
-                    return o.createElement(d.b, null, e)
+                    if (o(this.props.data.event)) {
+                        var e;
+                        return (e = r(this.props.data.event)) ? u.createElement($, {
+                            event: e,
+                            loadNextChildren: this.props.getNextChildren
+                        }) : this.errorPage()
+                    }
+                    var t = this.cleanEvent(this.props.data.event);
+                    return t ? u.createElement(w.U, {
+                        position: w._3.Relative
+                    }, u.createElement(y.a, null, u.createElement(k.a, {
+                        currentPage: k.b.Events,
+                        channelLogin: t.channel.login
+                    })), u.createElement(w.U, {
+                        display: w.H.Flex,
+                        flexWrap: w.K.NoWrap,
+                        margin: {
+                            left: 3,
+                            top: 3,
+                            right: 3
+                        },
+                        className: "event-landing-page__wrapper"
+                    }, u.createElement(w.U, {
+                        flexShrink: 0,
+                        flexGrow: 0,
+                        margin: {
+                            right: 3
+                        }
+                    }, u.createElement(V, {
+                        title: t.title,
+                        imageURL: t.imageURL,
+                        startAt: t.startAt,
+                        endAt: t.endAt,
+                        channel: t.channel,
+                        game: t.game,
+                        eventType: t.eventType
+                    })), u.createElement(w.U, {
+                        flexGrow: 1
+                    }, u.createElement(B, {
+                        id: t.id,
+                        title: t.title,
+                        description: t.description,
+                        startAt: t.startAt,
+                        endAt: t.endAt,
+                        channel: t.channel,
+                        self: t.self,
+                        eventType: t.eventType,
+                        premiere: t.premiere,
+                        goToVideo: this.goToVideo
+                    })))) : this.errorPage()
+                }, t.prototype.errorPage = function() {
+                    return u.createElement(p.a, {
+                        message: Object(m.d)("Error loading data.", "EventLandingPage")
+                    })
                 }, t.prototype.onRender = function() {
-                    this.props.data.event && (this.props.latencyTracking.reportInteractive(), this.props.data.event.title && l.n.setPageTitle(this.props.data.event.title))
-                }, t.prototype.missingRequiredEventField = function() {
-                    if (!this.props.data.event) return !0;
-                    var e = !this.props.data.event.title || !this.props.data.event.startAt || !this.props.data.event.endAt,
-                        t = !(this.props.data.event.channel && (!this.props.data.event.channel || this.props.data.event.channel.login && this.props.data.event.channel.id));
-                    return e || t
-                }, t = r.__decorate([Object(c.a)(R, {
+                    this.props.data.event && (this.props.latencyTracking.reportInteractive(), this.props.data.event.title && m.n.setPageTitle(this.props.data.event.title))
+                }, t.prototype.cleanEvent = function(e) {
+                    if (o(e) || s(e)) return null;
+                    var t = null;
+                    return e && "PremiereEvent" === e.__typename && (t = e.premiere), e && e.channel && e.game && e.channel.id && e.channel.login ? {
+                        id: e.id,
+                        title: e.title,
+                        imageURL: e.imageURL,
+                        description: e.description,
+                        startAt: e.startAt,
+                        endAt: e.endAt,
+                        channel: {
+                            id: e.channel.id,
+                            login: e.channel.login,
+                            displayName: e.channel.displayName || e.channel.login,
+                            profileImageURL: e.channel.profileImageURL || ""
+                        },
+                        game: {
+                            displayName: e.game.displayName,
+                            boxArtURL: e.game.boxArtURL || ""
+                        },
+                        eventType: e.__typename,
+                        premiere: t,
+                        self: {
+                            isFollowing: e.self && e.self.isFollowing || !1
+                        }
+                    } : null
+                }, t = c.__decorate([Object(h.a)(X, {
                     options: function(e) {
                         return {
                             variables: {
-                                eventName: e.match.params.eventName
+                                eventName: e.match.params.eventName,
+                                childrenCursor: null
                             }
                         }
+                    },
+                    props: function(e) {
+                        return c.__assign({}, e, {
+                            getNextChildren: function() {
+                                if (o(e.data.event)) {
+                                    var t = e.data.event && e.data.event.children && e.data.event.children.edges && e.data.event.children.edges.length > 0 && e.data.event.children.edges[e.data.event.children.edges.length - 1].cursor || null;
+                                    return e.data.fetchMore({
+                                        query: X,
+                                        variables: {
+                                            eventName: e.data.event.id,
+                                            childrenCursor: t
+                                        },
+                                        updateQuery: function(e, t) {
+                                            var n = t.fetchMoreResult;
+                                            return o(e.event) && o(n.event) ? {
+                                                event: l(e.event, n.event)
+                                            } : s(e.event) && s(n.event) ? {
+                                                event: function(e, t) {
+                                                    var n = e.parent;
+                                                    return n && t.parent && (n = l(n, t.parent)), c.__assign({}, e, {
+                                                        parent: n
+                                                    })
+                                                }(e.event, n.event)
+                                            } : e
+                                        }
+                                    })
+                                }
+                            }
+                        })
                     }
-                }), Object(g.c)("EventLandingPage", {
-                    destination: p.a.EventDetails,
-                    autoReportInteractive: !0
-                }), Object(u.a)({
-                    location: m.PageviewLocation.EventDetails,
+                }), Object(b.c)("EventLandingPage", {
+                    destination: v.a.EventDetails
+                }), Object(g.a)({
+                    location: f.PageviewLocation.EventDetails,
                     skip: function(e) {
                         return e.data.loading || !!e.data.error
                     }
                 })], t)
-            }(o.Component));
+            }(u.Component));
         n.d(t, "EventLandingPage", function() {
-            return H
+            return Z
         })
     },
     OFFm: function(e, t, n) {
@@ -2539,19 +2928,19 @@ webpackJsonp([46], {
         var i = n("RH2O"),
             a = n("2KeS"),
             r = n("+xm8"),
-            o = n("f2i/"),
-            l = n("Aj/L"),
+            l = n("f2i/"),
+            o = n("Aj/L"),
             s = n("TToO"),
             d = n("U7vG"),
             c = n("BhyV"),
             u = n("6sO2"),
-            p = n("+Znq"),
-            m = n("oIkB"),
+            m = n("+Znq"),
+            p = n("oIkB"),
             h = n("MQiv"),
             g = n("Odds"),
             v = n("Ru53"),
             f = n("9SRT"),
-            b = function(e) {
+            k = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleOpen = function(e) {
@@ -2562,62 +2951,31 @@ webpackJsonp([46], {
                             eventID: t.props.eventID,
                             location: t.props.eventLocation
                         })
+                    }, t.handleButton = function(e) {
+                        return e && (e.stopPropagation(), e.preventDefault()), t.toggleFollowing()
                     }, t.handleToggle = function() {
-                        if (!t.props.isLoggedIn) return t.props.login();
-                        if (t.props.areNotificationsEnabled) {
-                            var e = s.__assign({}, Object(m.a)({
-                                eventID: t.props.eventID
-                            }), {
-                                optimisticResponse: {
-                                    unfollowEvent: {
-                                        __typename: "UnfollowEventPayload",
-                                        event: {
-                                            __typename: "Event",
-                                            id: t.props.eventID,
-                                            self: {
-                                                __typename: "EventSelfConnection",
-                                                isFollowing: !1
-                                            }
-                                        }
-                                    }
-                                }
-                            });
-                            t.props.unfollowEvent(e)
-                        } else {
-                            e = s.__assign({}, Object(m.a)({
-                                eventID: t.props.eventID
-                            }), {
-                                optimisticResponse: {
-                                    followEvent: {
-                                        __typename: "FollowEventPayload",
-                                        event: {
-                                            __typename: "Event",
-                                            id: t.props.eventID,
-                                            self: {
-                                                __typename: "EventSelfConnection",
-                                                isFollowing: !0
-                                            }
-                                        }
-                                    }
-                                }
-                            });
-                            t.props.followEvent(e)
-                        }
-                        Object(h.d)({
-                            action: t.props.areNotificationsEnabled ? h.b.EmailReminderOff : h.b.EmailReminderOn,
-                            channelLogin: t.props.channelLogin,
-                            channelID: t.props.channelID,
-                            eventID: t.props.eventID,
-                            location: t.props.eventLocation
-                        })
+                        return t.toggleFollowing()
                     }, t
                 }
                 return s.__extends(t, e), t.prototype.render = function() {
-                    return d.createElement(p.a, {
+                    var e = Object(u.d)("Remind Me", "FollowEvent");
+                    if (this.props.small) {
+                        var t = e,
+                            n = g._10.Heart;
+                        return this.props.areNotificationsEnabled && (t = Object(u.d)("Reminder Set", "FollowEvent"), n = g._10.FollowCheck), d.createElement(g._30, {
+                            label: t
+                        }, d.createElement(g.v, {
+                            size: g.x.Default,
+                            icon: n,
+                            onClick: this.handleButton,
+                            ariaLabel: t
+                        }))
+                    }
+                    return d.createElement(m.a, {
                         onToggle: this.handleOpen
                     }, d.createElement(g.u, {
                         dropdown: !0
-                    }, Object(u.d)("Remind Me", "FollowEvent")), d.createElement(g.p, {
+                    }, e), d.createElement(g.p, {
                         direction: this.props.balloonDirection
                     }, d.createElement(g.U, {
                         padding: 1
@@ -2639,24 +2997,72 @@ webpackJsonp([46], {
                     })), d.createElement(g._22, {
                         color: g.F.Alt
                     }, Object(u.d)("Turn on reminders to be notified when this event starts.", "FollowEvent")))))
+                }, t.prototype.toggleFollowing = function() {
+                    if (!this.props.isLoggedIn) return this.props.login();
+                    if (this.props.areNotificationsEnabled) {
+                        var e = s.__assign({}, Object(p.a)({
+                            eventID: this.props.eventID
+                        }), {
+                            optimisticResponse: {
+                                unfollowEvent: {
+                                    __typename: "UnfollowEventPayload",
+                                    event: {
+                                        __typename: "Event",
+                                        id: this.props.eventID,
+                                        self: {
+                                            __typename: "EventSelfConnection",
+                                            isFollowing: !1
+                                        }
+                                    }
+                                }
+                            }
+                        });
+                        this.props.unfollowEvent(e)
+                    } else {
+                        e = s.__assign({}, Object(p.a)({
+                            eventID: this.props.eventID
+                        }), {
+                            optimisticResponse: {
+                                followEvent: {
+                                    __typename: "FollowEventPayload",
+                                    event: {
+                                        __typename: "Event",
+                                        id: this.props.eventID,
+                                        self: {
+                                            __typename: "EventSelfConnection",
+                                            isFollowing: !0
+                                        }
+                                    }
+                                }
+                            }
+                        });
+                        this.props.followEvent(e)
+                    }
+                    Object(h.d)({
+                        action: this.props.areNotificationsEnabled ? h.b.EmailReminderOff : h.b.EmailReminderOn,
+                        channelLogin: this.props.channelLogin,
+                        channelID: this.props.channelID,
+                        eventID: this.props.eventID,
+                        location: this.props.eventLocation
+                    })
                 }, t
-            }(d.Component),
-            k = Object(c.compose)(Object(c.graphql)(v, {
+            }(d.PureComponent),
+            b = Object(c.compose)(Object(c.graphql)(v, {
                 name: "followEvent"
             }), Object(c.graphql)(f, {
                 name: "unfollowEvent"
-            }))(b),
+            }))(k),
             y = Object(i.a)(function(e) {
                 return {
-                    isLoggedIn: Object(l.d)(e)
+                    isLoggedIn: Object(o.d)(e)
                 }
             }, function(e) {
                 return Object(a.bindActionCreators)({
                     login: function() {
-                        return Object(o.f)(r.a.EventFollowButton)
+                        return Object(l.f)(r.a.EventFollowButton)
                     }
                 }, e)
-            })(k);
+            })(b);
         n.d(t, "a", function() {
             return y
         })
@@ -2839,8 +3245,8 @@ webpackJsonp([46], {
         var i = n("TToO"),
             a = n("U7vG"),
             r = n("6sO2"),
-            o = n("bhVC"),
-            l = n("+Znq"),
+            l = n("bhVC"),
+            o = n("+Znq"),
             s = n("MQiv"),
             d = n("Odds"),
             c = function(e) {
@@ -2849,16 +3255,16 @@ webpackJsonp([46], {
                     return t.onShareClicked = function(e) {
                         var n = "";
                         switch (e) {
-                            case o.b.Twitter:
+                            case l.b.Twitter:
                                 n = "twitter";
                                 break;
-                            case o.b.Facebook:
+                            case l.b.Facebook:
                                 n = "facebook";
                                 break;
-                            case o.b.Reddit:
+                            case l.b.Reddit:
                                 n = "reddit";
                                 break;
-                            case o.b.VKontakte:
+                            case l.b.VKontakte:
                                 n = "vk";
                                 break;
                             default:
@@ -2877,7 +3283,7 @@ webpackJsonp([46], {
                     var e = function(e) {
                         return "https://www.twitch.tv/events/" + e
                     }(this.props.id);
-                    return a.createElement(l.a, null, a.createElement(d.u, {
+                    return a.createElement(o.a, null, a.createElement(d.u, {
                         dropdown: !0,
                         type: d.z.Hollow
                     }, Object(r.d)("Share", "ShareEvent")), a.createElement(d.p, {
@@ -2889,28 +3295,28 @@ webpackJsonp([46], {
                         flexDirection: d.J.Row,
                         flexWrap: d.K.NoWrap,
                         justifyContent: d.T.Center
-                    }, a.createElement(o.a, {
-                        type: o.b.Twitter,
+                    }, a.createElement(l.a, {
+                        type: l.b.Twitter,
                         text: this.props.title,
                         url: e,
                         onShareClick: this.onShareClicked
-                    }), a.createElement(o.a, {
-                        type: o.b.Facebook,
+                    }), a.createElement(l.a, {
+                        type: l.b.Facebook,
                         text: this.props.title,
                         url: e,
                         onShareClick: this.onShareClicked
-                    }), a.createElement(o.a, {
-                        type: o.b.Reddit,
+                    }), a.createElement(l.a, {
+                        type: l.b.Reddit,
                         text: this.props.title,
                         url: e,
                         onShareClick: this.onShareClicked
-                    }), a.createElement(o.a, {
-                        type: o.b.VKontakte,
+                    }), a.createElement(l.a, {
+                        type: l.b.VKontakte,
                         text: this.props.title,
                         url: e,
                         onShareClick: this.onShareClicked
-                    }), a.createElement(o.a, {
-                        type: o.b.Copy,
+                    }), a.createElement(l.a, {
+                        type: l.b.Copy,
                         text: this.props.title,
                         url: e
                     })))))
@@ -3057,76 +3463,76 @@ webpackJsonp([46], {
         "use strict";
         var i, a = n("TToO"),
             r = n("HW6M"),
-            o = n("U7vG"),
-            l = n("F8kA"),
+            l = n("U7vG"),
+            o = n("F8kA"),
             s = n("6sO2"),
             d = n("hdYS"),
             c = n("DtWM"),
             u = n("+Znq"),
-            p = n("7vx8"),
-            m = n("czpb"),
+            m = n("7vx8"),
+            p = n("czpb"),
             h = n("RH2O"),
             g = n("Aj/L"),
             v = n("N221"),
             f = n("jF7o"),
-            b = n("iMOk"),
-            k = n("WVx7"),
+            k = n("iMOk"),
+            b = n("WVx7"),
             y = n("ySfT"),
-            _ = n("ZJYd"),
-            E = n("/LBW"),
-            S = n("Odds"),
+            E = n("ZJYd"),
+            S = n("/LBW"),
+            _ = n("Odds"),
             w = (n("fHoP"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handlePromoBuy = function(e) {
-                        var n = Object(_.b)({
+                        var n = Object(E.b)({
                             trackBitsCardInteraction: t.props.trackBitsCardInteraction,
                             channelID: t.props.channelID,
                             purchaseUrl: e.currentTarget.dataset.purchaseUrl,
                             bitsAmount: e.currentTarget.dataset.bitsAmount,
-                            location: E.b.GetBitsButton
+                            location: S.b.GetBitsButton
                         });
                         n && t.props.onPromoBuyClose(n)
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    var e = o.createElement(S.U, null, o.createElement(S.U, {
+                    var e = l.createElement(_.U, null, l.createElement(_.U, {
                         padding: {
                             x: 5,
                             y: 2
                         },
-                        textAlign: S._23.Center
-                    }, o.createElement(S._22, {
-                        type: S._27.H4,
+                        textAlign: _._23.Center
+                    }, l.createElement(_._22, {
+                        type: _._27.H4,
                         bold: !0
-                    }, Object(s.d)("Cheer Bits for your Favorite Streamer!", "Bits--FirstTimeUserPrompt"))), o.createElement(S.U, {
+                    }, Object(s.d)("Cheer Bits for your Favorite Streamer!", "Bits--FirstTimeUserPrompt"))), l.createElement(_.U, {
                         padding: {
                             x: 2,
                             bottom: 1
                         }
-                    }, o.createElement(S._22, {
-                        type: S._27.Span,
-                        color: S.F.Alt
-                    }, Object(s.d)("Bits are fun, animated emotes. Cheering Bits celebrates moments you love with the community right in chat and similar to subscribing, helps support Partners and Affiliates.", "Bits--FirstTimeUserPrompt"), o.createElement(S.P, {
+                    }, l.createElement(_._22, {
+                        type: _._27.Span,
+                        color: _.F.Alt
+                    }, Object(s.d)("Bits are fun, animated emotes. Cheering Bits celebrates moments you love with the community right in chat and similar to subscribing, helps support Partners and Affiliates.", "Bits--FirstTimeUserPrompt"), l.createElement(_.P, {
                         margin: {
                             left: .5
                         }
-                    }, o.createElement("a", {
+                    }, l.createElement("a", {
                         onClick: this.props.toggleShowTutorial
-                    }, Object(s.d)("How do I cheer?", "Bits--FirstTimeUserPrompt"))))), o.createElement(S.U, {
+                    }, Object(s.d)("How do I cheer?", "Bits--FirstTimeUserPrompt"))))), l.createElement(_.U, {
                         padding: {
                             bottom: 2
                         },
-                        textAlign: S._23.Center
-                    }, o.createElement(S.P, {
+                        textAlign: _._23.Center
+                    }, l.createElement(_.P, {
                         margin: {
                             bottom: 1
                         }
-                    }, o.createElement(S._22, {
-                        type: S._27.H6,
+                    }, l.createElement(_._22, {
+                        type: _._27.H6,
                         bold: !0,
                         className: "bits-first-time-user-prompt__promo-header"
-                    }, Object(s.d)("First Time Purchaser Discount Pack!", "Bits--FirstTimeUserPrompt"))), o.createElement(S.u, {
+                    }, Object(s.d)("First Time Purchaser Discount Pack!", "Bits--FirstTimeUserPrompt"))), l.createElement(_.u, {
                         onClick: this.handlePromoBuy,
                         "data-purchase-url": this.props.promo.url,
                         "data-bits-amount": this.props.promo.bits,
@@ -3135,45 +3541,45 @@ webpackJsonp([46], {
                         price: this.props.promo.price,
                         amount: this.props.promo.bits
                     }, "Bits--FirstTimeUserPrompt"))));
-                    return this.props.isShowingTutorial ? o.createElement(S.U, {
+                    return this.props.isShowingTutorial ? l.createElement(_.U, {
                         className: "bits-first-time-user-prompt",
                         fullWidth: !0
-                    }, o.createElement(S.U, {
+                    }, l.createElement(_.U, {
                         className: "bits-first-time-user-prompt__tutorial-back-button"
-                    }, o.createElement(S.u, {
+                    }, l.createElement(_.u, {
                         onClick: this.props.toggleShowTutorial,
-                        type: S.z.Text
-                    }, o.createElement(S._9, {
-                        asset: S._10.Play,
+                        type: _.z.Text
+                    }, l.createElement(_._9, {
+                        asset: _._10.Play,
                         height: 8
-                    }), " ", Object(s.d)("Back", "Bits--FirstTimeUserPrompt"))), o.createElement(S.U, {
-                        textAlign: S._23.Center,
+                    }), " ", Object(s.d)("Back", "Bits--FirstTimeUserPrompt"))), l.createElement(_.U, {
+                        textAlign: _._23.Center,
                         padding: {
                             x: 2,
                             bottom: 2,
                             top: 5
                         },
                         fullHeight: !0
-                    }, o.createElement(S.e, {
-                        type: S.i.SlideInLeft,
-                        duration: S.g.Long,
+                    }, l.createElement(_.e, {
+                        type: _.i.SlideInLeft,
+                        duration: _.g.Long,
                         enabled: !0
-                    }, o.createElement(y.a, null)))) : this.props.animateFirstTimeUserIntro ? o.createElement(S.P, {
+                    }, l.createElement(y.a, null)))) : this.props.animateFirstTimeUserIntro ? l.createElement(_.P, {
                         className: "bits-first-time-user-prompt"
-                    }, o.createElement(S.e, {
-                        type: S.i.SlideInRight,
-                        duration: S.g.Long,
+                    }, l.createElement(_.e, {
+                        type: _.i.SlideInRight,
+                        duration: _.g.Long,
                         enabled: this.props.animateFirstTimeUserIntro
-                    }, e)) : o.createElement(S.U, {
+                    }, e)) : l.createElement(_.U, {
                         className: "bits-first-time-user-prompt"
                     }, e)
                 }, t
-            }(o.Component)),
-            C = n("jxGs"),
-            N = n("bkpq"),
+            }(l.Component)),
+            N = n("jxGs"),
+            C = n("bkpq"),
             A = n("CSlQ"),
             F = n("annQ"),
-            O = (n("lGVF"), function(e) {
+            x = (n("lGVF"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -3183,10 +3589,10 @@ webpackJsonp([46], {
                             actionName: e,
                             emoteType: n && n.emoteType,
                             emoteLevel: n && n.emoteLevel,
-                            location: E.b.GetBitsButton,
+                            location: S.b.GetBitsButton,
                             displayedBalance: t.props.bitsBalance || 0
                         };
-                        Object(E.h)(i)
+                        Object(S.h)(i)
                     }, t.onClose = function() {}, t.onPromoBuyClose = function(e) {
                         Object(f.a)(e, function() {
                             t.props.data && t.props.data.refetch()
@@ -3196,31 +3602,31 @@ webpackJsonp([46], {
                 return a.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    if (this.props.loading) return o.createElement(S._18, {
+                    if (this.props.loading) return l.createElement(_._18, {
                         "data-a-target": "get-bits-button-content-loading",
-                        display: S.H.Flex,
-                        flexDirection: S.J.Column,
-                        alignItems: S.c.Center,
-                        justifyContent: S.T.Center,
-                        textAlign: S._23.Center,
+                        display: _.H.Flex,
+                        flexDirection: _.J.Column,
+                        alignItems: _.c.Center,
+                        justifyContent: _.T.Center,
+                        textAlign: _._23.Center,
                         padding: {
                             y: 5
                         }
-                    }, o.createElement(S.Y, {
+                    }, l.createElement(_.Y, {
                         delay: 0
-                    }), o.createElement(S.U, {
+                    }), l.createElement(_.U, {
                         padding: {
                             top: 2
                         }
-                    }, o.createElement(S._22, {
+                    }, l.createElement(_._22, {
                         italic: !0
                     }, Object(s.d)("Fetching bits", "Bits--GetBitsButtonContent"))));
                     var e = null;
                     if (this.props.bitsOffers) {
                         var t = this.props.bitsOffers.find(function(e) {
-                            return Object(_.c)(e)
+                            return Object(E.c)(e)
                         });
-                        t && t.type === C.b && this.props.channelID && !this.state.hideFirstTimeUserIntro && (e = o.createElement(w, {
+                        t && t.type === N.b && this.props.channelID && !this.state.hideFirstTimeUserIntro && (e = l.createElement(w, {
                             promo: t,
                             animateFirstTimeUserIntro: this.props.animateFirstTimeUserIntro,
                             isShowingTutorial: this.props.isShowingTutorial,
@@ -3231,57 +3637,57 @@ webpackJsonp([46], {
                         }))
                     }
                     var n = null;
-                    void 0 !== this.props.bitsBalance && this.props.bitsConfig ? n = o.createElement(S._18, {
+                    void 0 !== this.props.bitsBalance && this.props.bitsConfig ? n = l.createElement(_._18, {
                         borderBottom: !0,
-                        textAlign: S._23.Center,
+                        textAlign: _._23.Center,
                         fullWidth: !0,
                         padding: {
                             y: .5
                         }
-                    }, o.createElement(S._22, {
-                        type: S._27.Span
+                    }, l.createElement(_._22, {
+                        type: _._27.Span
                     }, Object(s.d)("You have {bitsBalance}", {
-                        bitsBalance: o.createElement(b.a, {
+                        bitsBalance: l.createElement(k.a, {
                             withImage: !0,
                             withText: !0,
                             count: this.props.bitsBalance,
                             bitsConfig: this.props.bitsConfig
                         })
-                    }, "Bits--GetBitsButton"))) : void 0 === this.props.bitsBalance && this.props.bitsConfig && (n = o.createElement(S._18, {
+                    }, "Bits--GetBitsButton"))) : void 0 === this.props.bitsBalance && this.props.bitsConfig && (n = l.createElement(_._18, {
                         borderBottom: !0,
-                        textAlign: S._23.Center,
+                        textAlign: _._23.Center,
                         fullWidth: !0,
                         padding: {
                             y: .5
                         }
-                    }, o.createElement(S._22, {
-                        type: S._27.Span
+                    }, l.createElement(_._22, {
+                        type: _._27.Span
                     }, Object(s.d)("{bitsGem} Log in to see your Bits balance", {
-                        bitsGem: o.createElement(b.a, {
+                        bitsGem: l.createElement(k.a, {
                             count: 100,
                             withImage: !0,
                             bitsConfig: this.props.bitsConfig
                         })
                     }, "Bits--GetBitsButton"))));
                     var i = null;
-                    return this.props.bitsConfig && this.props.channelLogin && (i = o.createElement(k.a, {
+                    return this.props.bitsConfig && this.props.channelLogin && (i = l.createElement(b.a, {
                         bitsConfig: this.props.bitsConfig,
                         channelLogin: this.props.channelLogin,
                         closeAllBits: this.onClose,
                         onClose: this.onClose,
                         trackBitsCardInteraction: this.trackBitsCardInteraction,
-                        location: E.b.GetBitsButton,
+                        location: S.b.GetBitsButton,
                         hidePromos: !0,
                         hideWateb: !0,
                         fullsize: !0
-                    })), o.createElement(v.b, {
+                    })), l.createElement(v.b, {
                         className: "get-bits-button-content"
-                    }, o.createElement(S.U, null, n, e, i))
-                }, t = a.__decorate([Object(A.c)("GetBitsButtonContent"), Object(p.a)(F, {
+                    }, l.createElement(_.U, null, n, e, i))
+                }, t = a.__decorate([Object(A.c)("GetBitsButtonContent"), Object(m.a)(F, {
                     name: "data",
                     props: function(e) {
                         var t, n;
-                        e.data && e.data.user && e.data.user.cheer && (t = Object(N.a)(e.data.user.cheer.emotes), n = e.data.user.id);
+                        e.data && e.data.user && e.data.user.cheer && (t = Object(C.a)(e.data.user.cheer.emotes), n = e.data.user.id);
                         var i, a;
                         return e.data && e.data.currentUser ? (a = e.data.currentUser.bitsBalance, i = e.data.currentUser.bitsOffers) : e.data && e.data.bitsOffers && (i = e.data.bitsOffers), {
                             loading: e.data && e.data.loading,
@@ -3304,8 +3710,8 @@ webpackJsonp([46], {
                         }
                     }
                 })], t)
-            }(o.Component)),
-            I = function(e) {
+            }(l.Component)),
+            U = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -3314,9 +3720,9 @@ webpackJsonp([46], {
                     }, t.toggleBalloon = function(e) {
                         t.setState({
                             animateFirstTimeUserIntro: !1
-                        }), e || Object(E.h)({
-                            actionName: E.a.BuyMain,
-                            location: E.b.GetBitsButton,
+                        }), e || Object(S.h)({
+                            actionName: S.a.BuyMain,
+                            location: S.b.GetBitsButton,
                             displayedBalance: 0
                         })
                     }, t.toggleShowTutorial = function() {
@@ -3330,55 +3736,55 @@ webpackJsonp([46], {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     var e = null;
-                    return this.props.channelLogin && (e = o.createElement(O, {
+                    return this.props.channelLogin && (e = l.createElement(x, {
                         isLoggedIn: this.props.isLoggedIn,
                         channelLogin: this.props.channelLogin,
                         toggleShowTutorial: this.toggleShowTutorial,
                         isShowingTutorial: this.state.isShowingTutorial,
                         animateFirstTimeUserIntro: this.state.animateFirstTimeUserIntro
-                    })), o.createElement(u.a, {
+                    })), l.createElement(u.a, {
                         onToggle: this.toggleBalloon
-                    }, o.createElement(S.u, {
+                    }, l.createElement(_.u, {
                         dropdown: !0
-                    }, Object(s.d)("Get Bits", "Bits--GetBitsButton")), o.createElement(S.p, {
-                        direction: S.q.BottomRight,
-                        size: S.r.Large
+                    }, Object(s.d)("Get Bits", "Bits--GetBitsButton")), l.createElement(_.p, {
+                        direction: _.q.BottomRight,
+                        size: _.r.Large
                     }, e))
                 }, t = a.__decorate([Object(A.c)("GetBitsButton")], t)
-            }(o.Component),
-            x = Object(h.a)(function(e) {
+            }(l.Component),
+            I = Object(h.a)(function(e) {
                 return {
                     isLoggedIn: Object(g.d)(e)
                 }
-            })(I),
-            U = n("2KeS"),
+            })(U),
+            O = n("2KeS"),
             T = n("V5M+"),
             L = n("J8WN"),
-            B = n("+8VM"),
-            D = n("HZww"),
+            D = n("+8VM"),
+            B = n("HZww"),
             j = (n("weaG"), function(e) {
                 var t = {
                     "default-avatar__selected": e.selected,
                     "default-avatar": !0
                 };
-                return o.createElement(S.U, {
+                return l.createElement(_.U, {
                     padding: {
                         bottom: 1
                     }
-                }, o.createElement("div", {
+                }, l.createElement("div", {
                     onClick: function() {
                         e.onSelect(e.index)
                     },
                     "aria-label": Object(s.d)("Click to select Default Avatar Number {index, number}", {
                         index: e.index
                     }, "Default Avatar")
-                }, o.createElement(S._18, {
+                }, l.createElement(_._18, {
                     border: !0,
                     fullHeight: !0,
                     fullWidth: !0,
-                    position: S._3.Relative,
+                    position: _._3.Relative,
                     className: r(t)
-                }, o.createElement("img", {
+                }, l.createElement("img", {
                     alt: Object(s.d)("Default Avatar Number {index, number}", {
                         index: e.index
                     }, "Default Avatar"),
@@ -3388,17 +3794,17 @@ webpackJsonp([46], {
         ! function(e) {
             e.ProfileImage = "profile_image", e.ProfileBanner = "profile_banner", e.ChannelOfflineImage = "channel_offline_image"
         }(i || (i = {}));
-        var P;
-        ! function(e) {
-            e.Success = "SUCCESS", e.NonImage = "IS_IMAGE_VALIDATION_FAILED", e.WrongFormat = "IMAGE_FORMAT_VALIDATION_FAILED", e.BadSize = "FILE_SIZE_VALIDATION_FAILED"
-        }(P || (P = {}));
         var R;
         ! function(e) {
-            e[e.Success = 0] = "Success", e[e.UnexpectedError = 1] = "UnexpectedError", e[e.BadSizeError = 2] = "BadSizeError", e[e.NonImageError = 3] = "NonImageError", e[e.WrongFormatError = 4] = "WrongFormatError", e[e.TimeoutError = 5] = "TimeoutError", e[e.Uploading = 6] = "Uploading", e[e.ImageNotSelected = 7] = "ImageNotSelected"
+            e.Success = "SUCCESS", e.NonImage = "IS_IMAGE_VALIDATION_FAILED", e.WrongFormat = "IMAGE_FORMAT_VALIDATION_FAILED", e.BadSize = "FILE_SIZE_VALIDATION_FAILED"
         }(R || (R = {}));
+        var P;
+        ! function(e) {
+            e[e.Success = 0] = "Success", e[e.UnexpectedError = 1] = "UnexpectedError", e[e.BadSizeError = 2] = "BadSizeError", e[e.NonImageError = 3] = "NonImageError", e[e.WrongFormatError = 4] = "WrongFormatError", e[e.TimeoutError = 5] = "TimeoutError", e[e.Uploading = 6] = "Uploading", e[e.ImageNotSelected = 7] = "ImageNotSelected"
+        }(P || (P = {}));
         n("AL3x");
         var H = n("nmDn"),
-            M = [{
+            W = [{
                 id: "profile_image_001",
                 uri: "https://static-cdn.jtvnw.net/user-default-pictures/bb97f7e6-f11a-4194-9708-52bf5a5125e8-profile_image-300x300.jpg"
             }, {
@@ -3420,7 +3826,7 @@ webpackJsonp([46], {
                 id: "profile_image_007",
                 uri: "https://static-cdn.jtvnw.net/user-default-pictures/b83b1794-7df9-4878-916c-88c2ad2e4f9f-profile_image-300x300.jpg"
             }],
-            W = ["image/*"],
+            M = ["image/*"],
             V = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -3443,7 +3849,7 @@ webpackJsonp([46], {
                                 }(n = e[0]),
                                 a = (n.size / 1024 / 1024).toFixed(4);
                             parseInt(a, 10) > 10 ? t.setState({
-                                statusMessage: R.BadSizeError
+                                statusMessage: P.BadSizeError
                             }) : (t.setState({
                                 selectedImageIndex: void 0,
                                 imagePreviewURL: "",
@@ -3475,20 +3881,20 @@ webpackJsonp([46], {
                                 })
                             }))
                         } else t.setState({
-                            statusMessage: R.ImageNotSelected
+                            statusMessage: P.ImageNotSelected
                         })
                     }, t.onUpdateButtonClick = function(e) {
                         return a.__awaiter(t, void 0, void 0, function() {
-                            var t, n, r, o, l = this;
+                            var t, n, r, l, o = this;
                             return a.__generator(this, function(d) {
                                 switch (d.label) {
                                     case 0:
                                         if (e.preventDefault(), void 0 !== this.state.selectedImageIndex) return this.setDefaultAvatar(), [2];
                                         if (!this.currentImage) return this.setState({
-                                            statusMessage: R.ImageNotSelected
+                                            statusMessage: P.ImageNotSelected
                                         }), [2];
                                         this.setState({
-                                            statusMessage: R.Uploading
+                                            statusMessage: P.Uploading
                                         }), d.label = 1;
                                     case 1:
                                         return d.trys.push([1, 3, , 4]), [4, function(e, t, n, i) {
@@ -3512,12 +3918,12 @@ webpackJsonp([46], {
                                     case 2:
                                         return t = d.sent(), n = t.upload_url, r = t.upload_id, [3, 4];
                                     case 3:
-                                        return o = d.sent(), this.logger.error(o, "Request for upload ID failed to get expected response from server."), this.setState({
-                                            statusMessage: R.UnexpectedError
+                                        return l = d.sent(), this.logger.error(l, "Request for upload ID failed to get expected response from server."), this.setState({
+                                            statusMessage: P.UnexpectedError
                                         }), [2];
                                     case 4:
                                         return this.unsubscribe = s.j.subscribe({
-                                            topic: Object(D.c)(this.props.userID),
+                                            topic: Object(B.c)(this.props.userID),
                                             success: function() {
                                                 try {
                                                     ! function(e, t) {
@@ -3527,23 +3933,23 @@ webpackJsonp([46], {
                                                             method: "PUT",
                                                             body: new Blob([t])
                                                         })
-                                                    }(n, l.currentImage)
+                                                    }(n, o.currentImage)
                                                 } catch (e) {
-                                                    l.logger.error(e, "Profile Image upload failed."), l.unsubscribe(), l.setState({
-                                                        statusMessage: R.UnexpectedError,
+                                                    o.logger.error(e, "Profile Image upload failed."), o.unsubscribe(), o.setState({
+                                                        statusMessage: P.UnexpectedError,
                                                         selectedImageIndex: void 0,
                                                         imagePreviewURL: "",
                                                         imageFormat: "",
                                                         currentImageHasTallAspectRatio: !1
                                                     })
                                                 }
-                                                l.timeoutHandle = setTimeout(function() {
-                                                    return l.handlePubSubTimeout()
+                                                o.timeoutHandle = setTimeout(function() {
+                                                    return o.handlePubSubTimeout()
                                                 }, 1e4)
                                             },
                                             failure: function() {
-                                                l.setState({
-                                                    statusMessage: R.UnexpectedError,
+                                                o.setState({
+                                                    statusMessage: P.UnexpectedError,
                                                     selectedImageIndex: void 0,
                                                     imagePreviewURL: "",
                                                     currentImageHasTallAspectRatio: !1
@@ -3551,17 +3957,17 @@ webpackJsonp([46], {
                                             },
                                             onMessage: function(e) {
                                                 if (e.upload_id === r) {
-                                                    clearTimeout(l.timeoutHandle);
+                                                    clearTimeout(o.timeoutHandle);
                                                     var t = null;
-                                                    t = e.status === P.Success ? R.Success : e.status === P.BadSize ? R.BadSizeError : e.status === P.NonImage ? R.NonImageError : e.status === P.WrongFormat ? R.WrongFormatError : R.UnexpectedError, l.unsubscribe && l.unsubscribe(), l.setState({
+                                                    t = e.status === R.Success ? P.Success : e.status === R.BadSize ? P.BadSizeError : e.status === R.NonImage ? P.NonImageError : e.status === R.WrongFormat ? P.WrongFormatError : P.UnexpectedError, o.unsubscribe && o.unsubscribe(), o.setState({
                                                         statusMessage: t
-                                                    }), l.state.statusMessage === R.Success ? l.setState({
+                                                    }), o.state.statusMessage === P.Success ? o.setState({
                                                         profileUpdated: !0
-                                                    }) : (l.setState({
+                                                    }) : (o.setState({
                                                         profileUpdated: !1,
                                                         imagePreviewURL: "",
                                                         imageFormat: ""
-                                                    }), l.currentImage = null)
+                                                    }), o.currentImage = null)
                                                 }
                                             }
                                         }), [2]
@@ -3571,11 +3977,11 @@ webpackJsonp([46], {
                     }, t.onDefaultImageSelected = function(e) {
                         t.setState({
                             selectedImageIndex: e,
-                            imagePreviewURL: M[e].uri
+                            imagePreviewURL: W[e].uri
                         })
                     }, t.handlePubSubTimeout = function() {
                         t.unsubscribe(), t.setState({
-                            statusMessage: R.TimeoutError
+                            statusMessage: P.TimeoutError
                         })
                     }, t
                 }
@@ -3590,8 +3996,8 @@ webpackJsonp([46], {
                     }, 1e3)
                 }, t.prototype.render = function() {
                     var e = this,
-                        t = M.map(function(t, n) {
-                            return o.createElement(j, {
+                        t = W.map(function(t, n) {
+                            return l.createElement(j, {
                                 key: t.id,
                                 imageSrc: t.uri,
                                 index: n,
@@ -3605,103 +4011,103 @@ webpackJsonp([46], {
                             "profile-edit__image-preview": !0,
                             "profile-edit__image-preview-tall": this.state.currentImageHasTallAspectRatio
                         };
-                        n = o.createElement(S.U, {
+                        n = l.createElement(_.U, {
                             className: r(i),
                             "data-test-selector": "preview-image",
-                            position: S._3.Relative
-                        }, o.createElement("img", {
+                            position: _._3.Relative
+                        }, l.createElement("img", {
                             src: "" + this.state.imagePreviewURL
                         }))
                     }
                     var a = null;
-                    "" === this.state.imagePreviewURL && (a = o.createElement(S.U, {
+                    "" === this.state.imagePreviewURL && (a = l.createElement(_.U, {
                         className: "profile-edit__upload-info"
-                    }, o.createElement(S.U, null, o.createElement(S._9, {
-                        asset: S._10.Plus,
-                        type: S._11.Alt2,
+                    }, l.createElement(_.U, null, l.createElement(_._9, {
+                        asset: _._10.Plus,
+                        type: _._11.Alt2,
                         height: 20,
                         width: 20
-                    })), o.createElement(S._22, {
-                        type: S._27.H3,
-                        color: S.F.Alt2,
-                        fontSize: S.L.Size4
+                    })), l.createElement(_._22, {
+                        type: _._27.H3,
+                        color: _.F.Alt2,
+                        fontSize: _.L.Size4
                     }, Object(s.d)("Upload a Photo", "Profile Edit"))));
-                    var l = null;
-                    this.props.showCloser && (l = o.createElement(B.a, null));
+                    var o = null;
+                    this.props.showCloser && (o = l.createElement(D.a, null));
                     var d = null;
                     if (null !== this.state.statusMessage) {
                         var c = function(e) {
                                 switch (e) {
-                                    case R.Success:
+                                    case P.Success:
                                         return {
                                             message: Object(s.d)("Success!", "Profile Edit"),
-                                            type: S._1.Success
+                                            type: _._1.Success
                                         };
-                                    case R.UnexpectedError:
+                                    case P.UnexpectedError:
                                         return {
                                             message: Object(s.d)("Unexpected error, please try again.", "Profile Edit"),
-                                            type: S._1.Alert
+                                            type: _._1.Alert
                                         };
-                                    case R.BadSizeError:
+                                    case P.BadSizeError:
                                         return {
                                             message: Object(s.d)("Image might exceed 10MB.", "Profile Edit"),
-                                            type: S._1.Alert
+                                            type: _._1.Alert
                                         };
-                                    case R.NonImageError:
+                                    case P.NonImageError:
                                         return {
                                             message: Object(s.d)("You must upload an image.", "Profile Edit"),
-                                            type: S._1.Alert
+                                            type: _._1.Alert
                                         };
-                                    case R.WrongFormatError:
+                                    case P.WrongFormatError:
                                         return {
                                             message: Object(s.d)("You must select a valid image type.", "Profile Edit"),
-                                            type: S._1.Alert
+                                            type: _._1.Alert
                                         };
-                                    case R.TimeoutError:
+                                    case P.TimeoutError:
                                         return {
                                             message: Object(s.d)("Upload timed-out. Please try again.", "Profile Edit"),
-                                            type: S._1.Alert
+                                            type: _._1.Alert
                                         };
-                                    case R.Uploading:
+                                    case P.Uploading:
                                         return {
                                             message: Object(s.d)("Uploading....", "Profile Edit"),
-                                            type: S._1.Brand
+                                            type: _._1.Brand
                                         };
-                                    case R.ImageNotSelected:
+                                    case P.ImageNotSelected:
                                         return {
                                             message: Object(s.d)("Select a image first.", "Profile Edit"),
-                                            type: S._1.Alert
+                                            type: _._1.Alert
                                         };
                                     default:
                                         return {
                                             message: Object(s.d)("Please try again.", "Profile Edit"),
-                                            type: S._1.Alert
+                                            type: _._1.Alert
                                         }
                                 }
                             }(this.state.statusMessage),
                             u = c.message,
-                            p = c.type;
-                        d = o.createElement(S._0, {
+                            m = c.type;
+                        d = l.createElement(_._0, {
                             label: u,
-                            type: p
+                            type: m
                         })
                     }
-                    var m = this.props.login;
-                    return this.props.displayName && (m = this.props.displayName), o.createElement(S.U, {
+                    var p = this.props.login;
+                    return this.props.displayName && (p = this.props.displayName), l.createElement(_.U, {
                         className: "profile-edit",
-                        position: S._3.Relative,
+                        position: _._3.Relative,
                         fullHeight: !0
-                    }, o.createElement(S._18, {
+                    }, l.createElement(_._18, {
                         className: "profile-edit__background-container",
-                        background: S.m.Base,
+                        background: _.m.Base,
                         fullWidth: !0
-                    }, o.createElement(S.U, {
+                    }, l.createElement(_.U, {
                         padding: 2,
-                        display: S.H.InlineBlock,
-                        position: S._3.Relative,
-                        textAlign: S._23.Center,
+                        display: _.H.InlineBlock,
+                        position: _._3.Relative,
+                        textAlign: _._23.Center,
                         fullWidth: !0
-                    }, o.createElement(S._18, {
+                    }, l.createElement(_._18, {
                         borderBottom: !0,
                         padding: {
                             bottom: 2
@@ -3709,34 +4115,34 @@ webpackJsonp([46], {
                         margin: {
                             bottom: 2
                         }
-                    }, o.createElement(S._22, {
-                        type: S._27.H3,
-                        fontSize: S.L.Size4
+                    }, l.createElement(_._22, {
+                        type: _._27.H3,
+                        fontSize: _.L.Size4
                     }, Object(s.d)("Editing profile picture for {userName}", {
-                        userName: m
-                    }, "Profile Edit"), " ")), o.createElement(S.U, {
+                        userName: p
+                    }, "Profile Edit"), " ")), l.createElement(_.U, {
                         className: "profile-edit__upload-container",
-                        display: S.H.InlineBlock,
-                        position: S._3.Relative,
-                        textAlign: S._23.Center,
+                        display: _.H.InlineBlock,
+                        position: _._3.Relative,
+                        textAlign: _._23.Center,
                         margin: {
                             bottom: 1
                         }
-                    }, o.createElement(S.U, {
+                    }, l.createElement(_.U, {
                         className: "profile-edit__upload",
-                        display: S.H.InlineBlock,
-                        position: S._3.Relative,
-                        textAlign: S._23.Center
-                    }, o.createElement(L.a, {
-                        allowedFileTypes: W,
+                        display: _.H.InlineBlock,
+                        position: _._3.Relative,
+                        textAlign: _._23.Center
+                    }, l.createElement(L.a, {
+                        allowedFileTypes: M,
                         onFilesSubmitted: this.onImageInputChange
-                    }, a), n)), o.createElement(S._18, {
+                    }, a), n)), l.createElement(_._18, {
                         "data-test-selector": "status-message",
-                        fontSize: S.L.Size4,
-                        position: S._3.Relative,
-                        textAlign: S._23.Center,
+                        fontSize: _.L.Size4,
+                        position: _._3.Relative,
+                        textAlign: _._23.Center,
                         className: "profile-edit__status-message"
-                    }, d), o.createElement(S._18, {
+                    }, d), l.createElement(_._18, {
                         borderBottom: !0,
                         padding: {
                             bottom: .5
@@ -3744,24 +4150,24 @@ webpackJsonp([46], {
                         margin: {
                             bottom: 2
                         }
-                    }, o.createElement(S.U, {
+                    }, l.createElement(_.U, {
                         margin: {
                             bottom: 1
                         }
-                    }, o.createElement(S._22, {
-                        type: S._27.H3,
-                        fontSize: S.L.Size5
-                    }, Object(s.d)("Or select one of these", "Profile Edit"))), o.createElement(S._33, {
-                        childWidth: S._34.ExtraSmall,
-                        gutterSize: S._35.ExtraSmall,
+                    }, l.createElement(_._22, {
+                        type: _._27.H3,
+                        fontSize: _.L.Size5
+                    }, Object(s.d)("Or select one of these", "Profile Edit"))), l.createElement(_._33, {
+                        childWidth: _._34.ExtraSmall,
+                        gutterSize: _._35.ExtraSmall,
                         placeholderItems: 3
-                    }, t)), o.createElement(S.U, {
-                        display: S.H.Flex,
-                        justifyContent: S.T.Center
-                    }, o.createElement(S.u, {
+                    }, t)), l.createElement(_.U, {
+                        display: _.H.Flex,
+                        justifyContent: _.T.Center
+                    }, l.createElement(_.u, {
                         "data-test-selector": "update-button",
                         onClick: this.onUpdateButtonClick
-                    }, Object(s.d)("Update", "Profile Edit"))))), l)
+                    }, Object(s.d)("Update", "Profile Edit"))))), o)
                 }, t.prototype.setDefaultAvatar = function() {
                     return a.__awaiter(this, void 0, void 0, function() {
                         var e, t, n;
@@ -3769,8 +4175,8 @@ webpackJsonp([46], {
                             switch (i.label) {
                                 case 0:
                                     this.setState({
-                                        statusMessage: R.Uploading
-                                    }), e = R.UnexpectedError, i.label = 1;
+                                        statusMessage: P.Uploading
+                                    }), e = P.UnexpectedError, i.label = 1;
                                 case 1:
                                     return i.trys.push([1, 3, , 4]), [4, function(e, t, n) {
                                         if (void 0 === n) throw new Error("No default avatar selected.");
@@ -3782,23 +4188,23 @@ webpackJsonp([46], {
                                                 Accept: "application/json"
                                             },
                                             body: JSON.stringify({
-                                                default_profile_image: M[n].id
+                                                default_profile_image: W[n].id
                                             })
                                         })
                                     }(this.props.userID, this.props.authToken, this.state.selectedImageIndex)];
                                 case 2:
-                                    return 204 === (t = i.sent()).status || 200 === t.status ? e = R.Success : this.logger.error(new Error("Default Avatar PUT failed. Fetch returned non-200 status: " + t.status), "Default Avatar PUT failed. Fetch returned non-200 status: " + t.status), [3, 4];
+                                    return 204 === (t = i.sent()).status || 200 === t.status ? e = P.Success : this.logger.error(new Error("Default Avatar PUT failed. Fetch returned non-200 status: " + t.status), "Default Avatar PUT failed. Fetch returned non-200 status: " + t.status), [3, 4];
                                 case 3:
                                     return n = i.sent(), this.logger.error(n, "Default Avatar PUT failed."), [3, 4];
                                 case 4:
                                     return this.setState({
                                         statusMessage: e,
-                                        profileUpdated: e === R.Success
+                                        profileUpdated: e === P.Success
                                     }), [2]
                             }
                         })
                     })
-                }, t = a.__decorate([Object(p.a)(H, {
+                }, t = a.__decorate([Object(m.a)(H, {
                     options: function(e) {
                         return {
                             variables: {
@@ -3807,14 +4213,14 @@ webpackJsonp([46], {
                         }
                     }
                 })], t)
-            }(o.Component),
+            }(l.Component),
             z = Object(A.c)("Profile Edit")(V),
             G = Object(h.a)(function(e) {
                 return {
                     authToken: Object(g.a)(e)
                 }
             }, function(e, t) {
-                return Object(U.bindActionCreators)({
+                return Object(O.bindActionCreators)({
                     closeModal: function() {
                         return t.successCallback && t.successCallback(), Object(T.c)()
                     }
@@ -3835,74 +4241,74 @@ webpackJsonp([46], {
                 return a.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return o.createElement(S.v, {
+                    return l.createElement(_.v, {
                         overlay: !0,
-                        size: S.x.Large,
+                        size: _.x.Large,
                         ariaLabel: Object(s.d)("Edit Profile", "ChannelHeader"),
-                        icon: S._10.Edit,
+                        icon: _._10.Edit,
                         onClick: this.openModal
                     })
                 }, t = a.__decorate([Object(A.c)("EditProfileOverlay")], t)
-            }(o.Component),
+            }(l.Component),
             K = Object(h.a)(null, function(e) {
-                return Object(U.bindActionCreators)({
+                return Object(O.bindActionCreators)({
                     showModal: T.d
                 }, e)
             })(q),
             J = n("70dR"),
             Y = (n("z4Db"), n("kOMe"));
         n.d(t, "b", function() {
-            return $
+            return Q
         }), n.d(t, "a", function() {
             return Z
         });
-        var $, Q = "channel-header__verified-badge",
+        var Q, $ = "channel-header__verified-badge",
             X = "channel-header__live-indicator";
         ! function(e) {
             e[e.Channel = 1] = "Channel", e[e.Clips = 2] = "Clips", e[e.Collections = 3] = "Collections", e[e.Events = 4] = "Events", e[e.Success = 5] = "Success", e[e.Followers = 6] = "Followers", e[e.Following = 7] = "Following", e[e.Videos = 8] = "Videos"
-        }($ || ($ = {}));
+        }(Q || (Q = {}));
         var Z = function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.state = {
                     live: !1
-                }, t.verifiedBadgeElement = o.createElement(S._30, {
+                }, t.verifiedBadgeElement = l.createElement(_._30, {
                     label: Object(s.d)("Verified", "ChannelHeader"),
-                    direction: S._32.Right
-                }, o.createElement(S.U, {
+                    direction: _._32.Right
+                }, l.createElement(_.U, {
                     className: "channel-header__verified",
-                    "data-target": Q,
-                    display: S.H.Flex,
-                    alignItems: S.c.Center,
+                    "data-target": $,
+                    display: _.H.Flex,
+                    alignItems: _.c.Center,
                     margin: {
                         left: 1
                     }
-                }, o.createElement(S._9, {
-                    asset: S._10.Verified
-                }))), t.liveIndicatorElement = o.createElement(S.U, {
+                }, l.createElement(_._9, {
+                    asset: _._10.Verified
+                }))), t.liveIndicatorElement = l.createElement(_.U, {
                     margin: {
                         left: 1
                     },
                     "data-target": X
-                }, o.createElement(S._30, {
+                }, l.createElement(_._30, {
                     label: Object(s.d)("Live Now", "ChannelHeader"),
-                    direction: S._32.Right
-                }, o.createElement(S.W, {
+                    direction: _._32.Right
+                }, l.createElement(_.W, {
                     pulse: !0
                 }))), t.renderAvatarEditButton = function() {
                     if (!t.props.data) return null;
-                    return t.props.data && t.props.data.currentUser && t.props.data.user && t.props.data.currentUser.roles && (t.props.data.currentUser.id === t.props.data.user.id || t.props.data.currentUser.roles.isStaff || t.props.data.currentUser.roles.isSiteAdmin) ? o.createElement(S._18, {
+                    return t.props.data && t.props.data.currentUser && t.props.data.user && t.props.data.currentUser.roles && (t.props.data.currentUser.id === t.props.data.user.id || t.props.data.currentUser.roles.isStaff || t.props.data.currentUser.roles.isSiteAdmin) ? l.createElement(_._18, {
                         className: "channel-header__edit-profile-overlay",
-                        background: S.m.Overlay,
-                        position: S._3.Absolute,
+                        background: _.m.Overlay,
+                        position: _._3.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
                         fullHeight: !0,
                         fullWidth: !0,
-                        display: S.H.InlineFlex,
-                        alignItems: S.c.Center,
-                        justifyContent: S.T.Center
-                    }, o.createElement(K, {
+                        display: _.H.InlineFlex,
+                        alignItems: _.c.Center,
+                        justifyContent: _.T.Center
+                    }, l.createElement(K, {
                         userID: t.props.data.user.id,
                         login: t.props.data.user.login,
                         displayName: t.props.data.user.displayName
@@ -3935,127 +4341,127 @@ webpackJsonp([46], {
                 var e, t, n = 0,
                     i = 0,
                     a = 0,
-                    p = s.a.defaultAvatarURL;
-                this.props.data && this.props.data.user && !this.props.data.loading && !this.props.data.error && (n = this.props.data.user.videos.totalCount, i = this.props.data.user.followers.totalCount, a = this.props.data.user.follows.totalCount, p = this.props.data.user.profileImageURL, e = this.props.data.user.displayName, t = this.props.data.user.roles.isPartner);
-                var m = this.state.live && $[this.props.currentPage] !== $[$.Channel],
+                    m = s.a.defaultAvatarURL;
+                this.props.data && this.props.data.user && !this.props.data.loading && !this.props.data.error && (n = this.props.data.user.videos.totalCount, i = this.props.data.user.followers.totalCount, a = this.props.data.user.follows.totalCount, m = this.props.data.user.profileImageURL, e = this.props.data.user.displayName, t = this.props.data.user.roles.isPartner);
+                var p = this.state.live && Q[this.props.currentPage] !== Q[Q.Channel],
                     h = this.createChannelLinks(n, i, a),
                     g = {
                         "channel-header__user": !0,
-                        "channel-header__user--selected": $[this.props.currentPage] === $[$.Channel]
+                        "channel-header__user--selected": Q[this.props.currentPage] === Q[Q.Channel]
                     },
                     v = null;
-                this.canRenderBitsButton() && (v = o.createElement(S.U, {
+                this.canRenderBitsButton() && (v = l.createElement(_.U, {
                     margin: {
                         left: 1
                     }
-                }, o.createElement(x, {
+                }, l.createElement(I, {
                     channelLogin: this.props.channelLogin
                 })));
-                var f, b = o.createElement(S.U, {
-                    display: S.H.Flex,
-                    flexWrap: S.K.NoWrap,
-                    alignItems: S.c.Center,
+                var f, k = l.createElement(_.U, {
+                    display: _.H.Flex,
+                    flexWrap: _.K.NoWrap,
+                    alignItems: _.c.Center,
                     flexShrink: 0
-                }, o.createElement(S.U, {
+                }, l.createElement(_.U, {
                     className: "channel-header__user-avatar channel-header__user-avatar--active",
                     margin: {
                         right: 1
                     },
-                    display: S.H.Flex,
+                    display: _.H.Flex,
                     flexShrink: 0,
-                    alignItems: S.c.Stretch
-                }, o.createElement(S.U, {
-                    position: S._3.Relative
-                }, o.createElement(S.l, {
+                    alignItems: _.c.Stretch
+                }, l.createElement(_.U, {
+                    position: _._3.Relative
+                }, l.createElement(_.l, {
                     size: 36,
-                    imageSrc: p,
+                    imageSrc: m,
                     imageAlt: e || ""
-                }), this.renderAvatarEditButton())), e ? o.createElement(S._22, {
-                    type: S._27.H5
-                }, e) : o.createElement(S.U, {
-                    alignItems: S.c.Center
-                }, o.createElement(S._2, {
+                }), this.renderAvatarEditButton())), e ? l.createElement(_._22, {
+                    type: _._27.H5
+                }, e) : l.createElement(_.U, {
+                    alignItems: _.c.Center
+                }, l.createElement(_._2, {
                     lineCount: 1,
                     width: 120
-                })), m && this.liveIndicatorElement, t && this.verifiedBadgeElement);
-                return f = this.props.data && this.props.data.user && this.props.data.user.login ? o.createElement(l.a, {
+                })), p && this.liveIndicatorElement, t && this.verifiedBadgeElement);
+                return f = this.props.data && this.props.data.user && this.props.data.user.login ? l.createElement(o.a, {
                     to: "/" + this.props.data.user.login,
                     "data-target": "channel-header__channel-link",
                     "data-a-target": "user-channel-header-item"
-                }, b) : b, o.createElement(S.U, {
+                }, k) : k, l.createElement(_.U, {
                     className: "channel-header",
                     flexShrink: 0,
                     padding: {
                         x: 3
                     }
-                }, o.createElement(S.U, {
-                    display: S.H.Flex,
-                    justifyContent: S.T.Between,
-                    flexWrap: S.K.NoWrap,
+                }, l.createElement(_.U, {
+                    display: _.H.Flex,
+                    justifyContent: _.T.Between,
+                    flexWrap: _.K.NoWrap,
                     fullHeight: !0,
                     refDelegate: this.saveChannelHeaderRef
-                }, o.createElement(S.U, {
-                    display: S.H.Flex,
-                    alignItems: S.c.Stretch,
+                }, l.createElement(_.U, {
+                    display: _.H.Flex,
+                    alignItems: _.c.Stretch,
                     flexShrink: 0,
-                    flexWrap: S.K.NoWrap,
+                    flexWrap: _.K.NoWrap,
                     "data-target": "channel-header-left"
-                }, o.createElement(S.P, {
+                }, l.createElement(_.P, {
                     className: r(g),
                     padding: {
                         y: .5,
                         right: 2
                     },
-                    display: S.H.Flex,
-                    flexWrap: S.K.NoWrap,
-                    alignItems: S.c.Center,
+                    display: _.H.Flex,
+                    flexWrap: _.K.NoWrap,
+                    alignItems: _.c.Center,
                     flexShrink: 0
-                }, f), this.renderTabs(h), o.createElement(S.U, {
+                }, f), this.renderTabs(h), l.createElement(_.U, {
                     className: "channel-header__item channel-header__item--no-underline",
                     padding: {
                         x: 1
                     },
                     flexShrink: 0,
-                    alignSelf: S.d.Center,
+                    alignSelf: _.d.Center,
                     "data-target": "channel-header-button"
-                }, o.createElement(u.a, {
+                }, l.createElement(u.a, {
                     alwaysMountBalloonContent: !0
-                }, o.createElement(S.v, {
-                    icon: S._10.NavMore,
+                }, l.createElement(_.v, {
+                    icon: _._10.NavMore,
                     ariaLabel: Object(s.d)("More", "ChannelHeader")
-                }), o.createElement(S.p, {
-                    direction: S.q.Bottom,
+                }), l.createElement(_.p, {
+                    direction: _.q.Bottom,
                     noTail: !0
-                }, o.createElement(S.U, {
+                }, l.createElement(_.U, {
                     padding: {
                         y: 1
                     }
-                }, this.renderDropdown(h)))))), o.createElement(S.U, {
-                    display: S.H.Flex,
-                    flexWrap: S.K.NoWrap,
+                }, this.renderDropdown(h)))))), l.createElement(_.U, {
+                    display: _.H.Flex,
+                    flexWrap: _.K.NoWrap,
                     flexShrink: 0,
-                    alignItems: S.c.Center,
+                    alignItems: _.c.Center,
                     className: "channel-header__right",
                     "data-target": "channel-header-right"
-                }, o.createElement(S.U, {
+                }, l.createElement(_.U, {
                     className: "channel-header__follow-button",
-                    display: S.H.Flex,
-                    alignItems: S.c.Stretch,
+                    display: _.H.Flex,
+                    alignItems: _.c.Stretch,
                     margin: {
                         left: 1
                     }
-                }, o.createElement(d.a, {
+                }, l.createElement(d.a, {
                     updateContainerWidth: this.onUpdateDebounce,
                     isHostedFollow: !1,
                     channelLogin: this.props.channelLogin
-                })), o.createElement(S.U, {
+                })), l.createElement(_.U, {
                     margin: {
                         left: 1
                     }
-                }, o.createElement(J.b, {
+                }, l.createElement(J.b, {
                     updateContainerWidth: this.onUpdateDebounce,
                     channelLogin: this.props.channelLogin
-                })), v)), o.createElement(c.a, {
+                })), v)), l.createElement(c.a, {
                     onResize: this.onUpdateDebounce
                 }))
             }, t.prototype.updateLiveState = function(e) {
@@ -4067,73 +4473,73 @@ webpackJsonp([46], {
                 var n = this.props.data && this.props.data.user && this.props.data.user.login;
                 if (!n) return "#";
                 var i = "/" + n + "/" + e;
-                return t ? Object(m.a)(i) : i
+                return t ? Object(p.a)(i) : i
             }, t.prototype.renderTabs = function(e) {
                 var t = this;
                 return e.map(function(e) {
-                    var n = e.count ? o.createElement(S.U, {
+                    var n = e.count ? l.createElement(_.U, {
                             className: "channel-header__item-count",
-                            display: S.H.Flex,
+                            display: _.H.Flex,
                             margin: {
                                 left: .5
                             }
-                        }, o.createElement(S._22, {
-                            type: S._27.Span,
-                            fontSize: S.L.Size5
+                        }, l.createElement(_._22, {
+                            type: _._27.Span,
+                            fontSize: _.L.Size5
                         }, e.count)) : null,
                         i = t.generateUserLink(e.pathSuffix, e.isExternal),
                         r = {};
-                    return e.isExternal && (r.target = Object(m.b)() ? "_blank" : ""), o.createElement(S.P, {
+                    return e.isExternal && (r.target = Object(p.b)() ? "_blank" : ""), l.createElement(_.P, {
                         key: "channel-header__item--" + e.label,
-                        alignItems: S.c.Center,
+                        alignItems: _.c.Center,
                         flexShrink: 0
-                    }, o.createElement(l.a, a.__assign({
+                    }, l.createElement(o.a, a.__assign({
                         className: "channel-header__item channel-header__item--hide " + (e.isSelected ? "channel-header__item--selected" : "")
                     }, r, {
                         to: i,
                         disabled: "#" === i,
                         "data-target": "channel-header-item",
                         "data-a-target": e.label.toLowerCase() + "-channel-header-item"
-                    }), o.createElement(S.U, {
+                    }), l.createElement(_.U, {
                         padding: {
                             x: 2,
                             y: .5
                         },
-                        display: S.H.Flex
-                    }, o.createElement(S._22, {
-                        type: S._27.Span,
-                        fontSize: S.L.Size5
+                        display: _.H.Flex
+                    }, l.createElement(_._22, {
+                        type: _._27.Span,
+                        fontSize: _.L.Size5
                     }, e.label), n)))
                 })
             }, t.prototype.renderDropdown = function(e) {
                 var t = this;
                 return e.map(function(e) {
-                    var n = e.count ? o.createElement(S.U, {
+                    var n = e.count ? l.createElement(_.U, {
                             className: "channel-header__item-count",
-                            display: S.H.Flex,
+                            display: _.H.Flex,
                             margin: {
                                 left: .5
                             }
-                        }, o.createElement(S._22, {
-                            type: S._27.Span
+                        }, l.createElement(_._22, {
+                            type: _._27.Span
                         }, e.count)) : null,
                         i = t.generateUserLink(e.pathSuffix, e.isExternal),
                         r = {};
-                    return e.isExternal && (r.targetBlank = !0), o.createElement(S.U, {
+                    return e.isExternal && (r.targetBlank = !0), l.createElement(_.U, {
                         key: "channel-header__dropdown-item--" + e.label,
                         "data-target": "channel-header-dropdown-item"
-                    }, o.createElement(S.S, a.__assign({
+                    }, l.createElement(_.S, a.__assign({
                         linkTo: i,
                         disabled: "#" === i
-                    }, r), o.createElement(S.U, {
+                    }, r), l.createElement(_.U, {
                         className: "channel-header__dropdown-hover-target",
                         padding: {
                             y: .5,
                             x: 1
                         },
-                        display: S.H.Flex
-                    }, o.createElement(S._22, {
-                        type: S._27.Span
+                        display: _.H.Flex
+                    }, l.createElement(_._22, {
+                        type: _._27.Span
                     }, e.label), n)))
                 })
             }, t.prototype.createChannelLinks = function(e, t, n) {
@@ -4142,34 +4548,34 @@ webpackJsonp([46], {
                     count: Object(s.e)(e),
                     pathSuffix: "videos/all",
                     isExternal: !1,
-                    isSelected: $[this.props.currentPage] === $[$.Videos]
+                    isSelected: Q[this.props.currentPage] === Q[Q.Videos]
                 }, {
                     label: Object(s.d)("Clips", "ChannelHeader"),
                     pathSuffix: "clips",
                     isExternal: !1,
-                    isSelected: $[this.props.currentPage] === $[$.Clips]
+                    isSelected: Q[this.props.currentPage] === Q[Q.Clips]
                 }, {
                     label: Object(s.d)("Collections", "ChannelHeader"),
                     pathSuffix: "collections",
                     isExternal: !1,
-                    isSelected: $[this.props.currentPage] === $[$.Collections]
+                    isSelected: Q[this.props.currentPage] === Q[Q.Collections]
                 }, {
                     label: Object(s.d)("Events", "ChannelHeader"),
                     pathSuffix: "events",
                     isExternal: !1,
-                    isSelected: $[this.props.currentPage] === $[$.Events]
+                    isSelected: Q[this.props.currentPage] === Q[Q.Events]
                 }, {
                     label: Object(s.d)("Followers", "ChannelHeader"),
                     count: Object(s.e)(t),
                     pathSuffix: "followers",
                     isExternal: !0,
-                    isSelected: $[this.props.currentPage] === $[$.Followers]
+                    isSelected: Q[this.props.currentPage] === Q[Q.Followers]
                 }, {
                     label: Object(s.d)("Following", "ChannelHeader"),
                     count: Object(s.e)(n),
                     pathSuffix: "following",
                     isExternal: !0,
-                    isSelected: $[this.props.currentPage] === $[$.Following]
+                    isSelected: Q[this.props.currentPage] === Q[Q.Following]
                 }]
             }, t.prototype.getChannelHeaderSize = function() {
                 if (this.channelHeader) {
@@ -4181,21 +4587,21 @@ webpackJsonp([46], {
                         var a = this.getWidth(this.channelHeader).width,
                             r = this.getWidth(e).width + this.getWidth(t).width + 20 - a;
                         if (r > 0)
-                            for (var o = n.length - 1; o >= 0; o--) {
-                                if (!(s = n[o]).classList.contains("channel-header__item--hide")) {
-                                    var l = this.getWidth(s);
-                                    if (s.classList.add("channel-header__item--hide"), i[o].classList.remove("channel-header__item--hide"), (r -= l.width) <= 0) break
+                            for (var l = n.length - 1; l >= 0; l--) {
+                                if (!(s = n[l]).classList.contains("channel-header__item--hide")) {
+                                    var o = this.getWidth(s);
+                                    if (s.classList.add("channel-header__item--hide"), i[l].classList.remove("channel-header__item--hide"), (r -= o.width) <= 0) break
                                 }
                             } else
-                                for (o = 0; o < n.length; o++) {
+                                for (l = 0; l < n.length; l++) {
                                     var s;
-                                    if ((s = n[o]).classList.contains("channel-header__item--hide")) {
+                                    if ((s = n[l]).classList.contains("channel-header__item--hide")) {
                                         s.classList.remove("channel-header__item--hide");
-                                        if ((l = this.getWidth(s)).width >= Math.abs(r)) {
+                                        if ((o = this.getWidth(s)).width >= Math.abs(r)) {
                                             s.classList.add("channel-header__item--hide");
                                             break
                                         }
-                                        s.classList.remove("channel-header__item--hide"), i[o].classList.add("channel-header__item--hide"), r += l.width
+                                        s.classList.remove("channel-header__item--hide"), i[l].classList.add("channel-header__item--hide"), r += o.width
                                     }
                                 }
                         var d = this.channelHeader.querySelector('[data-target="channel-header-button"]');
@@ -4206,7 +4612,7 @@ webpackJsonp([46], {
                     }
                 }
             }, t.prototype.canRenderBitsButton = function() {
-                return this.props.data && !this.props.data.loading && this.props.currentPage !== $.Clips && this.props.data.currentUser && this.props.data.user && this.props.data.user.cheer
+                return this.props.data && !this.props.data.loading && this.props.currentPage !== Q.Clips && this.props.data.currentUser && this.props.data.user && this.props.data.user.cheer
             }, t.prototype.getWidth = function(e) {
                 return e ? {
                     width: e.clientWidth
@@ -4215,7 +4621,7 @@ webpackJsonp([46], {
                 }
             }, t.prototype.reportInteractive = function() {
                 !this.props.data || this.props.data.loading || this.props.data.error || this.props.latencyTracking.reportInteractive()
-            }, t = a.__decorate([Object(p.a)(Y, {
+            }, t = a.__decorate([Object(m.a)(Y, {
                 options: function(e) {
                     return {
                         variables: {
@@ -4227,7 +4633,7 @@ webpackJsonp([46], {
                     return !e.channelLogin
                 }
             }), Object(A.c)("ChannelHeader")], t)
-        }(o.Component)
+        }(l.Component)
     },
     WVx7: function(e, t, n) {
         "use strict";
@@ -4235,22 +4641,22 @@ webpackJsonp([46], {
         function i(e) {
             return u.__awaiter(this, void 0, void 0, function() {
                 var t, n, i, a, r;
-                return u.__generator(this, function(o) {
-                    switch (o.label) {
+                return u.__generator(this, function(l) {
+                    switch (l.label) {
                         case 0:
-                            if (t = h.b.get("bits_truex_partner_hash", ""), !(n = h.b.get("bits_truex_api_url", "")) || !t) return h.i.warn("Truex API info missing from dynamic settings"), [2, b.Error];
-                            o.label = 1;
+                            if (t = h.b.get("bits_truex_partner_hash", ""), !(n = h.b.get("bits_truex_api_url", "")) || !t) return h.i.warn("Truex API info missing from dynamic settings"), [2, k.Error];
+                            l.label = 1;
                         case 1:
-                            return o.trys.push([1, 5, , 6]), [4, fetch(n + "?placement.key=" + t + "&user.uid=" + e + "&max_activities=1")];
+                            return l.trys.push([1, 5, , 6]), [4, fetch(n + "?placement.key=" + t + "&user.uid=" + e + "&max_activities=1")];
                         case 2:
-                            return (i = o.sent()).ok ? [4, i.json()] : [3, 4];
+                            return (i = l.sent()).ok ? [4, i.json()] : [3, 4];
                         case 3:
-                            if ((a = o.sent()) && Array.isArray(a) && a.length) return [2, b.Available];
-                            o.label = 4;
+                            if ((a = l.sent()) && Array.isArray(a) && a.length) return [2, k.Available];
+                            l.label = 4;
                         case 4:
-                            return [2, b.Unavailable];
+                            return [2, k.Unavailable];
                         case 5:
-                            return r = o.sent(), h.i.warn("Failed checking ad availability from TrueX, probably due to AdBlock", r), [2, b.AdBlocked];
+                            return r = l.sent(), h.i.warn("Failed checking ad availability from TrueX, probably due to AdBlock", r), [2, k.AdBlocked];
                         case 6:
                             return [2]
                     }
@@ -4272,51 +4678,51 @@ webpackJsonp([46], {
                 }
             }
         }
-        var o, l = n("RH2O"),
+        var l, o = n("RH2O"),
             s = n("V5M+"),
             d = n("Iw4B"),
             c = n("Aj/L"),
             u = n("TToO"),
-            p = n("U7vG"),
-            m = n("2KeS"),
+            m = n("U7vG"),
+            p = n("2KeS"),
             h = n("6sO2"),
             g = n("+8VM"),
             v = n("7vx8"),
             f = n("oIkB");
         ! function(e) {
             e[e.ExitEarly = 0] = "ExitEarly", e[e.Unknown = 1] = "Unknown", e[e.Adblock = 2] = "Adblock", e[e.LimitReached = 3] = "LimitReached"
-        }(o || (o = {}));
-        var b, k = n("4JjK"),
+        }(l || (l = {}));
+        var k, b = n("4JjK"),
             y = n("/LBW"),
-            _ = n("Odds"),
-            E = n("zzpv"),
-            S = (n("x583"), function(e) {
+            E = n("Odds"),
+            S = n("zzpv"),
+            _ = (n("x583"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {}, t.hasAwarded = !1, t.messageHandler = function(e) {
                         return u.__awaiter(t, void 0, void 0, function() {
                             var t, n, i, a, r;
-                            return u.__generator(this, function(l) {
-                                switch (l.label) {
+                            return u.__generator(this, function(o) {
+                                switch (o.label) {
                                     case 0:
                                         if (e.origin !== window.location.origin) return [2];
                                         if (!(t = e.data) || "trueXAd" !== t.msgSrc) return [2];
                                         switch (t.type) {
-                                            case k.a.Ready:
+                                            case b.a.Ready:
                                                 return [3, 1];
-                                            case k.a.RequestAd:
+                                            case b.a.RequestAd:
                                                 return [3, 2];
-                                            case k.a.Dimensions:
+                                            case b.a.Dimensions:
                                                 return [3, 3];
-                                            case k.a.OnStart:
+                                            case b.a.OnStart:
                                                 return [3, 4];
-                                            case k.a.OnCredit:
+                                            case b.a.OnCredit:
                                                 return [3, 5];
-                                            case k.a.OnClose:
-                                            case k.a.OnFinish:
-                                            case k.a.LimitReached:
-                                            case k.a.Adblock:
-                                            case k.a.OnError:
+                                            case b.a.OnClose:
+                                            case b.a.OnFinish:
+                                            case b.a.LimitReached:
+                                            case b.a.Adblock:
+                                            case b.a.OnError:
                                                 return [3, 9]
                                         }
                                         return [3, 10];
@@ -4353,7 +4759,7 @@ webpackJsonp([46], {
                                         } catch (e) {}
                                         return [2];
                                     case 5:
-                                        return l.trys.push([5, 7, , 8]), [4, this.props.redeemTrueXAd(Object(f.a)({
+                                        return o.trys.push([5, 7, , 8]), [4, this.props.redeemTrueXAd(Object(f.a)({
                                             args: t.engagement.signature_argument_string,
                                             signature: t.engagement.signature,
                                             trueXAd: {
@@ -4365,13 +4771,13 @@ webpackJsonp([46], {
                                             targetID: this.props.channelID
                                         }))];
                                     case 6:
-                                        return a = l.sent(), this.hasAwarded = !0, this.props.onBitsAwarded && this.props.onBitsAwarded(a.data.redeemTrueXAd.grantedBits), [3, 8];
+                                        return a = o.sent(), this.hasAwarded = !0, this.props.onBitsAwarded && this.props.onBitsAwarded(a.data.redeemTrueXAd.grantedBits), [3, 8];
                                     case 7:
-                                        return r = l.sent(), h.i.warn("Error while redeeming bits for truex ad", r), this.props.onError && this.props.onError(o.Unknown), [3, 8];
+                                        return r = o.sent(), h.i.warn("Error while redeeming bits for truex ad", r), this.props.onError && this.props.onError(l.Unknown), [3, 8];
                                     case 8:
                                         return [3, 10];
                                     case 9:
-                                        return this.props.onError && (t.type === k.a.LimitReached ? this.props.onError(o.LimitReached) : t.type === k.a.Adblock ? this.props.onError(o.Adblock) : t.type === k.a.OnError ? this.props.onError(o.Unknown) : this.hasAwarded || this.props.onError(o.ExitEarly)), this.props.closeModal(), [3, 10];
+                                        return this.props.onError && (t.type === b.a.LimitReached ? this.props.onError(l.LimitReached) : t.type === b.a.Adblock ? this.props.onError(l.Adblock) : t.type === b.a.OnError ? this.props.onError(l.Unknown) : this.hasAwarded || this.props.onError(l.ExitEarly)), this.props.closeModal(), [3, 10];
                                     case 10:
                                         return [2]
                                 }
@@ -4384,69 +4790,69 @@ webpackJsonp([46], {
                 }, t.prototype.componentWillUnmount = function() {
                     window.removeEventListener("message", this.messageHandler)
                 }, t.prototype.render = function() {
-                    return p.createElement(_._18, {
-                        background: _.m.Base
-                    }, p.createElement("div", {
+                    return m.createElement(E._18, {
+                        background: E.m.Base
+                    }, m.createElement("div", {
                         className: "t-watch-ads-modal",
                         style: this.state.customDimensions
-                    }, p.createElement(g.a, null), p.createElement("iframe", {
+                    }, m.createElement(g.a, null), m.createElement("iframe", {
                         src: "/products/bits/ad"
                     })))
-                }, t = u.__decorate([Object(v.a)(E, {
+                }, t = u.__decorate([Object(v.a)(S, {
                     name: "redeemTrueXAd"
                 })], t)
-            }(p.Component)),
-            w = Object(l.a)(null, function(e) {
-                return Object(m.bindActionCreators)({
+            }(m.Component)),
+            w = Object(o.a)(null, function(e) {
+                return Object(p.bindActionCreators)({
                     closeModal: s.c
                 }, e)
-            })(S),
-            C = n("HW6M"),
-            N = n("jF7o"),
+            })(_),
+            N = n("HW6M"),
+            C = n("jF7o"),
             A = n("zCIC");
         ! function(e) {
             e[e.Error = 0] = "Error", e[e.AdBlocked = 1] = "AdBlocked", e[e.Unavailable = 2] = "Unavailable", e[e.Available = 3] = "Available"
-        }(b || (b = {}));
-        var F, O = function(e) {
+        }(k || (k = {}));
+        var F, x = function(e) {
                 var t = null;
-                return e.disableWatchAd && (t = Object(h.d)("Try again later", "Bits--WatchAdOffer")), p.createElement(_._18, {
+                return e.disableWatchAd && (t = Object(h.d)("Try again later", "Bits--WatchAdOffer")), m.createElement(E._18, {
                     className: "bits-buy-card__offer-row",
-                    display: _.H.Flex,
+                    display: E.H.Flex,
                     flexShrink: 0,
                     borderBottom: !0,
-                    justifyContent: _.T.Between,
-                    flexWrap: _.K.NoWrap,
+                    justifyContent: E.T.Between,
+                    flexWrap: E.K.NoWrap,
                     padding: {
                         x: 2,
                         y: 1
                     }
-                }, p.createElement(_.U, {
+                }, m.createElement(E.U, {
                     padding: {
                         right: 4
                     }
-                }, p.createElement("strong", null, Object(h.d)("Get {minBitsCount} or more Bits by watching short ads", {
+                }, m.createElement("strong", null, Object(h.d)("Get {minBitsCount} or more Bits by watching short ads", {
                     minBitsCount: e.minPayout
-                }, "Bits--WatchAdOffer"))), p.createElement(_.U, {
+                }, "Bits--WatchAdOffer"))), m.createElement(E.U, {
                     flexShrink: 0,
-                    display: _.H.Flex,
-                    flexDirection: _.J.Column,
-                    alignItems: _.c.End
-                }, p.createElement(_.u, {
-                    type: _.z.Hollow,
+                    display: E.H.Flex,
+                    flexDirection: E.J.Column,
+                    alignItems: E.c.End
+                }, m.createElement(E.u, {
+                    type: E.z.Hollow,
                     "data-a-target": "bits-watch-ad",
                     onClick: e.onWatchAdClick,
                     disabled: e.disableWatchAd
-                }, Object(h.d)("Watch Ad", "Bits--WatchAdOffer")), t && p.createElement(_.U, {
+                }, Object(h.d)("Watch Ad", "Bits--WatchAdOffer")), t && m.createElement(E.U, {
                     className: "bits-buy-card__sub-text",
-                    alignSelf: _.d.Stretch,
-                    textAlign: _._23.Center,
+                    alignSelf: E.d.Stretch,
+                    textAlign: E._23.Center,
                     margin: {
                         top: .5
                     }
                 }, t)))
             },
-            I = /version\/([\w\.]+).+?(mobile\s?safari|safari)/i,
-            x = function(e) {
+            U = /version\/([\w\.]+).+?(mobile\s?safari|safari)/i,
+            I = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -4464,31 +4870,31 @@ webpackJsonp([46], {
                                     return e = t.sent(), Object(y.e)({
                                         channel: this.props.channelLogin,
                                         channelID: this.props.channelID,
-                                        available: e === b.Available
-                                    }), e !== b.Available && e !== b.AdBlocked && this.setState({
+                                        available: e === k.Available
+                                    }), e !== k.Available && e !== k.AdBlocked && this.setState({
                                         enableWatchAd: !1
                                     }), [2]
                             }
                         })
                     })
                 }, t.prototype.render = function() {
-                    return I.test(navigator.userAgent) ? null : p.createElement(O, u.__assign({}, this.props, {
+                    return U.test(navigator.userAgent) ? null : m.createElement(x, u.__assign({}, this.props, {
                         disableWatchAd: !this.state.enableWatchAd
                     }))
                 }, t
-            }(p.Component),
-            U = n("jxGs"),
+            }(m.Component),
+            O = n("jxGs"),
             T = n("3iBR"),
             L = n("iydZ"),
-            B = n("ZJYd"),
-            D = n("CFVp"),
+            D = n("ZJYd"),
+            B = n("CFVp"),
             j = n("qe65"),
-            P = (n("OLKT"), function(e) {
+            R = (n("OLKT"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleBuyClick = function(e) {
                         var n = t.props.channelID || "",
-                            i = Object(B.b)({
+                            i = Object(D.b)({
                                 trackBitsCardInteraction: t.props.trackBitsCardInteraction,
                                 channelID: n,
                                 purchaseUrl: e.currentTarget.dataset.purchaseUrl,
@@ -4500,10 +4906,10 @@ webpackJsonp([46], {
                     }, t
                 }
                 return u.__extends(t, e), t.prototype.render = function() {
-                    if (this.props.offer.type === U.a) {
+                    if (this.props.offer.type === O.a) {
                         if (!this.props.channelLogin) return null;
                         var e = this.props.currentUserSHA || "";
-                        return p.createElement(x, {
+                        return m.createElement(I, {
                             key: "wateb",
                             minPayout: this.props.offer.bits,
                             onWatchAdClick: this.props.handleWatchAdClick,
@@ -4513,91 +4919,91 @@ webpackJsonp([46], {
                         })
                     }
                     var t = null;
-                    Object(B.c)(this.props.offer) ? t = p.createElement(_.U, {
+                    Object(D.c)(this.props.offer) ? t = m.createElement(E.U, {
                         className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline"
-                    }, p.createElement(_._22, {
-                        type: _._27.Strong,
-                        fontSize: _.L.Size6
-                    }, Object(h.d)("Special Offer: 1st Time Buyers", "Bits--BuyCard"))) : Object(B.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === U.c && (t = p.createElement(_.U, {
+                    }, m.createElement(E._22, {
+                        type: E._27.Strong,
+                        fontSize: E.L.Size6
+                    }, Object(h.d)("Special Offer: 1st Time Buyers", "Bits--BuyCard"))) : Object(D.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === O.c && (t = m.createElement(E.U, {
                         className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline"
-                    }, p.createElement(_._22, {
-                        type: _._27.Strong,
-                        fontSize: _.L.Size6
+                    }, m.createElement(E._22, {
+                        type: E._27.Strong,
+                        fontSize: E.L.Size6
                     }, Object(h.d)("Flash Sale: Now thru Nov. 27!", "Bits--BuyCard"))));
                     var n = null;
-                    this.props.offer.discount && (n = p.createElement("div", {
+                    this.props.offer.discount && (n = m.createElement("div", {
                         className: "bits-buy-card-offer-row__sub-text"
                     }, Object(h.d)("{percentOff,number,percent} discount", {
                         percentOff: this.props.offer.discount
                     }, "Bits--BuyCard")));
                     var i = null;
-                    (Object(B.c)(this.props.offer) || Object(B.e)(this.props.offer)) && (i = p.createElement("div", {
+                    (Object(D.c)(this.props.offer) || Object(D.e)(this.props.offer)) && (i = m.createElement("div", {
                         className: "bits-buy-card-offer-row__sub-text"
                     }, Object(h.d)("one per account", "Bits--BuyCard")));
-                    var a = this.props.isLastRow ? _._18 : _.U;
-                    return p.createElement(a, {
+                    var a = this.props.isLastRow ? E._18 : E.U;
+                    return m.createElement(a, {
                         className: "bits-buy-card-offer-row",
                         flexShrink: 0,
-                        display: _.H.Flex,
-                        justifyContent: _.T.Center,
+                        display: E.H.Flex,
+                        justifyContent: E.T.Center,
                         borderBottom: this.props.isLastRow,
-                        flexDirection: _.J.Column,
+                        flexDirection: E.J.Column,
                         padding: {
                             x: 2,
                             y: 1
                         }
-                    }, t, p.createElement(_.U, {
-                        display: _.H.Flex,
-                        justifyContent: _.T.Between,
-                        alignItems: _.c.Center
-                    }, p.createElement(_.U, {
+                    }, t, m.createElement(E.U, {
+                        display: E.H.Flex,
+                        justifyContent: E.T.Between,
+                        alignItems: E.c.Center
+                    }, m.createElement(E.U, {
                         flexGrow: 1
-                    }, p.createElement(_._22, {
-                        type: _._27.H5,
-                        color: _.F.Base,
+                    }, m.createElement(E._22, {
+                        type: E._27.H5,
+                        color: E.F.Base,
                         bold: !0
-                    }, this.props.offer.bits, " Bits"), this.getAvailableTiers(this.props.offer.bits)), p.createElement(_.U, {
+                    }, this.props.offer.bits, " Bits"), this.getAvailableTiers(this.props.offer.bits)), m.createElement(E.U, {
                         flexShrink: 0,
-                        display: _.H.Flex,
-                        flexDirection: _.J.Column,
-                        alignItems: _.c.End
-                    }, p.createElement(_.u, {
+                        display: E.H.Flex,
+                        flexDirection: E.J.Column,
+                        alignItems: E.c.End
+                    }, m.createElement(E.u, {
                         onClick: this.handleBuyClick,
                         "data-purchase-url": this.props.offer.url,
                         "data-bits-amount": this.props.offer.bits,
                         "data-a-target": "bits-purchase-button-" + this.props.offer.bits
-                    }, this.props.offer.price), (n || i) && p.createElement(_.U, {
-                        alignSelf: _.d.Stretch,
-                        textAlign: _._23.Right,
+                    }, this.props.offer.price), (n || i) && m.createElement(E.U, {
+                        alignSelf: E.d.Stretch,
+                        textAlign: E._23.Right,
                         margin: {
                             top: .5
                         }
                     }, n, i))))
                 }, t.prototype.getAvailableTiers = function(e) {
                     var t = this.props.bitsConfig.indexedActions[T.f];
-                    t || (t = Object(D.b)());
+                    t || (t = Object(B.b)());
                     var n = t.orderedTiers.filter(function(t) {
                         return t.bits <= e
                     }).reverse();
-                    return p.createElement(_.U, {
+                    return m.createElement(E.U, {
                         padding: {
                             top: .5
                         },
                         className: "bits-buy-card-offer-row__tier-bits-images"
                     }, n.map(function(e) {
-                        return p.createElement(j.a, {
+                        return m.createElement(j.a, {
                             key: e.bits,
                             sources: Object(L.b)(e, 2, !1)
                         })
                     }))
                 }, t
-            }(p.Component)),
-            R = (n("sgUC"), function(e) {
+            }(m.Component)),
+            P = (n("sgUC"), function(e) {
                 var t = [],
                     n = [],
                     i = null;
                 return e.offers.forEach(function(a, r) {
-                    var o = p.createElement(P, {
+                    var l = m.createElement(R, {
                             key: a.id,
                             offer: a,
                             isLastRow: r + 1 < e.offers.length,
@@ -4612,47 +5018,47 @@ webpackJsonp([46], {
                             closeAllBits: e.closeAllBits,
                             trackBitsCardInteraction: e.trackBitsCardInteraction
                         }),
-                        l = Object(B.d)(a),
-                        s = Object(B.c)(a),
-                        d = a.type === U.a;
-                    s && !e.hidePromos ? t.push(o) : l && !s ? t.push(o) : d && !e.hideWateb ? i = o : d || l || n.push(o)
-                }), e.fullsize ? p.createElement(_.U, {
+                        o = Object(D.d)(a),
+                        s = Object(D.c)(a),
+                        d = a.type === O.a;
+                    s && !e.hidePromos ? t.push(l) : o && !s ? t.push(l) : d && !e.hideWateb ? i = l : d || o || n.push(l)
+                }), e.fullsize ? m.createElement(E.U, {
                     className: "bits-buy-card-offers__full-size",
                     flexGrow: 1,
-                    flexWrap: _.K.NoWrap,
-                    display: _.H.Flex,
-                    flexDirection: _.J.Column
-                }, i, t, n) : p.createElement(A.b, {
+                    flexWrap: E.K.NoWrap,
+                    display: E.H.Flex,
+                    flexDirection: E.J.Column
+                }, i, t, n) : m.createElement(A.b, {
                     className: "bits-buy-card-offers__scroll-view"
-                }, p.createElement(_.U, {
+                }, m.createElement(E.U, {
                     flexGrow: 1,
-                    flexWrap: _.K.NoWrap,
-                    display: _.H.Flex,
-                    flexDirection: _.J.Column
+                    flexWrap: E.K.NoWrap,
+                    display: E.H.Flex,
+                    flexDirection: E.J.Column
                 }, i, t, n))
             }),
             H = function(e) {
                 var t = null;
-                e.pricesIncludeVAT && (t = p.createElement(_._22, {
+                e.pricesIncludeVAT && (t = m.createElement(E._22, {
                     italic: !0,
-                    type: _._27.P,
-                    color: _.F.Alt
+                    type: E._27.P,
+                    color: E.F.Alt
                 }, Object(h.d)("Prices include VAT", "Bits--BuyCard")));
                 var n = null;
-                e.minBitsToCheer && e.minBitsToCheer > 1 && (n = p.createElement(_._22, {
-                    color: _.F.Alt
+                e.minBitsToCheer && e.minBitsToCheer > 1 && (n = m.createElement(E._22, {
+                    color: E.F.Alt
                 }, Object(h.d)("{displayName} requires {minBits} Bits to Cheer in this channel.", {
                     displayName: e.displayName,
                     minBits: e.minBitsToCheer
                 }, "Bits--BuyCard")));
                 var i = null;
-                return void 0 !== e.bitsBalance && null !== e.bitsBalance && (i = p.createElement(_._22, {
-                    color: _.F.Alt
+                return void 0 !== e.bitsBalance && null !== e.bitsBalance && (i = m.createElement(E._22, {
+                    color: E.F.Alt
                 }, Object(h.d)("You have {totalBits} Bits", {
-                    totalBits: p.createElement("strong", {
+                    totalBits: m.createElement("strong", {
                         "data-a-target": "buy-card-bits-count"
                     }, e.bitsBalance)
-                }, "Bits--BuyCard"))), p.createElement(_._18, {
+                }, "Bits--BuyCard"))), m.createElement(E._18, {
                     className: "bits-buy-card-header",
                     padding: {
                         x: 1,
@@ -4660,67 +5066,67 @@ webpackJsonp([46], {
                     },
                     borderBottom: !0,
                     flexShrink: 0
-                }, p.createElement(_.U, {
+                }, m.createElement(E.U, {
                     margin: {
                         bottom: 1
                     }
-                }, p.createElement(_._22, {
-                    type: _._27.H4,
-                    color: _.F.Alt
+                }, m.createElement(E._22, {
+                    type: E._27.H4,
+                    color: E.F.Alt
                 }, Object(h.d)("Purchase Bits", "Bits--BuyCard")), t), i, n)
             },
-            M = n("nrdj"),
-            W = function(e) {
-                return p.createElement(_.U, {
-                    display: _.H.Flex,
+            W = n("nrdj"),
+            M = function(e) {
+                return m.createElement(E.U, {
+                    display: E.H.Flex,
                     flexGrow: 1,
-                    flexDirection: _.J.Column,
-                    alignItems: _.c.Center,
+                    flexDirection: E.J.Column,
+                    alignItems: E.c.Center,
                     fullWidth: !0,
-                    flexWrap: _.K.NoWrap,
+                    flexWrap: E.K.NoWrap,
                     padding: {
                         y: 1
                     }
-                }, p.createElement(M.a, {
+                }, m.createElement(W.a, {
                     prefix: "cheer",
                     amount: e.amount,
                     bitsConfig: e.bitsConfig,
                     showAmount: !0,
                     showImage: !0
-                }), p.createElement(_.U, {
-                    display: _.H.Flex,
+                }), m.createElement(E.U, {
+                    display: E.H.Flex,
                     padding: {
                         top: 1
                     },
                     flexGrow: 1,
-                    flexDirection: _.J.Column,
-                    alignItems: _.c.Center,
-                    flexWrap: _.K.NoWrap
-                }, p.createElement(_._22, {
-                    type: _._27.H4,
+                    flexDirection: E.J.Column,
+                    alignItems: E.c.Center,
+                    flexWrap: E.K.NoWrap
+                }, m.createElement(E._22, {
+                    type: E._27.H4,
                     bold: !0
                 }, Object(h.d)("You got {bitsAmount,number} Bits!", {
                     bitsAmount: e.amount
-                }, "Bits--WatchAdAward")), p.createElement(_.P, {
+                }, "Bits--WatchAdAward")), m.createElement(E.P, {
                     padding: {
                         top: 1
                     }
-                }, p.createElement(_._22, {
-                    color: _.F.Alt2
+                }, m.createElement(E._22, {
+                    color: E.F.Alt2
                 }, Object(h.d)("{bitsAmount,number} Bits were added to your Bit inventory.", {
                     bitsAmount: e.amount
-                }, "Bits--WatchAdAward"), p.createElement("br", null), Object(h.d)("You can use these Bits to Cheer!", "Bits--WatchAdAward")))), p.createElement(_.U, {
-                    display: _.H.Flex,
+                }, "Bits--WatchAdAward"), m.createElement("br", null), Object(h.d)("You can use these Bits to Cheer!", "Bits--WatchAdAward")))), m.createElement(E.U, {
+                    display: E.H.Flex,
                     padding: {
                         x: 1,
                         top: 3
                     },
-                    alignSelf: _.d.Stretch,
-                    justifyContent: _.T.Between
-                }, p.createElement(_.u, {
+                    alignSelf: E.d.Stretch,
+                    justifyContent: E.T.Between
+                }, m.createElement(E.u, {
                     onClick: e.onStartCheering
-                }, Object(h.d)("Start Cheering", "Bits--WatchAdAward")), p.createElement(_.u, {
-                    type: _.z.Hollow,
+                }, Object(h.d)("Start Cheering", "Bits--WatchAdAward")), m.createElement(E.u, {
+                    type: E.z.Hollow,
                     onClick: e.onWatchAnother,
                     disabled: !e.hasAdAvailable
                 }, Object(h.d)("Watch Another", "Bits--WatchAdAward"))))
@@ -4739,82 +5145,82 @@ webpackJsonp([46], {
                                 case 0:
                                     return [4, i(this.props.truexUserID)];
                                 case 1:
-                                    return e.sent() !== b.Available && this.setState({
+                                    return e.sent() !== k.Available && this.setState({
                                         hasAdAvailable: !1
                                     }), [2]
                             }
                         })
                     })
                 }, t.prototype.render = function() {
-                    return p.createElement(W, u.__assign({}, this.props, {
+                    return m.createElement(M, u.__assign({}, this.props, {
                         hasAdAvailable: this.state.hasAdAvailable
                     }))
                 }, t
-            }(p.Component),
+            }(m.Component),
             z = (n("q8Cw"), function(e) {
                 var t = Object(h.d)("Something's wrong!", "Bits--WatchAdError"),
                     n = Object(h.d)("Something went wrong. Wait a while and try again.", "Bits--WatchAdError"),
                     i = "adserrorgeneric";
                 switch (e.type) {
-                    case o.Adblock:
+                    case l.Adblock:
                         i = "adserroradblock", n = Object(h.d)("We can't load this Ad, probably because Ad Blocking software is running. To watch an ad and get Bits, please disable all Ad Blocking software.", "Bits--WatchAdError");
                         break;
-                    case o.LimitReached:
+                    case l.LimitReached:
                         i = "adserrorlimit", t = Object(h.d)("Ad Limit Reached", "Bits--WatchAdError"), n = Object(h.d)("That's all the Ads we have for now. Try again tomorrow!", "Bits--WatchAdError");
                         break;
-                    case o.ExitEarly:
+                    case l.ExitEarly:
                         n = Object(h.d)("To get Bits, you must view and interact with the Ad for the minimum amount of time.", "Bits--WatchAdError")
                 }
-                var a = p.createElement(_.U, {
+                var a = m.createElement(E.U, {
                     className: "watch-ad-error__footer",
-                    display: _.H.Flex,
+                    display: E.H.Flex,
                     padding: {
                         top: 2
                     },
-                    alignSelf: _.d.Stretch,
-                    justifyContent: _.T.Center
-                }, p.createElement(_.u, {
+                    alignSelf: E.d.Stretch,
+                    justifyContent: E.T.Center
+                }, m.createElement(E.u, {
                     onClick: e.onTryAgain
                 }, Object(h.d)("Try Again", "Bits--WatchAdError")));
-                return e.type === o.LimitReached && (a = p.createElement(_.U, {
+                return e.type === l.LimitReached && (a = m.createElement(E.U, {
                     className: "watch-ad-error__footer",
-                    display: _.H.Flex,
+                    display: E.H.Flex,
                     padding: {
                         top: 2
                     },
-                    alignSelf: _.d.Stretch,
-                    justifyContent: _.T.Between
-                }, p.createElement(_.u, {
+                    alignSelf: E.d.Stretch,
+                    justifyContent: E.T.Between
+                }, m.createElement(E.u, {
                     onClick: e.onClose
-                }, Object(h.d)("Got It", "Bits--WatchAdError")), p.createElement(_.u, {
+                }, Object(h.d)("Got It", "Bits--WatchAdError")), m.createElement(E.u, {
                     onClick: e.onTryAgain,
-                    type: _.z.Hollow
-                }, Object(h.d)("Buy Bits", "Bits--WatchAdError")))), p.createElement(_.U, {
+                    type: E.z.Hollow
+                }, Object(h.d)("Buy Bits", "Bits--WatchAdError")))), m.createElement(E.U, {
                     padding: {
                         x: 1
                     },
-                    display: _.H.Flex,
+                    display: E.H.Flex,
                     flexGrow: 1,
-                    flexDirection: _.J.Column,
-                    alignItems: _.c.Center,
+                    flexDirection: E.J.Column,
+                    alignItems: E.c.Center,
                     fullWidth: !0,
-                    flexWrap: _.K.NoWrap
-                }, p.createElement(_.U, {
+                    flexWrap: E.K.NoWrap
+                }, m.createElement(E.U, {
                     padding: {
                         y: 2
                     }
-                }, p.createElement("img", {
+                }, m.createElement("img", {
                     className: "watch-ad-error__error-image",
                     src: T.b + "/light/static/1/" + i + ".png"
-                })), p.createElement(_.U, {
+                })), m.createElement(E.U, {
                     padding: {
                         bottom: 1
                     }
-                }, p.createElement(_._22, {
-                    type: _._27.H4,
+                }, m.createElement(E._22, {
+                    type: E._27.H4,
                     bold: !0
-                }, t)), p.createElement(_._22, {
-                    color: _.F.Alt2
+                }, t)), m.createElement(E._22, {
+                    color: E.F.Alt2
                 }, n), a)
             }),
             G = n("aqNN");
@@ -4830,7 +5236,7 @@ webpackJsonp([46], {
                         watebError: null,
                         bitsAwarded: 0
                     }, t.onBuyPopupClose = function(e) {
-                        Object(N.a)(e, function() {
+                        Object(C.a)(e, function() {
                             t.props.data && t.props.data.refetch()
                         })
                     }, t.onAdBitsAwarded = function(e) {
@@ -4866,77 +5272,77 @@ webpackJsonp([46], {
                 }, t.prototype.render = function() {
                     var e = {
                             border: !0,
-                            background: _.m.Base,
+                            background: E.m.Base,
                             fullWidth: !0,
                             elevation: 3
                         },
-                        t = C({
+                        t = N({
                             "bits-buy-card": !0,
                             "bits-buy-card__chat-tooltip": this.props.location === y.b.ChatTooltip
                         }),
                         n = null;
-                    if (this.props.location === y.b.ChatTooltip && (n = p.createElement("button", {
+                    if (this.props.location === y.b.ChatTooltip && (n = m.createElement("button", {
                             className: "bits-buy-card__close",
                             onClick: this.props.onClose,
                             "data-a-target": "bits-buy-card-close-button"
-                        }, p.createElement(_._9, {
-                            asset: _._10.Close,
+                        }, m.createElement(E._9, {
+                            asset: E._10.Close,
                             height: 11,
                             width: 11
-                        }))), !this.props.data || this.props.data.loading) return p.createElement(_._18, u.__assign({
+                        }))), !this.props.data || this.props.data.loading) return m.createElement(E._18, u.__assign({
                         className: t,
                         "data-a-target": "bits-buy-card-loading",
-                        display: _.H.Flex,
-                        flexDirection: _.J.Column,
-                        alignItems: _.c.Center,
-                        justifyContent: _.T.Center,
-                        textAlign: _._23.Center
-                    }, e), p.createElement(_.Y, {
+                        display: E.H.Flex,
+                        flexDirection: E.J.Column,
+                        alignItems: E.c.Center,
+                        justifyContent: E.T.Center,
+                        textAlign: E._23.Center
+                    }, e), m.createElement(E.Y, {
                         delay: 0
-                    }), p.createElement(_.U, {
+                    }), m.createElement(E.U, {
                         padding: {
                             top: 2
                         }
-                    }, p.createElement(_._22, {
+                    }, m.createElement(E._22, {
                         italic: !0
                     }, Object(h.d)("Fetching bits", "Bits--BuyCard"))));
-                    if (this.props.data.error) return p.createElement(_.U, u.__assign({
-                        className: C(t, "bits-buy-card--shorter"),
-                        display: _.H.Flex,
-                        flexDirection: _.J.Column,
-                        alignItems: _.c.Center,
-                        justifyContent: _.T.Center,
+                    if (this.props.data.error) return m.createElement(E.U, u.__assign({
+                        className: N(t, "bits-buy-card--shorter"),
+                        display: E.H.Flex,
+                        flexDirection: E.J.Column,
+                        alignItems: E.c.Center,
+                        justifyContent: E.T.Center,
                         padding: 2,
-                        textAlign: _._23.Center,
+                        textAlign: E._23.Center,
                         "data-a-target": "bits-buy-card-error"
-                    }, e), n, p.createElement(_._22, {
+                    }, e), n, m.createElement(E._22, {
                         italic: !0
                     }, Object(h.d)("Bits prices are unavailable right now. Check back again later.", "Bits--BuyCard")));
                     var i = this.renderWatebCard();
-                    if (i) return p.createElement(_._18, u.__assign({
-                        className: C(t, "bits-buy-card--shorter"),
-                        display: _.H.Flex,
-                        flexDirection: _.J.Column,
-                        alignItems: _.c.Center,
-                        justifyContent: _.T.Center,
-                        textAlign: _._23.Center,
+                    if (i) return m.createElement(E._18, u.__assign({
+                        className: N(t, "bits-buy-card--shorter"),
+                        display: E.H.Flex,
+                        flexDirection: E.J.Column,
+                        alignItems: E.c.Center,
+                        justifyContent: E.T.Center,
+                        textAlign: E._23.Center,
                         padding: 1
                     }, e), n, i);
                     var a = [];
                     this.props.data.currentUser ? a = this.props.data.currentUser.bitsOffers : this.props.data.bitsOffers && (a = this.props.data.bitsOffers);
                     var r = a.filter(function(e) {
-                            return e.type === U.b
+                            return e.type === O.b
                         }).some(function(e) {
                             return e.includesVAT
                         }),
-                        o = this.props.data.user ? this.props.data.user.id : "",
-                        l = p.createElement(R, {
+                        l = this.props.data.user ? this.props.data.user.id : "",
+                        o = m.createElement(P, {
                             offers: a,
                             fullsize: this.props.fullsize,
                             hidePromos: this.props.hidePromos,
                             hideWateb: this.props.hideWateb,
                             bitsConfig: this.props.bitsConfig,
-                            channelID: o,
+                            channelID: l,
                             channelLogin: this.props.channelLogin,
                             closeAllBits: this.props.closeAllBits,
                             currentUserSHA: this.props.data && this.props.data.currentUser && this.props.data.currentUser.idSHA1,
@@ -4947,24 +5353,24 @@ webpackJsonp([46], {
                             trackBitsCardInteraction: this.props.trackBitsCardInteraction
                         }),
                         s = null;
-                    return this.props.location === y.b.ChatTooltip && (s = p.createElement(H, {
+                    return this.props.location === y.b.ChatTooltip && (s = m.createElement(H, {
                         bitsBalance: this.props.data && this.props.data.currentUser && this.props.data.currentUser.bitsBalance,
                         displayName: this.props.data && this.props.data.user && this.props.data.user.displayName || this.props.channelLogin || "",
                         minBitsToCheer: this.props.data && this.props.data.user && this.props.data.user.cheer && this.props.data.user.cheer.settings.cheerMinimumBits,
                         pricesIncludeVAT: r
-                    })), p.createElement(_._18, u.__assign({
+                    })), m.createElement(E._18, u.__assign({
                         className: t,
                         padding: {
                             top: 1
                         },
-                        display: _.H.Flex,
-                        flexDirection: _.J.Column,
+                        display: E.H.Flex,
+                        flexDirection: E.J.Column,
                         "data-a-target": "bits-buy-card"
-                    }, e), n, s, l)
+                    }, e), n, s, o)
                 }, t.prototype.renderWatebCard = function() {
                     if (this.props.data && this.props.data.currentUser) switch (this.state.wateb) {
                         case F.Awarded:
-                            return p.createElement(V, {
+                            return m.createElement(V, {
                                 bitsConfig: this.props.bitsConfig,
                                 amount: this.state.bitsAwarded,
                                 onStartCheering: this.props.onClose,
@@ -4972,8 +5378,8 @@ webpackJsonp([46], {
                                 truexUserID: this.props.data.currentUser.idSHA1
                             });
                         case F.Error:
-                            return p.createElement(z, {
-                                type: this.state.watebError || o.Unknown,
+                            return m.createElement(z, {
+                                type: this.state.watebError || l.Unknown,
                                 onClose: this.props.onClose,
                                 onTryAgain: this.resetAdErrorState
                             });
@@ -4992,8 +5398,8 @@ webpackJsonp([46], {
                         }
                     }
                 })], t)
-            }(p.Component),
-            K = Object(l.a)(a, r)(q);
+            }(m.Component),
+            K = Object(o.a)(a, r)(q);
         n.d(t, !1, function() {
             return a
         }), n.d(t, !1, function() {
@@ -5044,12 +5450,12 @@ webpackJsonp([46], {
         "use strict";
 
         function i(e) {
-            return e.type === o.b && null !== e.promotion && !!e.promotion
+            return e.type === l.b && null !== e.promotion && !!e.promotion
         }
         t.c = function(e) {
-            return e.type !== o.a && i(e) && null !== e.promotion && e.promotion.type === o.d
+            return e.type !== l.a && i(e) && null !== e.promotion && e.promotion.type === l.d
         }, t.e = function(e) {
-            return e.type !== o.a && i(e) && null !== e.promotion && e.promotion.type === o.e
+            return e.type !== l.a && i(e) && null !== e.promotion && e.promotion.type === l.e
         }, t.d = i, t.a = function(e) {
             var t = 0,
                 n = 0,
@@ -5067,19 +5473,19 @@ webpackJsonp([46], {
                 i = t.largestCheermote,
                 r = t.smallestCheermote;
             if (n) {
-                var o = {
-                    cheerAboveMaxBitsPerEmote: i > l.j,
+                var l = {
+                    cheerAboveMaxBitsPerEmote: i > o.j,
                     totalAboveBalance: n > e.balance,
                     totalBelowCheerMinimum: n < e.cheerMinimumBits,
                     totalBelowEmoteMinimum: r < e.emoteMinimumBits,
-                    inputLongerThanMaxBitsMessage: e.inputValue.length > l.i,
+                    inputLongerThanMaxBitsMessage: e.inputValue.length > o.i,
                     inputStartsWithCommand: e.inputValue.startsWith("/")
                 };
-                if (Object.keys(o).some(function(e) {
-                        return o[e]
+                if (Object.keys(l).some(function(e) {
+                        return l[e]
                     })) return a.__assign({
                     canSpend: !1
-                }, o)
+                }, l)
             }
             return {
                 canSpend: !0
@@ -5099,8 +5505,8 @@ webpackJsonp([46], {
         };
         var a = n("TToO"),
             r = n("Ouuk"),
-            o = n("jxGs"),
-            l = n("3iBR"),
+            l = n("jxGs"),
+            o = n("3iBR"),
             s = n("/LBW")
     },
     a0ve: function(e, t) {},
@@ -5113,15 +5519,15 @@ webpackJsonp([46], {
         var i = n("TToO"),
             a = n("HW6M"),
             r = (n.n(a), n("OAwv")),
-            o = (n.n(r), n("U7vG")),
-            l = (n.n(o), n("F8kA")),
+            l = (n.n(r), n("U7vG")),
+            o = (n.n(l), n("F8kA")),
             s = n("6sO2"),
             d = n("SZoP"),
             c = n("mi6k"),
             u = n("CSlQ"),
-            p = n("Odds"),
-            m = n("a0ve"),
-            h = (n.n(m), function(e) {
+            m = n("Odds"),
+            p = n("a0ve"),
+            h = (n.n(p), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -5148,63 +5554,65 @@ webpackJsonp([46], {
                         })
                     }, t
                 }
-                return i.__extends(t, e), t.prototype.componentWillUnmount = function() {
+                return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.props.overrideImageInteractivity && this.props.latencyTracking.reportInteractive()
+                }, t.prototype.componentWillUnmount = function() {
                     this.ignoreResumeTimeResponse = !0
                 }, t.prototype.render = function() {
                     var e = null,
                         t = this.getVideoPreviousWatchPercentage();
-                    return null !== t && (e = o.createElement(p.U, {
-                        position: p._3.Absolute,
+                    return null !== t && (e = l.createElement(m.U, {
+                        position: m._3.Absolute,
                         attachBottom: !0,
                         fullWidth: !0
-                    }, o.createElement(p._6, {
-                        size: p._7.Small,
+                    }, l.createElement(m._6, {
+                        size: m._7.Small,
                         value: t,
                         mask: !0
-                    }))), o.createElement("div", i.__assign({
+                    }))), l.createElement("div", i.__assign({
                         onClick: this.onClickHandler,
                         onMouseEnter: this.onMouseEnterHandler,
                         onMouseLeave: this.onMouseLeaveHandler
-                    }, Object(p._39)(this.props)), o.createElement(p.A, null, o.createElement(p.U, {
+                    }, Object(m._39)(this.props)), l.createElement(m.A, null, l.createElement(m.U, {
                         fullWidth: !0
-                    }, o.createElement(p.j, {
+                    }, l.createElement(m.j, {
                         overflow: !0
-                    }, o.createElement("div", null, o.createElement(p._18, {
-                        display: p.H.InlineFlex,
-                        position: p._3.Absolute,
+                    }, l.createElement("div", null, l.createElement(m._18, {
+                        display: m.H.InlineFlex,
+                        position: m._3.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
                         margin: .5,
-                        zIndex: p._38.Default,
-                        fontSize: p.L.Size6,
-                        background: p.m.Overlay,
-                        color: p.F.Overlay,
+                        zIndex: m._38.Default,
+                        fontSize: m.L.Size6,
+                        background: m.m.Overlay,
+                        color: m.F.Overlay,
                         className: "video-preview-card__preview-overlay-stat"
-                    }, o.createElement(p._17, {
+                    }, l.createElement(m._17, {
                         "data-test-selector": "video-view-count",
-                        icon: p._10.GlyphViews,
+                        icon: m._10.GlyphViews,
                         label: Object(s.d)("views", "VideoPreviewCard"),
                         value: Object(s.f)(this.props.video.viewCount)
-                    })), o.createElement(p._18, {
-                        display: p.H.InlineFlex,
-                        position: p._3.Absolute,
+                    })), l.createElement(m._18, {
+                        display: m.H.InlineFlex,
+                        position: m._3.Absolute,
                         attachTop: !0,
                         attachRight: !0,
                         margin: .5,
-                        zIndex: p._38.Default,
-                        fontSize: p.L.Size6,
-                        background: p.m.Overlay,
-                        color: p.F.Overlay,
+                        zIndex: m._38.Default,
+                        fontSize: m.L.Size6,
+                        background: m.m.Overlay,
+                        color: m.F.Overlay,
                         className: "video-preview-card__preview-overlay-stat"
-                    }, o.createElement(p._17, {
+                    }, l.createElement(m._17, {
                         "data-test-selector": "video-length",
-                        icon: p._10.GlyphLength,
+                        icon: m._10.GlyphLength,
                         label: Object(s.d)("length", "VideoPreviewCard"),
                         value: Object(c.a)(this.props.video.lengthSeconds)
-                    })), this.videoPreviewImage(), e))), o.createElement(p.B, null, o.createElement(p.U, {
-                        display: p.H.Flex,
-                        flexDirection: p.J.Row,
-                        flexWrap: p.K.NoWrap,
+                    })), this.videoPreviewImage(), e))), l.createElement(m.B, null, l.createElement(m.U, {
+                        display: m.H.Flex,
+                        flexDirection: m.J.Row,
+                        flexWrap: m.K.NoWrap,
                         padding: {
                             top: .5
                         }
@@ -5222,9 +5630,9 @@ webpackJsonp([46], {
                         n = a("video-preview-card__preview-image", {
                             "video-preview-card__preview-image--animated": this.state.hovered && this.state.didAnimatedPreviewLoad
                         });
-                    return o.createElement(p.j, {
+                    return l.createElement(m.j, {
                         overflow: !0
-                    }, o.createElement(l.a, {
+                    }, l.createElement(o.a, {
                         to: {
                             pathname: "/videos/" + this.props.video.id,
                             state: this.getLinkState(),
@@ -5233,14 +5641,14 @@ webpackJsonp([46], {
                         title: this.props.video.title,
                         "data-a-target": "video-preview-card-image-link",
                         "data-test-selector": "preview-image-link"
-                    }, o.createElement("div", {
+                    }, l.createElement("div", {
                         className: t,
                         "data-test-selector": "preview-image-wrapper"
-                    }, o.createElement(p.P, {
+                    }, l.createElement(m.P, {
                         flexShrink: 0
-                    }, o.createElement("figure", null, o.createElement(p.j, {
-                        ratio: p.k.Aspect16x9
-                    }, o.createElement("img", {
+                    }, l.createElement("figure", null, l.createElement(m.j, {
+                        ratio: m.k.Aspect16x9
+                    }, l.createElement("img", {
                         alt: this.props.video.title,
                         className: n,
                         "data-test-selector": "preview-image",
@@ -5258,32 +5666,32 @@ webpackJsonp([46], {
                         n = a("video-preview-card__image-wrapper", {
                             "video-preview-card__image-wrapper--watched": null !== this.getVideoPreviousWatchPercentage() && !this.state.hovered
                         });
-                    return o.createElement(p.U, {
+                    return l.createElement(m.U, {
                         "data-test-selector": "game-box-art",
-                        display: p.H.InlineFlex,
+                        display: m.H.InlineFlex,
                         flexShrink: 0,
                         padding: {
                             bottom: .5
                         }
-                    }, o.createElement(l.a, {
+                    }, l.createElement(o.a, {
                         to: t,
                         title: e.name,
                         "data-a-target": "video-preview-card-boxart-link"
-                    }, o.createElement(p.P, {
+                    }, l.createElement(m.P, {
                         margin: {
                             right: 1
                         }
-                    }, o.createElement("figure", {
+                    }, l.createElement("figure", {
                         className: "video-preview-card__game-art"
-                    }, o.createElement(p._30, {
-                        display: p.H.Block,
-                        direction: p._32.Bottom,
+                    }, l.createElement(m._30, {
+                        display: m.H.Block,
+                        direction: m._32.Bottom,
                         label: e.name
-                    }, o.createElement("div", {
+                    }, l.createElement("div", {
                         className: n,
                         "data-test-selector": "game-box-art-wrapper"
-                    }, o.createElement(p.C, {
-                        aspect: p.k.BoxArt,
+                    }, l.createElement(m.C, {
+                        aspect: m.k.BoxArt,
                         imageAlt: e.name,
                         imageSrc: e.boxArtURL || s.a.defaultBoxArtURL
                     })))))))
@@ -5295,7 +5703,7 @@ webpackJsonp([46], {
                             pathname: "/" + this.props.video.owner.login,
                             state: this.getLinkState()
                         };
-                        t = o.createElement(l.a, {
+                        t = l.createElement(o.a, {
                             to: n,
                             className: "video-preview-card__owner-display-name",
                             "data-a-target": "video-preview-card-channel-link",
@@ -5303,18 +5711,18 @@ webpackJsonp([46], {
                             title: Object(d.a)(this.props.video.owner.login, this.props.video.owner.displayName, !0)
                         }, Object(d.a)(this.props.video.owner.login, this.props.video.owner.displayName))
                     }
-                    return o.createElement(p.U, {
-                        display: p.H.Flex,
-                        flexDirection: p.J.Column
-                    }, o.createElement(p.U, {
+                    return l.createElement(m.U, {
+                        display: m.H.Flex,
+                        flexDirection: m.J.Column
+                    }, l.createElement(m.U, {
                         "data-test-selector": "video-title",
-                        overflow: p.Z.Hidden,
-                        position: p._3.Relative
-                    }, o.createElement(p._22, {
-                        color: p.F.Base,
-                        fontSize: p.L.Size5,
-                        lineHeight: p.V.Heading
-                    }, o.createElement(l.a, {
+                        overflow: m.Z.Hidden,
+                        position: m._3.Relative
+                    }, l.createElement(m._22, {
+                        color: m.F.Base,
+                        fontSize: m.L.Size5,
+                        lineHeight: m.V.Heading
+                    }, l.createElement(o.a, {
                         className: "video-preview-card__video-title",
                         to: {
                             pathname: "/videos/" + this.props.video.id,
@@ -5323,20 +5731,20 @@ webpackJsonp([46], {
                         },
                         title: this.props.video.title,
                         "data-a-target": "video-preview-card-title-link"
-                    }, this.props.video.title))), o.createElement(p.U, {
+                    }, this.props.video.title))), l.createElement(m.U, {
                         flexShrink: 0,
                         flexGrow: 0,
                         ellipsis: !0
-                    }, o.createElement(p._22, {
-                        type: p._27.Span,
-                        color: p.F.Alt2,
+                    }, l.createElement(m._22, {
+                        type: m._27.Span,
+                        color: m.F.Alt2,
                         ellipsis: !0,
                         title: this.formatTitle(e)
-                    }, e, o.createElement(p.P, {
+                    }, e, l.createElement(m.P, {
                         padding: {
                             x: .5
                         }
-                    }, o.createElement("span", null, "·")), t)))
+                    }, l.createElement("span", null, "·")), t)))
                 }, t.prototype.getVideoPreviousWatchPercentage = function() {
                     return this.props.video && this.props.video.self && this.props.video.self.viewingHistory && null !== this.props.video.self.viewingHistory.position ? 0 === this.props.video.lengthSeconds || 0 === this.props.video.self.viewingHistory.position ? null : this.props.video.self.viewingHistory.position / this.props.video.lengthSeconds * 100 : null
                 }, t.prototype.showGameArt = function() {
@@ -5350,7 +5758,7 @@ webpackJsonp([46], {
                         medium: this.props.tracking.medium
                     }
                 }, t
-            }(o.Component)),
+            }(l.Component)),
             g = Object(u.c)("VideoPreviewCard")(h)
     },
     annQ: function(e, t, n) {
@@ -6010,10 +6418,10 @@ webpackJsonp([46], {
             var t = [],
                 n = {};
             return e.forEach(function(e) {
-                var l = e.tiers.map(function(e) {
+                var o = e.tiers.map(function(e) {
                     return i(e)
                 });
-                "Cheer" === e.prefix && l.push(function() {
+                "Cheer" === e.prefix && o.push(function() {
                     var e = ["DARK", "LIGHT"],
                         t = ["static", "animated"],
                         n = [];
@@ -6021,7 +6429,7 @@ webpackJsonp([46], {
                         e.forEach(function(e) {
                             t.forEach(function(t) {
                                 n.push({
-                                    url: o.a + "/cheer/" + e.toLowerCase() + "/" + t + "/100000/" + i + "." + ("static" === t ? "png" : "gif"),
+                                    url: l.a + "/cheer/" + e.toLowerCase() + "/" + t + "/100000/" + i + "." + ("static" === t ? "png" : "gif"),
                                     isAnimated: "animated" === t,
                                     theme: e,
                                     dpiScale: i
@@ -6031,17 +6439,17 @@ webpackJsonp([46], {
                     }), i({
                         id: "Cheer:100000",
                         bits: 1e5,
-                        color: o.e[r.a.Yellow],
+                        color: l.e[r.a.Yellow],
                         images: n
                     })
-                }()), l.sort(function(e, t) {
+                }()), o.sort(function(e, t) {
                     return t.bits - e.bits
                 });
                 var s = a.__assign({}, e, {
-                    indexedTiers: new Map(l.map(function(e) {
+                    indexedTiers: new Map(o.map(function(e) {
                         return [e.bits, e]
                     })),
-                    orderedTiers: l
+                    orderedTiers: o
                 });
                 t.push(s), n[s.prefix.toLowerCase()] = s
             }), {
@@ -6051,7 +6459,49 @@ webpackJsonp([46], {
         };
         var a = n("TToO"),
             r = n("I89S"),
-            o = n("3iBR")
+            l = n("3iBR")
+    },
+    cSst: function(e, t, n) {
+        "use strict";
+        var i = n("TToO"),
+            a = n("U7vG"),
+            r = n("F8kA"),
+            l = n("Odds"),
+            o = function(e) {
+                return a.createElement(l.U, {
+                    margin: {
+                        right: 1
+                    },
+                    display: l.H.Flex,
+                    alignItems: l.c.Center
+                }, a.createElement(l._30, {
+                    align: l._31.Left,
+                    label: e.tooltip,
+                    direction: l._32.Bottom
+                }, a.createElement(l.U, {
+                    margin: {
+                        right: .5
+                    }
+                }, a.createElement(l._18, {
+                    display: l.H.Flex,
+                    alignItems: l.c.Center,
+                    color: l.F.Alt2
+                }, a.createElement(l._9, {
+                    asset: e.svgAsset,
+                    width: 18,
+                    height: 18
+                }))), a.createElement(l._22, {
+                    fontSize: l.L.Size5,
+                    ellipsis: !0
+                }, a.createElement(r.a, i.__assign({
+                    to: e.linkTo
+                }, Object(l._39)(e), {
+                    target: e.target
+                }), e.title))))
+            };
+        n.d(t, "a", function() {
+            return o
+        })
     },
     czpb: function(e, t, n) {
         "use strict";
@@ -6059,11 +6509,11 @@ webpackJsonp([46], {
             a = n("Ejve"),
             r = n("MSvX");
         t.a = function(e) {
-            return i.b.get(r.a, !1) || i.a.buildType !== a.a.Production ? "string" == typeof e ? e : e.pathname || "" : "string" == typeof e ? o + e : o + e.pathname
+            return i.b.get(r.a, !1) || i.a.buildType !== a.a.Production ? "string" == typeof e ? e : e.pathname || "" : "string" == typeof e ? l + e : l + e.pathname
         }, t.b = function() {
             return !i.b.get(r.a, !1) && i.a.buildType === a.a.Production
         };
-        var o = "https://www.twitch.tv"
+        var l = "https://www.twitch.tv"
     },
     ea40: function(e, t) {},
     fHoP: function(e, t) {},
@@ -6075,16 +6525,16 @@ webpackJsonp([46], {
                 bitsAmount: e.count.toString()
             }, "Bits--BitsCount");
             if (e.withImage) {
-                var i = e.bitsConfig.indexedActions[l.f];
+                var i = e.bitsConfig.indexedActions[o.f];
                 i || (i = Object(d.b)());
                 var u = i.orderedTiers.find(function(t) {
                     return t.bits <= e.count
                 });
                 if (u) {
-                    var p = Object(s.b)(u);
-                    return void 0 !== e.themeOverride && (e.themeOverride === o.a.Light ? p.dark = p.light : p.light = p.dark), t = a.createElement(c.a, {
+                    var m = Object(s.b)(u);
+                    return void 0 !== e.themeOverride && (e.themeOverride === l.a.Light ? m.dark = m.light : m.light = m.dark), t = a.createElement(c.a, {
                         className: "bits-count--img",
-                        sources: p
+                        sources: m
                     }), a.createElement("strong", {
                         className: "bits-count",
                         "data-a-target": "bits-count"
@@ -6098,8 +6548,8 @@ webpackJsonp([46], {
         }
         var a = n("U7vG"),
             r = n("6sO2"),
-            o = n("NXs7"),
-            l = n("3iBR"),
+            l = n("NXs7"),
+            o = n("3iBR"),
             s = n("iydZ"),
             d = n("CFVp"),
             c = n("qe65");
@@ -6125,12 +6575,12 @@ webpackJsonp([46], {
                                 var n = a.__assign({}, i.props);
                                 n.location && n.location.state && (t.medium = n.location.state.medium, t.content = n.location.state.content, t.content_index = n.location.state.content_index);
                                 var r = i.referenceTracking,
-                                    o = r.content,
-                                    l = r.medium,
+                                    l = r.content,
+                                    o = r.medium,
                                     d = r.content_index;
                                 s.n.tracking.trackPageview(a.__assign({
-                                    content: o,
-                                    medium: l,
+                                    content: l,
+                                    medium: o,
                                     content_index: d,
                                     location: e.location
                                 }, t))
@@ -6145,7 +6595,7 @@ webpackJsonp([46], {
                     }, i.prototype.componentDidUpdate = function() {
                         this.trackPageview()
                     }, i.prototype.render = function() {
-                        return o.createElement(t, a.__assign({}, this.props))
+                        return l.createElement(t, a.__assign({}, this.props))
                     }, i.prototype.stripTTParams = function(e) {
                         var t = "" !== e.search ? r.parse(e.search) : {},
                             n = {
@@ -6164,14 +6614,14 @@ webpackJsonp([46], {
                         }
                         return n
                     }, i
-                }(o.Component);
-                return Object(l.f)(n)
+                }(l.Component);
+                return Object(o.f)(n)
             }
         }
         var a = n("TToO"),
             r = n("OAwv"),
-            o = n("U7vG"),
-            l = n("F8kA"),
+            l = n("U7vG"),
+            o = n("F8kA"),
             s = n("6sO2");
         n.d(t, "a", function() {
             return i
@@ -6207,15 +6657,15 @@ webpackJsonp([46], {
         }), n.d(t, "d", function() {
             return r
         }), n.d(t, "e", function() {
-            return o
-        }), n.d(t, "c", function() {
             return l
+        }), n.d(t, "c", function() {
+            return o
         });
         var i = "AD",
             a = "BUNDLE",
             r = "first_time_purchase",
-            o = "single_purchase",
-            l = "black_friday_2017"
+            l = "single_purchase",
+            o = "black_friday_2017"
     },
     kOMe: function(e, t) {
         var n = {
@@ -6675,8 +7125,8 @@ webpackJsonp([46], {
         "use strict";
         var i, a = n("HW6M"),
             r = n("U7vG"),
-            o = n("6sO2"),
-            l = n("iydZ"),
+            l = n("6sO2"),
+            o = n("iydZ"),
             s = n("CFVp"),
             d = n("qe65"),
             c = n("Odds");
@@ -6692,8 +7142,8 @@ webpackJsonp([46], {
             });
             n || (n = t.orderedTiers[0]);
             var u = e.display === c.H.Inline || e.display === c.H.InlineFlex || e.display === c.H.InlineBlock,
-                p = null,
-                m = a("cheermote-for-amount__cheer-amount", {
+                m = null,
+                p = a("cheermote-for-amount__cheer-amount", {
                     "cheermote-for-amount__display--table-cell": !u
                 }, {
                     "cheermote-for-amount__cheer-amount--medium": e.size === i.Medium
@@ -6703,12 +7153,12 @@ webpackJsonp([46], {
                     "cheermote-for-amount__cheer-amount--extremely-small": e.size === i.ExtremelySmall
                 });
             if (e.amount && e.showAmount) {
-                var h = e.formattedNumber ? Object(o.e)(e.amount) : e.amount;
-                p = r.createElement(c.P, {
+                var h = e.formattedNumber ? Object(l.e)(e.amount) : e.amount;
+                m = r.createElement(c.P, {
                     padding: e.size === i.Small ? 0 : void 0,
                     textAlign: e.size === i.Small ? c._23.Center : void 0
                 }, r.createElement("strong", {
-                    className: m,
+                    className: p,
                     style: {
                         color: n.color
                     }
@@ -6727,12 +7177,12 @@ webpackJsonp([46], {
                 }),
                 v = r.createElement(d.a, {
                     className: g,
-                    sources: Object(l.b)(n, e.size || i.Large, e.animated)
+                    sources: Object(o.b)(n, e.size || i.Large, e.animated)
                 });
             return e.showImage || (v = null), r.createElement(c.U, {
                 className: "cheermote-for-amount",
                 display: e.display
-            }, v, p)
+            }, v, m)
         };
         n.d(t, "a", function() {
             return u
@@ -6741,7 +7191,857 @@ webpackJsonp([46], {
         })
     },
     q8Cw: function(e, t) {},
+    qdmu: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "FragmentDefinition",
+                name: {
+                    kind: "Name",
+                    value: "PremiereLanding"
+                },
+                typeCondition: {
+                    kind: "NamedType",
+                    name: {
+                        kind: "Name",
+                        value: "PremiereEvent"
+                    }
+                },
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "id"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "title"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "description"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "startAt"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "endAt"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "game"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "displayName"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "boxArtURL"
+                                },
+                                arguments: [{
+                                    kind: "Argument",
+                                    name: {
+                                        kind: "Name",
+                                        value: "width"
+                                    },
+                                    value: {
+                                        kind: "IntValue",
+                                        value: "285"
+                                    }
+                                }, {
+                                    kind: "Argument",
+                                    name: {
+                                        kind: "Name",
+                                        value: "height"
+                                    },
+                                    value: {
+                                        kind: "IntValue",
+                                        value: "380"
+                                    }
+                                }],
+                                directives: [],
+                                selectionSet: null
+                            }]
+                        }
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "channel"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "login"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "displayName"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "profileImageURL"
+                                },
+                                arguments: [{
+                                    kind: "Argument",
+                                    name: {
+                                        kind: "Name",
+                                        value: "width"
+                                    },
+                                    value: {
+                                        kind: "IntValue",
+                                        value: "300"
+                                    }
+                                }],
+                                directives: [],
+                                selectionSet: null
+                            }]
+                        }
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "premiere"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "status"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "pastPremiere"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "id"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "broadcastType"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "description"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "thumbnailURLs"
+                                        },
+                                        arguments: [{
+                                            kind: "Argument",
+                                            name: {
+                                                kind: "Name",
+                                                value: "width"
+                                            },
+                                            value: {
+                                                kind: "IntValue",
+                                                value: "320"
+                                            }
+                                        }, {
+                                            kind: "Argument",
+                                            name: {
+                                                kind: "Name",
+                                                value: "height"
+                                            },
+                                            value: {
+                                                kind: "IntValue",
+                                                value: "180"
+                                            }
+                                        }],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "viewCount"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "title"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "animatedPreviewURL"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "previewThumbnailURL"
+                                        },
+                                        arguments: [{
+                                            kind: "Argument",
+                                            name: {
+                                                kind: "Name",
+                                                value: "width"
+                                            },
+                                            value: {
+                                                kind: "IntValue",
+                                                value: "320"
+                                            }
+                                        }, {
+                                            kind: "Argument",
+                                            name: {
+                                                kind: "Name",
+                                                value: "height"
+                                            },
+                                            value: {
+                                                kind: "IntValue",
+                                                value: "180"
+                                            }
+                                        }],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "publishedAt"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "lengthSeconds"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "owner"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                alias: null,
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "id"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: null
+                                            }, {
+                                                kind: "Field",
+                                                alias: null,
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "login"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: null
+                                            }, {
+                                                kind: "Field",
+                                                alias: null,
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "displayName"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: null
+                                            }]
+                                        }
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "game"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                alias: null,
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "id"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: null
+                                            }, {
+                                                kind: "Field",
+                                                alias: null,
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "name"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: null
+                                            }, {
+                                                kind: "Field",
+                                                alias: null,
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "boxArtURL"
+                                                },
+                                                arguments: [{
+                                                    kind: "Argument",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "width"
+                                                    },
+                                                    value: {
+                                                        kind: "IntValue",
+                                                        value: "285"
+                                                    }
+                                                }, {
+                                                    kind: "Argument",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "height"
+                                                    },
+                                                    value: {
+                                                        kind: "IntValue",
+                                                        value: "380"
+                                                    }
+                                                }],
+                                                directives: [],
+                                                selectionSet: null
+                                            }]
+                                        }
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "self"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                alias: null,
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "viewingHistory"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: {
+                                                    kind: "SelectionSet",
+                                                    selections: [{
+                                                        kind: "Field",
+                                                        alias: null,
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "position"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: null
+                                                    }]
+                                                }
+                                            }]
+                                        }
+                                    }]
+                                }
+                            }]
+                        }
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "imageURL"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "width"
+                            },
+                            value: {
+                                kind: "IntValue",
+                                value: "320"
+                            }
+                        }, {
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "height"
+                            },
+                            value: {
+                                kind: "IntValue",
+                                value: "180"
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: null
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "self"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "isFollowing"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 576
+            }
+        };
+        n.loc.source = {
+            body: "fragment PremiereLanding on PremiereEvent {\nid\ntitle\ndescription\nstartAt\nendAt\ngame {\nid\ndisplayName\nboxArtURL(width:285 height:380)\n}\nchannel {\nid\nlogin\ndisplayName\nprofileImageURL(width:300)\n}\npremiere {\nstatus\npastPremiere {\nid\nbroadcastType\ndescription\nthumbnailURLs(width: 320 height: 180)\nviewCount\ntitle\nanimatedPreviewURL\npreviewThumbnailURL(width: 320 height: 180)\npublishedAt\nlengthSeconds\nowner {\nid\nlogin\ndisplayName\n}\ngame {\nid\nname\nboxArtURL(width: 285 height: 380)\n}\nself {\nviewingHistory {\nposition\n}\n}\n}\n}\nimageURL(width:320 height:180)\nself {\nisFollowing\n}\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
     sgUC: function(e, t) {},
+    thRY: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "FragmentDefinition",
+                name: {
+                    kind: "Name",
+                    value: "SingleLanding"
+                },
+                typeCondition: {
+                    kind: "NamedType",
+                    name: {
+                        kind: "Name",
+                        value: "SingleEvent"
+                    }
+                },
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "id"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "title"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "description"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "startAt"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "endAt"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "game"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "displayName"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "boxArtURL"
+                                },
+                                arguments: [{
+                                    kind: "Argument",
+                                    name: {
+                                        kind: "Name",
+                                        value: "width"
+                                    },
+                                    value: {
+                                        kind: "IntValue",
+                                        value: "285"
+                                    }
+                                }, {
+                                    kind: "Argument",
+                                    name: {
+                                        kind: "Name",
+                                        value: "height"
+                                    },
+                                    value: {
+                                        kind: "IntValue",
+                                        value: "380"
+                                    }
+                                }],
+                                directives: [],
+                                selectionSet: null
+                            }]
+                        }
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "channel"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "login"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "displayName"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "profileImageURL"
+                                },
+                                arguments: [{
+                                    kind: "Argument",
+                                    name: {
+                                        kind: "Name",
+                                        value: "width"
+                                    },
+                                    value: {
+                                        kind: "IntValue",
+                                        value: "300"
+                                    }
+                                }],
+                                directives: [],
+                                selectionSet: null
+                            }]
+                        }
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "imageURL"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "width"
+                            },
+                            value: {
+                                kind: "IntValue",
+                                value: "320"
+                            }
+                        }, {
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "height"
+                            },
+                            value: {
+                                kind: "IntValue",
+                                value: "180"
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: null
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "self"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "isFollowing"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 244
+            }
+        };
+        n.loc.source = {
+            body: "fragment SingleLanding on SingleEvent {\nid\ntitle\ndescription\nstartAt\nendAt\ngame {\nid\ndisplayName\nboxArtURL(width:285 height:380)\n}\nchannel {\nid\nlogin\ndisplayName\nprofileImageURL(width:300)\n}\nimageURL(width:320 height:180)\nself {\nisFollowing\n}\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
     w9tK: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
@@ -6810,8 +8110,8 @@ webpackJsonp([46], {
         var i = n("U7vG"),
             a = n("6sO2"),
             r = n("3iBR"),
-            o = n("qe65"),
-            l = n("Odds"),
+            l = n("qe65"),
+            o = n("Odds"),
             s = (n("6lb1"), {
                 themed: !0,
                 dark: {
@@ -6822,19 +8122,19 @@ webpackJsonp([46], {
                 }
             }),
             d = function() {
-                return i.createElement(l.U, {
-                    display: l.H.Flex,
+                return i.createElement(o.U, {
+                    display: o.H.Flex,
                     padding: {
                         top: 5
                     },
                     flexGrow: 1,
-                    flexDirection: l.J.Column,
-                    justifyContent: l.T.Center,
-                    alignItems: l.c.Center
-                }, i.createElement(l._22, {
-                    type: l._27.H4,
+                    flexDirection: o.J.Column,
+                    justifyContent: o.T.Center,
+                    alignItems: o.c.Center
+                }, i.createElement(o._22, {
+                    type: o._27.H4,
                     bold: !0
-                }, i.createElement(o.a, {
+                }, i.createElement(l.a, {
                     className: "cheermote-help__tutorial-image",
                     sources: s
                 }), Object(a.d)("How to Cheer", "Bits--CheermoteHelp")), i.createElement("p", {
@@ -6846,6 +8146,7 @@ webpackJsonp([46], {
         })
     },
     yU6t: function(e, t) {},
+    ynGC: function(e, t) {},
     z4Db: function(e, t) {},
     zzpv: function(e, t) {
         var n = {
@@ -6936,4 +8237,4 @@ webpackJsonp([46], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.event-landing-fda439d827887731ccd641b87b637fb7.js.map
+//# sourceMappingURL=pages.event-landing-42fc89920b3ff80df1ebd0c9ee7c03f9.js.map

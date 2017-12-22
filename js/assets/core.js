@@ -2646,7 +2646,6 @@ webpackJsonp([59], {
             }, t
         }(r.Component)
     },
-    "1XdE": function(e, t) {},
     2: function(e, t) {},
     "2BvQ": function(e, t) {
         var n = {
@@ -8006,69 +8005,8 @@ webpackJsonp([59], {
                     firstPageLoaded: !!e.session.firstPageLoaded
                 }
             })(H),
-            z = (n("1XdE"), function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return a.__extends(t, e), t.prototype.render = function() {
-                    return o.createElement(p._18, {
-                        className: "net-neutrality-bar",
-                        position: p._3.Relative,
-                        fullWidth: !0
-                    }, o.createElement(p.U, {
-                        className: "net-neutrality-bar__bar",
-                        display: p.H.Flex,
-                        alignItems: p.c.Center,
-                        justifyContent: p.T.Between,
-                        flexWrap: p.K.NoWrap,
-                        margin: "auto",
-                        padding: {
-                            x: 2,
-                            y: .5
-                        }
-                    }, o.createElement(p.U, {
-                        display: p.H.InlineFlex,
-                        alignItems: p.c.Center,
-                        padding: {
-                            right: .5
-                        }
-                    }, o.createElement(p.P, {
-                        display: p.H.InlineFlex,
-                        alignItems: p.c.Center,
-                        margin: {
-                            right: .5
-                        },
-                        flexShrink: 0
-                    }, o.createElement("figure", null, o.createElement("svg", {
-                        width: 20,
-                        height: 20,
-                        fill: "currentColor",
-                        viewBox: "0 0 20 20",
-                        x: "0px",
-                        y: "0px"
-                    }, o.createElement("path", {
-                        "fill-rule": "nonzero",
-                        d: "M12,17 L12,18 L10,20 L8,18 L8,17 L3,17 L1,15 L1,4 L3,2 L17,2 L19,4 L19,15 L17,17 L12,17 Z M9,13 L9,15 L11,15 L11,13 L9,13 Z M9,11 L11,11 L12,4 L8,4 L9,11 Z"
-                    })))), o.createElement(p._22, {
-                        type: p._27.Span,
-                        fontSize: p.L.Size6
-                    }, Object(s.d)("<x:bold>Help us save the Internet!</x:bold> If Net Neutrality rules are repealed, it could mean a lot more loading spinners.", {
-                        "x:bold": function(e) {
-                            return o.createElement("strong", null, e)
-                        }
-                    }, "NetNeutralityBar"))), o.createElement(p.U, {
-                        display: p.H.InlineFlex,
-                        flexShrink: 0
-                    }, o.createElement(p.u, {
-                        type: p.z.Hollow,
-                        overlay: !0,
-                        linkTo: "http://link.twitch.tv/netneutrality",
-                        targetBlank: !0
-                    }, Object(s.d)("Take Action!", "NetNeutralityBar")))))
-                }, t
-            }(o.Component)),
-            W = (n("ukY1"), n("F1v6")),
-            q = function(e) {
+            z = (n("ukY1"), n("F1v6")),
+            W = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -8076,25 +8014,23 @@ webpackJsonp([59], {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     var e = this.props.data.currentUser && this.props.data.currentUser.hasPrime,
-                        t = this.props.data.requestInfo && this.props.data.requestInfo.countryCode,
-                        n = Object(b.h)(e, t);
-                    if (s.b.get("net_neutrality_visible", !1) && this.props.data.currentUser && this.props.data.requestInfo && "US" === this.props.data.requestInfo.countryCode) return o.createElement(z, null);
-                    if (!n) return null;
+                        t = this.props.data.requestInfo && this.props.data.requestInfo.countryCode;
+                    if (!Object(b.h)(e, t)) return null;
                     if (this.props.data.loading) return null;
-                    var i = Object(_.d)(_.a, ""),
-                        a = Object(s.d)("Twitch Prime", "BlueBar"),
-                        r = o.createElement("span", null, Object(s.d)("Free loot every month, plus exclusives and surprises, ad-free viewing, and loads more.", "BlueBar")),
-                        l = Object(_.d)(_.a, ""),
-                        c = Object(s.d)("Start Your Free Trial", "BlueBar");
+                    var n = Object(_.d)(_.a, ""),
+                        i = Object(s.d)("Twitch Prime", "BlueBar"),
+                        a = o.createElement("span", null, Object(s.d)("Free loot every month, plus exclusives and surprises, ad-free viewing, and loads more.", "BlueBar")),
+                        r = Object(_.d)(_.a, ""),
+                        l = Object(s.d)("Start Your Free Trial", "BlueBar");
                     if (!this.props.data.loading && !this.props.data.error) {
-                        var u = this.props.data;
-                        u && u.primePromotions && u.primePromotions.forEach(function(e) {
+                        var c = this.props.data;
+                        c && c.primePromotions && c.primePromotions.forEach(function(e) {
                             switch (e.id) {
                                 case "twitch.prime.bluebar.left1":
-                                    i = e.externalURL, a = e.text;
+                                    n = e.externalURL, i = e.text;
                                     break;
                                 case "twitch.prime.bluebar.center1":
-                                    r = o.createElement(f, {
+                                    a = o.createElement(f, {
                                         source: e.text,
                                         renderers: {
                                             Link: function(e) {
@@ -8108,7 +8044,7 @@ webpackJsonp([59], {
                                     });
                                     break;
                                 case "twitch.prime.bluebar.right1":
-                                    l = e.externalURL, c = e.text
+                                    r = e.externalURL, l = e.text
                             }
                         })
                     }
@@ -8156,14 +8092,14 @@ webpackJsonp([59], {
                         }
                     }, o.createElement("a", {
                         className: "blue-bar__link",
-                        href: i,
+                        href: n,
                         target: "_blank",
                         rel: "noopener noreferrer"
-                    }, a))), o.createElement(p._22, {
+                    }, i))), o.createElement(p._22, {
                         className: "blue-bar__headline",
                         type: p._27.Span,
                         fontSize: p.L.Size6
-                    }, r)), o.createElement(p.U, {
+                    }, a)), o.createElement(p.U, {
                         display: p.H.InlineFlex,
                         flexShrink: 0
                     }, o.createElement(p._22, {
@@ -8174,11 +8110,11 @@ webpackJsonp([59], {
                         color: p.F.Base
                     }, o.createElement("a", {
                         className: "blue-bar__link",
-                        href: l,
+                        href: r,
                         target: "_blank",
                         rel: "noopener noreferrer"
-                    }, c)))))
-                }, t = a.__decorate([Object(c.a)(W, {
+                    }, l)))))
+                }, t = a.__decorate([Object(c.a)(z, {
                     options: function() {
                         return {
                             variables: {
@@ -8192,7 +8128,7 @@ webpackJsonp([59], {
         n.d(t, "b", function() {
             return V
         }), n.d(t, "a", function() {
-            return q
+            return W
         }), n.d(t, "c", function() {
             return b.d
         })
@@ -13464,7 +13400,6 @@ webpackJsonp([59], {
                 "74156eb2-ed95-482c-b006-60c1428e8846": "control",
                 "e9fe3136-84bc-4a61-9079-0c7df78abeb3": "control",
                 "29a37cfd-6a34-4624-970f-6b155b40636b": "control",
-                "9452d9e2-6588-408c-b8aa-1e54ff1e2f4a": "control",
                 "011d1499-61b3-49b2-92b2-b2ffd353ef00": "no",
                 "afc307f3-4011-40ba-9406-56c474b5922b": "control",
                 "1318509a-bf97-475d-acdc-df6a24ef6e3e": "none",
@@ -13475,7 +13410,8 @@ webpackJsonp([59], {
                 "f866f89d-85de-4a5b-9b00-d97c791bc16d": "no",
                 "47597570-dd4e-4996-85eb-86db164cae9c": "control",
                 "50ac9a2b-63c2-46ed-9e7d-123363195dfd": "control",
-                "7aa589f3-34d8-425f-8227-29007d50757e": "control"
+                "7aa589f3-34d8-425f-8227-29007d50757e": "control",
+                "0dc9a9c9-fee5-4b5f-a462-f07675713e5e": "control"
             },
             k = {
                 TWILIGHT_PREMIERE_UPLOAD_FLOW: "4d3d19a7-38c5-4328-9730-7d99565d5edd",
@@ -13485,7 +13421,6 @@ webpackJsonp([59], {
                 TWILIGHT_WEB_ONBOARDING_CHANNEL_RANKING: "74156eb2-ed95-482c-b006-60c1428e8846",
                 TWILIGHT_WEB_ONBOARDING_CATEGORIES: "e9fe3136-84bc-4a61-9079-0c7df78abeb3",
                 TWILIGHT_WEB_ONBOARDING_RANDOMIZED_GAMES: "29a37cfd-6a34-4624-970f-6b155b40636b",
-                TWILIGHT_EXPANDO_FEATURO: "9452d9e2-6588-408c-b8aa-1e54ff1e2f4a",
                 TWILIGHT_SUB_GIFTING: "011d1499-61b3-49b2-92b2-b2ffd353ef00",
                 TWILIGHT_VIDEO_FEATURO_EN: "afc307f3-4011-40ba-9406-56c474b5922b",
                 TWILIGHT_VIDEOS_IN_SIDENAV: "1318509a-bf97-475d-acdc-df6a24ef6e3e",
@@ -13496,7 +13431,8 @@ webpackJsonp([59], {
                 TWILIGHT_RAID_AUTO_JOIN: "f866f89d-85de-4a5b-9b00-d97c791bc16d",
                 TWILIGHT_AML_RANKING_FOLLOWS: "47597570-dd4e-4996-85eb-86db164cae9c",
                 TWILIGHT_NEW_BROWSE: "50ac9a2b-63c2-46ed-9e7d-123363195dfd",
-                TWILIGHT_GROWTH_EMAIL_VERIFY_BAR: "7aa589f3-34d8-425f-8227-29007d50757e"
+                TWILIGHT_GROWTH_EMAIL_VERIFY_BAR: "7aa589f3-34d8-425f-8227-29007d50757e",
+                TWILIGHT_FOLLOWING_INDEX_LATEST_VIDEOS_V2: "0dc9a9c9-fee5-4b5f-a462-f07675713e5e"
             },
             S = {
                 TWILIGHT_PREMIERE_UPLOAD_FLOW: "yes",
@@ -13522,7 +13458,11 @@ webpackJsonp([59], {
                                     if (n = k[e], !this.experiments[n]) return this.logger.warn("Unable to find experiment configuration", {
                                         name: e,
                                         id: n
-                                    }), [2, null];
+                                    }), y[n] && this.overrides[n] ? (this.logger.warn("Using experiment override despite missing experiment configuration", {
+                                        name: e,
+                                        id: n,
+                                        assignment: this.overrides[n]
+                                    }), [2, this.overrides[n]]) : [2, null];
                                     if (i = this.experiments[n], !this.assignments[n]) return this.logger.warn("Unable to determine default assignment", {
                                         name: e,
                                         id: n,
@@ -32160,10 +32100,10 @@ webpackJsonp([59], {
                 return n.e(55).then(n.bind(null, "Tj44"))
             }, "EmailVerificationPage"),
             fe = ee.a.wrap(function() {
-                return n.e(46).then(n.bind(null, "NTi8"))
+                return n.e(45).then(n.bind(null, "NTi8"))
             }, "EventLandingPage"),
             ve = ee.a.wrap(function() {
-                return n.e(45).then(n.bind(null, "IpE8"))
+                return n.e(46).then(n.bind(null, "IpE8"))
             }, "FollowingRootPage"),
             be = ee.a.wrap(function() {
                 return n.e(44).then(n.bind(null, "IOEW"))
@@ -40656,4 +40596,4 @@ webpackJsonp([59], {
         }
     }
 }, [4]);
-//# sourceMappingURL=core-b5da364686704e7ce74408e66d89c875.js.map
+//# sourceMappingURL=core-491949a3d94fb967e111803cd985d877.js.map

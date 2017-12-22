@@ -19192,10 +19192,10 @@ webpackJsonp([39], {
                 return n.e(55).then(n.bind(null, "Tj44"))
             }, "EmailVerificationPage"),
             ge = ee.a.wrap(function() {
-                return n.e(46).then(n.bind(null, "NTi8"))
+                return n.e(45).then(n.bind(null, "NTi8"))
             }, "EventLandingPage"),
             ve = ee.a.wrap(function() {
-                return n.e(45).then(n.bind(null, "IpE8"))
+                return n.e(46).then(n.bind(null, "IpE8"))
             }, "FollowingRootPage"),
             be = ee.a.wrap(function() {
                 return n.e(44).then(n.bind(null, "IOEW"))
@@ -23473,4 +23473,4 @@ webpackJsonp([39], {
         }
     }
 });
-//# sourceMappingURL=pages.subs-399759b6282ef5ae1f16e82a6b9878f1.js.map
+//# sourceMappingURL=pages.subs-dc7e076e94e4d4433d3ab8b634aebc89.js.map
