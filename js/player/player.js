@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".f831f318fc78b45a8d56.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".174b9a94deca4ccd5476.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -13396,7 +13396,7 @@
                     k = _.indexOf("windows") > -1 && _.indexOf("edge") > -1;
                 (w || k) && y.addEventListener(J.o, function() {
                     t.dispatch(n.i(I.g)(!1))
-                }), y.addEventListener(X.I, F), y.addEventListener(J.l, ve), y.addEventListener(J.k, W), y.addEventListener(J.j, W), y.addEventListener(J.j, G), y.addEventListener(J.p, W), y.addEventListener(J.q, pe), y.addEventListener(X.h, Ue._loadVideoAPI), y.addEventListener(J.c, Ue._loadVideoAPI);
+                }), y.addEventListener(X.I, F), y.addEventListener(J.l, ve), y.addEventListener(J.k, W), y.addEventListener(J.j, W), y.addEventListener(J.j, G), y.addEventListener(J.q, pe), y.addEventListener(X.h, Ue._loadVideoAPI), y.addEventListener(J.c, Ue._loadVideoAPI);
                 var E = t.getState(),
                     S = E.playback;
                 y.setVolume(S.volume), y.setMuted(S.muted), Le(), Ne(), Ue._propagateBackendMutliEvents()
@@ -21807,7 +21807,7 @@
                     u = v.a(!0),
                     c = b.k() === b.p ? null : E;
                 return {
-                    app_version: "2017.12.20-230710+fcbfeacb69bf4d30bb858482847354b3941a3bbf",
+                    app_version: "2017.12.22-220417+fc968edc8a53519294dd1dc11369dde60d55fe56",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -30241,7 +30241,7 @@
         n.d(t, "a", function() {
             return r
         });
-        var r = "//video-edge-579545.sjc01.hls.ttvnw.net/v1/playlist/Cu4FIz37DQAAcULZqu6k87n2t6WB98PuG2vdxdahUpUdYfjHqVufmVSRcE6CYLwscQotPb6OcGc3rGLGlef6YfIxbLFhJC3hrGUa-8RlqGkENPAmMVEf9HpndluCQ1Z-pkAqWha0-em-KxeIW12yYUT600rjj7O4OXPtg6767DBMJwfBOsLMlcCdwHJkYXcKSQf545AfaR0VxoRusHuceDGIYk6keVn8k6qvFn_qetIszIut9Aq12IQE8Eik9GoFtqAN50DjMc4zMOagWRby7b2wK1i9zXGU_sQzBC2DTF-lEX3IAzvlj2m88nGVoLMukSMnXbPZiQSYbDajZ4L6hE4PmdwVltU2iOU-12YFcb0SjqPYhFqVHEUmD3v9xcWUpE93xaP1GtSf2JCV58VKFXBZNGUuCTy6VJaQAlB_l6MnbKtpWjSbccWp9-FjF3GZFHMPXNP7S9xVYQ.m3u8"
+        var r = "//video-edge-20159b.sjc01.hls.ttvnw.net/v1/playlist/CgMCnTT9_EP2DfVID0kf-H673APVsUJFO8twRu2nDpFf8rPFG_abxc7JlY-gXXsTX1yGe3BvuvPuW1K-4fdI8yuvZ57OxOIQi4q-XQvmOFmmq6l1wmo_4dzIy7Rn4gy67n6mkMeCO1xpS2Fc4h-im3LHxHDANzHNWzRZSK43DMz0ULqlIcAPRfKtWiUBvs6l0zYCG-oNB0FNeN5qN9d8YDzN1ICgbyWjdLXQo9hUiwmG1M2aqo-BxCMMWl0Zl9PMCxdTAUNuigCfMISCusn2tyJ-TqTfbS3tpm-jPTxg-FtYb9KrzBPf4cugImgXLw_lSGv0nkn4TTFVCDb-yNegVNpkBedrxGRF72qHfDt95pt5uymDK-mTywQQiYMyhw6oxaGB3bWmCLxhSE3frQ4tO9HB9UVIXwgcmsoJi-fTXeAP9U8YIWirf0FznaPBMeltmDgAGkb.m3u8"
     }, function(e, t, n) {
         "use strict";
 
