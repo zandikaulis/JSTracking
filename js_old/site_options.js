@@ -1208,13 +1208,13 @@ window.SiteOptions = {
         },
         "43213506-2eba-49c9-950a-db09cc8335a4": {
             "name": "valkyrie_multi_region_upload",
-            "v": 2731,
+            "v": 2734,
             "t": 2,
             "groups": [{
-                "weight": 20,
+                "weight": 50,
                 "value": "regional_routing"
             }, {
-                "weight": 80,
+                "weight": 50,
                 "value": "control"
             }]
         },
