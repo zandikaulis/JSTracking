@@ -290,13 +290,13 @@ window.SiteOptions = {
         },
         "0dc9a9c9-fee5-4b5f-a462-f07675713e5e": {
             "name": "TWILIGHT_FOLLOWING_INDEX_LATEST_VIDEOS_V2",
-            "v": 2719,
+            "v": 2738,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 50,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 50,
                 "value": "enabled"
             }]
         },
