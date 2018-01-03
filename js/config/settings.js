@@ -204,6 +204,21 @@ window.__twilightSettings = {
                 "value": "treatment"
             }]
         },
+        "47c76558-9d79-4181-9e43-d7c440a1a148": {
+            "name": "twilight_web_onboarding_categories_anon_front_page",
+            "v": 2744,
+            "t": 2,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "games"
+            }, {
+                "weight": 0,
+                "value": "streams"
+            }]
+        },
         "49f40b88-2044-409d-b306-2eb308489a60": {
             "name": "Twilight_Upsell",
             "v": 2446,

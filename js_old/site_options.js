@@ -1377,6 +1377,21 @@ window.SiteOptions = {
                 "value": "control"
             }]
         },
+        "47c76558-9d79-4181-9e43-d7c440a1a148": {
+            "name": "twilight_web_onboarding_categories_anon_front_page",
+            "v": 2744,
+            "t": 2,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "games"
+            }, {
+                "weight": 0,
+                "value": "streams"
+            }]
+        },
         "48ec769e-fc80-4464-8b89-b95f9654f7ea": {
             "name": "android_videoplayer_v2",
             "v": 2315,
