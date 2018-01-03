@@ -1467,6 +1467,18 @@ window.SiteOptions = {
                 "value": "variant1"
             }]
         },
+        "4b79ad96-2307-48fe-9bc5-f903a29dc55d": {
+            "name": "android_enable_rooms_release",
+            "v": 2740,
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "active"
+            }, {
+                "weight": 100,
+                "value": "control"
+            }]
+        },
         "4badc757-13a7-468c-99b6-e42aef7fc286": {
             "name": "spade_url",
             "v": 2739,
