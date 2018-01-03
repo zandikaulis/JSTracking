@@ -4661,15 +4661,15 @@ window.SiteOptions = {
             }]
         },
         "feb4fffb-c997-47f7-a2e4-25d463f125ba": {
-            "name": "Mobile Web Muted Autoplay",
-            "v": 2702,
+            "name": "mobile_web_muted_autoplay",
+            "v": 2741,
             "t": 1,
             "groups": [{
                 "weight": 50,
-                "value": "AutoPlay "
+                "value": "treatment"
             }, {
                 "weight": 50,
-                "value": "No AutoPlay"
+                "value": "control"
             }]
         },
         "ffe0c67b-19e4-43fe-8193-8897dbf4b8ed": {
