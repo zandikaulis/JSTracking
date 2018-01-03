@@ -54,7 +54,7 @@ window.__twilightSettings = {
     "sizmek_versatag_events": ["YeUmkUI9R5GKR5WGtg046A", "f4aK8duASJKiAYAiETsUvw", "WN1Ly4NxRgOrSNWOSG40PQ", "YFCU_dppR6Oor32XLPrU2w", "2HsLVRMUTnqChbVy5YSsfg", "f4aK8duASJKiAYAiETsUvw"],
     "sizmek_versatag_games": ["496712", "Call of Duty: WWII", "497571", "Wrestling"],
     "sizmek_versatag_teams": ["wrestling"],
-    "spade_url": "https://video-edge-e07a2c.sjc01.hls.ttvnw.net/v1/playlist/ChQY3yQJVV9t1Q7ATLgSx_d1Efmc-v_Ni5ruqLZVGboyHa6m8kZVsucARpKS5ZhcJ1wZK2WUZUV4Oh1Ke4PmBE88a2u7UnOKZg9cPljDwdPGuzcAoo4hSE2ja6pnDJt2RxzXia3Q_b4PyhfzsLfippLDx3mf4O9ULzYASyGQvrJJoShG-NQpB-4g6aWsKvDMj2YimIZbHT9HyKS7B33thLuCqAMW5sGqKLDhy48148lggud02IVIb2DflyI3ubdERW3DjVthpcm09GniUn-7mtRSRSMW_z-J9RxiV61dQ4RjgDjDmWjIVeW2UxlmeeaI4IvA0o7NAsInabwiRMiox-NwF5F6kaZFOkOhlRGb_SnUKWv3Y0b2F_fk5Iq7X5upgKLP0W3mzcXlab4mccqOmDHGbupm7ESvqU8QKHR8YzwjDqT2oCbVhr0CKyA7IvMbP.m3u8",
+    "spade_url": "https://video-edge-428988.sjc01.hls.ttvnw.net/v1/playlist/CvfjHpgi7nrNVN-Razk06SsNCIL-wrtqhvSsNlRzuCJkPjh5vApFKryAzB89uVSaiKTGKJbUPkJfvM_YSo2ZJRLeX8MIgOtwrz225xITyfM7fQaU_lC13fVSDO_TxeAQAWwv5sWLCJzSE66SqbabybtpjRYtq-vbFBko0KCFBpX3mVlEJJoAOCzFwz5Ydz9yqbpWZeOlMZdqkSzRS0rqDq93jp1la_o_xrmd8StM_zSkYKkp3y25F4T54xg_kFYXcuCmj6lewAZjYKmLTNetTfu1rc3k-hSrNpqRSd5ofvoBpgKm91FCWp9tY4D5pmHoZh1KUKFONN8V37KSYiksLE_xEJnkvHru69REfEYvNkYZ-at5O_2aB4m82hmwqTmW0H0pGl98lO922ETTF_rSbaEdaIinmQEeU8j43RLzN6nmh2OpmHO6j6UlyqGbjSh7YVS2r3mTnCQd.m3u8",
     "store_merch_promo": "off",
     "store_merch_seasonal": "on",
     "streamer_trailers_start_date": "2017-10-12T23:00:25.75536206Z",
@@ -80,13 +80,13 @@ window.__twilightSettings = {
         },
         "0dc9a9c9-fee5-4b5f-a462-f07675713e5e": {
             "name": "TWILIGHT_FOLLOWING_INDEX_LATEST_VIDEOS_V2",
-            "v": 2719,
+            "v": 2738,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 50,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 50,
                 "value": "enabled"
             }]
         },
