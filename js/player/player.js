@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".ae7179b42b4f300240ab.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".fb2da6d6aa816066968b.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -4394,7 +4394,7 @@
                             language: d.langCode
                         };
                         c.contentType === N.a && s.id && (m.collection_item_position = h()(s.items, {
-                            item_id: c.videoId.substr(1)
+                            itemId: c.videoId.substr(1)
                         }), m.collection_id = s.id), this.trackEvent(A.a.MINUTE_WATCHED, u()({}, p, m)), this.store.dispatch(n.i(O.b)()), this.valveClient.notify(), this.trackNetworkProfile.then(function(t) {
                             "yes" === t && f.length > 0 && e.tracker.trackEvents(f.map(function(e) {
                                 return {
@@ -4528,7 +4528,7 @@
                             a.contentType === N.a && (n.i(w.e)(a.videoId).then(function(t) {
                                 e.countessTracker.trackVODView(t)
                             }), s.id && (l.collection_item_position = h()(s.items, {
-                                item_id: a.videoId.substr(1)
+                                itemId: a.videoId.substr(1)
                             }), l.collection_id = s.id)), this.trackEvent(A.a.VIDEO_PLAY, l), this.hasPlayed = !0, this.valveClient.notify(), this.store.dispatch(k.a()), this.store.dispatch(k.b())
                         }
                         this.minutesWatchedTimer.start()
@@ -21860,7 +21860,7 @@
                     u = v.a(!0),
                     c = b.k() === b.p ? null : E;
                 return {
-                    app_version: "2018.01.03-230019+e60638473ee30ae33093f083d57ede86f466854c",
+                    app_version: "2018.01.04-005413+adb30c8ad597113c66588dcaeb1c72dd70d597a7",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -30405,7 +30405,7 @@
         n.d(t, "a", function() {
             return r
         });
-        var r = "//video-edge-428988.sjc01.hls.ttvnw.net/v1/playlist/CvfjHpgi7nrNVN-Razk06SsNCIL-wrtqhvSsNlRzuCJkPjh5vApFKryAzB89uVSaiKTGKJbUPkJfvM_YSo2ZJRLeX8MIgOtwrz225xITyfM7fQaU_lC13fVSDO_TxeAQAWwv5sWLCJzSE66SqbabybtpjRYtq-vbFBko0KCFBpX3mVlEJJoAOCzFwz5Ydz9yqbpWZeOlMZdqkSzRS0rqDq93jp1la_o_xrmd8StM_zSkYKkp3y25F4T54xg_kFYXcuCmj6lewAZjYKmLTNetTfu1rc3k-hSrNpqRSd5ofvoBpgKm91FCWp9tY4D5pmHoZh1KUKFONN8V37KSYiksLE_xEJnkvHru69REfEYvNkYZ-at5O_2aB4m82hmwqTmW0H0pGl98lO922ETTF_rSbaEdaIinmQEeU8j43RLzN6nmh2OpmHO6j6UlyqGbjSh7YVS2r3mTnCQd.m3u8"
+        var r = "//video-edge-f2f4e4.sjc01.hls.ttvnw.net/v1/playlist/CqQ8PPMoNnEswYAuYbakYDpvpqOqndfsq363Mmst-BFNbPAKGXYe3uk0TQcfQ2R7wucEvK7JGLMUYUactDgsi3Dh1ab6OCEygDECt2wJCS3GbqMmZ441s7uoSVfSP-kqE3B0Wh7jN7dCUOWg6Gfm0p6CFGoZt09VdjBoiV04SK-wsrH_5Fy8-cdi9z0jAb2Ss8Uehk-HUDhVCCeOv27M53lVloDOFkNFcRE-I25bAb2bbQABHCuo1kZ8KjegrZUqA8rB1rvM2SHijEawTZl-MStmv_FSB5LRLwJJy0J1jPtxgO_e11oXNpHhirjmKPLUyMNxodvFlD7NXH_8_4qBEbNbGluC-1YGZPzTRNpRyZ5zKIj-ICWHVJuLZ2pC7df71-XMuinE-JEncJSaj_sTjMqClHDCLQRWM6UNOpOSVIldSPJwfx5ywcm.m3u8"
     }, function(e, t, n) {
         "use strict";
 
