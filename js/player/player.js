@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".cc248b30b78332e8238a.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".ae7179b42b4f300240ab.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -6379,7 +6379,7 @@
         n.d(t, "a", function() {
             return T
         }), n.d(t, "b", function() {
-            return R
+            return I
         });
         var a = n(24),
             o = n(57),
@@ -6450,7 +6450,19 @@
                 video_buffer_size: 0,
                 volume: 0
             },
-            R = function() {
+            R = Object.freeze({
+                playbackRate: -1,
+                fps: -1,
+                bufferSize: -1,
+                skippedFrames: -1,
+                memoryUsage: "0 MB",
+                hlsLatencyEncoder: -1,
+                hlsLatencyBroadcaster: -1,
+                videoResolution: "",
+                displayResolution: "",
+                backendVersion: ""
+            }),
+            I = function() {
                 function e() {
                     var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                         n = arguments[1];
@@ -6513,7 +6525,7 @@
                                 backendVersion: e.getVersion()
                             }
                         }
-                        return {}
+                        return R
                     }
                 }, {
                     key: "getCaption",
@@ -6671,9 +6683,9 @@
                 }, {
                     key: "getBuffered",
                     value: function() {
-                        if (null === this._mediaPlayer) return new I;
+                        if (null === this._mediaPlayer) return new A;
                         var e = this._mediaPlayer.getBuffered();
-                        return new I(e.start, e.end)
+                        return new A(e.start, e.end)
                     }
                 }, {
                     key: "getReadyState",
@@ -6789,7 +6801,7 @@
                 }, {
                     key: "getPlayed",
                     value: function() {
-                        return new I
+                        return new A
                     }
                 }, {
                     key: "getStatsEnabled",
@@ -6948,10 +6960,10 @@
                     }
                 }]), e
             }();
-        R.canPlay = function() {
+        I.canPlay = function() {
             return g.a.canLoadMediaplayer()
         };
-        var I = function() {
+        var A = function() {
             function e(t, n) {
                 i(this, e), this.length = void 0 === t ? 0 : 1, this._start = t, this._end = n
             }
@@ -21848,7 +21860,7 @@
                     u = v.a(!0),
                     c = b.k() === b.p ? null : E;
                 return {
-                    app_version: "2018.01.03-223800+c4ccfb0d82ff36bec24b4b7f590d1b24809eb3ad",
+                    app_version: "2018.01.03-230019+e60638473ee30ae33093f083d57ede86f466854c",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
