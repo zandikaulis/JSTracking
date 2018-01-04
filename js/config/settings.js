@@ -36,6 +36,7 @@ window.__twilightSettings = {
     "legacy_routes_enabled": true,
     "live_event_banner_whitelist": ["bern"],
     "live_event_poll_interval": 300000,
+    "native_broadcast_blacklist": [],
     "net_neutrality_visible": false,
     "notification_app_server_public_key": "BGzteaQYOqrTAPN8EuuowBVG67pHwyZo879XZkC7cUV2QP4qQf-92Pmm9tyOuriJdiKnMDDRi28F5HQK6uSk0vM",
     "onsite_notifications_launch": true,
