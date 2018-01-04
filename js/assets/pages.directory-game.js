@@ -1337,8 +1337,9 @@ webpackJsonp([43], {
                         }, this.props.clip.game.name)
                     }, "ClipsViewModalContent") : Object(r.d)("{broadcaster}", {
                         broadcaster: t
-                    }, "ClipsViewModalContent"), a.createElement(_.U, {
-                        className: "clips-view-modal-content"
+                    }, "ClipsViewModalContent"), a.createElement(_._18, {
+                        className: "clips-view-modal-content",
+                        background: _.m.Base
                     }, a.createElement(_.U, {
                         padding: {
                             bottom: 2
@@ -5991,7 +5992,7 @@ webpackJsonp([43], {
                         fontSize: U.L.Size6
                     }, d.createElement(Sn, {
                         title: Object(p.d)("Information", "DirectoryGameDetailsPage")
-                    }), this.renderRow(Object(p.d)("Title: ", "DirectoryGameDetailsPage"), t.title), this.renderRow(Object(p.d)("Developer: ", "DirectoryGameDetailsPage"), e.developer), this.renderRow(Object(p.d)("Publisher: ", "DirectoryGameDetailsPage"), e.publisher), this.renderRowLink(Object(p.d)("More Info: ", "DirectoryGameDetailsPage"), Object(p.d)("Website", "DirectoryGameDetailsPage"), e.websiteURL), this.renderRowLink(Object(p.d)("License Agreement: ", "DirectoryGameDetailsPage"), Object(p.d)("Check out the EULA", "DirectoryGameDetailsPage"), e.eulaURL), this.renderRowLink(Object(p.d)("Need Help? ", "DirectoryGameDetailsPage"), Object(p.d)("Contact Support", "DirectoryGameDetailsPage"), e.supportURL))), d.createElement(U.G, {
+                    }), this.renderRow(Object(p.d)("Title: ", "DirectoryGameDetailsPage"), t.title), this.renderRow(Object(p.d)("Developer: ", "DirectoryGameDetailsPage"), e.developer), this.renderRow(Object(p.d)("Publisher: ", "DirectoryGameDetailsPage"), e.publisher), this.renderRowLink(Object(p.d)("More Info: ", "DirectoryGameDetailsPage"), Object(p.d)("Website", "DirectoryGameDetailsPage"), e.websiteURL), e.eulaURL && this.renderRowLink(Object(p.d)("License Agreement: ", "DirectoryGameDetailsPage"), Object(p.d)("Check out the EULA", "DirectoryGameDetailsPage"), e.eulaURL), this.renderRowLink(Object(p.d)("Need Help? ", "DirectoryGameDetailsPage"), Object(p.d)("Contact Support", "DirectoryGameDetailsPage"), e.supportURL))), d.createElement(U.G, {
                         cols: {
                             default: 6,
                             xs: 12,
@@ -17405,4 +17406,4 @@ webpackJsonp([43], {
     zSAx: function(e, t) {},
     zu64: function(e, t) {}
 });
-//# sourceMappingURL=pages.directory-game-6f54612cb4cdc9125ae0c81d7e9cc2d8.js.map
+//# sourceMappingURL=pages.directory-game-bd84eec6066e4a572ade1a4f3ed14f2d.js.map

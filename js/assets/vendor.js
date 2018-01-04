@@ -955,7 +955,7 @@ webpackJsonp([58], {
                     }, n.buildCoordinator = function() {
                         return n.params.extensionCoordinator || new f.ExtensionCoordinator(n.iframe)
                     }, n.buildFunctionManager = function() {
-                        return n.params.functionManager || new h.FunctionManager(n.coordinator, n.emitConfirmationRequest)
+                        return n.params.functionManager || new h.FunctionManager(n.coordinator, n.params.loginId, n.emitConfirmationRequest)
                     }, n.buildPurchaseService = function() {
                         return n.params.purchaseService || new m.PurchaseService
                     }, n.getExtensionHeight = function() {
@@ -24084,7 +24084,7 @@ webpackJsonp([58], {
         });
         var r = t.FunctionAction = void 0;
         ! function(e) {
-            e.FollowAction = "twitch-ext-follow-action", e.FollowComplete = "twitch-ext-follow-complete", e.FollowStatusRequest = "twitch-ext-follow-status", e.FollowStatusResponse = "twitch-ext-follow-status-response", e.IdShareRequest = "twitch-ext-id-share-request"
+            e.LoginRequest = "twitch-ext-login-request", e.FollowAction = "twitch-ext-follow-action", e.FollowComplete = "twitch-ext-follow-complete", e.FollowStatusRequest = "twitch-ext-follow-status", e.FollowStatusResponse = "twitch-ext-follow-status-response", e.IdShareRequest = "twitch-ext-id-share-request"
         }(r || (t.FunctionAction = r = {}))
     },
     awF4: function(e, t, n) {
@@ -29624,36 +29624,37 @@ webpackJsonp([58], {
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.FunctionManager = void 0;
-        var r = n("yqgX"),
-            o = function() {
-                return function(e, t) {
-                    var n = this;
-                    this.coordinator = e, this.emitConfirmationRequest = t, this.functionActionMap = (0, r.dict)(), this.functionModalMap = (0, r.dict)(), this.registerFunctionModal = function(e, t) {
-                        t.onOpen(function(r) {
+        var r = n("r5oj"),
+            o = n("yqgX"),
+            i = function() {
+                return function(e, t, n) {
+                    var i = this;
+                    this.coordinator = e, this.loginId = t, this.emitConfirmationRequest = n, this.functionActionMap = (0, o.dict)(), this.functionModalMap = (0, o.dict)(), this.registerFunctionModal = function(e, t) {
+                        t.onOpen(function(n) {
                             var o = {
-                                action: e,
+                                action: i.loginId ? e : r.FunctionAction.LoginRequest,
                                 resultCallback: t.resultCallback,
                                 defaultResult: t.defaultResult
                             };
-                            r && (o.options = r), n.requestConfirmation(o)
+                            n && (o.options = n), i.requestConfirmation(o)
                         }), t.onModalResult && t.onModalResult(function(e) {
-                            n.sendFunctionReply(e)
-                        }), n.functionModalMap[e] = t, n.functionActionMap[e] = n.functionActionHandler(e), n.coordinator.on(e, n.functionActionMap[e])
+                            i.sendFunctionReply(e)
+                        }), i.functionModalMap[e] = t, i.functionActionMap[e] = i.functionActionHandler(e), i.coordinator.on(e, i.functionActionMap[e])
                     }, this.unregisterFunctionModal = function(e) {
-                        n.coordinator.off(e, n.functionActionMap[e]), delete n.functionActionMap[e], delete n.functionModalMap[e]
+                        i.coordinator.off(e, i.functionActionMap[e]), delete i.functionActionMap[e], delete i.functionModalMap[e]
                     }, this.functionActionHandler = function(e) {
                         return function(t) {
-                            var r = n.functionModalMap[e];
-                            r && r.open(t)
+                            var n = i.functionModalMap[e];
+                            n && n.open(t)
                         }
                     }, this.requestConfirmation = function(e) {
-                        n.emitConfirmationRequest(e)
+                        i.emitConfirmationRequest(e)
                     }, this.sendFunctionReply = function(e) {
-                        n.coordinator.sendFunctionReply(e)
+                        i.coordinator.sendFunctionReply(e)
                     }
                 }
             }();
-        t.FunctionManager = o
+        t.FunctionManager = i
     },
     pUTq: function(e, t, n) {
         "use strict";
@@ -37181,4 +37182,4 @@ webpackJsonp([58], {
         }
     }
 });
-//# sourceMappingURL=vendor-4dbb576bd2720319f63907f9e8f6fcfd.js.map
+//# sourceMappingURL=vendor-525adfe0eb97104be5ef44c8f65875d3.js.map

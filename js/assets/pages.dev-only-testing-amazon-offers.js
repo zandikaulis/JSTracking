@@ -7,8 +7,8 @@ webpackJsonp([52], {
         var a = n("TToO"),
             i = n("U7vG"),
             o = n("HW6M"),
-            r = n("6sO2"),
-            l = n("7vx8"),
+            l = n("6sO2"),
+            r = n("7vx8"),
             c = n("jF7o"),
             s = n("Odds"),
             d = n("CB9r"),
@@ -16,14 +16,14 @@ webpackJsonp([52], {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderButtonText = function(e) {
-                        return e ? Object(r.d)("Edit", "AmazonRetailAssociatesAccountLinking") : Object(r.d)("Get Started", "AmazonRetailAssociatesAccountLinking")
+                        return e ? Object(l.d)("Edit", "AmazonRetailAssociatesAccountLinking") : Object(l.d)("Get Started", "AmazonRetailAssociatesAccountLinking")
                     }, t.renderDescriptionText = function(e) {
-                        return e ? Object(r.d)("Link to {storeID}", {
+                        return e ? Object(l.d)("Link to {storeID}", {
                             storeID: i.createElement(s._22, {
                                 type: s._27.Span,
                                 bold: !0
                             }, e)
-                        }, "AmazonRetailAssociatesAccountLinking") : Object(r.d)("Create and link an Amazon Associates account to your Twitch account. Only one Amazon account may be linked at any one time.", "AmazonRetailAssociatesAccountLinking")
+                        }, "AmazonRetailAssociatesAccountLinking") : Object(l.d)("Create and link an Amazon Associates account to your Twitch account. Only one Amazon account may be linked at any one time.", "AmazonRetailAssociatesAccountLinking")
                     }, t.launchLinkAccount = function() {
                         t.launchPopup("https://affiliate-program.amazon.com/home/account")
                     }, t.launchAssociatesAccount = function(e) {
@@ -55,7 +55,7 @@ webpackJsonp([52], {
                         className: "amazon-associates-account-linking__label"
                     }, i.createElement(s._22, {
                         bold: !0
-                    }, Object(r.d)("Link an Amazon Associates Account", "AmazonRetailAssociatesAccountLinking"))), i.createElement(s.U, {
+                    }, Object(l.d)("Link an Amazon Associates Account", "AmazonRetailAssociatesAccountLinking"))), i.createElement(s.U, {
                         display: s.H.Flex,
                         flexDirection: s.J.Column,
                         padding: 2
@@ -89,11 +89,11 @@ webpackJsonp([52], {
                         className: "amazon-associates-account-linking__label"
                     }, i.createElement(s._22, {
                         bold: !0
-                    }, Object(r.d)("Receive payments from Amazon.com", "AmazonRetailAssociatesAccountLinking"))), i.createElement(s.U, {
+                    }, Object(l.d)("Receive payments from Amazon.com", "AmazonRetailAssociatesAccountLinking"))), i.createElement(s.U, {
                         display: s.H.Flex,
                         flexDirection: s.J.Column,
                         padding: 2
-                    }, i.createElement(s._22, null, Object(r.d)("To receive payments, please provide your <x:tax>Tax Information</x:tax> and your <x:payment>Payment Information</x:payment>. Note, changes made to your Tax Information must be made by the primary account holder and any changes after the 15th will go into effect the following month. Please ignore this message if you have already submitted your information.", {
+                    }, i.createElement(s._22, null, Object(l.d)("To receive payments, please provide your <x:tax>Tax Information</x:tax> and your <x:payment>Payment Information</x:payment>. Note, changes made to your Tax Information must be made by the primary account holder and any changes after the 15th will go into effect the following month. Please ignore this message if you have already submitted your information.", {
                         "x:tax": function(e) {
                             return i.createElement(s._22, {
                                 key: "tax",
@@ -121,18 +121,18 @@ webpackJsonp([52], {
                     }, i.createElement("a", {
                         href: "#",
                         onClick: this.launchAssociatesAccount
-                    }, Object(r.d)("Add/update tax information", "AmazonRetailAssociatesAccountLinking"))), i.createElement(s.P, {
+                    }, Object(l.d)("Add/update tax information", "AmazonRetailAssociatesAccountLinking"))), i.createElement(s.P, {
                         padding: {
                             right: 2
                         }
                     }, i.createElement("a", {
                         href: "#",
                         onClick: this.launchAssociatesAccount
-                    }, Object(r.d)("Add/update payment information", "AmazonRetailAssociatesAccountLinking"))), i.createElement("a", {
+                    }, Object(l.d)("Add/update payment information", "AmazonRetailAssociatesAccountLinking"))), i.createElement("a", {
                         href: "#",
                         onClick: this.launchAssociatesReporting
-                    }, Object(r.d)("Reporting", "AmazonRetailAssociatesAccountLinking"))))))
-                }, t = a.__decorate([Object(l.a)(d, {
+                    }, Object(l.d)("Reporting", "AmazonRetailAssociatesAccountLinking"))))))
+                }, t = a.__decorate([Object(r.a)(d, {
                     options: function(e) {
                         return {
                             variables: {
@@ -146,19 +146,16 @@ webpackJsonp([52], {
             p = n("2KeS"),
             h = n("V5M+"),
             f = n("ivNp"),
-            g = (n("Kv1R"), function(e) {
+            g = (n("Kv1R"), "GAME_COMMERCE_V2"),
+            k = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        amendmentAccepted: !1,
-                        isError: !1
+                        amendmentAccepted: !1
                     }, t.onAmendmentClick = function() {
                         return t.props.showAmendmentModal({
-                            onClose: t.onCloseModal,
                             amendmentAccepted: t.state.amendmentAccepted
                         }), !1
-                    }, t.onCloseModal = function(e) {
-                        return e
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
@@ -167,17 +164,20 @@ webpackJsonp([52], {
                         amendmentAccepted: t
                     })
                 }, t.prototype.render = function() {
-                    return this.props.data.loading || this.props.data.error ? null : i.createElement(s._18, {
+                    return this.props.data.loading ? null : i.createElement(s._18, {
                         display: s.H.Flex,
                         flexDirection: s.J.Row,
                         borderTop: !0,
                         borderBottom: !0,
                         background: s.m.Alt2
                     }, i.createElement(s.U, {
-                        padding: 2
+                        padding: 2,
+                        flexShrink: 0,
+                        flexGrow: 0,
+                        className: "amazon-retail-offers__label"
                     }, i.createElement(s._22, {
                         bold: !0
-                    }, Object(r.d)("Opt in to earn revenue", "AmazonRetailOffersAmendnment"))), i.createElement(s.U, {
+                    }, Object(l.d)("Opt in to earn revenue", "AmazonRetailOffersAmendnment"))), i.createElement(s.U, {
                         padding: 2
                     }, i.createElement("div", {
                         onClick: this.onAmendmentClick,
@@ -188,21 +188,24 @@ webpackJsonp([52], {
                         checked: this.state.amendmentAccepted,
                         disabled: !0,
                         id: "amazon-retail-offers-amendment",
-                        label: Object(r.d)("Opt in to earn revenue from sales on Amazon.com", "AmazonRetailOffersAmendnment")
-                    })), i.createElement(s._22, null, Object(r.d)("Please read and agree to the new Commerce Addendum to become eligible for this program.", "AmazonRetailOffersAmendnment"))))
-                }, t = a.__decorate([Object(l.a)(f, {
+                        label: Object(l.d)("Opt in to earn revenue from sales on Amazon.com", "AmazonRetailOffersAmendnment")
+                    })), i.createElement(s._22, null, Object(l.d)("Please read and agree to the new Commerce Addendum to become eligible for this program.", "AmazonRetailOffersAmendnment"))))
+                }, t = a.__decorate([Object(r.a)(f, {
                     options: function(e) {
                         return {
                             variables: {
                                 login: e.channelName,
-                                amendmentType: "GAME_COMMERCE_V2"
+                                amendmentType: g
                             }
                         }
                     }
                 })], t)
-            }(i.Component)),
-            y = "amendment-modal-accept-button",
-            A = function(e) {
+            }(i.Component),
+            A = k,
+            y = n("oIkB"),
+            b = n("ViHY"),
+            v = "amendment-modal-accept-button",
+            S = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -218,15 +221,19 @@ webpackJsonp([52], {
                                 right: .5
                             }
                         }, i.createElement(s.u, {
-                            "data-test-selector": y,
+                            "data-test-selector": v,
                             type: s.z.Text,
                             onClick: t.onAccept,
                             disabled: !t.state.hasUserScrolled
-                        }, Object(r.d)("Accept", "AmazonRetailOffersAmendmentModal")))
+                        }, Object(l.d)("Accept", "AmazonRetailOffersAmendmentModal")))
                     }, t.onClose = function() {
-                        t.props.onClose(!1)
+                        t.props.onClose()
                     }, t.onAccept = function() {
-                        t.props.onClose(!0)
+                        if (!0 !== t.props.amendmentAccepted && t.props.setAmendmentAcceptance) try {
+                            t.props.setAmendmentAcceptance(Object(y.a)(g))
+                        } finally {
+                            t.props.onClose()
+                        }
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
@@ -240,7 +247,7 @@ webpackJsonp([52], {
                         textAlign: s._23.Center
                     }, i.createElement(s._22, {
                         type: s._27.H4
-                    }, Object(r.d)("Addendum to Content Partner Agreement – Commerce Addendum", "AmazonRetailOffersAmendmentModal"))), i.createElement(s.U, {
+                    }, Object(l.d)("Addendum to Content Partner Agreement – Commerce Addendum", "AmazonRetailOffersAmendmentModal"))), i.createElement(s.U, {
                         padding: {
                             top: 2,
                             bottom: 2
@@ -248,7 +255,7 @@ webpackJsonp([52], {
                         textAlign: s._23.Center
                     }, i.createElement(s._22, {
                         fontSize: s.L.Size5
-                    }, Object(r.d)('Please read and agree to the following addendum ("Addendum") to your Content License and Base Agreement (or Content License Agreement, as applicable) (the "Agreement") with Twitch in order to be eligible to earn revenue for certain purchases by a Twitch user that is viewing your Twitch channel.', "AmazonRetailOffersAmendmentModal"))), i.createElement(s._18, {
+                    }, Object(l.d)('Please read and agree to the following addendum ("Addendum") to your Content License and Base Agreement (or Content License Agreement, as applicable) (the "Agreement") with Twitch in order to be eligible to earn revenue for certain purchases by a Twitch user that is viewing your Twitch channel.', "AmazonRetailOffersAmendmentModal"))), i.createElement(s._18, {
                         borderTop: !0,
                         borderRight: !0,
                         borderBottom: !0,
@@ -290,7 +297,7 @@ webpackJsonp([52], {
                         }
                     }, i.createElement(s._22, {
                         fontSize: s.L.Size4
-                    }, Object(r.d)("Summary", "AmazonRetailOffersAmendmentModal")), i.createElement(s._22, null, Object(r.d)("By accepting below, you may earn revenue for certain purchases by your viewers as described above.", "AmazonRetailOffersAmendmentModal"))), i.createElement(s._18, {
+                    }, Object(l.d)("Summary", "AmazonRetailOffersAmendmentModal")), i.createElement(s._22, null, Object(l.d)("By accepting below, you may earn revenue for certain purchases by your viewers as described above.", "AmazonRetailOffersAmendmentModal"))), i.createElement(s._18, {
                         borderTop: !0,
                         display: s.H.Flex,
                         flexDirection: s.J.Row,
@@ -309,43 +316,41 @@ webpackJsonp([52], {
                         "data-test-selector": "amendment-modal-cancel-button",
                         type: s.z.Text,
                         onClick: this.onClose
-                    }, Object(r.d)("Cancel", "AmazonRetailOffersAmendmentModal"))), this.renderAcceptButton(this.props.amendmentAccepted)))
+                    }, Object(l.d)("Cancel", "AmazonRetailOffersAmendmentModal"))), this.renderAcceptButton(this.props.amendmentAccepted)))
                 }, t
             }(i.Component),
-            b = (n("mJW4"), function(e) {
+            _ = Object(r.a)(b, {
+                name: "setAmendmentAcceptance"
+            })(S),
+            w = (n("mJW4"), function(e) {
                 function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.amendmentAccepted = !1, t.handleClose = function(e) {
-                        t.amendmentAccepted = e, t.props.closeModal()
-                    }, t
+                    return null !== e && e.apply(this, arguments) || this
                 }
-                return a.__extends(t, e), t.prototype.componentWillUnmount = function() {
-                    this.props.onClose && this.props.onClose(this.amendmentAccepted)
-                }, t.prototype.render = function() {
+                return a.__extends(t, e), t.prototype.render = function() {
                     return i.createElement(s._18, {
                         className: "amendment-modal__container",
                         background: s.m.Base
-                    }, i.createElement(A, {
+                    }, i.createElement(_, {
                         "data-test-selector": "amendment-modal-selector",
-                        onClose: this.handleClose,
+                        onClose: this.props.closeModal,
                         amendmentAccepted: this.props.amendmentAccepted
                     }))
                 }, t
             }(i.Component)),
-            k = Object(u.a)(null, function(e) {
+            E = Object(u.a)(null, function(e) {
                 return Object(p.bindActionCreators)({
                     closeModal: h.c
                 }, e)
-            })(b),
-            v = Object(u.a)(null, function(e) {
+            })(w),
+            N = Object(u.a)(null, function(e) {
                 return Object(p.bindActionCreators)({
                     showAmendmentModal: function(e) {
                         var t = a.__rest(e, []);
-                        return Object(h.d)(k, t)
+                        return Object(h.d)(E, t)
                     }
                 }, e)
-            })(g),
-            _ = function(e) {
+            })(A),
+            O = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -358,18 +363,18 @@ webpackJsonp([52], {
                         margin: {
                             y: 2
                         }
-                    }, i.createElement(v, {
+                    }, i.createElement(N, {
                         channelName: this.props.match.params.channelName
                     }), i.createElement(m, {
                         channelName: this.props.match.params.channelName
                     })))
                 }, t
             }(i.Component),
-            S = _;
+            x = O;
         n.d(t, "DevOnlyTestingAmazonOffersComponent", function() {
-            return _
+            return O
         }), n.d(t, "DevOnlyTestingAmazonOffersPage", function() {
-            return S
+            return x
         })
     },
     CB9r: function(e, t) {
@@ -507,6 +512,156 @@ webpackJsonp([52], {
         e.exports = n
     },
     Kv1R: function(e, t) {},
+    ViHY: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "mutation",
+                name: {
+                    kind: "Name",
+                    value: "AmazonRetailOffers_AcceptAmendment"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "input"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "CommerceAmendmentType"
+                            }
+                        }
+                    },
+                    defaultValue: null
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "setAmendmentAcceptance"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "input"
+                            },
+                            value: {
+                                kind: "ObjectValue",
+                                fields: [{
+                                    kind: "ObjectField",
+                                    name: {
+                                        kind: "Name",
+                                        value: "amendmentType"
+                                    },
+                                    value: {
+                                        kind: "Variable",
+                                        name: {
+                                            kind: "Name",
+                                            value: "input"
+                                        }
+                                    }
+                                }]
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "twitch"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "commerceAmendment"
+                                        },
+                                        arguments: [{
+                                            kind: "Argument",
+                                            name: {
+                                                kind: "Name",
+                                                value: "types"
+                                            },
+                                            value: {
+                                                kind: "ListValue",
+                                                values: [{
+                                                    kind: "Variable",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "input"
+                                                    }
+                                                }]
+                                            }
+                                        }],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                alias: null,
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "isSigned"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: null
+                                            }, {
+                                                kind: "Field",
+                                                alias: null,
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "id"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: null
+                                            }]
+                                        }
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 200
+            }
+        };
+        n.loc.source = {
+            body: "mutation AmazonRetailOffers_AcceptAmendment($input: CommerceAmendmentType!) {\nsetAmendmentAcceptance(input: {\namendmentType: $input\n}){\ntwitch {\ncommerceAmendment(types:[$input]) {\nisSigned\nid\n}\n}\n}\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
     c8iB: function(e, t) {},
     ivNp: function(e, t) {
         var n = {
@@ -701,4 +856,4 @@ webpackJsonp([52], {
     },
     mJW4: function(e, t) {}
 });
-//# sourceMappingURL=pages.dev-only-testing-amazon-offers-8684682378a651b7d528e918b4b238a7.js.map
+//# sourceMappingURL=pages.dev-only-testing-amazon-offers-7ca1b134fdcdd38ebd6a837518c91e6a.js.map

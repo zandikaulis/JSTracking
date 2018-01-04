@@ -8491,8 +8491,9 @@ webpackJsonp([40], {
                         }, this.props.clip.game.name)
                     }, "ClipsViewModalContent") : Object(r.d)("{broadcaster}", {
                         broadcaster: t
-                    }, "ClipsViewModalContent"), i.createElement(S.U, {
-                        className: "clips-view-modal-content"
+                    }, "ClipsViewModalContent"), i.createElement(S._18, {
+                        className: "clips-view-modal-content",
+                        background: S.m.Base
                     }, i.createElement(S.U, {
                         padding: {
                             bottom: 2
@@ -23622,4 +23623,4 @@ webpackJsonp([40], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-clips-d938802addb439a4ef506b41af47fe5c.js.map
+//# sourceMappingURL=pages.channel-clips-2ee2bd66068645aa667eb8e6c9c8b795.js.map

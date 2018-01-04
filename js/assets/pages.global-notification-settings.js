@@ -128,7 +128,7 @@ webpackJsonp([50], {
                         linkTo: Object(l.a)("/settings/profile"),
                         active: !1
                     }, Object(r.d)("Profile", "SettingsTabs")), o.createElement(u._19, {
-                        linkTo: "https://twitch.amazon.com/prime?ref_=sm_w_tsp_p_t",
+                        linkTo: Object(l.a)("/settings/prime"),
                         active: !1
                     }, Object(r.d)("Prime", "SettingsTabs")), o.createElement(u._19, {
                         targetBlank: Object(l.b)(),
@@ -2136,4 +2136,4 @@ webpackJsonp([50], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.global-notification-settings-8dc2c2e9d7c81ab62deaa24af89d46f5.js.map
+//# sourceMappingURL=pages.global-notification-settings-e4b882c77b2d77ae9a10bfc50cf030a4.js.map
