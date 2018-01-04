@@ -1379,8 +1379,8 @@ window.SiteOptions = {
         },
         "47c76558-9d79-4181-9e43-d7c440a1a148": {
             "name": "twilight_web_onboarding_categories_anon_front_page",
-            "v": 2744,
-            "t": 2,
+            "v": 2747,
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "control"
