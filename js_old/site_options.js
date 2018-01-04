@@ -2791,30 +2791,6 @@ window.SiteOptions = {
                 "value": "expanded"
             }]
         },
-        "953e4d90-2463-4caf-8f55-2884b7e34fa4": {
-            "name": "clips_let_it_go",
-            "v": 2712,
-            "t": 1,
-            "groups": [{
-                "weight": 0,
-                "value": "control"
-            }, {
-                "weight": 0,
-                "value": "variant1"
-            }, {
-                "weight": 100,
-                "value": "variant2"
-            }, {
-                "weight": 0,
-                "value": "variant3"
-            }, {
-                "weight": 0,
-                "value": "variant4"
-            }, {
-                "weight": 0,
-                "value": "variant5"
-            }]
-        },
         "95869c70-08ce-4e58-a82e-bcaaaf1f8dc2": {
             "name": "DISCOVER_HIDE_RECENTLY_WATCHED_STREAMS",
             "v": 702,
