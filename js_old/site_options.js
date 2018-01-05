@@ -2803,6 +2803,18 @@ window.SiteOptions = {
                 "value": "show"
             }]
         },
+        "9619b63b-2e9a-4e20-af4b-cce72346691d": {
+            "name": "twilight_web_onboarding_follow_categories",
+            "v": 2753,
+            "t": 2,
+            "groups": [{
+                "weight": 1,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "enabled"
+            }]
+        },
         "9649684c-6d3f-423d-9d3c-f4296efee975": {
             "name": "clips_hear_me_now",
             "v": 1582,
