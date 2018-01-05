@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".21a5e0c03cdce4da47a3.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".49b5369be592d7383cb6.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -5863,182 +5863,182 @@
                     hlsLatencyBroadcaster: e.hasOwnProperty("hls_latency_broadcaster") ? c()(.001 * e.hls_latency_broadcaster) : 0,
                     videoResolution: e.hasOwnProperty("vid_width") ? e.vid_width + "x" + e.vid_height : "",
                     displayResolution: e.hasOwnProperty("stageWidth") ? e.stageWidth + "x" + e.stageHeight : "",
-                    backendVersion: Le.getVersion()
+                    backendVersion: Ne.getVersion()
                 }
             }
 
             function o() {
-                Be = !0, Ue.resolve(), De.emit(b.h)
+                qe = !0, De.resolve(), je.emit(b.h)
             }
 
             function u(e) {
-                tt = e, De.emit(b.c)
+                et = e, je.emit(b.c)
             }
 
             function l(e) {
-                a()(e.volume) && (Je = Math.min(Math.max(e.volume, 0), 1), De.emit(g.r))
+                a()(e.volume) && ($e = Math.min(Math.max(e.volume, 0), 1), je.emit(g.r))
             }
 
             function f(e) {
-                $e = e.duration || 0, De.emit(g.n), ut && De.emit(g.a)
+                Qe = e.duration || 0, je.emit(g.n), st && je.emit(g.a)
             }
 
             function K(e) {
-                et = e.formats
+                Ze = e.formats
             }
 
             function G(e) {
-                Ze = e.format, De.emit(b.k, e.format)
+                Xe = e.format, je.emit(b.k, e.format)
             }
 
             function Y(e) {
-                e && e.format && Ze !== e.format && (Ze = e.format, De.emit(b.k)), He = _.b, De.emit(g.c), $e = 0, De.emit(g.n), Pe(Ne("getVideoTime")), Te()
+                e && e.format && Xe !== e.format && (Xe = e.format, je.emit(b.k)), Ve = _.b, je.emit(g.c), Qe = 0, je.emit(g.n), Se(Ae("getVideoTime")), Ce()
             }
 
             function Q() {
-                De.emit(g.g)
+                je.emit(g.g)
             }
 
-            function J(e) {
-                Ye && (Ye = !1, De.emit(g.p)), ot = !1, Ze = e.format, Pe(Ne("getVideoTime")), Ce(), Ve < w.d && (null !== Le.getChannel() && ($e = 1 / 0), Ve = w.d, De.emit(g.a)), Ve < w.a && (Ve = w.a, De.emit(g.f)), Ve = w.c, De.emit(g.i)
+            function $(e) {
+                Ge && (Ge = !1, je.emit(g.p)), at = !1, Xe = e.format, Se(Ae("getVideoTime")), Pe(), Fe < w.d && (null !== Ne.getChannel() && (Qe = 1 / 0), Fe = w.d, je.emit(g.a)), Fe < w.a && (Fe = w.a, je.emit(g.f)), Fe = w.c, je.emit(g.i)
+            }
+
+            function J() {
+                Ge = !0, je.emit(g.q), it instanceof k.b && (Fe = w.b), Ce()
             }
 
             function X() {
-                Ye = !0, De.emit(g.q), at instanceof k.b && (Ve = w.b), Te()
+                je.emit(b.f), at || Fe !== w.b || (at = !0, je.emit(g.m)), at = !0, Fe = w.b, Ce()
             }
 
             function Z() {
-                De.emit(b.f), ot || Ve !== w.b || (ot = !0, De.emit(g.m)), ot = !0, Ve = w.b, Te()
-            }
-
-            function ee() {
                 t.dispatch(n.i(T.a)(C.a.CODES.ABORTED))
             }
 
-            function te() {
-                ot = !0, Ve = w.b, De.emit(g.m), Te()
+            function ee() {
+                at = !0, Fe = w.b, je.emit(g.m), Ce()
+            }
+
+            function te(e) {
+                Ce(), Se(0), He = e.channel, ze = null
             }
 
             function ne(e) {
-                Te(), Pe(0), ze = e.channel, We = null
+                Ce(), Se(0), st = !0;
+                var t = e.videoId;
+                isNaN(t[0]) || (t = "v" + t), ze = t, He = null, Fe = w.d
             }
 
-            function re(e) {
-                Te(), Pe(0), ut = !0;
-                var t = e.videoId;
-                isNaN(t[0]) || (t = "v" + t), We = t, ze = null, Ve = w.d
+            function re() {
+                Ce(), Ye = !0, je.emit(g.k)
             }
 
             function ie() {
-                Te(), Qe = !0, De.emit(g.k)
+                Ye = !1, je.emit(g.l)
             }
 
             function ae() {
-                Qe = !1, De.emit(g.l)
+                Ye = !1
             }
 
             function oe() {
-                Qe = !1
+                Se(Ae("getVideoTime"))
             }
 
-            function se() {
-                Pe(Ne("getVideoTime"))
+            function se(e) {
+                tt = e, je.emit(b.b, e)
             }
 
-            function ue(e) {
-                nt = e, De.emit(b.b, e)
+            function ue() {
+                Ce(), Fe = w.a, je.emit(g.j)
             }
 
-            function ce() {
-                Te(), Ve = w.a, De.emit(g.j)
+            function ce(e) {
+                Ge = !1, ze && Ce(), je.emit(W.AD_START, e)
             }
 
             function le(e) {
-                Ye = !1, We && Te(), De.emit(W.AD_START, e)
+                ze && !at && (Se(Ae("getVideoTime")), Pe()), je.emit(W.AD_END, e)
             }
 
             function de(e) {
-                We && !ot && (Pe(Ne("getVideoTime")), Ce()), De.emit(W.AD_END, e)
+                je.emit(W.AD_REQUEST, e)
             }
 
             function fe(e) {
-                De.emit(W.AD_REQUEST, e)
+                je.emit(W.AD_REQUEST_DECLINED, e)
             }
 
             function pe(e) {
-                De.emit(W.AD_REQUEST_DECLINED, e)
+                je.emit(W.AD_REQUEST_RESPONSE, e)
             }
 
             function he(e) {
-                De.emit(W.AD_REQUEST_RESPONSE, e)
+                je.emit(W.AD_REQUEST_ERROR, e)
             }
 
             function me(e) {
-                De.emit(W.AD_REQUEST_ERROR, e)
+                je.emit(W.AD_ERROR, e)
             }
 
             function ve(e) {
-                De.emit(W.AD_ERROR, e)
+                je.emit(W.COMPANION_RENDERED, e), t.dispatch(n.i(P.a)(W.COMPANION_RENDERED, e))
             }
 
             function ye(e) {
-                De.emit(W.COMPANION_RENDERED, e), t.dispatch(n.i(P.a)(W.COMPANION_RENDERED, e))
+                je.emit(W.AD_IMPRESSION, e)
             }
 
             function ge(e) {
-                De.emit(W.AD_IMPRESSION, e)
+                je.emit(W.AD_IMPRESSION_COMPLETE, e)
             }
 
-            function be(e) {
-                De.emit(W.AD_IMPRESSION_COMPLETE, e)
+            function be() {
+                je.emit(b.l)
             }
 
             function _e() {
-                De.emit(b.l)
+                je.emit(b.E)
             }
 
-            function we() {
-                De.emit(b.E)
+            function we(e) {
+                je.emit(b.m, e)
             }
 
             function ke(e) {
-                De.emit(b.m, e)
+                je.emit(b.x, e)
             }
 
-            function Ee(e) {
-                De.emit(b.x, e)
+            function Ee() {
+                je.emit(g.o, Ue.extrapolateTimeStamp())
             }
 
-            function Se() {
-                De.emit(g.o, qe.extrapolateTimeStamp())
+            function Se(e) {
+                Ue.setCurrentTimeStamp(e), je.emit(g.o, Ue.extrapolateTimeStamp())
             }
 
-            function Pe(e) {
-                qe.setCurrentTimeStamp(e), De.emit(g.o, qe.extrapolateTimeStamp())
+            function Pe() {
+                null === Be && (Be = setInterval(Ee, x), Ue.resume())
             }
 
             function Ce() {
-                null === Fe && (Fe = setInterval(Se, x), qe.resume())
+                null !== Be && (clearInterval(Be), Be = null, Ue.pause())
             }
 
-            function Te() {
-                null !== Fe && (clearInterval(Fe), Fe = null, qe.pause())
+            function Te(e) {
+                je.emit(W.AD_LOADED, e)
             }
 
             function Oe(e) {
-                De.emit(W.AD_LOADED, e)
+                je.emit(b.e, e)
             }
 
-            function xe(e) {
-                De.emit(b.e, e)
-            }
-
-            function Re(e, r) {
+            function xe(e, r) {
                 var i = y.a();
                 if ("" === i) return void t.dispatch(n.i(T.a)(C.a.CODES.ABORTED));
                 var a = {
                         eventsCallback: "window._BackendFlash_emitEvents",
-                        eventsContext: Me,
+                        eventsContext: Le,
                         initCallback: null
                     },
                     o = {
@@ -6051,198 +6051,198 @@
                         align: "middle"
                     },
                     u = document.createElement("div");
-                $(r).prepend(u), it = "swfobject-" + Me, u.setAttribute("id", it), y.b(e, it, "100%", "100%", "10.2", "playerProductInstall.swf", a, o, s, function(e) {
-                    rt = e.ref
+                r.insertBefore(u, r.children[0]), rt = "swfobject-" + Le, u.setAttribute("id", rt), y.b(e, rt, "100%", "100%", "10.2", "playerProductInstall.swf", a, o, s, function(e) {
+                    nt = e.ref
                 })
             }
 
-            function Ie(t) {
+            function Re(t) {
                 var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
                 switch (e.debug && console.log("flash call:", t, n), n.length) {
                     case 0:
-                        return rt[t]();
+                        return nt[t]();
                     case 1:
-                        return rt[t](n[0]);
+                        return nt[t](n[0]);
                     case 2:
-                        return rt[t](n[0], n[1]);
+                        return nt[t](n[0], n[1]);
                     case 3:
-                        return rt[t](n[0], n[1], n[2]);
+                        return nt[t](n[0], n[1], n[2]);
                     default:
-                        return console.log("WARNING, too many arguments passed to Flash"), rt[t].apply(this, n)
+                        return console.log("WARNING, too many arguments passed to Flash"), nt[t].apply(this, n)
                 }
             }
 
-            function Ae(t, n) {
-                Ue.promise.then(function() {
+            function Ie(t, n) {
+                De.promise.then(function() {
                     setTimeout(function() {
-                        var r = Ie(t, n);
+                        var r = Re(t, n);
                         r && e.debug && console.log("flash return:", t, "=", r)
                     }, 0)
                 })
             }
 
-            function Ne(t, n) {
-                if (Be) {
-                    var r = Ie(t, n);
+            function Ae(t, n) {
+                if (qe) {
+                    var r = Re(t, n);
                     return r && e.debug && console.log("flash return:", t, "=", r), r
                 }
             }
-            var Le = this,
-                Me = r.counter++;
-            r.map[Me] = Le;
-            var je = new p.a,
-                De = new p.a,
-                Ue = new h.a,
-                qe = new m.a,
-                Be = !1,
-                Fe = null,
+            var Ne = this,
+                Le = r.counter++;
+            r.map[Le] = Ne;
+            var Me = new p.a,
+                je = new p.a,
+                De = new h.a,
+                Ue = new m.a,
+                qe = !1,
+                Be = null,
+                Fe = 0,
                 Ve = 0,
-                He = 0,
+                He = null,
                 ze = null,
-                We = null,
+                We = void 0,
                 Ke = void 0,
-                Ge = void 0,
-                Ye = !1,
-                Qe = void 0,
-                $e = 0,
+                Ge = !1,
+                Ye = void 0,
+                Qe = 0,
+                $e = void 0,
                 Je = void 0,
                 Xe = void 0,
                 Ze = void 0,
                 et = void 0,
                 tt = void 0,
                 nt = void 0,
-                rt = void 0,
-                it = "",
-                at = void 0,
+                rt = "",
+                it = void 0,
+                at = !1,
                 ot = !1,
-                st = !1,
-                ut = !1;
-            Le.getStats = function() {
-                    return i(Le.getVideoInfo())
-                }, Le.attach = function(t) {
-                    Re(n(691), t), Ae("setLastAdDisplay", [e.lastAdDisplay]), Ae("setPlayerType", [e.player]), Ae("setFlashIMAAdsEnabled", [!0])
-                }, Le._emitEvent = function(t, n) {
+                st = !1;
+            Ne.getStats = function() {
+                    return i(Ne.getVideoInfo())
+                }, Ne.attach = function(t) {
+                    xe(n(691), t), Ie("setLastAdDisplay", [e.lastAdDisplay]), Ie("setPlayerType", [e.player]), Ie("setFlashIMAAdsEnabled", [!0])
+                }, Ne._emitEvent = function(t, n) {
                     setTimeout(function() {
-                        e.debug && "timeupdate" !== t && "playbackStatistics" !== t && console.log("flash event:", t, n), je.emit(t, n)
+                        e.debug && "timeupdate" !== t && "playbackStatistics" !== t && console.log("flash event:", t, n), Me.emit(t, n)
                     }, 0)
-                }, Le.addEventListener = function(e, t) {
-                    De.on(e, t)
-                }, Le.removeEventListener = function(e, t) {
-                    De.off(e, t)
-                }, Le.getNetworkProfile = function() {
-                    return Ne("getNetworkProfile") || []
-                }, Le.getError = function() {}, Le.getNetworkState = function() {
-                    return He
-                }, Le.getBuffered = function() {
-                    var e = nt ? 1 : 0;
+                }, Ne.addEventListener = function(e, t) {
+                    je.on(e, t)
+                }, Ne.removeEventListener = function(e, t) {
+                    je.off(e, t)
+                }, Ne.getNetworkProfile = function() {
+                    return Ae("getNetworkProfile") || []
+                }, Ne.getError = function() {}, Ne.getNetworkState = function() {
+                    return Ve
+                }, Ne.getBuffered = function() {
+                    var e = tt ? 1 : 0;
                     return {
                         length: e,
                         start: function(t) {
-                            if (!(t >= e)) return nt.start
+                            if (!(t >= e)) return tt.start
                         },
                         end: function(t) {
-                            if (!(t >= e)) return nt.end
+                            if (!(t >= e)) return tt.end
                         }
                     }
-                }, Le.load = function() {
-                    if (Ke || Ge) {
-                        if (Ve = w.b, He = _.b, De.emit(g.c), ut = !1, Ge) {
-                            var e = Ge;
-                            return Promise.all([n.i(v.e)(Ge), at.streamUrl]).then(function(n) {
+                }, Ne.load = function() {
+                    if (We || Ke) {
+                        if (Fe = w.b, Ve = _.b, je.emit(g.c), st = !1, Ke) {
+                            var e = Ke;
+                            return Promise.all([n.i(v.e)(Ke), it.streamUrl]).then(function(n) {
                                 var r = O(n, 2),
                                     i = r[0],
                                     a = r[1],
                                     o = t.getState(),
                                     s = o.streamMetadata;
-                                e === s.videoId && (st = !0, Ae("loadStream", [a, i.channel.name, !1]))
+                                e === s.videoId && (ot = !0, Ie("loadStream", [a, i.channel.name, !1]))
                             })
                         }
-                        var r = Ke;
-                        return at.streamUrl.then(function(e) {
+                        var r = We;
+                        return it.streamUrl.then(function(e) {
                             var n = t.getState(),
                                 i = n.streamMetadata;
-                            r === i.channelName && (st = !0, Ae("loadStream", [e, Ke, !0]))
+                            r === i.channelName && (ot = !0, Ie("loadStream", [e, We, !0]))
                         })
                     }
-                }, Le.getReadyState = function() {
-                    return Ve
-                }, Le.getSeeking = function() {
-                    return Qe
-                }, Le.getCurrentTime = function() {
-                    return qe.extrapolateTimeStamp()
-                }, Le.setCurrentTime = function(e) {
-                    ot = !1, Te(), Pe(e), Ae("videoSeek", [e])
-                }, Le.getDuration = function() {
-                    return $e
-                }, Le.getPaused = function() {
+                }, Ne.getReadyState = function() {
+                    return Fe
+                }, Ne.getSeeking = function() {
                     return Ye
-                }, Le.getEnded = function() {
-                    return t.getState().ads.currentMetadata.contentType === E.c.NONE && ot
-                }, Le.play = function() {
-                    Ye = !1, De.emit(g.p);
+                }, Ne.getCurrentTime = function() {
+                    return Ue.extrapolateTimeStamp()
+                }, Ne.setCurrentTime = function(e) {
+                    at = !1, Ce(), Se(e), Ie("videoSeek", [e])
+                }, Ne.getDuration = function() {
+                    return Qe
+                }, Ne.getPaused = function() {
+                    return Ge
+                }, Ne.getEnded = function() {
+                    return t.getState().ads.currentMetadata.contentType === E.c.NONE && at
+                }, Ne.play = function() {
+                    Ge = !1, je.emit(g.p);
                     var e = function() {
-                        at.streamUrl.then(function(e) {
-                            Ae("setStreamURI", [e]), Ae("playVideo")
+                        it.streamUrl.then(function(e) {
+                            Ie("setStreamURI", [e]), Ie("playVideo")
                         })
                     };
-                    st ? e() : Le.load().then(e())
-                }, Le.pause = function() {
-                    Ae("pauseVideo")
-                }, Le.getVolume = function() {
-                    return Je
-                }, Le.setVolume = function(e) {
-                    e > 0 && (Xe = e), Ae("setVolume", [e])
-                }, Le.getMuted = function() {
-                    return 0 === Le.getVolume()
-                }, Le.setMuted = function(e) {
-                    var t = e ? 0 : Xe || .5;
-                    Le.setVolume(t)
-                }, Le.getVideoInfo = s()(function() {
-                    var e = Ne("getVideoInfo");
+                    ot ? e() : Ne.load().then(e())
+                }, Ne.pause = function() {
+                    Ie("pauseVideo")
+                }, Ne.getVolume = function() {
+                    return $e
+                }, Ne.setVolume = function(e) {
+                    e > 0 && (Je = e), Ie("setVolume", [e])
+                }, Ne.getMuted = function() {
+                    return 0 === Ne.getVolume()
+                }, Ne.setMuted = function(e) {
+                    var t = e ? 0 : Je || .5;
+                    Ne.setVolume(t)
+                }, Ne.getVideoInfo = s()(function() {
+                    var e = Ae("getVideoInfo");
                     return e ? d()({}, A, e) : A
-                }, R), Le.getChannel = function() {
+                }, R), Ne.getChannel = function() {
+                    return We || He
+                }, Ne.setChannel = function(t, n) {
+                    it = n, We = t, Ke = null, ze = null, e.autoplay || Ve > _.d ? Ne.load() : Ne.pause()
+                }, Ne.getVideo = function() {
                     return Ke || ze
-                }, Le.setChannel = function(t, n) {
-                    at = n, Ke = t, Ge = null, We = null, e.autoplay || He > _.d ? Le.load() : Le.pause()
-                }, Le.getVideo = function() {
-                    return Ge || We
-                }, Le.setVideo = function(t, n) {
-                    at = n, Ge = t, Ke = null, ze = null, e.autoplay || He > _.d ? Le.load() : Le.pause()
-                }, Le.getQuality = function() {
-                    return Ze || ""
-                }, Le.setQuality = function(e) {
-                    e === S.c ? (Ae("setQuality", [I]), Ze = I) : (Ae("setQuality", [e]), Ze = e)
-                }, Le.getQualities = function() {
-                    return et || []
-                }, Le.getBackend = function() {
+                }, Ne.setVideo = function(t, n) {
+                    it = n, Ke = t, We = null, He = null, e.autoplay || Ve > _.d ? Ne.load() : Ne.pause()
+                }, Ne.getQuality = function() {
+                    return Xe || ""
+                }, Ne.setQuality = function(e) {
+                    e === S.c ? (Ie("setQuality", [I]), Xe = I) : (Ie("setQuality", [e]), Xe = e)
+                }, Ne.getQualities = function() {
+                    return Ze || []
+                }, Ne.getBackend = function() {
                     return z
-                }, Le.elapsedTime = function() {}, Le.getVersion = function() {
-                    return Ne("getVersion")
-                }, Le.getMediaGroup = function() {
+                }, Ne.elapsedTime = function() {}, Ne.getVersion = function() {
+                    return Ae("getVersion")
+                }, Ne.getMediaGroup = function() {
                     return null
-                }, Le.getController = function() {
+                }, Ne.getController = function() {
                     return null
-                }, Le.getControls = function() {
+                }, Ne.getControls = function() {
                     return !1
-                }, Le.getAudioTracks = function() {
+                }, Ne.getAudioTracks = function() {
                     return null
-                }, Le.getVideoTracks = function() {
+                }, Ne.getVideoTracks = function() {
                     return null
-                }, Le.getTextTracks = function() {
+                }, Ne.getTextTracks = function() {
                     return null
-                }, Le.getPlaybackRate = function() {
+                }, Ne.getPlaybackRate = function() {
                     return 1
-                }, Le.addTextTrack = function() {}, Le.setControls = function() {}, Le.setLoop = function() {}, Le.setPlaybackRate = function() {
-                    De.emit(g.s)
-                }, Le.getPlayed = function() {}, Le.getSrc = function() {}, Le.setSrc = function() {}, Le.getCaption = function() {
-                    return tt
-                }, Le.absAvailable = function() {}, Le.requestAdFill = function(e, t, n) {
-                    Ae("requestFlashAd", [e, t, n])
-                }, Le.destroy = function() {
-                    Te(), y.c(it), rt = null
+                }, Ne.addTextTrack = function() {}, Ne.setControls = function() {}, Ne.setLoop = function() {}, Ne.setPlaybackRate = function() {
+                    je.emit(g.s)
+                }, Ne.getPlayed = function() {}, Ne.getSrc = function() {}, Ne.setSrc = function() {}, Ne.getCaption = function() {
+                    return et
+                }, Ne.absAvailable = function() {}, Ne.requestAdFill = function(e, t, n) {
+                    Ie("requestFlashAd", [e, t, n])
+                }, Ne.destroy = function() {
+                    Ce(), y.c(rt), nt = null
                 },
                 function() {
-                    je.on(g.g, Q), je.on(g.n, f), je.on(g.k, ie), je.on(g.l, ae), je.on(g.m, te), je.on(g.b, ee), je.on(g.i, J), je.on(g.j, ce), je.on(g.r, l), je.on(g.c, Y), je.on(b.h, o), je.on(b.y, oe), je.on(b.z, _e), je.on(b.e, xe), je.on(b.A, Z), je.on(b.B, K), je.on(b.C, G), je.on(b.D, se), je.on(b.b, ue), je.on(b.m, ke), je.on(b.E, we), je.on(b.c, u), je.on(b.x, Ee), je.on(b.F, X), je.on(b.G, ne), je.on(b.H, re), je.on(N, le), je.on(L, de), je.on(B, ye), je.on(M, fe), je.on(j, pe), je.on(D, he), je.on(U, me), je.on(q, ve), je.on(F, ge), je.on(V, be), je.on(H, Oe)
+                    Me.on(g.g, Q), Me.on(g.n, f), Me.on(g.k, re), Me.on(g.l, ie), Me.on(g.m, ee), Me.on(g.b, Z), Me.on(g.i, $), Me.on(g.j, ue), Me.on(g.r, l), Me.on(g.c, Y), Me.on(b.h, o), Me.on(b.y, ae), Me.on(b.z, be), Me.on(b.e, Oe), Me.on(b.A, X), Me.on(b.B, K), Me.on(b.C, G), Me.on(b.D, oe), Me.on(b.b, se), Me.on(b.m, we), Me.on(b.E, _e), Me.on(b.c, u), Me.on(b.x, ke), Me.on(b.F, J), Me.on(b.G, te), Me.on(b.H, ne), Me.on(N, ce), Me.on(L, le), Me.on(B, ve), Me.on(M, de), Me.on(j, fe), Me.on(D, pe), Me.on(U, he), Me.on(q, me), Me.on(F, ye), Me.on(V, ge), Me.on(H, Te)
                 }()
         }
         n.d(t, "a", function() {
@@ -9264,7 +9264,7 @@
                     g = e
                 });
             i.attach = function(e) {
-                    $(e).append(o), o.addEventListener(h, function() {
+                    e.appendChild(o), o.addEventListener(h, function() {
                         var e;
                         if (null !== o.error) {
                             if (o.error.code === o.error.MEDIA_ERR_SRC_NOT_SUPPORTED) return a.emit(l.f), void a.emit(c.m);
@@ -21915,7 +21915,7 @@
                     u = v.a(!0),
                     c = b.k() === b.p ? null : E;
                 return {
-                    app_version: "2018.01.05-183421+844e5d3b7fa8fff4f249ea31a36301349d70841d",
+                    app_version: "2018.01.05-183805+e7d311ffaed4555fced2171b1fd302b0dce18d52",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -22069,7 +22069,7 @@
                 return f(e, [{
                     key: "hookUpForm",
                     value: function(e) {
-                        this._$createClipPlayerBackendType = $(".js-create-clip-player-backend-type", e), this._$createClipChannel = $(".js-create-clip-channel", e), this._$createClipSegment = $(".js-create-clip-segment", e), this._$createClipOffset = $(".js-create-clip-offset", e), this._$createClipBroadcastId = $(".js-create-clip-broadcast_id", e), this._$createClipVodId = $(".js-create-clip-vod_id", e), this._$createClipPlaySessionId = $(".js-create-clip-play_session_id", e), this._$createClipForm = $(".js-create-clip-form", e), this._$createClipForm.attr("action", this._clipsUrl + "/clips")
+                        this._$createClipPlayerBackendType = e.getElementsByClassName("js-create-clip-player-backend-type")[0], this._$createClipChannel = e.getElementsByClassName("js-create-clip-channel")[0], this._$createClipSegment = e.getElementsByClassName("js-create-clip-segment")[0], this._$createClipOffset = e.getElementsByClassName("js-create-clip-offset")[0], this._$createClipBroadcastId = e.getElementsByClassName("js-create-clip-broadcast_id")[0], this._$createClipVodId = e.getElementsByClassName("js-create-clip-vod_id")[0], this._$createClipPlaySessionId = e.getElementsByClassName("js-create-clip-play_session_id")[0], this._$createClipForm = e.getElementsByClassName("js-create-clip-form")[0], this._$createClipForm.setAttribute("action", this._clipsUrl + "/clips")
                     }
                 }, {
                     key: "recordClip",
@@ -22137,7 +22137,12 @@
                             a = e.vodId,
                             o = e.playSessionId,
                             s = "twitch_clips_" + Date.now().toString();
-                        this._$createClipPlayerBackendType.val(t), this._$createClipChannel.val(n), this._$createClipOffset.val(r), this._$createClipBroadcastId.val(i), this._$createClipVodId.val(a), this._$createClipPlaySessionId.val(o), this._$createClipForm.attr("target", s), this._store.getState().window.open("", s), this._$createClipForm.submit()
+                        this._$createClipPlayerBackendType.value = t, this._$createClipChannel.value = n, this._$createClipOffset.value = r, this._$createClipBroadcastId.value = i, this._$createClipVodId.value = a, this._$createClipPlaySessionId.value = o, this._$createClipForm.setAttribute("target", s), this._store.getState().window.open("", s), this._submitForm()
+                    }
+                }, {
+                    key: "_submitForm",
+                    value: function() {
+                        this._$createClipForm.submit()
                     }
                 }, {
                     key: "_createWithAPI",
@@ -22341,39 +22346,37 @@
             }) : e[t] = n, e
         }
         n.d(t, "a", function() {
-            return V
+            return B
         });
         var a, o, s = n(25),
             u = n.n(s),
-            c = n(5),
-            l = n.n(c),
-            d = n(14),
-            f = n(79),
-            p = n(17),
-            h = n(28),
-            m = n(20),
-            v = n(22),
-            y = n(24),
-            g = n(35),
-            b = n(39),
-            _ = n(15),
-            w = n(6),
-            k = n(10),
-            E = n(12),
-            S = n(431),
-            P = n(81),
-            C = n(72),
-            T = n(182),
-            O = n(133),
-            x = n(7),
-            R = n.n(x),
-            I = n(162),
-            A = n(19),
-            N = n(114),
-            L = n(32),
-            M = n(11),
-            j = n(119),
-            D = function() {
+            c = n(14),
+            l = n(79),
+            d = n(17),
+            f = n(28),
+            p = n(20),
+            h = n(22),
+            m = n(24),
+            v = n(35),
+            y = n(39),
+            g = n(15),
+            b = n(6),
+            _ = n(10),
+            w = n(12),
+            k = n(431),
+            E = n(81),
+            S = n(72),
+            P = n(182),
+            C = n(133),
+            T = n(7),
+            O = n.n(T),
+            x = n(162),
+            R = n(19),
+            I = n(114),
+            A = n(32),
+            N = n(11),
+            L = n(119),
+            M = function() {
                 function e(e, t) {
                     var n = [],
                         r = !0,
@@ -22398,7 +22401,7 @@
                     throw new TypeError("Invalid attempt to destructure non-iterable instance")
                 }
             }(),
-            U = function() {
+            j = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var r = t[n];
@@ -22409,29 +22412,29 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            q = Object.freeze((a = {}, i(a, T.a.MINUTE_WATCHED, S.a), i(a, T.a.VIDEO_PLAY, S.b), i(a, T.a.BUFFER_EMPTY, S.c), i(a, T.b, S.d), a)),
-            B = Object.freeze(l()((o = {}, i(o, S.e, !0), i(o, S.f, !0), i(o, S.g, !0), i(o, S.h, !0), i(o, S.i, !0), i(o, S.j, !0), o), q)),
-            F = Object.freeze({
+            D = Object.freeze((a = {}, i(a, P.a.MINUTE_WATCHED, k.a), i(a, P.a.VIDEO_PLAY, k.b), i(a, P.a.BUFFER_EMPTY, k.c), i(a, P.b, k.d), a)),
+            U = Object.freeze((o = {}, i(o, k.e, !0), i(o, k.f, !0), i(o, k.g, !0), i(o, k.h, !0), i(o, k.i, !0), i(o, k.j, !0), i(o, k.a, !0), i(o, k.b, !0), i(o, k.c, !0), i(o, k.d, !0), o)),
+            q = Object.freeze({
                 origin: ""
             }),
-            V = function() {
+            B = function() {
                 function e(t, i) {
                     var a = this,
-                        o = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : F;
+                        o = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : q;
                     r(this, e), this._player = t, this._store = i, this._clients = [], this._unsubscribes = [], this._window = this._store.getState().window, this._targetOrigin = o.origin, this._bridgeIsReady = function() {
                         throw new Error("_bridgeIsReady should only be called in _sendReadyEvent")
                     }, this._onBridgeReady = new Promise(function(e) {
                         a._bridgeIsReady = e
                     }), this._window.addEventListener("message", this);
                     var s = this._store.getState().env.playerType;
-                    s !== w.h && s !== w.i || this._player.addEventListener(y.j, this._sendOpenStreamEvent.bind(this));
+                    s !== b.h && s !== b.i || this._player.addEventListener(m.j, this._sendOpenStreamEvent.bind(this));
                     var u = this._window.opener || this._window.parent;
-                    u && u !== this._window && this._addClient(u), this._store.dispatch(n.i(f.c)(this)), this._initSubscriptions()
+                    u && u !== this._window && this._addClient(u), this._store.dispatch(n.i(l.c)(this)), this._initSubscriptions()
                 }
-                return U(e, [{
+                return j(e, [{
                     key: "_sendOpenStreamEvent",
                     value: function() {
-                        this._sendPlayerEvent(S.k)
+                        this._sendPlayerEvent(k.k)
                     }
                 }, {
                     key: "_sendReadyEvent",
@@ -22442,41 +22445,41 @@
                     key: "_initSubscriptions",
                     value: function() {
                         var e = this;
-                        this._unsubscribes.push(n.i(_.a)(this._store, ["analytics.playSessionId", "captions.available", "manifestInfo.broadcast_id", "stream"], function() {
+                        this._unsubscribes.push(n.i(g.a)(this._store, ["analytics.playSessionId", "captions.available", "manifestInfo.broadcast_id", "stream"], function() {
                             e._sendStoreState()
-                        })), this._unsubscribes.push(n.i(_.a)(this._store, ["error"], this.onError.bind(this))), this.onError(this._store.getState()), this._unsubscribes.push(n.i(_.a)(this._store, ["analytics.playSessionId", "manifestInfo.broadcast_id"], function() {})), this._unsubscribes.push(n.i(_.a)(this._store, ["viewercount"], function() {
-                            e._sendStoreState(), e._sendPlayerEvent(S.l)
-                        })), this._unsubscribes.push(n.i(_.a)(this._store, ["playback.contentShowing"], function(t) {
-                            t.playback.contentShowing && e._sendPlayerEvent(S.m)
-                        })), this._unsubscribes.push(n.i(_.a)(this._store, ["playback.paused", "playback.ended", "playback.hasPlayed"], function(t) {
+                        })), this._unsubscribes.push(n.i(g.a)(this._store, ["error"], this.onError.bind(this))), this.onError(this._store.getState()), this._unsubscribes.push(n.i(g.a)(this._store, ["analytics.playSessionId", "manifestInfo.broadcast_id"], function() {})), this._unsubscribes.push(n.i(g.a)(this._store, ["viewercount"], function() {
+                            e._sendStoreState(), e._sendPlayerEvent(k.l)
+                        })), this._unsubscribes.push(n.i(g.a)(this._store, ["playback.contentShowing"], function(t) {
+                            t.playback.contentShowing && e._sendPlayerEvent(k.m)
+                        })), this._unsubscribes.push(n.i(g.a)(this._store, ["playback.paused", "playback.ended", "playback.hasPlayed"], function(t) {
                             var n = t.playback,
                                 r = n.paused,
                                 i = n.ended,
                                 a = n.hasPlayed;
-                            i ? e._sendPlayerEvent(S.e) : r ? e._sendPlayerEvent(S.f) : a && e._sendPlayerEvent(S.g)
-                        })), this._unsubscribes.push(n.i(_.a)(this._store, ["onlineStatus"], function(t) {
-                            t.onlineStatus === v.a ? e._sendPlayerEvent(S.i) : e._sendPlayerEvent(S.h)
-                        })), this._unsubscribes.push(n.i(_.a)(this._store, ["screenMode.isTheatreMode"], function(t) {
+                            i ? e._sendPlayerEvent(k.e) : r ? e._sendPlayerEvent(k.f) : a && e._sendPlayerEvent(k.g)
+                        })), this._unsubscribes.push(n.i(g.a)(this._store, ["onlineStatus"], function(t) {
+                            t.onlineStatus === h.a ? e._sendPlayerEvent(k.i) : e._sendPlayerEvent(k.h)
+                        })), this._unsubscribes.push(n.i(g.a)(this._store, ["screenMode.isTheatreMode"], function(t) {
                             var n = t.screenMode;
-                            e._sendStoreState(), n.isTheatreMode ? e._sendPlayerEvent(S.n) : e._sendPlayerEvent(S.o)
-                        })), this._unsubscribes.push(n.i(_.a)(this._store, ["screenMode.isFullScreen"], function(t) {
+                            e._sendStoreState(), n.isTheatreMode ? e._sendPlayerEvent(k.n) : e._sendPlayerEvent(k.o)
+                        })), this._unsubscribes.push(n.i(g.a)(this._store, ["screenMode.isFullScreen"], function(t) {
                             var n = t.screenMode;
-                            e._sendStoreState(), n.isFullScreen ? e._sendPlayerEvent(S.p) : e._sendPlayerEvent(S.q)
-                        })), this._unsubscribes.push(n.i(_.a)(this._store, ["playback.currentTime"], function(t) {
+                            e._sendStoreState(), n.isFullScreen ? e._sendPlayerEvent(k.p) : e._sendPlayerEvent(k.q)
+                        })), this._unsubscribes.push(n.i(g.a)(this._store, ["playback.currentTime"], function(t) {
                             var n = t.playback,
                                 r = n.currentTime;
-                            e._sendAll(S.r, {
-                                event: S.s,
+                            e._sendAll(k.r, {
+                                event: k.s,
                                 data: r
                             })
-                        })), this._unsubscribes.push(n.i(_.a)(this._store, ["stream", "streamMetadata.channelName", "streamMetadata.channel.id", "streamMetadata.videoId", "quality.current", "quality.available", "playback.currentTime", "playback.duration", "playback.muted", "playback.volume", "playback.paused", "playback.ended"], this._sendPlayerState.bind(this)))
+                        })), this._unsubscribes.push(n.i(g.a)(this._store, ["stream", "streamMetadata.channelName", "streamMetadata.channel.id", "streamMetadata.videoId", "quality.current", "quality.available", "playback.currentTime", "playback.duration", "playback.muted", "playback.volume", "playback.paused", "playback.ended"], this._sendPlayerState.bind(this)))
                     }
                 }, {
                     key: "onError",
                     value: function(e) {
                         var t = e.error;
-                        t.hasError && this._sendAll(S.r, {
-                            event: S.t,
+                        t.hasError && this._sendAll(k.r, {
+                            event: k.t,
                             data: {
                                 code: t.code
                             }
@@ -22493,10 +22496,10 @@
                         var e = this;
                         this._clients.forEach(function(t) {
                             t.postMessage({
-                                namespace: S.u,
-                                method: S.v,
+                                namespace: k.u,
+                                method: k.v,
                                 args: [e._getNormalizedStoreState()]
-                            }, "*")
+                            }, e._targetOrigin)
                         })
                     }
                 }, {
@@ -22504,7 +22507,7 @@
                     value: function(e, t, n) {
                         this._clients.forEach(function(r) {
                             r.postMessage({
-                                namespace: S.u,
+                                namespace: k.u,
                                 method: e,
                                 args: t
                             }, n)
@@ -22512,99 +22515,116 @@
                     }
                 }, {
                     key: "_sendAll",
-                    value: function(e, t) {
-                        var r = this,
-                            i = Array.isArray(t) ? t : [t],
-                            a = B[i[0]];
+                    value: function(e) {
+                        var t = this,
+                            r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                            i = Array.isArray(r) ? r : [r];
                         return this._onBridgeReady.then(function() {
-                            return n.i(j.a)(r._targetOrigin) || n.i(j.c)(r._targetOrigin) ? r._postTo(e, i, r._targetOrigin) : a ? r._postTo(e, i, "*") : void 0
+                            var r = n.i(L.a)(t._targetOrigin),
+                                a = n.i(L.c)(t._targetOrigin),
+                                o = t._isEvent(e),
+                                s = t._isPublicEvent(e, i);
+                            if (r || a || !o || s) return t._postTo(e, i, t._targetOrigin)
                         })
+                    }
+                }, {
+                    key: "_isEvent",
+                    value: function(e) {
+                        return e === k.w || e === k.r
+                    }
+                }, {
+                    key: "_isPublicEvent",
+                    value: function(e, t) {
+                        if (!Array.isArray(t)) return !1;
+                        var n = M(t, 1),
+                            r = n[0];
+                        return !(!this._isEvent(e) || void 0 === r.event) && !0 === U[r.event]
                     }
                 }, {
                     key: "handleEvent",
                     value: function(e) {
-                        if (u()(e.data) && e.data.namespace === S.w) switch (e.data.method) {
-                            case S.x:
+                        if (u()(e.data) && e.data.namespace === k.x) switch (e.data.method) {
+                            case k.y:
                                 this._addClient(e.source);
                                 break;
-                            case S.y:
-                                this._store.dispatch(n.i(p.b)());
+                            case k.z:
+                                this._store.dispatch(n.i(d.b)());
                                 break;
-                            case S.z:
-                                this._store.dispatch(n.i(p.c)());
+                            case k.A:
+                                this._store.dispatch(n.i(d.c)());
                                 break;
-                            case S.A:
-                                this._store.dispatch(d.b({
-                                    contentType: d.c,
+                            case k.B:
+                                this._store.dispatch(c.b({
+                                    contentType: c.c,
                                     contentId: e.data.args[0],
                                     customerId: e.data.args[1]
-                                })), this._store.dispatch(n.i(g.b)());
+                                })), this._store.dispatch(n.i(v.b)());
                                 break;
-                            case S.B:
-                                this._store.dispatch(d.b({
-                                    contentType: d.e,
+                            case k.C:
+                                this._store.dispatch(c.b({
+                                    contentType: c.e,
                                     contentId: e.data.args[0]
-                                })), this._store.dispatch(n.i(g.b)());
+                                })), this._store.dispatch(n.i(v.b)());
                                 break;
-                            case S.C:
-                                this._store.dispatch(d.b({
-                                    contentType: d.h,
+                            case k.D:
+                                this._store.dispatch(c.b({
+                                    contentType: c.h,
                                     contentId: e.data.args[0]
-                                })), this._store.dispatch(n.i(g.b)());
+                                })), this._store.dispatch(n.i(v.b)());
                                 break;
-                            case S.D:
-                                this._store.dispatch(d.b({
-                                    contentType: d.d,
+                            case k.E:
+                                this._store.dispatch(c.b({
+                                    contentType: c.d,
                                     contentId: e.data.args[0]
-                                })), this._store.dispatch(n.i(g.b)());
+                                })), this._store.dispatch(n.i(v.b)());
                                 break;
-                            case S.E:
+                            case k.F:
                                 this._handleChannelId(e.data.args[0]);
                                 break;
-                            case S.F:
+                            case k.G:
                                 this._handleSetVideo(e.data.args);
                                 break;
-                            case S.G:
+                            case k.H:
                                 this._handleSetCollection(e.data.args);
                                 break;
-                            case S.H:
+                            case k.I:
                                 this._player.setCurrentTime(parseFloat(e.data.args[0]));
                                 break;
-                            case S.I:
-                                this._store.dispatch(n.i(b.d)(e.data.args[0]));
+                            case k.J:
+                                this._store.dispatch(n.i(y.d)(e.data.args[0]));
                                 break;
-                            case S.J:
-                                this._store.dispatch(n.i(p.a)(!!e.data.args[0]));
+                            case k.K:
+                                this._store.dispatch(n.i(d.a)(!!e.data.args[0]));
                                 break;
-                            case S.K:
-                                this._store.dispatch(n.i(p.g)(e.data.args[0]));
+                            case k.L:
+                                this._store.dispatch(n.i(d.g)(e.data.args[0]));
                                 break;
-                            case S.L:
-                                this._store.dispatch(n.i(h.d)(e.data.args[0]));
+                            case k.M:
+                                this._store.dispatch(n.i(f.d)(e.data.args[0]));
                                 break;
-                            case S.M:
-                                this._store.dispatch(n.i(h.b)(e.data.args[0]));
+                            case k.N:
+                                this._store.dispatch(n.i(f.b)(e.data.args[0]));
                                 break;
-                            case S.N:
-                                this._player.destroy(), this.destroy(), this._sendAll(S.O);
+                            case k.O:
+                                this._player.destroy(), this.destroy(), this._sendAll(k.P);
                                 break;
-                            case S.P:
-                                this._store.dispatch(n.i(m.a)(e.data.args[0]));
+                            case k.Q:
+                                this._store.dispatch(n.i(p.a)(e.data.args[0]));
                                 break;
-                            case S.Q:
+                            case k.R:
                                 this._setTrackingProperties(e.data.args[0]);
                                 break;
-                            case S.R:
-                                this._store.dispatch(n.i(N.b)(e.data.args[0]));
+                            case k.S:
+                                this._store.dispatch(n.i(I.b)(e.data.args[0]));
                                 break;
-                            case S.S:
-                                this._store.dispatch(n.i(L.j)(!0));
+                            case k.T:
+                                this._store.dispatch(n.i(A.j)(!0));
                                 break;
-                            case S.T:
-                                this._store.dispatch(n.i(L.j)(!1));
+                            case k.U:
+                                this._store.dispatch(n.i(A.j)(!1));
                                 break;
-                            case S.U:
-                                this._store.dispatch(n.i(L.c)(L.d, {
+                            case k.V:
+                                this._store.dispatch(n.i(A.c)(A.d, {
                                     fontSize: e.data.args[0]
                                 }))
                         }
@@ -22614,32 +22634,32 @@
                     value: function(e) {
                         var t = this,
                             r = String(e).replace(/[^A-Za-z0-9_]/g, "");
-                        n.i(M.b)("channels/" + r).then(function(e) {
-                            t._store.dispatch(d.b({
-                                contentType: d.d,
+                        n.i(N.b)("channels/" + r).then(function(e) {
+                            t._store.dispatch(c.b({
+                                contentType: c.d,
                                 contentId: e.name
-                            })), t._store.dispatch(n.i(g.b)())
+                            })), t._store.dispatch(n.i(v.b)())
                         })
                     }
                 }, {
                     key: "_handleSetVideo",
                     value: function(e) {
-                        var t = D(e, 2),
+                        var t = M(e, 2),
                             r = t[0],
                             i = t[1];
-                        this._store.dispatch(d.b({
-                            contentType: d.f,
+                        this._store.dispatch(c.b({
+                            contentType: c.f,
                             contentId: r
-                        })), this._store.dispatch(n.i(g.b)()), this._store.dispatch(n.i(A.b)(i))
+                        })), this._store.dispatch(n.i(v.b)()), this._store.dispatch(n.i(R.b)(i))
                     }
                 }, {
                     key: "_handleSetCollection",
                     value: function(e) {
-                        var t = D(e, 3),
+                        var t = M(e, 3),
                             r = t[0],
                             i = t[1],
                             a = t[2];
-                        this._store.dispatch(n.i(g.a)(r, i, a))
+                        this._store.dispatch(n.i(v.a)(r, i, a))
                     }
                 }, {
                     key: "_sendPlayerState",
@@ -22652,7 +22672,7 @@
                             o = this._configurePlaybackState(),
                             s = n,
                             u = {
-                                channelName: s instanceof E.b ? s.channel : "",
+                                channelName: s instanceof w.b ? s.channel : "",
                                 channelId: t.channel.id,
                                 currentTime: i.currentTime,
                                 duration: i.duration,
@@ -22660,35 +22680,37 @@
                                 playback: o,
                                 quality: r.current,
                                 qualitiesAvailable: r.available,
-                                videoID: s instanceof k.b ? s.videoId : "",
+                                videoID: s instanceof _.b ? s.videoId : "",
                                 viewers: a,
                                 volume: i.volume
                             };
-                        this._sendAll(S.V, u)
+                        this._sendAll(k.W, u)
                     }
                 }, {
                     key: "_configurePlaybackState",
                     value: function() {
-                        return this._store.getState().playback.ended ? S.W : this._store.getState().playback.paused ? S.X : S.Y
+                        return this._store.getState().playback.ended ? k.X : this._store.getState().playback.paused ? k.Y : k.Z
                     }
                 }, {
                     key: "_sendPlayerEvent",
                     value: function(e) {
-                        this._sendAll(S.Z, e)
+                        this._sendAll(k.w, {
+                            event: e
+                        })
                     }
                 }, {
                     key: "_sendAdCompanionEvent",
                     value: function(e, t) {
                         switch (e) {
-                            case P.COMPANION_RENDERED:
-                                this._sendAll(S.r, {
-                                    event: S._0,
+                            case E.COMPANION_RENDERED:
+                                this._sendAll(k.r, {
+                                    event: k._0,
                                     data: t
                                 });
                                 break;
-                            case C.c.AD_COMPANION_RENDERED:
-                                this._sendAll(S.r, {
-                                    event: S._1,
+                            case S.c.AD_COMPANION_RENDERED:
+                                this._sendAll(k.r, {
+                                    event: k._1,
                                     data: t
                                 })
                         }
@@ -22696,16 +22718,16 @@
                 }, {
                     key: "_emitWheelEvent",
                     value: function(e) {
-                        this._sendAll(S.r, {
-                            event: S._2,
+                        this._sendAll(k.r, {
+                            event: k._2,
                             data: e
                         })
                     }
                 }, {
                     key: "_sendFirstPartyAnalyticEvent",
                     value: function(e, t) {
-                        this._sendAll(S.r, {
-                            event: q[e],
+                        this._sendAll(k.r, {
+                            event: D[e],
                             data: t
                         })
                     }
@@ -22732,55 +22754,55 @@
                             broadcastId: r.broadcast_id,
                             screenMode: i,
                             stream: {
-                                contentId: o.contentType === O.b ? o.contentId : "",
-                                customerId: o.contentType === O.b ? o.customerId : ""
+                                contentId: o.contentType === C.b ? o.contentId : "",
+                                customerId: o.contentType === C.b ? o.customerId : ""
                             }
                         }
                     }
                 }, {
                     key: "_sendStoreState",
                     value: function() {
-                        this._sendAll(S._3, this._getNormalizedStoreState())
+                        this._sendAll(k._3, this._getNormalizedStoreState())
                     }
                 }, {
                     key: "_sendTransitionToCollectionEvent",
                     value: function(e) {
-                        this._sendAll(S.r, {
-                            event: S._4,
+                        this._sendAll(k.r, {
+                            event: k._4,
                             data: e
                         })
                     }
                 }, {
                     key: "_sendTransitionToRecommendedVodEvent",
                     value: function(e) {
-                        this._sendAll(S.r, {
-                            event: S._5,
+                        this._sendAll(k.r, {
+                            event: k._5,
                             data: e
                         })
                     }
                 }, {
                     key: "_sendStatsUpdateEvent",
                     value: function() {
-                        this._sendStoreState(), this._sendPlayerEvent(S._6)
+                        this._sendStoreState(), this._sendPlayerEvent(k._6)
                     }
                 }, {
                     key: "_sendSeekedEvent",
                     value: function(e) {
-                        this._sendAll(S.r, {
-                            event: S._7,
+                        this._sendAll(k.r, {
+                            event: k._7,
                             data: e
                         })
                     }
                 }, {
                     key: "_setTrackingProperties",
                     value: function(e) {
-                        var t = [w.c, w.h, w.o, w.i];
-                        R()(t, this._store.getState().env.playerType) && this._store.dispatch(n.i(I.a)(e))
+                        var t = [b.c, b.h, b.o, b.i];
+                        O()(t, this._store.getState().env.playerType) && this._store.dispatch(n.i(x.a)(e))
                     }
                 }, {
                     key: "destroy",
                     value: function() {
-                        this._window.removeEventListener("message", this), this._store.getState().env.playerType === w.h && this._player.removeEventListener(y.j, this._sendOpenStreamEvent.bind(this)), this._unsubscribes.forEach(function(e) {
+                        this._window.removeEventListener("message", this), this._store.getState().env.playerType === b.h && this._player.removeEventListener(m.j, this._sendOpenStreamEvent.bind(this)), this._unsubscribes.forEach(function(e) {
                             return e()
                         })
                     }
@@ -22944,7 +22966,7 @@
                     var s = this;
                     r(this, e), this.ctrl = !1, this.store = a, this.player = t, this.root = n, this.unsubs = [], this._initSubscribes(), this.rootKeydownListener = function(e) {
                         var t = e.target || e.srcElement,
-                            n = "INPUT" === t.tagName && "text" === $(t).attr("type"),
+                            n = "INPUT" === t.tagName && "text" === t.getAttribute("type"),
                             r = "TEXTAREA" === t.tagName,
                             i = "true" === t.contentEditable,
                             o = a.getState().ui.isMini;
@@ -24564,13 +24586,7 @@
 
         function r(e, t, r) {
             function o(t) {
-                t.player !== i.h && t.player !== i.i && $(e).on("dblclick", ".js-control-fullscreen-overlay", function(e) {
-                    e.preventDefault(), s()
-                }), $(e).on("click", ".js-player-alert__close", function() {
-                    $(this).closest(".js-player-alert").attr("data-active", !1)
-                }), $(e).on("click", ".js-player-product-close", function(e) {
-                    e.preventDefault(), u()
-                })
+                t.player !== i.h && t.player !== i.i && e.getElementsByClassName("js-control-fullscreen-overlay")[0].addEventListener("dblclick", u)
             }
 
             function s() {
@@ -24582,18 +24598,18 @@
                 }), t.dispatch(n.i(a.c)())
             }
 
-            function u() {
-                $(".js-player-product-overlay", e).attr("data-active", !1)
+            function u(e) {
+                e.preventDefault(), s()
             }
             var c = [];
             this.destroy = function() {
-                    $(e).off("click"), $(e).off("dblclick"), c.forEach(function(e) {
+                    e.getElementsByClassName("js-control-fullscreen-overlay")[0].removeEventListener("dblclick", u), c.forEach(function(e) {
                         return e()
                     })
                 },
                 function() {
                     var t = r;
-                    o(t), $(e).attr("data-theatre", !1), $(e).attr("data-mini", !1), $(e).attr("data-showinfo", t.showInfo)
+                    o(t), e.setAttribute("data-theatre", !1), e.setAttribute("data-mini", !1), e.setAttribute("data-showinfo", t.showInfo)
                 }()
         }
         t.a = r;
@@ -24603,37 +24619,36 @@
         "use strict";
 
         function r(e, t, r, s) {
-            function u(n) {
-                var r = n.streamMetadata;
-                $(t).attr({
-                    "data-channel": r.channelName || null,
-                    "data-video": e.getVideo() || null
-                })
+            function u() {
+                r.dispatch(n.i(o.e)())
             }
 
-            function c() {
+            function c(n) {
+                var r = n.streamMetadata;
+                r.channelName ? t.setAttribute("data-channel", r.channelName) : t.removeAttribute("data-channel"), e.getVideo() ? t.setAttribute("data-video", e.getVideo()) : t.removeAttribute("data-video")
+            }
+
+            function l() {
                 var e = r.getState(),
                     n = e.screenMode;
-                s.showInfo || n.isTheatreMode || n.isFullScreen ? $(t).attr("data-showinfo", !0) : $(t).attr("data-showinfo", !1)
+                s.showInfo || n.isTheatreMode || n.isFullScreen ? t.setAttribute("data-showinfo", !0) : t.setAttribute("data-showinfo", !1)
             }
-            var l = [];
+            var d = [];
             this.destroy = function() {
-                    $(t).off("click"), l.forEach(function(e) {
+                    t.getElementsByClassName("js-control-fullscreen-overlay")[0].removeEventListener("click", u), d.forEach(function(e) {
                         return e()
-                    }), l = null
+                    }), d = null
                 },
                 function() {
-                    l.push(n.i(a.a)(r, ["screenMode.isFullScreen", "screenMode.isTheatreMode"], c)), c();
+                    d.push(n.i(a.a)(r, ["screenMode.isFullScreen", "screenMode.isTheatreMode"], l)), l();
                     var e = s.player;
-                    $(t).attr("data-playertype", e), e !== i.h && e !== i.i || $(t).on("click", ".js-control-fullscreen-overlay", function() {
-                        r.dispatch(n.i(o.e)())
-                    }), l.push(n.i(a.a)(r, ["viewercount"], function(e) {
+                    e && t.setAttribute("data-playertype", e), e !== i.h && e !== i.i || t.getElementsByClassName("js-control-fullscreen-overlay")[0].addEventListener("click", u), d.push(n.i(a.a)(r, ["viewercount"], function(e) {
                         var n = e.viewercount;
-                        $(t).attr("data-viewers", n)
-                    })), l.push(n.i(a.a)(r, ["screen"], function(e) {
+                        t.setAttribute("data-viewers", n)
+                    })), d.push(n.i(a.a)(r, ["screen"], function(e) {
                         var n = e.screen;
-                        $(t).attr("data-screen", n[0])
-                    })), l.push(n.i(a.a)(r, ["streamMetadata"], u))
+                        t.setAttribute("data-screen", n[0])
+                    })), d.push(n.i(a.a)(r, ["streamMetadata"], c))
                 }()
         }
         t.a = r;
@@ -24689,17 +24704,12 @@
                     value: function() {
                         var e = this._store.getState(),
                             t = e.ui;
-                        $(this._root).attr({
-                            "data-mini": t.isMini
-                        })
+                        this._root.setAttribute("data-mini", t.isMini)
                     }
                 }, {
                     key: "handleEvent",
                     value: function() {
-                        $(this._root).attr({
-                            "data-paused": this._store.getState().playback.paused,
-                            "data-ended": this._store.getState().playback.ended
-                        })
+                        this._root.setAttribute("data-paused", this._store.getState().playback.paused), this._root.setAttribute("data-ended", this._store.getState().playback.ended)
                     }
                 }]), t
             }(o.a)
@@ -28346,7 +28356,7 @@
             if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
         }
         n.d(t, "a", function() {
-            return O
+            return T
         });
         var i = n(34),
             a = n.n(i),
@@ -28379,29 +28389,32 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            P = $('<div class="js-ima-ads-container ima-ads-container"></div>'),
-            C = [{
+            P = [{
                 width: 300,
                 height: 250
             }, {
                 width: 300,
                 height: 60
             }],
-            T = {
+            C = {
                 preroll: p.f.PREROLL,
                 midroll: p.f.MIDROLL,
                 postroll: p.f.POSTROLL
             },
-            O = function() {
+            T = function() {
                 function e(t, i, o) {
                     var s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-                    r(this, e), this._videoContainer = t, this._backend = i, this._store = o, this._unsubs = [], this._paused = !1, this._contentPauseRequested = !1, this._eventEmitter = new a.a, this._currentAdsManager = I, this._aaxManager = new g.a(g.b, g.c, this._store, s);
-                    var u = this._store.getState(),
-                        c = u.window,
-                        l = c.google;
-                    l && (this._unsubs.push(n.i(y.a)(this._store, ["playerDimensions"], this._resizeAd.bind(this))), this._configureVpaidMode(), this._adContainer = P.clone().appendTo(this._videoContainer).get(0), this._adDisplayContainer = new l.ima.AdDisplayContainer(this._adContainer, $(this._videoContainer).find("video, object").get(0)), this._adDisplayContainer.initialize(), this._moat = new h.a(this._adContainer, this._store), this._setupAdsLoader())
+                    r(this, e), this._videoContainer = t, this._backend = i, this._store = o, this._unsubs = [], this._paused = !1, this._contentPauseRequested = !1, this._eventEmitter = new a.a, this._currentAdsManager = R, this._aaxManager = new g.a(g.b, g.c, this._store, s), this._store.getState().window.google && (this._unsubs.push(n.i(y.a)(this._store, ["playerDimensions"], this._resizeAd.bind(this))), this._configureVpaidMode(), this.initializeAdDisplayContainer(), this._moat = new h.a(this._adContainer, this._store), this._setupAdsLoader())
                 }
                 return S(e, [{
+                    key: "initializeAdDisplayContainer",
+                    value: function() {
+                        var e = this._store.getState(),
+                            t = e.window,
+                            n = t.google;
+                        n && (this._adContainer = t.document.createElement("div"), this._adContainer.classList.add("js-ima-ads-container", "ima-ads-container"), this._videoContainer.appendChild(this._adContainer), this._adDisplayContainer = new n.ima.AdDisplayContainer(this._adContainer, this._videoContainer.querySelector("video, object")), this._adDisplayContainer.initialize())
+                    }
+                }, {
                     key: "destroy",
                     value: function() {
                         this._adsLoader.destroy(), this._adDisplayContainer.destroy(), this._aaxManager.destroy(), this._unsubs.forEach(function(e) {
@@ -28457,7 +28470,7 @@
                         var t = this,
                             r = this._store.getState().window.google,
                             i = e.getUserRequestContext();
-                        n.i(b.a)(this._store, "ima", c.c, n.i(b.b)(i)), this._currentAdsManager = e.getAdsManager(new x(this._backend), this._getAdRenderSettings()), this._currentAdsManager.addEventListener(r.ima.AdErrorEvent.Type.AD_ERROR, function(e) {
+                        n.i(b.a)(this._store, "ima", c.c, n.i(b.b)(i)), this._currentAdsManager = e.getAdsManager(new O(this._backend), this._getAdRenderSettings()), this._currentAdsManager.addEventListener(r.ima.AdErrorEvent.Type.AD_ERROR, function(e) {
                             return t._onAdError(e)
                         }), this._currentAdsManager.addEventListener(r.ima.AdEvent.Type.RESUMED, function() {
                             return t._store.dispatch(n.i(w.g)())
@@ -28507,7 +28520,7 @@
                             i = n.i(b.b)(r);
                         i.reason = t.getMessage(), i.error_code = t.getErrorCode(), i.error_type = t.getType(), n.i(b.a)(this._store, "ima", c.d, i), this._contentPauseRequested && (this._contentPauseRequested = !1, this._store.dispatch(n.i(p.i)()), this._resumeContent(), this._eventEmitter.emit(f.AD_ERROR, {
                             roll_type: r.adType
-                        })), this._isCreativeIdSet(r) && console.error("Error playing creative " + r.creativeId + ": " + t.getMessage()), this._currentAdsManager.destroy(), this._currentAdsManager = I
+                        })), this._isCreativeIdSet(r) && console.error("Error playing creative " + r.creativeId + ": " + t.getMessage()), this._currentAdsManager.destroy(), this._currentAdsManager = R
                     }
                 }, {
                     key: "_onContentPauseRequested",
@@ -28517,7 +28530,7 @@
                                 r = t.playback;
                             this._currentAdsManager.setVolume(r.muted ? 0 : r.volume), this._interruptContent(), this._store.dispatch(n.i(p.h)({
                                 contentType: p.c.IMA,
-                                rollType: T[e.adType]
+                                rollType: C[e.adType]
                             })), this._eventEmitter.emit(f.AD_START, {
                                 roll_type: e.adType
                             })
@@ -28526,7 +28539,7 @@
                 }, {
                     key: "_onContentResumeRequested",
                     value: function(e) {
-                        this._contentPauseRequested = !1, this._store.getState().ads.currentMetadata.contentType !== p.c.NONE && (this._currentAdsManager = I, this._store.dispatch(n.i(p.i)()), this._eventEmitter.emit(f.AD_END, {
+                        this._contentPauseRequested = !1, this._store.getState().ads.currentMetadata.contentType !== p.c.NONE && (this._currentAdsManager = R, this._store.dispatch(n.i(p.i)()), this._eventEmitter.emit(f.AD_END, {
                             roll_type: e.adType
                         }), this._resumeContent())
                     }
@@ -28541,7 +28554,7 @@
                     key: "_onAdStarted",
                     value: function(e) {
                         var t = e.getAd();
-                        C.reduce(function(e, n) {
+                        P.reduce(function(e, n) {
                             return e + t.getCompanionAds(n.width, n.height).length
                         }, 0) > 0 && (this._eventEmitter.emit(f.COMPANION_RENDERED, {
                             provider: "ima"
@@ -28670,7 +28683,7 @@
                     }
                 }]), e
             }(),
-            x = function() {
+            O = function() {
                 function e(t) {
                     r(this, e), this._backend = t
                 }
@@ -28686,7 +28699,7 @@
                     }
                 }]), e
             }(),
-            R = function() {
+            x = function() {
                 function e() {
                     r(this, e)
                 }
@@ -28721,7 +28734,7 @@
                     }
                 }]), e
             }(),
-            I = new R
+            R = new x
     }, function(e, t, n) {
         "use strict";
 
@@ -30136,73 +30149,73 @@
             return H
         }), n.d(t, "t", function() {
             return z
-        }), n.d(t, "y", function() {
-            return W
         }), n.d(t, "z", function() {
-            return K
-        }), n.d(t, "D", function() {
-            return G
-        }), n.d(t, "E", function() {
-            return Y
-        }), n.d(t, "F", function() {
-            return Q
-        }), n.d(t, "G", function() {
-            return $
-        }), n.d(t, "H", function() {
-            return J
-        }), n.d(t, "I", function() {
-            return X
-        }), n.d(t, "J", function() {
-            return Z
-        }), n.d(t, "K", function() {
-            return ee
-        }), n.d(t, "N", function() {
-            return te
-        }), n.d(t, "L", function() {
-            return ne
-        }), n.d(t, "M", function() {
-            return re
-        }), n.d(t, "P", function() {
-            return ie
+            return W
         }), n.d(t, "A", function() {
-            return ae
-        }), n.d(t, "B", function() {
-            return oe
-        }), n.d(t, "C", function() {
-            return se
+            return K
+        }), n.d(t, "E", function() {
+            return G
+        }), n.d(t, "F", function() {
+            return Y
+        }), n.d(t, "G", function() {
+            return Q
+        }), n.d(t, "H", function() {
+            return $
+        }), n.d(t, "I", function() {
+            return J
+        }), n.d(t, "J", function() {
+            return X
+        }), n.d(t, "K", function() {
+            return Z
+        }), n.d(t, "L", function() {
+            return ee
+        }), n.d(t, "O", function() {
+            return te
+        }), n.d(t, "M", function() {
+            return ne
+        }), n.d(t, "N", function() {
+            return re
         }), n.d(t, "Q", function() {
-            return ue
+            return ie
+        }), n.d(t, "B", function() {
+            return ae
+        }), n.d(t, "C", function() {
+            return oe
+        }), n.d(t, "D", function() {
+            return se
         }), n.d(t, "R", function() {
-            return ce
+            return ue
         }), n.d(t, "S", function() {
-            return le
+            return ce
         }), n.d(t, "T", function() {
-            return de
+            return le
         }), n.d(t, "U", function() {
+            return de
+        }), n.d(t, "V", function() {
             return fe
-        }), n.d(t, "x", function() {
+        }), n.d(t, "y", function() {
             return pe
         }), n.d(t, "v", function() {
             return he
-        }), n.d(t, "V", function() {
+        }), n.d(t, "W", function() {
             return me
         }), n.d(t, "_3", function() {
             return ve
-        }), n.d(t, "Z", function() {
+        }), n.d(t, "w", function() {
             return ye
         }), n.d(t, "r", function() {
             return ge
-        }), n.d(t, "w", function() {
+        }), n.d(t, "x", function() {
             return be
         }), n.d(t, "u", function() {
             return _e
-        }), n.d(t, "O", function() {
+        }), n.d(t, "P", function() {
             return we
-        }), n.d(t, "X", function() {
-            return ke
         }), n.d(t, "Y", function() {
+            return ke
+        }), n.d(t, "Z", function() {
             return Ee
-        }), n.d(t, "W", function() {
+        }), n.d(t, "X", function() {
             return Se
         });
         var i = n(69),
@@ -30391,7 +30404,7 @@
                             this._playerState = e.data.args[0], this._playerStateEmitter.emit("playerstateupdate", this._playerState);
                             break;
                         case ye:
-                            this._eventEmitter.emit(e.data.args[0]);
+                            this._eventEmitter.emit(e.data.args[0].event);
                             break;
                         case ge:
                             this._eventEmitter.emit(e.data.args[0].event, e.data.args[0].data);
@@ -44661,7 +44674,7 @@
         "use strict";
 
         function r(e, t, r, _, k) {
-            function Z(e) {
+            function X(e) {
                 E.a.render(w.a.createElement(S.Provider, {
                     store: e
                 }, w.a.createElement(P.b, {
@@ -44669,7 +44682,7 @@
                 }, w.a.createElement(D.a, null))), document.getElementById("js-loading-overlay"))
             }
 
-            function ee(e) {
+            function Z(e) {
                 E.a.render(w.a.createElement(S.Provider, {
                     store: e
                 }, w.a.createElement(P.b, {
@@ -44677,7 +44690,7 @@
                 }, w.a.createElement(j.a, null))), document.getElementById("stats"))
             }
 
-            function te(e) {
+            function ee(e) {
                 E.a.render(w.a.createElement(S.Provider, {
                     store: e
                 }, w.a.createElement(P.b, {
@@ -44685,7 +44698,7 @@
                 }, w.a.createElement(R.a, null))), document.getElementById("js-collection-sidebar"))
             }
 
-            function ne(e) {
+            function te(e) {
                 E.a.render(w.a.createElement(S.Provider, {
                     store: e
                 }, w.a.createElement(P.b, {
@@ -44693,7 +44706,7 @@
                 }, w.a.createElement(I.a, null))), document.getElementById("empty-collection-overlay"))
             }
 
-            function re(e) {
+            function ne(e) {
                 E.a.render(w.a.createElement(S.Provider, {
                     store: e
                 }, w.a.createElement(P.b, {
@@ -44704,7 +44717,7 @@
                 }, w.a.createElement(T.a, null)))), document.getElementById("js-follow-panel"))
             }
 
-            function ie(e) {
+            function re(e) {
                 E.a.render(w.a.createElement(S.Provider, {
                     store: e
                 }, w.a.createElement(P.b, {
@@ -44715,7 +44728,7 @@
                 }, w.a.createElement(O.a, null)))), document.getElementById("js-dead-ltv-overlay"))
             }
 
-            function ae(e) {
+            function ie(e) {
                 var t = document.getElementById("js-player-extension-confirmation-root");
                 E.a.render(w.a.createElement(S.Provider, {
                     store: e
@@ -44726,7 +44739,7 @@
                 }))), t)
             }
 
-            function oe(e) {
+            function ae(e) {
                 var t = document.getElementById("js-player-extension-root");
                 E.a.render(w.a.createElement(S.Provider, {
                     store: e
@@ -44737,7 +44750,7 @@
                 }))), t)
             }
 
-            function se(e) {
+            function oe(e) {
                 E.a.render(w.a.createElement(S.Provider, {
                     store: e
                 }, w.a.createElement(P.b, {
@@ -44745,7 +44758,7 @@
                 }, w.a.createElement(L.a, null))), document.getElementById("js-player-offline-recommendations-overlay"))
             }
 
-            function ue(e) {
+            function se(e) {
                 E.a.render(w.a.createElement(S.Provider, {
                     store: e
                 }, w.a.createElement(P.b, {
@@ -44753,7 +44766,7 @@
                 }, w.a.createElement(M.a, null))), document.getElementById("js-player-post-vod-recommendations-overlay"))
             }
 
-            function ce(e) {
+            function ue(e) {
                 E.a.render(w.a.createElement(S.Provider, {
                     store: e
                 }, w.a.createElement(P.b, {
@@ -44761,7 +44774,7 @@
                 }, w.a.createElement(z.a, null))), document.getElementById("player-chromecast"))
             }
 
-            function le(e) {
+            function ce(e) {
                 E.a.render(w.a.createElement(S.Provider, {
                     store: e
                 }, w.a.createElement(P.b, {
@@ -44769,7 +44782,7 @@
                 }, w.a.createElement(W.b, null))), document.getElementById("player-mature"))
             }
 
-            function de(e) {
+            function le(e) {
                 E.a.render(w.a.createElement(S.Provider, {
                     store: e
                 }, w.a.createElement(P.b, {
@@ -44777,7 +44790,7 @@
                 }, w.a.createElement(K.b, null))), document.getElementById("player-age-gate-overlay"))
             }
 
-            function fe(e) {
+            function de(e) {
                 E.a.render(w.a.createElement(S.Provider, {
                     store: e
                 }, w.a.createElement(P.b, {
@@ -44785,32 +44798,32 @@
                 }, w.a.createElement(G.a, null))), document.getElementById("player-subscribe-overlay"))
             }
 
-            function pe(e) {
+            function fe(e) {
                 E.a.render(w.a.createElement(S.Provider, {
                     store: e
                 }, w.a.createElement(P.b, {
                     i18n: C.b
                 }, w.a.createElement(Y.a, null))), document.getElementById("storm-warning-overlay"))
             }
-            var he = void 0,
+            var pe = void 0,
+                he = void 0,
                 me = void 0,
                 ve = void 0,
-                ye = void 0,
-                ge = void 0;
+                ye = void 0;
             this.destroy = function() {
-                    he.destroy(), me.destroy(), ve.destroy(), ge.destroy(), ye && ye.destroy()
+                    pe.destroy(), he.destroy(), me.destroy(), ye.destroy(), ve && ve.destroy()
                 },
                 function() {
                     var f = k;
-                    $(t).addClass("player").addClass("theme--dark"), $(t).append(n(692));
+                    t.classList.add("player", "theme--dark"), t.insertAdjacentHTML("beforeend", n(692));
                     var p = r.getState().playback.muted;
-                    r.dispatch(n.i(h.a)(p)), r.dispatch(n.i(m.e)()), r.dispatch(n.i(v.a)()), ae(r), oe(r), re(r), te(r), ne(r), ie(r), ee(r), ue(r), se(r), Z(r), ce(r), le(r), de(r), fe(r), pe(r), E.a.render(w.a.createElement(S.Provider, {
+                    r.dispatch(n.i(h.a)(p)), r.dispatch(n.i(m.e)()), r.dispatch(n.i(v.a)()), ie(r), ae(r), ne(r), ee(r), te(r), re(r), Z(r), se(r), oe(r), X(r), ue(r), ce(r), le(r), de(r), fe(r), E.a.render(w.a.createElement(S.Provider, {
                         store: r
                     }, w.a.createElement(P.b, {
                         i18n: C.b
-                    }, w.a.createElement(J.a, {
+                    }, w.a.createElement($.a, {
                         root: t
-                    }, w.a.createElement(X.a, null, w.a.createElement(x.a, null, w.a.createElement(l.a, null), w.a.createElement(c.a, null), w.a.createElement(u.a, null)), w.a.createElement(s.a, {
+                    }, w.a.createElement(J.a, null, w.a.createElement(x.a, null, w.a.createElement(l.a, null), w.a.createElement(c.a, null), w.a.createElement(u.a, null)), w.a.createElement(s.a, {
                         getCurrentTime: e.getCurrentTime
                     })), w.a.createElement(q.a, null), w.a.createElement(d.a, null)))), document.getElementById("root-player")), E.a.render(w.a.createElement(S.Provider, {
                         store: r
@@ -44828,8 +44841,8 @@
                         store: r
                     }, w.a.createElement(P.b, {
                         i18n: C.b
-                    }, w.a.createElement(B.a, null))), document.getElementById("js-cc-panel")), _.hookUpForm(t), he = new i.a(t, r), me = new o.a(e, t, r, f), ve = new a.a(t, r, f), ye = new y.a(t, r), ge = new Q.a(e, t, r, f), $(t).attr("data-initializing", !0), e.addEventListener(b.h, function() {
-                        $(t).attr("data-initializing", !1)
+                    }, w.a.createElement(B.a, null))), document.getElementById("js-cc-panel")), _.hookUpForm(t), pe = new i.a(t, r), he = new o.a(e, t, r, f), me = new a.a(t, r, f), ve = new y.a(t, r), ye = new Q.a(e, t, r, f), t.setAttribute("data-initializing", !0), e.addEventListener(b.h, function() {
+                        t.setAttribute("data-initializing", !1)
                     }), t.addEventListener("wheel", function(e) {
                         r.dispatch(n.i(H.b)(e))
                     })
@@ -44882,8 +44895,8 @@
             G = n(601),
             Y = n(600),
             Q = n(628),
-            J = n(372),
-            X = n(371)
+            $ = n(372),
+            J = n(371)
     }, function(e, t, n) {
         "use strict";
 
@@ -46803,7 +46816,7 @@
     }, function(e, t, n) {
         e.exports = n.p + "vendor/TwitchPlayer.7cfe0f2e9d071ac72c5a539139bcedd4.swf"
     }, function(e, t) {
-        e.exports = '<div class="player-initializing player-center-content">\n    <div class="pl-loading-spinner"></div>\n</div>\n<div id="player-mature" />\n<div id="player-age-gate-overlay" />\n\n<div id="js-cc-panel"></div>\n\n\n<div id="js-player-post-vod-recommendations-overlay" />\n<div id="js-player-offline-recommendations-overlay" />\n\n<div id="js-background-banner" />\n\n<div id="js-loading-overlay" />\n<div id="user-offline-overlay" />\n<div id="player-chromecast" />\n\n<div class="player-overlay player-fullscreen-overlay js-control-fullscreen-overlay">\n</div>\n\n<div class="player-overlay player-extensions" id="js-player-extension-root">\n</div>\n\n<div id="js-player-extension-confirmation-root" />\n<div id="js-player-captions-container" />\n\n<div id="js-paused-overlay" />\n<div id="player-subscribe-overlay" />\n\n<div id="empty-collection-overlay" />\n<div id="root-player" />\n<div id="js-collection-sidebar"></div>\n<div id="js-follow-panel"></div>\n<div id="js-dead-ltv-overlay" />\n\n<div id="storm-warning-overlay" />\n\n<div id="error-overlay" />\n\n<form class="js-create-clip-form" method="post" action="" target="">\n    <input class="js-create-clip-player-backend-type" type="hidden" name="player_backend_type" value="" />\n    <input class="js-create-clip-channel" type="hidden" name="channel" value="" />\n    <input class="js-create-clip-offset" type="hidden" name="offset" value="" />\n    <input class="js-create-clip-broadcast_id" type="hidden" name="broadcast_id" value="" />\n    <input class="js-create-clip-vod_id" type="hidden" name="vod_id" value="" />\n    <input class="js-create-clip-play_session_id" type="hidden" name="play_session_id" value="" />\n</form>\n\n<div id="js-player-alert-container" />\n\n<div id="stats" />\n\n<svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg" style="width:0;height:0;visibility:hidden;display:block;">\n    <symbol viewBox="0 0 30 30" id="icon_play"><path clip-rule="evenodd" d="M10,7l12,8l-12,8V7z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_pause"><path clip-rule="evenodd" d="M9,22h4V8H9V22z M17,8v14h4V8H17z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_volumefull"><path clip-rule="evenodd" d="M22,21.5v-13L23,8v14L22,21.5z M18,10.5l1-0.5v10l-1-0.5V10.5z M7,18v-6l3,0l5-4v14l-5-4L7,18z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_volumemute"><path clip-rule="evenodd" d="M23,18L23,18h-0.7L20,15.7L17.7,18H17l0,0v-0.7l2.3-2.3L17,12.7V12l0,0h0.7l2.3,2.3l2.3-2.3H23l0,0v0.7L20.7,15l2.3,2.3V18z M7,18v-6l3,0l5-4v14l-5-4L7,18z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_fullscreen"><path clip-rule="evenodd" d="M7,7 L15.2,7 L12.8,9.4 L15.8,12.4 L12.4,15.8 L9.4,12.8 L7,15.2 L7,7 Z M23,23 L14.8,23 L17.2,20.6 L14.2,17.6 L17.6,14.2 L20.6,17.2 L23,14.8 L23,23 Z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_unfullscreen"><path clip-rule="evenodd" d="M15,15 L23.2,15 L20.8,17.4 L23.8,20.4 L20.4,23.8 L17.4,20.8 L15,23.2 L15,15 L15,15 Z M15,15 L6.8,15 L9.2,12.6 L6.2,9.6 L9.6,6.2 L12.6,9.2 L15,6.8 L15,15 L15,15 Z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_settings"><path clip-rule="evenodd" d="M13.3589744,7 L16.6410256,7 L18.0769231,9.8 L21.3589744,9.8 L23,12.2 L21.3589744,15 L23,17.8 L21.3589744,20.2 L18.0769231,20.2 L16.6410256,23 L13.3589744,23 L11.9230769,20.2 L8.64102564,20.2 L7,17.8 L8.64102564,15 L7,12.2 L8.64102564,9.8 L11.9230769,9.8 L13.3589744,7 Z M15,17.8 C16.5860485,17.8 17.8717949,16.5463973 17.8717949,15 C17.8717949,13.4536027 16.5860485,12.2 15,12.2 C13.4139515,12.2 12.1282051,13.4536027 12.1282051,15 C12.1282051,16.5463973 13.4139515,17.8 15,17.8 Z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_theatre"><path d="M6 21h11V9H6v12zM19 9v12h5V9h-5z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_theatre_deactivate"><path d="M6 9h11v12H6V9zm2 2h9v8H8v-8zm9-2h7v12h-7V9zm2 2h3v8h-3v-8z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 63 30" id="icon_twitch"><path clip-rule="evenodd" d="M55,19 L52,19 L52,13 L49,13 L49,19 L46,19 L46,8 L49,8 L49,10 L53,10 L55,12 L55,19 L55,19 Z M45,13 L41,13 L41,16 L45,16 L45,19 L40,19 L38,17 L38,12 L40,10 L45,10 L45,13 L45,13 Z M37,13 L34,13 L34,16 L37,16 L37,19 L33,19 L31,17 L31,8 L34,8 L34,10 L37,10 L37,13 L37,13 Z M27,8 L30,8 L30,9 L27,9 L27,8 Z M27,10 L30,10 L30,19 L27,19 L27,10 Z M26,17 L24,19 L15,19 L15,10 L18,10 L18,16 L19,16 L19,10 L22,10 L22,16 L23,16 L23,10 L26,10 L26,17 L26,17 Z M14,13 L11,13 L11,16 L14,16 L14,19 L10,19 L8,17 L8,8 L11,8 L11,10 L14,10 L14,13 L14,13 Z M53.5,9 L50,9 L50,7 L45.5,7 L43,9 L39.5,9 L38,10.5 L38,9 L35,9 L35,7 L26,7 L26,9 L15,9 L12,7 L7,7 L7,17.5 L9.5,20.125 L14,23 L18,23 L18,22.25 L19.5,23 L25.5,23 L26.5,21.5 L27,23 L31,23 L31,21.5 L32.5,23 L37,23 L37.25,21.5 L38.5,23 L43.5,23 L45,21.5 L45,23 L47.5,23 L49,21.5 L49,23 L52.5,23 L56,19.5 L56,11.5 L53.5,9 L53.5,9 Z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_close"><path clip-rule="evenodd" d="M15.1035534,15.4571068 L11.5303301,19.0303301 L11.3535534,19.2071068 L11,18.8535534 L11.1767767,18.6767767 L14.75,15.1035534 L11.1767767,11.5303301 L11,11.3535534 L11.3535534,11 L11.5303301,11.1767767 L15.1035534,14.75 L18.6767767,11.1767767 L18.8535534,11 L19.2071068,11.3535534 L19.0303301,11.5303301 L15.4571068,15.1035534 L19.0303301,18.6767767 L19.2071068,18.8535534 L18.8535534,19.2071068 L18.6767767,19.0303301 L15.1035534,15.4571068 Z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_close_md"><path clip-rule="evenodd" d="M20.657 10.757L16.414 15l4.243 4.242-1.415 1.415L15 16.414l-4.243 4.243-1.414-1.415L13.586 15l-4.243-4.243 1.414-1.414L15 13.586l4.242-4.243 1.415 1.414z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_chromecast_p1"><path fill-rule="evenodd" clip-rule="evenodd" d="M15,22c0-0.7-0.1-1.4-0.2-2H22V10H8v3.2C7.4,13.1,6.7,13,6,13V8h18v14H15z"/></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_chromecast_p2"><path fill-rule="evenodd" clip-rule="evenodd" d="M10,13.9V12h10v6h-5.9C13.2,16.2,11.8,14.8,10,13.9z"/></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_chromecast_p3"><path fill-rule="evenodd" clip-rule="evenodd" d="M13,22h-1c0-3.3-2.7-6-6-6v-1C9.9,15,13,18.1,13,22z"/></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_chromecast_p4"><path fill-rule="evenodd" clip-rule="evenodd" d="M10,22H9c0-1.7-1.3-3-3-3v-1C8.2,18,10,19.8,10,22z"/></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_chromecast_p5"><path fill-rule="evenodd" clip-rule="evenodd" d="M7,22H6v-1C6.6,21,7,21.4,7,22z"/></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_clips"><path d="M14.802 7.804l-3.83 1.026 2.928 2.321 3.83-1.026-2.928-2.321zm2.895-.776l3.981-1.067.777 2.898-1.83.49-2.928-2.321zM7.969 9.635l-1.745.467L7 13l3.898-1.044-2.929-2.321zM7 13h16v9H7v-9zm1.969 3h2.785l2.228-3h-2.785l-2.228 3zm7.018 0h2.785L21 13h-2.785l-2.228 3z" fill-rule="evenodd"/></symbol>\n    <symbol viewBox="0 0 13 18" id="icon_clips--bday"><path d="M6.505 7.61l2.41 2.33H4.53l.621-2.174-.552-.81L1.43 8.53l1.77-2.803L.266 4.184l3.531-.22.234-3.118 1.761 2.583L8.96 1.854 7.19 4.658 10.124 6.2l-3.53.22-.09 1.189zm6.546 6.33H3.385l.625-2.182h6.785l2.256 2.182zm-3.042 1.818l-7.737 2.073.593-2.073h7.144z" fill-rule="evenodd"/></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_cc_on"><path fill-rule="evenodd" clip-rule="evenodd" d="M5,8 L6,7 L24,7 L25,8 L25,22 L24,23 L6,23 L5,22 L5,8 Z M8,15 C8,17.2003155 9.48065348,18.75 11.5511608,18.75 C13.3929493,18.75 14.4763543,17.6735016 14.7411866,16.1829653 L12.8151333,16.1829653 C12.6225279,16.7271293 12.2252794,17.0820189 11.5511608,17.0820189 C10.527945,17.0820189 9.95012898,16.1829653 9.95012898,15 C9.95012898,13.805205 10.527945,12.9179811 11.5511608,12.9179811 C12.2252794,12.9179811 12.6225279,13.2728707 12.8151333,13.805205 L14.7411866,13.805205 C14.4763543,12.3264984 13.3929493,11.25 11.5511608,11.25 C9.48065348,11.25 8,12.7996845 8,15 Z M15.2588134,15 C15.2588134,17.2003155 16.7394669,18.75 18.8099742,18.75 C20.6517627,18.75 21.7351677,17.6735016 22,16.1829653 L20.0739467,16.1829653 C19.8813414,16.7271293 19.4840929,17.0820189 18.8099742,17.0820189 C17.7867584,17.0820189 17.2089424,16.1829653 17.2089424,15 C17.2089424,13.805205 17.7867584,12.9179811 18.8099742,12.9179811 C19.4840929,12.9179811 19.8813414,13.2728707 20.0739467,13.805205 L22,13.805205 C21.7351677,12.3264984 20.6517627,11.25 18.8099742,11.25 C16.7394669,11.25 15.2588134,12.7996845 15.2588134,15 Z"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_cc_off"><path fill-rule="evenodd" clip-rule="evenodd" d="M5,8 L6,7 L24,7 L25,8 L25,22 L24,23 L6,23 L5,22 L5,8 Z M24,8 L24,22 L6,22 L6,8 L24,8 Z M8,15 C8,17.2003155 9.48065348,18.75 11.5511608,18.75 C13.3929493,18.75 14.4763543,17.6735016 14.7411866,16.1829653 L12.8151333,16.1829653 C12.6225279,16.7271293 12.2252794,17.0820189 11.5511608,17.0820189 C10.527945,17.0820189 9.95012898,16.1829653 9.95012898,15 C9.95012898,13.805205 10.527945,12.9179811 11.5511608,12.9179811 C12.2252794,12.9179811 12.6225279,13.2728707 12.8151333,13.805205 L14.7411866,13.805205 C14.4763543,12.3264984 13.3929493,11.25 11.5511608,11.25 C9.48065348,11.25 8,12.7996845 8,15 Z M15.2588134,15 C15.2588134,17.2003155 16.7394669,18.75 18.8099742,18.75 C20.6517627,18.75 21.7351677,17.6735016 22,16.1829653 L20.0739467,16.1829653 C19.8813414,16.7271293 19.4840929,17.0820189 18.8099742,17.0820189 C17.7867584,17.0820189 17.2089424,16.1829653 17.2089424,15 C17.2089424,13.805205 17.7867584,12.9179811 18.8099742,12.9179811 C19.4840929,12.9179811 19.8813414,13.2728707 20.0739467,13.805205 L22,13.805205 C21.7351677,12.3264984 20.6517627,11.25 18.8099742,11.25 C16.7394669,11.25 15.2588134,12.7996845 15.2588134,15 Z"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_close_modal"><path clip-rule="evenodd" d="M13.657 3.757l-4.243 4.243 4.243 4.242-1.415 1.415-4.242-4.243-4.243 4.243-1.414-1.415 4.243-4.242-4.243-4.243 1.414-1.414 4.243 4.243 4.242-4.243 1.415 1.414z" fill-rule="evenodd"/></symbol>\n    <symbol viewBox="0 0 14 14" id="icon_arrow"><path d="M6.46765898,5.00010938 L6.46755335,5 L3.08055618,8.27078515 C2.97320936,8.37444877 2.97610632,8.52662201 3.07163118,8.6255409 L3.47144895,9.03956433 C3.56460436,9.13602957 3.72584608,9.14003286 3.82630008,9.04302556 L6.46765898,6.49229492 L9.10901788,9.04302556 C9.20947188,9.14003286 9.3707136,9.13602957 9.46386901,9.03956433 L9.86368678,8.6255409 C9.95921164,8.52662201 9.9621086,8.37444877 9.85476178,8.27078515 L6.46776461,5 L6.46765898,5.00010938 Z" transform="translate(6.467659, 7.056937) scale(-1, 1) rotate(-270.000000) translate(-6.467659, -7.056937) "></path></symbol>\n    <symbol viewBox="0 0 98 86" id="age-gate-icon-21"><path d="M24 8h50v10h12V8h10a2 2 0 0 1 2 2v74a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2h10v10h12V8zm52-8h8v16h-8V0zM14 0h8v16h-8V0zm13.638 33.726c2.978-1.237 5.656-1.856 8.032-1.856 3.076 0 5.55.83 7.422 2.49 1.872 1.66 2.807 3.817 2.807 6.47 0 2.083-.52 3.87-1.562 5.359-1.042 1.49-3.027 3.455-5.957 5.896-2.1 1.742-3.414 3.02-3.943 3.833-.529.814-.826 1.782-.891 2.905h12.89V65h-20.36v-3.906c0-3.142.487-5.587 1.464-7.337s3.15-4.04 6.519-6.872c1.595-1.351 2.632-2.364 3.112-3.04.48-.675.72-1.38.72-2.112 0-.96-.374-1.77-1.122-2.429-.75-.659-1.734-.989-2.955-.989-1.79 0-3.849.863-6.176 2.588v-7.177zm32.592-1.319h6.421V65h-7.446V44.272h-5.127v-5.615h1.196c1.563 0 2.78-.431 3.65-1.294.871-.862 1.306-2.148 1.306-3.857v-1.099z" fill="#F9F7FC" fill-rule="evenodd"/></symbol>\n    <symbol viewBox="0 0 98 86" id="age-gate-icon-19"><path d="M24 8h50v10h12V8h10a2 2 0 0 1 2 2v74a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2h10v10h12V8zm52-8h8v16h-8V0zM14 0h8v16h-8V0zm18.718 32.407h6.42V65h-7.446V44.272h-5.127v-5.615h1.197c1.562 0 2.779-.431 3.65-1.294.87-.862 1.306-2.148 1.306-3.857v-1.099zm29.614 18.994c-.911 1.058-1.827 1.856-2.747 2.393-.92.537-1.843.806-2.77.806-2.182 0-4.09-1.034-5.726-3.101-1.635-2.067-2.453-4.622-2.453-7.666 0-3.32.984-6.144 2.954-8.472 1.97-2.327 4.419-3.49 7.348-3.49 3.337 0 6.063 1.496 8.18 4.491 2.115 2.995 3.173 7.137 3.173 12.427 0 2.962-.468 5.717-1.404 8.264-.936 2.547-2.409 4.598-4.419 6.153-2.01 1.554-4.423 2.331-7.239 2.331-2.001 0-4.174-.48-6.518-1.44v-7.202c2.132 1.464 3.988 2.197 5.566 2.197 1.71 0 3.068-.643 4.077-1.929 1.01-1.286 1.669-3.206 1.978-5.762zm0-6.933c-.163-1.937-.541-3.443-1.135-4.517-.594-1.074-1.29-1.611-2.088-1.611-.813 0-1.473.476-1.977 1.428-.505.952-.757 2.128-.757 3.528 0 1.383.236 2.494.708 3.332.472.839 1.099 1.258 1.88 1.258.553 0 1.11-.285 1.672-.855.562-.57 1.127-1.424 1.697-2.563z" fill="#F9F7FC" fill-rule="evenodd"/></symbol>\n    <symbol id="age-gate-fail-icon" viewBox="0 0 92 81"><path d="M0 75.6l3.067-5.4L9.2 59.4l12.267-21.6 12.266-21.6 6.134-10.8L42.933 0h6.134l3.066 5.4 6.134 10.8 12.266 21.6L82.8 59.4l6.133 10.8L92 75.6 89.06 81H3.44L0 75.6zM40 27h12v13l-3 19h-6l-3-19V27zm1 34h10v10H41V61z" fill="#F9F7FC" fill-rule="evenodd"/></symbol>\n    <symbol viewBox="0 0 19 19" id="icon_open_collection"><path fill-rule="evenodd" d="M0,6 L19,6 L19,19 L0,19 L0,6 Z M12.25,12.5 L7,9 L7,16 L12.25,12.5 Z M2,3 L17,3 L17,5 L2,5 L2,3 Z M4,0 L15,0 L15,2 L4,2 L4,0 Z"/></symbol>\n    <symbol id=\'icon_pl-followcheck\' viewBox=\'0 0 16 16\'><path clip-rule=\'evenodd\' d=\'M6.5,12.75L2,8.25l2-2l2.5,2.5l5.5-5.5l2,2L6.5,12.75z\' fill-rule=\'evenodd\'></symbol>\n    <symbol viewBox="0 0 30 30" id="pl-icon_close"><path clip-rule="evenodd" d="M20.657 10.757L16.414 15l4.243 4.242-1.415 1.415L15 16.414l-4.243 4.243-1.414-1.415L13.586 15l-4.243-4.243 1.414-1.414L15 13.586l4.242-4.243 1.415 1.414z"/></symbol>\n    <symbol viewBox="0 0 14 12" id="pl-icon_vod"><path d="M0 12h14V0H0v12zm4-3V3l7 3-7 3z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 16 3" id="icon_more_info"><path d="M15 1.5c0 .389-.139.736-.417 1.042-.277.305-.639.458-1.083.458-.444 0-.806-.153-1.083-.458a1.506 1.506 0 0 1 0-2.084C12.694.153 13.056 0 13.5 0c.444 0 .806.153 1.083.458.278.306.417.653.417 1.042zm-6 0c0 .389-.139.736-.417 1.042C8.306 2.847 7.944 3 7.5 3c-.444 0-.806-.153-1.083-.458a1.506 1.506 0 0 1 0-2.084C6.694.153 7.056 0 7.5 0c.444 0 .806.153 1.083.458C8.861.764 9 1.111 9 1.5zm-6 0c0 .389-.139.736-.417 1.042C2.306 2.847 1.944 3 1.5 3c-.444 0-.806-.153-1.083-.458a1.506 1.506 0 0 1 0-2.084C.694.153 1.056 0 1.5 0c.444 0 .806.153 1.083.458C2.861.764 3 1.111 3 1.5z" fill-rule="evenodd"/></symbol>\n    <symbol viewBox="0 0 22 14" id="icon_grant_permissions"><g fill-rule="evenodd"><path d="M16 5h-3v1.994L11.91 8H16v3l6-4.5L16 2v3z"/><path d="M0 14v-1l3-3h3L3 7V0h8v7l-3 3h3l3 3v1z"/></g></symbol>\n    <symbol viewBox="0 0 22 14" id="icon_revoke_permissions"><g fill-rule="evenodd"><path d="M0 14v-1l3-3h3L3 7V0h8v7l-3 3h3l3 3v1z"/><path fill="currentColor" d="M17.013 5.34l-2.37-2.37-1.624 1.624 2.37 2.37-2.37 2.37 1.624 1.624 2.37-2.37 2.37 2.37 1.624-1.624-2.37-2.37 2.37-2.37-1.624-1.624-2.37 2.37z"/></g></symbol>\n    <symbol viewBox="0 0 22 14" id="icon_approved_permissions"><g fill-rule="evenodd"><path d="M0 14v-1l3-3h3L3 7V0h8v7l-3 3h3l3 3v1z"/><path fill="currentColor" fill-rule="nonzero" d="M20.356 3L22 4.618 15.513 11 12 7.543l1.644-1.617 1.87 1.839z"/></g></symbol>\n    <symbol viewBox="0 0 16 16" id="icon_report_flag"><path clip-rule="evenodd" d="M3,14 L1,14 L1,2 L3,2 L3,14 L3,14 Z M4,2 L11,2 L11,4 L15,4 L15,11 L8,11 L8,9 L4,9 L4,2 L4,2 Z"></path></symbol>\n    <symbol viewBox="0 0 12 12" height=\'12px\' id="icon_offline"><path clip-rule="evenodd" d="M6,0 C-1.7,0, -1.7,12, 6,12 C13.7,12, 13.7,0, 6,0" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 12 12" height=\'12px\' id="icon_live"><path clip-rule="evenodd" d="M6,0 C-1.7,0, -1.7,12, 6,12 C13.7,12, 13.7,0, 6,0" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 12 12" height=\'12px\' id="icon_vodcast"><path clip-rule="evenodd" d="M6,0 C-1.7,0, -1.7,12, 6,12 C13.7,12, 13.7,0, 6,0" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 20 20" height=\'36px\' id="icon_premiere">\n        <path d="M10 1c4.9 0 9 4.1 9 9s-4 9-9 9-9-4-9-9 4-9 9-9zm0 1.8c-3.9 0-7.2 3.3-7.2 7.2 0 3.9 3.3 7.2 7.2 7.2 3.9 0 7.2-3.3 7.2-7.2 0-3.9-3.3-7.2-7.2-7.2zm3.668 7.737l-4.8 3.4C8.784 13.98 8.69 14 8.6 14c-.11 0-.22-.03-.316-.09-.177-.107-.284-.3-.284-.51V6.6c0-.208.107-.4.284-.51C8.38 6.03 8.49 6 8.6 6c.09 0 .184.02.268.063l4.8 3.4c.204.102.332.31.332.537 0 .227-.128.435-.332.537z"/>\n    </symbol>\n    <symbol viewBox="0 0 20 20" height=\'12px\' id="icon_rerun">\n        <path d="M17.953 4.797c-.004-.404-.25-.766-.626-.917-.12-.05-.247-.073-.373-.073-.264 0-.522.104-.713.3l-1.49 1.526c-.725-.937-1.677-1.684-2.795-2.167-1.745-.754-3.68-.783-5.45-.084-1.766.702-3.154 2.048-3.91 3.795-.753 1.744-.783 3.68-.083 5.446.7 1.767 2.048 3.156 3.794 3.91 1.745.756 3.68.785 5.447.084.563-.222.838-.858.615-1.42-.22-.564-.856-.838-1.42-.615-1.224.485-2.563.464-3.77-.058-1.21-.522-2.143-1.484-2.63-2.707-.483-1.225-.462-2.562.06-3.772.523-1.21 1.484-2.14 2.707-2.626 1.225-.49 2.563-.47 3.773.05.867.375 1.585.983 2.104 1.745L11.3 9.142c-.283.288-.364.718-.206 1.09.155.37.517.608.92.608h.01l4.993-.046c.552-.006.995-.457.99-1.01L17.96 4.79z"/>\n    </symbol>\n    <symbol id="icon_heart" height=\'16px\' version=\'1.1\' viewBox=\'0 0 16 16\' width=\'16px\' x=\'0px\' y=\'0px\'>\n      <path clip-rule=\'evenodd\' d=\'M8,14L1,7V4l2-2h3l2,2l2-2h3l2,2v3L8,14z\' fill-rule=\'evenodd\'></path>\n    </symbol>\n    <symbol id=\'icon_unheart\' height=\'16px\' version=\'1.1\' viewBox=\'0 0 16 16\' width=\'16px\' x=\'0px\' y=\'0px\'>\n      <path clip-rule=\'evenodd\' d=\'M1,9V7h14v2H1z M1,4l2-2h3l2,2l2-2h3l2,2v2H1V4z M8,14l-4.667-4h9.333L8,14z\' fill-rule=\'evenodd\'></path>\n    </symbol>\n    <symbol viewBox="0 0 30 30" id="icon_extensions"><path d="M20 17.113V22a1 1 0 0 1-1 1h-4.887c.257-1.051.87-1.404.887-1.917C15.025 19.6 14.006 19 13 19c-1.004 0-2.055.6-1.998 2.083.037.483.642.854.894 1.917H8a1 1 0 0 1-1-1v-4.887c1.051.257 1.404.87 1.917.887C10.4 18.025 11 17.006 11 16c0-1.004-.6-2.055-2.083-1.998-.483.037-.854.642-1.917.894V11a1 1 0 0 1 1-1h3.896c-.252-1.063-.857-1.434-.894-1.917C10.945 6.6 11.996 6 13 6c1.006 0 2.025.599 2 2.083-.016.513-.63.866-.887 1.917H19a1 1 0 0 1 1 1v3.896c1.063-.252 1.434-.857 1.917-.894C23.4 13.945 24 14.996 24 16c0 1.006-.599 2.025-2.083 2-.513-.016-.866-.63-1.917-.887z" fill-rule="evenodd"/></symbol>\n</svg>\n'
+        e.exports = '<div class="player-initializing player-center-content">\n    <div class="pl-loading-spinner"></div>\n</div>\n<div id="player-mature"></div>\n<div id="player-age-gate-overlay"></div>\n\n<div id="js-cc-panel"></div>\n\n<div id="js-ad-overlay"></div>\n<div id="js-player-post-vod-recommendations-overlay"></div>\n<div id="js-player-offline-recommendations-overlay"></div>\n\n<div id="js-player-post-vod-recommendations-overlay"></div>\n<div id="js-player-offline-recommendations-overlay"></div>\n\n<div id="js-background-banner"></div>\n\n<div id="js-loading-overlay"></div>\n<div id="user-offline-overlay"></div>\n<div id="player-chromecast"></div>\n\n<div class="player-overlay player-fullscreen-overlay js-control-fullscreen-overlay"></div>\n\n<div class="player-overlay player-extensions" id="js-player-extension-root"></div>\n\n<div id="js-player-extension-confirmation-root"></div>\n<div id="js-player-captions-container"></div>\n\n<div id="js-paused-overlay"></div>\n<div id="player-subscribe-overlay"></div>\n\n<div id="empty-collection-overlay"></div>\n\n<div id="root-player"></div>\n\n<div id="js-collection-sidebar"></div>\n<div id="js-follow-panel"></div>\n<div id="js-dead-ltv-overlay"></div>\n\n<div id="storm-warning-overlay"></div>\n\n<div id="error-overlay"></div>\n\n<form class="js-create-clip-form" method="post" action="" target="">\n    <input class="js-create-clip-player-backend-type" type="hidden" name="player_backend_type" value="">\n    <input class="js-create-clip-channel" type="hidden" name="channel" value="">\n    <input class="js-create-clip-offset" type="hidden" name="offset" value="">\n    <input class="js-create-clip-broadcast_id" type="hidden" name="broadcast_id" value="">\n    <input class="js-create-clip-vod_id" type="hidden" name="vod_id" value="">\n    <input class="js-create-clip-play_session_id" type="hidden" name="play_session_id" value="">\n</form>\n\n<div id="js-player-alert-container"></div>\n\n<div id="stats"></div>\n\n<svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg" style="width:0;height:0;visibility:hidden;display:block;">\n    <symbol viewBox="0 0 30 30" id="icon_play"><path clip-rule="evenodd" d="M10,7l12,8l-12,8V7z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_pause"><path clip-rule="evenodd" d="M9,22h4V8H9V22z M17,8v14h4V8H17z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_volumefull"><path clip-rule="evenodd" d="M22,21.5v-13L23,8v14L22,21.5z M18,10.5l1-0.5v10l-1-0.5V10.5z M7,18v-6l3,0l5-4v14l-5-4L7,18z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_volumemute"><path clip-rule="evenodd" d="M23,18L23,18h-0.7L20,15.7L17.7,18H17l0,0v-0.7l2.3-2.3L17,12.7V12l0,0h0.7l2.3,2.3l2.3-2.3H23l0,0v0.7L20.7,15l2.3,2.3V18z M7,18v-6l3,0l5-4v14l-5-4L7,18z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_fullscreen"><path clip-rule="evenodd" d="M7,7 L15.2,7 L12.8,9.4 L15.8,12.4 L12.4,15.8 L9.4,12.8 L7,15.2 L7,7 Z M23,23 L14.8,23 L17.2,20.6 L14.2,17.6 L17.6,14.2 L20.6,17.2 L23,14.8 L23,23 Z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_unfullscreen"><path clip-rule="evenodd" d="M15,15 L23.2,15 L20.8,17.4 L23.8,20.4 L20.4,23.8 L17.4,20.8 L15,23.2 L15,15 L15,15 Z M15,15 L6.8,15 L9.2,12.6 L6.2,9.6 L9.6,6.2 L12.6,9.2 L15,6.8 L15,15 L15,15 Z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_settings"><path clip-rule="evenodd" d="M13.3589744,7 L16.6410256,7 L18.0769231,9.8 L21.3589744,9.8 L23,12.2 L21.3589744,15 L23,17.8 L21.3589744,20.2 L18.0769231,20.2 L16.6410256,23 L13.3589744,23 L11.9230769,20.2 L8.64102564,20.2 L7,17.8 L8.64102564,15 L7,12.2 L8.64102564,9.8 L11.9230769,9.8 L13.3589744,7 Z M15,17.8 C16.5860485,17.8 17.8717949,16.5463973 17.8717949,15 C17.8717949,13.4536027 16.5860485,12.2 15,12.2 C13.4139515,12.2 12.1282051,13.4536027 12.1282051,15 C12.1282051,16.5463973 13.4139515,17.8 15,17.8 Z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_theatre"><path d="M6 21h11V9H6v12zM19 9v12h5V9h-5z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_theatre_deactivate"><path d="M6 9h11v12H6V9zm2 2h9v8H8v-8zm9-2h7v12h-7V9zm2 2h3v8h-3v-8z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 63 30" id="icon_twitch"><path clip-rule="evenodd" d="M55,19 L52,19 L52,13 L49,13 L49,19 L46,19 L46,8 L49,8 L49,10 L53,10 L55,12 L55,19 L55,19 Z M45,13 L41,13 L41,16 L45,16 L45,19 L40,19 L38,17 L38,12 L40,10 L45,10 L45,13 L45,13 Z M37,13 L34,13 L34,16 L37,16 L37,19 L33,19 L31,17 L31,8 L34,8 L34,10 L37,10 L37,13 L37,13 Z M27,8 L30,8 L30,9 L27,9 L27,8 Z M27,10 L30,10 L30,19 L27,19 L27,10 Z M26,17 L24,19 L15,19 L15,10 L18,10 L18,16 L19,16 L19,10 L22,10 L22,16 L23,16 L23,10 L26,10 L26,17 L26,17 Z M14,13 L11,13 L11,16 L14,16 L14,19 L10,19 L8,17 L8,8 L11,8 L11,10 L14,10 L14,13 L14,13 Z M53.5,9 L50,9 L50,7 L45.5,7 L43,9 L39.5,9 L38,10.5 L38,9 L35,9 L35,7 L26,7 L26,9 L15,9 L12,7 L7,7 L7,17.5 L9.5,20.125 L14,23 L18,23 L18,22.25 L19.5,23 L25.5,23 L26.5,21.5 L27,23 L31,23 L31,21.5 L32.5,23 L37,23 L37.25,21.5 L38.5,23 L43.5,23 L45,21.5 L45,23 L47.5,23 L49,21.5 L49,23 L52.5,23 L56,19.5 L56,11.5 L53.5,9 L53.5,9 Z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_close"><path clip-rule="evenodd" d="M15.1035534,15.4571068 L11.5303301,19.0303301 L11.3535534,19.2071068 L11,18.8535534 L11.1767767,18.6767767 L14.75,15.1035534 L11.1767767,11.5303301 L11,11.3535534 L11.3535534,11 L11.5303301,11.1767767 L15.1035534,14.75 L18.6767767,11.1767767 L18.8535534,11 L19.2071068,11.3535534 L19.0303301,11.5303301 L15.4571068,15.1035534 L19.0303301,18.6767767 L19.2071068,18.8535534 L18.8535534,19.2071068 L18.6767767,19.0303301 L15.1035534,15.4571068 Z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_close_md"><path clip-rule="evenodd" d="M20.657 10.757L16.414 15l4.243 4.242-1.415 1.415L15 16.414l-4.243 4.243-1.414-1.415L13.586 15l-4.243-4.243 1.414-1.414L15 13.586l4.242-4.243 1.415 1.414z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_chromecast_p1"><path fill-rule="evenodd" clip-rule="evenodd" d="M15,22c0-0.7-0.1-1.4-0.2-2H22V10H8v3.2C7.4,13.1,6.7,13,6,13V8h18v14H15z"/></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_chromecast_p2"><path fill-rule="evenodd" clip-rule="evenodd" d="M10,13.9V12h10v6h-5.9C13.2,16.2,11.8,14.8,10,13.9z"/></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_chromecast_p3"><path fill-rule="evenodd" clip-rule="evenodd" d="M13,22h-1c0-3.3-2.7-6-6-6v-1C9.9,15,13,18.1,13,22z"/></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_chromecast_p4"><path fill-rule="evenodd" clip-rule="evenodd" d="M10,22H9c0-1.7-1.3-3-3-3v-1C8.2,18,10,19.8,10,22z"/></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_chromecast_p5"><path fill-rule="evenodd" clip-rule="evenodd" d="M7,22H6v-1C6.6,21,7,21.4,7,22z"/></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_clips"><path d="M14.802 7.804l-3.83 1.026 2.928 2.321 3.83-1.026-2.928-2.321zm2.895-.776l3.981-1.067.777 2.898-1.83.49-2.928-2.321zM7.969 9.635l-1.745.467L7 13l3.898-1.044-2.929-2.321zM7 13h16v9H7v-9zm1.969 3h2.785l2.228-3h-2.785l-2.228 3zm7.018 0h2.785L21 13h-2.785l-2.228 3z" fill-rule="evenodd"/></symbol>\n    <symbol viewBox="0 0 13 18" id="icon_clips--bday"><path d="M6.505 7.61l2.41 2.33H4.53l.621-2.174-.552-.81L1.43 8.53l1.77-2.803L.266 4.184l3.531-.22.234-3.118 1.761 2.583L8.96 1.854 7.19 4.658 10.124 6.2l-3.53.22-.09 1.189zm6.546 6.33H3.385l.625-2.182h6.785l2.256 2.182zm-3.042 1.818l-7.737 2.073.593-2.073h7.144z" fill-rule="evenodd"/></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_cc_on"><path fill-rule="evenodd" clip-rule="evenodd" d="M5,8 L6,7 L24,7 L25,8 L25,22 L24,23 L6,23 L5,22 L5,8 Z M8,15 C8,17.2003155 9.48065348,18.75 11.5511608,18.75 C13.3929493,18.75 14.4763543,17.6735016 14.7411866,16.1829653 L12.8151333,16.1829653 C12.6225279,16.7271293 12.2252794,17.0820189 11.5511608,17.0820189 C10.527945,17.0820189 9.95012898,16.1829653 9.95012898,15 C9.95012898,13.805205 10.527945,12.9179811 11.5511608,12.9179811 C12.2252794,12.9179811 12.6225279,13.2728707 12.8151333,13.805205 L14.7411866,13.805205 C14.4763543,12.3264984 13.3929493,11.25 11.5511608,11.25 C9.48065348,11.25 8,12.7996845 8,15 Z M15.2588134,15 C15.2588134,17.2003155 16.7394669,18.75 18.8099742,18.75 C20.6517627,18.75 21.7351677,17.6735016 22,16.1829653 L20.0739467,16.1829653 C19.8813414,16.7271293 19.4840929,17.0820189 18.8099742,17.0820189 C17.7867584,17.0820189 17.2089424,16.1829653 17.2089424,15 C17.2089424,13.805205 17.7867584,12.9179811 18.8099742,12.9179811 C19.4840929,12.9179811 19.8813414,13.2728707 20.0739467,13.805205 L22,13.805205 C21.7351677,12.3264984 20.6517627,11.25 18.8099742,11.25 C16.7394669,11.25 15.2588134,12.7996845 15.2588134,15 Z"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_cc_off"><path fill-rule="evenodd" clip-rule="evenodd" d="M5,8 L6,7 L24,7 L25,8 L25,22 L24,23 L6,23 L5,22 L5,8 Z M24,8 L24,22 L6,22 L6,8 L24,8 Z M8,15 C8,17.2003155 9.48065348,18.75 11.5511608,18.75 C13.3929493,18.75 14.4763543,17.6735016 14.7411866,16.1829653 L12.8151333,16.1829653 C12.6225279,16.7271293 12.2252794,17.0820189 11.5511608,17.0820189 C10.527945,17.0820189 9.95012898,16.1829653 9.95012898,15 C9.95012898,13.805205 10.527945,12.9179811 11.5511608,12.9179811 C12.2252794,12.9179811 12.6225279,13.2728707 12.8151333,13.805205 L14.7411866,13.805205 C14.4763543,12.3264984 13.3929493,11.25 11.5511608,11.25 C9.48065348,11.25 8,12.7996845 8,15 Z M15.2588134,15 C15.2588134,17.2003155 16.7394669,18.75 18.8099742,18.75 C20.6517627,18.75 21.7351677,17.6735016 22,16.1829653 L20.0739467,16.1829653 C19.8813414,16.7271293 19.4840929,17.0820189 18.8099742,17.0820189 C17.7867584,17.0820189 17.2089424,16.1829653 17.2089424,15 C17.2089424,13.805205 17.7867584,12.9179811 18.8099742,12.9179811 C19.4840929,12.9179811 19.8813414,13.2728707 20.0739467,13.805205 L22,13.805205 C21.7351677,12.3264984 20.6517627,11.25 18.8099742,11.25 C16.7394669,11.25 15.2588134,12.7996845 15.2588134,15 Z"></path></symbol>\n    <symbol viewBox="0 0 30 30" id="icon_close_modal"><path clip-rule="evenodd" d="M13.657 3.757l-4.243 4.243 4.243 4.242-1.415 1.415-4.242-4.243-4.243 4.243-1.414-1.415 4.243-4.242-4.243-4.243 1.414-1.414 4.243 4.243 4.242-4.243 1.415 1.414z" fill-rule="evenodd"/></symbol>\n    <symbol viewBox="0 0 14 14" id="icon_arrow"><path d="M6.46765898,5.00010938 L6.46755335,5 L3.08055618,8.27078515 C2.97320936,8.37444877 2.97610632,8.52662201 3.07163118,8.6255409 L3.47144895,9.03956433 C3.56460436,9.13602957 3.72584608,9.14003286 3.82630008,9.04302556 L6.46765898,6.49229492 L9.10901788,9.04302556 C9.20947188,9.14003286 9.3707136,9.13602957 9.46386901,9.03956433 L9.86368678,8.6255409 C9.95921164,8.52662201 9.9621086,8.37444877 9.85476178,8.27078515 L6.46776461,5 L6.46765898,5.00010938 Z" transform="translate(6.467659, 7.056937) scale(-1, 1) rotate(-270.000000) translate(-6.467659, -7.056937) "></path></symbol>\n    <symbol viewBox="0 0 98 86" id="age-gate-icon-21"><path d="M24 8h50v10h12V8h10a2 2 0 0 1 2 2v74a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2h10v10h12V8zm52-8h8v16h-8V0zM14 0h8v16h-8V0zm13.638 33.726c2.978-1.237 5.656-1.856 8.032-1.856 3.076 0 5.55.83 7.422 2.49 1.872 1.66 2.807 3.817 2.807 6.47 0 2.083-.52 3.87-1.562 5.359-1.042 1.49-3.027 3.455-5.957 5.896-2.1 1.742-3.414 3.02-3.943 3.833-.529.814-.826 1.782-.891 2.905h12.89V65h-20.36v-3.906c0-3.142.487-5.587 1.464-7.337s3.15-4.04 6.519-6.872c1.595-1.351 2.632-2.364 3.112-3.04.48-.675.72-1.38.72-2.112 0-.96-.374-1.77-1.122-2.429-.75-.659-1.734-.989-2.955-.989-1.79 0-3.849.863-6.176 2.588v-7.177zm32.592-1.319h6.421V65h-7.446V44.272h-5.127v-5.615h1.196c1.563 0 2.78-.431 3.65-1.294.871-.862 1.306-2.148 1.306-3.857v-1.099z" fill="#F9F7FC" fill-rule="evenodd"/></symbol>\n    <symbol viewBox="0 0 98 86" id="age-gate-icon-19"><path d="M24 8h50v10h12V8h10a2 2 0 0 1 2 2v74a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2h10v10h12V8zm52-8h8v16h-8V0zM14 0h8v16h-8V0zm18.718 32.407h6.42V65h-7.446V44.272h-5.127v-5.615h1.197c1.562 0 2.779-.431 3.65-1.294.87-.862 1.306-2.148 1.306-3.857v-1.099zm29.614 18.994c-.911 1.058-1.827 1.856-2.747 2.393-.92.537-1.843.806-2.77.806-2.182 0-4.09-1.034-5.726-3.101-1.635-2.067-2.453-4.622-2.453-7.666 0-3.32.984-6.144 2.954-8.472 1.97-2.327 4.419-3.49 7.348-3.49 3.337 0 6.063 1.496 8.18 4.491 2.115 2.995 3.173 7.137 3.173 12.427 0 2.962-.468 5.717-1.404 8.264-.936 2.547-2.409 4.598-4.419 6.153-2.01 1.554-4.423 2.331-7.239 2.331-2.001 0-4.174-.48-6.518-1.44v-7.202c2.132 1.464 3.988 2.197 5.566 2.197 1.71 0 3.068-.643 4.077-1.929 1.01-1.286 1.669-3.206 1.978-5.762zm0-6.933c-.163-1.937-.541-3.443-1.135-4.517-.594-1.074-1.29-1.611-2.088-1.611-.813 0-1.473.476-1.977 1.428-.505.952-.757 2.128-.757 3.528 0 1.383.236 2.494.708 3.332.472.839 1.099 1.258 1.88 1.258.553 0 1.11-.285 1.672-.855.562-.57 1.127-1.424 1.697-2.563z" fill="#F9F7FC" fill-rule="evenodd"/></symbol>\n    <symbol id="age-gate-fail-icon" viewBox="0 0 92 81"><path d="M0 75.6l3.067-5.4L9.2 59.4l12.267-21.6 12.266-21.6 6.134-10.8L42.933 0h6.134l3.066 5.4 6.134 10.8 12.266 21.6L82.8 59.4l6.133 10.8L92 75.6 89.06 81H3.44L0 75.6zM40 27h12v13l-3 19h-6l-3-19V27zm1 34h10v10H41V61z" fill="#F9F7FC" fill-rule="evenodd"/></symbol>\n    <symbol viewBox="0 0 19 19" id="icon_open_collection"><path fill-rule="evenodd" d="M0,6 L19,6 L19,19 L0,19 L0,6 Z M12.25,12.5 L7,9 L7,16 L12.25,12.5 Z M2,3 L17,3 L17,5 L2,5 L2,3 Z M4,0 L15,0 L15,2 L4,2 L4,0 Z"/></symbol>\n    <symbol id=\'icon_pl-followcheck\' viewBox=\'0 0 16 16\'><path clip-rule=\'evenodd\' d=\'M6.5,12.75L2,8.25l2-2l2.5,2.5l5.5-5.5l2,2L6.5,12.75z\' fill-rule=\'evenodd\'></symbol>\n    <symbol viewBox="0 0 30 30" id="pl-icon_close"><path clip-rule="evenodd" d="M20.657 10.757L16.414 15l4.243 4.242-1.415 1.415L15 16.414l-4.243 4.243-1.414-1.415L13.586 15l-4.243-4.243 1.414-1.414L15 13.586l4.242-4.243 1.415 1.414z"/></symbol>\n    <symbol viewBox="0 0 14 12" id="pl-icon_vod"><path d="M0 12h14V0H0v12zm4-3V3l7 3-7 3z" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 16 3" id="icon_more_info"><path d="M15 1.5c0 .389-.139.736-.417 1.042-.277.305-.639.458-1.083.458-.444 0-.806-.153-1.083-.458a1.506 1.506 0 0 1 0-2.084C12.694.153 13.056 0 13.5 0c.444 0 .806.153 1.083.458.278.306.417.653.417 1.042zm-6 0c0 .389-.139.736-.417 1.042C8.306 2.847 7.944 3 7.5 3c-.444 0-.806-.153-1.083-.458a1.506 1.506 0 0 1 0-2.084C6.694.153 7.056 0 7.5 0c.444 0 .806.153 1.083.458C8.861.764 9 1.111 9 1.5zm-6 0c0 .389-.139.736-.417 1.042C2.306 2.847 1.944 3 1.5 3c-.444 0-.806-.153-1.083-.458a1.506 1.506 0 0 1 0-2.084C.694.153 1.056 0 1.5 0c.444 0 .806.153 1.083.458C2.861.764 3 1.111 3 1.5z" fill-rule="evenodd"/></symbol>\n    <symbol viewBox="0 0 22 14" id="icon_grant_permissions"><g fill-rule="evenodd"><path d="M16 5h-3v1.994L11.91 8H16v3l6-4.5L16 2v3z"/><path d="M0 14v-1l3-3h3L3 7V0h8v7l-3 3h3l3 3v1z"/></g></symbol>\n    <symbol viewBox="0 0 22 14" id="icon_revoke_permissions"><g fill-rule="evenodd"><path d="M0 14v-1l3-3h3L3 7V0h8v7l-3 3h3l3 3v1z"/><path fill="currentColor" d="M17.013 5.34l-2.37-2.37-1.624 1.624 2.37 2.37-2.37 2.37 1.624 1.624 2.37-2.37 2.37 2.37 1.624-1.624-2.37-2.37 2.37-2.37-1.624-1.624-2.37 2.37z"/></g></symbol>\n    <symbol viewBox="0 0 22 14" id="icon_approved_permissions"><g fill-rule="evenodd"><path d="M0 14v-1l3-3h3L3 7V0h8v7l-3 3h3l3 3v1z"/><path fill="currentColor" fill-rule="nonzero" d="M20.356 3L22 4.618 15.513 11 12 7.543l1.644-1.617 1.87 1.839z"/></g></symbol>\n    <symbol viewBox="0 0 16 16" id="icon_report_flag"><path clip-rule="evenodd" d="M3,14 L1,14 L1,2 L3,2 L3,14 L3,14 Z M4,2 L11,2 L11,4 L15,4 L15,11 L8,11 L8,9 L4,9 L4,2 L4,2 Z"></path></symbol>\n    <symbol viewBox="0 0 12 12" height=\'12px\' id="icon_offline"><path clip-rule="evenodd" d="M6,0 C-1.7,0, -1.7,12, 6,12 C13.7,12, 13.7,0, 6,0" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 12 12" height=\'12px\' id="icon_live"><path clip-rule="evenodd" d="M6,0 C-1.7,0, -1.7,12, 6,12 C13.7,12, 13.7,0, 6,0" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 12 12" height=\'12px\' id="icon_vodcast"><path clip-rule="evenodd" d="M6,0 C-1.7,0, -1.7,12, 6,12 C13.7,12, 13.7,0, 6,0" fill-rule="evenodd"></path></symbol>\n    <symbol viewBox="0 0 20 20" height=\'36px\' id="icon_premiere">\n        <path d="M10 1c4.9 0 9 4.1 9 9s-4 9-9 9-9-4-9-9 4-9 9-9zm0 1.8c-3.9 0-7.2 3.3-7.2 7.2 0 3.9 3.3 7.2 7.2 7.2 3.9 0 7.2-3.3 7.2-7.2 0-3.9-3.3-7.2-7.2-7.2zm3.668 7.737l-4.8 3.4C8.784 13.98 8.69 14 8.6 14c-.11 0-.22-.03-.316-.09-.177-.107-.284-.3-.284-.51V6.6c0-.208.107-.4.284-.51C8.38 6.03 8.49 6 8.6 6c.09 0 .184.02.268.063l4.8 3.4c.204.102.332.31.332.537 0 .227-.128.435-.332.537z"></path>\n    </symbol>\n    <symbol viewBox="0 0 20 20" height=\'12px\' id="icon_rerun">\n        <path d="M17.953 4.797c-.004-.404-.25-.766-.626-.917-.12-.05-.247-.073-.373-.073-.264 0-.522.104-.713.3l-1.49 1.526c-.725-.937-1.677-1.684-2.795-2.167-1.745-.754-3.68-.783-5.45-.084-1.766.702-3.154 2.048-3.91 3.795-.753 1.744-.783 3.68-.083 5.446.7 1.767 2.048 3.156 3.794 3.91 1.745.756 3.68.785 5.447.084.563-.222.838-.858.615-1.42-.22-.564-.856-.838-1.42-.615-1.224.485-2.563.464-3.77-.058-1.21-.522-2.143-1.484-2.63-2.707-.483-1.225-.462-2.562.06-3.772.523-1.21 1.484-2.14 2.707-2.626 1.225-.49 2.563-.47 3.773.05.867.375 1.585.983 2.104 1.745L11.3 9.142c-.283.288-.364.718-.206 1.09.155.37.517.608.92.608h.01l4.993-.046c.552-.006.995-.457.99-1.01L17.96 4.79z"></path>\n    </symbol>\n    <symbol id="icon_heart" height=\'16px\' version=\'1.1\' viewBox=\'0 0 16 16\' width=\'16px\' x=\'0px\' y=\'0px\'>\n      <path clip-rule=\'evenodd\' d=\'M8,14L1,7V4l2-2h3l2,2l2-2h3l2,2v3L8,14z\' fill-rule=\'evenodd\'></path>\n    </symbol>\n    <symbol id=\'icon_unheart\' height=\'16px\' version=\'1.1\' viewBox=\'0 0 16 16\' width=\'16px\' x=\'0px\' y=\'0px\'>\n      <path clip-rule=\'evenodd\' d=\'M1,9V7h14v2H1z M1,4l2-2h3l2,2l2-2h3l2,2v2H1V4z M8,14l-4.667-4h9.333L8,14z\' fill-rule=\'evenodd\'></path>\n    </symbol>\n    <symbol viewBox="0 0 30 30" id="icon_extensions"><path d="M20 17.113V22a1 1 0 0 1-1 1h-4.887c.257-1.051.87-1.404.887-1.917C15.025 19.6 14.006 19 13 19c-1.004 0-2.055.6-1.998 2.083.037.483.642.854.894 1.917H8a1 1 0 0 1-1-1v-4.887c1.051.257 1.404.87 1.917.887C10.4 18.025 11 17.006 11 16c0-1.004-.6-2.055-2.083-1.998-.483.037-.854.642-1.917.894V11a1 1 0 0 1 1-1h3.896c-.252-1.063-.857-1.434-.894-1.917C10.945 6.6 11.996 6 13 6c1.006 0 2.025.599 2 2.083-.016.513-.63.866-.887 1.917H19a1 1 0 0 1 1 1v3.896c1.063-.252 1.434-.857 1.917-.894C23.4 13.945 24 14.996 24 16c0 1.006-.599 2.025-2.083 2-.513-.016-.866-.63-1.917-.887z" fill-rule="evenodd"/></symbol>\n</svg>\n'
     }, function(e, t, n) {
         e.exports = {
             parse: n(695),
