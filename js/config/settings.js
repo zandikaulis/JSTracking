@@ -55,7 +55,7 @@ window.__twilightSettings = {
     "sizmek_versatag_events": ["YeUmkUI9R5GKR5WGtg046A", "f4aK8duASJKiAYAiETsUvw", "WN1Ly4NxRgOrSNWOSG40PQ", "YFCU_dppR6Oor32XLPrU2w", "2HsLVRMUTnqChbVy5YSsfg", "f4aK8duASJKiAYAiETsUvw"],
     "sizmek_versatag_games": ["496712", "Call of Duty: WWII", "497571", "Wrestling"],
     "sizmek_versatag_teams": ["wrestling"],
-    "spade_url": "https://video-edge-f2f4e4.sjc01.hls.ttvnw.net/v1/playlist/CqQ8PPMoNnEswYAuYbakYDpvpqOqndfsq363Mmst-BFNbPAKGXYe3uk0TQcfQ2R7wucEvK7JGLMUYUactDgsi3Dh1ab6OCEygDECt2wJCS3GbqMmZ441s7uoSVfSP-kqE3B0Wh7jN7dCUOWg6Gfm0p6CFGoZt09VdjBoiV04SK-wsrH_5Fy8-cdi9z0jAb2Ss8Uehk-HUDhVCCeOv27M53lVloDOFkNFcRE-I25bAb2bbQABHCuo1kZ8KjegrZUqA8rB1rvM2SHijEawTZl-MStmv_FSB5LRLwJJy0J1jPtxgO_e11oXNpHhirjmKPLUyMNxodvFlD7NXH_8_4qBEbNbGluC-1YGZPzTRNpRyZ5zKIj-ICWHVJuLZ2pC7df71-XMuinE-JEncJSaj_sTjMqClHDCLQRWM6UNOpOSVIldSPJwfx5ywcm.m3u8",
+    "spade_url": "https://video-edge-f44d23.sjc01.hls.ttvnw.net/v1/playlist/ChG7CzZ0rCq9uxxdZCwUoyjlRV8AsNCkwzw9P4iH1y7ah2AhB_hNcv6SthuOtGOq9-mlbh3OyD989Naqj87pJG8vWkuN8jF6-81K81wzqFeGmWUxpp4PzgtOsP15J3NUmU1wGBeFUWawa2ciWF8Kyh_32jQIUM3a1IoSPaCzRm7YYLfEluSpFc2JQVhNPGHT4Zpc-VzOKUKPKu_0kfF8HEi549ifKxvsby3L7jPdtYTWguuB0wizoig5Au-cX4XMZexeDZ6Rvcp8706uLbnmS9nP5VfUgKzK-5C0cBTmBA0vL_fUs_cysZQ0iJUQNQ3-Ybg2gpQnEuqjzerAY4HvQ-_1QuBCdA83rZfawVQh6jx994Q2ZV8KV8lSmdvWLOgv453NGgIowhUt-yk0oZsDg1tAY54MFBEM8z6INxDP1KQ3cnKdVqS0ivNL5Us5A9VN0AW5JF.m3u8",
     "store_merch_promo": "off",
     "store_merch_seasonal": "on",
     "streamer_trailers_start_date": "2017-10-12T23:00:25.75536206Z",
@@ -207,8 +207,8 @@ window.__twilightSettings = {
         },
         "47c76558-9d79-4181-9e43-d7c440a1a148": {
             "name": "twilight_web_onboarding_categories_anon_front_page",
-            "v": 2744,
-            "t": 2,
+            "v": 2747,
+            "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "control"
@@ -350,6 +350,18 @@ window.__twilightSettings = {
             }, {
                 "weight": 100,
                 "value": "expanded"
+            }]
+        },
+        "9619b63b-2e9a-4e20-af4b-cce72346691d": {
+            "name": "twilight_web_onboarding_follow_categories",
+            "v": 2753,
+            "t": 2,
+            "groups": [{
+                "weight": 1,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "enabled"
             }]
         },
         "9fb3c040-d7d1-40b1-ab32-f6843c8baa46": {
