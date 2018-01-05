@@ -124,133 +124,6 @@ webpackJsonp([43], {
             return d
         })
     },
-    "+Tzs": function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "mutation",
-                name: {
-                    kind: "Name",
-                    value: "DirectoryFollowButton_FollowCommunity"
-                },
-                variableDefinitions: [{
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "input"
-                        }
-                    },
-                    type: {
-                        kind: "NonNullType",
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "FollowCommunityInput"
-                            }
-                        }
-                    },
-                    defaultValue: null
-                }],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "followCommunity"
-                        },
-                        arguments: [{
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "input"
-                            },
-                            value: {
-                                kind: "Variable",
-                                name: {
-                                    kind: "Name",
-                                    value: "input"
-                                }
-                            }
-                        }],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "community"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "self"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "follow"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: {
-                                                    kind: "SelectionSet",
-                                                    selections: [{
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "followedAt"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }]
-                                                }
-                                            }]
-                                        }
-                                    }]
-                                }
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 161
-            }
-        };
-        n.loc.source = {
-            body: "mutation DirectoryFollowButton_FollowCommunity($input: FollowCommunityInput!) {\nfollowCommunity(input: $input) {\ncommunity {\nself {\nfollow {\nfollowedAt\n}\n}\n}\n}\n}",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
     "+lUI": function(e, t, n) {
         var i = {
             kind: "Document",
@@ -2162,163 +2035,6 @@ webpackJsonp([43], {
         n.d(t, "a", function() {
             return v
         })
-    },
-    "73SQ": function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "DirectoryFollowButton_Community"
-                },
-                variableDefinitions: [{
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "name"
-                        }
-                    },
-                    type: {
-                        kind: "NonNullType",
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "String"
-                            }
-                        }
-                    },
-                    defaultValue: null
-                }],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "community"
-                        },
-                        arguments: [{
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "name"
-                            },
-                            value: {
-                                kind: "Variable",
-                                name: {
-                                    kind: "Name",
-                                    value: "name"
-                                }
-                            }
-                        }],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "name"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "self"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "follow"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "followedAt"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }]
-                                        }
-                                    }]
-                                }
-                            }]
-                        }
-                    }, {
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "currentUser"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 142
-            }
-        };
-        n.loc.source = {
-            body: "query DirectoryFollowButton_Community($name: String!) {\ncommunity(name: $name) {\nid\nname\nself {\nfollow {\nfollowedAt\n}\n}\n}\ncurrentUser {\nid\n}\n}",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
     },
     "7FW4": function(e, t, n) {
         "use strict";
@@ -4758,9 +4474,9 @@ webpackJsonp([43], {
             })(kt),
             _t = n("+xm8"),
             Ct = n("f2i/"),
-            Et = n("73SQ"),
-            Nt = n("+Tzs"),
-            wt = n("Z4DL"),
+            Et = n("qs/O"),
+            Nt = n("odW7"),
+            wt = n("d+bE"),
             Dt = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -7572,21 +7288,20 @@ webpackJsonp([43], {
             a = n("U7vG"),
             r = n("6sO2"),
             o = n("+GT7"),
-            l = n("IOwa"),
-            s = n("SZoP"),
-            c = n("NY9D"),
-            d = n("vH/s"),
-            u = n("v5ho"),
-            m = n("RH2O"),
-            p = n("2KeS"),
-            g = n("V5M+"),
-            h = n("jetF"),
-            v = n("7vx8"),
-            f = n("CSlQ"),
-            y = n("BhyV"),
-            k = n("+8VM"),
-            b = n("oIkB"),
-            S = function(e) {
+            l = n("SZoP"),
+            s = n("NY9D"),
+            c = n("vH/s"),
+            d = n("v5ho"),
+            u = n("RH2O"),
+            m = n("2KeS"),
+            p = n("V5M+"),
+            g = n("jetF"),
+            h = n("7vx8"),
+            v = n("CSlQ"),
+            f = n("BhyV"),
+            y = n("+8VM"),
+            k = n("oIkB"),
+            b = function(e) {
                 switch (e) {
                     case "TARGET_USER_OWNER":
                         return Object(r.d)("You cannot ban or timeout the owner of this community", "BanTimeoutErrorMessages");
@@ -7602,25 +7317,25 @@ webpackJsonp([43], {
                         return Object(r.d)("Something went wrong", "BanTimeoutErrorMessages")
                 }
             },
-            _ = n("Odds"),
-            C = n("nC3l"),
-            E = (n("sJt0"), "error-message"),
-            N = function(e) {
+            S = n("Odds"),
+            _ = n("nC3l"),
+            C = (n("sJt0"), "error-message"),
+            E = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         error: "",
                         reason: ""
                     }, t.renderErrorMessage = function() {
-                        return t.state.error ? a.createElement(_.U, {
+                        return t.state.error ? a.createElement(S.U, {
                             margin: {
                                 bottom: 2
                             }
-                        }, a.createElement(_._22, {
-                            color: _.F.Error,
-                            type: _._27.H4,
-                            "data-test-selector": E
-                        }, S(t.state.error))) : null
+                        }, a.createElement(S._22, {
+                            color: S.F.Error,
+                            type: S._27.H4,
+                            "data-test-selector": C
+                        }, b(t.state.error))) : null
                     }, t.onReasonChange = function(e) {
                         var n = e.target.value;
                         t.setState({
@@ -7632,7 +7347,7 @@ webpackJsonp([43], {
                             return i.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
-                                        return this.props.banUserFromCommunity ? (e = i.__assign({}, Object(b.a)({
+                                        return this.props.banUserFromCommunity ? (e = i.__assign({}, Object(k.a)({
                                             communityID: this.props.communityID,
                                             userID: this.props.userID,
                                             reason: this.state.reason
@@ -7645,7 +7360,7 @@ webpackJsonp([43], {
                                             }
                                         }), [4, this.props.banUserFromCommunity(e)]) : [2];
                                     case 1:
-                                        return null === (t = n.sent()).data.banUserFromCommunity.error ? (r.n.tracking.track(d.SpadeEventType.CommunityModeration, {
+                                        return null === (t = n.sent()).data.banUserFromCommunity.error ? (r.n.tracking.track(c.SpadeEventType.CommunityModeration, {
                                             community_id: this.props.communityID,
                                             name: this.props.communityName,
                                             is_official: !1,
@@ -7662,75 +7377,75 @@ webpackJsonp([43], {
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return a.createElement(_.P, {
-                        position: _._3.Relative
-                    }, a.createElement(_._18, {
-                        background: _.m.Base,
+                    return a.createElement(S.P, {
+                        position: S._3.Relative
+                    }, a.createElement(S._18, {
+                        background: S.m.Base,
                         className: "stream-ban-modal"
-                    }, a.createElement(_.U, {
+                    }, a.createElement(S.U, {
                         padding: 2
-                    }, this.renderErrorMessage(), a.createElement(_.U, {
+                    }, this.renderErrorMessage(), a.createElement(S.U, {
                         margin: {
                             bottom: 2
                         }
-                    }, a.createElement(_._22, {
-                        type: _._27.H4
+                    }, a.createElement(S._22, {
+                        type: S._27.H4
                     }, Object(r.d)("Are you sure you want to ban {name}?", {
                         name: this.props.username
-                    }, "StreamBanModal"))), a.createElement(_._18, {
+                    }, "StreamBanModal"))), a.createElement(S._18, {
                         borderTop: !0
-                    }, a.createElement(_.U, {
+                    }, a.createElement(S.U, {
                         margin: {
                             y: 2
                         }
-                    }, a.createElement(_._22, {
+                    }, a.createElement(S._22, {
                         bold: !0
-                    }, Object(r.d)("Reason (Required)", "StreamBanModal")), a.createElement(_.Q, {
-                        type: _.R.Text,
+                    }, Object(r.d)("Reason (Required)", "StreamBanModal")), a.createElement(S.Q, {
+                        type: S.R.Text,
                         placeholder: Object(r.d)("Please be as detailed as possible", "StreamBanModal"),
                         onChange: this.onReasonChange,
                         "data-test-selector": "reason-input"
-                    }))), a.createElement(_._18, {
+                    }))), a.createElement(S._18, {
                         borderTop: !0
-                    }, a.createElement(_.U, {
+                    }, a.createElement(S.U, {
                         padding: {
                             top: 2
                         },
-                        textAlign: _._23.Center
-                    }, a.createElement(_.U, {
-                        display: _.H.Inline,
+                        textAlign: S._23.Center
+                    }, a.createElement(S.U, {
+                        display: S.H.Inline,
                         margin: {
                             x: 1
                         }
-                    }, a.createElement(_.u, {
-                        type: _.z.Text,
+                    }, a.createElement(S.u, {
+                        type: S.z.Text,
                         onClick: this.props.onCloseModal,
                         "data-test-selector": "cancel-button"
-                    }, Object(r.d)("Cancel", "StreamBanModal"))), a.createElement(_.U, {
-                        display: _.H.Inline,
+                    }, Object(r.d)("Cancel", "StreamBanModal"))), a.createElement(S.U, {
+                        display: S.H.Inline,
                         margin: {
                             x: 1
                         }
-                    }, a.createElement(_.u, {
+                    }, a.createElement(S.u, {
                         onClick: this.banUserFromCommunity,
                         disabled: !this.state.reason.length,
                         "data-test-selector": "ban-button"
-                    }, Object(r.d)("Ban", "StreamBanModal")))))), a.createElement(k.a, {
+                    }, Object(r.d)("Ban", "StreamBanModal")))))), a.createElement(y.a, {
                         closeOnBackdropClick: !0
                     })))
                 }, t
             }(a.Component),
-            w = Object(y.compose)(Object(v.a)(C, {
+            N = Object(f.compose)(Object(h.a)(_, {
                 name: "banUserFromCommunity"
-            }))(N),
-            D = Object(m.a)(null, function(e) {
-                return Object(p.bindActionCreators)({
-                    onCloseModal: g.c
+            }))(E),
+            w = Object(u.a)(null, function(e) {
+                return Object(m.bindActionCreators)({
+                    onCloseModal: p.c
                 }, e)
-            })(w),
-            O = (n("npyu"), n("plcU")),
-            F = "error-message",
-            T = function(e) {
+            })(N),
+            D = (n("npyu"), n("plcU")),
+            O = "error-message",
+            F = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -7738,15 +7453,15 @@ webpackJsonp([43], {
                         error: "",
                         reason: ""
                     }, t.renderErrorMessage = function() {
-                        return t.state.error ? a.createElement(_.U, {
+                        return t.state.error ? a.createElement(S.U, {
                             margin: {
                                 bottom: 2
                             }
-                        }, a.createElement(_._22, {
-                            color: _.F.Error,
-                            type: _._27.H4,
-                            "data-test-selector": F
-                        }, S(t.state.error))) : null
+                        }, a.createElement(S._22, {
+                            color: S.F.Error,
+                            type: S._27.H4,
+                            "data-test-selector": O
+                        }, b(t.state.error))) : null
                     }, t.onReasonChange = function(e) {
                         var n = e.target.value;
                         t.setState({
@@ -7763,7 +7478,7 @@ webpackJsonp([43], {
                             return i.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
-                                        return this.props.timeoutUserFromCommunity ? (e = i.__assign({}, Object(b.a)({
+                                        return this.props.timeoutUserFromCommunity ? (e = i.__assign({}, Object(k.a)({
                                             communityID: this.props.communityID,
                                             durationHours: this.state.durationHours,
                                             userID: this.props.userID,
@@ -7777,7 +7492,7 @@ webpackJsonp([43], {
                                             }
                                         }), [4, this.props.timeoutUserFromCommunity(e)]) : [2];
                                     case 1:
-                                        return null === (t = n.sent()).data.timeoutUserFromCommunity.error ? (r.n.tracking.track(d.SpadeEventType.CommunityModeration, {
+                                        return null === (t = n.sent()).data.timeoutUserFromCommunity.error ? (r.n.tracking.track(c.SpadeEventType.CommunityModeration, {
                                             community_id: this.props.communityID,
                                             name: this.props.communityName,
                                             is_official: !1,
@@ -7795,41 +7510,41 @@ webpackJsonp([43], {
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return a.createElement(_.P, {
-                        position: _._3.Relative
-                    }, a.createElement(_._18, {
-                        background: _.m.Base,
+                    return a.createElement(S.P, {
+                        position: S._3.Relative
+                    }, a.createElement(S._18, {
+                        background: S.m.Base,
                         className: "stream-timeout-modal"
-                    }, a.createElement(_.U, {
+                    }, a.createElement(S.U, {
                         padding: 2
-                    }, this.renderErrorMessage(), a.createElement(_.U, {
+                    }, this.renderErrorMessage(), a.createElement(S.U, {
                         margin: {
                             bottom: 2
                         }
-                    }, a.createElement(_._22, {
-                        type: _._27.H4
+                    }, a.createElement(S._22, {
+                        type: S._27.H4
                     }, Object(r.d)("Are you sure you want to timeout {name}?", {
                         name: this.props.username
-                    }, "StreamTimeoutModal"))), a.createElement(_._18, {
+                    }, "StreamTimeoutModal"))), a.createElement(S._18, {
                         borderTop: !0
-                    }, a.createElement(_.U, {
+                    }, a.createElement(S.U, {
                         margin: {
                             y: 2
                         }
-                    }, a.createElement(_._22, {
+                    }, a.createElement(S._22, {
                         bold: !0
-                    }, Object(r.d)("Reason (Required)", "StreamTimeoutModal")), a.createElement(_.Q, {
-                        type: _.R.Text,
+                    }, Object(r.d)("Reason (Required)", "StreamTimeoutModal")), a.createElement(S.Q, {
+                        type: S.R.Text,
                         placeholder: Object(r.d)("Please be as detailed as possible", "StreamTimeoutModal"),
                         onChange: this.onReasonChange,
                         "data-test-selector": "reason-input"
-                    }))), a.createElement(_.U, {
+                    }))), a.createElement(S.U, {
                         margin: {
                             y: 2
                         }
-                    }, a.createElement(_._22, {
+                    }, a.createElement(S._22, {
                         bold: !0
-                    }, Object(r.d)("Duration", "StreamTimeoutModal")), a.createElement(_._15, {
+                    }, Object(r.d)("Duration", "StreamTimeoutModal")), a.createElement(S._15, {
                         defaultValue: "2",
                         onChange: this.onDurationHoursChange
                     }, a.createElement("option", {
@@ -7842,51 +7557,51 @@ webpackJsonp([43], {
                         value: "12"
                     }, Object(r.d)("12 hours", "StreamTimeoutModal")), a.createElement("option", {
                         value: "24"
-                    }, Object(r.d)("24 hours", "StreamTimeoutModal")))), a.createElement(_._18, {
+                    }, Object(r.d)("24 hours", "StreamTimeoutModal")))), a.createElement(S._18, {
                         borderTop: !0
-                    }, a.createElement(_.U, {
+                    }, a.createElement(S.U, {
                         padding: {
                             top: 2
                         },
-                        textAlign: _._23.Center
-                    }, a.createElement(_.U, {
-                        display: _.H.Inline,
+                        textAlign: S._23.Center
+                    }, a.createElement(S.U, {
+                        display: S.H.Inline,
                         margin: {
                             x: 1
                         }
-                    }, a.createElement(_.u, {
-                        type: _.z.Text,
+                    }, a.createElement(S.u, {
+                        type: S.z.Text,
                         onClick: this.props.onCloseModal,
                         "data-test-selector": "cancel-button"
-                    }, Object(r.d)("Cancel", "StreamTimeoutModal"))), a.createElement(_.U, {
-                        display: _.H.Inline,
+                    }, Object(r.d)("Cancel", "StreamTimeoutModal"))), a.createElement(S.U, {
+                        display: S.H.Inline,
                         margin: {
                             x: 1
                         }
-                    }, a.createElement(_.u, {
+                    }, a.createElement(S.u, {
                         onClick: this.timeoutUserFromCommunity,
                         disabled: !this.state.reason.length,
                         "data-test-selector": "timeout-button"
-                    }, Object(r.d)("Timeout", "StreamTimeoutModal")))))), a.createElement(k.a, {
+                    }, Object(r.d)("Timeout", "StreamTimeoutModal")))))), a.createElement(y.a, {
                         closeOnBackdropClick: !0
                     })))
                 }, t
             }(a.Component),
-            U = Object(y.compose)(Object(v.a)(O, {
+            T = Object(f.compose)(Object(h.a)(D, {
                 name: "timeoutUserFromCommunity"
-            }))(T),
-            I = Object(m.a)(null, function(e) {
-                return Object(p.bindActionCreators)({
-                    onCloseModal: g.c
+            }))(F),
+            U = Object(u.a)(null, function(e) {
+                return Object(m.bindActionCreators)({
+                    onCloseModal: p.c
                 }, e)
-            })(U),
-            L = n("PO03"),
-            A = function(e) {
+            })(T),
+            I = n("PO03"),
+            L = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onStreamBanClick = function() {
-                        var e = Object(s.a)(t.props.login, t.props.displayName, !0);
-                        t.props.onShowModal(D, {
+                        var e = Object(l.a)(t.props.login, t.props.displayName, !0);
+                        t.props.onShowModal(w, {
                             communityID: t.props.data.community.id,
                             communityName: t.props.communityName,
                             currentUserID: t.props.data.currentUser.id,
@@ -7894,8 +7609,8 @@ webpackJsonp([43], {
                             username: e
                         })
                     }, t.onStreamTimeoutClick = function() {
-                        var e = Object(s.a)(t.props.login, t.props.displayName, !0);
-                        t.props.onShowModal(I, {
+                        var e = Object(l.a)(t.props.login, t.props.displayName, !0);
+                        t.props.onShowModal(U, {
                             communityID: t.props.data.community.id,
                             communityName: t.props.communityName,
                             currentUserID: t.props.data.currentUser.id,
@@ -7905,35 +7620,35 @@ webpackJsonp([43], {
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return this.props.data && !this.props.data.loading && !this.props.data.error && this.props.data.community && this.props.data.community.self && (this.props.data.community.self.permissions.banning || this.props.data.community.self.permissions.timingOut) ? a.createElement(h.a, null, a.createElement(_.v, {
+                    return this.props.data && !this.props.data.loading && !this.props.data.error && this.props.data.community && this.props.data.community.self && (this.props.data.community.self.permissions.banning || this.props.data.community.self.permissions.timingOut) ? a.createElement(g.a, null, a.createElement(S.v, {
                         ariaLabel: Object(r.d)("Moderation", "DirectoryGamePage"),
-                        icon: _._10.ChatRiskFlag
-                    }), a.createElement(_.p, {
-                        direction: _.q.BottomRight,
-                        size: _.r.ExtraSmall,
+                        icon: S._10.ChatRiskFlag
+                    }), a.createElement(S.p, {
+                        direction: S.q.BottomRight,
+                        size: S.r.ExtraSmall,
                         offsetX: "1rem"
                     }, this.renderBanInteractable(), this.renderTimeoutInteractable())) : null
                 }, t.prototype.renderBanInteractable = function() {
-                    return this.props.data.community.self.permissions.banning ? a.createElement(_.S, {
+                    return this.props.data.community.self.permissions.banning ? a.createElement(S.S, {
                         onClick: this.onStreamBanClick,
                         "data-test-selector": "ban-selector"
-                    }, a.createElement(_.U, {
+                    }, a.createElement(S.U, {
                         padding: {
                             y: .5,
                             x: 1
                         }
                     }, Object(r.d)("Ban", "StreamFlag"))) : null
                 }, t.prototype.renderTimeoutInteractable = function() {
-                    return this.props.data.community.self.permissions.timingOut ? a.createElement(_.S, {
+                    return this.props.data.community.self.permissions.timingOut ? a.createElement(S.S, {
                         onClick: this.onStreamTimeoutClick,
                         "data-test-selector": "timeout-selector"
-                    }, a.createElement(_.U, {
+                    }, a.createElement(S.U, {
                         padding: {
                             y: .5,
                             x: 1
                         }
                     }, Object(r.d)("Timeout", "StreamFlag"))) : null
-                }, t = i.__decorate([Object(v.a)(L, {
+                }, t = i.__decorate([Object(h.a)(I, {
                     options: function(e) {
                         return {
                             fetchPolicy: "network-only",
@@ -7942,23 +7657,23 @@ webpackJsonp([43], {
                             }
                         }
                     }
-                }), Object(f.c)("StreamFlagComponent", {
+                }), Object(v.c)("StreamFlagComponent", {
                     autoReportInteractive: !0
                 })], t)
             }(a.Component),
-            R = Object(m.a)(null, function(e) {
-                return Object(p.bindActionCreators)({
-                    onShowModal: g.d
+            A = Object(u.a)(null, function(e) {
+                return Object(m.bindActionCreators)({
+                    onShowModal: p.d
                 }, e)
-            })(A),
-            j = n("PLRK"),
-            P = (n("GiGb"), "directory-game__card_container"),
-            x = function(e) {
+            })(L),
+            R = n("PLRK"),
+            j = (n("GiGb"), "directory-game__card_container"),
+            P = function(e) {
                 function t() {
-                    var t = e.call(this) || this;
+                    var t = null !== e && e.apply(this, arguments) || this;
                     return t.getLinkTo = function(e, n) {
-                        var i = t.props.trackingContent ? t.props.trackingContent : d.PageviewContent.Live,
-                            a = t.props.directoryType === u.a.Communities ? d.PageviewMedium.Community : d.PageviewMedium.Game;
+                        var i = t.props.trackingContent ? t.props.trackingContent : c.PageviewContent.Live,
+                            a = t.props.directoryType === d.a.Communities ? c.PageviewMedium.Community : c.PageviewMedium.Game;
                         return t.props.trackingMedium && (a = t.props.trackingMedium), {
                             pathname: e,
                             state: {
@@ -7969,87 +7684,60 @@ webpackJsonp([43], {
                         }
                     }, t.renderStreamFlag = function() {
                         var e = t.props.streamNode;
-                        return e.broadcaster ? t.props.directoryType === u.a.Communities && t.props.directoryName ? a.createElement(_.U, {
+                        return e.broadcaster ? t.props.directoryType === d.a.Communities && t.props.directoryName ? a.createElement(S.U, {
                             className: "stream-thumbnail__card stream-thumbnail__card-flag",
-                            position: _._3.Absolute,
+                            position: S._3.Absolute,
                             attachTop: !0,
                             attachRight: !0
-                        }, a.createElement(R, {
+                        }, a.createElement(A, {
                             communityName: t.props.directoryName,
                             login: e.broadcaster.login,
                             displayName: e.broadcaster.displayName,
                             userID: e.broadcaster.id
                         })) : void 0 : null
                     }, t.shouldShowGame = function(e) {
-                        return t.props.directoryType !== u.a.Games && t.props.streamNode.game ? t.props.streamNode.game[e] : ""
-                    }, t.state = {
-                        isPremiereExperimentActive: !1
+                        return t.props.directoryType !== d.a.Games && t.props.streamNode.game ? t.props.streamNode.game[e] : ""
                     }, t
                 }
-                return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                    return i.__awaiter(this, void 0, void 0, function() {
-                        return i.__generator(this, function(e) {
-                            switch (e.label) {
-                                case 0:
-                                    return [4, r.n.experiments.getAssignment("TWILIGHT_PREMIERE_UPLOAD_FLOW")];
-                                case 1:
-                                    return "yes" === e.sent() && r.b.get("premiere_video_manager_staff", !1) && this.setState({
-                                        isPremiereExperimentActive: !0
-                                    }), [2]
-                            }
-                        })
-                    })
-                }, t.prototype.render = function() {
+                return i.__extends(t, e), t.prototype.render = function() {
                     var e = this.props.streamNode,
                         t = this.props.streamIndex;
-                    if (!e.broadcaster) return null;
-                    var n = null;
-                    return this.state.isPremiereExperimentActive && "string" == typeof e.type && e.type && (n = a.createElement(_.U, {
-                        className: "stream-thumbnail__stream-type-indicator-wrapper",
-                        position: _._3.Absolute,
-                        attachLeft: !0,
-                        attachTop: !0,
-                        padding: .5
-                    }, a.createElement(l.a, {
-                        type: e.type
-                    }))), a.createElement("div", {
+                    return e.broadcaster ? a.createElement("div", {
                         className: "stream-thumbnail",
                         "data-target": t ? "" : "directory-first-item",
                         style: {
                             order: t
                         }
-                    }, a.createElement(_.U, {
+                    }, a.createElement(S.U, {
                         className: "stream-thumbnail__card",
-                        position: _._3.Relative,
+                        position: S._3.Relative,
                         margin: {
                             bottom: 2
                         },
-                        "data-target": P
-                    }, a.createElement(_.U, {
-                        position: _._3.Relative
+                        "data-target": j
                     }, a.createElement(o.a, {
                         imageSrc: e.previewImageURL || r.a.defaultStreamPreviewURL,
                         imageAlt: e.broadcaster.login + " cover image",
                         viewerCount: e.viewersCount || 0,
-                        title: e.title || j.a,
-                        channelName: Object(s.a)(e.broadcaster.login, e.broadcaster.displayName, !0),
+                        title: e.title || R.a,
+                        channelName: Object(l.a)(e.broadcaster.login, e.broadcaster.displayName, !0),
                         gameImageSrc: this.shouldShowGame("boxArtURL") || r.a.defaultBoxArtURL,
                         gameTitle: this.shouldShowGame("name"),
-                        gameLinkTo: this.getLinkTo(Object(c.c)(this.shouldShowGame("name")), t),
+                        gameLinkTo: this.getLinkTo(Object(s.c)(this.shouldShowGame("name")), t),
                         linkTo: this.getLinkTo("/" + e.broadcaster.login, t),
                         channelNameLinkTo: this.getLinkTo("/" + e.broadcaster.login + "/videos", t),
                         streamType: e.type,
                         "data-a-target": "card-" + t,
                         "data-a-id": "card-" + (e.broadcaster.login || "").replace(/ /g, "")
-                    }), n), this.renderStreamFlag()))
+                    }), this.renderStreamFlag())) : null
                 }, t
             }(a.Component);
         n.d(t, "a", function() {
             return "directory-first-item"
         }), n.d(t, !1, function() {
-            return P
+            return j
         }), n.d(t, "b", function() {
-            return x
+            return P
         })
     },
     Ajho: function(e, t) {},
@@ -12506,107 +12194,6 @@ webpackJsonp([43], {
         };
         e.exports = n
     },
-    Z4DL: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "mutation",
-                name: {
-                    kind: "Name",
-                    value: "DirectoryFollowButton_UnfollowCommunity"
-                },
-                variableDefinitions: [{
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "input"
-                        }
-                    },
-                    type: {
-                        kind: "NonNullType",
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "UnfollowCommunityInput"
-                            }
-                        }
-                    },
-                    defaultValue: null
-                }],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "unfollowCommunity"
-                        },
-                        arguments: [{
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "input"
-                            },
-                            value: {
-                                kind: "Variable",
-                                name: {
-                                    kind: "Name",
-                                    value: "input"
-                                }
-                            }
-                        }],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "follow"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "followedAt"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }]
-                                }
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 144
-            }
-        };
-        n.loc.source = {
-            body: "mutation DirectoryFollowButton_UnfollowCommunity($input: UnfollowCommunityInput!) {\nunfollowCommunity(input: $input) {\nfollow {\nfollowedAt\n}\n}\n}",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
     ZdVn: function(e, t) {},
     ZoyS: function(e, t) {
         var n = {
@@ -13092,6 +12679,107 @@ webpackJsonp([43], {
             return !i.b.get(r.a, !1) && i.a.buildType === a.a.Production
         };
         var o = "https://www.twitch.tv"
+    },
+    "d+bE": function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "mutation",
+                name: {
+                    kind: "Name",
+                    value: "DirectoryFollowButton_UnfollowCommunity"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "input"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "UnfollowCommunityInput"
+                            }
+                        }
+                    },
+                    defaultValue: null
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "unfollowCommunity"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "input"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "input"
+                                }
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "follow"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "followedAt"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 144
+            }
+        };
+        n.loc.source = {
+            body: "mutation DirectoryFollowButton_UnfollowCommunity($input: UnfollowCommunityInput!) {\nunfollowCommunity(input: $input) {\nfollow {\nfollowedAt\n}\n}\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
     },
     dH4b: function(e, t, n) {
         "use strict";
@@ -14458,6 +14146,133 @@ webpackJsonp([43], {
         var i = /^\$[\d]+.[\d]{2}$/
     },
     oHn4: function(e, t) {},
+    odW7: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "mutation",
+                name: {
+                    kind: "Name",
+                    value: "DirectoryFollowButton_FollowCommunity"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "input"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "FollowCommunityInput"
+                            }
+                        }
+                    },
+                    defaultValue: null
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "followCommunity"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "input"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "input"
+                                }
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "community"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "self"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                alias: null,
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "follow"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: {
+                                                    kind: "SelectionSet",
+                                                    selections: [{
+                                                        kind: "Field",
+                                                        alias: null,
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "followedAt"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: null
+                                                    }]
+                                                }
+                                            }]
+                                        }
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 161
+            }
+        };
+        n.loc.source = {
+            body: "mutation DirectoryFollowButton_FollowCommunity($input: FollowCommunityInput!) {\nfollowCommunity(input: $input) {\ncommunity {\nself {\nfollow {\nfollowedAt\n}\n}\n}\n}\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
     peXu: function(e, t, n) {
         "use strict";
         t.a = function(e, t, n) {
@@ -14863,6 +14678,163 @@ webpackJsonp([43], {
         ! function(e) {
             e[e.Post = 0] = "Post", e[e.Action = 1] = "Action", e[e.PostWithMention = 2] = "PostWithMention", e[e.Ban = 3] = "Ban", e[e.Timeout = 4] = "Timeout", e[e.AutoModRejectedPrompt = 5] = "AutoModRejectedPrompt", e[e.AutoModMessageRejected = 6] = "AutoModMessageRejected", e[e.AutoModMessageAllowed = 7] = "AutoModMessageAllowed", e[e.AutoModMessageDenied = 8] = "AutoModMessageDenied", e[e.Connected = 9] = "Connected", e[e.Disconnected = 10] = "Disconnected", e[e.Reconnect = 11] = "Reconnect", e[e.Hosting = 12] = "Hosting", e[e.Unhost = 13] = "Unhost", e[e.Subscription = 14] = "Subscription", e[e.Resubscription = 15] = "Resubscription", e[e.SubGift = 16] = "SubGift", e[e.Clear = 17] = "Clear", e[e.SubscriberOnlyMode = 18] = "SubscriberOnlyMode", e[e.FollowerOnlyMode = 19] = "FollowerOnlyMode", e[e.SlowMode = 20] = "SlowMode", e[e.EmoteOnlyMode = 21] = "EmoteOnlyMode", e[e.RoomMods = 22] = "RoomMods", e[e.RoomState = 23] = "RoomState", e[e.Raid = 24] = "Raid", e[e.Unraid = 25] = "Unraid", e[e.Ritual = 26] = "Ritual", e[e.Notice = 27] = "Notice", e[e.Info = 28] = "Info", e[e.BadgesUpdated = 29] = "BadgesUpdated", e[e.Purchase = 30] = "Purchase", e[e.BitsCharity = 31] = "BitsCharity", e[e.CrateGift = 32] = "CrateGift"
         }(i || (i = {}))
+    },
+    "qs/O": function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "DirectoryFollowButton_Community"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "name"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "String"
+                            }
+                        }
+                    },
+                    defaultValue: null
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "community"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "name"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "name"
+                                }
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "name"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "self"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "follow"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                alias: null,
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "followedAt"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: null
+                                            }]
+                                        }
+                                    }]
+                                }
+                            }]
+                        }
+                    }, {
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "currentUser"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 142
+            }
+        };
+        n.loc.source = {
+            body: "query DirectoryFollowButton_Community($name: String!) {\ncommunity(name: $name) {\nid\nname\nself {\nfollow {\nfollowedAt\n}\n}\n}\ncurrentUser {\nid\n}\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
     },
     qw9S: function(e, t) {
         var n = {
@@ -17406,4 +17378,4 @@ webpackJsonp([43], {
     zSAx: function(e, t) {},
     zu64: function(e, t) {}
 });
-//# sourceMappingURL=pages.directory-game-bd84eec6066e4a572ade1a4f3ed14f2d.js.map
+//# sourceMappingURL=pages.directory-game-d9c4bbcbef33e5236f66ccef0f3be576.js.map

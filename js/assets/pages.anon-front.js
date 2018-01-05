@@ -1981,7 +1981,8 @@ webpackJsonp([47], {
                                     medium: g.PageviewMedium.Following,
                                     content: g.PageviewContent.Live,
                                     content_index: n
-                                };
+                                },
+                                s = a && a.game ? Object(E.c)(a.game.name) : "";
                             return r.createElement(d.U, {
                                 className: "anon-top-channels",
                                 key: a.broadcaster.id,
@@ -1997,7 +1998,7 @@ webpackJsonp([47], {
                                 gameImageSrc: a && a.game && a.game.boxArtURL || o.a.defaultBoxArtURL,
                                 gameTitle: a && a.game ? a.game.name : "",
                                 gameLinkTo: {
-                                    pathname: "/directory/game/" + (a && a.game ? a.game.name : ""),
+                                    pathname: s,
                                     state: l
                                 },
                                 linkTo: {
@@ -5694,4 +5695,4 @@ webpackJsonp([47], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.anon-front-91f14838aa1f1b7e788b65833c6012df.js.map
+//# sourceMappingURL=pages.anon-front-f7faafdcf4b2899f7d3484f10bf5736c.js.map

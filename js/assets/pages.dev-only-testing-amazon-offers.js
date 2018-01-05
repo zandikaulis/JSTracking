@@ -25,7 +25,7 @@ webpackJsonp([52], {
                             }, e)
                         }, "AmazonRetailAssociatesAccountLinking") : Object(l.d)("Create and link an Amazon Associates account to your Twitch account. Only one Amazon account may be linked at any one time.", "AmazonRetailAssociatesAccountLinking")
                     }, t.launchLinkAccount = function() {
-                        t.launchPopup("https://affiliate-program.amazon.com/home/account")
+                        t.launchPopup("https://twitch.amazon.com/associates/register")
                     }, t.launchAssociatesAccount = function(e) {
                         e.preventDefault();
                         t.launchPopup("https://affiliate-program.amazon.com/home/account")
@@ -856,4 +856,4 @@ webpackJsonp([52], {
     },
     mJW4: function(e, t) {}
 });
-//# sourceMappingURL=pages.dev-only-testing-amazon-offers-7ca1b134fdcdd38ebd6a837518c91e6a.js.map
+//# sourceMappingURL=pages.dev-only-testing-amazon-offers-107557bbc8bb62ee441ac7ee39338559.js.map
