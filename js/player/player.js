@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".67a2c4b93930906fb243.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".e6fdde476c6632f11cd3.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -1060,7 +1060,7 @@
             var a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0,
                 o = arguments[5];
             return p(r.stream).then(function(e) {
-                return Promise.all([n.i(g.h)(), n.i(g.d)(e), n.i(g.j)(e), n.i(g.k)(e), n.i(g.m)(e), n.i(g.l)(e), r.experiments.get(k.p), r.experiments.get(k.q), r.experiments.get(k.r)])
+                return Promise.all([n.i(g.h)(), n.i(g.d)(e), n.i(g.j)(e), n.i(g.k)(e), n.i(g.m)(e), n.i(g.l)(e), r.experiments.get(k.q), r.experiments.get(k.r), r.experiments.get(k.s)])
             }).then(function(s) {
                 var u = P(s, 9),
                     c = u[0],
@@ -1295,9 +1295,10 @@
                     adStitchingG: m.get(f.i),
                     adStitchingH: m.get(f.j),
                     adStitchingI: m.get(f.k),
-                    adStitchingPrerolls: m.get(f.l),
-                    realtimeQos: m.get(f.m),
-                    fastBread: void 0 !== y.params.fast_bread ? Promise.resolve(y.params.fast_bread) : m.get(f.n)
+                    adStitchingJ: m.get(f.l),
+                    adStitchingPrerolls: m.get(f.m),
+                    realtimeQos: m.get(f.n),
+                    fastBread: void 0 !== y.params.fast_bread ? Promise.resolve(y.params.fast_bread) : m.get(f.o)
                 },
                 C = void 0;
             i === O ? C = new p.b(g, E, y.params, s.params, P) : i === x && (C = new h.b(_, E, y.params, s.params, P)), C.accessToken.then(function() {
@@ -2835,16 +2836,16 @@
         function o(e) {
             var t, n;
             return new p.a({
-                defaults: (t = {}, r(t, g, "no"), r(t, b, "no"), r(t, _, "no"), r(t, w, "no"), r(t, k, "no"), r(t, E, "no"), r(t, S, "no"), r(t, P, "no"), r(t, C, "no"), r(t, T, "no"), r(t, O, "no"), r(t, x, "no"), r(t, R, "control"), r(t, I, "no"), r(t, A, "no"), r(t, N, "keep"), r(t, L, "pad_control"), r(t, M, "no"), r(t, j, "no"), r(t, D, "control"), r(t, U, "control"), r(t, q, "control"), r(t, B, "control"), r(t, F, "2.1.0"), r(t, V, "no"), r(t, H, "no"), r(t, z, "control"), t),
+                defaults: (t = {}, r(t, g, "no"), r(t, b, "no"), r(t, _, "no"), r(t, w, "no"), r(t, k, "no"), r(t, E, "no"), r(t, S, "no"), r(t, P, "no"), r(t, C, "no"), r(t, T, "no"), r(t, O, "no"), r(t, x, "no"), r(t, R, "no"), r(t, I, "control"), r(t, A, "no"), r(t, N, "no"), r(t, L, "keep"), r(t, M, "pad_control"), r(t, j, "no"), r(t, D, "no"), r(t, U, "control"), r(t, q, "control"), r(t, B, "control"), r(t, F, "control"), r(t, V, "2.1.0"), r(t, H, "no"), r(t, z, "no"), r(t, W, "control"), t),
                 deviceID: e.deviceID,
-                overrides: c()((n = {}, r(n, R, a(["CA", "NZ", "AU", "DE", "FR", "SE", "BE", "PL", "NO", "FI", "DK", "NL", "IT", "ES", "CH", "AT", "PT", "US", "GB"])), r(n, b, a(["US"])), r(n, _, a(["GB"])), r(n, w, a(["DE"])), r(n, k, a(["FR"])), r(n, E, a(["SE"])), r(n, S, a(["DK", "FI", "NL", "NO"])), r(n, P, a(["CA"])), r(n, C, a(["AU", "NZ"])), r(n, T, a(["BE"])), r(n, O, a(["PL"])), r(n, x, a(["AT", "CH", "ES", "IT", "PT"])), r(n, I, i("vca")), r(n, A, i("yes")), r(n, j, i("yes")), r(n, M, i("yes")), r(n, U, i("show")), r(n, q, i("show")), r(n, F, i("2.0.0")), r(n, V, i("yes")), n), JSON.parse(s.cookie.get("experiment_overrides", "{}"))),
+                overrides: c()((n = {}, r(n, I, a(["CA", "NZ", "AU", "DE", "FR", "SE", "BE", "PL", "NO", "FI", "DK", "NL", "IT", "ES", "CH", "AT", "PT", "US", "GB"])), r(n, b, a(["US"])), r(n, _, a(["GB"])), r(n, w, a(["DE"])), r(n, k, a(["FR"])), r(n, E, a(["SE"])), r(n, S, a(["DK", "FI", "NL", "NO"])), r(n, P, a(["CA"])), r(n, C, a(["AU", "NZ"])), r(n, T, a(["BE"])), r(n, O, a(["PL"])), r(n, x, a(["AT", "CH", "ES", "IT", "PT"])), r(n, R, a(["AE", "SA"])), r(n, A, i("vca")), r(n, N, i("yes")), r(n, D, i("yes")), r(n, j, i("yes")), r(n, q, i("show")), r(n, B, i("show")), r(n, V, i("2.0.0")), r(n, H, i("yes")), n), JSON.parse(s.cookie.get("experiment_overrides", "{}"))),
                 platform: "web",
                 login: e.login,
                 provider: new m.a(m.a.SERVICE_URL),
                 Promise: Promise
             })
         }
-        n.d(t, "o", function() {
+        n.d(t, "p", function() {
             return g
         }), n.d(t, "a", function() {
             return b
@@ -2870,31 +2871,33 @@
             return x
         }), n.d(t, "l", function() {
             return R
-        }), n.d(t, "w", function() {
+        }), n.d(t, "m", function() {
             return I
-        }), n.d(t, "u", function() {
+        }), n.d(t, "x", function() {
             return A
         }), n.d(t, "v", function() {
             return N
-        }), n.d(t, "p", function() {
+        }), n.d(t, "w", function() {
             return L
-        }), n.d(t, "y", function() {
-            return M
         }), n.d(t, "q", function() {
-            return D
-        }), n.d(t, "t", function() {
-            return q
-        }), n.d(t, "m", function() {
-            return B
-        }), n.d(t, "s", function() {
-            return F
-        }), n.d(t, "x", function() {
-            return V
+            return M
+        }), n.d(t, "z", function() {
+            return j
         }), n.d(t, "r", function() {
-            return H
+            return U
+        }), n.d(t, "u", function() {
+            return B
         }), n.d(t, "n", function() {
+            return F
+        }), n.d(t, "t", function() {
+            return V
+        }), n.d(t, "y", function() {
+            return H
+        }), n.d(t, "s", function() {
             return z
-        }), t.z = o;
+        }), n.d(t, "o", function() {
+            return W
+        }), t.A = o;
         var s = n(93),
             u = (n.n(s), n(5)),
             c = n.n(u),
@@ -2918,21 +2921,22 @@
             T = "c65ae62f-82dc-4394-ad75-df5f641e22d4",
             O = "51e3d33c-157b-422d-9a15-b0f9e9c055b2",
             x = "ac2acc22-f0ef-4162-b9a3-7357249165ca",
-            R = "ed516213-9b6f-49a0-96f7-1706aafc8e2d",
-            I = "9e5fffd0-9693-412b-913d-7da332fdeea4",
-            A = "1a42d36b-3f3f-4b80-8252-bdd6cc675ec3",
-            N = "354aaebd-7643-434f-be37-98fe12c01220",
-            L = "b8d1e7be-59f7-4ee3-a0c6-54ce94366d14",
-            M = "00683bde-a79d-4b9d-a7cc-b0549f854d36",
-            j = "d0518b75-fbba-418a-9445-ff7c517beb32",
-            D = "d48fe249-fd73-4c8f-bd17-415b70dc3708",
-            U = "74d6faab-1794-458a-a5f6-b92602254e9e",
-            q = "6e2f439b-916a-40b7-b1be-e82b284fd0bb",
-            B = "6a2630a4-edc7-4f2a-8cfe-e4de75eb0d98",
-            F = "ec70bd08-dbc8-4f48-9f60-d035fec3eb20",
-            V = "4d3d19a7-38c5-4328-9730-7d99565d5edd",
-            H = "3886e2be-85fd-43a4-84b9-02024290026a",
-            z = "fd5223cb-3ae7-4a9f-9af8-ce0d44d4b9f1"
+            R = "2b5c426e-3b29-4bad-a4be-5f8bea3ad8af",
+            I = "ed516213-9b6f-49a0-96f7-1706aafc8e2d",
+            A = "9e5fffd0-9693-412b-913d-7da332fdeea4",
+            N = "1a42d36b-3f3f-4b80-8252-bdd6cc675ec3",
+            L = "354aaebd-7643-434f-be37-98fe12c01220",
+            M = "b8d1e7be-59f7-4ee3-a0c6-54ce94366d14",
+            j = "00683bde-a79d-4b9d-a7cc-b0549f854d36",
+            D = "d0518b75-fbba-418a-9445-ff7c517beb32",
+            U = "d48fe249-fd73-4c8f-bd17-415b70dc3708",
+            q = "74d6faab-1794-458a-a5f6-b92602254e9e",
+            B = "6e2f439b-916a-40b7-b1be-e82b284fd0bb",
+            F = "6a2630a4-edc7-4f2a-8cfe-e4de75eb0d98",
+            V = "ec70bd08-dbc8-4f48-9f60-d035fec3eb20",
+            H = "4d3d19a7-38c5-4328-9730-7d99565d5edd",
+            z = "3886e2be-85fd-43a4-84b9-02024290026a",
+            W = "fd5223cb-3ae7-4a9f-9af8-ce0d44d4b9f1"
     }, function(e, t, n) {
         var r = n(776),
             i = n(90),
@@ -4256,7 +4260,7 @@
             }),
             Q = function() {
                 function e(t, i, a, o, s) {
-                    r(this, e), this.player = t, this.tracker = i, this.state = a, this.store = o, this.options = s, this.hasPlayed = !1, this.bufferEmptyStartTime = null, this.bufferEmptyCount = 0, this.lastNetworkProfile = -1 / 0, this.lastSeekTime = null, this.timeStampBeforeSeek = 0, this.isSeekInProgress = !1, this.trackNetworkProfile = this.store.getState().experiments.get(P.o), this.countessTracker = new y.a({
+                    r(this, e), this.player = t, this.tracker = i, this.state = a, this.store = o, this.options = s, this.hasPlayed = !1, this.bufferEmptyStartTime = null, this.bufferEmptyCount = 0, this.lastNetworkProfile = -1 / 0, this.lastSeekTime = null, this.timeStampBeforeSeek = 0, this.isSeekInProgress = !1, this.trackNetworkProfile = this.store.getState().experiments.get(P.p), this.countessTracker = new y.a({
                         host: _.k
                     }), this.comscore = new b.a(this, this.player, this.store), this.latencyTracker = new g.a(this, .001, this.player, this.store), this.valveClient = new S.a, this.initProperties(), this.initEvents(), this.unsubscribes = [], this.unsubscribes.push(this._subscribeCaptions(this.store)), this.unsubscribes.push(n.i(C.a)(this.store, ["quality.current", "quality.selected"], this.onQualityChange.bind(this))), this.unsubscribes.push(n.i(C.a)(this.store, ["collection.id"], this.onCollectionChange.bind(this))), this.unsubscribes.push(n.i(C.a)(this.store, ["ui.isMini"], this.onMiniChange.bind(this))), this.unsubscribes.push(n.i(C.a)(this.store, ["playback.ended"], this.onPlaybackEnded.bind(this))), this.unsubscribes.push(n.i(C.a)(this.store, ["error"], this.onError.bind(this))), this.unsubscribes.push(n.i(C.a)(this.store, ["stream"], this.onStreamChange.bind(this))), this.unsubscribes.push(n.i(C.a)(this.store, ["watchParty.vodId"], this.onWatchPartyVodChange.bind(this))), this.unsubscribes.push(n.i(C.a)(this.store, ["watchParty.watchPartyId"], this.onWatchPartyChange.bind(this))), this.unsubscribes.push(n.i(C.a)(this.store, ["chromecast.castingState"], this.onCastingChange.bind(this))), this.onError()
                 }
@@ -6501,7 +6505,7 @@
                     key: "loadMediaPlayer",
                     value: function() {
                         var e = this;
-                        return this.store.getState().experiments.get(b.s).then(function(t) {
+                        return this.store.getState().experiments.get(b.t).then(function(t) {
                             return g.a.loadMediaPlayer({
                                 value: t,
                                 logLevel: e._mediaPlayerLogLevel
@@ -7349,7 +7353,7 @@
                 }), new Promise(function(e) {
                     n().window.setTimeout(e, c)
                 }).then(function() {
-                    return n().experiments.get(d.u)
+                    return n().experiments.get(d.v)
                 }).then(function(e) {
                     return "yes" === e ? a(n().stream.videoId) : Promise.reject()
                 }).catch(function() {
@@ -8583,8 +8587,8 @@
                     key: "_commonExperimentParams",
                     value: function() {
                         var e = this;
-                        return Promise.all([this.accessToken, this._experimentSettings.adStitchingUS, this._experimentSettings.adStitchingUK, this._experimentSettings.adStitchingA, this._experimentSettings.adStitchingB, this._experimentSettings.adStitchingC, this._experimentSettings.adStitchingD, this._experimentSettings.adStitchingE, this._experimentSettings.adStitchingF, this._experimentSettings.adStitchingG, this._experimentSettings.adStitchingH, this._experimentSettings.adStitchingI, this._experimentSettings.adStitchingPrerolls, this._experimentSettings.realtimeQos, this._experimentSettings.fastBread]).then(function(t) {
-                            var n = p(t, 15),
+                        return Promise.all([this.accessToken, this._experimentSettings.adStitchingUS, this._experimentSettings.adStitchingUK, this._experimentSettings.adStitchingA, this._experimentSettings.adStitchingB, this._experimentSettings.adStitchingC, this._experimentSettings.adStitchingD, this._experimentSettings.adStitchingE, this._experimentSettings.adStitchingF, this._experimentSettings.adStitchingG, this._experimentSettings.adStitchingH, this._experimentSettings.adStitchingI, this._experimentSettings.adStitchingJ, this._experimentSettings.adStitchingPrerolls, this._experimentSettings.realtimeQos, this._experimentSettings.fastBread]).then(function(t) {
+                            var n = p(t, 16),
                                 r = n[0],
                                 i = n[1],
                                 o = n[2],
@@ -8600,11 +8604,12 @@
                                 _ = n[12],
                                 w = n[13],
                                 k = n[14],
-                                E = {};
-                            E.rtqos = w, E.baking_bread = l()([i, o, u, c, d, h, m, v, y, g, b], function(e) {
+                                E = n[15],
+                                S = {};
+                            S.rtqos = k, S.baking_bread = l()([i, o, u, c, d, h, m, v, y, g, b, _], function(e) {
                                 return s()(e, "yes")
-                            }), E.fast_bread = "treatment" === k && f.a.chrome;
-                            return e._restrictedBitrates = JSON.parse(r.token).chansub.restricted_bitrates, a()({}, E, function(e) {
+                            }), S.fast_bread = "treatment" === E && f.a.chrome;
+                            return e._restrictedBitrates = JSON.parse(r.token).chansub.restricted_bitrates, a()({}, S, function(e) {
                                 var t = /^(yes_play|no_play)_(\d+)$/,
                                     n = t.exec(e),
                                     r = n || [],
@@ -8615,7 +8620,7 @@
                                     baking_brownies: "yes_play" === a,
                                     baking_brownies_timeout: Number(o)
                                 }
-                            }(_))
+                            }(w))
                         })
                     }
                 }, {
@@ -13041,7 +13046,7 @@
         }
 
         function i(e) {
-            return r(n.i(a.z)(e))
+            return r(n.i(a.A)(e))
         }
         n.d(t, "b", function() {
             return o
@@ -13404,7 +13409,7 @@
                             t._store.dispatch(n.i(o.a)(e))
                         }), n.i(u.a)(r.videoId).then(function(e) {
                             t._store.dispatch(n.i(o.b)(e))
-                        }), f.get(d.w).then(function(e) {
+                        }), f.get(d.x).then(function(e) {
                             switch (e) {
                                 case "vca":
                                     return n.i(l.b)(r.videoId);
@@ -21900,7 +21905,7 @@
                     u = v.a(!0),
                     c = b.k() === b.p ? null : E;
                 return {
-                    app_version: "2018.01.04-193248+d158787d9c1ef1671684731ce46e1f1f38276764",
+                    app_version: "2018.01.04-230208+5bae7e099e83004ae1e9acaf93a3d4dfcf2640ed",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -23324,8 +23329,8 @@
                     value: function(e) {
                         var t = this._store.getState(),
                             n = t.experiments;
-                        return n.get(m.t).then(function(e) {
-                            return "show" === e ? n.get(m.y) : Promise.reject("Offline Experience: In control group")
+                        return n.get(m.u).then(function(e) {
+                            return "show" === e ? n.get(m.z) : Promise.reject("Offline Experience: In control group")
                         }).then(function(t) {
                             return "yes" === t ? e : Promise.reject("Offline Recommendations: In control group")
                         })
@@ -43181,7 +43186,7 @@
                             }),
                             h = !r && c && l;
                         return s.a.createElement("div", null, s.a.createElement(b.a, {
-                            uuid: _.v,
+                            uuid: _.w,
                             renderValue: "keep"
                         }, s.a.createElement(d.a, {
                             html5PlayerEnabled: i,
@@ -43194,7 +43199,7 @@
                             onStatsToggle: this.toggleVideoStats,
                             onHTML5Toggle: this.toggleHTML5Player
                         })), s.a.createElement(b.a, {
-                            uuid: _.v,
+                            uuid: _.w,
                             renderValue: "remove"
                         }, s.a.createElement(d.a, {
                             html5PlayerEnabled: i,
@@ -44263,7 +44268,7 @@
                     }), i.a.createElement("span", {
                         className: "player-streamstatus__label"
                     }, n.translate("Vodcast"))) : s && r ? i.a.createElement("span", null, i.a.createElement(p.a, {
-                        uuid: f.x,
+                        uuid: f.y,
                         renderValue: "yes"
                     }, i.a.createElement("span", {
                         className: "player-streamstatus__container"
@@ -44273,7 +44278,7 @@
                     }), i.a.createElement("span", {
                         className: "player-streamstatus__label"
                     }, n.translate("Rerun")))), i.a.createElement(p.a, {
-                        uuid: f.x,
+                        uuid: f.y,
                         renderValue: "no"
                     }, i.a.createElement("span", null, i.a.createElement(u.b, {
                         svgClass: b,
@@ -44281,7 +44286,7 @@
                     }), i.a.createElement("span", {
                         className: "player-streamstatus__label"
                     }, n.translate("Vodcast"))))) : l && r ? i.a.createElement("span", null, i.a.createElement(p.a, {
-                        uuid: f.x,
+                        uuid: f.y,
                         renderValue: "yes"
                     }, i.a.createElement("span", {
                         className: "player-streamstatus__container"
@@ -44291,7 +44296,7 @@
                     }), i.a.createElement("span", {
                         className: "player-streamstatus__label"
                     }, n.translate("Premiere")))), i.a.createElement(p.a, {
-                        uuid: f.x,
+                        uuid: f.y,
                         renderValue: "no"
                     }, i.a.createElement("span", null, i.a.createElement(u.b, {
                         svgClass: b,
@@ -44669,7 +44674,7 @@
                 }, w.a.createElement(P.b, {
                     i18n: C.b
                 }, w.a.createElement(A.a, {
-                    uuid: g.t,
+                    uuid: g.u,
                     renderValue: "show"
                 }, w.a.createElement(T.a, null)))), document.getElementById("js-follow-panel"))
             }
@@ -44680,7 +44685,7 @@
                 }, w.a.createElement(P.b, {
                     i18n: C.b
                 }, w.a.createElement(A.a, {
-                    uuid: g.t,
+                    uuid: g.u,
                     renderValue: "show"
                 }, w.a.createElement(O.a, null)))), document.getElementById("js-dead-ltv-overlay"))
             }
