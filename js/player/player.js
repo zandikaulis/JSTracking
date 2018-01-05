@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".e6fdde476c6632f11cd3.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".d6fd476b7497d8afba91.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -21905,7 +21905,7 @@
                     u = v.a(!0),
                     c = b.k() === b.p ? null : E;
                 return {
-                    app_version: "2018.01.04-230208+5bae7e099e83004ae1e9acaf93a3d4dfcf2640ed",
+                    app_version: "2018.01.05-005521+07fde0f5154dd585b577a6dea0af616cb8ea4d66",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -30479,7 +30479,7 @@
         n.d(t, "a", function() {
             return r
         });
-        var r = "//video-edge-f2f4e4.sjc01.hls.ttvnw.net/v1/playlist/CqQ8PPMoNnEswYAuYbakYDpvpqOqndfsq363Mmst-BFNbPAKGXYe3uk0TQcfQ2R7wucEvK7JGLMUYUactDgsi3Dh1ab6OCEygDECt2wJCS3GbqMmZ441s7uoSVfSP-kqE3B0Wh7jN7dCUOWg6Gfm0p6CFGoZt09VdjBoiV04SK-wsrH_5Fy8-cdi9z0jAb2Ss8Uehk-HUDhVCCeOv27M53lVloDOFkNFcRE-I25bAb2bbQABHCuo1kZ8KjegrZUqA8rB1rvM2SHijEawTZl-MStmv_FSB5LRLwJJy0J1jPtxgO_e11oXNpHhirjmKPLUyMNxodvFlD7NXH_8_4qBEbNbGluC-1YGZPzTRNpRyZ5zKIj-ICWHVJuLZ2pC7df71-XMuinE-JEncJSaj_sTjMqClHDCLQRWM6UNOpOSVIldSPJwfx5ywcm.m3u8"
+        var r = "//video-edge-f44d23.sjc01.hls.ttvnw.net/v1/playlist/ChG7CzZ0rCq9uxxdZCwUoyjlRV8AsNCkwzw9P4iH1y7ah2AhB_hNcv6SthuOtGOq9-mlbh3OyD989Naqj87pJG8vWkuN8jF6-81K81wzqFeGmWUxpp4PzgtOsP15J3NUmU1wGBeFUWawa2ciWF8Kyh_32jQIUM3a1IoSPaCzRm7YYLfEluSpFc2JQVhNPGHT4Zpc-VzOKUKPKu_0kfF8HEi549ifKxvsby3L7jPdtYTWguuB0wizoig5Au-cX4XMZexeDZ6Rvcp8706uLbnmS9nP5VfUgKzK-5C0cBTmBA0vL_fUs_cysZQ0iJUQNQ3-Ybg2gpQnEuqjzerAY4HvQ-_1QuBCdA83rZfawVQh6jx994Q2ZV8KV8lSmdvWLOgv453NGgIowhUt-yk0oZsDg1tAY54MFBEM8z6INxDP1KQ3cnKdVqS0ivNL5Us5A9VN0AW5JF.m3u8"
     }, function(e, t, n) {
         "use strict";
 
