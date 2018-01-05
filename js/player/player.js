@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".d6fd476b7497d8afba91.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".23ed7c8031c80818930c.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -17039,24 +17039,34 @@
             return isNaN(i) ? 0 : i
         }
         n.d(t, "a", function() {
-            return c
+            return d
         });
         var i = n(0),
             a = n.n(i),
             o = n(1),
             s = n.n(o),
-            u = {
+            u = n(2),
+            c = n.n(u),
+            l = {
                 popupLeftOffset: s.a.number,
                 popupObject: s.a.object,
                 popupWidth: s.a.number,
-                seekbarWidth: s.a.number
+                seekbarWidth: s.a.number,
+                hideThumbnailPreview: s.a.bool
             },
-            c = function(e) {
+            d = function(e) {
                 var t = e.popupLeftOffset,
                     n = e.popupObject,
                     i = e.popupWidth,
-                    o = e.seekbarWidth;
-                return a.a.createElement("div", null, a.a.createElement("div", {
+                    o = e.seekbarWidth,
+                    s = e.hideThumbnailPreview,
+                    u = c()({
+                        "seekbar__popup--fadein": !s,
+                        "seekbar__popup--fadeout": s
+                    });
+                return a.a.createElement("div", {
+                    className: u
+                }, a.a.createElement("div", {
                     className: "player-slider__popup-container",
                     style: {
                         width: n.width,
@@ -17105,7 +17115,7 @@
                     }
                 }))
             };
-        c.propTypes = u
+        d.propTypes = l
     }, function(e, t, n) {
         "use strict";
 
@@ -21905,7 +21915,7 @@
                     u = v.a(!0),
                     c = b.k() === b.p ? null : E;
                 return {
-                    app_version: "2018.01.05-005521+07fde0f5154dd585b577a6dea0af616cb8ea4d66",
+                    app_version: "2018.01.05-120146+1a766d50d5dfd269bd0c7afb278c6017a49ce202",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -30432,12 +30442,12 @@
             }, {
                 key: "setWidth",
                 value: function(e) {
-                    a()(e) && e >= 0 && this._iframe.setAttribute("width", e)
+                    a()(e) && e >= 0 && this._iframe.setAttribute("width", Math.max(200, e))
                 }
             }, {
                 key: "setHeight",
                 value: function(e) {
-                    a()(e) && e >= 0 && this._iframe.setAttribute("height", e)
+                    a()(e) && e >= 0 && this._iframe.setAttribute("height", Math.max(200, e))
                 }
             }])
         }()
@@ -38083,7 +38093,8 @@
                 onShowingMarkerPreview: p.a.func,
                 onMarkerSeek: p.a.func,
                 seekbarWidth: p.a.number,
-                trackEvent: p.a.func
+                trackEvent: p.a.func,
+                hideThumbnailPreview: p.a.bool
             },
             _ = {
                 currentTime: 0,
@@ -38194,7 +38205,8 @@
                             popupLeftOffset: a,
                             popupWidth: w[c.type],
                             popupObject: l,
-                            seekbarWidth: this.props.seekbarWidth
+                            seekbarWidth: this.props.seekbarWidth,
+                            hideThumbnailPreview: this.props.hideThumbnailPreview
                         })
                     }
                 }]), t
@@ -38232,19 +38244,21 @@
         "use strict";
 
         function r(e) {
-            var t = e.duration,
-                n = e.seekbarWidth,
-                r = e.seekbarLeftOffset,
-                a = e.previews,
-                s = e.mouseMoveClientX,
-                u = s - r,
-                c = t * (u / n),
-                f = i(a, c, t);
+            var t = e.hideThumbnailPreview,
+                n = e.duration,
+                r = e.seekbarWidth,
+                a = e.seekbarLeftOffset,
+                s = e.previews,
+                u = e.mouseMoveClientX,
+                c = u - a,
+                f = n * (c / r),
+                p = i(s, f, n);
             return o.a.createElement(l.a, {
-                popupLeftOffset: u,
-                popupObject: f,
+                popupLeftOffset: c,
+                popupObject: p,
                 popupWidth: d,
-                seekbarWidth: n
+                seekbarWidth: r,
+                hideThumbnailPreview: t
             })
         }
 
@@ -38284,6 +38298,7 @@
             l = n(263),
             d = 148,
             f = {
+                hideThumbnailPreview: u.a.bool,
                 duration: u.a.number,
                 previews: u.a.object,
                 mouseMoveClientX: u.a.number,
@@ -42709,7 +42724,8 @@
                         isDragging: !1,
                         isShowingMarkerPreview: !1,
                         mouseMoveClientX: 0,
-                        mouseMoveOnSeekbar: !1
+                        mouseMoveOnSeekbar: !1,
+                        hideThumbnailPreview: !1
                     }, e.$seekbar = null, e.handleDragStart = e.handleDragStart.bind(e), e.handleDragStop = e.handleDragStop.bind(e), e.handleClick = e.handleClick.bind(e), e.handleMouseMove = e.handleMouseMove.bind(e), e.handleMouseOut = e.handleMouseOut.bind(e), e.seekbarRefHandler = e.seekbarRefHandler.bind(e), e.seekToPosition = e.seekToPosition.bind(e), e.handleShowingMarkerPreview = e.handleShowingMarkerPreview.bind(e), e.handleHidingMarkerPreview = e.handleHidingMarkerPreview.bind(e), e
                 }
                 return a(t, e), x(t, [{
@@ -42768,7 +42784,8 @@
                             onMarkerSeek: this.seekToPosition,
                             onShowingMarkerPreview: this.handleShowingMarkerPreview,
                             seekbarWidth: m,
-                            trackEvent: f
+                            trackEvent: f,
+                            hideThumbnailPreview: this.state.hideThumbnailPreview
                         });
                         return s.a.createElement(w.a, {
                             classNames: N,
@@ -42817,6 +42834,7 @@
                             u = a.seekbarLeftOffset,
                             c = d.a.msedge || d.a.msie;
                         return r.count > 0 && !c ? s.a.createElement(S.a, {
+                            hideThumbnailPreview: this.state.hideThumbnailPreview,
                             duration: n,
                             previews: r,
                             mouseMoveClientX: e,
@@ -42851,10 +42869,17 @@
                 }, {
                     key: "handleMouseOut",
                     value: function() {
+                        var e = this;
                         this.setState({
-                            mouseMoveOnSeekbar: !1,
-                            mouseMoveClientX: 0
-                        })
+                            hideThumbnailPreview: !0
+                        });
+                        setTimeout(function() {
+                            e.state.hideThumbnailPreview && e.setState({
+                                mouseMoveOnSeekbar: !1,
+                                mouseMoveClientX: 0,
+                                hideThumbnailPreview: !1
+                            })
+                        }, 750)
                     }
                 }, {
                     key: "handleDragStart",
