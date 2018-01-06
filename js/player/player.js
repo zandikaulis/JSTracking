@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".f1da5759ca806202adbb.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".3509906f7fed3f559ae1.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -1832,7 +1832,7 @@
         }
 
         function i() {
-            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : g;
+            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : b;
             return {
                 type: f,
                 value: e
@@ -1873,30 +1873,32 @@
         function l(e) {
             return {
                 type: f,
-                value: _,
+                value: w,
                 extensionsSubmenu: e
             }
         }
         n.d(t, "l", function() {
             return d
-        }), n.d(t, "o", function() {
-            return f
         }), n.d(t, "p", function() {
+            return f
+        }), n.d(t, "q", function() {
             return p
         }), n.d(t, "n", function() {
             return h
         }), n.d(t, "m", function() {
             return m
-        }), n.d(t, "q", function() {
-            return v
         }), n.d(t, "r", function() {
+            return v
+        }), n.d(t, "s", function() {
             return y
-        }), n.d(t, "g", function() {
+        }), n.d(t, "o", function() {
             return g
-        }), n.d(t, "i", function() {
+        }), n.d(t, "g", function() {
             return b
-        }), n.d(t, "f", function() {
+        }), n.d(t, "i", function() {
             return _
+        }), n.d(t, "f", function() {
+            return w
         }), t.a = r, t.h = i, t.k = a, t.c = o, t.d = s, t.e = u, t.j = c, t.b = l;
         var d = "set miniplayer",
             f = "show settings menu",
@@ -1905,9 +1907,10 @@
             m = "hide ui",
             v = "hovering on ui element",
             y = "hovering off ui element",
-            g = "none",
-            b = "settings",
-            _ = "extensions"
+            g = "show volume slider",
+            b = "none",
+            _ = "settings",
+            w = "extensions"
     }, function(e, t, n) {
         "use strict";
         n.d(t, "c", function() {
@@ -21915,7 +21918,7 @@
                     u = v.a(!0),
                     c = b.k() === b.p ? null : E;
                 return {
-                    app_version: "2018.01.05-214416+97bf65b7478c474b7c05780db12d64e45d82d4a6",
+                    app_version: "2018.01.05-224004+0409cadeaa88e7dbfadab8adc050cfe249dbe028",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -32152,24 +32155,28 @@
             var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u,
                 t = arguments[1];
             switch (t.type) {
+                case o.o:
+                    return a()({}, e, {
+                        showVolumeSlider: t.value
+                    });
                 case o.l:
                     return a()({}, e, {
                         isMini: Boolean(t.value)
                     });
-                case o.o:
+                case o.p:
                     return a()({}, e, {
                         showSettings: t.value,
                         showExtensionsSubmenu: t.extensionsSubmenu
                     });
-                case o.p:
+                case o.q:
                     return a()({}, e, {
                         showUI: t.showUI
                     });
-                case o.q:
+                case o.r:
                     return a()({}, e, {
                         onUIElement: !0
                     });
-                case o.r:
+                case o.s:
                     return a()({}, e, {
                         onUIElement: !1
                     });
@@ -32185,6 +32192,7 @@
             u = {
                 isMini: !1,
                 showSettings: o.g,
+                showVolumeSlider: !0,
                 showExtensionsSubmenu: s.g,
                 showUI: !1,
                 onUIElement: !1
@@ -44560,15 +44568,18 @@
                 muted: c.a.bool,
                 mutePlayer: c.a.func,
                 changeVolume: c.a.func,
-                volume: c.a.number
+                volume: c.a.number,
+                showVolumeSlider: c.a.bool.isRequired
             },
             g = function(e) {
                 var t = e.lang,
-                    n = e.playback;
+                    n = e.playback,
+                    r = e.ui;
                 return {
                     i18n: t,
                     muted: n.muted,
-                    volume: n.volume
+                    volume: n.volume,
+                    showVolumeSlider: r.showVolumeSlider
                 }
             },
             b = function(e) {
@@ -44598,8 +44609,9 @@
                     value: function() {
                         var e = this.props,
                             t = e.muted,
-                            n = e.volume,
-                            r = t ? 0 : n,
+                            n = e.volume;
+                        if (!e.showVolumeSlider) return null;
+                        var r = t ? 0 : n,
                             i = this.getVolumeIcon();
                         return s.a.createElement("div", {
                             className: w
