@@ -55,7 +55,7 @@ window.__twilightSettings = {
     "sizmek_versatag_events": ["YeUmkUI9R5GKR5WGtg046A", "f4aK8duASJKiAYAiETsUvw", "WN1Ly4NxRgOrSNWOSG40PQ", "YFCU_dppR6Oor32XLPrU2w", "2HsLVRMUTnqChbVy5YSsfg", "f4aK8duASJKiAYAiETsUvw"],
     "sizmek_versatag_games": ["496712", "Call of Duty: WWII", "497571", "Wrestling"],
     "sizmek_versatag_teams": ["wrestling"],
-    "spade_url": "https://video-edge-f44d23.sjc01.hls.ttvnw.net/v1/playlist/ChG7CzZ0rCq9uxxdZCwUoyjlRV8AsNCkwzw9P4iH1y7ah2AhB_hNcv6SthuOtGOq9-mlbh3OyD989Naqj87pJG8vWkuN8jF6-81K81wzqFeGmWUxpp4PzgtOsP15J3NUmU1wGBeFUWawa2ciWF8Kyh_32jQIUM3a1IoSPaCzRm7YYLfEluSpFc2JQVhNPGHT4Zpc-VzOKUKPKu_0kfF8HEi549ifKxvsby3L7jPdtYTWguuB0wizoig5Au-cX4XMZexeDZ6Rvcp8706uLbnmS9nP5VfUgKzK-5C0cBTmBA0vL_fUs_cysZQ0iJUQNQ3-Ybg2gpQnEuqjzerAY4HvQ-_1QuBCdA83rZfawVQh6jx994Q2ZV8KV8lSmdvWLOgv453NGgIowhUt-yk0oZsDg1tAY54MFBEM8z6INxDP1KQ3cnKdVqS0ivNL5Us5A9VN0AW5JF.m3u8",
+    "spade_url": "https://video-edge-104c66.sjc01.hls.ttvnw.net/v1/playlist/Cp7X-kPO0QIaxSquj9WL_NBf-UFmNdkRmRdnKB0bBDCpeTNDjHMPeRd_Jn3s5ZjF5YLNx8hAudf6iYcfiMoWBW5k1Jjp0fb43nP_wgUldS-zoHkK0dHdrKGDPG9QolPBWQRQ4R4hPIRadYIP6umor39mj1qVMvUE-qbW8x2szujL761WIriRwgwwuucxq5u37Npfmu6SN2pBRedvcc1FIarhtDEb8ncxR1WE2EknZesTl8nem2a9FvKPpAZhlPcOXMqknJPx4qkrhjCFJ2qmEwY0cEJoa_saJP3MJXI_QqTUo3Y5knARIJs5l8n0vpCXzvDio46ri4MFq97OsAkVvI7ycWo5GUpQ0Sz7pyKcRdtHvsKZOq3COgXKgLIxLXwfu7aUVx3NVXAnoYTtGhyWckPavonLfrpPLIIEoHnyxKWKH_DBqHUCuWZ3RySTBO3i988T1JJBPp7u4T3s6ol.m3u8",
     "store_merch_promo": "off",
     "store_merch_seasonal": "on",
     "streamer_trailers_start_date": "2017-10-12T23:00:25.75536206Z",
@@ -302,6 +302,18 @@ window.__twilightSettings = {
             }, {
                 "weight": 90,
                 "value": "treatment"
+            }]
+        },
+        "72c14aa9-d78d-4095-8f27-d97b9aac4233": {
+            "name": "TWILIGHT_SUB_CHECKOUT_POPUP",
+            "v": 2759,
+            "t": 1,
+            "groups": [{
+                "weight": 50,
+                "value": "yes"
+            }, {
+                "weight": 50,
+                "value": "no"
             }]
         },
         "73fd722c-5197-4677-9a89-bb61a6aadc1d": {
