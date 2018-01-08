@@ -1,4 +1,4 @@
-webpackJsonp([38, 66], {
+webpackJsonp([39, 66], {
     "+5Qw": function(e, t) {},
     "+DHI": function(e, t, n) {
         var a = {
@@ -6308,7 +6308,8 @@ webpackJsonp([38, 66], {
                         key: "Timeout",
                         label: t,
                         direction: H._32.Top,
-                        align: H._31.Center
+                        align: H._31.Left,
+                        offsetX: "15%"
                     }, k.createElement(H.U, {
                         padding: {
                             right: 1
@@ -6325,7 +6326,8 @@ webpackJsonp([38, 66], {
                         key: "Untimeout",
                         label: e,
                         direction: H._32.Top,
-                        align: H._31.Center
+                        align: H._31.Left,
+                        offsetX: "15%"
                     }, k.createElement(H.U, {
                         padding: {
                             right: 1
@@ -6342,7 +6344,8 @@ webpackJsonp([38, 66], {
                         key: "Ban",
                         label: t,
                         direction: H._32.Top,
-                        align: H._31.Center
+                        align: H._31.Left,
+                        offsetX: "32%"
                     }, k.createElement(H.U, {
                         padding: {
                             right: 1,
@@ -6360,7 +6363,8 @@ webpackJsonp([38, 66], {
                         key: "Unban",
                         label: e,
                         direction: H._32.Top,
-                        align: H._31.Center
+                        align: H._31.Left,
+                        offsetX: "32%"
                     }, k.createElement(H.U, {
                         padding: {
                             right: 1,
@@ -6532,7 +6536,8 @@ webpackJsonp([38, 66], {
                             flexDirection: H.J.Row,
                             textAlign: H._23.Center,
                             fullWidth: !0,
-                            flexGrow: 1
+                            flexGrow: 1,
+                            className: "viewer-card__banner"
                         }, k.createElement(H.l, {
                             imageSrc: t.props.data.targetUser.profileImageURL,
                             size: 50,
@@ -23553,6 +23558,12 @@ webpackJsonp([38, 66], {
             NotificationSettingsPage: "settings.notificationSettings",
             OnboardingIndex: "onboarding.index",
             ReportUserPage: "reportUser.page",
+            SettingsChannel: "private/embed-components",
+            SettingsConnections: "private/embed-components",
+            SettingsNotifications: "settings.notifications",
+            SettingsPrime: "settings.prime",
+            SettingsProfile: "settings.profile",
+            SettingsSecurity: "private/embed-components",
             StoreMerchPage: "store.merch",
             SubsLandingPage: "subs.landing",
             SubsBroadcasterPage: "subs.broadcaster",
@@ -24136,4 +24147,4 @@ webpackJsonp([38, 66], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-videos-2ba3ecc5dba675e6278b48f4a11fcc80.js.map
+//# sourceMappingURL=pages.channel-videos-57e64fd4dd1d6a988ff6fea65da151bf.js.map

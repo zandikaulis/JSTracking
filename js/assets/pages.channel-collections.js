@@ -4482,6 +4482,12 @@ webpackJsonp([48], {
             NotificationSettingsPage: "settings.notificationSettings",
             OnboardingIndex: "onboarding.index",
             ReportUserPage: "reportUser.page",
+            SettingsChannel: "private/embed-components",
+            SettingsConnections: "private/embed-components",
+            SettingsNotifications: "settings.notifications",
+            SettingsPrime: "settings.prime",
+            SettingsProfile: "settings.profile",
+            SettingsSecurity: "private/embed-components",
             StoreMerchPage: "store.merch",
             SubsLandingPage: "subs.landing",
             SubsBroadcasterPage: "subs.broadcaster",
@@ -4936,4 +4942,4 @@ webpackJsonp([48], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-collections-81293ff04e7a5947d91d2b13ed3a4a95.js.map
+//# sourceMappingURL=pages.channel-collections-b61229de83376ace45e0fe5477a72cfa.js.map

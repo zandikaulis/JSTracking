@@ -1,4 +1,4 @@
-webpackJsonp([37], {
+webpackJsonp([38], {
     "+R+X": function(e, t) {
         var n = {
             kind: "Document",
@@ -13563,11 +13563,9 @@ webpackJsonp([37], {
             return "/directory/game/" + encodeURIComponent(e)
         }, t.a = function(e) {
             return "/communities/" + encodeURIComponent(e)
-        }, t.d = function(e) {
-            return "/settings/" + encodeURIComponent(e)
         }, t.b = function(e) {
             return "/events/" + encodeURIComponent(e)
-        }, t.e = function(e) {
+        }, t.d = function(e) {
             return i.b.get("premiere_video_manager_public", !1) ? "/" + encodeURIComponent(e) + "/manager" : "/" + encodeURIComponent(e) + "/manager_v2"
         };
         var i = n("6sO2")
@@ -19872,19 +19870,19 @@ webpackJsonp([37], {
                 return n.e(49).then(n.bind(null, "Dd84"))
             }, "BrowseRootPage"),
             oe = ee.a.wrap(function() {
-                return n.e(40).then(n.bind(null, "gZGZ"))
+                return n.e(41).then(n.bind(null, "gZGZ"))
             }, "ChannelClipsPage"),
             le = ee.a.wrap(function() {
                 return n.e(48).then(n.bind(null, "zfLI"))
             }, "ChannelCollectionsPage"),
             ce = ee.a.wrap(function() {
-                return n.e(41).then(n.bind(null, "lW0T"))
+                return n.e(42).then(n.bind(null, "lW0T"))
             }, "ChannelEventsPage"),
             de = ee.a.wrap(function() {
                 return n.e(33).then(n.bind(null, "oFVJ"))
             }, "ChannelPage"),
             ue = ee.a.wrap(function() {
-                return n.e(38).then(n.bind(null, "g8mI"))
+                return n.e(39).then(n.bind(null, "g8mI"))
             }, "ChannelVideosPage"),
             pe = ee.a.wrap(function() {
                 return n.e(57).then(n.bind(null, "yMnN"))
@@ -19911,11 +19909,11 @@ webpackJsonp([37], {
                 return n.e(56).then(n.bind(null, "DkuH"))
             }, "ReportUserPage"),
             ye = ee.a.wrap(function() {
-                return n.e(42).then(n.bind(null, "uiPj"))
-            }, "VideoWatchPage"),
+                return n.e(50).then(n.bind(null, "K4jf"))
+            }, "SettingsRoot"),
             Se = ee.a.wrap(function() {
-                return n.e(50).then(n.bind(null, "Gsz8"))
-            }, "GlobalNotificationSettingsPage"),
+                return n.e(35).then(n.bind(null, "uiPj"))
+            }, "VideoWatchPage"),
             _e = ee.a.wrap(function() {
                 return n.e(52).then(n.bind(null, "6Vx1"))
             }, "DevOnlyTestingAmazonOffersPage"),
@@ -19984,7 +19982,7 @@ webpackJsonp([37], {
                     render: Te
                 }), o.createElement(X.d, {
                     path: "/collections/:collectionID",
-                    component: ye
+                    component: Se
                 }), o.createElement(X.d, {
                     path: "/communities/:encodedCommunityName/details",
                     component: me
@@ -20056,7 +20054,7 @@ webpackJsonp([37], {
                     render: Ee
                 }), o.createElement(X.d, {
                     path: "/videos/:videoID",
-                    component: ye
+                    component: Se
                 }), o.createElement(X.d, {
                     path: "/store",
                     render: Pe
@@ -20067,8 +20065,8 @@ webpackJsonp([37], {
                     path: "/subs",
                     render: Te
                 }), o.createElement(X.d, {
-                    path: "/settings/notifications",
-                    component: Se
+                    path: "/settings/:tab?",
+                    component: ye
                 }), o.createElement(X.d, {
                     path: "/:channelName/report",
                     component: ke
@@ -24342,6 +24340,12 @@ webpackJsonp([37], {
             NotificationSettingsPage: "settings.notificationSettings",
             OnboardingIndex: "onboarding.index",
             ReportUserPage: "reportUser.page",
+            SettingsChannel: "private/embed-components",
+            SettingsConnections: "private/embed-components",
+            SettingsNotifications: "settings.notifications",
+            SettingsPrime: "settings.prime",
+            SettingsProfile: "settings.profile",
+            SettingsSecurity: "private/embed-components",
             StoreMerchPage: "store.merch",
             SubsLandingPage: "subs.landing",
             SubsBroadcasterPage: "subs.broadcaster",
@@ -25129,4 +25133,4 @@ webpackJsonp([37], {
         }
     }
 });
-//# sourceMappingURL=pages.onboarding-f2e8b40bafbe8b850c2ec6dc66376695.js.map
+//# sourceMappingURL=pages.onboarding-8edcd8d487a2a7da0cfc1d1552ba2e4c.js.map

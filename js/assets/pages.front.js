@@ -1132,7 +1132,16 @@ webpackJsonp([44], {
                         fontSize: m.L.Size6
                     }, o.createElement(m._36, null, o.createElement(v, {
                         source: this.props.claimInstructions || "",
-                        escapeHtml: !0
+                        escapeHtml: !0,
+                        renderers: {
+                            Link: function(e) {
+                                return o.createElement("a", {
+                                    href: e.href,
+                                    target: "_blank",
+                                    rel: "nofollow noopener noreferrer"
+                                }, e.children)
+                            }
+                        }
                     })))
                 }, t = a.__decorate([Object(u.c)("PrimeClaimInstructions")], t)
             }(o.Component),
@@ -10920,6 +10929,12 @@ webpackJsonp([44], {
             NotificationSettingsPage: "settings.notificationSettings",
             OnboardingIndex: "onboarding.index",
             ReportUserPage: "reportUser.page",
+            SettingsChannel: "private/embed-components",
+            SettingsConnections: "private/embed-components",
+            SettingsNotifications: "settings.notifications",
+            SettingsPrime: "settings.prime",
+            SettingsProfile: "settings.profile",
+            SettingsSecurity: "private/embed-components",
             StoreMerchPage: "store.merch",
             SubsLandingPage: "subs.landing",
             SubsBroadcasterPage: "subs.broadcaster",
@@ -11345,4 +11360,4 @@ webpackJsonp([44], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.front-3eaf00283b7ee3c6c6453e5976ad7f68.js.map
+//# sourceMappingURL=pages.front-361a0eedbef2b7e123966b1bd1c9041d.js.map

@@ -1,4 +1,4 @@
-webpackJsonp([39], {
+webpackJsonp([40], {
     "+R+X": function(e, t) {
         var n = {
             kind: "Document",
@@ -13143,11 +13143,9 @@ webpackJsonp([39], {
             return "/directory/game/" + encodeURIComponent(e)
         }, t.a = function(e) {
             return "/communities/" + encodeURIComponent(e)
-        }, t.d = function(e) {
-            return "/settings/" + encodeURIComponent(e)
         }, t.b = function(e) {
             return "/events/" + encodeURIComponent(e)
-        }, t.e = function(e) {
+        }, t.d = function(e) {
             return i.b.get("premiere_video_manager_public", !1) ? "/" + encodeURIComponent(e) + "/manager" : "/" + encodeURIComponent(e) + "/manager_v2"
         };
         var i = n("6sO2")
@@ -19165,19 +19163,19 @@ webpackJsonp([39], {
                 return n.e(49).then(n.bind(null, "Dd84"))
             }, "BrowseRootPage"),
             oe = ee.a.wrap(function() {
-                return n.e(40).then(n.bind(null, "gZGZ"))
+                return n.e(41).then(n.bind(null, "gZGZ"))
             }, "ChannelClipsPage"),
             le = ee.a.wrap(function() {
                 return n.e(48).then(n.bind(null, "zfLI"))
             }, "ChannelCollectionsPage"),
             ce = ee.a.wrap(function() {
-                return n.e(41).then(n.bind(null, "lW0T"))
+                return n.e(42).then(n.bind(null, "lW0T"))
             }, "ChannelEventsPage"),
             de = ee.a.wrap(function() {
                 return n.e(33).then(n.bind(null, "oFVJ"))
             }, "ChannelPage"),
             ue = ee.a.wrap(function() {
-                return n.e(38).then(n.bind(null, "g8mI"))
+                return n.e(39).then(n.bind(null, "g8mI"))
             }, "ChannelVideosPage"),
             pe = ee.a.wrap(function() {
                 return n.e(57).then(n.bind(null, "yMnN"))
@@ -19204,11 +19202,11 @@ webpackJsonp([39], {
                 return n.e(56).then(n.bind(null, "DkuH"))
             }, "ReportUserPage"),
             Se = ee.a.wrap(function() {
-                return n.e(42).then(n.bind(null, "uiPj"))
-            }, "VideoWatchPage"),
+                return n.e(50).then(n.bind(null, "K4jf"))
+            }, "SettingsRoot"),
             ye = ee.a.wrap(function() {
-                return n.e(50).then(n.bind(null, "Gsz8"))
-            }, "GlobalNotificationSettingsPage"),
+                return n.e(35).then(n.bind(null, "uiPj"))
+            }, "VideoWatchPage"),
             _e = ee.a.wrap(function() {
                 return n.e(52).then(n.bind(null, "6Vx1"))
             }, "DevOnlyTestingAmazonOffersPage"),
@@ -19277,7 +19275,7 @@ webpackJsonp([39], {
                     render: Ne
                 }), o.createElement(X.d, {
                     path: "/collections/:collectionID",
-                    component: Se
+                    component: ye
                 }), o.createElement(X.d, {
                     path: "/communities/:encodedCommunityName/details",
                     component: me
@@ -19349,7 +19347,7 @@ webpackJsonp([39], {
                     render: Ee
                 }), o.createElement(X.d, {
                     path: "/videos/:videoID",
-                    component: Se
+                    component: ye
                 }), o.createElement(X.d, {
                     path: "/store",
                     render: Pe
@@ -19360,8 +19358,8 @@ webpackJsonp([39], {
                     path: "/subs",
                     render: Ne
                 }), o.createElement(X.d, {
-                    path: "/settings/notifications",
-                    component: ye
+                    path: "/settings/:tab?",
+                    component: Se
                 }), o.createElement(X.d, {
                     path: "/:channelName/report",
                     component: ke
@@ -23473,4 +23471,4 @@ webpackJsonp([39], {
         }
     }
 });
-//# sourceMappingURL=pages.subs-edb9923f8526b1491f455502ce52ee91.js.map
+//# sourceMappingURL=pages.subs-8348467154f21427d30356e5482ec5c6.js.map

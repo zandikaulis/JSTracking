@@ -1,4 +1,4 @@
-webpackJsonp([40], {
+webpackJsonp([41], {
     "+5Qw": function(e, t) {},
     "+V/3": function(e, t, n) {
         "use strict";
@@ -6066,7 +6066,8 @@ webpackJsonp([40], {
                         key: "Timeout",
                         label: t,
                         direction: H._32.Top,
-                        align: H._31.Center
+                        align: H._31.Left,
+                        offsetX: "15%"
                     }, k.createElement(H.U, {
                         padding: {
                             right: 1
@@ -6083,7 +6084,8 @@ webpackJsonp([40], {
                         key: "Untimeout",
                         label: e,
                         direction: H._32.Top,
-                        align: H._31.Center
+                        align: H._31.Left,
+                        offsetX: "15%"
                     }, k.createElement(H.U, {
                         padding: {
                             right: 1
@@ -6100,7 +6102,8 @@ webpackJsonp([40], {
                         key: "Ban",
                         label: t,
                         direction: H._32.Top,
-                        align: H._31.Center
+                        align: H._31.Left,
+                        offsetX: "32%"
                     }, k.createElement(H.U, {
                         padding: {
                             right: 1,
@@ -6118,7 +6121,8 @@ webpackJsonp([40], {
                         key: "Unban",
                         label: e,
                         direction: H._32.Top,
-                        align: H._31.Center
+                        align: H._31.Left,
+                        offsetX: "32%"
                     }, k.createElement(H.U, {
                         padding: {
                             right: 1,
@@ -6290,7 +6294,8 @@ webpackJsonp([40], {
                             flexDirection: H.J.Row,
                             textAlign: H._23.Center,
                             fullWidth: !0,
-                            flexGrow: 1
+                            flexGrow: 1,
+                            className: "viewer-card__banner"
                         }, k.createElement(H.l, {
                             imageSrc: t.props.data.targetUser.profileImageURL,
                             size: 50,
@@ -8960,7 +8965,18 @@ webpackJsonp([40], {
                         gutterSize: S.O.None
                     }, 0 === this.props.clips.length ? this.renderEmpty() : this.renderClips()))
                 }, t.prototype.renderEmpty = function() {
-                    var e = i.createElement(S.U, null, i.createElement(S._22, {
+                    var e = this.props.timeFilterValue === q.b.All ? i.createElement(S.U, null, i.createElement(S._22, {
+                        fontSize: S.L.Size4
+                    }, Object(p.d)("No Clips Found", "ClipsCards")), i.createElement(S.U, {
+                        margin: 3
+                    }, Object(p.d)("<x:link>Learn how</x:link> to make and share clips of this channel", {
+                        "x:link": function(e) {
+                            return i.createElement("a", {
+                                href: "https://help.twitch.tv/customer/portal/articles/2442508-how-to-use-clips",
+                                target: "_blank"
+                            }, e)
+                        }
+                    }, "ClipsCards"))) : i.createElement(S.U, null, i.createElement(S._22, {
                         fontSize: S.L.Size4
                     }, Object(p.d)("No clips were created in this time period.", "ClipsCards"), i.createElement("br", null), Object(p.d)("Check out all popular clips from this channel instead.", "ClipsCards")), i.createElement(S.U, {
                         margin: 3
@@ -8968,16 +8984,7 @@ webpackJsonp([40], {
                         type: S.z.Hollow,
                         onClick: this.updateToAllTime
                     }, Object(p.d)("See all popular clips", "ClipCards"))));
-                    return this.props.timeFilterValue === q.b.All && (e = i.createElement(S.U, null, i.createElement(S._22, {
-                        fontSize: S.L.Size4
-                    }, Object(p.d)("No Clips Found", "ClipsCards")), i.createElement(S.U, {
-                        margin: 3
-                    }, Object(p.d)("{learnClipsLink} to make and share clips of this channel", {
-                        learnClipsLink: i.createElement("a", {
-                            href: "https://help.twitch.tv/customer/portal/articles/2442508-how-to-use-clips",
-                            target: "_blank"
-                        }, Object(p.d)("Learn how", "ClipsCards"))
-                    }, "ClipsCards")))), i.createElement(S.U, {
+                    return i.createElement(S.U, {
                         fullWidth: !0
                     }, i.createElement(S.N, null, i.createElement(S.G, {
                         cols: 3
@@ -22908,6 +22915,12 @@ webpackJsonp([40], {
             NotificationSettingsPage: "settings.notificationSettings",
             OnboardingIndex: "onboarding.index",
             ReportUserPage: "reportUser.page",
+            SettingsChannel: "private/embed-components",
+            SettingsConnections: "private/embed-components",
+            SettingsNotifications: "settings.notifications",
+            SettingsPrime: "settings.prime",
+            SettingsProfile: "settings.profile",
+            SettingsSecurity: "private/embed-components",
             StoreMerchPage: "store.merch",
             SubsLandingPage: "subs.landing",
             SubsBroadcasterPage: "subs.broadcaster",
@@ -23735,4 +23748,4 @@ webpackJsonp([40], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-clips-e35b521523de5dcb4062947877a82fb2.js.map
+//# sourceMappingURL=pages.channel-clips-d2455adf034128a805766237a9326600.js.map

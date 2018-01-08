@@ -9603,7 +9603,7 @@ webpackJsonp([32], {
         }
 
         function Qe(e, t) {
-            return Object(Er.e)(e) + "/edit/" + t
+            return Object(Er.d)(e) + "/edit/" + t
         }
 
         function Ze(e, t) {
@@ -9611,7 +9611,7 @@ webpackJsonp([32], {
         }
 
         function Xe(e, t) {
-            return Object(Er.e)(e) + "/schedule/" + t
+            return Object(Er.d)(e) + "/schedule/" + t
         }
 
         function $e(e) {
@@ -9694,7 +9694,7 @@ webpackJsonp([32], {
                         isConfirmingBanUser: !1,
                         showReportMessageModal: !1
                     }, t.banUserClickHandler = function() {
-                        t.props.onShowBanUserModal(yt.e, {
+                        t.balloonWrapperRef.toggleBalloon(!1), t.props.onShowBanUserModal(yt.e, {
                             title: Object(mt.d)("Ban this viewer?", "chomments.moderation.banUserActionConfirmV2"),
                             onConfirmClick: t.props.onBanUserClick,
                             onDenyClick: t.props.onCloseBanUserModal,
@@ -9703,11 +9703,13 @@ webpackJsonp([32], {
                             })
                         })
                     }, t.onReportMessageClick = function() {
-                        t.props.onMessageReportRequest(t.props.comment.id, t.props.comment.commenter)
-                    }, t.onReportCommentModalClose = function() {
-                        t.setState({
-                            showReportMessageModal: !1
-                        })
+                        t.balloonWrapperRef.toggleBalloon(!1), t.props.onMessageReportRequest(t.props.comment.id, t.props.comment.commenter)
+                    }, t.onPublishClickHandler = function() {
+                        t.balloonWrapperRef.toggleBalloon(!1), t.props.onPublishClick && t.props.onPublishClick()
+                    }, t.onUnpublishClickHandler = function() {
+                        t.balloonWrapperRef.toggleBalloon(!1), t.props.onUnpublishClick && t.props.onUnpublishClick()
+                    }, t.saveBalloonWrapperRef = function(e) {
+                        t.balloonWrapperRef = e
                     }, t
                 }
                 return lt.__extends(t, e), t.prototype.render = function() {
@@ -9719,7 +9721,7 @@ webpackJsonp([32], {
                         }),
                         t = null;
                     return "onPublishClick" in this.props ? t = dt.createElement(Ct.S, {
-                        onClick: this.props.onPublishClick,
+                        onClick: this.onPublishClickHandler,
                         "data-test-selector": "publish"
                     }, dt.createElement(Ct.U, {
                         padding: {
@@ -9727,7 +9729,7 @@ webpackJsonp([32], {
                             x: 1
                         }
                     }, Object(mt.d)("Publish Message", "chomments.moderation.publishMessageAction"))) : "onUnpublishClick" in this.props && (t = dt.createElement(Ct.S, {
-                        onClick: this.props.onUnpublishClick,
+                        onClick: this.onUnpublishClickHandler,
                         "data-test-selector": "un-publish"
                     }, dt.createElement(Ct.U, {
                         padding: {
@@ -9737,7 +9739,9 @@ webpackJsonp([32], {
                     }, Object(mt.d)("Hold for Review", "chomments.moderation.unpublishMessageAction")))), dt.createElement(Ct.U, {
                         display: Ct.H.Flex,
                         flexWrap: Ct.K.NoWrap
-                    }, dt.createElement(Tt.a, null, e, dt.createElement(Ct.p, {
+                    }, dt.createElement(Tt.a, {
+                        ref: this.saveBalloonWrapperRef
+                    }, e, dt.createElement(Ct.p, {
                         direction: Ct.q.BottomRight
                     }, dt.createElement(Ct.U, {
                         padding: .5
@@ -10234,11 +10238,11 @@ webpackJsonp([32], {
             })(function(e) {
                 var t = e.comments.map(function(t, n) {
                     return dt.createElement(Ct.P, {
+                        key: t.comment.id,
                         margin: {
                             y: 1
                         }
                     }, dt.createElement("li", {
-                        key: t.comment.id,
                         className: yt.g + " " + yt.g + "__fadein"
                     }, dt.createElement(Jt, {
                         "data-a-target": "moderator-message-" + n,
@@ -13083,7 +13087,7 @@ webpackJsonp([32], {
                         type: Ct._27.H4,
                         fontSize: Ct.L.Size5
                     }, this.videoManagerTitle)), dt.createElement("ul", null, dt.createElement("li", null, dt.createElement(pr, {
-                        href: Object(Er.e)(this.props.channelName)
+                        href: Object(Er.d)(this.props.channelName)
                     }, this.videoManagerTitle)), dt.createElement("li", null, dt.createElement(pr, {
                         href: "/" + this.props.channelName + "/dashboard/moderation"
                     }, this.moderationTitle)), dt.createElement("li", null, dt.createElement(pr, {
@@ -18463,7 +18467,7 @@ webpackJsonp([32], {
                         icon: Ct._10.Muted,
                         text: Object(mt.d)("Appeal Muted Audio", "VideoManagerMenuRoot"),
                         link: function(e, t) {
-                            return Object(Er.e)(e) + "/appeal/" + t
+                            return Object(Er.d)(e) + "/appeal/" + t
                         }(this.props.channelName, this.props.video.id)
                     }), e.menu.canDownloadHighlightAddToVodcast && dt.createElement(Vd, {
                         icon: Ct._10.Download,
@@ -19710,7 +19714,7 @@ webpackJsonp([32], {
                         t.props.clearEditModalErrors(), t.props.closeModal(), t.setState({
                             showingModal: !1
                         }, function() {
-                            t.props.history.push(Object(Er.e)(t.props.match.params.channelName))
+                            t.props.history.push(Object(Er.d)(t.props.match.params.channelName))
                         })
                     }, t.showEventScheduleModal = function(e, n) {
                         return lt.__awaiter(t, void 0, void 0, function() {
@@ -19799,7 +19803,7 @@ webpackJsonp([32], {
                     }, t.handleUploadFilesSubmitted = function(e) {
                         t.props.data.user && t.props.data.user.id && t.props.submitVideoUploadFiles(t.props.data.user.id, e)
                     }, t.finishModalEditing = function() {
-                        t.props.history.push(Object(Er.e)(t.props.match.params.channelName))
+                        t.props.history.push(Object(Er.d)(t.props.match.params.channelName))
                     }, t
                 }
                 return lt.__extends(t, e), t.prototype.componentWillMount = function() {
@@ -42236,6 +42240,12 @@ webpackJsonp([32], {
             NotificationSettingsPage: "settings.notificationSettings",
             OnboardingIndex: "onboarding.index",
             ReportUserPage: "reportUser.page",
+            SettingsChannel: "private/embed-components",
+            SettingsConnections: "private/embed-components",
+            SettingsNotifications: "settings.notifications",
+            SettingsPrime: "settings.prime",
+            SettingsProfile: "settings.profile",
+            SettingsSecurity: "private/embed-components",
             StoreMerchPage: "store.merch",
             SubsLandingPage: "subs.landing",
             SubsBroadcasterPage: "subs.broadcaster",
@@ -43629,4 +43639,4 @@ webpackJsonp([32], {
         }
     }
 });
-//# sourceMappingURL=pages.dashboard-74829fa4582a8cbb32dbb2af580320e0.js.map
+//# sourceMappingURL=pages.dashboard-679ecc0c4fc43df96e4a1e5bbf4db2b8.js.map

@@ -1568,7 +1568,18 @@ webpackJsonp([43], {
                         gutterSize: _.O.None
                     }, 0 === this.props.clips.length ? this.renderEmpty() : this.renderClips()))
                 }, t.prototype.renderEmpty = function() {
-                    var e = a.createElement(_.U, null, a.createElement(_._22, {
+                    var e = this.props.timeFilterValue === W.b.All ? a.createElement(_.U, null, a.createElement(_._22, {
+                        fontSize: _.L.Size4
+                    }, Object(m.d)("No Clips Found", "ClipsCards")), a.createElement(_.U, {
+                        margin: 3
+                    }, Object(m.d)("<x:link>Learn how</x:link> to make and share clips of this channel", {
+                        "x:link": function(e) {
+                            return a.createElement("a", {
+                                href: "https://help.twitch.tv/customer/portal/articles/2442508-how-to-use-clips",
+                                target: "_blank"
+                            }, e)
+                        }
+                    }, "ClipsCards"))) : a.createElement(_.U, null, a.createElement(_._22, {
                         fontSize: _.L.Size4
                     }, Object(m.d)("No clips were created in this time period.", "ClipsCards"), a.createElement("br", null), Object(m.d)("Check out all popular clips from this channel instead.", "ClipsCards")), a.createElement(_.U, {
                         margin: 3
@@ -1576,16 +1587,7 @@ webpackJsonp([43], {
                         type: _.z.Hollow,
                         onClick: this.updateToAllTime
                     }, Object(m.d)("See all popular clips", "ClipCards"))));
-                    return this.props.timeFilterValue === W.b.All && (e = a.createElement(_.U, null, a.createElement(_._22, {
-                        fontSize: _.L.Size4
-                    }, Object(m.d)("No Clips Found", "ClipsCards")), a.createElement(_.U, {
-                        margin: 3
-                    }, Object(m.d)("{learnClipsLink} to make and share clips of this channel", {
-                        learnClipsLink: a.createElement("a", {
-                            href: "https://help.twitch.tv/customer/portal/articles/2442508-how-to-use-clips",
-                            target: "_blank"
-                        }, Object(m.d)("Learn how", "ClipsCards"))
-                    }, "ClipsCards")))), a.createElement(_.U, {
+                    return a.createElement(_.U, {
                         fullWidth: !0
                     }, a.createElement(_.N, null, a.createElement(_.G, {
                         cols: 3
@@ -16463,6 +16465,12 @@ webpackJsonp([43], {
             NotificationSettingsPage: "settings.notificationSettings",
             OnboardingIndex: "onboarding.index",
             ReportUserPage: "reportUser.page",
+            SettingsChannel: "private/embed-components",
+            SettingsConnections: "private/embed-components",
+            SettingsNotifications: "settings.notifications",
+            SettingsPrime: "settings.prime",
+            SettingsProfile: "settings.profile",
+            SettingsSecurity: "private/embed-components",
             StoreMerchPage: "store.merch",
             SubsLandingPage: "subs.landing",
             SubsBroadcasterPage: "subs.broadcaster",
@@ -17378,4 +17386,4 @@ webpackJsonp([43], {
     zSAx: function(e, t) {},
     zu64: function(e, t) {}
 });
-//# sourceMappingURL=pages.directory-game-d9c4bbcbef33e5236f66ccef0f3be576.js.map
+//# sourceMappingURL=pages.directory-game-c7bac46542efae1430464555e689f99c.js.map

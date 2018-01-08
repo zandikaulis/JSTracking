@@ -140,8 +140,8 @@ webpackJsonp([46], {
             g = n("vH/s"),
             v = n("Odds"),
             h = n("z4nH"),
-            k = n("rG8a"),
-            f = n("U9Fb"),
+            f = n("rG8a"),
+            k = n("U9Fb"),
             y = "follow-game-button-component",
             S = function(e) {
                 function t() {
@@ -173,13 +173,13 @@ webpackJsonp([46], {
                                             update: function(e, n) {
                                                 var i = n.data.followGame,
                                                     a = e.readQuery({
-                                                        query: k,
+                                                        query: f,
                                                         variables: {
                                                             name: t.props.gameName
                                                         }
                                                     });
                                                 a.game && (a.game.self.follow = i.game.self.follow, e.writeQuery({
-                                                    query: k,
+                                                    query: f,
                                                     variables: {
                                                         name: t.props.gameName
                                                     },
@@ -209,13 +209,13 @@ webpackJsonp([46], {
                                             },
                                             update: function(e) {
                                                 var n = e.readQuery({
-                                                    query: k,
+                                                    query: f,
                                                     variables: {
                                                         name: t.props.gameName
                                                     }
                                                 });
                                                 n.game && (n.game.self.follow = null, e.writeQuery({
-                                                    query: k,
+                                                    query: f,
                                                     variables: {
                                                         name: t.props.gameName
                                                     },
@@ -279,7 +279,7 @@ webpackJsonp([46], {
                     })
                 }, t
             }(d.Component),
-            w = Object(u.compose)(Object(m.a)(k, {
+            w = Object(u.compose)(Object(m.a)(f, {
                 options: function(e) {
                     return {
                         variables: {
@@ -292,7 +292,7 @@ webpackJsonp([46], {
                 }
             }), Object(m.a)(h, {
                 name: "followGame"
-            }), Object(m.a)(f, {
+            }), Object(m.a)(k, {
                 name: "unfollowGame"
             }))(S),
             b = Object(i.a)(function(e) {
@@ -1257,8 +1257,8 @@ webpackJsonp([46], {
             g = n("jetF"),
             v = n("7vx8"),
             h = n("CSlQ"),
-            k = n("BhyV"),
-            f = n("+8VM"),
+            f = n("BhyV"),
+            k = n("+8VM"),
             y = n("oIkB"),
             S = function(e) {
                 switch (e) {
@@ -1389,12 +1389,12 @@ webpackJsonp([46], {
                         onClick: this.banUserFromCommunity,
                         disabled: !this.state.reason.length,
                         "data-test-selector": "ban-button"
-                    }, Object(l.d)("Ban", "StreamBanModal")))))), a.createElement(f.a, {
+                    }, Object(l.d)("Ban", "StreamBanModal")))))), a.createElement(k.a, {
                         closeOnBackdropClick: !0
                     })))
                 }, t
             }(a.Component),
-            C = Object(k.compose)(Object(v.a)(b, {
+            C = Object(f.compose)(Object(v.a)(b, {
                 name: "banUserFromCommunity"
             }))(N),
             F = Object(c.a)(null, function(e) {
@@ -1541,12 +1541,12 @@ webpackJsonp([46], {
                         onClick: this.timeoutUserFromCommunity,
                         disabled: !this.state.reason.length,
                         "data-test-selector": "timeout-button"
-                    }, Object(l.d)("Timeout", "StreamTimeoutModal")))))), a.createElement(f.a, {
+                    }, Object(l.d)("Timeout", "StreamTimeoutModal")))))), a.createElement(k.a, {
                         closeOnBackdropClick: !0
                     })))
                 }, t
             }(a.Component),
-            L = Object(k.compose)(Object(v.a)(E, {
+            L = Object(f.compose)(Object(v.a)(E, {
                 name: "timeoutUserFromCommunity"
             }))(O),
             T = Object(c.a)(null, function(e) {
@@ -2391,9 +2391,9 @@ webpackJsonp([46], {
         }), n.d(t, "k", function() {
             return h
         }), n.d(t, "l", function() {
-            return k
-        }), n.d(t, "j", function() {
             return f
+        }), n.d(t, "j", function() {
+            return k
         }), n.d(t, "m", function() {
             return y
         });
@@ -2419,10 +2419,10 @@ webpackJsonp([46], {
         var h = function(e) {
                 return !!e && p.has(e)
             },
-            k = function(e, t) {
+            f = function(e, t) {
                 return !!e && c.has(e) && h(t)
             },
-            f = function(e, t, n) {
+            k = function(e, t, n) {
                 return !!e && c.has(e) && h(t) && n === m.Yes
             },
             y = function(e) {
@@ -3022,8 +3022,8 @@ webpackJsonp([46], {
             g = n("CIox"),
             v = n("6sO2"),
             h = n("yWCw"),
-            k = n("CSlQ"),
-            f = n("eXld"),
+            f = n("CSlQ"),
+            k = n("eXld"),
             y = n("7vx8"),
             S = n("j7/Y"),
             w = n("w9tK"),
@@ -3105,7 +3105,7 @@ webpackJsonp([46], {
                             bottom: 2
                         }
                     }, p.createElement(C._20, null, t))
-                }, t = m.__decorate([Object(k.c)("FollowingHeaderTabs"), Object(y.a)(F)], t)
+                }, t = m.__decorate([Object(f.c)("FollowingHeaderTabs"), Object(y.a)(F)], t)
             }(p.Component),
             U = n("7FW4"),
             O = n("peXu"),
@@ -3145,7 +3145,7 @@ webpackJsonp([46], {
                             limit: 100
                         }
                     }
-                }), Object(k.c)("FollowingCommunitiesPage", {
+                }), Object(f.c)("FollowingCommunitiesPage", {
                     destination: w.a.DirectoryFollowingCommunities
                 }), Object(S.a)({
                     location: b.PageviewLocation.Directory,
@@ -3414,7 +3414,7 @@ webpackJsonp([46], {
                             limit: 100
                         }
                     }
-                }), Object(k.c)("FollowingGamesPage", {
+                }), Object(f.c)("FollowingGamesPage", {
                     destination: w.a.DirectoryFollowingGames
                 }), Object(S.a)({
                     location: b.PageviewLocation.Directory,
@@ -3501,7 +3501,7 @@ webpackJsonp([46], {
                             }
                         }
                     }
-                }), Object(k.c)("FollowingHostsPage", {
+                }), Object(f.c)("FollowingHostsPage", {
                     destination: w.a.DirectoryFollowingHosts
                 }), Object(S.a)({
                     location: b.PageviewLocation.Directory,
@@ -3558,7 +3558,7 @@ webpackJsonp([46], {
                             limit: 30
                         }
                     }
-                }), Object(k.c)("SuggestedVideos")], t)
+                }), Object(f.c)("SuggestedVideos")], t)
             }(p.Component),
             ee = n("iOr9"),
             te = n("bZTi"),
@@ -3647,7 +3647,7 @@ webpackJsonp([46], {
                             limit: 30
                         }
                     }
-                }), Object(k.c)("FollowingIndexPage", {
+                }), Object(f.c)("FollowingIndexPage", {
                     destination: w.a.DirectoryFollowingIndex
                 }), Object(S.a)({
                     location: b.PageviewLocation.Directory,
@@ -3744,7 +3744,7 @@ webpackJsonp([46], {
                             }
                         })
                     }
-                }), Object(k.c)("FollowingLivePage", {
+                }), Object(f.c)("FollowingLivePage", {
                     destination: w.a.DirectoryFollowingLiveChannels
                 }), Object(S.a)({
                     location: b.PageviewLocation.Directory,
@@ -3830,15 +3830,15 @@ webpackJsonp([46], {
                     registerReceiver: pe.func
                 }, t
             }(p.Component),
-            ke = (n("6xx4"), "community-streams-row__title"),
-            fe = function(e) {
+            fe = (n("6xx4"), "community-streams-row__title"),
+            ke = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderTitle = function() {
                         if (t.props.title) return p.createElement(C.U, {
                             className: "community-streams-row__title"
                         }, p.createElement(C._22, {
-                            "data-test-selector": ke,
+                            "data-test-selector": fe,
                             color: C.F.Alt2,
                             fontSize: C.L.Size5,
                             transform: C._26.Uppercase
@@ -3894,7 +3894,7 @@ webpackJsonp([46], {
                         noWrap: !0,
                         placeholderItems: e
                     }, this.renderCommunityStreams()))))
-                }, t = m.__decorate([Object(k.c)("CommunityStreamsRow")], t)
+                }, t = m.__decorate([Object(f.c)("CommunityStreamsRow")], t)
             }(p.Component),
             ye = n("QcSp"),
             Se = 7,
@@ -3938,7 +3938,7 @@ webpackJsonp([46], {
                 return m.__extends(t, e), t.prototype.componentDidUpdate = function() {
                     (this.rankedChannelStreamsInputPresent() && this.rankedChannelStreamsLoaded() || !this.rankedChannelStreamsInputPresent() && !this.rankedChannelStreamsLoaded()) && this.communityStreamsLoaded() && this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return p.createElement(fe, {
+                    return p.createElement(ke, {
                         name: this.props.name,
                         title: this.props.title,
                         type: this.props.type,
@@ -3969,7 +3969,7 @@ webpackJsonp([46], {
                     skip: function(e) {
                         return !e.channelLogins || !e.channelLogins.length
                     }
-                }), Object(k.c)("CommunityStreamsRowContainer")], t)
+                }), Object(f.c)("CommunityStreamsRowContainer")], t)
             }(p.Component),
             be = (n("4az8"), n("QjjF")),
             _e = "for-you__empty",
@@ -4118,7 +4118,7 @@ webpackJsonp([46], {
                     }, p.createElement(E, {
                         activeCategory: b.SpadeFollowingCategory.ForYou
                     }), this.renderPage()))
-                }, t = m.__decorate([Object(k.c)("ForYouPage", {
+                }, t = m.__decorate([Object(f.c)("ForYouPage", {
                     destination: w.a.ForYou
                 }), Object(y.a)(be, {
                     options: {
@@ -4136,7 +4136,7 @@ webpackJsonp([46], {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return m.__extends(t, e), t.prototype.render = function() {
-                    return this.props.isLoggedIn ? p.createElement(C.U, null, p.createElement(f.b, {
+                    return this.props.isLoggedIn ? p.createElement(C.U, null, p.createElement(k.b, {
                         addPaddingWhenPlayerIsPersisting: !0
                     }), p.createElement(g.d, null, p.createElement(g.b, {
                         path: "/directory/following/foryou",
@@ -4159,7 +4159,7 @@ webpackJsonp([46], {
                     }))) : (this.props.login(), p.createElement(h.a, {
                         message: Object(v.d)("You must be logged in to view this page", "FollowingRoot")
                     }))
-                }, t = m.__decorate([Object(k.c)("FollowingPageRoot", {
+                }, t = m.__decorate([Object(f.c)("FollowingPageRoot", {
                     autoReportInteractive: !0
                 })], t)
             }(p.Component),
@@ -5834,8 +5834,8 @@ webpackJsonp([46], {
                         h = {
                             "video-filters": !0
                         },
-                        k = null;
-                    return this.state.isPremiereExperimentActive && (k = l.createElement(m.S, {
+                        f = null;
+                    return this.state.isPremiereExperimentActive && (f = l.createElement(m.S, {
                         onClick: this.typeChangeHandler,
                         "data-filter-type": d.a.PastPremiere,
                         "data-a-target": "video-type-filter-past-premieres"
@@ -5882,7 +5882,7 @@ webpackJsonp([46], {
                             x: 1
                         },
                         "data-test-selector": "filter-item-all"
-                    }, t)), k, l.createElement(m.S, {
+                    }, t)), f, l.createElement(m.S, {
                         onClick: this.typeChangeHandler,
                         "data-filter-type": d.a.Archive,
                         "data-a-target": "video-type-filter-past-broadcasts"
@@ -8196,6 +8196,12 @@ webpackJsonp([46], {
             NotificationSettingsPage: "settings.notificationSettings",
             OnboardingIndex: "onboarding.index",
             ReportUserPage: "reportUser.page",
+            SettingsChannel: "private/embed-components",
+            SettingsConnections: "private/embed-components",
+            SettingsNotifications: "settings.notifications",
+            SettingsPrime: "settings.prime",
+            SettingsProfile: "settings.profile",
+            SettingsSecurity: "private/embed-components",
             StoreMerchPage: "store.merch",
             SubsLandingPage: "subs.landing",
             SubsBroadcasterPage: "subs.broadcaster",
@@ -8468,4 +8474,4 @@ webpackJsonp([46], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.following-dd7b6c58b3396344175b36906bd95a28.js.map
+//# sourceMappingURL=pages.following-e4b2178ae2eb2e00c3c88f07e9fb533f.js.map

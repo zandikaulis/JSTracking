@@ -1,4 +1,4 @@
-webpackJsonp([35], {
+webpackJsonp([36], {
     "+5Qw": function(e, t) {},
     "+V/3": function(e, t, n) {
         "use strict";
@@ -6597,7 +6597,8 @@ webpackJsonp([35], {
                         key: "Timeout",
                         label: t,
                         direction: V._32.Top,
-                        align: V._31.Center
+                        align: V._31.Left,
+                        offsetX: "15%"
                     }, k.createElement(V.U, {
                         padding: {
                             right: 1
@@ -6614,7 +6615,8 @@ webpackJsonp([35], {
                         key: "Untimeout",
                         label: e,
                         direction: V._32.Top,
-                        align: V._31.Center
+                        align: V._31.Left,
+                        offsetX: "15%"
                     }, k.createElement(V.U, {
                         padding: {
                             right: 1
@@ -6631,7 +6633,8 @@ webpackJsonp([35], {
                         key: "Ban",
                         label: t,
                         direction: V._32.Top,
-                        align: V._31.Center
+                        align: V._31.Left,
+                        offsetX: "32%"
                     }, k.createElement(V.U, {
                         padding: {
                             right: 1,
@@ -6649,7 +6652,8 @@ webpackJsonp([35], {
                         key: "Unban",
                         label: e,
                         direction: V._32.Top,
-                        align: V._31.Center
+                        align: V._31.Left,
+                        offsetX: "32%"
                     }, k.createElement(V.U, {
                         padding: {
                             right: 1,
@@ -6821,7 +6825,8 @@ webpackJsonp([35], {
                             flexDirection: V.J.Row,
                             textAlign: V._23.Center,
                             fullWidth: !0,
-                            flexGrow: 1
+                            flexGrow: 1,
+                            className: "viewer-card__banner"
                         }, k.createElement(V.l, {
                             imageSrc: t.props.data.targetUser.profileImageURL,
                             size: 50,
@@ -19216,11 +19221,9 @@ webpackJsonp([35], {
             return "/directory/game/" + encodeURIComponent(e)
         }, t.a = function(e) {
             return "/communities/" + encodeURIComponent(e)
-        }, t.d = function(e) {
-            return "/settings/" + encodeURIComponent(e)
         }, t.b = function(e) {
             return "/events/" + encodeURIComponent(e)
-        }, t.e = function(e) {
+        }, t.d = function(e) {
             return i.b.get("premiere_video_manager_public", !1) ? "/" + encodeURIComponent(e) + "/manager" : "/" + encodeURIComponent(e) + "/manager_v2"
         };
         var i = n("6sO2")
@@ -31675,6 +31678,12 @@ webpackJsonp([35], {
             NotificationSettingsPage: "settings.notificationSettings",
             OnboardingIndex: "onboarding.index",
             ReportUserPage: "reportUser.page",
+            SettingsChannel: "private/embed-components",
+            SettingsConnections: "private/embed-components",
+            SettingsNotifications: "settings.notifications",
+            SettingsPrime: "settings.prime",
+            SettingsProfile: "settings.profile",
+            SettingsSecurity: "private/embed-components",
             StoreMerchPage: "store.merch",
             SubsLandingPage: "subs.landing",
             SubsBroadcasterPage: "subs.broadcaster",
@@ -32594,4 +32603,4 @@ webpackJsonp([35], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.popout-chat-ac0e8c00270ead89669e9a25561f5ec0.js.map
+//# sourceMappingURL=pages.popout-chat-98a46d3adf054df2c9bda5de9736cbf5.js.map

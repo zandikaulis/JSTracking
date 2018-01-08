@@ -456,7 +456,7 @@ webpackJsonp([64], {
             }(s.Component)),
             E = n("XFEc"),
             x = n("2oK2"),
-            O = (n("VNre"), function(e) {
+            P = (n("VNre"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -587,8 +587,8 @@ webpackJsonp([64], {
                         return _.f(b.a.SubsLandingPage)
                     }
                 }, e)
-            })(O),
-            P = n("6BvN"),
+            })(P),
+            O = n("6BvN"),
             F = n("HM6l"),
             T = n("5LoI"),
             D = n("MAZT"),
@@ -745,9 +745,9 @@ webpackJsonp([64], {
                             isOpen: !0
                         })
                     }, t.onKeyDown = function(e) {
-                        t.state.term && (e.keyCode === P.a.Esc ? t.setState({
+                        t.state.term && (e.keyCode === O.a.Esc ? t.setState({
                             isOpen: !1
-                        }) : e.keyCode === P.a.Up ? t.focusNext(-1) : e.keyCode === P.a.Down && t.focusNext(1))
+                        }) : e.keyCode === O.a.Up ? t.focusNext(-1) : e.keyCode === O.a.Down && t.focusNext(1))
                     }, t.onResultSelected = function(e) {
                         t.setState({
                             isOpen: !1
@@ -1106,6 +1106,12 @@ webpackJsonp([64], {
             NotificationSettingsPage: "settings.notificationSettings",
             OnboardingIndex: "onboarding.index",
             ReportUserPage: "reportUser.page",
+            SettingsChannel: "private/embed-components",
+            SettingsConnections: "private/embed-components",
+            SettingsNotifications: "settings.notifications",
+            SettingsPrime: "settings.prime",
+            SettingsProfile: "settings.profile",
+            SettingsSecurity: "private/embed-components",
             StoreMerchPage: "store.merch",
             SubsLandingPage: "subs.landing",
             SubsBroadcasterPage: "subs.broadcaster",
@@ -1125,4 +1131,4 @@ webpackJsonp([64], {
     },
     yoqf: function(e, t) {}
 });
-//# sourceMappingURL=pages.subs.components.subs-landing-page-f097c133c11be37425ce283e5eef1577.js.map
+//# sourceMappingURL=pages.subs.components.subs-landing-page-3fdbda9350b71926266d1684ec893850.js.map

@@ -1,151 +1,151 @@
 webpackJsonp([55], {
-    "9u8h": function(e, t, r) {
+    "9u8h": function(e, t, i) {
         "use strict";
-        r.d(t, "a", function() {
+        i.d(t, "a", function() {
             return s
         });
-        var i = r("TToO"),
-            n = r("6sO2"),
-            a = r("Aj/L"),
+        var r = i("TToO"),
+            n = i("6sO2"),
+            a = i("Aj/L"),
             o = "application/json; charset=UTF-8",
             s = function() {
                 function e() {}
-                return e.get = function(e, t, r) {
-                    return void 0 === t && (t = {}), void 0 === r && (r = {}), i.__awaiter(this, void 0, void 0, function() {
-                        return i.__generator(this, function(n) {
+                return e.get = function(e, t, i) {
+                    return void 0 === t && (t = {}), void 0 === i && (i = {}), r.__awaiter(this, void 0, void 0, function() {
+                        return r.__generator(this, function(n) {
                             switch (n.label) {
                                 case 0:
-                                    return [4, this.request(e, i.__assign({}, t, {
+                                    return [4, this.request(e, r.__assign({}, t, {
                                         method: "GET"
-                                    }), r)];
+                                    }), i)];
                                 case 1:
                                     return [2, n.sent()]
                             }
                         })
                     })
-                }, e.put = function(e, t, r) {
-                    return void 0 === t && (t = {}), void 0 === r && (r = {}), i.__awaiter(this, void 0, void 0, function() {
-                        return i.__generator(this, function(n) {
+                }, e.put = function(e, t, i) {
+                    return void 0 === t && (t = {}), void 0 === i && (i = {}), r.__awaiter(this, void 0, void 0, function() {
+                        return r.__generator(this, function(n) {
                             switch (n.label) {
                                 case 0:
-                                    return [4, this.request(e, i.__assign({}, t, {
+                                    return [4, this.request(e, r.__assign({}, t, {
                                         method: "PUT"
-                                    }), r)];
+                                    }), i)];
                                 case 1:
                                     return [2, n.sent()]
                             }
                         })
                     })
-                }, e.post = function(e, t, r) {
-                    return void 0 === t && (t = {}), void 0 === r && (r = {}), i.__awaiter(this, void 0, void 0, function() {
-                        return i.__generator(this, function(n) {
+                }, e.post = function(e, t, i) {
+                    return void 0 === t && (t = {}), void 0 === i && (i = {}), r.__awaiter(this, void 0, void 0, function() {
+                        return r.__generator(this, function(n) {
                             switch (n.label) {
                                 case 0:
-                                    return [4, this.request(e, i.__assign({}, t, {
+                                    return [4, this.request(e, r.__assign({}, t, {
                                         method: "POST"
-                                    }), r)];
+                                    }), i)];
                                 case 1:
                                     return [2, n.sent()]
                             }
                         })
                     })
-                }, e.delete = function(e, t, r) {
-                    return void 0 === t && (t = {}), void 0 === r && (r = {}), i.__awaiter(this, void 0, void 0, function() {
-                        return i.__generator(this, function(n) {
+                }, e.delete = function(e, t, i) {
+                    return void 0 === t && (t = {}), void 0 === i && (i = {}), r.__awaiter(this, void 0, void 0, function() {
+                        return r.__generator(this, function(n) {
                             switch (n.label) {
                                 case 0:
-                                    return [4, this.request(e, i.__assign({}, t, {
+                                    return [4, this.request(e, r.__assign({}, t, {
                                         method: "DELETE"
-                                    }), r)];
+                                    }), i)];
                                 case 1:
                                     return [2, n.sent()]
                             }
                         })
                     })
-                }, e.request = function(e, t, r) {
-                    return void 0 === t && (t = {}), void 0 === r && (r = {}), i.__awaiter(this, void 0, void 0, function() {
+                }, e.request = function(e, t, i) {
+                    return void 0 === t && (t = {}), void 0 === i && (i = {}), r.__awaiter(this, void 0, void 0, function() {
                         var n, a;
-                        return i.__generator(this, function(i) {
-                            switch (i.label) {
+                        return r.__generator(this, function(r) {
+                            switch (r.label) {
                                 case 0:
-                                    return t = this.constructOptions(t, r), n = t.headers ? t.headers["Content-Type"] : void 0, t.body = this.serialize(t.body, n), [4, this._fetch(e, t)];
+                                    return t = this.constructOptions(t, i), n = t.headers ? t.headers["Content-Type"] : void 0, t.body = this.serialize(t.body, n), [4, this._fetch(e, t)];
                                 case 1:
-                                    return a = i.sent(), [4, this.constructLegacyAPIResponse(a)];
+                                    return a = r.sent(), [4, this.constructLegacyAPIResponse(a)];
                                 case 2:
-                                    return [2, i.sent()]
+                                    return [2, r.sent()]
                             }
                         })
                     })
                 }, e.getAPIURL = function(e) {
                     return new URL(e, n.n.config.apiBaseURL)
                 }, e.constructLegacyAPIResponse = function(e) {
-                    return i.__awaiter(this, void 0, void 0, function() {
-                        var t, r, n;
-                        return i.__generator(this, function(i) {
-                            switch (i.label) {
+                    return r.__awaiter(this, void 0, void 0, function() {
+                        var t, i, n;
+                        return r.__generator(this, function(r) {
+                            switch (r.label) {
                                 case 0:
                                     t = {
                                         status: e.status
-                                    }, i.label = 1;
+                                    }, r.label = 1;
                                 case 1:
-                                    return i.trys.push([1, 3, , 4]), [4, e.json()];
+                                    return r.trys.push([1, 3, , 4]), [4, e.json()];
                                 case 2:
-                                    return r = i.sent(), e.ok ? t.body = r : t.error = r, [3, 4];
+                                    return i = r.sent(), e.ok ? t.body = i : t.error = i, [3, 4];
                                 case 3:
-                                    return n = i.sent(), t.requestError = n, [3, 4];
+                                    return n = r.sent(), t.requestError = n, [3, 4];
                                 case 4:
                                     return [2, t]
                             }
                         })
                     })
                 }, e._fetch = function(e, t) {
-                    return void 0 === t && (t = {}), i.__awaiter(this, void 0, void 0, function() {
-                        return i.__generator(this, function(r) {
-                            switch (r.label) {
+                    return void 0 === t && (t = {}), r.__awaiter(this, void 0, void 0, function() {
+                        return r.__generator(this, function(i) {
+                            switch (i.label) {
                                 case 0:
                                     return [4, fetch(this.getAPIURL(e).toString(), t)];
                                 case 1:
-                                    return [2, r.sent()]
+                                    return [2, i.sent()]
                             }
                         })
                     })
                 }, e.constructOptions = function(e, t) {
                     return e = Object.assign({}, e, {
-                        headers: i.__assign({}, this.getDefaultHeaders(e, t), e.headers)
+                        headers: r.__assign({}, this.getDefaultHeaders(e, t), e.headers)
                     })
                 }, e.serialize = function(e, t) {
                     return t === o ? JSON.stringify(e) : e
                 }, e.getDefaultHeaders = function(e, t) {
-                    var r = n.n.store.getState(),
-                        i = {
+                    var i = n.n.store.getState(),
+                        r = {
                             Accept: "application/vnd.twitchtv.v" + (t.version || 5) + "+json; charset=UTF-8",
                             "Accept-Language": "en-us",
                             "Client-ID": n.n.config.legacyClientID,
                             "X-Requested-With": "XMLHttpRequest"
                         };
-                    e.body && FormData.prototype.isPrototypeOf(e.body) || (i["Content-Type"] = o);
-                    var s = Object(a.c)(r);
-                    return s && (i.Authorization = "OAuth " + s.authToken, s.legacyCSRFToken && (i["Twitch-Api-Token"] = s.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
-                        i[e] && delete i[e]
-                    }), i
+                    e.body && FormData.prototype.isPrototypeOf(e.body) || (r["Content-Type"] = o);
+                    var s = Object(a.c)(i);
+                    return s && (r.Authorization = "OAuth " + s.authToken, s.legacyCSRFToken && (r["Twitch-Api-Token"] = s.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
+                        r[e] && delete r[e]
+                    }), r
                 }, e
             }()
     },
-    Tj44: function(e, t, r) {
+    Tj44: function(e, t, i) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var i = r("TToO"),
-            n = r("U7vG"),
-            a = r("2KeS"),
-            o = r("6sO2"),
-            s = r("j7/Y"),
-            c = r("w9tK"),
-            d = r("vH/s"),
-            u = r("CSlQ"),
-            l = r("9u8h"),
-            h = r("Odds"),
+        var r = i("TToO"),
+            n = i("U7vG"),
+            a = i("2KeS"),
+            o = i("6sO2"),
+            s = i("j7/Y"),
+            c = i("w9tK"),
+            d = i("vH/s"),
+            u = i("CSlQ"),
+            l = i("9u8h"),
+            h = i("Odds"),
             g = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -156,7 +156,7 @@ webpackJsonp([55], {
                         errorMessage: ""
                     }, t.logger = o.n.logger.withCategory("email-verification"), t
                 }
-                return i.__extends(t, e), t.prototype.componentWillMount = function() {
+                return r.__extends(t, e), t.prototype.componentWillMount = function() {
                     this.verifyEmail().then(function() {})
                 }, t.prototype.render = function() {
                     return n.createElement(h.U, {
@@ -195,9 +195,9 @@ webpackJsonp([55], {
                 }, t.prototype.maybeGetLocalizedErrorMessage = function(e) {
                     return e ? "Not Found" === e ? Object(o.d)("Not Found", "EmailVerification") : e : Object(o.d)("Unknown Error", "EmailVerification")
                 }, t.prototype.verifyEmail = function() {
-                    return i.__awaiter(this, void 0, void 0, function() {
-                        var e, t, r, n;
-                        return i.__generator(this, function(a) {
+                    return r.__awaiter(this, void 0, void 0, function() {
+                        var e, t, i, n;
+                        return r.__generator(this, function(a) {
                             switch (a.label) {
                                 case 0:
                                     if (this.state.isLoading || this.state.isError) return [2];
@@ -206,27 +206,27 @@ webpackJsonp([55], {
                                     }), a.label = 1;
                                 case 1:
                                     return a.trys.push([1, 3, , 4]), [4, function(e) {
-                                        return i.__awaiter(this, void 0, void 0, function() {
-                                            var t, r, n;
-                                            return i.__generator(this, function(i) {
-                                                switch (i.label) {
+                                        return r.__awaiter(this, void 0, void 0, function() {
+                                            var t, i, n;
+                                            return r.__generator(this, function(r) {
+                                                switch (r.label) {
                                                     case 0:
-                                                        return t = !1, r = "", e ? [4, l.a.post("/v5/emailvalidator/" + e)] : [3, 2];
+                                                        return t = !1, i = "", e ? [4, l.a.post("/v5/emailvalidator/" + e)] : [3, 2];
                                                     case 1:
-                                                        n = i.sent(), t = n && (200 === n.status || 204 === n.status), r = n.error && n.error.error || "", i.label = 2;
+                                                        n = r.sent(), t = n && (200 === n.status || 204 === n.status), i = n.error && n.error.error || "", r.label = 2;
                                                     case 2:
                                                         return [2, Promise.resolve({
                                                             isEmailVerified: t,
-                                                            errorMessage: r
+                                                            errorMessage: i
                                                         })]
                                                 }
                                             })
                                         })
                                     }(this.props.match.params.emailOpaqueId)];
                                 case 2:
-                                    return e = a.sent(), t = e.isEmailVerified, r = e.errorMessage, this.setState({
+                                    return e = a.sent(), t = e.isEmailVerified, i = e.errorMessage, this.setState({
                                         isEmailVerified: t,
-                                        errorMessage: r,
+                                        errorMessage: i,
                                         isLoading: !1
                                     }), [3, 4];
                                 case 3:
@@ -246,26 +246,26 @@ webpackJsonp([55], {
             }), Object(s.a)({
                 location: d.PageviewLocation.EmailVerification
             }))(g);
-        r.d(t, "EmailVerificationPage", function() {
+        i.d(t, "EmailVerificationPage", function() {
             return m
         })
     },
-    "j7/Y": function(e, t, r) {
+    "j7/Y": function(e, t, i) {
         "use strict";
 
-        function i(e) {
+        function r(e) {
             return function(t) {
-                var r = function(r) {
-                    function i(t) {
-                        var i = r.call(this, t) || this;
-                        return i.tracked = !1, i.referenceTracking = {}, i.trackPageview = function() {
-                            if (!(i.tracked || e.skip && e.skip(i.props))) {
-                                i.tracked = !0, c.n.adBlockSentinel.pageTransition();
+                var i = function(i) {
+                    function r(t) {
+                        var r = i.call(this, t) || this;
+                        return r.tracked = !1, r.referenceTracking = {}, r.trackPageview = function() {
+                            if (!(r.tracked || e.skip && e.skip(r.props))) {
+                                r.tracked = !0, c.n.adBlockSentinel.pageTransition();
                                 var t = {};
-                                "function" == typeof e.properties ? t = e.properties(i.props) : e.properties && (t = n.__assign({}, e.properties));
-                                var r = n.__assign({}, i.props);
-                                r.location && r.location.state && (t.medium = r.location.state.medium, t.content = r.location.state.content, t.content_index = r.location.state.content_index);
-                                var a = i.referenceTracking,
+                                "function" == typeof e.properties ? t = e.properties(r.props) : e.properties && (t = n.__assign({}, e.properties));
+                                var i = n.__assign({}, r.props);
+                                i.location && i.location.state && (t.medium = i.location.state.medium, t.content = i.location.state.content, t.content_index = i.location.state.content_index);
+                                var a = r.referenceTracking,
                                     o = a.content,
                                     s = a.medium,
                                     d = a.content_index;
@@ -276,54 +276,54 @@ webpackJsonp([55], {
                                     location: e.location
                                 }, t))
                             }
-                        }, c.i.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : c.i.warn("No latency tracker exists! This means no data will be sent to Spade.", e), i
+                        }, c.i.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : c.i.warn("No latency tracker exists! This means no data will be sent to Spade.", e), r
                     }
-                    return n.__extends(i, r), i.prototype.componentDidMount = function() {
+                    return n.__extends(r, i), r.prototype.componentDidMount = function() {
                         var e = this;
-                        this.referenceTracking = this.stripTTParams(this.props.history.location), this.trackPageview(), this.props.history.listen(function(t, r) {
-                            "REPLACE" !== r && (e.tracked = !1, e.referenceTracking = {})
+                        this.referenceTracking = this.stripTTParams(this.props.history.location), this.trackPageview(), this.props.history.listen(function(t, i) {
+                            "REPLACE" !== i && (e.tracked = !1, e.referenceTracking = {})
                         })
-                    }, i.prototype.componentDidUpdate = function() {
+                    }, r.prototype.componentDidUpdate = function() {
                         this.trackPageview()
-                    }, i.prototype.render = function() {
+                    }, r.prototype.render = function() {
                         return o.createElement(t, n.__assign({}, this.props))
-                    }, i.prototype.stripTTParams = function(e) {
+                    }, r.prototype.stripTTParams = function(e) {
                         var t = "" !== e.search ? a.parse(e.search) : {},
-                            r = {
+                            i = {
                                 content: t.tt_content,
                                 content_index: t.tt_content_index,
                                 medium: t.tt_medium
                             };
-                        if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, r.medium || r.content) {
-                            var i = "",
+                        if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, i.medium || i.content) {
+                            var r = "",
                                 n = a.stringify(t);
-                            n.length > 0 && (i = "?" + n), this.props.history.replace({
+                            n.length > 0 && (r = "?" + n), this.props.history.replace({
                                 pathname: e.pathname,
                                 hash: e.hash,
-                                search: i
+                                search: r
                             })
                         }
-                        return r
-                    }, i
+                        return i
+                    }, r
                 }(o.Component);
-                return Object(s.f)(r)
+                return Object(s.f)(i)
             }
         }
-        var n = r("TToO"),
-            a = r("OAwv"),
-            o = r("U7vG"),
-            s = r("F8kA"),
-            c = r("6sO2");
-        r.d(t, "a", function() {
-            return i
+        var n = i("TToO"),
+            a = i("OAwv"),
+            o = i("U7vG"),
+            s = i("F8kA"),
+            c = i("6sO2");
+        i.d(t, "a", function() {
+            return r
         })
     },
-    w9tK: function(e, t, r) {
+    w9tK: function(e, t, i) {
         "use strict";
-        r.d(t, "a", function() {
-            return i
+        i.d(t, "a", function() {
+            return r
         });
-        var i = {
+        var r = {
             BrowseCommunities: "browse.communities",
             BrowseCreative: "browse.creative",
             BrowseGamesAndCommunities: "browse.games-and-communities",
@@ -362,6 +362,12 @@ webpackJsonp([55], {
             NotificationSettingsPage: "settings.notificationSettings",
             OnboardingIndex: "onboarding.index",
             ReportUserPage: "reportUser.page",
+            SettingsChannel: "private/embed-components",
+            SettingsConnections: "private/embed-components",
+            SettingsNotifications: "settings.notifications",
+            SettingsPrime: "settings.prime",
+            SettingsProfile: "settings.profile",
+            SettingsSecurity: "private/embed-components",
             StoreMerchPage: "store.merch",
             SubsLandingPage: "subs.landing",
             SubsBroadcasterPage: "subs.broadcaster",
@@ -380,4 +386,4 @@ webpackJsonp([55], {
         }
     }
 });
-//# sourceMappingURL=pages.email-verification-5ff73abd0ef7430f2df902040c420431.js.map
+//# sourceMappingURL=pages.email-verification-919a31cf01215196291c83fa0f322df5.js.map
