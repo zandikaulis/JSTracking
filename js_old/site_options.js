@@ -815,7 +815,7 @@ window.SiteOptions = {
         },
         "2b5c426e-3b29-4bad-a4be-5f8bea3ad8af": {
             "name": "baking_bread_j",
-            "v": 2748,
+            "v": 2767,
             "t": 1,
             "groups": [{
                 "weight": 0,
@@ -830,10 +830,10 @@ window.SiteOptions = {
                 "weight": 0,
                 "value": "yes_80"
             }, {
-                "weight": 0,
+                "weight": 100,
                 "value": "yes_95"
             }, {
-                "weight": 100,
+                "weight": 0,
                 "value": "no"
             }, {
                 "weight": 0,
