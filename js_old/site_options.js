@@ -2356,13 +2356,13 @@ window.SiteOptions = {
         },
         "7582bc5a-db43-4579-a0e6-6c8fd79a41ba": {
             "name": "android_first_time_chatter_prompt",
-            "v": 2537,
+            "v": 2768,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 100,
                 "value": "active"
             }]
         },
