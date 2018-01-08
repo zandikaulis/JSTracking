@@ -3352,7 +3352,7 @@ window.SiteOptions = {
         },
         "adff30ad-0ef3-4b61-9892-1c6b10500bd4": {
             "name": "ios_extensions",
-            "v": 2649,
+            "v": 2769,
             "t": 1,
             "groups": [{
                 "weight": 100,
@@ -3360,6 +3360,9 @@ window.SiteOptions = {
             }, {
                 "weight": 0,
                 "value": "enabled_v5.8"
+            }, {
+                "weight": 0,
+                "value": "enabled_v5.9"
             }]
         },
         "ae497662-3b14-4bc8-95f4-adc4beedca4d": {
