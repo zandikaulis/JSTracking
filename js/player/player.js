@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".b3c6ed2807b591214176.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".61449ef113ec7424417d.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -21918,7 +21918,7 @@
                     u = v.a(!0),
                     c = b.k() === b.p ? null : E;
                 return {
-                    app_version: "2018.01.08-232219+c0995a699095a19e4bfe7f9044593a6546e78420",
+                    app_version: "2018.01.09-183226+fefb10d5b9783bb36cd94bd146601734e7f62fca",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -30508,7 +30508,7 @@
         n.d(t, "a", function() {
             return r
         });
-        var r = "//video-edge-7e1330.sjc01.hls.ttvnw.net/v1/playlist/CmcUPHTEiNar2xNQcyFzeTYIucfacFSF64gq_dw5v_txwEbbmhzn_7cFVgaqSbJlwELR8bI1s8cHJXsUGY6MzCpHOTeundD12DEZNO32t6N1HPr5Eph6_LfKd6mlpg2z21zniJ7Svo579SnH3qtjVKgkYMHEgTRdfcLBpMOlMXHcgHWjwYRpMlXNyo57YymyVeJlgaNgh8M5Ig8T4jgQAliIva3PVYa88CmDP2ixN8p8L5rGDd4w6423sZW1mazgCyqKFCExfdcDGmbw6BZLLkJyPVGbQ9mNpnnxNbfp_kKiQCaCxf-ESBOaOu8A9dIpIl0VsPmN_fOUDKCG1iV4z-WXPqVJ5duQDZOpyUTIoRzp94jCe2LrZ0_nkef0NxXJAKNtsEge47VC41bjE6LiHQOSvwaX1RgvWfpO6PLMVVDmWDnoGDYPnhNOymj5ZRFWK2I0E63daeG60s70.m3u8"
+        var r = "//video-edge-3c228e.sjc01.hls.ttvnw.net/v1/playlist/Cr8E-acaE-dox9I7kUtDIFKddrY38fYgLw1G72p2kozsAK_5h4MMdXNjZ8qHM5WBckOgMOPO46uTgvgWTInMcNSAZO5gpP1fA83T6wMRw3kQt9AvEYgWD-z8qFVDeMjji8KLo4Vnv9VmULiTZRQzXTveQ1cU-RbnryeDyhSoAkhzWAau_rkPeXpTCSLOLcJs0oh2Cpdvw17WDb3iUf9qRgb8aNSru5XxB-9e5xHtEQ-GVNi73Xzrx76I08sY4L4nG3KrY2iaKCv81Dymj38XKchAoz5QIR9MeYc2gouXS1IDm7bXB_YA667-52pMmbt15RQkJp5ekKdWpUcvVeZHjcujBI4aRbxCBPHYB1BCf3icWp1GOncRLnrKBhI6PptcRdltjfoHJckkvVbCq1AR7QEvhrGrdJ4I7_XR2baE2y3ixBaVDRelxPuuvcXcap80yJf.m3u8"
     }, function(e, t, n) {
         "use strict";
 
