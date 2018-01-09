@@ -49,19 +49,20 @@ webpackJsonp([52], {
                                 bold: !0
                             }, e)
                         }, "AmazonRetailAssociatesAccountLinking") : Object(s.d)("Create and link an Amazon Associates account to your Twitch account. Only one Amazon account may be linked at any one time.", "AmazonRetailAssociatesAccountLinking")
-                    }, n.launchLinkAccount = function() {
-                        var e = "https://twitch.amazon.com/associates/register",
-                            t = n.props.data.user && n.props.data.user.roles,
-                            o = n.props.data.user && n.props.data.user.amazon.associatesStore.storeID,
-                            r = i.NONE,
-                            l = u.NONE;
-                        t && (r = t.isPartner ? i.PARTNER : t.isAffiliate ? i.AFFILIATE : i.NONE), o && (l = u.LINKED), n.launchPopup(e), a({
-                            action: o ? p.LinkAccountEdit : p.LinkAccountGetStarted,
+                    }, n.launchLinkAccount = function(e) {
+                        e.preventDefault();
+                        var t = "https://twitch.amazon.com/associates/register",
+                            o = n.props.data.user && n.props.data.user.roles,
+                            r = n.props.data.user && n.props.data.user.amazon.associatesStore.storeID,
+                            l = i.NONE,
+                            s = u.NONE;
+                        o && (l = o.isPartner ? i.PARTNER : o.isAffiliate ? i.AFFILIATE : i.NONE), r && (s = u.LINKED), n.launchPopup(t), a({
+                            action: r ? p.LinkAccountEdit : p.LinkAccountGetStarted,
                             channel: n.props.channelName,
                             channel_id: n.props.data.user && n.props.data.user.id,
-                            partner_status: r,
-                            associate_status: l,
-                            target: e
+                            partner_status: l,
+                            associate_status: s,
+                            target: t
                         })
                     }, n.launchAssociatesAccount = function(e) {
                         e.preventDefault();
@@ -104,7 +105,6 @@ webpackJsonp([52], {
                         }
                     }, r.createElement(h.u, {
                         "data-test-selector": "amazon-associates-account-linking-setup-button",
-                        targetBlank: !0,
                         onClick: this.launchLinkAccount
                     }, this.renderButtonText(e || null))))), r.createElement(h._18, {
                         display: h.H.Flex,
@@ -1039,4 +1039,4 @@ webpackJsonp([52], {
         e.exports = t
     }
 });
-//# sourceMappingURL=pages.dev-only-testing-amazon-offers-6cb64c82e32d2678e8ca28eebaff582f.js.map
+//# sourceMappingURL=pages.dev-only-testing-amazon-offers-97d75d9c7d1d685ff7cc215998537296.js.map

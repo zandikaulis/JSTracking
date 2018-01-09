@@ -17479,6 +17479,7 @@ webpackJsonp([34], {
                         data: this.state.revenues
                     }), c.createElement(p.u, {
                         "data-test-selector": "revenue-csv-button",
+                        icon: p._10.Download,
                         onClick: this.handleCSVClick
                     }, He()))))
                 }, t = l.__decorate([Object(_.c)("RevenuePage", {
@@ -18523,6 +18524,7 @@ webpackJsonp([34], {
                         onMonthSelection: this.handleTimeRangeChange
                     })), c.createElement(p.U, null, c.createElement(p.u, {
                         "data-test-selector": "stats-csv-button",
+                        icon: p._10.Download,
                         onClick: this.handleCSVClick
                     }, He()))), c.createElement(p.U, {
                         fullWidth: !0
@@ -21514,4 +21516,4 @@ webpackJsonp([34], {
         }
     }
 });
-//# sourceMappingURL=pages.teams-dashboard-1ed58053129ea58df2401d61111b372c.js.map
+//# sourceMappingURL=pages.teams-dashboard-12ee3ca95ab121b2210614091bc4a844.js.map
