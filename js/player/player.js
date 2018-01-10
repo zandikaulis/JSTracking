@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".ee774d0d8aaed3a3966a.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".29d16bd933058626b5c6.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -13454,16 +13454,18 @@
                         lastAdDisplay: d.a.get("lastAdDisplay", 0)
                     }, r),
                     y = new m(v, t);
-                t.dispatch(n.i(g.a)(y)), t.dispatch(n.i(b.a)(y.getBackend())), y.attach(a), Ve = u.a, Ve.init(), Fe = new c.a(Ve, y), Oe(a, Fe), y.addEventListener(J.a, Q), Ve.addEventListener(J.a, Q), y.addEventListener(J.n, H), y.addEventListener(X.b, ue), y.addEventListener(X.x, ce), y.addEventListener(X.v, le), y.addEventListener(X.w, de), y.addEventListener(X.r, q), y.addEventListener(X.f, be), y.addEventListener(J.m, ye), Ve.addEventListener(J.m, ge), y.addEventListener(J.i, fe), y.addEventListener(J.o, he), Ve.addEventListener(J.o, he), y.addEventListener(J.s, me);
-                var _ = t.getState().window.navigator.userAgent.toLowerCase(),
-                    w = _.indexOf("safari") > -1 && -1 === _.indexOf("chrome"),
-                    k = _.indexOf("windows") > -1 && _.indexOf("edge") > -1;
-                (w || k) && y.addEventListener(J.o, function() {
+                t.dispatch(n.i(g.a)(y)), t.dispatch(n.i(b.a)(y.getBackend())), y.attach(a), Ve = u.a;
+                var _ = Ve.init();
+                t.dispatch(n.i(O.e)(_)), Fe = new c.a(Ve, y), Oe(a, Fe), y.addEventListener(J.a, Q), Ve.addEventListener(J.a, Q), y.addEventListener(J.n, H), y.addEventListener(X.b, ue), y.addEventListener(X.x, ce), y.addEventListener(X.v, le), y.addEventListener(X.w, de), y.addEventListener(X.r, q), y.addEventListener(X.f, be), y.addEventListener(J.m, ye), Ve.addEventListener(J.m, ge), y.addEventListener(J.i, fe), y.addEventListener(J.o, he), Ve.addEventListener(J.o, he), y.addEventListener(J.s, me);
+                var w = t.getState().window.navigator.userAgent.toLowerCase(),
+                    k = w.indexOf("safari") > -1 && -1 === w.indexOf("chrome"),
+                    E = w.indexOf("windows") > -1 && w.indexOf("edge") > -1;
+                (k || E) && y.addEventListener(J.o, function() {
                     t.dispatch(n.i(I.h)(!1))
                 }), y.addEventListener(X.I, F), y.addEventListener(J.l, ve), y.addEventListener(J.k, W), y.addEventListener(J.j, W), y.addEventListener(J.j, G), y.addEventListener(J.q, pe), y.addEventListener(X.h, Ue._loadVideoAPI), y.addEventListener(J.c, Ue._loadVideoAPI);
-                var E = t.getState(),
-                    S = E.playback;
-                y.setVolume(S.volume), y.setMuted(S.muted), Le(), Ne(), Ue._propagateBackendMutliEvents()
+                var S = t.getState(),
+                    P = S.playback;
+                y.setVolume(P.volume), y.setMuted(P.muted), Le(), Ne(), Ue._propagateBackendMutliEvents()
             }
 
             function q(e) {
@@ -21969,7 +21971,7 @@
                     u = v.a(!0),
                     c = b.k() === b.p ? null : E;
                 return {
-                    app_version: "2018.01.10-213625+7485b0aa4c81c942673b90f100ca71819e4b031f",
+                    app_version: "2018.01.10-220005+67fec9bf49431d43da08b449124c9906f74fa535",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -29607,7 +29609,7 @@
                 V = [],
                 H = void 0;
             O.init = function(n) {
-                x.removeAllListeners(), B || (B = !0, H = n, i(), e().then(t))
+                return x.removeAllListeners(), B ? C() : (B = !0, H = n, i(), e().then(t), C())
             }, O.destroy = function() {}, O.addEventListener = function(e, t) {
                 x.on(e, t)
             }, O.removeEventListener = function(e, t) {
