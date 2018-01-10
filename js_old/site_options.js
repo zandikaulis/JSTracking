@@ -2588,6 +2588,27 @@ window.SiteOptions = {
                 "value": "yes"
             }]
         },
+        "8751df7a-c44b-460b-b291-6ae249202626": {
+            "name": "android_videoplayer_v4",
+            "v": 2785,
+            "t": 1,
+            "groups": [{
+                "weight": 5,
+                "value": "control"
+            }, {
+                "weight": 1,
+                "value": "native"
+            }, {
+                "weight": 5,
+                "value": "playercore"
+            }, {
+                "weight": 88,
+                "value": "exoplayer"
+            }, {
+                "weight": 1,
+                "value": "exoplayer_2"
+            }]
+        },
         "87d995c4-afbc-400e-a6e4-472419071e26": {
             "name": "ios_pipboy_broadcasting",
             "v": 1338,
