@@ -3197,21 +3197,6 @@ window.SiteOptions = {
                 "value": "variant1"
             }]
         },
-        "a3f2f49f-3e4b-4608-9555-8fa1d6164519": {
-            "name": "clips_champagne_supernova",
-            "v": 2789,
-            "t": 1,
-            "groups": [{
-                "weight": 100,
-                "value": "control"
-            }, {
-                "weight": 0,
-                "value": "variant1"
-            }, {
-                "weight": 0,
-                "value": "variant2"
-            }]
-        },
         "a540dfb1-7502-4a8c-affa-5175a3e671d9": {
             "name": "twilight_web_onboarding_for_you",
             "v": 2439,
