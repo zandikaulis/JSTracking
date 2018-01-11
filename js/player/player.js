@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".29d16bd933058626b5c6.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".45b01690a86f1ffdd2b2.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -4100,7 +4100,7 @@
 
         function f(e) {
             var t = {
-                    id: e.id,
+                    id: e.tracking_id,
                     channel: {
                         channelUrl: e.broadcaster.channel_url,
                         displayName: e.broadcaster.display_name,
@@ -21971,7 +21971,7 @@
                     u = v.a(!0),
                     c = b.k() === b.p ? null : E;
                 return {
-                    app_version: "2018.01.10-220005+67fec9bf49431d43da08b449124c9906f74fa535",
+                    app_version: "2018.01.10-234304+f61350aafd005c77a63d7d96aa18c1e46f19de25",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
