@@ -485,10 +485,10 @@ window.SiteOptions = {
         },
         "19cc1327-9436-4019-b71c-e2a1e41d3cb3": {
             "name": "test",
-            "v": 2811,
+            "v": 2812,
             "t": 1,
             "groups": [{
-                "weight": 15,
+                "weight": 16,
                 "value": "a"
             }, {
                 "weight": 2,
