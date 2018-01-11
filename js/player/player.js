@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".6a02b52a8f2813429fc2.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".eaabf3635314cc857f25.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -22022,7 +22022,7 @@
                     u = v.a(!0),
                     c = b.k() === b.p ? null : E;
                 return {
-                    app_version: "2018.01.11-185616+39b07fb36b6a7206305cd43e3c768288e4c78b04",
+                    app_version: "2018.01.11-202336+f938b826060e5cb888124252f8dca229841ecfe2",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -22650,7 +22650,7 @@
                 }, {
                     key: "handleEvent",
                     value: function(e) {
-                        if (u()(e.data) && e.data.namespace === k.x) switch (e.data.method) {
+                        if (u()(e.data) && e.data.namespace === k.x && e.origin === this._targetOrigin) switch (e.data.method) {
                             case k.y:
                                 this._addClient(e.source);
                                 break;
