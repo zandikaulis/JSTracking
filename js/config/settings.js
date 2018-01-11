@@ -16,6 +16,7 @@ window.__twilightSettings = {
     "blitz_frame_url": "https://twitch.amazon.com/prime/video/",
     "blitz_player_front": true,
     "browser_notifications_launch": false,
+    "chatrooms_enabled": false,
     "commerce_gdp_launch": "off",
     "comscore_config_c1": 2,
     "comscore_config_c2": 6745306,
@@ -367,7 +368,7 @@ window.__twilightSettings = {
         },
         "9619b63b-2e9a-4e20-af4b-cce72346691d": {
             "name": "twilight_web_onboarding_follow_categories",
-            "v": 2753,
+            "v": 2817,
             "t": 2,
             "groups": [{
                 "weight": 1,
