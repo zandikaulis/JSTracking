@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".45b01690a86f1ffdd2b2.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".4366ec5064fcfb7059d4.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -21971,7 +21971,7 @@
                     u = v.a(!0),
                     c = b.k() === b.p ? null : E;
                 return {
-                    app_version: "2018.01.10-234304+f61350aafd005c77a63d7d96aa18c1e46f19de25",
+                    app_version: "2018.01.11-175935+62416d021a1d5bb7994548493aabd0482fdeea39",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -25184,8 +25184,8 @@
             "terms of service": "terms of service",
             "Grant Access": "Grant Access",
             "Revoke Access": "Revoke Access",
-            "You are granting the following access:": "You are granting the following access:",
-            "You are revoking the following access:": "You are revoking the following access:",
+            "You are granting {{extensionName}} the following access:": "You are granting {{extensionName}} the following access:",
+            "You are revoking the following access for {{extensionName}}:": "You are revoking the following access for {{extensionName}}:",
             "Allows this extension to know your User ID on Twitch.": "Allows this extension to know your User ID on Twitch.",
             "View Details": "View Details",
             "Manage Access": "Manage Access",
@@ -25218,6 +25218,32 @@
             "In-Extension Purchase": "In-Extension Purchase",
             "{{extensionName}} Extension": "{{extensionName}} Extension",
             "You seem to be offline. Please wait while we try to reconnect.": "You seem to be offline. Please wait while we try to reconnect.",
+            Share: "Share",
+            "{{displayName}} playing {{game}}": "{{displayName}} playing {{game}}",
+            "{{numberOfViews}} view": "{{numberOfViews}} view",
+            "{{numberOfViews}} view_plural": "{{numberOfViews}} views",
+            "Keyboard Shortcuts": "Keyboard Shortcuts",
+            "Pause/Play": "Pause/Play",
+            "Back/Forward 1 frame": "Back/Forward 1 frame",
+            "Slow down/Speed up": "Slow down/Speed up",
+            "Toggle Fullscreen": "Toggle Fullscreen",
+            "Show this menu": "Show this menu",
+            "Back/Forward {{count}} second": "Back/Forward {{count}} second",
+            "Back/Forward {{count}} second_plural": "Back/Forward {{count}} seconds",
+            Space: "Space",
+            Esc: "Esc",
+            Shift: "Shift",
+            "{{displayName}} streaming on Twitch": "{{displayName}} streaming on Twitch",
+            "{{displayName}}'s video on Twitch": "{{displayName}}'s video on Twitch",
+            "Full Video": "Full Video",
+            "Watch {{broadcaster}} Live": "Watch {{broadcaster}} Live",
+            "Continue Watching": "Continue Watching",
+            "Sharing is Caring": "Sharing is Caring",
+            "Embed Code": "Embed Code",
+            Copy: "Copy",
+            Back: "Back",
+            Link: "Link",
+            "Check out this clip from {{displayName}}'s broadcast": "Check out this clip from {{displayName}}'s broadcast",
             "Tap to unmute": "Tap to unmute"
         }
     }, function(e, t, n) {
@@ -30600,7 +30626,7 @@
         n.d(t, "a", function() {
             return r
         });
-        var r = "//video-edge-d2b043.sjc01.hls.ttvnw.net/v1/playlist/Cp7yOWkJucy-Q4EFwWnIHkiLyt0Au_kieDstMGqTH1nMjaxNwxzyNp7C5AmZsBx3rQw5a1KjLVSL-eF7wFGwhH58SZujcvEKEQN8N2Eq17E2ylLS1pi586fx156MkCqB3Q9TRGTBZhTZHE_xrEdB-pjM8TO-fdyC30fVJjuatpSgcmIrcUKSFb0GcPJRNylQNHBJKtECKpHTRKPeMxWb5CnzP6YvXFYg0KxYY6Wp_TUBTS3q7nKgzlsVoym8Ah57uiBiAjQNsBXVPUl9-3GEKh-J_0jKMBCQguX61ka2LbLrjWmwtkp7z3d1NSlcmdzDE-XumeuWZ9k_1KXNvRDhEd3KmfsPXBdH1f_Njh3Sr2oLzbO-YL5N9zdNA7j8mCZuZBf6kQJJopiB1RccFqieADJWc5bqM98E3wRy8e1JtZ8f0vpQe.m3u8"
+        var r = "//video-edge-400766.sjc01.hls.ttvnw.net/v1/playlist/CsSwVqs_FictY9hNAE_9T_LVFJnBPD6NjS6J7MpZgmlRfIcs8VjJPxXTta3DqDM-R-xYzw0fRs2U-vfsPoRHj9SuCno51YQyz1H9ojKrilqZCXHcqfsOxWZK5tflpTlZxzK3KO32LRg5o9xl6CfF8bRmTScz2-pE8jBzh8p35XkeBX00kk0NIZRtnC0HMFJznt_ehC08JBhDbgmIsWimxEO48WIRvSHhyLCXGgBS4WcHULHeRc_-pJT0cWctpnPMFreenWE2P0xGBoQrsDdjNENxdW34pcEitEvgbD0s4qZJzvT--Vxys_kTqPiPGb5f_nnWm-A8Zst6zLF5ItOrnxszw_DD8_hSl0LTtwmQ7sRGC-_nv_twmFpH4zSQN_PMrAkUDjFzsE3hm9BcVE1uxNiGxWpEegN9kIAwX8Ubbt7CTAb3fsdQGpp.m3u8"
     }, function(e, t, n) {
         "use strict";
 
