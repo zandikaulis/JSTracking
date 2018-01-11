@@ -166,13 +166,13 @@ window.SiteOptions = {
         },
         "04adab74-98c1-4adb-88ea-c896504692d3": {
             "name": "ios_native_bits_iap_onboarding_feature",
-            "v": 2787,
+            "v": 2815,
             "t": 1,
             "groups": [{
-                "weight": 80,
+                "weight": 70,
                 "value": "inactive"
             }, {
-                "weight": 20,
+                "weight": 30,
                 "value": "active"
             }]
         },
@@ -2016,13 +2016,13 @@ window.SiteOptions = {
         },
         "647ac2c7-7650-4e06-87c0-2e3098c7f70a": {
             "name": "android_bits_iap_onboarding",
-            "v": 2786,
+            "v": 2814,
             "t": 1,
             "groups": [{
-                "weight": 80,
+                "weight": 70,
                 "value": "control"
             }, {
-                "weight": 20,
+                "weight": 30,
                 "value": "active"
             }]
         },
@@ -2839,7 +2839,7 @@ window.SiteOptions = {
         },
         "9619b63b-2e9a-4e20-af4b-cce72346691d": {
             "name": "twilight_web_onboarding_follow_categories",
-            "v": 2753,
+            "v": 2817,
             "t": 2,
             "groups": [{
                 "weight": 1,
