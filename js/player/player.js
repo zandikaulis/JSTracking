@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".4366ec5064fcfb7059d4.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".3c81eb603d8ad46dd765.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -992,6 +992,58 @@
     }, function(e, t, n) {
         "use strict";
 
+        function r(e) {
+            return {
+                type: a,
+                screen: e
+            }
+        }
+
+        function i() {
+            return {
+                type: o
+            }
+        }
+        n.d(t, "l", function() {
+            return a
+        }), n.d(t, "m", function() {
+            return o
+        }), n.d(t, "e", function() {
+            return s
+        }), n.d(t, "h", function() {
+            return u
+        }), n.d(t, "g", function() {
+            return c
+        }), n.d(t, "a", function() {
+            return l
+        }), n.d(t, "c", function() {
+            return d
+        }), n.d(t, "b", function() {
+            return f
+        }), n.d(t, "f", function() {
+            return p
+        }), n.d(t, "j", function() {
+            return h
+        }), n.d(t, "k", function() {
+            return m
+        }), n.d(t, "n", function() {
+            return v
+        }), t.i = r, t.d = i;
+        var a = "push screen",
+            o = "pop screen",
+            s = "content",
+            u = "advertisement",
+            c = "advertisement-bb",
+            l = "stormwarning",
+            d = "vodrecommendations",
+            f = "vodrestrictedscreen",
+            p = "collectionemptyscreen",
+            h = "clip-sharing-screen",
+            m = "clip-shortcut-screen",
+            v = "error"
+    }, function(e, t, n) {
+        "use strict";
+
         function r(e, t) {
             var n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                 r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
@@ -1394,55 +1446,6 @@
 
         function r(e) {
             return {
-                type: a,
-                screen: e
-            }
-        }
-
-        function i() {
-            return {
-                type: o
-            }
-        }
-        n.d(t, "k", function() {
-            return a
-        }), n.d(t, "l", function() {
-            return o
-        }), n.d(t, "e", function() {
-            return s
-        }), n.d(t, "h", function() {
-            return u
-        }), n.d(t, "g", function() {
-            return c
-        }), n.d(t, "a", function() {
-            return l
-        }), n.d(t, "c", function() {
-            return d
-        }), n.d(t, "b", function() {
-            return f
-        }), n.d(t, "f", function() {
-            return p
-        }), n.d(t, "j", function() {
-            return h
-        }), n.d(t, "m", function() {
-            return m
-        }), t.i = r, t.d = i;
-        var a = "push screen",
-            o = "pop screen",
-            s = "content",
-            u = "advertisement",
-            c = "advertisement-bb",
-            l = "stormwarning",
-            d = "vodrecommendations",
-            f = "vodrestrictedscreen",
-            p = "collectionemptyscreen",
-            h = "clip-sharing-screen",
-            m = "error"
-    }, function(e, t, n) {
-        "use strict";
-
-        function r(e) {
-            return {
                 type: p,
                 video: e
             }
@@ -1798,7 +1801,7 @@
             x = n(30),
             R = n.n(x),
             I = n(29),
-            A = (n.n(I), n(14)),
+            A = (n.n(I), n(15)),
             N = n(50),
             L = "clear error quality restricted",
             M = "set player ended",
@@ -1993,7 +1996,7 @@
         }), n.d(t, "b", function() {
             return u
         }), t.c = r;
-        var i = n(14),
+        var i = n(15),
             a = n(126),
             o = n(56),
             s = "online",
@@ -4199,10 +4202,10 @@
             _ = n(8),
             w = n(11),
             k = n(175),
-            E = n(13),
+            E = n(14),
             S = n(425),
             P = n(37),
-            C = n(15),
+            C = n(16),
             T = n(6),
             O = n(96),
             x = n(249),
@@ -4746,7 +4749,7 @@
             s = n(24),
             u = n(21),
             c = n(12),
-            l = n(13),
+            l = n(14),
             d = n(57),
             f = n(58),
             p = n(26),
@@ -5429,7 +5432,7 @@
             return l
         }), t.d = r;
         var i = n(35),
-            a = n(14),
+            a = n(15),
             o = n(91),
             s = n.n(o),
             u = "collapsed",
@@ -6272,7 +6275,7 @@
             _ = n(183),
             w = n(117),
             k = n(12),
-            E = n(13),
+            E = n(14),
             S = n(39),
             P = n(79),
             C = n(46),
@@ -7802,7 +7805,7 @@
             return h
         }), t.c = r;
         var i = n(56),
-            a = n(14),
+            a = n(15),
             o = n(12),
             s = n(10),
             u = n(133),
@@ -9907,7 +9910,7 @@
             o = n(23),
             s = n.n(o),
             u = n(19),
-            c = n(14),
+            c = n(15),
             l = n(35),
             d = n(84),
             f = "transition collection",
@@ -10864,7 +10867,7 @@
         var i = n(277),
             a = n.n(i),
             o = n(28),
-            s = n(15),
+            s = n(16),
             u = n(50),
             c = function() {
                 function e(e, t) {
@@ -10937,8 +10940,8 @@
         }), n.d(t, "a", function() {
             return p
         });
-        var i = n(15),
-            a = n(13),
+        var i = n(16),
+            a = n(14),
             o = n(45),
             s = n(634),
             u = n(11),
@@ -12351,7 +12354,7 @@
             y = n(8),
             g = n(6),
             b = n(83),
-            _ = n(16),
+            _ = n(13),
             w = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -12456,7 +12459,7 @@
         n.d(t, "a", function() {
             return s
         });
-        var i = n(15),
+        var i = n(16),
             a = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -13107,7 +13110,7 @@
         }), n.d(t, "a", function() {
             return f
         });
-        var i = n(15),
+        var i = n(16),
             a = n(27),
             o = n(176),
             s = n(532),
@@ -13376,7 +13379,7 @@
         }), n.d(t, "a", function() {
             return m
         });
-        var i = n(15),
+        var i = n(16),
             a = n(10),
             o = n(252),
             s = n(477),
@@ -13986,11 +13989,11 @@
             p = n(12),
             h = n(10),
             m = n(132),
-            v = n(15),
+            v = n(16),
             y = n(32),
             g = n(248),
             b = n(247),
-            _ = n(13),
+            _ = n(14),
             w = n(45),
             k = n(246),
             E = n(181),
@@ -14004,7 +14007,7 @@
             I = n(19),
             A = n(39),
             N = n(56),
-            L = n(16),
+            L = n(13),
             M = n(28),
             j = n(163),
             D = n(17),
@@ -16598,7 +16601,7 @@
             a = n.n(i),
             o = n(82),
             s = n(32),
-            u = n(14),
+            u = n(15),
             c = n(177),
             l = {
                 enabled: !1,
@@ -17825,7 +17828,7 @@
             h = n(27),
             m = n(17),
             v = n(19),
-            y = n(13),
+            y = n(14),
             g = n(45),
             b = function() {
                 function e(e, t) {
@@ -17975,7 +17978,7 @@
             h = n.n(p),
             m = n(17),
             v = n(19),
-            y = n(13),
+            y = n(14),
             g = n(45),
             b = n(271),
             _ = function() {
@@ -21971,7 +21974,7 @@
                     u = v.a(!0),
                     c = b.k() === b.p ? null : E;
                 return {
-                    app_version: "2018.01.11-175935+62416d021a1d5bb7994548493aabd0482fdeea39",
+                    app_version: "2018.01.11-182217+d29abb4ef026d75b3b4e0611c1d052b28e726357",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -22237,14 +22240,14 @@
             o = n(11),
             s = n(131),
             u = n(10),
-            c = n(15),
+            c = n(16),
             l = n(90),
             d = n.n(l),
             f = n(35),
             p = n(19),
-            h = n(16),
+            h = n(13),
             m = n(17),
-            v = n(14),
+            v = n(15),
             y = function() {
                 function e(e, t) {
                     var n = [],
@@ -22406,7 +22409,7 @@
         });
         var a, o, s = n(25),
             u = n.n(s),
-            c = n(14),
+            c = n(15),
             l = n(79),
             d = n(17),
             f = n(28),
@@ -22415,7 +22418,7 @@
             m = n(24),
             v = n(35),
             y = n(39),
-            g = n(15),
+            g = n(16),
             b = n(6),
             _ = n(10),
             w = n(12),
@@ -22877,7 +22880,7 @@
         n.d(t, "a", function() {
             return h
         });
-        var a = n(15),
+        var a = n(16),
             o = n(55),
             s = n(60),
             u = n(22),
@@ -22977,7 +22980,7 @@
         n.d(t, "a", function() {
             return k
         });
-        var a = n(15),
+        var a = n(16),
             o = n(69),
             s = n.n(o),
             u = n(90),
@@ -23204,12 +23207,12 @@
         n.d(t, "a", function() {
             return k
         });
-        var i = n(16),
+        var i = n(13),
             a = n(22),
             o = n(6),
             s = n(12),
             u = n(131),
-            c = n(15),
+            c = n(16),
             l = n(7),
             d = n.n(l),
             f = n(80),
@@ -23217,7 +23220,7 @@
             h = n(11),
             m = n(37),
             v = n(92),
-            y = n(13),
+            y = n(14),
             g = function() {
                 function e(e, t) {
                     var n = [],
@@ -23506,11 +23509,11 @@
             return h
         });
         var i = n(80),
-            a = n(16),
+            a = n(13),
             o = n(6),
             s = n(10),
             u = n(131),
-            c = n(15),
+            c = n(16),
             l = n(7),
             d = n.n(l),
             f = function() {
@@ -23584,10 +23587,10 @@
         var a = n(848),
             o = n.n(a),
             s = n(407),
-            u = n(15),
+            u = n(16),
             c = n(179),
             l = n(126),
-            d = n(14),
+            d = n(15),
             f = n(253),
             p = n(12),
             h = function() {
@@ -23992,9 +23995,9 @@
             return l
         });
         var i = n(10),
-            a = n(15),
+            a = n(16),
             o = n(11),
-            s = n(16),
+            s = n(13),
             u = function() {
                 function e(e, t) {
                     var n = [],
@@ -24068,7 +24071,7 @@
         n.d(t, "a", function() {
             return c
         });
-        var i = n(15),
+        var i = n(16),
             a = n(251),
             o = n(55),
             s = n(36),
@@ -24335,7 +24338,7 @@
             c = n.n(u),
             l = n(3),
             d = (n.n(l), n(538)),
-            f = n(16),
+            f = n(13),
             p = n(61),
             h = n(17),
             m = function() {
@@ -24734,7 +24737,7 @@
         }
         t.a = r;
         var i = n(6),
-            a = n(15),
+            a = n(16),
             o = n(50)
     }, function(e, t, n) {
         "use strict";
@@ -27978,9 +27981,9 @@
         }), n.d(t, "a", function() {
             return y
         });
-        var i = n(13),
+        var i = n(14),
             a = n(254),
-            o = n(15),
+            o = n(16),
             s = n(909),
             u = (n.n(s), n(7)),
             c = n.n(u),
@@ -28317,7 +28320,7 @@
             return h
         });
         var i = n(45),
-            a = n(13),
+            a = n(14),
             o = n(72),
             s = n(81),
             u = n(58),
@@ -28491,11 +28494,11 @@
             l = n(12),
             d = n(10),
             f = n(81),
-            p = n(13),
+            p = n(14),
             h = n(423),
             m = n(17),
             v = n(79),
-            y = n(15),
+            y = n(16),
             g = n(412),
             b = n(180),
             _ = n(414),
@@ -28952,7 +28955,7 @@
             E = n(12),
             S = n(10),
             P = n(175),
-            C = n(13),
+            C = n(14),
             T = function() {
                 function e(e, t) {
                     var n = [],
@@ -31217,8 +31220,8 @@
             B = n(359),
             F = n(60),
             V = n(161),
-            H = n(13),
-            z = n(14),
+            H = n(14),
+            z = n(15),
             W = n(35),
             K = n(220),
             G = n(221),
@@ -31253,7 +31256,7 @@
             ke = n(24),
             Ee = n(55),
             Se = n(56),
-            Pe = n(15),
+            Pe = n(16),
             Ce = n(360),
             Te = n(50),
             Oe = n(365),
@@ -31307,7 +31310,7 @@
             a = n.n(i),
             o = n(245),
             s = n(114),
-            u = n(13),
+            u = n(14),
             c = {
                 params: {
                     need_https: !1,
@@ -31371,8 +31374,8 @@
         t.a = r;
         var i = n(5),
             a = n.n(i),
-            o = n(13),
-            s = n(14),
+            o = n(14),
+            s = n(15),
             u = n(166),
             c = {
                 currentMetadata: {
@@ -31560,7 +31563,7 @@
         t.a = r;
         var i = n(346),
             a = n.n(i),
-            o = n(14),
+            o = n(15),
             s = n(175),
             u = "6745306",
             c = {
@@ -31640,7 +31643,7 @@
             o = n(23),
             s = n.n(o),
             u = n(55),
-            c = n(14),
+            c = n(15),
             l = {
                 fetched: !1,
                 following: !1,
@@ -31682,7 +31685,7 @@
         }
         t.a = r;
         var i = n(250),
-            a = n(14),
+            a = n(15),
             o = n(5),
             s = n.n(o),
             u = n(23),
@@ -31882,7 +31885,7 @@
         }
         t.a = r;
         var i = n(80),
-            a = n(14),
+            a = n(15),
             o = n(5),
             s = n.n(o),
             u = {
@@ -31981,7 +31984,7 @@
             f = n(23),
             p = n.n(f),
             h = n(92),
-            m = n(14),
+            m = n(15),
             v = n(10),
             y = n(12),
             g = n(178),
@@ -32063,16 +32066,16 @@
                         default:
                             return e
                     }
-                case o.k:
-                    return [t.screen].concat(e);
                 case o.l:
+                    return [t.screen].concat(e);
+                case o.m:
                     return 1 === e.length ? [o.e] : e.slice(1);
                 case s.g:
                     return a()([o.c, o.b, o.f], e[0]) ? e.slice(1) : e;
                 case u.c:
-                    return a()([o.m, o.b], e[0]) ? e : [o.m].concat(e);
+                    return a()([o.n, o.b], e[0]) ? e : [o.n].concat(e);
                 case u.d:
-                    return e[0] === o.m ? e.slice(1) : e;
+                    return e[0] === o.n ? e.slice(1) : e;
                 default:
                     return e
             }
@@ -32080,10 +32083,10 @@
         t.a = r;
         var i = n(7),
             a = n.n(i),
-            o = n(16),
-            s = n(14),
+            o = n(13),
+            s = n(15),
             u = n(51),
-            c = n(13)
+            c = n(14)
     }, function(e, t, n) {
         "use strict";
 
@@ -32166,7 +32169,7 @@
             }
         }
         t.a = r;
-        var i = n(14),
+        var i = n(15),
             a = n(84)
     }, function(e, t, n) {
         "use strict";
@@ -32191,7 +32194,7 @@
         var i = n(5),
             a = n.n(i),
             o = n(251),
-            s = n(14),
+            s = n(15),
             u = {
                 isSubscribed: !1,
                 isSubscribable: !1,
@@ -32224,7 +32227,7 @@
         }
         t.a = r;
         var i = n(252),
-            a = n(14),
+            a = n(15),
             o = n(5),
             s = n.n(o),
             u = {
@@ -38711,7 +38714,7 @@
                 }
             }(),
             k = {
-                playerType: l.a.bool.isRequired,
+                playerType: l.a.string.isRequired,
                 canChangePlaybackSpeed: l.a.bool,
                 canPopoutPlayer: l.a.bool,
                 captionsAvailable: l.a.bool,
@@ -38724,6 +38727,7 @@
                 onPopoutPlayer: l.a.func,
                 onShowCaptionsOptions: l.a.func,
                 selectedQualityName: l.a.string.isRequired,
+                showClipsShortcutOverlay: l.a.func.isRequired,
                 shouldShowQualityMenu: l.a.bool,
                 t: l.a.func.isRequired,
                 vodUrlWithTimestamp: l.a.string,
@@ -38859,13 +38863,15 @@
                 }, {
                     key: "_renderClipsKeyboardShortcutsButton",
                     value: function() {
-                        var e = this.props.t;
+                        var e = this.props,
+                            t = e.showClipsShortcutOverlay,
+                            n = e.t;
                         return u.a.createElement("div", {
                             className: S
                         }, u.a.createElement(g.a, {
-                            onClick: this.handleClipsKeyboardShortcuts,
+                            onClick: t,
                             className: "qa-clips-keyboard-shortcuts"
-                        }, u.a.createElement("span", null, e("View Keyboard Shortcuts"))))
+                        }, u.a.createElement("span", null, n("View Keyboard Shortcuts"))))
                     }
                 }, {
                     key: "_renderQualityButton",
@@ -40061,7 +40067,7 @@
             h = n(22),
             m = n(12),
             v = n(84),
-            y = n(13),
+            y = n(14),
             g = n(19),
             b = function() {
                 function e(e, t) {
@@ -40868,7 +40874,7 @@
             a = n(0),
             o = n.n(a),
             s = n(3),
-            u = (n.n(s), n(16)),
+            u = (n.n(s), n(13)),
             c = n(508),
             l = {
                 shouldShow: i.a.bool.isRequired
@@ -40926,7 +40932,7 @@
             g = n(511),
             b = n(35),
             _ = n(19),
-            w = n(16),
+            w = n(13),
             k = n(10),
             E = function() {
                 function e(e, t) {
@@ -41080,7 +41086,7 @@
             d = (n.n(l), n(62)),
             f = n(35),
             p = n(512),
-            h = n(16),
+            h = n(13),
             m = n(10),
             v = function() {
                 function e(e, t) {
@@ -41658,7 +41664,7 @@
             m = n(12),
             v = n(36),
             y = n(40),
-            g = n(13),
+            g = n(14),
             b = n(20),
             _ = n(98),
             w = n(6),
@@ -42241,7 +42247,7 @@
             s = n.n(o),
             u = n(537),
             c = n(3),
-            l = (n.n(c), n(16)),
+            l = (n.n(c), n(13)),
             d = n(46),
             f = {
                 errorCode: s.a.number.isRequired,
@@ -42285,7 +42291,7 @@
             l = n(540),
             d = n(10),
             f = n(61),
-            p = n(16),
+            p = n(13),
             h = n(22),
             m = n(62),
             v = {
@@ -42337,7 +42343,7 @@
             o = n(1),
             s = n.n(o),
             u = n(3),
-            c = (n.n(u), n(16)),
+            c = (n.n(u), n(13)),
             l = n(541),
             d = {
                 shouldRenderStormWarning: s.a.bool.isRequired
@@ -42385,7 +42391,7 @@
             l = n.n(c),
             d = n(8),
             f = n(19),
-            p = n(16),
+            p = n(13),
             h = n(542),
             m = function() {
                 function e(e, t) {
@@ -42478,7 +42484,7 @@
             u = n(1),
             c = n.n(u),
             l = n(3),
-            d = (n.n(l), n(16)),
+            d = (n.n(l), n(13)),
             f = n(547),
             p = n(80),
             h = n(19),
@@ -42629,7 +42635,7 @@
             u = n(0),
             c = n.n(u),
             l = n(3),
-            d = (n.n(l), n(16)),
+            d = (n.n(l), n(13)),
             f = n(549),
             p = n(80),
             h = n(19),
@@ -43407,7 +43413,7 @@
             }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
         }
         n.d(t, "a", function() {
-            return L
+            return M
         });
         var o = n(0),
             s = n.n(o),
@@ -43430,7 +43436,8 @@
             S = n(20),
             P = n(32),
             C = n(6),
-            T = function() {
+            T = n(13),
+            O = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var r = t[n];
@@ -43441,8 +43448,8 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            O = [w.a, k.a, E.a],
-            x = {
+            x = [w.a, k.a, E.a],
+            R = {
                 availableQualities: c.a.array.isRequired,
                 backendType: c.a.string.isRequired,
                 captionsAvailable: c.a.bool.isRequired,
@@ -43458,12 +43465,13 @@
                 playback: c.a.object.isRequired,
                 playerType: c.a.string,
                 selectedQuality: c.a.string.isRequired,
+                showClipsShortcutOverlay: c.a.func.isRequired,
                 showCaptionsOptions: c.a.func.isRequired,
                 stream: c.a.object.isRequired,
                 streamUrl: c.a.string,
                 windowObj: c.a.object.isRequired
             },
-            R = {
+            I = {
                 currentTime: 0,
                 isStaffUser: !1,
                 hideSettingsMenu: function() {},
@@ -43472,7 +43480,7 @@
                 streamUrl: "",
                 playerType: ""
             },
-            I = function(e) {
+            A = function(e) {
                 var t = e.backendInfo,
                     n = e.captions,
                     r = e.collection,
@@ -43501,7 +43509,7 @@
                     windowObj: l
                 }
             },
-            A = function(e) {
+            N = function(e) {
                 return {
                     pausePlayback: function() {
                         e(n.i(y.c)())
@@ -43511,16 +43519,19 @@
                     },
                     showCaptionsOptions: function() {
                         e(n.i(P.b)(!0))
+                    },
+                    showClipsShortcutOverlay: function() {
+                        e(n.i(T.i)(T.k))
                     }
                 }
             },
-            N = function(e) {
+            L = function(e) {
                 function t() {
                     r(this, t);
                     var e = i(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
                     return e.showCaptionsOptions = e.showCaptionsOptions.bind(e), e.popoutPlayer = e.popoutPlayer.bind(e), e
                 }
-                return a(t, e), T(t, [{
+                return a(t, e), O(t, [{
                     key: "showCaptionsOptions",
                     value: function() {
                         this.props.hideSettingsMenu(), this.props.showCaptionsOptions()
@@ -43552,19 +43563,20 @@
                             h = e.playerType,
                             v = e.selectedQuality,
                             y = e.streamUrl,
-                            b = e.windowObj,
-                            _ = p()(O, r) || p()(C.f, h),
-                            w = h !== C.e,
-                            k = d()(t, function(e) {
+                            b = e.showClipsShortcutOverlay,
+                            _ = e.windowObj,
+                            w = p()(x, r) || p()(C.f, h),
+                            k = h !== C.e,
+                            E = d()(t, function(e) {
                                 return e.group === v
                             }),
-                            E = k ? k.name : "",
-                            S = y + "?t=" + n.i(g.b)(a),
-                            P = t.length > 0;
+                            S = E ? E.name : "",
+                            P = y + "?t=" + n.i(g.b)(a),
+                            T = t.length > 0;
                         return s.a.createElement(m.a, {
                             playerType: h,
-                            canChangePlaybackSpeed: _,
-                            canPopoutPlayer: w,
+                            canChangePlaybackSpeed: w,
+                            canPopoutPlayer: k,
                             captionsAvailable: i,
                             currentTime: a,
                             currentSpeed: o,
@@ -43574,16 +43586,17 @@
                             onMenuTransition: f,
                             onPopoutPlayer: this.popoutPlayer,
                             onShowCaptionsOptions: this.showCaptionsOptions,
-                            selectedQualityName: E,
-                            shouldShowQualityMenu: P,
-                            vodUrlWithTimestamp: S,
-                            windowObj: b
+                            selectedQualityName: S,
+                            shouldShowQualityMenu: T,
+                            vodUrlWithTimestamp: P,
+                            showClipsShortcutOverlay: b,
+                            windowObj: _
                         })
                     }
                 }]), t
             }(s.a.Component);
-        N.propTypes = x, N.defaultProps = R;
-        var L = n.i(h.connect)(I, A)(N)
+        L.propTypes = R, L.defaultProps = I;
+        var M = n.i(h.connect)(A, N)(L)
     }, function(e, t, n) {
         "use strict";
 
@@ -44001,7 +44014,7 @@
             o = n.n(a),
             s = n(3),
             u = (n.n(s), n(564)),
-            c = n(13),
+            c = n(14),
             l = {
                 onMenuTransition: i.a.func,
                 onRunLocalPrerollAd: i.a.func.isRequired,
@@ -44210,7 +44223,7 @@
             m = n(6),
             v = n(618),
             y = n(571),
-            g = n(13),
+            g = n(14),
             b = n(2),
             _ = n.n(b),
             w = n(60),
@@ -44377,7 +44390,7 @@
             s = n(3),
             u = (n.n(s), n(41)),
             c = n(12),
-            l = n(16),
+            l = n(13),
             d = n(22),
             f = n(37),
             p = n(186),
@@ -45247,7 +45260,7 @@
             u = (n.n(s), n(9)),
             c = n(4),
             l = n(626),
-            d = n(16),
+            d = n(13),
             f = {
                 t: o.a.func.isRequired,
                 showSharing: o.a.func.isRequired
@@ -45426,7 +45439,7 @@
         t.a = r;
         var i = n(637),
             a = n(8),
-            o = n(16),
+            o = n(13),
             s = n(21),
             u = n(26)
     }, function(e, t, n) {
