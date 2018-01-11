@@ -159,27 +159,32 @@ webpackJsonp([66], {
                                 location: t.props.tracking.location
                             }, t.props.tracking.source))
                         }
-                    }, t.getVideoCards = function(e) {
+                    }, t.getVideoCards = function() {
+                        var e = t.props.videos;
                         if (null === e) {
                             for (var n = [], i = 0; i < f; i++) n.push(d.createElement(p.VideoPreviewCardPlaceholder, {
                                 key: "carousel-placeholder-" + i
                             }));
                             return n
                         }
-                        for (var r = [], o = 0; o < e.length; o++) null !== e && (o < f || t.props.firstPageLoaded) ? r.push(d.createElement(p.VideoPreviewCard, {
-                            collectionID: t.props.collectionID,
-                            onClick: t.onPreviewCardClick,
-                            key: "video-" + o,
-                            tracking: {
-                                content: t.props.tracking.content,
-                                content_index: o,
-                                medium: t.props.tracking.medium
-                            },
-                            overrideImageInteractivity: t.props.overrideCardImageInteractivity,
-                            video: e[o]
-                        })) : r.push(d.createElement(p.VideoPreviewCardPlaceholder, {
-                            key: "carousel-placeholder-" + o
-                        }));
+                        for (var r = [], o = 0; o < e.length; o++)
+                            if (o < f || t.props.firstPageLoaded) {
+                                if (e[o].id === t.props.currentlyWatchingVideoID) continue;
+                                r.push(d.createElement(p.VideoPreviewCard, {
+                                    collectionID: t.props.collectionID,
+                                    onClick: t.onPreviewCardClick,
+                                    key: "video-" + o,
+                                    tracking: {
+                                        content: t.props.tracking.content,
+                                        content_index: o,
+                                        medium: t.props.tracking.medium
+                                    },
+                                    overrideImageInteractivity: t.props.overrideCardImageInteractivity,
+                                    video: e[o]
+                                }))
+                            } else r.push(d.createElement(p.VideoPreviewCardPlaceholder, {
+                                key: "carousel-placeholder-" + o
+                            }));
                         return r
                     }, t.moveCarouselForward = function() {
                         if (!t.isForwardButtonDisabled() && t.props.videos) {
@@ -268,7 +273,7 @@ webpackJsonp([66], {
                         childWidth: this.props.videoCardSize || m._34.Large,
                         gutterSize: m._35.Small,
                         "data-js-selector": v
-                    }, this.getVideoCards(this.props.videos))))), d.createElement(m.U, {
+                    }, this.getVideoCards())))), d.createElement(m.U, {
                         className: "video-carousel__nav",
                         display: m.H.Flex,
                         alignItems: m.c.Center,
@@ -388,6 +393,7 @@ webpackJsonp([66], {
                         transform: u._26.Uppercase,
                         color: u.F.Alt2
                     }, Object(a.d)("Latest videos", "LatestVideosFromFollowedCarousel"))), r.createElement(l.a, {
+                        currentlyWatchingVideoID: this.props.currentlyWatchingVideoID,
                         overrideCardImageInteractivity: !0,
                         tracking: {
                             content: this.props.tracking.content,
@@ -395,6 +401,7 @@ webpackJsonp([66], {
                             medium: this.props.tracking.medium,
                             source: {}
                         },
+                        videoCardSize: u._34.Medium,
                         videos: e
                     })) : null
                 }, t
@@ -413,4 +420,4 @@ webpackJsonp([66], {
     },
     yF7E: function(e, t) {}
 });
-//# sourceMappingURL=features.video-carousel.components.latest-videos-from-followed-carousel.component-5aebbd7edafb01deae95a730f33103f6.js.map
+//# sourceMappingURL=features.video-carousel.components.latest-videos-from-followed-carousel.component-48145adb02c3ef2c8f3b4cf7048badaa.js.map

@@ -1003,7 +1003,6 @@ webpackJsonp([48], {
                         index: e.index
                     }, "Default Avatar")
                 }, o.createElement(E._18, {
-                    border: !0,
                     fullHeight: !0,
                     fullWidth: !0,
                     position: E._3.Relative,
@@ -1332,17 +1331,19 @@ webpackJsonp([48], {
                         textAlign: E._23.Center,
                         fullWidth: !0
                     }, o.createElement(E._18, {
+                        textAlign: E._23.Left,
                         borderBottom: !0,
                         padding: {
-                            bottom: 2
+                            bottom: 1
                         },
                         margin: {
                             bottom: 2
                         }
                     }, o.createElement(E._22, {
                         type: E._27.H3,
+                        color: E.F.Alt2,
                         fontSize: E.L.Size4
-                    }, Object(s.d)("Editing profile picture for {userName}", {
+                    }, Object(s.d)("Edit Profile Picture for {userName}", {
                         userName: p
                     }, "Profile Edit"), " ")), o.createElement(E.U, {
                         className: "profile-edit__upload-container",
@@ -1375,11 +1376,13 @@ webpackJsonp([48], {
                             bottom: 2
                         }
                     }, o.createElement(E.U, {
+                        textAlign: E._23.Left,
                         margin: {
                             bottom: 1
                         }
                     }, o.createElement(E._22, {
                         type: E._27.H3,
+                        color: E.F.Alt2,
                         fontSize: E.L.Size5
                     }, Object(s.d)("Or select one of these", "Profile Edit"))), o.createElement(E._33, {
                         childWidth: E._34.ExtraSmall,
@@ -1390,7 +1393,8 @@ webpackJsonp([48], {
                         justifyContent: E.T.Center
                     }, o.createElement(E.u, {
                         "data-test-selector": "update-button",
-                        onClick: this.onUpdateButtonClick
+                        onClick: this.onUpdateButtonClick,
+                        size: E.x.Large
                     }, Object(s.d)("Update", "Profile Edit"))))), l)
                 }, t.prototype.setDefaultAvatar = function() {
                     return i.__awaiter(this, void 0, void 0, function() {
@@ -1450,7 +1454,7 @@ webpackJsonp([48], {
                     }
                 }, e)
             })(z),
-            q = function(e) {
+            q = (n("WClm"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.openModal = function() {
@@ -1465,15 +1469,21 @@ webpackJsonp([48], {
                 return i.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return o.createElement(E.v, {
+                    return o.createElement(E.U, {
+                        className: "edit-profile-overlay",
+                        display: E.H.Flex,
+                        justifyContent: E.T.Center,
+                        alignContent: E.b.Center,
+                        fullHeight: !0,
+                        fullWidth: !0
+                    }, o.createElement(E.v, {
                         overlay: !0,
-                        size: E.x.Large,
                         ariaLabel: Object(s.d)("Edit Profile", "ChannelHeader"),
                         icon: E._10.Edit,
                         onClick: this.openModal
-                    })
+                    }))
                 }, t = i.__decorate([Object(A.c)("EditProfileOverlay")], t)
-            }(o.Component),
+            }(o.Component)),
             J = Object(h.a)(null, function(e) {
                 return Object(F.bindActionCreators)({
                     showModal: T.d
@@ -1682,7 +1692,7 @@ webpackJsonp([48], {
                     margin: {
                         left: 1
                     }
-                }, o.createElement(K.b, {
+                }, o.createElement(K.a, {
                     updateContainerWidth: this.onUpdateDebounce,
                     channelLogin: this.props.channelLogin
                 })), f)), o.createElement(d.a, {
@@ -1859,6 +1869,7 @@ webpackJsonp([48], {
             }), Object(A.c)("ChannelHeader")], t)
         }(o.Component)
     },
+    WClm: function(e, t) {},
     WVx7: function(e, t, n) {
         "use strict";
 
@@ -4491,12 +4502,11 @@ webpackJsonp([48], {
             StoreMerchPage: "store.merch",
             SubsLandingPage: "subs.landing",
             SubsBroadcasterPage: "subs.broadcaster",
-            TeamsDashboardBasicInfo: "teams.dashboard.basic-info",
-            TeamsDashboardCustomize: "teams.dashboard.customize",
-            TeamsDashboardFeaturedChannels: "teams.dashboard.featured-channels",
-            TeamsDashboardMembers: "teams.dashboard.members",
-            TeamsDashboardStats: "teams.dashboard.stats",
             TeamsDashboardRevenue: "teams.dashboard.revenue",
+            TeamsDashboardStats: "teams.dashboard.stats",
+            TeamsDashboardMembers: "teams.dashboard.members",
+            TeamsDashboardFeaturedChannels: "teams.dashboard.featured-channels",
+            TeamsDashboardSettings: "teams.dashboard.settings",
             VideosPage: "videos",
             VideoWatchPage: "video",
             VideoManagerPage: "videoManager.page",
@@ -4942,4 +4952,4 @@ webpackJsonp([48], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-collections-b61229de83376ace45e0fe5477a72cfa.js.map
+//# sourceMappingURL=pages.channel-collections-e3db2a4a72fd4974e24fb74d35f1cbd1.js.map

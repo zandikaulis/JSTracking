@@ -7789,7 +7789,7 @@ webpackJsonp([34], {
                 }
 
                 function E(e, t) {
-                    return e.isValid() ? (t = I(t, e.localeData()), st[t] = st[t] || function(e) {
+                    return e.isValid() ? (t = W(t, e.localeData()), st[t] = st[t] || function(e) {
                         var t, n, a = e.match(rt);
                         for (t = 0, n = a.length; t < n; t++) ot[a[t]] ? a[t] = ot[a[t]] : a[t] = F(a[t]);
                         return function(t) {
@@ -7800,7 +7800,7 @@ webpackJsonp([34], {
                     }(t), st[t](e)) : e.localeData().invalidDate()
                 }
 
-                function I(e, t) {
+                function W(e, t) {
                     function n(e) {
                         return t.longDateFormat(e) || e
                     }
@@ -7809,7 +7809,7 @@ webpackJsonp([34], {
                     return e
                 }
 
-                function W(e, t, n) {
+                function I(e, t, n) {
                     Yt[e] = Y(t) ? t : function(e, a) {
                         return e && n ? n : t
                     }
@@ -8095,7 +8095,7 @@ webpackJsonp([34], {
                             var n, a, r, i, s, o = "" + e._i,
                                 d = o.length,
                                 u = 0;
-                            for (r = I(e._f, e._locale).match(rt) || [], n = 0; n < r.length; n++) i = r[n], (a = (o.match(N(i, e)) || [])[0]) && ((s = o.substr(0, o.indexOf(a))).length > 0 && h(e).unusedInput.push(s), o = o.slice(o.indexOf(a) + a.length), u += a.length), ot[i] ? (a ? h(e).empty = !1 : h(e).unusedTokens.push(i), J(i, a, e)) : e._strict && !a && h(e).unusedTokens.push(i);
+                            for (r = W(e._f, e._locale).match(rt) || [], n = 0; n < r.length; n++) i = r[n], (a = (o.match(N(i, e)) || [])[0]) && ((s = o.substr(0, o.indexOf(a))).length > 0 && h(e).unusedInput.push(s), o = o.slice(o.indexOf(a) + a.length), u += a.length), ot[i] ? (a ? h(e).empty = !1 : h(e).unusedTokens.push(i), J(i, a, e)) : e._strict && !a && h(e).unusedTokens.push(i);
                             h(e).charsLeftOver = d - u, o.length > 0 && h(e).unusedInput.push(o), e._a[St] <= 12 && !0 === h(e).bigHour && e._a[St] > 0 && (h(e).bigHour = void 0), h(e).parsedDateParts = e._a.slice(0), h(e).meridiem = e._meridiem, e._a[St] = function(e, t, n) {
                                 var a;
                                 if (null == n) return t;
@@ -8299,11 +8299,11 @@ webpackJsonp([34], {
                     }.call(this, e, t, n, a, r))
                 }
 
-                function Ie(e, t) {
+                function We(e, t) {
                     t[Ht] = M(1e3 * ("0." + e))
                 }
 
-                function We(e) {
+                function Ie(e) {
                     return e
                 }
 
@@ -8433,9 +8433,9 @@ webpackJsonp([34], {
                     return this.localeData().monthsShort(this, e)
                 }), A("MMMM", 0, 0, function(e) {
                     return this.localeData().months(this, e)
-                }), x("month", "M"), O("month", 8), W("M", mt), W("MM", mt, ut), W("MMM", function(e, t) {
+                }), x("month", "M"), O("month", 8), I("M", mt), I("MM", mt, ut), I("MMM", function(e, t) {
                     return t.monthsShortRegex(e)
-                }), W("MMMM", function(e, t) {
+                }), I("MMMM", function(e, t) {
                     return t.monthsRegex(e)
                 }), R(["M", "MM"], function(e, t) {
                     t[xt] = M(e) - 1
@@ -8445,15 +8445,15 @@ webpackJsonp([34], {
                 });
                 var Ft = /D[oD]?(\[[^\[\]]*\]|\s)+MMMM?/,
                     Et = "January_February_March_April_May_June_July_August_September_October_November_December".split("_"),
-                    It = "Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec".split("_"),
-                    Wt = Dt,
+                    Wt = "Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec".split("_"),
+                    It = Dt,
                     Nt = Dt;
                 A("Y", 0, 0, function() {
                     var e = this.year();
                     return e <= 9999 ? "" + e : "+" + e
                 }), A(0, ["YY", 2], 0, function() {
                     return this.year() % 100
-                }), A(0, ["YYYY", 4], 0, "year"), A(0, ["YYYYY", 5], 0, "year"), A(0, ["YYYYYY", 6, !0], 0, "year"), x("year", "y"), O("year", 1), W("Y", vt), W("YY", mt, ut), W("YYYY", gt, ct), W("YYYYY", yt, ht), W("YYYYYY", yt, ht), R(["YYYYY", "YYYYYY"], wt), R("YYYY", function(e, n) {
+                }), A(0, ["YYYY", 4], 0, "year"), A(0, ["YYYYY", 5], 0, "year"), A(0, ["YYYYYY", 6, !0], 0, "year"), x("year", "y"), O("year", 1), I("Y", vt), I("YY", mt, ut), I("YYYY", gt, ct), I("YYYYY", yt, ht), I("YYYYYY", yt, ht), R(["YYYYY", "YYYYYY"], wt), R("YYYY", function(e, n) {
                     n[wt] = 2 === e.length ? t.parseTwoDigitYear(e) : M(e)
                 }), R("YY", function(e, n) {
                     n[wt] = t.parseTwoDigitYear(e)
@@ -8463,7 +8463,7 @@ webpackJsonp([34], {
                     return M(e) + (M(e) > 68 ? 1900 : 2e3)
                 };
                 var zt = j("FullYear", !0);
-                A("w", ["ww", 2], "wo", "week"), A("W", ["WW", 2], "Wo", "isoWeek"), x("week", "w"), x("isoWeek", "W"), O("week", 5), O("isoWeek", 5), W("w", mt), W("ww", mt, ut), W("W", mt), W("WW", mt, ut), B(["w", "ww", "W", "WW"], function(e, t, n, a) {
+                A("w", ["ww", 2], "wo", "week"), A("W", ["WW", 2], "Wo", "isoWeek"), x("week", "w"), x("isoWeek", "W"), O("week", 5), O("isoWeek", 5), I("w", mt), I("ww", mt, ut), I("W", mt), I("WW", mt, ut), B(["w", "ww", "W", "WW"], function(e, t, n, a) {
                     t[a.substr(0, 1)] = M(e)
                 });
                 A("d", 0, "do", "day"), A("dd", 0, 0, function(e) {
@@ -8472,11 +8472,11 @@ webpackJsonp([34], {
                     return this.localeData().weekdaysShort(this, e)
                 }), A("dddd", 0, 0, function(e) {
                     return this.localeData().weekdays(this, e)
-                }), A("e", 0, 0, "weekday"), A("E", 0, 0, "isoWeekday"), x("day", "d"), x("weekday", "e"), x("isoWeekday", "E"), O("day", 11), O("weekday", 11), O("isoWeekday", 11), W("d", mt), W("e", mt), W("E", mt), W("dd", function(e, t) {
+                }), A("e", 0, 0, "weekday"), A("E", 0, 0, "isoWeekday"), x("day", "d"), x("weekday", "e"), x("isoWeekday", "E"), O("day", 11), O("weekday", 11), O("isoWeekday", 11), I("d", mt), I("e", mt), I("E", mt), I("dd", function(e, t) {
                     return t.weekdaysMinRegex(e)
-                }), W("ddd", function(e, t) {
+                }), I("ddd", function(e, t) {
                     return t.weekdaysShortRegex(e)
-                }), W("dddd", function(e, t) {
+                }), I("dddd", function(e, t) {
                     return t.weekdaysRegex(e)
                 }), B(["dd", "ddd", "dddd"], function(e, t, n, a) {
                     var r = n._locale.weekdaysParse(e, a, n._strict);
@@ -8500,7 +8500,7 @@ webpackJsonp([34], {
                     return "" + this.hours() + P(this.minutes(), 2)
                 }), A("Hmmss", 0, 0, function() {
                     return "" + this.hours() + P(this.minutes(), 2) + P(this.seconds(), 2)
-                }), re("a", !0), re("A", !1), x("hour", "h"), O("hour", 13), W("a", ie), W("A", ie), W("H", mt), W("h", mt), W("k", mt), W("HH", mt, ut), W("hh", mt, ut), W("kk", mt, ut), W("hmm", _t), W("hmmss", ft), W("Hmm", _t), W("Hmmss", ft), R(["H", "HH"], St), R(["k", "kk"], function(e, t, n) {
+                }), re("a", !0), re("A", !1), x("hour", "h"), O("hour", 13), I("a", ie), I("A", ie), I("H", mt), I("h", mt), I("k", mt), I("HH", mt, ut), I("hh", mt, ut), I("kk", mt, ut), I("hmm", _t), I("hmmss", ft), I("Hmm", _t), I("Hmmss", ft), R(["H", "HH"], St), R(["k", "kk"], function(e, t, n) {
                     var a = M(e);
                     t[St] = 24 === a ? 0 : a
                 }), R(["a", "A"], function(e, t, n) {
@@ -8560,7 +8560,7 @@ webpackJsonp([34], {
                             yy: "%d years"
                         },
                         months: Et,
-                        monthsShort: It,
+                        monthsShort: Wt,
                         week: {
                             dow: 0,
                             doy: 6
@@ -8613,7 +8613,7 @@ webpackJsonp([34], {
                         return this.isValid() && e.isValid() ? e > this ? this : e : _()
                     }),
                     un = ["year", "quarter", "month", "week", "day", "hour", "minute", "second", "millisecond"];
-                Ye("Z", ":"), Ye("ZZ", ""), W("Z", Lt), W("ZZ", Lt), R(["Z", "ZZ"], function(e, t, n) {
+                Ye("Z", ":"), Ye("ZZ", ""), I("Z", Lt), I("ZZ", Lt), R(["Z", "ZZ"], function(e, t, n) {
                     n._useUTC = !0, n._tzm = ke(Lt, e)
                 });
                 var ln = /([\+\-]|\d\d)/gi;
@@ -8633,23 +8633,23 @@ webpackJsonp([34], {
                     return this.weekYear() % 100
                 }), A(0, ["GG", 2], 0, function() {
                     return this.isoWeekYear() % 100
-                }), Fe("gggg", "weekYear"), Fe("ggggg", "weekYear"), Fe("GGGG", "isoWeekYear"), Fe("GGGGG", "isoWeekYear"), x("weekYear", "gg"), x("isoWeekYear", "GG"), O("weekYear", 1), O("isoWeekYear", 1), W("G", vt), W("g", vt), W("GG", mt, ut), W("gg", mt, ut), W("GGGG", gt, ct), W("gggg", gt, ct), W("GGGGG", yt, ht), W("ggggg", yt, ht), B(["gggg", "ggggg", "GGGG", "GGGGG"], function(e, t, n, a) {
+                }), Fe("gggg", "weekYear"), Fe("ggggg", "weekYear"), Fe("GGGG", "isoWeekYear"), Fe("GGGGG", "isoWeekYear"), x("weekYear", "gg"), x("isoWeekYear", "GG"), O("weekYear", 1), O("isoWeekYear", 1), I("G", vt), I("g", vt), I("GG", mt, ut), I("gg", mt, ut), I("GGGG", gt, ct), I("gggg", gt, ct), I("GGGGG", yt, ht), I("ggggg", yt, ht), B(["gggg", "ggggg", "GGGG", "GGGGG"], function(e, t, n, a) {
                     t[a.substr(0, 2)] = M(e)
                 }), B(["gg", "GG"], function(e, n, a, r) {
                     n[r] = t.parseTwoDigitYear(e)
-                }), A("Q", 0, "Qo", "quarter"), x("quarter", "Q"), O("quarter", 7), W("Q", dt), R("Q", function(e, t) {
+                }), A("Q", 0, "Qo", "quarter"), x("quarter", "Q"), O("quarter", 7), I("Q", dt), R("Q", function(e, t) {
                     t[xt] = 3 * (M(e) - 1)
-                }), A("D", ["DD", 2], "Do", "date"), x("date", "D"), O("date", 9), W("D", mt), W("DD", mt, ut), W("Do", function(e, t) {
+                }), A("D", ["DD", 2], "Do", "date"), x("date", "D"), O("date", 9), I("D", mt), I("DD", mt, ut), I("Do", function(e, t) {
                     return e ? t._dayOfMonthOrdinalParse || t._ordinalParse : t._dayOfMonthOrdinalParseLenient
                 }), R(["D", "DD"], Tt), R("Do", function(e, t) {
                     t[Tt] = M(e.match(mt)[0])
                 });
                 var pn = j("Date", !0);
-                A("DDD", ["DDDD", 3], "DDDo", "dayOfYear"), x("dayOfYear", "DDD"), O("dayOfYear", 4), W("DDD", pt), W("DDDD", lt), R(["DDD", "DDDD"], function(e, t, n) {
+                A("DDD", ["DDDD", 3], "DDDo", "dayOfYear"), x("dayOfYear", "DDD"), O("dayOfYear", 4), I("DDD", pt), I("DDDD", lt), R(["DDD", "DDDD"], function(e, t, n) {
                     n._dayOfYear = M(e)
-                }), A("m", ["mm", 2], 0, "minute"), x("minute", "m"), O("minute", 14), W("m", mt), W("mm", mt, ut), R(["m", "mm"], Ot);
+                }), A("m", ["mm", 2], 0, "minute"), x("minute", "m"), O("minute", 14), I("m", mt), I("mm", mt, ut), R(["m", "mm"], Ot);
                 var gn = j("Minutes", !1);
-                A("s", ["ss", 2], 0, "second"), x("second", "s"), O("second", 15), W("s", mt), W("ss", mt, ut), R(["s", "ss"], jt);
+                A("s", ["ss", 2], 0, "second"), x("second", "s"), O("second", 15), I("s", mt), I("ss", mt, ut), R(["s", "ss"], jt);
                 var yn = j("Seconds", !1);
                 A("S", 0, 0, function() {
                     return ~~(this.millisecond() / 100)
@@ -8667,10 +8667,10 @@ webpackJsonp([34], {
                     return 1e5 * this.millisecond()
                 }), A(0, ["SSSSSSSSS", 9], 0, function() {
                     return 1e6 * this.millisecond()
-                }), x("millisecond", "ms"), O("millisecond", 16), W("S", pt, dt), W("SS", pt, ut), W("SSS", pt, lt);
+                }), x("millisecond", "ms"), O("millisecond", 16), I("S", pt, dt), I("SS", pt, ut), I("SSS", pt, lt);
                 var Mn;
-                for (Mn = "SSSS"; Mn.length <= 9; Mn += "S") W(Mn, Mt);
-                for (Mn = "S"; Mn.length <= 9; Mn += "S") R(Mn, Ie);
+                for (Mn = "SSSS"; Mn.length <= 9; Mn += "S") I(Mn, Mt);
+                for (Mn = "S"; Mn.length <= 9; Mn += "S") R(Mn, We);
                 var vn = j("Milliseconds", !1);
                 A("z", 0, 0, "zoneAbbr"), A("zz", 0, 0, "zoneName");
                 var bn = p.prototype;
@@ -8910,7 +8910,7 @@ webpackJsonp([34], {
                     return this._invalidDate
                 }, Ln.ordinal = function(e) {
                     return this._ordinal.replace("%d", e)
-                }, Ln.preparse = We, Ln.postformat = We, Ln.relativeTime = function(e, t, n, a) {
+                }, Ln.preparse = Ie, Ln.postformat = Ie, Ln.relativeTime = function(e, t, n, a) {
                     var r = this._relativeTime[n];
                     return Y(r) ? r(e, t, n, a) : r.replace(/%d/i, e)
                 }, Ln.pastFuture = function(e, t) {
@@ -8940,7 +8940,7 @@ webpackJsonp([34], {
                 }, Ln.monthsRegex = function(e) {
                     return this._monthsParseExact ? (u(this, "_monthsRegex") || q.call(this), e ? this._monthsStrictRegex : this._monthsRegex) : (u(this, "_monthsRegex") || (this._monthsRegex = Nt), this._monthsStrictRegex && e ? this._monthsStrictRegex : this._monthsRegex)
                 }, Ln.monthsShortRegex = function(e) {
-                    return this._monthsParseExact ? (u(this, "_monthsRegex") || q.call(this), e ? this._monthsShortStrictRegex : this._monthsShortRegex) : (u(this, "_monthsShortRegex") || (this._monthsShortRegex = Wt), this._monthsShortStrictRegex && e ? this._monthsShortStrictRegex : this._monthsShortRegex)
+                    return this._monthsParseExact ? (u(this, "_monthsRegex") || q.call(this), e ? this._monthsShortStrictRegex : this._monthsShortRegex) : (u(this, "_monthsShortRegex") || (this._monthsShortRegex = It), this._monthsShortStrictRegex && e ? this._monthsShortStrictRegex : this._monthsShortRegex)
                 }, Ln.week = function(e) {
                     return ee(e, this._week.dow, this._week.doy).week
                 }, Ln.firstDayOfYear = function() {
@@ -8999,8 +8999,8 @@ webpackJsonp([34], {
                     An = qe("hours"),
                     Fn = qe("days"),
                     En = qe("months"),
-                    In = qe("years"),
-                    Wn = Math.round,
+                    Wn = qe("years"),
+                    In = Math.round,
                     Nn = {
                         ss: 44,
                         s: 45,
@@ -9052,17 +9052,17 @@ webpackJsonp([34], {
                         return e = T(e), this.isValid() ? this[e + "s"]() : NaN
                     }, Rn.milliseconds = Hn, Rn.seconds = Cn, Rn.minutes = Pn, Rn.hours = An, Rn.days = Fn, Rn.weeks = function() {
                         return y(this.days() / 7)
-                    }, Rn.months = En, Rn.years = In, Rn.humanize = function(e) {
+                    }, Rn.months = En, Rn.years = Wn, Rn.humanize = function(e) {
                         if (!this.isValid()) return this.localeData().invalidDate();
                         var t = this.localeData(),
                             n = function(e, t, n) {
                                 var a = Se(e).abs(),
-                                    r = Wn(a.as("s")),
-                                    i = Wn(a.as("m")),
-                                    s = Wn(a.as("h")),
-                                    o = Wn(a.as("d")),
-                                    d = Wn(a.as("M")),
-                                    u = Wn(a.as("y")),
+                                    r = In(a.as("s")),
+                                    i = In(a.as("m")),
+                                    s = In(a.as("h")),
+                                    o = In(a.as("d")),
+                                    d = In(a.as("M")),
+                                    u = In(a.as("y")),
                                     l = r <= Nn.ss && ["s", r] || r < Nn.s && ["ss", r] || i <= 1 && ["m"] || i < Nn.m && ["mm", i] || s <= 1 && ["h"] || s < Nn.h && ["hh", s] || o <= 1 && ["d"] || o < Nn.d && ["dd", o] || d <= 1 && ["M"] || d < Nn.M && ["MM", d] || u <= 1 && ["y"] || ["yy", u];
                                 return l[2] = t, l[3] = +e > 0, l[4] = n,
                                     function(e, t, n, a, r) {
@@ -9070,7 +9070,7 @@ webpackJsonp([34], {
                                     }.apply(null, l)
                             }(this, !e, t);
                         return e && (n = t.pastFuture(+this, n)), t.postformat(n)
-                    }, Rn.toISOString = Ke, Rn.toString = Ke, Rn.toJSON = Ke, Rn.locale = Pe, Rn.localeData = Ae, Rn.toIsoString = L("toIsoString() is deprecated. Please use toISOString() instead (notice the capitals)", Ke), Rn.lang = fn, A("X", 0, 0, "unix"), A("x", 0, 0, "valueOf"), W("x", vt), W("X", /[+-]?\d+(\.\d{1,3})?/), R("X", function(e, t, n) {
+                    }, Rn.toISOString = Ke, Rn.toString = Ke, Rn.toJSON = Ke, Rn.locale = Pe, Rn.localeData = Ae, Rn.toIsoString = L("toIsoString() is deprecated. Please use toISOString() instead (notice the capitals)", Ke), Rn.lang = fn, A("X", 0, 0, "unix"), A("x", 0, 0, "valueOf"), I("x", vt), I("X", /[+-]?\d+(\.\d{1,3})?/), R("X", function(e, t, n) {
                         n._d = new Date(1e3 * parseFloat(e, 10))
                     }), R("x", function(e, t, n) {
                         n._d = new Date(M(e))
@@ -9106,7 +9106,7 @@ webpackJsonp([34], {
                     }, t.weekdaysShort = function(e, t, n) {
                         return Re(e, t, n, "weekdaysShort")
                     }, t.normalizeUnits = T, t.relativeTimeRounding = function(e) {
-                        return void 0 === e ? Wn : "function" == typeof e && (Wn = e, !0)
+                        return void 0 === e ? In : "function" == typeof e && (In = e, !0)
                     }, t.relativeTimeThreshold = function(e, t) {
                         return void 0 !== Nn[e] && (void 0 === t ? Nn[e] : (Nn[e] = t, "s" === e && (Nn.ss = t - 1), !0))
                     }, t.calendarFormat = function(e, t) {
@@ -10144,10 +10144,10 @@ webpackJsonp([34], {
                                         F = "middle",
                                         E = l.padding;
                                     if (f) {
-                                        var I = b + E;
-                                        "bottom" === a.position ? (F = _ ? "middle" : "top", A = _ ? "right" : "center", P = t.top + I) : (F = _ ? "middle" : "bottom", A = _ ? "left" : "center", P = t.bottom - I);
-                                        var W = r(t, i, h.offsetGridLines && p.length > 1);
-                                        W < t.left && (d = "rgba(0,0,0,0)"), W += o.aliasPixel(s), C = t.getPixelForTick(i) + l.labelOffset, y = v = D = j = W, M = S, L = O, Y = e.top, H = e.bottom
+                                        var W = b + E;
+                                        "bottom" === a.position ? (F = _ ? "middle" : "top", A = _ ? "right" : "center", P = t.top + W) : (F = _ ? "middle" : "bottom", A = _ ? "left" : "center", P = t.bottom - W);
+                                        var I = r(t, i, h.offsetGridLines && p.length > 1);
+                                        I < t.left && (d = "rgba(0,0,0,0)"), I += o.aliasPixel(s), C = t.getPixelForTick(i) + l.labelOffset, y = v = D = j = I, M = S, L = O, Y = e.top, H = e.bottom
                                     } else {
                                         var N, z = "left" === a.position;
                                         l.mirror ? (A = z ? "left" : "right", N = E) : (A = z ? "right" : "left", N = b + E), C = z ? t.right - N : t.left + N;
@@ -10199,10 +10199,10 @@ webpackJsonp([34], {
                             s.lineWidth = o.valueAtIndexOrDefault(h.lineWidth, 0), s.strokeStyle = o.valueAtIndexOrDefault(h.color, 0);
                             var F = t.left,
                                 E = t.right,
-                                I = t.top,
-                                W = t.bottom,
+                                W = t.top,
+                                I = t.bottom,
                                 N = o.aliasPixel(s.lineWidth);
-                            f ? (I = W = "top" === a.position ? t.bottom : t.top, I += N, W += N) : (F = E = "left" === a.position ? t.right : t.left, F += N, E += N), s.beginPath(), s.moveTo(F, I), s.lineTo(E, W), s.stroke()
+                            f ? (W = I = "top" === a.position ? t.bottom : t.top, W += N, I += N) : (F = E = "left" === a.position ? t.right : t.left, F += N, E += N), s.beginPath(), s.moveTo(F, W), s.lineTo(E, I), s.stroke()
                         }
                     }
                 }
@@ -13449,7 +13449,7 @@ webpackJsonp([34], {
                     }
 
                     function o(e) {
-                        e.isHorizontal() ? (e.left = e.fullWidth ? l : j, e.right = e.fullWidth ? r - c : j + Y, e.top = N, e.bottom = N + e.height, N = e.bottom) : (e.left = W, e.right = W + e.width, e.top = C, e.bottom = C + k, W = e.right)
+                        e.isHorizontal() ? (e.left = e.fullWidth ? l : j, e.right = e.fullWidth ? r - c : j + Y, e.top = N, e.bottom = N + e.height, N = e.bottom) : (e.left = I, e.right = I + e.width, e.top = C, e.bottom = C + k, I = e.right)
                     }
                     if (e) {
                         var d = e.options.layout || {},
@@ -13532,19 +13532,19 @@ webpackJsonp([34], {
                         var F = Math.max(S - C, 0);
                         C += F, P += Math.max(O - P, 0);
                         var E = i - C - P,
-                            I = r - j - H;
-                        I === Y && E === k || (a.each(_, function(e) {
+                            W = r - j - H;
+                        W === Y && E === k || (a.each(_, function(e) {
                             e.height = E
                         }), a.each(f, function(e) {
                             e.height = E
                         }), a.each(p, function(e) {
-                            e.fullWidth || (e.width = I)
+                            e.fullWidth || (e.width = W)
                         }), a.each(g, function(e) {
-                            e.fullWidth || (e.width = I)
-                        }), k = E, Y = I);
-                        var W = l + A,
+                            e.fullWidth || (e.width = W)
+                        }), k = E, Y = W);
+                        var I = l + A,
                             N = h + F;
-                        a.each(_.concat(p), o), W += Y, N += k, a.each(f, o), a.each(g, o), e.chartArea = {
+                        a.each(_.concat(p), o), I += Y, N += k, a.each(f, o), a.each(g, o), e.chartArea = {
                             left: j,
                             top: C,
                             right: j + Y,
@@ -15558,513 +15558,513 @@ webpackJsonp([34], {
         function a(e) {
             switch (e.toUpperCase()) {
                 case "A1":
-                    return Object(M.d)("Anonymous Proxy", "format-country");
+                    return Object(m.d)("Anonymous Proxy", "format-country");
                 case "A2":
-                    return Object(M.d)("Satellite Provider", "format-country");
+                    return Object(m.d)("Satellite Provider", "format-country");
                 case "AD":
-                    return Object(M.d)("Andorra", "format-country");
+                    return Object(m.d)("Andorra", "format-country");
                 case "AE":
-                    return Object(M.d)("United Arab Emirates", "format-country");
+                    return Object(m.d)("United Arab Emirates", "format-country");
                 case "AF":
-                    return Object(M.d)("Afghanistan", "format-country");
+                    return Object(m.d)("Afghanistan", "format-country");
                 case "AG":
-                    return Object(M.d)("Antigua and Barbuda", "format-country");
+                    return Object(m.d)("Antigua and Barbuda", "format-country");
                 case "AI":
-                    return Object(M.d)("Anguilla", "format-country");
+                    return Object(m.d)("Anguilla", "format-country");
                 case "AL":
-                    return Object(M.d)("Albania", "format-country");
+                    return Object(m.d)("Albania", "format-country");
                 case "AM":
-                    return Object(M.d)("Armenia", "format-country");
+                    return Object(m.d)("Armenia", "format-country");
                 case "AO":
-                    return Object(M.d)("Angola", "format-country");
+                    return Object(m.d)("Angola", "format-country");
                 case "AP":
-                    return Object(M.d)("Asia/Pacific Region", "format-country");
+                    return Object(m.d)("Asia/Pacific Region", "format-country");
                 case "AQ":
-                    return Object(M.d)("Antarctica", "format-country");
+                    return Object(m.d)("Antarctica", "format-country");
                 case "AR":
-                    return Object(M.d)("Argentina", "format-country");
+                    return Object(m.d)("Argentina", "format-country");
                 case "AS":
-                    return Object(M.d)("American Samoa", "format-country");
+                    return Object(m.d)("American Samoa", "format-country");
                 case "AT":
-                    return Object(M.d)("Austria", "format-country");
+                    return Object(m.d)("Austria", "format-country");
                 case "AU":
-                    return Object(M.d)("Australia", "format-country");
+                    return Object(m.d)("Australia", "format-country");
                 case "AW":
-                    return Object(M.d)("Aruba", "format-country");
+                    return Object(m.d)("Aruba", "format-country");
                 case "AX":
-                    return Object(M.d)("Aland Islands", "format-country");
+                    return Object(m.d)("Aland Islands", "format-country");
                 case "AZ":
-                    return Object(M.d)("Azerbaijan", "format-country");
+                    return Object(m.d)("Azerbaijan", "format-country");
                 case "BA":
-                    return Object(M.d)("Bosnia and Herzegovina", "format-country");
+                    return Object(m.d)("Bosnia and Herzegovina", "format-country");
                 case "BB":
-                    return Object(M.d)("Barbados", "format-country");
+                    return Object(m.d)("Barbados", "format-country");
                 case "BD":
-                    return Object(M.d)("Bangladesh", "format-country");
+                    return Object(m.d)("Bangladesh", "format-country");
                 case "BE":
-                    return Object(M.d)("Belgium", "format-country");
+                    return Object(m.d)("Belgium", "format-country");
                 case "BF":
-                    return Object(M.d)("Burkina Faso", "format-country");
+                    return Object(m.d)("Burkina Faso", "format-country");
                 case "BG":
-                    return Object(M.d)("Bulgaria", "format-country");
+                    return Object(m.d)("Bulgaria", "format-country");
                 case "BH":
-                    return Object(M.d)("Bahrain", "format-country");
+                    return Object(m.d)("Bahrain", "format-country");
                 case "BI":
-                    return Object(M.d)("Burundi", "format-country");
+                    return Object(m.d)("Burundi", "format-country");
                 case "BJ":
-                    return Object(M.d)("Benin", "format-country");
+                    return Object(m.d)("Benin", "format-country");
                 case "BL":
-                    return Object(M.d)("Saint Bartelemey", "format-country");
+                    return Object(m.d)("Saint Bartelemey", "format-country");
                 case "BM":
-                    return Object(M.d)("Bermuda", "format-country");
+                    return Object(m.d)("Bermuda", "format-country");
                 case "BN":
-                    return Object(M.d)("Brunei", "format-country");
+                    return Object(m.d)("Brunei", "format-country");
                 case "BO":
-                    return Object(M.d)("Bolivia", "format-country");
+                    return Object(m.d)("Bolivia", "format-country");
                 case "BQ":
-                    return Object(M.d)("Bonaire, Saint Eustatius, and Saba", "format-country");
+                    return Object(m.d)("Bonaire, Saint Eustatius, and Saba", "format-country");
                 case "BR":
-                    return Object(M.d)("Brazil", "format-country");
+                    return Object(m.d)("Brazil", "format-country");
                 case "BS":
-                    return Object(M.d)("Bahamas", "format-country");
+                    return Object(m.d)("Bahamas", "format-country");
                 case "BT":
-                    return Object(M.d)("Bhutan", "format-country");
+                    return Object(m.d)("Bhutan", "format-country");
                 case "BV":
-                    return Object(M.d)("Bouvet Island", "format-country");
+                    return Object(m.d)("Bouvet Island", "format-country");
                 case "BW":
-                    return Object(M.d)("Botswana", "format-country");
+                    return Object(m.d)("Botswana", "format-country");
                 case "BY":
-                    return Object(M.d)("Belarus", "format-country");
+                    return Object(m.d)("Belarus", "format-country");
                 case "BZ":
-                    return Object(M.d)("Belize", "format-country");
+                    return Object(m.d)("Belize", "format-country");
                 case "CA":
-                    return Object(M.d)("Canada", "format-country");
+                    return Object(m.d)("Canada", "format-country");
                 case "CC":
-                    return Object(M.d)("Cocos (Keeling) Islands", "format-country");
+                    return Object(m.d)("Cocos (Keeling) Islands", "format-country");
                 case "CD":
-                    return Object(M.d)("Congo, The Democratic Republic of the", "format-country");
+                    return Object(m.d)("Congo, The Democratic Republic of the", "format-country");
                 case "CF":
-                    return Object(M.d)("Central African Republic", "format-country");
+                    return Object(m.d)("Central African Republic", "format-country");
                 case "CG":
-                    return Object(M.d)("Congo", "format-country");
+                    return Object(m.d)("Congo", "format-country");
                 case "CH":
-                    return Object(M.d)("Switzerland", "format-country");
+                    return Object(m.d)("Switzerland", "format-country");
                 case "CI":
-                    return Object(M.d)("Ivory Coast", "format-country");
+                    return Object(m.d)("Ivory Coast", "format-country");
                 case "CK":
-                    return Object(M.d)("Cook Islands", "format-country");
+                    return Object(m.d)("Cook Islands", "format-country");
                 case "CL":
-                    return Object(M.d)("Chile", "format-country");
+                    return Object(m.d)("Chile", "format-country");
                 case "CM":
-                    return Object(M.d)("Cameroon", "format-country");
+                    return Object(m.d)("Cameroon", "format-country");
                 case "CN":
-                    return Object(M.d)("China", "format-country");
+                    return Object(m.d)("China", "format-country");
                 case "CO":
-                    return Object(M.d)("Colombia", "format-country");
+                    return Object(m.d)("Colombia", "format-country");
                 case "CR":
-                    return Object(M.d)("Costa Rica", "format-country");
+                    return Object(m.d)("Costa Rica", "format-country");
                 case "CU":
-                    return Object(M.d)("Cuba", "format-country");
+                    return Object(m.d)("Cuba", "format-country");
                 case "CV":
-                    return Object(M.d)("Cape Verde", "format-country");
+                    return Object(m.d)("Cape Verde", "format-country");
                 case "CW":
-                    return Object(M.d)("Curacao", "format-country");
+                    return Object(m.d)("Curacao", "format-country");
                 case "CX":
-                    return Object(M.d)("Christmas Island", "format-country");
+                    return Object(m.d)("Christmas Island", "format-country");
                 case "CY":
-                    return Object(M.d)("Cyprus", "format-country");
+                    return Object(m.d)("Cyprus", "format-country");
                 case "CZ":
-                    return Object(M.d)("Czech Republic", "format-country");
+                    return Object(m.d)("Czech Republic", "format-country");
                 case "DE":
-                    return Object(M.d)("Germany", "format-country");
+                    return Object(m.d)("Germany", "format-country");
                 case "DJ":
-                    return Object(M.d)("Djibouti", "format-country");
+                    return Object(m.d)("Djibouti", "format-country");
                 case "DK":
-                    return Object(M.d)("Denmark", "format-country");
+                    return Object(m.d)("Denmark", "format-country");
                 case "DM":
-                    return Object(M.d)("Dominica", "format-country");
+                    return Object(m.d)("Dominica", "format-country");
                 case "DO":
-                    return Object(M.d)("Dominican Republic", "format-country");
+                    return Object(m.d)("Dominican Republic", "format-country");
                 case "DZ":
-                    return Object(M.d)("Algeria", "format-country");
+                    return Object(m.d)("Algeria", "format-country");
                 case "EC":
-                    return Object(M.d)("Ecuador", "format-country");
+                    return Object(m.d)("Ecuador", "format-country");
                 case "EE":
-                    return Object(M.d)("Estonia", "format-country");
+                    return Object(m.d)("Estonia", "format-country");
                 case "EG":
-                    return Object(M.d)("Egypt", "format-country");
+                    return Object(m.d)("Egypt", "format-country");
                 case "EH":
-                    return Object(M.d)("Western Sahara", "format-country");
+                    return Object(m.d)("Western Sahara", "format-country");
                 case "ER":
-                    return Object(M.d)("Eritrea", "format-country");
+                    return Object(m.d)("Eritrea", "format-country");
                 case "ES":
-                    return Object(M.d)("Spain", "format-country");
+                    return Object(m.d)("Spain", "format-country");
                 case "ET":
-                    return Object(M.d)("Ethiopia", "format-country");
+                    return Object(m.d)("Ethiopia", "format-country");
                 case "EU":
-                    return Object(M.d)("Europe", "format-country");
+                    return Object(m.d)("Europe", "format-country");
                 case "FI":
-                    return Object(M.d)("Finland", "format-country");
+                    return Object(m.d)("Finland", "format-country");
                 case "FJ":
-                    return Object(M.d)("Fiji", "format-country");
+                    return Object(m.d)("Fiji", "format-country");
                 case "FK":
-                    return Object(M.d)("Falkland Islands (Malvinas)", "format-country");
+                    return Object(m.d)("Falkland Islands (Malvinas)", "format-country");
                 case "FM":
-                    return Object(M.d)("Micronesia", "format-country");
+                    return Object(m.d)("Micronesia", "format-country");
                 case "FO":
-                    return Object(M.d)("Faroe Islands", "format-country");
+                    return Object(m.d)("Faroe Islands", "format-country");
                 case "FR":
-                    return Object(M.d)("France", "format-country");
+                    return Object(m.d)("France", "format-country");
                 case "GA":
-                    return Object(M.d)("Gabon", "format-country");
+                    return Object(m.d)("Gabon", "format-country");
                 case "GB":
-                    return Object(M.d)("United Kingdom", "format-country");
+                    return Object(m.d)("United Kingdom", "format-country");
                 case "GD":
-                    return Object(M.d)("Grenada", "format-country");
+                    return Object(m.d)("Grenada", "format-country");
                 case "GE":
-                    return Object(M.d)("Georgia", "format-country");
+                    return Object(m.d)("Georgia", "format-country");
                 case "GF":
-                    return Object(M.d)("French Guiana", "format-country");
+                    return Object(m.d)("French Guiana", "format-country");
                 case "GG":
-                    return Object(M.d)("Guernsey", "format-country");
+                    return Object(m.d)("Guernsey", "format-country");
                 case "GH":
-                    return Object(M.d)("Ghana", "format-country");
+                    return Object(m.d)("Ghana", "format-country");
                 case "GI":
-                    return Object(M.d)("Gibraltar", "format-country");
+                    return Object(m.d)("Gibraltar", "format-country");
                 case "GL":
-                    return Object(M.d)("Greenland", "format-country");
+                    return Object(m.d)("Greenland", "format-country");
                 case "GM":
-                    return Object(M.d)("Gambia", "format-country");
+                    return Object(m.d)("Gambia", "format-country");
                 case "GN":
-                    return Object(M.d)("Guinea", "format-country");
+                    return Object(m.d)("Guinea", "format-country");
                 case "GP":
-                    return Object(M.d)("Guadeloupe", "format-country");
+                    return Object(m.d)("Guadeloupe", "format-country");
                 case "GQ":
-                    return Object(M.d)("Equatorial Guinea", "format-country");
+                    return Object(m.d)("Equatorial Guinea", "format-country");
                 case "GR":
-                    return Object(M.d)("Greece", "format-country");
+                    return Object(m.d)("Greece", "format-country");
                 case "GS":
-                    return Object(M.d)("South Georgia and the South Sandwich Islands", "format-country");
+                    return Object(m.d)("South Georgia and the South Sandwich Islands", "format-country");
                 case "GT":
-                    return Object(M.d)("Guatemala", "format-country");
+                    return Object(m.d)("Guatemala", "format-country");
                 case "GU":
-                    return Object(M.d)("Guam", "format-country");
+                    return Object(m.d)("Guam", "format-country");
                 case "GW":
-                    return Object(M.d)("Guinea-Bissau", "format-country");
+                    return Object(m.d)("Guinea-Bissau", "format-country");
                 case "GY":
-                    return Object(M.d)("Guyana", "format-country");
+                    return Object(m.d)("Guyana", "format-country");
                 case "HK":
-                    return Object(M.d)("Hong Kong", "format-country");
+                    return Object(m.d)("Hong Kong", "format-country");
                 case "HM":
-                    return Object(M.d)("Heard Island and McDonald Islands", "format-country");
+                    return Object(m.d)("Heard Island and McDonald Islands", "format-country");
                 case "HN":
-                    return Object(M.d)("Honduras", "format-country");
+                    return Object(m.d)("Honduras", "format-country");
                 case "HR":
-                    return Object(M.d)("Croatia", "format-country");
+                    return Object(m.d)("Croatia", "format-country");
                 case "HT":
-                    return Object(M.d)("Haiti", "format-country");
+                    return Object(m.d)("Haiti", "format-country");
                 case "HU":
-                    return Object(M.d)("Hungary", "format-country");
+                    return Object(m.d)("Hungary", "format-country");
                 case "ID":
-                    return Object(M.d)("Indonesia", "format-country");
+                    return Object(m.d)("Indonesia", "format-country");
                 case "IE":
-                    return Object(M.d)("Ireland", "format-country");
+                    return Object(m.d)("Ireland", "format-country");
                 case "IL":
-                    return Object(M.d)("Israel", "format-country");
+                    return Object(m.d)("Israel", "format-country");
                 case "IM":
-                    return Object(M.d)("Isle of Man", "format-country");
+                    return Object(m.d)("Isle of Man", "format-country");
                 case "IN":
-                    return Object(M.d)("India", "format-country");
+                    return Object(m.d)("India", "format-country");
                 case "IO":
-                    return Object(M.d)("British Indian Ocean Territory", "format-country");
+                    return Object(m.d)("British Indian Ocean Territory", "format-country");
                 case "IQ":
-                    return Object(M.d)("Iraq", "format-country");
+                    return Object(m.d)("Iraq", "format-country");
                 case "IR":
-                    return Object(M.d)("Iran", "format-country");
+                    return Object(m.d)("Iran", "format-country");
                 case "IS":
-                    return Object(M.d)("Iceland", "format-country");
+                    return Object(m.d)("Iceland", "format-country");
                 case "IT":
-                    return Object(M.d)("Italy", "format-country");
+                    return Object(m.d)("Italy", "format-country");
                 case "JE":
-                    return Object(M.d)("Jersey", "format-country");
+                    return Object(m.d)("Jersey", "format-country");
                 case "JM":
-                    return Object(M.d)("Jamaica", "format-country");
+                    return Object(m.d)("Jamaica", "format-country");
                 case "JO":
-                    return Object(M.d)("Jordan", "format-country");
+                    return Object(m.d)("Jordan", "format-country");
                 case "JP":
-                    return Object(M.d)("Japan", "format-country");
+                    return Object(m.d)("Japan", "format-country");
                 case "KE":
-                    return Object(M.d)("Kenya", "format-country");
+                    return Object(m.d)("Kenya", "format-country");
                 case "KG":
-                    return Object(M.d)("Kyrgyzstan", "format-country");
+                    return Object(m.d)("Kyrgyzstan", "format-country");
                 case "KH":
-                    return Object(M.d)("Cambodia", "format-country");
+                    return Object(m.d)("Cambodia", "format-country");
                 case "KI":
-                    return Object(M.d)("Kiribati", "format-country");
+                    return Object(m.d)("Kiribati", "format-country");
                 case "KM":
-                    return Object(M.d)("Comoros", "format-country");
+                    return Object(m.d)("Comoros", "format-country");
                 case "KN":
-                    return Object(M.d)("Saint Kitts and Nevis", "format-country");
+                    return Object(m.d)("Saint Kitts and Nevis", "format-country");
                 case "KP":
-                    return Object(M.d)("North Korea", "format-country");
+                    return Object(m.d)("North Korea", "format-country");
                 case "KR":
-                    return Object(M.d)("South Korea", "format-country");
+                    return Object(m.d)("South Korea", "format-country");
                 case "KW":
-                    return Object(M.d)("Kuwait", "format-country");
+                    return Object(m.d)("Kuwait", "format-country");
                 case "KY":
-                    return Object(M.d)("Cayman Islands", "format-country");
+                    return Object(m.d)("Cayman Islands", "format-country");
                 case "KZ":
-                    return Object(M.d)("Kazakhstan", "format-country");
+                    return Object(m.d)("Kazakhstan", "format-country");
                 case "LA":
-                    return Object(M.d)("Laos", "format-country");
+                    return Object(m.d)("Laos", "format-country");
                 case "LB":
-                    return Object(M.d)("Lebanon", "format-country");
+                    return Object(m.d)("Lebanon", "format-country");
                 case "LC":
-                    return Object(M.d)("Saint Lucia", "format-country");
+                    return Object(m.d)("Saint Lucia", "format-country");
                 case "LI":
-                    return Object(M.d)("Liechtenstein", "format-country");
+                    return Object(m.d)("Liechtenstein", "format-country");
                 case "LK":
-                    return Object(M.d)("Sri Lanka", "format-country");
+                    return Object(m.d)("Sri Lanka", "format-country");
                 case "LR":
-                    return Object(M.d)("Liberia", "format-country");
+                    return Object(m.d)("Liberia", "format-country");
                 case "LS":
-                    return Object(M.d)("Lesotho", "format-country");
+                    return Object(m.d)("Lesotho", "format-country");
                 case "LT":
-                    return Object(M.d)("Lithuania", "format-country");
+                    return Object(m.d)("Lithuania", "format-country");
                 case "LU":
-                    return Object(M.d)("Luxembourg", "format-country");
+                    return Object(m.d)("Luxembourg", "format-country");
                 case "LV":
-                    return Object(M.d)("Latvia", "format-country");
+                    return Object(m.d)("Latvia", "format-country");
                 case "LY":
-                    return Object(M.d)("Libya", "format-country");
+                    return Object(m.d)("Libya", "format-country");
                 case "MA":
-                    return Object(M.d)("Morocco", "format-country");
+                    return Object(m.d)("Morocco", "format-country");
                 case "MC":
-                    return Object(M.d)("Monaco", "format-country");
+                    return Object(m.d)("Monaco", "format-country");
                 case "MD":
-                    return Object(M.d)("Moldova", "format-country");
+                    return Object(m.d)("Moldova", "format-country");
                 case "ME":
-                    return Object(M.d)("Montenegro", "format-country");
+                    return Object(m.d)("Montenegro", "format-country");
                 case "MF":
-                    return Object(M.d)("Saint Martin", "format-country");
+                    return Object(m.d)("Saint Martin", "format-country");
                 case "MG":
-                    return Object(M.d)("Madagascar", "format-country");
+                    return Object(m.d)("Madagascar", "format-country");
                 case "MH":
-                    return Object(M.d)("Marshall Islands", "format-country");
+                    return Object(m.d)("Marshall Islands", "format-country");
                 case "MK":
-                    return Object(M.d)("Macedonia", "format-country");
+                    return Object(m.d)("Macedonia", "format-country");
                 case "ML":
-                    return Object(M.d)("Mali", "format-country");
+                    return Object(m.d)("Mali", "format-country");
                 case "MM":
-                    return Object(M.d)("Myanmar", "format-country");
+                    return Object(m.d)("Myanmar", "format-country");
                 case "MN":
-                    return Object(M.d)("Mongolia", "format-country");
+                    return Object(m.d)("Mongolia", "format-country");
                 case "MO":
-                    return Object(M.d)("Macao", "format-country");
+                    return Object(m.d)("Macao", "format-country");
                 case "MP":
-                    return Object(M.d)("Northern Mariana Islands", "format-country");
+                    return Object(m.d)("Northern Mariana Islands", "format-country");
                 case "MQ":
-                    return Object(M.d)("Martinique", "format-country");
+                    return Object(m.d)("Martinique", "format-country");
                 case "MR":
-                    return Object(M.d)("Mauritania", "format-country");
+                    return Object(m.d)("Mauritania", "format-country");
                 case "MS":
-                    return Object(M.d)("Montserrat", "format-country");
+                    return Object(m.d)("Montserrat", "format-country");
                 case "MT":
-                    return Object(M.d)("Malta", "format-country");
+                    return Object(m.d)("Malta", "format-country");
                 case "MU":
-                    return Object(M.d)("Mauritius", "format-country");
+                    return Object(m.d)("Mauritius", "format-country");
                 case "MV":
-                    return Object(M.d)("Maldives", "format-country");
+                    return Object(m.d)("Maldives", "format-country");
                 case "MW":
-                    return Object(M.d)("Malawi", "format-country");
+                    return Object(m.d)("Malawi", "format-country");
                 case "MX":
-                    return Object(M.d)("Mexico", "format-country");
+                    return Object(m.d)("Mexico", "format-country");
                 case "MY":
-                    return Object(M.d)("Malaysia", "format-country");
+                    return Object(m.d)("Malaysia", "format-country");
                 case "MZ":
-                    return Object(M.d)("Mozambique", "format-country");
+                    return Object(m.d)("Mozambique", "format-country");
                 case "NA":
-                    return Object(M.d)("Namibia", "format-country");
+                    return Object(m.d)("Namibia", "format-country");
                 case "NC":
-                    return Object(M.d)("New Caledonia", "format-country");
+                    return Object(m.d)("New Caledonia", "format-country");
                 case "NE":
-                    return Object(M.d)("Niger", "format-country");
+                    return Object(m.d)("Niger", "format-country");
                 case "NF":
-                    return Object(M.d)("Norfolk Island", "format-country");
+                    return Object(m.d)("Norfolk Island", "format-country");
                 case "NG":
-                    return Object(M.d)("Nigeria", "format-country");
+                    return Object(m.d)("Nigeria", "format-country");
                 case "NI":
-                    return Object(M.d)("Nicaragua", "format-country");
+                    return Object(m.d)("Nicaragua", "format-country");
                 case "NL":
-                    return Object(M.d)("Netherlands", "format-country");
+                    return Object(m.d)("Netherlands", "format-country");
                 case "NO":
-                    return Object(M.d)("Norway", "format-country");
+                    return Object(m.d)("Norway", "format-country");
                 case "NP":
-                    return Object(M.d)("Nepal", "format-country");
+                    return Object(m.d)("Nepal", "format-country");
                 case "NR":
-                    return Object(M.d)("Nauru", "format-country");
+                    return Object(m.d)("Nauru", "format-country");
                 case "NU":
-                    return Object(M.d)("Niue", "format-country");
+                    return Object(m.d)("Niue", "format-country");
                 case "NZ":
-                    return Object(M.d)("New Zealand", "format-country");
+                    return Object(m.d)("New Zealand", "format-country");
                 case "O1":
-                    return Object(M.d)("Other Country", "format-country");
+                    return Object(m.d)("Other Country", "format-country");
                 case "OM":
-                    return Object(M.d)("Oman", "format-country");
+                    return Object(m.d)("Oman", "format-country");
                 case "PA":
-                    return Object(M.d)("Panama", "format-country");
+                    return Object(m.d)("Panama", "format-country");
                 case "PE":
-                    return Object(M.d)("Peru", "format-country");
+                    return Object(m.d)("Peru", "format-country");
                 case "PF":
-                    return Object(M.d)("French Polynesia", "format-country");
+                    return Object(m.d)("French Polynesia", "format-country");
                 case "PG":
-                    return Object(M.d)("Papua New Guinea", "format-country");
+                    return Object(m.d)("Papua New Guinea", "format-country");
                 case "PH":
-                    return Object(M.d)("Philippines", "format-country");
+                    return Object(m.d)("Philippines", "format-country");
                 case "PK":
-                    return Object(M.d)("Pakistan", "format-country");
+                    return Object(m.d)("Pakistan", "format-country");
                 case "PL":
-                    return Object(M.d)("Poland", "format-country");
+                    return Object(m.d)("Poland", "format-country");
                 case "PM":
-                    return Object(M.d)("Saint Pierre and Miquelon", "format-country");
+                    return Object(m.d)("Saint Pierre and Miquelon", "format-country");
                 case "PN":
-                    return Object(M.d)("Pitcairn", "format-country");
+                    return Object(m.d)("Pitcairn", "format-country");
                 case "PR":
-                    return Object(M.d)("Puerto Rico", "format-country");
+                    return Object(m.d)("Puerto Rico", "format-country");
                 case "PS":
-                    return Object(M.d)("Palestine", "format-country");
+                    return Object(m.d)("Palestine", "format-country");
                 case "PT":
-                    return Object(M.d)("Portugal", "format-country");
+                    return Object(m.d)("Portugal", "format-country");
                 case "PW":
-                    return Object(M.d)("Palau", "format-country");
+                    return Object(m.d)("Palau", "format-country");
                 case "PY":
-                    return Object(M.d)("Paraguay", "format-country");
+                    return Object(m.d)("Paraguay", "format-country");
                 case "QA":
-                    return Object(M.d)("Qatar", "format-country");
+                    return Object(m.d)("Qatar", "format-country");
                 case "RE":
-                    return Object(M.d)("Reunion", "format-country");
+                    return Object(m.d)("Reunion", "format-country");
                 case "RO":
-                    return Object(M.d)("Romania", "format-country");
+                    return Object(m.d)("Romania", "format-country");
                 case "RS":
-                    return Object(M.d)("Serbia", "format-country");
+                    return Object(m.d)("Serbia", "format-country");
                 case "RU":
-                    return Object(M.d)("Russia", "format-country");
+                    return Object(m.d)("Russia", "format-country");
                 case "RW":
-                    return Object(M.d)("Rwanda", "format-country");
+                    return Object(m.d)("Rwanda", "format-country");
                 case "SA":
-                    return Object(M.d)("Saudi Arabia", "format-country");
+                    return Object(m.d)("Saudi Arabia", "format-country");
                 case "SB":
-                    return Object(M.d)("Solomon Islands", "format-country");
+                    return Object(m.d)("Solomon Islands", "format-country");
                 case "SC":
-                    return Object(M.d)("Seychelles", "format-country");
+                    return Object(m.d)("Seychelles", "format-country");
                 case "SD":
-                    return Object(M.d)("Sudan", "format-country");
+                    return Object(m.d)("Sudan", "format-country");
                 case "SE":
-                    return Object(M.d)("Sweden", "format-country");
+                    return Object(m.d)("Sweden", "format-country");
                 case "SG":
-                    return Object(M.d)("Singapore", "format-country");
+                    return Object(m.d)("Singapore", "format-country");
                 case "SH":
-                    return Object(M.d)("Saint Helena", "format-country");
+                    return Object(m.d)("Saint Helena", "format-country");
                 case "SI":
-                    return Object(M.d)("Slovenia", "format-country");
+                    return Object(m.d)("Slovenia", "format-country");
                 case "SJ":
-                    return Object(M.d)("Svalbard and Jan Mayen", "format-country");
+                    return Object(m.d)("Svalbard and Jan Mayen", "format-country");
                 case "SK":
-                    return Object(M.d)("Slovakia", "format-country");
+                    return Object(m.d)("Slovakia", "format-country");
                 case "SL":
-                    return Object(M.d)("Sierra Leone", "format-country");
+                    return Object(m.d)("Sierra Leone", "format-country");
                 case "SM":
-                    return Object(M.d)("San Marino", "format-country");
+                    return Object(m.d)("San Marino", "format-country");
                 case "SN":
-                    return Object(M.d)("Senegal", "format-country");
+                    return Object(m.d)("Senegal", "format-country");
                 case "SO":
-                    return Object(M.d)("Somalia", "format-country");
+                    return Object(m.d)("Somalia", "format-country");
                 case "SR":
-                    return Object(M.d)("Suriname", "format-country");
+                    return Object(m.d)("Suriname", "format-country");
                 case "SS":
-                    return Object(M.d)("South Sudan", "format-country");
+                    return Object(m.d)("South Sudan", "format-country");
                 case "ST":
-                    return Object(M.d)("Sao Tome and Principe", "format-country");
+                    return Object(m.d)("Sao Tome and Principe", "format-country");
                 case "SV":
-                    return Object(M.d)("El Salvador", "format-country");
+                    return Object(m.d)("El Salvador", "format-country");
                 case "SX":
-                    return Object(M.d)("Sint Maarten", "format-country");
+                    return Object(m.d)("Sint Maarten", "format-country");
                 case "SY":
-                    return Object(M.d)("Syria", "format-country");
+                    return Object(m.d)("Syria", "format-country");
                 case "SZ":
-                    return Object(M.d)("Swaziland", "format-country");
+                    return Object(m.d)("Swaziland", "format-country");
                 case "TC":
-                    return Object(M.d)("Turks and Caicos Islands", "format-country");
+                    return Object(m.d)("Turks and Caicos Islands", "format-country");
                 case "TD":
-                    return Object(M.d)("Chad", "format-country");
+                    return Object(m.d)("Chad", "format-country");
                 case "TF":
-                    return Object(M.d)("French Southern Territories", "format-country");
+                    return Object(m.d)("French Southern Territories", "format-country");
                 case "TG":
-                    return Object(M.d)("Togo", "format-country");
+                    return Object(m.d)("Togo", "format-country");
                 case "TH":
-                    return Object(M.d)("Thailand", "format-country");
+                    return Object(m.d)("Thailand", "format-country");
                 case "TJ":
-                    return Object(M.d)("Tajikistan", "format-country");
+                    return Object(m.d)("Tajikistan", "format-country");
                 case "TK":
-                    return Object(M.d)("Tokelau", "format-country");
+                    return Object(m.d)("Tokelau", "format-country");
                 case "TL":
-                    return Object(M.d)("East Timor", "format-country");
+                    return Object(m.d)("East Timor", "format-country");
                 case "TM":
-                    return Object(M.d)("Turkmenistan", "format-country");
+                    return Object(m.d)("Turkmenistan", "format-country");
                 case "TN":
-                    return Object(M.d)("Tunisia", "format-country");
+                    return Object(m.d)("Tunisia", "format-country");
                 case "TO":
-                    return Object(M.d)("Tonga", "format-country");
+                    return Object(m.d)("Tonga", "format-country");
                 case "TR":
-                    return Object(M.d)("Turkey", "format-country");
+                    return Object(m.d)("Turkey", "format-country");
                 case "TT":
-                    return Object(M.d)("Trinidad and Tobago", "format-country");
+                    return Object(m.d)("Trinidad and Tobago", "format-country");
                 case "TV":
-                    return Object(M.d)("Tuvalu", "format-country");
+                    return Object(m.d)("Tuvalu", "format-country");
                 case "TW":
-                    return Object(M.d)("Taiwan", "format-country");
+                    return Object(m.d)("Taiwan", "format-country");
                 case "TZ":
-                    return Object(M.d)("Tanzania", "format-country");
+                    return Object(m.d)("Tanzania", "format-country");
                 case "UA":
-                    return Object(M.d)("Ukraine", "format-country");
+                    return Object(m.d)("Ukraine", "format-country");
                 case "UG":
-                    return Object(M.d)("Uganda", "format-country");
+                    return Object(m.d)("Uganda", "format-country");
                 case "UM":
-                    return Object(M.d)("United States Minor Outlying Islands", "format-country");
+                    return Object(m.d)("United States Minor Outlying Islands", "format-country");
                 case "US":
-                    return Object(M.d)("United States", "format-country");
+                    return Object(m.d)("United States", "format-country");
                 case "UY":
-                    return Object(M.d)("Uruguay", "format-country");
+                    return Object(m.d)("Uruguay", "format-country");
                 case "UZ":
-                    return Object(M.d)("Uzbekistan", "format-country");
+                    return Object(m.d)("Uzbekistan", "format-country");
                 case "VA":
-                    return Object(M.d)("Vatican City", "format-country");
+                    return Object(m.d)("Vatican City", "format-country");
                 case "VC":
-                    return Object(M.d)("Saint Vincent and the Grenadines", "format-country");
+                    return Object(m.d)("Saint Vincent and the Grenadines", "format-country");
                 case "VE":
-                    return Object(M.d)("Venezuela", "format-country");
+                    return Object(m.d)("Venezuela", "format-country");
                 case "VG":
-                    return Object(M.d)("British Virgin Islands", "format-country");
+                    return Object(m.d)("British Virgin Islands", "format-country");
                 case "VI":
-                    return Object(M.d)("U.S. Virgin Islands", "format-country");
+                    return Object(m.d)("U.S. Virgin Islands", "format-country");
                 case "VN":
-                    return Object(M.d)("Vietnam", "format-country");
+                    return Object(m.d)("Vietnam", "format-country");
                 case "VU":
-                    return Object(M.d)("Vanuatu", "format-country");
+                    return Object(m.d)("Vanuatu", "format-country");
                 case "WF":
-                    return Object(M.d)("Wallis and Futuna", "format-country");
+                    return Object(m.d)("Wallis and Futuna", "format-country");
                 case "WS":
-                    return Object(M.d)("Samoa", "format-country");
+                    return Object(m.d)("Samoa", "format-country");
                 case "YE":
-                    return Object(M.d)("Yemen", "format-country");
+                    return Object(m.d)("Yemen", "format-country");
                 case "YT":
-                    return Object(M.d)("Mayotte", "format-country");
+                    return Object(m.d)("Mayotte", "format-country");
                 case "ZA":
-                    return Object(M.d)("South Africa", "format-country");
+                    return Object(m.d)("South Africa", "format-country");
                 case "ZM":
-                    return Object(M.d)("Zambia", "format-country");
+                    return Object(m.d)("Zambia", "format-country");
                 case "ZW":
-                    return Object(M.d)("Zimbabwe", "format-country");
+                    return Object(m.d)("Zimbabwe", "format-country");
                 default:
                     return e
             }
@@ -16080,68 +16080,11 @@ webpackJsonp([34], {
             l = n("TToO"),
             c = n("U7vG"),
             h = n("CIox"),
-            m = n("w9tK"),
-            _ = n("CSlQ"),
-            f = n("zCIC"),
+            m = n("6sO2"),
+            _ = n("w9tK"),
+            f = n("CSlQ"),
             p = n("Odds"),
             g = function(e) {
-                return c.createElement(f.b, null, c.createElement(p.U, {
-                    display: p.H.Flex,
-                    flexDirection: p.J.Column,
-                    alignItems: p.c.Center,
-                    padding: 2
-                }, c.createElement(p.U, {
-                    display: p.H.Flex,
-                    padding: {
-                        bottom: 2
-                    },
-                    fullWidth: !0
-                }, c.createElement(p._22, {
-                    "data-test-selector": e.titleSelector,
-                    type: p._27.H1
-                }, e.title)), e.children))
-            };
-        ! function(e) {
-            e.BasicInfo = "basic-info", e.Customize = "customize", e.Members = "members", e.FeaturedChannels = "featured-channels", e.Stats = "stats", e.Revenue = "revenue"
-        }(r || (r = {}));
-        var y, M = n("6sO2"),
-            v = function(e) {
-                switch (e) {
-                    case r.BasicInfo:
-                        return Object(M.d)("Basic Info", "TeamsDashboard");
-                    case r.Customize:
-                        return Object(M.d)("Customize", "TeamsDashboard");
-                    case r.Members:
-                        return Object(M.d)("Members", "TeamsDashboard");
-                    case r.FeaturedChannels:
-                        return Object(M.d)("Featured Channels", "TeamsDashboard");
-                    case r.Stats:
-                        return Object(M.d)("Stats", "TeamsDashboard");
-                    case r.Revenue:
-                        return Object(M.d)("Revenue", "TeamsDashboard");
-                    default:
-                        return ""
-                }
-            },
-            b = Object(_.c)("BasicInfoPage", {
-                destination: m.a.TeamsDashboardBasicInfo,
-                autoReportInteractive: !0
-            })(function() {
-                return c.createElement(g, {
-                    title: v(r.BasicInfo),
-                    titleSelector: "basic-info-page-title"
-                })
-            }),
-            L = Object(_.c)("CustomizePage", {
-                destination: m.a.TeamsDashboardCustomize,
-                autoReportInteractive: !0
-            })(function() {
-                return c.createElement(g, {
-                    title: v(r.Customize),
-                    titleSelector: "customize-page-title"
-                })
-            }),
-            D = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -16206,62 +16149,63 @@ webpackJsonp([34], {
                         maxLength: 25
                     })), this.renderButton()))
                 }, t
-            }(c.Component);
+            }(c.Component),
+            y = n("zCIC");
         n("A5K9");
         ! function(e) {
             e.ToTop = "move-to-top", e.Up = "move-up", e.Down = "move-down", e.ToBottom = "move-to-bottom"
-        }(y || (y = {}));
-        var Y;
+        }(r || (r = {}));
+        var M;
         ! function(e) {
             e.AllButtons = "all-buttons", e.RemoveOnly = "remove-button-only", e.MoveUpAndRemoveOnly = "move-up-and-remove-buttons-only", e.MoveDownAndRemoveOnly = "move-down-and-remove-buttons-only"
-        }(Y || (Y = {}));
-        var k, w = function(e) {
+        }(M || (M = {}));
+        var v, b = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         isHovered: !1
                     }, t.renderButtons = function() {
-                        var e = t.props.buttonConfiguration === Y.AllButtons,
-                            n = e || t.props.buttonConfiguration === Y.MoveUpAndRemoveOnly,
-                            a = e || t.props.buttonConfiguration === Y.MoveDownAndRemoveOnly;
+                        var e = t.props.buttonConfiguration === M.AllButtons,
+                            n = e || t.props.buttonConfiguration === M.MoveUpAndRemoveOnly,
+                            a = e || t.props.buttonConfiguration === M.MoveDownAndRemoveOnly;
                         return c.createElement(p.U, null, n && c.createElement(p._30, {
-                            label: Object(M.d)("Move To Top", "TeamsDashboard"),
+                            label: Object(m.d)("Move To Top", "TeamsDashboard"),
                             direction: p._32.Left
                         }, c.createElement(p.u, {
                             type: p.z.Text,
                             blurAfterClick: !0,
                             icon: p._10.ToTop,
-                            onClick: t.handleOnMoveClick(y.ToTop),
+                            onClick: t.handleOnMoveClick(r.ToTop),
                             disabled: t.props.isDisabled
                         })), n && c.createElement(p._30, {
-                            label: Object(M.d)("Move Up", "TeamsDashboard"),
+                            label: Object(m.d)("Move Up", "TeamsDashboard"),
                             direction: p._32.Left
                         }, c.createElement(p.u, {
                             type: p.z.Text,
                             blurAfterClick: !0,
                             icon: p._10.ArrowUp,
-                            onClick: t.handleOnMoveClick(y.Up),
+                            onClick: t.handleOnMoveClick(r.Up),
                             disabled: t.props.isDisabled
                         })), a && c.createElement(p._30, {
-                            label: Object(M.d)("Move Down", "TeamsDashboard"),
+                            label: Object(m.d)("Move Down", "TeamsDashboard"),
                             direction: p._32.Left
                         }, c.createElement(p.u, {
                             type: p.z.Text,
                             blurAfterClick: !0,
                             icon: p._10.ArrowDown,
-                            onClick: t.handleOnMoveClick(y.Down),
+                            onClick: t.handleOnMoveClick(r.Down),
                             disabled: t.props.isDisabled
                         })), a && c.createElement(p._30, {
-                            label: Object(M.d)("Move To Bottom", "TeamsDashboard"),
+                            label: Object(m.d)("Move To Bottom", "TeamsDashboard"),
                             direction: p._32.Left
                         }, c.createElement(p.u, {
                             type: p.z.Text,
                             blurAfterClick: !0,
                             icon: p._10.ToBottom,
-                            onClick: t.handleOnMoveClick(y.ToBottom),
+                            onClick: t.handleOnMoveClick(r.ToBottom),
                             disabled: t.props.isDisabled
                         })), c.createElement(p._30, {
-                            label: Object(M.d)("Remove", "TeamsDashboard"),
+                            label: Object(m.d)("Remove", "TeamsDashboard"),
                             direction: p._32.Left
                         }, c.createElement(p.u, {
                             type: p.z.Text,
@@ -16287,7 +16231,7 @@ webpackJsonp([34], {
                     }, t
                 }
                 return l.__extends(t, e), t.prototype.render = function() {
-                    var e = Object(M.d)("{displayName}'s Avatar Image", {
+                    var e = Object(m.d)("{displayName}'s Avatar Image", {
                         displayName: this.props.member.displayName
                     }, "TeamsDashboard");
                     return c.createElement("div", {
@@ -16320,26 +16264,26 @@ webpackJsonp([34], {
                     }, this.state.isHovered && this.renderButtons())))
                 }, t
             }(c.Component),
-            x = function(e) {
+            L = function(e) {
                 var t = function(t, n) {
-                    var a, r = e.members.findIndex(function(e) {
+                    var a, i = e.members.findIndex(function(e) {
                         return e.id === t
                     });
                     switch (n) {
-                        case y.ToTop:
+                        case r.ToTop:
                             a = 0;
                             break;
-                        case y.Up:
-                            a = r - 1;
+                        case r.Up:
+                            a = i - 1;
                             break;
-                        case y.Down:
-                            a = r + 1;
+                        case r.Down:
+                            a = i + 1;
                             break;
-                        case y.ToBottom:
+                        case r.ToBottom:
                             a = e.members.length - 1;
                             break;
                         default:
-                            a = r
+                            a = i
                     }
                     e.onMoveClick(t, a)
                 };
@@ -16353,14 +16297,14 @@ webpackJsonp([34], {
                     type: p._27.H3
                 }, e.header), e.members.length ? function(n) {
                     var a = e.onMoveClick ? t : void 0;
-                    return c.createElement(f.b, null, c.createElement(p.U, {
+                    return c.createElement(y.b, null, c.createElement(p.U, {
                         display: p.H.Flex,
                         flexDirection: p.J.Column
                     }, n.map(function(t, r) {
-                        return c.createElement(w, {
+                        return c.createElement(b, {
                             key: t.id,
                             buttonConfiguration: function(t, n) {
-                                return e.onMoveClick ? 0 === t ? Y.MoveDownAndRemoveOnly : t === n - 1 ? Y.MoveUpAndRemoveOnly : Y.AllButtons : Y.RemoveOnly
+                                return e.onMoveClick ? 0 === t ? M.MoveDownAndRemoveOnly : t === n - 1 ? M.MoveUpAndRemoveOnly : M.AllButtons : M.RemoveOnly
                             }(r, n.length),
                             member: t,
                             listItemsSelector: e.listItemsSelector,
@@ -16370,117 +16314,154 @@ webpackJsonp([34], {
                         })
                     })))
                 }(e.members) : c.createElement(p._22, null, e.emptyStateText))
+            },
+            D = function(e) {
+                return c.createElement(y.b, null, c.createElement(p.U, {
+                    display: p.H.Flex,
+                    flexDirection: p.J.Column,
+                    alignItems: p.c.Center,
+                    padding: 2
+                }, c.createElement(p.U, {
+                    display: p.H.Flex,
+                    padding: {
+                        bottom: 2
+                    },
+                    fullWidth: !0
+                }, c.createElement(p._22, {
+                    "data-test-selector": e.titleSelector,
+                    type: p._27.H1
+                }, e.title)), e.children))
             };
         ! function(e) {
+            e.Revenue = "revenue", e.Stats = "stats", e.Members = "members", e.FeaturedChannels = "featured-channels", e.Settings = "settings"
+        }(v || (v = {}));
+        var Y;
+        ! function(e) {
             e.ChannelNotFoundByLogin = "CHANNEL_NOT_FOUND_BY_LOGIN", e.ChannelPendingInvitation = "CHANNEL_PENDING_INVITATION", e.ChannelAlreadyMember = "CHANNEL_ALREADY_MEMBER", e.ChannelAlreadyFeatured = "CHANNEL_ALREADY_FEATURED"
-        }(k || (k = {}));
-        var T, S = function(e) {
-                for (var t in k)
-                    if (e.includes(k[t])) return k[t];
+        }(Y || (Y = {}));
+        var k, w = function(e) {
+                for (var t in Y)
+                    if (e.includes(Y[t])) return Y[t];
                 return ""
             },
-            O = function(e) {
+            x = function(e) {
                 switch (e) {
-                    case k.ChannelNotFoundByLogin:
-                        return Object(M.d)("Channel not found", "TeamsDashboard");
-                    case k.ChannelPendingInvitation:
-                        return Object(M.d)("Channel has a pending invitation", "TeamsDashboard");
-                    case k.ChannelAlreadyMember:
-                        return Object(M.d)("Channel is already a member", "TeamsDashboard");
-                    case k.ChannelAlreadyFeatured:
-                        return Object(M.d)("Channel is already featured", "TeamsDashboard");
+                    case Y.ChannelNotFoundByLogin:
+                        return Object(m.d)("Channel not found", "TeamsDashboard");
+                    case Y.ChannelPendingInvitation:
+                        return Object(m.d)("Channel has a pending invitation", "TeamsDashboard");
+                    case Y.ChannelAlreadyMember:
+                        return Object(m.d)("Channel is already a member", "TeamsDashboard");
+                    case Y.ChannelAlreadyFeatured:
+                        return Object(m.d)("Channel is already featured", "TeamsDashboard");
                     default:
-                        return Object(M.d)("Unknown Error", "TeamsDashboard")
+                        return Object(m.d)("Unknown Error", "TeamsDashboard")
                 }
             },
-            j = 100,
-            H = function(e) {
-                return e.map(C)
+            T = 100,
+            S = function(e) {
+                return e.map(O)
             },
-            C = function(e) {
+            O = function(e) {
                 return {
                     id: e._id,
                     displayName: e.display_name,
                     avatarSrc: e.logo
                 }
             },
-            P = function(e, t) {
+            j = function(e, t) {
                 return e.map(function(e, n) {
                     return {
                         id: e.id,
                         displayName: e.displayName,
                         avatarSrc: e.avatarSrc,
-                        checked: t && n < j
+                        checked: t && n < T
                     }
                 })
             },
-            A = function(e) {
+            H = function(e) {
                 return e.filter(function(e) {
                     return e.checked
                 }).map(function(e) {
                     return e.id
                 })
             },
-            F = function() {
-                return Object(M.d)("Enter channel login", "TeamsDashboard")
+            C = function() {
+                return Object(m.d)("Enter channel login", "TeamsDashboard")
             },
-            E = n("9u8h"),
-            I = this,
-            W = function(e, t) {
-                return l.__awaiter(I, void 0, void 0, function() {
+            P = function(e) {
+                switch (e) {
+                    case v.Revenue:
+                        return Object(m.d)("Revenue", "TeamsDashboard");
+                    case v.Stats:
+                        return Object(m.d)("Stats", "TeamsDashboard");
+                    case v.Members:
+                        return Object(m.d)("Members", "TeamsDashboard");
+                    case v.FeaturedChannels:
+                        return Object(m.d)("Featured Channels", "TeamsDashboard");
+                    case v.Settings:
+                        return Object(m.d)("Settings", "TeamsDashboard");
+                    default:
+                        return ""
+                }
+            },
+            A = n("9u8h"),
+            F = this,
+            E = function(e, t) {
+                return l.__awaiter(F, void 0, void 0, function() {
                     var n, a, r, i;
                     return l.__generator(this, function(s) {
                         switch (s.label) {
                             case 0:
-                                return n = "/v5/teams/" + e + "/dashboard/featured_channels", [4, E.a.post(n, {
+                                return n = "/v5/teams/" + e + "/dashboard/featured_channels", [4, A.a.post(n, {
                                     body: {
                                         channel_login: t
                                     }
                                 })];
                             case 1:
-                                return (a = s.sent()).body && 200 === a.status ? [2, C(a.body.feature.channel)] : (r = a.error.message) && "" !== (i = S(r)) ? [2, Promise.reject(i)] : [2, Promise.reject(JSON.stringify(a.error))]
+                                return (a = s.sent()).body && 200 === a.status ? [2, O(a.body.feature.channel)] : (r = a.error.message) && "" !== (i = w(r)) ? [2, Promise.reject(i)] : [2, Promise.reject(JSON.stringify(a.error))]
                         }
                     })
                 })
             },
-            N = this,
-            z = this,
+            W = this,
+            I = this,
+            N = function(e, t) {
+                return B("membership", e, t)
+            },
+            z = function(e, t) {
+                return B("featured_channels", e, t)
+            },
             R = function(e, t) {
-                return V("membership", e, t)
+                return B("invitation", e, t)
             },
-            B = function(e, t) {
-                return V("featured_channels", e, t)
-            },
-            J = function(e, t) {
-                return V("invitation", e, t)
-            },
-            V = function(e, t, n) {
-                return l.__awaiter(z, void 0, void 0, function() {
+            B = function(e, t, n) {
+                return l.__awaiter(I, void 0, void 0, function() {
                     var a, r;
                     return l.__generator(this, function(i) {
                         switch (i.label) {
                             case 0:
-                                return a = "/v5/teams/" + t + "/dashboard/channels/" + n + "/" + e, [4, E.a.delete(a)];
+                                return a = "/v5/teams/" + t + "/dashboard/channels/" + n + "/" + e, [4, A.a.delete(a)];
                             case 1:
                                 return r = i.sent(), [2, 204 === r.status]
                         }
                     })
                 })
             },
-            U = this,
-            G = function(e, t, n) {
-                return K("membership", e, t, n)
+            J = this,
+            V = function(e, t, n) {
+                return G("membership", e, t, n)
             },
-            q = function(e, t, n) {
-                return K("featured_channels", e, t, n)
+            U = function(e, t, n) {
+                return G("featured_channels", e, t, n)
             },
-            K = function(e, t, n, a) {
-                return l.__awaiter(U, void 0, void 0, function() {
+            G = function(e, t, n, a) {
+                return l.__awaiter(J, void 0, void 0, function() {
                     var r, i;
                     return l.__generator(this, function(s) {
                         switch (s.label) {
                             case 0:
-                                return r = "/v5/teams/" + t + "/dashboard/channels/" + n + "/" + e, [4, E.a.put(r, {
+                                return r = "/v5/teams/" + t + "/dashboard/channels/" + n + "/" + e, [4, A.a.put(r, {
                                     body: {
                                         display_position: a
                                     }
@@ -16491,7 +16472,7 @@ webpackJsonp([34], {
                     })
                 })
             },
-            Z = function(e) {
+            q = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -16516,14 +16497,14 @@ webpackJsonp([34], {
                                             tooltipError: ""
                                         }), a.label = 1;
                                     case 1:
-                                        return a.trys.push([1, 3, , 4]), [4, W(this.props.teamName, e)];
+                                        return a.trys.push([1, 3, , 4]), [4, E(this.props.teamName, e)];
                                     case 2:
                                         return t = a.sent(), this.setState({
                                             featuredChannels: this.state.featuredChannels.concat(t)
                                         }), [3, 4];
                                     case 3:
                                         return n = a.sent(), this.setState({
-                                            tooltipError: O(n)
+                                            tooltipError: x(n)
                                         }), [3, 4];
                                     case 4:
                                         return [2]
@@ -16537,7 +16518,7 @@ webpackJsonp([34], {
                                     case 0:
                                         return this.setState({
                                             isDisabled: !0
-                                        }), [4, B(this.props.teamName, e)];
+                                        }), [4, z(this.props.teamName, e)];
                                     case 1:
                                         return t.sent() && this.setState({
                                             featuredChannels: this.state.featuredChannels.filter(function(t) {
@@ -16557,7 +16538,7 @@ webpackJsonp([34], {
                                     case 0:
                                         return this.setState({
                                             isDisabled: !0
-                                        }), [4, q(this.props.teamName, e, n)];
+                                        }), [4, U(this.props.teamName, e, n)];
                                     case 1:
                                         return r.sent() && (t = this.state.featuredChannels.findIndex(function(t) {
                                             return t.id === e
@@ -16578,16 +16559,16 @@ webpackJsonp([34], {
                             switch (n.label) {
                                 case 0:
                                     return e = this.setState, t = {}, [4, function(e) {
-                                        return l.__awaiter(N, void 0, void 0, function() {
+                                        return l.__awaiter(W, void 0, void 0, function() {
                                             var t, n, a;
                                             return l.__generator(this, function(r) {
                                                 switch (r.label) {
                                                     case 0:
-                                                        return t = "/v5/teams/" + e + "/dashboard/featured_channels", [4, E.a.get(t)];
+                                                        return t = "/v5/teams/" + e + "/dashboard/featured_channels", [4, A.a.get(t)];
                                                     case 1:
                                                         return !(n = r.sent()).body || 200 !== n.status || n.error || n.requestError ? [2, []] : (a = n.body.featured_channels.map(function(e) {
                                                             return e.channel
-                                                        }), [2, H(a)])
+                                                        }), [2, S(a)])
                                                 }
                                             })
                                         })
@@ -16598,68 +16579,68 @@ webpackJsonp([34], {
                         })
                     })
                 }, t.prototype.render = function() {
-                    return c.createElement(g, {
-                        title: v(r.FeaturedChannels),
+                    return c.createElement(D, {
+                        title: P(v.FeaturedChannels),
                         titleSelector: "featured-channels-page-title"
-                    }, c.createElement(D, {
-                        descriptor: Object(M.d)("Pick channels to feature. Featured channels do not need to be a member of the team.\nIf none of the featured channels are live, your team will feature a live member based on member ordering.", "TeamsDashboard"),
-                        placeholder: F(),
-                        buttonText: Object(M.d)("Add", "TeamsDashboard"),
+                    }, c.createElement(g, {
+                        descriptor: Object(m.d)("Pick channels to feature. Featured channels do not need to be a member of the team.\nIf none of the featured channels are live, your team will feature a live member based on member ordering.", "TeamsDashboard"),
+                        placeholder: C(),
+                        buttonText: Object(m.d)("Add", "TeamsDashboard"),
                         submitAction: this.handleAddFeaturedChannel,
                         errorString: this.state.tooltipError
-                    }), c.createElement(x, {
-                        emptyStateText: Object(M.d)("No featured channels.", "TeamsDashboard"),
+                    }), c.createElement(L, {
+                        emptyStateText: Object(m.d)("No featured channels.", "TeamsDashboard"),
                         members: this.state.featuredChannels,
                         listItemsSelector: "featured-channels-list-items",
                         onDeleteClick: this.handleDeleteFeaturedChannel,
                         isDisabled: this.state.isDisabled,
                         onMoveClick: this.handleMoveFeaturedChannel
                     }))
-                }, t = l.__decorate([Object(_.c)("FeaturedChannelsPage", {
+                }, t = l.__decorate([Object(f.c)("FeaturedChannelsPage", {
                     autoReportInteractive: !0,
-                    destination: m.a.TeamsDashboardFeaturedChannels
+                    destination: _.a.TeamsDashboardFeaturedChannels
                 })], t)
             }(c.Component),
-            X = n("PGY2"),
-            Q = this,
-            $ = this;
+            K = n("PGY2"),
+            Z = this,
+            X = this;
         ! function(e) {
             e.StatsRevealed = "stats_revealed", e.RevenueRevealed = "revenue_revealed"
-        }(T || (T = {}));
-        var ee, te = function(e, t) {
-                return l.__awaiter($, void 0, void 0, function() {
+        }(k || (k = {}));
+        var Q, $ = function(e, t) {
+                return l.__awaiter(X, void 0, void 0, function() {
                     var n, a, r, i;
                     return l.__generator(this, function(s) {
                         switch (s.label) {
                             case 0:
-                                return n = t ? "?" + t + "=true" : "", a = "/v5/teams/" + e + "/dashboard/members" + n, [4, Object(X.d)({
+                                return n = t ? "?" + t + "=true" : "", a = "/v5/teams/" + e + "/dashboard/members" + n, [4, Object(K.d)({
                                     path: a
                                 })];
                             case 1:
-                                return r = s.sent(), i = r.body ? r.body.channels : [], [2, H(i)]
+                                return r = s.sent(), i = r.body ? r.body.channels : [], [2, S(i)]
                         }
                     })
                 })
             },
-            ne = this,
-            ae = function(e, t) {
-                return l.__awaiter(ne, void 0, void 0, function() {
+            ee = this,
+            te = function(e, t) {
+                return l.__awaiter(ee, void 0, void 0, function() {
                     var n, a, r, i;
                     return l.__generator(this, function(s) {
                         switch (s.label) {
                             case 0:
-                                return n = "/v5/teams/" + e + "/dashboard/invitations", [4, E.a.post(n, {
+                                return n = "/v5/teams/" + e + "/dashboard/invitations", [4, A.a.post(n, {
                                     body: {
                                         channel_login: t
                                     }
                                 })];
                             case 1:
-                                return (a = s.sent()).body && 200 === a.status ? [2, C(a.body.invitation.channel)] : (r = a.error.message) && "" !== (i = S(r)) ? [2, Promise.reject(i)] : [2, Promise.reject(JSON.stringify(a.error))]
+                                return (a = s.sent()).body && 200 === a.status ? [2, O(a.body.invitation.channel)] : (r = a.error.message) && "" !== (i = w(r)) ? [2, Promise.reject(i)] : [2, Promise.reject(JSON.stringify(a.error))]
                         }
                     })
                 })
             },
-            re = function(e) {
+            ne = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -16677,14 +16658,14 @@ webpackJsonp([34], {
                                             invitationError: ""
                                         }), r.label = 1;
                                     case 1:
-                                        return r.trys.push([1, 3, , 4]), [4, ae(this.props.teamName, e)];
+                                        return r.trys.push([1, 3, , 4]), [4, te(this.props.teamName, e)];
                                     case 2:
                                         return t = r.sent(), n = this.state.invitations.concat(t), this.setState({
                                             invitations: n
                                         }), [3, 4];
                                     case 3:
                                         return a = r.sent(), this.setState({
-                                            invitationError: O(a)
+                                            invitationError: x(a)
                                         }), [3, 4];
                                     case 4:
                                         return [2]
@@ -16699,7 +16680,7 @@ webpackJsonp([34], {
                                     case 0:
                                         return this.setState({
                                             isDisabled: !0
-                                        }), [4, G(this.props.teamName, e, n)];
+                                        }), [4, V(this.props.teamName, e, n)];
                                     case 1:
                                         return r.sent() && (t = this.state.members.findIndex(function(t) {
                                             return t.id === e
@@ -16718,7 +16699,7 @@ webpackJsonp([34], {
                                     case 0:
                                         return this.setState({
                                             isDisabled: !0
-                                        }), [4, J(this.props.teamName, e)];
+                                        }), [4, R(this.props.teamName, e)];
                                     case 1:
                                         return t.sent() && this.setState({
                                             invitations: this.state.invitations.filter(function(t) {
@@ -16736,7 +16717,7 @@ webpackJsonp([34], {
                                     case 0:
                                         return this.setState({
                                             isDisabled: !0
-                                        }), [4, R(this.props.teamName, e)];
+                                        }), [4, N(this.props.teamName, e)];
                                     case 1:
                                         return t.sent() && this.setState({
                                             members: this.state.members.filter(function(t) {
@@ -16755,19 +16736,19 @@ webpackJsonp([34], {
                         return l.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return [4, Promise.all([te(this.props.teamName), function(e) {
-                                        return l.__awaiter(Q, void 0, void 0, function() {
+                                    return [4, Promise.all([$(this.props.teamName), function(e) {
+                                        return l.__awaiter(Z, void 0, void 0, function() {
                                             var t, n, a;
                                             return l.__generator(this, function(r) {
                                                 switch (r.label) {
                                                     case 0:
-                                                        return t = "/v5/teams/" + e + "/dashboard/invitations", [4, Object(X.d)({
+                                                        return t = "/v5/teams/" + e + "/dashboard/invitations", [4, Object(K.d)({
                                                             path: t
                                                         })];
                                                     case 1:
                                                         return n = r.sent(), a = n.body ? n.body.invitations.map(function(e) {
                                                             return e.channel
-                                                        }) : [], [2, H(a)]
+                                                        }) : [], [2, S(a)]
                                                 }
                                             })
                                         })
@@ -16781,78 +16762,78 @@ webpackJsonp([34], {
                         })
                     })
                 }, t.prototype.render = function() {
-                    return c.createElement(g, {
-                        title: v(r.Members),
+                    return c.createElement(D, {
+                        title: P(v.Members),
                         titleSelector: "members-page-title"
-                    }, c.createElement(D, {
-                        descriptor: Object(M.d)("Live team members will always be at the top. Order is respected for live members and offline members.\nOrder also determines which member will be featured in the video player.", "TeamsDashboard"),
-                        placeholder: F(),
-                        buttonText: Object(M.d)("Invite", "TeamsDashboard"),
+                    }, c.createElement(g, {
+                        descriptor: Object(m.d)("Live team members will always be at the top. Order is respected for live members and offline members.\nOrder also determines which member will be featured in the video player.", "TeamsDashboard"),
+                        placeholder: C(),
+                        buttonText: Object(m.d)("Invite", "TeamsDashboard"),
                         submitAction: this.onInviteClick,
                         errorString: this.state.invitationError
-                    }), c.createElement(x, {
-                        emptyStateText: Object(M.d)("No pending invitations.", "TeamsDashboard"),
-                        header: Object(M.d)("Pending Team Invitations", "TeamsDashboard"),
+                    }), c.createElement(L, {
+                        emptyStateText: Object(m.d)("No pending invitations.", "TeamsDashboard"),
+                        header: Object(m.d)("Pending Team Invitations", "TeamsDashboard"),
                         members: this.state.invitations,
                         listItemsSelector: "invitations-list-items",
                         onDeleteClick: this.handleDeleteInvitation,
                         isDisabled: this.state.isDisabled
-                    }), c.createElement(x, {
-                        emptyStateText: Object(M.d)("No team members yet.", "TeamsDashboard"),
-                        header: Object(M.d)("Current Members", "TeamsDashboard"),
+                    }), c.createElement(L, {
+                        emptyStateText: Object(m.d)("No team members yet.", "TeamsDashboard"),
+                        header: Object(m.d)("Current Members", "TeamsDashboard"),
                         members: this.state.members,
                         listItemsSelector: "members-list-items",
                         onDeleteClick: this.handleDeleteMember,
                         onMoveClick: this.handleMoveMember,
                         isDisabled: this.state.isDisabled
                     }))
-                }, t = l.__decorate([Object(_.c)("MembersPage", {
+                }, t = l.__decorate([Object(f.c)("MembersPage", {
                     autoReportInteractive: !0,
-                    destination: m.a.TeamsDashboardMembers
+                    destination: _.a.TeamsDashboardMembers
                 })], t)
             }(c.Component),
-            ie = function(e) {
-                return Object(M.c)(e, {
+            ae = function(e) {
+                return Object(m.c)(e, {
                     month: "long",
                     year: "numeric",
                     timeZone: "UTC"
                 })
             },
-            se = function(e) {
+            re = function(e) {
                 var t = Math.floor(e / 3600),
                     n = Math.floor(e % 3600 / 60),
                     a = e % 60 + "s";
                 return n && (a = n + "m" + a), t && (a = t + "h" + a), a
             },
-            oe = function(e) {
+            ie = function(e) {
                 return new Date(Date.UTC(e.getUTCFullYear(), e.getUTCMonth()))
             },
-            de = function(e, t) {
+            se = function(e, t) {
                 var n = new Date(Date.UTC(e.getUTCFullYear(), e.getUTCMonth() + 1));
                 return n.getTime() > t.getTime() ? t : n
             },
-            ue = function(e) {
+            oe = function(e) {
                 return new Date(Date.UTC(e.getUTCFullYear(), e.getUTCMonth() - 1))
             },
-            le = function(e) {
+            de = function(e) {
                 var t = new Date(e.toISOString());
                 return t.setUTCHours(e.getUTCHours() + 4), t
             },
-            ce = function(e) {
+            ue = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.handleChange = function(e) {
                         var t = new Date(e.currentTarget.value),
-                            a = oe(t),
-                            r = de(a, n.validatedCurrentDate);
+                            a = ie(t),
+                            r = se(a, n.validatedCurrentDate);
                         n.props.onMonthSelection(a, r)
                     }, n.getDropdownOptions = function(e, t) {
-                        for (var n = [], a = oe(e); a >= t; a = ue(a)) {
+                        for (var n = [], a = ie(e); a >= t; a = oe(a)) {
                             var r = a.toISOString();
                             n.push(c.createElement("option", {
                                 key: r,
                                 value: r
-                            }, ie(a)))
+                            }, ae(a)))
                         }
                         return n
                     }, n.validatedCurrentDate = t.currentDate < t.earliestDate ? t.earliestDate : t.currentDate, n
@@ -16865,40 +16846,40 @@ webpackJsonp([34], {
                     }, c.createElement(p._15, {
                         onChange: this.handleChange
                     }, this.getDropdownOptions(this.validatedCurrentDate, this.props.earliestDate)))
-                }, t = l.__decorate([Object(_.c)("MonthSelectMenuComponent")], t)
+                }, t = l.__decorate([Object(f.c)("MonthSelectMenuComponent")], t)
             }(c.Component),
-            he = ["twitch_subscriptions", "prime_subscriptions", "bits", "ads"],
-            me = function(e) {
+            le = ["twitch_subscriptions", "prime_subscriptions", "bits", "ads"],
+            ce = function(e) {
                 switch (e) {
                     case "twitch_subscriptions":
-                        return Object(M.d)("Sub Revenue", "TeamsDashboard");
+                        return Object(m.d)("Sub Revenue", "TeamsDashboard");
                     case "prime_subscriptions":
-                        return Object(M.d)("Twitch Prime Revenue", "TeamsDashboard");
+                        return Object(m.d)("Twitch Prime Revenue", "TeamsDashboard");
                     case "bits":
-                        return Object(M.d)("Bits Revenue", "TeamsDashboard");
+                        return Object(m.d)("Bits Revenue", "TeamsDashboard");
                     case "ads":
-                        return Object(M.d)("Ad Revenue", "TeamsDashboard");
+                        return Object(m.d)("Ad Revenue", "TeamsDashboard");
                     default:
                         return ""
                 }
             },
-            _e = n("WaEV"),
-            fe = function(e) {
-                return Object(M.e)(e / 100, {
+            he = n("WaEV"),
+            me = function(e) {
+                return Object(m.e)(e / 100, {
                     style: "currency",
                     currency: "USD"
                 })
             },
-            pe = 800,
-            ge = 380,
-            ye = function(e) {
+            _e = 800,
+            fe = 380,
+            pe = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return l.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.setCanvasResolution(), this.myChart = new _e(this.canvas, {
+                    this.setCanvasResolution(), this.myChart = new he(this.canvas, {
                         type: "bar",
-                        data: ve(this.props.datasets, this.props.timestampLabels),
+                        data: ye(this.props.datasets, this.props.timestampLabels),
                         options: {
                             tooltips: {
                                 backgroundColor: "rgba(0,0,0,0.8)",
@@ -16926,8 +16907,8 @@ webpackJsonp([34], {
                                         }).reduce(function(e, t) {
                                             return e + Math.round(parseFloat(t))
                                         }, 0);
-                                        return fe(t) + " - " + function(e) {
-                                            return Object(M.c)(e, {
+                                        return me(t) + " - " + function(e) {
+                                            return Object(m.c)(e, {
                                                 weekday: "short",
                                                 month: "short",
                                                 day: "numeric",
@@ -16937,7 +16918,7 @@ webpackJsonp([34], {
                                         }(new Date(e[0].xLabel || "1970-01-01Z"))
                                     },
                                     label: function(e, t) {
-                                        return " " + fe(Math.round(parseFloat(e.yLabel || "0"))) + " " + (void 0 !== e.datasetIndex && t.datasets ? t.datasets[e.datasetIndex].label : "")
+                                        return " " + me(Math.round(parseFloat(e.yLabel || "0"))) + " " + (void 0 !== e.datasetIndex && t.datasets ? t.datasets[e.datasetIndex].label : "")
                                     }
                                 }
                             },
@@ -16970,7 +16951,7 @@ webpackJsonp([34], {
                                         min: 0,
                                         maxTicksLimit: 5,
                                         callback: function(e) {
-                                            return fe(e)
+                                            return me(e)
                                         }
                                     }
                                 }]
@@ -16980,7 +16961,7 @@ webpackJsonp([34], {
                 }, t.prototype.componentWillUnmount = function() {
                     this.myChart && this.myChart.destroy()
                 }, t.prototype.componentWillUpdate = function(e) {
-                    this.myChart.data = ve(e.datasets, e.timestampLabels), this.myChart.update()
+                    this.myChart.data = ye(e.datasets, e.timestampLabels), this.myChart.update()
                 }, t.prototype.render = function() {
                     var e = this;
                     return c.createElement("canvas", {
@@ -16989,16 +16970,16 @@ webpackJsonp([34], {
                         }
                     })
                 }, t.prototype.setCanvasResolution = function() {
-                    var e = pe,
-                        t = ge,
-                        n = Me(this.canvas.getContext("2d"));
+                    var e = _e,
+                        t = fe,
+                        n = ge(this.canvas.getContext("2d"));
                     this.canvas.width = e * n, this.canvas.height = t * n, this.canvas.style.width = e + "px", this.canvas.style.height = t + "px", this.canvas.getContext("2d").setTransform(n, 0, 0, n, 0, 0)
-                }, t = l.__decorate([Object(_.c)("RevenueCanvas")], t)
+                }, t = l.__decorate([Object(f.c)("RevenueCanvas")], t)
             }(c.Component),
-            Me = function(e) {
+            ge = function(e) {
                 return (window.devicePixelRatio || 1) / (e.webkitBackingStorePixelRatio || e.mozBackingStorePixelRatio || e.msBackingStorePixelRatio || e.oBackingStorePixelRatio || e.backingStorePixelRatio || 1)
             },
-            ve = function(e, t) {
+            ye = function(e, t) {
                 return {
                     labels: t.slice(0),
                     datasets: e.map(function(e) {
@@ -17024,36 +17005,36 @@ webpackJsonp([34], {
                     })
                 }
             },
-            be = ye,
-            Le = function(e) {
+            Me = pe,
+            ve = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.formatRevenueChartData = function(e) {
                         var t = {
                             twitch_subscriptions: {
-                                categoryLabel: me("twitch_subscriptions"),
+                                categoryLabel: ce("twitch_subscriptions"),
                                 color: "#7752ba",
                                 data: []
                             },
                             prime_subscriptions: {
-                                categoryLabel: me("prime_subscriptions"),
+                                categoryLabel: ce("prime_subscriptions"),
                                 color: "#059bdc",
                                 data: []
                             },
                             bits: {
-                                categoryLabel: me("bits"),
+                                categoryLabel: ce("bits"),
                                 color: "#3dc7ae",
                                 data: []
                             },
                             ads: {
-                                categoryLabel: me("ads"),
+                                categoryLabel: ce("ads"),
                                 color: "#c5b6e2",
                                 data: []
                             },
                             timestampLabels: []
                         };
                         return Object.keys(e).sort().reduce(function(t, n) {
-                            return t.timestampLabels.push(n), he.forEach(function(a) {
+                            return t.timestampLabels.push(n), le.forEach(function(a) {
                                 t[a].data.push(e[n][a])
                             }), t
                         }, t)
@@ -17061,10 +17042,10 @@ webpackJsonp([34], {
                 }
                 return l.__extends(t, e), t.prototype.render = function() {
                     var e = this.formatRevenueChartData(this.props.data),
-                        t = he.map(function(t) {
+                        t = le.map(function(t) {
                             return e[t]
                         });
-                    return c.createElement(be, {
+                    return c.createElement(Me, {
                         datasets: t,
                         timestampLabels: e.timestampLabels
                     })
@@ -17072,8 +17053,8 @@ webpackJsonp([34], {
             }(c.PureComponent);
         ! function(e) {
             e.Title = "revenue-summary-item-title", e.Symbol = "revenue-summary-item-symbol", e.Dollars = "revenue-summary-item-dollars", e.Cents = "revenue-summary-item-cents"
-        }(ee || (ee = {}));
-        var De, Ye = function(e) {
+        }(Q || (Q = {}));
+        var be, Le = function(e) {
                 var t, n;
                 return e.isLoading ? (t = c.createElement(p._22, {
                     type: p._27.H5
@@ -17085,21 +17066,21 @@ webpackJsonp([34], {
                 }))) : (t = c.createElement(p._22, {
                     color: p.F.Alt2,
                     type: p._27.H5,
-                    "data-test-selector": ee.Title
+                    "data-test-selector": Q.Title
                 }, e.title), n = c.createElement(p.U, {
                     alignItems: p.c.Start,
                     display: p.H.Flex,
                     flexDirection: p.J.Row
                 }, c.createElement(p._22, {
                     type: e.magnified ? p._27.H4 : p._27.H5,
-                    "data-test-selector": ee.Symbol
+                    "data-test-selector": Q.Symbol
                 }, "$ "), c.createElement(p._22, {
                     type: e.magnified ? p._27.H1 : p._27.H2,
-                    "data-test-selector": ee.Dollars
-                }, Object(M.e)(Math.floor(e.cents / 100))), c.createElement(p._22, {
+                    "data-test-selector": Q.Dollars
+                }, Object(m.e)(Math.floor(e.cents / 100))), c.createElement(p._22, {
                     type: e.magnified ? p._27.H4 : p._27.H5,
-                    "data-test-selector": ee.Cents
-                }, Object(M.e)(Math.round(e.cents % 100), {
+                    "data-test-selector": Q.Cents
+                }, Object(m.e)(Math.round(e.cents % 100), {
                     minimumIntegerDigits: 2
                 })))), c.createElement(p.U, {
                     display: p.H.Flex,
@@ -17112,12 +17093,12 @@ webpackJsonp([34], {
                     } : {}
                 }, t), n)
             },
-            ke = function(e) {
+            De = function(e) {
                 var t = e.revenues.reduce(function(e, t) {
                         return e + t.cents
                     }, 0),
                     n = e.revenues.map(function(t, n) {
-                        return c.createElement(Ye, {
+                        return c.createElement(Le, {
                             key: n,
                             isLoading: e.isLoading,
                             title: t.title + " " + e.summaryItemTitleSuffix,
@@ -17133,15 +17114,15 @@ webpackJsonp([34], {
                     justifyContent: p.T.Between,
                     alignItems: p.c.Center,
                     padding: 1
-                }, c.createElement(Ye, {
+                }, c.createElement(Le, {
                     isLoading: e.isLoading,
                     title: e.totalTitle + " " + e.summaryItemTitleSuffix,
                     cents: t,
                     magnified: !0
                 }), n)
             },
-            we = function(e) {
-                return c.createElement(ke, {
+            Ye = function(e) {
+                return c.createElement(De, {
                     isLoading: e.isLoading,
                     revenues: function(e) {
                         var t = {
@@ -17152,12 +17133,12 @@ webpackJsonp([34], {
                         };
                         return Object.keys(e).forEach(function(n) {
                             var a = e[n];
-                            he.forEach(function(e) {
+                            le.forEach(function(e) {
                                 t[e] += Math.round(a[e])
                             })
-                        }), he.map(function(e) {
+                        }), le.map(function(e) {
                             return {
-                                title: me(e),
+                                title: ce(e),
                                 cents: t[e]
                             }
                         })
@@ -17166,8 +17147,8 @@ webpackJsonp([34], {
                     summaryItemTitleSuffix: e.summaryItemTitleSuffix
                 })
             },
-            xe = n("+Znq"),
-            Te = function(e) {
+            ke = n("+Znq"),
+            we = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderMenu = function() {
@@ -17178,20 +17159,20 @@ webpackJsonp([34], {
                         var e = t.props.members.filter(function(e) {
                                 return e.checked
                             }).length,
-                            n = Object(M.d)("Select All", "TeamsDashboard");
-                        return t.props.members.length > j && (n = Object(M.d)("Select First {maxSelected, number}", {
-                            maxSelected: j
-                        }, "TeamsDashboard")), c.createElement(xe.a, {
+                            n = Object(m.d)("Select All", "TeamsDashboard");
+                        return t.props.members.length > T && (n = Object(m.d)("Select First {maxSelected, number}", {
+                            maxSelected: T
+                        }, "TeamsDashboard")), c.createElement(ke.a, {
                             onToggle: t.toggleOpenClose
                         }, c.createElement(p.u, {
                             dropdown: !0,
                             type: p.z.Hollow
-                        }, Object(M.d)("{checkedCount, plural, one {Stats for # Team Member} other {Stats for # Team Members}}", {
+                        }, Object(m.d)("{checkedCount, plural, one {Stats for # Team Member} other {Stats for # Team Members}}", {
                             checkedCount: e
                         }, "TeamsDashboard")), c.createElement(p.p, {
                             direction: p.q.BottomLeft,
                             noTail: !0
-                        }, c.createElement(f.b, {
+                        }, c.createElement(y.b, {
                             className: "team-members-select-menu__scroller"
                         }, c.createElement(p.U, null, c.createElement(p._18, {
                             borderBottom: !0,
@@ -17210,7 +17191,7 @@ webpackJsonp([34], {
                                 label: n.displayName,
                                 checked: n.checked,
                                 onChange: t.props.toggleMemberChecked.bind(t, n),
-                                disabled: e >= j && !n.checked
+                                disabled: e >= T && !n.checked
                             };
                             return c.createElement(p._18, {
                                 margin: {
@@ -17228,72 +17209,72 @@ webpackJsonp([34], {
                     return c.createElement(p.U, {
                         className: "team-members-select-menu"
                     }, this.renderMenu())
-                }, t = l.__decorate([Object(_.c)("TeamMembersSelectMenu", {
+                }, t = l.__decorate([Object(f.c)("TeamMembersSelectMenu", {
                     autoReportInteractive: !0
                 })], t)
             }(c.Component),
-            Se = function(e, t, n) {
+            xe = function(e, t, n) {
                 return Object.keys(e).reduce(function(n, a) {
                     return n + t(new Date(a), e[a])
                 }, n)
             },
-            Oe = function(e, t) {
+            Te = function(e, t) {
                 var n = encodeURIComponent(e),
                     a = document.createElement("a");
                 a.href = "data:text/csv;charset=utf-8," + n, a.download = t, document.body.appendChild(a), a.click(), document.body.removeChild(a)
             },
-            je = function() {
-                return Object(M.d)("Time Zone", "TeamsDashboard")
+            Se = function() {
+                return Object(m.d)("Time Zone", "TeamsDashboard")
             },
-            He = function() {
-                return Object(M.d)("Export Data", "TeamsDashboard")
+            Oe = function() {
+                return Object(m.d)("Export Data", "TeamsDashboard")
+            },
+            je = function(e) {
+                return He(e) + " " + Ce(e)
+            },
+            He = function(e) {
+                return e.getUTCFullYear() + "-" + Pe(e.getUTCMonth() + 1) + "-" + Pe(e.getUTCDate())
             },
             Ce = function(e) {
-                return Pe(e) + " " + Ae(e)
+                return Pe(e.getUTCHours()) + ":" + Pe(e.getUTCMinutes()) + ":" + Pe(e.getUTCSeconds())
             },
             Pe = function(e) {
-                return e.getUTCFullYear() + "-" + Fe(e.getUTCMonth() + 1) + "-" + Fe(e.getUTCDate())
-            },
-            Ae = function(e) {
-                return Fe(e.getUTCHours()) + ":" + Fe(e.getUTCMinutes()) + ":" + Fe(e.getUTCSeconds())
-            },
-            Fe = function(e) {
-                return Object(M.e)(e, {
+                return Object(m.e)(e, {
                     minimumIntegerDigits: 2,
                     maximumFractionDigits: 0
                 })
             },
-            Ee = this,
-            Ie = function(e, t, n, a) {
-                return l.__awaiter(Ee, void 0, void 0, function() {
+            Ae = this,
+            Fe = function(e, t, n, a) {
+                return l.__awaiter(Ae, void 0, void 0, function() {
                     var r, i, s;
                     return l.__generator(this, function(o) {
                         switch (o.label) {
                             case 0:
-                                return r = "/v5/teams/" + e + "/revenues?channel_ids=" + t + "&start_date=" + n + "&end_date=" + a + "&fraction=day", [4, Object(X.d)({
+                                return r = "/v5/teams/" + e + "/revenues?channel_ids=" + t + "&start_date=" + n + "&end_date=" + a + "&fraction=day", [4, Object(K.d)({
                                     path: r
                                 })];
                             case 1:
-                                return i = o.sent(), s = We(n, a, i.body && i.body.revenues ? i.body.revenues : {}), [2, s]
+                                return i = o.sent(), s = Ee(n, a, i.body && i.body.revenues ? i.body.revenues : {}), [2, s]
                         }
                     })
                 })
             },
-            We = function(e, t, n) {
-                for (var a = Ne(e, t), r = 0, i = Object.keys(n); r < i.length; r++)
+            Ee = function(e, t, n) {
+                for (var a = We(e, t), r = 0, i = Object.keys(n); r < i.length; r++)
                     for (var s = i[r], o = 0, d = Object.keys(n[s]); o < d.length; o++) {
                         var u = d[o];
-                        if (he.includes(u))
+                        if (le.includes(u))
                             for (var l = 0, c = n[s][u]; l < c.length; l++) {
                                 var h = c[l],
-                                    m = ze(h.timestamp);
+                                    m = Ie(h.timestamp);
                                 a[m] && (a[m][u] += h.cents)
                             }
                     }
                 return a
             },
-            Ne = function(e, t) {
-                for (var n = {}, a = new Date(ze(e)); a < new Date(t); a.setUTCDate(a.getUTCDate() + 1)) n[a.toISOString()] = {
+            We = function(e, t) {
+                for (var n = {}, a = new Date(Ie(e)); a < new Date(t); a.setUTCDate(a.getUTCDate() + 1)) n[a.toISOString()] = {
                     twitch_subscriptions: 0,
                     prime_subscriptions: 0,
                     bits: 0,
@@ -17301,35 +17282,35 @@ webpackJsonp([34], {
                 };
                 return n
             },
-            ze = function(e) {
+            Ie = function(e) {
                 var t = new Date(e);
                 return new Date(Date.UTC(t.getUTCFullYear(), t.getUTCMonth(), t.getUTCDate())).toISOString()
             },
-            Re = function() {
-                var e = Object(M.d)("Date", "TeamsDashboard") + "," + je(),
-                    t = "," + Object(M.d)("Total", "TeamsDashboard") + "\n";
-                return he.reduce(function(e, t) {
-                    return e + "," + me(t)
+            Ne = function() {
+                var e = Object(m.d)("Date", "TeamsDashboard") + "," + Se(),
+                    t = "," + Object(m.d)("Total", "TeamsDashboard") + "\n";
+                return le.reduce(function(e, t) {
+                    return e + "," + ce(t)
                 }, e) + t
             },
-            Be = function(e, t) {
-                var n = Pe(e) + ",UTC",
-                    a = he.reduce(function(e, n) {
+            ze = function(e, t) {
+                var n = He(e) + ",UTC",
+                    a = le.reduce(function(e, n) {
                         return e + Math.round(t[n])
                     }, 0),
-                    r = "," + Je(a) + "\n";
-                return he.reduce(function(e, n) {
-                    return e + "," + Je(t[n])
+                    r = "," + Re(a) + "\n";
+                return le.reduce(function(e, n) {
+                    return e + "," + Re(t[n])
                 }, n) + r
             },
-            Je = function(e) {
-                return Object(M.e)(e / 100, {
+            Re = function(e) {
+                return Object(m.e)(e / 100, {
                     useGrouping: !1,
                     minimumFractionDigits: 2,
                     maximumFractionDigits: 2
                 })
             },
-            Ve = function(e) {
+            Be = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.toggleMemberChecked = function(e) {
@@ -17343,7 +17324,7 @@ webpackJsonp([34], {
                         })
                     }, n.toggleGroupChecked = function() {
                         var e = !n.state.groupChecked,
-                            t = P(n.state.members, e);
+                            t = j(n.state.members, e);
                         n.setState({
                             groupChecked: e,
                             members: t
@@ -17356,7 +17337,7 @@ webpackJsonp([34], {
                                     case 0:
                                         return this.setState({
                                             isLoadingRevenues: !0
-                                        }), [4, Ie(this.props.teamName, A(this.state.members), e.toISOString(), t.toISOString())];
+                                        }), [4, Fe(this.props.teamName, H(this.state.members), e.toISOString(), t.toISOString())];
                                     case 1:
                                         return n = a.sent(), this.setState({
                                             startTime: e,
@@ -17375,7 +17356,7 @@ webpackJsonp([34], {
                                     case 0:
                                         return this.setState({
                                             isLoadingRevenues: !0
-                                        }), [4, Ie(this.props.teamName, A(this.state.members), this.state.startTime.toISOString(), this.state.endTime.toISOString())];
+                                        }), [4, Fe(this.props.teamName, H(this.state.members), this.state.startTime.toISOString(), this.state.endTime.toISOString())];
                                     case 1:
                                         return e = t.sent(), this.setState({
                                             revenues: e,
@@ -17385,12 +17366,12 @@ webpackJsonp([34], {
                             })
                         })
                     }, n.handleCSVClick = function() {
-                        var e = Se(n.state.revenues, Be, Re());
-                        Oe(e, v(r.Revenue) + " - " + ie(n.state.startTime) + ".csv")
+                        var e = xe(n.state.revenues, ze, Ne());
+                        Te(e, P(v.Revenue) + " - " + ae(n.state.startTime) + ".csv")
                     }, n.state = {
                         isLoadingMembers: !0,
                         members: [],
-                        startTime: oe(n.props.currentDate),
+                        startTime: ie(n.props.currentDate),
                         endTime: n.props.currentDate,
                         groupChecked: !0,
                         isLoadingRevenues: !0,
@@ -17403,18 +17384,18 @@ webpackJsonp([34], {
                         return l.__generator(this, function(n) {
                             switch (n.label) {
                                 case 0:
-                                    return [4, te(this.props.teamName, T.RevenueRevealed)];
+                                    return [4, $(this.props.teamName, k.RevenueRevealed)];
                                 case 1:
                                     return e = n.sent(), this.setState({
                                         isLoadingMembers: !1,
-                                        members: P(e, !0)
+                                        members: j(e, !0)
                                     }, function() {
                                         return l.__awaiter(t, void 0, void 0, function() {
                                             var e;
                                             return l.__generator(this, function(t) {
                                                 switch (t.label) {
                                                     case 0:
-                                                        return [4, Ie(this.props.teamName, A(this.state.members), this.state.startTime.toISOString(), this.state.endTime.toISOString())];
+                                                        return [4, Fe(this.props.teamName, H(this.state.members), this.state.startTime.toISOString(), this.state.endTime.toISOString())];
                                                     case 1:
                                                         return e = t.sent(), this.setState({
                                                             isLoadingRevenues: !1,
@@ -17428,8 +17409,8 @@ webpackJsonp([34], {
                         })
                     })
                 }, t.prototype.render = function() {
-                    return c.createElement(g, {
-                        title: v(r.Revenue),
+                    return c.createElement(D, {
+                        title: P(v.Revenue),
                         titleSelector: "revenue-page-title"
                     }, c.createElement(p._18, {
                         border: !0,
@@ -17446,28 +17427,28 @@ webpackJsonp([34], {
                         margin: {
                             right: 1
                         }
-                    }, c.createElement(Te, {
+                    }, c.createElement(we, {
                         isLoading: this.state.isLoadingMembers,
                         members: this.state.members,
                         groupChecked: this.state.groupChecked,
                         onMemberSelectClose: this.handleMemberSelectionChange,
                         toggleMemberChecked: this.toggleMemberChecked,
                         toggleGroupChecked: this.toggleGroupChecked
-                    })), c.createElement(ce, {
+                    })), c.createElement(ue, {
                         earliestDate: this.props.earliestDataDate,
                         currentDate: this.props.currentDate,
                         onMonthSelection: this.handleTimeRangeChange
                     })), c.createElement(p.U, null, c.createElement(p._22, {
                         color: p.F.Alt2
-                    }, Object(M.d)("* All revenue values are estimated (in $USD)", "TeamsDashboard")))), c.createElement(p.U, {
+                    }, Object(m.d)("* All revenue values are estimated (in $USD)", "TeamsDashboard")))), c.createElement(p.U, {
                         display: p.H.Flex,
                         flexDirection: p.J.Row,
                         justifyContent: p.T.Between,
                         margin: 2
-                    }, c.createElement(we, {
+                    }, c.createElement(Ye, {
                         isLoading: this.state.isLoadingRevenues,
                         data: this.state.revenues,
-                        totalTitle: Object(M.d)("Total Revenue", "TeamsDashboard"),
+                        totalTitle: Object(m.d)("Total Revenue", "TeamsDashboard"),
                         summaryItemTitleSuffix: "*"
                     })), c.createElement(p._18, {
                         padding: 2,
@@ -17475,28 +17456,28 @@ webpackJsonp([34], {
                         borderTop: !0,
                         display: p.H.Flex,
                         justifyContent: p.T.End
-                    }, c.createElement(Le, {
+                    }, c.createElement(ve, {
                         data: this.state.revenues
                     }), c.createElement(p.u, {
                         "data-test-selector": "revenue-csv-button",
                         icon: p._10.Download,
                         onClick: this.handleCSVClick
-                    }, He()))))
-                }, t = l.__decorate([Object(_.c)("RevenuePage", {
+                    }, Oe()))))
+                }, t = l.__decorate([Object(f.c)("RevenuePage", {
                     autoReportInteractive: !0,
-                    destination: m.a.TeamsDashboardRevenue
+                    destination: _.a.TeamsDashboardRevenue
                 })], t)
             }(c.Component),
-            Ue = n("HW6M"),
-            Ge = {
+            Je = n("HW6M"),
+            Ve = {
                 "side-nav-bar__option": !0,
                 "side-nav-bar__option--active": !0
             },
-            qe = Object(_.c)("Navbar", {
+            Ue = Object(f.c)("Navbar", {
                 autoReportInteractive: !0
             })(function(e) {
                 var t = function(t) {
-                    return Ue(e.page === t ? Ge : "side-nav-bar__option")
+                    return Je(e.page === t ? Ve : "side-nav-bar__option")
                 };
                 return c.createElement(p._18, {
                     display: p.H.Block,
@@ -17514,82 +17495,83 @@ webpackJsonp([34], {
                 }, c.createElement(p._22, {
                     type: p._27.H4,
                     fontSize: p.L.Size5
-                }, Object(M.d)("Team Dashboard", "TeamsDashboard"))), c.createElement("ul", null, c.createElement("li", null, c.createElement(p.S, {
-                    linkTo: "/teams/" + e.teamName + "/dashboard/" + r.BasicInfo
-                }, c.createElement(p.U, {
-                    padding: {
-                        x: 2,
-                        y: .5
-                    },
-                    className: t(r.BasicInfo)
-                }, v(r.BasicInfo)))), c.createElement("li", null, c.createElement(p.S, {
-                    linkTo: "/teams/" + e.teamName + "/dashboard/" + r.Customize
-                }, c.createElement(p.U, {
-                    padding: {
-                        x: 2,
-                        y: .5
-                    },
-                    className: t(r.Customize)
-                }, v(r.Customize)))), c.createElement("li", null, c.createElement(p.S, {
-                    linkTo: "/teams/" + e.teamName + "/dashboard/" + r.Revenue,
+                }, Object(m.d)("Team Dashboard", "TeamsDashboard"))), c.createElement("ul", null, c.createElement("li", null, c.createElement(p.S, {
+                    linkTo: "/teams/" + e.teamName + "/dashboard/" + v.Revenue,
                     "data-test-selector": "side-nav-revenue"
                 }, c.createElement(p.U, {
                     padding: {
                         x: 2,
                         y: .5
                     },
-                    className: t(r.Revenue)
-                }, v(r.Revenue)))), c.createElement("li", null, c.createElement(p.S, {
-                    linkTo: "/teams/" + e.teamName + "/dashboard/" + r.Stats,
+                    className: t(v.Revenue)
+                }, P(v.Revenue)))), c.createElement("li", null, c.createElement(p.S, {
+                    linkTo: "/teams/" + e.teamName + "/dashboard/" + v.Stats,
                     "data-test-selector": "side-nav-stats"
                 }, c.createElement(p.U, {
                     padding: {
                         x: 2,
                         y: .5
                     },
-                    className: t(r.Stats)
-                }, v(r.Stats)))), c.createElement("li", null, c.createElement(p.S, {
-                    linkTo: "/teams/" + e.teamName + "/dashboard/" + r.Members
+                    className: t(v.Stats)
+                }, P(v.Stats)))), c.createElement("li", null, c.createElement(p.S, {
+                    linkTo: "/teams/" + e.teamName + "/dashboard/" + v.Members
                 }, c.createElement(p.U, {
                     padding: {
                         x: 2,
                         y: .5
                     },
-                    className: t(r.Members)
-                }, v(r.Members)))), c.createElement("li", null, c.createElement(p.S, {
-                    linkTo: "/teams/" + e.teamName + "/dashboard/" + r.FeaturedChannels
+                    className: t(v.Members)
+                }, P(v.Members)))), c.createElement("li", null, c.createElement(p.S, {
+                    linkTo: "/teams/" + e.teamName + "/dashboard/" + v.FeaturedChannels
                 }, c.createElement(p.U, {
                     padding: {
                         x: 2,
                         y: .5
                     },
-                    className: t(r.FeaturedChannels)
-                }, v(r.FeaturedChannels))))))
+                    className: t(v.FeaturedChannels)
+                }, P(v.FeaturedChannels)))), c.createElement("li", null, c.createElement(p.S, {
+                    linkTo: "/teams/" + e.teamName + "/dashboard/" + v.Settings
+                }, c.createElement(p.U, {
+                    padding: {
+                        x: 2,
+                        y: .5
+                    },
+                    className: t(v.Settings)
+                }, P(v.Settings))))))
+            }),
+            Ge = Object(f.c)("SettingsPage", {
+                destination: _.a.TeamsDashboardSettings,
+                autoReportInteractive: !0
+            })(function() {
+                return c.createElement(D, {
+                    title: P(v.Settings),
+                    titleSelector: "settings-page-title"
+                })
             });
         ! function(e) {
             e.AverageViewers = "AverageViewers", e.NewFollowers = "NewFollowers", e.AverageChatters = "AverageChatters", e.ChatMessages = "ChatMessages", e.AdBreakDuration = "AdBreakDuration", e.AdBreaks = "AdBreaks"
-        }(De || (De = {}));
-        var Ke, Ze, Xe = (Ke = {}, Ke[De.AverageViewers] = "concurrent_viewers", Ke[De.NewFollowers] = "follows", Ke[De.AverageChatters] = "chat_activities", Ke[De.ChatMessages] = "chat_activities", Ke[De.AdBreakDuration] = "commercials", Ke),
-            Qe = (Ze = {}, Ze[De.AverageViewers] = "line", Ze[De.NewFollowers] = "line", Ze[De.AverageChatters] = "bar", Ze[De.ChatMessages] = "bar", Ze[De.AdBreakDuration] = "bar", Ze),
-            $e = function(e) {
+        }(be || (be = {}));
+        var qe, Ke, Ze = (qe = {}, qe[be.AverageViewers] = "concurrent_viewers", qe[be.NewFollowers] = "follows", qe[be.AverageChatters] = "chat_activities", qe[be.ChatMessages] = "chat_activities", qe[be.AdBreakDuration] = "commercials", qe),
+            Xe = (Ke = {}, Ke[be.AverageViewers] = "line", Ke[be.NewFollowers] = "line", Ke[be.AverageChatters] = "bar", Ke[be.ChatMessages] = "bar", Ke[be.AdBreakDuration] = "bar", Ke),
+            Qe = function(e) {
                 switch (e) {
-                    case De.AverageViewers:
-                        return Object(M.d)("Avg. Viewers", "TeamsDashboard");
-                    case De.NewFollowers:
-                        return Object(M.d)("New Followers", "TeamsDashboard");
-                    case De.AverageChatters:
-                        return Object(M.d)("Avg. Chatters", "TeamsDashboard");
-                    case De.ChatMessages:
-                        return Object(M.d)("Chat Messages", "TeamsDashboard");
-                    case De.AdBreakDuration:
-                        return Object(M.d)("Ad Break Duration", "TeamsDashboard");
-                    case De.AdBreaks:
-                        return Object(M.d)("Ad Breaks", "TeamsDashboard");
+                    case be.AverageViewers:
+                        return Object(m.d)("Avg. Viewers", "TeamsDashboard");
+                    case be.NewFollowers:
+                        return Object(m.d)("New Followers", "TeamsDashboard");
+                    case be.AverageChatters:
+                        return Object(m.d)("Avg. Chatters", "TeamsDashboard");
+                    case be.ChatMessages:
+                        return Object(m.d)("Chat Messages", "TeamsDashboard");
+                    case be.AdBreakDuration:
+                        return Object(m.d)("Ad Break Duration", "TeamsDashboard");
+                    case be.AdBreaks:
+                        return Object(m.d)("Ad Breaks", "TeamsDashboard");
                     default:
                         return ""
                 }
             },
-            et = function(e) {
+            $e = function(e) {
                 return c.createElement(p.U, {
                     className: "metric-select-menu"
                 }, c.createElement(p._15, {
@@ -17600,24 +17582,24 @@ webpackJsonp([34], {
                 }, c.createElement("optgroup", {
                     label: "Ads"
                 }, c.createElement("option", {
-                    value: De.AdBreakDuration
-                }, $e(De.AdBreakDuration))), c.createElement("optgroup", {
+                    value: be.AdBreakDuration
+                }, Qe(be.AdBreakDuration))), c.createElement("optgroup", {
                     label: "Audience"
                 }, c.createElement("option", {
-                    value: De.AverageViewers
-                }, $e(De.AverageViewers)), c.createElement("option", {
-                    value: De.NewFollowers
-                }, $e(De.NewFollowers))), c.createElement("optgroup", {
+                    value: be.AverageViewers
+                }, Qe(be.AverageViewers)), c.createElement("option", {
+                    value: be.NewFollowers
+                }, Qe(be.NewFollowers))), c.createElement("optgroup", {
                     label: "Chat"
                 }, c.createElement("option", {
-                    value: De.AverageChatters
-                }, $e(De.AverageChatters)), c.createElement("option", {
-                    value: De.ChatMessages
-                }, $e(De.ChatMessages)))))
+                    value: be.AverageChatters
+                }, Qe(be.AverageChatters)), c.createElement("option", {
+                    value: be.ChatMessages
+                }, Qe(be.ChatMessages)))))
             },
-            tt = 800,
-            nt = 380,
-            at = function(e) {
+            et = 800,
+            tt = 380,
+            nt = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -17636,7 +17618,7 @@ webpackJsonp([34], {
                     })
                 }, t.prototype.rebuildChart = function(e) {
                     var t = this;
-                    this.myChart && this.myChart.destroy(), this.setCanvasResolution(), this.myChart = new _e(this.canvas, {
+                    this.myChart && this.myChart.destroy(), this.setCanvasResolution(), this.myChart = new he(this.canvas, {
                         type: e.chartData.chartType,
                         data: {
                             datasets: [{
@@ -17668,17 +17650,17 @@ webpackJsonp([34], {
                                             a = e[0];
                                         return t && t.labels && (n = t.labels[a.index || 0]),
                                             function(e) {
-                                                var t = le(e);
-                                                return Object(M.c)(e, {
+                                                var t = de(e);
+                                                return Object(m.c)(e, {
                                                     weekday: "short",
                                                     year: "numeric",
                                                     month: "short",
                                                     day: "numeric",
                                                     timeZone: "UTC"
-                                                }) + " | " + Object(M.c)(e, {
+                                                }) + " | " + Object(m.c)(e, {
                                                     hour: "numeric",
                                                     timeZone: "UTC"
-                                                }) + " - " + Object(M.c)(t, {
+                                                }) + " - " + Object(m.c)(t, {
                                                     hour: "numeric",
                                                     timeZone: "UTC"
                                                 }) + " (4h)"
@@ -17712,7 +17694,7 @@ webpackJsonp([34], {
                                         callback: function(e) {
                                             var t = new Date(e);
                                             return 0 === t.getUTCHours() ? function(e) {
-                                                return Object(M.c)(e, {
+                                                return Object(m.c)(e, {
                                                     weekday: "long",
                                                     month: "long",
                                                     day: "numeric",
@@ -17741,17 +17723,17 @@ webpackJsonp([34], {
                 }, t.prototype.updateChartData = function(e) {
                     this.myChart.data.datasets && (this.myChart.data.labels = e.timeLabels, this.myChart.data.datasets[0].label = e.chartLabel, this.myChart.data.datasets[0].data = e.data, this.myChart.update())
                 }, t.prototype.setCanvasResolution = function() {
-                    var e = tt,
-                        t = nt,
-                        n = rt(this.canvas.getContext("2d"));
+                    var e = et,
+                        t = tt,
+                        n = at(this.canvas.getContext("2d"));
                     this.canvas.width = e * n, this.canvas.height = t * n, this.canvas.style.width = e + "px", this.canvas.style.height = t + "px", this.canvas.getContext("2d").setTransform(n, 0, 0, n, 0, 0)
-                }, t = l.__decorate([Object(_.c)("StatsCanvas")], t)
+                }, t = l.__decorate([Object(f.c)("StatsCanvas")], t)
             }(c.Component),
-            rt = function(e) {
+            at = function(e) {
                 return (window.devicePixelRatio || 1) / (e.webkitBackingStorePixelRatio || e.mozBackingStorePixelRatio || e.msBackingStorePixelRatio || e.oBackingStorePixelRatio || e.backingStorePixelRatio || 1)
             },
-            it = at,
-            st = function(e) {
+            rt = nt,
+            it = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -17760,8 +17742,8 @@ webpackJsonp([34], {
                         t = e.data,
                         n = e.dataType,
                         a = {
-                            chartType: Qe[n],
-                            chartLabel: $e(n),
+                            chartType: Xe[n],
+                            chartLabel: Qe(n),
                             timeLabels: Object.keys(t).sort(function(e, t) {
                                 return e.localeCompare(t, void 0, {
                                     numeric: !0
@@ -17772,27 +17754,27 @@ webpackJsonp([34], {
                             dataFooters: []
                         };
                     switch (n) {
-                        case De.AverageViewers:
-                        case De.ChatMessages:
-                        case De.AverageChatters:
+                        case be.AverageViewers:
+                        case be.ChatMessages:
+                        case be.AverageChatters:
                             a.data = a.timeLabels.map(function(e) {
                                 return t[e].count
                             }), a.dataLabels = a.data.map(function(e) {
                                 return "" + Math.floor(e)
                             }), a.dataFooters = Array(a.data.length).fill("");
                             break;
-                        case De.AdBreakDuration:
+                        case be.AdBreakDuration:
                             a.data = a.timeLabels.map(function(e) {
                                 return t[e].count
                             }), a.dataLabels = a.data.map(function(e) {
-                                return se(e)
+                                return re(e)
                             }), a.dataFooters = a.timeLabels.map(function(e) {
-                                return Object(M.d)("{adBreakCount, plural, one {# Ad Break} other {# Ad Breaks}}", {
+                                return Object(m.d)("{adBreakCount, plural, one {# Ad Break} other {# Ad Breaks}}", {
                                     adBreakCount: t[e].numberOfDatapoints
                                 }, "TeamsDashboard")
                             });
                             break;
-                        case De.NewFollowers:
+                        case be.NewFollowers:
                             a.data = a.timeLabels.reduce(function(e, n) {
                                 return e.push(t[n].count + (e.length ? e[e.length - 1] : 0)), e
                             }, []), a.dataLabels = a.data.map(function(e) {
@@ -17802,12 +17784,12 @@ webpackJsonp([34], {
                         default:
                             throw new Error("Data type: " + n + " is unrecognized")
                     }
-                    return c.createElement(it, {
+                    return c.createElement(rt, {
                         chartData: a
                     })
                 }, t
             }(c.PureComponent),
-            ot = function(e) {
+            st = function(e) {
                 var t = e.columnName;
                 return c.createElement(p.N, null, c.createElement(p.G, {
                     cols: {
@@ -17825,15 +17807,15 @@ webpackJsonp([34], {
                     }
                 }, c.createElement(p._22, {
                     bold: !0
-                }, Object(M.d)("Views", "TeamsDashboard"))), c.createElement(p.G, {
+                }, Object(m.d)("Views", "TeamsDashboard"))), c.createElement(p.G, {
                     cols: {
                         default: 2
                     }
                 }, c.createElement(p._22, {
                     bold: !0
-                }, Object(M.d)("Percent", "TeamsDashboard"))))
+                }, Object(m.d)("Percent", "TeamsDashboard"))))
             },
-            dt = function(e) {
+            ot = function(e) {
                 var t = e.rowContent;
                 return c.createElement(p.N, null, c.createElement(p.G, {
                     cols: {
@@ -17856,40 +17838,40 @@ webpackJsonp([34], {
                     cols: {
                         default: 2
                     }
-                }, c.createElement(p._22, null, Object(M.e)(t.views))), c.createElement(p.G, {
+                }, c.createElement(p._22, null, Object(m.e)(t.views))), c.createElement(p.G, {
                     cols: {
                         default: 2
                     }
-                }, c.createElement(p._22, null, Object(M.e)(t.percent), "%")))
+                }, c.createElement(p._22, null, Object(m.e)(t.percent), "%")))
             },
-            ut = function(e, t, n, a) {
-                return 0 === e.length ? ct() : a && 1 === e.length ? ht(e[0].name) : mt(e, n, t)
+            dt = function(e, t, n, a) {
+                return 0 === e.length ? lt() : a && 1 === e.length ? ct(e[0].name) : ht(e, n, t)
             },
-            lt = function(e, t) {
-                return t > 10 ? Object(M.d)("{tableName} (Top 10)", {
+            ut = function(e, t) {
+                return t > 10 ? Object(m.d)("{tableName} (Top 10)", {
                     tableName: e
-                }, "TeamsDashboard") : t > 1 ? Object(M.d)("{tableName} (All)", {
+                }, "TeamsDashboard") : t > 1 ? Object(m.d)("{tableName} (All)", {
                     tableName: e
-                }, "TeamsDashboard") : Object(M.d)("{tableName}", {
+                }, "TeamsDashboard") : Object(m.d)("{tableName}", {
                     tableName: e
                 }, "TeamsDashboard")
             },
-            ct = function() {
+            lt = function() {
                 return c.createElement(p._22, {
                     color: p.F.Alt2
-                }, Object(M.d)("Not enough data for us to display", "TeamsDashboard"))
+                }, Object(m.d)("Not enough data for us to display", "TeamsDashboard"))
             },
-            ht = function(e) {
-                return c.createElement(p._22, null, Object(M.d)("The top viewer location was {name}", {
+            ct = function(e) {
+                return c.createElement(p._22, null, Object(m.d)("The top viewer location was {name}", {
                     name: e
                 }, "TeamsDashboard"))
             },
-            mt = function(e, t, n) {
+            ht = function(e, t, n) {
                 var a = e.slice(0, 10).map(function(e, t) {
                     var a = e.name,
                         r = e.views,
                         i = Math.round(r / n * 100);
-                    return c.createElement(dt, {
+                    return c.createElement(ot, {
                         key: t,
                         rowContent: {
                             name: a,
@@ -17898,11 +17880,11 @@ webpackJsonp([34], {
                         }
                     })
                 });
-                return c.createElement(p.U, null, c.createElement(ot, {
+                return c.createElement(p.U, null, c.createElement(st, {
                     columnName: t
                 }), a)
             },
-            _t = function(e) {
+            mt = function(e) {
                 var t, n = e.rowData.reduce(function(e, t) {
                         return e + t.views
                     }, 0),
@@ -17911,9 +17893,9 @@ webpackJsonp([34], {
                     });
                 t = e.isLoading ? c.createElement(p._2, {
                     width: 180
-                }) : lt(e.tableName, a.length);
+                }) : ut(e.tableName, a.length);
                 var r;
-                return r = e.isLoading ? c.createElement(p.U, null, c.createElement(p._22, null, c.createElement(p._2, null)), c.createElement(p._22, null, c.createElement(p._2, null))) : ut(a, n, e.columnName, e.isGeo), c.createElement(p.U, {
+                return r = e.isLoading ? c.createElement(p.U, null, c.createElement(p._22, null, c.createElement(p._2, null)), c.createElement(p._22, null, c.createElement(p._2, null))) : dt(a, n, e.columnName, e.isGeo), c.createElement(p.U, {
                     display: p.H.Flex,
                     flexDirection: p.J.Column,
                     padding: 2,
@@ -17928,19 +17910,19 @@ webpackJsonp([34], {
                     type: p._27.H4
                 }, t)), r)
             },
-            ft = Object(M.d)("Referrer", "TeamsDashboard"),
-            pt = function(e) {
-                var t = Object(M.d)("Views by Referrer", "TeamsDashboard"),
+            _t = Object(m.d)("Referrer", "TeamsDashboard"),
+            ft = function(e) {
+                var t = Object(m.d)("Views by Referrer", "TeamsDashboard"),
                     n = "";
-                return e.internalReferral && e.internalReferral.length && (t = Object(M.d)("Views from Outside Twitch", "TeamsDashboard"), n = c.createElement(p._18, {
+                return e.internalReferral && e.internalReferral.length && (t = Object(m.d)("Views from Outside Twitch", "TeamsDashboard"), n = c.createElement(p._18, {
                     display: p.H.Flex,
                     flexGrow: 1,
                     borderBottom: !0,
                     borderLeft: !0
-                }, c.createElement(_t, {
+                }, c.createElement(mt, {
                     isLoading: e.isLoading,
-                    tableName: Object(M.d)("Views from Twitch", "TeamsDashboard"),
-                    columnName: ft,
+                    tableName: Object(m.d)("Views from Twitch", "TeamsDashboard"),
+                    columnName: _t,
                     rowData: e.internalReferral
                 }))), c.createElement(p._18, {
                     className: "all-tables-wrapper",
@@ -17956,19 +17938,19 @@ webpackJsonp([34], {
                     display: p.H.Flex,
                     flexGrow: 1,
                     borderBottom: !0
-                }, c.createElement(_t, {
+                }, c.createElement(mt, {
                     isLoading: e.isLoading,
-                    tableName: Object(M.d)("Views by Location", "TeamsDashboard"),
-                    columnName: Object(M.d)("Location", "TeamsDashboard"),
+                    tableName: Object(m.d)("Views by Location", "TeamsDashboard"),
+                    columnName: Object(m.d)("Location", "TeamsDashboard"),
                     rowData: e.geographical,
                     isGeo: !0
                 })), c.createElement(p._18, {
                     display: p.H.Flex,
                     flexGrow: 1
-                }, c.createElement(_t, {
+                }, c.createElement(mt, {
                     isLoading: e.isLoading,
-                    tableName: Object(M.d)("Views by Platform", "TeamsDashboard"),
-                    columnName: Object(M.d)("Platform", "TeamsDashboard"),
+                    tableName: Object(m.d)("Views by Platform", "TeamsDashboard"),
+                    columnName: Object(m.d)("Platform", "TeamsDashboard"),
                     rowData: e.platform
                 }))), c.createElement(p.U, {
                     display: p.H.Flex,
@@ -17979,36 +17961,36 @@ webpackJsonp([34], {
                     display: p.H.Flex,
                     flexGrow: 1,
                     borderLeft: !0
-                }, c.createElement(_t, {
+                }, c.createElement(mt, {
                     isLoading: e.isLoading,
                     tableName: t,
-                    columnName: ft,
+                    columnName: _t,
                     rowData: e.externalReferral
                 }))))
             },
-            gt = this,
-            yt = {
+            pt = this,
+            gt = {
                 geographical: [],
                 platform: [],
                 internalReferral: [],
                 externalReferral: []
             },
-            Mt = function(e, t, n, a) {
-                return l.__awaiter(gt, void 0, void 0, function() {
+            yt = function(e, t, n, a) {
+                return l.__awaiter(pt, void 0, void 0, function() {
                     var r, i, s, o;
                     return l.__generator(this, function(d) {
                         switch (d.label) {
                             case 0:
-                                return r = yt, t.length < 1 ? [2, r] : (i = t.join(","), s = "/v5/teams/" + e + "/stats/video_play_demographics?channel_ids=" + i + "&start_time=" + n + "&end_time=" + a, [4, Object(X.d)({
+                                return r = gt, t.length < 1 ? [2, r] : (i = t.join(","), s = "/v5/teams/" + e + "/stats/video_play_demographics?channel_ids=" + i + "&start_time=" + n + "&end_time=" + a, [4, Object(K.d)({
                                     path: s
                                 })]);
                             case 1:
-                                return o = d.sent(), [2, o.body ? vt(o.body) : r]
+                                return o = d.sent(), [2, o.body ? Mt(o.body) : r]
                         }
                     })
                 })
             },
-            vt = function(e) {
+            Mt = function(e) {
                 for (var t = e.video_play_demographics, n = {
                         geographical: [],
                         platform: [],
@@ -18024,125 +18006,125 @@ webpackJsonp([34], {
                 for (var o = 0, d = Object.keys(t.platform); o < d.length; o++) {
                     s = d[o];
                     n.platform.push({
-                        name: Lt(s),
+                        name: bt(s),
                         views: t.platform[s]
                     })
                 }
                 for (var u = 0, l = Object.keys(t.referrer.internal); u < l.length; u++) {
                     s = l[u];
                     n.internalReferral.push({
-                        name: Dt(s),
+                        name: Lt(s),
                         views: t.referrer.internal[s]
                     })
                 }
                 for (var c = 0, h = Object.keys(t.referrer.external); c < h.length; c++) {
                     s = h[c];
                     n.externalReferral.push({
-                        name: Yt(s),
+                        name: Dt(s),
                         views: t.referrer.external[s]
                     })
                 }
                 return n
             },
-            bt = Object(M.d)("Other", "TeamsDashboard"),
-            Lt = function(e) {
+            vt = Object(m.d)("Other", "TeamsDashboard"),
+            bt = function(e) {
                 return {
-                    unknown: Object(M.d)("Unknown", "TeamsDashboard"),
-                    tv: Object(M.d)("TV", "TeamsDashboard"),
-                    ios: Object(M.d)("iOS App", "TeamsDashboard"),
-                    web: Object(M.d)("Web", "TeamsDashboard"),
-                    android: Object(M.d)("Android App", "TeamsDashboard"),
-                    mobile_web: Object(M.d)("Mobile Web", "TeamsDashboard"),
-                    mobile_aggregated: Object(M.d)("Mobile", "TeamsDashboard"),
-                    console: Object(M.d)("Console", "TeamsDashboard"),
-                    other: bt
+                    unknown: Object(m.d)("Unknown", "TeamsDashboard"),
+                    tv: Object(m.d)("TV", "TeamsDashboard"),
+                    ios: Object(m.d)("iOS App", "TeamsDashboard"),
+                    web: Object(m.d)("Web", "TeamsDashboard"),
+                    android: Object(m.d)("Android App", "TeamsDashboard"),
+                    mobile_web: Object(m.d)("Mobile Web", "TeamsDashboard"),
+                    mobile_aggregated: Object(m.d)("Mobile", "TeamsDashboard"),
+                    console: Object(m.d)("Console", "TeamsDashboard"),
+                    other: vt
                 }[e] || e
             },
-            Dt = function(e) {
+            Lt = function(e) {
                 return {
-                    other: bt,
-                    front_page_featured: Object(M.d)("Featured Section - Front Page", "TeamsDashboard"),
-                    creative_page_featured: Object(M.d)("Featured Section - Creative Page", "TeamsDashboard"),
-                    hosted: Object(M.d)("Hosts", "TeamsDashboard"),
-                    email_live_notification: Object(M.d)("Notifications - Email", "TeamsDashboard"),
-                    onsite_notification: Object(M.d)("Notifications - Onsite", "TeamsDashboard"),
-                    followed_channel: Object(M.d)("Followers", "TeamsDashboard"),
-                    directory_browse: Object(M.d)("Browse Page", "TeamsDashboard"),
-                    search: Object(M.d)("Searches", "TeamsDashboard"),
-                    clips_live: Object(M.d)("Clips", "TeamsDashboard"),
-                    friend_presence: Object(M.d)("Friends", "TeamsDashboard"),
-                    top_nav_bar: Object(M.d)("Your Channel Page", "TeamsDashboard"),
-                    recommended_channel: Object(M.d)("Recommendations", "TeamsDashboard"),
-                    other_channel_page: Object(M.d)("Other Channel Page", "TeamsDashboard")
-                }[e] || Object(M.d)("{name}'s Channel Page", {
+                    other: vt,
+                    front_page_featured: Object(m.d)("Featured Section - Front Page", "TeamsDashboard"),
+                    creative_page_featured: Object(m.d)("Featured Section - Creative Page", "TeamsDashboard"),
+                    hosted: Object(m.d)("Hosts", "TeamsDashboard"),
+                    email_live_notification: Object(m.d)("Notifications - Email", "TeamsDashboard"),
+                    onsite_notification: Object(m.d)("Notifications - Onsite", "TeamsDashboard"),
+                    followed_channel: Object(m.d)("Followers", "TeamsDashboard"),
+                    directory_browse: Object(m.d)("Browse Page", "TeamsDashboard"),
+                    search: Object(m.d)("Searches", "TeamsDashboard"),
+                    clips_live: Object(m.d)("Clips", "TeamsDashboard"),
+                    friend_presence: Object(m.d)("Friends", "TeamsDashboard"),
+                    top_nav_bar: Object(m.d)("Your Channel Page", "TeamsDashboard"),
+                    recommended_channel: Object(m.d)("Recommendations", "TeamsDashboard"),
+                    other_channel_page: Object(m.d)("Other Channel Page", "TeamsDashboard")
+                }[e] || Object(m.d)("{name}'s Channel Page", {
                     name: e
                 }, "TeamsDashboard")
             },
-            Yt = function(e) {
+            Dt = function(e) {
                 return (t = {
-                    facebook: Object(M.d)("Facebook", "TeamsDashboard"),
-                    google: Object(M.d)("Google", "TeamsDashboard"),
-                    reddit: Object(M.d)("Reddit", "TeamsDashboard"),
-                    youtube: Object(M.d)("Youtube", "TeamsDashboard")
-                }, t["t.co"] = Object(M.d)("Twitter", "TeamsDashboard"), t.unknown = Object(M.d)("Direct/Unknown", "TeamsDashboard"), t.twitch_aggregate = Object(M.d)("Twitch", "TeamsDashboard"), t.external_aggregate = Object(M.d)("External", "TeamsDashboard"), t)[e] || e;
+                    facebook: Object(m.d)("Facebook", "TeamsDashboard"),
+                    google: Object(m.d)("Google", "TeamsDashboard"),
+                    reddit: Object(m.d)("Reddit", "TeamsDashboard"),
+                    youtube: Object(m.d)("Youtube", "TeamsDashboard")
+                }, t["t.co"] = Object(m.d)("Twitter", "TeamsDashboard"), t.unknown = Object(m.d)("Direct/Unknown", "TeamsDashboard"), t.twitch_aggregate = Object(m.d)("Twitch", "TeamsDashboard"), t.external_aggregate = Object(m.d)("External", "TeamsDashboard"), t)[e] || e;
                 var t
             },
-            kt = this,
-            wt = function(e, t, n, a, r) {
-                return l.__awaiter(kt, void 0, void 0, function() {
+            Yt = this,
+            kt = function(e, t, n, a, r) {
+                return l.__awaiter(Yt, void 0, void 0, function() {
                     var i, s, o, d, u, c, h;
                     return l.__generator(this, function(l) {
                         switch (l.label) {
                             case 0:
                                 if (0 === n.length) return [2, Promise.resolve({})];
-                                switch (i = "/v5/teams/" + t + "/stats/" + Xe[e] + "?channel_ids=" + n + "&start_time=" + a + "&end_time=" + r, e) {
-                                    case De.AverageViewers:
+                                switch (i = "/v5/teams/" + t + "/stats/" + Ze[e] + "?channel_ids=" + n + "&start_time=" + a + "&end_time=" + r, e) {
+                                    case be.AverageViewers:
                                         return [3, 1];
-                                    case De.NewFollowers:
+                                    case be.NewFollowers:
                                         return [3, 3];
-                                    case De.AverageChatters:
+                                    case be.AverageChatters:
                                         return [3, 5];
-                                    case De.ChatMessages:
+                                    case be.ChatMessages:
                                         return [3, 7];
-                                    case De.AdBreakDuration:
+                                    case be.AdBreakDuration:
                                         return [3, 9]
                                 }
                                 return [3, 11];
                             case 1:
-                                return o = Ht, [4, xt(i)];
+                                return o = jt, [4, wt(i)];
                             case 2:
-                                return s = o.apply(void 0, [l.sent(), a, r, Pt]), [3, 12];
+                                return s = o.apply(void 0, [l.sent(), a, r, Ct]), [3, 12];
                             case 3:
-                                return d = Ht, [4, St(i)];
+                                return d = jt, [4, Tt(i)];
                             case 4:
-                                return s = d.apply(void 0, [l.sent(), a, r, At]), [3, 12];
+                                return s = d.apply(void 0, [l.sent(), a, r, Pt]), [3, 12];
                             case 5:
-                                return u = Ht, [4, Tt(i)];
+                                return u = jt, [4, xt(i)];
                             case 6:
-                                return s = u.apply(void 0, [l.sent(), a, r, Ft]), [3, 12];
+                                return s = u.apply(void 0, [l.sent(), a, r, At]), [3, 12];
                             case 7:
-                                return c = Ht, [4, Tt(i)];
+                                return c = jt, [4, xt(i)];
                             case 8:
-                                return s = c.apply(void 0, [l.sent(), a, r, Et]), [3, 12];
+                                return s = c.apply(void 0, [l.sent(), a, r, Ft]), [3, 12];
                             case 9:
-                                return h = Ct, [4, Ot(i)];
+                                return h = Ht, [4, St(i)];
                             case 10:
-                                return s = h.apply(void 0, [l.sent(), a, r, It]), [3, 12];
+                                return s = h.apply(void 0, [l.sent(), a, r, Et]), [3, 12];
                             case 11:
                                 throw new Error("fetch type is not in StatsMetric enum");
                             case 12:
-                                return [2, jt(s)]
+                                return [2, Ot(s)]
                         }
                     })
                 })
             },
-            xt = function(e) {
-                return l.__awaiter(kt, void 0, void 0, function() {
+            wt = function(e) {
+                return l.__awaiter(Yt, void 0, void 0, function() {
                     var t;
                     return l.__generator(this, function(n) {
                         switch (n.label) {
                             case 0:
-                                return [4, Object(X.d)({
+                                return [4, Object(K.d)({
                                     path: e
                                 })];
                             case 1:
@@ -18151,13 +18133,13 @@ webpackJsonp([34], {
                     })
                 })
             },
-            Tt = function(e) {
-                return l.__awaiter(kt, void 0, void 0, function() {
+            xt = function(e) {
+                return l.__awaiter(Yt, void 0, void 0, function() {
                     var t;
                     return l.__generator(this, function(n) {
                         switch (n.label) {
                             case 0:
-                                return [4, Object(X.d)({
+                                return [4, Object(K.d)({
                                     path: e
                                 })];
                             case 1:
@@ -18166,13 +18148,13 @@ webpackJsonp([34], {
                     })
                 })
             },
-            St = function(e) {
-                return l.__awaiter(kt, void 0, void 0, function() {
+            Tt = function(e) {
+                return l.__awaiter(Yt, void 0, void 0, function() {
                     var t;
                     return l.__generator(this, function(n) {
                         switch (n.label) {
                             case 0:
-                                return [4, Object(X.d)({
+                                return [4, Object(K.d)({
                                     path: e
                                 })];
                             case 1:
@@ -18181,13 +18163,13 @@ webpackJsonp([34], {
                     })
                 })
             },
-            Ot = function(e) {
-                return l.__awaiter(kt, void 0, void 0, function() {
+            St = function(e) {
+                return l.__awaiter(Yt, void 0, void 0, function() {
                     var t;
                     return l.__generator(this, function(n) {
                         switch (n.label) {
                             case 0:
-                                return [4, Object(X.d)({
+                                return [4, Object(K.d)({
                                     path: e
                                 })];
                             case 1:
@@ -18196,7 +18178,7 @@ webpackJsonp([34], {
                     })
                 })
             },
-            jt = function(e) {
+            Ot = function(e) {
                 for (var t = {}, n = 0, a = Object.keys(e); n < a.length; n++)
                     for (var r = 0, i = e[a[n]]; r < i.length; r++) {
                         var s = i[r],
@@ -18210,6 +18192,13 @@ webpackJsonp([34], {
                     }
                 return t
             },
+            jt = function(e, t, n, a) {
+                for (var r = {}, i = 0, s = Object.keys(e); i < s.length; i++) {
+                    var o = s[i];
+                    r[o] = a(t, n, e[o])
+                }
+                return r
+            },
             Ht = function(e, t, n, a) {
                 for (var r = {}, i = 0, s = Object.keys(e); i < s.length; i++) {
                     var o = s[i];
@@ -18217,21 +18206,14 @@ webpackJsonp([34], {
                 }
                 return r
             },
-            Ct = function(e, t, n, a) {
-                for (var r = {}, i = 0, s = Object.keys(e); i < s.length; i++) {
-                    var o = s[i];
-                    r[o] = a(t, n, e[o])
-                }
-                return r
-            },
-            Pt = function(e, t, n) {
+            Ct = function(e, t, n) {
                 for (var a = Wt(e, t).map(function(e) {
                         return l.__assign({}, e, {
                             sampleSize: 0
                         })
                     }), r = function(e, t) {
                         var n = a.find(function(t) {
-                            return t.timestamp === Nt(e)
+                            return t.timestamp === It(e)
                         });
                         n && 0 !== t && (n.count += t, n.sampleSize += 1)
                     }, i = 0, s = n; i < s.length; i++) {
@@ -18246,10 +18228,10 @@ webpackJsonp([34], {
                     }
                 })
             },
-            At = function(e, t, n) {
+            Pt = function(e, t, n) {
                 for (var a = Wt(e, t), r = function(e, t) {
                         var n = a.find(function(t) {
-                            return t.timestamp === Nt(e)
+                            return t.timestamp === It(e)
                         });
                         n && (n.count += t)
                     }, i = 0, s = n; i < s.length; i++) {
@@ -18258,14 +18240,14 @@ webpackJsonp([34], {
                 }
                 return a
             },
-            Ft = function(e, t, n) {
+            At = function(e, t, n) {
                 for (var a = Wt(e, t).map(function(e) {
                         return l.__assign({}, e, {
                             sampleSize: 0
                         })
                     }), r = function(e, t) {
                         var n = a.find(function(t) {
-                            return t.timestamp === Nt(e)
+                            return t.timestamp === It(e)
                         });
                         n && 0 !== t && (n.count += t, n.sampleSize += 1)
                     }, i = 0, s = n; i < s.length; i++) {
@@ -18280,10 +18262,10 @@ webpackJsonp([34], {
                     }
                 })
             },
-            Et = function(e, t, n) {
+            Ft = function(e, t, n) {
                 for (var a = Wt(e, t), r = function(e, t) {
                         var n = a.find(function(t) {
-                            return t.timestamp === Nt(e)
+                            return t.timestamp === It(e)
                         });
                         n && (n.count += t)
                     }, i = 0, s = n; i < s.length; i++) {
@@ -18292,10 +18274,10 @@ webpackJsonp([34], {
                 }
                 return a
             },
-            It = function(e, t, n) {
+            Et = function(e, t, n) {
                 for (var a = Wt(e, t), r = function(e, t) {
                         var n = a.find(function(t) {
-                            return t.timestamp === Nt(e)
+                            return t.timestamp === It(e)
                         });
                         n && (n.count += t, n.numberOfDatapoints += 1)
                     }, i = 0, s = n; i < s.length; i++) {
@@ -18305,54 +18287,54 @@ webpackJsonp([34], {
                 return a
             },
             Wt = function(e, t) {
-                for (var n = [], a = new Date(Nt(e)), r = new Date(t); a < r;) n.push({
+                for (var n = [], a = new Date(It(e)), r = new Date(t); a < r;) n.push({
                     timestamp: a.toISOString(),
                     count: 0,
                     numberOfDatapoints: 0
-                }), a = le(a);
+                }), a = de(a);
                 return n
             },
-            Nt = function(e) {
+            It = function(e) {
                 var t = new Date(e),
                     n = t.getUTCHours() - t.getUTCHours() % 4;
                 return new Date(Date.UTC(t.getUTCFullYear(), t.getUTCMonth(), t.getUTCDate(), n)).toISOString()
             },
-            zt = this,
-            Rt = [De.AverageViewers, De.NewFollowers, De.AverageChatters, De.ChatMessages, De.AdBreaks, De.AdBreakDuration],
-            Bt = Object.keys(Xe),
-            Jt = function(e, t, n, a) {
-                return l.__awaiter(zt, void 0, void 0, function() {
+            Nt = this,
+            zt = [be.AverageViewers, be.NewFollowers, be.AverageChatters, be.ChatMessages, be.AdBreaks, be.AdBreakDuration],
+            Rt = Object.keys(Ze),
+            Bt = function(e, t, n, a) {
+                return l.__awaiter(Nt, void 0, void 0, function() {
                     var r, i, s, o, d, u, c, h, m, _, f, p;
                     return l.__generator(this, function(l) {
                         switch (l.label) {
                             case 0:
-                                for (r = {}, i = [], s = 0, o = Bt; s < o.length; s++) h = o[s], i.push(wt(h, e, t, n, a));
+                                for (r = {}, i = [], s = 0, o = Rt; s < o.length; s++) h = o[s], i.push(kt(h, e, t, n, a));
                                 return [4, Promise.all(i)];
                             case 1:
-                                for (d = l.sent(), u = 0, c = Bt; u < c.length; u++) {
+                                for (d = l.sent(), u = 0, c = Rt; u < c.length; u++) {
                                     if (h = c[u], m = d.shift() || {}, 0 === Object.keys(m).length) return [2, {}];
-                                    for (_ = 0, f = Object.keys(m); _ < f.length; _++) p = f[_], r[p] || (r[p] = {}), r[p][h] = m[p].count, h === De.AdBreakDuration && (r[p][De.AdBreaks] = m[p].numberOfDatapoints)
+                                    for (_ = 0, f = Object.keys(m); _ < f.length; _++) p = f[_], r[p] || (r[p] = {}), r[p][h] = m[p].count, h === be.AdBreakDuration && (r[p][be.AdBreaks] = m[p].numberOfDatapoints)
                                 }
                                 return [2, r]
                         }
                     })
                 })
             },
-            Vt = function() {
-                var e = Object(M.d)("Start Time", "TeamsDashboard") + "," + Object(M.d)("End Time", "TeamsDashboard") + "," + je();
-                return Rt.reduce(function(e, t) {
-                    return e + "," + $e(t)
+            Jt = function() {
+                var e = Object(m.d)("Start Time", "TeamsDashboard") + "," + Object(m.d)("End Time", "TeamsDashboard") + "," + Se();
+                return zt.reduce(function(e, t) {
+                    return e + "," + Qe(t)
                 }, e) + "\n"
             },
-            Ut = function(e, t) {
-                var n = le(e),
-                    a = Ce(e) + "," + Ce(n) + ",UTC";
-                return Rt.reduce(function(e, n) {
+            Vt = function(e, t) {
+                var n = de(e),
+                    a = je(e) + "," + je(n) + ",UTC";
+                return zt.reduce(function(e, n) {
                     var a = "" + t[n];
-                    return n === De.AdBreakDuration && (a = se(t[n])), e + "," + a
+                    return n === be.AdBreakDuration && (a = re(t[n])), e + "," + a
                 }, a) + "\n"
             },
-            Gt = function(e) {
+            Ut = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.toggleMemberChecked = function(e) {
@@ -18366,7 +18348,7 @@ webpackJsonp([34], {
                         }))
                     }, n.toggleGroupChecked = function() {
                         var e = !n.state.groupChecked,
-                            t = P(n.state.members, e);
+                            t = j(n.state.members, e);
                         n.setState({
                             groupChecked: e,
                             members: t
@@ -18389,17 +18371,17 @@ webpackJsonp([34], {
                             return l.__generator(this, function(u) {
                                 switch (u.label) {
                                     case 0:
-                                        return n = A(this.state.members), r = e.toISOString(), i = t.toISOString(), s = {
+                                        return n = H(this.state.members), r = e.toISOString(), i = t.toISOString(), s = {
                                             isLoadingDemographics: !1,
-                                            demographics: yt,
+                                            demographics: gt,
                                             data: {}
-                                        }, a !== De.AverageViewers ? [3, 2] : (this.setState({
+                                        }, a !== be.AverageViewers ? [3, 2] : (this.setState({
                                             isLoadingDemographics: !0
-                                        }), o = s, [4, Mt(this.props.teamName, n, r, i)]);
+                                        }), o = s, [4, yt(this.props.teamName, n, r, i)]);
                                     case 1:
                                         o.demographics = u.sent(), u.label = 2;
                                     case 2:
-                                        return d = s, [4, wt(a, this.props.teamName, n, r, i)];
+                                        return d = s, [4, kt(a, this.props.teamName, n, r, i)];
                                     case 3:
                                         return d.data = u.sent(), [2, s]
                                 }
@@ -18411,9 +18393,9 @@ webpackJsonp([34], {
                             return l.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
-                                        return [4, Jt(this.props.teamName, A(this.state.members), this.state.startTime.toISOString(), this.state.endTime.toISOString())];
+                                        return [4, Bt(this.props.teamName, H(this.state.members), this.state.startTime.toISOString(), this.state.endTime.toISOString())];
                                     case 1:
-                                        return e = n.sent(), 0 === Object.keys(e).length ? [2] : (t = Se(e, Ut, Vt()), Oe(t, v(r.Stats) + " - " + ie(this.state.startTime) + ".csv"), [2])
+                                        return e = n.sent(), 0 === Object.keys(e).length ? [2] : (t = xe(e, Vt, Jt()), Te(t, P(v.Stats) + " - " + ae(this.state.startTime) + ".csv"), [2])
                                 }
                             })
                         })
@@ -18447,7 +18429,7 @@ webpackJsonp([34], {
                             })
                         })
                     }, n.renderViewershipTables = function() {
-                        return c.createElement(pt, l.__assign({
+                        return c.createElement(ft, l.__assign({
                             isLoading: n.state.isLoadingDemographics
                         }, n.state.demographics))
                     }, n.state = {
@@ -18455,11 +18437,11 @@ webpackJsonp([34], {
                         members: [],
                         data: {},
                         isLoadingDemographics: !0,
-                        demographics: yt,
-                        startTime: oe(n.props.currentDate),
+                        demographics: gt,
+                        startTime: ie(n.props.currentDate),
                         endTime: n.props.currentDate,
                         groupChecked: !0,
-                        metric: De.AverageViewers
+                        metric: be.AverageViewers
                     }, n
                 }
                 return l.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -18468,11 +18450,11 @@ webpackJsonp([34], {
                         return l.__generator(this, function(n) {
                             switch (n.label) {
                                 case 0:
-                                    return [4, te(this.props.teamName, T.StatsRevealed)];
+                                    return [4, $(this.props.teamName, k.StatsRevealed)];
                                 case 1:
                                     return e = n.sent(), this.setState({
                                         isLoadingMembers: !1,
-                                        members: P(e, !0)
+                                        members: j(e, !0)
                                     }, function() {
                                         return l.__awaiter(t, void 0, void 0, function() {
                                             var e;
@@ -18490,8 +18472,8 @@ webpackJsonp([34], {
                         })
                     })
                 }, t.prototype.render = function() {
-                    return c.createElement(g, {
-                        title: v(r.Stats),
+                    return c.createElement(D, {
+                        title: P(v.Stats),
                         titleSelector: "stats-page-title"
                     }, c.createElement(p._18, {
                         border: !0,
@@ -18508,17 +18490,17 @@ webpackJsonp([34], {
                         margin: {
                             right: 1
                         }
-                    }, c.createElement(Te, {
+                    }, c.createElement(we, {
                         isLoading: this.state.isLoadingMembers,
                         members: this.state.members,
                         groupChecked: this.state.groupChecked,
                         onMemberSelectClose: this.handleMemberSelectionChange,
                         toggleMemberChecked: this.toggleMemberChecked,
                         toggleGroupChecked: this.toggleGroupChecked
-                    })), c.createElement(et, {
+                    })), c.createElement($e, {
                         metric: this.state.metric,
                         onChange: this.onMetricChange
-                    }), c.createElement(ce, {
+                    }), c.createElement(ue, {
                         earliestDate: this.props.earliestDataDate,
                         currentDate: this.props.currentDate,
                         onMonthSelection: this.handleTimeRangeChange
@@ -18526,46 +18508,44 @@ webpackJsonp([34], {
                         "data-test-selector": "stats-csv-button",
                         icon: p._10.Download,
                         onClick: this.handleCSVClick
-                    }, He()))), c.createElement(p.U, {
+                    }, Oe()))), c.createElement(p.U, {
                         fullWidth: !0
-                    }, c.createElement(st, {
+                    }, c.createElement(it, {
                         data: this.state.data,
                         dataType: this.state.metric
-                    })), this.state.metric === De.AverageViewers ? this.renderViewershipTables() : ""))
-                }, t = l.__decorate([Object(_.c)("StatsPage", {
+                    })), this.state.metric === be.AverageViewers ? this.renderViewershipTables() : ""))
+                }, t = l.__decorate([Object(f.c)("StatsPage", {
                     autoReportInteractive: !0,
-                    destination: m.a.TeamsDashboardStats
+                    destination: _.a.TeamsDashboardStats
                 })], t)
             }(c.Component),
-            qt = new Date(Date.UTC(2016, 0)),
-            Kt = function(e) {
+            Gt = new Date(Date.UTC(2016, 0)),
+            qt = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
-                    return n.renderStatsPage = function() {
-                        return c.createElement(Gt, {
+                    return n.renderRevenuePage = function() {
+                        return c.createElement(Be, {
                             teamName: n.props.match.params.teamName,
                             earliestDataDate: n.earliestDataDate,
                             currentDate: n.currentDate
                         })
-                    }, n.renderBasicInfoPage = function() {
-                        return c.createElement(b, null)
-                    }, n.renderCustomizePage = function() {
-                        return c.createElement(L, null)
+                    }, n.renderStatsPage = function() {
+                        return c.createElement(Ut, {
+                            teamName: n.props.match.params.teamName,
+                            earliestDataDate: n.earliestDataDate,
+                            currentDate: n.currentDate
+                        })
                     }, n.renderMembersPage = function() {
-                        return c.createElement(re, {
+                        return c.createElement(ne, {
                             teamName: n.props.match.params.teamName
                         })
                     }, n.renderFeaturedChannelsPage = function() {
-                        return c.createElement(Z, {
+                        return c.createElement(q, {
                             teamName: n.props.match.params.teamName
                         })
-                    }, n.renderRevenuePage = function() {
-                        return c.createElement(Ve, {
-                            teamName: n.props.match.params.teamName,
-                            earliestDataDate: n.earliestDataDate,
-                            currentDate: n.currentDate
-                        })
-                    }, n.earliestDataDate = qt, n.currentDate = t.currentDate || new Date, n.currentDate < n.earliestDataDate && (n.currentDate = n.earliestDataDate), n
+                    }, n.renderSettingsPage = function() {
+                        return c.createElement(Ge, null)
+                    }, n.earliestDataDate = Gt, n.currentDate = t.currentDate || new Date, n.currentDate < n.earliestDataDate && (n.currentDate = n.earliestDataDate), n
                 }
                 return l.__extends(t, e), t.prototype.render = function() {
                     return this.props.isLoggedIn ? c.createElement(p.U, {
@@ -18573,37 +18553,34 @@ webpackJsonp([34], {
                         flexWrap: p.K.NoWrap,
                         fullWidth: !0,
                         fullHeight: !0
-                    }, c.createElement(qe, {
+                    }, c.createElement(Ue, {
                         teamName: this.props.match.params.teamName,
                         page: this.props.match.params.pageName
                     }), c.createElement(p.U, {
                         fullWidth: !0
                     }, c.createElement(h.d, null, c.createElement(h.b, {
-                        path: "/teams/" + this.props.match.params.teamName + "/dashboard/" + r.Stats,
+                        path: "/teams/" + this.props.match.params.teamName + "/dashboard/" + v.Revenue,
+                        render: this.renderRevenuePage
+                    }), c.createElement(h.b, {
+                        path: "/teams/" + this.props.match.params.teamName + "/dashboard/" + v.Stats,
                         render: this.renderStatsPage
                     }), c.createElement(h.b, {
-                        path: "/teams/" + this.props.match.params.teamName + "/dashboard/" + r.BasicInfo,
-                        render: this.renderBasicInfoPage
-                    }), c.createElement(h.b, {
-                        path: "/teams/" + this.props.match.params.teamName + "/dashboard/" + r.Customize,
-                        render: this.renderCustomizePage
-                    }), c.createElement(h.b, {
-                        path: "/teams/" + this.props.match.params.teamName + "/dashboard/" + r.Members,
+                        path: "/teams/" + this.props.match.params.teamName + "/dashboard/" + v.Members,
                         render: this.renderMembersPage
                     }), c.createElement(h.b, {
-                        path: "/teams/" + this.props.match.params.teamName + "/dashboard/" + r.FeaturedChannels,
+                        path: "/teams/" + this.props.match.params.teamName + "/dashboard/" + v.FeaturedChannels,
                         render: this.renderFeaturedChannelsPage
                     }), c.createElement(h.b, {
-                        path: "/teams/" + this.props.match.params.teamName + "/dashboard/" + r.Revenue,
-                        render: this.renderRevenuePage
+                        path: "/teams/" + this.props.match.params.teamName + "/dashboard/" + v.Settings,
+                        render: this.renderSettingsPage
                     }), c.createElement(h.a, {
-                        to: "/teams/" + this.props.match.params.teamName + "/dashboard/" + r.Stats
+                        to: "/teams/" + this.props.match.params.teamName + "/dashboard/" + v.Revenue
                     })))) : (this.props.onAnonymousVisit(), c.createElement(p.Y, {
                         fillContent: !0
                     }))
                 }, t
             }(c.Component),
-            Zt = Object(i.a)(function(e) {
+            Kt = Object(i.a)(function(e) {
                 return {
                     isLoggedIn: Object(u.d)(e)
                 }
@@ -18613,9 +18590,9 @@ webpackJsonp([34], {
                         return Object(d.f)(o.a.DashboardPage)
                     }
                 }, e)
-            })(Kt);
+            })(qt);
         n.d(t, "TeamsDashboardRoot", function() {
-            return Zt
+            return Kt
         })
     },
     rBmI: function(e, t, n) {
@@ -20607,12 +20584,11 @@ webpackJsonp([34], {
             StoreMerchPage: "store.merch",
             SubsLandingPage: "subs.landing",
             SubsBroadcasterPage: "subs.broadcaster",
-            TeamsDashboardBasicInfo: "teams.dashboard.basic-info",
-            TeamsDashboardCustomize: "teams.dashboard.customize",
-            TeamsDashboardFeaturedChannels: "teams.dashboard.featured-channels",
-            TeamsDashboardMembers: "teams.dashboard.members",
-            TeamsDashboardStats: "teams.dashboard.stats",
             TeamsDashboardRevenue: "teams.dashboard.revenue",
+            TeamsDashboardStats: "teams.dashboard.stats",
+            TeamsDashboardMembers: "teams.dashboard.members",
+            TeamsDashboardFeaturedChannels: "teams.dashboard.featured-channels",
+            TeamsDashboardSettings: "teams.dashboard.settings",
             VideosPage: "videos",
             VideoWatchPage: "video",
             VideoManagerPage: "videoManager.page",
@@ -21516,4 +21492,4 @@ webpackJsonp([34], {
         }
     }
 });
-//# sourceMappingURL=pages.teams-dashboard-12ee3ca95ab121b2210614091bc4a844.js.map
+//# sourceMappingURL=pages.teams-dashboard-dcf463adc85d7febbb21c45a7e9de59e.js.map

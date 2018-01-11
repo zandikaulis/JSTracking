@@ -2710,27 +2710,32 @@ webpackJsonp([35, 66], {
                                 location: t.props.tracking.location
                             }, t.props.tracking.source))
                         }
-                    }, t.getVideoCards = function(e) {
+                    }, t.getVideoCards = function() {
+                        var e = t.props.videos;
                         if (null === e) {
                             for (var n = [], i = 0; i < f; i++) n.push(l.createElement(m.VideoPreviewCardPlaceholder, {
                                 key: "carousel-placeholder-" + i
                             }));
                             return n
                         }
-                        for (var a = [], r = 0; r < e.length; r++) null !== e && (r < f || t.props.firstPageLoaded) ? a.push(l.createElement(m.VideoPreviewCard, {
-                            collectionID: t.props.collectionID,
-                            onClick: t.onPreviewCardClick,
-                            key: "video-" + r,
-                            tracking: {
-                                content: t.props.tracking.content,
-                                content_index: r,
-                                medium: t.props.tracking.medium
-                            },
-                            overrideImageInteractivity: t.props.overrideCardImageInteractivity,
-                            video: e[r]
-                        })) : a.push(l.createElement(m.VideoPreviewCardPlaceholder, {
-                            key: "carousel-placeholder-" + r
-                        }));
+                        for (var a = [], r = 0; r < e.length; r++)
+                            if (r < f || t.props.firstPageLoaded) {
+                                if (e[r].id === t.props.currentlyWatchingVideoID) continue;
+                                a.push(l.createElement(m.VideoPreviewCard, {
+                                    collectionID: t.props.collectionID,
+                                    onClick: t.onPreviewCardClick,
+                                    key: "video-" + r,
+                                    tracking: {
+                                        content: t.props.tracking.content,
+                                        content_index: r,
+                                        medium: t.props.tracking.medium
+                                    },
+                                    overrideImageInteractivity: t.props.overrideCardImageInteractivity,
+                                    video: e[r]
+                                }))
+                            } else a.push(l.createElement(m.VideoPreviewCardPlaceholder, {
+                                key: "carousel-placeholder-" + r
+                            }));
                         return a
                     }, t.moveCarouselForward = function() {
                         if (!t.isForwardButtonDisabled() && t.props.videos) {
@@ -2819,7 +2824,7 @@ webpackJsonp([35, 66], {
                         childWidth: this.props.videoCardSize || p._34.Large,
                         gutterSize: p._35.Small,
                         "data-js-selector": h
-                    }, this.getVideoCards(this.props.videos))))), l.createElement(p.U, {
+                    }, this.getVideoCards())))), l.createElement(p.U, {
                         className: "video-carousel__nav",
                         display: p.H.Flex,
                         alignItems: p.c.Center,
@@ -3154,6 +3159,7 @@ webpackJsonp([35, 66], {
                         transform: u._26.Uppercase,
                         color: u.F.Alt2
                     }, Object(o.d)("Latest videos", "LatestVideosFromFollowedCarousel"))), a.createElement(c.a, {
+                        currentlyWatchingVideoID: this.props.currentlyWatchingVideoID,
                         overrideCardImageInteractivity: !0,
                         tracking: {
                             content: this.props.tracking.content,
@@ -3161,6 +3167,7 @@ webpackJsonp([35, 66], {
                             medium: this.props.tracking.medium,
                             source: {}
                         },
+                        videoCardSize: u._34.Medium,
                         videos: e
                     })) : null
                 }, t
@@ -3471,8 +3478,8 @@ webpackJsonp([35, 66], {
             }, r.createElement("div", {
                 className: "chat-settings__edit-button",
                 onClick: e.onClickEdit,
-                "data-a-target": V,
-                "data-test-selector": B
+                "data-a-target": B,
+                "data-test-selector": V
             }, Object(w.d)("Edit Appearance", "ChatSettings")))), r.createElement(T._18, {
                 background: T.m.Base,
                 color: T.F.Base,
@@ -3812,8 +3819,8 @@ webpackJsonp([35, 66], {
             }(r.Component),
             R = n("SZoP"),
             j = n("3T7g"),
-            B = "edit-appearance-button",
             V = "edit-appearance-button",
+            B = "edit-appearance-button",
             P = "edit-display-name",
             H = function(e) {
                 function t() {
@@ -5855,7 +5862,6 @@ webpackJsonp([35, 66], {
                         index: e.index
                     }, "Default Avatar")
                 }, o.createElement(C._18, {
-                    border: !0,
                     fullHeight: !0,
                     fullWidth: !0,
                     position: C._3.Relative,
@@ -5874,12 +5880,12 @@ webpackJsonp([35, 66], {
         ! function(e) {
             e.Success = "SUCCESS", e.NonImage = "IS_IMAGE_VALIDATION_FAILED", e.WrongFormat = "IMAGE_FORMAT_VALIDATION_FAILED", e.BadSize = "FILE_SIZE_VALIDATION_FAILED"
         }(j || (j = {}));
-        var B;
+        var V;
         ! function(e) {
             e[e.Success = 0] = "Success", e[e.UnexpectedError = 1] = "UnexpectedError", e[e.BadSizeError = 2] = "BadSizeError", e[e.NonImageError = 3] = "NonImageError", e[e.WrongFormatError = 4] = "WrongFormatError", e[e.TimeoutError = 5] = "TimeoutError", e[e.Uploading = 6] = "Uploading", e[e.ImageNotSelected = 7] = "ImageNotSelected"
-        }(B || (B = {}));
+        }(V || (V = {}));
         n("AL3x");
-        var V = n("nmDn"),
+        var B = n("nmDn"),
             P = [{
                 id: "profile_image_001",
                 uri: "https://static-cdn.jtvnw.net/user-default-pictures/bb97f7e6-f11a-4194-9708-52bf5a5125e8-profile_image-300x300.jpg"
@@ -5925,7 +5931,7 @@ webpackJsonp([35, 66], {
                                 }(n = e[0]),
                                 a = (n.size / 1024 / 1024).toFixed(4);
                             parseInt(a, 10) > 10 ? t.setState({
-                                statusMessage: B.BadSizeError
+                                statusMessage: V.BadSizeError
                             }) : (t.setState({
                                 selectedImageIndex: void 0,
                                 imagePreviewURL: "",
@@ -5957,7 +5963,7 @@ webpackJsonp([35, 66], {
                                 })
                             }))
                         } else t.setState({
-                            statusMessage: B.ImageNotSelected
+                            statusMessage: V.ImageNotSelected
                         })
                     }, t.onUpdateButtonClick = function(e) {
                         return a.__awaiter(t, void 0, void 0, function() {
@@ -5967,10 +5973,10 @@ webpackJsonp([35, 66], {
                                     case 0:
                                         if (e.preventDefault(), void 0 !== this.state.selectedImageIndex) return this.setDefaultAvatar(), [2];
                                         if (!this.currentImage) return this.setState({
-                                            statusMessage: B.ImageNotSelected
+                                            statusMessage: V.ImageNotSelected
                                         }), [2];
                                         this.setState({
-                                            statusMessage: B.Uploading
+                                            statusMessage: V.Uploading
                                         }), c.label = 1;
                                     case 1:
                                         return c.trys.push([1, 3, , 4]), [4, function(e, t, n, i) {
@@ -5995,7 +6001,7 @@ webpackJsonp([35, 66], {
                                         return t = c.sent(), n = t.upload_url, r = t.upload_id, [3, 4];
                                     case 3:
                                         return o = c.sent(), this.logger.error(o, "Request for upload ID failed to get expected response from server."), this.setState({
-                                            statusMessage: B.UnexpectedError
+                                            statusMessage: V.UnexpectedError
                                         }), [2];
                                     case 4:
                                         return this.unsubscribe = l.j.subscribe({
@@ -6012,7 +6018,7 @@ webpackJsonp([35, 66], {
                                                     }(n, s.currentImage)
                                                 } catch (e) {
                                                     s.logger.error(e, "Profile Image upload failed."), s.unsubscribe(), s.setState({
-                                                        statusMessage: B.UnexpectedError,
+                                                        statusMessage: V.UnexpectedError,
                                                         selectedImageIndex: void 0,
                                                         imagePreviewURL: "",
                                                         imageFormat: "",
@@ -6025,7 +6031,7 @@ webpackJsonp([35, 66], {
                                             },
                                             failure: function() {
                                                 s.setState({
-                                                    statusMessage: B.UnexpectedError,
+                                                    statusMessage: V.UnexpectedError,
                                                     selectedImageIndex: void 0,
                                                     imagePreviewURL: "",
                                                     currentImageHasTallAspectRatio: !1
@@ -6035,9 +6041,9 @@ webpackJsonp([35, 66], {
                                                 if (e.upload_id === r) {
                                                     clearTimeout(s.timeoutHandle);
                                                     var t = null;
-                                                    t = e.status === j.Success ? B.Success : e.status === j.BadSize ? B.BadSizeError : e.status === j.NonImage ? B.NonImageError : e.status === j.WrongFormat ? B.WrongFormatError : B.UnexpectedError, s.unsubscribe && s.unsubscribe(), s.setState({
+                                                    t = e.status === j.Success ? V.Success : e.status === j.BadSize ? V.BadSizeError : e.status === j.NonImage ? V.NonImageError : e.status === j.WrongFormat ? V.WrongFormatError : V.UnexpectedError, s.unsubscribe && s.unsubscribe(), s.setState({
                                                         statusMessage: t
-                                                    }), s.state.statusMessage === B.Success ? s.setState({
+                                                    }), s.state.statusMessage === V.Success ? s.setState({
                                                         profileUpdated: !0
                                                     }) : (s.setState({
                                                         profileUpdated: !1,
@@ -6057,7 +6063,7 @@ webpackJsonp([35, 66], {
                         })
                     }, t.handlePubSubTimeout = function() {
                         t.unsubscribe(), t.setState({
-                            statusMessage: B.TimeoutError
+                            statusMessage: V.TimeoutError
                         })
                     }, t
                 }
@@ -6114,42 +6120,42 @@ webpackJsonp([35, 66], {
                     if (null !== this.state.statusMessage) {
                         var d = function(e) {
                                 switch (e) {
-                                    case B.Success:
+                                    case V.Success:
                                         return {
                                             message: Object(l.d)("Success!", "Profile Edit"),
                                             type: C._1.Success
                                         };
-                                    case B.UnexpectedError:
+                                    case V.UnexpectedError:
                                         return {
                                             message: Object(l.d)("Unexpected error, please try again.", "Profile Edit"),
                                             type: C._1.Alert
                                         };
-                                    case B.BadSizeError:
+                                    case V.BadSizeError:
                                         return {
                                             message: Object(l.d)("Image might exceed 10MB.", "Profile Edit"),
                                             type: C._1.Alert
                                         };
-                                    case B.NonImageError:
+                                    case V.NonImageError:
                                         return {
                                             message: Object(l.d)("You must upload an image.", "Profile Edit"),
                                             type: C._1.Alert
                                         };
-                                    case B.WrongFormatError:
+                                    case V.WrongFormatError:
                                         return {
                                             message: Object(l.d)("You must select a valid image type.", "Profile Edit"),
                                             type: C._1.Alert
                                         };
-                                    case B.TimeoutError:
+                                    case V.TimeoutError:
                                         return {
                                             message: Object(l.d)("Upload timed-out. Please try again.", "Profile Edit"),
                                             type: C._1.Alert
                                         };
-                                    case B.Uploading:
+                                    case V.Uploading:
                                         return {
                                             message: Object(l.d)("Uploading....", "Profile Edit"),
                                             type: C._1.Brand
                                         };
-                                    case B.ImageNotSelected:
+                                    case V.ImageNotSelected:
                                         return {
                                             message: Object(l.d)("Select a image first.", "Profile Edit"),
                                             type: C._1.Alert
@@ -6184,17 +6190,19 @@ webpackJsonp([35, 66], {
                         textAlign: C._23.Center,
                         fullWidth: !0
                     }, o.createElement(C._18, {
+                        textAlign: C._23.Left,
                         borderBottom: !0,
                         padding: {
-                            bottom: 2
+                            bottom: 1
                         },
                         margin: {
                             bottom: 2
                         }
                     }, o.createElement(C._22, {
                         type: C._27.H3,
+                        color: C.F.Alt2,
                         fontSize: C.L.Size4
-                    }, Object(l.d)("Editing profile picture for {userName}", {
+                    }, Object(l.d)("Edit Profile Picture for {userName}", {
                         userName: p
                     }, "Profile Edit"), " ")), o.createElement(C.U, {
                         className: "profile-edit__upload-container",
@@ -6227,11 +6235,13 @@ webpackJsonp([35, 66], {
                             bottom: 2
                         }
                     }, o.createElement(C.U, {
+                        textAlign: C._23.Left,
                         margin: {
                             bottom: 1
                         }
                     }, o.createElement(C._22, {
                         type: C._27.H3,
+                        color: C.F.Alt2,
                         fontSize: C.L.Size5
                     }, Object(l.d)("Or select one of these", "Profile Edit"))), o.createElement(C._33, {
                         childWidth: C._34.ExtraSmall,
@@ -6242,7 +6252,8 @@ webpackJsonp([35, 66], {
                         justifyContent: C.T.Center
                     }, o.createElement(C.u, {
                         "data-test-selector": "update-button",
-                        onClick: this.onUpdateButtonClick
+                        onClick: this.onUpdateButtonClick,
+                        size: C.x.Large
                     }, Object(l.d)("Update", "Profile Edit"))))), s)
                 }, t.prototype.setDefaultAvatar = function() {
                     return a.__awaiter(this, void 0, void 0, function() {
@@ -6251,8 +6262,8 @@ webpackJsonp([35, 66], {
                             switch (i.label) {
                                 case 0:
                                     this.setState({
-                                        statusMessage: B.Uploading
-                                    }), e = B.UnexpectedError, i.label = 1;
+                                        statusMessage: V.Uploading
+                                    }), e = V.UnexpectedError, i.label = 1;
                                 case 1:
                                     return i.trys.push([1, 3, , 4]), [4, function(e, t, n) {
                                         if (void 0 === n) throw new Error("No default avatar selected.");
@@ -6269,18 +6280,18 @@ webpackJsonp([35, 66], {
                                         })
                                     }(this.props.userID, this.props.authToken, this.state.selectedImageIndex)];
                                 case 2:
-                                    return 204 === (t = i.sent()).status || 200 === t.status ? e = B.Success : this.logger.error(new Error("Default Avatar PUT failed. Fetch returned non-200 status: " + t.status), "Default Avatar PUT failed. Fetch returned non-200 status: " + t.status), [3, 4];
+                                    return 204 === (t = i.sent()).status || 200 === t.status ? e = V.Success : this.logger.error(new Error("Default Avatar PUT failed. Fetch returned non-200 status: " + t.status), "Default Avatar PUT failed. Fetch returned non-200 status: " + t.status), [3, 4];
                                 case 3:
                                     return n = i.sent(), this.logger.error(n, "Default Avatar PUT failed."), [3, 4];
                                 case 4:
                                     return this.setState({
                                         statusMessage: e,
-                                        profileUpdated: e === B.Success
+                                        profileUpdated: e === V.Success
                                     }), [2]
                             }
                         })
                     })
-                }, t = a.__decorate([Object(m.a)(V, {
+                }, t = a.__decorate([Object(m.a)(B, {
                     options: function(e) {
                         return {
                             variables: {
@@ -6302,7 +6313,7 @@ webpackJsonp([35, 66], {
                     }
                 }, e)
             })(z),
-            G = function(e) {
+            G = (n("WClm"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.openModal = function() {
@@ -6317,15 +6328,21 @@ webpackJsonp([35, 66], {
                 return a.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return o.createElement(C.v, {
+                    return o.createElement(C.U, {
+                        className: "edit-profile-overlay",
+                        display: C.H.Flex,
+                        justifyContent: C.T.Center,
+                        alignContent: C.b.Center,
+                        fullHeight: !0,
+                        fullWidth: !0
+                    }, o.createElement(C.v, {
                         overlay: !0,
-                        size: C.x.Large,
                         ariaLabel: Object(l.d)("Edit Profile", "ChannelHeader"),
                         icon: C._10.Edit,
                         onClick: this.openModal
-                    })
+                    }))
                 }, t = a.__decorate([Object(O.c)("EditProfileOverlay")], t)
-            }(o.Component),
+            }(o.Component)),
             Y = Object(h.a)(null, function(e) {
                 return Object(A.bindActionCreators)({
                     showModal: F.d
@@ -6534,7 +6551,7 @@ webpackJsonp([35, 66], {
                     margin: {
                         left: 1
                     }
-                }, o.createElement(Q.b, {
+                }, o.createElement(Q.a, {
                     updateContainerWidth: this.onUpdateDebounce,
                     channelLogin: this.props.channelLogin
                 })), g)), o.createElement(d.a, {
@@ -7110,6 +7127,7 @@ webpackJsonp([35, 66], {
         };
         var s = "chatSettings"
     },
+    WClm: function(e, t) {},
     WNGz: function(e, t, n) {
         var i = n("xA5w");
         e.exports = function(e) {
@@ -7682,7 +7700,7 @@ webpackJsonp([35, 66], {
                     }))
                 }, t
             }(m.Component)),
-            B = (n("sgUC"), function(e) {
+            V = (n("sgUC"), function(e) {
                 var t = [],
                     n = [],
                     i = null;
@@ -7721,7 +7739,7 @@ webpackJsonp([35, 66], {
                     flexDirection: S.J.Column
                 }, i, t, n))
             }),
-            V = function(e) {
+            B = function(e) {
                 var t = null;
                 e.pricesIncludeVAT && (t = m.createElement(S._22, {
                     italic: !0,
@@ -8020,7 +8038,7 @@ webpackJsonp([35, 66], {
                             return e.includesVAT
                         }),
                         o = this.props.data.user ? this.props.data.user.id : "",
-                        s = m.createElement(B, {
+                        s = m.createElement(V, {
                             offers: a,
                             fullsize: this.props.fullsize,
                             hidePromos: this.props.hidePromos,
@@ -8037,7 +8055,7 @@ webpackJsonp([35, 66], {
                             trackBitsCardInteraction: this.props.trackBitsCardInteraction
                         }),
                         l = null;
-                    return this.props.location === y.b.ChatTooltip && (l = m.createElement(V, {
+                    return this.props.location === y.b.ChatTooltip && (l = m.createElement(B, {
                         bitsBalance: this.props.data && this.props.data.currentUser && this.props.data.currentUser.bitsBalance,
                         displayName: this.props.data && this.props.data.user && this.props.data.user.displayName || this.props.channelLogin || "",
                         minBitsToCheer: this.props.data && this.props.data.user && this.props.data.user.cheer && this.props.data.user.cheer.settings.cheerMinimumBits,
@@ -8196,6 +8214,7 @@ webpackJsonp([35, 66], {
                     }, "PopularVideosByGameCarousel") : a.createElement(u._2, {
                         width: 200
                     })), a.createElement(c.a, {
+                        currentlyWatchingVideoID: this.props.currentlyWatchingVideoID,
                         tracking: {
                             content: s.PageviewContent.PopularVideos,
                             medium: this.props.tracking.medium,
@@ -8232,6 +8251,7 @@ webpackJsonp([35, 66], {
                         transform: u._26.Uppercase,
                         color: u.F.Alt2
                     }, Object(r.d)("Popular Videos On Twitch", "PopularVideosCarousel")), a.createElement(c.a, {
+                        currentlyWatchingVideoID: this.props.currentlyWatchingVideoID,
                         tracking: {
                             content: s.PageviewContent.PopularOverallVideos,
                             medium: this.props.tracking.medium,
@@ -8261,6 +8281,7 @@ webpackJsonp([35, 66], {
                     }, "RecentVideosFromUserCarousel") : a.createElement(u._2, {
                         width: 200
                     })), a.createElement(c.a, {
+                        currentlyWatchingVideoID: this.props.currentlyWatchingVideoID,
                         videos: e,
                         tracking: {
                             content: s.PageviewContent.RecentVideos,
@@ -8301,6 +8322,7 @@ webpackJsonp([35, 66], {
                         transform: u._26.Uppercase,
                         color: u.F.Alt2
                     }, Object(r.d)("Based On Your Viewing History", "RecommendedVideoCarousel")), a.createElement(c.a, {
+                        currentlyWatchingVideoID: this.props.currentlyWatchingVideoID,
                         tracking: {
                             content: s.PageviewContent.RecommendedVideos,
                             medium: this.props.tracking.medium,
@@ -12390,7 +12412,7 @@ webpackJsonp([35, 66], {
 
         function c(e) {
             var t = function(e) {
-                return new URL(Be + "/videos/" + e)
+                return new URL(Ve + "/videos/" + e)
             }(e);
             return new URL(t.toString() + "/comments")
         }
@@ -12401,7 +12423,7 @@ webpackJsonp([35, 66], {
         }
 
         function u(e) {
-            return new URL(Be + "/videos/comments/" + e)
+            return new URL(Ve + "/videos/comments/" + e)
         }
 
         function m(e, t) {
@@ -12419,7 +12441,7 @@ webpackJsonp([35, 66], {
                     }
                 }(t),
                 a = {
-                    method: Ve,
+                    method: Be,
                     body: JSON.stringify(i)
                 };
             return e.doAuthRequest(n, a).then(function(e) {
@@ -12465,11 +12487,11 @@ webpackJsonp([35, 66], {
             return n = function(e) {
                 return "userId" in e
             }(e) ? function(e) {
-                var t = new URL(Be + "/videos/comments/"),
+                var t = new URL(Ve + "/videos/comments/"),
                     n = new URLSearchParams;
                 return n.append(dt, mt.toString()), n.append(ct, e.userId), void 0 !== e.cursor && n.append(rt, e.cursor), t.search = "?" + n, t
             }(e) : function(e) {
-                var t = new URL(Be + "/videos/comments/"),
+                var t = new URL(Ve + "/videos/comments/"),
                     n = new URLSearchParams;
                 return n.append(dt, mt.toString()), n.append(ut, e.videoId), void 0 !== e.cursor && n.append(rt, e.cursor), t.search = "?" + n, t
             }(e), t.doAuthRequest(n, {}).then(function(t) {
@@ -12479,10 +12501,10 @@ webpackJsonp([35, 66], {
 
         function b(e, t) {
             var n = new URL(function(e) {
-                    return new URL(Be + "/videos/channels/" + e.targetChannel + "/bans")
+                    return new URL(Ve + "/videos/channels/" + e.targetChannel + "/bans")
                 }(e).toString()),
                 i = {
-                    method: Ve,
+                    method: Be,
                     body: JSON.stringify({
                         commenter_id: e.bannedUser
                     })
@@ -12547,8 +12569,8 @@ webpackJsonp([35, 66], {
                 }
             },
             j = "vodChat.comments.UPDATED_SUCCESS",
-            B = "vodChat.comments.CURSOR_RECEIVED",
-            V = "vodChat.comments.OFFSET_RECEIVED",
+            V = "vodChat.comments.CURSOR_RECEIVED",
+            B = "vodChat.comments.OFFSET_RECEIVED",
             P = "vodChat.comments.QUERY_FAILED",
             H = "vodChat.comments.CLEARED",
             W = function() {
@@ -12799,7 +12821,7 @@ webpackJsonp([35, 66], {
                             return D.__assign({}, e, {
                                 errorMessage: t.errorMessage
                             });
-                        case B:
+                        case V:
                             var a = t.comments[0].parentId,
                                 r = e.cursor,
                                 o = e.replyCursorMap,
@@ -12821,7 +12843,7 @@ webpackJsonp([35, 66], {
                                 hasLoadedData: !0,
                                 replyCursorMap: o
                             });
-                        case V:
+                        case B:
                             return D.__assign({}, e, {
                                 comments: fe(he(), t.comments),
                                 hasLoadedData: !0,
@@ -12908,8 +12930,8 @@ webpackJsonp([35, 66], {
                 },
                 users: function(e, t) {
                     switch (void 0 === e && (e = Ie), t.type) {
-                        case B:
                         case V:
+                        case B:
                         case O:
                         case U:
                             return {
@@ -12957,8 +12979,8 @@ webpackJsonp([35, 66], {
                 }), i
             },
             je = "Authorization",
-            Be = "https://api.twitch.tv/v5",
-            Ve = "POST",
+            Ve = "https://api.twitch.tv/v5",
+            Be = "POST",
             Pe = "PUT",
             He = "DELETE",
             We = (Ue = {}, Ue.Accept = "application/vnd.twitchtv.v5+json", Ue["Content-Type"] = "application/json", Ue["CLIENT-ID"] = "jzkbprff40iqj646a697cyrvl0zt2m6", Ue),
@@ -13327,8 +13349,8 @@ webpackJsonp([35, 66], {
                 }, Object(E.d)("Show more replies...", "chomments.moderation.showMoreRepliesAction"))
             },
             jt = n("vH/s"),
-            Bt = n("IWpL"),
-            Vt = n("xrVp"),
+            Vt = n("IWpL"),
+            Bt = n("xrVp"),
             Pt = n("Ryxq"),
             Ht = n("zAjo"),
             Wt = n("iO8W"),
@@ -13339,7 +13361,7 @@ webpackJsonp([35, 66], {
             Qt = "off",
             Kt = "frontend",
             Jt = function(e) {
-                E.m.track(Bt.SpadeEventType.VideoChatSettingChanged, e)
+                E.m.track(Vt.SpadeEventType.VideoChatSettingChanged, e)
             },
             Zt = function(e, t) {
                 return D.__awaiter(zt, void 0, void 0, function() {
@@ -13363,12 +13385,12 @@ webpackJsonp([35, 66], {
                                     share_platform: Ht.a.Link,
                                     share_context: jt.ShareItemContext.Chomment,
                                     shared_item_id: Object(Pt.a)(e.contentId),
-                                    shared_item_type: Object(Vt.a)(n.video.broadcastType),
+                                    shared_item_type: Object(Bt.a)(n.video.broadcastType),
                                     shared_item_url: t.toString(),
                                     partner: n.video.owner.roles.isPartner,
                                     source_item_id: e.id,
                                     source_item_type: jt.ShareItemSourceItemType.Chomment
-                                }, a = $t(e, n, Ht.a.Link), E.m.track(Bt.SpadeEventType.ChommentUIAction, a), E.m.track(Bt.SpadeEventType.ShareItem, i), [3, 3];
+                                }, a = $t(e, n, Ht.a.Link), E.m.track(Vt.SpadeEventType.ChommentUIAction, a), E.m.track(Vt.SpadeEventType.ShareItem, i), [3, 3];
                             case 2:
                                 return r = o.sent(), E.i.error(r.toString(), Zt.name), [3, 3];
                             case 3:
@@ -13391,7 +13413,7 @@ webpackJsonp([35, 66], {
                     vod_id: Number(e.contentId),
                     vod_title: t.video.title,
                     vod_ts: e.contentOffset,
-                    vod_type: Object(Vt.a)(t.video.broadcastType),
+                    vod_type: Object(Bt.a)(t.video.broadcastType),
                     share_platform: n
                 }
             },
@@ -13452,11 +13474,11 @@ webpackJsonp([35, 66], {
                         return n = s(e), sn = !0, [2, p(n, t).then(function(n) {
                             sn = !1, g(t) && t.offset === on ? e.dispatch(function(e) {
                                 return D.__assign({
-                                    type: V
+                                    type: B
                                 }, e)
                             }(n)) : e.dispatch(function(e) {
                                 return D.__assign({
-                                    type: B
+                                    type: V
                                 }, e)
                             }(n))
                         }, function(t) {
@@ -13594,7 +13616,7 @@ webpackJsonp([35, 66], {
                                         vod_id: Number(i.contentId),
                                         vod_title: t.video.title,
                                         vod_ts: i.contentOffset,
-                                        vod_type: Object(Vt.a)(t.video.broadcastType)
+                                        vod_type: Object(Bt.a)(t.video.broadcastType)
                                     }
                                 }(t, e)), [3, 3];
                             case 2:
@@ -13633,7 +13655,7 @@ webpackJsonp([35, 66], {
                                         user_id: Number(t.session.user.id),
                                         vod_id: Number(e.comment.contentId),
                                         vod_title: n.video.title,
-                                        vod_type: Object(Vt.a)(n.video.broadcastType),
+                                        vod_type: Object(Bt.a)(n.video.broadcastType),
                                         vod_ts: e.comment.contentOffset
                                     }
                                 }(t, e.getState(), a)), [3, 3];
@@ -13670,7 +13692,7 @@ webpackJsonp([35, 66], {
                                         user_id: Number(t.session.user.id),
                                         vod_id: Number(n.video.id),
                                         vod_title: n.video.title,
-                                        vod_type: Object(Vt.a)(n.video.broadcastType),
+                                        vod_type: Object(Bt.a)(n.video.broadcastType),
                                         vod_ts: e.comment.contentOffset
                                     }
                                 }(t, e.getState(), a)), [3, 3];
@@ -13712,7 +13734,7 @@ webpackJsonp([35, 66], {
                                         user_id: Number(t.session.user.id),
                                         vod_id: Number(e.contentId),
                                         vod_title: n.video.title,
-                                        vod_type: Object(Vt.a)(n.video.broadcastType),
+                                        vod_type: Object(Bt.a)(n.video.broadcastType),
                                         vod_ts: e.contentOffset
                                     }
                                 }(t, e.getState(), a)), [3, 3];
@@ -13756,7 +13778,7 @@ webpackJsonp([35, 66], {
                                         vod_id: Number(n.video.id),
                                         vod_title: n.video.title,
                                         vod_ts: h(e) ? null : Number(e.contentOffsetSeconds),
-                                        vod_type: Object(Vt.a)(n.video.broadcastType)
+                                        vod_type: Object(Bt.a)(n.video.broadcastType)
                                     }
                                 }(t, e.getState(), o)), [3, 3];
                             case 2:
@@ -13794,7 +13816,7 @@ webpackJsonp([35, 66], {
                                         vod_id: Number(n.video.id),
                                         vod_title: n.video.title,
                                         vod_ts: e.comment.contentOffset,
-                                        vod_type: Object(Vt.a)(n.video.broadcastType)
+                                        vod_type: Object(Bt.a)(n.video.broadcastType)
                                     }
                                 }(t, e.getState(), a)), [3, 3];
                             case 2:
@@ -13833,7 +13855,7 @@ webpackJsonp([35, 66], {
                                         vod_id: Number(e.contentId),
                                         vod_title: n.video.title,
                                         vod_ts: e.contentOffset,
-                                        vod_type: Object(Vt.a)(n.video.broadcastType)
+                                        vod_type: Object(Bt.a)(n.video.broadcastType)
                                     }
                                 }(t, e.getState(), a)), [3, 3];
                             case 2:
@@ -14006,8 +14028,8 @@ webpackJsonp([35, 66], {
             jn = function(e, t, n) {
                 return e && t && !n
             },
-            Bn = n("HW6M"),
-            Vn = n("3T7g"),
+            Vn = n("HW6M"),
+            Bn = n("3T7g"),
             Pn = n("CSlQ"),
             Hn = 15e3,
             Wn = function(e) {
@@ -14545,7 +14567,7 @@ webpackJsonp([35, 66], {
                         i = e.currentUser,
                         a = !!i && t.comment.commenter === i.id,
                         r = void 0 !== t.comment.userBadges[ii.a],
-                        o = Bn("video-chat__message-menu", {
+                        o = Vn("video-chat__message-menu", {
                             "video-chat__message-menu--force-visible": this.state.forceMenuVisibility
                         }),
                         s = Mt.createElement(Lt.U, {
@@ -14562,7 +14584,7 @@ webpackJsonp([35, 66], {
                             onOpen: this.onMenuOpenHandler,
                             onReplyClick: this.props.onReplyClick
                         })),
-                        l = Bn(vi, (u = {}, u["video-chat__message-author--me"] = a, u["video-chat__message-author--creator"] = r, u)),
+                        l = Vn(vi, (u = {}, u["video-chat__message-author--me"] = a, u["video-chat__message-author--creator"] = r, u)),
                         c = a || r ? "" : t.comment.message.userColor,
                         d = Mt.createElement(Lt.P, {
                             padding: {
@@ -14579,7 +14601,7 @@ webpackJsonp([35, 66], {
                         flexWrap: Lt.K.NoWrap
                     }, Mt.createElement(Lt.U, {
                         flexGrow: 1
-                    }, Mt.createElement(Vn.b, {
+                    }, Mt.createElement(Bn.b, {
                         badgesToRender: t.comment.userBadges,
                         badgeSets: n
                     }), Mt.createElement("a", {
@@ -14832,7 +14854,7 @@ webpackJsonp([35, 66], {
                             y: .5,
                             left: .5
                         },
-                        className: Bn("vod-message__reply", "qa-vod-chat-reply")
+                        className: Vn("vod-message__reply", "qa-vod-chat-reply")
                     }, e, Mt.createElement(Ci, {
                         badgeSets: this.props.badgeSets,
                         currentUser: this.props.currentUser,
@@ -14907,7 +14929,7 @@ webpackJsonp([35, 66], {
                         offset: this.props.messageContext.comment.contentOffset,
                         onClick: this.onTimestampClickHandler
                     })));
-                    var n = Bn("vod-message", (a = {}, a["vod-message--focused"] = this.shouldFocusMessage(), a)),
+                    var n = Vn("vod-message", (a = {}, a["vod-message--focused"] = this.shouldFocusMessage(), a)),
                         i = Mt.createElement(Lt.U, {
                             alignItems: Lt.c.Start,
                             className: n,
@@ -14973,7 +14995,7 @@ webpackJsonp([35, 66], {
                 }, t.prototype.componentDidUpdate = function() {
                     this.preventScrolling = !0, this.props.isScrollingSynced && (this.preventScrolling = !1, this.componentInitiatedScroll = !0, this.commentListRef.scrollTop = this.commentListRef.scrollHeight)
                 }, t.prototype.render = function() {
-                    var e = Bn("video-chat__message-list-wrapper", (n = {}, n["video-chat__message-list-wrapper--unsynced"] = !this.props.isScrollingSynced, n)),
+                    var e = Vn("video-chat__message-list-wrapper", (n = {}, n["video-chat__message-list-wrapper--unsynced"] = !this.props.isScrollingSynced, n)),
                         t = null;
                     return !1 === this.props.isScrollingSynced && (t = Mt.createElement(Lt.P, {
                         className: "video-chat__sync-button",
@@ -15012,7 +15034,7 @@ webpackJsonp([35, 66], {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         commentAlreadyFocused: !1
-                    }, t.badgeSets = new Vn.c([], [], ""), t.createComment = function(e) {
+                    }, t.badgeSets = new Bn.c([], [], ""), t.createComment = function(e) {
                         var n = {
                             contentId: t.props.videoID,
                             contentOffsetSeconds: t.props.currentVideoTime,
@@ -15059,7 +15081,7 @@ webpackJsonp([35, 66], {
                         })),
                         function(e, t) {
                             return !(t.data.loading || t.data.error || t.data.badges === e.data.badges && t.data.video.owner === e.data.video.owner)
-                        }(this.props, e) && (this.badgeSets = new Vn.c([], [], ""), e.data.loading || e.data.error || (this.badgeSets = new Vn.c(e.data.badges, e.data.video.owner.broadcastBadges, e.data.video.owner.login)));
+                        }(this.props, e) && (this.badgeSets = new Bn.c([], [], ""), e.data.loading || e.data.error || (this.badgeSets = new Bn.c(e.data.badges, e.data.video.owner.broadcastBadges, e.data.video.owner.login)));
                     (0, this.props.onUpdateBegan)(e, this.props)
                 }, t.prototype.componentDidUpdate = function() {
                     if (this.props.data.loading || this.props.data.error || !this.props.hasFetchedComments || this.props.latencyTracking.reportInteractive(), this.state.commentToFocus) {
@@ -15171,7 +15193,7 @@ webpackJsonp([35, 66], {
                         videoOwnerID: this.props.data.video.owner.id,
                         videoOwnerLogin: this.props.data.video.owner.login
                     }), Mt.createElement(Lt._18, {
-                        className: Bn("video-chat", "qa-vod-chat"),
+                        className: Vn("video-chat", "qa-vod-chat"),
                         display: Lt.H.Flex,
                         background: Lt.m.Alt2,
                         borderLeft: !0,
@@ -17333,15 +17355,15 @@ webpackJsonp([35, 66], {
                     if (!this.props.isLoggedIn || !this.props.data || this.props.data.error) return null;
                     var e = this.props.data && this.props.data.currentUser && Object(M.a)(this.props.data.currentUser.viewedVideos) || null;
                     if (!(!this.props.data || this.props.data.loading || e && 0 !== e.length)) return null;
-                    e = function(e, t) {
+                    e = function(e) {
                         return e.filter(function(e) {
                             if (!e.self || !e.self.viewingHistory || !e.self.viewingHistory.position) return !1;
-                            var n = e.self.viewingHistory.position / e.lengthSeconds;
-                            return !(n <= .05 || n >= .95) && e.id !== t
+                            var t = e.self.viewingHistory.position / e.lengthSeconds;
+                            return !(t <= .05 || t >= .95)
                         }).sort(function(e, t) {
                             return Object(A.compareDesc)(new Date(e.publishedAt), new Date(t.publishedAt))
                         })
-                    }(e || [], this.props.currentlyWatchingVideoID);
+                    }(e || []);
                     var t = this.props.data.currentUser ? this.props.data.currentUser.login : "";
                     return f.createElement(L.U, {
                         padding: {
@@ -17352,6 +17374,7 @@ webpackJsonp([35, 66], {
                         transform: L._26.Uppercase,
                         color: L.F.Alt2
                     }, Object(v.d)("Finish Watching", "ResumeWatchingVideoCarousel")), f.createElement(U.a, {
+                        currentlyWatchingVideoID: this.props.currentlyWatchingVideoID,
                         tracking: {
                             content: w.PageviewContent.ResumeWatchingVideos,
                             location: this.props.tracking.location,
@@ -17365,19 +17388,19 @@ webpackJsonp([35, 66], {
                     }))
                 }, t
             }(f.Component),
-            B = Object(g.compose)(Object(F.a)(R, {
+            V = Object(g.compose)(Object(F.a)(R, {
                 skip: function(e) {
                     return !e.isLoggedIn || !e.firstPageLoaded
                 }
             }), Object(O.c)("ResumeWatchingVideoCarousel", {
                 autoReportInteractive: !0
             }))(j),
-            V = Object(s.a)(function(e) {
+            B = Object(s.a)(function(e) {
                 return {
                     firstPageLoaded: e.session.firstPageLoaded,
                     isLoggedIn: Object(I.d)(e)
                 }
-            })(B),
+            })(V),
             P = n("fc0G"),
             H = n("Ic9h"),
             W = n("fTsm"),
@@ -18083,11 +18106,13 @@ webpackJsonp([35, 66], {
                         video: e || null,
                         lastVideoOffset: this.state.lastVideoOffset
                     })), f.createElement(T.e, {
+                        currentlyWatchingVideoID: o,
                         tracking: {
                             medium: w.PageviewMedium.VideoWatchPage,
                             location: w.PageviewLocation.VideoWatchPage
                         }
                     }), !n && f.createElement(T.b, {
+                        currentlyWatchingVideoID: o,
                         gameName: e && e.game && e.game.name,
                         noGameSpecified: !(!e || e.game && e.game.name),
                         tracking: {
@@ -18095,13 +18120,14 @@ webpackJsonp([35, 66], {
                             location: w.PageviewLocation.VideoWatchPage
                         }
                     }), f.createElement(T.d, {
-                        userID: i.id,
+                        currentlyWatchingVideoID: o,
                         displayName: i.displayName,
                         tracking: {
                             medium: w.PageviewMedium.VideoWatchPage,
                             location: w.PageviewLocation.VideoWatchPage
-                        }
-                    }), f.createElement(V, {
+                        },
+                        userID: i.id
+                    }), f.createElement(B, {
                         currentlyWatchingVideoID: o,
                         tracking: {
                             medium: w.PageviewMedium.VideoWatchPage,
@@ -18562,12 +18588,11 @@ webpackJsonp([35, 66], {
             StoreMerchPage: "store.merch",
             SubsLandingPage: "subs.landing",
             SubsBroadcasterPage: "subs.broadcaster",
-            TeamsDashboardBasicInfo: "teams.dashboard.basic-info",
-            TeamsDashboardCustomize: "teams.dashboard.customize",
-            TeamsDashboardFeaturedChannels: "teams.dashboard.featured-channels",
-            TeamsDashboardMembers: "teams.dashboard.members",
-            TeamsDashboardStats: "teams.dashboard.stats",
             TeamsDashboardRevenue: "teams.dashboard.revenue",
+            TeamsDashboardStats: "teams.dashboard.stats",
+            TeamsDashboardMembers: "teams.dashboard.members",
+            TeamsDashboardFeaturedChannels: "teams.dashboard.featured-channels",
+            TeamsDashboardSettings: "teams.dashboard.settings",
             VideosPage: "videos",
             VideoWatchPage: "video",
             VideoManagerPage: "videoManager.page",
@@ -19459,4 +19484,4 @@ webpackJsonp([35, 66], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.video-watch-35da84ba98e7dd13744d44fc580f298d.js.map
+//# sourceMappingURL=pages.video-watch-703994a937b70cd029d0e4cc19696620.js.map

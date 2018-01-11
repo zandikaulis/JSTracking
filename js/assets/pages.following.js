@@ -2660,7 +2660,7 @@ webpackJsonp([46], {
                 });
                 return i.createElement(o._33, {
                     gutterSize: o._35.Small,
-                    childWidth: o._34.Large,
+                    childWidth: e.videoCardSize || o._34.Large,
                     placeholderItems: 20
                 }, t)
             },
@@ -3549,6 +3549,7 @@ webpackJsonp([46], {
                     return p.createElement("div", null, e, p.createElement(J.b, {
                         trackingMedium: b.PageviewMedium.Following,
                         trackingContent: b.PageviewContent.SuggestedVideos,
+                        videoCardSize: C._34.Medium,
                         videos: t
                     }))
                 }, t = m.__decorate([Object(y.a)(K, {
@@ -8205,12 +8206,11 @@ webpackJsonp([46], {
             StoreMerchPage: "store.merch",
             SubsLandingPage: "subs.landing",
             SubsBroadcasterPage: "subs.broadcaster",
-            TeamsDashboardBasicInfo: "teams.dashboard.basic-info",
-            TeamsDashboardCustomize: "teams.dashboard.customize",
-            TeamsDashboardFeaturedChannels: "teams.dashboard.featured-channels",
-            TeamsDashboardMembers: "teams.dashboard.members",
-            TeamsDashboardStats: "teams.dashboard.stats",
             TeamsDashboardRevenue: "teams.dashboard.revenue",
+            TeamsDashboardStats: "teams.dashboard.stats",
+            TeamsDashboardMembers: "teams.dashboard.members",
+            TeamsDashboardFeaturedChannels: "teams.dashboard.featured-channels",
+            TeamsDashboardSettings: "teams.dashboard.settings",
             VideosPage: "videos",
             VideoWatchPage: "video",
             VideoManagerPage: "videoManager.page",
@@ -8474,4 +8474,4 @@ webpackJsonp([46], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.following-e4b2178ae2eb2e00c3c88f07e9fb533f.js.map
+//# sourceMappingURL=pages.following-627e3cfbfc8b0bb19aee13f73b6b48e5.js.map

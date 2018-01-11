@@ -590,8 +590,8 @@ webpackJsonp([50], {
             E = n("7vx8"),
             O = n("oIkB"),
             P = n("F8kA"),
-            C = n("Odds"),
-            x = (n("hPJb"), function(e) {
+            x = n("Odds"),
+            C = (n("hPJb"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.changeHandler = function() {
@@ -599,71 +599,71 @@ webpackJsonp([50], {
                     }, t
                 }
                 return c.__extends(t, e), t.prototype.render = function() {
-                    return d.createElement(C._18, {
+                    return d.createElement(x._18, {
                         className: "advanced-notification-settings-toggle",
-                        display: C.H.Flex,
-                        justifyContent: C.T.Between,
-                        background: C.m.Base,
+                        display: x.H.Flex,
+                        justifyContent: x.T.Between,
+                        background: x.m.Base,
                         padding: {
                             x: 5,
                             y: 1
                         },
                         borderBottom: !0
-                    }, d.createElement(C.U, {
+                    }, d.createElement(x.U, {
                         margin: {
                             left: 5
                         },
-                        display: C.H.Flex,
+                        display: x.H.Flex,
                         flexGrow: 1,
-                        alignItems: C.c.Center,
-                        flexWrap: C.K.NoWrap
-                    }, d.createElement(C.U, {
-                        display: C.H.Flex,
+                        alignItems: x.c.Center,
+                        flexWrap: x.K.NoWrap
+                    }, d.createElement(x.U, {
+                        display: x.H.Flex,
                         flexGrow: 1,
-                        flexWrap: C.K.NoWrap
-                    }, d.createElement(C.U, {
+                        flexWrap: x.K.NoWrap
+                    }, d.createElement(x.U, {
                         flexShrink: 0,
                         margin: {
                             right: 1
                         }
-                    }, d.createElement(C.S, {
+                    }, d.createElement(x.S, {
                         linkTo: "/" + this.props.login
-                    }, d.createElement(C.l, {
+                    }, d.createElement(x.l, {
                         imageSrc: this.props.thumbnail,
                         imageAlt: this.props.text,
                         size: 40
-                    }))), d.createElement(C.U, {
+                    }))), d.createElement(x.U, {
                         flexGrow: 1,
-                        display: C.H.Flex,
-                        flexDirection: C.J.Column
-                    }, d.createElement(C._22, {
-                        fontSize: C.L.Size5
+                        display: x.H.Flex,
+                        flexDirection: x.J.Column
+                    }, d.createElement(x._22, {
+                        fontSize: x.L.Size5
                     }, d.createElement(P.a, {
                         to: "/" + this.props.login
-                    }, this.props.text)), d.createElement(C._22, {
-                        type: C._27.Span,
-                        color: C.F.Alt2
-                    }, this.props.description))), d.createElement(C.U, {
-                        display: C.H.Flex,
+                    }, this.props.text)), d.createElement(x._22, {
+                        type: x._27.Span,
+                        color: x.F.Alt2
+                    }, this.props.description))), d.createElement(x.U, {
+                        display: x.H.Flex,
                         flexGrow: 0,
                         flexShrink: 0
-                    }, d.createElement(C.U, {
+                    }, d.createElement(x.U, {
                         margin: {
                             right: 1
                         }
-                    }, d.createElement(C._29, {
+                    }, d.createElement(x._29, {
                         checked: this.props.isEnabled,
                         onChange: this.changeHandler,
                         "data-test-selector": "toggle-selector",
                         id: this.props.userId
-                    })), d.createElement(C.U, {
+                    })), d.createElement(x.U, {
                         className: this.props.saved ? "advanced-notification-settings-toggle__saved" : "advanced-notification-settings-toggle__saved--hide",
                         padding: {
                             x: 1
                         }
-                    }, d.createElement(C._22, {
-                        fontSize: C.L.Size5,
-                        color: C.F.Link
+                    }, d.createElement(x._22, {
+                        fontSize: x.L.Size5,
+                        color: x.F.Link
                     }, Object(p.d)("Saved", "AdvancedNotificationSettingsToggle"))))))
                 }, t
             }(d.Component)),
@@ -719,18 +719,18 @@ webpackJsonp([50], {
                 return c.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    if (!this.props.data || this.props.data.loading && !this.props.data.currentUser) return d.createElement(C._18, {
+                    if (!this.props.data || this.props.data.loading && !this.props.data.currentUser) return d.createElement(x._18, {
                         padding: {
                             y: 1
                         },
                         borderBottom: !0
-                    }, d.createElement(C.Y, {
+                    }, d.createElement(x.Y, {
                         fillContent: !0
                     }));
                     if (this.props.data.error) return d.createElement(g.a, {
                         message: Object(p.d)("Error loading data.", "AdvancedNotificationSettings")
                     });
-                    if (!this.props.data.currentUser) return d.createElement(C._18, {
+                    if (!this.props.data.currentUser) return d.createElement(x._18, {
                         padding: {
                             y: 1
                         },
@@ -741,64 +741,64 @@ webpackJsonp([50], {
                     var e = Object(p.d)("{followCount, plural, one {You follow # channel} other {You follow # channels}}", {
                             followCount: this.props.data.currentUser.follows.totalCount
                         }, "AdvancedNotificationSettings"),
-                        t = d.createElement(C._18, {
-                            background: C.m.Alt2,
+                        t = d.createElement(x._18, {
+                            background: x.m.Alt2,
                             borderBottom: !0
-                        }, d.createElement(C.S, {
+                        }, d.createElement(x.S, {
                             onClick: this.toggleCollapse,
                             alpha: !0,
                             "data-test-selector": "header-selector"
-                        }, d.createElement(C.U, {
-                            display: C.H.Flex,
+                        }, d.createElement(x.U, {
+                            display: x.H.Flex,
                             padding: {
                                 x: 2,
                                 y: 1
                             }
-                        }, d.createElement(C.U, {
+                        }, d.createElement(x.U, {
                             className: "advanced-notification-settings__header",
                             flexGrow: 0
-                        }, d.createElement(C._22, {
-                            fontSize: C.L.Size5,
-                            color: C.F.Alt2,
+                        }, d.createElement(x._22, {
+                            fontSize: x.L.Size5,
+                            color: x.F.Alt2,
                             bold: !0
-                        }, Object(p.d)("Advanced", "AdvancedNotificationSettings"))), d.createElement(C.U, {
+                        }, Object(p.d)("Advanced", "AdvancedNotificationSettings"))), d.createElement(x.U, {
                             padding: {
                                 x: 1
                             },
                             flexGrow: 1
-                        }, d.createElement(C._22, {
+                        }, d.createElement(x._22, {
                             "data-test-selector": "description-selector",
-                            fontSize: C.L.Size5,
-                            color: C.F.Alt2
-                        }, e)), d.createElement(C.U, {
+                            fontSize: x.L.Size5,
+                            color: x.F.Alt2
+                        }, e)), d.createElement(x.U, {
                             className: this.state.collapsed ? "advanced-notification-settings--collapse" : "advanced-notification-settings--expand",
                             flexGrow: 0,
                             flexShrink: 1,
-                            display: C.H.Flex,
-                            justifyContent: C.T.Center
-                        }, d.createElement(C._9, {
-                            asset: C._10.AngleRight,
-                            type: C._11.Alt2
+                            display: x.H.Flex,
+                            justifyContent: x.T.Center
+                        }, d.createElement(x._9, {
+                            asset: x._10.AngleRight,
+                            type: x._11.Alt2
                         }))))),
                         n = !this.props.data.loading && !this.props.data.error && !!this.props.data.currentUser.follows.pageInfo.hasNextPage;
-                    return this.props.data.currentUser.follows.totalCount > 0 ? this.state.collapsed ? d.createElement(C._18, null, t) : d.createElement(C._18, null, t, d.createElement(C._18, {
+                    return this.props.data.currentUser.follows.totalCount > 0 ? this.state.collapsed ? d.createElement(x._18, null, t) : d.createElement(x._18, null, t, d.createElement(x._18, {
                         borderBottom: !0,
                         padding: 2
-                    }, d.createElement(C.U, {
+                    }, d.createElement(x.U, {
                         padding: {
                             bottom: 1
                         }
-                    }, d.createElement(C._22, {
-                        fontSize: C.L.Size5,
-                        color: C.F.Alt2
-                    }, Object(p.d)("Manage which channels you receive notifications for.", "AdvancedNotificationSettings"))), d.createElement(C.U, {
+                    }, d.createElement(x._22, {
+                        fontSize: x.L.Size5,
+                        color: x.F.Alt2
+                    }, Object(p.d)("Manage which channels you receive notifications for.", "AdvancedNotificationSettings"))), d.createElement(x.U, {
                         padding: {
                             bottom: 1
                         }
-                    }, d.createElement(C._22, {
-                        fontSize: C.L.Size4,
-                        color: C.F.Alt
-                    }, e)), d.createElement(C._18, {
+                    }, d.createElement(x._22, {
+                        fontSize: x.L.Size4,
+                        color: x.F.Alt
+                    }, e)), d.createElement(x._18, {
                         className: "advanced-notification-settings__toggle-container",
                         borderTop: !0,
                         borderLeft: !0,
@@ -815,7 +815,7 @@ webpackJsonp([50], {
                     if (this.props.data && (!this.props.data.loading || this.props.data.currentUser)) {
                         for (var e = [], t = 0, n = this.props.data.currentUser.follows.edges; t < n.length; t++) {
                             var i = n[t];
-                            i.node && i.node.id && i.node.followers && e.push(d.createElement(x, {
+                            i.node && i.node.id && i.node.followers && e.push(d.createElement(C, {
                                 userId: i.node.id,
                                 text: i.node.displayName,
                                 login: i.node.login,
@@ -963,7 +963,7 @@ webpackJsonp([50], {
                 }, t.prototype.render = function() {
                     if (this.state.hide || this.state.loading) return null;
                     var e = this.state.hasSubscription ? Object(p.d)("Turn Off", "BrowserPushNotificationsSettings") : Object(p.d)("Turn On", "BrowserPushNotificationsSettings");
-                    return d.createElement(C._18, {
+                    return d.createElement(x._18, {
                         borderTop: !0,
                         padding: {
                             right: 2,
@@ -973,39 +973,39 @@ webpackJsonp([50], {
                             top: 1
                         },
                         "data-test-selector": "qa-browser-push-notifications-settings"
-                    }, d.createElement(C._18, {
+                    }, d.createElement(x._18, {
                         className: "browser-push-notification-settings",
                         padding: {
                             left: 5,
                             right: 4
                         },
-                        display: C.H.Flex,
+                        display: x.H.Flex,
                         margin: {
                             x: 5
                         }
-                    }, d.createElement(C.U, {
+                    }, d.createElement(x.U, {
                         className: "browser-push-notification-settings__body",
-                        display: C.H.Flex,
-                        flexWrap: C.K.NoWrap,
+                        display: x.H.Flex,
+                        flexWrap: x.K.NoWrap,
                         flexGrow: 1
-                    }, d.createElement(C.U, {
+                    }, d.createElement(x.U, {
                         margin: {
                             right: 1
                         },
                         flexGrow: 1
-                    }, d.createElement(C._22, {
-                        fontSize: C.L.Size4,
-                        color: C.F.Alt
-                    }, Object(p.d)("Receive Browser Notifications for this Device", "BrowserPushNotificationsSettings")), d.createElement(C.U, {
+                    }, d.createElement(x._22, {
+                        fontSize: x.L.Size4,
+                        color: x.F.Alt
+                    }, Object(p.d)("Receive Browser Notifications for this Device", "BrowserPushNotificationsSettings")), d.createElement(x.U, {
                         padding: {
                             top: .5
                         }
-                    }, d.createElement(C._22, {
-                        fontSize: C.L.Size5,
-                        color: C.F.Alt2
-                    }, Object(p.d)("See notifications at the corner of your screen, even when you’re not on Twitch", "BrowserPushNotificationsSettings")))), d.createElement(C.U, {
+                    }, d.createElement(x._22, {
+                        fontSize: x.L.Size5,
+                        color: x.F.Alt2
+                    }, Object(p.d)("See notifications at the corner of your screen, even when you’re not on Twitch", "BrowserPushNotificationsSettings")))), d.createElement(x.U, {
                         flexShrink: 0
-                    }, d.createElement(C.u, {
+                    }, d.createElement(x.u, {
                         "data-test-selector": "qa-browser-push-notifications-settings-toggle",
                         disabled: this.state.deciding,
                         onClick: this.toggle
@@ -1035,12 +1035,12 @@ webpackJsonp([50], {
                     }, t
                 }
                 return c.__extends(t, e), t.prototype.render = function() {
-                    return d.createElement(C._18, {
+                    return d.createElement(x._18, {
                         className: "platform-notification-settings-toggle",
-                        display: C.H.Flex,
-                        flexWrap: C.K.NoWrap,
-                        alignItems: C.c.Start,
-                        background: C.m.Alt,
+                        display: x.H.Flex,
+                        flexWrap: x.K.NoWrap,
+                        alignItems: x.c.Start,
+                        background: x.m.Alt,
                         margin: {
                             top: 1,
                             bottom: .5
@@ -1048,56 +1048,56 @@ webpackJsonp([50], {
                         padding: {
                             right: 5
                         }
-                    }, d.createElement(C.U, {
+                    }, d.createElement(x.U, {
                         className: "platform-notification-settings-toggle__body",
-                        display: C.H.Flex,
-                        flexDirection: C.J.Column,
+                        display: x.H.Flex,
+                        flexDirection: x.J.Column,
                         flexGrow: 1,
                         padding: {
                             right: 1
                         }
-                    }, d.createElement(C.U, {
+                    }, d.createElement(x.U, {
                         margin: {
                             bottom: .5
                         }
-                    }, d.createElement(C._22, {
-                        fontSize: C.L.Size4
-                    }, this.props.text)), d.createElement(C._22, {
-                        fontSize: C.L.Size5,
-                        color: C.F.Alt2
-                    }, this.props.description)), d.createElement(C.U, {
-                        display: C.H.Flex,
+                    }, d.createElement(x._22, {
+                        fontSize: x.L.Size4
+                    }, this.props.text)), d.createElement(x._22, {
+                        fontSize: x.L.Size5,
+                        color: x.F.Alt2
+                    }, this.props.description)), d.createElement(x.U, {
+                        display: x.H.Flex,
                         margin: {
                             top: .5
                         },
                         flexGrow: 0,
                         flexShrink: 0
-                    }, d.createElement(C.U, {
+                    }, d.createElement(x.U, {
                         margin: {
                             right: 1
                         }
-                    }, d.createElement(C._29, {
+                    }, d.createElement(x._29, {
                         checked: this.props.isEnabled,
                         disabled: this.props.disabled,
                         onChange: this.changeHandler,
                         "data-test-selector": "toggle-selector"
-                    })), d.createElement(C.U, {
+                    })), d.createElement(x.U, {
                         className: this.props.saved ? "platform-notification-settings-toggle__saved" : "platform-notification-settings-toggle__saved--hide",
                         padding: {
                             x: 1
                         }
-                    }, d.createElement(C._22, {
-                        fontSize: C.L.Size5,
-                        color: C.F.Link
+                    }, d.createElement(x._22, {
+                        fontSize: x.L.Size5,
+                        color: x.F.Link
                     }, Object(p.d)("Saved", "PlatformNotificationSettingsToggle")))))
                 }, t
             }(d.Component)),
-            z = n("g+dK"),
-            G = (n("RC0U"), n("1f5k"));
+            G = n("g+dK"),
+            R = (n("RC0U"), n("1f5k"));
         ! function(e) {
             e.onsite = "onsite", e.email = "email", e.push = "push"
         }(i || (i = {}));
-        var R, H = function(e) {
+        var z, H = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -1172,7 +1172,7 @@ webpackJsonp([50], {
                                                     return e.platformName === r.props.platformName && (e.isEnabled = "on" === a.data.setNotificationSetting.settingState, e.settingState = a.data.setNotificationSetting.settingState), e
                                                 })), t
                                             }), t
-                                        }, Object(O.d)(G, {}, o), this.markSaved(e), [2]
+                                        }, Object(O.d)(R, {}, o), this.markSaved(e), [2]
                                 }
                             })
                         })
@@ -1181,122 +1181,122 @@ webpackJsonp([50], {
                 return c.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    if (!this.props.data || this.props.data.loading && !this.props.data.currentUser) return d.createElement(C.U, {
+                    if (!this.props.data || this.props.data.loading && !this.props.data.currentUser) return d.createElement(x.U, {
                         padding: 1
-                    }, d.createElement(C.Y, {
+                    }, d.createElement(x.Y, {
                         fillContent: !0
                     }));
                     if (this.props.data.error) return d.createElement(g.a, {
                         message: Object(p.d)("Error loading data.", "PlatformNotificationSettings")
                     });
-                    if (!this.props.data.currentUser) return d.createElement(C._18, {
+                    if (!this.props.data.currentUser) return d.createElement(x._18, {
                         margin: {
                             top: 1
                         }
                     }, d.createElement(g.a, {
                         message: Object(p.d)("You must be logged in to update your settings.", "PlatformNotificationSettings")
                     }));
-                    var e = d.createElement(C._18, {
-                        background: C.m.Alt2,
+                    var e = d.createElement(x._18, {
+                        background: x.m.Alt2,
                         borderBottom: !0
-                    }, d.createElement(C.S, {
+                    }, d.createElement(x.S, {
                         onClick: this.toggleCollapse,
                         alpha: !0
-                    }, d.createElement(C.U, {
-                        display: C.H.Flex,
+                    }, d.createElement(x.U, {
+                        display: x.H.Flex,
                         padding: {
                             x: 2,
                             y: 1
                         }
-                    }, d.createElement(C.U, {
+                    }, d.createElement(x.U, {
                         className: "platform-notification-settings__header",
                         flexGrow: 0,
                         "data-test-selector": "collapsible-header"
-                    }, d.createElement(C._22, {
+                    }, d.createElement(x._22, {
                         "data-test-selector": "display-name",
-                        fontSize: C.L.Size5,
-                        color: C.F.Alt2,
+                        fontSize: x.L.Size5,
+                        color: x.F.Alt2,
                         bold: !0
-                    }, this.props.displayName)), d.createElement(C.U, {
+                    }, this.props.displayName)), d.createElement(x.U, {
                         padding: {
                             x: 1
                         },
                         flexGrow: 1
-                    }, d.createElement(C._22, {
-                        fontSize: C.L.Size5,
-                        color: C.F.Alt2
-                    }, this.getSettingTurnedOnMessage())), d.createElement(C.U, {
+                    }, d.createElement(x._22, {
+                        fontSize: x.L.Size5,
+                        color: x.F.Alt2
+                    }, this.getSettingTurnedOnMessage())), d.createElement(x.U, {
                         className: this.state.collapsed ? "platform-notification-settings--collapse" : "platform-notification-settings--expand",
                         flexGrow: 0,
                         flexShrink: 1,
-                        display: C.H.Flex,
-                        justifyContent: C.T.Center
-                    }, d.createElement(C._9, {
-                        asset: C._10.AngleRight,
-                        type: C._11.Alt2
+                        display: x.H.Flex,
+                        justifyContent: x.T.Center
+                    }, d.createElement(x._9, {
+                        asset: x._10.AngleRight,
+                        type: x._11.Alt2
                     })))));
-                    return this.state.collapsed ? d.createElement(C._18, null, e) : d.createElement(C._18, null, e, d.createElement(C._18, {
+                    return this.state.collapsed ? d.createElement(x._18, null, e) : d.createElement(x._18, null, e, d.createElement(x._18, {
                         padding: 2,
                         borderBottom: !0
-                    }, d.createElement(C.U, {
+                    }, d.createElement(x.U, {
                         padding: {
                             bottom: 1
                         }
-                    }, d.createElement(C._22, {
+                    }, d.createElement(x._22, {
                         "data-test-selector": "description",
-                        fontSize: C.L.Size5,
-                        color: C.F.Alt2
-                    }, this.props.description)), d.createElement(C._18, {
-                        display: C.H.Flex,
+                        fontSize: x.L.Size5,
+                        color: x.F.Alt2
+                    }, this.props.description)), d.createElement(x._18, {
+                        display: x.H.Flex,
                         margin: {
                             y: .5
                         },
                         borderBottom: !0
-                    }, d.createElement(C.U, {
+                    }, d.createElement(x.U, {
                         className: "platform-notification-settings__all",
-                        display: C.H.Flex,
+                        display: x.H.Flex,
                         padding: {
                             bottom: 1,
                             right: 5
                         },
-                        justifyContent: C.T.Center,
+                        justifyContent: x.T.Center,
                         flexGrow: 1,
-                        flexWrap: C.K.NoWrap
-                    }, d.createElement(C.U, {
+                        flexWrap: x.K.NoWrap
+                    }, d.createElement(x.U, {
                         className: "platform-notification-settings__all-body",
                         flexGrow: 1,
                         padding: {
                             right: 1
                         }
-                    }, d.createElement(C._22, {
-                        fontSize: C.L.Size4,
-                        color: C.F.Alt,
+                    }, d.createElement(x._22, {
+                        fontSize: x.L.Size4,
+                        color: x.F.Alt,
                         "data-test-selector": "explanation"
-                    }, this.props.explanation)), d.createElement(C.U, {
-                        display: C.H.Flex,
+                    }, this.props.explanation)), d.createElement(x.U, {
+                        display: x.H.Flex,
                         flexGrow: 0,
                         flexShrink: 0
-                    }, d.createElement(C.U, {
+                    }, d.createElement(x.U, {
                         margin: {
                             right: 1
                         }
-                    }, d.createElement(C._29, {
+                    }, d.createElement(x._29, {
                         "data-test-selector": "all-toggle",
                         checked: this.getGlobalStateForPlatform(),
                         onChange: this.toggleAll
-                    })), d.createElement(C.U, {
+                    })), d.createElement(x.U, {
                         padding: {
                             x: 1
                         },
                         "data-test-selector": "saved-selector",
                         className: this.getDisplaySaved("ALL") ? "platform-notification-settings__saved" : "platform-notification-settings__saved--hide"
-                    }, d.createElement(C._22, {
-                        fontSize: C.L.Size5,
-                        color: C.F.Link
-                    }, Object(p.d)("Saved", "PlatformNotificationSettings")))))), d.createElement(C.U, {
+                    }, d.createElement(x._22, {
+                        fontSize: x.L.Size5,
+                        color: x.F.Link
+                    }, Object(p.d)("Saved", "PlatformNotificationSettings")))))), d.createElement(x.U, {
                         className: "platform-notification-settings__toggle-container",
-                        display: C.H.Flex,
-                        flexDirection: C.J.Column,
+                        display: x.H.Flex,
+                        flexDirection: x.J.Column,
                         margin: {
                             left: 5
                         },
@@ -1362,13 +1362,13 @@ webpackJsonp([50], {
                     }
                 }, t
             }(d.Component),
-            W = Object(o.compose)(Object(m.c)("PlatformNotificationSettings"), Object(E.a)(G, {
+            W = Object(o.compose)(Object(m.c)("PlatformNotificationSettings"), Object(E.a)(R, {
                 options: function() {
                     return {
                         fetchPolicy: "cache-and-network"
                     }
                 }
-            }), Object(E.a)(z, {
+            }), Object(E.a)(G, {
                 name: "setNotificationSetting"
             }))(H),
             q = (n("nq6q"), function(e) {
@@ -1382,30 +1382,30 @@ webpackJsonp([50], {
                 }, t.prototype.render = function() {
                     return d.createElement(k.b, {
                         className: "notification-settings"
-                    }, d.createElement(C.U, {
+                    }, d.createElement(x.U, {
                         padding: 3
-                    }, d.createElement(C._18, {
+                    }, d.createElement(x._18, {
                         className: "notification-settings__body",
                         borderRight: !0,
                         borderLeft: !0,
                         borderTop: !0
-                    }, d.createElement(C._18, {
-                        background: C.m.Alt,
+                    }, d.createElement(x._18, {
+                        background: x.m.Alt,
                         padding: {
                             x: 2,
                             y: 1
                         },
                         borderBottom: !0
-                    }, d.createElement(C.U, {
+                    }, d.createElement(x.U, {
                         margin: {
                             bottom: .5
                         }
-                    }, d.createElement(C._22, {
-                        fontSize: C.L.Size3,
-                        color: C.F.Alt
-                    }, Object(p.d)("Notifications", "SettingsNotificationsPage"))), d.createElement(C.U, null, d.createElement(C._22, {
-                        fontSize: C.L.Size5,
-                        color: C.F.Alt2
+                    }, d.createElement(x._22, {
+                        fontSize: x.L.Size3,
+                        color: x.F.Alt
+                    }, Object(p.d)("Notifications", "SettingsNotificationsPage"))), d.createElement(x.U, null, d.createElement(x._22, {
+                        fontSize: x.L.Size5,
+                        color: x.F.Alt2
                     }, Object(p.d)("Get the notifications you care about, where you want to see them.", "SettingsNotificationsPage")))), d.createElement(W, {
                         startCollapsed: !1,
                         platformName: i.onsite,
@@ -1480,7 +1480,7 @@ webpackJsonp([50], {
             }(d.Component);
         ! function(e) {
             e.Channel = "channel", e.Notifications = "notifications", e.Profile = "profile", e.Security = "security", e.Connections = "connections", e.Prime = "prime", e.Turbo = "turbo"
-        }(R || (R = {}));
+        }(z || (z = {}));
         var $ = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -1488,37 +1488,37 @@ webpackJsonp([50], {
                 return c.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return d.createElement(C.U, {
+                    return d.createElement(x.U, {
                         className: "settings-tabs"
-                    }, d.createElement(C.U, {
+                    }, d.createElement(x.U, {
                         margin: {
                             bottom: 1
                         }
-                    }, d.createElement(C._22, {
-                        type: C._27.H2
-                    }, Object(p.d)("Settings", "SettingsTabs"))), d.createElement(C.U, {
+                    }, d.createElement(x._22, {
+                        type: x._27.H2
+                    }, Object(p.d)("Settings", "SettingsTabs"))), d.createElement(x.U, {
                         margin: {
                             bottom: 2
                         }
-                    }, d.createElement(C._20, null, d.createElement(C._19, {
+                    }, d.createElement(x._20, null, d.createElement(x._19, {
                         linkTo: "/settings/profile",
-                        active: this.props.match.params.tab === R.Profile
-                    }, Object(p.d)("Profile", "SettingsTabs")), d.createElement(C._19, {
+                        active: this.props.match.params.tab === z.Profile
+                    }, Object(p.d)("Profile", "SettingsTabs")), d.createElement(x._19, {
                         linkTo: "/settings/prime",
-                        active: this.props.match.params.tab === R.Prime
-                    }, Object(p.d)("Prime", "SettingsTabs")), d.createElement(C._19, {
+                        active: this.props.match.params.tab === z.Prime
+                    }, Object(p.d)("Prime", "SettingsTabs")), d.createElement(x._19, {
                         linkTo: "/settings/channel",
-                        active: this.props.match.params.tab === R.Channel
-                    }, Object(p.d)("Channel and Videos", "SettingsTabs")), d.createElement(C._19, {
+                        active: this.props.match.params.tab === z.Channel
+                    }, Object(p.d)("Channel and Videos", "SettingsTabs")), d.createElement(x._19, {
                         linkTo: "/settings/security",
-                        active: this.props.match.params.tab === R.Security
-                    }, Object(p.d)("Security and Privacy", "SettingsTabs")), d.createElement(C._19, {
+                        active: this.props.match.params.tab === z.Security
+                    }, Object(p.d)("Security and Privacy", "SettingsTabs")), d.createElement(x._19, {
                         linkTo: "/settings/notifications",
-                        active: this.props.match.params.tab === R.Notifications
-                    }, Object(p.d)("Notifications", "SettingsTab")), d.createElement(C._19, {
+                        active: this.props.match.params.tab === z.Notifications
+                    }, Object(p.d)("Notifications", "SettingsTab")), d.createElement(x._19, {
                         linkTo: "/settings/connections",
-                        active: this.props.match.params.tab === R.Connections
-                    }, Object(p.d)("Connections", "SettingsTabs")), d.createElement(C._19, {
+                        active: this.props.match.params.tab === z.Connections
+                    }, Object(p.d)("Connections", "SettingsTabs")), d.createElement(x._19, {
                         linkTo: "/subscriptions",
                         active: !1
                     }, Object(p.d)("Subscriptions", "SettingsTabs")))))
@@ -1535,7 +1535,7 @@ webpackJsonp([50], {
                     }, t
                 }
                 return c.__extends(t, e), t.prototype.render = function() {
-                    return this.props.isLoggedIn ? d.createElement(C.U, {
+                    return this.props.isLoggedIn ? d.createElement(x.U, {
                         padding: 3
                     }, d.createElement(Q, null), d.createElement(f.b, {
                         addPaddingWhenPlayerIsPersisting: !0
@@ -2148,12 +2148,11 @@ webpackJsonp([50], {
             StoreMerchPage: "store.merch",
             SubsLandingPage: "subs.landing",
             SubsBroadcasterPage: "subs.broadcaster",
-            TeamsDashboardBasicInfo: "teams.dashboard.basic-info",
-            TeamsDashboardCustomize: "teams.dashboard.customize",
-            TeamsDashboardFeaturedChannels: "teams.dashboard.featured-channels",
-            TeamsDashboardMembers: "teams.dashboard.members",
-            TeamsDashboardStats: "teams.dashboard.stats",
             TeamsDashboardRevenue: "teams.dashboard.revenue",
+            TeamsDashboardStats: "teams.dashboard.stats",
+            TeamsDashboardMembers: "teams.dashboard.members",
+            TeamsDashboardFeaturedChannels: "teams.dashboard.featured-channels",
+            TeamsDashboardSettings: "teams.dashboard.settings",
             VideosPage: "videos",
             VideoWatchPage: "video",
             VideoManagerPage: "videoManager.page",
@@ -2163,4 +2162,4 @@ webpackJsonp([50], {
         }
     }
 });
-//# sourceMappingURL=pages.settings-1d0d2d8b63864c9ba2ca779596ee777d.js.map
+//# sourceMappingURL=pages.settings-e619acfcffb0aeb3d47da85833e599cc.js.map

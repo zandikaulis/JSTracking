@@ -1604,7 +1604,8 @@ webpackJsonp([49], {
                     }
                 }, s.createElement(B.u, {
                     type: B.z.Hollow,
-                    linkTo: "/directory/game/creative"
+                    linkTo: "/directory/game/creative",
+                    "data-a-target": "view-all-creative"
                 }, Object(c.d)("View All Creative Broadcasters", "BrowseCreativePage"))))
             },
             M = function(e) {
@@ -2480,7 +2481,8 @@ webpackJsonp([49], {
                         }
                     }, s.createElement(B.u, {
                         linkTo: Object($.a)("/communities/create"),
-                        "data-test-selector": "create-community-button-test"
+                        "data-test-selector": "create-community-button-test",
+                        "data-a-target": "create-community-button"
                     }, Object(c.d)("Create a Community", "BrowseDirectory")))
                 }, t.prototype.renderPopularPageFilters = function() {
                     if (Pe[decodeURIComponent(this.props.match.path)] === i.BrowsePopularPage) return s.createElement(B.U, {
@@ -4214,12 +4216,11 @@ webpackJsonp([49], {
             StoreMerchPage: "store.merch",
             SubsLandingPage: "subs.landing",
             SubsBroadcasterPage: "subs.broadcaster",
-            TeamsDashboardBasicInfo: "teams.dashboard.basic-info",
-            TeamsDashboardCustomize: "teams.dashboard.customize",
-            TeamsDashboardFeaturedChannels: "teams.dashboard.featured-channels",
-            TeamsDashboardMembers: "teams.dashboard.members",
-            TeamsDashboardStats: "teams.dashboard.stats",
             TeamsDashboardRevenue: "teams.dashboard.revenue",
+            TeamsDashboardStats: "teams.dashboard.stats",
+            TeamsDashboardMembers: "teams.dashboard.members",
+            TeamsDashboardFeaturedChannels: "teams.dashboard.featured-channels",
+            TeamsDashboardSettings: "teams.dashboard.settings",
             VideosPage: "videos",
             VideoWatchPage: "video",
             VideoManagerPage: "videoManager.page",
@@ -4605,4 +4606,4 @@ webpackJsonp([49], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.browse-46815a0256cfb0eea9795f7abb33a4e2.js.map
+//# sourceMappingURL=pages.browse-adc43518c6e869b94e648d1df3000f2b.js.map

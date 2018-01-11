@@ -10963,7 +10963,9 @@ webpackJsonp([58], {
                     API_BASE_URL: void 0,
                     GQL_BASE_URL: void 0,
                     EMBEDDED: void 0,
-                    EMBEDDED_BUILD_ID: void 0
+                    EMBEDDED_BUILD_ID: void 0,
+                    MANIFEST_URL: void 0,
+                    CDN_URL: "https://static.twitchcdn.net/"
                 }).DEBUG), e
             }(t = e.exports = n("vmzn")).log = function() {
                 return "object" == typeof console && console.log && Function.prototype.apply.call(console.log, console, arguments)
@@ -24525,13 +24527,17 @@ webpackJsonp([58], {
                 API_BASE_URL: void 0,
                 GQL_BASE_URL: void 0,
                 EMBEDDED: void 0,
-                EMBEDDED_BUILD_ID: void 0
+                EMBEDDED_BUILD_ID: void 0,
+                MANIFEST_URL: void 0,
+                CDN_URL: "https://static.twitchcdn.net/"
             }).RESET_APP_DATA_TIMER && parseInt(Object({
                 NODE_ENV: "production",
                 API_BASE_URL: void 0,
                 GQL_BASE_URL: void 0,
                 EMBEDDED: void 0,
-                EMBEDDED_BUILD_ID: void 0
+                EMBEDDED_BUILD_ID: void 0,
+                MANIFEST_URL: void 0,
+                CDN_URL: "https://static.twitchcdn.net/"
             }).RESET_APP_DATA_TIMER, 10) || 12e4;
         r.prototype.initIndex = function(e) {
             return new c(this, e)
@@ -26203,7 +26209,9 @@ webpackJsonp([58], {
                 API_BASE_URL: void 0,
                 GQL_BASE_URL: void 0,
                 EMBEDDED: void 0,
-                EMBEDDED_BUILD_ID: void 0
+                EMBEDDED_BUILD_ID: void 0,
+                MANIFEST_URL: void 0,
+                CDN_URL: "https://static.twitchcdn.net/"
             }), e.exports = function(e, t) {
                 if (null == e) return e;
                 var n = {};
@@ -36731,7 +36739,9 @@ webpackJsonp([58], {
                 API_BASE_URL: void 0,
                 GQL_BASE_URL: void 0,
                 EMBEDDED: void 0,
-                EMBEDDED_BUILD_ID: void 0
+                EMBEDDED_BUILD_ID: void 0,
+                MANIFEST_URL: void 0,
+                CDN_URL: "https://static.twitchcdn.net/"
             });
             var u = {
                 instantiateChildren: function(e, t, n, o) {
@@ -37182,4 +37192,4 @@ webpackJsonp([58], {
         }
     }
 });
-//# sourceMappingURL=vendor-525adfe0eb97104be5ef44c8f65875d3.js.map
+//# sourceMappingURL=vendor-bf0d67727b8ecd8b043d01ab0c144cf9.js.map

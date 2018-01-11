@@ -591,10 +591,10 @@ webpackJsonp([64], {
             O = n("6BvN"),
             F = n("HM6l"),
             T = n("5LoI"),
-            D = n("MAZT"),
-            L = n("uTyw"),
-            I = n("rCmJ"),
-            U = n("SZoP"),
+            L = n("MAZT"),
+            D = n("uTyw"),
+            U = n("rCmJ"),
+            I = n("SZoP"),
             j = (n("np4D"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -640,7 +640,7 @@ webpackJsonp([64], {
                     var e = this;
                     if (!this.props.streamerResults) return s.createElement(w.U, null);
                     var t = this.props.streamerResults.results.map(function(t) {
-                        var n = Object(U.a)(t.login || "", t.name || "");
+                        var n = Object(I.a)(t.login || "", t.name || "");
                         return s.createElement(w.S, {
                             linkTo: "/subs/" + t.login,
                             tabIndex: -1,
@@ -702,7 +702,7 @@ webpackJsonp([64], {
                         position: w._3.Relative
                     }, s.createElement("div", {
                         className: this.props.isOpen ? "streamer-search__container streamer-search__container--open" : "streamer-search__container"
-                    }, s.createElement(I.a, {
+                    }, s.createElement(U.a, {
                         onClickOut: this.props.onClickOut
                     }, s.createElement(w._12, {
                         onChange: this.handleChange,
@@ -781,7 +781,7 @@ webpackJsonp([64], {
                                             isOpen: !0
                                         })), [2];
                                     case 4:
-                                        return t ? (a = Object(L.b)({
+                                        return t ? (a = Object(D.b)({
                                             searchResults: t,
                                             append: e > 0,
                                             currentUserResults: this.state.currentUserResults
@@ -799,7 +799,7 @@ webpackJsonp([64], {
                                 }
                             })
                         })
-                    }, t.state = t.getEmptyState(), t.searchClient = new D.a(i.a.algoliaApplicationID, i.a.algoliaAPIKey), t
+                    }, t.state = t.getEmptyState(), t.searchClient = new L.a(i.a.algoliaApplicationID, i.a.algoliaAPIKey), t
                 }
                 return r.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
@@ -864,7 +864,7 @@ webpackJsonp([64], {
                                         term: e
                                     })), [2];
                                 case 4:
-                                    return s ? this.state.queryID !== s.id ? [2] : (l = Object(L.b)({
+                                    return s ? this.state.queryID !== s.id ? [2] : (l = Object(D.b)({
                                         searchResults: s,
                                         append: !1
                                     }), this.setState(function(n) {
@@ -885,12 +885,12 @@ webpackJsonp([64], {
                     })
                 }, t = r.__decorate([Object(h.c)("StreamerSearch")], t)
             }(s.Component),
-            z = Object(a.a)(function(e) {
+            V = Object(a.a)(function(e) {
                 return {
                     user: Object(y.c)(e)
                 }
             })(A),
-            V = (n("rbRz"), function(e) {
+            z = (n("rbRz"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.messages = {
@@ -966,7 +966,7 @@ webpackJsonp([64], {
                     }, s.createElement(w._22, {
                         type: w._27.P,
                         fontSize: w.L.Size5
-                    }, this.messages.searchInfo)), s.createElement(z, null), s.createElement(N, null), s.createElement(w.U, {
+                    }, this.messages.searchInfo)), s.createElement(V, null), s.createElement(N, null), s.createElement(w.U, {
                         className: "subs-landing-page-contents__section",
                         display: w.H.Flex,
                         justifyContent: w.T.Center
@@ -1052,9 +1052,9 @@ webpackJsonp([64], {
                     location: g.PageviewLocation.SubsLandingPage
                 })], t)
             }(s.Component)),
-            B = Object(a.a)()(V);
+            W = Object(a.a)()(z);
         n.d(t, "SubsLandingPage", function() {
-            return B
+            return W
         })
     },
     np4D: function(e, t) {},
@@ -1115,12 +1115,11 @@ webpackJsonp([64], {
             StoreMerchPage: "store.merch",
             SubsLandingPage: "subs.landing",
             SubsBroadcasterPage: "subs.broadcaster",
-            TeamsDashboardBasicInfo: "teams.dashboard.basic-info",
-            TeamsDashboardCustomize: "teams.dashboard.customize",
-            TeamsDashboardFeaturedChannels: "teams.dashboard.featured-channels",
-            TeamsDashboardMembers: "teams.dashboard.members",
-            TeamsDashboardStats: "teams.dashboard.stats",
             TeamsDashboardRevenue: "teams.dashboard.revenue",
+            TeamsDashboardStats: "teams.dashboard.stats",
+            TeamsDashboardMembers: "teams.dashboard.members",
+            TeamsDashboardFeaturedChannels: "teams.dashboard.featured-channels",
+            TeamsDashboardSettings: "teams.dashboard.settings",
             VideosPage: "videos",
             VideoWatchPage: "video",
             VideoManagerPage: "videoManager.page",
@@ -1131,4 +1130,4 @@ webpackJsonp([64], {
     },
     yoqf: function(e, t) {}
 });
-//# sourceMappingURL=pages.subs.components.subs-landing-page-3fdbda9350b71926266d1684ec893850.js.map
+//# sourceMappingURL=pages.subs.components.subs-landing-page-d4919c9a8e454aa04aa0910e3d1e15f0.js.map

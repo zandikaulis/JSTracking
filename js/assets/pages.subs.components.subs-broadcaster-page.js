@@ -1273,12 +1273,11 @@ webpackJsonp([65], {
             StoreMerchPage: "store.merch",
             SubsLandingPage: "subs.landing",
             SubsBroadcasterPage: "subs.broadcaster",
-            TeamsDashboardBasicInfo: "teams.dashboard.basic-info",
-            TeamsDashboardCustomize: "teams.dashboard.customize",
-            TeamsDashboardFeaturedChannels: "teams.dashboard.featured-channels",
-            TeamsDashboardMembers: "teams.dashboard.members",
-            TeamsDashboardStats: "teams.dashboard.stats",
             TeamsDashboardRevenue: "teams.dashboard.revenue",
+            TeamsDashboardStats: "teams.dashboard.stats",
+            TeamsDashboardMembers: "teams.dashboard.members",
+            TeamsDashboardFeaturedChannels: "teams.dashboard.featured-channels",
+            TeamsDashboardSettings: "teams.dashboard.settings",
             VideosPage: "videos",
             VideoWatchPage: "video",
             VideoManagerPage: "videoManager.page",
@@ -1288,4 +1287,4 @@ webpackJsonp([65], {
         }
     }
 });
-//# sourceMappingURL=pages.subs.components.subs-broadcaster-page-d35f434d3b6ed336ec7e6cd4021836d3.js.map
+//# sourceMappingURL=pages.subs.components.subs-broadcaster-page-d01f4b152f8f265919f00261c151551b.js.map
