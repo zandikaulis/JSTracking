@@ -783,7 +783,12 @@ webpackJsonp([46], {
                     })
                 }, t
             }
-            return a.__extends(t, e), t.prototype.render = function() {
+            return a.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
+                var t = this;
+                !e.categoryChange || this.props.categoryChange && this.props.categoryChange.timestampMs === e.categoryChange.timestampMs || !e.categoryChange.category.games.find(function(e) {
+                    return e.name === t.props.title
+                }) || this.isFollowing() !== e.categoryChange.shouldFollow && this.onClick()
+            }, t.prototype.render = function() {
                 var e;
                 return this.state.inProgress ? e = l.createElement("div", {
                     className: "follow-game-card__overlay"
@@ -2370,65 +2375,72 @@ webpackJsonp([46], {
     },
     DBTH: function(e, t, n) {
         "use strict";
-        n.d(t, "e", function() {
+        n.d(t, "f", function() {
             return a
-        }), n.d(t, "f", function() {
-            return l
-        }), n.d(t, "h", function() {
-            return r
         }), n.d(t, "g", function() {
-            return o
+            return l
         }), n.d(t, "i", function() {
-            return s
-        }), n.d(t, "a", function() {
-            return d
-        }), n.d(t, "c", function() {
-            return u
-        }), n.d(t, "b", function() {
-            return g
-        }), n.d(t, "d", function() {
-            return v
+            return r
+        }), n.d(t, "h", function() {
+            return o
         }), n.d(t, "k", function() {
-            return h
-        }), n.d(t, "l", function() {
-            return f
+            return s
         }), n.d(t, "j", function() {
-            return k
+            return d
+        }), n.d(t, "a", function() {
+            return u
+        }), n.d(t, "d", function() {
+            return c
+        }), n.d(t, "b", function() {
+            return v
+        }), n.d(t, "c", function() {
+            return h
+        }), n.d(t, "e", function() {
+            return f
         }), n.d(t, "m", function() {
+            return k
+        }), n.d(t, "n", function() {
             return y
+        }), n.d(t, "l", function() {
+            return S
+        }), n.d(t, "o", function() {
+            return w
         });
         var i, a = "TWILIGHT_WEB_ONBOARDING_CATEGORIES",
             l = "TWILIGHT_WEB_ONBOARDING_CHANNEL_RANKING",
             r = "TWILIGHT_WEB_ONBOARDING_FOLLOWING_FOR_YOU",
             o = "TWILIGHT_WEB_ONBOARDING",
             s = "TWILIGHT_WEB_ONBOARDING_RANDOMIZED_GAMES",
-            d = "control";
+            d = "TWILIGHT_WEB_ONBOARDING_FOLLOW_CATEGORIES",
+            u = "control";
         ! function(e) {
             e.Skip = "skip", e.NoSkip = "no_skip"
         }(i || (i = {}));
-        var u, c = new Set([i.Skip.toString(), i.NoSkip.toString()]);
+        var c, m = new Set([i.Skip.toString(), i.NoSkip.toString()]);
         ! function(e) {
             e.First = "first", e.Last = "last"
-        }(u || (u = {}));
-        var m, p = new Set([u.First.toString(), u.Last.toString()]);
-        (m || (m = {})).Yes = "yes";
-        var g;
-        (g || (g = {})).Yes = "yes";
+        }(c || (c = {}));
+        var p, g = new Set([c.First.toString(), c.Last.toString()]);
+        (p || (p = {})).Yes = "yes";
         var v;
-        (v || (v = {})).ENABLED = "enabled";
-        var h = function(e) {
-                return !!e && p.has(e)
+        (v || (v = {})).Yes = "yes";
+        var h;
+        (h || (h = {})).ENABLED = "enabled";
+        var f;
+        (f || (f = {})).ENABLED = "enabled";
+        var k = function(e) {
+                return !!e && g.has(e)
             },
-            f = function(e, t) {
-                return !!e && c.has(e) && h(t)
+            y = function(e, t) {
+                return !!e && m.has(e) && k(t)
             },
-            k = function(e, t, n) {
-                return !!e && c.has(e) && h(t) && n === m.Yes
+            S = function(e, t, n) {
+                return !!e && m.has(e) && k(t) && n === p.Yes
             },
-            y = function(e) {
-                return e.getTime() >= S().getTime()
+            w = function(e) {
+                return e.getTime() >= b().getTime()
             },
-            S = function() {
+            b = function() {
                 return new Date((new Date).getTime() - 12096e5)
             }
     },
@@ -3045,11 +3057,11 @@ webpackJsonp([46], {
                         return m.__generator(this, function(n) {
                             switch (n.label) {
                                 case 0:
-                                    return [4, v.n.experiments.getAssignment(N.g)];
+                                    return [4, v.n.experiments.getAssignment(N.h)];
                                 case 1:
-                                    return e = n.sent(), [4, v.n.experiments.getAssignment(N.h)];
+                                    return e = n.sent(), [4, v.n.experiments.getAssignment(N.i)];
                                 case 2:
-                                    return t = n.sent(), Object(N.l)(e, t) ? this.setState({
+                                    return t = n.sent(), Object(N.n)(e, t) ? this.setState({
                                         forYouAssignment: t
                                     }) : this.setState({
                                         forYouAssignment: null
@@ -3089,7 +3101,7 @@ webpackJsonp([46], {
                             targetBlank: Object(_.b)(),
                             "data-a-target": "following-communities-tab"
                         }, Object(v.d)("Communities", "FollowingPage"))];
-                    if (this.state.forYouAssignment && !this.props.data.error && this.props.data.currentUser && Object(N.m)(new Date(this.props.data.currentUser.createdAt))) {
+                    if (this.state.forYouAssignment && !this.props.data.error && this.props.data.currentUser && Object(N.o)(new Date(this.props.data.currentUser.createdAt))) {
                         var n = p.createElement(C._19, {
                             key: "following-foryou-tab",
                             "data-test-selector": "for-you-tab",
@@ -3097,7 +3109,7 @@ webpackJsonp([46], {
                             linkTo: "/directory/following/foryou",
                             "data-a-target": "following-foryou-tab"
                         }, Object(v.d)("For You", "FollowingHeaderTabs"));
-                        this.state.forYouAssignment === N.c.First ? t.unshift(n) : this.state.forYouAssignment === N.c.Last && t.push(n)
+                        this.state.forYouAssignment === N.d.First ? t.unshift(n) : this.state.forYouAssignment === N.d.Last && t.push(n)
                     }
                     return p.createElement(C.U, {
                         className: "following__header-tabs",
@@ -4093,22 +4105,22 @@ webpackJsonp([46], {
                         return m.__generator(this, function(i) {
                             switch (i.label) {
                                 case 0:
-                                    return v.n.setPageTitle(Object(v.d)("For You", "ForYouPage")), [4, v.n.experiments.getAssignment(N.g)];
+                                    return v.n.setPageTitle(Object(v.d)("For You", "ForYouPage")), [4, v.n.experiments.getAssignment(N.h)];
                                 case 1:
-                                    return e = i.sent(), [4, v.n.experiments.getAssignment(N.h)];
+                                    return e = i.sent(), [4, v.n.experiments.getAssignment(N.i)];
                                 case 2:
-                                    return t = i.sent(), Object(N.l)(e, t) ? [3, 3] : (this.redirectToFollowing(), [3, 5]);
+                                    return t = i.sent(), Object(N.n)(e, t) ? [3, 3] : (this.redirectToFollowing(), [3, 5]);
                                 case 3:
-                                    return [4, v.n.experiments.getAssignment(N.f)];
+                                    return [4, v.n.experiments.getAssignment(N.g)];
                                 case 4:
-                                    n = i.sent(), Object(N.j)(e, t, n) && this.loadChannelRankingsByGameData(), i.label = 5;
+                                    n = i.sent(), Object(N.l)(e, t, n) && this.loadChannelRankingsByGameData(), i.label = 5;
                                 case 5:
                                     return [2]
                             }
                         })
                     })
                 }, t.prototype.componentWillReceiveProps = function(e) {
-                    this.userFollowedGamesDataLoaded(e) && !Object(N.m)(new Date(e.data.currentUser.createdAt)) && this.redirectToFollowing()
+                    this.userFollowedGamesDataLoaded(e) && !Object(N.o)(new Date(e.data.currentUser.createdAt)) && this.redirectToFollowing()
                 }, t.prototype.componentDidUpdate = function() {
                     this.userFollowedGamesDataLoaded(this.props) && !this.state.loadingRankedChannelData && this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
@@ -8474,4 +8486,4 @@ webpackJsonp([46], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.following-627e3cfbfc8b0bb19aee13f73b6b48e5.js.map
+//# sourceMappingURL=pages.following-002b491e7cb243e6e58fabf35e4bcb2d.js.map

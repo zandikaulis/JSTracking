@@ -16304,7 +16304,10 @@ webpackJsonp([34], {
                         return c.createElement(b, {
                             key: t.id,
                             buttonConfiguration: function(t, n) {
-                                return e.onMoveClick ? 0 === t ? M.MoveDownAndRemoveOnly : t === n - 1 ? M.MoveUpAndRemoveOnly : M.AllButtons : M.RemoveOnly
+                                if (!e.onMoveClick) return M.RemoveOnly;
+                                var a = 0 === t,
+                                    r = t === n - 1;
+                                return a && r ? M.RemoveOnly : a ? M.MoveDownAndRemoveOnly : r ? M.MoveUpAndRemoveOnly : M.AllButtons
                             }(r, n.length),
                             member: t,
                             listItemsSelector: e.listItemsSelector,
@@ -16419,7 +16422,7 @@ webpackJsonp([34], {
                                     }
                                 })];
                             case 1:
-                                return (a = s.sent()).body && 200 === a.status ? [2, O(a.body.feature.channel)] : (r = a.error.message) && "" !== (i = w(r)) ? [2, Promise.reject(i)] : [2, Promise.reject(JSON.stringify(a.error))]
+                                return (a = s.sent()).body && 200 === a.status ? [2, O(a.body.featured_channel.channel)] : (r = a.error.message) && "" !== (i = w(r)) ? [2, Promise.reject(i)] : [2, Promise.reject(JSON.stringify(a.error))]
                         }
                     })
                 })
@@ -16427,47 +16430,47 @@ webpackJsonp([34], {
             W = this,
             I = this,
             N = function(e, t) {
-                return B("membership", e, t)
+                return B("/v5/teams/" + e + "/dashboard/channels/" + t + "/membership")
             },
             z = function(e, t) {
-                return B("featured_channels", e, t)
+                return B("/v5/teams/" + e + "/dashboard/featured_channels/" + t)
             },
             R = function(e, t) {
-                return B("invitation", e, t)
+                return B("/v5/teams/" + e + "/dashboard/channels/" + t + "/invitation")
             },
-            B = function(e, t, n) {
+            B = function(e) {
                 return l.__awaiter(I, void 0, void 0, function() {
-                    var a, r;
-                    return l.__generator(this, function(i) {
-                        switch (i.label) {
+                    var t;
+                    return l.__generator(this, function(n) {
+                        switch (n.label) {
                             case 0:
-                                return a = "/v5/teams/" + t + "/dashboard/channels/" + n + "/" + e, [4, A.a.delete(a)];
+                                return [4, A.a.delete(e)];
                             case 1:
-                                return r = i.sent(), [2, 204 === r.status]
+                                return t = n.sent(), [2, 204 === t.status]
                         }
                     })
                 })
             },
             J = this,
             V = function(e, t, n) {
-                return G("membership", e, t, n)
+                return G("/v5/teams/" + e + "/dashboard/channels/" + t + "/membership", n)
             },
             U = function(e, t, n) {
-                return G("featured_channels", e, t, n)
+                return G("/v5/teams/" + e + "/dashboard/featured_channels/" + t, n)
             },
-            G = function(e, t, n, a) {
+            G = function(e, t) {
                 return l.__awaiter(J, void 0, void 0, function() {
-                    var r, i;
-                    return l.__generator(this, function(s) {
-                        switch (s.label) {
+                    var n;
+                    return l.__generator(this, function(a) {
+                        switch (a.label) {
                             case 0:
-                                return r = "/v5/teams/" + t + "/dashboard/channels/" + n + "/" + e, [4, A.a.put(r, {
+                                return [4, A.a.put(e, {
                                     body: {
-                                        display_position: a
+                                        display_position: t
                                     }
                                 })];
                             case 1:
-                                return i = s.sent(), [2, 204 === i.status]
+                                return n = a.sent(), [2, 204 === n.status]
                         }
                     })
                 })
@@ -16476,15 +16479,7 @@ webpackJsonp([34], {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        featuredChannels: [{
-                            id: 0,
-                            displayName: "Person 0",
-                            avatarSrc: "a logo url"
-                        }, {
-                            id: 1,
-                            displayName: "Person 1",
-                            avatarSrc: "another logo url"
-                        }],
+                        featuredChannels: [],
                         tooltipError: "",
                         isDisabled: !1
                     }, t.handleAddFeaturedChannel = function(e) {
@@ -21492,4 +21487,4 @@ webpackJsonp([34], {
         }
     }
 });
-//# sourceMappingURL=pages.teams-dashboard-dcf463adc85d7febbb21c45a7e9de59e.js.map
+//# sourceMappingURL=pages.teams-dashboard-dab1270a3e3246a9945a59e7bad9f7b3.js.map

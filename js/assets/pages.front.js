@@ -2498,65 +2498,72 @@ webpackJsonp([44], {
     },
     DBTH: function(e, t, n) {
         "use strict";
-        n.d(t, "e", function() {
+        n.d(t, "f", function() {
             return a
-        }), n.d(t, "f", function() {
-            return r
-        }), n.d(t, "h", function() {
-            return o
         }), n.d(t, "g", function() {
-            return l
+            return r
         }), n.d(t, "i", function() {
-            return s
-        }), n.d(t, "a", function() {
-            return d
-        }), n.d(t, "c", function() {
-            return c
-        }), n.d(t, "b", function() {
-            return f
-        }), n.d(t, "d", function() {
-            return g
+            return o
+        }), n.d(t, "h", function() {
+            return l
         }), n.d(t, "k", function() {
-            return v
-        }), n.d(t, "l", function() {
-            return h
+            return s
         }), n.d(t, "j", function() {
-            return k
+            return d
+        }), n.d(t, "a", function() {
+            return c
+        }), n.d(t, "d", function() {
+            return u
+        }), n.d(t, "b", function() {
+            return g
+        }), n.d(t, "c", function() {
+            return v
+        }), n.d(t, "e", function() {
+            return h
         }), n.d(t, "m", function() {
+            return k
+        }), n.d(t, "n", function() {
             return b
+        }), n.d(t, "l", function() {
+            return y
+        }), n.d(t, "o", function() {
+            return S
         });
         var i, a = "TWILIGHT_WEB_ONBOARDING_CATEGORIES",
             r = "TWILIGHT_WEB_ONBOARDING_CHANNEL_RANKING",
             o = "TWILIGHT_WEB_ONBOARDING_FOLLOWING_FOR_YOU",
             l = "TWILIGHT_WEB_ONBOARDING",
             s = "TWILIGHT_WEB_ONBOARDING_RANDOMIZED_GAMES",
-            d = "control";
+            d = "TWILIGHT_WEB_ONBOARDING_FOLLOW_CATEGORIES",
+            c = "control";
         ! function(e) {
             e.Skip = "skip", e.NoSkip = "no_skip"
         }(i || (i = {}));
-        var c, u = new Set([i.Skip.toString(), i.NoSkip.toString()]);
+        var u, m = new Set([i.Skip.toString(), i.NoSkip.toString()]);
         ! function(e) {
             e.First = "first", e.Last = "last"
-        }(c || (c = {}));
-        var m, p = new Set([c.First.toString(), c.Last.toString()]);
-        (m || (m = {})).Yes = "yes";
-        var f;
-        (f || (f = {})).Yes = "yes";
+        }(u || (u = {}));
+        var p, f = new Set([u.First.toString(), u.Last.toString()]);
+        (p || (p = {})).Yes = "yes";
         var g;
-        (g || (g = {})).ENABLED = "enabled";
-        var v = function(e) {
-                return !!e && p.has(e)
+        (g || (g = {})).Yes = "yes";
+        var v;
+        (v || (v = {})).ENABLED = "enabled";
+        var h;
+        (h || (h = {})).ENABLED = "enabled";
+        var k = function(e) {
+                return !!e && f.has(e)
             },
-            h = function(e, t) {
-                return !!e && u.has(e) && v(t)
+            b = function(e, t) {
+                return !!e && m.has(e) && k(t)
             },
-            k = function(e, t, n) {
-                return !!e && u.has(e) && v(t) && n === m.Yes
+            y = function(e, t, n) {
+                return !!e && m.has(e) && k(t) && n === p.Yes
             },
-            b = function(e) {
-                return e.getTime() >= y().getTime()
+            S = function(e) {
+                return e.getTime() >= _().getTime()
             },
-            y = function() {
+            _ = function() {
                 return new Date((new Date).getTime() - 12096e5)
             }
     },
@@ -3508,7 +3515,7 @@ webpackJsonp([44], {
                     return t.state = {
                         isOnboardingDismissedCookieSet: void 0 !== v.get(I)
                     }, t.handleAutoOnboardingRedirect = function() {
-                        void 0 === v.get(F) && Object(k.m)(new Date(t.props.data.currentUser.createdAt)) && (v.set(F, !0, D), t.redirectToOnboarding(b.b.NewSignup))
+                        void 0 === v.get(F) && Object(k.o)(new Date(t.props.data.currentUser.createdAt)) && (v.set(F, !0, D), t.redirectToOnboarding(b.b.NewSignup))
                     }, t.startOnboarding = function() {
                         t.redirectToOnboarding(b.b.HomepageCTA)
                     }, t.redirectToOnboarding = function(e) {
@@ -3538,7 +3545,7 @@ webpackJsonp([44], {
                         })
                     })
                 }, t.prototype.render = function() {
-                    return this.state.isOnboardingDismissedCookieSet || !this.followedGamesForUserHasLoaded() || !this.state.experimentAssignment || this.props.data.currentUser.followedGames.nodes.length >= (T.get(this.state.experimentAssignment) || 0) || !Object(k.m)(new Date(this.props.data.currentUser.createdAt)) ? null : (this.handleAutoOnboardingRedirect(), a.createElement(E._18, {
+                    return this.state.isOnboardingDismissedCookieSet || !this.followedGamesForUserHasLoaded() || !this.state.experimentAssignment || this.props.data.currentUser.followedGames.nodes.length >= (T.get(this.state.experimentAssignment) || 0) || !Object(k.o)(new Date(this.props.data.currentUser.createdAt)) ? null : (this.handleAutoOnboardingRedirect(), a.createElement(E._18, {
                         "data-test-selector": "onboarding-prompt",
                         background: E.m.Base,
                         display: E.H.Flex,
@@ -11359,4 +11366,4 @@ webpackJsonp([44], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.front-ca229944554f1483104eaa0cd55e8332.js.map
+//# sourceMappingURL=pages.front-7a5978798445c1a700c5b717a6233677.js.map
