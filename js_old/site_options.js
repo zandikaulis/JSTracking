@@ -329,13 +329,13 @@ window.SiteOptions = {
         },
         "143a0729-4294-48b3-bc05-e611afa52eb1": {
             "name": "android_track_network_request_latency",
-            "v": 2698,
+            "v": 2826,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 99,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 1,
                 "value": "active"
             }]
         },
@@ -755,13 +755,13 @@ window.SiteOptions = {
         },
         "286aa215-8f95-4f9d-86f0-232fb96ec4f0": {
             "name": "ios_latency_tracking",
-            "v": 2631,
+            "v": 2827,
             "t": 1,
             "groups": [{
-                "weight": 0,
+                "weight": 1,
                 "value": "active"
             }, {
-                "weight": 100,
+                "weight": 99,
                 "value": "control"
             }]
         },
