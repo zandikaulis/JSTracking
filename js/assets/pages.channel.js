@@ -27046,10 +27046,8 @@ webpackJsonp([33], {
                         "data-a-target": "additional-reaction-" + n
                     }))
                 });
-                return o.createElement(C.U, {
-                    position: C._3.Relative
-                }, o.createElement(C.p, {
-                    direction: C.q.TopCenter,
+                return o.createElement(C.p, {
+                    direction: e.position || C.q.TopCenter,
                     size: C.r.Small,
                     show: !0
                 }, o.createElement(C._18, {
@@ -27058,7 +27056,7 @@ webpackJsonp([33], {
                         left: 1,
                         top: 1
                     }
-                }, t)))
+                }, t))
             }),
             w = Object(S.c)("TopReactions", {
                 autoReportInteractive: !0
@@ -27131,7 +27129,7 @@ webpackJsonp([33], {
                         visible: this.state.emoteSelectorVisible && this.state.emotesLoaded,
                         toggleVisibility: this.toggleEmoteSelector,
                         onLoad: this.emotesLoaded,
-                        direction: C.q.TopLeft
+                        direction: this.props.position || C.q.TopLeft
                     }), e))
                 }, t = p.__decorate([Object(S.c)("ReactionSelector")], t)
             }(o.Component));
@@ -27237,38 +27235,41 @@ webpackJsonp([33], {
                     var n = function(n) {
                             return e.toggleAdditional(t, n)
                         },
-                        a = null;
-                    this.state.additionalReactionsVisible && (a = o.createElement(E, {
+                        a = this.props.emoteSelectorAndOverflowPos && this.props.emoteSelectorAndOverflowPos === C.q.Bottom ? C.q.BottomCenter : C.q.TopCenter,
+                        r = null;
+                    this.state.additionalReactionsVisible && (r = o.createElement(E, {
                         reactions: t.slice(L),
                         addReaction: this.addReaction,
-                        removeReaction: this.removeReaction
+                        removeReaction: this.removeReaction,
+                        position: a
                     }));
-                    var r = null;
-                    r = o.createElement(w, {
+                    var s = null;
+                    s = o.createElement(w, {
                         reactions: t.slice(0, L),
                         addReaction: this.addReaction,
                         removeReaction: this.removeReaction
                     });
-                    var s = null;
-                    this.props.reactions && this.state.totalReactionCount > 0 && (s = this.props.reactions.length >= L ? o.createElement("a", {
+                    var l = null;
+                    this.props.reactions && this.state.totalReactionCount > 0 && (l = this.props.reactions.length >= L ? o.createElement("a", {
                         href: "#",
                         onClick: n,
                         "data-test-selector": F
                     }, this.state.totalReactionCount) : o.createElement("span", {
                         "data-test-selector": F,
                         "data-a-target": "pulse-reaction-count"
-                    }, this.state.totalReactionCount)), this.state.additionalReactionsVisible || (s = o.createElement(C._30, {
+                    }, this.state.totalReactionCount)), this.state.additionalReactionsVisible || (l = o.createElement(C._30, {
                         label: Object(f.d)("Total Reactions", "ReactionList"),
                         direction: C._32.Top,
                         align: C._31.Center
-                    }, s));
-                    var l = null;
-                    return this.props.isLoggedIn && (l = o.createElement(C.U, {
+                    }, l)), a = this.props.emoteSelectorAndOverflowPos && this.props.emoteSelectorAndOverflowPos === C.q.Bottom ? C.q.BottomLeft : C.q.TopLeft;
+                    var c = null;
+                    return this.props.isLoggedIn && (c = o.createElement(C.U, {
                         margin: {
                             right: 1
                         }
                     }, o.createElement(T, {
-                        onEmoteSelect: this.addReaction
+                        onEmoteSelect: this.addReaction,
+                        position: a
                     }, o.createElement(C._9, {
                         asset: C._10.AddReaction,
                         type: C._11.Brand,
@@ -27278,13 +27279,15 @@ webpackJsonp([33], {
                         display: C.H.Flex,
                         alignItems: C.c.Center,
                         padding: 1
-                    }, r, o.createElement(C.U, {
+                    }, s, o.createElement(C.U, {
                         margin: {
                             right: 1
                         }
-                    }, l), o.createElement(g.a, {
+                    }, c), o.createElement(C.P, {
+                        position: C._3.Relative
+                    }, o.createElement(g.a, {
                         onClickOut: this.hideAdditional
-                    }, a, s))
+                    }, r, l)))
                 }, t.contextTypes = {
                     feedTrackingProps: h.object
                 }, t = p.__decorate([Object(v.a)(D, {
@@ -27393,7 +27396,8 @@ webpackJsonp([33], {
                         })
                     })), o.createElement(j, {
                         parentEntity: "post:" + l,
-                        reactions: c
+                        reactions: c,
+                        emoteSelectorAndOverflowPos: e.emoteSelectorAndOverflowPos
                     }))
                 }),
                 Video: Object(S.c)("VideoContent", {
@@ -27418,7 +27422,8 @@ webpackJsonp([33], {
             H = function(e) {
                 var t = B[e.content.__typename];
                 return o.createElement(t, {
-                    content: e.content
+                    content: e.content,
+                    emoteSelectorAndOverflowPos: e.emoteSelectorAndOverflowPos
                 })
             };
         n.d(t, "b", function() {
@@ -35529,16 +35534,13 @@ webpackJsonp([33], {
                         content: this.props.data.feedItemContent,
                         deletePost: this.deletePost
                     })), u.createElement(Je.a, {
-                        content: this.props.data.feedItemContent
+                        content: this.props.data.feedItemContent,
+                        emoteSelectorAndOverflowPos: O.q.Bottom
                     })), u.createElement(Qe.a, {
                         onClickOut: this.props.onClose
                     }, u.createElement(O._18, {
                         className: "post-modal-card",
                         elevation: 1,
-                        margin: {
-                            top: 5,
-                            bottom: 1
-                        },
                         background: O.m.Base,
                         position: O._3.Relative
                     }, e))
@@ -43257,4 +43259,4 @@ webpackJsonp([33], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-cca8d23449f315bd83f89af0b660266c.js.map
+//# sourceMappingURL=pages.channel-59199ba7580cdbbd358e0ddb6b86a981.js.map

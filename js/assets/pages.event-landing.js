@@ -4471,7 +4471,8 @@ webpackJsonp([45], {
                         onMouseLeave: this.onMouseLeaveHandler
                     }, Object(C._39)(this.props)), p.createElement(C.A, null, p.createElement(M.a, {
                         to: {
-                            pathname: "/videos/" + this.props.video.id + e,
+                            pathname: "/videos/" + this.props.video.id,
+                            search: e,
                             state: this.props.tracking
                         },
                         title: this.props.video.title,
@@ -10727,4 +10728,4 @@ webpackJsonp([45], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.event-landing-9f1c43c5c1eccdd0e8a3f85ce31014d1.js.map
+//# sourceMappingURL=pages.event-landing-419684421cd3aee5613adf15e6855983.js.map

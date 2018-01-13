@@ -1620,8 +1620,8 @@ webpackJsonp([44], {
                     firstPageLoaded: !!e.session.firstPageLoaded
                 }
             })(G),
-            z = (n("ukY1"), n("F1v6")),
-            q = function(e) {
+            q = (n("ukY1"), n("F1v6")),
+            z = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -1729,7 +1729,7 @@ webpackJsonp([44], {
                         target: "_blank",
                         rel: "noopener noreferrer"
                     }, s)))))
-                }, t = a.__decorate([Object(d.a)(z, {
+                }, t = a.__decorate([Object(d.a)(q, {
                     options: function() {
                         return {
                             variables: {
@@ -1743,7 +1743,7 @@ webpackJsonp([44], {
         n.d(t, "b", function() {
             return B
         }), n.d(t, "a", function() {
-            return q
+            return z
         }), n.d(t, "c", function() {
             return k.d
         })
@@ -3656,7 +3656,7 @@ webpackJsonp([44], {
             })(V),
             G = n("T0IN"),
             B = n("NqVV"),
-            z = new Map([
+            q = new Map([
                 ["52233100", "179571457"],
                 ["66228451", "179571772"],
                 ["72433606", "179571940"],
@@ -3697,7 +3697,7 @@ webpackJsonp([44], {
                 ["124751250", "179952949"],
                 ["51533859", "179570565"]
             ]),
-            q = Array.from(z.keys()),
+            z = Array.from(q.keys()),
             H = ["28036688", "30672745", "31582795", "51533859", "63321379", "62983472", "29400754"],
             W = n("fc0G"),
             Q = n("yw9L"),
@@ -3883,7 +3883,7 @@ webpackJsonp([44], {
                 }, t.prototype.addLiveUsersToUsedStreamerTrailers = function(e) {
                     for (var t = 0; t < e.length && !(t >= 4); t++) {
                         var n = e[t],
-                            i = z.get(n) || "",
+                            i = q.get(n) || "",
                             a = this.userIDToData.get(n) || this.blankUser;
                         if ("" !== i) {
                             var r = this.props.showTrailers ? "online-streamer-trailer" : "online-stream-trailer";
@@ -3903,7 +3903,7 @@ webpackJsonp([44], {
                             }
                         }
                         if (i) {
-                            var l = z.get(a) || "",
+                            var l = q.get(a) || "",
                                 s = this.userIDToData.get(a) || this.blankUser;
                             if (void 0 !== l && "" !== s.login) {
                                 var d = this.props.showTrailers ? "offline-streamer-trailer" : "offline-streamer-video";
@@ -3922,7 +3922,7 @@ webpackJsonp([44], {
                 }, t = i.__decorate([Object(f.c)("StreamerTrailer"), Object(h.a)(Q, {
                     options: {
                         variables: {
-                            ids: q
+                            ids: z
                         }
                     }
                 })], t)
@@ -6796,10 +6796,8 @@ webpackJsonp([44], {
                         "data-a-target": "additional-reaction-" + n
                     }))
                 });
-                return o.createElement(_.U, {
-                    position: _._3.Relative
-                }, o.createElement(_.p, {
-                    direction: _.q.TopCenter,
+                return o.createElement(_.p, {
+                    direction: e.position || _.q.TopCenter,
                     size: _.r.Small,
                     show: !0
                 }, o.createElement(_._18, {
@@ -6808,7 +6806,7 @@ webpackJsonp([44], {
                         left: 1,
                         top: 1
                     }
-                }, t)))
+                }, t))
             }),
             C = Object(S.c)("TopReactions", {
                 autoReportInteractive: !0
@@ -6881,7 +6879,7 @@ webpackJsonp([44], {
                         visible: this.state.emoteSelectorVisible && this.state.emotesLoaded,
                         toggleVisibility: this.toggleEmoteSelector,
                         onLoad: this.emotesLoaded,
-                        direction: _.q.TopLeft
+                        direction: this.props.position || _.q.TopLeft
                     }), e))
                 }, t = p.__decorate([Object(S.c)("ReactionSelector")], t)
             }(o.Component));
@@ -6987,38 +6985,41 @@ webpackJsonp([44], {
                     var n = function(n) {
                             return e.toggleAdditional(t, n)
                         },
-                        a = null;
-                    this.state.additionalReactionsVisible && (a = o.createElement(N, {
+                        a = this.props.emoteSelectorAndOverflowPos && this.props.emoteSelectorAndOverflowPos === _.q.Bottom ? _.q.BottomCenter : _.q.TopCenter,
+                        r = null;
+                    this.state.additionalReactionsVisible && (r = o.createElement(N, {
                         reactions: t.slice(R),
                         addReaction: this.addReaction,
-                        removeReaction: this.removeReaction
+                        removeReaction: this.removeReaction,
+                        position: a
                     }));
-                    var r = null;
-                    r = o.createElement(C, {
+                    var l = null;
+                    l = o.createElement(C, {
                         reactions: t.slice(0, R),
                         addReaction: this.addReaction,
                         removeReaction: this.removeReaction
                     });
-                    var l = null;
-                    this.props.reactions && this.state.totalReactionCount > 0 && (l = this.props.reactions.length >= R ? o.createElement("a", {
+                    var s = null;
+                    this.props.reactions && this.state.totalReactionCount > 0 && (s = this.props.reactions.length >= R ? o.createElement("a", {
                         href: "#",
                         onClick: n,
                         "data-test-selector": T
                     }, this.state.totalReactionCount) : o.createElement("span", {
                         "data-test-selector": T,
                         "data-a-target": "pulse-reaction-count"
-                    }, this.state.totalReactionCount)), this.state.additionalReactionsVisible || (l = o.createElement(_._30, {
+                    }, this.state.totalReactionCount)), this.state.additionalReactionsVisible || (s = o.createElement(_._30, {
                         label: Object(g.d)("Total Reactions", "ReactionList"),
                         direction: _._32.Top,
                         align: _._31.Center
-                    }, l));
-                    var s = null;
-                    return this.props.isLoggedIn && (s = o.createElement(_.U, {
+                    }, s)), a = this.props.emoteSelectorAndOverflowPos && this.props.emoteSelectorAndOverflowPos === _.q.Bottom ? _.q.BottomLeft : _.q.TopLeft;
+                    var d = null;
+                    return this.props.isLoggedIn && (d = o.createElement(_.U, {
                         margin: {
                             right: 1
                         }
                     }, o.createElement(D, {
-                        onEmoteSelect: this.addReaction
+                        onEmoteSelect: this.addReaction,
+                        position: a
                     }, o.createElement(_._9, {
                         asset: _._10.AddReaction,
                         type: _._11.Brand,
@@ -7028,13 +7029,15 @@ webpackJsonp([44], {
                         display: _.H.Flex,
                         alignItems: _.c.Center,
                         padding: 1
-                    }, r, o.createElement(_.U, {
+                    }, l, o.createElement(_.U, {
                         margin: {
                             right: 1
                         }
-                    }, s), o.createElement(v.a, {
+                    }, d), o.createElement(_.P, {
+                        position: _._3.Relative
+                    }, o.createElement(v.a, {
                         onClickOut: this.hideAdditional
-                    }, a, l))
+                    }, r, s)))
                 }, t.contextTypes = {
                     feedTrackingProps: f.object
                 }, t = p.__decorate([Object(h.a)(F, {
@@ -7143,7 +7146,8 @@ webpackJsonp([44], {
                         })
                     })), o.createElement(L, {
                         parentEntity: "post:" + s,
-                        reactions: d
+                        reactions: d,
+                        emoteSelectorAndOverflowPos: e.emoteSelectorAndOverflowPos
                     }))
                 }),
                 Video: Object(S.c)("VideoContent", {
@@ -7168,7 +7172,8 @@ webpackJsonp([44], {
             G = function(e) {
                 var t = M[e.content.__typename];
                 return o.createElement(t, {
-                    content: e.content
+                    content: e.content,
+                    emoteSelectorAndOverflowPos: e.emoteSelectorAndOverflowPos
                 })
             };
         n.d(t, "b", function() {
@@ -11366,4 +11371,4 @@ webpackJsonp([44], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.front-7a5978798445c1a700c5b717a6233677.js.map
+//# sourceMappingURL=pages.front-d13d6d8fbd1533e698ce68dd96386f0a.js.map
