@@ -17771,11 +17771,12 @@ webpackJsonp([35, 66], {
             ne = /\S/,
             ie = function(e) {
                 var t = e.video,
-                    n = !!t.publishedAt,
-                    i = Object(v.g)(new Date(t.publishedAt)),
-                    a = t.title && "" !== t.title && ne.test(t.title),
-                    r = "";
-                return a && n ? r = t.title + " · " + i : t.title && a && !n ? r = t.title : !a && n && (r = i), f.createElement(L._18, {
+                    n = "",
+                    i = "",
+                    a = !!t.publishedAt;
+                a && (n = Object(v.g)(new Date(t.publishedAt)));
+                var r = t.title && "" !== t.title && ne.test(t.title);
+                return r && a ? i = t.title + " · " + n : t.title && r && !a ? i = t.title : !r && a && (i = n), f.createElement(L._18, {
                     margin: {
                         bottom: .5
                     }
@@ -17783,7 +17784,7 @@ webpackJsonp([35, 66], {
                     ellipsis: !0,
                     title: t.title,
                     fontSize: L.L.Size4
-                }, r))
+                }, i))
             },
             ae = Object(O.c)("VideoInfo", {
                 autoReportInteractive: !0
@@ -19685,4 +19686,4 @@ webpackJsonp([35, 66], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.video-watch-6158fa835e925e6ebbe3a8ee0389fd89.js.map
+//# sourceMappingURL=pages.video-watch-cc25512fe1a9eb5f17b556c2170ac2a4.js.map
