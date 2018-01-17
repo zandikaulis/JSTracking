@@ -2590,7 +2590,7 @@ window.SiteOptions = {
         },
         "8751df7a-c44b-460b-b291-6ae249202626": {
             "name": "android_videoplayer_v4",
-            "v": 2785,
+            "v": 2837,
             "t": 1,
             "groups": [{
                 "weight": 5,
@@ -2599,10 +2599,10 @@ window.SiteOptions = {
                 "weight": 1,
                 "value": "native"
             }, {
-                "weight": 5,
+                "weight": 0,
                 "value": "playercore"
             }, {
-                "weight": 88,
+                "weight": 93,
                 "value": "exoplayer"
             }, {
                 "weight": 1,
