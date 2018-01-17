@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".b16c3f53af74d0dc3d65.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".ea75184d5b842ba2d153.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -22315,7 +22315,7 @@
                     u = v.a(!0),
                     c = b.k() === b.p ? null : E;
                 return {
-                    app_version: "2018.01.12-032119+ee3a8d7d22a0fd4bf2ae051ca25329f791c2e336",
+                    app_version: "2018.01.17-175937+7ecb2c9c7149748ea8b2e89c9d13e9e4fff3bff5",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -30934,7 +30934,7 @@
         n.d(t, "a", function() {
             return r
         });
-        var r = "//video-edge-a6ed8a.sjc01.hls.ttvnw.net/v1/playlist/CiXE31CFVvo20P6hXzAcftbq3_ow-W_xG5tIgD-SoGuzBG54hruppV6tPlrr37FShfSNYHh53fXpb-Uqn5v8eL_3M1rT1kpSQV-uvnpaVtS_d13P14qBrbTas_74bPxd0Krzn7aV6T70S3LMmCU6eIm4bTxuvZaJ-k2cZtx6GpgyuHMH0r9h5K-srAd3agl6_ZC88cMFwTaP0ZkyZbhINbLI0eydLzj7rS8W38Voxu60gEc_26i8FmBiLqAwBudrmHjV5DNwXP2iClzo1O4b-nE9UWbsJjo8jxDXwVvB3MyNfuEFKXpCJo9K7WP_ygAMJXE58-K5t3WPVnUpADztda5Cawjw7qRADWk8AoZ3bzgAam2dza6YvJmsfdvHK2q2aRspKBEVm7oA9ZuLfJawAy-Uz3qBDYBs7hmrXamuXRq9_uIkIQ88W7eIa2dX.m3u8"
+        var r = "//video-edge-82af50.sjc01.hls.ttvnw.net/v1/playlist/CmDxSJYcUGIi5KuJSqJuDiEbD_fRkhGThLJEYb-L6sSei9LO2Sb5psc7QVbCdmn149u2B2ixSeB-JxRPkT_oQWLyh4C1TbT31uCJuDyc92dveREU90cEihPK3aKA6GuWQqTp-ZRl2sMFGW0IkTtPXtf5jjvV-XsFmHIVYsjIuBqfFPwRIpXOooZ33jlyAXHOawKMVb7NuNe8Xj84YmXcPEyqK8a2byEjvwvUfVx0AtSmqJxvsHyBGHeKCkEvyUBJUWaOBoQ8QR-HG1beEVrRaW6mDeYueOAY1zDYFQNlfMmSKDio0vOgQgZTPOd8vv6IJpFBWoGUsGPlQJhjGaD86CboJAyVYlpwaOo1ONP1EmPDsdhGttHdS3EvlhQlbP1REOfrV2CTmC0nVegxK0ucLIQFOPiGb5u3max1eM8OV_mEQEaX_--srvmNBTP2MNYm5pduqs_x5bJ4L2og3OX.m3u8"
     }, function(e, t, n) {
         "use strict";
 
@@ -43533,7 +43533,7 @@
             }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
         }
         n.d(t, "a", function() {
-            return S
+            return P
         });
         var o = n(0),
             s = n.n(o),
@@ -43547,7 +43547,8 @@
             m = n(52),
             v = n(21),
             y = n(39),
-            g = function() {
+            g = n(6),
+            b = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var r = t[n];
@@ -43558,11 +43559,12 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            b = {
+            _ = {
                 isAutoQuality: c.a.bool.isRequired,
                 isEnded: c.a.bool.isRequired,
                 isPaused: c.a.bool.isRequired,
                 isSettingsShown: c.a.bool.isRequired,
+                isClipsPlayerType: c.a.bool.isRequired,
                 onShowSettings: c.a.func,
                 playerHeight: c.a.number.isRequired,
                 qualitiesAvailable: c.a.bool.isRequired,
@@ -43570,21 +43572,23 @@
                 trackEvent: c.a.func.isRequired,
                 windowObj: c.a.object.isRequired
             },
-            _ = {
+            w = {
                 showSettings: function() {}
             },
-            w = function(e) {
+            k = function(e) {
                 var t = e.analyticsTracker,
                     n = e.quality,
                     r = e.playback,
                     i = e.playerDimensions,
                     a = e.ui,
-                    o = e.window;
+                    o = e.window,
+                    s = e.env;
                 return {
                     isAutoQuality: n.selected === y.c,
                     isEnded: r.ended,
                     isPaused: r.paused,
                     isSettingsShown: a.showSettings === v.i,
+                    isClipsPlayerType: g.f.includes(s.playerType),
                     playerHeight: i.height,
                     qualitiesAvailable: n.available.length > 0,
                     qualityIsChanging: n.selected !== n.current,
@@ -43592,7 +43596,7 @@
                     windowObj: o
                 }
             },
-            k = function(e) {
+            E = function(e) {
                 return {
                     onShowSettings: function() {
                         var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : v.g;
@@ -43600,13 +43604,13 @@
                     }
                 }
             },
-            E = function(e) {
+            S = function(e) {
                 function t() {
                     r(this, t);
                     var e = i(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
                     return e.handleSettingsButtonClick = e.handleSettingsButtonClick.bind(e), e.handleWindowBlur = e.handleWindowBlur.bind(e), e
                 }
-                return a(t, e), g(t, [{
+                return a(t, e), b(t, [{
                     key: "componentDidMount",
                     value: function() {
                         this.props.windowObj.addEventListener("blur", this.handleWindowBlur)
@@ -43643,23 +43647,24 @@
                             a = e.playerHeight,
                             o = e.qualitiesAvailable,
                             u = e.qualityIsChanging,
-                            c = i ? s.a.createElement(m.h, {
+                            c = e.isClipsPlayerType,
+                            l = i ? s.a.createElement(m.h, {
                                 playerHeight: a
                             }) : null,
-                            l = !t && o && u,
-                            d = !n && !r,
-                            f = l && d;
+                            d = !t && o && u && !c,
+                            f = !n && !r,
+                            v = d && f;
                         return s.a.createElement("div", {
                             className: "pl-flex"
                         }, s.a.createElement(p.a, null), s.a.createElement(h.a, {
                             onClick: this.handleSettingsButtonClick,
-                            showSpinningAnimation: f
-                        }), c)
+                            showSpinningAnimation: v
+                        }), l)
                     }
                 }]), t
             }(s.a.Component);
-        E.propTypes = b, E.defaultProps = _;
-        var S = n.i(f.connect)(w, k)(d()(E))
+        S.propTypes = _, S.defaultProps = w;
+        var P = n.i(f.connect)(k, E)(d()(S))
     }, function(e, t, n) {
         "use strict";
 
