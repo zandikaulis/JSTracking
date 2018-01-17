@@ -12,9 +12,6 @@ window.__twilightSettings = {
     "bits_truex_api_url": "https://get.truex.com/v2",
     "bits_truex_partner_hash": "af4f4f3a5b1e302e3e17383b8dd300cb6867ec84",
     "bits_truex_script_url": "https://static.truex.com/js/client.js",
-    "blitz_channels": ["lunacyhatter", "n5devtest", "blitz_blitz_blitz", "primevideo"],
-    "blitz_frame_url": "https://twitch.amazon.com/prime/video/",
-    "blitz_player_front": true,
     "browser_notifications_launch": true,
     "chatrooms_enabled": false,
     "commerce_gdp_launch": "off",
@@ -147,13 +144,13 @@ window.__twilightSettings = {
         },
         "3763f4e7-c786-4000-a6c3-b91b9c774302": {
             "name": "twilight_fenix_down",
-            "v": 2623,
+            "v": 2839,
             "t": 1,
             "groups": [{
-                "weight": 50,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 50,
+                "weight": 100,
                 "value": "recs"
             }]
         },
