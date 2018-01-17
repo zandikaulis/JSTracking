@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".ea75184d5b842ba2d153.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".4d2e1188a7106d513a8c.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -22315,7 +22315,7 @@
                     u = v.a(!0),
                     c = b.k() === b.p ? null : E;
                 return {
-                    app_version: "2018.01.17-175937+7ecb2c9c7149748ea8b2e89c9d13e9e4fff3bff5",
+                    app_version: "2018.01.17-181027+fcecda7cc755c6ac0f219b62faf7932a3c22e6d9",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
