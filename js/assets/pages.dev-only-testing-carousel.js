@@ -15,69 +15,69 @@ webpackJsonp([53], {
                     return t.state = {}, t
                 }
                 return n.__extends(t, e), t.prototype.render = function() {
-                    return a.createElement(i.b, null, a.createElement(l.U, {
+                    return a.createElement(i.b, null, a.createElement(l.V, {
                         className: "testing-carousel",
                         padding: 3
-                    }, a.createElement(l._22, {
-                        type: l._27.H2
-                    }, "Media Carousel - Standard"), a.createElement(l.U, {
+                    }, a.createElement(l._23, {
+                        type: l._28.H2
+                    }, "Media Carousel - Standard"), a.createElement(l.V, {
                         "data-a-target": "carousel-standard"
-                    }, a.createElement(l.P, {
+                    }, a.createElement(l.Q, {
                         margin: {
                             bottom: 3,
                             top: 1
                         }
                     }, a.createElement(o.a, {
                         items: this.renderStandardItems()
-                    }))), a.createElement(l._22, {
-                        type: l._27.H2
-                    }, "Media Carousel - Tiny"), a.createElement(l.U, {
+                    }))), a.createElement(l._23, {
+                        type: l._28.H2
+                    }, "Media Carousel - Tiny"), a.createElement(l.V, {
                         "data-a-target": "carousel-standard-tiny"
-                    }, a.createElement(l.P, {
+                    }, a.createElement(l.Q, {
                         margin: {
                             bottom: 3,
                             top: 1
                         }
                     }, a.createElement(o.a, {
                         items: this.renderStandardTinyItems()
-                    }))), a.createElement(l._22, {
-                        type: l._27.H2
-                    }, "Media Carousel - HUGE"), a.createElement(l.U, {
+                    }))), a.createElement(l._23, {
+                        type: l._28.H2
+                    }, "Media Carousel - HUGE"), a.createElement(l.V, {
                         "data-a-target": "carousel-standard-huge"
-                    }, a.createElement(l.P, {
+                    }, a.createElement(l.Q, {
                         margin: {
                             bottom: 3,
                             top: 1
                         }
                     }, a.createElement(o.a, {
                         items: this.renderStandardHugeItems()
-                    }))), a.createElement(l._22, {
-                        type: l._27.H2
-                    }, "Media Carousel - Single"), a.createElement(l.U, {
+                    }))), a.createElement(l._23, {
+                        type: l._28.H2
+                    }, "Media Carousel - Single"), a.createElement(l.V, {
                         "data-a-target": "carousel-single"
-                    }, a.createElement(l.P, {
+                    }, a.createElement(l.Q, {
                         margin: {
                             bottom: 3,
                             top: 1
                         }
                     }, a.createElement(o.a, {
                         items: this.renderSingleItem()
-                    }))), a.createElement(l._22, {
-                        type: l._27.H2
-                    }, "Media Carousel - Single and HUGE"), a.createElement(l.U, {
+                    }))), a.createElement(l._23, {
+                        type: l._28.H2
+                    }, "Media Carousel - Single and HUGE"), a.createElement(l.V, {
                         "data-a-target": "carousel-single-huge"
-                    }, a.createElement(l.P, {
+                    }, a.createElement(l.Q, {
                         margin: {
                             bottom: 3,
                             top: 1
                         }
                     }, a.createElement(o.a, {
                         items: this.renderSingleHugeItem()
-                    }))), a.createElement(l._22, {
-                        type: l._27.H2
-                    }, "Media Carousel - Various Widths"), a.createElement(l.U, {
+                    }))), a.createElement(l._23, {
+                        type: l._28.H2
+                    }, "Media Carousel - Various Widths"), a.createElement(l.V, {
                         "data-a-target": "carousel-various-widths"
-                    }, a.createElement(l.P, {
+                    }, a.createElement(l.Q, {
                         margin: {
                             bottom: 3,
                             top: 1
@@ -87,7 +87,7 @@ webpackJsonp([53], {
                     })))))
                 }, t.prototype.renderStandardItems = function() {
                     return [0, 1, 2, 3, 4, 5, 6, 7, 8].map(function(e) {
-                        return a.createElement(l.U, {
+                        return a.createElement(l.V, {
                             key: "placeholder-" + e,
                             padding: {
                                 right: 2
@@ -99,14 +99,14 @@ webpackJsonp([53], {
                                 width: 200,
                                 height: 100
                             }
-                        }, a.createElement(l._22, {
-                            type: l._27.H1,
+                        }, a.createElement(l._23, {
+                            type: l._28.H1,
                             color: l.F.Overlay
                         }, e)))
                     })
                 }, t.prototype.renderStandardTinyItems = function() {
                     return [0, 1, 2].map(function(e) {
-                        return a.createElement(l.U, {
+                        return a.createElement(l.V, {
                             key: "placeholder-" + e,
                             padding: {
                                 right: 2
@@ -118,14 +118,14 @@ webpackJsonp([53], {
                                 width: 20,
                                 height: 100
                             }
-                        }, a.createElement(l._22, {
-                            type: l._27.H1,
+                        }, a.createElement(l._23, {
+                            type: l._28.H1,
                             color: l.F.Overlay
                         }, e)))
                     })
                 }, t.prototype.renderStandardHugeItems = function() {
                     return [0, 1, 2, 3, 4, 5, 6, 7, 8].map(function(e) {
-                        return a.createElement(l.U, {
+                        return a.createElement(l.V, {
                             key: "placeholder-" + e,
                             padding: {
                                 right: 2
@@ -137,14 +137,14 @@ webpackJsonp([53], {
                                 width: 2e3,
                                 height: 100
                             }
-                        }, a.createElement(l._22, {
-                            type: l._27.H1,
+                        }, a.createElement(l._23, {
+                            type: l._28.H1,
                             color: l.F.Overlay
                         }, e)))
                     })
                 }, t.prototype.renderSingleItem = function() {
                     return [0].map(function(e) {
-                        return a.createElement(l.U, {
+                        return a.createElement(l.V, {
                             key: "placeholder-" + e,
                             padding: {
                                 right: 2
@@ -156,14 +156,14 @@ webpackJsonp([53], {
                                 width: 200,
                                 height: 100
                             }
-                        }, a.createElement(l._22, {
-                            type: l._27.H1,
+                        }, a.createElement(l._23, {
+                            type: l._28.H1,
                             color: l.F.Overlay
                         }, e)))
                     })
                 }, t.prototype.renderSingleHugeItem = function() {
                     return [0].map(function(e) {
-                        return a.createElement(l.U, {
+                        return a.createElement(l.V, {
                             key: "placeholder-" + e,
                             padding: {
                                 right: 2
@@ -175,14 +175,14 @@ webpackJsonp([53], {
                                 width: 2e3,
                                 height: 100
                             }
-                        }, a.createElement(l._22, {
-                            type: l._27.H1,
+                        }, a.createElement(l._23, {
+                            type: l._28.H1,
                             color: l.F.Overlay
                         }, e)))
                     })
                 }, t.prototype.renderVariousWidthItems = function() {
                     return [0, 1, 2, 3, 4, 5, 6, 7, 8].map(function(e) {
-                        return a.createElement(l.U, {
+                        return a.createElement(l.V, {
                             key: "placeholder-" + e,
                             padding: {
                                 right: 2
@@ -194,8 +194,8 @@ webpackJsonp([53], {
                                 width: 30 * (e + 1),
                                 height: 100
                             }
-                        }, a.createElement(l._22, {
-                            type: l._27.H1,
+                        }, a.createElement(l._23, {
+                            type: l._28.H1,
                             color: l.F.Overlay
                         }, e)))
                     })
@@ -221,7 +221,7 @@ webpackJsonp([53], {
         ! function(e) {
             e.Previous = "previous", e.Next = "next"
         }(n || (n = {}));
-        var m, g = (m = {}, m[n.Previous] = d._10.AngleLeft, m[n.Next] = d._10.AngleRight, m),
+        var m, g = (m = {}, m[n.Previous] = d._11.AngleLeft, m[n.Next] = d._11.AngleRight, m),
             h = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -300,9 +300,9 @@ webpackJsonp([53], {
                             }, {
                                 "media-carousel__button--inset": !0 === t.props.insetStyle
                             });
-                        return o.createElement(d.U, {
+                        return o.createElement(d.V, {
                             className: c,
-                            position: d._3.Relative,
+                            position: d._4.Relative,
                             display: d.H.Flex,
                             alignItems: d.c.Stretch
                         }, o.createElement(d.v, {
@@ -326,15 +326,15 @@ webpackJsonp([53], {
                 }, t.prototype.componentWillUnmount = function() {
                     window.removeEventListener("resize", this.onResize)
                 }, t.prototype.render = function() {
-                    return o.createElement(d.P, a.__assign({}, this.props, {
-                        position: d._3.Relative
+                    return o.createElement(d.Q, a.__assign({}, this.props, {
+                        position: d._4.Relative
                     }), o.createElement("div", {
                         className: "media-carousel",
                         ref: this.refHandler,
                         "data-test-selector": "carousel-container"
-                    }, o.createElement(d.U, {
+                    }, o.createElement(d.V, {
                         className: "media-carousel__child-container",
-                        overflow: d.Z.Hidden,
+                        overflow: d._0.Hidden,
                         fullWidth: !0,
                         "data-test-selector": "child-container"
                     }, o.createElement("div", {
@@ -343,7 +343,7 @@ webpackJsonp([53], {
                             marginLeft: this.transformString()
                         },
                         "data-test-selector": "carousel-body"
-                    }, o.createElement(d.P, {
+                    }, o.createElement(d.Q, {
                         className: "media-carousel__content",
                         display: d.H.Flex,
                         flexWrap: d.K.NoWrap,
@@ -354,19 +354,19 @@ webpackJsonp([53], {
                         style: {
                             width: "max-content"
                         }
-                    }, this.props.items)))), o.createElement(d.U, {
+                    }, this.props.items)))), o.createElement(d.V, {
                         className: "media-carousel__nav",
                         display: d.H.Flex,
                         alignItems: d.c.Center,
-                        position: d._3.Absolute,
+                        position: d._4.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
                         fullHeight: !0
-                    }, this.renderNavButton(n.Previous, !this.state.childrenRendered || this.isBackButtonDisabled(), this.moveCarouselBackward)), o.createElement(d.U, {
+                    }, this.renderNavButton(n.Previous, !this.state.childrenRendered || this.isBackButtonDisabled(), this.moveCarouselBackward)), o.createElement(d.V, {
                         className: "media-carousel__nav",
                         display: d.H.Flex,
                         alignItems: d.c.Center,
-                        position: d._3.Absolute,
+                        position: d._4.Absolute,
                         attachTop: !0,
                         attachRight: !0,
                         fullHeight: !0
@@ -379,4 +379,4 @@ webpackJsonp([53], {
     M4d4: function(e, t) {},
     WWVW: function(e, t) {}
 });
-//# sourceMappingURL=pages.dev-only-testing-carousel-73940c0b932b4c06963a9c7950232512.js.map
+//# sourceMappingURL=pages.dev-only-testing-carousel-851c5d2789e9c5995bce5a9c18650df1.js.map

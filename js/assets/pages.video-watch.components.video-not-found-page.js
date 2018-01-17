@@ -27,39 +27,39 @@ webpackJsonp([73], {
                         medium: d.PageviewMedium.VideoNotFoundPage,
                         location: d.PageviewLocation.VideoWatchPage
                     }
-                }), o.createElement(c._18, {
+                }), o.createElement(c._19, {
                     display: c.H.Flex,
                     color: c.F.Alt2,
-                    justifyContent: c.T.Center,
+                    justifyContent: c.U.Center,
                     fullWidth: !0,
                     fullHeight: !0
-                }, o.createElement(c.U, {
+                }, o.createElement(c.V, {
                     display: c.H.InlineFlex,
                     alignItems: c.c.Center,
                     flexWrap: c.K.NoWrap,
                     padding: {
                         x: 5
                     }
-                }, o.createElement(c._18, {
+                }, o.createElement(c._19, {
                     margin: {
                         right: 2
                     },
                     flexShrink: 0,
                     color: c.F.Alt2
-                }, o.createElement(c._9, {
-                    asset: c._10.DeadGlitch,
+                }, o.createElement(c._10, {
+                    asset: c._11.DeadGlitch,
                     width: 92,
                     height: 96
-                })), o.createElement(c.U, {
+                })), o.createElement(c.V, {
                     display: c.H.Flex,
                     flexDirection: c.J.Column
-                }, o.createElement(c._22, {
+                }, o.createElement(c._23, {
                     fontSize: c.L.Size4,
                     "data-test-selector": "video-error-message"
-                }, Object(r.d)("Sorry. Unless you’ve got a time machine, that content is unavailable.", "VideoNotFoundPage")), o.createElement(c._22, {
+                }, Object(r.d)("Sorry. Unless you’ve got a time machine, that content is unavailable.", "VideoNotFoundPage")), o.createElement(c._23, {
                     fontSize: c.L.Size4,
                     "data-test-selector": "video-error-cta"
-                }, Object(r.d)("In the meantime, take a look at these other videos instead.", "VideoNotFoundPage")))), o.createElement(c.U, {
+                }, Object(r.d)("In the meantime, take a look at these other videos instead.", "VideoNotFoundPage")))), o.createElement(c.V, {
                     fullWidth: !0,
                     padding: {
                         x: 5
@@ -71,4 +71,4 @@ webpackJsonp([73], {
         })
     }
 });
-//# sourceMappingURL=pages.video-watch.components.video-not-found-page-0dece20796321f0c9f795480c29676b6.js.map
+//# sourceMappingURL=pages.video-watch.components.video-not-found-page-c9b54072dad2c975ff8ea4e51ee5fd53.js.map

@@ -10964,7 +10964,7 @@ webpackJsonp([58], {
                     GQL_BASE_URL: void 0,
                     EMBEDDED: void 0,
                     EMBEDDED_BUILD_ID: void 0,
-                    MANIFEST_URL: void 0,
+                    MANIFEST_URL: "https://static.twitchcdn.net/config/manifest.json",
                     CDN_URL: "https://static.twitchcdn.net/"
                 }).DEBUG), e
             }(t = e.exports = n("vmzn")).log = function() {
@@ -24528,7 +24528,7 @@ webpackJsonp([58], {
                 GQL_BASE_URL: void 0,
                 EMBEDDED: void 0,
                 EMBEDDED_BUILD_ID: void 0,
-                MANIFEST_URL: void 0,
+                MANIFEST_URL: "https://static.twitchcdn.net/config/manifest.json",
                 CDN_URL: "https://static.twitchcdn.net/"
             }).RESET_APP_DATA_TIMER && parseInt(Object({
                 NODE_ENV: "production",
@@ -24536,7 +24536,7 @@ webpackJsonp([58], {
                 GQL_BASE_URL: void 0,
                 EMBEDDED: void 0,
                 EMBEDDED_BUILD_ID: void 0,
-                MANIFEST_URL: void 0,
+                MANIFEST_URL: "https://static.twitchcdn.net/config/manifest.json",
                 CDN_URL: "https://static.twitchcdn.net/"
             }).RESET_APP_DATA_TIMER, 10) || 12e4;
         r.prototype.initIndex = function(e) {
@@ -26210,7 +26210,7 @@ webpackJsonp([58], {
                 GQL_BASE_URL: void 0,
                 EMBEDDED: void 0,
                 EMBEDDED_BUILD_ID: void 0,
-                MANIFEST_URL: void 0,
+                MANIFEST_URL: "https://static.twitchcdn.net/config/manifest.json",
                 CDN_URL: "https://static.twitchcdn.net/"
             }), e.exports = function(e, t) {
                 if (null == e) return e;
@@ -36740,7 +36740,7 @@ webpackJsonp([58], {
                 GQL_BASE_URL: void 0,
                 EMBEDDED: void 0,
                 EMBEDDED_BUILD_ID: void 0,
-                MANIFEST_URL: void 0,
+                MANIFEST_URL: "https://static.twitchcdn.net/config/manifest.json",
                 CDN_URL: "https://static.twitchcdn.net/"
             });
             var u = {
@@ -37192,4 +37192,4 @@ webpackJsonp([58], {
         }
     }
 });
-//# sourceMappingURL=vendor-bf0d67727b8ecd8b043d01ab0c144cf9.js.map
+//# sourceMappingURL=vendor-1148e565df780637579b26024707114a.js.map

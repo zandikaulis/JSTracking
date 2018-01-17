@@ -267,26 +267,26 @@ webpackJsonp([54], {
                 }, t.prototype.isVisible = function() {
                     return this.state.verifyEmailBarState !== v.INITIAL && this.state.verifyEmailBarState !== v.DISMISSED
                 }, t.prototype.renderClickToVerify = function() {
-                    return n.createElement(p.U, {
+                    return n.createElement(p.V, {
                         fullWidth: !0,
-                        position: p._3.Relative
-                    }, n.createElement(p._18, {
+                        position: p._4.Relative
+                    }, n.createElement(p._19, {
                         className: "verify-email-banner",
                         display: p.H.Flex,
-                        justifyContent: p.T.Center,
+                        justifyContent: p.U.Center,
                         alignItems: p.c.Center
-                    }, n.createElement(p.P, {
+                    }, n.createElement(p.Q, {
                         fullHeight: !0,
                         fullWidth: !0
                     }, n.createElement("button", {
                         onClick: this.onClickToVerify,
                         "data-test-selector": D
-                    }, n.createElement(p._22, {
+                    }, n.createElement(p._23, {
                         color: p.F.Alt,
                         fontSize: p.L.Size5
-                    }, Object(o.d)("Click here to verify your email", "VerifyEmail")))), n.createElement(p._18, {
+                    }, Object(o.d)("Click here to verify your email", "VerifyEmail")))), n.createElement(p._19, {
                         className: "verify-email-banner__dismiss",
-                        position: p._3.Absolute,
+                        position: p._4.Absolute,
                         attachRight: !0,
                         margin: {
                             right: 2
@@ -297,27 +297,27 @@ webpackJsonp([54], {
                         "data-test-selector": g
                     }, Object(o.d)("Not Now", "VerifyEmail")))))
                 }, t.prototype.renderEmailSent = function() {
-                    return n.createElement(p._18, {
+                    return n.createElement(p._19, {
                         className: "verify-email-banner verify-email-banner--success",
                         display: p.H.Flex,
-                        justifyContent: p.T.Center,
+                        justifyContent: p.U.Center,
                         alignItems: p.c.Center
-                    }, n.createElement(p.U, {
+                    }, n.createElement(p.V, {
                         className: "verify-email-banner__body"
-                    }, n.createElement(p._22, {
+                    }, n.createElement(p._23, {
                         fontSize: p.L.Size5
                     }, Object(o.d)("Verification email sent to {email}", {
                         email: this.props.data.currentUser.email
                     }, "VerifyEmail"))))
                 }, t.prototype.renderErrorSending = function() {
-                    return n.createElement(p._18, {
+                    return n.createElement(p._19, {
                         className: "verify-email-banner verify-email-banner--error",
                         display: p.H.Flex,
-                        justifyContent: p.T.Center,
+                        justifyContent: p.U.Center,
                         alignItems: p.c.Center
-                    }, n.createElement(p.U, {
+                    }, n.createElement(p.V, {
                         className: "verify-email-banner__body"
-                    }, n.createElement(p._22, {
+                    }, n.createElement(p._23, {
                         fontSize: p.L.Size5
                     }, Object(o.d)("Unable to send an email to {email}. Please try again later.", {
                         email: this.props.data.currentUser.email
@@ -460,4 +460,4 @@ webpackJsonp([54], {
     },
     yY1M: function(e, t) {}
 });
-//# sourceMappingURL=features.verify-email.components.verify-email-bar.component-fbb3d53d13ea787714026e335ad90f51.js.map
+//# sourceMappingURL=features.verify-email.components.verify-email-bar.component-3ea780b941447f0c773c2d5ff378b5b8.js.map

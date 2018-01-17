@@ -44,8 +44,8 @@ webpackJsonp([52], {
                         return e ? Object(s.d)("Edit", "AmazonRetailAssociatesAccountLinking") : Object(s.d)("Get Started", "AmazonRetailAssociatesAccountLinking")
                     }, n.renderDescriptionText = function(e) {
                         return e ? Object(s.d)("Link to {storeID}", {
-                            storeID: r.createElement(h._22, {
-                                type: h._27.Span,
+                            storeID: r.createElement(h._23, {
+                                type: h._28.Span,
                                 bold: !0
                             }, e)
                         }, "AmazonRetailAssociatesAccountLinking") : Object(s.d)("Create and link an Amazon Associates account to your Twitch account. Only one Amazon account may be linked at any one time.", "AmazonRetailAssociatesAccountLinking")
@@ -80,33 +80,33 @@ webpackJsonp([52], {
                 return o.__extends(n, e), n.prototype.render = function() {
                     var e = this.props.data.user && this.props.data.user.amazon.associatesStore && this.props.data.user.amazon.associatesStore.storeID,
                         n = this.props.data.user && this.props.data.user.amazon.associatesStore && this.props.data.user.amazon.associatesStore.isPayoutEnabled;
-                    return r.createElement(h.U, null, r.createElement(h._18, {
+                    return r.createElement(h.V, null, r.createElement(h._19, {
                         background: h.m.Alt2,
                         borderBottom: !0,
                         display: h.H.Flex,
                         flexDirection: h.J.Row,
                         flexWrap: h.K.NoWrap
-                    }, r.createElement(h.U, {
+                    }, r.createElement(h.V, {
                         padding: 2,
                         flexShrink: 0,
                         flexGrow: 0,
                         className: "amazon-associates-account-linking__label"
-                    }, r.createElement(h._22, {
+                    }, r.createElement(h._23, {
                         bold: !0
-                    }, Object(s.d)("Link an Amazon Associates Account", "AmazonRetailAssociatesAccountLinking"))), r.createElement(h.U, {
+                    }, Object(s.d)("Link an Amazon Associates Account", "AmazonRetailAssociatesAccountLinking"))), r.createElement(h.V, {
                         display: h.H.Flex,
                         flexDirection: h.J.Column,
                         padding: 2
-                    }, r.createElement(h._22, {
+                    }, r.createElement(h._23, {
                         "data-test-selector": "amazon-associates-account-linking-setup-text"
-                    }, this.renderDescriptionText(e || null)), r.createElement(h.U, {
+                    }, this.renderDescriptionText(e || null)), r.createElement(h.V, {
                         padding: {
                             top: .5
                         }
                     }, r.createElement(h.u, {
                         "data-test-selector": "amazon-associates-account-linking-setup-button",
                         onClick: this.launchLinkAccount
-                    }, this.renderButtonText(e || null))))), r.createElement(h._18, {
+                    }, this.renderButtonText(e || null))))), r.createElement(h._19, {
                         display: h.H.Flex,
                         flexDirection: h.J.Row,
                         flexWrap: h.K.NoWrap,
@@ -114,7 +114,7 @@ webpackJsonp([52], {
                         className: l({
                             "amazon-associates-account-linking__tax-info--error": !(!e || n)
                         })
-                    }, r.createElement(h.U, {
+                    }, r.createElement(h.V, {
                         padding: {
                             top: 2,
                             right: 2,
@@ -124,41 +124,41 @@ webpackJsonp([52], {
                         flexShrink: 0,
                         flexGrow: 0,
                         className: "amazon-associates-account-linking__label"
-                    }, r.createElement(h._22, {
+                    }, r.createElement(h._23, {
                         bold: !0
-                    }, Object(s.d)("Receive payments from Amazon.com", "AmazonRetailAssociatesAccountLinking"))), r.createElement(h.U, {
+                    }, Object(s.d)("Receive payments from Amazon.com", "AmazonRetailAssociatesAccountLinking"))), r.createElement(h.V, {
                         display: h.H.Flex,
                         flexDirection: h.J.Column,
                         padding: 2
-                    }, r.createElement(h._22, null, Object(s.d)("To receive payments, please provide your <x:tax>Tax Information</x:tax> and your <x:payment>Payment Information</x:payment>. Note, changes made to your Tax Information must be made by the primary account holder and any changes after the 15th will go into effect the following month. Please ignore this message if you have already submitted your information.", {
+                    }, r.createElement(h._23, null, Object(s.d)("To receive payments, please provide your <x:tax>Tax Information</x:tax> and your <x:payment>Payment Information</x:payment>. Note, changes made to your Tax Information must be made by the primary account holder and any changes after the 15th will go into effect the following month. Please ignore this message if you have already submitted your information.", {
                         "x:tax": function(e) {
-                            return r.createElement(h._22, {
+                            return r.createElement(h._23, {
                                 key: "tax",
-                                type: h._27.Span,
+                                type: h._28.Span,
                                 bold: !0,
-                                decoration: h._25.Underline
+                                decoration: h._26.Underline
                             }, e)
                         },
                         "x:payment": function(e) {
-                            return r.createElement(h._22, {
+                            return r.createElement(h._23, {
                                 key: "payment",
-                                type: h._27.Span,
+                                type: h._28.Span,
                                 bold: !0,
-                                decoration: h._25.Underline
+                                decoration: h._26.Underline
                             }, e)
                         }
-                    }, "AmazonRetailAssociatesAccountLinking")), r.createElement(h.U, {
+                    }, "AmazonRetailAssociatesAccountLinking")), r.createElement(h.V, {
                         padding: {
                             top: 1
                         }
-                    }, r.createElement(h.P, {
+                    }, r.createElement(h.Q, {
                         padding: {
                             right: 2
                         }
                     }, r.createElement("a", {
                         href: "#",
                         onClick: this.launchAssociatesAccount
-                    }, Object(s.d)("Add/update tax information", "AmazonRetailAssociatesAccountLinking"))), r.createElement(h.P, {
+                    }, Object(s.d)("Add/update tax information", "AmazonRetailAssociatesAccountLinking"))), r.createElement(h.Q, {
                         padding: {
                             right: 2
                         }
@@ -212,20 +212,20 @@ webpackJsonp([52], {
                         amendmentAccepted: n
                     })
                 }, n.prototype.render = function() {
-                    return this.props.data.loading ? null : r.createElement(h._18, {
+                    return this.props.data.loading ? null : r.createElement(h._19, {
                         display: h.H.Flex,
                         flexDirection: h.J.Row,
                         borderTop: !0,
                         borderBottom: !0,
                         background: h.m.Alt2
-                    }, r.createElement(h.U, {
+                    }, r.createElement(h.V, {
                         padding: 2,
                         flexShrink: 0,
                         flexGrow: 0,
                         className: "amazon-retail-offers__label"
-                    }, r.createElement(h._22, {
+                    }, r.createElement(h._23, {
                         bold: !0
-                    }, Object(s.d)("Opt in to earn revenue", "AmazonRetailOffersAmendnment"))), r.createElement(h.U, {
+                    }, Object(s.d)("Opt in to earn revenue", "AmazonRetailOffersAmendnment"))), r.createElement(h.V, {
                         padding: 2
                     }, r.createElement("div", {
                         onClick: this.onAmendmentClick,
@@ -237,7 +237,7 @@ webpackJsonp([52], {
                         disabled: !0,
                         id: "amazon-retail-offers-amendment",
                         label: Object(s.d)("Opt in to earn revenue from sales on Amazon.com", "AmazonRetailOffersAmendnment")
-                    })), r.createElement(h._22, null, Object(s.d)("Please read and agree to the new Commerce Addendum to become eligible for this program.", "AmazonRetailOffersAmendnment"))))
+                    })), r.createElement(h._23, null, Object(s.d)("Please read and agree to the new Commerce Addendum to become eligible for this program.", "AmazonRetailOffersAmendnment"))))
                 }, n = o.__decorate([Object(c.a)(b, {
                     options: function(e) {
                         return {
@@ -263,7 +263,7 @@ webpackJsonp([52], {
                             hasUserScrolled: !0
                         })
                     }, n.renderAcceptButton = function(e) {
-                        return e ? null : r.createElement(h.U, {
+                        return e ? null : r.createElement(h.V, {
                             margin: {
                                 left: .5,
                                 right: .5
@@ -299,25 +299,25 @@ webpackJsonp([52], {
                     }, n
                 }
                 return o.__extends(n, e), n.prototype.render = function() {
-                    return r.createElement(h.U, {
+                    return r.createElement(h.V, {
                         padding: 3
-                    }, r.createElement(h._18, {
+                    }, r.createElement(h._19, {
                         padding: {
                             bottom: 3
                         },
                         borderBottom: !0,
-                        textAlign: h._23.Center
-                    }, r.createElement(h._22, {
-                        type: h._27.H4
-                    }, Object(s.d)("Addendum to Content Partner Agreement – Commerce Addendum", "AmazonRetailOffersAmendmentModal"))), r.createElement(h.U, {
+                        textAlign: h._24.Center
+                    }, r.createElement(h._23, {
+                        type: h._28.H4
+                    }, Object(s.d)("Addendum to Content Partner Agreement – Commerce Addendum", "AmazonRetailOffersAmendmentModal"))), r.createElement(h.V, {
                         padding: {
                             top: 2,
                             bottom: 2
                         },
-                        textAlign: h._23.Center
-                    }, r.createElement(h._22, {
+                        textAlign: h._24.Center
+                    }, r.createElement(h._23, {
                         fontSize: h.L.Size5
-                    }, Object(s.d)('Please read and agree to the following addendum ("Addendum") to your Content License and Base Agreement (or Content License Agreement, as applicable) (the "Agreement") with Twitch in order to be eligible to earn revenue for certain purchases by a Twitch user that is viewing your Twitch channel.', "AmazonRetailOffersAmendmentModal"))), r.createElement(h._18, {
+                    }, Object(s.d)('Please read and agree to the following addendum ("Addendum") to your Content License and Base Agreement (or Content License Agreement, as applicable) (the "Agreement") with Twitch in order to be eligible to earn revenue for certain purchases by a Twitch user that is viewing your Twitch channel.', "AmazonRetailOffersAmendmentModal"))), r.createElement(h._19, {
                         borderTop: !0,
                         borderRight: !0,
                         borderBottom: !0,
@@ -327,49 +327,49 @@ webpackJsonp([52], {
                         onScroll: this.onUserScroll,
                         className: "amendment-modal__amendment-text",
                         "data-test-selector": "amendment-modal-text-container"
-                    }, r.createElement(h._22, null, 'Please read and agree to the following addendum ("', r.createElement(h._22, {
-                        type: h._27.Span,
+                    }, r.createElement(h._23, null, 'Please read and agree to the following addendum ("', r.createElement(h._23, {
+                        type: h._28.Span,
                         bold: !0
-                    }, "Addendum"), '") to your Content License and Base Agreement (or Content License Agreement, as applicable) (the "', r.createElement(h._22, {
-                        type: h._27.Span,
+                    }, "Addendum"), '") to your Content License and Base Agreement (or Content License Agreement, as applicable) (the "', r.createElement(h._23, {
+                        type: h._28.Span,
                         bold: !0
-                    }, "Agreement"), '") with Twitch in order to be eligible to earn revenue for certain purchases by a Twitch user that is viewing your Twitch channel. Twitch, in its sole discretion, may make specially-formatted links appear on your Twitch channel page (a "', r.createElement(h._22, {
-                        type: h._27.Span,
+                    }, "Agreement"), '") with Twitch in order to be eligible to earn revenue for certain purchases by a Twitch user that is viewing your Twitch channel. Twitch, in its sole discretion, may make specially-formatted links appear on your Twitch channel page (a "', r.createElement(h._23, {
+                        type: h._28.Span,
                         bold: !0
-                    }, "Special Link"), '"), which would direct Twitch users to the purchase of a Product (as defined below). For every such purchase of a Product that is a Qualifying Purchase (as defined below), you will receive a fee (a "', r.createElement(h._22, {
-                        type: h._27.Span,
+                    }, "Special Link"), '"), which would direct Twitch users to the purchase of a Product (as defined below). For every such purchase of a Product that is a Qualifying Purchase (as defined below), you will receive a fee (a "', r.createElement(h._23, {
+                        type: h._28.Span,
                         bold: !0
                     }, "Product Purchase Fee"), '") that will be calculated as a certain percentage as published by Twitch in the Supplemental Fees Statement, currently available at ', r.createElement("a", {
                         href: "http://www.twitch.tv/legal/p/supplemental-fees",
                         target: "_blank",
                         rel: "noopener noreferrer"
-                    }, "http://www.twitch.tv/legal/p/supplemental-fees"), ' or a successor website (as may be updated from time to time) (the "', r.createElement(h._22, {
-                        type: h._27.Span,
+                    }, "http://www.twitch.tv/legal/p/supplemental-fees"), ' or a successor website (as may be updated from time to time) (the "', r.createElement(h._23, {
+                        type: h._28.Span,
                         bold: !0
-                    }, "Supplemental Fees Statement"), '"), of (a) the purchase price of such Product, as such price was listed by Twitch at the time of the Qualifying Purchase and in the currency in which the Qualifying Purchase was made, less (b) any special discounts or promotions, taxes, service charges, rebates, payment processing fees (e.g. credit card processing fees) and any other related transaction and processing expenses. Calculation of and eligibility to receive Product Purchase Fees will be further subject to any limitations or clarifications set forth in the Supplemental Fees Statement.'), r.createElement(h._22, null, '"', r.createElement(h._22, {
-                        type: h._27.Span,
+                    }, "Supplemental Fees Statement"), '"), of (a) the purchase price of such Product, as such price was listed by Twitch at the time of the Qualifying Purchase and in the currency in which the Qualifying Purchase was made, less (b) any special discounts or promotions, taxes, service charges, rebates, payment processing fees (e.g. credit card processing fees) and any other related transaction and processing expenses. Calculation of and eligibility to receive Product Purchase Fees will be further subject to any limitations or clarifications set forth in the Supplemental Fees Statement.'), r.createElement(h._23, null, '"', r.createElement(h._23, {
+                        type: h._28.Span,
                         bold: !0
-                    }, "Product"), '" means a product that is set forth in the Supplemental Fees Statement and is associated with a program in which Twitch places Special Links.'), r.createElement(h._22, null, 'A "', r.createElement(h._22, {
-                        type: h._27.Span,
+                    }, "Product"), '" means a product that is set forth in the Supplemental Fees Statement and is associated with a program in which Twitch places Special Links.'), r.createElement(h._23, null, 'A "', r.createElement(h._23, {
+                        type: h._28.Span,
                         bold: !0
-                    }, "Qualifying Purchase"), '" of a Product occurs when: (a) a user of Twitch clicks through a Special Link on your Twitch channel page; (b) such user purchases a Product(s) sold by Twitch Interactive, Inc., or a related entity that is designated in the Supplemental Fees Statement as a relevant seller of record; and (c) Twitch receives a fully settled payment for the purchase by such user.'), r.createElement(h._22, null, "If we pay you a Product Purchase Fee and later issue a refund or credit to the Twitch user for such Qualifying Purchase (or receive a chargeback related to the Qualifying Purchase), we may offset the amount of the Product Purchase Fee we previously paid you for such Qualifying Purchase against future Product Purchase Fees or other amounts that would otherwise be payable to you under the Agreement or this Addendum, or require you to remit that amount to us."), r.createElement(h._22, null, "This Addendum is governed by and subject to the Agreement.  Capitalized terms used but not defined in this Addendum will have the meanings defined in the Agreement.  Except as amended by this Addendum, all other terms and conditions of the Agreement remain in full force and effect."))), r.createElement(h.U, {
+                    }, "Qualifying Purchase"), '" of a Product occurs when: (a) a user of Twitch clicks through a Special Link on your Twitch channel page; (b) such user purchases a Product(s) sold by Twitch Interactive, Inc., or a related entity that is designated in the Supplemental Fees Statement as a relevant seller of record; and (c) Twitch receives a fully settled payment for the purchase by such user.'), r.createElement(h._23, null, "If we pay you a Product Purchase Fee and later issue a refund or credit to the Twitch user for such Qualifying Purchase (or receive a chargeback related to the Qualifying Purchase), we may offset the amount of the Product Purchase Fee we previously paid you for such Qualifying Purchase against future Product Purchase Fees or other amounts that would otherwise be payable to you under the Agreement or this Addendum, or require you to remit that amount to us."), r.createElement(h._23, null, "This Addendum is governed by and subject to the Agreement.  Capitalized terms used but not defined in this Addendum will have the meanings defined in the Agreement.  Except as amended by this Addendum, all other terms and conditions of the Agreement remain in full force and effect."))), r.createElement(h.V, {
                         padding: {
                             top: 2,
                             bottom: 2
                         }
-                    }, r.createElement(h._22, {
+                    }, r.createElement(h._23, {
                         fontSize: h.L.Size4
-                    }, Object(s.d)("Summary", "AmazonRetailOffersAmendmentModal")), r.createElement(h._22, null, Object(s.d)("By accepting below, you may earn revenue for certain purchases by your viewers as described above.", "AmazonRetailOffersAmendmentModal"))), r.createElement(h._18, {
+                    }, Object(s.d)("Summary", "AmazonRetailOffersAmendmentModal")), r.createElement(h._23, null, Object(s.d)("By accepting below, you may earn revenue for certain purchases by your viewers as described above.", "AmazonRetailOffersAmendmentModal"))), r.createElement(h._19, {
                         borderTop: !0,
                         display: h.H.Flex,
                         flexDirection: h.J.Row,
                         alignItems: h.c.Center,
-                        justifyContent: h.T.Center,
+                        justifyContent: h.U.Center,
                         padding: {
                             top: 2,
                             bottom: 1
                         }
-                    }, r.createElement(h.U, {
+                    }, r.createElement(h.V, {
                         margin: {
                             left: .5,
                             right: .5
@@ -389,7 +389,7 @@ webpackJsonp([52], {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return o.__extends(n, e), n.prototype.render = function() {
-                    return r.createElement(h._18, {
+                    return r.createElement(h._19, {
                         className: "amendment-modal__container",
                         background: h.m.Base
                     }, r.createElement(x, {
@@ -405,7 +405,7 @@ webpackJsonp([52], {
                     closeModal: y.c
                 }, e)
             })(T),
-            P = Object(g.a)(null, function(e) {
+            F = Object(g.a)(null, function(e) {
                 return Object(v.bindActionCreators)({
                     showAmendmentModal: function(e) {
                         var n = o.__rest(e, []);
@@ -413,29 +413,29 @@ webpackJsonp([52], {
                     }
                 }, e)
             })(N),
-            F = function(e) {
+            P = function(e) {
                 function n() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return o.__extends(n, e), n.prototype.render = function() {
-                    return r.createElement(h.U, {
+                    return r.createElement(h.V, {
                         padding: 3
-                    }, r.createElement(h._22, {
-                        type: h._27.H2
-                    }, "Amazon Retail Offers Amendment v2"), r.createElement(h.U, {
+                    }, r.createElement(h._23, {
+                        type: h._28.H2
+                    }, "Amazon Retail Offers Amendment v2"), r.createElement(h.V, {
                         margin: {
                             y: 2
                         }
-                    }, r.createElement(P, {
+                    }, r.createElement(F, {
                         channelName: this.props.match.params.channelName
                     }), r.createElement(A, {
                         channelName: this.props.match.params.channelName
                     })))
                 }, n
             }(r.Component),
-            R = F;
+            R = P;
         t.d(n, "DevOnlyTestingAmazonOffersComponent", function() {
-            return F
+            return P
         }), t.d(n, "DevOnlyTestingAmazonOffersPage", function() {
             return R
         })
@@ -1039,4 +1039,4 @@ webpackJsonp([52], {
         e.exports = t
     }
 });
-//# sourceMappingURL=pages.dev-only-testing-amazon-offers-97d75d9c7d1d685ff7cc215998537296.js.map
+//# sourceMappingURL=pages.dev-only-testing-amazon-offers-d900052a543e2d4e1a991b837334d737.js.map
