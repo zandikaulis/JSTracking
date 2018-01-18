@@ -1694,7 +1694,8 @@ webpackJsonp([47], {
                 }, r.createElement("a", {
                     target: "_blank",
                     className: "footer__link",
-                    href: "https://www.twitch.tv/p/about/"
+                    href: "https://www.twitch.tv/p/about/",
+                    "data-a-target": "frontpage-footer-about-link"
                 }, Object(o.d)("About", "Footer"))), r.createElement(d.V, {
                     margin: {
                         right: 1
@@ -1702,7 +1703,8 @@ webpackJsonp([47], {
                 }, r.createElement("a", {
                     target: "_blank",
                     className: "footer__link",
-                    href: "https://blog.twitch.tv/"
+                    href: "https://blog.twitch.tv/",
+                    "data-a-target": "frontpage-footer-blog-link"
                 }, Object(o.d)("Blog", "Footer"))), r.createElement(d.V, {
                     margin: {
                         right: 1
@@ -1710,7 +1712,8 @@ webpackJsonp([47], {
                 }, r.createElement("a", {
                     target: "_blank",
                     className: "footer__link",
-                    href: "https://www.twitch.tv/products/turbo/ticket?ref=footer"
+                    href: "https://www.twitch.tv/products/turbo/ticket?ref=footer",
+                    "data-a-target": "frontpage-footer-turbo-link"
                 }, Object(o.d)("Turbo", "Footer"))), r.createElement(d.V, {
                     margin: {
                         right: 1
@@ -1718,7 +1721,8 @@ webpackJsonp([47], {
                 }, r.createElement("a", {
                     target: "_blank",
                     className: "footer__link",
-                    href: "https://music.twitch.tv/"
+                    href: "https://music.twitch.tv/",
+                    "data-a-target": "frontpage-footer-music-link"
                 }, Object(o.d)("Music", "Footer"))), r.createElement(d.V, {
                     margin: {
                         right: 1
@@ -1726,7 +1730,8 @@ webpackJsonp([47], {
                 }, r.createElement("a", {
                     target: "_blank",
                     className: "footer__link",
-                    href: "http://twitchadvertising.tv/"
+                    href: "http://twitchadvertising.tv/",
+                    "data-a-target": "frontpage-footer-advertising-link"
                 }, Object(o.d)("Advertise", "Footer"))), r.createElement(d.V, {
                     margin: {
                         right: 1
@@ -1734,7 +1739,8 @@ webpackJsonp([47], {
                 }, r.createElement("a", {
                     target: "_blank",
                     className: "footer__link",
-                    href: "https://dev.twitch.tv/"
+                    href: "https://dev.twitch.tv/",
+                    "data-a-target": "frontpage-footer-developers-link"
                 }, Object(o.d)("Developers", "Footer"))), r.createElement(d.V, {
                     margin: {
                         right: 1
@@ -1742,7 +1748,8 @@ webpackJsonp([47], {
                 }, r.createElement("a", {
                     target: "_blank",
                     className: "footer__link",
-                    href: "https://www.twitch.tv/p/partners/"
+                    href: "https://www.twitch.tv/p/partners/",
+                    "data-a-target": "frontpage-footer-partners-link"
                 }, Object(o.d)("Partners", "Footer"))), r.createElement(d.V, {
                     margin: {
                         right: 1
@@ -1750,7 +1757,8 @@ webpackJsonp([47], {
                 }, r.createElement("a", {
                     target: "_blank",
                     className: "footer__link",
-                    href: "https://www.twitch.tv/p/platforms/"
+                    href: "https://www.twitch.tv/p/platforms/",
+                    "data-a-target": "frontpage-footer-mobile-link"
                 }, Object(o.d)("Mobile", "Footer"))), r.createElement(d.V, {
                     margin: {
                         right: 1
@@ -1758,7 +1766,8 @@ webpackJsonp([47], {
                 }, r.createElement("a", {
                     target: "_blank",
                     className: "footer__link",
-                    href: "https://www.twitch.tv/p/jobs/"
+                    href: "https://www.twitch.tv/p/jobs/",
+                    "data-a-target": "frontpage-footer-jobs-link"
                 }, Object(o.d)("Jobs", "Footer"))), r.createElement(d.V, {
                     margin: {
                         right: 1
@@ -1766,7 +1775,8 @@ webpackJsonp([47], {
                 }, r.createElement("a", {
                     target: "_blank",
                     className: "footer__link",
-                    href: "https://help.twitch.tv/"
+                    href: "https://help.twitch.tv/",
+                    "data-a-target": "frontpage-footer-help-link"
                 }, Object(o.d)("Help", "Footer"))), r.createElement(d.V, {
                     margin: {
                         right: 1
@@ -1774,7 +1784,8 @@ webpackJsonp([47], {
                 }, r.createElement("a", {
                     target: "_blank",
                     className: "footer__link",
-                    href: "https://www.twitch.tv/p/legal/terms-of-service/"
+                    href: "https://www.twitch.tv/p/legal/terms-of-service/",
+                    "data-a-target": "frontpage-footer-terms-link"
                 }, Object(o.d)("Terms", "Footer"))), r.createElement(d.V, {
                     margin: {
                         right: 1
@@ -1782,7 +1793,8 @@ webpackJsonp([47], {
                 }, r.createElement("a", {
                     target: "_blank",
                     className: "footer__link",
-                    href: "https://www.twitch.tv/p/legal/privacy-policy/"
+                    href: "https://www.twitch.tv/p/legal/privacy-policy/",
+                    "data-a-target": "frontpage-footer-privacy-link"
                 }, Object(o.d)("Privacy Policy", "Footer"))), r.createElement(d.V, {
                     margin: {
                         right: 1
@@ -1790,7 +1802,8 @@ webpackJsonp([47], {
                 }, r.createElement("a", {
                     target: "_blank",
                     className: "footer__link",
-                    href: "https://www.twitch.tv/p/legal/ad-choices/"
+                    href: "https://www.twitch.tv/p/legal/ad-choices/",
+                    "data-a-target": "frontpage-footer-choices-link"
                 }, Object(o.d)("Ad Choices", "Footer"))), r.createElement(d.V, {
                     margin: {
                         right: 1
@@ -1798,14 +1811,17 @@ webpackJsonp([47], {
                 }, r.createElement("a", {
                     target: "_blank",
                     className: "footer__link",
-                    href: "https://www.twitch.tv/p/legal/cookie-policy/"
+                    href: "https://www.twitch.tv/p/legal/cookie-policy/",
+                    "data-a-target": "frontpage-footer-cookie-link"
                 }, Object(o.d)("Cookie Policy", "Footer"))), r.createElement(d.V, {
                     margin: {
                         left: 5
                     }
                 }, r.createElement(s.a, null, r.createElement("span", {
-                    className: "footer__link"
+                    className: "footer__link",
+                    "data-a-target": "frontpage-footer-language-link"
                 }, Object(o.d)("Language", "Footer")), r.createElement(d.p, {
+                    "data-a-target": "frontpage-footer-language-options",
                     size: d.r.Medium,
                     direction: d.q.TopRight
                 }, r.createElement(l.a, null))))))
@@ -5559,66 +5575,10 @@ webpackJsonp([47], {
         n.d(t, "a", function() {
             return a
         });
-        var a = {
-            BrowseCommunities: "browse.communities",
-            BrowseCreative: "browse.creative",
-            BrowseGamesAndCommunities: "browse.games-and-communities",
-            ChannelIndex: "channel.index.index",
-            ChannelDashboardAchievements: "channel.dashboard.achievements",
-            ChannelDashboardExtensions: "channel.dashboard.extensions",
-            ChannelDashboardModeration: "channel.dashboard.moderation",
-            ChannelDashboardStreamSummary: "channel.dashboard.stream-summary",
-            ChannelClips: "channel.clips",
-            ChannelClipsManager: "videoManager.clips.channel",
-            ChannelCollections: "channel.collections",
-            ChannelEvents: "channel.events",
-            ChatPopout: "chat",
-            DevOnly: "dev",
-            DirectoryCommunityByLanguage: "directory.community.language",
-            DirectoryCommunityIndex: "directory.community.index",
-            DirectoryCommunityDetails: "directory.community.details",
-            DirectoryGames: "directory.games",
-            DirectoryPopular: "directory.popular",
-            DirectoryPopularByLanguage: "directory.popular.language",
-            DirectoryGameIndex: "directory.game.index",
-            DirectoryGameClips: "directory.game.clips",
-            DirectoryGameDetails: "directory.game.details",
-            DirectoryGameVideos: "directory.game.videos",
-            DirectoryFollowingIndex: "directory.following.index",
-            DirectoryFollowingGames: "directory.following.games",
-            DirectoryFollowingVideos: "directory.following.videos.video-type",
-            DirectoryFollowingHosts: "directory.following.hosts",
-            DirectoryFollowingLiveChannels: "directory.following.channels",
-            DirectoryFollowingCommunities: "directory.following.communities",
-            EmailVerification: "emailVerification",
-            EventDetails: "event.details",
-            ForYou: "for-you",
-            Index: "index",
-            MyClipsManager: "videoManager.clips",
-            NotificationSettingsPage: "settings.notificationSettings",
-            OnboardingIndex: "onboarding.index",
-            ReportUserPage: "reportUser.page",
-            SettingsChannel: "private/embed-components",
-            SettingsConnections: "private/embed-components",
-            SettingsNotifications: "settings.notifications",
-            SettingsPrime: "settings.prime",
-            SettingsProfile: "settings.profile",
-            SettingsSecurity: "private/embed-components",
-            StoreMerchPage: "store.merch",
-            SubsLandingPage: "subs.landing",
-            SubsBroadcasterPage: "subs.broadcaster",
-            TeamsDashboardRevenue: "teams.dashboard.revenue",
-            TeamsDashboardStats: "teams.dashboard.stats",
-            TeamsDashboardMembers: "teams.dashboard.members",
-            TeamsDashboardFeaturedChannels: "teams.dashboard.featured-channels",
-            TeamsDashboardSettings: "teams.dashboard.settings",
-            VideosPage: "videos",
-            VideoWatchPage: "video",
-            VideoManagerPage: "videoManager.page",
-            VideoManagerEditPropertiesPage: "videoManager.edit",
-            VideoManagerUploadPage: "videoManager.upload",
-            VideoManagerUploadListPage: "videoManager.upload-list"
-        }
+        var a;
+        ! function(e) {
+            e.BitsBuyCard = "bits-buy-card", e.BrowseCommunities = "browse.communities", e.BrowseCreative = "browse.creative", e.BrowseGamesAndCommunities = "browse.games-and-communities", e.ChannelClips = "channel.clips", e.ChannelCollections = "channel.collections", e.ChannelClipsManager = "videoManager.clips.channel", e.ChannelDashboardAchievements = "channel.dashboard.achievements", e.ChannelDashboardExtensions = "channel.dashboard.extensions", e.ChannelDashboardModeration = "channel.dashboard.moderation", e.ChannelDashboardStreamSummary = "channel.dashboard.stream-summary", e.ChannelEvents = "channel.events", e.ChannelIndex = "channel.index.index", e.ChatPopout = "chat", e.CheermoteCarousel = "cheermote-carousel", e.DevOnly = "dev", e.DirectoryCommunityByLanguage = "directory.community.language", e.DirectoryCommunityIndex = "directory.community.index", e.DirectoryCommunityDetails = "directory.community.details", e.DirectoryFollowingCommunities = "directory.following.communities", e.DirectoryFollowingGames = "directory.following.games", e.DirectoryFollowingHosts = "directory.following.hosts", e.DirectoryFollowingIndex = "directory.following.index", e.DirectoryFollowingLiveChannels = "directory.following.channels", e.DirectoryFollowingVideos = "directory.following.videos.video-type", e.DirectoryGameClips = "directory.game.clips", e.DirectoryGameDetails = "directory.game.details", e.DirectoryGameIndex = "directory.game.index", e.DirectoryGames = "directory.games", e.DirectoryPopular = "directory.popular", e.DirectoryPopularByLanguage = "directory.popular.language", e.DirectoryGameVideos = "directory.game.videos", e.EmailVerification = "emailVerification", e.EventDetails = "event.details", e.ForYou = "for-you", e.Index = "index", e.MyClipsManager = "videoManager.clips", e.NotificationSettingsPage = "settings.notificationSettings", e.OnboardingIndex = "onboarding.index", e.ReportUserPage = "reportUser.page", e.SettingsConnections = "private/embed-components", e.SettingsChannel = "private/embed-components", e.SettingsNotifications = "settings.notifications", e.SettingsPrime = "settings.prime", e.SettingsProfile = "settings.profile", e.SettingsSecurity = "private/embed-components", e.StoreMerchPage = "store.merch", e.SubsLandingPage = "subs.landing", e.TeamsDashboardRevenue = "teams.dashboard.revenue", e.TeamsDashboardStats = "teams.dashboard.stats", e.TeamsDashboardMembers = "teams.dashboard.members", e.TeamsDashboardFeaturedChannels = "teams.dashboard.featured-channels", e.TeamsDashboardSettings = "teams.dashboard.settings", e.SubsBroadcasterPage = "subs.broadcaster", e.VideoManagerEditPropertiesPage = "videoManager.edit", e.VideoManagerPage = "videoManager.page", e.VideoManagerUploadListPage = "videoManager.upload-list", e.VideoManagerUploadPage = "videoManager.upload", e.VideosPage = "videos", e.VideoWatchPage = "video"
+        }(a || (a = {}))
     },
     wjhu: function(e, t) {
         var n = {
@@ -5709,4 +5669,4 @@ webpackJsonp([47], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.anon-front-8c88ad44fbc3653c89130c97ca1c28e9.js.map
+//# sourceMappingURL=pages.anon-front-feb75dca9bf7e37712b48df2b9afb09e.js.map

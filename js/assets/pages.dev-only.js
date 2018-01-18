@@ -1,16 +1,26 @@
 webpackJsonp([57], {
+    w9tK: function(e, t, n) {
+        "use strict";
+        n.d(t, "a", function() {
+            return a
+        });
+        var a;
+        ! function(e) {
+            e.BitsBuyCard = "bits-buy-card", e.BrowseCommunities = "browse.communities", e.BrowseCreative = "browse.creative", e.BrowseGamesAndCommunities = "browse.games-and-communities", e.ChannelClips = "channel.clips", e.ChannelCollections = "channel.collections", e.ChannelClipsManager = "videoManager.clips.channel", e.ChannelDashboardAchievements = "channel.dashboard.achievements", e.ChannelDashboardExtensions = "channel.dashboard.extensions", e.ChannelDashboardModeration = "channel.dashboard.moderation", e.ChannelDashboardStreamSummary = "channel.dashboard.stream-summary", e.ChannelEvents = "channel.events", e.ChannelIndex = "channel.index.index", e.ChatPopout = "chat", e.CheermoteCarousel = "cheermote-carousel", e.DevOnly = "dev", e.DirectoryCommunityByLanguage = "directory.community.language", e.DirectoryCommunityIndex = "directory.community.index", e.DirectoryCommunityDetails = "directory.community.details", e.DirectoryFollowingCommunities = "directory.following.communities", e.DirectoryFollowingGames = "directory.following.games", e.DirectoryFollowingHosts = "directory.following.hosts", e.DirectoryFollowingIndex = "directory.following.index", e.DirectoryFollowingLiveChannels = "directory.following.channels", e.DirectoryFollowingVideos = "directory.following.videos.video-type", e.DirectoryGameClips = "directory.game.clips", e.DirectoryGameDetails = "directory.game.details", e.DirectoryGameIndex = "directory.game.index", e.DirectoryGames = "directory.games", e.DirectoryPopular = "directory.popular", e.DirectoryPopularByLanguage = "directory.popular.language", e.DirectoryGameVideos = "directory.game.videos", e.EmailVerification = "emailVerification", e.EventDetails = "event.details", e.ForYou = "for-you", e.Index = "index", e.MyClipsManager = "videoManager.clips", e.NotificationSettingsPage = "settings.notificationSettings", e.OnboardingIndex = "onboarding.index", e.ReportUserPage = "reportUser.page", e.SettingsConnections = "private/embed-components", e.SettingsChannel = "private/embed-components", e.SettingsNotifications = "settings.notifications", e.SettingsPrime = "settings.prime", e.SettingsProfile = "settings.profile", e.SettingsSecurity = "private/embed-components", e.StoreMerchPage = "store.merch", e.SubsLandingPage = "subs.landing", e.TeamsDashboardRevenue = "teams.dashboard.revenue", e.TeamsDashboardStats = "teams.dashboard.stats", e.TeamsDashboardMembers = "teams.dashboard.members", e.TeamsDashboardFeaturedChannels = "teams.dashboard.featured-channels", e.TeamsDashboardSettings = "teams.dashboard.settings", e.SubsBroadcasterPage = "subs.broadcaster", e.VideoManagerEditPropertiesPage = "videoManager.edit", e.VideoManagerPage = "videoManager.page", e.VideoManagerUploadListPage = "videoManager.upload-list", e.VideoManagerUploadPage = "videoManager.upload", e.VideosPage = "videos", e.VideoWatchPage = "video"
+        }(a || (a = {}))
+    },
     yMnN: function(e, t, n) {
         "use strict";
 
-        function l() {
+        function a() {
             h.i.debug("debug message")
         }
 
-        function a() {
+        function i() {
             h.i.info("info message")
         }
 
-        function i() {
+        function l() {
             h.i.warn("warn message")
         }
 
@@ -41,15 +51,16 @@ webpackJsonp([57], {
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var u = n("U7vG"),
+        var d = n("U7vG"),
             m = n("CIox"),
-            d = n("F8kA"),
+            u = n("F8kA"),
             h = n("6sO2"),
-            p = n("zCIC"),
-            g = n("CSlQ"),
-            E = n("TToO"),
-            v = n("Odds"),
-            k = function(e) {
+            g = n("zCIC"),
+            p = n("w9tK"),
+            v = n("CSlQ"),
+            y = n("TToO"),
+            E = n("Odds"),
+            f = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.loadMoreA = function() {
@@ -81,149 +92,149 @@ webpackJsonp([57], {
                         loadingB: !1
                     }, n
                 }
-                return E.__extends(t, e), t.prototype.render = function() {
-                    for (var e = [], t = 0; t < this.state.colA; t++) e.push(u.createElement(v.V, {
+                return y.__extends(t, e), t.prototype.render = function() {
+                    for (var e = [], t = 0; t < this.state.colA; t++) e.push(d.createElement(E.V, {
                         key: t,
-                        display: v.H.Flex,
-                        flexWrap: v.K.NoWrap,
+                        display: E.H.Flex,
+                        flexWrap: E.K.NoWrap,
                         margin: 1
-                    }, u.createElement(v.V, {
+                    }, d.createElement(E.V, {
                         margin: {
                             right: 1
                         }
-                    }, u.createElement(v._3, {
+                    }, d.createElement(E._3, {
                         height: 90,
                         width: 90
-                    })), u.createElement(v.V, null, u.createElement(v._3, {
+                    })), d.createElement(E.V, null, d.createElement(E._3, {
                         width: 300,
                         lineCount: 3
                     }))));
                     var n = [];
-                    for (t = 0; t < this.state.colB; t++) n.push(u.createElement(v.V, {
+                    for (t = 0; t < this.state.colB; t++) n.push(d.createElement(E.V, {
                         key: t,
-                        display: v.H.Flex,
-                        flexWrap: v.K.NoWrap,
+                        display: E.H.Flex,
+                        flexWrap: E.K.NoWrap,
                         margin: 1
-                    }, u.createElement(v.V, {
+                    }, d.createElement(E.V, {
                         margin: {
                             right: 1
                         }
-                    }, u.createElement(v._3, {
+                    }, d.createElement(E._3, {
                         height: 90,
                         width: 90
-                    })), u.createElement(v.V, null, u.createElement(v._3, {
+                    })), d.createElement(E.V, null, d.createElement(E._3, {
                         width: 300,
                         lineCount: 3
                     }))));
-                    var l = {
+                    var a = {
                         border: "solid 3px",
                         borderColor: this.state.loadingA || this.state.loadingB ? "yellow" : "green",
                         height: "500px"
                     };
-                    return u.createElement("div", {
-                        style: l
-                    }, u.createElement(p.b, null, u.createElement(v.V, {
-                        display: v.H.Flex,
-                        flexWrap: v.K.NoWrap
-                    }, u.createElement(v.V, {
+                    return d.createElement("div", {
+                        style: a
+                    }, d.createElement(g.b, null, d.createElement(E.V, {
+                        display: E.H.Flex,
+                        flexWrap: E.K.NoWrap
+                    }, d.createElement(E.V, {
                         margin: {
                             right: 1
                         }
-                    }, e, this.state.loadingA && u.createElement(v.V, null, u.createElement(v.Z, {
+                    }, e, this.state.loadingA && d.createElement(E.V, null, d.createElement(E.Z, {
                         fillContent: !0
-                    })), u.createElement(p.a, {
+                    })), d.createElement(g.a, {
                         enabled: !0,
                         loadMore: this.loadMoreA,
                         pixelThreshold: 0
-                    })), u.createElement(v.V, null, n, this.state.loadingB && u.createElement(v.V, null, u.createElement(v.Z, {
+                    })), d.createElement(E.V, null, n, this.state.loadingB && d.createElement(E.V, null, d.createElement(E.Z, {
                         fillContent: !0
-                    })), u.createElement(p.a, {
+                    })), d.createElement(g.a, {
                         contentLength: n.length,
                         enabled: !0,
                         loadMore: this.loadMoreB,
                         pixelThreshold: 100
                     })))))
                 }, t
-            }(u.Component),
-            f = Object(g.c)("DevOnlyPage", {
-                destination: "dev",
+            }(d.Component),
+            k = Object(v.c)("DevOnlyPage", {
+                destination: p.a.DevOnly,
                 autoReportInteractive: !0
             })(function() {
-                return u.createElement(p.b, null, u.createElement("div", {
+                return d.createElement(g.b, null, d.createElement("div", {
                     style: {
                         margin: "0 2rem"
                     }
-                }, u.createElement("h1", {
+                }, d.createElement("h1", {
                     style: {
                         margin: "2rem 0"
                     }
-                }, "The Dev only page!"), u.createElement("p", null, "This page is only included in development. Use it for testing all the things that need testing."), u.createElement("h2", {
+                }, "The Dev only page!"), d.createElement("p", null, "This page is only included in development. Use it for testing all the things that need testing."), d.createElement("h2", {
                     style: {
                         margin: "2rem 0"
                     }
-                }, " Logging and error reporting"), u.createElement("div", null, u.createElement(v.u, {
-                    onClick: l
-                }, "Log a debug-level message"), " ", u.createElement(v.u, {
+                }, " Logging and error reporting"), d.createElement("div", null, d.createElement(E.u, {
                     onClick: a
-                }, "Log a info-level message"), " ", u.createElement(v.u, {
+                }, "Log a debug-level message"), " ", d.createElement(E.u, {
                     onClick: i
-                }, "Log a warning-level message"), " ", u.createElement(v.u, {
+                }, "Log a info-level message"), " ", d.createElement(E.u, {
+                    onClick: l
+                }, "Log a warning-level message"), " ", d.createElement(E.u, {
                     onClick: o
-                }, "Log an error-level message with error"), " ", u.createElement(v.u, {
+                }, "Log an error-level message with error"), " ", d.createElement(E.u, {
                     onClick: s
-                }, "Log a fatal-level message with error"), " ", u.createElement(v.u, {
+                }, "Log a fatal-level message with error"), " ", d.createElement(E.u, {
                     onClick: r
-                }, "Log message with unserializable argument"), " ", u.createElement(v.u, {
+                }, "Log message with unserializable argument"), " ", d.createElement(E.u, {
                     onClick: c
-                }, "Throw an error")), u.createElement("h2", {
+                }, "Throw an error")), d.createElement("h2", {
                     style: {
                         margin: "2rem 0"
                     }
-                }, " Dynamic Settings"), u.createElement("ul", null, u.createElement("li", null, u.createElement("pre", null, "environment = ", JSON.stringify(h.b.get("environment", "<not set>")))), u.createElement("li", null, u.createElement("pre", null, "env_test = ", JSON.stringify(h.b.get("env_test", "<not set>")))), u.createElement("li", null, u.createElement("pre", null, "totally_invalid_key = ", JSON.stringify(h.b.get("totally_invalid_key", "<default value>")))), u.createElement("li", null, u.createElement("pre", null, "experiments (hidden) = ", JSON.stringify(h.b.get("experiments", "<default value>"))))), u.createElement("h2", {
+                }, " Dynamic Settings"), d.createElement("ul", null, d.createElement("li", null, d.createElement("pre", null, "environment = ", JSON.stringify(h.b.get("environment", "<not set>")))), d.createElement("li", null, d.createElement("pre", null, "env_test = ", JSON.stringify(h.b.get("env_test", "<not set>")))), d.createElement("li", null, d.createElement("pre", null, "totally_invalid_key = ", JSON.stringify(h.b.get("totally_invalid_key", "<default value>")))), d.createElement("li", null, d.createElement("pre", null, "experiments (hidden) = ", JSON.stringify(h.b.get("experiments", "<default value>"))))), d.createElement("h2", {
                     style: {
                         margin: "2rem 0"
                     }
-                }, " Link tests"), u.createElement("ul", null, u.createElement("li", null, u.createElement(d.a, {
+                }, " Link tests"), d.createElement("ul", null, d.createElement("li", null, d.createElement(u.a, {
                     to: "/_dev"
-                }, "Full path")), u.createElement("li", null, u.createElement(d.a, {
+                }, "Full path")), d.createElement("li", null, d.createElement(u.a, {
                     to: "/_dev?qs"
-                }, "Full path, query string")), u.createElement("li", null, u.createElement(d.a, {
+                }, "Full path, query string")), d.createElement("li", null, d.createElement(u.a, {
                     to: "/_dev#hash"
-                }, "Full path, hash")), u.createElement("li", null, u.createElement(d.a, {
+                }, "Full path, hash")), d.createElement("li", null, d.createElement(u.a, {
                     to: "/_dev?qs#hash"
-                }, "Full path, query string, hash")), u.createElement("li", null, u.createElement(d.a, {
+                }, "Full path, query string, hash")), d.createElement("li", null, d.createElement(u.a, {
                     to: "_dev"
-                }, "Relative (identical) path")), u.createElement("li", null, u.createElement(d.a, {
+                }, "Relative (identical) path")), d.createElement("li", null, d.createElement(u.a, {
                     to: "_dev?qs"
-                }, "Relative path, query string")), u.createElement("li", null, u.createElement(d.a, {
+                }, "Relative path, query string")), d.createElement("li", null, d.createElement(u.a, {
                     to: "_dev#hash"
-                }, "Relative path, hash")), u.createElement("li", null, u.createElement(d.a, {
+                }, "Relative path, hash")), d.createElement("li", null, d.createElement(u.a, {
                     to: "_dev?qs#hash"
-                }, "Relative path, query string, hash")), u.createElement("li", null, u.createElement(d.a, {
+                }, "Relative path, query string, hash")), d.createElement("li", null, d.createElement(u.a, {
                     to: "?qs"
-                }, "Query string")), u.createElement("li", null, u.createElement(d.a, {
+                }, "Query string")), d.createElement("li", null, d.createElement(u.a, {
                     to: "#hash"
-                }, "Hash")), u.createElement("li", null, u.createElement(d.a, {
+                }, "Hash")), d.createElement("li", null, d.createElement(u.a, {
                     to: "?qs#hash"
-                }, "Query string and hash")), u.createElement("li", null, u.createElement(d.a, {
+                }, "Query string and hash")), d.createElement("li", null, d.createElement(u.a, {
                     to: {
                         pathname: "/_dev"
                     }
-                }, "Location with pathname")), u.createElement("li", null, u.createElement(d.a, {
+                }, "Location with pathname")), d.createElement("li", null, d.createElement(u.a, {
                     to: {
                         pathname: "_dev"
                     }
-                }, "Location with relative (identical) pathname")), u.createElement("li", null, u.createElement(d.a, {
+                }, "Location with relative (identical) pathname")), d.createElement("li", null, d.createElement(u.a, {
                     to: {
                         search: "?qs"
                     }
-                }, "Location with query string")), u.createElement("li", null, u.createElement(d.a, {
+                }, "Location with query string")), d.createElement("li", null, d.createElement(u.a, {
                     to: {
                         hash: "hash"
                     }
-                }, "Location with hash")), u.createElement("li", null, u.createElement(d.a, {
+                }, "Location with hash")), d.createElement("li", null, d.createElement(u.a, {
                     to: "/pondelinp?foo=bar&tt_content=content&tt_medium=medium&tt_foo=extrafoo"
-                }, "URL with query parameters, including tt_codes")), u.createElement("li", null, u.createElement(d.a, {
+                }, "URL with query parameters, including tt_codes")), d.createElement("li", null, d.createElement(u.a, {
                     to: {
                         pathname: "/pondelinp",
                         state: {
@@ -231,32 +242,32 @@ webpackJsonp([57], {
                             medium: "medium"
                         }
                     }
-                }, "Internal Link with location state, including tt_codes")), u.createElement("li", null, u.createElement(d.a, {
+                }, "Internal Link with location state, including tt_codes")), d.createElement("li", null, d.createElement(u.a, {
                     to: "/adamar/dashboard"
-                }, "Legacy Link (dashbaord)"))), u.createElement(v.V, {
+                }, "Legacy Link (dashbaord)"))), d.createElement(E.V, {
                     margin: {
                         top: 2
                     }
-                }, u.createElement(v._23, {
-                    type: v._28.H2
-                }, " Infinite Scroll Test"), u.createElement(k, null))))
+                }, d.createElement(E._23, {
+                    type: E._28.H2
+                }, " Infinite Scroll Test"), d.createElement(f, null))))
             }),
-            y = n("BhyV"),
+            b = n("BhyV"),
             S = n("7vx8"),
-            _ = n("z7vJ"),
-            b = function(e) {
+            w = n("z7vJ"),
+            C = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return E.__extends(t, e), t.prototype.render = function() {
-                    return u.createElement("div", {
+                return y.__extends(t, e), t.prototype.render = function() {
+                    return d.createElement("div", {
                         style: {
                             margin: "0 2rem"
                         }
-                    }, u.createElement("p", null, "Testing GraphQL"))
+                    }, d.createElement("p", null, "Testing GraphQL"))
                 }, t
-            }(u.Component),
-            w = Object(y.compose)(Object(S.a)(_, {
+            }(d.Component),
+            D = Object(b.compose)(Object(S.a)(w, {
                 options: function(e) {
                     return {
                         variables: {
@@ -264,15 +275,15 @@ webpackJsonp([57], {
                         }
                     }
                 }
-            }), d.f)(b),
-            N = function(e) {
+            }), u.f)(C),
+            _ = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         shouldSkip: !0
                     }, t
                 }
-                return E.__extends(t, e), t.prototype.componentDidMount = function() {
+                return y.__extends(t, e), t.prototype.componentDidMount = function() {
                     var e = this;
                     setTimeout(function() {
                         return e.setState({
@@ -286,22 +297,22 @@ webpackJsonp([57], {
                         })
                     }, 1e3)
                 }, t.prototype.render = function() {
-                    return u.createElement(w, {
+                    return d.createElement(D, {
                         shouldSkip: this.state.shouldSkip
                     })
                 }, t
-            }(u.Component),
-            L = function() {
-                return u.createElement(m.d, null, u.createElement(m.b, {
+            }(d.Component),
+            x = function() {
+                return d.createElement(m.d, null, d.createElement(m.b, {
                     path: "/_dev/gql",
-                    component: N
-                }), u.createElement(m.b, {
+                    component: _
+                }), d.createElement(m.b, {
                     path: "/_dev",
-                    component: f
+                    component: k
                 }))
             };
         n.d(t, "DevOnlyRoot", function() {
-            return L
+            return x
         })
     },
     z7vJ: function(e, t) {
@@ -472,4 +483,4 @@ webpackJsonp([57], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.dev-only-6e631530aa1793eb81ad89ba77fd7d60.js.map
+//# sourceMappingURL=pages.dev-only-40bbc2ba1f57a3ae4ef2be41fe2d37e4.js.map

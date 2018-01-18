@@ -2226,12 +2226,14 @@ webpackJsonp([48], {
                 }, e)
             })(E),
             w = n("HW6M"),
-            N = n("jF7o"),
-            A = n("zCIC");
+            N = n("BhyV"),
+            A = n("jF7o"),
+            B = n("w9tK"),
+            x = n("zCIC");
         ! function(e) {
             e[e.Error = 0] = "Error", e[e.AdBlocked = 1] = "AdBlocked", e[e.Unavailable = 2] = "Unavailable", e[e.Available = 3] = "Available"
         }(b || (b = {}));
-        var B, x = function(e) {
+        var O, I = function(e) {
                 var t = null;
                 return e.disableWatchAd && (t = Object(h.d)("Try again later", "Bits--WatchAdOffer")), m.createElement(_._19, {
                     className: "bits-buy-card__offer-row",
@@ -2269,8 +2271,8 @@ webpackJsonp([48], {
                     }
                 }, t)))
             },
-            O = /version\/([\w\.]+).+?(mobile\s?safari|safari)/i,
-            I = function(e) {
+            F = /version\/([\w\.]+).+?(mobile\s?safari|safari)/i,
+            T = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -2296,23 +2298,23 @@ webpackJsonp([48], {
                         })
                     })
                 }, t.prototype.render = function() {
-                    return O.test(navigator.userAgent) ? null : m.createElement(x, u.__assign({}, this.props, {
+                    return F.test(navigator.userAgent) ? null : m.createElement(I, u.__assign({}, this.props, {
                         disableWatchAd: !this.state.enableWatchAd
                     }))
                 }, t
             }(m.Component),
-            F = n("jxGs"),
-            T = n("3iBR"),
-            L = n("iydZ"),
-            D = n("ZJYd"),
-            j = n("CFVp"),
-            U = n("qe65"),
-            V = (n("OLKT"), function(e) {
+            L = n("jxGs"),
+            D = n("3iBR"),
+            j = n("iydZ"),
+            U = n("ZJYd"),
+            V = n("CFVp"),
+            P = n("qe65"),
+            H = (n("OLKT"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleBuyClick = function(e) {
                         var n = t.props.channelID || "",
-                            a = Object(D.b)({
+                            a = Object(U.b)({
                                 trackBitsCardInteraction: t.props.trackBitsCardInteraction,
                                 channelID: n,
                                 purchaseUrl: e.currentTarget.dataset.purchaseUrl,
@@ -2324,10 +2326,10 @@ webpackJsonp([48], {
                     }, t
                 }
                 return u.__extends(t, e), t.prototype.render = function() {
-                    if (this.props.offer.type === F.a) {
+                    if (this.props.offer.type === L.a) {
                         if (!this.props.channelLogin) return null;
                         var e = this.props.currentUserSHA || "";
-                        return m.createElement(I, {
+                        return m.createElement(T, {
                             key: "wateb",
                             minPayout: this.props.offer.bits,
                             onWatchAdClick: this.props.handleWatchAdClick,
@@ -2337,12 +2339,12 @@ webpackJsonp([48], {
                         })
                     }
                     var t = null;
-                    Object(D.c)(this.props.offer) ? t = m.createElement(_.V, {
+                    Object(U.c)(this.props.offer) ? t = m.createElement(_.V, {
                         className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline"
                     }, m.createElement(_._23, {
                         type: _._28.Strong,
                         fontSize: _.L.Size6
-                    }, Object(h.d)("Special Offer: 1st Time Buyers", "Bits--BuyCard"))) : Object(D.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === F.c && (t = m.createElement(_.V, {
+                    }, Object(h.d)("Special Offer: 1st Time Buyers", "Bits--BuyCard"))) : Object(U.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === L.c && (t = m.createElement(_.V, {
                         className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline"
                     }, m.createElement(_._23, {
                         type: _._28.Strong,
@@ -2355,7 +2357,7 @@ webpackJsonp([48], {
                         percentOff: this.props.offer.discount
                     }, "Bits--BuyCard")));
                     var a = null;
-                    (Object(D.c)(this.props.offer) || Object(D.e)(this.props.offer)) && (a = m.createElement("div", {
+                    (Object(U.c)(this.props.offer) || Object(U.e)(this.props.offer)) && (a = m.createElement("div", {
                         className: "bits-buy-card-offer-row__sub-text"
                     }, Object(h.d)("one per account", "Bits--BuyCard")));
                     var i = this.props.isLastRow ? _._19 : _.V;
@@ -2398,8 +2400,8 @@ webpackJsonp([48], {
                         }
                     }, n, a))))
                 }, t.prototype.getAvailableTiers = function(e) {
-                    var t = this.props.bitsConfig.indexedActions[T.f];
-                    t || (t = Object(j.b)());
+                    var t = this.props.bitsConfig.indexedActions[D.f];
+                    t || (t = Object(V.b)());
                     var n = t.orderedTiers.filter(function(t) {
                         return t.bits <= e
                     }).reverse();
@@ -2409,19 +2411,19 @@ webpackJsonp([48], {
                         },
                         className: "bits-buy-card-offer-row__tier-bits-images"
                     }, n.map(function(e) {
-                        return m.createElement(U.a, {
+                        return m.createElement(P.a, {
                             key: e.bits,
-                            sources: Object(L.b)(e, 2, !1)
+                            sources: Object(j.b)(e, 2, !1)
                         })
                     }))
                 }, t
             }(m.Component)),
-            P = (n("sgUC"), function(e) {
+            W = (n("sgUC"), function(e) {
                 var t = [],
                     n = [],
                     a = null;
                 return e.offers.forEach(function(i, r) {
-                    var l = m.createElement(V, {
+                    var l = m.createElement(H, {
                             key: i.id,
                             offer: i,
                             isLastRow: r + 1 < e.offers.length,
@@ -2436,9 +2438,9 @@ webpackJsonp([48], {
                             closeAllBits: e.closeAllBits,
                             trackBitsCardInteraction: e.trackBitsCardInteraction
                         }),
-                        o = Object(D.d)(i),
-                        s = Object(D.c)(i),
-                        c = i.type === F.a;
+                        o = Object(U.d)(i),
+                        s = Object(U.c)(i),
+                        c = i.type === L.a;
                     s && !e.hidePromos ? t.push(l) : o && !s ? t.push(l) : c && !e.hideWateb ? a = l : c || o || n.push(l)
                 }), e.fullsize ? m.createElement(_.V, {
                     className: "bits-buy-card-offers__full-size",
@@ -2446,7 +2448,7 @@ webpackJsonp([48], {
                     flexWrap: _.K.NoWrap,
                     display: _.H.Flex,
                     flexDirection: _.J.Column
-                }, a, t, n) : m.createElement(A.b, {
+                }, a, t, n) : m.createElement(x.b, {
                     className: "bits-buy-card-offers__scroll-view"
                 }, m.createElement(_.V, {
                     flexGrow: 1,
@@ -2455,7 +2457,7 @@ webpackJsonp([48], {
                     flexDirection: _.J.Column
                 }, a, t, n))
             }),
-            H = function(e) {
+            M = function(e) {
                 var t = null;
                 e.pricesIncludeVAT && (t = m.createElement(_._23, {
                     italic: !0,
@@ -2493,8 +2495,8 @@ webpackJsonp([48], {
                     color: _.F.Alt
                 }, Object(h.d)("Purchase Bits", "Bits--BuyCard")), t), a, n)
             },
-            W = n("nrdj"),
-            M = function(e) {
+            R = n("nrdj"),
+            z = function(e) {
                 return m.createElement(_.V, {
                     display: _.H.Flex,
                     flexGrow: 1,
@@ -2505,7 +2507,7 @@ webpackJsonp([48], {
                     padding: {
                         y: 1
                     }
-                }, m.createElement(W.a, {
+                }, m.createElement(R.a, {
                     prefix: "cheer",
                     amount: e.amount,
                     bitsConfig: e.bitsConfig,
@@ -2549,7 +2551,7 @@ webpackJsonp([48], {
                     disabled: !e.hasAdAvailable
                 }, Object(h.d)("Watch Another", "Bits--WatchAdAward"))))
             },
-            R = function(e) {
+            G = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -2570,12 +2572,12 @@ webpackJsonp([48], {
                         })
                     })
                 }, t.prototype.render = function() {
-                    return m.createElement(M, u.__assign({}, this.props, {
+                    return m.createElement(z, u.__assign({}, this.props, {
                         hasAdAvailable: this.state.hasAdAvailable
                     }))
                 }, t
             }(m.Component),
-            z = (n("q8Cw"), function(e) {
+            q = (n("q8Cw"), function(e) {
                 var t = Object(h.d)("Something's wrong!", "Bits--WatchAdError"),
                     n = Object(h.d)("Something went wrong. Wait a while and try again.", "Bits--WatchAdError"),
                     a = "adserrorgeneric";
@@ -2629,7 +2631,7 @@ webpackJsonp([48], {
                     }
                 }, m.createElement("img", {
                     className: "watch-ad-error__error-image",
-                    src: T.b + "/light/static/1/" + a + ".png"
+                    src: D.b + "/light/static/1/" + a + ".png"
                 })), m.createElement(_.V, {
                     padding: {
                         bottom: 1
@@ -2641,25 +2643,26 @@ webpackJsonp([48], {
                     color: _.F.Alt2
                 }, n), i)
             }),
-            G = n("aqNN");
+            J = n("CSlQ"),
+            Q = n("aqNN");
         n("6Rwu");
         ! function(e) {
             e[e.Inactive = 0] = "Inactive", e[e.Error = 1] = "Error", e[e.Awarded = 2] = "Awarded"
-        }(B || (B = {}));
-        var q = function(e) {
+        }(O || (O = {}));
+        var $ = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        wateb: B.Inactive,
+                        wateb: O.Inactive,
                         watebError: null,
                         bitsAwarded: 0
                     }, t.onBuyPopupClose = function(e) {
-                        Object(N.a)(e, function() {
+                        Object(A.a)(e, function() {
                             t.props.data && t.props.data.refetch()
                         })
                     }, t.onAdBitsAwarded = function(e) {
                         t.props.data && !t.props.data.loading && t.props.data.refetch(), t.setState({
-                            wateb: B.Awarded,
+                            wateb: O.Awarded,
                             bitsAwarded: e
                         })
                     }, t.handleWatchAdClick = function() {
@@ -2676,12 +2679,12 @@ webpackJsonp([48], {
                         })
                     }, t.receiveAdErrorState = function(e) {
                         t.setState({
-                            wateb: B.Error,
+                            wateb: O.Error,
                             watebError: e
                         })
                     }, t.resetAdErrorState = function() {
-                        t.state.wateb === B.Error && (t.setState({
-                            wateb: B.Inactive
+                        t.state.wateb === O.Error && (t.setState({
+                            wateb: O.Inactive
                         }), t.props.data && t.props.data.refetch())
                     }, t
                 }
@@ -2749,12 +2752,12 @@ webpackJsonp([48], {
                     var i = [];
                     this.props.data.currentUser ? i = this.props.data.currentUser.bitsOffers : this.props.data.bitsOffers && (i = this.props.data.bitsOffers);
                     var r = i.filter(function(e) {
-                            return e.type === F.b
+                            return e.type === L.b
                         }).some(function(e) {
                             return e.includesVAT
                         }),
                         l = this.props.data.user ? this.props.data.user.id : "",
-                        o = m.createElement(P, {
+                        o = m.createElement(W, {
                             offers: i,
                             fullsize: this.props.fullsize,
                             hidePromos: this.props.hidePromos,
@@ -2771,7 +2774,7 @@ webpackJsonp([48], {
                             trackBitsCardInteraction: this.props.trackBitsCardInteraction
                         }),
                         s = null;
-                    return this.props.location === y.b.ChatTooltip && (s = m.createElement(H, {
+                    return this.props.location === y.b.ChatTooltip && (s = m.createElement(M, {
                         bitsBalance: this.props.data && this.props.data.currentUser && this.props.data.currentUser.bitsBalance,
                         displayName: this.props.data && this.props.data.user && this.props.data.user.displayName || this.props.channelLogin || "",
                         minBitsToCheer: this.props.data && this.props.data.user && this.props.data.user.cheer && this.props.data.user.cheer.settings.cheerMinimumBits,
@@ -2787,16 +2790,16 @@ webpackJsonp([48], {
                     }, e), n, s, o)
                 }, t.prototype.renderWatebCard = function() {
                     if (this.props.data && this.props.data.currentUser) switch (this.state.wateb) {
-                        case B.Awarded:
-                            return m.createElement(R, {
+                        case O.Awarded:
+                            return m.createElement(G, {
                                 bitsConfig: this.props.bitsConfig,
                                 amount: this.state.bitsAwarded,
                                 onStartCheering: this.props.onClose,
                                 onWatchAnother: this.handleWatchAdClick,
                                 truexUserID: this.props.data.currentUser.idSHA1
                             });
-                        case B.Error:
-                            return m.createElement(z, {
+                        case O.Error:
+                            return m.createElement(q, {
                                 type: this.state.watebError || l.Unknown,
                                 onClose: this.props.onClose,
                                 onTryAgain: this.resetAdErrorState
@@ -2804,7 +2807,7 @@ webpackJsonp([48], {
                         default:
                             return !1
                     }
-                }, t = u.__decorate([Object(f.a)(G, {
+                }, t = u.__decorate([Object(f.a)(Q, {
                     name: "data",
                     options: function(e) {
                         return {
@@ -2817,13 +2820,17 @@ webpackJsonp([48], {
                     }
                 })], t)
             }(m.Component),
-            J = Object(o.a)(i, r)(q);
+            K = Object(N.compose)(Object(J.c)("BitsBuyCard", {
+                autoReportInteractive: !0,
+                destination: B.a.BitsBuyCard
+            }))($),
+            Z = Object(o.a)(i, r)(K);
         n.d(t, !1, function() {
             return i
         }), n.d(t, !1, function() {
             return r
         }), n.d(t, "a", function() {
-            return J
+            return Z
         })
     },
     ZJYd: function(e, t, n) {
@@ -4637,66 +4644,10 @@ webpackJsonp([48], {
         n.d(t, "a", function() {
             return a
         });
-        var a = {
-            BrowseCommunities: "browse.communities",
-            BrowseCreative: "browse.creative",
-            BrowseGamesAndCommunities: "browse.games-and-communities",
-            ChannelIndex: "channel.index.index",
-            ChannelDashboardAchievements: "channel.dashboard.achievements",
-            ChannelDashboardExtensions: "channel.dashboard.extensions",
-            ChannelDashboardModeration: "channel.dashboard.moderation",
-            ChannelDashboardStreamSummary: "channel.dashboard.stream-summary",
-            ChannelClips: "channel.clips",
-            ChannelClipsManager: "videoManager.clips.channel",
-            ChannelCollections: "channel.collections",
-            ChannelEvents: "channel.events",
-            ChatPopout: "chat",
-            DevOnly: "dev",
-            DirectoryCommunityByLanguage: "directory.community.language",
-            DirectoryCommunityIndex: "directory.community.index",
-            DirectoryCommunityDetails: "directory.community.details",
-            DirectoryGames: "directory.games",
-            DirectoryPopular: "directory.popular",
-            DirectoryPopularByLanguage: "directory.popular.language",
-            DirectoryGameIndex: "directory.game.index",
-            DirectoryGameClips: "directory.game.clips",
-            DirectoryGameDetails: "directory.game.details",
-            DirectoryGameVideos: "directory.game.videos",
-            DirectoryFollowingIndex: "directory.following.index",
-            DirectoryFollowingGames: "directory.following.games",
-            DirectoryFollowingVideos: "directory.following.videos.video-type",
-            DirectoryFollowingHosts: "directory.following.hosts",
-            DirectoryFollowingLiveChannels: "directory.following.channels",
-            DirectoryFollowingCommunities: "directory.following.communities",
-            EmailVerification: "emailVerification",
-            EventDetails: "event.details",
-            ForYou: "for-you",
-            Index: "index",
-            MyClipsManager: "videoManager.clips",
-            NotificationSettingsPage: "settings.notificationSettings",
-            OnboardingIndex: "onboarding.index",
-            ReportUserPage: "reportUser.page",
-            SettingsChannel: "private/embed-components",
-            SettingsConnections: "private/embed-components",
-            SettingsNotifications: "settings.notifications",
-            SettingsPrime: "settings.prime",
-            SettingsProfile: "settings.profile",
-            SettingsSecurity: "private/embed-components",
-            StoreMerchPage: "store.merch",
-            SubsLandingPage: "subs.landing",
-            SubsBroadcasterPage: "subs.broadcaster",
-            TeamsDashboardRevenue: "teams.dashboard.revenue",
-            TeamsDashboardStats: "teams.dashboard.stats",
-            TeamsDashboardMembers: "teams.dashboard.members",
-            TeamsDashboardFeaturedChannels: "teams.dashboard.featured-channels",
-            TeamsDashboardSettings: "teams.dashboard.settings",
-            VideosPage: "videos",
-            VideoWatchPage: "video",
-            VideoManagerPage: "videoManager.page",
-            VideoManagerEditPropertiesPage: "videoManager.edit",
-            VideoManagerUploadPage: "videoManager.upload",
-            VideoManagerUploadListPage: "videoManager.upload-list"
-        }
+        var a;
+        ! function(e) {
+            e.BitsBuyCard = "bits-buy-card", e.BrowseCommunities = "browse.communities", e.BrowseCreative = "browse.creative", e.BrowseGamesAndCommunities = "browse.games-and-communities", e.ChannelClips = "channel.clips", e.ChannelCollections = "channel.collections", e.ChannelClipsManager = "videoManager.clips.channel", e.ChannelDashboardAchievements = "channel.dashboard.achievements", e.ChannelDashboardExtensions = "channel.dashboard.extensions", e.ChannelDashboardModeration = "channel.dashboard.moderation", e.ChannelDashboardStreamSummary = "channel.dashboard.stream-summary", e.ChannelEvents = "channel.events", e.ChannelIndex = "channel.index.index", e.ChatPopout = "chat", e.CheermoteCarousel = "cheermote-carousel", e.DevOnly = "dev", e.DirectoryCommunityByLanguage = "directory.community.language", e.DirectoryCommunityIndex = "directory.community.index", e.DirectoryCommunityDetails = "directory.community.details", e.DirectoryFollowingCommunities = "directory.following.communities", e.DirectoryFollowingGames = "directory.following.games", e.DirectoryFollowingHosts = "directory.following.hosts", e.DirectoryFollowingIndex = "directory.following.index", e.DirectoryFollowingLiveChannels = "directory.following.channels", e.DirectoryFollowingVideos = "directory.following.videos.video-type", e.DirectoryGameClips = "directory.game.clips", e.DirectoryGameDetails = "directory.game.details", e.DirectoryGameIndex = "directory.game.index", e.DirectoryGames = "directory.games", e.DirectoryPopular = "directory.popular", e.DirectoryPopularByLanguage = "directory.popular.language", e.DirectoryGameVideos = "directory.game.videos", e.EmailVerification = "emailVerification", e.EventDetails = "event.details", e.ForYou = "for-you", e.Index = "index", e.MyClipsManager = "videoManager.clips", e.NotificationSettingsPage = "settings.notificationSettings", e.OnboardingIndex = "onboarding.index", e.ReportUserPage = "reportUser.page", e.SettingsConnections = "private/embed-components", e.SettingsChannel = "private/embed-components", e.SettingsNotifications = "settings.notifications", e.SettingsPrime = "settings.prime", e.SettingsProfile = "settings.profile", e.SettingsSecurity = "private/embed-components", e.StoreMerchPage = "store.merch", e.SubsLandingPage = "subs.landing", e.TeamsDashboardRevenue = "teams.dashboard.revenue", e.TeamsDashboardStats = "teams.dashboard.stats", e.TeamsDashboardMembers = "teams.dashboard.members", e.TeamsDashboardFeaturedChannels = "teams.dashboard.featured-channels", e.TeamsDashboardSettings = "teams.dashboard.settings", e.SubsBroadcasterPage = "subs.broadcaster", e.VideoManagerEditPropertiesPage = "videoManager.edit", e.VideoManagerPage = "videoManager.page", e.VideoManagerUploadListPage = "videoManager.upload-list", e.VideoManagerUploadPage = "videoManager.upload", e.VideosPage = "videos", e.VideoWatchPage = "video"
+        }(a || (a = {}))
     },
     weaG: function(e, t) {},
     x583: function(e, t) {},
@@ -5135,4 +5086,4 @@ webpackJsonp([48], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-collections-b24ffbf7502731c3b922d9f29dc8334f.js.map
+//# sourceMappingURL=pages.channel-collections-5b2f9ab731dcf2334400d7e0df75d9b3.js.map

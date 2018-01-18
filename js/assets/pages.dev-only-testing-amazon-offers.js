@@ -1,27 +1,27 @@
 webpackJsonp([52], {
-    "2AKG": function(e, n) {},
-    "4mOb": function(e, n) {},
-    "6Vx1": function(e, n, t) {
+    "2AKG": function(e, t) {},
+    "4mOb": function(e, t) {},
+    "6Vx1": function(e, t, n) {
         "use strict";
 
         function a(e) {
-            var n = o.__assign({
+            var t = o.__assign({
                 action_type: f.CLICK,
                 category: "Monetization",
                 section_name: "amazon_associates"
             }, e);
-            s.m.track(m.SpadeEventType.PartnerAffiliateSettings, n)
+            s.m.track(m.SpadeEventType.PartnerAffiliateSettings, t)
         }
-        Object.defineProperty(n, "__esModule", {
+        Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var i, o = t("TToO"),
-            r = t("U7vG"),
-            l = t("HW6M"),
-            s = t("6sO2"),
-            c = t("7vx8"),
-            d = t("jF7o"),
-            m = t("vH/s");
+        var i, o = n("TToO"),
+            r = n("U7vG"),
+            l = n("HW6M"),
+            s = n("6sO2"),
+            c = n("7vx8"),
+            d = n("jF7o"),
+            m = n("vH/s");
         ! function(e) {
             e.PARTNER = "partner", e.AFFILIATE = "affiliate", e.NONE = "none"
         }(i || (i = {}));
@@ -35,51 +35,51 @@ webpackJsonp([52], {
         }(p || (p = {}));
         var f;
         (f || (f = {})).CLICK = "click";
-        var h = t("Odds"),
-            k = t("ZOrf"),
-            A = (t("2AKG"), function(e) {
-                function n() {
-                    var n = null !== e && e.apply(this, arguments) || this;
-                    return n.renderButtonText = function(e) {
+        var h = n("Odds"),
+            k = n("ZOrf"),
+            A = (n("2AKG"), function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.renderButtonText = function(e) {
                         return e ? Object(s.d)("Edit", "AmazonRetailAssociatesAccountLinking") : Object(s.d)("Get Started", "AmazonRetailAssociatesAccountLinking")
-                    }, n.renderDescriptionText = function(e) {
+                    }, t.renderDescriptionText = function(e) {
                         return e ? Object(s.d)("Link to {storeID}", {
                             storeID: r.createElement(h._23, {
                                 type: h._28.Span,
                                 bold: !0
                             }, e)
                         }, "AmazonRetailAssociatesAccountLinking") : Object(s.d)("Create and link an Amazon Associates account to your Twitch account. Only one Amazon account may be linked at any one time.", "AmazonRetailAssociatesAccountLinking")
-                    }, n.launchLinkAccount = function(e) {
+                    }, t.launchLinkAccount = function(e) {
                         e.preventDefault();
-                        var t = "https://twitch.amazon.com/associates/register",
-                            o = n.props.data.user && n.props.data.user.roles,
-                            r = n.props.data.user && n.props.data.user.amazon.associatesStore.storeID,
+                        var n = "https://twitch.amazon.com/associates/register",
+                            o = t.props.data.user && t.props.data.user.roles,
+                            r = t.props.data.user && t.props.data.user.amazon.associatesStore.storeID,
                             l = i.NONE,
                             s = u.NONE;
-                        o && (l = o.isPartner ? i.PARTNER : o.isAffiliate ? i.AFFILIATE : i.NONE), r && (s = u.LINKED), n.launchPopup(t), a({
+                        o && (l = o.isPartner ? i.PARTNER : o.isAffiliate ? i.AFFILIATE : i.NONE), r && (s = u.LINKED), t.launchPopup(n), a({
                             action: r ? p.LinkAccountEdit : p.LinkAccountGetStarted,
-                            channel: n.props.channelName,
-                            channel_id: n.props.data.user && n.props.data.user.id,
+                            channel: t.props.channelName,
+                            channel_id: t.props.data.user && t.props.data.user.id,
                             partner_status: l,
                             associate_status: s,
-                            target: t
+                            target: n
                         })
-                    }, n.launchAssociatesAccount = function(e) {
+                    }, t.launchAssociatesAccount = function(e) {
                         e.preventDefault();
-                        n.launchPopup("https://affiliate-program.amazon.com/home/account")
-                    }, n.launchAssociatesReporting = function(e) {
+                        t.launchPopup("https://affiliate-program.amazon.com/home/account")
+                    }, t.launchAssociatesReporting = function(e) {
                         e.preventDefault();
-                        n.launchPopup("https://affiliate-program.amazon.com/home/reports")
-                    }, n.launchPopup = function(e) {
-                        var t = window.open(e, "Twitch", "width=1024,height=600,scrollbars=yes");
-                        t && (t.focus(), Object(d.a)(t, function() {
-                            n.props.data.refetch && n.props.data.refetch()
+                        t.launchPopup("https://affiliate-program.amazon.com/home/reports")
+                    }, t.launchPopup = function(e) {
+                        var n = window.open(e, "Twitch", "width=1024,height=600,scrollbars=yes");
+                        n && (n.focus(), Object(d.a)(n, function() {
+                            t.props.data.refetch && t.props.data.refetch()
                         }))
-                    }, n
+                    }, t
                 }
-                return o.__extends(n, e), n.prototype.render = function() {
+                return o.__extends(t, e), t.prototype.render = function() {
                     var e = this.props.data.user && this.props.data.user.amazon.associatesStore && this.props.data.user.amazon.associatesStore.storeID,
-                        n = this.props.data.user && this.props.data.user.amazon.associatesStore && this.props.data.user.amazon.associatesStore.isPayoutEnabled;
+                        t = this.props.data.user && this.props.data.user.amazon.associatesStore && this.props.data.user.amazon.associatesStore.isPayoutEnabled;
                     return r.createElement(h.V, null, r.createElement(h._19, {
                         background: h.m.Alt2,
                         borderBottom: !0,
@@ -112,14 +112,14 @@ webpackJsonp([52], {
                         flexWrap: h.K.NoWrap,
                         "data-test-selector": "amazon-associates-account-linking-tax-info",
                         className: l({
-                            "amazon-associates-account-linking__tax-info--error": !(!e || n)
+                            "amazon-associates-account-linking__tax-info--error": !(!e || t)
                         })
                     }, r.createElement(h.V, {
                         padding: {
                             top: 2,
                             right: 2,
                             bottom: 2,
-                            left: e && !n ? 1 : 2
+                            left: e && !t ? 1 : 2
                         },
                         flexShrink: 0,
                         flexGrow: 0,
@@ -169,7 +169,7 @@ webpackJsonp([52], {
                         href: "#",
                         onClick: this.launchAssociatesReporting
                     }, Object(s.d)("Reporting", "AmazonRetailAssociatesAccountLinking"))))))
-                }, n = o.__decorate([Object(c.a)(k, {
+                }, t = o.__decorate([Object(c.a)(k, {
                     options: function(e) {
                         return {
                             variables: {
@@ -177,41 +177,41 @@ webpackJsonp([52], {
                             }
                         }
                     }
-                })], n)
+                })], t)
             }(r.Component)),
-            g = t("RH2O"),
-            v = t("2KeS"),
-            y = t("V5M+"),
-            b = t("tu8+"),
-            S = (t("pBoG"), "GAME_COMMERCE_V2"),
+            g = n("RH2O"),
+            v = n("2KeS"),
+            y = n("V5M+"),
+            b = n("tu8+"),
+            S = (n("pBoG"), "GAME_COMMERCE_V2"),
             _ = function(e) {
-                function n() {
-                    var n = null !== e && e.apply(this, arguments) || this;
-                    return n.state = {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
                         amendmentAccepted: !1
-                    }, n.onAmendmentClick = function() {
+                    }, t.onAmendmentClick = function() {
                         var e = {
-                                channel: n.props.channelName,
-                                channel_id: n.props.data.user && n.props.data.user.id,
+                                channel: t.props.channelName,
+                                channel_id: t.props.data.user && t.props.data.user.id,
                                 partner_status: i.NONE,
                                 associate_status: u.NONE
                             },
-                            t = n.props.data.user && n.props.data.user.roles,
-                            r = n.props.data.user && n.props.data.user.amazon.associatesStore.storeID;
-                        return t && (e.partner_status = t.isPartner ? i.PARTNER : t.isAffiliate ? i.AFFILIATE : i.NONE), r && (e.associate_status = u.LINKED), a(o.__assign({
+                            n = t.props.data.user && t.props.data.user.roles,
+                            r = t.props.data.user && t.props.data.user.amazon.associatesStore.storeID;
+                        return n && (e.partner_status = n.isPartner ? i.PARTNER : n.isAffiliate ? i.AFFILIATE : i.NONE), r && (e.associate_status = u.LINKED), a(o.__assign({
                             action: p.OptInEarnRevenueCheckbox
-                        }, e)), n.props.showAmendmentModal({
-                            amendmentAccepted: n.state.amendmentAccepted,
+                        }, e)), t.props.showAmendmentModal({
+                            amendmentAccepted: t.state.amendmentAccepted,
                             trackingParameters: e
                         }), !1
-                    }, n
+                    }, t
                 }
-                return o.__extends(n, e), n.prototype.componentWillReceiveProps = function(e) {
-                    var n = e.data.user && e.data.user.twitch && e.data.user.twitch.commerceAmendment[0].isSigned || !1;
-                    n !== this.state.amendmentAccepted && this.setState({
-                        amendmentAccepted: n
+                return o.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
+                    var t = e.data.user && e.data.user.twitch && e.data.user.twitch.commerceAmendment[0].isSigned || !1;
+                    t !== this.state.amendmentAccepted && this.setState({
+                        amendmentAccepted: t
                     })
-                }, n.prototype.render = function() {
+                }, t.prototype.render = function() {
                     return this.props.data.loading ? null : r.createElement(h._19, {
                         display: h.H.Flex,
                         flexDirection: h.J.Row,
@@ -238,7 +238,7 @@ webpackJsonp([52], {
                         id: "amazon-retail-offers-amendment",
                         label: Object(s.d)("Opt in to earn revenue from sales on Amazon.com", "AmazonRetailOffersAmendnment")
                     })), r.createElement(h._23, null, Object(s.d)("Please read and agree to the new Commerce Addendum to become eligible for this program.", "AmazonRetailOffersAmendnment"))))
-                }, n = o.__decorate([Object(c.a)(b, {
+                }, t = o.__decorate([Object(c.a)(b, {
                     options: function(e) {
                         return {
                             variables: {
@@ -247,22 +247,22 @@ webpackJsonp([52], {
                             }
                         }
                     }
-                })], n)
+                })], t)
             }(r.Component),
             N = _,
-            E = t("oIkB"),
-            w = t("Wedf"),
+            E = n("oIkB"),
+            w = n("Wedf"),
             O = "amendment-modal-accept-button",
             z = function(e) {
-                function n() {
-                    var n = null !== e && e.apply(this, arguments) || this;
-                    return n.state = {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
                         hasUserScrolled: !1
-                    }, n.onUserScroll = function() {
-                        n.setState({
+                    }, t.onUserScroll = function() {
+                        t.setState({
                             hasUserScrolled: !0
                         })
-                    }, n.renderAcceptButton = function(e) {
+                    }, t.renderAcceptButton = function(e) {
                         return e ? null : r.createElement(h.V, {
                             margin: {
                                 left: .5,
@@ -271,13 +271,13 @@ webpackJsonp([52], {
                         }, r.createElement(h.u, {
                             "data-test-selector": O,
                             type: h.z.Text,
-                            onClick: n.onAccept,
-                            disabled: !n.state.hasUserScrolled
+                            onClick: t.onAccept,
+                            disabled: !t.state.hasUserScrolled
                         }, Object(s.d)("Accept", "AmazonRetailOffersAmendmentModal")))
-                    }, n.onClose = function() {
-                        n.props.onClose()
-                    }, n.onAccept = function() {
-                        return o.__awaiter(n, void 0, void 0, function() {
+                    }, t.onClose = function() {
+                        t.props.onClose()
+                    }, t.onAccept = function() {
+                        return o.__awaiter(t, void 0, void 0, function() {
                             return o.__generator(this, function(e) {
                                 switch (e.label) {
                                     case 0:
@@ -296,9 +296,9 @@ webpackJsonp([52], {
                                 }
                             })
                         })
-                    }, n
+                    }, t
                 }
-                return o.__extends(n, e), n.prototype.render = function() {
+                return o.__extends(t, e), t.prototype.render = function() {
                     return r.createElement(h.V, {
                         padding: 3
                     }, r.createElement(h._19, {
@@ -340,10 +340,10 @@ webpackJsonp([52], {
                         type: h._28.Span,
                         bold: !0
                     }, "Product Purchase Fee"), '") that will be calculated as a certain percentage as published by Twitch in the Supplemental Fees Statement, currently available at ', r.createElement("a", {
-                        href: "http://www.twitch.tv/legal/p/supplemental-fees",
+                        href: "https://www.twitch.tv/p/legal/supplemental-fees-statement/",
                         target: "_blank",
                         rel: "noopener noreferrer"
-                    }, "http://www.twitch.tv/legal/p/supplemental-fees"), ' or a successor website (as may be updated from time to time) (the "', r.createElement(h._23, {
+                    }, "https://www.twitch.tv/p/legal/supplemental-fees-statement/"), ' or a successor website (as may be updated from time to time) (the "', r.createElement(h._23, {
                         type: h._28.Span,
                         bold: !0
                     }, "Supplemental Fees Statement"), '"), of (a) the purchase price of such Product, as such price was listed by Twitch at the time of the Qualifying Purchase and in the currency in which the Qualifying Purchase was made, less (b) any special discounts or promotions, taxes, service charges, rebates, payment processing fees (e.g. credit card processing fees) and any other related transaction and processing expenses. Calculation of and eligibility to receive Product Purchase Fees will be further subject to any limitations or clarifications set forth in the Supplemental Fees Statement.'), r.createElement(h._23, null, '"', r.createElement(h._23, {
@@ -379,16 +379,16 @@ webpackJsonp([52], {
                         type: h.z.Text,
                         onClick: this.onClose
                     }, Object(s.d)("Cancel", "AmazonRetailOffersAmendmentModal"))), this.renderAcceptButton(this.props.amendmentAccepted)))
-                }, n
+                }, t
             }(r.Component),
             x = Object(c.a)(w, {
                 name: "setAmendmentAcceptance"
             })(z),
-            T = (t("4mOb"), function(e) {
-                function n() {
+            T = (n("4mOb"), function(e) {
+                function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return o.__extends(n, e), n.prototype.render = function() {
+                return o.__extends(t, e), t.prototype.render = function() {
                     return r.createElement(h._19, {
                         className: "amendment-modal__container",
                         background: h.m.Base
@@ -398,7 +398,7 @@ webpackJsonp([52], {
                         onClose: this.props.closeModal,
                         amendmentAccepted: this.props.amendmentAccepted
                     }))
-                }, n
+                }, t
             }(r.Component)),
             C = Object(g.a)(null, function(e) {
                 return Object(v.bindActionCreators)({
@@ -408,16 +408,16 @@ webpackJsonp([52], {
             F = Object(g.a)(null, function(e) {
                 return Object(v.bindActionCreators)({
                     showAmendmentModal: function(e) {
-                        var n = o.__rest(e, []);
-                        return Object(y.d)(C, n)
+                        var t = o.__rest(e, []);
+                        return Object(y.d)(C, t)
                     }
                 }, e)
             })(N),
             P = function(e) {
-                function n() {
+                function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return o.__extends(n, e), n.prototype.render = function() {
+                return o.__extends(t, e), t.prototype.render = function() {
                     return r.createElement(h.V, {
                         padding: 3
                     }, r.createElement(h._23, {
@@ -431,17 +431,17 @@ webpackJsonp([52], {
                     }), r.createElement(A, {
                         channelName: this.props.match.params.channelName
                     })))
-                }, n
+                }, t
             }(r.Component),
             R = P;
-        t.d(n, "DevOnlyTestingAmazonOffersComponent", function() {
+        n.d(t, "DevOnlyTestingAmazonOffersComponent", function() {
             return P
-        }), t.d(n, "DevOnlyTestingAmazonOffersPage", function() {
+        }), n.d(t, "DevOnlyTestingAmazonOffersPage", function() {
             return R
         })
     },
-    Wedf: function(e, n) {
-        var t = {
+    Wedf: function(e, t) {
+        var n = {
             kind: "Document",
             definitions: [{
                 kind: "OperationDefinition",
@@ -580,7 +580,7 @@ webpackJsonp([52], {
                 end: 200
             }
         };
-        t.loc.source = {
+        n.loc.source = {
             body: "mutation AmazonRetailOffers_AcceptAmendment($input: CommerceAmendmentType!) {\nsetAmendmentAcceptance(input: {\namendmentType: $input\n}){\ntwitch {\ncommerceAmendment(types:[$input]) {\nisSigned\nid\n}\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
@@ -588,10 +588,10 @@ webpackJsonp([52], {
                 column: 1
             }
         };
-        e.exports = t
+        e.exports = n
     },
-    ZOrf: function(e, n) {
-        var t = {
+    ZOrf: function(e, t) {
+        var n = {
             kind: "Document",
             definitions: [{
                 kind: "OperationDefinition",
@@ -757,7 +757,7 @@ webpackJsonp([52], {
                 end: 181
             }
         };
-        t.loc.source = {
+        n.loc.source = {
             body: "query AmazonAssociates_LinkedStore($login: String!) {\nuser(login: $login) {\nid\ndisplayName\nroles {\nisPartner\nisAffiliate\n}\namazon {\nassociatesStore {\nisPayoutEnabled\nstoreID\n}\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
@@ -765,32 +765,32 @@ webpackJsonp([52], {
                 column: 1
             }
         };
-        e.exports = t
+        e.exports = n
     },
-    jF7o: function(e, n, t) {
+    jF7o: function(e, t, n) {
         "use strict";
-        n.a = function(e, n) {
-            if (e) var t = setInterval(function() {
+        t.a = function(e, t) {
+            if (e) var n = setInterval(function() {
                 var a = !1,
                     i = !1;
                 try {
                     a = e.closed, i = !!e.success
                 } catch (e) {}
                 if (a || i) {
-                    n(i);
+                    t(i);
                     try {
                         e.close()
                     } catch (e) {}
-                    clearInterval(t)
+                    clearInterval(n)
                 }
             }, 500);
             else a.i.warn("[onPopupClose] Attempted to observe a window that failed to open.")
         };
-        var a = t("6sO2")
+        var a = n("6sO2")
     },
-    pBoG: function(e, n) {},
-    "tu8+": function(e, n) {
-        var t = {
+    pBoG: function(e, t) {},
+    "tu8+": function(e, t) {
+        var n = {
             kind: "Document",
             definitions: [{
                 kind: "OperationDefinition",
@@ -1028,7 +1028,7 @@ webpackJsonp([52], {
                 end: 282
             }
         };
-        t.loc.source = {
+        n.loc.source = {
             body: "query AmazonRetailOffers_CommerceAmendment($login: String! $amendmentType: CommerceAmendmentType!) {\nuser(login: $login) {\nid\ndisplayName\nroles {\nisPartner\nisAffiliate\n}\namazon {\nassociatesStore {\nstoreID\n}\n}\ntwitch {\ncommerceAmendment(types: [$amendmentType]) {\nid\nisSigned\n}\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
@@ -1036,7 +1036,7 @@ webpackJsonp([52], {
                 column: 1
             }
         };
-        e.exports = t
+        e.exports = n
     }
 });
-//# sourceMappingURL=pages.dev-only-testing-amazon-offers-d900052a543e2d4e1a991b837334d737.js.map
+//# sourceMappingURL=pages.dev-only-testing-amazon-offers-431ac73bfb5e1fb77313f9cc84f7bd42.js.map

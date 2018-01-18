@@ -964,7 +964,7 @@ webpackJsonp([44], {
                 }, t = a.__decorate([Object(u.c)("PrimeUpsellButton")], t)
             }(o.Component),
             N = n("e2wA"),
-            O = function(e) {
+            C = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -995,7 +995,7 @@ webpackJsonp([44], {
                     })
                 }, t = a.__decorate([Object(d.a)(N), Object(u.c)("PrimeInstructions")], t)
             }(o.Component),
-            C = function(e) {
+            O = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -1219,7 +1219,7 @@ webpackJsonp([44], {
                                 claimData: ""
                             },
                             a = (t.props.data || {}).currentUser || {};
-                        if (t.state.error) return o.createElement(C, {
+                        if (t.state.error) return o.createElement(O, {
                             fontSize: m.L.Size6
                         });
                         if ((t.isCurrentOfferClaimed(e) || t.state.claimed) && a && a.hasPrime) {
@@ -1230,7 +1230,7 @@ webpackJsonp([44], {
                                 deliveryMethod: e.deliveryMethod
                             })
                         }
-                        return o.createElement(O, {
+                        return o.createElement(C, {
                             offerId: e.id,
                             offerDescription: e.description || "",
                             offerType: e.deliveryMethod || "",
@@ -3464,8 +3464,8 @@ webpackJsonp([44], {
                     autoReportInteractive: !0
                 })], t)
             }(a.Component),
-            O = n("OkeX"),
-            C = function(e) {
+            C = n("OkeX"),
+            O = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -3487,7 +3487,7 @@ webpackJsonp([44], {
                     }) : null)
                 }, t.prototype.postRender = function() {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
-                }, t = i.__decorate([Object(h.a)(O, {
+                }, t = i.__decorate([Object(h.a)(C, {
                     options: {
                         variables: {
                             limit: 18
@@ -4274,7 +4274,7 @@ webpackJsonp([44], {
                         margin: {
                             bottom: 1
                         }
-                    }, a.createElement(C, null)), a.createElement(fe, null), a.createElement(E.V, {
+                    }, a.createElement(O, null)), a.createElement(fe, null), a.createElement(E.V, {
                         display: E.H.Hide,
                         breakpointMedium: {
                             display: E.H.Block
@@ -4464,7 +4464,7 @@ webpackJsonp([44], {
         var N = Object(l.c)("StreamEmbed", {
                 autoReportInteractive: !0
             })(E),
-            O = function(e, t) {
+            C = function(e, t) {
                 var n = e.embed,
                     i = n.id,
                     r = n.owner,
@@ -4493,17 +4493,17 @@ webpackJsonp([44], {
                     description: k
                 }))
             };
-        O.contextTypes = {
+        C.contextTypes = {
             feedTrackingProps: m.object
         };
-        var C = Object(l.c)("VideoEmbed", {
+        var O = Object(l.c)("VideoEmbed", {
                 autoReportInteractive: !0
-            })(O),
+            })(C),
             w = Object(d.a)(null, function(e) {
                 return Object(c.bindActionCreators)({
                     pauseCarousel: u.d
                 }, e)
-            })(C),
+            })(O),
             F = (n("HgOP"), function(e, t) {
                 var n = e.embed,
                     i = n.html,
@@ -6249,7 +6249,7 @@ webpackJsonp([44], {
                 }, t = a.__decorate([Object(p.c)("Composer")], t)
             }(r.Component),
             N = n("RH2O"),
-            O = Object(N.a)(function(e) {
+            C = Object(N.a)(function(e) {
                 return {
                     firstPageLoaded: e.session.firstPageLoaded
                 }
@@ -6269,7 +6269,7 @@ webpackJsonp([44], {
         }), n.d(t, !1, function() {
             return E
         }), n.d(t, "a", function() {
-            return O
+            return C
         })
     },
     VMA7: function(e, t, n) {
@@ -6809,7 +6809,7 @@ webpackJsonp([44], {
                     }
                 }, t))
             }),
-            O = Object(S.c)("TopReactions", {
+            C = Object(S.c)("TopReactions", {
                 autoReportInteractive: !0
             })(function(e) {
                 var t = e.reactions.map(function(t, n) {
@@ -6830,7 +6830,7 @@ webpackJsonp([44], {
                     display: _.H.Flex
                 }, t)
             }),
-            C = n("C/8M"),
+            O = n("C/8M"),
             w = n("rzuL"),
             F = n("Mlfg"),
             I = n("Dqkc"),
@@ -6941,7 +6941,7 @@ webpackJsonp([44], {
                             emoteID: n
                         })).then(function(i) {
                             var o = {
-                                action: e === r.Add ? C.a.Create : C.a.Remove,
+                                action: e === r.Add ? O.a.Create : O.a.Remove,
                                 entity: t.props.parentEntity,
                                 reactionInt: n,
                                 reactionText: a
@@ -6970,7 +6970,7 @@ webpackJsonp([44], {
                         position: a
                     }));
                     var l = null;
-                    l = o.createElement(O, {
+                    l = o.createElement(C, {
                         reactions: t.slice(0, R),
                         addReaction: this.addReaction,
                         removeReaction: this.removeReaction
@@ -8748,11 +8748,11 @@ webpackJsonp([44], {
             _ = n("F8kA"),
             E = n("SZoP"),
             N = n("fc0G"),
-            O = (n("i6UE"), {
+            C = (n("i6UE"), {
                 content: "carousel",
                 medium: "twitch_home"
             }),
-            C = function(e) {
+            O = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getContentRender = function() {
@@ -8763,7 +8763,7 @@ webpackJsonp([44], {
                                 game: m.createElement(_.a, {
                                     to: {
                                         pathname: "/directory/game/" + t.props.item.content.gameName,
-                                        state: O
+                                        state: C
                                     }
                                 }, t.props.item.content.gameName)
                             }, "HorizontalCarouselPlayer"),
@@ -8811,7 +8811,7 @@ webpackJsonp([44], {
                         }, m.createElement(_.a, {
                             to: {
                                 pathname: "/" + t.props.item.broadcaster.login,
-                                state: O
+                                state: C
                             },
                             "data-a-target": "carousel-profile-image"
                         }, m.createElement(h.l, {
@@ -8855,12 +8855,12 @@ webpackJsonp([44], {
                     }, t.getLinkForTitle = function() {
                         if (t.props.item.content.type === g.b.Stream) return {
                             pathname: "/" + t.props.item.broadcaster.login,
-                            state: O
+                            state: C
                         };
                         var e = t.state ? t.state.videoOffset || 0 : 0;
                         return {
                             pathname: "/videos/" + t.props.item.content.id + "?t=" + e,
-                            state: O
+                            state: C
                         }
                     }, t.getPlaceholderRender = function() {
                         var e = u("horizontal-carousel-player__details", {
@@ -9161,7 +9161,7 @@ webpackJsonp([44], {
                             case g.c.Vertical:
                                 return m.createElement(I, o.__assign({}, e));
                             default:
-                                return m.createElement(C, o.__assign({}, e))
+                                return m.createElement(O, o.__assign({}, e))
                         }
                     }, t.registerCarousel = function(e) {
                         t.props.registerCarousel && t.props.registerCarousel(e)
@@ -9532,7 +9532,7 @@ webpackJsonp([44], {
         "use strict";
 
         function i(e) {
-            return e.__typename === O
+            return e.__typename === C
         }
         var a = n("TToO"),
             r = n("RH2O"),
@@ -9555,8 +9555,8 @@ webpackJsonp([44], {
             _ = (n("BLXQ"), "delete"),
             E = "delete-confirm",
             N = "report",
-            O = "Post",
-            C = function(e) {
+            C = "Post",
+            O = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     n.closeViews = function() {
@@ -9705,7 +9705,7 @@ webpackJsonp([44], {
                                 targetUserID: t.broadcaster.id,
                                 contentID: t.id
                             };
-                        case O:
+                        case C:
                             var n = e;
                             return {
                                 contentType: b.a.ChannelFeedPost,
@@ -9749,7 +9749,7 @@ webpackJsonp([44], {
                         return Object(d.f)(l.a.FeedReactionToggle)
                     }
                 }, e)
-            })(C);
+            })(O);
         n.d(t, "a", function() {
             return w
         })
@@ -10878,66 +10878,10 @@ webpackJsonp([44], {
         n.d(t, "a", function() {
             return i
         });
-        var i = {
-            BrowseCommunities: "browse.communities",
-            BrowseCreative: "browse.creative",
-            BrowseGamesAndCommunities: "browse.games-and-communities",
-            ChannelIndex: "channel.index.index",
-            ChannelDashboardAchievements: "channel.dashboard.achievements",
-            ChannelDashboardExtensions: "channel.dashboard.extensions",
-            ChannelDashboardModeration: "channel.dashboard.moderation",
-            ChannelDashboardStreamSummary: "channel.dashboard.stream-summary",
-            ChannelClips: "channel.clips",
-            ChannelClipsManager: "videoManager.clips.channel",
-            ChannelCollections: "channel.collections",
-            ChannelEvents: "channel.events",
-            ChatPopout: "chat",
-            DevOnly: "dev",
-            DirectoryCommunityByLanguage: "directory.community.language",
-            DirectoryCommunityIndex: "directory.community.index",
-            DirectoryCommunityDetails: "directory.community.details",
-            DirectoryGames: "directory.games",
-            DirectoryPopular: "directory.popular",
-            DirectoryPopularByLanguage: "directory.popular.language",
-            DirectoryGameIndex: "directory.game.index",
-            DirectoryGameClips: "directory.game.clips",
-            DirectoryGameDetails: "directory.game.details",
-            DirectoryGameVideos: "directory.game.videos",
-            DirectoryFollowingIndex: "directory.following.index",
-            DirectoryFollowingGames: "directory.following.games",
-            DirectoryFollowingVideos: "directory.following.videos.video-type",
-            DirectoryFollowingHosts: "directory.following.hosts",
-            DirectoryFollowingLiveChannels: "directory.following.channels",
-            DirectoryFollowingCommunities: "directory.following.communities",
-            EmailVerification: "emailVerification",
-            EventDetails: "event.details",
-            ForYou: "for-you",
-            Index: "index",
-            MyClipsManager: "videoManager.clips",
-            NotificationSettingsPage: "settings.notificationSettings",
-            OnboardingIndex: "onboarding.index",
-            ReportUserPage: "reportUser.page",
-            SettingsChannel: "private/embed-components",
-            SettingsConnections: "private/embed-components",
-            SettingsNotifications: "settings.notifications",
-            SettingsPrime: "settings.prime",
-            SettingsProfile: "settings.profile",
-            SettingsSecurity: "private/embed-components",
-            StoreMerchPage: "store.merch",
-            SubsLandingPage: "subs.landing",
-            SubsBroadcasterPage: "subs.broadcaster",
-            TeamsDashboardRevenue: "teams.dashboard.revenue",
-            TeamsDashboardStats: "teams.dashboard.stats",
-            TeamsDashboardMembers: "teams.dashboard.members",
-            TeamsDashboardFeaturedChannels: "teams.dashboard.featured-channels",
-            TeamsDashboardSettings: "teams.dashboard.settings",
-            VideosPage: "videos",
-            VideoWatchPage: "video",
-            VideoManagerPage: "videoManager.page",
-            VideoManagerEditPropertiesPage: "videoManager.edit",
-            VideoManagerUploadPage: "videoManager.upload",
-            VideoManagerUploadListPage: "videoManager.upload-list"
-        }
+        var i;
+        ! function(e) {
+            e.BitsBuyCard = "bits-buy-card", e.BrowseCommunities = "browse.communities", e.BrowseCreative = "browse.creative", e.BrowseGamesAndCommunities = "browse.games-and-communities", e.ChannelClips = "channel.clips", e.ChannelCollections = "channel.collections", e.ChannelClipsManager = "videoManager.clips.channel", e.ChannelDashboardAchievements = "channel.dashboard.achievements", e.ChannelDashboardExtensions = "channel.dashboard.extensions", e.ChannelDashboardModeration = "channel.dashboard.moderation", e.ChannelDashboardStreamSummary = "channel.dashboard.stream-summary", e.ChannelEvents = "channel.events", e.ChannelIndex = "channel.index.index", e.ChatPopout = "chat", e.CheermoteCarousel = "cheermote-carousel", e.DevOnly = "dev", e.DirectoryCommunityByLanguage = "directory.community.language", e.DirectoryCommunityIndex = "directory.community.index", e.DirectoryCommunityDetails = "directory.community.details", e.DirectoryFollowingCommunities = "directory.following.communities", e.DirectoryFollowingGames = "directory.following.games", e.DirectoryFollowingHosts = "directory.following.hosts", e.DirectoryFollowingIndex = "directory.following.index", e.DirectoryFollowingLiveChannels = "directory.following.channels", e.DirectoryFollowingVideos = "directory.following.videos.video-type", e.DirectoryGameClips = "directory.game.clips", e.DirectoryGameDetails = "directory.game.details", e.DirectoryGameIndex = "directory.game.index", e.DirectoryGames = "directory.games", e.DirectoryPopular = "directory.popular", e.DirectoryPopularByLanguage = "directory.popular.language", e.DirectoryGameVideos = "directory.game.videos", e.EmailVerification = "emailVerification", e.EventDetails = "event.details", e.ForYou = "for-you", e.Index = "index", e.MyClipsManager = "videoManager.clips", e.NotificationSettingsPage = "settings.notificationSettings", e.OnboardingIndex = "onboarding.index", e.ReportUserPage = "reportUser.page", e.SettingsConnections = "private/embed-components", e.SettingsChannel = "private/embed-components", e.SettingsNotifications = "settings.notifications", e.SettingsPrime = "settings.prime", e.SettingsProfile = "settings.profile", e.SettingsSecurity = "private/embed-components", e.StoreMerchPage = "store.merch", e.SubsLandingPage = "subs.landing", e.TeamsDashboardRevenue = "teams.dashboard.revenue", e.TeamsDashboardStats = "teams.dashboard.stats", e.TeamsDashboardMembers = "teams.dashboard.members", e.TeamsDashboardFeaturedChannels = "teams.dashboard.featured-channels", e.TeamsDashboardSettings = "teams.dashboard.settings", e.SubsBroadcasterPage = "subs.broadcaster", e.VideoManagerEditPropertiesPage = "videoManager.edit", e.VideoManagerPage = "videoManager.page", e.VideoManagerUploadListPage = "videoManager.upload-list", e.VideoManagerUploadPage = "videoManager.upload", e.VideosPage = "videos", e.VideoWatchPage = "video"
+        }(i || (i = {}))
     },
     wjhu: function(e, t) {
         var n = {
@@ -11347,4 +11291,4 @@ webpackJsonp([44], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.front-3e22ac510dec42010ddd1fa431cecf2a.js.map
+//# sourceMappingURL=pages.front-af69815c6a043f546870152066b9cb20.js.map
