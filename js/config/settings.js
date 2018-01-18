@@ -279,16 +279,16 @@ window.__twilightSettings = {
         },
         "54b18ea6-2b6a-4ed7-9128-2497572d31e2": {
             "name": "twilight_web_onboarding_following_for_you",
-            "v": 2644,
+            "v": 2845,
             "t": 2,
             "groups": [{
-                "weight": 100,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 50,
                 "value": "first"
             }, {
-                "weight": 0,
+                "weight": 50,
                 "value": "last"
             }]
         },
@@ -386,30 +386,6 @@ window.__twilightSettings = {
             }, {
                 "weight": 0,
                 "value": "enabled"
-            }]
-        },
-        "9fb3c040-d7d1-40b1-ab32-f6843c8baa46": {
-            "name": "twilight_web_onboarding",
-            "v": 2524,
-            "t": 1,
-            "groups": [{
-                "weight": 100,
-                "value": "control"
-            }]
-        },
-        "a540dfb1-7502-4a8c-affa-5175a3e671d9": {
-            "name": "twilight_web_onboarding_for_you",
-            "v": 2439,
-            "t": 1,
-            "groups": [{
-                "weight": 100,
-                "value": "control"
-            }, {
-                "weight": 0,
-                "value": "last"
-            }, {
-                "weight": 0,
-                "value": "first"
             }]
         },
         "a9667563-723a-4cf7-b253-674d9eef0a53": {
