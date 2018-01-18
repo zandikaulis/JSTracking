@@ -1271,13 +1271,13 @@ window.SiteOptions = {
         },
         "44a503af-d77f-4f1d-9fa4-c99c5f783f9c": {
             "name": "twilight_video_manager_release",
-            "v": 2650,
+            "v": 2850,
             "t": 2,
             "groups": [{
-                "weight": 100,
+                "weight": 0,
                 "value": "no"
             }, {
-                "weight": 0,
+                "weight": 100,
                 "value": "yes"
             }]
         },
@@ -1622,13 +1622,13 @@ window.SiteOptions = {
         },
         "4d3d19a7-38c5-4328-9730-7d99565d5edd": {
             "name": "twilight_premiere_upload_flow",
-            "v": 2144,
+            "v": 2851,
             "t": 2,
             "groups": [{
-                "weight": 100,
+                "weight": 0,
                 "value": "no"
             }, {
-                "weight": 0,
+                "weight": 100,
                 "value": "yes"
             }]
         },
@@ -2234,18 +2234,6 @@ window.SiteOptions = {
                 "value": "test"
             }, {
                 "weight": 0,
-                "value": "control"
-            }]
-        },
-        "6e2f439b-916a-40b7-b1be-e82b284fd0bb": {
-            "name": "offline_experience",
-            "v": 1521,
-            "t": 1,
-            "groups": [{
-                "weight": 95,
-                "value": "show"
-            }, {
-                "weight": 5,
                 "value": "control"
             }]
         },
@@ -3139,13 +3127,13 @@ window.SiteOptions = {
         },
         "9daf3cbf-bd22-4101-95b9-b2c1b0461094": {
             "name": "android_premieres_reruns",
-            "v": 2387,
+            "v": 2852,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 100,
                 "value": "active"
             }]
         },
@@ -3388,13 +3376,13 @@ window.SiteOptions = {
         },
         "ae5fe654-f29f-435e-b1c9-4d106d51fd42": {
             "name": "iOS_premieres_reruns_pastpremieres",
-            "v": 2385,
+            "v": 2853,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 100,
                 "value": "active"
             }]
         },
