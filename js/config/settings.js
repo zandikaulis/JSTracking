@@ -93,13 +93,13 @@ window.__twilightSettings = {
         },
         "1318509a-bf97-475d-acdc-df6a24ef6e3e": {
             "name": "twilight_videos_in_sidenav",
-            "v": 2689,
+            "v": 2842,
             "t": 1,
             "groups": [{
-                "weight": 50,
+                "weight": 0,
                 "value": "none"
             }, {
-                "weight": 50,
+                "weight": 100,
                 "value": "all_content"
             }, {
                 "weight": 0,
@@ -242,6 +242,18 @@ window.__twilightSettings = {
             }, {
                 "weight": 0,
                 "value": "yes"
+            }]
+        },
+        "4f952587-515d-44ac-b0cc-86769f543c72": {
+            "name": "TWILIGHT_ALL_THE_STATS",
+            "v": 2841,
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "yes"
+            }, {
+                "weight": 100,
+                "value": "no"
             }]
         },
         "50ac9a2b-63c2-46ed-9e7d-123363195dfd": {
