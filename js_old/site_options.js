@@ -3164,15 +3164,6 @@ window.SiteOptions = {
                 "value": "none"
             }]
         },
-        "9fb3c040-d7d1-40b1-ab32-f6843c8baa46": {
-            "name": "twilight_web_onboarding",
-            "v": 2524,
-            "t": 1,
-            "groups": [{
-                "weight": 100,
-                "value": "control"
-            }]
-        },
         "a1ce3d24-076a-4664-be4c-f9046fdce18c": {
             "name": "baking_bread_uk",
             "v": 657,
@@ -3207,21 +3198,6 @@ window.SiteOptions = {
             }, {
                 "weight": 1,
                 "value": "variant1"
-            }]
-        },
-        "a540dfb1-7502-4a8c-affa-5175a3e671d9": {
-            "name": "twilight_web_onboarding_for_you",
-            "v": 2439,
-            "t": 1,
-            "groups": [{
-                "weight": 100,
-                "value": "control"
-            }, {
-                "weight": 0,
-                "value": "last"
-            }, {
-                "weight": 0,
-                "value": "first"
             }]
         },
         "a6896ac8-2d90-4342-840b-b48573b00d62": {
@@ -4465,14 +4441,11 @@ window.SiteOptions = {
         },
         "ec70bd08-dbc8-4f48-9f60-d035fec3eb20": {
             "name": "CVP Player Core 2.0 Mediaplayer Experiment Aug 2017",
-            "v": 2825,
+            "v": 2848,
             "t": 1,
             "groups": [{
-                "weight": 95,
+                "weight": 100,
                 "value": "2.2.4"
-            }, {
-                "weight": 5,
-                "value": "2.2.5"
             }]
         },
         "ed516213-9b6f-49a0-96f7-1706aafc8e2d": {
