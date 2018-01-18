@@ -314,13 +314,13 @@ window.SiteOptions = {
         },
         "1318509a-bf97-475d-acdc-df6a24ef6e3e": {
             "name": "twilight_videos_in_sidenav",
-            "v": 2689,
+            "v": 2842,
             "t": 1,
             "groups": [{
-                "weight": 50,
+                "weight": 0,
                 "value": "none"
             }, {
-                "weight": 50,
+                "weight": 100,
                 "value": "all_content"
             }, {
                 "weight": 0,
