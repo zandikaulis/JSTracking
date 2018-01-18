@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".53a692aa710b3002f470.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".2d7de28fde7acdc4d38f.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -14759,7 +14759,7 @@
 
         function i(e) {
             return function(t) {
-                n.i(o.d)(e).then(function(n) {
+                return n.i(o.d)(e).then(function(n) {
                     var i = n.partner ? d : f;
                     return t(r(e, {
                         partnerStatus: i
@@ -14770,21 +14770,22 @@
 
         function a(e) {
             return function(t) {
-                n.i(o.c)(e).then(function(n) {
+                return n.i(o.c)(e).then(function(n) {
                     var i = n.stream ? c : l;
                     return t(r(e, {
-                        liveStatus: i
+                        liveStatus: i,
+                        stream: n.stream
                     }))
                 })
             }
         }
-        n.d(t, "f", function() {
+        n.d(t, "e", function() {
             return s
         }), n.d(t, "a", function() {
             return u
         }), n.d(t, "d", function() {
             return c
-        }), n.d(t, "e", function() {
+        }), n.d(t, "f", function() {
             return d
         }), t.b = i, t.c = a;
         var o = n(11),
@@ -14801,17 +14802,19 @@
             var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u,
                 t = arguments[1];
             switch (t.type) {
-                case i.f:
+                case i.e:
                     var r = s()({}, e);
                     return r.byName[t.channelName] = s()({}, r.byName[t.channelName] || {}, t.info), r.allNames = n.i(a.a)(r.allNames, t.channelName), r;
                 default:
                     return e
             }
         }
-        t.c = r, n.d(t, "a", function() {
+        t.d = r, n.d(t, "a", function() {
             return l
-        }), n.d(t, "b", function() {
+        }), n.d(t, "c", function() {
             return d
+        }), n.d(t, "b", function() {
+            return f
         });
         var i = n(228),
             a = n(187),
@@ -14830,6 +14833,9 @@
             },
             d = function(e, t) {
                 return c(e, t, "partnerStatus")
+            },
+            f = function(e, t) {
+                return c(e, t, "stream")
             }
     }, function(e, t, n) {
         "use strict";
@@ -22268,7 +22274,7 @@
                     u = v.a(!0),
                     c = b.k() === b.p ? null : E;
                 return {
-                    app_version: "2018.01.18-185128+c31f4595a03a35bfecb7391347f769a43297d4b5",
+                    app_version: "2018.01.18-213702+da8eb63a7a01ccd3ae87146971eeb435005f919c",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -24237,7 +24243,7 @@
                 analyticsTracker: d.a,
                 backend: f.a,
                 backendInfo: p.a,
-                broadcasterInfo: h.c,
+                broadcasterInfo: h.d,
                 captions: m.b,
                 chromecast: w.f,
                 clipRecommendations: v.c,
@@ -25254,8 +25260,8 @@
                     r = void 0,
                     a = void 0,
                     s = n.i(c.a)(e, t),
-                    u = n.i(c.b)(e, t);
-                return s !== l.a && (r = s === l.d), u !== l.a && (a = u === l.e), {
+                    u = n.i(c.c)(e, t);
+                return s !== l.a && (r = s === l.d), u !== l.a && (a = u === l.f), {
                     channel: e.streamMetadata.channel.name || null,
                     channel_id: e.streamMetadata.channel.id ? parseInt(e.streamMetadata.channel.id, 10) : null,
                     game: e.streamMetadata.game || null,
