@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".ba992ef01c97100b53e1.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".7392f2c16b86413d5adb.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.i = function(e) {
@@ -10831,7 +10831,7 @@
                             n = t.channel,
                             r = t.type,
                             i = n.name;
-                        r === f ? this.createTimer(i) : this._timer && this._timer.pause()
+                        r === f ? (this.createTimer(i), this.onPlaybackStateChange(this._store.getState())) : this._timer && (this._timer.destroy(), this._timer = null)
                     }
                 }, {
                     key: "createTimer",
@@ -10844,7 +10844,7 @@
                                 if (t._store.dispatch(n.i(a.m)(i)), i === d) {
                                     var u = r.vod_archive_midrolls_break_length,
                                         c = r.vod_archive_midrolls_frequency;
-                                    t._timer = new s.a(function() {
+                                    t._timer && t._timer.destroy(), t._timer = new s.a(function() {
                                         t._store.dispatch(n.i(a.d)(o.d, parseInt(u, 10), !1, 0, "TIMER_AD"))
                                     }, 60 * parseInt(c, 10) * 1e3, window)
                                 }
@@ -10856,7 +10856,7 @@
                     value: function() {
                         this._unsubs.forEach(function(e) {
                             return e()
-                        })
+                        }), this._timer && this._timer.destroy()
                     }
                 }]), e
             }()
@@ -22268,7 +22268,7 @@
                     u = v.a(!0),
                     c = b.k() === b.p ? null : E;
                 return {
-                    app_version: "2018.01.18-221600+b13ecc5757bcb121c94222556c4f81ad73ec5b56",
+                    app_version: "2018.01.18-233826+9d166b564b25b59cfcce9d43c06cf720e3fd42a4",
                     flash_version: t,
                     referrer_url: i,
                     referrer_host: a.host,

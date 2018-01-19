@@ -61,7 +61,7 @@ window.__twilightSettings = {
     "twilight_routes": ["channel", "channelEvents", "clips", "collections", "community", "dashboardAchievements", "dashboardModeration", "dashboardStreamSummary", "directoryAllChannels", "directoryCommunities", "directoryCreative", "directoryFollowing", "directoryFollowingCommunities", "directoryFollowingChannels", "directoryFollowingGames", "directoryFollowingHosts", "directoryGame", "directoryGameDetails", "directoryGames", "directoryGameClips", "directoryGameVideos", "directoryVideos", "event", "index", "managerClips", "managerClipsChannel", "managerHighlights", "managerPastBroadcast", "managerUploads", "merchStore", "settingsNotifications", "video", "videos"],
     "twilight_routes_enabled": true,
     "twilight_routes_test_users": ["tanexion", "codecrshr", "adamar", "major_mosey", "kashinwins", "legypsy", "cathadan", "zenhaplo", "diresqrl", "kugleburg", "polygoose", "r_demerzel", "digisaint", "molu", "bennyguitar", "cresseye", "lunacyhatter", "lawls544", "delthios"],
-    "twilight_video_manager_public": true,
+    "twilight_video_manager_public": false,
     "twilight_video_manager_staff": true,
     "update_chunks": [],
     "update_manager_enabled": false,
