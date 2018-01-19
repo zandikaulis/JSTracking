@@ -3584,7 +3584,7 @@ webpackJsonp([46], {
                         },
                         enabled: function() {
                             return te.a.wrap(function() {
-                                return n.e(66).then(n.bind(null, "IwGL"))
+                                return n.e(67).then(n.bind(null, "IwGL"))
                             }, "LatestVideosFromFollowedCarousel")(e)
                         }
                     },
@@ -3775,7 +3775,7 @@ webpackJsonp([46], {
                 })], t)
             }(p.Component),
             oe = function() {
-                return n.e(69).then(n.bind(null, "oms2"))
+                return n.e(70).then(n.bind(null, "oms2"))
             },
             se = n("54wg"),
             de = n("F8kA"),
@@ -8431,4 +8431,4 @@ webpackJsonp([46], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.following-2058fb9d5d8451f9178665c3ccfb04ea.js.map
+//# sourceMappingURL=pages.following-1d0b33e5f1f1359d6f36945f4e942ddc.js.map

@@ -897,7 +897,7 @@ webpackJsonp([36], {
                             t = null, i.label = 1;
                         case 1:
                             return i.trys.push([1, 3, , 4]), [4, m.n.apollo.client.query({
-                                query: ke,
+                                query: ge,
                                 variables: {
                                     login: e
                                 }
@@ -1854,122 +1854,7 @@ webpackJsonp([36], {
                     })))
                 }, t
             }(S.Component),
-            ue = n("F8kA"),
-            pe = (n("tNBv"), "nativeLanguageNotifDismissed"),
-            me = [{
-                title: "English",
-                login: "gamesdonequick"
-            }, {
-                title: "Español",
-                login: "speedrunsespanol"
-            }, {
-                title: "Deutsch",
-                login: "germenchrestream"
-            }, {
-                title: "Français",
-                login: "lefrenchrestream"
-            }, {
-                title: "Русский",
-                login: "goldensplit"
-            }, {
-                title: "日本語",
-                login: "japanese_restream"
-            }],
-            he = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        isClosed: !1
-                    }, t.getChannelLinks = function() {
-                        var e = R.b.get("native_broadcast_blacklist", []);
-                        return me.filter(function(t) {
-                            return e.indexOf(t.login) < 0
-                        }).filter(function(e) {
-                            return e.login !== t.props.channelLogin
-                        }).map(function(e) {
-                            var t = e.title + " (" + e.login + ")";
-                            return S.createElement("li", {
-                                key: e.login
-                            }, S.createElement(ue.a, {
-                                className: "native-broadcast-notification__link",
-                                to: "/" + e.login
-                            }, t))
-                        })
-                    }, t.onDismiss = function() {
-                        t.setState({
-                            isClosed: !0
-                        });
-                        var e = u.__assign({}, m.k.get(pe, {}), (n = {}, n[t.props.channelLogin] = Date.now(), n));
-                        m.k.set(pe, e);
-                        var n
-                    }, t.onExpire = function() {
-                        t.setState({
-                            isClosed: !0
-                        })
-                    }, t
-                }
-                return u.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
-                    e.channelLogin !== this.props.channelLogin && this.setState({
-                        isClosed: !1
-                    })
-                }, t.prototype.render = function() {
-                    if (this.state.isClosed || !this.isEventChannel(this.props.channelLogin)) return null;
-                    if (!this.isEventChannel(this.props.channelLogin)) return null;
-                    if (this.hasDismissedForChannel(this.props.channelLogin)) return null;
-                    var e = Date.now();
-                    if (e < 15153426e5 || e >= 15159564e5) return null;
-                    var t = this.getChannelLinks();
-                    return t.length ? S.createElement(z._19, {
-                        attachLeft: !0,
-                        attachRight: !0,
-                        attachTop: !0,
-                        background: z.m.AccentAlt2,
-                        color: z.F.Overlay,
-                        padding: 1,
-                        position: z._4.Absolute
-                    }, S.createElement(z.V, {
-                        margin: {
-                            bottom: 1
-                        }
-                    }, S.createElement(z._23, {
-                        type: z._28.H4
-                    }, Object(m.d)("Awesome Games Done Quick 2018", "AGDQLanguageSticky"))), S.createElement(z.V, {
-                        margin: {
-                            bottom: 1
-                        }
-                    }, S.createElement(z._23, {
-                        color: z.F.OverlayAlt
-                    }, Object(m.d)("Want to watch AGDQ in your local language? Try one of these international broadcasts!", "AGDQLanguageSticky"))), S.createElement("ul", null, t), S.createElement(z.V, {
-                        attachRight: !0,
-                        attachTop: !0,
-                        margin: 1,
-                        position: z._4.Absolute
-                    }, S.createElement(z.v, {
-                        ariaLabel: Object(m.d)("Close", "AGDQLanguageSticky"),
-                        icon: z._11.Close,
-                        onClick: this.onDismiss,
-                        overlay: !0,
-                        size: z.x.Small,
-                        "data-a-target": "native-language-notification-close-button"
-                    })), S.createElement(z.V, {
-                        margin: {
-                            top: .5
-                        }
-                    }, S.createElement(z._7, {
-                        countdown: 30,
-                        onCountdownEnd: this.onExpire,
-                        size: z._8.ExtraSmall
-                    }))) : null
-                }, t.prototype.isEventChannel = function(e) {
-                    return me.map(function(e) {
-                        return e.login
-                    }).includes(e)
-                }, t.prototype.hasDismissedForChannel = function(e) {
-                    var t = m.k.get(pe, {})[e];
-                    return !!t && t >= 15153426e5
-                }, t
-            }(S.Component),
-            ge = function(e) {
+            ue = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -2051,11 +1936,11 @@ webpackJsonp([36], {
                     })))) : null
                 }, t
             }(S.Component),
-            fe = n("u8SD"),
-            ve = n("Kxgf"),
-            be = n("djIP"),
-            ke = n("pV+t"),
-            ye = function(e) {
+            pe = n("u8SD"),
+            me = n("Kxgf"),
+            he = n("djIP"),
+            ge = n("pV+t"),
+            fe = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getInvalidUserMessage = function() {
@@ -2071,7 +1956,7 @@ webpackJsonp([36], {
                                     notice: t.getInvalidUserMessage()
                                 };
                                 try {
-                                    t.props.blockUserMutation(e, be.b.Other, be.a.Chat, t.props.data && t.props.data.user)
+                                    t.props.blockUserMutation(e, he.b.Other, he.a.Chat, t.props.data && t.props.data.user)
                                 } catch (e) {
                                     return {
                                         notice: Object(m.d)("Unable to ignore user", "IgnoreCommandHandler")
@@ -2126,7 +2011,7 @@ webpackJsonp([36], {
                         command: "unignore",
                         handler: this.unblockUser
                     }))
-                }, t = u.__decorate([Object(C.a)(ke, {
+                }, t = u.__decorate([Object(C.a)(ge, {
                     options: function(e) {
                         return {
                             variables: {
@@ -2139,7 +2024,137 @@ webpackJsonp([36], {
                     }
                 })], t)
             }(S.Component),
-            Se = Object(_.compose)(Object(ve.a)(), Object(fe.a)())(ye),
+            ve = Object(_.compose)(Object(me.a)(), Object(pe.a)())(fe),
+            be = n("F8kA"),
+            ke = (n("W266"), "nativeBroadcastNotifDismissed"),
+            ye = [{
+                title: "English",
+                login: "PlayHearthstone"
+            }, {
+                title: "中文 繁體",
+                login: "HearthstonezhTW"
+            }, {
+                title: "한국어",
+                login: "playhearthstonekr"
+            }, {
+                title: "Русский",
+                login: "PlayHearthstoneRU"
+            }, {
+                title: "Deutsch",
+                login: "C4mlann"
+            }, {
+                title: "Italiano",
+                login: "GDivision"
+            }, {
+                title: "Polski",
+                login: "BlackFIreIce"
+            }, {
+                title: "Français",
+                login: "originhs"
+            }, {
+                title: "Français",
+                login: "armatvhs"
+            }, {
+                title: "Español - España",
+                login: "OGSeries"
+            }, {
+                title: "ภาษาไทย",
+                login: "HearthstoneTH"
+            }, {
+                title: "Español - Latinoamérica",
+                login: "CopaAmerica_ES1"
+            }, {
+                title: "Português - Brasil",
+                login: "CopaAmerica_pt1"
+            }],
+            Se = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        isClosed: !1
+                    }, t.getChannelLinks = function() {
+                        var e = R.b.get("native_broadcast_blacklist", []);
+                        return ye.filter(function(t) {
+                            return e.indexOf(t.login.toLowerCase()) < 0
+                        }).filter(function(e) {
+                            return e.login.toLowerCase() !== t.props.channelLogin.toLowerCase()
+                        }).map(function(e) {
+                            var t = e.title + " (" + e.login + ")";
+                            return S.createElement("li", {
+                                key: e.login
+                            }, S.createElement(be.a, {
+                                className: "native-broadcast-notification__link",
+                                to: "/" + e.login.toLowerCase()
+                            }, t))
+                        })
+                    }, t.onDismiss = function() {
+                        t.setState({
+                            isClosed: !0
+                        });
+                        var e = u.__assign({}, m.k.get(ke, {}), (n = {}, n[t.props.channelLogin.toLowerCase()] = Date.now(), n));
+                        m.k.set(ke, e);
+                        var n
+                    }, t.onExpire = function() {
+                        t.setState({
+                            isClosed: !0
+                        })
+                    }, t
+                }
+                return u.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
+                    e.channelLogin.toLowerCase() !== this.props.channelLogin.toLowerCase() && this.setState({
+                        isClosed: !1
+                    })
+                }, t.prototype.render = function() {
+                    if (this.state.isClosed) return null;
+                    if (!this.isEventChannel(this.props.channelLogin)) return null;
+                    if (this.hasDismissedForChannel(this.props.channelLogin)) return null;
+                    var e = Date.now();
+                    if (e < 15161904e5 || e >= 15167088e5) return null;
+                    var t = this.getChannelLinks();
+                    return t.length ? S.createElement(z._19, {
+                        attachLeft: !0,
+                        attachRight: !0,
+                        attachTop: !0,
+                        background: z.m.AccentAlt2,
+                        color: z.F.Overlay,
+                        padding: 1,
+                        position: z._4.Absolute
+                    }, S.createElement(z.V, {
+                        margin: {
+                            bottom: 1
+                        }
+                    }, S.createElement(z._23, {
+                        type: z._28.H4
+                    }, Object(m.d)("Want to watch HCT?", "NativeBroadcastNotification"))), S.createElement("ul", null, t), S.createElement(z.V, {
+                        attachRight: !0,
+                        attachTop: !0,
+                        margin: 1,
+                        position: z._4.Absolute
+                    }, S.createElement(z.v, {
+                        ariaLabel: Object(m.d)("Close", "NativeBroadcastNotification"),
+                        icon: z._11.Close,
+                        onClick: this.onDismiss,
+                        overlay: !0,
+                        size: z.x.Small,
+                        "data-a-target": "native-broadcast-notification-close-button"
+                    })), S.createElement(z.V, {
+                        margin: {
+                            top: .5
+                        }
+                    }, S.createElement(z._7, {
+                        countdown: 30,
+                        onCountdownEnd: this.onExpire,
+                        size: z._8.ExtraSmall
+                    }))) : null
+                }, t.prototype.isEventChannel = function(e) {
+                    return ye.map(function(e) {
+                        return e.login.toLowerCase()
+                    }).includes(e.toLowerCase())
+                }, t.prototype.hasDismissedForChannel = function(e) {
+                    var t = m.k.get(ke, {})[e.toLowerCase()];
+                    return !!t && t >= 15161904e5
+                }, t
+            }(S.Component),
             Ce = n("+Znq"),
             _e = n("9u8h"),
             Ee = (n("q4rf"), function(e) {
@@ -2729,7 +2744,7 @@ webpackJsonp([36], {
                         }
                     }, S.createElement(z._23, {
                         type: z._28.Span
-                    }, Object(m.d)("New chatter announcements are now active in your channel, making it easier to welcome new people.", "RitualsOnboardingSticky")), S.createElement(z._23, null, S.createElement(ue.a, {
+                    }, Object(m.d)("New chatter announcements are now active in your channel, making it easier to welcome new people.", "RitualsOnboardingSticky")), S.createElement(z._23, null, S.createElement(be.a, {
                         onClick: this.props.onClick,
                         to: "/" + this.props.channelLogin + "/dashboard/settings",
                         "data-test-selector": "rituals-sticky-link"
@@ -7685,13 +7700,13 @@ webpackJsonp([36], {
                         channelDisplayName: this.props.channelDisplayName,
                         channelLogin: this.props.channelLogin,
                         bitsConfig: this.props.bitsConfig
-                    }), this.props.hostedChannelDisplayName && !this.props.isPopout && S.createElement(ge, {
+                    }), this.props.hostedChannelDisplayName && !this.props.isPopout && S.createElement(ue, {
                         hostedChannelDisplayName: this.props.hostedChannelDisplayName || "",
                         hostedChannelLogin: this.state.hostedChannelLogin || ""
                     }), this.props.firstPageLoaded && !this.props.isEmbedded && S.createElement(nt, {
                         channelID: this.props.channelID,
                         send: this.sendMessage
-                    }), this.props.firstPageLoaded && !this.props.isEmbedded && !this.props.isPopout && S.createElement(he, {
+                    }), this.props.firstPageLoaded && !this.props.isEmbedded && !this.props.isPopout && S.createElement(Se, {
                         channelLogin: this.props.channelLogin
                     }), this.props.firstPageLoaded && !this.props.isEmbedded && !this.props.isPopout && S.createElement(ut, {
                         channelID: this.props.channelID,
@@ -7702,7 +7717,7 @@ webpackJsonp([36], {
                         userLogin: this.props.userLogin,
                         userID: this.props.userID,
                         emoteMap: t
-                    }), S.createElement(Se, {
+                    }), S.createElement(ve, {
                         currentUserLogin: this.props.userLogin
                     }), S.createElement(L, {
                         channelID: this.props.channelID
@@ -20401,6 +20416,7 @@ webpackJsonp([36], {
         };
         var o = "chatSettings"
     },
+    W266: function(e, t) {},
     WIs4: function(e, t, n) {
         "use strict";
 
@@ -28441,7 +28457,6 @@ webpackJsonp([36], {
             return v
         })
     },
-    tNBv: function(e, t) {},
     thJT: function(e, t, n) {
         var i = {
             kind: "Document",
@@ -30314,4 +30329,4 @@ webpackJsonp([36], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.popout-chat-9e38a0ea34c563d449657f9d8ce434d2.js.map
+//# sourceMappingURL=pages.popout-chat-961be37e5fdc8bbae2e7b863f6b9578d.js.map

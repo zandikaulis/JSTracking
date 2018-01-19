@@ -1,4 +1,4 @@
-webpackJsonp([59], {
+webpackJsonp([60], {
     "+8VM": function(e, t, n) {
         "use strict";
         var i = n("RH2O"),
@@ -1150,7 +1150,7 @@ webpackJsonp([59], {
             r = 30,
             o = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
         ! function(e) {
-            e.BitsLandingPage = "bits_landing_page", e.ChatLoginButton = "chat_login_button", e.ChatSignupButton = "chat_signup_button", e.Chat = "chat", e.ChannelUpsellLogin = "channel_upsell_login", e.ChannelUpsellSignup = "channel_upsell_signup", e.ClipsManager = "clips_manager", e.DashboardPage = "dashboard_page", e.DirectoryFollowButton = "directory-follow-button", e.EventFollowButton = "event_follow_button", e.FeedReactionToggle = "feed_reaction_toggle", e.FollowButton = "follow-button", e.FollowGameButton = "follow-game-button", e.FollowingPage = "following_page", e.FriendAdd = "friend_add", e.RaidJoin = "raid_join", e.ReportHoster = "report_hoster", e.ReportChannel = "report_channel", e.SettingsPage = "settings_page", e.SubsLandingPage = "subs_landing_Page", e.TopNavLoginButton = "topnav_login_button", e.TopNavSignupButton = "topnav_signup_button", e.TrendingEmotesLogin = "trending-emotes-login", e.TrendingEmotesSignup = "trending-emotes-signup", e.VODComment = "vod_comment", e.VODOptions = "vod_options"
+            e.BitsLandingPage = "bits_landing_page", e.ChatLoginButton = "chat_login_button", e.ChatSignupButton = "chat_signup_button", e.Chat = "chat", e.ChannelUpsellLogin = "channel_upsell_login", e.ChannelUpsellSignup = "channel_upsell_signup", e.ClipsManager = "clips_manager", e.DashboardPage = "dashboard_page", e.DirectoryFollowButton = "directory-follow-button", e.EventFollowButton = "event_follow_button", e.FeedReactionToggle = "feed_reaction_toggle", e.FollowButton = "follow-button", e.FollowGameButton = "follow-game-button", e.FollowingPage = "following_page", e.FriendAdd = "friend_add", e.ManagerRedirect = "manager_redirect", e.RaidJoin = "raid_join", e.ReportHoster = "report_hoster", e.ReportChannel = "report_channel", e.SettingsPage = "settings_page", e.SubsLandingPage = "subs_landing_Page", e.TopNavLoginButton = "topnav_login_button", e.TopNavSignupButton = "topnav_signup_button", e.TrendingEmotesLogin = "trending-emotes-login", e.TrendingEmotesSignup = "trending-emotes-signup", e.VODComment = "vod_comment", e.VODOptions = "vod_options"
         }(i || (i = {}))
     },
     "+xsx": function(e, t) {},
@@ -14565,7 +14565,7 @@ webpackJsonp([59], {
                     }), this.root.customEvents[e.group] || (this.root.customEvents[e.group] = []), this.root.customEvents[e.group].push(n), this.raiseUpdate(), n
                 }, e.prototype.reportCustomEvent = function(e) {
                     if (!e.duration || !e.duration.value) {
-                        var t = this.getCurrentTimestamp() - e.startTime,
+                        var t = Math.round(this.getCurrentTimestamp() - e.startTime),
                             n = t <= e.benchmark ? Q.a.Pass : Q.a.Fail;
                         e.duration.value = t, e.duration.latencyStatus = n, this.logger.debug("[" + e.group + "][" + e.label + "] Event reported", {
                             customEvent: e
@@ -25773,7 +25773,7 @@ webpackJsonp([59], {
                             referrer_url: this.referrerURL || "",
                             received_language: Object(l.a)() || "en",
                             tab_session_id: this.session.tabID,
-                            batch_time: (new Date).getTime() / 1e3,
+                            batch_time: Math.round((new Date).getTime() / 1e3),
                             url: window.location.href
                         }, t)
                     };
@@ -32433,61 +32433,64 @@ webpackJsonp([59], {
                 return n.e(44).then(n.bind(null, "IOEW"))
             }, "FrontPage"),
             ye = ee.a.wrap(function() {
+                return n.e(58).then(n.bind(null, "o8EG"))
+            }, "ManagerRedirectPage"),
+            ke = ee.a.wrap(function() {
                 return n.e(56).then(n.bind(null, "DkuH"))
             }, "ReportUserPage"),
-            ke = ee.a.wrap(function() {
+            Se = ee.a.wrap(function() {
                 return n.e(50).then(n.bind(null, "K4jf"))
             }, "SettingsRoot"),
-            Se = ee.a.wrap(function() {
+            _e = ee.a.wrap(function() {
                 return n.e(35).then(n.bind(null, "uiPj"))
             }, "VideoWatchPage"),
-            _e = ee.a.wrap(function() {
+            we = ee.a.wrap(function() {
                 return n.e(52).then(n.bind(null, "6Vx1"))
             }, "DevOnlyTestingAmazonOffersPage"),
-            we = function() {
+            Ee = function() {
                 return s.createElement(X.c, {
                     path: "/",
                     to: "/directory/following"
                 })
             },
-            Ee = function() {
+            Ce = function() {
                 return window.location.reload(), null
             },
-            Ce = function(e) {
+            Ne = function(e) {
                 var t = Object(ne.a)(e.match.params.videoID);
                 return s.createElement(X.c, {
                     to: "/videos/" + t
                 })
             },
-            Ne = function(e) {
+            Te = function(e) {
                 return s.createElement(X.c, {
                     to: "/popout/" + e.match.params.channelLogin + "/chat"
                 })
             },
-            Te = function(e) {
+            Oe = function(e) {
                 return s.createElement(X.c, {
                     to: "/" + e.match.params.channelLogin + "/videos/all"
                 })
             },
-            Oe = function(e) {
+            Ie = function(e) {
                 return s.createElement(X.c, {
                     to: "/" + e.match.params.channelLogin + "/videos/archive"
                 })
             },
-            Ie = function(e) {
+            De = function(e) {
                 return s.createElement(X.c, {
                     to: "/directory/game/" + e.match.params.encodedCommunityName + "/videos/all"
                 })
             },
-            De = function() {
+            Le = function() {
                 return s.createElement(X.c, {
                     to: "/directory/all/xbox"
                 })
             },
-            Le = function() {
+            xe = function() {
                 return window.location.replace(ie.a), null
             },
-            xe = Object(ae.c)("DefaultRootRouter", {
+            Re = Object(ae.c)("DefaultRootRouter", {
                 autoReportInteractive: !0
             })(function(e) {
                 var t = e.isLoggedIn;
@@ -32496,7 +32499,7 @@ webpackJsonp([59], {
                     component: he
                 }), O.a.buildType !== te.a.Production && s.createElement(X.d, {
                     path: "/_dev/testing/amazon-offers/:channelName",
-                    component: _e
+                    component: we
                 }), O.a.buildType !== te.a.Production && s.createElement(X.d, {
                     path: "/_dev",
                     component: pe
@@ -32506,10 +32509,10 @@ webpackJsonp([59], {
                     component: t ? be : re
                 }), s.createElement(X.d, {
                     path: "/bits",
-                    render: Ee
+                    render: Ce
                 }), s.createElement(X.d, {
                     path: "/collections/:collectionID",
-                    component: Se
+                    component: _e
                 }), s.createElement(X.d, {
                     path: "/communities/:encodedCommunityName/details",
                     component: me
@@ -32539,7 +32542,7 @@ webpackJsonp([59], {
                     component: me
                 }), s.createElement(X.d, {
                     path: "/directory/game/:encodedCommunityName/videos",
-                    render: Ie
+                    render: De
                 }), s.createElement(X.d, {
                     path: "/directory/game/:encodedCommunityName/:encodedLanguage",
                     component: me
@@ -32551,7 +32554,7 @@ webpackJsonp([59], {
                     component: oe
                 }), s.createElement(X.d, {
                     path: "/directory/all/xb1",
-                    component: De
+                    component: Le
                 }), s.createElement(X.d, {
                     path: "/directory/all/xbox",
                     component: oe
@@ -32572,46 +32575,49 @@ webpackJsonp([59], {
                     component: ge
                 }), s.createElement(X.d, {
                     path: "/following",
-                    component: we
+                    component: Ee
                 }), s.createElement(X.d, {
                     path: "/popout/:channelName/chat",
-                    render: Ee
-                }), s.createElement(X.d, {
-                    path: "/videos/v:videoID",
                     render: Ce
                 }), s.createElement(X.d, {
+                    path: "/videos/v:videoID",
+                    render: Ne
+                }), s.createElement(X.d, {
                     path: "/videos/:videoID",
-                    component: Se
+                    component: _e
                 }), s.createElement(X.d, {
                     path: "/store",
-                    render: Le
+                    render: xe
                 }), s.createElement(X.d, {
                     path: "/store/merch",
-                    render: Le
+                    render: xe
                 }), s.createElement(X.d, {
                     path: "/subs",
-                    render: Ee
+                    render: Ce
                 }), s.createElement(X.d, {
                     path: "/settings/:tab?",
-                    component: ke
+                    component: Se
                 }), s.createElement(X.d, {
-                    path: "/:channelName/report",
+                    path: "/manager/:pageName?",
                     component: ye
                 }), s.createElement(X.d, {
+                    path: "/:channelName/report",
+                    component: ke
+                }), s.createElement(X.d, {
                     path: "/:channelLogin/videos/(past_broadcasts?)",
-                    render: Oe
+                    render: Ie
                 }), s.createElement(X.d, {
                     path: "/:channelLogin/videos/:filter(all|archive|upload|highlight|past_premiere)",
                     component: de
                 }), s.createElement(X.d, {
                     path: "/:channelLogin/videos/:unknownFilter?",
-                    render: Te
+                    render: Oe
                 }), s.createElement(X.d, {
                     path: "/:channelName/clips",
                     component: se
                 }), s.createElement(X.d, {
                     path: "/:channelLogin/chat",
-                    render: Ne
+                    render: Te
                 }), s.createElement(X.d, {
                     path: "/:channelLogin/collections",
                     component: le
@@ -32627,12 +32633,12 @@ webpackJsonp([59], {
                 }))
             });
         n.d(t, "b", function() {
-            return Re
-        }), n.d(t, "a", function() {
             return Fe
+        }), n.d(t, "a", function() {
+            return Pe
         });
-        var Re = "twilight-main",
-            Fe = function(e) {
+        var Fe = "twilight-main",
+            Pe = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {}, t.setRootScrollableContentRef = function(e) {
@@ -32656,10 +32662,10 @@ webpackJsonp([59], {
                         fullHeight: !0,
                         fullWidth: !0
                     }, s.createElement("main", {
-                        className: Re
+                        className: Fe
                     }, s.createElement(b.b, null), s.createElement(u.a, {
                         contentRefDelegate: this.setRootScrollableContentRef
-                    }, s.createElement(xe, {
+                    }, s.createElement(Re, {
                         isLoggedIn: this.props.isLoggedIn
                     }), s.createElement(l.b, {
                         mainRef: this.state.rootScrollableContentRef
@@ -34206,7 +34212,7 @@ webpackJsonp([59], {
         });
         var i;
         ! function(e) {
-            e.AchievementSpotlightImpression = "achievement_spotlight_impression", e.AchievementQuestBannerClick = "achievement_quest_banner_click", e.APIQuery = "benchmark_api_query", e.AppBooted = "benchmark_app_booted", e.AutohostChatImpression = "autohost_chat_impression", e.AutohostChatYes = "autohost_chat_yes", e.AutohostChatDismiss = "autohost_chat_dismiss", e.AutohostChatSettings = "autohost_chat_settings", e.BitsAdsAvailability = "bits_ads_availability", e.BitsAdsImpression = "bits_ads_impression", e.BitsAdsRequest = "bits_ads_request", e.BitsCardInteraction = "bits_card_interaction", e.BrowseForYou = "browse_for_you", e.BrowserFingerprint = "browser_fingerprint", e.BrowserPushNotificationPrompt = "browser_notification_prompt", e.BrowserPushNotificationDisable = "browser_notification_disable", e.BTTV = "bttv_check", e.Chat = "chat", e.ChatMentionUsed = "chat_mention_used", e.ChatRoomJoined = "chat_room_join", e.ChatSettingsChanged = "chat_client_setting_changed", e.ChatSettingsOpened = "chat_client_settings_open", e.ChatSuggestion = "chat-suggestions", e.ChatSuggestionComplete = "chat-completed-suggestion", e.ChommentCreated = "chomment_create", e.ChommentDeleted = "chomment_delete", e.ChommentUIAction = "chomment_ui_action", e.CommunityEdit = "community_client_edit", e.CommunityFollow = "community_client_follow", e.CommunityModeration = "community_client_channel_moderation", e.CommunityReport = "community_client_report", e.CommunityUnfollow = "community_client_unfollow", e.CompleteTransition = "benchmark_complete_transition", e.ComponentInitializing = "benchmark_component_initializing", e.ComponentInteractive = "benchmark_component_interactive", e.CustomEvent = "benchmark_custom_event", e.CrateNotificationAction = "crate_notification_action", e.EventFollowing = "oracle_user_notification_client", e.EventShare = "oracle_event_share", e.ExperimentBranch = "experiment_branch", e.FeaturedEventPresentation = "event_suggestions_shown", e.FeedCardImpression = "feed_client_card_impression", e.FeedCardEmbedImpression = "feed_client_card_embed_impression", e.FeedCardEmbedPlay = "feed_client_card_embed_play", e.FeedPost = "feed_client_post", e.FeedReaction = "feed_client_reaction", e.FetchStart = "benchmark_fetch_start", e.FFZ = "ffz_check", e.Follow = "follow", e.FrontPageCarouselClick = "frontpage_carousel_click", e.FrontPageCarouselDisplay = "carousel_display", e.FrontPageCarouselPromotionCardClick = "promotion_card_click", e.FrontPageCarouselPromotionCardView = "promotion_card_view", e.FrontPageCarouselNavButtonClick = "carousel_nav_button_click", e.FuelBuyButton = "fuel_buy_button", e.FuelGetGameClick = "fuel_get_game_click", e.FuelOfferView = "offer_view", e.FuelOfferInteraction = "offer_interaction", e.FuelSocialShare = "fuel_social_share", e.GameFollow = "follow-game", e.GameUnfollow = "unfollow-game", e.ItemSectionClick = "item_section_click", e.ItemSectionLoad = "item_section_load", e.OnboardingEvent = "onboarding_web", e.NetworkRequest = "network_request", e.NewChatterTokenStatus = "nca_client_token_status", e.NewChatterOnboardingInteraction = "nca_onboarding_chatbox_interaction", e.NotificationCenterInteraction = "notification_center_interaction", e.NotificationImpression = "notification_impression", e.NotificationInteraction = "notification_interaction", e.Pageview = "pageview", e.PartnerAffiliateSettings = "partner_affiliate_settings", e.PassportHide = "auth_exit", e.PassportShow = "auth_show", e.PresenceClick = "friend_presence_click", e.RaidPromptJoin = "raid_prompt_join", e.RaidPromptLeave = "raid_prompt_leave", e.RaidPromptImpression = "raid_prompt_impression", e.ShareItem = "share_item", e.SideNavChannelClick = "sidenav_channel_click", e.SideNavDetails = "sidenav_details", e.SideNavLoadMore = "sidenav_load_more", e.SiteLayoutMod = "site_layout_mod", e.SiteToggle = "twilight_site_toggle", e.StreamSummarySpotlightImpression = "summary_spotlight_impression", e.StreamSummarySpotlightClick = "summary_spotlight_click", e.StoreMerchClick = "store_item_select", e.StoreMerchView = "store_item_view", e.Subscription = "subscribe_button", e.SubsLandingStreamerClick = "subs_landing_streamer_click", e.ThemeChange = "dark_mode_toggle", e.Unfollow = "unfollow", e.VideoChatSettingChanged = "video_chat_setting_changed", e.VideoShare = "video_share", e.WhisperAllThreadsMod = "chat_convo_mod_global", e.WhisperIgnoreUser = "chat_ignore_client", e.WhisperReceived = "whisper_received", e.WhisperSearchClick = "search_click", e.WhisperSent = "whisper", e.WhisperThreadCreate = "chat_convo_create", e.WhisperThreadMod = "chat_convo_mod"
+            e.AchievementSpotlightImpression = "achievement_spotlight_impression", e.AchievementQuestBannerClick = "achievement_quest_banner_click", e.APIQuery = "benchmark_api_query", e.AppBooted = "benchmark_app_booted", e.AutohostChatImpression = "autohost_chat_impression", e.AutohostChatYes = "autohost_chat_yes", e.AutohostChatDismiss = "autohost_chat_dismiss", e.AutohostChatSettings = "autohost_chat_settings", e.BitsAdsAvailability = "bits_ads_availability", e.BitsAdsImpression = "bits_ads_impression", e.BitsAdsRequest = "bits_ads_request", e.BitsCardInteraction = "bits_card_interaction", e.BrowseForYou = "browse_for_you", e.BrowserFingerprint = "browser_fingerprint", e.BrowserPushNotificationPrompt = "browser_notification_prompt", e.BrowserPushNotificationDisable = "browser_notification_disable", e.BTTV = "bttv_check", e.Chat = "chat", e.ChatMentionUsed = "chat_mention_used", e.ChatRoomJoined = "chat_room_join", e.ChatSettingsChanged = "chat_client_setting_changed", e.ChatSettingsOpened = "chat_client_settings_open", e.ChatSuggestion = "chat-suggestions", e.ChatSuggestionComplete = "chat-completed-suggestion", e.ChommentCreated = "chomment_create", e.ChommentDeleted = "chomment_delete", e.ChommentUIAction = "chomment_ui_action", e.CollectionCreate = "collection_create", e.CollectionAddItem = "collection_add_item", e.CollectionRemoveItem = "collection_remove_item", e.CommunityEdit = "community_client_edit", e.CommunityFollow = "community_client_follow", e.CommunityModeration = "community_client_channel_moderation", e.CommunityReport = "community_client_report", e.CommunityUnfollow = "community_client_unfollow", e.CompleteTransition = "benchmark_complete_transition", e.ComponentInitializing = "benchmark_component_initializing", e.ComponentInteractive = "benchmark_component_interactive", e.CustomEvent = "benchmark_custom_event", e.CrateNotificationAction = "crate_notification_action", e.EventFollowing = "oracle_user_notification_client", e.EventShare = "oracle_event_share", e.ExperimentBranch = "experiment_branch", e.FeaturedEventPresentation = "event_suggestions_shown", e.FeedCardImpression = "feed_client_card_impression", e.FeedCardEmbedImpression = "feed_client_card_embed_impression", e.FeedCardEmbedPlay = "feed_client_card_embed_play", e.FeedPost = "feed_client_post", e.FeedReaction = "feed_client_reaction", e.FetchStart = "benchmark_fetch_start", e.FFZ = "ffz_check", e.Follow = "follow", e.FrontPageCarouselClick = "frontpage_carousel_click", e.FrontPageCarouselDisplay = "carousel_display", e.FrontPageCarouselPromotionCardClick = "promotion_card_click", e.FrontPageCarouselPromotionCardView = "promotion_card_view", e.FrontPageCarouselNavButtonClick = "carousel_nav_button_click", e.FuelBuyButton = "fuel_buy_button", e.FuelGetGameClick = "fuel_get_game_click", e.FuelOfferView = "offer_view", e.FuelOfferInteraction = "offer_interaction", e.FuelSocialShare = "fuel_social_share", e.GameFollow = "follow-game", e.GameUnfollow = "unfollow-game", e.ItemSectionClick = "item_section_click", e.ItemSectionLoad = "item_section_load", e.OnboardingEvent = "onboarding_web", e.NetworkRequest = "network_request", e.NewChatterTokenStatus = "nca_client_token_status", e.NewChatterOnboardingInteraction = "nca_onboarding_chatbox_interaction", e.NotificationCenterInteraction = "notification_center_interaction", e.NotificationImpression = "notification_impression", e.NotificationInteraction = "notification_interaction", e.Pageview = "pageview", e.PartnerAffiliateSettings = "partner_affiliate_settings", e.PassportHide = "auth_exit", e.PassportShow = "auth_show", e.PresenceClick = "friend_presence_click", e.RaidPromptJoin = "raid_prompt_join", e.RaidPromptLeave = "raid_prompt_leave", e.RaidPromptImpression = "raid_prompt_impression", e.ShareItem = "share_item", e.SideNavChannelClick = "sidenav_channel_click", e.SideNavDetails = "sidenav_details", e.SideNavLoadMore = "sidenav_load_more", e.SiteLayoutMod = "site_layout_mod", e.SiteToggle = "twilight_site_toggle", e.StreamSummarySpotlightImpression = "summary_spotlight_impression", e.StreamSummarySpotlightClick = "summary_spotlight_click", e.StoreMerchClick = "store_item_select", e.StoreMerchView = "store_item_view", e.Subscription = "subscribe_button", e.SubsLandingStreamerClick = "subs_landing_streamer_click", e.ThemeChange = "dark_mode_toggle", e.Unfollow = "unfollow", e.VideoChatSettingChanged = "video_chat_setting_changed", e.VideoShare = "video_share", e.WhisperAllThreadsMod = "chat_convo_mod_global", e.WhisperIgnoreUser = "chat_ignore_client", e.WhisperReceived = "whisper_received", e.WhisperSearchClick = "search_click", e.WhisperSent = "whisper", e.WhisperThreadCreate = "chat_convo_create", e.WhisperThreadMod = "chat_convo_mod"
         }(i || (i = {}))
     },
     kIPx: function(e, t) {},
@@ -40629,4 +40635,4 @@ webpackJsonp([59], {
         }
     }
 }, [4]);
-//# sourceMappingURL=core-445fb3892996798ef07c978a2a62aec8.js.map
+//# sourceMappingURL=core-c45617927040516f4dcda9e19a78c85f.js.map

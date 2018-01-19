@@ -19956,61 +19956,64 @@ webpackJsonp([39], {
                 return n.e(44).then(n.bind(null, "IOEW"))
             }, "FrontPage"),
             ke = ee.a.wrap(function() {
+                return n.e(58).then(n.bind(null, "o8EG"))
+            }, "ManagerRedirectPage"),
+            ye = ee.a.wrap(function() {
                 return n.e(56).then(n.bind(null, "DkuH"))
             }, "ReportUserPage"),
-            ye = ee.a.wrap(function() {
+            Se = ee.a.wrap(function() {
                 return n.e(50).then(n.bind(null, "K4jf"))
             }, "SettingsRoot"),
-            Se = ee.a.wrap(function() {
+            _e = ee.a.wrap(function() {
                 return n.e(35).then(n.bind(null, "uiPj"))
             }, "VideoWatchPage"),
-            _e = ee.a.wrap(function() {
+            Ce = ee.a.wrap(function() {
                 return n.e(52).then(n.bind(null, "6Vx1"))
             }, "DevOnlyTestingAmazonOffersPage"),
-            Ce = function() {
+            Ne = function() {
                 return o.createElement(X.c, {
                     path: "/",
                     to: "/directory/following"
                 })
             },
-            Ne = function() {
+            Te = function() {
                 return window.location.reload(), null
             },
-            Te = function(e) {
+            Ee = function(e) {
                 var t = Object(ne.a)(e.match.params.videoID);
                 return o.createElement(X.c, {
                     to: "/videos/" + t
                 })
             },
-            Ee = function(e) {
+            we = function(e) {
                 return o.createElement(X.c, {
                     to: "/popout/" + e.match.params.channelLogin + "/chat"
                 })
             },
-            we = function(e) {
+            De = function(e) {
                 return o.createElement(X.c, {
                     to: "/" + e.match.params.channelLogin + "/videos/all"
                 })
             },
-            De = function(e) {
+            Oe = function(e) {
                 return o.createElement(X.c, {
                     to: "/" + e.match.params.channelLogin + "/videos/archive"
                 })
             },
-            Oe = function(e) {
+            Ie = function(e) {
                 return o.createElement(X.c, {
                     to: "/directory/game/" + e.match.params.encodedCommunityName + "/videos/all"
                 })
             },
-            Ie = function() {
+            Fe = function() {
                 return o.createElement(X.c, {
                     to: "/directory/all/xbox"
                 })
             },
-            Fe = function() {
+            Pe = function() {
                 return window.location.replace(ie.a), null
             },
-            Pe = Object(ae.c)("DefaultRootRouter", {
+            Re = Object(ae.c)("DefaultRootRouter", {
                 autoReportInteractive: !0
             })(function(e) {
                 var t = e.isLoggedIn;
@@ -20019,7 +20022,7 @@ webpackJsonp([39], {
                     component: he
                 }), D.a.buildType !== te.a.Production && o.createElement(X.d, {
                     path: "/_dev/testing/amazon-offers/:channelName",
-                    component: _e
+                    component: Ce
                 }), D.a.buildType !== te.a.Production && o.createElement(X.d, {
                     path: "/_dev",
                     component: pe
@@ -20029,10 +20032,10 @@ webpackJsonp([39], {
                     component: t ? be : re
                 }), o.createElement(X.d, {
                     path: "/bits",
-                    render: Ne
+                    render: Te
                 }), o.createElement(X.d, {
                     path: "/collections/:collectionID",
-                    component: Se
+                    component: _e
                 }), o.createElement(X.d, {
                     path: "/communities/:encodedCommunityName/details",
                     component: me
@@ -20062,7 +20065,7 @@ webpackJsonp([39], {
                     component: me
                 }), o.createElement(X.d, {
                     path: "/directory/game/:encodedCommunityName/videos",
-                    render: Oe
+                    render: Ie
                 }), o.createElement(X.d, {
                     path: "/directory/game/:encodedCommunityName/:encodedLanguage",
                     component: me
@@ -20074,7 +20077,7 @@ webpackJsonp([39], {
                     component: se
                 }), o.createElement(X.d, {
                     path: "/directory/all/xb1",
-                    component: Ie
+                    component: Fe
                 }), o.createElement(X.d, {
                     path: "/directory/all/xbox",
                     component: se
@@ -20095,46 +20098,49 @@ webpackJsonp([39], {
                     component: fe
                 }), o.createElement(X.d, {
                     path: "/following",
-                    component: Ce
+                    component: Ne
                 }), o.createElement(X.d, {
                     path: "/popout/:channelName/chat",
-                    render: Ne
-                }), o.createElement(X.d, {
-                    path: "/videos/v:videoID",
                     render: Te
                 }), o.createElement(X.d, {
+                    path: "/videos/v:videoID",
+                    render: Ee
+                }), o.createElement(X.d, {
                     path: "/videos/:videoID",
-                    component: Se
+                    component: _e
                 }), o.createElement(X.d, {
                     path: "/store",
-                    render: Fe
+                    render: Pe
                 }), o.createElement(X.d, {
                     path: "/store/merch",
-                    render: Fe
+                    render: Pe
                 }), o.createElement(X.d, {
                     path: "/subs",
-                    render: Ne
+                    render: Te
                 }), o.createElement(X.d, {
                     path: "/settings/:tab?",
-                    component: ye
+                    component: Se
                 }), o.createElement(X.d, {
-                    path: "/:channelName/report",
+                    path: "/manager/:pageName?",
                     component: ke
                 }), o.createElement(X.d, {
+                    path: "/:channelName/report",
+                    component: ye
+                }), o.createElement(X.d, {
                     path: "/:channelLogin/videos/(past_broadcasts?)",
-                    render: De
+                    render: Oe
                 }), o.createElement(X.d, {
                     path: "/:channelLogin/videos/:filter(all|archive|upload|highlight|past_premiere)",
                     component: ue
                 }), o.createElement(X.d, {
                     path: "/:channelLogin/videos/:unknownFilter?",
-                    render: we
+                    render: De
                 }), o.createElement(X.d, {
                     path: "/:channelName/clips",
                     component: oe
                 }), o.createElement(X.d, {
                     path: "/:channelLogin/chat",
-                    render: Ee
+                    render: we
                 }), o.createElement(X.d, {
                     path: "/:channelLogin/collections",
                     component: le
@@ -20150,12 +20156,12 @@ webpackJsonp([39], {
                 }))
             });
         n.d(t, "b", function() {
-            return Re
-        }), n.d(t, "a", function() {
             return xe
+        }), n.d(t, "a", function() {
+            return Ue
         });
-        var Re = "twilight-main",
-            xe = function(e) {
+        var xe = "twilight-main",
+            Ue = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {}, t.setRootScrollableContentRef = function(e) {
@@ -20179,10 +20185,10 @@ webpackJsonp([39], {
                         fullHeight: !0,
                         fullWidth: !0
                     }, o.createElement("main", {
-                        className: Re
+                        className: xe
                     }, o.createElement(b.b, null), o.createElement(d.a, {
                         contentRefDelegate: this.setRootScrollableContentRef
-                    }, o.createElement(Pe, {
+                    }, o.createElement(Re, {
                         isLoggedIn: this.props.isLoggedIn
                     }), o.createElement(l.b, {
                         mainRef: this.state.rootScrollableContentRef
@@ -22208,7 +22214,7 @@ webpackJsonp([39], {
                                 case 0:
                                     e = [], i.label = 1;
                                 case 1:
-                                    return i.trys.push([1, 3, , 4]), [4, n.e(67).then(n.bind(null, "GZxo"))];
+                                    return i.trys.push([1, 3, , 4]), [4, n.e(68).then(n.bind(null, "GZxo"))];
                                 case 2:
                                     return e = i.sent(), [3, 4];
                                 case 3:
@@ -22228,7 +22234,7 @@ webpackJsonp([39], {
                                 case 0:
                                     return [4, i.__awaiter(h, void 0, void 0, function() {
                                         return i.__generator(this, function(e) {
-                                            return [2, n.e(68).then(n.bind(null, "Revh"))]
+                                            return [2, n.e(69).then(n.bind(null, "Revh"))]
                                         })
                                     })];
                                 case 1:
@@ -24742,4 +24748,4 @@ webpackJsonp([39], {
         }
     }
 });
-//# sourceMappingURL=pages.onboarding-4d3e016ab8cbf5bd657737c94c752053.js.map
+//# sourceMappingURL=pages.onboarding-26cdc6a09c7353854497fcd4e8948237.js.map

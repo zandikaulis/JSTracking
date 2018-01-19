@@ -1,4 +1,4 @@
-webpackJsonp([68], {
+webpackJsonp([69], {
     Revh: function(e, a) {
         e.exports = [{
             games: ["League of Legends", "Dota 2", "Heroes of the Storm", "Vainglory", "Paragon", "Clash Royale", "Heroes of Newerth"],
@@ -78,4 +78,4 @@ webpackJsonp([68], {
         }]
     }
 });
-//# sourceMappingURL=assets.data.onboarding.community-selection-page.categories.json-051b19a2fb5f36dc9699ae0dd56fb48e.js.map
+//# sourceMappingURL=assets.data.onboarding.community-selection-page.categories.json-9f3cb29f0317d59e19a9a651bc6ec5ad.js.map

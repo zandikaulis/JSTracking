@@ -1,4 +1,4 @@
-webpackJsonp([60], {
+webpackJsonp([61], {
     "+8VM": function(e, t, n) {
         "use strict";
         var i = n("RH2O"),
@@ -37,7 +37,7 @@ webpackJsonp([60], {
             o = 30,
             a = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
         ! function(e) {
-            e.BitsLandingPage = "bits_landing_page", e.ChatLoginButton = "chat_login_button", e.ChatSignupButton = "chat_signup_button", e.Chat = "chat", e.ChannelUpsellLogin = "channel_upsell_login", e.ChannelUpsellSignup = "channel_upsell_signup", e.ClipsManager = "clips_manager", e.DashboardPage = "dashboard_page", e.DirectoryFollowButton = "directory-follow-button", e.EventFollowButton = "event_follow_button", e.FeedReactionToggle = "feed_reaction_toggle", e.FollowButton = "follow-button", e.FollowGameButton = "follow-game-button", e.FollowingPage = "following_page", e.FriendAdd = "friend_add", e.RaidJoin = "raid_join", e.ReportHoster = "report_hoster", e.ReportChannel = "report_channel", e.SettingsPage = "settings_page", e.SubsLandingPage = "subs_landing_Page", e.TopNavLoginButton = "topnav_login_button", e.TopNavSignupButton = "topnav_signup_button", e.TrendingEmotesLogin = "trending-emotes-login", e.TrendingEmotesSignup = "trending-emotes-signup", e.VODComment = "vod_comment", e.VODOptions = "vod_options"
+            e.BitsLandingPage = "bits_landing_page", e.ChatLoginButton = "chat_login_button", e.ChatSignupButton = "chat_signup_button", e.Chat = "chat", e.ChannelUpsellLogin = "channel_upsell_login", e.ChannelUpsellSignup = "channel_upsell_signup", e.ClipsManager = "clips_manager", e.DashboardPage = "dashboard_page", e.DirectoryFollowButton = "directory-follow-button", e.EventFollowButton = "event_follow_button", e.FeedReactionToggle = "feed_reaction_toggle", e.FollowButton = "follow-button", e.FollowGameButton = "follow-game-button", e.FollowingPage = "following_page", e.FriendAdd = "friend_add", e.ManagerRedirect = "manager_redirect", e.RaidJoin = "raid_join", e.ReportHoster = "report_hoster", e.ReportChannel = "report_channel", e.SettingsPage = "settings_page", e.SubsLandingPage = "subs_landing_Page", e.TopNavLoginButton = "topnav_login_button", e.TopNavSignupButton = "topnav_signup_button", e.TrendingEmotesLogin = "trending-emotes-login", e.TrendingEmotesSignup = "trending-emotes-signup", e.VODComment = "vod_comment", e.VODOptions = "vod_options"
         }(i || (i = {}))
     },
     "/9PY": function(e, t) {},
@@ -582,7 +582,7 @@ webpackJsonp([60], {
         function i() {
             a.n.mount(r.createElement(o.c, {
                 history: a.n.history
-            }, r.createElement(R, null)), document.getElementById("root"))
+            }, r.createElement(N, null)), document.getElementById("root"))
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -672,14 +672,14 @@ webpackJsonp([60], {
                 return window.location.reload(), null
             },
             x = L,
-            N = Object(u.a)(function(e) {
+            R = Object(u.a)(function(e) {
                 return {
                     isReady: e.session.authInitialized && e.session.languageInitialized,
                     firstPageLoaded: e.session.firstPageLoaded,
                     isLoggedIn: Object(l.d)(e)
                 }
             })(x),
-            R = Object(d.f)(N);
+            N = Object(d.f)(R);
         a.a.optimizedBuild || n.e(0).then(n.bind(null, "c+Ld")).then(function(e) {
             return window.Perf = e
         });
@@ -1979,13 +1979,13 @@ webpackJsonp([60], {
                     this.currentPageComponentName = e
                 }, e
             }(),
-            N = n("vH/s"),
-            R = n("I9Rr"),
+            R = n("vH/s"),
+            N = n("I9Rr"),
             I = function() {
                 function e(e, t) {
                     this.logger = e.withCategory("tmi");
                     var n = this.getConnectionOptions(t);
-                    this.disabled = n.disabled, this.logger.debug("Creating TMI client", n), this.client = new R.a({
+                    this.disabled = n.disabled, this.logger.debug("Creating TMI client", n), this.client = new N.a({
                         connection: n,
                         logger: this.logger
                     })
@@ -2560,7 +2560,7 @@ webpackJsonp([60], {
                     }), this.root.customEvents[e.group] || (this.root.customEvents[e.group] = []), this.root.customEvents[e.group].push(n), this.raiseUpdate(), n
                 }, e.prototype.reportCustomEvent = function(e) {
                     if (!e.duration || !e.duration.value) {
-                        var t = this.getCurrentTimestamp() - e.startTime,
+                        var t = Math.round(this.getCurrentTimestamp() - e.startTime),
                             n = t <= e.benchmark ? Q.a.Pass : Q.a.Fail;
                         e.duration.value = t, e.duration.latencyStatus = n, this.logger.debug("[" + e.group + "][" + e.label + "] Event reported", {
                             customEvent: e
@@ -2654,7 +2654,7 @@ webpackJsonp([60], {
                     this.tracking = e, this.logger = t.withCategory("tracker"), this.logger.debug("Created")
                 }
                 return e.prototype.trackNetworkRequestEvent = function(e, t, n, i, r, o) {
-                    o.request_url !== this.tracking.getEndpoint() ? this.tracking.trackBenchmark(N.SpadeEventType.NetworkRequest, m.__assign({
+                    o.request_url !== this.tracking.getEndpoint() ? this.tracking.trackBenchmark(R.SpadeEventType.NetworkRequest, m.__assign({
                         is_pre_pageload: i,
                         destination: e,
                         location: t,
@@ -2663,7 +2663,7 @@ webpackJsonp([60], {
                         relative_start_time: r
                     }, o)) : this.logger.debug("Skipping Spade network request.")
                 }, e.prototype.trackCompleteTransition = function(e, t, n, i, r, o, a) {
-                    this.tracking.trackBenchmark(N.SpadeEventType.CompleteTransition, {
+                    this.tracking.trackBenchmark(R.SpadeEventType.CompleteTransition, {
                         client_time: i / 1e3,
                         lost_visibility: a,
                         destination: e,
@@ -2681,7 +2681,7 @@ webpackJsonp([60], {
                         label: e.label
                     })
                 }, e.prototype.trackAppBooted = function(e, t, n, i, r, o) {
-                    this.tracking.trackBenchmark(N.SpadeEventType.AppBooted, {
+                    this.tracking.trackBenchmark(R.SpadeEventType.AppBooted, {
                         client_time: i / 1e3,
                         lost_visibility: o,
                         destination: e,
@@ -2690,7 +2690,7 @@ webpackJsonp([60], {
                         time_from_fetch: r
                     })
                 }, e.prototype.trackInitialize = function(e, t, n, i, r, o, a, s, l, c) {
-                    this.tracking.trackBenchmark(N.SpadeEventType.ComponentInitializing, {
+                    this.tracking.trackBenchmark(R.SpadeEventType.ComponentInitializing, {
                         destination: e,
                         location: t,
                         page_component_name: n,
@@ -2703,7 +2703,7 @@ webpackJsonp([60], {
                         relative_start_time: r
                     })
                 }, e.prototype.trackInteractive = function(e, t, n, i, r, o, a, s, l, c, u, d) {
-                    this.tracking.trackBenchmark(N.SpadeEventType.ComponentInteractive, {
+                    this.tracking.trackBenchmark(R.SpadeEventType.ComponentInteractive, {
                         destination: e,
                         location: t,
                         page_component_name: n,
@@ -2719,7 +2719,7 @@ webpackJsonp([60], {
                         is_pre_pageload: l
                     })
                 }, e.prototype.trackFetchStart = function(e, t, n, i, r) {
-                    this.tracking.trackBenchmark(N.SpadeEventType.FetchStart, {
+                    this.tracking.trackBenchmark(R.SpadeEventType.FetchStart, {
                         destination: e,
                         location: t,
                         page_component_name: n,
@@ -3223,11 +3223,11 @@ webpackJsonp([60], {
         }), n.d(t, "m", function() {
             return xe
         }), n.d(t, "n", function() {
-            return Ne
+            return Re
         }), t.i = function(e) {
-            fe = new Re(e), ve = fe.config, we = fe.dynamicSettings, be = fe.intl.formatDate, ye = fe.intl.formatMessage, _e = fe.intl.formatNumber, Ee = fe.intl.formatNumberShort, ke = fe.intl.formatRelativeDate, Ce = fe.intl.formatTime, Se = fe.logger, Le = fe.pubsub, Te = fe.storage, xe = fe.tempStorage, Ne = fe.tracking
+            fe = new Ne(e), ve = fe.config, we = fe.dynamicSettings, be = fe.intl.formatDate, ye = fe.intl.formatMessage, _e = fe.intl.formatNumber, Ee = fe.intl.formatNumberShort, ke = fe.intl.formatRelativeDate, Ce = fe.intl.formatTime, Se = fe.logger, Le = fe.pubsub, Te = fe.storage, xe = fe.tempStorage, Re = fe.tracking
         };
-        var fe, ve, we, be, ye, _e, Ee, ke, Ce, Se, Le, Te, xe, Ne, Re = function() {
+        var fe, ve, we, be, ye, _e, Ee, ke, Ce, Se, Le, Te, xe, Re, Ne = function() {
             function e(e) {
                 var t = this;
                 this.dynamicSettings = new ie.a, this.history = function(e) {
@@ -3284,7 +3284,7 @@ webpackJsonp([60], {
                     logger: this.logger,
                     session: this.session,
                     store: this.store
-                }), this.tracking = new N.Spade({
+                }), this.tracking = new R.Spade({
                     apollo: this.apollo,
                     config: this.config,
                     endpoint: this.dynamicSettings.get("spade_url", e.defaultSpadeEndpoint),
@@ -3625,11 +3625,11 @@ webpackJsonp([60], {
         ! function(e) {
             e[e.None = 1] = "None", e[e.X = 2] = "X", e[e.Y = 3] = "Y"
         }(T || (T = {}));
-        var N, R = (j = {}, j[T.None] = "tw-resize-none", j[T.X] = "tw-resize-x", j[T.Y] = "tw-resize-y", j);
+        var R, N = (j = {}, j[T.None] = "tw-resize-none", j[T.X] = "tw-resize-x", j[T.Y] = "tw-resize-y", j);
         ! function(e) {
             e[e.Left = 1] = "Left", e[e.Center = 2] = "Center", e[e.Right = 3] = "Right"
-        }(N || (N = {}));
-        var I, z = (W = {}, W[N.Left] = "align-left", W[N.Center] = "align-center", W[N.Right] = "align-right", W);
+        }(R || (R = {}));
+        var I, z = (W = {}, W[R.Left] = "align-left", W[R.Center] = "align-center", W[R.Right] = "align-right", W);
         ! function(e) {
             e[e.Visible = 1] = "Visible", e[e.Hidden = 2] = "Hidden"
         }(I || (I = {}));
@@ -3645,7 +3645,7 @@ webpackJsonp([60], {
                 }
                 return l.__extends(t, e), t.prototype.render = function() {
                     var e = (p = {}, p["" + this.props.className] = !!this.props.className, p["tw-top-0"] = this.props.attachTop, p["tw-right-0"] = this.props.attachRight, p["tw-bottom-0"] = this.props.attachBottom, p["tw-left-0"] = this.props.attachLeft, p["tw-ellipsis"] = this.props.ellipsis, p["tw-full-width"] = this.props.fullWidth, p["tw-full-height"] = this.props.fullHeight, p);
-                    this.props.overflow && (e[L[this.props.overflow]] = !0), this.props.resize && (e[R[T.X]] = !0), this.props.zIndex && (e[Z[this.props.zIndex]] = !0);
+                    this.props.overflow && (e[L[this.props.overflow]] = !0), this.props.resize && (e[N[T.X]] = !0), this.props.zIndex && (e[Z[this.props.zIndex]] = !0);
                     var t = this.getBreakpointClasses(this.props),
                         n = this.getBreakpointClasses(this.props.breakpointExtraSmall, "xs"),
                         r = this.getBreakpointClasses(this.props.breakpointSmall, "sm"),
@@ -3777,15 +3777,15 @@ webpackJsonp([60], {
         ! function(e) {
             e[e.Size1 = 1] = "Size1", e[e.Size2 = 2] = "Size2", e[e.Size3 = 3] = "Size3", e[e.Size4 = 4] = "Size4", e[e.Size5 = 5] = "Size5", e[e.Size6 = 6] = "Size6", e[e.Size7 = 7] = "Size7", e[e.Size8 = 8] = "Size8"
         }(Le || (Le = {}));
-        var xe, Ne = (Be = {}, Be[Le.Size1] = "tw-font-size-1", Be[Le.Size2] = "tw-font-size-2", Be[Le.Size3] = "tw-font-size-3", Be[Le.Size4] = "tw-font-size-4", Be[Le.Size5] = "tw-font-size-5", Be[Le.Size6] = "tw-font-size-6", Be[Le.Size7] = "tw-font-size-7", Be[Le.Size8] = "tw-font-size-8", Be);
+        var xe, Re = (Be = {}, Be[Le.Size1] = "tw-font-size-1", Be[Le.Size2] = "tw-font-size-2", Be[Le.Size3] = "tw-font-size-3", Be[Le.Size4] = "tw-font-size-4", Be[Le.Size5] = "tw-font-size-5", Be[Le.Size6] = "tw-font-size-6", Be[Le.Size7] = "tw-font-size-7", Be[Le.Size8] = "tw-font-size-8", Be);
         ! function(e) {
             e[e.Body = 1] = "Body", e[e.Heading = 2] = "Heading"
         }(xe || (xe = {}));
-        var Re, Ie = (Ve = {}, Ve[xe.Body] = "tw-line-height-body", Ve[xe.Heading] = "tw-line-height-heading", Ve);
+        var Ne, Ie = (Ve = {}, Ve[xe.Body] = "tw-line-height-body", Ve[xe.Heading] = "tw-line-height-heading", Ve);
         ! function(e) {
             e[e.Underline = 1] = "Underline", e[e.Strikethrough = 2] = "Strikethrough"
-        }(Re || (Re = {}));
-        var ze, Me = (Pe = {}, Pe[Re.Underline] = "tw-underline", Pe[Re.Strikethrough] = "tw-strikethrough", Pe);
+        }(Ne || (Ne = {}));
+        var ze, Me = (Pe = {}, Pe[Ne.Underline] = "tw-underline", Pe[Ne.Strikethrough] = "tw-strikethrough", Pe);
         ! function(e) {
             e[e.Capitalize = 1] = "Capitalize", e[e.Uppercase = 2] = "Uppercase"
         }(ze || (ze = {}));
@@ -3805,7 +3805,7 @@ webpackJsonp([60], {
                     "tw-nowrap": e.noWrap,
                     "tw-strong": e.bold
                 }, r["tw-line-clamp-2"] = 2 === e.lines, r);
-                e.align && (t[je[e.align]] = !0), e.color && (t[Te[e.color]] = !0), e.fontSize && (t[Ne[e.fontSize]] = !0), e.lineHeight && (t[Ie[e.lineHeight]] = !0), e.transform && (t[Ae[e.transform]] = !0), e.decoration && (t[Me[e.decoration]] = !0);
+                e.align && (t[je[e.align]] = !0), e.color && (t[Te[e.color]] = !0), e.fontSize && (t[Re[e.fontSize]] = !0), e.lineHeight && (t[Ie[e.lineHeight]] = !0), e.transform && (t[Ae[e.transform]] = !0), e.decoration && (t[Me[e.decoration]] = !0);
                 var n;
                 return e.title ? n = e.title : e.ellipsis && "string" == typeof e.children && (n = e.children), u.createElement(e.type || "p", l.__assign({
                     className: c(e.className, t)
@@ -5087,7 +5087,7 @@ webpackJsonp([60], {
             e[e.Default = 0] = "Default", e[e.Small = 1] = "Small", e[e.Large = 2] = "Large"
         }(_t || (_t = {}));
         var Lt, Tt, xt = (Lt = {}, Lt[_t.Small] = "tw-loading-spinner--small", Lt[_t.Large] = "tw-loading-spinner--large", Lt),
-            Nt = function(e) {
+            Rt = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -5125,19 +5125,19 @@ webpackJsonp([60], {
         ! function(e) {
             e[e.Default = 0] = "Default", e[e.Hollow = 1] = "Hollow", e[e.Text = 2] = "Text", e[e.Alert = 3] = "Alert", e[e.Success = 4] = "Success"
         }(Tt || (Tt = {}));
-        var Rt, It = (Dt = {}, Dt[Tt.Hollow] = "tw-button--hollow", Dt[Tt.Text] = "tw-button--text", Dt[Tt.Alert] = "tw-button--alert", Dt[Tt.Success] = "tw-button--success", Dt);
+        var Nt, It = (Dt = {}, Dt[Tt.Hollow] = "tw-button--hollow", Dt[Tt.Text] = "tw-button--text", Dt[Tt.Alert] = "tw-button--alert", Dt[Tt.Success] = "tw-button--success", Dt);
         ! function(e) {
             e[e.Default = 0] = "Default", e[e.Small = 1] = "Small", e[e.Large = 2] = "Large"
-        }(Rt || (Rt = {}));
-        var zt, Mt = (At = {}, At[Rt.Small] = "tw-button--small", At[Rt.Large] = "tw-button--large", At);
+        }(Nt || (Nt = {}));
+        var zt, Mt = (At = {}, At[Nt.Small] = "tw-button--small", At[Nt.Large] = "tw-button--large", At);
         ! function(e) {
             e[e.Default = 0] = "Default", e[e.Loading = 1] = "Loading", e[e.Success = 2] = "Success"
         }(zt || (zt = {}));
         var Dt, At, Ht, Ot, Bt, Vt = (Ht = {}, Ht[zt.Loading] = "tw-button--state-loading", Ht[zt.Success] = "tw-button--state-success", Ht),
-            Pt = (Ot = {}, Ot[Rt.Small] = {
+            Pt = (Ot = {}, Ot[Nt.Small] = {
                 width: 12,
                 height: 12
-            }, Ot[Rt.Large] = {
+            }, Ot[Nt.Large] = {
                 width: 20,
                 height: 20
             }, Ot),
@@ -5175,7 +5175,7 @@ webpackJsonp([60], {
                             className: "tw-button__loading-spinner",
                             position: S.Absolute,
                             key: "tw-button-loading-spinner"
-                        }, u.createElement(Nt, {
+                        }, u.createElement(Rt, {
                             delay: 0,
                             size: this.getSpinnerSize(this.props.size),
                             inheritColor: !0
@@ -5275,21 +5275,21 @@ webpackJsonp([60], {
                     }, b), w)
                 }, t.prototype.getSpinnerSize = function(e) {
                     switch (e) {
-                        case Rt.Small:
+                        case Nt.Small:
                             return _t.Small;
-                        case Rt.Large:
+                        case Nt.Large:
                             return _t.Large;
-                        case Rt.Default:
+                        case Nt.Default:
                         default:
                             return _t.Default
                     }
                 }, t.prototype.successIconSize = function(e) {
                     switch (e) {
-                        case Rt.Small:
+                        case Nt.Small:
                             return 12;
-                        case Rt.Large:
+                        case Nt.Large:
                             return 20;
-                        case Rt.Default:
+                        case Nt.Default:
                         default:
                             return 16
                     }
@@ -5300,11 +5300,11 @@ webpackJsonp([60], {
             e[e.Default = 0] = "Default", e[e.Hollow = 1] = "Hollow", e[e.Primary = 2] = "Primary", e[e.Alert = 3] = "Alert", e[e.Secondary = 4] = "Secondary", e[e.Success = 5] = "Success"
         }(Bt || (Bt = {}));
         var Ut, qt, jt, Wt, Gt = (Ut = {}, Ut[Bt.Primary] = "tw-button-icon--primary", Ut[Bt.Hollow] = "tw-button-icon--hollow", Ut[Bt.Alert] = "tw-button-icon--alert", Ut[Bt.Secondary] = "tw-button-icon--secondary", Ut[Bt.Success] = "tw-button-icon--success", Ut),
-            Qt = (qt = {}, qt[Rt.Small] = "tw-button-icon--small", qt[Rt.Large] = "tw-button-icon--large", qt),
-            Kt = (jt = {}, jt[Rt.Small] = {
+            Qt = (qt = {}, qt[Nt.Small] = "tw-button-icon--small", qt[Nt.Large] = "tw-button-icon--large", qt),
+            Kt = (jt = {}, jt[Nt.Small] = {
                 width: 12,
                 height: 12
-            }, jt[Rt.Large] = {
+            }, jt[Nt.Large] = {
                 width: 20,
                 height: 20
             }, jt),
@@ -5810,7 +5810,7 @@ webpackJsonp([60], {
         ! function(e) {
             e[e.Notification = 1] = "Notification", e[e.Brand = 2] = "Brand", e[e.Live = 3] = "Live", e[e.Alert = 4] = "Alert", e[e.Success = 5] = "Success", e[e.Prime = 6] = "Prime", e[e.Overlay = 7] = "Overlay"
         }(Cn || (Cn = {}));
-        var Nn, Rn, In = (Nn = {}, Nn[Cn.Notification] = "tw-pill--notification", Nn[Cn.Brand] = "tw-pill--brand", Nn[Cn.Live] = "tw-pill--live", Nn[Cn.Alert] = "tw-pill--alert", Nn[Cn.Success] = "tw-pill--success", Nn[Cn.Prime] = "tw-pill--prime", Nn[Cn.Overlay] = "tw-pill--overlay", Nn),
+        var Rn, Nn, In = (Rn = {}, Rn[Cn.Notification] = "tw-pill--notification", Rn[Cn.Brand] = "tw-pill--brand", Rn[Cn.Live] = "tw-pill--live", Rn[Cn.Alert] = "tw-pill--alert", Rn[Cn.Success] = "tw-pill--success", Rn[Cn.Prime] = "tw-pill--prime", Rn[Cn.Overlay] = "tw-pill--overlay", Rn),
             zn = function(e) {
                 var t = {
                     "tw-pill": !0
@@ -5822,8 +5822,8 @@ webpackJsonp([60], {
         n("3+CI");
         ! function(e) {
             e[e.Default = 0] = "Default", e[e.Small = 1] = "Small", e[e.ExtraSmall = 2] = "ExtraSmall"
-        }(Rn || (Rn = {}));
-        var Mn, Dn = (An = {}, An[Rn.Small] = "tw-progress-bar--sm", An[Rn.ExtraSmall] = "tw-progress-bar--xs", An);
+        }(Nn || (Nn = {}));
+        var Mn, Dn = (An = {}, An[Nn.Small] = "tw-progress-bar--sm", An[Nn.ExtraSmall] = "tw-progress-bar--xs", An);
         ! function(e) {
             e[e.Default = 0] = "Default", e[e.Caution = 1] = "Caution", e[e.Error = 2] = "Error", e[e.Success = 3] = "Success"
         }(Mn || (Mn = {}));
@@ -6237,7 +6237,7 @@ webpackJsonp([60], {
         }), n.d(t, "u", function() {
             return Ft
         }), n.d(t, "x", function() {
-            return Rt
+            return Nt
         }), n.d(t, "z", function() {
             return Tt
         }), n.d(t, "y", function() {
@@ -6319,7 +6319,7 @@ webpackJsonp([60], {
         }), n.d(t, "_4", function() {
             return S
         }), n.d(t, "_24", function() {
-            return N
+            return R
         }), n.d(t, "_39", function() {
             return M
         }), n.d(t, !1, function() {
@@ -6329,7 +6329,7 @@ webpackJsonp([60], {
         }), n.d(t, "Y", function() {
             return mn
         }), n.d(t, "Z", function() {
-            return Nt
+            return Rt
         }), n.d(t, "_17", function() {
             return _t
         }), n.d(t, "_18", function() {
@@ -6349,7 +6349,7 @@ webpackJsonp([60], {
         }), n.d(t, "_7", function() {
             return Vn
         }), n.d(t, "_8", function() {
-            return Rn
+            return Nn
         }), n.d(t, !1, function() {
             return Mn
         }), n.d(t, "_9", function() {
@@ -6363,7 +6363,7 @@ webpackJsonp([60], {
         }), n.d(t, "W", function() {
             return xe
         }), n.d(t, "_26", function() {
-            return Re
+            return Ne
         }), n.d(t, "_27", function() {
             return ze
         }), n.d(t, "_28", function() {
@@ -6820,7 +6820,7 @@ webpackJsonp([60], {
                             referrer_url: this.referrerURL || "",
                             received_language: Object(l.a)() || "en",
                             tab_session_id: this.session.tabID,
-                            batch_time: (new Date).getTime() / 1e3,
+                            batch_time: Math.round((new Date).getTime() / 1e3),
                             url: window.location.href
                         }, t)
                     };
@@ -8140,7 +8140,7 @@ webpackJsonp([60], {
         });
         var i;
         ! function(e) {
-            e.AchievementSpotlightImpression = "achievement_spotlight_impression", e.AchievementQuestBannerClick = "achievement_quest_banner_click", e.APIQuery = "benchmark_api_query", e.AppBooted = "benchmark_app_booted", e.AutohostChatImpression = "autohost_chat_impression", e.AutohostChatYes = "autohost_chat_yes", e.AutohostChatDismiss = "autohost_chat_dismiss", e.AutohostChatSettings = "autohost_chat_settings", e.BitsAdsAvailability = "bits_ads_availability", e.BitsAdsImpression = "bits_ads_impression", e.BitsAdsRequest = "bits_ads_request", e.BitsCardInteraction = "bits_card_interaction", e.BrowseForYou = "browse_for_you", e.BrowserFingerprint = "browser_fingerprint", e.BrowserPushNotificationPrompt = "browser_notification_prompt", e.BrowserPushNotificationDisable = "browser_notification_disable", e.BTTV = "bttv_check", e.Chat = "chat", e.ChatMentionUsed = "chat_mention_used", e.ChatRoomJoined = "chat_room_join", e.ChatSettingsChanged = "chat_client_setting_changed", e.ChatSettingsOpened = "chat_client_settings_open", e.ChatSuggestion = "chat-suggestions", e.ChatSuggestionComplete = "chat-completed-suggestion", e.ChommentCreated = "chomment_create", e.ChommentDeleted = "chomment_delete", e.ChommentUIAction = "chomment_ui_action", e.CommunityEdit = "community_client_edit", e.CommunityFollow = "community_client_follow", e.CommunityModeration = "community_client_channel_moderation", e.CommunityReport = "community_client_report", e.CommunityUnfollow = "community_client_unfollow", e.CompleteTransition = "benchmark_complete_transition", e.ComponentInitializing = "benchmark_component_initializing", e.ComponentInteractive = "benchmark_component_interactive", e.CustomEvent = "benchmark_custom_event", e.CrateNotificationAction = "crate_notification_action", e.EventFollowing = "oracle_user_notification_client", e.EventShare = "oracle_event_share", e.ExperimentBranch = "experiment_branch", e.FeaturedEventPresentation = "event_suggestions_shown", e.FeedCardImpression = "feed_client_card_impression", e.FeedCardEmbedImpression = "feed_client_card_embed_impression", e.FeedCardEmbedPlay = "feed_client_card_embed_play", e.FeedPost = "feed_client_post", e.FeedReaction = "feed_client_reaction", e.FetchStart = "benchmark_fetch_start", e.FFZ = "ffz_check", e.Follow = "follow", e.FrontPageCarouselClick = "frontpage_carousel_click", e.FrontPageCarouselDisplay = "carousel_display", e.FrontPageCarouselPromotionCardClick = "promotion_card_click", e.FrontPageCarouselPromotionCardView = "promotion_card_view", e.FrontPageCarouselNavButtonClick = "carousel_nav_button_click", e.FuelBuyButton = "fuel_buy_button", e.FuelGetGameClick = "fuel_get_game_click", e.FuelOfferView = "offer_view", e.FuelOfferInteraction = "offer_interaction", e.FuelSocialShare = "fuel_social_share", e.GameFollow = "follow-game", e.GameUnfollow = "unfollow-game", e.ItemSectionClick = "item_section_click", e.ItemSectionLoad = "item_section_load", e.OnboardingEvent = "onboarding_web", e.NetworkRequest = "network_request", e.NewChatterTokenStatus = "nca_client_token_status", e.NewChatterOnboardingInteraction = "nca_onboarding_chatbox_interaction", e.NotificationCenterInteraction = "notification_center_interaction", e.NotificationImpression = "notification_impression", e.NotificationInteraction = "notification_interaction", e.Pageview = "pageview", e.PartnerAffiliateSettings = "partner_affiliate_settings", e.PassportHide = "auth_exit", e.PassportShow = "auth_show", e.PresenceClick = "friend_presence_click", e.RaidPromptJoin = "raid_prompt_join", e.RaidPromptLeave = "raid_prompt_leave", e.RaidPromptImpression = "raid_prompt_impression", e.ShareItem = "share_item", e.SideNavChannelClick = "sidenav_channel_click", e.SideNavDetails = "sidenav_details", e.SideNavLoadMore = "sidenav_load_more", e.SiteLayoutMod = "site_layout_mod", e.SiteToggle = "twilight_site_toggle", e.StreamSummarySpotlightImpression = "summary_spotlight_impression", e.StreamSummarySpotlightClick = "summary_spotlight_click", e.StoreMerchClick = "store_item_select", e.StoreMerchView = "store_item_view", e.Subscription = "subscribe_button", e.SubsLandingStreamerClick = "subs_landing_streamer_click", e.ThemeChange = "dark_mode_toggle", e.Unfollow = "unfollow", e.VideoChatSettingChanged = "video_chat_setting_changed", e.VideoShare = "video_share", e.WhisperAllThreadsMod = "chat_convo_mod_global", e.WhisperIgnoreUser = "chat_ignore_client", e.WhisperReceived = "whisper_received", e.WhisperSearchClick = "search_click", e.WhisperSent = "whisper", e.WhisperThreadCreate = "chat_convo_create", e.WhisperThreadMod = "chat_convo_mod"
+            e.AchievementSpotlightImpression = "achievement_spotlight_impression", e.AchievementQuestBannerClick = "achievement_quest_banner_click", e.APIQuery = "benchmark_api_query", e.AppBooted = "benchmark_app_booted", e.AutohostChatImpression = "autohost_chat_impression", e.AutohostChatYes = "autohost_chat_yes", e.AutohostChatDismiss = "autohost_chat_dismiss", e.AutohostChatSettings = "autohost_chat_settings", e.BitsAdsAvailability = "bits_ads_availability", e.BitsAdsImpression = "bits_ads_impression", e.BitsAdsRequest = "bits_ads_request", e.BitsCardInteraction = "bits_card_interaction", e.BrowseForYou = "browse_for_you", e.BrowserFingerprint = "browser_fingerprint", e.BrowserPushNotificationPrompt = "browser_notification_prompt", e.BrowserPushNotificationDisable = "browser_notification_disable", e.BTTV = "bttv_check", e.Chat = "chat", e.ChatMentionUsed = "chat_mention_used", e.ChatRoomJoined = "chat_room_join", e.ChatSettingsChanged = "chat_client_setting_changed", e.ChatSettingsOpened = "chat_client_settings_open", e.ChatSuggestion = "chat-suggestions", e.ChatSuggestionComplete = "chat-completed-suggestion", e.ChommentCreated = "chomment_create", e.ChommentDeleted = "chomment_delete", e.ChommentUIAction = "chomment_ui_action", e.CollectionCreate = "collection_create", e.CollectionAddItem = "collection_add_item", e.CollectionRemoveItem = "collection_remove_item", e.CommunityEdit = "community_client_edit", e.CommunityFollow = "community_client_follow", e.CommunityModeration = "community_client_channel_moderation", e.CommunityReport = "community_client_report", e.CommunityUnfollow = "community_client_unfollow", e.CompleteTransition = "benchmark_complete_transition", e.ComponentInitializing = "benchmark_component_initializing", e.ComponentInteractive = "benchmark_component_interactive", e.CustomEvent = "benchmark_custom_event", e.CrateNotificationAction = "crate_notification_action", e.EventFollowing = "oracle_user_notification_client", e.EventShare = "oracle_event_share", e.ExperimentBranch = "experiment_branch", e.FeaturedEventPresentation = "event_suggestions_shown", e.FeedCardImpression = "feed_client_card_impression", e.FeedCardEmbedImpression = "feed_client_card_embed_impression", e.FeedCardEmbedPlay = "feed_client_card_embed_play", e.FeedPost = "feed_client_post", e.FeedReaction = "feed_client_reaction", e.FetchStart = "benchmark_fetch_start", e.FFZ = "ffz_check", e.Follow = "follow", e.FrontPageCarouselClick = "frontpage_carousel_click", e.FrontPageCarouselDisplay = "carousel_display", e.FrontPageCarouselPromotionCardClick = "promotion_card_click", e.FrontPageCarouselPromotionCardView = "promotion_card_view", e.FrontPageCarouselNavButtonClick = "carousel_nav_button_click", e.FuelBuyButton = "fuel_buy_button", e.FuelGetGameClick = "fuel_get_game_click", e.FuelOfferView = "offer_view", e.FuelOfferInteraction = "offer_interaction", e.FuelSocialShare = "fuel_social_share", e.GameFollow = "follow-game", e.GameUnfollow = "unfollow-game", e.ItemSectionClick = "item_section_click", e.ItemSectionLoad = "item_section_load", e.OnboardingEvent = "onboarding_web", e.NetworkRequest = "network_request", e.NewChatterTokenStatus = "nca_client_token_status", e.NewChatterOnboardingInteraction = "nca_onboarding_chatbox_interaction", e.NotificationCenterInteraction = "notification_center_interaction", e.NotificationImpression = "notification_impression", e.NotificationInteraction = "notification_interaction", e.Pageview = "pageview", e.PartnerAffiliateSettings = "partner_affiliate_settings", e.PassportHide = "auth_exit", e.PassportShow = "auth_show", e.PresenceClick = "friend_presence_click", e.RaidPromptJoin = "raid_prompt_join", e.RaidPromptLeave = "raid_prompt_leave", e.RaidPromptImpression = "raid_prompt_impression", e.ShareItem = "share_item", e.SideNavChannelClick = "sidenav_channel_click", e.SideNavDetails = "sidenav_details", e.SideNavLoadMore = "sidenav_load_more", e.SiteLayoutMod = "site_layout_mod", e.SiteToggle = "twilight_site_toggle", e.StreamSummarySpotlightImpression = "summary_spotlight_impression", e.StreamSummarySpotlightClick = "summary_spotlight_click", e.StoreMerchClick = "store_item_select", e.StoreMerchView = "store_item_view", e.Subscription = "subscribe_button", e.SubsLandingStreamerClick = "subs_landing_streamer_click", e.ThemeChange = "dark_mode_toggle", e.Unfollow = "unfollow", e.VideoChatSettingChanged = "video_chat_setting_changed", e.VideoShare = "video_share", e.WhisperAllThreadsMod = "chat_convo_mod_global", e.WhisperIgnoreUser = "chat_ignore_client", e.WhisperReceived = "whisper_received", e.WhisperSearchClick = "search_click", e.WhisperSent = "whisper", e.WhisperThreadCreate = "chat_convo_create", e.WhisperThreadMod = "chat_convo_mod"
         }(i || (i = {}))
     },
     kIPx: function(e, t) {},
@@ -8897,4 +8897,4 @@ webpackJsonp([60], {
     },
     zF1n: function(e, t) {}
 }, [5]);
-//# sourceMappingURL=minimal-dc9706537937d47f3b70ac2eeb70f1b8.js.map
+//# sourceMappingURL=minimal-f97250a62b9b5adf0f5d2b4802225a52.js.map
