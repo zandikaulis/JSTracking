@@ -5086,4 +5086,4 @@ webpackJsonp([48], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-collections-5b2f9ab731dcf2334400d7e0df75d9b3.js.map
+//# sourceMappingURL=pages.channel-collections-f45a1f49eb296a00a22334fc8f5f3e4a.js.map

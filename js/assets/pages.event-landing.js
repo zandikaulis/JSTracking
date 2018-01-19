@@ -4597,12 +4597,12 @@ webpackJsonp([45], {
                     return t.pastPremiereToPreviewCardVideo = function(e) {
                         return {
                             id: e.id,
-                            viewCount: e.viewCount ? e.viewCount : -1,
+                            viewCount: e.viewCount ? e.viewCount : 0,
                             title: e.title || "",
                             animatedPreviewURL: e.animatedPreviewURL || "",
                             previewThumbnailURL: e.previewThumbnailURL || "",
                             publishedAt: e.publishedAt || "",
-                            lengthSeconds: e.lengthSeconds ? e.lengthSeconds : -1,
+                            lengthSeconds: e.lengthSeconds ? e.lengthSeconds : 0,
                             owner: {
                                 id: e.owner && e.owner.id ? e.owner.id : "",
                                 login: e.owner && e.owner.login ? e.owner.login : "",
@@ -11278,4 +11278,4 @@ webpackJsonp([45], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.event-landing-1e0772c802ab1b66db78f20ba8cf6c18.js.map
+//# sourceMappingURL=pages.event-landing-42b34e9a2181c604bae58be76b4f0354.js.map

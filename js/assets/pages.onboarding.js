@@ -2801,7 +2801,7 @@ webpackJsonp([39], {
                 }
             }), Object(v.a)([{
                 topic: function(e) {
-                    return Object(S.p)(e.currentUserID)
+                    return Object(S.q)(e.currentUserID)
                 },
                 mapMessageTypesToProps: {
                     whisper_received: "whisperReceived",
@@ -6184,7 +6184,7 @@ webpackJsonp([39], {
                     }
                 }), Object(p.a)([{
                     topic: function(e) {
-                        return Object(g.n)(e.data.currentUser && e.data.currentUser.id || "")
+                        return Object(g.o)(e.data.currentUser && e.data.currentUser.id || "")
                     },
                     mapMessageTypesToProps: {
                         "*": "subscriptionInfo"
@@ -7700,6 +7700,7 @@ webpackJsonp([39], {
                 StreamChange: "stream-change-v1",
                 StreamChatRoom: "stream-chat-room-v1",
                 UploadService: "upload",
+                UserBitsUpdates: "user-bits-updates-v1",
                 UserCommerceEvents: "user-commerce-events",
                 UserCrateEvents: "user-crate-events-v1",
                 UserSubscribeEvents: "user-subscribe-events-v1",
@@ -7728,6 +7729,8 @@ webpackJsonp([39], {
                 StreamUp: "stream_up",
                 UpdatedChannelChatProperty: "updated_channel_chat_property",
                 UploadService: "upload",
+                UserBitsBalanceUpdate: "balance_update",
+                UserBitsBadgeUpdate: "badge_update",
                 UserCrateEvent: "crate-event",
                 UserGiftEvent: "gift-event",
                 ViewCount: "viewcount",
@@ -9697,7 +9700,7 @@ webpackJsonp([39], {
             return a.d.ImageUpload + "." + e
         }, t.k = function(e) {
             return a.d.UploadService + "." + e
-        }, t.o = function(e) {
+        }, t.p = function(e) {
             return a.d.VideoPlaybackById + "." + e
         }, t.f = function(e) {
             return a.d.Presence + "." + e
@@ -9709,13 +9712,15 @@ webpackJsonp([39], {
             return a.d.Friendship + "." + e
         }, t.a = function(e) {
             return a.d.ChannelBitsPinEvents + "." + e
-        }, t.n = function(e) {
-            return a.d.UserSubscribeEvents + "." + e
-        }, t.m = function(e) {
-            return a.d.UserCrateEvents + "." + e
         }, t.l = function(e) {
+            return a.d.UserBitsUpdates + "." + e
+        }, t.o = function(e) {
+            return a.d.UserSubscribeEvents + "." + e
+        }, t.n = function(e) {
+            return a.d.UserCrateEvents + "." + e
+        }, t.m = function(e) {
             return a.d.UserCommerceEvents + "." + e
-        }, t.p = function(e) {
+        }, t.q = function(e) {
             return a.d.Whispers + "." + e
         }, t.e = function(e) {
             return a.d.OnsiteNotifications + "." + e
@@ -18141,10 +18146,7 @@ webpackJsonp([39], {
                         }), window.__playerScriptChunk && !t.tagInjected) {
                         this.logger.debug("Loading player chunk after page loaded");
                         var n = document.createElement("script");
-                        n.crossOrigin = "anonymous", n.src = window.__jqueryChunk, n.onload = function() {
-                            var e = document.createElement("script");
-                            e.async = !0, e.crossOrigin = "anonymous", e.src = window.__playerScriptChunk, document.body.appendChild(e)
-                        }, document.body.appendChild(n);
+                        n.async = !0, n.crossOrigin = "anonymous", n.src = window.__playerScriptChunk, document.body.appendChild(n);
                         var i = document.createElement("link");
                         i.href = window.__playerStyleChunk, i.media = "screen", i.rel = "stylesheet", i.type = "text/css", document.body.appendChild(i), t.tagInjected = !0
                     }
@@ -19780,7 +19782,7 @@ webpackJsonp([39], {
                         types: [T.c.WhisperDeleted, T.c.WhisperEdited, T.c.WhisperSent, T.c.WhisperAllThreadsUpdate, T.c.WhisperReceived, T.c.WhisperThreadUpdate],
                         variables: s.__assign({}, e.data.variables),
                         skip: !e.data.currentUser || void 0 === e.data.currentUser.id,
-                        topic: Object(w.p)(e.data.currentUser && e.data.currentUser.id || ""),
+                        topic: Object(w.q)(e.data.currentUser && e.data.currentUser.id || ""),
                         mutator: function(t, n) {
                             if (!n.currentUser) return n;
                             if (a(t) || r(t)) {
@@ -21411,7 +21413,7 @@ webpackJsonp([39], {
         }
 
         function o(e, t, n) {
-            var i = /([^\w@#%\-+=:~])?(?:(https?:\/\/)?(?:[\w@#%\-+=:~]+\.)+[a-z]{2,6}(?:\/[\w./@#%&()\-+=:?~]*)?)([^\w./@#%&()\-+=:?~]|\s|$)/g,
+            var i = /^(?:(https?:\/\/)?(?:[\w@#%\-+=:~]+\.)+[a-z]{2,6}(?:\/[\w./@#%&()\-+=:?~]*)?)$/g,
                 a = /([^\w@#%\-+=:~])?(@)([^\u0000-\u007F]+|\w+)+([^\w./@#%&()\-+=:?~]|\s|$)/g,
                 r = [],
                 s = e.split(/\s+/);
@@ -21421,92 +21423,88 @@ webpackJsonp([39], {
                 a.lastIndex = 0;
                 var c = a.exec(e);
                 if (l) {
-                    var u = l.index,
-                        h = !1,
-                        g = !1,
-                        v = l[1];
-                    v && (u += 1, /\s/.test(v) || (h = !0)), 0 !== u && r.push({
+                    var u = l.index;
+                    0 !== u && r.push({
                         type: p.a.Text,
-                        content: (g ? " " : "") + e.slice(0, u) + (h ? " " : "")
-                    }), g = !1;
-                    var b = i.lastIndex,
-                        k = l[3];
-                    if (k && (b -= 1, /\s/.test(k) || (g = !0)), n) r.push({
+                        content: "" + e.slice(0, u)
+                    });
+                    var h = i.lastIndex;
+                    if (n) r.push({
                         type: p.a.Text,
                         content: " <" + Object(d.d)("deleted link", "CreateMessageData") + "> "
                     });
                     else {
-                        var y = (l[2] ? "" : "https://") + e.slice(u, b);
+                        var g = (l[1] ? "" : "https://") + e.slice(u, h);
                         if (function(e) {
                                 return void 0 === e && (e = ""), m.test(e) && !e.includes("clips.twitch.tv/2017/")
-                            }(y)) {
-                            var S = function(e) {
+                            }(g)) {
+                            var v = function(e) {
                                 void 0 === e && (e = "");
                                 var t = e.match(m);
                                 if (null === t) return "";
                                 if (t && t.length > 0 && void 0 !== t.index) return t[1];
                                 return ""
-                            }(y);
+                            }(g);
                             r.push({
                                 type: p.a.ClipLink,
                                 content: {
-                                    slug: S,
-                                    url: y,
-                                    displayText: e.slice(u, b)
+                                    slug: v,
+                                    url: g,
+                                    displayText: e.slice(u, h)
                                 }
                             })
                         } else if (function(e) {
                                 return void 0 === e && (e = ""), f.test(e)
-                            }(y)) {
-                            var _ = function(e) {
+                            }(g)) {
+                            var b = function(e) {
                                 void 0 === e && (e = "");
                                 var t = e.match(f);
                                 if (null === t) return "";
                                 if (t && t.length > 0 && void 0 !== t.index) return t[1];
                                 return ""
-                            }(y);
+                            }(g);
                             r.push({
                                 type: p.a.VideoLink,
                                 content: {
-                                    id: _,
-                                    url: y,
-                                    displayText: e.slice(u, b)
+                                    id: b,
+                                    url: g,
+                                    displayText: e.slice(u, h)
                                 }
                             })
                         } else r.push({
                             type: p.a.Link,
                             content: {
-                                displayText: e.slice(u, b),
-                                url: y
+                                displayText: e.slice(u, h),
+                                url: g
                             }
                         })
                     }
-                    var C = e.slice(b),
-                        N = "";
-                    o < s.length - 1 && (N = " "), C && r.push({
+                    var k = e.slice(h),
+                        y = "";
+                    o < s.length - 1 && (y = " "), k && r.push({
                         type: p.a.Text,
-                        content: (g ? " " : "") + C + N
+                        content: "" + k + y
                     })
                 } else {
                     if (!c) {
-                        var T = r.length && r[r.length - 1];
-                        N = "";
-                        if (o < s.length - 1 && (N = " "), T && T.type === p.a.Text) T.content += e + N;
+                        var S = r.length && r[r.length - 1];
+                        y = "";
+                        if (o < s.length - 1 && (y = " "), S && S.type === p.a.Text) S.content += e + y;
                         else {
-                            var E = "";
-                            o && (E = " "), r.push({
+                            var _ = "";
+                            o && (_ = " "), r.push({
                                 type: p.a.Text,
-                                content: E + e + N
+                                content: _ + e + y
                             })
                         }
                         return
                     }
-                    var w = c[3];
+                    var C = c[3];
                     r.push({
                         type: p.a.Mention,
                         content: {
                             sender: t,
-                            recipient: w
+                            recipient: C
                         }
                     })
                 }
@@ -24748,4 +24746,4 @@ webpackJsonp([39], {
         }
     }
 });
-//# sourceMappingURL=pages.onboarding-26cdc6a09c7353854497fcd4e8948237.js.map
+//# sourceMappingURL=pages.onboarding-2f1ee448bd4a834218ab596fbaf0a217.js.map
