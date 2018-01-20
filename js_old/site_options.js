@@ -2040,13 +2040,13 @@ window.SiteOptions = {
         },
         "647ac2c7-7650-4e06-87c0-2e3098c7f70a": {
             "name": "android_bits_iap_onboarding",
-            "v": 2843,
+            "v": 2860,
             "t": 1,
             "groups": [{
-                "weight": 30,
+                "weight": 20,
                 "value": "control"
             }, {
-                "weight": 70,
+                "weight": 80,
                 "value": "active"
             }]
         },
@@ -3781,13 +3781,13 @@ window.SiteOptions = {
         },
         "c5b39c2e-17e2-4226-b59e-ba48d940a855": {
             "name": "ios_native_bits_iap_onboarding",
-            "v": 2844,
+            "v": 2859,
             "t": 1,
             "groups": [{
-                "weight": 30,
+                "weight": 20,
                 "value": "inactive"
             }, {
-                "weight": 70,
+                "weight": 80,
                 "value": "active"
             }]
         },
