@@ -1592,16 +1592,16 @@ window.SiteOptions = {
         },
         "4ce15ce7-a4fc-40df-812d-847467f0572d": {
             "name": "ios_mobile_promotions",
-            "v": 2666,
+            "v": 2867,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 10,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 40,
                 "value": "active_first_tab"
             }, {
-                "weight": 0,
+                "weight": 50,
                 "value": "active_last_tab"
             }]
         },
