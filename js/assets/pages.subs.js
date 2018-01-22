@@ -3158,7 +3158,9 @@ webpackJsonp([41], {
                         })
                     }, i && t.logger.error(new Error("StickyHeaderRoot is already mounted."), "StickyHeaderRoot is already mounted. There should only be one of these mounted at a time."), i = t, t
                 }
-                return a.__extends(t, e), t.prototype.render = function() {
+                return a.__extends(t, e), t.prototype.componentWillUnmount = function() {
+                    i = null
+                }, t.prototype.render = function() {
                     return this.state.content ? r.createElement(o.V, null, this.state.content) : null
                 }, t
             }(r.Component),
@@ -3173,11 +3175,11 @@ webpackJsonp([41], {
                     return c = n, n
                 }
                 return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                    i.displayContent(this.props.children)
+                    i && i.displayContent(this.props.children)
                 }, t.prototype.componentWillReceiveProps = function(e) {
-                    e.children ? i.displayContent(e.children) : i.hideContent()
+                    i && (e.children ? i.displayContent(e.children) : i.hideContent())
                 }, t.prototype.componentWillUnmount = function() {
-                    i.hideContent(), c = null
+                    i && i.hideContent(), c = null
                 }, t.prototype.render = function() {
                     return null
                 }, t
@@ -9233,7 +9235,9 @@ webpackJsonp([41], {
                         })
                     }, i && t.logger.error(new Error("StickyFooterRoot is already mounted."), "StickyFooterRoot is already mounted. There should only be one of these mounted at a time."), i = t, t
                 }
-                return a.__extends(t, e), t.prototype.render = function() {
+                return a.__extends(t, e), t.prototype.componentWillUnmount = function() {
+                    i = null
+                }, t.prototype.render = function() {
                     return this.state.content ? r.createElement(o.V, null, this.state.content) : null
                 }, t
             }(r.Component),
@@ -9248,11 +9252,11 @@ webpackJsonp([41], {
                     return c = n, n
                 }
                 return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                    i.displayContent(this.props.children)
+                    i && i.displayContent(this.props.children)
                 }, t.prototype.componentWillReceiveProps = function(e) {
-                    e.children ? i.displayContent(e.children) : i.hideContent()
+                    i && (e.children ? i.displayContent(e.children) : i.hideContent())
                 }, t.prototype.componentWillUnmount = function() {
-                    i.hideContent(), c = null
+                    i && i.hideContent(), c = null
                 }, t.prototype.render = function() {
                     return null
                 }, t
@@ -12767,14 +12771,18 @@ webpackJsonp([41], {
                 }, t.prototype.render = function() {
                     var e = null,
                         t = Object(o.d)("Select One...", "ReportUserModal");
-                    return e = this.props.data.loading ? [r.createElement("option", {
+                    if (this.props.data.loading) e = [r.createElement("option", {
                         key: "Loading"
-                    }, Object(o.d)("Loading...", "ReportReasonsSelect"))] : Object(d.b)(this.props.data.reportReasons).map(function(e) {
-                        return r.createElement("option", {
-                            key: e.canonical,
-                            value: e.canonical
-                        }, e.localized)
-                    }), r.createElement(u.V, {
+                    }, Object(o.d)("Loading...", "ReportReasonsSelect"))];
+                    else {
+                        e = (this.props.data.reportReasons || Object(d.b)()).map(function(e) {
+                            return r.createElement("option", {
+                                key: e.id,
+                                value: e.id
+                            }, e.text)
+                        })
+                    }
+                    return r.createElement(u.V, {
                         margin: {
                             bottom: 2
                         }
@@ -22736,6 +22744,16 @@ webpackJsonp([41], {
                                 arguments: [],
                                 directives: [],
                                 selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "text"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
                             }]
                         }
                     }]
@@ -22743,11 +22761,11 @@ webpackJsonp([41], {
             }],
             loc: {
                 start: 0,
-                end: 109
+                end: 114
             }
         };
         n.loc.source = {
-            body: "query ReportUserModal_ReportReasons($content: ReportContentType!) {\nreportReasons(content: $content) {\nid\n}\n}",
+            body: "query ReportUserModal_ReportReasons($content: ReportContentType!) {\nreportReasons(content: $content) {\nid\ntext\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -22812,85 +22830,17 @@ webpackJsonp([41], {
     xwpJ: function(e, t, n) {
         "use strict";
 
-        function i(e) {
-            if (e) {
-                var t = e.map(function(e) {
-                    return e.id
-                });
-                return s().filter(function(e) {
-                    return t.includes(e.canonical)
-                })
-            }
-            return s()
+        function i() {
+            return [{
+                id: "other",
+                text: Object(r.d)("Other Terms of Service Violation", "ReportUserModal")
+            }]
         }
         var a = function(e, t) {
                 var n = "https://www.twitch.tv/communities/{communityName}".replace("{communityName}", e);
                 return 'community report (<a href="{link}">{link}</a>) {description}'.replace(/{link}/g, n).replace(/{description}/, t)
             },
-            r = n("6sO2"),
-            s = function() {
-                return [{
-                    localized: Object(r.d)("Site Suspension Evasion", "ReportUserModal"),
-                    canonical: "tos_ban_evasion"
-                }, {
-                    localized: Object(r.d)("Chat Ban Evasion", "ReportUserModal"),
-                    canonical: "chat_ban_evasion"
-                }, {
-                    localized: Object(r.d)("Self-Harm", "ReportUserModal"),
-                    canonical: "selfharm"
-                }, {
-                    localized: Object(r.d)("Attempts or Threats to Harm", "ReportUserModal"),
-                    canonical: "harm"
-                }, {
-                    localized: Object(r.d)("Harassment", "ReportUserModal"),
-                    canonical: "harassment"
-                }, {
-                    localized: Object(r.d)("Hate Speech", "ReportUserModal"),
-                    canonical: "hate_speech"
-                }, {
-                    localized: Object(r.d)("Offensive Username", "ReportUserModal"),
-                    canonical: "offensive_username"
-                }, {
-                    localized: Object(r.d)("Impersonation", "ReportUserModal"),
-                    canonical: "impersonation"
-                }, {
-                    localized: Object(r.d)("Spam, Scams, or Other Malicious Content", "ReportUserModal"),
-                    canonical: "spam"
-                }, {
-                    localized: Object(r.d)("Porn or Other Sexually Explicit Content", "ReportUserModal"),
-                    canonical: "porn"
-                }, {
-                    localized: Object(r.d)("Nudity or Sexual Behavior/Attire", "ReportUserModal"),
-                    canonical: "nudity"
-                }, {
-                    localized: Object(r.d)("Extreme Violence, Gore, or Other Obscene Content", "ReportUserModal"),
-                    canonical: "gore"
-                }, {
-                    localized: Object(r.d)("Underaged User", "ReportUserModal"),
-                    canonical: "underaged"
-                }, {
-                    localized: Object(r.d)("Cheating in Online Game", "ReportUserModal"),
-                    canonical: "cheating"
-                }, {
-                    localized: Object(r.d)("Prohibited Game", "ReportUserModal"),
-                    canonical: "prohibited"
-                }, {
-                    localized: Object(r.d)("Miscategorized Content or Other Category Violation", "ReportUserModal"),
-                    canonical: "miscategorized"
-                }, {
-                    localized: Object(r.d)("Community Rules Violation", "ReportUserModal"),
-                    canonical: "community_rules_violation"
-                }, {
-                    localized: Object(r.d)("Community is Violating Terms of Service", "ReportUserModal"),
-                    canonical: "community_tos_violation"
-                }, {
-                    localized: Object(r.d)("Bits Acceptable Use Policy Violation", "ReportUserModal"),
-                    canonical: "bits_violation"
-                }, {
-                    localized: Object(r.d)("Other Terms of Service Violation", "ReportUserModal"),
-                    canonical: "other"
-                }]
-            };
+            r = n("6sO2");
         n.d(t, "a", function() {
             return a
         }), n.d(t, "b", function() {
@@ -23023,4 +22973,4 @@ webpackJsonp([41], {
         }
     }
 });
-//# sourceMappingURL=pages.subs-c12d91c216065aab4e56f905173efb73.js.map
+//# sourceMappingURL=pages.subs-478385ffde10658cf191f96475510dc1.js.map

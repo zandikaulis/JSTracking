@@ -3562,7 +3562,9 @@ webpackJsonp([60], {
                         })
                     }, i && t.logger.error(new Error("StickyHeaderRoot is already mounted."), "StickyHeaderRoot is already mounted. There should only be one of these mounted at a time."), i = t, t
                 }
-                return a.__extends(t, e), t.prototype.render = function() {
+                return a.__extends(t, e), t.prototype.componentWillUnmount = function() {
+                    i = null
+                }, t.prototype.render = function() {
                     return this.state.content ? r.createElement(s.V, null, this.state.content) : null
                 }, t
             }(r.Component),
@@ -3577,11 +3579,11 @@ webpackJsonp([60], {
                     return c = n, n
                 }
                 return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                    i.displayContent(this.props.children)
+                    i && i.displayContent(this.props.children)
                 }, t.prototype.componentWillReceiveProps = function(e) {
-                    e.children ? i.displayContent(e.children) : i.hideContent()
+                    i && (e.children ? i.displayContent(e.children) : i.hideContent())
                 }, t.prototype.componentWillUnmount = function() {
-                    i.hideContent(), c = null
+                    i && i.hideContent(), c = null
                 }, t.prototype.render = function() {
                     return null
                 }, t
@@ -11090,7 +11092,7 @@ webpackJsonp([60], {
         });
         var i;
         ! function(e) {
-            e.BitsLandingPage = "bits_landing", e.BrowseCommunities = "browse_communities", e.BrowseCreative = "browse_creative", e.BrowseForYou = "browse_for_you", e.Channel = "channel", e.ChannelClips = "channel_clips", e.ChannelClipsManager = "my_clips_channel", e.ChannelEvents = "channel_events", e.ChannelVideos = "channel_vods", e.ChannelCollections = "channel_collections", e.Chat = "chat", e.ClipsGame = "clips_game", e.Dashboard = "dashboard", e.DashboardAchievements = "dashboard/achievements", e.DashboardExtensions = "dashboard/extensions", e.DashboardStreamSummary = "dashboard/stream-summary", e.Directory = "directory", e.DirectoryPopular = "directory.popular", e.EmailVerification = "email_verification", e.EventDetails = "event_details", e.FrontPage = "home", e.GameDetail = "game_detail", e.MyClipsManager = "my_clips", e.None = "", e.OnboardingCommunitySelection = "onboarding/community-selection", e.StoreMerch = "store-merch", e.VideoWatchPage = "vod", e.SubsLandingPage = "subs-landing", e.SettingsPage = "settings", e.SubsBroadcasterPage = "subs-broadcaster"
+            e.BitsLandingPage = "bits_landing", e.BrowseCommunities = "browse_communities", e.BrowseCreative = "browse_creative", e.BrowseForYou = "browse_for_you", e.Channel = "channel", e.ChannelClips = "channel_clips", e.ChannelClipsManager = "my_clips_channel", e.ChannelEvents = "channel_events", e.ChannelVideos = "channel_vods", e.ChannelCollections = "channel_collections", e.Chat = "chat", e.ClipsGame = "clips_game", e.Dashboard = "dashboard", e.DashboardAchievements = "dashboard/achievements", e.DashboardChannelAnalytics = "dashboard/channel-analytics", e.DashboardExtensions = "dashboard/extensions", e.DashboardStreamSummary = "dashboard/stream-summary", e.Directory = "directory", e.DirectoryPopular = "directory.popular", e.EmailVerification = "email_verification", e.EventDetails = "event_details", e.FrontPage = "home", e.GameDetail = "game_detail", e.MyClipsManager = "my_clips", e.None = "", e.OnboardingCommunitySelection = "onboarding/community-selection", e.StoreMerch = "store-merch", e.VideoWatchPage = "vod", e.SubsLandingPage = "subs-landing", e.SettingsPage = "settings", e.SubsBroadcasterPage = "subs-broadcaster"
         }(i || (i = {}));
         var a;
         ! function(e) {
@@ -12509,7 +12511,9 @@ webpackJsonp([60], {
                         })
                     }, i && t.logger.error(new Error("StickyFooterRoot is already mounted."), "StickyFooterRoot is already mounted. There should only be one of these mounted at a time."), i = t, t
                 }
-                return a.__extends(t, e), t.prototype.render = function() {
+                return a.__extends(t, e), t.prototype.componentWillUnmount = function() {
+                    i = null
+                }, t.prototype.render = function() {
                     return this.state.content ? r.createElement(s.V, null, this.state.content) : null
                 }, t
             }(r.Component),
@@ -12524,11 +12528,11 @@ webpackJsonp([60], {
                     return c = n, n
                 }
                 return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                    i.displayContent(this.props.children)
+                    i && i.displayContent(this.props.children)
                 }, t.prototype.componentWillReceiveProps = function(e) {
-                    e.children ? i.displayContent(e.children) : i.hideContent()
+                    i && (e.children ? i.displayContent(e.children) : i.hideContent())
                 }, t.prototype.componentWillUnmount = function() {
-                    i.hideContent(), c = null
+                    i && i.hideContent(), c = null
                 }, t.prototype.render = function() {
                     return null
                 }, t
@@ -13619,13 +13623,13 @@ webpackJsonp([60], {
         function a(e) {
             return !!(e && e.timing && e.getEntriesByType && e.setResourceTimingBufferSize && e.clearResourceTimings)
         }
-        var r = n("U7vG"),
-            o = n("BhyV"),
-            s = n("O27J"),
-            l = n("Ejve"),
-            c = "https://ad.doubleclick.net/ddm/ad/",
-            u = n("/wlI"),
-            d = function() {
+        var r, o = n("U7vG"),
+            s = n("BhyV"),
+            l = n("O27J"),
+            c = n("Ejve"),
+            u = "https://ad.doubleclick.net/ddm/ad/",
+            d = n("/wlI"),
+            p = function() {
                 function e(e) {
                     this.detect = !1, this.logger = e.logger.withCategory("ad-block-detector"), this.logger.debug("Created.")
                 }
@@ -13633,7 +13637,7 @@ webpackJsonp([60], {
                     this.logger.debug("Start ad block tests."), this.detectEasyList(), this.detectEasyListPrivacy()
                 }, e.prototype.detectEasyList = function() {
                     var e = this;
-                    fetch("" + c + i(5) + "/" + i(10) + "/" + i(6) + "'/;ord='" + Date.now(), {
+                    fetch("" + u + i(5) + "/" + i(10) + "/" + i(6) + "'/;ord='" + Date.now(), {
                         method: "GET",
                         mode: "no-cors"
                     }).then(function() {
@@ -13657,7 +13661,7 @@ webpackJsonp([60], {
                         },
                         n = {
                             method: "POST",
-                            body: new Blob([Object(u.a)([t])], {
+                            body: new Blob([Object(d.a)([t])], {
                                 type: "application/x-www-form-urlencoded; charset=UTF-8"
                             })
                         };
@@ -13675,29 +13679,14 @@ webpackJsonp([60], {
                         sentinel: window.Twitch.sentinel
                     }) : (window.Twitch.sentinel = this, this.logger.debug("Setting global sentinel."))
                 }, e
-            }();
-        window._sp_ = window._sp_ || {}, window._sp_.config = window._sp_.config || {};
-        var p, m = function() {
-                function e(e) {
-                    var t = this;
-                    this.detect = !1, this.logger = e.logger.withCategory("AdBlockSentinel"), window.sp_cid = e.cid, window._sp_.config.account_id = e.accountID, document.addEventListener("sp.blocking", function() {
-                        t.logger.debug("Ad blocker detected"), t.detect = !0
-                    }), document.addEventListener("sp.not_blocking", function() {
-                        t.logger.debug("Ad blocker not detected"), t.detect = !1
-                    }), this.logger.debug("Created")
-                }
-                return e.prototype.addTwitchGlobal = function() {
-                    window.Twitch || (window.Twitch = {}), window.Twitch.sentinel ? this.logger.debug("Sentinel global already exists") : (window.Twitch.sentinel = this, this.logger.debug("Setting global sentinel"))
-                }, e.prototype.pageTransition = function() {
-                    window._sp_ && window._sp_.pageChange ? (window._sp_.pageChange(), this.logger.debug("Called pageChange method")) : this.logger.debug("window._sp_ or window._sp_.pageChange does not exist.")
-                }, e
             }(),
-            h = n("TToO"),
-            g = n("lbHh"),
-            f = n("JMIN"),
-            v = n("OAwv"),
-            b = n("6sO2"),
-            y = {
+            m = n("TToO"),
+            h = n("lbHh"),
+            g = n("JMIN"),
+            f = n("OAwv"),
+            v = n("6sO2"),
+            b = {
+                "4f952587-515d-44ac-b0cc-86769f543c72": "no",
                 "4d3d19a7-38c5-4328-9730-7d99565d5edd": "no",
                 "ef25ca44-13bd-4e89-99d2-f9939c013fec": "off",
                 "a9667563-723a-4cf7-b253-674d9eef0a53": "control",
@@ -13719,7 +13708,8 @@ webpackJsonp([60], {
                 "7aa589f3-34d8-425f-8227-29007d50757e": "control",
                 "0dc9a9c9-fee5-4b5f-a462-f07675713e5e": "control"
             },
-            k = {
+            y = {
+                TWILIGHT_ALL_THE_STATS: "4f952587-515d-44ac-b0cc-86769f543c72",
                 TWILIGHT_PREMIERE_UPLOAD_FLOW: "4d3d19a7-38c5-4328-9730-7d99565d5edd",
                 STREAMER_TRAILERS: "ef25ca44-13bd-4e89-99d2-f9939c013fec",
                 TWILIGHT_WEB_ONBOARDING: "a9667563-723a-4cf7-b253-674d9eef0a53",
@@ -13741,32 +13731,32 @@ webpackJsonp([60], {
                 TWILIGHT_GROWTH_EMAIL_VERIFY_BAR: "7aa589f3-34d8-425f-8227-29007d50757e",
                 TWILIGHT_FOLLOWING_INDEX_LATEST_VIDEOS_V2: "0dc9a9c9-fee5-4b5f-a462-f07675713e5e"
             },
-            S = {
+            k = {
                 TWILIGHT_PREMIERE_UPLOAD_FLOW: "yes",
                 TWILIGHT_SUB_CHECKOUT_POPUP: "yes",
                 TWILIGHT_VIDEOS_IN_SIDENAV: "all_content"
             };
         ! function(e) {
             e.Channel = "channel_id", e.Device = "device_id", e.User = "user_id"
-        }(p || (p = {}));
-        var _, w = "twilight.ignore_experiments",
-            E = function() {
+        }(r || (r = {}));
+        var S, _ = "twilight.ignore_experiments",
+            w = function() {
                 function e(e) {
-                    this.ignoreExperiments = !1, this.logger = e.logger.withCategory("Experiment"), this.session = e.session, this.store = e.store, this.tracking = e.tracking, this.ignoreExperiments = e.storage.get(w, !1)
+                    this.ignoreExperiments = !1, this.logger = e.logger.withCategory("Experiment"), this.session = e.session, this.store = e.store, this.tracking = e.tracking, this.ignoreExperiments = e.storage.get(_, !1)
                 }
                 return e.prototype.getAssignment = function(e, t) {
-                    return void 0 === t && (t = {}), h.__awaiter(this, void 0, void 0, function() {
-                        var n, i, a, r, o;
-                        return h.__generator(this, function(s) {
-                            switch (s.label) {
+                    return void 0 === t && (t = {}), m.__awaiter(this, void 0, void 0, function() {
+                        var n, i, a, o, s;
+                        return m.__generator(this, function(l) {
+                            switch (l.label) {
                                 case 0:
                                     return this.ignoreExperiments ? (this.logger.debug("Ingoring experiments because local storage key is present"), [2, null]) : [4, this.initialize()];
                                 case 1:
-                                    if (s.sent(), !k[e]) return this.logger.warn("Experiment name not in mapping", e), [2, null];
-                                    if (n = k[e], !this.experiments[n]) return this.logger.warn("Unable to find experiment configuration", {
+                                    if (l.sent(), !y[e]) return this.logger.warn("Experiment name not in mapping", e), [2, null];
+                                    if (n = y[e], !this.experiments[n]) return this.logger.warn("Unable to find experiment configuration", {
                                         name: e,
                                         id: n
-                                    }), y[n] && this.overrides[n] ? (this.logger.warn("Using experiment override despite missing experiment configuration", {
+                                    }), b[n] && this.overrides[n] ? (this.logger.warn("Using experiment override despite missing experiment configuration", {
                                         name: e,
                                         id: n,
                                         assignment: this.overrides[n]
@@ -13776,27 +13766,27 @@ webpackJsonp([60], {
                                         id: n,
                                         experiment: i
                                     }), [2, null];
-                                    switch (a = this.assignments[n], this.overrides[n] ? r = this.overrides[n] : 3 === i.t ? t.channel ? r = Object(f.selectTreatment)(n, i, t.channel) : (this.logger.warn("Called getAssignment() for channel experiment with no channel", i), r = a) : r = a, i.t) {
+                                    switch (a = this.assignments[n], this.overrides[n] ? o = this.overrides[n] : 3 === i.t ? t.channel ? o = Object(g.selectTreatment)(n, i, t.channel) : (this.logger.warn("Called getAssignment() for channel experiment with no channel", i), o = a) : o = a, i.t) {
                                         case 1:
-                                            o = p.Device;
+                                            s = r.Device;
                                             break;
                                         case 2:
-                                            o = p.User;
+                                            s = r.User;
                                             break;
                                         case 3:
-                                            o = p.Channel;
+                                            s = r.Channel;
                                             break;
                                         default:
-                                            o = void 0
+                                            s = void 0
                                     }
                                     return this.trackExperiment({
-                                        assignment: r,
+                                        assignment: o,
                                         channel: t.channel,
                                         id: n,
                                         name: i.name,
                                         version: i.v,
-                                        type: o
-                                    }), [2, r]
+                                        type: s
+                                    }), [2, o]
                             }
                         })
                     })
@@ -13812,12 +13802,12 @@ webpackJsonp([60], {
                         experiment_type: e.type
                     })
                 }, e.prototype.initialize = function() {
-                    return h.__awaiter(this, void 0, void 0, function() {
+                    return m.__awaiter(this, void 0, void 0, function() {
                         var e, t, n = this;
-                        return h.__generator(this, function(i) {
+                        return m.__generator(this, function(i) {
                             return this.initializing ? [2, this.initializing] : (this.initializing = new Promise(function(e) {
                                 return n.initializeComplete = e
-                            }), window.__twilightSettings && window.__twilightSettings.experiments ? (this.experiments = window.__twilightSettings && window.__twilightSettings.experiments, (e = Object(f.validate)(this.experiments)) && (this.logger.error(e, "Invalid experiment configuration. Experiments will be default"), this.experiments = {})) : (this.logger.warn("Unable to get experiment data from dynamic settings. Experiments will be default."), this.experiments = {}), t = this.store.getState().session.user, this.overrides = this.determineOverrides(!(!t || !t.roles) && t.roles.isStaff), this.login = t ? t.login : void 0, this.assignments = this.determineAssignments(this.experiments, this.session.deviceID, this.login), this.logger.debug("Experiment settings determined", {
+                            }), window.__twilightSettings && window.__twilightSettings.experiments ? (this.experiments = window.__twilightSettings && window.__twilightSettings.experiments, (e = Object(g.validate)(this.experiments)) && (this.logger.error(e, "Invalid experiment configuration. Experiments will be default"), this.experiments = {})) : (this.logger.warn("Unable to get experiment data from dynamic settings. Experiments will be default."), this.experiments = {}), t = this.store.getState().session.user, this.overrides = this.determineOverrides(!(!t || !t.roles) && t.roles.isStaff), this.login = t ? t.login : void 0, this.assignments = this.determineAssignments(this.experiments, this.session.deviceID, this.login), this.logger.debug("Experiment settings determined", {
                                 overrides: this.overrides,
                                 assignments: this.assignments,
                                 experiments: this.experiments
@@ -13827,52 +13817,52 @@ webpackJsonp([60], {
                 }, e.prototype.determineOverrides = function(e) {
                     var t = this,
                         n = {};
-                    e && Object.keys(S).forEach(function(e) {
-                        k[e] ? S[e] && (n[k[e]] = S[e]) : t.logger.warn("Staff experiment name is not in mapping", e)
+                    e && Object.keys(k).forEach(function(e) {
+                        y[e] ? k[e] && (n[y[e]] = k[e]) : t.logger.warn("Staff experiment name is not in mapping", e)
                     });
                     var i = {};
                     try {
-                        var a = g.get(b.a.experimentsOverrideCookie);
+                        var a = h.get(v.a.experimentsOverrideCookie);
                         if (a) {
                             var r = JSON.parse(a);
                             Object.keys(r).forEach(function(e) {
-                                y[e] ? i[e] = r[e] : t.logger.warn("Cookie experiment ID is not in DEFAULT_ASSIGNMENTS mapping", e)
+                                b[e] ? i[e] = r[e] : t.logger.warn("Cookie experiment ID is not in DEFAULT_ASSIGNMENTS mapping", e)
                             })
                         }
                     } catch (e) {
                         this.logger.warn("Unable to parse cookie overrides", e)
                     }
                     var o = {},
-                        s = v.parse(window.location.search);
+                        s = f.parse(window.location.search);
                     if (s.experiments) try {
                         var l = JSON.parse(s.experiments);
                         Object.keys(l).forEach(function(e) {
-                            k[e] ? o[k[e]] = l[e] : t.logger.warn("URL override experiment name is not in mapping", e)
+                            y[e] ? o[y[e]] = l[e] : t.logger.warn("URL override experiment name is not in mapping", e)
                         })
                     } catch (e) {
                         this.logger.warn("Unable to parse URL overrides", e)
                     }
-                    return h.__assign({}, n, i, o)
+                    return m.__assign({}, n, i, o)
                 }, e.prototype.determineAssignments = function(e, t, n) {
                     var i = this,
                         a = {};
-                    return Object.keys(y).forEach(function(r) {
+                    return Object.keys(b).forEach(function(r) {
                         if (e[r]) {
                             var o = e[r];
-                            1 === o.t ? a[r] = Object(f.selectTreatment)(r, o, t) : 2 === o.t && n ? a[r] = Object(f.selectTreatment)(r, o, n) : a[r] = y[r]
+                            1 === o.t ? a[r] = Object(g.selectTreatment)(r, o, t) : 2 === o.t && n ? a[r] = Object(g.selectTreatment)(r, o, n) : a[r] = b[r]
                         } else i.logger.warn("Experiment is deprecated", r)
                     }), a
                 }, e
             }(),
-            C = n("IgU9"),
-            N = n.n(C),
-            T = function() {
+            E = n("IgU9"),
+            C = n.n(E),
+            N = function() {
                 function e(e, t) {
                     this.store = e, this.logger = t.withCategory("pubsub")
                 }
                 return e.prototype.subscribe = function(e) {
                     var t = this;
-                    this.driver || (this.driver = N.a.getInstance("production"));
+                    this.driver || (this.driver = C.a.getInstance("production"));
                     var n = this.wrapMessageCallback(e.onMessage),
                         i = this.store.getState();
                     return this.driver.Listen({
@@ -13884,7 +13874,7 @@ webpackJsonp([60], {
                                 }), e.success && e.success()
                             },
                             failure: function(n) {
-                                b.a.buildType === l.a.Production ? t.logger.warn("Failed to subscribe to topic.", {
+                                v.a.buildType === c.a.Production ? t.logger.warn("Failed to subscribe to topic.", {
                                     opts: e,
                                     err: n
                                 }) : t.logger.error(new Error("Failed to subscribe to topic."), "Failed to subscribe to topic.", {
@@ -13929,7 +13919,7 @@ webpackJsonp([60], {
                     }
                 }, e
             }(),
-            O = function() {
+            T = function() {
                 function e(e) {
                     this.currentPageComponentName = "", this.buildID = e.buildID, this.endpoint = e.endpoint, this.logger = e.logger.withCategory("sentinel"), this.session = e.session, this.store = e.store, this.logger.debug("Creating instance.", {
                         buildID: e.buildID,
@@ -13937,9 +13927,9 @@ webpackJsonp([60], {
                     })
                 }
                 return e.prototype.report = function(e) {
-                    return h.__awaiter(this, void 0, void 0, function() {
+                    return m.__awaiter(this, void 0, void 0, function() {
                         var t, n, i, a;
-                        return h.__generator(this, function(r) {
+                        return m.__generator(this, function(r) {
                             switch (r.label) {
                                 case 0:
                                     t = {
@@ -13991,13 +13981,13 @@ webpackJsonp([60], {
                     this.currentPageComponentName = e
                 }, e
             }(),
-            I = n("vH/s"),
-            D = n("I9Rr"),
-            L = function() {
+            O = n("vH/s"),
+            I = n("I9Rr"),
+            D = function() {
                 function e(e, t) {
                     this.logger = e.withCategory("tmi");
                     var n = this.getConnectionOptions(t);
-                    this.disabled = n.disabled, this.logger.debug("Creating TMI client", n), this.client = new D.a({
+                    this.disabled = n.disabled, this.logger.debug("Creating TMI client", n), this.client = new I.a({
                         connection: n,
                         logger: this.logger
                     })
@@ -14011,9 +14001,9 @@ webpackJsonp([60], {
                         authToken: t
                     })
                 }, e.prototype.connect = function() {
-                    return h.__awaiter(this, void 0, void 0, function() {
+                    return m.__awaiter(this, void 0, void 0, function() {
                         var e, t;
-                        return h.__generator(this, function(n) {
+                        return m.__generator(this, function(n) {
                             switch (n.label) {
                                 case 0:
                                     if (this.disabled) return [2];
@@ -14032,9 +14022,9 @@ webpackJsonp([60], {
                         })
                     })
                 }, e.prototype.join = function(e) {
-                    return h.__awaiter(this, void 0, void 0, function() {
+                    return m.__awaiter(this, void 0, void 0, function() {
                         var t, n;
-                        return h.__generator(this, function(i) {
+                        return m.__generator(this, function(i) {
                             switch (i.label) {
                                 case 0:
                                     if (this.disabled) return [2];
@@ -14058,9 +14048,9 @@ webpackJsonp([60], {
                         })
                     })
                 }, e.prototype.part = function(e) {
-                    return h.__awaiter(this, void 0, void 0, function() {
+                    return m.__awaiter(this, void 0, void 0, function() {
                         var t, n;
-                        return h.__generator(this, function(i) {
+                        return m.__generator(this, function(i) {
                             switch (i.label) {
                                 case 0:
                                     if (!this.client.isConnected()) return this.logger.warn("Attempt to part channel, but not connected."), [2];
@@ -14083,9 +14073,9 @@ webpackJsonp([60], {
                         })
                     })
                 }, e.prototype.awaitParted = function() {
-                    return h.__awaiter(this, void 0, void 0, function() {
+                    return m.__awaiter(this, void 0, void 0, function() {
                         var e;
-                        return h.__generator(this, function(t) {
+                        return m.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
                                     return t.trys.push([0, 3, , 4]), this.pendingPart ? (this.logger.debug("Waiting for pending part operation..."), [4, this.pendingPart]) : [3, 2];
@@ -14107,8 +14097,8 @@ webpackJsonp([60], {
                         this.logger.warn("Failed to disconnect client!", e)
                     }
                 }, e.prototype.ensureConnected = function() {
-                    return h.__awaiter(this, void 0, void 0, function() {
-                        return h.__generator(this, function(e) {
+                    return m.__awaiter(this, void 0, void 0, function() {
+                        return m.__generator(this, function(e) {
                             switch (e.label) {
                                 case 0:
                                     return this.client.isConnected() ? [3, 2] : (this.logger.debug("Connection not yet established. Waiting on connect to complete..."), [4, this.connect()]);
@@ -14128,9 +14118,9 @@ webpackJsonp([60], {
                             server: e.tmiHost
                         },
                         n = this.getQueryStringOptions();
-                    return null === n ? (this.logger.debug("Using options from configuration"), t) : "false" === n.server ? h.__assign({}, t, {
+                    return null === n ? (this.logger.debug("Using options from configuration"), t) : "false" === n.server ? m.__assign({}, t, {
                         disabled: !0
-                    }) : e.buildType !== l.a.Dev ? t : {
+                    }) : e.buildType !== c.a.Dev ? t : {
                         disabled: !1,
                         secure: null !== n.secure ? n.secure : t.secure,
                         port: null !== n.port ? n.port : t.port,
@@ -14138,7 +14128,7 @@ webpackJsonp([60], {
                     }
                 }, e.prototype.getQueryStringOptions = function() {
                     try {
-                        var e = v.parse(window.location.search),
+                        var e = f.parse(window.location.search),
                             t = {
                                 server: void 0 !== e.tmi_host ? e.tmi_host : null,
                                 port: void 0 !== e.tmi_port ? +e.tmi_port : null,
@@ -14151,9 +14141,9 @@ webpackJsonp([60], {
                     return null
                 }, e
             }(),
-            x = n("BzvE"),
-            R = n("2KeS"),
-            F = new o.IntrospectionFragmentMatcher({
+            L = n("BzvE"),
+            x = n("2KeS"),
+            R = new s.IntrospectionFragmentMatcher({
                 introspectionQueryResultData: {
                     __schema: {
                         types: [{
@@ -14212,28 +14202,28 @@ webpackJsonp([60], {
                     }
                 }
             }),
-            P = n("bejq"),
-            U = "apollo_excluded_errors",
-            M = "apollo_log_errors",
-            A = function() {
+            F = n("bejq"),
+            P = "apollo_excluded_errors",
+            U = "apollo_log_errors",
+            M = function() {
                 function e(e) {
-                    this.authToken = null, this.batchID = 0, this.excludedErrors = [], this.eventEmitter = new x.EventEmitter, this.logErrors = !1, this.queryID = 0, this.config = e.config, this.logger = e.logger.withCategory("apollo"), this.store = e.store, this.session = e.session, this.excludedErrors = e.dynamicSettings.get(U, []), this.logErrors = e.dynamicSettings.get(M, !1), this.client = this.createApolloClient(), this.reduxStore = Object(R.createStore)(Object(R.combineReducers)({
+                    this.authToken = null, this.batchID = 0, this.excludedErrors = [], this.eventEmitter = new L.EventEmitter, this.logErrors = !1, this.queryID = 0, this.config = e.config, this.logger = e.logger.withCategory("apollo"), this.store = e.store, this.session = e.session, this.excludedErrors = e.dynamicSettings.get(P, []), this.logErrors = e.dynamicSettings.get(U, !1), this.client = this.createApolloClient(), this.reduxStore = Object(x.createStore)(Object(x.combineReducers)({
                         apollo: this.client.reducer()
-                    }), (e.config.buildType !== l.a.Production && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || R.compose)(Object(R.applyMiddleware)(this.client.middleware())))
+                    }), (e.config.buildType !== c.a.Production && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || x.compose)(Object(x.applyMiddleware)(this.client.middleware())))
                 }
                 return e.prototype.addQueryMetricsListener = function(e) {
                     this.eventEmitter.addListener("query-metrics", e)
                 }, e.prototype.removeQueryMetricsListener = function(e) {
                     this.eventEmitter.removeListener("query-metrics", e)
                 }, e.prototype.createApolloClient = function() {
-                    return new o.ApolloClient({
+                    return new s.ApolloClient({
                         networkInterface: this.createNetworkInterface(),
                         queryDeduplication: !0,
-                        fragmentMatcher: F
+                        fragmentMatcher: R
                     })
                 }, e.prototype.createNetworkInterface = function() {
                     var e = this,
-                        t = Object(o.createBatchingNetworkInterface)({
+                        t = Object(s.createBatchingNetworkInterface)({
                             uri: this.config.graphqlEndpoint,
                             batchInterval: 10
                         });
@@ -14250,14 +14240,14 @@ webpackJsonp([60], {
                         }
                     }]), t.useAfter([{
                         applyBatchAfterware: function(t, n) {
-                            return h.__awaiter(e, void 0, void 0, function() {
+                            return m.__awaiter(e, void 0, void 0, function() {
                                 var e, i, a, r, o, s, l, c, u, d = this;
-                                return h.__generator(this, function(p) {
+                                return m.__generator(this, function(p) {
                                     switch (p.label) {
                                         case 0:
                                             e = 0, i = t.responses, p.label = 1;
                                         case 1:
-                                            return e < i.length ? (a = i[e]).status ? 401 !== a.status ? [3, 2] : this.config.embedded ? (this.logger.warn("Received 401 response from GraphQL."), [3, 4]) : (this.logger.warn("Received 401 response from GraphQL, logging user out."), Object(P.e)(), window.location.reload(!0), [2]) : [3, 5] : [3, 6];
+                                            return e < i.length ? (a = i[e]).status ? 401 !== a.status ? [3, 2] : this.config.embedded ? (this.logger.warn("Received 401 response from GraphQL."), [3, 4]) : (this.logger.warn("Received 401 response from GraphQL, logging user out."), Object(F.e)(), window.location.reload(!0), [2]) : [3, 5] : [3, 6];
                                         case 2:
                                             return o = (r = this.logger).error, s = [new Error("Received non-200 response from GraphQL."), "Received non-200 response from GraphQL."], l = {
                                                 status: a.status
@@ -14308,9 +14298,9 @@ webpackJsonp([60], {
                     }]), t
                 }, e
             }(),
-            V = n("4ufr"),
-            j = n.n(V),
-            H = function() {
+            A = n("4ufr"),
+            V = n.n(A),
+            j = function() {
                 function e(e) {
                     var t = this;
                     this.reducers = {}, this.rootReducer = function(e, n) {
@@ -14322,7 +14312,7 @@ webpackJsonp([60], {
                                 if (void 0 === (o = t.reducers[n.name](e[n.name], {
                                         type: "@@INIT"
                                     }))) throw new Error("Reducer for key " + n.name + " returned undefined!");
-                                i = h.__assign({}, e, (s = {}, s[n.name] = o, s)), a = !0;
+                                i = m.__assign({}, e, (s = {}, s[n.name] = o, s)), a = !0;
                                 break;
                             default:
                                 for (var r in t.reducers)
@@ -14334,7 +14324,7 @@ webpackJsonp([60], {
                         }
                         return a ? i : e;
                         var s
-                    }, this.reduxStore = Object(R.createStore)(this.rootReducer, (e.buildType !== l.a.Production && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || R.compose)(Object(R.applyMiddleware)(j.a)))
+                    }, this.reduxStore = Object(x.createStore)(this.rootReducer, (e.buildType !== c.a.Production && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || x.compose)(Object(x.applyMiddleware)(V.a)))
                 }
                 return e.prototype.getReduxStore = function() {
                     return this.reduxStore
@@ -14350,7 +14340,7 @@ webpackJsonp([60], {
                     })
                 }, e
             }(),
-            B = function() {
+            H = function() {
                 function e(e, t, n) {
                     this.sniffers = e, this.trackFunc = t, this.filterFunc = n, this.startCalled = !1
                 }
@@ -14406,12 +14396,12 @@ webpackJsonp([60], {
                     return e > 0 && t > 0 ? t - e : void 0
                 }, e
             }(),
-            z = "resource",
-            W = function() {
+            B = "resource",
+            z = function() {
                 function e(e, t, n) {
                     var i = this;
-                    this.performance = t, this.frameURL = n, this.startCalled = !1, this.eventEmitter = new x.EventEmitter, this.emitterName = "network-sniffer", this.processNewResourceTimings = function() {
-                        var e = i.performance.getEntriesByType(z);
+                    this.performance = t, this.frameURL = n, this.startCalled = !1, this.eventEmitter = new L.EventEmitter, this.emitterName = "network-sniffer", this.processNewResourceTimings = function() {
+                        var e = i.performance.getEntriesByType(B);
                         if (0 !== e.length) {
                             for (var t = 0, n = e; t < n.length; t++) {
                                 var a = n[t];
@@ -14426,7 +14416,7 @@ webpackJsonp([60], {
                 }, e.prototype.getFrameTiming = function() {
                     return this.performance.timing
                 }, e.prototype.getAvailableResourceTimings = function() {
-                    return this.processNewResourceTimings(), this.performance.getEntriesByType(z)
+                    return this.processNewResourceTimings(), this.performance.getEntriesByType(B)
                 }, e.prototype.addResourceListener = function(e) {
                     this.eventEmitter.addListener(this.emitterName, e)
                 }, e.prototype.removeResourceListener = function(e) {
@@ -14439,10 +14429,10 @@ webpackJsonp([60], {
                     this.eventEmitter.emit(this.emitterName, e)
                 }, e
             }(),
-            q = function() {
+            W = function() {
                 function e(e) {
                     var t = this;
-                    this.buffer = [], this.eventEmitter = new x.EventEmitter, this.emitterName = "network-metrics", this.loggedHostWarnings = {}, this.shouldLogHosts = function(e) {
+                    this.buffer = [], this.eventEmitter = new L.EventEmitter, this.emitterName = "network-metrics", this.loggedHostWarnings = {}, this.shouldLogHosts = function(e) {
                         return function(n) {
                             var i = new URL(n),
                                 a = i.hostname,
@@ -14471,7 +14461,7 @@ webpackJsonp([60], {
                     var n = this.createSniffers();
                     n.map(function(e) {
                         t.logger.debug("Starting network sniffer"), e.start()
-                    }), this.networkLogger = new B(n, this.onRequestCompleted, this.shouldLogHosts(e.config.networkLoggingHostNames)), this.logger.debug("Starting network logger"), this.networkLogger.start()
+                    }), this.networkLogger = new H(n, this.onRequestCompleted, this.shouldLogHosts(e.config.networkLoggingHostNames)), this.logger.debug("Starting network logger"), this.networkLogger.start()
                 }
                 return e.prototype.flush = function() {
                     this.networkLogger.flush()
@@ -14507,20 +14497,20 @@ webpackJsonp([60], {
                     }
                 }, e.prototype.createSniffer = function(e) {
                     try {
-                        return new W(this.logger, e.performance, e.location.href)
+                        return new z(this.logger, e.performance, e.location.href)
                     } catch (e) {
                         this.logger.warn("Unable to create network sniffer", e)
                     }
                 }, e
             }(),
-            G = n("ZaD5"),
-            Q = n("Hvhe"),
-            K = n("ZVME"),
-            $ = function() {
+            q = n("ZaD5"),
+            G = n("Hvhe"),
+            Q = n("ZVME"),
+            K = function() {
                 function e(t, n) {
                     var i = this;
                     if (this.componentDuration = {
-                            latencyStatus: Q.a.Unknown
+                            latencyStatus: G.a.Unknown
                         }, this.isRoot = !1, this.hasReportedInteractive = !1, this.customEvents = {}, this.hasSentInitializing = !1, this.hasSentInteractive = !1, this.setLocation = function(e) {
                             i.root.setLocation(e)
                         }, this.sendInitializingEvent = function(e, t, n) {
@@ -14555,15 +14545,15 @@ webpackJsonp([60], {
                 }, e.prototype.registerCustomEvent = function(e) {
                     var t;
                     switch (e.start) {
-                        case K.d.Registration:
+                        case Q.d.Registration:
                             t = this.getCurrentTimestamp();
                             break;
                         default:
                             t = this.getRootInitTimestamp()
                     }
-                    var n = h.__assign({}, e, {
+                    var n = m.__assign({}, e, {
                         duration: {
-                            latencyStatus: Q.a.Unknown
+                            latencyStatus: G.a.Unknown
                         },
                         startTime: t
                     });
@@ -14573,7 +14563,7 @@ webpackJsonp([60], {
                 }, e.prototype.reportCustomEvent = function(e) {
                     if (!e.duration || !e.duration.value) {
                         var t = Math.round(this.getCurrentTimestamp() - e.startTime),
-                            n = t <= e.benchmark ? Q.a.Pass : Q.a.Fail;
+                            n = t <= e.benchmark ? G.a.Pass : G.a.Fail;
                         e.duration.value = t, e.duration.latencyStatus = n, this.logger.debug("[" + e.group + "][" + e.label + "] Event reported", {
                             customEvent: e
                         }), this.raiseUpdate(), this.root.sendCustomEventToSpade(e)
@@ -14604,7 +14594,7 @@ webpackJsonp([60], {
                         var e = Math.round(this.completedTimestamp - this.startTimestamp);
                         this.componentDuration = {
                             value: e,
-                            latencyStatus: Q.a.Unknown
+                            latencyStatus: G.a.Unknown
                         }, this.logger.debug("Done", {
                             componantName: this.componentName,
                             durationMs: this.componentDuration.value
@@ -14644,7 +14634,7 @@ webpackJsonp([60], {
                     var e = this.getCurrentTimestamp();
                     this.startTimestamp = e, this.relativeStartTime = this.getRelativeStartTimestamp(), this.completedTimestamp = 0, this.componentDuration = {
                         value: void 0,
-                        latencyStatus: Q.a.Unknown
+                        latencyStatus: G.a.Unknown
                     }
                 }, e.prototype.childReset = function(e) {
                     this.children.includes(e) || this.children.push(e), this.completedTimestamp ? this.logger.warn("Child component reset after this one completed", {
@@ -14661,12 +14651,12 @@ webpackJsonp([60], {
                     }), this.hasReportedInteractive && this.checkChildCompleted())
                 }, e.counter = 1, e
             }(),
-            Z = function() {
+            $ = function() {
                 function e(e, t) {
                     this.tracking = e, this.logger = t.withCategory("tracker"), this.logger.debug("Created")
                 }
                 return e.prototype.trackNetworkRequestEvent = function(e, t, n, i, a, r) {
-                    r.request_url !== this.tracking.getEndpoint() ? this.tracking.trackBenchmark(I.SpadeEventType.NetworkRequest, h.__assign({
+                    r.request_url !== this.tracking.getEndpoint() ? this.tracking.trackBenchmark(O.SpadeEventType.NetworkRequest, m.__assign({
                         is_pre_pageload: i,
                         destination: e,
                         location: t,
@@ -14675,7 +14665,7 @@ webpackJsonp([60], {
                         relative_start_time: a
                     }, r)) : this.logger.debug("Skipping Spade network request.")
                 }, e.prototype.trackCompleteTransition = function(e, t, n, i, a, r, o) {
-                    this.tracking.trackBenchmark(I.SpadeEventType.CompleteTransition, {
+                    this.tracking.trackBenchmark(O.SpadeEventType.CompleteTransition, {
                         client_time: i / 1e3,
                         lost_visibility: o,
                         destination: e,
@@ -14693,7 +14683,7 @@ webpackJsonp([60], {
                         label: e.label
                     })
                 }, e.prototype.trackAppBooted = function(e, t, n, i, a, r) {
-                    this.tracking.trackBenchmark(I.SpadeEventType.AppBooted, {
+                    this.tracking.trackBenchmark(O.SpadeEventType.AppBooted, {
                         client_time: i / 1e3,
                         lost_visibility: r,
                         destination: e,
@@ -14702,7 +14692,7 @@ webpackJsonp([60], {
                         time_from_fetch: a
                     })
                 }, e.prototype.trackInitialize = function(e, t, n, i, a, r, o, s, l, c) {
-                    this.tracking.trackBenchmark(I.SpadeEventType.ComponentInitializing, {
+                    this.tracking.trackBenchmark(O.SpadeEventType.ComponentInitializing, {
                         destination: e,
                         location: t,
                         page_component_name: n,
@@ -14715,7 +14705,7 @@ webpackJsonp([60], {
                         relative_start_time: a
                     })
                 }, e.prototype.trackInteractive = function(e, t, n, i, a, r, o, s, l, c, u, d) {
-                    this.tracking.trackBenchmark(I.SpadeEventType.ComponentInteractive, {
+                    this.tracking.trackBenchmark(O.SpadeEventType.ComponentInteractive, {
                         destination: e,
                         location: t,
                         page_component_name: n,
@@ -14731,7 +14721,7 @@ webpackJsonp([60], {
                         is_pre_pageload: l
                     })
                 }, e.prototype.trackFetchStart = function(e, t, n, i, a) {
-                    this.tracking.trackBenchmark(I.SpadeEventType.FetchStart, {
+                    this.tracking.trackBenchmark(O.SpadeEventType.FetchStart, {
                         destination: e,
                         location: t,
                         page_component_name: n,
@@ -14752,16 +14742,16 @@ webpackJsonp([60], {
                     })
                 }, e
             }(),
-            Y = function(e) {
+            Z = function(e) {
                 function t(t) {
                     var n = e.call(this, "Root", {
                         logger: t.logger.withCategory("latency-tracker")
                     }) || this;
                     if (n.rootInitDuration = {
-                            latencyStatus: Q.a.Unknown
+                            latencyStatus: G.a.Unknown
                         }, n.pageLoadDuration = {
-                            latencyStatus: Q.a.Unknown
-                        }, n.networkEvents = [], n.queryBatchMetrics = [], n.queryEvents = [], n.isFirstLoad = !0, n.isRoot = !0, n.hasLostVisibility = !1, n.emitter = new x.EventEmitter, n.getLocation = function() {
+                            latencyStatus: G.a.Unknown
+                        }, n.networkEvents = [], n.queryBatchMetrics = [], n.queryEvents = [], n.isFirstLoad = !0, n.isRoot = !0, n.hasLostVisibility = !1, n.emitter = new L.EventEmitter, n.getLocation = function() {
                             return n.location
                         }, n.setLocation = function(e) {
                             n.logger.debug("Updating location", {
@@ -14789,14 +14779,14 @@ webpackJsonp([60], {
                                 a = Math.round(e.start_time - n.getNavigationStartTimestamp());
                             n.networkEvents.push({
                                 networkEvent: e,
-                                latencyStatus: Q.a.Unknown,
+                                latencyStatus: G.a.Unknown,
                                 relativeStartTime: a,
                                 isPendingSpade: !0,
                                 isApiRequest: t,
                                 isPrePageload: i,
                                 duration: {
                                     value: e.duration,
-                                    latencyStatus: Q.a.Unknown
+                                    latencyStatus: G.a.Unknown
                                 }
                             }), n.reconcileQueries()
                         }, n.reconcileQueries = function() {
@@ -14814,7 +14804,7 @@ webpackJsonp([60], {
                                         return e.networkEvent.duration >= i.slowestQueryInBatch && e.networkEvent.start_time >= i.batchTimestamp
                                     })), a ? (i.relatedNetworkEvent = a.networkEvent, i.isPrePageload = a.isPrePageload, i.requestDuration = {
                                         value: Math.round(a.networkEvent.duration),
-                                        latencyStatus: Q.a.Unknown
+                                        latencyStatus: G.a.Unknown
                                     }) : e && n.logger.warn("Unable to find a related network event for query", {
                                         queryEvent: i,
                                         filteredApiRequests: t,
@@ -14835,7 +14825,7 @@ webpackJsonp([60], {
                                 n.queryBatchMetrics.push({
                                     batchID: e.batchID,
                                     batchTimestamp: e.batchTimestamp,
-                                    latencyStatus: Q.a.Unknown,
+                                    latencyStatus: G.a.Unknown,
                                     slowestQueryInBatch: t
                                 });
                                 for (var i = 0, a = e.queries; i < a.length; i++) {
@@ -14846,16 +14836,16 @@ webpackJsonp([60], {
                                         relativeStartTime: Math.round(e.batchTimestamp - n.getNavigationStartTimestamp()),
                                         queryDuration: {
                                             value: r.durationMs,
-                                            latencyStatus: Q.a.Unknown
+                                            latencyStatus: G.a.Unknown
                                         },
                                         requestDuration: {
-                                            latencyStatus: Q.a.Unknown
+                                            latencyStatus: G.a.Unknown
                                         },
                                         operationName: r.operationName,
                                         queryID: r.queryID,
                                         slowestQueryInBatch: t,
                                         variables: r.variables,
-                                        latencyStatus: Q.a.Unknown,
+                                        latencyStatus: G.a.Unknown,
                                         isPendingSpade: !0,
                                         isPrePageload: !1
                                     })
@@ -14893,9 +14883,9 @@ webpackJsonp([60], {
                             }
                         }, n.checkLostVisibility = function() {
                             n.hasLostVisibility || (n.hasLostVisibility = document.hidden)
-                        }, n.root = n, n.store = t.store, n.networkEventsEnabled = t.networkEventsEnabled, n.componentEventsEnabled = t.componentEventsEnabled, n.toolsEnabled = t.toolsEnabled, n.graphqlEndpoint = t.config.graphqlEndpoint, n.tracker = new Z(t.tracking, n.logger), n.navigationStart = performance.timing.navigationStart, n.rootInitDuration = {
+                        }, n.root = n, n.store = t.store, n.networkEventsEnabled = t.networkEventsEnabled, n.componentEventsEnabled = t.componentEventsEnabled, n.toolsEnabled = t.toolsEnabled, n.graphqlEndpoint = t.config.graphqlEndpoint, n.tracker = new $(t.tracking, n.logger), n.navigationStart = performance.timing.navigationStart, n.rootInitDuration = {
                             value: Math.round(n.startTimestamp - n.navigationStart),
-                            latencyStatus: Q.a.Unknown
+                            latencyStatus: G.a.Unknown
                         }, n.networkMonitor = t.networkMonitor, n.sentinel = t.sentinel, n.networkEventsEnabled && n.networkMonitor && n.networkMonitor.subscribeToUpdates(n.onNetworkRequest), n.networkEventsEnabled && t.apollo && t.apollo.addQueryMetricsListener(n.onQuery), t.trackVisibility) try {
                         n.checkLostVisibility(), document.addEventListener("visibilitychange", n.checkLostVisibility)
                     } catch (e) {
@@ -14903,19 +14893,19 @@ webpackJsonp([60], {
                     }
                     return n.raiseUpdate(), n
                 }
-                return h.__extends(t, e), t.prototype.subscribeToUpdates = function(e) {
+                return m.__extends(t, e), t.prototype.subscribeToUpdates = function(e) {
                     this.emitter.addListener("root-latency-tracker", e)
                 }, t.prototype.getCustomEvents = function() {
                     return this.customEvents
                 }, t.prototype.reset = function() {
-                    this.isFirstLoad && this.store.dispatch(Object(G.f)());
+                    this.isFirstLoad && this.store.dispatch(Object(q.f)());
                     var e = this.getCurrentTimestamp();
                     this.customEvents = {}, this.resetChildren(), this.children = [], this.startTimestamp = e, this.navigationStart = e, this.relativeStartTime = 0, this.rootInitDuration = {
-                        latencyStatus: Q.a.Unknown
+                        latencyStatus: G.a.Unknown
                     }, this.completedTimestamp = 0, this.componentDuration = {
-                        latencyStatus: Q.a.Unknown
+                        latencyStatus: G.a.Unknown
                     }, this.hasReportedInteractive = !1, this.page = void 0, this.isFirstLoad = !1, this.pageLoadDuration = {
-                        latencyStatus: Q.a.Unknown
+                        latencyStatus: G.a.Unknown
                     }, this.networkEvents = [], this.queryEvents = [], this.queryBatchMetrics = [], this.hasSentInitializing = !1, this.hasSentInteractive = !1, this.hasSentAppBooted = !1, this.hasSentCompleteTransition = !1, this.hasReportedInteractive = !1, this.hasLostVisibility = !1, this.raiseUpdate(), this.logger.debug("Reset Root")
                 }, t.prototype.raiseUpdate = function() {
                     var e = this;
@@ -14941,19 +14931,19 @@ webpackJsonp([60], {
                         if (this.page) {
                             if (this.completedTimestamp = this.getCurrentTimestamp(), this.componentDuration = {
                                     value: Math.round(this.completedTimestamp - this.startTimestamp),
-                                    latencyStatus: Q.a.Unknown
+                                    latencyStatus: G.a.Unknown
                                 }, this.logger.debug("Root tracker done", {
                                     durationMs: this.componentDuration
                                 }), this.pageLoadDuration = {
                                     value: (this.componentDuration.value || 0) + (this.rootInitDuration.value || 0),
-                                    latencyStatus: Q.a.Unknown
+                                    latencyStatus: G.a.Unknown
                                 }, this.logger.debug("Root page completed", {
                                     pageLoadDuration: this.pageLoadDuration,
                                     rootInitDuration: this.rootInitDuration,
                                     componentDuration: this.componentDuration,
                                     children: this.getChildNames()
                                 }), this.raiseUpdate(), this.sendAllEvents(), this.isFirstLoad) {
-                                this.store.dispatch(Object(G.f)());
+                                this.store.dispatch(Object(q.f)());
                                 var e = document.getElementById("root");
                                 e && e.setAttribute("data-a-page-loaded", Date.now().toString())
                             }
@@ -14961,23 +14951,23 @@ webpackJsonp([60], {
                 }, t.prototype.getNavigationStartTimestamp = function() {
                     return this.navigationStart > 0 ? this.navigationStart : performance.timing.navigationStart
                 }, t
-            }($),
-            J = "twilight.force-component-benchmarking",
-            X = "twilight.force-network-monitoring",
-            ee = "twilight.force-benchmarking-tools",
-            te = {
+            }(K),
+            Y = "twilight.force-component-benchmarking",
+            J = "twilight.force-network-monitoring",
+            X = "twilight.force-benchmarking-tools",
+            ee = {
                 networkingThreshold: "benchmark_networking_threshold",
                 componentThreshold: "benchmark_component_threshold"
             },
-            ne = function() {
+            te = function() {
                 function e(e) {
                     var t = this;
                     this.getRootLatencyTracker = function() {
                         return t.latencyTracker
                     }, this.logger = e.logger.withCategory("Benchmarking"), this.seed = Math.round(100 * Math.random()) / 100, this.storage = e.storage;
-                    var n = e.dynamicSettings.get(te.networkingThreshold, e.config.defaultNetworkLoggingThreshold),
-                        i = e.dynamicSettings.get(te.componentThreshold, e.config.defaultComponentBenchmarkingThreshold);
-                    this.toolsEnabled = this.shouldEnableTools(e.config), this.componentsEnabled = this.shouldEnableComponentBenchmarking(e.config, i, this.toolsEnabled), this.networkingEnabled = this.shouldEnableNetworkBenchmarking(e.config, n, this.componentsEnabled, this.toolsEnabled), this.networkingEnabled && (this.networkMonitoring = new q(e)), this.latencyTracker = new Y({
+                    var n = e.dynamicSettings.get(ee.networkingThreshold, e.config.defaultNetworkLoggingThreshold),
+                        i = e.dynamicSettings.get(ee.componentThreshold, e.config.defaultComponentBenchmarkingThreshold);
+                    this.toolsEnabled = this.shouldEnableTools(e.config), this.componentsEnabled = this.shouldEnableComponentBenchmarking(e.config, i, this.toolsEnabled), this.networkingEnabled = this.shouldEnableNetworkBenchmarking(e.config, n, this.componentsEnabled, this.toolsEnabled), this.networkingEnabled && (this.networkMonitoring = new W(e)), this.latencyTracker = new Z({
                         componentEventsEnabled: this.componentsEnabled,
                         networkEventsEnabled: this.networkingEnabled,
                         toolsEnabled: this.toolsEnabled,
@@ -14999,30 +14989,30 @@ webpackJsonp([60], {
                     })
                 }
                 return e.prototype.shouldEnableTools = function(e) {
-                    return e.forceComponentBenchmarking ? (this.logger.debug("Tools enabled, due to config."), !0) : !!this.storage.get(ee, !1) && (this.logger.debug("Tools enabled, due to local storage."), !0)
+                    return e.forceComponentBenchmarking ? (this.logger.debug("Tools enabled, due to config."), !0) : !!this.storage.get(X, !1) && (this.logger.debug("Tools enabled, due to local storage."), !0)
                 }, e.prototype.shouldEnableComponentBenchmarking = function(e, t, n) {
-                    return n ? (this.logger.debug("Components enabled, due to Tools being enabled"), !0) : e.forceComponentBenchmarking ? (this.logger.debug("Components enabled, due to config."), !0) : this.storage.get(X, !1) ? (this.logger.debug("Components enabled, due to local storage."), !0) : this.seed <= t && (this.logger.debug("Components enabled, due to random selection"), !0)
+                    return n ? (this.logger.debug("Components enabled, due to Tools being enabled"), !0) : e.forceComponentBenchmarking ? (this.logger.debug("Components enabled, due to config."), !0) : this.storage.get(J, !1) ? (this.logger.debug("Components enabled, due to local storage."), !0) : this.seed <= t && (this.logger.debug("Components enabled, due to random selection"), !0)
                 }, e.prototype.shouldEnableNetworkBenchmarking = function(e, t, n, i) {
-                    return n || i ? (this.logger.debug("Networking enabled, due to Components or Tools being enabled"), !0) : e.forceNetworkLogging ? (this.logger.debug("Networking enabled, due to config."), !0) : this.storage.get(J, !1) ? (this.logger.debug("Networking enabled, due to local storage."), !0) : this.seed <= t && (this.logger.debug("Networking enabled, due to random selection"), !0)
+                    return n || i ? (this.logger.debug("Networking enabled, due to Components or Tools being enabled"), !0) : e.forceNetworkLogging ? (this.logger.debug("Networking enabled, due to config."), !0) : this.storage.get(Y, !1) ? (this.logger.debug("Networking enabled, due to local storage."), !0) : this.seed <= t && (this.logger.debug("Networking enabled, due to random selection"), !0)
                 }, e
             }(),
-            ie = n("Itsn"),
-            ae = n("ciQf"),
-            re = n.n(ae),
-            oe = n("HSnN"),
-            se = n.n(oe);
+            ne = n("Itsn"),
+            ie = n("ciQf"),
+            ae = n.n(ie),
+            re = n("HSnN"),
+            oe = n.n(re);
         ! function(e) {
             e[e.Debug = 1] = "Debug", e[e.Info = 2] = "Info", e[e.Warn = 3] = "Warn", e[e.Error = 4] = "Error", e[e.Fatal = 5] = "Fatal"
-        }(_ || (_ = {}));
-        var le = function() {
+        }(S || (S = {}));
+        var se = function() {
                 function e(e, t) {
                     var n = this;
-                    if (this.eventEmitter = new x.EventEmitter, this.addMessageListener = function(e) {
+                    if (this.eventEmitter = new L.EventEmitter, this.addMessageListener = function(e) {
                             n.eventEmitter.addListener("message", e)
                         }, this.removeMessageListener = function(e) {
                             n.eventEmitter.removeListener("message", e)
                         }, this.onWindowError = function(e) {
-                            e.error ? (e.preventDefault(), n.write(_.Error, "Uncaught error.", void 0, e.error, "uncaught")) : n.write(_.Warn, "Uncaught error, but the error object is null. This is usually caused by a browser permission issue. Please check the browser console.", [{
+                            e.error ? (e.preventDefault(), n.write(S.Error, "Uncaught error.", void 0, e.error, "uncaught")) : n.write(S.Warn, "Uncaught error, but the error object is null. This is usually caused by a browser permission issue. Please check the browser console.", [{
                                 event: e
                             }], new Error("Uncaught error, but the error object is null."), "uncaught")
                         }, e && t) throw new Error("Cannot pass both `options` and `childOptions` arguments.");
@@ -15038,25 +15028,25 @@ webpackJsonp([60], {
                     })
                 }, e.prototype.debug = function(e) {
                     for (var t = [], n = 1; n < arguments.length; n++) t[n - 1] = arguments[n];
-                    this.write(_.Debug, e, t)
+                    this.write(S.Debug, e, t)
                 }, e.prototype.info = function(e) {
                     for (var t = [], n = 1; n < arguments.length; n++) t[n - 1] = arguments[n];
-                    this.write(_.Info, e, t)
+                    this.write(S.Info, e, t)
                 }, e.prototype.warn = function(e) {
                     for (var t = [], n = 1; n < arguments.length; n++) t[n - 1] = arguments[n];
-                    this.write(_.Warn, e, t)
+                    this.write(S.Warn, e, t)
                 }, e.prototype.error = function(e, t) {
                     for (var n = [], i = 2; i < arguments.length; i++) n[i - 2] = arguments[i];
-                    this.write(_.Error, t, n, e, "caught")
+                    this.write(S.Error, t, n, e, "caught")
                 }, e.prototype.fatal = function(e, t) {
                     for (var n = [], i = 2; i < arguments.length; i++) n[i - 2] = arguments[i];
-                    this.write(_.Fatal, t, n, e, "fatal")
+                    this.write(S.Fatal, t, n, e, "fatal")
                 }, e.prototype.flush = function() {
                     if (this.rootLogger) throw new Error("Cannot flush a child logger.");
                     var e = this.buffer;
                     return this.buffer = [], this.messagesTruncated && e.unshift({
                         time: e[0].time - 1,
-                        level: _[_.Info].toLowerCase(),
+                        level: S[S.Info].toLowerCase(),
                         message: "Log truncated.",
                         args: [{
                             firstMessageTime: this.firstMessageTime,
@@ -15065,16 +15055,16 @@ webpackJsonp([60], {
                         }]
                     }), e
                 }, e.prototype.write = function(e, t, n, i, a, r, o) {
-                    void 0 === n && (n = []), void 0 === o && (o = !1), this.rootLogger ? this.rootLogger.write(e, t, n, i, a, this.category, o) : (this.buffer.length === this.maxBufferSize && (this.firstMessageTime || (this.firstMessageTime = this.buffer[0].time), this.truncationEvents = (this.truncationEvents || 0) + 1, this.messagesTruncated = (this.messagesTruncated || 0) + this.buffer.splice(0, Math.ceil(this.maxBufferSize / 10)).length), r = r || this.category, e >= this.minConsoleLogLevel && this.writeToConsole(e, r, t, n, i), e !== _.Debug && this.writeToBuffer(e, r, t, n, i, a, o), !this.onError || e !== _.Error && e !== _.Fatal || this.onError(this))
+                    void 0 === n && (n = []), void 0 === o && (o = !1), this.rootLogger ? this.rootLogger.write(e, t, n, i, a, this.category, o) : (this.buffer.length === this.maxBufferSize && (this.firstMessageTime || (this.firstMessageTime = this.buffer[0].time), this.truncationEvents = (this.truncationEvents || 0) + 1, this.messagesTruncated = (this.messagesTruncated || 0) + this.buffer.splice(0, Math.ceil(this.maxBufferSize / 10)).length), r = r || this.category, e >= this.minConsoleLogLevel && this.writeToConsole(e, r, t, n, i), e !== S.Debug && this.writeToBuffer(e, r, t, n, i, a, o), !this.onError || e !== S.Error && e !== S.Fatal || this.onError(this))
                 }, e.prototype.writeToBuffer = function(e, t, n, i, a, r, o) {
                     void 0 === o && (o = !1);
                     var s = [],
-                        c = {
+                        l = {
                             time: Date.now(),
-                            level: _[e].toLowerCase(),
+                            level: S[e].toLowerCase(),
                             message: n
                         };
-                    if (i && i.length > 0 && (c.args = i.map(function(e, t) {
+                    if (i && i.length > 0 && (l.args = i.map(function(e, t) {
                             if (e instanceof Error) return {
                                 name: e.name,
                                 message: e.message,
@@ -15090,36 +15080,36 @@ webpackJsonp([60], {
                                 }), "<unserializable>"
                             } else if ("function" == typeof e) return e.name ? "<function " + e.name + ">" : "<anonymous function>";
                             return e
-                        })), t && (c.category = t), a && (c.errors = [{
+                        })), t && (l.category = t), a && (l.errors = [{
                             name: a.name,
                             message: a.message,
                             stack: a.stack || null,
                             type: r || "caught"
-                        }]), this.buffer.push(c), !o)
+                        }]), this.buffer.push(l), !o)
                         for (var u = 0, d = s; u < d.length; u++) {
                             var p = d[u];
-                            this.buildType === l.a.Production ? this.write(_.Warn, "Failed to serialize argument for log message.", [{
+                            this.buildType === c.a.Production ? this.write(S.Warn, "Failed to serialize argument for log message.", [{
                                 message: p.message,
                                 argIndex: p.argIndex,
                                 err: p.err
-                            }], void 0, void 0, void 0, !0) : this.write(_.Error, "Failed to serialize argument for log message.", [{
+                            }], void 0, void 0, void 0, !0) : this.write(S.Error, "Failed to serialize argument for log message.", [{
                                 message: p.message,
                                 argIndex: p.argIndex
                             }], p.err, "caught", t, !0)
                         }
-                    this.eventEmitter.emit("message", c)
+                    this.eventEmitter.emit("message", l)
                 }, e.prototype.writeToConsole = function(e, t, n, i, a) {
                     var r = (new Date).toLocaleTimeString();
-                    t = t ? "[" + t + "] " : "", n = r + " [" + _[e].toUpperCase() + "] " + t + n, e === _.Fatal && (e = _.Error);
-                    var o = (console[_[e].toLowerCase()] || console.log).bind(console);
+                    t = t ? "[" + t + "] " : "", n = r + " [" + S[e].toUpperCase() + "] " + t + n, e === S.Fatal && (e = S.Error);
+                    var o = (console[S[e].toLowerCase()] || console.log).bind(console);
                     a ? o.apply(void 0, [n, a].concat(i)) : o.apply(void 0, [n].concat(i))
                 }, e
             }(),
-            ce = n("HM6l"),
-            ue = n("o/qv"),
-            de = "session_storage_unique_id",
-            pe = "local_storage_device_id",
-            me = function() {
+            le = n("HM6l"),
+            ce = n("o/qv"),
+            ue = "session_storage_unique_id",
+            de = "local_storage_device_id",
+            pe = function() {
                 function e(e) {
                     var t = this;
                     this.onHistoryChange = function() {
@@ -15127,25 +15117,25 @@ webpackJsonp([60], {
                     }, this.storage = e.storage, this.tempStorage = e.tempStorage, this.benchmarkID = this.getOrCreateBenchmarkSessionID(), this.deviceID = this.getOrCreateDeviceID(), this.localStorageDeviceID = this.getOrCreateLocalStorageDeviceID(), this.pageviewID = this.getUniqueID(), this.tabID = this.getOrCreateSessionStorageUniqueID(), e.history.listen(this.onHistoryChange)
                 }
                 return e.prototype.getUniqueID = function() {
-                    return Object(ce.b)().substring(0, 16)
+                    return Object(le.b)().substring(0, 16)
                 }, e.prototype.getOrCreateDeviceID = function() {
-                    var e = g.get("unique_id");
-                    return e || (e = Object(ce.b)().substring(0, 16), g.set("unique_id", e, {
+                    var e = h.get("unique_id");
+                    return e || (e = Object(le.b)().substring(0, 16), h.set("unique_id", e, {
                         expires: 3650,
-                        domain: Object(ue.a)(),
+                        domain: Object(ce.a)(),
                         secure: "https:" === window.location.protocol
                     }), e)
                 }, e.prototype.getOrCreateBenchmarkSessionID = function() {
-                    return g.get("twilight.automation_session_id") || Object(ce.b)().substring(0, 16)
+                    return h.get("twilight.automation_session_id") || Object(le.b)().substring(0, 16)
                 }, e.prototype.getOrCreateSessionStorageUniqueID = function() {
-                    var e = this.tempStorage.get(de, "");
-                    return e || (e = Object(ce.b)().substring(0, 16), this.tempStorage.set(de, e), e)
+                    var e = this.tempStorage.get(ue, "");
+                    return e || (e = Object(le.b)().substring(0, 16), this.tempStorage.set(ue, e), e)
                 }, e.prototype.getOrCreateLocalStorageDeviceID = function() {
-                    var e = this.storage.get(pe, "");
-                    return e || (e = Object(ce.b)().substring(0, 16), this.storage.set(pe, e), e)
+                    var e = this.storage.get(de, "");
+                    return e || (e = Object(le.b)().substring(0, 16), this.storage.set(de, e), e)
                 }, e
             }(),
-            he = function() {
+            me = function() {
                 function e(e, t) {
                     this.cache = {}, this.storage = e, this.logger = t
                 }
@@ -15207,43 +15197,43 @@ webpackJsonp([60], {
                     }
                 }, e
             }(),
-            ge = n("MkXM");
+            he = n("MkXM");
         n.d(t, "o", function() {
-            return fe
+            return ge
         }), n.d(t, "a", function() {
-            return ve
+            return fe
         }), n.d(t, "b", function() {
-            return be
+            return ve
         }), n.d(t, "c", function() {
-            return ye
+            return be
         }), n.d(t, "d", function() {
-            return ke
+            return ye
         }), n.d(t, "e", function() {
-            return Se
+            return ke
         }), n.d(t, "f", function() {
-            return _e
+            return Se
         }), n.d(t, "g", function() {
-            return we
+            return _e
         }), n.d(t, "h", function() {
-            return Ee
+            return we
         }), n.d(t, "j", function() {
-            return Ce
+            return Ee
         }), n.d(t, "k", function() {
-            return Ne
+            return Ce
         }), n.d(t, "l", function() {
-            return Te
+            return Ne
         }), n.d(t, "m", function() {
-            return Oe
+            return Te
         }), n.d(t, "n", function() {
-            return Ie
+            return Oe
         }), t.i = function(e) {
-            fe = new De(e), ve = fe.config, be = fe.dynamicSettings, ye = fe.intl.formatDate, ke = fe.intl.formatMessage, Se = fe.intl.formatNumber, _e = fe.intl.formatNumberShort, we = fe.intl.formatRelativeDate, Ee = fe.intl.formatTime, Ce = fe.logger, Ne = fe.pubsub, Te = fe.storage, Oe = fe.tempStorage, Ie = fe.tracking
+            ge = new Ie(e), fe = ge.config, ve = ge.dynamicSettings, be = ge.intl.formatDate, ye = ge.intl.formatMessage, ke = ge.intl.formatNumber, Se = ge.intl.formatNumberShort, _e = ge.intl.formatRelativeDate, we = ge.intl.formatTime, Ee = ge.logger, Ce = ge.pubsub, Ne = ge.storage, Te = ge.tempStorage, Oe = ge.tracking
         };
-        var fe, ve, be, ye, ke, Se, _e, we, Ee, Ce, Ne, Te, Oe, Ie, De = function() {
+        var ge, fe, ve, be, ye, ke, Se, _e, we, Ee, Ce, Ne, Te, Oe, Ie = function() {
             function e(e) {
                 var t = this;
-                this.dynamicSettings = new ie.a, this.history = function(e) {
-                    var t = e ? se()() : re()(),
+                this.dynamicSettings = new ne.a, this.history = function(e) {
+                    var t = e ? oe()() : ae()(),
                         n = t.push.bind(t),
                         i = /^([^#?]+)?(\?[^#]+)?(\#.+)?$/i;
                     return t.push = function(e, a) {
@@ -15257,8 +15247,8 @@ webpackJsonp([60], {
                         } else e.pathname && (r = e.pathname), e.search && ((o = e.search).startsWith("?") || (o = "?" + o)), e.hash && ((s = e.hash).startsWith("#") || (s = "#" + s));
                         (r === t.location.pathname || !r.startsWith("/") && t.location.pathname.endsWith("/" + r)) && o === t.location.search && s === t.location.hash ? t.replace(e, a) : n(e, a)
                     }, t
-                }(), this.pageTitle = "Twitch", this.config = e, this.store = new H(this.config);
-                var n = this.config.buildType === l.a.Production ? _.Error : _.Debug;
+                }(), this.pageTitle = "Twitch", this.config = e, this.store = new j(this.config);
+                var n = this.config.buildType === c.a.Production ? S.Error : S.Debug;
                 try {
                     var i = localStorage.getItem(this.config.forceMinConsoleLogLevelKey);
                     null !== i && (n = Number(i))
@@ -15268,15 +15258,15 @@ webpackJsonp([60], {
                         key: this.config.forceMinConsoleLogLevelKey
                     })
                 }
-                this.logger = new le({
+                this.logger = new se({
                     minConsoleLogLevel: n,
                     maxBufferSize: 1e3,
                     buildType: this.config.buildType
-                }), this.logger.addWindowErrorListener(), this.storage = new he(localStorage, this.logger.withCategory("storage")), this.tempStorage = new he(sessionStorage, this.logger.withCategory("tempStorage")), this.session = new me({
+                }), this.logger.addWindowErrorListener(), this.storage = new me(localStorage, this.logger.withCategory("storage")), this.tempStorage = new me(sessionStorage, this.logger.withCategory("tempStorage")), this.session = new pe({
                     history: this.history,
                     storage: this.storage,
                     tempStorage: this.tempStorage
-                }), this.config.embedded || (this.sentinel = new O({
+                }), this.config.embedded || (this.sentinel = new T({
                     buildID: e.buildID,
                     endpoint: e.sentinelEndpoint,
                     logger: this.logger,
@@ -15284,28 +15274,23 @@ webpackJsonp([60], {
                     store: this.store
                 }), this.logger.onError = function(e) {
                     t.sentinel.report(e.flush())
-                }), this.adBlockSentinel = new m({
-                    accountID: e.adblockAccount,
-                    cid: e.adblockID,
+                }), this.adBlockDetector = new p({
                     logger: this.logger
-                }), this.adBlockDetector = new d({
-                    logger: this.logger
-                }), this.adBlockDetector.addTwitchGlobal(), this.adBlockDetector.detectAdBlock(), this.apollo = new A({
+                }), this.adBlockDetector.addTwitchGlobal(), this.adBlockDetector.detectAdBlock(), this.apollo = new M({
                     config: this.config,
                     dynamicSettings: this.dynamicSettings,
                     logger: this.logger,
                     session: this.session,
                     store: this.store
-                }), this.tracking = new I.Spade({
+                }), this.tracking = new O.Spade({
                     apollo: this.apollo,
                     config: this.config,
                     endpoint: this.dynamicSettings.get("spade_url", e.defaultSpadeEndpoint),
                     logger: this.logger,
                     session: this.session,
                     store: this.store,
-                    adBlockSentinel: this.adBlockSentinel,
                     adBlockDetector: this.adBlockDetector
-                }), this.pubsub = new T(this.store, this.logger), this.intl = new ge.TwilightIntl(e.locales), this.config.embedded || (this.benchmarking = new ne({
+                }), this.pubsub = new N(this.store, this.logger), this.intl = new he.TwilightIntl(e.locales), this.config.embedded || (this.benchmarking = new te({
                     apollo: this.apollo,
                     config: this.config,
                     dynamicSettings: this.dynamicSettings,
@@ -15316,18 +15301,18 @@ webpackJsonp([60], {
                     store: this.store,
                     tracking: this.tracking,
                     window: window
-                })), this.experiments = new E({
+                })), this.experiments = new w({
                     logger: this.logger,
                     session: this.session,
                     store: this.store,
                     storage: this.storage,
                     tracking: this.tracking
-                }), this.tmi = new L(this.logger, this.config)
+                }), this.tmi = new D(this.logger, this.config)
             }
             return e.prototype.mount = function(e, t) {
-                s.render(this.wrap(e), t)
+                l.render(this.wrap(e), t)
             }, e.prototype.wrap = function(e) {
-                return r.createElement(o.ApolloProvider, {
+                return o.createElement(s.ApolloProvider, {
                     store: this.store.getReduxStore(),
                     client: this.apollo.client
                 }, e)
@@ -17878,14 +17863,18 @@ webpackJsonp([60], {
                 }, t.prototype.render = function() {
                     var e = null,
                         t = Object(s.d)("Select One...", "ReportUserModal");
-                    return e = this.props.data.loading ? [r.createElement("option", {
+                    if (this.props.data.loading) e = [r.createElement("option", {
                         key: "Loading"
-                    }, Object(s.d)("Loading...", "ReportReasonsSelect"))] : Object(u.b)(this.props.data.reportReasons).map(function(e) {
-                        return r.createElement("option", {
-                            key: e.canonical,
-                            value: e.canonical
-                        }, e.localized)
-                    }), r.createElement(d.V, {
+                    }, Object(s.d)("Loading...", "ReportReasonsSelect"))];
+                    else {
+                        e = (this.props.data.reportReasons || Object(u.b)()).map(function(e) {
+                            return r.createElement("option", {
+                                key: e.id,
+                                value: e.id
+                            }, e.text)
+                        })
+                    }
+                    return r.createElement(d.V, {
                         margin: {
                             bottom: 2
                         }
@@ -25856,7 +25845,7 @@ webpackJsonp([60], {
                         })
                     }, this.onWindowUnload = function() {
                         t.logger.debug("Unload triggered."), t.sendEvents(!0)
-                    }, this.logger = e.logger.withCategory("spade"), this.transmitLogger = this.logger.withCategory("transmitter"), this.endpoint = e.endpoint, this.session = e.session, this.apollo = e.apollo, this.config = e.config, this.store = e.store, this.adBlockSentinel = e.adBlockSentinel, this.adBlockDetector = e.adBlockDetector, this.logger.debug("Creating instance.", {
+                    }, this.logger = e.logger.withCategory("spade"), this.transmitLogger = this.logger.withCategory("transmitter"), this.endpoint = e.endpoint, this.session = e.session, this.apollo = e.apollo, this.config = e.config, this.store = e.store, this.adBlockDetector = e.adBlockDetector, this.logger.debug("Creating instance.", {
                         endpoint: this.endpoint,
                         sessionID: this.session.benchmarkID
                     }), window.addEventListener("unload", this.onWindowUnload)
@@ -25883,7 +25872,6 @@ webpackJsonp([60], {
                             page_session_id: this.session.pageviewID,
                             referrer: this.lastLocationURL ? this.lastLocationURL.href : document.referrer,
                             referrer_domain: this.lastLocationURL ? this.lastLocationURL.hostname : this.getCurrentReferrerURL().hostname,
-                            sentinel_ab: this.adBlockSentinel.detect,
                             session_device_id: this.session.deviceID,
                             tab_session_id: this.session.tabID,
                             viewport_height: window.innerHeight,
@@ -36398,7 +36386,7 @@ webpackJsonp([60], {
                         loader: function() {
                             return n.e(9).then(n.bind(null, "TkpZ"))
                         }
-                    }], this.passportAuthURL = "https://api.twitch.tv/kraken/oauth2/authorize", this.passportScopes = ["chat_login", "user_read", "user_subscriptions", "user_presence_friends_read"], this.defaultAvatarURL = "https://static-cdn.jtvnw.net/jtv_user_pictures/xarth/404_user_70x70.png", this.defaultStreamPreviewURL = "https://static-cdn.jtvnw.net/ttv-static/404_preview-160x90.jpg", this.defaultBoxArtURL = "https://static-cdn.jtvnw.net/ttv-boxart/404_boxart.png", this.defaultCollectionPreviewURL = "https://static-cdn.jtvnw.net/ttv-playlists-thumbnails-prod/missing-video-thumb-320x180.png", this.hostingCacheDelay = 2001, this.legacyClientID = "jzkbprff40iqj646a697cyrvl0zt2m6", this.algoliaApplicationID = "XLUO134HOR", this.algoliaAPIKey = "d157112f6fc2cab93ce4b01227c80a6d", this.forceNetworkLogging = !1, this.networkLoggingHostNames = ["twitch.tv", "localhost", "jtvnw.net", "twitchcdn.net", "twitchcdn.tech", "twitchcdn-shadow.net", "twitchsvc.net", "twitchsvc.tech", "twitchsvc-shadow.net"], this.defaultNetworkLoggingThreshold = .2, this.layoutCacheKey = "TwitchCache:Layout", this.forceComponentBenchmarking = !1, this.defaultComponentBenchmarkingThreshold = .1, this.forceBenchmarkingTools = !1, this.dfpNetworkCode = "3576121", this.krakenEndpoint = "https://api.twitch.tv/kraken", this.defaultAPIVersion = "5", this.adblockAccount = 58, this.adblockID = "qFEaZsFQnwEdUIs", this.forceMinConsoleLogLevelKey = "twilight.minConsoleLogLevel", this.tryPrimeURI = "https://twitch.amazon.com/prime", this.experimentsOverrideCookie = "experiment_overrides", this.tmiHost = "irc-ws.chat.twitch.tv", this.persistentPlayerEnabledKey = "persistenceEnabled", this.manifestURL = "https://static.twitchcdn.net/config/manifest.json", this.cdnURL = "https://static.twitchcdn.net/"
+                    }], this.passportAuthURL = "https://api.twitch.tv/kraken/oauth2/authorize", this.passportScopes = ["chat_login", "user_read", "user_subscriptions", "user_presence_friends_read"], this.defaultAvatarURL = "https://static-cdn.jtvnw.net/jtv_user_pictures/xarth/404_user_70x70.png", this.defaultStreamPreviewURL = "https://static-cdn.jtvnw.net/ttv-static/404_preview-160x90.jpg", this.defaultBoxArtURL = "https://static-cdn.jtvnw.net/ttv-boxart/404_boxart.png", this.defaultCollectionPreviewURL = "https://static-cdn.jtvnw.net/ttv-playlists-thumbnails-prod/missing-video-thumb-320x180.png", this.hostingCacheDelay = 2001, this.legacyClientID = "jzkbprff40iqj646a697cyrvl0zt2m6", this.algoliaApplicationID = "XLUO134HOR", this.algoliaAPIKey = "d157112f6fc2cab93ce4b01227c80a6d", this.forceNetworkLogging = !1, this.networkLoggingHostNames = ["twitch.tv", "localhost", "jtvnw.net", "twitchcdn.net", "twitchcdn.tech", "twitchcdn-shadow.net", "twitchsvc.net", "twitchsvc.tech", "twitchsvc-shadow.net"], this.defaultNetworkLoggingThreshold = .2, this.layoutCacheKey = "TwitchCache:Layout", this.forceComponentBenchmarking = !1, this.defaultComponentBenchmarkingThreshold = .1, this.forceBenchmarkingTools = !1, this.dfpNetworkCode = "3576121", this.krakenEndpoint = "https://api.twitch.tv/kraken", this.defaultAPIVersion = "5", this.adblockAccount = 58, this.forceMinConsoleLogLevelKey = "twilight.minConsoleLogLevel", this.tryPrimeURI = "https://twitch.amazon.com/prime", this.experimentsOverrideCookie = "experiment_overrides", this.tmiHost = "irc-ws.chat.twitch.tv", this.persistentPlayerEnabledKey = "persistenceEnabled", this.manifestURL = "https://static.twitchcdn.net/config/manifest.json", this.cdnURL = "https://static.twitchcdn.net/"
                 }
             }()),
             d = n("J4ib");
@@ -40167,6 +40155,16 @@ webpackJsonp([60], {
                                 arguments: [],
                                 directives: [],
                                 selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "text"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
                             }]
                         }
                     }]
@@ -40174,11 +40172,11 @@ webpackJsonp([60], {
             }],
             loc: {
                 start: 0,
-                end: 109
+                end: 114
             }
         };
         n.loc.source = {
-            body: "query ReportUserModal_ReportReasons($content: ReportContentType!) {\nreportReasons(content: $content) {\nid\n}\n}",
+            body: "query ReportUserModal_ReportReasons($content: ReportContentType!) {\nreportReasons(content: $content) {\nid\ntext\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -40244,85 +40242,17 @@ webpackJsonp([60], {
     xwpJ: function(e, t, n) {
         "use strict";
 
-        function i(e) {
-            if (e) {
-                var t = e.map(function(e) {
-                    return e.id
-                });
-                return o().filter(function(e) {
-                    return t.includes(e.canonical)
-                })
-            }
-            return o()
+        function i() {
+            return [{
+                id: "other",
+                text: Object(r.d)("Other Terms of Service Violation", "ReportUserModal")
+            }]
         }
         var a = function(e, t) {
                 var n = "https://www.twitch.tv/communities/{communityName}".replace("{communityName}", e);
                 return 'community report (<a href="{link}">{link}</a>) {description}'.replace(/{link}/g, n).replace(/{description}/, t)
             },
-            r = n("6sO2"),
-            o = function() {
-                return [{
-                    localized: Object(r.d)("Site Suspension Evasion", "ReportUserModal"),
-                    canonical: "tos_ban_evasion"
-                }, {
-                    localized: Object(r.d)("Chat Ban Evasion", "ReportUserModal"),
-                    canonical: "chat_ban_evasion"
-                }, {
-                    localized: Object(r.d)("Self-Harm", "ReportUserModal"),
-                    canonical: "selfharm"
-                }, {
-                    localized: Object(r.d)("Attempts or Threats to Harm", "ReportUserModal"),
-                    canonical: "harm"
-                }, {
-                    localized: Object(r.d)("Harassment", "ReportUserModal"),
-                    canonical: "harassment"
-                }, {
-                    localized: Object(r.d)("Hate Speech", "ReportUserModal"),
-                    canonical: "hate_speech"
-                }, {
-                    localized: Object(r.d)("Offensive Username", "ReportUserModal"),
-                    canonical: "offensive_username"
-                }, {
-                    localized: Object(r.d)("Impersonation", "ReportUserModal"),
-                    canonical: "impersonation"
-                }, {
-                    localized: Object(r.d)("Spam, Scams, or Other Malicious Content", "ReportUserModal"),
-                    canonical: "spam"
-                }, {
-                    localized: Object(r.d)("Porn or Other Sexually Explicit Content", "ReportUserModal"),
-                    canonical: "porn"
-                }, {
-                    localized: Object(r.d)("Nudity or Sexual Behavior/Attire", "ReportUserModal"),
-                    canonical: "nudity"
-                }, {
-                    localized: Object(r.d)("Extreme Violence, Gore, or Other Obscene Content", "ReportUserModal"),
-                    canonical: "gore"
-                }, {
-                    localized: Object(r.d)("Underaged User", "ReportUserModal"),
-                    canonical: "underaged"
-                }, {
-                    localized: Object(r.d)("Cheating in Online Game", "ReportUserModal"),
-                    canonical: "cheating"
-                }, {
-                    localized: Object(r.d)("Prohibited Game", "ReportUserModal"),
-                    canonical: "prohibited"
-                }, {
-                    localized: Object(r.d)("Miscategorized Content or Other Category Violation", "ReportUserModal"),
-                    canonical: "miscategorized"
-                }, {
-                    localized: Object(r.d)("Community Rules Violation", "ReportUserModal"),
-                    canonical: "community_rules_violation"
-                }, {
-                    localized: Object(r.d)("Community is Violating Terms of Service", "ReportUserModal"),
-                    canonical: "community_tos_violation"
-                }, {
-                    localized: Object(r.d)("Bits Acceptable Use Policy Violation", "ReportUserModal"),
-                    canonical: "bits_violation"
-                }, {
-                    localized: Object(r.d)("Other Terms of Service Violation", "ReportUserModal"),
-                    canonical: "other"
-                }]
-            };
+            r = n("6sO2");
         n.d(t, "a", function() {
             return a
         }), n.d(t, "b", function() {
@@ -40793,4 +40723,4 @@ webpackJsonp([60], {
         }
     }
 }, [4]);
-//# sourceMappingURL=core-72cdc926f5663adb7eec54375e719345.js.map
+//# sourceMappingURL=core-949dbd5b8fe9d332032d218d780043b4.js.map

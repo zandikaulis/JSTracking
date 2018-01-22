@@ -329,7 +329,7 @@ webpackJsonp([65], {
                         var a = n.call(this, t) || this;
                         return a.tracked = !1, a.referenceTracking = {}, a.trackPageview = function() {
                             if (!(a.tracked || e.skip && e.skip(a.props))) {
-                                a.tracked = !0, l.n.adBlockSentinel.pageTransition();
+                                a.tracked = !0;
                                 var t = {};
                                 "function" == typeof e.properties ? t = e.properties(a.props) : e.properties && (t = r.__assign({}, e.properties));
                                 var n = r.__assign({}, a.props);
@@ -412,8 +412,8 @@ webpackJsonp([65], {
             v = n("7vx8"),
             S = n("oIkB"),
             k = n("F8kA"),
-            w = n("Odds"),
-            C = (n("1KsR"), function(e) {
+            C = n("Odds"),
+            w = (n("1KsR"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {}, t.handleClick = function() {
@@ -428,12 +428,12 @@ webpackJsonp([65], {
                         className: "followed-channel-link",
                         to: "/subs/" + this.props.followedChannel.login,
                         onClick: this.handleClick
-                    }, s.createElement(w.V, {
-                        textAlign: w._24.Center,
+                    }, s.createElement(C.V, {
+                        textAlign: C._24.Center,
                         padding: {
                             bottom: 1
                         }
-                    }, s.createElement(w.Q, {
+                    }, s.createElement(C.Q, {
                         margin: {
                             bottom: 1
                         }
@@ -441,14 +441,14 @@ webpackJsonp([65], {
                         className: "followed-channel-link__avatar",
                         src: e,
                         alt: this.props.followedChannel.displayName
-                    })), s.createElement(w.Q, {
+                    })), s.createElement(C.Q, {
                         margin: {
                             top: 0,
                             bottom: 1
                         }
-                    }, s.createElement(w._23, {
+                    }, s.createElement(C._23, {
                         className: "followed-channel-link__name",
-                        color: w.F.Link,
+                        color: C.F.Link,
                         ellipsis: !0,
                         noWrap: !0
                     }, this.props.followedChannel.displayName))))
@@ -470,18 +470,18 @@ webpackJsonp([65], {
                     }, t.onLoginClick = function(e) {
                         e.preventDefault(), t.props.login()
                     }, t.getFollowedChannels = function() {
-                        if (t.props.data.loading || t.props.data.error) return [s.createElement(w._3, {
+                        if (t.props.data.loading || t.props.data.error) return [s.createElement(C._3, {
                             key: "followed-channels-placeholder-1",
                             height: 96
                         })];
                         var e = t.state.followedChannels.map(function(e) {
-                            return s.createElement(C, {
+                            return s.createElement(w, {
                                 key: "followed-channel-link-" + e.id,
                                 followedChannel: e,
                                 onClick: t.onFollowClick
                             })
                         });
-                        return e.length < 1 ? [s.createElement(w._23, {
+                        return e.length < 1 ? [s.createElement(C._23, {
                             key: "followed-channels_empty"
                         }, t.messages.emptyFollows)] : e
                     }, t.onFollowClick = function(e, n) {
@@ -493,12 +493,12 @@ webpackJsonp([65], {
                             clickthroughLocation: "followed"
                         })
                     }, t.getShowMore = function() {
-                        return t.props.data.loading || t.props.data.error || !t.props.data.currentUser.follows.pageInfo || !t.props.data.currentUser.follows.pageInfo.hasNextPage ? null : s.createElement(w.V, {
+                        return t.props.data.loading || t.props.data.error || !t.props.data.currentUser.follows.pageInfo || !t.props.data.currentUser.follows.pageInfo.hasNextPage ? null : s.createElement(C.V, {
                             className: "subs-landing-followed-channels__show-more",
                             margin: {
                                 top: 1
                             }
-                        }, s.createElement(w.u, {
+                        }, s.createElement(C.u, {
                             fullWidth: !0,
                             onClick: t.onShowMore
                         }, t.messages.showMore))
@@ -516,34 +516,34 @@ webpackJsonp([65], {
                         })
                     }
                 }, t.prototype.render = function() {
-                    return this.props.isLoggedIn ? s.createElement(w.V, {
+                    return this.props.isLoggedIn ? s.createElement(C.V, {
                         className: "subs-landing-followed-channels",
-                        display: w.H.Flex,
-                        alignItems: w.c.Center,
-                        flexDirection: w.J.Column,
+                        display: C.H.Flex,
+                        alignItems: C.c.Center,
+                        flexDirection: C.J.Column,
                         fullWidth: !0
-                    }, s.createElement(w.Q, {
+                    }, s.createElement(C.Q, {
                         margin: {
                             top: 3,
                             bottom: 2
                         }
-                    }, s.createElement(w._23, {
-                        type: w._28.H3,
-                        color: w.F.Link,
+                    }, s.createElement(C._23, {
+                        type: C._28.H3,
+                        color: C.F.Link,
                         bold: !0,
                         className: "subs-landing-followed-channels__title"
-                    }, this.messages.title)), s.createElement(w._34, {
+                    }, this.messages.title)), s.createElement(C._34, {
                         center: !0,
-                        gutterSize: w._36.Small
-                    }, this.getFollowedChannels()), this.getShowMore()) : s.createElement(w.V, {
-                        textAlign: w._24.Center,
+                        gutterSize: C._36.Small
+                    }, this.getFollowedChannels()), this.getShowMore()) : s.createElement(C.V, {
+                        textAlign: C._24.Center,
                         margin: {
                             top: 3
                         }
-                    }, s.createElement(w.u, {
+                    }, s.createElement(C.u, {
                         onClick: this.onLoginClick,
                         "data-a-target": "login-button"
-                    }, this.messages.login), s.createElement(w._23, null, this.messages.loginTitle))
+                    }, this.messages.login), s.createElement(C._23, null, this.messages.loginTitle))
                 }, t = r.__decorate([Object(v.a)(x, {
                     options: function() {
                         return {
@@ -589,8 +589,8 @@ webpackJsonp([65], {
                 }, e)
             })(N),
             F = n("6BvN"),
-            L = n("HM6l"),
-            D = n("5LoI"),
+            D = n("HM6l"),
+            L = n("5LoI"),
             P = n("MAZT"),
             T = n("uTyw"),
             I = n("rCmJ"),
@@ -608,40 +608,40 @@ webpackJsonp([65], {
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
                     var e;
-                    return e = this.props.isWaiting ? s.createElement(w.Z, {
+                    return e = this.props.isWaiting ? s.createElement(C.Z, {
                         fillContent: !0
-                    }) : this.props.isErrored ? this.getErrorMessage() : this.props.streamerResults && this.props.streamerResults.totalHits > 0 ? this.getStreamerResultContent() : this.getNoResultsMessage(), s.createElement(w._19, {
+                    }) : this.props.isErrored ? this.getErrorMessage() : this.props.streamerResults && this.props.streamerResults.totalHits > 0 ? this.getStreamerResultContent() : this.getNoResultsMessage(), s.createElement(C._19, {
                         elevation: 4
                     }, s.createElement("div", {
                         className: "streamer-search-panel " + (this.props.isOpen ? "" : "streamer-search-panel--closed"),
                         tabIndex: 0,
                         onKeyDown: this.props.onKeyDown
-                    }, s.createElement(w._19, {
+                    }, s.createElement(C._19, {
                         className: "streamer-search-panel__results",
-                        background: w.m.Base,
-                        position: w._4.Relative,
-                        overflow: w._0.Hidden,
-                        display: w.H.Block,
+                        background: C.m.Base,
+                        position: C._4.Relative,
+                        overflow: C._0.Hidden,
+                        display: C.H.Block,
                         attachLeft: !0,
                         attachRight: !0,
                         attachBottom: !0,
                         fullHeight: !0
-                    }, s.createElement(w.Q, {
-                        overflow: w._0.Hidden,
-                        position: w._4.Relative,
+                    }, s.createElement(C.Q, {
+                        overflow: C._0.Hidden,
+                        position: C._4.Relative,
                         fullHeight: !0
                     }, s.createElement(d.b, {
                         suppressScrollX: !0
-                    }, s.createElement(w.V, null, e, s.createElement(d.a, {
+                    }, s.createElement(C.V, null, e, s.createElement(d.a, {
                         enabled: !this.props.isWaiting && this.props.isOpen,
                         loadMore: this.props.loadMore
                     })))))))
                 }, t.prototype.getStreamerResultContent = function() {
                     var e = this;
-                    if (!this.props.streamerResults) return s.createElement(w.V, null);
+                    if (!this.props.streamerResults) return s.createElement(C.V, null);
                     var t = this.props.streamerResults.results.map(function(t) {
                         var n = Object(U.a)(t.login || "", t.name || "");
-                        return s.createElement(w.T, {
+                        return s.createElement(C.T, {
                             linkTo: "/subs/" + t.login,
                             tabIndex: -1,
                             "data-ts_selectable": !0,
@@ -650,32 +650,32 @@ webpackJsonp([65], {
                             "data-streamer_id": t.id,
                             "data-streamer_login": t.login,
                             onClick: e.onStreamerClick
-                        }, s.createElement(w.V, {
+                        }, s.createElement(C.V, {
                             padding: {
                                 y: .5,
                                 x: 1
                             }
-                        }, s.createElement(w.A, {
+                        }, s.createElement(C.A, {
                             row: !0
-                        }, s.createElement(w.C, {
+                        }, s.createElement(C.C, {
                             imageAlt: t.thumbnailAltText,
                             imageSrc: t.thumbnail ? t.thumbnail : "",
-                            size: w.D.Size4,
-                            aspect: w.k.Aspect1x1
-                        }), s.createElement(w.B, null, s.createElement(w.Q, {
+                            size: C.D.Size4,
+                            aspect: C.k.Aspect1x1
+                        }), s.createElement(C.B, null, s.createElement(C.Q, {
                             padding: {
                                 x: 1
                             }
-                        }, s.createElement(w._23, {
-                            type: w._28.H5,
+                        }, s.createElement(C._23, {
+                            type: C._28.H5,
                             ellipsis: !0
                         }, n))))))
                     });
-                    return s.createElement(w.V, null, t)
+                    return s.createElement(C.V, null, t)
                 }, t.prototype.getErrorMessage = function() {
-                    return s.createElement(w._23, null, "Error")
+                    return s.createElement(C._23, null, "Error")
                 }, t.prototype.getNoResultsMessage = function() {
-                    return s.createElement(w._23, null, "No Results")
+                    return s.createElement(C._23, null, "No Results")
                 }, t
             }(s.Component)),
             M = (n("yoqf"), {
@@ -689,31 +689,31 @@ webpackJsonp([65], {
                     }, t
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
-                    return s.createElement(w.V, {
+                    return s.createElement(C.V, {
                         margin: {
                             top: 2
                         },
-                        display: w.H.Flex,
-                        justifyContent: w.U.Center,
+                        display: C.H.Flex,
+                        justifyContent: C.U.Center,
                         fullWidth: !0
-                    }, s.createElement(w.Q, {
+                    }, s.createElement(C.Q, {
                         fullWidth: !0,
-                        zIndex: w._39.Above,
-                        position: w._4.Relative
+                        zIndex: C._39.Above,
+                        position: C._4.Relative
                     }, s.createElement("div", {
                         className: this.props.isOpen ? "streamer-search__container streamer-search__container--open" : "streamer-search__container"
                     }, s.createElement(I.a, {
                         onClickOut: this.props.onClickOut
-                    }, s.createElement(w._13, {
+                    }, s.createElement(C._13, {
                         onChange: this.handleChange,
                         onFocus: this.props.onFocus,
                         onKeyDown: this.props.onKeyDown,
                         placeholder: M.searchPlaceholder,
                         id: "streamer-search-input"
-                    }), s.createElement(w.p, {
-                        direction: w.q.BottomCenter,
+                    }), s.createElement(C.p, {
+                        direction: C.q.BottomCenter,
                         noTail: !0,
-                        size: w.r.ExtraLarge,
+                        size: C.r.ExtraLarge,
                         show: this.props.isOpen
                     }, s.createElement(j, {
                         isOpen: this.props.isOpen,
@@ -769,7 +769,7 @@ webpackJsonp([65], {
                                         if (this.state.queryID || !0 === this.state.exhaustedHits) return [2];
                                         e = this.state.currentPage + 1, s.label = 1;
                                     case 1:
-                                        return s.trys.push([1, 3, , 4]), [4, this.searchClient.queryForType(D.a.Users, this.state.term, "", {
+                                        return s.trys.push([1, 3, , 4]), [4, this.searchClient.queryForType(L.a.Users, this.state.term, "", {
                                             page: e,
                                             facetFilters: "has_subscription_products:true"
                                         })];
@@ -847,12 +847,12 @@ webpackJsonp([65], {
                         return r.__generator(this, function(c) {
                             switch (c.label) {
                                 case 0:
-                                    this.inputTimer = 0, t = -1, n = L.a(), a = "INPUT" === document.activeElement.tagName, this.setState({
+                                    this.inputTimer = 0, t = -1, n = D.a(), a = "INPUT" === document.activeElement.tagName, this.setState({
                                         queryID: n,
                                         focusSelectable: !a && !!this.state.currentFocus
                                     }), c.label = 1;
                                 case 1:
-                                    return c.trys.push([1, 3, , 4]), t = 0, [4, this.searchClient.queryForType(D.a.Users, e, n, {
+                                    return c.trys.push([1, 3, , 4]), t = 0, [4, this.searchClient.queryForType(L.a.Users, e, n, {
                                         facetFilters: "has_subscription_products:true"
                                     })];
                                 case 2:
@@ -890,7 +890,7 @@ webpackJsonp([65], {
                     user: Object(y.c)(e)
                 }
             })(H),
-            B = (n("rbRz"), function(e) {
+            z = (n("rbRz"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.messages = {
@@ -907,144 +907,144 @@ webpackJsonp([65], {
                 return r.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive(), i.n.setPageTitle("Subscriptions")
                 }, t.prototype.render = function() {
-                    return s.createElement(w.V, {
+                    return s.createElement(C.V, {
                         className: "subs-landing-page",
                         fullHeight: !0,
-                        display: w.H.Flex,
-                        justifyContent: w.U.Center
-                    }, s.createElement(w.Q, {
+                        display: C.H.Flex,
+                        justifyContent: C.U.Center
+                    }, s.createElement(C.Q, {
                         fullWidth: !0
                     }, s.createElement(d.b, {
                         suppressScrollX: !0
-                    }, s.createElement(w.V, {
+                    }, s.createElement(C.V, {
                         fullWidth: !0,
-                        display: w.H.Flex,
-                        justifyContent: w.U.Center
-                    }, s.createElement(w.V, {
+                        display: C.H.Flex,
+                        justifyContent: C.U.Center
+                    }, s.createElement(C.V, {
                         className: "subs-landing-page-contents",
-                        textAlign: w._24.Center,
-                        display: w.H.Flex,
-                        justifyContent: w.U.Center,
-                        alignItems: w.c.Center,
-                        flexWrap: w.K.NoWrap,
-                        flexDirection: w.J.Column,
+                        textAlign: C._24.Center,
+                        display: C.H.Flex,
+                        justifyContent: C.U.Center,
+                        alignItems: C.c.Center,
+                        flexWrap: C.K.NoWrap,
+                        flexDirection: C.J.Column,
                         padding: {
                             x: 2
                         },
                         fullHeight: !0
-                    }, s.createElement(w.Q, {
+                    }, s.createElement(C.Q, {
                         margin: {
                             top: 4
                         }
-                    }, s.createElement(w._23, {
-                        type: w._28.H2,
-                        color: w.F.Link,
+                    }, s.createElement(C._23, {
+                        type: C._28.H2,
+                        color: C.F.Link,
                         bold: !0
-                    }, this.messages.title)), s.createElement(w.Q, {
+                    }, this.messages.title)), s.createElement(C.Q, {
                         margin: {
                             top: 2
                         },
                         className: "subs-landing-page-contents__paragraph"
-                    }, s.createElement(w._23, {
-                        type: w._28.P,
-                        fontSize: w.L.Size5
-                    }, this.messages.info)), s.createElement(w.Q, {
+                    }, s.createElement(C._23, {
+                        type: C._28.P,
+                        fontSize: C.L.Size5
+                    }, this.messages.info)), s.createElement(C.Q, {
                         margin: {
                             top: 3
                         },
                         className: "subs-landing-page-contents__heading"
-                    }, s.createElement(w._23, {
-                        type: w._28.H3,
-                        color: w.F.Link,
+                    }, s.createElement(C._23, {
+                        type: C._28.H3,
+                        color: C.F.Link,
                         bold: !0,
-                        fontSize: w.L.Size4
-                    }, this.messages.searchTitle)), s.createElement(w.Q, {
+                        fontSize: C.L.Size4
+                    }, this.messages.searchTitle)), s.createElement(C.Q, {
                         margin: {
                             top: 2
                         },
                         className: "subs-landing-page-contents__paragraph"
-                    }, s.createElement(w._23, {
-                        type: w._28.P,
-                        fontSize: w.L.Size5
-                    }, this.messages.searchInfo)), s.createElement(A, null), s.createElement(O, null), s.createElement(w.V, {
+                    }, s.createElement(C._23, {
+                        type: C._28.P,
+                        fontSize: C.L.Size5
+                    }, this.messages.searchInfo)), s.createElement(A, null), s.createElement(O, null), s.createElement(C.V, {
                         className: "subs-landing-page-contents__section",
-                        display: w.H.Flex,
-                        justifyContent: w.U.Center
-                    }, s.createElement(w.V, {
+                        display: C.H.Flex,
+                        justifyContent: C.U.Center
+                    }, s.createElement(C.V, {
                         className: "subs-landing-page-contents__section-info",
-                        display: w.H.Flex,
-                        justifyContent: w.U.Center,
-                        alignItems: w.c.Center,
-                        flexDirection: w.J.Column,
+                        display: C.H.Flex,
+                        justifyContent: C.U.Center,
+                        alignItems: C.c.Center,
+                        flexDirection: C.J.Column,
                         margin: {
                             x: 3
                         }
-                    }, s.createElement(w.Q, {
+                    }, s.createElement(C.Q, {
                         margin: {
                             top: 3
                         },
                         className: "subs-landing-page-contents__heading"
-                    }, s.createElement(w._23, {
-                        type: w._28.H3,
-                        color: w.F.Link,
+                    }, s.createElement(C._23, {
+                        type: C._28.H3,
+                        color: C.F.Link,
                         bold: !0,
-                        fontSize: w.L.Size4
-                    }, this.messages.perksTitle)), s.createElement(w.Q, {
+                        fontSize: C.L.Size4
+                    }, this.messages.perksTitle)), s.createElement(C.Q, {
                         margin: {
                             top: 2
                         },
                         className: "subs-landing-page-contents__paragraph"
-                    }, s.createElement(w._23, {
-                        type: w._28.P,
-                        fontSize: w.L.Size5
-                    }, this.messages.perksInfo))), s.createElement(w.V, {
+                    }, s.createElement(C._23, {
+                        type: C._28.P,
+                        fontSize: C.L.Size5
+                    }, this.messages.perksInfo))), s.createElement(C.V, {
                         margin: {
                             top: 2
                         },
                         className: "subs-landing-page-contents__image"
                     }, s.createElement("img", {
                         src: l.a
-                    }))), s.createElement(w.V, {
+                    }))), s.createElement(C.V, {
                         className: "subs-landing-page-contents__section",
-                        display: w.H.Flex,
-                        justifyContent: w.U.Center,
+                        display: C.H.Flex,
+                        justifyContent: C.U.Center,
                         margin: {
                             bottom: 2
                         }
-                    }, s.createElement(w.V, {
+                    }, s.createElement(C.V, {
                         margin: {
                             top: 2
                         },
                         className: "subs-landing-page-contents__image"
                     }, s.createElement("img", {
                         src: u.a
-                    })), s.createElement(w.V, {
+                    })), s.createElement(C.V, {
                         className: "subs-landing-page__section-info",
-                        display: w.H.Flex,
-                        justifyContent: w.U.Center,
-                        alignItems: w.c.Center,
-                        flexDirection: w.J.Column,
+                        display: C.H.Flex,
+                        justifyContent: C.U.Center,
+                        alignItems: C.c.Center,
+                        flexDirection: C.J.Column,
                         margin: {
                             x: 3
                         }
-                    }, s.createElement(w.Q, {
+                    }, s.createElement(C.Q, {
                         margin: {
                             top: 3
                         },
                         className: "subs-landing-page-contents__heading"
-                    }, s.createElement(w._23, {
-                        type: w._28.H3,
-                        color: w.F.Link,
+                    }, s.createElement(C._23, {
+                        type: C._28.H3,
+                        color: C.F.Link,
                         bold: !0,
-                        fontSize: w.L.Size4
-                    }, this.messages.emotesTitle)), s.createElement(w.Q, {
+                        fontSize: C.L.Size4
+                    }, this.messages.emotesTitle)), s.createElement(C.Q, {
                         margin: {
                             top: 2
                         },
                         className: "subs-landing-page-contents__paragraph"
-                    }, s.createElement(w._23, {
-                        type: w._28.P,
-                        fontSize: w.L.Size5
+                    }, s.createElement(C._23, {
+                        type: C._28.P,
+                        fontSize: C.L.Size5
                     }, this.messages.emotesInfo)))))))))
                 }, t = r.__decorate([Object(h.c)("SubsLandingPage", {
                     destination: p.a.SubsLandingPage
@@ -1052,9 +1052,9 @@ webpackJsonp([65], {
                     location: g.PageviewLocation.SubsLandingPage
                 })], t)
             }(s.Component)),
-            z = Object(a.a)()(B);
+            B = Object(a.a)()(z);
         n.d(t, "SubsLandingPage", function() {
-            return z
+            return B
         })
     },
     np4D: function(e, t) {},
@@ -1069,9 +1069,9 @@ webpackJsonp([65], {
         });
         var a;
         ! function(e) {
-            e.BitsBuyCard = "bits-buy-card", e.BrowseCommunities = "browse.communities", e.BrowseCreative = "browse.creative", e.BrowseGamesAndCommunities = "browse.games-and-communities", e.ChannelClips = "channel.clips", e.ChannelCollections = "channel.collections", e.ChannelClipsManager = "videoManager.clips.channel", e.ChannelDashboardAchievements = "channel.dashboard.achievements", e.ChannelDashboardExtensions = "channel.dashboard.extensions", e.ChannelDashboardModeration = "channel.dashboard.moderation", e.ChannelDashboardStreamSummary = "channel.dashboard.stream-summary", e.ChannelEvents = "channel.events", e.ChannelIndex = "channel.index.index", e.ChatPopout = "chat", e.CheermoteCarousel = "cheermote-carousel", e.DevOnly = "dev", e.DirectoryCommunityByLanguage = "directory.community.language", e.DirectoryCommunityIndex = "directory.community.index", e.DirectoryCommunityDetails = "directory.community.details", e.DirectoryFollowingCommunities = "directory.following.communities", e.DirectoryFollowingGames = "directory.following.games", e.DirectoryFollowingHosts = "directory.following.hosts", e.DirectoryFollowingIndex = "directory.following.index", e.DirectoryFollowingLiveChannels = "directory.following.channels", e.DirectoryFollowingVideos = "directory.following.videos.video-type", e.DirectoryGameClips = "directory.game.clips", e.DirectoryGameDetails = "directory.game.details", e.DirectoryGameIndex = "directory.game.index", e.DirectoryGames = "directory.games", e.DirectoryPopular = "directory.popular", e.DirectoryPopularByLanguage = "directory.popular.language", e.DirectoryGameVideos = "directory.game.videos", e.EmailVerification = "emailVerification", e.EventDetails = "event.details", e.ForYou = "for-you", e.Index = "index", e.MyClipsManager = "videoManager.clips", e.NotificationSettingsPage = "settings.notificationSettings", e.OnboardingIndex = "onboarding.index", e.ReportUserPage = "reportUser.page", e.SettingsConnections = "private/embed-components", e.SettingsChannel = "private/embed-components", e.SettingsNotifications = "settings.notifications", e.SettingsPrime = "settings.prime", e.SettingsProfile = "settings.profile", e.SettingsSecurity = "private/embed-components", e.StoreMerchPage = "store.merch", e.SubsLandingPage = "subs.landing", e.TeamsDashboardRevenue = "teams.dashboard.revenue", e.TeamsDashboardStats = "teams.dashboard.stats", e.TeamsDashboardMembers = "teams.dashboard.members", e.TeamsDashboardFeaturedChannels = "teams.dashboard.featured-channels", e.TeamsDashboardSettings = "teams.dashboard.settings", e.SubsBroadcasterPage = "subs.broadcaster", e.VideoManagerEditPropertiesPage = "videoManager.edit", e.VideoManagerPage = "videoManager.page", e.VideoManagerUploadListPage = "videoManager.upload-list", e.VideoManagerUploadPage = "videoManager.upload", e.VideosPage = "videos", e.VideoWatchPage = "video"
+            e.BitsBuyCard = "bits-buy-card", e.BrowseCommunities = "browse.communities", e.BrowseCreative = "browse.creative", e.BrowseGamesAndCommunities = "browse.games-and-communities", e.ChannelClips = "channel.clips", e.ChannelCollections = "channel.collections", e.ChannelClipsManager = "videoManager.clips.channel", e.ChannelDashboardAchievements = "channel.dashboard.achievements", e.ChannelDashboardChannelAnalytics = "channel.dashboard.channel-analytics", e.ChannelDashboardExtensions = "channel.dashboard.extensions", e.ChannelDashboardModeration = "channel.dashboard.moderation", e.ChannelDashboardStreamSummary = "channel.dashboard.stream-summary", e.ChannelEvents = "channel.events", e.ChannelIndex = "channel.index.index", e.ChatPopout = "chat", e.CheermoteCarousel = "cheermote-carousel", e.DevOnly = "dev", e.DirectoryCommunityByLanguage = "directory.community.language", e.DirectoryCommunityIndex = "directory.community.index", e.DirectoryCommunityDetails = "directory.community.details", e.DirectoryFollowingCommunities = "directory.following.communities", e.DirectoryFollowingGames = "directory.following.games", e.DirectoryFollowingHosts = "directory.following.hosts", e.DirectoryFollowingIndex = "directory.following.index", e.DirectoryFollowingLiveChannels = "directory.following.channels", e.DirectoryFollowingVideos = "directory.following.videos.video-type", e.DirectoryGameClips = "directory.game.clips", e.DirectoryGameDetails = "directory.game.details", e.DirectoryGameIndex = "directory.game.index", e.DirectoryGames = "directory.games", e.DirectoryPopular = "directory.popular", e.DirectoryPopularByLanguage = "directory.popular.language", e.DirectoryGameVideos = "directory.game.videos", e.EmailVerification = "emailVerification", e.EventDetails = "event.details", e.ForYou = "for-you", e.Index = "index", e.MyClipsManager = "videoManager.clips", e.NotificationSettingsPage = "settings.notificationSettings", e.OnboardingIndex = "onboarding.index", e.ReportUserPage = "reportUser.page", e.SettingsConnections = "private/embed-components", e.SettingsChannel = "private/embed-components", e.SettingsNotifications = "settings.notifications", e.SettingsPrime = "settings.prime", e.SettingsProfile = "settings.profile", e.SettingsSecurity = "private/embed-components", e.StoreMerchPage = "store.merch", e.SubsLandingPage = "subs.landing", e.TeamsDashboardRevenue = "teams.dashboard.revenue", e.TeamsDashboardStats = "teams.dashboard.stats", e.TeamsDashboardMembers = "teams.dashboard.members", e.TeamsDashboardFeaturedChannels = "teams.dashboard.featured-channels", e.TeamsDashboardSettings = "teams.dashboard.settings", e.SubsBroadcasterPage = "subs.broadcaster", e.VideoManagerEditPropertiesPage = "videoManager.edit", e.VideoManagerPage = "videoManager.page", e.VideoManagerUploadListPage = "videoManager.upload-list", e.VideoManagerUploadPage = "videoManager.upload", e.VideosPage = "videos", e.VideoWatchPage = "video"
         }(a || (a = {}))
     },
     yoqf: function(e, t) {}
 });
-//# sourceMappingURL=pages.subs.components.subs-landing-page-65149b6c72a4ab9104ba5a81876ffb29.js.map
+//# sourceMappingURL=pages.subs.components.subs-landing-page-e54b98b4d274b2b899090105dfe7ad47.js.map

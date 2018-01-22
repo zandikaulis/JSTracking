@@ -1,43 +1,43 @@
 webpackJsonp([56], {
-    DkuH: function(e, t, n) {
+    DkuH: function(e, n, t) {
         "use strict";
-        Object.defineProperty(t, "__esModule", {
+        Object.defineProperty(n, "__esModule", {
             value: !0
         });
-        var a = n("RH2O"),
-            o = n("2KeS"),
-            r = n("+xm8"),
-            i = n("f2i/"),
-            s = n("Aj/L"),
-            l = n("TToO"),
-            c = n("OAwv"),
-            d = n("U7vG"),
-            m = n("6sO2"),
-            u = n("7vx8"),
-            p = n("w9tK"),
-            g = n("CSlQ"),
-            h = n("LjAQ"),
-            y = n("A5Hr"),
-            b = n("mw/a"),
-            v = n("Odds"),
-            f = n("ucSk"),
+        var a = t("RH2O"),
+            o = t("2KeS"),
+            r = t("+xm8"),
+            i = t("f2i/"),
+            s = t("Aj/L"),
+            l = t("TToO"),
+            c = t("OAwv"),
+            d = t("U7vG"),
+            m = t("6sO2"),
+            u = t("7vx8"),
+            p = t("w9tK"),
+            g = t("CSlQ"),
+            h = t("LjAQ"),
+            y = t("A5Hr"),
+            b = t("mw/a"),
+            v = t("Odds"),
+            f = t("ucSk"),
             C = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.getReportingContext = function() {
-                        var e = c.parse(t.props.location.search);
+                function n() {
+                    var n = null !== e && e.apply(this, arguments) || this;
+                    return n.getReportingContext = function() {
+                        var e = c.parse(n.props.location.search);
                         return {
                             contentType: e.contentType ? e.contentType : b.a.User,
                             contentID: e.contentId,
-                            targetUserID: t.props.userToReportData.user.id
+                            targetUserID: n.props.userToReportData.user.id
                         }
-                    }, t.handleReportUserClose = function(e) {
-                        e !== h.b.MutationError && e !== h.b.Success || t.props.history.push("/")
-                    }, t
+                    }, n.handleReportUserClose = function(e) {
+                        e !== h.b.MutationError && e !== h.b.Success || n.props.history.push("/")
+                    }, n
                 }
-                return l.__extends(t, e), t.prototype.componentDidMount = function() {
+                return l.__extends(n, e), n.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive(), this.props.isLoggedIn || this.props.login()
-                }, t.prototype.render = function() {
+                }, n.prototype.render = function() {
                     return d.createElement(v.V, {
                         "data-test-selector": "report-user-page",
                         alignItems: v.c.Center,
@@ -46,7 +46,7 @@ webpackJsonp([56], {
                         fullHeight: !0,
                         padding: 3
                     }, this.renderPage())
-                }, t.prototype.renderPage = function() {
+                }, n.prototype.renderPage = function() {
                     return this.props.isLoggedIn ? this.props.userToReportData.error ? d.createElement(v.V, {
                         margin: {
                             bottom: 1
@@ -77,7 +77,7 @@ webpackJsonp([56], {
                     }, "ReportUserPage"))), d.createElement(v.u, {
                         onClick: this.props.login
                     }, Object(m.d)("Log in", "ReportUserPage")))
-                }, t = l.__decorate([Object(u.a)(f, {
+                }, n = l.__decorate([Object(u.a)(f, {
                     name: "userToReportData",
                     options: function(e) {
                         return {
@@ -89,7 +89,7 @@ webpackJsonp([56], {
                 }), Object(g.c)("ReportUserPage", {
                     autoReportInteractive: !0,
                     destination: p.a.ReportUserPage
-                })], t)
+                })], n)
             }(d.Component),
             D = Object(a.a)(function(e) {
                 return {
@@ -103,12 +103,12 @@ webpackJsonp([56], {
                     }
                 }, e)
             })(C);
-        n.d(t, "ReportUserPage", function() {
+        t.d(n, "ReportUserPage", function() {
             return D
         })
     },
-    ucSk: function(e, t) {
-        var n = {
+    ucSk: function(e, n) {
+        var t = {
             kind: "Document",
             definitions: [{
                 kind: "OperationDefinition",
@@ -185,7 +185,7 @@ webpackJsonp([56], {
                 end: 73
             }
         };
-        n.loc.source = {
+        t.loc.source = {
             body: "query ReportUserPage_User($login: String!) {\nuser(login: $login) {\nid\n}\n}",
             name: "GraphQL request",
             locationOffset: {
@@ -193,17 +193,17 @@ webpackJsonp([56], {
                 column: 1
             }
         };
-        e.exports = n
+        e.exports = t
     },
-    w9tK: function(e, t, n) {
+    w9tK: function(e, n, t) {
         "use strict";
-        n.d(t, "a", function() {
+        t.d(n, "a", function() {
             return a
         });
         var a;
         ! function(e) {
-            e.BitsBuyCard = "bits-buy-card", e.BrowseCommunities = "browse.communities", e.BrowseCreative = "browse.creative", e.BrowseGamesAndCommunities = "browse.games-and-communities", e.ChannelClips = "channel.clips", e.ChannelCollections = "channel.collections", e.ChannelClipsManager = "videoManager.clips.channel", e.ChannelDashboardAchievements = "channel.dashboard.achievements", e.ChannelDashboardExtensions = "channel.dashboard.extensions", e.ChannelDashboardModeration = "channel.dashboard.moderation", e.ChannelDashboardStreamSummary = "channel.dashboard.stream-summary", e.ChannelEvents = "channel.events", e.ChannelIndex = "channel.index.index", e.ChatPopout = "chat", e.CheermoteCarousel = "cheermote-carousel", e.DevOnly = "dev", e.DirectoryCommunityByLanguage = "directory.community.language", e.DirectoryCommunityIndex = "directory.community.index", e.DirectoryCommunityDetails = "directory.community.details", e.DirectoryFollowingCommunities = "directory.following.communities", e.DirectoryFollowingGames = "directory.following.games", e.DirectoryFollowingHosts = "directory.following.hosts", e.DirectoryFollowingIndex = "directory.following.index", e.DirectoryFollowingLiveChannels = "directory.following.channels", e.DirectoryFollowingVideos = "directory.following.videos.video-type", e.DirectoryGameClips = "directory.game.clips", e.DirectoryGameDetails = "directory.game.details", e.DirectoryGameIndex = "directory.game.index", e.DirectoryGames = "directory.games", e.DirectoryPopular = "directory.popular", e.DirectoryPopularByLanguage = "directory.popular.language", e.DirectoryGameVideos = "directory.game.videos", e.EmailVerification = "emailVerification", e.EventDetails = "event.details", e.ForYou = "for-you", e.Index = "index", e.MyClipsManager = "videoManager.clips", e.NotificationSettingsPage = "settings.notificationSettings", e.OnboardingIndex = "onboarding.index", e.ReportUserPage = "reportUser.page", e.SettingsConnections = "private/embed-components", e.SettingsChannel = "private/embed-components", e.SettingsNotifications = "settings.notifications", e.SettingsPrime = "settings.prime", e.SettingsProfile = "settings.profile", e.SettingsSecurity = "private/embed-components", e.StoreMerchPage = "store.merch", e.SubsLandingPage = "subs.landing", e.TeamsDashboardRevenue = "teams.dashboard.revenue", e.TeamsDashboardStats = "teams.dashboard.stats", e.TeamsDashboardMembers = "teams.dashboard.members", e.TeamsDashboardFeaturedChannels = "teams.dashboard.featured-channels", e.TeamsDashboardSettings = "teams.dashboard.settings", e.SubsBroadcasterPage = "subs.broadcaster", e.VideoManagerEditPropertiesPage = "videoManager.edit", e.VideoManagerPage = "videoManager.page", e.VideoManagerUploadListPage = "videoManager.upload-list", e.VideoManagerUploadPage = "videoManager.upload", e.VideosPage = "videos", e.VideoWatchPage = "video"
+            e.BitsBuyCard = "bits-buy-card", e.BrowseCommunities = "browse.communities", e.BrowseCreative = "browse.creative", e.BrowseGamesAndCommunities = "browse.games-and-communities", e.ChannelClips = "channel.clips", e.ChannelCollections = "channel.collections", e.ChannelClipsManager = "videoManager.clips.channel", e.ChannelDashboardAchievements = "channel.dashboard.achievements", e.ChannelDashboardChannelAnalytics = "channel.dashboard.channel-analytics", e.ChannelDashboardExtensions = "channel.dashboard.extensions", e.ChannelDashboardModeration = "channel.dashboard.moderation", e.ChannelDashboardStreamSummary = "channel.dashboard.stream-summary", e.ChannelEvents = "channel.events", e.ChannelIndex = "channel.index.index", e.ChatPopout = "chat", e.CheermoteCarousel = "cheermote-carousel", e.DevOnly = "dev", e.DirectoryCommunityByLanguage = "directory.community.language", e.DirectoryCommunityIndex = "directory.community.index", e.DirectoryCommunityDetails = "directory.community.details", e.DirectoryFollowingCommunities = "directory.following.communities", e.DirectoryFollowingGames = "directory.following.games", e.DirectoryFollowingHosts = "directory.following.hosts", e.DirectoryFollowingIndex = "directory.following.index", e.DirectoryFollowingLiveChannels = "directory.following.channels", e.DirectoryFollowingVideos = "directory.following.videos.video-type", e.DirectoryGameClips = "directory.game.clips", e.DirectoryGameDetails = "directory.game.details", e.DirectoryGameIndex = "directory.game.index", e.DirectoryGames = "directory.games", e.DirectoryPopular = "directory.popular", e.DirectoryPopularByLanguage = "directory.popular.language", e.DirectoryGameVideos = "directory.game.videos", e.EmailVerification = "emailVerification", e.EventDetails = "event.details", e.ForYou = "for-you", e.Index = "index", e.MyClipsManager = "videoManager.clips", e.NotificationSettingsPage = "settings.notificationSettings", e.OnboardingIndex = "onboarding.index", e.ReportUserPage = "reportUser.page", e.SettingsConnections = "private/embed-components", e.SettingsChannel = "private/embed-components", e.SettingsNotifications = "settings.notifications", e.SettingsPrime = "settings.prime", e.SettingsProfile = "settings.profile", e.SettingsSecurity = "private/embed-components", e.StoreMerchPage = "store.merch", e.SubsLandingPage = "subs.landing", e.TeamsDashboardRevenue = "teams.dashboard.revenue", e.TeamsDashboardStats = "teams.dashboard.stats", e.TeamsDashboardMembers = "teams.dashboard.members", e.TeamsDashboardFeaturedChannels = "teams.dashboard.featured-channels", e.TeamsDashboardSettings = "teams.dashboard.settings", e.SubsBroadcasterPage = "subs.broadcaster", e.VideoManagerEditPropertiesPage = "videoManager.edit", e.VideoManagerPage = "videoManager.page", e.VideoManagerUploadListPage = "videoManager.upload-list", e.VideoManagerUploadPage = "videoManager.upload", e.VideosPage = "videos", e.VideoWatchPage = "video"
         }(a || (a = {}))
     }
 });
-//# sourceMappingURL=pages.report-user-page-59bc62186bae56be0c0b928481798ce9.js.map
+//# sourceMappingURL=pages.report-user-page-c1593c86dcc969fd574bc71e628e305a.js.map
