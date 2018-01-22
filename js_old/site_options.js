@@ -3653,6 +3653,18 @@ window.SiteOptions = {
                 "value": "variant1"
             }]
         },
+        "bafaf46f-6107-4cf8-bf65-36d604c6555a": {
+            "name": "ios_add_badging",
+            "v": 2864,
+            "t": 2,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "badged"
+            }]
+        },
         "bb614c04-fce4-4abb-9686-a38022f4284e": {
             "name": "ios_autoplay_browse",
             "v": 1307,
