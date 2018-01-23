@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".2a59b330a1de146c7cf4.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".6c90218050d9b3ad69d6.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -1233,7 +1233,7 @@
         "use strict";
 
         function r(e) {
-            return e.replace(/[^A-Za-z0-9_]/g, "")
+            return String(e).replace(/[^A-Za-z0-9_]/g, "")
         }
 
         function i(e) {
@@ -1486,7 +1486,7 @@
                 "Client-ID": "jzkbprff40iqj646a697cyrvl0zt2m6"
             },
             K = x()(function(e) {
-                return null === e ? Promise.reject(new Error("No channel info available on null channel ID")) : s("channels/" + r(e))
+                return e ? s("channels/" + r(e)) : Promise.reject(new Error("No channel info available on null channel ID"))
             }),
             G = x()(function(e) {
                 if (null === e || void 0 === e) return Promise.reject(new Error("No video info available on null video ID"));
@@ -27755,7 +27755,7 @@
                     s = Ao.a(!0),
                     u = Lo.u() === Lo.j ? null : qo;
                 return {
-                    app_version: "2018.01.23-221644+a31701d3e82dd7c2a11b46ec62c35fa97bcc9a14",
+                    app_version: "2018.01.23-223834+1448da2f0ca41613c39651ffff484a7c3f572b05",
                     flash_version: t,
                     referrer_url: r,
                     referrer_host: i.host,
