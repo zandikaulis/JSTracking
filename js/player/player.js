@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".6c90218050d9b3ad69d6.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".09cfa325a8f8c625cd8c.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -14742,36 +14742,44 @@
                 writable: !0
             }) : e[t] = n, e
         }
-        n.d(t, "h", function() {
+        n.d(t, "l", function() {
             return a
-        }), n.d(t, "m", function() {
+        }), n.d(t, "q", function() {
             return o
-        }), n.d(t, "i", function() {
+        }), n.d(t, "m", function() {
             return s
-        }), n.d(t, "e", function() {
+        }), n.d(t, "i", function() {
             return u
-        }), n.d(t, "b", function() {
-            return c
-        }), n.d(t, "d", function() {
-            return l
-        }), n.d(t, "c", function() {
-            return d
-        }), n.d(t, "o", function() {
-            return p
-        }), n.d(t, "l", function() {
-            return f
-        }), n.d(t, "a", function() {
-            return h
-        }), n.d(t, "n", function() {
-            return m
-        }), n.d(t, "k", function() {
-            return y
-        }), n.d(t, "j", function() {
-            return v
         }), n.d(t, "f", function() {
-            return g
+            return c
+        }), n.d(t, "h", function() {
+            return l
         }), n.d(t, "g", function() {
+            return d
+        }), n.d(t, "s", function() {
+            return p
+        }), n.d(t, "p", function() {
+            return f
+        }), n.d(t, "c", function() {
+            return h
+        }), n.d(t, "r", function() {
+            return m
+        }), n.d(t, "e", function() {
+            return y
+        }), n.d(t, "o", function() {
+            return v
+        }), n.d(t, "n", function() {
+            return g
+        }), n.d(t, "j", function() {
             return b
+        }), n.d(t, "k", function() {
+            return _
+        }), n.d(t, "d", function() {
+            return w
+        }), n.d(t, "a", function() {
+            return k
+        }), n.d(t, "b", function() {
+            return E
         });
         var i, a = "clips",
             o = "clip",
@@ -14784,10 +14792,14 @@
             f = "recommendation",
             h = "clips_minute_watched",
             m = "player_twitch_logo",
-            y = Object.freeze((i = {}, r(i, "top", "popular_clips"), r(i, "similar", "similar_popular_clips"), r(i, "game", "game_popular_clips"), r(i, "channel", "channel_popular_clips"), i)),
-            v = "similar_clips",
-            g = "item_section_click",
-            b = "item_section_load"
+            y = "mp4",
+            v = Object.freeze((i = {}, r(i, "top", "popular_clips"), r(i, "similar", "similar_popular_clips"), r(i, "game", "game_popular_clips"), r(i, "channel", "channel_popular_clips"), i)),
+            g = "similar_clips",
+            b = "item_section_click",
+            _ = "item_section_load",
+            w = "clips_qos",
+            k = "buffer-empty",
+            E = "buffer-refill"
     }, function(e, t, n) {
         "use strict";
 
@@ -26451,7 +26463,7 @@
                     key: "_getClipURL",
                     value: function() {
                         var e = this.props.metadataUrl;
-                        return Object(oi.b)(e, ai.i, ai.n)
+                        return Object(oi.b)(e, ai.m, ai.r)
                     }
                 }, {
                     key: "_getVODURL",
@@ -27454,19 +27466,19 @@
                     game: e.streamMetadata.game || null,
                     partner: r,
                     live: n,
-                    player: e.env.playerType === i.e ? s.i : s.h,
+                    player: e.env.playerType === i.e ? s.m : s.l,
                     vod_id: parseInt(e.streamMetadata.id, 10)
                 }
             },
             m = function(e) {
-                var t = s.k[Object(c.b)(e, e.streamMetadata.slug)];
+                var t = s.o[Object(c.b)(e, e.streamMetadata.slug)];
                 return {
                     source_channel: e.streamMetadata.channel.name || null,
                     source_game: e.streamMetadata.game || null,
                     source_vod_id: parseInt(e.streamMetadata.id, 10),
-                    source_item_type: s.m,
+                    source_item_type: s.q,
                     content: t || null,
-                    carousel_content: s.j
+                    carousel_content: s.n
                 }
             }
     }, function(e, t, n) {
@@ -27755,7 +27767,7 @@
                     s = Ao.a(!0),
                     u = Lo.u() === Lo.j ? null : qo;
                 return {
-                    app_version: "2018.01.23-223834+1448da2f0ca41613c39651ffff484a7c3f572b05",
+                    app_version: "2018.01.23-225102+dd0e788ad9d01a15a2716929509056cf472671e3",
                     flash_version: t,
                     referrer_url: r,
                     referrer_host: i.host,
