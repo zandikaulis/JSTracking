@@ -64,7 +64,7 @@ window.__twilightSettings = {
     "twilight_routes_test_users": ["tanexion", "codecrshr", "adamar", "major_mosey", "kashinwins", "legypsy", "cathadan", "zenhaplo", "diresqrl", "kugleburg", "polygoose", "r_demerzel", "digisaint", "molu", "bennyguitar", "cresseye", "lunacyhatter", "lawls544", "delthios"],
     "twilight_video_manager_public": false,
     "twilight_video_manager_staff": true,
-    "update_chunks": [],
+    "update_chunks": ["core.css", "core.js", "vendor.js", "pages.front.js", "page.channel.js", "page.browser.js", "pages.anon-front.js", "pages.directory.js"],
     "update_manager_enabled": false,
     "viewer_milestones_enabled": true,
     "experiments": {
