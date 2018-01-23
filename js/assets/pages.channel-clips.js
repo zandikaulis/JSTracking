@@ -1912,7 +1912,7 @@ webpackJsonp([40], {
                     return t.getRemainingTime = function() {
                         return t.props.raid.getRemainingJoinTime()
                     }, t.handleCountdownEnd = function() {
-                        t.props.onRaidInvitePeriodOver(t.props.data.targetChannel.displayName)
+                        t.props.onRaidInvitePeriodOver(t.props.data.targetChannel.login)
                     }, t
                 }
                 return u.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -16486,6 +16486,16 @@ webpackJsonp([40], {
                                 alias: null,
                                 name: {
                                     kind: "Name",
+                                    value: "login"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
                                     value: "displayName"
                                 },
                                 arguments: [],
@@ -16555,6 +16565,16 @@ webpackJsonp([40], {
                                 alias: null,
                                 name: {
                                     kind: "Name",
+                                    value: "login"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
                                     value: "displayName"
                                 },
                                 arguments: [],
@@ -16587,11 +16607,11 @@ webpackJsonp([40], {
             }],
             loc: {
                 start: 0,
-                end: 256
+                end: 268
             }
         };
         n.loc.source = {
-            body: "query RaidNotification_Channels($sourceChannelID: ID! $targetChannelID: ID!) {\nsourceChannel: user(id: $sourceChannelID) {\nid\ndisplayName\nprofileImageURL(width: 70)\n}\ntargetChannel: user(id: $targetChannelID) {\nid\ndisplayName\nprofileImageURL(width: 70)\n}\n}",
+            body: "query RaidNotification_Channels($sourceChannelID: ID! $targetChannelID: ID!) {\nsourceChannel: user(id: $sourceChannelID) {\nid\nlogin\ndisplayName\nprofileImageURL(width: 70)\n}\ntargetChannel: user(id: $targetChannelID) {\nid\nlogin\ndisplayName\nprofileImageURL(width: 70)\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -24583,4 +24603,4 @@ webpackJsonp([40], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-clips-4fa4ccd5d73b5793e4b28c1eba50fe75.js.map
+//# sourceMappingURL=pages.channel-clips-d291b73724e27f5b0bea39dfd13652f9.js.map

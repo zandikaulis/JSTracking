@@ -1626,14 +1626,14 @@ webpackJsonp([46], {
                     autoReportInteractive: !0
                 })], t)
             }(a.Component),
-            x = Object(c.a)(null, function(e) {
+            I = Object(c.a)(null, function(e) {
                 return Object(m.bindActionCreators)({
                     onShowModal: p.d
                 }, e)
             })(D),
-            U = n("PLRK"),
-            I = (n("GiGb"), "directory-game__card_container"),
-            P = function(e) {
+            x = n("PLRK"),
+            U = (n("GiGb"), "directory-game__card_container"),
+            G = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getLinkTo = function(e, n) {
@@ -1654,7 +1654,7 @@ webpackJsonp([46], {
                             position: w._4.Absolute,
                             attachTop: !0,
                             attachRight: !0
-                        }, a.createElement(x, {
+                        }, a.createElement(I, {
                             communityName: t.props.directoryName,
                             login: e.broadcaster.login,
                             displayName: e.broadcaster.displayName,
@@ -1679,12 +1679,12 @@ webpackJsonp([46], {
                         margin: {
                             bottom: 2
                         },
-                        "data-target": I
+                        "data-target": U
                     }, a.createElement(r.a, {
                         imageSrc: e.previewImageURL || l.a.defaultStreamPreviewURL,
                         imageAlt: e.broadcaster.login + " cover image",
                         viewerCount: e.viewersCount || 0,
-                        title: e.title || U.a,
+                        title: e.title || x.a,
                         channelName: Object(o.a)(e.broadcaster.login, e.broadcaster.displayName, !0),
                         gameImageSrc: this.shouldShowGame("boxArtURL") || l.a.defaultBoxArtURL,
                         gameTitle: this.shouldShowGame("name"),
@@ -1700,9 +1700,9 @@ webpackJsonp([46], {
         n.d(t, "a", function() {
             return "directory-first-item"
         }), n.d(t, !1, function() {
-            return I
+            return U
         }), n.d(t, "b", function() {
-            return P
+            return G
         })
     },
     AtoX: function(e, t) {},
@@ -2693,42 +2693,42 @@ webpackJsonp([46], {
 
         function i(e) {
             var t;
-            if (!e.communities || 0 === e.communities.length) return p.createElement(C._23, {
+            if (!e.communities || 0 === e.communities.length) return g.createElement(F._23, {
                 "data-a-target": "no-communities-text"
-            }, Object(v.d)("No communities", "LiveCommunities"));
+            }, Object(h.d)("No communities", "LiveCommunities"));
             var n, i = e.communities;
             if (e.showSample) {
-                var a = Object(L.a)(e.directoryWidth || 0, 180, 1); - 1 === a ? i = [] : a < i.length && (i = i.slice(0, a - 1), n = p.createElement(O.a, {
-                    subHeader: Object(v.d)("Communities", "LiveCommunities--view-all"),
+                var a = Object(T.a)(e.directoryWidth || 0, 180, 1); - 1 === a ? i = [] : a < i.length && (i = i.slice(0, a - 1), n = g.createElement(L.a, {
+                    subHeader: Object(h.d)("Communities", "LiveCommunities--view-all"),
                     linkTo: "/directory/following/communities",
-                    aspectRatio: C.k.Aspect3x4
-                })), t = p.createElement(C.V, {
+                    aspectRatio: F.k.Aspect3x4
+                })), t = g.createElement(F.V, {
                     margin: {
                         bottom: 2
                     }
-                }, p.createElement(C._23, {
-                    type: C._28.H4,
-                    color: C.F.Alt2,
-                    fontSize: C.L.Size5,
-                    transform: C._27.Uppercase,
+                }, g.createElement(F._23, {
+                    type: F._28.H4,
+                    color: F.F.Alt2,
+                    fontSize: F.L.Size5,
+                    transform: F._27.Uppercase,
                     "data-a-target": "live-communities-header"
-                }, Object(v.d)("Communities", "LiveCommunities")))
+                }, Object(h.d)("Communities", "LiveCommunities")))
             }
             var l = i.map(function(e, t) {
                 var n = e.node,
-                    i = Object(v.d)("{channelsCount,number} streams", {
+                    i = Object(h.d)("{channelsCount,number} streams", {
                         channelsCount: n.broadcastersCount
                     }, "LiveCommunities"),
-                    a = Object(v.d)("{viewerCount,number} viewers {streams}", {
+                    a = Object(h.d)("{viewerCount,number} viewers {streams}", {
                         viewerCount: n.viewersCount,
-                        streams: p.createElement("span", null, i)
+                        streams: g.createElement("span", null, i)
                     }, "LiveCommunities");
-                return p.createElement(C.V, {
+                return g.createElement(F.V, {
                     key: n.id,
                     margin: {
                         bottom: 2
                     }
-                }, p.createElement(C.t, {
+                }, g.createElement(F.t, {
                     linkTo: {
                         pathname: "/communities/" + encodeURIComponent(n.name),
                         state: {
@@ -2739,188 +2739,188 @@ webpackJsonp([46], {
                     },
                     title: n.displayName,
                     imageAlt: n.displayName + " cover image",
-                    imageSrc: n.avatarURL || v.a.defaultBoxArtURL,
-                    info: p.createElement("span", {
+                    imageSrc: n.avatarURL || h.a.defaultBoxArtURL,
+                    info: g.createElement("span", {
                         className: "live-communities__info"
                     }, a),
                     "data-a-target": "live-community-card-" + t
                 }))
             });
-            return p.createElement("div", null, t, p.createElement(C._34, {
-                gutterSize: C._36.Small,
-                childWidth: C._35.Small,
+            return g.createElement("div", null, t, g.createElement(F._34, {
+                gutterSize: F._36.Small,
+                childWidth: F._35.Small,
                 placeholderItems: 30
             }, l, n))
         }
 
         function a() {
-            return p.createElement(C.V, {
+            return g.createElement(F.V, {
                 className: "following__empty",
                 margin: {
                     x: "auto"
                 }
-            }, p.createElement(C.V, {
-                textAlign: C._24.Center,
+            }, g.createElement(F.V, {
+                textAlign: F._24.Center,
                 margin: {
                     bottom: 2
                 }
-            }, p.createElement(C._23, {
-                color: C.F.Alt2,
-                fontSize: C.L.Size4,
-                type: C._28.H4
-            }, Object(v.d)("Never miss the Channels you love.", "EmptyChannelList"))), p.createElement(C.V, {
-                display: C.H.Flex,
-                justifyContent: C.U.Between
-            }, p.createElement(C.V, {
+            }, g.createElement(F._23, {
+                color: F.F.Alt2,
+                fontSize: F.L.Size4,
+                type: F._28.H4
+            }, Object(h.d)("Never miss the Channels you love.", "EmptyChannelList"))), g.createElement(F.V, {
+                display: F.H.Flex,
+                justifyContent: F.U.Between
+            }, g.createElement(F.V, {
                 className: "following__empty-information",
-                position: C._4.Relative
-            }, p.createElement(C.V, {
+                position: F._4.Relative
+            }, g.createElement(F.V, {
                 margin: {
                     bottom: 1
                 }
-            }, p.createElement("figure", {
+            }, g.createElement("figure", {
                 className: "following__empty-image"
-            }, p.createElement("img", {
+            }, g.createElement("img", {
                 src: "//s.jtvnw.net/jtv_user_pictures/hosted_images/guide_1.png"
-            }))), p.createElement(C._23, {
-                fontSize: C.L.Size5
-            }, Object(v.d)("Like the channel you're watching? Follow it.", "EmptyChannelList")), p.createElement(C._19, {
+            }))), g.createElement(F._23, {
+                fontSize: F.L.Size5
+            }, Object(h.d)("Like the channel you're watching? Follow it.", "EmptyChannelList")), g.createElement(F._19, {
                 className: "following__empty-information-num",
-                position: C._4.Absolute,
+                position: F._4.Absolute,
                 attachLeft: !0,
                 attachTop: !0,
-                background: C.m.Alt,
-                textAlign: C._24.Center
-            }, "1")), p.createElement(C.V, {
+                background: F.m.Alt,
+                textAlign: F._24.Center
+            }, "1")), g.createElement(F.V, {
                 className: "following__empty-information",
-                position: C._4.Relative
-            }, p.createElement(C.V, {
+                position: F._4.Relative
+            }, g.createElement(F.V, {
                 margin: {
                     bottom: 1
                 }
-            }, p.createElement("figure", {
+            }, g.createElement("figure", {
                 className: "following__empty-image"
-            }, p.createElement("img", {
+            }, g.createElement("img", {
                 src: "//s.jtvnw.net/jtv_user_pictures/hosted_images/guide_2.png"
-            }))), p.createElement(C._23, {
-                fontSize: C.L.Size5
-            }, Object(v.d)("We'll let you know when the channel goes live again.", "EmptyChannelList")), p.createElement(C._19, {
+            }))), g.createElement(F._23, {
+                fontSize: F.L.Size5
+            }, Object(h.d)("We'll let you know when the channel goes live again.", "EmptyChannelList")), g.createElement(F._19, {
                 className: "following__empty-information-num",
-                position: C._4.Absolute,
+                position: F._4.Absolute,
                 attachLeft: !0,
                 attachTop: !0,
-                background: C.m.Alt,
-                textAlign: C._24.Center
-            }, "2")), p.createElement(C.V, {
+                background: F.m.Alt,
+                textAlign: F._24.Center
+            }, "2")), g.createElement(F.V, {
                 className: "following__empty-information",
-                position: C._4.Relative
-            }, p.createElement(C.V, {
+                position: F._4.Relative
+            }, g.createElement(F.V, {
                 margin: {
                     bottom: 1
                 }
-            }, p.createElement("figure", {
+            }, g.createElement("figure", {
                 className: "following__empty-image"
-            }, p.createElement("img", {
+            }, g.createElement("img", {
                 src: "//s.jtvnw.net/jtv_user_pictures/hosted_images/guide_3.png"
-            }))), p.createElement(C._23, {
-                fontSize: C.L.Size5
-            }, Object(v.d)("Come back and watch your favorite channels.", "EmptyChannelList")), p.createElement(C._19, {
+            }))), g.createElement(F._23, {
+                fontSize: F.L.Size5
+            }, Object(h.d)("Come back and watch your favorite channels.", "EmptyChannelList")), g.createElement(F._19, {
                 className: "following__empty-information-num",
-                position: C._4.Absolute,
+                position: F._4.Absolute,
                 attachLeft: !0,
                 attachTop: !0,
-                background: C.m.Alt,
-                textAlign: C._24.Center
+                background: F.m.Alt,
+                textAlign: F._24.Center
             }, "3"))))
         }
 
         function l(e) {
-            var t = Object(v.d)("Live hosts", "LiveHosts"),
-                n = p.createElement(C.V, {
+            var t = Object(h.d)("Live hosts", "LiveHosts"),
+                n = g.createElement(F.V, {
                     margin: {
                         bottom: 2
                     }
-                }, p.createElement(C._23, {
-                    type: C._28.H4,
-                    color: C.F.Alt2,
-                    fontSize: C.L.Size5,
-                    transform: C._27.Uppercase,
+                }, g.createElement(F._23, {
+                    type: F._28.H4,
+                    color: F.F.Alt2,
+                    fontSize: F.L.Size5,
+                    transform: F._27.Uppercase,
                     "data-a-target": "live-hosts-header"
                 }, t));
-            if (!e.hosts || 0 === e.hosts.length) return e.followsCount > 0 ? p.createElement("div", null, n, p.createElement(C.V, {
-                textAlign: C._24.Center,
+            if (!e.hosts || 0 === e.hosts.length) return e.followsCount > 0 ? g.createElement("div", null, n, g.createElement(F.V, {
+                textAlign: F._24.Center,
                 padding: {
                     y: 5
                 }
-            }, p.createElement(C._23, {
-                color: C.F.Alt2,
-                fontSize: C.L.Size4,
+            }, g.createElement(F._23, {
+                color: F.F.Alt2,
+                fontSize: F.L.Size4,
                 "data-a-target": "no-hosts-live-text",
                 italic: !0
-            }, Object(v.d)("No Hosts Live", "LiveHosts")))) : p.createElement("div", null, n, !e.showSample && p.createElement(a, null));
+            }, Object(h.d)("No Hosts Live", "LiveHosts")))) : g.createElement("div", null, n, !e.showSample && g.createElement(a, null));
             var i, l = e.hosts.filter(function(e) {
                 return e.hosting && e.hosting.stream && e.hosting.id
             });
-            if (e.maxCount) e.maxCount < l.length && (l = l.slice(0, e.maxCount - 1), i = p.createElement(O.a, {
+            if (e.maxCount) e.maxCount < l.length && (l = l.slice(0, e.maxCount - 1), i = g.createElement(L.a, {
                 subHeader: "Live Hosts",
                 onClickViewAll: e.onClickViewAll
             }));
             else if (e.showSample && e.directoryWidth && e.directoryWidth > 0) {
-                var r = Object(L.a)(e.directoryWidth, 240, 2);
-                r < l.length && (l = l.slice(0, r - 1), i = p.createElement(O.a, {
+                var r = Object(T.a)(e.directoryWidth, 240, 2);
+                r < l.length && (l = l.slice(0, r - 1), i = g.createElement(L.a, {
                     subHeader: t,
                     linkTo: {
                         pathname: "/directory/following/hosts",
                         state: {
-                            medium: b.PageviewMedium.Following,
-                            content: b.PageviewContent.Following
+                            medium: _.PageviewMedium.Following,
+                            content: _.PageviewContent.Following
                         }
                     }
                 }))
             }
             var o = l.map(function(e, t) {
                 if (e.hosting && e.hosting.stream && e.hosting.id) {
-                    var n = Object(z.a)(e.hosting.login, e.hosting.displayName, !0),
-                        i = Object(z.a)(e.login, e.displayName, !0),
-                        a = Object(v.d)("{hostDisplayName} hosting {hostedDisplayName}", {
+                    var n = Object(q.a)(e.hosting.login, e.hosting.displayName, !0),
+                        i = Object(q.a)(e.login, e.displayName, !0),
+                        a = Object(h.d)("{hostDisplayName} hosting {hostedDisplayName}", {
                             hostDisplayName: i,
                             hostedDisplayName: n
                         }, "LiveHosts"),
-                        l = e.hosting.stream && e.hosting.stream.game ? Object(j.c)(e.hosting.stream.game.name) : "";
-                    return p.createElement(C.V, {
+                        l = e.hosting.stream && e.hosting.stream.game ? Object(R.c)(e.hosting.stream.game.name) : "";
+                    return g.createElement(F.V, {
                         key: e.id,
                         margin: {
                             bottom: 2
                         }
-                    }, p.createElement(W.a, {
-                        imageSrc: e.hosting.stream.previewImageURL || v.a.defaultStreamPreviewURL,
+                    }, g.createElement(z.a, {
+                        imageSrc: e.hosting.stream.previewImageURL || h.a.defaultStreamPreviewURL,
                         imageAlt: a,
                         viewerCount: e.hosting.stream && e.hosting.stream.viewersCount || 0,
                         title: a,
                         channelName: n,
-                        gameImageSrc: e.hosting.stream && e.hosting.stream.game && e.hosting.stream.game.boxArtURL || v.a.defaultBoxArtURL,
+                        gameImageSrc: e.hosting.stream && e.hosting.stream.game && e.hosting.stream.game.boxArtURL || h.a.defaultBoxArtURL,
                         gameTitle: e.hosting.stream.game && e.hosting.stream.game.name || "",
                         gameLinkTo: {
                             pathname: l,
                             state: {
-                                medium: b.PageviewMedium.Following,
-                                content: b.PageviewContent.LiveHost,
+                                medium: _.PageviewMedium.Following,
+                                content: _.PageviewContent.LiveHost,
                                 content_index: t
                             }
                         },
                         linkTo: {
                             pathname: "/" + e.login,
                             state: {
-                                medium: b.PageviewMedium.Following,
-                                content: b.PageviewContent.LiveHost,
+                                medium: _.PageviewMedium.Following,
+                                content: _.PageviewContent.LiveHost,
                                 content_index: t
                             }
                         },
                         channelNameLinkTo: {
                             pathname: "/" + e.hosting.login + "/videos",
                             state: {
-                                medium: b.PageviewMedium.Following,
-                                content: b.PageviewContent.LiveHost,
+                                medium: _.PageviewMedium.Following,
+                                content: _.PageviewContent.LiveHost,
                                 content_index: t
                             }
                         },
@@ -2930,70 +2930,70 @@ webpackJsonp([46], {
                     }))
                 }
             });
-            return p.createElement("div", null, n, p.createElement(C._34, {
-                gutterSize: C._36.Small,
-                childWidth: C._35.Medium,
+            return g.createElement("div", null, n, g.createElement(F._34, {
+                gutterSize: F._36.Small,
+                childWidth: F._35.Medium,
                 placeholderItems: 20
             }, o, i))
         }
 
         function r(e) {
-            var t = Object(v.d)("Live channels", "LiveChannels"),
-                n = p.createElement(C.V, {
+            var t = Object(h.d)("Live channels", "LiveChannels"),
+                n = g.createElement(F.V, {
                     margin: {
                         bottom: 2
                     }
-                }, p.createElement(C._23, {
-                    type: C._28.H4,
-                    color: C.F.Alt2,
-                    fontSize: C.L.Size5,
-                    transform: C._27.Uppercase,
+                }, g.createElement(F._23, {
+                    type: F._28.H4,
+                    color: F.F.Alt2,
+                    fontSize: F.L.Size5,
+                    transform: F._27.Uppercase,
                     "data-a-target": "live-channels-header"
                 }, t));
-            if (null !== e.users && 0 === e.users.length) return e.followsCount > 0 ? p.createElement("div", null, n, p.createElement(C.V, {
-                textAlign: C._24.Center,
+            if (null !== e.users && 0 === e.users.length) return e.followsCount > 0 ? g.createElement("div", null, n, g.createElement(F.V, {
+                textAlign: F._24.Center,
                 padding: {
                     y: 5
                 }
-            }, p.createElement(C._23, {
-                color: C.F.Alt2,
-                fontSize: C.L.Size4,
+            }, g.createElement(F._23, {
+                color: F.F.Alt2,
+                fontSize: F.L.Size4,
                 "data-a-target": "no-channels-live-text",
                 italic: !0
-            }, Object(v.d)("No Channels Live", "LiveChannels")))) : p.createElement("div", null, n, p.createElement(a, null));
+            }, Object(h.d)("No Channels Live", "LiveChannels")))) : g.createElement("div", null, n, g.createElement(a, null));
             var i, l = e.users || [];
-            if (e.maxDisplayCount && e.maxDisplayCount < l.length) l = l.slice(0, e.maxDisplayCount - 1), i = p.createElement(O.a, {
+            if (e.maxDisplayCount && e.maxDisplayCount < l.length) l = l.slice(0, e.maxDisplayCount - 1), i = g.createElement(L.a, {
                 subHeader: "Live Channels",
                 onClickViewAll: e.onClickViewAll
             });
             else if (e.showSample && e.directoryWidth && e.directoryWidth > 0) {
-                var r = Object(L.a)(e.directoryWidth, 240, 2);
-                r < l.length && (l = l.slice(0, r - 1), i = p.createElement(O.a, {
+                var r = Object(T.a)(e.directoryWidth, 240, 2);
+                r < l.length && (l = l.slice(0, r - 1), i = g.createElement(L.a, {
                     subHeader: t,
                     linkTo: "/directory/following/live"
                 }))
             }
             var o = l.map(function(e, t) {
                 if (!e.stream || !e.id) return null;
-                var n = Object(z.a)(e.login, e.displayName),
+                var n = Object(q.a)(e.login, e.displayName),
                     i = {
-                        medium: b.PageviewMedium.Following,
-                        content: b.PageviewContent.Live,
+                        medium: _.PageviewMedium.Following,
+                        content: _.PageviewContent.Live,
                         content_index: t
                     },
-                    a = e.stream && e.stream.game ? Object(j.c)(e.stream.game.name) : "";
-                return p.createElement(C.V, {
+                    a = e.stream && e.stream.game ? Object(R.c)(e.stream.game.name) : "";
+                return g.createElement(F.V, {
                     key: e.id,
                     margin: {
                         bottom: 2
                     }
-                }, p.createElement(W.a, {
-                    imageSrc: e.stream && e.stream.previewImageURL || v.a.defaultStreamPreviewURL,
+                }, g.createElement(z.a, {
+                    imageSrc: e.stream && e.stream.previewImageURL || h.a.defaultStreamPreviewURL,
                     imageAlt: e.stream && e.stream.title || "",
                     viewerCount: e.stream && e.stream.viewersCount || 0,
-                    title: e.stream && e.stream.title || Object(v.d)("Untitled Broadcast", "LiveChannels"),
+                    title: e.stream && e.stream.title || Object(h.d)("Untitled Broadcast", "LiveChannels"),
                     channelName: n,
-                    gameImageSrc: e.stream && e.stream.game && e.stream.game.boxArtURL || v.a.defaultBoxArtURL,
+                    gameImageSrc: e.stream && e.stream.game && e.stream.game.boxArtURL || h.a.defaultBoxArtURL,
                     gameTitle: e.stream && e.stream.game ? e.stream.game.name : "",
                     gameLinkTo: {
                         pathname: a,
@@ -3013,56 +3013,56 @@ webpackJsonp([46], {
                 }))
             });
             if (0 === l.length)
-                for (var s = 0; s < 5; s++) o.push(p.createElement(X.VideoPreviewCardPlaceholder, {
+                for (var s = 0; s < 5; s++) o.push(g.createElement(ie.VideoPreviewCardPlaceholder, {
                     key: "live-channels-placeholder-" + s
                 }));
-            return p.createElement("div", null, n, p.createElement(C._34, {
-                gutterSize: C._36.Small,
-                childWidth: C._35.Medium,
+            return g.createElement("div", null, n, g.createElement(F._34, {
+                gutterSize: F._36.Small,
+                childWidth: F._35.Medium,
                 placeholderItems: 20
             }, o, i))
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var o = n("RH2O"),
-            s = n("2KeS"),
-            d = n("+xm8"),
-            u = n("f2i/"),
-            c = n("Aj/L"),
-            m = n("TToO"),
-            p = n("U7vG"),
-            g = n("CIox"),
-            v = n("6sO2"),
-            h = n("yWCw"),
-            f = n("CSlQ"),
-            k = n("eXld"),
-            y = n("7vx8"),
-            S = n("j7/Y"),
-            w = n("w9tK"),
-            b = n("vH/s"),
-            _ = n("czpb"),
-            N = n("DBTH"),
-            C = n("Odds"),
-            F = n("qb8C"),
-            E = function(e) {
+        var o, s = n("RH2O"),
+            d = n("2KeS"),
+            u = n("+xm8"),
+            c = n("f2i/"),
+            m = n("Aj/L"),
+            p = n("TToO"),
+            g = n("U7vG"),
+            v = n("CIox"),
+            h = n("6sO2"),
+            f = n("yWCw"),
+            k = n("CSlQ"),
+            y = n("eXld"),
+            S = n("7vx8"),
+            w = n("j7/Y"),
+            b = n("w9tK"),
+            _ = n("vH/s"),
+            N = n("czpb"),
+            C = n("DBTH"),
+            F = n("Odds"),
+            E = n("qb8C"),
+            O = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {}, t.userDataLoaded = function() {
                         return t.props.data && !t.props.data.loading
                     }, t
                 }
-                return m.__extends(t, e), t.prototype.componentDidMount = function() {
-                    return m.__awaiter(this, void 0, void 0, function() {
+                return p.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return p.__awaiter(this, void 0, void 0, function() {
                         var e, t;
-                        return m.__generator(this, function(n) {
+                        return p.__generator(this, function(n) {
                             switch (n.label) {
                                 case 0:
-                                    return [4, v.n.experiments.getAssignment(N.h)];
+                                    return [4, h.n.experiments.getAssignment(C.h)];
                                 case 1:
-                                    return e = n.sent(), [4, v.n.experiments.getAssignment(N.i)];
+                                    return e = n.sent(), [4, h.n.experiments.getAssignment(C.i)];
                                 case 2:
-                                    return t = n.sent(), Object(N.n)(e, t) ? this.setState({
+                                    return t = n.sent(), Object(C.n)(e, t) ? this.setState({
                                         forYouAssignment: t
                                     }) : this.setState({
                                         forYouAssignment: null
@@ -3075,108 +3075,108 @@ webpackJsonp([46], {
                 }, t.prototype.render = function() {
                     if (void 0 === this.state.forYouAssignment || !this.userDataLoaded()) return null;
                     var e = this.props.activeCategory,
-                        t = [p.createElement(C._20, {
+                        t = [g.createElement(F._20, {
                             key: "following-overview-tab",
                             active: void 0 === e,
                             linkTo: "/directory/following",
                             "data-a-target": "following-overview-tab"
-                        }, Object(v.d)("Overview", "FollowingHeaderTabs")), p.createElement(C._20, {
+                        }, Object(h.d)("Overview", "FollowingHeaderTabs")), g.createElement(F._20, {
                             key: "following-channels-tab",
-                            active: e === b.SpadeFollowingCategory.Live,
+                            active: e === _.SpadeFollowingCategory.Live,
                             "data-a-target": "following-channels-tab",
                             linkTo: "/directory/following/live"
-                        }, Object(v.d)("Channels", "FollowingHeaderTabs")), p.createElement(C._20, {
+                        }, Object(h.d)("Channels", "FollowingHeaderTabs")), g.createElement(F._20, {
                             key: "following-hosts-tab",
-                            active: e === b.SpadeFollowingCategory.Hosts,
+                            active: e === _.SpadeFollowingCategory.Hosts,
                             "data-a-target": "following-hosts-tab",
                             linkTo: "/directory/following/hosts"
-                        }, Object(v.d)("Hosts", "FollowingHeaderTabs")), p.createElement(C._20, {
+                        }, Object(h.d)("Hosts", "FollowingHeaderTabs")), g.createElement(F._20, {
                             key: "following-games-tab",
-                            active: e === b.SpadeFollowingCategory.Games,
+                            active: e === _.SpadeFollowingCategory.Games,
                             "data-a-target": "following-games-tab",
                             linkTo: "/directory/following/games"
-                        }, Object(v.d)("Games", "FollowingHeaderTabs")), p.createElement(C._20, {
+                        }, Object(h.d)("Games", "FollowingHeaderTabs")), g.createElement(F._20, {
                             key: "following-communities-tab",
-                            active: e === b.SpadeFollowingCategory.Communities,
-                            linkTo: Object(_.a)("/directory/following/communities"),
-                            targetBlank: Object(_.b)(),
+                            active: e === _.SpadeFollowingCategory.Communities,
+                            linkTo: Object(N.a)("/directory/following/communities"),
+                            targetBlank: Object(N.b)(),
                             "data-a-target": "following-communities-tab"
-                        }, Object(v.d)("Communities", "FollowingPage"))];
-                    if (this.state.forYouAssignment && !this.props.data.error && this.props.data.currentUser && Object(N.o)(new Date(this.props.data.currentUser.createdAt))) {
-                        var n = p.createElement(C._20, {
+                        }, Object(h.d)("Communities", "FollowingPage"))];
+                    if (this.state.forYouAssignment && !this.props.data.error && this.props.data.currentUser && Object(C.o)(new Date(this.props.data.currentUser.createdAt))) {
+                        var n = g.createElement(F._20, {
                             key: "following-foryou-tab",
                             "data-test-selector": "for-you-tab",
-                            active: e === b.SpadeFollowingCategory.ForYou,
+                            active: e === _.SpadeFollowingCategory.ForYou,
                             linkTo: "/directory/following/foryou",
                             "data-a-target": "following-foryou-tab"
-                        }, Object(v.d)("For You", "FollowingHeaderTabs"));
-                        this.state.forYouAssignment === N.d.First ? t.unshift(n) : this.state.forYouAssignment === N.d.Last && t.push(n)
+                        }, Object(h.d)("For You", "FollowingHeaderTabs"));
+                        this.state.forYouAssignment === C.d.First ? t.unshift(n) : this.state.forYouAssignment === C.d.Last && t.push(n)
                     }
-                    return p.createElement(C.V, {
+                    return g.createElement(F.V, {
                         className: "following__header-tabs",
                         margin: {
                             bottom: 2
                         }
-                    }, p.createElement(C._21, null, t))
-                }, t = m.__decorate([Object(f.c)("FollowingHeaderTabs"), Object(y.a)(F)], t)
-            }(p.Component),
-            O = n("7FW4"),
-            L = n("peXu"),
-            T = (n("4194"), n("cJkg")),
-            A = function(e) {
+                    }, g.createElement(F._21, null, t))
+                }, t = p.__decorate([Object(k.c)("FollowingHeaderTabs"), Object(S.a)(E)], t)
+            }(g.Component),
+            L = n("7FW4"),
+            T = n("peXu"),
+            A = (n("4194"), n("cJkg")),
+            V = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return m.__extends(t, e), t.prototype.componentDidMount = function() {
-                    v.n.setPageTitle(Object(v.d)("Communities You Follow", "FollowingCommunitiesPage")), this.onRender()
+                return p.__extends(t, e), t.prototype.componentDidMount = function() {
+                    h.n.setPageTitle(Object(h.d)("Communities You Follow", "FollowingCommunitiesPage")), this.onRender()
                 }, t.prototype.componentDidUpdate = function() {
                     this.onRender()
                 }, t.prototype.render = function() {
                     var e;
-                    return e = this.props.data.loading ? p.createElement(C.V, {
-                        display: C.H.Flex,
-                        position: C._4.Absolute,
+                    return e = this.props.data.loading ? g.createElement(F.V, {
+                        display: F.H.Flex,
+                        position: F._4.Absolute,
                         fullHeight: !0,
                         fullWidth: !0
-                    }, p.createElement(C.Z, {
+                    }, g.createElement(F.Z, {
                         fillContent: !0
-                    })) : this.props.data.error ? p.createElement(h.a, {
-                        message: Object(v.d)("Error loading data.", "FollowingCommunitiesPage")
-                    }) : p.createElement(i, {
+                    })) : this.props.data.error ? g.createElement(f.a, {
+                        message: Object(h.d)("Error loading data.", "FollowingCommunitiesPage")
+                    }) : g.createElement(i, {
                         communities: this.props.data.currentUser ? this.props.data.currentUser.followedCommunities.edges : []
-                    }), p.createElement(C.V, {
+                    }), g.createElement(F.V, {
                         padding: 3
-                    }, p.createElement(E, {
-                        activeCategory: b.SpadeFollowingCategory.Communities
+                    }, g.createElement(O, {
+                        activeCategory: _.SpadeFollowingCategory.Communities
                     }), e)
                 }, t.prototype.onRender = function() {
                     this.props.latencyTracking.reportInteractive()
-                }, t = m.__decorate([Object(y.a)(T, {
+                }, t = p.__decorate([Object(S.a)(A, {
                     options: {
                         fetchPolicy: "cache-and-network",
                         variables: {
                             limit: 100
                         }
                     }
-                }), Object(f.c)("FollowingCommunitiesPage", {
-                    destination: w.a.DirectoryFollowingCommunities
-                }), Object(S.a)({
-                    location: b.PageviewLocation.Directory,
+                }), Object(k.c)("FollowingCommunitiesPage", {
+                    destination: b.a.DirectoryFollowingCommunities
+                }), Object(w.a)({
+                    location: _.PageviewLocation.Directory,
                     properties: function() {
                         return {
-                            content_type: b.PageviewDirectoryContentType.Communities,
-                            tab: b.PageviewFollowingTab.Communities
+                            content_type: _.PageviewDirectoryContentType.Communities,
+                            tab: _.PageviewFollowingTab.Communities
                         }
                     }
                 })], t)
-            }(p.Component),
-            V = n("V5M+"),
-            D = n("+8VM"),
+            }(g.Component),
+            D = n("V5M+"),
+            I = n("+8VM"),
             x = n("zCIC"),
             U = n("T0IN"),
-            I = n("5G5w"),
+            G = n("5G5w"),
             P = n("6lWU"),
-            G = (n("A8Kk"), function(e) {
+            j = (n("A8Kk"), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.state = {
@@ -3184,9 +3184,9 @@ webpackJsonp([46], {
                     }, n.getAndStoreShuffledGameCards = function() {
                         n.props.data && (n.shuffledGameCards = Object(U.a)(n.props.data.games.edges.map(function(e, t) {
                             var i = e.node;
-                            return p.createElement(C.V, {
+                            return g.createElement(F.V, {
                                 key: i.id
-                            }, p.createElement(I.a, {
+                            }, g.createElement(G.a, {
                                 info: "",
                                 title: i.name,
                                 imageAlt: i.name,
@@ -3197,7 +3197,7 @@ webpackJsonp([46], {
                             }))
                         })))
                     }, n.onClickContinue = function() {
-                        n.props.onContinue && n.props.onContinue(), v.n.store.dispatch(Object(V.c)())
+                        n.props.onContinue && n.props.onContinue(), h.n.store.dispatch(Object(D.c)())
                     }, n.onFollow = function() {
                         n.setState(function(e) {
                             return {
@@ -3212,17 +3212,17 @@ webpackJsonp([46], {
                         }), n.props.onFollowChange && n.props.onFollowChange()
                     }, n
                 }
-                return m.__extends(t, e), t.prototype.render = function() {
-                    return !this.props.data || this.props.data.loading ? null : (this.shuffledGameCards || this.getAndStoreShuffledGameCards(), p.createElement(C._19, {
+                return p.__extends(t, e), t.prototype.render = function() {
+                    return !this.props.data || this.props.data.loading ? null : (this.shuffledGameCards || this.getAndStoreShuffledGameCards(), g.createElement(F._19, {
                         className: "following-games-modal",
-                        background: C.m.Base,
+                        background: F.m.Base,
                         padding: 2,
-                        overflow: C._0.Hidden,
+                        overflow: F._0.Hidden,
                         "data-a-target": "follow-games-modal",
-                        display: C.H.Flex,
-                        flexDirection: C.J.Column,
-                        flexWrap: C.K.NoWrap
-                    }, p.createElement(C.V, {
+                        display: F.H.Flex,
+                        flexDirection: F.J.Column,
+                        flexWrap: F.K.NoWrap
+                    }, g.createElement(F.V, {
                         flexGrow: 0,
                         flexShrink: 0,
                         padding: {
@@ -3231,74 +3231,74 @@ webpackJsonp([46], {
                         margin: {
                             bottom: 1
                         },
-                        textAlign: C._24.Center,
-                        display: C.H.Flex,
-                        flexDirection: C.J.Column,
-                        alignContent: C.b.Center
-                    }, p.createElement(C.V, {
+                        textAlign: F._24.Center,
+                        display: F.H.Flex,
+                        flexDirection: F.J.Column,
+                        alignContent: F.b.Center
+                    }, g.createElement(F.V, {
                         margin: {
                             bottom: .5
                         }
-                    }, p.createElement(C._23, {
-                        fontSize: C.L.Size4,
-                        color: C.F.Base,
+                    }, g.createElement(F._23, {
+                        fontSize: F.L.Size4,
+                        color: F.F.Base,
                         bold: !0
-                    }, Object(v.d)("Choose some games that you'd like to follow.", "FollowGamesModal"))), p.createElement(C._23, {
-                        fontSize: C.L.Size5,
-                        color: C.F.Alt
-                    }, Object(v.d)("This will let you pin your favorites for easy access.", "FollowGamesModal"))), p.createElement(C.V, {
+                    }, Object(h.d)("Choose some games that you'd like to follow.", "FollowGamesModal"))), g.createElement(F._23, {
+                        fontSize: F.L.Size5,
+                        color: F.F.Alt
+                    }, Object(h.d)("This will let you pin your favorites for easy access.", "FollowGamesModal"))), g.createElement(F.V, {
                         className: "following-games-modal__list",
                         margin: {
                             bottom: 1
                         },
                         flexGrow: 1
-                    }, p.createElement(x.b, {
+                    }, g.createElement(x.b, {
                         suppressScrollX: !0
-                    }, p.createElement(C.V, {
+                    }, g.createElement(F.V, {
                         padding: 1
-                    }, p.createElement(C._34, {
-                        childWidth: C._35.Small,
-                        gutterSize: C._36.Small,
+                    }, g.createElement(F._34, {
+                        childWidth: F._35.Small,
+                        gutterSize: F._36.Small,
                         placeholderItems: 99
-                    }, this.shuffledGameCards)))), p.createElement(C.V, {
-                        display: C.H.Flex,
-                        justifyContent: C.U.Center,
+                    }, this.shuffledGameCards)))), g.createElement(F.V, {
+                        display: F.H.Flex,
+                        justifyContent: F.U.Center,
                         padding: {
                             y: 1
                         },
                         flexGrow: 0,
                         flexShrink: 0
-                    }, p.createElement(C.u, {
-                        size: C.x.Large,
+                    }, g.createElement(F.u, {
+                        size: F.x.Large,
                         onClick: this.onClickContinue,
                         disabled: 0 === this.state.followCount
-                    }, Object(v.d)("Continue", "FollowGamesModal"))), p.createElement(D.a, null)))
-                }, t = m.__decorate([Object(y.a)(P, {
+                    }, Object(h.d)("Continue", "FollowGamesModal"))), g.createElement(I.a, null)))
+                }, t = p.__decorate([Object(S.a)(P, {
                     options: {
                         variables: {
                             limit: 40
                         }
                     }
                 })], t)
-            }(p.Component)),
-            j = n("NY9D"),
-            R = function(e) {
+            }(g.Component)),
+            R = n("NY9D"),
+            H = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return m.__extends(t, e), t.prototype.render = function() {
-                    var e = p.createElement(C.V, {
+                return p.__extends(t, e), t.prototype.render = function() {
+                    var e = g.createElement(F.V, {
                         margin: {
                             bottom: 2
                         }
-                    }, p.createElement(C._23, {
-                        type: C._28.H4,
-                        color: C.F.Alt2,
-                        fontSize: C.L.Size5,
-                        transform: C._27.Uppercase,
+                    }, g.createElement(F._23, {
+                        type: F._28.H4,
+                        color: F.F.Alt2,
+                        fontSize: F.L.Size5,
+                        transform: F._27.Uppercase,
                         "data-a-target": "live-games-header"
-                    }, Object(v.d)("Live games", "LiveGames")));
-                    if (!this.props.games) return p.createElement("div", null, e);
+                    }, Object(h.d)("Live games", "LiveGames")));
+                    if (!this.props.games) return g.createElement("div", null, e);
                     var t = this.props.games.filter(function(e) {
                         return e && !!e.viewersCount
                     });
@@ -3308,12 +3308,12 @@ webpackJsonp([46], {
                             var n = e.name.toLowerCase(),
                                 i = t.name.toLowerCase();
                             return n < i ? -1 : n > i ? 1 : 0
-                        })) || 0 === t.length) return p.createElement(C._19, {
+                        })) || 0 === t.length) return g.createElement(F._19, {
                         fullWidth: !0,
-                        background: C.m.Alt2,
-                        display: C.H.Flex,
-                        flexDirection: C.J.Column,
-                        alignItems: C.c.Center,
+                        background: F.m.Alt2,
+                        display: F.H.Flex,
+                        flexDirection: F.J.Column,
+                        alignItems: F.c.Center,
                         padding: {
                             y: 3
                         },
@@ -3321,44 +3321,44 @@ webpackJsonp([46], {
                             y: 2
                         },
                         "data-target": "following__follow-games-cta"
-                    }, p.createElement(C.V, {
+                    }, g.createElement(F.V, {
                         margin: {
                             bottom: 1
                         }
-                    }, p.createElement(C._23, {
-                        fontSize: C.L.Size4,
-                        color: C.F.Alt2
-                    }, Object(v.d)("You can now follow your favorite games!", "LiveGames"))), p.createElement(C.V, {
+                    }, g.createElement(F._23, {
+                        fontSize: F.L.Size4,
+                        color: F.F.Alt2
+                    }, Object(h.d)("You can now follow your favorite games!", "LiveGames"))), g.createElement(F.V, {
                         margin: {
                             top: .5
                         }
-                    }, p.createElement(C.u, {
-                        size: C.x.Large,
+                    }, g.createElement(F.u, {
+                        size: F.x.Large,
                         onClick: this.props.showFollowGamesModal,
                         "data-a-target": "find-out-more-button"
-                    }, Object(v.d)("Find Out More!", "LiveGames"))));
+                    }, Object(h.d)("Find Out More!", "LiveGames"))));
                     var n;
                     if (this.props.showSample && this.props.directoryWidth && this.props.directoryWidth > 0) {
-                        var i = Object(L.a)(this.props.directoryWidth, 180, 1);
-                        i < t.length && (t = t.slice(0, i - 1), n = p.createElement(C.V, {
+                        var i = Object(T.a)(this.props.directoryWidth, 180, 1);
+                        i < t.length && (t = t.slice(0, i - 1), n = g.createElement(F.V, {
                             margin: {
                                 bottom: 2
                             }
-                        }, p.createElement(O.a, {
+                        }, g.createElement(L.a, {
                             subHeader: "Live Games",
                             linkTo: "/directory/following/games",
-                            aspectRatio: C.k.Aspect3x4
+                            aspectRatio: F.k.Aspect3x4
                         })))
                     }
                     var a = t.map(function(e, t) {
-                        return e ? p.createElement(C.V, {
+                        return e ? g.createElement(F.V, {
                             key: e.id,
                             margin: {
                                 bottom: 2
                             }
-                        }, p.createElement(C.t, {
+                        }, g.createElement(F.t, {
                             linkTo: {
-                                pathname: Object(j.c)(e.name),
+                                pathname: Object(R.c)(e.name),
                                 state: {
                                     content: "twitch_following",
                                     medium: "live_game",
@@ -3367,96 +3367,96 @@ webpackJsonp([46], {
                             },
                             title: e.name,
                             imageAlt: e.name + " cover image",
-                            imageSrc: e.boxArtURL || v.a.defaultBoxArtURL,
-                            info: Object(v.d)("{viewerCount,number} viewers", {
+                            imageSrc: e.boxArtURL || h.a.defaultBoxArtURL,
+                            info: Object(h.d)("{viewerCount,number} viewers", {
                                 viewerCount: e.viewersCount
                             }, "LiveGames"),
                             "data-a-target": "live-game-card-" + t
                         })) : null
                     });
-                    return p.createElement("div", null, e, p.createElement(C._34, {
-                        gutterSize: C._36.Small,
-                        childWidth: C._35.Small,
+                    return g.createElement("div", null, e, g.createElement(F._34, {
+                        gutterSize: F._36.Small,
+                        childWidth: F._35.Small,
                         placeholderItems: 30
                     }, a, n))
                 }, t
-            }(p.Component),
-            H = Object(o.a)(null, function(e, t) {
-                return Object.assign(Object(s.bindActionCreators)({
+            }(g.Component),
+            M = Object(s.a)(null, function(e, t) {
+                return Object.assign(Object(d.bindActionCreators)({
                     showFollowGamesModal: function() {
-                        return Object(V.d)(G, {
+                        return Object(D.d)(j, {
                             onFollowChange: t.onFollowChange
                         })
                     }
                 }, e), t)
-            })(R),
-            M = n("Au+y"),
-            B = function(e) {
+            })(H),
+            B = n("Au+y"),
+            W = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return m.__extends(t, e), t.prototype.componentDidMount = function() {
-                    v.n.setPageTitle(Object(v.d)("Games You Follow", "FollowingGamesPage")), this.onRender()
+                return p.__extends(t, e), t.prototype.componentDidMount = function() {
+                    h.n.setPageTitle(Object(h.d)("Games You Follow", "FollowingGamesPage")), this.onRender()
                 }, t.prototype.componentDidUpdate = function() {
                     this.onRender()
                 }, t.prototype.render = function() {
                     var e;
-                    return e = this.props.data.loading ? p.createElement(C.V, {
-                        display: C.H.Flex,
-                        position: C._4.Absolute,
+                    return e = this.props.data.loading ? g.createElement(F.V, {
+                        display: F.H.Flex,
+                        position: F._4.Absolute,
                         fullHeight: !0,
                         fullWidth: !0
-                    }, p.createElement(C.Z, {
+                    }, g.createElement(F.Z, {
                         fillContent: !0
-                    })) : this.props.data.error ? p.createElement(h.a, {
-                        message: Object(v.d)("Error loading data.", "FollowingGamesPage")
-                    }) : p.createElement(H, {
+                    })) : this.props.data.error ? g.createElement(f.a, {
+                        message: Object(h.d)("Error loading data.", "FollowingGamesPage")
+                    }) : g.createElement(M, {
                         games: this.props.data.currentUser ? this.props.data.currentUser.followedGames.nodes : [],
                         onFollowChange: this.props.data.refetch
-                    }), p.createElement(C.V, {
+                    }), g.createElement(F.V, {
                         padding: 3
-                    }, p.createElement(E, {
-                        activeCategory: b.SpadeFollowingCategory.Games
+                    }, g.createElement(O, {
+                        activeCategory: _.SpadeFollowingCategory.Games
                     }), e)
                 }, t.prototype.onRender = function() {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
-                }, t = m.__decorate([Object(y.a)(M, {
+                }, t = p.__decorate([Object(S.a)(B, {
                     options: {
                         fetchPolicy: "cache-and-network",
                         variables: {
                             limit: 100
                         }
                     }
-                }), Object(f.c)("FollowingGamesPage", {
-                    destination: w.a.DirectoryFollowingGames
-                }), Object(S.a)({
-                    location: b.PageviewLocation.Directory,
+                }), Object(k.c)("FollowingGamesPage", {
+                    destination: b.a.DirectoryFollowingGames
+                }), Object(w.a)({
+                    location: _.PageviewLocation.Directory,
                     skip: function(e) {
                         return e.data.loading || !!e.data.error
                     },
                     properties: function(e) {
                         return {
-                            content_type: b.PageviewDirectoryContentType.Games,
-                            tab: b.PageviewFollowingTab.Games,
+                            content_type: _.PageviewDirectoryContentType.Games,
+                            tab: _.PageviewFollowingTab.Games,
                             num_live_games: e.data.currentUser.followedGames.nodes.filter(function(e) {
                                 return e && e.viewersCount > 0
                             }).length
                         }
                     }
                 })], t)
-            }(p.Component),
-            W = n("+GT7"),
-            z = n("SZoP"),
-            q = (n("tkib"), n("NAfc")),
-            Q = 50,
-            Y = function(e) {
+            }(g.Component),
+            z = n("+GT7"),
+            q = n("SZoP"),
+            Q = (n("tkib"), n("NAfc")),
+            Y = 50,
+            $ = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        maxCount: Q
+                        maxCount: Y
                     }, t.onClickViewAll = function() {
-                        return m.__awaiter(t, void 0, void 0, function() {
-                            return m.__generator(this, function(e) {
+                        return p.__awaiter(t, void 0, void 0, function() {
+                            return p.__generator(this, function(e) {
                                 switch (e.label) {
                                     case 0:
                                         return [4, this.props.data.refetch({
@@ -3471,41 +3471,41 @@ webpackJsonp([46], {
                         })
                     }, t
                 }
-                return m.__extends(t, e), t.prototype.componentDidMount = function() {
-                    v.n.setPageTitle(Object(v.d)("Hosts You Follow", "FollowingHostsPage")), this.onRender()
+                return p.__extends(t, e), t.prototype.componentDidMount = function() {
+                    h.n.setPageTitle(Object(h.d)("Hosts You Follow", "FollowingHostsPage")), this.onRender()
                 }, t.prototype.componentDidUpdate = function() {
                     this.onRender()
                 }, t.prototype.render = function() {
                     var e;
-                    if (this.props.data.loading) e = p.createElement(C.V, {
-                        display: C.H.Flex,
-                        position: C._4.Absolute,
+                    if (this.props.data.loading) e = g.createElement(F.V, {
+                        display: F.H.Flex,
+                        position: F._4.Absolute,
                         fullHeight: !0,
                         fullWidth: !0
-                    }, p.createElement(C.Z, {
+                    }, g.createElement(F.Z, {
                         fillContent: !0
                     }));
-                    else if (this.props.data.error) e = p.createElement(h.a, {
-                        message: Object(v.d)("Error loading data.", "FollowingHostsPage")
+                    else if (this.props.data.error) e = g.createElement(f.a, {
+                        message: Object(h.d)("Error loading data.", "FollowingHostsPage")
                     });
                     else {
                         var t = this.props.data.currentUser ? this.props.data.currentUser.followedHosts.nodes : [],
                             n = this.props.data.currentUser ? this.props.data.currentUser.follows.totalCount : 0;
-                        e = p.createElement(l, {
+                        e = g.createElement(l, {
                             hosts: t,
                             followsCount: n,
                             maxCount: this.state.maxCount,
                             onClickViewAll: this.onClickViewAll
                         })
                     }
-                    return p.createElement(C.V, {
+                    return g.createElement(F.V, {
                         padding: 3
-                    }, p.createElement(E, {
-                        activeCategory: b.SpadeFollowingCategory.Hosts
+                    }, g.createElement(O, {
+                        activeCategory: _.SpadeFollowingCategory.Hosts
                     }), e)
                 }, t.prototype.onRender = function() {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
-                }, t = m.__decorate([Object(y.a)(q, {
+                }, t = p.__decorate([Object(S.a)(Q, {
                     options: function() {
                         return {
                             fetchPolicy: "cache-and-network",
@@ -3514,89 +3514,115 @@ webpackJsonp([46], {
                             }
                         }
                     }
-                }), Object(f.c)("FollowingHostsPage", {
-                    destination: w.a.DirectoryFollowingHosts
-                }), Object(S.a)({
-                    location: b.PageviewLocation.Directory,
+                }), Object(k.c)("FollowingHostsPage", {
+                    destination: b.a.DirectoryFollowingHosts
+                }), Object(w.a)({
+                    location: _.PageviewLocation.Directory,
                     skip: function(e) {
                         return e.data.loading || !!e.data.error
                     },
                     properties: function(e) {
                         return {
-                            content_type: b.PageviewDirectoryContentType.Hosts,
-                            tab: b.PageviewFollowingTab.Hosts,
+                            content_type: _.PageviewDirectoryContentType.Hosts,
+                            tab: _.PageviewFollowingTab.Hosts,
                             num_host_channels: e.data.currentUser.followedHosts.nodes.length
                         }
                     }
                 })], t)
-            }(p.Component),
-            $ = n("DtWM"),
-            X = n("81qH"),
-            Z = n("VDV3"),
-            J = n("TGxD"),
-            K = function(e) {
+            }(g.Component),
+            X = n("DtWM"),
+            Z = n("iOr9"),
+            J = n("bZTi"),
+            K = n("VDV3"),
+            ee = n("TGxD"),
+            te = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return m.__extends(t, e), t.prototype.componentDidUpdate = function() {
+                return p.__extends(t, e), t.prototype.componentDidUpdate = function() {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     if (this.props.data.loading || this.props.data.error || 0 === this.props.data.currentUser.recommendations.videos.edges.length) return null;
-                    var e = p.createElement(C.V, {
+                    var e = g.createElement(F.V, {
                             margin: {
                                 bottom: 2
                             }
-                        }, p.createElement(C._23, {
-                            type: C._28.H4,
-                            color: C.F.Alt2,
-                            fontSize: C.L.Size5,
-                            transform: C._27.Uppercase
-                        }, Object(v.d)("Based on your viewing history", "SuggestedVideos"))),
+                        }, g.createElement(F._23, {
+                            type: F._28.H4,
+                            color: F.F.Alt2,
+                            fontSize: F.L.Size5,
+                            transform: F._27.Uppercase
+                        }, Object(h.d)("Based on your viewing history", "SuggestedVideos"))),
                         t = [];
                     if (this.props.data.currentUser.recommendations.videos && (t = this.props.data.currentUser.recommendations.videos.edges.map(function(e) {
                             return e.node
                         })), this.props.directoryWidth > 0) {
-                        var n = Object(L.a)(this.props.directoryWidth, 240, 2);
+                        var n = Object(T.a)(this.props.directoryWidth, 240, 2);
                         t = t.slice(0, n)
                     }
-                    return p.createElement("div", null, e, p.createElement(Z.b, {
-                        trackingMedium: b.PageviewMedium.Following,
-                        trackingContent: b.PageviewContent.SuggestedVideos,
-                        videoCardSize: C._35.Medium,
+                    return g.createElement("div", null, e, g.createElement(K.b, {
+                        trackingMedium: _.PageviewMedium.Following,
+                        trackingContent: _.PageviewContent.SuggestedVideos,
+                        videoCardSize: F._35.Medium,
                         videos: t
                     }))
-                }, t = m.__decorate([Object(y.a)(J, {
+                }, t = p.__decorate([Object(S.a)(ee, {
                     options: {
                         fetchPolicy: "network-only",
                         variables: {
                             limit: 30
                         }
                     }
-                }), Object(f.c)("SuggestedVideos")], t)
-            }(p.Component),
-            ee = n("iOr9"),
-            te = n("bZTi"),
-            ne = function(e) {
+                }), Object(k.c)("SuggestedVideos")], t)
+            }(g.Component);
+        ! function(e) {
+            e.FOLLOWING_BASIC = "following_basic", e.CONTROL = "control"
+        }(o || (o = {}));
+        var ne = function(e) {
+                var t = {
+                    name: "TWILIGHT_VOD_REDITUS",
+                    assignments: (i = {
+                        fallback: function() {
+                            return g.createElement(te, {
+                                directoryWidth: e.directoryWidth
+                            })
+                        }
+                    }, i[o.FOLLOWING_BASIC] = function() {
+                        return J.a.wrap(function() {
+                            return n.e(69).then(n.bind(null, "crkb"))
+                        }, "FinishWatchingTower")({
+                            directoryWidth: e.directoryWidth
+                        })
+                    }, i),
+                    loader: function() {
+                        return null
+                    }
+                };
+                return g.createElement(Z.a, p.__assign({}, t));
+                var i
+            },
+            ie = n("81qH"),
+            ae = function(e) {
                 var t = {
                     assignments: {
                         fallback: function() {
                             return null
                         },
                         enabled: function() {
-                            return te.a.wrap(function() {
+                            return J.a.wrap(function() {
                                 return n.e(67).then(n.bind(null, "IwGL"))
                             }, "LatestVideosFromFollowedCarousel")(e)
                         }
                     },
                     loader: function() {
-                        return p.createElement(C.Z, null)
+                        return g.createElement(F.Z, null)
                     },
                     name: "TWILIGHT_FOLLOWING_INDEX_LATEST_VIDEOS_V2"
                 };
-                return p.createElement(ee.a, m.__assign({}, t))
+                return g.createElement(Z.a, p.__assign({}, t))
             },
-            ie = n("X9eO"),
-            ae = function(e) {
+            le = n("X9eO"),
+            re = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -3607,93 +3633,93 @@ webpackJsonp([46], {
                         })
                     }, t
                 }
-                return m.__extends(t, e), t.prototype.componentDidMount = function() {
-                    v.n.setPageTitle(Object(v.d)("Following", "FollowingPage")), this.onRender()
+                return p.__extends(t, e), t.prototype.componentDidMount = function() {
+                    h.n.setPageTitle(Object(h.d)("Following", "FollowingPage")), this.onRender()
                 }, t.prototype.componentDidUpdate = function() {
                     this.onRender()
                 }, t.prototype.render = function() {
                     var e = this.props.data && this.props.data.currentUser;
-                    return this.props.data.error || !this.props.data.loading && !e ? p.createElement(h.a, {
-                        message: Object(v.d)("Error loading data.", "FollowingPage")
-                    }) : p.createElement(C.V, {
+                    return this.props.data.error || !this.props.data.loading && !e ? g.createElement(f.a, {
+                        message: Object(h.d)("Error loading data.", "FollowingPage")
+                    }) : g.createElement(F.V, {
                         padding: 3
-                    }, p.createElement(E, null), p.createElement(r, {
+                    }, g.createElement(O, null), g.createElement(r, {
                         key: "live-channels",
                         showSample: !0,
                         directoryWidth: this.state.directoryWidth,
                         users: this.props.data.loading ? null : e && e.followedLiveUsers.nodes || [],
                         followsCount: e ? e.follows.totalCount : 0
-                    }), p.createElement(ne, {
+                    }), g.createElement(ae, {
                         tracking: {
-                            content: b.PageviewContent.Following,
-                            location: b.PageviewLocation.Directory,
-                            medium: b.PageviewMedium.Following
+                            content: _.PageviewContent.Following,
+                            location: _.PageviewLocation.Directory,
+                            medium: _.PageviewMedium.Following
                         }
-                    }), e && e.followedHosts.nodes.length > 0 && p.createElement(l, {
+                    }), e && e.followedHosts.nodes.length > 0 && g.createElement(l, {
                         key: "live-hosts",
                         showSample: !0,
                         directoryWidth: this.state.directoryWidth,
                         hosts: e ? e.followedHosts.nodes : [],
                         followsCount: e ? e.follows.totalCount : 0
-                    }), e && p.createElement(H, {
+                    }), e && g.createElement(M, {
                         key: "live-games",
                         showSample: !0,
                         directoryWidth: this.state.directoryWidth,
                         games: e ? e.followedGames.nodes : [],
                         onFollowChange: this.props.data.refetch
-                    }), p.createElement(K, {
-                        key: "suggested-videos",
+                    }), g.createElement(ne, {
+                        key: "finish-watching-experiments",
                         directoryWidth: this.state.directoryWidth
-                    }), e && p.createElement(i, {
+                    }), e && g.createElement(i, {
                         key: "live-communities",
                         showSample: !0,
                         communities: e ? e.followedCommunities.edges : [],
                         directoryWidth: this.state.directoryWidth
-                    }), p.createElement($.a, {
+                    }), g.createElement(X.a, {
                         onResize: this.onResize
                     }))
                 }, t.prototype.onRender = function() {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
-                }, t = m.__decorate([Object(y.a)(ie, {
+                }, t = p.__decorate([Object(S.a)(le, {
                     options: {
                         fetchPolicy: "cache-and-network",
                         variables: {
                             limit: 30
                         }
                     }
-                }), Object(f.c)("FollowingIndexPage", {
-                    destination: w.a.DirectoryFollowingIndex
-                }), Object(S.a)({
-                    location: b.PageviewLocation.Directory,
+                }), Object(k.c)("FollowingIndexPage", {
+                    destination: b.a.DirectoryFollowingIndex
+                }), Object(w.a)({
+                    location: _.PageviewLocation.Directory,
                     properties: function() {
                         return {
-                            content_type: b.PageviewDirectoryContentType.Mixed,
-                            tab: b.PageviewFollowingTab.Overview
+                            content_type: _.PageviewDirectoryContentType.Mixed,
+                            tab: _.PageviewFollowingTab.Overview
                         }
                     }
                 })], t)
-            }(p.Component),
-            le = n("BWqq"),
-            re = function(e) {
+            }(g.Component),
+            oe = n("BWqq"),
+            se = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return m.__extends(t, e), t.prototype.componentDidMount = function() {
-                    v.n.setPageTitle(Object(v.d)("Channels You Follow", "FollowingLivePage")), this.onRender()
+                return p.__extends(t, e), t.prototype.componentDidMount = function() {
+                    h.n.setPageTitle(Object(h.d)("Channels You Follow", "FollowingLivePage")), this.onRender()
                 }, t.prototype.componentDidUpdate = function() {
                     this.onRender()
                 }, t.prototype.render = function() {
                     var e, t = !1;
-                    if (this.props.data.loading && !this.props.data.currentUser) e = p.createElement(C.V, {
-                        display: C.H.Flex,
-                        position: C._4.Absolute,
+                    if (this.props.data.loading && !this.props.data.currentUser) e = g.createElement(F.V, {
+                        display: F.H.Flex,
+                        position: F._4.Absolute,
                         fullHeight: !0,
                         fullWidth: !0
-                    }, p.createElement(C.Z, {
+                    }, g.createElement(F.Z, {
                         fillContent: !0
                     }));
-                    else if (this.props.data.error) e = p.createElement(h.a, {
-                        message: Object(v.d)("Error loading data.", "FollowingLivePage")
+                    else if (this.props.data.error) e = g.createElement(f.a, {
+                        message: Object(h.d)("Error loading data.", "FollowingLivePage")
                     });
                     else {
                         var n = this.props.data.currentUser,
@@ -3702,23 +3728,23 @@ webpackJsonp([46], {
                             return e.node
                         }));
                         var a = this.props.data.currentUser ? this.props.data.currentUser.follows.totalCount : 0;
-                        e = p.createElement(r, {
+                        e = g.createElement(r, {
                             users: i,
                             followsCount: a
                         }), t = this.props.data.currentUser && n.followedLiveUsers.pageInfo.hasNextPage
                     }
-                    return p.createElement(C.V, {
+                    return g.createElement(F.V, {
                         padding: 3
-                    }, p.createElement(E, {
-                        activeCategory: b.SpadeFollowingCategory.Live
-                    }), e, p.createElement(x.a, {
+                    }, g.createElement(O, {
+                        activeCategory: _.SpadeFollowingCategory.Live
+                    }), e, g.createElement(x.a, {
                         enabled: t,
                         loadMore: this.props.loadMore,
                         pixelThreshold: 100
                     }))
                 }, t.prototype.onRender = function() {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
-                }, t = m.__decorate([Object(y.a)(le, {
+                }, t = p.__decorate([Object(S.a)(oe, {
                     options: function() {
                         return {
                             fetchPolicy: "cache-and-network",
@@ -3728,11 +3754,11 @@ webpackJsonp([46], {
                         }
                     },
                     props: function(e) {
-                        return m.__assign({}, e, {
+                        return p.__assign({}, e, {
                             loadMore: function() {
                                 var t = e.data.currentUser.followedLiveUsers.edges;
                                 return e.data.fetchMore({
-                                    query: le,
+                                    query: oe,
                                     variables: {
                                         limit: 30,
                                         cursor: t[t.length - 1].cursor
@@ -3740,8 +3766,8 @@ webpackJsonp([46], {
                                     updateQuery: function(e, t) {
                                         var n = t.fetchMoreResult;
                                         return {
-                                            currentUser: m.__assign({}, n.currentUser, {
-                                                followedLiveUsers: m.__assign({}, n.currentUser.followedLiveUsers, {
+                                            currentUser: p.__assign({}, n.currentUser, {
+                                                followedLiveUsers: p.__assign({}, n.currentUser.followedLiveUsers, {
                                                     edges: function(e, t) {
                                                         var n = new Set(e.map(function(e) {
                                                             return e.node.id
@@ -3758,34 +3784,34 @@ webpackJsonp([46], {
                             }
                         })
                     }
-                }), Object(f.c)("FollowingLivePage", {
-                    destination: w.a.DirectoryFollowingLiveChannels
-                }), Object(S.a)({
-                    location: b.PageviewLocation.Directory,
+                }), Object(k.c)("FollowingLivePage", {
+                    destination: b.a.DirectoryFollowingLiveChannels
+                }), Object(w.a)({
+                    location: _.PageviewLocation.Directory,
                     skip: function(e) {
                         return e.data.loading || !!e.data.error
                     },
                     properties: function(e) {
                         return {
-                            content_type: b.PageviewDirectoryContentType.Channels,
-                            tab: b.PageviewFollowingTab.Channels,
+                            content_type: _.PageviewDirectoryContentType.Channels,
+                            tab: _.PageviewFollowingTab.Channels,
                             num_live_channels: e.data.currentUser.followedLiveUsers.edges.length
                         }
                     }
                 })], t)
-            }(p.Component),
-            oe = function() {
-                return n.e(71).then(n.bind(null, "oms2"))
+            }(g.Component),
+            de = function() {
+                return n.e(72).then(n.bind(null, "oms2"))
             },
-            se = n("54wg"),
-            de = n("F8kA"),
-            ue = n("IOwa"),
-            ce = n("2o2f"),
-            me = n("/XPz"),
-            pe = n("KSGD"),
-            ge = n("S4HN"),
-            ve = n("AadB"),
-            he = function(e) {
+            ue = n("54wg"),
+            ce = n("F8kA"),
+            me = n("IOwa"),
+            pe = n("2o2f"),
+            ge = n("/XPz"),
+            ve = n("KSGD"),
+            he = n("S4HN"),
+            fe = n("AadB"),
+            ke = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.impressionEventFired = !1, t.setRef = function(e) {
@@ -3800,33 +3826,33 @@ webpackJsonp([46], {
                         var e = {
                             channel: t.props.streamNode.title,
                             channel_id: t.props.streamNode.id,
-                            action: ge.a.Impression,
+                            action: he.a.Impression,
                             parent_game: t.props.streamNode.game ? t.props.streamNode.game.name : "",
                             content_index: t.props.streamIndex
                         };
-                        Object(ge.c)(e)
+                        Object(he.c)(e)
                     }, t.trackClickEvent = function() {
                         var e = {
                             channel: t.props.streamNode.title,
                             channel_id: t.props.streamNode.id,
-                            action: ge.a.Click,
+                            action: he.a.Click,
                             parent_game: t.props.streamNode.game ? t.props.streamNode.game.name : "",
                             content_index: t.props.streamIndex
                         };
-                        Object(ge.c)(e)
+                        Object(he.c)(e)
                     }, t
                 }
-                return m.__extends(t, e), t.prototype.componentDidMount = function() {
+                return p.__extends(t, e), t.prototype.componentDidMount = function() {
                     var e = this.context.registerReceiver;
-                    e ? this.unregister = e(this) : v.i.warn("<StreamThumbnailWithTrackingComponent /> initialized missing a <ScrollableArea /> provider")
+                    e ? this.unregister = e(this) : h.i.warn("<StreamThumbnailWithTrackingComponent /> initialized missing a <ScrollableArea /> provider")
                 }, t.prototype.componentWillUnmount = function() {
                     this.unregister && this.unregister()
                 }, t.prototype.render = function() {
-                    return p.createElement("div", {
+                    return g.createElement("div", {
                         onClick: this.trackClickEvent
-                    }, p.createElement(C.V, {
+                    }, g.createElement(F.V, {
                         refDelegate: this.setRef
-                    }, p.createElement(ve.b, {
+                    }, g.createElement(fe.b, {
                         key: this.props.streamIndex,
                         directoryName: this.props.directoryName,
                         directoryType: this.props.directoryType,
@@ -3835,44 +3861,44 @@ webpackJsonp([46], {
                         trackingMedium: this.props.trackingMedium
                     })))
                 }, t.prototype.checkVisible = function(e) {
-                    return m.__awaiter(this, void 0, void 0, function() {
-                        return m.__generator(this, function(t) {
+                    return p.__awaiter(this, void 0, void 0, function() {
+                        return p.__generator(this, function(t) {
                             return !this.impressionEventFired && this.isVisible(e) && (this.trackImpression(), this.impressionEventFired = !0), [2]
                         })
                     })
                 }, t.contextTypes = {
-                    registerReceiver: pe.func
+                    registerReceiver: ve.func
                 }, t
-            }(p.Component),
-            fe = (n("6xx4"), "community-streams-row__title"),
-            ke = function(e) {
+            }(g.Component),
+            ye = (n("6xx4"), "community-streams-row__title"),
+            Se = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderTitle = function() {
-                        if (t.props.title) return p.createElement(C.V, {
+                        if (t.props.title) return g.createElement(F.V, {
                             className: "community-streams-row__title"
-                        }, p.createElement(C._23, {
-                            "data-test-selector": fe,
-                            color: C.F.Alt2,
-                            fontSize: C.L.Size5,
-                            transform: C._27.Uppercase
-                        }, p.createElement(de.a, {
-                            to: Object(j.c)(t.props.name)
+                        }, g.createElement(F._23, {
+                            "data-test-selector": ye,
+                            color: F.F.Alt2,
+                            fontSize: F.L.Size5,
+                            transform: F._27.Uppercase
+                        }, g.createElement(ce.a, {
+                            to: Object(R.c)(t.props.name)
                         }, t.props.title)))
                     }, t.renderCommunityStreams = function() {
                         return t.props.data.map(function(e, n) {
-                            return p.createElement(C.V, {
+                            return g.createElement(F.V, {
                                 key: "community-streams-row-stream-thumbnail-" + e.id,
-                                position: C._4.Relative
-                            }, p.createElement(C.V, {
+                                position: F._4.Relative
+                            }, g.createElement(F.V, {
                                 padding: .5,
-                                position: C._4.Absolute,
-                                zIndex: C._39.Above
-                            }, p.createElement(ue.a, {
-                                type: ce.a.Live
-                            })), p.createElement(he, {
+                                position: F._4.Absolute,
+                                zIndex: F._39.Above
+                            }, g.createElement(me.a, {
+                                type: pe.a.Live
+                            })), g.createElement(ke, {
                                 key: e.id,
-                                trackingMedium: b.PageviewMedium.BrowseForYou,
+                                trackingMedium: _.PageviewMedium.BrowseForYou,
                                 directoryName: t.props.name,
                                 directoryType: t.props.type,
                                 streamIndex: n,
@@ -3881,38 +3907,38 @@ webpackJsonp([46], {
                         })
                     }, t
                 }
-                return m.__extends(t, e), t.prototype.componentDidMount = function() {
+                return p.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     if (!this.props.data.length) return null;
                     var e = 1 === this.props.data.length ? 1 : 0;
-                    return p.createElement(C.V, {
+                    return g.createElement(F.V, {
                         "data-test-selector": "community-streams-row",
                         flexShrink: 0
-                    }, p.createElement(C.V, {
-                        alignItems: C.c.Center,
-                        display: C.H.Flex,
-                        flexWrap: C.K.NoWrap,
-                        justifyContent: C.U.Between,
+                    }, g.createElement(F.V, {
+                        alignItems: F.c.Center,
+                        display: F.H.Flex,
+                        flexWrap: F.K.NoWrap,
+                        justifyContent: F.U.Between,
                         margin: {
                             bottom: .5
                         }
-                    }, this.renderTitle(), p.createElement(me.a, {
+                    }, this.renderTitle(), g.createElement(ge.a, {
                         gameName: this.props.name,
-                        src: b.PageviewMedium.BrowseForYou
-                    })), p.createElement(x.b, null, p.createElement(C.V, {
-                        display: C.H.Flex
-                    }, p.createElement(C._34, {
-                        gutterSize: C._36.Small,
-                        childWidth: C._35.Large,
+                        src: _.PageviewMedium.BrowseForYou
+                    })), g.createElement(x.b, null, g.createElement(F.V, {
+                        display: F.H.Flex
+                    }, g.createElement(F._34, {
+                        gutterSize: F._36.Small,
+                        childWidth: F._35.Large,
                         noWrap: !0,
                         placeholderItems: e
                     }, this.renderCommunityStreams()))))
-                }, t = m.__decorate([Object(f.c)("CommunityStreamsRow")], t)
-            }(p.Component),
-            ye = n("QcSp"),
-            Se = 7,
-            we = function(e) {
+                }, t = p.__decorate([Object(k.c)("CommunityStreamsRow")], t)
+            }(g.Component),
+            we = n("QcSp"),
+            be = 7,
+            _e = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getData = function() {
@@ -3922,8 +3948,8 @@ webpackJsonp([46], {
                                 return e.stream && e.stream.id && e.stream.broadcaster && e.stream.broadcaster.login
                             }).map(function(e) {
                                 return e.stream
-                            }).slice(0, Se);
-                            if (n.length === Se) return n;
+                            }).slice(0, be);
+                            if (n.length === be) return n;
                             var i = new Set(n.map(function(e) {
                                     return e.id
                                 })),
@@ -3933,7 +3959,7 @@ webpackJsonp([46], {
                                 }).map(function(e) {
                                     return e.node
                                 });
-                            return n.concat(a.slice(0, Se - n.length))
+                            return n.concat(a.slice(0, be - n.length))
                         }
                         return !e && t.communityStreamsLoaded() && t.props.communityStreamsData.directory.streams && t.props.communityStreamsData.directory.streams.edges ? t.props.communityStreamsData.directory.streams.edges.filter(function(e) {
                             var t = e.node;
@@ -3949,28 +3975,28 @@ webpackJsonp([46], {
                         return t.props.rankedChannelData && !t.props.rankedChannelData.loading && !t.props.rankedChannelData.error && t.props.rankedChannelData.users
                     }, t
                 }
-                return m.__extends(t, e), t.prototype.componentDidUpdate = function() {
+                return p.__extends(t, e), t.prototype.componentDidUpdate = function() {
                     (this.rankedChannelStreamsInputPresent() && this.rankedChannelStreamsLoaded() || !this.rankedChannelStreamsInputPresent() && !this.rankedChannelStreamsLoaded()) && this.communityStreamsLoaded() && this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return p.createElement(ke, {
+                    return g.createElement(Se, {
                         name: this.props.name,
                         title: this.props.title,
                         type: this.props.type,
                         data: this.getData()
                     })
-                }, t = m.__decorate([Object(y.a)(se, {
+                }, t = p.__decorate([Object(S.a)(ue, {
                     name: "communityStreamsData",
                     options: function(e) {
                         return {
                             fetchPolicy: "network-only",
                             variables: {
                                 name: e.name,
-                                limit: Se,
+                                limit: be,
                                 type: e.type
                             }
                         }
                     }
-                }), Object(y.a)(ye, {
+                }), Object(S.a)(we, {
                     name: "rankedChannelData",
                     options: function(e) {
                         return {
@@ -3983,35 +4009,35 @@ webpackJsonp([46], {
                     skip: function(e) {
                         return !e.channelLogins || !e.channelLogins.length
                     }
-                }), Object(f.c)("CommunityStreamsRowContainer")], t)
-            }(p.Component),
-            be = (n("4az8"), n("QjjF")),
-            _e = "for-you__empty",
-            Ne = "for-you__add_more_games",
-            Ce = 10,
-            Fe = function(e) {
+                }), Object(k.c)("CommunityStreamsRowContainer")], t)
+            }(g.Component),
+            Ne = (n("4az8"), n("QjjF")),
+            Ce = "for-you__empty",
+            Fe = "for-you__add_more_games",
+            Ee = 10,
+            Oe = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         rankedChannelData: {},
                         loadingRankedChannelData: !1
-                    }, t.logger = v.n.logger.withCategory("for-you"), t.loadedChannelRankingsData = !1, t.renderPage = function() {
-                        return t.userFollowedGamesDataLoaded(t.props) ? t.props.data.currentUser.followedGames && t.props.data.currentUser.followedGames.nodes && t.props.data.currentUser.followedGames.nodes.length ? p.createElement(C.V, null, t.renderFollowedCommunityStreams(), p.createElement(C.V, {
+                    }, t.logger = h.n.logger.withCategory("for-you"), t.loadedChannelRankingsData = !1, t.renderPage = function() {
+                        return t.userFollowedGamesDataLoaded(t.props) ? t.props.data.currentUser.followedGames && t.props.data.currentUser.followedGames.nodes && t.props.data.currentUser.followedGames.nodes.length ? g.createElement(F.V, null, t.renderFollowedCommunityStreams(), g.createElement(F.V, {
                             margin: {
                                 top: .5
                             }
-                        }, t.renderAddMoreGamesCTA())) : t.renderEmptyFollowedState() : p.createElement(C.V, null, p.createElement(C.Z, {
+                        }, t.renderAddMoreGamesCTA())) : t.renderEmptyFollowedState() : g.createElement(F.V, null, g.createElement(F.Z, {
                             fillContent: !0
                         }))
                     }, t.userFollowedGamesDataLoaded = function(e) {
                         return e.data && !e.data.loading && !e.data.error && e.data.currentUser
                     }, t.renderFollowedCommunityStreams = function() {
                         if (t.props.data.currentUser.followedGames && t.props.data.currentUser.followedGames.nodes && t.props.data.currentUser.followedGames.nodes.length) return t.props.data.currentUser.followedGames.nodes.map(function(e) {
-                            return p.createElement(C.V, {
+                            return g.createElement(F.V, {
                                 key: e.id
-                            }, p.createElement(we, {
+                            }, g.createElement(_e, {
                                 key: e.id,
-                                title: Object(v.d)("BECAUSE YOU FOLLOW {name}", {
+                                title: Object(h.d)("BECAUSE YOU FOLLOW {name}", {
                                     name: e.name.toUpperCase()
                                 }, "ForYouPage"),
                                 name: e.name,
@@ -4020,50 +4046,50 @@ webpackJsonp([46], {
                             }))
                         })
                     }, t.renderAddMoreGamesCTA = function() {
-                        if (!t.props.data.currentUser.followedGames || !t.props.data.currentUser.followedGames.nodes || t.props.data.currentUser.followedGames.nodes.length < Ce) return p.createElement(C.T, {
-                            "data-test-selector": Ne,
+                        if (!t.props.data.currentUser.followedGames || !t.props.data.currentUser.followedGames.nodes || t.props.data.currentUser.followedGames.nodes.length < Ee) return g.createElement(F.T, {
+                            "data-test-selector": Fe,
                             onClick: t.redirectToCommunitySelectionPage,
                             alpha: !0
-                        }, p.createElement(C._19, {
-                            alignItems: C.c.Center,
+                        }, g.createElement(F._19, {
+                            alignItems: F.c.Center,
                             border: !0,
-                            display: C.H.Flex,
-                            justifyContent: C.U.Center,
+                            display: F.H.Flex,
+                            justifyContent: F.U.Center,
                             padding: 2
-                        }, p.createElement(C.V, {
-                            alignItems: C.c.Center,
-                            display: C.H.Flex,
+                        }, g.createElement(F.V, {
+                            alignItems: F.c.Center,
+                            display: F.H.Flex,
                             margin: {
                                 right: 1
                             }
-                        }, p.createElement(C._10, {
-                            asset: C._11.Plus,
-                            type: C._12.Alt2
-                        })), p.createElement(C._23, {
-                            fontSize: C.L.Size5,
-                            color: C.F.Alt2
-                        }, Object(v.d)("Add More Games", "ForYouPage"))))
+                        }, g.createElement(F._10, {
+                            asset: F._11.Plus,
+                            type: F._12.Alt2
+                        })), g.createElement(F._23, {
+                            fontSize: F.L.Size5,
+                            color: F.F.Alt2
+                        }, Object(h.d)("Add More Games", "ForYouPage"))))
                     }, t.renderEmptyFollowedState = function() {
-                        return p.createElement(C._19, {
+                        return g.createElement(F._19, {
                             className: "for-you__empty",
-                            "data-test-selector": _e,
-                            background: C.m.Base,
-                            display: C.H.Flex,
-                            flexDirection: C.J.Column,
+                            "data-test-selector": Ce,
+                            background: F.m.Base,
+                            display: F.H.Flex,
+                            flexDirection: F.J.Column,
                             margin: {
                                 bottom: 1
                             },
-                            alignItems: C.c.Center
-                        }, p.createElement(G, {
+                            alignItems: F.c.Center
+                        }, g.createElement(j, {
                             onContinue: t.refetchFollowedData
                         }))
                     }, t.redirectToFollowing = function() {
-                        v.n.history.push("/directory/following" + location.search)
+                        h.n.history.push("/directory/following" + location.search)
                     }, t.redirectToCommunitySelectionPage = function() {
                         window.location.assign("/hi" + location.search)
                     }, t.refetchFollowedData = function() {
-                        return m.__awaiter(t, void 0, void 0, function() {
-                            return m.__generator(this, function(e) {
+                        return p.__awaiter(t, void 0, void 0, function() {
+                            return p.__generator(this, function(e) {
                                 switch (e.label) {
                                     case 0:
                                         return [4, this.props.data.refetch()];
@@ -4073,9 +4099,9 @@ webpackJsonp([46], {
                             })
                         })
                     }, t.loadChannelRankingsByGameData = function() {
-                        return m.__awaiter(t, void 0, void 0, function() {
+                        return p.__awaiter(t, void 0, void 0, function() {
                             var e, t;
-                            return m.__generator(this, function(n) {
+                            return p.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
                                         if (this.loadedChannelRankingsData) return [3, 4];
@@ -4083,7 +4109,7 @@ webpackJsonp([46], {
                                             loadingRankedChannelData: !0
                                         }), n.label = 1;
                                     case 1:
-                                        return n.trys.push([1, 3, , 4]), [4, oe()];
+                                        return n.trys.push([1, 3, , 4]), [4, de()];
                                     case 2:
                                         return e = n.sent(), this.setState({
                                             rankedChannelData: e,
@@ -4100,96 +4126,96 @@ webpackJsonp([46], {
                         })
                     }, t
                 }
-                return m.__extends(t, e), t.prototype.componentDidMount = function() {
-                    return m.__awaiter(this, void 0, void 0, function() {
+                return p.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return p.__awaiter(this, void 0, void 0, function() {
                         var e, t, n;
-                        return m.__generator(this, function(i) {
+                        return p.__generator(this, function(i) {
                             switch (i.label) {
                                 case 0:
-                                    return v.n.setPageTitle(Object(v.d)("For You", "ForYouPage")), [4, v.n.experiments.getAssignment(N.h)];
+                                    return h.n.setPageTitle(Object(h.d)("For You", "ForYouPage")), [4, h.n.experiments.getAssignment(C.h)];
                                 case 1:
-                                    return e = i.sent(), [4, v.n.experiments.getAssignment(N.i)];
+                                    return e = i.sent(), [4, h.n.experiments.getAssignment(C.i)];
                                 case 2:
-                                    return t = i.sent(), Object(N.n)(e, t) ? [3, 3] : (this.redirectToFollowing(), [3, 5]);
+                                    return t = i.sent(), Object(C.n)(e, t) ? [3, 3] : (this.redirectToFollowing(), [3, 5]);
                                 case 3:
-                                    return [4, v.n.experiments.getAssignment(N.g)];
+                                    return [4, h.n.experiments.getAssignment(C.g)];
                                 case 4:
-                                    n = i.sent(), Object(N.l)(e, t, n) && this.loadChannelRankingsByGameData(), i.label = 5;
+                                    n = i.sent(), Object(C.l)(e, t, n) && this.loadChannelRankingsByGameData(), i.label = 5;
                                 case 5:
                                     return [2]
                             }
                         })
                     })
                 }, t.prototype.componentWillReceiveProps = function(e) {
-                    this.userFollowedGamesDataLoaded(e) && !Object(N.o)(new Date(e.data.currentUser.createdAt)) && this.redirectToFollowing()
+                    this.userFollowedGamesDataLoaded(e) && !Object(C.o)(new Date(e.data.currentUser.createdAt)) && this.redirectToFollowing()
                 }, t.prototype.componentDidUpdate = function() {
                     this.userFollowedGamesDataLoaded(this.props) && !this.state.loadingRankedChannelData && this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return p.createElement(x.b, null, p.createElement(C.V, {
+                    return g.createElement(x.b, null, g.createElement(F.V, {
                         className: "for-you-page",
                         padding: 3,
                         fullWidth: !0
-                    }, p.createElement(E, {
-                        activeCategory: b.SpadeFollowingCategory.ForYou
+                    }, g.createElement(O, {
+                        activeCategory: _.SpadeFollowingCategory.ForYou
                     }), this.renderPage()))
-                }, t = m.__decorate([Object(f.c)("ForYouPage", {
-                    destination: w.a.ForYou
-                }), Object(y.a)(be, {
+                }, t = p.__decorate([Object(k.c)("ForYouPage", {
+                    destination: b.a.ForYou
+                }), Object(S.a)(Ne, {
                     options: {
                         fetchPolicy: "network-only",
                         variables: {
-                            limit: Ce
+                            limit: Ee
                         }
                     }
-                }), Object(S.a)({
-                    location: b.PageviewLocation.BrowseForYou
+                }), Object(w.a)({
+                    location: _.PageviewLocation.BrowseForYou
                 })], t)
-            }(p.Component),
-            Ee = function(e) {
+            }(g.Component),
+            Le = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return m.__extends(t, e), t.prototype.render = function() {
-                    return this.props.isLoggedIn ? p.createElement(C.V, null, p.createElement(k.b, {
+                return p.__extends(t, e), t.prototype.render = function() {
+                    return this.props.isLoggedIn ? g.createElement(F.V, null, g.createElement(y.b, {
                         addPaddingWhenPlayerIsPersisting: !0
-                    }), p.createElement(g.d, null, p.createElement(g.b, {
+                    }), g.createElement(v.d, null, g.createElement(v.b, {
                         path: "/directory/following/foryou",
-                        component: Fe
-                    }), p.createElement(g.b, {
+                        component: Oe
+                    }), g.createElement(v.b, {
                         path: "/directory/following/live",
-                        component: re
-                    }), p.createElement(g.b, {
+                        component: se
+                    }), g.createElement(v.b, {
                         path: "/directory/following/hosts",
-                        component: Y
-                    }), p.createElement(g.b, {
+                        component: $
+                    }), g.createElement(v.b, {
                         path: "/directory/following/games",
-                        component: B
-                    }), p.createElement(g.b, {
+                        component: W
+                    }), g.createElement(v.b, {
                         path: "/directory/following/communities",
-                        component: A
-                    }), p.createElement(g.b, {
+                        component: V
+                    }), g.createElement(v.b, {
                         path: "/",
-                        component: ae
-                    }))) : (this.props.login(), p.createElement(h.a, {
-                        message: Object(v.d)("You must be logged in to view this page", "FollowingRoot")
+                        component: re
+                    }))) : (this.props.login(), g.createElement(f.a, {
+                        message: Object(h.d)("You must be logged in to view this page", "FollowingRoot")
                     }))
-                }, t = m.__decorate([Object(f.c)("FollowingPageRoot", {
+                }, t = p.__decorate([Object(k.c)("FollowingPageRoot", {
                     autoReportInteractive: !0
                 })], t)
-            }(p.Component),
-            Oe = Object(o.a)(function(e) {
+            }(g.Component),
+            Te = Object(s.a)(function(e) {
                 return {
-                    isLoggedIn: Object(c.d)(e)
+                    isLoggedIn: Object(m.d)(e)
                 }
             }, function(e) {
-                return Object(s.bindActionCreators)({
+                return Object(d.bindActionCreators)({
                     login: function() {
-                        return Object(u.f)(d.a.FollowingPage)
+                        return Object(c.f)(u.a.FollowingPage)
                     }
                 }, e)
-            })(Ee);
+            })(Le);
         n.d(t, "FollowingRootPage", function() {
-            return Oe
+            return Te
         })
     },
     JpYe: function(e, t, n) {
@@ -8431,4 +8457,4 @@ webpackJsonp([46], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.following-68d0d14dc80fe058022f2349fa11dbf7.js.map
+//# sourceMappingURL=pages.following-2b0d67b3464b15368b306a5bce995744.js.map

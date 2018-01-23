@@ -12114,7 +12114,7 @@ webpackJsonp([39], {
                     return t.state = {
                         sortedFollows: [],
                         displayAmount: 5
-                    }, t.fetchInterval = 0, t.hasRequestedTracking = !1, t.followedVideoDict = {}, t.sortFollowedChannels = function(e) {
+                    }, t.hasRequestedTracking = !1, t.followedVideoDict = {}, t.sortFollowedChannels = function(e) {
                         if (e.data.loading || e.data.error || !e.data.currentUser || !e.data.currentUser.followedLiveUsers) return [];
                         var n = e.data.currentUser.followedLiveUsers.nodes.slice(),
                             i = (e.data.currentUser.follows.edges || []).map(function(e) {
@@ -12146,7 +12146,7 @@ webpackJsonp([39], {
                             sortedFollows: s
                         })
                     }, t.getFollowedChannels = function() {
-                        return t.props.data.loading || t.props.data.error ? [] : t.state.sortedFollows.slice(0, t.state.displayAmount).map(function(e, n) {
+                        return t.props.data.loading || t.props.data.error && 0 === t.state.sortedFollows.length ? [] : t.state.sortedFollows.slice(0, t.state.displayAmount).map(function(e, n) {
                             if (!e.id) return null;
                             var i = t.onChannelClick.bind(t, n, e);
                             return u.createElement(H, {
@@ -12198,8 +12198,6 @@ webpackJsonp([39], {
                     this.isRenderReady() && this.props.latencyTracking.reportInteractive()
                 }, t.prototype.componentWillReceiveProps = function(e) {
                     this.sortFollowedChannels(e)
-                }, t.prototype.componentWillUnmount = function() {
-                    clearInterval(this.fetchInterval)
                 }, t.prototype.render = function() {
                     var e = !this.props.data.loading && !this.props.data.error && this.props.data.currentUser && (!this.props.data.currentUser.follows.edges || 0 === this.props.data.currentUser.follows.edges.length);
                     return this.props.data.loading || this.props.data.error || !this.props.data.currentUser || this.hasRequestedTracking || (this.hasRequestedTracking = !0, function(e, t, n) {
@@ -16154,7 +16152,7 @@ webpackJsonp([39], {
                             if (e.types && i.options.types) {
                                 if (e.types.length !== i.options.types.length) return !0;
                                 var t = new Set(i.options.types);
-                                return e.types.every(function(e) {
+                                return !e.types.every(function(e) {
                                     return t.has(e)
                                 })
                             }
@@ -22220,7 +22218,7 @@ webpackJsonp([39], {
                                 case 0:
                                     e = [], i.label = 1;
                                 case 1:
-                                    return i.trys.push([1, 3, , 4]), [4, n.e(69).then(n.bind(null, "GZxo"))];
+                                    return i.trys.push([1, 3, , 4]), [4, n.e(70).then(n.bind(null, "GZxo"))];
                                 case 2:
                                     return e = i.sent(), [3, 4];
                                 case 3:
@@ -22240,7 +22238,7 @@ webpackJsonp([39], {
                                 case 0:
                                     return [4, i.__awaiter(h, void 0, void 0, function() {
                                         return i.__generator(this, function(e) {
-                                            return [2, n.e(70).then(n.bind(null, "Revh"))]
+                                            return [2, n.e(71).then(n.bind(null, "Revh"))]
                                         })
                                     })];
                                 case 1:
@@ -24696,4 +24694,4 @@ webpackJsonp([39], {
         }
     }
 });
-//# sourceMappingURL=pages.onboarding-75494214ab43fd7c37b19984908e212b.js.map
+//# sourceMappingURL=pages.onboarding-2b11bb57a5ea758cbee701119d1a6881.js.map

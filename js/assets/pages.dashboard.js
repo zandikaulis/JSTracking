@@ -8606,7 +8606,11 @@ webpackJsonp([32], {
             return e.status === Fo.VIDEO_STATUS_RECORDED && e.broadcastType.toLowerCase() === Po.a.PastPremiere.toLowerCase()
         }
 
-        function le(e, t) {
+        function le(e) {
+            return e.status === Fo.VIDEO_STATUS_RECORDED && e.broadcastType.toLowerCase() === Po.a.Highlight.toLowerCase()
+        }
+
+        function de(e, t) {
             if (ae(t)) return Fs.queued();
             if (ee(t)) return Fs.uploadFailed();
             if (ne(t)) return Fs.uploadInProgress();
@@ -8628,23 +8632,17 @@ webpackJsonp([32], {
                 }(e)) return Fs.premiereFailed();
             var n = void 0;
             return n = function(e) {
-                var t = de(e);
+                var t = ce(e);
                 return !!t && t < Ns
-            }(e) ? Fs.expiring() : oe(e) ? Fs.archive() : se(e) ? Fs.pastPremiere() : Fs.uploadOrHighlight(), e.mutedSegments && (n.thumbnail = {
+            }(e) ? Fs.expiring() : oe(e) ? Fs.archive() : se(e) ? Fs.pastPremiere() : le(e) ? Fs.highlight() : Fs.upload(), e.mutedSegments && (n.thumbnail = {
                 message: Object(St.d)("Muted audio", "VideoManagerThumbnail"),
                 overlayIcon: Ut._11.Muted,
                 error: !0
             }), n
         }
 
-        function de(e) {
-            if (e.deleteAt) return (new Date(e.deleteAt).valueOf() - Date.now()) / Ps
-        }
-
         function ce(e) {
-            return oe(e) || function(e) {
-                return e.status === Fo.VIDEO_STATUS_RECORDED && e.broadcastType.toLowerCase() === Po.a.Highlight.toLowerCase()
-            }(e) || se(e)
+            if (e.deleteAt) return (new Date(e.deleteAt).valueOf() - Date.now()) / Ps
         }
 
         function ue() {
@@ -15535,13 +15533,41 @@ webpackJsonp([32], {
                         sharable: !0
                     }
                 },
-                uploadOrHighlight: function() {
+                upload: function() {
                     return {
                         menu: {
                             show: !0,
                             canDownload: !1,
+                            canHighlight: !0,
+                            canAddToVodcast: !0
+                        },
+                        callToActionButton: null,
+                        subheader: {
+                            duration: !1,
+                            scheduledDate: !1,
+                            publishedDateBroadcastType: !0
+                        },
+                        thumbnail: {
+                            message: null,
+                            overlayIcon: null,
+                            error: !1
+                        },
+                        subrow: {
+                            spinner: !1,
+                            uploadProgress: !1,
+                            expirationWarning: !1
+                        },
+                        interactableMetaData: !0,
+                        sharable: !0
+                    }
+                },
+                highlight: function() {
+                    return {
+                        menu: {
+                            show: !0,
+                            canDownload: !0,
                             canHighlight: !1,
-                            canAddToVodcast: !1
+                            canAddToVodcast: !0
                         },
                         callToActionButton: null,
                         subheader: {
@@ -18805,8 +18831,10 @@ webpackJsonp([32], {
                     }, t
                 }
                 return Mt.__extends(t, e), t.prototype.render = function() {
-                    var e = le(this.props.video, this.props.videoUpload),
-                        t = ce(this.props.video);
+                    var e = de(this.props.video, this.props.videoUpload),
+                        t = function(e) {
+                            return oe(e) || le(e) || se(e)
+                        }(this.props.video);
                     return kt.createElement("div", {
                         "data-test-selector-menu": "root"
                     }, kt.createElement(lc, {
@@ -19484,7 +19512,7 @@ webpackJsonp([32], {
                                 }
                             }
                         }(e, this.props.user),
-                        n = le(e);
+                        n = de(e);
                     return kt.createElement(Ut._19, {
                         display: Ut.H.Flex,
                         color: Ut.F.Link
@@ -19854,7 +19882,7 @@ webpackJsonp([32], {
                         flexGrow: 0
                     }, e, this.subheaderDetail())
                 }, t.prototype.subheaderDetail = function() {
-                    var e = le(this.props.video);
+                    var e = de(this.props.video);
                     return e.subheader.duration ? kt.createElement("div", null, this.durationElement()) : e.subheader.scheduledDate ? kt.createElement("div", null, this.scheduledDateElement()) : e.subheader.publishedDateBroadcastType ? kt.createElement(Ut.V, {
                         display: Ut.H.Flex,
                         alignItems: Ut.c.Center
@@ -19970,7 +19998,7 @@ webpackJsonp([32], {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return Mt.__extends(t, e), t.prototype.render = function() {
-                    var e = le(this.props.video, this.props.videoUpload).thumbnail,
+                    var e = de(this.props.video, this.props.videoUpload).thumbnail,
                         t = null,
                         n = void 0;
                     e.overlayIcon && (t = kt.createElement(Ut.V, {
@@ -19981,8 +20009,8 @@ webpackJsonp([32], {
                         asset: e.overlayIcon,
                         "data-test-selector": Iu
                     })));
-                    var a = de(this.props.video),
-                        r = le(this.props.video, this.props.videoUpload).subrow;
+                    var a = ce(this.props.video),
+                        r = de(this.props.video, this.props.videoUpload).subrow;
                     if (r.spinner) n = kt.createElement(Ut.V, {
                         padding: {
                             top: .5
@@ -20065,7 +20093,7 @@ webpackJsonp([32], {
                 }
                 return Mt.__extends(t, e), t.prototype.render = function() {
                     var e = null,
-                        t = le(this.props.video, this.props.videoUpload);
+                        t = de(this.props.video, this.props.videoUpload);
                     if (t.callToActionButton) {
                         var n = void 0,
                             a = void 0,
@@ -20288,7 +20316,7 @@ webpackJsonp([32], {
             e.Edit = "edit", e.Schedule = "schedule", e.Appeal = "appeal"
         }(Pc || (Pc = {}));
         var Hu, Vu = function(e, t) {
-                return Boolean(e.pathname.match(new RegExp("/" + t)))
+                return Boolean(e.pathname.match(new RegExp("/" + t + "/", "i")))
             },
             Wu = function(e, t) {
                 return e.pathname !== t.pathname
@@ -20788,14 +20816,17 @@ webpackJsonp([32], {
                         i = !this.state.showingModal;
                     r && (this.props.fetchProcessingVideosData(this.propsToPageContext(e), 0, this.notificationService), this.fetchData(this.propsToPageContext(e), this.propsToPageContext(this.props))), ! function(e, t) {
                         return Object.keys(Pc).map(function(n) {
-                            var a = new RegExp("/" + n, "i"),
-                                r = !t.pathname.match(a),
-                                i = e.pathname.match(a);
-                            return Wu(e, t) && Boolean(i && r)
+                            var a = !Vu(t, n),
+                                r = Vu(e, n);
+                            return Wu(e, t) && Boolean(r && a)
                         }).reduce(function(e, t) {
                             return e || t
                         })
-                    }(this.props.location, n) ? i && Vu(n, Pc.Edit) && a ? this.showEditVideoPropertiesModal(a, e) : i && Vu(n, Pc.Schedule) && a ? this.showEventScheduleModal(a, e) : i && Vu(n, Pc.Appeal) && a && this.showAppealMutedAudioModal(a, e) : this.setState({
+                    }(this.props.location, n) ? i && Vu(n, Pc.Edit) && a ? this.showEditVideoPropertiesModal(a, e) : i && Vu(n, Pc.Schedule) && a && this.props.data.user ? this.setState({
+                        showingModal: !0
+                    }, function() {
+                        t.showEventScheduleModal(a, e)
+                    }) : i && Vu(n, Pc.Appeal) && a && this.showAppealMutedAudioModal(a, e) : this.setState({
                         showingModal: !1
                     }, function() {
                         t.props.closeModal()
@@ -21285,6 +21316,9 @@ webpackJsonp([32], {
                             component: rm
                         }), kt.createElement(wt.b, {
                             path: "/:channelName/manager/edit/:videoID",
+                            component: rm
+                        }), kt.createElement(wt.b, {
+                            path: "/:channelName/manager/appeal/:videoID",
                             component: rm
                         }), kt.createElement(wt.b, {
                             path: "/:channelName/manager/clips/channel",
@@ -44939,4 +44973,4 @@ webpackJsonp([32], {
         }
     }
 });
-//# sourceMappingURL=pages.dashboard-6b57253a68985d479647bb753914aebd.js.map
+//# sourceMappingURL=pages.dashboard-3cf86a557302bcacf2e5739af7a6e140.js.map
