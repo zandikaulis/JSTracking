@@ -2137,21 +2137,6 @@ window.SiteOptions = {
                 "value": "control"
             }]
         },
-        "699265c3-830c-4215-859b-647b01f4425b": {
-            "name": "clips_closer_2",
-            "v": 2871,
-            "t": 1,
-            "groups": [{
-                "weight": 1,
-                "value": "control"
-            }, {
-                "weight": 1,
-                "value": "variant1"
-            }, {
-                "weight": 1,
-                "value": "variant2"
-            }]
-        },
         "6a2630a4-edc7-4f2a-8cfe-e4de75eb0d98": {
             "name": "rtqos",
             "v": 2541,
