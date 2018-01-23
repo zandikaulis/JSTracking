@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".b3607ff009f4ed67bdc0.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".3c2f8e5c0de32dd1c44a.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -9933,10 +9933,13 @@
                         "Content-Type": "application/json",
                         "Client-ID": this.clientId
                     }, this.setApiOptions = function(t) {
-                        e.apiUrl = t.apiUrl ? t.apiUrl : e.apiUrl
+                        e.apiUrl = t.apiUrl ? t.apiUrl : e.apiUrl, e.authToken = t.authToken ? t.authToken : null
                     }
                 }
                 return e.prototype.tokenRequest = function() {
+                    if (this.authToken) return Promise.resolve({
+                        token: this.authToken
+                    });
                     var e = this.tokenRequestCache;
                     if (!e) {
                         var t = new Headers(this.defaultHeaders),
@@ -10065,7 +10068,7 @@
                     var e = this;
                     this.clockSkew = 0, this.tokens = {}, this.timers = {}, this.tokenEmitter = new d.EventEmitter2, this.clearTokenManager = function() {
                         e.clockSkew = 0, e.tokenEmitter.removeAllListeners();
-                        for (var t in e.timers) e.timers[t] && e.timers[t] && (clearTimeout(e.timers[t]), delete e.timers[t])
+                        for (var t in e.tokens) e.tokens[t] && (delete e.tokens[t], e.timers[t] && (clearTimeout(e.timers[t]), delete e.timers[t]))
                     }, this.getToken = function(t) {
                         return e.tokens[t]
                     }, this.registerToken = function(t, n) {
@@ -10229,19 +10232,24 @@
                 return z(t, e), t.prototype.getInstalledExtensions = function(e) {
                     var t = this;
                     return I(e).then(function(e) {
-                        return U.setClockSkew(e.issued_at), e.tokens.forEach(function(n) {
-                            var r = e.installed_extensions.reduce(function(e, t) {
-                                    var r = t.extension,
-                                        i = t.installation_status;
-                                    return e || (r.id === n.extension_id ? "active" === i.activation_state : e)
-                                }, !1),
-                                i = new b(n.token).isBroadcaster;
-                            (r || i) && (U.registerToken(n.extension_id, n.token), t.subscribeToMassExtensionControl(n.extension_id))
-                        }), e
+                        return t.registerExtensionInstallations(e)
                     })
+                }, t.prototype.registerExtensionInstallations = function(e) {
+                    var t = this;
+                    return U.setClockSkew(e.issued_at), e.tokens.forEach(function(n) {
+                        var r = e.installed_extensions,
+                            i = r.reduce(function(e, t) {
+                                var r = t.extension,
+                                    i = t.installation_status;
+                                return e || (r.id === n.extension_id ? "active" === i.activation_state : e)
+                            }, !1),
+                            a = new b(n.token).isBroadcaster;
+                        (i || a) && (U.registerToken(n.extension_id, n.token), t.subscribeToMassExtensionControl(n.extension_id))
+                    }), e
                 }, t.prototype.setEnvironmentOptions = function(e) {
-                    e.env && (this.pubsub.setEnvironment(this.getPubsubEnvironment(e.env)), F.environment = e.env), e.apiUrl && k.setApiOptions({
-                        apiUrl: e.apiUrl
+                    e.env && (this.pubsub.setEnvironment(this.getPubsubEnvironment(e.env)), F.environment = e.env), k.setApiOptions({
+                        apiUrl: e.apiUrl,
+                        authToken: e.authToken
                     })
                 }, t.prototype.subscribeToExtensionControl = function(e, t) {
                     e !== this.currentChannelId && this.unsubscribeFromExtensionControl(this.currentChannelId), this.currentChannelId = e, this.currentControlHandlers = t, this.currentChannelUnsubscribe = this.pubsub.subscribe({
@@ -10862,7 +10870,7 @@
                     }, n.sendBootstrap = function(e) {
                         n.hasBootstrapped = !0, n.sendIdentityLinkUpdate(e), n.coordinator.sendExtensionBootstrap(n.getExtensionAuth())
                     }, n.sendIdentityLinkUpdate = function(e) {
-                        var t = e.isUserLoggedIn && !e.isBroadcaster && (e.isLinked || n.extension.requestIdentityLink);
+                        var t = e.isUserLoggedIn && n.canRequestIdLink;
                         n.emit(q.c.IdentityLinked, e.isLinked, t)
                     }, n.beginPurchase = function(e) {
                         var t = e.payload.sku,
@@ -10898,9 +10906,9 @@
                             callback: n.onMouseEnter.bind(n)
                         }], n.eventListeners.forEach(function(e) {
                             e.target.addEventListener(e.event, e.callback)
-                        }), n.contextManager.on("context", n.coordinator.sendContext), n.coordinator.on(q.f.SupervisorReady, n.initSupervisedExtension), n.coordinator.on(q.a.TwitchExtLoaded, n.onExtensionLoaded), n.coordinator.on(q.a.TwitchExtNetworkTiming, n.onExtensionNetworkTraffic), n.coordinator.on(q.a.TwitchExtUserAction, n.onExtensionUserAction), n.registerFunctionModals(), n.onBeginPurchase && n.coordinator.on(q.a.TwitchExtBeginPurchase, n.beginPurchase), U.subscribe(n.extension.clientId, n.handleToken);
+                        }), n.contextManager.on("context", n.coordinator.sendContext), n.coordinator.on(q.f.SupervisorReady, n.initSupervisedExtension), n.coordinator.on(q.a.TwitchExtLoaded, n.onExtensionLoaded), n.coordinator.on(q.a.TwitchExtNetworkTiming, n.onExtensionNetworkTraffic), n.coordinator.on(q.a.TwitchExtUserAction, n.onExtensionUserAction), n.onBeginPurchase && n.coordinator.on(q.a.TwitchExtBeginPurchase, n.beginPurchase), U.subscribe(n.extension.clientId, n.handleToken);
                         var e = U.getToken(n.extension.clientId);
-                        e.isNearExpiration || n.handleToken(e, e)
+                        e && !e.isNearExpiration && n.handleToken(e, e)
                     }, n.reloadExtension = function() {
                         n.hasLoaded = !1, n.hasBootstrapped = !1, n.coordinator.sendExtensionReloadMessage()
                     }, n.unsetupListeners = function() {
@@ -10908,7 +10916,7 @@
                             e.target.removeEventListener(e.event, e.callback)
                         }), n.contextManager.off("context", n.coordinator.sendContext), n.coordinator.off(q.a.TwitchExtLoaded, n.onExtensionLoaded), n.coordinator.off(q.a.TwitchExtNetworkTiming, n.onExtensionNetworkTraffic), n.coordinator.off(q.a.TwitchExtUserAction, n.onExtensionUserAction), n.unregisterFunctionModals(), U.unsubscribe(n.extension.clientId, n.handleToken)
                     }, n.registerFunctionModals = function() {
-                        n.functionManager.registerFunctionModal(q.e.FollowAction, new le(n.params.loginId, n.tracker)), n.extension.requestIdentityLink && n.functionManager.registerFunctionModal(q.e.IdShareRequest, new de)
+                        n.functionManager.registerFunctionModal(q.e.FollowAction, new le(n.params.loginId, n.tracker)), n.canRequestIdLink && n.functionManager.registerFunctionModal(q.e.IdShareRequest, new de)
                     }, n.unregisterFunctionModals = function() {
                         n.functionManager.unregisterFunctionModal(q.e.FollowAction)
                     }, n.handlePurchaseCompleted = function(e) {
@@ -10918,7 +10926,7 @@
                                 return e.sku === t
                             }) && n.coordinator.sendExtensionReloadEntitlementsMessage()
                         })
-                    }, n.params = t, n.iframe = n.createSupervisorIFrame(t.iframeClassName, n.extension.anchor, n.extensionOptions), void 0 !== t.onBeginPurchase && (n.onBeginPurchase = t.onBeginPurchase), n.setupListeners(), n.tracker.trackEvent("extension_render", {}), t.parentElement.appendChild(n.iframe), n.visibilityChanged(), n.params.loginId && G.onPurchaseCompleted(n.params.loginId, n.handlePurchaseCompleted), n
+                    }, n.params = t, n.iframe = n.createSupervisorIFrame(t.iframeClassName, n.extension.anchor, n.extensionOptions), void 0 !== t.onBeginPurchase && (n.onBeginPurchase = t.onBeginPurchase), n.setupListeners(), n.extension.token && !U.getToken(n.extension.clientId) && U.registerToken(n.extension.clientId, n.extension.token), n.registerFunctionModals(), n.tracker.trackEvent("extension_render", {}), t.parentElement.appendChild(n.iframe), n.visibilityChanged(), n.params.loginId && G.onPurchaseCompleted(n.params.loginId, n.handlePurchaseCompleted), n
                 }
                 return pe(t, e), Object.defineProperty(t.prototype, "tracker", {
                     get: function() {
@@ -10976,6 +10984,13 @@
                 }), Object.defineProperty(t.prototype, "purchaseService", {
                     get: function() {
                         return c(this.buildPurchaseService)
+                    },
+                    enumerable: !0,
+                    configurable: !0
+                }), Object.defineProperty(t.prototype, "canRequestIdLink", {
+                    get: function() {
+                        var e = U.getToken(this.extension.clientId);
+                        return !e.isBroadcaster && (e.isLinked || this.extension.requestIdentityLink)
                     },
                     enumerable: !0,
                     configurable: !0
@@ -27708,7 +27723,7 @@
                     s = Io.a(!0),
                     u = Mo.u() === Mo.j ? null : Bo;
                 return {
-                    app_version: "2018.01.22-225415+e4ad51110def8ef4df6c5acab144bb28a4d608c5",
+                    app_version: "2018.01.23-182807+fd351682d2c1295ff3a6b6448b0286620952471b",
                     flash_version: t,
                     referrer_url: r,
                     referrer_host: i.host,
@@ -33413,7 +33428,7 @@
                 }]), e
             }(),
             xo = n(99),
-            Ro = "//video-edge-4fc805.sjc01.hls.ttvnw.net/v1/playlist/CssU0N8eJjK-891PVrI0NqOcUhjHkybXSqtkYtBwUByZkG3eokmMJIQymDtW4EcIUNIaK0boG17OjF24ZX6TdHDjedZUS9gt6rwb_4XPptvanId7rEr9M0xkE_oJL8kAxN2w0lOjjdw-3E1aaJOpl-YLJPdqI134nQ5qYJA2e90MEgQR1dlzjUnLqYG4bhYpTPDtjtPVxV6V5ADYRFQjoku7fm7qFcVMXmp42zAMUXS18N33L9MqVsN2PMHFJmEBb-3HjNKiyFeCj5CBUTlxQJLMDhH6MhGh1uJM_Ut8CCzxaBUA18SDCGqb-ZyikwMkxU6zwfs_CHEaOi5y5bY9pijVRcDTVGEh-30jREhsOq73dAd_lDMf_Xkdfba2fwCWVypJMriMMOGNVMYr42m2vdb2iktDs7TGYP03uvuskej_K5Mft5FRvnLP6u8WEiIvPexU-ghuUFoQe5qYU.m3u8",
+            Ro = "//video-edge-996063.sjc01.hls.ttvnw.net/v1/playlist/CoUXp2WCiPGiR9i9Us4kd5xHN_lee3Y0CF-CaEvLpKS-BGWR9lx5Y9EExaPkX2Pb88vJPk-KHX1xW4CoN1t19B53fW_PouptuYcsRQDFeyLH6D185_y9yfnAyKtp4_dRDL-FHPwP1RFY51JWjWxhtFx8f2Hd71wSEABtbHkv-LuTDLFO--PnjTVZQS05vNlkAh6q1JWB1kUknRLvTbUFAo3KNZhHo6j1KKzxNdDl6HFjmWuQwj05WSe90nL8X2kCcxCOqvnIviifCpnHZceN0KGW8OMu8_bdu07nu3SIpwjb4fm9HeNMric5bAtuXWJtMycjgRxis7E5UIkeO-ODhndtJz5PeVp1ACsmOtSHFET_uwEmxK-TibVTDF5PIVa-ULZZjD_THrSuOBuERYrt_AJ9HUutczAZOPnQb7jx1pc2C1WMQEjR9Sor_wE.m3u8",
             jo = n(45),
             Ao = n(245),
             Io = n(132),
