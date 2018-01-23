@@ -290,13 +290,13 @@ window.SiteOptions = {
         },
         "0dc9a9c9-fee5-4b5f-a462-f07675713e5e": {
             "name": "TWILIGHT_FOLLOWING_INDEX_LATEST_VIDEOS_V2",
-            "v": 2738,
+            "v": 2874,
             "t": 1,
             "groups": [{
-                "weight": 50,
+                "weight": 10,
                 "value": "control"
             }, {
-                "weight": 50,
+                "weight": 90,
                 "value": "enabled"
             }]
         },
@@ -2837,6 +2837,18 @@ window.SiteOptions = {
                 "value": "expanded"
             }]
         },
+        "9474904f-d15c-4694-8e65-8807d0c96146": {
+            "name": "ios_enable_rooms_v5.8.1",
+            "v": 2872,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
         "95869c70-08ce-4e58-a82e-bcaaaf1f8dc2": {
             "name": "DISCOVER_HIDE_RECENTLY_WATCHED_STREAMS",
             "v": 702,
@@ -4293,6 +4305,18 @@ window.SiteOptions = {
             }, {
                 "weight": 100,
                 "value": "variant1"
+            }]
+        },
+        "e28b9f51-336e-4398-80ff-6f0083c57434": {
+            "name": "twilight_collection_manager",
+            "v": 2875,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "enabled"
             }]
         },
         "e3493262-e9b1-4ea8-b621-1f7ed544fad2": {

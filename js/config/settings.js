@@ -82,13 +82,13 @@ window.__twilightSettings = {
         },
         "0dc9a9c9-fee5-4b5f-a462-f07675713e5e": {
             "name": "TWILIGHT_FOLLOWING_INDEX_LATEST_VIDEOS_V2",
-            "v": 2738,
+            "v": 2874,
             "t": 1,
             "groups": [{
-                "weight": 50,
+                "weight": 10,
                 "value": "control"
             }, {
-                "weight": 50,
+                "weight": 90,
                 "value": "enabled"
             }]
         },
@@ -441,6 +441,18 @@ window.__twilightSettings = {
             }, {
                 "weight": 100,
                 "value": "off"
+            }]
+        },
+        "e28b9f51-336e-4398-80ff-6f0083c57434": {
+            "name": "twilight_collection_manager",
+            "v": 2875,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "enabled"
             }]
         },
         "e9fe3136-84bc-4a61-9079-0c7df78abeb3": {
