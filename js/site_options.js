@@ -2800,14 +2800,14 @@ window.SiteOptions = {
         },
         "93da9d43-a078-43b9-ab48-602fa9a226b0": {
             "name": "ios_app_badge",
-            "v": 1740,
+            "v": 2883,
             "t": 2,
             "groups": [{
                 "weight": 100,
                 "value": "control"
             }, {
                 "weight": 0,
-                "value": "active"
+                "value": "enabled"
             }]
         },
         "9452d9e2-6588-408c-b8aa-1e54ff1e2f4a": {
