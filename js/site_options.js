@@ -2513,6 +2513,18 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
+        "7ecd2720-5df0-4111-8060-58335f050866": {
+            "name": "ios_native_subs_iap",
+            "v": 2888,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "inactive"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
         "80a4bf5b-0897-4ae6-bf0b-70357524c39b": {
             "name": "ios_feed_display_content_type_indicator",
             "v": 2357,
