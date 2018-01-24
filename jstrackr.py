@@ -51,6 +51,7 @@ if __name__ == '__main__':
                 # Avoid spam
                 if '"experiments": null' in beatuified:
                     continue
-            open('js_old/%s' % jsfile['filename'], 'wb').write(beatuified)
+            if beatuified:
+                open('js/%s' % jsfile['filename'], 'wb').write(beatuified)
         except:
             pass
