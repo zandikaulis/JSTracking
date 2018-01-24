@@ -2112,16 +2112,16 @@ window.SiteOptions = {
         },
         "680113ed-4ef6-4006-b4cf-259ee8213079": {
             "name": "clips_no_problem",
-            "v": 2661,
+            "v": 2897,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 20,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 40,
                 "value": "variant1"
             }, {
-                "weight": 0,
+                "weight": 40,
                 "value": "variant2"
             }]
         },
