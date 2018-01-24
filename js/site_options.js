@@ -3563,6 +3563,18 @@ window.SiteOptions = {
                 "value": "new"
             }]
         },
+        "b54f8797-2b35-4024-8a8c-0f2ef440e4fa": {
+            "name": "channel_deeplink_to_theatre",
+            "v": 2889,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "experiment"
+            }]
+        },
         "b60494e1-91c9-485c-82a4-b12026cafac3": {
             "name": "android_chat_refactor",
             "v": 2821,
