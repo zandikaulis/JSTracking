@@ -873,6 +873,18 @@ window.SiteOptions = {
                 "value": "off"
             }]
         },
+        "2d6bf24d-39b8-491b-936e-4daebd3cc17c": {
+            "name": "clips_already",
+            "v": 2884,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant1"
+            }]
+        },
         "2e0cb30b-7aaa-4e01-9fdd-b7046605b41f": {
             "name": "Mobile Web Chat Experiment",
             "v": 1178,
