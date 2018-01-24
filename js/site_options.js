@@ -2052,13 +2052,13 @@ window.SiteOptions = {
         },
         "647ac2c7-7650-4e06-87c0-2e3098c7f70a": {
             "name": "android_bits_iap_onboarding",
-            "v": 2860,
+            "v": 2886,
             "t": 1,
             "groups": [{
-                "weight": 20,
+                "weight": 10,
                 "value": "control"
             }, {
-                "weight": 80,
+                "weight": 90,
                 "value": "active"
             }]
         },
@@ -3802,13 +3802,13 @@ window.SiteOptions = {
         },
         "c5b39c2e-17e2-4226-b59e-ba48d940a855": {
             "name": "ios_native_bits_iap_onboarding",
-            "v": 2859,
+            "v": 2887,
             "t": 1,
             "groups": [{
-                "weight": 20,
+                "weight": 10,
                 "value": "inactive"
             }, {
-                "weight": 80,
+                "weight": 90,
                 "value": "active"
             }]
         },
@@ -4696,13 +4696,13 @@ window.SiteOptions = {
         },
         "fd5223cb-3ae7-4a9f-9af8-ce0d44d4b9f1": {
             "name": "pad_thai",
-            "v": 2824,
+            "v": 2885,
             "t": 1,
             "groups": [{
-                "weight": 99,
+                "weight": 95,
                 "value": "control"
             }, {
-                "weight": 1,
+                "weight": 5,
                 "value": "treatment"
             }]
         },
