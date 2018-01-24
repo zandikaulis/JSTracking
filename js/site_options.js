@@ -2872,13 +2872,13 @@ window.SiteOptions = {
         },
         "9619b63b-2e9a-4e20-af4b-cce72346691d": {
             "name": "twilight_web_onboarding_follow_categories",
-            "v": 2817,
+            "v": 2890,
             "t": 2,
             "groups": [{
-                "weight": 1,
+                "weight": 50,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 50,
                 "value": "enabled"
             }]
         },
@@ -4453,13 +4453,13 @@ window.SiteOptions = {
         },
         "e9fe3136-84bc-4a61-9079-0c7df78abeb3": {
             "name": "twilight_web_onboarding_categories",
-            "v": 2711,
+            "v": 2892,
             "t": 2,
             "groups": [{
-                "weight": 50,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 50,
+                "weight": 100,
                 "value": "yes"
             }]
         },
