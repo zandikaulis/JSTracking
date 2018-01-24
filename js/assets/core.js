@@ -8447,9 +8447,19 @@ webpackJsonp([60], {
                         n.setState({
                             imageLoaded: !0
                         })
+                    }, n.onMouseOver = function() {
+                        n.setState({
+                            isHovering: !0
+                        })
+                    }, n.onMouseOut = function() {
+                        n.setState({
+                            isHovering: !1
+                        })
                     }, n.renderImage = function() {
                         var e = null,
-                            t = a("chat-image", n.props.className);
+                            t = a("chat-image", {
+                                "chat-image__animated": !!n.props.cheerText && n.state.imageLoaded
+                            }, n.props.className);
                         if (n.props.srcSet.themed) e = r.createElement(s.Q, {
                             display: n.state.imageLoaded ? s.H.InlineBlock : s.H.Hide
                         }, r.createElement(o.a, {
@@ -8457,6 +8467,8 @@ webpackJsonp([60], {
                             className: t,
                             defaultRes: n.props.srcKey,
                             onLoad: n.onImageLoad,
+                            onMouseOver: n.onMouseOver,
+                            onMouseOut: n.onMouseOut,
                             sources: n.props.srcSet
                         }));
                         else {
@@ -8469,6 +8481,8 @@ webpackJsonp([60], {
                             }, r.createElement("img", {
                                 className: t,
                                 onLoad: n.onImageLoad,
+                                onMouseOver: n.onMouseOver,
+                                onMouseOut: n.onMouseOut,
                                 src: n.props.srcSet.sources[n.props.srcKey],
                                 srcSet: i.join(","),
                                 alt: n.props.alt
@@ -8487,18 +8501,21 @@ webpackJsonp([60], {
                             width: 28
                         })))
                     }, n.state = {
-                        imageLoaded: !1
+                        imageLoaded: !1,
+                        isHovering: !1
                     }, n
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    var e = r.createElement(s._31, {
+                    var e;
+                    return e = this.state.isHovering && this.state.imageLoaded ? r.createElement(s._31, {
                         direction: this.props.tooltipDirection || s._33.Top,
                         label: this.props.alt,
                         display: s.H.Inline,
                         offsetY: "0.9rem",
                         "data-a-target": "emote-name"
-                    }, this.renderPlaceholder(), this.renderImage(), this.props.cheerText);
-                    return this.props.cheerText ? r.createElement(s._23, {
+                    }, this.renderPlaceholder(), this.renderImage(), this.props.cheerText) : r.createElement("span", {
+                        "data-a-target": "emote-name"
+                    }, this.renderPlaceholder(), this.renderImage(), this.props.cheerText), this.props.cheerText ? r.createElement(s._23, {
                         type: s._28.Span,
                         noWrap: !0
                     }, e) : e
@@ -11104,7 +11121,7 @@ webpackJsonp([60], {
         });
         var i;
         ! function(e) {
-            e.BitsLandingPage = "bits_landing", e.BrowseCommunities = "browse_communities", e.BrowseCreative = "browse_creative", e.BrowseForYou = "browse_for_you", e.Channel = "channel", e.ChannelClips = "channel_clips", e.ChannelClipsManager = "my_clips_channel", e.ChannelEvents = "channel_events", e.ChannelVideos = "channel_vods", e.ChannelCollections = "channel_collections", e.Chat = "chat", e.ClipsGame = "clips_game", e.Dashboard = "dashboard", e.DashboardAchievements = "dashboard/achievements", e.DashboardChannelAnalytics = "dashboard/channel-analytics", e.DashboardExtensions = "dashboard/extensions", e.DashboardStreamSummary = "dashboard/stream-summary", e.Directory = "directory", e.DirectoryPopular = "directory.popular", e.EmailVerification = "email_verification", e.EventDetails = "event_details", e.FrontPage = "home", e.GameDetail = "game_detail", e.MyClipsManager = "my_clips", e.None = "", e.OnboardingCommunitySelection = "onboarding/community-selection", e.StoreMerch = "store-merch", e.VideoWatchPage = "vod", e.SubsLandingPage = "subs-landing", e.SettingsPage = "settings", e.SubsBroadcasterPage = "subs-broadcaster"
+            e.BitsLandingPage = "bits_landing", e.Browse = "browse", e.BrowseCommunities = "browse_communities", e.BrowseCreative = "browse_creative", e.BrowseForYou = "browse_for_you", e.Channel = "channel", e.ChannelClips = "channel_clips", e.ChannelClipsManager = "my_clips_channel", e.ChannelEvents = "channel_events", e.ChannelVideos = "channel_vods", e.ChannelCollections = "channel_collections", e.Chat = "chat", e.ClipsGame = "clips_game", e.Dashboard = "dashboard", e.DashboardAchievements = "dashboard/achievements", e.DashboardChannelAnalytics = "dashboard/channel-analytics", e.DashboardExtensions = "dashboard/extensions", e.DashboardStreamSummary = "dashboard/stream-summary", e.Directory = "directory", e.DirectoryPopular = "directory.popular", e.EmailVerification = "email_verification", e.EventDetails = "event_details", e.FrontPage = "home", e.GameDetail = "game_detail", e.MyClipsManager = "my_clips", e.None = "", e.OnboardingCommunitySelection = "onboarding/community-selection", e.StoreMerch = "store-merch", e.VideoWatchPage = "vod", e.SubsLandingPage = "subs-landing", e.SettingsPage = "settings", e.SubsBroadcasterPage = "subs-broadcaster"
         }(i || (i = {}));
         var a;
         ! function(e) {
@@ -14527,8 +14544,9 @@ webpackJsonp([60], {
             }(),
             q = n("ZaD5"),
             G = n("Hvhe"),
-            Q = n("ZVME"),
-            K = function() {
+            Q = n("w9tK"),
+            K = n("ZVME"),
+            $ = function() {
                 function e(t, n) {
                     var i = this;
                     if (this.componentDuration = {
@@ -14543,7 +14561,7 @@ webpackJsonp([60], {
                             return i.getCurrentTimestamp() - i.completedTimestamp < 500
                         }, this.id = e.counter++, this.componentName = t, this.parent = n && n.parent, this.children = [], this.parent ? (this.tracker = this.parent.tracker, this.root = this.parent.root || this.parent, this.depth = this.parent.depth + 1, this.parent.registerChild(this)) : this.depth = 0, this.logger = n.logger, this.isPageComponent = this.componentName.endsWith("Page"), this.isPrePageLoad = this.isRoot || this.root && !this.root.completedTimestamp, this.isPageComponent) {
                         var a = n && n.destination;
-                        a || (this.logger.error(new Error("The " + this.componentName + " component must supply a canonical destination, ex: directory.index"), "Invalid withLatencyTracking options"), a = this.componentName), this.logger.debug("Set root page to: " + a), this.root && this.root.setPage(this, a)
+                        a || (this.logger.error(new Error("The " + this.componentName + " component must supply a canonical destination, ex: directory.index"), "Invalid withLatencyTracking options"), a = Q.a.Unknown), this.logger.debug("Set root page to: " + a), this.root && this.root.setPage(this, a)
                     }
                     this.resetStartTime(), this.raiseUpdate(), this.logger.debug("Latency tracker created")
                 }
@@ -14567,7 +14585,7 @@ webpackJsonp([60], {
                 }, e.prototype.registerCustomEvent = function(e) {
                     var t;
                     switch (e.start) {
-                        case Q.d.Registration:
+                        case K.d.Registration:
                             t = this.getCurrentTimestamp();
                             break;
                         default:
@@ -14673,7 +14691,7 @@ webpackJsonp([60], {
                     }), this.hasReportedInteractive && this.checkChildCompleted())
                 }, e.counter = 1, e
             }(),
-            $ = function() {
+            Z = function() {
                 function e(e, t) {
                     this.tracking = e, this.logger = t.withCategory("tracker"), this.logger.debug("Created")
                 }
@@ -14764,7 +14782,7 @@ webpackJsonp([60], {
                     })
                 }, e
             }(),
-            Z = function(e) {
+            Y = function(e) {
                 function t(t) {
                     var n = e.call(this, "Root", {
                         logger: t.logger.withCategory("latency-tracker")
@@ -14905,7 +14923,7 @@ webpackJsonp([60], {
                             }
                         }, n.checkLostVisibility = function() {
                             n.hasLostVisibility || (n.hasLostVisibility = document.hidden)
-                        }, n.root = n, n.store = t.store, n.networkEventsEnabled = t.networkEventsEnabled, n.componentEventsEnabled = t.componentEventsEnabled, n.toolsEnabled = t.toolsEnabled, n.graphqlEndpoint = t.config.graphqlEndpoint, n.tracker = new $(t.tracking, n.logger), n.navigationStart = performance.timing.navigationStart, n.rootInitDuration = {
+                        }, n.root = n, n.store = t.store, n.networkEventsEnabled = t.networkEventsEnabled, n.componentEventsEnabled = t.componentEventsEnabled, n.toolsEnabled = t.toolsEnabled, n.graphqlEndpoint = t.config.graphqlEndpoint, n.tracker = new Z(t.tracking, n.logger), n.navigationStart = performance.timing.navigationStart, n.rootInitDuration = {
                             value: Math.round(n.startTimestamp - n.navigationStart),
                             latencyStatus: G.a.Unknown
                         }, n.networkMonitor = t.networkMonitor, n.sentinel = t.sentinel, n.networkEventsEnabled && n.networkMonitor && n.networkMonitor.subscribeToUpdates(n.onNetworkRequest), n.networkEventsEnabled && t.apollo && t.apollo.addQueryMetricsListener(n.onQuery), t.trackVisibility) try {
@@ -14973,23 +14991,23 @@ webpackJsonp([60], {
                 }, t.prototype.getNavigationStartTimestamp = function() {
                     return this.navigationStart > 0 ? this.navigationStart : performance.timing.navigationStart
                 }, t
-            }(K),
-            Y = "twilight.force-component-benchmarking",
-            J = "twilight.force-network-monitoring",
-            X = "twilight.force-benchmarking-tools",
-            ee = {
+            }($),
+            J = "twilight.force-component-benchmarking",
+            X = "twilight.force-network-monitoring",
+            ee = "twilight.force-benchmarking-tools",
+            te = {
                 networkingThreshold: "benchmark_networking_threshold",
                 componentThreshold: "benchmark_component_threshold"
             },
-            te = function() {
+            ne = function() {
                 function e(e) {
                     var t = this;
                     this.getRootLatencyTracker = function() {
                         return t.latencyTracker
                     }, this.logger = e.logger.withCategory("Benchmarking"), this.seed = Math.round(100 * Math.random()) / 100, this.storage = e.storage;
-                    var n = e.dynamicSettings.get(ee.networkingThreshold, e.config.defaultNetworkLoggingThreshold),
-                        i = e.dynamicSettings.get(ee.componentThreshold, e.config.defaultComponentBenchmarkingThreshold);
-                    this.toolsEnabled = this.shouldEnableTools(e.config), this.componentsEnabled = this.shouldEnableComponentBenchmarking(e.config, i, this.toolsEnabled), this.networkingEnabled = this.shouldEnableNetworkBenchmarking(e.config, n, this.componentsEnabled, this.toolsEnabled), this.networkingEnabled && (this.networkMonitoring = new W(e)), this.latencyTracker = new Z({
+                    var n = e.dynamicSettings.get(te.networkingThreshold, e.config.defaultNetworkLoggingThreshold),
+                        i = e.dynamicSettings.get(te.componentThreshold, e.config.defaultComponentBenchmarkingThreshold);
+                    this.toolsEnabled = this.shouldEnableTools(e.config), this.componentsEnabled = this.shouldEnableComponentBenchmarking(e.config, i, this.toolsEnabled), this.networkingEnabled = this.shouldEnableNetworkBenchmarking(e.config, n, this.componentsEnabled, this.toolsEnabled), this.networkingEnabled && (this.networkMonitoring = new W(e)), this.latencyTracker = new Y({
                         componentEventsEnabled: this.componentsEnabled,
                         networkEventsEnabled: this.networkingEnabled,
                         toolsEnabled: this.toolsEnabled,
@@ -15011,22 +15029,22 @@ webpackJsonp([60], {
                     })
                 }
                 return e.prototype.shouldEnableTools = function(e) {
-                    return e.forceComponentBenchmarking ? (this.logger.debug("Tools enabled, due to config."), !0) : !!this.storage.get(X, !1) && (this.logger.debug("Tools enabled, due to local storage."), !0)
+                    return e.forceComponentBenchmarking ? (this.logger.debug("Tools enabled, due to config."), !0) : !!this.storage.get(ee, !1) && (this.logger.debug("Tools enabled, due to local storage."), !0)
                 }, e.prototype.shouldEnableComponentBenchmarking = function(e, t, n) {
-                    return n ? (this.logger.debug("Components enabled, due to Tools being enabled"), !0) : e.forceComponentBenchmarking ? (this.logger.debug("Components enabled, due to config."), !0) : this.storage.get(J, !1) ? (this.logger.debug("Components enabled, due to local storage."), !0) : this.seed <= t && (this.logger.debug("Components enabled, due to random selection"), !0)
+                    return n ? (this.logger.debug("Components enabled, due to Tools being enabled"), !0) : e.forceComponentBenchmarking ? (this.logger.debug("Components enabled, due to config."), !0) : this.storage.get(X, !1) ? (this.logger.debug("Components enabled, due to local storage."), !0) : this.seed <= t && (this.logger.debug("Components enabled, due to random selection"), !0)
                 }, e.prototype.shouldEnableNetworkBenchmarking = function(e, t, n, i) {
-                    return n || i ? (this.logger.debug("Networking enabled, due to Components or Tools being enabled"), !0) : e.forceNetworkLogging ? (this.logger.debug("Networking enabled, due to config."), !0) : this.storage.get(Y, !1) ? (this.logger.debug("Networking enabled, due to local storage."), !0) : this.seed <= t && (this.logger.debug("Networking enabled, due to random selection"), !0)
+                    return n || i ? (this.logger.debug("Networking enabled, due to Components or Tools being enabled"), !0) : e.forceNetworkLogging ? (this.logger.debug("Networking enabled, due to config."), !0) : this.storage.get(J, !1) ? (this.logger.debug("Networking enabled, due to local storage."), !0) : this.seed <= t && (this.logger.debug("Networking enabled, due to random selection"), !0)
                 }, e
             }(),
-            ne = n("Itsn"),
-            ie = n("ciQf"),
-            ae = n.n(ie),
-            re = n("HSnN"),
-            oe = n.n(re);
+            ie = n("Itsn"),
+            ae = n("ciQf"),
+            re = n.n(ae),
+            oe = n("HSnN"),
+            se = n.n(oe);
         ! function(e) {
             e[e.Debug = 1] = "Debug", e[e.Info = 2] = "Info", e[e.Warn = 3] = "Warn", e[e.Error = 4] = "Error", e[e.Fatal = 5] = "Fatal"
         }(r || (r = {}));
-        var se = function() {
+        var le = function() {
                 function e(e, t) {
                     var n = this;
                     if (this.eventEmitter = new L.EventEmitter, this.addMessageListener = function(e) {
@@ -15127,11 +15145,11 @@ webpackJsonp([60], {
                     a ? s.apply(void 0, [n, a].concat(i)) : s.apply(void 0, [n].concat(i))
                 }, e
             }(),
-            le = n("HM6l"),
-            ce = n("o/qv"),
-            ue = "session_storage_unique_id",
-            de = "local_storage_device_id",
-            pe = function() {
+            ce = n("HM6l"),
+            ue = n("o/qv"),
+            de = "session_storage_unique_id",
+            pe = "local_storage_device_id",
+            me = function() {
                 function e(e) {
                     var t = this;
                     this.onHistoryChange = function() {
@@ -15139,25 +15157,25 @@ webpackJsonp([60], {
                     }, this.storage = e.storage, this.tempStorage = e.tempStorage, this.benchmarkID = this.getOrCreateBenchmarkSessionID(), this.deviceID = this.getOrCreateDeviceID(), this.localStorageDeviceID = this.getOrCreateLocalStorageDeviceID(), this.pageviewID = this.getUniqueID(), this.tabID = this.getOrCreateSessionStorageUniqueID(), e.history.listen(this.onHistoryChange)
                 }
                 return e.prototype.getUniqueID = function() {
-                    return Object(le.b)().substring(0, 16)
+                    return Object(ce.b)().substring(0, 16)
                 }, e.prototype.getOrCreateDeviceID = function() {
                     var e = h.get("unique_id");
-                    return e || (e = Object(le.b)().substring(0, 16), h.set("unique_id", e, {
+                    return e || (e = Object(ce.b)().substring(0, 16), h.set("unique_id", e, {
                         expires: 3650,
-                        domain: Object(ce.a)(),
+                        domain: Object(ue.a)(),
                         secure: "https:" === window.location.protocol
                     }), e)
                 }, e.prototype.getOrCreateBenchmarkSessionID = function() {
-                    return h.get("twilight.automation_session_id") || Object(le.b)().substring(0, 16)
+                    return h.get("twilight.automation_session_id") || Object(ce.b)().substring(0, 16)
                 }, e.prototype.getOrCreateSessionStorageUniqueID = function() {
-                    var e = this.tempStorage.get(ue, "");
-                    return e || (e = Object(le.b)().substring(0, 16), this.tempStorage.set(ue, e), e)
+                    var e = this.tempStorage.get(de, "");
+                    return e || (e = Object(ce.b)().substring(0, 16), this.tempStorage.set(de, e), e)
                 }, e.prototype.getOrCreateLocalStorageDeviceID = function() {
-                    var e = this.storage.get(de, "");
-                    return e || (e = Object(le.b)().substring(0, 16), this.storage.set(de, e), e)
+                    var e = this.storage.get(pe, "");
+                    return e || (e = Object(ce.b)().substring(0, 16), this.storage.set(pe, e), e)
                 }, e
             }(),
-            me = function() {
+            he = function() {
                 function e(e, t) {
                     this.cache = {}, this.storage = e, this.logger = t
                 }
@@ -15219,43 +15237,43 @@ webpackJsonp([60], {
                     }
                 }, e
             }(),
-            he = n("MkXM");
+            ge = n("MkXM");
         n.d(t, "o", function() {
-            return ge
-        }), n.d(t, "a", function() {
             return fe
-        }), n.d(t, "b", function() {
+        }), n.d(t, "a", function() {
             return ve
-        }), n.d(t, "c", function() {
+        }), n.d(t, "b", function() {
             return be
-        }), n.d(t, "d", function() {
+        }), n.d(t, "c", function() {
             return ye
-        }), n.d(t, "e", function() {
+        }), n.d(t, "d", function() {
             return ke
-        }), n.d(t, "f", function() {
+        }), n.d(t, "e", function() {
             return Se
-        }), n.d(t, "g", function() {
+        }), n.d(t, "f", function() {
             return _e
-        }), n.d(t, "h", function() {
+        }), n.d(t, "g", function() {
             return we
-        }), n.d(t, "j", function() {
+        }), n.d(t, "h", function() {
             return Ee
-        }), n.d(t, "k", function() {
+        }), n.d(t, "j", function() {
             return Ce
-        }), n.d(t, "l", function() {
+        }), n.d(t, "k", function() {
             return Ne
-        }), n.d(t, "m", function() {
+        }), n.d(t, "l", function() {
             return Te
-        }), n.d(t, "n", function() {
+        }), n.d(t, "m", function() {
             return Oe
+        }), n.d(t, "n", function() {
+            return Ie
         }), t.i = function(e) {
-            ge = new Ie(e), fe = ge.config, ve = ge.dynamicSettings, be = ge.intl.formatDate, ye = ge.intl.formatMessage, ke = ge.intl.formatNumber, Se = ge.intl.formatNumberShort, _e = ge.intl.formatRelativeDate, we = ge.intl.formatTime, Ee = ge.logger, Ce = ge.pubsub, Ne = ge.storage, Te = ge.tempStorage, Oe = ge.tracking
+            fe = new De(e), ve = fe.config, be = fe.dynamicSettings, ye = fe.intl.formatDate, ke = fe.intl.formatMessage, Se = fe.intl.formatNumber, _e = fe.intl.formatNumberShort, we = fe.intl.formatRelativeDate, Ee = fe.intl.formatTime, Ce = fe.logger, Ne = fe.pubsub, Te = fe.storage, Oe = fe.tempStorage, Ie = fe.tracking
         };
-        var ge, fe, ve, be, ye, ke, Se, _e, we, Ee, Ce, Ne, Te, Oe, Ie = function() {
+        var fe, ve, be, ye, ke, Se, _e, we, Ee, Ce, Ne, Te, Oe, Ie, De = function() {
             function e(e) {
                 var t = this;
                 this.history = function(e) {
-                    var t = e ? oe()() : ae()(),
+                    var t = e ? se()() : re()(),
                         n = t.push.bind(t),
                         i = /^([^#?]+)?(\?[^#]+)?(\#.+)?$/i;
                     return t.push = function(e, a) {
@@ -15280,14 +15298,14 @@ webpackJsonp([60], {
                         key: this.config.forceMinConsoleLogLevelKey
                     })
                 }
-                this.logger = new se({
+                this.logger = new le({
                     minConsoleLogLevel: n,
                     maxBufferSize: 1e3,
                     buildType: this.config.buildType
-                }), this.logger.addWindowErrorListener(), this.storage = new me(localStorage, this.logger.withCategory("storage")), this.tempStorage = new me(sessionStorage, this.logger.withCategory("tempStorage")), this.dynamicSettings = new ne.a({
+                }), this.logger.addWindowErrorListener(), this.storage = new he(localStorage, this.logger.withCategory("storage")), this.tempStorage = new he(sessionStorage, this.logger.withCategory("tempStorage")), this.dynamicSettings = new ie.a({
                     logger: this.logger,
                     storage: this.storage
-                }), this.session = new pe({
+                }), this.session = new me({
                     history: this.history,
                     storage: this.storage,
                     tempStorage: this.tempStorage
@@ -15315,7 +15333,7 @@ webpackJsonp([60], {
                     session: this.session,
                     store: this.store,
                     adBlockDetector: this.adBlockDetector
-                }), this.pubsub = new N(this.store, this.logger), this.intl = new he.TwilightIntl(e.locales), this.config.embedded || (this.benchmarking = new te({
+                }), this.pubsub = new N(this.store, this.logger), this.intl = new ge.TwilightIntl(e.locales), this.config.embedded || (this.benchmarking = new ne({
                     apollo: this.apollo,
                     config: this.config,
                     dynamicSettings: this.dynamicSettings,
@@ -19005,7 +19023,9 @@ webpackJsonp([60], {
             c = function() {
                 function e(e, t) {
                     var n = this;
-                    this.getLocation = function() {
+                    this.getDestination = function() {
+                        return n.destination
+                    }, this.getLocation = function() {
                         return n.location
                     }, this.name = e, this.destination = t
                 }
@@ -19013,6 +19033,8 @@ webpackJsonp([60], {
                     return e
                 }, e.prototype.createChild = function(t, n) {
                     return new e(t, n)
+                }, e.prototype.setDestination = function(e) {
+                    this.destination = e
                 }, e.prototype.setLocation = function(e) {
                     this.location = e
                 }, e.prototype.reset = function() {}, e.prototype.registerCustomEvent = function(e) {
@@ -25785,7 +25807,7 @@ webpackJsonp([60], {
         n.d(t, "a", function() {
             return d
         });
-        var u = new Set([o.SpadeEventType.Chat, o.SpadeEventType.Follow, o.SpadeEventType.Unfollow]),
+        var u = new Set([o.SpadeEventType.AutoHostToggle, o.SpadeEventType.Chat, o.SpadeEventType.DeprioritizeVodcastToggle, o.SpadeEventType.Follow, o.SpadeEventType.TeamHostToggle, o.SpadeEventType.Unfollow]),
             d = function() {
                 function e(e) {
                     var t = this;
@@ -28727,46 +28749,46 @@ webpackJsonp([60], {
     },
     c8Is: function(e, t, n) {
         "use strict";
-        var i = n("TToO"),
-            a = n("OAwv"),
-            r = n("U7vG"),
-            o = n("6sO2"),
-            s = n("7vx8"),
-            l = n("Ejve"),
-            c = n("vH/s"),
-            u = n("CSlQ"),
-            d = function(e) {
+        var i, a = n("TToO"),
+            r = n("OAwv"),
+            o = n("U7vG"),
+            s = n("6sO2"),
+            l = n("7vx8"),
+            c = n("Ejve"),
+            u = n("vH/s"),
+            d = n("CSlQ"),
+            p = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
-                    n.logger = o.i.withCategory("Tracking/AmazonAds");
-                    var i = o.b.get("amazon_ads_url", ""),
-                        a = o.b.get("amazon_ads_countries", ["US"]),
+                    n.logger = s.i.withCategory("Tracking/AmazonAds");
+                    var i = s.b.get("amazon_ads_url", ""),
+                        a = s.b.get("amazon_ads_countries", ["US"]),
                         r = t.countryCode,
-                        s = r && a.includes(r);
-                    return s && i ? (n.imageSrc = i, n.logger.debug("Created", {
+                        o = r && a.includes(r);
+                    return o && i ? (n.imageSrc = i, n.logger.debug("Created", {
                         imageSrc: n.imageSrc,
                         userCountry: r,
-                        isSupportedCountry: s,
+                        isSupportedCountry: o,
                         supportedCountries: a
                     })) : n.logger.debug("Skipping", {
-                        isSupportedCountry: s,
+                        isSupportedCountry: o,
                         userCountry: r,
                         supportedCountries: a
                     }), n
                 }
-                return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                return a.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return this.imageSrc ? r.createElement("img", {
+                    return this.imageSrc ? o.createElement("img", {
                         src: this.imageSrc,
                         style: {
                             display: "none"
                         }
                     }) : null
-                }, t = i.__decorate([Object(u.c)("AmazonAds")], t)
-            }(r.Component),
-            p = n("F8kA"),
-            m = function(e) {
+                }, t = a.__decorate([Object(d.c)("AmazonAds")], t)
+            }(o.Component),
+            m = n("F8kA"),
+            h = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.renderBinding = function(e) {
@@ -28781,14 +28803,14 @@ webpackJsonp([60], {
                         })
                     }, n.onHistoryChange = function() {
                         window.COMSCORE && window.COMSCORE.beacon && n.sendBeacon()
-                    }, n.scriptSrc = o.b.get("comscore_url", ""), n.logger = o.i.withCategory("Tracking/Comscore"), n.data = {
-                        c1: o.b.get("comscore_config_c1", 0),
-                        c2: o.b.get("comscore_config_c2", 0),
-                        c3: o.b.get("comscore_config_c3", 0),
-                        c5: o.b.get("comscore_config_c5", "")
+                    }, n.scriptSrc = s.b.get("comscore_url", ""), n.logger = s.i.withCategory("Tracking/Comscore"), n.data = {
+                        c1: s.b.get("comscore_config_c1", 0),
+                        c2: s.b.get("comscore_config_c2", 0),
+                        c3: s.b.get("comscore_config_c3", 0),
+                        c5: s.b.get("comscore_config_c5", "")
                     }, n
                 }
-                return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                return a.__extends(t, e), t.prototype.componentDidMount = function() {
                     if (this.scriptSrc) {
                         if (document.querySelector('[data-name="comscore"]')) return;
                         this.logger.debug("Loading", {
@@ -28799,20 +28821,20 @@ webpackJsonp([60], {
                     } else this.logger.warn("Skipping");
                     this.props.history.listen(this.onHistoryChange), this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return this.scriptSrc ? r.createElement("div", {
+                    return this.scriptSrc ? o.createElement("div", {
                         ref: this.renderBinding
                     }) : null
-                }, t = i.__decorate([Object(u.c)("Comscore")], t)
-            }(r.Component),
-            h = Object(p.f)(m),
-            g = function(e) {
+                }, t = a.__decorate([Object(d.c)("Comscore")], t)
+            }(o.Component),
+            g = Object(m.f)(h),
+            f = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.renderBinding = function(e) {
                         n.containerRef = e
-                    }, n.logger = o.i.withCategory("Tracking/GoogleAnalytics"), n.scriptSrc = o.b.get("google_analytics_url", ""), n
+                    }, n.logger = s.i.withCategory("Tracking/GoogleAnalytics"), n.scriptSrc = s.b.get("google_analytics_url", ""), n
                 }
-                return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                return a.__extends(t, e), t.prototype.componentDidMount = function() {
                     if (this.scriptSrc) {
                         if (document.querySelector('[data-name="google-analytics"]')) return;
                         var e = document.createElement("script");
@@ -28822,46 +28844,59 @@ webpackJsonp([60], {
                     } else this.logger.debug("Skipped");
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return this.scriptSrc ? r.createElement("div", {
+                    return this.scriptSrc ? o.createElement("div", {
                         ref: this.renderBinding
                     }) : null
-                }, t = i.__decorate([Object(u.c)("GoogleAnalytics")], t)
-            }(r.Component),
-            f = n("IWpL"),
-            v = function(e) {
+                }, t = a.__decorate([Object(d.c)("GoogleAnalytics")], t)
+            }(o.Component),
+            v = n("w9tK"),
+            b = n("IWpL");
+        ! function(e) {
+            e.ivwUrl = "ivw_url", e.ivwCountries = "ivw_countries", e.ivwLanguages = "ivw_languages", e.miscGames = "ivw_misc_games", e.codeGameDirectory = "ivw_code_game_directory", e.codeMiscDirectory = "ivw_code_misc_directory", e.codeGameVideo = "ivw_code_game_video", e.codeMiscVideo = "ivw_code_misc_video", e.codeFrontpage = "ivw_code_frontpage"
+        }(i || (i = {}));
+        var y = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
-                    n.getPageCode = function(e) {
-                        switch (e) {
-                            case "directory-game":
-                                return "1148gameVIDE";
-                            case "directory-creative":
-                                return "1148directory_misc";
-                            case "directory":
-                                return "1148directory";
-                            case "search":
-                                return "4201search";
-                            case "home":
-                                return "1101homepage";
-                            case "pages":
-                                return "1148text";
-                            case "channel":
-                            case "video":
-                                return "1148publVIDE";
-                            case "video_list":
-                                return "1148publcont";
+                    n.loadSettings = function() {
+                        n.scriptSrc = s.b.get(i.ivwUrl, ""), n.supportedCountries = s.b.get(i.ivwCountries, ["DE"]), n.supportedLanguages = s.b.get(i.ivwLanguages, ["de"]), n.miscGames = s.b.get(i.miscGames, ["Creative", "IRL", "Music", "Always On", "Talk Shows", "Programming"]), n.ivwCodeGameDirectory = s.b.get(i.codeGameDirectory, "1148directory"), n.ivwCodeMiscDirectory = s.b.get(i.codeMiscDirectory, "1148directory_misc"), n.ivwCodeFrontpage = s.b.get(i.codeFrontpage, "1101homepage"), n.ivwCodeGameVideo = s.b.get(i.codeGameVideo, "1148gameVIDE"), n.ivwCodeMiscVideo = s.b.get(i.codeMiscVideo, "1148miscVIDE")
+                    }, n.getPageCode = function(e) {
+                        var t = n.props.destination,
+                            i = n.props.rootLatencyTracker;
+                        switch (t || (t = i.getDestination()), t) {
+                            case v.a.BrowseGamesAndCommunities:
+                            case v.a.BrowseCreative:
+                            case v.a.BrowseCommunities:
+                            case v.a.DirectoryPopular:
+                            case v.a.DirectoryPopularByLanguage:
+                                return n.ivwCodeMiscDirectory;
+                            case v.a.DirectoryGameIndex:
+                                return n.getDirectoryPageCode(e.content_type, e.game);
+                            case v.a.ChannelIndex:
+                            case v.a.VideoWatchPage:
+                                return n.getVideoPageCode(e.game, e.hosted_game);
+                            case v.a.Index:
+                                return n.ivwCodeFrontpage;
                             default:
                                 return null
                         }
+                    }, n.getDirectoryPageCode = function(e, t) {
+                        return e === b.PageviewDirectoryContentType.Games && t && !n.miscGames.includes(t) ? n.ivwCodeGameDirectory : n.ivwCodeMiscDirectory
+                    }, n.getVideoPageCode = function(e, t) {
+                        return t && n.miscGames.includes(t) ? n.ivwCodeMiscVideo : t ? n.ivwCodeGameVideo : e && n.miscGames.includes(e) ? n.ivwCodeMiscVideo : n.ivwCodeGameVideo
+                    }, n.isMultilingual = function(e) {
+                        return n.logger.debug("isMultilingual()", {
+                            languageCode: n.languageCode,
+                            broadcastLanguage: e
+                        }), !n.supportedLanguages.includes(n.languageCode) || e && !n.supportedLanguages.includes(e)
                     }, n.onScriptLoad = function() {
                         n.trackPageView()
                     }, n.trackPageView = function() {
-                        var e = o.m.getLastPageview();
-                        if (window.iom && window.iom.c && o.m.getLastPageview())
+                        var e = s.m.getLastPageview();
+                        if (window.iom && window.iom.c && s.m.getLastPageview())
                             if (e && e.location) {
-                                var t = n.getPageCode(e.location);
+                                var t = n.getPageCode(e);
                                 if (t) {
-                                    n.isMultiLingual && (t += "_multilanguage");
+                                    n.isMultilingual(e.language) && (t += "_multilanguage");
                                     var i = {
                                         st: "twitchtv",
                                         cp: t,
@@ -28878,43 +28913,41 @@ webpackJsonp([60], {
                         else n.logger.debug("Unable to track pageview. IOM is missing.")
                     }, n.renderBinding = function(e) {
                         n.containerRef = e
-                    }, n.logger = o.i.withCategory("Tracking/IVW"), n.languageCode = o.n.intl.getLanguageCode() || "en";
-                    var i = o.b.get("ivw_url", ""),
-                        a = o.b.get("ivw_countries", [""]),
-                        r = o.b.get("ivw_languages", ["de"]),
-                        s = t.countryCode,
-                        l = s && a.includes(t.countryCode),
-                        c = n.languageCode && r.includes(n.languageCode);
-                    return i && (l || c) ? (n.scriptSrc = i, n.isMultiLingual = !c, n.logger.debug("Created", {
-                        url: i,
-                        supportedCountries: a,
-                        supportedLanguages: r,
+                    }, n.logger = s.i.withCategory("Tracking/IVW"), n.loadSettings(), n.languageCode = n.props.language || s.n.intl.getLanguageCode() || "en";
+                    var a = t.countryCode,
+                        r = void 0 !== a && n.supportedCountries.includes(a),
+                        o = n.supportedLanguages.includes(n.languageCode);
+                    return n.loadScript = void 0 !== n.scriptSrc && (r || o), n.loadScript ? n.logger.debug("Created", {
+                        scriptSrc: n.scriptSrc,
+                        supportedCountries: n.supportedCountries,
+                        supportedLanguages: n.supportedLanguages,
                         languageCode: n.languageCode,
-                        userCountry: s
-                    })) : n.logger.debug("Skipping", {
-                        url: i,
-                        supportedCountries: a,
-                        supportedLanguages: r,
+                        userCountry: a
+                    }) : n.logger.debug("Skipping", {
+                        scriptSrc: n.scriptSrc,
+                        supportedCountries: n.supportedCountries,
+                        supportedLanguages: n.supportedLanguages,
                         languageCode: n.languageCode,
-                        userCountry: s
+                        userCountry: a
                     }), n
                 }
-                return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                    if (this.scriptSrc) {
+                return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                    if (this.loadScript) {
                         if (document.querySelector('[data-name="ivw"]')) return;
                         var e = document.createElement("script");
-                        e.async = !0, e.src = this.scriptSrc, e.dataset && (e.dataset.name = "ivw"), this.containerRef.appendChild(e), e.onload = this.onScriptLoad
+                        e.async = !0, e.src = this.scriptSrc, e.dataset && (e.dataset.name = "ivw"), this.containerRef.appendChild(e), e.onload = this.onScriptLoad, s.m.eventEmitter.addListener(b.SpadeEventType.Pageview, this.trackPageView)
                     }
-                    o.m.eventEmitter.addListener(f.SpadeEventType.Pageview, this.trackPageView), this.props.latencyTracking.reportInteractive()
+                    this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return this.scriptSrc ? r.createElement("div", {
+                    return this.loadScript ? o.createElement("div", {
                         ref: this.renderBinding
                     }) : null
-                }, t = i.__decorate([Object(u.c)("IVW")], t)
-            }(r.Component),
-            b = Object(p.f)(v),
-            y = n("lbHh"),
-            k = function(e) {
+                }, t.prototype.componentWillUnmount = function() {
+                    s.m.eventEmitter.removeListener(b.SpadeEventType.Pageview, this.trackPageView)
+                }, t = a.__decorate([Object(d.c)("IVW")], t)
+            }(o.Component),
+            k = n("lbHh"),
+            S = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     n.renderBinding = function(e) {
@@ -28939,25 +28972,25 @@ webpackJsonp([60], {
                     }, n.onTrackError = function(e) {
                         e ? n.logger.warn("Failed to track pageview.", e) : n.logger.debug("Tracked pageview")
                     }, n.onHistoryChange = function() {
-                        window.Krux ? n.trackPageload() : o.i.debug("Failed to track pageview; Krux not available.")
+                        window.Krux ? n.trackPageload() : s.i.debug("Failed to track pageview; Krux not available.")
                     }, n.retrieve = function(e) {
                         var t = "kx" + e;
                         if (window.localStorage) return window.localStorage[t] || "";
                         if (navigator.cookieEnabled) {
-                            var n = y.get(t);
+                            var n = k.get(t);
                             return n && decodeURI(n[1]) || ""
                         }
                         return ""
-                    }, n.logger = o.i.withCategory("Tracking/Krux");
+                    }, n.logger = s.i.withCategory("Tracking/Krux");
                     var i = t.countryCode,
-                        a = o.b.get("krux_countries", [""]);
+                        a = s.b.get("krux_countries", [""]);
                     if (i && a.includes(i)) {
                         var r = /\bkxsrc=([^&]+)/,
-                            s = /^https?:\/\/([a-z0-9_\-\.]+\.)?krxd\.net(:\d{1,5})?\//i,
+                            o = /^https?:\/\/([a-z0-9_\-\.]+\.)?krxd\.net(:\d{1,5})?\//i,
                             l = location.href.match(r),
                             c = l && decodeURIComponent(l[1]),
-                            u = o.b.get("krux_url", "");
-                        c && (s.test(c) ? u = c : "disable" === c && (u = "")), n.scriptSrc = u, n.logger.debug("Created", {
+                            u = s.b.get("krux_url", "");
+                        c && (o.test(c) ? u = c : "disable" === c && (u = "")), n.scriptSrc = u, n.logger.debug("Created", {
                             userCountry: i,
                             supportedCountries: a,
                             src: n.scriptSrc
@@ -28968,7 +29001,7 @@ webpackJsonp([60], {
                     });
                     return n
                 }
-                return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                return a.__extends(t, e), t.prototype.componentDidMount = function() {
                     if (this.scriptSrc) {
                         if (document.querySelector('[data-name="krux"]')) return;
                         var e = document.createElement("script");
@@ -28976,20 +29009,20 @@ webpackJsonp([60], {
                     }
                     this.props.history.listen(this.onHistoryChange), this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return this.scriptSrc ? r.createElement("div", {
+                    return this.scriptSrc ? o.createElement("div", {
                         ref: this.renderBinding
                     }) : null
-                }, t = i.__decorate([Object(u.c)("Krux")], t)
-            }(r.Component),
-            S = Object(p.f)(k),
-            _ = function(e) {
+                }, t = a.__decorate([Object(d.c)("Krux")], t)
+            }(o.Component),
+            _ = Object(m.f)(S),
+            w = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.renderBinding = function(e) {
                         n.containerRef = e
-                    }, n.logger = o.i.withCategory("Tracking/Quantcast"), n.scriptSrc = o.b.get("quantcast_url", ""), n.qacct = o.b.get("quantcast_account", ""), n.labels = o.b.get("quantcast_labels", ""), n
+                    }, n.logger = s.i.withCategory("Tracking/Quantcast"), n.scriptSrc = s.b.get("quantcast_url", ""), n.qacct = s.b.get("quantcast_account", ""), n.labels = s.b.get("quantcast_labels", ""), n
                 }
-                return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                return a.__extends(t, e), t.prototype.componentDidMount = function() {
                     if (this.scriptSrc && this.qacct && this.labels) {
                         if (document.querySelector('[data-name="quantcast"]')) return;
                         var e = {
@@ -29005,24 +29038,24 @@ webpackJsonp([60], {
                     } else this.logger.debug("Skipped");
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return this.scriptSrc ? r.createElement("div", {
+                    return this.scriptSrc ? o.createElement("div", {
                         ref: this.renderBinding
                     }) : null
-                }, t = i.__decorate([Object(u.c)("Quantcast")], t)
-            }(r.Component),
-            w = n("wG4N");
+                }, t = a.__decorate([Object(d.c)("Quantcast")], t)
+            }(o.Component),
+            E = n("wG4N");
         n.d(t, "a", function() {
-            return E
+            return C
         });
-        var E = function(e) {
+        var C = function(e) {
             function t(t) {
                 var n = e.call(this, t) || this;
-                return n.logger = o.i.withCategory("Tracking/Manager"), n
+                return n.logger = s.i.withCategory("Tracking/Manager"), n
             }
-            return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                this.reportInteractive(), o.m.track(c.SpadeEventType.BTTV, {
+            return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                this.reportInteractive(), s.m.track(u.SpadeEventType.BTTV, {
                     is_bttv: !!window.BetterTTV
-                }), o.m.track(c.SpadeEventType.FFZ, {
+                }), s.m.track(u.SpadeEventType.FFZ, {
                     is_ffz: !!window.FrankerFaceZ
                 })
             }, t.prototype.componentDidUpdate = function() {
@@ -29030,25 +29063,25 @@ webpackJsonp([60], {
             }, t.prototype.render = function() {
                 if (!this.props.data || this.props.data.loading || this.props.data.error) return null;
                 var e = this.props.data.requestInfo.countryCode;
-                if (!e && o.a.buildType !== l.a.Production) {
-                    var t = a.parse(this.props.history.location.search || "");
+                if (!e && s.a.buildType !== c.a.Production) {
+                    var t = r.parse(this.props.history.location.search || "");
                     t.country ? (e = t.country, this.logger.debug("Using supplied country code", {
                         countryCode: e
                     })) : (e = "US", this.logger.debug("Using default country code", {
                         countryCode: e
                     }))
                 }
-                return r.createElement("div", null, r.createElement(d, {
+                return o.createElement("div", null, o.createElement(p, {
                     countryCode: e
-                }), r.createElement(_, null), r.createElement(g, null), r.createElement(S, {
+                }), o.createElement(w, null), o.createElement(f, null), o.createElement(_, {
                     countryCode: e
-                }), r.createElement(h, null), r.createElement(b, {
+                }), o.createElement(g, null), o.createElement(y, {
                     countryCode: e
                 }))
             }, t.prototype.reportInteractive = function() {
                 !this.props.data || this.props.data.loading && !this.props.data.error || this.props.latencyTracking.reportInteractive()
-            }, t = i.__decorate([Object(s.a)(w), Object(u.c)("TrackingManager")], t)
-        }(r.Component)
+            }, t = a.__decorate([Object(l.a)(E), Object(d.c)("TrackingManager")], t)
+        }(o.Component)
     },
     c8sn: function(e, t) {
         var n = {
@@ -29211,49 +29244,17 @@ webpackJsonp([60], {
     cLQP: function(e, t) {},
     cVFG: function(e, t, n) {
         "use strict";
-        var i = n("RH2O"),
-            a = n("TToO"),
-            r = n("U7vG"),
-            o = n("6sO2"),
-            s = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return a.__extends(t, e), t.prototype.componentWillMount = function() {
-                    return a.__awaiter(this, void 0, void 0, function() {
-                        var e;
-                        return a.__generator(this, function(t) {
-                            switch (t.label) {
-                                case 0:
-                                    this.props.username && this.props.authToken && o.n.tmi.setIdentity(this.props.username, this.props.authToken), t.label = 1;
-                                case 1:
-                                    return t.trys.push([1, 3, , 4]), [4, o.n.tmi.connect()];
-                                case 2:
-                                    return t.sent(), [3, 4];
-                                case 3:
-                                    return e = t.sent(), o.i.warn("Failed to connect to TMI from chat manager. It will be retried as needed.", e), [3, 4];
-                                case 4:
-                                    return [2]
-                            }
-                        })
-                    })
-                }, t.prototype.componentWillUnmount = function() {
-                    o.n.tmi.disconnect()
-                }, t.prototype.componentWillReceiveProps = function(e) {
-                    e.username && e.authToken && (e.username !== this.props.username || e.authToken !== this.props.authToken) && o.n.tmi.setIdentity(e.username, e.authToken)
-                }, t.prototype.render = function() {
-                    return null
-                }, t
-            }(r.Component);
         n.d(t, "a", function() {
-            return l
+            return r
         });
-        var l = Object(i.a)(function(e) {
-            return {
-                authToken: e.session.user && e.session.user.authToken,
-                username: e.session.user && e.session.user.login
-            }
-        })(s)
+        var i = n("RH2O"),
+            a = n("rrpS"),
+            r = Object(i.a)(function(e) {
+                return {
+                    authToken: e.session.user && e.session.user.authToken,
+                    username: e.session.user && e.session.user.login
+                }
+            })(a.a)
     },
     "cuT/": function(e, t, n) {
         "use strict";
@@ -32574,13 +32575,13 @@ webpackJsonp([60], {
                 return n.e(47).then(n.bind(null, "8U1+"))
             }, "AnonFrontPage"),
             oe = ee.a.wrap(function() {
-                return n.e(49).then(n.bind(null, "Dd84"))
+                return n.e(48).then(n.bind(null, "Dd84"))
             }, "BrowseRootPage"),
             se = ee.a.wrap(function() {
                 return n.e(40).then(n.bind(null, "gZGZ"))
             }, "ChannelClipsPage"),
             le = ee.a.wrap(function() {
-                return n.e(48).then(n.bind(null, "zfLI"))
+                return n.e(49).then(n.bind(null, "zfLI"))
             }, "ChannelCollectionsPage"),
             ce = ee.a.wrap(function() {
                 return n.e(42).then(n.bind(null, "lW0T"))
@@ -34392,7 +34393,7 @@ webpackJsonp([60], {
         });
         var i;
         ! function(e) {
-            e.AchievementSpotlightImpression = "achievement_spotlight_impression", e.AchievementQuestBannerClick = "achievement_quest_banner_click", e.APIQuery = "benchmark_api_query", e.AppBooted = "benchmark_app_booted", e.AutohostChatImpression = "autohost_chat_impression", e.AutohostChatYes = "autohost_chat_yes", e.AutohostChatDismiss = "autohost_chat_dismiss", e.AutohostChatSettings = "autohost_chat_settings", e.BitsAdsAvailability = "bits_ads_availability", e.BitsAdsImpression = "bits_ads_impression", e.BitsAdsRequest = "bits_ads_request", e.BitsCardInteraction = "bits_card_interaction", e.BrowseForYou = "browse_for_you", e.BrowserFingerprint = "browser_fingerprint", e.BrowserPushNotificationPrompt = "browser_notification_prompt", e.BrowserPushNotificationDisable = "browser_notification_disable", e.BTTV = "bttv_check", e.Chat = "chat", e.ChatMentionUsed = "chat_mention_used", e.ChatRoomJoined = "chat_room_join", e.ChatSettingsChanged = "chat_client_setting_changed", e.ChatSettingsOpened = "chat_client_settings_open", e.ChatSuggestion = "chat-suggestions", e.ChatSuggestionComplete = "chat-completed-suggestion", e.ChommentCreated = "chomment_create", e.ChommentDeleted = "chomment_delete", e.ChommentUIAction = "chomment_ui_action", e.CollectionCreate = "collection_create", e.CollectionAddItem = "collection_add_item", e.CollectionRemoveItem = "collection_remove_item", e.CommunityEdit = "community_client_edit", e.CommunityFollow = "community_client_follow", e.CommunityModeration = "community_client_channel_moderation", e.CommunityReport = "community_client_report", e.CommunityUnfollow = "community_client_unfollow", e.CompleteTransition = "benchmark_complete_transition", e.ComponentInitializing = "benchmark_component_initializing", e.ComponentInteractive = "benchmark_component_interactive", e.CustomEvent = "benchmark_custom_event", e.CrateNotificationAction = "crate_notification_action", e.EventFollowing = "oracle_user_notification_client", e.EventShare = "oracle_event_share", e.ExperimentBranch = "experiment_branch", e.FeaturedEventPresentation = "event_suggestions_shown", e.FeedCardImpression = "feed_client_card_impression", e.FeedCardEmbedImpression = "feed_client_card_embed_impression", e.FeedCardEmbedPlay = "feed_client_card_embed_play", e.FeedPost = "feed_client_post", e.FeedReaction = "feed_client_reaction", e.FetchStart = "benchmark_fetch_start", e.FFZ = "ffz_check", e.Follow = "follow", e.FrontPageCarouselClick = "frontpage_carousel_click", e.FrontPageCarouselDisplay = "carousel_display", e.FrontPageCarouselPromotionCardClick = "promotion_card_click", e.FrontPageCarouselPromotionCardView = "promotion_card_view", e.FrontPageCarouselNavButtonClick = "carousel_nav_button_click", e.FuelBuyButton = "fuel_buy_button", e.FuelGetGameClick = "fuel_get_game_click", e.FuelOfferView = "offer_view", e.FuelOfferInteraction = "offer_interaction", e.FuelSocialShare = "fuel_social_share", e.GameFollow = "follow-game", e.GameUnfollow = "unfollow-game", e.ItemSectionClick = "item_section_click", e.ItemSectionLoad = "item_section_load", e.OnboardingEvent = "onboarding_web", e.NetworkRequest = "network_request", e.NewChatterTokenStatus = "nca_client_token_status", e.NewChatterOnboardingInteraction = "nca_onboarding_chatbox_interaction", e.NotificationCenterInteraction = "notification_center_interaction", e.NotificationImpression = "notification_impression", e.NotificationInteraction = "notification_interaction", e.Pageview = "pageview", e.PartnerAffiliateSettings = "partner_affiliate_settings", e.PassportHide = "auth_exit", e.PassportShow = "auth_show", e.PresenceClick = "friend_presence_click", e.RaidPromptJoin = "raid_prompt_join", e.RaidPromptLeave = "raid_prompt_leave", e.RaidPromptImpression = "raid_prompt_impression", e.ShareItem = "share_item", e.SideNavChannelClick = "sidenav_channel_click", e.SideNavDetails = "sidenav_details", e.SideNavLoadMore = "sidenav_load_more", e.SiteLayoutMod = "site_layout_mod", e.SiteToggle = "twilight_site_toggle", e.StreamSummarySpotlightImpression = "summary_spotlight_impression", e.StreamSummarySpotlightClick = "summary_spotlight_click", e.StoreMerchClick = "store_item_select", e.StoreMerchView = "store_item_view", e.Subscription = "subscribe_button", e.SubsLandingStreamerClick = "subs_landing_streamer_click", e.ThemeChange = "dark_mode_toggle", e.Unfollow = "unfollow", e.VideoChatSettingChanged = "video_chat_setting_changed", e.VideoShare = "video_share", e.WhisperAllThreadsMod = "chat_convo_mod_global", e.WhisperIgnoreUser = "chat_ignore_client", e.WhisperReceived = "whisper_received", e.WhisperSearchClick = "search_click", e.WhisperSent = "whisper", e.WhisperThreadCreate = "chat_convo_create", e.WhisperThreadMod = "chat_convo_mod"
+            e.AchievementSpotlightImpression = "achievement_spotlight_impression", e.AchievementQuestBannerClick = "achievement_quest_banner_click", e.APIQuery = "benchmark_api_query", e.AppBooted = "benchmark_app_booted", e.AutohostChatImpression = "autohost_chat_impression", e.AutohostChatYes = "autohost_chat_yes", e.AutohostChatDismiss = "autohost_chat_dismiss", e.AutohostChatSettings = "autohost_chat_settings", e.AutoHostToggle = "autohost_toggle", e.BitsAdsAvailability = "bits_ads_availability", e.BitsAdsImpression = "bits_ads_impression", e.BitsAdsRequest = "bits_ads_request", e.BitsCardInteraction = "bits_card_interaction", e.BrowseForYou = "browse_for_you", e.BrowserFingerprint = "browser_fingerprint", e.BrowserPushNotificationPrompt = "browser_notification_prompt", e.BrowserPushNotificationDisable = "browser_notification_disable", e.BTTV = "bttv_check", e.Chat = "chat", e.ChatMentionUsed = "chat_mention_used", e.ChatRoomJoined = "chat_room_join", e.ChatSettingsChanged = "chat_client_setting_changed", e.ChatSettingsOpened = "chat_client_settings_open", e.ChatSuggestion = "chat-suggestions", e.ChatSuggestionComplete = "chat-completed-suggestion", e.ChommentCreated = "chomment_create", e.ChommentDeleted = "chomment_delete", e.ChommentUIAction = "chomment_ui_action", e.CollectionCreate = "collection_create", e.CollectionAddItem = "collection_add_item", e.CollectionRemoveItem = "collection_remove_item", e.CommunityEdit = "community_client_edit", e.CommunityFollow = "community_client_follow", e.CommunityModeration = "community_client_channel_moderation", e.CommunityReport = "community_client_report", e.CommunityUnfollow = "community_client_unfollow", e.CompleteTransition = "benchmark_complete_transition", e.ComponentInitializing = "benchmark_component_initializing", e.ComponentInteractive = "benchmark_component_interactive", e.CustomEvent = "benchmark_custom_event", e.CrateNotificationAction = "crate_notification_action", e.DeprioritizeVodcastToggle = "autohost_deprioritize_vodcast_toggle", e.EventFollowing = "oracle_user_notification_client", e.EventShare = "oracle_event_share", e.ExperimentBranch = "experiment_branch", e.FeaturedEventPresentation = "event_suggestions_shown", e.FeedCardImpression = "feed_client_card_impression", e.FeedCardEmbedImpression = "feed_client_card_embed_impression", e.FeedCardEmbedPlay = "feed_client_card_embed_play", e.FeedPost = "feed_client_post", e.FeedReaction = "feed_client_reaction", e.FetchStart = "benchmark_fetch_start", e.FFZ = "ffz_check", e.Follow = "follow", e.FrontPageCarouselClick = "frontpage_carousel_click", e.FrontPageCarouselDisplay = "carousel_display", e.FrontPageCarouselPromotionCardClick = "promotion_card_click", e.FrontPageCarouselPromotionCardView = "promotion_card_view", e.FrontPageCarouselNavButtonClick = "carousel_nav_button_click", e.FuelBuyButton = "fuel_buy_button", e.FuelGetGameClick = "fuel_get_game_click", e.FuelOfferView = "offer_view", e.FuelOfferInteraction = "offer_interaction", e.FuelSocialShare = "fuel_social_share", e.GameFollow = "follow-game", e.GameUnfollow = "unfollow-game", e.ItemSectionClick = "item_section_click", e.ItemSectionLoad = "item_section_load", e.OnboardingEvent = "onboarding_web", e.NetworkRequest = "network_request", e.NewChatterTokenStatus = "nca_client_token_status", e.NewChatterOnboardingInteraction = "nca_onboarding_chatbox_interaction", e.NotificationCenterInteraction = "notification_center_interaction", e.NotificationImpression = "notification_impression", e.NotificationInteraction = "notification_interaction", e.Pageview = "pageview", e.PartnerAffiliateSettings = "partner_affiliate_settings", e.PassportHide = "auth_exit", e.PassportShow = "auth_show", e.PresenceClick = "friend_presence_click", e.RaidPromptJoin = "raid_prompt_join", e.RaidPromptLeave = "raid_prompt_leave", e.RaidPromptImpression = "raid_prompt_impression", e.ShareItem = "share_item", e.SideNavChannelClick = "sidenav_channel_click", e.SideNavDetails = "sidenav_details", e.SideNavLoadMore = "sidenav_load_more", e.SiteLayoutMod = "site_layout_mod", e.SiteToggle = "twilight_site_toggle", e.StreamSummarySpotlightImpression = "summary_spotlight_impression", e.StreamSummarySpotlightClick = "summary_spotlight_click", e.StoreMerchClick = "store_item_select", e.StoreMerchView = "store_item_view", e.Subscription = "subscribe_button", e.SubsLandingStreamerClick = "subs_landing_streamer_click", e.TeamHostToggle = "autohost_team_toggle", e.ThemeChange = "dark_mode_toggle", e.Unfollow = "unfollow", e.VideoChatSettingChanged = "video_chat_setting_changed", e.VideoShare = "video_share", e.WhisperAllThreadsMod = "chat_convo_mod_global", e.WhisperIgnoreUser = "chat_ignore_client", e.WhisperReceived = "whisper_received", e.WhisperSearchClick = "search_click", e.WhisperSent = "whisper", e.WhisperThreadCreate = "chat_convo_create", e.WhisperThreadMod = "chat_convo_mod"
         }(i || (i = {}))
     },
     kIPx: function(e, t) {},
@@ -36424,6 +36425,45 @@ webpackJsonp([60], {
             }()),
             d = n("J4ib");
         Object(d.i)(new u)
+    },
+    rrpS: function(e, t, n) {
+        "use strict";
+        n.d(t, "a", function() {
+            return o
+        });
+        var i = n("TToO"),
+            a = n("U7vG"),
+            r = (n.n(a), n("6sO2")),
+            o = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return i.__extends(t, e), t.prototype.componentWillMount = function() {
+                    return i.__awaiter(this, void 0, void 0, function() {
+                        var e;
+                        return i.__generator(this, function(t) {
+                            switch (t.label) {
+                                case 0:
+                                    this.props.username && this.props.authToken && r.n.tmi.setIdentity(this.props.username, this.props.authToken), t.label = 1;
+                                case 1:
+                                    return t.trys.push([1, 3, , 4]), [4, r.n.tmi.connect()];
+                                case 2:
+                                    return t.sent(), [3, 4];
+                                case 3:
+                                    return e = t.sent(), r.i.warn("Failed to connect to TMI from chat manager. It will be retried as needed.", e), [3, 4];
+                                case 4:
+                                    return [2]
+                            }
+                        })
+                    })
+                }, t.prototype.componentWillUnmount = function() {
+                    r.n.tmi.disconnect()
+                }, t.prototype.componentWillReceiveProps = function(e) {
+                    e.username && e.authToken && (e.username !== this.props.username || e.authToken !== this.props.authToken) && r.n.tmi.setIdentity(e.username, e.authToken)
+                }, t.prototype.render = function() {
+                    return null
+                }, t
+            }(a.Component)
     },
     rxEr: function(e, t) {},
     s3R1: function(e, t, n) {
@@ -39706,6 +39746,16 @@ webpackJsonp([60], {
     vRhQ: function(e, t) {},
     vXa3: function(e, t) {},
     "w/8h": function(e, t) {},
+    w9tK: function(e, t, n) {
+        "use strict";
+        n.d(t, "a", function() {
+            return i
+        });
+        var i;
+        ! function(e) {
+            e.BitsBuyCard = "bits-buy-card", e.BrowseCommunities = "browse.communities", e.BrowseCreative = "browse.creative", e.BrowseGamesAndCommunities = "browse.games-and-communities", e.ChannelClips = "channel.clips", e.ChannelCollections = "channel.collections", e.ChannelClipsManager = "videoManager.clips.channel", e.ChannelDashboardAchievements = "channel.dashboard.achievements", e.ChannelDashboardChannelAnalytics = "channel.dashboard.channel-analytics", e.ChannelDashboardExtensions = "channel.dashboard.extensions", e.ChannelDashboardModeration = "channel.dashboard.moderation", e.ChannelDashboardStreamSummary = "channel.dashboard.stream-summary", e.ChannelEvents = "channel.events", e.ChannelIndex = "channel.index.index", e.ChatPopout = "chat", e.CheermoteCarousel = "cheermote-carousel", e.DevOnly = "dev", e.DirectoryCommunityByLanguage = "directory.community.language", e.DirectoryCommunityIndex = "directory.community.index", e.DirectoryCommunityDetails = "directory.community.details", e.DirectoryFollowingCommunities = "directory.following.communities", e.DirectoryFollowingGames = "directory.following.games", e.DirectoryFollowingHosts = "directory.following.hosts", e.DirectoryFollowingIndex = "directory.following.index", e.DirectoryFollowingLiveChannels = "directory.following.channels", e.DirectoryFollowingVideos = "directory.following.videos.video-type", e.DirectoryGameClips = "directory.game.clips", e.DirectoryGameDetails = "directory.game.details", e.DirectoryGameIndex = "directory.game.index", e.DirectoryGames = "directory.games", e.DirectoryPopular = "directory.popular", e.DirectoryPopularByLanguage = "directory.popular.language", e.DirectoryGameVideos = "directory.game.videos", e.EmailVerification = "emailVerification", e.EventDetails = "event.details", e.ForYou = "for-you", e.Index = "index", e.MyClipsManager = "videoManager.clips", e.NotificationSettingsPage = "settings.notificationSettings", e.OnboardingIndex = "onboarding.index", e.ReportUserPage = "reportUser.page", e.SettingsConnections = "private/embed-components", e.SettingsChannel = "private/embed-components", e.SettingsNotifications = "settings.notifications", e.SettingsPrime = "settings.prime", e.SettingsProfile = "settings.profile", e.SettingsSecurity = "private/embed-components", e.StoreMerchPage = "store.merch", e.SubsLandingPage = "subs.landing", e.TeamsDashboardRevenue = "teams.dashboard.revenue", e.TeamsDashboardStats = "teams.dashboard.stats", e.TeamsDashboardMembers = "teams.dashboard.members", e.TeamsDashboardFeaturedChannels = "teams.dashboard.featured-channels", e.TeamsDashboardSettings = "teams.dashboard.settings", e.SubsBroadcasterPage = "subs.broadcaster", e.VideoManagerEditPropertiesPage = "videoManager.edit", e.VideoManagerPage = "videoManager.page", e.VideoManagerUploadListPage = "videoManager.upload-list", e.VideoManagerUploadPage = "videoManager.upload", e.VideosPage = "videos", e.VideoWatchPage = "video", e.Unknown = "unknown"
+        }(i || (i = {}))
+    },
     wG4N: function(e, t) {
         var n = {
             kind: "Document",
@@ -40776,4 +40826,4 @@ webpackJsonp([60], {
         }(i || (i = {}))
     }
 }, [4]);
-//# sourceMappingURL=core-0abb9f6af74b37afa88e8b985eedda6b.js.map
+//# sourceMappingURL=core-ed8a25b8d58dc2755b3ae51f9c549bb0.js.map

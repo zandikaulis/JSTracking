@@ -1,83 +1,83 @@
 webpackJsonp([56], {
-    DkuH: function(e, n, t) {
+    DkuH: function(e, t, n) {
         "use strict";
-        Object.defineProperty(n, "__esModule", {
+        Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var a = t("RH2O"),
-            o = t("2KeS"),
-            r = t("+xm8"),
-            i = t("f2i/"),
-            s = t("Aj/L"),
-            l = t("TToO"),
-            c = t("OAwv"),
-            d = t("U7vG"),
-            m = t("6sO2"),
-            u = t("7vx8"),
-            p = t("w9tK"),
-            g = t("CSlQ"),
-            h = t("LjAQ"),
-            y = t("A5Hr"),
-            b = t("mw/a"),
-            v = t("Odds"),
-            f = t("ucSk"),
-            C = function(e) {
-                function n() {
-                    var n = null !== e && e.apply(this, arguments) || this;
-                    return n.getReportingContext = function() {
-                        var e = c.parse(n.props.location.search);
+        var r = n("RH2O"),
+            o = n("2KeS"),
+            a = n("+xm8"),
+            i = n("f2i/"),
+            s = n("Aj/L"),
+            l = n("TToO"),
+            c = n("OAwv"),
+            p = n("U7vG"),
+            u = n("6sO2"),
+            d = n("7vx8"),
+            m = n("w9tK"),
+            g = n("CSlQ"),
+            h = n("LjAQ"),
+            f = n("A5Hr"),
+            b = n("mw/a"),
+            k = n("Odds"),
+            v = n("ucSk"),
+            R = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.getReportingContext = function() {
+                        var e = c.parse(t.props.location.search);
                         return {
                             contentType: e.contentType ? e.contentType : b.a.User,
                             contentID: e.contentId,
-                            targetUserID: n.props.userToReportData.user.id
+                            targetUserID: t.props.userToReportData.user.id
                         }
-                    }, n.handleReportUserClose = function(e) {
-                        e !== h.b.MutationError && e !== h.b.Success || n.props.history.push("/")
-                    }, n
+                    }, t.handleReportUserClose = function(e) {
+                        e !== h.b.MutationError && e !== h.b.Success || t.props.history.push("/")
+                    }, t
                 }
-                return l.__extends(n, e), n.prototype.componentDidMount = function() {
+                return l.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive(), this.props.isLoggedIn || this.props.login()
-                }, n.prototype.render = function() {
-                    return d.createElement(v.V, {
+                }, t.prototype.render = function() {
+                    return p.createElement(k.V, {
                         "data-test-selector": "report-user-page",
-                        alignItems: v.c.Center,
-                        display: v.H.Flex,
-                        flexDirection: v.J.Column,
+                        alignItems: k.c.Center,
+                        display: k.H.Flex,
+                        flexDirection: k.J.Column,
                         fullHeight: !0,
                         padding: 3
                     }, this.renderPage())
-                }, n.prototype.renderPage = function() {
-                    return this.props.isLoggedIn ? this.props.userToReportData.error ? d.createElement(v.V, {
+                }, t.prototype.renderPage = function() {
+                    return this.props.isLoggedIn ? this.props.userToReportData.error ? p.createElement(k.V, {
                         margin: {
                             bottom: 1
                         }
-                    }, d.createElement(v._23, {
-                        fontSize: v.L.Size5
-                    }, Object(m.d)("There was an unexpected error. Please refresh the page and try again", "ReportUserPage"))) : this.props.userToReportData && !this.props.userToReportData.loading && this.props.userToReportData.user ? d.createElement(y.a, {
+                    }, p.createElement(k._23, {
+                        fontSize: k.L.Size5
+                    }, Object(u.d)("There was an unexpected error. Please refresh the page and try again", "ReportUserPage"))) : this.props.userToReportData && !this.props.userToReportData.loading && this.props.userToReportData.user ? p.createElement(f.a, {
                         onClose: this.handleReportUserClose,
                         reportContext: this.getReportingContext(),
-                        title: Object(m.d)("Report {channelName}", {
+                        title: Object(u.d)("Report {channelName}", {
                             channelName: this.props.match.params.channelName
                         }, "ReportUserPage")
-                    }) : d.createElement(v._3, {
+                    }) : p.createElement(k._3, {
                         lineCount: 3
-                    }) : d.createElement(v.V, {
+                    }) : p.createElement(k.V, {
                         "data-test-selector": "report-user-page__logged-out",
-                        alignItems: v.c.Center,
-                        display: v.H.Flex,
-                        flexDirection: v.J.Column
-                    }, d.createElement(v.V, {
+                        alignItems: k.c.Center,
+                        display: k.H.Flex,
+                        flexDirection: k.J.Column
+                    }, p.createElement(k.V, {
                         margin: {
                             bottom: 1
                         }
-                    }, d.createElement(v._23, {
-                        fontSize: v.L.Size5
-                    }, Object(m.d)("You must be logged in to report {channelName}. Please log in to complete.", {
+                    }, p.createElement(k._23, {
+                        fontSize: k.L.Size5
+                    }, Object(u.d)("You must be logged in to report {channelName}. Please log in to complete.", {
                         channelName: this.props.match.params.channelName
-                    }, "ReportUserPage"))), d.createElement(v.u, {
+                    }, "ReportUserPage"))), p.createElement(k.u, {
                         onClick: this.props.login
-                    }, Object(m.d)("Log in", "ReportUserPage")))
-                }, n = l.__decorate([Object(u.a)(f, {
+                    }, Object(u.d)("Log in", "ReportUserPage")))
+                }, t = l.__decorate([Object(d.a)(v, {
                     name: "userToReportData",
                     options: function(e) {
                         return {
@@ -88,10 +88,10 @@ webpackJsonp([56], {
                     }
                 }), Object(g.c)("ReportUserPage", {
                     autoReportInteractive: !0,
-                    destination: p.a.ReportUserPage
-                })], n)
-            }(d.Component),
-            D = Object(a.a)(function(e) {
+                    destination: m.a.ReportUserPage
+                })], t)
+            }(p.Component),
+            y = Object(r.a)(function(e) {
                 return {
                     isLoggedIn: Object(s.d)(e),
                     currentUser: Object(s.c)(e)
@@ -99,16 +99,16 @@ webpackJsonp([56], {
             }, function(e) {
                 return Object(o.bindActionCreators)({
                     login: function() {
-                        return Object(i.f)(r.a.ReportChannel)
+                        return Object(i.f)(a.a.ReportChannel)
                     }
                 }, e)
-            })(C);
-        t.d(n, "ReportUserPage", function() {
-            return D
+            })(R);
+        n.d(t, "ReportUserPage", function() {
+            return y
         })
     },
-    ucSk: function(e, n) {
-        var t = {
+    ucSk: function(e, t) {
+        var n = {
             kind: "Document",
             definitions: [{
                 kind: "OperationDefinition",
@@ -185,7 +185,7 @@ webpackJsonp([56], {
                 end: 73
             }
         };
-        t.loc.source = {
+        n.loc.source = {
             body: "query ReportUserPage_User($login: String!) {\nuser(login: $login) {\nid\n}\n}",
             name: "GraphQL request",
             locationOffset: {
@@ -193,17 +193,7 @@ webpackJsonp([56], {
                 column: 1
             }
         };
-        e.exports = t
-    },
-    w9tK: function(e, n, t) {
-        "use strict";
-        t.d(n, "a", function() {
-            return a
-        });
-        var a;
-        ! function(e) {
-            e.BitsBuyCard = "bits-buy-card", e.BrowseCommunities = "browse.communities", e.BrowseCreative = "browse.creative", e.BrowseGamesAndCommunities = "browse.games-and-communities", e.ChannelClips = "channel.clips", e.ChannelCollections = "channel.collections", e.ChannelClipsManager = "videoManager.clips.channel", e.ChannelDashboardAchievements = "channel.dashboard.achievements", e.ChannelDashboardChannelAnalytics = "channel.dashboard.channel-analytics", e.ChannelDashboardExtensions = "channel.dashboard.extensions", e.ChannelDashboardModeration = "channel.dashboard.moderation", e.ChannelDashboardStreamSummary = "channel.dashboard.stream-summary", e.ChannelEvents = "channel.events", e.ChannelIndex = "channel.index.index", e.ChatPopout = "chat", e.CheermoteCarousel = "cheermote-carousel", e.DevOnly = "dev", e.DirectoryCommunityByLanguage = "directory.community.language", e.DirectoryCommunityIndex = "directory.community.index", e.DirectoryCommunityDetails = "directory.community.details", e.DirectoryFollowingCommunities = "directory.following.communities", e.DirectoryFollowingGames = "directory.following.games", e.DirectoryFollowingHosts = "directory.following.hosts", e.DirectoryFollowingIndex = "directory.following.index", e.DirectoryFollowingLiveChannels = "directory.following.channels", e.DirectoryFollowingVideos = "directory.following.videos.video-type", e.DirectoryGameClips = "directory.game.clips", e.DirectoryGameDetails = "directory.game.details", e.DirectoryGameIndex = "directory.game.index", e.DirectoryGames = "directory.games", e.DirectoryPopular = "directory.popular", e.DirectoryPopularByLanguage = "directory.popular.language", e.DirectoryGameVideos = "directory.game.videos", e.EmailVerification = "emailVerification", e.EventDetails = "event.details", e.ForYou = "for-you", e.Index = "index", e.MyClipsManager = "videoManager.clips", e.NotificationSettingsPage = "settings.notificationSettings", e.OnboardingIndex = "onboarding.index", e.ReportUserPage = "reportUser.page", e.SettingsConnections = "private/embed-components", e.SettingsChannel = "private/embed-components", e.SettingsNotifications = "settings.notifications", e.SettingsPrime = "settings.prime", e.SettingsProfile = "settings.profile", e.SettingsSecurity = "private/embed-components", e.StoreMerchPage = "store.merch", e.SubsLandingPage = "subs.landing", e.TeamsDashboardRevenue = "teams.dashboard.revenue", e.TeamsDashboardStats = "teams.dashboard.stats", e.TeamsDashboardMembers = "teams.dashboard.members", e.TeamsDashboardFeaturedChannels = "teams.dashboard.featured-channels", e.TeamsDashboardSettings = "teams.dashboard.settings", e.SubsBroadcasterPage = "subs.broadcaster", e.VideoManagerEditPropertiesPage = "videoManager.edit", e.VideoManagerPage = "videoManager.page", e.VideoManagerUploadListPage = "videoManager.upload-list", e.VideoManagerUploadPage = "videoManager.upload", e.VideosPage = "videos", e.VideoWatchPage = "video"
-        }(a || (a = {}))
+        e.exports = n
     }
 });
-//# sourceMappingURL=pages.report-user-page-c1593c86dcc969fd574bc71e628e305a.js.map
+//# sourceMappingURL=pages.report-user-page-67e0f98603b96fcfe56e283cbd5d535d.js.map

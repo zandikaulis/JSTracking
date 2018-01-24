@@ -4206,15 +4206,15 @@ webpackJsonp([45], {
             return t && (n = t),
                 function(e, t) {
                     if (t < e.endAt) {
-                        if (e.eventType === C.PREMIERE_EVENT) return !!e.premiere && e.premiere.status === m.STARTED;
-                        if (e.eventType === C.SINGLE_EVENT) return t > e.startAt;
-                        if (e.eventType === C.SEGMENT_EVENT) return t > e.startAt
+                        if (e.eventType === A.PREMIERE_EVENT) return !!e.premiere && e.premiere.status === m.STARTED;
+                        if (e.eventType === A.SINGLE_EVENT) return t > e.startAt;
+                        if (e.eventType === A.SEGMENT_EVENT) return t > e.startAt
                     }
                     return !1
                 }(e, n) ? w.LIVE : function(e, t) {
-                    if (e.eventType === C.PREMIERE_EVENT) return t < e.endAt;
-                    if (e.eventType === C.SINGLE_EVENT) return t < e.startAt;
-                    if (e.eventType === C.SEGMENT_EVENT) return t < e.startAt;
+                    if (e.eventType === A.PREMIERE_EVENT) return t < e.endAt;
+                    if (e.eventType === A.SINGLE_EVENT) return t < e.startAt;
+                    if (e.eventType === A.SEGMENT_EVENT) return t < e.startAt;
                     return !1
                 }(e, n) ? w.FUTURE : w.PAST
         }
@@ -4376,11 +4376,11 @@ webpackJsonp([45], {
         }
 
         function d(e) {
-            return !!e && e.__typename === C.TIMETABLE_EVENT
+            return !!e && e.__typename === A.TIMETABLE_EVENT
         }
 
         function c(e) {
-            return !!e && e.__typename === C.SEGMENT_EVENT
+            return !!e && e.__typename === A.SEGMENT_EVENT
         }
 
         function u(e, t) {
@@ -4413,12 +4413,12 @@ webpackJsonp([45], {
         ! function(e) {
             e.LIVE = "LIVE", e.FUTURE = "FUTURE", e.PAST = "PAST"
         }(w || (w = {}));
-        var C;
+        var A;
         ! function(e) {
             e.SINGLE_EVENT = "SingleEvent", e.PREMIERE_EVENT = "PremiereEvent", e.TIMETABLE_EVENT = "TimetableEvent", e.SEGMENT_EVENT = "SegmentEvent"
-        }(C || (C = {}));
-        var A = n("Odds"),
-            F = (n("ioX4"), function(e) {
+        }(A || (A = {}));
+        var F = n("Odds"),
+            C = (n("ioX4"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -4437,11 +4437,11 @@ webpackJsonp([45], {
                         }),
                         t = "";
                     "function" == typeof g.d && (t = Object(g.d)("This event is Live! Head to the channel page to watch and chat.", "EventLandingAction"), this.state.countdownActive && (t = Object(g.d)("This event is Live! Redirecting to the channel page in 5 seconds.", "EventLandingAction")));
-                    var n = v.createElement(A.V, {
+                    var n = v.createElement(F.V, {
                             margin: {
                                 left: 1
                             }
-                        }, v.createElement(A.u, {
+                        }, v.createElement(F.u, {
                             linkTo: {
                                 pathname: "/" + this.props.login,
                                 state: {
@@ -4451,54 +4451,54 @@ webpackJsonp([45], {
                             }
                         }, Object(g.d)("Go to Channel", "EventLandingAction"))),
                         i = null;
-                    this.state.countdownActive && (n = v.createElement(A.V, {
+                    this.state.countdownActive && (n = v.createElement(F.V, {
                         margin: {
                             left: 1
                         }
-                    }, v.createElement(A.u, {
+                    }, v.createElement(F.u, {
                         onClick: this.cancelCountdown
-                    }, Object(g.d)("Cancel", "EventLandingAction"))), i = v.createElement(A._7, {
+                    }, Object(g.d)("Cancel", "EventLandingAction"))), i = v.createElement(F._7, {
                         countdown: 5,
                         onCountdownEnd: this.props.onCountdownSuccess,
-                        size: A._8.Small
+                        size: F._8.Small
                     }));
-                    var a = v.createElement(A.X, null);
-                    return this.props.eventType === C.PREMIERE_EVENT && (a = v.createElement(A._10, {
-                        asset: A._11.VideoPremiere,
-                        type: A._12.Live,
+                    var a = v.createElement(F.X, null);
+                    return this.props.eventType === A.PREMIERE_EVENT && (a = v.createElement(F._10, {
+                        asset: F._11.VideoPremiere,
+                        type: F._12.Live,
                         width: 10
-                    })), v.createElement(A.V, null, v.createElement(A._19, {
-                        display: A.H.Flex,
-                        flexWrap: A.K.NoWrap,
+                    })), v.createElement(F.V, null, v.createElement(F._19, {
+                        display: F.H.Flex,
+                        flexWrap: F.K.NoWrap,
                         border: !0,
                         margin: {
                             top: 2
                         },
-                        alignItems: A.c.Center,
+                        alignItems: F.c.Center,
                         className: "event-landing-action__strip",
-                        background: A.m.Base
-                    }, v.createElement(A.V, {
-                        display: A.H.InlineFlex,
+                        background: F.m.Base
+                    }, v.createElement(F.V, {
+                        display: F.H.InlineFlex,
                         flexShrink: 0,
                         margin: {
                             right: 1
                         }
-                    }, a), v.createElement(A.V, {
+                    }, a), v.createElement(F.V, {
                         className: "event-landing-action__message",
-                        display: A.H.InlineFlex,
-                        flexWrap: A.K.Wrap,
+                        display: F.H.InlineFlex,
+                        flexWrap: F.K.Wrap,
                         flexGrow: 1
-                    }, t), v.createElement(A.V, {
-                        display: A.H.InlineFlex,
+                    }, t), v.createElement(F.V, {
+                        display: F.H.InlineFlex,
                         flexShrink: 0
-                    }, n)), v.createElement(A.V, {
+                    }, n)), v.createElement(F.V, {
                         className: e
                     }, i))
                 }, t
             }(v.Component)),
-            I = Object(E.c)("EventLandingAction")(F),
+            I = Object(E.c)("EventLandingAction")(C),
             L = n("1jVX"),
-            x = (n("9bpq"), function(e) {
+            T = (n("9bpq"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -4506,11 +4506,11 @@ webpackJsonp([45], {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     var e = Object(g.d)("No description listed", "EventLandingDescription");
-                    return "" !== this.props.description && (e = this.props.description), v.createElement(A.V, null, v.createElement(A._23, {
-                        transform: A._27.Uppercase,
-                        type: A._28.H5,
-                        color: A.F.Alt2
-                    }, Object(g.d)("Description", "EventLandingDescription")), v.createElement(A.V, {
+                    return "" !== this.props.description && (e = this.props.description), v.createElement(F.V, null, v.createElement(F._23, {
+                        transform: F._27.Uppercase,
+                        type: F._28.H5,
+                        color: F.F.Alt2
+                    }, Object(g.d)("Description", "EventLandingDescription")), v.createElement(F.V, {
                         margin: {
                             top: 1
                         },
@@ -4518,11 +4518,11 @@ webpackJsonp([45], {
                     }, Object(L.a)(e, [], "", !0)))
                 }, t = p.__decorate([Object(E.c)("EventLandingDescription")], t)
             }(v.Component)),
-            T = n("OFFm"),
-            O = n("E+X/"),
+            O = n("OFFm"),
+            x = n("E+X/"),
             V = n("QdVH"),
             U = n("MQiv"),
-            D = (n("ea40"), function(e) {
+            B = (n("ea40"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -4537,10 +4537,10 @@ webpackJsonp([45], {
                             },
                             eventType: this.props.eventType
                         }),
-                        t = v.createElement(A.u, {
+                        t = v.createElement(F.u, {
                             disabled: !0
                         }, Object(g.d)("Past Event", "EventLandingTitle"));
-                    return e === w.LIVE ? t = v.createElement(A.u, {
+                    return e === w.LIVE ? t = v.createElement(F.u, {
                         linkTo: {
                             pathname: "/" + this.props.channel.login,
                             state: {
@@ -4548,28 +4548,28 @@ webpackJsonp([45], {
                                 medium: "event_page"
                             }
                         }
-                    }, Object(g.d)("Watch Now", "EventLandingTitle")) : e === w.FUTURE && (t = v.createElement(T.a, {
+                    }, Object(g.d)("Watch Now", "EventLandingTitle")) : e === w.FUTURE && (t = v.createElement(O.a, {
                         eventID: this.props.id,
                         areNotificationsEnabled: !(!this.props.self || !this.props.self.isFollowing),
                         channelID: this.props.channel.id,
                         channelLogin: this.props.channel.login,
                         eventLocation: U.a.EventDetails
-                    })), v.createElement(A._19, {
+                    })), v.createElement(F._19, {
                         borderBottom: !0
-                    }, v.createElement(A._23, {
-                        type: A._28.H2,
+                    }, v.createElement(F._23, {
+                        type: F._28.H2,
                         className: "event-landing-title__heading"
-                    }, this.props.title), v.createElement(A.V, {
-                        display: A.H.Flex,
+                    }, this.props.title), v.createElement(F.V, {
+                        display: F.H.Flex,
                         margin: {
                             top: 2,
                             bottom: 3
                         }
-                    }, v.createElement(A.V, {
+                    }, v.createElement(F.V, {
                         margin: {
                             right: 1
                         }
-                    }, t), v.createElement(A.V, {
+                    }, t), v.createElement(F.V, {
                         margin: {
                             right: 1
                         }
@@ -4579,19 +4579,19 @@ webpackJsonp([45], {
                         channelID: this.props.channel.id,
                         channelLogin: this.props.channel.login,
                         eventLocation: U.a.EventDetails
-                    })), v.createElement(O.a, {
+                    })), v.createElement(x.a, {
                         targetUser: {
                             id: this.props.channel.id,
                             displayName: this.props.channel.displayName || this.props.channel.login
                         },
                         eventID: this.props.id,
-                        balloonDirection: A.q.Bottom
+                        balloonDirection: F.q.Bottom
                     })))
                 }, t
             }(v.Component)),
-            B = Object(E.c)("EventLandingTitle")(D),
+            D = Object(E.c)("EventLandingTitle")(B),
             R = n("ISok"),
-            P = function(e) {
+            j = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.pastPremiereToPreviewCardVideo = function(e) {
@@ -4629,22 +4629,22 @@ webpackJsonp([45], {
                         trackingContent: S.PageviewContent.EventPast,
                         trackingMedium: S.PageviewMedium.EventDetails,
                         videos: [this.pastPremiereToPreviewCardVideo(this.props.pastPremiere)]
-                    })), v.createElement(A._19, {
+                    })), v.createElement(F._19, {
                         padding: {
                             top: 2
                         }
-                    }, v.createElement(A._23, {
-                        transform: A._27.Uppercase,
-                        type: A._28.H5,
-                        color: A.F.Alt2
-                    }, Object(g.d)("Videos", "EventLandingVideos")), v.createElement(A.V, {
+                    }, v.createElement(F._23, {
+                        transform: F._27.Uppercase,
+                        type: F._28.H5,
+                        color: F.F.Alt2
+                    }, Object(g.d)("Videos", "EventLandingVideos")), v.createElement(F.V, {
                         margin: {
                             top: 1
                         }
-                    }, v.createElement(A.V, null, e)))
+                    }, v.createElement(F.V, null, e)))
                 }, t = p.__decorate([Object(E.c)("EventLandingVideos")], t)
             }(v.Component),
-            j = function(e) {
+            P = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onCountdownSuccess = function() {
@@ -4667,9 +4667,9 @@ webpackJsonp([45], {
                         onCountdownSuccess: this.onCountdownSuccess
                     }));
                     var t = null;
-                    return this.props.eventType === C.PREMIERE_EVENT && this.props.premiere && this.props.premiere.pastPremiere && this.props.premiere.pastPremiere.id && (t = v.createElement(P, {
+                    return this.props.eventType === A.PREMIERE_EVENT && this.props.premiere && this.props.premiere.pastPremiere && this.props.premiere.pastPremiere.id && (t = v.createElement(j, {
                         pastPremiere: this.props.premiere.pastPremiere
-                    })), v.createElement(A.V, null, v.createElement(B, {
+                    })), v.createElement(F.V, null, v.createElement(D, {
                         id: this.props.id,
                         title: this.props.title,
                         startAt: this.props.startAt,
@@ -4678,7 +4678,7 @@ webpackJsonp([45], {
                         self: this.props.self,
                         premiere: this.props.premiere,
                         eventType: this.props.eventType
-                    }), e, t, v.createElement(x, {
+                    }), e, t, v.createElement(T, {
                         description: this.props.description
                     }))
                 }, t = p.__decorate([Object(E.c)("EventLandingBody", {
@@ -4692,13 +4692,13 @@ webpackJsonp([45], {
                 }
                 return p.__extends(t, e), t.prototype.render = function() {
                     var e = new Date(this.props.startAt);
-                    return v.createElement(A.A, {
+                    return v.createElement(F.A, {
                         row: !0
-                    }, v.createElement(A.Q, {
+                    }, v.createElement(F.Q, {
                         flexShrink: 0
-                    }, v.createElement(A.C, {
-                        size: A.D.Size32,
-                        aspect: A.k.Aspect16x9,
+                    }, v.createElement(F.C, {
+                        size: F.D.Size32,
+                        aspect: F.k.Aspect16x9,
                         imageSrc: this.props.imageURL,
                         imageAlt: "" !== this.props.imageURL ? this.props.title : ""
                     }, v.createElement(H.a, {
@@ -4715,11 +4715,11 @@ webpackJsonp([45], {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderGameBoxArt = function(e, t) {
-                        return v.createElement(A.C, {
+                        return v.createElement(F.C, {
                             imageSrc: e,
                             imageAlt: t,
-                            aspect: A.k.Aspect3x4,
-                            size: A.D.Size4
+                            aspect: F.k.Aspect3x4,
+                            size: F.D.Size4
                         })
                     }, t
                 }
@@ -4733,44 +4733,44 @@ webpackJsonp([45], {
                         a = null,
                         l = null;
                     if (function(e) {
-                            for (var t in C)
-                                if (isNaN(Number(t)) && C[t] === e) return !0;
+                            for (var t in A)
+                                if (isNaN(Number(t)) && A[t] === e) return !0;
                             return !1
                         }(this.props.eventType)) {
                         var r = void 0;
                         switch (this.props.eventType) {
-                            case C.PREMIERE_EVENT:
+                            case A.PREMIERE_EVENT:
                                 r = Object(g.d)("Premiere", "EventLandingInfo");
                                 break;
                             default:
                                 r = Object(g.d)("Live Stream", "EventLandingInfo")
                         }
-                        n = v.createElement(A.V, {
+                        n = v.createElement(F.V, {
                             margin: {
                                 top: 3
                             }
-                        }, v.createElement(A._23, {
-                            transform: A._27.Uppercase,
-                            type: A._28.H5,
-                            color: A.F.Alt2
-                        }, Object(g.d)("Event Type", "EventLandingInfo")), v.createElement(A.V, {
+                        }, v.createElement(F._23, {
+                            transform: F._27.Uppercase,
+                            type: F._28.H5,
+                            color: F.F.Alt2
+                        }, Object(g.d)("Event Type", "EventLandingInfo")), v.createElement(F.V, {
                             margin: {
                                 top: 1
                             }
-                        }, v.createElement(A._23, {
-                            fontSize: A.L.Size5
+                        }, v.createElement(F._23, {
+                            fontSize: F.L.Size5
                         }, r)))
                     }
-                    return this.props.game && (this.props.game.boxArtURL && this.props.game.displayName && (a = v.createElement(A.V, {
-                        display: A.H.InlineFlex
-                    }, this.renderGameBoxArt(this.props.game.boxArtURL, this.props.game.displayName))), i = v.createElement(A.V, {
+                    return this.props.game && (this.props.game.boxArtURL && this.props.game.displayName && (a = v.createElement(F.V, {
+                        display: F.H.InlineFlex
+                    }, this.renderGameBoxArt(this.props.game.boxArtURL, this.props.game.displayName))), i = v.createElement(F.V, {
                         margin: {
                             top: 3
                         }
-                    }, v.createElement(A._23, {
-                        transform: A._27.Uppercase,
-                        type: A._28.H5,
-                        color: A.F.Alt2
+                    }, v.createElement(F._23, {
+                        transform: F._27.Uppercase,
+                        type: F._28.H5,
+                        color: F.F.Alt2
                     }, Object(g.d)("Streaming", "EventLandingInfo")), v.createElement(W.a, {
                         to: {
                             pathname: Object(z.c)(this.props.game.displayName),
@@ -4779,43 +4779,43 @@ webpackJsonp([45], {
                                 medium: "event_page"
                             }
                         }
-                    }, v.createElement(A.V, {
-                        display: A.H.Flex,
-                        flexWrap: A.K.Wrap,
-                        alignItems: A.c.Center,
+                    }, v.createElement(F.V, {
+                        display: F.H.Flex,
+                        flexWrap: F.K.Wrap,
+                        alignItems: F.c.Center,
                         margin: {
                             top: 1
                         }
-                    }, a, v.createElement(A.V, {
-                        display: A.H.InlineFlex,
+                    }, a, v.createElement(F.V, {
+                        display: F.H.InlineFlex,
                         margin: {
                             left: 1
                         }
-                    }, v.createElement(A._23, {
-                        fontSize: A.L.Size5
-                    }, this.props.game.displayName)))))), this.props.channel.profileImageURL && (l = v.createElement(A.V, {
-                        display: A.H.InlineFlex
-                    }, v.createElement(A.l, {
+                    }, v.createElement(F._23, {
+                        fontSize: F.L.Size5
+                    }, this.props.game.displayName)))))), this.props.channel.profileImageURL && (l = v.createElement(F.V, {
+                        display: F.H.InlineFlex
+                    }, v.createElement(F.l, {
                         size: 40,
                         imageSrc: this.props.channel.profileImageURL,
                         imageAlt: "User profile picture"
-                    }))), v.createElement(A.V, {
+                    }))), v.createElement(F.V, {
                         margin: {
                             x: 3
                         },
                         padding: {
                             y: 2
                         }
-                    }, v.createElement(A.V, null, v.createElement(A._23, {
-                        transform: A._27.Uppercase,
-                        type: A._28.H5,
-                        color: A.F.Alt2
-                    }, Object(g.d)("Date & Time", "EventLandingInfo")), v.createElement(A.V, {
+                    }, v.createElement(F.V, null, v.createElement(F._23, {
+                        transform: F._27.Uppercase,
+                        type: F._28.H5,
+                        color: F.F.Alt2
+                    }, Object(g.d)("Date & Time", "EventLandingInfo")), v.createElement(F.V, {
                         margin: {
                             top: 1
                         }
-                    }, v.createElement(A._23, {
-                        fontSize: A.L.Size5
+                    }, v.createElement(F._23, {
+                        fontSize: F.L.Size5
                     }, function(e, t) {
                         var n = new Date;
                         t && (n = t);
@@ -4827,33 +4827,33 @@ webpackJsonp([45], {
                         return n.getFullYear() !== e.getFullYear() && (i = p.__assign({}, i, {
                             year: "numeric"
                         })), Object(g.c)(e, i)
-                    }(e))), v.createElement(A.V, {
+                    }(e))), v.createElement(F.V, {
                         margin: {
                             top: 1
                         }
-                    }, v.createElement(A._23, {
-                        fontSize: A.L.Size5
+                    }, v.createElement(F._23, {
+                        fontSize: F.L.Size5
                     }, function(e) {
                         return Object(g.h)(e, {
                             timeZoneName: "short"
                         })
-                    }(e))), v.createElement(A.V, {
+                    }(e))), v.createElement(F.V, {
                         margin: {
                             top: 1
                         }
-                    }, v.createElement(A._23, {
-                        fontSize: A.L.Size5
+                    }, v.createElement(F._23, {
+                        fontSize: F.L.Size5
                     }, function(e, t) {
                         var n = Math.abs(e.getTime() / 1e3 - t.getTime() / 1e3);
                         return Object(G.a)(n)
-                    }(e, t)))), n, v.createElement(A.V, {
+                    }(e, t)))), n, v.createElement(F.V, {
                         margin: {
                             top: 3
                         }
-                    }, v.createElement(A._23, {
-                        transform: A._27.Uppercase,
-                        type: A._28.H5,
-                        color: A.F.Alt2
+                    }, v.createElement(F._23, {
+                        transform: F._27.Uppercase,
+                        type: F._28.H5,
+                        color: F.F.Alt2
                     }, Object(g.d)("Starring", "EventLandingInfo")), v.createElement(W.a, {
                         to: {
                             pathname: "/" + this.props.channel.login,
@@ -4862,20 +4862,20 @@ webpackJsonp([45], {
                                 medium: "event_page"
                             }
                         }
-                    }, v.createElement(A.V, {
-                        display: A.H.Flex,
-                        flexWrap: A.K.Wrap,
-                        alignItems: A.c.Center,
+                    }, v.createElement(F.V, {
+                        display: F.H.Flex,
+                        flexWrap: F.K.Wrap,
+                        alignItems: F.c.Center,
                         margin: {
                             top: 1
                         }
-                    }, l, v.createElement(A.V, {
-                        display: A.H.InlineFlex,
+                    }, l, v.createElement(F.V, {
+                        display: F.H.InlineFlex,
                         margin: {
                             left: 1
                         }
-                    }, v.createElement(A._23, {
-                        fontSize: A.L.Size5
+                    }, v.createElement(F._23, {
+                        fontSize: F.L.Size5
                     }, "" !== this.props.channel.displayName ? this.props.channel.displayName : this.props.channel.login))))), i)
                 }, t = p.__decorate([Object(E.c)("EventLandingInfo")], t)
             }(v.Component),
@@ -4886,15 +4886,15 @@ webpackJsonp([45], {
                 return p.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return v.createElement(A._19, {
-                        background: A.m.Base
-                    }, v.createElement(A._19, {
+                    return v.createElement(F._19, {
+                        background: F.m.Base
+                    }, v.createElement(F._19, {
                         border: !0
                     }, v.createElement(M, {
                         title: this.props.title,
                         imageURL: this.props.imageURL,
                         startAt: this.props.startAt
-                    })), v.createElement(A._19, {
+                    })), v.createElement(F._19, {
                         borderRight: !0,
                         borderLeft: !0,
                         borderBottom: !0
@@ -4926,16 +4926,16 @@ webpackJsonp([45], {
                 e.upcomingSegment && (a = i({
                     startAt: e.upcomingSegment.startAt,
                     endAt: e.upcomingSegment.endAt,
-                    eventType: C.SEGMENT_EVENT
+                    eventType: A.SEGMENT_EVENT
                 }));
-                var l = v.createElement(T.a, {
+                var l = v.createElement(O.a, {
                     eventID: e.id,
                     areNotificationsEnabled: e.isFollowing,
                     channelID: "",
                     channelLogin: "",
                     eventLocation: U.a.EventDetails
                 });
-                e.upcomingSegment && a === w.LIVE ? l = v.createElement(A.u, {
+                e.upcomingSegment && a === w.LIVE ? l = v.createElement(F.u, {
                     linkTo: {
                         pathname: "/" + e.upcomingSegment.channel.login,
                         state: {
@@ -4943,16 +4943,16 @@ webpackJsonp([45], {
                             medium: "event_page"
                         }
                     }
-                }, Object(g.d)("Watch Now", "TimetableHeader")) : e.upcomingSegment && a !== w.PAST || (l = v.createElement(A.u, {
+                }, Object(g.d)("Watch Now", "TimetableHeader")) : e.upcomingSegment && a !== w.PAST || (l = v.createElement(F.u, {
                     disabled: !0
                 }, Object(g.d)("Past Event", "TimetableHeader")));
-                var r = v.createElement(A.V, {
-                        display: A.H.Flex
-                    }, v.createElement(A.V, {
+                var r = v.createElement(F.V, {
+                        display: F.H.Flex
+                    }, v.createElement(F.V, {
                         margin: {
                             right: 1
                         }
-                    }, l), v.createElement(A.V, {
+                    }, l), v.createElement(F.V, {
                         margin: {
                             right: 1
                         }
@@ -4962,43 +4962,43 @@ webpackJsonp([45], {
                         channelID: "",
                         channelLogin: "",
                         eventLocation: U.a.EventDetails
-                    })), e.owner && v.createElement(O.a, {
+                    })), e.owner && v.createElement(x.a, {
                         targetUser: e.owner,
                         eventID: e.id,
-                        balloonDirection: A.q.Bottom
+                        balloonDirection: F.q.Bottom
                     })),
-                    s = v.createElement(A.V, null, Object(g.d)("To Be Announced", "TimetableHeader"));
-                e.startAt && (s = a === w.LIVE ? v.createElement(A.V, {
-                    display: A.H.Flex
-                }, v.createElement(A.V, null, v.createElement(A.X, null)), v.createElement(A._19, {
+                    s = v.createElement(F.V, null, Object(g.d)("To Be Announced", "TimetableHeader"));
+                e.startAt && (s = a === w.LIVE ? v.createElement(F.V, {
+                    display: F.H.Flex
+                }, v.createElement(F.V, null, v.createElement(F.X, null)), v.createElement(F._19, {
                     margin: {
                         left: .5
                     }
-                }, v.createElement(A._23, null, Object(g.d)("Happening Now", "TimetableHeader")))) : v.createElement(A.V, null, v.createElement(A._23, null, Object(g.h)(e.startAt, t))));
+                }, v.createElement(F._23, null, Object(g.d)("Happening Now", "TimetableHeader")))) : v.createElement(F.V, null, v.createElement(F._23, null, Object(g.h)(e.startAt, t))));
                 var o = null;
                 if (e.startAt && e.endAt) {
                     var d = Object(g.h)(e.endAt, n);
-                    o = v.createElement(A.V, null, v.createElement(A._23, null, Object(g.d)("to {endDate}", {
+                    o = v.createElement(F.V, null, v.createElement(F._23, null, Object(g.d)("to {endDate}", {
                         endDate: d
                     }, "TimetableHeader")))
                 }
-                return v.createElement(A.V, {
+                return v.createElement(F.V, {
                     margin: .5
-                }, v.createElement(A._19, {
+                }, v.createElement(F._19, {
                     border: !0,
-                    background: A.m.Base
-                }, v.createElement(A.V, null, v.createElement("img", {
+                    background: F.m.Base
+                }, v.createElement(F.V, null, v.createElement("img", {
                     src: e.imageURL
-                })), v.createElement(A.V, {
+                })), v.createElement(F.V, {
                     margin: 1
-                }, v.createElement(A._19, {
+                }, v.createElement(F._19, {
                     borderBottom: !0,
                     padding: {
                         y: 1
                     }
-                }, v.createElement(A._23, {
-                    type: A._28.H3
-                }, e.title)), v.createElement(A._19, {
+                }, v.createElement(F._23, {
+                    type: F._28.H3
+                }, e.title)), v.createElement(F._19, {
                     borderBottom: !0,
                     padding: {
                         y: 1
@@ -5006,19 +5006,19 @@ webpackJsonp([45], {
                     margin: {
                         y: .5
                     }
-                }, s, o), v.createElement(A.V, {
+                }, s, o), v.createElement(F.V, {
                     margin: {
                         y: 1
                     }
-                }, r))), v.createElement(A._19, {
+                }, r))), v.createElement(F._19, {
                     border: !0,
-                    background: A.m.Base,
+                    background: F.m.Base,
                     margin: {
                         top: 1
                     }
-                }, v.createElement(A.V, {
+                }, v.createElement(F.V, {
                     margin: 1
-                }, v.createElement(x, {
+                }, v.createElement(T, {
                     description: e.description
                 }))))
             }),
@@ -5059,7 +5059,7 @@ webpackJsonp([45], {
                     return this.props.offsetSeconds && this.props.offsetSeconds > 0 && (e += a(this.props.offsetSeconds)), v.createElement("div", p.__assign({
                         onMouseEnter: this.onMouseEnterHandler,
                         onMouseLeave: this.onMouseLeaveHandler
-                    }, Object(A._40)(this.props)), v.createElement(A.A, null, v.createElement(W.a, {
+                    }, Object(F._40)(this.props)), v.createElement(F.A, null, v.createElement(W.a, {
                         to: {
                             pathname: "/videos/" + this.props.video.id,
                             search: e,
@@ -5067,40 +5067,40 @@ webpackJsonp([45], {
                         },
                         title: this.props.video.title,
                         "data-test-selector": "preview-image-link"
-                    }, v.createElement(A.V, {
+                    }, v.createElement(F.V, {
                         fullWidth: !0
-                    }, v.createElement(A.j, {
+                    }, v.createElement(F.j, {
                         overflow: !0
-                    }, v.createElement("div", null, v.createElement(A._19, {
-                        display: A.H.InlineFlex,
-                        position: A._4.Absolute,
+                    }, v.createElement("div", null, v.createElement(F._19, {
+                        display: F.H.InlineFlex,
+                        position: F._4.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
                         margin: .5,
-                        zIndex: A._39.Default,
-                        fontSize: A.L.Size6,
-                        background: A.m.Overlay,
-                        color: A.F.Overlay,
+                        zIndex: F._39.Default,
+                        fontSize: F.L.Size6,
+                        background: F.m.Overlay,
+                        color: F.F.Overlay,
                         className: "event-video-card__preview-overlay-stat"
-                    }, v.createElement(A._18, {
+                    }, v.createElement(F._18, {
                         "data-test-selector": "video-view-count",
-                        icon: A._11.GlyphViews,
+                        icon: F._11.GlyphViews,
                         label: Object(g.d)("views", "EventVideoCard"),
                         value: Object(g.f)(this.props.video.viewCount)
-                    })), v.createElement(A._19, {
-                        display: A.H.InlineFlex,
-                        position: A._4.Absolute,
+                    })), v.createElement(F._19, {
+                        display: F.H.InlineFlex,
+                        position: F._4.Absolute,
                         attachTop: !0,
                         attachRight: !0,
                         margin: .5,
-                        zIndex: A._39.Default,
-                        fontSize: A.L.Size6,
-                        background: A.m.Overlay,
-                        color: A.F.Overlay,
+                        zIndex: F._39.Default,
+                        fontSize: F.L.Size6,
+                        background: F.m.Overlay,
+                        color: F.F.Overlay,
                         className: "event-video-card__preview-overlay-stat"
-                    }, v.createElement(A._18, {
+                    }, v.createElement(F._18, {
                         "data-test-selector": "video-length",
-                        icon: A._11.GlyphLength,
+                        icon: F._11.GlyphLength,
                         label: Object(g.d)("length", "EventVideoCard"),
                         value: Object(ee.a)(this.props.video.lengthSeconds)
                     })), this.videoPreviewImage()))))))
@@ -5110,14 +5110,14 @@ webpackJsonp([45], {
                         n = _("event-video-card__preview-image", {
                             "event-video-card__preview-image--animated": this.state.hovered && this.state.didAnimatedPreviewLoad
                         });
-                    return v.createElement(A.j, {
+                    return v.createElement(F.j, {
                         overflow: !0
                     }, v.createElement("div", {
                         className: t
-                    }, v.createElement(A.Q, {
+                    }, v.createElement(F.Q, {
                         flexShrink: 0
-                    }, v.createElement("figure", null, v.createElement(A.j, {
-                        ratio: A.k.Aspect16x9
+                    }, v.createElement("figure", null, v.createElement(F.j, {
+                        ratio: F.k.Aspect16x9
                     }, v.createElement("img", {
                         alt: this.props.video.title,
                         className: n,
@@ -5151,17 +5151,17 @@ webpackJsonp([45], {
                         n = i({
                             startAt: this.props.event.startAt,
                             endAt: this.props.event.endAt,
-                            eventType: C.SEGMENT_EVENT
+                            eventType: A.SEGMENT_EVENT
                         }),
                         a = null;
-                    n === w.LIVE && (a = v.createElement(A.V, {
+                    n === w.LIVE && (a = v.createElement(F.V, {
                         flexShrink: 0
-                    }, v.createElement(A._1, {
+                    }, v.createElement(F._1, {
                         label: Object(g.d)("Live", "EventLandingPage"),
-                        type: A._2.Live
+                        type: F._2.Live
                     })));
-                    var l = v.createElement(A._19, {
-                        display: A.H.Flex,
+                    var l = v.createElement(F._19, {
+                        display: F.H.Flex,
                         borderBottom: !0,
                         padding: {
                             y: 1
@@ -5169,36 +5169,36 @@ webpackJsonp([45], {
                     }, v.createElement("button", {
                         "data-test-selector": "collapsed-segment-title",
                         onClick: this.onExpandClick
-                    }, v.createElement(A._23, {
+                    }, v.createElement(F._23, {
                         className: "timetable-segment__title-link",
                         bold: !0,
-                        color: A.F.Link,
-                        type: A._28.H5,
+                        color: F.F.Link,
+                        type: F._28.H5,
                         ellipsis: !0
                     }, this.props.event.title)));
-                    a && (l = v.createElement(A._19, {
+                    a && (l = v.createElement(F._19, {
                         borderBottom: !0,
                         padding: {
                             y: 1
                         },
-                        display: A.H.Flex,
-                        flexWrap: A.K.NoWrap,
-                        alignItems: A.c.Center
-                    }, a, v.createElement(A.V, {
-                        display: A.H.Flex,
+                        display: F.H.Flex,
+                        flexWrap: F.K.NoWrap,
+                        alignItems: F.c.Center
+                    }, a, v.createElement(F.V, {
+                        display: F.H.Flex,
                         margin: {
                             left: .5
                         }
                     }, v.createElement("button", {
                         onClick: this.onExpandClick
-                    }, v.createElement(A._23, {
+                    }, v.createElement(F._23, {
                         className: "timetable-segment__title-link",
                         bold: !0,
-                        color: A.F.Link,
-                        type: A._28.H5,
+                        color: F.F.Link,
+                        type: F._28.H5,
                         ellipsis: !0
                     }, this.props.event.title)))));
-                    var r = v.createElement(T.a, {
+                    var r = v.createElement(O.a, {
                         eventID: this.props.event.id,
                         areNotificationsEnabled: this.props.event.self.isFollowing,
                         channelID: this.props.event.channel.id,
@@ -5206,7 +5206,7 @@ webpackJsonp([45], {
                         eventLocation: U.a.EventDetails,
                         small: !0
                     });
-                    return n === w.LIVE ? r = v.createElement(A.V, null, v.createElement(A.u, {
+                    return n === w.LIVE ? r = v.createElement(F.V, null, v.createElement(F.u, {
                         linkTo: {
                             pathname: "/" + this.props.event.channel.login,
                             state: {
@@ -5214,60 +5214,60 @@ webpackJsonp([45], {
                                 medium: "event_page"
                             }
                         },
-                        size: A.x.Small
-                    }, ie)) : n === w.PAST && (r = null), v.createElement("div", null, v.createElement(A._19, {
+                        size: F.x.Small
+                    }, ie)) : n === w.PAST && (r = null), v.createElement("div", null, v.createElement(F._19, {
                         className: "timetable-segment__row",
                         border: !0,
                         fullWidth: !0,
                         margin: {
                             y: 1
                         },
-                        display: A.H.Flex,
-                        flexWrap: A.K.NoWrap,
-                        alignItems: A.c.Center,
-                        background: A.m.Base
-                    }, v.createElement(A.V, {
+                        display: F.H.Flex,
+                        flexWrap: F.K.NoWrap,
+                        alignItems: F.c.Center,
+                        background: F.m.Base
+                    }, v.createElement(F.V, {
                         className: "timetable-segment__calendar-date",
-                        display: A.H.Flex,
+                        display: F.H.Flex,
                         flexShrink: 0,
-                        flexDirection: A.J.Column,
-                        justifyContent: A.U.Center,
-                        alignItems: A.c.Center
-                    }, v.createElement(A._23, {
-                        fontSize: A.L.Size6,
-                        transform: A._27.Uppercase
-                    }, e), v.createElement(A._23, {
-                        fontSize: A.L.Size3
-                    }, t)), v.createElement(A.V, {
+                        flexDirection: F.J.Column,
+                        justifyContent: F.U.Center,
+                        alignItems: F.c.Center
+                    }, v.createElement(F._23, {
+                        fontSize: F.L.Size6,
+                        transform: F._27.Uppercase
+                    }, e), v.createElement(F._23, {
+                        fontSize: F.L.Size3
+                    }, t)), v.createElement(F.V, {
                         flexGrow: 1,
                         margin: {
                             right: 1
                         }
-                    }, l, v.createElement(A.V, {
-                        display: A.H.Flex,
-                        justifyContent: A.U.Between,
-                        alignItems: A.c.Center,
-                        flexWrap: A.K.NoWrap
-                    }, v.createElement(A.V, {
+                    }, l, v.createElement(F.V, {
+                        display: F.H.Flex,
+                        justifyContent: F.U.Between,
+                        alignItems: F.c.Center,
+                        flexWrap: F.K.NoWrap
+                    }, v.createElement(F.V, {
                         padding: {
                             y: 1
                         },
-                        display: A.H.Flex
-                    }, v.createElement(A.V, {
+                        display: F.H.Flex
+                    }, v.createElement(F.V, {
                         flexShrink: 0
-                    }, v.createElement(A._23, {
-                        type: A._28.H5
+                    }, v.createElement(F._23, {
+                        type: F._28.H5
                     }, Object(g.h)(this.props.event.startAt, {
                         weekday: "long",
                         timezoneName: "short"
-                    }))), v.createElement(A.V, {
+                    }))), v.createElement(F.V, {
                         margin: {
                             x: 1
                         }
                     }, "•"), v.createElement(J.a, {
                         linkTo: "/directory/game/" + encodeURIComponent(this.props.event.game.name),
                         tooltip: this.localizedGame(),
-                        svgAsset: A._11.NavGames,
+                        svgAsset: F._11.NavGames,
                         title: this.props.event.game.displayName
                     })), r))))
                 }, t.prototype.expandedSegment = function() {
@@ -5285,16 +5285,16 @@ webpackJsonp([45], {
                         l = i({
                             startAt: this.props.event.startAt,
                             endAt: this.props.event.endAt,
-                            eventType: C.SEGMENT_EVENT
+                            eventType: A.SEGMENT_EVENT
                         }),
-                        r = v.createElement(T.a, {
+                        r = v.createElement(O.a, {
                             eventID: this.props.event.id,
                             areNotificationsEnabled: this.props.event.self.isFollowing,
                             channelID: this.props.event.channel.id,
                             channelLogin: this.props.event.channel.login,
                             eventLocation: U.a.EventDetails
                         });
-                    if (l === w.LIVE) r = v.createElement(A.u, {
+                    if (l === w.LIVE) r = v.createElement(F.u, {
                         linkTo: {
                             pathname: "/" + this.props.event.channel.login,
                             state: {
@@ -5305,7 +5305,7 @@ webpackJsonp([45], {
                     }, ie);
                     else if (l === w.PAST && this.props.event.video && this.props.event.video.video) {
                         var s = "";
-                        this.props.event.video.offsetSeconds && (s = "t=" + a(this.props.event.video.offsetSeconds)), r = v.createElement(A.u, {
+                        this.props.event.video.offsetSeconds && (s = "t=" + a(this.props.event.video.offsetSeconds)), r = v.createElement(F.u, {
                             linkTo: {
                                 pathname: "/videos/" + this.props.event.video.video.id,
                                 search: s,
@@ -5315,7 +5315,7 @@ webpackJsonp([45], {
                                 }
                             }
                         }, Object(g.d)("Watch Video", "TimetableSegment"))
-                    } else l === w.PAST && (r = v.createElement(A.u, {
+                    } else l === w.PAST && (r = v.createElement(F.u, {
                         disabled: !0
                     }, Object(g.d)("Past Event", "TimetableSegment")));
                     var o = v.createElement("img", {
@@ -5323,10 +5323,10 @@ webpackJsonp([45], {
                         height: 130,
                         width: 93
                     });
-                    if (l === w.LIVE && this.props.event.channel.stream && this.props.event.channel.stream.previewImageURL && (o = v.createElement(A.V, {
-                            position: A._4.Relative
-                        }, v.createElement(A.V, {
-                            position: A._4.Absolute,
+                    if (l === w.LIVE && this.props.event.channel.stream && this.props.event.channel.stream.previewImageURL && (o = v.createElement(F.V, {
+                            position: F._4.Relative
+                        }, v.createElement(F.V, {
+                            position: F._4.Absolute,
                             attachLeft: !0,
                             attachTop: !0,
                             padding: .5
@@ -5349,95 +5349,95 @@ webpackJsonp([45], {
                             tracking: d
                         }))
                     }
-                    var c = v.createElement(A._23, {
-                        color: A.F.Overlay
+                    var c = v.createElement(F._23, {
+                        color: F.F.Overlay
                     }, Object(g.h)(this.props.event.startAt, {
                         weekday: "long",
                         month: "long",
                         day: "numeric",
                         timeZoneName: "short"
                     }));
-                    return l === w.LIVE && (c = v.createElement(A.V, {
-                        position: A._4.Relative
-                    }, v.createElement(A._23, {
-                        color: A.F.Overlay
-                    }, "" + Object(g.c)(this.props.event.startAt, t)), v.createElement(A._23, {
-                        color: A.F.Overlay
-                    }, Object(g.d)("Happening Now until", "TimeTableSegment") + " " + Object(g.h)(this.props.event.endAt, n)))), v.createElement(A._19, {
+                    return l === w.LIVE && (c = v.createElement(F.V, {
+                        position: F._4.Relative
+                    }, v.createElement(F._23, {
+                        color: F.F.Overlay
+                    }, "" + Object(g.c)(this.props.event.startAt, t)), v.createElement(F._23, {
+                        color: F.F.Overlay
+                    }, Object(g.d)("Happening Now until", "TimeTableSegment") + " " + Object(g.h)(this.props.event.endAt, n)))), v.createElement(F._19, {
                         border: !0,
                         elevation: 2,
                         fullWidth: !0,
                         margin: {
                             y: 1
                         },
-                        background: A.m.Base,
-                        position: A._4.Relative
-                    }, v.createElement(A.V, {
-                        position: A._4.Absolute,
+                        background: F.m.Base,
+                        position: F._4.Relative
+                    }, v.createElement(F.V, {
+                        position: F._4.Absolute,
                         attachTop: !0,
                         attachRight: !0,
                         padding: {
                             top: .5,
                             right: .5
                         }
-                    }, v.createElement(A.u, {
+                    }, v.createElement(F.u, {
                         overlay: !0,
-                        type: A.z.Text,
-                        icon: A._11.Close,
+                        type: F.z.Text,
+                        icon: F._11.Close,
                         onClick: this.props.onDismissExpand
-                    })), v.createElement(A._19, {
+                    })), v.createElement(F._19, {
                         borderBottom: !0
                     }, v.createElement("div", {
                         style: e
                     }, v.createElement("div", {
                         className: "events-landing__expanded-segment-header"
-                    }, v.createElement(A.V, {
-                        display: A.H.Flex,
-                        alignItems: A.c.End,
-                        flexWrap: A.K.NoWrap,
+                    }, v.createElement(F.V, {
+                        display: F.H.Flex,
+                        alignItems: F.c.End,
+                        flexWrap: F.K.NoWrap,
                         padding: {
                             top: 3,
                             x: 2,
                             bottom: 1
                         }
-                    }, v.createElement(A.V, {
+                    }, v.createElement(F.V, {
                         className: "timetable-segment__expanded-image",
                         flexShrink: 0
-                    }, o), v.createElement(A.V, {
+                    }, o), v.createElement(F.V, {
                         flexGrow: 1,
                         margin: {
                             left: 2
                         }
-                    }, v.createElement(A.V, {
+                    }, v.createElement(F.V, {
                         margin: {
                             bottom: 2
                         }
-                    }, v.createElement(A.V, {
+                    }, v.createElement(F.V, {
                         margin: {
                             bottom: .5
                         }
-                    }, v.createElement(A._23, {
-                        color: A.F.Overlay,
-                        type: A._28.H3
-                    }, this.props.event.title)), c), v.createElement(A.V, {
-                        display: A.H.Flex,
-                        alignItems: A.c.Center,
-                        flexWrap: A.K.NoWrap,
-                        justifyContent: A.U.Between
+                    }, v.createElement(F._23, {
+                        color: F.F.Overlay,
+                        type: F._28.H3
+                    }, this.props.event.title)), c), v.createElement(F.V, {
+                        display: F.H.Flex,
+                        alignItems: F.c.Center,
+                        flexWrap: F.K.NoWrap,
+                        justifyContent: F.U.Between
                     }, v.createElement(J.a, {
                         linkTo: "/directory/game/" + encodeURIComponent(this.props.event.game.name),
                         tooltip: this.localizedGame(),
-                        svgAsset: A._11.NavGames,
+                        svgAsset: F._11.NavGames,
                         title: this.props.event.game.displayName
-                    }), v.createElement(A.V, {
-                        display: A.H.Flex,
-                        flexWrap: A.K.NoWrap,
+                    }), v.createElement(F.V, {
+                        display: F.H.Flex,
+                        flexWrap: F.K.NoWrap,
                         flexShrink: 0
-                    }, v.createElement(A.V, {
+                    }, v.createElement(F.V, {
                         margin: {
                             right: 1
                         }
-                    }, r), v.createElement(A.V, {
+                    }, r), v.createElement(F.V, {
                         margin: {
                             right: 1
                         }
@@ -5447,14 +5447,14 @@ webpackJsonp([45], {
                         channelID: this.props.event.channel.id,
                         channelLogin: this.props.event.channel.login,
                         eventLocation: U.a.EventDetails
-                    })), v.createElement(O.a, {
+                    })), v.createElement(x.a, {
                         targetUser: this.props.event.channel,
                         eventID: this.props.event.id,
-                        balloonDirection: A.q.BottomRight,
+                        balloonDirection: F.q.BottomRight,
                         tailOffset: 10
-                    })))))))), v.createElement(A.V, {
+                    })))))))), v.createElement(F.V, {
                         margin: 2
-                    }, v.createElement(x, {
+                    }, v.createElement(T, {
                         description: this.props.event.description
                     })))
                 }, t
@@ -5491,23 +5491,23 @@ webpackJsonp([45], {
                             })
                         }),
                         n = null;
-                    return this.props.hasPreviousPage && (n = v.createElement(A.V, {
+                    return this.props.hasPreviousPage && (n = v.createElement(F.V, {
                         fullWidth: !0,
-                        display: A.H.Flex,
-                        justifyContent: A.U.Center
-                    }, v.createElement(A.u, {
-                        type: A.z.Text,
-                        icon: A._11.GlyphArrUp,
+                        display: F.H.Flex,
+                        justifyContent: F.U.Center
+                    }, v.createElement(F.u, {
+                        type: F.z.Text,
+                        icon: F._11.GlyphArrUp,
                         onClick: this.loadPrevious
-                    }, Object(g.d)("Load Earlier Events", "TimetableSchedule")))), v.createElement(A.V, {
+                    }, Object(g.d)("Load Earlier Events", "TimetableSchedule")))), v.createElement(F.V, {
                         className: "events-landing__main-col",
-                        position: A._4.Relative,
+                        position: F._4.Relative,
                         margin: {
                             left: 3
                         }
-                    }, v.createElement(A._19, {
-                        display: A.H.Flex,
-                        justifyContent: A.U.Between,
+                    }, v.createElement(F._19, {
+                        display: F.H.Flex,
+                        justifyContent: F.U.Between,
                         margin: {
                             y: 1
                         },
@@ -5515,11 +5515,11 @@ webpackJsonp([45], {
                             bottom: 1
                         },
                         borderBottom: !0
-                    }, v.createElement(A._23, {
-                        transform: A._27.Uppercase,
-                        color: A.F.Alt2,
-                        type: A._28.H5
-                    }, Object(g.d)("Schedule", "TimetableSchedule"))), v.createElement(A.V, null, n, t, v.createElement(Q.a, {
+                    }, v.createElement(F._23, {
+                        transform: F._27.Uppercase,
+                        color: F.F.Alt2,
+                        type: F._28.H5
+                    }, Object(g.d)("Schedule", "TimetableSchedule"))), v.createElement(F.V, null, n, t, v.createElement(Q.a, {
                         enabled: this.props.hasNextPage,
                         loadMore: this.props.loadMore
                     })))
@@ -5532,13 +5532,13 @@ webpackJsonp([45], {
                 autoReportInteractive: !0
             })(function(e) {
                 var t = null;
-                return e.event.upcomingChildren && e.event.upcomingChildren.length > 0 && (t = e.event.upcomingChildren[0]), v.createElement(A.V, {
-                    display: A.H.Flex,
-                    justifyContent: A.U.Center,
+                return e.event.upcomingChildren && e.event.upcomingChildren.length > 0 && (t = e.event.upcomingChildren[0]), v.createElement(F.V, {
+                    display: F.H.Flex,
+                    justifyContent: F.U.Center,
                     margin: {
                         top: 3
                     }
-                }, v.createElement(A.V, {
+                }, v.createElement(F.V, {
                     className: "events-landing__info-col"
                 }, v.createElement(Q.c, null, v.createElement($, {
                     id: e.event.id,
@@ -5590,21 +5590,21 @@ webpackJsonp([45], {
                         }) : this.errorPage()
                     }
                     var t = this.cleanEvent(this.props.data.event);
-                    return t ? v.createElement(A.V, {
-                        position: A._4.Relative
+                    return t ? v.createElement(F.V, {
+                        position: F._4.Relative
                     }, v.createElement(N.a, null, v.createElement(y.a, {
                         currentPage: y.b.Events,
                         channelLogin: t.channel.login
-                    })), v.createElement(A.V, {
-                        display: A.H.Flex,
-                        flexWrap: A.K.NoWrap,
+                    })), v.createElement(F.V, {
+                        display: F.H.Flex,
+                        flexWrap: F.K.NoWrap,
                         margin: {
                             left: 3,
                             top: 3,
                             right: 3
                         },
                         className: "event-landing-page__wrapper"
-                    }, v.createElement(A.V, {
+                    }, v.createElement(F.V, {
                         flexShrink: 0,
                         flexGrow: 0,
                         margin: {
@@ -5618,9 +5618,9 @@ webpackJsonp([45], {
                         channel: t.channel,
                         game: t.game,
                         eventType: t.eventType
-                    })), v.createElement(A.V, {
+                    })), v.createElement(F.V, {
                         flexGrow: 1
-                    }, v.createElement(j, {
+                    }, v.createElement(P, {
                         id: t.id,
                         title: t.title,
                         description: t.description,
@@ -5637,11 +5637,11 @@ webpackJsonp([45], {
                         message: Object(g.d)("Error loading data.", "EventLandingPage")
                     })
                 }, t.prototype.loadingSpinner = function() {
-                    return v.createElement(A.V, {
+                    return v.createElement(F.V, {
                         margin: {
                             top: 3
                         }
-                    }, v.createElement(A.Z, {
+                    }, v.createElement(F.Z, {
                         fillContent: !0
                     }))
                 }, t.prototype.onRender = function() {
@@ -6467,9 +6467,9 @@ webpackJsonp([45], {
                 }, t
             }(r.Component)),
             w = n("jxGs"),
-            C = n("bkpq"),
-            A = n("CSlQ"),
-            F = n("annQ"),
+            A = n("bkpq"),
+            F = n("CSlQ"),
+            C = n("annQ"),
             I = (n("lGVF"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -6574,11 +6574,11 @@ webpackJsonp([45], {
                     })), r.createElement(h.b, {
                         className: "get-bits-button-content"
                     }, r.createElement(N.V, null, n, e, i))
-                }, t = a.__decorate([Object(A.c)("GetBitsButtonContent"), Object(m.a)(F, {
+                }, t = a.__decorate([Object(F.c)("GetBitsButtonContent"), Object(m.a)(C, {
                     name: "data",
                     props: function(e) {
                         var t, n;
-                        e.data && e.data.user && e.data.user.cheer && (t = Object(C.a)(e.data.user.cheer.emotes), n = e.data.user.id);
+                        e.data && e.data.user && e.data.user.cheer && (t = Object(A.a)(e.data.user.cheer.emotes), n = e.data.user.id);
                         var i, a;
                         return e.data && e.data.currentUser ? (a = e.data.currentUser.bitsBalance, i = e.data.currentUser.bitsOffers) : e.data && e.data.bitsOffers && (i = e.data.bitsOffers), {
                             loading: e.data && e.data.loading,
@@ -6641,15 +6641,15 @@ webpackJsonp([45], {
                         direction: N.q.BottomRight,
                         size: N.r.Large
                     }, e))
-                }, t = a.__decorate([Object(A.c)("GetBitsButton")], t)
+                }, t = a.__decorate([Object(F.c)("GetBitsButton")], t)
             }(r.Component),
-            x = Object(v.a)(function(e) {
+            T = Object(v.a)(function(e) {
                 return {
                     isLoggedIn: Object(g.d)(e)
                 }
             })(L),
-            T = n("E9Qg"),
-            O = (n("4Jix"), n("Ojfd")),
+            O = n("E9Qg"),
+            x = (n("4Jix"), n("Ojfd")),
             V = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -6665,7 +6665,7 @@ webpackJsonp([45], {
                     }) : (i && i.user && i.user.bannerImageURL ? t = {
                         backgroundImage: "url(" + i.user.bannerImageURL + ")"
                     } : (n["channel-banner--default"] = !0, t = {
-                        backgroundImage: "url(" + T + ")"
+                        backgroundImage: "url(" + O + ")"
                     }), e = r.createElement("div", {
                         className: "channel-banner__image",
                         style: t
@@ -6678,7 +6678,7 @@ webpackJsonp([45], {
                     }, e))
                 }, t
             }(r.Component),
-            U = Object(m.a)(O, {
+            U = Object(m.a)(x, {
                 options: function(e) {
                     return {
                         variables: {
@@ -6690,15 +6690,15 @@ webpackJsonp([45], {
                     return !e.channelLogin || !e.firstPageLoaded
                 }
             })(V),
-            D = Object(v.a)(function(e) {
+            B = Object(v.a)(function(e) {
                 return {
                     firstPageLoaded: e.session.firstPageLoaded
                 }
             })(U),
-            B = n("2KeS"),
+            D = n("2KeS"),
             R = n("V5M+"),
-            P = n("J8WN"),
-            j = n("+8VM"),
+            j = n("J8WN"),
+            P = n("+8VM"),
             H = n("HZww"),
             M = (n("weaG"), function(e) {
                 var t = {
@@ -6970,7 +6970,7 @@ webpackJsonp([45], {
                         fontSize: N.L.Size4
                     }, Object(o.d)("Upload a Photo", "Profile Edit"))));
                     var s = null;
-                    this.props.showCloser && (s = r.createElement(j.a, null));
+                    this.props.showCloser && (s = r.createElement(P.a, null));
                     var d = null;
                     if (null !== this.state.statusMessage) {
                         var c = function(e) {
@@ -7072,7 +7072,7 @@ webpackJsonp([45], {
                         display: N.H.InlineBlock,
                         position: N._4.Relative,
                         textAlign: N._24.Center
-                    }, r.createElement(P.a, {
+                    }, r.createElement(j.a, {
                         allowedFileTypes: K,
                         onFilesSubmitted: this.onImageInputChange
                     }, a), n)), r.createElement(N._19, {
@@ -7156,13 +7156,13 @@ webpackJsonp([45], {
                     }
                 })], t)
             }(r.Component),
-            $ = Object(A.c)("Profile Edit")(Q),
+            $ = Object(F.c)("Profile Edit")(Q),
             J = Object(v.a)(function(e) {
                 return {
                     authToken: Object(g.a)(e)
                 }
             }, function(e, t) {
-                return Object(B.bindActionCreators)({
+                return Object(D.bindActionCreators)({
                     closeModal: function() {
                         return t.successCallback && t.successCallback(), Object(R.c)()
                     }
@@ -7196,10 +7196,10 @@ webpackJsonp([45], {
                         icon: N._11.Edit,
                         onClick: this.openModal
                     }))
-                }, t = a.__decorate([Object(A.c)("EditProfileOverlay")], t)
+                }, t = a.__decorate([Object(F.c)("EditProfileOverlay")], t)
             }(r.Component)),
             X = Object(v.a)(null, function(e) {
-                return Object(B.bindActionCreators)({
+                return Object(D.bindActionCreators)({
                     showModal: R.d
                 }, e)
             })(Y),
@@ -7323,7 +7323,7 @@ webpackJsonp([45], {
                     margin: {
                         left: 1
                     }
-                }, r.createElement(x, {
+                }, r.createElement(T, {
                     channelLogin: this.props.channelLogin
                 })));
                 var f, k = r.createElement(N.V, {
@@ -7367,7 +7367,7 @@ webpackJsonp([45], {
                     S = null;
                 return this.isActiveTab(te.Channel) && (S = r.createElement(N.V, {
                     display: b
-                }, r.createElement(D, {
+                }, r.createElement(B, {
                     channelLogin: this.props.channelLogin,
                     collapsed: !this.state.bannerSlideIn,
                     onTransitionEnd: this.completedBannerAnimation
@@ -7617,7 +7617,7 @@ webpackJsonp([45], {
                 skip: function(e) {
                     return !e.channelLogin
                 }
-            }), Object(A.c)("ChannelHeader")], t)
+            }), Object(F.c)("ChannelHeader")], t)
         }(r.Component)
     },
     WClm: function(e, t) {},
@@ -7794,14 +7794,14 @@ webpackJsonp([45], {
                 }, e)
             })(N),
             w = n("HW6M"),
-            C = n("BhyV"),
-            A = n("jF7o"),
-            F = n("w9tK"),
+            A = n("BhyV"),
+            F = n("jF7o"),
+            C = n("w9tK"),
             I = n("zCIC");
         ! function(e) {
             e[e.Error = 0] = "Error", e[e.AdBlocked = 1] = "AdBlocked", e[e.Unavailable = 2] = "Unavailable", e[e.Available = 3] = "Available"
         }(k || (k = {}));
-        var L, x = function(e) {
+        var L, T = function(e) {
                 var t = null;
                 return e.disableWatchAd && (t = Object(v.d)("Try again later", "Bits--WatchAdOffer")), m.createElement(y._19, {
                     className: "bits-buy-card__offer-row",
@@ -7839,8 +7839,8 @@ webpackJsonp([45], {
                     }
                 }, t)))
             },
-            T = /version\/([\w\.]+).+?(mobile\s?safari|safari)/i,
-            O = function(e) {
+            O = /version\/([\w\.]+).+?(mobile\s?safari|safari)/i,
+            x = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -7866,23 +7866,23 @@ webpackJsonp([45], {
                         })
                     })
                 }, t.prototype.render = function() {
-                    return T.test(navigator.userAgent) ? null : m.createElement(x, u.__assign({}, this.props, {
+                    return O.test(navigator.userAgent) ? null : m.createElement(T, u.__assign({}, this.props, {
                         disableWatchAd: !this.state.enableWatchAd
                     }))
                 }, t
             }(m.Component),
             V = n("jxGs"),
             U = n("3iBR"),
-            D = n("iydZ"),
-            B = n("ZJYd"),
+            B = n("iydZ"),
+            D = n("ZJYd"),
             R = n("CFVp"),
-            P = n("qe65"),
-            j = (n("OLKT"), function(e) {
+            j = n("qe65"),
+            P = (n("OLKT"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleBuyClick = function(e) {
                         var n = t.props.channelID || "",
-                            i = Object(B.b)({
+                            i = Object(D.b)({
                                 trackBitsCardInteraction: t.props.trackBitsCardInteraction,
                                 channelID: n,
                                 purchaseUrl: e.currentTarget.dataset.purchaseUrl,
@@ -7897,7 +7897,7 @@ webpackJsonp([45], {
                     if (this.props.offer.type === V.a) {
                         if (!this.props.channelLogin) return null;
                         var e = this.props.currentUserSHA || "";
-                        return m.createElement(O, {
+                        return m.createElement(x, {
                             key: "wateb",
                             minPayout: this.props.offer.bits,
                             onWatchAdClick: this.props.handleWatchAdClick,
@@ -7907,12 +7907,12 @@ webpackJsonp([45], {
                         })
                     }
                     var t = null;
-                    Object(B.c)(this.props.offer) ? t = m.createElement(y.V, {
+                    Object(D.c)(this.props.offer) ? t = m.createElement(y.V, {
                         className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline"
                     }, m.createElement(y._23, {
                         type: y._28.Strong,
                         fontSize: y.L.Size6
-                    }, Object(v.d)("Special Offer: 1st Time Buyers", "Bits--BuyCard"))) : Object(B.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === V.c && (t = m.createElement(y.V, {
+                    }, Object(v.d)("Special Offer: 1st Time Buyers", "Bits--BuyCard"))) : Object(D.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === V.c && (t = m.createElement(y.V, {
                         className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline"
                     }, m.createElement(y._23, {
                         type: y._28.Strong,
@@ -7925,7 +7925,7 @@ webpackJsonp([45], {
                         percentOff: this.props.offer.discount
                     }, "Bits--BuyCard")));
                     var i = null;
-                    (Object(B.c)(this.props.offer) || Object(B.e)(this.props.offer)) && (i = m.createElement("div", {
+                    (Object(D.c)(this.props.offer) || Object(D.e)(this.props.offer)) && (i = m.createElement("div", {
                         className: "bits-buy-card-offer-row__sub-text"
                     }, Object(v.d)("one per account", "Bits--BuyCard")));
                     var a = this.props.isLastRow ? y._19 : y.V;
@@ -7979,9 +7979,9 @@ webpackJsonp([45], {
                         },
                         className: "bits-buy-card-offer-row__tier-bits-images"
                     }, n.map(function(e) {
-                        return m.createElement(P.a, {
+                        return m.createElement(j.a, {
                             key: e.bits,
-                            sources: Object(D.b)(e, 2, !1)
+                            sources: Object(B.b)(e, 2, !1)
                         })
                     }))
                 }, t
@@ -7991,7 +7991,7 @@ webpackJsonp([45], {
                     n = [],
                     i = null;
                 return e.offers.forEach(function(a, l) {
-                    var r = m.createElement(j, {
+                    var r = m.createElement(P, {
                             key: a.id,
                             offer: a,
                             isLastRow: l + 1 < e.offers.length,
@@ -8006,8 +8006,8 @@ webpackJsonp([45], {
                             closeAllBits: e.closeAllBits,
                             trackBitsCardInteraction: e.trackBitsCardInteraction
                         }),
-                        s = Object(B.d)(a),
-                        o = Object(B.c)(a),
+                        s = Object(D.d)(a),
+                        o = Object(D.c)(a),
                         d = a.type === V.a;
                     o && !e.hidePromos ? t.push(r) : s && !o ? t.push(r) : d && !e.hideWateb ? i = r : d || s || n.push(r)
                 }), e.fullsize ? m.createElement(y.V, {
@@ -8225,7 +8225,7 @@ webpackJsonp([45], {
                         watebError: null,
                         bitsAwarded: 0
                     }, t.onBuyPopupClose = function(e) {
-                        Object(A.a)(e, function() {
+                        Object(F.a)(e, function() {
                             t.props.data && t.props.data.refetch()
                         })
                     }, t.onAdBitsAwarded = function(e) {
@@ -8388,9 +8388,9 @@ webpackJsonp([45], {
                     }
                 })], t)
             }(m.Component),
-            J = Object(C.compose)(Object(K.c)("BitsBuyCard", {
+            J = Object(A.compose)(Object(K.c)("BitsBuyCard", {
                 autoReportInteractive: !0,
-                destination: F.a.BitsBuyCard
+                destination: C.a.BitsBuyCard
             }))($),
             Y = Object(s.a)(a, l)(J);
         n.d(t, !1, function() {
@@ -11134,16 +11134,6 @@ webpackJsonp([45], {
         };
         e.exports = n
     },
-    w9tK: function(e, t, n) {
-        "use strict";
-        n.d(t, "a", function() {
-            return i
-        });
-        var i;
-        ! function(e) {
-            e.BitsBuyCard = "bits-buy-card", e.BrowseCommunities = "browse.communities", e.BrowseCreative = "browse.creative", e.BrowseGamesAndCommunities = "browse.games-and-communities", e.ChannelClips = "channel.clips", e.ChannelCollections = "channel.collections", e.ChannelClipsManager = "videoManager.clips.channel", e.ChannelDashboardAchievements = "channel.dashboard.achievements", e.ChannelDashboardChannelAnalytics = "channel.dashboard.channel-analytics", e.ChannelDashboardExtensions = "channel.dashboard.extensions", e.ChannelDashboardModeration = "channel.dashboard.moderation", e.ChannelDashboardStreamSummary = "channel.dashboard.stream-summary", e.ChannelEvents = "channel.events", e.ChannelIndex = "channel.index.index", e.ChatPopout = "chat", e.CheermoteCarousel = "cheermote-carousel", e.DevOnly = "dev", e.DirectoryCommunityByLanguage = "directory.community.language", e.DirectoryCommunityIndex = "directory.community.index", e.DirectoryCommunityDetails = "directory.community.details", e.DirectoryFollowingCommunities = "directory.following.communities", e.DirectoryFollowingGames = "directory.following.games", e.DirectoryFollowingHosts = "directory.following.hosts", e.DirectoryFollowingIndex = "directory.following.index", e.DirectoryFollowingLiveChannels = "directory.following.channels", e.DirectoryFollowingVideos = "directory.following.videos.video-type", e.DirectoryGameClips = "directory.game.clips", e.DirectoryGameDetails = "directory.game.details", e.DirectoryGameIndex = "directory.game.index", e.DirectoryGames = "directory.games", e.DirectoryPopular = "directory.popular", e.DirectoryPopularByLanguage = "directory.popular.language", e.DirectoryGameVideos = "directory.game.videos", e.EmailVerification = "emailVerification", e.EventDetails = "event.details", e.ForYou = "for-you", e.Index = "index", e.MyClipsManager = "videoManager.clips", e.NotificationSettingsPage = "settings.notificationSettings", e.OnboardingIndex = "onboarding.index", e.ReportUserPage = "reportUser.page", e.SettingsConnections = "private/embed-components", e.SettingsChannel = "private/embed-components", e.SettingsNotifications = "settings.notifications", e.SettingsPrime = "settings.prime", e.SettingsProfile = "settings.profile", e.SettingsSecurity = "private/embed-components", e.StoreMerchPage = "store.merch", e.SubsLandingPage = "subs.landing", e.TeamsDashboardRevenue = "teams.dashboard.revenue", e.TeamsDashboardStats = "teams.dashboard.stats", e.TeamsDashboardMembers = "teams.dashboard.members", e.TeamsDashboardFeaturedChannels = "teams.dashboard.featured-channels", e.TeamsDashboardSettings = "teams.dashboard.settings", e.SubsBroadcasterPage = "subs.broadcaster", e.VideoManagerEditPropertiesPage = "videoManager.edit", e.VideoManagerPage = "videoManager.page", e.VideoManagerUploadListPage = "videoManager.upload-list", e.VideoManagerUploadPage = "videoManager.upload", e.VideosPage = "videos", e.VideoWatchPage = "video"
-        }(i || (i = {}))
-    },
     weaG: function(e, t) {},
     x583: function(e, t) {},
     ySfT: function(e, t, n) {
@@ -11278,4 +11268,4 @@ webpackJsonp([45], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.event-landing-8bc03583cc45e8aa84fbea9bcf2c7ff9.js.map
+//# sourceMappingURL=pages.event-landing-5d872345ea54b3b114de263a3f238f4a.js.map

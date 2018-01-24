@@ -1,4 +1,4 @@
-webpackJsonp([66], {
+webpackJsonp([68], {
     "027l": function(e, t) {
         var n = {
             kind: "Document",
@@ -613,12 +613,12 @@ webpackJsonp([66], {
             b = n("Tzcg"),
             h = n("CSlQ"),
             g = n("pQNb"),
-            v = n("7LIQ"),
-            k = n("37Pp"),
-            y = n("YEG/"),
-            f = n("FDYX"),
+            k = n("7LIQ"),
+            v = n("37Pp"),
+            f = n("YEG/"),
+            _ = n("FDYX"),
             S = n("Odds"),
-            _ = function(e) {
+            T = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -644,12 +644,12 @@ webpackJsonp([66], {
                     })
                 }, t
             }(a.Component),
-            T = n("XFEc");
+            E = n("XFEc");
         n("CqGj");
         ! function(e) {
             e[e.Tier1 = 0] = "Tier1", e[e.Tier2 = 1] = "Tier2", e[e.Tier3 = 2] = "Tier3"
         }(i || (i = {}));
-        var E = function(e) {
+        var y = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -677,7 +677,7 @@ webpackJsonp([66], {
                                 })
                         }
                     }, t.onSubClick = function(e) {
-                        Object(T.b)({
+                        Object(E.b)({
                             action: e.action,
                             canSubscribe: !t.props.subTier || "3000" !== t.props.subTier,
                             channelID: t.props.channelId,
@@ -773,7 +773,7 @@ webpackJsonp([66], {
                             e = this.props.subscriptionProducts[0]
                     }
                     var t = e.price;
-                    return Object(f.d)([e]) && (t = Object(f.a)(e)), a.createElement(S.V, {
+                    return Object(_.d)([e]) && (t = Object(_.a)(e)), a.createElement(S.V, {
                         margin: {
                             top: 1
                         }
@@ -781,13 +781,13 @@ webpackJsonp([66], {
                         margin: {
                             top: 1
                         }
-                    }, a.createElement(k.a, {
+                    }, a.createElement(v.a, {
                         subscriptionProduct: e
                     })), a.createElement(S.V, {
                         margin: {
                             top: 1
                         }
-                    }, a.createElement(y.a, {
+                    }, a.createElement(f.a, {
                         isSubbedToTier: this.isSubbedToTier(),
                         tierPrice: t,
                         reportSubAction: this.onSubClick,
@@ -818,14 +818,14 @@ webpackJsonp([66], {
                     var e = [];
                     if (this.state.activeTab === i.Tier2 || this.state.activeTab === i.Tier3) {
                         var t = this.props.subscriptionProducts[1];
-                        e.push(a.createElement(_, {
+                        e.push(a.createElement(T, {
                             key: "bonus-emote-" + i.Tier2,
                             subscriptionProduct: t
                         }))
                     }
                     if (this.state.activeTab === i.Tier3) {
                         t = this.props.subscriptionProducts[2];
-                        e.push(a.createElement(_, {
+                        e.push(a.createElement(T, {
                             key: "bonus-emote-" + i.Tier3,
                             subscriptionProduct: t
                         }))
@@ -838,7 +838,7 @@ webpackJsonp([66], {
                     var e = Object(b.b)(this.props.subscriptionProducts[0].emotes);
                     return a.createElement(S.V, {
                         className: "subs-broadcaster-tabbed-tiers__emotes"
-                    }, a.createElement(v.a, {
+                    }, a.createElement(k.a, {
                         emoteSet: {
                             id: this.state.emoteSetId || "",
                             emotes: e
@@ -848,8 +848,8 @@ webpackJsonp([66], {
                     }))
                 }, t = s.__decorate([Object(h.c)("SubPlanTabs")], t)
             }(a.Component),
-            C = (n("bPto"), n("027l")),
-            P = function(e) {
+            P = (n("bPto"), n("027l")),
+            C = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -964,7 +964,7 @@ webpackJsonp([66], {
                     }, a.createElement(S._23, {
                         color: S.F.Overlay
                     }, Object(o.d)("Verified Twitch Partner", "SubsBroadcasterBanner")))) : null
-                }, t = s.__decorate([Object(h.c)("SubsBroadcasterBanner"), Object(u.a)(C, {
+                }, t = s.__decorate([Object(h.c)("SubsBroadcasterBanner"), Object(u.a)(P, {
                     options: function(e) {
                         return {
                             variables: {
@@ -978,7 +978,7 @@ webpackJsonp([66], {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onSubClick = function(e) {
-                        Object(T.b)({
+                        Object(E.b)({
                             action: e.action,
                             canSubscribe: !t.props.subTier || "3000" !== t.props.subTier,
                             channelID: t.props.channelId,
@@ -1026,7 +1026,7 @@ webpackJsonp([66], {
                         key: "subs-broadcaster__emote-placeholder"
                     })] : this.props.subscriptionProducts.map(function(t, n) {
                         var i = t.price;
-                        return Object(f.d)([t]) && (i = Object(f.a)(t)), a.createElement(S._19, {
+                        return Object(_.d)([t]) && (i = Object(_.a)(t)), a.createElement(S._19, {
                             key: "subs-broadcaster-plan-" + n,
                             className: "subs-plan-tiers__plan",
                             margin: 1,
@@ -1049,11 +1049,11 @@ webpackJsonp([66], {
                             flexGrow: 1,
                             alignItems: S.c.Center,
                             justifyContent: S.U.Center
-                        }, a.createElement(S._23, null, e.messages.includes), e.bonusEmotesMessage(n)), e.bonusEmotes(n), a.createElement(k.a, {
+                        }, a.createElement(S._23, null, e.messages.includes), e.bonusEmotesMessage(n)), e.bonusEmotes(n), a.createElement(v.a, {
                             subscriptionProduct: t
                         }), a.createElement(S.V, {
                             margin: 1
-                        }, a.createElement(y.a, {
+                        }, a.createElement(f.a, {
                             isSubbedToTier: e.isSubbedToTier(n),
                             tierPrice: i,
                             reportSubAction: e.onSubClick,
@@ -1073,7 +1073,7 @@ webpackJsonp([66], {
                     return a.createElement(S.V, {
                         margin: 1,
                         className: "subs-plan-tiers__base-emotes"
-                    }, a.createElement(v.a, {
+                    }, a.createElement(k.a, {
                         emoteSet: {
                             id: "",
                             emotes: e
@@ -1109,7 +1109,7 @@ webpackJsonp([66], {
                             n.push(this.props.subscriptionProducts[1])
                     }
                     return t = n.map(function(e, t) {
-                        return a.createElement(_, {
+                        return a.createElement(T, {
                             key: "subs-broadcaster__bonus-emote-" + t,
                             subscriptionProduct: e,
                             hidePrice: !0
@@ -1129,8 +1129,8 @@ webpackJsonp([66], {
                     }
                 }, t = s.__decorate([Object(h.c)("SubsPlanTiers")], t)
             }(a.Component)),
-            w = n("Ie7/"),
-            x = function(e) {
+            F = n("Ie7/"),
+            w = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -1170,7 +1170,7 @@ webpackJsonp([66], {
                         display: S.H.Flex,
                         justifyContent: S.U.Center,
                         alignItems: S.c.Center
-                    }, a.createElement(S.Z, null))) : a.createElement(l.b, null, a.createElement(S.V, null, a.createElement(P, {
+                    }, a.createElement(S.Z, null))) : a.createElement(l.b, null, a.createElement(S.V, null, a.createElement(C, {
                         channelName: this.props.match.params.channelName
                     }), a.createElement(g.a, {
                         subscriptionProducts: this.state.subscriptionProducts
@@ -1181,7 +1181,7 @@ webpackJsonp([66], {
                         breakpointMedium: {
                             display: S.H.Hide
                         }
-                    }, a.createElement(E, {
+                    }, a.createElement(y, {
                         channelDisplayName: this.props.data.user.displayName,
                         channelId: this.props.data.user.id,
                         channelLogin: this.props.data.user.login,
@@ -1202,7 +1202,7 @@ webpackJsonp([66], {
                         channelId: this.props.data.user.id,
                         channelLogin: this.props.data.user.login
                     }))))
-                }, t = s.__decorate([Object(u.a)(w, {
+                }, t = s.__decorate([Object(u.a)(F, {
                     options: function(e) {
                         return {
                             variables: {
@@ -1216,20 +1216,10 @@ webpackJsonp([66], {
                     location: m.PageviewLocation.SubsBroadcasterPage
                 })], t)
             }(a.Component),
-            F = Object(r.a)()(x);
+            O = Object(r.a)()(w);
         n.d(t, "SubsBroadcasterPage", function() {
-            return F
+            return O
         })
-    },
-    w9tK: function(e, t, n) {
-        "use strict";
-        n.d(t, "a", function() {
-            return i
-        });
-        var i;
-        ! function(e) {
-            e.BitsBuyCard = "bits-buy-card", e.BrowseCommunities = "browse.communities", e.BrowseCreative = "browse.creative", e.BrowseGamesAndCommunities = "browse.games-and-communities", e.ChannelClips = "channel.clips", e.ChannelCollections = "channel.collections", e.ChannelClipsManager = "videoManager.clips.channel", e.ChannelDashboardAchievements = "channel.dashboard.achievements", e.ChannelDashboardChannelAnalytics = "channel.dashboard.channel-analytics", e.ChannelDashboardExtensions = "channel.dashboard.extensions", e.ChannelDashboardModeration = "channel.dashboard.moderation", e.ChannelDashboardStreamSummary = "channel.dashboard.stream-summary", e.ChannelEvents = "channel.events", e.ChannelIndex = "channel.index.index", e.ChatPopout = "chat", e.CheermoteCarousel = "cheermote-carousel", e.DevOnly = "dev", e.DirectoryCommunityByLanguage = "directory.community.language", e.DirectoryCommunityIndex = "directory.community.index", e.DirectoryCommunityDetails = "directory.community.details", e.DirectoryFollowingCommunities = "directory.following.communities", e.DirectoryFollowingGames = "directory.following.games", e.DirectoryFollowingHosts = "directory.following.hosts", e.DirectoryFollowingIndex = "directory.following.index", e.DirectoryFollowingLiveChannels = "directory.following.channels", e.DirectoryFollowingVideos = "directory.following.videos.video-type", e.DirectoryGameClips = "directory.game.clips", e.DirectoryGameDetails = "directory.game.details", e.DirectoryGameIndex = "directory.game.index", e.DirectoryGames = "directory.games", e.DirectoryPopular = "directory.popular", e.DirectoryPopularByLanguage = "directory.popular.language", e.DirectoryGameVideos = "directory.game.videos", e.EmailVerification = "emailVerification", e.EventDetails = "event.details", e.ForYou = "for-you", e.Index = "index", e.MyClipsManager = "videoManager.clips", e.NotificationSettingsPage = "settings.notificationSettings", e.OnboardingIndex = "onboarding.index", e.ReportUserPage = "reportUser.page", e.SettingsConnections = "private/embed-components", e.SettingsChannel = "private/embed-components", e.SettingsNotifications = "settings.notifications", e.SettingsPrime = "settings.prime", e.SettingsProfile = "settings.profile", e.SettingsSecurity = "private/embed-components", e.StoreMerchPage = "store.merch", e.SubsLandingPage = "subs.landing", e.TeamsDashboardRevenue = "teams.dashboard.revenue", e.TeamsDashboardStats = "teams.dashboard.stats", e.TeamsDashboardMembers = "teams.dashboard.members", e.TeamsDashboardFeaturedChannels = "teams.dashboard.featured-channels", e.TeamsDashboardSettings = "teams.dashboard.settings", e.SubsBroadcasterPage = "subs.broadcaster", e.VideoManagerEditPropertiesPage = "videoManager.edit", e.VideoManagerPage = "videoManager.page", e.VideoManagerUploadListPage = "videoManager.upload-list", e.VideoManagerUploadPage = "videoManager.upload", e.VideosPage = "videos", e.VideoWatchPage = "video"
-        }(i || (i = {}))
     }
 });
-//# sourceMappingURL=pages.subs.components.subs-broadcaster-page-e061b1283189daff445e3851a8ec4ae4.js.map
+//# sourceMappingURL=pages.subs.components.subs-broadcaster-page-db1a658af7afa879837b83d1ba140036.js.map

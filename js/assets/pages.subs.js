@@ -6519,9 +6519,19 @@ webpackJsonp([41], {
                         n.setState({
                             imageLoaded: !0
                         })
+                    }, n.onMouseOver = function() {
+                        n.setState({
+                            isHovering: !0
+                        })
+                    }, n.onMouseOut = function() {
+                        n.setState({
+                            isHovering: !1
+                        })
                     }, n.renderImage = function() {
                         var e = null,
-                            t = a("chat-image", n.props.className);
+                            t = a("chat-image", {
+                                "chat-image__animated": !!n.props.cheerText && n.state.imageLoaded
+                            }, n.props.className);
                         if (n.props.srcSet.themed) e = r.createElement(o.Q, {
                             display: n.state.imageLoaded ? o.H.InlineBlock : o.H.Hide
                         }, r.createElement(s.a, {
@@ -6529,6 +6539,8 @@ webpackJsonp([41], {
                             className: t,
                             defaultRes: n.props.srcKey,
                             onLoad: n.onImageLoad,
+                            onMouseOver: n.onMouseOver,
+                            onMouseOut: n.onMouseOut,
                             sources: n.props.srcSet
                         }));
                         else {
@@ -6541,6 +6553,8 @@ webpackJsonp([41], {
                             }, r.createElement("img", {
                                 className: t,
                                 onLoad: n.onImageLoad,
+                                onMouseOver: n.onMouseOver,
+                                onMouseOut: n.onMouseOut,
                                 src: n.props.srcSet.sources[n.props.srcKey],
                                 srcSet: i.join(","),
                                 alt: n.props.alt
@@ -6559,18 +6573,21 @@ webpackJsonp([41], {
                             width: 28
                         })))
                     }, n.state = {
-                        imageLoaded: !1
+                        imageLoaded: !1,
+                        isHovering: !1
                     }, n
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    var e = r.createElement(o._31, {
+                    var e;
+                    return e = this.state.isHovering && this.state.imageLoaded ? r.createElement(o._31, {
                         direction: this.props.tooltipDirection || o._33.Top,
                         label: this.props.alt,
                         display: o.H.Inline,
                         offsetY: "0.9rem",
                         "data-a-target": "emote-name"
-                    }, this.renderPlaceholder(), this.renderImage(), this.props.cheerText);
-                    return this.props.cheerText ? r.createElement(o._23, {
+                    }, this.renderPlaceholder(), this.renderImage(), this.props.cheerText) : r.createElement("span", {
+                        "data-a-target": "emote-name"
+                    }, this.renderPlaceholder(), this.renderImage(), this.props.cheerText), this.props.cheerText ? r.createElement(o._23, {
                         type: o._28.Span,
                         noWrap: !0
                     }, e) : e
@@ -14147,10 +14164,10 @@ webpackJsonp([41], {
             p = n("hfrE"),
             m = n("Odds"),
             h = (n("w+Qa"), l.a.wrap(function() {
-                return n.e(65).then(n.bind(null, "kd/b"))
+                return n.e(67).then(n.bind(null, "kd/b"))
             }, "SubsLandingPage")),
             f = l.a.wrap(function() {
-                return n.e(66).then(n.bind(null, "uy5s"))
+                return n.e(68).then(n.bind(null, "uy5s"))
             }, "SubsBroadcasterPage"),
             g = function(e) {
                 function t() {
@@ -19206,13 +19223,13 @@ webpackJsonp([41], {
                 return n.e(47).then(n.bind(null, "8U1+"))
             }, "AnonFrontPage"),
             se = ee.a.wrap(function() {
-                return n.e(49).then(n.bind(null, "Dd84"))
+                return n.e(48).then(n.bind(null, "Dd84"))
             }, "BrowseRootPage"),
             oe = ee.a.wrap(function() {
                 return n.e(40).then(n.bind(null, "gZGZ"))
             }, "ChannelClipsPage"),
             le = ee.a.wrap(function() {
-                return n.e(48).then(n.bind(null, "zfLI"))
+                return n.e(49).then(n.bind(null, "zfLI"))
             }, "ChannelCollectionsPage"),
             ce = ee.a.wrap(function() {
                 return n.e(42).then(n.bind(null, "lW0T"))
@@ -22971,4 +22988,4 @@ webpackJsonp([41], {
         }
     }
 });
-//# sourceMappingURL=pages.subs-cd9c46195dc88f9b24a95c0c2b018367.js.map
+//# sourceMappingURL=pages.subs-786799c8f21811e75cbbf420cf047a51.js.map

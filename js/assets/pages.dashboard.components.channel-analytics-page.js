@@ -1,4 +1,4 @@
-webpackJsonp([68], {
+webpackJsonp([70], {
     UVy3: function(e, n, a) {
         "use strict";
         Object.defineProperty(n, "__esModule", {
@@ -179,4 +179,4 @@ webpackJsonp([68], {
         e.exports = a
     }
 });
-//# sourceMappingURL=pages.dashboard.components.channel-analytics-page-4b2af1f6b6361800861a38c588b027e0.js.map
+//# sourceMappingURL=pages.dashboard.components.channel-analytics-page-7d3bd12a94f07c6ed4ed7db87814f64c.js.map

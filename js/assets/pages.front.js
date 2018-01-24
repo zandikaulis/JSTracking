@@ -964,8 +964,8 @@ webpackJsonp([44], {
                     }, Object(l.d)("Start Your Free Trial", "PrimeUpsellButton")))
                 }, t = a.__decorate([Object(m.c)("PrimeUpsellButton")], t)
             }(o.Component),
-            C = n("e2wA"),
-            O = function(e) {
+            O = n("e2wA"),
+            C = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -994,7 +994,7 @@ webpackJsonp([44], {
                     return this.props.offerType === b.a.EXTERNAL_OFFER ? null : o.createElement(_, {
                         description: this.props.offerDescription
                     })
-                }, t = a.__decorate([Object(d.a)(C), Object(m.c)("PrimeInstructions")], t)
+                }, t = a.__decorate([Object(d.a)(O), Object(m.c)("PrimeInstructions")], t)
             }(o.Component),
             w = function(e) {
                 function t() {
@@ -1118,7 +1118,7 @@ webpackJsonp([44], {
                     }))) : null
                 }, t = a.__decorate([Object(m.c)("CopyableItem")], t)
             }(o.Component),
-            D = function(e) {
+            T = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -1146,7 +1146,7 @@ webpackJsonp([44], {
                     })))
                 }, t = a.__decorate([Object(m.c)("PrimeClaimInstructions")], t)
             }(o.Component),
-            T = function(e) {
+            D = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -1199,7 +1199,7 @@ webpackJsonp([44], {
                         height: 20
                     })), Object(l.d)("Added To Your Twitch Account", "PrimeRedeem"))))
                 }, t.prototype.getPrimeClaimInstructions = function() {
-                    if (this.props.claimInstructions) return o.createElement(D, {
+                    if (this.props.claimInstructions) return o.createElement(T, {
                         claimInstructions: this.props.claimInstructions || ""
                     })
                 }, t = a.__decorate([Object(m.c)("PrimeRedeem")], t)
@@ -1225,13 +1225,13 @@ webpackJsonp([44], {
                         });
                         if ((t.isCurrentOfferClaimed(e) || t.state.claimed) && a && a.hasPrime) {
                             var r = t.state.claimData || i.claimData;
-                            return o.createElement(T, {
+                            return o.createElement(D, {
                                 claimInstructions: e.claimInstructions,
                                 code: r,
                                 deliveryMethod: e.deliveryMethod
                             })
                         }
-                        return o.createElement(O, {
+                        return o.createElement(C, {
                             offerId: e.id,
                             offerDescription: e.description || "",
                             offerType: e.deliveryMethod || "",
@@ -3476,8 +3476,8 @@ webpackJsonp([44], {
                     autoReportInteractive: !0
                 })], t)
             }(a.Component),
-            C = n("OkeX"),
-            O = function(e) {
+            O = n("OkeX"),
+            C = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -3499,7 +3499,7 @@ webpackJsonp([44], {
                     }) : null)
                 }, t.prototype.postRender = function() {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
-                }, t = i.__decorate([Object(h.a)(C, {
+                }, t = i.__decorate([Object(h.a)(O, {
                     options: {
                         variables: {
                             limit: 18
@@ -3510,11 +3510,11 @@ webpackJsonp([44], {
             w = n("Y4Yc"),
             F = "twilight_onboarding",
             I = "twilight_onboarding-prompt_dismissed",
-            D = {
+            T = {
                 domain: window.location.hostname.endsWith(".twitch.tv") ? ".twitch.tv" : void 0,
                 secure: "https:" === window.location.protocol
             },
-            T = i.__assign({}, D, {
+            D = i.__assign({}, T, {
                 expires: 365
             }),
             V = new Map([
@@ -3527,7 +3527,7 @@ webpackJsonp([44], {
                     return t.state = {
                         isOnboardingDismissedCookieSet: void 0 !== v.get(I)
                     }, t.handleAutoOnboardingRedirect = function() {
-                        void 0 === v.get(F) && Object(k.o)(new Date(t.props.data.currentUser.createdAt)) && (v.set(F, !0, T), t.redirectToOnboarding(b.b.NewSignup))
+                        void 0 === v.get(F) && Object(k.o)(new Date(t.props.data.currentUser.createdAt)) && (v.set(F, !0, D), t.redirectToOnboarding(b.b.NewSignup))
                     }, t.startOnboarding = function() {
                         t.redirectToOnboarding(b.b.HomepageCTA)
                     }, t.redirectToOnboarding = function(e) {
@@ -3535,7 +3535,7 @@ webpackJsonp([44], {
                             source: e
                         }), window.location.assign("/hi" + location.search)
                     }, t.dismissOnboardingPrompt = function() {
-                        Object(b.e)(), v.set(I, !0, T), t.setState({
+                        Object(b.e)(), v.set(I, !0, D), t.setState({
                             isOnboardingDismissedCookieSet: !0
                         })
                     }, t.followedGamesForUserHasLoaded = function() {
@@ -3940,8 +3940,8 @@ webpackJsonp([44], {
                 })], t)
             }(a.Component),
             $ = n("ZPDF"),
-            Y = ["control", "on"],
-            X = "2017-10-05T20:00:26.75536206Z",
+            X = ["control", "on"],
+            Y = "2017-10-05T20:00:26.75536206Z",
             Z = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -3978,11 +3978,11 @@ webpackJsonp([44], {
                     }
                     return null
                 }, t.prototype.getStartDate = function() {
-                    var e = r.b.get("streamer_trailers_start_date", X);
-                    return isNaN(Date.parse(e)) ? (r.i.warn("Date", e, "is not a valid date"), new Date(X)) : new Date(e)
+                    var e = r.b.get("streamer_trailers_start_date", Y);
+                    return isNaN(Date.parse(e)) ? (r.i.warn("Date", e, "is not a valid date"), new Date(Y)) : new Date(e)
                 }, t.prototype.validAssignment = function() {
                     var e = this.state.assignment || "";
-                    return void 0 !== Y.find(function(t) {
+                    return void 0 !== X.find(function(t) {
                         return t === e
                     })
                 }, t = i.__decorate([Object(f.c)("StreamerTrailersExperiment"), Object(h.a)($)], t)
@@ -4286,7 +4286,7 @@ webpackJsonp([44], {
                         margin: {
                             bottom: 1
                         }
-                    }, a.createElement(O, null)), a.createElement(fe, null), a.createElement(E.V, {
+                    }, a.createElement(C, null)), a.createElement(fe, null), a.createElement(E.V, {
                         display: E.H.Hide,
                         breakpointMedium: {
                             display: E.H.Block
@@ -4336,49 +4336,53 @@ webpackJsonp([44], {
             g = Object(l.c)("EmbedInfo", {
                 autoReportInteractive: !0
             })(function(e) {
-                var t = e.author,
-                    n = e.title,
-                    i = e.description,
-                    r = null,
-                    o = null;
-                return t && (r = a.createElement(s.V, {
+                var t = e.title,
+                    n = e.author,
+                    i = e.externalAuthorName,
+                    r = e.description,
+                    o = null,
+                    l = null;
+                return n ? (o = a.createElement(s.V, {
                     margin: {
                         right: 1
                     },
                     flexShrink: 0
                 }, a.createElement(f.a, {
-                    to: "/" + t.login,
+                    to: "/" + n.login,
                     "data-a-target": "pulse-profile-picture"
                 }, a.createElement(s.Q, {
                     flexShrink: 0
                 }, a.createElement(s.l, {
                     size: 40,
-                    imageSrc: t.profileImageURL,
+                    imageSrc: n.profileImageURL,
                     imageAlt: "User profile picture"
-                })))), o = a.createElement(s._23, {
+                })))), l = a.createElement(s._23, {
                     fontSize: s.L.Size6,
                     color: s.F.Alt
                 }, a.createElement(f.a, {
-                    to: "/" + t.login,
+                    to: "/" + n.login,
                     "data-a-target": "pulse-displayname-link"
-                }, t.displayName))), a.createElement(s._19, {
+                }, n.displayName))) : i && "" !== i && (l = a.createElement(s._23, {
+                    fontSize: s.L.Size6,
+                    color: s.F.Alt
+                }, i)), a.createElement(s._19, {
                     display: s.H.Flex,
                     flexWrap: s.K.NoWrap,
                     padding: 1,
                     background: s.m.Base
-                }, r, a.createElement(s.V, {
+                }, o, a.createElement(s.V, {
                     flexGrow: 1,
                     overflow: s._0.Hidden
-                }, o, a.createElement(s._23, {
+                }, l, a.createElement(s._23, {
                     fontSize: s.L.Size6,
                     color: s.F.Base,
                     bold: !0,
                     ellipsis: !0
-                }, n), i && a.createElement(s._23, {
+                }, t), r && a.createElement(s._23, {
                     fontSize: s.L.Size6,
                     color: s.F.Alt2,
                     noWrap: !0
-                }, i)))
+                }, r)))
             }),
             v = n("NqVV"),
             h = n("fc0G"),
@@ -4427,11 +4431,13 @@ webpackJsonp([44], {
                 autoReportInteractive: !0
             })(function(e) {
                 var t = e.embed,
-                    n = t.inputURL,
-                    i = t.thumbnail,
-                    r = t.providerName;
+                    n = t.title,
+                    i = t.inputURL,
+                    r = t.providerName,
+                    o = t.authorName,
+                    l = t.thumbnail;
                 return a.createElement("a", {
-                    href: "" + n,
+                    href: "" + i,
                     target: "_blank",
                     rel: "noopener noreferrer"
                 }, a.createElement(s.j, {
@@ -4441,9 +4447,11 @@ webpackJsonp([44], {
                     fullHeight: !0,
                     position: s._4.Absolute
                 }, a.createElement("img", {
-                    src: i && i.url || S.n.config.defaultStreamPreviewURL
+                    src: l && l.url || S.n.config.defaultStreamPreviewURL
                 })))), a.createElement(g, {
-                    title: r
+                    externalAuthorName: o,
+                    title: n,
+                    description: r
                 }))
             }),
             E = function(e, t) {
@@ -4476,7 +4484,7 @@ webpackJsonp([44], {
         var N = Object(l.c)("StreamEmbed", {
                 autoReportInteractive: !0
             })(E),
-            C = function(e, t) {
+            O = function(e, t) {
                 var n = e.embed,
                     i = n.id,
                     r = n.owner,
@@ -4505,25 +4513,27 @@ webpackJsonp([44], {
                     description: k
                 }))
             };
-        C.contextTypes = {
+        O.contextTypes = {
             feedTrackingProps: m.object
         };
-        var O = Object(l.c)("VideoEmbed", {
+        var C = Object(l.c)("VideoEmbed", {
                 autoReportInteractive: !0
-            })(C),
+            })(O),
             w = Object(d.a)(null, function(e) {
                 return Object(c.bindActionCreators)({
                     pauseCarousel: u.d
                 }, e)
-            })(O),
+            })(C),
             F = (n("HgOP"), function(e, t) {
                 var n = e.embed,
-                    i = n.html,
-                    r = n.thumbnail,
-                    l = n.providerName,
-                    d = i.replace("autoplay=false", "autoplay=true");
+                    i = n.title,
+                    r = n.providerName,
+                    l = n.authorName,
+                    d = n.html,
+                    c = n.thumbnail,
+                    u = d.replace("autoplay=false", "autoplay=true");
                 return a.createElement(s.V, null, a.createElement(p.a, {
-                    thumbnailURL: r && r.url || S.n.config.defaultStreamPreviewURL,
+                    thumbnailURL: c && c.url || S.n.config.defaultStreamPreviewURL,
                     type: p.b.VideoOEmbed,
                     onClick: function() {
                         Object(o.c)(e, t.feedTrackingProps)
@@ -4531,10 +4541,12 @@ webpackJsonp([44], {
                 }, a.createElement("div", {
                     className: "video-oembed-container",
                     dangerouslySetInnerHTML: {
-                        __html: d
+                        __html: u
                     }
                 })), a.createElement(g, {
-                    title: l
+                    externalAuthorName: l,
+                    title: i,
+                    description: r
                 }))
             });
         F.contextTypes = {
@@ -4549,7 +4561,7 @@ webpackJsonp([44], {
                 Stream: N,
                 Video: w
             },
-            D = function(e) {
+            T = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onImpression = function(e) {
@@ -4568,7 +4580,7 @@ webpackJsonp([44], {
                 }, t = i.__decorate([Object(l.c)("Embed"), Object(r.c)()], t)
             }(a.Component);
         n.d(t, "a", function() {
-            return D
+            return T
         })
     },
     L46p: function(e, t) {
@@ -5710,6 +5722,16 @@ webpackJsonp([44], {
                                         alias: null,
                                         name: {
                                             kind: "Name",
+                                            value: "authorName"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
                                             value: "thumbnail"
                                         },
                                         arguments: [],
@@ -5777,6 +5799,16 @@ webpackJsonp([44], {
                                         alias: null,
                                         name: {
                                             kind: "Name",
+                                            value: "authorName"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
                                             value: "thumbnail"
                                         },
                                         arguments: [],
@@ -5834,11 +5866,11 @@ webpackJsonp([44], {
             }],
             loc: {
                 start: 0,
-                end: 609
+                end: 631
             }
         };
         a.loc.source = {
-            body: '#import "twilight/features/chat/models/embedded-emote-fragment.gql"\n#import "twilight/features/feed/models/clip-fragment.gql"\n#import "twilight/features/feed/models/user-fragment.gql"\n#import "twilight/features/feed/models/video-fragment.gql"\nfragment feedItemPost on Post {\nid\ncreatedAt\nbody {\ncontent\nemotes {\n...embeddedEmote\n}\n}\nreactions {\nemote {\nid\ntoken\nsetID\n}\ncount\nself {\nhasReacted\n}\n}\nembeds {\n...feedItemClip\n...feedItemVideo\n... on PhotoOEmbed {\ntitle\ninputURL\nproviderName\nthumbnail {\nurl\n}\n}\n... on VideoOEmbed {\ntitle\ninputURL\nproviderName\nthumbnail {\nurl\n}\nhtml\n}\n}\nauthor {\n...feedUser\n}\n}',
+            body: '#import "twilight/features/chat/models/embedded-emote-fragment.gql"\n#import "twilight/features/feed/models/clip-fragment.gql"\n#import "twilight/features/feed/models/user-fragment.gql"\n#import "twilight/features/feed/models/video-fragment.gql"\nfragment feedItemPost on Post {\nid\ncreatedAt\nbody {\ncontent\nemotes {\n...embeddedEmote\n}\n}\nreactions {\nemote {\nid\ntoken\nsetID\n}\ncount\nself {\nhasReacted\n}\n}\nembeds {\n...feedItemClip\n...feedItemVideo\n... on PhotoOEmbed {\ntitle\ninputURL\nproviderName\nauthorName\nthumbnail {\nurl\n}\n}\n... on VideoOEmbed {\ntitle\ninputURL\nproviderName\nauthorName\nthumbnail {\nurl\n}\nhtml\n}\n}\nauthor {\n...feedUser\n}\n}',
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -6134,7 +6166,8 @@ webpackJsonp([44], {
                     }, t.resetComposer = function() {
                         t.textArea.value = "", t.textArea.selectionStart = 0, t.textArea.selectionEnd = 0, t.setState({
                             shareToTwitter: !1,
-                            embed: void 0
+                            embed: void 0,
+                            inputEmbedURL: ""
                         }), t.enableComposer()
                     }, t.toggleShareActivity = function() {
                         t.setState(function(e) {
@@ -6261,7 +6294,7 @@ webpackJsonp([44], {
                 }, t = a.__decorate([Object(p.c)("Composer")], t)
             }(r.Component),
             N = n("RH2O"),
-            C = Object(N.a)(function(e) {
+            O = Object(N.a)(function(e) {
                 return {
                     firstPageLoaded: e.session.firstPageLoaded
                 }
@@ -6281,7 +6314,7 @@ webpackJsonp([44], {
         }), n.d(t, !1, function() {
             return E
         }), n.d(t, "a", function() {
-            return C
+            return O
         })
     },
     VMA7: function(e, t, n) {
@@ -6821,7 +6854,7 @@ webpackJsonp([44], {
                     }
                 }, t))
             }),
-            C = Object(S.c)("TopReactions", {
+            O = Object(S.c)("TopReactions", {
                 autoReportInteractive: !0
             })(function(e) {
                 var t = e.reactions.map(function(t, n) {
@@ -6842,12 +6875,12 @@ webpackJsonp([44], {
                     display: _.H.Flex
                 }, t)
             }),
-            O = n("C/8M"),
+            C = n("C/8M"),
             w = n("rzuL"),
             F = n("Mlfg"),
             I = n("Dqkc"),
-            D = n("P+j/"),
-            T = (n("24qG"), function(e) {
+            T = n("P+j/"),
+            D = (n("24qG"), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.closeEmoteSelector = function() {
@@ -6887,7 +6920,7 @@ webpackJsonp([44], {
                         position: _._4.Relative
                     }, o.createElement(v.a, {
                         onClickOut: this.closeEmoteSelector
-                    }, this.state.emoteSelectorVisible && o.createElement(D.a, {
+                    }, this.state.emoteSelectorVisible && o.createElement(T.a, {
                         onClickEmote: this.onEmoteSelect,
                         visible: this.state.emoteSelectorVisible && this.state.emotesLoaded,
                         toggleVisibility: this.toggleEmoteSelector,
@@ -6953,7 +6986,7 @@ webpackJsonp([44], {
                             emoteID: n
                         })).then(function(i) {
                             var o = {
-                                action: e === r.Add ? O.a.Create : O.a.Remove,
+                                action: e === r.Add ? C.a.Create : C.a.Remove,
                                 entity: t.props.parentEntity,
                                 reactionInt: n,
                                 reactionText: a
@@ -6982,7 +7015,7 @@ webpackJsonp([44], {
                         position: a
                     }));
                     var l = null;
-                    l = o.createElement(C, {
+                    l = o.createElement(O, {
                         reactions: t.slice(0, R),
                         addReaction: this.addReaction,
                         removeReaction: this.removeReaction
@@ -7005,7 +7038,7 @@ webpackJsonp([44], {
                         margin: {
                             right: 1
                         }
-                    }, o.createElement(T, {
+                    }, o.createElement(D, {
                         onEmoteSelect: this.addReaction,
                         position: a
                     }, o.createElement(_._10, {
@@ -7440,6 +7473,16 @@ webpackJsonp([44], {
                                         alias: null,
                                         name: {
                                             kind: "Name",
+                                            value: "authorName"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
                                             value: "thumbnail"
                                         },
                                         arguments: [],
@@ -7507,6 +7550,16 @@ webpackJsonp([44], {
                                         alias: null,
                                         name: {
                                             kind: "Name",
+                                            value: "authorName"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
                                             value: "thumbnail"
                                         },
                                         arguments: [],
@@ -7544,11 +7597,11 @@ webpackJsonp([44], {
             }],
             loc: {
                 start: 0,
-                end: 360
+                end: 382
             }
         };
         a.loc.source = {
-            body: '#import "twilight/features/feed/models/clip-fragment.gql"\n#import "twilight/features/feed/models/video-fragment.gql"\nquery Feed_Embed($url: String!) {\nembed: feedEmbed(url: $url) {\n...feedItemClip\n...feedItemVideo\n... on PhotoOEmbed {\ntitle\ninputURL\nproviderName\nthumbnail {\nurl\n}\n}\n... on VideoOEmbed {\ntitle\ninputURL\nproviderName\nthumbnail {\nurl\n}\nhtml\n}\n}\n}',
+            body: '#import "twilight/features/feed/models/clip-fragment.gql"\n#import "twilight/features/feed/models/video-fragment.gql"\nquery Feed_Embed($url: String!) {\nembed: feedEmbed(url: $url) {\n...feedItemClip\n...feedItemVideo\n... on PhotoOEmbed {\ntitle\ninputURL\nproviderName\nauthorName\nthumbnail {\nurl\n}\n}\n... on VideoOEmbed {\ntitle\ninputURL\nproviderName\nauthorName\nthumbnail {\nurl\n}\nhtml\n}\n}\n}',
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -8644,7 +8697,7 @@ webpackJsonp([44], {
         }
 
         function a(e) {
-            l.m.track(D.SpadeEventType.FrontPageCarouselNavButtonClick, {
+            l.m.track(T.SpadeEventType.FrontPageCarouselNavButtonClick, {
                 direction: e
             })
         }
@@ -8760,11 +8813,11 @@ webpackJsonp([44], {
             _ = n("F8kA"),
             E = n("SZoP"),
             N = n("fc0G"),
-            C = (n("i6UE"), {
+            O = (n("i6UE"), {
                 content: "carousel",
                 medium: "twitch_home"
             }),
-            O = function(e) {
+            C = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getContentRender = function() {
@@ -8775,7 +8828,7 @@ webpackJsonp([44], {
                                 game: m.createElement(_.a, {
                                     to: {
                                         pathname: "/directory/game/" + t.props.item.content.gameName,
-                                        state: C
+                                        state: O
                                     }
                                 }, t.props.item.content.gameName)
                             }, "HorizontalCarouselPlayer"),
@@ -8823,7 +8876,7 @@ webpackJsonp([44], {
                         }, m.createElement(_.a, {
                             to: {
                                 pathname: "/" + t.props.item.broadcaster.login,
-                                state: C
+                                state: O
                             },
                             "data-a-target": "carousel-profile-image"
                         }, m.createElement(h.l, {
@@ -8867,12 +8920,12 @@ webpackJsonp([44], {
                     }, t.getLinkForTitle = function() {
                         if (t.props.item.content.type === g.b.Stream) return {
                             pathname: "/" + t.props.item.broadcaster.login,
-                            state: C
+                            state: O
                         };
                         var e = t.state ? t.state.videoOffset || 0 : 0;
                         return {
                             pathname: "/videos/" + t.props.item.content.id + "?t=" + e,
-                            state: C
+                            state: O
                         }
                     }, t.getPlaceholderRender = function() {
                         var e = u("horizontal-carousel-player__details", {
@@ -9088,8 +9141,8 @@ webpackJsonp([44], {
                     firstPageLoaded: e.session.firstPageLoaded
                 }
             })(F),
-            D = n("vH/s"),
-            T = (n("0OPT"), 6),
+            T = n("vH/s"),
+            D = (n("0OPT"), 6),
             V = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -9097,7 +9150,7 @@ webpackJsonp([44], {
                         activeItem: t.props.items[0],
                         startingIndex: 0
                     }, t.displayEventFired = !1, t.renderLeftButton = function() {
-                        if (t.props.items.length > T) {
+                        if (t.props.items.length > D) {
                             var e = t.state.startingIndex > 0;
                             return m.createElement(h.V, {
                                 display: h.H.Flex,
@@ -9112,8 +9165,8 @@ webpackJsonp([44], {
                         }
                         return null
                     }, t.renderRightButton = function() {
-                        if (t.props.items.length > T) {
-                            var e = t.props.items.length > t.state.startingIndex + T;
+                        if (t.props.items.length > D) {
+                            var e = t.props.items.length > t.state.startingIndex + D;
                             return m.createElement(h.V, {
                                 display: h.H.Flex,
                                 alignItems: h.c.Stretch
@@ -9132,9 +9185,9 @@ webpackJsonp([44], {
                                 var t = {};
                                 e.forEach(function(e, n) {
                                     t["carousel_slot_" + n + "_channel"] = e.broadcaster.login, t["carousel_slot_" + n + "_priority"] = e.priorityLevel, t["carousel_slot_" + n + "_game"] = e.content.gameName, t["carousel_slot_" + n + "_ccu"] = e.content.viewersCount, t["carousel_slot_" + n + "_type"] = e.content.subType
-                                }), l.m.track(D.SpadeEventType.FrontPageCarouselDisplay, t)
+                                }), l.m.track(T.SpadeEventType.FrontPageCarouselDisplay, t)
                             }(t.props.items), t.displayEventFired = !0);
-                            return t.props.items.slice(t.state.startingIndex, t.state.startingIndex + T).map(function(e, n) {
+                            return t.props.items.slice(t.state.startingIndex, t.state.startingIndex + D).map(function(e, n) {
                                 return m.createElement(y, {
                                     key: e.content.id,
                                     item: e,
@@ -9144,7 +9197,7 @@ webpackJsonp([44], {
                                 })
                             })
                         }
-                        for (var e = [], n = 0; n < T; n++) e.push(m.createElement(h.V, {
+                        for (var e = [], n = 0; n < D; n++) e.push(m.createElement(h.V, {
                             key: n,
                             margin: {
                                 x: .5
@@ -9173,7 +9226,7 @@ webpackJsonp([44], {
                             case g.c.Vertical:
                                 return m.createElement(I, o.__assign({}, e));
                             default:
-                                return m.createElement(O, o.__assign({}, e))
+                                return m.createElement(C, o.__assign({}, e))
                         }
                     }, t.registerCarousel = function(e) {
                         t.props.registerCarousel && t.props.registerCarousel(e)
@@ -9184,7 +9237,7 @@ webpackJsonp([44], {
                             activeItem: e
                         });
                         ! function(e) {
-                            l.m.track(D.SpadeEventType.FrontPageCarouselClick, e)
+                            l.m.track(T.SpadeEventType.FrontPageCarouselClick, e)
                         }({
                             broadcast_type: e.content.subType,
                             carousel_index: t.props.items.indexOf(e),
@@ -9201,7 +9254,7 @@ webpackJsonp([44], {
                             var n = o.__assign({
                                 clicked_element: t
                             }, e);
-                            l.m.track(D.SpadeEventType.FrontPageCarouselPromotionCardClick, n)
+                            l.m.track(T.SpadeEventType.FrontPageCarouselPromotionCardClick, n)
                         }({
                             broadcast_type: a.subType,
                             carousel_index: t.props.items.indexOf(t.state.activeItem),
@@ -9212,7 +9265,7 @@ webpackJsonp([44], {
                         }, n)
                     }, t.trackPromotionView = function(e) {
                         ! function(e) {
-                            l.m.track(D.SpadeEventType.FrontPageCarouselPromotionCardView, e)
+                            l.m.track(T.SpadeEventType.FrontPageCarouselPromotionCardView, e)
                         }({
                             broadcast_type: e.content.subType,
                             carousel_index: t.props.items.indexOf(e),
@@ -9222,7 +9275,7 @@ webpackJsonp([44], {
                             views: e.content.viewersCount
                         })
                     }, t.handlePageRight = function() {
-                        var e = t.props.items.length - T;
+                        var e = t.props.items.length - D;
                         e !== t.state.startingIndex && (a("next"), t.setState({
                             startingIndex: e
                         }))
@@ -9544,7 +9597,7 @@ webpackJsonp([44], {
         "use strict";
 
         function i(e) {
-            return e.__typename === C
+            return e.__typename === O
         }
         var a = n("TToO"),
             r = n("RH2O"),
@@ -9567,8 +9620,8 @@ webpackJsonp([44], {
             _ = (n("BLXQ"), "delete"),
             E = "delete-confirm",
             N = "report",
-            C = "Post",
-            O = function(e) {
+            O = "Post",
+            C = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     n.closeViews = function() {
@@ -9717,7 +9770,7 @@ webpackJsonp([44], {
                                 targetUserID: t.broadcaster.id,
                                 contentID: t.id
                             };
-                        case C:
+                        case O:
                             var n = e;
                             return {
                                 contentType: b.a.ChannelFeedPost,
@@ -9761,7 +9814,7 @@ webpackJsonp([44], {
                         return Object(d.f)(l.a.FeedReactionToggle)
                     }
                 }, e)
-            })(O);
+            })(C);
         n.d(t, "a", function() {
             return w
         })
@@ -10885,16 +10938,6 @@ webpackJsonp([44], {
         e.exports = n
     },
     "w/8h": function(e, t) {},
-    w9tK: function(e, t, n) {
-        "use strict";
-        n.d(t, "a", function() {
-            return i
-        });
-        var i;
-        ! function(e) {
-            e.BitsBuyCard = "bits-buy-card", e.BrowseCommunities = "browse.communities", e.BrowseCreative = "browse.creative", e.BrowseGamesAndCommunities = "browse.games-and-communities", e.ChannelClips = "channel.clips", e.ChannelCollections = "channel.collections", e.ChannelClipsManager = "videoManager.clips.channel", e.ChannelDashboardAchievements = "channel.dashboard.achievements", e.ChannelDashboardChannelAnalytics = "channel.dashboard.channel-analytics", e.ChannelDashboardExtensions = "channel.dashboard.extensions", e.ChannelDashboardModeration = "channel.dashboard.moderation", e.ChannelDashboardStreamSummary = "channel.dashboard.stream-summary", e.ChannelEvents = "channel.events", e.ChannelIndex = "channel.index.index", e.ChatPopout = "chat", e.CheermoteCarousel = "cheermote-carousel", e.DevOnly = "dev", e.DirectoryCommunityByLanguage = "directory.community.language", e.DirectoryCommunityIndex = "directory.community.index", e.DirectoryCommunityDetails = "directory.community.details", e.DirectoryFollowingCommunities = "directory.following.communities", e.DirectoryFollowingGames = "directory.following.games", e.DirectoryFollowingHosts = "directory.following.hosts", e.DirectoryFollowingIndex = "directory.following.index", e.DirectoryFollowingLiveChannels = "directory.following.channels", e.DirectoryFollowingVideos = "directory.following.videos.video-type", e.DirectoryGameClips = "directory.game.clips", e.DirectoryGameDetails = "directory.game.details", e.DirectoryGameIndex = "directory.game.index", e.DirectoryGames = "directory.games", e.DirectoryPopular = "directory.popular", e.DirectoryPopularByLanguage = "directory.popular.language", e.DirectoryGameVideos = "directory.game.videos", e.EmailVerification = "emailVerification", e.EventDetails = "event.details", e.ForYou = "for-you", e.Index = "index", e.MyClipsManager = "videoManager.clips", e.NotificationSettingsPage = "settings.notificationSettings", e.OnboardingIndex = "onboarding.index", e.ReportUserPage = "reportUser.page", e.SettingsConnections = "private/embed-components", e.SettingsChannel = "private/embed-components", e.SettingsNotifications = "settings.notifications", e.SettingsPrime = "settings.prime", e.SettingsProfile = "settings.profile", e.SettingsSecurity = "private/embed-components", e.StoreMerchPage = "store.merch", e.SubsLandingPage = "subs.landing", e.TeamsDashboardRevenue = "teams.dashboard.revenue", e.TeamsDashboardStats = "teams.dashboard.stats", e.TeamsDashboardMembers = "teams.dashboard.members", e.TeamsDashboardFeaturedChannels = "teams.dashboard.featured-channels", e.TeamsDashboardSettings = "teams.dashboard.settings", e.SubsBroadcasterPage = "subs.broadcaster", e.VideoManagerEditPropertiesPage = "videoManager.edit", e.VideoManagerPage = "videoManager.page", e.VideoManagerUploadListPage = "videoManager.upload-list", e.VideoManagerUploadPage = "videoManager.upload", e.VideosPage = "videos", e.VideoWatchPage = "video"
-        }(i || (i = {}))
-    },
     wjhu: function(e, t) {
         var n = {
             kind: "Document",
@@ -11303,4 +11346,4 @@ webpackJsonp([44], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.front-c75e19516b28e8a92fcd8a5e339d1649.js.map
+//# sourceMappingURL=pages.front-6a5a5ec3e1e52d313445a3d594a8bf37.js.map

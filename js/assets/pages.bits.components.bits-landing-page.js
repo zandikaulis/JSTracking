@@ -1,4 +1,4 @@
-webpackJsonp([64], {
+webpackJsonp([66], {
     "/LBW": function(e, t, n) {
         "use strict";
         t.h = function(e) {
@@ -106,9 +106,9 @@ webpackJsonp([64], {
         }), n.d(t, "c", function() {
             return h
         }), n.d(t, "d", function() {
-            return g
-        }), n.d(t, "e", function() {
             return f
+        }), n.d(t, "e", function() {
+            return g
         });
         var a, i = n("I89S"),
             r = {
@@ -125,8 +125,8 @@ webpackJsonp([64], {
             m = "cheer",
             p = i.a.Purple,
             h = "FIRST_PARTY",
-            g = "THIRD_PARTY",
-            f = (a = {}, a[i.a.Gray] = "#979797", a[i.a.Purple] = "#9c3ee8", a[i.a.Green] = "#1db2a5", a[i.a.Blue] = "#0099fe", a[i.a.Red] = "#f43021", a[i.a.Yellow] = "#f3a71a", a)
+            f = "THIRD_PARTY",
+            g = (a = {}, a[i.a.Gray] = "#979797", a[i.a.Purple] = "#9c3ee8", a[i.a.Green] = "#1db2a5", a[i.a.Blue] = "#0099fe", a[i.a.Red] = "#f43021", a[i.a.Yellow] = "#f3a71a", a)
     },
     "4JjK": function(e, t, n) {
         "use strict";
@@ -159,8 +159,8 @@ webpackJsonp([64], {
                                 });
                                 var h = i(e, d, !0, t, p);
                                 n.push(h), a[d].animated.set(p, h.url);
-                                var g = i(e, d, !1, t, p);
-                                n.push(g), a[d].static.set(p, g.url)
+                                var f = i(e, d, !1, t, p);
+                                n.push(f), a[d].static.set(p, f.url)
                             }
                         return {
                             id: e + ";" + t,
@@ -242,8 +242,8 @@ webpackJsonp([64], {
             m = n("7vx8"),
             p = n("j7/Y"),
             h = n("vH/s"),
-            g = n("CFVp"),
-            f = n("CSlQ"),
+            f = n("CFVp"),
+            g = n("CSlQ"),
             b = n("nrdj"),
             y = n("Odds"),
             v = (n("AHKM"), function(e) {
@@ -287,7 +287,7 @@ webpackJsonp([64], {
                     margin: "auto"
                 }, e.cheermoteImaages))
             }),
-            C = (n("Kk2y"), function(e) {
+            _ = (n("Kk2y"), function(e) {
                 var t = null;
                 return e.additionalInfo && (t = c.createElement(v, {
                     text: e.additionalInfo
@@ -308,7 +308,7 @@ webpackJsonp([64], {
                     bold: !0
                 }, e.title)), t)
             }),
-            _ = {
+            B = {
                 title: Object(d.d)("Cheer with Bits to celebrate and show support!", "BitsLandingPage"),
                 info: Object(d.d)("Bits are a virtual good you can buy and use to Cheer. A Cheer is a chat message that uses Bits, and includes animated emotes to amplify your voice in chat and celebrate the moment. Cheering is another way to support Partners and Affiliates, similar to subscribing.", "BitsLandingPage"),
                 tutorialTitle: Object(d.d)("How to Cheer", "BitsLandingPage"),
@@ -344,7 +344,7 @@ webpackJsonp([64], {
                     }
                 }, "BitsLandingPage")
             },
-            B = function(e) {
+            C = function(e) {
                 var t = ["Cheer", "Kappa", "Kreygasm", "VoHiYo"].map(function(t) {
                         return c.createElement(b.a, {
                             key: t,
@@ -368,23 +368,23 @@ webpackJsonp([64], {
                     id: "how-to-cheer"
                 }, c.createElement(y.V, {
                     className: "bits-landing-page-cheermote-intro"
-                }, c.createElement(C, {
-                    title: _.tutorialTitle,
-                    additionalInfo: _.tutorialInfo
-                }), c.createElement(C, {
-                    title: _.valuePropositionTitle,
-                    additionalInfo: _.valuePropositionInfo
+                }, c.createElement(_, {
+                    title: B.tutorialTitle,
+                    additionalInfo: B.tutorialInfo
+                }), c.createElement(_, {
+                    title: B.valuePropositionTitle,
+                    additionalInfo: B.valuePropositionInfo
                 }), c.createElement(k, {
-                    title: _.globalCheermotesTitle,
-                    additionInfo: [_.globalCheermotesInfo],
+                    title: B.globalCheermotesTitle,
+                    additionInfo: [B.globalCheermotesInfo],
                     cheermoteImaages: t
                 }), c.createElement(k, {
-                    title: _.partnerCheermotesTitle,
-                    additionInfo: [_.partnerCheermotesInfo, _.partnerCheermotesInfo2],
+                    title: B.partnerCheermotesTitle,
+                    additionInfo: [B.partnerCheermotesInfo, B.partnerCheermotesInfo2],
                     cheermoteImaages: n
                 })))
             },
-            w = function(e) {
+            A = function(e) {
                 return c.createElement(y.V, {
                     className: "bits-landing-page-faq-section"
                 }, c.createElement(y.Q, {
@@ -400,24 +400,24 @@ webpackJsonp([64], {
                     text: e.answer
                 }), e.additionalContent)
             },
-            A = [{
-                question: _.paymentMethodsQuestion,
-                answer: _.paymentMethodsAnswer
+            w = [{
+                question: B.paymentMethodsQuestion,
+                answer: B.paymentMethodsAnswer
             }, {
-                question: _.howToCheerQuestion,
-                answer: _.howToCheerAnswer
+                question: B.howToCheerQuestion,
+                answer: B.howToCheerAnswer
             }, {
-                question: _.cheeringSupportStreamersQuestion,
-                answer: _.cheeringSupportStreamersAnswer
+                question: B.cheeringSupportStreamersQuestion,
+                answer: B.cheeringSupportStreamersAnswer
             }, {
-                question: _.bitsGemQuestion,
-                answer: _.bitsGemAnswer
+                question: B.bitsGemQuestion,
+                answer: B.bitsGemAnswer
             }, {
-                question: _.whatAreCheermotesQuestion,
-                answer: _.whatAreCheermotesAnswer
+                question: B.whatAreCheermotesQuestion,
+                answer: B.whatAreCheermotesAnswer
             }, {
-                question: _.additionalHelpQuestion,
-                answer: _.additionalHelpAnswer
+                question: B.additionalHelpQuestion,
+                answer: B.additionalHelpAnswer
             }],
             E = (n("XdS0"), function(e) {
                 var t = [1, 100, 1e3, 5e3, 1e4].map(function(t) {
@@ -462,9 +462,9 @@ webpackJsonp([64], {
                         },
                         margin: "auto"
                     }, t),
-                    a = A.map(function(e, t) {
+                    a = w.map(function(e, t) {
                         var a = void 0;
-                        return e.question === _.bitsGemQuestion && (a = n), c.createElement(w, {
+                        return e.question === B.bitsGemQuestion && (a = n), c.createElement(A, {
                             key: "faqsection:" + t,
                             question: e.question,
                             answer: e.answer,
@@ -473,8 +473,8 @@ webpackJsonp([64], {
                     });
                 return c.createElement(y.V, {
                     className: "bits-landing-page-faq"
-                }, c.createElement(C, {
-                    title: _.faqs
+                }, c.createElement(_, {
+                    title: B.faqs
                 }), c.createElement(y.V, {
                     className: "bits-landing-page-faq__content"
                 }, a))
@@ -521,8 +521,8 @@ webpackJsonp([64], {
                 return c.createElement(y.V, {
                     className: "bits-landing-page-intro"
                 }, c.createElement(x, {
-                    text: _.title,
-                    additionalInfo: _.info
+                    text: B.title,
+                    additionalInfo: B.info
                 }))
             },
             O = n("WVx7"),
@@ -599,7 +599,7 @@ webpackJsonp([64], {
                     type: y._28.H3,
                     color: y.F.Link,
                     bold: !0
-                }, _.buyBits)), c.createElement(N, {
+                }, B.buyBits)), c.createElement(N, {
                     bitsBalance: e.bitsBalance,
                     bitsConfig: e.bitsConfig,
                     isLoggedIn: e.isLoggedIn,
@@ -620,7 +620,7 @@ webpackJsonp([64], {
                         right: 1
                     },
                     alignItems: y.c.Center
-                }, c.createElement(y._23, null, _.paypalHeader)), c.createElement(y.V, {
+                }, c.createElement(y._23, null, B.paypalHeader)), c.createElement(y.V, {
                     alignItems: y.c.Center,
                     display: y.H.Flex
                 }, c.createElement("img", {
@@ -638,10 +638,10 @@ webpackJsonp([64], {
             }),
             T = function() {},
             j = n("W/WQ"),
-            D = (n("5Rtq"), function(e) {
+            F = (n("5Rtq"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
-                    return t.bitsConfig = Object(g.a)(), t
+                    return t.bitsConfig = Object(f.a)(), t
                 }
                 return l.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive(), d.n.setPageTitle("Purchase Bits")
@@ -692,12 +692,12 @@ webpackJsonp([64], {
                         breakpointSmall: {
                             display: y.H.InlineBlock
                         }
-                    }, c.createElement(B, {
+                    }, c.createElement(C, {
                         bitsConfig: this.bitsConfig
                     }), c.createElement(E, {
                         bitsConfig: this.bitsConfig
                     })))))))
-                }, t = l.__decorate([Object(f.c)("Bits"), Object(p.a)({
+                }, t = l.__decorate([Object(g.c)("Bits"), Object(p.a)({
                     location: h.PageviewLocation.BitsLandingPage
                 }), Object(m.a)(j, {
                     name: "data",
@@ -716,7 +716,7 @@ webpackJsonp([64], {
                         return Object(o.f)(r.a.BitsLandingPage)
                     }
                 }, e)
-            })(D);
+            })(F);
         n.d(t, "BitsLandingPage", function() {
             return P
         })
@@ -1001,7 +1001,7 @@ webpackJsonp([64], {
 
         function i(e) {
             return {
-                adModalOpen: Object(c.b)(e, w),
+                adModalOpen: Object(c.b)(e, A),
                 isLoggedIn: Object(d.d)(e)
             }
         }
@@ -1009,7 +1009,7 @@ webpackJsonp([64], {
         function r(e) {
             return {
                 showWatchAdModal: function(t) {
-                    return e(Object(l.d)(w, t))
+                    return e(Object(l.d)(A, t))
                 }
             }
         }
@@ -1021,17 +1021,17 @@ webpackJsonp([64], {
             m = n("U7vG"),
             p = n("2KeS"),
             h = n("6sO2"),
-            g = n("+8VM"),
-            f = n("7vx8"),
+            f = n("+8VM"),
+            g = n("7vx8"),
             b = n("oIkB");
         ! function(e) {
             e[e.ExitEarly = 0] = "ExitEarly", e[e.Unknown = 1] = "Unknown", e[e.Adblock = 2] = "Adblock", e[e.LimitReached = 3] = "LimitReached"
         }(o || (o = {}));
         var y, v = n("4JjK"),
             k = n("/LBW"),
-            C = n("Odds"),
-            _ = n("zzpv"),
-            B = (n("x583"), function(e) {
+            _ = n("Odds"),
+            B = n("zzpv"),
+            C = (n("x583"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {}, t.hasAwarded = !1, t.messageHandler = function(e) {
@@ -1125,24 +1125,24 @@ webpackJsonp([64], {
                 }, t.prototype.componentWillUnmount = function() {
                     window.removeEventListener("message", this.messageHandler)
                 }, t.prototype.render = function() {
-                    return m.createElement(C._19, {
-                        background: C.m.Base
+                    return m.createElement(_._19, {
+                        background: _.m.Base
                     }, m.createElement("div", {
                         className: "t-watch-ads-modal",
                         style: this.state.customDimensions
-                    }, m.createElement(g.a, null), m.createElement("iframe", {
+                    }, m.createElement(f.a, null), m.createElement("iframe", {
                         src: "/products/bits/ad"
                     })))
-                }, t = u.__decorate([Object(f.a)(_, {
+                }, t = u.__decorate([Object(g.a)(B, {
                     name: "redeemTrueXAd"
                 })], t)
             }(m.Component)),
-            w = Object(s.a)(null, function(e) {
+            A = Object(s.a)(null, function(e) {
                 return Object(p.bindActionCreators)({
                     closeModal: l.c
                 }, e)
-            })(B),
-            A = n("HW6M"),
+            })(C),
+            w = n("HW6M"),
             E = n("BhyV"),
             x = n("jF7o"),
             S = n("w9tK"),
@@ -1152,37 +1152,37 @@ webpackJsonp([64], {
         }(y || (y = {}));
         var I, N = function(e) {
                 var t = null;
-                return e.disableWatchAd && (t = Object(h.d)("Try again later", "Bits--WatchAdOffer")), m.createElement(C._19, {
+                return e.disableWatchAd && (t = Object(h.d)("Try again later", "Bits--WatchAdOffer")), m.createElement(_._19, {
                     className: "bits-buy-card__offer-row",
-                    display: C.H.Flex,
+                    display: _.H.Flex,
                     flexShrink: 0,
                     borderBottom: !0,
-                    justifyContent: C.U.Between,
-                    flexWrap: C.K.NoWrap,
+                    justifyContent: _.U.Between,
+                    flexWrap: _.K.NoWrap,
                     padding: {
                         x: 2,
                         y: 1
                     }
-                }, m.createElement(C.V, {
+                }, m.createElement(_.V, {
                     padding: {
                         right: 4
                     }
                 }, m.createElement("strong", null, Object(h.d)("Get {minBitsCount} or more Bits by watching short ads", {
                     minBitsCount: e.minPayout
-                }, "Bits--WatchAdOffer"))), m.createElement(C.V, {
+                }, "Bits--WatchAdOffer"))), m.createElement(_.V, {
                     flexShrink: 0,
-                    display: C.H.Flex,
-                    flexDirection: C.J.Column,
-                    alignItems: C.c.End
-                }, m.createElement(C.u, {
-                    type: C.z.Hollow,
+                    display: _.H.Flex,
+                    flexDirection: _.J.Column,
+                    alignItems: _.c.End
+                }, m.createElement(_.u, {
+                    type: _.z.Hollow,
                     "data-a-target": "bits-watch-ad",
                     onClick: e.onWatchAdClick,
                     disabled: e.disableWatchAd
-                }, Object(h.d)("Watch Ad", "Bits--WatchAdOffer")), t && m.createElement(C.V, {
+                }, Object(h.d)("Watch Ad", "Bits--WatchAdOffer")), t && m.createElement(_.V, {
                     className: "bits-buy-card__sub-text",
-                    alignSelf: C.d.Stretch,
-                    textAlign: C._24.Center,
+                    alignSelf: _.d.Stretch,
+                    textAlign: _._24.Center,
                     margin: {
                         top: .5
                     }
@@ -1221,17 +1221,17 @@ webpackJsonp([64], {
                 }, t
             }(m.Component),
             j = n("jxGs"),
-            D = n("3iBR"),
+            F = n("3iBR"),
             P = n("iydZ"),
-            F = n("ZJYd"),
-            V = n("CFVp"),
-            H = n("qe65"),
+            V = n("ZJYd"),
+            H = n("CFVp"),
+            D = n("qe65"),
             W = (n("OLKT"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleBuyClick = function(e) {
                         var n = t.props.channelID || "",
-                            a = Object(F.b)({
+                            a = Object(V.b)({
                                 trackBitsCardInteraction: t.props.trackBitsCardInteraction,
                                 channelID: n,
                                 purchaseUrl: e.currentTarget.dataset.purchaseUrl,
@@ -1256,16 +1256,16 @@ webpackJsonp([64], {
                         })
                     }
                     var t = null;
-                    Object(F.c)(this.props.offer) ? t = m.createElement(C.V, {
+                    Object(V.c)(this.props.offer) ? t = m.createElement(_.V, {
                         className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline"
-                    }, m.createElement(C._23, {
-                        type: C._28.Strong,
-                        fontSize: C.L.Size6
-                    }, Object(h.d)("Special Offer: 1st Time Buyers", "Bits--BuyCard"))) : Object(F.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === j.c && (t = m.createElement(C.V, {
+                    }, m.createElement(_._23, {
+                        type: _._28.Strong,
+                        fontSize: _.L.Size6
+                    }, Object(h.d)("Special Offer: 1st Time Buyers", "Bits--BuyCard"))) : Object(V.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === j.c && (t = m.createElement(_.V, {
                         className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline"
-                    }, m.createElement(C._23, {
-                        type: C._28.Strong,
-                        fontSize: C.L.Size6
+                    }, m.createElement(_._23, {
+                        type: _._28.Strong,
+                        fontSize: _.L.Size6
                     }, Object(h.d)("Flash Sale: Now thru Nov. 27!", "Bits--BuyCard"))));
                     var n = null;
                     this.props.offer.discount && (n = m.createElement("div", {
@@ -1274,68 +1274,68 @@ webpackJsonp([64], {
                         percentOff: this.props.offer.discount
                     }, "Bits--BuyCard")));
                     var a = null;
-                    (Object(F.c)(this.props.offer) || Object(F.e)(this.props.offer)) && (a = m.createElement("div", {
+                    (Object(V.c)(this.props.offer) || Object(V.e)(this.props.offer)) && (a = m.createElement("div", {
                         className: "bits-buy-card-offer-row__sub-text"
                     }, Object(h.d)("one per account", "Bits--BuyCard")));
-                    var i = this.props.isLastRow ? C._19 : C.V;
+                    var i = this.props.isLastRow ? _._19 : _.V;
                     return m.createElement(i, {
                         className: "bits-buy-card-offer-row",
                         flexShrink: 0,
-                        display: C.H.Flex,
-                        justifyContent: C.U.Center,
+                        display: _.H.Flex,
+                        justifyContent: _.U.Center,
                         borderBottom: this.props.isLastRow,
-                        flexDirection: C.J.Column,
+                        flexDirection: _.J.Column,
                         padding: {
                             x: 2,
                             y: 1
                         }
-                    }, t, m.createElement(C.V, {
-                        display: C.H.Flex,
-                        justifyContent: C.U.Between,
-                        alignItems: C.c.Center
-                    }, m.createElement(C.V, {
+                    }, t, m.createElement(_.V, {
+                        display: _.H.Flex,
+                        justifyContent: _.U.Between,
+                        alignItems: _.c.Center
+                    }, m.createElement(_.V, {
                         flexGrow: 1
-                    }, m.createElement(C._23, {
-                        type: C._28.H5,
-                        color: C.F.Base,
+                    }, m.createElement(_._23, {
+                        type: _._28.H5,
+                        color: _.F.Base,
                         bold: !0
-                    }, this.props.offer.bits, " Bits"), this.getAvailableTiers(this.props.offer.bits)), m.createElement(C.V, {
+                    }, this.props.offer.bits, " Bits"), this.getAvailableTiers(this.props.offer.bits)), m.createElement(_.V, {
                         flexShrink: 0,
-                        display: C.H.Flex,
-                        flexDirection: C.J.Column,
-                        alignItems: C.c.End
-                    }, m.createElement(C.u, {
+                        display: _.H.Flex,
+                        flexDirection: _.J.Column,
+                        alignItems: _.c.End
+                    }, m.createElement(_.u, {
                         onClick: this.handleBuyClick,
                         "data-purchase-url": this.props.offer.url,
                         "data-bits-amount": this.props.offer.bits,
                         "data-a-target": "bits-purchase-button-" + this.props.offer.bits
-                    }, this.props.offer.price), (n || a) && m.createElement(C.V, {
-                        alignSelf: C.d.Stretch,
-                        textAlign: C._24.Right,
+                    }, this.props.offer.price), (n || a) && m.createElement(_.V, {
+                        alignSelf: _.d.Stretch,
+                        textAlign: _._24.Right,
                         margin: {
                             top: .5
                         }
                     }, n, a))))
                 }, t.prototype.getAvailableTiers = function(e) {
-                    var t = this.props.bitsConfig.indexedActions[D.f];
-                    t || (t = Object(V.b)());
+                    var t = this.props.bitsConfig.indexedActions[F.f];
+                    t || (t = Object(H.b)());
                     var n = t.orderedTiers.filter(function(t) {
                         return t.bits <= e
                     }).reverse();
-                    return m.createElement(C.V, {
+                    return m.createElement(_.V, {
                         padding: {
                             top: .5
                         },
                         className: "bits-buy-card-offer-row__tier-bits-images"
                     }, n.map(function(e) {
-                        return m.createElement(H.a, {
+                        return m.createElement(D.a, {
                             key: e.bits,
                             sources: Object(P.b)(e, 2, !1)
                         })
                     }))
                 }, t
             }(m.Component)),
-            M = (n("sgUC"), function(e) {
+            R = (n("sgUC"), function(e) {
                 var t = [],
                     n = [],
                     a = null;
@@ -1355,47 +1355,47 @@ webpackJsonp([64], {
                             closeAllBits: e.closeAllBits,
                             trackBitsCardInteraction: e.trackBitsCardInteraction
                         }),
-                        s = Object(F.d)(i),
-                        l = Object(F.c)(i),
+                        s = Object(V.d)(i),
+                        l = Object(V.c)(i),
                         c = i.type === j.a;
                     l && !e.hidePromos ? t.push(o) : s && !l ? t.push(o) : c && !e.hideWateb ? a = o : c || s || n.push(o)
-                }), e.fullsize ? m.createElement(C.V, {
+                }), e.fullsize ? m.createElement(_.V, {
                     className: "bits-buy-card-offers__full-size",
                     flexGrow: 1,
-                    flexWrap: C.K.NoWrap,
-                    display: C.H.Flex,
-                    flexDirection: C.J.Column
+                    flexWrap: _.K.NoWrap,
+                    display: _.H.Flex,
+                    flexDirection: _.J.Column
                 }, a, t, n) : m.createElement(O.b, {
                     className: "bits-buy-card-offers__scroll-view"
-                }, m.createElement(C.V, {
+                }, m.createElement(_.V, {
                     flexGrow: 1,
-                    flexWrap: C.K.NoWrap,
-                    display: C.H.Flex,
-                    flexDirection: C.J.Column
+                    flexWrap: _.K.NoWrap,
+                    display: _.H.Flex,
+                    flexDirection: _.J.Column
                 }, a, t, n))
             }),
-            R = function(e) {
+            q = function(e) {
                 var t = null;
-                e.pricesIncludeVAT && (t = m.createElement(C._23, {
+                e.pricesIncludeVAT && (t = m.createElement(_._23, {
                     italic: !0,
-                    type: C._28.P,
-                    color: C.F.Alt
+                    type: _._28.P,
+                    color: _.F.Alt
                 }, Object(h.d)("Prices include VAT", "Bits--BuyCard")));
                 var n = null;
-                e.minBitsToCheer && e.minBitsToCheer > 1 && (n = m.createElement(C._23, {
-                    color: C.F.Alt
+                e.minBitsToCheer && e.minBitsToCheer > 1 && (n = m.createElement(_._23, {
+                    color: _.F.Alt
                 }, Object(h.d)("{displayName} requires {minBits} Bits to Cheer in this channel.", {
                     displayName: e.displayName,
                     minBits: e.minBitsToCheer
                 }, "Bits--BuyCard")));
                 var a = null;
-                return void 0 !== e.bitsBalance && null !== e.bitsBalance && (a = m.createElement(C._23, {
-                    color: C.F.Alt
+                return void 0 !== e.bitsBalance && null !== e.bitsBalance && (a = m.createElement(_._23, {
+                    color: _.F.Alt
                 }, Object(h.d)("You have {totalBits} Bits", {
                     totalBits: m.createElement("strong", {
                         "data-a-target": "buy-card-bits-count"
                     }, e.bitsBalance)
-                }, "Bits--BuyCard"))), m.createElement(C._19, {
+                }, "Bits--BuyCard"))), m.createElement(_._19, {
                     className: "bits-buy-card-header",
                     padding: {
                         x: 1,
@@ -1403,67 +1403,67 @@ webpackJsonp([64], {
                     },
                     borderBottom: !0,
                     flexShrink: 0
-                }, m.createElement(C.V, {
+                }, m.createElement(_.V, {
                     margin: {
                         bottom: 1
                     }
-                }, m.createElement(C._23, {
-                    type: C._28.H4,
-                    color: C.F.Alt
+                }, m.createElement(_._23, {
+                    type: _._28.H4,
+                    color: _.F.Alt
                 }, Object(h.d)("Purchase Bits", "Bits--BuyCard")), t), a, n)
             },
-            q = n("nrdj"),
-            U = function(e) {
-                return m.createElement(C.V, {
-                    display: C.H.Flex,
+            U = n("nrdj"),
+            M = function(e) {
+                return m.createElement(_.V, {
+                    display: _.H.Flex,
                     flexGrow: 1,
-                    flexDirection: C.J.Column,
-                    alignItems: C.c.Center,
+                    flexDirection: _.J.Column,
+                    alignItems: _.c.Center,
                     fullWidth: !0,
-                    flexWrap: C.K.NoWrap,
+                    flexWrap: _.K.NoWrap,
                     padding: {
                         y: 1
                     }
-                }, m.createElement(q.a, {
+                }, m.createElement(U.a, {
                     prefix: "cheer",
                     amount: e.amount,
                     bitsConfig: e.bitsConfig,
                     showAmount: !0,
                     showImage: !0
-                }), m.createElement(C.V, {
-                    display: C.H.Flex,
+                }), m.createElement(_.V, {
+                    display: _.H.Flex,
                     padding: {
                         top: 1
                     },
                     flexGrow: 1,
-                    flexDirection: C.J.Column,
-                    alignItems: C.c.Center,
-                    flexWrap: C.K.NoWrap
-                }, m.createElement(C._23, {
-                    type: C._28.H4,
+                    flexDirection: _.J.Column,
+                    alignItems: _.c.Center,
+                    flexWrap: _.K.NoWrap
+                }, m.createElement(_._23, {
+                    type: _._28.H4,
                     bold: !0
                 }, Object(h.d)("You got {bitsAmount,number} Bits!", {
                     bitsAmount: e.amount
-                }, "Bits--WatchAdAward")), m.createElement(C.Q, {
+                }, "Bits--WatchAdAward")), m.createElement(_.Q, {
                     padding: {
                         top: 1
                     }
-                }, m.createElement(C._23, {
-                    color: C.F.Alt2
+                }, m.createElement(_._23, {
+                    color: _.F.Alt2
                 }, Object(h.d)("{bitsAmount,number} Bits were added to your Bit inventory.", {
                     bitsAmount: e.amount
-                }, "Bits--WatchAdAward"), m.createElement("br", null), Object(h.d)("You can use these Bits to Cheer!", "Bits--WatchAdAward")))), m.createElement(C.V, {
-                    display: C.H.Flex,
+                }, "Bits--WatchAdAward"), m.createElement("br", null), Object(h.d)("You can use these Bits to Cheer!", "Bits--WatchAdAward")))), m.createElement(_.V, {
+                    display: _.H.Flex,
                     padding: {
                         x: 1,
                         top: 3
                     },
-                    alignSelf: C.d.Stretch,
-                    justifyContent: C.U.Between
-                }, m.createElement(C.u, {
+                    alignSelf: _.d.Stretch,
+                    justifyContent: _.U.Between
+                }, m.createElement(_.u, {
                     onClick: e.onStartCheering
-                }, Object(h.d)("Start Cheering", "Bits--WatchAdAward")), m.createElement(C.u, {
-                    type: C.z.Hollow,
+                }, Object(h.d)("Start Cheering", "Bits--WatchAdAward")), m.createElement(_.u, {
+                    type: _.z.Hollow,
                     onClick: e.onWatchAnother,
                     disabled: !e.hasAdAvailable
                 }, Object(h.d)("Watch Another", "Bits--WatchAdAward"))))
@@ -1489,7 +1489,7 @@ webpackJsonp([64], {
                         })
                     })
                 }, t.prototype.render = function() {
-                    return m.createElement(U, u.__assign({}, this.props, {
+                    return m.createElement(M, u.__assign({}, this.props, {
                         hasAdAvailable: this.state.hasAdAvailable
                     }))
                 }, t
@@ -1508,56 +1508,56 @@ webpackJsonp([64], {
                     case o.ExitEarly:
                         n = Object(h.d)("To get Bits, you must view and interact with the Ad for the minimum amount of time.", "Bits--WatchAdError")
                 }
-                var i = m.createElement(C.V, {
+                var i = m.createElement(_.V, {
                     className: "watch-ad-error__footer",
-                    display: C.H.Flex,
+                    display: _.H.Flex,
                     padding: {
                         top: 2
                     },
-                    alignSelf: C.d.Stretch,
-                    justifyContent: C.U.Center
-                }, m.createElement(C.u, {
+                    alignSelf: _.d.Stretch,
+                    justifyContent: _.U.Center
+                }, m.createElement(_.u, {
                     onClick: e.onTryAgain
                 }, Object(h.d)("Try Again", "Bits--WatchAdError")));
-                return e.type === o.LimitReached && (i = m.createElement(C.V, {
+                return e.type === o.LimitReached && (i = m.createElement(_.V, {
                     className: "watch-ad-error__footer",
-                    display: C.H.Flex,
+                    display: _.H.Flex,
                     padding: {
                         top: 2
                     },
-                    alignSelf: C.d.Stretch,
-                    justifyContent: C.U.Between
-                }, m.createElement(C.u, {
+                    alignSelf: _.d.Stretch,
+                    justifyContent: _.U.Between
+                }, m.createElement(_.u, {
                     onClick: e.onClose
-                }, Object(h.d)("Got It", "Bits--WatchAdError")), m.createElement(C.u, {
+                }, Object(h.d)("Got It", "Bits--WatchAdError")), m.createElement(_.u, {
                     onClick: e.onTryAgain,
-                    type: C.z.Hollow
-                }, Object(h.d)("Buy Bits", "Bits--WatchAdError")))), m.createElement(C.V, {
+                    type: _.z.Hollow
+                }, Object(h.d)("Buy Bits", "Bits--WatchAdError")))), m.createElement(_.V, {
                     padding: {
                         x: 1
                     },
-                    display: C.H.Flex,
+                    display: _.H.Flex,
                     flexGrow: 1,
-                    flexDirection: C.J.Column,
-                    alignItems: C.c.Center,
+                    flexDirection: _.J.Column,
+                    alignItems: _.c.Center,
                     fullWidth: !0,
-                    flexWrap: C.K.NoWrap
-                }, m.createElement(C.V, {
+                    flexWrap: _.K.NoWrap
+                }, m.createElement(_.V, {
                     padding: {
                         y: 2
                     }
                 }, m.createElement("img", {
                     className: "watch-ad-error__error-image",
-                    src: D.b + "/light/static/1/" + a + ".png"
-                })), m.createElement(C.V, {
+                    src: F.b + "/light/static/1/" + a + ".png"
+                })), m.createElement(_.V, {
                     padding: {
                         bottom: 1
                     }
-                }, m.createElement(C._23, {
-                    type: C._28.H4,
+                }, m.createElement(_._23, {
+                    type: _._28.H4,
                     bold: !0
-                }, t)), m.createElement(C._23, {
-                    color: C.F.Alt2
+                }, t)), m.createElement(_._23, {
+                    color: _.F.Alt2
                 }, n), i)
             }),
             Q = n("CSlQ"),
@@ -1610,11 +1610,11 @@ webpackJsonp([64], {
                 }, t.prototype.render = function() {
                     var e = {
                             border: !0,
-                            background: C.m.Base,
+                            background: _.m.Base,
                             fullWidth: !0,
                             elevation: 3
                         },
-                        t = A({
+                        t = w({
                             "bits-buy-card": !0,
                             "bits-buy-card__chat-tooltip": this.props.location === k.b.ChatTooltip
                         }),
@@ -1623,47 +1623,47 @@ webpackJsonp([64], {
                             className: "bits-buy-card__close",
                             onClick: this.props.onClose,
                             "data-a-target": "bits-buy-card-close-button"
-                        }, m.createElement(C._10, {
-                            asset: C._11.Close,
+                        }, m.createElement(_._10, {
+                            asset: _._11.Close,
                             height: 11,
                             width: 11
-                        }))), !this.props.data || this.props.data.loading) return m.createElement(C._19, u.__assign({
+                        }))), !this.props.data || this.props.data.loading) return m.createElement(_._19, u.__assign({
                         className: t,
                         "data-a-target": "bits-buy-card-loading",
-                        display: C.H.Flex,
-                        flexDirection: C.J.Column,
-                        alignItems: C.c.Center,
-                        justifyContent: C.U.Center,
-                        textAlign: C._24.Center
-                    }, e), m.createElement(C.Z, {
+                        display: _.H.Flex,
+                        flexDirection: _.J.Column,
+                        alignItems: _.c.Center,
+                        justifyContent: _.U.Center,
+                        textAlign: _._24.Center
+                    }, e), m.createElement(_.Z, {
                         delay: 0
-                    }), m.createElement(C.V, {
+                    }), m.createElement(_.V, {
                         padding: {
                             top: 2
                         }
-                    }, m.createElement(C._23, {
+                    }, m.createElement(_._23, {
                         italic: !0
                     }, Object(h.d)("Fetching bits", "Bits--BuyCard"))));
-                    if (this.props.data.error) return m.createElement(C.V, u.__assign({
-                        className: A(t, "bits-buy-card--shorter"),
-                        display: C.H.Flex,
-                        flexDirection: C.J.Column,
-                        alignItems: C.c.Center,
-                        justifyContent: C.U.Center,
+                    if (this.props.data.error) return m.createElement(_.V, u.__assign({
+                        className: w(t, "bits-buy-card--shorter"),
+                        display: _.H.Flex,
+                        flexDirection: _.J.Column,
+                        alignItems: _.c.Center,
+                        justifyContent: _.U.Center,
                         padding: 2,
-                        textAlign: C._24.Center,
+                        textAlign: _._24.Center,
                         "data-a-target": "bits-buy-card-error"
-                    }, e), n, m.createElement(C._23, {
+                    }, e), n, m.createElement(_._23, {
                         italic: !0
                     }, Object(h.d)("Bits prices are unavailable right now. Check back again later.", "Bits--BuyCard")));
                     var a = this.renderWatebCard();
-                    if (a) return m.createElement(C._19, u.__assign({
-                        className: A(t, "bits-buy-card--shorter"),
-                        display: C.H.Flex,
-                        flexDirection: C.J.Column,
-                        alignItems: C.c.Center,
-                        justifyContent: C.U.Center,
-                        textAlign: C._24.Center,
+                    if (a) return m.createElement(_._19, u.__assign({
+                        className: w(t, "bits-buy-card--shorter"),
+                        display: _.H.Flex,
+                        flexDirection: _.J.Column,
+                        alignItems: _.c.Center,
+                        justifyContent: _.U.Center,
+                        textAlign: _._24.Center,
                         padding: 1
                     }, e), n, a);
                     var i = [];
@@ -1674,7 +1674,7 @@ webpackJsonp([64], {
                             return e.includesVAT
                         }),
                         o = this.props.data.user ? this.props.data.user.id : "",
-                        s = m.createElement(M, {
+                        s = m.createElement(R, {
                             offers: i,
                             fullsize: this.props.fullsize,
                             hidePromos: this.props.hidePromos,
@@ -1691,18 +1691,18 @@ webpackJsonp([64], {
                             trackBitsCardInteraction: this.props.trackBitsCardInteraction
                         }),
                         l = null;
-                    return this.props.location === k.b.ChatTooltip && (l = m.createElement(R, {
+                    return this.props.location === k.b.ChatTooltip && (l = m.createElement(q, {
                         bitsBalance: this.props.data && this.props.data.currentUser && this.props.data.currentUser.bitsBalance,
                         displayName: this.props.data && this.props.data.user && this.props.data.user.displayName || this.props.channelLogin || "",
                         minBitsToCheer: this.props.data && this.props.data.user && this.props.data.user.cheer && this.props.data.user.cheer.settings.cheerMinimumBits,
                         pricesIncludeVAT: r
-                    })), m.createElement(C._19, u.__assign({
+                    })), m.createElement(_._19, u.__assign({
                         className: t,
                         padding: {
                             top: 1
                         },
-                        display: C.H.Flex,
-                        flexDirection: C.J.Column,
+                        display: _.H.Flex,
+                        flexDirection: _.J.Column,
                         "data-a-target": "bits-buy-card"
                     }, e), n, l, s)
                 }, t.prototype.renderWatebCard = function() {
@@ -1724,7 +1724,7 @@ webpackJsonp([64], {
                         default:
                             return !1
                     }
-                }, t = u.__decorate([Object(f.a)(K, {
+                }, t = u.__decorate([Object(g.a)(K, {
                     name: "data",
                     options: function(e) {
                         return {
@@ -2206,14 +2206,14 @@ webpackJsonp([64], {
                         })
                     }
                 } else {
-                    var g = n.length && n[n.length - 1],
-                        f = "";
-                    if (t < c.length - 1 && (f = " "), g && g.type === o.a.Text) g.content += e + f;
+                    var f = n.length && n[n.length - 1],
+                        g = "";
+                    if (t < c.length - 1 && (g = " "), f && f.type === o.a.Text) f.content += e + g;
                     else {
                         var b = "";
                         t && (b = " "), n.push({
                             type: o.a.Text,
-                            content: b + e + f
+                            content: b + e + g
                         })
                     }
                 }
@@ -2388,7 +2388,7 @@ webpackJsonp([64], {
                     }
                 }, h))
             }
-            var g = i("cheermote-for-amount__cheer-image", {
+            var f = i("cheermote-for-amount__cheer-image", {
                     "cheermote-for-amount__display--table-cell": !u
                 }, {
                     "cheermote-for-amount__cheer--inline": u
@@ -2399,14 +2399,14 @@ webpackJsonp([64], {
                 }, {
                     "cheermote-for-amount__cheer-image--extremely-small": e.size === a.ExtremelySmall
                 }),
-                f = r.createElement(c.a, {
-                    className: g,
+                g = r.createElement(c.a, {
+                    className: f,
                     sources: Object(s.b)(n, e.size || a.Large, e.animated)
                 });
-            return e.showImage || (f = null), r.createElement(d.V, {
+            return e.showImage || (g = null), r.createElement(d.V, {
                 className: "cheermote-for-amount",
                 display: e.display
-            }, f, m)
+            }, g, m)
         };
         n.d(t, "a", function() {
             return u
@@ -2516,16 +2516,6 @@ webpackJsonp([64], {
         })
     },
     sgUC: function(e, t) {},
-    w9tK: function(e, t, n) {
-        "use strict";
-        n.d(t, "a", function() {
-            return a
-        });
-        var a;
-        ! function(e) {
-            e.BitsBuyCard = "bits-buy-card", e.BrowseCommunities = "browse.communities", e.BrowseCreative = "browse.creative", e.BrowseGamesAndCommunities = "browse.games-and-communities", e.ChannelClips = "channel.clips", e.ChannelCollections = "channel.collections", e.ChannelClipsManager = "videoManager.clips.channel", e.ChannelDashboardAchievements = "channel.dashboard.achievements", e.ChannelDashboardChannelAnalytics = "channel.dashboard.channel-analytics", e.ChannelDashboardExtensions = "channel.dashboard.extensions", e.ChannelDashboardModeration = "channel.dashboard.moderation", e.ChannelDashboardStreamSummary = "channel.dashboard.stream-summary", e.ChannelEvents = "channel.events", e.ChannelIndex = "channel.index.index", e.ChatPopout = "chat", e.CheermoteCarousel = "cheermote-carousel", e.DevOnly = "dev", e.DirectoryCommunityByLanguage = "directory.community.language", e.DirectoryCommunityIndex = "directory.community.index", e.DirectoryCommunityDetails = "directory.community.details", e.DirectoryFollowingCommunities = "directory.following.communities", e.DirectoryFollowingGames = "directory.following.games", e.DirectoryFollowingHosts = "directory.following.hosts", e.DirectoryFollowingIndex = "directory.following.index", e.DirectoryFollowingLiveChannels = "directory.following.channels", e.DirectoryFollowingVideos = "directory.following.videos.video-type", e.DirectoryGameClips = "directory.game.clips", e.DirectoryGameDetails = "directory.game.details", e.DirectoryGameIndex = "directory.game.index", e.DirectoryGames = "directory.games", e.DirectoryPopular = "directory.popular", e.DirectoryPopularByLanguage = "directory.popular.language", e.DirectoryGameVideos = "directory.game.videos", e.EmailVerification = "emailVerification", e.EventDetails = "event.details", e.ForYou = "for-you", e.Index = "index", e.MyClipsManager = "videoManager.clips", e.NotificationSettingsPage = "settings.notificationSettings", e.OnboardingIndex = "onboarding.index", e.ReportUserPage = "reportUser.page", e.SettingsConnections = "private/embed-components", e.SettingsChannel = "private/embed-components", e.SettingsNotifications = "settings.notifications", e.SettingsPrime = "settings.prime", e.SettingsProfile = "settings.profile", e.SettingsSecurity = "private/embed-components", e.StoreMerchPage = "store.merch", e.SubsLandingPage = "subs.landing", e.TeamsDashboardRevenue = "teams.dashboard.revenue", e.TeamsDashboardStats = "teams.dashboard.stats", e.TeamsDashboardMembers = "teams.dashboard.members", e.TeamsDashboardFeaturedChannels = "teams.dashboard.featured-channels", e.TeamsDashboardSettings = "teams.dashboard.settings", e.SubsBroadcasterPage = "subs.broadcaster", e.VideoManagerEditPropertiesPage = "videoManager.edit", e.VideoManagerPage = "videoManager.page", e.VideoManagerUploadListPage = "videoManager.upload-list", e.VideoManagerUploadPage = "videoManager.upload", e.VideosPage = "videos", e.VideoWatchPage = "video"
-        }(a || (a = {}))
-    },
     x583: function(e, t) {},
     zzpv: function(e, t) {
         var n = {
@@ -2616,4 +2606,4 @@ webpackJsonp([64], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.bits.components.bits-landing-page-58503072735f98f52e1b7d9957ab203e.js.map
+//# sourceMappingURL=pages.bits.components.bits-landing-page-32a087a4b06bfdeaf1bb8e293a70a6ce.js.map
