@@ -1,7 +1,7 @@
-webpackJsonp([77], {
+webpackJsonp([73], {
     Revh: function(e, a) {
         e.exports = [{
-            games: ["League of Legends", "Dota 2", "Heroes of the Storm", "Smite", "Vainglory", "Paragon", "Clash Royale", "Heroes of Newerth", "Arena of Valor", "Battlerite"],
+            games: ["League of Legends", "Dota 2", "Heroes of the Storm", "Vainglory", "Paragon", "Clash Royale", "Heroes of Newerth"],
             name: "MOBA"
         }, {
             games: ["PLAYERUNKNOWN'S BATTLEGROUNDS", "Fortnite", "Dead by Daylight", "H1Z1", "Rust", "7 Days to Die", "Death Road to Canada"],
@@ -16,7 +16,7 @@ webpackJsonp([77], {
             games: ["Tom Clancy's The Division", "Destiny 2", "Dark Souls III", "Bloodborne", "Diablo III: Reaper of Souls", "Dark Souls II: Scholar of the First Sin", "Demon's Souls"],
             name: "RPG"
         }, {
-            games: ["Fortnite", "Black Desert Online", "Minecraft", "Super Mario Maker", "Garry's Mod", "Terraria", "Avorion"],
+            games: ["Fortnite", "Black Desert Online", "Minecraft", "Super Mario Odyssey", "Garry's Mod", "Terraria", "Avorion"],
             name: "Sandbox"
         }, {
             games: ["Grand Theft Auto V", "Lineage 2: Revolution", "The Elder Scrolls V: Skyrim", "DayZ", "The Witcher 3: Wild Hunt", "My Summer Car", "Grand Theft Auto: San Andreas"],
@@ -78,4 +78,4 @@ webpackJsonp([77], {
         }]
     }
 });
-//# sourceMappingURL=assets.data.onboarding.community-selection-page.categories.json-7e406e204cc9de6415758f44c0fbcc74.js.map
+//# sourceMappingURL=assets.data.onboarding.community-selection-page.categories.json-3cc95e0975a4c3dfec02480a14c562e7.js.map

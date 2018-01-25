@@ -1,4 +1,4 @@
-webpackJsonp([62], {
+webpackJsonp([61], {
     "+8VM": function(e, t, n) {
         "use strict";
         var i = n("RH2O"),
@@ -287,40 +287,6 @@ webpackJsonp([62], {
         }), n.d(t, "n", function() {
             return i.o
         })
-    },
-    "75D5": function(e, t, n) {
-        "use strict";
-        n.d(t, "a", function() {
-            return o
-        });
-        var i = n("TToO"),
-            r = n("Hvhe"),
-            o = function() {
-                function e(e, t) {
-                    var n = this;
-                    this.getDestination = function() {
-                        return n.destination
-                    }, this.getLocation = function() {
-                        return n.location
-                    }, this.name = e, this.destination = t
-                }
-                return e.prototype.reportInteractive = function(e) {
-                    return e
-                }, e.prototype.createChild = function(t, n) {
-                    return new e(t, n)
-                }, e.prototype.setDestination = function(e) {
-                    this.destination = e
-                }, e.prototype.setLocation = function(e) {
-                    this.location = e
-                }, e.prototype.reset = function() {}, e.prototype.registerCustomEvent = function(e) {
-                    return i.__assign({}, e, {
-                        duration: {
-                            latencyStatus: r.a.Unknown
-                        },
-                        startTime: 0
-                    })
-                }, e.prototype.reportCustomEvent = function(e) {}, e.prototype.resetCustomEvents = function(e) {}, e
-            }()
     },
     "7Qq+": function(e, t) {
         var n = {
@@ -642,16 +608,16 @@ webpackJsonp([62], {
                 return n.e(36).then(n.bind(null, "swra"))
             }, "PopoutChatPage")),
             E = p.a.wrap(function() {
-                return n.e(52).then(n.bind(null, "JeT+"))
+                return n.e(51).then(n.bind(null, "JeT+"))
             }, "BitsRoot"),
             C = p.a.wrap(function() {
-                return n.e(42).then(n.bind(null, "RY+8"))
+                return n.e(41).then(n.bind(null, "RY+8"))
             }, "SubsRoot"),
             k = p.a.wrap(function() {
                 return n.e(37).then(n.bind(null, "2FAx"))
             }, "EmbeddedChatPage"),
             S = p.a.wrap(function() {
-                return n.e(38).then(n.bind(null, "lI8O"))
+                return n.e(39).then(n.bind(null, "lI8O"))
             }, "CommunitySelectionPage"),
             L = function(e) {
                 function t() {
@@ -717,10 +683,10 @@ webpackJsonp([62], {
         a.a.optimizedBuild || n.e(0).then(n.bind(null, "c+Ld")).then(function(e) {
             return window.Perf = e
         });
-        var R, M = !1;
+        var R, z = !1;
         R = a.n.store.getReduxStore().subscribe(function() {
             var e = a.n.store.getState();
-            !M && Object(l.e)(e) && (M = !0, R(), a.a.optimizedBuild ? i() : setTimeout(i, 100))
+            !z && Object(l.e)(e) && (z = !0, R(), a.a.optimizedBuild ? i() : setTimeout(i, 100))
         }), Object(c.a)(), a.n.store.dispatch(Object(s.e)())
     },
     "8pDc": function(e, t) {},
@@ -1448,7 +1414,7 @@ webpackJsonp([62], {
         });
         var i;
         ! function(e) {
-            e.BitsLandingPage = "bits_landing", e.Browse = "browse", e.BrowseCommunities = "browse_communities", e.BrowseCreative = "browse_creative", e.BrowseForYou = "browse_for_you", e.Channel = "channel", e.ChannelClips = "channel_clips", e.ChannelClipsManager = "my_clips_channel", e.ChannelEvents = "channel_events", e.ChannelVideos = "channel_vods", e.ChannelCollections = "channel_collections", e.Chat = "chat", e.ClipsGame = "clips_game", e.Dashboard = "dashboard", e.DashboardAchievements = "dashboard/achievements", e.DashboardChannelAnalytics = "dashboard/channel-analytics", e.DashboardExtensions = "dashboard/extensions", e.DashboardStreamSummary = "dashboard/stream-summary", e.Directory = "directory", e.DirectoryPopular = "directory.popular", e.EmailVerification = "email_verification", e.EventDetails = "event_details", e.Followers = "followers", e.FrontPage = "home", e.GameDetail = "game_detail", e.MyClipsManager = "my_clips", e.None = "", e.OnboardingCommunitySelection = "onboarding/community-selection", e.StoreMerch = "store-merch", e.VideoWatchPage = "vod", e.SubsLandingPage = "subs-landing", e.SettingsPage = "settings", e.SubsBroadcasterPage = "subs-broadcaster", e.VideoManagerCollectionManager = "video_manager_collections"
+            e.BitsLandingPage = "bits_landing", e.Browse = "browse", e.BrowseCommunities = "browse_communities", e.BrowseCreative = "browse_creative", e.BrowseForYou = "browse_for_you", e.Channel = "channel", e.ChannelClips = "channel_clips", e.ChannelClipsManager = "my_clips_channel", e.ChannelEvents = "channel_events", e.ChannelVideos = "channel_vods", e.ChannelCollections = "channel_collections", e.Chat = "chat", e.ClipsGame = "clips_game", e.Dashboard = "dashboard", e.DashboardAchievements = "dashboard/achievements", e.DashboardChannelAnalytics = "dashboard/channel-analytics", e.DashboardExtensions = "dashboard/extensions", e.DashboardStreamSummary = "dashboard/stream-summary", e.Directory = "directory", e.DirectoryPopular = "directory.popular", e.EmailVerification = "email_verification", e.EventDetails = "event_details", e.FrontPage = "home", e.GameDetail = "game_detail", e.MyClipsManager = "my_clips", e.None = "", e.OnboardingCommunitySelection = "onboarding/community-selection", e.StoreMerch = "store-merch", e.VideoWatchPage = "vod", e.SubsLandingPage = "subs-landing", e.SettingsPage = "settings", e.SubsBroadcasterPage = "subs-broadcaster"
         }(i || (i = {}));
         var r;
         ! function(e) {
@@ -1460,7 +1426,7 @@ webpackJsonp([62], {
         }(o || (o = {}));
         var a;
         ! function(e) {
-            e.AnonFrontPage = "anon_home", e.Browse = "twitch_browse_directory", e.BrowseForYou = "twitch_browse_for_you", e.Channel = "twitch_channel", e.ChannelVideos = "channel_videos", e.Chat = "twitch_chat", e.ChatNotification = "chat_bar_notification", e.Community = "twitch_community_directory", e.Game = "twitch_game_directory", e.GameVideos = "twitch_video_game_directory", e.EventDetails = "event_details", e.Following = "following_directory", e.NavSearch = "header_search", e.NotificationCenter = "notification_center", e.NotificationToast = "notification_toast", e.SideNav = "twitch_socialcolumn", e.TopNav = "twitch_topnav", e.VideoEmbed = "vod_embed", e.VideoNotFoundPage = "vod_not_found", e.VideoWatchPage = "vod", e.Whispers = "conversations"
+            e.Browse = "twitch_browse_directory", e.BrowseForYou = "twitch_browse_for_you", e.Channel = "twitch_channel", e.ChannelVideos = "channel_videos", e.Chat = "twitch_chat", e.ChatNotification = "chat_bar_notification", e.Community = "twitch_community_directory", e.Game = "twitch_game_directory", e.GameVideos = "twitch_video_game_directory", e.EventDetails = "event_details", e.Following = "following_directory", e.NavSearch = "header_search", e.NotificationCenter = "notification_center", e.NotificationToast = "notification_toast", e.SideNav = "twitch_socialcolumn", e.TopNav = "twitch_topnav", e.VideoEmbed = "vod_embed", e.VideoNotFoundPage = "vod_not_found", e.VideoWatchPage = "vod", e.Whispers = "conversations"
         }(a || (a = {}));
         var s;
         ! function(e) {
@@ -1723,7 +1689,6 @@ webpackJsonp([62], {
                 "54b18ea6-2b6a-4ed7-9128-2497572d31e2": "control",
                 "74156eb2-ed95-482c-b006-60c1428e8846": "control",
                 "e9fe3136-84bc-4a61-9079-0c7df78abeb3": "control",
-                "47c76558-9d79-4181-9e43-d7c440a1a148": "control",
                 "9619b63b-2e9a-4e20-af4b-cce72346691d": "control",
                 "29a37cfd-6a34-4624-970f-6b155b40636b": "control",
                 "72c14aa9-d78d-4095-8f27-d97b9aac4233": "no",
@@ -1738,8 +1703,7 @@ webpackJsonp([62], {
                 "50ac9a2b-63c2-46ed-9e7d-123363195dfd": "control",
                 "7aa589f3-34d8-425f-8227-29007d50757e": "control",
                 "0dc9a9c9-fee5-4b5f-a462-f07675713e5e": "control",
-                "5cfa2a90-54f0-4dcc-b28c-45f33935718e": "control",
-                "e28b9f51-336e-4398-80ff-6f0083c57434": "control"
+                "5cfa2a90-54f0-4dcc-b28c-45f33935718e": "control"
             },
             y = {
                 TWILIGHT_ALL_THE_STATS: "4f952587-515d-44ac-b0cc-86769f543c72",
@@ -1749,7 +1713,6 @@ webpackJsonp([62], {
                 TWILIGHT_WEB_ONBOARDING_FOLLOWING_FOR_YOU: "54b18ea6-2b6a-4ed7-9128-2497572d31e2",
                 TWILIGHT_WEB_ONBOARDING_CHANNEL_RANKING: "74156eb2-ed95-482c-b006-60c1428e8846",
                 TWILIGHT_WEB_ONBOARDING_CATEGORIES: "e9fe3136-84bc-4a61-9079-0c7df78abeb3",
-                TWILIGHT_WEB_ONBOARDING_CATEGORIES_ANON_FRONT_PAGE: "47c76558-9d79-4181-9e43-d7c440a1a148",
                 TWILIGHT_WEB_ONBOARDING_FOLLOW_CATEGORIES: "9619b63b-2e9a-4e20-af4b-cce72346691d",
                 TWILIGHT_WEB_ONBOARDING_RANDOMIZED_GAMES: "29a37cfd-6a34-4624-970f-6b155b40636b",
                 TWILIGHT_SUB_CHECKOUT_POPUP: "72c14aa9-d78d-4095-8f27-d97b9aac4233",
@@ -1764,8 +1727,7 @@ webpackJsonp([62], {
                 TWILIGHT_NEW_BROWSE: "50ac9a2b-63c2-46ed-9e7d-123363195dfd",
                 TWILIGHT_GROWTH_EMAIL_VERIFY_BAR: "7aa589f3-34d8-425f-8227-29007d50757e",
                 TWILIGHT_FOLLOWING_INDEX_LATEST_VIDEOS_V2: "0dc9a9c9-fee5-4b5f-a462-f07675713e5e",
-                TWILIGHT_VOD_REDITUS: "5cfa2a90-54f0-4dcc-b28c-45f33935718e",
-                TWILIGHT_COLLECTION_MANAGER: "e28b9f51-336e-4398-80ff-6f0083c57434"
+                TWILIGHT_VOD_REDITUS: "5cfa2a90-54f0-4dcc-b28c-45f33935718e"
             },
             b = {
                 TWILIGHT_PREMIERE_UPLOAD_FLOW: "yes",
@@ -2176,8 +2138,8 @@ webpackJsonp([62], {
                 }, e
             }(),
             R = n("BzvE"),
-            M = n("2KeS"),
-            z = new s.IntrospectionFragmentMatcher({
+            z = n("2KeS"),
+            M = new s.IntrospectionFragmentMatcher({
                 introspectionQueryResultData: {
                     __schema: {
                         types: [{
@@ -2241,9 +2203,9 @@ webpackJsonp([62], {
             H = "apollo_log_errors",
             V = function() {
                 function e(e) {
-                    this.authToken = null, this.batchID = 0, this.excludedErrors = [], this.eventEmitter = new R.EventEmitter, this.logErrors = !1, this.queryID = 0, this.config = e.config, this.logger = e.logger.withCategory("apollo"), this.store = e.store, this.session = e.session, this.excludedErrors = e.dynamicSettings.get(A, []), this.logErrors = e.dynamicSettings.get(H, !1), this.client = this.createApolloClient(), this.reduxStore = Object(M.createStore)(Object(M.combineReducers)({
+                    this.authToken = null, this.batchID = 0, this.excludedErrors = [], this.eventEmitter = new R.EventEmitter, this.logErrors = !1, this.queryID = 0, this.config = e.config, this.logger = e.logger.withCategory("apollo"), this.store = e.store, this.session = e.session, this.excludedErrors = e.dynamicSettings.get(A, []), this.logErrors = e.dynamicSettings.get(H, !1), this.client = this.createApolloClient(), this.reduxStore = Object(z.createStore)(Object(z.combineReducers)({
                         apollo: this.client.reducer()
-                    }), (e.config.buildType !== c.a.Production && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || M.compose)(Object(M.applyMiddleware)(this.client.middleware())))
+                    }), (e.config.buildType !== c.a.Production && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || z.compose)(Object(z.applyMiddleware)(this.client.middleware())))
                 }
                 return e.prototype.addQueryMetricsListener = function(e) {
                     this.eventEmitter.addListener("query-metrics", e)
@@ -2253,7 +2215,7 @@ webpackJsonp([62], {
                     return new s.ApolloClient({
                         networkInterface: this.createNetworkInterface(),
                         queryDeduplication: !0,
-                        fragmentMatcher: z
+                        fragmentMatcher: M
                     })
                 }, e.prototype.createNetworkInterface = function() {
                     var e = this,
@@ -2358,7 +2320,7 @@ webpackJsonp([62], {
                         }
                         return r ? i : e;
                         var s
-                    }, this.reduxStore = Object(M.createStore)(this.rootReducer, (e.buildType !== c.a.Production && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || M.compose)(Object(M.applyMiddleware)(P.a)))
+                    }, this.reduxStore = Object(z.createStore)(this.rootReducer, (e.buildType !== c.a.Production && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || z.compose)(Object(z.applyMiddleware)(P.a)))
                 }
                 return e.prototype.getReduxStore = function() {
                     return this.reduxStore
@@ -3379,43 +3341,6 @@ webpackJsonp([62], {
     },
     M1vR: function(e, t) {},
     MQjL: function(e, t) {},
-    MRMr: function(e, t, n) {
-        "use strict";
-        t.a = function(e, t) {
-            return function(n) {
-                return function(l) {
-                    function c(n, i) {
-                        var r = l.call(this, n) || this;
-                        return r.logger = a.i.withCategory("latency-tracking"), r.getChildContext = function() {
-                            return {
-                                latencyTracking: r.tracker
-                            }
-                        }, t && t.isRoot ? r.tracker = a.n.benchmarking.getRootLatencyTracker() : i.latencyTracking ? r.tracker = i.latencyTracking.createChild(e, t && t.destination) : (r.tracker = new s.a(e, t && t.destination), r.tracker.root = new s.a("Root", t && t.destination)), r
-                    }
-                    return i.__extends(c, l), c.prototype.componentDidMount = function() {
-                        t && t.autoReportInteractive && (this.logger.debug("Using default implementation of reportInteractive", {
-                            componentID: e
-                        }), this.tracker.reportInteractive())
-                    }, c.prototype.render = function() {
-                        var e = {
-                            latencyTracking: this.tracker,
-                            rootLatencyTracker: t && t.isRoot ? this.tracker : this.tracker.root
-                        };
-                        return o.createElement(n, i.__assign({}, this.props, e))
-                    }, c.contextTypes = {
-                        latencyTracking: r.object
-                    }, c.childContextTypes = {
-                        latencyTracking: r.object
-                    }, c
-                }(o.Component)
-            }
-        };
-        var i = n("TToO"),
-            r = n("KSGD"),
-            o = (n.n(r), n("U7vG")),
-            a = (n.n(o), n("6sO2")),
-            s = n("75D5")
-    },
     N221: function(e, t, n) {
         "use strict";
         var i, r = n("TToO"),
@@ -3560,9 +3485,69 @@ webpackJsonp([62], {
     },
     NoSW: function(e, t, n) {
         "use strict";
-        var i = n("MRMr");
+
+        function i(e, t) {
+            return function(n) {
+                return function(i) {
+                    function l(n, r) {
+                        var o = i.call(this, n) || this;
+                        return o.logger = s.i.withCategory("latency-tracking"), o.getChildContext = function() {
+                            return {
+                                latencyTracking: o.tracker
+                            }
+                        }, t && t.isRoot ? o.tracker = s.n.benchmarking.getRootLatencyTracker() : r.latencyTracking ? o.tracker = r.latencyTracking.createChild(e, t && t.destination) : (o.tracker = new c(e, t && t.destination), o.tracker.root = new c("Root", t && t.destination)), o
+                    }
+                    return r.__extends(l, i), l.prototype.componentDidMount = function() {
+                        t && t.autoReportInteractive && (this.logger.debug("Using default implementation of reportInteractive", {
+                            componentID: e
+                        }), this.tracker.reportInteractive())
+                    }, l.prototype.render = function() {
+                        var e = {
+                            latencyTracking: this.tracker,
+                            rootLatencyTracker: t && t.isRoot ? this.tracker : this.tracker.root
+                        };
+                        return a.createElement(n, r.__assign({}, this.props, e))
+                    }, l.contextTypes = {
+                        latencyTracking: o.object
+                    }, l.childContextTypes = {
+                        latencyTracking: o.object
+                    }, l
+                }(a.Component)
+            }
+        }
+        var r = n("TToO"),
+            o = n("KSGD"),
+            a = n("U7vG"),
+            s = n("6sO2"),
+            l = n("Hvhe"),
+            c = function() {
+                function e(e, t) {
+                    var n = this;
+                    this.getDestination = function() {
+                        return n.destination
+                    }, this.getLocation = function() {
+                        return n.location
+                    }, this.name = e, this.destination = t
+                }
+                return e.prototype.reportInteractive = function(e) {
+                    return e
+                }, e.prototype.createChild = function(t, n) {
+                    return new e(t, n)
+                }, e.prototype.setDestination = function(e) {
+                    this.destination = e
+                }, e.prototype.setLocation = function(e) {
+                    this.location = e
+                }, e.prototype.reset = function() {}, e.prototype.registerCustomEvent = function(e) {
+                    return r.__assign({}, e, {
+                        duration: {
+                            latencyStatus: l.a.Unknown
+                        },
+                        startTime: 0
+                    })
+                }, e.prototype.reportCustomEvent = function(e) {}, e.prototype.resetCustomEvents = function(e) {}, e
+            }();
         n.d(t, "a", function() {
-            return i.a
+            return i
         })
     },
     OXEC: function(e, t) {},
@@ -3645,15 +3630,15 @@ webpackJsonp([62], {
         ! function(e) {
             e[e.Left = 1] = "Left", e[e.Center = 2] = "Center", e[e.Right = 3] = "Right"
         }(N || (N = {}));
-        var R, M = (W = {}, W[N.Left] = "align-left", W[N.Center] = "align-center", W[N.Right] = "align-right", W);
+        var R, z = (W = {}, W[N.Left] = "align-left", W[N.Center] = "align-center", W[N.Right] = "align-right", W);
         ! function(e) {
             e[e.Visible = 1] = "Visible", e[e.Hidden = 2] = "Hidden"
         }(R || (R = {}));
-        var z, D = (j = {}, j[R.Visible] = "visible", j[R.Hidden] = "hidden", j);
+        var M, D = (j = {}, j[R.Visible] = "visible", j[R.Hidden] = "hidden", j);
         ! function(e) {
             e[e.Default = 1] = "Default", e[e.Above = 2] = "Above", e[e.Below = 3] = "Below"
-        }(z || (z = {}));
-        var A, H, V, O, P, B, F, U, q, G, W, j, Q, K, Z = (Q = {}, Q[z.Default] = "tw-z-default", Q[z.Above] = "tw-z-above", Q[z.Below] = "tw-z-below", Q),
+        }(M || (M = {}));
+        var A, H, V, O, P, B, F, U, q, G, W, j, Q, K, Z = (Q = {}, Q[M.Default] = "tw-z-default", Q[M.Above] = "tw-z-above", Q[M.Below] = "tw-z-below", Q),
             X = new Set([0, .5, 1, 2, 3, 4, 5, "auto"]),
             Y = function(e) {
                 function t() {
@@ -3677,7 +3662,7 @@ webpackJsonp([62], {
                 }, t.prototype.getBreakpointClasses = function(e, t) {
                     if (!e) return "";
                     var n = [];
-                    if (t = t ? "tw-" + t + "-" : "tw-", e.alignContent && n.push(t + h[e.alignContent]), e.alignItems && n.push(t + m[e.alignItems]), e.alignSelf && n.push(t + f[e.alignSelf]), e.display && n.push(t + w[e.display]), e.flexDirection && n.push(t + b[e.flexDirection]), void 0 !== e.flexGrow && n.push(t + "flex-grow-" + e.flexGrow), void 0 !== e.flexOrder && n.push(t + "item-order-" + e.flexOrder), void 0 !== e.flexShrink && n.push(t + "flex-shrink-" + e.flexShrink), e.flexWrap && n.push(t + E[e.flexWrap]), e.justifyContent && n.push(t + k[e.justifyContent]), e.position && n.push(t + x[e.position]), e.textAlign && n.push(t + M[e.textAlign]), e.visibility && n.push(t + D[e.visibility]), void 0 !== e.margin) {
+                    if (t = t ? "tw-" + t + "-" : "tw-", e.alignContent && n.push(t + h[e.alignContent]), e.alignItems && n.push(t + m[e.alignItems]), e.alignSelf && n.push(t + f[e.alignSelf]), e.display && n.push(t + w[e.display]), e.flexDirection && n.push(t + b[e.flexDirection]), void 0 !== e.flexGrow && n.push(t + "flex-grow-" + e.flexGrow), void 0 !== e.flexOrder && n.push(t + "item-order-" + e.flexOrder), void 0 !== e.flexShrink && n.push(t + "flex-shrink-" + e.flexShrink), e.flexWrap && n.push(t + E[e.flexWrap]), e.justifyContent && n.push(t + k[e.justifyContent]), e.position && n.push(t + x[e.position]), e.textAlign && n.push(t + z[e.textAlign]), e.visibility && n.push(t + D[e.visibility]), void 0 !== e.margin) {
                         "string" == typeof(i = this.getSpacingClasses("mg", e.margin)) ? n.push(t + i): i.forEach(function(e) {
                             n.push(t + e)
                         })
@@ -3801,11 +3786,11 @@ webpackJsonp([62], {
         ! function(e) {
             e[e.Underline = 1] = "Underline", e[e.Strikethrough = 2] = "Strikethrough"
         }(Ie || (Ie = {}));
-        var Me, ze = (Be = {}, Be[Ie.Underline] = "tw-underline", Be[Ie.Strikethrough] = "tw-strikethrough", Be);
+        var ze, Me = (Be = {}, Be[Ie.Underline] = "tw-underline", Be[Ie.Strikethrough] = "tw-strikethrough", Be);
         ! function(e) {
             e[e.Capitalize = 1] = "Capitalize", e[e.Uppercase = 2] = "Uppercase"
-        }(Me || (Me = {}));
-        var De, Ae = (Fe = {}, Fe[Me.Capitalize] = "tw-capcase", Fe[Me.Uppercase] = "tw-upcase", Fe);
+        }(ze || (ze = {}));
+        var De, Ae = (Fe = {}, Fe[ze.Capitalize] = "tw-capcase", Fe[ze.Uppercase] = "tw-upcase", Fe);
         ! function(e) {
             e.P = "p", e.Span = "span", e.H1 = "h1", e.H2 = "h2", e.H3 = "h3", e.H4 = "h4", e.H5 = "h5", e.H6 = "h6", e.Strong = "strong", e.Em = "em"
         }(De || (De = {}));
@@ -3821,7 +3806,7 @@ webpackJsonp([62], {
                     "tw-nowrap": e.noWrap,
                     "tw-strong": e.bold
                 }, r["tw-line-clamp-2"] = 2 === e.lines, r);
-                e.align && (t[Ge[e.align]] = !0), e.color && (t[Te[e.color]] = !0), e.fontSize && (t[Ne[e.fontSize]] = !0), e.lineHeight && (t[Re[e.lineHeight]] = !0), e.transform && (t[Ae[e.transform]] = !0), e.decoration && (t[ze[e.decoration]] = !0);
+                e.align && (t[Ge[e.align]] = !0), e.color && (t[Te[e.color]] = !0), e.fontSize && (t[Ne[e.fontSize]] = !0), e.lineHeight && (t[Re[e.lineHeight]] = !0), e.transform && (t[Ae[e.transform]] = !0), e.decoration && (t[Me[e.decoration]] = !0);
                 var n;
                 return e.title ? n = e.title : e.ellipsis && "string" == typeof e.children && (n = e.children), u.createElement(e.type || "p", l.__assign({
                     className: c(e.className, t)
@@ -5158,11 +5143,11 @@ webpackJsonp([62], {
         ! function(e) {
             e[e.Default = 0] = "Default", e[e.Small = 1] = "Small", e[e.Large = 2] = "Large"
         }(It || (It = {}));
-        var Mt, zt = (At = {}, At[It.Small] = "tw-button--small", At[It.Large] = "tw-button--large", At);
+        var zt, Mt = (At = {}, At[It.Small] = "tw-button--small", At[It.Large] = "tw-button--large", At);
         ! function(e) {
             e[e.Default = 0] = "Default", e[e.Loading = 1] = "Loading", e[e.Success = 2] = "Success"
-        }(Mt || (Mt = {}));
-        var Dt, At, Ht, Vt, Ot, Pt = (Ht = {}, Ht[Mt.Loading] = "tw-button--state-loading", Ht[Mt.Success] = "tw-button--state-success", Ht),
+        }(zt || (zt = {}));
+        var Dt, At, Ht, Vt, Ot, Pt = (Ht = {}, Ht[zt.Loading] = "tw-button--state-loading", Ht[zt.Success] = "tw-button--state-success", Ht),
             Bt = (Vt = {}, Vt[It.Small] = {
                 width: 12,
                 height: 12
@@ -5181,7 +5166,7 @@ webpackJsonp([62], {
                 }
                 return l.__extends(t, e), t.prototype.render = function() {
                     var e, t, n, r, a, s, h;
-                    (this.props.disabled || this.props.state === Mt.Loading || this.props.state === Mt.Success) && (h = !0);
+                    (this.props.disabled || this.props.state === zt.Loading || this.props.state === zt.Success) && (h = !0);
                     var p = {
                         "tw-button": !0,
                         "tw-button--dropmenu": this.props.dropdown,
@@ -5191,7 +5176,7 @@ webpackJsonp([62], {
                         "tw-button--disabled": this.props.disabled,
                         "tw-button--full-width": this.props.fullWidth
                     };
-                    if (this.props.statusAlertText || this.props.statusAlertIcon || this.props.state === Mt.Success ? p[Rt[Tt.Success]] = !0 : this.props.type && (p[Rt[this.props.type]] = !0), this.props.size && (p[zt[this.props.size]] = !0), this.props.state && (p[Pt[this.props.state]] = !0), this.props.purchase && (t = u.createElement("span", {
+                    if (this.props.statusAlertText || this.props.statusAlertIcon || this.props.state === zt.Success ? p[Rt[Tt.Success]] = !0 : this.props.type && (p[Rt[this.props.type]] = !0), this.props.size && (p[Mt[this.props.size]] = !0), this.props.state && (p[Pt[this.props.state]] = !0), this.props.purchase && (t = u.createElement("span", {
                             className: "tw-button__num-block",
                             key: "tw-button-purchase"
                         }, this.props.purchase)), this.props.dropdown && (e = u.createElement("span", {
@@ -5200,7 +5185,7 @@ webpackJsonp([62], {
                         }, u.createElement(dt, {
                             asset: ot.GlyphArrDown,
                             type: Je.Inherit
-                        }))), this.props.state === Mt.Loading && (a = u.createElement(J, {
+                        }))), this.props.state === zt.Loading && (a = u.createElement(J, {
                             className: "tw-button__loading-spinner",
                             position: S.Absolute,
                             key: "tw-button-loading-spinner"
@@ -5208,7 +5193,7 @@ webpackJsonp([62], {
                             delay: 0,
                             size: this.getSpinnerSize(this.props.size),
                             inheritColor: !0
-                        }))), this.props.state === Mt.Success && (s = u.createElement(J, {
+                        }))), this.props.state === zt.Success && (s = u.createElement(J, {
                             className: "tw-button__success-icon",
                             position: S.Absolute,
                             display: g.Flex,
@@ -5592,7 +5577,7 @@ webpackJsonp([62], {
                     attachLeft: e.icon && !e.iconRight,
                     attachRight: e.iconRight,
                     attachTop: !0,
-                    zIndex: z.Default
+                    zIndex: M.Default
                 }, u.createElement(it, {
                     className: "tw-input__icon",
                     color: Ce.Alt2,
@@ -5849,7 +5834,7 @@ webpackJsonp([62], {
                     label: e.label
                 }, n) : n
             }),
-            Mn = (n("xdZ7"), function(e) {
+            zn = (n("xdZ7"), function(e) {
                 var t;
                 e.tabIndex && (t = e.tabIndex);
                 var n;
@@ -5882,7 +5867,7 @@ webpackJsonp([62], {
         ! function(e) {
             e[e.Notification = 1] = "Notification", e[e.Brand = 2] = "Brand", e[e.Live = 3] = "Live", e[e.Alert = 4] = "Alert", e[e.Success = 5] = "Success", e[e.Prime = 6] = "Prime", e[e.Overlay = 7] = "Overlay"
         }(xn || (xn = {}));
-        var zn, Dn, An = (zn = {}, zn[xn.Notification] = "tw-pill--notification", zn[xn.Brand] = "tw-pill--brand", zn[xn.Live] = "tw-pill--live", zn[xn.Alert] = "tw-pill--alert", zn[xn.Success] = "tw-pill--success", zn[xn.Prime] = "tw-pill--prime", zn[xn.Overlay] = "tw-pill--overlay", zn),
+        var Mn, Dn, An = (Mn = {}, Mn[xn.Notification] = "tw-pill--notification", Mn[xn.Brand] = "tw-pill--brand", Mn[xn.Live] = "tw-pill--live", Mn[xn.Alert] = "tw-pill--alert", Mn[xn.Success] = "tw-pill--success", Mn[xn.Prime] = "tw-pill--prime", Mn[xn.Overlay] = "tw-pill--overlay", Mn),
             Hn = function(e) {
                 var t = {
                     "tw-pill": !0
@@ -6392,7 +6377,7 @@ webpackJsonp([62], {
         }), n.d(t, "z", function() {
             return Tt
         }), n.d(t, "y", function() {
-            return Mt
+            return zt
         }), n.d(t, "v", function() {
             return Zt
         }), n.d(t, "w", function() {
@@ -6476,7 +6461,7 @@ webpackJsonp([62], {
         }), n.d(t, "_24", function() {
             return N
         }), n.d(t, "_39", function() {
-            return z
+            return M
         }), n.d(t, !1, function() {
             return R
         }), n.d(t, "X", function() {
@@ -6490,7 +6475,7 @@ webpackJsonp([62], {
         }), n.d(t, "_18", function() {
             return Rn
         }), n.d(t, "_22", function() {
-            return Mn
+            return zn
         }), n.d(t, "_1", function() {
             return Hn
         }), n.d(t, "_2", function() {
@@ -6520,7 +6505,7 @@ webpackJsonp([62], {
         }), n.d(t, "_26", function() {
             return Ie
         }), n.d(t, "_27", function() {
-            return Me
+            return ze
         }), n.d(t, "_28", function() {
             return De
         }), n.d(t, "_38", function() {
@@ -7285,11 +7270,11 @@ webpackJsonp([62], {
         }(i || (i = {}));
         var r;
         ! function(e) {
-            e.Connected = "Connected", e.Created = "Created", e.FirstFrame = "First Frame", e.Init = "Init", e.Loaded = "Loaded"
+            e.Connected = "Connected", e.Created = "Created", e.FirstFrame = "First Frame", e.Init = "Init", e.OfferLoaded = "Offer List Loaded"
         }(r || (r = {}));
         var o;
         ! function(e) {
-            e.ChatConnected = "chat-connected", e.ChatInit = "chat-init", e.OnsiteNotificationsLoaded = "onsite-notifications-loaded", e.PlayerCreated = "player-created", e.PlayerPlayed = "player-played", e.PlayerLoaded = "player-loaded", e.PrimeOfferLoaded = "prime-offer-loaded"
+            e.ChatConnected = "chat-connected", e.ChatInit = "chat-init", e.OnsiteNotificationsLoaded = "onsite-notifications-loaded", e.PlayerCreated = "player-created", e.PlayerPlayed = "player-played", e.PlayerLoaded = "player-loaded", e.OfferLoaded = "offer-loaded"
         }(o || (o = {}));
         var a;
         ! function(e) {
@@ -8831,7 +8816,7 @@ webpackJsonp([62], {
         });
         var i;
         ! function(e) {
-            e.BitsBuyCard = "bits-buy-card", e.BrowseCommunities = "browse.communities", e.BrowseCreative = "browse.creative", e.BrowseGamesAndCommunities = "browse.games-and-communities", e.ChannelClips = "channel.clips", e.ChannelCollections = "channel.collections", e.ChannelClipsManager = "videoManager.clips.channel", e.ChannelDashboardAchievements = "channel.dashboard.achievements", e.ChannelDashboardChannelAnalytics = "channel.dashboard.channel-analytics", e.ChannelDashboardExtensions = "channel.dashboard.extensions", e.ChannelDashboardModeration = "channel.dashboard.moderation", e.ChannelDashboardStreamSummary = "channel.dashboard.stream-summary", e.ChannelEvents = "channel.events", e.ChannelFollowers = "channel.followers", e.ChannelIndex = "channel.index.index", e.ChatPopout = "chat", e.CheermoteCarousel = "cheermote-carousel", e.DevOnly = "dev", e.DirectoryCommunityByLanguage = "directory.community.language", e.DirectoryCommunityIndex = "directory.community.index", e.DirectoryCommunityDetails = "directory.community.details", e.DirectoryFollowingCommunities = "directory.following.communities", e.DirectoryFollowingGames = "directory.following.games", e.DirectoryFollowingHosts = "directory.following.hosts", e.DirectoryFollowingIndex = "directory.following.index", e.DirectoryFollowingLiveChannels = "directory.following.channels", e.DirectoryFollowingVideos = "directory.following.videos.video-type", e.DirectoryGameClips = "directory.game.clips", e.DirectoryGameDetails = "directory.game.details", e.DirectoryGameIndex = "directory.game.index", e.DirectoryGames = "directory.games", e.DirectoryPopular = "directory.popular", e.DirectoryPopularByLanguage = "directory.popular.language", e.DirectoryGameVideos = "directory.game.videos", e.EmailVerification = "emailVerification", e.EventDetails = "event.details", e.ForYou = "for-you", e.Index = "index", e.MyClipsManager = "videoManager.clips", e.NotificationSettingsPage = "settings.notificationSettings", e.OnboardingIndex = "onboarding.index", e.ReportUserPage = "reportUser.page", e.SettingsConnections = "private/embed-components", e.SettingsChannel = "private/embed-components", e.SettingsNotifications = "settings.notifications", e.SettingsPrime = "settings.prime", e.SettingsProfile = "settings.profile", e.SettingsSecurity = "private/embed-components", e.StoreMerchPage = "store.merch", e.SubsLandingPage = "subs.landing", e.TeamsDashboardRevenue = "teams.dashboard.revenue", e.TeamsDashboardStats = "teams.dashboard.stats", e.TeamsDashboardMembers = "teams.dashboard.members", e.TeamsDashboardFeaturedChannels = "teams.dashboard.featured-channels", e.TeamsDashboardSettings = "teams.dashboard.settings", e.SubsBroadcasterPage = "subs.broadcaster", e.VideoManagerEditPropertiesPage = "videoManager.edit", e.VideoManagerPage = "videoManager.page", e.VideoManagerUploadListPage = "videoManager.upload-list", e.VideoManagerUploadPage = "videoManager.upload", e.VideoManagerCollectionsManager = "videoManager.collections", e.VideoManagerCollectionsEditor = "videoManager.collections.editor", e.VideosPage = "videos", e.VideoWatchPage = "video", e.Unknown = "unknown"
+            e.BitsBuyCard = "bits-buy-card", e.BrowseCommunities = "browse.communities", e.BrowseCreative = "browse.creative", e.BrowseGamesAndCommunities = "browse.games-and-communities", e.ChannelClips = "channel.clips", e.ChannelCollections = "channel.collections", e.ChannelClipsManager = "videoManager.clips.channel", e.ChannelDashboardAchievements = "channel.dashboard.achievements", e.ChannelDashboardChannelAnalytics = "channel.dashboard.channel-analytics", e.ChannelDashboardExtensions = "channel.dashboard.extensions", e.ChannelDashboardModeration = "channel.dashboard.moderation", e.ChannelDashboardStreamSummary = "channel.dashboard.stream-summary", e.ChannelEvents = "channel.events", e.ChannelIndex = "channel.index.index", e.ChatPopout = "chat", e.CheermoteCarousel = "cheermote-carousel", e.DevOnly = "dev", e.DirectoryCommunityByLanguage = "directory.community.language", e.DirectoryCommunityIndex = "directory.community.index", e.DirectoryCommunityDetails = "directory.community.details", e.DirectoryFollowingCommunities = "directory.following.communities", e.DirectoryFollowingGames = "directory.following.games", e.DirectoryFollowingHosts = "directory.following.hosts", e.DirectoryFollowingIndex = "directory.following.index", e.DirectoryFollowingLiveChannels = "directory.following.channels", e.DirectoryFollowingVideos = "directory.following.videos.video-type", e.DirectoryGameClips = "directory.game.clips", e.DirectoryGameDetails = "directory.game.details", e.DirectoryGameIndex = "directory.game.index", e.DirectoryGames = "directory.games", e.DirectoryPopular = "directory.popular", e.DirectoryPopularByLanguage = "directory.popular.language", e.DirectoryGameVideos = "directory.game.videos", e.EmailVerification = "emailVerification", e.EventDetails = "event.details", e.ForYou = "for-you", e.Index = "index", e.MyClipsManager = "videoManager.clips", e.NotificationSettingsPage = "settings.notificationSettings", e.OnboardingIndex = "onboarding.index", e.ReportUserPage = "reportUser.page", e.SettingsConnections = "private/embed-components", e.SettingsChannel = "private/embed-components", e.SettingsNotifications = "settings.notifications", e.SettingsPrime = "settings.prime", e.SettingsProfile = "settings.profile", e.SettingsSecurity = "private/embed-components", e.StoreMerchPage = "store.merch", e.SubsLandingPage = "subs.landing", e.TeamsDashboardRevenue = "teams.dashboard.revenue", e.TeamsDashboardStats = "teams.dashboard.stats", e.TeamsDashboardMembers = "teams.dashboard.members", e.TeamsDashboardFeaturedChannels = "teams.dashboard.featured-channels", e.TeamsDashboardSettings = "teams.dashboard.settings", e.SubsBroadcasterPage = "subs.broadcaster", e.VideoManagerEditPropertiesPage = "videoManager.edit", e.VideoManagerPage = "videoManager.page", e.VideoManagerUploadListPage = "videoManager.upload-list", e.VideoManagerUploadPage = "videoManager.upload", e.VideosPage = "videos", e.VideoWatchPage = "video", e.Unknown = "unknown"
         }(i || (i = {}))
     },
     wG4N: function(e, t) {
@@ -9108,4 +9093,4 @@ webpackJsonp([62], {
         }(i || (i = {}))
     }
 }, [5]);
-//# sourceMappingURL=minimal-9039b25c48701c881f899c10cb3de8d8.js.map
+//# sourceMappingURL=minimal-becabeb8dd285c7e9e93688c28e2f9fd.js.map
