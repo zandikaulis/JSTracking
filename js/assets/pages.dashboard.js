@@ -12673,7 +12673,7 @@ webpackJsonp([32], {
                         },
                         yes: function() {
                             return xt.a.wrap(function() {
-                                return n.e(70).then(n.bind(null, "UVy3"))
+                                return n.e(74).then(n.bind(null, "UVy3"))
                             }, "ChannelAnalyticsPage")(e)
                         }
                     },
@@ -17645,6 +17645,7 @@ webpackJsonp([32], {
                         onChange: this.onTitleChange,
                         value: this.state.eventEdits.title || "",
                         type: zt.S.Text,
+                        maxLength: 140,
                         placeholder: Object(Et.d)("Your title is also used in reminders and social media posts. ({limit} character limit)", {
                             limit: 140
                         }, "EventModal")
@@ -19080,7 +19081,7 @@ webpackJsonp([32], {
                         value: e.title,
                         disabled: this.props.disabled,
                         "data-test-selector": cc,
-                        maxLength: 99,
+                        maxLength: 140,
                         required: !0
                     }))), St.createElement(zt.V, {
                         margin: {
@@ -20794,84 +20795,7 @@ webpackJsonp([32], {
                     }))) : null
                 }, t
             }(St.Component),
-            Qu = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return kt.__extends(t, e), t.prototype.render = function() {
-                    return St.createElement(zt._19, {
-                        margin: {
-                            bottom: 1
-                        },
-                        elevation: 1,
-                        display: zt.H.Flex,
-                        flexWrap: zt.K.NoWrap,
-                        flexDirection: zt.J.Row,
-                        alignItems: zt.c.Stretch
-                    }, St.createElement(zt.V, {
-                        flexGrow: 1,
-                        flexShrink: 1,
-                        display: zt.H.Flex,
-                        flexWrap: zt.K.NoWrap,
-                        flexDirection: zt.J.Column,
-                        breakpointSmall: {
-                            flexDirection: zt.J.Row
-                        }
-                    }, St.createElement(zt.V, {
-                        fullWidth: !0
-                    }, St.createElement(zt.A, {
-                        row: !0
-                    }, St.createElement(zt.V, null, St.createElement(zt._3, {
-                        height: 75,
-                        width: 133
-                    })), St.createElement(zt.B, null, St.createElement(zt.V, {
-                        padding: {
-                            x: 2,
-                            y: 1
-                        }
-                    }, St.createElement(zt._23, null, St.createElement(zt._3, {
-                        width: 600,
-                        lineCount: 1
-                    }), St.createElement(zt._3, {
-                        width: 200,
-                        lineCount: 1
-                    })))))), St.createElement(zt.V, {
-                        display: zt.H.Flex,
-                        flexGrow: 0,
-                        flexShrink: 0,
-                        flexWrap: zt.K.NoWrap,
-                        flexDirection: zt.J.Row,
-                        alignItems: zt.c.Center
-                    }, St.createElement(zt._19, {
-                        fullHeight: !0,
-                        fullWidth: !0
-                    }, St.createElement(zt.V, {
-                        display: zt.H.InlineFlex,
-                        fullHeight: !0
-                    }, St.createElement(zt.V, {
-                        fullHeight: !0,
-                        display: zt.H.Flex,
-                        alignItems: zt.c.Center,
-                        justifyContent: zt.U.Center,
-                        padding: 2
-                    }, St.createElement(zt._23, null, St.createElement(zt._3, {
-                        width: 40,
-                        lineCount: 1
-                    })))))), St.createElement(zt.V, {
-                        flexGrow: 0,
-                        flexShrink: 0
-                    }, St.createElement(zt.V, {
-                        fullHeight: !0,
-                        display: zt.H.Flex,
-                        alignItems: zt.c.Center,
-                        justifyContent: zt.U.Center,
-                        padding: 1
-                    }, St.createElement(zt._23, null, St.createElement(zt._3, {
-                        width: 20,
-                        lineCount: 1
-                    }))))))
-                }, t
-            }(St.PureComponent);
+            Qu = n("PQ4i");
         ! function(e) {
             e.Edit = "edit", e.Schedule = "schedule", e.Appeal = "appeal"
         }(Kc || (Kc = {}));
@@ -21612,15 +21536,15 @@ webpackJsonp([32], {
                     var t = this.props.apiData.videos.data.map(function(t) {
                         return e.getVideoRow(t)
                     });
-                    return this.props.apiData.videos.loading && t.push(St.createElement(Qu, {
+                    return this.props.apiData.videos.loading && t.push(St.createElement(Qu.a, {
                         key: "VideoCardPlaceholder" + this.props.apiData.videos.data.length
                     })), t
                 }, t.prototype.renderLoadingState = function() {
-                    return St.createElement(zt.V, null, St.createElement(Qu, {
+                    return St.createElement(zt.V, null, St.createElement(Qu.a, {
                         key: "VideoCardPlaceholderLoading1"
-                    }), St.createElement(Qu, {
+                    }), St.createElement(Qu.a, {
                         key: "VideoCardPlaceholderLoading2"
-                    }), St.createElement(Qu, {
+                    }), St.createElement(Qu.a, {
                         key: "VideoCardPlaceholderLoading3"
                     }))
                 }, t.prototype.renderEmptyState = function() {
@@ -21776,18 +21700,40 @@ webpackJsonp([32], {
                     updateEvent: We
                 }, e)
             })(pm),
-            gm = xt.a.wrap(function() {
-                return n.e(63).then(n.bind(null, "aeDV"))
+            gm = function(e) {
+                return window.location.replace("https://www.twitch.tv/" + encodeURIComponent(e.match.params.creatorLogin) + "/manager/collections"), null
+            },
+            _m = function(e) {
+                var t = {
+                    name: "TWILIGHT_COLLECTION_MANAGER",
+                    assignments: {
+                        fallback: function() {
+                            return St.createElement(gm, kt.__assign({}, e))
+                        },
+                        enabled: function() {
+                            return xt.a.wrap(function() {
+                                return n.e(73).then(n.bind(null, "Dk8+"))
+                            }, "CollectionManagerPage")(e)
+                        }
+                    },
+                    loader: function() {
+                        return null
+                    }
+                };
+                return St.createElement(Za.a, kt.__assign({}, t))
+            },
+            vm = xt.a.wrap(function() {
+                return n.e(64).then(n.bind(null, "aeDV"))
             }, "ChannelClipsManagerPage"),
-            _m = xt.a.wrap(function() {
-                return n.e(63).then(n.bind(null, "aeDV"))
+            ym = xt.a.wrap(function() {
+                return n.e(64).then(n.bind(null, "aeDV"))
             }, "MyClipsManagerPage"),
-            vm = function(e) {
+            bm = function(e) {
                 var t = e.match.params.pageName,
                     n = t ? "/" + encodeURIComponent(t) : "";
                 return window.location.replace("https://www.twitch.tv/" + encodeURIComponent(e.match.params.channelName) + "/dashboard" + n), null
             },
-            ym = function(e) {
+            Mm = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderAchievementsPage = function() {
@@ -21858,7 +21804,7 @@ webpackJsonp([32], {
                             component: Tn
                         }), St.createElement(wt.b, {
                             path: "/:channelName/dashboard/:pageName?",
-                            render: vm
+                            render: bm
                         }), St.createElement(wt.b, {
                             path: "/:channelName/manager_v2/schedule/:videoID",
                             component: fm
@@ -21882,9 +21828,12 @@ webpackJsonp([32], {
                             component: fm
                         }), St.createElement(wt.b, {
                             path: "/:channelName/manager/clips/channel",
-                            component: gm
+                            component: vm
                         }), St.createElement(wt.b, {
                             path: "/:channelName/manager/clips",
+                            component: ym
+                        }), St.createElement(wt.b, {
+                            path: "/:creatorLogin/manager/collections",
                             component: _m
                         }), St.createElement(wt.b, {
                             path: "/:channelName/manager",
@@ -21893,7 +21842,7 @@ webpackJsonp([32], {
                     }) : St.createElement(Ct.PageNotFound, null)
                 }, t
             }(St.Component),
-            bm = Object(ht.compose)(Object(gt.a)(Mt, {
+            km = Object(ht.compose)(Object(gt.a)(Mt, {
                 options: function(e) {
                     return {
                         variables: {
@@ -21915,9 +21864,9 @@ webpackJsonp([32], {
                     collapseSideNav: yt.m,
                     expandSideNav: yt.q
                 }, e)
-            }))(ym);
+            }))(Mm);
         n.d(t, "DashboardRoot", function() {
-            return bm
+            return km
         })
     },
     "Eoz/": function(e, t, n) {
@@ -24992,7 +24941,8 @@ webpackJsonp([32], {
                         key: "color-chooser",
                         onColorSelected: this.props.onColorSelected
                     }), this.renderUniversalOptions()], r.createElement(D.b, {
-                        className: "chat-settings"
+                        className: "chat-settings",
+                        suppressScrollX: !0
                     }, r.createElement("div", {
                         onClick: this.dismissRaidsTooltip
                     }, r.createElement(T._19, {
@@ -27820,6 +27770,93 @@ webpackJsonp([32], {
         }(a || (a = {}))
     },
     PNnM: function(e, t) {},
+    PQ4i: function(e, t, n) {
+        "use strict";
+        n.d(t, "a", function() {
+            return o
+        });
+        var a = n("TToO"),
+            i = n("U7vG"),
+            r = (n.n(i), n("Odds")),
+            o = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return a.__extends(t, e), t.prototype.render = function() {
+                    return i.createElement(r._19, {
+                        margin: {
+                            bottom: 1
+                        },
+                        elevation: 1,
+                        display: r.H.Flex,
+                        flexWrap: r.K.NoWrap,
+                        flexDirection: r.J.Row,
+                        alignItems: r.c.Stretch
+                    }, i.createElement(r.V, {
+                        flexGrow: 1,
+                        flexShrink: 1,
+                        display: r.H.Flex,
+                        flexWrap: r.K.NoWrap,
+                        flexDirection: r.J.Column,
+                        breakpointSmall: {
+                            flexDirection: r.J.Row
+                        }
+                    }, i.createElement(r.V, {
+                        fullWidth: !0
+                    }, i.createElement(r.A, {
+                        row: !0
+                    }, i.createElement(r.V, null, i.createElement(r._3, {
+                        height: 75,
+                        width: 133
+                    })), i.createElement(r.B, null, i.createElement(r.V, {
+                        padding: {
+                            x: 2,
+                            y: 1
+                        }
+                    }, i.createElement(r._23, null, i.createElement(r._3, {
+                        width: 600,
+                        lineCount: 1
+                    }), i.createElement(r._3, {
+                        width: 200,
+                        lineCount: 1
+                    })))))), i.createElement(r.V, {
+                        display: r.H.Flex,
+                        flexGrow: 0,
+                        flexShrink: 0,
+                        flexWrap: r.K.NoWrap,
+                        flexDirection: r.J.Row,
+                        alignItems: r.c.Center
+                    }, i.createElement(r._19, {
+                        fullHeight: !0,
+                        fullWidth: !0
+                    }, i.createElement(r.V, {
+                        display: r.H.InlineFlex,
+                        fullHeight: !0
+                    }, i.createElement(r.V, {
+                        fullHeight: !0,
+                        display: r.H.Flex,
+                        alignItems: r.c.Center,
+                        justifyContent: r.U.Center,
+                        padding: 2
+                    }, i.createElement(r._23, null, i.createElement(r._3, {
+                        width: 40,
+                        lineCount: 1
+                    })))))), i.createElement(r.V, {
+                        flexGrow: 0,
+                        flexShrink: 0
+                    }, i.createElement(r.V, {
+                        fullHeight: !0,
+                        display: r.H.Flex,
+                        alignItems: r.c.Center,
+                        justifyContent: r.U.Center,
+                        padding: 1
+                    }, i.createElement(r._23, null, i.createElement(r._3, {
+                        width: 20,
+                        lineCount: 1
+                    }))))))
+                }, t
+            }(i.PureComponent)
+    },
     PeVI: function(e, t) {},
     Ptqd: function(e, t) {
         e.exports = function() {
@@ -46616,4 +46653,4 @@ webpackJsonp([32], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.dashboard-33a247660f9c5970e66899e8c4b4c5da.js.map
+//# sourceMappingURL=pages.dashboard-b35797e33cfa65cb8bf4dea8e9c99103.js.map

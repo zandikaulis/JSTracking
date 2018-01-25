@@ -10512,8 +10512,9 @@ webpackJsonp([36], {
             o = n("TToO"),
             l = n("U7vG"),
             c = n("6sO2"),
-            d = n("Odds"),
-            u = function(e) {
+            d = n("CSlQ"),
+            u = n("Odds"),
+            p = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleClick = function() {
@@ -10522,12 +10523,14 @@ webpackJsonp([36], {
                 }
                 return o.__extends(t, e), t.prototype.render = function() {
                     var e = Object(c.d)("Whisper", "WhisperButton");
-                    return l.createElement(d.u, {
+                    return l.createElement(u.u, {
                         onClick: this.handleClick
                     }, e)
-                }, t
+                }, t = o.__decorate([Object(d.c)("WhisperButton", {
+                    autoReportInteractive: !0
+                })], t)
             }(l.Component),
-            p = Object(i.a)(null, function(e) {
+            m = Object(i.a)(null, function(e) {
                 return Object(a.bindActionCreators)({
                     openThread: function(e) {
                         return Object(r.l)({
@@ -10537,9 +10540,9 @@ webpackJsonp([36], {
                         }, Object(s.a)())
                     }
                 }, e)
-            })(u);
+            })(p);
         n.d(t, "a", function() {
-            return p
+            return m
         })
     },
     "5vPJ": function(e, t, n) {
@@ -16755,7 +16758,8 @@ webpackJsonp([36], {
                         key: "color-chooser",
                         onColorSelected: this.props.onColorSelected
                     }), this.renderUniversalOptions()], r.createElement(N.b, {
-                        className: "chat-settings"
+                        className: "chat-settings",
+                        suppressScrollX: !0
                     }, r.createElement("div", {
                         onClick: this.dismissRaidsTooltip
                     }, r.createElement(I._19, {
@@ -17821,7 +17825,7 @@ webpackJsonp([36], {
                         ariaLabel: e,
                         onClick: this.props.onLoginClick
                     }, e);
-                    if (this.props.data.loading || this.props.data.error) return c.createElement(h._3, {
+                    if (!this.props.friendsData && this.props.data && (this.props.data.loading || this.props.data.error)) return c.createElement(h._3, {
                         height: 30,
                         width: 60
                     });
@@ -17838,10 +17842,15 @@ webpackJsonp([36], {
                     }, n)
                 }, t.prototype.isFriend = function() {
                     var e = this;
-                    return !this.props.data.loading && !this.props.data.error && !!this.props.data.currentUser.friends.edges.find(function(t) {
+                    if (!this.props.friendsData && this.props.data && (this.props.data.loading || this.props.data.error)) return !1;
+                    return !!(this.props.friendsData || this.props.data).currentUser.friends.edges.find(function(t) {
                         return t.node.id === e.props.channelID
                     })
-                }, t = l.__decorate([Object(m.c)("FriendButton"), Object(u.a)(f), Object(u.a)(v, {
+                }, t = l.__decorate([Object(m.c)("FriendButton"), Object(u.a)(f, {
+                    skip: function(e) {
+                        return !!e.friendsData
+                    }
+                }), Object(u.a)(v, {
                     name: "onUnfriendUser"
                 }), Object(u.a)(g, {
                     name: "onCreateFriendRequest"
@@ -30390,4 +30399,4 @@ webpackJsonp([36], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.popout-chat-7f7f512f4c5a7e315b460172f1f10865.js.map
+//# sourceMappingURL=pages.popout-chat-ba3e5fe848be6103e693b8d18d5e599f.js.map
