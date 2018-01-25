@@ -3565,14 +3565,14 @@ window.SiteOptions = {
         },
         "b54f8797-2b35-4024-8a8c-0f2ef440e4fa": {
             "name": "android_channel_deeplink_to_theatre",
-            "v": 2901,
+            "v": 2903,
             "t": 1,
             "groups": [{
                 "weight": 100,
                 "value": "control"
             }, {
                 "weight": 0,
-                "value": "experiment"
+                "value": "active"
             }]
         },
         "b60494e1-91c9-485c-82a4-b12026cafac3": {
