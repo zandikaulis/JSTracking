@@ -3746,6 +3746,18 @@ window.SiteOptions = {
                 "value": "off"
             }]
         },
+        "c270e8a5-57f8-413f-a238-7872a6ecbcc5": {
+            "name": "android_native_subs_iap",
+            "v": 2905,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
         "c2d3d8cb-713f-41eb-965e-07e88a94ccb4": {
             "name": "android_player_refactor",
             "v": 2575,
