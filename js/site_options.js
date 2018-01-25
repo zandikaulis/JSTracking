@@ -1547,11 +1547,11 @@ window.SiteOptions = {
         },
         "4badc757-13a7-468c-99b6-e42aef7fc286": {
             "name": "spade_url",
-            "v": 2882,
+            "v": 2900,
             "t": 1,
             "groups": [{
                 "weight": 1,
-                "value": "//video-edge-c6ca9a.sjc01.hls.ttvnw.net/v1/playlist/CupNn5e_I9IV05zH4EZ5xTLsVG2SV_T1lvieMOSWfjQv-QGwkZH2YlP54HYbMptsZX1uCXalhGRGk2EUMx6OxIXW5gijsf_UrklS1Vx7XPsPy2g4SL5VTb4ihckLz6d3d3cBGTgbU6H7p06ZNvT-P7kXso7Ftqg28fP2jCgmFRbS8EOz8SCujrJPTAgjBU2AqBEwDmkz0MONbjI0HaYmWMQWK2Jb4YIthMJu3Xizcu7lFJTkQr3DTgk5XS4D0s_BY0ilfd4WaL1tHf8OW0NJ504fR9WO9aFlfY5eN3PoukUheVnsAzcvGgemjkS3ZR95EzuOSggtwLdGJPaHWqIUPLy5D7GWseBjNgoIap2vF-MzOUHE-DpcDPEKVBhfyz3UPwKvCQbu9Rt4iBNM18JMRKa0BihFJMG5R-rICOGg9Li5XKJXO4-L.m3u8"
+                "value": "//video-edge-07122b.sjc01.hls.ttvnw.net/v1/playlist/Cp-UrQElB8iZDSbVyhgZmCbGBHJFz8rAfdk6kkBBE1nJSv_w_gXpHO5KxAUo1YhWWXUcZdg993iUcUNGjCnoDETeFdrcb30nTd1gOjTYrNBpftrsi_hBB1u8vNXoF-hWsdo0QIiRHLx9HQQM18HAG8FM2jeTxVmiOgaSXtgYaCckvDoB35KwsUyz8aMCGrTSzyMzYrodokD0WNq0kqGQ78kwDgv_N-NP3xMDq7lJuI4hxwR0nq7NI7EALevJliRHUA6rZ6EzlpYBZegfL5fbk1PFQoGurvvJKe_c_a7Xhto_OhjcxX8mLEV5n5SZCLHv0aO02PEBuFRQlI0tMmdInLQE0_DZWvMKzXIqWU7tjHN5aoXKEaUzZOsCzh-oSo3vyqv1z8VIJHZvNZRe1qHAgaHEmyYz58-Up3cNJOAo_Cep2C7Ih53CMctR4TaM4GvK9P.m3u8"
             }]
         },
         "4bc4a7c7-21b7-44f5-a0fb-79f430ee8ac4": {
@@ -3564,8 +3564,8 @@ window.SiteOptions = {
             }]
         },
         "b54f8797-2b35-4024-8a8c-0f2ef440e4fa": {
-            "name": "channel_deeplink_to_theatre",
-            "v": 2889,
+            "name": "android_channel_deeplink_to_theatre",
+            "v": 2901,
             "t": 1,
             "groups": [{
                 "weight": 100,
@@ -4801,16 +4801,16 @@ window.SiteOptions = {
         },
         "ff8e8dba-1168-459f-b131-7be5b5e7ba4d": {
             "name": "clips_champagne_supernova",
-            "v": 2788,
+            "v": 2899,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 33,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 33,
                 "value": "variant1"
             }, {
-                "weight": 0,
+                "weight": 33,
                 "value": "variant2"
             }]
         },
