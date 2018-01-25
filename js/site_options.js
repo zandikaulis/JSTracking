@@ -966,6 +966,18 @@ window.SiteOptions = {
                 "value": "yes"
             }]
         },
+        "31935f88-873a-484d-83be-c238a2a5693e": {
+            "name": "ios_app_badge_5.9",
+            "v": 2906,
+            "t": 2,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "enabled"
+            }]
+        },
         "32099615-3609-4658-9f6b-5c1c1daa3510": {
             "name": "TWILIGHT_STREAM_SUMMARY",
             "v": 2445,
