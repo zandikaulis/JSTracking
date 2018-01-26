@@ -154,13 +154,13 @@ window.SiteOptions = {
         },
         "0238d763-05ee-4d27-ba3f-0b7d45346102": {
             "name": "android_spade_batching_v2",
-            "v": 2543,
+            "v": 2916,
             "t": 1,
             "groups": [{
-                "weight": 80,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 20,
+                "weight": 100,
                 "value": "active"
             }]
         },
@@ -4198,19 +4198,19 @@ window.SiteOptions = {
         },
         "d932e71d-23b9-4562-a2d3-2c57761cbfc6": {
             "name": "clips_love_story",
-            "v": 2401,
+            "v": 2913,
             "t": 1,
             "groups": [{
-                "weight": 10,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 40,
+                "weight": 0,
                 "value": "variant1"
             }, {
-                "weight": 10,
+                "weight": 0,
                 "value": "variant2"
             }, {
-                "weight": 40,
+                "weight": 0,
                 "value": "variant3"
             }]
         },
