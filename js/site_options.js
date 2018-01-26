@@ -3395,6 +3395,18 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
+        "ae56cc27-8d3d-431e-98cb-6e99db9afd1a": {
+            "name": "ios_feed_autoplay_video_content_v5.8",
+            "v": 2922,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
         "ae5fe654-f29f-435e-b1c9-4d106d51fd42": {
             "name": "iOS_premieres_reruns_pastpremieres",
             "v": 2853,
