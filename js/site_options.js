@@ -1847,16 +1847,16 @@ window.SiteOptions = {
         },
         "54b18ea6-2b6a-4ed7-9128-2497572d31e2": {
             "name": "twilight_web_onboarding_following_for_you",
-            "v": 2904,
+            "v": 2919,
             "t": 2,
             "groups": [{
-                "weight": 100,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 50,
                 "value": "first"
             }, {
-                "weight": 0,
+                "weight": 50,
                 "value": "last"
             }]
         },
