@@ -3395,18 +3395,6 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
-        "ae56cc27-8d3d-431e-98cb-6e99db9afd1a": {
-            "name": "ios_feed_autoplay_video_content_v5.9",
-            "v": 2923,
-            "t": 1,
-            "groups": [{
-                "weight": 100,
-                "value": "control"
-            }, {
-                "weight": 0,
-                "value": "active"
-            }]
-        },
         "ae5fe654-f29f-435e-b1c9-4d106d51fd42": {
             "name": "iOS_premieres_reruns_pastpremieres",
             "v": 2853,
@@ -4037,6 +4025,18 @@ window.SiteOptions = {
                 "value": "control"
             }, {
                 "weight": 1,
+                "value": "active"
+            }]
+        },
+        "d22b1724-f9ba-4470-99ab-f3f193034394": {
+            "name": "ios_autoplay_feed_v5.9",
+            "v": 2926,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
                 "value": "active"
             }]
         },
