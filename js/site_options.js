@@ -3396,8 +3396,8 @@ window.SiteOptions = {
             }]
         },
         "ae56cc27-8d3d-431e-98cb-6e99db9afd1a": {
-            "name": "ios_feed_autoplay_video_content_v5.8",
-            "v": 2922,
+            "name": "ios_feed_autoplay_video_content_v5.9",
+            "v": 2923,
             "t": 1,
             "groups": [{
                 "weight": 100,
