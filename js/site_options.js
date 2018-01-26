@@ -624,18 +624,6 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
-        "213678cc-be7d-4aa6-a938-8baac01a442a": {
-            "name": "android_spade_batching",
-            "v": 502,
-            "t": 1,
-            "groups": [{
-                "weight": 100,
-                "value": "control"
-            }, {
-                "weight": 0,
-                "value": "live"
-            }]
-        },
         "2153e9fc-7f48-4402-aa54-7883d0c55c98": {
             "name": "android_chromecast_player_core",
             "v": 2610,
