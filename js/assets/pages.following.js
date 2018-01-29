@@ -22,7 +22,7 @@ webpackJsonp([47], {
                     return a.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(66).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(67).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -34,7 +34,7 @@ webpackJsonp([47], {
                     return a.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(65).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(66).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -647,7 +647,6 @@ webpackJsonp([47], {
                         return !1
                     }, t.trackImpression = function() {
                         var e = {
-                            channel: t.props.streamNode.title,
                             channel_id: t.props.streamNode.id,
                             action: v.a.Impression,
                             parent_game: t.props.streamNode.game ? t.props.streamNode.game.name : "",
@@ -656,7 +655,6 @@ webpackJsonp([47], {
                         Object(v.c)(e)
                     }, t.trackClickEvent = function() {
                         var e = {
-                            channel: t.props.streamNode.title,
                             channel_id: t.props.streamNode.id,
                             action: v.a.Click,
                             parent_game: t.props.streamNode.game ? t.props.streamNode.game.name : "",
@@ -869,7 +867,7 @@ webpackJsonp([47], {
                     }, this.renderStreams()))
                 }, t
             }(a.Component),
-            F = Object(l.c)("CommunityStreamsRow")(E);
+            F = Object(l.d)("CommunityStreamsRow")(E);
         n.d(t, !1, function() {
             return N
         }), n.d(t, !1, function() {
@@ -1353,7 +1351,7 @@ webpackJsonp([47], {
                         onClick: this.props.clearLanguagePreferences,
                         "data-a-target": "language-clear-all"
                     }, Object(d.d)("Clear all", "LanguageSelectMenu"))))))
-                }, t = l.__decorate([Object(p.c)("LanguageSelectMenu")], t)
+                }, t = l.__decorate([Object(p.d)("LanguageSelectMenu")], t)
             }(s.Component)),
             h = Object(i.a)(function(e) {
                 return {
@@ -1965,7 +1963,7 @@ webpackJsonp([47], {
                             }
                         }
                     }
-                }), Object(h.c)("StreamFlagComponent", {
+                }), Object(h.d)("StreamFlagComponent", {
                     autoReportInteractive: !0
                 })], t)
             }(a.Component),
@@ -3035,7 +3033,7 @@ webpackJsonp([47], {
                     placeholderItems: 20
                 }, t)
             },
-            d = Object(a.c)("VideoTower", {
+            d = Object(a.d)("VideoTower", {
                 autoReportInteractive: !0
             })(s);
         n.d(t, !1, function() {
@@ -3476,7 +3474,7 @@ webpackJsonp([47], {
                             bottom: 2
                         }
                     }, g.createElement(F._21, null, t))
-                }, t = p.__decorate([Object(k.c)("FollowingHeaderTabs"), Object(S.a)(C)], t)
+                }, t = p.__decorate([Object(k.d)("FollowingHeaderTabs"), Object(S.a)(C)], t)
             }(g.Component),
             L = n("7FW4"),
             T = n("peXu"),
@@ -3516,7 +3514,7 @@ webpackJsonp([47], {
                             limit: 100
                         }
                     }
-                }), Object(k.c)("FollowingCommunitiesPage", {
+                }), Object(k.d)("FollowingCommunitiesPage", {
                     destination: b.a.DirectoryFollowingCommunities
                 }), Object(w.a)({
                     location: _.PageviewLocation.Directory,
@@ -3785,7 +3783,7 @@ webpackJsonp([47], {
                             limit: 100
                         }
                     }
-                }), Object(k.c)("FollowingGamesPage", {
+                }), Object(k.d)("FollowingGamesPage", {
                     destination: b.a.DirectoryFollowingGames
                 }), Object(w.a)({
                     location: _.PageviewLocation.Directory,
@@ -3872,7 +3870,7 @@ webpackJsonp([47], {
                             }
                         }
                     }
-                }), Object(k.c)("FollowingHostsPage", {
+                }), Object(k.d)("FollowingHostsPage", {
                     destination: b.a.DirectoryFollowingHosts
                 }), Object(w.a)({
                     location: _.PageviewLocation.Directory,
@@ -3931,7 +3929,7 @@ webpackJsonp([47], {
                             limit: 30
                         }
                     }
-                }), Object(k.c)("SuggestedVideos")], t)
+                }), Object(k.d)("SuggestedVideos")], t)
             }(g.Component);
         ! function(e) {
             e.FOLLOWING_BASIC = "following_basic", e.CONTROL = "control"
@@ -3947,7 +3945,7 @@ webpackJsonp([47], {
                         }
                     }, i[l.FOLLOWING_BASIC] = function() {
                         return Z.a.wrap(function() {
-                            return n.e(75).then(n.bind(null, "crkb"))
+                            return n.e(76).then(n.bind(null, "crkb"))
                         }, "FinishWatchingTower")({
                             directoryWidth: e.directoryWidth
                         })
@@ -3968,7 +3966,7 @@ webpackJsonp([47], {
                         },
                         enabled: function() {
                             return Z.a.wrap(function() {
-                                return n.e(72).then(n.bind(null, "IwGL"))
+                                return n.e(73).then(n.bind(null, "IwGL"))
                             }, "LatestVideosFromFollowedCarousel")(e)
                         }
                     },
@@ -4045,7 +4043,7 @@ webpackJsonp([47], {
                             limit: 30
                         }
                     }
-                }), Object(k.c)("FollowingIndexPage", {
+                }), Object(k.d)("FollowingIndexPage", {
                     destination: b.a.DirectoryFollowingIndex
                 }), Object(w.a)({
                     location: _.PageviewLocation.Directory,
@@ -4142,7 +4140,7 @@ webpackJsonp([47], {
                             }
                         })
                     }
-                }), Object(k.c)("FollowingLivePage", {
+                }), Object(k.d)("FollowingLivePage", {
                     destination: b.a.DirectoryFollowingLiveChannels
                 }), Object(w.a)({
                     location: _.PageviewLocation.Directory,
@@ -4159,7 +4157,7 @@ webpackJsonp([47], {
                 })], t)
             }(g.Component),
             de = function() {
-                return n.e(78).then(n.bind(null, "oms2"))
+                return n.e(79).then(n.bind(null, "oms2"))
             },
             ue = n("wx0k"),
             ce = n("F8kA"),
@@ -4206,7 +4204,7 @@ webpackJsonp([47], {
                         directoryType: this.props.type,
                         trackingMedium: _.PageviewMedium.BrowseForYou
                     })))) : null
-                }, t = p.__decorate([Object(k.c)("ForYouCommunityStreamsRow")], t)
+                }, t = p.__decorate([Object(k.d)("ForYouCommunityStreamsRow")], t)
             }(g.Component),
             he = n("giFn"),
             fe = 7,
@@ -4281,7 +4279,7 @@ webpackJsonp([47], {
                     skip: function(e) {
                         return !e.channelLogins || !e.channelLogins.length
                     }
-                }), Object(k.c)("ForYouCommunityStreamsRowContainer")], t)
+                }), Object(k.d)("ForYouCommunityStreamsRowContainer")], t)
             }(g.Component),
             ye = (n("4az8"), n("QjjF")),
             Se = "for-you__empty",
@@ -4434,7 +4432,7 @@ webpackJsonp([47], {
                     }, g.createElement(O, {
                         activeCategory: _.SpadeFollowingCategory.ForYou
                     }), this.renderPage()))
-                }, t = p.__decorate([Object(k.c)("ForYouPage", {
+                }, t = p.__decorate([Object(k.d)("ForYouPage", {
                     destination: b.a.ForYou
                 }), Object(S.a)(ye, {
                     options: {
@@ -4475,7 +4473,7 @@ webpackJsonp([47], {
                     }))) : (this.props.login(), g.createElement(f.a, {
                         message: Object(h.d)("You must be logged in to view this page", "FollowingRoot")
                     }))
-                }, t = p.__decorate([Object(k.c)("FollowingPageRoot", {
+                }, t = p.__decorate([Object(k.d)("FollowingPageRoot", {
                     autoReportInteractive: !0
                 })], t)
             }(g.Component),
@@ -5218,7 +5216,7 @@ webpackJsonp([47], {
             return function(t) {
                 clearTimeout(u), u = setTimeout(function() {
                     return i.__awaiter(e, void 0, void 0, function() {
-                        var e, n, l, u, c, m, p;
+                        var e, n, l, u, c, m;
                         return i.__generator(this, function(i) {
                             switch (i.label) {
                                 case 0:
@@ -5227,11 +5225,11 @@ webpackJsonp([47], {
                                     return i.trys.push([1, 3, , 4]), n = r.n.intl.getLanguageCode(), l = s(n), u = o.a.getAPIURL("/api/lol/champions?" + a.stringify({
                                         locale: l,
                                         on_site: 1
-                                    })).toString(), c = t, m = d.f, [4, o.a.get(u)];
+                                    })).toString(), [4, o.a.get(u)];
                                 case 2:
-                                    return c.apply(void 0, [m.apply(void 0, [i.sent().body || null])]), [3, 4];
+                                    return (c = i.sent()).body ? t(Object(d.f)(c.body)) : (e.warn("LoL champion API response body was empty."), t(Object(d.d)(!0))), [3, 4];
                                 case 3:
-                                    throw p = i.sent(), t(Object(d.d)(!0)), e.error(p, "Failed to load LoL champion data"), p;
+                                    throw m = i.sent(), t(Object(d.d)(!0)), e.error(m, "Failed to load LoL champion data"), m;
                                 case 4:
                                     return [2]
                             }
@@ -7231,7 +7229,7 @@ webpackJsonp([47], {
                     }
                 }, t
             }(o.Component)),
-            v = Object(c.c)("VideoPreviewCard")(g)
+            v = Object(c.d)("VideoPreviewCard")(g)
     },
     c8Oh: function(e, t, n) {
         "use strict";
@@ -9735,4 +9733,4 @@ webpackJsonp([47], {
     },
     "zH/G": function(e, t) {}
 });
-//# sourceMappingURL=pages.following-421e64bc7f64a7be321872b03483cd7e.js.map
+//# sourceMappingURL=pages.following-7979bb4d219680404ee6b8f715bfeeca.js.map

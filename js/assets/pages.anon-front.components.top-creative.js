@@ -1,4 +1,4 @@
-webpackJsonp([67, 69], {
+webpackJsonp([68, 70], {
     "+I3D": function(e, t, n) {
         "use strict";
         var a = n("TToO"),
@@ -181,7 +181,7 @@ webpackJsonp([67, 69], {
                     }, this.renderCategoryContent())))
                 }, t
             }(i.Component),
-            v = Object(o.c)("CommunityCategory")(h);
+            v = Object(o.d)("CommunityCategory")(h);
         n.d(t, !1, function() {
             return "community-category"
         }), n.d(t, !1, function() {
@@ -378,7 +378,7 @@ webpackJsonp([67, 69], {
                     }, Object(u.d)("Log in", "MinimalUser")))
                 }, t.prototype.reportInteractive = function() {
                     !this.props.data || this.props.data.loading && !this.props.data.error || this.props.latencyTracking.reportInteractive()
-                }, t = m.__decorate([Object(v.c)("MinimalUser"), Object(g.a)(k)], t)
+                }, t = m.__decorate([Object(v.d)("MinimalUser"), Object(g.a)(k)], t)
             }(c.Component)),
             b = Object(a.a)(function(e) {
                 return {
@@ -510,7 +510,7 @@ webpackJsonp([67, 69], {
                             }
                         }
                     }
-                }), Object(m.c)("TopCreative")], t)
+                }), Object(m.d)("TopCreative")], t)
             }(i.Component);
         n.d(t, "TOP_CREATIVE_WITH_STREAMS_LIMIT", function() {
             return 3
@@ -550,7 +550,6 @@ webpackJsonp([67, 69], {
                         return !1
                     }, t.trackImpression = function() {
                         var e = {
-                            channel: t.props.streamNode.title,
                             channel_id: t.props.streamNode.id,
                             action: f.a.Impression,
                             parent_game: t.props.streamNode.game ? t.props.streamNode.game.name : "",
@@ -559,7 +558,6 @@ webpackJsonp([67, 69], {
                         Object(f.c)(e)
                     }, t.trackClickEvent = function() {
                         var e = {
-                            channel: t.props.streamNode.title,
                             channel_id: t.props.streamNode.id,
                             action: f.a.Click,
                             parent_game: t.props.streamNode.game ? t.props.streamNode.game.name : "",
@@ -772,7 +770,7 @@ webpackJsonp([67, 69], {
                     }, this.renderStreams()))
                 }, t
             }(i.Component),
-            N = Object(l.c)("CommunityStreamsRow")(E);
+            N = Object(l.d)("CommunityStreamsRow")(E);
         n.d(t, !1, function() {
             return w
         }), n.d(t, !1, function() {
@@ -1235,7 +1233,7 @@ webpackJsonp([67, 69], {
             r = function() {
                 return a.__awaiter(i, void 0, void 0, function() {
                     return a.__generator(this, function(e) {
-                        return [2, n.e(77).then(n.bind(null, "Revh"))]
+                        return [2, n.e(78).then(n.bind(null, "Revh"))]
                     })
                 })
             }
@@ -1615,7 +1613,7 @@ webpackJsonp([67, 69], {
                             }
                         }
                     }
-                }), Object(h.c)("StreamFlagComponent", {
+                }), Object(h.d)("StreamFlagComponent", {
                     autoReportInteractive: !0
                 })], t)
             }(i.Component),
@@ -2645,7 +2643,7 @@ webpackJsonp([67, 69], {
                     return this.props.isScrollable ? i.createElement(r.b, null, this.renderCards(!0)) : this.renderCards(!1)
                 }, t
             }(i.Component),
-            w = Object(s.c)("CommunityCardRow")(C);
+            w = Object(s.d)("CommunityCardRow")(C);
         n.d(t, !1, function() {
             return _
         }), n.d(t, !1, function() {
@@ -3141,7 +3139,7 @@ webpackJsonp([67, 69], {
                     }, i.createElement(S.a, {
                         isOnboarding: !0
                     }))))) : (o.i.warn("OnboardingTopNavComponent is only meant to be used for logged in users."), null)
-                }, t = a.__decorate([Object(f.c)("OnboardingTopNav")], t)
+                }, t = a.__decorate([Object(f.d)("OnboardingTopNav")], t)
             }(i.Component)),
             C = Object(y.a)(function(e) {
                 return {
@@ -3265,7 +3263,7 @@ webpackJsonp([67, 69], {
                         return a.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return o.n.setPageTitle(Object(o.d)("Onboarding", "CommunitySelectionPage")), [4, o.n.experiments.getAssignment(w.j)];
+                                    return o.n.setPageTitle(Object(o.d)("Welcome", "CommunitySelectionPage")), [4, o.n.experiments.getAssignment(w.j)];
                                 case 1:
                                     return e = t.sent() || w.a, this.setState({
                                         assignment: e,
@@ -3429,7 +3427,7 @@ webpackJsonp([67, 69], {
                         limit: 10
                     }
                 }
-            }), Object(f.c)("CommunitySelectionPage", {
+            }), Object(f.d)("CommunitySelectionPage", {
                 destination: p.a.OnboardingIndex
             }), Object(d.a)({
                 location: g.PageviewLocation.OnboardingCommunitySelection
@@ -4034,7 +4032,7 @@ webpackJsonp([67, 69], {
                             }
                         })
                     })
-                }, t = a.__decorate([Object(s.c)("FeaturedGenres")], t)
+                }, t = a.__decorate([Object(s.d)("FeaturedGenres")], t)
             }(i.Component));
         n.d(t, "GENRE_DISPLAY_LIMIT", function() {
             return 3
@@ -4047,4 +4045,4 @@ webpackJsonp([67, 69], {
         })
     }
 });
-//# sourceMappingURL=pages.anon-front.components.top-creative-c1f4d55f123d9340d23534a2109a1ce1.js.map
+//# sourceMappingURL=pages.anon-front.components.top-creative-533a1679077c6754c1605761e695f65a.js.map

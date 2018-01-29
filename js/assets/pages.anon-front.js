@@ -22,7 +22,7 @@ webpackJsonp([48], {
                     return r.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(66).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(67).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -34,7 +34,7 @@ webpackJsonp([48], {
                     return r.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(65).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(66).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -919,7 +919,7 @@ webpackJsonp([48], {
                         alignItems: p.c.Center,
                         justifyContent: p.U.Center
                     }, o.createElement(p._23, null, e.toString())))))
-                }, t = r.__decorate([Object(m.c)("PrimeOfferHeader")], t)
+                }, t = r.__decorate([Object(m.d)("PrimeOfferHeader")], t)
             }(o.Component)),
             g = n("zCIC"),
             h = function(e) {
@@ -953,7 +953,7 @@ webpackJsonp([48], {
                         type: p._28.P,
                         bold: !0
                     }, Object(l.d)("Free in-game loot every month, plus surprises", "PrimeEmpty")), o.createElement("div", null, e))
-                }, t = r.__decorate([Object(m.c)("PrimeEmpty")], t)
+                }, t = r.__decorate([Object(m.d)("PrimeEmpty")], t)
             }(o.Component),
             v = n("lfvs"),
             k = n("oIkB"),
@@ -988,7 +988,7 @@ webpackJsonp([48], {
                     }, n)
                 }, t.prototype.getButtonText = function() {
                     return this.props.offerType === _.a.CLAIM_CODE ? Object(l.d)("Get Code", "PrimeClaimButton") : this.props.offerType === _.a.EXTERNAL_OFFER ? Object(l.d)("Learn More", "PrimeClaimButton") : Object(l.d)("Claim Offer", "PrimeClaimButton")
-                }, t = r.__decorate([Object(c.a)(y), Object(m.c)("PrimeClaimButton")], t)
+                }, t = r.__decorate([Object(c.a)(y), Object(m.d)("PrimeClaimButton")], t)
             }(o.Component),
             S = function(e) {
                 function t() {
@@ -1030,7 +1030,7 @@ webpackJsonp([48], {
                     }, o.createElement(v, {
                         source: this.props.description || ""
                     })))), e
-                }, t = r.__decorate([Object(m.c)("PrimeClaimDescription")], t)
+                }, t = r.__decorate([Object(m.d)("PrimeClaimDescription")], t)
             }(o.Component),
             E = n("Hs3O"),
             O = function(e) {
@@ -1053,7 +1053,7 @@ webpackJsonp([48], {
                         linkTo: this.getLink(),
                         targetBlank: !0
                     }, Object(l.d)("Start Your Free Trial", "PrimeUpsellButton")))
-                }, t = r.__decorate([Object(m.c)("PrimeUpsellButton")], t)
+                }, t = r.__decorate([Object(m.d)("PrimeUpsellButton")], t)
             }(o.Component),
             N = n("e2wA"),
             C = function(e) {
@@ -1085,7 +1085,7 @@ webpackJsonp([48], {
                     return this.props.offerType === _.a.EXTERNAL_OFFER ? null : o.createElement(S, {
                         description: this.props.offerDescription
                     })
-                }, t = r.__decorate([Object(c.a)(N), Object(m.c)("PrimeInstructions")], t)
+                }, t = r.__decorate([Object(c.a)(N), Object(m.d)("PrimeInstructions")], t)
             }(o.Component),
             w = function(e) {
                 function t() {
@@ -1130,7 +1130,7 @@ webpackJsonp([48], {
                         width: 20,
                         height: 20
                     })), Object(l.d)("Something has gone wrong. Please try again later.", "PrimeError"))))
-                }, t = r.__decorate([Object(m.c)("PrimeError")], t)
+                }, t = r.__decorate([Object(m.d)("PrimeError")], t)
             }(o.Component),
             F = (n("nFc2"), function(e) {
                 function t() {
@@ -1172,7 +1172,7 @@ webpackJsonp([48], {
                         value: this.props.clipboardText,
                         readOnly: !0
                     }))
-                }, t = r.__decorate([Object(m.c)("CopyButton")], t)
+                }, t = r.__decorate([Object(m.d)("CopyButton")], t)
             }(o.Component)),
             x = function(e) {
                 function t() {
@@ -1207,7 +1207,7 @@ webpackJsonp([48], {
                     })), o.createElement(p.V, null, o.createElement(F, {
                         clipboardText: this.state.value
                     }))) : null
-                }, t = r.__decorate([Object(m.c)("CopyableItem")], t)
+                }, t = r.__decorate([Object(m.d)("CopyableItem")], t)
             }(o.Component),
             L = function(e) {
                 function t() {
@@ -1235,7 +1235,7 @@ webpackJsonp([48], {
                             }
                         }
                     })))
-                }, t = r.__decorate([Object(m.c)("PrimeClaimInstructions")], t)
+                }, t = r.__decorate([Object(m.d)("PrimeClaimInstructions")], t)
             }(o.Component),
             T = function(e) {
                 function t() {
@@ -1293,7 +1293,7 @@ webpackJsonp([48], {
                     if (this.props.claimInstructions) return o.createElement(L, {
                         claimInstructions: this.props.claimInstructions || ""
                     })
-                }, t = r.__decorate([Object(m.c)("PrimeRedeem")], t)
+                }, t = r.__decorate([Object(m.d)("PrimeRedeem")], t)
             }(o.Component),
             I = n("el3o"),
             P = (n("v+rJ"), n("rM0q")),
@@ -1425,7 +1425,7 @@ webpackJsonp([48], {
                     name: "data"
                 }), Object(c.a)(I, {
                     name: "claimPrimeOffer"
-                }), Object(m.c)("PrimeOffer")], t)
+                }), Object(m.d)("PrimeOffer")], t)
             }(o.Component),
             R = function(e) {
                 function t() {
@@ -1473,7 +1473,7 @@ webpackJsonp([48], {
                     }, o.createElement(p._3, {
                         height: 40
                     })))
-                }, t = r.__decorate([Object(m.c)("PrimeOfferPlaceholder")], t)
+                }, t = r.__decorate([Object(m.d)("PrimeOfferPlaceholder")], t)
             }(o.Component),
             V = (n("7L7x"), function(e) {
                 function t() {
@@ -1508,7 +1508,7 @@ webpackJsonp([48], {
                     })), o.createElement(p._23, {
                         type: p._28.P
                     }, Object(l.d)("Get free game loot like this every month plus surprises, ad-free viewing, and loads more with Twitch Prime.", "PrimeUpsell")), o.createElement(O, null))
-                }, t = r.__decorate([Object(m.c)("PrimeUpsell")], t)
+                }, t = r.__decorate([Object(m.d)("PrimeUpsell")], t)
             }(o.Component)),
             A = n("eY4D"),
             U = (n("DgR+"), n("65au")),
@@ -1592,7 +1592,7 @@ webpackJsonp([48], {
                     }
                 }), Object(c.a)(U, {
                     name: "userData"
-                }), Object(m.c)("PrimeOfferList")], t)
+                }), Object(m.d)("PrimeOfferList")], t)
             }(o.Component),
             B = n("tTbW"),
             H = (n("9856"), n("wjhu")),
@@ -1714,7 +1714,7 @@ webpackJsonp([48], {
                     }
                 }), Object(c.a)(H, {
                     name: "userData"
-                }), Object(m.c)("PrimeOffers", {
+                }), Object(m.d)("PrimeOffers", {
                     autoReportInteractive: !0
                 })], t)
             }(o.Component),
@@ -1841,7 +1841,7 @@ webpackJsonp([48], {
                             }
                         }
                     }
-                }), Object(m.c)("BlueBarComponent")], t)
+                }), Object(m.d)("BlueBarComponent")], t)
             }(o.Component);
         n.d(t, "b", function() {
             return G
@@ -1863,7 +1863,7 @@ webpackJsonp([48], {
             s = n("+Znq"),
             c = n("CSlQ"),
             d = n("Odds"),
-            u = (n("//Ty"), Object(c.c)("Footer", {
+            u = (n("//Ty"), Object(c.d)("Footer", {
                 autoReportInteractive: !0
             })(function() {
                 return i.createElement(d.V, {
@@ -2174,7 +2174,7 @@ webpackJsonp([48], {
                     }, e, i.createElement(d.O, null, this.getItems()), t)
                 }, t.prototype.postRender = function() {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
-                }, t = r.__decorate([Object(O.a)(C), Object(c.c)("FeaturedGames")], t)
+                }, t = r.__decorate([Object(O.a)(C), Object(c.d)("FeaturedGames")], t)
             }(i.Component)),
             F = n("+GT7"),
             x = n("SZoP");
@@ -2377,13 +2377,13 @@ webpackJsonp([48], {
                             }
                         }
                     }
-                }), Object(c.c)("TopChannels")], t)
+                }), Object(c.d)("TopChannels")], t)
             }(i.Component)),
             I = (n("9zTP"), m.a.wrap(function() {
-                return n.e(69).then(n.bind(null, "yEZg"))
+                return n.e(70).then(n.bind(null, "yEZg"))
             }, "FeaturedGenres")),
             P = m.a.wrap(function() {
-                return n.e(67).then(n.bind(null, "2hMh"))
+                return n.e(68).then(n.bind(null, "2hMh"))
             }, "TopCreative"),
             D = function(e) {
                 function t() {
@@ -2617,7 +2617,7 @@ webpackJsonp([48], {
                     })), i.createElement(u, null))))
                 }, t.prototype.componentWillUnmount = function() {
                     k.g.removeListener(k.e, this.onSlotAdded)
-                }, t = r.__decorate([Object(c.c)("AnonFrontPage", {
+                }, t = r.__decorate([Object(c.d)("AnonFrontPage", {
                     destination: f.a.Index
                 }), Object(p.a)({
                     location: h.PageviewLocation.FrontPage
@@ -3708,7 +3708,7 @@ webpackJsonp([48], {
             return function(t) {
                 clearTimeout(d), d = setTimeout(function() {
                     return a.__awaiter(e, void 0, void 0, function() {
-                        var e, n, l, d, u, m, p;
+                        var e, n, l, d, u, m;
                         return a.__generator(this, function(a) {
                             switch (a.label) {
                                 case 0:
@@ -3717,11 +3717,11 @@ webpackJsonp([48], {
                                     return a.trys.push([1, 3, , 4]), n = i.n.intl.getLanguageCode(), l = s(n), d = o.a.getAPIURL("/api/lol/champions?" + r.stringify({
                                         locale: l,
                                         on_site: 1
-                                    })).toString(), u = t, m = c.f, [4, o.a.get(d)];
+                                    })).toString(), [4, o.a.get(d)];
                                 case 2:
-                                    return u.apply(void 0, [m.apply(void 0, [a.sent().body || null])]), [3, 4];
+                                    return (u = a.sent()).body ? t(Object(c.f)(u.body)) : (e.warn("LoL champion API response body was empty."), t(Object(c.d)(!0))), [3, 4];
                                 case 3:
-                                    throw p = a.sent(), t(Object(c.d)(!0)), e.error(p, "Failed to load LoL champion data"), p;
+                                    throw m = a.sent(), t(Object(c.d)(!0)), e.error(m, "Failed to load LoL champion data"), m;
                                 case 4:
                                     return [2]
                             }
@@ -4070,7 +4070,7 @@ webpackJsonp([48], {
                         }
                     }
                 }
-            }), Object(p.c)("FeaturedContent")], t)
+            }), Object(p.d)("FeaturedContent")], t)
         }(i.Component)
     },
     Xg86: function(e, t, n) {
@@ -4211,7 +4211,7 @@ webpackJsonp([48], {
                         }
                     }
                 }
-            }), Object(m.c)("FeaturedBroadcasters")], t)
+            }), Object(m.d)("FeaturedBroadcasters")], t)
         }(o.Component)
     },
     dXGo: function(e, t) {
@@ -4926,7 +4926,7 @@ webpackJsonp([48], {
                         width: 20,
                         height: 20
                     })) : "")))))
-                }, t = o.__decorate([Object(h.c)("CarouselCard")], t)
+                }, t = o.__decorate([Object(h.d)("CarouselCard")], t)
             }(m.Component),
             b = n("lfvs"),
             S = n("F8kA"),
@@ -5424,7 +5424,7 @@ webpackJsonp([48], {
                             y: 1
                         }
                     }, this.renderLeftButton(), this.getCardsRender(), this.renderRightButton())))
-                }, t = o.__decorate([Object(h.c)("CarouselPlayer")], t)
+                }, t = o.__decorate([Object(h.d)("CarouselPlayer")], t)
             }(m.Component),
             P = Object(c.a)(null, function(e) {
                 return Object(d.bindActionCreators)({
@@ -6238,4 +6238,4 @@ webpackJsonp([48], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.anon-front-034e2b2c61c933a3a08f643172a9f5a6.js.map
+//# sourceMappingURL=pages.anon-front-478607a258b1715521fc512ff1a7560d.js.map

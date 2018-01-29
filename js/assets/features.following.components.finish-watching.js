@@ -1,4 +1,4 @@
-webpackJsonp([75], {
+webpackJsonp([76], {
     crkb: function(e, i, n) {
         "use strict";
         Object.defineProperty(i, "__esModule", {
@@ -53,7 +53,7 @@ webpackJsonp([75], {
                         limit: 30
                     }
                 }
-            }), Object(c.c)("ViewedVideos"))(p);
+            }), Object(c.d)("ViewedVideos"))(p);
         n.d(i, "FinishWatchingTowerComponent", function() {
             return p
         }), n.d(i, "FinishWatchingTower", function() {
@@ -209,4 +209,4 @@ webpackJsonp([75], {
         }(n("qjMx").definitions)), e.exports = t
     }
 });
-//# sourceMappingURL=features.following.components.finish-watching-2a1850ab065ceb535d672a17443c86d6.js.map
+//# sourceMappingURL=features.following.components.finish-watching-dd10284c447068e536d077d7f3d23a85.js.map

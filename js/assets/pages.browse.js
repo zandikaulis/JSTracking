@@ -22,7 +22,7 @@ webpackJsonp([50], {
                     return r.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(66).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(67).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -34,7 +34,7 @@ webpackJsonp([50], {
                     return r.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(65).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(66).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -910,7 +910,7 @@ webpackJsonp([50], {
                         onClick: this.props.clearLanguagePreferences,
                         "data-a-target": "language-clear-all"
                     }, Object(c.d)("Clear all", "LanguageSelectMenu"))))))
-                }, t = s.__decorate([Object(p.c)("LanguageSelectMenu")], t)
+                }, t = s.__decorate([Object(p.d)("LanguageSelectMenu")], t)
             }(l.Component)),
             y = Object(a.a)(function(e) {
                 return {
@@ -1473,7 +1473,7 @@ webpackJsonp([50], {
                             }
                         }
                     }
-                }), Object(y.c)("StreamFlagComponent", {
+                }), Object(y.d)("StreamFlagComponent", {
                     autoReportInteractive: !0
                 })], t)
             }(r.Component),
@@ -1839,7 +1839,7 @@ webpackJsonp([50], {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive(), this.updateDisplayAdOrder()
                 }, t
             }(l.Component),
-            F = Object(c.compose)(Object(g.c)("BrowseDirectory"), Object(S.a)(B, {
+            F = Object(c.compose)(Object(g.d)("BrowseDirectory"), Object(S.a)(B, {
                 options: function(e) {
                     return {
                         fetchPolicy: "network-only",
@@ -1908,7 +1908,7 @@ webpackJsonp([50], {
                     })
                 }, t
             }(l.Component),
-            V = Object(c.compose)(Object(g.c)("DirectoryPage", {
+            V = Object(c.compose)(Object(g.d)("DirectoryPage", {
                 autoReportInteractive: !0,
                 destination: m.a.BrowseCommunities
             }), Object(u.a)({
@@ -1946,7 +1946,7 @@ webpackJsonp([50], {
                     }, l.createElement(U, null))
                 }, t
             }(l.Component),
-            M = Object(c.compose)(Object(g.c)("DirectoryPage", {
+            M = Object(c.compose)(Object(g.d)("DirectoryPage", {
                 autoReportInteractive: !0,
                 destination: m.a.BrowseCreative
             }), Object(u.a)({
@@ -1962,7 +1962,7 @@ webpackJsonp([50], {
                     })
                 }, t
             }(l.Component),
-            W = Object(c.compose)(Object(g.c)("DirectoryPage", {
+            W = Object(c.compose)(Object(g.d)("DirectoryPage", {
                 autoReportInteractive: !0,
                 destination: m.a.BrowseGamesAndCommunities
             }), Object(u.a)({
@@ -2332,7 +2332,7 @@ webpackJsonp([50], {
                             }
                         }
                     }
-                }), Object(g.c)("PopularInternationalSection", {
+                }), Object(g.d)("PopularInternationalSection", {
                     autoReportInteractive: !0
                 })], t)
             }(l.Component),
@@ -2525,7 +2525,7 @@ webpackJsonp([50], {
                             }
                         })
                     }
-                }), Object(g.c)("DirectoryPopularPage", {
+                }), Object(g.d)("DirectoryPopularPage", {
                     destination: m.a.DirectoryPopular
                 }), Object(u.a)({
                     location: p.PageviewLocation.DirectoryPopular
@@ -2700,7 +2700,7 @@ webpackJsonp([50], {
                             }
                         })
                     }
-                }), Object(g.c)("DirectoryPopularByLanguagePage", {
+                }), Object(g.d)("DirectoryPopularByLanguagePage", {
                     destination: m.a.DirectoryPopularByLanguage
                 }), Object(u.a)({
                     location: p.PageviewLocation.DirectoryPopular,
@@ -3641,7 +3641,7 @@ webpackJsonp([50], {
             return function(t) {
                 clearTimeout(d), d = setTimeout(function() {
                     return a.__awaiter(e, void 0, void 0, function() {
-                        var e, n, s, d, u, m, p;
+                        var e, n, s, d, u, m;
                         return a.__generator(this, function(a) {
                             switch (a.label) {
                                 case 0:
@@ -3650,11 +3650,11 @@ webpackJsonp([50], {
                                     return a.trys.push([1, 3, , 4]), n = i.n.intl.getLanguageCode(), s = l(n), d = o.a.getAPIURL("/api/lol/champions?" + r.stringify({
                                         locale: s,
                                         on_site: 1
-                                    })).toString(), u = t, m = c.f, [4, o.a.get(d)];
+                                    })).toString(), [4, o.a.get(d)];
                                 case 2:
-                                    return u.apply(void 0, [m.apply(void 0, [a.sent().body || null])]), [3, 4];
+                                    return (u = a.sent()).body ? t(Object(c.f)(u.body)) : (e.warn("LoL champion API response body was empty."), t(Object(c.d)(!0))), [3, 4];
                                 case 3:
-                                    throw p = a.sent(), t(Object(c.d)(!0)), e.error(p, "Failed to load LoL champion data"), p;
+                                    throw m = a.sent(), t(Object(c.d)(!0)), e.error(m, "Failed to load LoL champion data"), m;
                                 case 4:
                                     return [2]
                             }
@@ -5000,4 +5000,4 @@ webpackJsonp([50], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.browse-66577116b2945f14ecb21446be3b2996.js.map
+//# sourceMappingURL=pages.browse-2fd4779768b8944a5b369fc24b514d6f.js.map

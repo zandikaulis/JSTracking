@@ -1,4 +1,4 @@
-webpackJsonp([72], {
+webpackJsonp([73], {
     "97Ye": function(e, t, n) {
         var i = {
             kind: "Document",
@@ -362,7 +362,7 @@ webpackJsonp([72], {
                 }));
                 var r
             },
-            S = Object(p.c)("VideoCarousel", {
+            S = Object(p.d)("VideoCarousel", {
                 autoReportInteractive: !0
             })(g);
         n.d(t, "a", function() {
@@ -424,7 +424,7 @@ webpackJsonp([72], {
                     })) : null
                 }, t
             }(r.Component)),
-            v = Object(o.compose)(Object(s.a)(p), Object(d.c)("LatestVideosFromFollowedCarousel"))(m)
+            v = Object(o.compose)(Object(s.a)(p), Object(d.d)("LatestVideosFromFollowedCarousel"))(m)
     },
     dc2a: function(e, t, n) {
         "use strict";
@@ -438,4 +438,4 @@ webpackJsonp([72], {
     },
     yF7E: function(e, t) {}
 });
-//# sourceMappingURL=features.video-carousel.components.latest-videos-from-followed-carousel.component-3fd8db8fac5c7ef2d8eb1f5d4231feab.js.map
+//# sourceMappingURL=features.video-carousel.components.latest-videos-from-followed-carousel.component-0cb66a9b2b1315cbc26dd88daf32ac61.js.map

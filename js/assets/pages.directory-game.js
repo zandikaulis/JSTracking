@@ -22,7 +22,7 @@ webpackJsonp([44], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(66).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(67).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -34,7 +34,7 @@ webpackJsonp([44], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(65).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(66).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -1175,7 +1175,7 @@ webpackJsonp([44], {
                     }
                 }, t
             }(r.Component),
-            m = Object(s.c)("EmbedOverlay")(u);
+            m = Object(s.d)("EmbedOverlay")(u);
         n.d(t, !1, function() {
             return d
         }), n.d(t, "b", function() {
@@ -1226,7 +1226,7 @@ webpackJsonp([44], {
                         icon: this.props.iconAsset,
                         id: this.props.id
                     }), this.props.children)
-                }, t = u.__decorate([Object(l.c)("SelectableInput")], t)
+                }, t = u.__decorate([Object(l.d)("SelectableInput")], t)
             }(i.Component)),
             E = n("8Wuk"),
             N = n("2hJ3"),
@@ -1355,7 +1355,7 @@ webpackJsonp([44], {
                     return e.map(function(e) {
                         return t.renderMenuItem(e)
                     })
-                }, t = u.__decorate([Object(L.a)(I), Object(l.c)("ModerationMenu")], t)
+                }, t = u.__decorate([Object(L.a)(I), Object(l.d)("ModerationMenu")], t)
             }(i.Component),
             A = (n("MjlB"), 2e3),
             R = function(e) {
@@ -1506,7 +1506,7 @@ webpackJsonp([44], {
                     })), Object(r.d)("{viewCount, number} views", {
                         viewCount: this.props.clip.viewCount
                     }, "ClipsViewModalContent"))))
-                }, t = u.__decorate([Object(l.c)("ClipsViewModalContent")], t)
+                }, t = u.__decorate([Object(l.d)("ClipsViewModalContent")], t)
             }(i.Component),
             j = (n("GOrw"), function(e) {
                 function t() {
@@ -1570,7 +1570,7 @@ webpackJsonp([44], {
                     })
                 }, t
             }(i.Component)),
-            P = Object(l.c)("ClipsViewModalNavigation")(j),
+            P = Object(l.d)("ClipsViewModalNavigation")(j),
             x = Object(s.a)(null, function(e) {
                 return Object(c.bindActionCreators)({
                     showModal: d.d,
@@ -1631,7 +1631,7 @@ webpackJsonp([44], {
                         closeOnPageNavigation: !0
                     }));
                     var n
-                }, t = u.__decorate([Object(l.c)("ClipsViewModal")], t)
+                }, t = u.__decorate([Object(l.d)("ClipsViewModal")], t)
             }(i.Component),
             B = Object(s.a)(null, function(e) {
                 return Object(c.bindActionCreators)({
@@ -1734,7 +1734,7 @@ webpackJsonp([44], {
                     }, Object(r.d)("{viewCount, number} views", {
                         viewCount: this.props.clip.viewCount
                     }, "ClipsCardView")))))
-                }, t = u.__decorate([Object(l.c)("ClipsCardView")], t)
+                }, t = u.__decorate([Object(l.d)("ClipsCardView")], t)
             }(i.Component)),
             H = Object(s.a)(null, function(e) {
                 return Object(c.bindActionCreators)({
@@ -1807,7 +1807,7 @@ webpackJsonp([44], {
                             "data-a-target": "clips-card-" + n
                         }))
                     })
-                }, t = u.__decorate([Object(l.c)("ClipCards")], t)
+                }, t = u.__decorate([Object(l.d)("ClipCards")], t)
             }(i.Component),
             z = Object(s.a)(null, function(e) {
                 return Object(c.bindActionCreators)({
@@ -1848,7 +1848,7 @@ webpackJsonp([44], {
                     timeFilterValue: e.timeFilterValue
                 })))
             },
-            Q = Object(l.c)("TopClips", {
+            Q = Object(l.d)("TopClips", {
                 autoReportInteractive: !0
             })($);
         n.d(t, !1, function() {
@@ -2116,9 +2116,6 @@ webpackJsonp([44], {
     },
     "68hr": function(e, t, n) {
         "use strict";
-        Object.defineProperty(t, "__esModule", {
-            value: !0
-        });
         var a = n("U7vG"),
             i = n("6sO2"),
             r = n("yWCw"),
@@ -2135,7 +2132,7 @@ webpackJsonp([44], {
                     "data-a-target": "browse-channels-button"
                 }, Object(i.d)("Browse channels", "PageNotFound"))))
             };
-        n.d(t, "PageNotFound", function() {
+        n.d(t, "a", function() {
             return l
         })
     },
@@ -2213,7 +2210,7 @@ webpackJsonp([44], {
                         onClick: this.props.clearLanguagePreferences,
                         "data-a-target": "language-clear-all"
                     }, Object(c.d)("Clear all", "LanguageSelectMenu"))))))
-                }, t = l.__decorate([Object(p.c)("LanguageSelectMenu")], t)
+                }, t = l.__decorate([Object(p.d)("LanguageSelectMenu")], t)
             }(s.Component)),
             f = Object(a.a)(function(e) {
                 return {
@@ -2945,7 +2942,7 @@ webpackJsonp([44], {
                     })
                 }))
             },
-            be = (n("tmqW"), Object(ie.c)("EventCard", {
+            be = (n("tmqW"), Object(ie.d)("EventCard", {
                 autoReportInteractive: !0
             })(function(e) {
                 var t = {
@@ -2967,7 +2964,7 @@ webpackJsonp([44], {
                     bold: !0
                 }, e.title))), e.children)
             })),
-            Se = Object(ie.c)("LiveEvents", {
+            Se = Object(ie.d)("LiveEvents", {
                 autoReportInteractive: !0
             })(function(e) {
                 var t = e.events.map(function(e, t) {
@@ -3003,7 +3000,7 @@ webpackJsonp([44], {
                 return W.createElement(ue.V, null, t)
             }),
             _e = n("mi6k"),
-            Ce = Object(ie.c)("PastEvents", {
+            Ce = Object(ie.d)("PastEvents", {
                 autoReportInteractive: !0
             })(function(e) {
                 var t = e.events.map(function(e, t) {
@@ -3100,14 +3097,14 @@ webpackJsonp([44], {
                     }))
                 }, t = F.__decorate([Object(Y.a)(Ne, {
                     name: "updateEventBroadcastNotifications"
-                }), Object(ie.c)("NotifyMeComponent")], t)
+                }), Object(ie.d)("NotifyMeComponent")], t)
             }(W.Component),
             Oe = Object(q.a)(function(e) {
                 return {
                     isLoggedIn: Object(Ee.d)(e)
                 }
             })(we),
-            De = Object(ie.c)("UpcomingEvents", {
+            De = Object(ie.d)("UpcomingEvents", {
                 autoReportInteractive: !0
             })(function(e) {
                 var t = 0,
@@ -3502,7 +3499,7 @@ webpackJsonp([44], {
                     this.props.latencyTracking.reportInteractive(), this.updateDisplayAdOrder()
                 }, t
             }(W.Component),
-            Pe = Object(ie.c)("DirectoryGrid")(je),
+            Pe = Object(ie.d)("DirectoryGrid")(je),
             xe = Object(q.a)(function(e) {
                 return {
                     firstPageLoaded: e.session.firstPageLoaded,
@@ -3579,7 +3576,7 @@ webpackJsonp([44], {
                             }
                         }
                     }
-                }), Object(ie.c)("DirectoryInternationalSection", {
+                }), Object(ie.d)("DirectoryInternationalSection", {
                     autoReportInteractive: !0
                 })], t)
             }(W.Component),
@@ -3633,7 +3630,7 @@ webpackJsonp([44], {
                                             isLoading: !0
                                         }), i.label = 1;
                                     case 1:
-                                        return i.trys.push([1, 3, , 4]), [4, n.e(66).then(n.bind(null, "e/M0"))];
+                                        return i.trys.push([1, 3, , 4]), [4, n.e(67).then(n.bind(null, "e/M0"))];
                                     case 2:
                                         return e = i.sent(), this.setState({
                                             content: e,
@@ -3765,7 +3762,7 @@ webpackJsonp([44], {
                                             isLoading: !0
                                         }), i.label = 1;
                                     case 1:
-                                        return i.trys.push([1, 3, , 4]), [4, n.e(79).then(n.bind(null, "Dan5"))];
+                                        return i.trys.push([1, 3, , 4]), [4, n.e(80).then(n.bind(null, "Dan5"))];
                                     case 2:
                                         return e = i.sent(), this.setState({
                                             content: e,
@@ -4033,7 +4030,7 @@ webpackJsonp([44], {
                                             isLoading: !0
                                         }), i.label = 1;
                                     case 1:
-                                        return i.trys.push([1, 3, , 4]), [4, n.e(65).then(n.bind(null, "sQp1"))];
+                                        return i.trys.push([1, 3, , 4]), [4, n.e(66).then(n.bind(null, "sQp1"))];
                                     case 2:
                                         return e = i.sent(), this.setState({
                                             content: e,
@@ -4322,7 +4319,7 @@ webpackJsonp([44], {
                             }
                         })
                     }
-                }), Object(ie.c)("DirectoryGamePage", {
+                }), Object(ie.d)("DirectoryGamePage", {
                     destination: Z.a.DirectoryGameIndex
                 }), Object(K.a)({
                     location: te.PageviewLocation.Directory,
@@ -4457,7 +4454,7 @@ webpackJsonp([44], {
                                             })];
                                         case 2:
                                             return (o = c.sent()).status > 300 && a(new Error(Object(Gt.e)(o.status))), this.unsubscribe = T.j.subscribe({
-                                                topic: Object(Ut.k)(r),
+                                                topic: Object(Ut.l)(r),
                                                 success: function() {
                                                     s.timeoutID = setTimeout(function() {
                                                         s.unsubscribe(), a(new Error(Object(Gt.d)()))
@@ -4653,7 +4650,7 @@ webpackJsonp([44], {
                             }
                         }
                     }
-                }), D(), Object(ie.c)("DirectoryAvatar", {
+                }), D(), Object(ie.d)("DirectoryAvatar", {
                     autoReportInteractive: !0
                 })], t)
             }(W.Component)),
@@ -4899,7 +4896,7 @@ webpackJsonp([44], {
                             }
                         }
                     }
-                }), D(), Object(ie.c)("DirectoryBanner", {
+                }), D(), Object(ie.d)("DirectoryBanner", {
                     autoReportInteractive: !0
                 })], t)
             }(W.Component)),
@@ -5060,7 +5057,7 @@ webpackJsonp([44], {
                     name: "followCommunity"
                 }), Object(Y.a)(rn, {
                     name: "unfollowCommunity"
-                }), Object(ie.c)("DirectoryFollowButton")], t)
+                }), Object(ie.d)("DirectoryFollowButton")], t)
             }(W.Component),
             ln = Object(q.a)(function(e) {
                 return {
@@ -5257,7 +5254,7 @@ webpackJsonp([44], {
                     skip: function(e) {
                         return !e.isLoggedIn || !e.communityName
                     }
-                }), Object(ie.c)("SettingsCog", {
+                }), Object(ie.d)("SettingsCog", {
                     autoReportInteractive: !0
                 })], t)
             }(W.Component),
@@ -5418,7 +5415,7 @@ webpackJsonp([44], {
                             }
                         }
                     }
-                }), Object(ie.c)("DirectoryGameTabs")], t)
+                }), Object(ie.d)("DirectoryGameTabs")], t)
             }(W.Component),
             On = function(e) {
                 function t() {
@@ -5438,7 +5435,7 @@ webpackJsonp([44], {
                         directoryName: this.props.directoryName,
                         activeTab: this.props.activeTab
                     }))
-                }, t = F.__decorate([Object(ie.c)("DirectoryHeader", {
+                }, t = F.__decorate([Object(ie.d)("DirectoryHeader", {
                     autoReportInteractive: !0
                 })], t)
             }(W.Component),
@@ -5611,7 +5608,7 @@ webpackJsonp([44], {
                     }
                 }), Object(Y.a)(Vn, {
                     name: "editCommunity"
-                }), Object(ie.c)("DirectoryCommunityDetailsComponent", {
+                }), Object(ie.d)("DirectoryCommunityDetailsComponent", {
                     autoReportInteractive: !0
                 })], t)
             }(W.Component),
@@ -5643,7 +5640,7 @@ webpackJsonp([44], {
                     }, W.createElement(Rn, {
                         communityName: decodeURIComponent(this.props.match.params.encodedCommunityName)
                     }))
-                }, t = F.__decorate([Object(ie.c)("DirectoryCommunityDetailsPage", {
+                }, t = F.__decorate([Object(ie.d)("DirectoryCommunityDetailsPage", {
                     destination: Z.a.DirectoryCommunityDetails
                 })], t)
             }(W.Component),
@@ -5698,7 +5695,7 @@ webpackJsonp([44], {
                     return W.createElement(Q.a, {
                         message: Object(Ln.d)("Game does not exist", "DirectoryGameClipsContent")
                     })
-                }, t = F.__decorate([Object(ie.c)("DirectoryGameClipsContent", {
+                }, t = F.__decorate([Object(ie.d)("DirectoryGameClipsContent", {
                     autoReportInteractive: !0
                 }), Object(Y.a)(Un, {
                     options: function(e) {
@@ -5762,7 +5759,7 @@ webpackJsonp([44], {
                         updateTimeFilter: this.updateTimeFilter,
                         timeFilterValue: this.state.timeFilterValue
                     })
-                }, t = F.__decorate([Object(ie.c)("DirectoryGameClipsPage", {
+                }, t = F.__decorate([Object(ie.d)("DirectoryGameClipsPage", {
                     destination: Z.a.DirectoryGameClips
                 }), Object(K.a)({
                     location: te.PageviewLocation.ClipsGame
@@ -5848,7 +5845,7 @@ webpackJsonp([44], {
                     }))))))
                 }, t
             }(W.Component),
-            Yn = Object(ie.c)("FeaturedContent")(Jn),
+            Yn = Object(ie.d)("FeaturedContent")(Jn),
             Kn = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -5867,7 +5864,7 @@ webpackJsonp([44], {
                     }, this.props.children)
                 }, t
             }(W.Component),
-            Xn = Object(ie.c)("GameDetailsSection")(Kn),
+            Xn = Object(ie.d)("GameDetailsSection")(Kn),
             Zn = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -5884,7 +5881,7 @@ webpackJsonp([44], {
                     }, this.props.title))
                 }, t
             }(W.Component),
-            ea = Object(ie.c)("GameDetailsTitle")(Zn),
+            ea = Object(ie.d)("GameDetailsTitle")(Zn),
             ta = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -5915,7 +5912,7 @@ webpackJsonp([44], {
                     }, n))
                 }, t
             }(W.Component),
-            na = Object(ie.c)("FeaturedContentRow")(ta),
+            na = Object(ie.d)("FeaturedContentRow")(ta),
             aa = n("aFoJ"),
             ia = (n("nAt9"), function(e) {
                 function t() {
@@ -6060,7 +6057,7 @@ webpackJsonp([44], {
                     })), o))
                 }, t
             }(W.Component)),
-            ra = Object(ie.c)("GameDetailBox")(ia),
+            ra = Object(ie.d)("GameDetailBox")(ia),
             oa = Object(Y.a)(aa, {
                 name: "claimPrimeOffer"
             })(ra),
@@ -6243,7 +6240,7 @@ webpackJsonp([44], {
                     }, t))
                 }, t
             }(W.Component),
-            sa = Object(ie.c)("GameInfoSection")(la),
+            sa = Object(ie.d)("GameInfoSection")(la),
             ca = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -6269,7 +6266,7 @@ webpackJsonp([44], {
             }))(ca),
             ua = n("4mYF"),
             ma = n("fc0G"),
-            pa = Object(ie.c)("VideoEmbed", {
+            pa = Object(ie.d)("VideoEmbed", {
                 autoReportInteractive: !0
             })(function(e) {
                 var t = e.video,
@@ -6357,7 +6354,7 @@ webpackJsonp([44], {
                     }, W.createElement(ga.a, {
                         items: this.renderItems()
                     })))
-                }, t = F.__decorate([Object(ie.c)("GameMedia")], t)
+                }, t = F.__decorate([Object(ie.d)("GameMedia")], t)
             }(W.Component)),
             fa = Object(q.a)(function() {
                 return {}
@@ -6462,7 +6459,7 @@ webpackJsonp([44], {
                     }, d))))
                 }, t
             }(W.Component)),
-            ya = Object(ie.c)("InGameContent")(va),
+            ya = Object(ie.d)("InGameContent")(va),
             ka = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -6495,7 +6492,7 @@ webpackJsonp([44], {
                     }, n))
                 }, t
             }(W.Component),
-            ba = Object(ie.c)("InGameContentRow")(ka),
+            ba = Object(ie.d)("InGameContentRow")(ka),
             Sa = n("FEHb"),
             _a = n("xCTX"),
             Ca = function(e) {
@@ -6523,7 +6520,7 @@ webpackJsonp([44], {
                         if (this.props.data.error) return W.createElement(Q.a, {
                             message: Object(T.d)("Error loading data.", "DirectoryGameDetailsPage")
                         });
-                        if (!this.props.data.game || !this.props.data.game.product || !this.props.data.game.product.id) return W.createElement(qn.PageNotFound, null)
+                        if (!this.props.data.game || !this.props.data.game.product || !this.props.data.game.product.id) return W.createElement(qn.a, null)
                     }
                     var e = null,
                         t = null,
@@ -6594,7 +6591,7 @@ webpackJsonp([44], {
                             }
                         }
                     }
-                }), Object(ie.c)("DirectoryGameDetailsPage", {
+                }), Object(ie.d)("DirectoryGameDetailsPage", {
                     destination: Z.a.DirectoryGameDetails
                 }), Object(K.a)({
                     location: te.PageviewLocation.GameDetail
@@ -6700,7 +6697,7 @@ webpackJsonp([44], {
                             }
                         })
                     }
-                }), Object(ie.c)("DirectoryGameVideosPage", {
+                }), Object(ie.d)("DirectoryGameVideosPage", {
                     destination: Z.a.DirectoryGameVideos
                 }), Object(K.a)({
                     location: te.PageviewLocation.Directory,
@@ -8129,7 +8126,7 @@ webpackJsonp([44], {
                             }
                         }
                     }
-                }), Object(f.c)("StreamFlagComponent", {
+                }), Object(f.d)("StreamFlagComponent", {
                     autoReportInteractive: !0
                 })], t)
             }(i.Component),
@@ -9415,7 +9412,7 @@ webpackJsonp([44], {
                     placeholderItems: 20
                 }, t)
             },
-            c = Object(i.c)("VideoTower", {
+            c = Object(i.d)("VideoTower", {
                 autoReportInteractive: !0
             })(s);
         n.d(t, !1, function() {
@@ -10533,7 +10530,7 @@ webpackJsonp([44], {
                         attachRight: !0,
                         fullHeight: !0
                     }, this.renderNavButton(a.Next, !this.state.childrenRendered || this.isForwardButtonDisabled(), this.moveCarouselForward))))
-                }, t = i.__decorate([Object(s.c)("MediaCarousel", {
+                }, t = i.__decorate([Object(s.d)("MediaCarousel", {
                     autoReportInteractive: !0
                 })], t)
             }(o.Component)
@@ -11127,7 +11124,7 @@ webpackJsonp([44], {
             return function(t) {
                 clearTimeout(d), d = setTimeout(function() {
                     return a.__awaiter(e, void 0, void 0, function() {
-                        var e, n, l, d, u, m, p;
+                        var e, n, l, d, u, m;
                         return a.__generator(this, function(a) {
                             switch (a.label) {
                                 case 0:
@@ -11136,11 +11133,11 @@ webpackJsonp([44], {
                                     return a.trys.push([1, 3, , 4]), n = r.n.intl.getLanguageCode(), l = s(n), d = o.a.getAPIURL("/api/lol/champions?" + i.stringify({
                                         locale: l,
                                         on_site: 1
-                                    })).toString(), u = t, m = c.f, [4, o.a.get(d)];
+                                    })).toString(), [4, o.a.get(d)];
                                 case 2:
-                                    return u.apply(void 0, [m.apply(void 0, [a.sent().body || null])]), [3, 4];
+                                    return (u = a.sent()).body ? t(Object(c.f)(u.body)) : (e.warn("LoL champion API response body was empty."), t(Object(c.d)(!0))), [3, 4];
                                 case 3:
-                                    throw p = a.sent(), t(Object(c.d)(!0)), e.error(p, "Failed to load LoL champion data"), p;
+                                    throw m = a.sent(), t(Object(c.d)(!0)), e.error(m, "Failed to load LoL champion data"), m;
                                 case 4:
                                     return [2]
                             }
@@ -11229,7 +11226,7 @@ webpackJsonp([44], {
                     })))
                 }, t
             }(r.Component),
-            f = Object(s.c)("TopClipsTimeFilter")(h)
+            f = Object(s.d)("TopClipsTimeFilter")(h)
     },
     QG7y: function(e, t, n) {
         "use strict";
@@ -13054,7 +13051,7 @@ webpackJsonp([44], {
                     }
                 }, t
             }(o.Component)),
-            h = Object(u.c)("VideoPreviewCard")(g)
+            h = Object(u.d)("VideoPreviewCard")(g)
     },
     aFoJ: function(e, t) {
         var n = {
@@ -16746,7 +16743,7 @@ webpackJsonp([44], {
                     })
                 }, t
             }(r.Component),
-            f = Object(m.c)("ClipsModalBanUser")(Object(u.a)(function(e) {
+            f = Object(m.d)("ClipsModalBanUser")(Object(u.a)(function(e) {
                 return {
                     channelID: e.clip.broadcaster.id
                 }
@@ -16938,7 +16935,7 @@ webpackJsonp([44], {
                     })
                 }, t
             }(r.Component),
-            D = Object(C.compose)(Object(m.c)("ClipsModalDeleteAll"), a({
+            D = Object(C.compose)(Object(m.d)("ClipsModalDeleteAll"), a({
                 props: function(e) {
                     return {
                         deleteAllClips: function(t, n) {
@@ -18016,4 +18013,4 @@ webpackJsonp([44], {
     zSAx: function(e, t) {},
     zu64: function(e, t) {}
 });
-//# sourceMappingURL=pages.directory-game-9f435488036bd7ef0ef0686eec6199d4.js.map
+//# sourceMappingURL=pages.directory-game-4d92dfbd551302e3d32e134a5d00b240.js.map

@@ -16648,7 +16648,7 @@ webpackJsonp([34], {
                         isDisabled: this.state.isDisabled,
                         onMoveClick: this.handleMoveFeaturedChannel
                     }))
-                }, t = l.__decorate([Object(f.c)("FeaturedChannelsPage", {
+                }, t = l.__decorate([Object(f.d)("FeaturedChannelsPage", {
                     autoReportInteractive: !0,
                     destination: _.a.TeamsDashboardFeaturedChannels
                 })], t)
@@ -16839,7 +16839,7 @@ webpackJsonp([34], {
                         onMoveClick: this.handleMoveMember,
                         isDisabled: this.state.isDisabled
                     }))
-                }, t = l.__decorate([Object(f.c)("MembersPage", {
+                }, t = l.__decorate([Object(f.d)("MembersPage", {
                     autoReportInteractive: !0,
                     destination: _.a.TeamsDashboardMembers
                 })], t)
@@ -16899,7 +16899,7 @@ webpackJsonp([34], {
                         disabled: this.props.isDisabled,
                         onChange: this.handleChange
                     }, this.getDropdownOptions(this.validatedCurrentDate, this.props.earliestDate)))
-                }, t = l.__decorate([Object(f.c)("MonthSelectMenuComponent")], t)
+                }, t = l.__decorate([Object(f.d)("MonthSelectMenuComponent")], t)
             }(c.Component),
             le = ["twitch_subscriptions", "prime_subscriptions", "bits", "ads"],
             ce = function(e) {
@@ -17027,7 +17027,7 @@ webpackJsonp([34], {
                         t = fe,
                         n = ge(this.canvas.getContext("2d"));
                     this.canvas.width = e * n, this.canvas.height = t * n, this.canvas.style.width = e + "px", this.canvas.style.height = t + "px", this.canvas.getContext("2d").setTransform(n, 0, 0, n, 0, 0)
-                }, t = l.__decorate([Object(f.c)("RevenueCanvas")], t)
+                }, t = l.__decorate([Object(f.d)("RevenueCanvas")], t)
             }(c.Component),
             ge = function(e) {
                 return 1 / (e.webkitBackingStorePixelRatio || e.mozBackingStorePixelRatio || e.msBackingStorePixelRatio || e.oBackingStorePixelRatio || e.backingStorePixelRatio || 1)
@@ -17263,7 +17263,7 @@ webpackJsonp([34], {
                     return c.createElement(p.V, {
                         className: "team-members-select-menu"
                     }, this.renderMenu())
-                }, t = l.__decorate([Object(f.c)("TeamMembersSelectMenu", {
+                }, t = l.__decorate([Object(f.d)("TeamMembersSelectMenu", {
                     autoReportInteractive: !0
                 })], t)
             }(c.Component),
@@ -17521,7 +17521,7 @@ webpackJsonp([34], {
                         icon: p._11.Download,
                         onClick: this.handleCSVClick
                     }, Oe()))))
-                }, t = l.__decorate([Object(f.c)("RevenuePage", {
+                }, t = l.__decorate([Object(f.d)("RevenuePage", {
                     autoReportInteractive: !0,
                     destination: _.a.TeamsDashboardRevenue
                 })], t)
@@ -17531,7 +17531,7 @@ webpackJsonp([34], {
                 "side-nav-bar__option": !0,
                 "side-nav-bar__option--active": !0
             },
-            Ue = Object(f.c)("Navbar", {
+            Ue = Object(f.d)("Navbar", {
                 autoReportInteractive: !0
             })(function(e) {
                 var t = function(t) {
@@ -17763,7 +17763,7 @@ webpackJsonp([34], {
                     });
                     var t
                 }, a.readAsDataURL(t[0])
-            }, t = l.__decorate([Object(f.c)("SettingsPage", {
+            }, t = l.__decorate([Object(f.d)("SettingsPage", {
                 autoReportInteractive: !0,
                 destination: _.a.TeamsDashboardRevenue
             })], t)
@@ -17963,7 +17963,7 @@ webpackJsonp([34], {
                         t = dt,
                         n = lt(this.canvas.getContext("2d"));
                     this.canvas.width = e * n, this.canvas.height = t * n, this.canvas.style.width = e + "px", this.canvas.style.height = t + "px", this.canvas.getContext("2d").setTransform(n, 0, 0, n, 0, 0)
-                }, t = l.__decorate([Object(f.c)("StatsCanvas")], t)
+                }, t = l.__decorate([Object(f.d)("StatsCanvas")], t)
             }(c.Component),
             lt = function(e) {
                 return 1 / (e.webkitBackingStorePixelRatio || e.mozBackingStorePixelRatio || e.msBackingStorePixelRatio || e.oBackingStorePixelRatio || e.backingStorePixelRatio || 1)
@@ -18759,7 +18759,7 @@ webpackJsonp([34], {
                         data: this.state.data,
                         dataType: this.state.metric
                     })), this.state.metric === Xe.AverageViewers ? this.renderViewershipTables() : ""))
-                }, t = l.__decorate([Object(f.c)("StatsPage", {
+                }, t = l.__decorate([Object(f.d)("StatsPage", {
                     autoReportInteractive: !0,
                     destination: _.a.TeamsDashboardStats
                 })], t)
@@ -21672,4 +21672,4 @@ webpackJsonp([34], {
         }
     }
 });
-//# sourceMappingURL=pages.teams-dashboard-ce85d259f87d29b3fa23c737fa467ebf.js.map
+//# sourceMappingURL=pages.teams-dashboard-6e178a22a8ba6f5a416538cd1c717ab2.js.map

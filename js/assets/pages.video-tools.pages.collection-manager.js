@@ -1,4 +1,4 @@
-webpackJsonp([73], {
+webpackJsonp([74], {
     "Dk8+": function(e, n, t) {
         "use strict";
         Object.defineProperty(n, "__esModule", {
@@ -32,7 +32,7 @@ webpackJsonp([73], {
                     }, "CollectionManager"))))
                 }, n
             }(l.Component),
-            v = Object(a.compose)(Object(d.c)("CollectionManagerCard", {
+            v = Object(a.compose)(Object(d.d)("CollectionManagerCard", {
                 autoReportInteractive: !0
             }))(p),
             k = t("I9kX"),
@@ -81,7 +81,7 @@ webpackJsonp([73], {
                         }
                     }
                 }
-            }), Object(d.c)("CollectionManager", {
+            }), Object(d.d)("CollectionManager", {
                 destination: s.a.VideoManagerCollectionsManager
             }), Object(r.a)({
                 location: c.PageviewLocation.VideoManagerCollectionManager,
@@ -323,4 +323,4 @@ webpackJsonp([73], {
         e.exports = t
     }
 });
-//# sourceMappingURL=pages.video-tools.pages.collection-manager-70ea7369633ec58455bdc5f7d8e59e9f.js.map
+//# sourceMappingURL=pages.video-tools.pages.collection-manager-54302b098a03292d0f2d5027275789e5.js.map

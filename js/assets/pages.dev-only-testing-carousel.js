@@ -1,4 +1,4 @@
-webpackJsonp([54], {
+webpackJsonp([55], {
     IzAE: function(e, t, r) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
@@ -371,7 +371,7 @@ webpackJsonp([54], {
                         attachRight: !0,
                         fullHeight: !0
                     }, this.renderNavButton(n.Next, !this.state.childrenRendered || this.isForwardButtonDisabled(), this.moveCarouselForward))))
-                }, t = a.__decorate([Object(s.c)("MediaCarousel", {
+                }, t = a.__decorate([Object(s.d)("MediaCarousel", {
                     autoReportInteractive: !0
                 })], t)
             }(o.Component)
@@ -379,4 +379,4 @@ webpackJsonp([54], {
     M4d4: function(e, t) {},
     WWVW: function(e, t) {}
 });
-//# sourceMappingURL=pages.dev-only-testing-carousel-78c525de882f6b714c461d89333d9f19.js.map
+//# sourceMappingURL=pages.dev-only-testing-carousel-404675f80d0a4efd995fbdb29ba5cba2.js.map

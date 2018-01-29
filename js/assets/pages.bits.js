@@ -185,7 +185,7 @@ webpackJsonp([52], {
                     }, Object(u.d)("Log in", "MinimalUser")))
                 }, t.prototype.reportInteractive = function() {
                     !this.props.data || this.props.data.loading && !this.props.data.error || this.props.latencyTracking.reportInteractive()
-                }, t = c.__decorate([Object(v.c)("MinimalUser"), Object(h.a)(_)], t)
+                }, t = c.__decorate([Object(v.d)("MinimalUser"), Object(h.a)(_)], t)
             }(p.Component)),
             b = Object(a.a)(function(e) {
                 return {
@@ -231,7 +231,7 @@ webpackJsonp([52], {
             p = n("tnNl"),
             u = n("Odds"),
             m = s.a.wrap(function() {
-                return n.e(68).then(n.bind(null, "HQb3"))
+                return n.e(69).then(n.bind(null, "HQb3"))
             }, "BitsLandingPage"),
             h = function(e) {
                 function t() {
@@ -469,7 +469,7 @@ webpackJsonp([52], {
                     }))), r.createElement(s.a, {
                         darkModeEnabled: this.props.darkModeEnabled
                     }))))
-                }, t = a.__decorate([Object(l.c)("MinimalTopNav", {
+                }, t = a.__decorate([Object(l.d)("MinimalTopNav", {
                     autoReportInteractive: !0
                 })], t)
             }(r.Component));
@@ -531,4 +531,4 @@ webpackJsonp([52], {
             l = n("vH/s")
     }
 });
-//# sourceMappingURL=pages.bits-ec271ca0bf5c853a6272c65eb55ab52d.js.map
+//# sourceMappingURL=pages.bits-2041ed48963e77d4a670cf4775294cc7.js.map

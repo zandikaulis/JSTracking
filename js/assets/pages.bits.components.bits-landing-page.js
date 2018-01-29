@@ -1,4 +1,4 @@
-webpackJsonp([68], {
+webpackJsonp([69], {
     "/LBW": function(e, t, n) {
         "use strict";
         t.h = function(e) {
@@ -205,7 +205,7 @@ webpackJsonp([68], {
             return d
         }, t.b = function() {
             return u || (u = function(e) {
-                return d ? d.indexedActions[e] : a(e, s[e])
+                return d ? d.indexedActions[e.toLowerCase()] : a(e, s[e])
             }("Cheer")), u
         };
         var r = n("I89S"),
@@ -697,7 +697,7 @@ webpackJsonp([68], {
                     }), c.createElement(E, {
                         bitsConfig: this.bitsConfig
                     })))))))
-                }, t = l.__decorate([Object(g.c)("Bits"), Object(p.a)({
+                }, t = l.__decorate([Object(g.d)("Bits"), Object(p.a)({
                     location: h.PageviewLocation.BitsLandingPage
                 }), Object(m.a)(j, {
                     name: "data",
@@ -1737,7 +1737,7 @@ webpackJsonp([68], {
                     }
                 })], t)
             }(m.Component),
-            Y = Object(E.compose)(Object(Q.c)("BitsBuyCard", {
+            Y = Object(E.compose)(Object(Q.d)("BitsBuyCard", {
                 autoReportInteractive: !0,
                 destination: S.a.BitsBuyCard
             }))(J),
@@ -2405,6 +2405,7 @@ webpackJsonp([68], {
                 });
             return e.showImage || (g = null), r.createElement(d.V, {
                 className: "cheermote-for-amount",
+                alignItems: e.alignItems,
                 display: e.display
             }, g, m)
         };
@@ -2606,4 +2607,4 @@ webpackJsonp([68], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.bits.components.bits-landing-page-939028eaaee6aa994f3b84c3411851fc.js.map
+//# sourceMappingURL=pages.bits.components.bits-landing-page-b460491b5ef4c01cf499d4439662f0a2.js.map

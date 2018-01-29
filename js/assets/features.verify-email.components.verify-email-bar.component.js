@@ -1,4 +1,4 @@
-webpackJsonp([55], {
+webpackJsonp([56], {
     "9u8h": function(e, t, i) {
         "use strict";
         i.d(t, "a", function() {
@@ -338,7 +338,7 @@ webpackJsonp([55], {
                     return this.props.data && !(this.props.data.loading || this.props.data.error) && this.props.data.currentUser && this.props.data.requestInfo
                 }, t
             }(n.Component),
-            b = Object(s.compose)(Object(u.c)("VerifyEmail"), Object(l.a)(y), a.e)(T)
+            b = Object(s.compose)(Object(u.d)("VerifyEmail"), Object(l.a)(y), a.e)(T)
     },
     RDCx: function(e, t) {
         var i = {
@@ -460,4 +460,4 @@ webpackJsonp([55], {
     },
     yY1M: function(e, t) {}
 });
-//# sourceMappingURL=features.verify-email.components.verify-email-bar.component-3fd76e5d8b4af04161765b720bdc0b58.js.map
+//# sourceMappingURL=features.verify-email.components.verify-email-bar.component-f63b320f97885b4bbe93e873c37ee74c.js.map

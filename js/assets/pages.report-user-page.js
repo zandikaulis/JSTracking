@@ -1,4 +1,4 @@
-webpackJsonp([57], {
+webpackJsonp([58], {
     DkuH: function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
@@ -10,8 +10,8 @@ webpackJsonp([57], {
             i = n("f2i/"),
             s = n("Aj/L"),
             l = n("TToO"),
-            c = n("OAwv"),
-            p = n("U7vG"),
+            p = n("OAwv"),
+            c = n("U7vG"),
             u = n("6sO2"),
             d = n("7vx8"),
             m = n("w9tK"),
@@ -25,7 +25,7 @@ webpackJsonp([57], {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getReportingContext = function() {
-                        var e = c.parse(t.props.location.search);
+                        var e = p.parse(t.props.location.search);
                         return {
                             contentType: e.contentType ? e.contentType : b.a.User,
                             contentID: e.contentId,
@@ -38,7 +38,7 @@ webpackJsonp([57], {
                 return l.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive(), this.props.isLoggedIn || this.props.login()
                 }, t.prototype.render = function() {
-                    return p.createElement(k.V, {
+                    return c.createElement(k.V, {
                         "data-test-selector": "report-user-page",
                         alignItems: k.c.Center,
                         display: k.H.Flex,
@@ -47,34 +47,34 @@ webpackJsonp([57], {
                         padding: 3
                     }, this.renderPage())
                 }, t.prototype.renderPage = function() {
-                    return this.props.isLoggedIn ? this.props.userToReportData.error ? p.createElement(k.V, {
+                    return this.props.isLoggedIn ? this.props.userToReportData.error ? c.createElement(k.V, {
                         margin: {
                             bottom: 1
                         }
-                    }, p.createElement(k._23, {
+                    }, c.createElement(k._23, {
                         fontSize: k.L.Size5
-                    }, Object(u.d)("There was an unexpected error. Please refresh the page and try again", "ReportUserPage"))) : this.props.userToReportData && !this.props.userToReportData.loading && this.props.userToReportData.user ? p.createElement(f.a, {
+                    }, Object(u.d)("There was an unexpected error. Please refresh the page and try again", "ReportUserPage"))) : this.props.userToReportData && !this.props.userToReportData.loading && this.props.userToReportData.user ? c.createElement(f.a, {
                         onClose: this.handleReportUserClose,
                         reportContext: this.getReportingContext(),
                         title: Object(u.d)("Report {channelName}", {
                             channelName: this.props.match.params.channelName
                         }, "ReportUserPage")
-                    }) : p.createElement(k._3, {
+                    }) : c.createElement(k._3, {
                         lineCount: 3
-                    }) : p.createElement(k.V, {
+                    }) : c.createElement(k.V, {
                         "data-test-selector": "report-user-page__logged-out",
                         alignItems: k.c.Center,
                         display: k.H.Flex,
                         flexDirection: k.J.Column
-                    }, p.createElement(k.V, {
+                    }, c.createElement(k.V, {
                         margin: {
                             bottom: 1
                         }
-                    }, p.createElement(k._23, {
+                    }, c.createElement(k._23, {
                         fontSize: k.L.Size5
                     }, Object(u.d)("You must be logged in to report {channelName}. Please log in to complete.", {
                         channelName: this.props.match.params.channelName
-                    }, "ReportUserPage"))), p.createElement(k.u, {
+                    }, "ReportUserPage"))), c.createElement(k.u, {
                         onClick: this.props.login
                     }, Object(u.d)("Log in", "ReportUserPage")))
                 }, t = l.__decorate([Object(d.a)(v, {
@@ -86,11 +86,11 @@ webpackJsonp([57], {
                             }
                         }
                     }
-                }), Object(g.c)("ReportUserPage", {
+                }), Object(g.d)("ReportUserPage", {
                     autoReportInteractive: !0,
                     destination: m.a.ReportUserPage
                 })], t)
-            }(p.Component),
+            }(c.Component),
             y = Object(r.a)(function(e) {
                 return {
                     isLoggedIn: Object(s.d)(e),
@@ -196,4 +196,4 @@ webpackJsonp([57], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.report-user-page-c365874be7c62016bf2b4dcfc461fa7f.js.map
+//# sourceMappingURL=pages.report-user-page-d0c31e5be1ad66a6187ab02bd2152911.js.map

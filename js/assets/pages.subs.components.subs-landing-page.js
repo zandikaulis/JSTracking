@@ -1,4 +1,4 @@
-webpackJsonp([70], {
+webpackJsonp([71], {
     "1KsR": function(e, t) {},
     "2oK2": function(e, t) {
         var n = {
@@ -452,7 +452,7 @@ webpackJsonp([70], {
                         ellipsis: !0,
                         noWrap: !0
                     }, this.props.followedChannel.displayName))))
-                }, t = s.__decorate([Object(h.c)("FollowedChannelLink")], t)
+                }, t = s.__decorate([Object(h.d)("FollowedChannelLink")], t)
             }(r.Component)),
             C = n("XFEc"),
             N = n("2oK2"),
@@ -883,7 +883,7 @@ webpackJsonp([70], {
                             }
                         })
                     })
-                }, t = s.__decorate([Object(h.c)("StreamerSearch")], t)
+                }, t = s.__decorate([Object(h.d)("StreamerSearch")], t)
             }(r.Component),
             A = Object(a.a)(function(e) {
                 return {
@@ -1046,7 +1046,7 @@ webpackJsonp([70], {
                         type: E._28.P,
                         fontSize: E.L.Size5
                     }, this.messages.emotesInfo)))))))))
-                }, t = s.__decorate([Object(h.c)("SubsLandingPage", {
+                }, t = s.__decorate([Object(h.d)("SubsLandingPage", {
                     destination: m.a.SubsLandingPage
                 }), Object(p.a)({
                     location: g.PageviewLocation.SubsLandingPage
@@ -1064,4 +1064,4 @@ webpackJsonp([70], {
     },
     yoqf: function(e, t) {}
 });
-//# sourceMappingURL=pages.subs.components.subs-landing-page-68d5c6e6859b153a4bc131af038fb262.js.map
+//# sourceMappingURL=pages.subs.components.subs-landing-page-140b48e9f65f69c68ce6bd966e19c4b1.js.map

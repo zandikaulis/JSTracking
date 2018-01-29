@@ -1,4 +1,4 @@
-webpackJsonp([56], {
+webpackJsonp([57], {
     "9u8h": function(e, t, r) {
         "use strict";
         r.d(t, "a", function() {
@@ -241,7 +241,7 @@ webpackJsonp([56], {
                     })
                 }, t
             }(n.Component),
-            p = Object(o.compose)(Object(d.c)("EmailVerification", {
+            p = Object(o.compose)(Object(d.d)("EmailVerification", {
                 destination: c.a.EmailVerification
             }), Object(s.a)({
                 location: u.PageviewLocation.EmailVerification
@@ -319,4 +319,4 @@ webpackJsonp([56], {
         })
     }
 });
-//# sourceMappingURL=pages.email-verification-1e4fc36cf64f87a38f5166657da3c8e8.js.map
+//# sourceMappingURL=pages.email-verification-589d559f5833792d2c8331f17bc497e9.js.map

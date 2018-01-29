@@ -1,4 +1,4 @@
-webpackJsonp([71], {
+webpackJsonp([72], {
     "027l": function(e, t) {
         var n = {
             kind: "Document",
@@ -846,7 +846,7 @@ webpackJsonp([71], {
                         onClickEmote: void 0,
                         locked: !1
                     }))
-                }, t = s.__decorate([Object(h.c)("SubPlanTabs")], t)
+                }, t = s.__decorate([Object(h.d)("SubPlanTabs")], t)
             }(a.Component),
             P = (n("bPto"), n("027l")),
             C = function(e) {
@@ -964,7 +964,7 @@ webpackJsonp([71], {
                     }, a.createElement(S._23, {
                         color: S.F.Overlay
                     }, Object(o.d)("Verified Twitch Partner", "SubsBroadcasterBanner")))) : null
-                }, t = s.__decorate([Object(h.c)("SubsBroadcasterBanner"), Object(u.a)(P, {
+                }, t = s.__decorate([Object(h.d)("SubsBroadcasterBanner"), Object(u.a)(P, {
                     options: function(e) {
                         return {
                             variables: {
@@ -1127,7 +1127,7 @@ webpackJsonp([71], {
                         }, "SubsPlanTiers"),
                         includes: Object(o.d)("Includes everything listed above.", "SubsPlanTiers")
                     }
-                }, t = s.__decorate([Object(h.c)("SubsPlanTiers")], t)
+                }, t = s.__decorate([Object(h.d)("SubsPlanTiers")], t)
             }(a.Component)),
             F = n("Ie7/"),
             w = function(e) {
@@ -1210,7 +1210,7 @@ webpackJsonp([71], {
                             }
                         }
                     }
-                }), Object(h.c)("SubsBroadcasterPage", {
+                }), Object(h.d)("SubsBroadcasterPage", {
                     destination: p.a.SubsBroadcasterPage
                 }), Object(d.a)({
                     location: m.PageviewLocation.SubsBroadcasterPage
@@ -1222,4 +1222,4 @@ webpackJsonp([71], {
         })
     }
 });
-//# sourceMappingURL=pages.subs.components.subs-broadcaster-page-749b9cf2dcabc0a0b98ef1741d5f94da.js.map
+//# sourceMappingURL=pages.subs.components.subs-broadcaster-page-e518c7065a0365d2f7d1f460e6c69476.js.map

@@ -578,7 +578,7 @@ webpackJsonp([46], {
                     }
                 }, t
             }(r.Component),
-            m = Object(s.c)("EmbedOverlay")(u);
+            m = Object(s.d)("EmbedOverlay")(u);
         n.d(t, !1, function() {
             return c
         }), n.d(t, "b", function() {
@@ -828,7 +828,7 @@ webpackJsonp([46], {
                         alignItems: p.c.Center,
                         justifyContent: p.U.Center
                     }, o.createElement(p._23, null, e.toString())))))
-                }, t = a.__decorate([Object(m.c)("PrimeOfferHeader")], t)
+                }, t = a.__decorate([Object(m.d)("PrimeOfferHeader")], t)
             }(o.Component)),
             g = n("zCIC"),
             v = function(e) {
@@ -862,7 +862,7 @@ webpackJsonp([46], {
                         type: p._28.P,
                         bold: !0
                     }, Object(l.d)("Free in-game loot every month, plus surprises", "PrimeEmpty")), o.createElement("div", null, e))
-                }, t = a.__decorate([Object(m.c)("PrimeEmpty")], t)
+                }, t = a.__decorate([Object(m.d)("PrimeEmpty")], t)
             }(o.Component),
             h = n("lfvs"),
             k = n("oIkB"),
@@ -897,7 +897,7 @@ webpackJsonp([46], {
                     }, n)
                 }, t.prototype.getButtonText = function() {
                     return this.props.offerType === b.a.CLAIM_CODE ? Object(l.d)("Get Code", "PrimeClaimButton") : this.props.offerType === b.a.EXTERNAL_OFFER ? Object(l.d)("Learn More", "PrimeClaimButton") : Object(l.d)("Claim Offer", "PrimeClaimButton")
-                }, t = a.__decorate([Object(d.a)(y), Object(m.c)("PrimeClaimButton")], t)
+                }, t = a.__decorate([Object(d.a)(y), Object(m.d)("PrimeClaimButton")], t)
             }(o.Component),
             _ = function(e) {
                 function t() {
@@ -939,7 +939,7 @@ webpackJsonp([46], {
                     }, o.createElement(h, {
                         source: this.props.description || ""
                     })))), e
-                }, t = a.__decorate([Object(m.c)("PrimeClaimDescription")], t)
+                }, t = a.__decorate([Object(m.d)("PrimeClaimDescription")], t)
             }(o.Component),
             E = n("Hs3O"),
             N = function(e) {
@@ -962,7 +962,7 @@ webpackJsonp([46], {
                         linkTo: this.getLink(),
                         targetBlank: !0
                     }, Object(l.d)("Start Your Free Trial", "PrimeUpsellButton")))
-                }, t = a.__decorate([Object(m.c)("PrimeUpsellButton")], t)
+                }, t = a.__decorate([Object(m.d)("PrimeUpsellButton")], t)
             }(o.Component),
             O = n("e2wA"),
             C = function(e) {
@@ -994,7 +994,7 @@ webpackJsonp([46], {
                     return this.props.offerType === b.a.EXTERNAL_OFFER ? null : o.createElement(_, {
                         description: this.props.offerDescription
                     })
-                }, t = a.__decorate([Object(d.a)(O), Object(m.c)("PrimeInstructions")], t)
+                }, t = a.__decorate([Object(d.a)(O), Object(m.d)("PrimeInstructions")], t)
             }(o.Component),
             F = function(e) {
                 function t() {
@@ -1039,7 +1039,7 @@ webpackJsonp([46], {
                         width: 20,
                         height: 20
                     })), Object(l.d)("Something has gone wrong. Please try again later.", "PrimeError"))))
-                }, t = a.__decorate([Object(m.c)("PrimeError")], t)
+                }, t = a.__decorate([Object(m.d)("PrimeError")], t)
             }(o.Component),
             w = (n("nFc2"), function(e) {
                 function t() {
@@ -1081,7 +1081,7 @@ webpackJsonp([46], {
                         value: this.props.clipboardText,
                         readOnly: !0
                     }))
-                }, t = a.__decorate([Object(m.c)("CopyButton")], t)
+                }, t = a.__decorate([Object(m.d)("CopyButton")], t)
             }(o.Component)),
             I = function(e) {
                 function t() {
@@ -1116,7 +1116,7 @@ webpackJsonp([46], {
                     })), o.createElement(p.V, null, o.createElement(w, {
                         clipboardText: this.state.value
                     }))) : null
-                }, t = a.__decorate([Object(m.c)("CopyableItem")], t)
+                }, t = a.__decorate([Object(m.d)("CopyableItem")], t)
             }(o.Component),
             T = function(e) {
                 function t() {
@@ -1144,7 +1144,7 @@ webpackJsonp([46], {
                             }
                         }
                     })))
-                }, t = a.__decorate([Object(m.c)("PrimeClaimInstructions")], t)
+                }, t = a.__decorate([Object(m.d)("PrimeClaimInstructions")], t)
             }(o.Component),
             D = function(e) {
                 function t() {
@@ -1202,7 +1202,7 @@ webpackJsonp([46], {
                     if (this.props.claimInstructions) return o.createElement(T, {
                         claimInstructions: this.props.claimInstructions || ""
                     })
-                }, t = a.__decorate([Object(m.c)("PrimeRedeem")], t)
+                }, t = a.__decorate([Object(m.d)("PrimeRedeem")], t)
             }(o.Component),
             R = n("el3o"),
             x = (n("v+rJ"), n("rM0q")),
@@ -1334,7 +1334,7 @@ webpackJsonp([46], {
                     name: "data"
                 }), Object(d.a)(R, {
                     name: "claimPrimeOffer"
-                }), Object(m.c)("PrimeOffer")], t)
+                }), Object(m.d)("PrimeOffer")], t)
             }(o.Component),
             V = function(e) {
                 function t() {
@@ -1382,7 +1382,7 @@ webpackJsonp([46], {
                     }, o.createElement(p._3, {
                         height: 40
                     })))
-                }, t = a.__decorate([Object(m.c)("PrimeOfferPlaceholder")], t)
+                }, t = a.__decorate([Object(m.d)("PrimeOfferPlaceholder")], t)
             }(o.Component),
             L = (n("7L7x"), function(e) {
                 function t() {
@@ -1417,7 +1417,7 @@ webpackJsonp([46], {
                     })), o.createElement(p._23, {
                         type: p._28.P
                     }, Object(l.d)("Get free game loot like this every month plus surprises, ad-free viewing, and loads more with Twitch Prime.", "PrimeUpsell")), o.createElement(N, null))
-                }, t = a.__decorate([Object(m.c)("PrimeUpsell")], t)
+                }, t = a.__decorate([Object(m.d)("PrimeUpsell")], t)
             }(o.Component)),
             U = n("eY4D"),
             A = (n("DgR+"), n("65au")),
@@ -1501,7 +1501,7 @@ webpackJsonp([46], {
                     }
                 }), Object(d.a)(A, {
                     name: "userData"
-                }), Object(m.c)("PrimeOfferList")], t)
+                }), Object(m.d)("PrimeOfferList")], t)
             }(o.Component),
             M = n("tTbW"),
             G = (n("9856"), n("wjhu")),
@@ -1623,7 +1623,7 @@ webpackJsonp([46], {
                     }
                 }), Object(d.a)(G, {
                     name: "userData"
-                }), Object(m.c)("PrimeOffers", {
+                }), Object(m.d)("PrimeOffers", {
                     autoReportInteractive: !0
                 })], t)
             }(o.Component),
@@ -1750,7 +1750,7 @@ webpackJsonp([46], {
                             }
                         }
                     }
-                }), Object(m.c)("BlueBarComponent")], t)
+                }), Object(m.d)("BlueBarComponent")], t)
             }(o.Component);
         n.d(t, "b", function() {
             return q
@@ -3450,7 +3450,7 @@ webpackJsonp([46], {
                         childWidth: E._35.ExtraSmall,
                         placeholderItems: 18
                     }, o)), n)
-                }, t = i.__decorate([Object(f.c)("GameList", {
+                }, t = i.__decorate([Object(f.d)("GameList", {
                     autoReportInteractive: !0
                 })], t)
             }(a.Component),
@@ -3483,7 +3483,7 @@ webpackJsonp([46], {
                             limit: 18
                         }
                     }
-                }), Object(f.c)("FollowedGames")], t)
+                }), Object(f.d)("FollowedGames")], t)
             }(a.Component),
             F = n("Y4Yc"),
             w = "twilight_onboarding",
@@ -3589,7 +3589,7 @@ webpackJsonp([46], {
                             x: 1
                         }
                     }, Object(r.d)("Start", "OnboardingPrompt"))))))
-                }, t = i.__decorate([Object(f.c)("OnboardingPrompt", {
+                }, t = i.__decorate([Object(f.d)("OnboardingPrompt", {
                     autoReportInteractive: !0
                 }), Object(h.a)(F, {
                     options: {
@@ -3766,7 +3766,7 @@ webpackJsonp([46], {
                             }
                         }
                     }
-                }), Object(f.c)("Pulse")], t)
+                }), Object(f.d)("Pulse")], t)
             }(a.Component),
             $ = n("L46p"),
             X = function(e) {
@@ -3810,7 +3810,7 @@ webpackJsonp([46], {
                             }
                         }
                     }
-                }), Object(f.c)("TopGames")], t)
+                }), Object(f.d)("TopGames")], t)
             }(a.Component),
             Y = (n("jPY3"), function(e) {
                 function t() {
@@ -3929,7 +3929,7 @@ webpackJsonp([46], {
                     m.g.removeListener(m.e, this.onSlotAdded)
                 }, t.prototype.onRender = function() {
                     this.props.latencyTracking.reportInteractive()
-                }, t = i.__decorate([Object(f.c)("FrontPage", {
+                }, t = i.__decorate([Object(f.d)("FrontPage", {
                     destination: s.a.Index
                 }), Object(l.a)({
                     location: c.PageviewLocation.FrontPage
@@ -3953,7 +3953,7 @@ webpackJsonp([46], {
             m = n("KSGD"),
             p = n("4mYF"),
             f = n("F8kA"),
-            g = Object(l.c)("EmbedInfo", {
+            g = Object(l.d)("EmbedInfo", {
                 autoReportInteractive: !0
             })(function(e) {
                 var t = e.title,
@@ -4053,7 +4053,7 @@ webpackJsonp([46], {
                     }, l)) : a.createElement(s.V, null)
                 }, t.prototype.postMessageIsWheelEvent = function(e) {
                     return "player.embed.client" === e.data.namespace && "bridgeplayereventwithpayload" === e.data.method && e.data.args.length > 0 && "wheel" === e.data.args[0].event
-                }, t = i.__decorate([Object(l.c)("EmbedVideoPlayer")], t)
+                }, t = i.__decorate([Object(l.d)("EmbedVideoPlayer")], t)
             }(a.Component),
             k = function(e, t) {
                 var n = e.embed,
@@ -4087,7 +4087,7 @@ webpackJsonp([46], {
         k.contextTypes = {
             feedTrackingProps: m.object
         };
-        var b = Object(l.c)("ClipEmbed", {
+        var b = Object(l.d)("ClipEmbed", {
                 autoReportInteractive: !0
             })(k),
             y = Object(d.a)(null, function(e) {
@@ -4096,7 +4096,7 @@ webpackJsonp([46], {
                 }, e)
             })(b),
             S = n("6sO2"),
-            _ = Object(l.c)("PhotoOEmbed", {
+            _ = Object(l.d)("PhotoOEmbed", {
                 autoReportInteractive: !0
             })(function(e) {
                 var t = e.embed,
@@ -4150,7 +4150,7 @@ webpackJsonp([46], {
         E.contextTypes = {
             feedTrackingProps: m.object
         };
-        var N = Object(l.c)("StreamEmbed", {
+        var N = Object(l.d)("StreamEmbed", {
                 autoReportInteractive: !0
             })(E),
             O = function(e, t) {
@@ -4185,7 +4185,7 @@ webpackJsonp([46], {
         O.contextTypes = {
             feedTrackingProps: m.object
         };
-        var C = Object(l.c)("VideoEmbed", {
+        var C = Object(l.d)("VideoEmbed", {
                 autoReportInteractive: !0
             })(O),
             F = Object(d.a)(null, function(e) {
@@ -4223,7 +4223,7 @@ webpackJsonp([46], {
         };
         var I = {
                 PhotoOEmbed: _,
-                VideoOEmbed: Object(l.c)("VideoOEmbed", {
+                VideoOEmbed: Object(l.d)("VideoOEmbed", {
                     autoReportInteractive: !0
                 })(w),
                 Clip: y,
@@ -4246,7 +4246,7 @@ webpackJsonp([46], {
                     return e ? a.createElement(e, {
                         embed: this.props.embed
                     }) : a.createElement(s.V, null)
-                }, t = i.__decorate([Object(l.c)("Embed"), Object(r.c)()], t)
+                }, t = i.__decorate([Object(l.d)("Embed"), Object(r.c)()], t)
             }(a.Component);
         n.d(t, "a", function() {
             return T
@@ -5883,7 +5883,7 @@ webpackJsonp([46], {
                         embedURL: this.state.inputEmbedURL,
                         onSetEmbed: this.handleSetEmbed
                     }))
-                }, t = a.__decorate([Object(p.c)("Composer")], t)
+                }, t = a.__decorate([Object(p.d)("Composer")], t)
             }(r.Component),
             N = n("RH2O"),
             O = Object(N.a)(function(e) {
@@ -6255,7 +6255,7 @@ webpackJsonp([46], {
                         }
                     }
                 }
-            }), Object(p.c)("FeaturedContent")], t)
+            }), Object(p.d)("FeaturedContent")], t)
         }(r.Component)
     },
     Xg86: function(e, t, n) {
@@ -6414,9 +6414,9 @@ webpackJsonp([46], {
                         alt: t,
                         className: "activity-reaction__emote"
                     })))))
-                }, t = p.__decorate([Object(S.c)("Reaction")], t)
+                }, t = p.__decorate([Object(S.d)("Reaction")], t)
             }(o.Component)),
-            N = Object(S.c)("AdditionalReactions", {
+            N = Object(S.d)("AdditionalReactions", {
                 autoReportInteractive: !0
             })(function(e) {
                 var t = e.reactions.map(function(t, n) {
@@ -6446,7 +6446,7 @@ webpackJsonp([46], {
                     }
                 }, t))
             }),
-            O = Object(S.c)("TopReactions", {
+            O = Object(S.d)("TopReactions", {
                 autoReportInteractive: !0
             })(function(e) {
                 var t = e.reactions.map(function(t, n) {
@@ -6519,7 +6519,7 @@ webpackJsonp([46], {
                         onLoad: this.emotesLoaded,
                         direction: this.props.position || _.q.TopLeft
                     }), e))
-                }, t = p.__decorate([Object(S.c)("ReactionSelector")], t)
+                }, t = p.__decorate([Object(S.d)("ReactionSelector")], t)
             }(o.Component)),
             R = "additional-toggle-tracking",
             x = {
@@ -6657,7 +6657,7 @@ webpackJsonp([46], {
                     name: "addReaction"
                 }), Object(h.a)(I, {
                     name: "removeReaction"
-                }), Object(S.c)("Reactions")], t)
+                }), Object(S.d)("Reactions")], t)
             }(o.Component),
             L = Object(s.a)(function(e) {
                 return {
@@ -6670,7 +6670,7 @@ webpackJsonp([46], {
                     }
                 }, e)
             })(V),
-            U = Object(S.c)("ClipContent", {
+            U = Object(S.d)("ClipContent", {
                 autoReportInteractive: !0
             })(function(e) {
                 var t = e.content,
@@ -6687,7 +6687,7 @@ webpackJsonp([46], {
             j = n("1jVX"),
             M = (n("MTWZ"), {
                 Clip: U,
-                Post: Object(S.c)("PostContent", {
+                Post: Object(S.d)("PostContent", {
                     autoReportInteractive: !0
                 })(function(e) {
                     var t = e.content,
@@ -6763,7 +6763,7 @@ webpackJsonp([46], {
                         emoteSelectorAndOverflowPos: e.emoteSelectorAndOverflowPos
                     }))
                 }),
-                Video: Object(S.c)("VideoContent", {
+                Video: Object(S.d)("VideoContent", {
                     autoReportInteractive: !0
                 })(function(e) {
                     var t = e.content,
@@ -7280,7 +7280,7 @@ webpackJsonp([46], {
                         }
                     }
                 }
-            }), Object(m.c)("FeaturedBroadcasters")], t)
+            }), Object(m.d)("FeaturedBroadcasters")], t)
         }(o.Component)
     },
     cYgC: function(e, t, n) {
@@ -7334,7 +7334,7 @@ webpackJsonp([46], {
                     }), i.createElement(c.a, {
                         content: this.props.item.content
                     })) : i.createElement(d.V, null)
-                }, t = r.__decorate([Object(s.c)("FeedItem"), Object(o.d)(function(e) {
+                }, t = r.__decorate([Object(s.d)("FeedItem"), Object(o.d)(function(e) {
                     var t = e.item,
                         n = e.index,
                         i = Object(o.b)(t);
@@ -7350,7 +7350,7 @@ webpackJsonp([46], {
                     }
                 }), Object(o.c)()], t)
             }(i.Component),
-            f = Object(s.c)("Feed")(function(e) {
+            f = Object(s.d)("Feed")(function(e) {
                 var t = e.items.edges.filter(function(e) {
                     return e.node.content.id
                 }).map(function(t, n) {
@@ -8324,7 +8324,7 @@ webpackJsonp([46], {
                         width: 20,
                         height: 20
                     })) : "")))))
-                }, t = o.__decorate([Object(v.c)("CarouselCard")], t)
+                }, t = o.__decorate([Object(v.d)("CarouselCard")], t)
             }(m.Component),
             S = n("lfvs"),
             _ = n("F8kA"),
@@ -8822,7 +8822,7 @@ webpackJsonp([46], {
                             y: 1
                         }
                     }, this.renderLeftButton(), this.getCardsRender(), this.renderRightButton())))
-                }, t = o.__decorate([Object(v.c)("CarouselPlayer")], t)
+                }, t = o.__decorate([Object(v.d)("CarouselPlayer")], t)
             }(m.Component),
             x = Object(d.a)(null, function(e) {
                 return Object(c.bindActionCreators)({
@@ -9315,7 +9315,7 @@ webpackJsonp([46], {
                     }
                 }, t.contextTypes = {
                     feedTrackingProps: m.object
-                }, t = a.__decorate([Object(k.c)("FeedItemOptions")], t)
+                }, t = a.__decorate([Object(k.d)("FeedItemOptions")], t)
             }(p.Component),
             F = Object(r.a)(function(e) {
                 return {
@@ -10346,4 +10346,4 @@ webpackJsonp([46], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.front-544f1dfb3f7f9ec38d79bcc5d9d17add.js.map
+//# sourceMappingURL=pages.front-07e239e2a9197e54b8ef5fcb4c3a29c7.js.map
