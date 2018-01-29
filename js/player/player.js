@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".ab0c7fb29b9d597180d9.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".e2498051686560b513a2.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -23700,9 +23700,8 @@
                 n.dispatch(Object(a.n)())
             }
 
-            function u(n) {
-                var r = n.streamMetadata;
-                r.channelName ? t.setAttribute("data-channel", r.channelName) : t.removeAttribute("data-channel"), e.getVideo() ? t.setAttribute("data-video", e.getVideo()) : t.removeAttribute("data-video")
+            function u() {
+                e.getVideo() ? t.setAttribute("data-video", e.getVideo()) : t.removeAttribute("data-video")
             }
 
             function c() {
@@ -27861,7 +27860,7 @@
                     u = Ra.a(!0),
                     c = Ia.u() === Ia.j ? null : Da;
                 return {
-                    app_version: "2018.01.24-222447+684d532e0293c5fb56d707ecd26d3fe89d679e46",
+                    app_version: "2018.01.29-190703+0aec07c9c21ab0f936898448a202bd19ea13dddb",
                     flash_version: r,
                     referrer_url: i,
                     referrer_host: o.host,
@@ -33516,7 +33515,7 @@
                 }]), e
             }(),
             Ca = n(99),
-            Ta = "//video-edge-c6ca9a.sjc01.hls.ttvnw.net/v1/playlist/CupNn5e_I9IV05zH4EZ5xTLsVG2SV_T1lvieMOSWfjQv-QGwkZH2YlP54HYbMptsZX1uCXalhGRGk2EUMx6OxIXW5gijsf_UrklS1Vx7XPsPy2g4SL5VTb4ihckLz6d3d3cBGTgbU6H7p06ZNvT-P7kXso7Ftqg28fP2jCgmFRbS8EOz8SCujrJPTAgjBU2AqBEwDmkz0MONbjI0HaYmWMQWK2Jb4YIthMJu3Xizcu7lFJTkQr3DTgk5XS4D0s_BY0ilfd4WaL1tHf8OW0NJ504fR9WO9aFlfY5eN3PoukUheVnsAzcvGgemjkS3ZR95EzuOSggtwLdGJPaHWqIUPLy5D7GWseBjNgoIap2vF-MzOUHE-DpcDPEKVBhfyz3UPwKvCQbu9Rt4iBNM18JMRKa0BihFJMG5R-rICOGg9Li5XKJXO4-L.m3u8",
+            Ta = "//video-edge-f8455e.sjc01.hls.ttvnw.net/v1/playlist/CjgG8lGKEBLUx4XlK6v2TWhDijALt4xMGWmZLVh18olBcV8N-LStmNGxxJKgAmA-tl4hpAlZNF-4jlJx1977kZelh97y2TNVb1lN1Swe8TMAjxnf_n5S50Ogk_sC2MucUumQfce_9PH9y9XkmECOypRoIKJwAMy4zx28TZQw4xX4mBA5cb7DHIDfOzzmpCENnNdeFHYZwINNmmeCPuTIVBhgMXqSfXbwJx8AMd8yHwOnOajV0O2swGSwMc7j6qqR4d1C50VsSJLSrKDODJvqhW1-k56UshZBhNS1Wm60yubAqLgCirUQGlk92ZtZIqjFtNGYem6X5qZrrHWFPPUXlZ_jZAwLOrUUrXX6aiPaUftdkG5c9lLVE7PF4YoBpiJ9J1joPxgH7xgdEG8wN8_kKpu5yRc51lYwq9AUML8-pgY4Z2OQ.m3u8",
             Oa = n(45),
             xa = n(245),
             Ra = n(132),
