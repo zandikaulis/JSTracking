@@ -1939,6 +1939,21 @@ window.SiteOptions = {
                 "value": "control"
             }]
         },
+        "5cfa2a90-54f0-4dcc-b28c-45f33935718e": {
+            "name": "TWILIGHT_VOD_REDITUS",
+            "v": 2931,
+            "t": 1,
+            "groups": [{
+                "weight": 33,
+                "value": "following_basic"
+            }, {
+                "weight": 0,
+                "value": "following_advanced"
+            }, {
+                "weight": 66,
+                "value": "control"
+            }]
+        },
         "5daee224-4c99-499f-b6e0-e308a5fa54f1": {
             "name": "aws_roundtrip_latency_test_endpoint",
             "v": 953,
