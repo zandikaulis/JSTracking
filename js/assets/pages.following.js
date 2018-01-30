@@ -4,13 +4,13 @@ webpackJsonp([47], {
         var i, a = n("TToO"),
             r = n("U7vG"),
             o = n("F8kA"),
-            l = n("6sO2"),
-            s = n("IOwa"),
+            s = n("6sO2"),
+            l = n("IOwa"),
             d = n("RH2O"),
-            u = n("2KeS"),
-            c = n("PPNL"),
-            m = n("/SNv"),
-            p = n.n(m),
+            c = n("2KeS"),
+            m = n("PPNL"),
+            u = n("/SNv"),
+            p = n.n(u),
             g = n("Vr3l"),
             v = n.n(g);
         ! function(e) {
@@ -22,7 +22,7 @@ webpackJsonp([47], {
                     return a.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(67).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(69).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -34,7 +34,7 @@ webpackJsonp([47], {
                     return a.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(66).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(68).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -42,13 +42,13 @@ webpackJsonp([47], {
                 })
             },
             y = n("Odds"),
-            S = (n("AHWf"), function(e) {
+            w = (n("AHWf"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         isLoading: !1,
                         isError: !1
-                    }, t.logger = l.n.logger.withCategory("metadata-icon"), t.didUnmount = !1, t.loadData = function() {
+                    }, t.logger = s.n.logger.withCategory("metadata-icon"), t.didUnmount = !1, t.loadData = function() {
                         if (!t.state.isLoading && !t.state.isError && t.props.streamMetadata && !t.state.content) {
                             var e = t.props.streamMetadata.hearthstone && t.props.streamMetadata.hearthstone.broadcasterHeroClass,
                                 n = t.props.streamMetadata.leagueOfLegends && t.props.streamMetadata.leagueOfLegends.championID,
@@ -122,7 +122,7 @@ webpackJsonp([47], {
                         t.props.leagueOfLegends.isLoading || t.props.leagueOfLegends.isError || t.props.leagueOfLegends.championsMap || t.props.onLoadLeagueOfLegendsChampions()
                     }, t.getOverwatchData = function() {
                         return a.__awaiter(t, void 0, void 0, function() {
-                            var e, t, n, i, r, o, l, s, d, u, c, m, p;
+                            var e, t, n, i, r, o, s, l, d, c, m, u, p;
                             return a.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
@@ -132,17 +132,17 @@ webpackJsonp([47], {
                                         for (t = !1, n = void 0, i = 0, r = e; i < r.length && (n = r[i], !t); i++)
                                             for (o in n)
                                                 if (n.hasOwnProperty(o))
-                                                    for (l = n[o], s = 0, d = l; s < d.length; s++)
-                                                        if ((u = d[s]).character === this.state.item) {
-                                                            (p = {})[u.character] = u, c = p, this.setState({
-                                                                content: c,
+                                                    for (s = n[o], l = 0, d = s; l < d.length; l++)
+                                                        if ((c = d[l]).character === this.state.item) {
+                                                            (p = {})[c.character] = c, m = p, this.setState({
+                                                                content: m,
                                                                 isLoading: !1
                                                             }), t = !0;
                                                             break
                                                         }
                                         return [3, 3];
                                     case 2:
-                                        return m = a.sent(), this.logger.error(m, "Failed to load Overwatch character data"), this.setState({
+                                        return u = a.sent(), this.logger.error(u, "Failed to load Overwatch character data"), this.setState({
                                             isError: !0,
                                             isLoading: !1
                                         }), [3, 3];
@@ -169,7 +169,7 @@ webpackJsonp([47], {
                     return n ? this.renderIcon(n.display_name, this.state.gameSprite || "", n.image_width, n.image_height, n.sprite_x_offset, n.sprite_y_offset) : null
                 }, t
             }(r.Component)),
-            w = Object(d.a)(function(e) {
+            b = Object(d.b)(function(e) {
                 return {
                     leagueOfLegends: {
                         championsMap: e.directory.leagueOfLegends.championsMap,
@@ -179,11 +179,11 @@ webpackJsonp([47], {
                     }
                 }
             }, function(e) {
-                return Object(u.bindActionCreators)({
-                    onLoadLeagueOfLegendsChampions: c.a
+                return Object(c.b)({
+                    onLoadLeagueOfLegendsChampions: m.a
                 }, e)
-            })(S),
-            b = (n("LEV+"), function(e) {
+            })(w),
+            _ = (n("LEV+"), function(e) {
                 function t() {
                     var t = e.call(this) || this;
                     return t.state = {
@@ -195,9 +195,9 @@ webpackJsonp([47], {
                         return a.__generator(this, function(e) {
                             switch (e.label) {
                                 case 0:
-                                    return [4, l.n.experiments.getAssignment("TWILIGHT_PREMIERE_UPLOAD_FLOW")];
+                                    return [4, s.n.experiments.getAssignment("TWILIGHT_PREMIERE_UPLOAD_FLOW")];
                                 case 1:
-                                    return "yes" === e.sent() && l.b.get("premiere_video_manager_staff", !1) && this.setState({
+                                    return "yes" === e.sent() && s.b.get("premiere_video_manager_staff", !1) && this.setState({
                                         isPremiereExperimentActive: !0
                                     }), [2]
                             }
@@ -211,9 +211,9 @@ webpackJsonp([47], {
                             right: .5
                         }
                     }, r.createElement(y._1, {
-                        label: Object(l.d)("Vodcast", "LiveChannelCard")
+                        label: Object(s.d)("Vodcast", "LiveChannelCard")
                     })));
-                    var t = Object(l.d)("{viewerCount, plural, one {# viewer on {channel}} other {# viewers on {channel}}}", {
+                    var t = Object(s.d)("{viewerCount, plural, one {# viewer on {channel}} other {# viewers on {channel}}}", {
                         viewerCount: this.props.viewerCount,
                         channel: r.createElement(o.a, {
                             to: this.props.channelNameLinkTo,
@@ -296,21 +296,21 @@ webpackJsonp([47], {
                         attachLeft: !0,
                         attachTop: !0,
                         padding: .5
-                    }, r.createElement(s.a, {
+                    }, r.createElement(l.a, {
                         type: this.props.streamType,
                         hosting: this.props.hosting
                     })) : null
                 }, t.prototype.renderStreamMetadata = function() {
-                    return this.props.streamMetadata ? r.createElement(w, {
+                    return this.props.streamMetadata ? r.createElement(b, {
                         streamMetadata: this.props.streamMetadata
                     }) : null
                 }, t
             }(r.Component)),
-            _ = b;
+            S = _;
         n.d(t, !1, function() {
-            return b
-        }), n.d(t, "a", function() {
             return _
+        }), n.d(t, "a", function() {
+            return S
         })
     },
     "/+to": function(e, t, n) {
@@ -319,11 +319,11 @@ webpackJsonp([47], {
             a = n("TToO"),
             r = n("U7vG"),
             o = n("6sO2"),
-            l = n("Us7i"),
-            s = n("QG7y"),
+            s = n("Us7i"),
+            l = n("QG7y"),
             d = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_0",
-            u = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_1",
-            c = function(e) {
+            c = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_1",
+            m = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.logger = o.i.withCategory("ad-slot"), n.createSlot = function(e) {
@@ -337,9 +337,9 @@ webpackJsonp([47], {
                                             slotCreated: !0
                                         }), n.label = 1;
                                     case 1:
-                                        return n.trys.push([1, 3, , 4]), [4, l.a.createSlot(e.slotID, e.adUnit, e.adSize, e.targeting, e.autoEnable)];
+                                        return n.trys.push([1, 3, , 4]), [4, s.a.createSlot(e.slotID, e.adUnit, e.adSize, e.targeting, e.autoEnable)];
                                     case 2:
-                                        return t = n.sent(), Object(s.h)(t.getSlotElementId()), this.setState({
+                                        return t = n.sent(), Object(l.h)(t.getSlotElementId()), this.setState({
                                             slot: t
                                         }), [3, 4];
                                     case 3:
@@ -369,21 +369,21 @@ webpackJsonp([47], {
                                     size: e.size
                                 }), e.isEmpty) return;
                             if (!n.slotRef) return;
-                            if (n.props.slotID === s.b.anonFront.takeover) return void(document.body.classList.contains("takeover") && n.setState({
+                            if (n.props.slotID === l.b.anonFront.takeover) return void(document.body.classList.contains("takeover") && n.setState({
                                 shouldDisplay: !0
                             }, function() {
                                 return n.slotRendered(e.slot)
                             }));
-                            if (n.props.slotID === s.b.directory.banner) {
+                            if (n.props.slotID === l.b.directory.banner) {
                                 return void((i = n.slotRef.querySelector(d)) && 1 !== i.clientWidth && n.setState({
                                     shouldDisplay: !0
                                 }, function() {
                                     return n.slotRendered(e.slot)
                                 }))
                             }
-                            if (n.props.slotID === s.b.directory.rectangle) {
+                            if (n.props.slotID === l.b.directory.rectangle) {
                                 var i;
-                                return void((i = n.slotRef.querySelector(u)) && 1 !== i.clientWidth && n.setState({
+                                return void((i = n.slotRef.querySelector(c)) && 1 !== i.clientWidth && n.setState({
                                     shouldDisplay: !0
                                 }, function() {
                                     return n.slotRendered(e.slot)
@@ -402,11 +402,11 @@ webpackJsonp([47], {
                     }, n
                 }
                 return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                    s.g.addListener(s.f, this.onSlotRenderEnd), this.props.trackingSet ? (this.logger.debug("Tracking is set. Creating slot (componentDidMount)", this.props.slotID), this.createSlot(this.props)) : this.logger.debug("Tracking is not set. Skipping slot creation (componentDidMount)", this.props.slotID)
+                    l.g.addListener(l.f, this.onSlotRenderEnd), this.props.trackingSet ? (this.logger.debug("Tracking is set. Creating slot (componentDidMount)", this.props.slotID), this.createSlot(this.props)) : this.logger.debug("Tracking is not set. Skipping slot creation (componentDidMount)", this.props.slotID)
                 }, t.prototype.componentWillReceiveProps = function(e) {
                     this.state.slotCreated || (e.trackingSet ? (this.logger.debug("Tracking is set. Creating slot (componentWillReceiveProps)", this.props.slotID), this.createSlot(e)) : this.logger.debug("Tracking is not set. Skipping slot creation (componentWillReceiveProps)", this.props.slotID))
                 }, t.prototype.componentWillUnmount = function() {
-                    this.logger.debug("Destroying Slot (componentWillUnmount)", this.props.slotID), s.g.removeListener(s.f, this.onSlotRenderEnd), this.state.slot && l.a.destroySlot(this.state.slot)
+                    this.logger.debug("Destroying Slot (componentWillUnmount)", this.props.slotID), l.g.removeListener(l.f, this.onSlotRenderEnd), this.state.slot && s.a.destroySlot(this.state.slot)
                 }, t.prototype.shouldComponentUpdate = function(e, t) {
                     return t.shouldDisplay !== this.state.shouldDisplay
                 }, t.prototype.render = function() {
@@ -418,13 +418,13 @@ webpackJsonp([47], {
                     })
                 }, t
             }(r.Component),
-            m = Object(i.a)(function(e) {
+            u = Object(i.b)(function(e) {
                 return {
                     trackingSet: e.ads.trackingSet
                 }
-            })(c);
+            })(m);
         n.d(t, "a", function() {
-            return m
+            return u
         })
     },
     "/SNv": function(e, t, n) {
@@ -436,12 +436,12 @@ webpackJsonp([47], {
             a = n("2KeS"),
             r = n("+xm8"),
             o = n("f2i/"),
-            l = n("Aj/L"),
-            s = n("TToO"),
+            s = n("Aj/L"),
+            l = n("TToO"),
             d = n("U7vG"),
-            u = n("BhyV"),
-            c = n("6sO2"),
-            m = n("7vx8"),
+            c = n("3zLD"),
+            m = n("6sO2"),
+            u = n("7vx8"),
             p = n("oIkB"),
             g = n("vH/s"),
             v = n("Odds"),
@@ -449,16 +449,16 @@ webpackJsonp([47], {
             f = n("rG8a"),
             k = n("U9Fb"),
             y = "follow-game-button-component",
-            S = function(e) {
+            w = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.follow = function() {
-                        return s.__awaiter(t, void 0, void 0, function() {
+                        return l.__awaiter(t, void 0, void 0, function() {
                             var e, t = this;
-                            return s.__generator(this, function(n) {
+                            return l.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
-                                        return this.props.followGame && this.props.data && this.props.data.game ? (e = s.__assign({}, Object(p.a)({
+                                        return this.props.followGame && this.props.data && this.props.data.game ? (e = l.__assign({}, Object(p.a)({
                                             gameID: this.props.data.game.id
                                         }), {
                                             optimisticResponse: {
@@ -484,7 +484,7 @@ webpackJsonp([47], {
                                                             name: t.props.gameName
                                                         }
                                                     });
-                                                a.game && (a.game.self.follow = i.game.self.follow, e.writeQuery({
+                                                a && a.game && (a.game.self.follow = i.game.self.follow, e.writeQuery({
                                                     query: f,
                                                     variables: {
                                                         name: t.props.gameName
@@ -499,12 +499,12 @@ webpackJsonp([47], {
                             })
                         })
                     }, t.unfollow = function() {
-                        return s.__awaiter(t, void 0, void 0, function() {
+                        return l.__awaiter(t, void 0, void 0, function() {
                             var e, t = this;
-                            return s.__generator(this, function(n) {
+                            return l.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
-                                        return this.props.unfollowGame && this.props.data && this.props.data.game ? (e = s.__assign({}, Object(p.a)({
+                                        return this.props.unfollowGame && this.props.data && this.props.data.game ? (e = l.__assign({}, Object(p.a)({
                                             gameID: this.props.data.game.id
                                         }), {
                                             optimisticResponse: {
@@ -520,7 +520,7 @@ webpackJsonp([47], {
                                                         name: t.props.gameName
                                                     }
                                                 });
-                                                n.game && (n.game.self.follow = null, e.writeQuery({
+                                                n && n.game && (n.game.self.follow = null, e.writeQuery({
                                                     query: f,
                                                     variables: {
                                                         name: t.props.gameName
@@ -536,8 +536,8 @@ webpackJsonp([47], {
                         })
                     }, t
                 }
-                return s.__extends(t, e), t.prototype.render = function() {
-                    var e = Object(c.d)("Follow", "FollowGameButton");
+                return l.__extends(t, e), t.prototype.render = function() {
+                    var e = Object(m.d)("Follow", "FollowGameButton");
                     if (!this.props.isLoggedIn) return d.createElement(v.u, {
                         icon: v._11.Heart,
                         ariaLabel: e,
@@ -549,7 +549,7 @@ webpackJsonp([47], {
                         height: 30
                     });
                     if (this.isFollowing) {
-                        var t = Object(c.d)("Unfollow", "FollowGameButton");
+                        var t = Object(m.d)("Unfollow", "FollowGameButton");
                         return d.createElement(v.v, {
                             ariaLabel: t,
                             "data-test-selector": y,
@@ -579,14 +579,14 @@ webpackJsonp([47], {
                     enumerable: !0,
                     configurable: !0
                 }), t.prototype.track = function(e) {
-                    c.n.tracking.track(e, {
+                    m.n.tracking.track(e, {
                         src: this.props.src,
                         kind: e === g.SpadeEventType.GameFollow ? "follow" : "unfollow",
                         name: this.props.gameName
                     })
                 }, t
             }(d.Component),
-            w = Object(u.compose)(Object(m.a)(f, {
+            b = Object(c.compose)(Object(u.a)(f, {
                 options: function(e) {
                     return {
                         variables: {
@@ -597,24 +597,24 @@ webpackJsonp([47], {
                 skip: function(e) {
                     return !e.isLoggedIn || !e.gameName
                 }
-            }), Object(m.a)(h, {
+            }), Object(u.a)(h, {
                 name: "followGame"
-            }), Object(m.a)(k, {
+            }), Object(u.a)(k, {
                 name: "unfollowGame"
-            }))(S),
-            b = Object(i.a)(function(e) {
+            }))(w),
+            _ = Object(i.b)(function(e) {
                 return {
-                    isLoggedIn: Object(l.d)(e)
+                    isLoggedIn: Object(s.d)(e)
                 }
             }, function(e) {
-                return Object(a.bindActionCreators)({
+                return Object(a.b)({
                     showLoginModal: function() {
                         return Object(o.f)(r.a.FollowGameButton)
                     }
                 }, e)
-            })(w);
+            })(b);
         n.d(t, "a", function() {
-            return b
+            return _
         })
     },
     "2qz3": function(e, t, n) {
@@ -623,12 +623,12 @@ webpackJsonp([47], {
             a = n("U7vG"),
             r = n("/+to"),
             o = n("QG7y"),
-            l = n("CSlQ"),
-            s = n("7vx8"),
+            s = n("CSlQ"),
+            l = n("7vx8"),
             d = n("jkA6"),
-            u = n("7tMz"),
-            c = n("IOwa"),
-            m = n("2o2f"),
+            c = n("7tMz"),
+            m = n("IOwa"),
+            u = n("2o2f"),
             p = n("KSGD"),
             g = n("6sO2"),
             v = n("S4HN"),
@@ -692,20 +692,20 @@ webpackJsonp([47], {
                 }, t
             }(a.Component),
             y = "community-stream__placeholder",
-            S = "community-stream",
-            w = function(e) {
+            w = "community-stream",
+            b = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderStream = function() {
                         return t.props.data ? a.createElement(f.V, {
-                            "data-test-selector": S,
+                            "data-test-selector": w,
                             position: f._4.Relative
                         }, a.createElement(f.V, {
                             padding: .5,
                             position: f._4.Absolute,
                             zIndex: f._39.Above
-                        }, a.createElement(c.a, {
-                            type: m.a.Live
+                        }, a.createElement(m.a, {
+                            type: u.a.Live
                         })), a.createElement(k, {
                             key: t.props.data.id,
                             trackingMedium: t.props.trackingMedium,
@@ -737,8 +737,8 @@ webpackJsonp([47], {
                     return a.createElement(f.V, null, this.renderStream())
                 }, t
             }(a.Component),
-            b = n("eqtY"),
-            _ = function(e) {
+            _ = n("eqtY"),
+            S = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -757,14 +757,14 @@ webpackJsonp([47], {
                         });
                         n.length && (e = n[0])
                     }
-                    return a.createElement(w, {
+                    return a.createElement(b, {
                         data: e,
                         index: this.props.index,
                         directoryName: t,
                         directoryType: this.props.directoryType,
                         trackingMedium: this.props.trackingMedium
                     })
-                }, t = i.__decorate([Object(s.a)(b, {
+                }, t = i.__decorate([Object(l.a)(_, {
                     options: function(e) {
                         return {
                             fetchPolicy: "network-only",
@@ -775,10 +775,10 @@ webpackJsonp([47], {
                             }
                         }
                     }
-                }), Object(u.a)("CommunityStream")], t)
+                }), Object(c.a)("CommunityStream")], t)
             }(a.Component),
             N = "community-streams-row__ad",
-            E = function(e) {
+            F = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -821,7 +821,7 @@ webpackJsonp([47], {
                         if (t.props.data) {
                             var e = t.props.data;
                             return t.props.withAd && t.state.adDisplayed && (e = e.slice(0, 2)), e.map(function(e, n) {
-                                return a.createElement(w, {
+                                return a.createElement(b, {
                                     key: e.id,
                                     data: e,
                                     index: n,
@@ -834,7 +834,7 @@ webpackJsonp([47], {
                         if (t.props.names) {
                             var n = t.props.names;
                             return t.props.withAd && t.state.adDisplayed && (n = n.slice(0, 2)), n.map(function(e, n) {
-                                return a.createElement(_, {
+                                return a.createElement(S, {
                                     key: e,
                                     name: e,
                                     index: n,
@@ -867,13 +867,13 @@ webpackJsonp([47], {
                     }, this.renderStreams()))
                 }, t
             }(a.Component),
-            F = Object(l.d)("CommunityStreamsRow")(E);
+            E = Object(s.d)("CommunityStreamsRow")(F);
         n.d(t, !1, function() {
             return N
         }), n.d(t, !1, function() {
-            return E
-        }), n.d(t, "a", function() {
             return F
+        }), n.d(t, "a", function() {
+            return E
         })
     },
     "3yQz": function(e, t, n) {
@@ -897,29 +897,31 @@ webpackJsonp([47], {
         function i(e, t, n, i) {
             void 0 === n && (n = {});
             var a = e.readQuery({
-                    query: t,
-                    variables: n
-                }),
-                r = s(a, function(e) {
+                query: t,
+                variables: n
+            });
+            if (a) {
+                var r = l(a, function(e) {
                     return e
                 }, function(e) {
                     return i(e)
                 });
-            e.writeQuery({
-                query: t,
-                variables: n,
-                data: r
-            })
+                e.writeQuery({
+                    query: t,
+                    variables: n,
+                    data: r
+                })
+            }
         }
         var a = n("TToO"),
             r = n("U7vG"),
             o = n("7vx8"),
-            l = n("oIkB"),
-            s = n("LIeg"),
+            s = n("oIkB"),
+            l = n("LIeg"),
             d = n("Odds"),
-            u = n("xGL+"),
-            c = n("E+ZP"),
-            m = (n("AtoX"), n("RuaR"));
+            c = n("xGL+"),
+            m = n("E+ZP"),
+            u = (n("AtoX"), n("RuaR"));
         n.d(t, "a", function() {
             return p
         });
@@ -1016,12 +1018,12 @@ webpackJsonp([47], {
                     return a.__generator(this, function(r) {
                         switch (r.label) {
                             case 0:
-                                t = a.__assign({}, Object(l.a)({
+                                t = a.__assign({}, Object(s.a)({
                                     gameID: e
                                 }), {
                                     update: function(e, t) {
                                         var a = t.data.followGame;
-                                        i(e, c, {
+                                        i(e, m, {
                                             name: n.props.title
                                         }, function(e) {
                                             return e.game && a && a.game ? (e.game.self.follow = a.game.self.follow, e) : e
@@ -1066,12 +1068,12 @@ webpackJsonp([47], {
                     return a.__generator(this, function(r) {
                         switch (r.label) {
                             case 0:
-                                t = a.__assign({}, Object(l.a)({
+                                t = a.__assign({}, Object(s.a)({
                                     gameID: e
                                 }), {
                                     update: function(e, t) {
                                         var a = t.data.unfollowGame;
-                                        i(e, c, {
+                                        i(e, m, {
                                             name: n.props.title
                                         }, function(e) {
                                             return e.game && a && a.game ? (e.game.self.follow = a.game.self.follow, e) : e
@@ -1111,7 +1113,7 @@ webpackJsonp([47], {
                 return !!(this.followGameDataLoadedWithoutError() && this.props.data.game && this.props.data.game.self && this.props.data.game.self.follow)
             }, t.prototype.followGameDataLoadedWithoutError = function() {
                 return !(!this.props || !this.props.data || this.props.data.loading || this.props.data.error || !this.props.data.game)
-            }, t = a.__decorate([Object(o.a)(c, {
+            }, t = a.__decorate([Object(o.a)(m, {
                 options: function(e) {
                     return {
                         variables: {
@@ -1119,9 +1121,9 @@ webpackJsonp([47], {
                         }
                     }
                 }
-            }), Object(o.a)(u, {
+            }), Object(o.a)(c, {
                 name: "followGame"
-            }), Object(o.a)(m, {
+            }), Object(o.a)(u, {
                 name: "unfollowGame"
             })], t)
         }(r.Component)
@@ -1151,15 +1153,13 @@ webpackJsonp([47], {
                             kind: "Name",
                             value: "Int"
                         }
-                    },
-                    defaultValue: null
+                    }
                 }],
                 directives: [],
                 selectionSet: {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "games"
@@ -1183,7 +1183,6 @@ webpackJsonp([47], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "edges"
@@ -1194,7 +1193,6 @@ webpackJsonp([47], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "node"
@@ -1205,27 +1203,22 @@ webpackJsonp([47], {
                                             kind: "SelectionSet",
                                             selections: [{
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "id"
                                                 },
                                                 arguments: [],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }, {
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "name"
                                                 },
                                                 arguments: [],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }, {
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "boxArtURL"
@@ -1251,8 +1244,7 @@ webpackJsonp([47], {
                                                         value: "380"
                                                     }
                                                 }],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }]
                                         }
                                     }]
@@ -1283,12 +1275,12 @@ webpackJsonp([47], {
             a = n("2KeS"),
             r = n("iJpA"),
             o = n("c8Oh"),
-            l = n("TToO"),
-            s = n("U7vG"),
+            s = n("TToO"),
+            l = n("U7vG"),
             d = n("6sO2"),
-            u = n("zCIC"),
-            c = n("+Znq"),
-            m = n("D9fv"),
+            c = n("zCIC"),
+            m = n("+Znq"),
+            u = n("D9fv"),
             p = n("CSlQ"),
             g = n("Odds"),
             v = (n("vQzq"), function(e) {
@@ -1299,13 +1291,13 @@ webpackJsonp([47], {
                             i = n.parentElement && n.parentElement.getAttribute("data-language-code");
                         i && t.props.updateLanguagePreferences(i, n.checked)
                     }, t.renderLanguageOption = function(e) {
-                        return s.createElement(g.V, {
+                        return l.createElement(g.V, {
                             padding: {
                                 x: 1,
                                 y: .5
                             },
                             key: e.code
-                        }, s.createElement(g.E, {
+                        }, l.createElement(g.E, {
                             label: e.label,
                             checked: t.props.languagePreferences.includes(e.code),
                             "data-language-code": e.code,
@@ -1314,51 +1306,51 @@ webpackJsonp([47], {
                         }))
                     }, t
                 }
-                return l.__extends(t, e), t.prototype.componentDidMount = function() {
+                return s.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     var e = this.props.languagePreferences.length;
-                    return s.createElement(g.V, {
+                    return l.createElement(g.V, {
                         className: "language-select-menu"
-                    }, s.createElement(c.a, null, s.createElement(g.u, {
+                    }, l.createElement(m.a, null, l.createElement(g.u, {
                         "data-test-selector": "language-dropdown-button",
                         "data-a-target": "language-filter-dropdown",
                         dropdown: !0,
                         type: g.z.Hollow
-                    }, s.createElement(g.V, {
+                    }, l.createElement(g.V, {
                         display: g.H.Flex
-                    }, Object(d.d)("Language", "LanguageSelectMenu"), s.createElement(g.V, {
+                    }, Object(d.d)("Language", "LanguageSelectMenu"), l.createElement(g.V, {
                         margin: {
                             left: .5
                         }
-                    }, 0 !== e && s.createElement(g._1, {
+                    }, 0 !== e && l.createElement(g._1, {
                         type: g._2.Brand,
                         label: e.toString()
-                    })))), s.createElement(g.p, {
+                    })))), l.createElement(g.p, {
                         direction: g.q.BottomLeft,
                         noTail: !0,
                         "data-a-target": "language-filter-balloon"
-                    }, s.createElement(u.b, {
+                    }, l.createElement(c.b, {
                         className: "language-select-menu__balloon"
-                    }, s.createElement(g.V, {
+                    }, l.createElement(g.V, {
                         padding: .5
-                    }, Object(m.b)().map(this.renderLanguageOption))), s.createElement(g._19, {
+                    }, Object(u.b)().map(this.renderLanguageOption))), l.createElement(g._19, {
                         background: g.m.Alt,
                         borderTop: !0,
                         className: "language-select-menu__footer"
-                    }, s.createElement(g.u, {
+                    }, l.createElement(g.u, {
                         type: g.z.Text,
                         onClick: this.props.clearLanguagePreferences,
                         "data-a-target": "language-clear-all"
                     }, Object(d.d)("Clear all", "LanguageSelectMenu"))))))
-                }, t = l.__decorate([Object(p.d)("LanguageSelectMenu")], t)
-            }(s.Component)),
-            h = Object(i.a)(function(e) {
+                }, t = s.__decorate([Object(p.d)("LanguageSelectMenu")], t)
+            }(l.Component)),
+            h = Object(i.b)(function(e) {
                 return {
                     languagePreferences: Object(o.a)(e)
                 }
             }, function(e) {
-                return Object(a.bindActionCreators)({
+                return Object(a.b)({
                     updateLanguagePreferences: r.c,
                     clearLanguagePreferences: r.a
                 }, e)
@@ -1391,7 +1383,7 @@ webpackJsonp([47], {
             }, t)), i.createElement("div", {
                 className: "following__view-all",
                 onClick: e.onClickViewAll,
-                "data-test-selector": s
+                "data-test-selector": l
             }, i.createElement(o.V, null, i.createElement(o.j, {
                 ratio: e.aspectRatio
             }, i.createElement(o._19, {
@@ -1403,8 +1395,8 @@ webpackJsonp([47], {
             a = (n.n(i), n("F8kA")),
             r = n("6sO2"),
             o = n("Odds"),
-            l = n("oHn4"),
-            s = (n.n(l), "view-all-button-selector")
+            s = n("oHn4"),
+            l = (n.n(s), "view-all-button-selector")
     },
     "7tMz": function(e, t, n) {
         "use strict";
@@ -1412,14 +1404,14 @@ webpackJsonp([47], {
         function i(e) {
             return {
                 latencyTracking: function(e, t) {
-                    return new s.a(e, t)
+                    return new l.a(e, t)
                 }(e),
                 rootLatencyTracker: a()
             }
         }
 
         function a() {
-            return new s.a("Root")
+            return new l.a("Root")
         }
 
         function r(e, t) {
@@ -1429,14 +1421,14 @@ webpackJsonp([47], {
                         return null !== n && n.apply(this, arguments) || this
                     }
                     return o.__extends(a, n), a.prototype.render = function() {
-                        return l.createElement(t, o.__assign({}, this.props, i(e)))
+                        return s.createElement(t, o.__assign({}, this.props, i(e)))
                     }, a
-                }(l.Component)
+                }(s.Component)
             }
         }
         var o = n("TToO"),
-            l = n("U7vG"),
-            s = n("75D5");
+            s = n("U7vG"),
+            l = n("75D5");
         n("MRMr");
         n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "a", function() {
             return r
@@ -1457,13 +1449,13 @@ webpackJsonp([47], {
     "9u8h": function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
-            return l
+            return s
         });
         var i = n("TToO"),
             a = n("6sO2"),
             r = n("Aj/L"),
             o = "application/json; charset=UTF-8",
-            l = function() {
+            s = function() {
                 function e() {}
                 return e.get = function(e, t, n) {
                     return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, void 0, function() {
@@ -1579,8 +1571,8 @@ webpackJsonp([47], {
                             "X-Requested-With": "XMLHttpRequest"
                         };
                     e.body && FormData.prototype.isPrototypeOf(e.body) || (i["Content-Type"] = o);
-                    var l = Object(r.c)(n);
-                    return l && (i.Authorization = "OAuth " + l.authToken, l.legacyCSRFToken && (i["Twitch-Api-Token"] = l.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
+                    var s = Object(r.c)(n);
+                    return s && (i.Authorization = "OAuth " + s.authToken, s.legacyCSRFToken && (i["Twitch-Api-Token"] = s.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
                         i[e] && delete i[e]
                     }), i
                 }, e
@@ -1594,20 +1586,20 @@ webpackJsonp([47], {
             a = n("U7vG"),
             r = n("6sO2"),
             o = n("+GT7"),
-            l = n("SZoP"),
-            s = n("NY9D"),
+            s = n("SZoP"),
+            l = n("NY9D"),
             d = n("vH/s"),
-            u = n("v5ho"),
-            c = n("RH2O"),
-            m = n("2KeS"),
+            c = n("v5ho"),
+            m = n("RH2O"),
+            u = n("2KeS"),
             p = n("V5M+"),
             g = n("jetF"),
             v = n("7vx8"),
             h = n("CSlQ"),
-            f = n("BhyV"),
+            f = n("3zLD"),
             k = n("+8VM"),
             y = n("oIkB"),
-            S = function(e) {
+            w = function(e) {
                 switch (e) {
                     case "TARGET_USER_OWNER":
                         return Object(r.d)("You cannot ban or timeout the owner of this community", "BanTimeoutErrorMessages");
@@ -1623,9 +1615,9 @@ webpackJsonp([47], {
                         return Object(r.d)("Something went wrong", "BanTimeoutErrorMessages")
                 }
             },
-            w = n("Odds"),
-            b = n("nC3l"),
-            _ = (n("sJt0"), "error-message"),
+            b = n("Odds"),
+            _ = n("nC3l"),
+            S = (n("sJt0"), "error-message"),
             N = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -1633,15 +1625,15 @@ webpackJsonp([47], {
                         error: "",
                         reason: ""
                     }, t.renderErrorMessage = function() {
-                        return t.state.error ? a.createElement(w.V, {
+                        return t.state.error ? a.createElement(b.V, {
                             margin: {
                                 bottom: 2
                             }
-                        }, a.createElement(w._23, {
-                            color: w.F.Error,
-                            type: w._28.H4,
-                            "data-test-selector": _
-                        }, S(t.state.error))) : null
+                        }, a.createElement(b._23, {
+                            color: b.F.Error,
+                            type: b._28.H4,
+                            "data-test-selector": S
+                        }, w(t.state.error))) : null
                     }, t.onReasonChange = function(e) {
                         var n = e.target.value;
                         t.setState({
@@ -1683,56 +1675,56 @@ webpackJsonp([47], {
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return a.createElement(w.Q, {
-                        position: w._4.Relative
-                    }, a.createElement(w._19, {
-                        background: w.m.Base,
+                    return a.createElement(b.Q, {
+                        position: b._4.Relative
+                    }, a.createElement(b._19, {
+                        background: b.m.Base,
                         className: "stream-ban-modal"
-                    }, a.createElement(w.V, {
+                    }, a.createElement(b.V, {
                         padding: 2
-                    }, this.renderErrorMessage(), a.createElement(w.V, {
+                    }, this.renderErrorMessage(), a.createElement(b.V, {
                         margin: {
                             bottom: 2
                         }
-                    }, a.createElement(w._23, {
-                        type: w._28.H4
+                    }, a.createElement(b._23, {
+                        type: b._28.H4
                     }, Object(r.d)("Are you sure you want to ban {name}?", {
                         name: this.props.username
-                    }, "StreamBanModal"))), a.createElement(w._19, {
+                    }, "StreamBanModal"))), a.createElement(b._19, {
                         borderTop: !0
-                    }, a.createElement(w.V, {
+                    }, a.createElement(b.V, {
                         margin: {
                             y: 2
                         }
-                    }, a.createElement(w._23, {
+                    }, a.createElement(b._23, {
                         bold: !0
-                    }, Object(r.d)("Reason (Required)", "StreamBanModal")), a.createElement(w.R, {
-                        type: w.S.Text,
+                    }, Object(r.d)("Reason (Required)", "StreamBanModal")), a.createElement(b.R, {
+                        type: b.S.Text,
                         placeholder: Object(r.d)("Please be as detailed as possible", "StreamBanModal"),
                         onChange: this.onReasonChange,
                         "data-test-selector": "reason-input"
-                    }))), a.createElement(w._19, {
+                    }))), a.createElement(b._19, {
                         borderTop: !0
-                    }, a.createElement(w.V, {
+                    }, a.createElement(b.V, {
                         padding: {
                             top: 2
                         },
-                        textAlign: w._24.Center
-                    }, a.createElement(w.V, {
-                        display: w.H.Inline,
+                        textAlign: b._24.Center
+                    }, a.createElement(b.V, {
+                        display: b.H.Inline,
                         margin: {
                             x: 1
                         }
-                    }, a.createElement(w.u, {
-                        type: w.z.Text,
+                    }, a.createElement(b.u, {
+                        type: b.z.Text,
                         onClick: this.props.onCloseModal,
                         "data-test-selector": "cancel-button"
-                    }, Object(r.d)("Cancel", "StreamBanModal"))), a.createElement(w.V, {
-                        display: w.H.Inline,
+                    }, Object(r.d)("Cancel", "StreamBanModal"))), a.createElement(b.V, {
+                        display: b.H.Inline,
                         margin: {
                             x: 1
                         }
-                    }, a.createElement(w.u, {
+                    }, a.createElement(b.u, {
                         onClick: this.banUserFromCommunity,
                         disabled: !this.state.reason.length,
                         "data-test-selector": "ban-button"
@@ -1741,14 +1733,14 @@ webpackJsonp([47], {
                     })))
                 }, t
             }(a.Component),
-            E = Object(f.compose)(Object(v.a)(b, {
+            F = Object(f.compose)(Object(v.a)(_, {
                 name: "banUserFromCommunity"
             }))(N),
-            F = Object(c.a)(null, function(e) {
-                return Object(m.bindActionCreators)({
+            E = Object(m.b)(null, function(e) {
+                return Object(u.b)({
                     onCloseModal: p.c
                 }, e)
-            })(E),
+            })(F),
             C = (n("npyu"), n("plcU")),
             O = "error-message",
             L = function(e) {
@@ -1759,15 +1751,15 @@ webpackJsonp([47], {
                         error: "",
                         reason: ""
                     }, t.renderErrorMessage = function() {
-                        return t.state.error ? a.createElement(w.V, {
+                        return t.state.error ? a.createElement(b.V, {
                             margin: {
                                 bottom: 2
                             }
-                        }, a.createElement(w._23, {
-                            color: w.F.Error,
-                            type: w._28.H4,
+                        }, a.createElement(b._23, {
+                            color: b.F.Error,
+                            type: b._28.H4,
                             "data-test-selector": O
-                        }, S(t.state.error))) : null
+                        }, w(t.state.error))) : null
                     }, t.onReasonChange = function(e) {
                         var n = e.target.value;
                         t.setState({
@@ -1816,41 +1808,41 @@ webpackJsonp([47], {
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return a.createElement(w.Q, {
-                        position: w._4.Relative
-                    }, a.createElement(w._19, {
-                        background: w.m.Base,
+                    return a.createElement(b.Q, {
+                        position: b._4.Relative
+                    }, a.createElement(b._19, {
+                        background: b.m.Base,
                         className: "stream-timeout-modal"
-                    }, a.createElement(w.V, {
+                    }, a.createElement(b.V, {
                         padding: 2
-                    }, this.renderErrorMessage(), a.createElement(w.V, {
+                    }, this.renderErrorMessage(), a.createElement(b.V, {
                         margin: {
                             bottom: 2
                         }
-                    }, a.createElement(w._23, {
-                        type: w._28.H4
+                    }, a.createElement(b._23, {
+                        type: b._28.H4
                     }, Object(r.d)("Are you sure you want to timeout {name}?", {
                         name: this.props.username
-                    }, "StreamTimeoutModal"))), a.createElement(w._19, {
+                    }, "StreamTimeoutModal"))), a.createElement(b._19, {
                         borderTop: !0
-                    }, a.createElement(w.V, {
+                    }, a.createElement(b.V, {
                         margin: {
                             y: 2
                         }
-                    }, a.createElement(w._23, {
+                    }, a.createElement(b._23, {
                         bold: !0
-                    }, Object(r.d)("Reason (Required)", "StreamTimeoutModal")), a.createElement(w.R, {
-                        type: w.S.Text,
+                    }, Object(r.d)("Reason (Required)", "StreamTimeoutModal")), a.createElement(b.R, {
+                        type: b.S.Text,
                         placeholder: Object(r.d)("Please be as detailed as possible", "StreamTimeoutModal"),
                         onChange: this.onReasonChange,
                         "data-test-selector": "reason-input"
-                    }))), a.createElement(w.V, {
+                    }))), a.createElement(b.V, {
                         margin: {
                             y: 2
                         }
-                    }, a.createElement(w._23, {
+                    }, a.createElement(b._23, {
                         bold: !0
-                    }, Object(r.d)("Duration", "StreamTimeoutModal")), a.createElement(w._16, {
+                    }, Object(r.d)("Duration", "StreamTimeoutModal")), a.createElement(b._16, {
                         defaultValue: "2",
                         onChange: this.onDurationHoursChange
                     }, a.createElement("option", {
@@ -1863,28 +1855,28 @@ webpackJsonp([47], {
                         value: "12"
                     }, Object(r.d)("12 hours", "StreamTimeoutModal")), a.createElement("option", {
                         value: "24"
-                    }, Object(r.d)("24 hours", "StreamTimeoutModal")))), a.createElement(w._19, {
+                    }, Object(r.d)("24 hours", "StreamTimeoutModal")))), a.createElement(b._19, {
                         borderTop: !0
-                    }, a.createElement(w.V, {
+                    }, a.createElement(b.V, {
                         padding: {
                             top: 2
                         },
-                        textAlign: w._24.Center
-                    }, a.createElement(w.V, {
-                        display: w.H.Inline,
+                        textAlign: b._24.Center
+                    }, a.createElement(b.V, {
+                        display: b.H.Inline,
                         margin: {
                             x: 1
                         }
-                    }, a.createElement(w.u, {
-                        type: w.z.Text,
+                    }, a.createElement(b.u, {
+                        type: b.z.Text,
                         onClick: this.props.onCloseModal,
                         "data-test-selector": "cancel-button"
-                    }, Object(r.d)("Cancel", "StreamTimeoutModal"))), a.createElement(w.V, {
-                        display: w.H.Inline,
+                    }, Object(r.d)("Cancel", "StreamTimeoutModal"))), a.createElement(b.V, {
+                        display: b.H.Inline,
                         margin: {
                             x: 1
                         }
-                    }, a.createElement(w.u, {
+                    }, a.createElement(b.u, {
                         onClick: this.timeoutUserFromCommunity,
                         disabled: !this.state.reason.length,
                         "data-test-selector": "timeout-button"
@@ -1896,8 +1888,8 @@ webpackJsonp([47], {
             T = Object(f.compose)(Object(v.a)(C, {
                 name: "timeoutUserFromCommunity"
             }))(L),
-            A = Object(c.a)(null, function(e) {
-                return Object(m.bindActionCreators)({
+            A = Object(m.b)(null, function(e) {
+                return Object(u.b)({
                     onCloseModal: p.c
                 }, e)
             })(T),
@@ -1906,8 +1898,8 @@ webpackJsonp([47], {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onStreamBanClick = function() {
-                        var e = Object(l.a)(t.props.login, t.props.displayName, !0);
-                        t.props.onShowModal(F, {
+                        var e = Object(s.a)(t.props.login, t.props.displayName, !0);
+                        t.props.onShowModal(E, {
                             communityID: t.props.data.community.id,
                             communityName: t.props.communityName,
                             currentUserID: t.props.data.currentUser.id,
@@ -1915,7 +1907,7 @@ webpackJsonp([47], {
                             username: e
                         })
                     }, t.onStreamTimeoutClick = function() {
-                        var e = Object(l.a)(t.props.login, t.props.displayName, !0);
+                        var e = Object(s.a)(t.props.login, t.props.displayName, !0);
                         t.props.onShowModal(A, {
                             communityID: t.props.data.community.id,
                             communityName: t.props.communityName,
@@ -1926,29 +1918,29 @@ webpackJsonp([47], {
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return this.props.data && !this.props.data.loading && !this.props.data.error && this.props.data.community && this.props.data.community.self && (this.props.data.community.self.permissions.banning || this.props.data.community.self.permissions.timingOut) ? a.createElement(g.a, null, a.createElement(w.v, {
+                    return this.props.data && !this.props.data.loading && !this.props.data.error && this.props.data.community && this.props.data.community.self && (this.props.data.community.self.permissions.banning || this.props.data.community.self.permissions.timingOut) ? a.createElement(g.a, null, a.createElement(b.v, {
                         ariaLabel: Object(r.d)("Moderation", "DirectoryGamePage"),
-                        icon: w._11.ChatRiskFlag
-                    }), a.createElement(w.p, {
-                        direction: w.q.BottomRight,
-                        size: w.r.ExtraSmall,
+                        icon: b._11.ChatRiskFlag
+                    }), a.createElement(b.p, {
+                        direction: b.q.BottomRight,
+                        size: b.r.ExtraSmall,
                         offsetX: "1rem"
                     }, this.renderBanInteractable(), this.renderTimeoutInteractable())) : null
                 }, t.prototype.renderBanInteractable = function() {
-                    return this.props.data.community.self.permissions.banning ? a.createElement(w.T, {
+                    return this.props.data.community.self.permissions.banning ? a.createElement(b.T, {
                         onClick: this.onStreamBanClick,
                         "data-test-selector": "ban-selector"
-                    }, a.createElement(w.V, {
+                    }, a.createElement(b.V, {
                         padding: {
                             y: .5,
                             x: 1
                         }
                     }, Object(r.d)("Ban", "StreamFlag"))) : null
                 }, t.prototype.renderTimeoutInteractable = function() {
-                    return this.props.data.community.self.permissions.timingOut ? a.createElement(w.T, {
+                    return this.props.data.community.self.permissions.timingOut ? a.createElement(b.T, {
                         onClick: this.onStreamTimeoutClick,
                         "data-test-selector": "timeout-selector"
-                    }, a.createElement(w.V, {
+                    }, a.createElement(b.V, {
                         padding: {
                             y: .5,
                             x: 1
@@ -1967,19 +1959,19 @@ webpackJsonp([47], {
                     autoReportInteractive: !0
                 })], t)
             }(a.Component),
-            V = Object(c.a)(null, function(e) {
-                return Object(m.bindActionCreators)({
+            U = Object(m.b)(null, function(e) {
+                return Object(u.b)({
                     onShowModal: p.d
                 }, e)
             })(I),
-            U = n("PLRK"),
+            V = n("PLRK"),
             x = (n("GiGb"), "directory-game__card_container"),
-            G = function(e) {
+            P = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getLinkTo = function(e, n) {
                         var i = t.props.trackingContent ? t.props.trackingContent : d.PageviewContent.Live,
-                            a = t.props.directoryType === u.a.Communities ? d.PageviewMedium.Community : d.PageviewMedium.Game;
+                            a = t.props.directoryType === c.a.Communities ? d.PageviewMedium.Community : d.PageviewMedium.Game;
                         return t.props.trackingMedium && (a = t.props.trackingMedium), {
                             pathname: e,
                             state: {
@@ -1990,19 +1982,19 @@ webpackJsonp([47], {
                         }
                     }, t.renderStreamFlag = function() {
                         var e = t.props.streamNode;
-                        return e.broadcaster ? t.props.directoryType === u.a.Communities && t.props.directoryName ? a.createElement(w.V, {
+                        return e.broadcaster ? t.props.directoryType === c.a.Communities && t.props.directoryName ? a.createElement(b.V, {
                             className: "stream-thumbnail__card stream-thumbnail__card-flag",
-                            position: w._4.Absolute,
+                            position: b._4.Absolute,
                             attachTop: !0,
                             attachRight: !0
-                        }, a.createElement(V, {
+                        }, a.createElement(U, {
                             communityName: t.props.directoryName,
                             login: e.broadcaster.login,
                             displayName: e.broadcaster.displayName,
                             userID: e.broadcaster.id
                         })) : void 0 : null
                     }, t.shouldShowGame = function(e) {
-                        return t.props.directoryType !== u.a.Games && t.props.streamNode.game ? t.props.streamNode.game[e] : ""
+                        return t.props.directoryType !== c.a.Games && t.props.streamNode.game ? t.props.streamNode.game[e] : ""
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
@@ -2014,9 +2006,9 @@ webpackJsonp([47], {
                         style: {
                             order: t
                         }
-                    }, a.createElement(w.V, {
+                    }, a.createElement(b.V, {
                         className: "stream-thumbnail__card",
-                        position: w._4.Relative,
+                        position: b._4.Relative,
                         margin: {
                             bottom: 2
                         },
@@ -2025,11 +2017,11 @@ webpackJsonp([47], {
                         imageSrc: e.previewImageURL || r.a.defaultStreamPreviewURL,
                         imageAlt: e.broadcaster.login + " cover image",
                         viewerCount: e.viewersCount || 0,
-                        title: e.title || U.a,
-                        channelName: Object(l.a)(e.broadcaster.login, e.broadcaster.displayName, !0),
+                        title: e.title || V.a,
+                        channelName: Object(s.a)(e.broadcaster.login, e.broadcaster.displayName, !0),
                         gameImageSrc: this.shouldShowGame("boxArtURL") || r.a.defaultBoxArtURL,
                         gameTitle: this.shouldShowGame("name"),
-                        gameLinkTo: this.getLinkTo(Object(s.c)(this.shouldShowGame("name")), t),
+                        gameLinkTo: this.getLinkTo(Object(l.c)(this.shouldShowGame("name")), t),
                         linkTo: this.getLinkTo("/" + e.broadcaster.login, t),
                         channelNameLinkTo: this.getLinkTo("/" + e.broadcaster.login + "/videos", t),
                         streamType: e.type,
@@ -2044,567 +2036,10 @@ webpackJsonp([47], {
         }), n.d(t, !1, function() {
             return x
         }), n.d(t, "b", function() {
-            return G
+            return P
         })
     },
     AtoX: function(e, t) {},
-    "Au+y": function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "FollowingGames_CurrentUser"
-                },
-                variableDefinitions: [{
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "limit"
-                        }
-                    },
-                    type: {
-                        kind: "NamedType",
-                        name: {
-                            kind: "Name",
-                            value: "Int"
-                        }
-                    },
-                    defaultValue: null
-                }],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "currentUser"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "followedGames"
-                                },
-                                arguments: [{
-                                    kind: "Argument",
-                                    name: {
-                                        kind: "Name",
-                                        value: "first"
-                                    },
-                                    value: {
-                                        kind: "Variable",
-                                        name: {
-                                            kind: "Name",
-                                            value: "limit"
-                                        }
-                                    }
-                                }],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "nodes"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "id"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }, {
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "name"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }, {
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "boxArtURL"
-                                                },
-                                                arguments: [{
-                                                    kind: "Argument",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "width"
-                                                    },
-                                                    value: {
-                                                        kind: "IntValue",
-                                                        value: "285"
-                                                    }
-                                                }, {
-                                                    kind: "Argument",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "height"
-                                                    },
-                                                    value: {
-                                                        kind: "IntValue",
-                                                        value: "380"
-                                                    }
-                                                }],
-                                                directives: [],
-                                                selectionSet: null
-                                            }, {
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "viewersCount"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }]
-                                        }
-                                    }]
-                                }
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 166
-            }
-        };
-        n.loc.source = {
-            body: "query FollowingGames_CurrentUser($limit: Int) {\ncurrentUser {\nid\nfollowedGames(first: $limit) {\nnodes {\nid\nname\nboxArtURL(width: 285 height: 380)\nviewersCount\n}\n}\n}\n}",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
-    BWqq: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "FollowingLive_CurrentUser"
-                },
-                variableDefinitions: [{
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "limit"
-                        }
-                    },
-                    type: {
-                        kind: "NamedType",
-                        name: {
-                            kind: "Name",
-                            value: "Int"
-                        }
-                    },
-                    defaultValue: null
-                }, {
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "cursor"
-                        }
-                    },
-                    type: {
-                        kind: "NamedType",
-                        name: {
-                            kind: "Name",
-                            value: "Cursor"
-                        }
-                    },
-                    defaultValue: null
-                }],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "currentUser"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "follows"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "totalCount"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }]
-                                }
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "followedLiveUsers"
-                                },
-                                arguments: [{
-                                    kind: "Argument",
-                                    name: {
-                                        kind: "Name",
-                                        value: "first"
-                                    },
-                                    value: {
-                                        kind: "Variable",
-                                        name: {
-                                            kind: "Name",
-                                            value: "limit"
-                                        }
-                                    }
-                                }, {
-                                    kind: "Argument",
-                                    name: {
-                                        kind: "Name",
-                                        value: "after"
-                                    },
-                                    value: {
-                                        kind: "Variable",
-                                        name: {
-                                            kind: "Name",
-                                            value: "cursor"
-                                        }
-                                    }
-                                }],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "edges"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "node"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: {
-                                                    kind: "SelectionSet",
-                                                    selections: [{
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "id"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "login"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "displayName"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "stream"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: {
-                                                            kind: "SelectionSet",
-                                                            selections: [{
-                                                                kind: "Field",
-                                                                alias: null,
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "id"
-                                                                },
-                                                                arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
-                                                            }, {
-                                                                kind: "Field",
-                                                                alias: null,
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "game"
-                                                                },
-                                                                arguments: [],
-                                                                directives: [],
-                                                                selectionSet: {
-                                                                    kind: "SelectionSet",
-                                                                    selections: [{
-                                                                        kind: "Field",
-                                                                        alias: null,
-                                                                        name: {
-                                                                            kind: "Name",
-                                                                            value: "id"
-                                                                        },
-                                                                        arguments: [],
-                                                                        directives: [],
-                                                                        selectionSet: null
-                                                                    }, {
-                                                                        kind: "Field",
-                                                                        alias: null,
-                                                                        name: {
-                                                                            kind: "Name",
-                                                                            value: "name"
-                                                                        },
-                                                                        arguments: [],
-                                                                        directives: [],
-                                                                        selectionSet: null
-                                                                    }, {
-                                                                        kind: "Field",
-                                                                        alias: null,
-                                                                        name: {
-                                                                            kind: "Name",
-                                                                            value: "boxArtURL"
-                                                                        },
-                                                                        arguments: [{
-                                                                            kind: "Argument",
-                                                                            name: {
-                                                                                kind: "Name",
-                                                                                value: "width"
-                                                                            },
-                                                                            value: {
-                                                                                kind: "IntValue",
-                                                                                value: "40"
-                                                                            }
-                                                                        }, {
-                                                                            kind: "Argument",
-                                                                            name: {
-                                                                                kind: "Name",
-                                                                                value: "height"
-                                                                            },
-                                                                            value: {
-                                                                                kind: "IntValue",
-                                                                                value: "56"
-                                                                            }
-                                                                        }],
-                                                                        directives: [],
-                                                                        selectionSet: null
-                                                                    }]
-                                                                }
-                                                            }, {
-                                                                kind: "Field",
-                                                                alias: null,
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "viewersCount"
-                                                                },
-                                                                arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
-                                                            }, {
-                                                                kind: "Field",
-                                                                alias: null,
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "title"
-                                                                },
-                                                                arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
-                                                            }, {
-                                                                kind: "Field",
-                                                                alias: null,
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "type"
-                                                                },
-                                                                arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
-                                                            }, {
-                                                                kind: "Field",
-                                                                alias: null,
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "previewImageURL"
-                                                                },
-                                                                arguments: [{
-                                                                    kind: "Argument",
-                                                                    name: {
-                                                                        kind: "Name",
-                                                                        value: "width"
-                                                                    },
-                                                                    value: {
-                                                                        kind: "IntValue",
-                                                                        value: "320"
-                                                                    }
-                                                                }, {
-                                                                    kind: "Argument",
-                                                                    name: {
-                                                                        kind: "Name",
-                                                                        value: "height"
-                                                                    },
-                                                                    value: {
-                                                                        kind: "IntValue",
-                                                                        value: "180"
-                                                                    }
-                                                                }],
-                                                                directives: [],
-                                                                selectionSet: null
-                                                            }]
-                                                        }
-                                                    }]
-                                                }
-                                            }, {
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "cursor"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }]
-                                        }
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "pageInfo"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "hasNextPage"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }]
-                                        }
-                                    }]
-                                }
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 357
-            }
-        };
-        n.loc.source = {
-            body: "query FollowingLive_CurrentUser($limit: Int $cursor: Cursor) {\ncurrentUser {\nid\nfollows {\ntotalCount\n}\nfollowedLiveUsers(first: $limit after: $cursor) {\nedges {\nnode {\nid\nlogin\ndisplayName\nstream {\nid\ngame {\nid\nname\nboxArtURL(width: 40 height: 56)\n}\nviewersCount\ntitle\ntype\npreviewImageURL(width: 320 height: 180)\n}\n}\ncursor\n}\npageInfo {\nhasNextPage\n}\n}\n}\n}",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
     C2pI: function(e, t) {},
     CybZ: function(e, t) {},
     D9fv: function(e, t, n) {
@@ -2725,17 +2160,17 @@ webpackJsonp([47], {
         }), n.d(t, "i", function() {
             return o
         }), n.d(t, "k", function() {
-            return l
-        }), n.d(t, "j", function() {
             return s
+        }), n.d(t, "j", function() {
+            return l
         }), n.d(t, "m", function() {
             return d
         }), n.d(t, "l", function() {
-            return u
-        }), n.d(t, "a", function() {
             return c
-        }), n.d(t, "e", function() {
+        }), n.d(t, "a", function() {
             return m
+        }), n.d(t, "e", function() {
+            return u
         }), n.d(t, "c", function() {
             return h
         }), n.d(t, "b", function() {
@@ -2743,34 +2178,34 @@ webpackJsonp([47], {
         }), n.d(t, "d", function() {
             return k
         }), n.d(t, "f", function() {
-            return S
-        }), n.d(t, "p", function() {
             return w
-        }), n.d(t, "q", function() {
+        }), n.d(t, "p", function() {
             return b
-        }), n.d(t, "o", function() {
+        }), n.d(t, "q", function() {
             return _
+        }), n.d(t, "o", function() {
+            return S
         }), n.d(t, "n", function() {
             return N
         }), n.d(t, "r", function() {
-            return E
+            return F
         });
         var i, a = "TWILIGHT_WEB_ONBOARDING_CATEGORIES",
             r = "TWILIGHT_WEB_ONBOARDING_CATEGORIES_ANON_FRONT_PAGE",
             o = "TWILIGHT_WEB_ONBOARDING_CHANNEL_RANKING",
-            l = "TWILIGHT_WEB_ONBOARDING_FOLLOWING_FOR_YOU",
-            s = "TWILIGHT_WEB_ONBOARDING",
+            s = "TWILIGHT_WEB_ONBOARDING_FOLLOWING_FOR_YOU",
+            l = "TWILIGHT_WEB_ONBOARDING",
             d = "TWILIGHT_WEB_ONBOARDING_RANDOMIZED_GAMES",
-            u = "TWILIGHT_WEB_ONBOARDING_FOLLOW_CATEGORIES",
-            c = "control";
+            c = "TWILIGHT_WEB_ONBOARDING_FOLLOW_CATEGORIES",
+            m = "control";
         ! function(e) {
             e.Skip = "skip", e.NoSkip = "no_skip"
         }(i || (i = {}));
-        var m, p = new Set([i.Skip.toString(), i.NoSkip.toString()]);
+        var u, p = new Set([i.Skip.toString(), i.NoSkip.toString()]);
         ! function(e) {
             e.First = "first", e.Last = "last"
-        }(m || (m = {}));
-        var g, v = new Set([m.First.toString(), m.Last.toString()]);
+        }(u || (u = {}));
+        var g, v = new Set([u.First.toString(), u.Last.toString()]);
         (g || (g = {})).Yes = "yes";
         var h;
         (h || (h = {})).Yes = "yes";
@@ -2780,24 +2215,24 @@ webpackJsonp([47], {
         }(f || (f = {}));
         var k, y = new Set([f.Games.toString(), f.Streams.toString()]);
         (k || (k = {})).ENABLED = "enabled";
-        var S;
-        (S || (S = {})).ENABLED = "enabled";
-        var w = function(e) {
+        var w;
+        (w || (w = {})).ENABLED = "enabled";
+        var b = function(e) {
                 return !!e && v.has(e)
             },
-            b = function(e, t) {
-                return !!e && p.has(e) && w(t)
+            _ = function(e, t) {
+                return !!e && p.has(e) && b(t)
             },
-            _ = function(e, t, n) {
-                return !!e && p.has(e) && w(t) && n === g.Yes
+            S = function(e, t, n) {
+                return !!e && p.has(e) && b(t) && n === g.Yes
             },
             N = function(e) {
                 return !!e && y.has(e)
             },
-            E = function(e) {
-                return e.getTime() >= F().getTime()
+            F = function(e) {
+                return e.getTime() >= E().getTime()
             },
-            F = function() {
+            E = function() {
                 return new Date((new Date).getTime() - 12096e5)
             }
     },
@@ -2826,15 +2261,13 @@ webpackJsonp([47], {
                             kind: "Name",
                             value: "String"
                         }
-                    },
-                    defaultValue: null
+                    }
                 }],
                 directives: [],
                 selectionSet: {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "game"
@@ -2858,17 +2291,14 @@ webpackJsonp([47], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "self"
@@ -2879,7 +2309,6 @@ webpackJsonp([47], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "follow"
@@ -2890,14 +2319,12 @@ webpackJsonp([47], {
                                             kind: "SelectionSet",
                                             selections: [{
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "followedAt"
                                                 },
                                                 arguments: [],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }]
                                         }
                                     }]
@@ -2926,53 +2353,53 @@ webpackJsonp([47], {
     IOwa: function(e, t, n) {
         "use strict";
         var i, a, r, o = n("TToO"),
-            l = n("HW6M"),
-            s = n("U7vG"),
+            s = n("HW6M"),
+            l = n("U7vG"),
             d = n("6sO2"),
-            u = n("2o2f"),
-            c = n("Odds"),
-            m = (n("CybZ"), i = {}, i[u.a.Live] = "stream-type-indicator--live", i[u.a.Premiere] = "stream-type-indicator--premiere", i[u.a.Rerun] = "stream-type-indicator--rerun", i[u.a.WatchParty] = "stream-type-indicator--rerun", i),
-            p = (a = {}, a[u.a.Premiere] = c._11.VideoPremiere, a[u.a.Rerun] = c._11.VideoRerun, a[u.a.WatchParty] = c._11.VideoRerun, a),
-            g = (r = {}, r[u.a.Premiere] = c._12.Live, r[u.a.Rerun] = c._12.Inherit, r[u.a.WatchParty] = c._12.Inherit, r),
+            c = n("2o2f"),
+            m = n("Odds"),
+            u = (n("CybZ"), i = {}, i[c.a.Live] = "stream-type-indicator--live", i[c.a.Premiere] = "stream-type-indicator--premiere", i[c.a.Rerun] = "stream-type-indicator--rerun", i[c.a.WatchParty] = "stream-type-indicator--rerun", i),
+            p = (a = {}, a[c.a.Premiere] = m._11.VideoPremiere, a[c.a.Rerun] = m._11.VideoRerun, a[c.a.WatchParty] = m._11.VideoRerun, a),
+            g = (r = {}, r[c.a.Premiere] = m._12.Live, r[c.a.Rerun] = m._12.Inherit, r[c.a.WatchParty] = m._12.Inherit, r),
             v = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return o.__extends(t, e), t.prototype.render = function() {
-                    return s.createElement(c._19, {
+                    return l.createElement(m._19, {
                         className: this.getClassNames(),
-                        color: c.F.Overlay,
-                        background: c.m.Overlay,
+                        color: m.F.Overlay,
+                        background: m.m.Overlay,
                         padding: {
                             x: .5
                         },
-                        borderRadius: c.s.Small,
-                        display: c.H.Flex
-                    }, s.createElement(c.V, {
-                        display: c.H.Flex,
-                        alignItems: c.c.Center,
+                        borderRadius: m.s.Small,
+                        display: m.H.Flex
+                    }, l.createElement(m.V, {
+                        display: m.H.Flex,
+                        alignItems: m.c.Center,
                         margin: {
                             right: .5
                         }
-                    }, this.getIcon()), s.createElement(c._23, {
-                        type: c._28.Span
+                    }, this.getIcon()), l.createElement(m._23, {
+                        type: m._28.Span
                     }, this.getLabel()))
                 }, t.prototype.getClassNames = function() {
                     var e = {
                         "stream-type-indicator": !0
                     };
-                    return e[m[this.props.type]] = !0, l(e)
+                    return e[u[this.props.type]] = !0, s(e)
                 }, t.prototype.getIcon = function() {
-                    return this.props.hosting ? s.createElement(c._19, {
-                        borderRadius: c.s.Rounded,
+                    return this.props.hosting ? l.createElement(m._19, {
+                        borderRadius: m.s.Rounded,
                         className: "stream-type-indicator__hosting-dot"
-                    }) : this.props.type === u.a.Live ? s.createElement(c.V, {
+                    }) : this.props.type === c.a.Live ? l.createElement(m.V, {
                         className: "stream-type-indicator__live-wrapper",
-                        display: c.H.Flex,
-                        alignItems: c.c.Center
-                    }, s.createElement(c.X, {
-                        size: c.Y.Small
-                    })) : s.createElement(c._10, {
+                        display: m.H.Flex,
+                        alignItems: m.c.Center
+                    }, l.createElement(m.X, {
+                        size: m.Y.Small
+                    })) : l.createElement(m._10, {
                         asset: p[this.props.type],
                         type: g[this.props.type],
                         width: 14,
@@ -2981,43 +2408,46 @@ webpackJsonp([47], {
                 }, t.prototype.getLabel = function() {
                     if (this.props.hosting) return Object(d.d)("Hosting", "StreamTypeIndicator");
                     switch (this.props.type) {
-                        case u.a.Live:
+                        case c.a.Live:
                             return Object(d.d)("Live", "StreamTypeIndicator");
-                        case u.a.Premiere:
+                        case c.a.Premiere:
                             return Object(d.d)("Premiere", "StreamTypeIndicator");
-                        case u.a.Rerun:
-                        case u.a.WatchParty:
+                        case c.a.Rerun:
+                        case c.a.WatchParty:
                             return Object(d.d)("Rerun", "StreamTypeIndicator");
                         default:
                             return ""
                     }
                 }, t
-            }(s.Component);
+            }(l.Component);
         n.d(t, "a", function() {
             return v
         })
     },
     ISok: function(e, t, n) {
         "use strict";
-        var i = n("U7vG"),
-            a = n("CSlQ"),
-            r = n("81qH"),
-            o = n("XYqD"),
-            l = n("Odds"),
-            s = function(e) {
-                var t = [];
+        var i = n("TToO"),
+            a = n("U7vG"),
+            r = n("WxKK"),
+            o = n("CSlQ"),
+            s = n("81qH"),
+            l = n("XYqD"),
+            d = n("Odds"),
+            c = function(e) {
+                var t = [],
+                    n = null;
                 if (null === e.videos)
-                    for (var n = void 0 === e.placeholderCount ? 20 : e.placeholderCount, a = 0; a < n; a++) t.push(i.createElement(o.a, {
-                        key: a
+                    for (var o = void 0 === e.placeholderCount ? 20 : e.placeholderCount, c = 0; c < o; c++) t.push(a.createElement(l.a, {
+                        key: c
                     }));
-                else t = e.videos.map(function(t, n) {
-                    return i.createElement(l.V, {
+                else e.viewAllButtonProps && (n = a.createElement(r.a, i.__assign({}, e.viewAllButtonProps))), t = e.videos.map(function(t, n) {
+                    return a.createElement(d.V, {
                         "data-a-target": "video-tower-card-" + n,
                         key: "video-" + n,
                         padding: {
                             bottom: .5
                         }
-                    }, i.createElement(r.VideoPreviewCard, {
+                    }, a.createElement(s.VideoPreviewCard, {
                         hideGameArt: e.hideGameArt,
                         tracking: {
                             content: e.trackingContent,
@@ -3027,21 +2457,21 @@ webpackJsonp([47], {
                         video: t
                     }))
                 });
-                return i.createElement(l._34, {
-                    gutterSize: l._36.Small,
-                    childWidth: e.videoCardSize || l._35.Large,
+                return a.createElement(d._34, {
+                    gutterSize: d._36.Small,
+                    childWidth: e.videoCardSize || d._35.Large,
                     placeholderItems: 20
-                }, t)
+                }, t, n)
             },
-            d = Object(a.d)("VideoTower", {
+            m = Object(o.d)("VideoTower", {
                 autoReportInteractive: !0
-            })(s);
+            })(c);
         n.d(t, !1, function() {
             return 20
         }), n.d(t, !1, function() {
-            return s
+            return c
         }), n.d(t, "a", function() {
-            return d
+            return m
         })
     },
     IpE8: function(e, t, n) {
@@ -3049,7 +2479,7 @@ webpackJsonp([47], {
 
         function i(e) {
             var t;
-            if (!e.communities || 0 === e.communities.length) return g.createElement(F._23, {
+            if (!e.communities || 0 === e.communities.length) return g.createElement(E._23, {
                 "data-a-target": "no-communities-text"
             }, Object(h.d)("No communities", "LiveCommunities"));
             var n, i = e.communities;
@@ -3057,16 +2487,16 @@ webpackJsonp([47], {
                 var a = Object(T.a)(e.directoryWidth || 0, 180, 1); - 1 === a ? i = [] : a < i.length && (i = i.slice(0, a - 1), n = g.createElement(L.a, {
                     subHeader: Object(h.d)("Communities", "LiveCommunities--view-all"),
                     linkTo: "/directory/following/communities",
-                    aspectRatio: F.k.Aspect3x4
-                })), t = g.createElement(F.V, {
+                    aspectRatio: E.k.Aspect3x4
+                })), t = g.createElement(E.V, {
                     margin: {
                         bottom: 2
                     }
-                }, g.createElement(F._23, {
-                    type: F._28.H4,
-                    color: F.F.Alt2,
-                    fontSize: F.L.Size5,
-                    transform: F._27.Uppercase,
+                }, g.createElement(E._23, {
+                    type: E._28.H4,
+                    color: E.F.Alt2,
+                    fontSize: E.L.Size5,
+                    transform: E._27.Uppercase,
                     "data-a-target": "live-communities-header"
                 }, Object(h.d)("Communities", "LiveCommunities")))
             }
@@ -3079,12 +2509,12 @@ webpackJsonp([47], {
                         viewerCount: n.viewersCount,
                         streams: g.createElement("span", null, i)
                     }, "LiveCommunities");
-                return g.createElement(F.V, {
+                return g.createElement(E.V, {
                     key: n.id,
                     margin: {
                         bottom: 2
                     }
-                }, g.createElement(F.t, {
+                }, g.createElement(E.t, {
                     linkTo: {
                         pathname: "/communities/" + encodeURIComponent(n.name),
                         state: {
@@ -3102,35 +2532,35 @@ webpackJsonp([47], {
                     "data-a-target": "live-community-card-" + t
                 }))
             });
-            return g.createElement("div", null, t, g.createElement(F._34, {
-                gutterSize: F._36.Small,
-                childWidth: F._35.Small,
+            return g.createElement("div", null, t, g.createElement(E._34, {
+                gutterSize: E._36.Small,
+                childWidth: E._35.Small,
                 placeholderItems: 30
             }, r, n))
         }
 
         function a() {
-            return g.createElement(F.V, {
+            return g.createElement(E.V, {
                 className: "following__empty",
                 margin: {
                     x: "auto"
                 }
-            }, g.createElement(F.V, {
-                textAlign: F._24.Center,
+            }, g.createElement(E.V, {
+                textAlign: E._24.Center,
                 margin: {
                     bottom: 2
                 }
-            }, g.createElement(F._23, {
-                color: F.F.Alt2,
-                fontSize: F.L.Size4,
-                type: F._28.H4
-            }, Object(h.d)("Never miss the Channels you love.", "EmptyChannelList"))), g.createElement(F.V, {
-                display: F.H.Flex,
-                justifyContent: F.U.Between
-            }, g.createElement(F.V, {
+            }, g.createElement(E._23, {
+                color: E.F.Alt2,
+                fontSize: E.L.Size4,
+                type: E._28.H4
+            }, Object(h.d)("Never miss the Channels you love.", "EmptyChannelList"))), g.createElement(E.V, {
+                display: E.H.Flex,
+                justifyContent: E.U.Between
+            }, g.createElement(E.V, {
                 className: "following__empty-information",
-                position: F._4.Relative
-            }, g.createElement(F.V, {
+                position: E._4.Relative
+            }, g.createElement(E.V, {
                 margin: {
                     bottom: 1
                 }
@@ -3138,19 +2568,19 @@ webpackJsonp([47], {
                 className: "following__empty-image"
             }, g.createElement("img", {
                 src: "//s.jtvnw.net/jtv_user_pictures/hosted_images/guide_1.png"
-            }))), g.createElement(F._23, {
-                fontSize: F.L.Size5
-            }, Object(h.d)("Like the channel you're watching? Follow it.", "EmptyChannelList")), g.createElement(F._19, {
+            }))), g.createElement(E._23, {
+                fontSize: E.L.Size5
+            }, Object(h.d)("Like the channel you're watching? Follow it.", "EmptyChannelList")), g.createElement(E._19, {
                 className: "following__empty-information-num",
-                position: F._4.Absolute,
+                position: E._4.Absolute,
                 attachLeft: !0,
                 attachTop: !0,
-                background: F.m.Alt,
-                textAlign: F._24.Center
-            }, "1")), g.createElement(F.V, {
+                background: E.m.Alt,
+                textAlign: E._24.Center
+            }, "1")), g.createElement(E.V, {
                 className: "following__empty-information",
-                position: F._4.Relative
-            }, g.createElement(F.V, {
+                position: E._4.Relative
+            }, g.createElement(E.V, {
                 margin: {
                     bottom: 1
                 }
@@ -3158,19 +2588,19 @@ webpackJsonp([47], {
                 className: "following__empty-image"
             }, g.createElement("img", {
                 src: "//s.jtvnw.net/jtv_user_pictures/hosted_images/guide_2.png"
-            }))), g.createElement(F._23, {
-                fontSize: F.L.Size5
-            }, Object(h.d)("We'll let you know when the channel goes live again.", "EmptyChannelList")), g.createElement(F._19, {
+            }))), g.createElement(E._23, {
+                fontSize: E.L.Size5
+            }, Object(h.d)("We'll let you know when the channel goes live again.", "EmptyChannelList")), g.createElement(E._19, {
                 className: "following__empty-information-num",
-                position: F._4.Absolute,
+                position: E._4.Absolute,
                 attachLeft: !0,
                 attachTop: !0,
-                background: F.m.Alt,
-                textAlign: F._24.Center
-            }, "2")), g.createElement(F.V, {
+                background: E.m.Alt,
+                textAlign: E._24.Center
+            }, "2")), g.createElement(E.V, {
                 className: "following__empty-information",
-                position: F._4.Relative
-            }, g.createElement(F.V, {
+                position: E._4.Relative
+            }, g.createElement(E.V, {
                 margin: {
                     bottom: 1
                 }
@@ -3178,39 +2608,39 @@ webpackJsonp([47], {
                 className: "following__empty-image"
             }, g.createElement("img", {
                 src: "//s.jtvnw.net/jtv_user_pictures/hosted_images/guide_3.png"
-            }))), g.createElement(F._23, {
-                fontSize: F.L.Size5
-            }, Object(h.d)("Come back and watch your favorite channels.", "EmptyChannelList")), g.createElement(F._19, {
+            }))), g.createElement(E._23, {
+                fontSize: E.L.Size5
+            }, Object(h.d)("Come back and watch your favorite channels.", "EmptyChannelList")), g.createElement(E._19, {
                 className: "following__empty-information-num",
-                position: F._4.Absolute,
+                position: E._4.Absolute,
                 attachLeft: !0,
                 attachTop: !0,
-                background: F.m.Alt,
-                textAlign: F._24.Center
+                background: E.m.Alt,
+                textAlign: E._24.Center
             }, "3"))))
         }
 
         function r(e) {
             var t = Object(h.d)("Live hosts", "LiveHosts"),
-                n = g.createElement(F.V, {
+                n = g.createElement(E.V, {
                     margin: {
                         bottom: 2
                     }
-                }, g.createElement(F._23, {
-                    type: F._28.H4,
-                    color: F.F.Alt2,
-                    fontSize: F.L.Size5,
-                    transform: F._27.Uppercase,
+                }, g.createElement(E._23, {
+                    type: E._28.H4,
+                    color: E.F.Alt2,
+                    fontSize: E.L.Size5,
+                    transform: E._27.Uppercase,
                     "data-a-target": "live-hosts-header"
                 }, t));
-            if (!e.hosts || 0 === e.hosts.length) return e.followsCount > 0 ? g.createElement("div", null, n, g.createElement(F.V, {
-                textAlign: F._24.Center,
+            if (!e.hosts || 0 === e.hosts.length) return e.followsCount > 0 ? g.createElement("div", null, n, g.createElement(E.V, {
+                textAlign: E._24.Center,
                 padding: {
                     y: 5
                 }
-            }, g.createElement(F._23, {
-                color: F.F.Alt2,
-                fontSize: F.L.Size4,
+            }, g.createElement(E._23, {
+                color: E.F.Alt2,
+                fontSize: E.L.Size4,
                 "data-a-target": "no-hosts-live-text",
                 italic: !0
             }, Object(h.d)("No Hosts Live", "LiveHosts")))) : g.createElement("div", null, n, !e.showSample && g.createElement(a, null));
@@ -3228,27 +2658,27 @@ webpackJsonp([47], {
                     linkTo: {
                         pathname: "/directory/following/hosts",
                         state: {
-                            medium: _.PageviewMedium.Following,
-                            content: _.PageviewContent.Following
+                            medium: S.PageviewMedium.Following,
+                            content: S.PageviewContent.Following
                         }
                     }
                 }))
             }
-            var l = r.map(function(e, t) {
+            var s = r.map(function(e, t) {
                 if (e.hosting && e.hosting.stream && e.hosting.id) {
-                    var n = Object(q.a)(e.hosting.login, e.hosting.displayName, !0),
-                        i = Object(q.a)(e.login, e.displayName, !0),
+                    var n = Object(Q.a)(e.hosting.login, e.hosting.displayName, !0),
+                        i = Object(Q.a)(e.login, e.displayName, !0),
                         a = Object(h.d)("{hostDisplayName} hosting {hostedDisplayName}", {
                             hostDisplayName: i,
                             hostedDisplayName: n
                         }, "LiveHosts"),
                         r = e.hosting.stream && e.hosting.stream.game ? Object(j.c)(e.hosting.stream.game.name) : "";
-                    return g.createElement(F.V, {
+                    return g.createElement(E.V, {
                         key: e.id,
                         margin: {
                             bottom: 2
                         }
-                    }, g.createElement(z.a, {
+                    }, g.createElement(q.a, {
                         imageSrc: e.hosting.stream.previewImageURL || h.a.defaultStreamPreviewURL,
                         imageAlt: a,
                         viewerCount: e.hosting.stream && e.hosting.stream.viewersCount || 0,
@@ -3259,24 +2689,24 @@ webpackJsonp([47], {
                         gameLinkTo: {
                             pathname: r,
                             state: {
-                                medium: _.PageviewMedium.Following,
-                                content: _.PageviewContent.LiveHost,
+                                medium: S.PageviewMedium.Following,
+                                content: S.PageviewContent.LiveHost,
                                 content_index: t
                             }
                         },
                         linkTo: {
                             pathname: "/" + e.login,
                             state: {
-                                medium: _.PageviewMedium.Following,
-                                content: _.PageviewContent.LiveHost,
+                                medium: S.PageviewMedium.Following,
+                                content: S.PageviewContent.LiveHost,
                                 content_index: t
                             }
                         },
                         channelNameLinkTo: {
                             pathname: "/" + e.hosting.login + "/videos",
                             state: {
-                                medium: _.PageviewMedium.Following,
-                                content: _.PageviewContent.LiveHost,
+                                medium: S.PageviewMedium.Following,
+                                content: S.PageviewContent.LiveHost,
                                 content_index: t
                             }
                         },
@@ -3286,64 +2716,64 @@ webpackJsonp([47], {
                     }))
                 }
             });
-            return g.createElement("div", null, n, g.createElement(F._34, {
-                gutterSize: F._36.Small,
-                childWidth: F._35.Medium,
+            return g.createElement("div", null, n, g.createElement(E._34, {
+                gutterSize: E._36.Small,
+                childWidth: E._35.Medium,
                 placeholderItems: 20
-            }, l, i))
+            }, s, i))
         }
 
         function o(e) {
             var t = Object(h.d)("Live channels", "LiveChannels"),
-                n = g.createElement(F.V, {
+                n = g.createElement(E.V, {
                     margin: {
                         bottom: 2
                     }
-                }, g.createElement(F._23, {
-                    type: F._28.H4,
-                    color: F.F.Alt2,
-                    fontSize: F.L.Size5,
-                    transform: F._27.Uppercase,
+                }, g.createElement(E._23, {
+                    type: E._28.H4,
+                    color: E.F.Alt2,
+                    fontSize: E.L.Size5,
+                    transform: E._27.Uppercase,
                     "data-a-target": "live-channels-header"
                 }, t));
-            if (null !== e.users && 0 === e.users.length) return e.followsCount > 0 ? g.createElement("div", null, n, g.createElement(F.V, {
-                textAlign: F._24.Center,
+            if (null !== e.users && 0 === e.users.length) return e.followsCount > 0 ? g.createElement("div", null, n, g.createElement(E.V, {
+                textAlign: E._24.Center,
                 padding: {
                     y: 5
                 }
-            }, g.createElement(F._23, {
-                color: F.F.Alt2,
-                fontSize: F.L.Size4,
+            }, g.createElement(E._23, {
+                color: E.F.Alt2,
+                fontSize: E.L.Size4,
                 "data-a-target": "no-channels-live-text",
                 italic: !0
             }, Object(h.d)("No Channels Live", "LiveChannels")))) : g.createElement("div", null, n, g.createElement(a, null));
             var i, r = e.users || [];
-            if (e.maxDisplayCount && e.maxDisplayCount < r.length) r = r.slice(0, e.maxDisplayCount - 1), i = g.createElement(L.a, {
+            if (e.maxDisplayCount && e.maxDisplayCount < r.length) r = r.slice(0, e.maxDisplayCount - 1), i = g.createElement(H.a, {
                 subHeader: "Live Channels",
                 onClickViewAll: e.onClickViewAll
             });
             else if (e.showSample && e.directoryWidth && e.directoryWidth > 0) {
                 var o = Object(T.a)(e.directoryWidth, 240, 2);
-                o < r.length && (r = r.slice(0, o - 1), i = g.createElement(L.a, {
+                o < r.length && (r = r.slice(0, o - 1), i = g.createElement(H.a, {
                     subHeader: t,
                     linkTo: "/directory/following/live"
                 }))
             }
-            var l = r.map(function(e, t) {
+            var s = r.map(function(e, t) {
                 if (!e.stream || !e.id) return null;
-                var n = Object(q.a)(e.login, e.displayName),
+                var n = Object(Q.a)(e.login, e.displayName),
                     i = {
-                        medium: _.PageviewMedium.Following,
-                        content: _.PageviewContent.Live,
+                        medium: S.PageviewMedium.Following,
+                        content: S.PageviewContent.Live,
                         content_index: t
                     },
                     a = e.stream && e.stream.game ? Object(j.c)(e.stream.game.name) : "";
-                return g.createElement(F.V, {
+                return g.createElement(E.V, {
                     key: e.id,
                     margin: {
                         bottom: 2
                     }
-                }, g.createElement(z.a, {
+                }, g.createElement(q.a, {
                     imageSrc: e.stream && e.stream.previewImageURL || h.a.defaultStreamPreviewURL,
                     imageAlt: e.stream && e.stream.title || "",
                     viewerCount: e.stream && e.stream.viewersCount || 0,
@@ -3369,23 +2799,23 @@ webpackJsonp([47], {
                 }))
             });
             if (0 === r.length)
-                for (var s = 0; s < 5; s++) l.push(g.createElement(ie.VideoPreviewCardPlaceholder, {
-                    key: "live-channels-placeholder-" + s
+                for (var l = 0; l < 5; l++) s.push(g.createElement(ne.VideoPreviewCardPlaceholder, {
+                    key: "live-channels-placeholder-" + l
                 }));
-            return g.createElement("div", null, n, g.createElement(F._34, {
-                gutterSize: F._36.Small,
-                childWidth: F._35.Medium,
+            return g.createElement("div", null, n, g.createElement(E._34, {
+                gutterSize: E._36.Small,
+                childWidth: E._35.Medium,
                 placeholderItems: 20
-            }, l, i))
+            }, s, i))
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var l, s = n("RH2O"),
+        var s, l = n("RH2O"),
             d = n("2KeS"),
-            u = n("+xm8"),
-            c = n("f2i/"),
-            m = n("Aj/L"),
+            c = n("+xm8"),
+            m = n("f2i/"),
+            u = n("Aj/L"),
             p = n("TToO"),
             g = n("U7vG"),
             v = n("CIox"),
@@ -3393,13 +2823,13 @@ webpackJsonp([47], {
             f = n("yWCw"),
             k = n("CSlQ"),
             y = n("eXld"),
-            S = n("7vx8"),
-            w = n("j7/Y"),
-            b = n("w9tK"),
-            _ = n("vH/s"),
+            w = n("7vx8"),
+            b = n("j7/Y"),
+            _ = n("w9tK"),
+            S = n("vH/s"),
             N = n("czpb"),
-            E = n("DBTH"),
-            F = n("Odds"),
+            F = n("DBTH"),
+            E = n("Odds"),
             C = n("qb8C"),
             O = function(e) {
                 function t() {
@@ -3414,11 +2844,11 @@ webpackJsonp([47], {
                         return p.__generator(this, function(n) {
                             switch (n.label) {
                                 case 0:
-                                    return [4, h.n.experiments.getAssignment(E.j)];
+                                    return [4, h.n.experiments.getAssignment(F.j)];
                                 case 1:
-                                    return e = n.sent(), [4, h.n.experiments.getAssignment(E.k)];
+                                    return e = n.sent(), [4, h.n.experiments.getAssignment(F.k)];
                                 case 2:
-                                    return t = n.sent(), Object(E.q)(e, t) ? this.setState({
+                                    return t = n.sent(), Object(F.q)(e, t) ? this.setState({
                                         forYouAssignment: t
                                     }) : this.setState({
                                         forYouAssignment: null
@@ -3431,54 +2861,54 @@ webpackJsonp([47], {
                 }, t.prototype.render = function() {
                     if (void 0 === this.state.forYouAssignment || !this.userDataLoaded()) return null;
                     var e = this.props.activeCategory,
-                        t = [g.createElement(F._20, {
+                        t = [g.createElement(E._20, {
                             key: "following-overview-tab",
                             active: void 0 === e,
                             linkTo: "/directory/following",
                             "data-a-target": "following-overview-tab"
-                        }, Object(h.d)("Overview", "FollowingHeaderTabs")), g.createElement(F._20, {
+                        }, Object(h.d)("Overview", "FollowingHeaderTabs")), g.createElement(E._20, {
                             key: "following-channels-tab",
-                            active: e === _.SpadeFollowingCategory.Live,
+                            active: e === S.SpadeFollowingCategory.Live,
                             "data-a-target": "following-channels-tab",
                             linkTo: "/directory/following/live"
-                        }, Object(h.d)("Channels", "FollowingHeaderTabs")), g.createElement(F._20, {
+                        }, Object(h.d)("Channels", "FollowingHeaderTabs")), g.createElement(E._20, {
                             key: "following-hosts-tab",
-                            active: e === _.SpadeFollowingCategory.Hosts,
+                            active: e === S.SpadeFollowingCategory.Hosts,
                             "data-a-target": "following-hosts-tab",
                             linkTo: "/directory/following/hosts"
-                        }, Object(h.d)("Hosts", "FollowingHeaderTabs")), g.createElement(F._20, {
+                        }, Object(h.d)("Hosts", "FollowingHeaderTabs")), g.createElement(E._20, {
                             key: "following-games-tab",
-                            active: e === _.SpadeFollowingCategory.Games,
+                            active: e === S.SpadeFollowingCategory.Games,
                             "data-a-target": "following-games-tab",
                             linkTo: "/directory/following/games"
-                        }, Object(h.d)("Games", "FollowingHeaderTabs")), g.createElement(F._20, {
+                        }, Object(h.d)("Games", "FollowingHeaderTabs")), g.createElement(E._20, {
                             key: "following-communities-tab",
-                            active: e === _.SpadeFollowingCategory.Communities,
+                            active: e === S.SpadeFollowingCategory.Communities,
                             linkTo: Object(N.a)("/directory/following/communities"),
                             targetBlank: Object(N.b)(),
                             "data-a-target": "following-communities-tab"
                         }, Object(h.d)("Communities", "FollowingPage"))];
-                    if (this.state.forYouAssignment && !this.props.data.error && this.props.data.currentUser && Object(E.r)(new Date(this.props.data.currentUser.createdAt))) {
-                        var n = g.createElement(F._20, {
+                    if (this.state.forYouAssignment && !this.props.data.error && this.props.data.currentUser && Object(F.r)(new Date(this.props.data.currentUser.createdAt))) {
+                        var n = g.createElement(E._20, {
                             key: "following-foryou-tab",
                             "data-test-selector": "for-you-tab",
-                            active: e === _.SpadeFollowingCategory.ForYou,
+                            active: e === S.SpadeFollowingCategory.ForYou,
                             linkTo: "/directory/following/foryou",
                             "data-a-target": "following-foryou-tab"
                         }, Object(h.d)("For You", "FollowingHeaderTabs"));
-                        this.state.forYouAssignment === E.e.First ? t.unshift(n) : this.state.forYouAssignment === E.e.Last && t.push(n)
+                        this.state.forYouAssignment === F.e.First ? t.unshift(n) : this.state.forYouAssignment === F.e.Last && t.push(n)
                     }
-                    return g.createElement(F.V, {
+                    return g.createElement(E.V, {
                         className: "following__header-tabs",
                         margin: {
                             bottom: 2
                         }
-                    }, g.createElement(F._21, null, t))
-                }, t = p.__decorate([Object(k.d)("FollowingHeaderTabs"), Object(S.a)(C)], t)
+                    }, g.createElement(E._21, null, t))
+                }, t = p.__decorate([Object(k.d)("FollowingHeaderTabs"), Object(w.a)(C)], t)
             }(g.Component),
             L = n("7FW4"),
             T = n("peXu"),
-            A = (n("4194"), n("cJkg")),
+            A = (n("4194"), n("hOej")),
             D = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -3489,25 +2919,25 @@ webpackJsonp([47], {
                     this.onRender()
                 }, t.prototype.render = function() {
                     var e;
-                    return e = this.props.data.loading ? g.createElement(F.V, {
-                        display: F.H.Flex,
-                        position: F._4.Absolute,
+                    return e = this.props.data.loading ? g.createElement(E.V, {
+                        display: E.H.Flex,
+                        position: E._4.Absolute,
                         fullHeight: !0,
                         fullWidth: !0
-                    }, g.createElement(F.Z, {
+                    }, g.createElement(E.Z, {
                         fillContent: !0
                     })) : this.props.data.error ? g.createElement(f.a, {
                         message: Object(h.d)("Error loading data.", "FollowingCommunitiesPage")
                     }) : g.createElement(i, {
                         communities: this.props.data.currentUser ? this.props.data.currentUser.followedCommunities.edges : []
-                    }), g.createElement(F.V, {
+                    }), g.createElement(E.V, {
                         padding: 3
                     }, g.createElement(O, {
-                        activeCategory: _.SpadeFollowingCategory.Communities
+                        activeCategory: S.SpadeFollowingCategory.Communities
                     }), e)
                 }, t.prototype.onRender = function() {
                     this.props.latencyTracking.reportInteractive()
-                }, t = p.__decorate([Object(S.a)(A, {
+                }, t = p.__decorate([Object(w.a)(A, {
                     options: {
                         fetchPolicy: "cache-and-network",
                         variables: {
@@ -3515,23 +2945,23 @@ webpackJsonp([47], {
                         }
                     }
                 }), Object(k.d)("FollowingCommunitiesPage", {
-                    destination: b.a.DirectoryFollowingCommunities
-                }), Object(w.a)({
-                    location: _.PageviewLocation.Directory,
+                    destination: _.a.DirectoryFollowingCommunities
+                }), Object(b.a)({
+                    location: S.PageviewLocation.Directory,
                     properties: function() {
                         return {
-                            content_type: _.PageviewDirectoryContentType.Communities,
-                            tab: _.PageviewFollowingTab.Communities
+                            content_type: S.PageviewDirectoryContentType.Communities,
+                            tab: S.PageviewFollowingTab.Communities
                         }
                     }
                 })], t)
             }(g.Component),
             I = n("V5M+"),
-            V = n("+8VM"),
-            U = n("zCIC"),
+            U = n("+8VM"),
+            V = n("zCIC"),
             x = n("T0IN"),
-            G = n("5G5w"),
-            P = n("6lWU"),
+            P = n("5G5w"),
+            G = n("6lWU"),
             R = (n("A8Kk"), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
@@ -3540,9 +2970,9 @@ webpackJsonp([47], {
                     }, n.getAndStoreShuffledGameCards = function() {
                         n.props.data && (n.shuffledGameCards = Object(x.a)(n.props.data.games.edges.map(function(e, t) {
                             var i = e.node;
-                            return g.createElement(F.V, {
+                            return g.createElement(E.V, {
                                 key: i.id
-                            }, g.createElement(G.a, {
+                            }, g.createElement(P.a, {
                                 info: "",
                                 title: i.name,
                                 imageAlt: i.name,
@@ -3569,16 +2999,16 @@ webpackJsonp([47], {
                     }, n
                 }
                 return p.__extends(t, e), t.prototype.render = function() {
-                    return !this.props.data || this.props.data.loading ? null : (this.shuffledGameCards || this.getAndStoreShuffledGameCards(), g.createElement(F._19, {
+                    return !this.props.data || this.props.data.loading ? null : (this.shuffledGameCards || this.getAndStoreShuffledGameCards(), g.createElement(E._19, {
                         className: "following-games-modal",
-                        background: F.m.Base,
+                        background: E.m.Base,
                         padding: 2,
-                        overflow: F._0.Hidden,
+                        overflow: E._0.Hidden,
                         "data-a-target": "follow-games-modal",
-                        display: F.H.Flex,
-                        flexDirection: F.J.Column,
-                        flexWrap: F.K.NoWrap
-                    }, g.createElement(F.V, {
+                        display: E.H.Flex,
+                        flexDirection: E.J.Column,
+                        flexWrap: E.K.NoWrap
+                    }, g.createElement(E.V, {
                         flexGrow: 0,
                         flexShrink: 0,
                         padding: {
@@ -3587,49 +3017,49 @@ webpackJsonp([47], {
                         margin: {
                             bottom: 1
                         },
-                        textAlign: F._24.Center,
-                        display: F.H.Flex,
-                        flexDirection: F.J.Column,
-                        alignContent: F.b.Center
-                    }, g.createElement(F.V, {
+                        textAlign: E._24.Center,
+                        display: E.H.Flex,
+                        flexDirection: E.J.Column,
+                        alignContent: E.b.Center
+                    }, g.createElement(E.V, {
                         margin: {
                             bottom: .5
                         }
-                    }, g.createElement(F._23, {
-                        fontSize: F.L.Size4,
-                        color: F.F.Base,
+                    }, g.createElement(E._23, {
+                        fontSize: E.L.Size4,
+                        color: E.F.Base,
                         bold: !0
-                    }, Object(h.d)("Choose some games that you'd like to follow.", "FollowGamesModal"))), g.createElement(F._23, {
-                        fontSize: F.L.Size5,
-                        color: F.F.Alt
-                    }, Object(h.d)("This will let you pin your favorites for easy access.", "FollowGamesModal"))), g.createElement(F.V, {
+                    }, Object(h.d)("Choose some games that you'd like to follow.", "FollowGamesModal"))), g.createElement(E._23, {
+                        fontSize: E.L.Size5,
+                        color: E.F.Alt
+                    }, Object(h.d)("This will let you pin your favorites for easy access.", "FollowGamesModal"))), g.createElement(E.V, {
                         className: "following-games-modal__list",
                         margin: {
                             bottom: 1
                         },
                         flexGrow: 1
-                    }, g.createElement(U.b, {
+                    }, g.createElement(V.b, {
                         suppressScrollX: !0
-                    }, g.createElement(F.V, {
+                    }, g.createElement(E.V, {
                         padding: 1
-                    }, g.createElement(F._34, {
-                        childWidth: F._35.Small,
-                        gutterSize: F._36.Small,
+                    }, g.createElement(E._34, {
+                        childWidth: E._35.Small,
+                        gutterSize: E._36.Small,
                         placeholderItems: 99
-                    }, this.shuffledGameCards)))), g.createElement(F.V, {
-                        display: F.H.Flex,
-                        justifyContent: F.U.Center,
+                    }, this.shuffledGameCards)))), g.createElement(E.V, {
+                        display: E.H.Flex,
+                        justifyContent: E.U.Center,
                         padding: {
                             y: 1
                         },
                         flexGrow: 0,
                         flexShrink: 0
-                    }, g.createElement(F.u, {
-                        size: F.x.Large,
+                    }, g.createElement(E.u, {
+                        size: E.x.Large,
                         onClick: this.onClickContinue,
                         disabled: 0 === this.state.followCount
-                    }, Object(h.d)("Continue", "FollowGamesModal"))), g.createElement(V.a, null)))
-                }, t = p.__decorate([Object(S.a)(P, {
+                    }, Object(h.d)("Continue", "FollowGamesModal"))), g.createElement(U.a, null)))
+                }, t = p.__decorate([Object(w.a)(G, {
                     options: {
                         variables: {
                             limit: 40
@@ -3638,20 +3068,21 @@ webpackJsonp([47], {
                 })], t)
             }(g.Component)),
             j = n("NY9D"),
-            H = function(e) {
+            H = n("WxKK"),
+            M = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return p.__extends(t, e), t.prototype.render = function() {
-                    var e = g.createElement(F.V, {
+                    var e = g.createElement(E.V, {
                         margin: {
                             bottom: 2
                         }
-                    }, g.createElement(F._23, {
-                        type: F._28.H4,
-                        color: F.F.Alt2,
-                        fontSize: F.L.Size5,
-                        transform: F._27.Uppercase,
+                    }, g.createElement(E._23, {
+                        type: E._28.H4,
+                        color: E.F.Alt2,
+                        fontSize: E.L.Size5,
+                        transform: E._27.Uppercase,
                         "data-a-target": "live-games-header"
                     }, Object(h.d)("Live games", "LiveGames")));
                     if (!this.props.games) return g.createElement("div", null, e);
@@ -3664,12 +3095,12 @@ webpackJsonp([47], {
                             var n = e.name.toLowerCase(),
                                 i = t.name.toLowerCase();
                             return n < i ? -1 : n > i ? 1 : 0
-                        })) || 0 === t.length) return g.createElement(F._19, {
+                        })) || 0 === t.length) return g.createElement(E._19, {
                         fullWidth: !0,
-                        background: F.m.Alt2,
-                        display: F.H.Flex,
-                        flexDirection: F.J.Column,
-                        alignItems: F.c.Center,
+                        background: E.m.Alt2,
+                        display: E.H.Flex,
+                        flexDirection: E.J.Column,
+                        alignItems: E.c.Center,
                         padding: {
                             y: 3
                         },
@@ -3677,42 +3108,42 @@ webpackJsonp([47], {
                             y: 2
                         },
                         "data-target": "following__follow-games-cta"
-                    }, g.createElement(F.V, {
+                    }, g.createElement(E.V, {
                         margin: {
                             bottom: 1
                         }
-                    }, g.createElement(F._23, {
-                        fontSize: F.L.Size4,
-                        color: F.F.Alt2
-                    }, Object(h.d)("You can now follow your favorite games!", "LiveGames"))), g.createElement(F.V, {
+                    }, g.createElement(E._23, {
+                        fontSize: E.L.Size4,
+                        color: E.F.Alt2
+                    }, Object(h.d)("You can now follow your favorite games!", "LiveGames"))), g.createElement(E.V, {
                         margin: {
                             top: .5
                         }
-                    }, g.createElement(F.u, {
-                        size: F.x.Large,
+                    }, g.createElement(E.u, {
+                        size: E.x.Large,
                         onClick: this.props.showFollowGamesModal,
                         "data-a-target": "find-out-more-button"
                     }, Object(h.d)("Find Out More!", "LiveGames"))));
                     var n;
                     if (this.props.showSample && this.props.directoryWidth && this.props.directoryWidth > 0) {
                         var i = Object(T.a)(this.props.directoryWidth, 180, 1);
-                        i < t.length && (t = t.slice(0, i - 1), n = g.createElement(F.V, {
+                        i < t.length && (t = t.slice(0, i - 1), n = g.createElement(E.V, {
                             margin: {
                                 bottom: 2
                             }
-                        }, g.createElement(L.a, {
+                        }, g.createElement(H.a, {
                             subHeader: "Live Games",
                             linkTo: "/directory/following/games",
-                            aspectRatio: F.k.Aspect3x4
+                            aspectRatio: E.k.Aspect3x4
                         })))
                     }
                     var a = t.map(function(e, t) {
-                        return e ? g.createElement(F.V, {
+                        return e ? g.createElement(E.V, {
                             key: e.id,
                             margin: {
                                 bottom: 2
                             }
-                        }, g.createElement(F.t, {
+                        }, g.createElement(E.t, {
                             linkTo: {
                                 pathname: Object(j.c)(e.name),
                                 state: {
@@ -3730,24 +3161,24 @@ webpackJsonp([47], {
                             "data-a-target": "live-game-card-" + t
                         })) : null
                     });
-                    return g.createElement("div", null, e, g.createElement(F._34, {
-                        gutterSize: F._36.Small,
-                        childWidth: F._35.Small,
+                    return g.createElement("div", null, e, g.createElement(E._34, {
+                        gutterSize: E._36.Small,
+                        childWidth: E._35.Small,
                         placeholderItems: 30
                     }, a, n))
                 }, t
             }(g.Component),
-            M = Object(s.a)(null, function(e, t) {
-                return Object.assign(Object(d.bindActionCreators)({
+            W = Object(l.b)(null, function(e, t) {
+                return Object.assign(Object(d.b)({
                     showFollowGamesModal: function() {
                         return Object(I.d)(R, {
                             onFollowChange: t.onFollowChange
                         })
                     }
                 }, e), t)
-            })(H),
-            W = n("Au+y"),
-            B = function(e) {
+            })(M),
+            B = n("x/hU"),
+            z = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -3757,26 +3188,26 @@ webpackJsonp([47], {
                     this.onRender()
                 }, t.prototype.render = function() {
                     var e;
-                    return e = this.props.data.loading ? g.createElement(F.V, {
-                        display: F.H.Flex,
-                        position: F._4.Absolute,
+                    return e = this.props.data.loading ? g.createElement(E.V, {
+                        display: E.H.Flex,
+                        position: E._4.Absolute,
                         fullHeight: !0,
                         fullWidth: !0
-                    }, g.createElement(F.Z, {
+                    }, g.createElement(E.Z, {
                         fillContent: !0
                     })) : this.props.data.error ? g.createElement(f.a, {
                         message: Object(h.d)("Error loading data.", "FollowingGamesPage")
-                    }) : g.createElement(M, {
+                    }) : g.createElement(W, {
                         games: this.props.data.currentUser ? this.props.data.currentUser.followedGames.nodes : [],
                         onFollowChange: this.props.data.refetch
-                    }), g.createElement(F.V, {
+                    }), g.createElement(E.V, {
                         padding: 3
                     }, g.createElement(O, {
-                        activeCategory: _.SpadeFollowingCategory.Games
+                        activeCategory: S.SpadeFollowingCategory.Games
                     }), e)
                 }, t.prototype.onRender = function() {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
-                }, t = p.__decorate([Object(S.a)(W, {
+                }, t = p.__decorate([Object(w.a)(B, {
                     options: {
                         fetchPolicy: "cache-and-network",
                         variables: {
@@ -3784,16 +3215,16 @@ webpackJsonp([47], {
                         }
                     }
                 }), Object(k.d)("FollowingGamesPage", {
-                    destination: b.a.DirectoryFollowingGames
-                }), Object(w.a)({
-                    location: _.PageviewLocation.Directory,
+                    destination: _.a.DirectoryFollowingGames
+                }), Object(b.a)({
+                    location: S.PageviewLocation.Directory,
                     skip: function(e) {
                         return e.data.loading || !!e.data.error
                     },
                     properties: function(e) {
                         return {
-                            content_type: _.PageviewDirectoryContentType.Games,
-                            tab: _.PageviewFollowingTab.Games,
+                            content_type: S.PageviewDirectoryContentType.Games,
+                            tab: S.PageviewFollowingTab.Games,
                             num_live_games: e.data.currentUser.followedGames.nodes.filter(function(e) {
                                 return e && e.viewersCount > 0
                             }).length
@@ -3801,15 +3232,15 @@ webpackJsonp([47], {
                     }
                 })], t)
             }(g.Component),
-            z = n("+GT7"),
-            q = n("SZoP"),
-            Q = (n("tkib"), n("NAfc")),
-            Y = 50,
-            $ = function(e) {
+            q = n("+GT7"),
+            Q = n("SZoP"),
+            Y = (n("tkib"), n("b+Vy")),
+            $ = 50,
+            K = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        maxCount: Y
+                        maxCount: $
                     }, t.onClickViewAll = function() {
                         return p.__awaiter(t, void 0, void 0, function() {
                             return p.__generator(this, function(e) {
@@ -3833,12 +3264,12 @@ webpackJsonp([47], {
                     this.onRender()
                 }, t.prototype.render = function() {
                     var e;
-                    if (this.props.data.loading) e = g.createElement(F.V, {
-                        display: F.H.Flex,
-                        position: F._4.Absolute,
+                    if (this.props.data.loading) e = g.createElement(E.V, {
+                        display: E.H.Flex,
+                        position: E._4.Absolute,
                         fullHeight: !0,
                         fullWidth: !0
-                    }, g.createElement(F.Z, {
+                    }, g.createElement(E.Z, {
                         fillContent: !0
                     }));
                     else if (this.props.data.error) e = g.createElement(f.a, {
@@ -3854,14 +3285,14 @@ webpackJsonp([47], {
                             onClickViewAll: this.onClickViewAll
                         })
                     }
-                    return g.createElement(F.V, {
+                    return g.createElement(E.V, {
                         padding: 3
                     }, g.createElement(O, {
-                        activeCategory: _.SpadeFollowingCategory.Hosts
+                        activeCategory: S.SpadeFollowingCategory.Hosts
                     }), e)
                 }, t.prototype.onRender = function() {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
-                }, t = p.__decorate([Object(S.a)(Q, {
+                }, t = p.__decorate([Object(w.a)(Y, {
                     options: function() {
                         return {
                             fetchPolicy: "cache-and-network",
@@ -3871,114 +3302,85 @@ webpackJsonp([47], {
                         }
                     }
                 }), Object(k.d)("FollowingHostsPage", {
-                    destination: b.a.DirectoryFollowingHosts
-                }), Object(w.a)({
-                    location: _.PageviewLocation.Directory,
+                    destination: _.a.DirectoryFollowingHosts
+                }), Object(b.a)({
+                    location: S.PageviewLocation.Directory,
                     skip: function(e) {
                         return e.data.loading || !!e.data.error
                     },
                     properties: function(e) {
                         return {
-                            content_type: _.PageviewDirectoryContentType.Hosts,
-                            tab: _.PageviewFollowingTab.Hosts,
+                            content_type: S.PageviewDirectoryContentType.Hosts,
+                            tab: S.PageviewFollowingTab.Hosts,
                             num_host_channels: e.data.currentUser.followedHosts.nodes.length
                         }
                     }
                 })], t)
             }(g.Component),
             X = n("DtWM"),
-            J = n("iOr9"),
-            Z = n("bZTi"),
-            K = n("VDV3"),
-            ee = n("TGxD"),
-            te = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return p.__extends(t, e), t.prototype.componentDidUpdate = function() {
-                    this.props.data.loading || this.props.latencyTracking.reportInteractive()
-                }, t.prototype.render = function() {
-                    if (this.props.data.loading || this.props.data.error || 0 === this.props.data.currentUser.recommendations.videos.edges.length) return null;
-                    var e = g.createElement(F.V, {
-                            margin: {
-                                bottom: 2
-                            }
-                        }, g.createElement(F._23, {
-                            type: F._28.H4,
-                            color: F.F.Alt2,
-                            fontSize: F.L.Size5,
-                            transform: F._27.Uppercase
-                        }, Object(h.d)("Based on your viewing history", "SuggestedVideos"))),
-                        t = [];
-                    if (this.props.data.currentUser.recommendations.videos && (t = this.props.data.currentUser.recommendations.videos.edges.map(function(e) {
-                            return e.node
-                        })), this.props.directoryWidth > 0) {
-                        var n = Object(T.a)(this.props.directoryWidth, 240, 2);
-                        t = t.slice(0, n)
-                    }
-                    return g.createElement("div", null, e, g.createElement(K.b, {
-                        trackingMedium: _.PageviewMedium.Following,
-                        trackingContent: _.PageviewContent.SuggestedVideos,
-                        videoCardSize: F._35.Medium,
-                        videos: t
-                    }))
-                }, t = p.__decorate([Object(S.a)(ee, {
-                    options: {
-                        fetchPolicy: "network-only",
-                        variables: {
-                            limit: 30
-                        }
-                    }
-                }), Object(k.d)("SuggestedVideos")], t)
-            }(g.Component);
+            Z = n("iOr9"),
+            J = n("bZTi"),
+            ee = n("MZUk");
         ! function(e) {
-            e.FOLLOWING_BASIC = "following_basic", e.CONTROL = "control"
-        }(l || (l = {}));
-        var ne = function(e) {
+            e.FOLLOWING_BASIC = "following_basic", e.FOLLOWING_ADVANCED = "following_advanced"
+        }(s || (s = {}));
+        var te = function(e) {
                 var t = {
-                    name: "TWILIGHT_VOD_REDITUS",
-                    assignments: (i = {
-                        fallback: function() {
-                            return g.createElement(te, {
-                                directoryWidth: e.directoryWidth
-                            })
+                        directoryWidth: e.directoryWidth,
+                        tracking: {
+                            content: S.PageviewContent.ResumeWatchingVideos,
+                            medium: S.PageviewMedium.FinishWatching
                         }
-                    }, i[l.FOLLOWING_BASIC] = function() {
-                        return Z.a.wrap(function() {
-                            return n.e(76).then(n.bind(null, "crkb"))
-                        }, "FinishWatchingTower")({
-                            directoryWidth: e.directoryWidth
-                        })
-                    }, i),
-                    loader: function() {
-                        return null
-                    }
-                };
-                return g.createElement(J.a, p.__assign({}, t));
-                var i
+                    },
+                    i = p.__assign({}, t, {
+                        viewAllButton: !0
+                    }),
+                    a = {
+                        name: "TWILIGHT_VOD_REDITUS",
+                        assignments: (r = {
+                            fallback: function() {
+                                return g.createElement(ee.a, {
+                                    directoryWidth: e.directoryWidth
+                                })
+                            }
+                        }, r[s.FOLLOWING_BASIC] = function() {
+                            return J.a.wrap(function() {
+                                return n.e(67).then(n.bind(null, "BmWY"))
+                            }, "FinishWatchingTower")(t)
+                        }, r[s.FOLLOWING_ADVANCED] = function() {
+                            return J.a.wrap(function() {
+                                return n.e(67).then(n.bind(null, "BmWY"))
+                            }, "FinishWatchingTower")(i)
+                        }, r),
+                        loader: function() {
+                            return null
+                        }
+                    };
+                return g.createElement(Z.a, p.__assign({}, a));
+                var r
             },
-            ie = n("81qH"),
-            ae = function(e) {
+            ne = n("81qH"),
+            ie = function(e) {
                 var t = {
                     assignments: {
                         fallback: function() {
                             return null
                         },
                         enabled: function() {
-                            return Z.a.wrap(function() {
-                                return n.e(73).then(n.bind(null, "IwGL"))
+                            return J.a.wrap(function() {
+                                return n.e(75).then(n.bind(null, "IwGL"))
                             }, "LatestVideosFromFollowedCarousel")(e)
                         }
                     },
                     loader: function() {
-                        return g.createElement(F.Z, null)
+                        return g.createElement(E.Z, null)
                     },
                     name: "TWILIGHT_FOLLOWING_INDEX_LATEST_VIDEOS_V2"
                 };
-                return g.createElement(J.a, p.__assign({}, t))
+                return g.createElement(Z.a, p.__assign({}, t))
             },
-            re = n("X9eO"),
-            oe = function(e) {
+            ae = n("LVbz"),
+            re = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -3997,7 +3399,7 @@ webpackJsonp([47], {
                     var e = this.props.data && this.props.data.currentUser;
                     return this.props.data.error || !this.props.data.loading && !e ? g.createElement(f.a, {
                         message: Object(h.d)("Error loading data.", "FollowingPage")
-                    }) : g.createElement(F.V, {
+                    }) : g.createElement(E.V, {
                         padding: 3
                     }, g.createElement(O, null), g.createElement(o, {
                         key: "live-channels",
@@ -4005,11 +3407,11 @@ webpackJsonp([47], {
                         directoryWidth: this.state.directoryWidth,
                         users: this.props.data.loading ? null : e && e.followedLiveUsers.nodes || [],
                         followsCount: e ? e.follows.totalCount : 0
-                    }), g.createElement(ae, {
+                    }), g.createElement(ie, {
                         tracking: {
-                            content: _.PageviewContent.Following,
-                            location: _.PageviewLocation.Directory,
-                            medium: _.PageviewMedium.Following
+                            content: S.PageviewContent.Following,
+                            location: S.PageviewLocation.Directory,
+                            medium: S.PageviewMedium.Following
                         }
                     }), e && e.followedHosts.nodes.length > 0 && g.createElement(r, {
                         key: "live-hosts",
@@ -4017,14 +3419,14 @@ webpackJsonp([47], {
                         directoryWidth: this.state.directoryWidth,
                         hosts: e ? e.followedHosts.nodes : [],
                         followsCount: e ? e.follows.totalCount : 0
-                    }), e && g.createElement(M, {
+                    }), e && g.createElement(W, {
                         key: "live-games",
                         showSample: !0,
                         directoryWidth: this.state.directoryWidth,
                         games: e ? e.followedGames.nodes : [],
                         onFollowChange: this.props.data.refetch
-                    }), g.createElement(ne, {
-                        key: "finish-watching-experiments",
+                    }), g.createElement(te, {
+                        key: "finish-watching-tower-experiments",
                         directoryWidth: this.state.directoryWidth
                     }), e && g.createElement(i, {
                         key: "live-communities",
@@ -4036,7 +3438,7 @@ webpackJsonp([47], {
                     }))
                 }, t.prototype.onRender = function() {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
-                }, t = p.__decorate([Object(S.a)(re, {
+                }, t = p.__decorate([Object(w.a)(ae, {
                     options: {
                         fetchPolicy: "cache-and-network",
                         variables: {
@@ -4044,18 +3446,18 @@ webpackJsonp([47], {
                         }
                     }
                 }), Object(k.d)("FollowingIndexPage", {
-                    destination: b.a.DirectoryFollowingIndex
-                }), Object(w.a)({
-                    location: _.PageviewLocation.Directory,
+                    destination: _.a.DirectoryFollowingIndex
+                }), Object(b.a)({
+                    location: S.PageviewLocation.Directory,
                     properties: function() {
                         return {
-                            content_type: _.PageviewDirectoryContentType.Mixed,
-                            tab: _.PageviewFollowingTab.Overview
+                            content_type: S.PageviewDirectoryContentType.Mixed,
+                            tab: S.PageviewFollowingTab.Overview
                         }
                     }
                 })], t)
             }(g.Component),
-            le = n("BWqq"),
+            oe = n("LrP9"),
             se = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -4066,12 +3468,12 @@ webpackJsonp([47], {
                     this.onRender()
                 }, t.prototype.render = function() {
                     var e, t = !1;
-                    if (this.props.data.loading && !this.props.data.currentUser) e = g.createElement(F.V, {
-                        display: F.H.Flex,
-                        position: F._4.Absolute,
+                    if (this.props.data.loading && !this.props.data.currentUser) e = g.createElement(E.V, {
+                        display: E.H.Flex,
+                        position: E._4.Absolute,
                         fullHeight: !0,
                         fullWidth: !0
-                    }, g.createElement(F.Z, {
+                    }, g.createElement(E.Z, {
                         fillContent: !0
                     }));
                     else if (this.props.data.error) e = g.createElement(f.a, {
@@ -4089,18 +3491,18 @@ webpackJsonp([47], {
                             followsCount: a
                         }), t = this.props.data.currentUser && n.followedLiveUsers.pageInfo.hasNextPage
                     }
-                    return g.createElement(F.V, {
+                    return g.createElement(E.V, {
                         padding: 3
                     }, g.createElement(O, {
-                        activeCategory: _.SpadeFollowingCategory.Live
-                    }), e, g.createElement(U.a, {
+                        activeCategory: S.SpadeFollowingCategory.Live
+                    }), e, g.createElement(V.a, {
                         enabled: t,
                         loadMore: this.props.loadMore,
                         pixelThreshold: 100
                     }))
                 }, t.prototype.onRender = function() {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
-                }, t = p.__decorate([Object(S.a)(le, {
+                }, t = p.__decorate([Object(w.a)(oe, {
                     options: function() {
                         return {
                             fetchPolicy: "cache-and-network",
@@ -4114,7 +3516,7 @@ webpackJsonp([47], {
                             loadMore: function() {
                                 var t = e.data.currentUser.followedLiveUsers.edges;
                                 return e.data.fetchMore({
-                                    query: le,
+                                    query: oe,
                                     variables: {
                                         limit: 30,
                                         cursor: t[t.length - 1].cursor
@@ -4141,40 +3543,40 @@ webpackJsonp([47], {
                         })
                     }
                 }), Object(k.d)("FollowingLivePage", {
-                    destination: b.a.DirectoryFollowingLiveChannels
-                }), Object(w.a)({
-                    location: _.PageviewLocation.Directory,
+                    destination: _.a.DirectoryFollowingLiveChannels
+                }), Object(b.a)({
+                    location: S.PageviewLocation.Directory,
                     skip: function(e) {
                         return e.data.loading || !!e.data.error
                     },
                     properties: function(e) {
                         return {
-                            content_type: _.PageviewDirectoryContentType.Channels,
-                            tab: _.PageviewFollowingTab.Channels,
+                            content_type: S.PageviewDirectoryContentType.Channels,
+                            tab: S.PageviewFollowingTab.Channels,
                             num_live_channels: e.data.currentUser.followedLiveUsers.edges.length
                         }
                     }
                 })], t)
             }(g.Component),
-            de = function() {
-                return n.e(79).then(n.bind(null, "oms2"))
+            le = function() {
+                return n.e(80).then(n.bind(null, "oms2"))
             },
-            ue = n("wx0k"),
+            de = n("wx0k"),
             ce = n("F8kA"),
             me = n("/XPz"),
-            pe = n("2qz3"),
-            ge = (n("zH/G"), "for-you-community-streams-row__title"),
-            ve = function(e) {
+            ue = n("2qz3"),
+            pe = (n("zH/G"), "for-you-community-streams-row__title"),
+            ge = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderTitle = function() {
-                        if (t.props.title) return g.createElement(F.V, {
+                        if (t.props.title) return g.createElement(E.V, {
                             className: "for-you-community-streams-row__title"
-                        }, g.createElement(F._23, {
-                            "data-test-selector": ge,
-                            color: F.F.Alt2,
-                            fontSize: F.L.Size5,
-                            transform: F._27.Uppercase
+                        }, g.createElement(E._23, {
+                            "data-test-selector": pe,
+                            color: E.F.Alt2,
+                            fontSize: E.L.Size5,
+                            transform: E._27.Uppercase
                         }, g.createElement(ce.a, {
                             to: Object(j.c)(t.props.name)
                         }, t.props.title)))
@@ -4183,32 +3585,32 @@ webpackJsonp([47], {
                 return p.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return this.props.data.length ? g.createElement(F.V, {
+                    return this.props.data.length ? g.createElement(E.V, {
                         "data-test-selector": "for-you-community-streams-row",
                         flexShrink: 0
-                    }, g.createElement(F.V, {
-                        alignItems: F.c.Center,
-                        display: F.H.Flex,
-                        flexWrap: F.K.NoWrap,
-                        justifyContent: F.U.Between,
+                    }, g.createElement(E.V, {
+                        alignItems: E.c.Center,
+                        display: E.H.Flex,
+                        flexWrap: E.K.NoWrap,
+                        justifyContent: E.U.Between,
                         margin: {
                             bottom: .5
                         }
                     }, this.renderTitle(), g.createElement(me.a, {
                         gameName: this.props.name,
-                        src: _.PageviewMedium.BrowseForYou
-                    })), g.createElement(U.b, null, g.createElement(F.V, {
-                        display: F.H.Flex
-                    }, g.createElement(pe.a, {
+                        src: S.PageviewMedium.BrowseForYou
+                    })), g.createElement(V.b, null, g.createElement(E.V, {
+                        display: E.H.Flex
+                    }, g.createElement(ue.a, {
                         data: this.props.data,
                         directoryType: this.props.type,
-                        trackingMedium: _.PageviewMedium.BrowseForYou
+                        trackingMedium: S.PageviewMedium.BrowseForYou
                     })))) : null
                 }, t = p.__decorate([Object(k.d)("ForYouCommunityStreamsRow")], t)
             }(g.Component),
-            he = n("giFn"),
-            fe = 7,
-            ke = function(e) {
+            ve = n("giFn"),
+            he = 7,
+            fe = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getData = function() {
@@ -4218,8 +3620,8 @@ webpackJsonp([47], {
                                 return e.stream && e.stream.id && e.stream.broadcaster && e.stream.broadcaster.login
                             }).map(function(e) {
                                 return e.stream
-                            }).slice(0, fe);
-                            if (n.length === fe) return n;
+                            }).slice(0, he);
+                            if (n.length === he) return n;
                             var i = new Set(n.map(function(e) {
                                     return e.id
                                 })),
@@ -4229,7 +3631,7 @@ webpackJsonp([47], {
                                 }).map(function(e) {
                                     return e.node
                                 });
-                            return n.concat(a.slice(0, fe - n.length))
+                            return n.concat(a.slice(0, he - n.length))
                         }
                         return !e && t.communityStreamsLoaded() && t.props.communityStreamsData.directory.streams && t.props.communityStreamsData.directory.streams.edges ? t.props.communityStreamsData.directory.streams.edges.filter(function(e) {
                             var t = e.node;
@@ -4248,25 +3650,25 @@ webpackJsonp([47], {
                 return p.__extends(t, e), t.prototype.componentDidUpdate = function() {
                     (this.rankedChannelStreamsInputPresent() && this.rankedChannelStreamsLoaded() || !this.rankedChannelStreamsInputPresent() && !this.rankedChannelStreamsLoaded()) && this.communityStreamsLoaded() && this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return g.createElement(ve, {
+                    return g.createElement(ge, {
                         name: this.props.name,
                         title: this.props.title,
                         type: this.props.type,
                         data: this.getData()
                     })
-                }, t = p.__decorate([Object(S.a)(ue, {
+                }, t = p.__decorate([Object(w.a)(de, {
                     name: "communityStreamsData",
                     options: function(e) {
                         return {
                             fetchPolicy: "network-only",
                             variables: {
                                 name: e.name,
-                                limit: fe,
+                                limit: he,
                                 type: e.type
                             }
                         }
                     }
-                }), Object(S.a)(he, {
+                }), Object(w.a)(ve, {
                     name: "rankedChannelData",
                     options: function(e) {
                         return {
@@ -4281,8 +3683,8 @@ webpackJsonp([47], {
                     }
                 }), Object(k.d)("ForYouCommunityStreamsRowContainer")], t)
             }(g.Component),
-            ye = (n("4az8"), n("QjjF")),
-            Se = "for-you__empty",
+            ke = (n("4az8"), n("QjjF")),
+            ye = "for-you__empty",
             we = "for-you__add_more_games",
             be = 10,
             _e = function(e) {
@@ -4292,11 +3694,11 @@ webpackJsonp([47], {
                         rankedChannelData: {},
                         loadingRankedChannelData: !1
                     }, t.logger = h.n.logger.withCategory("for-you"), t.loadedChannelRankingsData = !1, t.renderPage = function() {
-                        return t.userFollowedGamesDataLoaded(t.props) ? t.props.data.currentUser.followedGames && t.props.data.currentUser.followedGames.nodes && t.props.data.currentUser.followedGames.nodes.length ? g.createElement(F.V, null, t.renderFollowedCommunityStreams(), g.createElement(F.V, {
+                        return t.userFollowedGamesDataLoaded(t.props) ? t.props.data.currentUser.followedGames && t.props.data.currentUser.followedGames.nodes && t.props.data.currentUser.followedGames.nodes.length ? g.createElement(E.V, null, t.renderFollowedCommunityStreams(), g.createElement(E.V, {
                             margin: {
                                 top: .5
                             }
-                        }, t.renderAddMoreGamesCTA())) : t.renderEmptyFollowedState() : g.createElement(F.V, null, g.createElement(F.Z, {
+                        }, t.renderAddMoreGamesCTA())) : t.renderEmptyFollowedState() : g.createElement(E.V, null, g.createElement(E.Z, {
                             fillContent: !0
                         }))
                     }, t.userFollowedGamesDataLoaded = function(e) {
@@ -4306,9 +3708,9 @@ webpackJsonp([47], {
                             return t.props.data.currentUser.followedGames.nodes.filter(function(e) {
                                 return null !== e
                             }).map(function(e) {
-                                return g.createElement(F.V, {
+                                return g.createElement(E.V, {
                                     key: e.id
-                                }, g.createElement(ke, {
+                                }, g.createElement(fe, {
                                     key: e.id,
                                     title: Object(h.d)("BECAUSE YOU FOLLOW {name}", {
                                         name: e.name.toUpperCase()
@@ -4320,40 +3722,40 @@ webpackJsonp([47], {
                             })
                         }
                     }, t.renderAddMoreGamesCTA = function() {
-                        if (!t.props.data.currentUser.followedGames || !t.props.data.currentUser.followedGames.nodes || t.props.data.currentUser.followedGames.nodes.length < be) return g.createElement(F.T, {
+                        if (!t.props.data.currentUser.followedGames || !t.props.data.currentUser.followedGames.nodes || t.props.data.currentUser.followedGames.nodes.length < be) return g.createElement(E.T, {
                             "data-test-selector": we,
                             onClick: t.redirectToCommunitySelectionPage,
                             alpha: !0
-                        }, g.createElement(F._19, {
-                            alignItems: F.c.Center,
+                        }, g.createElement(E._19, {
+                            alignItems: E.c.Center,
                             border: !0,
-                            display: F.H.Flex,
-                            justifyContent: F.U.Center,
+                            display: E.H.Flex,
+                            justifyContent: E.U.Center,
                             padding: 2
-                        }, g.createElement(F.V, {
-                            alignItems: F.c.Center,
-                            display: F.H.Flex,
+                        }, g.createElement(E.V, {
+                            alignItems: E.c.Center,
+                            display: E.H.Flex,
                             margin: {
                                 right: 1
                             }
-                        }, g.createElement(F._10, {
-                            asset: F._11.Plus,
-                            type: F._12.Alt2
-                        })), g.createElement(F._23, {
-                            fontSize: F.L.Size5,
-                            color: F.F.Alt2
+                        }, g.createElement(E._10, {
+                            asset: E._11.Plus,
+                            type: E._12.Alt2
+                        })), g.createElement(E._23, {
+                            fontSize: E.L.Size5,
+                            color: E.F.Alt2
                         }, Object(h.d)("Add More Games", "ForYouPage"))))
                     }, t.renderEmptyFollowedState = function() {
-                        return g.createElement(F._19, {
+                        return g.createElement(E._19, {
                             className: "for-you__empty",
-                            "data-test-selector": Se,
-                            background: F.m.Base,
-                            display: F.H.Flex,
-                            flexDirection: F.J.Column,
+                            "data-test-selector": ye,
+                            background: E.m.Base,
+                            display: E.H.Flex,
+                            flexDirection: E.J.Column,
                             margin: {
                                 bottom: 1
                             },
-                            alignItems: F.c.Center
+                            alignItems: E.c.Center
                         }, g.createElement(R, {
                             onContinue: t.refetchFollowedData
                         }))
@@ -4383,7 +3785,7 @@ webpackJsonp([47], {
                                             loadingRankedChannelData: !0
                                         }), n.label = 1;
                                     case 1:
-                                        return n.trys.push([1, 3, , 4]), [4, de()];
+                                        return n.trys.push([1, 3, , 4]), [4, le()];
                                     case 2:
                                         return e = n.sent(), this.setState({
                                             rankedChannelData: e,
@@ -4406,51 +3808,51 @@ webpackJsonp([47], {
                         return p.__generator(this, function(i) {
                             switch (i.label) {
                                 case 0:
-                                    return h.n.setPageTitle(Object(h.d)("For You", "ForYouPage")), [4, h.n.experiments.getAssignment(E.j)];
+                                    return h.n.setPageTitle(Object(h.d)("For You", "ForYouPage")), [4, h.n.experiments.getAssignment(F.j)];
                                 case 1:
-                                    return e = i.sent(), [4, h.n.experiments.getAssignment(E.k)];
+                                    return e = i.sent(), [4, h.n.experiments.getAssignment(F.k)];
                                 case 2:
-                                    return t = i.sent(), Object(E.q)(e, t) ? [3, 3] : (this.redirectToFollowing(), [3, 5]);
+                                    return t = i.sent(), Object(F.q)(e, t) ? [3, 3] : (this.redirectToFollowing(), [3, 5]);
                                 case 3:
-                                    return [4, h.n.experiments.getAssignment(E.i)];
+                                    return [4, h.n.experiments.getAssignment(F.i)];
                                 case 4:
-                                    n = i.sent(), Object(E.o)(e, t, n) && this.loadChannelRankingsByGameData(), i.label = 5;
+                                    n = i.sent(), Object(F.o)(e, t, n) && this.loadChannelRankingsByGameData(), i.label = 5;
                                 case 5:
                                     return [2]
                             }
                         })
                     })
                 }, t.prototype.componentWillReceiveProps = function(e) {
-                    this.userFollowedGamesDataLoaded(e) && !Object(E.r)(new Date(e.data.currentUser.createdAt)) && this.redirectToFollowing()
+                    this.userFollowedGamesDataLoaded(e) && !Object(F.r)(new Date(e.data.currentUser.createdAt)) && this.redirectToFollowing()
                 }, t.prototype.componentDidUpdate = function() {
                     this.userFollowedGamesDataLoaded(this.props) && !this.state.loadingRankedChannelData && this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return g.createElement(U.b, null, g.createElement(F.V, {
+                    return g.createElement(V.b, null, g.createElement(E.V, {
                         className: "for-you-page",
                         padding: 3,
                         fullWidth: !0
                     }, g.createElement(O, {
-                        activeCategory: _.SpadeFollowingCategory.ForYou
+                        activeCategory: S.SpadeFollowingCategory.ForYou
                     }), this.renderPage()))
                 }, t = p.__decorate([Object(k.d)("ForYouPage", {
-                    destination: b.a.ForYou
-                }), Object(S.a)(ye, {
+                    destination: _.a.ForYou
+                }), Object(w.a)(ke, {
                     options: {
                         fetchPolicy: "network-only",
                         variables: {
                             limit: be
                         }
                     }
-                }), Object(w.a)({
-                    location: _.PageviewLocation.BrowseForYou
+                }), Object(b.a)({
+                    location: S.PageviewLocation.BrowseForYou
                 })], t)
             }(g.Component),
-            Ne = function(e) {
+            Se = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return p.__extends(t, e), t.prototype.render = function() {
-                    return this.props.isLoggedIn ? g.createElement(F.V, null, g.createElement(y.b, {
+                    return this.props.isLoggedIn ? g.createElement(E.V, null, g.createElement(y.b, {
                         addPaddingWhenPlayerIsPersisting: !0
                     }), g.createElement(v.d, null, g.createElement(v.b, {
                         path: "/directory/following/foryou",
@@ -4460,16 +3862,16 @@ webpackJsonp([47], {
                         component: se
                     }), g.createElement(v.b, {
                         path: "/directory/following/hosts",
-                        component: $
+                        component: K
                     }), g.createElement(v.b, {
                         path: "/directory/following/games",
-                        component: B
+                        component: z
                     }), g.createElement(v.b, {
                         path: "/directory/following/communities",
                         component: D
                     }), g.createElement(v.b, {
                         path: "/",
-                        component: oe
+                        component: re
                     }))) : (this.props.login(), g.createElement(f.a, {
                         message: Object(h.d)("You must be logged in to view this page", "FollowingRoot")
                     }))
@@ -4477,26 +3879,26 @@ webpackJsonp([47], {
                     autoReportInteractive: !0
                 })], t)
             }(g.Component),
-            Ee = Object(s.a)(function(e) {
+            Ne = Object(l.b)(function(e) {
                 return {
-                    isLoggedIn: Object(m.d)(e)
+                    isLoggedIn: Object(u.d)(e)
                 }
             }, function(e) {
-                return Object(d.bindActionCreators)({
+                return Object(d.b)({
                     login: function() {
-                        return Object(c.f)(u.a.FollowingPage)
+                        return Object(m.f)(c.a.FollowingPage)
                     }
                 }, e)
-            })(Ne);
+            })(Se);
         n.d(t, "FollowingRootPage", function() {
-            return Ee
+            return Ne
         })
     },
     JpYe: function(e, t, n) {
         "use strict";
 
         function i(e) {
-            return r(l.parse(e.location.search).sort || "")
+            return r(s.parse(e.location.search).sort || "")
         }
 
         function a(e) {
@@ -4516,54 +3918,1108 @@ webpackJsonp([47], {
 
         function r(e) {
             switch (e.toUpperCase()) {
-                case u.b:
-                    return u.b;
-                case u.a:
-                    return u.a;
+                case c.b:
+                    return c.b;
+                case c.a:
+                    return c.a;
                 default:
                     return null
             }
         }
         t.d = function(e, t, n, r) {
-            var l = r || i(t),
+            var s = r || i(t),
                 d = "";
-            l && (d = "?sort=" + function(e) {
+            s && (d = "?sort=" + function(e) {
                 switch (e) {
-                    case u.b:
+                    case c.b:
                         return o.Popular;
-                    case u.a:
+                    case c.a:
                         return o.Newest;
                     default:
                         var t = e;
                         return t
                 }
-            }(l));
-            var c = n ? n.toLowerCase() : function(e) {
+            }(s));
+            var m = n ? n.toLowerCase() : function(e) {
                 var t = a(e);
                 return t ? t.toLowerCase() : "all"
             }(t);
-            s.n.history.push(e + "/" + c + d)
+            l.n.history.push(e + "/" + m + d)
         }, t.c = i, t.b = a, t.a = function(e) {
-            var t = l.parse(e.location.search);
+            var t = s.parse(e.location.search);
             return e.match.params.collectionID || t.collection || ""
         }, t.e = r;
-        var o, l = n("OAwv"),
-            s = (n.n(l), n("6sO2")),
+        var o, s = n("OAwv"),
+            l = (n.n(s), n("6sO2")),
             d = n("6WAQ"),
-            u = n("3yQz");
+            c = n("3yQz");
         ! function(e) {
             e.Popular = "views", e.Newest = "time"
         }(o || (o = {}))
     },
     "LEV+": function(e, t) {},
+    LVbz: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "FollowedIndex_CurrentUser"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "limit"
+                        }
+                    },
+                    type: {
+                        kind: "NamedType",
+                        name: {
+                            kind: "Name",
+                            value: "Int"
+                        }
+                    }
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "currentUser"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "followedGames"
+                                },
+                                arguments: [{
+                                    kind: "Argument",
+                                    name: {
+                                        kind: "Name",
+                                        value: "first"
+                                    },
+                                    value: {
+                                        kind: "Variable",
+                                        name: {
+                                            kind: "Name",
+                                            value: "limit"
+                                        }
+                                    }
+                                }],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "nodes"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "id"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }, {
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "name"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }, {
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "boxArtURL"
+                                                },
+                                                arguments: [{
+                                                    kind: "Argument",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "width"
+                                                    },
+                                                    value: {
+                                                        kind: "IntValue",
+                                                        value: "285"
+                                                    }
+                                                }, {
+                                                    kind: "Argument",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "height"
+                                                    },
+                                                    value: {
+                                                        kind: "IntValue",
+                                                        value: "380"
+                                                    }
+                                                }],
+                                                directives: []
+                                            }, {
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "viewersCount"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }]
+                                        }
+                                    }]
+                                }
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "followedLiveUsers"
+                                },
+                                arguments: [{
+                                    kind: "Argument",
+                                    name: {
+                                        kind: "Name",
+                                        value: "first"
+                                    },
+                                    value: {
+                                        kind: "Variable",
+                                        name: {
+                                            kind: "Name",
+                                            value: "limit"
+                                        }
+                                    }
+                                }],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "nodes"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "id"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }, {
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "login"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }, {
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "displayName"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }, {
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "stream"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: {
+                                                    kind: "SelectionSet",
+                                                    selections: [{
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "id"
+                                                        },
+                                                        arguments: [],
+                                                        directives: []
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "game"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: {
+                                                            kind: "SelectionSet",
+                                                            selections: [{
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "id"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "name"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "boxArtURL"
+                                                                },
+                                                                arguments: [{
+                                                                    kind: "Argument",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "width"
+                                                                    },
+                                                                    value: {
+                                                                        kind: "IntValue",
+                                                                        value: "40"
+                                                                    }
+                                                                }, {
+                                                                    kind: "Argument",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "height"
+                                                                    },
+                                                                    value: {
+                                                                        kind: "IntValue",
+                                                                        value: "56"
+                                                                    }
+                                                                }],
+                                                                directives: []
+                                                            }]
+                                                        }
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "viewersCount"
+                                                        },
+                                                        arguments: [],
+                                                        directives: []
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "title"
+                                                        },
+                                                        arguments: [],
+                                                        directives: []
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "type"
+                                                        },
+                                                        arguments: [],
+                                                        directives: []
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "previewImageURL"
+                                                        },
+                                                        arguments: [{
+                                                            kind: "Argument",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "width"
+                                                            },
+                                                            value: {
+                                                                kind: "IntValue",
+                                                                value: "320"
+                                                            }
+                                                        }, {
+                                                            kind: "Argument",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "height"
+                                                            },
+                                                            value: {
+                                                                kind: "IntValue",
+                                                                value: "180"
+                                                            }
+                                                        }],
+                                                        directives: []
+                                                    }]
+                                                }
+                                            }]
+                                        }
+                                    }]
+                                }
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "followedHosts"
+                                },
+                                arguments: [{
+                                    kind: "Argument",
+                                    name: {
+                                        kind: "Name",
+                                        value: "first"
+                                    },
+                                    value: {
+                                        kind: "Variable",
+                                        name: {
+                                            kind: "Name",
+                                            value: "limit"
+                                        }
+                                    }
+                                }],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "nodes"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "id"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }, {
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "login"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }, {
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "displayName"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }, {
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "hosting"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: {
+                                                    kind: "SelectionSet",
+                                                    selections: [{
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "id"
+                                                        },
+                                                        arguments: [],
+                                                        directives: []
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "login"
+                                                        },
+                                                        arguments: [],
+                                                        directives: []
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "displayName"
+                                                        },
+                                                        arguments: [],
+                                                        directives: []
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "stream"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: {
+                                                            kind: "SelectionSet",
+                                                            selections: [{
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "id"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "game"
+                                                                },
+                                                                arguments: [],
+                                                                directives: [],
+                                                                selectionSet: {
+                                                                    kind: "SelectionSet",
+                                                                    selections: [{
+                                                                        kind: "Field",
+                                                                        name: {
+                                                                            kind: "Name",
+                                                                            value: "id"
+                                                                        },
+                                                                        arguments: [],
+                                                                        directives: []
+                                                                    }, {
+                                                                        kind: "Field",
+                                                                        name: {
+                                                                            kind: "Name",
+                                                                            value: "name"
+                                                                        },
+                                                                        arguments: [],
+                                                                        directives: []
+                                                                    }, {
+                                                                        kind: "Field",
+                                                                        name: {
+                                                                            kind: "Name",
+                                                                            value: "boxArtURL"
+                                                                        },
+                                                                        arguments: [{
+                                                                            kind: "Argument",
+                                                                            name: {
+                                                                                kind: "Name",
+                                                                                value: "width"
+                                                                            },
+                                                                            value: {
+                                                                                kind: "IntValue",
+                                                                                value: "40"
+                                                                            }
+                                                                        }, {
+                                                                            kind: "Argument",
+                                                                            name: {
+                                                                                kind: "Name",
+                                                                                value: "height"
+                                                                            },
+                                                                            value: {
+                                                                                kind: "IntValue",
+                                                                                value: "56"
+                                                                            }
+                                                                        }],
+                                                                        directives: []
+                                                                    }]
+                                                                }
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "viewersCount"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "title"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "type"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "previewImageURL"
+                                                                },
+                                                                arguments: [{
+                                                                    kind: "Argument",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "width"
+                                                                    },
+                                                                    value: {
+                                                                        kind: "IntValue",
+                                                                        value: "320"
+                                                                    }
+                                                                }, {
+                                                                    kind: "Argument",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "height"
+                                                                    },
+                                                                    value: {
+                                                                        kind: "IntValue",
+                                                                        value: "180"
+                                                                    }
+                                                                }],
+                                                                directives: []
+                                                            }]
+                                                        }
+                                                    }]
+                                                }
+                                            }]
+                                        }
+                                    }]
+                                }
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "followedCommunities"
+                                },
+                                arguments: [{
+                                    kind: "Argument",
+                                    name: {
+                                        kind: "Name",
+                                        value: "first"
+                                    },
+                                    value: {
+                                        kind: "Variable",
+                                        name: {
+                                            kind: "Name",
+                                            value: "limit"
+                                        }
+                                    }
+                                }],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "edges"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "node"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: {
+                                                    kind: "SelectionSet",
+                                                    selections: [{
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "id"
+                                                        },
+                                                        arguments: [],
+                                                        directives: []
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "avatarURL"
+                                                        },
+                                                        arguments: [{
+                                                            kind: "Argument",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "width"
+                                                            },
+                                                            value: {
+                                                                kind: "IntValue",
+                                                                value: "285"
+                                                            }
+                                                        }, {
+                                                            kind: "Argument",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "height"
+                                                            },
+                                                            value: {
+                                                                kind: "IntValue",
+                                                                value: "380"
+                                                            }
+                                                        }],
+                                                        directives: []
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "viewersCount"
+                                                        },
+                                                        arguments: [],
+                                                        directives: []
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "displayName"
+                                                        },
+                                                        arguments: [],
+                                                        directives: []
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "broadcastersCount"
+                                                        },
+                                                        arguments: [],
+                                                        directives: []
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "name"
+                                                        },
+                                                        arguments: [],
+                                                        directives: []
+                                                    }]
+                                                }
+                                            }]
+                                        }
+                                    }]
+                                }
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "follows"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "totalCount"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 750
+            }
+        };
+        n.loc.source = {
+            body: "query FollowedIndex_CurrentUser($limit: Int) {\ncurrentUser {\nid\nfollowedGames(first: $limit) {\nnodes {\nid\nname\nboxArtURL(width: 285 height: 380)\nviewersCount\n}\n}\nfollowedLiveUsers(first: $limit) {\nnodes {\nid\nlogin\ndisplayName\nstream {\nid\ngame {\nid\nname\nboxArtURL(width: 40 height: 56)\n}\nviewersCount\ntitle\ntype\npreviewImageURL(width: 320 height: 180)\n}\n}\n}\nfollowedHosts(first: $limit) {\nnodes {\nid\nlogin\ndisplayName\nhosting {\nid\nlogin\ndisplayName\nstream {\nid\ngame {\nid\nname\nboxArtURL(width: 40 height: 56)\n}\nviewersCount\ntitle\ntype\npreviewImageURL(width: 320 height: 180)\n}\n}\n}\n}\nfollowedCommunities(first: $limit) {\nedges {\nnode {\nid\navatarURL(width: 285 height: 380)\nviewersCount\ndisplayName\nbroadcastersCount\nname\n}\n}\n}\nfollows {\ntotalCount\n}\n}\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
+    LrP9: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "FollowingLive_CurrentUser"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "limit"
+                        }
+                    },
+                    type: {
+                        kind: "NamedType",
+                        name: {
+                            kind: "Name",
+                            value: "Int"
+                        }
+                    }
+                }, {
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "cursor"
+                        }
+                    },
+                    type: {
+                        kind: "NamedType",
+                        name: {
+                            kind: "Name",
+                            value: "Cursor"
+                        }
+                    }
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "currentUser"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "follows"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "totalCount"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }]
+                                }
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "followedLiveUsers"
+                                },
+                                arguments: [{
+                                    kind: "Argument",
+                                    name: {
+                                        kind: "Name",
+                                        value: "first"
+                                    },
+                                    value: {
+                                        kind: "Variable",
+                                        name: {
+                                            kind: "Name",
+                                            value: "limit"
+                                        }
+                                    }
+                                }, {
+                                    kind: "Argument",
+                                    name: {
+                                        kind: "Name",
+                                        value: "after"
+                                    },
+                                    value: {
+                                        kind: "Variable",
+                                        name: {
+                                            kind: "Name",
+                                            value: "cursor"
+                                        }
+                                    }
+                                }],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "edges"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "node"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: {
+                                                    kind: "SelectionSet",
+                                                    selections: [{
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "id"
+                                                        },
+                                                        arguments: [],
+                                                        directives: []
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "login"
+                                                        },
+                                                        arguments: [],
+                                                        directives: []
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "displayName"
+                                                        },
+                                                        arguments: [],
+                                                        directives: []
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "stream"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: {
+                                                            kind: "SelectionSet",
+                                                            selections: [{
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "id"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "game"
+                                                                },
+                                                                arguments: [],
+                                                                directives: [],
+                                                                selectionSet: {
+                                                                    kind: "SelectionSet",
+                                                                    selections: [{
+                                                                        kind: "Field",
+                                                                        name: {
+                                                                            kind: "Name",
+                                                                            value: "id"
+                                                                        },
+                                                                        arguments: [],
+                                                                        directives: []
+                                                                    }, {
+                                                                        kind: "Field",
+                                                                        name: {
+                                                                            kind: "Name",
+                                                                            value: "name"
+                                                                        },
+                                                                        arguments: [],
+                                                                        directives: []
+                                                                    }, {
+                                                                        kind: "Field",
+                                                                        name: {
+                                                                            kind: "Name",
+                                                                            value: "boxArtURL"
+                                                                        },
+                                                                        arguments: [{
+                                                                            kind: "Argument",
+                                                                            name: {
+                                                                                kind: "Name",
+                                                                                value: "width"
+                                                                            },
+                                                                            value: {
+                                                                                kind: "IntValue",
+                                                                                value: "40"
+                                                                            }
+                                                                        }, {
+                                                                            kind: "Argument",
+                                                                            name: {
+                                                                                kind: "Name",
+                                                                                value: "height"
+                                                                            },
+                                                                            value: {
+                                                                                kind: "IntValue",
+                                                                                value: "56"
+                                                                            }
+                                                                        }],
+                                                                        directives: []
+                                                                    }]
+                                                                }
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "viewersCount"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "title"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "type"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "previewImageURL"
+                                                                },
+                                                                arguments: [{
+                                                                    kind: "Argument",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "width"
+                                                                    },
+                                                                    value: {
+                                                                        kind: "IntValue",
+                                                                        value: "320"
+                                                                    }
+                                                                }, {
+                                                                    kind: "Argument",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "height"
+                                                                    },
+                                                                    value: {
+                                                                        kind: "IntValue",
+                                                                        value: "180"
+                                                                    }
+                                                                }],
+                                                                directives: []
+                                                            }]
+                                                        }
+                                                    }]
+                                                }
+                                            }, {
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "cursor"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }]
+                                        }
+                                    }, {
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "pageInfo"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "hasNextPage"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }]
+                                        }
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 357
+            }
+        };
+        n.loc.source = {
+            body: "query FollowingLive_CurrentUser($limit: Int $cursor: Cursor) {\ncurrentUser {\nid\nfollows {\ntotalCount\n}\nfollowedLiveUsers(first: $limit after: $cursor) {\nedges {\nnode {\nid\nlogin\ndisplayName\nstream {\nid\ngame {\nid\nname\nboxArtURL(width: 40 height: 56)\n}\nviewersCount\ntitle\ntype\npreviewImageURL(width: 320 height: 180)\n}\n}\ncursor\n}\npageInfo {\nhasNextPage\n}\n}\n}\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
     MSvX: function(e, t, n) {
         "use strict";
         var i = n("TToO"),
             a = n("OAwv"),
             r = n("U7vG"),
             o = n("6sO2"),
-            l = n("Ejve"),
-            s = "legacy_routes_enabled",
+            s = n("Ejve"),
+            l = "legacy_routes_enabled",
             d = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
@@ -4577,8 +5033,8 @@ webpackJsonp([47], {
                                     var i = "" !== e.search ? a.parse(e.search) : {};
                                     i["from-redirect"] = "true";
                                     var r = a.stringify(i),
-                                        s = o.a.buildType === l.a.Dev ? window.location.host : window.location.hostname,
-                                        d = window.location.protocol + "//" + s + e.pathname + "?" + r;
+                                        l = o.a.buildType === s.a.Dev ? window.location.host : window.location.hostname,
+                                        d = window.location.protocol + "//" + l + e.pathname + "?" + r;
                                     return n.logger.debug("Redirecting to legacy route", {
                                         newUrl: d
                                     }), void window.location.replace(d)
@@ -4603,7 +5059,7 @@ webpackJsonp([47], {
                                 })
                             }
                         }
-                    }, n.isEnabled = o.b.get(s, !1), n.logger = o.i.withCategory("legacy-routes"), n.legacyRoutes = n.buildRoutes(), n.props.history.listen(n.onHistoryChange), n
+                    }, n.isEnabled = o.b.get(l, !1), n.logger = o.i.withCategory("legacy-routes"), n.legacyRoutes = n.buildRoutes(), n.props.history.listen(n.onHistoryChange), n
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
                     return null
@@ -4633,22 +5089,78 @@ webpackJsonp([47], {
                 }, t
             }(r.Component);
         n.d(t, "a", function() {
-            return s
+            return l
         }), n.d(t, !1, function() {
             return "legacy_routes"
         }), n.d(t, "b", function() {
             return d
         })
     },
-    NAfc: function(e, t) {
-        var n = {
+    MZUk: function(e, t, n) {
+        "use strict";
+        var i = n("TToO"),
+            a = n("U7vG"),
+            r = n("6sO2"),
+            o = n("7vx8"),
+            s = n("vH/s"),
+            l = n("peXu"),
+            d = n("CSlQ"),
+            c = n("VDV3"),
+            m = n("Odds"),
+            u = n("NF3U"),
+            p = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return i.__extends(t, e), t.prototype.componentDidUpdate = function() {
+                    this.props.data.loading || this.props.latencyTracking.reportInteractive()
+                }, t.prototype.render = function() {
+                    if (this.props.data.loading || this.props.data.error || 0 === this.props.data.currentUser.recommendations.videos.edges.length) return null;
+                    var e = a.createElement(m.V, {
+                            margin: {
+                                bottom: 2
+                            }
+                        }, a.createElement(m._23, {
+                            type: m._28.H4,
+                            color: m.F.Alt2,
+                            fontSize: m.L.Size5,
+                            transform: m._27.Uppercase
+                        }, Object(r.d)("Based on your viewing history", "SuggestedVideos"))),
+                        t = [];
+                    if (this.props.data.currentUser.recommendations.videos && (t = this.props.data.currentUser.recommendations.videos.edges.map(function(e) {
+                            return e.node
+                        })), this.props.directoryWidth > 0) {
+                        var n = Object(l.a)(this.props.directoryWidth, 240, 2);
+                        t = t.slice(0, n)
+                    }
+                    return a.createElement("div", null, e, a.createElement(c.b, {
+                        trackingMedium: s.PageviewMedium.Following,
+                        trackingContent: s.PageviewContent.SuggestedVideos,
+                        videoCardSize: m._35.Medium,
+                        videos: t
+                    }))
+                }, t = i.__decorate([Object(o.a)(u, {
+                    options: {
+                        fetchPolicy: "network-only",
+                        variables: {
+                            limit: 30
+                        }
+                    }
+                }), Object(d.d)("SuggestedVideos")], t)
+            }(a.Component);
+        n.d(t, "a", function() {
+            return p
+        })
+    },
+    NF3U: function(e, t, n) {
+        var i = {
             kind: "Document",
             definitions: [{
                 kind: "OperationDefinition",
                 operation: "query",
                 name: {
                     kind: "Name",
-                    value: "FollowingHosts_CurrentUser"
+                    value: "SuggestedVideos_CurrentUser"
                 },
                 variableDefinitions: [{
                     kind: "VariableDefinition",
@@ -4665,15 +5177,13 @@ webpackJsonp([47], {
                             kind: "Name",
                             value: "Int"
                         }
-                    },
-                    defaultValue: null
+                    }
                 }],
                 directives: [],
                 selectionSet: {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "currentUser"
@@ -4684,20 +5194,17 @@ webpackJsonp([47], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
-                                    value: "follows"
+                                    value: "recommendations"
                                 },
                                 arguments: [],
                                 directives: [],
@@ -4705,87 +5212,32 @@ webpackJsonp([47], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
-                                            value: "totalCount"
+                                            value: "videos"
                                         },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }]
-                                }
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "followedHosts"
-                                },
-                                arguments: [{
-                                    kind: "Argument",
-                                    name: {
-                                        kind: "Name",
-                                        value: "first"
-                                    },
-                                    value: {
-                                        kind: "Variable",
-                                        name: {
-                                            kind: "Name",
-                                            value: "limit"
-                                        }
-                                    }
-                                }],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "nodes"
-                                        },
-                                        arguments: [],
+                                        arguments: [{
+                                            kind: "Argument",
+                                            name: {
+                                                kind: "Name",
+                                                value: "first"
+                                            },
+                                            value: {
+                                                kind: "Variable",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "limit"
+                                                }
+                                            }
+                                        }],
                                         directives: [],
                                         selectionSet: {
                                             kind: "SelectionSet",
                                             selections: [{
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
-                                                    value: "id"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }, {
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "login"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }, {
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "displayName"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }, {
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "hosting"
+                                                    value: "edges"
                                                 },
                                                 arguments: [],
                                                 directives: [],
@@ -4793,178 +5245,21 @@ webpackJsonp([47], {
                                                     kind: "SelectionSet",
                                                     selections: [{
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
-                                                            value: "id"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "login"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "displayName"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "stream"
+                                                            value: "node"
                                                         },
                                                         arguments: [],
                                                         directives: [],
                                                         selectionSet: {
                                                             kind: "SelectionSet",
                                                             selections: [{
-                                                                kind: "Field",
-                                                                alias: null,
+                                                                kind: "FragmentSpread",
                                                                 name: {
                                                                     kind: "Name",
-                                                                    value: "id"
+                                                                    value: "PreviewCardVideo"
                                                                 },
-                                                                arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
-                                                            }, {
-                                                                kind: "Field",
-                                                                alias: null,
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "game"
-                                                                },
-                                                                arguments: [],
-                                                                directives: [],
-                                                                selectionSet: {
-                                                                    kind: "SelectionSet",
-                                                                    selections: [{
-                                                                        kind: "Field",
-                                                                        alias: null,
-                                                                        name: {
-                                                                            kind: "Name",
-                                                                            value: "id"
-                                                                        },
-                                                                        arguments: [],
-                                                                        directives: [],
-                                                                        selectionSet: null
-                                                                    }, {
-                                                                        kind: "Field",
-                                                                        alias: null,
-                                                                        name: {
-                                                                            kind: "Name",
-                                                                            value: "name"
-                                                                        },
-                                                                        arguments: [],
-                                                                        directives: [],
-                                                                        selectionSet: null
-                                                                    }, {
-                                                                        kind: "Field",
-                                                                        alias: null,
-                                                                        name: {
-                                                                            kind: "Name",
-                                                                            value: "boxArtURL"
-                                                                        },
-                                                                        arguments: [{
-                                                                            kind: "Argument",
-                                                                            name: {
-                                                                                kind: "Name",
-                                                                                value: "width"
-                                                                            },
-                                                                            value: {
-                                                                                kind: "IntValue",
-                                                                                value: "40"
-                                                                            }
-                                                                        }, {
-                                                                            kind: "Argument",
-                                                                            name: {
-                                                                                kind: "Name",
-                                                                                value: "height"
-                                                                            },
-                                                                            value: {
-                                                                                kind: "IntValue",
-                                                                                value: "56"
-                                                                            }
-                                                                        }],
-                                                                        directives: [],
-                                                                        selectionSet: null
-                                                                    }]
-                                                                }
-                                                            }, {
-                                                                kind: "Field",
-                                                                alias: null,
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "viewersCount"
-                                                                },
-                                                                arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
-                                                            }, {
-                                                                kind: "Field",
-                                                                alias: null,
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "title"
-                                                                },
-                                                                arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
-                                                            }, {
-                                                                kind: "Field",
-                                                                alias: null,
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "type"
-                                                                },
-                                                                arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
-                                                            }, {
-                                                                kind: "Field",
-                                                                alias: null,
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "previewImageURL"
-                                                                },
-                                                                arguments: [{
-                                                                    kind: "Argument",
-                                                                    name: {
-                                                                        kind: "Name",
-                                                                        value: "width"
-                                                                    },
-                                                                    value: {
-                                                                        kind: "IntValue",
-                                                                        value: "320"
-                                                                    }
-                                                                }, {
-                                                                    kind: "Argument",
-                                                                    name: {
-                                                                        kind: "Name",
-                                                                        value: "height"
-                                                                    },
-                                                                    value: {
-                                                                        kind: "IntValue",
-                                                                        value: "180"
-                                                                    }
-                                                                }],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }]
                                                         }
                                                     }]
@@ -4980,18 +5275,25 @@ webpackJsonp([47], {
             }],
             loc: {
                 start: 0,
-                end: 315
+                end: 240
             }
         };
-        n.loc.source = {
-            body: "query FollowingHosts_CurrentUser($limit: Int) {\ncurrentUser {\nid\nfollows {\ntotalCount\n}\nfollowedHosts(first: $limit) {\nnodes {\nid\nlogin\ndisplayName\nhosting {\nid\nlogin\ndisplayName\nstream {\nid\ngame {\nid\nname\nboxArtURL(width: 40 height: 56)\n}\nviewersCount\ntitle\ntype\npreviewImageURL(width: 320 height: 180)\n}\n}\n}\n}\n}\n}",
+        i.loc.source = {
+            body: '#import "twilight/features/video-preview-card/models/preview-card-video-fragment.gql"\nquery SuggestedVideos_CurrentUser($limit: Int) {\ncurrentUser {\nid\nrecommendations {\nvideos(first: $limit) {\nedges {\nnode {\n...PreviewCardVideo\n}\n}\n}\n}\n}\n}',
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
                 column: 1
             }
         };
-        e.exports = n
+        var a = {};
+        i.definitions = i.definitions.concat(function(e) {
+            return e.filter(function(e) {
+                if ("FragmentDefinition" !== e.kind) return !0;
+                var t = e.name.value;
+                return !a[t] && (a[t] = !0, !0)
+            })
+        }(n("qjMx").definitions)), e.exports = i
     },
     PLRK: function(e, t, n) {
         "use strict";
@@ -5004,8 +5306,8 @@ webpackJsonp([47], {
                     channel: t
                 }, "DirectoryGamePage")
             },
-            l = Object(r.d)("Untitled Broadcast", "StreamThumbnail"),
-            s = function(e) {
+            s = Object(r.d)("Untitled Broadcast", "StreamThumbnail"),
+            l = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -5016,9 +5318,9 @@ webpackJsonp([47], {
         n.d(t, !1, function() {
             return o
         }), n.d(t, "a", function() {
-            return l
-        }), n.d(t, !1, function() {
             return s
+        }), n.d(t, !1, function() {
+            return l
         })
     },
     PO03: function(e, t) {
@@ -5049,15 +5351,13 @@ webpackJsonp([47], {
                                 value: "String"
                             }
                         }
-                    },
-                    defaultValue: null
+                    }
                 }],
                 directives: [],
                 selectionSet: {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "community"
@@ -5081,17 +5381,14 @@ webpackJsonp([47], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "self"
@@ -5102,7 +5399,6 @@ webpackJsonp([47], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "permissions"
@@ -5113,24 +5409,20 @@ webpackJsonp([47], {
                                             kind: "SelectionSet",
                                             selections: [{
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "banning"
                                                 },
                                                 arguments: [],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }, {
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "timingOut"
                                                 },
                                                 arguments: [],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }]
                                         }
                                     }]
@@ -5139,7 +5431,6 @@ webpackJsonp([47], {
                         }
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "currentUser"
@@ -5150,14 +5441,12 @@ webpackJsonp([47], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }]
                         }
                     }]
@@ -5184,7 +5473,7 @@ webpackJsonp([47], {
             a = n("OAwv"),
             r = n("6sO2"),
             o = n("9u8h"),
-            l = {
+            s = {
                 en: "en_US",
                 de: "de_DE",
                 es: "es_ES",
@@ -5207,39 +5496,39 @@ webpackJsonp([47], {
                 ja: "ja_JP",
                 ko: "ko_KR"
             },
-            s = function(e) {
-                return e ? l[e] || "en_US" : "en_US"
+            l = function(e) {
+                return e ? s[e] || "en_US" : "en_US"
             },
             d = n("pqU3");
         t.a = function() {
             var e = this;
             return function(t) {
-                clearTimeout(u), u = setTimeout(function() {
+                clearTimeout(c), c = setTimeout(function() {
                     return i.__awaiter(e, void 0, void 0, function() {
-                        var e, n, l, u, c, m;
+                        var e, n, s, c, m, u;
                         return i.__generator(this, function(i) {
                             switch (i.label) {
                                 case 0:
                                     e = r.n.logger.withCategory("leagueoflegends-api"), t(Object(d.e)(!0)), i.label = 1;
                                 case 1:
-                                    return i.trys.push([1, 3, , 4]), n = r.n.intl.getLanguageCode(), l = s(n), u = o.a.getAPIURL("/api/lol/champions?" + a.stringify({
-                                        locale: l,
+                                    return i.trys.push([1, 3, , 4]), n = r.n.intl.getLanguageCode(), s = l(n), c = o.a.getAPIURL("/api/lol/champions?" + a.stringify({
+                                        locale: s,
                                         on_site: 1
-                                    })).toString(), [4, o.a.get(u)];
+                                    })).toString(), [4, o.a.get(c)];
                                 case 2:
-                                    return (c = i.sent()).body ? t(Object(d.f)(c.body)) : (e.warn("LoL champion API response body was empty."), t(Object(d.d)(!0))), [3, 4];
+                                    return (m = i.sent()).body ? t(Object(d.f)(m.body)) : (e.warn("LoL champion API response body was empty."), t(Object(d.d)(!0))), [3, 4];
                                 case 3:
-                                    throw m = i.sent(), t(Object(d.d)(!0)), e.error(m, "Failed to load LoL champion data"), m;
+                                    throw u = i.sent(), t(Object(d.d)(!0)), e.error(u, "Failed to load LoL champion data"), u;
                                 case 4:
                                     return [2]
                             }
                         })
                     })
-                }, c)
+                }, m)
             }
         };
-        var u = 0,
-            c = 350
+        var c = 0,
+            m = 350
     },
     QG7y: function(e, t, n) {
         "use strict";
@@ -5248,19 +5537,19 @@ webpackJsonp([47], {
         }), n.d(t, "c", function() {
             return o
         }), n.d(t, "d", function() {
-            return l
-        }), n.d(t, "a", function() {
             return s
+        }), n.d(t, "a", function() {
+            return l
         }), n.d(t, "f", function() {
             return d
         }), n.d(t, "e", function() {
-            return u
-        }), n.d(t, "g", function() {
             return c
+        }), n.d(t, "g", function() {
+            return m
         }), t.i = function(e) {
-            c.emit(d, e)
+            m.emit(d, e)
         }, t.h = function(e) {
-            c.emit(u, e)
+            m.emit(c, e)
         };
         var i = n("BzvE"),
             a = (n.n(i), n("6sO2")),
@@ -5330,20 +5619,20 @@ webpackJsonp([47], {
                     ]
                 }
             },
-            l = {
+            s = {
                 directory: "/" + a.a.dfpNetworkCode + "/twitch/directory",
                 channel: "/" + a.a.dfpNetworkCode + "/twitch/channels",
                 frontpage: "/" + a.a.dfpNetworkCode + "/twitch/homepage",
                 sizzle: "/" + a.a.dfpNetworkCode + "/twitch/sizzle_strip"
             },
-            s = {
+            l = {
                 games: "games",
                 channel: "channel",
                 frontpage: "homepage"
             },
             d = "ads.slot-render-end",
-            u = "ads.slot-ready",
-            c = new i.EventEmitter
+            c = "ads.slot-ready",
+            m = new i.EventEmitter
     },
     QjjF: function(e, t) {
         var n = {
@@ -5370,15 +5659,13 @@ webpackJsonp([47], {
                             kind: "Name",
                             value: "Int"
                         }
-                    },
-                    defaultValue: null
+                    }
                 }],
                 directives: [],
                 selectionSet: {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "currentUser"
@@ -5389,27 +5676,22 @@ webpackJsonp([47], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "createdAt"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "followedGames"
@@ -5433,7 +5715,6 @@ webpackJsonp([47], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "nodes"
@@ -5444,34 +5725,28 @@ webpackJsonp([47], {
                                             kind: "SelectionSet",
                                             selections: [{
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "id"
                                                 },
                                                 arguments: [],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }, {
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "name"
                                                 },
                                                 arguments: [],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }, {
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "directoryType"
                                                 },
                                                 arguments: [],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }]
                                         }
                                     }]
@@ -5524,15 +5799,13 @@ webpackJsonp([47], {
                                 value: "UnfollowGameInput"
                             }
                         }
-                    },
-                    defaultValue: null
+                    }
                 }],
                 directives: [],
                 selectionSet: {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "unfollowGame"
@@ -5556,7 +5829,6 @@ webpackJsonp([47], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "game"
@@ -5567,7 +5839,6 @@ webpackJsonp([47], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "self"
@@ -5578,7 +5849,6 @@ webpackJsonp([47], {
                                             kind: "SelectionSet",
                                             selections: [{
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "follow"
@@ -5589,14 +5859,12 @@ webpackJsonp([47], {
                                                     kind: "SelectionSet",
                                                     selections: [{
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "followedAt"
                                                         },
                                                         arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }]
                                                 }
                                             }]
@@ -5630,15 +5898,15 @@ webpackJsonp([47], {
         }), n.d(t, "a", function() {
             return o
         }), n.d(t, "g", function() {
-            return l
-        }), n.d(t, "e", function() {
             return s
+        }), n.d(t, "e", function() {
+            return l
         }), n.d(t, "f", function() {
             return d
         }), n.d(t, "d", function() {
-            return u
-        }), n.d(t, "c", function() {
             return c
+        }), n.d(t, "c", function() {
+            return m
         });
         var i, a = n("6sO2"),
             r = n("vH/s");
@@ -5649,14 +5917,14 @@ webpackJsonp([47], {
         ! function(e) {
             e.Click = "click", e.Impression = "impression", e.Start = "start", e.Dismissed = "dismissed", e.Completed = "completed", e.Skipped = "skipped"
         }(o || (o = {}));
-        var l = function(e) {
+        var s = function(e) {
                 var t = {
                     source: e.source,
                     action: o.Start
                 };
                 a.m.track(r.SpadeEventType.OnboardingEvent, t)
             },
-            s = function() {
+            l = function() {
                 var e = {
                     source: i.HomepageCTA,
                     action: o.Dismissed
@@ -5670,14 +5938,14 @@ webpackJsonp([47], {
                 };
                 a.m.track(r.SpadeEventType.OnboardingEvent, t)
             },
-            u = function(e, t) {
+            c = function(e, t) {
                 var n = {
                     src: r.SpadeEventType.OnboardingEvent,
                     game: t
                 };
                 a.m.track(e, n)
             },
-            c = function(e) {
+            m = function(e) {
                 a.m.track(r.SpadeEventType.BrowseForYou, e)
             }
     },
@@ -5691,157 +5959,6 @@ webpackJsonp([47], {
             }
             return e
         }
-    },
-    TGxD: function(e, t, n) {
-        var i = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "SuggestedVideos_CurrentUser"
-                },
-                variableDefinitions: [{
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "limit"
-                        }
-                    },
-                    type: {
-                        kind: "NamedType",
-                        name: {
-                            kind: "Name",
-                            value: "Int"
-                        }
-                    },
-                    defaultValue: null
-                }],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "currentUser"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "recommendations"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "videos"
-                                        },
-                                        arguments: [{
-                                            kind: "Argument",
-                                            name: {
-                                                kind: "Name",
-                                                value: "first"
-                                            },
-                                            value: {
-                                                kind: "Variable",
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "limit"
-                                                }
-                                            }
-                                        }],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "edges"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: {
-                                                    kind: "SelectionSet",
-                                                    selections: [{
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "node"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: {
-                                                            kind: "SelectionSet",
-                                                            selections: [{
-                                                                kind: "FragmentSpread",
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "PreviewCardVideo"
-                                                                },
-                                                                directives: []
-                                                            }]
-                                                        }
-                                                    }]
-                                                }
-                                            }]
-                                        }
-                                    }]
-                                }
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 240
-            }
-        };
-        i.loc.source = {
-            body: '#import "twilight/features/video-preview-card/models/preview-card-video-fragment.gql"\nquery SuggestedVideos_CurrentUser($limit: Int) {\ncurrentUser {\nid\nrecommendations {\nvideos(first: $limit) {\nedges {\nnode {\n...PreviewCardVideo\n}\n}\n}\n}\n}\n}',
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        var a = {};
-        i.definitions = i.definitions.concat(function(e) {
-            return e.filter(function(e) {
-                if ("FragmentDefinition" !== e.kind) return !0;
-                var t = e.name.value;
-                return !a[t] && (a[t] = !0, !0)
-            })
-        }(n("qjMx").definitions)), e.exports = i
     },
     U9Fb: function(e, t) {
         var n = {
@@ -5871,15 +5988,13 @@ webpackJsonp([47], {
                                 value: "UnfollowGameInput"
                             }
                         }
-                    },
-                    defaultValue: null
+                    }
                 }],
                 directives: [],
                 selectionSet: {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "unfollowGame"
@@ -5903,7 +6018,6 @@ webpackJsonp([47], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "follow"
@@ -5914,14 +6028,12 @@ webpackJsonp([47], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "followedAt"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }]
                                 }
                             }]
@@ -5962,24 +6074,24 @@ webpackJsonp([47], {
             a = n("HW6M"),
             r = n("U7vG"),
             o = n("6sO2"),
-            l = n("6yQB"),
-            s = n("+Znq"),
+            s = n("6yQB"),
+            l = n("+Znq"),
             d = n("6WAQ"),
-            u = n("JpYe"),
-            c = n("3yQz"),
-            m = n("Odds"),
+            c = n("JpYe"),
+            m = n("3yQz"),
+            u = n("Odds"),
             p = (n("C2pI"), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.sortChangeHandler = function(e) {
                         n.props.onVideoSortChange(e.target.value)
                     }, n.renderLanguageSelector = function() {
-                        return n.props.hideLanguageSelector ? null : r.createElement(m.V, {
-                            display: m.H.InlineFlex,
+                        return n.props.hideLanguageSelector ? null : r.createElement(u.V, {
+                            display: u.H.InlineFlex,
                             margin: {
                                 right: 1
                             }
-                        }, r.createElement(l.a, null))
+                        }, r.createElement(s.a, null))
                     }, n.typeChangeHandler = function(e) {
                         if (n.balloonWrapperRef.toggleBalloon(!1), n.props.onVideoFilterChange) {
                             var t = e.currentTarget.getAttribute("data-filter-type");
@@ -6009,9 +6121,9 @@ webpackJsonp([47], {
                     var e, t = Object(o.d)("All Videos", "VideoFilter"),
                         n = Object(o.d)("Past Premieres", "VideoFilter"),
                         i = Object(o.d)("Past Broadcasts", "VideoFilter"),
-                        l = Object(o.d)("Highlights", "VideoFilter"),
+                        s = Object(o.d)("Highlights", "VideoFilter"),
                         p = Object(o.d)("Uploads", "VideoFilter"),
-                        g = this.props.selectedSort && Object(u.e)(this.props.selectedSort) || c.a;
+                        g = this.props.selectedSort && Object(c.e)(this.props.selectedSort) || m.a;
                     switch (this.props.broadcastType) {
                         case d.a.PastPremiere:
                             e = n;
@@ -6020,7 +6132,7 @@ webpackJsonp([47], {
                             e = i;
                             break;
                         case d.a.Highlight:
-                            e = l;
+                            e = s;
                             break;
                         case d.a.Upload:
                             e = p;
@@ -6036,98 +6148,98 @@ webpackJsonp([47], {
                             "video-filters": !0
                         },
                         f = null;
-                    return this.state.isPremiereExperimentActive && (f = r.createElement(m.T, {
+                    return this.state.isPremiereExperimentActive && (f = r.createElement(u.T, {
                         onClick: this.typeChangeHandler,
                         "data-filter-type": d.a.PastPremiere,
                         "data-a-target": "video-type-filter-past-premieres"
-                    }, r.createElement(m.V, {
+                    }, r.createElement(u.V, {
                         className: a(this.props.broadcastType === d.a.PastPremiere ? v : h),
                         padding: {
                             y: .5,
                             x: 1
                         },
                         "data-test-selector": "filter-item-past-premiere"
-                    }, n))), r.createElement(m.V, {
+                    }, n))), r.createElement(u.V, {
                         margin: {
                             bottom: 2
                         },
-                        display: m.H.Flex,
-                        justifyContent: m.U.Between
-                    }, r.createElement("div", null, this.renderLanguageSelector(), r.createElement(m.V, {
-                        display: m.H.InlineFlex
-                    }, r.createElement(s.a, {
+                        display: u.H.Flex,
+                        justifyContent: u.U.Between
+                    }, r.createElement("div", null, this.renderLanguageSelector(), r.createElement(u.V, {
+                        display: u.H.InlineFlex
+                    }, r.createElement(l.a, {
                         ref: this.saveBalloonWrapperRef
-                    }, r.createElement(m.u, {
-                        type: m.z.Hollow,
+                    }, r.createElement(u.u, {
+                        type: u.z.Hollow,
                         "data-test-selector": "filter-dropdown-button",
                         "data-a-target": "video-type-filter-dropdown",
                         dropdown: !0
-                    }, e), r.createElement(m.p, {
-                        direction: m.q.Bottom,
+                    }, e), r.createElement(u.p, {
+                        direction: u.q.Bottom,
                         "data-a-target": "video-type-filter-balloon",
                         offsetX: "0",
                         noTail: !0
-                    }, r.createElement(m.V, {
+                    }, r.createElement(u.V, {
                         className: "layout",
                         padding: {
                             y: 1
                         }
-                    }, r.createElement(m.T, {
+                    }, r.createElement(u.T, {
                         onClick: this.typeChangeHandler,
                         "data-filter-type": "all",
                         "data-a-target": "video-type-filter-all"
-                    }, r.createElement(m.V, {
+                    }, r.createElement(u.V, {
                         className: a(this.props.broadcastType ? h : v),
                         padding: {
                             y: .5,
                             x: 1
                         },
                         "data-test-selector": "filter-item-all"
-                    }, t)), f, r.createElement(m.T, {
+                    }, t)), f, r.createElement(u.T, {
                         onClick: this.typeChangeHandler,
                         "data-filter-type": d.a.Archive,
                         "data-a-target": "video-type-filter-past-broadcasts"
-                    }, r.createElement(m.V, {
+                    }, r.createElement(u.V, {
                         className: a(this.props.broadcastType === d.a.Archive ? v : h),
                         padding: {
                             y: .5,
                             x: 1
                         },
                         "data-test-selector": "filter-item-archive"
-                    }, i)), r.createElement(m.T, {
+                    }, i)), r.createElement(u.T, {
                         onClick: this.typeChangeHandler,
                         "data-filter-type": d.a.Highlight,
                         "data-a-target": "video-type-filter-highlights"
-                    }, r.createElement(m.V, {
+                    }, r.createElement(u.V, {
                         className: a(this.props.broadcastType === d.a.Highlight ? v : h),
                         padding: {
                             y: .5,
                             x: 1
                         },
                         "data-test-selector": "filter-item-highlight"
-                    }, l)), r.createElement(m.T, {
+                    }, s)), r.createElement(u.T, {
                         onClick: this.typeChangeHandler,
                         "data-filter-type": d.a.Upload,
                         "data-a-target": "video-type-filter-uploads"
-                    }, r.createElement(m.V, {
+                    }, r.createElement(u.V, {
                         className: a(this.props.broadcastType === d.a.Upload ? v : h),
                         padding: {
                             y: .5,
                             x: 1
                         },
                         "data-test-selector": "filter-item-upload"
-                    }, p))))))), r.createElement("div", null, r.createElement(m._16, {
+                    }, p))))))), r.createElement("div", null, r.createElement(u._16, {
                         name: "sort",
                         onChange: this.sortChangeHandler,
                         value: g,
                         "data-a-target": "video-sort-select"
                     }, r.createElement("option", {
                         "data-test-selector": "sort-option-newest",
-                        value: c.a,
+                        value: m.a,
                         "data-a-target": "video-sort-newest"
                     }, Object(o.d)("Newest", "VideoFilter")), r.createElement("option", {
                         "data-test-selector": "sort-option-popular",
-                        value: c.b,
+                        value: m.b,
                         "data-a-target": "video-sort-popular"
                     }, Object(o.d)("Popular", "VideoFilter")))))
                 }, t
@@ -6142,804 +6254,12 @@ webpackJsonp([47], {
     Vr3l: function(e, t, n) {
         e.exports = n.p + "assets/overwatch-chars-062a1df5ff2aaa76eb8e129940ef964a.png"
     },
-    X9eO: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "FollowedIndex_CurrentUser"
-                },
-                variableDefinitions: [{
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "limit"
-                        }
-                    },
-                    type: {
-                        kind: "NamedType",
-                        name: {
-                            kind: "Name",
-                            value: "Int"
-                        }
-                    },
-                    defaultValue: null
-                }],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "currentUser"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "followedGames"
-                                },
-                                arguments: [{
-                                    kind: "Argument",
-                                    name: {
-                                        kind: "Name",
-                                        value: "first"
-                                    },
-                                    value: {
-                                        kind: "Variable",
-                                        name: {
-                                            kind: "Name",
-                                            value: "limit"
-                                        }
-                                    }
-                                }],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "nodes"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "id"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }, {
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "name"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }, {
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "boxArtURL"
-                                                },
-                                                arguments: [{
-                                                    kind: "Argument",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "width"
-                                                    },
-                                                    value: {
-                                                        kind: "IntValue",
-                                                        value: "285"
-                                                    }
-                                                }, {
-                                                    kind: "Argument",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "height"
-                                                    },
-                                                    value: {
-                                                        kind: "IntValue",
-                                                        value: "380"
-                                                    }
-                                                }],
-                                                directives: [],
-                                                selectionSet: null
-                                            }, {
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "viewersCount"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }]
-                                        }
-                                    }]
-                                }
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "followedLiveUsers"
-                                },
-                                arguments: [{
-                                    kind: "Argument",
-                                    name: {
-                                        kind: "Name",
-                                        value: "first"
-                                    },
-                                    value: {
-                                        kind: "Variable",
-                                        name: {
-                                            kind: "Name",
-                                            value: "limit"
-                                        }
-                                    }
-                                }],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "nodes"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "id"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }, {
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "login"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }, {
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "displayName"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }, {
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "stream"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: {
-                                                    kind: "SelectionSet",
-                                                    selections: [{
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "id"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "game"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: {
-                                                            kind: "SelectionSet",
-                                                            selections: [{
-                                                                kind: "Field",
-                                                                alias: null,
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "id"
-                                                                },
-                                                                arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
-                                                            }, {
-                                                                kind: "Field",
-                                                                alias: null,
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "name"
-                                                                },
-                                                                arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
-                                                            }, {
-                                                                kind: "Field",
-                                                                alias: null,
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "boxArtURL"
-                                                                },
-                                                                arguments: [{
-                                                                    kind: "Argument",
-                                                                    name: {
-                                                                        kind: "Name",
-                                                                        value: "width"
-                                                                    },
-                                                                    value: {
-                                                                        kind: "IntValue",
-                                                                        value: "40"
-                                                                    }
-                                                                }, {
-                                                                    kind: "Argument",
-                                                                    name: {
-                                                                        kind: "Name",
-                                                                        value: "height"
-                                                                    },
-                                                                    value: {
-                                                                        kind: "IntValue",
-                                                                        value: "56"
-                                                                    }
-                                                                }],
-                                                                directives: [],
-                                                                selectionSet: null
-                                                            }]
-                                                        }
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "viewersCount"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "title"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "type"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "previewImageURL"
-                                                        },
-                                                        arguments: [{
-                                                            kind: "Argument",
-                                                            name: {
-                                                                kind: "Name",
-                                                                value: "width"
-                                                            },
-                                                            value: {
-                                                                kind: "IntValue",
-                                                                value: "320"
-                                                            }
-                                                        }, {
-                                                            kind: "Argument",
-                                                            name: {
-                                                                kind: "Name",
-                                                                value: "height"
-                                                            },
-                                                            value: {
-                                                                kind: "IntValue",
-                                                                value: "180"
-                                                            }
-                                                        }],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }]
-                                                }
-                                            }]
-                                        }
-                                    }]
-                                }
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "followedHosts"
-                                },
-                                arguments: [{
-                                    kind: "Argument",
-                                    name: {
-                                        kind: "Name",
-                                        value: "first"
-                                    },
-                                    value: {
-                                        kind: "Variable",
-                                        name: {
-                                            kind: "Name",
-                                            value: "limit"
-                                        }
-                                    }
-                                }],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "nodes"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "id"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }, {
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "login"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }, {
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "displayName"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }, {
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "hosting"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: {
-                                                    kind: "SelectionSet",
-                                                    selections: [{
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "id"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "login"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "displayName"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "stream"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: {
-                                                            kind: "SelectionSet",
-                                                            selections: [{
-                                                                kind: "Field",
-                                                                alias: null,
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "id"
-                                                                },
-                                                                arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
-                                                            }, {
-                                                                kind: "Field",
-                                                                alias: null,
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "game"
-                                                                },
-                                                                arguments: [],
-                                                                directives: [],
-                                                                selectionSet: {
-                                                                    kind: "SelectionSet",
-                                                                    selections: [{
-                                                                        kind: "Field",
-                                                                        alias: null,
-                                                                        name: {
-                                                                            kind: "Name",
-                                                                            value: "id"
-                                                                        },
-                                                                        arguments: [],
-                                                                        directives: [],
-                                                                        selectionSet: null
-                                                                    }, {
-                                                                        kind: "Field",
-                                                                        alias: null,
-                                                                        name: {
-                                                                            kind: "Name",
-                                                                            value: "name"
-                                                                        },
-                                                                        arguments: [],
-                                                                        directives: [],
-                                                                        selectionSet: null
-                                                                    }, {
-                                                                        kind: "Field",
-                                                                        alias: null,
-                                                                        name: {
-                                                                            kind: "Name",
-                                                                            value: "boxArtURL"
-                                                                        },
-                                                                        arguments: [{
-                                                                            kind: "Argument",
-                                                                            name: {
-                                                                                kind: "Name",
-                                                                                value: "width"
-                                                                            },
-                                                                            value: {
-                                                                                kind: "IntValue",
-                                                                                value: "40"
-                                                                            }
-                                                                        }, {
-                                                                            kind: "Argument",
-                                                                            name: {
-                                                                                kind: "Name",
-                                                                                value: "height"
-                                                                            },
-                                                                            value: {
-                                                                                kind: "IntValue",
-                                                                                value: "56"
-                                                                            }
-                                                                        }],
-                                                                        directives: [],
-                                                                        selectionSet: null
-                                                                    }]
-                                                                }
-                                                            }, {
-                                                                kind: "Field",
-                                                                alias: null,
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "viewersCount"
-                                                                },
-                                                                arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
-                                                            }, {
-                                                                kind: "Field",
-                                                                alias: null,
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "title"
-                                                                },
-                                                                arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
-                                                            }, {
-                                                                kind: "Field",
-                                                                alias: null,
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "type"
-                                                                },
-                                                                arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
-                                                            }, {
-                                                                kind: "Field",
-                                                                alias: null,
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "previewImageURL"
-                                                                },
-                                                                arguments: [{
-                                                                    kind: "Argument",
-                                                                    name: {
-                                                                        kind: "Name",
-                                                                        value: "width"
-                                                                    },
-                                                                    value: {
-                                                                        kind: "IntValue",
-                                                                        value: "320"
-                                                                    }
-                                                                }, {
-                                                                    kind: "Argument",
-                                                                    name: {
-                                                                        kind: "Name",
-                                                                        value: "height"
-                                                                    },
-                                                                    value: {
-                                                                        kind: "IntValue",
-                                                                        value: "180"
-                                                                    }
-                                                                }],
-                                                                directives: [],
-                                                                selectionSet: null
-                                                            }]
-                                                        }
-                                                    }]
-                                                }
-                                            }]
-                                        }
-                                    }]
-                                }
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "followedCommunities"
-                                },
-                                arguments: [{
-                                    kind: "Argument",
-                                    name: {
-                                        kind: "Name",
-                                        value: "first"
-                                    },
-                                    value: {
-                                        kind: "Variable",
-                                        name: {
-                                            kind: "Name",
-                                            value: "limit"
-                                        }
-                                    }
-                                }],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "edges"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "node"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: {
-                                                    kind: "SelectionSet",
-                                                    selections: [{
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "id"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "avatarURL"
-                                                        },
-                                                        arguments: [{
-                                                            kind: "Argument",
-                                                            name: {
-                                                                kind: "Name",
-                                                                value: "width"
-                                                            },
-                                                            value: {
-                                                                kind: "IntValue",
-                                                                value: "285"
-                                                            }
-                                                        }, {
-                                                            kind: "Argument",
-                                                            name: {
-                                                                kind: "Name",
-                                                                value: "height"
-                                                            },
-                                                            value: {
-                                                                kind: "IntValue",
-                                                                value: "380"
-                                                            }
-                                                        }],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "viewersCount"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "displayName"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "broadcastersCount"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "name"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }]
-                                                }
-                                            }]
-                                        }
-                                    }]
-                                }
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "follows"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "totalCount"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }]
-                                }
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 750
-            }
-        };
-        n.loc.source = {
-            body: "query FollowedIndex_CurrentUser($limit: Int) {\ncurrentUser {\nid\nfollowedGames(first: $limit) {\nnodes {\nid\nname\nboxArtURL(width: 285 height: 380)\nviewersCount\n}\n}\nfollowedLiveUsers(first: $limit) {\nnodes {\nid\nlogin\ndisplayName\nstream {\nid\ngame {\nid\nname\nboxArtURL(width: 40 height: 56)\n}\nviewersCount\ntitle\ntype\npreviewImageURL(width: 320 height: 180)\n}\n}\n}\nfollowedHosts(first: $limit) {\nnodes {\nid\nlogin\ndisplayName\nhosting {\nid\nlogin\ndisplayName\nstream {\nid\ngame {\nid\nname\nboxArtURL(width: 40 height: 56)\n}\nviewersCount\ntitle\ntype\npreviewImageURL(width: 320 height: 180)\n}\n}\n}\n}\nfollowedCommunities(first: $limit) {\nedges {\nnode {\nid\navatarURL(width: 285 height: 380)\nviewersCount\ndisplayName\nbroadcastersCount\nname\n}\n}\n}\nfollows {\ntotalCount\n}\n}\n}",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
+    WxKK: function(e, t, n) {
+        "use strict";
+        var i = n("7FW4");
+        n.d(t, "a", function() {
+            return i.a
+        })
     },
     XYqD: function(e, t, n) {
         "use strict";
@@ -6990,12 +6310,12 @@ webpackJsonp([47], {
             a = n("HW6M"),
             r = (n.n(a), n("OAwv")),
             o = (n.n(r), n("U7vG")),
-            l = (n.n(o), n("F8kA")),
-            s = n("6sO2"),
+            s = (n.n(o), n("F8kA")),
+            l = n("6sO2"),
             d = n("SZoP"),
-            u = n("mi6k"),
-            c = n("CSlQ"),
-            m = n("Odds"),
+            c = n("mi6k"),
+            m = n("CSlQ"),
+            u = n("Odds"),
             p = n("a0ve"),
             g = (n.n(p), function(e) {
                 function t() {
@@ -7031,58 +6351,58 @@ webpackJsonp([47], {
                 }, t.prototype.render = function() {
                     var e = null,
                         t = this.getVideoPreviousWatchPercentage();
-                    return null !== t && (e = o.createElement(m.V, {
-                        position: m._4.Absolute,
+                    return null !== t && (e = o.createElement(u.V, {
+                        position: u._4.Absolute,
                         attachBottom: !0,
                         fullWidth: !0
-                    }, o.createElement(m._7, {
-                        size: m._8.Small,
+                    }, o.createElement(u._7, {
+                        size: u._8.Small,
                         value: t,
                         mask: !0
                     }))), o.createElement("div", i.__assign({
                         onClick: this.onClickHandler,
                         onMouseEnter: this.onMouseEnterHandler,
                         onMouseLeave: this.onMouseLeaveHandler
-                    }, Object(m._40)(this.props)), o.createElement(m.A, null, o.createElement(m.V, {
+                    }, Object(u._40)(this.props)), o.createElement(u.A, null, o.createElement(u.V, {
                         fullWidth: !0
-                    }, o.createElement(m.j, {
+                    }, o.createElement(u.j, {
                         overflow: !0
-                    }, o.createElement("div", null, o.createElement(m._19, {
-                        display: m.H.InlineFlex,
-                        position: m._4.Absolute,
+                    }, o.createElement("div", null, o.createElement(u._19, {
+                        display: u.H.InlineFlex,
+                        position: u._4.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
                         margin: .5,
-                        zIndex: m._39.Default,
-                        fontSize: m.L.Size6,
-                        background: m.m.Overlay,
-                        color: m.F.Overlay,
+                        zIndex: u._39.Default,
+                        fontSize: u.L.Size6,
+                        background: u.m.Overlay,
+                        color: u.F.Overlay,
                         className: "video-preview-card__preview-overlay-stat"
-                    }, o.createElement(m._18, {
+                    }, o.createElement(u._18, {
                         "data-test-selector": "video-view-count",
-                        icon: m._11.GlyphViews,
-                        label: Object(s.d)("views", "VideoPreviewCard"),
-                        value: Object(s.f)(this.props.video.viewCount)
-                    })), o.createElement(m._19, {
-                        display: m.H.InlineFlex,
-                        position: m._4.Absolute,
+                        icon: u._11.GlyphViews,
+                        label: Object(l.d)("views", "VideoPreviewCard"),
+                        value: Object(l.f)(this.props.video.viewCount)
+                    })), o.createElement(u._19, {
+                        display: u.H.InlineFlex,
+                        position: u._4.Absolute,
                         attachTop: !0,
                         attachRight: !0,
                         margin: .5,
-                        zIndex: m._39.Default,
-                        fontSize: m.L.Size6,
-                        background: m.m.Overlay,
-                        color: m.F.Overlay,
+                        zIndex: u._39.Default,
+                        fontSize: u.L.Size6,
+                        background: u.m.Overlay,
+                        color: u.F.Overlay,
                         className: "video-preview-card__preview-overlay-stat"
-                    }, o.createElement(m._18, {
+                    }, o.createElement(u._18, {
                         "data-test-selector": "video-length",
-                        icon: m._11.GlyphLength,
-                        label: Object(s.d)("length", "VideoPreviewCard"),
-                        value: Object(u.a)(this.props.video.lengthSeconds)
-                    })), this.videoPreviewImage(), e))), o.createElement(m.B, null, o.createElement(m.V, {
-                        display: m.H.Flex,
-                        flexDirection: m.J.Row,
-                        flexWrap: m.K.NoWrap,
+                        icon: u._11.GlyphLength,
+                        label: Object(l.d)("length", "VideoPreviewCard"),
+                        value: Object(c.a)(this.props.video.lengthSeconds)
+                    })), this.videoPreviewImage(), e))), o.createElement(u.B, null, o.createElement(u.V, {
+                        display: u.H.Flex,
+                        flexDirection: u.J.Row,
+                        flexWrap: u.K.NoWrap,
                         padding: {
                             top: .5
                         }
@@ -7100,9 +6420,9 @@ webpackJsonp([47], {
                         n = a("video-preview-card__preview-image", {
                             "video-preview-card__preview-image--animated": this.state.hovered && this.state.didAnimatedPreviewLoad
                         });
-                    return o.createElement(m.j, {
+                    return o.createElement(u.j, {
                         overflow: !0
-                    }, o.createElement(l.a, {
+                    }, o.createElement(s.a, {
                         to: {
                             pathname: "/videos/" + this.props.video.id,
                             state: this.getLinkState(),
@@ -7114,10 +6434,10 @@ webpackJsonp([47], {
                     }, o.createElement("div", {
                         className: t,
                         "data-test-selector": "preview-image-wrapper"
-                    }, o.createElement(m.Q, {
+                    }, o.createElement(u.Q, {
                         flexShrink: 0
-                    }, o.createElement("figure", null, o.createElement(m.j, {
-                        ratio: m.k.Aspect16x9
+                    }, o.createElement("figure", null, o.createElement(u.j, {
+                        ratio: u.k.Aspect16x9
                     }, o.createElement("img", {
                         alt: this.props.video.title,
                         className: n,
@@ -7136,44 +6456,44 @@ webpackJsonp([47], {
                         n = a("video-preview-card__image-wrapper", {
                             "video-preview-card__image-wrapper--watched": null !== this.getVideoPreviousWatchPercentage() && !this.state.hovered
                         });
-                    return o.createElement(m.V, {
+                    return o.createElement(u.V, {
                         "data-test-selector": "game-box-art",
-                        display: m.H.InlineFlex,
+                        display: u.H.InlineFlex,
                         flexShrink: 0,
                         padding: {
                             bottom: .5
                         }
-                    }, o.createElement(l.a, {
+                    }, o.createElement(s.a, {
                         to: t,
                         title: e.name,
                         "data-a-target": "video-preview-card-boxart-link"
-                    }, o.createElement(m.Q, {
+                    }, o.createElement(u.Q, {
                         margin: {
                             right: 1
                         }
                     }, o.createElement("figure", {
                         className: "video-preview-card__game-art"
-                    }, o.createElement(m._31, {
-                        display: m.H.Block,
-                        direction: m._33.Bottom,
+                    }, o.createElement(u._31, {
+                        display: u.H.Block,
+                        direction: u._33.Bottom,
                         label: e.name
                     }, o.createElement("div", {
                         className: n,
                         "data-test-selector": "game-box-art-wrapper"
-                    }, o.createElement(m.C, {
-                        aspect: m.k.BoxArt,
+                    }, o.createElement(u.C, {
+                        aspect: u.k.BoxArt,
                         imageAlt: e.name,
-                        imageSrc: e.boxArtURL || s.a.defaultBoxArtURL
+                        imageSrc: e.boxArtURL || l.a.defaultBoxArtURL
                     })))))))
                 }, t.prototype.videoMetaData = function() {
-                    var e = Object(s.c)(new Date(this.props.video.publishedAt), "medium"),
+                    var e = Object(l.c)(new Date(this.props.video.publishedAt), "medium"),
                         t = null;
                     if (this.props.video.owner) {
                         var n = {
                             pathname: "/" + this.props.video.owner.login,
                             state: this.getLinkState()
                         };
-                        t = o.createElement(l.a, {
+                        t = o.createElement(s.a, {
                             to: n,
                             className: "video-preview-card__owner-display-name",
                             "data-a-target": "video-preview-card-channel-link",
@@ -7181,18 +6501,18 @@ webpackJsonp([47], {
                             title: Object(d.a)(this.props.video.owner.login, this.props.video.owner.displayName, !0)
                         }, Object(d.a)(this.props.video.owner.login, this.props.video.owner.displayName))
                     }
-                    return o.createElement(m.V, {
-                        display: m.H.Flex,
-                        flexDirection: m.J.Column
-                    }, o.createElement(m.V, {
+                    return o.createElement(u.V, {
+                        display: u.H.Flex,
+                        flexDirection: u.J.Column
+                    }, o.createElement(u.V, {
                         "data-test-selector": "video-title",
-                        overflow: m._0.Hidden,
-                        position: m._4.Relative
-                    }, o.createElement(m._23, {
-                        color: m.F.Base,
-                        fontSize: m.L.Size5,
-                        lineHeight: m.W.Heading
-                    }, o.createElement(l.a, {
+                        overflow: u._0.Hidden,
+                        position: u._4.Relative
+                    }, o.createElement(u._23, {
+                        color: u.F.Base,
+                        fontSize: u.L.Size5,
+                        lineHeight: u.W.Heading
+                    }, o.createElement(s.a, {
                         className: "video-preview-card__video-title",
                         to: {
                             pathname: "/videos/" + this.props.video.id,
@@ -7201,16 +6521,16 @@ webpackJsonp([47], {
                         },
                         title: this.props.video.title,
                         "data-a-target": "video-preview-card-title-link"
-                    }, this.props.video.title))), o.createElement(m.V, {
+                    }, this.props.video.title))), o.createElement(u.V, {
                         flexShrink: 0,
                         flexGrow: 0,
                         ellipsis: !0
-                    }, o.createElement(m._23, {
-                        type: m._28.Span,
-                        color: m.F.Alt2,
+                    }, o.createElement(u._23, {
+                        type: u._28.Span,
+                        color: u.F.Alt2,
                         ellipsis: !0,
                         title: this.formatTitle(e)
-                    }, e, o.createElement(m.Q, {
+                    }, e, o.createElement(u.Q, {
                         padding: {
                             x: .5
                         }
@@ -7229,7 +6549,320 @@ webpackJsonp([47], {
                     }
                 }, t
             }(o.Component)),
-            v = Object(c.d)("VideoPreviewCard")(g)
+            v = Object(m.d)("VideoPreviewCard")(g)
+    },
+    "b+Vy": function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "FollowingHosts_CurrentUser"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "limit"
+                        }
+                    },
+                    type: {
+                        kind: "NamedType",
+                        name: {
+                            kind: "Name",
+                            value: "Int"
+                        }
+                    }
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "currentUser"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "follows"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "totalCount"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }]
+                                }
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "followedHosts"
+                                },
+                                arguments: [{
+                                    kind: "Argument",
+                                    name: {
+                                        kind: "Name",
+                                        value: "first"
+                                    },
+                                    value: {
+                                        kind: "Variable",
+                                        name: {
+                                            kind: "Name",
+                                            value: "limit"
+                                        }
+                                    }
+                                }],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "nodes"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "id"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }, {
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "login"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }, {
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "displayName"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }, {
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "hosting"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: {
+                                                    kind: "SelectionSet",
+                                                    selections: [{
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "id"
+                                                        },
+                                                        arguments: [],
+                                                        directives: []
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "login"
+                                                        },
+                                                        arguments: [],
+                                                        directives: []
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "displayName"
+                                                        },
+                                                        arguments: [],
+                                                        directives: []
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "stream"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: {
+                                                            kind: "SelectionSet",
+                                                            selections: [{
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "id"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "game"
+                                                                },
+                                                                arguments: [],
+                                                                directives: [],
+                                                                selectionSet: {
+                                                                    kind: "SelectionSet",
+                                                                    selections: [{
+                                                                        kind: "Field",
+                                                                        name: {
+                                                                            kind: "Name",
+                                                                            value: "id"
+                                                                        },
+                                                                        arguments: [],
+                                                                        directives: []
+                                                                    }, {
+                                                                        kind: "Field",
+                                                                        name: {
+                                                                            kind: "Name",
+                                                                            value: "name"
+                                                                        },
+                                                                        arguments: [],
+                                                                        directives: []
+                                                                    }, {
+                                                                        kind: "Field",
+                                                                        name: {
+                                                                            kind: "Name",
+                                                                            value: "boxArtURL"
+                                                                        },
+                                                                        arguments: [{
+                                                                            kind: "Argument",
+                                                                            name: {
+                                                                                kind: "Name",
+                                                                                value: "width"
+                                                                            },
+                                                                            value: {
+                                                                                kind: "IntValue",
+                                                                                value: "40"
+                                                                            }
+                                                                        }, {
+                                                                            kind: "Argument",
+                                                                            name: {
+                                                                                kind: "Name",
+                                                                                value: "height"
+                                                                            },
+                                                                            value: {
+                                                                                kind: "IntValue",
+                                                                                value: "56"
+                                                                            }
+                                                                        }],
+                                                                        directives: []
+                                                                    }]
+                                                                }
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "viewersCount"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "title"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "type"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "previewImageURL"
+                                                                },
+                                                                arguments: [{
+                                                                    kind: "Argument",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "width"
+                                                                    },
+                                                                    value: {
+                                                                        kind: "IntValue",
+                                                                        value: "320"
+                                                                    }
+                                                                }, {
+                                                                    kind: "Argument",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "height"
+                                                                    },
+                                                                    value: {
+                                                                        kind: "IntValue",
+                                                                        value: "180"
+                                                                    }
+                                                                }],
+                                                                directives: []
+                                                            }]
+                                                        }
+                                                    }]
+                                                }
+                                            }]
+                                        }
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 315
+            }
+        };
+        n.loc.source = {
+            body: "query FollowingHosts_CurrentUser($limit: Int) {\ncurrentUser {\nid\nfollows {\ntotalCount\n}\nfollowedHosts(first: $limit) {\nnodes {\nid\nlogin\ndisplayName\nhosting {\nid\nlogin\ndisplayName\nstream {\nid\ngame {\nid\nname\nboxArtURL(width: 40 height: 56)\n}\nviewersCount\ntitle\ntype\npreviewImageURL(width: 320 height: 180)\n}\n}\n}\n}\n}\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
     },
     c8Oh: function(e, t, n) {
         "use strict";
@@ -7252,210 +6885,6 @@ webpackJsonp([47], {
                     return e
             }
         })
-    },
-    cJkg: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "FollowingCommunities_CurrentUser"
-                },
-                variableDefinitions: [{
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "limit"
-                        }
-                    },
-                    type: {
-                        kind: "NamedType",
-                        name: {
-                            kind: "Name",
-                            value: "Int"
-                        }
-                    },
-                    defaultValue: null
-                }],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "currentUser"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "followedCommunities"
-                                },
-                                arguments: [{
-                                    kind: "Argument",
-                                    name: {
-                                        kind: "Name",
-                                        value: "first"
-                                    },
-                                    value: {
-                                        kind: "Variable",
-                                        name: {
-                                            kind: "Name",
-                                            value: "limit"
-                                        }
-                                    }
-                                }],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "edges"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "node"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: {
-                                                    kind: "SelectionSet",
-                                                    selections: [{
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "id"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "avatarURL"
-                                                        },
-                                                        arguments: [{
-                                                            kind: "Argument",
-                                                            name: {
-                                                                kind: "Name",
-                                                                value: "width"
-                                                            },
-                                                            value: {
-                                                                kind: "IntValue",
-                                                                value: "285"
-                                                            }
-                                                        }, {
-                                                            kind: "Argument",
-                                                            name: {
-                                                                kind: "Name",
-                                                                value: "height"
-                                                            },
-                                                            value: {
-                                                                kind: "IntValue",
-                                                                value: "380"
-                                                            }
-                                                        }],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "viewersCount"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "displayName"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "broadcastersCount"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "name"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }]
-                                                }
-                                            }]
-                                        }
-                                    }]
-                                }
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 217
-            }
-        };
-        n.loc.source = {
-            body: "query FollowingCommunities_CurrentUser($limit: Int) {\ncurrentUser {\nid\nfollowedCommunities(first: $limit) {\nedges {\nnode {\nid\navatarURL(width: 285 height: 380)\nviewersCount\ndisplayName\nbroadcastersCount\nname\n}\n}\n}\n}\n}",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
     },
     czpb: function(e, t, n) {
         "use strict";
@@ -7497,8 +6926,7 @@ webpackJsonp([47], {
                                 value: "String"
                             }
                         }
-                    },
-                    defaultValue: null
+                    }
                 }, {
                     kind: "VariableDefinition",
                     variable: {
@@ -7517,8 +6945,7 @@ webpackJsonp([47], {
                                 value: "DirectoryType"
                             }
                         }
-                    },
-                    defaultValue: null
+                    }
                 }, {
                     kind: "VariableDefinition",
                     variable: {
@@ -7534,15 +6961,13 @@ webpackJsonp([47], {
                             kind: "Name",
                             value: "Int"
                         }
-                    },
-                    defaultValue: null
+                    }
                 }],
                 directives: [],
                 selectionSet: {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "directory"
@@ -7579,27 +7004,22 @@ webpackJsonp([47], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "name"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "streams"
@@ -7623,7 +7043,6 @@ webpackJsonp([47], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "edges"
@@ -7634,17 +7053,14 @@ webpackJsonp([47], {
                                             kind: "SelectionSet",
                                             selections: [{
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "cursor"
                                                 },
                                                 arguments: [],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }, {
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "node"
@@ -7655,37 +7071,30 @@ webpackJsonp([47], {
                                                     kind: "SelectionSet",
                                                     selections: [{
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "id"
                                                         },
                                                         arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "title"
                                                         },
                                                         arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "viewersCount"
                                                         },
                                                         arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "previewImageURL"
@@ -7711,11 +7120,9 @@ webpackJsonp([47], {
                                                                 value: "180"
                                                             }
                                                         }],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "broadcaster"
@@ -7726,39 +7133,32 @@ webpackJsonp([47], {
                                                             kind: "SelectionSet",
                                                             selections: [{
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "id"
                                                                 },
                                                                 arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }, {
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "login"
                                                                 },
                                                                 arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }, {
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "displayName"
                                                                 },
                                                                 arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }]
                                                         }
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "game"
@@ -7769,17 +7169,14 @@ webpackJsonp([47], {
                                                             kind: "SelectionSet",
                                                             selections: [{
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "id"
                                                                 },
                                                                 arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }, {
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "boxArtURL"
@@ -7805,37 +7202,31 @@ webpackJsonp([47], {
                                                                         value: "380"
                                                                     }
                                                                 }],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }, {
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "name"
                                                                 },
                                                                 arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }]
                                                         }
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "type"
                                                         },
                                                         arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }]
                                                 }
                                             }]
                                         }
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "pageInfo"
@@ -7846,14 +7237,12 @@ webpackJsonp([47], {
                                             kind: "SelectionSet",
                                             selections: [{
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "hasNextPage"
                                                 },
                                                 arguments: [],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }]
                                         }
                                     }]
@@ -7909,15 +7298,13 @@ webpackJsonp([47], {
                                 }
                             }
                         }
-                    },
-                    defaultValue: null
+                    }
                 }],
                 directives: [],
                 selectionSet: {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "users"
@@ -7941,27 +7328,22 @@ webpackJsonp([47], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "login"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "stream"
@@ -7972,37 +7354,30 @@ webpackJsonp([47], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "id"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "title"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "viewersCount"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "previewImageURL"
@@ -8028,11 +7403,9 @@ webpackJsonp([47], {
                                                 value: "180"
                                             }
                                         }],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "broadcaster"
@@ -8043,39 +7416,32 @@ webpackJsonp([47], {
                                             kind: "SelectionSet",
                                             selections: [{
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "id"
                                                 },
                                                 arguments: [],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }, {
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "login"
                                                 },
                                                 arguments: [],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }, {
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "displayName"
                                                 },
                                                 arguments: [],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }]
                                         }
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "game"
@@ -8086,17 +7452,14 @@ webpackJsonp([47], {
                                             kind: "SelectionSet",
                                             selections: [{
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "id"
                                                 },
                                                 arguments: [],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }, {
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "boxArtURL"
@@ -8122,18 +7485,15 @@ webpackJsonp([47], {
                                                         value: "380"
                                                     }
                                                 }],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }, {
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "name"
                                                 },
                                                 arguments: [],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }]
                                         }
                                     }]
@@ -8158,11 +7518,196 @@ webpackJsonp([47], {
         };
         e.exports = n
     },
+    hOej: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "FollowingCommunities_CurrentUser"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "limit"
+                        }
+                    },
+                    type: {
+                        kind: "NamedType",
+                        name: {
+                            kind: "Name",
+                            value: "Int"
+                        }
+                    }
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "currentUser"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "followedCommunities"
+                                },
+                                arguments: [{
+                                    kind: "Argument",
+                                    name: {
+                                        kind: "Name",
+                                        value: "first"
+                                    },
+                                    value: {
+                                        kind: "Variable",
+                                        name: {
+                                            kind: "Name",
+                                            value: "limit"
+                                        }
+                                    }
+                                }],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "edges"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "node"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: {
+                                                    kind: "SelectionSet",
+                                                    selections: [{
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "id"
+                                                        },
+                                                        arguments: [],
+                                                        directives: []
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "avatarURL"
+                                                        },
+                                                        arguments: [{
+                                                            kind: "Argument",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "width"
+                                                            },
+                                                            value: {
+                                                                kind: "IntValue",
+                                                                value: "285"
+                                                            }
+                                                        }, {
+                                                            kind: "Argument",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "height"
+                                                            },
+                                                            value: {
+                                                                kind: "IntValue",
+                                                                value: "380"
+                                                            }
+                                                        }],
+                                                        directives: []
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "viewersCount"
+                                                        },
+                                                        arguments: [],
+                                                        directives: []
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "displayName"
+                                                        },
+                                                        arguments: [],
+                                                        directives: []
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "broadcastersCount"
+                                                        },
+                                                        arguments: [],
+                                                        directives: []
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "name"
+                                                        },
+                                                        arguments: [],
+                                                        directives: []
+                                                    }]
+                                                }
+                                            }]
+                                        }
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 217
+            }
+        };
+        n.loc.source = {
+            body: "query FollowingCommunities_CurrentUser($limit: Int) {\ncurrentUser {\nid\nfollowedCommunities(first: $limit) {\nedges {\nnode {\nid\navatarURL(width: 285 height: 380)\nviewersCount\ndisplayName\nbroadcastersCount\nname\n}\n}\n}\n}\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
     iJpA: function(e, t, n) {
         "use strict";
 
         function i() {
-            return r.k.get(s, []).filter(function(e) {
+            return r.k.get(l, []).filter(function(e) {
                 return o.a.has(e)
             })
         }
@@ -8172,7 +7717,7 @@ webpackJsonp([47], {
                 return a.__awaiter(n, void 0, void 0, function() {
                     var n, d;
                     return a.__generator(this, function(a) {
-                        return n = new Set(i()), t ? n.add(e) : n.delete(e), d = Array.from(n), r.k.set(s, d), o(Object(l.b)(d)), [2]
+                        return n = new Set(i()), t ? n.add(e) : n.delete(e), d = Array.from(n), r.k.set(l, d), o(Object(s.b)(d)), [2]
                     })
                 })
             }
@@ -8181,7 +7726,7 @@ webpackJsonp([47], {
             return function(t) {
                 return a.__awaiter(e, void 0, void 0, function() {
                     return a.__generator(this, function(e) {
-                        return r.k.set(s, []), t(Object(l.b)([])), [2]
+                        return r.k.set(l, []), t(Object(s.b)([])), [2]
                     })
                 })
             }
@@ -8189,8 +7734,8 @@ webpackJsonp([47], {
         var a = n("TToO"),
             r = n("6sO2"),
             o = n("D9fv"),
-            l = n("V9YC"),
-            s = "languageDirectoryFilters"
+            s = n("V9YC"),
+            l = "languageDirectoryFilters"
     },
     iOr9: function(e, t, n) {
         "use strict";
@@ -8260,16 +7805,16 @@ webpackJsonp([47], {
                                 n.location && n.location.state && (t.medium = n.location.state.medium, t.content = n.location.state.content, t.content_index = n.location.state.content_index);
                                 var r = i.referenceTracking,
                                     o = r.content,
-                                    l = r.medium,
+                                    s = r.medium,
                                     d = r.content_index;
-                                s.n.tracking.trackPageview(a.__assign({
+                                l.n.tracking.trackPageview(a.__assign({
                                     content: o,
-                                    medium: l,
+                                    medium: s,
                                     content_index: d,
                                     location: e.location
                                 }, t))
                             }
-                        }, s.i.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : s.i.warn("No latency tracker exists! This means no data will be sent to Spade.", e), i
+                        }, l.i.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : l.i.warn("No latency tracker exists! This means no data will be sent to Spade.", e), i
                     }
                     return a.__extends(i, n), i.prototype.componentDidMount = function() {
                         var e = this;
@@ -8299,14 +7844,14 @@ webpackJsonp([47], {
                         return n
                     }, i
                 }(o.Component);
-                return Object(l.f)(n)
+                return Object(s.f)(n)
             }
         }
         var a = n("TToO"),
             r = n("OAwv"),
             o = n("U7vG"),
-            l = n("F8kA"),
-            s = n("6sO2");
+            s = n("F8kA"),
+            l = n("6sO2");
         n.d(t, "a", function() {
             return i
         })
@@ -8362,15 +7907,13 @@ webpackJsonp([47], {
                                 value: "BanUserFromCommunityInput"
                             }
                         }
-                    },
-                    defaultValue: null
+                    }
                 }],
                 directives: [],
                 selectionSet: {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "banUserFromCommunity"
@@ -8394,14 +7937,12 @@ webpackJsonp([47], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "error"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }]
                         }
                     }]
@@ -8458,15 +7999,13 @@ webpackJsonp([47], {
                                 value: "TimeoutUserFromCommunityInput"
                             }
                         }
-                    },
-                    defaultValue: null
+                    }
                 }],
                 directives: [],
                 selectionSet: {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "timeoutUserFromCommunity"
@@ -8490,7 +8029,6 @@ webpackJsonp([47], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "community"
@@ -8501,36 +8039,30 @@ webpackJsonp([47], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "id"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "name"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }]
                                 }
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "error"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }]
                         }
                     }]
@@ -8600,7 +8132,6 @@ webpackJsonp([47], {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "currentUser"
@@ -8611,24 +8142,20 @@ webpackJsonp([47], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "createdAt"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }]
                         }
                     }]
@@ -8670,17 +8197,14 @@ webpackJsonp([47], {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "animatedPreviewURL"
                         },
                         arguments: [],
-                        directives: [],
-                        selectionSet: null
+                        directives: []
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "game"
@@ -8691,7 +8215,6 @@ webpackJsonp([47], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "boxArtURL"
@@ -8717,53 +8240,43 @@ webpackJsonp([47], {
                                         value: "56"
                                     }
                                 }],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "name"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }]
                         }
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "id"
                         },
                         arguments: [],
-                        directives: [],
-                        selectionSet: null
+                        directives: []
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "lengthSeconds"
                         },
                         arguments: [],
-                        directives: [],
-                        selectionSet: null
+                        directives: []
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "owner"
@@ -8774,39 +8287,32 @@ webpackJsonp([47], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "displayName"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "login"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }]
                         }
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "previewThumbnailURL"
@@ -8832,21 +8338,17 @@ webpackJsonp([47], {
                                 value: "180"
                             }
                         }],
-                        directives: [],
-                        selectionSet: null
+                        directives: []
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "publishedAt"
                         },
                         arguments: [],
-                        directives: [],
-                        selectionSet: null
+                        directives: []
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "self"
@@ -8857,7 +8359,6 @@ webpackJsonp([47], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "viewingHistory"
@@ -8868,38 +8369,32 @@ webpackJsonp([47], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "position"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }]
                                 }
                             }]
                         }
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "title"
                         },
                         arguments: [],
-                        directives: [],
-                        selectionSet: null
+                        directives: []
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "viewCount"
                         },
                         arguments: [],
-                        directives: [],
-                        selectionSet: null
+                        directives: []
                     }]
                 }
             }],
@@ -8946,15 +8441,13 @@ webpackJsonp([47], {
                                 value: "String"
                             }
                         }
-                    },
-                    defaultValue: null
+                    }
                 }],
                 directives: [],
                 selectionSet: {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "game"
@@ -8978,27 +8471,22 @@ webpackJsonp([47], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "name"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "self"
@@ -9009,7 +8497,6 @@ webpackJsonp([47], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "follow"
@@ -9020,14 +8507,12 @@ webpackJsonp([47], {
                                             kind: "SelectionSet",
                                             selections: [{
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "followedAt"
                                                 },
                                                 arguments: [],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }]
                                         }
                                     }]
@@ -9036,7 +8521,6 @@ webpackJsonp([47], {
                         }
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "currentUser"
@@ -9047,14 +8531,12 @@ webpackJsonp([47], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }]
                         }
                     }]
@@ -9116,8 +8598,7 @@ webpackJsonp([47], {
                                 value: "String"
                             }
                         }
-                    },
-                    defaultValue: null
+                    }
                 }, {
                     kind: "VariableDefinition",
                     variable: {
@@ -9136,8 +8617,7 @@ webpackJsonp([47], {
                                 value: "DirectoryType"
                             }
                         }
-                    },
-                    defaultValue: null
+                    }
                 }, {
                     kind: "VariableDefinition",
                     variable: {
@@ -9153,15 +8633,13 @@ webpackJsonp([47], {
                             kind: "Name",
                             value: "Int"
                         }
-                    },
-                    defaultValue: null
+                    }
                 }],
                 directives: [],
                 selectionSet: {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "directory"
@@ -9198,17 +8676,14 @@ webpackJsonp([47], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "streams"
@@ -9232,7 +8707,6 @@ webpackJsonp([47], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "edges"
@@ -9243,17 +8717,14 @@ webpackJsonp([47], {
                                             kind: "SelectionSet",
                                             selections: [{
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "cursor"
                                                 },
                                                 arguments: [],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }, {
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "node"
@@ -9264,37 +8735,30 @@ webpackJsonp([47], {
                                                     kind: "SelectionSet",
                                                     selections: [{
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "id"
                                                         },
                                                         arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "title"
                                                         },
                                                         arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "viewersCount"
                                                         },
                                                         arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "previewImageURL"
@@ -9320,11 +8784,9 @@ webpackJsonp([47], {
                                                                 value: "180"
                                                             }
                                                         }],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "broadcaster"
@@ -9335,39 +8797,32 @@ webpackJsonp([47], {
                                                             kind: "SelectionSet",
                                                             selections: [{
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "id"
                                                                 },
                                                                 arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }, {
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "login"
                                                                 },
                                                                 arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }, {
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "displayName"
                                                                 },
                                                                 arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }]
                                                         }
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "game"
@@ -9378,17 +8833,14 @@ webpackJsonp([47], {
                                                             kind: "SelectionSet",
                                                             selections: [{
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "id"
                                                                 },
                                                                 arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }, {
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "boxArtURL"
@@ -9414,18 +8866,15 @@ webpackJsonp([47], {
                                                                         value: "380"
                                                                     }
                                                                 }],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }, {
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "name"
                                                                 },
                                                                 arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }]
                                                         }
                                                     }]
@@ -9434,7 +8883,6 @@ webpackJsonp([47], {
                                         }
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "pageInfo"
@@ -9445,14 +8893,12 @@ webpackJsonp([47], {
                                             kind: "SelectionSet",
                                             selections: [{
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "hasNextPage"
                                                 },
                                                 arguments: [],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }]
                                         }
                                     }]
@@ -9469,6 +8915,163 @@ webpackJsonp([47], {
         };
         n.loc.source = {
             body: "query CommunityStreams_Streams($name: String! $type: DirectoryType! $limit: Int) {\ndirectory(name: $name type: $type) {\nid\nstreams(first: $limit) {\nedges {\ncursor\nnode {\nid\ntitle\nviewersCount\npreviewImageURL(width: 320 height: 180)\nbroadcaster {\nid\nlogin\ndisplayName\n}\ngame {\nid\nboxArtURL(width: 285 height: 380)\nname\n}\n}\n}\npageInfo {\nhasNextPage\n}\n}\n}\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
+    "x/hU": function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "FollowingGames_CurrentUser"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "limit"
+                        }
+                    },
+                    type: {
+                        kind: "NamedType",
+                        name: {
+                            kind: "Name",
+                            value: "Int"
+                        }
+                    }
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "currentUser"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "followedGames"
+                                },
+                                arguments: [{
+                                    kind: "Argument",
+                                    name: {
+                                        kind: "Name",
+                                        value: "first"
+                                    },
+                                    value: {
+                                        kind: "Variable",
+                                        name: {
+                                            kind: "Name",
+                                            value: "limit"
+                                        }
+                                    }
+                                }],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "nodes"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "id"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }, {
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "name"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }, {
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "boxArtURL"
+                                                },
+                                                arguments: [{
+                                                    kind: "Argument",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "width"
+                                                    },
+                                                    value: {
+                                                        kind: "IntValue",
+                                                        value: "285"
+                                                    }
+                                                }, {
+                                                    kind: "Argument",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "height"
+                                                    },
+                                                    value: {
+                                                        kind: "IntValue",
+                                                        value: "380"
+                                                    }
+                                                }],
+                                                directives: []
+                                            }, {
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "viewersCount"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }]
+                                        }
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 166
+            }
+        };
+        n.loc.source = {
+            body: "query FollowingGames_CurrentUser($limit: Int) {\ncurrentUser {\nid\nfollowedGames(first: $limit) {\nnodes {\nid\nname\nboxArtURL(width: 285 height: 380)\nviewersCount\n}\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -9505,15 +9108,13 @@ webpackJsonp([47], {
                                 value: "FollowGameInput"
                             }
                         }
-                    },
-                    defaultValue: null
+                    }
                 }],
                 directives: [],
                 selectionSet: {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "followGame"
@@ -9537,7 +9138,6 @@ webpackJsonp([47], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "game"
@@ -9548,7 +9148,6 @@ webpackJsonp([47], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "self"
@@ -9559,7 +9158,6 @@ webpackJsonp([47], {
                                             kind: "SelectionSet",
                                             selections: [{
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "follow"
@@ -9570,14 +9168,12 @@ webpackJsonp([47], {
                                                     kind: "SelectionSet",
                                                     selections: [{
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "followedAt"
                                                         },
                                                         arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }]
                                                 }
                                             }]
@@ -9632,15 +9228,13 @@ webpackJsonp([47], {
                                 value: "FollowGameInput"
                             }
                         }
-                    },
-                    defaultValue: null
+                    }
                 }],
                 directives: [],
                 selectionSet: {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "followGame"
@@ -9664,7 +9258,6 @@ webpackJsonp([47], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "game"
@@ -9675,7 +9268,6 @@ webpackJsonp([47], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "self"
@@ -9686,7 +9278,6 @@ webpackJsonp([47], {
                                             kind: "SelectionSet",
                                             selections: [{
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "follow"
@@ -9697,14 +9288,12 @@ webpackJsonp([47], {
                                                     kind: "SelectionSet",
                                                     selections: [{
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "followedAt"
                                                         },
                                                         arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }]
                                                 }
                                             }]
@@ -9733,4 +9322,4 @@ webpackJsonp([47], {
     },
     "zH/G": function(e, t) {}
 });
-//# sourceMappingURL=pages.following-7979bb4d219680404ee6b8f715bfeeca.js.map
+//# sourceMappingURL=pages.following-29750d8fd7d37e396eff6a1107d28101.js.map

@@ -1382,7 +1382,9 @@ webpackJsonp([52], {
                         directoryWidth: this.props.directoryWidth
                     }));
                     else {
-                        var t = this.props.data.currentUser.viewedVideos.edges.map(function(e) {
+                        var t = this.props.data.currentUser.viewedVideos.edges.filter(function(e) {
+                            return !!e.node.id
+                        }).map(function(e) {
                             return e.node
                         });
                         e = 0 === t.length ? d.createElement("div", null, d.createElement(b.V, {
@@ -1713,4 +1715,4 @@ webpackJsonp([52], {
     },
     vQzq: function(e, t) {}
 });
-//# sourceMappingURL=pages.finish-watching-07f7cee57c498ec32824028639ca91d4.js.map
+//# sourceMappingURL=pages.finish-watching-c44f96ba555ccca48fec9299a350f804.js.map

@@ -149,8 +149,8 @@ webpackJsonp([67], {
             a = n("6sO2"),
             d = n("7vx8"),
             s = n("vH/s"),
-            l = n("peXu"),
-            c = n("CSlQ"),
+            c = n("peXu"),
+            l = n("CSlQ"),
             u = n("VDV3"),
             m = n("Odds"),
             p = n("0shC"),
@@ -162,11 +162,13 @@ webpackJsonp([67], {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
                 }, i.prototype.render = function() {
                     if (this.props.data.loading || this.props.data.error || !this.props.data.currentUser || !this.props.data.currentUser.viewedVideos || 0 === this.props.data.currentUser.viewedVideos.edges.length) return null;
-                    var e, i = this.props.data.currentUser.viewedVideos.edges.map(function(e) {
+                    var e, i = this.props.data.currentUser.viewedVideos.edges.filter(function(e) {
+                        return !!e.node.id
+                    }).map(function(e) {
                         return e.node
-                    }) || null;
+                    });
                     if (i && this.props.directoryWidth > 0) {
-                        var n = Object(l.a)(this.props.directoryWidth, 240, 2);
+                        var n = Object(c.a)(this.props.directoryWidth, 240, 2);
                         this.props.viewAllButton && i.length > n ? (i = i.slice(0, n - 1), e = {
                             subHeader: Object(a.d)("Viewing History", "ViewingHistory"),
                             linkTo: {
@@ -202,7 +204,7 @@ webpackJsonp([67], {
                         limit: 30
                     }
                 }
-            }), Object(c.d)("ViewedVideos"))(v);
+            }), Object(l.d)("ViewedVideos"))(v);
         n.d(i, "FinishWatchingTowerComponent", function() {
             return v
         }), n.d(i, "FinishWatchingTower", function() {
@@ -210,4 +212,4 @@ webpackJsonp([67], {
         })
     }
 });
-//# sourceMappingURL=features.following.components.finish-watching-tower-ef3589cbc340d206baaa463ef4c07373.js.map
+//# sourceMappingURL=features.following.components.finish-watching-tower-080333ace862852b650ec1cb42ab0209.js.map
