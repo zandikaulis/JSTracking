@@ -28,13 +28,15 @@ webpackJsonp([51], {
                                 value: "String"
                             }
                         }
-                    }
+                    },
+                    defaultValue: null
                 }],
                 directives: [],
                 selectionSet: {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
+                        alias: null,
                         name: {
                             kind: "Name",
                             value: "user"
@@ -58,36 +60,44 @@ webpackJsonp([51], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
+                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: []
+                                directives: [],
+                                selectionSet: null
                             }, {
                                 kind: "Field",
+                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "login"
                                 },
                                 arguments: [],
-                                directives: []
+                                directives: [],
+                                selectionSet: null
                             }, {
                                 kind: "Field",
+                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "bannerImageURL"
                                 },
                                 arguments: [],
-                                directives: []
+                                directives: [],
+                                selectionSet: null
                             }, {
                                 kind: "Field",
+                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "offlineImageURL"
                                 },
                                 arguments: [],
-                                directives: []
+                                directives: [],
+                                selectionSet: null
                             }]
                         }
                     }]
@@ -124,6 +134,7 @@ webpackJsonp([51], {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
+                        alias: null,
                         name: {
                             kind: "Name",
                             value: "currentUser"
@@ -134,22 +145,27 @@ webpackJsonp([51], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
+                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: []
+                                directives: [],
+                                selectionSet: null
                             }, {
                                 kind: "Field",
+                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "displayName"
                                 },
                                 arguments: [],
-                                directives: []
+                                directives: [],
+                                selectionSet: null
                             }, {
                                 kind: "Field",
+                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "notificationSettings"
@@ -160,14 +176,17 @@ webpackJsonp([51], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
+                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "category"
                                         },
                                         arguments: [],
-                                        directives: []
+                                        directives: [],
+                                        selectionSet: null
                                     }, {
                                         kind: "Field",
+                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "platforms"
@@ -178,28 +197,34 @@ webpackJsonp([51], {
                                             kind: "SelectionSet",
                                             selections: [{
                                                 kind: "Field",
+                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "platformName"
                                                 },
                                                 arguments: [],
-                                                directives: []
+                                                directives: [],
+                                                selectionSet: null
                                             }, {
                                                 kind: "Field",
+                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "settingState"
                                                 },
                                                 arguments: [],
-                                                directives: []
+                                                directives: [],
+                                                selectionSet: null
                                             }, {
                                                 kind: "Field",
+                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "isEnabled"
                                                 },
                                                 arguments: [],
-                                                directives: []
+                                                directives: [],
+                                                selectionSet: null
                                             }]
                                         }
                                     }]
@@ -395,13 +420,15 @@ webpackJsonp([51], {
                                 value: "FollowUserInput"
                             }
                         }
-                    }
+                    },
+                    defaultValue: null
                 }],
                 directives: [],
                 selectionSet: {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
+                        alias: null,
                         name: {
                             kind: "Name",
                             value: "followUser"
@@ -425,6 +452,7 @@ webpackJsonp([51], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
+                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "follow"
@@ -435,12 +463,14 @@ webpackJsonp([51], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
+                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "disableNotifications"
                                         },
                                         arguments: [],
-                                        directives: []
+                                        directives: [],
+                                        selectionSet: null
                                     }]
                                 }
                             }]
@@ -479,6 +509,7 @@ webpackJsonp([51], {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
+                        alias: null,
                         name: {
                             kind: "Name",
                             value: "currentUser"
@@ -489,32 +520,39 @@ webpackJsonp([51], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
+                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: []
+                                directives: [],
+                                selectionSet: null
                             }, {
                                 kind: "Field",
+                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "hasTurbo"
                                 },
                                 arguments: [],
-                                directives: []
+                                directives: [],
+                                selectionSet: null
                             }, {
                                 kind: "Field",
+                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "hasPrime"
                                 },
                                 arguments: [],
-                                directives: []
+                                directives: [],
+                                selectionSet: null
                             }]
                         }
                     }, {
                         kind: "Field",
+                        alias: null,
                         name: {
                             kind: "Name",
                             value: "requestInfo"
@@ -525,12 +563,14 @@ webpackJsonp([51], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
+                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "countryCode"
                                 },
                                 arguments: [],
-                                directives: []
+                                directives: [],
+                                selectionSet: null
                             }]
                         }
                     }]
@@ -576,7 +616,8 @@ webpackJsonp([51], {
                             kind: "Name",
                             value: "Int"
                         }
-                    }
+                    },
+                    defaultValue: null
                 }, {
                     kind: "VariableDefinition",
                     variable: {
@@ -592,13 +633,15 @@ webpackJsonp([51], {
                             kind: "Name",
                             value: "Cursor"
                         }
-                    }
+                    },
+                    defaultValue: null
                 }],
                 directives: [],
                 selectionSet: {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
+                        alias: null,
                         name: {
                             kind: "Name",
                             value: "currentUser"
@@ -609,14 +652,17 @@ webpackJsonp([51], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
+                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: []
+                                directives: [],
+                                selectionSet: null
                             }, {
                                 kind: "Field",
+                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "follows"
@@ -653,14 +699,17 @@ webpackJsonp([51], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
+                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "totalCount"
                                         },
                                         arguments: [],
-                                        directives: []
+                                        directives: [],
+                                        selectionSet: null
                                     }, {
                                         kind: "Field",
+                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "edges"
@@ -671,14 +720,17 @@ webpackJsonp([51], {
                                             kind: "SelectionSet",
                                             selections: [{
                                                 kind: "Field",
+                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "cursor"
                                                 },
                                                 arguments: [],
-                                                directives: []
+                                                directives: [],
+                                                selectionSet: null
                                             }, {
                                                 kind: "Field",
+                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "node"
@@ -689,22 +741,27 @@ webpackJsonp([51], {
                                                     kind: "SelectionSet",
                                                     selections: [{
                                                         kind: "Field",
+                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "id"
                                                         },
                                                         arguments: [],
-                                                        directives: []
+                                                        directives: [],
+                                                        selectionSet: null
                                                     }, {
                                                         kind: "Field",
+                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "displayName"
                                                         },
                                                         arguments: [],
-                                                        directives: []
+                                                        directives: [],
+                                                        selectionSet: null
                                                     }, {
                                                         kind: "Field",
+                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "profileImageURL"
@@ -720,17 +777,21 @@ webpackJsonp([51], {
                                                                 value: "70"
                                                             }
                                                         }],
-                                                        directives: []
+                                                        directives: [],
+                                                        selectionSet: null
                                                     }, {
                                                         kind: "Field",
+                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "login"
                                                         },
                                                         arguments: [],
-                                                        directives: []
+                                                        directives: [],
+                                                        selectionSet: null
                                                     }, {
                                                         kind: "Field",
+                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "followers"
@@ -741,18 +802,21 @@ webpackJsonp([51], {
                                                             kind: "SelectionSet",
                                                             selections: [{
                                                                 kind: "Field",
+                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "totalCount"
                                                                 },
                                                                 arguments: [],
-                                                                directives: []
+                                                                directives: [],
+                                                                selectionSet: null
                                                             }]
                                                         }
                                                     }]
                                                 }
                                             }, {
                                                 kind: "Field",
+                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "notificationSettings"
@@ -763,18 +827,21 @@ webpackJsonp([51], {
                                                     kind: "SelectionSet",
                                                     selections: [{
                                                         kind: "Field",
+                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "isEnabled"
                                                         },
                                                         arguments: [],
-                                                        directives: []
+                                                        directives: [],
+                                                        selectionSet: null
                                                     }]
                                                 }
                                             }]
                                         }
                                     }, {
                                         kind: "Field",
+                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "pageInfo"
@@ -785,12 +852,14 @@ webpackJsonp([51], {
                                             kind: "SelectionSet",
                                             selections: [{
                                                 kind: "Field",
+                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "hasNextPage"
                                                 },
                                                 arguments: [],
-                                                directives: []
+                                                directives: [],
+                                                selectionSet: null
                                             }]
                                         }
                                     }]
@@ -881,14 +950,14 @@ webpackJsonp([51], {
             s = n("J8WN"),
             l = n("+8VM"),
             c = n("7vx8"),
-            d = n("HZww"),
-            u = n("Odds"),
+            u = n("HZww"),
+            d = n("Odds"),
             p = (n("weaG"), function(e) {
                 var t = {
                     "default-avatar__selected": e.selected,
                     "default-avatar": !0
                 };
-                return r.createElement(u.V, {
+                return r.createElement(d.V, {
                     padding: {
                         bottom: 1
                     }
@@ -899,10 +968,10 @@ webpackJsonp([51], {
                     "aria-label": Object(o.d)("Click to select Default Avatar Number {index, number}", {
                         index: e.index
                     }, "Default Avatar")
-                }, r.createElement(u._19, {
+                }, r.createElement(d._19, {
                     fullHeight: !0,
                     fullWidth: !0,
-                    position: u._4.Relative,
+                    position: d._4.Relative,
                     className: a(t)
                 }, r.createElement("img", {
                     alt: Object(o.d)("Default Avatar Number {index, number}", {
@@ -1009,7 +1078,7 @@ webpackJsonp([51], {
                                         }), [2];
                                     case 4:
                                         return this.unsubscribe = o.j.subscribe({
-                                            topic: Object(d.d)(this.props.userID),
+                                            topic: Object(u.d)(this.props.userID),
                                             success: function() {
                                                 try {
                                                     Object(f.c)(n, s.currentImage)
@@ -1090,56 +1159,56 @@ webpackJsonp([51], {
                             "profile-edit__image-preview": !0,
                             "profile-edit__image-preview-tall": this.state.currentImageHasTallAspectRatio
                         };
-                        n = r.createElement(u.V, {
+                        n = r.createElement(d.V, {
                             className: a(i),
                             "data-test-selector": "preview-image",
-                            position: u._4.Relative
+                            position: d._4.Relative
                         }, r.createElement("img", {
                             src: "" + this.state.imagePreviewURL
                         }))
                     }
                     var c = null;
-                    "" === this.state.imagePreviewURL && (c = r.createElement(u.V, {
+                    "" === this.state.imagePreviewURL && (c = r.createElement(d.V, {
                         className: "profile-edit__upload-info"
-                    }, r.createElement(u.V, null, r.createElement(u._10, {
-                        asset: u._11.Plus,
-                        type: u._12.Alt2,
+                    }, r.createElement(d.V, null, r.createElement(d._10, {
+                        asset: d._11.Plus,
+                        type: d._12.Alt2,
                         height: 20,
                         width: 20
-                    })), r.createElement(u._23, {
-                        type: u._28.H3,
-                        color: u.F.Alt2,
-                        fontSize: u.L.Size4
+                    })), r.createElement(d._23, {
+                        type: d._28.H3,
+                        color: d.F.Alt2,
+                        fontSize: d.L.Size4
                     }, Object(o.d)("Upload a Photo", "Profile Edit"))));
-                    var d = null;
-                    this.props.showCloser && (d = r.createElement(l.a, null));
+                    var u = null;
+                    this.props.showCloser && (u = r.createElement(l.a, null));
                     var g = null;
                     if (null !== this.state.statusMessage) {
                         var m = Object(h.c)(this.state.statusMessage),
                             f = m.message,
                             b = m.type;
-                        g = r.createElement(u._1, {
+                        g = r.createElement(d._1, {
                             label: f,
                             type: b
                         })
                     }
                     var v = this.props.login;
-                    return this.props.displayName && (v = this.props.displayName), r.createElement(u.V, {
+                    return this.props.displayName && (v = this.props.displayName), r.createElement(d.V, {
                         className: "profile-edit",
-                        position: u._4.Relative,
+                        position: d._4.Relative,
                         fullHeight: !0
-                    }, r.createElement(u._19, {
+                    }, r.createElement(d._19, {
                         className: "profile-edit__background-container",
-                        background: u.m.Base,
+                        background: d.m.Base,
                         fullWidth: !0
-                    }, r.createElement(u.V, {
+                    }, r.createElement(d.V, {
                         padding: 2,
-                        display: u.H.InlineBlock,
-                        position: u._4.Relative,
-                        textAlign: u._24.Center,
+                        display: d.H.InlineBlock,
+                        position: d._4.Relative,
+                        textAlign: d._24.Center,
                         fullWidth: !0
-                    }, r.createElement(u._19, {
-                        textAlign: u._24.Left,
+                    }, r.createElement(d._19, {
+                        textAlign: d._24.Left,
                         borderBottom: !0,
                         padding: {
                             bottom: 1
@@ -1147,35 +1216,35 @@ webpackJsonp([51], {
                         margin: {
                             bottom: 2
                         }
-                    }, r.createElement(u._23, {
-                        type: u._28.H3,
-                        color: u.F.Alt2,
-                        fontSize: u.L.Size4
+                    }, r.createElement(d._23, {
+                        type: d._28.H3,
+                        color: d.F.Alt2,
+                        fontSize: d.L.Size4
                     }, Object(o.d)("Edit Profile Picture for {userName}", {
                         userName: v
-                    }, "Profile Edit"), " ")), r.createElement(u.V, {
+                    }, "Profile Edit"), " ")), r.createElement(d.V, {
                         className: "profile-edit__upload-container",
-                        display: u.H.InlineBlock,
-                        position: u._4.Relative,
-                        textAlign: u._24.Center,
+                        display: d.H.InlineBlock,
+                        position: d._4.Relative,
+                        textAlign: d._24.Center,
                         margin: {
                             bottom: 1
                         }
-                    }, r.createElement(u.V, {
+                    }, r.createElement(d.V, {
                         className: "profile-edit__upload",
-                        display: u.H.InlineBlock,
-                        position: u._4.Relative,
-                        textAlign: u._24.Center
+                        display: d.H.InlineBlock,
+                        position: d._4.Relative,
+                        textAlign: d._24.Center
                     }, r.createElement(s.a, {
                         allowedFileTypes: y,
                         onFilesSubmitted: this.onImageInputChange
-                    }, c), n)), r.createElement(u._19, {
+                    }, c), n)), r.createElement(d._19, {
                         "data-test-selector": "status-message",
-                        fontSize: u.L.Size4,
-                        position: u._4.Relative,
-                        textAlign: u._24.Center,
+                        fontSize: d.L.Size4,
+                        position: d._4.Relative,
+                        textAlign: d._24.Center,
                         className: "profile-edit__status-message"
-                    }, g), r.createElement(u._19, {
+                    }, g), r.createElement(d._19, {
                         borderBottom: !0,
                         padding: {
                             bottom: .5
@@ -1183,27 +1252,27 @@ webpackJsonp([51], {
                         margin: {
                             bottom: 2
                         }
-                    }, r.createElement(u.V, {
-                        textAlign: u._24.Left,
+                    }, r.createElement(d.V, {
+                        textAlign: d._24.Left,
                         margin: {
                             bottom: 1
                         }
-                    }, r.createElement(u._23, {
-                        type: u._28.H3,
-                        color: u.F.Alt2,
-                        fontSize: u.L.Size5
-                    }, Object(o.d)("Or select one of these", "Profile Edit"))), r.createElement(u._34, {
-                        childWidth: u._35.ExtraSmall,
-                        gutterSize: u._36.ExtraSmall,
+                    }, r.createElement(d._23, {
+                        type: d._28.H3,
+                        color: d.F.Alt2,
+                        fontSize: d.L.Size5
+                    }, Object(o.d)("Or select one of these", "Profile Edit"))), r.createElement(d._34, {
+                        childWidth: d._35.ExtraSmall,
+                        gutterSize: d._36.ExtraSmall,
                         placeholderItems: 3
-                    }, t)), r.createElement(u.V, {
-                        display: u.H.Flex,
-                        justifyContent: u.U.Center
-                    }, r.createElement(u.u, {
+                    }, t)), r.createElement(d.V, {
+                        display: d.H.Flex,
+                        justifyContent: d.U.Center
+                    }, r.createElement(d.u, {
                         "data-test-selector": "update-button",
                         onClick: this.onUpdateButtonClick,
-                        size: u.x.Large
-                    }, Object(o.d)("Update", "Profile Edit"))))), d)
+                        size: d.x.Large
+                    }, Object(o.d)("Update", "Profile Edit"))))), u)
                 }, t.prototype.setDefaultAvatar = function() {
                     return i.__awaiter(this, void 0, void 0, function() {
                         var e, t, n;
@@ -1301,8 +1370,8 @@ webpackJsonp([51], {
         var o, s = n("RH2O"),
             l = n("2KeS"),
             c = n("+xm8"),
-            d = n("f2i/"),
-            u = n("Aj/L"),
+            u = n("f2i/"),
+            d = n("Aj/L"),
             p = n("TToO"),
             g = n("U7vG"),
             m = n("CIox"),
@@ -1338,7 +1407,7 @@ webpackJsonp([51], {
                             y: 2
                         },
                         margin: {
-                            x: it
+                            x: Ze
                         }
                     }, g.createElement(N.u, {
                         disabled: i,
@@ -1351,7 +1420,7 @@ webpackJsonp([51], {
                 }, t
             }(g.Component),
             C = n("9u8h"),
-            T = function(e) {
+            x = function(e) {
                 return g.createElement(N.V, {
                     margin: {
                         top: 1
@@ -1376,7 +1445,7 @@ webpackJsonp([51], {
                     orientation: e.orientation
                 }, e.children))
             },
-            x = function(e) {
+            T = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderBody = function() {
@@ -1386,7 +1455,7 @@ webpackJsonp([51], {
                             disabled: t.props.disabled,
                             onChange: t.onChange,
                             id: t.props.id
-                        }), g.createElement(T, {
+                        }), g.createElement(x, {
                             text: t.props.description
                         }))
                     }, t.onChange = function(e) {
@@ -1420,7 +1489,7 @@ webpackJsonp([51], {
                                 }, e))
                             }
                         }, "AutoHostToggle");
-                    return g.createElement(x, {
+                    return g.createElement(T, {
                         id: "auto-host-toggle",
                         label: e,
                         description: t,
@@ -1435,7 +1504,7 @@ webpackJsonp([51], {
         ! function(e) {
             e.Random = "random", e.Ordered = "ordered"
         }(O || (O = {}));
-        var I, H = function(e) {
+        var I, A = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderBody = function() {
@@ -1471,28 +1540,9 @@ webpackJsonp([51], {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return p.__extends(t, e), t.prototype.render = function() {
-                    var e = Object(f.d)("Auto Host Channels Similar to Yours", "SimilarHostToggle"),
-                        t = Object(f.d)("Streamers on your primary team and host list will be hosted first.", "SimilarHostToggle ");
-                    return g.createElement(x, {
-                        id: "similar-host-toggle",
-                        label: e,
-                        description: t,
-                        checked: this.props.enabled,
-                        error: this.props.error,
-                        disabled: this.props.updating,
-                        onChange: this.props.onChange,
-                        showPlaceholder: void 0 === this.props.enabled
-                    })
-                }, t
-            }(g.Component),
-            A = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return p.__extends(t, e), t.prototype.render = function() {
                     var e = Object(f.d)("Team Hosting", "TeamHostToggle"),
                         t = Object(f.d)("Automatically host random channels from your team when you're not live. Team channels will be hosted before any channels in your host list.", "TeamHostToggle ");
-                    return g.createElement(x, {
+                    return g.createElement(T, {
                         id: "team-host-toggle",
                         label: e,
                         description: t,
@@ -1504,7 +1554,7 @@ webpackJsonp([51], {
                     })
                 }, t
             }(g.Component),
-            V = function(e) {
+            H = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -1521,7 +1571,7 @@ webpackJsonp([51], {
                                 }, e))
                             }
                         }, "VodcastToggle");
-                    return g.createElement(x, {
+                    return g.createElement(T, {
                         id: "vodcast-host-toggle",
                         label: e,
                         description: t,
@@ -1533,7 +1583,7 @@ webpackJsonp([51], {
                     })
                 }, t
             }(g.Component),
-            L = function(e) {
+            V = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -1546,31 +1596,26 @@ webpackJsonp([51], {
                         error: this.props.autoHostingError,
                         updating: this.props.autoHostingUpdating,
                         onChange: this.props.onAutoHostingEnabledChange
-                    }), g.createElement(A, {
+                    }), g.createElement(F, {
                         enabled: this.props.teamHostingEnabled,
                         error: this.props.teamHostingError,
                         updating: this.props.teamHostingUpdating,
                         onChange: this.props.onTeamHostingEnabledChange
-                    }), g.createElement(V, {
+                    }), g.createElement(H, {
                         enabled: this.props.vodcastHostingEnabled,
                         error: this.props.vodcastHostingError,
                         updating: this.props.vodcastHostingUpdating,
                         onChange: this.props.onVodcastHostingEnabledChange
-                    }), g.createElement(H, {
+                    }), g.createElement(A, {
                         hostPriority: this.props.hostPriority,
                         error: this.props.hostPriorityError,
                         updating: this.props.hostPriorityUpdating,
                         onChange: this.props.onHostPriorityChange
-                    }), g.createElement(F, {
-                        enabled: this.props.similarHostingEnabled,
-                        error: this.props.similarHostingError,
-                        updating: this.props.similarHostingUpdating,
-                        onChange: this.props.onSimilarHostingEnabledChange
                     }))
                 }, t
             }(g.Component),
-            D = "/kraken/autohost/settings",
-            R = function(e) {
+            L = "/kraken/autohost/settings",
+            D = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -1581,9 +1626,7 @@ webpackJsonp([51], {
                         vodcastHostingError: !1,
                         vodcastHostingUpdating: !1,
                         hostPriorityError: !1,
-                        hostPriorityUpdating: !1,
-                        similarHostingError: !1,
-                        similarHostingUpdating: !1
+                        hostPriorityUpdating: !1
                     }, t.deserialize = function(e) {
                         return e.body ? {
                             autoHostingEnabled: e.body.settings.enabled,
@@ -1597,10 +1640,7 @@ webpackJsonp([51], {
                             vodcastHostingUpdating: !1,
                             hostPriority: e.body.settings.strategy,
                             hostPriorityError: !1,
-                            hostPriorityUpdating: !1,
-                            similarHostingEnabled: e.body.settings.recommended_host,
-                            similarHostingError: !1,
-                            similarHostingUpdating: !1
+                            hostPriorityUpdating: !1
                         } : t.state
                     }, t.updateAutoHostSetting = function(e) {
                         return p.__awaiter(t, void 0, void 0, function() {
@@ -1608,7 +1648,7 @@ webpackJsonp([51], {
                             return p.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
-                                        return [4, C.a.put(D, {
+                                        return [4, C.a.put(L, {
                                             body: e
                                         })];
                                     case 1:
@@ -1722,33 +1762,6 @@ webpackJsonp([51], {
                                 }
                             })
                         })
-                    }, t.setSimilarHostEnabled = function(e) {
-                        return p.__awaiter(t, void 0, void 0, function() {
-                            return p.__generator(this, function(t) {
-                                switch (t.label) {
-                                    case 0:
-                                        return t.trys.push([0, 2, , 3]), this.setState({
-                                            similarHostingUpdating: !0
-                                        }), [4, this.updateAutoHostSetting({
-                                            recommended_host: e
-                                        })];
-                                    case 1:
-                                        return t.sent(),
-                                            function(e) {
-                                                a(k.SpadeEventType.SimilarHostToggle, e)
-                                            }({
-                                                newValue: e
-                                            }), [3, 3];
-                                    case 2:
-                                        return t.sent(), this.setState({
-                                            similarHostingUpdating: !1,
-                                            similarHostingError: !0
-                                        }), [3, 3];
-                                    case 3:
-                                        return [2]
-                                }
-                            })
-                        })
                     }, t
                 }
                 return p.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -1757,7 +1770,7 @@ webpackJsonp([51], {
                         return p.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return t.trys.push([0, 2, , 3]), [4, C.a.get(D)];
+                                    return t.trys.push([0, 2, , 3]), [4, C.a.get(L)];
                                 case 1:
                                     return e = t.sent(), this.props.latencyTracking.reportInteractive(), this.setState(this.deserialize(e)), [3, 3];
                                 case 2:
@@ -1769,9 +1782,7 @@ webpackJsonp([51], {
                                         vodcastHostingEnabled: !1,
                                         vodcastHostingError: !0,
                                         hostPriority: O.Random,
-                                        hostPriorityError: !0,
-                                        similarHostingEnabled: !1,
-                                        similarHostingError: !0
+                                        hostPriorityError: !0
                                     }), [3, 3];
                                 case 3:
                                     return [2]
@@ -1779,7 +1790,7 @@ webpackJsonp([51], {
                         })
                     })
                 }, t.prototype.render = function() {
-                    return g.createElement(L, {
+                    return g.createElement(V, {
                         autoHostingEnabled: this.state.autoHostingEnabled,
                         autoHostingError: this.state.autoHostingError,
                         autoHostingUpdating: this.state.autoHostingUpdating,
@@ -1795,27 +1806,23 @@ webpackJsonp([51], {
                         hostPriority: this.state.hostPriority,
                         hostPriorityError: this.state.hostPriorityError,
                         hostPriorityUpdating: this.state.hostPriorityUpdating,
-                        onHostPriorityChange: this.setHostPriority,
-                        similarHostingEnabled: this.state.similarHostingEnabled,
-                        similarHostingError: this.state.similarHostingError,
-                        similarHostingUpdating: this.state.similarHostingUpdating,
-                        onSimilarHostingEnabledChange: this.setSimilarHostEnabled
+                        onHostPriorityChange: this.setHostPriority
                     })
                 }, t
             }(g.Component),
-            M = Object(b.d)("SettingsAutoHostContainer")(R),
-            z = n("V5M+"),
-            B = n("J8WN"),
-            q = n("+8VM"),
+            R = Object(b.d)("SettingsAutoHostContainer")(D),
+            M = n("V5M+"),
+            z = n("J8WN"),
+            B = n("+8VM"),
             W = n("7vx8"),
             G = n("HZww"),
-            J = n("4Q9N"),
-            Q = n("Tt3k"),
-            $ = n("W6ca"),
-            K = n("xgnX"),
-            Y = (n("+Aaf"), n("0H+u")),
-            X = ["image/*"],
-            Z = function(e) {
+            q = n("4Q9N"),
+            J = n("Tt3k"),
+            Q = n("W6ca"),
+            $ = n("xgnX"),
+            K = (n("+Aaf"), n("0H+u")),
+            Y = ["image/*"],
+            X = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -1828,11 +1835,11 @@ webpackJsonp([51], {
                             t.setState({
                                 loading: !0
                             }), n = e[0];
-                            var i = Object(Q.a)(n),
+                            var i = Object(J.a)(n),
                                 a = (n.size / 1024 / 1024).toFixed(4);
                             parseInt(a, 10) > 10 ? t.setState({
-                                statusMessage: K.b.BadSizeError
-                            }) : Object(Q.b)(n, function(e) {
+                                statusMessage: $.b.BadSizeError
+                            }) : Object(J.b)(n, function(e) {
                                 return p.__awaiter(t, void 0, void 0, function() {
                                     var t, n, a, r, o = this;
                                     return p.__generator(this, function(s) {
@@ -1840,22 +1847,22 @@ webpackJsonp([51], {
                                             case 0:
                                                 this.currentImage = e, s.label = 1;
                                             case 1:
-                                                return s.trys.push([1, 3, , 4]), [4, Object($.a)(this.props.userID, this.props.authToken, this.props.imageType, i)];
+                                                return s.trys.push([1, 3, , 4]), [4, Object(Q.a)(this.props.userID, this.props.authToken, this.props.imageType, i)];
                                             case 2:
                                                 return t = s.sent(), n = t.upload_url, a = t.upload_id, [3, 4];
                                             case 3:
                                                 return r = s.sent(), this.logger.error(r, "Request for upload ID failed to get expected response from server."), this.setState({
-                                                    statusMessage: K.b.UnexpectedError
+                                                    statusMessage: $.b.UnexpectedError
                                                 }), [2];
                                             case 4:
                                                 return this.unsubscribe = f.j.subscribe({
                                                     topic: Object(G.d)(this.props.userID),
                                                     success: function() {
                                                         try {
-                                                            Object($.c)(n, o.currentImage)
+                                                            Object(Q.c)(n, o.currentImage)
                                                         } catch (e) {
                                                             o.logger.error(e, "Image upload failed."), o.unsubscribe(), o.setState({
-                                                                statusMessage: K.b.UnexpectedError,
+                                                                statusMessage: $.b.UnexpectedError,
                                                                 loading: !1
                                                             })
                                                         }
@@ -1865,7 +1872,7 @@ webpackJsonp([51], {
                                                     },
                                                     failure: function() {
                                                         o.setState({
-                                                            statusMessage: K.b.UnexpectedError,
+                                                            statusMessage: $.b.UnexpectedError,
                                                             loading: !1
                                                         })
                                                     },
@@ -1873,10 +1880,10 @@ webpackJsonp([51], {
                                                         if (e.upload_id === a) {
                                                             clearTimeout(o.timeoutHandle);
                                                             var t = null;
-                                                            e.status === K.a.Success ? t = K.b.Success : e.status === K.a.BadSize ? (t = K.b.BadSizeError, o.currentImage = null) : e.status === K.a.NonImage ? (t = K.b.NonImageError, o.currentImage = null) : e.status === K.a.WrongFormat ? (t = K.b.WrongFormatError, o.currentImage = null) : (t = K.b.UnexpectedError, o.currentImage = null), o.unsubscribe && o.unsubscribe(), o.setState({
+                                                            e.status === $.a.Success ? t = $.b.Success : e.status === $.a.BadSize ? (t = $.b.BadSizeError, o.currentImage = null) : e.status === $.a.NonImage ? (t = $.b.NonImageError, o.currentImage = null) : e.status === $.a.WrongFormat ? (t = $.b.WrongFormatError, o.currentImage = null) : (t = $.b.UnexpectedError, o.currentImage = null), o.unsubscribe && o.unsubscribe(), o.setState({
                                                                 statusMessage: t,
                                                                 loading: !1,
-                                                                imageUpdated: e.status === K.a.Success
+                                                                imageUpdated: e.status === $.a.Success
                                                             })
                                                         }
                                                     }
@@ -1886,11 +1893,11 @@ webpackJsonp([51], {
                                 })
                             })
                         } else t.setState({
-                            statusMessage: K.b.ImageNotSelected
+                            statusMessage: $.b.ImageNotSelected
                         })
                     }, t.handlePubSubTimeout = function() {
                         t.unsubscribe(), t.setState({
-                            statusMessage: K.b.TimeoutError
+                            statusMessage: $.b.TimeoutError
                         })
                     }, t
                 }
@@ -1911,7 +1918,7 @@ webpackJsonp([51], {
                     var t = Object(f.d)("Editing profile banner for {userName}", {
                         userName: e
                     }, "UserImageUploader");
-                    this.props.imageType === J.a.ChannelOfflineImage && (t = Object(f.d)("Editing video banner for {userName}", {
+                    this.props.imageType === q.a.ChannelOfflineImage && (t = Object(f.d)("Editing video banner for {userName}", {
                         userName: e
                     }, "UserImageUploader"));
                     var n = null;
@@ -1927,7 +1934,7 @@ webpackJsonp([51], {
                     }));
                     else {
                         var i = Object(f.d)("Recommended image size: 1200x380 and less than 10MB.", "UserImageUploader");
-                        this.props.imageType === J.a.ChannelOfflineImage && (i = Object(f.d)("Recommended image size: 1920x1080 and less than 10MB.", "UserImageUploader")), n = g.createElement(N.V, null, g.createElement(N.V, {
+                        this.props.imageType === q.a.ChannelOfflineImage && (i = Object(f.d)("Recommended image size: 1920x1080 and less than 10MB.", "UserImageUploader")), n = g.createElement(N.V, null, g.createElement(N.V, {
                             className: "user-image-uploader__upload-info"
                         }, g.createElement(N.V, null, g.createElement(N._10, {
                             asset: N._11.Plus,
@@ -1956,10 +1963,10 @@ webpackJsonp([51], {
                         }, i)))
                     }
                     var a = null;
-                    this.props.showCloser && (a = g.createElement(q.a, null));
+                    this.props.showCloser && (a = g.createElement(B.a, null));
                     var r = null;
                     if (null !== this.state.statusMessage) {
-                        var o = Object(K.c)(this.state.statusMessage);
+                        var o = Object($.c)(this.state.statusMessage);
                         r = g.createElement(N._1, {
                             label: o.message,
                             type: o.type
@@ -2000,8 +2007,8 @@ webpackJsonp([51], {
                         display: N.H.InlineBlock,
                         position: N._4.Relative,
                         textAlign: N._24.Center
-                    }, g.createElement(B.a, {
-                        allowedFileTypes: X,
+                    }, g.createElement(z.a, {
+                        allowedFileTypes: Y,
                         onFilesSubmitted: this.onImageInputChange
                     }, n))), g.createElement(N._19, {
                         "data-test-selector": "status-message",
@@ -2010,7 +2017,7 @@ webpackJsonp([51], {
                         textAlign: N._24.Center,
                         className: "user-image-uploader__status-message"
                     }, r))), a)
-                }, t = p.__decorate([Object(W.a)(Y, {
+                }, t = p.__decorate([Object(W.a)(K, {
                     options: function(e) {
                         return {
                             variables: {
@@ -2020,21 +2027,21 @@ webpackJsonp([51], {
                     }
                 })], t)
             }(g.Component),
-            ee = Object(b.d)("User Image Upload")(Z),
-            te = Object(s.b)(function(e) {
+            Z = Object(b.d)("User Image Upload")(X),
+            ee = Object(s.a)(function(e) {
                 return {
-                    authToken: Object(u.a)(e)
+                    authToken: Object(d.a)(e)
                 }
             }, function(e, t) {
-                return Object(l.b)({
+                return Object(l.bindActionCreators)({
                     closeModal: function() {
-                        return t.successCallback && t.successCallback(), Object(z.c)()
+                        return t.successCallback && t.successCallback(), Object(M.c)()
                     }
                 }, e)
-            })(ee),
-            ne = n("J4ib"),
-            ie = n("vm+z"),
-            ae = function(e) {
+            })(Z),
+            te = n("J4ib"),
+            ne = n("vm+z"),
+            ie = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.showModal = function() {
@@ -2051,15 +2058,15 @@ webpackJsonp([51], {
                             width: "160",
                             src: this.props.data.user.offlineImageURL
                         });
-                        var n = Object(ne.d)("Remove my Video Player Banner Image", "UploadVideoPlayerBanner");
+                        var n = Object(te.d)("Remove my Video Player Banner Image", "UploadVideoPlayerBanner");
                         t = g.createElement(N.v, {
                             icon: N._11.Trash,
                             ariaLabel: n
                         })
                     }
                     return g.createElement(N.V, null, g.createElement(i, {
-                        title: Object(ne.d)("Video Player Banner", "UploadVideoPlayerBanner"),
-                        description: Object(ne.d)("This is displayed on the player when your channel is offline.", "UploadVideoPlayerBanner")
+                        title: Object(te.d)("Video Player Banner", "UploadVideoPlayerBanner"),
+                        description: Object(te.d)("This is displayed on the player when your channel is offline.", "UploadVideoPlayerBanner")
                     }), g.createElement(N.V, {
                         display: N.H.Flex
                     }, e, g.createElement(N.V, {
@@ -2072,10 +2079,10 @@ webpackJsonp([51], {
                     }, g.createElement(N.u, {
                         "data-test-selector": "test-upload-video-player-banner-selector",
                         onClick: this.showModal
-                    }, "Update"), t), g.createElement(T, {
-                        text: Object(ne.d)("Max 10mb GIF, JPG, or PNG", "UploadVideoPlayerBanner")
+                    }, "Update"), t), g.createElement(x, {
+                        text: Object(te.d)("Max 10mb GIF, JPG, or PNG", "UploadVideoPlayerBanner")
                     }))))
-                }, t = p.__decorate([Object(W.a)(ie, {
+                }, t = p.__decorate([Object(W.a)(ne, {
                     options: function(e) {
                         return {
                             skip: !e.user,
@@ -2086,24 +2093,24 @@ webpackJsonp([51], {
                     }
                 })], t)
             }(g.Component),
-            re = Object(s.b)(function(e) {
+            ae = Object(s.a)(function(e) {
                 return {
-                    user: Object(u.c)(e)
+                    user: Object(d.c)(e)
                 }
             }, function(e) {
-                return Object(l.b)({
+                return Object(l.bindActionCreators)({
                     showUploaderModal: function(e) {
-                        return Object(z.d)(te, {
+                        return Object(M.d)(ee, {
                             userID: e.id,
                             login: e.login,
                             displayName: e.displayName,
-                            imageType: J.a.ChannelOfflineImage,
+                            imageType: q.a.ChannelOfflineImage,
                             showCloser: !0
                         })
                     }
                 }, e)
-            })(ae),
-            oe = function(e) {
+            })(ie),
+            re = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -2115,7 +2122,7 @@ webpackJsonp([51], {
                     }, t
                 }
                 return p.__extends(t, e), t.prototype.render = function() {
-                    return f.a.buildType === _.a.Production ? null : g.createElement("div", null, g.createElement(re, null), g.createElement(M, null), g.createElement(P, {
+                    return f.a.buildType === _.a.Production ? null : g.createElement("div", null, g.createElement(ae, null), g.createElement(R, null), g.createElement(P, {
                         status: this.state.saveStatus,
                         onClickSave: this.onClickSave
                     }))
@@ -2126,7 +2133,7 @@ webpackJsonp([51], {
                     location: k.PageviewLocation.SettingsPage
                 })], t)
             }(g.Component),
-            se = function(e) {
+            oe = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -2149,13 +2156,13 @@ webpackJsonp([51], {
                     location: k.PageviewLocation.SettingsPage
                 })], t)
             }(g.Component),
-            le = n("WbwR"),
-            ce = n("LBNC"),
-            de = n("UbVv"),
+            se = n("WbwR"),
+            le = n("LBNC"),
+            ce = n("UbVv"),
             ue = n("zCIC"),
-            pe = n("oIkB"),
-            ge = n("F8kA"),
-            me = (n("hPJb"), function(e) {
+            de = n("oIkB"),
+            pe = n("F8kA"),
+            ge = (n("hPJb"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.changeHandler = function() {
@@ -2202,7 +2209,7 @@ webpackJsonp([51], {
                         flexDirection: N.J.Column
                     }, g.createElement(N._23, {
                         fontSize: N.L.Size5
-                    }, g.createElement(ge.a, {
+                    }, g.createElement(pe.a, {
                         to: "/" + this.props.login
                     }, this.props.text)), g.createElement(N._23, {
                         type: N._28.Span,
@@ -2231,9 +2238,9 @@ webpackJsonp([51], {
                     }, Object(f.d)("Saved", "AdvancedNotificationSettingsToggle"))))))
                 }, t
             }(g.Component)),
-            fe = n("AQCV"),
-            he = (n("t4xU"), n("EaRL")),
-            be = function(e) {
+            me = n("AQCV"),
+            fe = (n("t4xU"), n("EaRL")),
+            he = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -2251,7 +2258,7 @@ webpackJsonp([51], {
                             return p.__generator(this, function(r) {
                                 switch (r.label) {
                                     case 0:
-                                        return this.props.data && this.props.data.currentUser && this.props.setAdvancedNotificationSetting ? (t = p.__assign({}, Object(pe.a)({
+                                        return this.props.data && this.props.data.currentUser && this.props.setAdvancedNotificationSetting ? (t = p.__assign({}, Object(de.a)({
                                             disableNotifications: n,
                                             targetID: e
                                         }), {
@@ -2272,7 +2279,7 @@ webpackJsonp([51], {
                                                 r.node.id === e && (r.notificationSettings.isEnabled = !i.data.followUser.follow.disableNotifications)
                                             }
                                             return t
-                                        }, Object(pe.d)(he, {
+                                        }, Object(de.d)(fe, {
                                             limit: 50
                                         }, a), this.markSaved(e), [2]
                                 }
@@ -2379,7 +2386,7 @@ webpackJsonp([51], {
                     if (this.props.data && (!this.props.data.loading || this.props.data.currentUser)) {
                         for (var e = [], t = 0, n = this.props.data.currentUser.follows.edges; t < n.length; t++) {
                             var i = n[t];
-                            i.node && i.node.id && i.node.followers && e.push(g.createElement(me, {
+                            i.node && i.node.id && i.node.followers && e.push(g.createElement(ge, {
                                 userId: i.node.id,
                                 text: i.node.displayName,
                                 login: i.node.login,
@@ -2414,7 +2421,7 @@ webpackJsonp([51], {
                     }
                 }, t
             }(g.Component),
-            ve = Object(l.d)(Object(W.a)(he, {
+            be = Object(l.compose)(Object(W.a)(fe, {
                 options: function() {
                     return {
                         fetchPolicy: "cache-and-network",
@@ -2427,7 +2434,7 @@ webpackJsonp([51], {
                     return p.__assign({}, e, {
                         loadMore: function() {
                             return e.data.fetchMore({
-                                query: he,
+                                query: fe,
                                 variables: p.__assign({}, e.data.variables, {
                                     cursor: e.data.currentUser.follows.edges[e.data.currentUser.follows.edges.length - 1].cursor
                                 }),
@@ -2436,7 +2443,7 @@ webpackJsonp([51], {
                                     return {
                                         currentUser: p.__assign({}, n.currentUser, {
                                             follows: p.__assign({}, n.currentUser.follows, {
-                                                edges: Object(pe.b)(e.currentUser.follows.edges, n.currentUser.follows.edges)
+                                                edges: Object(de.b)(e.currentUser.follows.edges, n.currentUser.follows.edges)
                                             })
                                         })
                                     }
@@ -2445,14 +2452,14 @@ webpackJsonp([51], {
                         }
                     })
                 }
-            }), Object(W.a)(fe, {
+            }), Object(W.a)(me, {
                 name: "setAdvancedNotificationSetting"
-            }), Object(b.d)("AdvancedNotificationSettings"))(be),
-            Se = n("3zLD"),
-            ye = n("OOv5"),
-            _e = n("JBcW"),
-            Ee = (n("mVHD"), f.n.logger.withCategory("browser-push-notifications-settings")),
-            ke = function(e) {
+            }), Object(b.d)("AdvancedNotificationSettings"))(he),
+            ve = n("BhyV"),
+            Se = n("OOv5"),
+            ye = n("JBcW"),
+            _e = (n("mVHD"), f.n.logger.withCategory("browser-push-notifications-settings")),
+            Ee = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -2468,26 +2475,26 @@ webpackJsonp([51], {
                                     case 0:
                                         return this.setState({
                                             deciding: !0
-                                        }), [4, ye.a.hasPushSubscription()];
+                                        }), [4, Se.a.hasPushSubscription()];
                                     case 1:
                                         if (!n.sent()) return [3, 6];
                                         n.label = 2;
                                     case 2:
-                                        return n.trys.push([2, 4, , 5]), [4, ye.a.userUnsubscribe(_e.a.Settings)];
+                                        return n.trys.push([2, 4, , 5]), [4, Se.a.userUnsubscribe(ye.a.Settings)];
                                     case 3:
                                         return n.sent(), [3, 5];
                                     case 4:
-                                        return e = n.sent(), Ee.error(e, "user unsubscribe failed"), [3, 5];
+                                        return e = n.sent(), _e.error(e, "user unsubscribe failed"), [3, 5];
                                     case 5:
                                         return [3, 9];
                                     case 6:
-                                        return n.trys.push([6, 8, , 9]), [4, ye.a.userSubscribe(_e.a.Settings)];
+                                        return n.trys.push([6, 8, , 9]), [4, Se.a.userSubscribe(ye.a.Settings)];
                                     case 7:
                                         return n.sent(), [3, 9];
                                     case 8:
-                                        return t = n.sent(), Object(de.a)() ? (this.setState({
+                                        return t = n.sent(), Object(ce.a)() ? (this.setState({
                                             hide: !0
-                                        }), [2]) : (Ee.error(t, "user subscribe failed"), [3, 9]);
+                                        }), [2]) : (_e.error(t, "user subscribe failed"), [3, 9]);
                                     case 9:
                                         return [4, this.updateSubscriptionState()];
                                     case 10:
@@ -2505,13 +2512,13 @@ webpackJsonp([51], {
                         return p.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return t.trys.push([0, 3, , 4]), [4, ye.a.initialize()];
+                                    return t.trys.push([0, 3, , 4]), [4, Se.a.initialize()];
                                 case 1:
                                     return t.sent(), [4, this.updateSubscriptionState()];
                                 case 2:
                                     return t.sent(), [3, 4];
                                 case 3:
-                                    return e = t.sent(), Ee.error(e, "unexpected error initializing push manager"), this.setState({
+                                    return e = t.sent(), _e.error(e, "unexpected error initializing push manager"), this.setState({
                                         hide: !0
                                     }), [2];
                                 case 4:
@@ -2580,7 +2587,7 @@ webpackJsonp([51], {
                         return p.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return [4, ye.a.hasPushSubscription()];
+                                    return [4, Se.a.hasPushSubscription()];
                                 case 1:
                                     return e = t.sent(), this.setState({
                                         hasSubscription: e
@@ -2590,8 +2597,8 @@ webpackJsonp([51], {
                     })
                 }, t
             }(g.Component),
-            we = Object(Se.compose)(Object(b.d)("BrowserPushNotificationsSettings"))(ke),
-            Ne = (n("iOZM"), function(e) {
+            ke = Object(ve.compose)(Object(b.d)("BrowserPushNotificationsSettings"))(Ee),
+            we = (n("iOZM"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.changeHandler = function() {
@@ -2656,12 +2663,12 @@ webpackJsonp([51], {
                     }, Object(f.d)("Saved", "PlatformNotificationSettingsToggle")))))
                 }, t
             }(g.Component)),
-            Oe = n("g+dK"),
-            Pe = (n("RC0U"), n("1f5k"));
+            Ne = n("g+dK"),
+            Oe = (n("RC0U"), n("1f5k"));
         ! function(e) {
             e.onsite = "onsite", e.email = "email", e.push = "push"
         }(I || (I = {}));
-        var Ce, Te = function(e) {
+        var Pe, Ce = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -2717,7 +2724,7 @@ webpackJsonp([51], {
                             return p.__generator(this, function(s) {
                                 switch (s.label) {
                                     case 0:
-                                        return this.props.data && this.props.data.currentUser && this.props.setNotificationSetting ? (t = n ? "off" : "on", i = p.__assign({}, Object(pe.a)({
+                                        return this.props.data && this.props.data.currentUser && this.props.setNotificationSetting ? (t = n ? "off" : "on", i = p.__assign({}, Object(de.a)({
                                             category: e,
                                             platform: this.props.platformName,
                                             settingState: t
@@ -2736,7 +2743,7 @@ webpackJsonp([51], {
                                                     return e.platformName === o.props.platformName && (e.isEnabled = "on" === a.data.setNotificationSetting.settingState, e.settingState = a.data.setNotificationSetting.settingState), e
                                                 })), t
                                             }), t
-                                        }, Object(pe.d)(Pe, {}, r), this.markSaved(e), [2]
+                                        }, Object(de.d)(Oe, {}, r), this.markSaved(e), [2]
                                 }
                             })
                         })
@@ -2895,7 +2902,7 @@ webpackJsonp([51], {
                     for (var e = [], t = 0, n = this.VisibleSettings; t < n.length; t++) {
                         var i = n[t],
                             a = this.getSettingByCategory(i.category);
-                        a && e.push(g.createElement(Ne, {
+                        a && e.push(g.createElement(we, {
                             category: i.category,
                             text: i.name,
                             description: i.description,
@@ -2926,16 +2933,16 @@ webpackJsonp([51], {
                     }
                 }, t
             }(g.Component),
-            je = Object(l.d)(Object(b.d)("PlatformNotificationSettings"), Object(W.a)(Pe, {
+            xe = Object(l.compose)(Object(b.d)("PlatformNotificationSettings"), Object(W.a)(Oe, {
                 options: function() {
                     return {
                         fetchPolicy: "cache-and-network"
                     }
                 }
-            }), Object(W.a)(Oe, {
+            }), Object(W.a)(Ne, {
                 name: "setNotificationSetting"
-            }))(Te),
-            xe = (n("nq6q"), function(e) {
+            }))(Ce),
+            je = (n("nq6q"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -2966,7 +2973,7 @@ webpackJsonp([51], {
                     }, Object(f.d)("Notifications", "SettingsNotificationsPage"))), g.createElement(N.V, null, g.createElement(N._23, {
                         fontSize: N.L.Size5,
                         color: N.F.Alt2
-                    }, Object(f.d)("Get the notifications you care about, where you want to see them.", "SettingsNotificationsPage")))), g.createElement(je, {
+                    }, Object(f.d)("Get the notifications you care about, where you want to see them.", "SettingsNotificationsPage")))), g.createElement(xe, {
                         startCollapsed: !1,
                         platformName: I.onsite,
                         displayName: Object(f.d)("On Twitch", "SettingsNotificationsPage"),
@@ -2974,23 +2981,23 @@ webpackJsonp([51], {
                         explanation: Object(f.d)("Send me notifications on Twitch about", "SettingsNotificationsPage"),
                         key: "onsite",
                         extraSettings: this.renderBrowserPushNotifications()
-                    }), g.createElement(je, {
+                    }), g.createElement(xe, {
                         startCollapsed: !0,
                         platformName: I.email,
                         displayName: Object(f.d)("By Email", "SettingsNotificationsPage"),
                         description: Object(f.d)("Receive important notifications through email. You may receive additional emails about features and content on Twitch. You can turn off specific emails using the unsubscribe link included in each message.", "SettingsNotificationsPage"),
                         explanation: Object(f.d)("Send me emails about", "SettingsNotificationsPage"),
                         key: "email"
-                    }), g.createElement(je, {
+                    }), g.createElement(xe, {
                         platformName: I.push,
                         startCollapsed: !0,
                         displayName: Object(f.d)("On Mobile", "SettingsNotificationsPage"),
                         description: Object(f.d)("Get Twitch updates on the go. Receive notifications right on your phone's home screen.", "SettingsNotificationsPage"),
                         explanation: Object(f.d)("Send me push notifications", "SettingsNotificationsPage"),
                         key: "push"
-                    }), g.createElement(ve, null))
+                    }), g.createElement(be, null))
                 }, t.prototype.renderBrowserPushNotifications = function() {
-                    return f.b.get(le.b, !1) && Object(ce.a)() && !Object(de.a)() ? g.createElement(we, null) : null
+                    return f.b.get(se.b, !1) && Object(le.a)() && !Object(ce.a)() ? g.createElement(ke, null) : null
                 }, t.prototype.onRender = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t = p.__decorate([Object(b.d)("SettingsNotificationsPage", {
@@ -2999,9 +3006,7 @@ webpackJsonp([51], {
                     location: k.PageviewLocation.SettingsPage
                 })], t)
             }(g.Component)),
-            Ue = n("S1vB"),
-            Ie = n("cumT"),
-            He = function(e) {
+            Te = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -3013,27 +3018,25 @@ webpackJsonp([51], {
                     }, t
                 }
                 return p.__extends(t, e), t.prototype.render = function() {
-                    return f.a.buildType === _.a.Production ? null : this.props.data.currentUser && this.props.data.requestInfo ? this.props.data.currentUser.hasPrime ? g.createElement("div", null, g.createElement(P, {
+                    return f.a.buildType === _.a.Production ? null : g.createElement("div", null, g.createElement(P, {
                         status: this.state.saveStatus,
                         onClickSave: this.onClickSave
-                    })) : Object(Ue.a)(this.props.data.requestInfo.countryCode) ? (window.location.replace("https://twitch.amazon.com/prime?ref_=sm_w_tsp_p_t"), null) : g.createElement(m.a, {
-                        to: "/settings/turbo"
-                    }) : null
+                    }))
                 }, t = p.__decorate([Object(b.d)("SettingsPrimePage", {
                     autoReportInteractive: !0,
                     destination: E.a.SettingsPrime
                 }), Object(y.a)({
                     location: k.PageviewLocation.SettingsPage
-                }), Object(W.a)(Ie)], t)
+                })], t)
             }(g.Component),
-            Fe = n("x9n8"),
-            Ae = (n("eppJ"), n("zwbd")),
-            Ve = function(e) {
+            Ue = n("x9n8"),
+            Ie = (n("eppJ"), n("zwbd")),
+            Ae = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.openModal = function() {
                         var e = t.props.data && t.props.data.currentUser;
-                        e && t.props.showModal(Fe.a, {
+                        e && t.props.showModal(Ue.a, {
                             userID: e.id,
                             login: e.login,
                             displayName: e.displayName,
@@ -3080,18 +3083,18 @@ webpackJsonp([51], {
                         padding: {
                             x: 1
                         }
-                    }, Object(f.d)("Update", "ProfileImageSetting"))), g.createElement(T, {
+                    }, Object(f.d)("Update", "ProfileImageSetting"))), g.createElement(x, {
                         text: Object(f.d)("File format: JPEG, PNG, GIF (max size 256x256, 10MB)", "ProfileImageSetting")
                     }))))
                 }, t
             }(g.Component),
-            Le = Object(Se.compose)(Object(b.d)("ProfileImageSetting"), Object(W.a)(Ae))(Ve),
-            De = Object(s.b)(null, function(e) {
-                return Object(l.b)({
-                    showModal: z.d
+            Fe = Object(ve.compose)(Object(b.d)("ProfileImageSetting"), Object(W.a)(Ie))(Ae),
+            He = Object(s.a)(null, function(e) {
+                return Object(l.bindActionCreators)({
+                    showModal: M.d
                 }, e)
-            })(Le),
-            Re = function(e) {
+            })(Fe),
+            Ve = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -3103,7 +3106,7 @@ webpackJsonp([51], {
                     }, t
                 }
                 return p.__extends(t, e), t.prototype.render = function() {
-                    return f.a.buildType === _.a.Production ? null : g.createElement("div", null, g.createElement(De, null), g.createElement(P, {
+                    return f.a.buildType === _.a.Production ? null : g.createElement("div", null, g.createElement(He, null), g.createElement(P, {
                         status: this.state.saveStatus,
                         onClickSave: this.onClickSave
                     }))
@@ -3114,8 +3117,8 @@ webpackJsonp([51], {
                     location: k.PageviewLocation.SettingsPage
                 })], t)
             }(g.Component),
-            Me = "/v5/whispers/settings",
-            ze = function(e) {
+            Le = "/v5/whispers/settings",
+            De = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -3132,7 +3135,7 @@ webpackJsonp([51], {
                                             updating: !0
                                         }), n.label = 1;
                                     case 1:
-                                        return n.trys.push([1, 3, , 4]), [4, C.a.post(Me, {
+                                        return n.trys.push([1, 3, , 4]), [4, C.a.post(Le, {
                                             body: {
                                                 restrict_whispers: e
                                             }
@@ -3163,7 +3166,7 @@ webpackJsonp([51], {
                         return p.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return t.trys.push([0, 2, , 3]), [4, C.a.get(Me)];
+                                    return t.trys.push([0, 2, , 3]), [4, C.a.get(Le)];
                                 case 1:
                                     return e = t.sent(), this.setState({
                                         enabled: e.body && e.body.restrict_whispers || !1,
@@ -3182,7 +3185,7 @@ webpackJsonp([51], {
                         })
                     })
                 }, t.prototype.render = function() {
-                    return g.createElement(x, {
+                    return g.createElement(T, {
                         id: "settings-security-page-block-whispers",
                         label: Object(f.d)("Block Whispers from Stangers", "SettingsSecurityPage"),
                         description: Object(f.d)("Block whispers from people you don't follow", "SettingsSecurityPage"),
@@ -3193,8 +3196,8 @@ webpackJsonp([51], {
                     })
                 }, t
             }(g.Component),
-            Be = n("NoSW"),
-            qe = function(e) {
+            Re = n("NoSW"),
+            Me = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -3202,22 +3205,22 @@ webpackJsonp([51], {
                     return g.createElement(j, {
                         label: Object(f.d)("Two-Factor Authentication", "TwoFactorAuthenticationSetting"),
                         orientation: N.N.Horizontal,
-                        error: this.props.status === Ce.Error,
+                        error: this.props.status === Pe.Error,
                         errorMessage: Object(f.d)("Sorry, something went wrong. Please try again later.", "TwoFactorAuthenticationSetting")
                     }, this.renderBody())
                 }, t.prototype.renderBody = function() {
                     switch (this.props.status) {
-                        case Ce.Loading:
+                        case Pe.Loading:
                             return this.renderLoading();
-                        case Ce.Error:
+                        case Pe.Error:
                             return this.renderError();
-                        case Ce.UnverifiedEmail:
+                        case Pe.UnverifiedEmail:
                             return this.renderVerifyEmail();
-                        case Ce.CanEnable:
+                        case Pe.CanEnable:
                             return this.renderEnableButton();
-                        case Ce.Enabled:
+                        case Pe.Enabled:
                             return this.renderDisableButton();
-                        case Ce.EnabledAndRequired:
+                        case Pe.EnabledAndRequired:
                             return this.renderEnabledAndRequired();
                         default:
                             return null
@@ -3234,7 +3237,7 @@ webpackJsonp([51], {
                     return g.createElement(N.V, null, g.createElement(N.u, {
                         linkTo: "https://passport.twitch.tv/register_2fa/new",
                         "data-a-target": "tfa-enable-button"
-                    }, Object(f.d)("Set Up Two-Factor Authentication", "TwoFactorAuthenticationSetting")), g.createElement(T, {
+                    }, Object(f.d)("Set Up Two-Factor Authentication", "TwoFactorAuthenticationSetting")), g.createElement(x, {
                         dataTarget: "tfa-pitch-message",
                         text: Object(f.d)("It's dangerous to go alone. <x:link>Two-factor authentication</x:link> adds an extra layer of security to your Twitch account by requiring both a password and your mobile phone to login.", {
                             "x:link": function(e) {
@@ -3257,7 +3260,7 @@ webpackJsonp([51], {
                         "data-a-target": "tfa-required-message"
                     }, Object(f.d)("You must have two-factor authentication enabled.", "TwoFactorAuthenticationSetting")), this.renderEnabledMessage())
                 }, t.prototype.renderEnabledMessage = function() {
-                    return g.createElement(T, {
+                    return g.createElement(x, {
                         dataTarget: "tfa-successful-message",
                         text: Object(f.d)("Woohoo! Two-factor authentication is enabled! To reset or change your phone, visit the Authy <x:link>phone reset form</x:link>.", {
                             "x:link": function(e) {
@@ -3271,15 +3274,15 @@ webpackJsonp([51], {
                     })
                 }, t
             }(g.Component),
-            We = n("Q6se");
+            ze = n("u9bz");
         ! function(e) {
             e[e.Loading = 0] = "Loading", e[e.Error = 1] = "Error", e[e.UnverifiedEmail = 2] = "UnverifiedEmail", e[e.CanEnable = 3] = "CanEnable", e[e.Enabled = 4] = "Enabled", e[e.EnabledAndRequired = 5] = "EnabledAndRequired"
-        }(Ce || (Ce = {}));
-        var Ge, Je = function(e) {
+        }(Pe || (Pe = {}));
+        var Be, We = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        status: Ce.Loading,
+                        status: Pe.Loading,
                         restLoading: !0,
                         restError: !1
                     }, t
@@ -3287,11 +3290,11 @@ webpackJsonp([51], {
                 return p.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.fetchTwoFactorEnabled()
                 }, t.prototype.componentDidUpdate = function(e, t) {
-                    t.status === Ce.Loading && this.state.status !== Ce.Loading && this.props.latencyTracking.reportInteractive()
+                    t.status === Pe.Loading && this.state.status !== Pe.Loading && this.props.latencyTracking.reportInteractive()
                 }, t.prototype.componentWillReceiveProps = function(e) {
-                    this.state.status !== Ce.Loading || e.data.loading || this.reconcileStatus(e)
+                    this.state.status !== Pe.Loading || e.data.loading || this.reconcileStatus(e)
                 }, t.prototype.render = function() {
-                    return g.createElement(qe, {
+                    return g.createElement(Me, {
                         status: this.state.status
                     })
                 }, t.prototype.fetchTwoFactorEnabled = function() {
@@ -3329,7 +3332,7 @@ webpackJsonp([51], {
                     })
                 }, t.prototype.reconcileStatus = function(e) {
                     var t;
-                    e.data.loading || this.state.restLoading ? t = Ce.Loading : !e.data.currentUser || this.state.restError ? t = Ce.Error : this.state.twoFactorEnabled || e.data.currentUser.isEmailVerified ? !this.state.twoFactorEnabled && e.data.currentUser.isEmailVerified ? t = Ce.CanEnable : this.state.twoFactorEnabled && !this.userRoleRequiresTwoFactor(e) ? t = Ce.Enabled : this.state.twoFactorEnabled && this.userRoleRequiresTwoFactor(e) && (t = Ce.EnabledAndRequired) : t = Ce.UnverifiedEmail, t && this.setState({
+                    e.data.loading || this.state.restLoading ? t = Pe.Loading : !e.data.currentUser || this.state.restError ? t = Pe.Error : this.state.twoFactorEnabled || e.data.currentUser.isEmailVerified ? !this.state.twoFactorEnabled && e.data.currentUser.isEmailVerified ? t = Pe.CanEnable : this.state.twoFactorEnabled && !this.userRoleRequiresTwoFactor(e) ? t = Pe.Enabled : this.state.twoFactorEnabled && this.userRoleRequiresTwoFactor(e) && (t = Pe.EnabledAndRequired) : t = Pe.UnverifiedEmail, t && this.setState({
                         status: t
                     })
                 }, t.prototype.userRoleRequiresTwoFactor = function(e) {
@@ -3337,8 +3340,8 @@ webpackJsonp([51], {
                     return !(!t || !(t.isGlobalMod || t.isSiteAdmin || t.isStaff))
                 }, t
             }(g.Component),
-            Qe = Object(Se.compose)(Object(Be.a)("TwoFactorAuthenticationSetting"), Object(W.a)(We))(Je),
-            $e = function(e) {
+            Ge = Object(ve.compose)(Object(Re.a)("TwoFactorAuthenticationSetting"), Object(W.a)(ze))(We),
+            qe = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -3346,27 +3349,28 @@ webpackJsonp([51], {
                     return f.a.buildType === _.a.Production ? null : g.createElement("div", null, g.createElement(i, {
                         title: Object(f.d)("Security", "SettingsSecurityPage"),
                         description: Object(f.d)("Keep your account safe and sound", "SettingsSecurityPage")
-                    }), g.createElement(r, null), g.createElement(Qe, null), g.createElement(i, {
+                    }), g.createElement(r, null), g.createElement(Ge, null), g.createElement(i, {
                         title: Object(f.d)("Privacy", "SettingsSecurityPage"),
                         description: Object(f.d)("Choose who can message you", "SettingsSecurityPage")
-                    }), g.createElement(ze, null))
+                    }), g.createElement(De, null))
                 }, t
             }(g.Component),
-            Ke = Object(Se.compose)(Object(b.d)("SettingsSecurityPage", {
+            Je = Object(ve.compose)(Object(b.d)("SettingsSecurityPage", {
                 autoReportInteractive: !0,
                 destination: E.a.SettingsSecurity
             }), Object(y.a)({
                 location: k.PageviewLocation.SettingsPage
-            }))($e),
-            Ye = n("CkX/");
+            }))(qe),
+            Qe = n("S1vB"),
+            $e = n("CkX/");
         ! function(e) {
             e.Channel = "channel", e.Notifications = "notifications", e.Profile = "profile", e.Security = "security", e.Connections = "connections", e.Prime = "prime", e.Turbo = "turbo"
-        }(Ge || (Ge = {}));
-        var Xe = function(e) {
+        }(Be || (Be = {}));
+        var Ke = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.isPrimeVisible = function() {
-                        return t.props.data.requestInfo && t.props.data.currentUser && (Object(Ue.a)(t.props.data.requestInfo.countryCode) || t.props.data.currentUser.hasPrime)
+                        return t.props.data.requestInfo && t.props.data.currentUser && (Object(Qe.a)(t.props.data.requestInfo.countryCode) || t.props.data.currentUser.hasPrime)
                     }, t
                 }
                 return p.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -3376,21 +3380,21 @@ webpackJsonp([51], {
                     var e = null;
                     this.isPrimeVisible() && (e = g.createElement(N._20, {
                         linkTo: "/settings/prime",
-                        active: this.props.tabName === Ge.Prime,
+                        active: this.props.tabName === Be.Prime,
                         "data-test-selector": "test-settings-prime-tab",
                         "data-a-target": "prime-tab"
                     }, Object(f.d)("Twitch Prime", "SettingsTabs")));
                     var t = null;
                     return !this.props.data.currentUser.hasTurbo && this.isPrimeVisible() || (t = g.createElement(N._20, {
                         linkTo: "/settings/turbo",
-                        active: this.props.tabName === Ge.Turbo,
+                        active: this.props.tabName === Be.Turbo,
                         "data-test-selector": "test-settings-turbo-tab",
                         "data-a-target": "turbo-tab"
                     }, Object(f.d)("Twitch Turbo", "SettingsTabs"))), g.createElement(N.V, {
                         className: "settings-tabs",
                         padding: {
-                            x: it,
-                            top: it
+                            x: Ze,
+                            top: Ze
                         }
                     }, g.createElement(N.V, {
                         margin: {
@@ -3400,23 +3404,23 @@ webpackJsonp([51], {
                         type: N._28.H2
                     }, Object(f.d)("Settings", "SettingsTabs"))), g.createElement(N.V, null, g.createElement(N._21, null, g.createElement(N._20, {
                         linkTo: "/settings/profile",
-                        active: this.props.tabName === Ge.Profile,
+                        active: this.props.tabName === Be.Profile,
                         "data-a-target": "profile-tab"
                     }, Object(f.d)("Profile", "SettingsTabs")), e, t, g.createElement(N._20, {
                         linkTo: "/settings/channel",
-                        active: this.props.tabName === Ge.Channel,
+                        active: this.props.tabName === Be.Channel,
                         "data-a-target": "channel-tab"
                     }, Object(f.d)("Channel and Videos", "SettingsTabs")), g.createElement(N._20, {
                         linkTo: "/settings/security",
-                        active: this.props.tabName === Ge.Security,
+                        active: this.props.tabName === Be.Security,
                         "data-a-target": "security-tab"
                     }, Object(f.d)("Security and Privacy", "SettingsTabs")), g.createElement(N._20, {
                         linkTo: "/settings/notifications",
-                        active: this.props.tabName === Ge.Notifications,
+                        active: this.props.tabName === Be.Notifications,
                         "data-a-target": "notifications-tab"
                     }, Object(f.d)("Notifications", "SettingsTab")), g.createElement(N._20, {
                         linkTo: "/settings/connections",
-                        active: this.props.tabName === Ge.Connections,
+                        active: this.props.tabName === Be.Connections,
                         "data-a-target": "connections-tab"
                     }, Object(f.d)("Connections", "SettingsTabs")), g.createElement(N._20, {
                         linkTo: "/subscriptions",
@@ -3425,14 +3429,8 @@ webpackJsonp([51], {
                     }, Object(f.d)("Subscriptions", "SettingsTabs")))))
                 }, t
             }(g.Component),
-            Ze = Object(Se.compose)(Object(b.d)("SettingsTabs"), Object(W.a)(Ye))(Xe),
-            et = function() {
-                return g.createElement(h.a, {
-                    message: Object(f.d)("Error loading user data. Please try again later.", "SettingsPageError")
-                })
-            },
-            tt = n("hRPz"),
-            nt = function(e) {
+            Ye = Object(ve.compose)(Object(b.d)("SettingsTabs"), Object(W.a)($e))(Ke),
+            Xe = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -3444,23 +3442,19 @@ webpackJsonp([51], {
                     }, t
                 }
                 return p.__extends(t, e), t.prototype.render = function() {
-                    return f.a.buildType === _.a.Production ? null : this.props.data.loading && !this.props.data.currentUser ? g.createElement(N.Z, {
-                        fillContent: !0
-                    }) : this.props.data.loading || this.props.data.currentUser ? this.props.data.currentUser && !this.props.data.currentUser.hasTurbo ? this.props.data.currentUser.hasPrime || Object(Ue.a)(this.props.data.requestInfo.countryCode) ? g.createElement(m.a, {
-                        to: "/settings/prime"
-                    }) : (window.location.replace("https://www.twitch.tv/products/turbo/ticket"), null) : g.createElement("div", null, g.createElement(P, {
+                    return f.a.buildType === _.a.Production ? null : g.createElement("div", null, g.createElement(P, {
                         status: this.state.saveStatus,
                         onClickSave: this.onClickSave
-                    })) : g.createElement(et, null)
+                    }))
                 }, t = p.__decorate([Object(b.d)("SettingsTurboPage", {
                     autoReportInteractive: !0,
                     destination: E.a.SettingsTurbo
                 }), Object(y.a)({
                     location: k.PageviewLocation.SettingsPage
-                }), Object(W.a)(tt)], t)
+                })], t)
             }(g.Component),
-            it = 3,
-            at = function(e) {
+            Ze = 3,
+            et = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.redirectToProfilePage = function() {
@@ -3472,7 +3466,7 @@ webpackJsonp([51], {
                 return p.__extends(t, e), t.prototype.render = function() {
                     return this.props.isLoggedIn ? g.createElement(N.V, {
                         padding: {
-                            x: it
+                            x: Ze
                         },
                         fullHeight: !0,
                         fullWidth: !0,
@@ -3481,7 +3475,7 @@ webpackJsonp([51], {
                         flexWrap: N.K.NoWrap
                     }, g.createElement(v.b, {
                         addPaddingWhenPlayerIsPersisting: !0
-                    }), g.createElement(S.a, null, g.createElement(Ze, {
+                    }), g.createElement(S.a, null, g.createElement(Ye, {
                         tabName: this.props.match.params.tab
                     })), g.createElement(N.V, {
                         padding: {
@@ -3489,25 +3483,25 @@ webpackJsonp([51], {
                         }
                     }, g.createElement(m.d, null, g.createElement(m.b, {
                         path: "/settings/profile",
-                        component: Re
+                        component: Ve
                     }), g.createElement(m.b, {
                         path: "/settings/prime",
-                        component: He
+                        component: Te
                     }), g.createElement(m.b, {
                         path: "/settings/turbo",
-                        component: nt
+                        component: Xe
                     }), g.createElement(m.b, {
                         path: "/settings/channel",
-                        component: oe
+                        component: re
                     }), g.createElement(m.b, {
                         path: "/settings/security",
-                        component: Ke
+                        component: Je
                     }), g.createElement(m.b, {
                         path: "/settings/notifications",
-                        component: xe
+                        component: je
                     }), g.createElement(m.b, {
                         path: "/settings/connections",
-                        component: se
+                        component: oe
                     }), g.createElement(m.b, {
                         path: "/settings",
                         render: this.redirectToProfilePage
@@ -3518,20 +3512,20 @@ webpackJsonp([51], {
                     autoReportInteractive: !0
                 })], t)
             }(g.Component),
-            rt = Object(m.e)(at),
-            ot = Object(s.b)(function(e) {
+            tt = Object(m.e)(et),
+            nt = Object(s.a)(function(e) {
                 return {
-                    isLoggedIn: Object(u.d)(e)
+                    isLoggedIn: Object(d.d)(e)
                 }
             }, function(e) {
-                return Object(l.b)({
+                return Object(l.bindActionCreators)({
                     login: function() {
-                        return Object(d.f)(c.a.SettingsPage)
+                        return Object(u.f)(c.a.SettingsPage)
                     }
                 }, e)
-            })(rt);
+            })(tt);
         n.d(t, "SettingsRoot", function() {
-            return ot
+            return nt
         })
     },
     LBNC: function(e, t, n) {
@@ -3558,7 +3552,7 @@ webpackJsonp([51], {
             e.NewSession = "new-session", e.ClearSession = "clear-session"
         }(a || (a = {}));
         var c = o.n.logger.withCategory("host-service-worker-messenger"),
-            d = function() {
+            u = function() {
                 function e() {}
                 return e.syncSession = function() {
                     var e = Object(l.c)(o.n.store.getState());
@@ -3587,17 +3581,17 @@ webpackJsonp([51], {
                     navigator.serviceWorker.controller ? (c.debug("postMessage", e), navigator.serviceWorker.controller.postMessage(JSON.stringify(e))) : c.error(new Error("navigator.serviceWorker.controller is null"), "postMessage called with no controlling service worker")
                 }, e
             }(),
-            u = "browserPushNotificationsEnabled",
+            d = "browserPushNotificationsEnabled",
             p = function() {
                 function e() {}
                 return e.exists = function() {
-                    return null !== o.n.storage.getOptional(u)
+                    return null !== o.n.storage.getOptional(d)
                 }, e.isEnabled = function() {
-                    return o.n.storage.get(u, !1)
+                    return o.n.storage.get(d, !1)
                 }, e.setEnabled = function() {
-                    o.n.storage.set(u, !0)
+                    o.n.storage.set(d, !0)
                 }, e.setDisabled = function() {
-                    o.n.storage.set(u, !1)
+                    o.n.storage.set(d, !1)
                 }, e
             }(),
             g = n("UbVv"),
@@ -3623,7 +3617,7 @@ webpackJsonp([51], {
                                 case 1:
                                     return r.sent(), e = Object(l.d)(o.n.store.getState()), [4, this.hasPushSubscription()];
                                 case 2:
-                                    return t = r.sent(), d.syncSession(), t ? (n = p.exists() && !p.isEnabled(), a = !e, n || a ? [4, this.unsubscribe()] : [3, 4]) : [3, 5];
+                                    return t = r.sent(), u.syncSession(), t ? (n = p.exists() && !p.isEnabled(), a = !e, n || a ? [4, this.unsubscribe()] : [3, 4]) : [3, 5];
                                 case 3:
                                     r.sent(), r.label = 4;
                                 case 4:
@@ -3677,18 +3671,18 @@ webpackJsonp([51], {
                     })
                 }, e.subscribe = function() {
                     return r.__awaiter(this, void 0, void 0, function() {
-                        var e, t, n, a, c, d;
-                        return r.__generator(this, function(u) {
-                            switch (u.label) {
+                        var e, t, n, a, c, u;
+                        return r.__generator(this, function(d) {
+                            switch (d.label) {
                                 case 0:
                                     if (Object(g.a)()) throw new Error("notification permission is denied");
                                     if (!Object(l.d)(o.n.store.getState())) throw new Error("cannot be enabled logged out");
                                     if (!(e = o.b.get("notification_app_server_public_key", ""))) throw new Error("application server public key is blank");
                                     return [4, i()];
                                 case 1:
-                                    return t = u.sent(), [4, this.getPushSubscription()];
+                                    return t = d.sent(), [4, this.getPushSubscription()];
                                 case 2:
-                                    return (n = u.sent()) ? [3, 4] : (a = function(e) {
+                                    return (n = d.sent()) ? [3, 4] : (a = function(e) {
                                         for (var t = (e + "=".repeat((4 - e.length % 4) % 4)).replace(/\-/g, "+").replace(/_/g, "/"), n = atob(t), i = new Uint8Array(n.length), a = 0; a < n.length; ++a) i[a] = n.charCodeAt(a);
                                         return i
                                     }(e), [4, t.pushManager.subscribe({
@@ -3696,21 +3690,21 @@ webpackJsonp([51], {
                                         applicationServerKey: a
                                     })]);
                                 case 3:
-                                    n = u.sent(), u.label = 4;
+                                    n = d.sent(), d.label = 4;
                                 case 4:
                                     if (!(c = n.toJSON()).endpoint) throw new Error("push subscription 'endpoint' missing");
                                     if (!c.keys) throw new Error("push subscription 'keys' missing");
                                     if (!c.keys.auth) throw new Error("push subscription 'keys.auth' missing");
                                     if (!c.keys.p256dh) throw new Error("push subscription 'keys.p256dh' missing");
-                                    return d = Object(s.a)({
+                                    return u = Object(s.a)({
                                         endpoint: c.endpoint,
                                         auth: c.keys.auth,
                                         p256DH: c.keys.p256dh
                                     }), [4, o.n.apollo.client.mutate(r.__assign({
                                         mutation: b
-                                    }, d))];
+                                    }, u))];
                                 case 5:
-                                    return u.sent(), [2]
+                                    return d.sent(), [2]
                             }
                         })
                     })
@@ -3746,102 +3740,6 @@ webpackJsonp([51], {
                 }, e
             }()
     },
-    Q6se: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "TwoFactorAuthenticationSetting_CurrentUser"
-                },
-                variableDefinitions: [],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "currentUser"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "isEmailVerified"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "roles"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "isGlobalMod"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }, {
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "isSiteAdmin"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }, {
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "isStaff"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }]
-                                }
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 129
-            }
-        };
-        n.loc.source = {
-            body: "query TwoFactorAuthenticationSetting_CurrentUser {\ncurrentUser {\nid\nisEmailVerified\nroles {\nisGlobalMod\nisSiteAdmin\nisStaff\n}\n}\n}",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
     RC0U: function(e, t) {},
     TbkX: function(e, t) {
         var n = {
@@ -3871,13 +3769,15 @@ webpackJsonp([51], {
                                 value: "AddBrowserPushSubscriptionInput"
                             }
                         }
-                    }
+                    },
+                    defaultValue: null
                 }],
                 directives: [],
                 selectionSet: {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
+                        alias: null,
                         name: {
                             kind: "Name",
                             value: "addBrowserPushSubscription"
@@ -3901,12 +3801,14 @@ webpackJsonp([51], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
+                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "browserPushSubscriptionID"
                                 },
                                 arguments: [],
-                                directives: []
+                                directives: [],
+                                selectionSet: null
                             }]
                         }
                     }]
@@ -4042,86 +3944,6 @@ webpackJsonp([51], {
             return c
         })
     },
-    cumT: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "SettingsPrimePage_CurrentUser"
-                },
-                variableDefinitions: [],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "currentUser"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "hasPrime"
-                                },
-                                arguments: [],
-                                directives: []
-                            }]
-                        }
-                    }, {
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "requestInfo"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "countryCode"
-                                },
-                                arguments: [],
-                                directives: []
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 95
-            }
-        };
-        n.loc.source = {
-            body: "query SettingsPrimePage_CurrentUser {\ncurrentUser {\nid\nhasPrime\n}\nrequestInfo {\ncountryCode\n}\n}",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
     eppJ: function(e, t) {},
     "g+dK": function(e, t) {
         var n = {
@@ -4151,13 +3973,15 @@ webpackJsonp([51], {
                                 value: "SetNotificationSettingInput"
                             }
                         }
-                    }
+                    },
+                    defaultValue: null
                 }],
                 directives: [],
                 selectionSet: {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
+                        alias: null,
                         name: {
                             kind: "Name",
                             value: "setNotificationSetting"
@@ -4181,12 +4005,14 @@ webpackJsonp([51], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
+                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "settingState"
                                 },
                                 arguments: [],
-                                directives: []
+                                directives: [],
+                                selectionSet: null
                             }]
                         }
                     }]
@@ -4208,94 +4034,6 @@ webpackJsonp([51], {
         e.exports = n
     },
     hPJb: function(e, t) {},
-    hRPz: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "SettingsTurboPage"
-                },
-                variableDefinitions: [],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "currentUser"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "hasPrime"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "hasTurbo"
-                                },
-                                arguments: [],
-                                directives: []
-                            }]
-                        }
-                    }, {
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "requestInfo"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "countryCode"
-                                },
-                                arguments: [],
-                                directives: []
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 92
-            }
-        };
-        n.loc.source = {
-            body: "query SettingsTurboPage {\ncurrentUser {\nid\nhasPrime\nhasTurbo\n}\nrequestInfo {\ncountryCode\n}\n}",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
     iOZM: function(e, t) {},
     "j7/Y": function(e, t, n) {
         "use strict";
@@ -4394,13 +4132,15 @@ webpackJsonp([51], {
                                 value: "String"
                             }
                         }
-                    }
+                    },
+                    defaultValue: null
                 }],
                 directives: [],
                 selectionSet: {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
+                        alias: null,
                         name: {
                             kind: "Name",
                             value: "user"
@@ -4424,22 +4164,27 @@ webpackJsonp([51], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
+                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: []
+                                directives: [],
+                                selectionSet: null
                             }, {
                                 kind: "Field",
+                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "login"
                                 },
                                 arguments: [],
-                                directives: []
+                                directives: [],
+                                selectionSet: null
                             }, {
                                 kind: "Field",
+                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "profileImageURL"
@@ -4455,7 +4200,8 @@ webpackJsonp([51], {
                                         value: "70"
                                     }
                                 }],
-                                directives: []
+                                directives: [],
+                                selectionSet: null
                             }]
                         }
                     }]
@@ -4478,6 +4224,114 @@ webpackJsonp([51], {
     },
     nq6q: function(e, t) {},
     t4xU: function(e, t) {},
+    u9bz: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "TwoFactorAuthenticationSetting_CurrentUser"
+                },
+                variableDefinitions: [],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "currentUser"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "isEmailVerified"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "roles"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "isGlobalMod"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "isSiteAdmin"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "isStaff"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 129
+            }
+        };
+        n.loc.source = {
+            body: "query TwoFactorAuthenticationSetting_CurrentUser {\ncurrentUser {\nid\nisEmailVerified\nroles {\nisGlobalMod\nisSiteAdmin\nisStaff\n}\n}\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
     "vm+z": function(e, t) {
         var n = {
             kind: "Document",
@@ -4506,13 +4360,15 @@ webpackJsonp([51], {
                                 value: "String"
                             }
                         }
-                    }
+                    },
+                    defaultValue: null
                 }],
                 directives: [],
                 selectionSet: {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
+                        alias: null,
                         name: {
                             kind: "Name",
                             value: "user"
@@ -4536,20 +4392,24 @@ webpackJsonp([51], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
+                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: []
+                                directives: [],
+                                selectionSet: null
                             }, {
                                 kind: "Field",
+                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "offlineImageURL"
                                 },
                                 arguments: [],
-                                directives: []
+                                directives: [],
+                                selectionSet: null
                             }]
                         }
                     }]
@@ -4578,12 +4438,12 @@ webpackJsonp([51], {
             r = n("V5M+"),
             o = n("Aj/L"),
             s = n("J92i"),
-            l = Object(i.b)(function(e) {
+            l = Object(i.a)(function(e) {
                 return {
                     authToken: Object(o.a)(e)
                 }
             }, function(e, t) {
-                return Object(a.b)({
+                return Object(a.bindActionCreators)({
                     closeModal: function() {
                         return t.successCallback && t.successCallback(), Object(r.c)()
                     }
@@ -4675,6 +4535,7 @@ webpackJsonp([51], {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
+                        alias: null,
                         name: {
                             kind: "Name",
                             value: "currentUser"
@@ -4685,30 +4546,37 @@ webpackJsonp([51], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
+                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: []
+                                directives: [],
+                                selectionSet: null
                             }, {
                                 kind: "Field",
+                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "login"
                                 },
                                 arguments: [],
-                                directives: []
+                                directives: [],
+                                selectionSet: null
                             }, {
                                 kind: "Field",
+                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "displayName"
                                 },
                                 arguments: [],
-                                directives: []
+                                directives: [],
+                                selectionSet: null
                             }, {
                                 kind: "Field",
+                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "profileImageURL"
@@ -4724,7 +4592,8 @@ webpackJsonp([51], {
                                         value: "300"
                                     }
                                 }],
-                                directives: []
+                                directives: [],
+                                selectionSet: null
                             }]
                         }
                     }]
@@ -4746,4 +4615,4 @@ webpackJsonp([51], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.settings-d3626f3b9e4fe08c8c5d22a15e691ba0.js.map
+//# sourceMappingURL=pages.settings-e1ac01321ced8e61ac9baf0db44c7d58.js.map
