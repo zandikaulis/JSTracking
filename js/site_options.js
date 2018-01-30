@@ -4750,13 +4750,13 @@ window.SiteOptions = {
         },
         "fd5223cb-3ae7-4a9f-9af8-ce0d44d4b9f1": {
             "name": "pad_thai",
-            "v": 2885,
+            "v": 2933,
             "t": 1,
             "groups": [{
-                "weight": 95,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 5,
+                "weight": 0,
                 "value": "treatment"
             }]
         },

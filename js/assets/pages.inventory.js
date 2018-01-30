@@ -1,4 +1,4 @@
-webpackJsonp([55], {
+webpackJsonp([54], {
     "1pvm": function(e, t) {},
     "8RY4": function(e, t, n) {
         var i = {
@@ -16,6 +16,7 @@ webpackJsonp([55], {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
+                        alias: null,
                         name: {
                             kind: "Name",
                             value: "currentUser"
@@ -26,14 +27,17 @@ webpackJsonp([55], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
+                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: []
+                                directives: [],
+                                selectionSet: null
                             }, {
                                 kind: "Field",
+                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "amazonMarketplaces"
@@ -53,12 +57,14 @@ webpackJsonp([55], {
                                 }
                             }, {
                                 kind: "Field",
+                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "bitsBalance"
                                 },
                                 arguments: [],
-                                directives: []
+                                directives: [],
+                                selectionSet: null
                             }]
                         }
                     }]
@@ -86,6 +92,146 @@ webpackJsonp([55], {
             })
         }(n("UP6l").definitions)), e.exports = i
     },
+    D6hH: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "Inventory_DropsList"
+                },
+                variableDefinitions: [],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "currentUser"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "inventory"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "drops"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                alias: null,
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "nodes"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: {
+                                                    kind: "SelectionSet",
+                                                    selections: [{
+                                                        kind: "Field",
+                                                        alias: null,
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "node"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: {
+                                                            kind: "SelectionSet",
+                                                            selections: [{
+                                                                kind: "Field",
+                                                                alias: null,
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "game"
+                                                                },
+                                                                arguments: [],
+                                                                directives: [],
+                                                                selectionSet: {
+                                                                    kind: "SelectionSet",
+                                                                    selections: [{
+                                                                        kind: "Field",
+                                                                        alias: null,
+                                                                        name: {
+                                                                            kind: "Name",
+                                                                            value: "name"
+                                                                        },
+                                                                        arguments: [],
+                                                                        directives: [],
+                                                                        selectionSet: null
+                                                                    }]
+                                                                }
+                                                            }, {
+                                                                kind: "Field",
+                                                                alias: null,
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "imageURL"
+                                                                },
+                                                                arguments: [],
+                                                                directives: [],
+                                                                selectionSet: null
+                                                            }]
+                                                        }
+                                                    }]
+                                                }
+                                            }]
+                                        }
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 114
+            }
+        };
+        n.loc.source = {
+            body: "query Inventory_DropsList {\ncurrentUser {\nid\ninventory {\ndrops {\nnodes {\nnode {\ngame {\nname\n}\nimageURL\n}\n}\n}\n}\n}\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
     DZCb: function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
@@ -96,32 +242,32 @@ webpackJsonp([55], {
             a = n("+xm8"),
             o = n("f2i/"),
             s = n("Aj/L"),
-            c = n("TToO"),
-            d = n("U7vG"),
-            l = n("6sO2"),
-            p = n("yWCw"),
-            m = n("j7/Y"),
-            u = n("w9tK"),
+            l = n("TToO"),
+            c = n("U7vG"),
+            d = n("6sO2"),
+            u = n("yWCw"),
+            p = n("j7/Y"),
+            m = n("w9tK"),
             g = n("vH/s"),
             v = n("CSlQ"),
             f = n("7vx8"),
             k = n("Odds"),
-            h = n("bdhb"),
+            h = n("D6hH"),
             y = (n("Jc4Y"), "drops-list_drop-award"),
             b = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getDropsDescription = function(e) {
-                        return e.length < 1 ? Object(l.d)("Drops are a fun new way to get in-game loot just for watching your favorite channels on Twitch! <x:link>Learn more</x:link>", {
+                        return e.length < 1 ? Object(d.d)("Drops are a fun new way to get in-game loot just for watching your favorite channels on Twitch! <x:link>Learn more</x:link>", {
                             "x:link": function(e) {
-                                return d.createElement("a", {
+                                return c.createElement("a", {
                                     href: "https://help.twitch.tv/customer/en/portal/topics/301257-getting-started/articles",
                                     target: "_blank"
                                 }, e)
                             }
-                        }, "DropsList") : Object(l.d)("Drops you have received are accessed within their corresponding games. Log into the game to experience your new content.", "DropsList")
+                        }, "DropsList") : Object(d.d)("Drops you have received are accessed within their corresponding games. Log into the game to experience your new content.", "DropsList")
                     }, t.renderDrop = function(e, t) {
-                        return d.createElement(k.V, {
+                        return c.createElement(k.V, {
                             key: t,
                             className: "drops-list__drop-award",
                             "data-test-selector": y,
@@ -131,33 +277,33 @@ webpackJsonp([55], {
                             },
                             display: k.H.InlineFlex,
                             flexDirection: k.J.Column
-                        }, d.createElement(k._19, {
+                        }, c.createElement(k._19, {
                             fullHeight: !0,
                             fullWidth: !0,
                             display: k.H.Flex,
                             justifyContent: k.U.Center,
                             padding: 2,
                             border: !0
-                        }, d.createElement("img", {
-                            alt: Object(l.d)("Drop image", "DropsListPresentation"),
+                        }, c.createElement("img", {
+                            alt: Object(d.d)("Drop image", "DropsListPresentation"),
                             src: e.node.imageURL
-                        })), d.createElement(k.V, {
+                        })), c.createElement(k.V, {
                             padding: {
                                 y: .5
                             }
-                        }, d.createElement(k._23, {
+                        }, c.createElement(k._23, {
                             bold: !0,
                             ellipsis: !0
                         }, e.node.game.name)))
                     }, t
                 }
-                return c.__extends(t, e), t.prototype.componentDidMount = function() {
+                return l.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.postRender()
                 }, t.prototype.componentDidUpdate = function() {
                     this.postRender()
                 }, t.prototype.render = function() {
                     var e = this;
-                    if (this.props.data.loading) return d.createElement(k.Z, {
+                    if (this.props.data.loading) return c.createElement(k.Z, {
                         fillContent: !0
                     });
                     if (!this.props.data || this.props.data.error || !this.props.data.currentUser || !this.props.data.currentUser.inventory.drops.nodes) return null;
@@ -165,144 +311,144 @@ webpackJsonp([55], {
                         n = t.map(function(t, n) {
                             return e.renderDrop(t, n)
                         });
-                    return d.createElement(k.V, {
+                    return c.createElement(k.V, {
                         "data-test-selector": "drops-list_wrapper",
                         margin: {
                             y: 1
                         }
-                    }, d.createElement(k.V, {
+                    }, c.createElement(k.V, {
                         display: k.H.Flex
-                    }, d.createElement(k.V, {
+                    }, c.createElement(k.V, {
                         margin: {
                             right: 1
                         }
-                    }, d.createElement(k._23, {
+                    }, c.createElement(k._23, {
                         type: k._28.H3
-                    }, Object(l.d)("Drops", "DropsList"))), d.createElement(k._23, {
+                    }, Object(d.d)("Drops", "DropsList"))), c.createElement(k._23, {
                         type: k._28.H3,
                         color: k.F.Alt2
-                    }, Object(l.e)(t.length))), d.createElement(k.V, {
+                    }, Object(d.e)(t.length))), c.createElement(k.V, {
                         margin: {
                             bottom: 1
                         }
-                    }, d.createElement(k._23, null, this.getDropsDescription(t))), n)
+                    }, c.createElement(k._23, null, this.getDropsDescription(t))), n)
                 }, t.prototype.postRender = function() {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
-                }, t = c.__decorate([Object(f.a)(h)], t)
-            }(d.Component),
-            _ = Object(r.d)(Object(v.d)("DropsList"))(b),
-            O = n("+Znq"),
-            E = n("iMOk"),
-            S = n("CFVp"),
+                }, t = l.__decorate([Object(f.a)(h)], t)
+            }(c.Component),
+            _ = Object(r.compose)(Object(v.d)("DropsList"))(b),
+            S = n("+Znq"),
+            O = n("iMOk"),
+            E = n("CFVp"),
             x = n("8RY4"),
-            T = function(e) {
+            D = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
-                    return t.bitsConfig = Object(S.a)(), t
+                    return t.bitsConfig = Object(E.a)(), t
                 }
-                return c.__extends(t, e), t.prototype.componentDidMount = function() {
+                return l.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.postRender()
                 }, t.prototype.componentDidUpdate = function() {
                     this.postRender()
                 }, t.prototype.render = function() {
-                    var e = Object(l.d)("Inventory", "InventoryTitleBar");
-                    if (this.props.data.loading || this.props.data.error) return d.createElement(k._19, {
+                    var e = Object(d.d)("Inventory", "InventoryTitleBar");
+                    if (this.props.data.loading || this.props.data.error) return c.createElement(k._19, {
                         className: "title-bar",
                         display: k.H.Flex,
                         borderBottom: !0,
                         padding: {
                             bottom: 1
                         }
-                    }, d.createElement(k.V, {
+                    }, c.createElement(k.V, {
                         flexGrow: 1
-                    }, d.createElement(k._23, {
+                    }, c.createElement(k._23, {
                         type: k._28.H2
-                    }, e)), d.createElement(k.V, {
+                    }, e)), c.createElement(k.V, {
                         display: k.H.Flex,
                         margin: {
                             right: 3
                         },
                         alignItems: k.c.Center
-                    }, d.createElement(k._3, {
+                    }, c.createElement(k._3, {
                         width: 135,
                         height: 30
-                    })), d.createElement(k.V, {
+                    })), c.createElement(k.V, {
                         alignSelf: k.d.Baseline
-                    }, d.createElement(k._3, {
+                    }, c.createElement(k._3, {
                         width: 180,
                         height: 30
                     })));
                     var t = this.props.data.currentUser.amazonMarketplaces.map(function(e) {
-                            return d.createElement(k.T, {
+                            return c.createElement(k.T, {
                                 key: e.id,
                                 linkTo: "https://" + e.orderHistoryRedirectURL,
                                 targetBlank: !0
                             }, e.displayText)
                         }),
-                        n = Object(l.d)("You have {bitsComponent}", {
-                            bitsComponent: d.createElement(E.a, {
+                        n = Object(d.d)("You have {bitsComponent}", {
+                            bitsComponent: c.createElement(O.a, {
                                 count: this.props.data.currentUser.bitsBalance,
                                 bitsConfig: this.bitsConfig,
                                 withImage: !0,
                                 withText: !0
                             })
                         }, "InventoryTitleBar");
-                    return d.createElement(k._19, {
+                    return c.createElement(k._19, {
                         className: "title-bar",
                         display: k.H.Flex,
                         borderBottom: !0,
                         padding: {
                             bottom: 1
                         }
-                    }, d.createElement(k.V, {
+                    }, c.createElement(k.V, {
                         flexGrow: 1
-                    }, d.createElement(k._23, {
+                    }, c.createElement(k._23, {
                         type: k._28.H2
-                    }, e)), d.createElement(k.V, {
+                    }, e)), c.createElement(k.V, {
                         display: k.H.Flex,
                         margin: {
                             right: 3
                         },
                         alignItems: k.c.Center
-                    }, d.createElement(k._23, null, n)), d.createElement(k.V, {
+                    }, c.createElement(k._23, null, n)), c.createElement(k.V, {
                         alignSelf: k.d.Baseline
-                    }, d.createElement(O.a, null, d.createElement(k.u, {
+                    }, c.createElement(S.a, null, c.createElement(k.u, {
                         type: k.z.Hollow
-                    }, Object(l.d)("View your Twitch Order History", "InventoryTitleBar")), d.createElement(k.p, null, d.createElement(k.V, {
+                    }, Object(d.d)("View your Twitch Order History", "InventoryTitleBar")), c.createElement(k.p, null, c.createElement(k.V, {
                         padding: 1
                     }, t)))))
                 }, t.prototype.postRender = function() {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
                 }, t
-            }(d.Component),
-            w = Object(r.d)(Object(v.d)("TitleBar"), Object(f.a)(x))(T),
-            D = function(e) {
+            }(c.Component),
+            T = Object(r.compose)(Object(v.d)("TitleBar"), Object(f.a)(x))(D),
+            w = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return c.__extends(t, e), t.prototype.componentDidMount = function() {
-                    l.n.setPageTitle(Object(l.d)("Inventory", "InventoryPage"))
+                return l.__extends(t, e), t.prototype.componentDidMount = function() {
+                    d.n.setPageTitle(Object(d.d)("Inventory", "InventoryPage"))
                 }, t.prototype.render = function() {
-                    return this.props.isLoggedIn ? d.createElement(k.V, {
+                    return this.props.isLoggedIn ? c.createElement(k.V, {
                         className: "inventory",
                         padding: 3
-                    }, d.createElement(w, null), d.createElement(_, null)) : (this.props.onAnonymousVisit(), d.createElement(p.a, {
-                        message: Object(l.d)("You must be logged in to view this page", "InventoryPage")
+                    }, c.createElement(T, null), c.createElement(_, null)) : (this.props.onAnonymousVisit(), c.createElement(u.a, {
+                        message: Object(d.d)("You must be logged in to view this page", "InventoryPage")
                     }))
                 }, t
-            }(d.Component),
-            j = Object(r.d)(Object(v.d)("InventoryPage", {
+            }(c.Component),
+            j = Object(r.compose)(Object(v.d)("InventoryPage", {
                 autoReportInteractive: !0,
-                destination: u.a.Inventory
-            }), Object(m.a)({
+                destination: m.a.Inventory
+            }), Object(p.a)({
                 location: g.PageviewLocation.Inventory
-            }))(D),
-            N = Object(i.b)(function(e) {
+            }))(w),
+            N = Object(i.a)(function(e) {
                 return {
                     isLoggedIn: Object(s.d)(e)
                 }
             }, function(e) {
-                return Object(r.b)({
+                return Object(r.bindActionCreators)({
                     onAnonymousVisit: function() {
                         return Object(o.f)(a.a.InventoryPage)
                     }
@@ -334,28 +480,34 @@ webpackJsonp([55], {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
+                        alias: null,
                         name: {
                             kind: "Name",
                             value: "id"
                         },
                         arguments: [],
-                        directives: []
+                        directives: [],
+                        selectionSet: null
                     }, {
                         kind: "Field",
+                        alias: null,
                         name: {
                             kind: "Name",
                             value: "displayText"
                         },
                         arguments: [],
-                        directives: []
+                        directives: [],
+                        selectionSet: null
                     }, {
                         kind: "Field",
+                        alias: null,
                         name: {
                             kind: "Name",
                             value: "orderHistoryRedirectURL"
                         },
                         arguments: [],
-                        directives: []
+                        directives: [],
+                        selectionSet: null
                     }]
                 }
             }],
@@ -374,134 +526,6 @@ webpackJsonp([55], {
         };
         e.exports = n
     },
-    bdhb: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "Inventory_DropsList_CurrentUser"
-                },
-                variableDefinitions: [],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "currentUser"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "inventory"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "drops"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "nodes"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: {
-                                                    kind: "SelectionSet",
-                                                    selections: [{
-                                                        kind: "Field",
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "node"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: {
-                                                            kind: "SelectionSet",
-                                                            selections: [{
-                                                                kind: "Field",
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "game"
-                                                                },
-                                                                arguments: [],
-                                                                directives: [],
-                                                                selectionSet: {
-                                                                    kind: "SelectionSet",
-                                                                    selections: [{
-                                                                        kind: "Field",
-                                                                        name: {
-                                                                            kind: "Name",
-                                                                            value: "name"
-                                                                        },
-                                                                        arguments: [],
-                                                                        directives: []
-                                                                    }]
-                                                                }
-                                                            }, {
-                                                                kind: "Field",
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "imageURL"
-                                                                },
-                                                                arguments: [],
-                                                                directives: []
-                                                            }]
-                                                        }
-                                                    }]
-                                                }
-                                            }]
-                                        }
-                                    }]
-                                }
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 126
-            }
-        };
-        n.loc.source = {
-            body: "query Inventory_DropsList_CurrentUser {\ncurrentUser {\nid\ninventory {\ndrops {\nnodes {\nnode {\ngame {\nname\n}\nimageURL\n}\n}\n}\n}\n}\n}",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
     iMOk: function(e, t, n) {
         "use strict";
 
@@ -511,15 +535,15 @@ webpackJsonp([55], {
             }, "Bits--BitsCount");
             if (e.withImage) {
                 var i = e.bitsConfig.indexedActions[s.f];
-                i || (i = Object(d.b)());
-                var p = i.orderedTiers.find(function(t) {
+                i || (i = Object(c.b)());
+                var u = i.orderedTiers.find(function(t) {
                     return t.bits <= e.count
                 });
-                if (p) {
-                    var m = Object(c.b)(p);
-                    return void 0 !== e.themeOverride && (e.themeOverride === o.a.Light ? m.dark = m.light : m.light = m.dark), t = r.createElement(l.a, {
+                if (u) {
+                    var p = Object(l.b)(u);
+                    return void 0 !== e.themeOverride && (e.themeOverride === o.a.Light ? p.dark = p.light : p.light = p.dark), t = r.createElement(d.a, {
                         className: "bits-count--img",
-                        sources: m
+                        sources: p
                     }), r.createElement("strong", {
                         className: "bits-count",
                         "data-a-target": "bits-count"
@@ -535,9 +559,9 @@ webpackJsonp([55], {
             a = n("6sO2"),
             o = n("NXs7"),
             s = n("3iBR"),
-            c = n("iydZ"),
-            d = n("CFVp"),
-            l = n("qe65");
+            l = n("iydZ"),
+            c = n("CFVp"),
+            d = n("qe65");
         n("1pvm");
         n.d(t, "a", function() {
             return i
@@ -561,15 +585,15 @@ webpackJsonp([55], {
                                 var a = i.referenceTracking,
                                     o = a.content,
                                     s = a.medium,
-                                    d = a.content_index;
-                                c.n.tracking.trackPageview(r.__assign({
+                                    c = a.content_index;
+                                l.n.tracking.trackPageview(r.__assign({
                                     content: o,
                                     medium: s,
-                                    content_index: d,
+                                    content_index: c,
                                     location: e.location
                                 }, t))
                             }
-                        }, c.i.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : c.i.warn("No latency tracker exists! This means no data will be sent to Spade.", e), i
+                        }, l.i.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : l.i.warn("No latency tracker exists! This means no data will be sent to Spade.", e), i
                     }
                     return r.__extends(i, n), i.prototype.componentDidMount = function() {
                         var e = this;
@@ -606,10 +630,10 @@ webpackJsonp([55], {
             a = n("OAwv"),
             o = n("U7vG"),
             s = n("F8kA"),
-            c = n("6sO2");
+            l = n("6sO2");
         n.d(t, "a", function() {
             return i
         })
     }
 });
-//# sourceMappingURL=pages.inventory-564a346adca8ca14721fdfb776532ed2.js.map
+//# sourceMappingURL=pages.inventory-dcd063b622846af1a06e34d331de705c.js.map
