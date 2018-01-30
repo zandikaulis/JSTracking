@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".33f00b2a8effa8bea8d8.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".f6d6c9835015b80ec3cc.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -23641,16 +23641,9 @@
                 function t(e, n) {
                     r(this, t);
                     var o = i(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-                    return o._root = e, o._store = n, o.subscribe(n, ["online", "playback"], o.handleEvent.bind(o)), o.subscribe(n, ["ui"], o.onUiUpdate.bind(o)), o
+                    return o._root = e, o._store = n, o.subscribe(n, ["online", "playback"], o.handleEvent.bind(o)), o
                 }
                 return o(t, e), s(t, [{
-                    key: "onUiUpdate",
-                    value: function() {
-                        var e = this._store.getState(),
-                            t = e.ui;
-                        this._root.setAttribute("data-mini", t.isMini)
-                    }
-                }, {
                     key: "handleEvent",
                     value: function() {
                         this._root.setAttribute("data-paused", this._store.getState().playback.paused), this._root.setAttribute("data-ended", this._store.getState().playback.ended)
@@ -23685,7 +23678,7 @@
                 },
                 function() {
                     var t = n;
-                    r(t), e.setAttribute("data-theatre", !1), e.setAttribute("data-mini", !1), e.setAttribute("data-showinfo", t.showInfo)
+                    r(t), e.setAttribute("data-theatre", !1), e.setAttribute("data-showinfo", t.showInfo)
                 }()
         }
         t.a = r;
@@ -27762,9 +27755,10 @@
             },
             x = /\r?\n|\r/g,
             R = function(e) {
-                var t = e.captions;
+                var t = e.captions,
+                    n = e.ui;
                 return {
-                    enabled: t.enabled,
+                    enabled: t.enabled && !n.isMini,
                     captionsData: t.data,
                     captionsStyle: t.style
                 }
@@ -27859,7 +27853,7 @@
                     u = Ra.a(!0),
                     c = Ia.u() === Ia.j ? null : Da;
                 return {
-                    app_version: "2018.01.30-215407+2f1f20c1371996841c112586bb9db435a40a2fc7",
+                    app_version: "2018.01.30-221130+53dc36471109d17ec98225aeb799ee128373339c",
                     flash_version: r,
                     referrer_url: i,
                     referrer_host: o.host,
@@ -37826,6 +37820,7 @@
                 showUIWithAutoHide: Ga.a.func,
                 mutedSegmentsAvailable: Ga.a.bool,
                 uiShowing: Ga.a.bool,
+                isMini: Ga.a.bool,
                 isShowingContentScreen: Ga.a.bool
             },
             Sp = function(e) {
@@ -37835,6 +37830,7 @@
                 return {
                     mutedSegmentsAvailable: t.mutedSegments.length > 0,
                     uiShowing: n.showUI,
+                    isMini: n.isMini,
                     isShowingContentScreen: r[0] === cc.g
                 }
             },
@@ -37862,26 +37858,27 @@
                         var e = this.props,
                             t = e.t,
                             n = e.isShowingContentScreen,
-                            r = e.onHoverElement,
-                            i = e.showUIWithAutoHide,
-                            o = e.mutedSegmentsAvailable,
-                            a = e.uiShowing,
-                            s = this.state.hasDismissedAlert,
-                            u = Qa()({
+                            r = e.isMini,
+                            i = e.onHoverElement,
+                            o = e.showUIWithAutoHide,
+                            a = e.mutedSegmentsAvailable,
+                            s = e.uiShowing,
+                            u = this.state.hasDismissedAlert,
+                            c = Qa()({
                                 "player-alert": !0,
-                                "muted-alert-on-ui": a
+                                "muted-alert-on-ui": s
                             });
-                        return o && n && !s ? Wa.a.createElement("div", {
-                            onMouseEnter: r,
-                            onMouseLeave: i,
-                            className: u
+                        return !a || !n || u || r ? null : Wa.a.createElement("div", {
+                            onMouseEnter: i,
+                            onMouseLeave: o,
+                            className: c
                         }, Wa.a.createElement("p", null, t("Audio for portions of this video has been muted as it appears to contain copyrighted content owned or controlled by a third party.")), Wa.a.createElement("button", {
                             type: "button",
                             className: "player-button player-button--noscale player-button--close",
                             onClick: this.handleCloseAlertClick
                         }, Wa.a.createElement("svg", null, Wa.a.createElement("use", {
                             xlinkHref: "#icon_close"
-                        })))) : null
+                        }))))
                     }
                 }, {
                     key: "handleCloseAlertClick",
@@ -38400,7 +38397,7 @@
                     height: e.playerDimensions.height,
                     videoResolution: e.stats.videoStats.videoResolution,
                     shouldEnableExtensions: e.env.platform !== fu.a && !Op.a.hasOwnProperty(e.env.playerType) && e.stream.contentType === Is.a && e.streamMetadata.streamType !== Up.b && e.playback.contentShowing && e.onlineStatus === wc.b,
-                    shouldShowExtensions: e.env.playerType !== Ia.s && e.ads.currentMetadata.contentType === ou.f.NONE,
+                    shouldShowExtensions: !e.ui.isMini && e.ads.currentMetadata.contentType === ou.f.NONE,
                     isLoggedIn: e.user.loggedInStatus === Fd.a,
                     login: e.user.name,
                     loginId: e.user.id,
@@ -38464,7 +38461,8 @@
                         var d = r[0],
                             p = Qa()({
                                 "extension-container": !0,
-                                hide: !n || d.anchor === Op.b
+                                hide: d.anchor === Op.b,
+                                invisible: !n
                             }),
                             f = Wa.a.createElement(mf, {
                                 playerHeight: c,
@@ -38839,8 +38837,10 @@
                 showTopBar: Ga.a.bool.isRequired
             },
             fh = function(e) {
+                var t = e.env,
+                    n = e.ui;
                 return {
-                    showTopBar: e.env.playerType !== Ia.d
+                    showTopBar: t.playerType !== Ia.d && !n.isMini
                 }
             };
         $t.propTypes = ph;
