@@ -18825,12 +18825,12 @@ webpackJsonp([34], {
                     }))
                 }, t
             }(c.Component),
-            nn = Object(i.b)(function(e) {
+            nn = Object(i.a)(function(e) {
                 return {
                     isLoggedIn: Object(u.d)(e)
                 }
             }, function(e) {
-                return Object(s.b)({
+                return Object(s.bindActionCreators)({
                     onAnonymousVisit: function() {
                         return Object(d.f)(o.a.DashboardPage)
                     }
@@ -21672,4 +21672,4 @@ webpackJsonp([34], {
         }
     }
 });
-//# sourceMappingURL=pages.teams-dashboard-04d990c48aa912c785b6165aa0e4811f.js.map
+//# sourceMappingURL=pages.teams-dashboard-6e178a22a8ba6f5a416538cd1c717ab2.js.map

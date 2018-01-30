@@ -1,4 +1,4 @@
-webpackJsonp([59], {
+webpackJsonp([58], {
     DkuH: function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
@@ -91,13 +91,13 @@ webpackJsonp([59], {
                     destination: m.a.ReportUserPage
                 })], t)
             }(c.Component),
-            y = Object(r.b)(function(e) {
+            y = Object(r.a)(function(e) {
                 return {
                     isLoggedIn: Object(s.d)(e),
                     currentUser: Object(s.c)(e)
                 }
             }, function(e) {
-                return Object(o.b)({
+                return Object(o.bindActionCreators)({
                     login: function() {
                         return Object(i.f)(a.a.ReportChannel)
                     }
@@ -135,13 +135,15 @@ webpackJsonp([59], {
                                 value: "String"
                             }
                         }
-                    }
+                    },
+                    defaultValue: null
                 }],
                 directives: [],
                 selectionSet: {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
+                        alias: null,
                         name: {
                             kind: "Name",
                             value: "user"
@@ -165,12 +167,14 @@ webpackJsonp([59], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
+                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: []
+                                directives: [],
+                                selectionSet: null
                             }]
                         }
                     }]
@@ -192,4 +196,4 @@ webpackJsonp([59], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.report-user-page-104e6ad52389727e730cac459b3faeda.js.map
+//# sourceMappingURL=pages.report-user-page-d0c31e5be1ad66a6187ab02bd2152911.js.map
