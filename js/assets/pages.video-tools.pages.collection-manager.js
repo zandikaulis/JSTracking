@@ -1,17 +1,17 @@
-webpackJsonp([74], {
+webpackJsonp([76], {
     "Dk8+": function(e, n, t) {
         "use strict";
         Object.defineProperty(n, "__esModule", {
             value: !0
         });
         var i = t("TToO"),
-            l = t("U7vG"),
-            a = t("BhyV"),
-            o = t("6sO2"),
-            r = t("j7/Y"),
-            s = t("w9tK"),
-            c = t("vH/s"),
-            d = t("CSlQ"),
+            a = t("U7vG"),
+            o = t("3zLD"),
+            r = t("6sO2"),
+            l = t("j7/Y"),
+            c = t("w9tK"),
+            d = t("vH/s"),
+            s = t("CSlQ"),
             u = t("PQ4i"),
             m = t("Odds"),
             p = function(e) {
@@ -20,19 +20,19 @@ webpackJsonp([74], {
                 }
                 return i.__extends(n, e), n.prototype.render = function() {
                     var e = this.props.collection;
-                    return l.createElement(m.V, {
+                    return a.createElement(m.V, {
                         display: m.H.Flex
-                    }, l.createElement(m.j, null, l.createElement("img", {
+                    }, a.createElement(m.j, null, a.createElement("img", {
                         src: e.thumbnailURL,
                         alt: e.title
-                    })), l.createElement("div", null, l.createElement(m._23, null, e.title), l.createElement(m._23, {
+                    })), a.createElement("div", null, a.createElement(m._23, null, e.title), a.createElement(m._23, {
                         "data-test-selector": "view-count"
-                    }, Object(o.d)("Total Views {views}", {
+                    }, Object(r.d)("Total Views {views}", {
                         views: e.viewCount || 0
                     }, "CollectionManager"))))
                 }, n
-            }(l.Component),
-            v = Object(a.compose)(Object(d.d)("CollectionManagerCard", {
+            }(a.Component),
+            v = Object(o.compose)(Object(s.d)("CollectionManagerCard", {
                 autoReportInteractive: !0
             }))(p),
             k = t("I9kX"),
@@ -44,9 +44,9 @@ webpackJsonp([74], {
                     e.data.loading && !this.props.data.loading && this.props.latencyTracking.reportInteractive()
                 }, n.prototype.render = function() {
                     var e;
-                    return e = this.props.data.loading ? this.collectionCardPlaceholders() : !this.props.data.error && this.props.data.user && this.props.data.user.collections ? this.props.data.user.collections.edges.length > 0 ? this.renderCollections(this.props.data.user.collections.edges) : this.noCollectionsCTA() : this.contentUnavaibleError(), l.createElement("div", null, l.createElement(m._23, {
+                    return e = this.props.data.loading ? this.collectionCardPlaceholders() : !this.props.data.error && this.props.data.user && this.props.data.user.collections ? this.props.data.user.collections.edges.length > 0 ? this.renderCollections(this.props.data.user.collections.edges) : this.noCollectionsCTA() : this.contentUnavaibleError(), a.createElement("div", null, a.createElement(m._23, {
                         type: m._28.H1
-                    }, Object(o.d)("Collections", "CollectionManager")), l.createElement(m.V, {
+                    }, Object(r.d)("Collections", "CollectionManager")), a.createElement(m.V, {
                         fullWidth: !0,
                         padding: {
                             right: 2
@@ -54,26 +54,26 @@ webpackJsonp([74], {
                     }, e))
                 }, n.prototype.renderCollections = function(e) {
                     return e.map(function(e, n) {
-                        return l.createElement(v, {
+                        return a.createElement(v, {
                             key: n,
                             collection: e.node
                         })
                     })
                 }, n.prototype.collectionCardPlaceholders = function() {
-                    return [l.createElement(u.a, {
+                    return [a.createElement(u.a, {
                         key: 1
-                    }), l.createElement(u.a, {
+                    }), a.createElement(u.a, {
                         key: 2
-                    }), l.createElement(u.a, {
+                    }), a.createElement(u.a, {
                         key: 3
                     })]
                 }, n.prototype.noCollectionsCTA = function() {
-                    return l.createElement("div", null)
+                    return a.createElement("div", null)
                 }, n.prototype.contentUnavaibleError = function() {
-                    return l.createElement("div", null)
+                    return a.createElement("div", null)
                 }, n
-            }(l.Component),
-            h = Object(a.compose)(Object(a.graphql)(k, {
+            }(a.Component),
+            h = Object(o.compose)(Object(o.graphql)(k, {
                 options: function(e) {
                     return {
                         variables: {
@@ -81,10 +81,10 @@ webpackJsonp([74], {
                         }
                     }
                 }
-            }), Object(d.d)("CollectionManager", {
-                destination: s.a.VideoManagerCollectionsManager
-            }), Object(r.a)({
-                location: c.PageviewLocation.VideoManagerCollectionManager,
+            }), Object(s.d)("CollectionManager", {
+                destination: c.a.VideoManagerCollectionsManager
+            }), Object(l.a)({
+                location: d.PageviewLocation.VideoManagerCollectionManager,
                 properties: function(e) {
                     return {
                         channel: e.match.params.creatorLogin,
@@ -127,15 +127,13 @@ webpackJsonp([74], {
                                 value: "String"
                             }
                         }
-                    },
-                    defaultValue: null
+                    }
                 }],
                 directives: [],
                 selectionSet: {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "user"
@@ -159,17 +157,14 @@ webpackJsonp([74], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "collections"
@@ -180,7 +175,6 @@ webpackJsonp([74], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "edges"
@@ -191,17 +185,14 @@ webpackJsonp([74], {
                                             kind: "SelectionSet",
                                             selections: [{
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "cursor"
                                                 },
                                                 arguments: [],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }, {
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "node"
@@ -212,47 +203,38 @@ webpackJsonp([74], {
                                                     kind: "SelectionSet",
                                                     selections: [{
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "id"
                                                         },
                                                         arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "title"
                                                         },
                                                         arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "thumbnailURL"
                                                         },
                                                         arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "viewCount"
                                                         },
                                                         arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "items"
@@ -263,14 +245,12 @@ webpackJsonp([74], {
                                                             kind: "SelectionSet",
                                                             selections: [{
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "totalCount"
                                                                 },
                                                                 arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }]
                                                         }
                                                     }]
@@ -279,7 +259,6 @@ webpackJsonp([74], {
                                         }
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "pageInfo"
@@ -290,14 +269,12 @@ webpackJsonp([74], {
                                             kind: "SelectionSet",
                                             selections: [{
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "hasNextPage"
                                                 },
                                                 arguments: [],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }]
                                         }
                                     }]
@@ -323,4 +300,4 @@ webpackJsonp([74], {
         e.exports = t
     }
 });
-//# sourceMappingURL=pages.video-tools.pages.collection-manager-54302b098a03292d0f2d5027275789e5.js.map
+//# sourceMappingURL=pages.video-tools.pages.collection-manager-b6653fe2dcfa34d6445cfaf866b8c2f7.js.map
