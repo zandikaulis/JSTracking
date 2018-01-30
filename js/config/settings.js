@@ -307,7 +307,7 @@ window.__twilightSettings = {
         },
         "5cfa2a90-54f0-4dcc-b28c-45f33935718e": {
             "name": "TWILIGHT_VOD_REDITUS",
-            "v": 2936,
+            "v": 2940,
             "t": 1,
             "groups": [{
                 "weight": 33,
