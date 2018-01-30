@@ -1,4 +1,4 @@
-webpackJsonp([53], {
+webpackJsonp([52], {
     "2b/B": function(e, t, n) {
         "use strict";
         var a = n("RH2O"),
@@ -10,8 +10,8 @@ webpackJsonp([53], {
             c = n("TToO"),
             d = n("HW6M"),
             p = n("U7vG"),
-            m = n("6sO2"),
-            u = n("rCmJ"),
+            u = n("6sO2"),
+            m = n("rCmJ"),
             h = n("7vx8"),
             f = n("NXs7"),
             g = n("VAT8"),
@@ -90,7 +90,7 @@ webpackJsonp([53], {
                             }
                         }, p.createElement(k.E, {
                             id: "dark-mode-toggle",
-                            label: Object(m.d)("Dark Mode", "MinimalUser"),
+                            label: Object(u.d)("Dark Mode", "MinimalUser"),
                             "data-a-target": "dark-mode-toggle",
                             "data-test-selector": "dark-mode-toggle",
                             "data-a-value": this.props.theme,
@@ -105,7 +105,7 @@ webpackJsonp([53], {
                             }, {
                                 "minimal-top-nav__dropdown": !this.state.dropdownOpen
                             });
-                        return p.createElement(u.a, {
+                        return p.createElement(m.a, {
                             onClickOut: this.onClickOut,
                             className: t
                         }, p.createElement(k.V, {
@@ -176,24 +176,24 @@ webpackJsonp([53], {
                             asset: k._11.NavLogout,
                             height: 18,
                             width: 18
-                        })), p.createElement(k._23, null, Object(m.d)("Log Out", "MinimalUser"))))))
+                        })), p.createElement(k._23, null, Object(u.d)("Log Out", "MinimalUser"))))))
                     }
                     return p.createElement(k.V, {
                         margin: 1
                     }, p.createElement(k.u, {
                         onClick: this.onLoginClick
-                    }, Object(m.d)("Log in", "MinimalUser")))
+                    }, Object(u.d)("Log in", "MinimalUser")))
                 }, t.prototype.reportInteractive = function() {
                     !this.props.data || this.props.data.loading && !this.props.data.error || this.props.latencyTracking.reportInteractive()
                 }, t = c.__decorate([Object(v.d)("MinimalUser"), Object(h.a)(_)], t)
             }(p.Component)),
-            b = Object(a.b)(function(e) {
+            b = Object(a.a)(function(e) {
                 return {
                     isLoggedIn: Object(s.d)(e),
                     theme: e.ui.theme
                 }
             }, function(e) {
-                return Object(r.b)({
+                return Object(r.bindActionCreators)({
                     logout: o.g,
                     login: function() {
                         return o.f(i.a.TopNavLoginButton)
@@ -229,19 +229,19 @@ webpackJsonp([53], {
             c = n("ZyA2"),
             d = n("VAT8"),
             p = n("tnNl"),
-            m = n("Odds"),
-            u = s.a.wrap(function() {
-                return n.e(71).then(n.bind(null, "HQb3"))
+            u = n("Odds"),
+            m = s.a.wrap(function() {
+                return n.e(69).then(n.bind(null, "HQb3"))
             }, "BitsLandingPage"),
             h = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return o.__extends(t, e), t.prototype.render = function() {
-                    return l.createElement(m.V, {
+                    return l.createElement(u.V, {
                         className: "bits-root " + Object(d.c)(this.props.theme),
-                        position: m._4.Absolute,
-                        overflow: m._0.Hidden,
+                        position: u._4.Absolute,
+                        overflow: u._0.Hidden,
                         attachRight: !0,
                         attachTop: !0,
                         attachBottom: !0,
@@ -251,14 +251,14 @@ webpackJsonp([53], {
                         }
                     }, l.createElement(p.a, {
                         darkModeEnabled: !0
-                    }), l.createElement(m.V, {
-                        display: m.H.Flex,
-                        flexWrap: m.K.NoWrap,
+                    }), l.createElement(u.V, {
+                        display: u.H.Flex,
+                        flexWrap: u.K.NoWrap,
                         fullHeight: !0,
-                        position: m._4.Relative
-                    }, l.createElement(m.Q, {
-                        display: m.H.Flex,
-                        position: m._4.Relative,
+                        position: u._4.Relative
+                    }, l.createElement(u.Q, {
+                        display: u.H.Flex,
+                        position: u._4.Relative,
                         flexGrow: 1,
                         fullHeight: !0,
                         fullWidth: !0
@@ -266,11 +266,11 @@ webpackJsonp([53], {
                         className: "bits-root__main"
                     }, l.createElement(r.d, {
                         path: "/bits",
-                        component: u
+                        component: m
                     }))), l.createElement(c.a, null)))
                 }, t
             }(l.Component),
-            f = Object(a.b)(function(e) {
+            f = Object(a.a)(function(e) {
                 return {
                     firstPageLoaded: !!e.session.firstPageLoaded,
                     isLoggedIn: Object(i.d)(e),
@@ -298,6 +298,7 @@ webpackJsonp([53], {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
+                        alias: null,
                         name: {
                             kind: "Name",
                             value: "currentUser"
@@ -308,22 +309,27 @@ webpackJsonp([53], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
+                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: []
+                                directives: [],
+                                selectionSet: null
                             }, {
                                 kind: "Field",
+                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "displayName"
                                 },
                                 arguments: [],
-                                directives: []
+                                directives: [],
+                                selectionSet: null
                             }, {
                                 kind: "Field",
+                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "profileImageURL"
@@ -339,7 +345,8 @@ webpackJsonp([53], {
                                         value: "70"
                                     }
                                 }],
-                                directives: []
+                                directives: [],
+                                selectionSet: null
                             }]
                         }
                     }]
@@ -524,4 +531,4 @@ webpackJsonp([53], {
             l = n("vH/s")
     }
 });
-//# sourceMappingURL=pages.bits-b83be39edef2ce477f0eaf6ff83d90d4.js.map
+//# sourceMappingURL=pages.bits-2041ed48963e77d4a670cf4775294cc7.js.map
