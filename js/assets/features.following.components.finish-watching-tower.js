@@ -24,13 +24,15 @@ webpackJsonp([67], {
                             kind: "Name",
                             value: "Int"
                         }
-                    }
+                    },
+                    defaultValue: null
                 }],
                 directives: [],
                 selectionSet: {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
+                        alias: null,
                         name: {
                             kind: "Name",
                             value: "currentUser"
@@ -41,22 +43,27 @@ webpackJsonp([67], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
+                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: []
+                                directives: [],
+                                selectionSet: null
                             }, {
                                 kind: "Field",
+                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "login"
                                 },
                                 arguments: [],
-                                directives: []
+                                directives: [],
+                                selectionSet: null
                             }, {
                                 kind: "Field",
+                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "viewedVideos"
@@ -80,6 +87,7 @@ webpackJsonp([67], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
+                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "edges"
@@ -90,6 +98,7 @@ webpackJsonp([67], {
                                             kind: "SelectionSet",
                                             selections: [{
                                                 kind: "Field",
+                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "node"
@@ -145,12 +154,12 @@ webpackJsonp([67], {
         });
         var t = n("TToO"),
             r = n("U7vG"),
-            o = n("3zLD"),
-            a = n("6sO2"),
+            a = n("BhyV"),
+            o = n("6sO2"),
             d = n("7vx8"),
             s = n("vH/s"),
-            c = n("peXu"),
-            l = n("CSlQ"),
+            l = n("peXu"),
+            c = n("CSlQ"),
             u = n("VDV3"),
             m = n("Odds"),
             p = n("0shC"),
@@ -168,9 +177,9 @@ webpackJsonp([67], {
                         return e.node
                     });
                     if (i && this.props.directoryWidth > 0) {
-                        var n = Object(c.a)(this.props.directoryWidth, 240, 2);
+                        var n = Object(l.a)(this.props.directoryWidth, 240, 2);
                         this.props.viewAllButton && i.length > n ? (i = i.slice(0, n - 1), e = {
-                            subHeader: Object(a.d)("Viewing History", "ViewingHistory"),
+                            subHeader: Object(o.d)("Viewing History", "ViewingHistory"),
                             linkTo: {
                                 pathname: "/directory/videos/history",
                                 state: {
@@ -189,7 +198,7 @@ webpackJsonp([67], {
                         color: m.F.Alt2,
                         fontSize: m.L.Size5,
                         transform: m._27.Uppercase
-                    }, Object(a.d)("Resume Watching", "viewedVideos"))), r.createElement(u.b, {
+                    }, Object(o.d)("Resume Watching", "viewedVideos"))), r.createElement(u.b, {
                         videos: i,
                         videoCardSize: m._35.Medium,
                         trackingMedium: s.PageviewMedium.Following,
@@ -198,13 +207,13 @@ webpackJsonp([67], {
                     }))
                 }, i
             }(r.Component),
-            g = Object(o.compose)(Object(d.a)(p, {
+            g = Object(a.compose)(Object(d.a)(p, {
                 options: {
                     variables: {
                         limit: 30
                     }
                 }
-            }), Object(l.d)("ViewedVideos"))(v);
+            }), Object(c.d)("ViewedVideos"))(v);
         n.d(i, "FinishWatchingTowerComponent", function() {
             return v
         }), n.d(i, "FinishWatchingTower", function() {
@@ -212,4 +221,4 @@ webpackJsonp([67], {
         })
     }
 });
-//# sourceMappingURL=features.following.components.finish-watching-tower-080333ace862852b650ec1cb42ab0209.js.map
+//# sourceMappingURL=features.following.components.finish-watching-tower-bd44cf82cc0d3086373e6fc56f3fe029.js.map

@@ -4253,603 +4253,6 @@ webpackJsonp([42], {
     },
     "67ft": function(e, t) {},
     "6O9f": function(e, t) {},
-    "6Vcl": function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "Whispers_Whispers_UserWhisperThreads"
-                },
-                variableDefinitions: [{
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "cursor"
-                        }
-                    },
-                    type: {
-                        kind: "NamedType",
-                        name: {
-                            kind: "Name",
-                            value: "Cursor"
-                        }
-                    },
-                    defaultValue: null
-                }],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "currentUser"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "login"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "emoteSets"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "id"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: null
-                                    }, {
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "emotes"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "id"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }, {
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "token"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }]
-                                        }
-                                    }]
-                                }
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "whisperThreads"
-                                },
-                                arguments: [{
-                                    kind: "Argument",
-                                    name: {
-                                        kind: "Name",
-                                        value: "first"
-                                    },
-                                    value: {
-                                        kind: "IntValue",
-                                        value: "10"
-                                    }
-                                }, {
-                                    kind: "Argument",
-                                    name: {
-                                        kind: "Name",
-                                        value: "after"
-                                    },
-                                    value: {
-                                        kind: "Variable",
-                                        name: {
-                                            kind: "Name",
-                                            value: "cursor"
-                                        }
-                                    }
-                                }],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        alias: null,
-                                        name: {
-                                            kind: "Name",
-                                            value: "edges"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "cursor"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: null
-                                            }, {
-                                                kind: "Field",
-                                                alias: null,
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "node"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: {
-                                                    kind: "SelectionSet",
-                                                    selections: [{
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "id"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "participants"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: {
-                                                            kind: "SelectionSet",
-                                                            selections: [{
-                                                                kind: "Field",
-                                                                alias: null,
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "id"
-                                                                },
-                                                                arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
-                                                            }, {
-                                                                kind: "Field",
-                                                                alias: null,
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "chatColor"
-                                                                },
-                                                                arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
-                                                            }, {
-                                                                kind: "Field",
-                                                                alias: null,
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "displayName"
-                                                                },
-                                                                arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
-                                                            }, {
-                                                                kind: "Field",
-                                                                alias: null,
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "profileImageURL"
-                                                                },
-                                                                arguments: [{
-                                                                    kind: "Argument",
-                                                                    name: {
-                                                                        kind: "Name",
-                                                                        value: "width"
-                                                                    },
-                                                                    value: {
-                                                                        kind: "IntValue",
-                                                                        value: "70"
-                                                                    }
-                                                                }],
-                                                                directives: [],
-                                                                selectionSet: null
-                                                            }, {
-                                                                kind: "Field",
-                                                                alias: null,
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "login"
-                                                                },
-                                                                arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
-                                                            }]
-                                                        }
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "spamInfo"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: {
-                                                            kind: "SelectionSet",
-                                                            selections: [{
-                                                                kind: "Field",
-                                                                alias: null,
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "lastMarkedNotSpamAt"
-                                                                },
-                                                                arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
-                                                            }, {
-                                                                kind: "Field",
-                                                                alias: null,
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "likelihood"
-                                                                },
-                                                                arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
-                                                            }]
-                                                        }
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "messages"
-                                                        },
-                                                        arguments: [{
-                                                            kind: "Argument",
-                                                            name: {
-                                                                kind: "Name",
-                                                                value: "first"
-                                                            },
-                                                            value: {
-                                                                kind: "IntValue",
-                                                                value: "20"
-                                                            }
-                                                        }],
-                                                        directives: [],
-                                                        selectionSet: {
-                                                            kind: "SelectionSet",
-                                                            selections: [{
-                                                                kind: "Field",
-                                                                alias: null,
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "edges"
-                                                                },
-                                                                arguments: [],
-                                                                directives: [],
-                                                                selectionSet: {
-                                                                    kind: "SelectionSet",
-                                                                    selections: [{
-                                                                        kind: "Field",
-                                                                        alias: null,
-                                                                        name: {
-                                                                            kind: "Name",
-                                                                            value: "cursor"
-                                                                        },
-                                                                        arguments: [],
-                                                                        directives: [],
-                                                                        selectionSet: null
-                                                                    }, {
-                                                                        kind: "Field",
-                                                                        alias: null,
-                                                                        name: {
-                                                                            kind: "Name",
-                                                                            value: "node"
-                                                                        },
-                                                                        arguments: [],
-                                                                        directives: [],
-                                                                        selectionSet: {
-                                                                            kind: "SelectionSet",
-                                                                            selections: [{
-                                                                                kind: "Field",
-                                                                                alias: null,
-                                                                                name: {
-                                                                                    kind: "Name",
-                                                                                    value: "id"
-                                                                                },
-                                                                                arguments: [],
-                                                                                directives: [],
-                                                                                selectionSet: null
-                                                                            }, {
-                                                                                kind: "Field",
-                                                                                alias: null,
-                                                                                name: {
-                                                                                    kind: "Name",
-                                                                                    value: "sentAt"
-                                                                                },
-                                                                                arguments: [],
-                                                                                directives: [],
-                                                                                selectionSet: null
-                                                                            }, {
-                                                                                kind: "Field",
-                                                                                alias: null,
-                                                                                name: {
-                                                                                    kind: "Name",
-                                                                                    value: "editedAt"
-                                                                                },
-                                                                                arguments: [],
-                                                                                directives: [],
-                                                                                selectionSet: null
-                                                                            }, {
-                                                                                kind: "Field",
-                                                                                alias: null,
-                                                                                name: {
-                                                                                    kind: "Name",
-                                                                                    value: "deletedAt"
-                                                                                },
-                                                                                arguments: [],
-                                                                                directives: [],
-                                                                                selectionSet: null
-                                                                            }, {
-                                                                                kind: "Field",
-                                                                                alias: null,
-                                                                                name: {
-                                                                                    kind: "Name",
-                                                                                    value: "from"
-                                                                                },
-                                                                                arguments: [],
-                                                                                directives: [],
-                                                                                selectionSet: {
-                                                                                    kind: "SelectionSet",
-                                                                                    selections: [{
-                                                                                        kind: "Field",
-                                                                                        alias: null,
-                                                                                        name: {
-                                                                                            kind: "Name",
-                                                                                            value: "id"
-                                                                                        },
-                                                                                        arguments: [],
-                                                                                        directives: [],
-                                                                                        selectionSet: null
-                                                                                    }]
-                                                                                }
-                                                                            }, {
-                                                                                kind: "Field",
-                                                                                alias: null,
-                                                                                name: {
-                                                                                    kind: "Name",
-                                                                                    value: "content"
-                                                                                },
-                                                                                arguments: [],
-                                                                                directives: [],
-                                                                                selectionSet: {
-                                                                                    kind: "SelectionSet",
-                                                                                    selections: [{
-                                                                                        kind: "Field",
-                                                                                        alias: null,
-                                                                                        name: {
-                                                                                            kind: "Name",
-                                                                                            value: "content"
-                                                                                        },
-                                                                                        arguments: [],
-                                                                                        directives: [],
-                                                                                        selectionSet: null
-                                                                                    }, {
-                                                                                        kind: "Field",
-                                                                                        alias: null,
-                                                                                        name: {
-                                                                                            kind: "Name",
-                                                                                            value: "emotes"
-                                                                                        },
-                                                                                        arguments: [],
-                                                                                        directives: [],
-                                                                                        selectionSet: {
-                                                                                            kind: "SelectionSet",
-                                                                                            selections: [{
-                                                                                                kind: "Field",
-                                                                                                alias: null,
-                                                                                                name: {
-                                                                                                    kind: "Name",
-                                                                                                    value: "id"
-                                                                                                },
-                                                                                                arguments: [],
-                                                                                                directives: [],
-                                                                                                selectionSet: null
-                                                                                            }, {
-                                                                                                kind: "Field",
-                                                                                                alias: null,
-                                                                                                name: {
-                                                                                                    kind: "Name",
-                                                                                                    value: "emoteID"
-                                                                                                },
-                                                                                                arguments: [],
-                                                                                                directives: [],
-                                                                                                selectionSet: null
-                                                                                            }, {
-                                                                                                kind: "Field",
-                                                                                                alias: null,
-                                                                                                name: {
-                                                                                                    kind: "Name",
-                                                                                                    value: "setID"
-                                                                                                },
-                                                                                                arguments: [],
-                                                                                                directives: [],
-                                                                                                selectionSet: null
-                                                                                            }, {
-                                                                                                kind: "Field",
-                                                                                                alias: null,
-                                                                                                name: {
-                                                                                                    kind: "Name",
-                                                                                                    value: "from"
-                                                                                                },
-                                                                                                arguments: [],
-                                                                                                directives: [],
-                                                                                                selectionSet: null
-                                                                                            }, {
-                                                                                                kind: "Field",
-                                                                                                alias: null,
-                                                                                                name: {
-                                                                                                    kind: "Name",
-                                                                                                    value: "to"
-                                                                                                },
-                                                                                                arguments: [],
-                                                                                                directives: [],
-                                                                                                selectionSet: null
-                                                                                            }]
-                                                                                        }
-                                                                                    }]
-                                                                                }
-                                                                            }]
-                                                                        }
-                                                                    }]
-                                                                }
-                                                            }]
-                                                        }
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "userLastMessageRead"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: {
-                                                            kind: "SelectionSet",
-                                                            selections: [{
-                                                                kind: "Field",
-                                                                alias: null,
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "id"
-                                                                },
-                                                                arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
-                                                            }, {
-                                                                kind: "Field",
-                                                                alias: null,
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "sentAt"
-                                                                },
-                                                                arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
-                                                            }]
-                                                        }
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "isMuted"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "isArchived"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }, {
-                                                        kind: "Field",
-                                                        alias: null,
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "unreadMessagesCount"
-                                                        },
-                                                        arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
-                                                    }]
-                                                }
-                                            }]
-                                        }
-                                    }]
-                                }
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 538
-            }
-        };
-        n.loc.source = {
-            body: "query Whispers_Whispers_UserWhisperThreads($cursor: Cursor) {\ncurrentUser {\nid\nlogin\nemoteSets {\nid\nemotes {\nid\ntoken\n}\n}\nwhisperThreads(first: 10 after: $cursor) {\nedges {\ncursor\nnode {\nid\nparticipants {\nid\nchatColor\ndisplayName\nprofileImageURL(width: 70)\nlogin\n}\nspamInfo {\nlastMarkedNotSpamAt\nlikelihood\n}\nmessages(first: 20) {\nedges {\ncursor\nnode {\nid\nsentAt\neditedAt\ndeletedAt\nfrom {\nid\n}\ncontent {\ncontent\nemotes {\nid\nemoteID\nsetID\nfrom\nto\n}\n}\n}\n}\n}\nuserLastMessageRead {\nid\nsentAt\n}\nisMuted\nisArchived\nunreadMessagesCount\n}\n}\n}\n}\n}",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
     "6WAQ": function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
@@ -6605,6 +6008,603 @@ webpackJsonp([42], {
             return l
         })
     },
+    "8p/O": function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "Whispers_Whispers_UserWhisperThreads"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "cursor"
+                        }
+                    },
+                    type: {
+                        kind: "NamedType",
+                        name: {
+                            kind: "Name",
+                            value: "Cursor"
+                        }
+                    },
+                    defaultValue: null
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "currentUser"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "login"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "emoteSets"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "id"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: null
+                                    }, {
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "emotes"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                alias: null,
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "id"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: null
+                                            }, {
+                                                kind: "Field",
+                                                alias: null,
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "token"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: null
+                                            }]
+                                        }
+                                    }]
+                                }
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "whisperThreads"
+                                },
+                                arguments: [{
+                                    kind: "Argument",
+                                    name: {
+                                        kind: "Name",
+                                        value: "first"
+                                    },
+                                    value: {
+                                        kind: "IntValue",
+                                        value: "10"
+                                    }
+                                }, {
+                                    kind: "Argument",
+                                    name: {
+                                        kind: "Name",
+                                        value: "after"
+                                    },
+                                    value: {
+                                        kind: "Variable",
+                                        name: {
+                                            kind: "Name",
+                                            value: "cursor"
+                                        }
+                                    }
+                                }],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        alias: null,
+                                        name: {
+                                            kind: "Name",
+                                            value: "edges"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                alias: null,
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "cursor"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: null
+                                            }, {
+                                                kind: "Field",
+                                                alias: null,
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "node"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: {
+                                                    kind: "SelectionSet",
+                                                    selections: [{
+                                                        kind: "Field",
+                                                        alias: null,
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "id"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: null
+                                                    }, {
+                                                        kind: "Field",
+                                                        alias: null,
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "participants"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: {
+                                                            kind: "SelectionSet",
+                                                            selections: [{
+                                                                kind: "Field",
+                                                                alias: null,
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "id"
+                                                                },
+                                                                arguments: [],
+                                                                directives: [],
+                                                                selectionSet: null
+                                                            }, {
+                                                                kind: "Field",
+                                                                alias: null,
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "chatColor"
+                                                                },
+                                                                arguments: [],
+                                                                directives: [],
+                                                                selectionSet: null
+                                                            }, {
+                                                                kind: "Field",
+                                                                alias: null,
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "displayName"
+                                                                },
+                                                                arguments: [],
+                                                                directives: [],
+                                                                selectionSet: null
+                                                            }, {
+                                                                kind: "Field",
+                                                                alias: null,
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "profileImageURL"
+                                                                },
+                                                                arguments: [{
+                                                                    kind: "Argument",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "width"
+                                                                    },
+                                                                    value: {
+                                                                        kind: "IntValue",
+                                                                        value: "70"
+                                                                    }
+                                                                }],
+                                                                directives: [],
+                                                                selectionSet: null
+                                                            }, {
+                                                                kind: "Field",
+                                                                alias: null,
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "login"
+                                                                },
+                                                                arguments: [],
+                                                                directives: [],
+                                                                selectionSet: null
+                                                            }]
+                                                        }
+                                                    }, {
+                                                        kind: "Field",
+                                                        alias: null,
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "spamInfo"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: {
+                                                            kind: "SelectionSet",
+                                                            selections: [{
+                                                                kind: "Field",
+                                                                alias: null,
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "lastMarkedNotSpamAt"
+                                                                },
+                                                                arguments: [],
+                                                                directives: [],
+                                                                selectionSet: null
+                                                            }, {
+                                                                kind: "Field",
+                                                                alias: null,
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "likelihood"
+                                                                },
+                                                                arguments: [],
+                                                                directives: [],
+                                                                selectionSet: null
+                                                            }]
+                                                        }
+                                                    }, {
+                                                        kind: "Field",
+                                                        alias: null,
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "messages"
+                                                        },
+                                                        arguments: [{
+                                                            kind: "Argument",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "first"
+                                                            },
+                                                            value: {
+                                                                kind: "IntValue",
+                                                                value: "20"
+                                                            }
+                                                        }],
+                                                        directives: [],
+                                                        selectionSet: {
+                                                            kind: "SelectionSet",
+                                                            selections: [{
+                                                                kind: "Field",
+                                                                alias: null,
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "edges"
+                                                                },
+                                                                arguments: [],
+                                                                directives: [],
+                                                                selectionSet: {
+                                                                    kind: "SelectionSet",
+                                                                    selections: [{
+                                                                        kind: "Field",
+                                                                        alias: null,
+                                                                        name: {
+                                                                            kind: "Name",
+                                                                            value: "cursor"
+                                                                        },
+                                                                        arguments: [],
+                                                                        directives: [],
+                                                                        selectionSet: null
+                                                                    }, {
+                                                                        kind: "Field",
+                                                                        alias: null,
+                                                                        name: {
+                                                                            kind: "Name",
+                                                                            value: "node"
+                                                                        },
+                                                                        arguments: [],
+                                                                        directives: [],
+                                                                        selectionSet: {
+                                                                            kind: "SelectionSet",
+                                                                            selections: [{
+                                                                                kind: "Field",
+                                                                                alias: null,
+                                                                                name: {
+                                                                                    kind: "Name",
+                                                                                    value: "id"
+                                                                                },
+                                                                                arguments: [],
+                                                                                directives: [],
+                                                                                selectionSet: null
+                                                                            }, {
+                                                                                kind: "Field",
+                                                                                alias: null,
+                                                                                name: {
+                                                                                    kind: "Name",
+                                                                                    value: "sentAt"
+                                                                                },
+                                                                                arguments: [],
+                                                                                directives: [],
+                                                                                selectionSet: null
+                                                                            }, {
+                                                                                kind: "Field",
+                                                                                alias: null,
+                                                                                name: {
+                                                                                    kind: "Name",
+                                                                                    value: "editedAt"
+                                                                                },
+                                                                                arguments: [],
+                                                                                directives: [],
+                                                                                selectionSet: null
+                                                                            }, {
+                                                                                kind: "Field",
+                                                                                alias: null,
+                                                                                name: {
+                                                                                    kind: "Name",
+                                                                                    value: "deletedAt"
+                                                                                },
+                                                                                arguments: [],
+                                                                                directives: [],
+                                                                                selectionSet: null
+                                                                            }, {
+                                                                                kind: "Field",
+                                                                                alias: null,
+                                                                                name: {
+                                                                                    kind: "Name",
+                                                                                    value: "from"
+                                                                                },
+                                                                                arguments: [],
+                                                                                directives: [],
+                                                                                selectionSet: {
+                                                                                    kind: "SelectionSet",
+                                                                                    selections: [{
+                                                                                        kind: "Field",
+                                                                                        alias: null,
+                                                                                        name: {
+                                                                                            kind: "Name",
+                                                                                            value: "id"
+                                                                                        },
+                                                                                        arguments: [],
+                                                                                        directives: [],
+                                                                                        selectionSet: null
+                                                                                    }]
+                                                                                }
+                                                                            }, {
+                                                                                kind: "Field",
+                                                                                alias: null,
+                                                                                name: {
+                                                                                    kind: "Name",
+                                                                                    value: "content"
+                                                                                },
+                                                                                arguments: [],
+                                                                                directives: [],
+                                                                                selectionSet: {
+                                                                                    kind: "SelectionSet",
+                                                                                    selections: [{
+                                                                                        kind: "Field",
+                                                                                        alias: null,
+                                                                                        name: {
+                                                                                            kind: "Name",
+                                                                                            value: "content"
+                                                                                        },
+                                                                                        arguments: [],
+                                                                                        directives: [],
+                                                                                        selectionSet: null
+                                                                                    }, {
+                                                                                        kind: "Field",
+                                                                                        alias: null,
+                                                                                        name: {
+                                                                                            kind: "Name",
+                                                                                            value: "emotes"
+                                                                                        },
+                                                                                        arguments: [],
+                                                                                        directives: [],
+                                                                                        selectionSet: {
+                                                                                            kind: "SelectionSet",
+                                                                                            selections: [{
+                                                                                                kind: "Field",
+                                                                                                alias: null,
+                                                                                                name: {
+                                                                                                    kind: "Name",
+                                                                                                    value: "id"
+                                                                                                },
+                                                                                                arguments: [],
+                                                                                                directives: [],
+                                                                                                selectionSet: null
+                                                                                            }, {
+                                                                                                kind: "Field",
+                                                                                                alias: null,
+                                                                                                name: {
+                                                                                                    kind: "Name",
+                                                                                                    value: "emoteID"
+                                                                                                },
+                                                                                                arguments: [],
+                                                                                                directives: [],
+                                                                                                selectionSet: null
+                                                                                            }, {
+                                                                                                kind: "Field",
+                                                                                                alias: null,
+                                                                                                name: {
+                                                                                                    kind: "Name",
+                                                                                                    value: "setID"
+                                                                                                },
+                                                                                                arguments: [],
+                                                                                                directives: [],
+                                                                                                selectionSet: null
+                                                                                            }, {
+                                                                                                kind: "Field",
+                                                                                                alias: null,
+                                                                                                name: {
+                                                                                                    kind: "Name",
+                                                                                                    value: "from"
+                                                                                                },
+                                                                                                arguments: [],
+                                                                                                directives: [],
+                                                                                                selectionSet: null
+                                                                                            }, {
+                                                                                                kind: "Field",
+                                                                                                alias: null,
+                                                                                                name: {
+                                                                                                    kind: "Name",
+                                                                                                    value: "to"
+                                                                                                },
+                                                                                                arguments: [],
+                                                                                                directives: [],
+                                                                                                selectionSet: null
+                                                                                            }]
+                                                                                        }
+                                                                                    }]
+                                                                                }
+                                                                            }]
+                                                                        }
+                                                                    }]
+                                                                }
+                                                            }]
+                                                        }
+                                                    }, {
+                                                        kind: "Field",
+                                                        alias: null,
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "userLastMessageRead"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: {
+                                                            kind: "SelectionSet",
+                                                            selections: [{
+                                                                kind: "Field",
+                                                                alias: null,
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "id"
+                                                                },
+                                                                arguments: [],
+                                                                directives: [],
+                                                                selectionSet: null
+                                                            }, {
+                                                                kind: "Field",
+                                                                alias: null,
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "sentAt"
+                                                                },
+                                                                arguments: [],
+                                                                directives: [],
+                                                                selectionSet: null
+                                                            }]
+                                                        }
+                                                    }, {
+                                                        kind: "Field",
+                                                        alias: null,
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "isMuted"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: null
+                                                    }, {
+                                                        kind: "Field",
+                                                        alias: null,
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "isArchived"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: null
+                                                    }, {
+                                                        kind: "Field",
+                                                        alias: null,
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "unreadMessagesCount"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: null
+                                                    }]
+                                                }
+                                            }]
+                                        }
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 538
+            }
+        };
+        n.loc.source = {
+            body: "query Whispers_Whispers_UserWhisperThreads($cursor: Cursor) {\ncurrentUser {\nid\nlogin\nemoteSets {\nid\nemotes {\nid\ntoken\n}\n}\nwhisperThreads(first: 10 after: $cursor) {\nedges {\ncursor\nnode {\nid\nparticipants {\nid\nchatColor\ndisplayName\nprofileImageURL(width: 70)\nlogin\n}\nspamInfo {\nlastMarkedNotSpamAt\nlikelihood\n}\nmessages(first: 20) {\nedges {\ncursor\nnode {\nid\nsentAt\neditedAt\ndeletedAt\nfrom {\nid\n}\ncontent {\ncontent\nemotes {\nid\nemoteID\nsetID\nfrom\nto\n}\n}\n}\n}\n}\nuserLastMessageRead {\nid\nsentAt\n}\nisMuted\nisArchived\nunreadMessagesCount\n}\n}\n}\n}\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
     "9RMu": function(e, t, n) {
         "use strict";
 
@@ -7555,91 +7555,6 @@ webpackJsonp([42], {
         ! function(e) {
             e.Private = "private", e.Public = "public"
         }(c || (c = {}))
-    },
-    CCVP: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "Whispers_Tracking_CurrentUser"
-                },
-                variableDefinitions: [],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        alias: null,
-                        name: {
-                            kind: "Name",
-                            value: "currentUser"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "hasTurbo"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "availability"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }, {
-                                kind: "Field",
-                                alias: null,
-                                name: {
-                                    kind: "Name",
-                                    value: "login"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: null
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 86
-            }
-        };
-        n.loc.source = {
-            body: "query Whispers_Tracking_CurrentUser {\ncurrentUser {\nid\nhasTurbo\navailability\nlogin\n}\n}",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
     },
     CF9R: function(e, t) {
         var n = {
@@ -14113,7 +14028,7 @@ webpackJsonp([42], {
         var l, c = n("TToO"),
             d = n("6sO2"),
             u = n("vH/s"),
-            p = n("CCVP");
+            p = n("yDSg");
         n.n(p);
         ! function(e) {
             e.Harassment = "Harassment", e.Spam = "Spam", e.Other = "Other"
@@ -14182,10 +14097,10 @@ webpackJsonp([42], {
             p = n("hfrE"),
             m = n("Odds"),
             h = (n("w+Qa"), l.a.wrap(function() {
-                return n.e(71).then(n.bind(null, "kd/b"))
+                return n.e(73).then(n.bind(null, "kd/b"))
             }, "SubsLandingPage")),
             f = l.a.wrap(function() {
-                return n.e(72).then(n.bind(null, "uy5s"))
+                return n.e(74).then(n.bind(null, "uy5s"))
             }, "SubsBroadcasterPage"),
             g = function(e) {
                 function t() {
@@ -18966,8 +18881,8 @@ webpackJsonp([42], {
             Q = n("9RMu"),
             $ = n("DCOT"),
             K = n("qpaC"),
-            Y = (n("n7G4"), n("6Vcl")),
-            J = function(e) {
+            Y = n("8p/O"),
+            J = (n("n7G4"), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     n.archiveThread = function(e) {
@@ -19226,7 +19141,7 @@ webpackJsonp([42], {
                         }
                     }
                 })], t)
-            }(o.Component),
+            }(o.Component)),
             Z = Object(p.a)(function(e) {
                 return {
                     rightColumnExpanded: e.ui.rightColumnExpanded,
@@ -19274,16 +19189,16 @@ webpackJsonp([42], {
                 return n.e(39).then(n.bind(null, "g8mI"))
             }, "ChannelVideosPage"),
             me = ee.a.wrap(function() {
-                return n.e(59).then(n.bind(null, "yMnN"))
+                return n.e(60).then(n.bind(null, "yMnN"))
             }, "DevOnlyRoot"),
             he = ee.a.wrap(function() {
                 return n.e(44).then(n.bind(null, "7yeK"))
             }, "DirectoryRootPage"),
             fe = ee.a.wrap(function() {
-                return n.e(55).then(n.bind(null, "IzAE"))
+                return n.e(56).then(n.bind(null, "IzAE"))
             }, "DevOnlyTestingCarouselPage"),
             ge = ee.a.wrap(function() {
-                return n.e(57).then(n.bind(null, "Tj44"))
+                return n.e(58).then(n.bind(null, "Tj44"))
             }, "EmailVerificationPage"),
             ve = ee.a.wrap(function() {
                 return n.e(45).then(n.bind(null, "NTi8"))
@@ -19292,70 +19207,73 @@ webpackJsonp([42], {
                 return n.e(47).then(n.bind(null, "IpE8"))
             }, "FollowingRootPage"),
             ke = ee.a.wrap(function() {
+                return n.e(52).then(n.bind(null, "lTLe"))
+            }, "FinishWatchingPage"),
+            ye = ee.a.wrap(function() {
                 return n.e(46).then(n.bind(null, "IOEW"))
             }, "FrontPage"),
-            ye = ee.a.wrap(function() {
-                return n.e(54).then(n.bind(null, "DZCb"))
-            }, "InventoryPage"),
             Se = ee.a.wrap(function() {
-                return n.e(60).then(n.bind(null, "o8EG"))
-            }, "ManagerRedirectPage"),
+                return n.e(55).then(n.bind(null, "DZCb"))
+            }, "InventoryPage"),
             _e = ee.a.wrap(function() {
-                return n.e(58).then(n.bind(null, "DkuH"))
-            }, "ReportUserPage"),
+                return n.e(61).then(n.bind(null, "o8EG"))
+            }, "ManagerRedirectPage"),
             Ne = ee.a.wrap(function() {
+                return n.e(59).then(n.bind(null, "DkuH"))
+            }, "ReportUserPage"),
+            Te = ee.a.wrap(function() {
                 return n.e(51).then(n.bind(null, "K4jf"))
             }, "SettingsRoot"),
-            Te = ee.a.wrap(function() {
+            Ce = ee.a.wrap(function() {
                 return n.e(35).then(n.bind(null, "uiPj"))
             }, "VideoWatchPage"),
-            Ce = ee.a.wrap(function() {
-                return n.e(53).then(n.bind(null, "6Vx1"))
+            Ee = ee.a.wrap(function() {
+                return n.e(54).then(n.bind(null, "6Vx1"))
             }, "DevOnlyTestingAmazonOffersPage"),
-            Ee = function() {
+            we = function() {
                 return o.createElement(X.c, {
                     path: "/",
                     to: "/directory/following"
                 })
             },
-            we = function() {
+            De = function() {
                 return window.location.reload(), null
             },
-            De = function(e) {
+            Ie = function(e) {
                 var t = Object(ne.a)(e.match.params.videoID);
                 return o.createElement(X.c, {
                     to: "/videos/" + t
                 })
             },
-            Ie = function(e) {
+            Oe = function(e) {
                 return o.createElement(X.c, {
                     to: "/popout/" + e.match.params.channelLogin + "/chat"
                 })
             },
-            Oe = function(e) {
+            Pe = function(e) {
                 return o.createElement(X.c, {
                     to: "/" + e.match.params.channelLogin + "/videos/all"
                 })
             },
-            Pe = function(e) {
+            Fe = function(e) {
                 return o.createElement(X.c, {
                     to: "/" + e.match.params.channelLogin + "/videos/archive"
                 })
             },
-            Fe = function(e) {
+            Re = function(e) {
                 return o.createElement(X.c, {
                     to: "/directory/game/" + e.match.params.encodedCommunityName + "/videos/all"
                 })
             },
-            Re = function() {
+            xe = function() {
                 return o.createElement(X.c, {
                     to: "/directory/all/xbox"
                 })
             },
-            xe = function() {
+            Ue = function() {
                 return window.location.replace(ie.a), null
             },
-            Ue = Object(ae.d)("DefaultRootRouter", {
+            Le = Object(ae.d)("DefaultRootRouter", {
                 autoReportInteractive: !0
             })(function(e) {
                 var t = e.isLoggedIn;
@@ -19364,20 +19282,20 @@ webpackJsonp([42], {
                     component: fe
                 }), D.a.buildType !== te.a.Production && o.createElement(X.d, {
                     path: "/_dev/testing/amazon-offers/:channelName",
-                    component: Ce
+                    component: Ee
                 }), D.a.buildType !== te.a.Production && o.createElement(X.d, {
                     path: "/_dev",
                     component: me
                 }), o.createElement(X.d, {
                     exact: !0,
                     path: "/",
-                    component: t ? ke : re
+                    component: t ? ye : re
                 }), o.createElement(X.d, {
                     path: "/bits",
-                    render: we
+                    render: De
                 }), o.createElement(X.d, {
                     path: "/collections/:collectionID",
-                    component: Te
+                    component: Ce
                 }), o.createElement(X.d, {
                     path: "/communities/:encodedCommunityName/details",
                     component: he
@@ -19407,7 +19325,7 @@ webpackJsonp([42], {
                     component: he
                 }), o.createElement(X.d, {
                     path: "/directory/game/:encodedCommunityName/videos",
-                    render: Fe
+                    render: Re
                 }), o.createElement(X.d, {
                     path: "/directory/game/:encodedCommunityName/:encodedLanguage",
                     component: he
@@ -19419,7 +19337,7 @@ webpackJsonp([42], {
                     component: se
                 }), o.createElement(X.d, {
                     path: "/directory/all/xb1",
-                    component: Re
+                    component: xe
                 }), o.createElement(X.d, {
                     path: "/directory/all/xbox",
                     component: se
@@ -19429,6 +19347,9 @@ webpackJsonp([42], {
                 }), o.createElement(X.d, {
                     path: "/directory/all",
                     component: se
+                }), o.createElement(X.d, {
+                    path: "/directory/videos/history",
+                    component: ke
                 }), o.createElement(X.d, {
                     path: "/directory/:category?",
                     component: se
@@ -19440,52 +19361,52 @@ webpackJsonp([42], {
                     component: ge
                 }), o.createElement(X.d, {
                     path: "/following",
-                    component: Ee
+                    component: we
                 }), D.a.buildType !== te.a.Production && o.createElement(X.d, {
                     path: "/inventory",
-                    component: ye
-                }), o.createElement(X.d, {
-                    path: "/popout/:channelName/chat",
-                    render: we
-                }), o.createElement(X.d, {
-                    path: "/videos/v:videoID",
-                    render: De
-                }), o.createElement(X.d, {
-                    path: "/videos/:videoID",
-                    component: Te
-                }), o.createElement(X.d, {
-                    path: "/store",
-                    render: xe
-                }), o.createElement(X.d, {
-                    path: "/store/merch",
-                    render: xe
-                }), o.createElement(X.d, {
-                    path: "/subs",
-                    render: we
-                }), o.createElement(X.d, {
-                    path: "/settings/:tab?",
-                    component: Ne
-                }), o.createElement(X.d, {
-                    path: "/manager/:pageName?",
                     component: Se
                 }), o.createElement(X.d, {
-                    path: "/:channelName/report",
+                    path: "/popout/:channelName/chat",
+                    render: De
+                }), o.createElement(X.d, {
+                    path: "/videos/v:videoID",
+                    render: Ie
+                }), o.createElement(X.d, {
+                    path: "/videos/:videoID",
+                    component: Ce
+                }), o.createElement(X.d, {
+                    path: "/store",
+                    render: Ue
+                }), o.createElement(X.d, {
+                    path: "/store/merch",
+                    render: Ue
+                }), o.createElement(X.d, {
+                    path: "/subs",
+                    render: De
+                }), o.createElement(X.d, {
+                    path: "/settings/:tab?",
+                    component: Te
+                }), o.createElement(X.d, {
+                    path: "/manager/:pageName?",
                     component: _e
                 }), o.createElement(X.d, {
+                    path: "/:channelName/report",
+                    component: Ne
+                }), o.createElement(X.d, {
                     path: "/:channelLogin/videos/(past_broadcasts?)",
-                    render: Pe
+                    render: Fe
                 }), o.createElement(X.d, {
                     path: "/:channelLogin/videos/:filter(all|archive|upload|highlight|past_premiere)",
                     component: pe
                 }), o.createElement(X.d, {
                     path: "/:channelLogin/videos/:unknownFilter?",
-                    render: Oe
+                    render: Pe
                 }), o.createElement(X.d, {
                     path: "/:channelName/clips",
                     component: oe
                 }), o.createElement(X.d, {
                     path: "/:channelLogin/chat",
-                    render: Ie
+                    render: Oe
                 }), o.createElement(X.d, {
                     path: "/:channelLogin/collections",
                     component: le
@@ -19504,12 +19425,12 @@ webpackJsonp([42], {
                 }))
             });
         n.d(t, "b", function() {
-            return Le
-        }), n.d(t, "a", function() {
             return Me
+        }), n.d(t, "a", function() {
+            return je
         });
-        var Le = "twilight-main",
-            Me = function(e) {
+        var Me = "twilight-main",
+            je = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {}, t.setRootScrollableContentRef = function(e) {
@@ -19533,10 +19454,10 @@ webpackJsonp([42], {
                         fullHeight: !0,
                         fullWidth: !0
                     }, o.createElement("main", {
-                        className: Le
+                        className: Me
                     }, o.createElement(b.b, null), o.createElement(d.a, {
                         contentRefDelegate: this.setRootScrollableContentRef
-                    }, o.createElement(Ue, {
+                    }, o.createElement(Le, {
                         isLoggedIn: this.props.isLoggedIn
                     }), o.createElement(l.b, {
                         mainRef: this.state.rootScrollableContentRef
@@ -22925,6 +22846,91 @@ webpackJsonp([42], {
             return i
         })
     },
+    yDSg: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "Whispers_Tracking_CurrentUser"
+                },
+                variableDefinitions: [],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        alias: null,
+                        name: {
+                            kind: "Name",
+                            value: "currentUser"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "hasTurbo"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "availability"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }, {
+                                kind: "Field",
+                                alias: null,
+                                name: {
+                                    kind: "Name",
+                                    value: "login"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 86
+            }
+        };
+        n.loc.source = {
+            body: "query Whispers_Tracking_CurrentUser {\ncurrentUser {\nid\nhasTurbo\navailability\nlogin\n}\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
     "yTC+": function(e, t) {
         var n = {
             kind: "Document",
@@ -23051,4 +23057,4 @@ webpackJsonp([42], {
         }
     }
 });
-//# sourceMappingURL=pages.subs-abab737d84ef7cba7144c336bacfbc0c.js.map
+//# sourceMappingURL=pages.subs-1e83a4d511f4d6130c72f8b46cf14d52.js.map

@@ -468,6 +468,45 @@ webpackJsonp([45], {
     "6Rwu": function(e, t) {},
     "6lb1": function(e, t) {},
     "6suJ": function(e, t) {},
+    "7FW4": function(e, t, n) {
+        "use strict";
+        t.a = function(e) {
+            var t = i.createElement(r.V, {
+                padding: 1,
+                fullHeight: !0,
+                flexDirection: r.J.Column,
+                justifyContent: r.U.Center,
+                display: r.H.Flex
+            }, i.createElement(r._23, {
+                color: r.F.Link,
+                fontSize: r.L.Size4,
+                noWrap: !0
+            }, Object(l.d)("View All", "Following--ViewAllButton")), i.createElement(r._23, {
+                color: r.F.Alt2,
+                fontSize: r.L.Size4,
+                noWrap: !0
+            }, e.subHeader));
+            return e.linkTo && (t = i.createElement(a.a, {
+                to: e.linkTo,
+                className: "following__view-all__link"
+            }, t)), i.createElement("div", {
+                className: "following__view-all",
+                onClick: e.onClickViewAll,
+                "data-test-selector": o
+            }, i.createElement(r.V, null, i.createElement(r.j, {
+                ratio: e.aspectRatio
+            }, i.createElement(r._19, {
+                background: r.m.Alt2,
+                fullHeight: !0
+            }, t))))
+        };
+        var i = n("U7vG"),
+            a = (n.n(i), n("F8kA")),
+            l = n("6sO2"),
+            r = n("Odds"),
+            s = n("oHn4"),
+            o = (n.n(s), "view-all-button-selector")
+    },
     "81qH": function(e, t, n) {
         "use strict";
         var i = n("aBed");
@@ -3987,25 +4026,28 @@ webpackJsonp([45], {
     },
     ISok: function(e, t, n) {
         "use strict";
-        var i = n("U7vG"),
-            a = n("CSlQ"),
-            l = n("81qH"),
-            r = n("XYqD"),
-            s = n("Odds"),
-            o = function(e) {
-                var t = [];
+        var i = n("TToO"),
+            a = n("U7vG"),
+            l = n("WxKK"),
+            r = n("CSlQ"),
+            s = n("81qH"),
+            o = n("XYqD"),
+            d = n("Odds"),
+            c = function(e) {
+                var t = [],
+                    n = null;
                 if (null === e.videos)
-                    for (var n = void 0 === e.placeholderCount ? 20 : e.placeholderCount, a = 0; a < n; a++) t.push(i.createElement(r.a, {
-                        key: a
+                    for (var r = void 0 === e.placeholderCount ? 20 : e.placeholderCount, c = 0; c < r; c++) t.push(a.createElement(o.a, {
+                        key: c
                     }));
-                else t = e.videos.map(function(t, n) {
-                    return i.createElement(s.V, {
+                else e.viewAllButtonProps && (n = a.createElement(l.a, i.__assign({}, e.viewAllButtonProps))), t = e.videos.map(function(t, n) {
+                    return a.createElement(d.V, {
                         "data-a-target": "video-tower-card-" + n,
                         key: "video-" + n,
                         padding: {
                             bottom: .5
                         }
-                    }, i.createElement(l.VideoPreviewCard, {
+                    }, a.createElement(s.VideoPreviewCard, {
                         hideGameArt: e.hideGameArt,
                         tracking: {
                             content: e.trackingContent,
@@ -4015,21 +4057,21 @@ webpackJsonp([45], {
                         video: t
                     }))
                 });
-                return i.createElement(s._34, {
-                    gutterSize: s._36.Small,
-                    childWidth: e.videoCardSize || s._35.Large,
+                return a.createElement(d._34, {
+                    gutterSize: d._36.Small,
+                    childWidth: e.videoCardSize || d._35.Large,
                     placeholderItems: 20
-                }, t)
+                }, t, n)
             },
-            d = Object(a.d)("VideoTower", {
+            u = Object(r.d)("VideoTower", {
                 autoReportInteractive: !0
-            })(o);
+            })(c);
         n.d(t, !1, function() {
             return 20
         }), n.d(t, !1, function() {
-            return o
+            return c
         }), n.d(t, "a", function() {
-            return d
+            return u
         })
     },
     J8WN: function(e, t, n) {
@@ -4781,8 +4823,8 @@ webpackJsonp([45], {
             S = n("vH/s"),
             y = n("SI0h"),
             E = n("CSlQ"),
-            N = n("2aoH"),
-            _ = n("HW6M");
+            _ = n("2aoH"),
+            N = n("HW6M");
         ! function(e) {
             e.UNSCHEDULED = "UNSCHEDULED", e.SCHEDULED = "SCHEDULED", e.CANCELLED = "CANCELLED", e.STARTED = "STARTED", e.SUCCESS = "SUCCESS", e.FAILED = "FAILED"
         }(m || (m = {}));
@@ -4809,7 +4851,7 @@ webpackJsonp([45], {
                 return p.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    var e = _({
+                    var e = N({
                             "event-landing-action__progress": this.state.countdownActive
                         }),
                         t = "";
@@ -5483,8 +5525,8 @@ webpackJsonp([45], {
                     })), this.videoPreviewImage()))))))
                 }, t.prototype.videoPreviewImage = function() {
                     var e = this.state.hovered && !this.state.didAnimatedPreviewFailToLoad ? this.props.video.animatedPreviewURL : this.props.video.previewThumbnailURL,
-                        t = _("event-video-card__image-wrapper"),
-                        n = _("event-video-card__preview-image", {
+                        t = N("event-video-card__image-wrapper"),
+                        n = N("event-video-card__preview-image", {
                             "event-video-card__preview-image--animated": this.state.hovered && this.state.didAnimatedPreviewLoad
                         });
                     return v.createElement(F.j, {
@@ -5969,7 +6011,7 @@ webpackJsonp([45], {
                     var t = this.cleanEvent(this.props.data.event);
                     return t ? v.createElement(F.V, {
                         position: F._4.Relative
-                    }, v.createElement(N.a, null, v.createElement(y.a, {
+                    }, v.createElement(_.a, null, v.createElement(y.a, {
                         currentPage: y.b.Events,
                         channelLogin: t.channel.login
                     })), v.createElement(F.V, {
@@ -6749,7 +6791,7 @@ webpackJsonp([45], {
             S = n("ZJYd"),
             y = n("/LBW"),
             E = n("Odds"),
-            N = (n("fHoP"), function(e) {
+            _ = (n("fHoP"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handlePromoBuy = function(e) {
@@ -6843,7 +6885,7 @@ webpackJsonp([45], {
                     }, e)
                 }, t
             }(l.Component)),
-            _ = n("jxGs"),
+            N = n("jxGs"),
             w = n("bkpq"),
             A = n("CSlQ"),
             F = n("annQ"),
@@ -6894,7 +6936,7 @@ webpackJsonp([45], {
                         var t = this.props.bitsOffers.find(function(e) {
                             return Object(S.c)(e)
                         });
-                        t && t.type === _.b && this.props.channelID && !this.state.hideFirstTimeUserIntro && (e = l.createElement(N, {
+                        t && t.type === N.b && this.props.channelID && !this.state.hideFirstTimeUserIntro && (e = l.createElement(_, {
                             promo: t,
                             animateFirstTimeUserIntro: this.props.animateFirstTimeUserIntro,
                             isShowingTutorial: this.props.isShowingTutorial,
@@ -7623,7 +7665,7 @@ webpackJsonp([45], {
 
         function a(e) {
             return {
-                adModalOpen: Object(d.b)(e, _),
+                adModalOpen: Object(d.b)(e, N),
                 isLoggedIn: Object(c.d)(e)
             }
         }
@@ -7631,7 +7673,7 @@ webpackJsonp([45], {
         function l(e) {
             return {
                 showWatchAdModal: function(t) {
-                    return e(Object(o.d)(_, t))
+                    return e(Object(o.d)(N, t))
                 }
             }
         }
@@ -7653,7 +7695,7 @@ webpackJsonp([45], {
             S = n("/LBW"),
             y = n("Odds"),
             E = n("zzpv"),
-            N = (n("x583"), function(e) {
+            _ = (n("x583"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {}, t.hasAwarded = !1, t.messageHandler = function(e) {
@@ -7759,11 +7801,11 @@ webpackJsonp([45], {
                     name: "redeemTrueXAd"
                 })], t)
             }(m.Component)),
-            _ = Object(s.a)(null, function(e) {
+            N = Object(s.a)(null, function(e) {
                 return Object(p.bindActionCreators)({
                     closeModal: o.c
                 }, e)
-            })(N),
+            })(_),
             w = n("HW6M"),
             A = n("BhyV"),
             F = n("jF7o"),
@@ -8370,6 +8412,13 @@ webpackJsonp([45], {
             return l
         }), n.d(t, "a", function() {
             return Y
+        })
+    },
+    WxKK: function(e, t, n) {
+        "use strict";
+        var i = n("7FW4");
+        n.d(t, "a", function() {
+            return i.a
         })
     },
     XYqD: function(e, t, n) {
@@ -10255,6 +10304,7 @@ webpackJsonp([45], {
             return i
         })
     },
+    oHn4: function(e, t) {},
     q8Cw: function(e, t) {},
     qdmu: function(e, t) {
         var n = {
@@ -11338,4 +11388,4 @@ webpackJsonp([45], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.event-landing-2467eb228e1d2524b5b1e8c2c0385c07.js.map
+//# sourceMappingURL=pages.event-landing-96bf61d62a0411cacf5fcce2be870a69.js.map

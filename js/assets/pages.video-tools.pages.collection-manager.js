@@ -1,4 +1,4 @@
-webpackJsonp([74], {
+webpackJsonp([76], {
     "Dk8+": function(e, n, t) {
         "use strict";
         Object.defineProperty(n, "__esModule", {
@@ -323,4 +323,4 @@ webpackJsonp([74], {
         e.exports = t
     }
 });
-//# sourceMappingURL=pages.video-tools.pages.collection-manager-54302b098a03292d0f2d5027275789e5.js.map
+//# sourceMappingURL=pages.video-tools.pages.collection-manager-9a5e5cb44059449e1a91c97ef1b1df6b.js.map
