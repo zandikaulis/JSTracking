@@ -1,9 +1,9 @@
-webpackJsonp([65], {
+webpackJsonp([66], {
     "1OO3": function(e, t, n) {
         "use strict";
 
         function a() {
-            return Object(r.d)("Unable to ban user", "BlockUserMutation")
+            return Object(i.d)("Unable to ban user", "BlockUserMutation")
         }
         t.a = function(e) {
             var t = this;
@@ -11,15 +11,15 @@ webpackJsonp([65], {
                 props: function(n) {
                     return {
                         onBanUser: function(l, u) {
-                            return void 0 === u && (u = null), i.__awaiter(t, void 0, void 0, function() {
-                                var t, C, b, v, E, S;
-                                return i.__generator(this, function(i) {
-                                    switch (i.label) {
+                            return void 0 === u && (u = null), r.__awaiter(t, void 0, void 0, function() {
+                                var t, C, b, v, E, k;
+                                return r.__generator(this, function(r) {
+                                    switch (r.label) {
                                         case 0:
                                             if (t = u ? d.a.Timeout : d.a.Ban, C = e(n.ownProps), b = C.channelID, v = C.onPushMessage, !n.mutate) return [3, 5];
-                                            i.label = 1;
+                                            r.label = 1;
                                         case 1:
-                                            return i.trys.push([1, 3, , 4]), [4, n.mutate(Object(s.a)({
+                                            return r.trys.push([1, 3, , 4]), [4, n.mutate(Object(s.a)({
                                                 channelID: b,
                                                 bannedUserLogin: l,
                                                 expiresIn: u && function(e) {
@@ -31,12 +31,12 @@ webpackJsonp([65], {
                                                         t -= a * f, n += a + "mo"
                                                     }
                                                     if (t > g) {
-                                                        var i = Math.floor(t / g);
-                                                        t -= i * g, n += i + "w"
+                                                        var r = Math.floor(t / g);
+                                                        t -= r * g, n += r + "w"
                                                     }
                                                     if (t > h) {
-                                                        var r = Math.floor(t / h);
-                                                        t -= r * h, n += r + "d"
+                                                        var i = Math.floor(t / h);
+                                                        t -= i * h, n += i + "d"
                                                     }
                                                     if (t > m) {
                                                         var l = Math.floor(t / m);
@@ -50,9 +50,9 @@ webpackJsonp([65], {
                                                 }(u)
                                             }))];
                                         case 2:
-                                            return i.sent(), E = Object(c.a)(t, l, null, u), v && v(E), [2, E];
+                                            return r.sent(), E = Object(c.a)(t, l, null, u), v && v(E), [2, E];
                                         case 3:
-                                            throw S = i.sent(), r.i.error(S, "Unable to ban user"), v && v(Object(o.a)(a())), new Error(a());
+                                            throw k = r.sent(), i.i.error(k, "Unable to ban user"), v && v(Object(o.a)(a())), new Error(a());
                                         case 4:
                                             return [3, 6];
                                         case 5:
@@ -67,8 +67,8 @@ webpackJsonp([65], {
                 }
             })
         };
-        var i = n("TToO"),
-            r = n("6sO2"),
+        var r = n("TToO"),
+            i = n("6sO2"),
             l = n("7vx8"),
             s = n("oIkB"),
             o = n("aUOx"),
@@ -118,15 +118,13 @@ webpackJsonp([65], {
                                 value: "BanUserFromChatRoomInput"
                             }
                         }
-                    },
-                    defaultValue: null
+                    }
                 }],
                 directives: [],
                 selectionSet: {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "banUserFromChatRoom"
@@ -150,7 +148,6 @@ webpackJsonp([65], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "ban"
@@ -161,14 +158,12 @@ webpackJsonp([65], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "createdAt"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }]
                                 }
                             }]
@@ -219,15 +214,13 @@ webpackJsonp([65], {
                                 value: "UpdateClipInput"
                             }
                         }
-                    },
-                    defaultValue: null
+                    }
                 }],
                 directives: [],
                 selectionSet: {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "updateClip"
@@ -251,7 +244,6 @@ webpackJsonp([65], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "clip"
@@ -287,24 +279,24 @@ webpackJsonp([65], {
                 column: 1
             }
         };
-        var i = {};
+        var r = {};
         a.definitions = a.definitions.concat(function(e) {
             return e.filter(function(e) {
                 if ("FragmentDefinition" !== e.kind) return !0;
                 var t = e.name.value;
-                return !i[t] && (i[t] = !0, !0)
+                return !r[t] && (r[t] = !0, !0)
             })
         }(n("kUjr").definitions)), e.exports = a
     },
     Ncf8: function(e, t, n) {
         "use strict";
-        t.a = function(e, t, n, i) {
+        t.a = function(e, t, n, r) {
             return {
                 type: e,
                 id: Object(a.a)(t + "-mod"),
                 userLogin: t,
                 reason: n,
-                duration: i
+                duration: r
             }
         };
         var a = n("INp2")
@@ -314,10 +306,10 @@ webpackJsonp([65], {
         n.d(t, "a", function() {
             return a
         }), n.d(t, "b", function() {
-            return i
+            return r
         });
         var a = "//static-cdn.jtvnw.net/ttv-boxart",
-            i = "52x72"
+            r = "52x72"
     },
     WNmM: function(e, t, n) {
         "use strict";
@@ -328,10 +320,10 @@ webpackJsonp([65], {
         }), n.d(t, "c", function() {
             return u
         });
-        var a, i = n("6sO2"),
-            r = n("8Wuk"),
+        var a, r = n("6sO2"),
+            i = n("8Wuk"),
             l = n("vH/s"),
-            s = (a = {}, a[r.b.Twitter] = "twitter", a[r.b.Reddit] = "reddit", a[r.b.VKontakte] = "vkontakte", a[r.b.Facebook] = "facebook", a[r.b.Copy] = "link", a[r.b.CopyInput] = "option_link", a),
+            s = (a = {}, a[i.b.Twitter] = "twitter", a[i.b.Reddit] = "reddit", a[i.b.VKontakte] = "vkontakte", a[i.b.Facebook] = "facebook", a[i.b.Copy] = "link", a[i.b.CopyInput] = "option_link", a),
             o = {
                 MyClips: "MyClips",
                 ClipsOfMyChannel: "ClipsOfMyChannel"
@@ -348,7 +340,7 @@ webpackJsonp([65], {
             },
             u = function(e, t) {
                 return function(n) {
-                    i.n.tracking.track(l.SpadeEventType.VideoShare, {
+                    r.n.tracking.track(l.SpadeEventType.VideoShare, {
                         vod_id: e.id,
                         vod_type: "clip",
                         share_platform: s[n],
@@ -367,12 +359,12 @@ webpackJsonp([65], {
         t.a = function(e) {
             return {
                 type: a.a.Info,
-                id: Object(i.a)("notice"),
+                id: Object(r.a)("notice"),
                 message: e
             }
         };
         var a = n("qkCi"),
-            i = n("INp2")
+            r = n("INp2")
     },
     aeDV: function(e, t, n) {
         "use strict";
@@ -381,23 +373,23 @@ webpackJsonp([65], {
             e.currentTarget.select()
         }
 
-        function i(e, t) {
+        function r(e, t) {
             return t === g.Curator ? "/" + e + "/manager/clips" : "/" + e + "/manager/clips/channel"
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var r, l = n("TToO"),
+        var i, l = n("TToO"),
             s = n("U7vG"),
-            o = n("BhyV"),
+            o = n("3zLD"),
             c = n("CIox"),
             d = n("j7/Y"),
             u = n("w9tK"),
             p = n("vH/s");
         ! function(e) {
             e[e.ViewsAscending = 0] = "ViewsAscending", e[e.ViewsDescending = 1] = "ViewsDescending", e[e.CreatedAtAscending = 2] = "CreatedAtAscending", e[e.CreatedAtDescending = 3] = "CreatedAtDescending"
-        }(r || (r = {}));
-        var m, h = (C = {}, C[r.CreatedAtAscending] = "CREATED_AT_ASC", C[r.CreatedAtDescending] = "CREATED_AT_DESC", C[r.ViewsAscending] = "VIEWS_ASC", C[r.ViewsDescending] = "VIEWS_DESC", C);
+        }(i || (i = {}));
+        var m, h = (C = {}, C[i.CreatedAtAscending] = "CREATED_AT_ASC", C[i.CreatedAtDescending] = "CREATED_AT_DESC", C[i.ViewsAscending] = "VIEWS_ASC", C[i.ViewsDescending] = "VIEWS_DESC", C);
         ! function(e) {
             e[e.Day = 0] = "Day", e[e.Week = 1] = "Week", e[e.Month = 2] = "Month", e[e.All = 3] = "All"
         }(m || (m = {}));
@@ -407,23 +399,23 @@ webpackJsonp([65], {
         }(g || (g = {}));
         var C, b, v = n("CSlQ"),
             E = n("RH2O"),
-            S = n("2KeS"),
+            k = n("2KeS"),
             y = n("+xm8"),
-            k = n("f2i/"),
+            S = n("f2i/"),
             _ = n("Aj/L"),
             T = n("KSGD"),
             O = n("6sO2"),
             N = n("7vx8"),
             w = n("5LoI"),
             R = n("oIkB"),
-            M = n("V5M+"),
-            D = n("zCIC"),
+            D = n("V5M+"),
+            M = n("zCIC"),
             x = n("sikP"),
-            A = n("WNmM"),
-            j = n("F8kA"),
+            j = n("WNmM"),
+            A = n("F8kA"),
             I = n("rCmJ"),
-            V = n("+Znq"),
-            L = n("NY9D"),
+            L = n("+Znq"),
+            V = n("NY9D"),
             U = n("yDzg"),
             F = n("bhVC"),
             B = n("0i+s"),
@@ -450,7 +442,7 @@ webpackJsonp([65], {
             }],
             P = Object(v.d)("ClipsManagerSocialShare")(function(e) {
                 var t = Object(O.d)("Share", "ClipsManagerSocialShare");
-                return s.createElement(V.a, null, s.createElement("div", null, s.createElement(H._31, {
+                return s.createElement(L.a, null, s.createElement("div", null, s.createElement(H._31, {
                     label: t
                 }, s.createElement(H.v, {
                     ariaLabel: t,
@@ -469,7 +461,7 @@ webpackJsonp([65], {
                         type: t.type,
                         text: e.clip.title,
                         url: Object(U.a)(e.clip.url, t.params),
-                        onShareClick: Object(A.c)(e.clip, e.pageType)
+                        onShareClick: Object(j.c)(e.clip, e.pageType)
                     })
                 })), s.createElement(H.V, {
                     padding: {
@@ -664,7 +656,7 @@ webpackJsonp([65], {
                     }
                 }
             })(Y),
-            X = n("hSb5"),
+            X = n("iFCf"),
             Z = (n("qCag"), {
                 MODERATION_DROPDOWN: "cmgr-moderation-dropdown",
                 MODERATION_BUTTON: "cmgr-moderation-button",
@@ -675,9 +667,9 @@ webpackJsonp([65], {
                 function t(t) {
                     var n = e.call(this) || this;
                     return n.renderGameLink = function(e) {
-                        return e.game ? s.createElement(j.a, {
+                        return e.game ? s.createElement(A.a, {
                             "data-test-selector": Z.GAME_LINK,
-                            to: Object(L.c)(e.game.name),
+                            to: Object(V.c)(e.game.name),
                             title: e.game.name
                         }, e.game.name) : null
                     }, n.renderModerationIcon = function() {
@@ -689,7 +681,7 @@ webpackJsonp([65], {
                             margin: {
                                 right: .5
                             }
-                        }, s.createElement(V.a, null, s.createElement(H.v, {
+                        }, s.createElement(L.a, null, s.createElement(H.v, {
                             ariaLabel: e,
                             type: H.w.Hollow,
                             icon: H._11.Sword,
@@ -942,7 +934,7 @@ webpackJsonp([65], {
                         bold: !0
                     }, Object(O.d)("Channel", "ClipsManagerExpandedRow")), s.createElement(H._23, {
                         ellipsis: !0
-                    }, s.createElement(j.a, {
+                    }, s.createElement(A.a, {
                         "data-test-selector": Z.CHANNEL_LINK,
                         to: "/" + e.broadcaster.login + "/clips",
                         title: e.broadcaster.displayName
@@ -962,15 +954,15 @@ webpackJsonp([65], {
                 }, t
             }(s.Component),
             te = Object(v.d)("ClipsManagerExpandedRow")(Object(N.a)(X)(ee)),
-            ne = Object(E.a)(null, function(e) {
-                return Object(S.bindActionCreators)({
-                    showModal: M.d,
-                    closeModal: M.c
+            ne = Object(E.b)(null, function(e) {
+                return Object(k.b)({
+                    showModal: D.d,
+                    closeModal: D.c
                 }, e)
             })(te),
             ae = n("MAZT"),
-            ie = n("uTyw"),
-            re = n("Qfvd"),
+            re = n("uTyw"),
+            ie = n("Qfvd"),
             le = (n("uHjT"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -985,7 +977,7 @@ webpackJsonp([65], {
                             size: H.D.Size3,
                             aspect: H.k.Aspect3x4,
                             imageSrc: function(e) {
-                                return re.a + "/" + e + "-" + re.b + ".jpg"
+                                return ie.a + "/" + e + "-" + ie.b + ".jpg"
                             }(e.title),
                             imageAlt: e.thumbnailAltText
                         }), s.createElement(H.B, null, s.createElement(H.V, {
@@ -1186,8 +1178,8 @@ webpackJsonp([65], {
                         void 0 === e && (e = !0);
                         var n = t.getResultsLength();
                         0 !== n && t.setState(function(t) {
-                            var a, i = t.focusedIndex;
-                            return a = null === i ? e ? 0 : n - 1 : e ? i + 1 >= n ? 0 : i + 1 : i - 1 < 0 ? n - 1 : i - 1, {
+                            var a, r = t.focusedIndex;
+                            return a = null === r ? e ? 0 : n - 1 : e ? r + 1 >= n ? 0 : r + 1 : r - 1 < 0 ? n - 1 : r - 1, {
                                 focusedIndex: a,
                                 isShowingResults: !0
                             }
@@ -1206,10 +1198,10 @@ webpackJsonp([65], {
                         t.searchInputRef && t.searchInputRef.focus()
                     }, t.selectResult = function(e) {
                         var n, a = t.state,
-                            i = a.currentCategory,
-                            r = a.gameResults,
+                            r = a.currentCategory,
+                            i = a.gameResults,
                             l = a.userResults;
-                        if (i === w.a.Games) n = r[e].title, t.context.setSearchTerm(n);
+                        if (r === w.a.Games) n = i[e].title, t.context.setSearchTerm(n);
                         else {
                             var s = l[e];
                             n = s.name, t.context.setSearchTerm(s.id)
@@ -1229,15 +1221,15 @@ webpackJsonp([65], {
                         var e = t.state,
                             n = e.isLoading,
                             a = e.searchTerm,
-                            i = e.currentCategory;
+                            r = e.currentCategory;
                         n && t.setState({
                             isLoading: !0,
                             isShowingResults: !0
-                        }), t.searchClient.queryForType(i, a, "", {
+                        }), t.searchClient.queryForType(r, a, "", {
                             hitsPerPage: oe
                         }).then(function(e) {
                             if (e) {
-                                var n = Object(ie.b)({
+                                var n = Object(re.b)({
                                     searchResults: e
                                 });
                                 t.setState({
@@ -1456,7 +1448,7 @@ webpackJsonp([65], {
                         fullHeight: !0
                     }, s.createElement(H.Q, {
                         ellipsis: !0
-                    }, s.createElement(j.a, {
+                    }, s.createElement(A.a, {
                         to: "/" + e.broadcaster.login + "/clips",
                         title: e.broadcaster.displayName
                     }, e.broadcaster.displayName)))), s.createElement(H.G, {
@@ -1498,17 +1490,17 @@ webpackJsonp([65], {
                 }, t.prototype.renderGameLink = function(e) {
                     return e.game ? s.createElement(H.Q, {
                         ellipsis: !0
-                    }, s.createElement(j.a, {
-                        to: Object(L.c)(e.game.name),
+                    }, s.createElement(A.a, {
+                        to: Object(V.c)(e.game.name),
                         title: e.game.name
                     }, e.game.name)) : null
                 }, t
             }(s.Component),
             ve = (n("EDaX"), "clips-manager-table-row"),
             Ee = "clips-manager-select-all",
-            Se = "clips-manager-batch-delete",
+            ke = "clips-manager-batch-delete",
             ye = "clips-manager-views-sort",
-            ke = "clips-manager-createdat-sort",
+            Se = "clips-manager-createdat-sort",
             _e = "clips-manager-empty-body",
             Te = function(e) {
                 function t() {
@@ -1532,10 +1524,10 @@ webpackJsonp([65], {
                             var a;
                             if (n) a = l.__assign({}, t.selectedClips, (s = {}, s[e.slug] = e, s));
                             else {
-                                var i = t.selectedClips,
-                                    r = e.slug;
-                                i[r];
-                                a = l.__rest(i, ["symbol" == typeof r ? r : r + ""])
+                                var r = t.selectedClips,
+                                    i = e.slug;
+                                r[i];
+                                a = l.__rest(r, ["symbol" == typeof i ? i : i + ""])
                             }
                             return {
                                 numberOfSelectedClips: Object.keys(a).length,
@@ -1544,9 +1536,9 @@ webpackJsonp([65], {
                             var s
                         })
                     }, t.toggleViewsSort = function() {
-                        t.props.sort === r.ViewsDescending ? t.props.updateSort(r.ViewsAscending) : t.props.updateSort(r.ViewsDescending)
+                        t.props.sort === i.ViewsDescending ? t.props.updateSort(i.ViewsAscending) : t.props.updateSort(i.ViewsDescending)
                     }, t.toggleCreatedAtSort = function() {
-                        t.props.sort === r.CreatedAtDescending ? t.props.updateSort(r.CreatedAtAscending) : t.props.updateSort(r.CreatedAtDescending)
+                        t.props.sort === i.CreatedAtDescending ? t.props.updateSort(i.CreatedAtAscending) : t.props.updateSort(i.CreatedAtDescending)
                     }, t.deleteSelectedClips = function() {
                         t.props.onBatchDeleteClips(Object.keys(t.state.selectedClips)), t.setState({
                             numberOfSelectedClips: 0,
@@ -1587,11 +1579,11 @@ webpackJsonp([65], {
                                 a = t.state.selectedClips[n];
                             t.renderDeleteClipModal(a)
                         } else {
-                            var i = t.state.selectedClips,
-                                r = [],
+                            var r = t.state.selectedClips,
+                                i = [],
                                 l = Object.keys(t.state.selectedClips).reduce(function(e, t) {
-                                    return e.push(i[t]), e
-                                }, r);
+                                    return e.push(r[t]), e
+                                }, i);
                             t.props.showModal(x.c, {
                                 clips: l,
                                 onClose: t.props.closeModal,
@@ -1646,7 +1638,7 @@ webpackJsonp([65], {
                     }, this.renderHeaderRow()), s.createElement(H._19, {
                         fullWidth: !0,
                         fullHeight: !0
-                    }, s.createElement(D.b, null, s.createElement(H._19, {
+                    }, s.createElement(M.b, null, s.createElement(H._19, {
                         background: H.m.Base,
                         elevation: 2,
                         border: !0
@@ -1677,7 +1669,7 @@ webpackJsonp([65], {
                             rel: "noopener",
                             href: "https://help.twitch.tv/customer/portal/articles/2442508-how-to-use-clips"
                         }, Object(O.d)("Learn how", "ClipsManagerTable"))
-                    }, "ClipsManagerTable"))), s.createElement(D.a, {
+                    }, "ClipsManagerTable"))), s.createElement(M.a, {
                         loadMore: this.loadMore,
                         enabled: !this.props.loading && this.props.hasNextPage
                     }), this.props.loading && !this.state.isNewQueryLoading && s.createElement(H.V, {
@@ -1739,11 +1731,11 @@ webpackJsonp([65], {
                         ariaLabel: Object(O.d)("Delete Clip", "ClipsManagerTable"),
                         icon: H._11.Trash,
                         onClick: this.renderBatchDeleteModal,
-                        "data-test-selector": Se
+                        "data-test-selector": ke
                     })))));
                     var a = this.props.sort,
-                        i = a === r.ViewsAscending || a === r.ViewsDescending,
-                        l = a === r.CreatedAtAscending || a === r.CreatedAtDescending,
+                        r = a === i.ViewsAscending || a === i.ViewsDescending,
+                        l = a === i.CreatedAtAscending || a === i.CreatedAtDescending,
                         o = Object(O.d)("Created", "ClipsManagerTable"),
                         c = Object(O.d)("Views", "ClipsManagerTable");
                     return s.createElement(H.O, null, s.createElement(H.G, {
@@ -1779,7 +1771,7 @@ webpackJsonp([65], {
                     }, s.createElement(H.T, {
                         alpha: !0,
                         onClick: this.toggleCreatedAtSort,
-                        "data-test-selector": ke
+                        "data-test-selector": Se
                     }, s.createElement(H.V, {
                         display: H.H.Flex,
                         flexWrap: H.K.NoWrap,
@@ -1794,7 +1786,7 @@ webpackJsonp([65], {
                         bold: !0,
                         ellipsis: !0
                     }, o), l && s.createElement(H._10, {
-                        asset: a === r.CreatedAtDescending ? H._11.GlyphArrDown : H._11.GlyphArrUp,
+                        asset: a === i.CreatedAtDescending ? H._11.GlyphArrDown : H._11.GlyphArrUp,
                         type: H._12.Brand
                     }))))), s.createElement(H.G, {
                         cols: 2
@@ -1822,14 +1814,14 @@ webpackJsonp([65], {
                         title: c,
                         bold: !0,
                         ellipsis: !0
-                    }, c), i && s.createElement(H._10, {
-                        asset: a === r.ViewsDescending ? H._11.GlyphArrDown : H._11.GlyphArrUp,
+                    }, c), r && s.createElement(H._10, {
+                        asset: a === i.ViewsDescending ? H._11.GlyphArrDown : H._11.GlyphArrUp,
                         type: H._12.Brand
                     }))))))
                 }, t.prototype.renderClipRow = function(e) {
                     var t = !!this.state.selectedClips[e.slug];
                     if (e.slug === this.state.expandedSlug) {
-                        var n = this.props.userRole === g.Curator ? A.a.MyClips : A.a.ClipsOfMyChannel;
+                        var n = this.props.userRole === g.Curator ? j.a.MyClips : j.a.ClipsOfMyChannel;
                         return s.createElement(ne, {
                             key: e.slug,
                             dataTarget: ve,
@@ -1888,11 +1880,11 @@ webpackJsonp([65], {
                                 updateQuery: function(e, t) {
                                     var n = t.fetchMoreResult,
                                         a = e.user.clips.edges,
-                                        i = n.user.clips.edges;
+                                        r = n.user.clips.edges;
                                     return {
                                         user: l.__assign({}, n.user, {
                                             clips: l.__assign({}, n.user.clips, {
-                                                edges: Object(R.b)(a, i)
+                                                edges: Object(R.b)(a, r)
                                             })
                                         })
                                     }
@@ -1930,10 +1922,10 @@ webpackJsonp([65], {
                         }
                     }
                 }
-            }), Object(E.a)(null, function(e) {
-                return Object(S.bindActionCreators)({
-                    showModal: M.d,
-                    closeModal: M.c
+            }), Object(E.b)(null, function(e) {
+                return Object(k.b)({
+                    showModal: D.d,
+                    closeModal: D.c
                 }, e)
             }))(Te),
             we = n("tYdz"),
@@ -1973,7 +1965,7 @@ webpackJsonp([65], {
                         e && !e.loading && e.currentUser && n.props.latencyTracking.reportInteractive()
                     }, n.state = {
                         userRole: t.role,
-                        sortOption: r.CreatedAtDescending,
+                        sortOption: i.CreatedAtDescending,
                         searchType: w.a.Games,
                         searchTerm: null
                     }, n
@@ -2015,36 +2007,36 @@ webpackJsonp([65], {
                     clearSearch: T.func
                 }, t
             }(s.Component),
-            Me = Object(o.compose)(Object(v.d)("ClipsManager"), Object(N.a)(we), c.e)(Re),
-            De = Object(E.a)(function(e) {
+            De = Object(o.compose)(Object(v.d)("ClipsManager"), Object(N.a)(we), c.e)(Re),
+            Me = Object(E.b)(function(e) {
                 return {
                     isLoggedIn: Object(_.d)(e)
                 }
             }, function(e) {
-                return Object(S.bindActionCreators)({
+                return Object(k.b)({
                     login: function() {
-                        return Object(k.f)(y.a.ClipsManager)
+                        return Object(S.f)(y.a.ClipsManager)
                     }
                 }, e)
-            })(Me),
+            })(De),
             xe = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onRoleChange = function(e) {
                         e !== g.Broadcaster && t.props.history.push({
-                            pathname: i(t.props.match.params.channelName, e)
+                            pathname: r(t.props.match.params.channelName, e)
                         })
                     }, t
                 }
                 return l.__extends(t, e), t.prototype.render = function() {
-                    return s.createElement(De, {
+                    return s.createElement(Me, {
                         channelName: this.props.match.params.channelName,
                         role: g.Broadcaster,
                         onRoleChange: this.onRoleChange
                     })
                 }, t
             }(s.Component),
-            Ae = Object(o.compose)(Object(v.d)("ClipsOfMeManagerPage", {
+            je = Object(o.compose)(Object(v.d)("ClipsOfMeManagerPage", {
                 destination: u.a.ChannelClipsManager
             }), Object(d.a)({
                 location: p.PageviewLocation.ChannelClipsManager,
@@ -2052,17 +2044,17 @@ webpackJsonp([65], {
                     is_live: !1
                 }
             }), c.e)(xe),
-            je = function(e) {
+            Ae = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onRoleChange = function(e) {
                         e !== g.Curator && t.props.history.push({
-                            pathname: i(t.props.match.params.channelName, e)
+                            pathname: r(t.props.match.params.channelName, e)
                         })
                     }, t
                 }
                 return l.__extends(t, e), t.prototype.render = function() {
-                    return s.createElement(De, {
+                    return s.createElement(Me, {
                         channelName: this.props.match.params.channelName,
                         role: g.Curator,
                         onRoleChange: this.onRoleChange
@@ -2076,14 +2068,14 @@ webpackJsonp([65], {
                 properties: {
                     is_live: !1
                 }
-            }), c.e)(je);
+            }), c.e)(Ae);
         n.d(t, "ChannelClipsManagerPage", function() {
-            return Ae
+            return je
         }), n.d(t, "MyClipsManagerPage", function() {
             return Ie
         })
     },
-    hSb5: function(e, t) {
+    iFCf: function(e, t) {
         var n = {
             kind: "Document",
             definitions: [{
@@ -2099,7 +2091,6 @@ webpackJsonp([65], {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "currentUser"
@@ -2110,14 +2101,12 @@ webpackJsonp([65], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }]
                         }
                     }]
@@ -2159,77 +2148,62 @@ webpackJsonp([65], {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "id"
                         },
                         arguments: [],
-                        directives: [],
-                        selectionSet: null
+                        directives: []
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "slug"
                         },
                         arguments: [],
-                        directives: [],
-                        selectionSet: null
+                        directives: []
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "url"
                         },
                         arguments: [],
-                        directives: [],
-                        selectionSet: null
+                        directives: []
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "embedURL"
                         },
                         arguments: [],
-                        directives: [],
-                        selectionSet: null
+                        directives: []
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "title"
                         },
                         arguments: [],
-                        directives: [],
-                        selectionSet: null
+                        directives: []
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "viewCount"
                         },
                         arguments: [],
-                        directives: [],
-                        selectionSet: null
+                        directives: []
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "language"
                         },
                         arguments: [],
-                        directives: [],
-                        selectionSet: null
+                        directives: []
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "curator"
@@ -2240,39 +2214,32 @@ webpackJsonp([65], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "login"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "displayName"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }]
                         }
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "game"
@@ -2283,27 +2250,22 @@ webpackJsonp([65], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "name"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "boxArtURL"
@@ -2329,13 +2291,11 @@ webpackJsonp([65], {
                                         value: "72"
                                     }
                                 }],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }]
                         }
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "broadcaster"
@@ -2346,66 +2306,54 @@ webpackJsonp([65], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "login"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "displayName"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }]
                         }
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "thumbnailURL"
                         },
                         arguments: [],
-                        directives: [],
-                        selectionSet: null
+                        directives: []
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "createdAt"
                         },
                         arguments: [],
-                        directives: [],
-                        selectionSet: null
+                        directives: []
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "durationSeconds"
                         },
                         arguments: [],
-                        directives: [],
-                        selectionSet: null
+                        directives: []
                     }]
                 }
             }],
@@ -2432,8 +2380,8 @@ webpackJsonp([65], {
         function a(e) {
             return Object(C.a)(b, e)
         }
-        var i = n("TToO"),
-            r = n("U7vG"),
+        var r = n("TToO"),
+            i = n("U7vG"),
             l = n("6sO2"),
             s = n("rCmJ"),
             o = n("Odds"),
@@ -2449,7 +2397,7 @@ webpackJsonp([65], {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderSuccess = function() {
-                        return t.props.successContent ? r.createElement(o._19, {
+                        return t.props.successContent ? i.createElement(o._19, {
                             "data-test-selector": c.SUCCESS_BODY,
                             padding: {
                                 x: 2,
@@ -2461,11 +2409,11 @@ webpackJsonp([65], {
                             borderMarked: !0,
                             background: o.m.Alt,
                             fullWidth: !0
-                        }, r.createElement(o._23, {
+                        }, i.createElement(o._23, {
                             type: o._28.Strong
                         }, t.props.successContent)) : null
                     }, t.renderError = function() {
-                        return t.props.errorContent ? r.createElement(o._19, {
+                        return t.props.errorContent ? i.createElement(o._19, {
                             "data-test-selector": c.ERROR_BODY,
                             padding: {
                                 x: 1,
@@ -2477,7 +2425,7 @@ webpackJsonp([65], {
                             borderMarked: !0,
                             background: o.m.Alt,
                             fullWidth: !0
-                        }, r.createElement(o._23, {
+                        }, i.createElement(o._23, {
                             type: o._28.Strong,
                             color: o.F.Error
                         }, t.props.errorContent)) : null
@@ -2485,30 +2433,30 @@ webpackJsonp([65], {
                         t.props.onSubmit()
                     }, t
                 }
-                return i.__extends(t, e), t.prototype.render = function() {
-                    return this.props.successContent ? r.createElement(s.a, {
+                return r.__extends(t, e), t.prototype.render = function() {
+                    return this.props.successContent ? i.createElement(s.a, {
                         onClickOut: this.props.onClose
-                    }, r.createElement(o._19, {
+                    }, i.createElement(o._19, {
                         padding: 2,
                         background: o.m.Base,
                         className: "clip-modal"
-                    }, this.renderSuccess(), r.createElement(o.V, {
+                    }, this.renderSuccess(), i.createElement(o.V, {
                         display: o.H.Flex,
                         justifyContent: o.U.Center
-                    }, r.createElement(o.V, {
+                    }, i.createElement(o.V, {
                         margin: {
                             x: 1
                         }
-                    }, r.createElement(o.u, {
+                    }, i.createElement(o.u, {
                         "data-test-selector": c.CANCEL_BUTTON,
                         onClick: this.props.onClose
-                    }, Object(l.d)("Close", "ClipsModal")))))) : r.createElement(s.a, {
+                    }, Object(l.d)("Close", "ClipsModal")))))) : i.createElement(s.a, {
                         onClickOut: this.props.onClose
-                    }, r.createElement(o._19, {
+                    }, i.createElement(o._19, {
                         padding: 2,
                         background: o.m.Base,
                         className: "clip-modal"
-                    }, r.createElement(o._19, {
+                    }, i.createElement(o._19, {
                         "data-test-selector": c.TITLE,
                         borderBottom: !0,
                         margin: {
@@ -2517,7 +2465,7 @@ webpackJsonp([65], {
                         padding: {
                             bottom: 1
                         }
-                    }, this.props.title), r.createElement(o._19, {
+                    }, this.props.title), i.createElement(o._19, {
                         "data-test-selector": c.MAIN_BODY,
                         borderBottom: !0,
                         margin: {
@@ -2526,31 +2474,31 @@ webpackJsonp([65], {
                         padding: {
                             bottom: 2
                         }
-                    }, this.renderError(), this.props.body), r.createElement(o.V, {
+                    }, this.renderError(), this.props.body), i.createElement(o.V, {
                         display: o.H.Flex,
                         justifyContent: o.U.Center
-                    }, r.createElement(o.V, {
+                    }, i.createElement(o.V, {
                         margin: {
                             x: 1
                         }
-                    }, r.createElement(o.u, {
+                    }, i.createElement(o.u, {
                         "data-test-selector": c.CANCEL_BUTTON,
                         type: o.z.Text,
                         onClick: this.props.onClose
-                    }, Object(l.d)("Cancel", "ClipsModal"))), r.createElement(o.V, {
+                    }, Object(l.d)("Cancel", "ClipsModal"))), i.createElement(o.V, {
                         margin: {
                             x: 1
                         }
-                    }, r.createElement(o.u, {
+                    }, i.createElement(o.u, {
                         "data-test-selector": c.SUBMIT_BUTTON,
                         type: this.props.buttonType ? this.props.buttonType : o.z.Default,
                         onClick: this.onSubmit,
                         disabled: this.props.submitDisabled
-                    }, this.props.buttonContent), this.props.isLoading && r.createElement(o.Z, {
+                    }, this.props.buttonContent), this.props.isLoading && i.createElement(o.Z, {
                         delay: 0
                     })))))
                 }, t
-            }(r.Component),
+            }(i.Component),
             u = n("1OO3"),
             p = n("CSlQ"),
             m = 86400,
@@ -2563,17 +2511,17 @@ webpackJsonp([65], {
                 function t() {
                     var t = e.call(this) || this;
                     return t.renderTitle = function() {
-                        return t.props.isTemporary ? r.createElement(o._23, {
+                        return t.props.isTemporary ? i.createElement(o._23, {
                             type: o._28.H5,
                             ellipsis: !0
-                        }, Object(l.d)("Timeout this Clip Creator for 24 hours from Your Channel", "ClipsModalBanUser")) : r.createElement(o._23, {
+                        }, Object(l.d)("Timeout this Clip Creator for 24 hours from Your Channel", "ClipsModalBanUser")) : i.createElement(o._23, {
                             type: o._28.H5,
                             ellipsis: !0
                         }, Object(l.d)("Ban this Clip Creator from Your Channel", "ClipsModalBanUser"))
                     }, t.renderBodyText = function() {
-                        return t.props.isTemporary ? r.createElement(o._23, null, Object(l.d)("{clipCreator} will temporarily be timed out from creating clips and chatting in your channel for 24 hours.", {
+                        return t.props.isTemporary ? i.createElement(o._23, null, Object(l.d)("{clipCreator} will temporarily be timed out from creating clips and chatting in your channel for 24 hours.", {
                             clipCreator: t.props.clip.curator.displayName
-                        }, "ClipsModalBanUser")) : r.createElement(o._23, null, Object(l.d)("{clipCreator} will be permanently banned from creating clips and chatting in your channel.", {
+                        }, "ClipsModalBanUser")) : i.createElement(o._23, null, Object(l.d)("{clipCreator} will be permanently banned from creating clips and chatting in your channel.", {
                             clipCreator: t.props.clip.curator.displayName
                         }, "ClipsModalBanUser"))
                     }, t.renderButtonText = function() {
@@ -2583,9 +2531,9 @@ webpackJsonp([65], {
                     }, t.renderFailure = function() {
                         return t.state.hasErrored ? t.props.isTemporary ? Object(l.d)("There was a problem timing out this clip creator", "ClipsModalBanUser") : Object(l.d)("There was a problem banning this clip creator", "ClipsModalBanUser") : null
                     }, t.banUser = function() {
-                        return i.__awaiter(t, void 0, void 0, function() {
+                        return r.__awaiter(t, void 0, void 0, function() {
                             var e, t;
-                            return i.__generator(this, function(n) {
+                            return r.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
                                         this.setState({
@@ -2612,10 +2560,10 @@ webpackJsonp([65], {
                         })
                     }, t.state = h, t
                 }
-                return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                return r.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return r.createElement(d, {
+                    return i.createElement(d, {
                         onSubmit: this.banUser,
                         onClose: this.props.onClose,
                         title: this.renderTitle(),
@@ -2628,7 +2576,7 @@ webpackJsonp([65], {
                         isLoading: this.state.isLoading
                     })
                 }, t
-            }(r.Component),
+            }(i.Component),
             f = Object(p.d)("ClipsModalBanUser")(Object(u.a)(function(e) {
                 return {
                     channelID: e.clip.broadcaster.id
@@ -2642,12 +2590,12 @@ webpackJsonp([65], {
                 hasErrored: !1,
                 hasSucceeded: !1
             },
-            S = function(e) {
+            k = function(e) {
                 function t() {
                     var t = e.call(this) || this;
                     return t.onDeleteClick = function() {
-                        return i.__awaiter(t, void 0, void 0, function() {
-                            return i.__generator(this, function(e) {
+                        return r.__awaiter(t, void 0, void 0, function() {
+                            return r.__generator(this, function(e) {
                                 switch (e.label) {
                                     case 0:
                                         this.setState({
@@ -2674,45 +2622,45 @@ webpackJsonp([65], {
                         })
                     }, t.state = E, t
                 }
-                return i.__extends(t, e), t.prototype.render = function() {
-                    var e = [r.createElement(o._23, {
+                return r.__extends(t, e), t.prototype.render = function() {
+                    var e = [i.createElement(o._23, {
                             key: "title",
                             type: o._28.H4
-                        }, Object(l.d)("Delete This Clip", "ClipsModalDelete")), r.createElement(o.V, {
+                        }, Object(l.d)("Delete This Clip", "ClipsModalDelete")), i.createElement(o.V, {
                             key: "message",
                             margin: {
                                 top: 1
                             }
-                        }, r.createElement(o._23, {
+                        }, i.createElement(o._23, {
                             type: o._28.P,
                             color: o.F.Alt2
                         }, Object(l.d)("This clip will be permanently deleted.", "ClipsModalDelete")))],
-                        t = r.createElement(o._19, {
+                        t = i.createElement(o._19, {
                             display: o.H.Flex,
                             flexWrap: o.K.NoWrap
-                        }, r.createElement(o.V, {
+                        }, i.createElement(o.V, {
                             className: "clips-modal-delete__thumb",
                             margin: {
                                 right: 1
                             }
-                        }, r.createElement(o.j, {
+                        }, i.createElement(o.j, {
                             ratio: o.k.Aspect16x9
-                        }, r.createElement("img", {
+                        }, i.createElement("img", {
                             src: this.props.clip.thumbnailURL
-                        }))), r.createElement(o.V, null, r.createElement(o._23, {
+                        }))), i.createElement(o.V, null, i.createElement(o._23, {
                             type: o._28.H5
-                        }, this.props.clip.title), r.createElement(o._23, {
+                        }, this.props.clip.title), i.createElement(o._23, {
                             color: o.F.Alt2
                         }, Object(l.d)("{created, date, medium}", {
                             created: new Date(this.props.clip.createdAt)
                         }, "ClipsModalDelete"), " • ", Object(l.d)("Clipped by {curator}", {
                             curator: this.props.clip.curator.login
-                        }, "ClipsModalDelete")), r.createElement(o._23, {
+                        }, "ClipsModalDelete")), i.createElement(o._23, {
                             color: o.F.Alt2
                         }, Object(l.d)("{viewCount, number} views", {
                             viewCount: this.props.clip.viewCount
                         }, "ClipsModalDelete"))));
-                    return r.createElement(d, {
+                    return i.createElement(d, {
                         onSubmit: this.onDeleteClick,
                         onClose: this.props.onClose,
                         title: e,
@@ -2725,14 +2673,14 @@ webpackJsonp([65], {
                         isLoading: this.state.isLoading
                     })
                 }, t
-            }(r.Component),
+            }(i.Component),
             y = a({
                 props: function(e) {
                     return {
                         deleteClip: function(t) {
-                            return i.__awaiter(v, void 0, void 0, function() {
+                            return r.__awaiter(v, void 0, void 0, function() {
                                 var n;
-                                return i.__generator(this, function(a) {
+                                return r.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
                                             return a.trys.push([0, 2, , 3]), [4, e.mutate({
@@ -2754,8 +2702,8 @@ webpackJsonp([65], {
                         }
                     }
                 }
-            })(S),
-            k = n("BhyV"),
+            })(k),
+            S = n("3zLD"),
             _ = n("wqRA"),
             T = this,
             O = {
@@ -2767,8 +2715,8 @@ webpackJsonp([65], {
                 function t() {
                     var t = e.call(this) || this;
                     return t.deleteAll = function() {
-                        return i.__awaiter(t, void 0, void 0, function() {
-                            return i.__generator(this, function(e) {
+                        return r.__awaiter(t, void 0, void 0, function() {
+                            return r.__generator(this, function(e) {
                                 switch (e.label) {
                                     case 0:
                                         this.setState({
@@ -2799,16 +2747,16 @@ webpackJsonp([65], {
                         return t.state.hasErrored ? Object(l.d)("There was a problem deleting this clip.", "ClipsModalDeleteAll") : null
                     }, t.state = O, t
                 }
-                return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                return r.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    var e = r.createElement(o._23, {
+                    var e = i.createElement(o._23, {
                         type: o._28.P
                     }, Object(l.d)("This clip and all other clips created from the same video will be permanently deleted.", "ClipsModalDeleteAll"));
-                    return r.createElement(d, {
+                    return i.createElement(d, {
                         onSubmit: this.deleteAll,
                         onClose: this.props.onClose,
-                        title: r.createElement(o._23, {
+                        title: i.createElement(o._23, {
                             type: o._28.H4
                         }, Object(l.d)("Delete All Clips from Related Video", "ClipsModalDeleteAll")),
                         body: e,
@@ -2820,17 +2768,17 @@ webpackJsonp([65], {
                         errorContent: this.renderFailure()
                     })
                 }, t
-            }(r.Component),
-            w = Object(k.compose)(Object(p.d)("ClipsModalDeleteAll"), a({
+            }(i.Component),
+            w = Object(S.compose)(Object(p.d)("ClipsModalDeleteAll"), a({
                 props: function(e) {
                     return {
                         deleteAllClips: function(t, n) {
-                            return i.__awaiter(T, void 0, void 0, function() {
-                                var a, r, s;
-                                return i.__generator(this, function(i) {
-                                    switch (i.label) {
+                            return r.__awaiter(T, void 0, void 0, function() {
+                                var a, i, s;
+                                return r.__generator(this, function(r) {
+                                    switch (r.label) {
                                         case 0:
-                                            return i.trys.push([0, 6, , 7]), a = void 0, n ? [4, e.mutate({
+                                            return r.trys.push([0, 6, , 7]), a = void 0, n ? [4, e.mutate({
                                                 variables: {
                                                     input: {
                                                         videoID: n
@@ -2838,7 +2786,7 @@ webpackJsonp([65], {
                                                 }
                                             })] : [3, 2];
                                         case 1:
-                                            return r = i.sent(), a = r.data, [3, 5];
+                                            return i = r.sent(), a = i.data, [3, 5];
                                         case 2:
                                             return t ? [4, e.mutate({
                                                 variables: {
@@ -2848,13 +2796,13 @@ webpackJsonp([65], {
                                                 }
                                             })] : [3, 4];
                                         case 3:
-                                            return r = i.sent(), a = r.data, [3, 5];
+                                            return i = r.sent(), a = i.data, [3, 5];
                                         case 4:
                                             throw new Error("Invalid broadcastID specified for deleteAllClips");
                                         case 5:
                                             return e.ownProps.onDeleteAll && e.ownProps.onDeleteAll(a.deleteClips.clips), [3, 7];
                                         case 6:
-                                            throw s = i.sent(), l.i.error(s, "Failed to delete clips from VOD"), s;
+                                            throw s = r.sent(), l.i.error(s, "Failed to delete clips from VOD"), s;
                                         case 7:
                                             return [2]
                                     }
@@ -2883,12 +2831,12 @@ webpackJsonp([65], {
                 }
             }))(N),
             R = this,
-            M = {
+            D = {
                 isLoading: !1,
                 hasErrored: !1,
                 hasSucceeded: !1
             },
-            D = function(e) {
+            M = function(e) {
                 function t() {
                     var t = e.call(this) || this;
                     return t.renderSuccess = function() {
@@ -2896,8 +2844,8 @@ webpackJsonp([65], {
                     }, t.renderError = function() {
                         return t.state.hasErrored ? Object(l.d)("There was a problem deleting this clip.", "ClipsModalBatchDelete") : null
                     }, t.onDeleteClick = function() {
-                        return i.__awaiter(t, void 0, void 0, function() {
-                            return i.__generator(this, function(e) {
+                        return r.__awaiter(t, void 0, void 0, function() {
+                            return r.__generator(this, function(e) {
                                 switch (e.label) {
                                     case 0:
                                         this.setState({
@@ -2922,16 +2870,16 @@ webpackJsonp([65], {
                                 }
                             })
                         })
-                    }, t.state = M, t
+                    }, t.state = D, t
                 }
-                return i.__extends(t, e), t.prototype.render = function() {
-                    var e = r.createElement(o._23, {
+                return r.__extends(t, e), t.prototype.render = function() {
+                    var e = i.createElement(o._23, {
                             type: o._28.H4
                         }, Object(l.d)("Delete these clips?", "ClipsModalBatchDelete")),
-                        t = r.createElement(o._23, {
+                        t = i.createElement(o._23, {
                             type: o._28.P
                         }, Object(l.d)("These clips will be permanently deleted. Are you sure?", "ClipsModalBatchDelete"));
-                    return r.createElement(d, {
+                    return i.createElement(d, {
                         onSubmit: this.onDeleteClick,
                         onClose: this.props.onClose,
                         title: e,
@@ -2944,14 +2892,14 @@ webpackJsonp([65], {
                         errorContent: this.renderError()
                     })
                 }, t
-            }(r.Component),
+            }(i.Component),
             x = a({
                 props: function(e) {
                     return {
                         deleteClips: function() {
-                            return i.__awaiter(R, void 0, void 0, function() {
+                            return r.__awaiter(R, void 0, void 0, function() {
                                 var t;
-                                return i.__generator(this, function(n) {
+                                return r.__generator(this, function(n) {
                                     switch (n.label) {
                                         case 0:
                                             return n.trys.push([0, 2, , 3]), [4, e.mutate({
@@ -2975,7 +2923,7 @@ webpackJsonp([65], {
                         }
                     }
                 }
-            })(D);
+            })(M);
         n.d(t, "a", function() {
             return d
         }), n.d(t, "b", function() {
@@ -3004,7 +2952,6 @@ webpackJsonp([65], {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "currentUser"
@@ -3015,24 +2962,20 @@ webpackJsonp([65], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "login"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }]
                         }
                     }]
@@ -3082,15 +3025,13 @@ webpackJsonp([65], {
                                 value: "DeleteClipsInput"
                             }
                         }
-                    },
-                    defaultValue: null
+                    }
                 }],
                 directives: [],
                 selectionSet: {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "deleteClips"
@@ -3114,7 +3055,6 @@ webpackJsonp([65], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "clips"
@@ -3125,24 +3065,20 @@ webpackJsonp([65], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "id"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "slug"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }]
                                 }
                             }]
@@ -3193,15 +3129,13 @@ webpackJsonp([65], {
                                 value: "ID"
                             }
                         }
-                    },
-                    defaultValue: null
+                    }
                 }],
                 directives: [],
                 selectionSet: {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "clip"
@@ -3225,17 +3159,14 @@ webpackJsonp([65], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "video"
@@ -3246,19 +3177,16 @@ webpackJsonp([65], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "id"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }]
                                 }
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "broadcast"
@@ -3269,14 +3197,12 @@ webpackJsonp([65], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "id"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }]
                                 }
                             }]
@@ -3327,8 +3253,7 @@ webpackJsonp([65], {
                                 value: "String"
                             }
                         }
-                    },
-                    defaultValue: null
+                    }
                 }, {
                     kind: "VariableDefinition",
                     variable: {
@@ -3344,8 +3269,7 @@ webpackJsonp([65], {
                             kind: "Name",
                             value: "Int"
                         }
-                    },
-                    defaultValue: null
+                    }
                 }, {
                     kind: "VariableDefinition",
                     variable: {
@@ -3361,8 +3285,7 @@ webpackJsonp([65], {
                             kind: "Name",
                             value: "Cursor"
                         }
-                    },
-                    defaultValue: null
+                    }
                 }, {
                     kind: "VariableDefinition",
                     variable: {
@@ -3378,15 +3301,13 @@ webpackJsonp([65], {
                             kind: "Name",
                             value: "UserClipsInput"
                         }
-                    },
-                    defaultValue: null
+                    }
                 }],
                 directives: [],
                 selectionSet: {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "user"
@@ -3410,27 +3331,22 @@ webpackJsonp([65], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "displayName"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "clips"
@@ -3480,7 +3396,6 @@ webpackJsonp([65], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "pageInfo"
@@ -3491,19 +3406,16 @@ webpackJsonp([65], {
                                             kind: "SelectionSet",
                                             selections: [{
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "hasNextPage"
                                                 },
                                                 arguments: [],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }]
                                         }
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "edges"
@@ -3514,17 +3426,14 @@ webpackJsonp([65], {
                                             kind: "SelectionSet",
                                             selections: [{
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "cursor"
                                                 },
                                                 arguments: [],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }, {
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "node"
@@ -3564,14 +3473,14 @@ webpackJsonp([65], {
                 column: 1
             }
         };
-        var i = {};
+        var r = {};
         a.definitions = a.definitions.concat(function(e) {
             return e.filter(function(e) {
                 if ("FragmentDefinition" !== e.kind) return !0;
                 var t = e.name.value;
-                return !i[t] && (i[t] = !0, !0)
+                return !r[t] && (r[t] = !0, !0)
             })
         }(n("kUjr").definitions)), e.exports = a
     }
 });
-//# sourceMappingURL=pages.clips-manager-2b0a91f8e2b9df209ba1d9f479ab9f4e.js.map
+//# sourceMappingURL=pages.clips-manager-78b7d3b37c38568c04cc29cf0cfe10e4.js.map
