@@ -2178,14 +2178,14 @@ window.SiteOptions = {
         },
         "6a2630a4-edc7-4f2a-8cfe-e4de75eb0d98": {
             "name": "rtqos",
-            "v": 2541,
+            "v": 2950,
             "t": 1,
             "s": 1,
             "groups": [{
-                "weight": 90,
+                "weight": 80,
                 "value": "control"
             }, {
-                "weight": 10,
+                "weight": 20,
                 "value": "realtime"
             }]
         },
