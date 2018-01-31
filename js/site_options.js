@@ -104,6 +104,18 @@ window.SiteOptions = {
     "tsubs_enabled": true,
     "release_subs_tsubs": "staff",
     "experiments": {
+        "00266295-54c5-46e6-a8ca-84165b807c8f": {
+            "name": "mobile_web_aa",
+            "v": 2943,
+            "t": 1,
+            "groups": [{
+                "weight": 50,
+                "value": "treatment"
+            }, {
+                "weight": 50,
+                "value": "control"
+            }]
+        },
         "00683bde-a79d-4b9d-a7cc-b0549f854d36": {
             "name": "offline_recs",
             "v": 1520,
@@ -4819,7 +4831,7 @@ window.SiteOptions = {
         },
         "feb4fffb-c997-47f7-a2e4-25d463f125ba": {
             "name": "mobile_web_muted_autoplay",
-            "v": 2741,
+            "v": 2942,
             "t": 1,
             "groups": [{
                 "weight": 50,
