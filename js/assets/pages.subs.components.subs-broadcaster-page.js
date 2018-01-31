@@ -27,15 +27,13 @@ webpackJsonp([74], {
                                 value: "String"
                             }
                         }
-                    },
-                    defaultValue: null
+                    }
                 }],
                 directives: [],
                 selectionSet: {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "user"
@@ -59,37 +57,30 @@ webpackJsonp([74], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "displayName"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "description"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "roles"
@@ -100,29 +91,24 @@ webpackJsonp([74], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "isPartner"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }]
                                 }
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "bannerImageURL"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "profileImageURL"
@@ -138,8 +124,7 @@ webpackJsonp([74], {
                                         value: "300"
                                     }
                                 }],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }]
                         }
                     }]
@@ -190,15 +175,13 @@ webpackJsonp([74], {
                                 value: "String"
                             }
                         }
-                    },
-                    defaultValue: null
+                    }
                 }],
                 directives: [],
                 selectionSet: {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "user"
@@ -222,37 +205,30 @@ webpackJsonp([74], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "displayName"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "login"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "subscriptionProducts"
@@ -263,37 +239,30 @@ webpackJsonp([74], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "id"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "url"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "price"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "emotes"
@@ -304,39 +273,32 @@ webpackJsonp([74], {
                                             kind: "SelectionSet",
                                             selections: [{
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "id"
                                                 },
                                                 arguments: [],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }, {
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "token"
                                                 },
                                                 arguments: [],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }]
                                         }
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "emoteSetID"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "self"
@@ -347,7 +309,6 @@ webpackJsonp([74], {
                                             kind: "SelectionSet",
                                             selections: [{
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "promotion"
@@ -358,44 +319,36 @@ webpackJsonp([74], {
                                                     kind: "SelectionSet",
                                                     selections: [{
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "newPrice"
                                                         },
                                                         arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "oldPrice"
                                                         },
                                                         arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "discountValue"
                                                         },
                                                         arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "discountType"
                                                         },
                                                         arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }]
                                                 }
                                             }]
@@ -404,7 +357,6 @@ webpackJsonp([74], {
                                 }
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "self"
@@ -415,7 +367,6 @@ webpackJsonp([74], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "subscriptionBenefit"
@@ -426,24 +377,20 @@ webpackJsonp([74], {
                                             kind: "SelectionSet",
                                             selections: [{
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "id"
                                                 },
                                                 arguments: [],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }, {
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "tier"
                                                 },
                                                 arguments: [],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }]
                                         }
                                     }]
@@ -545,11 +492,11 @@ webpackJsonp([74], {
                                 var s = i.referenceTracking,
                                     a = s.content,
                                     o = s.medium,
-                                    l = s.content_index;
+                                    u = s.content_index;
                                 c.n.tracking.trackPageview(r.__assign({
                                     content: a,
                                     medium: o,
-                                    content_index: l,
+                                    content_index: u,
                                     location: e.location
                                 }, t))
                             }
@@ -605,8 +552,8 @@ webpackJsonp([74], {
             a = n("U7vG"),
             o = n("6sO2"),
             c = n("yWCw"),
-            l = n("zCIC"),
-            u = n("7vx8"),
+            u = n("zCIC"),
+            l = n("7vx8"),
             d = n("j7/Y"),
             p = n("w9tK"),
             m = n("vH/s"),
@@ -617,19 +564,19 @@ webpackJsonp([74], {
             v = n("37Pp"),
             f = n("YEG/"),
             _ = n("FDYX"),
-            S = n("Odds"),
-            T = function(e) {
+            T = n("Odds"),
+            E = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return s.__extends(t, e), t.prototype.render = function() {
-                    return this.props.subscriptionProduct.emotes.length < 1 ? null : a.createElement(S.V, {
+                    return this.props.subscriptionProduct.emotes.length < 1 ? null : a.createElement(T.V, {
                         key: this.props.subscriptionProduct.id,
-                        display: S.H.Flex,
-                        flexDirection: S.J.Column,
-                        alignItems: S.c.Center,
+                        display: T.H.Flex,
+                        flexDirection: T.J.Column,
+                        alignItems: T.c.Center,
                         margin: 1
-                    }, this.buildEmotes(this.props.subscriptionProduct.emotes), this.props.hidePrice ? null : a.createElement(S._23, null, Object(o.d)("{price} emote", {
+                    }, this.buildEmotes(this.props.subscriptionProduct.emotes), this.props.hidePrice ? null : a.createElement(T._23, null, Object(o.d)("{price} emote", {
                         price: this.props.subscriptionProduct.price
                     }, "SubsBonusEmote")))
                 }, t.prototype.buildEmotes = function(e) {
@@ -644,12 +591,12 @@ webpackJsonp([74], {
                     })
                 }, t
             }(a.Component),
-            E = n("XFEc");
+            y = n("XFEc");
         n("CqGj");
         ! function(e) {
             e[e.Tier1 = 0] = "Tier1", e[e.Tier2 = 1] = "Tier2", e[e.Tier3 = 2] = "Tier3"
         }(i || (i = {}));
-        var y = function(e) {
+        var S = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -677,7 +624,7 @@ webpackJsonp([74], {
                                 })
                         }
                     }, t.onSubClick = function(e) {
-                        Object(E.b)({
+                        Object(y.b)({
                             action: e.action,
                             canSubscribe: !t.props.subTier || "3000" !== t.props.subTier,
                             channelID: t.props.channelId,
@@ -697,66 +644,66 @@ webpackJsonp([74], {
                 return s.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return !this.props.subscriptionProducts || this.props.subscriptionProducts.length < 1 ? a.createElement(S.V, {
-                        display: S.H.Flex,
-                        justifyContent: S.U.Center,
-                        alignItems: S.c.Center,
+                    return !this.props.subscriptionProducts || this.props.subscriptionProducts.length < 1 ? a.createElement(T.V, {
+                        display: T.H.Flex,
+                        justifyContent: T.U.Center,
+                        alignItems: T.c.Center,
                         fullHeight: !0
-                    }, a.createElement(S.Z, null)) : a.createElement(S.V, {
+                    }, a.createElement(T.Z, null)) : a.createElement(T.V, {
                         className: "subs-broadcaster-tabbed-tiers",
-                        display: S.H.Flex,
-                        flexDirection: S.J.Column,
-                        alignItems: S.c.Center
-                    }, a.createElement(S.Q, {
+                        display: T.H.Flex,
+                        flexDirection: T.J.Column,
+                        alignItems: T.c.Center
+                    }, a.createElement(T.Q, {
                         margin: 1
-                    }, a.createElement(S._23, {
-                        type: S._28.H3,
-                        color: S.F.Link,
+                    }, a.createElement(T._23, {
+                        type: T._28.H3,
+                        color: T.F.Link,
                         bold: !0
                     }, this.messages.subscribe)), this.makeTabs(), this.makeTabContents())
                 }, t.prototype.makeTabs = function() {
-                    return !this.props.subscriptionProducts || this.props.subscriptionProducts.length < 1 ? a.createElement(S._3, null) : 1 === this.props.subscriptionProducts.length ? a.createElement(S._21, null, a.createElement(S._20, {
+                    return !this.props.subscriptionProducts || this.props.subscriptionProducts.length < 1 ? a.createElement(T._3, null) : 1 === this.props.subscriptionProducts.length ? a.createElement(T._21, null, a.createElement(T._20, {
                         active: !0,
                         "data-a-target": "subscribe-tab-" + i.Tier1
-                    }, this.props.subscriptionProducts[0].price)) : a.createElement(S._21, null, a.createElement(S._20, {
+                    }, this.props.subscriptionProducts[0].price)) : a.createElement(T._21, null, a.createElement(T._20, {
                         active: this.state.activeTab === i.Tier1,
                         onClick: this.toggleActiveTab,
                         "data-a-target": "subscribe-tab-" + i.Tier1
-                    }, this.props.subscriptionProducts[0].price), a.createElement(S._20, {
+                    }, this.props.subscriptionProducts[0].price), a.createElement(T._20, {
                         active: this.state.activeTab === i.Tier2,
                         onClick: this.toggleActiveTab,
                         "data-a-target": "subscribe-tab-" + i.Tier2
-                    }, this.props.subscriptionProducts[1].price), a.createElement(S._20, {
+                    }, this.props.subscriptionProducts[1].price), a.createElement(T._20, {
                         active: this.state.activeTab === i.Tier3,
                         onClick: this.toggleActiveTab,
                         "data-a-target": "subscribe-tab-" + i.Tier3
                     }, this.props.subscriptionProducts[2].price))
                 }, t.prototype.makeTabContents = function() {
-                    return !this.props.subscriptionProducts || this.props.subscriptionProducts.length < 1 ? a.createElement(S._3, null) : a.createElement(S.V, {
+                    return !this.props.subscriptionProducts || this.props.subscriptionProducts.length < 1 ? a.createElement(T._3, null) : a.createElement(T.V, {
                         className: "subs-broadcaster-tabbed-tiers__tab",
-                        display: S.H.Flex,
-                        flexDirection: S.J.Column,
-                        alignItems: S.c.Center,
-                        textAlign: S._24.Center
-                    }, a.createElement(S.Q, {
+                        display: T.H.Flex,
+                        flexDirection: T.J.Column,
+                        alignItems: T.c.Center,
+                        textAlign: T._24.Center
+                    }, a.createElement(T.Q, {
                         margin: 1
-                    }, a.createElement(S._23, {
-                        type: S._28.H4,
+                    }, a.createElement(T._23, {
+                        type: T._28.H4,
                         bold: !0
                     }, Object(o.d)("Channel Subscription for {displayName}", {
                         displayName: this.props.channelDisplayName
-                    }, "SubsBroadcasterPlanTabs"))), a.createElement(S._23, {
-                        type: S._28.P
+                    }, "SubsBroadcasterPlanTabs"))), a.createElement(T._23, {
+                        type: T._28.P
                     }, Object(o.d)("{numEmotes, plural, one {Includes Ad-Free Viewing, Subscriber Badges and 1 Emote.} other {Includes Ad-Free Viewing, Subscriber Badges and {numEmotes, number} Emotes.}}", {
                         numEmotes: this.props.subscriptionProducts[0].emotes.length
-                    }, "SubsBroadcasterPlanTabs")), a.createElement(S._23, {
-                        type: S._28.P
-                    }, this.messages.perkChat), this.getSubButton(), a.createElement(S.Q, {
+                    }, "SubsBroadcasterPlanTabs")), a.createElement(T._23, {
+                        type: T._28.P
+                    }, this.messages.perkChat), this.getSubButton(), a.createElement(T.Q, {
                         margin: {
                             top: 2
                         }
-                    }, a.createElement(S._23, {
-                        type: S._28.H4,
+                    }, a.createElement(T._23, {
+                        type: T._28.H4,
                         bold: !0
                     }, this.messages.includedEmotes)), this.getBonusEmotes(), this.baseEmotes())
                 }, t.prototype.getSubButton = function() {
@@ -773,17 +720,17 @@ webpackJsonp([74], {
                             e = this.props.subscriptionProducts[0]
                     }
                     var t = e.price;
-                    return Object(_.d)([e]) && (t = Object(_.a)(e)), a.createElement(S.V, {
+                    return Object(_.d)([e]) && (t = Object(_.a)(e)), a.createElement(T.V, {
                         margin: {
                             top: 1
                         }
-                    }, a.createElement(S.V, {
+                    }, a.createElement(T.V, {
                         margin: {
                             top: 1
                         }
                     }, a.createElement(v.a, {
                         subscriptionProduct: e
-                    })), a.createElement(S.V, {
+                    })), a.createElement(T.V, {
                         margin: {
                             top: 1
                         }
@@ -818,25 +765,25 @@ webpackJsonp([74], {
                     var e = [];
                     if (this.state.activeTab === i.Tier2 || this.state.activeTab === i.Tier3) {
                         var t = this.props.subscriptionProducts[1];
-                        e.push(a.createElement(T, {
+                        e.push(a.createElement(E, {
                             key: "bonus-emote-" + i.Tier2,
                             subscriptionProduct: t
                         }))
                     }
                     if (this.state.activeTab === i.Tier3) {
                         t = this.props.subscriptionProducts[2];
-                        e.push(a.createElement(T, {
+                        e.push(a.createElement(E, {
                             key: "bonus-emote-" + i.Tier3,
                             subscriptionProduct: t
                         }))
                     }
-                    return a.createElement(S.V, {
-                        display: S.H.InlineFlex,
+                    return a.createElement(T.V, {
+                        display: T.H.InlineFlex,
                         "data-test-selector": "bonus-emote-container"
                     }, e)
                 }, t.prototype.baseEmotes = function() {
                     var e = Object(b.b)(this.props.subscriptionProducts[0].emotes);
-                    return a.createElement(S.V, {
+                    return a.createElement(T.V, {
                         className: "subs-broadcaster-tabbed-tiers__emotes"
                     }, a.createElement(k.a, {
                         emoteSet: {
@@ -858,13 +805,13 @@ webpackJsonp([74], {
                 }, t.prototype.render = function() {
                     return this.props.data.loading ? a.createElement("div", {
                         className: "subs-broadcaster-banner"
-                    }, a.createElement(S.V, {
+                    }, a.createElement(T.V, {
                         className: "subs-broadcaster-banner__broadcaster-info",
-                        textAlign: S._24.Center,
-                        display: S.H.Flex,
-                        flexDirection: S.J.Column,
-                        alignItems: S.c.Center,
-                        flexWrap: S.K.NoWrap,
+                        textAlign: T._24.Center,
+                        display: T.H.Flex,
+                        flexDirection: T.J.Column,
+                        alignItems: T.c.Center,
+                        flexWrap: T.K.NoWrap,
                         padding: {
                             x: 1,
                             y: 3
@@ -876,43 +823,43 @@ webpackJsonp([74], {
                         breakpointLarge: {
                             padding: 5
                         }
-                    }, a.createElement(S.V, {
+                    }, a.createElement(T.V, {
                         margin: 1,
                         breakpointLarge: {
                             margin: 1
                         },
                         fullWidth: !0
-                    }, a.createElement(S._3, {
+                    }, a.createElement(T._3, {
                         height: 40
-                    })), a.createElement(S.V, {
+                    })), a.createElement(T.V, {
                         margin: 1,
                         breakpointLarge: {
                             margin: 2
                         }
-                    }, a.createElement(S._3, {
+                    }, a.createElement(T._3, {
                         height: 80,
                         width: 80
-                    })), a.createElement(S.V, {
+                    })), a.createElement(T.V, {
                         className: "subs-broadcaster-banner__description",
                         margin: 1,
                         breakpointLarge: {
                             margin: 2
                         },
                         fullWidth: !0
-                    }, a.createElement(S._3, {
+                    }, a.createElement(T._3, {
                         lineCount: 1
                     })))) : a.createElement("div", {
                         style: {
                             backgroundImage: "url(" + this.props.data.user.bannerImageURL
                         },
                         className: "subs-broadcaster-banner"
-                    }, a.createElement(S.V, {
+                    }, a.createElement(T.V, {
                         className: "subs-broadcaster-banner__broadcaster-info",
-                        textAlign: S._24.Center,
-                        display: S.H.Flex,
-                        flexDirection: S.J.Column,
-                        alignItems: S.c.Center,
-                        flexWrap: S.K.NoWrap,
+                        textAlign: T._24.Center,
+                        display: T.H.Flex,
+                        flexDirection: T.J.Column,
+                        alignItems: T.c.Center,
+                        flexWrap: T.K.NoWrap,
                         padding: {
                             x: 1,
                             y: 3
@@ -924,47 +871,47 @@ webpackJsonp([74], {
                         breakpointLarge: {
                             padding: 5
                         }
-                    }, a.createElement(S.Q, {
+                    }, a.createElement(T.Q, {
                         margin: 1,
                         breakpointLarge: {
                             margin: 1
                         }
-                    }, a.createElement(S._23, {
-                        type: S._28.H2,
+                    }, a.createElement(T._23, {
+                        type: T._28.H2,
                         bold: !0,
-                        color: S.F.Overlay
-                    }, this.props.data.user.displayName)), a.createElement(S.Q, {
+                        color: T.F.Overlay
+                    }, this.props.data.user.displayName)), a.createElement(T.Q, {
                         margin: 1,
                         breakpointLarge: {
                             margin: 2
                         }
-                    }, a.createElement(S.l, {
+                    }, a.createElement(T.l, {
                         imageAlt: this.props.data.user.displayName,
                         size: 96,
                         imageSrc: this.props.data.user.profileImageURL
-                    })), a.createElement(S.V, {
+                    })), a.createElement(T.V, {
                         className: "subs-broadcaster-banner__description",
                         margin: 1,
                         breakpointLarge: {
                             margin: 2
                         }
-                    }, a.createElement(S._23, {
-                        color: S.F.Overlay
+                    }, a.createElement(T._23, {
+                        color: T.F.Overlay
                     }, this.props.data.user.description)), this.verifiedPartner()))
                 }, t.prototype.verifiedPartner = function() {
-                    return this.props.data.user.roles.isPartner ? a.createElement(S.V, {
-                        display: S.H.Flex
-                    }, a.createElement(S._10, {
-                        asset: S._11.Verified,
-                        type: S._12.Brand
-                    }), a.createElement(S.Q, {
+                    return this.props.data.user.roles.isPartner ? a.createElement(T.V, {
+                        display: T.H.Flex
+                    }, a.createElement(T._10, {
+                        asset: T._11.Verified,
+                        type: T._12.Brand
+                    }), a.createElement(T.Q, {
                         margin: {
                             x: 1
                         }
-                    }, a.createElement(S._23, {
-                        color: S.F.Overlay
+                    }, a.createElement(T._23, {
+                        color: T.F.Overlay
                     }, Object(o.d)("Verified Twitch Partner", "SubsBroadcasterBanner")))) : null
-                }, t = s.__decorate([Object(h.d)("SubsBroadcasterBanner"), Object(u.a)(P, {
+                }, t = s.__decorate([Object(h.d)("SubsBroadcasterBanner"), Object(l.a)(P, {
                     options: function(e) {
                         return {
                             variables: {
@@ -978,7 +925,7 @@ webpackJsonp([74], {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onSubClick = function(e) {
-                        Object(E.b)({
+                        Object(y.b)({
                             action: e.action,
                             canSubscribe: !t.props.subTier || "3000" !== t.props.subTier,
                             channelID: t.props.channelId,
@@ -998,60 +945,60 @@ webpackJsonp([74], {
                 return s.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return !this.props.subscriptionProducts || this.props.subscriptionProducts.length < 1 ? a.createElement(S._3, null) : (this.setMessages(), a.createElement(S.V, {
+                    return !this.props.subscriptionProducts || this.props.subscriptionProducts.length < 1 ? a.createElement(T._3, null) : (this.setMessages(), a.createElement(T.V, {
                         className: "subs-plan-tiers",
-                        alignItems: S.c.Center,
-                        flexDirection: S.J.Column,
+                        alignItems: T.c.Center,
+                        flexDirection: T.J.Column,
                         margin: {
                             x: 5
                         }
-                    }, a.createElement(S.Q, {
+                    }, a.createElement(T.Q, {
                         margin: 1,
-                        textAlign: S._24.Center
-                    }, a.createElement(S._23, {
-                        type: S._28.H3,
-                        color: S.F.Link,
+                        textAlign: T._24.Center
+                    }, a.createElement(T._23, {
+                        type: T._28.H3,
+                        color: T.F.Link,
                         bold: !0
-                    }, this.messages.subscribeNow)), a.createElement(S.Q, {
+                    }, this.messages.subscribeNow)), a.createElement(T.Q, {
                         margin: 1,
-                        textAlign: S._24.Center
-                    }, a.createElement(S._23, null, this.messages.subscriptionPerks)), this.baseEmotes(), a.createElement(S.V, {
+                        textAlign: T._24.Center
+                    }, a.createElement(T._23, null, this.messages.subscriptionPerks)), this.baseEmotes(), a.createElement(T.V, {
                         margin: 1,
-                        display: S.H.Flex,
-                        justifyContent: S.U.Center
+                        display: T.H.Flex,
+                        justifyContent: T.U.Center
                     }, this.makePlanWrappers())))
                 }, t.prototype.makePlanWrappers = function() {
                     var e = this;
-                    return !this.props.subscriptionProducts || this.props.subscriptionProducts.length < 1 ? [a.createElement(S._3, {
+                    return !this.props.subscriptionProducts || this.props.subscriptionProducts.length < 1 ? [a.createElement(T._3, {
                         key: "subs-broadcaster__emote-placeholder"
                     })] : this.props.subscriptionProducts.map(function(t, n) {
                         var i = t.price;
-                        return Object(_.d)([t]) && (i = Object(_.a)(t)), a.createElement(S._19, {
+                        return Object(_.d)([t]) && (i = Object(_.a)(t)), a.createElement(T._19, {
                             key: "subs-broadcaster-plan-" + n,
                             className: "subs-plan-tiers__plan",
                             margin: 1,
                             elevation: 2,
-                            display: S.H.Flex,
-                            flexDirection: S.J.Column,
+                            display: T.H.Flex,
+                            flexDirection: T.J.Column,
                             padding: 2,
-                            textAlign: S._24.Center,
+                            textAlign: T._24.Center,
                             "data-test-selector": "sub-tier-container"
-                        }, a.createElement(S.Q, {
+                        }, a.createElement(T.Q, {
                             margin: 1
-                        }, a.createElement(S._23, {
-                            type: S._28.H3,
-                            color: S.F.Link
+                        }, a.createElement(T._23, {
+                            type: T._28.H3,
+                            color: T.F.Link
                         }, Object(o.d)("{price} Subscription", {
                             price: t.price
-                        }, "SubsPlanTiers"))), a.createElement(S.V, {
+                        }, "SubsPlanTiers"))), a.createElement(T.V, {
                             margin: 1,
-                            display: S.H.Flex,
+                            display: T.H.Flex,
                             flexGrow: 1,
-                            alignItems: S.c.Center,
-                            justifyContent: S.U.Center
-                        }, a.createElement(S._23, null, e.messages.includes), e.bonusEmotesMessage(n)), e.bonusEmotes(n), a.createElement(v.a, {
+                            alignItems: T.c.Center,
+                            justifyContent: T.U.Center
+                        }, a.createElement(T._23, null, e.messages.includes), e.bonusEmotesMessage(n)), e.bonusEmotes(n), a.createElement(v.a, {
                             subscriptionProduct: t
-                        }), a.createElement(S.V, {
+                        }), a.createElement(T.V, {
                             margin: 1
                         }, a.createElement(f.a, {
                             isSubbedToTier: e.isSubbedToTier(n),
@@ -1070,7 +1017,7 @@ webpackJsonp([74], {
                     return !1
                 }, t.prototype.baseEmotes = function() {
                     var e = Object(b.b)(this.props.subscriptionProducts[0].emotes);
-                    return a.createElement(S.V, {
+                    return a.createElement(T.V, {
                         margin: 1,
                         className: "subs-plan-tiers__base-emotes"
                     }, a.createElement(k.a, {
@@ -1093,7 +1040,7 @@ webpackJsonp([74], {
                         default:
                             t = 0
                     }
-                    return t > 0 ? a.createElement(S._23, {
+                    return t > 0 ? a.createElement(T._23, {
                         bold: !0
                     }, Object(o.d)("{bonusEmoteCount, plural, one {plus 1 bonus emote!} other {plus {bonusEmoteCount, number} bonus emotes!}}", {
                         bonusEmoteCount: t
@@ -1109,14 +1056,14 @@ webpackJsonp([74], {
                             n.push(this.props.subscriptionProducts[1])
                     }
                     return t = n.map(function(e, t) {
-                        return a.createElement(T, {
+                        return a.createElement(E, {
                             key: "subs-broadcaster__bonus-emote-" + t,
                             subscriptionProduct: e,
                             hidePrice: !0
                         })
-                    }), a.createElement(S.V, {
-                        display: S.H.Flex,
-                        justifyContent: S.U.Center,
+                    }), a.createElement(T.V, {
+                        display: T.H.Flex,
+                        justifyContent: T.U.Center,
                         "data-test-selector": "bonus-emote-container"
                     }, t)
                 }, t.prototype.setMessages = function() {
@@ -1159,42 +1106,42 @@ webpackJsonp([74], {
                         })
                     }
                 }, t.prototype.render = function() {
-                    return this.props.data.loading ? a.createElement(S.V, {
-                        display: S.H.Flex,
-                        justifyContent: S.U.Center,
-                        alignItems: S.c.Center,
+                    return this.props.data.loading ? a.createElement(T.V, {
+                        display: T.H.Flex,
+                        justifyContent: T.U.Center,
+                        alignItems: T.c.Center,
                         fullHeight: !0
-                    }, a.createElement(S.Z, null)) : this.props.data.error ? a.createElement(c.a, {
+                    }, a.createElement(T.Z, null)) : this.props.data.error ? a.createElement(c.a, {
                         message: "Something went wrong"
-                    }) : !this.props.data.user || !this.props.data.user.id || !this.props.data.user.subscriptionProducts || this.props.data.user.subscriptionProducts.length < 1 ? (window.location.replace("https://twitch.tv/" + this.props.match.params.channelName), a.createElement(S.V, {
-                        display: S.H.Flex,
-                        justifyContent: S.U.Center,
-                        alignItems: S.c.Center
-                    }, a.createElement(S.Z, null))) : a.createElement(l.b, null, a.createElement(S.V, null, a.createElement(C, {
+                    }) : !this.props.data.user || !this.props.data.user.id || !this.props.data.user.subscriptionProducts || this.props.data.user.subscriptionProducts.length < 1 ? (window.location.replace("https://twitch.tv/" + this.props.match.params.channelName), a.createElement(T.V, {
+                        display: T.H.Flex,
+                        justifyContent: T.U.Center,
+                        alignItems: T.c.Center
+                    }, a.createElement(T.Z, null))) : a.createElement(u.b, null, a.createElement(T.V, null, a.createElement(C, {
                         channelName: this.props.match.params.channelName
                     }), a.createElement(g.a, {
                         subscriptionProducts: this.state.subscriptionProducts
-                    }), a.createElement(S.V, {
+                    }), a.createElement(T.V, {
                         padding: {
                             top: 2
                         },
                         breakpointMedium: {
-                            display: S.H.Hide
+                            display: T.H.Hide
                         }
-                    }, a.createElement(y, {
+                    }, a.createElement(S, {
                         channelDisplayName: this.props.data.user.displayName,
                         channelId: this.props.data.user.id,
                         channelLogin: this.props.data.user.login,
                         subscriptionProducts: this.state.subscriptionProducts,
                         subTier: this.state.subTier
-                    })), a.createElement(S.V, {
+                    })), a.createElement(T.V, {
                         padding: {
                             top: 2
                         },
-                        display: S.H.Hide,
-                        justifyContent: S.U.Center,
+                        display: T.H.Hide,
+                        justifyContent: T.U.Center,
                         breakpointMedium: {
-                            display: S.H.Flex
+                            display: T.H.Flex
                         }
                     }, a.createElement(N, {
                         subscriptionProducts: this.state.subscriptionProducts,
@@ -1202,7 +1149,7 @@ webpackJsonp([74], {
                         channelId: this.props.data.user.id,
                         channelLogin: this.props.data.user.login
                     }))))
-                }, t = s.__decorate([Object(u.a)(F, {
+                }, t = s.__decorate([Object(l.a)(F, {
                     options: function(e) {
                         return {
                             variables: {
@@ -1216,10 +1163,10 @@ webpackJsonp([74], {
                     location: m.PageviewLocation.SubsBroadcasterPage
                 })], t)
             }(a.Component),
-            O = Object(r.a)()(w);
+            O = Object(r.b)()(w);
         n.d(t, "SubsBroadcasterPage", function() {
             return O
         })
     }
 });
-//# sourceMappingURL=pages.subs.components.subs-broadcaster-page-56b0f50cbd187b6b2d557c3ead6574d5.js.map
+//# sourceMappingURL=pages.subs.components.subs-broadcaster-page-fa3c5d90f12626793d2fb487acffd896.js.map

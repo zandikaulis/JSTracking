@@ -141,8 +141,8 @@ webpackJsonp([57], {
             a = i("CIox"),
             s = i("2KeS"),
             o = i("6sO2"),
-            l = i("7vx8"),
-            u = i("CSlQ"),
+            u = i("7vx8"),
+            l = i("CSlQ"),
             c = i("R0Kh"),
             d = i("9u8h"),
             m = this,
@@ -338,7 +338,7 @@ webpackJsonp([57], {
                     return this.props.data && !(this.props.data.loading || this.props.data.error) && this.props.data.currentUser && this.props.data.requestInfo
                 }, t
             }(n.Component),
-            b = Object(s.compose)(Object(u.d)("VerifyEmail"), Object(l.a)(y), a.e)(T)
+            b = Object(s.d)(Object(l.d)("VerifyEmail"), Object(u.a)(y), a.e)(T)
     },
     RDCx: function(e, t) {
         var i = {
@@ -356,7 +356,6 @@ webpackJsonp([57], {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "currentUser"
@@ -367,59 +366,48 @@ webpackJsonp([57], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "hasPrime"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "displayName"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "email"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "isEmailVerified"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }]
                         }
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "requestInfo"
@@ -430,14 +418,12 @@ webpackJsonp([57], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "countryCode"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }]
                         }
                     }]
@@ -460,4 +446,4 @@ webpackJsonp([57], {
     },
     yY1M: function(e, t) {}
 });
-//# sourceMappingURL=features.verify-email.components.verify-email-bar.component-4f0c92b3cb105598094f877558b0afb1.js.map
+//# sourceMappingURL=features.verify-email.components.verify-email-bar.component-620ce619728442f5f895b8d1674d3531.js.map

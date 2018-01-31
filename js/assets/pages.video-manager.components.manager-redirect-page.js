@@ -12,15 +12,15 @@ webpackJsonp([61], {
             g = t("U7vG"),
             u = t("CIox"),
             s = t("6sO2"),
-            d = t("yWCw"),
-            b = Object(r.a)(function(e) {
+            b = t("yWCw"),
+            d = Object(r.b)(function(e) {
                 var n = Object(c.c)(e);
                 return {
                     isLoggedIn: Object(c.d)(e),
                     userLogin: n && n.login
                 }
             }, function(e) {
-                return Object(o.bindActionCreators)({
+                return Object(o.b)({
                     login: function() {
                         return Object(a.f)(i.a.ManagerRedirect)
                     }
@@ -28,13 +28,13 @@ webpackJsonp([61], {
             })(function(e) {
                 return e.isLoggedIn && e.userLogin ? g.createElement(u.a, {
                     to: "/" + e.userLogin + e.location.pathname
-                }) : (e.login(), g.createElement(d.a, {
+                }) : (e.login(), g.createElement(b.a, {
                     message: Object(s.d)("You must be logged in to view this page", "ManagerRedirectPage")
                 }))
             });
         t.d(n, "ManagerRedirectPage", function() {
-            return b
+            return d
         })
     }
 });
-//# sourceMappingURL=pages.video-manager.components.manager-redirect-page-e92d6981fe6a9796c19861d265ec124d.js.map
+//# sourceMappingURL=pages.video-manager.components.manager-redirect-page-baaa3accc70eb3583b3c178b7216dd44.js.map

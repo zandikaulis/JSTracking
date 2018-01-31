@@ -9,15 +9,15 @@ webpackJsonp([45], {
                 displayed_balance: e.displayedBalance,
                 emote_level: e.emoteLevel,
                 emote_type: e.emoteType,
-                bits_location: e.location || r.ChatTooltip
+                bits_location: e.location || o.ChatTooltip
             };
-            a.m.track(l.SpadeEventType.BitsCardInteraction, t)
+            a.m.track(r.SpadeEventType.BitsCardInteraction, t)
         }, n.d(t, "b", function() {
-            return r
+            return o
         }), n.d(t, "a", function() {
             return s
         }), t.d = function(e) {
-            return e && o[e] ? o[e] : (a.i.error(new Error('Buy Bits card contains improperly rendered offers, or offers unknown to Science. Tracking as "buy_100"'), 'Buy Bits card contains improperly rendered offers, or offers unknown to Science. Tracking as "buy_100"'), s.Buy100)
+            return e && l[e] ? l[e] : (a.i.error(new Error('Buy Bits card contains improperly rendered offers, or offers unknown to Science. Tracking as "buy_100"'), 'Buy Bits card contains improperly rendered offers, or offers unknown to Science. Tracking as "buy_100"'), s.Buy100)
         }, t.e = function(e) {
             var t = {
                 channel: e.channel,
@@ -25,7 +25,7 @@ webpackJsonp([45], {
                 available: e.available,
                 host: "twitch.tv"
             };
-            a.m.track(l.SpadeEventType.BitsAdsAvailability, t)
+            a.m.track(r.SpadeEventType.BitsAdsAvailability, t)
         }, t.f = function(e) {
             var t = {
                 distinct_id: a.n.session.deviceID,
@@ -34,7 +34,7 @@ webpackJsonp([45], {
                 campaign_id: e.campaignID,
                 adblock: e.adblock
             };
-            a.m.track(l.SpadeEventType.BitsAdsImpression, t)
+            a.m.track(r.SpadeEventType.BitsAdsImpression, t)
         }, n.d(t, "c", function() {
             return i
         }), t.g = function(e) {
@@ -48,11 +48,11 @@ webpackJsonp([45], {
                     request_id: e.requestID,
                     request_method: e.requestMethod
                 };
-            a.m.track(l.SpadeEventType.BitsAdsRequest, n)
+            a.m.track(r.SpadeEventType.BitsAdsRequest, n)
         };
         var i, a = n("6sO2"),
-            l = n("vH/s"),
-            r = {
+            r = n("vH/s"),
+            o = {
                 ChatTooltip: "card",
                 GetBitsButton: "get_bits_button",
                 BitsLandingPage: "bits_landing_page"
@@ -72,7 +72,7 @@ webpackJsonp([45], {
                 WatchAd: "watch_ad",
                 WatchAnotherAd: "watch_another_ad"
             },
-            o = {
+            l = {
                 100: s.Buy100,
                 500: s.Buy500,
                 1e3: s.Buy1000,
@@ -87,10 +87,10 @@ webpackJsonp([45], {
         "use strict";
         t.a = function(e, t, n, c) {
             void 0 === t && (t = []);
-            for (var u, m = [], p = e.split(/\n/), v = function(e, v) {
-                    if (e > 0 && (v += p[e - 1].length + 1), c && "" === p[e]) return m.push(i.createElement(o._23, {
+            for (var m, u = [], p = e.split(/\n/), v = function(e, v) {
+                    if (e > 0 && (v += p[e - 1].length + 1), c && "" === p[e]) return u.push(i.createElement(l._23, {
                         key: e
-                    }, "\n")), u = v, "continue";
+                    }, "\n")), m = v, "continue";
                     var g = t.map(function(e) {
                             return function(e, t) {
                                 return {
@@ -105,62 +105,62 @@ webpackJsonp([45], {
                                 return e.from < 0 || e.from >= t || e.to < 0 || e.to >= t
                             }(t, p[e].length)
                         }),
-                        h = Object(r.f)(p[e], Object(s.b)(g), 0, {}, !1, n);
-                    m.push(i.createElement(o._23, {
+                        h = Object(o.f)(p[e], Object(s.b)(g), 0, {}, !1, n);
+                    u.push(i.createElement(l._23, {
                         key: e
                     }, function(e) {
                         for (var t = [], n = 0; n < e.length; n++) {
-                            var r = e[n];
-                            switch (r.type) {
-                                case l.a.ClipLink:
+                            var o = e[n];
+                            switch (o.type) {
+                                case r.a.ClipLink:
                                     t.push(i.createElement("a", {
                                         key: n,
-                                        href: r.content.url,
+                                        href: o.content.url,
                                         target: "_blank"
-                                    }, r.content.url));
+                                    }, o.content.url));
                                     break;
-                                case l.a.VideoLink:
-                                case l.a.Link:
-                                    r.content.url.match(d) ? t.push(i.createElement(a.a, {
+                                case r.a.VideoLink:
+                                case r.a.Link:
+                                    o.content.url.match(d) ? t.push(i.createElement(a.a, {
                                         key: n,
-                                        to: r.content.url.replace(d, "")
-                                    }, r.content.displayText)) : t.push(i.createElement("a", {
+                                        to: o.content.url.replace(d, "")
+                                    }, o.content.displayText)) : t.push(i.createElement("a", {
                                         key: n,
-                                        href: r.content.url,
+                                        href: o.content.url,
                                         target: "_blank",
                                         rel: "noopener noreferrer"
-                                    }, r.content.displayText));
+                                    }, o.content.displayText));
                                     break;
-                                case l.a.Mention:
+                                case r.a.Mention:
                                     t.push(i.createElement(a.a, {
                                         key: n,
-                                        to: "/" + r.content.recipient
-                                    }, r.content.recipient));
+                                        to: "/" + o.content.recipient
+                                    }, o.content.recipient));
                                     break;
-                                case l.a.Emote:
-                                    r.content.images.themed || t.push(i.createElement("img", {
+                                case r.a.Emote:
+                                    o.content.images.themed || t.push(i.createElement("img", {
                                         key: n,
-                                        src: r.content.images.sources["1x"],
-                                        alt: r.content.alt
+                                        src: o.content.images.sources["1x"],
+                                        alt: o.content.alt
                                     }));
                                     break;
-                                case l.a.Text:
+                                case r.a.Text:
                                     t.push(i.createElement("span", {
                                         key: n
-                                    }, r.content))
+                                    }, o.content))
                             }
                         }
                         return t
-                    }(h))), u = v
-                }, g = 0, h = 0; g < p.length; g++) v(g, h), h = u;
-            return m
+                    }(h))), m = v
+                }, g = 0, h = 0; g < p.length; g++) v(g, h), h = m;
+            return u
         };
         var i = n("U7vG"),
             a = (n.n(i), n("F8kA")),
-            l = n("mwvJ"),
-            r = n("l21v"),
+            r = n("mwvJ"),
+            o = n("l21v"),
             s = n("dQj3"),
-            o = n("Odds"),
+            l = n("Odds"),
             d = /^(https?:\/\/)?(www.)?twitch\.tv/
     },
     "1pvm": function(e, t) {},
@@ -220,7 +220,6 @@ webpackJsonp([45], {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "cheer"
@@ -231,17 +230,14 @@ webpackJsonp([45], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "emotes"
@@ -252,37 +248,30 @@ webpackJsonp([45], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "id"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "prefix"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "type"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "tiers"
@@ -293,37 +282,30 @@ webpackJsonp([45], {
                                             kind: "SelectionSet",
                                             selections: [{
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "id"
                                                 },
                                                 arguments: [],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }, {
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "bits"
                                                 },
                                                 arguments: [],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }, {
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "color"
                                                 },
                                                 arguments: [],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }, {
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "images"
@@ -334,54 +316,44 @@ webpackJsonp([45], {
                                                     kind: "SelectionSet",
                                                     selections: [{
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "id"
                                                         },
                                                         arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "url"
                                                         },
                                                         arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "theme"
                                                         },
                                                         arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "isAnimated"
                                                         },
                                                         arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "dpiScale"
                                                         },
                                                         arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }]
                                                 }
                                             }]
@@ -412,47 +384,47 @@ webpackJsonp([45], {
         "use strict";
         var i = n("U7vG"),
             a = n("6sO2"),
-            l = n("Odds"),
-            r = (n("6suJ"), function(e) {
+            r = n("Odds"),
+            o = (n("6suJ"), function(e) {
                 var t = Object(a.c)(e.date, {
                         month: "short"
                     }),
                     n = Object(a.c)(e.date, {
                         day: "numeric"
                     });
-                return i.createElement(l._19, {
-                    background: l.m.Base,
+                return i.createElement(r._19, {
+                    background: r.m.Base,
                     elevation: 2,
-                    display: l.H.Flex,
-                    flexDirection: l.J.Column,
+                    display: r.H.Flex,
+                    flexDirection: r.J.Column,
                     className: "event-calendar-date",
                     margin: {
                         top: .5,
                         left: .5
                     },
-                    position: l._4.Absolute,
+                    position: r._4.Absolute,
                     attachTop: !0,
                     attachLeft: !0,
-                    flexWrap: l.K.NoWrap
-                }, i.createElement(l._19, {
+                    flexWrap: r.K.NoWrap
+                }, i.createElement(r._19, {
                     className: "event-calendar-date__month",
-                    display: l.H.Flex,
-                    justifyContent: l.U.Center,
-                    background: l.m.AccentAlt2
-                }, i.createElement(l._23, {
-                    fontSize: l.L.Size6,
-                    transform: l._27.Uppercase,
-                    color: l.F.Overlay
-                }, t)), i.createElement(l.V, {
-                    display: l.H.Flex,
-                    justifyContent: l.U.Center
-                }, i.createElement(l._23, {
-                    fontSize: l.L.Size3,
-                    color: l.F.Base
+                    display: r.H.Flex,
+                    justifyContent: r.U.Center,
+                    background: r.m.AccentAlt2
+                }, i.createElement(r._23, {
+                    fontSize: r.L.Size6,
+                    transform: r._27.Uppercase,
+                    color: r.F.Overlay
+                }, t)), i.createElement(r.V, {
+                    display: r.H.Flex,
+                    justifyContent: r.U.Center
+                }, i.createElement(r._23, {
+                    fontSize: r.L.Size3,
+                    color: r.F.Base
                 }, n)))
             });
         n.d(t, "a", function() {
-            return r
+            return o
         })
     },
     "6Agf": function(e, t, n) {
@@ -471,19 +443,19 @@ webpackJsonp([45], {
     "7FW4": function(e, t, n) {
         "use strict";
         t.a = function(e) {
-            var t = i.createElement(r.V, {
+            var t = i.createElement(o.V, {
                 padding: 1,
                 fullHeight: !0,
-                flexDirection: r.J.Column,
-                justifyContent: r.U.Center,
-                display: r.H.Flex
-            }, i.createElement(r._23, {
-                color: r.F.Link,
-                fontSize: r.L.Size4,
+                flexDirection: o.J.Column,
+                justifyContent: o.U.Center,
+                display: o.H.Flex
+            }, i.createElement(o._23, {
+                color: o.F.Link,
+                fontSize: o.L.Size4,
                 noWrap: !0
-            }, Object(l.d)("View All", "Following--ViewAllButton")), i.createElement(r._23, {
-                color: r.F.Alt2,
-                fontSize: r.L.Size4,
+            }, Object(r.d)("View All", "Following--ViewAllButton")), i.createElement(o._23, {
+                color: o.F.Alt2,
+                fontSize: o.L.Size4,
                 noWrap: !0
             }, e.subHeader));
             return e.linkTo && (t = i.createElement(a.a, {
@@ -492,20 +464,20 @@ webpackJsonp([45], {
             }, t)), i.createElement("div", {
                 className: "following__view-all",
                 onClick: e.onClickViewAll,
-                "data-test-selector": o
-            }, i.createElement(r.V, null, i.createElement(r.j, {
+                "data-test-selector": l
+            }, i.createElement(o.V, null, i.createElement(o.j, {
                 ratio: e.aspectRatio
-            }, i.createElement(r._19, {
-                background: r.m.Alt2,
+            }, i.createElement(o._19, {
+                background: o.m.Alt2,
                 fullHeight: !0
             }, t))))
         };
         var i = n("U7vG"),
             a = (n.n(i), n("F8kA")),
-            l = n("6sO2"),
-            r = n("Odds"),
+            r = n("6sO2"),
+            o = n("Odds"),
             s = n("oHn4"),
-            o = (n.n(s), "view-all-button-selector")
+            l = (n.n(s), "view-all-button-selector")
     },
     "81qH": function(e, t, n) {
         "use strict";
@@ -514,23 +486,23 @@ webpackJsonp([45], {
             return i.a
         });
         var a = n("a4C9"),
-            l = (n.n(a), n("XYqD"));
+            r = (n.n(a), n("XYqD"));
         n.d(t, "VideoPreviewCardPlaceholder", function() {
-            return l.a
+            return r.a
         })
     },
     "8Wuk": function(e, t, n) {
         "use strict";
         var i = n("TToO"),
             a = n("U7vG"),
-            l = n("6sO2"),
-            r = n("2hJ3"),
+            r = n("6sO2"),
+            o = n("2hJ3"),
             s = n("yDzg"),
-            o = "https://www.facebook.com/sharer/sharer.php",
+            l = "https://www.facebook.com/sharer/sharer.php",
             d = "https://www.twitter.com/share",
             c = "https://www.reddit.com/submit",
-            u = "https://vk.com/share.php",
-            m = n("Odds");
+            m = "https://vk.com/share.php",
+            u = n("Odds");
         n("bdk8");
         n.d(t, "b", function() {
             return p
@@ -551,11 +523,11 @@ webpackJsonp([45], {
                         target: "_blank",
                         className: e,
                         onClick: n.onShareClickHandler
-                    }, Object(m._40)(n.props)), n.renderIcon()) : a.createElement("button", i.__assign({
+                    }, Object(u._40)(n.props)), n.renderIcon()) : a.createElement("button", i.__assign({
                         onClick: n.copyPageUrl,
                         onMouseLeave: n.clearIsCopiedStatus,
                         className: e
-                    }, Object(m._40)(n.props)), n.renderIcon())
+                    }, Object(u._40)(n.props)), n.renderIcon())
                 }, n.onShareClickHandler = function() {
                     n.props.onShareClick && n.props.onShareClick(n.props.type)
                 }, n.clearIsCopiedStatus = function() {
@@ -565,14 +537,14 @@ webpackJsonp([45], {
                 }, n.getUrl = function() {
                     return n.props.url || window.location.href
                 }, n.copyPageUrl = function(e) {
-                    e && e.preventDefault(), n.props.onShareClick && n.props.onShareClick(n.props.type), Object(r.a)(n.getUrl()), n.setState({
+                    e && e.preventDefault(), n.props.onShareClick && n.props.onShareClick(n.props.type), Object(o.a)(n.getUrl()), n.setState({
                         isCopied: !0
                     })
                 }, n.renderIcon = function() {
                     var e = n.getAssetFromType();
-                    return a.createElement(m.V, {
+                    return a.createElement(u.V, {
                         className: "social-button__icon " + n.addSocialClassModifier("social-button__icon")
-                    }, a.createElement(m._10, {
+                    }, a.createElement(u._10, {
                         asset: e,
                         width: 30,
                         height: 30
@@ -590,23 +562,23 @@ webpackJsonp([45], {
                         case p.VKontakte:
                             return "VKontakte";
                         case p.Copy:
-                            return n.state.isCopied ? Object(l.d)("Copied", "SocialButton") : Object(l.d)("Copy to clipboard", "SocialButton");
+                            return n.state.isCopied ? Object(r.d)("Copied", "SocialButton") : Object(r.d)("Copy to clipboard", "SocialButton");
                         default:
                             return ""
                     }
                 }, n.getAssetFromType = function() {
                     switch (n.props.type) {
                         case p.Twitter:
-                            return m._11.Twitter;
+                            return u._11.Twitter;
                         case p.Facebook:
-                            return m._11.Facebook;
+                            return u._11.Facebook;
                         case p.VKontakte:
-                            return m._11.VKontakte;
+                            return u._11.VKontakte;
                         case p.Reddit:
-                            return m._11.Reddit;
+                            return u._11.Reddit;
                         case p.Copy:
                         default:
-                            return m._11.Copy
+                            return u._11.Copy
                     }
                 }, n.addSocialClassModifier = function(e) {
                     switch (n.props.type) {
@@ -628,7 +600,7 @@ webpackJsonp([45], {
                         t = e.text,
                         i = e.type,
                         a = n.getUrl(),
-                        l = t || "";
+                        r = t || "";
                     switch (i) {
                         case p.Reddit:
                             return function(e, t) {
@@ -636,16 +608,16 @@ webpackJsonp([45], {
                                     url: e,
                                     title: t
                                 })
-                            }(a, l);
+                            }(a, r);
                         case p.VKontakte:
                             return function(e) {
-                                return Object(s.a)(u, {
+                                return Object(s.a)(m, {
                                     url: e
                                 })
                             }(a);
                         case p.Facebook:
                             return function(e) {
-                                return Object(s.a)(o, {
+                                return Object(s.a)(l, {
                                     u: e
                                 })
                             }(a);
@@ -655,7 +627,7 @@ webpackJsonp([45], {
                                     url: e,
                                     text: t
                                 })
-                            }(a, l);
+                            }(a, r);
                         default:
                             return ""
                     }
@@ -664,11 +636,11 @@ webpackJsonp([45], {
                 }, n
             }
             return i.__extends(t, e), t.prototype.render = function() {
-                return a.createElement(m.V, {
+                return a.createElement(u.V, {
                     className: "social-button"
-                }, a.createElement(m._31, {
+                }, a.createElement(u._31, {
                     label: this.getTooltipFromType(),
-                    direction: m._33.Top
+                    direction: u._33.Top
                 }, this.renderLink()))
             }, t
         }(a.Component)
@@ -800,7 +772,6 @@ webpackJsonp([45], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "pageInfo"
@@ -811,29 +782,24 @@ webpackJsonp([45], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "hasPreviousPage"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "hasNextPage"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }]
                                 }
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "edges"
@@ -844,17 +810,14 @@ webpackJsonp([45], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "cursor"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "node"
@@ -877,57 +840,46 @@ webpackJsonp([45], {
                                                     kind: "SelectionSet",
                                                     selections: [{
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "id"
                                                         },
                                                         arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "title"
                                                         },
                                                         arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "description"
                                                         },
                                                         arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "startAt"
                                                         },
                                                         arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "endAt"
                                                         },
                                                         arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "imageURL"
@@ -953,11 +905,9 @@ webpackJsonp([45], {
                                                                 value: "337"
                                                             }
                                                         }],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "game"
@@ -968,37 +918,30 @@ webpackJsonp([45], {
                                                             kind: "SelectionSet",
                                                             selections: [{
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "id"
                                                                 },
                                                                 arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }, {
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "name"
                                                                 },
                                                                 arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }, {
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "displayName"
                                                                 },
                                                                 arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }, {
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "boxArtURL"
@@ -1024,13 +967,11 @@ webpackJsonp([45], {
                                                                         value: "130"
                                                                     }
                                                                 }],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }]
                                                         }
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "channel"
@@ -1041,37 +982,30 @@ webpackJsonp([45], {
                                                             kind: "SelectionSet",
                                                             selections: [{
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "id"
                                                                 },
                                                                 arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }, {
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "login"
                                                                 },
                                                                 arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }, {
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "displayName"
                                                                 },
                                                                 arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }, {
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "stream"
@@ -1082,17 +1016,14 @@ webpackJsonp([45], {
                                                                     kind: "SelectionSet",
                                                                     selections: [{
                                                                         kind: "Field",
-                                                                        alias: null,
                                                                         name: {
                                                                             kind: "Name",
                                                                             value: "id"
                                                                         },
                                                                         arguments: [],
-                                                                        directives: [],
-                                                                        selectionSet: null
+                                                                        directives: []
                                                                     }, {
                                                                         kind: "Field",
-                                                                        alias: null,
                                                                         name: {
                                                                             kind: "Name",
                                                                             value: "previewImageURL"
@@ -1118,25 +1049,21 @@ webpackJsonp([45], {
                                                                                 value: "180"
                                                                             }
                                                                         }],
-                                                                        directives: [],
-                                                                        selectionSet: null
+                                                                        directives: []
                                                                     }, {
                                                                         kind: "Field",
-                                                                        alias: null,
                                                                         name: {
                                                                             kind: "Name",
                                                                             value: "__typename"
                                                                         },
                                                                         arguments: [],
-                                                                        directives: [],
-                                                                        selectionSet: null
+                                                                        directives: []
                                                                     }]
                                                                 }
                                                             }]
                                                         }
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "self"
@@ -1147,19 +1074,16 @@ webpackJsonp([45], {
                                                             kind: "SelectionSet",
                                                             selections: [{
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "isFollowing"
                                                                 },
                                                                 arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }]
                                                         }
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "videos"
@@ -1170,7 +1094,6 @@ webpackJsonp([45], {
                                                             kind: "SelectionSet",
                                                             selections: [{
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "edges"
@@ -1181,17 +1104,14 @@ webpackJsonp([45], {
                                                                     kind: "SelectionSet",
                                                                     selections: [{
                                                                         kind: "Field",
-                                                                        alias: null,
                                                                         name: {
                                                                             kind: "Name",
                                                                             value: "offsetSeconds"
                                                                         },
                                                                         arguments: [],
-                                                                        directives: [],
-                                                                        selectionSet: null
+                                                                        directives: []
                                                                     }, {
                                                                         kind: "Field",
-                                                                        alias: null,
                                                                         name: {
                                                                             kind: "Name",
                                                                             value: "node"
@@ -1202,27 +1122,22 @@ webpackJsonp([45], {
                                                                             kind: "SelectionSet",
                                                                             selections: [{
                                                                                 kind: "Field",
-                                                                                alias: null,
                                                                                 name: {
                                                                                     kind: "Name",
                                                                                     value: "id"
                                                                                 },
                                                                                 arguments: [],
-                                                                                directives: [],
-                                                                                selectionSet: null
+                                                                                directives: []
                                                                             }, {
                                                                                 kind: "Field",
-                                                                                alias: null,
                                                                                 name: {
                                                                                     kind: "Name",
                                                                                     value: "lengthSeconds"
                                                                                 },
                                                                                 arguments: [],
-                                                                                directives: [],
-                                                                                selectionSet: null
+                                                                                directives: []
                                                                             }, {
                                                                                 kind: "Field",
-                                                                                alias: null,
                                                                                 name: {
                                                                                     kind: "Name",
                                                                                     value: "owner"
@@ -1233,49 +1148,40 @@ webpackJsonp([45], {
                                                                                     kind: "SelectionSet",
                                                                                     selections: [{
                                                                                         kind: "Field",
-                                                                                        alias: null,
                                                                                         name: {
                                                                                             kind: "Name",
                                                                                             value: "displayName"
                                                                                         },
                                                                                         arguments: [],
-                                                                                        directives: [],
-                                                                                        selectionSet: null
+                                                                                        directives: []
                                                                                     }, {
                                                                                         kind: "Field",
-                                                                                        alias: null,
                                                                                         name: {
                                                                                             kind: "Name",
                                                                                             value: "id"
                                                                                         },
                                                                                         arguments: [],
-                                                                                        directives: [],
-                                                                                        selectionSet: null
+                                                                                        directives: []
                                                                                     }, {
                                                                                         kind: "Field",
-                                                                                        alias: null,
                                                                                         name: {
                                                                                             kind: "Name",
                                                                                             value: "login"
                                                                                         },
                                                                                         arguments: [],
-                                                                                        directives: [],
-                                                                                        selectionSet: null
+                                                                                        directives: []
                                                                                     }]
                                                                                 }
                                                                             }, {
                                                                                 kind: "Field",
-                                                                                alias: null,
                                                                                 name: {
                                                                                     kind: "Name",
                                                                                     value: "animatedPreviewURL"
                                                                                 },
                                                                                 arguments: [],
-                                                                                directives: [],
-                                                                                selectionSet: null
+                                                                                directives: []
                                                                             }, {
                                                                                 kind: "Field",
-                                                                                alias: null,
                                                                                 name: {
                                                                                     kind: "Name",
                                                                                     value: "previewThumbnailURL"
@@ -1301,38 +1207,31 @@ webpackJsonp([45], {
                                                                                         value: "180"
                                                                                     }
                                                                                 }],
-                                                                                directives: [],
-                                                                                selectionSet: null
+                                                                                directives: []
                                                                             }, {
                                                                                 kind: "Field",
-                                                                                alias: null,
                                                                                 name: {
                                                                                     kind: "Name",
                                                                                     value: "publishedAt"
                                                                                 },
                                                                                 arguments: [],
-                                                                                directives: [],
-                                                                                selectionSet: null
+                                                                                directives: []
                                                                             }, {
                                                                                 kind: "Field",
-                                                                                alias: null,
                                                                                 name: {
                                                                                     kind: "Name",
                                                                                     value: "title"
                                                                                 },
                                                                                 arguments: [],
-                                                                                directives: [],
-                                                                                selectionSet: null
+                                                                                directives: []
                                                                             }, {
                                                                                 kind: "Field",
-                                                                                alias: null,
                                                                                 name: {
                                                                                     kind: "Name",
                                                                                     value: "viewCount"
                                                                                 },
                                                                                 arguments: [],
-                                                                                directives: [],
-                                                                                selectionSet: null
+                                                                                directives: []
                                                                             }]
                                                                         }
                                                                     }]
@@ -1396,7 +1295,6 @@ webpackJsonp([45], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "pageInfo"
@@ -1407,29 +1305,24 @@ webpackJsonp([45], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "hasPreviousPage"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "hasNextPage"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }]
                                 }
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "edges"
@@ -1440,17 +1333,14 @@ webpackJsonp([45], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "cursor"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "node"
@@ -1473,57 +1363,46 @@ webpackJsonp([45], {
                                                     kind: "SelectionSet",
                                                     selections: [{
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "id"
                                                         },
                                                         arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "title"
                                                         },
                                                         arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "description"
                                                         },
                                                         arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "startAt"
                                                         },
                                                         arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "endAt"
                                                         },
                                                         arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "imageURL"
@@ -1549,11 +1428,9 @@ webpackJsonp([45], {
                                                                 value: "337"
                                                             }
                                                         }],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "game"
@@ -1564,37 +1441,30 @@ webpackJsonp([45], {
                                                             kind: "SelectionSet",
                                                             selections: [{
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "id"
                                                                 },
                                                                 arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }, {
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "name"
                                                                 },
                                                                 arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }, {
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "displayName"
                                                                 },
                                                                 arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }, {
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "boxArtURL"
@@ -1620,13 +1490,11 @@ webpackJsonp([45], {
                                                                         value: "130"
                                                                     }
                                                                 }],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }]
                                                         }
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "channel"
@@ -1637,37 +1505,30 @@ webpackJsonp([45], {
                                                             kind: "SelectionSet",
                                                             selections: [{
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "id"
                                                                 },
                                                                 arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }, {
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "login"
                                                                 },
                                                                 arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }, {
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "displayName"
                                                                 },
                                                                 arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }, {
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "stream"
@@ -1678,17 +1539,14 @@ webpackJsonp([45], {
                                                                     kind: "SelectionSet",
                                                                     selections: [{
                                                                         kind: "Field",
-                                                                        alias: null,
                                                                         name: {
                                                                             kind: "Name",
                                                                             value: "id"
                                                                         },
                                                                         arguments: [],
-                                                                        directives: [],
-                                                                        selectionSet: null
+                                                                        directives: []
                                                                     }, {
                                                                         kind: "Field",
-                                                                        alias: null,
                                                                         name: {
                                                                             kind: "Name",
                                                                             value: "previewImageURL"
@@ -1714,15 +1572,13 @@ webpackJsonp([45], {
                                                                                 value: "180"
                                                                             }
                                                                         }],
-                                                                        directives: [],
-                                                                        selectionSet: null
+                                                                        directives: []
                                                                     }]
                                                                 }
                                                             }]
                                                         }
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "self"
@@ -1733,19 +1589,16 @@ webpackJsonp([45], {
                                                             kind: "SelectionSet",
                                                             selections: [{
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "isFollowing"
                                                                 },
                                                                 arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }]
                                                         }
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "videos"
@@ -1756,7 +1609,6 @@ webpackJsonp([45], {
                                                             kind: "SelectionSet",
                                                             selections: [{
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "edges"
@@ -1767,17 +1619,14 @@ webpackJsonp([45], {
                                                                     kind: "SelectionSet",
                                                                     selections: [{
                                                                         kind: "Field",
-                                                                        alias: null,
                                                                         name: {
                                                                             kind: "Name",
                                                                             value: "offsetSeconds"
                                                                         },
                                                                         arguments: [],
-                                                                        directives: [],
-                                                                        selectionSet: null
+                                                                        directives: []
                                                                     }, {
                                                                         kind: "Field",
-                                                                        alias: null,
                                                                         name: {
                                                                             kind: "Name",
                                                                             value: "node"
@@ -1788,27 +1637,22 @@ webpackJsonp([45], {
                                                                             kind: "SelectionSet",
                                                                             selections: [{
                                                                                 kind: "Field",
-                                                                                alias: null,
                                                                                 name: {
                                                                                     kind: "Name",
                                                                                     value: "id"
                                                                                 },
                                                                                 arguments: [],
-                                                                                directives: [],
-                                                                                selectionSet: null
+                                                                                directives: []
                                                                             }, {
                                                                                 kind: "Field",
-                                                                                alias: null,
                                                                                 name: {
                                                                                     kind: "Name",
                                                                                     value: "lengthSeconds"
                                                                                 },
                                                                                 arguments: [],
-                                                                                directives: [],
-                                                                                selectionSet: null
+                                                                                directives: []
                                                                             }, {
                                                                                 kind: "Field",
-                                                                                alias: null,
                                                                                 name: {
                                                                                     kind: "Name",
                                                                                     value: "owner"
@@ -1819,49 +1663,40 @@ webpackJsonp([45], {
                                                                                     kind: "SelectionSet",
                                                                                     selections: [{
                                                                                         kind: "Field",
-                                                                                        alias: null,
                                                                                         name: {
                                                                                             kind: "Name",
                                                                                             value: "displayName"
                                                                                         },
                                                                                         arguments: [],
-                                                                                        directives: [],
-                                                                                        selectionSet: null
+                                                                                        directives: []
                                                                                     }, {
                                                                                         kind: "Field",
-                                                                                        alias: null,
                                                                                         name: {
                                                                                             kind: "Name",
                                                                                             value: "id"
                                                                                         },
                                                                                         arguments: [],
-                                                                                        directives: [],
-                                                                                        selectionSet: null
+                                                                                        directives: []
                                                                                     }, {
                                                                                         kind: "Field",
-                                                                                        alias: null,
                                                                                         name: {
                                                                                             kind: "Name",
                                                                                             value: "login"
                                                                                         },
                                                                                         arguments: [],
-                                                                                        directives: [],
-                                                                                        selectionSet: null
+                                                                                        directives: []
                                                                                     }]
                                                                                 }
                                                                             }, {
                                                                                 kind: "Field",
-                                                                                alias: null,
                                                                                 name: {
                                                                                     kind: "Name",
                                                                                     value: "animatedPreviewURL"
                                                                                 },
                                                                                 arguments: [],
-                                                                                directives: [],
-                                                                                selectionSet: null
+                                                                                directives: []
                                                                             }, {
                                                                                 kind: "Field",
-                                                                                alias: null,
                                                                                 name: {
                                                                                     kind: "Name",
                                                                                     value: "previewThumbnailURL"
@@ -1887,38 +1722,31 @@ webpackJsonp([45], {
                                                                                         value: "180"
                                                                                     }
                                                                                 }],
-                                                                                directives: [],
-                                                                                selectionSet: null
+                                                                                directives: []
                                                                             }, {
                                                                                 kind: "Field",
-                                                                                alias: null,
                                                                                 name: {
                                                                                     kind: "Name",
                                                                                     value: "publishedAt"
                                                                                 },
                                                                                 arguments: [],
-                                                                                directives: [],
-                                                                                selectionSet: null
+                                                                                directives: []
                                                                             }, {
                                                                                 kind: "Field",
-                                                                                alias: null,
                                                                                 name: {
                                                                                     kind: "Name",
                                                                                     value: "title"
                                                                                 },
                                                                                 arguments: [],
-                                                                                directives: [],
-                                                                                selectionSet: null
+                                                                                directives: []
                                                                             }, {
                                                                                 kind: "Field",
-                                                                                alias: null,
                                                                                 name: {
                                                                                     kind: "Name",
                                                                                     value: "viewCount"
                                                                                 },
                                                                                 arguments: [],
-                                                                                directives: [],
-                                                                                selectionSet: null
+                                                                                directives: []
                                                                             }]
                                                                         }
                                                                     }]
@@ -2059,7 +1887,6 @@ webpackJsonp([45], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "pageInfo"
@@ -2070,29 +1897,24 @@ webpackJsonp([45], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "hasPreviousPage"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "hasNextPage"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }]
                                 }
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "edges"
@@ -2103,17 +1925,14 @@ webpackJsonp([45], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "cursor"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "node"
@@ -2136,57 +1955,46 @@ webpackJsonp([45], {
                                                     kind: "SelectionSet",
                                                     selections: [{
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "id"
                                                         },
                                                         arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "title"
                                                         },
                                                         arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "description"
                                                         },
                                                         arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "startAt"
                                                         },
                                                         arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "endAt"
                                                         },
                                                         arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "imageURL"
@@ -2212,11 +2020,9 @@ webpackJsonp([45], {
                                                                 value: "337"
                                                             }
                                                         }],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "game"
@@ -2227,37 +2033,30 @@ webpackJsonp([45], {
                                                             kind: "SelectionSet",
                                                             selections: [{
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "id"
                                                                 },
                                                                 arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }, {
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "name"
                                                                 },
                                                                 arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }, {
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "displayName"
                                                                 },
                                                                 arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }, {
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "boxArtURL"
@@ -2283,13 +2082,11 @@ webpackJsonp([45], {
                                                                         value: "130"
                                                                     }
                                                                 }],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }]
                                                         }
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "channel"
@@ -2300,37 +2097,30 @@ webpackJsonp([45], {
                                                             kind: "SelectionSet",
                                                             selections: [{
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "id"
                                                                 },
                                                                 arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }, {
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "login"
                                                                 },
                                                                 arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }, {
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "displayName"
                                                                 },
                                                                 arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }, {
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "stream"
@@ -2341,17 +2131,14 @@ webpackJsonp([45], {
                                                                     kind: "SelectionSet",
                                                                     selections: [{
                                                                         kind: "Field",
-                                                                        alias: null,
                                                                         name: {
                                                                             kind: "Name",
                                                                             value: "id"
                                                                         },
                                                                         arguments: [],
-                                                                        directives: [],
-                                                                        selectionSet: null
+                                                                        directives: []
                                                                     }, {
                                                                         kind: "Field",
-                                                                        alias: null,
                                                                         name: {
                                                                             kind: "Name",
                                                                             value: "previewImageURL"
@@ -2377,15 +2164,13 @@ webpackJsonp([45], {
                                                                                 value: "180"
                                                                             }
                                                                         }],
-                                                                        directives: [],
-                                                                        selectionSet: null
+                                                                        directives: []
                                                                     }]
                                                                 }
                                                             }]
                                                         }
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "self"
@@ -2396,19 +2181,16 @@ webpackJsonp([45], {
                                                             kind: "SelectionSet",
                                                             selections: [{
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "isFollowing"
                                                                 },
                                                                 arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }]
                                                         }
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "videos"
@@ -2419,7 +2201,6 @@ webpackJsonp([45], {
                                                             kind: "SelectionSet",
                                                             selections: [{
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "edges"
@@ -2430,17 +2211,14 @@ webpackJsonp([45], {
                                                                     kind: "SelectionSet",
                                                                     selections: [{
                                                                         kind: "Field",
-                                                                        alias: null,
                                                                         name: {
                                                                             kind: "Name",
                                                                             value: "offsetSeconds"
                                                                         },
                                                                         arguments: [],
-                                                                        directives: [],
-                                                                        selectionSet: null
+                                                                        directives: []
                                                                     }, {
                                                                         kind: "Field",
-                                                                        alias: null,
                                                                         name: {
                                                                             kind: "Name",
                                                                             value: "node"
@@ -2451,27 +2229,22 @@ webpackJsonp([45], {
                                                                             kind: "SelectionSet",
                                                                             selections: [{
                                                                                 kind: "Field",
-                                                                                alias: null,
                                                                                 name: {
                                                                                     kind: "Name",
                                                                                     value: "id"
                                                                                 },
                                                                                 arguments: [],
-                                                                                directives: [],
-                                                                                selectionSet: null
+                                                                                directives: []
                                                                             }, {
                                                                                 kind: "Field",
-                                                                                alias: null,
                                                                                 name: {
                                                                                     kind: "Name",
                                                                                     value: "lengthSeconds"
                                                                                 },
                                                                                 arguments: [],
-                                                                                directives: [],
-                                                                                selectionSet: null
+                                                                                directives: []
                                                                             }, {
                                                                                 kind: "Field",
-                                                                                alias: null,
                                                                                 name: {
                                                                                     kind: "Name",
                                                                                     value: "owner"
@@ -2482,49 +2255,40 @@ webpackJsonp([45], {
                                                                                     kind: "SelectionSet",
                                                                                     selections: [{
                                                                                         kind: "Field",
-                                                                                        alias: null,
                                                                                         name: {
                                                                                             kind: "Name",
                                                                                             value: "displayName"
                                                                                         },
                                                                                         arguments: [],
-                                                                                        directives: [],
-                                                                                        selectionSet: null
+                                                                                        directives: []
                                                                                     }, {
                                                                                         kind: "Field",
-                                                                                        alias: null,
                                                                                         name: {
                                                                                             kind: "Name",
                                                                                             value: "id"
                                                                                         },
                                                                                         arguments: [],
-                                                                                        directives: [],
-                                                                                        selectionSet: null
+                                                                                        directives: []
                                                                                     }, {
                                                                                         kind: "Field",
-                                                                                        alias: null,
                                                                                         name: {
                                                                                             kind: "Name",
                                                                                             value: "login"
                                                                                         },
                                                                                         arguments: [],
-                                                                                        directives: [],
-                                                                                        selectionSet: null
+                                                                                        directives: []
                                                                                     }]
                                                                                 }
                                                                             }, {
                                                                                 kind: "Field",
-                                                                                alias: null,
                                                                                 name: {
                                                                                     kind: "Name",
                                                                                     value: "animatedPreviewURL"
                                                                                 },
                                                                                 arguments: [],
-                                                                                directives: [],
-                                                                                selectionSet: null
+                                                                                directives: []
                                                                             }, {
                                                                                 kind: "Field",
-                                                                                alias: null,
                                                                                 name: {
                                                                                     kind: "Name",
                                                                                     value: "previewThumbnailURL"
@@ -2550,38 +2314,31 @@ webpackJsonp([45], {
                                                                                         value: "180"
                                                                                     }
                                                                                 }],
-                                                                                directives: [],
-                                                                                selectionSet: null
+                                                                                directives: []
                                                                             }, {
                                                                                 kind: "Field",
-                                                                                alias: null,
                                                                                 name: {
                                                                                     kind: "Name",
                                                                                     value: "publishedAt"
                                                                                 },
                                                                                 arguments: [],
-                                                                                directives: [],
-                                                                                selectionSet: null
+                                                                                directives: []
                                                                             }, {
                                                                                 kind: "Field",
-                                                                                alias: null,
                                                                                 name: {
                                                                                     kind: "Name",
                                                                                     value: "title"
                                                                                 },
                                                                                 arguments: [],
-                                                                                directives: [],
-                                                                                selectionSet: null
+                                                                                directives: []
                                                                             }, {
                                                                                 kind: "Field",
-                                                                                alias: null,
                                                                                 name: {
                                                                                     kind: "Name",
                                                                                     value: "viewCount"
                                                                                 },
                                                                                 arguments: [],
-                                                                                directives: [],
-                                                                                selectionSet: null
+                                                                                directives: []
                                                                             }]
                                                                         }
                                                                     }]
@@ -2645,7 +2402,6 @@ webpackJsonp([45], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "pageInfo"
@@ -2656,29 +2412,24 @@ webpackJsonp([45], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "hasPreviousPage"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "hasNextPage"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }]
                                 }
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "edges"
@@ -2689,17 +2440,14 @@ webpackJsonp([45], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "cursor"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "node"
@@ -2722,57 +2470,46 @@ webpackJsonp([45], {
                                                     kind: "SelectionSet",
                                                     selections: [{
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "id"
                                                         },
                                                         arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "title"
                                                         },
                                                         arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "description"
                                                         },
                                                         arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "startAt"
                                                         },
                                                         arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "endAt"
                                                         },
                                                         arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "imageURL"
@@ -2798,11 +2535,9 @@ webpackJsonp([45], {
                                                                 value: "337"
                                                             }
                                                         }],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "game"
@@ -2813,37 +2548,30 @@ webpackJsonp([45], {
                                                             kind: "SelectionSet",
                                                             selections: [{
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "id"
                                                                 },
                                                                 arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }, {
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "name"
                                                                 },
                                                                 arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }, {
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "displayName"
                                                                 },
                                                                 arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }, {
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "boxArtURL"
@@ -2869,13 +2597,11 @@ webpackJsonp([45], {
                                                                         value: "130"
                                                                     }
                                                                 }],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }]
                                                         }
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "channel"
@@ -2886,37 +2612,30 @@ webpackJsonp([45], {
                                                             kind: "SelectionSet",
                                                             selections: [{
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "id"
                                                                 },
                                                                 arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }, {
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "login"
                                                                 },
                                                                 arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }, {
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "displayName"
                                                                 },
                                                                 arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }, {
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "stream"
@@ -2927,17 +2646,14 @@ webpackJsonp([45], {
                                                                     kind: "SelectionSet",
                                                                     selections: [{
                                                                         kind: "Field",
-                                                                        alias: null,
                                                                         name: {
                                                                             kind: "Name",
                                                                             value: "id"
                                                                         },
                                                                         arguments: [],
-                                                                        directives: [],
-                                                                        selectionSet: null
+                                                                        directives: []
                                                                     }, {
                                                                         kind: "Field",
-                                                                        alias: null,
                                                                         name: {
                                                                             kind: "Name",
                                                                             value: "previewImageURL"
@@ -2963,15 +2679,13 @@ webpackJsonp([45], {
                                                                                 value: "180"
                                                                             }
                                                                         }],
-                                                                        directives: [],
-                                                                        selectionSet: null
+                                                                        directives: []
                                                                     }]
                                                                 }
                                                             }]
                                                         }
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "self"
@@ -2982,19 +2696,16 @@ webpackJsonp([45], {
                                                             kind: "SelectionSet",
                                                             selections: [{
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "isFollowing"
                                                                 },
                                                                 arguments: [],
-                                                                directives: [],
-                                                                selectionSet: null
+                                                                directives: []
                                                             }]
                                                         }
                                                     }, {
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "videos"
@@ -3005,7 +2716,6 @@ webpackJsonp([45], {
                                                             kind: "SelectionSet",
                                                             selections: [{
                                                                 kind: "Field",
-                                                                alias: null,
                                                                 name: {
                                                                     kind: "Name",
                                                                     value: "edges"
@@ -3016,17 +2726,14 @@ webpackJsonp([45], {
                                                                     kind: "SelectionSet",
                                                                     selections: [{
                                                                         kind: "Field",
-                                                                        alias: null,
                                                                         name: {
                                                                             kind: "Name",
                                                                             value: "offsetSeconds"
                                                                         },
                                                                         arguments: [],
-                                                                        directives: [],
-                                                                        selectionSet: null
+                                                                        directives: []
                                                                     }, {
                                                                         kind: "Field",
-                                                                        alias: null,
                                                                         name: {
                                                                             kind: "Name",
                                                                             value: "node"
@@ -3037,27 +2744,22 @@ webpackJsonp([45], {
                                                                             kind: "SelectionSet",
                                                                             selections: [{
                                                                                 kind: "Field",
-                                                                                alias: null,
                                                                                 name: {
                                                                                     kind: "Name",
                                                                                     value: "id"
                                                                                 },
                                                                                 arguments: [],
-                                                                                directives: [],
-                                                                                selectionSet: null
+                                                                                directives: []
                                                                             }, {
                                                                                 kind: "Field",
-                                                                                alias: null,
                                                                                 name: {
                                                                                     kind: "Name",
                                                                                     value: "lengthSeconds"
                                                                                 },
                                                                                 arguments: [],
-                                                                                directives: [],
-                                                                                selectionSet: null
+                                                                                directives: []
                                                                             }, {
                                                                                 kind: "Field",
-                                                                                alias: null,
                                                                                 name: {
                                                                                     kind: "Name",
                                                                                     value: "owner"
@@ -3068,49 +2770,40 @@ webpackJsonp([45], {
                                                                                     kind: "SelectionSet",
                                                                                     selections: [{
                                                                                         kind: "Field",
-                                                                                        alias: null,
                                                                                         name: {
                                                                                             kind: "Name",
                                                                                             value: "displayName"
                                                                                         },
                                                                                         arguments: [],
-                                                                                        directives: [],
-                                                                                        selectionSet: null
+                                                                                        directives: []
                                                                                     }, {
                                                                                         kind: "Field",
-                                                                                        alias: null,
                                                                                         name: {
                                                                                             kind: "Name",
                                                                                             value: "id"
                                                                                         },
                                                                                         arguments: [],
-                                                                                        directives: [],
-                                                                                        selectionSet: null
+                                                                                        directives: []
                                                                                     }, {
                                                                                         kind: "Field",
-                                                                                        alias: null,
                                                                                         name: {
                                                                                             kind: "Name",
                                                                                             value: "login"
                                                                                         },
                                                                                         arguments: [],
-                                                                                        directives: [],
-                                                                                        selectionSet: null
+                                                                                        directives: []
                                                                                     }]
                                                                                 }
                                                                             }, {
                                                                                 kind: "Field",
-                                                                                alias: null,
                                                                                 name: {
                                                                                     kind: "Name",
                                                                                     value: "animatedPreviewURL"
                                                                                 },
                                                                                 arguments: [],
-                                                                                directives: [],
-                                                                                selectionSet: null
+                                                                                directives: []
                                                                             }, {
                                                                                 kind: "Field",
-                                                                                alias: null,
                                                                                 name: {
                                                                                     kind: "Name",
                                                                                     value: "previewThumbnailURL"
@@ -3136,38 +2829,31 @@ webpackJsonp([45], {
                                                                                         value: "180"
                                                                                     }
                                                                                 }],
-                                                                                directives: [],
-                                                                                selectionSet: null
+                                                                                directives: []
                                                                             }, {
                                                                                 kind: "Field",
-                                                                                alias: null,
                                                                                 name: {
                                                                                     kind: "Name",
                                                                                     value: "publishedAt"
                                                                                 },
                                                                                 arguments: [],
-                                                                                directives: [],
-                                                                                selectionSet: null
+                                                                                directives: []
                                                                             }, {
                                                                                 kind: "Field",
-                                                                                alias: null,
                                                                                 name: {
                                                                                     kind: "Name",
                                                                                     value: "title"
                                                                                 },
                                                                                 arguments: [],
-                                                                                directives: [],
-                                                                                selectionSet: null
+                                                                                directives: []
                                                                             }, {
                                                                                 kind: "Field",
-                                                                                alias: null,
                                                                                 name: {
                                                                                     kind: "Name",
                                                                                     value: "viewCount"
                                                                                 },
                                                                                 arguments: [],
-                                                                                directives: [],
-                                                                                selectionSet: null
+                                                                                directives: []
                                                                             }]
                                                                         }
                                                                     }]
@@ -3202,34 +2888,28 @@ webpackJsonp([45], {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "id"
                         },
                         arguments: [],
-                        directives: [],
-                        selectionSet: null
+                        directives: []
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "title"
                         },
                         arguments: [],
-                        directives: [],
-                        selectionSet: null
+                        directives: []
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "description"
                         },
                         arguments: [],
-                        directives: [],
-                        selectionSet: null
+                        directives: []
                     }, {
                         kind: "Field",
                         alias: {
@@ -3261,8 +2941,7 @@ webpackJsonp([45], {
                                 value: "202"
                             }
                         }],
-                        directives: [],
-                        selectionSet: null
+                        directives: []
                     }, {
                         kind: "Field",
                         alias: {
@@ -3294,8 +2973,7 @@ webpackJsonp([45], {
                                 value: "90"
                             }
                         }],
-                        directives: [],
-                        selectionSet: null
+                        directives: []
                     }, {
                         kind: "Field",
                         alias: {
@@ -3307,8 +2985,7 @@ webpackJsonp([45], {
                             value: "startAt"
                         },
                         arguments: [],
-                        directives: [],
-                        selectionSet: null
+                        directives: []
                     }, {
                         kind: "Field",
                         alias: {
@@ -3320,11 +2997,9 @@ webpackJsonp([45], {
                             value: "endAt"
                         },
                         arguments: [],
-                        directives: [],
-                        selectionSet: null
+                        directives: []
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "owner"
@@ -3335,29 +3010,24 @@ webpackJsonp([45], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "displayName"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }]
                         }
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "self"
@@ -3368,14 +3038,12 @@ webpackJsonp([45], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "isFollowing"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }]
                         }
                     }]
@@ -3424,15 +3092,13 @@ webpackJsonp([45], {
                                 value: "UnfollowEventInput"
                             }
                         }
-                    },
-                    defaultValue: null
+                    }
                 }],
                 directives: [],
                 selectionSet: {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "unfollowEvent"
@@ -3456,7 +3122,6 @@ webpackJsonp([45], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "event"
@@ -3467,17 +3132,14 @@ webpackJsonp([45], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "id"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "self"
@@ -3488,14 +3150,12 @@ webpackJsonp([45], {
                                             kind: "SelectionSet",
                                             selections: [{
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "isFollowing"
                                                 },
                                                 arguments: [],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }]
                                         }
                                     }]
@@ -3530,7 +3190,7 @@ webpackJsonp([45], {
             return e.filter(function(e) {
                 if ("FragmentDefinition" !== e.kind) return !0;
                 var t = e.name.value;
-                return !l[t] && (l[t] = !0, !0)
+                return !r[t] && (r[t] = !0, !0)
             })
         }
         var a = {
@@ -3560,8 +3220,7 @@ webpackJsonp([45], {
                                 value: "ID"
                             }
                         }
-                    },
-                    defaultValue: null
+                    }
                 }, {
                     kind: "VariableDefinition",
                     variable: {
@@ -3577,8 +3236,7 @@ webpackJsonp([45], {
                             kind: "Name",
                             value: "Time"
                         }
-                    },
-                    defaultValue: null
+                    }
                 }, {
                     kind: "VariableDefinition",
                     variable: {
@@ -3594,8 +3252,7 @@ webpackJsonp([45], {
                             kind: "Name",
                             value: "Int"
                         }
-                    },
-                    defaultValue: null
+                    }
                 }, {
                     kind: "VariableDefinition",
                     variable: {
@@ -3611,8 +3268,7 @@ webpackJsonp([45], {
                             kind: "Name",
                             value: "Cursor"
                         }
-                    },
-                    defaultValue: null
+                    }
                 }, {
                     kind: "VariableDefinition",
                     variable: {
@@ -3628,8 +3284,7 @@ webpackJsonp([45], {
                             kind: "Name",
                             value: "Int"
                         }
-                    },
-                    defaultValue: null
+                    }
                 }, {
                     kind: "VariableDefinition",
                     variable: {
@@ -3645,15 +3300,13 @@ webpackJsonp([45], {
                             kind: "Name",
                             value: "Cursor"
                         }
-                    },
-                    defaultValue: null
+                    }
                 }],
                 directives: [],
                 selectionSet: {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "event"
@@ -3677,14 +3330,12 @@ webpackJsonp([45], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "__typename"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "InlineFragment",
                                 typeCondition: {
@@ -3762,27 +3413,22 @@ webpackJsonp([45], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "id"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "title"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "parent"
@@ -3834,21 +3480,21 @@ webpackJsonp([45], {
                 column: 1
             }
         };
-        var l = {};
+        var r = {};
         a.definitions = a.definitions.concat(i(n("8naI").definitions)), a.definitions = a.definitions.concat(i(n("thRY").definitions)), a.definitions = a.definitions.concat(i(n("qdmu").definitions)), e.exports = a
     },
     "E+X/": function(e, t, n) {
         "use strict";
         var i = n("TToO"),
             a = n("RH2O"),
-            l = n("2KeS"),
-            r = n("+xm8"),
+            r = n("2KeS"),
+            o = n("+xm8"),
             s = n("V5M+"),
-            o = n("f2i/"),
+            l = n("f2i/"),
             d = n("Aj/L"),
             c = n("oSFp"),
-            u = n("U7vG"),
-            m = n("6sO2"),
+            m = n("U7vG"),
+            u = n("6sO2"),
             p = n("+Znq"),
             v = n("mw/a"),
             g = n("Odds"),
@@ -3863,7 +3509,7 @@ webpackJsonp([45], {
                                 contentType: v.a.User,
                                 targetUserID: t.props.targetUser.id
                             },
-                            title: Object(m.d)("Report {channelName}", {
+                            title: Object(u.d)("Report {channelName}", {
                                 channelName: t.props.targetUser.displayName
                             }, "EventMoreMenu"),
                             defaultDescription: "Report event: " + e
@@ -3871,34 +3517,34 @@ webpackJsonp([45], {
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return u.createElement(p.a, null, u.createElement(g.u, {
+                    return m.createElement(p.a, null, m.createElement(g.u, {
                         icon: g._11.More,
                         type: g.z.Hollow
-                    }), u.createElement(g.p, {
+                    }), m.createElement(g.p, {
                         direction: this.props.balloonDirection,
                         tailOffset: this.props.tailOffset
-                    }, u.createElement(g.V, {
+                    }, m.createElement(g.V, {
                         padding: {
                             y: 1
                         }
-                    }, u.createElement(g.T, {
+                    }, m.createElement(g.T, {
                         onClick: this.handleReportClick
-                    }, u.createElement(g.V, {
+                    }, m.createElement(g.V, {
                         padding: {
                             x: 1,
                             y: .5
                         }
-                    }, Object(m.d)("Report", "EventMoreMenu"))))))
+                    }, Object(u.d)("Report", "EventMoreMenu"))))))
                 }, t
-            }(u.Component),
-            f = Object(a.a)(function(e) {
+            }(m.Component),
+            f = Object(a.b)(function(e) {
                 return {
                     isLoggedIn: Object(d.d)(e)
                 }
             }, function(e) {
-                return Object(l.bindActionCreators)({
+                return Object(r.b)({
                     login: function() {
-                        return Object(o.f)(r.a.ReportChannel)
+                        return Object(l.f)(o.a.ReportChannel)
                     },
                     showReportUserModal: function(e) {
                         var t = i.__rest(e, []);
@@ -3915,17 +3561,17 @@ webpackJsonp([45], {
         "use strict";
 
         function i(e, t) {
-            return e === a.SECOND ? Object(l.d)("{secondCount, plural, one {# second} other {# seconds}}", {
+            return e === a.SECOND ? Object(r.d)("{secondCount, plural, one {# second} other {# seconds}}", {
                 secondCount: t
-            }, "formatDuration") : e === a.MINUTE ? Object(l.d)("{minuteCount, plural, one {# minute} other {# minutes}}", {
+            }, "formatDuration") : e === a.MINUTE ? Object(r.d)("{minuteCount, plural, one {# minute} other {# minutes}}", {
                 minuteCount: t
-            }, "formatDuration") : e === a.DAY ? Object(l.d)("{dayCount, plural, one {# day} other {# days}}", {
+            }, "formatDuration") : e === a.DAY ? Object(r.d)("{dayCount, plural, one {# day} other {# days}}", {
                 dayCount: t
-            }, "formatDuration") : e === a.HOUR ? Object(l.d)("{hourCount, plural, one {# hour} other {# hours}}", {
+            }, "formatDuration") : e === a.HOUR ? Object(r.d)("{hourCount, plural, one {# hour} other {# hours}}", {
                 hourCount: t
-            }, "formatDuration") : e === a.WEEK ? Object(l.d)("{weekCount, plural, one {# week} other {# weeks}}", {
+            }, "formatDuration") : e === a.WEEK ? Object(r.d)("{weekCount, plural, one {# week} other {# weeks}}", {
                 weekCount: t
-            }, "formatDuration") : e === a.MONTH ? Object(l.d)("{monthCount, plural, one {# month} other {# months}}", {
+            }, "formatDuration") : e === a.MONTH ? Object(r.d)("{monthCount, plural, one {# month} other {# months}}", {
                 monthCount: t
             }, "formatDuration") : ""
         }
@@ -3934,72 +3580,72 @@ webpackJsonp([45], {
             var t = Math.floor(e / 60),
                 n = e % 60;
             if (t < 60) return n ? i(a.MINUTE, t) + " " + i(a.SECOND, n) : i(a.MINUTE, t);
-            var l = Math.floor(t / 60);
-            if (t %= 60, l < 24) return t ? i(a.HOUR, l) + " " + i(a.MINUTE, t) : i(a.HOUR, l);
-            var r = Math.floor(l / 24);
-            if (l %= 24, r < 7) return l ? i(a.DAY, r) + " " + i(a.HOUR, l) : i(a.DAY, r);
-            if (r <= 26) {
-                var s = Math.floor(r / 7);
-                return (r %= 7) ? i(a.WEEK, s) + " " + i(a.DAY, r) : i(a.WEEK, s)
+            var r = Math.floor(t / 60);
+            if (t %= 60, r < 24) return t ? i(a.HOUR, r) + " " + i(a.MINUTE, t) : i(a.HOUR, r);
+            var o = Math.floor(r / 24);
+            if (r %= 24, o < 7) return r ? i(a.DAY, o) + " " + i(a.HOUR, r) : i(a.DAY, o);
+            if (o <= 26) {
+                var s = Math.floor(o / 7);
+                return (o %= 7) ? i(a.WEEK, s) + " " + i(a.DAY, o) : i(a.WEEK, s)
             }
-            var o = Math.round((r + 3) / 30);
-            return i(a.MONTH, o)
+            var l = Math.round((o + 3) / 30);
+            return i(a.MONTH, l)
         };
-        var a, l = n("6sO2");
+        var a, r = n("6sO2");
         ! function(e) {
             e[e.SECOND = 0] = "SECOND", e[e.MINUTE = 1] = "MINUTE", e[e.HOUR = 2] = "HOUR", e[e.DAY = 3] = "DAY", e[e.WEEK = 4] = "WEEK", e[e.MONTH = 5] = "MONTH"
         }(a || (a = {}))
     },
     IOwa: function(e, t, n) {
         "use strict";
-        var i, a, l, r = n("TToO"),
+        var i, a, r, o = n("TToO"),
             s = n("HW6M"),
-            o = n("U7vG"),
+            l = n("U7vG"),
             d = n("6sO2"),
             c = n("2o2f"),
-            u = n("Odds"),
-            m = (n("CybZ"), i = {}, i[c.a.Live] = "stream-type-indicator--live", i[c.a.Premiere] = "stream-type-indicator--premiere", i[c.a.Rerun] = "stream-type-indicator--rerun", i[c.a.WatchParty] = "stream-type-indicator--rerun", i),
-            p = (a = {}, a[c.a.Premiere] = u._11.VideoPremiere, a[c.a.Rerun] = u._11.VideoRerun, a[c.a.WatchParty] = u._11.VideoRerun, a),
-            v = (l = {}, l[c.a.Premiere] = u._12.Live, l[c.a.Rerun] = u._12.Inherit, l[c.a.WatchParty] = u._12.Inherit, l),
+            m = n("Odds"),
+            u = (n("CybZ"), i = {}, i[c.a.Live] = "stream-type-indicator--live", i[c.a.Premiere] = "stream-type-indicator--premiere", i[c.a.Rerun] = "stream-type-indicator--rerun", i[c.a.WatchParty] = "stream-type-indicator--rerun", i),
+            p = (a = {}, a[c.a.Premiere] = m._11.VideoPremiere, a[c.a.Rerun] = m._11.VideoRerun, a[c.a.WatchParty] = m._11.VideoRerun, a),
+            v = (r = {}, r[c.a.Premiere] = m._12.Live, r[c.a.Rerun] = m._12.Inherit, r[c.a.WatchParty] = m._12.Inherit, r),
             g = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return r.__extends(t, e), t.prototype.render = function() {
-                    return o.createElement(u._19, {
+                return o.__extends(t, e), t.prototype.render = function() {
+                    return l.createElement(m._19, {
                         className: this.getClassNames(),
-                        color: u.F.Overlay,
-                        background: u.m.Overlay,
+                        color: m.F.Overlay,
+                        background: m.m.Overlay,
                         padding: {
                             x: .5
                         },
-                        borderRadius: u.s.Small,
-                        display: u.H.Flex
-                    }, o.createElement(u.V, {
-                        display: u.H.Flex,
-                        alignItems: u.c.Center,
+                        borderRadius: m.s.Small,
+                        display: m.H.Flex
+                    }, l.createElement(m.V, {
+                        display: m.H.Flex,
+                        alignItems: m.c.Center,
                         margin: {
                             right: .5
                         }
-                    }, this.getIcon()), o.createElement(u._23, {
-                        type: u._28.Span
+                    }, this.getIcon()), l.createElement(m._23, {
+                        type: m._28.Span
                     }, this.getLabel()))
                 }, t.prototype.getClassNames = function() {
                     var e = {
                         "stream-type-indicator": !0
                     };
-                    return e[m[this.props.type]] = !0, s(e)
+                    return e[u[this.props.type]] = !0, s(e)
                 }, t.prototype.getIcon = function() {
-                    return this.props.hosting ? o.createElement(u._19, {
-                        borderRadius: u.s.Rounded,
+                    return this.props.hosting ? l.createElement(m._19, {
+                        borderRadius: m.s.Rounded,
                         className: "stream-type-indicator__hosting-dot"
-                    }) : this.props.type === c.a.Live ? o.createElement(u.V, {
+                    }) : this.props.type === c.a.Live ? l.createElement(m.V, {
                         className: "stream-type-indicator__live-wrapper",
-                        display: u.H.Flex,
-                        alignItems: u.c.Center
-                    }, o.createElement(u.X, {
-                        size: u.Y.Small
-                    })) : o.createElement(u._10, {
+                        display: m.H.Flex,
+                        alignItems: m.c.Center
+                    }, l.createElement(m.X, {
+                        size: m.Y.Small
+                    })) : l.createElement(m._10, {
                         asset: p[this.props.type],
                         type: v[this.props.type],
                         width: 14,
@@ -4019,7 +3665,7 @@ webpackJsonp([45], {
                             return ""
                     }
                 }, t
-            }(o.Component);
+            }(l.Component);
         n.d(t, "a", function() {
             return g
         })
@@ -4028,19 +3674,19 @@ webpackJsonp([45], {
         "use strict";
         var i = n("TToO"),
             a = n("U7vG"),
-            l = n("WxKK"),
-            r = n("CSlQ"),
+            r = n("WxKK"),
+            o = n("CSlQ"),
             s = n("81qH"),
-            o = n("XYqD"),
+            l = n("XYqD"),
             d = n("Odds"),
             c = function(e) {
                 var t = [],
                     n = null;
                 if (null === e.videos)
-                    for (var r = void 0 === e.placeholderCount ? 20 : e.placeholderCount, c = 0; c < r; c++) t.push(a.createElement(o.a, {
+                    for (var o = void 0 === e.placeholderCount ? 20 : e.placeholderCount, c = 0; c < o; c++) t.push(a.createElement(l.a, {
                         key: c
                     }));
-                else e.viewAllButtonProps && (n = a.createElement(l.a, i.__assign({}, e.viewAllButtonProps))), t = e.videos.map(function(t, n) {
+                else e.viewAllButtonProps && (n = a.createElement(r.a, i.__assign({}, e.viewAllButtonProps))), t = e.videos.map(function(t, n) {
                     return a.createElement(d.V, {
                         "data-a-target": "video-tower-card-" + n,
                         key: "video-" + n,
@@ -4063,7 +3709,7 @@ webpackJsonp([45], {
                     placeholderItems: 20
                 }, t, n)
             },
-            u = Object(r.d)("VideoTower", {
+            m = Object(o.d)("VideoTower", {
                 autoReportInteractive: !0
             })(c);
         n.d(t, !1, function() {
@@ -4071,7 +3717,7 @@ webpackJsonp([45], {
         }), n.d(t, !1, function() {
             return c
         }), n.d(t, "a", function() {
-            return u
+            return m
         })
     },
     J8WN: function(e, t, n) {
@@ -4081,9 +3727,9 @@ webpackJsonp([45], {
         });
         var i = n("TToO"),
             a = n("U7vG"),
-            l = (n.n(a), n("Odds")),
-            r = n("yU6t"),
-            s = (n.n(r), function(e) {
+            r = (n.n(a), n("Odds")),
+            o = n("yU6t"),
+            s = (n.n(o), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -4105,16 +3751,16 @@ webpackJsonp([45], {
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return a.createElement(l.I, {
+                    return a.createElement(r.I, {
                         dragOver: this.state.isDraggingOver,
                         error: this.props.error
-                    }, a.createElement(l.Q, {
-                        position: l._4.Absolute,
+                    }, a.createElement(r.Q, {
+                        position: r._4.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
                         fullWidth: !0,
                         fullHeight: !0,
-                        zIndex: l._39.Above
+                        zIndex: r._39.Above
                     }, a.createElement("input", {
                         "data-test-selector": "file-picker-input",
                         className: "drag-and-drop-file-picker__input",
@@ -4135,36 +3781,36 @@ webpackJsonp([45], {
         "use strict";
         var i = n("TToO"),
             a = n("HW6M"),
-            l = n("U7vG"),
-            r = n("6sO2"),
+            r = n("U7vG"),
+            o = n("6sO2"),
             s = n("J8WN"),
-            o = n("+8VM"),
+            l = n("+8VM"),
             d = n("7vx8"),
             c = n("HZww"),
-            u = n("Odds"),
-            m = (n("weaG"), function(e) {
+            m = n("Odds"),
+            u = (n("weaG"), function(e) {
                 var t = {
                     "default-avatar__selected": e.selected,
                     "default-avatar": !0
                 };
-                return l.createElement(u.V, {
+                return r.createElement(m.V, {
                     padding: {
                         bottom: 1
                     }
-                }, l.createElement("div", {
+                }, r.createElement("div", {
                     onClick: function() {
                         e.onSelect(e.index)
                     },
-                    "aria-label": Object(r.d)("Click to select Default Avatar Number {index, number}", {
+                    "aria-label": Object(o.d)("Click to select Default Avatar Number {index, number}", {
                         index: e.index
                     }, "Default Avatar")
-                }, l.createElement(u._19, {
+                }, r.createElement(m._19, {
                     fullHeight: !0,
                     fullWidth: !0,
-                    position: u._4.Relative,
+                    position: m._4.Relative,
                     className: a(t)
-                }, l.createElement("img", {
-                    alt: Object(r.d)("Default Avatar Number {index, number}", {
+                }, r.createElement("img", {
+                    alt: Object(o.d)("Default Avatar Number {index, number}", {
                         index: e.index
                     }, "Default Avatar"),
                     src: e.imageSrc
@@ -4179,7 +3825,7 @@ webpackJsonp([45], {
         n.d(t, "b", function() {
             return b
         }), n.d(t, "a", function() {
-            return E
+            return _
         });
         var b = [{
                 id: "profile_image_001",
@@ -4203,8 +3849,8 @@ webpackJsonp([45], {
                 id: "profile_image_007",
                 uri: "https://static-cdn.jtvnw.net/user-default-pictures/b83b1794-7df9-4878-916c-88c2ad2e4f9f-profile_image-300x300.jpg"
             }],
-            S = ["image/*"],
-            y = function(e) {
+            y = ["image/*"],
+            E = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -4213,7 +3859,7 @@ webpackJsonp([45], {
                         profileUpdated: !1,
                         currentImageHasTallAspectRatio: !1,
                         imageFormat: ""
-                    }, t.currentImage = null, t.logger = r.i.withCategory("ProfileImagePicker"), t.onImageInputChange = function(e) {
+                    }, t.currentImage = null, t.logger = o.i.withCategory("ProfileImagePicker"), t.onImageInputChange = function(e) {
                         var n;
                         if (null !== e) {
                             n = e[0];
@@ -4247,7 +3893,7 @@ webpackJsonp([45], {
                         })
                     }, t.onUpdateButtonClick = function(e) {
                         return i.__awaiter(t, void 0, void 0, function() {
-                            var t, n, a, l, s = this;
+                            var t, n, a, r, s = this;
                             return i.__generator(this, function(i) {
                                 switch (i.label) {
                                     case 0:
@@ -4263,11 +3909,11 @@ webpackJsonp([45], {
                                     case 2:
                                         return t = i.sent(), n = t.upload_url, a = t.upload_id, [3, 4];
                                     case 3:
-                                        return l = i.sent(), this.logger.error(l, "Request for upload ID failed to get expected response from server."), this.setState({
+                                        return r = i.sent(), this.logger.error(r, "Request for upload ID failed to get expected response from server."), this.setState({
                                             statusMessage: h.b.UnexpectedError
                                         }), [2];
                                     case 4:
-                                        return this.unsubscribe = r.j.subscribe({
+                                        return this.unsubscribe = o.j.subscribe({
                                             topic: Object(c.d)(this.props.userID),
                                             success: function() {
                                                 try {
@@ -4335,7 +3981,7 @@ webpackJsonp([45], {
                 }, t.prototype.render = function() {
                     var e = this,
                         t = b.map(function(t, n) {
-                            return l.createElement(m, {
+                            return r.createElement(u, {
                                 key: t.id,
                                 imageSrc: t.uri,
                                 index: n,
@@ -4349,56 +3995,56 @@ webpackJsonp([45], {
                             "profile-edit__image-preview": !0,
                             "profile-edit__image-preview-tall": this.state.currentImageHasTallAspectRatio
                         };
-                        n = l.createElement(u.V, {
+                        n = r.createElement(m.V, {
                             className: a(i),
                             "data-test-selector": "preview-image",
-                            position: u._4.Relative
-                        }, l.createElement("img", {
+                            position: m._4.Relative
+                        }, r.createElement("img", {
                             src: "" + this.state.imagePreviewURL
                         }))
                     }
                     var d = null;
-                    "" === this.state.imagePreviewURL && (d = l.createElement(u.V, {
+                    "" === this.state.imagePreviewURL && (d = r.createElement(m.V, {
                         className: "profile-edit__upload-info"
-                    }, l.createElement(u.V, null, l.createElement(u._10, {
-                        asset: u._11.Plus,
-                        type: u._12.Alt2,
+                    }, r.createElement(m.V, null, r.createElement(m._10, {
+                        asset: m._11.Plus,
+                        type: m._12.Alt2,
                         height: 20,
                         width: 20
-                    })), l.createElement(u._23, {
-                        type: u._28.H3,
-                        color: u.F.Alt2,
-                        fontSize: u.L.Size4
-                    }, Object(r.d)("Upload a Photo", "Profile Edit"))));
+                    })), r.createElement(m._23, {
+                        type: m._28.H3,
+                        color: m.F.Alt2,
+                        fontSize: m.L.Size4
+                    }, Object(o.d)("Upload a Photo", "Profile Edit"))));
                     var c = null;
-                    this.props.showCloser && (c = l.createElement(o.a, null));
+                    this.props.showCloser && (c = r.createElement(l.a, null));
                     var p = null;
                     if (null !== this.state.statusMessage) {
                         var v = Object(h.c)(this.state.statusMessage),
                             g = v.message,
                             f = v.type;
-                        p = l.createElement(u._1, {
+                        p = r.createElement(m._1, {
                             label: g,
                             type: f
                         })
                     }
                     var k = this.props.login;
-                    return this.props.displayName && (k = this.props.displayName), l.createElement(u.V, {
+                    return this.props.displayName && (k = this.props.displayName), r.createElement(m.V, {
                         className: "profile-edit",
-                        position: u._4.Relative,
+                        position: m._4.Relative,
                         fullHeight: !0
-                    }, l.createElement(u._19, {
+                    }, r.createElement(m._19, {
                         className: "profile-edit__background-container",
-                        background: u.m.Base,
+                        background: m.m.Base,
                         fullWidth: !0
-                    }, l.createElement(u.V, {
+                    }, r.createElement(m.V, {
                         padding: 2,
-                        display: u.H.InlineBlock,
-                        position: u._4.Relative,
-                        textAlign: u._24.Center,
+                        display: m.H.InlineBlock,
+                        position: m._4.Relative,
+                        textAlign: m._24.Center,
                         fullWidth: !0
-                    }, l.createElement(u._19, {
-                        textAlign: u._24.Left,
+                    }, r.createElement(m._19, {
+                        textAlign: m._24.Left,
                         borderBottom: !0,
                         padding: {
                             bottom: 1
@@ -4406,35 +4052,35 @@ webpackJsonp([45], {
                         margin: {
                             bottom: 2
                         }
-                    }, l.createElement(u._23, {
-                        type: u._28.H3,
-                        color: u.F.Alt2,
-                        fontSize: u.L.Size4
-                    }, Object(r.d)("Edit Profile Picture for {userName}", {
+                    }, r.createElement(m._23, {
+                        type: m._28.H3,
+                        color: m.F.Alt2,
+                        fontSize: m.L.Size4
+                    }, Object(o.d)("Edit Profile Picture for {userName}", {
                         userName: k
-                    }, "Profile Edit"), " ")), l.createElement(u.V, {
+                    }, "Profile Edit"), " ")), r.createElement(m.V, {
                         className: "profile-edit__upload-container",
-                        display: u.H.InlineBlock,
-                        position: u._4.Relative,
-                        textAlign: u._24.Center,
+                        display: m.H.InlineBlock,
+                        position: m._4.Relative,
+                        textAlign: m._24.Center,
                         margin: {
                             bottom: 1
                         }
-                    }, l.createElement(u.V, {
+                    }, r.createElement(m.V, {
                         className: "profile-edit__upload",
-                        display: u.H.InlineBlock,
-                        position: u._4.Relative,
-                        textAlign: u._24.Center
-                    }, l.createElement(s.a, {
-                        allowedFileTypes: S,
+                        display: m.H.InlineBlock,
+                        position: m._4.Relative,
+                        textAlign: m._24.Center
+                    }, r.createElement(s.a, {
+                        allowedFileTypes: y,
                         onFilesSubmitted: this.onImageInputChange
-                    }, d), n)), l.createElement(u._19, {
+                    }, d), n)), r.createElement(m._19, {
                         "data-test-selector": "status-message",
-                        fontSize: u.L.Size4,
-                        position: u._4.Relative,
-                        textAlign: u._24.Center,
+                        fontSize: m.L.Size4,
+                        position: m._4.Relative,
+                        textAlign: m._24.Center,
                         className: "profile-edit__status-message"
-                    }, p), l.createElement(u._19, {
+                    }, p), r.createElement(m._19, {
                         borderBottom: !0,
                         padding: {
                             bottom: .5
@@ -4442,27 +4088,27 @@ webpackJsonp([45], {
                         margin: {
                             bottom: 2
                         }
-                    }, l.createElement(u.V, {
-                        textAlign: u._24.Left,
+                    }, r.createElement(m.V, {
+                        textAlign: m._24.Left,
                         margin: {
                             bottom: 1
                         }
-                    }, l.createElement(u._23, {
-                        type: u._28.H3,
-                        color: u.F.Alt2,
-                        fontSize: u.L.Size5
-                    }, Object(r.d)("Or select one of these", "Profile Edit"))), l.createElement(u._34, {
-                        childWidth: u._35.ExtraSmall,
-                        gutterSize: u._36.ExtraSmall,
+                    }, r.createElement(m._23, {
+                        type: m._28.H3,
+                        color: m.F.Alt2,
+                        fontSize: m.L.Size5
+                    }, Object(o.d)("Or select one of these", "Profile Edit"))), r.createElement(m._34, {
+                        childWidth: m._35.ExtraSmall,
+                        gutterSize: m._36.ExtraSmall,
                         placeholderItems: 3
-                    }, t)), l.createElement(u.V, {
-                        display: u.H.Flex,
-                        justifyContent: u.U.Center
-                    }, l.createElement(u.u, {
+                    }, t)), r.createElement(m.V, {
+                        display: m.H.Flex,
+                        justifyContent: m.U.Center
+                    }, r.createElement(m.u, {
                         "data-test-selector": "update-button",
                         onClick: this.onUpdateButtonClick,
-                        size: u.x.Large
-                    }, Object(r.d)("Update", "Profile Edit"))))), c)
+                        size: m.x.Large
+                    }, Object(o.d)("Update", "Profile Edit"))))), c)
                 }, t.prototype.setDefaultAvatar = function() {
                     return i.__awaiter(this, void 0, void 0, function() {
                         var e, t, n;
@@ -4495,15 +4141,15 @@ webpackJsonp([45], {
                         }
                     }
                 })], t)
-            }(l.Component),
-            E = Object(f.d)("Profile Edit")(y)
+            }(r.Component),
+            _ = Object(f.d)("Profile Edit")(E)
     },
     MQiv: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return i
         }), n.d(t, "b", function() {
-            return r
+            return o
         }), t.c = function(e) {
             var t = {
                 share_medium: e.shareMedium,
@@ -4512,7 +4158,7 @@ webpackJsonp([45], {
                 channel_id: e.channelID,
                 location: e.location
             };
-            return a.n.tracking.track(l.SpadeEventType.EventShare, t)
+            return a.n.tracking.track(r.SpadeEventType.EventShare, t)
         }, t.d = function(e) {
             var t = {
                 action: e.action,
@@ -4521,26 +4167,26 @@ webpackJsonp([45], {
                 event_id: e.eventID,
                 location: e.location
             };
-            return a.n.tracking.track(l.SpadeEventType.EventFollowing, t)
+            return a.n.tracking.track(r.SpadeEventType.EventFollowing, t)
         };
         var i, a = n("6sO2"),
-            l = n("vH/s");
+            r = n("vH/s");
         ! function(e) {
             e.ChannelEvents = "channel_events", e.EventDetails = "event_details", e.EventManagment = "event_managment"
         }(i || (i = {}));
-        var r;
+        var o;
         ! function(e) {
             e.RemindMeOpen = "remind_me_open_modal", e.EmailReminderOn = "email_reminder_on", e.EmailReminderOff = "email_reminder_off"
-        }(r || (r = {}))
+        }(o || (o = {}))
     },
     MSvX: function(e, t, n) {
         "use strict";
         var i = n("TToO"),
             a = n("OAwv"),
-            l = n("U7vG"),
-            r = n("6sO2"),
+            r = n("U7vG"),
+            o = n("6sO2"),
             s = n("Ejve"),
-            o = "legacy_routes_enabled",
+            l = "legacy_routes_enabled",
             d = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
@@ -4553,15 +4199,15 @@ webpackJsonp([45], {
                                     n.logger.debug("Found legacy route. Reloading...");
                                     var i = "" !== e.search ? a.parse(e.search) : {};
                                     i["from-redirect"] = "true";
-                                    var l = a.stringify(i),
-                                        o = r.a.buildType === s.a.Dev ? window.location.host : window.location.hostname,
-                                        d = window.location.protocol + "//" + o + e.pathname + "?" + l;
+                                    var r = a.stringify(i),
+                                        l = o.a.buildType === s.a.Dev ? window.location.host : window.location.hostname,
+                                        d = window.location.protocol + "//" + l + e.pathname + "?" + r;
                                     return n.logger.debug("Redirecting to legacy route", {
                                         newUrl: d
                                     }), void window.location.replace(d)
                                 }
                             } catch (e) {
-                                r.i.withCategory("legacy").error(e, "Unable to determine legacy reload match", {
+                                o.i.withCategory("legacy").error(e, "Unable to determine legacy reload match", {
                                     regex: t
                                 })
                             }
@@ -4572,15 +4218,15 @@ webpackJsonp([45], {
                             if (t["from-redirect"]) {
                                 delete t["from-redirect"];
                                 var i = a.stringify(t),
-                                    l = "";
-                                i.length > 0 && (l = "?" + i), n.props.history.replace({
+                                    r = "";
+                                i.length > 0 && (r = "?" + i), n.props.history.replace({
                                     pathname: e.pathname,
                                     hash: e.hash,
-                                    search: l
+                                    search: r
                                 })
                             }
                         }
-                    }, n.isEnabled = r.b.get(o, !1), n.logger = r.i.withCategory("legacy-routes"), n.legacyRoutes = n.buildRoutes(), n.props.history.listen(n.onHistoryChange), n
+                    }, n.isEnabled = o.b.get(l, !1), n.logger = o.i.withCategory("legacy-routes"), n.legacyRoutes = n.buildRoutes(), n.props.history.listen(n.onHistoryChange), n
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
                     return null
@@ -4589,14 +4235,14 @@ webpackJsonp([45], {
                 }, t.prototype.buildRoutes = function() {
                     if (!this.isEnabled) return [];
                     this.logger.debug("Building legacy routes...");
-                    var e = r.b.get("legacy_routes", []),
+                    var e = o.b.get("legacy_routes", []),
                         t = [];
                     if (!e || 0 === e.length) return this.logger.debug("No legacy routes found in settings."), t;
                     for (var n = 0, i = e; n < i.length; n++) {
                         var a = i[n];
                         try {
-                            var l = new RegExp(a, "i");
-                            t.push(l)
+                            var r = new RegExp(a, "i");
+                            t.push(r)
                         } catch (e) {
                             this.logger.debug("Failed to parse route!", {
                                 val: a,
@@ -4608,9 +4254,9 @@ webpackJsonp([45], {
                         count: t.length
                     }), t
                 }, t
-            }(l.Component);
+            }(r.Component);
         n.d(t, "a", function() {
-            return o
+            return l
         }), n.d(t, !1, function() {
             return "legacy_routes"
         }), n.d(t, "b", function() {
@@ -4625,7 +4271,7 @@ webpackJsonp([45], {
             return t && (n = t),
                 function(e, t) {
                     if (t < e.endAt) {
-                        if (e.eventType === A.PREMIERE_EVENT) return !!e.premiere && e.premiere.status === m.STARTED;
+                        if (e.eventType === A.PREMIERE_EVENT) return !!e.premiere && e.premiere.status === u.STARTED;
                         if (e.eventType === A.SINGLE_EVENT) return t > e.startAt;
                         if (e.eventType === A.SEGMENT_EVENT) return t > e.startAt
                     }
@@ -4647,18 +4293,18 @@ webpackJsonp([45], {
             return n + "h" + Math.floor(t / 60) + "m" + (t %= 60) + "s"
         }
 
-        function l(e) {
+        function r(e) {
             return null !== e
         }
 
-        function r(e) {
+        function o(e) {
             var t = [];
             e.upcomingChildren && e.upcomingChildren.edges && (t = e.upcomingChildren.edges.map(function(e) {
                 var t = e.node;
                 if (!(t && t.game && t.channel && t.channel.id && t.channel.login)) return null;
                 var n = null;
                 if (t && t.videos && t.videos.edges && t.videos.edges.length > 0) {
-                    n = o(t.videos.edges[0])
+                    n = l(t.videos.edges[0])
                 }
                 return {
                     id: t.id,
@@ -4686,14 +4332,14 @@ webpackJsonp([45], {
                     },
                     video: n
                 }
-            }).filter(l));
+            }).filter(r));
             var n = null;
             e.visibleChildren && e.visibleChildren.edges && (n = [], n = e.visibleChildren.edges.map(function(e) {
                 var t = e.node;
                 if (!(t && t.game && t.channel && t.channel.id && t.channel.login)) return null;
                 var n = null;
                 if (t && t.videos && t.videos.edges && t.videos.edges.length > 0) {
-                    n = o(t.videos.edges[0])
+                    n = l(t.videos.edges[0])
                 }
                 return {
                     id: t.id,
@@ -4721,12 +4367,12 @@ webpackJsonp([45], {
                     },
                     video: n
                 }
-            }).filter(l));
+            }).filter(r));
             var i = null,
                 a = null;
             null !== e.timetableStart && (i = new Date(e.timetableStart)), null !== e.timetableEnd && (a = new Date(e.timetableEnd));
-            var r = null;
-            null !== e.owner && (r = {
+            var o = null;
+            null !== e.owner && (o = {
                 id: e.owner.id || "",
                 displayName: e.owner.displayName || "-"
             });
@@ -4740,7 +4386,7 @@ webpackJsonp([45], {
                 thumbImageURL: e.thumbImageURL,
                 startAt: i,
                 endAt: a,
-                owner: r,
+                owner: o,
                 self: {
                     isFollowing: e.self && e.self.isFollowing || !1
                 },
@@ -4754,20 +4400,20 @@ webpackJsonp([45], {
         function s(e, t, n) {
             var i = e && e.visibleChildren && e.visibleChildren.edges || [],
                 a = t && t.visibleChildren && t.visibleChildren.edges || [],
-                l = [];
-            l = n ? a.concat(i) : i.concat(a);
-            var r = null;
-            e && e.visibleChildren && e.visibleChildren.pageInfo && (r = Object.assign({}, e.visibleChildren.pageInfo)), r && t && t.visibleChildren && t.visibleChildren.pageInfo && (r.hasNextPage = !!r.hasNextPage && t.visibleChildren.pageInfo.hasNextPage, r.hasPreviousPage = !!r.hasPreviousPage && t.visibleChildren.pageInfo.hasPreviousPage);
+                r = [];
+            r = n ? a.concat(i) : i.concat(a);
+            var o = null;
+            e && e.visibleChildren && e.visibleChildren.pageInfo && (o = Object.assign({}, e.visibleChildren.pageInfo)), o && t && t.visibleChildren && t.visibleChildren.pageInfo && (o.hasNextPage = !!o.hasNextPage && t.visibleChildren.pageInfo.hasNextPage, o.hasPreviousPage = !!o.hasPreviousPage && t.visibleChildren.pageInfo.hasPreviousPage);
             var s = Object.assign({}, e.visibleChildren, {
-                edges: l,
-                pageInfo: r
+                edges: r,
+                pageInfo: o
             });
             return p.__assign({}, e, {
                 visibleChildren: s
             })
         }
 
-        function o(e) {
+        function l(e) {
             var t = e.offsetSeconds,
                 n = null;
             if (e.node) {
@@ -4802,32 +4448,32 @@ webpackJsonp([45], {
             return !!e && e.__typename === A.SEGMENT_EVENT
         }
 
-        function u(e, t) {
+        function m(e, t) {
             for (var n = e, i = 0, a = t.split("."); i < a.length; i++) {
-                var l = a[i];
-                if (!n || null === n[l]) return null;
-                n = n[l]
+                var r = a[i];
+                if (!n || null === n[r]) return null;
+                n = n[r]
             }
             return n
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var m, p = n("TToO"),
+        var u, p = n("TToO"),
             v = n("U7vG"),
             g = n("6sO2"),
             h = n("yWCw"),
             f = n("7vx8"),
             k = n("j7/Y"),
             b = n("w9tK"),
-            S = n("vH/s"),
-            y = n("SI0h"),
-            E = n("CSlQ"),
-            _ = n("2aoH"),
-            N = n("HW6M");
+            y = n("vH/s"),
+            E = n("SI0h"),
+            _ = n("CSlQ"),
+            N = n("2aoH"),
+            S = n("HW6M");
         ! function(e) {
             e.UNSCHEDULED = "UNSCHEDULED", e.SCHEDULED = "SCHEDULED", e.CANCELLED = "CANCELLED", e.STARTED = "STARTED", e.SUCCESS = "SUCCESS", e.FAILED = "FAILED"
-        }(m || (m = {}));
+        }(u || (u = {}));
         var w;
         ! function(e) {
             e.LIVE = "LIVE", e.FUTURE = "FUTURE", e.PAST = "PAST"
@@ -4851,7 +4497,7 @@ webpackJsonp([45], {
                 return p.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    var e = N({
+                    var e = S({
                             "event-landing-action__progress": this.state.countdownActive
                         }),
                         t = "";
@@ -4915,7 +4561,7 @@ webpackJsonp([45], {
                     }, i))
                 }, t
             }(v.Component)),
-            I = Object(E.d)("EventLandingAction")(C),
+            I = Object(_.d)("EventLandingAction")(C),
             L = n("1jVX"),
             O = (n("9bpq"), function(e) {
                 function t() {
@@ -4935,7 +4581,7 @@ webpackJsonp([45], {
                         },
                         className: "event-landing-description__text"
                     }, Object(L.a)(e, [], "", !0)))
-                }, t = p.__decorate([Object(E.d)("EventLandingDescription")], t)
+                }, t = p.__decorate([Object(_.d)("EventLandingDescription")], t)
             }(v.Component)),
             T = n("OFFm"),
             x = n("E+X/"),
@@ -5008,7 +4654,7 @@ webpackJsonp([45], {
                     })))
                 }, t
             }(v.Component)),
-            D = Object(E.d)("EventLandingTitle")(B),
+            D = Object(_.d)("EventLandingTitle")(B),
             j = n("ISok"),
             R = function(e) {
                 function t() {
@@ -5045,8 +4691,8 @@ webpackJsonp([45], {
                 }, t.prototype.render = function() {
                     var e = null;
                     return this.props.pastPremiere && (e = v.createElement(j.a, {
-                        trackingContent: S.PageviewContent.EventPast,
-                        trackingMedium: S.PageviewMedium.EventDetails,
+                        trackingContent: y.PageviewContent.EventPast,
+                        trackingMedium: y.PageviewMedium.EventDetails,
                         videos: [this.pastPremiereToPreviewCardVideo(this.props.pastPremiere)]
                     })), v.createElement(F._19, {
                         padding: {
@@ -5061,7 +4707,7 @@ webpackJsonp([45], {
                             top: 1
                         }
                     }, v.createElement(F.V, null, e)))
-                }, t = p.__decorate([Object(E.d)("EventLandingVideos")], t)
+                }, t = p.__decorate([Object(_.d)("EventLandingVideos")], t)
             }(v.Component),
             P = function(e) {
                 function t() {
@@ -5100,7 +4746,7 @@ webpackJsonp([45], {
                     }), e, t, v.createElement(O, {
                         description: this.props.description
                     }))
-                }, t = p.__decorate([Object(E.d)("EventLandingBody", {
+                }, t = p.__decorate([Object(_.d)("EventLandingBody", {
                     autoReportInteractive: !0
                 })], t)
             }(v.Component),
@@ -5123,7 +4769,7 @@ webpackJsonp([45], {
                     }, v.createElement(H.a, {
                         date: e
                     }))))
-                }, t = p.__decorate([Object(E.d)("EventLandingImage", {
+                }, t = p.__decorate([Object(_.d)("EventLandingImage", {
                     autoReportInteractive: !0
                 })], t)
             }(v.Component),
@@ -5150,19 +4796,19 @@ webpackJsonp([45], {
                         n = null,
                         i = null,
                         a = null,
-                        l = null;
+                        r = null;
                     if (function(e) {
                             for (var t in A)
                                 if (isNaN(Number(t)) && A[t] === e) return !0;
                             return !1
                         }(this.props.eventType)) {
-                        var r = void 0;
+                        var o = void 0;
                         switch (this.props.eventType) {
                             case A.PREMIERE_EVENT:
-                                r = Object(g.d)("Premiere", "EventLandingInfo");
+                                o = Object(g.d)("Premiere", "EventLandingInfo");
                                 break;
                             default:
-                                r = Object(g.d)("Live Stream", "EventLandingInfo")
+                                o = Object(g.d)("Live Stream", "EventLandingInfo")
                         }
                         n = v.createElement(F.V, {
                             margin: {
@@ -5178,7 +4824,7 @@ webpackJsonp([45], {
                             }
                         }, v.createElement(F._23, {
                             fontSize: F.L.Size5
-                        }, r)))
+                        }, o)))
                     }
                     return this.props.game && (this.props.game.boxArtURL && this.props.game.displayName && (a = v.createElement(F.V, {
                         display: F.H.InlineFlex
@@ -5212,7 +4858,7 @@ webpackJsonp([45], {
                         }
                     }, v.createElement(F._23, {
                         fontSize: F.L.Size5
-                    }, this.props.game.displayName)))))), this.props.channel.profileImageURL && (l = v.createElement(F.V, {
+                    }, this.props.game.displayName)))))), this.props.channel.profileImageURL && (r = v.createElement(F.V, {
                         display: F.H.InlineFlex
                     }, v.createElement(F.l, {
                         size: 40,
@@ -5288,7 +4934,7 @@ webpackJsonp([45], {
                         margin: {
                             top: 1
                         }
-                    }, l, v.createElement(F.V, {
+                    }, r, v.createElement(F.V, {
                         display: F.H.InlineFlex,
                         margin: {
                             left: 1
@@ -5296,7 +4942,7 @@ webpackJsonp([45], {
                     }, v.createElement(F._23, {
                         fontSize: F.L.Size5
                     }, "" !== this.props.channel.displayName ? this.props.channel.displayName : this.props.channel.login))))), i)
-                }, t = p.__decorate([Object(E.d)("EventLandingInfo")], t)
+                }, t = p.__decorate([Object(_.d)("EventLandingInfo")], t)
             }(v.Component),
             K = function(e) {
                 function t() {
@@ -5324,10 +4970,10 @@ webpackJsonp([45], {
                         game: this.props.game,
                         eventType: this.props.eventType
                     })))
-                }, t = p.__decorate([Object(E.d)("EventLandingSidePanel")], t)
+                }, t = p.__decorate([Object(_.d)("EventLandingSidePanel")], t)
             }(v.Component),
             Q = n("zCIC"),
-            $ = Object(E.d)("TimetableHeader", {
+            $ = Object(_.d)("TimetableHeader", {
                 autoReportInteractive: !0
             })(function(e) {
                 var t = {
@@ -5347,14 +4993,14 @@ webpackJsonp([45], {
                     endAt: e.upcomingSegment.endAt,
                     eventType: A.SEGMENT_EVENT
                 }));
-                var l = v.createElement(T.a, {
+                var r = v.createElement(T.a, {
                     eventID: e.id,
                     areNotificationsEnabled: e.isFollowing,
                     channelID: "",
                     channelLogin: "",
                     eventLocation: U.a.EventDetails
                 });
-                e.upcomingSegment && a === w.LIVE ? l = v.createElement(F.u, {
+                e.upcomingSegment && a === w.LIVE ? r = v.createElement(F.u, {
                     linkTo: {
                         pathname: "/" + e.upcomingSegment.channel.login,
                         state: {
@@ -5362,16 +5008,16 @@ webpackJsonp([45], {
                             medium: "event_page"
                         }
                     }
-                }, Object(g.d)("Watch Now", "TimetableHeader")) : e.upcomingSegment && a !== w.PAST || (l = v.createElement(F.u, {
+                }, Object(g.d)("Watch Now", "TimetableHeader")) : e.upcomingSegment && a !== w.PAST || (r = v.createElement(F.u, {
                     disabled: !0
                 }, Object(g.d)("Past Event", "TimetableHeader")));
-                var r = v.createElement(F.V, {
+                var o = v.createElement(F.V, {
                         display: F.H.Flex
                     }, v.createElement(F.V, {
                         margin: {
                             right: 1
                         }
-                    }, l), v.createElement(F.V, {
+                    }, r), v.createElement(F.V, {
                         margin: {
                             right: 1
                         }
@@ -5394,10 +5040,10 @@ webpackJsonp([45], {
                         left: .5
                     }
                 }, v.createElement(F._23, null, Object(g.d)("Happening Now", "TimetableHeader")))) : v.createElement(F.V, null, v.createElement(F._23, null, Object(g.h)(e.startAt, t))));
-                var o = null;
+                var l = null;
                 if (e.startAt && e.endAt) {
                     var d = Object(g.h)(e.endAt, n);
-                    o = v.createElement(F.V, null, v.createElement(F._23, null, Object(g.d)("to {endDate}", {
+                    l = v.createElement(F.V, null, v.createElement(F._23, null, Object(g.d)("to {endDate}", {
                         endDate: d
                     }, "TimetableHeader")))
                 }
@@ -5425,11 +5071,11 @@ webpackJsonp([45], {
                     margin: {
                         y: .5
                     }
-                }, s, o), v.createElement(F.V, {
+                }, s, l), v.createElement(F.V, {
                     margin: {
                         y: 1
                     }
-                }, r))), v.createElement(F._19, {
+                }, o))), v.createElement(F._19, {
                     border: !0,
                     background: F.m.Base,
                     margin: {
@@ -5525,8 +5171,8 @@ webpackJsonp([45], {
                     })), this.videoPreviewImage()))))))
                 }, t.prototype.videoPreviewImage = function() {
                     var e = this.state.hovered && !this.state.didAnimatedPreviewFailToLoad ? this.props.video.animatedPreviewURL : this.props.video.previewThumbnailURL,
-                        t = N("event-video-card__image-wrapper"),
-                        n = N("event-video-card__preview-image", {
+                        t = S("event-video-card__image-wrapper"),
+                        n = S("event-video-card__preview-image", {
                             "event-video-card__preview-image--animated": this.state.hovered && this.state.didAnimatedPreviewLoad
                         });
                     return v.createElement(F.j, {
@@ -5547,7 +5193,7 @@ webpackJsonp([45], {
                     }))))))
                 }, t
             }(v.Component)),
-            ne = Object(E.d)("EventVideoCard")(te),
+            ne = Object(_.d)("EventVideoCard")(te),
             ie = (n("EKvq"), Object(g.d)("Watch Now", "TimetableSegment")),
             ae = function(e) {
                 function t() {
@@ -5579,7 +5225,7 @@ webpackJsonp([45], {
                         label: Object(g.d)("Live", "EventLandingPage"),
                         type: F._2.Live
                     })));
-                    var l = v.createElement(F._19, {
+                    var r = v.createElement(F._19, {
                         display: F.H.Flex,
                         borderBottom: !0,
                         padding: {
@@ -5595,7 +5241,7 @@ webpackJsonp([45], {
                         type: F._28.H5,
                         ellipsis: !0
                     }, this.props.event.title)));
-                    a && (l = v.createElement(F._19, {
+                    a && (r = v.createElement(F._19, {
                         borderBottom: !0,
                         padding: {
                             y: 1
@@ -5617,7 +5263,7 @@ webpackJsonp([45], {
                         type: F._28.H5,
                         ellipsis: !0
                     }, this.props.event.title)))));
-                    var r = v.createElement(T.a, {
+                    var o = v.createElement(T.a, {
                         eventID: this.props.event.id,
                         areNotificationsEnabled: this.props.event.self.isFollowing,
                         channelID: this.props.event.channel.id,
@@ -5625,7 +5271,7 @@ webpackJsonp([45], {
                         eventLocation: U.a.EventDetails,
                         small: !0
                     });
-                    return n === w.LIVE ? r = v.createElement(F.V, null, v.createElement(F.u, {
+                    return n === w.LIVE ? o = v.createElement(F.V, null, v.createElement(F.u, {
                         linkTo: {
                             pathname: "/" + this.props.event.channel.login,
                             state: {
@@ -5634,7 +5280,7 @@ webpackJsonp([45], {
                             }
                         },
                         size: F.x.Small
-                    }, ie)) : n === w.PAST && (r = null), v.createElement("div", null, v.createElement(F._19, {
+                    }, ie)) : n === w.PAST && (o = null), v.createElement("div", null, v.createElement(F._19, {
                         className: "timetable-segment__row",
                         border: !0,
                         fullWidth: !0,
@@ -5662,7 +5308,7 @@ webpackJsonp([45], {
                         margin: {
                             right: 1
                         }
-                    }, l, v.createElement(F.V, {
+                    }, r, v.createElement(F.V, {
                         display: F.H.Flex,
                         justifyContent: F.U.Between,
                         alignItems: F.c.Center,
@@ -5688,7 +5334,7 @@ webpackJsonp([45], {
                         tooltip: this.localizedGame(),
                         svgAsset: F._11.NavGames,
                         title: this.props.event.game.displayName
-                    })), r))))
+                    })), o))))
                 }, t.prototype.expandedSegment = function() {
                     var e = {
                             backgroundImage: "url(" + this.props.event.imageURL + ")"
@@ -5701,19 +5347,19 @@ webpackJsonp([45], {
                         n = {
                             timeZoneName: "short"
                         },
-                        l = i({
+                        r = i({
                             startAt: this.props.event.startAt,
                             endAt: this.props.event.endAt,
                             eventType: A.SEGMENT_EVENT
                         }),
-                        r = v.createElement(T.a, {
+                        o = v.createElement(T.a, {
                             eventID: this.props.event.id,
                             areNotificationsEnabled: this.props.event.self.isFollowing,
                             channelID: this.props.event.channel.id,
                             channelLogin: this.props.event.channel.login,
                             eventLocation: U.a.EventDetails
                         });
-                    if (l === w.LIVE) r = v.createElement(F.u, {
+                    if (r === w.LIVE) o = v.createElement(F.u, {
                         linkTo: {
                             pathname: "/" + this.props.event.channel.login,
                             state: {
@@ -5722,27 +5368,27 @@ webpackJsonp([45], {
                             }
                         }
                     }, ie);
-                    else if (l === w.PAST && this.props.event.video && this.props.event.video.video) {
+                    else if (r === w.PAST && this.props.event.video && this.props.event.video.video) {
                         var s = "";
-                        this.props.event.video.offsetSeconds && (s = "t=" + a(this.props.event.video.offsetSeconds)), r = v.createElement(F.u, {
+                        this.props.event.video.offsetSeconds && (s = "t=" + a(this.props.event.video.offsetSeconds)), o = v.createElement(F.u, {
                             linkTo: {
                                 pathname: "/videos/" + this.props.event.video.video.id,
                                 search: s,
                                 state: {
-                                    content: S.PageviewContent.EventPast,
-                                    medium: S.PageviewMedium.EventDetails
+                                    content: y.PageviewContent.EventPast,
+                                    medium: y.PageviewMedium.EventDetails
                                 }
                             }
                         }, Object(g.d)("Watch Video", "TimetableSegment"))
-                    } else l === w.PAST && (r = v.createElement(F.u, {
+                    } else r === w.PAST && (o = v.createElement(F.u, {
                         disabled: !0
                     }, Object(g.d)("Past Event", "TimetableSegment")));
-                    var o = v.createElement("img", {
+                    var l = v.createElement("img", {
                         src: this.props.event.game.boxArtURL,
                         height: 130,
                         width: 93
                     });
-                    if (l === w.LIVE && this.props.event.channel.stream && this.props.event.channel.stream.previewImageURL && (o = v.createElement(F.V, {
+                    if (r === w.LIVE && this.props.event.channel.stream && this.props.event.channel.stream.previewImageURL && (l = v.createElement(F.V, {
                             position: F._4.Relative
                         }, v.createElement(F.V, {
                             position: F._4.Absolute,
@@ -5755,12 +5401,12 @@ webpackJsonp([45], {
                             src: this.props.event.channel.stream.previewImageURL,
                             height: 120,
                             width: 190
-                        }))), l === w.PAST && this.props.event.video && this.props.event.video.video) {
+                        }))), r === w.PAST && this.props.event.video && this.props.event.video.video) {
                         var d = {
-                            content: S.PageviewContent.EventPast,
-                            medium: S.PageviewMedium.EventDetails
+                            content: y.PageviewContent.EventPast,
+                            medium: y.PageviewMedium.EventDetails
                         };
-                        o = v.createElement("div", {
+                        l = v.createElement("div", {
                             className: "timetable-segment__video-embed"
                         }, v.createElement(ne, {
                             video: this.props.event.video.video,
@@ -5776,7 +5422,7 @@ webpackJsonp([45], {
                         day: "numeric",
                         timeZoneName: "short"
                     }));
-                    return l === w.LIVE && (c = v.createElement(F.V, {
+                    return r === w.LIVE && (c = v.createElement(F.V, {
                         position: F._4.Relative
                     }, v.createElement(F._23, {
                         color: F.F.Overlay
@@ -5822,7 +5468,7 @@ webpackJsonp([45], {
                     }, v.createElement(F.V, {
                         className: "timetable-segment__expanded-image",
                         flexShrink: 0
-                    }, o), v.createElement(F.V, {
+                    }, l), v.createElement(F.V, {
                         flexGrow: 1,
                         margin: {
                             left: 2
@@ -5856,7 +5502,7 @@ webpackJsonp([45], {
                         margin: {
                             right: 1
                         }
-                    }, r), v.createElement(F.V, {
+                    }, o), v.createElement(F.V, {
                         margin: {
                             right: 1
                         }
@@ -5878,10 +5524,10 @@ webpackJsonp([45], {
                     })))
                 }, t
             }(v.PureComponent),
-            le = Object(E.d)("TimetableSegment", {
+            re = Object(_.d)("TimetableSegment", {
                 autoReportInteractive: !0
             })(ae),
-            re = function(e) {
+            oe = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.unexpand = function() {
@@ -5901,7 +5547,7 @@ webpackJsonp([45], {
                 return p.__extends(t, e), t.prototype.render = function() {
                     var e = this,
                         t = this.props.segments.map(function(t) {
-                            return v.createElement(le, {
+                            return v.createElement(re, {
                                 key: t.id,
                                 event: t,
                                 expanded: t.id === e.state.expandedEvent,
@@ -5944,10 +5590,10 @@ webpackJsonp([45], {
                     })))
                 }, t
             }(v.PureComponent),
-            se = Object(E.d)("TimetableSchedule", {
+            se = Object(_.d)("TimetableSchedule", {
                 autoReportInteractive: !0
-            })(re),
-            oe = (n("ynGC"), Object(E.d)("TimeablePageComponent", {
+            })(oe),
+            le = (n("ynGC"), Object(_.d)("TimeablePageComponent", {
                 autoReportInteractive: !0
             })(function(e) {
                 var t = null;
@@ -5996,14 +5642,14 @@ webpackJsonp([45], {
                     if (this.props.data.error || !this.props.data.loading && !this.props.data.event) return this.errorPage();
                     if (c(this.props.data.event)) {
                         if (!this.props.data.event.parent) return this.errorPage();
-                        return (e = r(this.props.data.event.parent)) ? v.createElement(oe, {
+                        return (e = o(this.props.data.event.parent)) ? v.createElement(le, {
                             event: e,
                             loadMore: this.props.loadMore
                         }) : this.errorPage()
                     }
                     if (d(this.props.data.event)) {
                         var e;
-                        return (e = r(this.props.data.event)) ? v.createElement(oe, {
+                        return (e = o(this.props.data.event)) ? v.createElement(le, {
                             event: e,
                             loadMore: this.props.loadMore
                         }) : this.errorPage()
@@ -6011,8 +5657,8 @@ webpackJsonp([45], {
                     var t = this.cleanEvent(this.props.data.event);
                     return t ? v.createElement(F.V, {
                         position: F._4.Relative
-                    }, v.createElement(_.a, null, v.createElement(y.a, {
-                        currentPage: y.b.Events,
+                    }, v.createElement(N.a, null, v.createElement(E.a, {
+                        currentPage: E.b.Events,
                         channelLogin: t.channel.login
                     })), v.createElement(F.V, {
                         display: F.H.Flex,
@@ -6107,10 +5753,10 @@ webpackJsonp([45], {
                             loadMore: function(t) {
                                 var n = null,
                                     i = null;
-                                if (d(e.data.event)) i = u(e, "data.event.visibleChildren.edges");
+                                if (d(e.data.event)) i = m(e, "data.event.visibleChildren.edges");
                                 else {
                                     if (!c(e.data.event)) return;
-                                    i = u(e, "data.event.parent.visibleChildren.edges")
+                                    i = m(e, "data.event.parent.visibleChildren.edges")
                                 }
                                 n = i && i.length > 0 && i[t ? 0 : i.length - 1].cursor || null;
                                 var a = {
@@ -6142,16 +5788,16 @@ webpackJsonp([45], {
                             }
                         })
                     }
-                }), Object(E.d)("EventLandingPage", {
+                }), Object(_.d)("EventLandingPage", {
                     destination: b.a.EventDetails
                 }), Object(k.a)({
-                    location: S.PageviewLocation.EventDetails,
+                    location: y.PageviewLocation.EventDetails,
                     skip: function(e) {
                         return e.data.loading || !!e.data.error
                     }
                 })], t)
             }(v.Component)),
-            ue = function(e) {
+            me = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -6162,21 +5808,21 @@ webpackJsonp([45], {
                 }, t
             }(v.Component);
         n.d(t, "EventLandingPage", function() {
-            return ue
+            return me
         })
     },
     OFFm: function(e, t, n) {
         "use strict";
         var i = n("RH2O"),
             a = n("2KeS"),
-            l = n("+xm8"),
-            r = n("f2i/"),
+            r = n("+xm8"),
+            o = n("f2i/"),
             s = n("Aj/L"),
-            o = n("TToO"),
+            l = n("TToO"),
             d = n("U7vG"),
-            c = n("BhyV"),
-            u = n("6sO2"),
-            m = n("oIkB"),
+            c = n("3zLD"),
+            m = n("6sO2"),
+            u = n("oIkB"),
             p = n("MQiv"),
             v = n("Odds"),
             g = n("Ru53"),
@@ -6188,9 +5834,9 @@ webpackJsonp([45], {
                         return e && (e.stopPropagation(), e.preventDefault()), t.toggleFollowing()
                     }, t
                 }
-                return o.__extends(t, e), t.prototype.render = function() {
-                    var e = Object(u.d)("Remind Me", "FollowEvent"),
-                        t = Object(u.d)("Reminder Set", "FollowEvent");
+                return l.__extends(t, e), t.prototype.render = function() {
+                    var e = Object(m.d)("Remind Me", "FollowEvent"),
+                        t = Object(m.d)("Reminder Set", "FollowEvent");
                     if (this.props.small) {
                         var n = e,
                             i = v._11.Heart;
@@ -6212,7 +5858,7 @@ webpackJsonp([45], {
                 }, t.prototype.toggleFollowing = function() {
                     if (!this.props.isLoggedIn) return this.props.login();
                     if (this.props.areNotificationsEnabled) {
-                        var e = o.__assign({}, Object(m.a)({
+                        var e = l.__assign({}, Object(u.a)({
                             eventID: this.props.eventID
                         }), {
                             optimisticResponse: {
@@ -6231,7 +5877,7 @@ webpackJsonp([45], {
                         });
                         this.props.unfollowEvent(e)
                     } else {
-                        e = o.__assign({}, Object(m.a)({
+                        e = l.__assign({}, Object(u.a)({
                             eventID: this.props.eventID
                         }), {
                             optimisticResponse: {
@@ -6264,14 +5910,14 @@ webpackJsonp([45], {
             }), Object(c.graphql)(h, {
                 name: "unfollowEvent"
             }))(f),
-            b = Object(i.a)(function(e) {
+            b = Object(i.b)(function(e) {
                 return {
                     isLoggedIn: Object(s.d)(e)
                 }
             }, function(e) {
-                return Object(a.bindActionCreators)({
+                return Object(a.b)({
                     login: function() {
-                        return Object(r.f)(l.a.EventFollowButton)
+                        return Object(o.f)(r.a.EventFollowButton)
                     }
                 }, e)
             })(k);
@@ -6301,34 +5947,28 @@ webpackJsonp([45], {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "id"
                         },
                         arguments: [],
-                        directives: [],
-                        selectionSet: null
+                        directives: []
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "type"
                         },
                         arguments: [],
-                        directives: [],
-                        selectionSet: null
+                        directives: []
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "bits"
                         },
                         arguments: [],
-                        directives: [],
-                        selectionSet: null
+                        directives: []
                     }, {
                         kind: "InlineFragment",
                         typeCondition: {
@@ -6343,57 +5983,46 @@ webpackJsonp([45], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "price"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "discount"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "isPromo"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "url"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "includesVAT"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "promotion"
@@ -6404,24 +6033,20 @@ webpackJsonp([45], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "id"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "type"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }]
                                 }
                             }]
@@ -6472,15 +6097,13 @@ webpackJsonp([45], {
                                 value: "String"
                             }
                         }
-                    },
-                    defaultValue: null
+                    }
                 }],
                 directives: [],
                 selectionSet: {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "user"
@@ -6504,24 +6127,20 @@ webpackJsonp([45], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "bannerImageURL"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }]
                         }
                     }]
@@ -6554,10 +6173,10 @@ webpackJsonp([45], {
         "use strict";
         var i = n("TToO"),
             a = n("U7vG"),
-            l = n("6sO2"),
-            r = n("bhVC"),
+            r = n("6sO2"),
+            o = n("bhVC"),
             s = n("+Znq"),
-            o = n("MQiv"),
+            l = n("MQiv"),
             d = n("Odds"),
             c = function(e) {
                 function t() {
@@ -6565,22 +6184,22 @@ webpackJsonp([45], {
                     return t.onShareClicked = function(e) {
                         var n = "";
                         switch (e) {
-                            case r.b.Twitter:
+                            case o.b.Twitter:
                                 n = "twitter";
                                 break;
-                            case r.b.Facebook:
+                            case o.b.Facebook:
                                 n = "facebook";
                                 break;
-                            case r.b.Reddit:
+                            case o.b.Reddit:
                                 n = "reddit";
                                 break;
-                            case r.b.VKontakte:
+                            case o.b.VKontakte:
                                 n = "vk";
                                 break;
                             default:
                                 n = "unknown"
                         }
-                        Object(o.c)({
+                        Object(l.c)({
                             shareMedium: n,
                             eventID: t.props.id,
                             channelLogin: t.props.channelLogin,
@@ -6596,7 +6215,7 @@ webpackJsonp([45], {
                     return a.createElement(s.a, null, a.createElement(d.u, {
                         dropdown: !0,
                         type: d.z.Hollow
-                    }, Object(l.d)("Share", "ShareEvent")), a.createElement(d.p, {
+                    }, Object(r.d)("Share", "ShareEvent")), a.createElement(d.p, {
                         direction: this.props.balloonDirection
                     }, a.createElement(d.V, {
                         padding: 1
@@ -6605,28 +6224,28 @@ webpackJsonp([45], {
                         flexDirection: d.J.Row,
                         flexWrap: d.K.NoWrap,
                         justifyContent: d.U.Center
-                    }, a.createElement(r.a, {
-                        type: r.b.Twitter,
+                    }, a.createElement(o.a, {
+                        type: o.b.Twitter,
                         text: this.props.title,
                         url: e,
                         onShareClick: this.onShareClicked
-                    }), a.createElement(r.a, {
-                        type: r.b.Facebook,
+                    }), a.createElement(o.a, {
+                        type: o.b.Facebook,
                         text: this.props.title,
                         url: e,
                         onShareClick: this.onShareClicked
-                    }), a.createElement(r.a, {
-                        type: r.b.Reddit,
+                    }), a.createElement(o.a, {
+                        type: o.b.Reddit,
                         text: this.props.title,
                         url: e,
                         onShareClick: this.onShareClicked
-                    }), a.createElement(r.a, {
-                        type: r.b.VKontakte,
+                    }), a.createElement(o.a, {
+                        type: o.b.VKontakte,
                         text: this.props.title,
                         url: e,
                         onShareClick: this.onShareClicked
-                    }), a.createElement(r.a, {
-                        type: r.b.Copy,
+                    }), a.createElement(o.a, {
+                        type: o.b.Copy,
                         text: this.props.title,
                         url: e
                     })))))
@@ -6664,15 +6283,13 @@ webpackJsonp([45], {
                                 value: "FollowEventInput"
                             }
                         }
-                    },
-                    defaultValue: null
+                    }
                 }],
                 directives: [],
                 selectionSet: {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "followEvent"
@@ -6696,7 +6313,6 @@ webpackJsonp([45], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "event"
@@ -6707,17 +6323,14 @@ webpackJsonp([45], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "id"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "self"
@@ -6728,14 +6341,12 @@ webpackJsonp([45], {
                                             kind: "SelectionSet",
                                             selections: [{
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "isFollowing"
                                                 },
                                                 arguments: [],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }]
                                         }
                                     }]
@@ -6773,14 +6384,14 @@ webpackJsonp([45], {
         "use strict";
         var i = n("TToO"),
             a = n("HW6M"),
-            l = n("U7vG"),
-            r = n("F8kA"),
+            r = n("U7vG"),
+            o = n("F8kA"),
             s = n("6sO2"),
-            o = n("hdYS"),
+            l = n("hdYS"),
             d = n("DtWM"),
             c = n("+Znq"),
-            u = n("7vx8"),
-            m = n("czpb"),
+            m = n("7vx8"),
+            u = n("czpb"),
             p = n("RH2O"),
             v = n("Aj/L"),
             g = n("N221"),
@@ -6788,61 +6399,61 @@ webpackJsonp([45], {
             f = n("iMOk"),
             k = n("WVx7"),
             b = n("ySfT"),
-            S = n("ZJYd"),
-            y = n("/LBW"),
-            E = n("Odds"),
-            _ = (n("fHoP"), function(e) {
+            y = n("ZJYd"),
+            E = n("/LBW"),
+            _ = n("Odds"),
+            N = (n("fHoP"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handlePromoBuy = function(e) {
-                        var n = Object(S.b)({
+                        var n = Object(y.b)({
                             trackBitsCardInteraction: t.props.trackBitsCardInteraction,
                             channelID: t.props.channelID,
                             purchaseUrl: e.currentTarget.dataset.purchaseUrl,
                             bitsAmount: e.currentTarget.dataset.bitsAmount,
-                            location: y.b.GetBitsButton
+                            location: E.b.GetBitsButton
                         });
                         n && t.props.onPromoBuyClose(n)
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    var e = l.createElement(E.V, null, l.createElement(E.V, {
+                    var e = r.createElement(_.V, null, r.createElement(_.V, {
                         padding: {
                             x: 5,
                             y: 2
                         },
-                        textAlign: E._24.Center
-                    }, l.createElement(E._23, {
-                        type: E._28.H4,
+                        textAlign: _._24.Center
+                    }, r.createElement(_._23, {
+                        type: _._28.H4,
                         bold: !0
-                    }, Object(s.d)("Cheer Bits for your Favorite Streamer!", "Bits--FirstTimeUserPrompt"))), l.createElement(E.V, {
+                    }, Object(s.d)("Cheer Bits for your Favorite Streamer!", "Bits--FirstTimeUserPrompt"))), r.createElement(_.V, {
                         padding: {
                             x: 2,
                             bottom: 1
                         }
-                    }, l.createElement(E._23, {
-                        type: E._28.Span,
-                        color: E.F.Alt
-                    }, Object(s.d)("Bits are fun, animated emotes. Cheering Bits celebrates moments you love with the community right in chat and similar to subscribing, helps support Partners and Affiliates.", "Bits--FirstTimeUserPrompt"), l.createElement(E.Q, {
+                    }, r.createElement(_._23, {
+                        type: _._28.Span,
+                        color: _.F.Alt
+                    }, Object(s.d)("Bits are fun, animated emotes. Cheering Bits celebrates moments you love with the community right in chat and similar to subscribing, helps support Partners and Affiliates.", "Bits--FirstTimeUserPrompt"), r.createElement(_.Q, {
                         margin: {
                             left: .5
                         }
-                    }, l.createElement("a", {
+                    }, r.createElement("a", {
                         onClick: this.props.toggleShowTutorial
-                    }, Object(s.d)("How do I cheer?", "Bits--FirstTimeUserPrompt"))))), l.createElement(E.V, {
+                    }, Object(s.d)("How do I cheer?", "Bits--FirstTimeUserPrompt"))))), r.createElement(_.V, {
                         padding: {
                             bottom: 2
                         },
-                        textAlign: E._24.Center
-                    }, l.createElement(E.Q, {
+                        textAlign: _._24.Center
+                    }, r.createElement(_.Q, {
                         margin: {
                             bottom: 1
                         }
-                    }, l.createElement(E._23, {
-                        type: E._28.H6,
+                    }, r.createElement(_._23, {
+                        type: _._28.H6,
                         bold: !0,
                         className: "bits-first-time-user-prompt__promo-header"
-                    }, Object(s.d)("First Time Purchaser Discount Pack!", "Bits--FirstTimeUserPrompt"))), l.createElement(E.u, {
+                    }, Object(s.d)("First Time Purchaser Discount Pack!", "Bits--FirstTimeUserPrompt"))), r.createElement(_.u, {
                         onClick: this.handlePromoBuy,
                         "data-purchase-url": this.props.promo.url,
                         "data-bits-amount": this.props.promo.bits,
@@ -6851,41 +6462,41 @@ webpackJsonp([45], {
                         price: this.props.promo.price,
                         amount: this.props.promo.bits
                     }, "Bits--FirstTimeUserPrompt"))));
-                    return this.props.isShowingTutorial ? l.createElement(E.V, {
+                    return this.props.isShowingTutorial ? r.createElement(_.V, {
                         className: "bits-first-time-user-prompt",
                         fullWidth: !0
-                    }, l.createElement(E.V, {
+                    }, r.createElement(_.V, {
                         className: "bits-first-time-user-prompt__tutorial-back-button"
-                    }, l.createElement(E.u, {
+                    }, r.createElement(_.u, {
                         onClick: this.props.toggleShowTutorial,
-                        type: E.z.Text
-                    }, l.createElement(E._10, {
-                        asset: E._11.Play,
+                        type: _.z.Text
+                    }, r.createElement(_._10, {
+                        asset: _._11.Play,
                         height: 8
-                    }), " ", Object(s.d)("Back", "Bits--FirstTimeUserPrompt"))), l.createElement(E.V, {
-                        textAlign: E._24.Center,
+                    }), " ", Object(s.d)("Back", "Bits--FirstTimeUserPrompt"))), r.createElement(_.V, {
+                        textAlign: _._24.Center,
                         padding: {
                             x: 2,
                             bottom: 2,
                             top: 5
                         },
                         fullHeight: !0
-                    }, l.createElement(E.e, {
-                        type: E.i.SlideInLeft,
-                        duration: E.g.Long,
+                    }, r.createElement(_.e, {
+                        type: _.i.SlideInLeft,
+                        duration: _.g.Long,
                         enabled: !0
-                    }, l.createElement(b.a, null)))) : this.props.animateFirstTimeUserIntro ? l.createElement(E.Q, {
+                    }, r.createElement(b.a, null)))) : this.props.animateFirstTimeUserIntro ? r.createElement(_.Q, {
                         className: "bits-first-time-user-prompt"
-                    }, l.createElement(E.e, {
-                        type: E.i.SlideInRight,
-                        duration: E.g.Long,
+                    }, r.createElement(_.e, {
+                        type: _.i.SlideInRight,
+                        duration: _.g.Long,
                         enabled: this.props.animateFirstTimeUserIntro
-                    }, e)) : l.createElement(E.V, {
+                    }, e)) : r.createElement(_.V, {
                         className: "bits-first-time-user-prompt"
                     }, e)
                 }, t
-            }(l.Component)),
-            N = n("jxGs"),
+            }(r.Component)),
+            S = n("jxGs"),
             w = n("bkpq"),
             A = n("CSlQ"),
             F = n("annQ"),
@@ -6899,10 +6510,10 @@ webpackJsonp([45], {
                             actionName: e,
                             emoteType: n && n.emoteType,
                             emoteLevel: n && n.emoteLevel,
-                            location: y.b.GetBitsButton,
+                            location: E.b.GetBitsButton,
                             displayedBalance: t.props.bitsBalance || 0
                         };
-                        Object(y.h)(i)
+                        Object(E.h)(i)
                     }, t.onClose = function() {}, t.onPromoBuyClose = function(e) {
                         Object(h.a)(e, function() {
                             t.props.data && t.props.data.refetch()
@@ -6912,31 +6523,31 @@ webpackJsonp([45], {
                 return i.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    if (this.props.loading) return l.createElement(E._19, {
+                    if (this.props.loading) return r.createElement(_._19, {
                         "data-a-target": "get-bits-button-content-loading",
-                        display: E.H.Flex,
-                        flexDirection: E.J.Column,
-                        alignItems: E.c.Center,
-                        justifyContent: E.U.Center,
-                        textAlign: E._24.Center,
+                        display: _.H.Flex,
+                        flexDirection: _.J.Column,
+                        alignItems: _.c.Center,
+                        justifyContent: _.U.Center,
+                        textAlign: _._24.Center,
                         padding: {
                             y: 5
                         }
-                    }, l.createElement(E.Z, {
+                    }, r.createElement(_.Z, {
                         delay: 0
-                    }), l.createElement(E.V, {
+                    }), r.createElement(_.V, {
                         padding: {
                             top: 2
                         }
-                    }, l.createElement(E._23, {
+                    }, r.createElement(_._23, {
                         italic: !0
                     }, Object(s.d)("Fetching bits", "Bits--GetBitsButtonContent"))));
                     var e = null;
                     if (this.props.bitsOffers) {
                         var t = this.props.bitsOffers.find(function(e) {
-                            return Object(S.c)(e)
+                            return Object(y.c)(e)
                         });
-                        t && t.type === N.b && this.props.channelID && !this.state.hideFirstTimeUserIntro && (e = l.createElement(_, {
+                        t && t.type === S.b && this.props.channelID && !this.state.hideFirstTimeUserIntro && (e = r.createElement(N, {
                             promo: t,
                             animateFirstTimeUserIntro: this.props.animateFirstTimeUserIntro,
                             isShowingTutorial: this.props.isShowingTutorial,
@@ -6947,53 +6558,53 @@ webpackJsonp([45], {
                         }))
                     }
                     var n = null;
-                    void 0 !== this.props.bitsBalance && this.props.bitsConfig ? n = l.createElement(E._19, {
+                    void 0 !== this.props.bitsBalance && this.props.bitsConfig ? n = r.createElement(_._19, {
                         borderBottom: !0,
-                        textAlign: E._24.Center,
+                        textAlign: _._24.Center,
                         fullWidth: !0,
                         padding: {
                             y: .5
                         }
-                    }, l.createElement(E._23, {
-                        type: E._28.Span
+                    }, r.createElement(_._23, {
+                        type: _._28.Span
                     }, Object(s.d)("You have {bitsBalance}", {
-                        bitsBalance: l.createElement(f.a, {
+                        bitsBalance: r.createElement(f.a, {
                             withImage: !0,
                             withText: !0,
                             count: this.props.bitsBalance,
                             bitsConfig: this.props.bitsConfig
                         })
-                    }, "Bits--GetBitsButton"))) : void 0 === this.props.bitsBalance && this.props.bitsConfig && (n = l.createElement(E._19, {
+                    }, "Bits--GetBitsButton"))) : void 0 === this.props.bitsBalance && this.props.bitsConfig && (n = r.createElement(_._19, {
                         borderBottom: !0,
-                        textAlign: E._24.Center,
+                        textAlign: _._24.Center,
                         fullWidth: !0,
                         padding: {
                             y: .5
                         }
-                    }, l.createElement(E._23, {
-                        type: E._28.Span
+                    }, r.createElement(_._23, {
+                        type: _._28.Span
                     }, Object(s.d)("{bitsGem} Log in to see your Bits balance", {
-                        bitsGem: l.createElement(f.a, {
+                        bitsGem: r.createElement(f.a, {
                             count: 100,
                             withImage: !0,
                             bitsConfig: this.props.bitsConfig
                         })
                     }, "Bits--GetBitsButton"))));
                     var i = null;
-                    return this.props.bitsConfig && this.props.channelLogin && (i = l.createElement(k.a, {
+                    return this.props.bitsConfig && this.props.channelLogin && (i = r.createElement(k.a, {
                         bitsConfig: this.props.bitsConfig,
                         channelLogin: this.props.channelLogin,
                         closeAllBits: this.onClose,
                         onClose: this.onClose,
                         trackBitsCardInteraction: this.trackBitsCardInteraction,
-                        location: y.b.GetBitsButton,
+                        location: E.b.GetBitsButton,
                         hidePromos: !0,
                         hideWateb: !0,
                         fullsize: !0
-                    })), l.createElement(g.b, {
+                    })), r.createElement(g.b, {
                         className: "get-bits-button-content"
-                    }, l.createElement(E.V, null, n, e, i))
-                }, t = i.__decorate([Object(A.d)("GetBitsButtonContent"), Object(u.a)(F, {
+                    }, r.createElement(_.V, null, n, e, i))
+                }, t = i.__decorate([Object(A.d)("GetBitsButtonContent"), Object(m.a)(F, {
                     name: "data",
                     props: function(e) {
                         var t, n;
@@ -7020,7 +6631,7 @@ webpackJsonp([45], {
                         }
                     }
                 })], t)
-            }(l.Component)),
+            }(r.Component)),
             I = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -7030,9 +6641,9 @@ webpackJsonp([45], {
                     }, t.toggleBalloon = function(e) {
                         t.setState({
                             animateFirstTimeUserIntro: !1
-                        }), e || Object(y.h)({
-                            actionName: y.a.BuyMain,
-                            location: y.b.GetBitsButton,
+                        }), e || Object(E.h)({
+                            actionName: E.a.BuyMain,
+                            location: E.b.GetBitsButton,
                             displayedBalance: 0
                         })
                     }, t.toggleShowTutorial = function() {
@@ -7046,23 +6657,23 @@ webpackJsonp([45], {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     var e = null;
-                    return this.props.channelLogin && (e = l.createElement(C, {
+                    return this.props.channelLogin && (e = r.createElement(C, {
                         isLoggedIn: this.props.isLoggedIn,
                         channelLogin: this.props.channelLogin,
                         toggleShowTutorial: this.toggleShowTutorial,
                         isShowingTutorial: this.state.isShowingTutorial,
                         animateFirstTimeUserIntro: this.state.animateFirstTimeUserIntro
-                    })), l.createElement(c.a, {
+                    })), r.createElement(c.a, {
                         onToggle: this.toggleBalloon
-                    }, l.createElement(E.u, {
+                    }, r.createElement(_.u, {
                         dropdown: !0
-                    }, Object(s.d)("Get Bits", "Bits--GetBitsButton")), l.createElement(E.p, {
-                        direction: E.q.BottomRight,
-                        size: E.r.Large
+                    }, Object(s.d)("Get Bits", "Bits--GetBitsButton")), r.createElement(_.p, {
+                        direction: _.q.BottomRight,
+                        size: _.r.Large
                     }, e))
                 }, t = i.__decorate([Object(A.d)("GetBitsButton")], t)
-            }(l.Component),
-            L = Object(p.a)(function(e) {
+            }(r.Component),
+            L = Object(p.b)(function(e) {
                 return {
                     isLoggedIn: Object(v.d)(e)
                 }
@@ -7078,26 +6689,26 @@ webpackJsonp([45], {
                             "channel-banner--open": !this.props.collapsed
                         },
                         i = this.props.data;
-                    return i && i.loading || !this.props.firstPageLoaded ? e = l.createElement(E._3, {
+                    return i && i.loading || !this.props.firstPageLoaded ? e = r.createElement(_._3, {
                         height: 380,
                         "data-test-selector": "channel-banner__placeholder"
                     }) : (i && i.user && i.user.bannerImageURL ? t = {
                         backgroundImage: "url(" + i.user.bannerImageURL + ")"
                     } : (n["channel-banner--default"] = !0, t = {
                         backgroundImage: "url(" + O + ")"
-                    }), e = l.createElement("div", {
+                    }), e = r.createElement("div", {
                         className: "channel-banner__image",
                         style: t
-                    })), l.createElement("div", {
+                    })), r.createElement("div", {
                         className: a("channel-banner", n),
                         "data-test-selector": "channel-banner",
                         onTransitionEnd: this.props.onTransitionEnd
-                    }, l.createElement(E.Q, {
+                    }, r.createElement(_.Q, {
                         fullWidth: !0
                     }, e))
                 }, t
-            }(l.Component),
-            V = Object(u.a)(T, {
+            }(r.Component),
+            V = Object(m.a)(T, {
                 options: function(e) {
                     return {
                         variables: {
@@ -7109,7 +6720,7 @@ webpackJsonp([45], {
                     return !e.channelLogin || !e.firstPageLoaded
                 }
             })(x),
-            U = Object(p.a)(function(e) {
+            U = Object(p.b)(function(e) {
                 return {
                     firstPageLoaded: e.session.firstPageLoaded
                 }
@@ -7132,23 +6743,23 @@ webpackJsonp([45], {
                 return i.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return l.createElement(E.V, {
+                    return r.createElement(_.V, {
                         className: "edit-profile-overlay",
-                        display: E.H.Flex,
-                        justifyContent: E.U.Center,
-                        alignContent: E.b.Center,
+                        display: _.H.Flex,
+                        justifyContent: _.U.Center,
+                        alignContent: _.b.Center,
                         fullHeight: !0,
                         fullWidth: !0
-                    }, l.createElement(E.v, {
+                    }, r.createElement(_.v, {
                         overlay: !0,
                         ariaLabel: Object(s.d)("Edit Profile", "ChannelHeader"),
-                        icon: E._11.Edit,
+                        icon: _._11.Edit,
                         onClick: this.openModal
                     }))
                 }, t = i.__decorate([Object(A.d)("EditProfileOverlay")], t)
-            }(l.Component)),
-            P = Object(p.a)(null, function(e) {
-                return Object(B.bindActionCreators)({
+            }(r.Component)),
+            P = Object(p.b)(null, function(e) {
+                return Object(B.b)({
                     showModal: D.d
                 }, e)
             })(R),
@@ -7174,43 +6785,43 @@ webpackJsonp([45], {
                     live: !1,
                     bannerHidden: !0,
                     bannerSlideIn: !1
-                }, t.verifiedBadgeElement = l.createElement(E._31, {
+                }, t.verifiedBadgeElement = r.createElement(_._31, {
                     label: Object(s.d)("Verified", "ChannelHeader"),
-                    direction: E._33.Right
-                }, l.createElement(E.V, {
+                    direction: _._33.Right
+                }, r.createElement(_.V, {
                     className: "channel-header__verified",
                     "data-target": q,
-                    display: E.H.Flex,
-                    alignItems: E.c.Center,
+                    display: _.H.Flex,
+                    alignItems: _.c.Center,
                     margin: {
                         left: 1
                     }
-                }, l.createElement(E._10, {
-                    asset: E._11.Verified
-                }))), t.liveIndicatorElement = l.createElement(E.V, {
+                }, r.createElement(_._10, {
+                    asset: _._11.Verified
+                }))), t.liveIndicatorElement = r.createElement(_.V, {
                     margin: {
                         left: 1
                     },
                     "data-target": K
-                }, l.createElement(E._31, {
+                }, r.createElement(_._31, {
                     label: Object(s.d)("Live Now", "ChannelHeader"),
-                    direction: E._33.Right
-                }, l.createElement(E.X, {
+                    direction: _._33.Right
+                }, r.createElement(_.X, {
                     pulse: !0
                 }))), t.renderAvatarEditButton = function() {
                     if (!t.props.data) return null;
-                    return t.props.data && t.props.data.currentUser && t.props.data.user && t.props.data.currentUser.roles && (t.props.data.currentUser.id === t.props.data.user.id || t.props.data.currentUser.roles.isStaff || t.props.data.currentUser.roles.isSiteAdmin) ? l.createElement(E._19, {
+                    return t.props.data && t.props.data.currentUser && t.props.data.user && t.props.data.currentUser.roles && (t.props.data.currentUser.id === t.props.data.user.id || t.props.data.currentUser.roles.isStaff || t.props.data.currentUser.roles.isSiteAdmin) ? r.createElement(_._19, {
                         className: z,
-                        background: E.m.Overlay,
-                        position: E._4.Absolute,
+                        background: _.m.Overlay,
+                        position: _._4.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
                         fullHeight: !0,
                         fullWidth: !0,
-                        display: E.H.InlineFlex,
-                        alignItems: E.c.Center,
-                        justifyContent: E.U.Center
-                    }, l.createElement(P, {
+                        display: _.H.InlineFlex,
+                        alignItems: _.c.Center,
+                        justifyContent: _.U.Center
+                    }, r.createElement(P, {
                         userID: t.props.data.user.id,
                         login: t.props.data.user.login,
                         displayName: t.props.data.user.displayName
@@ -7258,142 +6869,142 @@ webpackJsonp([45], {
             }, t.prototype.render = function() {
                 var e, t, n = 0,
                     i = 0,
-                    u = 0,
-                    m = s.a.defaultAvatarURL;
-                this.props.data && this.props.data.user && !this.props.data.loading && !this.props.data.error && (n = this.props.data.user.videos.totalCount, i = this.props.data.user.followers.totalCount, u = this.props.data.user.follows.totalCount, m = this.props.data.user.profileImageURL, e = this.props.data.user.displayName, t = this.props.data.user.roles.isPartner);
+                    m = 0,
+                    u = s.a.defaultAvatarURL;
+                this.props.data && this.props.data.user && !this.props.data.loading && !this.props.data.error && (n = this.props.data.user.videos.totalCount, i = this.props.data.user.followers.totalCount, m = this.props.data.user.follows.totalCount, u = this.props.data.user.profileImageURL, e = this.props.data.user.displayName, t = this.props.data.user.roles.isPartner);
                 var p = this.state.live && !this.isActiveTab(W.Channel),
-                    v = this.createChannelLinks(n, i, u),
+                    v = this.createChannelLinks(n, i, m),
                     g = {
                         "channel-header__user": !0,
                         "channel-header__user--selected": this.isActiveTab(W.Channel)
                     },
                     h = null;
-                this.canRenderBitsButton() && (h = l.createElement(E.V, {
+                this.canRenderBitsButton() && (h = r.createElement(_.V, {
                     margin: {
                         left: 1
                     }
-                }, l.createElement(L, {
+                }, r.createElement(L, {
                     channelLogin: this.props.channelLogin
                 })));
-                var f, k = l.createElement(E.V, {
-                    display: E.H.Flex,
-                    flexWrap: E.K.NoWrap,
-                    alignItems: E.c.Center,
+                var f, k = r.createElement(_.V, {
+                    display: _.H.Flex,
+                    flexWrap: _.K.NoWrap,
+                    alignItems: _.c.Center,
                     flexShrink: 0
-                }, l.createElement(E.V, {
+                }, r.createElement(_.V, {
                     className: "channel-header__user-avatar channel-header__user-avatar--active",
                     margin: {
                         right: 1
                     },
-                    display: E.H.Flex,
+                    display: _.H.Flex,
                     flexShrink: 0,
-                    alignItems: E.c.Stretch
-                }, l.createElement(E.V, {
-                    position: E._4.Relative
-                }, l.createElement(E.l, {
+                    alignItems: _.c.Stretch
+                }, r.createElement(_.V, {
+                    position: _._4.Relative
+                }, r.createElement(_.l, {
                     size: 36,
-                    imageSrc: m,
+                    imageSrc: u,
                     imageAlt: e || ""
-                }), this.renderAvatarEditButton())), e ? l.createElement(E._23, {
-                    type: E._28.H5
-                }, e) : l.createElement(E.V, {
-                    alignItems: E.c.Center
-                }, l.createElement(E._3, {
+                }), this.renderAvatarEditButton())), e ? r.createElement(_._23, {
+                    type: _._28.H5
+                }, e) : r.createElement(_.V, {
+                    alignItems: _.c.Center
+                }, r.createElement(_._3, {
                     lineCount: 1,
                     width: 120
                 })), p && this.liveIndicatorElement, t && this.verifiedBadgeElement);
-                f = this.isActiveTab(W.Channel) ? l.createElement("div", {
+                f = this.isActiveTab(W.Channel) ? r.createElement("div", {
                     className: "channel-header__banner-toggle",
                     onClick: this.toggleChannelBanner,
                     "data-target": Q,
                     "data-a-target": G
-                }, k) : this.props.data && this.props.data.user && this.props.data.user.login ? l.createElement(r.a, {
+                }, k) : this.props.data && this.props.data.user && this.props.data.user.login ? r.createElement(o.a, {
                     to: "/" + this.props.data.user.login,
                     "data-target": Q,
                     "data-a-target": G
                 }, k) : k;
-                var b = this.state.bannerHidden ? E.H.HideAccessible : E.H.Block,
-                    S = null;
-                return this.isActiveTab(W.Channel) && (S = l.createElement(E.V, {
+                var b = this.state.bannerHidden ? _.H.HideAccessible : _.H.Block,
+                    y = null;
+                return this.isActiveTab(W.Channel) && (y = r.createElement(_.V, {
                     display: b
-                }, l.createElement(U, {
+                }, r.createElement(U, {
                     channelLogin: this.props.channelLogin,
                     collapsed: !this.state.bannerSlideIn,
                     onTransitionEnd: this.completedBannerAnimation
-                }))), l.createElement(E.V, {
+                }))), r.createElement(_.V, {
                     className: "channel-header",
                     flexShrink: 0
-                }, S, l.createElement(E.V, {
-                    display: E.H.Flex,
-                    justifyContent: E.U.Between,
-                    flexWrap: E.K.NoWrap,
+                }, y, r.createElement(_.V, {
+                    display: _.H.Flex,
+                    justifyContent: _.U.Between,
+                    flexWrap: _.K.NoWrap,
                     fullHeight: !0,
                     refDelegate: this.saveChannelHeaderRef,
                     margin: {
                         x: 3
                     }
-                }, l.createElement(E.V, {
-                    display: E.H.Flex,
-                    alignItems: E.c.Stretch,
+                }, r.createElement(_.V, {
+                    display: _.H.Flex,
+                    alignItems: _.c.Stretch,
                     flexShrink: 0,
-                    flexWrap: E.K.NoWrap,
+                    flexWrap: _.K.NoWrap,
                     "data-target": "channel-header-left"
-                }, l.createElement(E.Q, {
+                }, r.createElement(_.Q, {
                     className: a(g),
                     padding: {
                         y: .5,
                         right: 2
                     },
-                    display: E.H.Flex,
-                    flexWrap: E.K.NoWrap,
-                    alignItems: E.c.Center,
+                    display: _.H.Flex,
+                    flexWrap: _.K.NoWrap,
+                    alignItems: _.c.Center,
                     flexShrink: 0
-                }, f), this.renderTabs(v), l.createElement(E.V, {
+                }, f), this.renderTabs(v), r.createElement(_.V, {
                     className: "channel-header__item channel-header__item--no-underline",
                     padding: {
                         x: 1
                     },
                     flexShrink: 0,
-                    alignSelf: E.d.Center,
+                    alignSelf: _.d.Center,
                     "data-target": "channel-header-button"
-                }, l.createElement(c.a, {
+                }, r.createElement(c.a, {
                     alwaysMountBalloonContent: !0
-                }, l.createElement(E.v, {
-                    icon: E._11.NavMore,
+                }, r.createElement(_.v, {
+                    icon: _._11.NavMore,
                     ariaLabel: Object(s.d)("More", "ChannelHeader")
-                }), l.createElement(E.p, {
-                    direction: E.q.Bottom,
+                }), r.createElement(_.p, {
+                    direction: _.q.Bottom,
                     noTail: !0
-                }, l.createElement(E.V, {
+                }, r.createElement(_.V, {
                     padding: {
                         y: 1
                     }
-                }, this.renderDropdown(v)))))), l.createElement(E.V, {
-                    display: E.H.Flex,
-                    flexWrap: E.K.NoWrap,
+                }, this.renderDropdown(v)))))), r.createElement(_.V, {
+                    display: _.H.Flex,
+                    flexWrap: _.K.NoWrap,
                     flexShrink: 0,
-                    alignItems: E.c.Center,
+                    alignItems: _.c.Center,
                     className: "channel-header__right",
                     "data-target": "channel-header-right"
-                }, l.createElement(E.V, {
+                }, r.createElement(_.V, {
                     className: "channel-header__follow-button",
-                    display: E.H.Flex,
-                    alignItems: E.c.Stretch,
+                    display: _.H.Flex,
+                    alignItems: _.c.Stretch,
                     margin: {
                         left: 1
                     }
-                }, l.createElement(o.a, {
+                }, r.createElement(l.a, {
                     updateContainerWidth: this.onUpdateDebounce,
                     isHostedFollow: !1,
                     channelLogin: this.props.channelLogin
-                })), l.createElement(E.V, {
+                })), r.createElement(_.V, {
                     margin: {
                         left: 1
                     }
-                }, l.createElement(H.a, {
+                }, r.createElement(H.a, {
                     updateContainerWidth: this.onUpdateDebounce,
                     channelLogin: this.props.channelLogin
-                })), h)), l.createElement(d.a, {
+                })), h)), r.createElement(d.a, {
                     onResize: this.onUpdateDebounce
                 }))
             }, t.prototype.updateLiveState = function(e) {
@@ -7405,73 +7016,73 @@ webpackJsonp([45], {
                 var n = this.props.data && this.props.data.user && this.props.data.user.login;
                 if (!n) return "#";
                 var i = "/" + n + "/" + e;
-                return t ? Object(m.a)(i) : i
+                return t ? Object(u.a)(i) : i
             }, t.prototype.renderTabs = function(e) {
                 var t = this;
                 return e.map(function(e) {
-                    var n = e.count ? l.createElement(E.V, {
+                    var n = e.count ? r.createElement(_.V, {
                             className: "channel-header__item-count",
-                            display: E.H.Flex,
+                            display: _.H.Flex,
                             margin: {
                                 left: .5
                             }
-                        }, l.createElement(E._23, {
-                            type: E._28.Span,
-                            fontSize: E.L.Size5
+                        }, r.createElement(_._23, {
+                            type: _._28.Span,
+                            fontSize: _.L.Size5
                         }, e.count)) : null,
                         a = t.generateUserLink(e.pathSuffix, e.isExternal),
                         s = {};
-                    return e.isExternal && (s.target = Object(m.b)() ? "_blank" : ""), l.createElement(E.Q, {
+                    return e.isExternal && (s.target = Object(u.b)() ? "_blank" : ""), r.createElement(_.Q, {
                         key: "channel-header__item--" + e.label,
-                        alignItems: E.c.Center,
+                        alignItems: _.c.Center,
                         flexShrink: 0
-                    }, l.createElement(r.a, i.__assign({
+                    }, r.createElement(o.a, i.__assign({
                         className: "channel-header__item channel-header__item--hide " + (e.isSelected ? "channel-header__item--selected" : "")
                     }, s, {
                         to: a,
                         disabled: "#" === a,
                         "data-target": "channel-header-item",
                         "data-a-target": e.label.toLowerCase() + "-channel-header-item"
-                    }), l.createElement(E.V, {
+                    }), r.createElement(_.V, {
                         padding: {
                             x: 2,
                             y: .5
                         },
-                        display: E.H.Flex
-                    }, l.createElement(E._23, {
-                        type: E._28.Span,
-                        fontSize: E.L.Size5
+                        display: _.H.Flex
+                    }, r.createElement(_._23, {
+                        type: _._28.Span,
+                        fontSize: _.L.Size5
                     }, e.label), n)))
                 })
             }, t.prototype.renderDropdown = function(e) {
                 var t = this;
                 return e.map(function(e) {
-                    var n = e.count ? l.createElement(E.V, {
+                    var n = e.count ? r.createElement(_.V, {
                             className: "channel-header__item-count",
-                            display: E.H.Flex,
+                            display: _.H.Flex,
                             margin: {
                                 left: .5
                             }
-                        }, l.createElement(E._23, {
-                            type: E._28.Span
+                        }, r.createElement(_._23, {
+                            type: _._28.Span
                         }, e.count)) : null,
                         a = t.generateUserLink(e.pathSuffix, e.isExternal),
-                        r = {};
-                    return e.isExternal && (r.targetBlank = !0), l.createElement(E.V, {
+                        o = {};
+                    return e.isExternal && (o.targetBlank = !0), r.createElement(_.V, {
                         key: "channel-header__dropdown-item--" + e.label,
                         "data-target": "channel-header-dropdown-item"
-                    }, l.createElement(E.T, i.__assign({
+                    }, r.createElement(_.T, i.__assign({
                         linkTo: a,
                         disabled: "#" === a
-                    }, r), l.createElement(E.V, {
+                    }, o), r.createElement(_.V, {
                         className: "channel-header__dropdown-hover-target",
                         padding: {
                             y: .5,
                             x: 1
                         },
-                        display: E.H.Flex
-                    }, l.createElement(E._23, {
-                        type: E._28.Span
+                        display: _.H.Flex
+                    }, r.createElement(_._23, {
+                        type: _._28.Span
                     }, e.label), n)))
                 })
             }, t.prototype.createChannelLinks = function(e, t, n) {
@@ -7519,23 +7130,23 @@ webpackJsonp([45], {
                         i = this.channelHeader.querySelectorAll('[data-target="channel-header-dropdown-item"]');
                     if (n.length) {
                         var a = this.getWidth(this.channelHeader).width,
-                            l = this.getWidth(e).width + this.getWidth(t).width + 20 - a;
-                        if (l > 0)
-                            for (var r = n.length - 1; r >= 0; r--) {
-                                if (!(o = n[r]).classList.contains("channel-header__item--hide")) {
-                                    var s = this.getWidth(o);
-                                    if (o.classList.add("channel-header__item--hide"), i[r].classList.remove("channel-header__item--hide"), (l -= s.width) <= 0) break
+                            r = this.getWidth(e).width + this.getWidth(t).width + 20 - a;
+                        if (r > 0)
+                            for (var o = n.length - 1; o >= 0; o--) {
+                                if (!(l = n[o]).classList.contains("channel-header__item--hide")) {
+                                    var s = this.getWidth(l);
+                                    if (l.classList.add("channel-header__item--hide"), i[o].classList.remove("channel-header__item--hide"), (r -= s.width) <= 0) break
                                 }
                             } else
-                                for (r = 0; r < n.length; r++) {
-                                    var o;
-                                    if ((o = n[r]).classList.contains("channel-header__item--hide")) {
-                                        o.classList.remove("channel-header__item--hide");
-                                        if ((s = this.getWidth(o)).width >= Math.abs(l)) {
-                                            o.classList.add("channel-header__item--hide");
+                                for (o = 0; o < n.length; o++) {
+                                    var l;
+                                    if ((l = n[o]).classList.contains("channel-header__item--hide")) {
+                                        l.classList.remove("channel-header__item--hide");
+                                        if ((s = this.getWidth(l)).width >= Math.abs(r)) {
+                                            l.classList.add("channel-header__item--hide");
                                             break
                                         }
-                                        o.classList.remove("channel-header__item--hide"), i[r].classList.add("channel-header__item--hide"), l += s.width
+                                        l.classList.remove("channel-header__item--hide"), i[o].classList.add("channel-header__item--hide"), r += s.width
                                     }
                                 }
                         var d = this.channelHeader.querySelector('[data-target="channel-header-button"]');
@@ -7555,7 +7166,7 @@ webpackJsonp([45], {
                 }
             }, t.prototype.reportInteractive = function() {
                 !this.props.data || this.props.data.loading || this.props.data.error || this.props.latencyTracking.reportInteractive()
-            }, t = i.__decorate([Object(u.a)(M, {
+            }, t = i.__decorate([Object(m.a)(M, {
                 options: function(e) {
                     return {
                         variables: {
@@ -7567,7 +7178,7 @@ webpackJsonp([45], {
                     return !e.channelLogin
                 }
             }), Object(A.d)("ChannelHeader")], t)
-        }(l.Component)
+        }(r.Component)
     },
     Tt3k: function(e, t, n) {
         "use strict";
@@ -7608,54 +7219,54 @@ webpackJsonp([45], {
                     Accept: "application/json"
                 },
                 body: JSON.stringify({
-                    default_profile_image: l.b[n].id
+                    default_profile_image: r.b[n].id
                 })
             })
-        }, t.a = function(e, t, n, l) {
+        }, t.a = function(e, t, n, r) {
             return i.__awaiter(this, void 0, void 0, function() {
-                var r;
+                var o;
                 return i.__generator(this, function(i) {
                     switch (i.label) {
                         case 0:
-                            return [4, fetch(a.a.krakenEndpoint + "/users/" + e + "/upload_image?client_id=" + a.a.authClientID + "&api_version=" + a.a.defaultAPIVersion + "&image_type=" + n + "&format=" + l, {
+                            return [4, fetch(a.a.krakenEndpoint + "/users/" + e + "/upload_image?client_id=" + a.a.authClientID + "&api_version=" + a.a.defaultAPIVersion + "&image_type=" + n + "&format=" + r, {
                                 method: "POST",
                                 headers: {
                                     Authorization: "OAuth " + t
                                 }
                             })];
                         case 1:
-                            return r = i.sent(), [2, r.json()]
+                            return o = i.sent(), [2, o.json()]
                     }
                 })
             })
         };
         var i = n("TToO"),
             a = n("6sO2"),
-            l = n("J92i")
+            r = n("J92i")
     },
     WClm: function(e, t) {},
     WVx7: function(e, t, n) {
         "use strict";
 
         function i(e) {
-            return u.__awaiter(this, void 0, void 0, function() {
-                var t, n, i, a, l;
-                return u.__generator(this, function(r) {
-                    switch (r.label) {
+            return m.__awaiter(this, void 0, void 0, function() {
+                var t, n, i, a, r;
+                return m.__generator(this, function(o) {
+                    switch (o.label) {
                         case 0:
                             if (t = v.b.get("bits_truex_partner_hash", ""), !(n = v.b.get("bits_truex_api_url", "")) || !t) return v.i.warn("Truex API info missing from dynamic settings"), [2, k.Error];
-                            r.label = 1;
+                            o.label = 1;
                         case 1:
-                            return r.trys.push([1, 5, , 6]), [4, fetch(n + "?placement.key=" + t + "&user.uid=" + e + "&max_activities=1")];
+                            return o.trys.push([1, 5, , 6]), [4, fetch(n + "?placement.key=" + t + "&user.uid=" + e + "&max_activities=1")];
                         case 2:
-                            return (i = r.sent()).ok ? [4, i.json()] : [3, 4];
+                            return (i = o.sent()).ok ? [4, i.json()] : [3, 4];
                         case 3:
-                            if ((a = r.sent()) && Array.isArray(a) && a.length) return [2, k.Available];
-                            r.label = 4;
+                            if ((a = o.sent()) && Array.isArray(a) && a.length) return [2, k.Available];
+                            o.label = 4;
                         case 4:
                             return [2, k.Unavailable];
                         case 5:
-                            return l = r.sent(), v.i.warn("Failed checking ad availability from TrueX, probably due to AdBlock", l), [2, k.AdBlocked];
+                            return r = o.sent(), v.i.warn("Failed checking ad availability from TrueX, probably due to AdBlock", r), [2, k.AdBlocked];
                         case 6:
                             return [2]
                     }
@@ -7665,24 +7276,24 @@ webpackJsonp([45], {
 
         function a(e) {
             return {
-                adModalOpen: Object(d.b)(e, N),
+                adModalOpen: Object(d.b)(e, S),
                 isLoggedIn: Object(c.d)(e)
             }
         }
 
-        function l(e) {
+        function r(e) {
             return {
                 showWatchAdModal: function(t) {
-                    return e(Object(o.d)(N, t))
+                    return e(Object(l.d)(S, t))
                 }
             }
         }
-        var r, s = n("RH2O"),
-            o = n("V5M+"),
+        var o, s = n("RH2O"),
+            l = n("V5M+"),
             d = n("Iw4B"),
             c = n("Aj/L"),
-            u = n("TToO"),
-            m = n("U7vG"),
+            m = n("TToO"),
+            u = n("U7vG"),
             p = n("2KeS"),
             v = n("6sO2"),
             g = n("+8VM"),
@@ -7690,18 +7301,18 @@ webpackJsonp([45], {
             f = n("oIkB");
         ! function(e) {
             e[e.ExitEarly = 0] = "ExitEarly", e[e.Unknown = 1] = "Unknown", e[e.Adblock = 2] = "Adblock", e[e.LimitReached = 3] = "LimitReached"
-        }(r || (r = {}));
+        }(o || (o = {}));
         var k, b = n("4JjK"),
-            S = n("/LBW"),
-            y = n("Odds"),
-            E = n("zzpv"),
-            _ = (n("x583"), function(e) {
+            y = n("/LBW"),
+            E = n("Odds"),
+            _ = n("zzpv"),
+            N = (n("x583"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {}, t.hasAwarded = !1, t.messageHandler = function(e) {
-                        return u.__awaiter(t, void 0, void 0, function() {
-                            var t, n, i, a, l;
-                            return u.__generator(this, function(s) {
+                        return m.__awaiter(t, void 0, void 0, function() {
+                            var t, n, i, a, r;
+                            return m.__generator(this, function(s) {
                                 switch (s.label) {
                                     case 0:
                                         if (e.origin !== window.location.origin) return [2];
@@ -7733,7 +7344,7 @@ webpackJsonp([45], {
                                     case 2:
                                         try {
                                             if (!(i = JSON.parse(t.activityJSON))) return [2];
-                                            Object(S.g)({
+                                            Object(y.g)({
                                                 campaignID: i.campaign_id.toString(),
                                                 requestID: t.requestID,
                                                 requestMethod: this.props.requestRef
@@ -7750,7 +7361,7 @@ webpackJsonp([45], {
                                     case 4:
                                         try {
                                             if (!(i = JSON.parse(t.activityJSON))) return [2];
-                                            Object(S.f)({
+                                            Object(y.f)({
                                                 requestID: t.requestID,
                                                 adblock: !1,
                                                 campaignID: i.campaign_id.toString()
@@ -7772,11 +7383,11 @@ webpackJsonp([45], {
                                     case 6:
                                         return a = s.sent(), this.hasAwarded = !0, this.props.onBitsAwarded && this.props.onBitsAwarded(a.data.redeemTrueXAd.grantedBits), [3, 8];
                                     case 7:
-                                        return l = s.sent(), v.i.warn("Error while redeeming bits for truex ad", l), this.props.onError && this.props.onError(r.Unknown), [3, 8];
+                                        return r = s.sent(), v.i.warn("Error while redeeming bits for truex ad", r), this.props.onError && this.props.onError(o.Unknown), [3, 8];
                                     case 8:
                                         return [3, 10];
                                     case 9:
-                                        return this.props.onError && (t.type === b.a.LimitReached ? this.props.onError(r.LimitReached) : t.type === b.a.Adblock ? this.props.onError(r.Adblock) : t.type === b.a.OnError ? this.props.onError(r.Unknown) : this.hasAwarded || this.props.onError(r.ExitEarly)), this.props.closeModal(), [3, 10];
+                                        return this.props.onError && (t.type === b.a.LimitReached ? this.props.onError(o.LimitReached) : t.type === b.a.Adblock ? this.props.onError(o.Adblock) : t.type === b.a.OnError ? this.props.onError(o.Unknown) : this.hasAwarded || this.props.onError(o.ExitEarly)), this.props.closeModal(), [3, 10];
                                     case 10:
                                         return [2]
                                 }
@@ -7784,30 +7395,30 @@ webpackJsonp([45], {
                         })
                     }, t
                 }
-                return u.__extends(t, e), t.prototype.componentWillMount = function() {
+                return m.__extends(t, e), t.prototype.componentWillMount = function() {
                     window.addEventListener("message", this.messageHandler)
                 }, t.prototype.componentWillUnmount = function() {
                     window.removeEventListener("message", this.messageHandler)
                 }, t.prototype.render = function() {
-                    return m.createElement(y._19, {
-                        background: y.m.Base
-                    }, m.createElement("div", {
+                    return u.createElement(E._19, {
+                        background: E.m.Base
+                    }, u.createElement("div", {
                         className: "t-watch-ads-modal",
                         style: this.state.customDimensions
-                    }, m.createElement(g.a, null), m.createElement("iframe", {
+                    }, u.createElement(g.a, null), u.createElement("iframe", {
                         src: "/products/bits/ad"
                     })))
-                }, t = u.__decorate([Object(h.a)(E, {
+                }, t = m.__decorate([Object(h.a)(_, {
                     name: "redeemTrueXAd"
                 })], t)
-            }(m.Component)),
-            N = Object(s.a)(null, function(e) {
-                return Object(p.bindActionCreators)({
-                    closeModal: o.c
+            }(u.Component)),
+            S = Object(s.b)(null, function(e) {
+                return Object(p.b)({
+                    closeModal: l.c
                 }, e)
-            })(_),
+            })(N),
             w = n("HW6M"),
-            A = n("BhyV"),
+            A = n("3zLD"),
             F = n("jF7o"),
             C = n("w9tK"),
             I = n("zCIC");
@@ -7816,37 +7427,37 @@ webpackJsonp([45], {
         }(k || (k = {}));
         var L, O = function(e) {
                 var t = null;
-                return e.disableWatchAd && (t = Object(v.d)("Try again later", "Bits--WatchAdOffer")), m.createElement(y._19, {
+                return e.disableWatchAd && (t = Object(v.d)("Try again later", "Bits--WatchAdOffer")), u.createElement(E._19, {
                     className: "bits-buy-card__offer-row",
-                    display: y.H.Flex,
+                    display: E.H.Flex,
                     flexShrink: 0,
                     borderBottom: !0,
-                    justifyContent: y.U.Between,
-                    flexWrap: y.K.NoWrap,
+                    justifyContent: E.U.Between,
+                    flexWrap: E.K.NoWrap,
                     padding: {
                         x: 2,
                         y: 1
                     }
-                }, m.createElement(y.V, {
+                }, u.createElement(E.V, {
                     padding: {
                         right: 4
                     }
-                }, m.createElement("strong", null, Object(v.d)("Get {minBitsCount} or more Bits by watching short ads", {
+                }, u.createElement("strong", null, Object(v.d)("Get {minBitsCount} or more Bits by watching short ads", {
                     minBitsCount: e.minPayout
-                }, "Bits--WatchAdOffer"))), m.createElement(y.V, {
+                }, "Bits--WatchAdOffer"))), u.createElement(E.V, {
                     flexShrink: 0,
-                    display: y.H.Flex,
-                    flexDirection: y.J.Column,
-                    alignItems: y.c.End
-                }, m.createElement(y.u, {
-                    type: y.z.Hollow,
+                    display: E.H.Flex,
+                    flexDirection: E.J.Column,
+                    alignItems: E.c.End
+                }, u.createElement(E.u, {
+                    type: E.z.Hollow,
                     "data-a-target": "bits-watch-ad",
                     onClick: e.onWatchAdClick,
                     disabled: e.disableWatchAd
-                }, Object(v.d)("Watch Ad", "Bits--WatchAdOffer")), t && m.createElement(y.V, {
+                }, Object(v.d)("Watch Ad", "Bits--WatchAdOffer")), t && u.createElement(E.V, {
                     className: "bits-buy-card__sub-text",
-                    alignSelf: y.d.Stretch,
-                    textAlign: y._24.Center,
+                    alignSelf: E.d.Stretch,
+                    textAlign: E._24.Center,
                     margin: {
                         top: .5
                     }
@@ -7860,15 +7471,15 @@ webpackJsonp([45], {
                         enableWatchAd: !0
                     }, t
                 }
-                return u.__extends(t, e), t.prototype.componentWillMount = function() {
-                    return u.__awaiter(this, void 0, void 0, function() {
+                return m.__extends(t, e), t.prototype.componentWillMount = function() {
+                    return m.__awaiter(this, void 0, void 0, function() {
                         var e;
-                        return u.__generator(this, function(t) {
+                        return m.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
                                     return [4, i(this.props.truexUserID)];
                                 case 1:
-                                    return e = t.sent(), Object(S.e)({
+                                    return e = t.sent(), Object(y.e)({
                                         channel: this.props.channelLogin,
                                         channelID: this.props.channelID,
                                         available: e === k.Available
@@ -7879,11 +7490,11 @@ webpackJsonp([45], {
                         })
                     })
                 }, t.prototype.render = function() {
-                    return T.test(navigator.userAgent) ? null : m.createElement(O, u.__assign({}, this.props, {
+                    return T.test(navigator.userAgent) ? null : u.createElement(O, m.__assign({}, this.props, {
                         disableWatchAd: !this.state.enableWatchAd
                     }))
                 }, t
-            }(m.Component),
+            }(u.Component),
             V = n("jxGs"),
             U = n("3iBR"),
             B = n("iydZ"),
@@ -7906,11 +7517,11 @@ webpackJsonp([45], {
                         i && (t.props.onBuyPopupClose(i), t.props.onClose())
                     }, t
                 }
-                return u.__extends(t, e), t.prototype.render = function() {
+                return m.__extends(t, e), t.prototype.render = function() {
                     if (this.props.offer.type === V.a) {
                         if (!this.props.channelLogin) return null;
                         var e = this.props.currentUserSHA || "";
-                        return m.createElement(x, {
+                        return u.createElement(x, {
                             key: "wateb",
                             minPayout: this.props.offer.bits,
                             onWatchAdClick: this.props.handleWatchAdClick,
@@ -7920,62 +7531,62 @@ webpackJsonp([45], {
                         })
                     }
                     var t = null;
-                    Object(D.c)(this.props.offer) ? t = m.createElement(y.V, {
+                    Object(D.c)(this.props.offer) ? t = u.createElement(E.V, {
                         className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline"
-                    }, m.createElement(y._23, {
-                        type: y._28.Strong,
-                        fontSize: y.L.Size6
-                    }, Object(v.d)("Special Offer: 1st Time Buyers", "Bits--BuyCard"))) : Object(D.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === V.c && (t = m.createElement(y.V, {
+                    }, u.createElement(E._23, {
+                        type: E._28.Strong,
+                        fontSize: E.L.Size6
+                    }, Object(v.d)("Special Offer: 1st Time Buyers", "Bits--BuyCard"))) : Object(D.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === V.c && (t = u.createElement(E.V, {
                         className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline"
-                    }, m.createElement(y._23, {
-                        type: y._28.Strong,
-                        fontSize: y.L.Size6
+                    }, u.createElement(E._23, {
+                        type: E._28.Strong,
+                        fontSize: E.L.Size6
                     }, Object(v.d)("Flash Sale: Now thru Nov. 27!", "Bits--BuyCard"))));
                     var n = null;
-                    this.props.offer.discount && (n = m.createElement("div", {
+                    this.props.offer.discount && (n = u.createElement("div", {
                         className: "bits-buy-card-offer-row__sub-text"
                     }, Object(v.d)("{percentOff,number,percent} discount", {
                         percentOff: this.props.offer.discount
                     }, "Bits--BuyCard")));
                     var i = null;
-                    (Object(D.c)(this.props.offer) || Object(D.e)(this.props.offer)) && (i = m.createElement("div", {
+                    (Object(D.c)(this.props.offer) || Object(D.e)(this.props.offer)) && (i = u.createElement("div", {
                         className: "bits-buy-card-offer-row__sub-text"
                     }, Object(v.d)("one per account", "Bits--BuyCard")));
-                    var a = this.props.isLastRow ? y._19 : y.V;
-                    return m.createElement(a, {
+                    var a = this.props.isLastRow ? E._19 : E.V;
+                    return u.createElement(a, {
                         className: "bits-buy-card-offer-row",
                         flexShrink: 0,
-                        display: y.H.Flex,
-                        justifyContent: y.U.Center,
+                        display: E.H.Flex,
+                        justifyContent: E.U.Center,
                         borderBottom: this.props.isLastRow,
-                        flexDirection: y.J.Column,
+                        flexDirection: E.J.Column,
                         padding: {
                             x: 2,
                             y: 1
                         }
-                    }, t, m.createElement(y.V, {
-                        display: y.H.Flex,
-                        justifyContent: y.U.Between,
-                        alignItems: y.c.Center
-                    }, m.createElement(y.V, {
+                    }, t, u.createElement(E.V, {
+                        display: E.H.Flex,
+                        justifyContent: E.U.Between,
+                        alignItems: E.c.Center
+                    }, u.createElement(E.V, {
                         flexGrow: 1
-                    }, m.createElement(y._23, {
-                        type: y._28.H5,
-                        color: y.F.Base,
+                    }, u.createElement(E._23, {
+                        type: E._28.H5,
+                        color: E.F.Base,
                         bold: !0
-                    }, this.props.offer.bits, " Bits"), this.getAvailableTiers(this.props.offer.bits)), m.createElement(y.V, {
+                    }, this.props.offer.bits, " Bits"), this.getAvailableTiers(this.props.offer.bits)), u.createElement(E.V, {
                         flexShrink: 0,
-                        display: y.H.Flex,
-                        flexDirection: y.J.Column,
-                        alignItems: y.c.End
-                    }, m.createElement(y.u, {
+                        display: E.H.Flex,
+                        flexDirection: E.J.Column,
+                        alignItems: E.c.End
+                    }, u.createElement(E.u, {
                         onClick: this.handleBuyClick,
                         "data-purchase-url": this.props.offer.url,
                         "data-bits-amount": this.props.offer.bits,
                         "data-a-target": "bits-purchase-button-" + this.props.offer.bits
-                    }, this.props.offer.price), (n || i) && m.createElement(y.V, {
-                        alignSelf: y.d.Stretch,
-                        textAlign: y._24.Right,
+                    }, this.props.offer.price), (n || i) && u.createElement(E.V, {
+                        alignSelf: E.d.Stretch,
+                        textAlign: E._24.Right,
                         margin: {
                             top: .5
                         }
@@ -7986,28 +7597,28 @@ webpackJsonp([45], {
                     var n = t.orderedTiers.filter(function(t) {
                         return t.bits <= e
                     }).reverse();
-                    return m.createElement(y.V, {
+                    return u.createElement(E.V, {
                         padding: {
                             top: .5
                         },
                         className: "bits-buy-card-offer-row__tier-bits-images"
                     }, n.map(function(e) {
-                        return m.createElement(R.a, {
+                        return u.createElement(R.a, {
                             key: e.bits,
                             sources: Object(B.b)(e, 2, !1)
                         })
                     }))
                 }, t
-            }(m.Component)),
+            }(u.Component)),
             H = (n("sgUC"), function(e) {
                 var t = [],
                     n = [],
                     i = null;
-                return e.offers.forEach(function(a, l) {
-                    var r = m.createElement(P, {
+                return e.offers.forEach(function(a, r) {
+                    var o = u.createElement(P, {
                             key: a.id,
                             offer: a,
-                            isLastRow: l + 1 < e.offers.length,
+                            isLastRow: r + 1 < e.offers.length,
                             bitsConfig: e.bitsConfig,
                             channelID: e.channelID,
                             channelLogin: e.channelLogin,
@@ -8020,46 +7631,46 @@ webpackJsonp([45], {
                             trackBitsCardInteraction: e.trackBitsCardInteraction
                         }),
                         s = Object(D.d)(a),
-                        o = Object(D.c)(a),
+                        l = Object(D.c)(a),
                         d = a.type === V.a;
-                    o && !e.hidePromos ? t.push(r) : s && !o ? t.push(r) : d && !e.hideWateb ? i = r : d || s || n.push(r)
-                }), e.fullsize ? m.createElement(y.V, {
+                    l && !e.hidePromos ? t.push(o) : s && !l ? t.push(o) : d && !e.hideWateb ? i = o : d || s || n.push(o)
+                }), e.fullsize ? u.createElement(E.V, {
                     className: "bits-buy-card-offers__full-size",
                     flexGrow: 1,
-                    flexWrap: y.K.NoWrap,
-                    display: y.H.Flex,
-                    flexDirection: y.J.Column
-                }, i, t, n) : m.createElement(I.b, {
+                    flexWrap: E.K.NoWrap,
+                    display: E.H.Flex,
+                    flexDirection: E.J.Column
+                }, i, t, n) : u.createElement(I.b, {
                     className: "bits-buy-card-offers__scroll-view"
-                }, m.createElement(y.V, {
+                }, u.createElement(E.V, {
                     flexGrow: 1,
-                    flexWrap: y.K.NoWrap,
-                    display: y.H.Flex,
-                    flexDirection: y.J.Column
+                    flexWrap: E.K.NoWrap,
+                    display: E.H.Flex,
+                    flexDirection: E.J.Column
                 }, i, t, n))
             }),
             M = function(e) {
                 var t = null;
-                e.pricesIncludeVAT && (t = m.createElement(y._23, {
+                e.pricesIncludeVAT && (t = u.createElement(E._23, {
                     italic: !0,
-                    type: y._28.P,
-                    color: y.F.Alt
+                    type: E._28.P,
+                    color: E.F.Alt
                 }, Object(v.d)("Prices include VAT", "Bits--BuyCard")));
                 var n = null;
-                e.minBitsToCheer && e.minBitsToCheer > 1 && (n = m.createElement(y._23, {
-                    color: y.F.Alt
+                e.minBitsToCheer && e.minBitsToCheer > 1 && (n = u.createElement(E._23, {
+                    color: E.F.Alt
                 }, Object(v.d)("{displayName} requires {minBits} Bits to Cheer in this channel.", {
                     displayName: e.displayName,
                     minBits: e.minBitsToCheer
                 }, "Bits--BuyCard")));
                 var i = null;
-                return void 0 !== e.bitsBalance && null !== e.bitsBalance && (i = m.createElement(y._23, {
-                    color: y.F.Alt
+                return void 0 !== e.bitsBalance && null !== e.bitsBalance && (i = u.createElement(E._23, {
+                    color: E.F.Alt
                 }, Object(v.d)("You have {totalBits} Bits", {
-                    totalBits: m.createElement("strong", {
+                    totalBits: u.createElement("strong", {
                         "data-a-target": "buy-card-bits-count"
                     }, e.bitsBalance)
-                }, "Bits--BuyCard"))), m.createElement(y._19, {
+                }, "Bits--BuyCard"))), u.createElement(E._19, {
                     className: "bits-buy-card-header",
                     padding: {
                         x: 1,
@@ -8067,67 +7678,67 @@ webpackJsonp([45], {
                     },
                     borderBottom: !0,
                     flexShrink: 0
-                }, m.createElement(y.V, {
+                }, u.createElement(E.V, {
                     margin: {
                         bottom: 1
                     }
-                }, m.createElement(y._23, {
-                    type: y._28.H4,
-                    color: y.F.Alt
+                }, u.createElement(E._23, {
+                    type: E._28.H4,
+                    color: E.F.Alt
                 }, Object(v.d)("Purchase Bits", "Bits--BuyCard")), t), i, n)
             },
             W = n("nrdj"),
             z = function(e) {
-                return m.createElement(y.V, {
-                    display: y.H.Flex,
+                return u.createElement(E.V, {
+                    display: E.H.Flex,
                     flexGrow: 1,
-                    flexDirection: y.J.Column,
-                    alignItems: y.c.Center,
+                    flexDirection: E.J.Column,
+                    alignItems: E.c.Center,
                     fullWidth: !0,
-                    flexWrap: y.K.NoWrap,
+                    flexWrap: E.K.NoWrap,
                     padding: {
                         y: 1
                     }
-                }, m.createElement(W.a, {
+                }, u.createElement(W.a, {
                     prefix: "cheer",
                     amount: e.amount,
                     bitsConfig: e.bitsConfig,
                     showAmount: !0,
                     showImage: !0
-                }), m.createElement(y.V, {
-                    display: y.H.Flex,
+                }), u.createElement(E.V, {
+                    display: E.H.Flex,
                     padding: {
                         top: 1
                     },
                     flexGrow: 1,
-                    flexDirection: y.J.Column,
-                    alignItems: y.c.Center,
-                    flexWrap: y.K.NoWrap
-                }, m.createElement(y._23, {
-                    type: y._28.H4,
+                    flexDirection: E.J.Column,
+                    alignItems: E.c.Center,
+                    flexWrap: E.K.NoWrap
+                }, u.createElement(E._23, {
+                    type: E._28.H4,
                     bold: !0
                 }, Object(v.d)("You got {bitsAmount,number} Bits!", {
                     bitsAmount: e.amount
-                }, "Bits--WatchAdAward")), m.createElement(y.Q, {
+                }, "Bits--WatchAdAward")), u.createElement(E.Q, {
                     padding: {
                         top: 1
                     }
-                }, m.createElement(y._23, {
-                    color: y.F.Alt2
+                }, u.createElement(E._23, {
+                    color: E.F.Alt2
                 }, Object(v.d)("{bitsAmount,number} Bits were added to your Bit inventory.", {
                     bitsAmount: e.amount
-                }, "Bits--WatchAdAward"), m.createElement("br", null), Object(v.d)("You can use these Bits to Cheer!", "Bits--WatchAdAward")))), m.createElement(y.V, {
-                    display: y.H.Flex,
+                }, "Bits--WatchAdAward"), u.createElement("br", null), Object(v.d)("You can use these Bits to Cheer!", "Bits--WatchAdAward")))), u.createElement(E.V, {
+                    display: E.H.Flex,
                     padding: {
                         x: 1,
                         top: 3
                     },
-                    alignSelf: y.d.Stretch,
-                    justifyContent: y.U.Between
-                }, m.createElement(y.u, {
+                    alignSelf: E.d.Stretch,
+                    justifyContent: E.U.Between
+                }, u.createElement(E.u, {
                     onClick: e.onStartCheering
-                }, Object(v.d)("Start Cheering", "Bits--WatchAdAward")), m.createElement(y.u, {
-                    type: y.z.Hollow,
+                }, Object(v.d)("Start Cheering", "Bits--WatchAdAward")), u.createElement(E.u, {
+                    type: E.z.Hollow,
                     onClick: e.onWatchAnother,
                     disabled: !e.hasAdAvailable
                 }, Object(v.d)("Watch Another", "Bits--WatchAdAward"))))
@@ -8139,9 +7750,9 @@ webpackJsonp([45], {
                         hasAdAvailable: !0
                     }, t
                 }
-                return u.__extends(t, e), t.prototype.componentWillMount = function() {
-                    return u.__awaiter(this, void 0, void 0, function() {
-                        return u.__generator(this, function(e) {
+                return m.__extends(t, e), t.prototype.componentWillMount = function() {
+                    return m.__awaiter(this, void 0, void 0, function() {
+                        return m.__generator(this, function(e) {
                             switch (e.label) {
                                 case 0:
                                     return [4, i(this.props.truexUserID)];
@@ -8153,75 +7764,75 @@ webpackJsonp([45], {
                         })
                     })
                 }, t.prototype.render = function() {
-                    return m.createElement(z, u.__assign({}, this.props, {
+                    return u.createElement(z, m.__assign({}, this.props, {
                         hasAdAvailable: this.state.hasAdAvailable
                     }))
                 }, t
-            }(m.Component),
+            }(u.Component),
             q = (n("q8Cw"), function(e) {
                 var t = Object(v.d)("Something's wrong!", "Bits--WatchAdError"),
                     n = Object(v.d)("Something went wrong. Wait a while and try again.", "Bits--WatchAdError"),
                     i = "adserrorgeneric";
                 switch (e.type) {
-                    case r.Adblock:
+                    case o.Adblock:
                         i = "adserroradblock", n = Object(v.d)("We can't load this Ad, probably because Ad Blocking software is running. To watch an ad and get Bits, please disable all Ad Blocking software.", "Bits--WatchAdError");
                         break;
-                    case r.LimitReached:
+                    case o.LimitReached:
                         i = "adserrorlimit", t = Object(v.d)("Ad Limit Reached", "Bits--WatchAdError"), n = Object(v.d)("That's all the Ads we have for now. Try again tomorrow!", "Bits--WatchAdError");
                         break;
-                    case r.ExitEarly:
+                    case o.ExitEarly:
                         n = Object(v.d)("To get Bits, you must view and interact with the Ad for the minimum amount of time.", "Bits--WatchAdError")
                 }
-                var a = m.createElement(y.V, {
+                var a = u.createElement(E.V, {
                     className: "watch-ad-error__footer",
-                    display: y.H.Flex,
+                    display: E.H.Flex,
                     padding: {
                         top: 2
                     },
-                    alignSelf: y.d.Stretch,
-                    justifyContent: y.U.Center
-                }, m.createElement(y.u, {
+                    alignSelf: E.d.Stretch,
+                    justifyContent: E.U.Center
+                }, u.createElement(E.u, {
                     onClick: e.onTryAgain
                 }, Object(v.d)("Try Again", "Bits--WatchAdError")));
-                return e.type === r.LimitReached && (a = m.createElement(y.V, {
+                return e.type === o.LimitReached && (a = u.createElement(E.V, {
                     className: "watch-ad-error__footer",
-                    display: y.H.Flex,
+                    display: E.H.Flex,
                     padding: {
                         top: 2
                     },
-                    alignSelf: y.d.Stretch,
-                    justifyContent: y.U.Between
-                }, m.createElement(y.u, {
+                    alignSelf: E.d.Stretch,
+                    justifyContent: E.U.Between
+                }, u.createElement(E.u, {
                     onClick: e.onClose
-                }, Object(v.d)("Got It", "Bits--WatchAdError")), m.createElement(y.u, {
+                }, Object(v.d)("Got It", "Bits--WatchAdError")), u.createElement(E.u, {
                     onClick: e.onTryAgain,
-                    type: y.z.Hollow
-                }, Object(v.d)("Buy Bits", "Bits--WatchAdError")))), m.createElement(y.V, {
+                    type: E.z.Hollow
+                }, Object(v.d)("Buy Bits", "Bits--WatchAdError")))), u.createElement(E.V, {
                     padding: {
                         x: 1
                     },
-                    display: y.H.Flex,
+                    display: E.H.Flex,
                     flexGrow: 1,
-                    flexDirection: y.J.Column,
-                    alignItems: y.c.Center,
+                    flexDirection: E.J.Column,
+                    alignItems: E.c.Center,
                     fullWidth: !0,
-                    flexWrap: y.K.NoWrap
-                }, m.createElement(y.V, {
+                    flexWrap: E.K.NoWrap
+                }, u.createElement(E.V, {
                     padding: {
                         y: 2
                     }
-                }, m.createElement("img", {
+                }, u.createElement("img", {
                     className: "watch-ad-error__error-image",
                     src: U.b + "/light/static/1/" + i + ".png"
-                })), m.createElement(y.V, {
+                })), u.createElement(E.V, {
                     padding: {
                         bottom: 1
                     }
-                }, m.createElement(y._23, {
-                    type: y._28.H4,
+                }, u.createElement(E._23, {
+                    type: E._28.H4,
                     bold: !0
-                }, t)), m.createElement(y._23, {
-                    color: y.F.Alt2
+                }, t)), u.createElement(E._23, {
+                    color: E.F.Alt2
                 }, n), a)
             }),
             K = n("CSlQ"),
@@ -8247,13 +7858,13 @@ webpackJsonp([45], {
                             bitsAwarded: e
                         })
                     }, t.handleWatchAdClick = function() {
-                        return u.__awaiter(t, void 0, void 0, function() {
-                            return u.__generator(this, function(e) {
+                        return m.__awaiter(t, void 0, void 0, function() {
+                            return m.__generator(this, function(e) {
                                 return this.props.data && this.props.data.currentUser && this.props.data.user ? (this.props.showWatchAdModal({
                                     tuid: this.props.data.currentUser.idSHA1,
                                     onBitsAwarded: this.onAdBitsAwarded,
                                     onError: this.receiveAdErrorState,
-                                    requestRef: S.c.ShowAdButton,
+                                    requestRef: y.c.ShowAdButton,
                                     channelID: this.props.data.user.id
                                 }), [2]) : [2]
                             })
@@ -8269,82 +7880,82 @@ webpackJsonp([45], {
                         }), t.props.data && t.props.data.refetch())
                     }, t
                 }
-                return u.__extends(t, e), t.prototype.shouldComponentUpdate = function(e) {
+                return m.__extends(t, e), t.prototype.shouldComponentUpdate = function(e) {
                     return !e.adModalOpen
                 }, t.prototype.render = function() {
                     var e = {
                             border: !0,
-                            background: y.m.Base,
+                            background: E.m.Base,
                             fullWidth: !0,
                             elevation: 3
                         },
                         t = w({
                             "bits-buy-card": !0,
-                            "bits-buy-card__chat-tooltip": this.props.location === S.b.ChatTooltip
+                            "bits-buy-card__chat-tooltip": this.props.location === y.b.ChatTooltip
                         }),
                         n = null;
-                    if (this.props.location === S.b.ChatTooltip && (n = m.createElement("button", {
+                    if (this.props.location === y.b.ChatTooltip && (n = u.createElement("button", {
                             className: "bits-buy-card__close",
                             onClick: this.props.onClose,
                             "data-a-target": "bits-buy-card-close-button"
-                        }, m.createElement(y._10, {
-                            asset: y._11.Close,
+                        }, u.createElement(E._10, {
+                            asset: E._11.Close,
                             height: 11,
                             width: 11
-                        }))), !this.props.data || this.props.data.loading) return m.createElement(y._19, u.__assign({
+                        }))), !this.props.data || this.props.data.loading) return u.createElement(E._19, m.__assign({
                         className: t,
                         "data-a-target": "bits-buy-card-loading",
-                        display: y.H.Flex,
-                        flexDirection: y.J.Column,
-                        alignItems: y.c.Center,
-                        justifyContent: y.U.Center,
-                        textAlign: y._24.Center
-                    }, e), m.createElement(y.Z, {
+                        display: E.H.Flex,
+                        flexDirection: E.J.Column,
+                        alignItems: E.c.Center,
+                        justifyContent: E.U.Center,
+                        textAlign: E._24.Center
+                    }, e), u.createElement(E.Z, {
                         delay: 0
-                    }), m.createElement(y.V, {
+                    }), u.createElement(E.V, {
                         padding: {
                             top: 2
                         }
-                    }, m.createElement(y._23, {
+                    }, u.createElement(E._23, {
                         italic: !0
                     }, Object(v.d)("Fetching bits", "Bits--BuyCard"))));
-                    if (this.props.data.error) return m.createElement(y.V, u.__assign({
+                    if (this.props.data.error) return u.createElement(E.V, m.__assign({
                         className: w(t, "bits-buy-card--shorter"),
-                        display: y.H.Flex,
-                        flexDirection: y.J.Column,
-                        alignItems: y.c.Center,
-                        justifyContent: y.U.Center,
+                        display: E.H.Flex,
+                        flexDirection: E.J.Column,
+                        alignItems: E.c.Center,
+                        justifyContent: E.U.Center,
                         padding: 2,
-                        textAlign: y._24.Center,
+                        textAlign: E._24.Center,
                         "data-a-target": "bits-buy-card-error"
-                    }, e), n, m.createElement(y._23, {
+                    }, e), n, u.createElement(E._23, {
                         italic: !0
                     }, Object(v.d)("Bits prices are unavailable right now. Check back again later.", "Bits--BuyCard")));
                     var i = this.renderWatebCard();
-                    if (i) return m.createElement(y._19, u.__assign({
+                    if (i) return u.createElement(E._19, m.__assign({
                         className: w(t, "bits-buy-card--shorter"),
-                        display: y.H.Flex,
-                        flexDirection: y.J.Column,
-                        alignItems: y.c.Center,
-                        justifyContent: y.U.Center,
-                        textAlign: y._24.Center,
+                        display: E.H.Flex,
+                        flexDirection: E.J.Column,
+                        alignItems: E.c.Center,
+                        justifyContent: E.U.Center,
+                        textAlign: E._24.Center,
                         padding: 1
                     }, e), n, i);
                     var a = [];
                     this.props.data.currentUser ? a = this.props.data.currentUser.bitsOffers : this.props.data.bitsOffers && (a = this.props.data.bitsOffers);
-                    var l = a.filter(function(e) {
+                    var r = a.filter(function(e) {
                             return e.type === V.b
                         }).some(function(e) {
                             return e.includesVAT
                         }),
-                        r = this.props.data.user ? this.props.data.user.id : "",
-                        s = m.createElement(H, {
+                        o = this.props.data.user ? this.props.data.user.id : "",
+                        s = u.createElement(H, {
                             offers: a,
                             fullsize: this.props.fullsize,
                             hidePromos: this.props.hidePromos,
                             hideWateb: this.props.hideWateb,
                             bitsConfig: this.props.bitsConfig,
-                            channelID: r,
+                            channelID: o,
                             channelLogin: this.props.channelLogin,
                             closeAllBits: this.props.closeAllBits,
                             currentUserSHA: this.props.data && this.props.data.currentUser && this.props.data.currentUser.idSHA1,
@@ -8354,25 +7965,25 @@ webpackJsonp([45], {
                             onClose: this.props.onClose,
                             trackBitsCardInteraction: this.props.trackBitsCardInteraction
                         }),
-                        o = null;
-                    return this.props.location === S.b.ChatTooltip && (o = m.createElement(M, {
+                        l = null;
+                    return this.props.location === y.b.ChatTooltip && (l = u.createElement(M, {
                         bitsBalance: this.props.data && this.props.data.currentUser && this.props.data.currentUser.bitsBalance,
                         displayName: this.props.data && this.props.data.user && this.props.data.user.displayName || this.props.channelLogin || "",
                         minBitsToCheer: this.props.data && this.props.data.user && this.props.data.user.cheer && this.props.data.user.cheer.settings.cheerMinimumBits,
-                        pricesIncludeVAT: l
-                    })), m.createElement(y._19, u.__assign({
+                        pricesIncludeVAT: r
+                    })), u.createElement(E._19, m.__assign({
                         className: t,
                         padding: {
                             top: 1
                         },
-                        display: y.H.Flex,
-                        flexDirection: y.J.Column,
+                        display: E.H.Flex,
+                        flexDirection: E.J.Column,
                         "data-a-target": "bits-buy-card"
-                    }, e), n, o, s)
+                    }, e), n, l, s)
                 }, t.prototype.renderWatebCard = function() {
                     if (this.props.data && this.props.data.currentUser) switch (this.state.wateb) {
                         case L.Awarded:
-                            return m.createElement(G, {
+                            return u.createElement(G, {
                                 bitsConfig: this.props.bitsConfig,
                                 amount: this.state.bitsAwarded,
                                 onStartCheering: this.props.onClose,
@@ -8380,15 +7991,15 @@ webpackJsonp([45], {
                                 truexUserID: this.props.data.currentUser.idSHA1
                             });
                         case L.Error:
-                            return m.createElement(q, {
-                                type: this.state.watebError || r.Unknown,
+                            return u.createElement(q, {
+                                type: this.state.watebError || o.Unknown,
                                 onClose: this.props.onClose,
                                 onTryAgain: this.resetAdErrorState
                             });
                         default:
                             return !1
                     }
-                }, t = u.__decorate([Object(h.a)(Q, {
+                }, t = m.__decorate([Object(h.a)(Q, {
                     name: "data",
                     options: function(e) {
                         return {
@@ -8400,16 +8011,16 @@ webpackJsonp([45], {
                         }
                     }
                 })], t)
-            }(m.Component),
+            }(u.Component),
             J = Object(A.compose)(Object(K.d)("BitsBuyCard", {
                 autoReportInteractive: !0,
                 destination: C.a.BitsBuyCard
             }))($),
-            Y = Object(s.a)(a, l)(J);
+            Y = Object(s.b)(a, r)(J);
         n.d(t, !1, function() {
             return a
         }), n.d(t, !1, function() {
-            return l
+            return r
         }), n.d(t, "a", function() {
             return Y
         })
@@ -8424,11 +8035,11 @@ webpackJsonp([45], {
     XYqD: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
-            return l
+            return r
         });
         var i = n("U7vG"),
             a = (n.n(i), n("Odds")),
-            l = function() {
+            r = function() {
                 return i.createElement(a.A, null, i.createElement(a.j, {
                     ratio: a.k.Aspect16x9
                 }, i.createElement(a._3, null)), i.createElement(a.B, null, i.createElement(a.V, {
@@ -8463,12 +8074,12 @@ webpackJsonp([45], {
         "use strict";
 
         function i(e) {
-            return e.type === r.b && null !== e.promotion && !!e.promotion
+            return e.type === o.b && null !== e.promotion && !!e.promotion
         }
         t.c = function(e) {
-            return e.type !== r.a && i(e) && null !== e.promotion && e.promotion.type === r.d
+            return e.type !== o.a && i(e) && null !== e.promotion && e.promotion.type === o.d
         }, t.e = function(e) {
-            return e.type !== r.a && i(e) && null !== e.promotion && e.promotion.type === r.e
+            return e.type !== o.a && i(e) && null !== e.promotion && e.promotion.type === o.e
         }, t.d = i, t.a = function(e) {
             var t = 0,
                 n = 0,
@@ -8484,21 +8095,21 @@ webpackJsonp([45], {
             var t = e.messageBits,
                 n = t.total,
                 i = t.largestCheermote,
-                l = t.smallestCheermote;
+                r = t.smallestCheermote;
             if (n) {
-                var r = {
+                var o = {
                     cheerAboveMaxBitsPerEmote: i > s.j,
                     totalAboveBalance: n > e.balance,
                     totalBelowCheerMinimum: n < e.cheerMinimumBits,
-                    totalBelowEmoteMinimum: l < e.emoteMinimumBits,
+                    totalBelowEmoteMinimum: r < e.emoteMinimumBits,
                     inputLongerThanMaxBitsMessage: e.inputValue.length > s.i,
                     inputStartsWithCommand: e.inputValue.startsWith("/")
                 };
-                if (Object.keys(r).some(function(e) {
-                        return r[e]
+                if (Object.keys(o).some(function(e) {
+                        return o[e]
                     })) return a.__assign({
                     canSpend: !1
-                }, r)
+                }, o)
             }
             return {
                 canSpend: !0
@@ -8506,21 +8117,21 @@ webpackJsonp([45], {
         }, t.b = function(e) {
             var t = e.purchaseUrl;
             if (t) {
-                e.trackBitsCardInteraction(Object(o.d)(e.bitsAmount), {
+                e.trackBitsCardInteraction(Object(l.d)(e.bitsAmount), {
                     location: e.location
                 });
                 var n = t.replace("{channelID}", e.channelID),
                     i = window.open(n, "Twitch", "width=1024,height=600,scrollbars=yes");
-                return !i || Object(l.a)() ? (e.closeAllBits && e.closeAllBits(), void e.trackBitsCardInteraction(o.a.CloseCard, {
+                return !i || Object(r.a)() ? (e.closeAllBits && e.closeAllBits(), void e.trackBitsCardInteraction(l.a.CloseCard, {
                     location: e.location
                 })) : (i.focus(), i)
             }
         };
         var a = n("TToO"),
-            l = n("Ouuk"),
-            r = n("jxGs"),
+            r = n("Ouuk"),
+            o = n("jxGs"),
             s = n("3iBR"),
-            o = n("/LBW")
+            l = n("/LBW")
     },
     a0ve: function(e, t) {},
     a4C9: function(e, t) {},
@@ -8531,14 +8142,14 @@ webpackJsonp([45], {
         });
         var i = n("TToO"),
             a = n("HW6M"),
-            l = (n.n(a), n("OAwv")),
-            r = (n.n(l), n("U7vG")),
-            s = (n.n(r), n("F8kA")),
-            o = n("6sO2"),
+            r = (n.n(a), n("OAwv")),
+            o = (n.n(r), n("U7vG")),
+            s = (n.n(o), n("F8kA")),
+            l = n("6sO2"),
             d = n("SZoP"),
             c = n("mi6k"),
-            u = n("CSlQ"),
-            m = n("Odds"),
+            m = n("CSlQ"),
+            u = n("Odds"),
             p = n("a0ve"),
             v = (n.n(p), function(e) {
                 function t() {
@@ -8574,58 +8185,58 @@ webpackJsonp([45], {
                 }, t.prototype.render = function() {
                     var e = null,
                         t = this.getVideoPreviousWatchPercentage();
-                    return null !== t && (e = r.createElement(m.V, {
-                        position: m._4.Absolute,
+                    return null !== t && (e = o.createElement(u.V, {
+                        position: u._4.Absolute,
                         attachBottom: !0,
                         fullWidth: !0
-                    }, r.createElement(m._7, {
-                        size: m._8.Small,
+                    }, o.createElement(u._7, {
+                        size: u._8.Small,
                         value: t,
                         mask: !0
-                    }))), r.createElement("div", i.__assign({
+                    }))), o.createElement("div", i.__assign({
                         onClick: this.onClickHandler,
                         onMouseEnter: this.onMouseEnterHandler,
                         onMouseLeave: this.onMouseLeaveHandler
-                    }, Object(m._40)(this.props)), r.createElement(m.A, null, r.createElement(m.V, {
+                    }, Object(u._40)(this.props)), o.createElement(u.A, null, o.createElement(u.V, {
                         fullWidth: !0
-                    }, r.createElement(m.j, {
+                    }, o.createElement(u.j, {
                         overflow: !0
-                    }, r.createElement("div", null, r.createElement(m._19, {
-                        display: m.H.InlineFlex,
-                        position: m._4.Absolute,
+                    }, o.createElement("div", null, o.createElement(u._19, {
+                        display: u.H.InlineFlex,
+                        position: u._4.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
                         margin: .5,
-                        zIndex: m._39.Default,
-                        fontSize: m.L.Size6,
-                        background: m.m.Overlay,
-                        color: m.F.Overlay,
+                        zIndex: u._39.Default,
+                        fontSize: u.L.Size6,
+                        background: u.m.Overlay,
+                        color: u.F.Overlay,
                         className: "video-preview-card__preview-overlay-stat"
-                    }, r.createElement(m._18, {
+                    }, o.createElement(u._18, {
                         "data-test-selector": "video-view-count",
-                        icon: m._11.GlyphViews,
-                        label: Object(o.d)("views", "VideoPreviewCard"),
-                        value: Object(o.f)(this.props.video.viewCount)
-                    })), r.createElement(m._19, {
-                        display: m.H.InlineFlex,
-                        position: m._4.Absolute,
+                        icon: u._11.GlyphViews,
+                        label: Object(l.d)("views", "VideoPreviewCard"),
+                        value: Object(l.f)(this.props.video.viewCount)
+                    })), o.createElement(u._19, {
+                        display: u.H.InlineFlex,
+                        position: u._4.Absolute,
                         attachTop: !0,
                         attachRight: !0,
                         margin: .5,
-                        zIndex: m._39.Default,
-                        fontSize: m.L.Size6,
-                        background: m.m.Overlay,
-                        color: m.F.Overlay,
+                        zIndex: u._39.Default,
+                        fontSize: u.L.Size6,
+                        background: u.m.Overlay,
+                        color: u.F.Overlay,
                         className: "video-preview-card__preview-overlay-stat"
-                    }, r.createElement(m._18, {
+                    }, o.createElement(u._18, {
                         "data-test-selector": "video-length",
-                        icon: m._11.GlyphLength,
-                        label: Object(o.d)("length", "VideoPreviewCard"),
+                        icon: u._11.GlyphLength,
+                        label: Object(l.d)("length", "VideoPreviewCard"),
                         value: Object(c.a)(this.props.video.lengthSeconds)
-                    })), this.videoPreviewImage(), e))), r.createElement(m.B, null, r.createElement(m.V, {
-                        display: m.H.Flex,
-                        flexDirection: m.J.Row,
-                        flexWrap: m.K.NoWrap,
+                    })), this.videoPreviewImage(), e))), o.createElement(u.B, null, o.createElement(u.V, {
+                        display: u.H.Flex,
+                        flexDirection: u.J.Row,
+                        flexWrap: u.K.NoWrap,
                         padding: {
                             top: .5
                         }
@@ -8633,7 +8244,7 @@ webpackJsonp([45], {
                 }, t.prototype.generateSearchString = function() {
                     var e = {};
                     this.props.collectionID && (e.collection = this.props.collectionID);
-                    var t = l.stringify(e);
+                    var t = r.stringify(e);
                     return t ? "?" + t : ""
                 }, t.prototype.videoPreviewImage = function() {
                     var e = this.state.hovered && !this.state.didAnimatedPreviewFailToLoad ? this.props.video.animatedPreviewURL : this.props.video.previewThumbnailURL,
@@ -8643,9 +8254,9 @@ webpackJsonp([45], {
                         n = a("video-preview-card__preview-image", {
                             "video-preview-card__preview-image--animated": this.state.hovered && this.state.didAnimatedPreviewLoad
                         });
-                    return r.createElement(m.j, {
+                    return o.createElement(u.j, {
                         overflow: !0
-                    }, r.createElement(s.a, {
+                    }, o.createElement(s.a, {
                         to: {
                             pathname: "/videos/" + this.props.video.id,
                             state: this.getLinkState(),
@@ -8654,14 +8265,14 @@ webpackJsonp([45], {
                         title: this.props.video.title,
                         "data-a-target": "video-preview-card-image-link",
                         "data-test-selector": "preview-image-link"
-                    }, r.createElement("div", {
+                    }, o.createElement("div", {
                         className: t,
                         "data-test-selector": "preview-image-wrapper"
-                    }, r.createElement(m.Q, {
+                    }, o.createElement(u.Q, {
                         flexShrink: 0
-                    }, r.createElement("figure", null, r.createElement(m.j, {
-                        ratio: m.k.Aspect16x9
-                    }, r.createElement("img", {
+                    }, o.createElement("figure", null, o.createElement(u.j, {
+                        ratio: u.k.Aspect16x9
+                    }, o.createElement("img", {
                         alt: this.props.video.title,
                         className: n,
                         "data-test-selector": "preview-image",
@@ -8679,44 +8290,44 @@ webpackJsonp([45], {
                         n = a("video-preview-card__image-wrapper", {
                             "video-preview-card__image-wrapper--watched": null !== this.getVideoPreviousWatchPercentage() && !this.state.hovered
                         });
-                    return r.createElement(m.V, {
+                    return o.createElement(u.V, {
                         "data-test-selector": "game-box-art",
-                        display: m.H.InlineFlex,
+                        display: u.H.InlineFlex,
                         flexShrink: 0,
                         padding: {
                             bottom: .5
                         }
-                    }, r.createElement(s.a, {
+                    }, o.createElement(s.a, {
                         to: t,
                         title: e.name,
                         "data-a-target": "video-preview-card-boxart-link"
-                    }, r.createElement(m.Q, {
+                    }, o.createElement(u.Q, {
                         margin: {
                             right: 1
                         }
-                    }, r.createElement("figure", {
+                    }, o.createElement("figure", {
                         className: "video-preview-card__game-art"
-                    }, r.createElement(m._31, {
-                        display: m.H.Block,
-                        direction: m._33.Bottom,
+                    }, o.createElement(u._31, {
+                        display: u.H.Block,
+                        direction: u._33.Bottom,
                         label: e.name
-                    }, r.createElement("div", {
+                    }, o.createElement("div", {
                         className: n,
                         "data-test-selector": "game-box-art-wrapper"
-                    }, r.createElement(m.C, {
-                        aspect: m.k.BoxArt,
+                    }, o.createElement(u.C, {
+                        aspect: u.k.BoxArt,
                         imageAlt: e.name,
-                        imageSrc: e.boxArtURL || o.a.defaultBoxArtURL
+                        imageSrc: e.boxArtURL || l.a.defaultBoxArtURL
                     })))))))
                 }, t.prototype.videoMetaData = function() {
-                    var e = Object(o.c)(new Date(this.props.video.publishedAt), "medium"),
+                    var e = Object(l.c)(new Date(this.props.video.publishedAt), "medium"),
                         t = null;
                     if (this.props.video.owner) {
                         var n = {
                             pathname: "/" + this.props.video.owner.login,
                             state: this.getLinkState()
                         };
-                        t = r.createElement(s.a, {
+                        t = o.createElement(s.a, {
                             to: n,
                             className: "video-preview-card__owner-display-name",
                             "data-a-target": "video-preview-card-channel-link",
@@ -8724,18 +8335,18 @@ webpackJsonp([45], {
                             title: Object(d.a)(this.props.video.owner.login, this.props.video.owner.displayName, !0)
                         }, Object(d.a)(this.props.video.owner.login, this.props.video.owner.displayName))
                     }
-                    return r.createElement(m.V, {
-                        display: m.H.Flex,
-                        flexDirection: m.J.Column
-                    }, r.createElement(m.V, {
+                    return o.createElement(u.V, {
+                        display: u.H.Flex,
+                        flexDirection: u.J.Column
+                    }, o.createElement(u.V, {
                         "data-test-selector": "video-title",
-                        overflow: m._0.Hidden,
-                        position: m._4.Relative
-                    }, r.createElement(m._23, {
-                        color: m.F.Base,
-                        fontSize: m.L.Size5,
-                        lineHeight: m.W.Heading
-                    }, r.createElement(s.a, {
+                        overflow: u._0.Hidden,
+                        position: u._4.Relative
+                    }, o.createElement(u._23, {
+                        color: u.F.Base,
+                        fontSize: u.L.Size5,
+                        lineHeight: u.W.Heading
+                    }, o.createElement(s.a, {
                         className: "video-preview-card__video-title",
                         to: {
                             pathname: "/videos/" + this.props.video.id,
@@ -8744,20 +8355,20 @@ webpackJsonp([45], {
                         },
                         title: this.props.video.title,
                         "data-a-target": "video-preview-card-title-link"
-                    }, this.props.video.title))), r.createElement(m.V, {
+                    }, this.props.video.title))), o.createElement(u.V, {
                         flexShrink: 0,
                         flexGrow: 0,
                         ellipsis: !0
-                    }, r.createElement(m._23, {
-                        type: m._28.Span,
-                        color: m.F.Alt2,
+                    }, o.createElement(u._23, {
+                        type: u._28.Span,
+                        color: u.F.Alt2,
                         ellipsis: !0,
                         title: this.formatTitle(e)
-                    }, e, r.createElement(m.Q, {
+                    }, e, o.createElement(u.Q, {
                         padding: {
                             x: .5
                         }
-                    }, r.createElement("span", null, "·")), t)))
+                    }, o.createElement("span", null, "·")), t)))
                 }, t.prototype.getVideoPreviousWatchPercentage = function() {
                     return this.props.video && this.props.video.self && this.props.video.self.viewingHistory && null !== this.props.video.self.viewingHistory.position ? 0 === this.props.video.lengthSeconds || 0 === this.props.video.self.viewingHistory.position ? null : this.props.video.self.viewingHistory.position / this.props.video.lengthSeconds * 100 : null
                 }, t.prototype.showGameArt = function() {
@@ -8771,15 +8382,15 @@ webpackJsonp([45], {
                         medium: this.props.tracking.medium
                     }
                 }, t
-            }(r.Component)),
-            g = Object(u.d)("VideoPreviewCard")(v)
+            }(o.Component)),
+            g = Object(m.d)("VideoPreviewCard")(v)
     },
     annQ: function(e, t, n) {
         function i(e) {
             return e.filter(function(e) {
                 if ("FragmentDefinition" !== e.kind) return !0;
                 var t = e.name.value;
-                return !l[t] && (l[t] = !0, !0)
+                return !r[t] && (r[t] = !0, !0)
             })
         }
         var a = {
@@ -8809,8 +8420,7 @@ webpackJsonp([45], {
                                 value: "Boolean"
                             }
                         }
-                    },
-                    defaultValue: null
+                    }
                 }, {
                     kind: "VariableDefinition",
                     variable: {
@@ -8829,8 +8439,7 @@ webpackJsonp([45], {
                                 value: "Boolean"
                             }
                         }
-                    },
-                    defaultValue: null
+                    }
                 }, {
                     kind: "VariableDefinition",
                     variable: {
@@ -8849,15 +8458,13 @@ webpackJsonp([45], {
                                 value: "String"
                             }
                         }
-                    },
-                    defaultValue: null
+                    }
                 }],
                 directives: [],
                 selectionSet: {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "bitsOffers"
@@ -8897,7 +8504,6 @@ webpackJsonp([45], {
                         }
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "currentUser"
@@ -8928,37 +8534,30 @@ webpackJsonp([45], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "idSHA1"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "bitsBalance"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "bitsOffers"
@@ -8980,7 +8579,6 @@ webpackJsonp([45], {
                         }
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "user"
@@ -9024,14 +8622,12 @@ webpackJsonp([45], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "FragmentSpread",
                                 name: {
@@ -9057,7 +8653,7 @@ webpackJsonp([45], {
                 column: 1
             }
         };
-        var l = {};
+        var r = {};
         a.definitions = a.definitions.concat(i(n("OcEY").definitions)), a.definitions = a.definitions.concat(i(n("576g").definitions)), e.exports = a
     },
     aqNN: function(e, t, n) {
@@ -9088,8 +8684,7 @@ webpackJsonp([45], {
                                 value: "Boolean"
                             }
                         }
-                    },
-                    defaultValue: null
+                    }
                 }, {
                     kind: "VariableDefinition",
                     variable: {
@@ -9108,8 +8703,7 @@ webpackJsonp([45], {
                                 value: "Boolean"
                             }
                         }
-                    },
-                    defaultValue: null
+                    }
                 }, {
                     kind: "VariableDefinition",
                     variable: {
@@ -9128,15 +8722,13 @@ webpackJsonp([45], {
                                 value: "String"
                             }
                         }
-                    },
-                    defaultValue: null
+                    }
                 }],
                 directives: [],
                 selectionSet: {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "bitsOffers"
@@ -9176,7 +8768,6 @@ webpackJsonp([45], {
                         }
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "currentUser"
@@ -9207,37 +8798,30 @@ webpackJsonp([45], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "idSHA1"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "bitsBalance"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "bitsOffers"
@@ -9259,7 +8843,6 @@ webpackJsonp([45], {
                         }
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "user"
@@ -9303,27 +8886,22 @@ webpackJsonp([45], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "displayName"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "cheer"
@@ -9334,17 +8912,14 @@ webpackJsonp([45], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "id"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "settings"
@@ -9355,14 +8930,12 @@ webpackJsonp([45], {
                                             kind: "SelectionSet",
                                             selections: [{
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "cheerMinimumBits"
                                                 },
                                                 arguments: [],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }]
                                         }
                                     }]
@@ -9411,9 +8984,9 @@ webpackJsonp([45], {
             var t = new Map,
                 n = new Map,
                 i = new Map,
-                l = new Map;
+                r = new Map;
             return e.images.forEach(function(e) {
-                "LIGHT" === e.theme ? e.isAnimated ? n.set(e.dpiScale, e.url) : t.set(e.dpiScale, e.url) : e.isAnimated ? l.set(e.dpiScale, e.url) : i.set(e.dpiScale, e.url)
+                "LIGHT" === e.theme ? e.isAnimated ? n.set(e.dpiScale, e.url) : t.set(e.dpiScale, e.url) : e.isAnimated ? r.set(e.dpiScale, e.url) : i.set(e.dpiScale, e.url)
             }), a.__assign({
                 indexedImages: {
                     LIGHT: {
@@ -9422,7 +8995,7 @@ webpackJsonp([45], {
                     },
                     DARK: {
                         static: i,
-                        animated: l
+                        animated: r
                     }
                 }
             }, e)
@@ -9442,7 +9015,7 @@ webpackJsonp([45], {
                         e.forEach(function(e) {
                             t.forEach(function(t) {
                                 n.push({
-                                    url: r.a + "/cheer/" + e.toLowerCase() + "/" + t + "/100000/" + i + "." + ("static" === t ? "png" : "gif"),
+                                    url: o.a + "/cheer/" + e.toLowerCase() + "/" + t + "/100000/" + i + "." + ("static" === t ? "png" : "gif"),
                                     isAnimated: "animated" === t,
                                     theme: e,
                                     dpiScale: i
@@ -9452,19 +9025,19 @@ webpackJsonp([45], {
                     }), i({
                         id: "Cheer:100000",
                         bits: 1e5,
-                        color: r.e[l.a.Yellow],
+                        color: o.e[r.a.Yellow],
                         images: n
                     })
                 }()), s.sort(function(e, t) {
                     return t.bits - e.bits
                 });
-                var o = a.__assign({}, e, {
+                var l = a.__assign({}, e, {
                     indexedTiers: new Map(s.map(function(e) {
                         return [e.bits, e]
                     })),
                     orderedTiers: s
                 });
-                t.push(o), n[o.prefix.toLowerCase()] = o
+                t.push(l), n[l.prefix.toLowerCase()] = l
             }), {
                 indexedActions: n,
                 orderedActions: t
@@ -9482,44 +9055,44 @@ webpackJsonp([45], {
             }
         };
         var a = n("TToO"),
-            l = n("I89S"),
-            r = n("3iBR")
+            r = n("I89S"),
+            o = n("3iBR")
     },
     cSst: function(e, t, n) {
         "use strict";
         var i = n("TToO"),
             a = n("U7vG"),
-            l = n("F8kA"),
-            r = n("Odds"),
+            r = n("F8kA"),
+            o = n("Odds"),
             s = function(e) {
-                return a.createElement(r.V, {
+                return a.createElement(o.V, {
                     margin: {
                         right: 1
                     },
-                    display: r.H.Flex,
-                    alignItems: r.c.Center
-                }, a.createElement(r._31, {
-                    align: r._32.Left,
+                    display: o.H.Flex,
+                    alignItems: o.c.Center
+                }, a.createElement(o._31, {
+                    align: o._32.Left,
                     label: e.tooltip,
-                    direction: r._33.Bottom
-                }, a.createElement(r.V, {
+                    direction: o._33.Bottom
+                }, a.createElement(o.V, {
                     margin: {
                         right: .5
                     }
-                }, a.createElement(r._19, {
-                    display: r.H.Flex,
-                    alignItems: r.c.Center,
-                    color: r.F.Alt2
-                }, a.createElement(r._10, {
+                }, a.createElement(o._19, {
+                    display: o.H.Flex,
+                    alignItems: o.c.Center,
+                    color: o.F.Alt2
+                }, a.createElement(o._10, {
                     asset: e.svgAsset,
                     width: 18,
                     height: 18
-                }))), a.createElement(r._23, {
-                    fontSize: r.L.Size5,
+                }))), a.createElement(o._23, {
+                    fontSize: o.L.Size5,
                     ellipsis: !0
-                }, a.createElement(l.a, i.__assign({
+                }, a.createElement(r.a, i.__assign({
                     to: e.linkTo
-                }, Object(r._40)(e), {
+                }, Object(o._40)(e), {
                     target: e.target
                 }), e.title))))
             };
@@ -9531,13 +9104,13 @@ webpackJsonp([45], {
         "use strict";
         var i = n("6sO2"),
             a = n("Ejve"),
-            l = n("MSvX");
+            r = n("MSvX");
         t.a = function(e) {
-            return i.b.get(l.a, !1) || i.a.buildType !== a.a.Production ? "string" == typeof e ? e : e.pathname || "" : "string" == typeof e ? r + e : r + e.pathname
+            return i.b.get(r.a, !1) || i.a.buildType !== a.a.Production ? "string" == typeof e ? e : e.pathname || "" : "string" == typeof e ? o + e : o + e.pathname
         }, t.b = function() {
-            return !i.b.get(l.a, !1) && i.a.buildType === a.a.Production
+            return !i.b.get(r.a, !1) && i.a.buildType === a.a.Production
         };
-        var r = "https://www.twitch.tv"
+        var o = "https://www.twitch.tv"
     },
     dQj3: function(e, t, n) {
         "use strict";
@@ -9567,7 +9140,7 @@ webpackJsonp([45], {
                     return e[t.setID] = t.version, e
                 }, {});
             return {
-                type: r.a.Post,
+                type: o.a.Post,
                 id: e.id,
                 badges: c,
                 bits: e.bitsUsed,
@@ -9576,9 +9149,9 @@ webpackJsonp([45], {
                 user: a.__assign({
                     userID: e.author.id,
                     userLogin: e.author.login,
-                    userType: l.a.User,
+                    userType: r.a.User,
                     color: e.authorColor
-                }, Object(o.a)(e.authorName, e.author.login)),
+                }, Object(l.a)(e.authorName, e.author.login)),
                 messageParts: Object(s.f)(e.body.content, d, e.bitsUsed, t, n, e.authorName)
             }
         }, t.c = function(e) {
@@ -9623,10 +9196,10 @@ webpackJsonp([45], {
             }
         };
         var a = n("TToO"),
-            l = n("6Agf"),
-            r = n("qkCi"),
+            r = n("6Agf"),
+            o = n("qkCi"),
             s = n("l21v"),
-            o = n("e1CU")
+            l = n("e1CU")
     },
     ea40: function(e, t) {},
     fHoP: function(e, t) {},
@@ -9634,20 +9207,20 @@ webpackJsonp([45], {
         "use strict";
 
         function i(e) {
-            var t, n = Object(l.d)("{bitsAmount} Bits", {
+            var t, n = Object(r.d)("{bitsAmount} Bits", {
                 bitsAmount: e.count.toString()
             }, "Bits--BitsCount");
             if (e.withImage) {
                 var i = e.bitsConfig.indexedActions[s.f];
                 i || (i = Object(d.b)());
-                var u = i.orderedTiers.find(function(t) {
+                var m = i.orderedTiers.find(function(t) {
                     return t.bits <= e.count
                 });
-                if (u) {
-                    var m = Object(o.b)(u);
-                    return void 0 !== e.themeOverride && (e.themeOverride === r.a.Light ? m.dark = m.light : m.light = m.dark), t = a.createElement(c.a, {
+                if (m) {
+                    var u = Object(l.b)(m);
+                    return void 0 !== e.themeOverride && (e.themeOverride === o.a.Light ? u.dark = u.light : u.light = u.dark), t = a.createElement(c.a, {
                         className: "bits-count--img",
-                        sources: m
+                        sources: u
                     }), a.createElement("strong", {
                         className: "bits-count",
                         "data-a-target": "bits-count"
@@ -9660,10 +9233,10 @@ webpackJsonp([45], {
             }, a.createElement("span", null, n))
         }
         var a = n("U7vG"),
-            l = n("6sO2"),
-            r = n("NXs7"),
+            r = n("6sO2"),
+            o = n("NXs7"),
             s = n("3iBR"),
-            o = n("iydZ"),
+            l = n("iydZ"),
             d = n("CFVp"),
             c = n("qe65");
         n("1pvm");
@@ -9687,18 +9260,18 @@ webpackJsonp([45], {
                                 "function" == typeof e.properties ? t = e.properties(i.props) : e.properties && (t = a.__assign({}, e.properties));
                                 var n = a.__assign({}, i.props);
                                 n.location && n.location.state && (t.medium = n.location.state.medium, t.content = n.location.state.content, t.content_index = n.location.state.content_index);
-                                var l = i.referenceTracking,
-                                    r = l.content,
-                                    s = l.medium,
-                                    d = l.content_index;
-                                o.n.tracking.trackPageview(a.__assign({
-                                    content: r,
+                                var r = i.referenceTracking,
+                                    o = r.content,
+                                    s = r.medium,
+                                    d = r.content_index;
+                                l.n.tracking.trackPageview(a.__assign({
+                                    content: o,
                                     medium: s,
                                     content_index: d,
                                     location: e.location
                                 }, t))
                             }
-                        }, o.i.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : o.i.warn("No latency tracker exists! This means no data will be sent to Spade.", e), i
+                        }, l.i.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : l.i.warn("No latency tracker exists! This means no data will be sent to Spade.", e), i
                     }
                     return a.__extends(i, n), i.prototype.componentDidMount = function() {
                         var e = this;
@@ -9708,9 +9281,9 @@ webpackJsonp([45], {
                     }, i.prototype.componentDidUpdate = function() {
                         this.trackPageview()
                     }, i.prototype.render = function() {
-                        return r.createElement(t, a.__assign({}, this.props))
+                        return o.createElement(t, a.__assign({}, this.props))
                     }, i.prototype.stripTTParams = function(e) {
-                        var t = "" !== e.search ? l.parse(e.search) : {},
+                        var t = "" !== e.search ? r.parse(e.search) : {},
                             n = {
                                 content: t.tt_content,
                                 content_index: t.tt_content_index,
@@ -9718,7 +9291,7 @@ webpackJsonp([45], {
                             };
                         if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, n.medium || n.content) {
                             var i = "",
-                                a = l.stringify(t);
+                                a = r.stringify(t);
                             a.length > 0 && (i = "?" + a), this.props.history.replace({
                                 pathname: e.pathname,
                                 hash: e.hash,
@@ -9727,15 +9300,15 @@ webpackJsonp([45], {
                         }
                         return n
                     }, i
-                }(r.Component);
+                }(o.Component);
                 return Object(s.f)(n)
             }
         }
         var a = n("TToO"),
-            l = n("OAwv"),
-            r = n("U7vG"),
+            r = n("OAwv"),
+            o = n("U7vG"),
             s = n("F8kA"),
-            o = n("6sO2");
+            l = n("6sO2");
         n.d(t, "a", function() {
             return i
         })
@@ -9768,16 +9341,16 @@ webpackJsonp([45], {
         }), n.d(t, "b", function() {
             return a
         }), n.d(t, "d", function() {
-            return l
-        }), n.d(t, "e", function() {
             return r
+        }), n.d(t, "e", function() {
+            return o
         }), n.d(t, "c", function() {
             return s
         });
         var i = "AD",
             a = "BUNDLE",
-            l = "first_time_purchase",
-            r = "single_purchase",
+            r = "first_time_purchase",
+            o = "single_purchase",
             s = "black_friday_2017"
     },
     kOMe: function(e, t) {
@@ -9808,15 +9381,13 @@ webpackJsonp([45], {
                                 value: "String"
                             }
                         }
-                    },
-                    defaultValue: null
+                    }
                 }],
                 directives: [],
                 selectionSet: {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "user"
@@ -9840,37 +9411,30 @@ webpackJsonp([45], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "login"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "displayName"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "profileImageURL"
@@ -9886,11 +9450,9 @@ webpackJsonp([45], {
                                         value: "70"
                                     }
                                 }],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "roles"
@@ -9901,19 +9463,16 @@ webpackJsonp([45], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "isPartner"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }]
                                 }
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "stream"
@@ -9924,19 +9483,16 @@ webpackJsonp([45], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "id"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }]
                                 }
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "videos"
@@ -9947,19 +9503,16 @@ webpackJsonp([45], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "totalCount"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }]
                                 }
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "followers"
@@ -9970,19 +9523,16 @@ webpackJsonp([45], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "totalCount"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }]
                                 }
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "follows"
@@ -9993,19 +9543,16 @@ webpackJsonp([45], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "totalCount"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }]
                                 }
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "cheer"
@@ -10016,21 +9563,18 @@ webpackJsonp([45], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "id"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }]
                                 }
                             }]
                         }
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "currentUser"
@@ -10041,17 +9585,14 @@ webpackJsonp([45], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "roles"
@@ -10062,24 +9603,20 @@ webpackJsonp([45], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "isStaff"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "isSiteAdmin"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }]
                                 }
                             }]
@@ -10112,8 +9649,8 @@ webpackJsonp([45], {
         t.a = function(e, t) {
             var n = Math.floor(e % 60),
                 a = Math.floor(e % 3600 / 60),
-                l = Math.floor(e / 3600);
-            return t && t.zeroPadAll ? i(l, 2) + ":" + i(a, 2) + ":" + i(n, 2) : l ? l + ":" + i(a, 2) + ":" + i(n, 2) : a + ":" + i(n, 2)
+                r = Math.floor(e / 3600);
+            return t && t.zeroPadAll ? i(r, 2) + ":" + i(a, 2) + ":" + i(n, 2) : r ? r + ":" + i(a, 2) + ":" + i(n, 2) : a + ":" + i(n, 2)
         }
     },
     nmDn: function(e, t) {
@@ -10144,15 +9681,13 @@ webpackJsonp([45], {
                                 value: "String"
                             }
                         }
-                    },
-                    defaultValue: null
+                    }
                 }],
                 directives: [],
                 selectionSet: {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "user"
@@ -10176,27 +9711,22 @@ webpackJsonp([45], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "login"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "profileImageURL"
@@ -10212,8 +9742,7 @@ webpackJsonp([45], {
                                         value: "70"
                                     }
                                 }],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }]
                         }
                     }]
@@ -10237,27 +9766,27 @@ webpackJsonp([45], {
     nrdj: function(e, t, n) {
         "use strict";
         var i, a = n("HW6M"),
-            l = n("U7vG"),
-            r = n("6sO2"),
+            r = n("U7vG"),
+            o = n("6sO2"),
             s = n("iydZ"),
-            o = n("CFVp"),
+            l = n("CFVp"),
             d = n("qe65"),
             c = n("Odds");
         n("PPK2");
         ! function(e) {
             e[e.Large = 4] = "Large", e[e.Medium = 3] = "Medium", e[e.Small = 2] = "Small", e[e.ExtraSmall = 1.5] = "ExtraSmall", e[e.ExtremelySmall = 1] = "ExtremelySmall"
         }(i || (i = {}));
-        var u = function(e) {
+        var m = function(e) {
             var t = e.bitsConfig.indexedActions[e.prefix.toLowerCase()];
-            t || (t = Object(o.b)());
+            t || (t = Object(l.b)());
             var n = t.orderedTiers.find(function(t) {
                 return t.bits <= (e.amount || 100)
             });
             n || (n = t.orderedTiers[0]);
-            var u = e.display === c.H.Inline || e.display === c.H.InlineFlex || e.display === c.H.InlineBlock,
-                m = null,
+            var m = e.display === c.H.Inline || e.display === c.H.InlineFlex || e.display === c.H.InlineBlock,
+                u = null,
                 p = a("cheermote-for-amount__cheer-amount", {
-                    "cheermote-for-amount__display--table-cell": !u
+                    "cheermote-for-amount__display--table-cell": !m
                 }, {
                     "cheermote-for-amount__cheer-amount--medium": e.size === i.Medium
                 }, {
@@ -10266,11 +9795,11 @@ webpackJsonp([45], {
                     "cheermote-for-amount__cheer-amount--extremely-small": e.size === i.ExtremelySmall
                 });
             if (e.amount && e.showAmount) {
-                var v = e.formattedNumber ? Object(r.e)(e.amount) : e.amount;
-                m = l.createElement(c.Q, {
+                var v = e.formattedNumber ? Object(o.e)(e.amount) : e.amount;
+                u = r.createElement(c.Q, {
                     padding: e.size === i.Small ? 0 : void 0,
                     textAlign: e.size === i.Small ? c._24.Center : void 0
-                }, l.createElement("strong", {
+                }, r.createElement("strong", {
                     className: p,
                     style: {
                         color: n.color
@@ -10278,9 +9807,9 @@ webpackJsonp([45], {
                 }, v))
             }
             var g = a("cheermote-for-amount__cheer-image", {
-                    "cheermote-for-amount__display--table-cell": !u
+                    "cheermote-for-amount__display--table-cell": !m
                 }, {
-                    "cheermote-for-amount__cheer--inline": u
+                    "cheermote-for-amount__cheer--inline": m
                 }, {
                     "cheermote-for-amount__cheer-image--small": e.size === i.Small
                 }, {
@@ -10288,18 +9817,18 @@ webpackJsonp([45], {
                 }, {
                     "cheermote-for-amount__cheer-image--extremely-small": e.size === i.ExtremelySmall
                 }),
-                h = l.createElement(d.a, {
+                h = r.createElement(d.a, {
                     className: g,
                     sources: Object(s.b)(n, e.size || i.Large, e.animated)
                 });
-            return e.showImage || (h = null), l.createElement(c.V, {
+            return e.showImage || (h = null), r.createElement(c.V, {
                 className: "cheermote-for-amount",
                 alignItems: e.alignItems,
                 display: e.display
-            }, h, m)
+            }, h, u)
         };
         n.d(t, "a", function() {
-            return u
+            return m
         }), n.d(t, "b", function() {
             return i
         })
@@ -10327,57 +9856,46 @@ webpackJsonp([45], {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "id"
                         },
                         arguments: [],
-                        directives: [],
-                        selectionSet: null
+                        directives: []
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "title"
                         },
                         arguments: [],
-                        directives: [],
-                        selectionSet: null
+                        directives: []
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "description"
                         },
                         arguments: [],
-                        directives: [],
-                        selectionSet: null
+                        directives: []
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "startAt"
                         },
                         arguments: [],
-                        directives: [],
-                        selectionSet: null
+                        directives: []
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "endAt"
                         },
                         arguments: [],
-                        directives: [],
-                        selectionSet: null
+                        directives: []
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "game"
@@ -10388,27 +9906,22 @@ webpackJsonp([45], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "displayName"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "boxArtURL"
@@ -10434,13 +9947,11 @@ webpackJsonp([45], {
                                         value: "380"
                                     }
                                 }],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }]
                         }
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "channel"
@@ -10451,37 +9962,30 @@ webpackJsonp([45], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "login"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "displayName"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "profileImageURL"
@@ -10497,13 +10001,11 @@ webpackJsonp([45], {
                                         value: "300"
                                     }
                                 }],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }]
                         }
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "premiere"
@@ -10514,17 +10016,14 @@ webpackJsonp([45], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "status"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "pastPremiere"
@@ -10535,37 +10034,30 @@ webpackJsonp([45], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "id"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "broadcastType"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "description"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "thumbnailURLs"
@@ -10591,41 +10083,33 @@ webpackJsonp([45], {
                                                 value: "180"
                                             }
                                         }],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "viewCount"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "title"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "animatedPreviewURL"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "previewThumbnailURL"
@@ -10651,31 +10135,25 @@ webpackJsonp([45], {
                                                 value: "180"
                                             }
                                         }],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "publishedAt"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "lengthSeconds"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "owner"
@@ -10686,39 +10164,32 @@ webpackJsonp([45], {
                                             kind: "SelectionSet",
                                             selections: [{
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "id"
                                                 },
                                                 arguments: [],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }, {
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "login"
                                                 },
                                                 arguments: [],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }, {
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "displayName"
                                                 },
                                                 arguments: [],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }]
                                         }
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "game"
@@ -10729,27 +10200,22 @@ webpackJsonp([45], {
                                             kind: "SelectionSet",
                                             selections: [{
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "id"
                                                 },
                                                 arguments: [],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }, {
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "name"
                                                 },
                                                 arguments: [],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }, {
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "boxArtURL"
@@ -10775,13 +10241,11 @@ webpackJsonp([45], {
                                                         value: "380"
                                                     }
                                                 }],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }]
                                         }
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "self"
@@ -10792,7 +10256,6 @@ webpackJsonp([45], {
                                             kind: "SelectionSet",
                                             selections: [{
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "viewingHistory"
@@ -10803,14 +10266,12 @@ webpackJsonp([45], {
                                                     kind: "SelectionSet",
                                                     selections: [{
                                                         kind: "Field",
-                                                        alias: null,
                                                         name: {
                                                             kind: "Name",
                                                             value: "position"
                                                         },
                                                         arguments: [],
-                                                        directives: [],
-                                                        selectionSet: null
+                                                        directives: []
                                                     }]
                                                 }
                                             }]
@@ -10821,7 +10282,6 @@ webpackJsonp([45], {
                         }
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "imageURL"
@@ -10847,11 +10307,9 @@ webpackJsonp([45], {
                                 value: "180"
                             }
                         }],
-                        directives: [],
-                        selectionSet: null
+                        directives: []
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "self"
@@ -10862,14 +10320,12 @@ webpackJsonp([45], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "isFollowing"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }]
                         }
                     }]
@@ -10922,57 +10378,46 @@ webpackJsonp([45], {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "id"
                         },
                         arguments: [],
-                        directives: [],
-                        selectionSet: null
+                        directives: []
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "title"
                         },
                         arguments: [],
-                        directives: [],
-                        selectionSet: null
+                        directives: []
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "description"
                         },
                         arguments: [],
-                        directives: [],
-                        selectionSet: null
+                        directives: []
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "startAt"
                         },
                         arguments: [],
-                        directives: [],
-                        selectionSet: null
+                        directives: []
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "endAt"
                         },
                         arguments: [],
-                        directives: [],
-                        selectionSet: null
+                        directives: []
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "game"
@@ -10983,27 +10428,22 @@ webpackJsonp([45], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "displayName"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "boxArtURL"
@@ -11029,13 +10469,11 @@ webpackJsonp([45], {
                                         value: "380"
                                     }
                                 }],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }]
                         }
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "channel"
@@ -11046,37 +10484,30 @@ webpackJsonp([45], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "login"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "displayName"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "profileImageURL"
@@ -11092,13 +10523,11 @@ webpackJsonp([45], {
                                         value: "300"
                                     }
                                 }],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }]
                         }
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "imageURL"
@@ -11124,11 +10553,9 @@ webpackJsonp([45], {
                                 value: "180"
                             }
                         }],
-                        directives: [],
-                        selectionSet: null
+                        directives: []
                     }, {
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "self"
@@ -11139,14 +10566,12 @@ webpackJsonp([45], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "isFollowing"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }]
                         }
                     }]
@@ -11173,22 +10598,22 @@ webpackJsonp([45], {
         "use strict";
         var i = n("RH2O"),
             a = n("2KeS"),
-            l = n("V5M+"),
-            r = n("Aj/L"),
+            r = n("V5M+"),
+            o = n("Aj/L"),
             s = n("J92i"),
-            o = Object(i.a)(function(e) {
+            l = Object(i.b)(function(e) {
                 return {
-                    authToken: Object(r.a)(e)
+                    authToken: Object(o.a)(e)
                 }
             }, function(e, t) {
-                return Object(a.bindActionCreators)({
+                return Object(a.b)({
                     closeModal: function() {
-                        return t.successCallback && t.successCallback(), Object(l.c)()
+                        return t.successCallback && t.successCallback(), Object(r.c)()
                     }
                 }, e)
             })(s.a);
         n.d(t, "a", function() {
-            return o
+            return l
         })
     },
     xgnX: function(e, t, n) {
@@ -11196,80 +10621,80 @@ webpackJsonp([45], {
         n.d(t, "a", function() {
             return i
         }), n.d(t, "b", function() {
-            return r
+            return o
         }), t.c = function(e) {
             switch (e) {
-                case r.Success:
+                case o.Success:
                     return {
                         message: Object(a.d)("Success!", "Profile Edit"),
-                        type: l._2.Success
+                        type: r._2.Success
                     };
-                case r.UnexpectedError:
+                case o.UnexpectedError:
                     return {
                         message: Object(a.d)("Unexpected error, please try again.", "Profile Edit"),
-                        type: l._2.Alert
+                        type: r._2.Alert
                     };
-                case r.BadSizeError:
+                case o.BadSizeError:
                     return {
                         message: Object(a.d)("Image might exceed 10MB.", "Profile Edit"),
-                        type: l._2.Alert
+                        type: r._2.Alert
                     };
-                case r.NonImageError:
+                case o.NonImageError:
                     return {
                         message: Object(a.d)("You must upload an image.", "Profile Edit"),
-                        type: l._2.Alert
+                        type: r._2.Alert
                     };
-                case r.WrongFormatError:
+                case o.WrongFormatError:
                     return {
                         message: Object(a.d)("You must select a valid image type.", "Profile Edit"),
-                        type: l._2.Alert
+                        type: r._2.Alert
                     };
-                case r.TimeoutError:
+                case o.TimeoutError:
                     return {
                         message: Object(a.d)("Upload timed-out. Please try again.", "Profile Edit"),
-                        type: l._2.Alert
+                        type: r._2.Alert
                     };
-                case r.Uploading:
+                case o.Uploading:
                     return {
                         message: Object(a.d)("Uploading....", "Profile Edit"),
-                        type: l._2.Brand
+                        type: r._2.Brand
                     };
-                case r.ImageNotSelected:
+                case o.ImageNotSelected:
                     return {
                         message: Object(a.d)("Select a image first.", "Profile Edit"),
-                        type: l._2.Alert
+                        type: r._2.Alert
                     };
                 default:
                     return {
                         message: Object(a.d)("Please try again.", "Profile Edit"),
-                        type: l._2.Alert
+                        type: r._2.Alert
                     }
             }
         };
         var i, a = n("6sO2"),
-            l = n("Odds");
+            r = n("Odds");
         ! function(e) {
             e.Success = "SUCCESS", e.NonImage = "IS_IMAGE_VALIDATION_FAILED", e.WrongFormat = "IMAGE_FORMAT_VALIDATION_FAILED", e.BadSize = "FILE_SIZE_VALIDATION_FAILED"
         }(i || (i = {}));
-        var r;
+        var o;
         ! function(e) {
             e[e.Success = 0] = "Success", e[e.UnexpectedError = 1] = "UnexpectedError", e[e.BadSizeError = 2] = "BadSizeError", e[e.NonImageError = 3] = "NonImageError", e[e.WrongFormatError = 4] = "WrongFormatError", e[e.TimeoutError = 5] = "TimeoutError", e[e.Uploading = 6] = "Uploading", e[e.ImageNotSelected = 7] = "ImageNotSelected"
-        }(r || (r = {}))
+        }(o || (o = {}))
     },
     ySfT: function(e, t, n) {
         "use strict";
         var i = n("U7vG"),
             a = n("6sO2"),
-            l = n("3iBR"),
-            r = n("qe65"),
+            r = n("3iBR"),
+            o = n("qe65"),
             s = n("Odds"),
-            o = (n("6lb1"), {
+            l = (n("6lb1"), {
                 themed: !0,
                 dark: {
-                    "1x": l.b + "/dark/animated/1/cheertutorial.gif"
+                    "1x": r.b + "/dark/animated/1/cheertutorial.gif"
                 },
                 light: {
-                    "1x": l.b + "/light/animated/1/cheertutorial.gif"
+                    "1x": r.b + "/light/animated/1/cheertutorial.gif"
                 }
             }),
             d = function() {
@@ -11285,9 +10710,9 @@ webpackJsonp([45], {
                 }, i.createElement(s._23, {
                     type: s._28.H4,
                     bold: !0
-                }, i.createElement(r.a, {
+                }, i.createElement(o.a, {
                     className: "cheermote-help__tutorial-image",
-                    sources: o
+                    sources: l
                 }), Object(a.d)("How to Cheer", "Bits--CheermoteHelp")), i.createElement("p", {
                     className: "t-bits-card__contents-body t-bits-card__contents-body--narrow"
                 }, Object(a.d)('Type "cheer" + the number of Bits you want to Cheer.', "Bits--CheermoteHelp")))
@@ -11327,15 +10752,13 @@ webpackJsonp([45], {
                                 value: "RedeemTrueXAdInput"
                             }
                         }
-                    },
-                    defaultValue: null
+                    }
                 }],
                 directives: [],
                 selectionSet: {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "redeemTrueXAd"
@@ -11359,14 +10782,12 @@ webpackJsonp([45], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "grantedBits"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }]
                         }
                     }]
@@ -11388,4 +10809,4 @@ webpackJsonp([45], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.event-landing-96bf61d62a0411cacf5fcce2be870a69.js.map
+//# sourceMappingURL=pages.event-landing-6b8e0b1ddb0c37c3e2934def0b13ec16.js.map

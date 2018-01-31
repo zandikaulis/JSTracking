@@ -10,16 +10,16 @@ webpackJsonp([54], {
                 category: "Monetization",
                 section_name: "amazon_associates"
             }, e);
-            s.m.track(m.SpadeEventType.PartnerAffiliateSettings, t)
+            c.m.track(m.SpadeEventType.PartnerAffiliateSettings, t)
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
         var i, o = n("TToO"),
             r = n("U7vG"),
-            l = n("HW6M"),
-            s = n("6sO2"),
-            c = n("7vx8"),
+            s = n("HW6M"),
+            c = n("6sO2"),
+            l = n("7vx8"),
             d = n("jF7o"),
             m = n("vH/s");
         ! function(e) {
@@ -37,31 +37,31 @@ webpackJsonp([54], {
         (f || (f = {})).CLICK = "click";
         var h = n("Odds"),
             k = n("ZOrf"),
-            A = (n("2AKG"), function(e) {
+            g = (n("2AKG"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderButtonText = function(e) {
-                        return e ? Object(s.d)("Edit", "AmazonRetailAssociatesAccountLinking") : Object(s.d)("Get Started", "AmazonRetailAssociatesAccountLinking")
+                        return e ? Object(c.d)("Edit", "AmazonRetailAssociatesAccountLinking") : Object(c.d)("Get Started", "AmazonRetailAssociatesAccountLinking")
                     }, t.renderDescriptionText = function(e) {
-                        return e ? Object(s.d)("Link to {storeID}", {
+                        return e ? Object(c.d)("Link to {storeID}", {
                             storeID: r.createElement(h._23, {
                                 type: h._28.Span,
                                 bold: !0
                             }, e)
-                        }, "AmazonRetailAssociatesAccountLinking") : Object(s.d)("Create and link an Amazon Associates account to your Twitch account. Only one Amazon account may be linked at any one time.", "AmazonRetailAssociatesAccountLinking")
+                        }, "AmazonRetailAssociatesAccountLinking") : Object(c.d)("Create and link an Amazon Associates account to your Twitch account. Only one Amazon account may be linked at any one time.", "AmazonRetailAssociatesAccountLinking")
                     }, t.launchLinkAccount = function(e) {
                         e.preventDefault();
                         var n = "https://twitch.amazon.com/associates/register",
                             o = t.props.data.user && t.props.data.user.roles,
                             r = t.props.data.user && t.props.data.user.amazon.associatesStore.storeID,
-                            l = i.NONE,
-                            s = u.NONE;
-                        o && (l = o.isPartner ? i.PARTNER : o.isAffiliate ? i.AFFILIATE : i.NONE), r && (s = u.LINKED), t.launchPopup(n), a({
+                            s = i.NONE,
+                            c = u.NONE;
+                        o && (s = o.isPartner ? i.PARTNER : o.isAffiliate ? i.AFFILIATE : i.NONE), r && (c = u.LINKED), t.launchPopup(n), a({
                             action: r ? p.LinkAccountEdit : p.LinkAccountGetStarted,
                             channel: t.props.channelName,
                             channel_id: t.props.data.user && t.props.data.user.id,
-                            partner_status: l,
-                            associate_status: s,
+                            partner_status: s,
+                            associate_status: c,
                             target: n
                         })
                     }, t.launchAssociatesAccount = function(e) {
@@ -93,7 +93,7 @@ webpackJsonp([54], {
                         className: "amazon-associates-account-linking__label"
                     }, r.createElement(h._23, {
                         bold: !0
-                    }, Object(s.d)("Link an Amazon Associates Account", "AmazonRetailAssociatesAccountLinking"))), r.createElement(h.V, {
+                    }, Object(c.d)("Link an Amazon Associates Account", "AmazonRetailAssociatesAccountLinking"))), r.createElement(h.V, {
                         display: h.H.Flex,
                         flexDirection: h.J.Column,
                         padding: 2
@@ -111,7 +111,7 @@ webpackJsonp([54], {
                         flexDirection: h.J.Row,
                         flexWrap: h.K.NoWrap,
                         "data-test-selector": "amazon-associates-account-linking-tax-info",
-                        className: l({
+                        className: s({
                             "amazon-associates-account-linking__tax-info--error": !(!e || t)
                         })
                     }, r.createElement(h.V, {
@@ -126,11 +126,11 @@ webpackJsonp([54], {
                         className: "amazon-associates-account-linking__label"
                     }, r.createElement(h._23, {
                         bold: !0
-                    }, Object(s.d)("Receive payments from Amazon.com", "AmazonRetailAssociatesAccountLinking"))), r.createElement(h.V, {
+                    }, Object(c.d)("Receive payments from Amazon.com", "AmazonRetailAssociatesAccountLinking"))), r.createElement(h.V, {
                         display: h.H.Flex,
                         flexDirection: h.J.Column,
                         padding: 2
-                    }, r.createElement(h._23, null, Object(s.d)("To receive payments, please provide your <x:tax>Tax Information</x:tax> and your <x:payment>Payment Information</x:payment>. Note, changes made to your Tax Information must be made by the primary account holder and any changes after the 15th will go into effect the following month. Please ignore this message if you have already submitted your information.", {
+                    }, r.createElement(h._23, null, Object(c.d)("To receive payments, please provide your <x:tax>Tax Information</x:tax> and your <x:payment>Payment Information</x:payment>. Note, changes made to your Tax Information must be made by the primary account holder and any changes after the 15th will go into effect the following month. Please ignore this message if you have already submitted your information.", {
                         "x:tax": function(e) {
                             return r.createElement(h._23, {
                                 key: "tax",
@@ -158,18 +158,18 @@ webpackJsonp([54], {
                     }, r.createElement("a", {
                         href: "#",
                         onClick: this.launchAssociatesAccount
-                    }, Object(s.d)("Add/update tax information", "AmazonRetailAssociatesAccountLinking"))), r.createElement(h.Q, {
+                    }, Object(c.d)("Add/update tax information", "AmazonRetailAssociatesAccountLinking"))), r.createElement(h.Q, {
                         padding: {
                             right: 2
                         }
                     }, r.createElement("a", {
                         href: "#",
                         onClick: this.launchAssociatesAccount
-                    }, Object(s.d)("Add/update payment information", "AmazonRetailAssociatesAccountLinking"))), r.createElement("a", {
+                    }, Object(c.d)("Add/update payment information", "AmazonRetailAssociatesAccountLinking"))), r.createElement("a", {
                         href: "#",
                         onClick: this.launchAssociatesReporting
-                    }, Object(s.d)("Reporting", "AmazonRetailAssociatesAccountLinking"))))))
-                }, t = o.__decorate([Object(c.a)(k, {
+                    }, Object(c.d)("Reporting", "AmazonRetailAssociatesAccountLinking"))))))
+                }, t = o.__decorate([Object(l.a)(k, {
                     options: function(e) {
                         return {
                             variables: {
@@ -179,12 +179,12 @@ webpackJsonp([54], {
                     }
                 })], t)
             }(r.Component)),
-            g = n("RH2O"),
+            A = n("RH2O"),
             v = n("2KeS"),
             y = n("V5M+"),
             b = n("tu8+"),
-            S = (n("pBoG"), "GAME_COMMERCE_V2"),
-            _ = function(e) {
+            _ = (n("pBoG"), "GAME_COMMERCE_V2"),
+            S = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -225,7 +225,7 @@ webpackJsonp([54], {
                         className: "amazon-retail-offers__label"
                     }, r.createElement(h._23, {
                         bold: !0
-                    }, Object(s.d)("Opt in to earn revenue", "AmazonRetailOffersAmendnment"))), r.createElement(h.V, {
+                    }, Object(c.d)("Opt in to earn revenue", "AmazonRetailOffersAmendnment"))), r.createElement(h.V, {
                         padding: 2
                     }, r.createElement("div", {
                         onClick: this.onAmendmentClick,
@@ -236,20 +236,20 @@ webpackJsonp([54], {
                         checked: this.state.amendmentAccepted,
                         disabled: !0,
                         id: "amazon-retail-offers-amendment",
-                        label: Object(s.d)("Opt in to earn revenue from sales on Amazon.com", "AmazonRetailOffersAmendnment")
-                    })), r.createElement(h._23, null, Object(s.d)("Please read and agree to the new Commerce Addendum to become eligible for this program.", "AmazonRetailOffersAmendnment"))))
-                }, t = o.__decorate([Object(c.a)(b, {
+                        label: Object(c.d)("Opt in to earn revenue from sales on Amazon.com", "AmazonRetailOffersAmendnment")
+                    })), r.createElement(h._23, null, Object(c.d)("Please read and agree to the new Commerce Addendum to become eligible for this program.", "AmazonRetailOffersAmendnment"))))
+                }, t = o.__decorate([Object(l.a)(b, {
                     options: function(e) {
                         return {
                             variables: {
                                 login: e.channelName,
-                                amendmentType: S
+                                amendmentType: _
                             }
                         }
                     }
                 })], t)
             }(r.Component),
-            N = _,
+            N = S,
             E = n("oIkB"),
             w = n("Wedf"),
             O = "amendment-modal-accept-button",
@@ -273,7 +273,7 @@ webpackJsonp([54], {
                             type: h.z.Text,
                             onClick: t.onAccept,
                             disabled: !t.state.hasUserScrolled
-                        }, Object(s.d)("Accept", "AmazonRetailOffersAmendmentModal")))
+                        }, Object(c.d)("Accept", "AmazonRetailOffersAmendmentModal")))
                     }, t.onClose = function() {
                         t.props.onClose()
                     }, t.onAccept = function() {
@@ -284,7 +284,7 @@ webpackJsonp([54], {
                                         if (!0 === this.props.amendmentAccepted || !this.props.setAmendmentAcceptance) return [3, 4];
                                         e.label = 1;
                                     case 1:
-                                        return e.trys.push([1, , 3, 4]), [4, this.props.setAmendmentAcceptance(Object(E.a)(S))];
+                                        return e.trys.push([1, , 3, 4]), [4, this.props.setAmendmentAcceptance(Object(E.a)(_))];
                                     case 2:
                                         return e.sent(), a(o.__assign({
                                             action: p.AcceptCommerceAddendum
@@ -309,7 +309,7 @@ webpackJsonp([54], {
                         textAlign: h._24.Center
                     }, r.createElement(h._23, {
                         type: h._28.H4
-                    }, Object(s.d)("Addendum to Content Partner Agreement – Commerce Addendum", "AmazonRetailOffersAmendmentModal"))), r.createElement(h.V, {
+                    }, Object(c.d)("Addendum to Content Partner Agreement – Commerce Addendum", "AmazonRetailOffersAmendmentModal"))), r.createElement(h.V, {
                         padding: {
                             top: 2,
                             bottom: 2
@@ -317,7 +317,7 @@ webpackJsonp([54], {
                         textAlign: h._24.Center
                     }, r.createElement(h._23, {
                         fontSize: h.L.Size5
-                    }, Object(s.d)('Please read and agree to the following addendum ("Addendum") to your Content License and Base Agreement (or Content License Agreement, as applicable) (the "Agreement") with Twitch in order to be eligible to earn revenue for certain purchases by a Twitch user that is viewing your Twitch channel.', "AmazonRetailOffersAmendmentModal"))), r.createElement(h._19, {
+                    }, Object(c.d)('Please read and agree to the following addendum ("Addendum") to your Content License and Base Agreement (or Content License Agreement, as applicable) (the "Agreement") with Twitch in order to be eligible to earn revenue for certain purchases by a Twitch user that is viewing your Twitch channel.', "AmazonRetailOffersAmendmentModal"))), r.createElement(h._19, {
                         borderTop: !0,
                         borderRight: !0,
                         borderBottom: !0,
@@ -359,7 +359,7 @@ webpackJsonp([54], {
                         }
                     }, r.createElement(h._23, {
                         fontSize: h.L.Size4
-                    }, Object(s.d)("Summary", "AmazonRetailOffersAmendmentModal")), r.createElement(h._23, null, Object(s.d)("By accepting below, you may earn revenue for certain purchases by your viewers as described above.", "AmazonRetailOffersAmendmentModal"))), r.createElement(h._19, {
+                    }, Object(c.d)("Summary", "AmazonRetailOffersAmendmentModal")), r.createElement(h._23, null, Object(c.d)("By accepting below, you may earn revenue for certain purchases by your viewers as described above.", "AmazonRetailOffersAmendmentModal"))), r.createElement(h._19, {
                         borderTop: !0,
                         display: h.H.Flex,
                         flexDirection: h.J.Row,
@@ -378,10 +378,10 @@ webpackJsonp([54], {
                         "data-test-selector": "amendment-modal-cancel-button",
                         type: h.z.Text,
                         onClick: this.onClose
-                    }, Object(s.d)("Cancel", "AmazonRetailOffersAmendmentModal"))), this.renderAcceptButton(this.props.amendmentAccepted)))
+                    }, Object(c.d)("Cancel", "AmazonRetailOffersAmendmentModal"))), this.renderAcceptButton(this.props.amendmentAccepted)))
                 }, t
             }(r.Component),
-            x = Object(c.a)(w, {
+            x = Object(l.a)(w, {
                 name: "setAmendmentAcceptance"
             })(z),
             T = (n("4mOb"), function(e) {
@@ -400,13 +400,13 @@ webpackJsonp([54], {
                     }))
                 }, t
             }(r.Component)),
-            C = Object(g.a)(null, function(e) {
-                return Object(v.bindActionCreators)({
+            C = Object(A.b)(null, function(e) {
+                return Object(v.b)({
                     closeModal: y.c
                 }, e)
             })(T),
-            F = Object(g.a)(null, function(e) {
-                return Object(v.bindActionCreators)({
+            F = Object(A.b)(null, function(e) {
+                return Object(v.b)({
                     showAmendmentModal: function(e) {
                         var t = o.__rest(e, []);
                         return Object(y.d)(C, t)
@@ -428,7 +428,7 @@ webpackJsonp([54], {
                         }
                     }, r.createElement(F, {
                         channelName: this.props.match.params.channelName
-                    }), r.createElement(A, {
+                    }), r.createElement(g, {
                         channelName: this.props.match.params.channelName
                     })))
                 }, t
@@ -468,15 +468,13 @@ webpackJsonp([54], {
                                 value: "CommerceAmendmentType"
                             }
                         }
-                    },
-                    defaultValue: null
+                    }
                 }],
                 directives: [],
                 selectionSet: {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "setAmendmentAcceptance"
@@ -510,7 +508,6 @@ webpackJsonp([54], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "twitch"
@@ -521,7 +518,6 @@ webpackJsonp([54], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "commerceAmendment"
@@ -548,24 +544,20 @@ webpackJsonp([54], {
                                             kind: "SelectionSet",
                                             selections: [{
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "isSigned"
                                                 },
                                                 arguments: [],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }, {
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "id"
                                                 },
                                                 arguments: [],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }]
                                         }
                                     }]
@@ -618,15 +610,13 @@ webpackJsonp([54], {
                                 value: "String"
                             }
                         }
-                    },
-                    defaultValue: null
+                    }
                 }],
                 directives: [],
                 selectionSet: {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "user"
@@ -650,27 +640,22 @@ webpackJsonp([54], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "displayName"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "roles"
@@ -681,29 +666,24 @@ webpackJsonp([54], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "isPartner"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "isAffiliate"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }]
                                 }
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "amazon"
@@ -714,7 +694,6 @@ webpackJsonp([54], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "associatesStore"
@@ -725,24 +704,20 @@ webpackJsonp([54], {
                                             kind: "SelectionSet",
                                             selections: [{
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "isPayoutEnabled"
                                                 },
                                                 arguments: [],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }, {
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "storeID"
                                                 },
                                                 arguments: [],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }]
                                         }
                                     }]
@@ -817,8 +792,7 @@ webpackJsonp([54], {
                                 value: "String"
                             }
                         }
-                    },
-                    defaultValue: null
+                    }
                 }, {
                     kind: "VariableDefinition",
                     variable: {
@@ -837,15 +811,13 @@ webpackJsonp([54], {
                                 value: "CommerceAmendmentType"
                             }
                         }
-                    },
-                    defaultValue: null
+                    }
                 }],
                 directives: [],
                 selectionSet: {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "user"
@@ -869,27 +841,22 @@ webpackJsonp([54], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "displayName"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "roles"
@@ -900,29 +867,24 @@ webpackJsonp([54], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "isPartner"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }, {
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "isAffiliate"
                                         },
                                         arguments: [],
-                                        directives: [],
-                                        selectionSet: null
+                                        directives: []
                                     }]
                                 }
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "amazon"
@@ -933,7 +895,6 @@ webpackJsonp([54], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "associatesStore"
@@ -944,21 +905,18 @@ webpackJsonp([54], {
                                             kind: "SelectionSet",
                                             selections: [{
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "storeID"
                                                 },
                                                 arguments: [],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }]
                                         }
                                     }]
                                 }
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "twitch"
@@ -969,7 +927,6 @@ webpackJsonp([54], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "commerceAmendment"
@@ -996,24 +953,20 @@ webpackJsonp([54], {
                                             kind: "SelectionSet",
                                             selections: [{
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "id"
                                                 },
                                                 arguments: [],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }, {
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "isSigned"
                                                 },
                                                 arguments: [],
-                                                directives: [],
-                                                selectionSet: null
+                                                directives: []
                                             }]
                                         }
                                     }]
@@ -1039,4 +992,4 @@ webpackJsonp([54], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.dev-only-testing-amazon-offers-4b4b81ef7da54face964d17cd6a877fc.js.map
+//# sourceMappingURL=pages.dev-only-testing-amazon-offers-80f50b3139789a54ccb971c04030d180.js.map

@@ -27,7 +27,7 @@ webpackJsonp([60], {
             }
         }
 
-        function s() {
+        function c() {
             try {
                 throw new Error("throwing a super bad unrecoverable error.")
             } catch (e) {
@@ -35,7 +35,7 @@ webpackJsonp([60], {
             }
         }
 
-        function c() {
+        function s() {
             throw new Error("Throwing an uncaught error.")
         }
         Object.defineProperty(t, "__esModule", {
@@ -171,11 +171,11 @@ webpackJsonp([60], {
                 }, "Log a warning-level message"), " ", u.createElement(k.u, {
                     onClick: o
                 }, "Log an error-level message with error"), " ", u.createElement(k.u, {
-                    onClick: s
+                    onClick: c
                 }, "Log a fatal-level message with error"), " ", u.createElement(k.u, {
                     onClick: r
                 }, "Log message with unserializable argument"), " ", u.createElement(k.u, {
-                    onClick: c
+                    onClick: s
                 }, "Throw an error")), u.createElement("h2", {
                     style: {
                         margin: "2rem 0"
@@ -242,8 +242,8 @@ webpackJsonp([60], {
                     type: k._28.H2
                 }, " Infinite Scroll Test"), u.createElement(f, null))))
             }),
-            S = n("BhyV"),
-            _ = n("7vx8"),
+            _ = n("3zLD"),
+            S = n("7vx8"),
             b = n("z7vJ"),
             w = function(e) {
                 function t() {
@@ -257,7 +257,7 @@ webpackJsonp([60], {
                     }, u.createElement("p", null, "Testing GraphQL"))
                 }, t
             }(u.Component),
-            N = Object(S.compose)(Object(_.a)(b, {
+            N = Object(_.compose)(Object(S.a)(b, {
                 options: function(e) {
                     return {
                         variables: {
@@ -333,15 +333,13 @@ webpackJsonp([60], {
                                 value: "Boolean"
                             }
                         }
-                    },
-                    defaultValue: null
+                    }
                 }],
                 directives: [],
                 selectionSet: {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "currentUser"
@@ -352,14 +350,12 @@ webpackJsonp([60], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }]
                         }
                     }, {
@@ -398,14 +394,12 @@ webpackJsonp([60], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }]
                         }
                     }, {
@@ -444,14 +438,12 @@ webpackJsonp([60], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }]
                         }
                     }]
@@ -473,4 +465,4 @@ webpackJsonp([60], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.dev-only-3e441d394b8c6e373e5afd3f09862482.js.map
+//# sourceMappingURL=pages.dev-only-51aae6862ae3eb858d1784502ce0f9c8.js.map

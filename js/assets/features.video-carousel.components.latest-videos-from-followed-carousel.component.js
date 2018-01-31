@@ -15,7 +15,6 @@ webpackJsonp([75], {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        alias: null,
                         name: {
                             kind: "Name",
                             value: "currentUser"
@@ -26,17 +25,14 @@ webpackJsonp([75], {
                             kind: "SelectionSet",
                             selections: [{
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "id"
                                 },
                                 arguments: [],
-                                directives: [],
-                                selectionSet: null
+                                directives: []
                             }, {
                                 kind: "Field",
-                                alias: null,
                                 name: {
                                     kind: "Name",
                                     value: "followedVideos"
@@ -67,7 +63,6 @@ webpackJsonp([75], {
                                     kind: "SelectionSet",
                                     selections: [{
                                         kind: "Field",
-                                        alias: null,
                                         name: {
                                             kind: "Name",
                                             value: "edges"
@@ -78,7 +73,6 @@ webpackJsonp([75], {
                                             kind: "SelectionSet",
                                             selections: [{
                                                 kind: "Field",
-                                                alias: null,
                                                 name: {
                                                     kind: "Name",
                                                     value: "node"
@@ -133,8 +127,8 @@ webpackJsonp([75], {
             a = n("TToO"),
             s = n("HW6M"),
             d = n("KSGD"),
-            l = n("U7vG"),
-            c = n("6sO2"),
+            c = n("U7vG"),
+            l = n("6sO2"),
             u = n("vH/s"),
             p = n("CSlQ"),
             m = n("81qH"),
@@ -151,7 +145,7 @@ webpackJsonp([75], {
                     }, t.onPreviewCardClick = function(e) {
                         if (t.props.videos) {
                             var n = t.props.videos[e];
-                            c.m.trackItemSectionClick(a.__assign({
+                            l.m.trackItemSectionClick(a.__assign({
                                 carousel_content: t.props.tracking.content,
                                 item_id: n.id,
                                 item_index: e,
@@ -163,7 +157,7 @@ webpackJsonp([75], {
                     }, t.getVideoCards = function() {
                         var e = t.props.videos;
                         if (null === e) {
-                            for (var n = [], i = 0; i < f; i++) n.push(l.createElement(m.VideoPreviewCardPlaceholder, {
+                            for (var n = [], i = 0; i < f; i++) n.push(c.createElement(m.VideoPreviewCardPlaceholder, {
                                 key: "carousel-placeholder-" + i
                             }));
                             return n
@@ -171,7 +165,7 @@ webpackJsonp([75], {
                         for (var r = [], o = 0; o < e.length; o++)
                             if (o < f || t.props.firstPageLoaded) {
                                 if (e[o].id === t.props.currentlyWatchingVideoID) continue;
-                                r.push(l.createElement(m.VideoPreviewCard, {
+                                r.push(c.createElement(m.VideoPreviewCard, {
                                     collectionID: t.props.collectionID,
                                     onClick: t.onPreviewCardClick,
                                     key: "video-" + o,
@@ -183,7 +177,7 @@ webpackJsonp([75], {
                                     overrideImageInteractivity: t.props.overrideCardImageInteractivity,
                                     video: e[o]
                                 }))
-                            } else r.push(l.createElement(m.VideoPreviewCardPlaceholder, {
+                            } else r.push(c.createElement(m.VideoPreviewCardPlaceholder, {
                                 key: "carousel-placeholder-" + o
                             }));
                         return r
@@ -246,38 +240,38 @@ webpackJsonp([75], {
                 }, t.prototype.componentWillUnmount = function() {
                     this.unregisterScrollHandler && this.unregisterScrollHandler()
                 }, t.prototype.render = function() {
-                    return l.createElement(v.Q, a.__assign({}, this.props, {
+                    return c.createElement(v.Q, a.__assign({}, this.props, {
                         margin: {
                             bottom: 2,
                             top: 1
                         },
                         position: v._4.Relative
-                    }), l.createElement("div", {
+                    }), c.createElement("div", {
                         className: "video-carousel",
                         ref: this.refHandler
-                    }, l.createElement(v.V, {
+                    }, c.createElement(v.V, {
                         className: "video-carousel__child-container",
                         overflow: v._0.Hidden,
                         position: v._4.Relative,
                         fullWidth: !0,
                         "data-test-selector": "child-container"
-                    }, l.createElement(v.Q, {
+                    }, c.createElement(v.Q, {
                         margin: {
                             bottom: 3
                         }
-                    }, l.createElement("div", {
+                    }, c.createElement("div", {
                         className: "video-carousel__body",
                         style: {
                             transform: this.transformString()
                         },
                         "data-test-selector": "carousel-body"
-                    }, l.createElement(v._34, {
+                    }, c.createElement(v._34, {
                         noWrap: !0,
                         noGrow: !0,
                         childWidth: this.props.videoCardSize || v._35.Large,
                         gutterSize: v._36.Small,
                         "data-js-selector": h
-                    }, this.getVideoCards())))), l.createElement(v.V, {
+                    }, this.getVideoCards())))), c.createElement(v.V, {
                         className: "video-carousel__nav",
                         display: v.H.Flex,
                         alignItems: v.c.Center,
@@ -285,11 +279,11 @@ webpackJsonp([75], {
                         attachTop: !0,
                         attachLeft: !0,
                         fullHeight: !0
-                    }, l.createElement(b, {
+                    }, c.createElement(b, {
                         direction: k.DirectionPrevious,
                         disabled: !this.state.childrenRendered || this.isBackButtonDisabled(),
                         onClickHandler: this.moveCarouselBackward
-                    })), l.createElement(v.V, {
+                    })), c.createElement(v.V, {
                         className: "video-carousel__nav",
                         display: v.H.Flex,
                         alignItems: v.c.Center,
@@ -297,13 +291,14 @@ webpackJsonp([75], {
                         attachTop: !0,
                         attachRight: !0,
                         fullHeight: !0
-                    }, l.createElement(b, {
+                    }, c.createElement(b, {
                         direction: k.DirectionNext,
                         disabled: !this.state.childrenRendered || this.isForwardButtonDisabled(),
                         onClickHandler: this.moveCarouselForward
                     }))))
                 }, t.prototype.checkVisible = function(e) {
                     this.props.videos && this.props.videos.length > 0 && !1 === this.state.hasTrackedItemSectionLoad && function(e) {
+                        if (!e) return !1;
                         var t = e.getBoundingClientRect(),
                             n = window.innerWidth,
                             i = window.innerHeight;
@@ -314,7 +309,7 @@ webpackJsonp([75], {
                         var o = r[i];
                         t.push(o.id), n.push(o.viewCount)
                     }
-                    c.m.trackItemSectionLoad(a.__assign({
+                    l.m.trackItemSectionLoad(a.__assign({
                         carousel_content: this.props.tracking.content,
                         location: this.props.tracking.location,
                         rendered_item_count: e.length,
@@ -334,7 +329,7 @@ webpackJsonp([75], {
                 }, t.contextTypes = {
                     registerReceiver: d.func
                 }, t
-            }(l.Component),
+            }(c.Component),
             k = {
                 DirectionPrevious: "previous",
                 DirectionNext: "next"
@@ -343,16 +338,16 @@ webpackJsonp([75], {
             _ = (r = {}, r[k.DirectionPrevious] = v._11.AngleLeft, r[k.DirectionNext] = v._11.AngleRight, r),
             b = function(e) {
                 var t = C[e.direction],
-                    n = (r = {}, r[k.DirectionPrevious] = Object(c.d)("previous", "CarouselNavButton"), r[k.DirectionNext] = Object(c.d)("next", "CarouselNavButton"), r),
+                    n = (r = {}, r[k.DirectionPrevious] = Object(l.d)("previous", "CarouselNavButton"), r[k.DirectionNext] = Object(l.d)("next", "CarouselNavButton"), r),
                     i = s("video-carousel__button", "video-carousel__button--" + t, {
                         "video-carousel__button--disabled": e.disabled
                     });
-                return l.createElement(v.V, {
+                return c.createElement(v.V, {
                     className: i,
                     position: v._4.Relative,
                     display: v.H.Flex,
                     alignItems: v.c.Stretch
-                }, l.createElement(v.v, {
+                }, c.createElement(v.v, {
                     "data-test-selector": t + "-button",
                     onClick: e.onClickHandler,
                     disabled: e.disabled,
@@ -366,9 +361,9 @@ webpackJsonp([75], {
                 autoReportInteractive: !0
             })(g);
         n.d(t, "a", function() {
-            return y
+            return w
         });
-        var y = Object(o.a)(function(e) {
+        var w = Object(o.b)(function(e) {
             return {
                 firstPageLoaded: e.session.firstPageLoaded
             }
@@ -385,12 +380,12 @@ webpackJsonp([75], {
         });
         var i = n("TToO"),
             r = n("U7vG"),
-            o = (n.n(r), n("BhyV")),
+            o = (n.n(r), n("3zLD")),
             a = (n.n(o), n("6sO2")),
             s = n("7vx8"),
             d = n("CSlQ"),
-            l = n("GJxf"),
-            c = n("dc2a"),
+            c = n("GJxf"),
+            l = n("dc2a"),
             u = n("Odds"),
             p = n("97Ye"),
             m = (n.n(p), function(e) {
@@ -400,7 +395,7 @@ webpackJsonp([75], {
                 return i.__extends(t, e), t.prototype.componentDidUpdate = function() {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    var e = this.props.data && !this.props.data.loading && this.props.data.currentUser && Object(c.a)(this.props.data.currentUser.followedVideos) || null;
+                    var e = this.props.data && !this.props.data.loading && this.props.data.currentUser && Object(l.a)(this.props.data.currentUser.followedVideos) || null;
                     return !this.props.data || this.props.data.loading || e && 0 !== e.length ? r.createElement(u.V, null, r.createElement(u.V, {
                         padding: {
                             bottom: 1
@@ -410,7 +405,7 @@ webpackJsonp([75], {
                         fontSize: u.L.Size5,
                         transform: u._27.Uppercase,
                         color: u.F.Alt2
-                    }, Object(a.d)("Latest videos", "LatestVideosFromFollowedCarousel"))), r.createElement(l.a, {
+                    }, Object(a.d)("Latest videos", "LatestVideosFromFollowedCarousel"))), r.createElement(c.a, {
                         currentlyWatchingVideoID: this.props.currentlyWatchingVideoID,
                         overrideCardImageInteractivity: !0,
                         tracking: {
@@ -438,4 +433,4 @@ webpackJsonp([75], {
     },
     yF7E: function(e, t) {}
 });
-//# sourceMappingURL=features.video-carousel.components.latest-videos-from-followed-carousel.component-526aa2fbbe7c49264faeeded6cd670b6.js.map
+//# sourceMappingURL=features.video-carousel.components.latest-videos-from-followed-carousel.component-39729f6396cd512d58d300b335e4c57b.js.map
