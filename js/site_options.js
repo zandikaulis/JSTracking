@@ -3941,6 +3941,21 @@ window.SiteOptions = {
                 "value": "no_prerolls"
             }]
         },
+        "ce512072-ab2b-4f44-892a-e203055d45da": {
+            "name": "clips_blessings",
+            "v": 2944,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant1"
+            }, {
+                "weight": 0,
+                "value": "variant2"
+            }]
+        },
         "ce62423f-4298-4448-bd1c-5421d96f65d6": {
             "name": "ios_dashboard",
             "v": 2544,
