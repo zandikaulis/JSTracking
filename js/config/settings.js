@@ -370,13 +370,13 @@ window.__twilightSettings = {
         },
         "7aa589f3-34d8-425f-8227-29007d50757e": {
             "name": "twilight_growth_email_verify_bar",
-            "v": 2721,
+            "v": 2955,
             "t": 2,
             "groups": [{
-                "weight": 95,
+                "weight": 1,
                 "value": "control"
             }, {
-                "weight": 5,
+                "weight": 99,
                 "value": "enabled"
             }]
         },
