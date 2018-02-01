@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".6afd11684bcb858d0961.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".dfb07611cdda8608744b.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -22138,8 +22138,7 @@
         e.exports.canLoad = function() {
             return y.CAN_LOAD
         }, e.exports.canLoadMediaplayer = function() {
-            var e = (navigator.appVersion || "").toLowerCase();
-            return y.CAN_LOAD && -1 === e.indexOf("rv:11")
+            return y.CAN_LOAD
         };
         var _ = null;
         e.exports.load = function(e) {
@@ -27983,7 +27982,7 @@
                     u = Pa.a(!0),
                     c = Oa.v() === Oa.k ? null : Na;
                 return {
-                    app_version: "2018.02.01-171312+0445022d83f67ac80f6a320f449da896623ce3f4",
+                    app_version: "2018.02.01-192740+2cf5ca01b71475afedb21d614e44b9c260674697",
                     flash_version: r,
                     referrer_url: i,
                     referrer_host: o.host,
@@ -46586,10 +46585,11 @@
             MEDIAPLAYER_WORKER_FILE_NAME_DEBUG: "/worker.js",
             SCRIPT_ID: "TwitchPlayerCoreModule",
             EXPERIMENT_ID: "45d73059-3cea-436a-b41f-86bb05f845f2",
-            DEFAULT_VERSION: "1.7.7",
+            DEFAULT_VERSION: "1.8.13",
             CAN_LOAD: function() {
                 try {
-                    return "undefined" != typeof MediaSource && MediaSource.isTypeSupported('video/mp4; codecs="avc1.42E01E,mp4a.40.2"') && !n()
+                    var e = (navigator.appVersion || "").toLowerCase();
+                    return "undefined" != typeof MediaSource && MediaSource.isTypeSupported('video/mp4; codecs="avc1.42E01E,mp4a.40.2"') && !n() && -1 === e.indexOf("rv:11")
                 } catch (e) {
                     return console.log(e), !1
                 }
