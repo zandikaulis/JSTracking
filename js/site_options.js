@@ -4661,6 +4661,18 @@ window.SiteOptions = {
                 "value": "control"
             }]
         },
+        "f3373266-ba22-4e0b-b56a-9e79fb53f62e": {
+            "name": "mobile_web_atlas",
+            "v": 2952,
+            "t": 1,
+            "groups": [{
+                "weight": 5,
+                "value": "treatment"
+            }, {
+                "weight": 95,
+                "value": "control"
+            }]
+        },
         "f4cfaad7-3641-46c1-941c-afacf61ff4e8": {
             "name": "clips_closer",
             "v": 2370,
