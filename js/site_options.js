@@ -813,6 +813,18 @@ window.SiteOptions = {
                 "value": "enabled"
             }]
         },
+        "29ad6e4c-0a4e-4e21-96f1-79c9e3aa364c": {
+            "name": "android_profile_tab_order",
+            "v": 2959,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
         "2b5c426e-3b29-4bad-a4be-5f8bea3ad8af": {
             "name": "baking_bread_j",
             "v": 2771,
@@ -3917,6 +3929,18 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
+        "c96f651c-0d69-43cf-9127-7eab817e5ebd": {
+            "name": "android_dead_channel_to_profile",
+            "v": 2961,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
         "ca305459-aec3-4d0c-b4e4-93d8cda54bba": {
             "name": "DEMOGRAPHIC_STATS",
             "v": 1839,
@@ -4409,6 +4433,18 @@ window.SiteOptions = {
                 "value": "enabled"
             }]
         },
+        "e2f109ce-23ba-432b-b328-9e3d0e44d8c2": {
+            "name": "android_profile_tab_order",
+            "v": 2958,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
         "e3493262-e9b1-4ea8-b621-1f7ed544fad2": {
             "name": "twitch_prime_poc",
             "v": 2688,
@@ -4635,6 +4671,18 @@ window.SiteOptions = {
             }, {
                 "weight": 99,
                 "value": "false"
+            }]
+        },
+        "f0d18017-e8c8-497f-a5bc-ff43ffe67301": {
+            "name": "android_profile_tab_order",
+            "v": 2960,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
             }]
         },
         "f164d19e-cbbd-4774-86c7-106f21d892c0": {
