@@ -2624,7 +2624,7 @@ webpackJsonp([63], {
             me = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
-                    return n.refetchTimeout = 0, n.onEmoticonClick = function(e) {
+                    return n.refetchTimeout = 0, n.hadError = !1, n.onEmoticonClick = function(e) {
                         var t = n.autocompleteInput.getValue();
                         t && t.length > 0 && !t.endsWith(" ") && (t += " "), t += e + " ", n.autocompleteInput.setValue(t)
                     }, n.onBlock = function(e) {
@@ -2634,7 +2634,7 @@ webpackJsonp([63], {
                     }, n.loadMore = function() {
                         return r.__awaiter(n, void 0, void 0, function() {
                             return r.__generator(this, function(e) {
-                                return this.props.data.loading || this.props.data.error ? [2] : [2, this.props.loadMore()]
+                                return this.props.data.loading || this.hadError ? [2] : [2, this.props.loadMore()]
                             })
                         })
                     }, n.addNewThreadSendWhisper = function(e) {
@@ -2703,13 +2703,13 @@ webpackJsonp([63], {
                     }, n.handleClick = function() {
                         n.props.onFocus(n.props.threadID), n.markThreadMessagesAsRead()
                     }, n.markThreadMessagesAsRead = function() {
-                        n.props.data.loading || n.props.data.error || n.props.data.whisperThread && 0 === n.props.data.whisperThread.unreadMessagesCount || Object(le.a)({
+                        n.props.data.loading || n.hadError || n.props.data.whisperThread && 0 === n.props.data.whisperThread.unreadMessagesCount || Object(le.a)({
                             threadID: n.props.threadID,
                             lastReadMessageID: n.props.data.whisperThread && n.props.data.whisperThread.messages.edges[0].node.id || ""
                         })
                     }, n.sendWhisper = function(e) {
                         if ("" !== e) {
-                            n.props.data.error && n.addNewThreadSendWhisper(e);
+                            n.hadError && n.addNewThreadSendWhisper(e);
                             var t = Object(de.b)(n.props.threadID, n.props.currentUserID);
                             t ? (n.props.participants.currentUser && n.props.participants.user && Object(P.m)({
                                 threadID: n.props.threadID,
@@ -2737,7 +2737,7 @@ webpackJsonp([63], {
                 }
                 return r.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
                     var t = this;
-                    if (e.data.error || e.data.loading || !e.data.whisperThread || this.props.reportThreadData(e.threadID, e.data.whisperThread), this.props.data.error) {
+                    if (e.data.error && (this.hadError = !0), e.data.error || e.data.loading || !e.data.whisperThread || this.props.reportThreadData(e.threadID, e.data.whisperThread), this.hadError) {
                         var n = !1;
                         this.props.pubsub.messages.whisperReceived !== e.pubsub.messages.whisperReceived && e.pubsub.messages.whisperReceived && e.pubsub.messages.whisperReceived.data_object.thread_id === this.props.threadID && (n = !0), this.props.pubsub.messages.whisperSent !== e.pubsub.messages.whisperSent && e.pubsub.messages.whisperSent && e.pubsub.messages.whisperSent.data_object.thread_id === this.props.threadID && (n = !0), n && (clearTimeout(this.refetchTimeout), this.refetchTimeout = setTimeout(function() {
                             t.props.data.refetch()
@@ -2817,7 +2817,7 @@ webpackJsonp([63], {
                         isFocused: !!this.props.focused,
                         isMuted: !!this.props.data.whisperThread && this.props.data.whisperThread.isMuted,
                         isCollapsed: this.props.collapsed,
-                        isLoading: this.props.data.loading || this.props.participants.loading || !this.props.participants.user || !this.props.participants.currentUser,
+                        isLoading: this.props.participants.loading || !this.props.participants.user || !this.props.participants.currentUser,
                         participants: this.props.participants,
                         spamInfo: this.props.data.whisperThread && this.props.data.whisperThread.spamInfo,
                         threadID: this.props.threadID,
@@ -2829,7 +2829,7 @@ webpackJsonp([63], {
                     }))))
                 }, t.prototype.renderContent = function() {
                     var e;
-                    return this.props.data.error ? (e = a.createElement(g.a, {
+                    return this.hadError ? (e = a.createElement(g.a, {
                         message: Object(m.d)("Sorry, something went wrong loading this conversation.", "WhisperThread")
                     }), e = a.createElement(U.V, null), this.props.participants.currentUser && this.props.participants.user && (e = a.createElement(se, {
                         thread: this.getPlaceholderThreadFromLocalState(),
@@ -39713,4 +39713,4 @@ webpackJsonp([63], {
         }(i || (i = {}))
     }
 }, [4]);
-//# sourceMappingURL=core-3a326f5be970e89d0a77030d35000a83.js.map
+//# sourceMappingURL=core-ba9c68aec64ced03f91d8e1221951d15.js.map
