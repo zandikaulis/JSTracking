@@ -288,6 +288,27 @@ window.SiteOptions = {
                 "value": "variant2"
             }]
         },
+        "0d5fb9e1-227c-4aea-94d3-414836081d58": {
+            "name": "android_videoplayer_v5",
+            "v": 2963,
+            "t": 1,
+            "groups": [{
+                "weight": 5,
+                "value": "control"
+            }, {
+                "weight": 1,
+                "value": "native"
+            }, {
+                "weight": 5,
+                "value": "playercore"
+            }, {
+                "weight": 88,
+                "value": "exoplayer"
+            }, {
+                "weight": 1,
+                "value": "exoplayer_2"
+            }]
+        },
         "0d73f2a4-46a0-4f6a-a985-134046be5e7e": {
             "name": "android_track_network_request_latency",
             "v": 2696,
