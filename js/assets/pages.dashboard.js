@@ -25886,40 +25886,40 @@ webpackJsonp([32], {
             }, function(e) {
                 return Object(l.b)({
                     onChatHide: function() {
-                        return _.J()
+                        return _.H()
                     },
                     onChatUnhide: function() {
-                        return _.M()
+                        return _.K()
                     },
                     onFollowerModeDisable: function() {
-                        return _.z()
+                        return _.x()
                     },
                     onFollowerModeDurationChange: function(e) {
-                        return _.w(e)
+                        return _.u(e)
                     },
                     onFollowerModeDurationPreferenceChange: function(e, t) {
-                        return _.x(e, t)
+                        return _.v(e, t)
                     },
                     onFollowerModeEnable: function() {
-                        return _.E()
+                        return _.C()
                     },
                     onModIconsDisable: function() {
-                        return _.A()
+                        return _.y()
                     },
                     onModIconsEnable: function() {
-                        return _.F()
-                    },
-                    onSlowModeDisable: function() {
-                        return _.B()
-                    },
-                    onSlowModeEnable: function() {
-                        return _.G()
-                    },
-                    onTimestampsDisable: function() {
                         return _.D()
                     },
+                    onSlowModeDisable: function() {
+                        return _.z()
+                    },
+                    onSlowModeEnable: function() {
+                        return _.E()
+                    },
+                    onTimestampsDisable: function() {
+                        return _.B()
+                    },
                     onTimestampsEnable: function() {
-                        return _.I()
+                        return _.G()
                     },
                     onShowViewerCard: v.d,
                     onThemeChanged: function(e) {
@@ -28836,10 +28836,8 @@ webpackJsonp([32], {
     },
     R9op: function(e, t, n) {
         "use strict";
-        t.b = function(e, t) {
+        t.a = function(e, t) {
             return e.chat && e.chat.messages ? e.chat.messages[t] || [] : []
-        }, t.a = function(e) {
-            return e.chat.renderSent
         };
         var a = n("TToO"),
             r = n("LIeg"),
@@ -28858,78 +28856,77 @@ webpackJsonp([32], {
                     isHidden: !1,
                     messages: {},
                     slowMode: !1,
-                    subsOnlyMode: !1,
-                    renderSent: null
+                    subsOnlyMode: !1
                 })
             }()), t.type) {
-                case o.c:
+                case o.b:
                     return a.__assign({}, e, {
                         isHidden: !0
                     });
-                case o.e:
+                case o.c:
                     return a.__assign({}, e, {
                         emoteSets: [],
                         messages: {}
                     });
-                case o.f:
+                case o.d:
                     return a.__assign({}, e, {
                         isHidden: !1
                     });
-                case o.g:
+                case o.e:
                     return a.__assign({}, e, {
                         emoteSets: t.emoteSets
                     });
-                case o.h:
+                case o.f:
                     return a.__assign({}, e, {
                         followerMode: !1
                     });
-                case o.i:
+                case o.g:
                     return a.__assign({}, e, {
                         followerDuration: t.duration
                     });
-                case o.j:
+                case o.h:
                     return a.__assign({}, e, {
                         lastUsedFollowerDurations: a.__assign({}, e.lastUsedFollowerDurations, (n = {}, n[t.channelLogin] = t.duration, n))
                     });
-                case o.k:
+                case o.i:
                     return a.__assign({}, e, {
                         followerMode: !0
                     });
-                case o.l:
+                case o.j:
                     return r(e, function(e) {
                         return e.messages
                     }, function(e) {
                         return e[t.channel] = t.messages, e
                     });
-                case o.m:
+                case o.k:
                     return a.__assign({}, e, {
                         showModIcons: !1
                     });
-                case o.n:
+                case o.l:
                     return a.__assign({}, e, {
                         showModIcons: !0
                     });
-                case o.p:
+                case o.n:
                     return a.__assign({}, e, {
                         slowMode: !1
                     });
-                case o.q:
+                case o.o:
                     return a.__assign({}, e, {
                         slowMode: !0
                     });
-                case o.r:
+                case o.p:
                     return a.__assign({}, e, {
                         subsOnlyMode: !1
                     });
-                case o.s:
+                case o.q:
                     return a.__assign({}, e, {
                         subsOnlyMode: !0
                     });
-                case o.t:
+                case o.r:
                     return a.__assign({}, e, {
                         showTimestamps: !1
                     });
-                case o.u:
+                case o.s:
                     return a.__assign({}, e, {
                         showTimestamps: !0
                     });
@@ -28939,19 +28936,11 @@ webpackJsonp([32], {
                     }, function(e) {
                         return e[t.command] = t.handler, e
                     });
-                case o.o:
+                case o.m:
                     return r(e, function(e) {
                         return e.commandHandlers
                     }, function(e) {
                         return delete e[t.command], e
-                    });
-                case o.d:
-                    return a.__assign({}, e, {
-                        renderSent: t.customEvent
-                    });
-                case o.b:
-                    return a.__assign({}, e, {
-                        renderSent: null
                     });
                 default:
                     return e
@@ -44959,132 +44948,123 @@ webpackJsonp([32], {
     },
     vh75: function(e, t, n) {
         "use strict";
-        n.d(t, "c", function() {
+        n.d(t, "b", function() {
             return a
-        }), n.d(t, "e", function() {
+        }), n.d(t, "c", function() {
             return r
-        }), n.d(t, "f", function() {
+        }), n.d(t, "d", function() {
             return i
-        }), n.d(t, "g", function() {
+        }), n.d(t, "e", function() {
             return o
-        }), n.d(t, "k", function() {
-            return s
-        }), n.d(t, "h", function() {
-            return l
         }), n.d(t, "i", function() {
+            return s
+        }), n.d(t, "f", function() {
+            return l
+        }), n.d(t, "g", function() {
             return d
-        }), n.d(t, "j", function() {
+        }), n.d(t, "h", function() {
             return c
-        }), n.d(t, "l", function() {
+        }), n.d(t, "j", function() {
             return u
-        }), n.d(t, "n", function() {
+        }), n.d(t, "l", function() {
             return m
-        }), n.d(t, "m", function() {
+        }), n.d(t, "k", function() {
             return h
-        }), n.d(t, "q", function() {
+        }), n.d(t, "o", function() {
             return p
-        }), n.d(t, "p", function() {
+        }), n.d(t, "n", function() {
             return f
-        }), n.d(t, "s", function() {
+        }), n.d(t, "q", function() {
             return g
-        }), n.d(t, "r", function() {
+        }), n.d(t, "p", function() {
             return _
-        }), n.d(t, "u", function() {
+        }), n.d(t, "s", function() {
             return v
-        }), n.d(t, "t", function() {
+        }), n.d(t, "r", function() {
             return y
         }), n.d(t, "a", function() {
             return b
-        }), n.d(t, "o", function() {
+        }), n.d(t, "m", function() {
             return k
-        }), n.d(t, "d", function() {
-            return M
-        }), n.d(t, "b", function() {
-            return w
-        }), t.K = function(e, t) {
+        }), t.I = function(e, t) {
             return {
                 type: u,
                 channel: e,
                 messages: t
             }
-        }, t.y = function() {
+        }, t.w = function() {
             return {
                 type: r
             }
-        }, t.I = function() {
+        }, t.G = function() {
             return {
                 type: v
             }
-        }, t.D = function() {
+        }, t.B = function() {
             return {
                 type: y
             }
-        }, t.M = function() {
+        }, t.K = function() {
             return {
                 type: i
             }
-        }, t.J = function() {
+        }, t.H = function() {
             return {
                 type: a
             }
-        }, t.F = function() {
+        }, t.D = function() {
             return {
                 type: m
             }
-        }, t.A = function() {
+        }, t.y = function() {
             return {
                 type: h
             }
-        }, t.E = function() {
+        }, t.C = function() {
             return {
                 type: s
             }
-        }, t.x = function(e, t) {
+        }, t.v = function(e, t) {
             return {
                 type: c,
                 channelLogin: e,
                 duration: t
             }
-        }, t.w = function(e) {
+        }, t.u = function(e) {
             return {
                 type: d,
                 duration: e
             }
-        }, t.z = function() {
+        }, t.x = function() {
             return {
                 type: l
             }
-        }, t.G = function() {
+        }, t.E = function() {
             return {
                 type: p
             }
-        }, t.B = function() {
+        }, t.z = function() {
             return {
                 type: f
             }
-        }, t.H = function() {
+        }, t.F = function() {
             return {
                 type: g
             }
-        }, t.C = function() {
+        }, t.A = function() {
             return {
                 type: _
             }
-        }, t.v = function(e, t) {
+        }, t.t = function(e, t) {
             return {
                 type: b,
                 command: e.toLowerCase(),
                 handler: t
             }
-        }, t.L = function(e) {
+        }, t.J = function(e) {
             return {
                 type: k,
                 command: e.toLowerCase()
-            }
-        }, t.N = function(e) {
-            return {
-                type: M,
-                customEvent: e
             }
         };
         var a = "chat.CHAT_HIDDEN",
@@ -45105,9 +45085,7 @@ webpackJsonp([32], {
             v = "chat.TIMESTAMPS_ENABLED",
             y = "chat.TIMESTAMPS_DISABLED",
             b = "chat.ADD_COMMAND",
-            k = "chat.REMOVE_COMMAND",
-            M = "chat.CHAT_RENDER_SENT",
-            w = "chat.CHAT_CLEAR_RENDER_SENT"
+            k = "chat.REMOVE_COMMAND"
     },
     vjRp: function(e, t) {
         var n = {
@@ -46878,4 +46856,4 @@ webpackJsonp([32], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.dashboard-1a303f41b2f0e01c09dfc3fb4a561c2b.js.map
+//# sourceMappingURL=pages.dashboard-53e55a39c70a0c93a4dd703093df04c9.js.map
