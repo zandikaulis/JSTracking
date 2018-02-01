@@ -159,22 +159,22 @@ webpackJsonp([58], {
                 return i.__extends(t, e), t.prototype.componentWillMount = function() {
                     this.verifyEmail().then(function() {})
                 }, t.prototype.render = function() {
-                    return n.createElement(f.X, {
+                    return n.createElement(f.V, {
                         padding: 3
-                    }, n.createElement(f._25, {
+                    }, n.createElement(f._23, {
                         className: "title",
-                        type: f._30.H2
+                        type: f._28.H2
                     }, Object(a.d)("Email Verification", "EmailVerification")), this.renderVerificationStatus())
                 }, t.prototype.renderVerificationStatus = function() {
-                    if (this.state.isLoading) return n.createElement(f.X, {
+                    if (this.state.isLoading) return n.createElement(f.V, {
                         margin: {
                             top: 1
                         },
                         "data-test-selector": "verify-loading"
-                    }, n.createElement(f._25, {
-                        type: f._30.Strong
+                    }, n.createElement(f._23, {
+                        type: f._28.Strong
                     }, Object(a.d)("Verifying Email...", "EmailVerification")));
-                    if (this.state.isEmailVerified) return n.createElement(f.X, {
+                    if (this.state.isEmailVerified) return n.createElement(f.V, {
                         margin: {
                             top: 1
                         },
@@ -183,14 +183,14 @@ webpackJsonp([58], {
                     var e = Object(a.d)("Couldn't validate your email: {errorMessage}", {
                         errorMessage: this.maybeGetLocalizedErrorMessage(this.state.errorMessage)
                     }, "EmailVerification");
-                    return n.createElement(f.X, {
+                    return n.createElement(f.V, {
                         margin: {
                             top: 1
                         },
                         "data-test-selector": "verify-error"
-                    }, n.createElement(f._25, {
+                    }, n.createElement(f._23, {
                         color: f.F.Error,
-                        type: f._30.Strong
+                        type: f._28.Strong
                     }, e))
                 }, t.prototype.maybeGetLocalizedErrorMessage = function(e) {
                     return e ? "Not Found" === e ? Object(a.d)("Not Found", "EmailVerification") : e : Object(a.d)("Unknown Error", "EmailVerification")
@@ -319,4 +319,4 @@ webpackJsonp([58], {
         })
     }
 });
-//# sourceMappingURL=pages.email-verification-f83059fb6ae5a64dc829b6a778b04f30.js.map
+//# sourceMappingURL=pages.email-verification-d12075a9c7a1090da7e3cebf04050f7c.js.map

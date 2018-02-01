@@ -1,299 +1,299 @@
-webpackJsonp([67], {
-    "Dk8+": function(e, n, t) {
+webpackJsonp([76], {
+    "Dk8+": function(e, t, n) {
         "use strict";
-        Object.defineProperty(n, "__esModule", {
+        Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var i = t("TToO"),
-            a = t("U7vG"),
-            l = t("3zLD"),
-            o = t("6sO2"),
-            r = t("j7/Y"),
-            c = t("w9tK"),
-            d = t("vH/s"),
-            s = t("CSlQ"),
-            u = t("Odds"),
+        var i = n("TToO"),
+            l = n("U7vG"),
+            a = n("3zLD"),
+            r = n("6sO2"),
+            o = n("j7/Y"),
+            c = n("w9tK"),
+            s = n("vH/s"),
+            d = n("CSlQ"),
+            u = n("Odds"),
             m = function(e) {
-                function n() {
+                function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return i.__extends(n, e), n.prototype.render = function() {
-                    return a.createElement(u._21, {
+                return i.__extends(t, e), t.prototype.render = function() {
+                    return l.createElement(u._19, {
                         background: u.m.Base,
                         elevation: 1,
-                        display: u.J.Flex,
-                        flexDirection: u.L.Row,
+                        display: u.H.Flex,
+                        flexDirection: u.J.Row,
                         alignItems: u.c.Stretch
                     }, this.props.children)
-                }, n
-            }(a.Component),
-            p = (t("QmYP"), function(e) {
-                return a.createElement(u.X, {
+                }, t
+            }(l.Component),
+            p = (n("QmYP"), function(e) {
+                return l.createElement(u.V, {
                     className: "manager-card__stats-container",
-                    display: u.J.Flex,
+                    display: u.H.Flex,
                     flexGrow: 0,
                     flexShrink: 0,
-                    flexWrap: u.M.NoWrap,
-                    flexDirection: u.L.Row,
+                    flexWrap: u.K.NoWrap,
+                    flexDirection: u.J.Row,
                     alignItems: u.c.Center
                 }, e.children)
             }),
             g = function(e) {
-                return a.createElement(u.X, {
+                return l.createElement(u.V, {
                     alignItems: u.c.Start,
-                    display: u.J.Flex,
-                    flexDirection: u.L.Column,
+                    display: u.H.Flex,
+                    flexDirection: u.J.Column,
                     flexGrow: 1,
                     flexShrink: 1,
-                    justifyContent: u.W.Center,
+                    justifyContent: u.U.Center,
                     padding: {
                         x: 2
                     }
                 }, e.children)
             },
-            v = function(e) {
-                function n() {
+            h = function(e) {
+                function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return i.__extends(n, e), n.prototype.render = function() {
-                    return a.createElement(m, null, a.createElement(u.X, null, a.createElement(u._5, {
+                return i.__extends(t, e), t.prototype.render = function() {
+                    return l.createElement(m, null, l.createElement(u.V, null, l.createElement(u._3, {
                         height: 75,
                         width: 133
-                    })), a.createElement(g, null, a.createElement(u._25, null, a.createElement(u._5, {
+                    })), l.createElement(g, null, l.createElement(u._23, null, l.createElement(u._3, {
                         width: 600,
                         lineCount: 1
-                    }), a.createElement(u._5, {
+                    }), l.createElement(u._3, {
                         width: 200,
                         lineCount: 1
-                    }))), a.createElement(p, null, a.createElement(u._25, null, a.createElement(u._5, {
+                    }))), l.createElement(p, null, l.createElement(u._23, null, l.createElement(u._3, {
                         width: 40,
                         lineCount: 1
-                    }))), a.createElement(u.X, {
+                    }))), l.createElement(u.V, {
                         flexGrow: 0,
                         flexShrink: 0
-                    }, a.createElement(u.X, {
+                    }, l.createElement(u.V, {
                         fullHeight: !0,
-                        display: u.J.Flex,
+                        display: u.H.Flex,
                         alignItems: u.c.Center,
-                        justifyContent: u.W.Center,
+                        justifyContent: u.U.Center,
                         padding: 1
-                    }, a.createElement(u._25, null, a.createElement(u._5, {
+                    }, l.createElement(u._23, null, l.createElement(u._3, {
                         width: 20,
                         lineCount: 1
                     })))))
-                }, n
-            }(a.PureComponent),
-            k = t("mi6k"),
-            h = t("rCmJ"),
+                }, t
+            }(l.PureComponent),
+            k = n("mi6k"),
+            v = n("rCmJ"),
             f = function(e) {
-                var n = e.asset ? a.createElement(u.X, {
+                var t = e.asset ? l.createElement(u.V, {
                     padding: {
                         right: .5
                     }
-                }, a.createElement(u._12, {
+                }, l.createElement(u._10, {
                     asset: e.asset
                 })) : null;
-                return a.createElement(u.V, {
+                return l.createElement(u.T, {
                     linkTo: e.linkTo,
                     onClick: e.onClick
-                }, a.createElement(u.X, {
+                }, l.createElement(u.V, {
                     padding: 1,
-                    display: u.J.Flex,
+                    display: u.H.Flex,
                     alignItems: u.c.Center
-                }, n, a.createElement(u._25, null, e.title)))
+                }, t, l.createElement(u._23, null, e.title)))
             },
             C = function(e) {
-                function n() {
-                    var n = null !== e && e.apply(this, arguments) || this;
-                    return n.state = {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
                         showDropMenu: !1
-                    }, n.menuButtonClickHandler = function() {
-                        n.setState(function(e) {
+                    }, t.menuButtonClickHandler = function() {
+                        t.setState(function(e) {
                             return {
                                 showDropMenu: !e.showDropMenu
                             }
                         })
-                    }, n.clickOutHandler = function() {
-                        n.setState(function() {
+                    }, t.clickOutHandler = function() {
+                        t.setState(function() {
                             return {
                                 showDropMenu: !1
                             }
                         })
-                    }, n
+                    }, t
                 }
-                return i.__extends(n, e), n.prototype.render = function() {
+                return i.__extends(t, e), t.prototype.render = function() {
                     var e = null;
-                    return this.state.showDropMenu && (e = this.dropMenu()), a.createElement(u.X, {
+                    return this.state.showDropMenu && (e = this.dropMenu()), l.createElement(u.V, {
                         flexGrow: 0,
                         flexShrink: 0,
-                        display: u.J.Flex,
-                        position: u._6.Relative
-                    }, a.createElement(u.S, {
+                        display: u.H.Flex,
+                        position: u._4.Relative
+                    }, l.createElement(u.Q, {
                         fullHeight: !0
-                    }, a.createElement(h.a, {
+                    }, l.createElement(v.a, {
                         onClickOut: this.clickOutHandler
-                    }, a.createElement(u.X, {
+                    }, l.createElement(u.V, {
                         fullHeight: !0,
-                        display: u.J.Flex,
+                        display: u.H.Flex,
                         alignItems: u.c.Stretch
-                    }, a.createElement(u.u, {
+                    }, l.createElement(u.u, {
                         disabled: 0 === this.props.options.length,
-                        icon: u._13.More,
+                        icon: u._11.More,
                         onClick: this.menuButtonClickHandler,
                         type: u.z.Text
                     })), e)))
-                }, n.prototype.dropMenu = function() {
-                    var e = this.props.options.map(function(e, n) {
-                        return a.createElement(f, i.__assign({
-                            key: n
+                }, t.prototype.dropMenu = function() {
+                    var e = this.props.options.map(function(e, t) {
+                        return l.createElement(f, i.__assign({
+                            key: t
                         }, e))
                     });
-                    return a.createElement(u.p, {
+                    return l.createElement(u.p, {
                         direction: u.q.BottomRight,
                         noTail: !0,
                         show: !0
                     }, e)
-                }, n
-            }(a.Component),
-            E = t("5kgt"),
+                }, t
+            }(l.Component),
+            E = n("5kgt"),
             y = function(e) {
-                function n() {
+                function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return i.__extends(n, e), n.prototype.render = function() {
-                    var e = a.createElement(u.X, {
+                return i.__extends(t, e), t.prototype.render = function() {
+                    var e = l.createElement(u.V, {
                             alignItems: u.c.Center,
-                            display: u.J.Flex,
+                            display: u.H.Flex,
                             fullHeight: !0,
-                            justifyContent: u.W.Center,
+                            justifyContent: u.U.Center,
                             padding: 2
-                        }, a.createElement(u._20, {
+                        }, l.createElement(u._18, {
                             icon: this.props.icon,
                             label: this.props.label,
                             value: this.props.value
                         })),
-                        n = this.props.linkTo ? a.createElement(u.V, {
+                        t = this.props.linkTo ? l.createElement(u.T, {
                             alpha: !0,
                             linkTo: this.props.linkTo,
                             targetBlank: !0
                         }, e) : e;
-                    return a.createElement(u.X, i.__assign({
-                        display: u.J.InlineFlex,
+                    return l.createElement(u.V, i.__assign({
+                        display: u.H.InlineFlex,
                         fullHeight: !0
-                    }, Object(E.a)(this.props)), n)
-                }, n
-            }(a.Component),
-            S = function(e) {
-                function n() {
-                    var n = null !== e && e.apply(this, arguments) || this;
-                    return n.onPreviewImageErrorHandler = function() {
-                        n.props.latencyTracking.reportInteractive()
-                    }, n.onPreviewImageLoadHandler = function() {
-                        n.props.latencyTracking.reportInteractive()
-                    }, n
+                    }, Object(E.a)(this.props)), t)
+                }, t
+            }(l.Component),
+            _ = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.onPreviewImageErrorHandler = function() {
+                        t.props.latencyTracking.reportInteractive()
+                    }, t.onPreviewImageLoadHandler = function() {
+                        t.props.latencyTracking.reportInteractive()
+                    }, t
                 }
-                return i.__extends(n, e), n.prototype.render = function() {
+                return i.__extends(t, e), t.prototype.render = function() {
                     var e = this.props.collection;
-                    return a.createElement(m, null, a.createElement(u.X, {
+                    return l.createElement(m, null, l.createElement(u.V, {
                         flexGrow: 0,
                         flexShrink: 0
-                    }, a.createElement(u.C, {
+                    }, l.createElement(u.C, {
                         aspect: u.k.Aspect16x9,
                         imageSrc: e.thumbnailURL ? e.thumbnailURL : "https://static-cdn.jtvnw.net/ttv-playlists-thumbnails-prod/missing-video-thumb-320x180.png",
                         imageAlt: e.title,
                         onImageLoad: this.onPreviewImageLoadHandler,
                         onImageError: this.onPreviewImageErrorHandler,
                         size: u.D.Size16
-                    })), a.createElement(g, null, a.createElement(u._25, {
-                        type: u._30.H5,
+                    })), l.createElement(g, null, l.createElement(u._23, {
+                        type: u._28.H5,
                         color: u.F.Alt
-                    }, e.title)), a.createElement(p, null, this.collectionStats(e)), a.createElement(C, {
+                    }, e.title)), l.createElement(p, null, this.collectionStats(e)), l.createElement(C, {
                         options: this.collectionMenuOptions(e)
                     }))
-                }, n.prototype.collectionMenuOptions = function(e) {
+                }, t.prototype.collectionMenuOptions = function(e) {
                     return [{
-                        asset: u._13.Edit,
+                        asset: u._11.Edit,
                         linkTo: "collections/" + e.id,
-                        title: Object(o.d)("Edit", "CollectionManagerCard")
+                        title: Object(r.d)("Edit", "CollectionManagerCard")
                     }, {
-                        asset: u._13.Trash,
-                        title: Object(o.d)("Delete", "CollectionManagerCard")
+                        asset: u._11.Trash,
+                        title: Object(r.d)("Delete", "CollectionManagerCard")
                     }]
-                }, n.prototype.collectionStats = function(e) {
-                    var n = e.updatedAt ? new Date(e.updatedAt) : new Date;
+                }, t.prototype.collectionStats = function(e) {
+                    var t = e.updatedAt ? new Date(e.updatedAt) : new Date;
                     return [{
-                        value: Object(o.c)(n, "long"),
-                        icon: u._13.Events,
-                        label: Object(o.d)("Last updated", "CollectionManagerCard")
+                        value: Object(r.c)(t, "long"),
+                        icon: u._11.Events,
+                        label: Object(r.d)("Last updated", "CollectionManagerCard")
                     }, {
                         value: Object(k.a)(e.lengthSeconds),
-                        icon: u._13.GlyphLength,
-                        label: Object(o.d)("Collection length", "CollectionManagerCard")
+                        icon: u._11.GlyphLength,
+                        label: Object(r.d)("Collection length", "CollectionManagerCard")
                     }, {
                         value: "" + e.items.totalCount,
-                        icon: u._13.Collections,
-                        label: Object(o.d)("Total videos", "CollectionManagerCard")
+                        icon: u._11.Collections,
+                        label: Object(r.d)("Total videos", "CollectionManagerCard")
                     }, {
                         value: "" + e.viewCount,
-                        icon: u._13.GlyphViews,
-                        label: Object(o.d)("Views", "CollectionManagerCard")
-                    }].map(function(e, n) {
-                        return a.createElement(y, i.__assign({
-                            key: n
+                        icon: u._11.GlyphViews,
+                        label: Object(r.d)("Views", "CollectionManagerCard")
+                    }].map(function(e, t) {
+                        return l.createElement(y, i.__assign({
+                            key: t
                         }, e))
                     })
-                }, n
-            }(a.Component),
-            b = Object(s.d)("CollectionManagerCard")(S),
-            _ = t("I9kX"),
-            N = function(e) {
-                function n() {
+                }, t
+            }(l.Component),
+            b = Object(d.d)("CollectionManagerCard")(_),
+            S = n("I9kX"),
+            w = function(e) {
+                function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return i.__extends(n, e), n.prototype.componentDidUpdate = function(e) {
+                return i.__extends(t, e), t.prototype.componentDidUpdate = function(e) {
                     e.data.loading && !this.props.data.loading && this.props.latencyTracking.reportInteractive()
-                }, n.prototype.render = function() {
+                }, t.prototype.render = function() {
                     var e;
-                    return e = this.props.data.loading ? this.collectionCardPlaceholders() : !this.props.data.error && this.props.data.user && this.props.data.user.collections ? this.props.data.user.collections.edges.length > 0 ? this.renderCollections(this.props.data.user.collections.edges) : this.noCollectionsCTA() : this.contentUnavaibleError(), a.createElement(u.X, {
+                    return e = this.props.data.loading ? this.collectionCardPlaceholders() : !this.props.data.error && this.props.data.user && this.props.data.user.collections ? this.props.data.user.collections.edges.length > 0 ? this.renderCollections(this.props.data.user.collections.edges) : this.noCollectionsCTA() : this.contentUnavaibleError(), l.createElement(u.V, {
                         fullHeight: !0,
                         padding: {
                             top: 2,
                             x: 2
                         }
-                    }, a.createElement(u._25, {
-                        type: u._30.H2
-                    }, Object(o.d)("Collections", "CollectionManager")), a.createElement(u.X, {
+                    }, l.createElement(u._23, {
+                        type: u._28.H2
+                    }, Object(r.d)("Collections", "CollectionManager")), l.createElement(u.V, {
                         fullWidth: !0,
                         padding: {
                             top: 2
                         }
                     }, e))
-                }, n.prototype.renderCollections = function(e) {
-                    return e.map(function(e, n) {
-                        return a.createElement(u.X, {
-                            key: n,
+                }, t.prototype.renderCollections = function(e) {
+                    return e.map(function(e, t) {
+                        return l.createElement(u.V, {
+                            key: t,
                             margin: {
                                 bottom: 1
                             }
-                        }, a.createElement(b, {
+                        }, l.createElement(b, {
                             collection: e.node
                         }))
                     })
-                }, n.prototype.collectionCardPlaceholders = function() {
-                    for (var e = [], n = 0; n < 3; n++) e.push(a.createElement(u.X, {
-                        key: n,
+                }, t.prototype.collectionCardPlaceholders = function() {
+                    for (var e = [], t = 0; t < 3; t++) e.push(l.createElement(u.V, {
+                        key: t,
                         margin: {
                             bottom: 1
                         }
-                    }, a.createElement(v, null)));
+                    }, l.createElement(h, null)));
                     return e
-                }, n.prototype.noCollectionsCTA = function() {
-                    return a.createElement("div", null)
-                }, n.prototype.contentUnavaibleError = function() {
-                    return a.createElement("div", null)
-                }, n
-            }(a.Component),
-            w = Object(l.compose)(Object(l.graphql)(_, {
+                }, t.prototype.noCollectionsCTA = function() {
+                    return l.createElement("div", null)
+                }, t.prototype.contentUnavaibleError = function() {
+                    return l.createElement("div", null)
+                }, t
+            }(l.Component),
+            x = Object(a.compose)(Object(a.graphql)(S, {
                 options: function(e) {
                     return {
                         variables: {
@@ -301,10 +301,10 @@ webpackJsonp([67], {
                         }
                     }
                 }
-            }), Object(s.d)("CollectionManager", {
+            }), Object(d.d)("CollectionManager", {
                 destination: c.a.VideoManagerCollectionsManager
-            }), Object(r.a)({
-                location: d.PageviewLocation.VideoManagerCollectionManager,
+            }), Object(o.a)({
+                location: s.PageviewLocation.VideoManagerCollectionManager,
                 properties: function(e) {
                     return {
                         channel: e.match.params.creatorLogin,
@@ -314,100 +314,13 @@ webpackJsonp([67], {
                 skip: function(e) {
                     return e.data.loading
                 }
-            }))(N),
-            I = t("PQ4i"),
-            F = function(e) {
-                function n() {
-                    var n = null !== e && e.apply(this, arguments) || this;
-                    return n.reportImageInteractive = function() {
-                        n.props.latencyTracking.reportInteractive()
-                    }, n
-                }
-                return i.__extends(n, e), n.prototype.render = function() {
-                    var e = this.props.collectionItem;
-                    return a.createElement(u._21, {
-                        display: u.J.Flex,
-                        border: !0
-                    }, a.createElement(u.j, null, a.createElement("img", {
-                        src: e.previewThumbnailURL,
-                        alt: e.title,
-                        onLoad: this.reportImageInteractive
-                    })), a.createElement("div", null, a.createElement(u._25, null, e.title), a.createElement(u._25, {
-                        "data-test-selector": "view-count"
-                    }, Object(o.d)("Total Views {views}", {
-                        views: e.viewCount || 0
-                    }, "CollectionItemCard"))))
-                }, n
-            }(a.Component),
-            x = Object(l.compose)(Object(s.d)("CollectionItemCard"))(F),
-            O = t("kwr5"),
-            D = function(e) {
-                function n() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return i.__extends(n, e), n.prototype.componentDidUpdate = function(e) {
-                    e.data.loading && !this.props.data.loading && this.props.latencyTracking.reportInteractive()
-                }, n.prototype.render = function() {
-                    var e;
-                    return e = this.props.data.loading ? this.collectionCardPlaceholders() : this.props.data.error || !this.props.data.collection ? this.contentUnavaibleError() : this.props.data.collection ? this.renderCollectionItems(this.props.data.collection.items.edges) : this.noCollectionItemsCTA(), a.createElement(u.X, {
-                        padding: {
-                            right: 4
-                        }
-                    }, a.createElement(u._25, {
-                        type: u._30.H1
-                    }, Object(o.d)("Collections", "CollectionEditorPagePresentation")), this.props.data.collection && a.createElement(b, {
-                        collection: this.props.data.collection
-                    }), a.createElement(u.X, null, e))
-                }, n.prototype.renderCollectionItems = function(e) {
-                    return e.map(function(e, n) {
-                        return a.createElement(x, {
-                            key: n,
-                            collectionItem: e.node
-                        })
-                    })
-                }, n.prototype.collectionCardPlaceholders = function() {
-                    return [a.createElement(I.a, {
-                        key: 1
-                    }), a.createElement(I.a, {
-                        key: 2
-                    }), a.createElement(I.a, {
-                        key: 3
-                    })]
-                }, n.prototype.noCollectionItemsCTA = function() {
-                    return a.createElement("div", null)
-                }, n.prototype.contentUnavaibleError = function() {
-                    return a.createElement("div", null)
-                }, n
-            }(a.Component),
-            M = Object(l.compose)(Object(l.graphql)(O, {
-                options: function(e) {
-                    return {
-                        variables: {
-                            collectionID: e.match.params.collectionID
-                        }
-                    }
-                }
-            }), Object(s.d)("CollectionEditorPage", {
-                destination: c.a.VideoManagerCollectionsEditor
-            }), Object(r.a)({
-                location: d.PageviewLocation.VideoManagerCollectionEditor,
-                properties: function(e) {
-                    return {
-                        channel: e.match.params.creatorLogin
-                    }
-                },
-                skip: function(e) {
-                    return e.data.loading
-                }
-            }))(D);
-        t.d(n, "CollectionManagerPage", function() {
-            return w
-        }), t.d(n, "CollectionEditorPage", function() {
-            return M
+            }))(w);
+        n.d(t, "CollectionManagerPage", function() {
+            return x
         })
     },
-    I9kX: function(e, n) {
-        var t = {
+    I9kX: function(e, t) {
+        var n = {
             kind: "Document",
             definitions: [{
                 kind: "OperationDefinition",
@@ -632,7 +545,7 @@ webpackJsonp([67], {
                 end: 258
             }
         };
-        t.loc.source = {
+        n.loc.source = {
             body: "query CollectionManager_Owner($creatorLogin: String!) {\nuser(login: $creatorLogin) {\nid\ncollections {\nedges {\ncursor\nnode {\nid\nitems {\ntotalCount\n}\nlengthSeconds\ntitle\nthumbnailURL(width: 160 height: 90)\nupdatedAt\nviewCount\n}\n}\npageInfo {\nhasNextPage\n}\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
@@ -640,242 +553,8 @@ webpackJsonp([67], {
                 column: 1
             }
         };
-        e.exports = t
+        e.exports = n
     },
-    QmYP: function(e, n) {},
-    kwr5: function(e, n) {
-        var t = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "CollectionManager_EditCollection"
-                },
-                variableDefinitions: [{
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "collectionID"
-                        }
-                    },
-                    type: {
-                        kind: "NonNullType",
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "ID"
-                            }
-                        }
-                    }
-                }],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "collection"
-                        },
-                        arguments: [{
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "id"
-                            },
-                            value: {
-                                kind: "Variable",
-                                name: {
-                                    kind: "Name",
-                                    value: "collectionID"
-                                }
-                            }
-                        }],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "lengthSeconds"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "owner"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "login"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }]
-                                }
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "title"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "viewCount"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "updatedAt"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "items"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "totalCount"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }, {
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "edges"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "node"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: {
-                                                    kind: "SelectionSet",
-                                                    selections: [{
-                                                        kind: "InlineFragment",
-                                                        typeCondition: {
-                                                            kind: "NamedType",
-                                                            name: {
-                                                                kind: "Name",
-                                                                value: "Video"
-                                                            }
-                                                        },
-                                                        directives: [],
-                                                        selectionSet: {
-                                                            kind: "SelectionSet",
-                                                            selections: [{
-                                                                kind: "Field",
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "id"
-                                                                },
-                                                                arguments: [],
-                                                                directives: []
-                                                            }, {
-                                                                kind: "Field",
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "title"
-                                                                },
-                                                                arguments: [],
-                                                                directives: []
-                                                            }, {
-                                                                kind: "Field",
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "lengthSeconds"
-                                                                },
-                                                                arguments: [],
-                                                                directives: []
-                                                            }, {
-                                                                kind: "Field",
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "previewThumbnailURL"
-                                                                },
-                                                                arguments: [],
-                                                                directives: []
-                                                            }, {
-                                                                kind: "Field",
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "viewCount"
-                                                                },
-                                                                arguments: [],
-                                                                directives: []
-                                                            }]
-                                                        }
-                                                    }]
-                                                }
-                                            }]
-                                        }
-                                    }]
-                                }
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 265
-            }
-        };
-        t.loc.source = {
-            body: "query CollectionManager_EditCollection($collectionID: ID!) {\ncollection(id: $collectionID) {\nid\nlengthSeconds\nowner {\nlogin\n}\ntitle\nviewCount\nupdatedAt\nitems {\ntotalCount\nedges {\nnode {\n... on Video {\nid\ntitle\nlengthSeconds\npreviewThumbnailURL\nviewCount\n}\n}\n}\n}\n}\n}",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = t
-    }
+    QmYP: function(e, t) {}
 });
-//# sourceMappingURL=pages.video-tools.pages.collection-manager-b0b9b7e128d76d20f5121d0a0a3e4940.js.map
+//# sourceMappingURL=pages.video-tools.pages.collection-manager-f8e58d132f033e30961fbcbe9f9d562c.js.map

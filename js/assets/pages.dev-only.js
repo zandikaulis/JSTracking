@@ -83,36 +83,36 @@ webpackJsonp([60], {
                     }, n
                 }
                 return v.__extends(t, e), t.prototype.render = function() {
-                    for (var e = [], t = 0; t < this.state.colA; t++) e.push(u.createElement(k.X, {
+                    for (var e = [], t = 0; t < this.state.colA; t++) e.push(u.createElement(k.V, {
                         key: t,
-                        display: k.J.Flex,
-                        flexWrap: k.M.NoWrap,
+                        display: k.H.Flex,
+                        flexWrap: k.K.NoWrap,
                         margin: 1
-                    }, u.createElement(k.X, {
+                    }, u.createElement(k.V, {
                         margin: {
                             right: 1
                         }
-                    }, u.createElement(k._5, {
+                    }, u.createElement(k._3, {
                         height: 90,
                         width: 90
-                    })), u.createElement(k.X, null, u.createElement(k._5, {
+                    })), u.createElement(k.V, null, u.createElement(k._3, {
                         width: 300,
                         lineCount: 3
                     }))));
                     var n = [];
-                    for (t = 0; t < this.state.colB; t++) n.push(u.createElement(k.X, {
+                    for (t = 0; t < this.state.colB; t++) n.push(u.createElement(k.V, {
                         key: t,
-                        display: k.J.Flex,
-                        flexWrap: k.M.NoWrap,
+                        display: k.H.Flex,
+                        flexWrap: k.K.NoWrap,
                         margin: 1
-                    }, u.createElement(k.X, {
+                    }, u.createElement(k.V, {
                         margin: {
                             right: 1
                         }
-                    }, u.createElement(k._5, {
+                    }, u.createElement(k._3, {
                         height: 90,
                         width: 90
-                    })), u.createElement(k.X, null, u.createElement(k._5, {
+                    })), u.createElement(k.V, null, u.createElement(k._3, {
                         width: 300,
                         lineCount: 3
                     }))));
@@ -123,20 +123,20 @@ webpackJsonp([60], {
                     };
                     return u.createElement("div", {
                         style: l
-                    }, u.createElement(p.b, null, u.createElement(k.X, {
-                        display: k.J.Flex,
-                        flexWrap: k.M.NoWrap
-                    }, u.createElement(k.X, {
+                    }, u.createElement(p.b, null, u.createElement(k.V, {
+                        display: k.H.Flex,
+                        flexWrap: k.K.NoWrap
+                    }, u.createElement(k.V, {
                         margin: {
                             right: 1
                         }
-                    }, e, this.state.loadingA && u.createElement(k.X, null, u.createElement(k._1, {
+                    }, e, this.state.loadingA && u.createElement(k.V, null, u.createElement(k.Z, {
                         fillContent: !0
                     })), u.createElement(p.a, {
                         enabled: !0,
                         loadMore: this.loadMoreA,
                         pixelThreshold: 0
-                    })), u.createElement(k.X, null, n, this.state.loadingB && u.createElement(k.X, null, u.createElement(k._1, {
+                    })), u.createElement(k.V, null, n, this.state.loadingB && u.createElement(k.V, null, u.createElement(k.Z, {
                         fillContent: !0
                     })), u.createElement(p.a, {
                         contentLength: n.length,
@@ -234,12 +234,12 @@ webpackJsonp([60], {
                     }
                 }, "Internal Link with location state, including tt_codes")), u.createElement("li", null, u.createElement(d.a, {
                     to: "/adamar/dashboard"
-                }, "Legacy Link (dashbaord)"))), u.createElement(k.X, {
+                }, "Legacy Link (dashbaord)"))), u.createElement(k.V, {
                     margin: {
                         top: 2
                     }
-                }, u.createElement(k._25, {
-                    type: k._30.H2
+                }, u.createElement(k._23, {
+                    type: k._28.H2
                 }, " Infinite Scroll Test"), u.createElement(f, null))))
             }),
             _ = n("3zLD"),
@@ -465,4 +465,4 @@ webpackJsonp([60], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.dev-only-75208bd9abda4e9beaf853f96ba4255e.js.map
+//# sourceMappingURL=pages.dev-only-51aae6862ae3eb858d1784502ce0f9c8.js.map
