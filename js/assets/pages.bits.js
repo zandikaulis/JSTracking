@@ -1,4 +1,4 @@
-webpackJsonp([53], {
+webpackJsonp([54], {
     "2b/B": function(e, t, n) {
         "use strict";
         var a = n("RH2O"),
@@ -45,45 +45,45 @@ webpackJsonp([53], {
                 }, t.prototype.componentDidUpdate = function() {
                     this.reportInteractive()
                 }, t.prototype.render = function() {
-                    if (this.props.data.loading || this.props.data.error) return p.createElement(k._3, null);
-                    if (this.props.isOnboarding) return p.createElement(k.V, {
-                        display: k.H.Flex,
+                    if (this.props.data.loading || this.props.data.error) return p.createElement(k._5, null);
+                    if (this.props.isOnboarding) return p.createElement(k.X, {
+                        display: k.J.Flex,
                         className: "minimal-top-nav__user",
                         fullHeight: !0
-                    }, p.createElement(k.V, {
-                        display: k.H.Flex,
-                        flexWrap: k.K.NoWrap,
+                    }, p.createElement(k.X, {
+                        display: k.J.Flex,
+                        flexWrap: k.M.NoWrap,
                         alignItems: k.c.Center,
                         flexGrow: 1,
                         padding: {
                             right: 1
                         },
                         fullHeight: !0
-                    }, p.createElement(k.V, {
+                    }, p.createElement(k.X, {
                         margin: {
                             x: 1
                         },
                         flexShrink: 0
-                    }, p.createElement(k.V, null, p.createElement(k.l, {
+                    }, p.createElement(k.X, null, p.createElement(k.l, {
                         size: 30,
                         imageSrc: this.props.data.currentUser.profileImageURL,
                         imageAlt: "User avatar"
-                    }))), p.createElement(k.V, {
+                    }))), p.createElement(k.X, {
                         flexGrow: 1,
                         flexShrink: 1,
-                        flexDirection: k.J.Column,
+                        flexDirection: k.L.Column,
                         ellipsis: !0
-                    }, p.createElement(k._19, {
+                    }, p.createElement(k._21, {
                         className: "minimal-top-nav__username"
                     }, this.props.data.currentUser.displayName))));
                     if (this.props.isLoggedIn) {
                         var e = null;
-                        this.props.darkModeEnabled && (e = p.createElement(k._19, {
+                        this.props.darkModeEnabled && (e = p.createElement(k._21, {
                             borderBottom: !0,
                             margin: {
                                 y: 1
                             }
-                        }, p.createElement(k.V, {
+                        }, p.createElement(k.X, {
                             margin: {
                                 x: 2,
                                 bottom: 1
@@ -108,77 +108,77 @@ webpackJsonp([53], {
                         return p.createElement(u.a, {
                             onClickOut: this.onClickOut,
                             className: t
-                        }, p.createElement(k.V, {
-                            display: k.H.Flex,
+                        }, p.createElement(k.X, {
+                            display: k.J.Flex,
                             className: "minimal-top-nav__user",
                             fullHeight: !0
-                        }, p.createElement(k.T, {
+                        }, p.createElement(k.V, {
                             onClick: this.onCardClick,
                             "data-test-selector": "user-menu-toggle"
-                        }, p.createElement(k.V, {
-                            display: k.H.Flex,
-                            flexWrap: k.K.NoWrap,
+                        }, p.createElement(k.X, {
+                            display: k.J.Flex,
+                            flexWrap: k.M.NoWrap,
                             alignItems: k.c.Center,
                             flexGrow: 1,
                             padding: {
                                 right: 1
                             },
                             fullHeight: !0
-                        }, p.createElement(k.V, {
+                        }, p.createElement(k.X, {
                             margin: {
                                 x: 1
                             },
                             flexShrink: 0
-                        }, p.createElement(k.V, null, p.createElement(k.l, {
+                        }, p.createElement(k.X, null, p.createElement(k.l, {
                             size: 30,
                             imageSrc: this.props.data.currentUser.profileImageURL,
                             imageAlt: "User avatar"
-                        }))), p.createElement(k.V, {
+                        }))), p.createElement(k.X, {
                             flexGrow: 1,
                             flexShrink: 1,
-                            flexDirection: k.J.Column,
+                            flexDirection: k.L.Column,
                             ellipsis: !0
-                        }, p.createElement(k._19, {
+                        }, p.createElement(k._21, {
                             className: "minimal-top-nav__username"
-                        }, this.props.data.currentUser.displayName)), p.createElement(k._19, {
-                            display: k.H.Flex,
+                        }, this.props.data.currentUser.displayName)), p.createElement(k._21, {
+                            display: k.J.Flex,
                             flexShrink: 0,
                             className: "minimal-top-nav__expand"
-                        }, p.createElement(k._10, {
-                            asset: k._11.GlyphArrDown
-                        }))))), p.createElement(k._19, {
+                        }, p.createElement(k._12, {
+                            asset: k._13.GlyphArrDown
+                        }))))), p.createElement(k._21, {
                             fullWidth: !0,
-                            overflow: k._0.Hidden,
-                            position: k._4.Absolute,
+                            overflow: k._2.Hidden,
+                            position: k._6.Absolute,
                             padding: {
                                 y: 1
                             },
                             background: k.m.Base,
                             className: n,
                             "data-test-selector": "dropdown-down"
-                        }, e, p.createElement(k.T, {
+                        }, e, p.createElement(k.V, {
                             onClick: this.onLogoutClick
-                        }, p.createElement(k._19, {
+                        }, p.createElement(k._21, {
                             color: k.F.Alt,
-                            display: k.H.Flex,
+                            display: k.J.Flex,
                             alignItems: k.c.Center,
                             padding: {
                                 x: 2,
                                 y: .5
                             }
-                        }, p.createElement(k.V, {
-                            display: k.H.Flex,
+                        }, p.createElement(k.X, {
+                            display: k.J.Flex,
                             alignItems: k.c.Center,
                             margin: {
                                 right: 1
                             }
-                        }, p.createElement(k._10, {
-                            asset: k._11.NavLogout,
+                        }, p.createElement(k._12, {
+                            asset: k._13.NavLogout,
                             height: 18,
                             width: 18
-                        })), p.createElement(k._23, null, Object(m.d)("Log Out", "MinimalUser"))))))
+                        })), p.createElement(k._25, null, Object(m.d)("Log Out", "MinimalUser"))))))
                     }
-                    return p.createElement(k.V, {
+                    return p.createElement(k.X, {
                         margin: 1
                     }, p.createElement(k.u, {
                         onClick: this.onLoginClick
@@ -231,17 +231,17 @@ webpackJsonp([53], {
             p = n("tnNl"),
             m = n("Odds"),
             u = s.a.wrap(function() {
-                return n.e(71).then(n.bind(null, "HQb3"))
+                return n.e(72).then(n.bind(null, "HQb3"))
             }, "BitsLandingPage"),
             h = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return o.__extends(t, e), t.prototype.render = function() {
-                    return l.createElement(m.V, {
+                    return l.createElement(m.X, {
                         className: "bits-root " + Object(d.c)(this.props.theme),
-                        position: m._4.Absolute,
-                        overflow: m._0.Hidden,
+                        position: m._6.Absolute,
+                        overflow: m._2.Hidden,
                         attachRight: !0,
                         attachTop: !0,
                         attachBottom: !0,
@@ -251,14 +251,14 @@ webpackJsonp([53], {
                         }
                     }, l.createElement(p.a, {
                         darkModeEnabled: !0
-                    }), l.createElement(m.V, {
-                        display: m.H.Flex,
-                        flexWrap: m.K.NoWrap,
+                    }), l.createElement(m.X, {
+                        display: m.J.Flex,
+                        flexWrap: m.M.NoWrap,
                         fullHeight: !0,
-                        position: m._4.Relative
-                    }, l.createElement(m.Q, {
-                        display: m.H.Flex,
-                        position: m._4.Relative,
+                        position: m._6.Relative
+                    }, l.createElement(m.S, {
+                        display: m.J.Flex,
+                        position: m._6.Relative,
                         flexGrow: 1,
                         fullHeight: !0,
                         fullWidth: !0
@@ -429,21 +429,21 @@ webpackJsonp([53], {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(c.Q, {
-                        position: c._4.Fixed,
+                    return r.createElement(c.S, {
+                        position: c._6.Fixed,
                         attachTop: !0,
                         fullWidth: !0
                     }, r.createElement("nav", {
                         className: "minimal-top-nav"
-                    }, r.createElement(c.V, {
+                    }, r.createElement(c.X, {
                         className: "minimal-top-nav__menu",
-                        display: c.H.Flex,
+                        display: c.J.Flex,
                         alignItems: c.c.Stretch,
-                        flexWrap: c.K.NoWrap,
+                        flexWrap: c.M.NoWrap,
                         fullHeight: !0,
-                        justifyContent: c.U.Between
-                    }, r.createElement(c.Q, {
-                        display: c.H.InlineFlex,
+                        justifyContent: c.W.Between
+                    }, r.createElement(c.S, {
+                        display: c.J.InlineFlex,
                         alignItems: c.c.Center,
                         flexShrink: 0
                     }, r.createElement(i.a, {
@@ -455,8 +455,8 @@ webpackJsonp([53], {
                             }
                         },
                         className: "minimal-top-nav__home-link"
-                    }, r.createElement(c._10, {
-                        asset: c._11.LogoTwitch,
+                    }, r.createElement(c._12, {
+                        asset: c._13.LogoTwitch,
                         width: 94,
                         height: 32
                     }))), r.createElement(s.a, {
@@ -524,4 +524,4 @@ webpackJsonp([53], {
             l = n("vH/s")
     }
 });
-//# sourceMappingURL=pages.bits-b83be39edef2ce477f0eaf6ff83d90d4.js.map
+//# sourceMappingURL=pages.bits-52b51cf129001d31570d7d862ea3b1a6.js.map

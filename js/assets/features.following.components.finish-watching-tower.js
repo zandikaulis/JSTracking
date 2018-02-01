@@ -1,4 +1,4 @@
-webpackJsonp([67], {
+webpackJsonp([68], {
     "0shC": function(e, i, n) {
         var t = {
             kind: "Document",
@@ -180,18 +180,18 @@ webpackJsonp([67], {
                             }
                         }) : i = i.slice(0, n)
                     }
-                    return r.createElement("div", null, r.createElement(m.V, {
+                    return r.createElement("div", null, r.createElement(m.X, {
                         margin: {
                             bottom: 2
                         }
-                    }, r.createElement(m._23, {
-                        type: m._28.H4,
+                    }, r.createElement(m._25, {
+                        type: m._30.H4,
                         color: m.F.Alt2,
-                        fontSize: m.L.Size5,
-                        transform: m._27.Uppercase
+                        fontSize: m.N.Size5,
+                        transform: m._29.Uppercase
                     }, Object(a.d)("Resume Watching", "viewedVideos"))), r.createElement(u.b, {
                         videos: i,
-                        videoCardSize: m._35.Medium,
+                        videoCardSize: m._37.Medium,
                         trackingMedium: s.PageviewMedium.Following,
                         trackingContent: s.PageviewContent.ResumeWatchingVideos,
                         viewAllButtonProps: e
@@ -212,4 +212,4 @@ webpackJsonp([67], {
         })
     }
 });
-//# sourceMappingURL=features.following.components.finish-watching-tower-080333ace862852b650ec1cb42ab0209.js.map
+//# sourceMappingURL=features.following.components.finish-watching-tower-765b63b4b8413f88caef34f40e53e0ac.js.map

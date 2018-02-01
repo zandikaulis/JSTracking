@@ -6525,16 +6525,16 @@ webpackJsonp([34], {
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(i.I, {
+                    return r.createElement(i.K, {
                         dragOver: this.state.isDraggingOver,
                         error: this.props.error
-                    }, r.createElement(i.Q, {
-                        position: i._4.Absolute,
+                    }, r.createElement(i.S, {
+                        position: i._6.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
                         fullWidth: !0,
                         fullHeight: !0,
-                        zIndex: i._39.Above
+                        zIndex: i._41.Above
                     }, r.createElement("input", {
                         "data-test-selector": "file-picker-input",
                         className: "drag-and-drop-file-picker__input",
@@ -7638,7 +7638,7 @@ webpackJsonp([34], {
                 "use strict";
 
                 function t() {
-                    return Ze.apply(null, arguments)
+                    return Ke.apply(null, arguments)
                 }
 
                 function a(e) {
@@ -7702,7 +7702,7 @@ webpackJsonp([34], {
                 function m(e) {
                     if (null == e._isValid) {
                         var t = h(e),
-                            n = Xe.call(t.parsedDateParts, function(e) {
+                            n = Ze.call(t.parsedDateParts, function(e) {
                                 return null != e
                             }),
                             a = !isNaN(e._d.getTime()) && t.overflow < 0 && !t.empty && !t.invalidMonth && !t.invalidWeekday && !t.nullInput && !t.invalidFormat && !t.userInvalidated && (!t.meridiem || t.meridiem && n);
@@ -7905,7 +7905,7 @@ webpackJsonp([34], {
                     return new Date(Date.UTC(e, t + 1, 0)).getUTCDate()
                 }
 
-                function U(e, t) {
+                function G(e, t) {
                     var n;
                     if (!e.isValid()) return e;
                     if ("string" == typeof t)
@@ -7914,8 +7914,8 @@ webpackJsonp([34], {
                     return n = Math.min(e.date(), V(e.year(), t)), e._d["set" + (e._isUTC ? "UTC" : "") + "Month"](t, n), e
                 }
 
-                function G(e) {
-                    return null != e ? (U(this, e), t.updateOffset(this, !0), this) : H(this, "Month")
+                function U(e) {
+                    return null != e ? (G(this, e), t.updateOffset(this, !0), this) : H(this, "Month")
                 }
 
                 function q() {
@@ -7931,27 +7931,27 @@ webpackJsonp([34], {
                     this._monthsRegex = new RegExp("^(" + i.join("|") + ")", "i"), this._monthsShortRegex = this._monthsRegex, this._monthsStrictRegex = new RegExp("^(" + r.join("|") + ")", "i"), this._monthsShortStrictRegex = new RegExp("^(" + a.join("|") + ")", "i")
                 }
 
-                function K(e) {
-                    return Z(e) ? 366 : 365
+                function X(e) {
+                    return K(e) ? 366 : 365
                 }
 
-                function Z(e) {
+                function K(e) {
                     return e % 4 == 0 && e % 100 != 0 || e % 400 == 0
                 }
 
-                function X(e) {
+                function Z(e) {
                     var t = new Date(Date.UTC.apply(null, arguments));
                     return e < 100 && e >= 0 && isFinite(t.getUTCFullYear()) && t.setUTCFullYear(e), t
                 }
 
                 function Q(e, t, n) {
                     var a = 7 + t - n;
-                    return -((7 + X(e, 0, a).getUTCDay() - t) % 7) + a - 1
+                    return -((7 + Z(e, 0, a).getUTCDay() - t) % 7) + a - 1
                 }
 
                 function $(e, t, n, a, r) {
                     var i, s, o = 1 + 7 * (t - 1) + (7 + n - a) % 7 + Q(e, a, r);
-                    return o <= 0 ? s = K(i = e - 1) + o : o > K(e) ? (i = e + 1, s = o - K(e)) : (i = e, s = o), {
+                    return o <= 0 ? s = X(i = e - 1) + o : o > X(e) ? (i = e + 1, s = o - X(e)) : (i = e, s = o), {
                         year: i,
                         dayOfYear: s
                     }
@@ -7969,7 +7969,7 @@ webpackJsonp([34], {
                 function te(e, t, n) {
                     var a = Q(e, t, n),
                         r = Q(e + 1, t, n);
-                    return (K(e) - a + r) / 7
+                    return (X(e) - a + r) / 7
                 }
 
                 function ne() {
@@ -8005,10 +8005,10 @@ webpackJsonp([34], {
 
                 function oe(t) {
                     var a = null;
-                    if (!Xt[t] && void 0 !== e && e && e.exports) try {
+                    if (!Zt[t] && void 0 !== e && e && e.exports) try {
                         a = qt._abbr, n("uslO")("./" + t), de(a)
                     } catch (e) {}
-                    return Xt[t]
+                    return Zt[t]
                 }
 
                 function de(e, t) {
@@ -8018,20 +8018,20 @@ webpackJsonp([34], {
 
                 function ue(e, t) {
                     if (null !== t) {
-                        var n = Zt;
-                        if (t.abbr = e, null != Xt[e]) D("defineLocaleOverride", "use moment.updateLocale(localeName, config) to change an existing locale. moment.defineLocale(localeName, config) should only be used for creating a new locale See http://momentjs.com/guides/#/warnings/define-locale/ for more info."), n = Xt[e]._config;
+                        var n = Kt;
+                        if (t.abbr = e, null != Zt[e]) D("defineLocaleOverride", "use moment.updateLocale(localeName, config) to change an existing locale. moment.defineLocale(localeName, config) should only be used for creating a new locale See http://momentjs.com/guides/#/warnings/define-locale/ for more info."), n = Zt[e]._config;
                         else if (null != t.parentLocale) {
-                            if (null == Xt[t.parentLocale]) return Qt[t.parentLocale] || (Qt[t.parentLocale] = []), Qt[t.parentLocale].push({
+                            if (null == Zt[t.parentLocale]) return Qt[t.parentLocale] || (Qt[t.parentLocale] = []), Qt[t.parentLocale].push({
                                 name: e,
                                 config: t
                             }), null;
-                            n = Xt[t.parentLocale]._config
+                            n = Zt[t.parentLocale]._config
                         }
-                        return Xt[e] = new w(Y(n, t)), Qt[e] && Qt[e].forEach(function(e) {
+                        return Zt[e] = new w(Y(n, t)), Qt[e] && Qt[e].forEach(function(e) {
                             ue(e.name, e.config)
-                        }), de(e), Xt[e]
+                        }), de(e), Zt[e]
                     }
-                    return delete Xt[e], null
+                    return delete Zt[e], null
                 }
 
                 function le(e) {
@@ -8136,9 +8136,9 @@ webpackJsonp([34], {
                                     n = _e(t.gg, e._a[wt], u.year), a = _e(t.w, u.week), null != t.d ? ((r = t.d) < 0 || r > 6) && (d = !0) : null != t.e ? (r = t.e + i, (t.e < 0 || t.e > 6) && (d = !0)) : r = i
                                 }
                                 a < 1 || a > te(n, i, s) ? h(e)._overflowWeeks = !0 : null != d ? h(e)._overflowWeekday = !0 : (o = $(n, a, r, i, s), e._a[wt] = o.year, e._dayOfYear = o.dayOfYear)
-                            }(e), null != e._dayOfYear && (i = _e(e._a[wt], r[wt]), (e._dayOfYear > K(i) || 0 === e._dayOfYear) && (h(e)._overflowDayOfYear = !0), a = X(i, 0, e._dayOfYear), e._a[xt] = a.getUTCMonth(), e._a[Tt] = a.getUTCDate()), n = 0; n < 3 && null == e._a[n]; ++n) e._a[n] = s[n] = r[n];
+                            }(e), null != e._dayOfYear && (i = _e(e._a[wt], r[wt]), (e._dayOfYear > X(i) || 0 === e._dayOfYear) && (h(e)._overflowDayOfYear = !0), a = Z(i, 0, e._dayOfYear), e._a[xt] = a.getUTCMonth(), e._a[Tt] = a.getUTCDate()), n = 0; n < 3 && null == e._a[n]; ++n) e._a[n] = s[n] = r[n];
                         for (; n < 7; n++) e._a[n] = s[n] = null == e._a[n] ? 2 === n ? 1 : 0 : e._a[n];
-                        24 === e._a[St] && 0 === e._a[Ot] && 0 === e._a[jt] && 0 === e._a[Ht] && (e._nextDay = !0, e._a[St] = 0), e._d = (e._useUTC ? X : function(e, t, n, a, r, i, s) {
+                        24 === e._a[St] && 0 === e._a[Ot] && 0 === e._a[jt] && 0 === e._a[Ht] && (e._nextDay = !0, e._a[St] = 0), e._d = (e._useUTC ? Z : function(e, t, n, a, r, i, s) {
                             var o = new Date(e, t, n, a, r, i, s);
                             return e < 100 && e >= 0 && isFinite(o.getFullYear()) && o.setFullYear(e), o
                         }).apply(null, s), null != e._tzm && e._d.setUTCMinutes(e._d.getUTCMinutes() - e._tzm), e._nextDay && (e._a[St] = 24)
@@ -8331,7 +8331,7 @@ webpackJsonp([34], {
                     var i = n._milliseconds,
                         s = De(n._days),
                         o = De(n._months);
-                    e.isValid() && (r = null == r || r, i && e._d.setTime(e._d.valueOf() + i * a), s && C(e, "Date", H(e, "Date") + s * a), o && U(e, H(e, "Month") + o * a), r && t.updateOffset(e, s || o))
+                    e.isValid() && (r = null == r || r, i && e._d.setTime(e._d.valueOf() + i * a), s && C(e, "Date", H(e, "Date") + s * a), o && G(e, H(e, "Month") + o * a), r && t.updateOffset(e, s || o))
                 }
 
                 function Pe(e) {
@@ -8351,7 +8351,7 @@ webpackJsonp([34], {
                     var i;
                     return null == e ? ee(this, a, r).year : (i = te(e, a, r), t > i && (t = i), function(e, t, n, a, r) {
                         var i = $(e, t, n, a, r),
-                            s = X(i.year, 0, i.dayOfYear);
+                            s = Z(i.year, 0, i.dayOfYear);
                         return this.year(s.getUTCFullYear()), this.month(s.getUTCMonth()), this.date(s.getUTCDate()), this
                     }.call(this, e, t, n, a, r))
                 }
@@ -8400,11 +8400,11 @@ webpackJsonp([34], {
                     return 4800 * e / 146097
                 }
 
-                function Ue(e) {
+                function Ge(e) {
                     return 146097 * e / 4800
                 }
 
-                function Ge(e) {
+                function Ue(e) {
                     return function() {
                         return this.as(e)
                     }
@@ -8416,7 +8416,7 @@ webpackJsonp([34], {
                     }
                 }
 
-                function Ke() {
+                function Xe() {
                     if (!this.isValid()) return this.localeData().invalidDate();
                     var e, t, n = Rn(this._milliseconds) / 1e3,
                         a = Rn(this._days),
@@ -8431,7 +8431,7 @@ webpackJsonp([34], {
                         c = this.asSeconds();
                     return c ? (c < 0 ? "-" : "") + "P" + (i ? i + "Y" : "") + (s ? s + "M" : "") + (o ? o + "D" : "") + (d || u || l ? "T" : "") + (d ? d + "H" : "") + (u ? u + "M" : "") + (l ? l + "S" : "") : "P0D"
                 }
-                var Ze, Xe = Array.prototype.some ? Array.prototype.some : function(e) {
+                var Ke, Ze = Array.prototype.some ? Array.prototype.some : function(e) {
                         for (var t = Object(this), n = t.length >>> 0, a = 0; a < n; a++)
                             if (a in t && e.call(this, t[a], a, t)) return !0;
                         return !1
@@ -8545,8 +8545,8 @@ webpackJsonp([34], {
                     Bt = "Sun_Mon_Tue_Wed_Thu_Fri_Sat".split("_"),
                     Jt = "Su_Mo_Tu_We_Th_Fr_Sa".split("_"),
                     Vt = Dt,
-                    Ut = Dt,
-                    Gt = Dt;
+                    Gt = Dt,
+                    Ut = Dt;
                 A("H", ["HH", 2], 0, "hour"), A("h", ["hh", 2], 0, ae), A("k", ["kk", 2], 0, function() {
                     return this.hours() || 24
                 }), A("hmm", 0, 0, function() {
@@ -8579,8 +8579,8 @@ webpackJsonp([34], {
                         r = e.length - 2;
                     t[St] = M(e.substr(0, a)), t[Ot] = M(e.substr(a, 2)), t[jt] = M(e.substr(r))
                 });
-                var qt, Kt = j("Hours", !0),
-                    Zt = {
+                var qt, Xt = j("Hours", !0),
+                    Kt = {
                         calendar: {
                             sameDay: "[Today at] LT",
                             nextDay: "[Tomorrow at] LT",
@@ -8627,7 +8627,7 @@ webpackJsonp([34], {
                         weekdaysShort: Bt,
                         meridiemParse: /[ap]\.?m?\.?/i
                     },
-                    Xt = {},
+                    Zt = {},
                     Qt = {},
                     $t = /^\s*((?:[+-]\d{6}|\d{4})-(?:\d\d-\d\d|W\d\d-\d|W\d\d|\d\d\d|\d\d))(?:(T| )(\d\d(?::\d\d(?::\d\d(?:[.,]\d+)?)?)?)([\+\-]\d\d(?::?\d\d)?|\s*Z)?)?$/,
                     en = /^\s*((?:[+-]\d{6}|\d{4})(?:\d\d\d\d|W\d\d\d|W\d\d|\d\d\d|\d\d))(?:(T| )(\d\d(?:\d\d(?:\d\d(?:[.,]\d+)?)?)?)([\+\-]\d\d(?::?\d\d)?|\s*Z)?)?$/,
@@ -8867,14 +8867,14 @@ webpackJsonp([34], {
                         strict: this._strict
                     }
                 }, bn.year = Rt, bn.isLeapYear = function() {
-                    return Z(this.year())
+                    return K(this.year())
                 }, bn.weekYear = function(e) {
                     return Ee.call(this, e, this.week(), this.weekday(), this.localeData()._week.dow, this.localeData()._week.doy)
                 }, bn.isoWeekYear = function(e) {
                     return Ee.call(this, e, this.isoWeek(), this.isoWeekday(), 1, 4)
                 }, bn.quarter = bn.quarters = function(e) {
                     return null == e ? Math.ceil((this.month() + 1) / 3) : this.month(3 * (e - 1) + this.month() % 3)
-                }, bn.month = G, bn.daysInMonth = function() {
+                }, bn.month = U, bn.daysInMonth = function() {
                     return V(this.year(), this.month())
                 }, bn.week = bn.weeks = function(e) {
                     var t = this.localeData().week(this);
@@ -8909,7 +8909,7 @@ webpackJsonp([34], {
                 }, bn.dayOfYear = function(e) {
                     var t = Math.round((this.clone().startOf("day") - this.clone().startOf("year")) / 864e5) + 1;
                     return null == e ? t : this.add(e - t, "d")
-                }, bn.hour = bn.hours = Kt, bn.minute = bn.minutes = gn, bn.second = bn.seconds = yn, bn.millisecond = bn.milliseconds = vn, bn.utcOffset = function(e, n, a) {
+                }, bn.hour = bn.hours = Xt, bn.minute = bn.minutes = gn, bn.second = bn.seconds = yn, bn.millisecond = bn.milliseconds = vn, bn.utcOffset = function(e, n, a) {
                     var r, i = this._offset || 0;
                     if (!this.isValid()) return null != e ? this : NaN;
                     if (null != e) {
@@ -8942,7 +8942,7 @@ webpackJsonp([34], {
                     return this._isUTC ? "UTC" : ""
                 }, bn.zoneName = function() {
                     return this._isUTC ? "Coordinated Universal Time" : ""
-                }, bn.dates = L("dates accessor is deprecated. Use date instead.", pn), bn.months = L("months accessor is deprecated. Use month instead", G), bn.years = L("years accessor is deprecated. Use year instead", Rt), bn.zone = L("moment().zone is deprecated, use moment().utcOffset instead. http://momentjs.com/guides/#/warnings/zone/", function(e, t) {
+                }, bn.dates = L("dates accessor is deprecated. Use date instead.", pn), bn.months = L("months accessor is deprecated. Use month instead", U), bn.years = L("years accessor is deprecated. Use year instead", Rt), bn.zone = L("moment().zone is deprecated, use moment().utcOffset instead. http://momentjs.com/guides/#/warnings/zone/", function(e, t) {
                     return null != e ? ("string" != typeof e && (e = -e), this.utcOffset(e, t), this) : -this.utcOffset()
                 }), bn.isDSTShifted = L("isDSTShifted is deprecated. See http://momentjs.com/guides/#/warnings/dst-shifted/ for more information", function() {
                     if (!i(this._isDSTShifted)) return this._isDSTShifted;
@@ -9027,9 +9027,9 @@ webpackJsonp([34], {
                 }, Ln.weekdaysRegex = function(e) {
                     return this._weekdaysParseExact ? (u(this, "_weekdaysRegex") || ne.call(this), e ? this._weekdaysStrictRegex : this._weekdaysRegex) : (u(this, "_weekdaysRegex") || (this._weekdaysRegex = Vt), this._weekdaysStrictRegex && e ? this._weekdaysStrictRegex : this._weekdaysRegex)
                 }, Ln.weekdaysShortRegex = function(e) {
-                    return this._weekdaysParseExact ? (u(this, "_weekdaysRegex") || ne.call(this), e ? this._weekdaysShortStrictRegex : this._weekdaysShortRegex) : (u(this, "_weekdaysShortRegex") || (this._weekdaysShortRegex = Ut), this._weekdaysShortStrictRegex && e ? this._weekdaysShortStrictRegex : this._weekdaysShortRegex)
+                    return this._weekdaysParseExact ? (u(this, "_weekdaysRegex") || ne.call(this), e ? this._weekdaysShortStrictRegex : this._weekdaysShortRegex) : (u(this, "_weekdaysShortRegex") || (this._weekdaysShortRegex = Gt), this._weekdaysShortStrictRegex && e ? this._weekdaysShortStrictRegex : this._weekdaysShortRegex)
                 }, Ln.weekdaysMinRegex = function(e) {
-                    return this._weekdaysParseExact ? (u(this, "_weekdaysRegex") || ne.call(this), e ? this._weekdaysMinStrictRegex : this._weekdaysMinRegex) : (u(this, "_weekdaysMinRegex") || (this._weekdaysMinRegex = Gt), this._weekdaysMinStrictRegex && e ? this._weekdaysMinStrictRegex : this._weekdaysMinRegex)
+                    return this._weekdaysParseExact ? (u(this, "_weekdaysRegex") || ne.call(this), e ? this._weekdaysMinStrictRegex : this._weekdaysMinRegex) : (u(this, "_weekdaysMinRegex") || (this._weekdaysMinRegex = Ut), this._weekdaysMinStrictRegex && e ? this._weekdaysMinStrictRegex : this._weekdaysMinRegex)
                 }, Ln.isPM = function(e) {
                     return "p" === (e + "").toLowerCase().charAt(0)
                 }, Ln.meridiem = function(e, t, n) {
@@ -9042,14 +9042,14 @@ webpackJsonp([34], {
                     }
                 }), t.lang = L("moment.lang is deprecated. Use moment.locale instead.", de), t.langData = L("moment.langData is deprecated. Use moment.localeData instead.", le);
                 var Dn = Math.abs,
-                    kn = Ge("ms"),
-                    Yn = Ge("s"),
-                    wn = Ge("m"),
-                    xn = Ge("h"),
-                    Tn = Ge("d"),
-                    Sn = Ge("w"),
-                    On = Ge("M"),
-                    jn = Ge("y"),
+                    kn = Ue("ms"),
+                    Yn = Ue("s"),
+                    wn = Ue("m"),
+                    xn = Ue("h"),
+                    Tn = Ue("d"),
+                    Sn = Ue("w"),
+                    On = Ue("M"),
+                    jn = Ue("y"),
                     Hn = qe("milliseconds"),
                     Cn = qe("seconds"),
                     Pn = qe("minutes"),
@@ -9081,7 +9081,7 @@ webpackJsonp([34], {
                         if (!this.isValid()) return NaN;
                         var t, n, a = this._milliseconds;
                         if ("month" === (e = T(e)) || "year" === e) return t = this._days + a / 864e5, n = this._months + Ve(t), "month" === e ? n : n / 12;
-                        switch (t = this._days + Math.round(Ue(this._months)), e) {
+                        switch (t = this._days + Math.round(Ge(this._months)), e) {
                             case "week":
                                 return t / 7 + a / 6048e5;
                             case "day":
@@ -9104,7 +9104,7 @@ webpackJsonp([34], {
                             s = this._days,
                             o = this._months,
                             d = this._data;
-                        return i >= 0 && s >= 0 && o >= 0 || i <= 0 && s <= 0 && o <= 0 || (i += 864e5 * Je(Ue(o) + s), s = 0, o = 0), d.milliseconds = i % 1e3, e = y(i / 1e3), d.seconds = e % 60, t = y(e / 60), d.minutes = t % 60, n = y(t / 60), d.hours = n % 24, s += y(n / 24), r = y(Ve(s)), o += r, s -= Je(Ue(r)), a = y(o / 12), o %= 12, d.days = s, d.months = o, d.years = a, this
+                        return i >= 0 && s >= 0 && o >= 0 || i <= 0 && s <= 0 && o <= 0 || (i += 864e5 * Je(Ge(o) + s), s = 0, o = 0), d.milliseconds = i % 1e3, e = y(i / 1e3), d.seconds = e % 60, t = y(e / 60), d.minutes = t % 60, n = y(t / 60), d.hours = n % 24, s += y(n / 24), r = y(Ve(s)), o += r, s -= Je(Ge(r)), a = y(o / 12), o %= 12, d.days = s, d.months = o, d.years = a, this
                     }, zn.get = function(e) {
                         return e = T(e), this.isValid() ? this[e + "s"]() : NaN
                     }, zn.milliseconds = Hn, zn.seconds = Cn, zn.minutes = Pn, zn.hours = An, zn.days = Fn, zn.weeks = function() {
@@ -9127,13 +9127,13 @@ webpackJsonp([34], {
                                     }.apply(null, l)
                             }(this, !e, t);
                         return e && (n = t.pastFuture(+this, n)), t.postformat(n)
-                    }, zn.toISOString = Ke, zn.toString = Ke, zn.toJSON = Ke, zn.locale = Pe, zn.localeData = Ae, zn.toIsoString = L("toIsoString() is deprecated. Please use toISOString() instead (notice the capitals)", Ke), zn.lang = fn, A("X", 0, 0, "unix"), A("x", 0, 0, "valueOf"), I("x", vt), I("X", /[+-]?\d+(\.\d{1,3})?/), z("X", function(e, t, n) {
+                    }, zn.toISOString = Xe, zn.toString = Xe, zn.toJSON = Xe, zn.locale = Pe, zn.localeData = Ae, zn.toIsoString = L("toIsoString() is deprecated. Please use toISOString() instead (notice the capitals)", Xe), zn.lang = fn, A("X", 0, 0, "unix"), A("x", 0, 0, "valueOf"), I("x", vt), I("X", /[+-]?\d+(\.\d{1,3})?/), z("X", function(e, t, n) {
                         n._d = new Date(1e3 * parseFloat(e, 10))
                     }), z("x", function(e, t, n) {
                         n._d = new Date(M(e))
                     }), t.version = "2.18.1",
                     function(e) {
-                        Ze = e
+                        Ke = e
                     }(Me), t.fn = bn, t.min = function() {
                         return ve("isBefore", [].slice.call(arguments, 0))
                     }, t.max = function() {
@@ -9154,12 +9154,12 @@ webpackJsonp([34], {
                         return ze(e, t, n, "weekdaysMin")
                     }, t.defineLocale = ue, t.updateLocale = function(e, t) {
                         if (null != t) {
-                            var n, a = Zt;
-                            null != Xt[e] && (a = Xt[e]._config), (n = new w(t = Y(a, t))).parentLocale = Xt[e], Xt[e] = n, de(e)
-                        } else null != Xt[e] && (null != Xt[e].parentLocale ? Xt[e] = Xt[e].parentLocale : null != Xt[e] && delete Xt[e]);
-                        return Xt[e]
+                            var n, a = Kt;
+                            null != Zt[e] && (a = Zt[e]._config), (n = new w(t = Y(a, t))).parentLocale = Zt[e], Zt[e] = n, de(e)
+                        } else null != Zt[e] && (null != Zt[e].parentLocale ? Zt[e] = Zt[e].parentLocale : null != Zt[e] && delete Zt[e]);
+                        return Zt[e]
                     }, t.locales = function() {
-                        return tt(Xt)
+                        return tt(Zt)
                     }, t.weekdaysShort = function(e, t, n) {
                         return ze(e, t, n, "weekdaysShort")
                     }, t.normalizeUnits = T, t.relativeTimeRounding = function(e) {
@@ -16150,7 +16150,7 @@ webpackJsonp([34], {
                         changedSinceSubmit: !1
                     }, t.renderDescriptor = function() {
                         return t.props.descriptor.split("\n").map(function(e, t) {
-                            return c.createElement(p._23, {
+                            return c.createElement(p._25, {
                                 key: t
                             }, e)
                         })
@@ -16159,9 +16159,9 @@ webpackJsonp([34], {
                                 disabled: t.state.buttonDisabled,
                                 onClick: t.handleSubmit
                             }, t.props.buttonText),
-                            n = c.createElement(p._31, {
+                            n = c.createElement(p._33, {
                                 label: t.props.errorString,
-                                direction: p._33.Right,
+                                direction: p._35.Right,
                                 show: !0
                             }, e);
                         return t.props.errorString.length && !t.state.changedSinceSubmit ? n : e
@@ -16191,15 +16191,15 @@ webpackJsonp([34], {
                     }, t
                 }
                 return l.__extends(t, e), t.prototype.render = function() {
-                    return c.createElement(p.V, {
+                    return c.createElement(p.X, {
                         alignSelf: p.d.Start,
-                        display: p.H.Flex,
-                        flexDirection: p.J.Column
-                    }, this.renderDescriptor(), c.createElement(p.V, {
-                        display: p.H.Flex,
-                        flexDirection: p.J.Row
-                    }, c.createElement(p.V, null, c.createElement(p.R, {
-                        type: p.S.Text,
+                        display: p.J.Flex,
+                        flexDirection: p.L.Column
+                    }, this.renderDescriptor(), c.createElement(p.X, {
+                        display: p.J.Flex,
+                        flexDirection: p.L.Row
+                    }, c.createElement(p.X, null, c.createElement(p.T, {
+                        type: p.U.Text,
                         placeholder: this.props.placeholder,
                         value: this.state.inputValue,
                         onChange: this.handleChangeInput,
@@ -16225,49 +16225,49 @@ webpackJsonp([34], {
                         var e = t.props.buttonConfiguration === M.AllButtons,
                             n = e || t.props.buttonConfiguration === M.MoveUpAndRemoveOnly,
                             a = e || t.props.buttonConfiguration === M.MoveDownAndRemoveOnly;
-                        return c.createElement(p.V, null, n && c.createElement(p._31, {
+                        return c.createElement(p.X, null, n && c.createElement(p._33, {
                             label: Object(m.d)("Move To Top", "TeamsDashboard"),
-                            direction: p._33.Left
+                            direction: p._35.Left
                         }, c.createElement(p.u, {
                             type: p.z.Text,
                             blurAfterClick: !0,
-                            icon: p._11.ToTop,
+                            icon: p._13.ToTop,
                             onClick: t.handleOnMoveClick(r.ToTop),
                             disabled: t.props.isDisabled
-                        })), n && c.createElement(p._31, {
+                        })), n && c.createElement(p._33, {
                             label: Object(m.d)("Move Up", "TeamsDashboard"),
-                            direction: p._33.Left
+                            direction: p._35.Left
                         }, c.createElement(p.u, {
                             type: p.z.Text,
                             blurAfterClick: !0,
-                            icon: p._11.ArrowUp,
+                            icon: p._13.ArrowUp,
                             onClick: t.handleOnMoveClick(r.Up),
                             disabled: t.props.isDisabled
-                        })), a && c.createElement(p._31, {
+                        })), a && c.createElement(p._33, {
                             label: Object(m.d)("Move Down", "TeamsDashboard"),
-                            direction: p._33.Left
+                            direction: p._35.Left
                         }, c.createElement(p.u, {
                             type: p.z.Text,
                             blurAfterClick: !0,
-                            icon: p._11.ArrowDown,
+                            icon: p._13.ArrowDown,
                             onClick: t.handleOnMoveClick(r.Down),
                             disabled: t.props.isDisabled
-                        })), a && c.createElement(p._31, {
+                        })), a && c.createElement(p._33, {
                             label: Object(m.d)("Move To Bottom", "TeamsDashboard"),
-                            direction: p._33.Left
+                            direction: p._35.Left
                         }, c.createElement(p.u, {
                             type: p.z.Text,
                             blurAfterClick: !0,
-                            icon: p._11.ToBottom,
+                            icon: p._13.ToBottom,
                             onClick: t.handleOnMoveClick(r.ToBottom),
                             disabled: t.props.isDisabled
-                        })), c.createElement(p._31, {
+                        })), c.createElement(p._33, {
                             label: Object(m.d)("Remove", "TeamsDashboard"),
-                            direction: p._33.Left
+                            direction: p._35.Left
                         }, c.createElement(p.u, {
                             type: p.z.Text,
                             blurAfterClick: !0,
-                            icon: p._11.Trash,
+                            icon: p._13.Trash,
                             onClick: t.handleDeleteClick,
                             disabled: t.props.isDisabled
                         })))
@@ -16295,28 +16295,28 @@ webpackJsonp([34], {
                         "data-test-selector": this.props.listItemsSelector,
                         onMouseEnter: this.handleMouseEnter,
                         onMouseLeave: this.handleMouseLeave
-                    }, c.createElement(p._19, {
-                        display: p.H.Flex,
-                        flexDirection: p.J.Row,
-                        justifyContent: p.U.Between,
+                    }, c.createElement(p._21, {
+                        display: p.J.Flex,
+                        flexDirection: p.L.Row,
+                        justifyContent: p.W.Between,
                         padding: 1,
                         borderBottom: !0,
                         fullWidth: !0
-                    }, c.createElement(p.V, {
-                        display: p.H.Flex,
-                        flexDirection: p.J.Row,
+                    }, c.createElement(p.X, {
+                        display: p.J.Flex,
+                        flexDirection: p.L.Row,
                         alignItems: p.c.Center
                     }, c.createElement(p.l, {
                         imageSrc: this.props.member.avatarSrc,
                         imageAlt: e,
                         size: 30
-                    }), c.createElement(p.V, {
+                    }), c.createElement(p.X, {
                         margin: {
                             left: 1
                         }
-                    }, c.createElement(p._23, null, this.props.member.displayName))), c.createElement(p.V, {
-                        display: p.H.Flex,
-                        flexDirection: p.J.Row,
+                    }, c.createElement(p._25, null, this.props.member.displayName))), c.createElement(p.X, {
+                        display: p.J.Flex,
+                        flexDirection: p.L.Row,
                         alignItems: p.c.Center
                     }, this.state.isHovered && this.renderButtons())))
                 }, t
@@ -16344,19 +16344,19 @@ webpackJsonp([34], {
                     }
                     e.onMoveClick(t, a)
                 };
-                return c.createElement(p.V, {
+                return c.createElement(p.X, {
                     fullWidth: !0,
                     margin: {
                         top: 2,
                         bottom: 2
                     }
-                }, e.header && c.createElement(p._23, {
-                    type: p._28.H3
+                }, e.header && c.createElement(p._25, {
+                    type: p._30.H3
                 }, e.header), e.members.length ? function(n) {
                     var a = e.onMoveClick ? t : void 0;
-                    return c.createElement(y.b, null, c.createElement(p.V, {
-                        display: p.H.Flex,
-                        flexDirection: p.J.Column
+                    return c.createElement(y.b, null, c.createElement(p.X, {
+                        display: p.J.Flex,
+                        flexDirection: p.L.Column
                     }, n.map(function(t, r) {
                         return c.createElement(b, {
                             key: t.id,
@@ -16373,23 +16373,23 @@ webpackJsonp([34], {
                             isDisabled: e.isDisabled
                         })
                     })))
-                }(e.members) : c.createElement(p._23, null, e.emptyStateText))
+                }(e.members) : c.createElement(p._25, null, e.emptyStateText))
             },
             D = function(e) {
-                return c.createElement(y.b, null, c.createElement(p.V, {
-                    display: p.H.Flex,
-                    flexDirection: p.J.Column,
+                return c.createElement(y.b, null, c.createElement(p.X, {
+                    display: p.J.Flex,
+                    flexDirection: p.L.Column,
                     alignItems: p.c.Start,
                     padding: 2
-                }, c.createElement(p.V, {
-                    display: p.H.Flex,
+                }, c.createElement(p.X, {
+                    display: p.J.Flex,
                     padding: {
                         bottom: 2
                     },
                     fullWidth: !0
-                }, c.createElement(p._23, {
+                }, c.createElement(p._25, {
                     "data-test-selector": e.titleSelector,
-                    type: p._28.H1
+                    type: p._30.H1
                 }, e.title)), e.children))
             };
         ! function(e) {
@@ -16510,12 +16510,12 @@ webpackJsonp([34], {
             },
             J = this,
             V = function(e, t, n) {
-                return G("/v5/teams/" + e + "/dashboard/channels/" + t + "/membership", n)
+                return U("/v5/teams/" + e + "/dashboard/channels/" + t + "/membership", n)
             },
-            U = function(e, t, n) {
-                return G("/v5/teams/" + e + "/dashboard/featured_channels/" + t, n)
+            G = function(e, t, n) {
+                return U("/v5/teams/" + e + "/dashboard/featured_channels/" + t, n)
             },
-            G = function(e, t) {
+            U = function(e, t) {
                 return l.__awaiter(J, void 0, void 0, function() {
                     var n;
                     return l.__generator(this, function(a) {
@@ -16590,7 +16590,7 @@ webpackJsonp([34], {
                                     case 0:
                                         return this.setState({
                                             isDisabled: !0
-                                        }), [4, U(this.props.teamName, e, n)];
+                                        }), [4, G(this.props.teamName, e, n)];
                                     case 1:
                                         return r.sent() && (t = this.state.featuredChannels.findIndex(function(t) {
                                             return t.id === e
@@ -16653,19 +16653,19 @@ webpackJsonp([34], {
                     destination: _.a.TeamsDashboardFeaturedChannels
                 })], t)
             }(c.Component),
-            K = n("PGY2"),
-            Z = this,
-            X = this;
+            X = n("PGY2"),
+            K = this,
+            Z = this;
         ! function(e) {
             e.StatsRevealed = "stats_revealed", e.RevenueRevealed = "revenue_revealed"
         }(Y || (Y = {}));
         var Q, $ = function(e, t) {
-                return l.__awaiter(X, void 0, void 0, function() {
+                return l.__awaiter(Z, void 0, void 0, function() {
                     var n, a, r, i;
                     return l.__generator(this, function(s) {
                         switch (s.label) {
                             case 0:
-                                return n = t ? "?" + t + "=true" : "", a = "/v5/teams/" + e + "/dashboard/members" + n, [4, Object(K.d)({
+                                return n = t ? "?" + t + "=true" : "", a = "/v5/teams/" + e + "/dashboard/members" + n, [4, Object(X.d)({
                                     path: a
                                 })];
                             case 1:
@@ -16789,12 +16789,12 @@ webpackJsonp([34], {
                             switch (t.label) {
                                 case 0:
                                     return [4, Promise.all([$(this.props.teamName), function(e) {
-                                        return l.__awaiter(Z, void 0, void 0, function() {
+                                        return l.__awaiter(K, void 0, void 0, function() {
                                             var t, n, a;
                                             return l.__generator(this, function(r) {
                                                 switch (r.label) {
                                                     case 0:
-                                                        return t = "/v5/teams/" + e + "/dashboard/invitations", [4, Object(K.d)({
+                                                        return t = "/v5/teams/" + e + "/dashboard/invitations", [4, Object(X.d)({
                                                             path: t
                                                         })];
                                                     case 1:
@@ -16893,9 +16893,9 @@ webpackJsonp([34], {
                 return l.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return c.createElement(p.V, {
+                    return c.createElement(p.X, {
                         className: "month-select-menu"
-                    }, c.createElement(p._16, {
+                    }, c.createElement(p._18, {
                         disabled: this.props.isDisabled,
                         onChange: this.handleChange
                     }, this.getDropdownOptions(this.validatedCurrentDate, this.props.earliestDate)))
@@ -17109,38 +17109,38 @@ webpackJsonp([34], {
         }(Q || (Q = {}));
         var be, Le = function(e) {
                 var t, n;
-                return e.isLoading ? (t = c.createElement(p._23, {
-                    type: p._28.H5
-                }, c.createElement(p._3, {
+                return e.isLoading ? (t = c.createElement(p._25, {
+                    type: p._30.H5
+                }, c.createElement(p._5, {
                     width: 90
-                })), n = c.createElement(p.V, null, c.createElement(p._3, {
+                })), n = c.createElement(p.X, null, c.createElement(p._5, {
                     width: 140,
                     height: e.magnified ? 40 : 30
-                }))) : (t = c.createElement(p._23, {
+                }))) : (t = c.createElement(p._25, {
                     color: p.F.Alt2,
-                    type: p._28.H5,
+                    type: p._30.H5,
                     "data-test-selector": Q.Title
-                }, e.title), n = c.createElement(p.V, {
+                }, e.title), n = c.createElement(p.X, {
                     alignItems: p.c.Start,
-                    display: p.H.Flex,
-                    flexDirection: p.J.Row
-                }, c.createElement(p._23, {
-                    type: e.magnified ? p._28.H4 : p._28.H5,
+                    display: p.J.Flex,
+                    flexDirection: p.L.Row
+                }, c.createElement(p._25, {
+                    type: e.magnified ? p._30.H4 : p._30.H5,
                     "data-test-selector": Q.Symbol
-                }, "$ "), c.createElement(p._23, {
-                    type: e.magnified ? p._28.H1 : p._28.H2,
+                }, "$ "), c.createElement(p._25, {
+                    type: e.magnified ? p._30.H1 : p._30.H2,
                     "data-test-selector": Q.Dollars
-                }, Object(m.e)(Math.floor(e.cents / 100))), c.createElement(p._23, {
-                    type: e.magnified ? p._28.H4 : p._28.H5,
+                }, Object(m.e)(Math.floor(e.cents / 100))), c.createElement(p._25, {
+                    type: e.magnified ? p._30.H4 : p._30.H5,
                     "data-test-selector": Q.Cents
                 }, Object(m.e)(Math.round(e.cents % 100), {
                     minimumIntegerDigits: 2
-                })))), c.createElement(p.V, {
-                    display: p.H.Flex,
-                    flexDirection: p.J.Column,
+                })))), c.createElement(p.X, {
+                    display: p.J.Flex,
+                    flexDirection: p.L.Column,
                     flexGrow: 1,
                     margin: 1
-                }, c.createElement(p.V, {
+                }, c.createElement(p.X, {
                     margin: e.magnified ? {
                         bottom: .5
                     } : {}
@@ -17158,13 +17158,13 @@ webpackJsonp([34], {
                             cents: t.cents
                         })
                     });
-                return c.createElement(p._19, {
+                return c.createElement(p._21, {
                     borderMarked: !0,
                     border: !0,
                     fullWidth: !0,
                     background: p.m.Base,
-                    display: p.H.Flex,
-                    justifyContent: p.U.Between,
+                    display: p.J.Flex,
+                    justifyContent: p.W.Between,
                     alignItems: p.c.Center,
                     padding: 1
                 }, c.createElement(Le, {
@@ -17205,7 +17205,7 @@ webpackJsonp([34], {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderMenu = function() {
-                        if (t.props.isLoading) return c.createElement(p._3, {
+                        if (t.props.isLoading) return c.createElement(p._5, {
                             width: 180,
                             height: 30
                         });
@@ -17228,7 +17228,7 @@ webpackJsonp([34], {
                             noTail: !0
                         }, c.createElement(y.b, {
                             className: "team-members-select-menu__scroller"
-                        }, c.createElement(p.V, null, c.createElement(p._19, {
+                        }, c.createElement(p.X, null, c.createElement(p._21, {
                             borderBottom: !0,
                             padding: {
                                 top: 1,
@@ -17247,7 +17247,7 @@ webpackJsonp([34], {
                                 onChange: t.props.toggleMemberChecked.bind(t, n),
                                 disabled: e >= T && !n.checked
                             };
-                            return c.createElement(p._19, {
+                            return c.createElement(p._21, {
                                 margin: {
                                     x: .5,
                                     y: 0
@@ -17260,7 +17260,7 @@ webpackJsonp([34], {
                     }, t
                 }
                 return l.__extends(t, e), t.prototype.render = function() {
-                    return c.createElement(p.V, {
+                    return c.createElement(p.X, {
                         className: "team-members-select-menu"
                     }, this.renderMenu())
                 }, t = l.__decorate([Object(f.d)("TeamMembersSelectMenu", {
@@ -17305,7 +17305,7 @@ webpackJsonp([34], {
                     return l.__generator(this, function(o) {
                         switch (o.label) {
                             case 0:
-                                return r = "/v5/teams/" + e + "/revenues?channel_ids=" + t + "&start_date=" + n + "&end_date=" + a + "&fraction=day", [4, Object(K.d)({
+                                return r = "/v5/teams/" + e + "/revenues?channel_ids=" + t + "&start_date=" + n + "&end_date=" + a + "&fraction=day", [4, Object(X.d)({
                                     path: r
                                 })];
                             case 1:
@@ -17467,18 +17467,18 @@ webpackJsonp([34], {
                     return c.createElement(D, {
                         title: P(v.Revenue),
                         titleSelector: "revenue-page-title"
-                    }, c.createElement(p._19, {
+                    }, c.createElement(p._21, {
                         border: !0,
                         fullWidth: !0
-                    }, c.createElement(p.V, {
-                        display: p.H.Flex,
-                        flexDirection: p.J.Row,
-                        justifyContent: p.U.Between,
+                    }, c.createElement(p.X, {
+                        display: p.J.Flex,
+                        flexDirection: p.L.Row,
+                        justifyContent: p.W.Between,
                         margin: 2
-                    }, c.createElement(p.V, {
-                        display: p.H.Flex,
-                        flexDirection: p.J.Row
-                    }, c.createElement(p.V, {
+                    }, c.createElement(p.X, {
+                        display: p.J.Flex,
+                        flexDirection: p.L.Row
+                    }, c.createElement(p.X, {
                         margin: {
                             right: 1
                         }
@@ -17495,30 +17495,30 @@ webpackJsonp([34], {
                         earliestDate: this.props.earliestDataDate,
                         currentDate: this.props.currentDate,
                         onMonthSelection: this.handleTimeRangeChange
-                    })), c.createElement(p.V, null, c.createElement(p._23, {
+                    })), c.createElement(p.X, null, c.createElement(p._25, {
                         color: p.F.Alt2
-                    }, Object(m.d)("* All revenue values are estimated (in $USD)", "TeamsDashboard")))), c.createElement(p.V, {
-                        display: p.H.Flex,
-                        flexDirection: p.J.Row,
-                        justifyContent: p.U.Between,
+                    }, Object(m.d)("* All revenue values are estimated (in $USD)", "TeamsDashboard")))), c.createElement(p.X, {
+                        display: p.J.Flex,
+                        flexDirection: p.L.Row,
+                        justifyContent: p.W.Between,
                         margin: 2
                     }, c.createElement(ke, {
                         isLoading: e,
                         data: this.state.revenues,
                         totalTitle: Object(m.d)("Total Revenue", "TeamsDashboard"),
                         summaryItemTitleSuffix: "*"
-                    })), c.createElement(p._19, {
+                    })), c.createElement(p._21, {
                         padding: 2,
                         background: p.m.Base,
                         borderTop: !0,
-                        display: p.H.Flex,
-                        justifyContent: p.U.End
+                        display: p.J.Flex,
+                        justifyContent: p.W.End
                     }, c.createElement(ve, {
                         data: this.state.revenues
                     }), c.createElement(p.u, {
                         disabled: e,
                         "data-test-selector": "revenue-csv-button",
-                        icon: p._11.Download,
+                        icon: p._13.Download,
                         onClick: this.handleCSVClick
                     }, Oe()))))
                 }, t = l.__decorate([Object(f.d)("RevenuePage", {
@@ -17531,18 +17531,18 @@ webpackJsonp([34], {
                 "side-nav-bar__option": !0,
                 "side-nav-bar__option--active": !0
             },
-            Ue = Object(f.d)("Navbar", {
+            Ge = Object(f.d)("Navbar", {
                 autoReportInteractive: !0
             })(function(e) {
                 var t = function(t) {
                     return Je(e.page === t ? Ve : "side-nav-bar__option")
                 };
-                return c.createElement(p._19, {
-                    display: p.H.Block,
+                return c.createElement(p._21, {
+                    display: p.J.Block,
                     className: "side-nav-bar",
                     fullHeight: !0,
                     borderRight: !0
-                }, c.createElement(p.V, {
+                }, c.createElement(p.X, {
                     padding: {
                         top: 2,
                         x: 2
@@ -17550,46 +17550,46 @@ webpackJsonp([34], {
                     margin: {
                         bottom: .5
                     }
-                }, c.createElement(p._23, {
-                    type: p._28.H4,
-                    fontSize: p.L.Size5
-                }, Object(m.d)("Team Dashboard", "TeamsDashboard"))), c.createElement("ul", null, c.createElement("li", null, c.createElement(p.T, {
+                }, c.createElement(p._25, {
+                    type: p._30.H4,
+                    fontSize: p.N.Size5
+                }, Object(m.d)("Team Dashboard", "TeamsDashboard"))), c.createElement("ul", null, c.createElement("li", null, c.createElement(p.V, {
                     linkTo: "/teams/" + e.teamName + "/dashboard/" + v.Revenue,
                     "data-test-selector": "side-nav-revenue"
-                }, c.createElement(p.V, {
+                }, c.createElement(p.X, {
                     padding: {
                         x: 2,
                         y: .5
                     },
                     className: t(v.Revenue)
-                }, P(v.Revenue)))), c.createElement("li", null, c.createElement(p.T, {
+                }, P(v.Revenue)))), c.createElement("li", null, c.createElement(p.V, {
                     linkTo: "/teams/" + e.teamName + "/dashboard/" + v.Stats,
                     "data-test-selector": "side-nav-stats"
-                }, c.createElement(p.V, {
+                }, c.createElement(p.X, {
                     padding: {
                         x: 2,
                         y: .5
                     },
                     className: t(v.Stats)
-                }, P(v.Stats)))), c.createElement("li", null, c.createElement(p.T, {
+                }, P(v.Stats)))), c.createElement("li", null, c.createElement(p.V, {
                     linkTo: "/teams/" + e.teamName + "/dashboard/" + v.Members
-                }, c.createElement(p.V, {
+                }, c.createElement(p.X, {
                     padding: {
                         x: 2,
                         y: .5
                     },
                     className: t(v.Members)
-                }, P(v.Members)))), c.createElement("li", null, c.createElement(p.T, {
+                }, P(v.Members)))), c.createElement("li", null, c.createElement(p.V, {
                     linkTo: "/teams/" + e.teamName + "/dashboard/" + v.FeaturedChannels
-                }, c.createElement(p.V, {
+                }, c.createElement(p.X, {
                     padding: {
                         x: 2,
                         y: .5
                     },
                     className: t(v.FeaturedChannels)
-                }, P(v.FeaturedChannels)))), c.createElement("li", null, c.createElement(p.T, {
+                }, P(v.FeaturedChannels)))), c.createElement("li", null, c.createElement(p.V, {
                     linkTo: "/teams/" + e.teamName + "/dashboard/" + v.Settings
-                }, c.createElement(p.V, {
+                }, c.createElement(p.X, {
                     padding: {
                         x: 2,
                         y: .5
@@ -17597,9 +17597,9 @@ webpackJsonp([34], {
                     className: t(v.Settings)
                 }, P(v.Settings))))))
             }),
-            Ge = n("J8WN"),
+            Ue = n("J8WN"),
             qe = this,
-            Ke = function(e) {
+            Xe = function(e) {
                 var t = e.team;
                 return {
                     name: t.name,
@@ -17610,13 +17610,13 @@ webpackJsonp([34], {
                     backgroundImageURL: t.background_image_url
                 }
             },
-            Ze = function() {
+            Ke = function() {
                 return l.__awaiter(qe, void 0, void 0, function() {
                     var e;
                     return l.__generator(this, function(t) {
                         switch (t.label) {
                             case 0:
-                                return e = Ke, [4, l.__awaiter(qe, void 0, void 0, function() {
+                                return e = Xe, [4, l.__awaiter(qe, void 0, void 0, function() {
                                     return l.__generator(this, function(e) {
                                         return [2, Promise.resolve({
                                             team: {
@@ -17643,7 +17643,7 @@ webpackJsonp([34], {
         ! function(e) {
             e.Logo = "logoURL", e.Banner = "bannerURL", e.BackgroundImage = "backgroundImageURL"
         }(be || (be = {}));
-        var Xe, Qe = function(e) {
+        var Ze, Qe = function(e) {
             function t(t) {
                 var n = e.call(this, t) || this;
                 return n.state = {
@@ -17663,7 +17663,7 @@ webpackJsonp([34], {
                     return l.__generator(this, function(t) {
                         switch (t.label) {
                             case 0:
-                                return [4, Ze()];
+                                return [4, Ke()];
                             case 1:
                                 return e = t.sent(), this.setState({
                                     team: e
@@ -17676,66 +17676,66 @@ webpackJsonp([34], {
                 return c.createElement(D, {
                     title: P(v.Settings),
                     titleSelector: "settings-page-title"
-                }, c.createElement(p.V, {
+                }, c.createElement(p.X, {
                     className: "settings-page"
-                }, c.createElement(p.V, {
+                }, c.createElement(p.X, {
                     fullWidth: !0
-                }, c.createElement(p.M, {
+                }, c.createElement(p.O, {
                     label: Object(m.d)("Display Name", "TeamsDashboard")
-                }, c.createElement(p.R, {
-                    type: p.S.Text,
+                }, c.createElement(p.T, {
+                    type: p.U.Text,
                     value: e.displayName
-                }))), c.createElement(p.V, {
+                }))), c.createElement(p.X, {
                     margin: {
                         top: 2
                     },
                     fullWidth: !0
-                }, c.createElement(p.M, {
+                }, c.createElement(p.O, {
                     label: Object(m.d)("Description", "TeamsDashboard"),
                     hint: Object(m.d)("Supports most HTML", "TeamsDashboard")
-                }, c.createElement(p._25, {
+                }, c.createElement(p._27, {
                     noResize: !0,
                     rows: 5,
                     value: e.description
-                }))), c.createElement(p.V, {
+                }))), c.createElement(p.X, {
                     margin: {
                         top: 2
                     }
-                }, c.createElement(p.M, {
+                }, c.createElement(p.O, {
                     label: Object(m.d)("Logo", "TeamsDashboard"),
                     hint: Object(m.d)("Square JPG or PNG at least 600x600px. Max 500 KB.", "TeamsDashboard")
-                }, c.createElement(p.V, {
+                }, c.createElement(p.X, {
                     className: "logo"
-                }, c.createElement(Ge.a, {
+                }, c.createElement(Ue.a, {
                     allowedFileTypes: [".jpg", ".png"],
                     onFilesSubmitted: this.onFilesSubmitted.bind(this, be.Logo)
-                }, this.filePickerChildrenGenerator(e.logoURL))))), c.createElement(p.V, {
+                }, this.filePickerChildrenGenerator(e.logoURL))))), c.createElement(p.X, {
                     margin: {
                         top: 2
                     }
-                }, c.createElement(p.M, {
+                }, c.createElement(p.O, {
                     label: Object(m.d)("Banner", "TeamsDashboard"),
                     hint: Object(m.d)("JPG or PNG at least 640x125px. Max 500 KB.", "TeamsDashboard")
-                }, c.createElement(p.V, {
+                }, c.createElement(p.X, {
                     fullWidth: !0,
                     className: "banner"
-                }, c.createElement(Ge.a, {
+                }, c.createElement(Ue.a, {
                     allowedFileTypes: [".jpg", ".png"],
                     onFilesSubmitted: this.onFilesSubmitted.bind(this, be.Banner)
-                }, this.filePickerChildrenGenerator(e.bannerURL))))), c.createElement(p.V, {
+                }, this.filePickerChildrenGenerator(e.bannerURL))))), c.createElement(p.X, {
                     margin: {
                         top: 2
                     }
-                }, c.createElement(p.M, {
+                }, c.createElement(p.O, {
                     label: Object(m.d)("Background Image", "TeamsDashboard"),
                     hint: Object(m.d)("JPG or PNG. Max 500 KB.", "TeamsDashboard")
-                }, c.createElement(p.V, {
+                }, c.createElement(p.X, {
                     fullWidth: !0,
                     className: "background-image"
-                }, c.createElement(Ge.a, {
+                }, c.createElement(Ue.a, {
                     allowedFileTypes: [".jpg", ".png"],
                     onFilesSubmitted: this.onFilesSubmitted.bind(this, be.BackgroundImage)
-                }, this.filePickerChildrenGenerator(e.backgroundImageURL))))), c.createElement(p.V, {
+                }, this.filePickerChildrenGenerator(e.backgroundImageURL))))), c.createElement(p.X, {
                     margin: {
                         top: 2
                     }
@@ -17743,15 +17743,15 @@ webpackJsonp([34], {
             }, t.prototype.filePickerChildrenGenerator = function(e) {
                 return e ? c.createElement("img", {
                     src: e
-                }) : c.createElement(p.V, {
-                    textAlign: p._24.Center
-                }, c.createElement(p._10, {
-                    asset: p._11.Upload,
-                    type: p._12.Alt2,
+                }) : c.createElement(p.X, {
+                    textAlign: p._26.Center
+                }, c.createElement(p._12, {
+                    asset: p._13.Upload,
+                    type: p._14.Alt2,
                     height: 36,
                     width: 36
-                }), c.createElement(p._23, {
-                    fontSize: p.L.Size6,
+                }), c.createElement(p._25, {
+                    fontSize: p.N.Size6,
                     color: p.F.Alt2
                 }, Object(m.d)("Choose a file", "TeamDashboard")))
             }, t.prototype.onFilesSubmitted = function(e, t) {
@@ -17770,13 +17770,13 @@ webpackJsonp([34], {
         }(c.Component);
         ! function(e) {
             e.AverageViewers = "AverageViewers", e.NewFollowers = "NewFollowers", e.AverageChatters = "AverageChatters", e.ChatMessages = "ChatMessages", e.AdBreakDuration = "AdBreakDuration", e.AdBreaks = "AdBreaks"
-        }(Xe || (Xe = {}));
+        }(Ze || (Ze = {}));
         var $e;
         ! function(e) {
             e.Ads = "Ads", e.Audience = "Audience", e.Chat = "Chat"
         }($e || ($e = {}));
-        var et, tt, nt = (et = {}, et[Xe.AverageViewers] = "concurrent_viewers", et[Xe.NewFollowers] = "follows", et[Xe.AverageChatters] = "chat_activities", et[Xe.ChatMessages] = "chat_activities", et[Xe.AdBreakDuration] = "commercials", et),
-            at = (tt = {}, tt[Xe.AverageViewers] = "line", tt[Xe.NewFollowers] = "line", tt[Xe.AverageChatters] = "bar", tt[Xe.ChatMessages] = "bar", tt[Xe.AdBreakDuration] = "bar", tt),
+        var et, tt, nt = (et = {}, et[Ze.AverageViewers] = "concurrent_viewers", et[Ze.NewFollowers] = "follows", et[Ze.AverageChatters] = "chat_activities", et[Ze.ChatMessages] = "chat_activities", et[Ze.AdBreakDuration] = "commercials", et),
+            at = (tt = {}, tt[Ze.AverageViewers] = "line", tt[Ze.NewFollowers] = "line", tt[Ze.AverageChatters] = "bar", tt[Ze.ChatMessages] = "bar", tt[Ze.AdBreakDuration] = "bar", tt),
             rt = function(e) {
                 switch (e) {
                     case $e.Ads:
@@ -17791,26 +17791,26 @@ webpackJsonp([34], {
             },
             it = function(e) {
                 switch (e) {
-                    case Xe.AverageViewers:
+                    case Ze.AverageViewers:
                         return Object(m.d)("Avg. Viewers", "TeamsDashboard");
-                    case Xe.NewFollowers:
+                    case Ze.NewFollowers:
                         return Object(m.d)("New Followers", "TeamsDashboard");
-                    case Xe.AverageChatters:
+                    case Ze.AverageChatters:
                         return Object(m.d)("Avg. Chatters", "TeamsDashboard");
-                    case Xe.ChatMessages:
+                    case Ze.ChatMessages:
                         return Object(m.d)("Chat Messages", "TeamsDashboard");
-                    case Xe.AdBreakDuration:
+                    case Ze.AdBreakDuration:
                         return Object(m.d)("Ad Break Duration", "TeamsDashboard");
-                    case Xe.AdBreaks:
+                    case Ze.AdBreaks:
                         return Object(m.d)("Ad Breaks", "TeamsDashboard");
                     default:
                         return ""
                 }
             },
             st = function(e) {
-                return c.createElement(p.V, {
+                return c.createElement(p.X, {
                     className: "metric-select-menu"
-                }, c.createElement(p._16, {
+                }, c.createElement(p._18, {
                     disabled: e.isDisabled,
                     value: "" + e.metric,
                     onChange: function(t) {
@@ -17819,20 +17819,20 @@ webpackJsonp([34], {
                 }, c.createElement("optgroup", {
                     label: rt($e.Ads)
                 }, c.createElement("option", {
-                    value: Xe.AdBreakDuration
-                }, it(Xe.AdBreakDuration))), c.createElement("optgroup", {
+                    value: Ze.AdBreakDuration
+                }, it(Ze.AdBreakDuration))), c.createElement("optgroup", {
                     label: rt($e.Audience)
                 }, c.createElement("option", {
-                    value: Xe.AverageViewers
-                }, it(Xe.AverageViewers)), c.createElement("option", {
-                    value: Xe.NewFollowers
-                }, it(Xe.NewFollowers))), c.createElement("optgroup", {
+                    value: Ze.AverageViewers
+                }, it(Ze.AverageViewers)), c.createElement("option", {
+                    value: Ze.NewFollowers
+                }, it(Ze.NewFollowers))), c.createElement("optgroup", {
                     label: rt($e.Chat)
                 }, c.createElement("option", {
-                    value: Xe.AverageChatters
-                }, it(Xe.AverageChatters)), c.createElement("option", {
-                    value: Xe.ChatMessages
-                }, it(Xe.ChatMessages)))))
+                    value: Ze.AverageChatters
+                }, it(Ze.AverageChatters)), c.createElement("option", {
+                    value: Ze.ChatMessages
+                }, it(Ze.ChatMessages)))))
             },
             ot = 800,
             dt = 380,
@@ -17990,16 +17990,16 @@ webpackJsonp([34], {
                             dataFooters: []
                         };
                     switch (n) {
-                        case Xe.AverageViewers:
-                        case Xe.ChatMessages:
-                        case Xe.AverageChatters:
+                        case Ze.AverageViewers:
+                        case Ze.ChatMessages:
+                        case Ze.AverageChatters:
                             a.data = a.timeLabels.map(function(e) {
                                 return t[e].count
                             }), a.dataLabels = a.data.map(function(e) {
                                 return "" + Math.floor(e)
                             }), a.dataFooters = Array(a.data.length).fill("");
                             break;
-                        case Xe.AdBreakDuration:
+                        case Ze.AdBreakDuration:
                             a.data = a.timeLabels.map(function(e) {
                                 return t[e].count
                             }), a.dataLabels = a.data.map(function(e) {
@@ -18010,7 +18010,7 @@ webpackJsonp([34], {
                                 }, "TeamsDashboard")
                             });
                             break;
-                        case Xe.NewFollowers:
+                        case Ze.NewFollowers:
                             a.data = a.timeLabels.reduce(function(e, n) {
                                 return e.push(t[n].count + (e.length ? e[e.length - 1] : 0)), e
                             }, []), a.dataLabels = a.data.map(function(e) {
@@ -18027,7 +18027,7 @@ webpackJsonp([34], {
             }(c.PureComponent),
             mt = function(e) {
                 var t = e.columnName;
-                return c.createElement(p.O, null, c.createElement(p.G, {
+                return c.createElement(p.Q, null, c.createElement(p.G, {
                     cols: {
                         default: 4
                     }
@@ -18035,50 +18035,50 @@ webpackJsonp([34], {
                     cols: {
                         default: 4
                     }
-                }, c.createElement(p._23, {
+                }, c.createElement(p._25, {
                     bold: !0
                 }, t)), c.createElement(p.G, {
                     cols: {
                         default: 2
                     }
-                }, c.createElement(p._23, {
+                }, c.createElement(p._25, {
                     bold: !0
                 }, Object(m.d)("Views", "TeamsDashboard"))), c.createElement(p.G, {
                     cols: {
                         default: 2
                     }
-                }, c.createElement(p._23, {
+                }, c.createElement(p._25, {
                     bold: !0
                 }, Object(m.d)("Percent", "TeamsDashboard"))))
             },
             _t = function(e) {
                 var t = e.rowContent;
-                return c.createElement(p.O, null, c.createElement(p.G, {
+                return c.createElement(p.Q, null, c.createElement(p.G, {
                     cols: {
                         default: 4
                     }
-                }, c.createElement(p.V, {
+                }, c.createElement(p.X, {
                     fullHeight: !0,
-                    display: p.H.Flex,
+                    display: p.J.Flex,
                     alignItems: p.c.Center
-                }, c.createElement(p._7, {
+                }, c.createElement(p._9, {
                     value: t.percent,
                     mask: !0
                 }))), c.createElement(p.G, {
                     cols: {
                         default: 4
                     }
-                }, c.createElement(p._23, {
+                }, c.createElement(p._25, {
                     ellipsis: !0
                 }, t.name)), c.createElement(p.G, {
                     cols: {
                         default: 2
                     }
-                }, c.createElement(p._23, null, Object(m.e)(t.views))), c.createElement(p.G, {
+                }, c.createElement(p._25, null, Object(m.e)(t.views))), c.createElement(p.G, {
                     cols: {
                         default: 2
                     }
-                }, c.createElement(p._23, null, Object(m.e)(t.percent), "%")))
+                }, c.createElement(p._25, null, Object(m.e)(t.percent), "%")))
             },
             ft = function(e, t, n, a) {
                 return 0 === e.length ? gt() : a && 1 === e.length ? yt(e[0].name) : Mt(e, n, t)
@@ -18093,12 +18093,12 @@ webpackJsonp([34], {
                 }, "TeamsDashboard")
             },
             gt = function() {
-                return c.createElement(p._23, {
+                return c.createElement(p._25, {
                     color: p.F.Alt2
                 }, Object(m.d)("Not enough data for us to display", "TeamsDashboard"))
             },
             yt = function(e) {
-                return c.createElement(p._23, null, Object(m.d)("The top viewer location was {name}", {
+                return c.createElement(p._25, null, Object(m.d)("The top viewer location was {name}", {
                     name: e
                 }, "TeamsDashboard"))
             },
@@ -18116,7 +18116,7 @@ webpackJsonp([34], {
                         }
                     })
                 });
-                return c.createElement(p.V, null, c.createElement(mt, {
+                return c.createElement(p.X, null, c.createElement(mt, {
                     columnName: t
                 }), a)
             },
@@ -18127,31 +18127,31 @@ webpackJsonp([34], {
                     a = e.rowData.sort(function(e, t) {
                         return t.views - e.views || e.name.localeCompare(t.name)
                     });
-                t = e.isLoading ? c.createElement(p._3, {
+                t = e.isLoading ? c.createElement(p._5, {
                     width: 180
                 }) : pt(e.tableName, a.length);
                 var r;
-                return r = e.isLoading ? c.createElement(p.V, null, c.createElement(p._23, null, c.createElement(p._3, null)), c.createElement(p._23, null, c.createElement(p._3, null))) : ft(a, n, e.columnName, e.isGeo), c.createElement(p.V, {
-                    display: p.H.Flex,
-                    flexDirection: p.J.Column,
+                return r = e.isLoading ? c.createElement(p.X, null, c.createElement(p._25, null, c.createElement(p._5, null)), c.createElement(p._25, null, c.createElement(p._5, null))) : ft(a, n, e.columnName, e.isGeo), c.createElement(p.X, {
+                    display: p.J.Flex,
+                    flexDirection: p.L.Column,
                     padding: 2,
                     className: "table",
-                    flexWrap: p.K.NoWrap,
+                    flexWrap: p.M.NoWrap,
                     fullWidth: !0
-                }, c.createElement(p.V, {
+                }, c.createElement(p.X, {
                     margin: {
                         bottom: 1
                     }
-                }, c.createElement(p._23, {
-                    type: p._28.H4
+                }, c.createElement(p._25, {
+                    type: p._30.H4
                 }, t)), r)
             },
             bt = Object(m.d)("Referrer", "TeamsDashboard"),
             Lt = function(e) {
                 var t = Object(m.d)("Views by Referrer", "TeamsDashboard"),
                     n = "";
-                return e.internalReferral && e.internalReferral.length && (t = Object(m.d)("Views from Outside Twitch", "TeamsDashboard"), n = c.createElement(p._19, {
-                    display: p.H.Flex,
+                return e.internalReferral && e.internalReferral.length && (t = Object(m.d)("Views from Outside Twitch", "TeamsDashboard"), n = c.createElement(p._21, {
+                    display: p.J.Flex,
                     flexGrow: 1,
                     borderBottom: !0,
                     borderLeft: !0
@@ -18160,18 +18160,18 @@ webpackJsonp([34], {
                     tableName: Object(m.d)("Views from Twitch", "TeamsDashboard"),
                     columnName: bt,
                     rowData: e.internalReferral
-                }))), c.createElement(p._19, {
+                }))), c.createElement(p._21, {
                     className: "all-tables-wrapper",
-                    display: p.H.Flex,
-                    flexDirection: p.J.Row,
+                    display: p.J.Flex,
+                    flexDirection: p.L.Row,
                     borderTop: !0
-                }, c.createElement(p.V, {
-                    display: p.H.Flex,
+                }, c.createElement(p.X, {
+                    display: p.J.Flex,
                     flexGrow: 1,
-                    flexDirection: p.J.Column,
-                    flexWrap: p.K.NoWrap
-                }, c.createElement(p._19, {
-                    display: p.H.Flex,
+                    flexDirection: p.L.Column,
+                    flexWrap: p.M.NoWrap
+                }, c.createElement(p._21, {
+                    display: p.J.Flex,
                     flexGrow: 1,
                     borderBottom: !0
                 }, c.createElement(vt, {
@@ -18180,21 +18180,21 @@ webpackJsonp([34], {
                     columnName: Object(m.d)("Location", "TeamsDashboard"),
                     rowData: e.geographical,
                     isGeo: !0
-                })), c.createElement(p._19, {
-                    display: p.H.Flex,
+                })), c.createElement(p._21, {
+                    display: p.J.Flex,
                     flexGrow: 1
                 }, c.createElement(vt, {
                     isLoading: e.isLoading,
                     tableName: Object(m.d)("Views by Platform", "TeamsDashboard"),
                     columnName: Object(m.d)("Platform", "TeamsDashboard"),
                     rowData: e.platform
-                }))), c.createElement(p.V, {
-                    display: p.H.Flex,
+                }))), c.createElement(p.X, {
+                    display: p.J.Flex,
                     flexGrow: 1,
-                    flexDirection: p.J.Column,
-                    flexWrap: p.K.NoWrap
-                }, n, c.createElement(p._19, {
-                    display: p.H.Flex,
+                    flexDirection: p.L.Column,
+                    flexWrap: p.M.NoWrap
+                }, n, c.createElement(p._21, {
+                    display: p.J.Flex,
                     flexGrow: 1,
                     borderLeft: !0
                 }, c.createElement(vt, {
@@ -18217,7 +18217,7 @@ webpackJsonp([34], {
                     return l.__generator(this, function(d) {
                         switch (d.label) {
                             case 0:
-                                return r = kt, t.length < 1 ? [2, r] : (i = t.join(","), s = "/v5/teams/" + e + "/stats/video_play_demographics?channel_ids=" + i + "&start_time=" + n + "&end_time=" + a, [4, Object(K.d)({
+                                return r = kt, t.length < 1 ? [2, r] : (i = t.join(","), s = "/v5/teams/" + e + "/stats/video_play_demographics?channel_ids=" + i + "&start_time=" + n + "&end_time=" + a, [4, Object(X.d)({
                                     path: s
                                 })]);
                             case 1:
@@ -18314,15 +18314,15 @@ webpackJsonp([34], {
                             case 0:
                                 if (0 === n.length) return [2, Promise.resolve({})];
                                 switch (i = "/v5/teams/" + t + "/stats/" + nt[e] + "?channel_ids=" + n + "&start_time=" + a + "&end_time=" + r, e) {
-                                    case Xe.AverageViewers:
+                                    case Ze.AverageViewers:
                                         return [3, 1];
-                                    case Xe.NewFollowers:
+                                    case Ze.NewFollowers:
                                         return [3, 3];
-                                    case Xe.AverageChatters:
+                                    case Ze.AverageChatters:
                                         return [3, 5];
-                                    case Xe.ChatMessages:
+                                    case Ze.ChatMessages:
                                         return [3, 7];
-                                    case Xe.AdBreakDuration:
+                                    case Ze.AdBreakDuration:
                                         return [3, 9]
                                 }
                                 return [3, 11];
@@ -18360,7 +18360,7 @@ webpackJsonp([34], {
                     return l.__generator(this, function(n) {
                         switch (n.label) {
                             case 0:
-                                return [4, Object(K.d)({
+                                return [4, Object(X.d)({
                                     path: e
                                 })];
                             case 1:
@@ -18375,7 +18375,7 @@ webpackJsonp([34], {
                     return l.__generator(this, function(n) {
                         switch (n.label) {
                             case 0:
-                                return [4, Object(K.d)({
+                                return [4, Object(X.d)({
                                     path: e
                                 })];
                             case 1:
@@ -18390,7 +18390,7 @@ webpackJsonp([34], {
                     return l.__generator(this, function(n) {
                         switch (n.label) {
                             case 0:
-                                return [4, Object(K.d)({
+                                return [4, Object(X.d)({
                                     path: e
                                 })];
                             case 1:
@@ -18405,7 +18405,7 @@ webpackJsonp([34], {
                     return l.__generator(this, function(n) {
                         switch (n.label) {
                             case 0:
-                                return [4, Object(K.d)({
+                                return [4, Object(X.d)({
                                     path: e
                                 })];
                             case 1:
@@ -18449,7 +18449,7 @@ webpackJsonp([34], {
                         })
                     }), r = function(e, t) {
                         var n = a.find(function(t) {
-                            return t.timestamp === Ut(e)
+                            return t.timestamp === Gt(e)
                         });
                         n && 0 !== t && (n.count += t, n.sampleSize += 1)
                     }, i = 0, s = n; i < s.length; i++) {
@@ -18467,7 +18467,7 @@ webpackJsonp([34], {
             Rt = function(e, t, n) {
                 for (var a = Vt(e, t), r = function(e, t) {
                         var n = a.find(function(t) {
-                            return t.timestamp === Ut(e)
+                            return t.timestamp === Gt(e)
                         });
                         n && (n.count += t)
                     }, i = 0, s = n; i < s.length; i++) {
@@ -18483,7 +18483,7 @@ webpackJsonp([34], {
                         })
                     }), r = function(e, t) {
                         var n = a.find(function(t) {
-                            return t.timestamp === Ut(e)
+                            return t.timestamp === Gt(e)
                         });
                         n && 0 !== t && (n.count += t, n.sampleSize += 1)
                     }, i = 0, s = n; i < s.length; i++) {
@@ -18501,7 +18501,7 @@ webpackJsonp([34], {
             Bt = function(e, t, n) {
                 for (var a = Vt(e, t), r = function(e, t) {
                         var n = a.find(function(t) {
-                            return t.timestamp === Ut(e)
+                            return t.timestamp === Gt(e)
                         });
                         n && (n.count += t)
                     }, i = 0, s = n; i < s.length; i++) {
@@ -18513,7 +18513,7 @@ webpackJsonp([34], {
             Jt = function(e, t, n) {
                 for (var a = Vt(e, t), r = function(e, t) {
                         var n = a.find(function(t) {
-                            return t.timestamp === Ut(e)
+                            return t.timestamp === Gt(e)
                         });
                         n && (n.count += t, n.numberOfDatapoints += 1)
                     }, i = 0, s = n; i < s.length; i++) {
@@ -18523,40 +18523,40 @@ webpackJsonp([34], {
                 return a
             },
             Vt = function(e, t) {
-                for (var n = [], a = new Date(Ut(e)), r = new Date(t); a < r;) n.push({
+                for (var n = [], a = new Date(Gt(e)), r = new Date(t); a < r;) n.push({
                     timestamp: a.toISOString(),
                     count: 0,
                     numberOfDatapoints: 0
                 }), a = de(a);
                 return n
             },
-            Ut = function(e) {
+            Gt = function(e) {
                 var t = new Date(e),
                     n = t.getUTCHours() - t.getUTCHours() % 4;
                 return new Date(Date.UTC(t.getUTCFullYear(), t.getUTCMonth(), t.getUTCDate(), n)).toISOString()
             },
-            Gt = this,
-            qt = [Xe.AverageViewers, Xe.NewFollowers, Xe.AverageChatters, Xe.ChatMessages, Xe.AdBreaks, Xe.AdBreakDuration],
-            Kt = Object.keys(nt),
-            Zt = function(e, t, n, a) {
-                return l.__awaiter(Gt, void 0, void 0, function() {
+            Ut = this,
+            qt = [Ze.AverageViewers, Ze.NewFollowers, Ze.AverageChatters, Ze.ChatMessages, Ze.AdBreaks, Ze.AdBreakDuration],
+            Xt = Object.keys(nt),
+            Kt = function(e, t, n, a) {
+                return l.__awaiter(Ut, void 0, void 0, function() {
                     var r, i, s, o, d, u, c, h, m, _, f, p;
                     return l.__generator(this, function(l) {
                         switch (l.label) {
                             case 0:
-                                for (r = {}, i = [], s = 0, o = Kt; s < o.length; s++) h = o[s], i.push(Ht(h, e, t, n, a));
+                                for (r = {}, i = [], s = 0, o = Xt; s < o.length; s++) h = o[s], i.push(Ht(h, e, t, n, a));
                                 return [4, Promise.all(i)];
                             case 1:
-                                for (d = l.sent(), u = 0, c = Kt; u < c.length; u++) {
+                                for (d = l.sent(), u = 0, c = Xt; u < c.length; u++) {
                                     if (h = c[u], m = d.shift() || {}, 0 === Object.keys(m).length) return [2, {}];
-                                    for (_ = 0, f = Object.keys(m); _ < f.length; _++) p = f[_], r[p] || (r[p] = {}), r[p][h] = m[p].count, h === Xe.AdBreakDuration && (r[p][Xe.AdBreaks] = m[p].numberOfDatapoints)
+                                    for (_ = 0, f = Object.keys(m); _ < f.length; _++) p = f[_], r[p] || (r[p] = {}), r[p][h] = m[p].count, h === Ze.AdBreakDuration && (r[p][Ze.AdBreaks] = m[p].numberOfDatapoints)
                                 }
                                 return [2, r]
                         }
                     })
                 })
             },
-            Xt = function() {
+            Zt = function() {
                 var e = Object(m.d)("Start Time", "TeamsDashboard") + "," + Object(m.d)("End Time", "TeamsDashboard") + "," + Se();
                 return qt.reduce(function(e, t) {
                     return e + "," + it(t)
@@ -18567,7 +18567,7 @@ webpackJsonp([34], {
                     a = je(e) + "," + je(n) + ",UTC";
                 return qt.reduce(function(e, n) {
                     var a = "" + t[n];
-                    return n === Xe.AdBreakDuration && (a = re(t[n])), e + "," + a
+                    return n === Ze.AdBreakDuration && (a = re(t[n])), e + "," + a
                 }, a) + "\n"
             },
             $t = function(e) {
@@ -18612,7 +18612,7 @@ webpackJsonp([34], {
                                             demographics: kt,
                                             isLoadingStats: !1,
                                             data: {}
-                                        }, a !== Xe.AverageViewers ? [3, 2] : (this.setState({
+                                        }, a !== Ze.AverageViewers ? [3, 2] : (this.setState({
                                             isLoadingDemographics: !0
                                         }), o = s, [4, Yt(this.props.teamName, n, r, i)]);
                                     case 1:
@@ -18632,9 +18632,9 @@ webpackJsonp([34], {
                             return l.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
-                                        return [4, Zt(this.props.teamName, H(this.state.members), this.state.startTime.toISOString(), this.state.endTime.toISOString())];
+                                        return [4, Kt(this.props.teamName, H(this.state.members), this.state.startTime.toISOString(), this.state.endTime.toISOString())];
                                     case 1:
-                                        return e = n.sent(), 0 === Object.keys(e).length ? [2] : (t = xe(e, Qt, Xt()), Te(t, P(v.Stats) + " - " + ae(this.state.startTime) + ".csv"), [2])
+                                        return e = n.sent(), 0 === Object.keys(e).length ? [2] : (t = xe(e, Qt, Zt()), Te(t, P(v.Stats) + " - " + ae(this.state.startTime) + ".csv"), [2])
                                 }
                             })
                         })
@@ -18681,7 +18681,7 @@ webpackJsonp([34], {
                         startTime: ie(n.props.currentDate),
                         endTime: n.props.currentDate,
                         groupChecked: !0,
-                        metric: Xe.AverageViewers
+                        metric: Ze.AverageViewers
                     }, n
                 }
                 return l.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -18716,18 +18716,18 @@ webpackJsonp([34], {
                     return c.createElement(D, {
                         title: P(v.Stats),
                         titleSelector: "stats-page-title"
-                    }, c.createElement(p._19, {
+                    }, c.createElement(p._21, {
                         border: !0,
                         fullWidth: !0
-                    }, c.createElement(p.V, {
-                        display: p.H.Flex,
-                        flexDirection: p.J.Row,
-                        justifyContent: p.U.Between,
+                    }, c.createElement(p.X, {
+                        display: p.J.Flex,
+                        flexDirection: p.L.Row,
+                        justifyContent: p.W.Between,
                         margin: 2
-                    }, c.createElement(p.V, {
-                        display: p.H.Flex,
-                        flexDirection: p.J.Row
-                    }, c.createElement(p.V, {
+                    }, c.createElement(p.X, {
+                        display: p.J.Flex,
+                        flexDirection: p.L.Row
+                    }, c.createElement(p.X, {
                         margin: {
                             right: 1
                         }
@@ -18748,17 +18748,17 @@ webpackJsonp([34], {
                         earliestDate: this.props.earliestDataDate,
                         currentDate: this.props.currentDate,
                         onMonthSelection: this.handleTimeRangeChange
-                    })), c.createElement(p.V, null, c.createElement(p.u, {
+                    })), c.createElement(p.X, null, c.createElement(p.u, {
                         disabled: e,
                         "data-test-selector": "stats-csv-button",
-                        icon: p._11.Download,
+                        icon: p._13.Download,
                         onClick: this.handleCSVClick
-                    }, Oe()))), c.createElement(p.V, {
+                    }, Oe()))), c.createElement(p.X, {
                         fullWidth: !0
                     }, c.createElement(ht, {
                         data: this.state.data,
                         dataType: this.state.metric
-                    })), this.state.metric === Xe.AverageViewers ? this.renderViewershipTables() : ""))
+                    })), this.state.metric === Ze.AverageViewers ? this.renderViewershipTables() : ""))
                 }, t = l.__decorate([Object(f.d)("StatsPage", {
                     autoReportInteractive: !0,
                     destination: _.a.TeamsDashboardStats
@@ -18793,15 +18793,15 @@ webpackJsonp([34], {
                     }, n.earliestDataDate = en, n.currentDate = t.currentDate || new Date, n.currentDate < n.earliestDataDate && (n.currentDate = n.earliestDataDate), n
                 }
                 return l.__extends(t, e), t.prototype.render = function() {
-                    return this.props.isLoggedIn ? c.createElement(p.V, {
-                        display: p.H.Flex,
-                        flexWrap: p.K.NoWrap,
+                    return this.props.isLoggedIn ? c.createElement(p.X, {
+                        display: p.J.Flex,
+                        flexWrap: p.M.NoWrap,
                         fullWidth: !0,
                         fullHeight: !0
-                    }, c.createElement(Ue, {
+                    }, c.createElement(Ge, {
                         teamName: this.props.match.params.teamName,
                         page: this.props.match.params.pageName
-                    }), c.createElement(p.V, {
+                    }), c.createElement(p.X, {
                         fullWidth: !0
                     }, c.createElement(h.d, null, c.createElement(h.b, {
                         path: "/teams/" + this.props.match.params.teamName + "/dashboard/" + v.Revenue,
@@ -18820,7 +18820,7 @@ webpackJsonp([34], {
                         render: this.renderSettingsPage
                     }), c.createElement(h.a, {
                         to: "/teams/" + this.props.match.params.teamName + "/dashboard/" + v.Revenue
-                    })))) : (this.props.onAnonymousVisit(), c.createElement(p.Z, {
+                    })))) : (this.props.onAnonymousVisit(), c.createElement(p._1, {
                         fillContent: !0
                     }))
                 }, t
@@ -21672,4 +21672,4 @@ webpackJsonp([34], {
         }
     }
 });
-//# sourceMappingURL=pages.teams-dashboard-dca7201439b98878f2443b844229b279.js.map
+//# sourceMappingURL=pages.teams-dashboard-0fe2029a0912bba538b4a457c52e9464.js.map

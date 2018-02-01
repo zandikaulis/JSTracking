@@ -13587,7 +13587,7 @@ webpackJsonp([62], {
                         reason: t
                     })
                 }, e.prototype.disconnect = function(e) {
-                    this.isActive && (this.isActive = e, this.onDisconnected("User or client initiated"))
+                    this.isActive && (e || (this.session.lastChannelJoined = ""), this.isActive = e, this.onDisconnected("User or client initiated"))
                 }, e.prototype.suppressEvents = function() {
                     this.eventProcessors.suppress()
                 }, e.prototype.unsuppressEvents = function() {
@@ -37205,4 +37205,4 @@ webpackJsonp([62], {
         e.exports = l
     }
 });
-//# sourceMappingURL=vendor-60cba6ede0c07416b4733d6c5bf9c1c5.js.map
+//# sourceMappingURL=vendor-128c346a9442245620332c7c735c08c2.js.map

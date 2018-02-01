@@ -103,13 +103,13 @@ webpackJsonp([77], {
                 }
                 return s.__extends(t, e), t.prototype.render = function() {
                     var e = new Date;
-                    return o.createElement("div", null, o.createElement(b.V, {
-                        display: b.H.Flex,
-                        flexWrap: b.K.NoWrap,
+                    return o.createElement("div", null, o.createElement(b.X, {
+                        display: b.J.Flex,
+                        flexWrap: b.M.NoWrap,
                         margin: {
                             bottom: 2
                         }
-                    }, o.createElement(b.V, {
+                    }, o.createElement(b.X, {
                         padding: {
                             right: 2
                         }
@@ -127,10 +127,10 @@ webpackJsonp([77], {
                         minDate: this.state.interval.start,
                         maxDate: e,
                         onChange: this.handleEndChange
-                    })), o.createElement(b.V, {
-                        display: b.H.Flex,
-                        justifyContent: b.U.Center
-                    }, o.createElement(b.V, {
+                    })), o.createElement(b.X, {
+                        display: b.J.Flex,
+                        justifyContent: b.W.Center
+                    }, o.createElement(b.X, {
                         margin: {
                             right: 2
                         }
@@ -160,8 +160,8 @@ webpackJsonp([77], {
                 return s.__extends(t, e), t.prototype.render = function() {
                     var e = this,
                         t = this.props.urlStore;
-                    return o.createElement(b.V, {
-                        position: b._4.Relative
+                    return o.createElement(b.X, {
+                        position: b._6.Relative
                     }, o.createElement(k.a, {
                         control: function(n) {
                             var a = n.toggle;
@@ -172,9 +172,9 @@ webpackJsonp([77], {
                                 type: b.z.Text,
                                 onClick: a,
                                 fullWidth: !0
-                            }), o.createElement(b._23, s.__assign({}, R, {
+                            }), o.createElement(b._25, s.__assign({}, R, {
                                 fontSize: 4
-                            }), e.formatDateRange(t)), o.createElement(b._23, s.__assign({}, j, {
+                            }), e.formatDateRange(t)), o.createElement(b._25, s.__assign({}, j, {
                                 fontSize: 6,
                                 color: b.F.Alt2
                             }), e.formatDaysInRange(t))))
@@ -185,7 +185,7 @@ webpackJsonp([77], {
                             noTail: !0,
                             show: !0,
                             direction: b.q.BottomCenter
-                        }, o.createElement(b.V, {
+                        }, o.createElement(b.X, {
                             padding: {
                                 top: 2,
                                 right: 2,
@@ -215,23 +215,23 @@ webpackJsonp([77], {
             w = function(e) {
                 var t = e.channel,
                     n = e.topClips;
-                if (n.isLoading) return o.createElement(b.V, {
+                if (n.isLoading) return o.createElement(b.X, {
                     margin: {
                         bottom: 2
                     }
-                }, o.createElement(b._3, {
+                }, o.createElement(b._5, {
                     height: 448
                 }));
                 if (!n.isLoading && !n.clips.length) return o.createElement("span", null);
                 var a = Object(c.d)("View Details", "ChannelAnalyticsTopClipsPanelCTA");
-                return o.createElement(b.V, {
+                return o.createElement(b.X, {
                     margin: {
                         top: 0,
                         left: .5,
                         right: .5,
                         bottom: 2
                     }
-                }, o.createElement(b.V, {
+                }, o.createElement(b.X, {
                     margin: {
                         bottom: 1
                     },
@@ -239,33 +239,33 @@ webpackJsonp([77], {
                         x: 2,
                         top: 2
                     }
-                }, o.createElement(b._23, {
-                    type: b._28.H4,
+                }, o.createElement(b._25, {
+                    type: b._30.H4,
                     bold: !0
-                }, Object(c.d)("What were my top clips?", "ChannelAnalyticsTopClipsTitle"))), o.createElement(b._19, {
+                }, Object(c.d)("What were my top clips?", "ChannelAnalyticsTopClipsTitle"))), o.createElement(b._21, {
                     elevation: 1,
                     background: b.m.Base
-                }, o.createElement(b.V, {
+                }, o.createElement(b.X, {
                     padding: {
                         top: .5
                     }
-                }, o.createElement(V, {
+                }, o.createElement(P, {
                     clipsAttrs: n
                 }), t ? o.createElement(A.a, {
                     message: a,
                     url: "/" + t + "/manager/clips/channel"
                 }) : o.createElement("p", null, a))))
             },
-            V = function(e) {
+            P = function(e) {
                 if (e.clipsAttrs.isLoading)
-                    for (var t = [], n = 0; n < 5; n++) t.push(o.createElement(b._19, {
+                    for (var t = [], n = 0; n < 5; n++) t.push(o.createElement(b._21, {
                         borderBottom: !0,
                         padding: {
                             x: 2,
                             y: 1
                         },
                         key: n
-                    }, o.createElement(b._3, {
+                    }, o.createElement(b._5, {
                         height: 50
                     })));
                 return o.createElement("span", null, e.clipsAttrs.clips.slice(0, 5).map(function(e, t) {
@@ -274,7 +274,7 @@ webpackJsonp([77], {
                     }))
                 }))
             },
-            P = n("OAwv"),
+            L = n("OAwv"),
             T = function() {
                 function e(e, t) {
                     var n = this;
@@ -284,20 +284,20 @@ webpackJsonp([77], {
                             end: n.end
                         }, e);
                         n.history.push(n.location.pathname + "?" + function(e) {
-                            return P.stringify({
+                            return L.stringify({
                                 start: r(e.start),
                                 end: r(e.end)
                             })
                         }(t))
                     }, this.location = e, this.history = t;
-                    var a = P.parse(e.search);
+                    var a = L.parse(e.search);
                     this.start = i(a.start) || Object(f.subDays)(new Date, D - 1), this.end = i(a.end) || new Date
                 }
                 return e.fromRouter = function(t) {
                     return new e(t.location, t.history)
                 }, e
             }(),
-            L = function(e) {
+            F = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -324,11 +324,11 @@ webpackJsonp([77], {
                     configurable: !0
                 }), t
             }(o.Component),
-            F = n("AJEV"),
-            W = n("pDcl"),
-            q = n("7qqA"),
-            z = n("DNvj"),
-            I = function(e) {
+            W = n("AJEV"),
+            X = n("pDcl"),
+            M = n("7qqA"),
+            V = n("DNvj"),
+            q = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.state = {
@@ -341,10 +341,10 @@ webpackJsonp([77], {
                 return s.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.fetchTopClips()
                 }, t.prototype.componentWillReceiveProps = function(e) {
-                    Object(F.f)(this.props.timeRange, e.timeRange) || this.fetchTopClips()
+                    Object(W.f)(this.props.timeRange, e.timeRange) || this.fetchTopClips()
                 }, t.prototype.render = function() {
                     var e = this;
-                    return this.props.channel ? o.createElement(q.a, {
+                    return this.props.channel ? o.createElement(M.a, {
                         timeRange: this.props.timeRange,
                         channelName: this.props.channel.name
                     }, function(t) {
@@ -363,7 +363,7 @@ webpackJsonp([77], {
                                             clips: [],
                                             isLoading: !0
                                         }
-                                    }), [4, Object(z.a)(this.props.channel.name, this.props.timeRange)]) : [2];
+                                    }), [4, Object(V.a)(this.props.channel.name, this.props.timeRange)]) : [2];
                                 case 1:
                                     return (e = t.sent()).isError ? [2] : (this.setState({
                                         topClips: {
@@ -376,7 +376,7 @@ webpackJsonp([77], {
                     })
                 }, t
             }(o.Component),
-            M = (n("ELpn"), function(e) {
+            z = (n("ELpn"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -384,33 +384,33 @@ webpackJsonp([77], {
                     c.n.setPageTitle(Object(c.d)("Channel Analytics", "DashboardChannelAnalyticsPage"))
                 }, t.prototype.render = function() {
                     if (!this.props.data.channel) return null;
-                    var e = F.c.fromChannelData(this.props.data.channel);
-                    return o.createElement(b.V, {
+                    var e = W.c.fromChannelData(this.props.data.channel);
+                    return o.createElement(b.X, {
                         padding: 4,
                         className: "channel-analytics-page__width"
-                    }, o.createElement(L, {
+                    }, o.createElement(F, {
                         location: this.props.location,
                         history: this.props.history
                     }, function(t) {
                         return o.createElement("div", null, o.createElement(N, {
                             urlStore: t
-                        }), o.createElement(b._19, {
+                        }), o.createElement(b._21, {
                             margin: {
                                 bottom: 1
                             },
-                            display: b.H.Flex,
-                            flexDirection: b.J.Column,
-                            flexWrap: b.K.NoWrap,
+                            display: b.J.Flex,
+                            flexDirection: b.L.Column,
+                            flexWrap: b.M.NoWrap,
                             alignItems: b.c.Stretch,
                             breakpointMedium: {
-                                flexDirection: b.J.Row
+                                flexDirection: b.L.Row
                             }
-                        }, o.createElement(b.V, {
-                            display: b.H.Flex,
+                        }, o.createElement(b.X, {
+                            display: b.J.Flex,
                             flexGrow: 1,
-                            flexWrap: b.K.NoWrap,
-                            flexDirection: b.J.Column
-                        }, o.createElement(I, {
+                            flexWrap: b.M.NoWrap,
+                            flexDirection: b.L.Column
+                        }, o.createElement(q, {
                             timeRange: t,
                             channel: e
                         }, function(t) {
@@ -422,7 +422,7 @@ webpackJsonp([77], {
                     }))
                 }, t
             }(o.Component)),
-            U = Object(l.d)(Object(p.a)(W, {
+            I = Object(l.d)(Object(p.a)(X, {
                 options: function(e) {
                     return {
                         variables: {
@@ -435,11 +435,11 @@ webpackJsonp([77], {
                 autoReportInteractive: !0
             }), Object(d.a)({
                 location: m.PageviewLocation.DashboardChannelAnalytics
-            }))(M);
+            }))(z);
         n.d(t, "ChannelAnalyticsPageComponent", function() {
-            return M
+            return z
         }), n.d(t, "ChannelAnalyticsPage", function() {
-            return U
+            return I
         })
     },
     pDcl: function(e, t) {
@@ -567,4 +567,4 @@ webpackJsonp([77], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.dashboard.components.channel-analytics-page-3677ddbb67e325474d64665c1619794a.js.map
+//# sourceMappingURL=pages.dashboard.components.channel-analytics-page-6fe77ee110e4b5822fa4595e0d8f01b6.js.map
