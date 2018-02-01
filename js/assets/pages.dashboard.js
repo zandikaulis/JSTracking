@@ -21957,7 +21957,7 @@ webpackJsonp([32], {
                         message: Object(wt.d)("Error loading data", "VideoManagerPage")
                     }) : this.props.apiData && this.props.apiData.notificationMessage && this.props.apiData.notificationMessage.type === Xo.NotificationType.PageError ? bt.createElement(Dt.a, {
                         message: this.props.apiData.notificationMessage.message
-                    }) : bt.createElement("div", null, bt.createElement(Ot.b, null, bt.createElement(Vt.V, {
+                    }) : bt.createElement(Ot.b, null, bt.createElement(Vt.V, {
                         padding: 3,
                         className: "video-manager",
                         fullWidth: !0
@@ -22158,7 +22158,7 @@ webpackJsonp([32], {
                         enabled: !!this.props.apiData.videos.data && this.props.apiData.videos.moreDataAvailable,
                         key: this.props.activeFilter || "",
                         loadMore: this.loadMore
-                    }))), bt.createElement(rm, {
+                    }), bt.createElement(rm, {
                         user: this.props.data.user,
                         currentUser: this.props.data.currentUser,
                         videoID: this.props.match.params.videoID,
@@ -22172,7 +22172,7 @@ webpackJsonp([32], {
                         downloadVideo: this.props.downloadVideo,
                         vodcastQueueUnavailable: this.vodcastQueueUnavailable,
                         theme: this.props.theme
-                    })) : bt.createElement(Dt.a, {
+                    }))) : bt.createElement(Dt.a, {
                         message: Object(wt.d)("Access Denied: Please log in", "VideoManagerPage")
                     })
                 }, t.prototype.renderSuccessfullyProcessedVideos = function() {
@@ -46856,4 +46856,4 @@ webpackJsonp([32], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.dashboard-53e55a39c70a0c93a4dd703093df04c9.js.map
+//# sourceMappingURL=pages.dashboard-f510caece60e2d137ae7118e5d2715c6.js.map
