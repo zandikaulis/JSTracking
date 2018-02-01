@@ -12234,7 +12234,7 @@ webpackJsonp([44], {
         function i() {
             var e = r.k.get(s, {});
             return a.__assign({
-                sortBy: o.a.Hotness
+                sortBy: o.a.Popularity
             }, e)
         }
         t.a = i, t.b = function(e, t) {
@@ -14021,7 +14021,7 @@ webpackJsonp([44], {
                 return i.__assign({
                     browseType: l.a.GamesAndCommunities,
                     lastBrowsePath: "/directory",
-                    sortBy: r.a.Hotness
+                    sortBy: r.a.Popularity
                 }, e)
             }()), t.type) {
                 case s.a:
@@ -15777,7 +15777,7 @@ webpackJsonp([44], {
         });
         var i;
         ! function(e) {
-            e.Popularity = "popularity", e.Hotness = "hotness"
+            e.Popularity = "popularity", e.Relevancy = "relevancy"
         }(i || (i = {}))
     },
     rG8a: function(e, t) {
@@ -17325,4 +17325,4 @@ webpackJsonp([44], {
     zSAx: function(e, t) {},
     zu64: function(e, t) {}
 });
-//# sourceMappingURL=pages.directory-game-631f9d9ff9c95707630f9e6922b3753e.js.map
+//# sourceMappingURL=pages.directory-game-8137b1e94965015ca7bebf3221ed00d9.js.map

@@ -1235,16 +1235,22 @@ webpackJsonp([64], {
                     }, r.createElement(o.V, {
                         className: "latency-metrics__header-container",
                         display: o.H.Flex,
+                        justifyContent: o.U.Between,
                         flexWrap: o.K.NoWrap,
-                        alignItems: o.c.Center,
+                        alignItems: o.c.Start,
                         padding: {
                             bottom: 1
                         },
                         margin: {
                             x: 1
                         }
-                    }, this.renderTab("overview", "Overview"), this.renderTab("components", "Components", this.state.componentStats.countByStatus[f.a.Fail]), this.renderTab("queries", "Queries", this.state.queryStats.countByStatus[f.a.Fail]), this.renderTab("requests", "Requests", this.state.networkStats.countByStatus[f.a.Fail]), r.createElement("div", {
-                        className: "latency-metrics__controls"
+                    }, r.createElement(o.V, {
+                        display: o.H.Flex,
+                        flexShrink: 0
+                    }, this.renderTab("overview", "Overview"), this.renderTab("components", "Components", this.state.componentStats.countByStatus[f.a.Fail]), this.renderTab("queries", "Queries", this.state.queryStats.countByStatus[f.a.Fail]), this.renderTab("requests", "Requests", this.state.networkStats.countByStatus[f.a.Fail])), r.createElement(o.V, {
+                        className: "latency-metrics__controls",
+                        display: o.H.Flex,
+                        flexShrink: 0
                     }, r.createElement(o.v, {
                         onClick: this.onClickWindowSize,
                         icon: o._11.Maximize,
@@ -9055,4 +9061,4 @@ webpackJsonp([64], {
         }(i || (i = {}))
     }
 }, [5]);
-//# sourceMappingURL=minimal-4958310b3cd2d22d5b96fb464bebc1ed.js.map
+//# sourceMappingURL=minimal-21c891f1d7a1e90b5b7690001fb84785.js.map

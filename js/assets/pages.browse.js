@@ -1651,8 +1651,8 @@ webpackJsonp([50], {
 
         function r(e) {
             switch (e) {
-                case I.a.Hotness:
-                    return Object(c.d)("Hotness", "BrowseHeader");
+                case I.a.Relevancy:
+                    return Object(c.d)("Relevancy", "BrowseHeader");
                 default:
                     return Object(c.d)("Popularity", "BrowseHeader")
             }
@@ -1822,7 +1822,7 @@ webpackJsonp([50], {
                                 }
                             }(e.browseType),
                             directorySort: function(e) {
-                                return e === I.a.Hotness ? "RELEVANCE" : "VIEWER_COUNT"
+                                return e === I.a.Relevancy ? "RELEVANCE" : "VIEWER_COUNT"
                             }(e.sortBy)
                         }
                     }
@@ -1898,7 +1898,7 @@ webpackJsonp([50], {
                     "data-a-target": "view-all-creative"
                 }, Object(c.d)("View All Creative Broadcasters", "BrowseCreativePage"))))
             },
-            H = function(e) {
+            M = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -1910,12 +1910,12 @@ webpackJsonp([50], {
                     }, l.createElement(U, null))
                 }, t
             }(l.Component),
-            M = Object(d.compose)(Object(g.d)("DirectoryPage", {
+            H = Object(d.compose)(Object(g.d)("DirectoryPage", {
                 autoReportInteractive: !0,
                 destination: m.a.BrowseCreative
             }), Object(u.a)({
                 location: p.PageviewLocation.BrowseCreative
-            }))(H),
+            }))(M),
             G = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -2034,7 +2034,7 @@ webpackJsonp([50], {
                         padding: {
                             y: 1
                         }
-                    }, this.renderSortItem(I.a.Hotness), this.renderSortItem(I.a.Popularity))))))
+                    }, this.renderSortItem(I.a.Popularity), this.renderSortItem(I.a.Relevancy))))))
                 }, t.prototype.renderSortItem = function(e) {
                     var t = this;
                     return l.createElement(D.T, {
@@ -2686,7 +2686,7 @@ webpackJsonp([50], {
                         component: V
                     }), l.createElement(W.b, {
                         path: i.CreativeCommunities,
-                        component: M
+                        component: H
                     }), l.createElement(W.b, {
                         path: i.PopularPlaystation,
                         component: Se
@@ -2724,7 +2724,7 @@ webpackJsonp([50], {
         n.d(t, "BrowseCommunitiesPage", function() {
             return V
         }), n.d(t, "BrowseCreativePage", function() {
-            return M
+            return H
         }), n.d(t, "BrowseGamesAndCommunitiesPage", function() {
             return z
         }), n.d(t, "BrowseRootPage", function() {
@@ -3678,7 +3678,7 @@ webpackJsonp([50], {
         function a() {
             var e = i.k.get(s, {});
             return r.__assign({
-                sortBy: o.a.Hotness
+                sortBy: o.a.Popularity
             }, e)
         }
         t.a = a, t.b = function(e, t) {
@@ -4143,7 +4143,7 @@ webpackJsonp([50], {
                 return a.__assign({
                     browseType: l.a.GamesAndCommunities,
                     lastBrowsePath: "/directory",
-                    sortBy: i.a.Hotness
+                    sortBy: i.a.Popularity
                 }, e)
             }()), t.type) {
                 case s.a:
@@ -4407,7 +4407,7 @@ webpackJsonp([50], {
         });
         var a;
         ! function(e) {
-            e.Popularity = "popularity", e.Hotness = "hotness"
+            e.Popularity = "popularity", e.Relevancy = "relevancy"
         }(a || (a = {}))
     },
     sJt0: function(e, t) {},
@@ -4764,4 +4764,4 @@ webpackJsonp([50], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.browse-e651b71ef408687ed4e51df0affc8e81.js.map
+//# sourceMappingURL=pages.browse-3dc8c056e329f820fc6aff9104addeff.js.map

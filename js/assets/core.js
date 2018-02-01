@@ -10611,16 +10611,22 @@ webpackJsonp([63], {
                     }, r.createElement(a.V, {
                         className: "latency-metrics__header-container",
                         display: a.H.Flex,
+                        justifyContent: a.U.Between,
                         flexWrap: a.K.NoWrap,
-                        alignItems: a.c.Center,
+                        alignItems: a.c.Start,
                         padding: {
                             bottom: 1
                         },
                         margin: {
                             x: 1
                         }
-                    }, this.renderTab("overview", "Overview"), this.renderTab("components", "Components", this.state.componentStats.countByStatus[f.a.Fail]), this.renderTab("queries", "Queries", this.state.queryStats.countByStatus[f.a.Fail]), this.renderTab("requests", "Requests", this.state.networkStats.countByStatus[f.a.Fail]), r.createElement("div", {
-                        className: "latency-metrics__controls"
+                    }, r.createElement(a.V, {
+                        display: a.H.Flex,
+                        flexShrink: 0
+                    }, this.renderTab("overview", "Overview"), this.renderTab("components", "Components", this.state.componentStats.countByStatus[f.a.Fail]), this.renderTab("queries", "Queries", this.state.queryStats.countByStatus[f.a.Fail]), this.renderTab("requests", "Requests", this.state.networkStats.countByStatus[f.a.Fail])), r.createElement(a.V, {
+                        className: "latency-metrics__controls",
+                        display: a.H.Flex,
+                        flexShrink: 0
                     }, r.createElement(a.v, {
                         onClick: this.onClickWindowSize,
                         icon: a._11.Maximize,
@@ -18233,9 +18239,8 @@ webpackJsonp([63], {
         }, t.b = function(e) {
             return "/events/" + encodeURIComponent(e)
         }, t.d = function(e) {
-            return i.b.get("premiere_video_manager_public", !1) ? "/" + encodeURIComponent(e) + "/manager" : "/" + encodeURIComponent(e) + "/manager_v2"
-        };
-        var i = n("6sO2")
+            return "/" + encodeURIComponent(e) + "/manager"
+        }
     },
     NikC: function(e, t, n) {
         "use strict";
@@ -39748,4 +39753,4 @@ webpackJsonp([63], {
         }(i || (i = {}))
     }
 }, [4]);
-//# sourceMappingURL=core-3cb9007ff0796f6726ae39b88a8ef4be.js.map
+//# sourceMappingURL=core-67d63cbb91fca06d24461a9c8a0bcea4.js.map

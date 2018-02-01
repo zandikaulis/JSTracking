@@ -12758,9 +12758,8 @@ webpackJsonp([42], {
         }, t.b = function(e) {
             return "/events/" + encodeURIComponent(e)
         }, t.d = function(e) {
-            return i.b.get("premiere_video_manager_public", !1) ? "/" + encodeURIComponent(e) + "/manager" : "/" + encodeURIComponent(e) + "/manager_v2"
-        };
-        var i = n("6sO2")
+            return "/" + encodeURIComponent(e) + "/manager"
+        }
     },
     NikC: function(e, t, n) {
         "use strict";
@@ -22228,4 +22227,4 @@ webpackJsonp([42], {
         }
     }
 });
-//# sourceMappingURL=pages.subs-0eab26a35f429d19821b0023f66aa638.js.map
+//# sourceMappingURL=pages.subs-8e61b023ef694c03df21ec22ba6175aa.js.map
