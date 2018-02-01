@@ -3740,6 +3740,18 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
+        "be1eb677-a362-4f12-ae40-cce0ef58e545": {
+            "name": "android_wateb",
+            "v": 2957,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
         "bfc54618-1905-49ed-ab8e-e72af763f553": {
             "name": "android_story_card_v2.5",
             "v": 2363,
