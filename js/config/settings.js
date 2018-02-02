@@ -132,16 +132,16 @@ window.__twilightSettings = {
             }]
         },
         "301a4a68-7d71-4dcb-a35c-890690fd2671": {
-            "name": "twilight_homepage_redesign",
-            "v": 2968,
+            "name": "TWILIGHT_HOMEPAGE_REDESIGN",
+            "v": 2970,
             "t": 2,
             "s": 9,
             "groups": [{
                 "weight": 95,
-                "value": "old"
+                "value": "off"
             }, {
                 "weight": 5,
-                "value": "new"
+                "value": "on"
             }]
         },
         "32099615-3609-4658-9f6b-5c1c1daa3510": {

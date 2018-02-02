@@ -976,8 +976,8 @@ window.SiteOptions = {
             }]
         },
         "301a4a68-7d71-4dcb-a35c-890690fd2671": {
-            "name": "twilight_homepage_redesign",
-            "v": 2969,
+            "name": "TWILIGHT_HOMEPAGE_REDESIGN",
+            "v": 2970,
             "t": 2,
             "s": 9,
             "groups": [{
