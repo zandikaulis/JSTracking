@@ -26,7 +26,7 @@ window.__twilightSettings = {
     "esport_channel_page_whitelist": "",
     "event_directory_enabled_games": ["overwatch", "twitchcon 2017", "twitch presents", "dota 2", "league of legends", "call of duty: wwii", "rocket league", "tekken 7", "talk shows", "always on"],
     "google_analytics_url": "https://ssl.google-analytics.com/ga.js",
-    "impact_experiment_key": false,
+    "impact_experiment_key": true,
     "ivw_countries": ["DE"],
     "ivw_languages": ["de"],
     "ivw_url": "https://script.ioam.de/iam.js",
