@@ -975,6 +975,19 @@ window.SiteOptions = {
                 "value": "exoplayer_2"
             }]
         },
+        "301a4a68-7d71-4dcb-a35c-890690fd2671": {
+            "name": "twilight_homepage_redesign",
+            "v": 2969,
+            "t": 2,
+            "s": 9,
+            "groups": [{
+                "weight": 95,
+                "value": "off"
+            }, {
+                "weight": 5,
+                "value": "on"
+            }]
+        },
         "30a7dfaa-e3d2-477e-a4f1-28e2ffb80e72": {
             "name": "NEWSFEED_RECOMMENDATIONS",
             "v": 1568,
