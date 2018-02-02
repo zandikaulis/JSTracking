@@ -1614,8 +1614,8 @@ webpackJsonp([46], {
                     firstPageLoaded: !!e.session.firstPageLoaded
                 }
             })(B),
-            H = (n("ukY1"), n("F1v6")),
-            z = function(e) {
+            z = (n("ukY1"), n("F1v6")),
+            H = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -1723,7 +1723,7 @@ webpackJsonp([46], {
                         target: "_blank",
                         rel: "noopener noreferrer"
                     }, d)))))
-                }, t = r.__decorate([Object(l.a)(H, {
+                }, t = r.__decorate([Object(l.a)(z, {
                     options: function() {
                         return {
                             variables: {
@@ -1737,7 +1737,7 @@ webpackJsonp([46], {
         n.d(t, "b", function() {
             return q
         }), n.d(t, "a", function() {
-            return z
+            return H
         }), n.d(t, "c", function() {
             return b.d
         })
@@ -2417,42 +2417,42 @@ webpackJsonp([46], {
     },
     DBTH: function(e, t, n) {
         "use strict";
-        n.d(t, "h", function() {
+        n.d(t, "g", function() {
             return r
-        }), n.d(t, "g", function() {
+        }), n.d(t, "f", function() {
             return a
-        }), n.d(t, "i", function() {
+        }), n.d(t, "h", function() {
             return o
-        }), n.d(t, "k", function() {
-            return s
         }), n.d(t, "j", function() {
+            return s
+        }), n.d(t, "i", function() {
             return d
-        }), n.d(t, "m", function() {
-            return l
         }), n.d(t, "l", function() {
+            return l
+        }), n.d(t, "k", function() {
             return c
-        }), n.d(t, "a", function() {
+        }), n.d(t, "d", function() {
             return m
-        }), n.d(t, "e", function() {
-            return u
+        }), n.d(t, "b", function() {
+            return f
+        }), n.d(t, "a", function() {
+            return g
         }), n.d(t, "c", function() {
             return v
-        }), n.d(t, "b", function() {
-            return h
-        }), n.d(t, "d", function() {
+        }), n.d(t, "e", function() {
             return k
-        }), n.d(t, "f", function() {
+        }), n.d(t, "q", function() {
+            return b
+        }), n.d(t, "o", function() {
             return y
         }), n.d(t, "p", function() {
             return _
-        }), n.d(t, "q", function() {
-            return S
-        }), n.d(t, "o", function() {
-            return E
         }), n.d(t, "n", function() {
-            return N
+            return S
+        }), n.d(t, "m", function() {
+            return E
         }), n.d(t, "r", function() {
-            return O
+            return N
         });
         var i, r = "TWILIGHT_WEB_ONBOARDING_CATEGORIES",
             a = "TWILIGHT_WEB_ONBOARDING_CATEGORIES_ANON_FRONT_PAGE",
@@ -2460,43 +2460,43 @@ webpackJsonp([46], {
             s = "TWILIGHT_WEB_ONBOARDING_FOLLOWING_FOR_YOU",
             d = "TWILIGHT_WEB_ONBOARDING",
             l = "TWILIGHT_WEB_ONBOARDING_RANDOMIZED_GAMES",
-            c = "TWILIGHT_WEB_ONBOARDING_FOLLOW_CATEGORIES",
-            m = "control";
-        ! function(e) {
-            e.Skip = "skip", e.NoSkip = "no_skip"
-        }(i || (i = {}));
-        var u, p = new Set([i.Skip.toString(), i.NoSkip.toString()]);
+            c = "TWILIGHT_WEB_ONBOARDING_FOLLOW_CATEGORIES";
+        (i || (i = {})).NoSkip = "no_skip";
+        var m;
         ! function(e) {
             e.First = "first", e.Last = "last"
-        }(u || (u = {}));
-        var f, g = new Set([u.First.toString(), u.Last.toString()]);
+        }(m || (m = {}));
+        var u, p = new Set([m.First.toString(), m.Last.toString()]);
+        (u || (u = {})).Yes = "yes";
+        var f;
         (f || (f = {})).Yes = "yes";
-        var v;
-        (v || (v = {})).Yes = "yes";
-        var h;
+        var g;
         ! function(e) {
             e.Games = "games", e.Streams = "streams"
-        }(h || (h = {}));
-        var k, b = new Set([h.Games.toString(), h.Streams.toString()]);
+        }(g || (g = {}));
+        var v, h = new Set([g.Games.toString(), g.Streams.toString()]);
+        (v || (v = {})).ENABLED = "enabled";
+        var k;
         (k || (k = {})).ENABLED = "enabled";
-        var y;
-        (y || (y = {})).ENABLED = "enabled";
-        var _ = function(e) {
-                return !!e && g.has(e)
+        var b = function(e) {
+                return e === i.NoSkip
             },
-            S = function(e, t) {
-                return !!e && p.has(e) && _(t)
+            y = function(e) {
+                return !!e && p.has(e)
             },
-            E = function(e, t, n) {
-                return !!e && p.has(e) && _(t) && n === f.Yes
+            _ = function(e, t) {
+                return b(e) && y(t)
+            },
+            S = function(e, t, n) {
+                return b(e) && y(t) && n === u.Yes
+            },
+            E = function(e) {
+                return !!e && h.has(e)
             },
             N = function(e) {
-                return !!e && b.has(e)
+                return e.getTime() >= O().getTime()
             },
-            O = function(e) {
-                return e.getTime() >= C().getTime()
-            },
-            C = function() {
+            O = function() {
                 return new Date((new Date).getTime() - 12096e5)
             }
     },
@@ -3346,10 +3346,7 @@ webpackJsonp([46], {
             D = i.__assign({}, T, {
                 expires: 365
             }),
-            R = new Map([
-                ["skip", 1],
-                ["no_skip", 3]
-            ]),
+            R = 3,
             x = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -3364,11 +3361,13 @@ webpackJsonp([46], {
                             source: e
                         }), window.location.assign("/hi" + location.search)
                     }, t.dismissOnboardingPrompt = function() {
-                        Object(b.e)(), v.set(I, !0, D), t.setState({
+                        Object(b.f)(), v.set(I, !0, D), t.setState({
                             isOnboardingDismissedCookieSet: !0
                         })
                     }, t.followedGamesForUserHasLoaded = function() {
                         return t.props.data && !t.props.data.loading && !t.props.data.error && t.props.data.currentUser && t.props.data.currentUser.followedGames
+                    }, t.shouldSeeOnboarding = function() {
+                        return !t.state.isOnboardingDismissedCookieSet && t.followedGamesForUserHasLoaded() && t.state.inOnboardingExperiment && t.props.data.currentUser.followedGames.nodes.length < R && Object(k.r)(new Date(t.props.data.currentUser.createdAt))
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -3377,16 +3376,18 @@ webpackJsonp([46], {
                         return i.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return [4, a.n.experiments.getAssignment("TWILIGHT_WEB_ONBOARDING")];
+                                    return [4, a.n.experiments.getAssignment(k.i)];
                                 case 1:
-                                    return (e = t.sent()) && R.has(e) && this.setState({
-                                        experimentAssignment: e
+                                    return e = t.sent(), this.setState({
+                                        inOnboardingExperiment: Object(k.q)(e)
                                     }), [2]
                             }
                         })
                     })
+                }, t.prototype.componentDidUpdate = function() {
+                    this.shouldSeeOnboarding() && this.handleAutoOnboardingRedirect()
                 }, t.prototype.render = function() {
-                    return this.state.isOnboardingDismissedCookieSet || !this.followedGamesForUserHasLoaded() || !this.state.experimentAssignment || this.props.data.currentUser.followedGames.nodes.length >= (R.get(this.state.experimentAssignment) || 0) || !Object(k.r)(new Date(this.props.data.currentUser.createdAt)) ? null : (this.handleAutoOnboardingRedirect(), r.createElement(E._19, {
+                    return this.shouldSeeOnboarding() ? r.createElement(E._19, {
                         "data-test-selector": "onboarding-prompt",
                         background: E.m.Base,
                         display: E.H.Flex,
@@ -3439,7 +3440,7 @@ webpackJsonp([46], {
                         padding: {
                             x: 1
                         }
-                    }, Object(a.d)("Start", "OnboardingPrompt"))))))
+                    }, Object(a.d)("Start", "OnboardingPrompt"))))) : null
                 }, t = i.__decorate([Object(f.d)("OnboardingPrompt", {
                     autoReportInteractive: !0
                 }), Object(h.a)(F, {
@@ -3467,7 +3468,7 @@ webpackJsonp([46], {
             G = n("ojlS"),
             B = n("C/8M"),
             q = n("EImC"),
-            H = function(e) {
+            z = function(e) {
                 for (var t = e.cardCount, n = [], i = 0; i < t; i++) 1 === i ? n.push(r.createElement(q.b, {
                     key: i
                 })) : n.push(r.createElement(q.a, {
@@ -3475,7 +3476,7 @@ webpackJsonp([46], {
                 }));
                 return r.createElement(E.V, null, n)
             },
-            z = n("/0cZ"),
+            H = n("/0cZ"),
             W = Object(B.d)(function() {
                 return {
                     feed_type: "rec"
@@ -3496,7 +3497,7 @@ webpackJsonp([46], {
                 }, t.prototype.componentDidUpdate = function() {
                     this.postRender()
                 }, t.prototype.render = function() {
-                    return this.props.data.loading ? r.createElement(H, {
+                    return this.props.data.loading ? r.createElement(z, {
                         cardCount: 5
                     }) : this.props.data.error ? r.createElement(y.a, {
                         message: Object(a.d)("Error loading data.", "PulseComponent")
@@ -3515,7 +3516,7 @@ webpackJsonp([46], {
                     }))
                 }, t.prototype.postRender = function() {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
-                }, t = i.__decorate([Object(h.a)(z, {
+                }, t = i.__decorate([Object(h.a)(H, {
                     options: {
                         fetchPolicy: "network-only",
                         variables: Q
@@ -3525,7 +3526,7 @@ webpackJsonp([46], {
                             loadMore: function() {
                                 var t = e.data.currentUser.pulseFeed.items.edges;
                                 return e.data.fetchMore({
-                                    query: z,
+                                    query: H,
                                     variables: {
                                         limit: 5,
                                         cursor: t[t.length - 1].cursor
@@ -3589,7 +3590,7 @@ webpackJsonp([46], {
                                     },
                                     update: function(e, t) {
                                         var n = e.readQuery({
-                                            query: z,
+                                            query: H,
                                             variables: Q
                                         });
                                         n && (n.currentUser.pulseFeed.items.edges = [{
@@ -3608,7 +3609,7 @@ webpackJsonp([46], {
                                             cursor: "",
                                             __typename: "FeedItemEdge"
                                         }].concat(n.currentUser.pulseFeed.items.edges), e.writeQuery({
-                                            query: z,
+                                            query: H,
                                             data: n,
                                             variables: Q
                                         }))
@@ -5258,11 +5259,11 @@ webpackJsonp([46], {
             return o
         }), n.d(t, "g", function() {
             return s
-        }), n.d(t, "e", function() {
-            return d
         }), n.d(t, "f", function() {
-            return l
+            return d
         }), n.d(t, "d", function() {
+            return l
+        }), n.d(t, "e", function() {
             return c
         }), n.d(t, "c", function() {
             return m
@@ -5274,7 +5275,7 @@ webpackJsonp([46], {
         }(i || (i = {}));
         var o;
         ! function(e) {
-            e.Click = "click", e.Impression = "impression", e.Start = "start", e.Dismissed = "dismissed", e.Completed = "completed", e.Skipped = "skipped"
+            e.Click = "click", e.Impression = "impression", e.Start = "start", e.Dismissed = "dismissed", e.Completed = "completed"
         }(o || (o = {}));
         var s = function(e) {
                 var t = {
@@ -5290,12 +5291,12 @@ webpackJsonp([46], {
                 };
                 r.m.track(a.SpadeEventType.OnboardingEvent, e)
             },
-            l = function(e) {
-                var t = {
+            l = function() {
+                var e = {
                     source: i.HomepageCTA,
-                    action: e
+                    action: o.Completed
                 };
-                r.m.track(a.SpadeEventType.OnboardingEvent, t)
+                r.m.track(a.SpadeEventType.OnboardingEvent, e)
             },
             c = function(e, t) {
                 var n = {
@@ -9895,4 +9896,4 @@ webpackJsonp([46], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.front-139deabdd190b33f221441bd0256512a.js.map
+//# sourceMappingURL=pages.front-3f02d64ede679672950f3df652e53cd4.js.map

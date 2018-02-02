@@ -1,151 +1,137 @@
-webpackJsonp([55], {
+webpackJsonp([53], {
     "1pvm": function(e, t) {},
-    "8RY4": function(e, t, n) {
-        var i = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "Inventory_TitleBar"
-                },
-                variableDefinitions: [],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "currentUser"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "amazonMarketplaces"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "FragmentSpread",
-                                        name: {
-                                            kind: "Name",
-                                            value: "amazonMarketplace"
-                                        },
-                                        directives: []
-                                    }]
-                                }
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "bitsBalance"
-                                },
-                                arguments: [],
-                                directives: []
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 166
-            }
-        };
-        i.loc.source = {
-            body: '#import "twilight/features/fuel/models/amazon-marketplace.gql"\nquery Inventory_TitleBar {\ncurrentUser {\nid\namazonMarketplaces {\n...amazonMarketplace\n}\nbitsBalance\n}\n}',
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        var r = {};
-        i.definitions = i.definitions.concat(function(e) {
-            return e.filter(function(e) {
-                if ("FragmentDefinition" !== e.kind) return !0;
-                var t = e.name.value;
-                return !r[t] && (r[t] = !0, !0)
-            })
-        }(n("UP6l").definitions)), e.exports = i
-    },
     DZCb: function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
         var i = n("RH2O"),
-            r = n("2KeS"),
-            a = n("+xm8"),
+            a = n("2KeS"),
+            r = n("+xm8"),
             o = n("f2i/"),
             s = n("Aj/L"),
             c = n("TToO"),
-            d = n("U7vG"),
-            l = n("6sO2"),
-            p = n("yWCw"),
-            m = n("j7/Y"),
-            u = n("w9tK"),
+            l = n("U7vG"),
+            d = n("6sO2"),
+            m = n("yWCw"),
+            u = n("7vx8"),
+            p = n("j7/Y"),
+            v = n("w9tK"),
             g = n("vH/s"),
-            v = n("CSlQ"),
-            f = n("7vx8"),
-            k = n("Odds"),
-            h = n("bdhb"),
-            y = (n("Jc4Y"), "drops-list_drop-award"),
+            k = n("CSlQ"),
+            f = n("Ouuk"),
+            h = n("jF7o"),
+            y = n("Odds"),
             b = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
+                    return t.renderCrate = function(e) {
+                        return l.createElement(y.V, {
+                            key: e.id
+                        }, l.createElement(y.T, {
+                            onClick: t.handleOpenClick,
+                            "data-open-url": e.openURL
+                        }, l.createElement(y.j, {
+                            ratio: y.k.Aspect1x1
+                        }, l.createElement(y._19, {
+                            fullHeight: !0,
+                            fullWidth: !0,
+                            display: y.H.Flex,
+                            padding: 2,
+                            border: !0
+                        }, l.createElement(y.Q, {
+                            fullHeight: !0,
+                            fullWidth: !0
+                        }, l.createElement("img", {
+                            alt: Object(d.d)("Crate", "CratesList"),
+                            src: e.iconURL
+                        })))), l.createElement(y._23, null, "Open Now")))
+                    }, t.handleOpenClick = function(e) {
+                        ! function(e, t) {
+                            var n = window.open(e, "Twitch", "width=1024,height=600,scrollbars=yes");
+                            n && !Object(f.a)() && (n.focus(), Object(h.a)(n, function(e) {
+                                t(e)
+                            }))
+                        }(e.currentTarget.dataset.openUrl || "", t.reload)
+                    }, t.reload = function() {
+                        t.props.refetchData && t.props.refetchData()
+                    }, t
+                }
+                return c.__extends(t, e), t.prototype.render = function() {
+                    if (this.props.loading) return l.createElement(y.Z, {
+                        fillContent: !0
+                    });
+                    if (!this.props.crates) return null;
+                    var e = this.props.crates,
+                        t = e.map(this.renderCrate);
+                    return l.createElement(y.V, {
+                        "data-test-selector": "crates-list__wrapper",
+                        margin: {
+                            y: 1
+                        }
+                    }, l.createElement(y.V, {
+                        display: y.H.Flex,
+                        margin: {
+                            bottom: 1
+                        }
+                    }, l.createElement(y.V, {
+                        margin: {
+                            right: 1
+                        }
+                    }, l.createElement(y._23, {
+                        type: y._28.H3
+                    }, Object(d.d)("Crates", "CratesList"))), l.createElement(y._23, {
+                        type: y._28.H3,
+                        color: y.F.Alt2
+                    }, Object(d.e)(e.length))), l.createElement(y._34, {
+                        childWidth: y._35.Small,
+                        placeholderItems: 8
+                    }, t))
+                }, t
+            }(l.Component),
+            _ = Object(a.d)(Object(k.d)("CratesList", {
+                autoReportInteractive: !0
+            }))(b),
+            E = n("bdhb"),
+            O = (n("Jc4Y"), "drops-list_drop-award"),
+            S = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
                     return t.getDropsDescription = function(e) {
-                        return e.length < 1 ? Object(l.d)("Drops are a fun new way to get in-game loot just for watching your favorite channels on Twitch! <x:link>Learn more</x:link>", {
+                        return e.length < 1 ? Object(d.d)("Drops are a fun new way to get in-game loot just for watching your favorite channels on Twitch! <x:link>Learn more</x:link>", {
                             "x:link": function(e) {
-                                return d.createElement("a", {
+                                return l.createElement("a", {
                                     href: "https://help.twitch.tv/customer/en/portal/topics/301257-getting-started/articles",
                                     target: "_blank"
                                 }, e)
                             }
-                        }, "DropsList") : Object(l.d)("Drops you have received are accessed within their corresponding games. Log into the game to experience your new content.", "DropsList")
+                        }, "DropsList") : Object(d.d)("Drops you have received are accessed within their corresponding games. Log into the game to experience your new content.", "DropsList")
                     }, t.renderDrop = function(e, t) {
-                        return d.createElement(k.V, {
+                        return l.createElement(y.V, {
                             key: t,
                             className: "drops-list__drop-award",
-                            "data-test-selector": y,
+                            "data-test-selector": O,
                             margin: {
                                 right: 2,
                                 bottom: 1
                             },
-                            display: k.H.InlineFlex,
-                            flexDirection: k.J.Column
-                        }, d.createElement(k._19, {
+                            display: y.H.InlineFlex,
+                            flexDirection: y.J.Column
+                        }, l.createElement(y._19, {
                             fullHeight: !0,
                             fullWidth: !0,
-                            display: k.H.Flex,
-                            justifyContent: k.U.Center,
+                            display: y.H.Flex,
+                            justifyContent: y.U.Center,
                             padding: 2,
                             border: !0
-                        }, d.createElement("img", {
-                            alt: Object(l.d)("Drop image", "DropsListPresentation"),
+                        }, l.createElement("img", {
+                            alt: Object(d.d)("Drop image", "DropsListPresentation"),
                             src: e.node.imageURL
-                        })), d.createElement(k.V, {
+                        })), l.createElement(y.V, {
                             padding: {
                                 y: .5
                             }
-                        }, d.createElement(k._23, {
+                        }, l.createElement(y._23, {
                             bold: !0,
                             ellipsis: !0
                         }, e.node.game.name)))
@@ -157,7 +143,7 @@ webpackJsonp([55], {
                     this.postRender()
                 }, t.prototype.render = function() {
                     var e = this;
-                    if (this.props.data.loading) return d.createElement(k.Z, {
+                    if (this.props.data.loading) return l.createElement(y.Z, {
                         fillContent: !0
                     });
                     if (!this.props.data || this.props.data.error || !this.props.data.currentUser || !this.props.data.currentUser.inventory.drops.nodes) return null;
@@ -165,154 +151,173 @@ webpackJsonp([55], {
                         n = t.map(function(t, n) {
                             return e.renderDrop(t, n)
                         });
-                    return d.createElement(k.V, {
+                    return l.createElement(y.V, {
                         "data-test-selector": "drops-list_wrapper",
                         margin: {
                             y: 1
                         }
-                    }, d.createElement(k.V, {
-                        display: k.H.Flex
-                    }, d.createElement(k.V, {
+                    }, l.createElement(y.V, {
+                        display: y.H.Flex
+                    }, l.createElement(y.V, {
                         margin: {
                             right: 1
                         }
-                    }, d.createElement(k._23, {
-                        type: k._28.H3
-                    }, Object(l.d)("Drops", "DropsList"))), d.createElement(k._23, {
-                        type: k._28.H3,
-                        color: k.F.Alt2
-                    }, Object(l.e)(t.length))), d.createElement(k.V, {
+                    }, l.createElement(y._23, {
+                        type: y._28.H3
+                    }, Object(d.d)("Drops", "DropsList"))), l.createElement(y._23, {
+                        type: y._28.H3,
+                        color: y.F.Alt2
+                    }, Object(d.e)(t.length))), l.createElement(y.V, {
                         margin: {
                             bottom: 1
                         }
-                    }, d.createElement(k._23, null, this.getDropsDescription(t))), n)
+                    }, l.createElement(y._23, null, this.getDropsDescription(t))), n)
                 }, t.prototype.postRender = function() {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
-                }, t = c.__decorate([Object(f.a)(h)], t)
-            }(d.Component),
-            _ = Object(r.d)(Object(v.d)("DropsList"))(b),
-            O = n("+Znq"),
-            E = n("iMOk"),
-            S = n("CFVp"),
-            x = n("8RY4"),
-            T = function(e) {
+                }, t = c.__decorate([Object(u.a)(E)], t)
+            }(l.Component),
+            N = Object(a.d)(Object(k.d)("DropsList"))(S),
+            F = n("+Znq"),
+            C = n("iMOk"),
+            w = n("CFVp"),
+            x = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
-                    return t.bitsConfig = Object(S.a)(), t
+                    return t.bitsConfig = Object(w.a)(), t
                 }
-                return c.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.postRender()
-                }, t.prototype.componentDidUpdate = function() {
-                    this.postRender()
-                }, t.prototype.render = function() {
-                    var e = Object(l.d)("Inventory", "InventoryTitleBar");
-                    if (this.props.data.loading || this.props.data.error) return d.createElement(k._19, {
+                return c.__extends(t, e), t.prototype.render = function() {
+                    var e = Object(d.d)("Inventory", "InventoryTitleBar");
+                    if (this.props.loading) return l.createElement(y._19, {
                         className: "title-bar",
-                        display: k.H.Flex,
+                        display: y.H.Flex,
                         borderBottom: !0,
                         padding: {
                             bottom: 1
                         }
-                    }, d.createElement(k.V, {
+                    }, l.createElement(y.V, {
                         flexGrow: 1
-                    }, d.createElement(k._23, {
-                        type: k._28.H2
-                    }, e)), d.createElement(k.V, {
-                        display: k.H.Flex,
+                    }, l.createElement(y._23, {
+                        type: y._28.H2
+                    }, e)), l.createElement(y.V, {
+                        display: y.H.Flex,
                         margin: {
                             right: 3
                         },
-                        alignItems: k.c.Center
-                    }, d.createElement(k._3, {
+                        alignItems: y.c.Center
+                    }, l.createElement(y._3, {
                         width: 135,
                         height: 30
-                    })), d.createElement(k.V, {
-                        alignSelf: k.d.Baseline
-                    }, d.createElement(k._3, {
+                    })), l.createElement(y.V, {
+                        alignSelf: y.d.Baseline
+                    }, l.createElement(y._3, {
                         width: 180,
                         height: 30
                     })));
-                    var t = this.props.data.currentUser.amazonMarketplaces.map(function(e) {
-                            return d.createElement(k.T, {
+                    var t = this.props.amazonMarketplaces.map(function(e) {
+                            return l.createElement(y.T, {
                                 key: e.id,
                                 linkTo: "https://" + e.orderHistoryRedirectURL,
                                 targetBlank: !0
                             }, e.displayText)
                         }),
-                        n = Object(l.d)("You have {bitsComponent}", {
-                            bitsComponent: d.createElement(E.a, {
-                                count: this.props.data.currentUser.bitsBalance,
+                        n = Object(d.d)("You have {bitsComponent}", {
+                            bitsComponent: l.createElement(C.a, {
+                                count: this.props.bitsBalance,
                                 bitsConfig: this.bitsConfig,
                                 withImage: !0,
                                 withText: !0
                             })
                         }, "InventoryTitleBar");
-                    return d.createElement(k._19, {
+                    return l.createElement(y._19, {
                         className: "title-bar",
-                        display: k.H.Flex,
+                        display: y.H.Flex,
                         borderBottom: !0,
                         padding: {
                             bottom: 1
                         }
-                    }, d.createElement(k.V, {
+                    }, l.createElement(y.V, {
                         flexGrow: 1
-                    }, d.createElement(k._23, {
-                        type: k._28.H2
-                    }, e)), d.createElement(k.V, {
-                        display: k.H.Flex,
+                    }, l.createElement(y._23, {
+                        type: y._28.H2
+                    }, e)), l.createElement(y.V, {
+                        display: y.H.Flex,
                         margin: {
                             right: 3
                         },
-                        alignItems: k.c.Center
-                    }, d.createElement(k._23, null, n)), d.createElement(k.V, {
-                        alignSelf: k.d.Baseline
-                    }, d.createElement(O.a, null, d.createElement(k.u, {
-                        type: k.z.Hollow
-                    }, Object(l.d)("View your Twitch Order History", "InventoryTitleBar")), d.createElement(k.p, null, d.createElement(k.V, {
+                        alignItems: y.c.Center
+                    }, l.createElement(y._23, null, n)), l.createElement(y.V, {
+                        alignSelf: y.d.Baseline
+                    }, l.createElement(F.a, null, l.createElement(y.u, {
+                        type: y.z.Hollow
+                    }, Object(d.d)("View your Twitch Order History", "InventoryTitleBar")), l.createElement(y.p, null, l.createElement(y.V, {
                         padding: 1
                     }, t)))))
-                }, t.prototype.postRender = function() {
-                    this.props.data.loading || this.props.latencyTracking.reportInteractive()
                 }, t
-            }(d.Component),
-            w = Object(r.d)(Object(v.d)("TitleBar"), Object(f.a)(x))(T),
-            D = function(e) {
+            }(l.Component),
+            j = Object(a.d)(Object(k.d)("TitleBar", {
+                autoReportInteractive: !0
+            }))(x),
+            T = n("xpYL"),
+            L = function(e) {
                 function t() {
-                    return null !== e && e.apply(this, arguments) || this
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.refetchData = function() {
+                        t.props.data && t.props.data.refetch && t.props.data.refetch()
+                    }, t
                 }
                 return c.__extends(t, e), t.prototype.componentDidMount = function() {
-                    l.n.setPageTitle(Object(l.d)("Inventory", "InventoryPage"))
+                    d.n.setPageTitle(Object(d.d)("Inventory", "InventoryPage"))
                 }, t.prototype.render = function() {
-                    return this.props.isLoggedIn ? d.createElement(k.V, {
+                    if (!this.props.isLoggedIn) return this.props.onAnonymousVisit(), l.createElement(m.a, {
+                        message: Object(d.d)("You must be logged in to view this page", "InventoryPage")
+                    });
+                    var e = !0,
+                        t = [],
+                        n = 0,
+                        i = [];
+                    return this.props.data.loading || this.props.data.error || (e = !1, t = this.props.data.currentUser.amazonMarketplaces, n = this.props.data.currentUser.bitsBalance, i = this.props.data.currentUser.crates), l.createElement(y.V, {
                         className: "inventory",
                         padding: 3
-                    }, d.createElement(w, null), d.createElement(_, null)) : (this.props.onAnonymousVisit(), d.createElement(p.a, {
-                        message: Object(l.d)("You must be logged in to view this page", "InventoryPage")
-                    }))
-                }, t
-            }(d.Component),
-            j = Object(r.d)(Object(v.d)("InventoryPage", {
+                    }, l.createElement(j, {
+                        bitsBalance: n,
+                        loading: e,
+                        amazonMarketplaces: t
+                    }), l.createElement(_, {
+                        refetchData: this.refetchData,
+                        crates: i,
+                        loading: e
+                    }), l.createElement(N, null))
+                }, t = c.__decorate([Object(u.a)(T)], t)
+            }(l.Component),
+            D = Object(a.d)(Object(k.d)("InventoryPage", {
                 autoReportInteractive: !0,
-                destination: u.a.Inventory
-            }), Object(m.a)({
+                destination: v.a.Inventory
+            }), Object(p.a)({
                 location: g.PageviewLocation.Inventory
-            }))(D),
-            N = Object(i.b)(function(e) {
+            }))(L),
+            U = Object(i.b)(function(e) {
                 return {
                     isLoggedIn: Object(s.d)(e)
                 }
             }, function(e) {
-                return Object(r.b)({
+                return Object(a.b)({
                     onAnonymousVisit: function() {
-                        return Object(o.f)(a.a.InventoryPage)
+                        return Object(o.f)(r.a.InventoryPage)
                     }
                 }, e)
-            })(j);
+            })(D);
         n.d(t, "InventoryPage", function() {
-            return N
+            return U
         })
     },
     Jc4Y: function(e, t) {},
+    Ouuk: function(e, t, n) {
+        "use strict";
+        t.a = function(e) {
+            return e || (e = navigator.userAgent), !!i.exec(e)
+        };
+        var i = /\scurse\/\d/
+    },
     UP6l: function(e, t) {
         var n = {
             kind: "Document",
@@ -506,38 +511,38 @@ webpackJsonp([55], {
         "use strict";
 
         function i(e) {
-            var t, n = Object(a.d)("{bitsAmount} Bits", {
+            var t, n = Object(r.d)("{bitsAmount} Bits", {
                 bitsAmount: e.count.toString()
             }, "Bits--BitsCount");
             if (e.withImage) {
                 var i = e.bitsConfig.indexedActions[s.f];
-                i || (i = Object(d.b)());
-                var p = i.orderedTiers.find(function(t) {
+                i || (i = Object(l.b)());
+                var m = i.orderedTiers.find(function(t) {
                     return t.bits <= e.count
                 });
-                if (p) {
-                    var m = Object(c.b)(p);
-                    return void 0 !== e.themeOverride && (e.themeOverride === o.a.Light ? m.dark = m.light : m.light = m.dark), t = r.createElement(l.a, {
+                if (m) {
+                    var u = Object(c.b)(m);
+                    return void 0 !== e.themeOverride && (e.themeOverride === o.a.Light ? u.dark = u.light : u.light = u.dark), t = a.createElement(d.a, {
                         className: "bits-count--img",
-                        sources: m
-                    }), r.createElement("strong", {
+                        sources: u
+                    }), a.createElement("strong", {
                         className: "bits-count",
                         "data-a-target": "bits-count"
-                    }, r.createElement("span", null, t, " ", e.withText ? n : ""))
+                    }, a.createElement("span", null, t, " ", e.withText ? n : ""))
                 }
             }
-            return r.createElement("strong", {
+            return a.createElement("strong", {
                 className: "bits-count",
                 "data-a-target": "bits-count"
-            }, r.createElement("span", null, n))
+            }, a.createElement("span", null, n))
         }
-        var r = n("U7vG"),
-            a = n("6sO2"),
+        var a = n("U7vG"),
+            r = n("6sO2"),
             o = n("NXs7"),
             s = n("3iBR"),
             c = n("iydZ"),
-            d = n("CFVp"),
-            l = n("qe65");
+            l = n("CFVp"),
+            d = n("qe65");
         n("1pvm");
         n.d(t, "a", function() {
             return i
@@ -555,23 +560,23 @@ webpackJsonp([55], {
                             if (!(i.tracked || e.skip && e.skip(i.props))) {
                                 i.tracked = !0;
                                 var t = {};
-                                "function" == typeof e.properties ? t = e.properties(i.props) : e.properties && (t = r.__assign({}, e.properties));
-                                var n = r.__assign({}, i.props);
+                                "function" == typeof e.properties ? t = e.properties(i.props) : e.properties && (t = a.__assign({}, e.properties));
+                                var n = a.__assign({}, i.props);
                                 n.location && n.location.state && (t.medium = n.location.state.medium, t.content = n.location.state.content, t.content_index = n.location.state.content_index);
-                                var a = i.referenceTracking,
-                                    o = a.content,
-                                    s = a.medium,
-                                    d = a.content_index;
-                                c.n.tracking.trackPageview(r.__assign({
+                                var r = i.referenceTracking,
+                                    o = r.content,
+                                    s = r.medium,
+                                    l = r.content_index;
+                                c.n.tracking.trackPageview(a.__assign({
                                     content: o,
                                     medium: s,
-                                    content_index: d,
+                                    content_index: l,
                                     location: e.location
                                 }, t))
                             }
                         }, c.i.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : c.i.warn("No latency tracker exists! This means no data will be sent to Spade.", e), i
                     }
-                    return r.__extends(i, n), i.prototype.componentDidMount = function() {
+                    return a.__extends(i, n), i.prototype.componentDidMount = function() {
                         var e = this;
                         this.referenceTracking = this.stripTTParams(this.props.history.location), this.trackPageview(), this.props.history.listen(function(t, n) {
                             "REPLACE" !== n && (e.tracked = !1, e.referenceTracking = {})
@@ -579,9 +584,9 @@ webpackJsonp([55], {
                     }, i.prototype.componentDidUpdate = function() {
                         this.trackPageview()
                     }, i.prototype.render = function() {
-                        return o.createElement(t, r.__assign({}, this.props))
+                        return o.createElement(t, a.__assign({}, this.props))
                     }, i.prototype.stripTTParams = function(e) {
-                        var t = "" !== e.search ? a.parse(e.search) : {},
+                        var t = "" !== e.search ? r.parse(e.search) : {},
                             n = {
                                 content: t.tt_content,
                                 content_index: t.tt_content_index,
@@ -589,8 +594,8 @@ webpackJsonp([55], {
                             };
                         if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, n.medium || n.content) {
                             var i = "",
-                                r = a.stringify(t);
-                            r.length > 0 && (i = "?" + r), this.props.history.replace({
+                                a = r.stringify(t);
+                            a.length > 0 && (i = "?" + a), this.props.history.replace({
                                 pathname: e.pathname,
                                 hash: e.hash,
                                 search: i
@@ -602,14 +607,322 @@ webpackJsonp([55], {
                 return Object(s.f)(n)
             }
         }
-        var r = n("TToO"),
-            a = n("OAwv"),
+        var a = n("TToO"),
+            r = n("OAwv"),
             o = n("U7vG"),
             s = n("F8kA"),
             c = n("6sO2");
         n.d(t, "a", function() {
             return i
         })
+    },
+    jF7o: function(e, t, n) {
+        "use strict";
+        t.a = function(e, t) {
+            if (e) var n = setInterval(function() {
+                var i = !1,
+                    a = !1;
+                try {
+                    i = e.closed, a = !!e.success
+                } catch (e) {}
+                if (i || a) {
+                    t(a);
+                    try {
+                        e.close()
+                    } catch (e) {}
+                    clearInterval(n)
+                }
+            }, 500);
+            else i.i.warn("[onPopupClose] Attempted to observe a window that failed to open.")
+        };
+        var i = n("6sO2")
+    },
+    l83l: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "FragmentDefinition",
+                name: {
+                    kind: "Name",
+                    value: "crate"
+                },
+                typeCondition: {
+                    kind: "NamedType",
+                    name: {
+                        kind: "Name",
+                        value: "Crate"
+                    }
+                },
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "id"
+                        },
+                        arguments: [],
+                        directives: []
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "title"
+                        },
+                        arguments: [],
+                        directives: []
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "iconURL"
+                        },
+                        arguments: [],
+                        directives: []
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "openURL"
+                        },
+                        arguments: [],
+                        directives: []
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "iconType"
+                        },
+                        arguments: [],
+                        directives: []
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 61
+            }
+        };
+        n.loc.source = {
+            body: "fragment crate on Crate {\nid\ntitle\niconURL\nopenURL\niconType\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
+    xpYL: function(e, t, n) {
+        function i(e) {
+            return e.filter(function(e) {
+                if ("FragmentDefinition" !== e.kind) return !0;
+                var t = e.name.value;
+                return !r[t] && (r[t] = !0, !0)
+            })
+        }
+        var a = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "Inventory"
+                },
+                variableDefinitions: [],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "currentUser"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "amazonMarketplaces"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "FragmentSpread",
+                                        name: {
+                                            kind: "Name",
+                                            value: "amazonMarketplace"
+                                        },
+                                        directives: []
+                                    }]
+                                }
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "bitsBalance"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "crates"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "FragmentSpread",
+                                        name: {
+                                            kind: "Name",
+                                            value: "crate"
+                                        },
+                                        directives: []
+                                    }]
+                                }
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "availableBadges"
+                                },
+                                arguments: [{
+                                    kind: "Argument",
+                                    name: {
+                                        kind: "Name",
+                                        value: "domains"
+                                    },
+                                    value: {
+                                        kind: "EnumValue",
+                                        value: "CRATE"
+                                    }
+                                }],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "id"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }, {
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "imageURL"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }, {
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "title"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }]
+                                }
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "emoteSets"
+                                },
+                                arguments: [{
+                                    kind: "Argument",
+                                    name: {
+                                        kind: "Name",
+                                        value: "domains"
+                                    },
+                                    value: {
+                                        kind: "EnumValue",
+                                        value: "CRATE"
+                                    }
+                                }],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "id"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }, {
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "emotes"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "id"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }, {
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "token"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }]
+                                        }
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 328
+            }
+        };
+        a.loc.source = {
+            body: '#import "twilight/features/fuel/models/amazon-marketplace.gql"\n#import "twilight/features/fuel/models/crate.gql"\nquery Inventory {\ncurrentUser{\nid\namazonMarketplaces {\n...amazonMarketplace\n}\nbitsBalance\ncrates {\n...crate\n}\navailableBadges(domains:CRATE){\nid\nimageURL\ntitle\n}\nemoteSets(domains:CRATE){\nid\nemotes{\nid\ntoken\n}\n}\n}\n}',
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        var r = {};
+        a.definitions = a.definitions.concat(i(n("UP6l").definitions)), a.definitions = a.definitions.concat(i(n("l83l").definitions)), e.exports = a
     }
 });
-//# sourceMappingURL=pages.inventory-564a346adca8ca14721fdfb776532ed2.js.map
+//# sourceMappingURL=pages.inventory-8c389270a3d1c6b605a51df20ce5939a.js.map

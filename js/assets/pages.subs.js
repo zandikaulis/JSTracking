@@ -1883,7 +1883,7 @@ webpackJsonp([42], {
                     }, t.onPresenceClick = function(e, n) {
                         n.stopPropagation();
                         var i = t.props.participants.currentUser && t.props.participants.currentUser.friends.edges.find(function(e) {
-                            return e.node.id === t.interlocutor.id
+                            return !(!e.node || e.node.id !== t.interlocutor.id)
                         });
                         t.props.participants.user && i && i.activity ? Object(D.b)({
                             context: e,
@@ -1934,7 +1934,7 @@ webpackJsonp([42], {
                         l = null,
                         d = null,
                         c = this.props.participants.currentUser && this.props.participants.currentUser.friends.edges.find(function(t) {
-                            return t.node.id === e.interlocutor.id
+                            return !(!t.node || t.node.id !== e.interlocutor.id)
                         });
                     if (c && (o = a.createElement(L.V, {
                             margin: {
@@ -13446,10 +13446,10 @@ webpackJsonp([42], {
             p = n("hfrE"),
             m = n("Odds"),
             h = (n("w+Qa"), l.a.wrap(function() {
-                return n.e(73).then(n.bind(null, "kd/b"))
+                return n.e(74).then(n.bind(null, "kd/b"))
             }, "SubsLandingPage")),
             f = l.a.wrap(function() {
-                return n.e(74).then(n.bind(null, "uy5s"))
+                return n.e(75).then(n.bind(null, "uy5s"))
             }, "SubsBroadcasterPage"),
             g = function(e) {
                 function t() {
@@ -18380,7 +18380,7 @@ webpackJsonp([42], {
                 return n.e(46).then(n.bind(null, "IOEW"))
             }, "FrontPage"),
             Se = ee.a.wrap(function() {
-                return n.e(55).then(n.bind(null, "DZCb"))
+                return n.e(53).then(n.bind(null, "DZCb"))
             }, "InventoryPage"),
             _e = ee.a.wrap(function() {
                 return n.e(61).then(n.bind(null, "o8EG"))
@@ -18395,7 +18395,7 @@ webpackJsonp([42], {
                 return n.e(35).then(n.bind(null, "uiPj"))
             }, "VideoWatchPage"),
             Ce = ee.a.wrap(function() {
-                return n.e(54).then(n.bind(null, "6Vx1"))
+                return n.e(55).then(n.bind(null, "6Vx1"))
             }, "DevOnlyTestingAmazonOffersPage"),
             we = function() {
                 return o.createElement(X.c, {
@@ -22127,4 +22127,4 @@ webpackJsonp([42], {
         }
     }
 });
-//# sourceMappingURL=pages.subs-5e7a3c9d11fd9cd013e90ee808755b45.js.map
+//# sourceMappingURL=pages.subs-7aafc98b411a2594db07003b8d5d60b0.js.map

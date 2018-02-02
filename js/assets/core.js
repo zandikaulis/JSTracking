@@ -2173,7 +2173,7 @@ webpackJsonp([63], {
                     }, t.onPresenceClick = function(e, n) {
                         n.stopPropagation();
                         var i = t.props.participants.currentUser && t.props.participants.currentUser.friends.edges.find(function(e) {
-                            return e.node.id === t.interlocutor.id
+                            return !(!e.node || e.node.id !== t.interlocutor.id)
                         });
                         t.props.participants.user && i && i.activity ? Object(O.b)({
                             context: e,
@@ -2224,7 +2224,7 @@ webpackJsonp([63], {
                         l = null,
                         c = null,
                         d = this.props.participants.currentUser && this.props.participants.currentUser.friends.edges.find(function(t) {
-                            return t.node.id === e.interlocutor.id
+                            return !(!t.node || t.node.id !== e.interlocutor.id)
                         });
                     if (d && (s = a.createElement(U.V, {
                             margin: {
@@ -10782,7 +10782,7 @@ webpackJsonp([63], {
         });
         var i;
         ! function(e) {
-            e.AutohostSettings = "autohost_settings", e.BitsLandingPage = "bits_landing", e.Browse = "browse", e.BrowseCommunities = "browse_communities", e.BrowseCreative = "browse_creative", e.BrowseForYou = "browse_for_you", e.Channel = "channel", e.ChannelClips = "channel_clips", e.ChannelClipsManager = "my_clips_channel", e.ChannelEvents = "channel_events", e.ChannelVideos = "channel_vods", e.ChannelCollections = "channel_collections", e.Chat = "chat", e.ClipsGame = "clips_game", e.Dashboard = "dashboard", e.DashboardAchievements = "dashboard/achievements", e.DashboardChannelAnalytics = "dashboard/channel-analytics", e.DashboardExtensions = "dashboard/extensions", e.DashboardSettingsIndex = "dashboard/settings", e.DashboardStreamSummary = "dashboard/stream-summary", e.Directory = "directory", e.DirectoryPopular = "directory.popular", e.EmailVerification = "email_verification", e.EventDetails = "event_details", e.Followers = "followers", e.FrontPage = "home", e.GameDetail = "game_detail", e.Inventory = "inventory", e.MyClipsManager = "my_clips", e.None = "", e.OnboardingCommunitySelection = "onboarding/community-selection", e.StoreMerch = "store-merch", e.VideoWatchPage = "vod", e.SubsLandingPage = "subs-landing", e.SettingsPage = "settings", e.SubsBroadcasterPage = "subs-broadcaster", e.VideoManagerCollectionManager = "video_manager_collections"
+            e.AutohostSettings = "autohost_settings", e.BitsLandingPage = "bits_landing", e.Browse = "browse", e.BrowseCommunities = "browse_communities", e.BrowseCreative = "browse_creative", e.BrowseForYou = "browse_for_you", e.Channel = "channel", e.ChannelClips = "channel_clips", e.ChannelClipsManager = "my_clips_channel", e.ChannelEvents = "channel_events", e.ChannelVideos = "channel_vods", e.ChannelCollections = "channel_collections", e.Chat = "chat", e.ClipsGame = "clips_game", e.Dashboard = "dashboard", e.DashboardAchievements = "dashboard/achievements", e.DashboardChannelAnalytics = "dashboard/channel-analytics", e.DashboardExtensions = "dashboard/extensions", e.DashboardSettingsIndex = "dashboard/settings", e.DashboardStreamSummary = "dashboard/stream-summary", e.Directory = "directory", e.DirectoryPopular = "directory.popular", e.EmailVerification = "email_verification", e.EventDetails = "event_details", e.Followers = "followers", e.FrontPage = "home", e.GameDetail = "game_detail", e.Inventory = "inventory", e.MyClipsManager = "my_clips", e.None = "", e.OnboardingCommunitySelection = "onboarding/community-selection", e.StoreMerch = "store-merch", e.VideoWatchPage = "vod", e.SubsLandingPage = "subs-landing", e.SettingsPage = "settings", e.SubsBroadcasterPage = "subs-broadcaster", e.VideoManagerCollectionManager = "video_manager_collections", e.VideoManagerCollectionEditor = "video_manager_collection_editor"
         }(i || (i = {}));
         var r;
         ! function(e) {
@@ -10879,42 +10879,42 @@ webpackJsonp([63], {
     },
     DBTH: function(e, t, n) {
         "use strict";
-        n.d(t, "h", function() {
+        n.d(t, "g", function() {
             return r
-        }), n.d(t, "g", function() {
+        }), n.d(t, "f", function() {
             return a
-        }), n.d(t, "i", function() {
+        }), n.d(t, "h", function() {
             return o
-        }), n.d(t, "k", function() {
-            return s
         }), n.d(t, "j", function() {
+            return s
+        }), n.d(t, "i", function() {
             return l
-        }), n.d(t, "m", function() {
-            return c
         }), n.d(t, "l", function() {
+            return c
+        }), n.d(t, "k", function() {
             return d
-        }), n.d(t, "a", function() {
+        }), n.d(t, "d", function() {
             return u
-        }), n.d(t, "e", function() {
-            return p
+        }), n.d(t, "b", function() {
+            return h
+        }), n.d(t, "a", function() {
+            return g
         }), n.d(t, "c", function() {
             return f
-        }), n.d(t, "b", function() {
-            return v
-        }), n.d(t, "d", function() {
+        }), n.d(t, "e", function() {
             return b
-        }), n.d(t, "f", function() {
+        }), n.d(t, "q", function() {
+            return y
+        }), n.d(t, "o", function() {
             return k
         }), n.d(t, "p", function() {
             return _
-        }), n.d(t, "q", function() {
-            return S
-        }), n.d(t, "o", function() {
-            return w
         }), n.d(t, "n", function() {
-            return E
+            return S
+        }), n.d(t, "m", function() {
+            return w
         }), n.d(t, "r", function() {
-            return C
+            return E
         });
         var i, r = "TWILIGHT_WEB_ONBOARDING_CATEGORIES",
             a = "TWILIGHT_WEB_ONBOARDING_CATEGORIES_ANON_FRONT_PAGE",
@@ -10922,43 +10922,43 @@ webpackJsonp([63], {
             s = "TWILIGHT_WEB_ONBOARDING_FOLLOWING_FOR_YOU",
             l = "TWILIGHT_WEB_ONBOARDING",
             c = "TWILIGHT_WEB_ONBOARDING_RANDOMIZED_GAMES",
-            d = "TWILIGHT_WEB_ONBOARDING_FOLLOW_CATEGORIES",
-            u = "control";
-        ! function(e) {
-            e.Skip = "skip", e.NoSkip = "no_skip"
-        }(i || (i = {}));
-        var p, m = new Set([i.Skip.toString(), i.NoSkip.toString()]);
+            d = "TWILIGHT_WEB_ONBOARDING_FOLLOW_CATEGORIES";
+        (i || (i = {})).NoSkip = "no_skip";
+        var u;
         ! function(e) {
             e.First = "first", e.Last = "last"
-        }(p || (p = {}));
-        var h, g = new Set([p.First.toString(), p.Last.toString()]);
+        }(u || (u = {}));
+        var p, m = new Set([u.First.toString(), u.Last.toString()]);
+        (p || (p = {})).Yes = "yes";
+        var h;
         (h || (h = {})).Yes = "yes";
-        var f;
-        (f || (f = {})).Yes = "yes";
-        var v;
+        var g;
         ! function(e) {
             e.Games = "games", e.Streams = "streams"
-        }(v || (v = {}));
-        var b, y = new Set([v.Games.toString(), v.Streams.toString()]);
+        }(g || (g = {}));
+        var f, v = new Set([g.Games.toString(), g.Streams.toString()]);
+        (f || (f = {})).ENABLED = "enabled";
+        var b;
         (b || (b = {})).ENABLED = "enabled";
-        var k;
-        (k || (k = {})).ENABLED = "enabled";
-        var _ = function(e) {
-                return !!e && g.has(e)
+        var y = function(e) {
+                return e === i.NoSkip
             },
-            S = function(e, t) {
-                return !!e && m.has(e) && _(t)
+            k = function(e) {
+                return !!e && m.has(e)
             },
-            w = function(e, t, n) {
-                return !!e && m.has(e) && _(t) && n === h.Yes
+            _ = function(e, t) {
+                return y(e) && k(t)
+            },
+            S = function(e, t, n) {
+                return y(e) && k(t) && n === p.Yes
+            },
+            w = function(e) {
+                return !!e && v.has(e)
             },
             E = function(e) {
-                return !!e && y.has(e)
+                return e.getTime() >= C().getTime()
             },
-            C = function(e) {
-                return e.getTime() >= N().getTime()
-            },
-            N = function() {
+            C = function() {
                 return new Date((new Date).getTime() - 12096e5)
             }
     },
@@ -31641,7 +31641,7 @@ webpackJsonp([63], {
                 return n.e(46).then(n.bind(null, "IOEW"))
             }, "FrontPage"),
             _e = ee.a.wrap(function() {
-                return n.e(55).then(n.bind(null, "DZCb"))
+                return n.e(53).then(n.bind(null, "DZCb"))
             }, "InventoryPage"),
             Se = ee.a.wrap(function() {
                 return n.e(61).then(n.bind(null, "o8EG"))
@@ -31656,7 +31656,7 @@ webpackJsonp([63], {
                 return n.e(35).then(n.bind(null, "uiPj"))
             }, "VideoWatchPage"),
             Ne = ee.a.wrap(function() {
-                return n.e(54).then(n.bind(null, "6Vx1"))
+                return n.e(55).then(n.bind(null, "6Vx1"))
             }, "DevOnlyTestingAmazonOffersPage"),
             Te = function() {
                 return s.createElement(X.c, {
@@ -35468,7 +35468,7 @@ webpackJsonp([63], {
                         secure: "https:" === window.location.protocol
                     })
                 }, t.prototype.sendExperimentEvent = function() {
-                    d.n.dynamicSettings.get("impact_experiment_key", !1) || R.get(A) || d.n.experiments.trackExperiment({
+                    d.n.dynamicSettings.get("impact_experiment_key", !1) && R.get(A) && d.n.experiments.trackExperiment({
                         assignment: "control",
                         id: "6f822381-f41d-445e-bf88-36fb9095a7b5",
                         name: "twilight_v_ember",
@@ -37427,11 +37427,11 @@ webpackJsonp([63], {
                         return f.__generator(this, function(n) {
                             switch (n.label) {
                                 case 0:
-                                    return this.props.latencyTracking.reportInteractive(), [4, d.n.experiments.getAssignment(Z.j)];
+                                    return this.props.latencyTracking.reportInteractive(), [4, d.n.experiments.getAssignment(Z.i)];
                                 case 1:
-                                    return e = n.sent(), [4, d.n.experiments.getAssignment(Z.k)];
+                                    return e = n.sent(), [4, d.n.experiments.getAssignment(Z.j)];
                                 case 2:
-                                    return t = n.sent(), Object(Z.q)(e, t) && this.setState({
+                                    return t = n.sent(), Object(Z.p)(e, t) && this.setState({
                                         forYouAssignment: t
                                     }), [2]
                             }
@@ -37441,7 +37441,7 @@ webpackJsonp([63], {
                     var e = null;
                     if (this.props.isLoggedIn) {
                         var t = Object(d.d)("Following", "TopNav"),
-                            n = this.state.forYouAssignment === Z.e.First ? "/directory/following/foryou" : "/directory/following";
+                            n = this.state.forYouAssignment === Z.d.First ? "/directory/following/foryou" : "/directory/following";
                         e = l.createElement(v.b, {
                             activeClassName: "active",
                             to: {
@@ -39713,4 +39713,4 @@ webpackJsonp([63], {
         }(i || (i = {}))
     }
 }, [4]);
-//# sourceMappingURL=core-ba9c68aec64ced03f91d8e1221951d15.js.map
+//# sourceMappingURL=core-65adcbe70729be52b6c41239554e6832.js.map

@@ -18471,84 +18471,7 @@ webpackJsonp([32], {
                     }))) : null
                 }, t
             }(bt.Component),
-            Qd = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return yt.__extends(t, e), t.prototype.render = function() {
-                    return bt.createElement(Vt._19, {
-                        margin: {
-                            bottom: 1
-                        },
-                        elevation: 1,
-                        display: Vt.H.Flex,
-                        flexWrap: Vt.K.NoWrap,
-                        flexDirection: Vt.J.Row,
-                        alignItems: Vt.c.Stretch
-                    }, bt.createElement(Vt.V, {
-                        flexGrow: 1,
-                        flexShrink: 1,
-                        display: Vt.H.Flex,
-                        flexWrap: Vt.K.NoWrap,
-                        flexDirection: Vt.J.Column,
-                        breakpointSmall: {
-                            flexDirection: Vt.J.Row
-                        }
-                    }, bt.createElement(Vt.V, {
-                        fullWidth: !0
-                    }, bt.createElement(Vt.A, {
-                        row: !0
-                    }, bt.createElement(Vt.V, null, bt.createElement(Vt._3, {
-                        height: 75,
-                        width: 133
-                    })), bt.createElement(Vt.B, null, bt.createElement(Vt.V, {
-                        padding: {
-                            x: 2,
-                            y: 1
-                        }
-                    }, bt.createElement(Vt._23, null, bt.createElement(Vt._3, {
-                        width: 600,
-                        lineCount: 1
-                    }), bt.createElement(Vt._3, {
-                        width: 200,
-                        lineCount: 1
-                    })))))), bt.createElement(Vt.V, {
-                        display: Vt.H.Flex,
-                        flexGrow: 0,
-                        flexShrink: 0,
-                        flexWrap: Vt.K.NoWrap,
-                        flexDirection: Vt.J.Row,
-                        alignItems: Vt.c.Center
-                    }, bt.createElement(Vt._19, {
-                        fullHeight: !0,
-                        fullWidth: !0
-                    }, bt.createElement(Vt.V, {
-                        display: Vt.H.InlineFlex,
-                        fullHeight: !0
-                    }, bt.createElement(Vt.V, {
-                        fullHeight: !0,
-                        display: Vt.H.Flex,
-                        alignItems: Vt.c.Center,
-                        justifyContent: Vt.U.Center,
-                        padding: 2
-                    }, bt.createElement(Vt._23, null, bt.createElement(Vt._3, {
-                        width: 40,
-                        lineCount: 1
-                    })))))), bt.createElement(Vt.V, {
-                        flexGrow: 0,
-                        flexShrink: 0
-                    }, bt.createElement(Vt.V, {
-                        fullHeight: !0,
-                        display: Vt.H.Flex,
-                        alignItems: Vt.c.Center,
-                        justifyContent: Vt.U.Center,
-                        padding: 1
-                    }, bt.createElement(Vt._23, null, bt.createElement(Vt._3, {
-                        width: 20,
-                        lineCount: 1
-                    }))))))
-                }, t
-            }(bt.PureComponent),
+            Qd = n("PQ4i"),
             Zd = n("sW0/"),
             Xd = n("VAT8"),
             $d = n("YmWy"),
@@ -22183,15 +22106,15 @@ webpackJsonp([32], {
                     var t = this.props.apiData.videos.data.map(function(t) {
                         return e.getVideoRow(t)
                     });
-                    return this.props.apiData.videos.loading && t.push(bt.createElement(Qd, {
+                    return this.props.apiData.videos.loading && t.push(bt.createElement(Qd.a, {
                         key: "VideoCardPlaceholder" + this.props.apiData.videos.data.length
                     })), t
                 }, t.prototype.renderLoadingState = function() {
-                    return bt.createElement(Vt.V, null, bt.createElement(Qd, {
+                    return bt.createElement(Vt.V, null, bt.createElement(Qd.a, {
                         key: "VideoCardPlaceholderLoading1"
-                    }), bt.createElement(Qd, {
+                    }), bt.createElement(Qd.a, {
                         key: "VideoCardPlaceholderLoading2"
-                    }), bt.createElement(Qd, {
+                    }), bt.createElement(Qd.a, {
                         key: "VideoCardPlaceholderLoading3"
                     }))
                 }, t.prototype.renderEmptyState = function() {
@@ -22327,7 +22250,7 @@ webpackJsonp([32], {
                 }, e)
             })(vm),
             bm = function(e) {
-                return window.location.replace("https://www.twitch.tv/" + encodeURIComponent(e.match.params.creatorLogin) + "/manager/collections"), null
+                return window.location.replace("https://www.twitch.tv/" + encodeURIComponent(e.match.params.creatorLogin) + "/manager/collections/edit/" + e.match.params.collectionID), null
             },
             km = function(e) {
                 var t = {
@@ -22338,7 +22261,29 @@ webpackJsonp([32], {
                         },
                         enabled: function() {
                             return St.a.wrap(function() {
-                                return n.e(76).then(n.bind(null, "Dk8+"))
+                                return n.e(67).then(n.bind(null, "Dk8+"))
+                            }, "CollectionEditorPage")(e)
+                        }
+                    },
+                    loader: function() {
+                        return null
+                    }
+                };
+                return bt.createElement(nr.a, yt.__assign({}, t))
+            },
+            Mm = function(e) {
+                return window.location.replace("https://www.twitch.tv/" + encodeURIComponent(e.match.params.creatorLogin) + "/manager/collections"), null
+            },
+            wm = function(e) {
+                var t = {
+                    name: "TWILIGHT_COLLECTION_MANAGER",
+                    assignments: {
+                        fallback: function() {
+                            return bt.createElement(Mm, yt.__assign({}, e))
+                        },
+                        enabled: function() {
+                            return St.a.wrap(function() {
+                                return n.e(67).then(n.bind(null, "Dk8+"))
                             }, "CollectionManagerPage")(e)
                         }
                     },
@@ -22348,18 +22293,18 @@ webpackJsonp([32], {
                 };
                 return bt.createElement(nr.a, yt.__assign({}, t))
             },
-            Mm = St.a.wrap(function() {
+            Sm = St.a.wrap(function() {
                 return n.e(66).then(n.bind(null, "aeDV"))
             }, "ChannelClipsManagerPage"),
-            wm = St.a.wrap(function() {
+            Dm = St.a.wrap(function() {
                 return n.e(66).then(n.bind(null, "aeDV"))
             }, "MyClipsManagerPage"),
-            Sm = function(e) {
+            Em = function(e) {
                 var t = e.match.params.pageName,
                     n = t ? "/" + encodeURIComponent(t) : "";
                 return window.location.replace("https://www.twitch.tv/" + encodeURIComponent(e.match.params.channelName) + "/dashboard" + n), null
             },
-            Dm = function(e) {
+            xm = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderAchievementsPage = function() {
@@ -22426,7 +22371,7 @@ webpackJsonp([32], {
                             component: Wn
                         }), bt.createElement(kt.b, {
                             path: "/:channelName/dashboard/:pageName?",
-                            render: Sm
+                            render: Em
                         }), bt.createElement(kt.b, {
                             path: "/:channelName/manager/schedule/:videoID",
                             component: ym
@@ -22438,13 +22383,16 @@ webpackJsonp([32], {
                             component: ym
                         }), bt.createElement(kt.b, {
                             path: "/:channelName/manager/clips/channel",
-                            component: Mm
+                            component: Sm
                         }), bt.createElement(kt.b, {
                             path: "/:channelName/manager/clips",
-                            component: wm
+                            component: Dm
+                        }), bt.createElement(kt.b, {
+                            path: "/:creatorLogin/manager/collections/:collectionID",
+                            component: km
                         }), bt.createElement(kt.b, {
                             path: "/:creatorLogin/manager/collections",
-                            component: km
+                            component: wm
                         }), bt.createElement(kt.b, {
                             path: "/:channelName/manager",
                             component: ym
@@ -22452,7 +22400,7 @@ webpackJsonp([32], {
                     }) : bt.createElement(Et.a, null)
                 }, t
             }(bt.Component),
-            Em = Object(ct.compose)(Object(ht.a)(vt, {
+            Lm = Object(ct.compose)(Object(ht.a)(vt, {
                 options: function(e) {
                     return {
                         variables: {
@@ -22474,9 +22422,9 @@ webpackJsonp([32], {
                     collapseSideNav: gt.m,
                     expandSideNav: gt.q
                 }, e)
-            }))(Dm);
+            }))(xm);
         n.d(t, "DashboardRoot", function() {
-            return Em
+            return Lm
         })
     },
     "Eoz/": function(e, t, n) {
@@ -28372,6 +28320,93 @@ webpackJsonp([32], {
         }(a || (a = {}))
     },
     PNnM: function(e, t) {},
+    PQ4i: function(e, t, n) {
+        "use strict";
+        n.d(t, "a", function() {
+            return o
+        });
+        var a = n("TToO"),
+            r = n("U7vG"),
+            i = (n.n(r), n("Odds")),
+            o = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return a.__extends(t, e), t.prototype.render = function() {
+                    return r.createElement(i._19, {
+                        margin: {
+                            bottom: 1
+                        },
+                        elevation: 1,
+                        display: i.H.Flex,
+                        flexWrap: i.K.NoWrap,
+                        flexDirection: i.J.Row,
+                        alignItems: i.c.Stretch
+                    }, r.createElement(i.V, {
+                        flexGrow: 1,
+                        flexShrink: 1,
+                        display: i.H.Flex,
+                        flexWrap: i.K.NoWrap,
+                        flexDirection: i.J.Column,
+                        breakpointSmall: {
+                            flexDirection: i.J.Row
+                        }
+                    }, r.createElement(i.V, {
+                        fullWidth: !0
+                    }, r.createElement(i.A, {
+                        row: !0
+                    }, r.createElement(i.V, null, r.createElement(i._3, {
+                        height: 75,
+                        width: 133
+                    })), r.createElement(i.B, null, r.createElement(i.V, {
+                        padding: {
+                            x: 2,
+                            y: 1
+                        }
+                    }, r.createElement(i._23, null, r.createElement(i._3, {
+                        width: 600,
+                        lineCount: 1
+                    }), r.createElement(i._3, {
+                        width: 200,
+                        lineCount: 1
+                    })))))), r.createElement(i.V, {
+                        display: i.H.Flex,
+                        flexGrow: 0,
+                        flexShrink: 0,
+                        flexWrap: i.K.NoWrap,
+                        flexDirection: i.J.Row,
+                        alignItems: i.c.Center
+                    }, r.createElement(i._19, {
+                        fullHeight: !0,
+                        fullWidth: !0
+                    }, r.createElement(i.V, {
+                        display: i.H.InlineFlex,
+                        fullHeight: !0
+                    }, r.createElement(i.V, {
+                        fullHeight: !0,
+                        display: i.H.Flex,
+                        alignItems: i.c.Center,
+                        justifyContent: i.U.Center,
+                        padding: 2
+                    }, r.createElement(i._23, null, r.createElement(i._3, {
+                        width: 40,
+                        lineCount: 1
+                    })))))), r.createElement(i.V, {
+                        flexGrow: 0,
+                        flexShrink: 0
+                    }, r.createElement(i.V, {
+                        fullHeight: !0,
+                        display: i.H.Flex,
+                        alignItems: i.c.Center,
+                        justifyContent: i.U.Center,
+                        padding: 1
+                    }, r.createElement(i._23, null, r.createElement(i._3, {
+                        width: 20,
+                        lineCount: 1
+                    }))))))
+                }, t
+            }(r.PureComponent)
+    },
     PeVI: function(e, t) {},
     Ptqd: function(e, t) {
         e.exports = function() {
@@ -46856,4 +46891,4 @@ webpackJsonp([32], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.dashboard-f510caece60e2d137ae7118e5d2715c6.js.map
+//# sourceMappingURL=pages.dashboard-97c49cc1c4602092d86a2b6ff8047297.js.map

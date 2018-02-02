@@ -9132,7 +9132,7 @@ webpackJsonp([37], {
                     }, t.onPresenceClick = function(e, n) {
                         n.stopPropagation();
                         var i = t.props.participants.currentUser && t.props.participants.currentUser.friends.edges.find(function(e) {
-                            return e.node.id === t.interlocutor.id
+                            return !(!e.node || e.node.id !== t.interlocutor.id)
                         });
                         t.props.participants.user && i && i.activity ? Object(T.b)({
                             context: e,
@@ -9183,7 +9183,7 @@ webpackJsonp([37], {
                         l = null,
                         c = null,
                         d = this.props.participants.currentUser && this.props.participants.currentUser.friends.edges.find(function(t) {
-                            return t.node.id === e.interlocutor.id
+                            return !(!t.node || t.node.id !== e.interlocutor.id)
                         });
                     if (d && (o = r.createElement(L.V, {
                             margin: {
@@ -30620,4 +30620,4 @@ webpackJsonp([37], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.embed-chat-265c21bc19b9962bd910994c16292f01.js.map
+//# sourceMappingURL=pages.embed-chat-88c37f608e7aabbe1a553e6ab783a28a.js.map

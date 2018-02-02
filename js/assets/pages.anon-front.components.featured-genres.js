@@ -1,4 +1,4 @@
-webpackJsonp([72], {
+webpackJsonp([73], {
     "+I3D": function(e, t, n) {
         "use strict";
         var a = n("TToO"),
@@ -85,10 +85,10 @@ webpackJsonp([72], {
                         return a.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return [4, i.n.experiments.getAssignment(u.l)];
+                                    return [4, i.n.experiments.getAssignment(u.k)];
                                 case 1:
                                     return e = t.sent(), this.setState({
-                                        isFollowCategoriesExperimentEnabled: e === u.d.ENABLED
+                                        isFollowCategoriesExperimentEnabled: e === u.c.ENABLED
                                     }), this.props.latencyTracking.reportInteractive(), [2]
                             }
                         })
@@ -1485,12 +1485,12 @@ webpackJsonp([72], {
                     autoReportInteractive: !0
                 })], t)
             }(r.Component),
-            j = Object(c.b)(null, function(e) {
+            U = Object(c.b)(null, function(e) {
                 return Object(u.b)({
                     onShowModal: p.d
                 }, e)
             })(I),
-            U = n("PLRK"),
+            j = n("PLRK"),
             A = (n("GiGb"), "directory-game__card_container"),
             M = function(e) {
                 function t() {
@@ -1513,7 +1513,7 @@ webpackJsonp([72], {
                             position: S._4.Absolute,
                             attachTop: !0,
                             attachRight: !0
-                        }, r.createElement(j, {
+                        }, r.createElement(U, {
                             communityName: t.props.directoryName,
                             login: e.broadcaster.login,
                             displayName: e.broadcaster.displayName,
@@ -1543,7 +1543,7 @@ webpackJsonp([72], {
                         imageSrc: e.previewImageURL || i.a.defaultStreamPreviewURL,
                         imageAlt: e.broadcaster.login + " cover image",
                         viewerCount: e.viewersCount || 0,
-                        title: e.title || U.a,
+                        title: e.title || j.a,
                         channelName: Object(s.a)(e.broadcaster.login, e.broadcaster.displayName, !0),
                         gameImageSrc: this.shouldShowGame("boxArtURL") || i.a.defaultBoxArtURL,
                         gameTitle: this.shouldShowGame("name"),
@@ -2059,11 +2059,11 @@ webpackJsonp([72], {
             return o
         }), n.d(t, "g", function() {
             return s
-        }), n.d(t, "e", function() {
-            return l
         }), n.d(t, "f", function() {
-            return m
+            return l
         }), n.d(t, "d", function() {
+            return m
+        }), n.d(t, "e", function() {
             return d
         }), n.d(t, "c", function() {
             return c
@@ -2075,7 +2075,7 @@ webpackJsonp([72], {
         }(a || (a = {}));
         var o;
         ! function(e) {
-            e.Click = "click", e.Impression = "impression", e.Start = "start", e.Dismissed = "dismissed", e.Completed = "completed", e.Skipped = "skipped"
+            e.Click = "click", e.Impression = "impression", e.Start = "start", e.Dismissed = "dismissed", e.Completed = "completed"
         }(o || (o = {}));
         var s = function(e) {
                 var t = {
@@ -2091,12 +2091,12 @@ webpackJsonp([72], {
                 };
                 r.m.track(i.SpadeEventType.OnboardingEvent, e)
             },
-            m = function(e) {
-                var t = {
+            m = function() {
+                var e = {
                     source: a.HomepageCTA,
-                    action: e
+                    action: o.Completed
                 };
-                r.m.track(i.SpadeEventType.OnboardingEvent, t)
+                r.m.track(i.SpadeEventType.OnboardingEvent, e)
             },
             d = function(e, t) {
                 var n = {
@@ -2769,19 +2769,17 @@ webpackJsonp([72], {
         }), n.d(t, "a", function() {
             return G
         }), n.d(t, "b", function() {
-            return U
+            return j
         });
         var T = "onboarding_game",
             x = "onboarding-community-selection__search",
             G = 100,
             D = 500,
             I = 3,
-            j = function(e) {
+            U = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        experimentAssigned: !1
-                    }, t.doneInitialRedirectCheck = !1, t.gameToCategories = {}, t.onFollow = function(e) {
+                    return t.state = {}, t.doneInitialRedirectCheck = !1, t.gameToCategories = {}, t.onFollow = function(e) {
                         t.props.data.updateQuery(function(t) {
                             if (t.currentUser && t.currentUser.followedGames && t.currentUser.followedGames.nodes) {
                                 var n = {
@@ -2799,7 +2797,7 @@ webpackJsonp([72], {
                                 })
                             }
                             return t
-                        }), Object(E.d)(g.SpadeEventType.GameFollow, e)
+                        }), Object(E.e)(g.SpadeEventType.GameFollow, e)
                     }, t.onUnfollow = function(e) {
                         t.props.data.updateQuery(function(t) {
                             return t.currentUser && t.currentUser.followedGames && t.currentUser.followedGames.nodes ? a.__assign({}, t, {
@@ -2811,18 +2809,16 @@ webpackJsonp([72], {
                                     })
                                 })
                             }) : t
-                        }), Object(E.d)(g.SpadeEventType.GameUnfollow, e)
-                    }, t.skipOnboarding = function() {
-                        Object(E.f)(E.a.Skipped), t.redirectToFrontPage()
+                        }), Object(E.e)(g.SpadeEventType.GameUnfollow, e)
                     }, t.redirectAfterCompletion = function() {
                         return a.__awaiter(t, void 0, void 0, function() {
                             var e;
                             return a.__generator(this, function(t) {
                                 switch (t.label) {
                                     case 0:
-                                        return Object(E.f)(E.a.Completed), [4, o.n.experiments.getAssignment(w.k)];
+                                        return Object(E.d)(), [4, o.n.experiments.getAssignment(w.j)];
                                     case 1:
-                                        return e = t.sent(), Object(w.p)(e) ? this.redirectToForYouPage() : this.redirectToFrontPage(), [2]
+                                        return e = t.sent(), Object(w.o)(e) ? this.redirectToForYouPage() : this.redirectToFrontPage(), [2]
                                 }
                             })
                         })
@@ -2832,35 +2828,7 @@ webpackJsonp([72], {
                         var e = "" === location.search ? "?tt_medium=onboarding" : location.search + "&tt_medium=onboarding";
                         window.location.assign("/directory/following/foryou" + e)
                     }, t.isButtonDisabled = function() {
-                        return "skip" !== t.state.assignment && t.getNumFollowedGames() < I
-                    }, t.renderGameCardsOrCategories = function() {
-                        if (t.props.gameData) {
-                            var e = {
-                                onFollow: t.onFollow,
-                                onUnfollow: t.onUnfollow
-                            };
-                            return r.createElement(h.a, {
-                                games: t.props.gameData,
-                                directoryType: N.a.Games,
-                                cardSize: S._35.Medium,
-                                followGameCardOptions: e
-                            })
-                        }
-                        if (t.props.categoryData) {
-                            var n = t.getCategoryFollowCounts();
-                            return t.props.categoryData.map(function(e) {
-                                var a = !!n && (n[e.name] || 0) === e.games.length;
-                                return r.createElement(y.a, {
-                                    key: e.name,
-                                    data: e,
-                                    cardSize: S._35.ExtraSmall,
-                                    trackingMedium: g.PageviewMedium.BrowseForYou,
-                                    isFollowingAllGamesInCategory: a,
-                                    onFollow: t.onFollow,
-                                    onUnfollow: t.onUnfollow
-                                })
-                            })
-                        }
+                        return t.getNumFollowedGames() < I
                     }, t.onGameInputChange = function(e) {
                         e.persist(), t.inputTimer && (clearTimeout(t.inputTimer), t.inputTimer = 0), t.inputTimer = setTimeout(function() {
                             t.props.onSearchChange(e.target.value), t.inputTimer = 0
@@ -2875,21 +2843,20 @@ webpackJsonp([72], {
                         return a.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return o.n.setPageTitle(Object(o.d)("Welcome", "CommunitySelectionPage")), [4, o.n.experiments.getAssignment(w.j)];
+                                    return o.n.setPageTitle(Object(o.d)("Welcome", "CommunitySelectionPage")), [4, o.n.experiments.getAssignment(w.i)];
                                 case 1:
-                                    return e = t.sent() || w.a, this.setState({
-                                        assignment: e,
-                                        experimentAssigned: !0
+                                    return e = t.sent(), this.setState({
+                                        inOnboardingExperiment: Object(w.q)(e)
                                     }), [2]
                             }
                         })
                     })
                 }, t.prototype.componentWillUpdate = function(e, t) {
-                    this.userFollowedGamesDataLoaded(e) && ((t.assignment === w.a || !this.doneInitialRedirectCheck && this.shouldRedirect(e)) && this.redirectToFrontPage(), this.doneInitialRedirectCheck = !0), (!this.props.categoryData && e.categoryData || this.props.categoryData && e.categoryData && this.props.categoryData.length !== e.categoryData.length) && this.mapGamesToCategories(e.categoryData)
+                    this.userFollowedGamesDataLoaded(e) && ((!1 === t.inOnboardingExperiment || !this.doneInitialRedirectCheck && this.shouldRedirect(e)) && this.redirectToFrontPage(), this.doneInitialRedirectCheck = !0), (!this.props.categoryData && e.categoryData || this.props.categoryData && e.categoryData && this.props.categoryData.length !== e.categoryData.length) && this.mapGamesToCategories(e.categoryData)
                 }, t.prototype.componentDidUpdate = function() {
                     this.userFollowedGamesDataLoaded(this.props) && this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return this.userFollowedGamesDataLoaded(this.props) && this.state.experimentAssigned ? r.createElement(S.V, {
+                    return this.userFollowedGamesDataLoaded(this.props) && this.state.inOnboardingExperiment ? r.createElement(S.V, {
                         display: S.H.Flex,
                         flexWrap: S.K.NoWrap,
                         fullHeight: !0,
@@ -2937,50 +2904,7 @@ webpackJsonp([72], {
                         onChange: this.onGameInputChange,
                         placeholder: "Search Games",
                         spellCheck: !1
-                    })), r.createElement(S.V, {
-                        display: S.H.Flex,
-                        alignItems: S.c.Center,
-                        flexGrow: 1,
-                        flexDirection: S.J.Column,
-                        margin: 1,
-                        breakpointLarge: {
-                            margin: {
-                                x: 2,
-                                y: 1
-                            }
-                        }
-                    }, r.createElement(S._19, {
-                        color: S.F.Base,
-                        fontSize: S.L.Size3,
-                        textAlign: S._24.Center,
-                        breakpointExtraLarge: {
-                            fontSize: S.L.Size2
-                        }
-                    }, Object(o.d)("Pick three or more you’d like to watch.", "CommunitySelectionPage")), r.createElement(S._19, {
-                        textAlign: S._24.Center,
-                        margin: {
-                            top: .5
-                        },
-                        display: S.H.Hide,
-                        breakpointLarge: {
-                            display: S.H.Flex
-                        }
-                    }, r.createElement(S._19, {
-                        fontSize: S.L.Size4,
-                        color: S.F.Alt,
-                        breakpointExtraLarge: {
-                            fontSize: S.L.Size3
-                        }
-                    }, Object(o.d)("We have tons of games, hobbies, and activities being streamed right now.", "CommunitySelectionPage")))), r.createElement(S.V, {
-                        className: "community-selection-page__cta-container",
-                        display: S.H.Flex,
-                        justifyContent: S.U.Center,
-                        breakpointLarge: {
-                            justifyContent: S.U.End
-                        },
-                        flexGrow: 0,
-                        flexShrink: 0
-                    }, this.renderCTA())), r.createElement(s.b, null, r.createElement(S.V, {
+                    })), this.renderTitleText(), this.renderCTA()), r.createElement(s.b, null, r.createElement(S.V, {
                         className: "community-selection-page__list",
                         overflow: S._0.Hidden,
                         padding: {
@@ -3019,21 +2943,90 @@ webpackJsonp([72], {
                     return Math.min(1 + this.getNumFollowedGames() / I * 99, 100)
                 }, t.prototype.shouldRedirect = function(e) {
                     return !e.data.currentUser || e.data.currentUser.followedGames.nodes.length >= 10
+                }, t.prototype.renderTitleText = function() {
+                    return r.createElement(S.V, {
+                        display: S.H.Flex,
+                        alignItems: S.c.Center,
+                        flexGrow: 1,
+                        flexDirection: S.J.Column,
+                        margin: 1,
+                        breakpointLarge: {
+                            margin: {
+                                x: 2,
+                                y: 1
+                            }
+                        }
+                    }, r.createElement(S._19, {
+                        color: S.F.Base,
+                        fontSize: S.L.Size3,
+                        textAlign: S._24.Center,
+                        breakpointExtraLarge: {
+                            fontSize: S.L.Size2
+                        }
+                    }, Object(o.d)("Pick three or more you’d like to watch.", "CommunitySelectionPage")), r.createElement(S._19, {
+                        textAlign: S._24.Center,
+                        margin: {
+                            top: .5
+                        },
+                        display: S.H.Hide,
+                        breakpointLarge: {
+                            display: S.H.Flex
+                        }
+                    }, r.createElement(S._19, {
+                        fontSize: S.L.Size4,
+                        color: S.F.Alt,
+                        breakpointExtraLarge: {
+                            fontSize: S.L.Size3
+                        }
+                    }, Object(o.d)("We have tons of games, hobbies, and activities being streamed right now.", "CommunitySelectionPage"))))
                 }, t.prototype.renderCTA = function() {
-                    return "skip" === this.state.assignment && this.getNumFollowedGames() < 1 ? r.createElement(S.u, {
-                        "data-test-selector": "onboarding_cta",
-                        size: S.x.Large,
-                        type: S.z.Hollow,
-                        onClick: this.skipOnboarding
-                    }, Object(o.d)("Skip for Now", "CommunitySelectionPage")) : r.createElement(S.u, {
+                    return r.createElement(S.V, {
+                        className: "community-selection-page__cta-container",
+                        display: S.H.Flex,
+                        justifyContent: S.U.Center,
+                        breakpointLarge: {
+                            justifyContent: S.U.End
+                        },
+                        flexGrow: 0,
+                        flexShrink: 0
+                    }, r.createElement(S.u, {
                         size: S.x.Large,
                         "data-test-selector": "onboarding_cta",
                         disabled: this.isButtonDisabled(),
                         onClick: this.redirectAfterCompletion
-                    }, Object(o.d)("Done", "CommunitySelectionPage"))
+                    }, Object(o.d)("Done", "CommunitySelectionPage")))
+                }, t.prototype.renderGameCardsOrCategories = function() {
+                    var e = this;
+                    if (this.props.gameData) {
+                        var t = {
+                            onFollow: this.onFollow,
+                            onUnfollow: this.onUnfollow
+                        };
+                        return r.createElement(h.a, {
+                            games: this.props.gameData,
+                            directoryType: N.a.Games,
+                            cardSize: S._35.Medium,
+                            followGameCardOptions: t
+                        })
+                    }
+                    if (this.props.categoryData) {
+                        var n = this.getCategoryFollowCounts();
+                        return this.props.categoryData.map(function(t) {
+                            var a = !!n && (n[t.name] || 0) === t.games.length;
+                            return r.createElement(y.a, {
+                                key: t.name,
+                                data: t,
+                                cardSize: S._35.ExtraSmall,
+                                trackingMedium: g.PageviewMedium.BrowseForYou,
+                                isFollowingAllGamesInCategory: a,
+                                onFollow: e.onFollow,
+                                onUnfollow: e.onUnfollow
+                            })
+                        })
+                    }
                 }, t
             }(r.Component),
-            U = Object(i.compose)(Object(m.a)(F, {
+            j = Object(i.compose)(Object(m.a)(F, {
                 options: {
                     variables: {
                         limit: 10
@@ -3043,7 +3036,7 @@ webpackJsonp([72], {
                 destination: p.a.OnboardingIndex
             }), Object(d.a)({
                 location: g.PageviewLocation.OnboardingCommunitySelection
-            }))(j)
+            }))(U)
     },
     l5N5: function(e, t) {},
     nC3l: function(e, t) {
@@ -3627,4 +3620,4 @@ webpackJsonp([72], {
         })
     }
 });
-//# sourceMappingURL=pages.anon-front.components.featured-genres-30dfa92a1376f148ac25e93c16556c68.js.map
+//# sourceMappingURL=pages.anon-front.components.featured-genres-898d037bbec35d8d8bd6490a813bc907.js.map

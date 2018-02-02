@@ -22,7 +22,7 @@ webpackJsonp([47], {
                     return a.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(69).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(70).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -34,7 +34,7 @@ webpackJsonp([47], {
                     return a.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(68).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(69).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -2153,42 +2153,42 @@ webpackJsonp([47], {
     },
     DBTH: function(e, t, n) {
         "use strict";
-        n.d(t, "h", function() {
+        n.d(t, "g", function() {
             return a
-        }), n.d(t, "g", function() {
+        }), n.d(t, "f", function() {
             return r
-        }), n.d(t, "i", function() {
+        }), n.d(t, "h", function() {
             return o
-        }), n.d(t, "k", function() {
-            return s
         }), n.d(t, "j", function() {
+            return s
+        }), n.d(t, "i", function() {
             return l
-        }), n.d(t, "m", function() {
-            return d
         }), n.d(t, "l", function() {
+            return d
+        }), n.d(t, "k", function() {
             return c
-        }), n.d(t, "a", function() {
+        }), n.d(t, "d", function() {
             return m
-        }), n.d(t, "e", function() {
-            return u
+        }), n.d(t, "b", function() {
+            return g
+        }), n.d(t, "a", function() {
+            return v
         }), n.d(t, "c", function() {
             return h
-        }), n.d(t, "b", function() {
-            return f
-        }), n.d(t, "d", function() {
+        }), n.d(t, "e", function() {
             return k
-        }), n.d(t, "f", function() {
+        }), n.d(t, "q", function() {
+            return y
+        }), n.d(t, "o", function() {
             return w
         }), n.d(t, "p", function() {
             return b
-        }), n.d(t, "q", function() {
-            return _
-        }), n.d(t, "o", function() {
-            return S
         }), n.d(t, "n", function() {
-            return N
+            return _
+        }), n.d(t, "m", function() {
+            return S
         }), n.d(t, "r", function() {
-            return F
+            return N
         });
         var i, a = "TWILIGHT_WEB_ONBOARDING_CATEGORIES",
             r = "TWILIGHT_WEB_ONBOARDING_CATEGORIES_ANON_FRONT_PAGE",
@@ -2196,43 +2196,43 @@ webpackJsonp([47], {
             s = "TWILIGHT_WEB_ONBOARDING_FOLLOWING_FOR_YOU",
             l = "TWILIGHT_WEB_ONBOARDING",
             d = "TWILIGHT_WEB_ONBOARDING_RANDOMIZED_GAMES",
-            c = "TWILIGHT_WEB_ONBOARDING_FOLLOW_CATEGORIES",
-            m = "control";
-        ! function(e) {
-            e.Skip = "skip", e.NoSkip = "no_skip"
-        }(i || (i = {}));
-        var u, p = new Set([i.Skip.toString(), i.NoSkip.toString()]);
+            c = "TWILIGHT_WEB_ONBOARDING_FOLLOW_CATEGORIES";
+        (i || (i = {})).NoSkip = "no_skip";
+        var m;
         ! function(e) {
             e.First = "first", e.Last = "last"
-        }(u || (u = {}));
-        var g, v = new Set([u.First.toString(), u.Last.toString()]);
+        }(m || (m = {}));
+        var u, p = new Set([m.First.toString(), m.Last.toString()]);
+        (u || (u = {})).Yes = "yes";
+        var g;
         (g || (g = {})).Yes = "yes";
-        var h;
-        (h || (h = {})).Yes = "yes";
-        var f;
+        var v;
         ! function(e) {
             e.Games = "games", e.Streams = "streams"
-        }(f || (f = {}));
-        var k, y = new Set([f.Games.toString(), f.Streams.toString()]);
+        }(v || (v = {}));
+        var h, f = new Set([v.Games.toString(), v.Streams.toString()]);
+        (h || (h = {})).ENABLED = "enabled";
+        var k;
         (k || (k = {})).ENABLED = "enabled";
-        var w;
-        (w || (w = {})).ENABLED = "enabled";
-        var b = function(e) {
-                return !!e && v.has(e)
+        var y = function(e) {
+                return e === i.NoSkip
             },
-            _ = function(e, t) {
-                return !!e && p.has(e) && b(t)
+            w = function(e) {
+                return !!e && p.has(e)
             },
-            S = function(e, t, n) {
-                return !!e && p.has(e) && b(t) && n === g.Yes
+            b = function(e, t) {
+                return y(e) && w(t)
+            },
+            _ = function(e, t, n) {
+                return y(e) && w(t) && n === u.Yes
+            },
+            S = function(e) {
+                return !!e && f.has(e)
             },
             N = function(e) {
-                return !!e && y.has(e)
+                return e.getTime() >= F().getTime()
             },
-            F = function(e) {
-                return e.getTime() >= E().getTime()
-            },
-            E = function() {
+            F = function() {
                 return new Date((new Date).getTime() - 12096e5)
             }
     },
@@ -2844,11 +2844,11 @@ webpackJsonp([47], {
                         return p.__generator(this, function(n) {
                             switch (n.label) {
                                 case 0:
-                                    return [4, h.n.experiments.getAssignment(F.j)];
+                                    return [4, h.n.experiments.getAssignment(F.i)];
                                 case 1:
-                                    return e = n.sent(), [4, h.n.experiments.getAssignment(F.k)];
+                                    return e = n.sent(), [4, h.n.experiments.getAssignment(F.j)];
                                 case 2:
-                                    return t = n.sent(), Object(F.q)(e, t) ? this.setState({
+                                    return t = n.sent(), Object(F.p)(e, t) ? this.setState({
                                         forYouAssignment: t
                                     }) : this.setState({
                                         forYouAssignment: null
@@ -2896,7 +2896,7 @@ webpackJsonp([47], {
                             linkTo: "/directory/following/foryou",
                             "data-a-target": "following-foryou-tab"
                         }, Object(h.d)("For You", "FollowingHeaderTabs"));
-                        this.state.forYouAssignment === F.e.First ? t.unshift(n) : this.state.forYouAssignment === F.e.Last && t.push(n)
+                        this.state.forYouAssignment === F.d.First ? t.unshift(n) : this.state.forYouAssignment === F.d.Last && t.push(n)
                     }
                     return g.createElement(E.V, {
                         className: "following__header-tabs",
@@ -3345,11 +3345,11 @@ webpackJsonp([47], {
                             }
                         }, r[s.FOLLOWING_BASIC] = function() {
                             return J.a.wrap(function() {
-                                return n.e(67).then(n.bind(null, "BmWY"))
+                                return n.e(68).then(n.bind(null, "BmWY"))
                             }, "FinishWatchingTower")(t)
                         }, r[s.FOLLOWING_ADVANCED] = function() {
                             return J.a.wrap(function() {
-                                return n.e(67).then(n.bind(null, "BmWY"))
+                                return n.e(68).then(n.bind(null, "BmWY"))
                             }, "FinishWatchingTower")(i)
                         }, r),
                         loader: function() {
@@ -3368,7 +3368,7 @@ webpackJsonp([47], {
                         },
                         enabled: function() {
                             return J.a.wrap(function() {
-                                return n.e(75).then(n.bind(null, "IwGL"))
+                                return n.e(76).then(n.bind(null, "IwGL"))
                             }, "LatestVideosFromFollowedCarousel")(e)
                         }
                     },
@@ -3808,15 +3808,15 @@ webpackJsonp([47], {
                         return p.__generator(this, function(i) {
                             switch (i.label) {
                                 case 0:
-                                    return h.n.setPageTitle(Object(h.d)("For You", "ForYouPage")), [4, h.n.experiments.getAssignment(F.j)];
+                                    return h.n.setPageTitle(Object(h.d)("For You", "ForYouPage")), [4, h.n.experiments.getAssignment(F.i)];
                                 case 1:
-                                    return e = i.sent(), [4, h.n.experiments.getAssignment(F.k)];
+                                    return e = i.sent(), [4, h.n.experiments.getAssignment(F.j)];
                                 case 2:
-                                    return t = i.sent(), Object(F.q)(e, t) ? [3, 3] : (this.redirectToFollowing(), [3, 5]);
+                                    return t = i.sent(), Object(F.p)(e, t) ? [3, 3] : (this.redirectToFollowing(), [3, 5]);
                                 case 3:
-                                    return [4, h.n.experiments.getAssignment(F.i)];
+                                    return [4, h.n.experiments.getAssignment(F.h)];
                                 case 4:
-                                    n = i.sent(), Object(F.o)(e, t, n) && this.loadChannelRankingsByGameData(), i.label = 5;
+                                    n = i.sent(), Object(F.n)(e, t, n) && this.loadChannelRankingsByGameData(), i.label = 5;
                                 case 5:
                                     return [2]
                             }
@@ -5899,11 +5899,11 @@ webpackJsonp([47], {
             return o
         }), n.d(t, "g", function() {
             return s
-        }), n.d(t, "e", function() {
-            return l
         }), n.d(t, "f", function() {
-            return d
+            return l
         }), n.d(t, "d", function() {
+            return d
+        }), n.d(t, "e", function() {
             return c
         }), n.d(t, "c", function() {
             return m
@@ -5915,7 +5915,7 @@ webpackJsonp([47], {
         }(i || (i = {}));
         var o;
         ! function(e) {
-            e.Click = "click", e.Impression = "impression", e.Start = "start", e.Dismissed = "dismissed", e.Completed = "completed", e.Skipped = "skipped"
+            e.Click = "click", e.Impression = "impression", e.Start = "start", e.Dismissed = "dismissed", e.Completed = "completed"
         }(o || (o = {}));
         var s = function(e) {
                 var t = {
@@ -5931,12 +5931,12 @@ webpackJsonp([47], {
                 };
                 a.m.track(r.SpadeEventType.OnboardingEvent, e)
             },
-            d = function(e) {
-                var t = {
+            d = function() {
+                var e = {
                     source: i.HomepageCTA,
-                    action: e
+                    action: o.Completed
                 };
-                a.m.track(r.SpadeEventType.OnboardingEvent, t)
+                a.m.track(r.SpadeEventType.OnboardingEvent, e)
             },
             c = function(e, t) {
                 var n = {
@@ -9322,4 +9322,4 @@ webpackJsonp([47], {
     },
     "zH/G": function(e, t) {}
 });
-//# sourceMappingURL=pages.following-f1640eb73cb7d44cbe86dff5262a10a4.js.map
+//# sourceMappingURL=pages.following-13ea8261ecba089a1599c871c39675d2.js.map

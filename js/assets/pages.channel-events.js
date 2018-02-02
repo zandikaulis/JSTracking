@@ -24173,4 +24173,4 @@ webpackJsonp([41], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-events-ee6bfe44f2fa08d0f11e1064227b3637.js.map
+//# sourceMappingURL=pages.channel-events-24ef94ff10ea3a0036c94081056168d4.js.map

@@ -22,7 +22,7 @@ webpackJsonp([48], {
                     return a.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(69).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(70).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -34,7 +34,7 @@ webpackJsonp([48], {
                     return a.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(68).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(69).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -2351,10 +2351,10 @@ webpackJsonp([48], {
                 }), Object(c.d)("TopChannels")], t)
             }(i.Component)),
             I = (n("9zTP"), m.a.wrap(function() {
-                return n.e(72).then(n.bind(null, "yEZg"))
+                return n.e(73).then(n.bind(null, "yEZg"))
             }, "FeaturedGenres")),
             P = m.a.wrap(function() {
-                return n.e(70).then(n.bind(null, "2hMh"))
+                return n.e(71).then(n.bind(null, "2hMh"))
             }, "TopCreative"),
             D = function(e) {
                 function t() {
@@ -2369,7 +2369,7 @@ webpackJsonp([48], {
                     }, t.renderFeaturedGamesOrGenres = function() {
                         if (void 0 !== t.state.categoriesExperimentAssignment) {
                             if (t.state.categoriesExperimentAssignment) {
-                                var e = t.state.categoriesExperimentAssignment === y.b.Streams;
+                                var e = t.state.categoriesExperimentAssignment === y.a.Streams;
                                 return i.createElement(I, {
                                     trackingMedium: h.PageviewMedium.AnonFrontPage,
                                     withStreams: e
@@ -2379,7 +2379,7 @@ webpackJsonp([48], {
                         }
                     }, t.renderTopCreative = function() {
                         if (t.state.categoriesExperimentAssignment) {
-                            var e = t.state.categoriesExperimentAssignment === y.b.Streams;
+                            var e = t.state.categoriesExperimentAssignment === y.a.Streams;
                             return i.createElement(d._19, {
                                 className: "anon-front__content-section",
                                 background: d.m.Base,
@@ -2482,10 +2482,10 @@ webpackJsonp([48], {
                         return a.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return [4, o.n.experiments.getAssignment(y.g)];
+                                    return [4, o.n.experiments.getAssignment(y.f)];
                                 case 1:
                                     return e = t.sent(), this.setState({
-                                        categoriesExperimentAssignment: Object(y.n)(e) ? e : null
+                                        categoriesExperimentAssignment: Object(y.m)(e) ? e : null
                                     }), this.props.latencyTracking.reportInteractive(), o.n.setPageTitle(), [2]
                             }
                         })
@@ -3182,42 +3182,42 @@ webpackJsonp([48], {
     CybZ: function(e, t) {},
     DBTH: function(e, t, n) {
         "use strict";
-        n.d(t, "h", function() {
+        n.d(t, "g", function() {
             return a
-        }), n.d(t, "g", function() {
+        }), n.d(t, "f", function() {
             return i
-        }), n.d(t, "i", function() {
+        }), n.d(t, "h", function() {
             return o
-        }), n.d(t, "k", function() {
-            return s
         }), n.d(t, "j", function() {
+            return s
+        }), n.d(t, "i", function() {
             return l
-        }), n.d(t, "m", function() {
-            return c
         }), n.d(t, "l", function() {
+            return c
+        }), n.d(t, "k", function() {
             return d
-        }), n.d(t, "a", function() {
+        }), n.d(t, "d", function() {
             return u
-        }), n.d(t, "e", function() {
-            return m
+        }), n.d(t, "b", function() {
+            return f
+        }), n.d(t, "a", function() {
+            return g
         }), n.d(t, "c", function() {
             return h
-        }), n.d(t, "b", function() {
-            return v
-        }), n.d(t, "d", function() {
+        }), n.d(t, "e", function() {
             return k
-        }), n.d(t, "f", function() {
+        }), n.d(t, "q", function() {
+            return _
+        }), n.d(t, "o", function() {
             return y
         }), n.d(t, "p", function() {
             return b
-        }), n.d(t, "q", function() {
-            return E
-        }), n.d(t, "o", function() {
-            return S
         }), n.d(t, "n", function() {
-            return O
+            return E
+        }), n.d(t, "m", function() {
+            return S
         }), n.d(t, "r", function() {
-            return N
+            return O
         });
         var r, a = "TWILIGHT_WEB_ONBOARDING_CATEGORIES",
             i = "TWILIGHT_WEB_ONBOARDING_CATEGORIES_ANON_FRONT_PAGE",
@@ -3225,43 +3225,43 @@ webpackJsonp([48], {
             s = "TWILIGHT_WEB_ONBOARDING_FOLLOWING_FOR_YOU",
             l = "TWILIGHT_WEB_ONBOARDING",
             c = "TWILIGHT_WEB_ONBOARDING_RANDOMIZED_GAMES",
-            d = "TWILIGHT_WEB_ONBOARDING_FOLLOW_CATEGORIES",
-            u = "control";
-        ! function(e) {
-            e.Skip = "skip", e.NoSkip = "no_skip"
-        }(r || (r = {}));
-        var m, p = new Set([r.Skip.toString(), r.NoSkip.toString()]);
+            d = "TWILIGHT_WEB_ONBOARDING_FOLLOW_CATEGORIES";
+        (r || (r = {})).NoSkip = "no_skip";
+        var u;
         ! function(e) {
             e.First = "first", e.Last = "last"
-        }(m || (m = {}));
-        var f, g = new Set([m.First.toString(), m.Last.toString()]);
+        }(u || (u = {}));
+        var m, p = new Set([u.First.toString(), u.Last.toString()]);
+        (m || (m = {})).Yes = "yes";
+        var f;
         (f || (f = {})).Yes = "yes";
-        var h;
-        (h || (h = {})).Yes = "yes";
-        var v;
+        var g;
         ! function(e) {
             e.Games = "games", e.Streams = "streams"
-        }(v || (v = {}));
-        var k, _ = new Set([v.Games.toString(), v.Streams.toString()]);
+        }(g || (g = {}));
+        var h, v = new Set([g.Games.toString(), g.Streams.toString()]);
+        (h || (h = {})).ENABLED = "enabled";
+        var k;
         (k || (k = {})).ENABLED = "enabled";
-        var y;
-        (y || (y = {})).ENABLED = "enabled";
-        var b = function(e) {
-                return !!e && g.has(e)
+        var _ = function(e) {
+                return e === r.NoSkip
             },
-            E = function(e, t) {
-                return !!e && p.has(e) && b(t)
+            y = function(e) {
+                return !!e && p.has(e)
             },
-            S = function(e, t, n) {
-                return !!e && p.has(e) && b(t) && n === f.Yes
+            b = function(e, t) {
+                return _(e) && y(t)
+            },
+            E = function(e, t, n) {
+                return _(e) && y(t) && n === m.Yes
+            },
+            S = function(e) {
+                return !!e && v.has(e)
             },
             O = function(e) {
-                return !!e && _.has(e)
+                return e.getTime() >= N().getTime()
             },
-            N = function(e) {
-                return e.getTime() >= C().getTime()
-            },
-            C = function() {
+            N = function() {
                 return new Date((new Date).getTime() - 12096e5)
             }
     },
@@ -6006,4 +6006,4 @@ webpackJsonp([48], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.anon-front-c25d8f943b61ab9be6764f4b1e1f07b6.js.map
+//# sourceMappingURL=pages.anon-front-58961bd53e5786d7db2239bdd4c4a458.js.map
