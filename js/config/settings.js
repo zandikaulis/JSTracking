@@ -133,14 +133,14 @@ window.__twilightSettings = {
         },
         "301a4a68-7d71-4dcb-a35c-890690fd2671": {
             "name": "TWILIGHT_HOMEPAGE_REDESIGN",
-            "v": 2970,
+            "v": 2972,
             "t": 2,
             "s": 9,
             "groups": [{
-                "weight": 95,
+                "weight": 1,
                 "value": "off"
             }, {
-                "weight": 5,
+                "weight": 99,
                 "value": "on"
             }]
         },

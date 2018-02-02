@@ -977,14 +977,14 @@ window.SiteOptions = {
         },
         "301a4a68-7d71-4dcb-a35c-890690fd2671": {
             "name": "TWILIGHT_HOMEPAGE_REDESIGN",
-            "v": 2970,
+            "v": 2972,
             "t": 2,
             "s": 9,
             "groups": [{
-                "weight": 95,
+                "weight": 1,
                 "value": "off"
             }, {
-                "weight": 5,
+                "weight": 99,
                 "value": "on"
             }]
         },
@@ -1605,11 +1605,11 @@ window.SiteOptions = {
         },
         "4badc757-13a7-468c-99b6-e42aef7fc286": {
             "name": "spade_url",
-            "v": 2951,
+            "v": 2971,
             "t": 1,
             "groups": [{
                 "weight": 1,
-                "value": "//video-edge-64a347.sjc01.hls.ttvnw.net/v1/playlist/Cotzq3PAgIY2_gg81sgm_gDxtdW9ZkVfYuV2ggz5LsqpMpThuLiVLxQUXLoWFmKwmN4OODQFyki1XdcXn4AXVMa8o8PRZpalwroUhc7bT89p6y_z1QGhpKi5WRYPPy_v6dXdoAwX3cf-uvmTe_tgdRfnUbPsXI3uGlZP-poEfvWsd5C73YrSoapEHOPBbPW1h9vWRNHRyiHWWYwLCdS-KG1ybMdXGenOb5bb1MBG_s3iy2zbQI-pOrF1EwwovmKwWWThMkoOO3knnxJEDbPBKPql3adooGNLMzM4g-7HrM-rEK2ULQWmD9DuhcyYygMncIfS5vJ_UhHV1CnvIcIfYywDqd4yl1v7o_gno_gdpmSp3cdz4NLbcXbCRm7GJ307UpPcdzuVK2QIWgU0lospageLtCO-VtsawBUQLOQ8jG0xv8Pvd.m3u8"
+                "value": "//video-edge-7935d6.sjc01.hls.ttvnw.net/v1/playlist/CqnR1l6m63doIaxQ6NVXdeQ-ujXpYTHYTIQrCDq0iKKqK-Yle85TpjBCbk62RynGZ7LlysTE32K_yikaS23ttj4ry_tTW4-pUWSoYzKdF5rX6HJqFgFvG34aDnVbq-aC13HHmRFqhhofes8x2ygSW48tMfyxFonS-SEcX9NnGHHdk--uCXXZIYb9NKDLyRt4LMy1-N7KJGSLz8qD8h5mfRpsTYr5juB-P5PHq7mAt1lWVfn2EBrR9PbhUbdToC5nhQOktwPxyIsILYeRqa-puCBu9D_BuUVgTcJtAhrkDLQLhfz32qC0Ck-k0WVIaHPXUhPLz_Smv7AJ7C3JOj9OD8Iz5hWT106Gex4AgVEvtFyat4NsrbdizooQ0adeO9lsON58Q_EAi5hY7BU6qpTFZ9GSX-EOPINKgU-mG6jsDQBV1Pm3ENmkKqTibVPNkwImC5p_v1vWzL2Dyi.m3u8"
             }]
         },
         "4bc4a7c7-21b7-44f5-a0fb-79f430ee8ac4": {
