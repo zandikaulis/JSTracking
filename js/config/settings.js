@@ -55,7 +55,7 @@ window.__twilightSettings = {
     "sizmek_versatag_events": ["YeUmkUI9R5GKR5WGtg046A", "f4aK8duASJKiAYAiETsUvw", "WN1Ly4NxRgOrSNWOSG40PQ", "YFCU_dppR6Oor32XLPrU2w", "2HsLVRMUTnqChbVy5YSsfg", "f4aK8duASJKiAYAiETsUvw"],
     "sizmek_versatag_games": ["496712", "Call of Duty: WWII", "497571", "Wrestling"],
     "sizmek_versatag_teams": ["wrestling"],
-    "spade_url": "https://video-edge-64a347.sjc01.hls.ttvnw.net/v1/playlist/Cotzq3PAgIY2_gg81sgm_gDxtdW9ZkVfYuV2ggz5LsqpMpThuLiVLxQUXLoWFmKwmN4OODQFyki1XdcXn4AXVMa8o8PRZpalwroUhc7bT89p6y_z1QGhpKi5WRYPPy_v6dXdoAwX3cf-uvmTe_tgdRfnUbPsXI3uGlZP-poEfvWsd5C73YrSoapEHOPBbPW1h9vWRNHRyiHWWYwLCdS-KG1ybMdXGenOb5bb1MBG_s3iy2zbQI-pOrF1EwwovmKwWWThMkoOO3knnxJEDbPBKPql3adooGNLMzM4g-7HrM-rEK2ULQWmD9DuhcyYygMncIfS5vJ_UhHV1CnvIcIfYywDqd4yl1v7o_gno_gdpmSp3cdz4NLbcXbCRm7GJ307UpPcdzuVK2QIWgU0lospageLtCO-VtsawBUQLOQ8jG0xv8Pvd.m3u8",
+    "spade_url": "https://video-edge-7935d6.sjc01.hls.ttvnw.net/v1/playlist/CqnR1l6m63doIaxQ6NVXdeQ-ujXpYTHYTIQrCDq0iKKqK-Yle85TpjBCbk62RynGZ7LlysTE32K_yikaS23ttj4ry_tTW4-pUWSoYzKdF5rX6HJqFgFvG34aDnVbq-aC13HHmRFqhhofes8x2ygSW48tMfyxFonS-SEcX9NnGHHdk--uCXXZIYb9NKDLyRt4LMy1-N7KJGSLz8qD8h5mfRpsTYr5juB-P5PHq7mAt1lWVfn2EBrR9PbhUbdToC5nhQOktwPxyIsILYeRqa-puCBu9D_BuUVgTcJtAhrkDLQLhfz32qC0Ck-k0WVIaHPXUhPLz_Smv7AJ7C3JOj9OD8Iz5hWT106Gex4AgVEvtFyat4NsrbdizooQ0adeO9lsON58Q_EAi5hY7BU6qpTFZ9GSX-EOPINKgU-mG6jsDQBV1Pm3ENmkKqTibVPNkwImC5p_v1vWzL2Dyi.m3u8",
     "store_merch_promo": "off",
     "store_merch_seasonal": "on",
     "streamer_trailers_start_date": "2017-10-12T23:00:25.75536206Z",
@@ -133,14 +133,14 @@ window.__twilightSettings = {
         },
         "301a4a68-7d71-4dcb-a35c-890690fd2671": {
             "name": "TWILIGHT_HOMEPAGE_REDESIGN",
-            "v": 2972,
+            "v": 2973,
             "t": 2,
             "s": 9,
             "groups": [{
-                "weight": 1,
+                "weight": 95,
                 "value": "off"
             }, {
-                "weight": 99,
+                "weight": 5,
                 "value": "on"
             }]
         },

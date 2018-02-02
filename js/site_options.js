@@ -977,14 +977,14 @@ window.SiteOptions = {
         },
         "301a4a68-7d71-4dcb-a35c-890690fd2671": {
             "name": "TWILIGHT_HOMEPAGE_REDESIGN",
-            "v": 2972,
+            "v": 2973,
             "t": 2,
             "s": 9,
             "groups": [{
-                "weight": 1,
+                "weight": 95,
                 "value": "off"
             }, {
-                "weight": 99,
+                "weight": 5,
                 "value": "on"
             }]
         },
