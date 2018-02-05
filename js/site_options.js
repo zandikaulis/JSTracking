@@ -3849,6 +3849,18 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
+        "c2a121ef-cd70-423f-8e65-de028477a140": {
+            "name": "ios_profile_redesign_tab_reorder",
+            "v": 2983,
+            "t": 2,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "enabled"
+            }]
+        },
         "c2d3d8cb-713f-41eb-965e-07e88a94ccb4": {
             "name": "android_player_refactor",
             "v": 2575,
