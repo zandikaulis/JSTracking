@@ -576,6 +576,18 @@ window.SiteOptions = {
                 "value": "enabled"
             }]
         },
+        "1b959783-5196-4c52-863d-06949b814e43": {
+            "name": "clips_got_em",
+            "v": 2980,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant1"
+            }]
+        },
         "1bca04fa-2aa1-4694-891b-c5a7417260b4": {
             "name": "clips_dont_mind_me",
             "v": 2434,
