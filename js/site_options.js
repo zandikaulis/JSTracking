@@ -249,6 +249,18 @@ window.SiteOptions = {
                 "value": "treatment"
             }]
         },
+        "0ace5fda-aa24-4263-9b07-e8a3099729d6": {
+            "name": "ios_theater_offline_channel_deeplink_to_profile",
+            "v": 2985,
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "control"
+            }, {
+                "weight": 100,
+                "value": "enabled"
+            }]
+        },
         "0bb7fc0a-c4ae-4972-8d5d-cc09dcfbb458": {
             "name": "AUTOMOD_SMALLER",
             "v": 1658,
@@ -1236,13 +1248,16 @@ window.SiteOptions = {
         },
         "40322537-01de-41e2-b46e-0ac2e4a98035": {
             "name": "ios_chromecast_player_core_test",
-            "v": 2982,
+            "v": 2984,
             "t": 1,
             "groups": [{
                 "weight": 5,
                 "value": "control"
             }, {
-                "weight": 95,
+                "weight": 90,
+                "value": "player_core"
+            }, {
+                "weight": 5,
                 "value": "player_core"
             }]
         },
