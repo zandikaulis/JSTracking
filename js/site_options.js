@@ -251,13 +251,13 @@ window.SiteOptions = {
         },
         "0ace5fda-aa24-4263-9b07-e8a3099729d6": {
             "name": "ios_theater_offline_channel_deeplink_to_profile",
-            "v": 2985,
+            "v": 2986,
             "t": 1,
             "groups": [{
-                "weight": 0,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 100,
+                "weight": 0,
                 "value": "enabled"
             }]
         },
