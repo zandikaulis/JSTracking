@@ -671,13 +671,16 @@ window.SiteOptions = {
         },
         "2153e9fc-7f48-4402-aa54-7883d0c55c98": {
             "name": "android_chromecast_player_core",
-            "v": 2610,
+            "v": 2981,
             "t": 1,
             "groups": [{
                 "weight": 5,
                 "value": "control"
             }, {
-                "weight": 95,
+                "weight": 90,
+                "value": "player_core"
+            }, {
+                "weight": 5,
                 "value": "player_core"
             }]
         },
