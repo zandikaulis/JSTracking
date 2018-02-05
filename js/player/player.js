@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".40abe25c043f9d6a53a8.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".9b7bc6262caf1d7e375c.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -26984,14 +26984,16 @@
                     a = n - r,
                     s = t * (a / i);
                 return we.a.createElement("div", null, we.a.createElement("div", {
-                    className: "player-slider__popup-container",
+                    className: "player-slider__popup-container pl-flex--verticalCenter",
                     style: {
-                        width: 92,
-                        left: le(a, 92, i)
+                        left: le(a, 20, i),
+                        width: 20
                     }
                 }, we.a.createElement("span", {
+                    className: "popup-timestamp-wrapper"
+                }, we.a.createElement("span", {
                     className: "popup-timestamp"
-                }, ti.c(s, o))), we.a.createElement("div", {
+                }, ti.c(s, o)))), we.a.createElement("div", {
                     className: "popup-arrow",
                     style: {
                         left: le(a, 20, i)
@@ -28032,7 +28034,7 @@
                     u = Pa.a(!0),
                     c = Oa.v() === Oa.k ? null : Na;
                 return {
-                    app_version: "2018.02.02-212939+7400f0e5c6054aa76c6040b28ebce49d3111f0b7",
+                    app_version: "2018.02.05-202624+1cc99fdc7ae38c63c53ec1b67b7cedcfa445b63f",
                     flash_version: r,
                     referrer_url: i,
                     referrer_host: o.host,
@@ -33619,7 +33621,7 @@
                 }]), e
             }(),
             wa = n(100),
-            ka = "//video-edge-7935d6.sjc01.hls.ttvnw.net/v1/playlist/CqnR1l6m63doIaxQ6NVXdeQ-ujXpYTHYTIQrCDq0iKKqK-Yle85TpjBCbk62RynGZ7LlysTE32K_yikaS23ttj4ry_tTW4-pUWSoYzKdF5rX6HJqFgFvG34aDnVbq-aC13HHmRFqhhofes8x2ygSW48tMfyxFonS-SEcX9NnGHHdk--uCXXZIYb9NKDLyRt4LMy1-N7KJGSLz8qD8h5mfRpsTYr5juB-P5PHq7mAt1lWVfn2EBrR9PbhUbdToC5nhQOktwPxyIsILYeRqa-puCBu9D_BuUVgTcJtAhrkDLQLhfz32qC0Ck-k0WVIaHPXUhPLz_Smv7AJ7C3JOj9OD8Iz5hWT106Gex4AgVEvtFyat4NsrbdizooQ0adeO9lsON58Q_EAi5hY7BU6qpTFZ9GSX-EOPINKgU-mG6jsDQBV1Pm3ENmkKqTibVPNkwImC5p_v1vWzL2Dyi.m3u8",
+            ka = "//video-edge-d8235e.sjc01.hls.ttvnw.net/v1/playlist/CoG1qams7QowzdPkexxtZCJ5uHzQbde-VICB6yS8sa-TSgSEpENFOi6HyLSpyKTVZQGFrdMvXlv9-HY0xu41CLHB4LFxeUPtEgxxtDflNk1ooOVEiTsZB1kswhIJ1-1Rwq6YkVbjRf45BhIUEb_9TpOyK4zlIex21iEcmUdGEsCSSlqmEw-1HSHqNw0g82RRLrtlLEl8Q9Mlqx71b4saTJcpiVsiBuPFkfNt0P_x4OQbgy-yZct--cN7zJpw5BBMaJcsfmRp3MlVSkq2_Jq-b9WfeW2aIA8BlW5CTVl_FA9TDtSXtQ1odCuiVXgYq_39Sa21RGEGt1aogkyL4OZJr8gE7Hn6dTb27sLj6V9d5-Ztf4Cu2lcZWgTSd-wg58djXJWgTJ--sxUsPdA7gtMMT4b-nVrxrN37sKjkKvq9PokImK39T_ZKR0PgprNIbX4q_hmK1PGC-e_XhgT6-5.m3u8",
             Ea = n(45),
             Sa = n(246),
             Pa = n(133),

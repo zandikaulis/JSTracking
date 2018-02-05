@@ -26,26 +26,26 @@ webpackJsonp([53], {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderCrate = function(e) {
-                        return l.createElement(y.V, {
+                        return l.createElement(y.W, {
                             key: e.id
-                        }, l.createElement(y.T, {
+                        }, l.createElement(y.U, {
                             onClick: t.handleOpenClick,
                             "data-open-url": e.openURL
                         }, l.createElement(y.j, {
                             ratio: y.k.Aspect1x1
-                        }, l.createElement(y._19, {
+                        }, l.createElement(y._20, {
                             fullHeight: !0,
                             fullWidth: !0,
-                            display: y.H.Flex,
+                            display: y.I.Flex,
                             padding: 2,
                             border: !0
-                        }, l.createElement(y.Q, {
+                        }, l.createElement(y.R, {
                             fullHeight: !0,
                             fullWidth: !0
                         }, l.createElement("img", {
                             alt: Object(d.d)("Crate", "CratesList"),
                             src: e.iconURL
-                        })))), l.createElement(y._23, null, "Open Now")))
+                        })))), l.createElement(y._24, null, "Open Now")))
                     }, t.handleOpenClick = function(e) {
                         ! function(e, t) {
                             var n = window.open(e, "Twitch", "width=1024,height=600,scrollbars=yes");
@@ -58,33 +58,33 @@ webpackJsonp([53], {
                     }, t
                 }
                 return c.__extends(t, e), t.prototype.render = function() {
-                    if (this.props.loading) return l.createElement(y.Z, {
+                    if (this.props.loading) return l.createElement(y._0, {
                         fillContent: !0
                     });
                     if (!this.props.crates) return null;
                     var e = this.props.crates,
                         t = e.map(this.renderCrate);
-                    return l.createElement(y.V, {
+                    return l.createElement(y.W, {
                         "data-test-selector": "crates-list__wrapper",
                         margin: {
                             y: 1
                         }
-                    }, l.createElement(y.V, {
-                        display: y.H.Flex,
+                    }, l.createElement(y.W, {
+                        display: y.I.Flex,
                         margin: {
                             bottom: 1
                         }
-                    }, l.createElement(y.V, {
+                    }, l.createElement(y.W, {
                         margin: {
                             right: 1
                         }
-                    }, l.createElement(y._23, {
-                        type: y._28.H3
-                    }, Object(d.d)("Crates", "CratesList"))), l.createElement(y._23, {
-                        type: y._28.H3,
+                    }, l.createElement(y._24, {
+                        type: y._29.H3
+                    }, Object(d.d)("Crates", "CratesList"))), l.createElement(y._24, {
+                        type: y._29.H3,
                         color: y.F.Alt2
-                    }, Object(d.e)(e.length))), l.createElement(y._34, {
-                        childWidth: y._35.Small,
+                    }, Object(d.e)(e.length))), l.createElement(y._35, {
+                        childWidth: y._36.Small,
                         placeholderItems: 8
                     }, t))
                 }, t
@@ -107,7 +107,7 @@ webpackJsonp([53], {
                             }
                         }, "DropsList") : Object(d.d)("Drops you have received are accessed within their corresponding games. Log into the game to experience your new content.", "DropsList")
                     }, t.renderDrop = function(e, t) {
-                        return l.createElement(y.V, {
+                        return l.createElement(y.W, {
                             key: t,
                             className: "drops-list__drop-award",
                             "data-test-selector": O,
@@ -115,23 +115,23 @@ webpackJsonp([53], {
                                 right: 2,
                                 bottom: 1
                             },
-                            display: y.H.InlineFlex,
-                            flexDirection: y.J.Column
-                        }, l.createElement(y._19, {
+                            display: y.I.InlineFlex,
+                            flexDirection: y.K.Column
+                        }, l.createElement(y._20, {
                             fullHeight: !0,
                             fullWidth: !0,
-                            display: y.H.Flex,
-                            justifyContent: y.U.Center,
+                            display: y.I.Flex,
+                            justifyContent: y.V.Center,
                             padding: 2,
                             border: !0
                         }, l.createElement("img", {
                             alt: Object(d.d)("Drop image", "DropsListPresentation"),
                             src: e.node.imageURL
-                        })), l.createElement(y.V, {
+                        })), l.createElement(y.W, {
                             padding: {
                                 y: .5
                             }
-                        }, l.createElement(y._23, {
+                        }, l.createElement(y._24, {
                             bold: !0,
                             ellipsis: !0
                         }, e.node.game.name)))
@@ -143,7 +143,7 @@ webpackJsonp([53], {
                     this.postRender()
                 }, t.prototype.render = function() {
                     var e = this;
-                    if (this.props.data.loading) return l.createElement(y.Z, {
+                    if (this.props.data.loading) return l.createElement(y._0, {
                         fillContent: !0
                     });
                     if (!this.props.data || this.props.data.error || !this.props.data.currentUser || !this.props.data.currentUser.inventory.drops.nodes) return null;
@@ -151,27 +151,27 @@ webpackJsonp([53], {
                         n = t.map(function(t, n) {
                             return e.renderDrop(t, n)
                         });
-                    return l.createElement(y.V, {
+                    return l.createElement(y.W, {
                         "data-test-selector": "drops-list_wrapper",
                         margin: {
                             y: 1
                         }
-                    }, l.createElement(y.V, {
-                        display: y.H.Flex
-                    }, l.createElement(y.V, {
+                    }, l.createElement(y.W, {
+                        display: y.I.Flex
+                    }, l.createElement(y.W, {
                         margin: {
                             right: 1
                         }
-                    }, l.createElement(y._23, {
-                        type: y._28.H3
-                    }, Object(d.d)("Drops", "DropsList"))), l.createElement(y._23, {
-                        type: y._28.H3,
+                    }, l.createElement(y._24, {
+                        type: y._29.H3
+                    }, Object(d.d)("Drops", "DropsList"))), l.createElement(y._24, {
+                        type: y._29.H3,
                         color: y.F.Alt2
-                    }, Object(d.e)(t.length))), l.createElement(y.V, {
+                    }, Object(d.e)(t.length))), l.createElement(y.W, {
                         margin: {
                             bottom: 1
                         }
-                    }, l.createElement(y._23, null, this.getDropsDescription(t))), n)
+                    }, l.createElement(y._24, null, this.getDropsDescription(t))), n)
                 }, t.prototype.postRender = function() {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
                 }, t = c.__decorate([Object(u.a)(E)], t)
@@ -187,34 +187,34 @@ webpackJsonp([53], {
                 }
                 return c.__extends(t, e), t.prototype.render = function() {
                     var e = Object(d.d)("Inventory", "InventoryTitleBar");
-                    if (this.props.loading) return l.createElement(y._19, {
+                    if (this.props.loading) return l.createElement(y._20, {
                         className: "title-bar",
-                        display: y.H.Flex,
+                        display: y.I.Flex,
                         borderBottom: !0,
                         padding: {
                             bottom: 1
                         }
-                    }, l.createElement(y.V, {
+                    }, l.createElement(y.W, {
                         flexGrow: 1
-                    }, l.createElement(y._23, {
-                        type: y._28.H2
-                    }, e)), l.createElement(y.V, {
-                        display: y.H.Flex,
+                    }, l.createElement(y._24, {
+                        type: y._29.H2
+                    }, e)), l.createElement(y.W, {
+                        display: y.I.Flex,
                         margin: {
                             right: 3
                         },
                         alignItems: y.c.Center
-                    }, l.createElement(y._3, {
+                    }, l.createElement(y._4, {
                         width: 135,
                         height: 30
-                    })), l.createElement(y.V, {
+                    })), l.createElement(y.W, {
                         alignSelf: y.d.Baseline
-                    }, l.createElement(y._3, {
+                    }, l.createElement(y._4, {
                         width: 180,
                         height: 30
                     })));
                     var t = this.props.amazonMarketplaces.map(function(e) {
-                            return l.createElement(y.T, {
+                            return l.createElement(y.U, {
                                 key: e.id,
                                 linkTo: "https://" + e.orderHistoryRedirectURL,
                                 targetBlank: !0
@@ -228,28 +228,28 @@ webpackJsonp([53], {
                                 withText: !0
                             })
                         }, "InventoryTitleBar");
-                    return l.createElement(y._19, {
+                    return l.createElement(y._20, {
                         className: "title-bar",
-                        display: y.H.Flex,
+                        display: y.I.Flex,
                         borderBottom: !0,
                         padding: {
                             bottom: 1
                         }
-                    }, l.createElement(y.V, {
+                    }, l.createElement(y.W, {
                         flexGrow: 1
-                    }, l.createElement(y._23, {
-                        type: y._28.H2
-                    }, e)), l.createElement(y.V, {
-                        display: y.H.Flex,
+                    }, l.createElement(y._24, {
+                        type: y._29.H2
+                    }, e)), l.createElement(y.W, {
+                        display: y.I.Flex,
                         margin: {
                             right: 3
                         },
                         alignItems: y.c.Center
-                    }, l.createElement(y._23, null, n)), l.createElement(y.V, {
+                    }, l.createElement(y._24, null, n)), l.createElement(y.W, {
                         alignSelf: y.d.Baseline
                     }, l.createElement(F.a, null, l.createElement(y.u, {
                         type: y.z.Hollow
-                    }, Object(d.d)("View your Twitch Order History", "InventoryTitleBar")), l.createElement(y.p, null, l.createElement(y.V, {
+                    }, Object(d.d)("View your Twitch Order History", "InventoryTitleBar")), l.createElement(y.p, null, l.createElement(y.W, {
                         padding: 1
                     }, t)))))
                 }, t
@@ -257,8 +257,8 @@ webpackJsonp([53], {
             j = Object(a.d)(Object(k.d)("TitleBar", {
                 autoReportInteractive: !0
             }))(x),
-            T = n("xpYL"),
-            L = function(e) {
+            L = n("xpYL"),
+            T = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.refetchData = function() {
@@ -275,7 +275,7 @@ webpackJsonp([53], {
                         t = [],
                         n = 0,
                         i = [];
-                    return this.props.data.loading || this.props.data.error || (e = !1, t = this.props.data.currentUser.amazonMarketplaces, n = this.props.data.currentUser.bitsBalance, i = this.props.data.currentUser.crates), l.createElement(y.V, {
+                    return this.props.data.loading || this.props.data.error || (e = !1, t = this.props.data.currentUser.amazonMarketplaces, n = this.props.data.currentUser.bitsBalance, i = this.props.data.currentUser.crates), l.createElement(y.W, {
                         className: "inventory",
                         padding: 3
                     }, l.createElement(j, {
@@ -287,15 +287,15 @@ webpackJsonp([53], {
                         crates: i,
                         loading: e
                     }), l.createElement(N, null))
-                }, t = c.__decorate([Object(u.a)(T)], t)
+                }, t = c.__decorate([Object(u.a)(L)], t)
             }(l.Component),
             D = Object(a.d)(Object(k.d)("InventoryPage", {
                 autoReportInteractive: !0,
                 destination: v.a.Inventory
             }), Object(p.a)({
                 location: g.PageviewLocation.Inventory
-            }))(L),
-            U = Object(i.b)(function(e) {
+            }))(T),
+            I = Object(i.b)(function(e) {
                 return {
                     isLoggedIn: Object(s.d)(e)
                 }
@@ -307,7 +307,7 @@ webpackJsonp([53], {
                 }, e)
             })(D);
         n.d(t, "InventoryPage", function() {
-            return U
+            return I
         })
     },
     Jc4Y: function(e, t) {},
@@ -925,4 +925,4 @@ webpackJsonp([53], {
         a.definitions = a.definitions.concat(i(n("UP6l").definitions)), a.definitions = a.definitions.concat(i(n("l83l").definitions)), e.exports = a
     }
 });
-//# sourceMappingURL=pages.inventory-8c389270a3d1c6b605a51df20ce5939a.js.map
+//# sourceMappingURL=pages.inventory-5038d5f2481d1e4b67018f3c617a29f4.js.map
