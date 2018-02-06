@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".9b7bc6262caf1d7e375c.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".120846096c96457d9eb9.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -7929,11 +7929,14 @@
                 }, {
                     key: "loadMediaPlayer",
                     value: function() {
-                        var e = this;
-                        return this.store.getState().experiments.get(b.s).then(function(t) {
+                        var e = this.store.getState(),
+                            t = e.experiments,
+                            n = this._mediaPlayerLogLevel;
+                        return Promise.all([t.get(b.s), t.get(b.o)]).then(function(e) {
                             return g.a.loadMediaPlayer({
-                                value: t,
-                                logLevel: e._mediaPlayerLogLevel
+                                value: e[0],
+                                latencyValue: e[1],
+                                logLevel: n
                             })
                         })
                     }
@@ -22029,9 +22032,10 @@
         }
 
         function o(e) {
-            return a(e).then(p).then(function(t) {
-                var n = e && e.hasOwnProperty("logLevel") ? e.logLevel : "";
-                return c(y.MAX_ATTEMPTS, t, n)
+            return p(e).then(function(e) {
+                return c(y.MAX_ATTEMPTS, e)
+            }).catch(function(e) {
+                return m.reject(e)
             })
         }
 
@@ -22069,34 +22073,35 @@
             })
         }
 
-        function c(e, t, n, r) {
-            return e > 0 ? l(t.url, t.workerUrl, t.settings, n).catch(function(r) {
-                return c(e - 1, t, n, r)
-            }) : m.reject(r)
+        function c(e, t, n) {
+            return e > 0 ? l(t.url, t.workerUrl, t.settings, t.logLevel, t.latencyValue).catch(function(n) {
+                return c(e - 1, t, n)
+            }) : m.reject(n)
         }
 
-        function l(e, t, n, r) {
-            return new m(function(i, o) {
-                var a = document.location.protocol + t,
-                    s = '\n            try {\n                importScripts("' + a + "\");\n            } catch (e) {\n                console.error('Exception in worker import', e);\n            }\n            ",
-                    u = new Blob([s], {
+        function l(e, t, n, r, i) {
+            return new m(function(o, a) {
+                var s = document.location.protocol + t,
+                    u = '\n            try {\n                importScripts("' + s + "\");\n            } catch (e) {\n                console.error('Exception in worker import', e);\n            }\n            ",
+                    c = new Blob([u], {
                         type: "text/javascript"
                     }),
-                    c = new Worker(URL.createObjectURL(u)),
-                    l = document.createElement("script");
-                l.onload = function() {
-                    "object" === ("undefined" == typeof MediaPlayer ? "undefined" : h(MediaPlayer)) && "function" == typeof MediaPlayer.MediaPlayer ? i(function() {
+                    l = new Worker(URL.createObjectURL(c)),
+                    d = document.createElement("script");
+                d.onload = function() {
+                    "object" === ("undefined" == typeof MediaPlayer ? "undefined" : h(MediaPlayer)) && "function" == typeof MediaPlayer.MediaPlayer ? o(function() {
                         return {
                             mediaPlayerHandle: MediaPlayer,
                             mediaPlayerInstance: new MediaPlayer.MediaPlayer({
                                 settings: n,
-                                logLevel: r
-                            }, c)
+                                logLevel: r,
+                                latencyValue: i
+                            }, l)
                         }
-                    }) : (l.parentNode.removeChild(l), o(b.BAD_RESPONSE))
-                }, l.onerror = function(e) {
-                    l.parentNode.removeChild(l), o(b.SCRIPT_ERROR)
-                }, l.src = e, l.id = y.SCRIPT_ID, document.head.appendChild(l)
+                    }) : (d.parentNode.removeChild(d), a(b.BAD_RESPONSE))
+                }, d.onerror = function(e) {
+                    d.parentNode.removeChild(d), a(b.SCRIPT_ERROR)
+                }, d.src = e, d.id = y.SCRIPT_ID, document.head.appendChild(d)
             })
         }
 
@@ -22125,29 +22130,35 @@
         }
 
         function p(e) {
-            var t = "",
-                n = y.PLAYER_CORE_HOST.prod,
-                r = e.split("+") || [e],
-                i = r[0];
-            r.length > 1 && (t = r[1], y.SETTING_CRITERIA.hasOwnProperty(t) && !y.SETTING_CRITERIA[t] && (t = ""));
-            var o = {},
-                a = document.URL,
-                s = a.indexOf("?");
-            if (s > -1) {
-                ((a.slice(s + 1) || "").split("&") || []).forEach(function(e) {
+            if (!e || !e.value) return m.reject(b.BAD_CONFIG);
+            var t = e.value,
+                n = "",
+                r = y.PLAYER_CORE_HOST.prod,
+                i = t.split("+") || [t],
+                o = i[0];
+            i.length > 1 && (n = i[1], y.SETTING_CRITERIA.hasOwnProperty(n) && !y.SETTING_CRITERIA[n] && (n = ""));
+            var a = {},
+                s = document.URL,
+                u = s.indexOf("?");
+            if (u > -1) {
+                ((s.slice(u + 1) || "").split("&") || []).forEach(function(e) {
                     var t = e.split("=") || [];
-                    o[t[0]] = t[1]
+                    a[t[0]] = t[1]
                 })
             }
-            return o["cvp-settings"] && (t = o["cvp-settings"]), o["cvp-branch"] ? {
-                url: y.PLAYER_CORE_HOST.dev + o["cvp-branch"] + y.MEDIAPLAYER_FILE_NAME_DEBUG,
-                workerUrl: y.PLAYER_CORE_HOST.dev + o["cvp-branch"] + y.MEDIAPLAYER_WORKER_FILE_NAME_DEBUG,
-                settings: t
-            } : (o["cvp-env"] && y.PLAYER_CORE_HOST[o["cvp-env"]] && (n = y.PLAYER_CORE_HOST[o["cvp-env"]]), o["cvp-ver"] && (i = o["cvp-ver"]), {
-                url: n + i + y.MEDIAPLAYER_FILE_NAME,
-                workerUrl: n + i + y.MEDIAPLAYER_WORKER_FILE_NAME,
-                settings: t
-            })
+            return a["cvp-settings"] && (n = a["cvp-settings"]), a["cvp-branch"] ? m.resolve({
+                url: y.PLAYER_CORE_HOST.dev + a["cvp-branch"] + y.MEDIAPLAYER_FILE_NAME_DEBUG,
+                workerUrl: y.PLAYER_CORE_HOST.dev + a["cvp-branch"] + y.MEDIAPLAYER_WORKER_FILE_NAME_DEBUG,
+                settings: n,
+                logLevel: e && e.hasOwnProperty("logLevel") ? e.logLevel : "",
+                latencyValue: e && e.hasOwnProperty("latencyValue") ? e.latencyValue : ""
+            }) : (a["cvp-env"] && y.PLAYER_CORE_HOST[a["cvp-env"]] && (r = y.PLAYER_CORE_HOST[a["cvp-env"]]), a["cvp-ver"] && (o = a["cvp-ver"]), m.resolve({
+                url: r + o + y.MEDIAPLAYER_FILE_NAME,
+                workerUrl: r + o + y.MEDIAPLAYER_WORKER_FILE_NAME,
+                settings: n,
+                logLevel: e && e.hasOwnProperty("logLevel") ? e.logLevel : "",
+                latencyValue: e && e.hasOwnProperty("latencyValue") ? e.latencyValue : ""
+            }))
         }
 
         function f() {
@@ -22182,6 +22193,13 @@
                     spadeEventData: {
                         core_error_code: 3002,
                         core_error_msg: "Bad Response"
+                    }
+                },
+                BAD_CONFIG: {
+                    spadeEventName: y.SPADE_EVENT_NAME,
+                    spadeEventData: {
+                        core_error_code: 3003,
+                        core_error_msg: "Bad Config"
                     }
                 }
             };
@@ -28034,7 +28052,7 @@
                     u = Pa.a(!0),
                     c = Oa.v() === Oa.k ? null : Na;
                 return {
-                    app_version: "2018.02.05-202624+1cc99fdc7ae38c63c53ec1b67b7cedcfa445b63f",
+                    app_version: "2018.02.05-234812+b34ddb8adb6779e873ecbe39dfe01c74058fb0fc",
                     flash_version: r,
                     referrer_url: i,
                     referrer_host: o.host,
