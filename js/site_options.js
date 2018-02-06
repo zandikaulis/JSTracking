@@ -934,8 +934,8 @@ window.SiteOptions = {
             }]
         },
         "2d6bf24d-39b8-491b-936e-4daebd3cc17c": {
-            "name": "clips_already",
-            "v": 2987,
+            "name": "TWILIGHT_CLIPS_ALREADY",
+            "v": 2989,
             "t": 1,
             "groups": [{
                 "weight": 100,
@@ -2254,15 +2254,18 @@ window.SiteOptions = {
         },
         "6a2630a4-edc7-4f2a-8cfe-e4de75eb0d98": {
             "name": "rtqos",
-            "v": 2950,
+            "v": 2990,
             "t": 1,
             "s": 1,
             "groups": [{
                 "weight": 80,
                 "value": "control"
             }, {
-                "weight": 20,
+                "weight": 19,
                 "value": "realtime"
+            }, {
+                "weight": 1,
+                "value": "direct"
             }]
         },
         "6a587617-eb7c-475e-8bc3-991d4f38fc87": {

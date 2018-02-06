@@ -128,6 +128,18 @@ window.__twilightSettings = {
                 "value": "enabled"
             }]
         },
+        "2d6bf24d-39b8-491b-936e-4daebd3cc17c": {
+            "name": "TWILIGHT_CLIPS_ALREADY",
+            "v": 2989,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant1"
+            }]
+        },
         "301a4a68-7d71-4dcb-a35c-890690fd2671": {
             "name": "TWILIGHT_HOMEPAGE_REDESIGN",
             "v": 2973,
