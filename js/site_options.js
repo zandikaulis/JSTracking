@@ -4190,13 +4190,13 @@ window.SiteOptions = {
         },
         "d22b1724-f9ba-4470-99ab-f3f193034394": {
             "name": "ios_autoplay_feed_v5.9",
-            "v": 2926,
+            "v": 2998,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 99,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 1,
                 "value": "active"
             }]
         },
@@ -4586,13 +4586,13 @@ window.SiteOptions = {
         },
         "e51aab46-7708-49cb-a7a3-57e2c95c7570": {
             "name": "EXTENSIONS_MAINTENANCE",
-            "v": 2995,
+            "v": 2996,
             "t": 1,
             "groups": [{
-                "weight": 0,
+                "weight": 100,
                 "value": "no"
             }, {
-                "weight": 100,
+                "weight": 0,
                 "value": "yes"
             }]
         },
