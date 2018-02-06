@@ -6,50 +6,117 @@ webpackJsonp([53], {
             value: !0
         });
         var i = n("RH2O"),
-            a = n("2KeS"),
-            r = n("+xm8"),
+            r = n("2KeS"),
+            a = n("+xm8"),
             o = n("f2i/"),
             s = n("Aj/L"),
-            c = n("TToO"),
-            l = n("U7vG"),
+            l = n("TToO"),
+            c = n("U7vG"),
             d = n("6sO2"),
             m = n("yWCw"),
             u = n("7vx8"),
             p = n("j7/Y"),
-            v = n("w9tK"),
-            g = n("vH/s"),
-            k = n("CSlQ"),
-            f = n("Ouuk"),
-            h = n("jF7o"),
-            y = n("Odds"),
-            b = function(e) {
+            g = n("w9tK"),
+            v = n("vH/s"),
+            f = n("CSlQ"),
+            h = n("Odds"),
+            k = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.renderBadge = function(e) {
+                        return c.createElement(h.Z, {
+                            key: e.id,
+                            margin: {
+                                bottom: 2
+                            }
+                        }, c.createElement(h.j, {
+                            ratio: h.k.Aspect1x1
+                        }, c.createElement(h._21, {
+                            fullHeight: !0,
+                            fullWidth: !0,
+                            display: h.L.Flex,
+                            padding: 2,
+                            border: !0
+                        }, c.createElement(h.U, {
+                            fullHeight: !0,
+                            fullWidth: !0
+                        }, c.createElement("img", {
+                            src: e.imageURL,
+                            title: e.title,
+                            alt: e.title
+                        })))), c.createElement(h._25, {
+                            type: h._30.Strong
+                        }, e.title))
+                    }, t
+                }
+                return l.__extends(t, e), t.prototype.render = function() {
+                    if (this.props.loading) return c.createElement(h._1, {
+                        fillContent: !0
+                    });
+                    if (!this.props.badges) return null;
+                    var e = this.props.badges,
+                        t = e.map(this.renderBadge);
+                    return c.createElement(h.Z, {
+                        margin: {
+                            y: 1
+                        }
+                    }, c.createElement(h.Z, {
+                        display: h.L.Flex,
+                        margin: {
+                            bottom: 1
+                        }
+                    }, c.createElement(h.Z, {
+                        margin: {
+                            right: 1
+                        }
+                    }, c.createElement(h._25, {
+                        type: h._30.H3
+                    }, Object(d.d)("Badges from Crates", "BadgesList"))), c.createElement(h._25, {
+                        type: h._30.H3,
+                        color: h.I.Alt2
+                    }, Object(d.e)(e.length))), c.createElement(h.Z, {
+                        margin: {
+                            bottom: 1
+                        }
+                    }, c.createElement(h._25, null, Object(d.d)('You can find your chat badge in Chat Settings under "Edit Appearance".', "BadgesList"))), c.createElement(h._36, {
+                        childWidth: h._37.Small,
+                        placeholderItems: 8
+                    }, t))
+                }, t
+            }(c.Component),
+            y = Object(r.d)(Object(f.d)("BadgesList", {
+                autoReportInteractive: !0
+            }))(k),
+            b = n("Ouuk"),
+            E = n("jF7o"),
+            _ = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderCrate = function(e) {
-                        return l.createElement(y.W, {
+                        return c.createElement(h.Z, {
                             key: e.id
-                        }, l.createElement(y.U, {
+                        }, c.createElement(h.X, {
                             onClick: t.handleOpenClick,
                             "data-open-url": e.openURL
-                        }, l.createElement(y.j, {
-                            ratio: y.k.Aspect1x1
-                        }, l.createElement(y._20, {
+                        }, c.createElement(h.j, {
+                            ratio: h.k.Aspect1x1
+                        }, c.createElement(h._21, {
                             fullHeight: !0,
                             fullWidth: !0,
-                            display: y.I.Flex,
+                            display: h.L.Flex,
                             padding: 2,
                             border: !0
-                        }, l.createElement(y.R, {
+                        }, c.createElement(h.U, {
                             fullHeight: !0,
                             fullWidth: !0
-                        }, l.createElement("img", {
+                        }, c.createElement("img", {
                             alt: Object(d.d)("Crate", "CratesList"),
                             src: e.iconURL
-                        })))), l.createElement(y._24, null, "Open Now")))
+                        })))), c.createElement(h._25, null, "Open Now")))
                     }, t.handleOpenClick = function(e) {
                         ! function(e, t) {
                             var n = window.open(e, "Twitch", "width=1024,height=600,scrollbars=yes");
-                            n && !Object(f.a)() && (n.focus(), Object(h.a)(n, function(e) {
+                            n && !Object(b.a)() && (n.focus(), Object(E.a)(n, function(e) {
                                 t(e)
                             }))
                         }(e.currentTarget.dataset.openUrl || "", t.reload)
@@ -57,93 +124,93 @@ webpackJsonp([53], {
                         t.props.refetchData && t.props.refetchData()
                     }, t
                 }
-                return c.__extends(t, e), t.prototype.render = function() {
-                    if (this.props.loading) return l.createElement(y._0, {
+                return l.__extends(t, e), t.prototype.render = function() {
+                    if (this.props.loading) return c.createElement(h._1, {
                         fillContent: !0
                     });
                     if (!this.props.crates) return null;
                     var e = this.props.crates,
                         t = e.map(this.renderCrate);
-                    return l.createElement(y.W, {
+                    return c.createElement(h.Z, {
                         "data-test-selector": "crates-list__wrapper",
                         margin: {
                             y: 1
                         }
-                    }, l.createElement(y.W, {
-                        display: y.I.Flex,
+                    }, c.createElement(h.Z, {
+                        display: h.L.Flex,
                         margin: {
                             bottom: 1
                         }
-                    }, l.createElement(y.W, {
+                    }, c.createElement(h.Z, {
                         margin: {
                             right: 1
                         }
-                    }, l.createElement(y._24, {
-                        type: y._29.H3
-                    }, Object(d.d)("Crates", "CratesList"))), l.createElement(y._24, {
-                        type: y._29.H3,
-                        color: y.F.Alt2
-                    }, Object(d.e)(e.length))), l.createElement(y._35, {
-                        childWidth: y._36.Small,
+                    }, c.createElement(h._25, {
+                        type: h._30.H3
+                    }, Object(d.d)("Twitch Crates", "CratesList"))), c.createElement(h._25, {
+                        type: h._30.H3,
+                        color: h.I.Alt2
+                    }, Object(d.e)(e.length))), c.createElement(h._36, {
+                        childWidth: h._37.Small,
                         placeholderItems: 8
                     }, t))
                 }, t
-            }(l.Component),
-            _ = Object(a.d)(Object(k.d)("CratesList", {
+            }(c.Component),
+            O = Object(r.d)(Object(f.d)("CratesList", {
                 autoReportInteractive: !0
-            }))(b),
-            E = n("bdhb"),
-            O = (n("Jc4Y"), "drops-list_drop-award"),
-            S = function(e) {
+            }))(_),
+            S = n("bdhb"),
+            L = (n("Jc4Y"), "drops-list_drop-award"),
+            N = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getDropsDescription = function(e) {
                         return e.length < 1 ? Object(d.d)("Drops are a fun new way to get in-game loot just for watching your favorite channels on Twitch! <x:link>Learn more</x:link>", {
                             "x:link": function(e) {
-                                return l.createElement("a", {
+                                return c.createElement("a", {
                                     href: "https://help.twitch.tv/customer/en/portal/topics/301257-getting-started/articles",
                                     target: "_blank"
                                 }, e)
                             }
                         }, "DropsList") : Object(d.d)("Drops you have received are accessed within their corresponding games. Log into the game to experience your new content.", "DropsList")
                     }, t.renderDrop = function(e, t) {
-                        return l.createElement(y.W, {
+                        return c.createElement(h.Z, {
                             key: t,
                             className: "drops-list__drop-award",
-                            "data-test-selector": O,
+                            "data-test-selector": L,
                             margin: {
                                 right: 2,
                                 bottom: 1
                             },
-                            display: y.I.InlineFlex,
-                            flexDirection: y.K.Column
-                        }, l.createElement(y._20, {
+                            display: h.L.InlineFlex,
+                            flexDirection: h.N.Column
+                        }, c.createElement(h._21, {
                             fullHeight: !0,
                             fullWidth: !0,
-                            display: y.I.Flex,
-                            justifyContent: y.V.Center,
+                            display: h.L.Flex,
+                            justifyContent: h.Y.Center,
                             padding: 2,
                             border: !0
-                        }, l.createElement("img", {
+                        }, c.createElement("img", {
                             alt: Object(d.d)("Drop image", "DropsListPresentation"),
                             src: e.node.imageURL
-                        })), l.createElement(y.W, {
+                        })), c.createElement(h.Z, {
                             padding: {
                                 y: .5
                             }
-                        }, l.createElement(y._24, {
+                        }, c.createElement(h._25, {
                             bold: !0,
                             ellipsis: !0
                         }, e.node.game.name)))
                     }, t
                 }
-                return c.__extends(t, e), t.prototype.componentDidMount = function() {
+                return l.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.postRender()
                 }, t.prototype.componentDidUpdate = function() {
                     this.postRender()
                 }, t.prototype.render = function() {
                     var e = this;
-                    if (this.props.data.loading) return l.createElement(y._0, {
+                    if (this.props.data.loading) return c.createElement(h._1, {
                         fillContent: !0
                     });
                     if (!this.props.data || this.props.data.error || !this.props.data.currentUser || !this.props.data.currentUser.inventory.drops.nodes) return null;
@@ -151,163 +218,253 @@ webpackJsonp([53], {
                         n = t.map(function(t, n) {
                             return e.renderDrop(t, n)
                         });
-                    return l.createElement(y.W, {
+                    return c.createElement(h.Z, {
                         "data-test-selector": "drops-list_wrapper",
                         margin: {
                             y: 1
                         }
-                    }, l.createElement(y.W, {
-                        display: y.I.Flex
-                    }, l.createElement(y.W, {
+                    }, c.createElement(h.Z, {
+                        display: h.L.Flex
+                    }, c.createElement(h.Z, {
                         margin: {
                             right: 1
                         }
-                    }, l.createElement(y._24, {
-                        type: y._29.H3
-                    }, Object(d.d)("Drops", "DropsList"))), l.createElement(y._24, {
-                        type: y._29.H3,
-                        color: y.F.Alt2
-                    }, Object(d.e)(t.length))), l.createElement(y.W, {
+                    }, c.createElement(h._25, {
+                        type: h._30.H3
+                    }, Object(d.d)("Drops", "DropsList"))), c.createElement(h._25, {
+                        type: h._30.H3,
+                        color: h.I.Alt2
+                    }, Object(d.e)(t.length))), c.createElement(h.Z, {
                         margin: {
                             bottom: 1
                         }
-                    }, l.createElement(y._24, null, this.getDropsDescription(t))), n)
+                    }, c.createElement(h._25, null, this.getDropsDescription(t))), n)
                 }, t.prototype.postRender = function() {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
-                }, t = c.__decorate([Object(u.a)(E)], t)
-            }(l.Component),
-            N = Object(a.d)(Object(k.d)("DropsList"))(S),
-            F = n("+Znq"),
-            C = n("iMOk"),
-            w = n("CFVp"),
-            x = function(e) {
+                }, t = l.__decorate([Object(u.a)(S)], t)
+            }(c.Component),
+            j = Object(r.d)(Object(f.d)("DropsList"))(N),
+            C = n("Tzcg"),
+            F = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
-                    return t.bitsConfig = Object(w.a)(), t
+                    return t.renderEmote = function(e) {
+                        var t = Object(C.b)([e])[0],
+                            n = t.srcSet.split(", ").pop().split(" ").shift();
+                        return c.createElement(h.Z, {
+                            key: t.id,
+                            margin: {
+                                bottom: 2
+                            }
+                        }, c.createElement(h.j, {
+                            ratio: h.k.Aspect1x1
+                        }, c.createElement(h._21, {
+                            fullHeight: !0,
+                            fullWidth: !0,
+                            display: h.L.Flex,
+                            padding: 2,
+                            border: !0
+                        }, c.createElement(h.U, {
+                            fullHeight: !0,
+                            fullWidth: !0
+                        }, c.createElement("img", {
+                            src: n,
+                            title: t.displayName,
+                            alt: t.displayName
+                        })))), c.createElement(h._25, {
+                            type: h._30.Strong
+                        }, t.displayName))
+                    }, t
                 }
-                return c.__extends(t, e), t.prototype.render = function() {
+                return l.__extends(t, e), t.prototype.render = function() {
+                    if (this.props.loading) return c.createElement(h._1, {
+                        fillContent: !0
+                    });
+                    if (!this.props.emoteSets) return null;
+                    var e = new Map;
+                    this.props.emoteSets.forEach(function(t) {
+                        t.emotes.forEach(function(t) {
+                            e.set(t.id, t)
+                        })
+                    });
+                    var t = Array.from(e).sort(function(e, t) {
+                        var n = e[0],
+                            i = t[0];
+                        return n.localeCompare(i)
+                    }).map(function(e) {
+                        e[0];
+                        return e[1]
+                    }).map(this.renderEmote);
+                    return c.createElement(h.Z, {
+                        margin: {
+                            y: 1
+                        }
+                    }, c.createElement(h.Z, {
+                        display: h.L.Flex,
+                        margin: {
+                            bottom: 1
+                        }
+                    }, c.createElement(h.Z, {
+                        margin: {
+                            right: 1
+                        }
+                    }, c.createElement(h._25, {
+                        type: h._30.H3
+                    }, Object(d.d)("Emotes from Crates", "EmoticonsList"))), c.createElement(h._25, {
+                        type: h._30.H3,
+                        color: h.I.Alt2
+                    }, Object(d.e)(t.length))), c.createElement(h.Z, {
+                        margin: {
+                            bottom: 1
+                        }
+                    }, c.createElement(h._25, null, Object(d.d)("You can find your new emote in the emote selector for Chat, Pulse, Feeds, and Whispers.", "EmoticonsList"))), c.createElement(h._36, {
+                        childWidth: h._37.Small,
+                        placeholderItems: 8
+                    }, t))
+                }, t
+            }(c.Component),
+            x = Object(r.d)(Object(f.d)("EmoticonsList", {
+                autoReportInteractive: !0
+            }))(F),
+            w = n("+Znq"),
+            U = n("iMOk"),
+            T = n("CFVp"),
+            D = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.bitsConfig = Object(T.a)(), t
+                }
+                return l.__extends(t, e), t.prototype.render = function() {
                     var e = Object(d.d)("Inventory", "InventoryTitleBar");
-                    if (this.props.loading) return l.createElement(y._20, {
+                    if (this.props.loading) return c.createElement(h._21, {
                         className: "title-bar",
-                        display: y.I.Flex,
+                        display: h.L.Flex,
                         borderBottom: !0,
                         padding: {
                             bottom: 1
                         }
-                    }, l.createElement(y.W, {
+                    }, c.createElement(h.Z, {
                         flexGrow: 1
-                    }, l.createElement(y._24, {
-                        type: y._29.H2
-                    }, e)), l.createElement(y.W, {
-                        display: y.I.Flex,
+                    }, c.createElement(h._25, {
+                        type: h._30.H2
+                    }, e)), c.createElement(h.Z, {
+                        display: h.L.Flex,
                         margin: {
                             right: 3
                         },
-                        alignItems: y.c.Center
-                    }, l.createElement(y._4, {
+                        alignItems: h.c.Center
+                    }, c.createElement(h._5, {
                         width: 135,
                         height: 30
-                    })), l.createElement(y.W, {
-                        alignSelf: y.d.Baseline
-                    }, l.createElement(y._4, {
+                    })), c.createElement(h.Z, {
+                        alignSelf: h.d.Baseline
+                    }, c.createElement(h._5, {
                         width: 180,
                         height: 30
                     })));
                     var t = this.props.amazonMarketplaces.map(function(e) {
-                            return l.createElement(y.U, {
+                            return c.createElement(h.X, {
                                 key: e.id,
                                 linkTo: "https://" + e.orderHistoryRedirectURL,
                                 targetBlank: !0
                             }, e.displayText)
                         }),
                         n = Object(d.d)("You have {bitsComponent}", {
-                            bitsComponent: l.createElement(C.a, {
+                            bitsComponent: c.createElement(U.a, {
                                 count: this.props.bitsBalance,
                                 bitsConfig: this.bitsConfig,
                                 withImage: !0,
                                 withText: !0
                             })
                         }, "InventoryTitleBar");
-                    return l.createElement(y._20, {
+                    return c.createElement(h._21, {
                         className: "title-bar",
-                        display: y.I.Flex,
+                        display: h.L.Flex,
                         borderBottom: !0,
                         padding: {
                             bottom: 1
                         }
-                    }, l.createElement(y.W, {
+                    }, c.createElement(h.Z, {
                         flexGrow: 1
-                    }, l.createElement(y._24, {
-                        type: y._29.H2
-                    }, e)), l.createElement(y.W, {
-                        display: y.I.Flex,
+                    }, c.createElement(h._25, {
+                        type: h._30.H2
+                    }, e)), c.createElement(h.Z, {
+                        display: h.L.Flex,
                         margin: {
                             right: 3
                         },
-                        alignItems: y.c.Center
-                    }, l.createElement(y._24, null, n)), l.createElement(y.W, {
-                        alignSelf: y.d.Baseline
-                    }, l.createElement(F.a, null, l.createElement(y.u, {
-                        type: y.z.Hollow
-                    }, Object(d.d)("View your Twitch Order History", "InventoryTitleBar")), l.createElement(y.p, null, l.createElement(y.W, {
+                        alignItems: h.c.Center
+                    }, c.createElement(h._25, null, n)), c.createElement(h.Z, {
+                        alignSelf: h.d.Baseline
+                    }, c.createElement(w.a, null, c.createElement(h.u, {
+                        type: h.z.Hollow
+                    }, Object(d.d)("View your Twitch Order History", "InventoryTitleBar")), c.createElement(h.p, null, c.createElement(h.Z, {
                         padding: 1
                     }, t)))))
                 }, t
-            }(l.Component),
-            j = Object(a.d)(Object(k.d)("TitleBar", {
+            }(c.Component),
+            I = Object(r.d)(Object(f.d)("TitleBar", {
                 autoReportInteractive: !0
-            }))(x),
-            L = n("xpYL"),
-            T = function(e) {
+            }))(D),
+            R = n("xpYL"),
+            A = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.refetchData = function() {
                         t.props.data && t.props.data.refetch && t.props.data.refetch()
                     }, t
                 }
-                return c.__extends(t, e), t.prototype.componentDidMount = function() {
+                return l.__extends(t, e), t.prototype.componentDidMount = function() {
                     d.n.setPageTitle(Object(d.d)("Inventory", "InventoryPage"))
                 }, t.prototype.render = function() {
-                    if (!this.props.isLoggedIn) return this.props.onAnonymousVisit(), l.createElement(m.a, {
+                    if (!this.props.isLoggedIn) return this.props.onAnonymousVisit(), c.createElement(m.a, {
                         message: Object(d.d)("You must be logged in to view this page", "InventoryPage")
                     });
                     var e = !0,
                         t = [],
                         n = 0,
-                        i = [];
-                    return this.props.data.loading || this.props.data.error || (e = !1, t = this.props.data.currentUser.amazonMarketplaces, n = this.props.data.currentUser.bitsBalance, i = this.props.data.currentUser.crates), l.createElement(y.W, {
+                        i = [],
+                        r = [],
+                        a = [];
+                    return this.props.data.loading || this.props.data.error || (e = !1, t = this.props.data.currentUser.amazonMarketplaces, n = this.props.data.currentUser.bitsBalance, i = this.props.data.currentUser.availableBadges, r = this.props.data.currentUser.crates, a = this.props.data.currentUser.emoteSets), c.createElement(h.Z, {
                         className: "inventory",
                         padding: 3
-                    }, l.createElement(j, {
+                    }, c.createElement(I, {
                         bitsBalance: n,
                         loading: e,
                         amazonMarketplaces: t
-                    }), l.createElement(_, {
+                    }), c.createElement(O, {
                         refetchData: this.refetchData,
-                        crates: i,
+                        crates: r,
                         loading: e
-                    }), l.createElement(N, null))
-                }, t = c.__decorate([Object(u.a)(L)], t)
-            }(l.Component),
-            D = Object(a.d)(Object(k.d)("InventoryPage", {
+                    }), c.createElement(x, {
+                        emoteSets: a,
+                        loading: e
+                    }), c.createElement(y, {
+                        badges: i,
+                        loading: e
+                    }), c.createElement(j, null))
+                }, t = l.__decorate([Object(u.a)(R)], t)
+            }(c.Component),
+            Z = Object(r.d)(Object(f.d)("InventoryPage", {
                 autoReportInteractive: !0,
-                destination: v.a.Inventory
+                destination: g.a.Inventory
             }), Object(p.a)({
-                location: g.PageviewLocation.Inventory
-            }))(T),
-            I = Object(i.b)(function(e) {
+                location: v.PageviewLocation.Inventory
+            }))(A),
+            B = Object(i.b)(function(e) {
                 return {
                     isLoggedIn: Object(s.d)(e)
                 }
             }, function(e) {
-                return Object(a.b)({
+                return Object(r.b)({
                     onAnonymousVisit: function() {
-                        return Object(o.f)(r.a.InventoryPage)
+                        return Object(o.f)(a.a.InventoryPage)
                     }
                 }, e)
-            })(D);
+            })(Z);
         n.d(t, "InventoryPage", function() {
-            return I
+            return B
         })
     },
     Jc4Y: function(e, t) {},
@@ -511,37 +668,37 @@ webpackJsonp([53], {
         "use strict";
 
         function i(e) {
-            var t, n = Object(r.d)("{bitsAmount} Bits", {
+            var t, n = Object(a.d)("{bitsAmount} Bits", {
                 bitsAmount: e.count.toString()
             }, "Bits--BitsCount");
             if (e.withImage) {
                 var i = e.bitsConfig.indexedActions[s.f];
-                i || (i = Object(l.b)());
+                i || (i = Object(c.b)());
                 var m = i.orderedTiers.find(function(t) {
                     return t.bits <= e.count
                 });
                 if (m) {
-                    var u = Object(c.b)(m);
-                    return void 0 !== e.themeOverride && (e.themeOverride === o.a.Light ? u.dark = u.light : u.light = u.dark), t = a.createElement(d.a, {
+                    var u = Object(l.b)(m);
+                    return void 0 !== e.themeOverride && (e.themeOverride === o.a.Light ? u.dark = u.light : u.light = u.dark), t = r.createElement(d.a, {
                         className: "bits-count--img",
                         sources: u
-                    }), a.createElement("strong", {
+                    }), r.createElement("strong", {
                         className: "bits-count",
                         "data-a-target": "bits-count"
-                    }, a.createElement("span", null, t, " ", e.withText ? n : ""))
+                    }, r.createElement("span", null, t, " ", e.withText ? n : ""))
                 }
             }
-            return a.createElement("strong", {
+            return r.createElement("strong", {
                 className: "bits-count",
                 "data-a-target": "bits-count"
-            }, a.createElement("span", null, n))
+            }, r.createElement("span", null, n))
         }
-        var a = n("U7vG"),
-            r = n("6sO2"),
+        var r = n("U7vG"),
+            a = n("6sO2"),
             o = n("NXs7"),
             s = n("3iBR"),
-            c = n("iydZ"),
-            l = n("CFVp"),
+            l = n("iydZ"),
+            c = n("CFVp"),
             d = n("qe65");
         n("1pvm");
         n.d(t, "a", function() {
@@ -560,23 +717,23 @@ webpackJsonp([53], {
                             if (!(i.tracked || e.skip && e.skip(i.props))) {
                                 i.tracked = !0;
                                 var t = {};
-                                "function" == typeof e.properties ? t = e.properties(i.props) : e.properties && (t = a.__assign({}, e.properties));
-                                var n = a.__assign({}, i.props);
+                                "function" == typeof e.properties ? t = e.properties(i.props) : e.properties && (t = r.__assign({}, e.properties));
+                                var n = r.__assign({}, i.props);
                                 n.location && n.location.state && (t.medium = n.location.state.medium, t.content = n.location.state.content, t.content_index = n.location.state.content_index);
-                                var r = i.referenceTracking,
-                                    o = r.content,
-                                    s = r.medium,
-                                    l = r.content_index;
-                                c.n.tracking.trackPageview(a.__assign({
+                                var a = i.referenceTracking,
+                                    o = a.content,
+                                    s = a.medium,
+                                    c = a.content_index;
+                                l.n.tracking.trackPageview(r.__assign({
                                     content: o,
                                     medium: s,
-                                    content_index: l,
+                                    content_index: c,
                                     location: e.location
                                 }, t))
                             }
-                        }, c.i.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : c.i.warn("No latency tracker exists! This means no data will be sent to Spade.", e), i
+                        }, l.i.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : l.i.warn("No latency tracker exists! This means no data will be sent to Spade.", e), i
                     }
-                    return a.__extends(i, n), i.prototype.componentDidMount = function() {
+                    return r.__extends(i, n), i.prototype.componentDidMount = function() {
                         var e = this;
                         this.referenceTracking = this.stripTTParams(this.props.history.location), this.trackPageview(), this.props.history.listen(function(t, n) {
                             "REPLACE" !== n && (e.tracked = !1, e.referenceTracking = {})
@@ -584,9 +741,9 @@ webpackJsonp([53], {
                     }, i.prototype.componentDidUpdate = function() {
                         this.trackPageview()
                     }, i.prototype.render = function() {
-                        return o.createElement(t, a.__assign({}, this.props))
+                        return o.createElement(t, r.__assign({}, this.props))
                     }, i.prototype.stripTTParams = function(e) {
-                        var t = "" !== e.search ? r.parse(e.search) : {},
+                        var t = "" !== e.search ? a.parse(e.search) : {},
                             n = {
                                 content: t.tt_content,
                                 content_index: t.tt_content_index,
@@ -594,8 +751,8 @@ webpackJsonp([53], {
                             };
                         if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, n.medium || n.content) {
                             var i = "",
-                                a = r.stringify(t);
-                            a.length > 0 && (i = "?" + a), this.props.history.replace({
+                                r = a.stringify(t);
+                            r.length > 0 && (i = "?" + r), this.props.history.replace({
                                 pathname: e.pathname,
                                 hash: e.hash,
                                 search: i
@@ -607,11 +764,11 @@ webpackJsonp([53], {
                 return Object(s.f)(n)
             }
         }
-        var a = n("TToO"),
-            r = n("OAwv"),
+        var r = n("TToO"),
+            a = n("OAwv"),
             o = n("U7vG"),
             s = n("F8kA"),
-            c = n("6sO2");
+            l = n("6sO2");
         n.d(t, "a", function() {
             return i
         })
@@ -621,12 +778,12 @@ webpackJsonp([53], {
         t.a = function(e, t) {
             if (e) var n = setInterval(function() {
                 var i = !1,
-                    a = !1;
+                    r = !1;
                 try {
-                    i = e.closed, a = !!e.success
+                    i = e.closed, r = !!e.success
                 } catch (e) {}
-                if (i || a) {
-                    t(a);
+                if (i || r) {
+                    t(r);
                     try {
                         e.close()
                     } catch (e) {}
@@ -719,10 +876,10 @@ webpackJsonp([53], {
             return e.filter(function(e) {
                 if ("FragmentDefinition" !== e.kind) return !0;
                 var t = e.name.value;
-                return !r[t] && (r[t] = !0, !0)
+                return !a[t] && (a[t] = !0, !0)
             })
         }
-        var a = {
+        var r = {
             kind: "Document",
             definitions: [{
                 kind: "OperationDefinition",
@@ -833,7 +990,17 @@ webpackJsonp([53], {
                                             kind: "Name",
                                             value: "imageURL"
                                         },
-                                        arguments: [],
+                                        arguments: [{
+                                            kind: "Argument",
+                                            name: {
+                                                kind: "Name",
+                                                value: "size"
+                                            },
+                                            value: {
+                                                kind: "EnumValue",
+                                                value: "QUADRUPLE"
+                                            }
+                                        }],
                                         directives: []
                                     }, {
                                         kind: "Field",
@@ -910,19 +1077,19 @@ webpackJsonp([53], {
             }],
             loc: {
                 start: 0,
-                end: 328
+                end: 344
             }
         };
-        a.loc.source = {
-            body: '#import "twilight/features/fuel/models/amazon-marketplace.gql"\n#import "twilight/features/fuel/models/crate.gql"\nquery Inventory {\ncurrentUser{\nid\namazonMarketplaces {\n...amazonMarketplace\n}\nbitsBalance\ncrates {\n...crate\n}\navailableBadges(domains:CRATE){\nid\nimageURL\ntitle\n}\nemoteSets(domains:CRATE){\nid\nemotes{\nid\ntoken\n}\n}\n}\n}',
+        r.loc.source = {
+            body: '#import "twilight/features/fuel/models/amazon-marketplace.gql"\n#import "twilight/features/fuel/models/crate.gql"\nquery Inventory {\ncurrentUser{\nid\namazonMarketplaces {\n...amazonMarketplace\n}\nbitsBalance\ncrates {\n...crate\n}\navailableBadges(domains:CRATE){\nid\nimageURL(size:QUADRUPLE)\ntitle\n}\nemoteSets(domains:CRATE){\nid\nemotes{\nid\ntoken\n}\n}\n}\n}',
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
                 column: 1
             }
         };
-        var r = {};
-        a.definitions = a.definitions.concat(i(n("UP6l").definitions)), a.definitions = a.definitions.concat(i(n("l83l").definitions)), e.exports = a
+        var a = {};
+        r.definitions = r.definitions.concat(i(n("UP6l").definitions)), r.definitions = r.definitions.concat(i(n("l83l").definitions)), e.exports = r
     }
 });
-//# sourceMappingURL=pages.inventory-5038d5f2481d1e4b67018f3c617a29f4.js.map
+//# sourceMappingURL=pages.inventory-5c648443273d02fdc4ec8bd512db2d14.js.map
