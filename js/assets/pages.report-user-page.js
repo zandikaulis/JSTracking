@@ -38,40 +38,40 @@ webpackJsonp([59], {
                 return l.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive(), this.props.isLoggedIn || this.props.login()
                 }, t.prototype.render = function() {
-                    return c.createElement(k.Z, {
+                    return c.createElement(k.W, {
                         "data-test-selector": "report-user-page",
                         alignItems: k.c.Center,
-                        display: k.L.Flex,
-                        flexDirection: k.N.Column,
+                        display: k.I.Flex,
+                        flexDirection: k.K.Column,
                         fullHeight: !0,
                         padding: 3
                     }, this.renderPage())
                 }, t.prototype.renderPage = function() {
-                    return this.props.isLoggedIn ? this.props.userToReportData.error ? c.createElement(k.Z, {
+                    return this.props.isLoggedIn ? this.props.userToReportData.error ? c.createElement(k.W, {
                         margin: {
                             bottom: 1
                         }
-                    }, c.createElement(k._25, {
-                        fontSize: k.P.Size5
+                    }, c.createElement(k._24, {
+                        fontSize: k.M.Size5
                     }, Object(u.d)("There was an unexpected error. Please refresh the page and try again", "ReportUserPage"))) : this.props.userToReportData && !this.props.userToReportData.loading && this.props.userToReportData.user ? c.createElement(f.a, {
                         onClose: this.handleReportUserClose,
                         reportContext: this.getReportingContext(),
                         title: Object(u.d)("Report {channelName}", {
                             channelName: this.props.match.params.channelName
                         }, "ReportUserPage")
-                    }) : c.createElement(k._5, {
+                    }) : c.createElement(k._4, {
                         lineCount: 3
-                    }) : c.createElement(k.Z, {
+                    }) : c.createElement(k.W, {
                         "data-test-selector": "report-user-page__logged-out",
                         alignItems: k.c.Center,
-                        display: k.L.Flex,
-                        flexDirection: k.N.Column
-                    }, c.createElement(k.Z, {
+                        display: k.I.Flex,
+                        flexDirection: k.K.Column
+                    }, c.createElement(k.W, {
                         margin: {
                             bottom: 1
                         }
-                    }, c.createElement(k._25, {
-                        fontSize: k.P.Size5
+                    }, c.createElement(k._24, {
+                        fontSize: k.M.Size5
                     }, Object(u.d)("You must be logged in to report {channelName}. Please log in to complete.", {
                         channelName: this.props.match.params.channelName
                     }, "ReportUserPage"))), c.createElement(k.u, {
@@ -192,4 +192,4 @@ webpackJsonp([59], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.report-user-page-df18dc4b3c34955d1efb31557be13034.js.map
+//# sourceMappingURL=pages.report-user-page-94893c2ffdd150438b795ed5b22766cc.js.map
