@@ -83,36 +83,36 @@ webpackJsonp([60], {
                     }, n
                 }
                 return v.__extends(t, e), t.prototype.render = function() {
-                    for (var e = [], t = 0; t < this.state.colA; t++) e.push(u.createElement(k.Z, {
+                    for (var e = [], t = 0; t < this.state.colA; t++) e.push(u.createElement(k.W, {
                         key: t,
-                        display: k.L.Flex,
-                        flexWrap: k.O.NoWrap,
+                        display: k.I.Flex,
+                        flexWrap: k.L.NoWrap,
                         margin: 1
-                    }, u.createElement(k.Z, {
+                    }, u.createElement(k.W, {
                         margin: {
                             right: 1
                         }
-                    }, u.createElement(k._5, {
+                    }, u.createElement(k._4, {
                         height: 90,
                         width: 90
-                    })), u.createElement(k.Z, null, u.createElement(k._5, {
+                    })), u.createElement(k.W, null, u.createElement(k._4, {
                         width: 300,
                         lineCount: 3
                     }))));
                     var n = [];
-                    for (t = 0; t < this.state.colB; t++) n.push(u.createElement(k.Z, {
+                    for (t = 0; t < this.state.colB; t++) n.push(u.createElement(k.W, {
                         key: t,
-                        display: k.L.Flex,
-                        flexWrap: k.O.NoWrap,
+                        display: k.I.Flex,
+                        flexWrap: k.L.NoWrap,
                         margin: 1
-                    }, u.createElement(k.Z, {
+                    }, u.createElement(k.W, {
                         margin: {
                             right: 1
                         }
-                    }, u.createElement(k._5, {
+                    }, u.createElement(k._4, {
                         height: 90,
                         width: 90
-                    })), u.createElement(k.Z, null, u.createElement(k._5, {
+                    })), u.createElement(k.W, null, u.createElement(k._4, {
                         width: 300,
                         lineCount: 3
                     }))));
@@ -123,20 +123,20 @@ webpackJsonp([60], {
                     };
                     return u.createElement("div", {
                         style: l
-                    }, u.createElement(p.b, null, u.createElement(k.Z, {
-                        display: k.L.Flex,
-                        flexWrap: k.O.NoWrap
-                    }, u.createElement(k.Z, {
+                    }, u.createElement(p.b, null, u.createElement(k.W, {
+                        display: k.I.Flex,
+                        flexWrap: k.L.NoWrap
+                    }, u.createElement(k.W, {
                         margin: {
                             right: 1
                         }
-                    }, e, this.state.loadingA && u.createElement(k.Z, null, u.createElement(k._1, {
+                    }, e, this.state.loadingA && u.createElement(k.W, null, u.createElement(k._0, {
                         fillContent: !0
                     })), u.createElement(p.a, {
                         enabled: !0,
                         loadMore: this.loadMoreA,
                         pixelThreshold: 0
-                    })), u.createElement(k.Z, null, n, this.state.loadingB && u.createElement(k.Z, null, u.createElement(k._1, {
+                    })), u.createElement(k.W, null, n, this.state.loadingB && u.createElement(k.W, null, u.createElement(k._0, {
                         fillContent: !0
                     })), u.createElement(p.a, {
                         contentLength: n.length,
@@ -234,12 +234,12 @@ webpackJsonp([60], {
                     }
                 }, "Internal Link with location state, including tt_codes")), u.createElement("li", null, u.createElement(d.a, {
                     to: "/adamar/dashboard"
-                }, "Legacy Link (dashbaord)"))), u.createElement(k.Z, {
+                }, "Legacy Link (dashbaord)"))), u.createElement(k.W, {
                     margin: {
                         top: 2
                     }
-                }, u.createElement(k._25, {
-                    type: k._30.H2
+                }, u.createElement(k._24, {
+                    type: k._29.H2
                 }, " Infinite Scroll Test"), u.createElement(f, null))))
             }),
             _ = n("3zLD"),
@@ -292,7 +292,7 @@ webpackJsonp([60], {
                     })
                 }, t
             }(u.Component),
-            O = function() {
+            C = function() {
                 return u.createElement(m.d, null, u.createElement(m.b, {
                     path: "/_dev/gql",
                     component: L
@@ -302,7 +302,7 @@ webpackJsonp([60], {
                 }))
             };
         n.d(t, "DevOnlyRoot", function() {
-            return O
+            return C
         })
     },
     z7vJ: function(e, t) {
@@ -465,4 +465,4 @@ webpackJsonp([60], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.dev-only-43fb9bc8a5208b079083adfba9ba046f.js.map
+//# sourceMappingURL=pages.dev-only-64b862d6202a76250b54bed163d89a08.js.map

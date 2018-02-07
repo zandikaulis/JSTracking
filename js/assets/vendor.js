@@ -8219,11 +8219,6 @@ webpackJsonp([62], {
                         return t.relativeFormatters[u] || (t.relativeFormatters[u] = new i(a, s)), t.relativeFormatters[u].format(e, {
                             now: o
                         })
-                    }, this.formatPastRelativeDate = function(e, n) {
-                        var o;
-                        return o = n && n.now ? n.now : new Date, e > o && (e = o), t.formatRelativeDate(e, r.__assign({}, n, {
-                            now: o
-                        }))
                     }, this.internalFormatMessage = function(e, n, r) {
                         var i = {};
                         "string" == typeof n ? r = n : n && (i = n);
@@ -11048,7 +11043,7 @@ webpackJsonp([62], {
         })
     },
     F2sf: function(e, t) {
-        var n = "/public/www/service-worker.js";
+        var n = "/service-worker.js";
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.default = {
@@ -37210,4 +37205,4 @@ webpackJsonp([62], {
         e.exports = l
     }
 });
-//# sourceMappingURL=vendor-d613be12ea648cdea9a84234af99b0dc.js.map
+//# sourceMappingURL=vendor-128c346a9442245620332c7c735c08c2.js.map
