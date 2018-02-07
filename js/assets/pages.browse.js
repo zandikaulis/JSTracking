@@ -17,7 +17,7 @@ webpackJsonp([51], {
             e[e.Hearthstone = 0] = "Hearthstone", e[e.LeagueOfLegends = 1] = "LeagueOfLegends", e[e.Overwatch = 2] = "Overwatch"
         }(a || (a = {}));
         var y = this,
-            f = function() {
+            v = function() {
                 return r.__awaiter(y, void 0, void 0, function() {
                     return r.__generator(this, function(e) {
                         switch (e.label) {
@@ -29,7 +29,7 @@ webpackJsonp([51], {
                     })
                 })
             },
-            v = function() {
+            f = function() {
                 return r.__awaiter(y, void 0, void 0, function() {
                     return r.__generator(this, function(e) {
                         switch (e.label) {
@@ -69,19 +69,19 @@ webpackJsonp([51], {
                             }), t.getOverwatchData())
                         }
                     }, t.renderIcon = function(e, t, n, a, r, o) {
-                        return n ? i.createElement(b.W, {
-                            display: b.I.Flex,
-                            flexDirection: b.K.Column,
+                        return n ? i.createElement(b.Z, {
+                            display: b.L.Flex,
+                            flexDirection: b.N.Column,
                             alignItems: b.c.Center,
-                            justifyContent: b.V.Center,
+                            justifyContent: b.Y.Center,
                             fullHeight: !0,
                             margin: {
                                 left: 1
                             }
-                        }, i.createElement(b._32, {
-                            direction: b._34.Left,
+                        }, i.createElement(b._33, {
+                            direction: b._35.Left,
                             label: e
-                        }, i.createElement(b.W, {
+                        }, i.createElement(b.Z, {
                             className: "metadata-icon"
                         }, i.createElement("div", {
                             style: {
@@ -100,7 +100,7 @@ webpackJsonp([51], {
                             return r.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
-                                        return a.trys.push([0, 2, , 3]), [4, f()];
+                                        return a.trys.push([0, 2, , 3]), [4, v()];
                                     case 1:
                                         return e = a.sent(), this.didUnmount ? [2] : (t = {}, e[0].Class.forEach(function(e) {
                                             t[e.class] = e
@@ -126,7 +126,7 @@ webpackJsonp([51], {
                             return r.__generator(this, function(r) {
                                 switch (r.label) {
                                     case 0:
-                                        return r.trys.push([0, 2, , 3]), [4, v()];
+                                        return r.trys.push([0, 2, , 3]), [4, f()];
                                     case 1:
                                         if (e = r.sent(), this.didUnmount) return [2];
                                         for (t = !1, n = void 0, a = 0, i = e; a < i.length && (n = i[a], !t); a++)
@@ -205,12 +205,12 @@ webpackJsonp([51], {
                     })
                 }, t.prototype.render = function() {
                     var e = null;
-                    !0 !== this.state.isPremiereExperimentActive && this.props.vodcast && (e = i.createElement(b.W, {
-                        display: b.I.InlineBlock,
+                    !0 !== this.state.isPremiereExperimentActive && this.props.vodcast && (e = i.createElement(b.Z, {
+                        display: b.L.InlineBlock,
                         padding: {
                             right: .5
                         }
-                    }, i.createElement(b._2, {
+                    }, i.createElement(b._3, {
                         label: Object(s.d)("Vodcast", "LiveChannelCard")
                     })));
                     var t = Object(s.d)("{viewerCount, plural, one {# viewer on {channel}} other {# viewers on {channel}}}", {
@@ -223,9 +223,9 @@ webpackJsonp([51], {
                     }, "Live Channel Card");
                     return i.createElement("div", r.__assign({
                         className: "live-channel-card"
-                    }, Object(b._42)(this.props)), i.createElement(b.A, {
+                    }, Object(b._43)(this.props)), i.createElement(b.A, {
                         key: this.props.title
-                    }, i.createElement(b.W, {
+                    }, i.createElement(b.Z, {
                         fullWidth: !0
                     }, i.createElement(b.j, {
                         overflow: !0
@@ -234,37 +234,37 @@ webpackJsonp([51], {
                         title: this.props.title,
                         "data-a-target": "live-channel-card-thumbnail-link"
                     }, i.createElement(b.C, {
-                        imageAlt: this.props.imageAlt,
-                        imageSrc: this.props.imageSrc,
+                        alt: this.props.imageAlt,
+                        src: this.props.imageSrc,
                         aspect: b.k.Aspect16x9
-                    }), this.renderContentType()), this.renderGameBoxArt()))), i.createElement(b.B, null, i.createElement(b.W, {
-                        display: b.I.Flex,
-                        flexWrap: b.L.NoWrap
-                    }, i.createElement(b.W, {
+                    }), this.renderContentType()), this.renderGameBoxArt()))), i.createElement(b.B, null, i.createElement(b.Z, {
+                        display: b.L.Flex,
+                        flexWrap: b.O.NoWrap
+                    }, i.createElement(b.Z, {
                         flexGrow: 1,
-                        fullWidth: !0
+                        ellipsis: !0
                     }, i.createElement(o.a, {
                         to: this.props.linkTo,
                         className: "live-channel-card__channel",
                         "data-a-target": "live-channel-card-title-link"
-                    }, i.createElement(b.R, {
+                    }, i.createElement(b.U, {
                         margin: {
                             top: .5
                         }
-                    }, i.createElement(b._24, {
-                        type: b._29.H3,
-                        fontSize: b.M.Size5,
-                        lineHeight: b.X.Body,
+                    }, i.createElement(b._25, {
+                        type: b._30.H3,
+                        fontSize: b.P.Size5,
+                        lineHeight: b._0.Body,
                         ellipsis: !0,
                         className: "live-channel-card__title"
-                    }, this.props.title))), i.createElement(b.W, {
+                    }, this.props.title))), i.createElement(b.Z, {
                         className: "live-channel-card__meta",
-                        display: b.I.Flex,
-                        flexWrap: b.L.NoWrap
-                    }, e, i.createElement(b._24, {
-                        type: b._29.Span,
+                        display: b.L.Flex,
+                        flexWrap: b.O.NoWrap
+                    }, e, i.createElement(b._25, {
+                        type: b._30.Span,
                         ellipsis: !0
-                    }, t))), i.createElement(b.W, {
+                    }, t))), i.createElement(b.Z, {
                         flexGrow: 0,
                         flexShrink: 0
                     }, this.renderStreamMetadata())))))
@@ -276,23 +276,23 @@ webpackJsonp([51], {
                         to: e,
                         title: t,
                         "data-a-target": "live-channel-card-game-link"
-                    }, i.createElement(b._20, {
+                    }, i.createElement(b._21, {
                         className: "live-channel-card__boxart",
-                        position: b._5.Absolute,
+                        position: b._6.Absolute,
                         attachRight: !0,
                         attachBottom: !0
-                    }, i.createElement(b._32, {
-                        display: b.I.Block,
-                        direction: b._34.Bottom,
+                    }, i.createElement(b._33, {
+                        display: b.L.Block,
+                        direction: b._35.Bottom,
                         label: t
                     }, i.createElement(b.C, {
-                        imageSrc: n,
-                        imageAlt: t,
+                        src: n,
+                        alt: t,
                         aspect: b.k.BoxArt
                     })))) : null
                 }, t.prototype.renderContentType = function() {
-                    return !0 !== this.state.isPremiereExperimentActive ? null : "string" == typeof this.props.streamType && this.props.streamType ? i.createElement(b.W, {
-                        position: b._5.Absolute,
+                    return !0 !== this.state.isPremiereExperimentActive ? null : "string" == typeof this.props.streamType && this.props.streamType ? i.createElement(b.Z, {
+                        position: b._6.Absolute,
                         attachLeft: !0,
                         attachTop: !0,
                         padding: .5
@@ -822,13 +822,13 @@ webpackJsonp([51], {
                             a = n.parentElement && n.parentElement.getAttribute("data-language-code");
                         a && t.props.updateLanguagePreferences(a, n.checked)
                     }, t.renderLanguageOption = function(e) {
-                        return l.createElement(g.W, {
+                        return l.createElement(g.Z, {
                             padding: {
                                 x: 1,
                                 y: .5
                             },
                             key: e.code
-                        }, l.createElement(g.E, {
+                        }, l.createElement(g.H, {
                             label: e.label,
                             checked: t.props.languagePreferences.includes(e.code),
                             "data-language-code": e.code,
@@ -841,21 +841,21 @@ webpackJsonp([51], {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     var e = this.props.languagePreferences.length;
-                    return l.createElement(g.W, {
+                    return l.createElement(g.Z, {
                         className: "language-select-menu"
                     }, l.createElement(u.a, null, l.createElement(g.u, {
                         "data-test-selector": "language-dropdown-button",
                         "data-a-target": "language-filter-dropdown",
                         dropdown: !0,
                         type: g.z.Hollow
-                    }, l.createElement(g.W, {
-                        display: g.I.Flex
-                    }, Object(d.d)("Language", "LanguageSelectMenu"), l.createElement(g.W, {
+                    }, l.createElement(g.Z, {
+                        display: g.L.Flex
+                    }, Object(d.d)("Language", "LanguageSelectMenu"), l.createElement(g.Z, {
                         margin: {
                             left: .5
                         }
-                    }, 0 !== e && l.createElement(g._2, {
-                        type: g._3.Brand,
+                    }, 0 !== e && l.createElement(g._3, {
+                        type: g._4.Brand,
                         label: e.toString()
                     })))), l.createElement(g.p, {
                         direction: g.q.BottomLeft,
@@ -863,9 +863,9 @@ webpackJsonp([51], {
                         "data-a-target": "language-filter-balloon"
                     }, l.createElement(c.b, {
                         className: "language-select-menu__balloon"
-                    }, l.createElement(g.W, {
+                    }, l.createElement(g.Z, {
                         padding: .5
-                    }, Object(m.b)().map(this.renderLanguageOption))), l.createElement(g._20, {
+                    }, Object(m.b)().map(this.renderLanguageOption))), l.createElement(g._21, {
                         background: g.m.Alt,
                         borderTop: !0,
                         className: "language-select-menu__footer"
@@ -893,19 +893,19 @@ webpackJsonp([51], {
     "7FW4": function(e, t, n) {
         "use strict";
         t.a = function(e) {
-            var t = a.createElement(o.W, {
+            var t = a.createElement(o.Z, {
                 padding: 1,
                 fullHeight: !0,
-                flexDirection: o.K.Column,
-                justifyContent: o.V.Center,
-                display: o.I.Flex
-            }, a.createElement(o._24, {
-                color: o.F.Link,
-                fontSize: o.M.Size4,
+                flexDirection: o.N.Column,
+                justifyContent: o.Y.Center,
+                display: o.L.Flex
+            }, a.createElement(o._25, {
+                color: o.I.Link,
+                fontSize: o.P.Size4,
                 noWrap: !0
-            }, Object(i.d)("View All", "Following--ViewAllButton")), a.createElement(o._24, {
-                color: o.F.Alt2,
-                fontSize: o.M.Size4,
+            }, Object(i.d)("View All", "Following--ViewAllButton")), a.createElement(o._25, {
+                color: o.I.Alt2,
+                fontSize: o.P.Size4,
                 noWrap: !0
             }, e.subHeader));
             return e.linkTo && (t = a.createElement(r.a, {
@@ -915,9 +915,9 @@ webpackJsonp([51], {
                 className: "following__view-all",
                 onClick: e.onClickViewAll,
                 "data-test-selector": l
-            }, a.createElement(o.W, null, a.createElement(o.j, {
+            }, a.createElement(o.Z, null, a.createElement(o.j, {
                 ratio: e.aspectRatio
-            }, a.createElement(o._20, {
+            }, a.createElement(o._21, {
                 background: o.m.Alt2,
                 fullHeight: !0
             }, t))))
@@ -1078,8 +1078,8 @@ webpackJsonp([51], {
             g = n("jetF"),
             h = n("7vx8"),
             y = n("CSlQ"),
-            f = n("3zLD"),
-            v = n("+8VM"),
+            v = n("3zLD"),
+            f = n("+8VM"),
             b = n("oIkB"),
             k = function(e) {
                 switch (e) {
@@ -1107,13 +1107,13 @@ webpackJsonp([51], {
                         error: "",
                         reason: ""
                     }, t.renderErrorMessage = function() {
-                        return t.state.error ? r.createElement(_.W, {
+                        return t.state.error ? r.createElement(_.Z, {
                             margin: {
                                 bottom: 2
                             }
-                        }, r.createElement(_._24, {
-                            color: _.F.Error,
-                            type: _._29.H4,
+                        }, r.createElement(_._25, {
+                            color: _.I.Error,
+                            type: _._30.H4,
                             "data-test-selector": C
                         }, k(t.state.error))) : null
                     }, t.onReasonChange = function(e) {
@@ -1157,43 +1157,43 @@ webpackJsonp([51], {
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(_.R, {
-                        position: _._5.Relative
-                    }, r.createElement(_._20, {
+                    return r.createElement(_.U, {
+                        position: _._6.Relative
+                    }, r.createElement(_._21, {
                         background: _.m.Base,
                         className: "stream-ban-modal"
-                    }, r.createElement(_.W, {
+                    }, r.createElement(_.Z, {
                         padding: 2
-                    }, this.renderErrorMessage(), r.createElement(_.W, {
+                    }, this.renderErrorMessage(), r.createElement(_.Z, {
                         margin: {
                             bottom: 2
                         }
-                    }, r.createElement(_._24, {
-                        type: _._29.H4
+                    }, r.createElement(_._25, {
+                        type: _._30.H4
                     }, Object(i.d)("Are you sure you want to ban {name}?", {
                         name: this.props.username
-                    }, "StreamBanModal"))), r.createElement(_._20, {
+                    }, "StreamBanModal"))), r.createElement(_._21, {
                         borderTop: !0
-                    }, r.createElement(_.W, {
+                    }, r.createElement(_.Z, {
                         margin: {
                             y: 2
                         }
-                    }, r.createElement(_._24, {
+                    }, r.createElement(_._25, {
                         bold: !0
-                    }, Object(i.d)("Reason (Required)", "StreamBanModal")), r.createElement(_.S, {
-                        type: _.T.Text,
+                    }, Object(i.d)("Reason (Required)", "StreamBanModal")), r.createElement(_.V, {
+                        type: _.W.Text,
                         placeholder: Object(i.d)("Please be as detailed as possible", "StreamBanModal"),
                         onChange: this.onReasonChange,
                         "data-test-selector": "reason-input"
-                    }))), r.createElement(_._20, {
+                    }))), r.createElement(_._21, {
                         borderTop: !0
-                    }, r.createElement(_.W, {
+                    }, r.createElement(_.Z, {
                         padding: {
                             top: 2
                         },
-                        textAlign: _._25.Center
-                    }, r.createElement(_.W, {
-                        display: _.I.Inline,
+                        textAlign: _._26.Center
+                    }, r.createElement(_.Z, {
+                        display: _.L.Inline,
                         margin: {
                             x: 1
                         }
@@ -1201,8 +1201,8 @@ webpackJsonp([51], {
                         type: _.z.Text,
                         onClick: this.props.onCloseModal,
                         "data-test-selector": "cancel-button"
-                    }, Object(i.d)("Cancel", "StreamBanModal"))), r.createElement(_.W, {
-                        display: _.I.Inline,
+                    }, Object(i.d)("Cancel", "StreamBanModal"))), r.createElement(_.Z, {
+                        display: _.L.Inline,
                         margin: {
                             x: 1
                         }
@@ -1210,12 +1210,12 @@ webpackJsonp([51], {
                         onClick: this.banUserFromCommunity,
                         disabled: !this.state.reason.length,
                         "data-test-selector": "ban-button"
-                    }, Object(i.d)("Ban", "StreamBanModal")))))), r.createElement(v.a, {
+                    }, Object(i.d)("Ban", "StreamBanModal")))))), r.createElement(f.a, {
                         closeOnBackdropClick: !0
                     })))
                 }, t
             }(r.Component),
-            E = Object(f.compose)(Object(h.a)(S, {
+            E = Object(v.compose)(Object(h.a)(S, {
                 name: "banUserFromCommunity"
             }))(w),
             N = Object(u.b)(null, function(e) {
@@ -1225,7 +1225,7 @@ webpackJsonp([51], {
             })(E),
             O = (n("npyu"), n("plcU")),
             T = "error-message",
-            I = function(e) {
+            P = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -1233,13 +1233,13 @@ webpackJsonp([51], {
                         error: "",
                         reason: ""
                     }, t.renderErrorMessage = function() {
-                        return t.state.error ? r.createElement(_.W, {
+                        return t.state.error ? r.createElement(_.Z, {
                             margin: {
                                 bottom: 2
                             }
-                        }, r.createElement(_._24, {
-                            color: _.F.Error,
-                            type: _._29.H4,
+                        }, r.createElement(_._25, {
+                            color: _.I.Error,
+                            type: _._30.H4,
                             "data-test-selector": T
                         }, k(t.state.error))) : null
                     }, t.onReasonChange = function(e) {
@@ -1290,41 +1290,41 @@ webpackJsonp([51], {
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(_.R, {
-                        position: _._5.Relative
-                    }, r.createElement(_._20, {
+                    return r.createElement(_.U, {
+                        position: _._6.Relative
+                    }, r.createElement(_._21, {
                         background: _.m.Base,
                         className: "stream-timeout-modal"
-                    }, r.createElement(_.W, {
+                    }, r.createElement(_.Z, {
                         padding: 2
-                    }, this.renderErrorMessage(), r.createElement(_.W, {
+                    }, this.renderErrorMessage(), r.createElement(_.Z, {
                         margin: {
                             bottom: 2
                         }
-                    }, r.createElement(_._24, {
-                        type: _._29.H4
+                    }, r.createElement(_._25, {
+                        type: _._30.H4
                     }, Object(i.d)("Are you sure you want to timeout {name}?", {
                         name: this.props.username
-                    }, "StreamTimeoutModal"))), r.createElement(_._20, {
+                    }, "StreamTimeoutModal"))), r.createElement(_._21, {
                         borderTop: !0
-                    }, r.createElement(_.W, {
+                    }, r.createElement(_.Z, {
                         margin: {
                             y: 2
                         }
-                    }, r.createElement(_._24, {
+                    }, r.createElement(_._25, {
                         bold: !0
-                    }, Object(i.d)("Reason (Required)", "StreamTimeoutModal")), r.createElement(_.S, {
-                        type: _.T.Text,
+                    }, Object(i.d)("Reason (Required)", "StreamTimeoutModal")), r.createElement(_.V, {
+                        type: _.W.Text,
                         placeholder: Object(i.d)("Please be as detailed as possible", "StreamTimeoutModal"),
                         onChange: this.onReasonChange,
                         "data-test-selector": "reason-input"
-                    }))), r.createElement(_.W, {
+                    }))), r.createElement(_.Z, {
                         margin: {
                             y: 2
                         }
-                    }, r.createElement(_._24, {
+                    }, r.createElement(_._25, {
                         bold: !0
-                    }, Object(i.d)("Duration", "StreamTimeoutModal")), r.createElement(_._17, {
+                    }, Object(i.d)("Duration", "StreamTimeoutModal")), r.createElement(_._18, {
                         defaultValue: "2",
                         onChange: this.onDurationHoursChange
                     }, r.createElement("option", {
@@ -1337,15 +1337,15 @@ webpackJsonp([51], {
                         value: "12"
                     }, Object(i.d)("12 hours", "StreamTimeoutModal")), r.createElement("option", {
                         value: "24"
-                    }, Object(i.d)("24 hours", "StreamTimeoutModal")))), r.createElement(_._20, {
+                    }, Object(i.d)("24 hours", "StreamTimeoutModal")))), r.createElement(_._21, {
                         borderTop: !0
-                    }, r.createElement(_.W, {
+                    }, r.createElement(_.Z, {
                         padding: {
                             top: 2
                         },
-                        textAlign: _._25.Center
-                    }, r.createElement(_.W, {
-                        display: _.I.Inline,
+                        textAlign: _._26.Center
+                    }, r.createElement(_.Z, {
+                        display: _.L.Inline,
                         margin: {
                             x: 1
                         }
@@ -1353,8 +1353,8 @@ webpackJsonp([51], {
                         type: _.z.Text,
                         onClick: this.props.onCloseModal,
                         "data-test-selector": "cancel-button"
-                    }, Object(i.d)("Cancel", "StreamTimeoutModal"))), r.createElement(_.W, {
-                        display: _.I.Inline,
+                    }, Object(i.d)("Cancel", "StreamTimeoutModal"))), r.createElement(_.Z, {
+                        display: _.L.Inline,
                         margin: {
                             x: 1
                         }
@@ -1362,20 +1362,20 @@ webpackJsonp([51], {
                         onClick: this.timeoutUserFromCommunity,
                         disabled: !this.state.reason.length,
                         "data-test-selector": "timeout-button"
-                    }, Object(i.d)("Timeout", "StreamTimeoutModal")))))), r.createElement(v.a, {
+                    }, Object(i.d)("Timeout", "StreamTimeoutModal")))))), r.createElement(f.a, {
                         closeOnBackdropClick: !0
                     })))
                 }, t
             }(r.Component),
-            P = Object(f.compose)(Object(h.a)(O, {
+            L = Object(v.compose)(Object(h.a)(O, {
                 name: "timeoutUserFromCommunity"
-            }))(I),
-            D = Object(u.b)(null, function(e) {
+            }))(P),
+            I = Object(u.b)(null, function(e) {
                 return Object(m.b)({
                     onCloseModal: p.c
                 }, e)
-            })(P),
-            L = n("PO03"),
+            })(L),
+            D = n("PO03"),
             j = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -1390,7 +1390,7 @@ webpackJsonp([51], {
                         })
                     }, t.onStreamTimeoutClick = function() {
                         var e = Object(s.a)(t.props.login, t.props.displayName, !0);
-                        t.props.onShowModal(D, {
+                        t.props.onShowModal(I, {
                             communityID: t.props.data.community.id,
                             communityName: t.props.communityName,
                             currentUserID: t.props.data.currentUser.id,
@@ -1402,33 +1402,33 @@ webpackJsonp([51], {
                 return a.__extends(t, e), t.prototype.render = function() {
                     return this.props.data && !this.props.data.loading && !this.props.data.error && this.props.data.community && this.props.data.community.self && (this.props.data.community.self.permissions.banning || this.props.data.community.self.permissions.timingOut) ? r.createElement(g.a, null, r.createElement(_.v, {
                         ariaLabel: Object(i.d)("Moderation", "DirectoryGamePage"),
-                        icon: _._12.ChatRiskFlag
+                        icon: _._13.ChatRiskFlag
                     }), r.createElement(_.p, {
                         direction: _.q.BottomRight,
                         size: _.r.ExtraSmall,
                         offsetX: "1rem"
                     }, this.renderBanInteractable(), this.renderTimeoutInteractable())) : null
                 }, t.prototype.renderBanInteractable = function() {
-                    return this.props.data.community.self.permissions.banning ? r.createElement(_.U, {
+                    return this.props.data.community.self.permissions.banning ? r.createElement(_.X, {
                         onClick: this.onStreamBanClick,
                         "data-test-selector": "ban-selector"
-                    }, r.createElement(_.W, {
+                    }, r.createElement(_.Z, {
                         padding: {
                             y: .5,
                             x: 1
                         }
                     }, Object(i.d)("Ban", "StreamFlag"))) : null
                 }, t.prototype.renderTimeoutInteractable = function() {
-                    return this.props.data.community.self.permissions.timingOut ? r.createElement(_.U, {
+                    return this.props.data.community.self.permissions.timingOut ? r.createElement(_.X, {
                         onClick: this.onStreamTimeoutClick,
                         "data-test-selector": "timeout-selector"
-                    }, r.createElement(_.W, {
+                    }, r.createElement(_.Z, {
                         padding: {
                             y: .5,
                             x: 1
                         }
                     }, Object(i.d)("Timeout", "StreamFlag"))) : null
-                }, t = a.__decorate([Object(h.a)(L, {
+                }, t = a.__decorate([Object(h.a)(D, {
                     options: function(e) {
                         return {
                             fetchPolicy: "network-only",
@@ -1441,12 +1441,12 @@ webpackJsonp([51], {
                     autoReportInteractive: !0
                 })], t)
             }(r.Component),
-            F = Object(u.b)(null, function(e) {
+            R = Object(u.b)(null, function(e) {
                 return Object(m.b)({
                     onShowModal: p.d
                 }, e)
             })(j),
-            R = n("PLRK"),
+            F = n("PLRK"),
             x = (n("GiGb"), "directory-game__card_container"),
             A = function(e) {
                 function t() {
@@ -1464,12 +1464,12 @@ webpackJsonp([51], {
                         }
                     }, t.renderStreamFlag = function() {
                         var e = t.props.streamNode;
-                        return e.broadcaster ? t.props.directoryType === c.a.Communities && t.props.directoryName ? r.createElement(_.W, {
+                        return e.broadcaster ? t.props.directoryType === c.a.Communities && t.props.directoryName ? r.createElement(_.Z, {
                             className: "stream-thumbnail__card stream-thumbnail__card-flag",
-                            position: _._5.Absolute,
+                            position: _._6.Absolute,
                             attachTop: !0,
                             attachRight: !0
-                        }, r.createElement(F, {
+                        }, r.createElement(R, {
                             communityName: t.props.directoryName,
                             login: e.broadcaster.login,
                             displayName: e.broadcaster.displayName,
@@ -1488,9 +1488,9 @@ webpackJsonp([51], {
                         style: {
                             order: t
                         }
-                    }, r.createElement(_.W, {
+                    }, r.createElement(_.Z, {
                         className: "stream-thumbnail__card",
-                        position: _._5.Relative,
+                        position: _._6.Relative,
                         margin: {
                             bottom: 2
                         },
@@ -1499,7 +1499,7 @@ webpackJsonp([51], {
                         imageSrc: e.previewImageURL || i.a.defaultStreamPreviewURL,
                         imageAlt: e.broadcaster.login + " cover image",
                         viewerCount: e.viewersCount || 0,
-                        title: e.title || R.a,
+                        title: e.title || F.a,
                         channelName: Object(s.a)(e.broadcaster.login, e.broadcaster.displayName, !0),
                         gameImageSrc: this.shouldShowGame("boxArtURL") || i.a.defaultBoxArtURL,
                         gameTitle: this.shouldShowGame("name"),
@@ -1651,7 +1651,7 @@ webpackJsonp([51], {
 
         function r(e) {
             switch (e) {
-                case P.a.Relevancy:
+                case L.a.Relevancy:
                     return Object(c.d)("Relevancy", "BrowseHeader");
                 default:
                     return Object(c.d)("Popularity", "BrowseHeader")
@@ -1671,8 +1671,8 @@ webpackJsonp([51], {
             g = n("CSlQ"),
             h = n("RH2O"),
             y = n("2KeS"),
-            f = n("UAN1"),
-            v = n("F8kA"),
+            v = n("UAN1"),
+            f = n("F8kA"),
             b = n("yWCw"),
             k = n("zCIC"),
             _ = n("7vx8"),
@@ -1683,13 +1683,13 @@ webpackJsonp([51], {
             N = n("QG7y"),
             O = n("eXld"),
             T = n("dzKs"),
-            I = n("v5ho"),
-            P = n("r4vp"),
-            D = n("Odds"),
-            L = n("lYCI"),
+            P = n("v5ho"),
+            L = n("r4vp"),
+            I = n("Odds"),
+            D = n("lYCI"),
             j = "directory-first-item",
-            F = "directory-container",
-            R = function(e) {
+            R = "directory-container",
+            F = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -1697,7 +1697,7 @@ webpackJsonp([51], {
                     }, t.onWindowResize = function() {
                         return requestAnimationFrame(t.updateDisplayAdOrder)
                     }, t.updateDisplayAdOrder = function() {
-                        var e = document.querySelector('[data-target="' + F + '"]'),
+                        var e = document.querySelector('[data-target="' + R + '"]'),
                             t = document.querySelector('[data-target="' + j + '"]'),
                             n = document.querySelector("#" + N.b.directory.rectangle);
                         if (t && e && n) {
@@ -1725,7 +1725,7 @@ webpackJsonp([51], {
                     this.props.sideNavExpanded !== e.sideNavExpanded && this.onWindowResize(), this.props.lastBrowsePath !== e.location.pathname && this.props.changeLastBrowsePath(decodeURIComponent(e.location.pathname))
                 }, t.prototype.render = function() {
                     var e = this;
-                    if (this.props.data.loading && !this.props.data.directories) return l.createElement(D._0, {
+                    if (this.props.data.loading && !this.props.data.directories) return l.createElement(I._1, {
                         fillContent: !0
                     });
                     if (this.props.data.error) return l.createElement(b.a, {
@@ -1740,12 +1740,12 @@ webpackJsonp([51], {
                                 style: {
                                     order: a
                                 }
-                            }, l.createElement(D.W, {
+                            }, l.createElement(I.Z, {
                                 margin: {
                                     bottom: 2
                                 },
                                 "data-target": "directory-page__card-container"
-                            }, l.createElement(D.t, {
+                            }, l.createElement(I.t, {
                                 linkTo: {
                                     pathname: e.getPathURL(r.name, r.directoryType),
                                     state: {
@@ -1755,10 +1755,10 @@ webpackJsonp([51], {
                                     }
                                 },
                                 title: r.displayName,
-                                imageAlt: Object(c.d)("{displayName} cover image", {
+                                alt: Object(c.d)("{displayName} cover image", {
                                     displayName: r.displayName
                                 }, "BrowseDirectory"),
-                                imageSrc: r.avatarURL,
+                                src: r.avatarURL,
                                 info: Object(c.d)("{viewerCount,number} viewers", {
                                     viewerCount: r.viewersCount
                                 }, "BrowseDirectory"),
@@ -1767,13 +1767,13 @@ webpackJsonp([51], {
                             })))
                         }),
                         a = !this.props.data.loading && !this.props.data.error && !!this.props.data.directories.pageInfo.hasNextPage;
-                    return l.createElement(D.W, null, l.createElement(O.b, {
+                    return l.createElement(I.Z, null, l.createElement(O.b, {
                         addPaddingWhenPlayerIsPersisting: !0
                     }), l.createElement("div", {
-                        "data-target": F
-                    }, l.createElement(D._35, {
-                        gutterSize: D._37.Small,
-                        childWidth: D._36.Small,
+                        "data-target": R
+                    }, l.createElement(I._36, {
+                        gutterSize: I._38.Small,
+                        childWidth: I._37.Small,
                         placeholderItems: 20
                     }, l.createElement(E.a, {
                         key: -1,
@@ -1803,7 +1803,7 @@ webpackJsonp([51], {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive(), this.updateDisplayAdOrder()
                 }, t
             }(l.Component),
-            x = Object(d.compose)(Object(g.d)("BrowseDirectory"), Object(_.a)(L, {
+            x = Object(d.compose)(Object(g.d)("BrowseDirectory"), Object(_.a)(D, {
                 options: function(e) {
                     return {
                         fetchPolicy: "network-only",
@@ -1812,17 +1812,17 @@ webpackJsonp([51], {
                             directoryFilters: function(e) {
                                 switch (e) {
                                     case T.a.Communities:
-                                        return [I.a.Communities, I.a.Creative];
+                                        return [P.a.Communities, P.a.Creative];
                                     case T.a.Games:
-                                        return [I.a.Games];
+                                        return [P.a.Games];
                                     case T.a.CreativeCommunities:
-                                        return [I.a.Creative];
+                                        return [P.a.Creative];
                                     default:
-                                        return [I.a.Communities, I.a.Creative, I.a.Games]
+                                        return [P.a.Communities, P.a.Creative, P.a.Games]
                                 }
                             }(e.browseType),
                             directorySort: function(e) {
-                                return e === P.a.Relevancy ? "RELEVANCE" : "VIEWER_COUNT"
+                                return e === L.a.Relevancy ? "RELEVANCE" : "VIEWER_COUNT"
                             }(e.sortBy)
                         }
                     }
@@ -1831,7 +1831,7 @@ webpackJsonp([51], {
                     return s.__assign({}, e, {
                         loadMore: function() {
                             return e.data.fetchMore({
-                                query: L,
+                                query: D,
                                 variables: s.__assign({}, e.data.variables, {
                                     cursor: e.data.directories.edges[e.data.directories.edges.length - 5].cursor
                                 }),
@@ -1847,7 +1847,7 @@ webpackJsonp([51], {
                         }
                     })
                 }
-            }))(Object(v.f)(R)),
+            }))(Object(f.f)(F)),
             A = Object(h.b)(function(e) {
                 return {
                     browseType: e.browse.browseType,
@@ -1857,7 +1857,7 @@ webpackJsonp([51], {
                 }
             }, function(e) {
                 return Object(y.b)({
-                    changeLastBrowsePath: f.e
+                    changeLastBrowsePath: v.e
                 }, e)
             })(x),
             B = function(e) {
@@ -1872,33 +1872,33 @@ webpackJsonp([51], {
                     })
                 }, t
             }(l.Component),
-            W = Object(d.compose)(Object(g.d)("DirectoryPage", {
+            U = Object(d.compose)(Object(g.d)("DirectoryPage", {
                 autoReportInteractive: !0,
                 destination: m.a.BrowseCommunities
             }), Object(u.a)({
                 location: p.PageviewLocation.BrowseCommunities
             }))(B),
-            U = function() {
-                return l.createElement(D._20, {
+            M = function() {
+                return l.createElement(I._21, {
                     borderTop: !0,
                     padding: {
                         top: 3
                     },
-                    textAlign: D._25.Center
-                }, l.createElement(D._24, {
-                    fontSize: D.M.Size4,
-                    color: D.F.Alt2
-                }, Object(c.d)("Not what you're looking for?", "BrowseCreativePage")), l.createElement(D.W, {
+                    textAlign: I._26.Center
+                }, l.createElement(I._25, {
+                    fontSize: I.P.Size4,
+                    color: I.I.Alt2
+                }, Object(c.d)("Not what you're looking for?", "BrowseCreativePage")), l.createElement(I.Z, {
                     margin: {
                         top: 2
                     }
-                }, l.createElement(D.u, {
-                    type: D.z.Hollow,
+                }, l.createElement(I.u, {
+                    type: I.z.Hollow,
                     linkTo: "/directory/game/creative",
                     "data-a-target": "view-all-creative"
                 }, Object(c.d)("View All Creative Broadcasters", "BrowseCreativePage"))))
             },
-            M = function(e) {
+            H = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -1907,16 +1907,16 @@ webpackJsonp([51], {
                 }, t.prototype.render = function() {
                     return l.createElement(A, {
                         category: T.a.CreativeCommunities
-                    }, l.createElement(U, null))
+                    }, l.createElement(M, null))
                 }, t
             }(l.Component),
-            H = Object(d.compose)(Object(g.d)("DirectoryPage", {
+            V = Object(d.compose)(Object(g.d)("DirectoryPage", {
                 autoReportInteractive: !0,
                 destination: m.a.BrowseCreative
             }), Object(u.a)({
                 location: p.PageviewLocation.BrowseCreative
-            }))(M),
-            V = function(e) {
+            }))(H),
+            G = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -1926,16 +1926,16 @@ webpackJsonp([51], {
                     })
                 }, t
             }(l.Component),
-            G = Object(d.compose)(Object(g.d)("DirectoryPage", {
+            z = Object(d.compose)(Object(g.d)("DirectoryPage", {
                 autoReportInteractive: !0,
                 destination: m.a.BrowseGamesAndCommunities
             }), Object(u.a)({
                 location: p.PageviewLocation.Browse
-            }))(V),
-            z = n("CIox"),
-            q = n("6yQB"),
-            $ = n("czpb"),
-            Q = n("+Znq");
+            }))(G),
+            W = n("CIox"),
+            Z = n("6yQB"),
+            q = n("czpb"),
+            $ = n("+Znq");
         ! function(e) {
             e.Communities = "/directory/communities", e.CreativeCommunities = "/directory/creative", e.Games = "/directory/games", e.GamesAndCommunities = "/directory", e.DirectoryCategory = "/directory/:category?", e.Popular = "/directory/all", e.PopularEncodedLanguage = "/directory/all/:encodedLanguage", e.PopularPlaystation = "/directory/all/ps4", e.PopularXbox = "/directory/all/xbox"
         }(i || (i = {}));
@@ -1965,33 +1965,33 @@ webpackJsonp([51], {
                     }, t
                 }
                 return s.__extends(t, e), t.prototype.render = function() {
-                    return l.createElement(D.W, {
-                        display: D.I.Flex
-                    }, l.createElement(D.W, {
-                        display: D.I.InlineFlex
-                    }, l.createElement(Q.a, {
+                    return l.createElement(I.Z, {
+                        display: I.L.Flex
+                    }, l.createElement(I.Z, {
+                        display: I.L.InlineFlex
+                    }, l.createElement($.a, {
                         ref: this.saveBalloonWrapperRef
-                    }, l.createElement(D.u, {
-                        type: D.z.Hollow,
+                    }, l.createElement(I.u, {
+                        type: I.z.Hollow,
                         "data-test-selector": "filter-dropdown-button",
                         "data-a-target": "browse-filter-dropdown",
                         dropdown: !0
-                    }, a(this.props.browseType)), l.createElement(D.p, {
-                        direction: D.q.Bottom,
+                    }, a(this.props.browseType)), l.createElement(I.p, {
+                        direction: I.q.Bottom,
                         noTail: !0
-                    }, l.createElement(D.W, {
+                    }, l.createElement(I.Z, {
                         padding: {
                             y: 1
                         }
                     }, this.renderFilterItem(T.a.Games), this.renderFilterItem(T.a.Communities), this.renderFilterItem(T.a.GamesAndCommunities), this.renderFilterItem(T.a.CreativeCommunities), this.renderFilterItem(T.a.Channels))))))
                 }, t.prototype.renderFilterItem = function(e) {
-                    return l.createElement(D.U, {
+                    return l.createElement(I.X, {
                         onClick: this.typeChangeHandler,
                         "data-filter-type": e,
                         "data-test-selector": e + "-selector",
                         "data-a-target": "browse-" + e + "-button",
                         selected: this.props.browseType === e
-                    }, l.createElement(D.W, {
+                    }, l.createElement(I.Z, {
                         padding: {
                             y: .5,
                             x: 1
@@ -2005,11 +2005,11 @@ webpackJsonp([51], {
                 }
             }, function(e) {
                 return Object(y.b)({
-                    changeBrowseType: f.d
+                    changeBrowseType: v.d
                 }, e)
             })(Y),
-            K = n("Y6wo"),
-            J = function(e) {
+            Q = n("Y6wo"),
+            K = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.saveBalloonWrapperRef = function(e) {
@@ -2017,33 +2017,33 @@ webpackJsonp([51], {
                     }, t
                 }
                 return s.__extends(t, e), t.prototype.render = function() {
-                    return l.createElement(D.W, {
-                        display: D.I.Flex
-                    }, l.createElement(D.W, {
-                        display: D.I.InlineFlex
-                    }, l.createElement(Q.a, {
+                    return l.createElement(I.Z, {
+                        display: I.L.Flex
+                    }, l.createElement(I.Z, {
+                        display: I.L.InlineFlex
+                    }, l.createElement($.a, {
                         ref: this.saveBalloonWrapperRef
-                    }, l.createElement(D.u, {
-                        type: D.z.Hollow,
+                    }, l.createElement(I.u, {
+                        type: I.z.Hollow,
                         "data-test-selector": "sort-dropdown-button",
                         dropdown: !0
-                    }, r(this.props.sortBy)), l.createElement(D.p, {
-                        direction: D.q.Bottom,
+                    }, r(this.props.sortBy)), l.createElement(I.p, {
+                        direction: I.q.Bottom,
                         noTail: !0
-                    }, l.createElement(D.W, {
+                    }, l.createElement(I.Z, {
                         padding: {
                             y: 1
                         }
-                    }, this.renderSortItem(P.a.Popularity), this.renderSortItem(P.a.Relevancy))))))
+                    }, this.renderSortItem(L.a.Popularity), this.renderSortItem(L.a.Relevancy))))))
                 }, t.prototype.renderSortItem = function(e) {
                     var t = this;
-                    return l.createElement(D.U, {
+                    return l.createElement(I.X, {
                         onClick: function() {
-                            t.balloonWrapperRef.toggleBalloon(!1), t.props.changeSortBy(e), Object(K.b)("sortBy", e)
+                            t.balloonWrapperRef.toggleBalloon(!1), t.props.changeSortBy(e), Object(Q.b)("sortBy", e)
                         },
                         "data-test-selector": e + "-selector",
                         selected: this.props.sortBy === e
-                    }, l.createElement(D.W, {
+                    }, l.createElement(I.Z, {
                         padding: {
                             y: .5,
                             x: 1
@@ -2051,15 +2051,15 @@ webpackJsonp([51], {
                     }, r(e)))
                 }, t
             }(l.Component),
-            Z = Object(h.b)(function(e) {
+            J = Object(h.b)(function(e) {
                 return {
                     sortBy: Object(o.a)(e)
                 }
             }, function(e) {
                 return Object(y.b)({
-                    changeSortBy: f.f
+                    changeSortBy: v.f
                 }, e)
-            })(J),
+            })(K),
             ee = function(e) {
                 return e === i.Popular || e === i.PopularEncodedLanguage || e === i.PopularPlaystation || e === i.PopularXbox
             },
@@ -2089,22 +2089,22 @@ webpackJsonp([51], {
                         default:
                             e = t
                     }
-                    return l.createElement(D.W, {
-                        display: D.I.Flex
-                    }, l.createElement("div", null, l.createElement(D.W, {
-                        display: D.I.InlineFlex
-                    }, l.createElement(Q.a, {
+                    return l.createElement(I.Z, {
+                        display: I.L.Flex
+                    }, l.createElement("div", null, l.createElement(I.Z, {
+                        display: I.L.InlineFlex
+                    }, l.createElement($.a, {
                         ref: this.saveBalloonWrapperRef,
                         "data-a-target": "platform-filter-balloon"
-                    }, l.createElement(D.u, {
-                        type: D.z.Hollow,
+                    }, l.createElement(I.u, {
+                        type: I.z.Hollow,
                         "data-test-selector": "filter-dropdown-button",
                         "data-a-target": "platform-filter-dropdown",
                         dropdown: !0
-                    }, e), l.createElement(D.p, {
-                        direction: D.q.Bottom,
+                    }, e), l.createElement(I.p, {
+                        direction: I.q.Bottom,
                         noTail: !0
-                    }, l.createElement(D.W, {
+                    }, l.createElement(I.Z, {
                         className: "layout",
                         padding: {
                             y: 1
@@ -2114,11 +2114,11 @@ webpackJsonp([51], {
                     var a = te("platform-filter", {
                         "platform-filter--active": !this.props.broadcastType || this.props.broadcastType === e
                     });
-                    return l.createElement(D.U, {
+                    return l.createElement(I.X, {
                         onClick: this.typeChangeHandler,
                         "data-filter-type": e,
                         "data-a-target": "platform-filter-" + e + "-button"
-                    }, l.createElement(D.W, {
+                    }, l.createElement(I.Z, {
                         className: a,
                         padding: {
                             y: .5,
@@ -2141,12 +2141,12 @@ webpackJsonp([51], {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderSortOrStream = function() {
                         return ee(t.props.match.path) ? Object(c.d)("Show me {filter} streaming from {platform}", {
-                            filter: l.createElement(D.W, {
+                            filter: l.createElement(I.Z, {
                                 margin: {
                                     x: 1
                                 }
                             }, l.createElement(X, null)),
-                            platform: l.createElement(D.W, {
+                            platform: l.createElement(I.Z, {
                                 margin: {
                                     x: 1
                                 }
@@ -2154,54 +2154,54 @@ webpackJsonp([51], {
                                 broadcastType: ae[decodeURIComponent(t.props.match.path)] || "all"
                             }))
                         }, "NewBrowseHeader") : Object(c.d)("Show me {filter} sorted by {sort}", {
-                            filter: l.createElement(D.W, {
+                            filter: l.createElement(I.Z, {
                                 margin: {
                                     x: 1
                                 }
                             }, l.createElement(X, null)),
-                            sort: l.createElement(D.W, {
+                            sort: l.createElement(I.Z, {
                                 margin: {
                                     x: 1
                                 }
-                            }, l.createElement(Z, null))
+                            }, l.createElement(J, null))
                         }, "NewBrowseHeader")
                     }, t.renderCreateCommunity = function() {
-                        return t.props.location.pathname !== i.Communities ? null : l.createElement(D.u, {
-                            type: D.z.Hollow,
-                            linkTo: Object($.a)("/communities/create"),
+                        return t.props.location.pathname !== i.Communities ? null : l.createElement(I.u, {
+                            type: I.z.Hollow,
+                            linkTo: Object(q.a)("/communities/create"),
                             "data-test-selector": re
                         }, Object(c.d)("Create Community", "NewBrowseHeader"))
                     }, t.renderLanguageSelect = function() {
-                        return ee(t.props.match.path) ? l.createElement(q.a, null) : null
+                        return ee(t.props.match.path) ? l.createElement(Z.a, null) : null
                     }, t
                 }
                 return s.__extends(t, e), t.prototype.render = function() {
-                    return l.createElement(D._20, {
-                        background: D.m.Base,
+                    return l.createElement(I._21, {
+                        background: I.m.Base,
                         border: !0,
-                        display: D.I.Flex,
-                        flexDirection: D.K.Row,
+                        display: I.L.Flex,
+                        flexDirection: I.N.Row,
                         margin: {
                             bottom: 2
                         },
                         padding: 2
-                    }, l.createElement(D.W, {
-                        display: D.I.Flex,
+                    }, l.createElement(I.Z, {
+                        display: I.L.Flex,
                         flexGrow: 1
-                    }, l.createElement(D.W, {
-                        display: D.I.Flex,
-                        alignItems: D.c.Center
-                    }, this.renderSortOrStream())), l.createElement(D.W, {
-                        display: D.I.Flex,
+                    }, l.createElement(I.Z, {
+                        display: I.L.Flex,
+                        alignItems: I.c.Center
+                    }, this.renderSortOrStream())), l.createElement(I.Z, {
+                        display: I.L.Flex,
                         flexGrow: 1,
-                        justifyContent: D.V.End
-                    }, l.createElement(D.W, {
-                        display: D.I.Flex,
-                        flexDirection: D.K.Row
+                        justifyContent: I.Y.End
+                    }, l.createElement(I.Z, {
+                        display: I.L.Flex,
+                        flexDirection: I.N.Row
                     }, this.renderCreateCommunity(), this.renderLanguageSelect())))
                 }, t
             }(l.Component),
-            oe = Object(v.f)(ie),
+            oe = Object(f.f)(ie),
             se = n("+GT7"),
             le = n("DtWM"),
             de = n("SZoP"),
@@ -2212,7 +2212,7 @@ webpackJsonp([51], {
             ge = n("AadB"),
             he = n("MMhf"),
             ye = n("I1+1"),
-            fe = function(e) {
+            ve = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -2246,7 +2246,7 @@ webpackJsonp([51], {
                     }).map(function(e, t) {
                         var n = e.node;
                         return l.createElement(ge.b, {
-                            directoryType: I.a.Communities,
+                            directoryType: P.a.Communities,
                             streamIndex: t,
                             streamNode: n,
                             key: n.id,
@@ -2256,9 +2256,9 @@ webpackJsonp([51], {
                     });
                     return l.createElement("div", null, l.createElement(pe.a, {
                         languageCode: this.props.languageCode
-                    }), l.createElement(D._35, {
-                        gutterSize: D._37.Small,
-                        childWidth: D._36.Medium,
+                    }), l.createElement(I._36, {
+                        gutterSize: I._38.Small,
+                        childWidth: I._37.Medium,
                         placeholderItems: 20
                     }, s, e))
                 }, t = s.__decorate([Object(_.a)(ye, {
@@ -2276,7 +2276,7 @@ webpackJsonp([51], {
                     autoReportInteractive: !0
                 })], t)
             }(l.Component),
-            ve = n("4pV0"),
+            fe = n("4pV0"),
             be = "directory-first-item",
             ke = "directory-container",
             _e = function(e) {
@@ -2319,7 +2319,7 @@ webpackJsonp([51], {
                 }, t.prototype.componentWillReceiveProps = function(e) {
                     this.props.sideNavExpanded !== e.sideNavExpanded && this.onWindowResize(), this.props.lastBrowsePath !== e.location.pathname && this.props.changeLastBrowsePath(decodeURIComponent(e.location.pathname))
                 }, t.prototype.render = function() {
-                    if (this.props.data.loading && !this.props.data.streams) return l.createElement(D._0, {
+                    if (this.props.data.loading && !this.props.data.streams) return l.createElement(I._1, {
                         fillContent: !0
                     });
                     if (this.props.data.error) return l.createElement(b.a, {
@@ -2327,16 +2327,16 @@ webpackJsonp([51], {
                     });
                     var e = null,
                         t = null;
-                    "en" !== this.props.languageCode && (t = l.createElement(D.W, {
+                    "en" !== this.props.languageCode && (t = l.createElement(I.Z, {
                         margin: {
                             bottom: 2
                         }
-                    }, l.createElement(D._24, {
-                        type: D._29.H4,
-                        color: D.F.Alt2,
-                        fontSize: D.M.Size5,
-                        transform: D._28.Uppercase
-                    }, Object(c.d)("All Channels", "PopularInternationalSection"))), e = l.createElement(fe, {
+                    }, l.createElement(I._25, {
+                        type: I._30.H4,
+                        color: I.I.Alt2,
+                        fontSize: I.P.Size5,
+                        transform: I._29.Uppercase
+                    }, Object(c.d)("All Channels", "PopularInternationalSection"))), e = l.createElement(ve, {
                         directoryWidth: this.state.directoryWidth,
                         languageCode: this.props.languageCode,
                         platformType: ae[decodeURIComponent(this.props.match.path)] || "all"
@@ -2350,7 +2350,7 @@ webpackJsonp([51], {
                                 style: {
                                     order: t
                                 }
-                            }, l.createElement(D.W, {
+                            }, l.createElement(I.Z, {
                                 margin: {
                                     bottom: 2
                                 },
@@ -2393,14 +2393,14 @@ webpackJsonp([51], {
                             }))) : null
                         }),
                         r = !this.props.data.loading && !this.props.data.error && !!this.props.data.streams.pageInfo.hasNextPage;
-                    return l.createElement(D.W, {
+                    return l.createElement(I.Z, {
                         flexShrink: 0,
                         "data-target": ke
                     }, l.createElement(O.b, {
                         addPaddingWhenPlayerIsPersisting: !0
-                    }), e, t, l.createElement(D._35, {
-                        gutterSize: D._37.Small,
-                        childWidth: D._36.Large,
+                    }), e, t, l.createElement(I._36, {
+                        gutterSize: I._38.Small,
+                        childWidth: I._37.Large,
                         placeholderItems: 20
                     }, l.createElement(E.a, {
                         key: -1,
@@ -2428,7 +2428,7 @@ webpackJsonp([51], {
                     }))
                 }, t.prototype.onRender = function() {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive(), this.updateDisplayAdOrder()
-                }, t = s.__decorate([Object(_.a)(ve, {
+                }, t = s.__decorate([Object(_.a)(fe, {
                     options: function(e) {
                         return {
                             fetchPolicy: "network-only",
@@ -2449,7 +2449,7 @@ webpackJsonp([51], {
                                     a = t.variables,
                                     r = t.streams;
                                 return n({
-                                    query: ve,
+                                    query: fe,
                                     variables: s.__assign({}, a, {
                                         cursor: r.edges[r.edges.length - 5].cursor
                                     }),
@@ -2480,7 +2480,7 @@ webpackJsonp([51], {
                 }
             }, function(e) {
                 return Object(y.b)({
-                    changeLastBrowsePath: f.e
+                    changeLastBrowsePath: v.e
                 }, e)
             })(_e),
             Ce = n("yFXh"),
@@ -2516,7 +2516,7 @@ webpackJsonp([51], {
                 }, t.prototype.componentWillUnmount = function() {
                     N.g.removeListener(N.e, this.onSlotAdded)
                 }, t.prototype.render = function() {
-                    if (this.props.data.loading && !this.props.data.streams) return l.createElement(D._0, {
+                    if (this.props.data.loading && !this.props.data.streams) return l.createElement(I._1, {
                         fillContent: !0
                     });
                     if (this.props.data.error) return l.createElement(b.a, {
@@ -2531,7 +2531,7 @@ webpackJsonp([51], {
                     }).map(function(e, t) {
                         var n = e.node;
                         return l.createElement(ge.b, {
-                            directoryType: I.a.Communities,
+                            directoryType: P.a.Communities,
                             streamIndex: t,
                             streamNode: n,
                             key: n.id,
@@ -2539,13 +2539,13 @@ webpackJsonp([51], {
                         })
                     });
                     if (t.length > 0) {
-                        var n = D._36.Large,
+                        var n = I._37.Large,
                             a = !this.props.data.loading && !this.props.data.error && !!this.props.data.streams.pageInfo.hasNextPage;
-                        e = l.createElement(D.W, {
+                        e = l.createElement(I.Z, {
                             flexShrink: 0,
                             "data-target": we
-                        }, l.createElement(D._35, {
-                            gutterSize: D._37.Small,
+                        }, l.createElement(I._36, {
+                            gutterSize: I._38.Small,
                             childWidth: n,
                             placeholderItems: 20
                         }, l.createElement(E.a, {
@@ -2571,26 +2571,26 @@ webpackJsonp([51], {
                         }))
                     } else {
                         var r = Object(c.d)("No live channels for this game", "PopularDirectoryByLanguagePage");
-                        e = l.createElement(D.W, {
-                            display: D.I.Flex,
-                            alignItems: D.c.Center,
-                            justifyContent: D.V.Center,
+                        e = l.createElement(I.Z, {
+                            display: I.L.Flex,
+                            alignItems: I.c.Center,
+                            justifyContent: I.Y.Center,
                             fullWidth: !0,
                             padding: {
                                 y: 3
                             }
-                        }, l.createElement(D._24, {
-                            color: D.F.Alt2,
-                            fontSize: D.M.Size4,
+                        }, l.createElement(I._25, {
+                            color: I.I.Alt2,
+                            fontSize: I.P.Size4,
                             italic: !0
                         }, r))
                     }
-                    return l.createElement(D.W, {
+                    return l.createElement(I.Z, {
                         margin: {
                             bottom: 2
                         },
-                        display: D.I.Flex,
-                        flexDirection: D.K.Row
+                        display: I.L.Flex,
+                        flexDirection: I.N.Row
                     }, l.createElement(O.b, {
                         addPaddingWhenPlayerIsPersisting: !0
                     }), l.createElement(E.a, {
@@ -2667,7 +2667,7 @@ webpackJsonp([51], {
                 }, t.prototype.componentWillReceiveProps = function(e) {
                     this.setBrowseType(e.match.path), this.setCorrectPageTitle(e.browseType)
                 }, t.prototype.render = function() {
-                    return l.createElement(D.W, {
+                    return l.createElement(I.Z, {
                         padding: 3
                     }, l.createElement(E.a, {
                         injectStyles: {
@@ -2681,27 +2681,27 @@ webpackJsonp([51], {
                             pagetype: N.a.games
                         },
                         autoEnable: !1
-                    }), this.renderBrowseHeader(), l.createElement(z.d, null, l.createElement(z.b, {
+                    }), this.renderBrowseHeader(), l.createElement(W.d, null, l.createElement(W.b, {
                         path: i.Communities,
-                        component: W
-                    }), l.createElement(z.b, {
+                        component: U
+                    }), l.createElement(W.b, {
                         path: i.CreativeCommunities,
-                        component: H
-                    }), l.createElement(z.b, {
+                        component: V
+                    }), l.createElement(W.b, {
                         path: i.PopularPlaystation,
                         component: Se
-                    }), l.createElement(z.b, {
+                    }), l.createElement(W.b, {
                         path: i.PopularXbox,
                         component: Se
-                    }), l.createElement(z.b, {
+                    }), l.createElement(W.b, {
                         path: i.PopularEncodedLanguage,
                         component: Ee
-                    }), l.createElement(z.b, {
+                    }), l.createElement(W.b, {
                         path: i.Popular,
                         component: Se
-                    }), l.createElement(z.b, {
+                    }), l.createElement(W.b, {
                         path: i.DirectoryCategory,
-                        component: G
+                        component: z
                     })))
                 }, t.prototype.renderBrowseHeader = function() {
                     return l.createElement(oe, null)
@@ -2718,15 +2718,15 @@ webpackJsonp([51], {
                 }
             }, function(e) {
                 return Object(y.b)({
-                    changeBrowseType: f.d
+                    changeBrowseType: v.d
                 }, e)
             })(Ne);
         n.d(t, "BrowseCommunitiesPage", function() {
-            return W
+            return U
         }), n.d(t, "BrowseCreativePage", function() {
-            return H
+            return V
         }), n.d(t, "BrowseGamesAndCommunitiesPage", function() {
-            return G
+            return z
         }), n.d(t, "BrowseRootPage", function() {
             return Oe
         })
@@ -3054,30 +3054,30 @@ webpackJsonp([51], {
             c = n("2o2f"),
             u = n("Odds"),
             m = (n("CybZ"), a = {}, a[c.a.Live] = "stream-type-indicator--live", a[c.a.Premiere] = "stream-type-indicator--premiere", a[c.a.Rerun] = "stream-type-indicator--rerun", a[c.a.WatchParty] = "stream-type-indicator--rerun", a),
-            p = (r = {}, r[c.a.Premiere] = u._12.VideoPremiere, r[c.a.Rerun] = u._12.VideoRerun, r[c.a.WatchParty] = u._12.VideoRerun, r),
-            g = (i = {}, i[c.a.Premiere] = u._13.Live, i[c.a.Rerun] = u._13.Inherit, i[c.a.WatchParty] = u._13.Inherit, i),
+            p = (r = {}, r[c.a.Premiere] = u._13.VideoPremiere, r[c.a.Rerun] = u._13.VideoRerun, r[c.a.WatchParty] = u._13.VideoRerun, r),
+            g = (i = {}, i[c.a.Premiere] = u._14.Live, i[c.a.Rerun] = u._14.Inherit, i[c.a.WatchParty] = u._14.Inherit, i),
             h = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return o.__extends(t, e), t.prototype.render = function() {
-                    return l.createElement(u._20, {
+                    return l.createElement(u._21, {
                         className: this.getClassNames(),
-                        color: u.F.Overlay,
+                        color: u.I.Overlay,
                         background: u.m.Overlay,
                         padding: {
                             x: .5
                         },
                         borderRadius: u.s.Small,
-                        display: u.I.Flex
-                    }, l.createElement(u.W, {
-                        display: u.I.Flex,
+                        display: u.L.Flex
+                    }, l.createElement(u.Z, {
+                        display: u.L.Flex,
                         alignItems: u.c.Center,
                         margin: {
                             right: .5
                         }
-                    }, this.getIcon()), l.createElement(u._24, {
-                        type: u._29.Span
+                    }, this.getIcon()), l.createElement(u._25, {
+                        type: u._30.Span
                     }, this.getLabel()))
                 }, t.prototype.getClassNames = function() {
                     var e = {
@@ -3085,16 +3085,17 @@ webpackJsonp([51], {
                     };
                     return e[m[this.props.type]] = !0, s(e)
                 }, t.prototype.getIcon = function() {
-                    return this.props.hosting ? l.createElement(u._20, {
+                    return this.props.hosting ? l.createElement(u._21, {
                         borderRadius: u.s.Rounded,
                         className: "stream-type-indicator__hosting-dot"
-                    }) : this.props.type === c.a.Live ? l.createElement(u.W, {
+                    }) : this.props.type === c.a.Live ? l.createElement(u.Z, {
                         className: "stream-type-indicator__live-wrapper",
-                        display: u.I.Flex,
+                        display: u.L.Flex,
                         alignItems: u.c.Center
-                    }, l.createElement(u.Y, {
-                        size: u.Z.Small
-                    })) : l.createElement(u._11, {
+                    }, l.createElement(u.E, {
+                        status: u.G.Live,
+                        size: u.F.Small
+                    })) : l.createElement(u._12, {
                         asset: p[this.props.type],
                         type: g[this.props.type],
                         width: 14,
@@ -3613,15 +3614,15 @@ webpackJsonp([51], {
             r = n("MMhf"),
             i = n("Odds"),
             o = function(e) {
-                return a.createElement(i.W, {
+                return a.createElement(i.Z, {
                     margin: {
                         bottom: 2
                     }
-                }, a.createElement(i._24, {
-                    type: i._29.H4,
-                    color: i.F.Alt2,
-                    fontSize: i.M.Size5,
-                    transform: i._28.Uppercase,
+                }, a.createElement(i._25, {
+                    type: i._30.H4,
+                    color: i.I.Alt2,
+                    fontSize: i.P.Size5,
+                    transform: i._29.Uppercase,
                     "data-a-target": "international-section-header"
                 }, Object(r.a)(e.languageCode)))
             };
@@ -4764,4 +4765,4 @@ webpackJsonp([51], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.browse-479e1ae6529d6befc65cdafaaff9413b.js.map
+//# sourceMappingURL=pages.browse-39339819764dd54bd6659659e62b4257.js.map

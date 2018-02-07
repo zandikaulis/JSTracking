@@ -404,95 +404,95 @@ webpackJsonp([66], {
             S = n("f2i/"),
             _ = n("Aj/L"),
             T = n("KSGD"),
-            N = n("6sO2"),
-            O = n("7vx8"),
+            O = n("6sO2"),
+            N = n("7vx8"),
             w = n("5LoI"),
             R = n("oIkB"),
             D = n("V5M+"),
             M = n("zCIC"),
             x = n("sikP"),
-            I = n("WNmM"),
-            j = n("F8kA"),
-            A = n("rCmJ"),
-            L = n("+Znq"),
+            L = n("WNmM"),
+            I = n("F8kA"),
+            j = n("rCmJ"),
+            A = n("+Znq"),
             U = n("NY9D"),
             F = n("yDzg"),
-            W = n("bhVC"),
-            B = n("0i+s"),
+            B = n("bhVC"),
+            Z = n("0i+s"),
             V = n("Odds"),
-            G = [{
-                type: W.b.Twitter,
+            H = [{
+                type: B.b.Twitter,
                 params: {
                     tt_medium: "twtr"
                 }
             }, {
-                type: W.b.Facebook,
+                type: B.b.Facebook,
                 params: {
                     tt_medium: "fb"
                 }
             }, {
-                type: W.b.VKontakte
+                type: B.b.VKontakte
             }, {
-                type: W.b.Reddit,
+                type: B.b.Reddit,
                 params: {
                     tt_medium: "redt"
                 }
             }, {
-                type: W.b.Copy
+                type: B.b.Copy
             }],
             P = Object(v.d)("ClipsManagerSocialShare")(function(e) {
-                var t = Object(N.d)("Share", "ClipsManagerSocialShare");
-                return s.createElement(L.a, null, s.createElement("div", null, s.createElement(V._32, {
+                var t = Object(O.d)("Share", "ClipsManagerSocialShare");
+                return s.createElement(A.a, null, s.createElement("div", null, s.createElement(V._33, {
                     label: t
                 }, s.createElement(V.v, {
                     ariaLabel: t,
                     type: V.w.Hollow,
-                    icon: V._12.Share
+                    icon: V._13.Share
                 }))), s.createElement(V.p, {
                     direction: V.q.BottomRight,
                     size: V.r.Small
-                }, s.createElement(V.W, {
-                    display: V.I.Flex,
-                    justifyContent: V.V.Between,
+                }, s.createElement(V.Z, {
+                    display: V.L.Flex,
+                    justifyContent: V.Y.Between,
                     padding: 1
-                }, G.map(function(t) {
-                    return s.createElement(W.a, {
+                }, H.map(function(t) {
+                    return s.createElement(B.a, {
                         key: t.type,
                         type: t.type,
                         text: e.clip.title,
                         url: Object(F.a)(e.clip.url, t.params),
-                        onShareClick: Object(I.c)(e.clip, e.pageType)
+                        onShareClick: Object(L.c)(e.clip, e.pageType)
                     })
-                })), s.createElement(V.W, {
+                })), s.createElement(V.Z, {
                     padding: {
                         x: 1,
                         y: .5
                     }
-                }, s.createElement(V.N, {
-                    label: Object(N.d)("Video Link", "ClipsManagerSocialShare")
-                }, s.createElement(V.S, {
+                }, s.createElement(V.Q, {
+                    label: Object(O.d)("Video Link", "ClipsManagerSocialShare")
+                }, s.createElement(V.V, {
                     readOnly: !0,
-                    type: V.T.Text,
+                    type: V.W.Text,
                     value: e.clip.url,
                     onFocus: a
-                }))), s.createElement(V.W, {
+                }))), s.createElement(V.Z, {
                     padding: {
                         x: 1,
                         y: .5
                     }
-                }, s.createElement(V.N, {
-                    label: Object(N.d)("Embed Video", "ClipsManagerSocialShare")
-                }, s.createElement(V.S, {
+                }, s.createElement(V.Q, {
+                    label: Object(O.d)("Embed Video", "ClipsManagerSocialShare")
+                }, s.createElement(V.V, {
                     readOnly: !0,
-                    type: V.T.Text,
-                    value: Object(B.a)(e.clip.embedURL),
+                    type: V.W.Text,
+                    value: Object(Z.a)(e.clip.embedURL),
                     onFocus: a
                 })))))
             }),
-            H = n("6BvN"),
-            q = function(e) {
+            G = n("6BvN"),
+            W = function(e) {
                 var t = Date.now() / 1e3;
-                N.n.tracking.track(p.SpadeEventType.ClipEdit, {
+                O.n.tracking.track(p.SpadeEventType.ClipEdit, {
                     channel_id: Number(e.broadcaster.id),
                     client_time: t,
                     clip_edit_session_id: e.id + "," + Math.floor(t),
@@ -504,54 +504,54 @@ webpackJsonp([66], {
                     location: p.PageviewLocation.MyClipsManager
                 })
             },
-            z = n("MV8X"),
-            K = this,
+            q = n("MV8X"),
+            z = this,
             Q = {
                 TITLE_TEXT: "cmgr-title-text",
                 TITLE_INPUT: "cmgr-title-input",
                 TITLE_SAVE: "cmgr-title-save",
                 TITLE_SAVE_TOOLTIP: "cmgr-title-save-tooltip"
             },
-            $ = 100,
-            Y = function(e) {
+            J = 100,
+            K = function(e) {
                 function t(t) {
                     var n = e.call(this) || this;
                     return n.renderTitle = function() {
-                        return n.props.canEdit ? s.createElement(V.S, {
+                        return n.props.canEdit ? s.createElement(V.V, {
                             id: Q.TITLE_INPUT,
                             "data-test-selector": Q.TITLE_INPUT,
-                            type: V.T.Text,
+                            type: V.W.Text,
                             value: n.state.title,
                             onChange: n.handleTitleEdit,
                             onKeyDown: n.handleKeyDown
-                        }) : s.createElement(V._24, {
+                        }) : s.createElement(V._25, {
                             "data-test-selector": Q.TITLE_TEXT
                         }, n.state.title)
                     }, n.renderSaveButton = function() {
                         if (!n.props.canEdit) return null;
                         var e;
-                        return e = n.state.hasErrored ? s.createElement(V._24, {
-                            color: V.F.Error,
+                        return e = n.state.hasErrored ? s.createElement(V._25, {
+                            color: V.I.Error,
                             bold: !0
-                        }, Object(N.d)("Uh-oh. Check for inappropriate language and try again!", "ClipsManagerTitleEdit")) : s.createElement(V._24, {
-                            color: V.F.Link,
+                        }, Object(O.d)("Uh-oh. Check for inappropriate language and try again!", "ClipsManagerTitleEdit")) : s.createElement(V._25, {
+                            color: V.I.Link,
                             bold: !0
-                        }, Object(N.d)("Title Saved!", "ClipsManagerTitleEdit")), s.createElement(V.W, {
+                        }, Object(O.d)("Title Saved!", "ClipsManagerTitleEdit")), s.createElement(V.Z, {
                             flexShrink: 0,
                             flexGrow: 0
-                        }, s.createElement(V.W, {
-                            position: V._5.Relative
+                        }, s.createElement(V.Z, {
+                            position: V._6.Relative
                         }, s.createElement(V.u, {
                             "data-test-selector": Q.TITLE_SAVE,
                             disabled: !n.canSaveEditedTitle(),
                             onClick: n.editClipTitle
-                        }, Object(N.d)("Save", "ClipsManagerTitleEdit")), s.createElement(V.U, {
+                        }, Object(O.d)("Save", "ClipsManagerTitleEdit")), s.createElement(V.X, {
                             onClick: n.dismissBalloon,
                             "data-test-selector": Q.TITLE_SAVE_TOOLTIP
                         }, s.createElement(V.p, {
                             direction: V.q.TopRight,
                             show: n.state.isShowingBalloon
-                        }, s.createElement(V.W, {
+                        }, s.createElement(V.Z, {
                             padding: 1
                         }, e)))))
                     }, n.dismissBalloon = function() {
@@ -559,7 +559,7 @@ webpackJsonp([66], {
                             isShowingBalloon: !1
                         })
                     }, n.handleTitleEdit = function(e) {
-                        var t = e.currentTarget.value.slice(0, $);
+                        var t = e.currentTarget.value.slice(0, J);
                         n.setState({
                             title: t,
                             trimmedTitle: t.trim()
@@ -571,7 +571,7 @@ webpackJsonp([66], {
                                     case 0:
                                         return e.trys.push([0, 2, , 3]), [4, this.props.editTitle(this.state.title)];
                                     case 1:
-                                        return e.sent(), q(this.props.clip), this.setState({
+                                        return e.sent(), W(this.props.clip), this.setState({
                                             isShowingBalloon: !0,
                                             hasErrored: !1
                                         }), [3, 3];
@@ -589,7 +589,7 @@ webpackJsonp([66], {
                         return n.props.clip.title !== n.state.trimmedTitle && "" !== n.state.trimmedTitle
                     }, n.handleKeyDown = function(e) {
                         switch (e.keyCode) {
-                            case H.a.Enter:
+                            case G.a.Enter:
                                 return void(n.canSaveEditedTitle() && n.editClipTitle());
                             default:
                                 return
@@ -602,23 +602,23 @@ webpackJsonp([66], {
                     }, n
                 }
                 return l.__extends(t, e), t.prototype.render = function() {
-                    var e = Object(N.d)("{characterCount, number} remaining", {
-                        characterCount: $ - this.state.trimmedTitle.length
+                    var e = Object(O.d)("{characterCount, number} remaining", {
+                        characterCount: J - this.state.trimmedTitle.length
                     }, "ClipsManagerTitleEdit");
-                    return s.createElement(V.W, {
-                        display: V.I.Flex,
-                        justifyContent: V.V.Center
-                    }, s.createElement(V.W, {
+                    return s.createElement(V.Z, {
+                        display: V.L.Flex,
+                        justifyContent: V.Y.Center
+                    }, s.createElement(V.Z, {
                         flexGrow: 1,
                         padding: 1
-                    }, s.createElement(V.N, {
+                    }, s.createElement(V.Q, {
                         id: Q.TITLE_INPUT,
-                        label: Object(N.d)("Title", "ClipsManagerTitleEdit"),
+                        label: Object(O.d)("Title", "ClipsManagerTitleEdit"),
                         hint: this.props.canEdit ? e : ""
-                    }, s.createElement(V.W, {
-                        display: V.I.Flex,
-                        flexWrap: V.L.NoWrap
-                    }, s.createElement(V.W, {
+                    }, s.createElement(V.Z, {
+                        display: V.L.Flex,
+                        flexWrap: V.O.NoWrap
+                    }, s.createElement(V.Z, {
                         flexGrow: 1,
                         margin: {
                             right: 1
@@ -626,11 +626,11 @@ webpackJsonp([66], {
                     }, this.renderTitle()), this.renderSaveButton()))))
                 }, t
             }(s.Component),
-            X = Object(O.a)(z, {
+            Y = Object(N.a)(q, {
                 props: function(e) {
                     return {
                         editTitle: function(t) {
-                            return l.__awaiter(K, void 0, void 0, function() {
+                            return l.__awaiter(z, void 0, void 0, function() {
                                 var n;
                                 return l.__generator(this, function(a) {
                                     switch (a.label) {
@@ -646,7 +646,7 @@ webpackJsonp([66], {
                                         case 1:
                                             return a.sent(), [3, 3];
                                         case 2:
-                                            throw n = a.sent(), N.i.error(n, "Failed to edit clip title"), n;
+                                            throw n = a.sent(), O.i.error(n, "Failed to edit clip title"), n;
                                         case 3:
                                             return [2]
                                     }
@@ -655,9 +655,9 @@ webpackJsonp([66], {
                         }
                     }
                 }
-            })(Y),
-            J = n("iFCf"),
-            Z = (n("qCag"), {
+            })(K),
+            X = n("iFCf"),
+            $ = (n("qCag"), {
                 MODERATION_DROPDOWN: "cmgr-moderation-dropdown",
                 MODERATION_BUTTON: "cmgr-moderation-button",
                 GAME_LINK: "cmgr-expanded-game-link",
@@ -667,56 +667,56 @@ webpackJsonp([66], {
                 function t(t) {
                     var n = e.call(this) || this;
                     return n.renderGameLink = function(e) {
-                        return e.game ? s.createElement(j.a, {
-                            "data-test-selector": Z.GAME_LINK,
+                        return e.game ? s.createElement(I.a, {
+                            "data-test-selector": $.GAME_LINK,
                             to: Object(U.c)(e.game.name),
                             title: e.game.name
                         }, e.game.name) : null
                     }, n.renderModerationIcon = function() {
                         if (n.props.data.currentUser.id !== n.props.clip.broadcaster.id) return null;
-                        var e = Object(N.d)("Moderation", "ClipsManagerExpandedRow");
-                        return s.createElement(V._32, {
+                        var e = Object(O.d)("Moderation", "ClipsManagerExpandedRow");
+                        return s.createElement(V._33, {
                             label: e
-                        }, s.createElement(V.W, {
+                        }, s.createElement(V.Z, {
                             margin: {
                                 right: .5
                             }
-                        }, s.createElement(L.a, null, s.createElement(V.v, {
+                        }, s.createElement(A.a, null, s.createElement(V.v, {
                             ariaLabel: e,
                             type: V.w.Hollow,
-                            icon: V._12.Sword,
-                            "data-test-selector": Z.MODERATION_BUTTON
+                            icon: V._13.Sword,
+                            "data-test-selector": $.MODERATION_BUTTON
                         }), s.createElement(V.p, {
-                            "data-test-selector": Z.MODERATION_DROPDOWN,
+                            "data-test-selector": $.MODERATION_DROPDOWN,
                             direction: V.q.BottomRight
-                        }, s.createElement(V.W, {
+                        }, s.createElement(V.Z, {
                             padding: {
                                 y: .5
                             }
-                        }, s.createElement(V._20, {
+                        }, s.createElement(V._21, {
                             borderBottom: !0
-                        }, s.createElement(V.U, {
+                        }, s.createElement(V.X, {
                             onClick: n.openTimeoutUserModal
-                        }, s.createElement(V.W, {
+                        }, s.createElement(V.Z, {
                             padding: {
                                 x: 1,
                                 y: .5
                             }
-                        }, Object(N.d)("Timeout User (24 hr)", "ClipsManagerExpandedRow"))), s.createElement(V.U, {
+                        }, Object(O.d)("Timeout User (24 hr)", "ClipsManagerExpandedRow"))), s.createElement(V.X, {
                             onClick: n.openBanUserModal
-                        }, s.createElement(V.W, {
+                        }, s.createElement(V.Z, {
                             padding: {
                                 x: 1,
                                 y: .5
                             }
-                        }, Object(N.d)("Ban User", "ClipsManagerExpandedRow")))), s.createElement(V.U, {
+                        }, Object(O.d)("Ban User", "ClipsManagerExpandedRow")))), s.createElement(V.X, {
                             onClick: n.openDeleteAllModal
-                        }, s.createElement(V.W, {
+                        }, s.createElement(V.Z, {
                             padding: {
                                 x: 1,
                                 y: .5
                             }
-                        }, Object(N.d)("Delete All Clips from Video", "ClipsManagerExpandedRow"))))))))
+                        }, Object(O.d)("Delete All Clips from Video", "ClipsManagerExpandedRow"))))))))
                     }, n.openModal = function(e, t) {
                         void 0 === t && (t = {}), n.setState({
                             isModalOpen: !0
@@ -765,75 +765,75 @@ webpackJsonp([66], {
                     this.reportInteractive()
                 }, t.prototype.render = function() {
                     var e = this.props.clip,
-                        t = Object(N.c)(new Date(e.createdAt), "medium"),
-                        n = Object(N.d)("Close", "ClipsManagerExpandedRow"),
-                        a = Object(N.d)("Delete", "ClipsManagerExpandedRow");
-                    return s.createElement(A.a, {
+                        t = Object(O.c)(new Date(e.createdAt), "medium"),
+                        n = Object(O.d)("Close", "ClipsManagerExpandedRow"),
+                        a = Object(O.d)("Delete", "ClipsManagerExpandedRow");
+                    return s.createElement(j.a, {
                         onClickOut: this.onClickOutside
-                    }, s.createElement(V._20, {
+                    }, s.createElement(V._21, {
                         "data-target": this.props.dataTarget,
                         background: V.m.Base,
-                        display: V.I.Block,
+                        display: V.L.Block,
                         elevation: 3,
                         className: "clmgr-table__row-expanded",
-                        position: V._5.Relative,
+                        position: V._6.Relative,
                         margin: {
                             bottom: 3
                         }
-                    }, s.createElement(V._20, {
-                        display: V.I.Flex,
-                        justifyContent: V.V.Between,
+                    }, s.createElement(V._21, {
+                        display: V.L.Flex,
+                        justifyContent: V.Y.Between,
                         alignItems: V.c.Center,
                         padding: 1,
                         background: V.m.Alt,
                         borderBottom: !0
-                    }, s.createElement(V._32, {
+                    }, s.createElement(V._33, {
                         label: n,
-                        align: V._33.Left
-                    }, s.createElement(V.W, {
+                        align: V._34.Left
+                    }, s.createElement(V.Z, {
                         flexGrow: 0
                     }, s.createElement(V.v, {
                         ariaLabel: n,
                         type: V.w.Hollow,
-                        icon: V._12.Close,
+                        icon: V._13.Close,
                         onClick: this.props.onClose
                     }), s.createElement(V.p, {
                         direction: V.q.TopLeft
-                    }))), s.createElement(V.W, {
-                        display: V.I.Flex
-                    }, this.renderModerationIcon(), s.createElement(V._32, {
+                    }))), s.createElement(V.Z, {
+                        display: V.L.Flex
+                    }, this.renderModerationIcon(), s.createElement(V._33, {
                         label: a
-                    }, s.createElement(V.W, {
+                    }, s.createElement(V.Z, {
                         margin: {
                             right: .5
                         }
                     }, s.createElement(V.v, {
                         ariaLabel: a,
                         type: V.w.Hollow,
-                        icon: V._12.Trash,
+                        icon: V._13.Trash,
                         onClick: this.openDeleteModal
-                    }))), s.createElement(V.W, {
+                    }))), s.createElement(V.Z, {
                         margin: {
                             right: .5
                         }
                     }, s.createElement(P, {
                         clip: this.props.clip,
                         pageType: this.props.pageType
-                    })), s.createElement(V._32, {
-                        label: Object(N.d)("Watch on Clips Page", "ClipsManagerExpandedRow"),
-                        align: V._33.Right
+                    })), s.createElement(V._33, {
+                        label: Object(O.d)("Watch on Clips Page", "ClipsManagerExpandedRow"),
+                        align: V._34.Right
                     }, s.createElement(V.v, {
-                        ariaLabel: Object(N.d)("Popout", "ClipsManagerExpandedRow"),
+                        ariaLabel: Object(O.d)("Popout", "ClipsManagerExpandedRow"),
                         type: V.w.Hollow,
                         linkTo: Object(F.a)(this.props.clip.url, {
                             tt_medium: "my_clips"
                         }),
-                        icon: V._12.Popout
-                    })))), s.createElement(V.W, {
+                        icon: V._13.Popout
+                    })))), s.createElement(V.Z, {
                         padding: 1
-                    }, s.createElement(V.P, {
-                        gutterSize: V.Q.None
-                    }, s.createElement(V.G, {
+                    }, s.createElement(V.S, {
+                        gutterSize: V.T.None
+                    }, s.createElement(V.J, {
                         cols: {
                             default: 12,
                             xs: 12,
@@ -842,8 +842,8 @@ webpackJsonp([66], {
                             lg: 5,
                             xl: 5
                         }
-                    }, s.createElement(V.W, {
-                        position: V._5.Relative
+                    }, s.createElement(V.Z, {
+                        position: V._6.Relative
                     }, s.createElement(V.j, {
                         ratio: V.k.Aspect16x9
                     }, s.createElement("iframe", {
@@ -855,7 +855,7 @@ webpackJsonp([66], {
                         height: "100%",
                         scrolling: "no",
                         allowFullScreen: !0
-                    })))), s.createElement(V.G, {
+                    })))), s.createElement(V.J, {
                         cols: {
                             default: 12,
                             xs: 12,
@@ -864,96 +864,96 @@ webpackJsonp([66], {
                             lg: 7,
                             xl: 7
                         }
-                    }, s.createElement(X, {
+                    }, s.createElement(Y, {
                         clip: e,
                         canEdit: this.props.data.currentUser.id === e.curator.id
-                    }), s.createElement(V._20, {
+                    }), s.createElement(V._21, {
                         background: V.m.Alt,
                         margin: 1,
                         padding: 1,
                         border: !0
-                    }, s.createElement(V.P, null, s.createElement(V.G, {
+                    }, s.createElement(V.S, null, s.createElement(V.J, {
                         cols: {
                             default: 4
                         }
-                    }, s.createElement(V.W, {
+                    }, s.createElement(V.Z, {
                         padding: {
                             y: .5
                         }
-                    }, s.createElement(V._24, {
+                    }, s.createElement(V._25, {
                         bold: !0
-                    }, Object(N.d)("Created On", "ClipsManagerExpandedRow")), s.createElement(V._24, {
+                    }, Object(O.d)("Created On", "ClipsManagerExpandedRow")), s.createElement(V._25, {
                         ellipsis: !0,
-                        transform: V._28.Capitalize,
+                        transform: V._29.Capitalize,
                         title: t
-                    }, t))), s.createElement(V.G, {
+                    }, t))), s.createElement(V.J, {
                         cols: {
                             default: 4
                         }
-                    }, s.createElement(V.W, {
+                    }, s.createElement(V.Z, {
                         padding: {
                             y: .5
                         }
-                    }, s.createElement(V._24, {
+                    }, s.createElement(V._25, {
                         bold: !0
-                    }, Object(N.d)("Clip Length", "ClipsManagerExpandedRow")), s.createElement(V._24, {
+                    }, Object(O.d)("Clip Length", "ClipsManagerExpandedRow")), s.createElement(V._25, {
                         ellipsis: !0
-                    }, Object(N.d)("{seconds, number}s", {
+                    }, Object(O.d)("{seconds, number}s", {
                         seconds: this.props.clip.durationSeconds
-                    }, "ClipsManagerExpandedRow")))), s.createElement(V.G, {
+                    }, "ClipsManagerExpandedRow")))), s.createElement(V.J, {
                         cols: {
                             default: 4
                         }
-                    }, s.createElement(V.W, {
+                    }, s.createElement(V.Z, {
                         padding: {
                             y: .5
                         }
-                    }, s.createElement(V._24, {
+                    }, s.createElement(V._25, {
                         bold: !0
-                    }, Object(N.d)("Views", "ClipsManagerExpandedRow")), s.createElement(V.W, {
-                        display: V.I.Flex,
+                    }, Object(O.d)("Views", "ClipsManagerExpandedRow")), s.createElement(V.Z, {
+                        display: V.L.Flex,
                         alignItems: V.c.Center,
                         ellipsis: !0
-                    }, s.createElement(V._11, {
-                        asset: V._12.GlyphViews
-                    }), s.createElement(V.W, {
+                    }, s.createElement(V._12, {
+                        asset: V._13.GlyphViews
+                    }), s.createElement(V.Z, {
                         padding: {
                             left: .5
                         }
-                    }, Object(N.f)(e.viewCount, {
+                    }, Object(O.f)(e.viewCount, {
                         maximumFractionDigits: 1
-                    }))))), s.createElement(V.G, {
+                    }))))), s.createElement(V.J, {
                         cols: {
                             default: 4
                         }
-                    }, s.createElement(V.W, {
+                    }, s.createElement(V.Z, {
                         padding: {
                             y: .5
                         }
-                    }, s.createElement(V._24, {
+                    }, s.createElement(V._25, {
                         bold: !0
-                    }, Object(N.d)("Channel", "ClipsManagerExpandedRow")), s.createElement(V._24, {
+                    }, Object(O.d)("Channel", "ClipsManagerExpandedRow")), s.createElement(V._25, {
                         ellipsis: !0
-                    }, s.createElement(j.a, {
-                        "data-test-selector": Z.CHANNEL_LINK,
+                    }, s.createElement(I.a, {
+                        "data-test-selector": $.CHANNEL_LINK,
                         to: "/" + e.broadcaster.login + "/clips",
                         title: e.broadcaster.displayName
-                    }, e.broadcaster.displayName)))), s.createElement(V.G, {
+                    }, e.broadcaster.displayName)))), s.createElement(V.J, {
                         cols: {
                             default: 4
                         }
-                    }, s.createElement(V.W, {
+                    }, s.createElement(V.Z, {
                         padding: {
                             y: .5
                         }
-                    }, s.createElement(V._24, {
+                    }, s.createElement(V._25, {
                         bold: !0
-                    }, Object(N.d)("Game", "ClipsManagerExpandedRow")), s.createElement(V._24, {
+                    }, Object(O.d)("Game", "ClipsManagerExpandedRow")), s.createElement(V._25, {
                         ellipsis: !0
                     }, this.renderGameLink(e)))))))))))
                 }, t
             }(s.Component),
-            te = Object(v.d)("ClipsManagerExpandedRow")(Object(O.a)(J)(ee)),
+            te = Object(v.d)("ClipsManagerExpandedRow")(Object(N.a)(X)(ee)),
             ne = Object(E.b)(null, function(e) {
                 return Object(k.b)({
                     showModal: D.d,
@@ -976,20 +976,22 @@ webpackJsonp([66], {
                         }, s.createElement(V.C, {
                             size: V.D.Size3,
                             aspect: V.k.Aspect3x4,
-                            imageSrc: function(e) {
+                            src: function(e) {
                                 return ie.a + "/" + e + "-" + ie.b + ".jpg"
                             }(e.title),
-                            imageAlt: e.thumbnailAltText
-                        }), s.createElement(V.B, null, s.createElement(V.W, {
+                            alt: e.thumbnailAltText
+                        }), s.createElement(V.B, {
+                            overflow: V._2.Hidden
+                        }, s.createElement(V.Z, {
                             padding: {
                                 left: 1
                             }
-                        }, s.createElement(V._24, {
-                            type: V._29.H5
-                        }, e.title), s.createElement(V._24, {
+                        }, s.createElement(V._25, {
+                            type: V._30.H5
+                        }, e.title), s.createElement(V._25, {
                             className: "clmgr-result__subtitle",
                             ellipsis: !0
-                        }, Object(N.d)("{numViewers, number} viewers", {
+                        }, Object(O.d)("{numViewers, number} viewers", {
                             numViewers: e.popularity
                         }, "ClipsManagerSearch"))))) : function(e) {
                             return void 0 !== e.followers
@@ -998,18 +1000,20 @@ webpackJsonp([66], {
                         }, s.createElement(V.C, {
                             size: V.D.Size3,
                             aspect: V.k.Aspect1x1,
-                            imageSrc: e.thumbnail,
-                            imageAlt: e.thumbnailAltText
-                        }), s.createElement(V.B, null, s.createElement(V.W, {
+                            src: e.thumbnail,
+                            alt: e.thumbnailAltText
+                        }), s.createElement(V.B, {
+                            overflow: V._2.Hidden
+                        }, s.createElement(V.Z, {
                             padding: {
                                 left: 1
                             }
-                        }, s.createElement(V._24, {
-                            type: V._29.H5
-                        }, e.name), s.createElement(V._24, {
+                        }, s.createElement(V._25, {
+                            type: V._30.H5
+                        }, e.name), s.createElement(V._25, {
                             className: "clmgr-result__subtitle",
                             ellipsis: !0
-                        }, Object(N.d)("{numFollowers, number} followers", {
+                        }, Object(O.d)("{numFollowers, number} followers", {
                             numFollowers: e.followers
                         }, "ClipsManagerSearch"))))) : void 0
                     }, t.onMouseEnter = function() {
@@ -1019,9 +1023,9 @@ webpackJsonp([66], {
                     }, t
                 }
                 return l.__extends(t, e), t.prototype.render = function() {
-                    return s.createElement(V.U, {
+                    return s.createElement(V.X, {
                         onClick: this.onClick
-                    }, s.createElement(V.R, {
+                    }, s.createElement(V.U, {
                         padding: {
                             y: .5,
                             x: 1
@@ -1057,20 +1061,20 @@ webpackJsonp([66], {
                 function t() {
                     var t = e.call(this) || this;
                     return t.renderSearchOptions = function() {
-                        var e = [s.createElement(V._21, {
+                        var e = [s.createElement(V._22, {
                             active: t.state.currentCategory === w.a.Games,
                             onClick: t.setSearchTypeGame,
                             key: se.GAME_SEARCH,
                             "data-test-selector": se.GAME_SEARCH
-                        }, Object(N.d)("Game Search", "ClipsManagerSearch"))];
-                        return t.props.userRole !== g.Broadcaster && e.push(s.createElement(V._21, {
+                        }, Object(O.d)("Game Search", "ClipsManagerSearch"))];
+                        return t.props.userRole !== g.Broadcaster && e.push(s.createElement(V._22, {
                             active: t.state.currentCategory === w.a.Users,
                             onClick: t.setSearchTypeChannel,
                             key: se.CHANNEL_SEARCH,
                             "data-test-selector": se.CHANNEL_SEARCH
-                        }, Object(N.d)("Channel Search", "ClipsManagerSearch"))), s.createElement(V._22, null, e)
+                        }, Object(O.d)("Channel Search", "ClipsManagerSearch"))), s.createElement(V._23, null, e)
                     }, t.renderSearchResults = function() {
-                        if (t.state.isLoading) return s.createElement(V._0, null);
+                        if (t.state.isLoading) return s.createElement(V._1, null);
                         var e = t.state.currentCategory;
                         if (e === w.a.Users) {
                             var n = t.state.userResults;
@@ -1101,26 +1105,26 @@ webpackJsonp([66], {
                             })
                         }
                     }, t.renderNoResults = function() {
-                        return s.createElement(V.W, {
+                        return s.createElement(V.Z, {
                             "data-test-selector": se.NO_RESULTS,
-                            display: V.I.Flex,
-                            flexDirection: V.K.Column
-                        }, s.createElement(V._20, {
-                            textAlign: V._25.Center,
+                            display: V.L.Flex,
+                            flexDirection: V.N.Column
+                        }, s.createElement(V._21, {
+                            textAlign: V._26.Center,
                             padding: {
                                 y: 5
                             }
-                        }, s.createElement(V._11, {
-                            asset: V._12.NavSearch,
+                        }, s.createElement(V._12, {
+                            asset: V._13.NavSearch,
                             height: 36,
                             width: 36,
-                            type: V._13.Brand
-                        }), s.createElement(V._24, {
-                            type: V._29.H4
-                        }, Object(N.d)("No results found", "ClipsManagerSearch")), s.createElement(V._24, {
-                            type: V._29.P,
-                            color: V.F.Alt
-                        }, Object(N.d)("They're probably in another castle", "ClipsManagerSearch"))))
+                            type: V._14.Brand
+                        }), s.createElement(V._25, {
+                            type: V._30.H4
+                        }, Object(O.d)("No results found", "ClipsManagerSearch")), s.createElement(V._25, {
+                            type: V._30.P,
+                            color: V.I.Alt
+                        }, Object(O.d)("They're probably in another castle", "ClipsManagerSearch"))))
                     }, t.setSearchResultRefs = function(e) {
                         if (null !== e) {
                             var n = e.dataset.refIndex;
@@ -1151,7 +1155,7 @@ webpackJsonp([66], {
                         }), t.performQuery()
                     }, t.onKeyDown = function(e) {
                         switch (e.keyCode) {
-                            case H.a.Esc:
+                            case G.a.Esc:
                                 return e.preventDefault(), void("" !== t.state.searchTerm ? (t.setState({
                                     searchTerm: "",
                                     focusedIndex: null
@@ -1163,11 +1167,11 @@ webpackJsonp([66], {
                                 }, function() {
                                     t.focusSearchInput()
                                 }));
-                            case H.a.Up:
+                            case G.a.Up:
                                 return void t.focusNext(!1);
-                            case H.a.Down:
+                            case G.a.Down:
                                 return void t.focusNext(!0);
-                            case H.a.Enter:
+                            case G.a.Enter:
                                 return void(null !== t.state.focusedIndex && t.selectResult(t.state.focusedIndex));
                             default:
                                 return t.setState({
@@ -1245,7 +1249,7 @@ webpackJsonp([66], {
                         })
                     }, t.setSearchInputRef = function(e) {
                         t.searchInputRef = e
-                    }, t.searchClient = new ae.a(N.a.algoliaApplicationID, N.a.algoliaAPIKey), t.inputTimer = null, t.state = ce, t.searchResultRefs = [], t
+                    }, t.searchClient = new ae.a(O.a.algoliaApplicationID, O.a.algoliaAPIKey), t.inputTimer = null, t.state = ce, t.searchResultRefs = [], t
                 }
                 return l.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
@@ -1259,22 +1263,22 @@ webpackJsonp([66], {
                         a = t.focusedIndex;
                     null !== a && null === n ? this.blurResultRef(a) : null !== n && a !== n && this.focusResultRef(n)
                 }, t.prototype.render = function() {
-                    return s.createElement(V.W, {
-                        position: V._5.Relative
-                    }, s.createElement(V.W, {
+                    return s.createElement(V.Z, {
+                        position: V._6.Relative
+                    }, s.createElement(V.Z, {
                         margin: {
                             bottom: 1
                         }
-                    }, this.renderSearchOptions()), s.createElement(A.a, {
+                    }, this.renderSearchOptions()), s.createElement(j.a, {
                         onClickOut: this.hideResults
-                    }, s.createElement(V._14, {
+                    }, s.createElement(V._15, {
                         id: se.SEARCH_INPUT,
                         refDelegate: this.setSearchInputRef,
                         onChange: this.onChange,
                         onFocus: this.onFocus,
                         onKeyDown: this.onKeyDown,
                         value: this.state.searchTerm,
-                        placeholder: this.state.currentCategory === w.a.Games ? Object(N.d)("Enter a Game", "ClipsManagerSearch") : Object(N.d)("Enter a Channel", "ClipsManagerSearch")
+                        placeholder: this.state.currentCategory === w.a.Games ? Object(O.d)("Enter a Game", "ClipsManagerSearch") : Object(O.d)("Enter a Channel", "ClipsManagerSearch")
                     }), s.createElement(V.p, {
                         "data-test-selector": se.RESULTS_MENU,
                         direction: V.q.Bottom,
@@ -1303,11 +1307,11 @@ webpackJsonp([66], {
                 return l.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return s.createElement(V.W, {
+                    return s.createElement(V.Z, {
                         className: "clmgr-filters-container"
-                    }, s.createElement(V.P, {
-                        gutterSize: V.Q.None
-                    }, s.createElement(V.G, {
+                    }, s.createElement(V.S, {
+                        gutterSize: V.T.None
+                    }, s.createElement(V.J, {
                         cols: {
                             default: 12,
                             xs: 6,
@@ -1315,37 +1319,37 @@ webpackJsonp([66], {
                             md: 12,
                             lg: 12
                         }
-                    }, s.createElement(V.W, {
+                    }, s.createElement(V.Z, {
                         margin: {
                             bottom: .5
                         }
-                    }, s.createElement(V.W, {
+                    }, s.createElement(V.Z, {
                         margin: {
                             bottom: .5
                         }
-                    }, s.createElement(V._24, {
-                        fontSize: V.M.Size5
-                    }, Object(N.d)("List View", "ClipsManagerTable"))), s.createElement(V.W, {
+                    }, s.createElement(V._25, {
+                        fontSize: V.P.Size5
+                    }, Object(O.d)("List View", "ClipsManagerTable"))), s.createElement(V.Z, {
                         margin: {
                             bottom: 2
                         }
-                    }, s.createElement(V.W, {
+                    }, s.createElement(V.Z, {
                         margin: {
                             bottom: .5
                         }
-                    }, s.createElement(V._10, {
+                    }, s.createElement(V._11, {
                         "data-test-selector": pe,
-                        label: Object(N.d)("Clips I've Created", "ClipsManagerTable"),
+                        label: Object(O.d)("Clips I've Created", "ClipsManagerTable"),
                         name: "MyClips",
                         checked: this.props.currentUserRole === g.Curator,
                         onChange: this.setCuratorRole
-                    })), s.createElement(V.W, null, s.createElement(V._10, {
+                    })), s.createElement(V.Z, null, s.createElement(V._11, {
                         "data-test-selector": me,
-                        label: Object(N.d)("Clips of My Channel", "ClipsManagerTable"),
+                        label: Object(O.d)("Clips of My Channel", "ClipsManagerTable"),
                         name: "ClipsOfMyChannel",
                         checked: this.props.currentUserRole === g.Broadcaster,
                         onChange: this.setBroadcasterRole
-                    }))))), s.createElement(V.G, {
+                    }))))), s.createElement(V.J, {
                         cols: {
                             default: 12,
                             xs: 6,
@@ -1364,7 +1368,7 @@ webpackJsonp([66], {
                     var n = e.call(this) || this;
                     return n.handleImageError = function() {
                         n.setState({
-                            imageURL: N.a.defaultStreamPreviewURL
+                            imageURL: O.a.defaultStreamPreviewURL
                         })
                     }, n.state = {
                         imageURL: t.imageURL
@@ -1395,39 +1399,39 @@ webpackJsonp([66], {
                 }
                 return l.__extends(t, e), t.prototype.render = function() {
                     var e = this.props.clip,
-                        t = Object(N.g)(new Date(e.createdAt));
-                    return s.createElement(V.W, {
+                        t = Object(O.g)(new Date(e.createdAt));
+                    return s.createElement(V.Z, {
                         className: "clmgr-table__row",
-                        display: V.I.Flex,
-                        overflow: V._1.Hidden,
+                        display: V.L.Flex,
+                        overflow: V._2.Hidden,
                         alignItems: V.c.Center
-                    }, s.createElement(V.U, {
+                    }, s.createElement(V.X, {
                         onClick: this.onRowClick,
                         alpha: !0
-                    }, s.createElement(V.P, {
+                    }, s.createElement(V.S, {
                         "data-target": this.props.dataTarget
-                    }, s.createElement(V.G, {
+                    }, s.createElement(V.J, {
                         cols: 4
-                    }, s.createElement(V.W, {
-                        display: V.I.Flex,
-                        flexWrap: V.L.NoWrap,
+                    }, s.createElement(V.Z, {
+                        display: V.L.Flex,
+                        flexWrap: V.O.NoWrap,
                         alignItems: V.c.Center,
                         padding: 1,
                         fullHeight: !0
-                    }, s.createElement(V.W, {
+                    }, s.createElement(V.Z, {
                         flexShrink: 0,
-                        position: V._5.Relative
-                    }, s.createElement(V._20, {
+                        position: V._6.Relative
+                    }, s.createElement(V._21, {
                         className: "clmgr-checkbox-bg",
                         background: V.m.Base,
-                        position: V._5.Absolute
-                    }), s.createElement(V.E, {
+                        position: V._6.Absolute
+                    }), s.createElement(V.H, {
                         refDelegate: this.setCheckboxRef,
                         "data-test-selector": Ce,
                         label: " ",
                         checked: this.props.isSelected,
                         onChange: this.selectClip
-                    })), s.createElement(V.R, {
+                    })), s.createElement(V.U, {
                         flexShrink: 0,
                         margin: {
                             right: 1
@@ -1435,62 +1439,62 @@ webpackJsonp([66], {
                     }, s.createElement(fe, {
                         imageURL: this.props.clip.thumbnailURL,
                         className: "clmgr-thumb"
-                    })), s.createElement(V._24, {
-                        type: V._29.H5,
+                    })), s.createElement(V._25, {
+                        type: V._30.H5,
                         title: e.title,
                         ellipsis: !0
-                    }, e.title))), s.createElement(V.G, {
+                    }, e.title))), s.createElement(V.J, {
                         cols: 2
-                    }, s.createElement(V.W, {
-                        display: V.I.Flex,
+                    }, s.createElement(V.Z, {
+                        display: V.L.Flex,
                         alignItems: V.c.Center,
                         padding: 1,
                         fullHeight: !0
-                    }, s.createElement(V.R, {
+                    }, s.createElement(V.U, {
                         ellipsis: !0
-                    }, s.createElement(j.a, {
+                    }, s.createElement(I.a, {
                         to: "/" + e.broadcaster.login + "/clips",
                         title: e.broadcaster.displayName
-                    }, e.broadcaster.displayName)))), s.createElement(V.G, {
+                    }, e.broadcaster.displayName)))), s.createElement(V.J, {
                         cols: 2
-                    }, s.createElement(V.W, {
-                        display: V.I.Flex,
+                    }, s.createElement(V.Z, {
+                        display: V.L.Flex,
                         alignItems: V.c.Center,
                         padding: 1,
                         fullHeight: !0
-                    }, this.renderGameLink(e))), s.createElement(V.G, {
+                    }, this.renderGameLink(e))), s.createElement(V.J, {
                         cols: 2
-                    }, s.createElement(V.W, {
-                        display: V.I.Flex,
+                    }, s.createElement(V.Z, {
+                        display: V.L.Flex,
                         alignItems: V.c.Center,
                         padding: 1,
                         fullHeight: !0
-                    }, s.createElement(V._24, {
+                    }, s.createElement(V._25, {
                         title: t,
-                        transform: V._28.Capitalize,
+                        transform: V._29.Capitalize,
                         ellipsis: !0
-                    }, t))), s.createElement(V.G, {
+                    }, t))), s.createElement(V.J, {
                         cols: 2
-                    }, s.createElement(V.W, {
-                        display: V.I.Flex,
+                    }, s.createElement(V.Z, {
+                        display: V.L.Flex,
                         alignItems: V.c.Center,
                         padding: 1,
                         fullHeight: !0
-                    }, s.createElement(V.W, {
-                        display: V.I.Flex,
+                    }, s.createElement(V.Z, {
+                        display: V.L.Flex,
                         alignItems: V.c.Center,
                         margin: {
                             right: .5
                         }
-                    }, s.createElement(V._11, {
-                        asset: V._12.GlyphViews
-                    })), Object(N.f)(e.viewCount, {
+                    }, s.createElement(V._12, {
+                        asset: V._13.GlyphViews
+                    })), Object(O.f)(e.viewCount, {
                         maximumFractionDigits: 1
                     }))))))
                 }, t.prototype.renderGameLink = function(e) {
-                    return e.game ? s.createElement(V.R, {
+                    return e.game ? s.createElement(V.U, {
                         ellipsis: !0
-                    }, s.createElement(j.a, {
+                    }, s.createElement(I.a, {
                         to: Object(U.c)(e.game.name),
                         title: e.game.name
                     }, e.game.name)) : null
@@ -1614,20 +1618,21 @@ webpackJsonp([66], {
                     this.reportInteractive()
                 }, t.prototype.render = function() {
                     var e = this;
-                    return this.props.error || !this.props.userID ? null : s.createElement(V.W, {
+                    return this.props.error || !this.props.userID ? null : s.createElement(V.Z, {
                         className: "clmgr-body-wrap",
-                        display: V.I.Flex,
-                        flexWrap: V.L.NoWrap,
-                        flexDirection: V.K.ColumnReverse,
+                        display: V.L.Flex,
+                        flexWrap: V.O.NoWrap,
+                        flexDirection: V.N.ColumnReverse,
                         breakpointMedium: {
-                            flexDirection: V.K.Row
+                            flexDirection: V.N.Row
                         }
-                    }, s.createElement(V.W, {
+                    }, s.createElement(V.Z, {
                         className: "clmgr-table-wrap",
-                        display: V.I.Flex,
+                        display: V.L.Flex,
                         flexGrow: 1,
-                        position: V._5.Relative
-                    }, s.createElement(V._20, {
+                        flexWrap: V.O.Wrap,
+                        position: V._6.Relative
+                    }, s.createElement(V._21, {
                         background: V.m.Base,
                         border: !0,
                         elevation: 3,
@@ -1635,52 +1640,52 @@ webpackJsonp([66], {
                             bottom: .5
                         },
                         fullWidth: !0
-                    }, this.renderHeaderRow()), s.createElement(V._20, {
+                    }, this.renderHeaderRow()), s.createElement(V._21, {
                         fullWidth: !0,
                         fullHeight: !0
-                    }, s.createElement(M.b, null, s.createElement(V._20, {
+                    }, s.createElement(M.b, null, s.createElement(V._21, {
                         background: V.m.Base,
                         elevation: 2,
                         border: !0
                     }, this.props.clips.length > 0 && !this.state.isNewQueryLoading && this.props.clips.map(function(t) {
                         return e.renderClipRow(t)
-                    }), this.state.isNewQueryLoading && this.props.loading && s.createElement(V.W, {
-                        display: V.I.Flex,
+                    }), this.state.isNewQueryLoading && this.props.loading && s.createElement(V.Z, {
+                        display: V.L.Flex,
                         alignItems: V.c.Center,
-                        justifyContent: V.V.Center,
+                        justifyContent: V.Y.Center,
                         padding: 1,
                         fullWidth: !0
-                    }, s.createElement(V._0, {
+                    }, s.createElement(V._1, {
                         delay: 0
-                    })), 0 === this.props.clips.length && !this.props.loading && s.createElement(V.W, {
-                        display: V.I.Flex,
-                        justifyContent: V.V.Center,
-                        textAlign: V._25.Center,
+                    })), 0 === this.props.clips.length && !this.props.loading && s.createElement(V.Z, {
+                        display: V.L.Flex,
+                        justifyContent: V.Y.Center,
+                        textAlign: V._26.Center,
                         padding: 2,
                         fullWidth: !0,
                         fullHeight: !0
-                    }, s.createElement(V._24, {
-                        type: V._29.H4,
-                        color: V.F.Alt2,
+                    }, s.createElement(V._25, {
+                        type: V._30.H4,
+                        color: V.I.Alt2,
                         "data-test-selector": _e
-                    }, Object(N.d)("Create Clips to fill this space with the most memorable moments from your favorite Twitch streams and videos. Just hit the Clip button on the video player to try it out. {learnHowLink} to use Clips.", {
+                    }, Object(O.d)("Create Clips to fill this space with the most memorable moments from your favorite Twitch streams and videos. Just hit the Clip button on the video player to try it out. {learnHowLink} to use Clips.", {
                         learnHowLink: s.createElement("a", {
                             target: "_blank",
                             rel: "noopener",
                             href: "https://help.twitch.tv/customer/portal/articles/2442508-how-to-use-clips"
-                        }, Object(N.d)("Learn how", "ClipsManagerTable"))
+                        }, Object(O.d)("Learn how", "ClipsManagerTable"))
                     }, "ClipsManagerTable"))), s.createElement(M.a, {
                         loadMore: this.loadMore,
                         enabled: !this.props.loading && this.props.hasNextPage
-                    }), this.props.loading && !this.state.isNewQueryLoading && s.createElement(V.W, {
-                        display: V.I.Flex,
+                    }), this.props.loading && !this.state.isNewQueryLoading && s.createElement(V.Z, {
+                        display: V.L.Flex,
                         alignItems: V.c.Center,
-                        justifyContent: V.V.Center,
+                        justifyContent: V.Y.Center,
                         padding: 1,
                         fullWidth: !0
-                    }, s.createElement(V._0, {
+                    }, s.createElement(V._1, {
                         delay: 0
-                    })))))), s.createElement(V.W, {
+                    })))))), s.createElement(V.Z, {
                         breakpointMedium: {
                             margin: {
                                 left: 2
@@ -1694,134 +1699,134 @@ webpackJsonp([66], {
                 }, t.prototype.renderHeaderRow = function() {
                     var e = this.state.numberOfSelectedClips > 0,
                         t = e && this.state.numberOfSelectedClips === this.props.clips.length,
-                        n = s.createElement(V.E, {
+                        n = s.createElement(V.H, {
                             "data-test-selector": Ee,
                             label: " ",
                             checked: t,
                             onChange: this.toggleClipsSelection,
                             disabled: this.state.isNewQueryLoading && this.props.loading
                         });
-                    if (e) return s.createElement(V.P, null, s.createElement(V.G, {
+                    if (e) return s.createElement(V.S, null, s.createElement(V.J, {
                         cols: 12
-                    }, s.createElement(V.W, {
-                        display: V.I.Flex,
+                    }, s.createElement(V.Z, {
+                        display: V.L.Flex,
                         alignItems: V.c.Center,
                         padding: {
                             x: 1,
                             y: .5
                         },
                         fullHeight: !0
-                    }, s.createElement(V.W, {
+                    }, s.createElement(V.Z, {
                         margin: {
                             right: 1
                         },
                         flexShrink: 0
-                    }, n), s.createElement(V.W, {
+                    }, n), s.createElement(V.Z, {
                         margin: {
                             right: 1
                         },
                         flexShrink: 0
-                    }, s.createElement(V._24, null, Object(N.d)("{numClips, number} selected", {
+                    }, s.createElement(V._25, null, Object(O.d)("{numClips, number} selected", {
                         numClips: this.state.numberOfSelectedClips
-                    }, "ClipsManagerTable"))), s.createElement(V.W, {
+                    }, "ClipsManagerTable"))), s.createElement(V.Z, {
                         flexShrink: 0,
                         alignItems: V.c.Center,
                         fullHeight: !0
                     }, s.createElement(V.v, {
-                        ariaLabel: Object(N.d)("Delete Clip", "ClipsManagerTable"),
-                        icon: V._12.Trash,
+                        ariaLabel: Object(O.d)("Delete Clip", "ClipsManagerTable"),
+                        icon: V._13.Trash,
                         onClick: this.renderBatchDeleteModal,
                         "data-test-selector": ke
                     })))));
                     var a = this.props.sort,
                         r = a === i.ViewsAscending || a === i.ViewsDescending,
                         l = a === i.CreatedAtAscending || a === i.CreatedAtDescending,
-                        o = Object(N.d)("Created", "ClipsManagerTable"),
-                        c = Object(N.d)("Views", "ClipsManagerTable");
-                    return s.createElement(V.P, null, s.createElement(V.G, {
+                        o = Object(O.d)("Created", "ClipsManagerTable"),
+                        c = Object(O.d)("Views", "ClipsManagerTable");
+                    return s.createElement(V.S, null, s.createElement(V.J, {
                         cols: 4
-                    }, s.createElement(V.W, {
-                        display: V.I.Flex,
+                    }, s.createElement(V.Z, {
+                        display: V.L.Flex,
                         alignItems: V.c.Center,
                         padding: 1,
                         fullHeight: !0
-                    }, s.createElement(V.W, {
-                        display: V.I.Flex,
+                    }, s.createElement(V.Z, {
+                        display: V.L.Flex,
                         alignItems: V.c.Center,
                         margin: {
                             right: 1
                         }
-                    }, n), s.createElement(V._24, null, Object(N.d)("Info", "ClipsManagerTable")))), s.createElement(V.G, {
+                    }, n), s.createElement(V._25, null, Object(O.d)("Info", "ClipsManagerTable")))), s.createElement(V.J, {
                         cols: 2
-                    }, s.createElement(V.W, {
+                    }, s.createElement(V.Z, {
                         padding: 1
-                    }, Object(N.d)("Channel", "ClipsManagerTable"))), s.createElement(V.G, {
+                    }, Object(O.d)("Channel", "ClipsManagerTable"))), s.createElement(V.J, {
                         cols: 2
-                    }, s.createElement(V.W, {
+                    }, s.createElement(V.Z, {
                         padding: 1
-                    }, Object(N.d)("Game", "ClipsManagerTable"))), s.createElement(V.G, {
+                    }, Object(O.d)("Game", "ClipsManagerTable"))), s.createElement(V.J, {
                         cols: 2
-                    }, s.createElement(V.W, {
+                    }, s.createElement(V.Z, {
                         padding: {
                             y: .5,
                             right: 1
                         },
-                        display: V.I.Flex,
+                        display: V.L.Flex,
                         fullHeight: !0
-                    }, s.createElement(V.U, {
+                    }, s.createElement(V.X, {
                         alpha: !0,
                         onClick: this.toggleCreatedAtSort,
                         "data-test-selector": Se
-                    }, s.createElement(V.W, {
-                        display: V.I.Flex,
-                        flexWrap: V.L.NoWrap,
+                    }, s.createElement(V.Z, {
+                        display: V.L.Flex,
+                        flexWrap: V.O.NoWrap,
                         alignContent: V.b.Center,
-                        justifyContent: V.V.Between,
+                        justifyContent: V.Y.Between,
                         padding: {
                             x: 1
                         }
-                    }, s.createElement(V._24, {
-                        color: V.F.Link,
+                    }, s.createElement(V._25, {
+                        color: V.I.Link,
                         title: o,
                         bold: !0,
                         ellipsis: !0
-                    }, o), l && s.createElement(V._11, {
-                        asset: a === i.CreatedAtDescending ? V._12.GlyphArrDown : V._12.GlyphArrUp,
-                        type: V._13.Brand
-                    }))))), s.createElement(V.G, {
+                    }, o), l && s.createElement(V._12, {
+                        asset: a === i.CreatedAtDescending ? V._13.GlyphArrDown : V._13.GlyphArrUp,
+                        type: V._14.Brand
+                    }))))), s.createElement(V.J, {
                         cols: 2
-                    }, s.createElement(V.W, {
+                    }, s.createElement(V.Z, {
                         padding: {
                             y: .5,
                             right: 1
                         },
-                        display: V.I.Flex,
+                        display: V.L.Flex,
                         fullHeight: !0
-                    }, s.createElement(V.U, {
+                    }, s.createElement(V.X, {
                         alpha: !0,
                         onClick: this.toggleViewsSort,
                         "data-test-selector": ye
-                    }, s.createElement(V.W, {
-                        display: V.I.Flex,
-                        flexWrap: V.L.NoWrap,
+                    }, s.createElement(V.Z, {
+                        display: V.L.Flex,
+                        flexWrap: V.O.NoWrap,
                         alignContent: V.b.Center,
-                        justifyContent: V.V.Between,
+                        justifyContent: V.Y.Between,
                         padding: {
                             x: 1
                         }
-                    }, s.createElement(V._24, {
-                        color: V.F.Link,
+                    }, s.createElement(V._25, {
+                        color: V.I.Link,
                         title: c,
                         bold: !0,
                         ellipsis: !0
-                    }, c), r && s.createElement(V._11, {
-                        asset: a === i.ViewsDescending ? V._12.GlyphArrDown : V._12.GlyphArrUp,
-                        type: V._13.Brand
+                    }, c), r && s.createElement(V._12, {
+                        asset: a === i.ViewsDescending ? V._13.GlyphArrDown : V._13.GlyphArrUp,
+                        type: V._14.Brand
                     }))))))
                 }, t.prototype.renderClipRow = function(e) {
                     var t = !!this.state.selectedClips[e.slug];
                     if (e.slug === this.state.expandedSlug) {
-                        var n = this.props.userRole === g.Curator ? I.a.MyClips : I.a.ClipsOfMyChannel;
+                        var n = this.props.userRole === g.Curator ? L.a.MyClips : L.a.ClipsOfMyChannel;
                         return s.createElement(ne, {
                             key: e.slug,
                             dataTarget: ve,
@@ -1842,8 +1847,8 @@ webpackJsonp([66], {
                     })
                 }, t
             }(s.Component),
-            Ne = n("zlRb"),
-            Oe = Object(o.compose)(Object(v.d)("ClipsManagerTable"), Object(O.a)(Ne, {
+            Oe = n("zlRb"),
+            Ne = Object(o.compose)(Object(v.d)("ClipsManagerTable"), Object(N.a)(Oe, {
                 options: function(e) {
                     var t = {
                         sort: h[e.sort],
@@ -1892,7 +1897,7 @@ webpackJsonp([66], {
                             })
                         },
                         onDeleteClip: function(t) {
-                            Object(R.d)(Ne, e.data.variables, function(e) {
+                            Object(R.d)(Oe, e.data.variables, function(e) {
                                 var n = e.user.clips.edges;
                                 return e.user.clips.edges = n.filter(function(e) {
                                     var n = e.node.slug;
@@ -1901,7 +1906,7 @@ webpackJsonp([66], {
                             })
                         },
                         onDeleteAllClips: function(t) {
-                            Object(R.d)(Ne, e.data.variables, function(e) {
+                            Object(R.d)(Oe, e.data.variables, function(e) {
                                 var n = e.user.clips.edges;
                                 return e.user.clips.edges = n.filter(function(e) {
                                     var n = e.node.slug;
@@ -1912,7 +1917,7 @@ webpackJsonp([66], {
                             })
                         },
                         onBatchDeleteClips: function(t) {
-                            Object(R.d)(Ne, e.data.variables, function(e) {
+                            Object(R.d)(Oe, e.data.variables, function(e) {
                                 var n = e.user.clips.edges;
                                 return e.user.clips.edges = n.filter(function(e) {
                                     var n = e.node.slug;
@@ -1977,21 +1982,21 @@ webpackJsonp([66], {
                 }, t.prototype.componentDidUpdate = function() {
                     this.reportInteractive()
                 }, t.prototype.render = function() {
-                    return this.props.data.loading || this.props.data.error || !this.props.data.currentUser ? null : s.createElement(V.W, {
+                    return this.props.data.loading || this.props.data.error || !this.props.data.currentUser ? null : s.createElement(V.Z, {
                         className: "scroll-y",
                         padding: {
                             x: 3,
                             top: 3
                         },
                         fullHeight: !0
-                    }, s.createElement(V.W, {
+                    }, s.createElement(V.Z, {
                         margin: {
                             bottom: 1
                         }
-                    }, s.createElement(V._24, {
-                        type: V._29.H1,
-                        fontSize: V.M.Size3
-                    }, Object(N.d)("Clips", "ClipsManagerPage"))), s.createElement(Oe, {
+                    }, s.createElement(V._25, {
+                        type: V._30.H1,
+                        fontSize: V.P.Size3
+                    }, Object(O.d)("Clips", "ClipsManagerPage"))), s.createElement(Ne, {
                         channelName: this.props.data.currentUser.login,
                         channelID: this.props.data.currentUser.id,
                         sort: this.state.sortOption,
@@ -2007,7 +2012,7 @@ webpackJsonp([66], {
                     clearSearch: T.func
                 }, t
             }(s.Component),
-            De = Object(o.compose)(Object(v.d)("ClipsManager"), Object(O.a)(we), c.e)(Re),
+            De = Object(o.compose)(Object(v.d)("ClipsManager"), Object(N.a)(we), c.e)(Re),
             Me = Object(E.b)(function(e) {
                 return {
                     isLoggedIn: Object(_.d)(e)
@@ -2036,7 +2041,7 @@ webpackJsonp([66], {
                     })
                 }, t
             }(s.Component),
-            Ie = Object(o.compose)(Object(v.d)("ClipsOfMeManagerPage", {
+            Le = Object(o.compose)(Object(v.d)("ClipsOfMeManagerPage", {
                 destination: u.a.ChannelClipsManager
             }), Object(d.a)({
                 location: p.PageviewLocation.ChannelClipsManager,
@@ -2044,7 +2049,7 @@ webpackJsonp([66], {
                     is_live: !1
                 }
             }), c.e)(xe),
-            je = function(e) {
+            Ie = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onRoleChange = function(e) {
@@ -2061,18 +2066,18 @@ webpackJsonp([66], {
                     })
                 }, t
             }(s.Component),
-            Ae = Object(o.compose)(Object(v.d)("MyClipsManagerPage", {
+            je = Object(o.compose)(Object(v.d)("MyClipsManagerPage", {
                 destination: u.a.MyClipsManager
             }), Object(d.a)({
                 location: p.PageviewLocation.MyClipsManager,
                 properties: {
                     is_live: !1
                 }
-            }), c.e)(je);
+            }), c.e)(Ie);
         n.d(t, "ChannelClipsManagerPage", function() {
-            return Ie
+            return Le
         }), n.d(t, "MyClipsManagerPage", function() {
-            return Ae
+            return je
         })
     },
     iFCf: function(e, t) {
@@ -2397,7 +2402,7 @@ webpackJsonp([66], {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderSuccess = function() {
-                        return t.props.successContent ? i.createElement(o._20, {
+                        return t.props.successContent ? i.createElement(o._21, {
                             "data-test-selector": c.SUCCESS_BODY,
                             padding: {
                                 x: 2,
@@ -2409,11 +2414,11 @@ webpackJsonp([66], {
                             borderMarked: !0,
                             background: o.m.Alt,
                             fullWidth: !0
-                        }, i.createElement(o._24, {
-                            type: o._29.Strong
+                        }, i.createElement(o._25, {
+                            type: o._30.Strong
                         }, t.props.successContent)) : null
                     }, t.renderError = function() {
-                        return t.props.errorContent ? i.createElement(o._20, {
+                        return t.props.errorContent ? i.createElement(o._21, {
                             "data-test-selector": c.ERROR_BODY,
                             padding: {
                                 x: 1,
@@ -2425,9 +2430,9 @@ webpackJsonp([66], {
                             borderMarked: !0,
                             background: o.m.Alt,
                             fullWidth: !0
-                        }, i.createElement(o._24, {
-                            type: o._29.Strong,
-                            color: o.F.Error
+                        }, i.createElement(o._25, {
+                            type: o._30.Strong,
+                            color: o.I.Error
                         }, t.props.errorContent)) : null
                     }, t.onSubmit = function() {
                         t.props.onSubmit()
@@ -2436,14 +2441,14 @@ webpackJsonp([66], {
                 return r.__extends(t, e), t.prototype.render = function() {
                     return this.props.successContent ? i.createElement(s.a, {
                         onClickOut: this.props.onClose
-                    }, i.createElement(o._20, {
+                    }, i.createElement(o._21, {
                         padding: 2,
                         background: o.m.Base,
                         className: "clip-modal"
-                    }, this.renderSuccess(), i.createElement(o.W, {
-                        display: o.I.Flex,
-                        justifyContent: o.V.Center
-                    }, i.createElement(o.W, {
+                    }, this.renderSuccess(), i.createElement(o.Z, {
+                        display: o.L.Flex,
+                        justifyContent: o.Y.Center
+                    }, i.createElement(o.Z, {
                         margin: {
                             x: 1
                         }
@@ -2452,11 +2457,11 @@ webpackJsonp([66], {
                         onClick: this.props.onClose
                     }, Object(l.d)("Close", "ClipsModal")))))) : i.createElement(s.a, {
                         onClickOut: this.props.onClose
-                    }, i.createElement(o._20, {
+                    }, i.createElement(o._21, {
                         padding: 2,
                         background: o.m.Base,
                         className: "clip-modal"
-                    }, i.createElement(o._20, {
+                    }, i.createElement(o._21, {
                         "data-test-selector": c.TITLE,
                         borderBottom: !0,
                         margin: {
@@ -2465,7 +2470,7 @@ webpackJsonp([66], {
                         padding: {
                             bottom: 1
                         }
-                    }, this.props.title), i.createElement(o._20, {
+                    }, this.props.title), i.createElement(o._21, {
                         "data-test-selector": c.MAIN_BODY,
                         borderBottom: !0,
                         margin: {
@@ -2474,10 +2479,10 @@ webpackJsonp([66], {
                         padding: {
                             bottom: 2
                         }
-                    }, this.renderError(), this.props.body), i.createElement(o.W, {
-                        display: o.I.Flex,
-                        justifyContent: o.V.Center
-                    }, i.createElement(o.W, {
+                    }, this.renderError(), this.props.body), i.createElement(o.Z, {
+                        display: o.L.Flex,
+                        justifyContent: o.Y.Center
+                    }, i.createElement(o.Z, {
                         margin: {
                             x: 1
                         }
@@ -2485,7 +2490,7 @@ webpackJsonp([66], {
                         "data-test-selector": c.CANCEL_BUTTON,
                         type: o.z.Text,
                         onClick: this.props.onClose
-                    }, Object(l.d)("Cancel", "ClipsModal"))), i.createElement(o.W, {
+                    }, Object(l.d)("Cancel", "ClipsModal"))), i.createElement(o.Z, {
                         margin: {
                             x: 1
                         }
@@ -2494,7 +2499,7 @@ webpackJsonp([66], {
                         type: this.props.buttonType ? this.props.buttonType : o.z.Default,
                         onClick: this.onSubmit,
                         disabled: this.props.submitDisabled
-                    }, this.props.buttonContent), this.props.isLoading && i.createElement(o._0, {
+                    }, this.props.buttonContent), this.props.isLoading && i.createElement(o._1, {
                         delay: 0
                     })))))
                 }, t
@@ -2511,17 +2516,17 @@ webpackJsonp([66], {
                 function t() {
                     var t = e.call(this) || this;
                     return t.renderTitle = function() {
-                        return t.props.isTemporary ? i.createElement(o._24, {
-                            type: o._29.H5,
+                        return t.props.isTemporary ? i.createElement(o._25, {
+                            type: o._30.H5,
                             ellipsis: !0
-                        }, Object(l.d)("Timeout this Clip Creator for 24 hours from Your Channel", "ClipsModalBanUser")) : i.createElement(o._24, {
-                            type: o._29.H5,
+                        }, Object(l.d)("Timeout this Clip Creator for 24 hours from Your Channel", "ClipsModalBanUser")) : i.createElement(o._25, {
+                            type: o._30.H5,
                             ellipsis: !0
                         }, Object(l.d)("Ban this Clip Creator from Your Channel", "ClipsModalBanUser"))
                     }, t.renderBodyText = function() {
-                        return t.props.isTemporary ? i.createElement(o._24, null, Object(l.d)("{clipCreator} will temporarily be timed out from creating clips and chatting in your channel for 24 hours.", {
+                        return t.props.isTemporary ? i.createElement(o._25, null, Object(l.d)("{clipCreator} will temporarily be timed out from creating clips and chatting in your channel for 24 hours.", {
                             clipCreator: t.props.clip.curator.displayName
-                        }, "ClipsModalBanUser")) : i.createElement(o._24, null, Object(l.d)("{clipCreator} will be permanently banned from creating clips and chatting in your channel.", {
+                        }, "ClipsModalBanUser")) : i.createElement(o._25, null, Object(l.d)("{clipCreator} will be permanently banned from creating clips and chatting in your channel.", {
                             clipCreator: t.props.clip.curator.displayName
                         }, "ClipsModalBanUser"))
                     }, t.renderButtonText = function() {
@@ -2623,22 +2628,22 @@ webpackJsonp([66], {
                     }, t.state = E, t
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
-                    var e = [i.createElement(o._24, {
+                    var e = [i.createElement(o._25, {
                             key: "title",
-                            type: o._29.H4
-                        }, Object(l.d)("Delete This Clip", "ClipsModalDelete")), i.createElement(o.W, {
+                            type: o._30.H4
+                        }, Object(l.d)("Delete This Clip", "ClipsModalDelete")), i.createElement(o.Z, {
                             key: "message",
                             margin: {
                                 top: 1
                             }
-                        }, i.createElement(o._24, {
-                            type: o._29.P,
-                            color: o.F.Alt2
+                        }, i.createElement(o._25, {
+                            type: o._30.P,
+                            color: o.I.Alt2
                         }, Object(l.d)("This clip will be permanently deleted.", "ClipsModalDelete")))],
-                        t = i.createElement(o._20, {
-                            display: o.I.Flex,
-                            flexWrap: o.L.NoWrap
-                        }, i.createElement(o.W, {
+                        t = i.createElement(o._21, {
+                            display: o.L.Flex,
+                            flexWrap: o.O.NoWrap
+                        }, i.createElement(o.Z, {
                             className: "clips-modal-delete__thumb",
                             margin: {
                                 right: 1
@@ -2647,16 +2652,16 @@ webpackJsonp([66], {
                             ratio: o.k.Aspect16x9
                         }, i.createElement("img", {
                             src: this.props.clip.thumbnailURL
-                        }))), i.createElement(o.W, null, i.createElement(o._24, {
-                            type: o._29.H5
-                        }, this.props.clip.title), i.createElement(o._24, {
-                            color: o.F.Alt2
+                        }))), i.createElement(o.Z, null, i.createElement(o._25, {
+                            type: o._30.H5
+                        }, this.props.clip.title), i.createElement(o._25, {
+                            color: o.I.Alt2
                         }, Object(l.d)("{created, date, medium}", {
                             created: new Date(this.props.clip.createdAt)
                         }, "ClipsModalDelete"), " • ", Object(l.d)("Clipped by {curator}", {
                             curator: this.props.clip.curator.login
-                        }, "ClipsModalDelete")), i.createElement(o._24, {
-                            color: o.F.Alt2
+                        }, "ClipsModalDelete")), i.createElement(o._25, {
+                            color: o.I.Alt2
                         }, Object(l.d)("{viewCount, number} views", {
                             viewCount: this.props.clip.viewCount
                         }, "ClipsModalDelete"))));
@@ -2706,12 +2711,12 @@ webpackJsonp([66], {
             S = n("3zLD"),
             _ = n("wqRA"),
             T = this,
-            N = {
+            O = {
                 isLoading: !1,
                 hasErrored: !1,
                 hasSucceeded: !1
             },
-            O = function(e) {
+            N = function(e) {
                 function t() {
                     var t = e.call(this) || this;
                     return t.deleteAll = function() {
@@ -2745,19 +2750,19 @@ webpackJsonp([66], {
                         return t.state.hasSucceeded ? Object(l.d)("A request has been made to delete the clip. Please wait a few minutes for this to take effect.", "ClipsModalDeleteAll") : null
                     }, t.renderFailure = function() {
                         return t.state.hasErrored ? Object(l.d)("There was a problem deleting this clip.", "ClipsModalDeleteAll") : null
-                    }, t.state = N, t
+                    }, t.state = O, t
                 }
                 return r.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    var e = i.createElement(o._24, {
-                        type: o._29.P
+                    var e = i.createElement(o._25, {
+                        type: o._30.P
                     }, Object(l.d)("This clip and all other clips created from the same video will be permanently deleted.", "ClipsModalDeleteAll"));
                     return i.createElement(d, {
                         onSubmit: this.deleteAll,
                         onClose: this.props.onClose,
-                        title: i.createElement(o._24, {
-                            type: o._29.H4
+                        title: i.createElement(o._25, {
+                            type: o._30.H4
                         }, Object(l.d)("Delete All Clips from Related Video", "ClipsModalDeleteAll")),
                         body: e,
                         buttonContent: Object(l.d)("Delete", "ClipsModalDeleteAll"),
@@ -2829,7 +2834,7 @@ webpackJsonp([66], {
                         }
                     }
                 }
-            }))(O),
+            }))(N),
             R = this,
             D = {
                 isLoading: !1,
@@ -2873,11 +2878,11 @@ webpackJsonp([66], {
                     }, t.state = D, t
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
-                    var e = i.createElement(o._24, {
-                            type: o._29.H4
+                    var e = i.createElement(o._25, {
+                            type: o._30.H4
                         }, Object(l.d)("Delete these clips?", "ClipsModalBatchDelete")),
-                        t = i.createElement(o._24, {
-                            type: o._29.P
+                        t = i.createElement(o._25, {
+                            type: o._30.P
                         }, Object(l.d)("These clips will be permanently deleted. Are you sure?", "ClipsModalBatchDelete"));
                     return i.createElement(d, {
                         onSubmit: this.onDeleteClick,
@@ -3483,4 +3488,4 @@ webpackJsonp([66], {
         }(n("kUjr").definitions)), e.exports = a
     }
 });
-//# sourceMappingURL=pages.clips-manager-6ed82981ecffaa299af06dfa2d4ca78d.js.map
+//# sourceMappingURL=pages.clips-manager-91c0c35a097ff2d085b25ea57cfa7723.js.map

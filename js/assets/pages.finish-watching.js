@@ -34,13 +34,13 @@ webpackJsonp([52], {
                             i = n.parentElement && n.parentElement.getAttribute("data-language-code");
                         i && t.props.updateLanguagePreferences(i, n.checked)
                     }, t.renderLanguageOption = function(e) {
-                        return s.createElement(v.W, {
+                        return s.createElement(v.Z, {
                             padding: {
                                 x: 1,
                                 y: .5
                             },
                             key: e.code
-                        }, s.createElement(v.E, {
+                        }, s.createElement(v.H, {
                             label: e.label,
                             checked: t.props.languagePreferences.includes(e.code),
                             "data-language-code": e.code,
@@ -53,21 +53,21 @@ webpackJsonp([52], {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     var e = this.props.languagePreferences.length;
-                    return s.createElement(v.W, {
+                    return s.createElement(v.Z, {
                         className: "language-select-menu"
                     }, s.createElement(u.a, null, s.createElement(v.u, {
                         "data-test-selector": "language-dropdown-button",
                         "data-a-target": "language-filter-dropdown",
                         dropdown: !0,
                         type: v.z.Hollow
-                    }, s.createElement(v.W, {
-                        display: v.I.Flex
-                    }, Object(d.d)("Language", "LanguageSelectMenu"), s.createElement(v.W, {
+                    }, s.createElement(v.Z, {
+                        display: v.L.Flex
+                    }, Object(d.d)("Language", "LanguageSelectMenu"), s.createElement(v.Z, {
                         margin: {
                             left: .5
                         }
-                    }, 0 !== e && s.createElement(v._2, {
-                        type: v._3.Brand,
+                    }, 0 !== e && s.createElement(v._3, {
+                        type: v._4.Brand,
                         label: e.toString()
                     })))), s.createElement(v.p, {
                         direction: v.q.BottomLeft,
@@ -75,9 +75,9 @@ webpackJsonp([52], {
                         "data-a-target": "language-filter-balloon"
                     }, s.createElement(c.b, {
                         className: "language-select-menu__balloon"
-                    }, s.createElement(v.W, {
+                    }, s.createElement(v.Z, {
                         padding: .5
-                    }, Object(p.b)().map(this.renderLanguageOption))), s.createElement(v._20, {
+                    }, Object(p.b)().map(this.renderLanguageOption))), s.createElement(v._21, {
                         background: v.m.Alt,
                         borderTop: !0,
                         className: "language-select-menu__footer"
@@ -105,19 +105,19 @@ webpackJsonp([52], {
     "7FW4": function(e, t, n) {
         "use strict";
         t.a = function(e) {
-            var t = i.createElement(o.W, {
+            var t = i.createElement(o.Z, {
                 padding: 1,
                 fullHeight: !0,
-                flexDirection: o.K.Column,
-                justifyContent: o.V.Center,
-                display: o.I.Flex
-            }, i.createElement(o._24, {
-                color: o.F.Link,
-                fontSize: o.M.Size4,
+                flexDirection: o.N.Column,
+                justifyContent: o.Y.Center,
+                display: o.L.Flex
+            }, i.createElement(o._25, {
+                color: o.I.Link,
+                fontSize: o.P.Size4,
                 noWrap: !0
-            }, Object(r.d)("View All", "Following--ViewAllButton")), i.createElement(o._24, {
-                color: o.F.Alt2,
-                fontSize: o.M.Size4,
+            }, Object(r.d)("View All", "Following--ViewAllButton")), i.createElement(o._25, {
+                color: o.I.Alt2,
+                fontSize: o.P.Size4,
                 noWrap: !0
             }, e.subHeader));
             return e.linkTo && (t = i.createElement(a.a, {
@@ -127,9 +127,9 @@ webpackJsonp([52], {
                 className: "following__view-all",
                 onClick: e.onClickViewAll,
                 "data-test-selector": s
-            }, i.createElement(o.W, null, i.createElement(o.j, {
+            }, i.createElement(o.Z, null, i.createElement(o.j, {
                 ratio: e.aspectRatio
-            }, i.createElement(o._20, {
+            }, i.createElement(o._21, {
                 background: o.m.Alt2,
                 fullHeight: !0
             }, t))))
@@ -419,7 +419,7 @@ webpackJsonp([52], {
                         key: c
                     }));
                 else e.viewAllButtonProps && (n = a.createElement(r.a, i.__assign({}, e.viewAllButtonProps))), t = e.videos.map(function(t, n) {
-                    return a.createElement(d.W, {
+                    return a.createElement(d.Z, {
                         "data-a-target": "video-tower-card-" + n,
                         key: "video-" + n,
                         padding: {
@@ -435,9 +435,9 @@ webpackJsonp([52], {
                         video: t
                     }))
                 });
-                return a.createElement(d._35, {
-                    gutterSize: d._37.Small,
-                    childWidth: e.videoCardSize || d._36.Large,
+                return a.createElement(d._36, {
+                    gutterSize: d._38.Small,
+                    childWidth: e.videoCardSize || d._37.Large,
                     placeholderItems: 20
                 }, t, n)
             },
@@ -535,15 +535,15 @@ webpackJsonp([52], {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     if (this.props.data.loading || this.props.data.error || 0 === this.props.data.currentUser.recommendations.videos.edges.length) return null;
-                    var e = a.createElement(u.W, {
+                    var e = a.createElement(u.Z, {
                             margin: {
                                 bottom: 2
                             }
-                        }, a.createElement(u._24, {
-                            type: u._29.H4,
-                            color: u.F.Alt2,
-                            fontSize: u.M.Size5,
-                            transform: u._28.Uppercase
+                        }, a.createElement(u._25, {
+                            type: u._30.H4,
+                            color: u.I.Alt2,
+                            fontSize: u.P.Size5,
+                            transform: u._29.Uppercase
                         }, Object(r.d)("Based on your viewing history", "SuggestedVideos"))),
                         t = [];
                     if (this.props.data.currentUser.recommendations.videos && (t = this.props.data.currentUser.recommendations.videos.edges.map(function(e) {
@@ -555,7 +555,7 @@ webpackJsonp([52], {
                     return a.createElement("div", null, e, a.createElement(c.b, {
                         trackingMedium: l.PageviewMedium.Following,
                         trackingContent: l.PageviewContent.SuggestedVideos,
-                        videoCardSize: u._36.Medium,
+                        videoCardSize: u._37.Medium,
                         videos: t
                     }))
                 }, t = i.__decorate([Object(o.a)(p, {
@@ -744,8 +744,8 @@ webpackJsonp([52], {
                     return n.sortChangeHandler = function(e) {
                         n.props.onVideoSortChange(e.target.value)
                     }, n.renderLanguageSelector = function() {
-                        return n.props.hideLanguageSelector ? null : r.createElement(p.W, {
-                            display: p.I.InlineFlex,
+                        return n.props.hideLanguageSelector ? null : r.createElement(p.Z, {
+                            display: p.L.InlineFlex,
                             margin: {
                                 right: 1
                             }
@@ -806,25 +806,25 @@ webpackJsonp([52], {
                             "video-filters": !0
                         },
                         f = null;
-                    return this.state.isPremiereExperimentActive && (f = r.createElement(p.U, {
+                    return this.state.isPremiereExperimentActive && (f = r.createElement(p.X, {
                         onClick: this.typeChangeHandler,
                         "data-filter-type": d.a.PastPremiere,
                         "data-a-target": "video-type-filter-past-premieres"
-                    }, r.createElement(p.W, {
+                    }, r.createElement(p.Z, {
                         className: a(this.props.broadcastType === d.a.PastPremiere ? g : h),
                         padding: {
                             y: .5,
                             x: 1
                         },
                         "data-test-selector": "filter-item-past-premiere"
-                    }, n))), r.createElement(p.W, {
+                    }, n))), r.createElement(p.Z, {
                         margin: {
                             bottom: 2
                         },
-                        display: p.I.Flex,
-                        justifyContent: p.V.Between
-                    }, r.createElement("div", null, this.renderLanguageSelector(), r.createElement(p.W, {
-                        display: p.I.InlineFlex
+                        display: p.L.Flex,
+                        justifyContent: p.Y.Between
+                    }, r.createElement("div", null, this.renderLanguageSelector(), r.createElement(p.Z, {
+                        display: p.L.InlineFlex
                     }, r.createElement(s.a, {
                         ref: this.saveBalloonWrapperRef
                     }, r.createElement(p.u, {
@@ -837,56 +837,56 @@ webpackJsonp([52], {
                         "data-a-target": "video-type-filter-balloon",
                         offsetX: "0",
                         noTail: !0
-                    }, r.createElement(p.W, {
+                    }, r.createElement(p.Z, {
                         className: "layout",
                         padding: {
                             y: 1
                         }
-                    }, r.createElement(p.U, {
+                    }, r.createElement(p.X, {
                         onClick: this.typeChangeHandler,
                         "data-filter-type": "all",
                         "data-a-target": "video-type-filter-all"
-                    }, r.createElement(p.W, {
+                    }, r.createElement(p.Z, {
                         className: a(this.props.broadcastType ? h : g),
                         padding: {
                             y: .5,
                             x: 1
                         },
                         "data-test-selector": "filter-item-all"
-                    }, t)), f, r.createElement(p.U, {
+                    }, t)), f, r.createElement(p.X, {
                         onClick: this.typeChangeHandler,
                         "data-filter-type": d.a.Archive,
                         "data-a-target": "video-type-filter-past-broadcasts"
-                    }, r.createElement(p.W, {
+                    }, r.createElement(p.Z, {
                         className: a(this.props.broadcastType === d.a.Archive ? g : h),
                         padding: {
                             y: .5,
                             x: 1
                         },
                         "data-test-selector": "filter-item-archive"
-                    }, i)), r.createElement(p.U, {
+                    }, i)), r.createElement(p.X, {
                         onClick: this.typeChangeHandler,
                         "data-filter-type": d.a.Highlight,
                         "data-a-target": "video-type-filter-highlights"
-                    }, r.createElement(p.W, {
+                    }, r.createElement(p.Z, {
                         className: a(this.props.broadcastType === d.a.Highlight ? g : h),
                         padding: {
                             y: .5,
                             x: 1
                         },
                         "data-test-selector": "filter-item-highlight"
-                    }, l)), r.createElement(p.U, {
+                    }, l)), r.createElement(p.X, {
                         onClick: this.typeChangeHandler,
                         "data-filter-type": d.a.Upload,
                         "data-a-target": "video-type-filter-uploads"
-                    }, r.createElement(p.W, {
+                    }, r.createElement(p.Z, {
                         className: a(this.props.broadcastType === d.a.Upload ? g : h),
                         padding: {
                             y: .5,
                             x: 1
                         },
                         "data-test-selector": "filter-item-upload"
-                    }, m))))))), r.createElement("div", null, r.createElement(p._17, {
+                    }, m))))))), r.createElement("div", null, r.createElement(p._18, {
                         name: "sort",
                         onChange: this.sortChangeHandler,
                         value: v,
@@ -926,30 +926,30 @@ webpackJsonp([52], {
             r = function() {
                 return i.createElement(a.A, null, i.createElement(a.j, {
                     ratio: a.k.Aspect16x9
-                }, i.createElement(a._4, null)), i.createElement(a.B, null, i.createElement(a.W, {
-                    display: a.I.Flex,
+                }, i.createElement(a._5, null)), i.createElement(a.B, null, i.createElement(a.Z, {
+                    display: a.L.Flex,
                     margin: {
                         bottom: 1
                     }
-                }, i.createElement(a.W, {
-                    display: a.I.InlineBlock,
+                }, i.createElement(a.Z, {
+                    display: a.L.InlineBlock,
                     margin: {
                         top: 1,
                         right: 1
                     }
-                }, i.createElement(a._4, {
+                }, i.createElement(a._5, {
                     width: 40,
                     height: 56
-                })), i.createElement(a.W, {
-                    display: a.I.InlineBlock,
+                })), i.createElement(a.Z, {
+                    display: a.L.InlineBlock,
                     margin: {
                         top: 1
                     }
-                }, i.createElement(a._24, null, i.createElement(a._4, {
+                }, i.createElement(a._25, null, i.createElement(a._5, {
                     width: 150
-                })), i.createElement(a._24, {
-                    fontSize: a.M.Size7
-                }, i.createElement(a._4, {
+                })), i.createElement(a._25, {
+                    fontSize: a.P.Size7
+                }, i.createElement(a._5, {
                     width: 100
                 }))))))
             }
@@ -1006,58 +1006,58 @@ webpackJsonp([52], {
                 }, t.prototype.render = function() {
                     var e = null,
                         t = this.getVideoPreviousWatchPercentage();
-                    return null !== t && (e = o.createElement(p.W, {
-                        position: p._5.Absolute,
+                    return null !== t && (e = o.createElement(p.Z, {
+                        position: p._6.Absolute,
                         attachBottom: !0,
                         fullWidth: !0
-                    }, o.createElement(p._8, {
-                        size: p._9.Small,
+                    }, o.createElement(p._9, {
+                        size: p._10.Small,
                         value: t,
                         mask: !0
                     }))), o.createElement("div", i.__assign({
                         onClick: this.onClickHandler,
                         onMouseEnter: this.onMouseEnterHandler,
                         onMouseLeave: this.onMouseLeaveHandler
-                    }, Object(p._42)(this.props)), o.createElement(p.A, null, o.createElement(p.W, {
+                    }, Object(p._43)(this.props)), o.createElement(p.A, null, o.createElement(p.Z, {
                         fullWidth: !0
                     }, o.createElement(p.j, {
                         overflow: !0
-                    }, o.createElement("div", null, o.createElement(p._20, {
-                        display: p.I.InlineFlex,
-                        position: p._5.Absolute,
+                    }, o.createElement("div", null, o.createElement(p._21, {
+                        display: p.L.InlineFlex,
+                        position: p._6.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
                         margin: .5,
-                        zIndex: p._41.Default,
-                        fontSize: p.M.Size6,
+                        zIndex: p._42.Default,
+                        fontSize: p.P.Size6,
                         background: p.m.Overlay,
-                        color: p.F.Overlay,
+                        color: p.I.Overlay,
                         className: "video-preview-card__preview-overlay-stat"
-                    }, o.createElement(p._19, {
+                    }, o.createElement(p._20, {
                         "data-test-selector": "video-view-count",
-                        icon: p._12.GlyphViews,
+                        icon: p._13.GlyphViews,
                         label: Object(s.d)("views", "VideoPreviewCard"),
                         value: Object(s.f)(this.props.video.viewCount)
-                    })), o.createElement(p._20, {
-                        display: p.I.InlineFlex,
-                        position: p._5.Absolute,
+                    })), o.createElement(p._21, {
+                        display: p.L.InlineFlex,
+                        position: p._6.Absolute,
                         attachTop: !0,
                         attachRight: !0,
                         margin: .5,
-                        zIndex: p._41.Default,
-                        fontSize: p.M.Size6,
+                        zIndex: p._42.Default,
+                        fontSize: p.P.Size6,
                         background: p.m.Overlay,
-                        color: p.F.Overlay,
+                        color: p.I.Overlay,
                         className: "video-preview-card__preview-overlay-stat"
-                    }, o.createElement(p._19, {
+                    }, o.createElement(p._20, {
                         "data-test-selector": "video-length",
-                        icon: p._12.GlyphLength,
+                        icon: p._13.GlyphLength,
                         label: Object(s.d)("length", "VideoPreviewCard"),
                         value: Object(c.a)(this.props.video.lengthSeconds)
-                    })), this.videoPreviewImage(), e))), o.createElement(p.B, null, o.createElement(p.W, {
-                        display: p.I.Flex,
-                        flexDirection: p.K.Row,
-                        flexWrap: p.L.NoWrap,
+                    })), this.videoPreviewImage(), e))), o.createElement(p.B, null, o.createElement(p.Z, {
+                        display: p.L.Flex,
+                        flexDirection: p.N.Row,
+                        flexWrap: p.O.NoWrap,
                         padding: {
                             top: .5
                         }
@@ -1089,7 +1089,7 @@ webpackJsonp([52], {
                     }, o.createElement("div", {
                         className: t,
                         "data-test-selector": "preview-image-wrapper"
-                    }, o.createElement(p.R, {
+                    }, o.createElement(p.U, {
                         flexShrink: 0
                     }, o.createElement("figure", null, o.createElement(p.j, {
                         ratio: p.k.Aspect16x9
@@ -1111,9 +1111,9 @@ webpackJsonp([52], {
                         n = a("video-preview-card__image-wrapper", {
                             "video-preview-card__image-wrapper--watched": null !== this.getVideoPreviousWatchPercentage() && !this.state.hovered
                         });
-                    return o.createElement(p.W, {
+                    return o.createElement(p.Z, {
                         "data-test-selector": "game-box-art",
-                        display: p.I.InlineFlex,
+                        display: p.L.InlineFlex,
                         flexShrink: 0,
                         padding: {
                             bottom: .5
@@ -1122,23 +1122,23 @@ webpackJsonp([52], {
                         to: t,
                         title: e.name,
                         "data-a-target": "video-preview-card-boxart-link"
-                    }, o.createElement(p.R, {
+                    }, o.createElement(p.U, {
                         margin: {
                             right: 1
                         }
                     }, o.createElement("figure", {
                         className: "video-preview-card__game-art"
-                    }, o.createElement(p._32, {
-                        display: p.I.Block,
-                        direction: p._34.Bottom,
+                    }, o.createElement(p._33, {
+                        display: p.L.Block,
+                        direction: p._35.Bottom,
                         label: e.name
                     }, o.createElement("div", {
                         className: n,
                         "data-test-selector": "game-box-art-wrapper"
                     }, o.createElement(p.C, {
                         aspect: p.k.BoxArt,
-                        imageAlt: e.name,
-                        imageSrc: e.boxArtURL || s.a.defaultBoxArtURL
+                        alt: e.name,
+                        src: e.boxArtURL || s.a.defaultBoxArtURL
                     })))))))
                 }, t.prototype.videoMetaData = function() {
                     var e = Object(s.c)(new Date(this.props.video.publishedAt), "medium"),
@@ -1156,17 +1156,18 @@ webpackJsonp([52], {
                             title: Object(d.a)(this.props.video.owner.login, this.props.video.owner.displayName, !0)
                         }, Object(d.a)(this.props.video.owner.login, this.props.video.owner.displayName))
                     }
-                    return o.createElement(p.W, {
-                        display: p.I.Flex,
-                        flexDirection: p.K.Column
-                    }, o.createElement(p.W, {
+                    return o.createElement(p.Z, {
+                        display: p.L.Flex,
+                        flexDirection: p.N.Column,
+                        overflow: p._2.Hidden
+                    }, o.createElement(p.Z, {
                         "data-test-selector": "video-title",
-                        overflow: p._1.Hidden,
-                        position: p._5.Relative
-                    }, o.createElement(p._24, {
-                        color: p.F.Base,
-                        fontSize: p.M.Size5,
-                        lineHeight: p.X.Heading
+                        overflow: p._2.Hidden,
+                        position: p._6.Relative
+                    }, o.createElement(p._25, {
+                        color: p.I.Base,
+                        fontSize: p.P.Size5,
+                        lineHeight: p._0.Heading
                     }, o.createElement(l.a, {
                         className: "video-preview-card__video-title",
                         to: {
@@ -1176,16 +1177,16 @@ webpackJsonp([52], {
                         },
                         title: this.props.video.title,
                         "data-a-target": "video-preview-card-title-link"
-                    }, this.props.video.title))), o.createElement(p.W, {
+                    }, this.props.video.title))), o.createElement(p.Z, {
                         flexShrink: 0,
                         flexGrow: 0,
                         ellipsis: !0
-                    }, o.createElement(p._24, {
-                        type: p._29.Span,
-                        color: p.F.Alt2,
+                    }, o.createElement(p._25, {
+                        type: p._30.Span,
+                        color: p.I.Alt2,
                         ellipsis: !0,
                         title: this.formatTitle(e)
-                    }, e, o.createElement(p.R, {
+                    }, e, o.createElement(p.U, {
                         padding: {
                             x: .5
                         }
@@ -1367,17 +1368,17 @@ webpackJsonp([52], {
                         message: Object(u.d)("Log in to view a full list of videos you have previously watched.", "FinishWatchingPage")
                     });
                     var e;
-                    if (this.props.data.loading) e = d.createElement(b._0, {
+                    if (this.props.data.loading) e = d.createElement(b._1, {
                         fillContent: !0
                     });
-                    else if (this.props.data.error || !this.props.data.currentUser) e = d.createElement("div", null, d.createElement(b.W, {
+                    else if (this.props.data.error || !this.props.data.currentUser) e = d.createElement("div", null, d.createElement(b.Z, {
                         margin: {
                             bottom: 2
                         }
-                    }, d.createElement(b._24, {
-                        type: b._29.H4,
-                        color: b.F.Alt2,
-                        fontSize: b.M.Size5
+                    }, d.createElement(b._25, {
+                        type: b._30.H4,
+                        color: b.I.Alt2,
+                        fontSize: b.P.Size5
                     }, Object(u.d)("Oops, viewing history failed to load. Check out some other videos you might like:", "FinishWatchingPage"))), d.createElement(f.a, {
                         directoryWidth: this.props.directoryWidth
                     }));
@@ -1387,14 +1388,14 @@ webpackJsonp([52], {
                         }).map(function(e) {
                             return e.node
                         });
-                        e = 0 === t.length ? d.createElement("div", null, d.createElement(b.W, {
+                        e = 0 === t.length ? d.createElement("div", null, d.createElement(b.Z, {
                             margin: {
                                 bottom: 2
                             }
-                        }, d.createElement(b._24, {
-                            type: b._29.H4,
-                            color: b.F.Alt2,
-                            fontSize: b.M.Size5
+                        }, d.createElement(b._25, {
+                            type: b._30.H4,
+                            color: b.I.Alt2,
+                            fontSize: b.P.Size5
                         }, Object(u.d)("You haven't watched any videos yet! Here are some to start you off:", "FinishWatchingPage"))), d.createElement(f.a, {
                             directoryWidth: this.props.directoryWidth
                         })) : d.createElement(w.b, {
@@ -1403,26 +1404,26 @@ webpackJsonp([52], {
                             trackingContent: h.PageviewContent.ResumeWatchingVideos
                         })
                     }
-                    return d.createElement(b.W, {
+                    return d.createElement(b.Z, {
                         className: "finish-watching-page",
-                        overflow: b._1.Hidden,
-                        display: b.I.Flex,
-                        flexDirection: b.K.Column,
-                        flexWrap: b.L.NoWrap,
+                        overflow: b._2.Hidden,
+                        display: b.L.Flex,
+                        flexDirection: b.N.Column,
+                        flexWrap: b.O.NoWrap,
                         padding: {
                             top: 2,
                             x: 3
                         },
                         fullHeight: !0
-                    }, d.createElement(b.W, {
+                    }, d.createElement(b.Z, {
                         margin: {
                             bottom: 2
                         }
-                    }, d.createElement(b._24, {
-                        type: b._29.H2,
-                        color: b.F.Alt2,
-                        fontSize: b.M.Size4,
-                        transform: b._28.Uppercase
+                    }, d.createElement(b._25, {
+                        type: b._30.H2,
+                        color: b.I.Alt2,
+                        fontSize: b.P.Size4,
+                        transform: b._29.Uppercase
                     }, Object(u.d)("Viewing History", "FinishWatchingPage"))), e)
                 }, t.prototype.onRender = function() {
                     this.props.data.loading || (this.props.data.currentUser && u.n.setPageTitle(Object(u.d)("{currentUser} - Viewing History", {
@@ -1715,4 +1716,4 @@ webpackJsonp([52], {
     },
     vQzq: function(e, t) {}
 });
-//# sourceMappingURL=pages.finish-watching-ccf5254a25e10d39525ab0fd87f84a52.js.map
+//# sourceMappingURL=pages.finish-watching-2a8e5c2a2638bae225288b683c30e4d5.js.map
