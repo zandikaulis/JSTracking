@@ -2254,17 +2254,17 @@ window.SiteOptions = {
         },
         "6a2630a4-edc7-4f2a-8cfe-e4de75eb0d98": {
             "name": "rtqos",
-            "v": 3003,
+            "v": 3009,
             "t": 1,
             "s": 1,
             "groups": [{
-                "weight": 80,
+                "weight": 70,
                 "value": "control"
             }, {
                 "weight": 10,
                 "value": "realtime"
             }, {
-                "weight": 10,
+                "weight": 20,
                 "value": "direct"
             }]
         },
