@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".09f49c994d36a1750028.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".331f652a151ffa485fd2.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -13160,7 +13160,7 @@
                 return u(t, e), k(t, [{
                     key: "handleMenuTransition",
                     value: function() {
-                        this.props.onMenuTransition(y.b)
+                        this.props.onMenuTransition(y.c)
                     }
                 }, {
                     key: "render",
@@ -13244,10 +13244,10 @@
                     volume: n.volume,
                     muted: n.muted
                 };
-            i.contentType === he.a ? (o.video = i.videoId, o.collection = t ? t.id : void 0, o.time = Y.d(n.currentTime)) : i.contentType === pe.a && (o.channel = i.channel), r === te.p && (o.player = te.p);
-            var s = me.z + "/?" + ye.c(o),
-                u = me.A.height,
-                c = me.A.width,
+            i.contentType === ve.a ? (o.video = i.videoId, o.collection = t ? t.id : void 0, o.time = X.d(n.currentTime)) : i.contentType === ye.a && (o.channel = i.channel), r === ie.p && (o.player = ie.p);
+            var s = ge.z + "/?" + be.c(o),
+                u = ge.A.height,
+                c = ge.A.width,
                 l = "width=" + c + ",height=" + u + ",toolbar=no,menubar=no,scrollbars=no,location=no,status=no";
             a.open(s, "_blank", l)
         }
@@ -13461,25 +13461,46 @@
                 }
             }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
         }
-        var q = n(0),
-            U = n.n(q),
-            B = n(1),
-            F = n.n(B),
-            V = n(7),
-            H = n.n(V),
-            z = n(37),
-            W = n.n(z),
-            K = n(3),
-            G = n(290),
+
+        function q(e, t) {
+            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+        }
+
+        function U(e, t) {
+            if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+            return !t || "object" != typeof t && "function" != typeof t ? e : t
+        }
+
+        function B(e, t) {
+            if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
+            e.prototype = Object.create(t && t.prototype, {
+                constructor: {
+                    value: e,
+                    enumerable: !1,
+                    writable: !0,
+                    configurable: !0
+                }
+            }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
+        }
+        var F = n(0),
+            V = n.n(F),
+            H = n(1),
+            z = n.n(H),
+            W = n(7),
+            K = n.n(W),
+            G = n(37),
             Q = n.n(G),
-            Y = n(31),
-            $ = n(2),
+            Y = n(3),
+            $ = n(290),
             J = n.n($),
-            X = n(4),
-            Z = n(9),
-            ee = n(185),
-            te = n(6),
-            ne = function() {
+            X = n(31),
+            Z = n(2),
+            ee = n.n(Z),
+            te = n(4),
+            ne = n(9),
+            re = n(185),
+            ie = n(6),
+            ae = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var r = t[n];
@@ -13490,27 +13511,27 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            re = {
-                playerType: F.a.string.isRequired,
-                canChangePlaybackSpeed: F.a.bool,
-                canPopoutPlayer: F.a.bool,
-                captionsAvailable: F.a.bool,
-                currentSpeed: F.a.number,
-                currentTime: F.a.number,
-                isStaffUser: F.a.bool,
-                isVod: F.a.bool.isRequired,
-                isClip: F.a.bool.isRequired,
-                onMenuTransition: F.a.func,
-                onPopoutPlayer: F.a.func,
-                onShowCaptionsOptions: F.a.func,
-                selectedQualityName: F.a.string.isRequired,
-                showClipsShortcutOverlay: F.a.func.isRequired,
-                shouldShowQualityMenu: F.a.bool,
-                t: F.a.func.isRequired,
-                vodUrlWithTimestamp: F.a.string,
-                windowObj: F.a.object.isRequired
+            oe = {
+                playerType: z.a.string.isRequired,
+                canChangePlaybackSpeed: z.a.bool,
+                canPopoutPlayer: z.a.bool,
+                captionsAvailable: z.a.bool,
+                currentSpeed: z.a.number,
+                currentTime: z.a.number,
+                isStaffUser: z.a.bool,
+                isVod: z.a.bool.isRequired,
+                isClip: z.a.bool.isRequired,
+                onMenuTransition: z.a.func,
+                onPopoutPlayer: z.a.func,
+                onShowCaptionsOptions: z.a.func,
+                selectedQualityName: z.a.string.isRequired,
+                showClipsShortcutOverlay: z.a.func.isRequired,
+                shouldShowQualityMenu: z.a.bool,
+                t: z.a.func.isRequired,
+                vodUrlWithTimestamp: z.a.string,
+                windowObj: z.a.object.isRequired
             },
-            ie = {
+            se = {
                 canChangePlaybackSpeed: !1,
                 canPopoutPlayer: !0,
                 captionsAvailable: !1,
@@ -13523,68 +13544,73 @@
                 shouldShowQualityMenu: !0,
                 vodUrlWithTimestamp: ""
             },
-            ae = J()({
+            ue = ee()({
                 "pl-menu__item": !0,
                 "pl-menu__item--block": !0
             }),
-            oe = J()({
+            ce = ee()({
                 "pl-menu__item": !0,
                 "pl-menu__item--block": !0,
                 "pl-menu__item--with-caret": !0
             }),
-            se = J()({
+            le = ee()({
                 ellipsis: !0,
                 "qa-advanced-button": !0
             }),
-            ue = J()({
+            de = ee()({
                 ellipsis: !0,
                 "qa-report-issue-button": !0
             }),
-            ce = J()({
+            fe = ee()({
                 ellipsis: !0,
                 "qa-popout-player-button": !0
             }),
-            le = J()({
+            pe = ee()({
                 ellipsis: !0,
                 "qa-captions-options-button": !0
             }),
-            de = function(e) {
+            he = function(e) {
                 function t() {
                     i(this, t);
                     var e = a(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
                     return e.state = {
                         hasRecentlyCopied: !1
-                    }, e.copyUrlTimeoutId = 0, e.handleAdvancedClick = e.handleAdvancedClick.bind(e), e.handlePlaybackSpeedClick = e.handlePlaybackSpeedClick.bind(e), e.handleQualityClick = e.handleQualityClick.bind(e), e.handleReportIssueClick = e.handleReportIssueClick.bind(e), e.handleStaffClick = e.handleStaffClick.bind(e), e.handleUrlCopied = e.handleUrlCopied.bind(e), e
+                    }, e.copyUrlTimeoutId = 0, e.handleAdvancedClick = e.handleAdvancedClick.bind(e), e.handlePlaybackSpeedClick = e.handlePlaybackSpeedClick.bind(e), e.handleQualityClick = e.handleQualityClick.bind(e), e.handleReportIssueClick = e.handleReportIssueClick.bind(e), e.handleStaffClick = e.handleStaffClick.bind(e), e.handleUrlCopied = e.handleUrlCopied.bind(e), e.handleClipModerationClick = e.handleClipModerationClick.bind(e), e
                 }
-                return o(t, e), ne(t, [{
+                return o(t, e), ae(t, [{
                     key: "componentWillUnmount",
                     value: function() {
                         0 !== this.copyUrlTimeoutId && this.props.windowObj.clearTimeout(this.copyUrlTimeoutId)
                     }
                 }, {
+                    key: "handleClipModerationClick",
+                    value: function() {
+                        this.props.onMenuTransition(Tn)
+                    }
+                }, {
                     key: "handleQualityClick",
                     value: function() {
-                        this.props.onMenuTransition(dn)
+                        this.props.onMenuTransition(kn)
                     }
                 }, {
                     key: "handlePlaybackSpeedClick",
                     value: function() {
-                        this.props.onMenuTransition(hn)
+                        this.props.onMenuTransition(Pn)
                     }
                 }, {
                     key: "handleAdvancedClick",
                     value: function() {
-                        this.props.onMenuTransition(fn)
+                        this.props.onMenuTransition(En)
                     }
                 }, {
                     key: "handleReportIssueClick",
                     value: function() {
-                        this.props.onMenuTransition(pn)
+                        this.props.onMenuTransition(Sn)
                     }
                 }, {
                     key: "handleStaffClick",
                     value: function() {
-                        this.props.onMenuTransition(mn)
+                        this.props.onMenuTransition(Cn)
                     }
                 }, {
                     key: "handleUrlCopied",
@@ -13604,9 +13630,23 @@
                         var e = this._renderQualityButton(),
                             t = this._renderPlaybackSpeedButton(),
                             n = this._renderClipsKeyboardShortcutsButton();
-                        return U.a.createElement("div", {
+                        return V.a.createElement("div", {
                             className: "pl-menu__inner"
-                        }, e, t, U.a.createElement("div", {
+                        }, e, t, V.a.createElement("div", {
+                            className: "pl-menu__section pl-menu__section--with-sep"
+                        }, n))
+                    }
+                }, {
+                    key: "renderClipsViewingMenu",
+                    value: function() {
+                        var e = this._renderQualityButton(),
+                            t = this._renderPlaybackSpeedButton(),
+                            n = this._renderClipsKeyboardShortcutsButton(),
+                            r = this._renderClipModerationButton(),
+                            i = this._renderReportClipButton();
+                        return V.a.createElement("div", {
+                            className: "pl-menu__inner"
+                        }, e, t, r, i, V.a.createElement("div", {
                             className: "pl-menu__section pl-menu__section--with-sep"
                         }, n))
                     }
@@ -13622,20 +13662,31 @@
                             o = this._renderStaffMenuButton(),
                             s = this._renderPopoutPlayerButton(),
                             u = this._renderCopyVideoUrlButton(),
-                            c = J()({
+                            c = ee()({
                                 "pl-menu__section": !0,
                                 "pl-menu__section--with-sep": e
                             });
-                        return U.a.createElement("div", {
+                        return V.a.createElement("div", {
                             className: "pl-menu__inner"
-                        }, t, U.a.createElement("div", {
+                        }, t, V.a.createElement("div", {
                             className: c
                         }, n, r, i, a, o, s, u))
                     }
                 }, {
                     key: "render",
                     value: function() {
-                        return this.props.playerType === te.f ? this.renderClipsEmbedMenu() : this.renderStandardMenu()
+                        var e = this.props.playerType;
+                        return e === ie.f ? this.renderClipsEmbedMenu() : e === ie.g ? this.renderClipsViewingMenu() : this.renderStandardMenu()
+                    }
+                }, {
+                    key: "_renderReportClipButton",
+                    value: function() {
+                        var e = this.props.t;
+                        return V.a.createElement("div", {
+                            className: ue
+                        }, V.a.createElement(ne.a, {
+                            className: "qa-report-clip"
+                        }, V.a.createElement("span", null, e("Report Clip"))))
                     }
                 }, {
                     key: "_renderClipsKeyboardShortcutsButton",
@@ -13643,12 +13694,25 @@
                         var e = this.props,
                             t = e.showClipsShortcutOverlay,
                             n = e.t;
-                        return U.a.createElement("div", {
-                            className: ae
-                        }, U.a.createElement(Z.a, {
+                        return V.a.createElement("div", {
+                            className: ue
+                        }, V.a.createElement(ne.a, {
                             onClick: t,
                             className: "qa-clips-keyboard-shortcuts"
-                        }, U.a.createElement("span", null, n("View Keyboard Shortcuts"))))
+                        }, V.a.createElement("span", null, n("View Keyboard Shortcuts"))))
+                    }
+                }, {
+                    key: "_renderClipModerationButton",
+                    value: function() {
+                        var e = this.props,
+                            t = e.isStaffUser,
+                            n = e.t;
+                        return t ? V.a.createElement("div", {
+                            className: ce
+                        }, V.a.createElement(ne.a, {
+                            onClick: this.handleClipModerationClick,
+                            className: "qa-clip-moderation-button"
+                        }, V.a.createElement("span", null, n("Moderation")))) : null
                     }
                 }, {
                     key: "_renderQualityButton",
@@ -13657,12 +13721,12 @@
                             t = e.selectedQualityName,
                             n = e.shouldShowQualityMenu,
                             r = e.t;
-                        return n ? U.a.createElement("div", {
-                            className: oe
-                        }, U.a.createElement(Z.a, {
+                        return n ? V.a.createElement("div", {
+                            className: ce
+                        }, V.a.createElement(ne.a, {
                             onClick: this.handleQualityClick,
                             className: "qa-quality-button"
-                        }, U.a.createElement("span", null, r("Quality")), U.a.createElement("span", {
+                        }, V.a.createElement("span", null, r("Quality")), V.a.createElement("span", {
                             className: "pl-pill pl-mg-l-05 qa-quality-pill"
                         }, t))) : null
                     }
@@ -13676,12 +13740,12 @@
                             i = e.canChangePlaybackSpeed,
                             a = e.t,
                             o = t + "x";
-                        return (n || r) && i ? U.a.createElement("div", {
-                            className: oe
-                        }, U.a.createElement(Z.a, {
+                        return (n || r) && i ? V.a.createElement("div", {
+                            className: ce
+                        }, V.a.createElement(ne.a, {
                             onClick: this.handlePlaybackSpeedClick,
                             className: "qa-playback-speed-button"
-                        }, U.a.createElement("span", null, a(ee.c)), U.a.createElement("span", {
+                        }, V.a.createElement("span", null, a(re.c)), V.a.createElement("span", {
                             className: "pl-pill pl-mg-l-05 qa-playback-speed-pill"
                         }, o))) : null
                     }
@@ -13692,44 +13756,44 @@
                             t = e.captionsAvailable,
                             n = e.onShowCaptionsOptions,
                             r = e.t;
-                        return t ? U.a.createElement("div", {
-                            className: ae
-                        }, U.a.createElement(Z.a, {
-                            className: le,
+                        return t ? V.a.createElement("div", {
+                            className: ue
+                        }, V.a.createElement(ne.a, {
+                            className: pe,
                             onClick: n
-                        }, U.a.createElement("span", null, r("Closed Captions Options")))) : null
+                        }, V.a.createElement("span", null, r("Closed Captions Options")))) : null
                     }
                 }, {
                     key: "_renderAdvancedMenuButton",
                     value: function() {
                         var e = this.props.t;
-                        return U.a.createElement("div", {
-                            className: oe
-                        }, U.a.createElement(Z.a, {
-                            className: se,
+                        return V.a.createElement("div", {
+                            className: ce
+                        }, V.a.createElement(ne.a, {
+                            className: le,
                             onClick: this.handleAdvancedClick
-                        }, U.a.createElement("span", null, e("Advanced"))))
+                        }, V.a.createElement("span", null, e("Advanced"))))
                     }
                 }, {
                     key: "_renderReportIssuesMenuButton",
                     value: function() {
                         var e = this.props.t;
-                        return U.a.createElement("div", {
-                            className: oe
-                        }, U.a.createElement(Z.a, {
-                            className: ue,
+                        return V.a.createElement("div", {
+                            className: ce
+                        }, V.a.createElement(ne.a, {
+                            className: de,
                             onClick: this.handleReportIssueClick
-                        }, U.a.createElement("span", null, e("Report Playback Issue"))))
+                        }, V.a.createElement("span", null, e("Report Playback Issue"))))
                     }
                 }, {
                     key: "_renderStaffMenuButton",
                     value: function() {
-                        return this.props.isStaffUser ? U.a.createElement("div", {
-                            className: oe
-                        }, U.a.createElement(Z.a, {
+                        return this.props.isStaffUser ? V.a.createElement("div", {
+                            className: ce
+                        }, V.a.createElement(ne.a, {
                             className: "ellipsis qa-staff-button",
                             onClick: this.handleStaffClick
-                        }, U.a.createElement("span", null, "Staff"))) : null
+                        }, V.a.createElement("span", null, "Staff"))) : null
                     }
                 }, {
                     key: "_renderPopoutPlayerButton",
@@ -13738,12 +13802,12 @@
                             t = e.canPopoutPlayer,
                             n = e.onPopoutPlayer,
                             r = e.t;
-                        return t ? U.a.createElement("div", {
-                            className: ae
-                        }, U.a.createElement(Z.a, {
-                            className: ce,
+                        return t ? V.a.createElement("div", {
+                            className: ue
+                        }, V.a.createElement(ne.a, {
+                            className: fe,
                             onClick: n
-                        }, U.a.createElement("span", null, r("Popout Player")))) : null
+                        }, V.a.createElement("span", null, r("Popout Player")))) : null
                     }
                 }, {
                     key: "_renderCopyUrlButton",
@@ -13753,41 +13817,41 @@
                             n = e.vodUrlWithTimestamp,
                             r = e.t,
                             i = r("Copy Video URL at {{time}}", {
-                                time: Object(Y.c)(t)
+                                time: Object(X.c)(t)
                             });
-                        return this.state.hasRecentlyCopied ? U.a.createElement(Z.a, null, U.a.createElement("span", null, r("Copied!"))) : U.a.createElement(Q.a, {
+                        return this.state.hasRecentlyCopied ? V.a.createElement(ne.a, null, V.a.createElement("span", null, r("Copied!"))) : V.a.createElement(J.a, {
                             text: n,
                             onSelect: this.handleUrlCopied,
                             className: "qa-copy-to-clipboard-button"
-                        }, U.a.createElement(Z.a, null, U.a.createElement("span", null, i)))
+                        }, V.a.createElement(ne.a, null, V.a.createElement("span", null, i)))
                     }
                 }, {
                     key: "_renderCopyVideoUrlButton",
                     value: function() {
                         var e, t = this.props.isVod,
                             n = this._renderCopyUrlButton(),
-                            i = J()((e = {}, r(e, ae, !0), r(e, "pl-menu__item--active", this.state.hasRecentlyCopied), e));
-                        return t ? U.a.createElement("div", {
+                            i = ee()((e = {}, r(e, ue, !0), r(e, "pl-menu__item--active", this.state.hasRecentlyCopied), e));
+                        return t ? V.a.createElement("div", {
                             className: i
                         }, n) : null
                     }
                 }]), t
-            }(U.a.Component);
-        de.propTypes = re, de.defaultProps = ie;
-        var fe = Object(X.c)()(de),
-            pe = n(12),
-            he = n(10),
-            me = n(8),
-            ye = n(81),
-            ve = n(14),
-            ge = n(100),
-            be = n(68),
-            _e = n(86),
-            we = n(271),
-            ke = n(27),
-            Ee = n(36),
-            Se = n(13),
-            Pe = function() {
+            }(V.a.Component);
+        he.propTypes = oe, he.defaultProps = se;
+        var me = Object(te.c)()(he),
+            ye = n(12),
+            ve = n(10),
+            ge = n(8),
+            be = n(81),
+            _e = n(14),
+            we = n(100),
+            ke = n(68),
+            Ee = n(86),
+            Se = n(271),
+            Pe = n(27),
+            Ce = n(36),
+            Te = n(13),
+            Oe = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var r = t[n];
@@ -13798,30 +13862,30 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            Ce = [be.a, _e.a, we.a],
-            Te = {
-                availableQualities: F.a.array.isRequired,
-                backendType: F.a.string.isRequired,
-                captionsAvailable: F.a.bool.isRequired,
-                collection: F.a.object.isRequired,
-                currentSpeed: F.a.number.isRequired,
-                currentTime: F.a.number,
-                hideSettingsMenu: F.a.func,
-                isStaffUser: F.a.bool,
-                isVod: F.a.bool.isRequired,
-                isClip: F.a.bool.isRequired,
-                onMenuTransition: F.a.func,
-                pausePlayback: F.a.func,
-                playback: F.a.object.isRequired,
-                playerType: F.a.string,
-                selectedQuality: F.a.string.isRequired,
-                showClipsShortcutOverlay: F.a.func.isRequired,
-                showCaptionsOptions: F.a.func.isRequired,
-                stream: F.a.object.isRequired,
-                streamUrl: F.a.string,
-                windowObj: F.a.object.isRequired
+            xe = [ke.a, Ee.a, Se.a],
+            Re = {
+                availableQualities: z.a.array.isRequired,
+                backendType: z.a.string.isRequired,
+                captionsAvailable: z.a.bool.isRequired,
+                collection: z.a.object.isRequired,
+                currentSpeed: z.a.number.isRequired,
+                currentTime: z.a.number,
+                hideSettingsMenu: z.a.func,
+                isStaffUser: z.a.bool,
+                isVod: z.a.bool.isRequired,
+                isClip: z.a.bool.isRequired,
+                onMenuTransition: z.a.func,
+                pausePlayback: z.a.func,
+                playback: z.a.object.isRequired,
+                playerType: z.a.string,
+                selectedQuality: z.a.string.isRequired,
+                showClipsShortcutOverlay: z.a.func.isRequired,
+                showCaptionsOptions: z.a.func.isRequired,
+                stream: z.a.object.isRequired,
+                streamUrl: z.a.string,
+                windowObj: z.a.object.isRequired
             },
-            Oe = {
+            je = {
                 currentTime: 0,
                 isStaffUser: !1,
                 hideSettingsMenu: function() {},
@@ -13830,7 +13894,7 @@
                 streamUrl: "",
                 playerType: ""
             },
-            xe = function(e) {
+            Ie = function(e) {
                 var t = e.backendInfo,
                     n = e.captions,
                     r = e.collection,
@@ -13849,8 +13913,8 @@
                     currentSpeed: a.playbackRate,
                     currentTime: a.currentTime,
                     isStaffUser: c.isStaff,
-                    isVod: s.contentType === he.a,
-                    isClip: s.contentType === ge.a,
+                    isVod: s.contentType === ve.a,
+                    isClip: s.contentType === we.a,
                     playback: a,
                     playerType: i.playerType,
                     selectedQuality: o.selected,
@@ -13859,29 +13923,29 @@
                     windowObj: l
                 }
             },
-            Re = function(e) {
+            Ae = function(e) {
                 return {
                     pausePlayback: function() {
-                        e(Object(ve.p)())
+                        e(Object(_e.p)())
                     },
                     hideSettingsMenu: function() {
-                        e(Object(ke.r)(ke.j))
+                        e(Object(Pe.r)(Pe.j))
                     },
                     showCaptionsOptions: function() {
-                        e(Object(Ee.k)(!0))
+                        e(Object(Ce.k)(!0))
                     },
                     showClipsShortcutOverlay: function() {
-                        e(Object(Se.o)(Se.e))
+                        e(Object(Te.o)(Te.e))
                     }
                 }
             },
-            je = function(e) {
+            Le = function(e) {
                 function t() {
                     u(this, t);
                     var e = c(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
                     return e.showCaptionsOptions = e.showCaptionsOptions.bind(e), e.popoutPlayer = e.popoutPlayer.bind(e), e
                 }
-                return l(t, e), Pe(t, [{
+                return l(t, e), Oe(t, [{
                     key: "showCaptionsOptions",
                     value: function() {
                         this.props.hideSettingsMenu(), this.props.showCaptionsOptions()
@@ -13915,15 +13979,15 @@
                             f = e.streamUrl,
                             p = e.showClipsShortcutOverlay,
                             h = e.windowObj,
-                            m = H()(Ce, n) || H()(te.b, l),
-                            y = l !== te.d,
-                            v = W()(t, function(e) {
+                            m = K()(xe, n) || K()(ie.b, l),
+                            y = l !== ie.d,
+                            v = Q()(t, function(e) {
                                 return e.group === d
                             }),
                             g = v ? v.name : "",
-                            b = f + "?t=" + Object(Y.d)(i),
+                            b = f + "?t=" + Object(X.d)(i),
                             _ = t.length > 0;
-                        return U.a.createElement(fe, {
+                        return V.a.createElement(me, {
                             playerType: l,
                             canChangePlaybackSpeed: m,
                             canPopoutPlayer: y,
@@ -13944,10 +14008,10 @@
                         })
                     }
                 }]), t
-            }(U.a.Component);
-        je.propTypes = Te, je.defaultProps = Oe;
-        var Ie = Object(K.connect)(xe, Re)(je),
-            Ae = function() {
+            }(V.a.Component);
+        Le.propTypes = Re, Le.defaultProps = je;
+        var Ne = Object(Y.connect)(Ie, Ae)(Le),
+            Me = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var r = t[n];
@@ -13958,28 +14022,28 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            Le = {
-                isActive: F.a.bool,
-                qualityObj: F.a.shape({
-                    name: F.a.string
+            De = {
+                isActive: z.a.bool,
+                qualityObj: z.a.shape({
+                    name: z.a.string
                 }).isRequired,
-                onQualitySelect: F.a.func
+                onQualitySelect: z.a.func
             },
-            Ne = {
+            qe = {
                 isActive: !1,
                 onQualitySelect: function() {}
             },
-            Me = J()({
+            Ue = ee()({
                 ellipsis: !0,
                 "pl-quality-option-button": !0
             }),
-            De = function(e) {
+            Be = function(e) {
                 function t() {
                     d(this, t);
                     var e = f(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
                     return e.handleSelectQuality = e.handleSelectQuality.bind(e), e
                 }
-                return p(t, e), Ae(t, [{
+                return p(t, e), Me(t, [{
                     key: "handleSelectQuality",
                     value: function() {
                         this.props.onQualitySelect(this.props.qualityObj)
@@ -13990,22 +14054,22 @@
                         var e = this.props,
                             t = e.isActive,
                             n = e.qualityObj,
-                            r = J()({
+                            r = ee()({
                                 "pl-menu__item": !0,
                                 "pl-menu__item--block": !0,
                                 "pl-menu__item--active": t
                             });
-                        return U.a.createElement("div", {
+                        return V.a.createElement("div", {
                             className: r
-                        }, U.a.createElement(Z.a, {
-                            className: Me,
+                        }, V.a.createElement(ne.a, {
+                            className: Ue,
                             onClick: this.handleSelectQuality
-                        }, U.a.createElement("span", null, n.name)))
+                        }, V.a.createElement("span", null, n.name)))
                     }
                 }]), t
-            }(U.a.Component);
-        De.propTypes = Le, De.defaultProps = Ne;
-        var qe = function() {
+            }(V.a.Component);
+        Be.propTypes = De, Be.defaultProps = qe;
+        var Fe = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var r = t[n];
@@ -14016,53 +14080,53 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            Ue = {
-                availableQualities: F.a.arrayOf(F.a.shape({
-                    group: F.a.string
+            Ve = {
+                availableQualities: z.a.arrayOf(z.a.shape({
+                    group: z.a.string
                 })).isRequired,
-                selectedQuality: F.a.string.isRequired,
-                onMenuTransition: F.a.func,
-                onQualitySelect: F.a.func,
-                t: F.a.func.isRequired
+                selectedQuality: z.a.string.isRequired,
+                onMenuTransition: z.a.func,
+                onQualitySelect: z.a.func,
+                t: z.a.func.isRequired
             },
-            Be = {
+            He = {
                 onMenuTransition: function() {},
                 onQualitySelect: function() {}
             },
-            Fe = J()({
+            ze = ee()({
                 "pl-menu__item": !0,
                 "pl-menu__item--block": !0,
                 "pl-menu__item--with-caret-left": !0
             }),
-            Ve = J()({
+            We = ee()({
                 "pl-menu__section": !0,
                 "pl-menu__section--with-sep": !0
             }),
-            He = function(e) {
+            Ke = function(e) {
                 function t() {
                     h(this, t);
                     var e = m(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
                     return e.handleMenuTransition = e.handleMenuTransition.bind(e), e
                 }
-                return y(t, e), qe(t, [{
+                return y(t, e), Fe(t, [{
                     key: "handleMenuTransition",
                     value: function() {
-                        this.props.onMenuTransition(ln)
+                        this.props.onMenuTransition(wn)
                     }
                 }, {
                     key: "render",
                     value: function() {
                         var e = this.props.t,
                             t = this._getQualityItems();
-                        return U.a.createElement("div", {
+                        return V.a.createElement("div", {
                             className: "pl-menu__inner"
-                        }, U.a.createElement("div", {
-                            className: Fe
-                        }, U.a.createElement("button", {
+                        }, V.a.createElement("div", {
+                            className: ze
+                        }, V.a.createElement("button", {
                             className: "qa-header-button",
                             onClick: this.handleMenuTransition
-                        }, e("Video Quality"))), U.a.createElement("div", {
-                            className: Ve
+                        }, e("Video Quality"))), V.a.createElement("div", {
+                            className: We
                         }, t))
                     }
                 }, {
@@ -14073,7 +14137,7 @@
                             n = e.onQualitySelect;
                         return this.props.availableQualities.map(function(e) {
                             var r = e.group === t;
-                            return U.a.createElement(De, {
+                            return V.a.createElement(Be, {
                                 isActive: r,
                                 key: e.group,
                                 onQualitySelect: n,
@@ -14082,51 +14146,51 @@
                         })
                     }
                 }]), t
-            }(U.a.Component);
-        He.propTypes = Ue, He.defaultProps = Be;
-        var ze = Object(X.c)()(He),
-            We = n(40),
-            Ke = n(22),
-            Ge = {
-                availableQualities: F.a.array.isRequired,
-                selectedQuality: F.a.string.isRequired,
-                onMenuTransition: F.a.func,
-                handleSelectQuality: F.a.func
+            }(V.a.Component);
+        Ke.propTypes = Ve, Ke.defaultProps = He;
+        var Ge = Object(te.c)()(Ke),
+            Qe = n(40),
+            Ye = n(22),
+            $e = {
+                availableQualities: z.a.array.isRequired,
+                selectedQuality: z.a.string.isRequired,
+                onMenuTransition: z.a.func,
+                handleSelectQuality: z.a.func
             },
-            Qe = {
+            Je = {
                 onMenuTransition: function() {},
                 handleSelectQuality: function() {}
             },
-            Ye = function(e) {
+            Xe = function(e) {
                 var t = e.quality;
                 return {
                     availableQualities: t.available,
                     selectedQuality: t.selected
                 }
             },
-            $e = function(e) {
+            Ze = function(e) {
                 return {
                     handleSelectQuality: function(t) {
-                        e(Object(We.k)(t.group)), e(Object(We.o)(t)), e(Object(ke.r)(ke.j)), e(Object(Ke.d)("player_click_quality_change"))
+                        e(Object(Qe.k)(t.group)), e(Object(Qe.o)(t)), e(Object(Pe.r)(Pe.j)), e(Object(Ye.d)("player_click_quality_change"))
                     }
                 }
             },
-            Je = function(e) {
+            et = function(e) {
                 var t = e.availableQualities,
                     n = e.selectedQuality,
                     r = e.handleSelectQuality,
                     i = e.onMenuTransition;
-                return U.a.createElement(ze, {
+                return V.a.createElement(Ge, {
                     availableQualities: t,
                     selectedQuality: n,
                     onMenuTransition: i,
                     onQualitySelect: r
                 })
             };
-        Je.propTypes = Ge, Je.defaultProps = Qe;
-        var Xe = Object(K.connect)(Ye, $e)(Je),
-            Ze = n(273),
-            et = function() {
+        et.propTypes = $e, et.defaultProps = Je;
+        var tt = Object(Y.connect)(Xe, Ze)(et),
+            nt = n(273),
+            rt = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var r = t[n];
@@ -14137,56 +14201,56 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            tt = {
-                html5PlayerEnabled: F.a.bool.isRequired,
-                html5ToggleEnabled: F.a.bool.isRequired,
-                isShowingVideoStats: F.a.bool.isRequired,
-                miniPlayerEnabled: F.a.bool.isRequired,
-                miniPlayerToggleEnabled: F.a.bool.isRequired,
-                onHTML5Toggle: F.a.func,
-                onMenuTransition: F.a.func,
-                onMiniPlayerToggle: F.a.func,
-                onStatsToggle: F.a.func,
-                t: F.a.func.isRequired
+            it = {
+                html5PlayerEnabled: z.a.bool.isRequired,
+                html5ToggleEnabled: z.a.bool.isRequired,
+                isShowingVideoStats: z.a.bool.isRequired,
+                miniPlayerEnabled: z.a.bool.isRequired,
+                miniPlayerToggleEnabled: z.a.bool.isRequired,
+                onHTML5Toggle: z.a.func,
+                onMenuTransition: z.a.func,
+                onMiniPlayerToggle: z.a.func,
+                onStatsToggle: z.a.func,
+                t: z.a.func.isRequired
             },
-            nt = {
+            at = {
                 onHTML5Toggle: function() {},
                 onMenuTransition: function() {},
                 onMiniPlayerToggle: function() {},
                 onStatsToggle: function() {}
             },
-            rt = J()({
+            ot = ee()({
                 ellipsis: !0,
                 "qa-header-button": !0
             }),
-            it = J()({
+            st = ee()({
                 "pl-menu__item": !0,
                 "pl-menu__item--block": !0,
                 "pl-menu__item--with-caret-left": !0
             }),
-            at = J()({
+            ut = ee()({
                 "pl-menu__section": !0,
                 "pl-menu__section--with-sep": !0
             }),
-            ot = J()({
+            ct = ee()({
                 "pl-menu__item": !0,
                 "pl-menu__item--block": !0,
                 "qa-item": !0
             }),
-            st = J()({
+            lt = ee()({
                 ellipsis: !0,
                 "qa-show-stats-button": !0
             }),
-            ut = function(e) {
+            dt = function(e) {
                 function t() {
                     v(this, t);
                     var e = g(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
                     return e.handleMenuTransition = e.handleMenuTransition.bind(e), e
                 }
-                return b(t, e), et(t, [{
+                return b(t, e), rt(t, [{
                     key: "handleMenuTransition",
                     value: function() {
-                        this.props.onMenuTransition(ln)
+                        this.props.onMenuTransition(wn)
                     }
                 }, {
                     key: "render",
@@ -14201,49 +14265,49 @@
                             s = e.onMiniPlayerToggle,
                             u = e.onStatsToggle,
                             c = e.t,
-                            l = n ? U.a.createElement("div", {
-                                className: ot
-                            }, U.a.createElement(Ze.a, {
+                            l = n ? V.a.createElement("div", {
+                                className: ct
+                            }, V.a.createElement(nt.a, {
                                 className: "qa-html5-toggle",
                                 label: "HTML5 Player",
                                 onToggle: o,
                                 toggledOn: t
                             })) : null,
-                            d = i ? U.a.createElement("div", {
-                                className: ot
-                            }, U.a.createElement(Ze.a, {
+                            d = i ? V.a.createElement("div", {
+                                className: ct
+                            }, V.a.createElement(nt.a, {
                                 className: "qa-miniplayer-toggle",
                                 label: "Mini Player",
                                 onToggle: s,
                                 toggledOn: r
                             })) : null;
-                        return U.a.createElement("div", {
+                        return V.a.createElement("div", {
                             className: "pl-menu__inner"
-                        }, U.a.createElement("div", {
-                            className: it
-                        }, U.a.createElement(Z.a, {
-                            className: rt,
+                        }, V.a.createElement("div", {
+                            className: st
+                        }, V.a.createElement(ne.a, {
+                            className: ot,
                             onClick: this.handleMenuTransition
-                        }, U.a.createElement("span", null, c("Advanced")))), U.a.createElement("div", {
-                            className: at
-                        }, l, d, U.a.createElement("div", {
-                            className: ot
-                        }, U.a.createElement(Z.a, {
-                            className: st,
+                        }, V.a.createElement("span", null, c("Advanced")))), V.a.createElement("div", {
+                            className: ut
+                        }, l, d, V.a.createElement("div", {
+                            className: ct
+                        }, V.a.createElement(ne.a, {
+                            className: lt,
                             onClick: u
-                        }, U.a.createElement("span", null, c(a ? "Hide Video Stats" : "Show Video Stats"))))))
+                        }, V.a.createElement("span", null, c(a ? "Hide Video Stats" : "Show Video Stats"))))))
                     }
                 }]), t
-            }(U.a.Component);
-        ut.propTypes = tt, ut.defaultProps = nt;
-        var ct = Object(X.c)()(ut),
-            lt = n(104),
-            dt = n(141),
-            ft = n(85),
-            pt = n(274),
-            ht = n(47),
-            mt = n(270),
-            yt = function() {
+            }(V.a.Component);
+        dt.propTypes = it, dt.defaultProps = at;
+        var ft = Object(te.c)()(dt),
+            pt = n(104),
+            ht = n(141),
+            mt = n(85),
+            yt = n(274),
+            vt = n(47),
+            gt = n(270),
+            bt = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var r = t[n];
@@ -14254,59 +14318,59 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            vt = {
-                availableBackends: F.a.array.isRequired,
-                isCursePlayer: F.a.bool.isRequired,
-                isHTML5Player: F.a.bool.isRequired,
-                isMiniPlayerEnabled: F.a.bool.isRequired,
-                isSitePlayer: F.a.bool.isRequired,
-                onMenuTransition: F.a.func,
-                statsDisplayed: F.a.bool.isRequired,
-                toggleHTML5Player: F.a.func.isRequired,
-                toggleMiniPlayer: F.a.func.isRequired,
-                toggleVideoStats: F.a.func.isRequired
+            _t = {
+                availableBackends: z.a.array.isRequired,
+                isCursePlayer: z.a.bool.isRequired,
+                isHTML5Player: z.a.bool.isRequired,
+                isMiniPlayerEnabled: z.a.bool.isRequired,
+                isSitePlayer: z.a.bool.isRequired,
+                onMenuTransition: z.a.func,
+                statsDisplayed: z.a.bool.isRequired,
+                toggleHTML5Player: z.a.func.isRequired,
+                toggleMiniPlayer: z.a.func.isRequired,
+                toggleVideoStats: z.a.func.isRequired
             },
-            gt = {
+            wt = {
                 onMenuTransition: function() {}
             },
-            bt = function(e) {
+            kt = function(e) {
                 var t = e.backendInfo,
                     n = e.env,
                     r = e.settings,
                     i = e.stats,
                     a = t.playerBackendType;
                 return {
-                    isCursePlayer: n.playerType === te.i,
-                    isHTML5Player: a === be.a || a === _e.a,
+                    isCursePlayer: n.playerType === ie.i,
+                    isHTML5Player: a === ke.a || a === Ee.a,
                     isMiniPlayerEnabled: r.persistenceEnabled,
-                    isSitePlayer: n.playerType === te.s,
+                    isSitePlayer: n.playerType === ie.s,
                     statsDisplayed: i.displayed,
-                    availableBackends: Object(mt.b)(n.playerType)
+                    availableBackends: Object(gt.b)(n.playerType)
                 }
             },
-            _t = function(e) {
+            Et = function(e) {
                 return {
                     toggleVideoStats: function() {
                         var t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                        e(t ? Object(lt.d)(!0) : Object(lt.d)(!1))
+                        e(t ? Object(pt.d)(!0) : Object(pt.d)(!1))
                     },
                     toggleMiniPlayer: function() {
                         var t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                        e(t ? Object(dt.d)() : Object(dt.c)())
+                        e(t ? Object(ht.d)() : Object(ht.c)())
                     },
                     toggleHTML5Player: function() {
                         var t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                        e(t ? Object(ve.l)(be.a) : Object(ve.l)(ft.a))
+                        e(t ? Object(_e.l)(ke.a) : Object(_e.l)(mt.a))
                     }
                 }
             },
-            wt = function(e) {
+            St = function(e) {
                 function t() {
                     _(this, t);
                     var e = w(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
                     return e.toggleVideoStats = e.toggleVideoStats.bind(e), e.toggleMiniPlayer = e.toggleMiniPlayer.bind(e), e.toggleHTML5Player = e.toggleHTML5Player.bind(e), e
                 }
-                return k(t, e), yt(t, [{
+                return k(t, e), bt(t, [{
                     key: "toggleVideoStats",
                     value: function() {
                         this.props.toggleVideoStats(!this.props.statsDisplayed)
@@ -14333,16 +14397,16 @@
                             o = e.isSitePlayer,
                             s = e.onMenuTransition,
                             u = t.some(function(e) {
-                                return e === be.a || e === _e.a
+                                return e === ke.a || e === Ee.a
                             }),
                             c = t.some(function(e) {
-                                return e === ft.a
+                                return e === mt.a
                             }),
                             l = !r && u && c;
-                        return U.a.createElement("div", null, U.a.createElement(pt.a, {
-                            uuid: ht.p,
+                        return V.a.createElement("div", null, V.a.createElement(yt.a, {
+                            uuid: vt.p,
                             renderValue: "keep"
-                        }, U.a.createElement(ct, {
+                        }, V.a.createElement(ft, {
                             html5PlayerEnabled: i,
                             html5ToggleEnabled: l,
                             isShowingVideoStats: n,
@@ -14352,10 +14416,10 @@
                             onMiniPlayerToggle: this.toggleMiniPlayer,
                             onStatsToggle: this.toggleVideoStats,
                             onHTML5Toggle: this.toggleHTML5Player
-                        })), U.a.createElement(pt.a, {
-                            uuid: ht.p,
+                        })), V.a.createElement(yt.a, {
+                            uuid: vt.p,
                             renderValue: "remove"
-                        }, U.a.createElement(ct, {
+                        }, V.a.createElement(ft, {
                             html5PlayerEnabled: i,
                             html5ToggleEnabled: !1,
                             isShowingVideoStats: n,
@@ -14368,10 +14432,10 @@
                         })))
                     }
                 }]), t
-            }(U.a.Component);
-        wt.propTypes = vt, wt.defaultProps = gt;
-        var kt = Object(K.connect)(bt, _t)(wt),
-            Et = function() {
+            }(V.a.Component);
+        St.propTypes = _t, St.defaultProps = wt;
+        var Pt = Object(Y.connect)(kt, Et)(St),
+            Ct = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var r = t[n];
@@ -14382,45 +14446,45 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            St = {
-                t: F.a.func.isRequired,
-                onReportIssueSubmit: F.a.func.isRequired,
-                onMenuTransition: F.a.func,
-                windowObj: F.a.object.isRequired
+            Tt = {
+                t: z.a.func.isRequired,
+                onReportIssueSubmit: z.a.func.isRequired,
+                onMenuTransition: z.a.func,
+                windowObj: z.a.object.isRequired
             },
-            Pt = {
+            Ot = {
                 onMenuTransition: function() {}
             },
-            Ct = J()({
+            xt = ee()({
                 "pl-form__input": !0,
                 ellipsis: !0
             }),
-            Tt = J()({
+            Rt = ee()({
                 "pl-menu__item": !0,
                 "pl-menu__item--block": !0,
                 "pl-menu__item--with-caret-left": !0
             }),
-            Ot = J()({
+            jt = ee()({
                 ellipsis: !0,
                 "qa-header-button": !0
             }),
-            xt = J()({
+            It = ee()({
                 "pl-menu__section": !0,
                 "pl-menu__section--with-sep": !0
             }),
-            Rt = J()({
+            At = ee()({
                 "pl-flex": !0,
                 "pl-flex--horizontalEnd": !0,
                 "pl-pd-r-1": !0,
                 "pl-pd-t-1": !0,
                 "pl-pd-b-1": !0
             }),
-            jt = J()({
+            Lt = ee()({
                 "pl-button": !0,
                 "pl-button--hollow": !0,
                 "qa-submit-button": !0
             }),
-            It = function(e) {
+            Nt = function(e) {
                 function t() {
                     E(this, t);
                     var e = S(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
@@ -14429,10 +14493,10 @@
                         hasRecentlySubmitted: !1
                     }, e.handleMenuTransition = e.handleMenuTransition.bind(e), e.handleIssueSelected = e.handleIssueSelected.bind(e), e.handleSubmit = e.handleSubmit.bind(e), e
                 }
-                return P(t, e), Et(t, [{
+                return P(t, e), Ct(t, [{
                     key: "handleMenuTransition",
                     value: function() {
-                        this.props.onMenuTransition(ln)
+                        this.props.onMenuTransition(wn)
                     }
                 }, {
                     key: "handleIssueSelected",
@@ -14458,41 +14522,41 @@
                     value: function() {
                         var e = this.props.t,
                             t = this._renderFeedbackForm();
-                        return U.a.createElement("div", {
+                        return V.a.createElement("div", {
                             className: "pl-menu__inner"
-                        }, U.a.createElement("div", {
-                            className: Tt
-                        }, U.a.createElement("button", {
-                            className: Ot,
+                        }, V.a.createElement("div", {
+                            className: Rt
+                        }, V.a.createElement("button", {
+                            className: jt,
                             onClick: this.handleMenuTransition
-                        }, e("Report Playback Issue"))), U.a.createElement("div", {
-                            className: xt
+                        }, e("Report Playback Issue"))), V.a.createElement("div", {
+                            className: It
                         }, t))
                     }
                 }, {
                     key: "_createSelectElement",
                     value: function() {
                         var e = this.props.t;
-                        return U.a.createElement("select", {
-                            className: Ct,
+                        return V.a.createElement("select", {
+                            className: xt,
                             onBlur: this.handleIssueSelected,
                             defaultValue: ""
-                        }, U.a.createElement("option", {
+                        }, V.a.createElement("option", {
                             value: "",
                             disabled: !0
-                        }, e("Select")), U.a.createElement("option", {
+                        }, e("Select")), V.a.createElement("option", {
                             value: "stutter-both"
-                        }, e("Audio and video stutter")), U.a.createElement("option", {
+                        }, e("Audio and video stutter")), V.a.createElement("option", {
                             value: "stutter-video"
-                        }, e("Video stutters, but audio is fine")), U.a.createElement("option", {
+                        }, e("Video stutters, but audio is fine")), V.a.createElement("option", {
                             value: "black-screen"
-                        }, e("Video is completely black or doesn't load")), U.a.createElement("option", {
+                        }, e("Video is completely black or doesn't load")), V.a.createElement("option", {
                             value: "av-desync"
-                        }, e("Audio and video aren't synced")), U.a.createElement("option", {
+                        }, e("Audio and video aren't synced")), V.a.createElement("option", {
                             value: "fullscreen-broken"
-                        }, e("Fullscreen playback doesn't work")), U.a.createElement("option", {
+                        }, e("Fullscreen playback doesn't work")), V.a.createElement("option", {
                             value: "ad-volume"
-                        }, e("Advertisement can't be muted or is too loud")), U.a.createElement("option", {
+                        }, e("Advertisement can't be muted or is too loud")), V.a.createElement("option", {
                             value: "ad-repeat"
                         }, e("Advertisement has played too many times")))
                     }
@@ -14501,22 +14565,22 @@
                     value: function() {
                         var e = this.props.t,
                             t = this._createSelectElement();
-                        return this.state.hasRecentlySubmitted ? U.a.createElement("span", null, e("Thanks for your report")) : U.a.createElement("form", {
+                        return this.state.hasRecentlySubmitted ? V.a.createElement("span", null, e("Thanks for your report")) : V.a.createElement("form", {
                             onSubmit: this.handleSubmit
-                        }, U.a.createElement("div", {
+                        }, V.a.createElement("div", {
                             className: "form__group"
-                        }, U.a.createElement("p", null, e("Noticed a video playback issue? Let us know!")), t), U.a.createElement("div", {
-                            className: Rt
-                        }, U.a.createElement("button", {
+                        }, V.a.createElement("p", null, e("Noticed a video playback issue? Let us know!")), t), V.a.createElement("div", {
+                            className: At
+                        }, V.a.createElement("button", {
                             type: "submit",
-                            className: jt
+                            className: Lt
                         }, e("Submit"))))
                     }
                 }]), t
-            }(U.a.Component);
-        It.propTypes = St, It.defaultProps = Pt;
-        var At = Object(X.c)()(It),
-            Lt = function() {
+            }(V.a.Component);
+        Nt.propTypes = Tt, Nt.defaultProps = Ot;
+        var Mt = Object(te.c)()(Nt),
+            Dt = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var r = t[n];
@@ -14527,39 +14591,39 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            Nt = {
-                handleVideoIssueReport: F.a.func,
-                hideSettingsMenu: F.a.func,
-                onMenuTransition: F.a.func,
-                windowObj: F.a.object.isRequired
+            qt = {
+                handleVideoIssueReport: z.a.func,
+                hideSettingsMenu: z.a.func,
+                onMenuTransition: z.a.func,
+                windowObj: z.a.object.isRequired
             },
-            Mt = {
+            Ut = {
                 handleVideoIssueReport: function() {},
                 hideSettingsMenu: function() {},
                 onMenuTransition: function() {}
             },
-            Dt = function(e) {
+            Bt = function(e) {
                 return {
                     windowObj: e.window
                 }
             },
-            qt = function(e) {
+            Ft = function(e) {
                 return {
                     handleVideoIssueReport: function(t) {
-                        e(Object(ve.s)(t))
+                        e(Object(_e.s)(t))
                     },
                     hideSettingsMenu: function() {
-                        e(Object(ke.r)(ke.j))
+                        e(Object(Pe.r)(Pe.j))
                     }
                 }
             },
-            Ut = function(e) {
+            Vt = function(e) {
                 function t() {
                     C(this, t);
                     var e = T(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
                     return e.handleVideoIssueReport = e.handleVideoIssueReport.bind(e), e
                 }
-                return O(t, e), Lt(t, [{
+                return O(t, e), Dt(t, [{
                     key: "handleVideoIssueReport",
                     value: function(e) {
                         var t = this;
@@ -14573,17 +14637,17 @@
                         var e = this.props,
                             t = e.onMenuTransition,
                             n = e.windowObj;
-                        return U.a.createElement(At, {
+                        return V.a.createElement(Mt, {
                             onMenuTransition: t,
                             onReportIssueSubmit: this.handleVideoIssueReport,
                             windowObj: n
                         })
                     }
                 }]), t
-            }(U.a.Component);
-        Ut.propTypes = Nt, Ut.defaultProps = Mt;
-        var Bt = Object(K.connect)(Dt, qt)(Ut),
-            Ft = function() {
+            }(V.a.Component);
+        Vt.propTypes = qt, Vt.defaultProps = Ut;
+        var Ht = Object(Y.connect)(Bt, Ft)(Vt),
+            zt = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var r = t[n];
@@ -14594,40 +14658,40 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            Vt = {
-                currentSpeed: F.a.number.isRequired,
-                onMenuTransition: F.a.func,
-                selectNewPlaybackRate: F.a.func,
-                tracker: F.a.object
+            Wt = {
+                currentSpeed: z.a.number.isRequired,
+                onMenuTransition: z.a.func,
+                selectNewPlaybackRate: z.a.func,
+                tracker: z.a.object
             },
-            Ht = {
+            Kt = {
                 onMenuTransition: function() {},
                 selectNewPlaybackRate: function() {},
                 tracker: {
                     trackEvent: function() {}
                 }
             },
-            zt = function(e) {
+            Gt = function(e) {
                 var t = e.analyticsTracker;
                 return {
                     currentSpeed: e.playback.playbackRate,
                     tracker: t
                 }
             },
-            Wt = function(e) {
+            Qt = function(e) {
                 return {
                     selectNewPlaybackRate: function(t) {
-                        e(Object(ve.m)(t)), e(Object(ke.r)(ke.j))
+                        e(Object(_e.m)(t)), e(Object(Pe.r)(Pe.j))
                     }
                 }
             },
-            Kt = function(e) {
+            Yt = function(e) {
                 function t() {
                     x(this, t);
                     var e = R(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
                     return e.handleSelectPlaybackRate = e.handleSelectPlaybackRate.bind(e), e
                 }
-                return j(t, e), Ft(t, [{
+                return j(t, e), zt(t, [{
                     key: "handleSelectPlaybackRate",
                     value: function(e) {
                         var t = this.props,
@@ -14642,17 +14706,17 @@
                         var e = this.props,
                             t = e.currentSpeed,
                             n = e.onMenuTransition;
-                        return U.a.createElement(ee.b, {
+                        return V.a.createElement(re.b, {
                             currentSpeed: t,
                             onMenuTransition: n,
                             onSelectPlaybackSpeed: this.handleSelectPlaybackRate
                         })
                     }
                 }]), t
-            }(U.a.Component);
-        Kt.propTypes = Vt, Kt.defaultProps = Ht;
-        var Gt = Object(K.connect)(zt, Wt)(Kt),
-            Qt = function() {
+            }(V.a.Component);
+        Yt.propTypes = Wt, Yt.defaultProps = Kt;
+        var $t = Object(Y.connect)(Gt, Qt)(Yt),
+            Jt = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var r = t[n];
@@ -14663,57 +14727,57 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            Yt = {
-                onMenuTransition: F.a.func,
-                onRunLocalPrerollAd: F.a.func,
-                onRunLocalMidrollAd: F.a.func,
-                onRunLocalPostrollAd: F.a.func,
-                t: F.a.func.isRequired
+            Xt = {
+                onMenuTransition: z.a.func,
+                onRunLocalPrerollAd: z.a.func,
+                onRunLocalMidrollAd: z.a.func,
+                onRunLocalPostrollAd: z.a.func,
+                t: z.a.func.isRequired
             },
-            $t = {
+            Zt = {
                 onRunLocalPrerollAd: function() {},
                 onRunLocalMidrollAd: function() {},
                 onRunLocalPostrollAd: function() {},
                 onMenuTransition: function() {}
             },
-            Jt = J()({
+            en = ee()({
                 "pl-menu__item": !0,
                 "pl-menu__item--block": !0,
                 "pl-menu__item--with-caret-left": !0
             }),
-            Xt = J()({
+            tn = ee()({
                 "pl-menu__section": !0,
                 "pl-menu__section--with-sep": !0
             }),
-            Zt = J()({
+            nn = ee()({
                 "pl-menu__item": !0,
                 "pl-menu__item--block": !0
             }),
-            en = function(e) {
+            rn = function(e) {
                 function t() {
                     I(this, t);
                     var e = A(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
                     return e.handleMenuTransition = e.handleMenuTransition.bind(e), e
                 }
-                return L(t, e), Qt(t, [{
+                return L(t, e), Jt(t, [{
                     key: "handleMenuTransition",
                     value: function() {
-                        this.props.onMenuTransition(ln)
+                        this.props.onMenuTransition(wn)
                     }
                 }, {
                     key: "render",
                     value: function() {
                         var e = this.props.t,
                             t = this._renderLocalAdButtons();
-                        return U.a.createElement("div", {
+                        return V.a.createElement("div", {
                             className: "pl-menu__inner"
-                        }, U.a.createElement("div", {
-                            className: Jt
-                        }, U.a.createElement(Z.a, {
+                        }, V.a.createElement("div", {
+                            className: en
+                        }, V.a.createElement(ne.a, {
                             className: "qa-header-button",
                             onClick: this.handleMenuTransition
-                        }, e("Staff"))), U.a.createElement("div", {
-                            className: Xt
+                        }, e("Staff"))), V.a.createElement("div", {
+                            className: tn
                         }, t))
                     }
                 }, {
@@ -14723,85 +14787,68 @@
                             t = e.onRunLocalPrerollAd,
                             n = e.onRunLocalMidrollAd,
                             r = e.onRunLocalPostrollAd,
-                            i = U.a.createElement("div", {
-                                className: Zt
-                            }, U.a.createElement(Z.a, {
+                            i = V.a.createElement("div", {
+                                className: nn
+                            }, V.a.createElement(ne.a, {
                                 className: "ellipsis",
                                 onClick: t
-                            }, U.a.createElement("span", null, "Run Local Preroll Ad"))),
-                            a = U.a.createElement("div", {
-                                className: Zt
-                            }, U.a.createElement(Z.a, {
+                            }, V.a.createElement("span", null, "Run Local Preroll Ad"))),
+                            a = V.a.createElement("div", {
+                                className: nn
+                            }, V.a.createElement(ne.a, {
                                 className: "ellipsis",
                                 onClick: n
-                            }, U.a.createElement("span", null, "Run Local Midroll Ad"))),
-                            o = U.a.createElement("div", {
-                                className: Zt
-                            }, U.a.createElement(Z.a, {
+                            }, V.a.createElement("span", null, "Run Local Midroll Ad"))),
+                            o = V.a.createElement("div", {
+                                className: nn
+                            }, V.a.createElement(ne.a, {
                                 className: "ellipsis",
                                 onClick: r
-                            }, U.a.createElement("span", null, "Run Local Postroll Ad")));
-                        return U.a.createElement("div", null, i, a, o)
+                            }, V.a.createElement("span", null, "Run Local Postroll Ad")));
+                        return V.a.createElement("div", null, i, a, o)
                     }
                 }]), t
-            }(U.a.Component);
-        en.propTypes = Yt, en.defaultProps = $t;
-        var tn = Object(X.c)()(en),
-            nn = n(15),
-            rn = {
-                onMenuTransition: F.a.func,
-                onRunLocalPrerollAd: F.a.func.isRequired,
-                onRunLocalMidrollAd: F.a.func.isRequired,
-                onRunLocalPostrollAd: F.a.func.isRequired
+            }(V.a.Component);
+        rn.propTypes = Xt, rn.defaultProps = Zt;
+        var an = Object(te.c)()(rn),
+            on = n(15),
+            sn = {
+                onMenuTransition: z.a.func,
+                onRunLocalPrerollAd: z.a.func.isRequired,
+                onRunLocalMidrollAd: z.a.func.isRequired,
+                onRunLocalPostrollAd: z.a.func.isRequired
             },
-            an = {
+            un = {
                 onMenuTransition: function() {}
             },
-            on = function(e) {
+            cn = function(e) {
                 return {
                     onRunLocalPrerollAd: function() {
-                        e(Object(nn.n)(nn.g.PREROLL, nn.h, !0))
+                        e(Object(on.n)(on.g.PREROLL, on.h, !0))
                     },
                     onRunLocalMidrollAd: function() {
-                        e(Object(nn.n)(nn.g.MIDROLL, nn.h, !0))
+                        e(Object(on.n)(on.g.MIDROLL, on.h, !0))
                     },
                     onRunLocalPostrollAd: function() {
-                        e(Object(nn.n)(nn.g.POSTROLL, nn.h, !0))
+                        e(Object(on.n)(on.g.POSTROLL, on.h, !0))
                     }
                 }
             },
-            sn = function(e) {
+            ln = function(e) {
                 var t = e.onMenuTransition,
                     n = e.onRunLocalPrerollAd,
                     r = e.onRunLocalMidrollAd,
                     i = e.onRunLocalPostrollAd;
-                return U.a.createElement(tn, {
+                return V.a.createElement(an, {
                     onMenuTransition: t,
                     onRunLocalPrerollAd: n,
                     onRunLocalMidrollAd: r,
                     onRunLocalPostrollAd: i
                 })
             };
-        sn.propTypes = rn, sn.defaultProps = an;
-        var un = Object(K.connect)(null, on)(sn);
-        n.d(t, "b", function() {
-            return ln
-        }), n.d(t, "d", function() {
-            return dn
-        }), n.d(t, "a", function() {
-            return fn
-        }), n.d(t, "e", function() {
-            return pn
-        }), n.d(t, "c", function() {
-            return hn
-        }), n.d(t, "f", function() {
-            return mn
-        }), n.d(t, "h", function() {
-            return yn
-        }), n.d(t, "g", function() {
-            return bn
-        });
-        var cn = function() {
+        ln.propTypes = sn, ln.defaultProps = un;
+        var dn = Object(Y.connect)(null, cn)(ln),
+            fn = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var r = t[n];
@@ -14812,29 +14859,118 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            ln = "main menu",
-            dn = "quality menu",
-            fn = "advanced menu",
-            pn = "report issues menu",
-            hn = "playback speed menu",
-            mn = "staff menu",
-            yn = 85,
-            vn = [ln, dn, fn, pn, hn, mn],
-            gn = {
-                playerHeight: F.a.number.isRequired
+            pn = {
+                onMenuTransition: z.a.func,
+                t: z.a.func.isRequired
             },
-            bn = function(e) {
+            hn = {
+                onMenuTransition: function() {}
+            },
+            mn = ee()({
+                "pl-menu__item": !0,
+                "pl-menu__item--block": !0,
+                "pl-menu__item--with-caret-left": !0
+            }),
+            yn = ee()({
+                "pl-menu__section": !0,
+                "pl-menu__section--with-sep": !0
+            }),
+            vn = ee()({
+                "pl-menu__item": !0,
+                "pl-menu__item--block": !0
+            }),
+            gn = function(e) {
                 function t() {
                     N(this, t);
                     var e = M(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
+                    return e.handleMenuTransition = e.handleMenuTransition.bind(e), e
+                }
+                return D(t, e), fn(t, [{
+                    key: "handleMenuTransition",
+                    value: function() {
+                        this.props.onMenuTransition(wn)
+                    }
+                }, {
+                    key: "render",
+                    value: function() {
+                        var e = this.props.t;
+                        return V.a.createElement("div", {
+                            className: "pl-menu__inner"
+                        }, V.a.createElement("div", {
+                            className: mn
+                        }, V.a.createElement("button", {
+                            className: "qa-header-button",
+                            onClick: this.handleMenuTransition
+                        }, e("Moderation"))), V.a.createElement("div", {
+                            className: yn
+                        }, V.a.createElement("div", {
+                            className: vn
+                        }, V.a.createElement("button", {
+                            className: "qa-delete-button"
+                        }, e("Delete"))), V.a.createElement("div", {
+                            className: vn
+                        }, V.a.createElement("button", {
+                            className: "qa-delete-all-button"
+                        }, e("Delete All clips from Video")))))
+                    }
+                }]), t
+            }(V.a.Component);
+        gn.propTypes = pn, gn.defaultProps = hn;
+        var bn = Object(te.c)()(gn);
+        n.d(t, "c", function() {
+            return wn
+        }), n.d(t, "e", function() {
+            return kn
+        }), n.d(t, "a", function() {
+            return En
+        }), n.d(t, "f", function() {
+            return Sn
+        }), n.d(t, "d", function() {
+            return Pn
+        }), n.d(t, "g", function() {
+            return Cn
+        }), n.d(t, "b", function() {
+            return Tn
+        }), n.d(t, "i", function() {
+            return On
+        }), n.d(t, "h", function() {
+            return jn
+        });
+        var _n = function() {
+                function e(e, t) {
+                    for (var n = 0; n < t.length; n++) {
+                        var r = t[n];
+                        r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
+                    }
+                }
+                return function(t, n, r) {
+                    return n && e(t.prototype, n), r && e(t, r), t
+                }
+            }(),
+            wn = "main menu",
+            kn = "quality menu",
+            En = "advanced menu",
+            Sn = "report issues menu",
+            Pn = "playback speed menu",
+            Cn = "staff menu",
+            Tn = "clip moderation menu",
+            On = 85,
+            xn = [wn, kn, En, Sn, Pn, Cn, Tn],
+            Rn = {
+                playerHeight: z.a.number.isRequired
+            },
+            jn = function(e) {
+                function t() {
+                    q(this, t);
+                    var e = U(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
                     return e.state = {
-                        currentMenu: ln
+                        currentMenu: wn
                     }, e.handleMenuTransition = e.handleMenuTransition.bind(e), e
                 }
-                return D(t, e), cn(t, [{
+                return B(t, e), _n(t, [{
                     key: "handleMenuTransition",
                     value: function(e) {
-                        H()(vn, e) && this.setState({
+                        K()(xn, e) && this.setState({
                             currentMenu: e
                         })
                     }
@@ -14844,9 +14980,9 @@
                         var e = this.props.playerHeight,
                             t = this._renderCurrentMenu(),
                             n = {
-                                maxHeight: e - yn + "px"
+                                maxHeight: e - On + "px"
                             };
-                        return U.a.createElement("div", {
+                        return V.a.createElement("div", {
                             className: "pl-menu",
                             style: n
                         }, t)
@@ -14855,36 +14991,40 @@
                     key: "_renderCurrentMenu",
                     value: function() {
                         switch (this.state.currentMenu) {
-                            case dn:
-                                return U.a.createElement(Xe, {
+                            case kn:
+                                return V.a.createElement(tt, {
                                     onMenuTransition: this.handleMenuTransition
                                 });
-                            case fn:
-                                return U.a.createElement(kt, {
+                            case En:
+                                return V.a.createElement(Pt, {
                                     onMenuTransition: this.handleMenuTransition
                                 });
-                            case pn:
-                                return U.a.createElement(Bt, {
+                            case Sn:
+                                return V.a.createElement(Ht, {
                                     onMenuTransition: this.handleMenuTransition
                                 });
-                            case hn:
-                                return U.a.createElement(Gt, {
+                            case Pn:
+                                return V.a.createElement($t, {
                                     onMenuTransition: this.handleMenuTransition
                                 });
-                            case mn:
-                                return U.a.createElement(un, {
+                            case Cn:
+                                return V.a.createElement(dn, {
                                     onMenuTransition: this.handleMenuTransition
                                 });
-                            case ln:
+                            case Tn:
+                                return V.a.createElement(bn, {
+                                    onMenuTransition: this.handleMenuTransition
+                                });
+                            case wn:
                             default:
-                                return U.a.createElement(Ie, {
+                                return V.a.createElement(Ne, {
                                     onMenuTransition: this.handleMenuTransition
                                 })
                         }
                     }
                 }]), t
-            }(U.a.Component);
-        bn.propTypes = gn
+            }(V.a.Component);
+        jn.propTypes = Rn
     }, function(e, t, n) {
         "use strict";
 
@@ -25479,7 +25619,7 @@
                             o = e.qualitiesAvailable,
                             s = e.qualityIsChanging,
                             u = e.isClipsPlayerType,
-                            c = i ? we.a.createElement(Ut.g, {
+                            c = i ? we.a.createElement(Ut.h, {
                                 playerHeight: a
                             }) : null,
                             l = !t && o && s && !u,
@@ -26110,7 +26250,7 @@
                         var e = this.props.playerHeight,
                             t = this._renderCurrentMenu(),
                             n = {
-                                maxHeight: e - Ut.h + "px"
+                                maxHeight: e - Ut.i + "px"
                             };
                         return we.a.createElement("div", {
                             className: "pl-menu",
@@ -27933,7 +28073,7 @@
                     u = yo.a(!0),
                     c = bo.v() === bo.k ? null : Po;
                 return {
-                    app_version: "2018.02.07-010044+0d370c9828897905a6f77e5500413028c1bf3dae",
+                    app_version: "2018.02.07-203148+4801bf25fa7222909445f17e862602944055f273",
                     flash_version: r,
                     referrer_url: i,
                     referrer_host: a.host,
