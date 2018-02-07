@@ -9430,17 +9430,18 @@ webpackJsonp([40], {
             c = n("2KeS"),
             d = n("V5M+"),
             u = n("TToO"),
-            p = n("F8kA"),
-            m = n("NY9D"),
-            h = n("HW6M"),
-            g = n("+8VM"),
-            f = n("sikP"),
-            b = n("oSFp"),
-            v = n("mw/a"),
-            k = n("6BvN"),
-            y = n("rCmJ"),
-            C = n("Odds"),
-            _ = (n("Jg0G"), function(e) {
+            p = n("J4ib"),
+            m = n("F8kA"),
+            h = n("NY9D"),
+            g = n("HW6M"),
+            f = n("+8VM"),
+            b = n("sikP"),
+            v = n("oSFp"),
+            k = n("mw/a"),
+            y = n("6BvN"),
+            C = n("rCmJ"),
+            _ = n("Odds"),
+            E = (n("Jg0G"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.selectOnFocus = function(e) {
@@ -9450,11 +9451,11 @@ webpackJsonp([40], {
                 return u.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return i.createElement(C.Z, u.__assign({
-                        position: C._6.Relative,
+                    return i.createElement(_.Z, u.__assign({
+                        position: _._6.Relative,
                         className: "selectable-input-wrapper"
-                    }, Object(C._43)(this.props)), i.createElement(C.V, {
-                        type: C.W.Text,
+                    }, Object(_._43)(this.props)), i.createElement(_.V, {
+                        type: _.W.Text,
                         value: this.props.text,
                         readOnly: !0,
                         onFocus: this.selectOnFocus,
@@ -9463,51 +9464,50 @@ webpackJsonp([40], {
                     }), this.props.children)
                 }, t = u.__decorate([Object(o.d)("SelectableInput")], t)
             }(i.Component)),
-            E = n("8Wuk"),
-            S = n("2hJ3"),
-            N = n("yDzg"),
-            w = n("WNmM"),
-            D = [{
-                type: E.b.Twitter,
+            S = n("8Wuk"),
+            N = n("2hJ3"),
+            w = n("yDzg"),
+            D = n("WNmM"),
+            O = [{
+                type: S.b.Twitter,
                 params: {
                     tt_medium: "twtr"
                 }
             }, {
-                type: E.b.Facebook,
+                type: S.b.Facebook,
                 params: {
                     tt_medium: "fb"
                 }
             }, {
-                type: E.b.Reddit,
+                type: S.b.Reddit,
                 params: {
                     tt_medium: "redt"
                 }
             }, {
-                type: E.b.Copy
+                type: S.b.Copy
             }],
-            O = function(e) {
-                return i.createElement(C.Z, {
+            I = function(e) {
+                return i.createElement(_.Z, {
                     className: "clips-social-share",
-                    display: C.L.Flex,
-                    flexWrap: C.O.NoWrap
-                }, D.map(function(t) {
-                    return i.createElement(C.Z, {
+                    display: _.L.Flex,
+                    flexWrap: _.O.NoWrap
+                }, O.map(function(t) {
+                    return i.createElement(_.Z, {
                         key: t.type,
                         margin: {
                             right: 1
                         }
-                    }, i.createElement(E.a, {
+                    }, i.createElement(S.a, {
                         key: t.type,
                         type: t.type,
                         text: e.clip.title,
-                        url: Object(N.a)(e.clip.url, t.params),
-                        onShareClick: Object(w.d)(e.clip, e.pageType)
+                        url: Object(w.a)(e.clip.url, t.params),
+                        onShareClick: Object(D.c)(e.clip, e.pageType)
                     }))
                 }))
             },
-            I = n("jetF"),
-            T = n("7vx8"),
-            L = n("J4ib");
+            T = n("jetF"),
+            L = n("7vx8");
         ! function(e) {
             e[e.View = 0] = "View", e[e.Report = 1] = "Report", e[e.Delete = 2] = "Delete", e[e.DeleteAll = 3] = "DeleteAll", e[e.Ban = 4] = "Ban", e[e.Timeout = 5] = "Timeout"
         }(a || (a = {}));
@@ -9517,11 +9517,11 @@ webpackJsonp([40], {
                     var n = e.call(this, t) || this;
                     return n.renderMenuItem = function(e) {
                         var t = n.menuData.get(e);
-                        return e && t ? i.createElement(C.X, {
+                        return e && t ? i.createElement(_.X, {
                             key: t.display,
                             onClick: t.destinationHandler,
                             "data-a-target": "clip-moderation-button-" + t.display
-                        }, i.createElement(C.Z, {
+                        }, i.createElement(_.Z, {
                             padding: {
                                 x: 1,
                                 y: .5
@@ -9529,31 +9529,31 @@ webpackJsonp([40], {
                         }, t.display)) : null
                     }, n.menuData = new Map([
                         [a.Report, {
-                            display: Object(L.d)("Report", "ModerationMenu"),
+                            display: Object(p.d)("Report", "ModerationMenu"),
                             destinationHandler: function() {
                                 return n.props.updateModalViewState(a.Report)
                             }
                         }],
                         [a.Delete, {
-                            display: Object(L.d)("Delete", "ModerationMenu"),
+                            display: Object(p.d)("Delete", "ModerationMenu"),
                             destinationHandler: function() {
                                 return n.props.updateModalViewState(a.Delete)
                             }
                         }],
                         [a.DeleteAll, {
-                            display: Object(L.d)("Delete All Clips from Video", "ModerationMenu"),
+                            display: Object(p.d)("Delete All Clips from Video", "ModerationMenu"),
                             destinationHandler: function() {
                                 return n.props.updateModalViewState(a.DeleteAll)
                             }
                         }],
                         [a.Ban, {
-                            display: Object(L.d)("Ban User", "ModerationMenu"),
+                            display: Object(p.d)("Ban User", "ModerationMenu"),
                             destinationHandler: function() {
                                 return n.props.updateModalViewState(a.Ban)
                             }
                         }],
                         [a.Timeout, {
-                            display: Object(L.d)("Timeout User (24 hr)", "ModerationMenu"),
+                            display: Object(p.d)("Timeout User (24 hr)", "ModerationMenu"),
                             destinationHandler: function() {
                                 return n.props.updateModalViewState(a.Timeout)
                             }
@@ -9572,16 +9572,16 @@ webpackJsonp([40], {
                         o = r || s || n,
                         l = s || n,
                         c = [a.Report];
-                    return o && c.push(a.Delete), l && (c.push(a.DeleteAll), c.push(a.Ban), c.push(a.Timeout)), i.createElement(C.Z, {
+                    return o && c.push(a.Delete), l && (c.push(a.DeleteAll), c.push(a.Ban), c.push(a.Timeout)), i.createElement(_.Z, {
                         className: "moderation-menu"
-                    }, i.createElement(I.a, null, i.createElement(C.u, {
-                        type: C.z.Hollow,
-                        icon: C._13.More,
-                        ariaLabel: Object(L.d)("More Options", "ModerationMenu"),
+                    }, i.createElement(T.a, null, i.createElement(_.u, {
+                        type: _.z.Hollow,
+                        icon: _._13.More,
+                        ariaLabel: Object(p.d)("More Options", "ModerationMenu"),
                         "data-a-target": "moderation-menu-button"
-                    }), i.createElement(C.p, {
-                        direction: C.q.TopRight
-                    }, i.createElement(C.Z, {
+                    }), i.createElement(_.p, {
+                        direction: _.q.TopRight
+                    }, i.createElement(_.Z, {
                         padding: {
                             y: .5
                         }
@@ -9591,7 +9591,7 @@ webpackJsonp([40], {
                     return e.map(function(e) {
                         return t.renderMenuItem(e)
                     })
-                }, t = u.__decorate([Object(T.a)(x), Object(o.d)("ModerationMenu")], t)
+                }, t = u.__decorate([Object(L.a)(x), Object(o.d)("ModerationMenu")], t)
             }(i.Component),
             j = (n("MjlB"), 2e3),
             B = function(e) {
@@ -9602,7 +9602,7 @@ webpackJsonp([40], {
                     }, t.timeoutID = null, t.copyClipURL = function() {
                         var e;
                         try {
-                            e = Object(S.a)(t.props.clip.url)
+                            e = Object(N.a)(t.props.clip.url)
                         } catch (e) {
                             return void r.i.warn("Failed to copy", e)
                         }
@@ -9612,7 +9612,7 @@ webpackJsonp([40], {
                             t.setState({
                                 isShowingBalloon: !1
                             })
-                        }, j), Object(w.d)(t.props.clip, t.props.pageType)(E.b.CopyInput))
+                        }, j), Object(D.c)(t.props.clip, t.props.pageType)(S.b.CopyInput))
                     }, t.dismissBalloon = function() {
                         t.setState({
                             isShowingBalloon: !1
@@ -9622,123 +9622,123 @@ webpackJsonp([40], {
                 return u.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    var e, t = i.createElement(p.a, {
+                    var e, t = i.createElement(m.a, {
                         to: "/" + this.props.clip.broadcaster.login,
                         onClick: this.props.closeModal,
                         "data-a-target": "clip-modal-broadcaster-link"
                     }, this.props.clip.broadcaster.login);
                     return e = this.props.clip.game ? Object(r.d)("{broadcaster} playing {game}", {
                         broadcaster: t,
-                        game: i.createElement(p.a, {
-                            to: "" + Object(m.c)(this.props.clip.game.name),
+                        game: i.createElement(m.a, {
+                            to: "" + Object(h.c)(this.props.clip.game.name),
                             onClick: this.props.closeModal,
                             "data-a-target": "clip-modal-game-link"
                         }, this.props.clip.game.name)
                     }, "ClipsViewModalContent") : Object(r.d)("{broadcaster}", {
                         broadcaster: t
-                    }, "ClipsViewModalContent"), i.createElement(C._21, {
+                    }, "ClipsViewModalContent"), i.createElement(_._21, {
                         className: "clips-view-modal-content",
-                        background: C.m.Base
-                    }, i.createElement(C.Z, {
+                        background: _.m.Base
+                    }, i.createElement(_.Z, {
                         padding: {
                             bottom: 2
                         }
-                    }, i.createElement(C.j, {
-                        ratio: C.k.Aspect16x9
+                    }, i.createElement(_.j, {
+                        ratio: _.k.Aspect16x9
                     }, i.createElement("iframe", {
                         src: this.props.clip.embedURL,
                         width: "100%",
                         height: "100%",
                         allowFullScreen: !0
-                    }))), i.createElement(C.Z, {
+                    }))), i.createElement(_.Z, {
                         padding: {
                             x: 2,
                             bottom: 2
                         }
-                    }, i.createElement(C.Z, {
-                        display: C.L.Flex,
-                        flexWrap: C.O.NoWrap
-                    }, i.createElement(C.Z, {
+                    }, i.createElement(_.Z, {
+                        display: _.L.Flex,
+                        flexWrap: _.O.NoWrap
+                    }, i.createElement(_.Z, {
                         flexGrow: 1,
                         margin: {
                             right: 1
                         }
-                    }, i.createElement(y.a, {
+                    }, i.createElement(C.a, {
                         onClickOut: this.dismissBalloon
-                    }, i.createElement(_, {
+                    }, i.createElement(E, {
                         text: this.props.clip.url,
                         icon: !0,
-                        iconAsset: C._13.Link,
+                        iconAsset: _._13.Link,
                         onSelection: this.copyClipURL,
                         "data-a-target": "clip-share-input"
-                    }, i.createElement(C.p, {
+                    }, i.createElement(_.p, {
                         show: this.state.isShowingBalloon,
-                        direction: C.q.TopRight
-                    }, i.createElement(C.X, {
+                        direction: _.q.TopRight
+                    }, i.createElement(_.X, {
                         onClick: this.dismissBalloon
-                    }, i.createElement(C.Z, {
+                    }, i.createElement(_.Z, {
                         padding: 1
-                    }, i.createElement(C._25, {
+                    }, i.createElement(_._25, {
                         bold: !0
-                    }, Object(r.d)("Link copied to clipboard", "ClipsViewModalContent")))))))), i.createElement(O, {
+                    }, Object(r.d)("Link copied to clipboard", "ClipsViewModalContent")))))))), i.createElement(I, {
                         clip: this.props.clip,
                         pageType: this.props.pageType
                     }), i.createElement(M, {
                         clip: this.props.clip,
                         updateModalViewState: this.props.updateModalViewState
-                    }))), i.createElement(C.Z, {
+                    }))), i.createElement(_.Z, {
                         padding: {
                             x: 2,
                             bottom: 2
                         },
-                        display: C.L.Flex,
-                        flexWrap: C.O.NoWrap,
-                        justifyContent: C.Y.Between,
+                        display: _.L.Flex,
+                        flexWrap: _.O.NoWrap,
+                        justifyContent: _.Y.Between,
                         fullWidth: !0
-                    }, i.createElement(C.Z, {
+                    }, i.createElement(_.Z, {
                         flexGrow: 1
-                    }, i.createElement(C.U, {
+                    }, i.createElement(_.U, {
                         ellipsis: !0
-                    }, i.createElement(C._21, {
-                        display: C.L.Flex,
-                        flexWrap: C.O.NoWrap,
-                        fontSize: C.P.Size5
-                    }, i.createElement(C.Z, {
+                    }, i.createElement(_._21, {
+                        display: _.L.Flex,
+                        flexWrap: _.O.NoWrap,
+                        fontSize: _.P.Size5
+                    }, i.createElement(_.Z, {
                         ellipsis: !0
-                    }, this.props.clip.title), i.createElement(C.Z, {
+                    }, this.props.clip.title), i.createElement(_.Z, {
                         flexShrink: 0
-                    }, i.createElement(C._25, {
-                        type: C._30.Span,
-                        color: C.I.Alt2
+                    }, i.createElement(_._25, {
+                        type: _._30.Span,
+                        color: _.I.Alt2
                     }, " • ", Object(r.d)("{created, date, medium}", {
                         created: new Date(this.props.clip.createdAt)
-                    }, "ClipsViewModalContent"))))), i.createElement(C.U, {
+                    }, "ClipsViewModalContent"))))), i.createElement(_.U, {
                         ellipsis: !0
-                    }, i.createElement(C._21, {
-                        color: C.I.Alt2
+                    }, i.createElement(_._21, {
+                        color: _.I.Alt2
                     }, e, " • ", Object(r.d)("Clipped by {curator}", {
-                        curator: i.createElement(p.a, {
+                        curator: i.createElement(m.a, {
                             to: "/" + this.props.clip.curator.login,
                             onClick: this.props.closeModal,
                             "data-a-target": "clip-modal-curator-link"
                         }, this.props.clip.curator.login)
-                    }, "ClipsViewModalContent")))), i.createElement(C._21, {
-                        display: C.L.Flex,
+                    }, "ClipsViewModalContent")))), i.createElement(_._21, {
+                        display: _.L.Flex,
                         margin: {
                             bottom: 2,
                             left: 2
                         },
-                        fontSize: C.P.Size5,
-                        color: C.I.Alt2,
+                        fontSize: _.P.Size5,
+                        color: _.I.Alt2,
                         flexShrink: 0
-                    }, i.createElement(C.Z, {
+                    }, i.createElement(_.Z, {
                         margin: {
                             right: .5
                         },
-                        alignItems: C.c.Center,
-                        display: C.L.Flex
-                    }, i.createElement(C._12, {
-                        asset: C._13.GlyphViews
+                        alignItems: _.c.Center,
+                        display: _.L.Flex
+                    }, i.createElement(_._12, {
+                        asset: _._13.GlyphViews
                     })), Object(r.d)("{viewCount, number} views", {
                         viewCount: this.props.clip.viewCount
                     }, "ClipsViewModalContent"))))
@@ -9749,7 +9749,7 @@ webpackJsonp([40], {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onKeyDown = function(e) {
                         var n = e.charCode || e.keyCode;
-                        n === k.a.Left ? t.updateClipBackward() : n === k.a.Right && t.updateClipForward()
+                        n === y.a.Left ? t.updateClipBackward() : n === y.a.Right && t.updateClipForward()
                     }, t.updateClipForward = function() {
                         t.updateClipIndex(t.props.clipIndex + 1)
                     }, t.updateClipBackward = function() {
@@ -9760,33 +9760,33 @@ webpackJsonp([40], {
                     this.props.latencyTracking.reportInteractive(), this.setUpArrowListeners()
                 }, t.prototype.render = function() {
                     var e = null;
-                    return this.props.clipIndex && this.props.clipIndex > 0 && (e = i.createElement(C.Z, {
-                        position: C._6.Absolute,
-                        display: C.L.Flex,
-                        alignItems: C.c.Stretch,
+                    return this.props.clipIndex && this.props.clipIndex > 0 && (e = i.createElement(_.Z, {
+                        position: _._6.Absolute,
+                        display: _.L.Flex,
+                        alignItems: _.c.Stretch,
                         className: "clip-carousel-button clip-carousel-button--left"
-                    }, i.createElement(C.v, {
+                    }, i.createElement(_.v, {
                         ariaLabel: Object(r.d)("Previous clip", "ClipsViewModalNavigation"),
-                        type: C.w.Primary,
-                        icon: C._13.AngleLeft,
+                        type: _.w.Primary,
+                        icon: _._13.AngleLeft,
                         onClick: this.updateClipBackward,
                         "data-test-selector": "clips-view-modal-content-back"
-                    }))), i.createElement(C.Z, {
+                    }))), i.createElement(_.Z, {
                         className: "clips-view-modal-content"
                     }, e, i.createElement(B, {
                         clip: this.props.clip,
                         updateModalViewState: this.props.updateModalViewState,
                         pageType: this.props.pageType,
                         closeModal: this.props.closeModal
-                    }), i.createElement(C.Z, {
-                        position: C._6.Absolute,
-                        display: C.L.Flex,
-                        alignItems: C.c.Stretch,
+                    }), i.createElement(_.Z, {
+                        position: _._6.Absolute,
+                        display: _.L.Flex,
+                        alignItems: _.c.Stretch,
                         className: "clip-carousel-button clip-carousel-button--right"
-                    }, i.createElement(C.v, {
+                    }, i.createElement(_.v, {
                         ariaLabel: Object(r.d)("Next clip", "ClipsViewModalNavigation"),
-                        type: C.w.Primary,
-                        icon: C._13.AngleRight,
+                        type: _.w.Primary,
+                        icon: _._13.AngleRight,
                         onClick: this.updateClipForward,
                         "data-test-selector": "clips-view-modal-content-forward"
                     })))
@@ -9831,25 +9831,25 @@ webpackJsonp([40], {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     var e, t = (n = {}, n["clips-modal-view"] = !0, n[U] = !1, n);
-                    return this.state.modalView === a.Report ? e = i.createElement(b.a, {
+                    return this.state.modalView === a.Report ? e = i.createElement(v.a, {
                         title: Object(r.d)("Report this Clip", "ClipsViewModal"),
                         reportContext: {
-                            contentType: v.a.Clip,
+                            contentType: k.a.Clip,
                             contentID: this.props.clip.slug,
                             targetUserID: this.props.clip.broadcaster.id
                         },
                         onClose: this.setToViewState
-                    }) : this.state.modalView === a.Delete ? e = i.createElement(f.d, {
+                    }) : this.state.modalView === a.Delete ? e = i.createElement(b.d, {
                         clip: this.props.clip,
                         onClose: this.setToViewState
-                    }) : this.state.modalView === a.DeleteAll ? e = i.createElement(f.e, {
+                    }) : this.state.modalView === a.DeleteAll ? e = i.createElement(b.e, {
                         clip: this.props.clip,
                         onClose: this.setToViewState
-                    }) : this.state.modalView === a.Ban ? e = i.createElement(f.b, {
+                    }) : this.state.modalView === a.Ban ? e = i.createElement(b.b, {
                         clip: this.props.clip,
                         isTemporary: !1,
                         onClose: this.setToViewState
-                    }) : this.state.modalView === a.Timeout ? e = i.createElement(f.b, {
+                    }) : this.state.modalView === a.Timeout ? e = i.createElement(b.b, {
                         clip: this.props.clip,
                         isTemporary: !0,
                         onClose: this.setToViewState
@@ -9860,9 +9860,9 @@ webpackJsonp([40], {
                         updateModalViewState: this.updateClipsModalViewState,
                         loadMoreClips: this.props.loadMoreClips,
                         pageType: this.props.pageType
-                    }), t[U] = !0), i.createElement(C.Z, {
-                        className: h(t)
-                    }, e, i.createElement(g.a, {
+                    }), t[U] = !0), i.createElement(_.Z, {
+                        className: g(t)
+                    }, e, i.createElement(f.a, {
                         closeOnBackdropClick: !0,
                         closeOnPageNavigation: !0
                     }));
@@ -9874,16 +9874,10 @@ webpackJsonp([40], {
                     showModal: d.d
                 }, e)
             })(P),
-            Z = (n("Ajho"), "https://help.twitch.tv/customer/portal/articles/2918323-clip-champs-guide"),
-            H = function(e) {
+            Z = (n("Ajho"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
-                    return t.clipChampIconClickHandler = function() {
-                        Object(w.c)({
-                            targetURL: Z,
-                            type: t.props.pageType
-                        })
-                    }, t.getClips = function() {
+                    return t.getClips = function() {
                         return t.props.clips
                     }, t.openModal = function(e) {
                         e.preventDefault(), t.props.showModal(V, {
@@ -9900,200 +9894,189 @@ webpackJsonp([40], {
                 }, t.prototype.render = function() {
                     var e = null,
                         t = null;
-                    return this.props.pageType === w.b.Channel && this.props.clip.game && (e = i.createElement(C._21, {
-                        position: C._6.Absolute,
+                    return this.props.pageType === D.b.Channel && this.props.clip.game && (e = i.createElement(_._21, {
+                        position: _._6.Absolute,
                         attachBottom: !0,
                         attachRight: !0,
                         borderRight: !1,
                         borderBottom: !1,
                         className: "clips-preview-card__boxart"
-                    }, i.createElement(p.a, {
-                        to: Object(m.c)(this.props.clip.game.name) + "/clips",
+                    }, i.createElement(m.a, {
+                        to: Object(h.c)(this.props.clip.game.name) + "/clips",
                         "data-test-selector": "card-view-game-link",
                         "data-a-target": "clip-game-link"
-                    }, i.createElement(C._33, {
-                        display: C.L.Block,
-                        direction: C._35.Bottom,
+                    }, i.createElement(_._33, {
+                        display: _.L.Block,
+                        direction: _._35.Bottom,
                         label: this.props.clip.game.name
-                    }, i.createElement(C.C, {
+                    }, i.createElement(_.C, {
                         alt: this.props.clip.game.name,
                         src: this.props.clip.game.boxArtURL,
-                        aspect: C.k.BoxArt,
-                        size: C.D.Size4
-                    }))))), this.props.pageType === w.b.Game && (t = i.createElement(C.Z, null, i.createElement(p.a, {
+                        aspect: _.k.BoxArt,
+                        size: _.D.Size4
+                    }))))), this.props.pageType === D.b.Game && (t = i.createElement(_.Z, null, i.createElement(m.a, {
                         className: "clips-preview-card__display-name",
                         to: "/" + this.props.clip.broadcaster.login + "/clips"
-                    }, this.props.clip.broadcaster.login))), i.createElement(C.Z, {
+                    }, this.props.clip.broadcaster.login))), i.createElement(_.Z, {
                         margin: {
                             bottom: 2
                         }
-                    }, i.createElement(C.A, u.__assign({
+                    }, i.createElement(_.A, u.__assign({
                         row: !0
-                    }, Object(C._43)(this.props)), i.createElement(C.Z, {
-                        position: C._6.Relative,
+                    }, Object(_._43)(this.props)), i.createElement(_.Z, {
+                        position: _._6.Relative,
                         margin: {
                             right: 1
                         },
                         flexShrink: 0
-                    }, i.createElement(p.a, {
+                    }, i.createElement(m.a, {
                         to: this.props.clip.url,
                         onClick: this.openModal,
                         "data-a-target": "clip-thumbnail-link"
-                    }, i.createElement(C.C, {
+                    }, i.createElement(_.C, {
                         src: this.props.clip.thumbnailURL || r.n.config.defaultStreamPreviewURL,
                         alt: this.props.clip.title,
-                        aspect: C.k.Aspect16x9,
-                        size: C.D.Size24
-                    })), e), i.createElement(C.B, null, i.createElement(C._25, {
-                        type: C._30.H3,
-                        fontSize: C.P.Size5
-                    }, i.createElement(p.a, {
+                        aspect: _.k.Aspect16x9,
+                        size: _.D.Size24
+                    })), e), i.createElement(_.B, null, i.createElement(_._25, {
+                        type: _._30.H3,
+                        fontSize: _.P.Size5
+                    }, i.createElement(m.a, {
                         className: "clips-preview-card__title",
                         to: this.props.clip.url,
                         onClick: this.openModal,
                         "data-a-target": "clip-title-link"
-                    }, this.props.clip.title)), i.createElement(C._25, {
+                    }, this.props.clip.title)), i.createElement(_._25, {
                         ellipsis: !0
-                    }, t), i.createElement(C._25, {
-                        color: C.I.Alt2,
+                    }, t), i.createElement(_._25, {
+                        color: _.I.Alt2,
                         ellipsis: !0
                     }, Object(r.d)("{created, date, medium}", {
                         created: new Date(this.props.clip.createdAt)
-                    }, "ClipsCardView"), i.createElement(C.U, {
+                    }, "ClipsCardView"), i.createElement(_.U, {
                         padding: {
                             x: .5
                         }
-                    }, i.createElement("span", null, "·")), this.props.isClipChampExperiment && this.props.clip.champBadge && i.createElement(C.U, null, i.createElement("a", {
-                        className: "clips-preview-card__clips-champ-badge",
-                        href: Z,
-                        onClick: this.clipChampIconClickHandler,
-                        target: "_blank"
-                    }, i.createElement("img", {
-                        alt: "clip champ badge",
-                        className: "clips-preview-card__clips-champ-badge-img",
-                        src: "https://s.jtvnw.net/jtv_user_pictures/hosted_images/clipchampbadge"
-                    }))), i.createElement(C.U, {
+                    }, i.createElement("span", null, "·")), i.createElement(_.U, {
                         padding: {
                             right: .5
                         }
-                    }, i.createElement("span", null, Object(r.d)("Clipped by", "ClipsCardView"))), i.createElement(p.a, {
+                    }, i.createElement("span", null, Object(r.d)("Clipped by", "ClipsCardView"))), i.createElement(m.a, {
                         className: "clips-preview-card__display-name",
                         to: "/" + this.props.clip.curator.login,
                         "data-a-target": "clip-curator-link"
-                    }, this.props.clip.curator.login)), i.createElement(C._25, {
-                        color: C.I.Alt2
+                    }, this.props.clip.curator.login)), i.createElement(_._25, {
+                        color: _.I.Alt2
                     }, Object(r.d)("{viewCount, number} views", {
                         viewCount: this.props.clip.viewCount
                     }, "ClipsCardView")))))
                 }, t = u.__decorate([Object(o.d)("ClipsCardView")], t)
-            }(i.Component),
-            W = Object(l.b)(null, function(e) {
+            }(i.Component)),
+            H = Object(l.b)(null, function(e) {
                 return Object(c.b)({
                     showModal: d.d
                 }, e)
-            })(H),
-            G = n("QAcM"),
-            q = function(e) {
+            })(Z),
+            W = n("QAcM"),
+            G = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.updateToAllTime = function() {
-                        t.props.updateTimeFilter(G.b.All)
+                        t.props.updateTimeFilter(W.b.All)
                     }, t
                 }
                 return u.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return i.createElement(C.Z, {
+                    return i.createElement(_.Z, {
                         className: "clips-cards"
-                    }, i.createElement(C.S, {
-                        gutterSize: C.T.None
+                    }, i.createElement(_.S, {
+                        gutterSize: _.T.None
                     }, 0 === this.props.clips.length ? this.renderEmpty() : this.renderClips()))
                 }, t.prototype.renderEmpty = function() {
-                    var e = this.props.timeFilterValue === G.b.All ? i.createElement(C.Z, null, i.createElement(C._25, {
-                        fontSize: C.P.Size4
-                    }, Object(r.d)("No Clips Found", "ClipsCards")), i.createElement(C.Z, {
+                    var e = this.props.timeFilterValue === W.b.All ? i.createElement(_.Z, null, i.createElement(_._25, {
+                        fontSize: _.P.Size4
+                    }, Object(p.d)("No Clips Found", "ClipsCards")), i.createElement(_.Z, {
                         margin: 3
-                    }, Object(r.d)("<x:link>Learn how</x:link> to make and share clips of this channel", {
+                    }, Object(p.d)("<x:link>Learn how</x:link> to make and share clips of this channel", {
                         "x:link": function(e) {
                             return i.createElement("a", {
                                 href: "https://help.twitch.tv/customer/portal/articles/2442508-how-to-use-clips",
                                 target: "_blank"
                             }, e)
                         }
-                    }, "ClipsCards"))) : i.createElement(C.Z, null, i.createElement(C._25, {
-                        fontSize: C.P.Size4
-                    }, Object(r.d)("No clips were created in this time period.", "ClipsCards"), i.createElement("br", null), Object(r.d)("Check out all popular clips from this channel instead.", "ClipsCards")), i.createElement(C.Z, {
+                    }, "ClipsCards"))) : i.createElement(_.Z, null, i.createElement(_._25, {
+                        fontSize: _.P.Size4
+                    }, Object(p.d)("No clips were created in this time period.", "ClipsCards"), i.createElement("br", null), Object(p.d)("Check out all popular clips from this channel instead.", "ClipsCards")), i.createElement(_.Z, {
                         margin: 3
-                    }, i.createElement(C.u, {
-                        type: C.z.Hollow,
+                    }, i.createElement(_.u, {
+                        type: _.z.Hollow,
                         onClick: this.updateToAllTime
-                    }, Object(r.d)("See all popular clips", "ClipCards"))));
-                    return i.createElement(C.Z, {
+                    }, Object(p.d)("See all popular clips", "ClipCards"))));
+                    return i.createElement(_.Z, {
                         fullWidth: !0
-                    }, i.createElement(C.S, null, i.createElement(C.J, {
+                    }, i.createElement(_.S, null, i.createElement(_.J, {
                         cols: 3
-                    }), i.createElement(C.J, {
+                    }), i.createElement(_.J, {
                         cols: 6
-                    }, i.createElement(C.Z, {
-                        textAlign: C._26.Center
-                    }, e)), i.createElement(C.J, {
+                    }, i.createElement(_.Z, {
+                        textAlign: _._26.Center
+                    }, e)), i.createElement(_.J, {
                         cols: 3
                     })))
                 }, t.prototype.renderClips = function() {
-                    var e = this,
-                        t = "on" === r.n.dynamicSettings.get("twilight_clips_already", "off");
-                    return this.props.clips.map(function(n, a) {
-                        return i.createElement(C.J, {
+                    var e = this;
+                    return this.props.clips.map(function(t, n) {
+                        return i.createElement(_.J, {
                             cols: {
                                 default: 12,
                                 xl: 6
                             },
-                            key: n.slug
-                        }, i.createElement(W, {
-                            clip: n,
+                            key: t.slug
+                        }, i.createElement(H, {
+                            clip: t,
                             clips: e.props.clips,
-                            clipIndex: a,
-                            "data-target": "clips-card-view",
-                            "data-a-target": "clips-card-" + a,
-                            isClipChampExperiment: t,
+                            clipIndex: n,
+                            pageType: e.props.pageType,
                             loadMoreClips: e.props.loadMoreClips,
-                            pageType: e.props.pageType
+                            "data-target": "clips-card-view",
+                            "data-a-target": "clips-card-" + n
                         }))
                     })
                 }, t = u.__decorate([Object(o.d)("ClipCards")], t)
             }(i.Component),
-            z = Object(l.b)(null, function(e) {
+            q = Object(l.b)(null, function(e) {
                 return Object(c.b)({
                     showModal: d.d
                 }, e)
-            })(q),
-            Y = function(e) {
-                return i.createElement(C.Z, null, i.createElement(C.Z, {
-                    display: C.L.Flex,
-                    flexWrap: C.O.NoWrap,
-                    justifyContent: C.Y.Between,
+            })(G),
+            z = function(e) {
+                return i.createElement(_.Z, null, i.createElement(_.Z, {
+                    display: _.L.Flex,
+                    flexWrap: _.O.NoWrap,
+                    justifyContent: _.Y.Between,
                     margin: {
                         bottom: 2
                     },
                     fullWidth: !0
-                }, i.createElement(C.Z, {
-                    display: C.L.Flex,
-                    flexWrap: C.O.NoWrap
-                }, e.pageType === w.b.Game && i.createElement(C.Z, {
+                }, i.createElement(_.Z, {
+                    display: _.L.Flex,
+                    flexWrap: _.O.NoWrap
+                }, e.pageType === D.b.Game && i.createElement(_.Z, {
                     margin: {
                         right: 1
                     }
-                }, i.createElement(s.a, null)), i.createElement(C.Z, null, i.createElement(G.c, {
+                }, i.createElement(s.a, null)), i.createElement(_.Z, null, i.createElement(W.c, {
                     updateTimeFilter: e.updateTimeFilter,
                     timeFilterValue: e.timeFilterValue
-                }))), i.createElement(C.u, {
+                }))), i.createElement(_.u, {
                     linkTo: "https://twitch.tv/manager/clips",
                     targetBlank: !0,
-                    type: C.z.Hollow,
+                    type: _.z.Hollow,
                     "data-a-target": "manage-clips-button"
-                }, Object(r.d)("Manage my clips", "TopClips"))), i.createElement(C.Z, null, e.isLoading ? i.createElement(C._1, {
+                }, Object(r.d)("Manage my clips", "TopClips"))), i.createElement(_.Z, null, e.isLoading ? i.createElement(_._1, {
                     fillContent: !0
-                }) : i.createElement(z, {
+                }) : i.createElement(q, {
                     clips: e.clips,
                     pageType: e.pageType,
                     loadMoreClips: e.loadMoreClips,
@@ -10101,13 +10084,13 @@ webpackJsonp([40], {
                     timeFilterValue: e.timeFilterValue
                 })))
             },
-            Q = Object(o.d)("TopClips", {
+            Y = Object(o.d)("TopClips", {
                 autoReportInteractive: !0
-            })(Y);
+            })(z);
         n.d(t, !1, function() {
-            return Y
+            return z
         }), n.d(t, "a", function() {
-            return Q
+            return Y
         })
     },
     "5vPJ": function(e, t, n) {
@@ -17549,10 +17532,8 @@ webpackJsonp([40], {
             return l
         }), n.d(t, "b", function() {
             return c
-        }), n.d(t, "d", function() {
-            return u
         }), n.d(t, "c", function() {
-            return p
+            return u
         });
         var a, i = n("6sO2"),
             r = n("8Wuk"),
@@ -17585,14 +17566,6 @@ webpackJsonp([40], {
                         live: null
                     })
                 }
-            },
-            p = function(e) {
-                var t = e.targetURL,
-                    n = e.type;
-                i.n.tracking.track(s.SpadeEventType.ClipChampHelpClick, {
-                    target_url: t,
-                    type: n.toLowerCase()
-                })
             }
     },
     WVx7: function(e, t, n) {
@@ -25624,4 +25597,4 @@ webpackJsonp([40], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-clips-db26262a7a1d030475f9c11c06292338.js.map
+//# sourceMappingURL=pages.channel-clips-dff3d8c2b620b1bd11e26fd49afd3d5a.js.map

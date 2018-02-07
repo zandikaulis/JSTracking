@@ -317,10 +317,8 @@ webpackJsonp([67], {
             return o
         }), n.d(t, "b", function() {
             return c
-        }), n.d(t, "d", function() {
-            return u
         }), n.d(t, "c", function() {
-            return p
+            return u
         });
         var a, r = n("6sO2"),
             i = n("8Wuk"),
@@ -353,14 +351,6 @@ webpackJsonp([67], {
                         live: null
                     })
                 }
-            },
-            p = function(e) {
-                var t = e.targetURL,
-                    n = e.type;
-                r.n.tracking.track(l.SpadeEventType.ClipChampHelpClick, {
-                    target_url: t,
-                    type: n.toLowerCase()
-                })
             }
     },
     XITx: function(e, t) {},
@@ -471,7 +461,7 @@ webpackJsonp([67], {
                         type: t.type,
                         text: e.clip.title,
                         url: Object(F.a)(e.clip.url, t.params),
-                        onShareClick: Object(L.d)(e.clip, e.pageType)
+                        onShareClick: Object(L.c)(e.clip, e.pageType)
                     })
                 })), s.createElement(V.Z, {
                     padding: {
@@ -2369,36 +2359,16 @@ webpackJsonp([67], {
                         },
                         arguments: [],
                         directives: []
-                    }, {
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "champBadge"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: []
-                            }]
-                        }
                     }]
                 }
             }],
             loc: {
                 start: 0,
-                end: 247
+                end: 229
             }
         };
         n.loc.source = {
-            body: "fragment clip on Clip {\nid\nslug\nurl\nembedURL\ntitle\nviewCount\nlanguage\ncurator {\nid\nlogin\ndisplayName\n}\ngame {\nid\nname\nboxArtURL(width: 52 height: 72)\n}\nbroadcaster {\nid\nlogin\ndisplayName\n}\nthumbnailURL\ncreatedAt\ndurationSeconds\nchampBadge {\nid\n}\n}",
+            body: "fragment clip on Clip {\nid\nslug\nurl\nembedURL\ntitle\nviewCount\nlanguage\ncurator {\nid\nlogin\ndisplayName\n}\ngame {\nid\nname\nboxArtURL(width: 52 height: 72)\n}\nbroadcaster {\nid\nlogin\ndisplayName\n}\nthumbnailURL\ncreatedAt\ndurationSeconds\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -3518,4 +3488,4 @@ webpackJsonp([67], {
         }(n("kUjr").definitions)), e.exports = a
     }
 });
-//# sourceMappingURL=pages.clips-manager-385f9c44ab6fd4a5300db565eb1385ae.js.map
+//# sourceMappingURL=pages.clips-manager-9c63db76f81c30bb3cb32956f68f1f41.js.map
