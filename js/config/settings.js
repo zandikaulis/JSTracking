@@ -14,6 +14,7 @@ window.__twilightSettings = {
     "bits_truex_script_url": "https://static.truex.com/js/client.js",
     "browser_notifications_launch": true,
     "chatrooms_enabled": false,
+    "chatrooms_staff_beta": false,
     "comscore_config_c1": 2,
     "comscore_config_c2": 6745306,
     "comscore_config_c3": 1,
