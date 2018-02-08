@@ -481,6 +481,18 @@ window.__twilightSettings = {
                 "value": "off"
             }]
         },
+        "e0fdfc17-389d-4ba5-8596-065352ddc01e": {
+            "name": "twilight_browser_notifications_upsell",
+            "v": 3014,
+            "t": 2,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "yes"
+            }]
+        },
         "e28b9f51-336e-4398-80ff-6f0083c57434": {
             "name": "twilight_collection_manager",
             "v": 2875,

@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".b99d4dc7b5bfdddafb32.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".8291a906f3458452a735.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -28060,7 +28060,7 @@
                     u = ko.a(!0),
                     c = Po.v() === Po.k ? null : jo;
                 return {
-                    app_version: "2018.02.08-003124+b807933681e99beb0cbf96c880b27fa888f240b1",
+                    app_version: "2018.02.08-205201+930669fb53063c33322406292c5e1108ac53af00",
                     flash_version: r,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -33638,7 +33638,7 @@
                 }]), e
             }(),
             go = n(101),
-            bo = "//video-edge-290313.sjc01.hls.ttvnw.net/v1/playlist/CixfQe1lEpDSABkFH4d9SNpVciusMWu_alHGX6I9--FqxveNR6Kl_w1heBC3GVAXAT1P2kd2b8JcZD7bAcuzU4L6UlgzaNsFCDCQOqWikR9-FvDQst9iv2R7ieHwo2jNJA1vPvXmNUugTAFXJWSLcPai0QogmIqhxWxb0q86axBDtXQUNHc7gMbtaNheF8_UM8lfCggJIjBKn4d9WmwCJDX4Q-0drgxPKrG7LpgWmqL1csKNhPe3mthbeDs6VXEPerSvfMbGapQR_dL2PjMRcUMAKVjjLDJFKiniWgFrFmjyRfZsTC0xZaod5sWXa7407jaL4fDrdEIBpH8wUMrE9GYQ5iJtS95774XtC6YUUDkMuKWfKF3xSXLR35Mf6hb3GEtfY86-7ck__-4Hhw3WQashznBFrbgwVCjj2DGjdW0F04Q5bYmkS-.m3u8",
+            bo = "//video-edge-793b3a.sjc01.hls.ttvnw.net/v1/playlist/CtwbqsSFXGPtccuBdttpbhKy6vE2xZgGjrF6bDqZqLzviwOLqz-m2zWn-lyKED2Qzb_y4oTxxpJMOXuQfl1J6ZO7OTZopTAQBxhZmlKD2lMce1mQz21z5bknWC334j7Qx5AehIEpF-X45y-kR-SzY8vdH1kYAUzakazS5J3sWgLkuhNRYcfxBmH9mTheTsSyyHzDtHpLtZLmxHFwWDoaT7anRmiaQoaKKlHhWZCCE2CE_cRqRCnPI37fK_vFgt37VRBdZBen297-WxL9KPtngrLZZi4RMm0FY1H5SNrtFQrJ5k0QtLYOKHqSBBF1Sc1Hu9YeYqO3SEShODDZMzpy9ZUJ6pM5unbkPEoqeGLnJTN7zW5Ptl0DwfpBYo3Ox6Ccvg1Xjstqih-nnYIpEiwIe_UeSilHyQY9mesZMXpxPpyQLt0.m3u8",
             _o = n(45),
             wo = n(244),
             ko = n(131),
