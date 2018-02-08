@@ -13479,10 +13479,10 @@ webpackJsonp([44], {
             p = n("T8ns"),
             m = n("Odds"),
             h = (n("w+Qa"), l.a.wrap(function() {
-                return n.e(75).then(n.bind(null, "kd/b"))
+                return n.e(76).then(n.bind(null, "kd/b"))
             }, "SubsLandingPage")),
             f = l.a.wrap(function() {
-                return n.e(76).then(n.bind(null, "uy5s"))
+                return n.e(77).then(n.bind(null, "uy5s"))
             }, "SubsBroadcasterPage"),
             g = function(e) {
                 function t() {
@@ -14655,16 +14655,16 @@ webpackJsonp([44], {
             ie = n("0Mfl"),
             re = n("CSlQ"),
             ae = ee.a.wrap(function() {
-                return n.e(49).then(n.bind(null, "8U1+"))
+                return n.e(50).then(n.bind(null, "8U1+"))
             }, "AnonFrontPage"),
             se = ee.a.wrap(function() {
-                return n.e(52).then(n.bind(null, "Dd84"))
+                return n.e(53).then(n.bind(null, "Dd84"))
             }, "BrowseRootPage"),
             oe = ee.a.wrap(function() {
                 return n.e(40).then(n.bind(null, "gZGZ"))
             }, "ChannelClipsPage"),
             le = ee.a.wrap(function() {
-                return n.e(50).then(n.bind(null, "zfLI"))
+                return n.e(51).then(n.bind(null, "zfLI"))
             }, "ChannelCollectionsPage"),
             de = ee.a.wrap(function() {
                 return n.e(41).then(n.bind(null, "lW0T"))
@@ -14682,91 +14682,94 @@ webpackJsonp([44], {
                 return n.e(34).then(n.bind(null, "g8mI"))
             }, "ChannelVideosPage"),
             he = ee.a.wrap(function() {
-                return n.e(61).then(n.bind(null, "yMnN"))
+                return n.e(62).then(n.bind(null, "yMnN"))
             }, "DevOnlyRoot"),
             fe = ee.a.wrap(function() {
-                return n.e(45).then(n.bind(null, "7yeK"))
+                return n.e(46).then(n.bind(null, "7yeK"))
             }, "DirectoryRootPage"),
             ge = ee.a.wrap(function() {
-                return n.e(57).then(n.bind(null, "IzAE"))
+                return n.e(58).then(n.bind(null, "IzAE"))
             }, "DevOnlyTestingCarouselPage"),
             ve = ee.a.wrap(function() {
-                return n.e(59).then(n.bind(null, "Tj44"))
+                return n.e(60).then(n.bind(null, "Tj44"))
             }, "EmailVerificationPage"),
             be = ee.a.wrap(function() {
-                return n.e(46).then(n.bind(null, "NTi8"))
+                return n.e(47).then(n.bind(null, "NTi8"))
             }, "EventLandingPage"),
             ke = ee.a.wrap(function() {
-                return n.e(48).then(n.bind(null, "IpE8"))
+                return n.e(49).then(n.bind(null, "IpE8"))
             }, "FollowingRootPage"),
             ye = ee.a.wrap(function() {
-                return n.e(53).then(n.bind(null, "lTLe"))
+                return n.e(54).then(n.bind(null, "lTLe"))
             }, "FinishWatchingPage"),
             Se = ee.a.wrap(function() {
-                return n.e(47).then(n.bind(null, "IOEW"))
+                return n.e(48).then(n.bind(null, "IOEW"))
             }, "FrontPage"),
             _e = ee.a.wrap(function() {
-                return n.e(54).then(n.bind(null, "DZCb"))
+                return n.e(55).then(n.bind(null, "DZCb"))
             }, "InventoryPage"),
             Ne = ee.a.wrap(function() {
-                return n.e(62).then(n.bind(null, "o8EG"))
+                return n.e(63).then(n.bind(null, "o8EG"))
             }, "ManagerRedirectPage"),
             Te = ee.a.wrap(function() {
-                return n.e(60).then(n.bind(null, "DkuH"))
-            }, "ReportUserPage"),
+                return n.e(45).then(n.bind(null, "gZLf"))
+            }, "PaymentsLandingPage"),
             Ee = ee.a.wrap(function() {
-                return n.e(51).then(n.bind(null, "K4jf"))
-            }, "SettingsRoot"),
+                return n.e(61).then(n.bind(null, "DkuH"))
+            }, "ReportUserPage"),
             Ce = ee.a.wrap(function() {
+                return n.e(52).then(n.bind(null, "K4jf"))
+            }, "SettingsRoot"),
+            we = ee.a.wrap(function() {
                 return n.e(36).then(n.bind(null, "uiPj"))
             }, "VideoWatchPage"),
-            we = ee.a.wrap(function() {
-                return n.e(56).then(n.bind(null, "6Vx1"))
+            Ie = ee.a.wrap(function() {
+                return n.e(57).then(n.bind(null, "6Vx1"))
             }, "DevOnlyTestingAmazonOffersPage"),
-            Ie = function() {
+            De = function() {
                 return o.createElement(J.c, {
                     path: "/",
                     to: "/directory/following"
                 })
             },
-            De = function() {
+            Oe = function() {
                 return window.location.reload(), null
             },
-            Oe = function(e) {
+            Pe = function(e) {
                 var t = Object(ne.a)(e.match.params.videoID);
                 return o.createElement(J.c, {
                     to: "/videos/" + t
                 })
             },
-            Pe = function(e) {
+            Fe = function(e) {
                 return o.createElement(J.c, {
                     to: "/popout/" + e.match.params.channelLogin + "/chat"
                 })
             },
-            Fe = function(e) {
+            Re = function(e) {
                 return o.createElement(J.c, {
                     to: "/" + e.match.params.channelLogin + "/videos/all"
                 })
             },
-            Re = function(e) {
+            xe = function(e) {
                 return o.createElement(J.c, {
                     to: "/" + e.match.params.channelLogin + "/videos/archive"
                 })
             },
-            xe = function(e) {
+            Ue = function(e) {
                 return o.createElement(J.c, {
                     to: "/directory/game/" + e.match.params.encodedCommunityName + "/videos/all"
                 })
             },
-            Ue = function() {
+            Le = function() {
                 return o.createElement(J.c, {
                     to: "/directory/all/xbox"
                 })
             },
-            Le = function() {
+            Me = function() {
                 return window.location.replace(ie.a), null
             },
-            Me = Object(re.d)("DefaultRootRouter", {
+            je = Object(re.d)("DefaultRootRouter", {
                 autoReportInteractive: !0
             })(function(e) {
                 var t = e.isLoggedIn;
@@ -14775,7 +14778,7 @@ webpackJsonp([44], {
                     component: ge
                 }), I.a.buildType !== te.a.Production && o.createElement(J.d, {
                     path: "/_dev/testing/amazon-offers/:channelName",
-                    component: we
+                    component: Ie
                 }), I.a.buildType !== te.a.Production && o.createElement(J.d, {
                     path: "/_dev",
                     component: he
@@ -14785,10 +14788,10 @@ webpackJsonp([44], {
                     component: t ? Se : ae
                 }), o.createElement(J.d, {
                     path: "/bits",
-                    render: De
+                    render: Oe
                 }), o.createElement(J.d, {
                     path: "/collections/:collectionID",
-                    component: Ce
+                    component: we
                 }), o.createElement(J.d, {
                     path: "/communities/:encodedCommunityName/details",
                     component: fe
@@ -14818,7 +14821,7 @@ webpackJsonp([44], {
                     component: fe
                 }), o.createElement(J.d, {
                     path: "/directory/game/:encodedCommunityName/videos",
-                    render: xe
+                    render: Ue
                 }), o.createElement(J.d, {
                     path: "/directory/game/:encodedCommunityName/:encodedLanguage",
                     component: fe
@@ -14830,7 +14833,7 @@ webpackJsonp([44], {
                     component: se
                 }), o.createElement(J.d, {
                     path: "/directory/all/xb1",
-                    component: Ue
+                    component: Le
                 }), o.createElement(J.d, {
                     path: "/directory/all/xbox",
                     component: se
@@ -14852,54 +14855,57 @@ webpackJsonp([44], {
                 }), o.createElement(J.d, {
                     path: "/email-verification/:emailOpaqueId",
                     component: ve
+                }), I.a.buildType !== te.a.Production && o.createElement(J.d, {
+                    path: "/payments",
+                    component: Te
                 }), o.createElement(J.d, {
                     path: "/following",
-                    component: Ie
-                }), I.a.buildType !== te.a.Production && o.createElement(J.d, {
+                    component: De
+                }), o.createElement(J.d, {
                     path: "/inventory",
                     component: _e
                 }), o.createElement(J.d, {
                     path: "/popout/:channelName/chat",
-                    render: De
-                }), o.createElement(J.d, {
-                    path: "/videos/v:videoID",
                     render: Oe
                 }), o.createElement(J.d, {
+                    path: "/videos/v:videoID",
+                    render: Pe
+                }), o.createElement(J.d, {
                     path: "/videos/:videoID",
-                    component: Ce
+                    component: we
                 }), o.createElement(J.d, {
                     path: "/store",
-                    render: Le
+                    render: Me
                 }), o.createElement(J.d, {
                     path: "/store/merch",
-                    render: Le
+                    render: Me
                 }), o.createElement(J.d, {
                     path: "/subs",
-                    render: De
+                    render: Oe
                 }), o.createElement(J.d, {
                     path: "/settings/:tab?",
-                    component: Ee
+                    component: Ce
                 }), o.createElement(J.d, {
                     path: "/manager/:pageName?",
                     component: Ne
                 }), o.createElement(J.d, {
                     path: "/:channelName/report",
-                    component: Te
+                    component: Ee
                 }), o.createElement(J.d, {
                     path: "/:channelLogin/videos/(past_broadcasts?)",
-                    render: Re
+                    render: xe
                 }), o.createElement(J.d, {
                     path: "/:channelLogin/videos/:filter(all|archive|upload|highlight|past_premiere)",
                     component: me
                 }), o.createElement(J.d, {
                     path: "/:channelLogin/videos/:unknownFilter?",
-                    render: Fe
+                    render: Re
                 }), o.createElement(J.d, {
                     path: "/:channelName/clips",
                     component: oe
                 }), o.createElement(J.d, {
                     path: "/:channelLogin/chat",
-                    render: Pe
+                    render: Fe
                 }), o.createElement(J.d, {
                     path: "/:channelLogin/collections",
                     component: le
@@ -14921,12 +14927,12 @@ webpackJsonp([44], {
                 }))
             });
         n.d(t, "b", function() {
-            return je
-        }), n.d(t, "a", function() {
             return Ae
+        }), n.d(t, "a", function() {
+            return Be
         });
-        var je = "twilight-main",
-            Ae = function(e) {
+        var Ae = "twilight-main",
+            Be = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {}, t.setRootScrollableContentRef = function(e) {
@@ -14950,10 +14956,10 @@ webpackJsonp([44], {
                         display: L.L.Flex,
                         flexDirection: L.N.Column
                     }, o.createElement("main", {
-                        className: je
+                        className: Ae
                     }, o.createElement(b.b, null), o.createElement(c.a, {
                         contentRefDelegate: this.setRootScrollableContentRef
-                    }, o.createElement(Me, {
+                    }, o.createElement(je, {
                         isLoggedIn: this.props.isLoggedIn
                     }), o.createElement(l.b, {
                         mainRef: this.state.rootScrollableContentRef
@@ -22162,4 +22168,4 @@ webpackJsonp([44], {
         }
     }
 });
-//# sourceMappingURL=pages.subs-91c69cdf69d0441bba363242d5df0c6d.js.map
+//# sourceMappingURL=pages.subs-ef8c11b019ccbb82456815912fd883fe.js.map

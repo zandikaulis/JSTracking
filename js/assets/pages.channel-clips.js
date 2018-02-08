@@ -1489,43 +1489,16 @@ webpackJsonp([40], {
             be = (n("W266"), "nativeBroadcastNotifDismissed"),
             ve = [{
                 title: "English",
-                login: "PlayHearthstone"
+                login: "esamarathon"
             }, {
-                title: "中文 繁體",
-                login: "HearthstonezhTW"
-            }, {
-                title: "한국어",
-                login: "playhearthstonekr"
-            }, {
-                title: "Русский",
-                login: "PlayHearthstoneRU"
+                title: "Français",
+                login: "LeFrenchRestream"
             }, {
                 title: "Deutsch",
-                login: "C4mlann"
+                login: "GermenchRestream"
             }, {
-                title: "Italiano",
-                login: "GDivision"
-            }, {
-                title: "Polski",
-                login: "BlackFIreIce"
-            }, {
-                title: "Français",
-                login: "originhs"
-            }, {
-                title: "Français",
-                login: "armatvhs"
-            }, {
-                title: "Español - España",
-                login: "OGSeries"
-            }, {
-                title: "ภาษาไทย",
-                login: "HearthstoneTH"
-            }, {
-                title: "Español - Latinoamérica",
-                login: "CopaAmerica_ES1"
-            }, {
-                title: "Português - Brasil",
-                login: "CopaAmerica_pt1"
+                title: "Русский",
+                login: "SpeedrunsRussia"
             }],
             ke = function(e) {
                 function t() {
@@ -1569,7 +1542,7 @@ webpackJsonp([40], {
                     if (!this.isEventChannel(this.props.channelLogin)) return null;
                     if (this.hasDismissedForChannel(this.props.channelLogin)) return null;
                     var e = Date.now();
-                    if (e < 15161904e5 || e >= 15167088e5) return null;
+                    if (e < 15191352e5 || e >= 15195132e5) return null;
                     var t = this.getChannelLinks();
                     return t.length ? v.createElement(W._21, {
                         attachLeft: !0,
@@ -1585,7 +1558,13 @@ webpackJsonp([40], {
                         }
                     }, v.createElement(W._25, {
                         type: W._30.H4
-                    }, Object(m.d)("Want to watch HCT?", "NativeBroadcastNotification"))), v.createElement("ul", null, t), v.createElement(W.Z, {
+                    }, Object(m.d)("ESA Winter 2018", "NativeBroadcastNotification"))), v.createElement(W.Z, {
+                        margin: {
+                            bottom: 1
+                        }
+                    }, v.createElement(W._25, {
+                        color: W.I.OverlayAlt
+                    }, Object(m.d)("Want to watch ESA in you local language? Try one of these international broadcasts!", "NativeBroadcastNotification"))), v.createElement("ul", null, t), v.createElement(W.Z, {
                         attachRight: !0,
                         attachTop: !0,
                         margin: 1,
@@ -1612,7 +1591,7 @@ webpackJsonp([40], {
                     }).includes(e.toLowerCase())
                 }, t.prototype.hasDismissedForChannel = function(e) {
                     var t = m.k.get(be, {})[e.toLowerCase()];
-                    return !!t && t >= 15161904e5
+                    return !!t && t >= 15191352e5
                 }, t
             }(v.Component),
             ye = n("+Znq"),
@@ -5274,7 +5253,7 @@ webpackJsonp([40], {
                 }, Object(m.d)("Details", "OWL2018Introduction"))))
             });
         ! function(e) {
-            e.CratesChristmas = "CratesChristmas", e.OWL2018 = "overwatchleague"
+            e.CratesChristmas = "CratesChristmas", e.OWL2018 = "owl2018"
         }(Wn || (Wn = {}));
         var la, ca = function(e) {
                 switch (e.event) {
@@ -25597,4 +25576,4 @@ webpackJsonp([40], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-clips-dff3d8c2b620b1bd11e26fd49afd3d5a.js.map
+//# sourceMappingURL=pages.channel-clips-39b261024b5db335c49ab6477aca43f2.js.map

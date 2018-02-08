@@ -1,4 +1,4 @@
-webpackJsonp([55], {
+webpackJsonp([56], {
     "2b/B": function(e, t, n) {
         "use strict";
         var a = n("RH2O"),
@@ -231,7 +231,7 @@ webpackJsonp([55], {
             p = n("tnNl"),
             m = n("Odds"),
             u = s.a.wrap(function() {
-                return n.e(73).then(n.bind(null, "HQb3"))
+                return n.e(74).then(n.bind(null, "HQb3"))
             }, "BitsLandingPage"),
             h = function(e) {
                 function t() {
@@ -524,4 +524,4 @@ webpackJsonp([55], {
             l = n("vH/s")
     }
 });
-//# sourceMappingURL=pages.bits-9ed42ccf053acd500d4906f2a05f1bef.js.map
+//# sourceMappingURL=pages.bits-79d0436993fb5008bdb769d4f4736707.js.map

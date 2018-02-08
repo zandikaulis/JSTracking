@@ -5,16 +5,16 @@ webpackJsonp([42], {
     "+V/3": function(e, t, n) {
         "use strict";
         n.d(t, "b", function() {
-            return i
-        }), n.d(t, "c", function() {
             return a
+        }), n.d(t, "c", function() {
+            return i
         }), n.d(t, "d", function() {
             return r
         }), n.d(t, "a", function() {
             return s
         });
-        var i = "subscribe_to_channel",
-            a = "turbo",
+        var a = "subscribe_to_channel",
+            i = "turbo",
             r = "visit_url",
             s = "broadcaster"
     },
@@ -30,13 +30,13 @@ webpackJsonp([42], {
                 emote_type: e.emoteType,
                 bits_location: e.location || s.ChatTooltip
             };
-            a.m.track(r.SpadeEventType.BitsCardInteraction, t)
+            i.m.track(r.SpadeEventType.BitsCardInteraction, t)
         }, n.d(t, "b", function() {
             return s
         }), n.d(t, "a", function() {
             return o
         }), t.d = function(e) {
-            return e && l[e] ? l[e] : (a.i.error(new Error('Buy Bits card contains improperly rendered offers, or offers unknown to Science. Tracking as "buy_100"'), 'Buy Bits card contains improperly rendered offers, or offers unknown to Science. Tracking as "buy_100"'), o.Buy100)
+            return e && l[e] ? l[e] : (i.i.error(new Error('Buy Bits card contains improperly rendered offers, or offers unknown to Science. Tracking as "buy_100"'), 'Buy Bits card contains improperly rendered offers, or offers unknown to Science. Tracking as "buy_100"'), o.Buy100)
         }, t.e = function(e) {
             var t = {
                 channel: e.channel,
@@ -44,32 +44,32 @@ webpackJsonp([42], {
                 available: e.available,
                 host: "twitch.tv"
             };
-            a.m.track(r.SpadeEventType.BitsAdsAvailability, t)
+            i.m.track(r.SpadeEventType.BitsAdsAvailability, t)
         }, t.f = function(e) {
             var t = {
-                distinct_id: a.n.session.deviceID,
+                distinct_id: i.n.session.deviceID,
                 host: "twitch.tv",
                 request_id: e.requestID,
                 campaign_id: e.campaignID,
                 adblock: e.adblock
             };
-            a.m.track(r.SpadeEventType.BitsAdsImpression, t)
+            i.m.track(r.SpadeEventType.BitsAdsImpression, t)
         }, n.d(t, "c", function() {
-            return i
+            return a
         }), t.g = function(e) {
-            var t = a.m.getLastPageview(),
+            var t = i.m.getLastPageview(),
                 n = {
                     location: t ? t.location || "" : "",
                     ad_returned: null,
                     campaign_id: e.campaignID,
-                    distinct_id: a.n.session.deviceID,
+                    distinct_id: i.n.session.deviceID,
                     host: "twitch.tv",
                     request_id: e.requestID,
                     request_method: e.requestMethod
                 };
-            a.m.track(r.SpadeEventType.BitsAdsRequest, n)
+            i.m.track(r.SpadeEventType.BitsAdsRequest, n)
         };
-        var i, a = n("6sO2"),
+        var a, i = n("6sO2"),
             r = n("vH/s"),
             s = {
                 ChatTooltip: "card",
@@ -100,7 +100,7 @@ webpackJsonp([42], {
                 1e4: o.Buy10000,
                 25e3: o.Buy25000
             };
-        (i || (i = {})).ShowAdButton = "show_ad_button"
+        (a || (a = {})).ShowAdButton = "show_ad_button"
     },
     "/eFD": function(e, t) {
         var n = {
@@ -442,24 +442,24 @@ webpackJsonp([42], {
     "11M/": function(e, t, n) {
         "use strict";
 
-        function i(e) {
+        function a(e) {
             return m.__awaiter(this, void 0, void 0, function() {
                 var t, n;
-                return m.__generator(this, function(i) {
-                    switch (i.label) {
+                return m.__generator(this, function(a) {
+                    switch (a.label) {
                         case 0:
-                            t = null, i.label = 1;
+                            t = null, a.label = 1;
                         case 1:
-                            return i.trys.push([1, 3, , 4]), [4, p.n.apollo.client.query({
+                            return a.trys.push([1, 3, , 4]), [4, p.n.apollo.client.query({
                                 query: pe,
                                 variables: {
                                     login: e
                                 }
                             })];
                         case 2:
-                            return t = i.sent(), [3, 4];
+                            return t = a.sent(), [3, 4];
                         case 3:
-                            return n = i.sent(), p.i.warn(n, "Failed to fetch user targeted by chat command.", {
+                            return n = a.sent(), p.i.warn(n, "Failed to fetch user targeted by chat command.", {
                                 userLogin: e
                             }), [3, 4];
                         case 4:
@@ -469,7 +469,7 @@ webpackJsonp([42], {
             })
         }
 
-        function a(e, t) {
+        function i(e, t) {
             var n = {
                 raid_creator_id: Number(t.creatorID),
                 raid_source_id: Number(t.sourceChannelID),
@@ -480,17 +480,17 @@ webpackJsonp([42], {
         }
 
         function r(e) {
-            return e.currentUserID !== e.channelID || !Object(it.a)()
+            return e.currentUserID !== e.channelID || !Object(at.a)()
         }
 
-        function s(e, t, n, i, a, r, s) {
-            return void 0 === s && (s = !1), m.__assign({}, Object(Ot.a)(t, n, i, a, r, s), {
+        function s(e, t, n, a, i, r, s) {
+            return void 0 === s && (s = !1), m.__assign({}, Object(Ot.a)(t, n, a, i, r, s), {
                 type: e,
                 id: n.id || Object(wt.a)(n.username)
             })
         }
 
-        function o(e, t, n, i, a, r, s, o) {
+        function o(e, t, n, a, i, r, s, o) {
             var l = r && s ? Object(Ot.a)(r, s, F.a, !1, o) : function(e) {
                 return {
                     user: {
@@ -508,8 +508,8 @@ webpackJsonp([42], {
                 id: Object(wt.a)(t + "-sub"),
                 channel: e.slice(1),
                 isPrime: n,
-                months: i,
-                tier: a
+                months: a,
+                tier: i
             })
         }
 
@@ -678,10 +678,10 @@ webpackJsonp([42], {
             j = n("RweG"),
             A = n("C8Io"),
             P = n("oIkB"),
-            H = n("HZww"),
-            V = n("vH/s"),
-            W = n("iMOk"),
-            Z = n("Odds"),
+            V = n("HZww"),
+            H = n("vH/s"),
+            Z = n("iMOk"),
+            W = n("Odds"),
             G = (n("y0i/"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -725,53 +725,53 @@ webpackJsonp([42], {
                         }),
                         t = this.state.formInputValue.length > 255,
                         n = t ? "-" + (this.state.formInputValue.length - 255) : Object(p.d)("Share", "ChatResubNotification"),
-                        i = Object(p.d)("Close", "ChatResubNotification"),
-                        a = Object(p.d)("Add a message to the streamer", "ChatResubNotification"),
-                        r = this.state.sharing ? Z.y.Loading : Z.y.Default;
-                    return b.createElement(Z.Z, {
+                        a = Object(p.d)("Close", "ChatResubNotification"),
+                        i = Object(p.d)("Add a message to the streamer", "ChatResubNotification"),
+                        r = this.state.sharing ? W.y.Loading : W.y.Default;
+                    return b.createElement(W.Z, {
                         className: e,
                         padding: 1,
                         attachTop: !0,
                         attachLeft: !0,
                         attachRight: !0,
-                        position: Z._6.Absolute
-                    }, b.createElement(Z._21, {
+                        position: W._6.Absolute
+                    }, b.createElement(W._21, {
                         className: "share-input__container",
-                        position: Z._6.Relative,
+                        position: W._6.Relative,
                         border: !0,
-                        background: Z.m.Base,
+                        background: W.m.Base,
                         padding: 1
-                    }, b.createElement(Z.Z, {
-                        position: Z._6.Absolute,
+                    }, b.createElement(W.Z, {
+                        position: W._6.Absolute,
                         attachTop: !0,
                         attachRight: !0
-                    }, b.createElement(Z.v, {
-                        ariaLabel: i,
+                    }, b.createElement(W.v, {
+                        ariaLabel: a,
                         onClick: this.props.onClose,
-                        type: Z.w.Secondary,
-                        icon: Z._13.Close,
+                        type: W.w.Secondary,
+                        icon: W._13.Close,
                         "data-a-target": "resub-notification-close-form-btn",
                         "data-test-selector": "share-input__close-form-btn"
-                    })), b.createElement(Z.Z, {
-                        textAlign: Z._26.Center,
+                    })), b.createElement(W.Z, {
+                        textAlign: W._26.Center,
                         padding: {
                             top: 1,
                             bottom: 2
                         }
-                    }, this.props.children), b.createElement(Z.Z, {
-                        display: Z.L.Flex,
-                        flexWrap: Z.O.NoWrap
-                    }, b.createElement(Z.Z, {
+                    }, this.props.children), b.createElement(W.Z, {
+                        display: W.L.Flex,
+                        flexWrap: W.O.NoWrap
+                    }, b.createElement(W.Z, {
                         fullWidth: !0
-                    }, b.createElement(Z.V, {
+                    }, b.createElement(W.V, {
                         autoFocus: !0,
-                        type: Z.W.Text,
+                        type: W.W.Text,
                         value: this.state.formInputValue,
                         onChange: this.onInputChange,
-                        placeholder: a,
+                        placeholder: i,
                         "data-a-target": "resub-notification-share-message-input",
                         "data-test-selector": "share-input__share-message-input"
-                    })), b.createElement(Z.u, {
+                    })), b.createElement(W.u, {
                         disabled: t,
                         onClick: this.handleShareClick,
                         "data-a-target": "resub-notification-send-msg-btn",
@@ -783,52 +783,52 @@ webpackJsonp([42], {
             q = (n("54rb"), function(e) {
                 var t = Object(p.d)("Share", "Chat--SharePrompt"),
                     n = Object(p.d)("Close", "Chat--SharePrompt"),
-                    i = U("chat-share-prompt", {
+                    a = U("chat-share-prompt", {
                         "chat-share-prompt--hidden": e.hide || !e.children
                     });
-                return b.createElement(Z.Z, {
-                    position: Z._6.Absolute,
+                return b.createElement(W.Z, {
+                    position: W._6.Absolute,
                     fullWidth: !0,
-                    className: i,
+                    className: a,
                     padding: {
                         y: .5,
                         left: .5
                     }
-                }, b.createElement(Z.Z, {
-                    display: Z.L.Flex,
+                }, b.createElement(W.Z, {
+                    display: W.L.Flex,
                     padding: 1,
-                    justifyContent: Z.Y.Between,
-                    alignItems: Z.c.Center,
-                    flexWrap: Z.O.NoWrap
-                }, b.createElement(Z._25, {
+                    justifyContent: W.Y.Between,
+                    alignItems: W.c.Center,
+                    flexWrap: W.O.NoWrap
+                }, b.createElement(W._25, {
                     "data-a-target": "resub-notification-months-subbed-text",
                     "data-test-selector": "share-prompt__text"
-                }, e.children), b.createElement(Z.Z, {
-                    display: Z.L.Flex,
-                    flexWrap: Z.O.NoWrap,
-                    alignItems: Z.c.Center,
+                }, e.children), b.createElement(W.Z, {
+                    display: W.L.Flex,
+                    flexWrap: W.O.NoWrap,
+                    alignItems: W.c.Center,
                     flexShrink: 0,
                     padding: {
                         left: .5
                     }
-                }, b.createElement(Z.Z, {
-                    display: Z.L.Inline,
+                }, b.createElement(W.Z, {
+                    display: W.L.Inline,
                     padding: {
                         right: .5
                     },
                     flexShrink: 0
-                }, b.createElement(Z.u, {
+                }, b.createElement(W.u, {
                     onClick: e.onClickShare,
-                    size: Z.x.Small,
+                    size: W.x.Small,
                     "data-a-target": "resub-notification-share-notification-btn",
                     "data-test-selector": "share-prompt__share-btn"
-                }, t)), b.createElement(Z.Z, {
+                }, t)), b.createElement(W.Z, {
                     flexShrink: 0
-                }, b.createElement(Z.v, {
+                }, b.createElement(W.v, {
                     ariaLabel: n,
                     onClick: e.onClickClose,
-                    type: Z.w.Secondary,
-                    icon: Z._13.Close,
+                    type: W.w.Secondary,
+                    icon: W._13.Close,
                     "data-a-target": "resub-notification-close-notification-btn",
                     "data-test-selector": "share-prompt__close-btn"
                 })))))
@@ -872,7 +872,7 @@ webpackJsonp([42], {
                                             return e.user.self && (e.user.self.purchaseTokens = e.user.self.purchaseTokens.slice(1)), e
                                         }, Object(P.d)($, {
                                             channelLogin: this.props.channelLogin
-                                        }, t), p.m.track(V.SpadeEventType.FuelSocialShare, {
+                                        }, t), p.m.track(H.SpadeEventType.FuelSocialShare, {
                                             channel_id: this.props.data.user.id,
                                             user_id: this.props.currentUserID,
                                             asin: e.asin,
@@ -897,21 +897,21 @@ webpackJsonp([42], {
                     }, t.sharePurchase = function(e) {
                         return m.__awaiter(t, void 0, void 0, function() {
                             var t, n;
-                            return m.__generator(this, function(i) {
-                                switch (i.label) {
+                            return m.__generator(this, function(a) {
+                                switch (a.label) {
                                     case 0:
                                         if (this.state.sendingMessage || !this.props.data.user.self || !this.props.data.user.self.purchaseTokens) return [2];
                                         this.setState({
                                             sendingMessage: !0
-                                        }), i.label = 1;
+                                        }), a.label = 1;
                                     case 1:
-                                        return i.trys.push([1, , 3, 4]), t = this.props.data.user.self.purchaseTokens[0], [4, this.props.sharePurchaseTokenInChat(Object(P.a)({
+                                        return a.trys.push([1, , 3, 4]), t = this.props.data.user.self.purchaseTokens[0], [4, this.props.sharePurchaseTokenInChat(Object(P.a)({
                                             token: t.id,
                                             channelID: this.props.data.user.id,
                                             message: e
                                         }))];
                                     case 2:
-                                        return i.sent(), p.m.track(V.SpadeEventType.FuelSocialShare, {
+                                        return a.sent(), p.m.track(H.SpadeEventType.FuelSocialShare, {
                                             channel_id: this.props.data.user.id,
                                             user_id: this.props.currentUserID,
                                             asin: t.asin,
@@ -943,9 +943,9 @@ webpackJsonp([42], {
                     if (this.dataIsReady(e)) {
                         var t = e.pubsub.messages.userCommerceUpdateEvent,
                             n = this.props.pubsub.messages.userCommerceUpdateEvent,
-                            i = !n && t,
-                            a = n && t && n.time !== t.time;
-                        (i || a) && this.props.data && this.props.data.refetch()
+                            a = !n && t,
+                            i = n && t && n.time !== t.time;
+                        (a || i) && this.props.data && this.props.data.refetch()
                     }
                 }, t.prototype.render = function() {
                     return this.dataIsReady(this.props) && this.purchaseTokensExist(this.props) && this.props.data.user.self ? this.renderPurchaseToken(this.props.data.user.self.purchaseTokens[0]) : null
@@ -958,27 +958,27 @@ webpackJsonp([42], {
                         product: b.createElement("strong", null, e.title),
                         channelName: b.createElement("strong", null, this.props.channelDisplayName)
                     }, "ShareToChat");
-                    var n, i = e.inGameContents.map(this.renderLootInGameContent),
-                        a = e.badges.map(this.renderLootBadge),
+                    var n, a = e.inGameContents.map(this.renderLootInGameContent),
+                        i = e.badges.map(this.renderLootBadge),
                         r = e.emoteSets.map(this.renderLootEmoteSet),
                         s = e.bits.map(this.renderLootBits, this);
-                    return (i.length || a.length || r.length || s.length) && (n = b.createElement(Z.Z, {
+                    return (a.length || i.length || r.length || s.length) && (n = b.createElement(W.Z, {
                         "data-test-selector": "share-purchase__loot",
                         padding: {
                             bottom: 1
                         },
-                        display: Z.L.Flex,
-                        justifyContent: Z.Y.Center
-                    }, i, a, r, s), t = Object(p.d)("You bought {product} and opened a Twitch Crate! Let {channelName} know you shared the love.", {
+                        display: W.L.Flex,
+                        justifyContent: W.Y.Center
+                    }, a, i, r, s), t = Object(p.d)("You bought {product} and opened a Twitch Crate! Let {channelName} know you shared the love.", {
                         product: b.createElement("strong", null, e.title),
                         channelName: b.createElement("strong", null, this.props.channelDisplayName)
-                    }, "ShareToChat")), b.createElement(Z.Z, {
+                    }, "ShareToChat")), b.createElement(W.Z, {
                         className: "chat-resub-notification",
                         padding: 0,
                         attachTop: !0,
                         attachLeft: !0,
                         attachRight: !0,
-                        position: Z._6.Absolute
+                        position: W._6.Absolute
                     }, b.createElement(q, {
                         hide: this.state.showMessageInput,
                         onClickShare: this.toggleContentShown,
@@ -987,7 +987,7 @@ webpackJsonp([42], {
                         hide: !this.state.showMessageInput,
                         onShare: this.sharePurchase,
                         onClose: this.toggleContentShown
-                    }, b.createElement(Z.Z, {
+                    }, b.createElement(W.Z, {
                         padding: {
                             bottom: 1
                         }
@@ -996,11 +996,11 @@ webpackJsonp([42], {
                         width: 40
                     }, b.createElement("img", {
                         src: e.imageThumbnail
-                    }))), n, b.createElement(Z._25, null, Object(p.d)("Score! Give a shout out to {channelName} in Chat about all your sweet loot!", {
+                    }))), n, b.createElement(W._25, null, Object(p.d)("Score! Give a shout out to {channelName} in Chat about all your sweet loot!", {
                         channelName: b.createElement("strong", null, this.props.channelDisplayName)
                     }, "ShareToChat"))))
                 }, t.prototype.renderLootInGameContent = function(e) {
-                    return b.createElement(Z.Z, {
+                    return b.createElement(W.Z, {
                         key: e.id,
                         margin: {
                             top: .5,
@@ -1013,7 +1013,7 @@ webpackJsonp([42], {
                     }))
                 }, t.prototype.renderLootEmoteSet = function(e) {
                     return Object(z.b)(e.emoteSet.emotes).map(function(e) {
-                        return b.createElement(Z.Z, {
+                        return b.createElement(W.Z, {
                             key: e.id,
                             margin: {
                                 top: .5,
@@ -1027,7 +1027,7 @@ webpackJsonp([42], {
                         }))
                     })
                 }, t.prototype.renderLootBadge = function(e) {
-                    return b.createElement(Z.Z, {
+                    return b.createElement(W.Z, {
                         key: e.id,
                         margin: {
                             top: .5,
@@ -1039,14 +1039,14 @@ webpackJsonp([42], {
                         src: e.badge.image2x
                     }))
                 }, t.prototype.renderLootBits = function(e) {
-                    if (this.props.bitsConfig) return b.createElement(Z.Z, {
+                    if (this.props.bitsConfig) return b.createElement(W.Z, {
                         key: e.id,
                         margin: {
                             top: .5,
                             right: 1
                         },
                         "data-test-selector": "share-purchase__bits"
-                    }, b.createElement(W.a, {
+                    }, b.createElement(Z.a, {
                         count: e.quantity,
                         bitsConfig: this.props.bitsConfig,
                         withImage: !0
@@ -1065,7 +1065,7 @@ webpackJsonp([42], {
                     }
                 }), Object(j.a)([{
                     topic: function(e) {
-                        return Object(H.n)(e.currentUserID)
+                        return Object(V.n)(e.currentUserID)
                     },
                     mapMessageTypesToProps: (x = {}, x[A.c.ChatNotification] = "userCommerceUpdateEvent", x)
                 }])], t)
@@ -1087,27 +1087,27 @@ webpackJsonp([42], {
                     n = U("rare-emote__neck", {
                         "rare-emote__neck--animate": !!e.animate
                     });
-                return b.createElement(Z.Z, {
-                    overflow: Z._2.Hidden,
+                return b.createElement(W.Z, {
+                    overflow: W._2.Hidden,
                     className: "rare-emote"
-                }, b.createElement(Z.U, {
-                    zIndex: Z._42.Above,
-                    position: Z._6.Relative
+                }, b.createElement(W.U, {
+                    zIndex: W._42.Above,
+                    position: W._6.Relative
                 }, b.createElement("img", {
                     className: t,
                     src: "https://static-cdn.jtvnw.net/emoticons/v1/" + e.emoteID + "/2.0"
-                })), b.createElement(Z.Z, {
-                    position: Z._6.Relative,
-                    zIndex: Z._42.Default,
+                })), b.createElement(W.Z, {
+                    position: W._6.Relative,
+                    zIndex: W._42.Default,
                     className: n
-                }, b.createElement(Z._12, {
+                }, b.createElement(W._12, {
                     width: 28,
                     height: 28,
-                    asset: Z._13.Neck
+                    asset: W._13.Neck
                 })))
             }),
-            ie = 3,
-            ae = n("nEoF"),
+            ae = 3,
+            ie = n("nEoF"),
             re = n("S20p"),
             se = function(e) {
                 function t() {
@@ -1135,26 +1135,26 @@ webpackJsonp([42], {
                     }, t.shareResub = function(e) {
                         return m.__awaiter(t, void 0, void 0, function() {
                             var t, n;
-                            return m.__generator(this, function(i) {
-                                switch (i.label) {
+                            return m.__generator(this, function(a) {
+                                switch (a.label) {
                                     case 0:
                                         if (this.state.sendingMessage || !this.props.data.user.self || !this.props.data.user.self.resubNotification) return [2];
                                         this.setState({
                                             sendingMessage: !0
-                                        }), i.label = 1;
+                                        }), a.label = 1;
                                     case 1:
-                                        return i.trys.push([1, 4, 5, 6]), this.props.authToken ? [4, function(e, t, n, i) {
+                                        return a.trys.push([1, 4, 5, 6]), this.props.authToken ? [4, function(e, t, n, a) {
                                             return m.__awaiter(this, void 0, void 0, function() {
-                                                var a, r, s, o, l;
+                                                var i, r, s, o, l;
                                                 return m.__generator(this, function(c) {
                                                     switch (c.label) {
                                                         case 0:
-                                                            a = "https://api.twitch.tv/api/channels/" + e + "/use_chat_notification_token", r = 1, c.label = 1;
+                                                            i = "https://api.twitch.tv/api/channels/" + e + "/use_chat_notification_token", r = 1, c.label = 1;
                                                         case 1:
-                                                            if (!(r <= ie)) return [3, 7];
+                                                            if (!(r <= ae)) return [3, 7];
                                                             c.label = 2;
                                                         case 2:
-                                                            return c.trys.push([2, 5, , 6]), [4, fetch(a, {
+                                                            return c.trys.push([2, 5, , 6]), [4, fetch(i, {
                                                                 body: JSON.stringify({
                                                                     token_id: t,
                                                                     custom_message: n
@@ -1164,7 +1164,7 @@ webpackJsonp([42], {
                                                                     "Client-ID": p.n.config.legacyClientID,
                                                                     Accept: "application/json; charset=UTF-8",
                                                                     "content-type": "application/json; charset=UTF-8",
-                                                                    Authorization: "OAuth " + i
+                                                                    Authorization: "OAuth " + a
                                                                 }
                                                             })];
                                                         case 3:
@@ -1172,7 +1172,7 @@ webpackJsonp([42], {
                                                         case 4:
                                                             return o = c.sent(), [2, o];
                                                         case 5:
-                                                            if (l = c.sent(), r === ie) throw l;
+                                                            if (l = c.sent(), r === ae) throw l;
                                                             return [3, 6];
                                                         case 6:
                                                             return ++r, [3, 1];
@@ -1183,15 +1183,15 @@ webpackJsonp([42], {
                                             })
                                         }(this.props.channelLogin, this.props.data.user.self.resubNotification.token, e, this.props.authToken)] : [3, 3];
                                     case 2:
-                                        i.sent(), t = function(e) {
+                                        a.sent(), t = function(e) {
                                             return e.user.self && (e.user.self.resubNotification = null), e
                                         }, Object(P.d)(re, {
                                             channelLogin: this.props.channelLogin
-                                        }, t), this.dismissResubNotification(), i.label = 3;
+                                        }, t), this.dismissResubNotification(), a.label = 3;
                                     case 3:
                                         return [3, 6];
                                     case 4:
-                                        return n = i.sent(), p.i.error(n, "Failed to post resub message"), [3, 6];
+                                        return n = a.sent(), p.i.error(n, "Failed to post resub message"), [3, 6];
                                     case 5:
                                         return this.setState({
                                             sendingMessage: !1
@@ -1212,13 +1212,13 @@ webpackJsonp([42], {
                 }, t.prototype.render = function() {
                     return this.dataIsReady(this.props) && this.resubExists(this.props, this.state) && this.props.data.user.self && this.props.data.user.self.resubNotification ? this.renderResubToken(this.props.data.user.self.resubNotification) : null
                 }, t.prototype.renderResubToken = function(e) {
-                    return b.createElement(Z.Z, {
+                    return b.createElement(W.Z, {
                         className: "chat-resub-notification",
                         padding: 0,
                         attachTop: !0,
                         attachLeft: !0,
                         attachRight: !0,
-                        position: Z._6.Absolute
+                        position: W._6.Absolute
                     }, b.createElement(q, {
                         hide: this.state.showMessageInput,
                         onClickShare: this.toggleContentShown,
@@ -1232,13 +1232,13 @@ webpackJsonp([42], {
                     }, b.createElement(ne, {
                         emoteID: this.randomEmoteId,
                         animate: this.state.showMessageInput
-                    }), b.createElement(Z._25, null, Object(p.d)("Hooray! Let {channelName} know it's your {monthsSubbed, number} month anniversary.", {
+                    }), b.createElement(W._25, null, Object(p.d)("Hooray! Let {channelName} know it's your {monthsSubbed, number} month anniversary.", {
                         channelName: b.createElement("strong", null, this.props.channelDisplayName),
                         monthsSubbed: e.months
                     }, "ChatResubNotification"))))
                 }, t.prototype.getRandomEmoteId = function() {
-                    var e = Math.floor(Math.random() * ae.a.length);
-                    return ae.a[e]
+                    var e = Math.floor(Math.random() * ie.a.length);
+                    return ie.a[e]
                 }, t = m.__decorate([Object(k.a)(re, {
                     options: function(e) {
                         return {
@@ -1294,7 +1294,7 @@ webpackJsonp([42], {
                         n = U({
                             "share-to-chat__space--hidden": e !== M.Purchase
                         });
-                    return b.createElement(Z.Z, null, b.createElement(Z.Z, {
+                    return b.createElement(W.Z, null, b.createElement(W.Z, {
                         className: t
                     }, b.createElement(se, {
                         authToken: this.props.authToken,
@@ -1302,7 +1302,7 @@ webpackJsonp([42], {
                         channelLogin: this.props.channelLogin,
                         requestSpace: this.requestResubSpace,
                         dismissSpace: this.dismissResubSpace
-                    })), b.createElement(Z.Z, {
+                    })), b.createElement(W.Z, {
                         className: n
                     }, b.createElement(te, {
                         channelDisplayName: this.props.channelDisplayName,
@@ -1329,53 +1329,53 @@ webpackJsonp([42], {
                         show: !0
                     })
                 }, t.prototype.render = function() {
-                    return this.state.show ? b.createElement(Z._21, {
+                    return this.state.show ? b.createElement(W._21, {
                         attachTop: !0,
                         attachLeft: !0,
                         attachRight: !0,
-                        background: Z.m.AccentAlt2,
-                        color: Z.I.Overlay,
-                        position: Z._6.Absolute,
+                        background: W.m.AccentAlt2,
+                        color: W.I.Overlay,
+                        position: W._6.Absolute,
                         className: "hosting-notification",
                         padding: {
                             y: .5,
                             left: .5
                         },
                         "data-a-target": "hosting-notification-container"
-                    }, b.createElement(Z.Z, {
-                        display: Z.L.Flex,
+                    }, b.createElement(W.Z, {
+                        display: W.L.Flex,
                         padding: 1,
-                        justifyContent: Z.Y.Between,
-                        alignItems: Z.c.Center,
-                        flexWrap: Z.O.NoWrap
-                    }, b.createElement(Z.Z, {
-                        display: Z.L.Flex,
-                        flexWrap: Z.O.NoWrap
-                    }, b.createElement(Z.Z, {
+                        justifyContent: W.Y.Between,
+                        alignItems: W.c.Center,
+                        flexWrap: W.O.NoWrap
+                    }, b.createElement(W.Z, {
+                        display: W.L.Flex,
+                        flexWrap: W.O.NoWrap
+                    }, b.createElement(W.Z, {
                         margin: {
                             right: .5
                         },
                         flexShrink: 0
-                    }, b.createElement(Z._25, null, Object(p.d)("Hosting", "ChatHostingNotification"))), b.createElement(Z.Z, {
+                    }, b.createElement(W._25, null, Object(p.d)("Hosting", "ChatHostingNotification"))), b.createElement(W.Z, {
                         ellipsis: !0,
                         flexShrink: 1,
                         margin: {
                             right: .5
                         }
-                    }, b.createElement(Z._25, {
-                        type: Z._30.Strong,
+                    }, b.createElement(W._25, {
+                        type: W._30.Strong,
                         "data-test-selector": "hosting-notification__text",
                         "data-a-target": "hosting-notification-channel-name"
-                    }, "" + this.props.hostedChannelDisplayName))), b.createElement(Z.Z, {
-                        display: Z.L.Flex,
-                        flexWrap: Z.O.NoWrap,
+                    }, "" + this.props.hostedChannelDisplayName))), b.createElement(W.Z, {
+                        display: W.L.Flex,
+                        flexWrap: W.O.NoWrap,
                         flexShrink: 0
-                    }, b.createElement(Z.Z, {
-                        display: Z.L.Inline,
+                    }, b.createElement(W.Z, {
+                        display: W.L.Inline,
                         padding: {
                             right: .5
                         }
-                    }, b.createElement(Z.u, {
+                    }, b.createElement(W.u, {
                         linkTo: {
                             pathname: "/" + this.props.hostedChannelLogin,
                             state: {
@@ -1383,14 +1383,14 @@ webpackJsonp([42], {
                                 medium: "chat_bar_notification"
                             }
                         },
-                        size: Z.x.Small,
+                        size: W.x.Small,
                         "data-a-target": "hosting-notification-gotochannel-button"
-                    }, Object(p.d)("Go to Channel", "ChatHostingNotification"))), b.createElement(Z.v, {
+                    }, Object(p.d)("Go to Channel", "ChatHostingNotification"))), b.createElement(W.v, {
                         onClick: this.dismiss,
                         ariaLabel: Object(p.d)("Close", "HostingNotification"),
-                        size: Z.x.Small,
+                        size: W.x.Small,
                         overlay: !0,
-                        icon: Z._13.Close,
+                        icon: W._13.Close,
                         "data-a-target": "hosting-notification-close-button"
                     })))) : null
                 }, t
@@ -1410,7 +1410,7 @@ webpackJsonp([42], {
                                 notice: Object(p.d)("You cannot ignore yourself.", "IgnoreCommandHandler")
                             })
                         } : {
-                            deferred: i(e).then(function(e) {
+                            deferred: a(e).then(function(e) {
                                 if (!e) return {
                                     notice: t.getInvalidUserMessage()
                                 };
@@ -1436,7 +1436,7 @@ webpackJsonp([42], {
                                 notice: Object(p.d)("You cannot unignore yourself.", "IgnoreCommandHandler")
                             })
                         } : {
-                            deferred: i(e).then(function(e) {
+                            deferred: a(e).then(function(e) {
                                 if (!e) return {
                                     notice: t.getInvalidUserMessage()
                                 };
@@ -1488,43 +1488,16 @@ webpackJsonp([42], {
             ve = (n("W266"), "nativeBroadcastNotifDismissed"),
             be = [{
                 title: "English",
-                login: "PlayHearthstone"
+                login: "esamarathon"
             }, {
-                title: "中文 繁體",
-                login: "HearthstonezhTW"
-            }, {
-                title: "한국어",
-                login: "playhearthstonekr"
-            }, {
-                title: "Русский",
-                login: "PlayHearthstoneRU"
+                title: "Français",
+                login: "LeFrenchRestream"
             }, {
                 title: "Deutsch",
-                login: "C4mlann"
+                login: "GermenchRestream"
             }, {
-                title: "Italiano",
-                login: "GDivision"
-            }, {
-                title: "Polski",
-                login: "BlackFIreIce"
-            }, {
-                title: "Français",
-                login: "originhs"
-            }, {
-                title: "Français",
-                login: "armatvhs"
-            }, {
-                title: "Español - España",
-                login: "OGSeries"
-            }, {
-                title: "ภาษาไทย",
-                login: "HearthstoneTH"
-            }, {
-                title: "Español - Latinoamérica",
-                login: "CopaAmerica_ES1"
-            }, {
-                title: "Português - Brasil",
-                login: "CopaAmerica_pt1"
+                title: "Русский",
+                login: "SpeedrunsRussia"
             }],
             ke = function(e) {
                 function t() {
@@ -1568,42 +1541,48 @@ webpackJsonp([42], {
                     if (!this.isEventChannel(this.props.channelLogin)) return null;
                     if (this.hasDismissedForChannel(this.props.channelLogin)) return null;
                     var e = Date.now();
-                    if (e < 15161904e5 || e >= 15167088e5) return null;
+                    if (e < 15191352e5 || e >= 15195132e5) return null;
                     var t = this.getChannelLinks();
-                    return t.length ? b.createElement(Z._21, {
+                    return t.length ? b.createElement(W._21, {
                         attachLeft: !0,
                         attachRight: !0,
                         attachTop: !0,
-                        background: Z.m.AccentAlt2,
-                        color: Z.I.Overlay,
+                        background: W.m.AccentAlt2,
+                        color: W.I.Overlay,
                         padding: 1,
-                        position: Z._6.Absolute
-                    }, b.createElement(Z.Z, {
+                        position: W._6.Absolute
+                    }, b.createElement(W.Z, {
                         margin: {
                             bottom: 1
                         }
-                    }, b.createElement(Z._25, {
-                        type: Z._30.H4
-                    }, Object(p.d)("Want to watch HCT?", "NativeBroadcastNotification"))), b.createElement("ul", null, t), b.createElement(Z.Z, {
+                    }, b.createElement(W._25, {
+                        type: W._30.H4
+                    }, Object(p.d)("ESA Winter 2018", "NativeBroadcastNotification"))), b.createElement(W.Z, {
+                        margin: {
+                            bottom: 1
+                        }
+                    }, b.createElement(W._25, {
+                        color: W.I.OverlayAlt
+                    }, Object(p.d)("Want to watch ESA in you local language? Try one of these international broadcasts!", "NativeBroadcastNotification"))), b.createElement("ul", null, t), b.createElement(W.Z, {
                         attachRight: !0,
                         attachTop: !0,
                         margin: 1,
-                        position: Z._6.Absolute
-                    }, b.createElement(Z.v, {
+                        position: W._6.Absolute
+                    }, b.createElement(W.v, {
                         ariaLabel: Object(p.d)("Close", "NativeBroadcastNotification"),
-                        icon: Z._13.Close,
+                        icon: W._13.Close,
                         onClick: this.onDismiss,
                         overlay: !0,
-                        size: Z.x.Small,
+                        size: W.x.Small,
                         "data-a-target": "native-broadcast-notification-close-button"
-                    })), b.createElement(Z.Z, {
+                    })), b.createElement(W.Z, {
                         margin: {
                             top: .5
                         }
-                    }, b.createElement(Z._9, {
+                    }, b.createElement(W._9, {
                         countdown: 30,
                         onCountdownEnd: this.onExpire,
-                        size: Z._10.ExtraSmall
+                        size: W._10.ExtraSmall
                     }))) : null
                 }, t.prototype.isEventChannel = function(e) {
                     return be.map(function(e) {
@@ -1611,7 +1590,7 @@ webpackJsonp([42], {
                     }).includes(e.toLowerCase())
                 }, t.prototype.hasDismissedForChannel = function(e) {
                     var t = p.k.get(ve, {})[e.toLowerCase()];
-                    return !!t && t >= 15161904e5
+                    return !!t && t >= 15191352e5
                 }, t
             }(b.Component),
             ye = n("+Znq"),
@@ -1632,12 +1611,12 @@ webpackJsonp([42], {
                 }, t.prototype.componentWillReceiveProps = function(e) {
                     this.props.isLoggedIn && !this.props.firstPageLoaded && e.firstPageLoaded && this.getChatProperties()
                 }, t.prototype.render = function() {
-                    return this.props.isLoggedIn && !this.state.requestFailed && this.hasInteractions() ? b.createElement(Z._21, {
+                    return this.props.isLoggedIn && !this.state.requestFailed && this.hasInteractions() ? b.createElement(W._21, {
                         className: "orbis",
-                        display: Z.L.Flex,
-                        flexDirection: Z.N.Column,
-                        alignItems: Z.c.Stretch,
-                        background: Z.m.Base,
+                        display: W.L.Flex,
+                        flexDirection: W.N.Column,
+                        alignItems: W.c.Stretch,
+                        background: W.m.Base,
                         flexShrink: 0,
                         borderBottom: !0
                     }, b.createElement(ye.a, {
@@ -1645,54 +1624,54 @@ webpackJsonp([42], {
                     }, b.createElement("div", {
                         className: "orbis__dropdown-container",
                         "data-test-selector": "orbis-dropdown-container"
-                    }, b.createElement(Z.Z, {
+                    }, b.createElement(W.Z, {
                         padding: {
                             y: 1,
                             x: 2
                         },
-                        display: Z.L.Flex,
-                        justifyContent: Z.Y.Between,
-                        flexWrap: Z.O.NoWrap
-                    }, b.createElement(Z.Z, {
+                        display: W.L.Flex,
+                        justifyContent: W.Y.Between,
+                        flexWrap: W.O.NoWrap
+                    }, b.createElement(W.Z, {
                         ellipsis: !0,
                         padding: {
                             right: 1
                         }
-                    }, b.createElement(Z._25, {
-                        type: Z._30.Span
-                    }, Object(p.d)("Interactions Available", "Orbis"))), b.createElement(Z.Z, {
-                        display: Z.L.Flex,
-                        justifyContent: Z.Y.Between,
-                        alignItems: Z.c.Center,
+                    }, b.createElement(W._25, {
+                        type: W._30.Span
+                    }, Object(p.d)("Interactions Available", "Orbis"))), b.createElement(W.Z, {
+                        display: W.L.Flex,
+                        justifyContent: W.Y.Between,
+                        alignItems: W.c.Center,
                         flexShrink: 0
-                    }, b.createElement(Z.Z, {
+                    }, b.createElement(W.Z, {
                         className: "orbis__dropdown-icon",
-                        display: Z.L.Flex,
-                        justifyContent: Z.Y.Between,
-                        alignItems: Z.c.Center
-                    }, b.createElement(Z._12, {
-                        asset: Z._13.AngleRight
-                    }))))), b.createElement(Z.p, {
+                        display: W.L.Flex,
+                        justifyContent: W.Y.Between,
+                        alignItems: W.c.Center
+                    }, b.createElement(W._12, {
+                        asset: W._13.AngleRight
+                    }))))), b.createElement(W.p, {
                         offsetY: "1px",
                         noTail: !0
-                    }, b.createElement(Z.Z, {
+                    }, b.createElement(W.Z, {
                         className: "orbis__dropdown-content",
                         padding: 1
                     }, this.renderInteractions())))) : null
                 }, t.prototype.renderInteractions = function() {
                     return this.state.chatProperties ? [this.renderInteraction(this.state.chatProperties.sce_title_preset_text_1), this.renderInteraction(this.state.chatProperties.sce_title_preset_text_2), this.renderInteraction(this.state.chatProperties.sce_title_preset_text_3), this.renderInteraction(this.state.chatProperties.sce_title_preset_text_4), this.renderInteraction(this.state.chatProperties.sce_title_preset_text_5)] : null
                 }, t.prototype.renderInteraction = function(e) {
-                    return e ? b.createElement(Z.X, {
+                    return e ? b.createElement(W.X, {
                         onClick: this.onClickInteraction,
                         key: e,
                         "data-action": e,
                         "data-test-selector": "orbis-interaction"
-                    }, b.createElement(Z.U, {
+                    }, b.createElement(W.U, {
                         padding: {
                             y: .5,
                             x: 1
                         }
-                    }, b.createElement(Z._25, {
+                    }, b.createElement(W._25, {
                         ellipsis: !0
                     }, e))) : null
                 }, t.prototype.getChatProperties = function() {
@@ -1755,16 +1734,16 @@ webpackJsonp([42], {
                 }, t.prototype.joinRaid = function(e) {
                     var n = new Set(this.joinedRaids);
                     n.add(e.id);
-                    var i = this.getStorageData();
-                    return i[e.id] = !0, this.setStorageData(i), new t({
+                    var a = this.getStorageData();
+                    return a[e.id] = !0, this.setStorageData(a), new t({
                         expiredRaids: this.expiredRaids,
                         joinedRaids: n
                     })
                 }, t.prototype.leaveRaid = function(e) {
                     var n = new Set(this.joinedRaids);
                     n.delete(e.id);
-                    var i = this.getStorageData();
-                    return delete i[e.id], this.setStorageData(i), new t({
+                    var a = this.getStorageData();
+                    return delete a[e.id], this.setStorageData(a), new t({
                         expiredRaids: this.expiredRaids,
                         joinedRaids: n
                     })
@@ -1792,16 +1771,16 @@ webpackJsonp([42], {
                 }, t.prototype.joinRaid = function(e) {
                     var n = new Set(this.leftRaids);
                     n.delete(e.id);
-                    var i = this.getStorageData();
-                    return delete i[e.id], this.setStorageData(i), new t({
+                    var a = this.getStorageData();
+                    return delete a[e.id], this.setStorageData(a), new t({
                         expiredRaids: this.expiredRaids,
                         leftRaids: n
                     })
                 }, t.prototype.leaveRaid = function(e) {
                     var n = new Set(this.leftRaids);
                     n.add(e.id);
-                    var i = this.getStorageData();
-                    return i[e.id] = !0, this.setStorageData(i), new t({
+                    var a = this.getStorageData();
+                    return a[e.id] = !0, this.setStorageData(a), new t({
                         expiredRaids: this.expiredRaids,
                         leftRaids: n
                     })
@@ -1886,10 +1865,10 @@ webpackJsonp([42], {
                     n = m.__rest(e, ["component"]);
                 return b.createElement(t, m.__assign({}, n))
             }),
-            He = {
+            Ve = {
                 "data-test-selector": "current-raiders"
             },
-            Ve = function(e) {
+            He = function(e) {
                 return function(t) {
                     return b.createElement(Pe, m.__assign({}, t, {
                         component: e
@@ -1906,56 +1885,56 @@ webpackJsonp([42], {
                 }
                 return m.__extends(t, e), t.prototype.componentDidMount = function() {
                     ! function(e) {
-                        a(V.SpadeEventType.RaidPromptImpression, e)
+                        i(H.SpadeEventType.RaidPromptImpression, e)
                     }(this.props.raid)
                 }, t.prototype.render = function() {
                     var e = this.props.data,
                         t = e.sourceChannel,
                         n = e.targetChannel;
-                    return b.createElement(Z._21, {
+                    return b.createElement(W._21, {
                         className: "raid-notification",
-                        background: Z.m.AccentAlt2,
-                        color: Z.I.Overlay,
-                        position: Z._6.Absolute,
-                        zIndex: Z._42.Above,
+                        background: W.m.AccentAlt2,
+                        color: W.I.Overlay,
+                        position: W._6.Absolute,
+                        zIndex: W._42.Above,
                         fullWidth: !0
-                    }, b.createElement(Z.Z, {
+                    }, b.createElement(W.Z, {
                         className: "raid-notification__content",
                         padding: {
                             y: 1,
                             x: 2
                         },
-                        display: Z.L.Flex,
-                        justifyContent: Z.Y.Between
-                    }, b.createElement(Z.Z, {
-                        alignItems: Z.c.Center,
-                        display: Z.L.Flex
-                    }, b.createElement(Z.l, {
+                        display: W.L.Flex,
+                        justifyContent: W.Y.Between
+                    }, b.createElement(W.Z, {
+                        alignItems: W.c.Center,
+                        display: W.L.Flex
+                    }, b.createElement(W.l, {
                         size: 36,
                         src: t.profileImageURL,
                         alt: t.displayName
-                    }), b.createElement(Z._12, {
-                        asset: Z._13.AngleRight,
+                    }), b.createElement(W._12, {
+                        asset: W._13.AngleRight,
                         height: 10
-                    }), b.createElement(Z.l, {
+                    }), b.createElement(W.l, {
                         size: 36,
                         src: n.profileImageURL,
                         alt: n.displayName
-                    }), b.createElement(Z.Z, {
+                    }), b.createElement(W.Z, {
                         padding: {
                             left: 1
                         }
-                    }, b.createElement(Z._25, {
-                        color: Z.I.OverlayAlt,
-                        type: Z._30.P,
+                    }, b.createElement(W._25, {
+                        color: W.I.OverlayAlt,
+                        type: W._30.P,
                         className: "raid-notification__channel-name"
                     }, Object(p.d)("{sourceDisplayName} is", {
                         sourceDisplayName: t.displayName
-                    }, "RaidCTASourceChannel")), b.createElement(Z._25, null, Object(p.d)("raiding {targetDisplayName}", {
+                    }, "RaidCTASourceChannel")), b.createElement(W._25, null, Object(p.d)("raiding {targetDisplayName}", {
                         targetDisplayName: n.displayName
-                    }, "RaidCTATargetChannel")), b.createElement(Z._25, m.__assign({
+                    }, "RaidCTATargetChannel")), b.createElement(W._25, m.__assign({
                         bold: !0
-                    }, He), Object(p.d)("{viewerCount, plural, one {# raider} other {# raiders}}", {
+                    }, Ve), Object(p.d)("{viewerCount, plural, one {# raider} other {# raiders}}", {
                         viewerCount: this.props.raid.viewerCount
                     }, "RaidCTATotalRaiders")))), this.props.children), b.createElement(Ue, {
                         totalCountdownTime: 1e3 * this.props.raid.totalDurationInSeconds,
@@ -1964,18 +1943,18 @@ webpackJsonp([42], {
                     }))
                 }, t
             }(b.Component)),
-            We = {
+            Ze = {
                 "data-test-selector": "raid-cancel-button"
             },
-            Ze = function(e) {
-                return b.createElement(Z.Z, {
-                    alignSelf: Z.d.Center
-                }, b.createElement(Z.u, m.__assign({
-                    size: Z.x.Large,
-                    type: Z.z.Hollow,
+            We = function(e) {
+                return b.createElement(W.Z, {
+                    alignSelf: W.d.Center
+                }, b.createElement(W.u, m.__assign({
+                    size: W.x.Large,
+                    type: W.z.Hollow,
                     overlay: !0,
                     onClick: e.onCancelRaid
-                }, We), Object(p.d)("Cancel", "RaidCTACancel")))
+                }, Ze), Object(p.d)("Cancel", "RaidCTACancel")))
             },
             Ge = n("bQ8d"),
             qe = {
@@ -1996,17 +1975,17 @@ webpackJsonp([42], {
                 }, t.prototype.componentWillUnmount = function() {
                     clearTimeout(this.timerID)
                 }, t.prototype.render = function() {
-                    return this.props.hasJoined ? b.createElement(Z.Z, {
-                        alignSelf: Z.d.Center
-                    }, b.createElement(Z.u, m.__assign({
-                        size: Z.x.Large,
-                        type: Z.z.Hollow,
+                    return this.props.hasJoined ? b.createElement(W.Z, {
+                        alignSelf: W.d.Center
+                    }, b.createElement(W.u, m.__assign({
+                        size: W.x.Large,
+                        type: W.z.Hollow,
                         overlay: !0,
                         onClick: this.handleLeaveRaid
-                    }, ze), Object(p.d)("Leave", "RaidCTALeave"))) : b.createElement(Z.Z, {
-                        alignSelf: Z.d.Center
-                    }, b.createElement(Z.u, m.__assign({
-                        size: Z.x.Large,
+                    }, ze), Object(p.d)("Leave", "RaidCTALeave"))) : b.createElement(W.Z, {
+                        alignSelf: W.d.Center
+                    }, b.createElement(W.u, m.__assign({
+                        size: W.x.Large,
                         onClick: this.props.onJoinRaid
                     }, qe), Object(p.d)("Join", "RaidCTAJoin")))
                 }, t
@@ -2031,7 +2010,7 @@ webpackJsonp([42], {
                         if (t.state.raid && t.setState({
                                 raidStorage: t.state.raidStorage.expireRaid(t.state.raid)
                             }), n) {
-                            var i = function(e, t) {
+                            var a = function(e, t) {
                                 var n;
                                 if (function(e) {
                                         return !e.split("/")[2]
@@ -2042,12 +2021,12 @@ webpackJsonp([42], {
                                         }(e.pathname)) return "";
                                     n = "/" + t + "/chat"
                                 }
-                                var i = m.__assign({}, Qe.parse(e.search), {
+                                var a = m.__assign({}, Qe.parse(e.search), {
                                     referrer: "raid"
                                 });
-                                return n + "?" + Qe.stringify(i)
+                                return n + "?" + Qe.stringify(a)
                             }(t.props.history.location || window.location, e);
-                            i && t.props.history.push(i, je)
+                            a && t.props.history.push(a, je)
                         }
                     }, t.handleJoinRaid = function() {
                         if (t.state.raid) {
@@ -2063,7 +2042,7 @@ webpackJsonp([42], {
                                 };
                                 fetch(Be + "/raids/" + e + "/join", n)
                             }(e, t.props.authToken), function(e) {
-                                a(V.SpadeEventType.RaidPromptJoin, e)
+                                i(H.SpadeEventType.RaidPromptJoin, e)
                             }(t.state.raid), t.setState({
                                 raidStorage: t.state.raidStorage.joinRaid(t.state.raid)
                             })) : t.props.login()
@@ -2082,7 +2061,7 @@ webpackJsonp([42], {
                                 fetch(Be + "/raids/" + e + "/leave", n)
                             }(t.state.raid.id, t.props.authToken),
                             function(e) {
-                                a(V.SpadeEventType.RaidPromptLeave, e)
+                                i(H.SpadeEventType.RaidPromptLeave, e)
                             }(t.state.raid), t.setState({
                                 raidStorage: t.state.raidStorage.leaveRaid(t.state.raid)
                             })
@@ -2105,7 +2084,7 @@ webpackJsonp([42], {
                         })
                     })
                 }, t.prototype.render = function() {
-                    return this.shouldRenderRaidNotification ? b.createElement(Ve, {
+                    return this.shouldRenderRaidNotification ? b.createElement(He, {
                         raid: this.state.raid,
                         onRaidInvitePeriodOver: this.handleRaidInvitePeriodOver
                     }, this.renderCTAButton()) : null
@@ -2120,11 +2099,11 @@ webpackJsonp([42], {
                     }))
                 }, t.prototype.subscribe = function() {
                     this.unsubscribe = p.n.pubsub.subscribe({
-                        topic: Object(H.h)(this.props.channelID),
+                        topic: Object(V.h)(this.props.channelID),
                         onMessage: this.handlePubsubMessage
                     })
                 }, t.prototype.renderCTAButton = function() {
-                    return this.isRaidCreator ? b.createElement(Ze, {
+                    return this.isRaidCreator ? b.createElement(We, {
                         onCancelRaid: this.handleCancelRaid
                     }) : b.createElement(Ye, {
                         onJoinRaid: this.handleJoinRaid,
@@ -2173,76 +2152,76 @@ webpackJsonp([42], {
             et = Object(Ee.e)(Xe),
             tt = n("WIs4"),
             nt = n("aSvS"),
-            it = n("rIzn"),
-            at = n("J7iJ"),
+            at = n("rIzn"),
+            it = n("J7iJ"),
             rt = n("KfLc"),
             st = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return m.__extends(t, e), t.prototype.render = function() {
-                    return b.createElement(Z._21, {
-                        background: Z.m.Base,
-                        color: Z.I.Alt
-                    }, b.createElement(Z.Z, {
+                    return b.createElement(W._21, {
+                        background: W.m.Base,
+                        color: W.I.Alt
+                    }, b.createElement(W.Z, {
                         padding: {
                             bottom: .5,
                             top: 1,
                             x: 1
                         }
-                    }, b.createElement(Z.Z, {
+                    }, b.createElement(W.Z, {
                         margin: {
                             bottom: .5
                         }
-                    }, b.createElement(Z._25, {
+                    }, b.createElement(W._25, {
                         bold: !0,
-                        type: Z._30.H5
-                    }, Object(p.d)("Introducing: New Chatter Announcements!", "RitualsOnboardingSticky"))), b.createElement(Z.Z, {
+                        type: W._30.H5
+                    }, Object(p.d)("Introducing: New Chatter Announcements!", "RitualsOnboardingSticky"))), b.createElement(W.Z, {
                         margin: {
                             bottom: .5
                         }
-                    }, b.createElement(Z._25, {
-                        type: Z._30.Span
-                    }, Object(p.d)("New chatter announcements are now active in your channel, making it easier to welcome new people.", "RitualsOnboardingSticky")), b.createElement(Z._25, null, b.createElement(fe.a, {
+                    }, b.createElement(W._25, {
+                        type: W._30.Span
+                    }, Object(p.d)("New chatter announcements are now active in your channel, making it easier to welcome new people.", "RitualsOnboardingSticky")), b.createElement(W._25, null, b.createElement(fe.a, {
                         onClick: this.props.onClick,
                         to: "/" + this.props.channelLogin + "/dashboard/settings",
                         "data-test-selector": "rituals-sticky-link"
-                    }, Object(p.d)("Manage in Dashboard", "RitualsOnboardingSticky"))))), b.createElement(Z._21, {
-                        alignItems: Z.c.Center,
-                        background: Z.m.Alt2,
+                    }, Object(p.d)("Manage in Dashboard", "RitualsOnboardingSticky"))))), b.createElement(W._21, {
+                        alignItems: W.c.Center,
+                        background: W.m.Alt2,
                         borderBottom: !0,
-                        color: Z.I.Alt2,
-                        display: Z.L.Flex,
+                        color: W.I.Alt2,
+                        display: W.L.Flex,
                         padding: {
                             x: 1,
                             y: .5
                         }
-                    }, b.createElement(Z._12, {
-                        asset: Z._13.Lock,
+                    }, b.createElement(W._12, {
+                        asset: W._13.Lock,
                         height: 12,
                         width: 12
-                    }), b.createElement(Z.Z, {
-                        display: Z.L.Inline,
+                    }), b.createElement(W.Z, {
+                        display: W.L.Inline,
                         margin: {
                             left: .5
                         }
-                    }, b.createElement(Z._25, {
-                        fontSize: Z.P.Size8,
-                        type: Z._30.Span
-                    }, Object(p.d)("You see this because you own this channel", "RitualsOnboardingSticky")))), b.createElement(Z._21, {
+                    }, b.createElement(W._25, {
+                        fontSize: W.P.Size8,
+                        type: W._30.Span
+                    }, Object(p.d)("You see this because you own this channel", "RitualsOnboardingSticky")))), b.createElement(W._21, {
                         attachRight: !0,
                         attachTop: !0,
                         padding: {
                             x: .5,
                             top: 1
                         },
-                        position: Z._6.Absolute
-                    }, b.createElement(Z.v, {
+                        position: W._6.Absolute
+                    }, b.createElement(W.v, {
                         ariaLabel: Object(p.d)("Close", "RitualsOnboardingSticky"),
-                        icon: Z._13.Close,
+                        icon: W._13.Close,
                         onClick: this.props.onDismiss,
-                        size: Z.x.Small,
-                        type: Z.w.Secondary,
+                        size: W.x.Small,
+                        type: W.w.Secondary,
                         "data-test-selector": "rituals-sticky-dismiss-button"
                     })))
                 }, t
@@ -2280,7 +2259,7 @@ webpackJsonp([42], {
                 return {
                     currentUserID: t && t.id
                 }
-            }, null), Object(k.a)(at, {
+            }, null), Object(k.a)(it, {
                 options: function(e) {
                     return {
                         variables: {
@@ -2291,11 +2270,11 @@ webpackJsonp([42], {
                 skip: r
             }), Object(tt.a)(function(e) {
                 return {
-                    query: at,
+                    query: it,
                     variables: {
                         id: e.channelID
                     },
-                    topic: Object(H.i)(e.channelID),
+                    topic: Object(V.i)(e.channelID),
                     type: A.c.UpdatedChannelChatProperty,
                     mutator: function(e, t) {
                         return t.channel.settings.isRitualsEnabled = e.data.is_rituals_enabled, t
@@ -2312,9 +2291,9 @@ webpackJsonp([42], {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleWhisperCommand = function(e) {
                         var n = Object(Fe.o)(e),
-                            i = n.recipientLogin,
-                            a = n.body;
-                        if (!i || !a) return {
+                            a = n.recipientLogin,
+                            i = n.body;
+                        if (!a || !i) return {
                             preserveInput: !0,
                             deferred: Promise.resolve({
                                 notice: Object(p.d)('Usage: "/w [login] [message]"', "WhisperCommandHandler")
@@ -2325,12 +2304,12 @@ webpackJsonp([42], {
                                 notice: Object(p.d)("Please use the whisper window for whispers.", "WhisperCommandHandler")
                             })
                         };
-                        if (i.toLowerCase() === t.props.userLogin) return {
+                        if (a.toLowerCase() === t.props.userLogin) return {
                             deferred: Promise.resolve({
                                 notice: Object(p.d)("You cannot whisper to yourself.", "WhisperCommandHandler")
                             })
                         };
-                        if (t.props.userID) return t.initiateWhisper(i, a)
+                        if (t.props.userID) return t.initiateWhisper(a, i)
                     }, t
                 }
                 return m.__extends(t, e), t.prototype.render = function() {
@@ -2341,13 +2320,13 @@ webpackJsonp([42], {
                 }, t.prototype.initiateWhisper = function(e, t) {
                     var n = this;
                     return {
-                        deferred: new Promise(function(a, r) {
+                        deferred: new Promise(function(i, r) {
                             return m.__awaiter(n, void 0, void 0, function() {
                                 var n, s, o, l;
                                 return m.__generator(this, function(c) {
                                     switch (c.label) {
                                         case 0:
-                                            return c.trys.push([0, 2, , 3]), [4, i(e)];
+                                            return c.trys.push([0, 2, , 3]), [4, a(e)];
                                         case 1:
                                             return n = c.sent(), [3, 3];
                                         case 2:
@@ -2355,7 +2334,7 @@ webpackJsonp([42], {
                                                 recipientLogin: e
                                             }), [2, r(s)];
                                         case 3:
-                                            return n ? [3, 4] : [2, a({
+                                            return n ? [3, 4] : [2, i({
                                                 notice: Object(p.d)("No user matching that login.", "WhisperCommandHandler")
                                             })];
                                         case 4:
@@ -2371,11 +2350,11 @@ webpackJsonp([42], {
                                             return o = c.sent(), p.i.error(o, "Failed to send whisper using whisper command.", {
                                                 currentUserID: this.props.userID,
                                                 recipientUserID: n
-                                            }), [2, a({
+                                            }), [2, i({
                                                 notice: Object(p.d)("Unable to send Whisper at this moment.", "WhisperCommandHandler")
                                             })];
                                         case 7:
-                                            return l = Object(pt.a)(this.props.userID, n), this.props.openThread(l), [2, a({})]
+                                            return l = Object(pt.a)(this.props.userID, n), this.props.openThread(l), [2, i({})]
                                     }
                                 })
                             })
@@ -2418,8 +2397,8 @@ webpackJsonp([42], {
                                 t.handleActiveChatter(n.user);
                                 break;
                             case ft.a.Ritual:
-                                var i = e.message;
-                                t.handleActiveChatter(i.user)
+                                var a = e.message;
+                                t.handleActiveChatter(a.user)
                         }
                     }, this.handleActiveChatter = function(e) {
                         e.userID && e.userID !== t.channelID && e.userID !== t.currentUserID && (t.activeChatterIDs.has(e.userID) ? (t.activeChatterIDs.delete(e.userID), t.addActiveChatter(e)) : (t.addActiveChatter(e), t.trimActiveChatters(), t.isDirty = !0))
@@ -2429,9 +2408,9 @@ webpackJsonp([42], {
                         t.activeChatterIDs.delete(e), delete t.activeChatters[e]
                     }, this.trimActiveChatters = function() {
                         if (!(t.activeChatterIDs.size <= bt))
-                            for (var e = t.activeChatterIDs.size - bt, n = t.activeChatterIDs.values(), i = 0; i < e; i++) {
-                                var a = n.next().value;
-                                t.removeActiveChatter(a)
+                            for (var e = t.activeChatterIDs.size - bt, n = t.activeChatterIDs.values(), a = 0; a < e; a++) {
+                                var i = n.next().value;
+                                t.removeActiveChatter(i)
                             }
                     }, this.resetWithChannelID(e)
                 }
@@ -2455,11 +2434,11 @@ webpackJsonp([42], {
                             case ft.a.Action:
                             case ft.a.Post:
                             case ft.a.PostWithMention:
-                                var i = e;
-                                if (i.user.userID && n.blockedUsers.has(i.user.userID)) return;
-                                var a = i.messageParts[0];
-                                if (a && a.type === yt.a.Text && a.content.startsWith(":act ")) return;
-                                t = !n.isOwnMessage(i);
+                                var a = e;
+                                if (a.user.userID && n.blockedUsers.has(a.user.userID)) return;
+                                var i = a.messageParts[0];
+                                if (i && i.type === yt.a.Text && i.content.startsWith(":act ")) return;
+                                t = !n.isOwnMessage(a);
                                 break;
                             case ft.a.Resubscription:
                                 var r = e;
@@ -2526,12 +2505,12 @@ webpackJsonp([42], {
                     var e = this,
                         t = [],
                         n = Date.now();
-                    this.delayedMessageBuffer.forEach(function(i) {
-                        var a = i.event,
-                            r = i.time,
-                            s = i.shouldDelay;
-                        r <= n - e.delayDuration || !s ? e.isDeletable(a) && a.deleted || (e.buffer.push(a), e._isDirty = !0, e.onBufferUpdate()) : t.push({
-                            event: a,
+                    this.delayedMessageBuffer.forEach(function(a) {
+                        var i = a.event,
+                            r = a.time,
+                            s = a.shouldDelay;
+                        r <= n - e.delayDuration || !s ? e.isDeletable(i) && i.deleted || (e.buffer.push(i), e._isDirty = !0, e.onBufferUpdate()) : t.push({
+                            event: i,
                             time: r,
                             shouldDelay: s
                         })
@@ -2564,14 +2543,14 @@ webpackJsonp([42], {
             Tt = n("YhVV"),
             xt = function() {
                 function e(e, t, n) {
-                    var i = this;
+                    var a = this;
                     this.onJoinedEvent = function(e) {
-                        return i.postMessage({
+                        return a.postMessage({
                             type: ft.a.Connected,
                             id: Object(wt.a)("connected")
                         })
                     }, this.onDisconnectedEvent = function(e) {
-                        return i.postMessage(function(e) {
+                        return a.postMessage(function(e) {
                             return {
                                 type: ft.a.Disconnected,
                                 id: Object(wt.a)("disconnected"),
@@ -2579,12 +2558,12 @@ webpackJsonp([42], {
                             }
                         }(e.reason))
                     }, this.onReconnectingEvent = function(e) {
-                        return i.postMessage({
+                        return a.postMessage({
                             type: ft.a.Reconnect,
                             id: Object(wt.a)("reconnect")
                         })
                     }, this.onHostingEvent = function(e) {
-                        return i.postMessage(function(e) {
+                        return a.postMessage(function(e) {
                             return {
                                 type: ft.a.Hosting,
                                 id: Object(wt.a)("hosting"),
@@ -2592,19 +2571,19 @@ webpackJsonp([42], {
                             }
                         }(e.target))
                     }, this.onUnhostEvent = function(e) {
-                        return i.postMessage(function(e) {
+                        return a.postMessage(function(e) {
                             return {
                                 type: ft.a.Unhost,
                                 id: Object(wt.a)("unhost-" + e)
                             }
                         }(e.channel))
                     }, this.onChatMessageEvent = function(e) {
-                        i.postMessage(i.convertMessage(e))
+                        a.postMessage(a.convertMessage(e))
                     }, this.onChatActionEvent = function(e) {
-                        var t = i.bitsConfig || F.a,
-                            n = e.message.user.username === i.userLogin ? i.selfEmotes : void 0,
-                            a = s(ft.a.Action, e.action, e.message.user, t, i.shouldBlockLinks(e.message.user), n);
-                        i.postMessage(a)
+                        var t = a.bitsConfig || F.a,
+                            n = e.message.user.username === a.userLogin ? a.selfEmotes : void 0,
+                            i = s(ft.a.Action, e.action, e.message.user, t, a.shouldBlockLinks(e.message.user), n);
+                        a.postMessage(i)
                     }, this.onChatNoticeEvent = function(e) {
                         var t = function(e, t, n) {
                             return {
@@ -2615,13 +2594,13 @@ webpackJsonp([42], {
                                 message: n
                             }
                         }(e.channel, e.msgid, e.body);
-                        i.postMessage(t)
+                        a.postMessage(t)
                     }, this.onTimeoutEvent = function(e) {
-                        i.onModerationEvent(ft.a.Timeout, e)
+                        a.onModerationEvent(ft.a.Timeout, e)
                     }, this.onBanEvent = function(e) {
-                        i.onModerationEvent(ft.a.Ban, e)
+                        a.onModerationEvent(ft.a.Ban, e)
                     }, this.onModerationEvent = function(e, t) {
-                        i.postMessage(Object(Lt.a)(e, t.userLogin, t.reason, t.duration))
+                        a.postMessage(Object(Lt.a)(e, t.userLogin, t.reason, t.duration))
                     }, this.onSubscriptionEvent = function(e) {
                         var t;
                         switch (e.methods.plan) {
@@ -2637,15 +2616,15 @@ webpackJsonp([42], {
                             default:
                                 t = "$4.99"
                         }
-                        i.postMessage(function(e, t, n, i, a) {
-                            var r = Object(Ot.a)("", a, F.a, !1);
+                        a.postMessage(function(e, t, n, a, i) {
+                            var r = Object(Ot.a)("", i, F.a, !1);
                             return m.__assign({}, r, {
                                 type: ft.a.Subscription,
                                 id: Object(wt.a)(t + "-sub"),
                                 channel: e.slice(1),
                                 isPrime: n,
                                 userLogin: t,
-                                tier: i
+                                tier: a
                             })
                         }(e.channel, e.user.displayName, e.methods.prime, t, e.user))
                     }, this.onSubscriptionGiftEvent = function(e) {
@@ -2663,27 +2642,27 @@ webpackJsonp([42], {
                             default:
                                 t = "custom"
                         }
-                        i.postMessage(function(e, t, n, i, a) {
+                        a.postMessage(function(e, t, n, a, i) {
                             return {
                                 type: ft.a.SubGift,
                                 id: Object(wt.a)(t + "-sub"),
                                 channel: e.slice(1),
                                 isPrime: n,
                                 userLogin: t,
-                                tier: i,
-                                recipient: a
+                                tier: a,
+                                recipient: i
                             }
                         }(e.channel, e.user.displayName, e.methods.prime, t, e.recipientName))
                     }, this.onBitsCharityEvent = function(e) {
-                        i.postMessage(function(e, t, n, i, a, r) {
+                        a.postMessage(function(e, t, n, a, i, r) {
                             return {
                                 type: ft.a.BitsCharity,
                                 id: Object(wt.a)("charity"),
                                 total: e,
                                 charityName: t,
                                 daysLeft: n,
-                                hoursLeft: i,
-                                hashtag: a,
+                                hoursLeft: a,
+                                hashtag: i,
                                 learnMore: r
                             }
                         }(e.total, e.charityName, e.daysLeft, e.hoursLeft, e.hashtag, e.learnMore))
@@ -2702,9 +2681,9 @@ webpackJsonp([42], {
                             default:
                                 t = "$4.99"
                         }
-                        i.postMessage(o(e.channel, e.user.displayName, e.methods.prime, e.months, t, e.body, e.user))
+                        a.postMessage(o(e.channel, e.user.displayName, e.methods.prime, e.months, t, e.body, e.user))
                     }, this.onRoomModsEvent = function(e) {
-                        return i.postMessage(function(e) {
+                        return a.postMessage(function(e) {
                             return {
                                 type: ft.a.RoomMods,
                                 id: Object(wt.a)("roommods"),
@@ -2712,7 +2691,7 @@ webpackJsonp([42], {
                             }
                         }(e.usernames))
                     }, this.onRoomStateEvent = function(e) {
-                        return i.postMessage(function(e) {
+                        return a.postMessage(function(e) {
                             return {
                                 type: ft.a.RoomState,
                                 id: Object(wt.a)("roomstate"),
@@ -2720,7 +2699,7 @@ webpackJsonp([42], {
                             }
                         }(e.state))
                     }, this.onSlowModeEvent = function(e) {
-                        return i.postMessage(function(e, t) {
+                        return a.postMessage(function(e, t) {
                             return {
                                 type: ft.a.SlowMode,
                                 id: Object(wt.a)("slowmode"),
@@ -2729,7 +2708,7 @@ webpackJsonp([42], {
                             }
                         }(e.enabled, e.length))
                     }, this.onEmoteOnlyModeEvent = function(e) {
-                        return i.postMessage(function(e) {
+                        return a.postMessage(function(e) {
                             return {
                                 type: ft.a.EmoteOnlyMode,
                                 id: Object(wt.a)("emoteonlymode"),
@@ -2737,7 +2716,7 @@ webpackJsonp([42], {
                             }
                         }(e.enabled))
                     }, this.onFollowerOnlyModeEvent = function(e) {
-                        return i.postMessage(function(e, t) {
+                        return a.postMessage(function(e, t) {
                             return {
                                 type: ft.a.FollowerOnlyMode,
                                 id: Object(wt.a)("follower-only"),
@@ -2746,7 +2725,7 @@ webpackJsonp([42], {
                             }
                         }(e.enabled, e.length))
                     }, this.onSubscriberOnlyModeEvent = function(e) {
-                        return i.postMessage(function(e) {
+                        return a.postMessage(function(e) {
                             return {
                                 type: ft.a.SubscriberOnlyMode,
                                 id: Object(wt.a)("subscriber-only"),
@@ -2754,12 +2733,12 @@ webpackJsonp([42], {
                             }
                         }(e.enabled))
                     }, this.onClearChatEvent = function(e) {
-                        return i.postMessage({
+                        return a.postMessage({
                             type: ft.a.Clear,
                             id: Object(wt.a)("clear")
                         })
                     }, this.onRaidEvent = function(e) {
-                        return i.postMessage(function(e, t, n) {
+                        return a.postMessage(function(e, t, n) {
                             return {
                                 type: ft.a.Raid,
                                 id: Object(wt.a)("raid"),
@@ -2769,7 +2748,7 @@ webpackJsonp([42], {
                             }
                         }(e.channel, e.userLogin, e.params))
                     }, this.onUnraidEvent = function(e) {
-                        return i.postMessage(function(e, t, n) {
+                        return a.postMessage(function(e, t, n) {
                             return {
                                 type: ft.a.Unraid,
                                 id: Object(wt.a)("unraid"),
@@ -2779,16 +2758,16 @@ webpackJsonp([42], {
                             }
                         }(e.channel, e.userLogin, e.message))
                     }, this.onRitualEvent = function(e) {
-                        i.postMessage(function(e, t) {
+                        a.postMessage(function(e, t) {
                             return {
                                 type: ft.a.Ritual,
                                 id: Object(wt.a)(t.user.userLogin + "-" + e + "-ritual"),
                                 ritualType: e,
                                 message: t
                             }
-                        }(e.type, i.convertMessage(e)))
+                        }(e.type, a.convertMessage(e)))
                     }, this.onBadgesUpdatedEvent = function(e) {
-                        return i.postMessage(function(e, t) {
+                        return a.postMessage(function(e, t) {
                             return {
                                 type: ft.a.BadgesUpdated,
                                 id: Object(wt.a)("updateBadges"),
@@ -2797,30 +2776,30 @@ webpackJsonp([42], {
                             }
                         }(e.username, e.badges))
                     }, this.onPurchaseEvent = function(e) {
-                        var t = i.bitsConfig || F.a;
-                        i.postMessage(function(e, t, n, i) {
+                        var t = a.bitsConfig || F.a;
+                        a.postMessage(function(e, t, n, a) {
                             return {
-                                bitsConfig: i,
+                                bitsConfig: a,
                                 message: t,
                                 purchase: e,
                                 timestamp: n,
                                 id: Object(wt.a)(t.user.userLogin + "-purchase"),
                                 type: ft.a.Purchase
                             }
-                        }(e.purchase, i.convertMessage(e), e.timestamp, t))
+                        }(e.purchase, a.convertMessage(e), e.timestamp, t))
                     }, this.onCrateEvent = function(e) {
-                        i.postMessage(function(e, t) {
+                        a.postMessage(function(e, t) {
                             return {
                                 type: ft.a.CrateGift,
                                 id: Object(wt.a)("crate"),
                                 message: e,
                                 selectedCount: t
                             }
-                        }(i.convertMessage(e), e.selectedCount))
+                        }(a.convertMessage(e), e.selectedCount))
                     }, this.convertMessage = function(e) {
-                        var t = i.bitsConfig || F.a,
-                            n = e.message.user.username === i.userLogin ? i.selfEmotes : void 0;
-                        return s(ft.a.Post, e.message.body, e.message.user, t, i.shouldBlockLinks(e.message.user), n)
+                        var t = a.bitsConfig || F.a,
+                            n = e.message.user.username === a.userLogin ? a.selfEmotes : void 0;
+                        return s(ft.a.Post, e.message.body, e.message.user, t, a.shouldBlockLinks(e.message.user), n)
                     }, this.logger = p.i.withCategory("chat-service"), this.logger.debug("Created"), this.userLogin = e, this.channelLogin = t, this.service = p.n.tmi, this.client = p.n.tmi.client, this.postMessage = n, this.disabled = p.n.tmi.disabled
                 }
                 return e.prototype.join = function() {
@@ -2873,12 +2852,12 @@ webpackJsonp([42], {
             Mt = function() {
                 return function(e, t, n) {
                     this.channelID = e, this.sessionUserID = t, this.unsubscribe = p.j.subscribe({
-                        topic: Object(H.e)(this.sessionUserID, this.channelID),
+                        topic: Object(V.e)(this.sessionUserID, this.channelID),
                         onMessage: function(e) {
                             switch (e.data.moderation_action) {
                                 case A.b.AutoModRejected:
-                                    var t = function(e, t, n, i) {
-                                        var a = {
+                                    var t = function(e, t, n, a) {
+                                        var i = {
                                                 badges: null,
                                                 bits: 0,
                                                 color: "",
@@ -2889,13 +2868,13 @@ webpackJsonp([42], {
                                                 userType: Dt.a.User,
                                                 emotes: null
                                             },
-                                            r = Object(Ot.a)(t, a, F.a, !1);
+                                            r = Object(Ot.a)(t, i, F.a, !1);
                                         return {
                                             type: ft.a.AutoModRejectedPrompt,
                                             id: function(e) {
                                                 return e + "-automod-rejected"
                                             }(e),
-                                            category: i,
+                                            category: a,
                                             isAutoModAction: !0,
                                             rejectedMessage: m.__assign({}, r, {
                                                 type: ft.a.Post,
@@ -2958,18 +2937,18 @@ webpackJsonp([42], {
                 }, e.setChannelsList = function(e) {
                     return m.__awaiter(this, void 0, void 0, function() {
                         var t, n;
-                        return m.__generator(this, function(i) {
-                            switch (i.label) {
+                        return m.__generator(this, function(a) {
+                            switch (a.label) {
                                 case 0:
-                                    return i.trys.push([0, 2, , 3]), [4, Ce.a.put("/kraken/autohost/list", {
+                                    return a.trys.push([0, 2, , 3]), [4, Ce.a.put("/kraken/autohost/list", {
                                         body: {
                                             targets: e.join(",")
                                         }
                                     })];
                                 case 1:
-                                    return t = i.sent(), [2, this.deserialize(t)];
+                                    return t = a.sent(), [2, this.deserialize(t)];
                                 case 2:
-                                    return n = i.sent(), p.i.error(n, "Couldn't update autohost list"), [2, e];
+                                    return n = a.sent(), p.i.error(n, "Couldn't update autohost list"), [2, e];
                                 case 3:
                                     return [2]
                             }
@@ -2983,7 +2962,7 @@ webpackJsonp([42], {
             }(),
             At = (n("7X7f"), n("QMHY")),
             Pt = "autohost-notifications-dismissed",
-            Ht = function(e) {
+            Vt = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -2991,7 +2970,7 @@ webpackJsonp([42], {
                     }, t.dismiss = function() {
                         t.setState({
                             isDismissed: !0
-                        }), t.track(V.SpadeEventType.AutohostChatDismiss);
+                        }), t.track(H.SpadeEventType.AutohostChatDismiss);
                         var e = t.getAutohostNotificationsDismissed();
                         e[t.props.data.user.id] = {
                             dismissedDate: (new Date).getTime()
@@ -3006,12 +2985,12 @@ webpackJsonp([42], {
                                     case 1:
                                         return e = t.sent().concat([this.props.data.user.id]), this.setState({
                                             autohostChannels: e
-                                        }), jt.setChannelsList(e), this.track(V.SpadeEventType.AutohostChatYes), [2]
+                                        }), jt.setChannelsList(e), this.track(H.SpadeEventType.AutohostChatYes), [2]
                                 }
                             })
                         })
                     }, t.trackSettingsClick = function() {
-                        t.track(V.SpadeEventType.AutohostChatSettings)
+                        t.track(H.SpadeEventType.AutohostChatSettings)
                     }, t
                 }
                 return m.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -3024,7 +3003,7 @@ webpackJsonp([42], {
                                 case 1:
                                     return e = t.sent(), this.setState({
                                         autohostChannels: e
-                                    }), this.isShowing && this.track(V.SpadeEventType.AutohostChatImpression), [2]
+                                    }), this.isShowing && this.track(H.SpadeEventType.AutohostChatImpression), [2]
                             }
                         })
                     })
@@ -3035,73 +3014,73 @@ webpackJsonp([42], {
                         }, "AutohostPrompt"),
                         t = Object(p.d)("Auto host this channel whenever you're offline?", "AutohostPrompt"),
                         n = Object(p.d)("Yes", "AutohostPrompt"),
-                        i = Object(p.d)("Settings", "AutohostPrompt");
-                    return b.createElement(Z._21, {
+                        a = Object(p.d)("Settings", "AutohostPrompt");
+                    return b.createElement(W._21, {
                         "data-target": "autohost-container",
-                        background: Z.m.Base,
+                        background: W.m.Base,
                         className: "autohost-prompt",
                         margin: {
                             x: 2
                         },
-                        position: Z._6.Relative
-                    }, b.createElement(Z.p, {
-                        size: Z.r.Medium,
-                        direction: Z.q.TopLeft,
+                        position: W._6.Relative
+                    }, b.createElement(W.p, {
+                        size: W.r.Medium,
+                        direction: W.q.TopLeft,
                         show: !0
-                    }, b.createElement(Z._21, {
-                        alignItems: Z.c.Center,
+                    }, b.createElement(W._21, {
+                        alignItems: W.c.Center,
                         borderBottom: !0,
-                        display: Z.L.Flex,
-                        flexDirection: Z.N.Column,
-                        justifyContent: Z.Y.Around,
+                        display: W.L.Flex,
+                        flexDirection: W.N.Column,
+                        justifyContent: W.Y.Around,
                         padding: 1
-                    }, b.createElement(Z.Z, {
-                        position: Z._6.Absolute,
+                    }, b.createElement(W.Z, {
+                        position: W._6.Absolute,
                         attachTop: !0,
                         attachRight: !0
-                    }, b.createElement(Z.v, {
+                    }, b.createElement(W.v, {
                         ariaLabel: Object(p.d)("Close", "AutohostPrompt"),
-                        size: Z.x.Small,
-                        type: Z.w.Secondary,
+                        size: W.x.Small,
+                        type: W.w.Secondary,
                         "data-test-selector": "autohost-dismiss-button",
-                        icon: Z._13.Close,
+                        icon: W._13.Close,
                         onClick: this.dismiss
-                    })), b.createElement(Z.l, {
+                    })), b.createElement(W.l, {
                         alt: this.props.data.user.displayName,
                         src: this.props.data.user.profileImageURL,
                         size: 30
-                    }), b.createElement(Z.Z, {
+                    }), b.createElement(W.Z, {
                         className: "autohost-prompt__hosting-message",
-                        display: Z.L.Flex,
+                        display: W.L.Flex,
                         padding: {
                             top: .5
                         }
-                    }, b.createElement(Z._12, {
-                        asset: Z._13.Check
-                    }), b.createElement(Z.U, {
+                    }, b.createElement(W._12, {
+                        asset: W._13.Check
+                    }), b.createElement(W.U, {
                         margin: {
                             left: .5
                         }
-                    }, b.createElement(Z._25, null, e)))), b.createElement(Z.Z, {
+                    }, b.createElement(W._25, null, e)))), b.createElement(W.Z, {
                         className: "autohost-prompt__prompt",
-                        justifyContent: Z.Y.Center,
-                        display: Z.L.Flex,
-                        flexWrap: Z.O.Wrap,
+                        justifyContent: W.Y.Center,
+                        display: W.L.Flex,
+                        flexWrap: W.O.Wrap,
                         padding: 1
-                    }, b.createElement(Z._25, null, t), b.createElement(Z._36, {
-                        gutterSize: Z._38.ExtraSmall,
-                        childWidth: Z._37.Large
-                    }, b.createElement("div", null, b.createElement(Z.u, {
+                    }, b.createElement(W._25, null, t), b.createElement(W._36, {
+                        gutterSize: W._38.ExtraSmall,
+                        childWidth: W._37.Large
+                    }, b.createElement("div", null, b.createElement(W.u, {
                         "data-test-selector": "autohost-yes-button",
                         fullWidth: !0,
                         onClick: this.addChannelToAutohost
-                    }, n)), b.createElement("div", null, b.createElement(Z.u, {
+                    }, n)), b.createElement("div", null, b.createElement(W.u, {
                         "data-test-selector": "autohost-settings-button",
                         fullWidth: !0,
                         onClick: this.trackSettingsClick,
-                        type: Z.z.Hollow,
+                        type: W.z.Hollow,
                         linkTo: "https://twitch.tv/settings/profile"
-                    }, i))))))
+                    }, a))))))
                 }, Object.defineProperty(t.prototype, "isShowing", {
                     get: function() {
                         return !this.state.isDismissed && !!this.props.hostedChannelLogin && !this.props.data.loading && !this.props.data.error && this.props.data.user && !!this.state.autohostChannels && !this.state.autohostChannels.includes(this.props.data.user.id) && !this.getAutohostNotificationsDismissed()[this.props.data.user.id]
@@ -3135,9 +3114,9 @@ webpackJsonp([42], {
                     }
                 })], t)
             }(b.Component),
-            Vt = n("3T7g"),
-            Wt = n("RbGx"),
-            Zt = n("5Nu7"),
+            Ht = n("3T7g"),
+            Zt = n("RbGx"),
+            Wt = n("5Nu7"),
             Gt = n("g7wA"),
             qt = n("O9wU"),
             zt = n("1OO3"),
@@ -3154,34 +3133,34 @@ webpackJsonp([42], {
                     }, t.renderModerationIcons = function() {
                         if (!t.props.isCurrentUserModerator || !t.props.showModerationIcons) return null;
                         var e = t.onBanUser,
-                            n = Z._13.Ban,
-                            i = Object(p.d)("Ban", "ChatMessageEvent"),
-                            a = $t;
-                        return t.props.message.deleted && !t.state.alwaysShowMessage && (e = t.onUnbanUser, n = Z._13.FollowCheck, i = Object(p.d)("Unban", "ChatMessageEvent"), a = Qt), b.createElement(Z.Z, {
-                            display: Z.L.Inline,
+                            n = W._13.Ban,
+                            a = Object(p.d)("Ban", "ChatMessageEvent"),
+                            i = $t;
+                        return t.props.message.deleted && !t.state.alwaysShowMessage && (e = t.onUnbanUser, n = W._13.FollowCheck, a = Object(p.d)("Unban", "ChatMessageEvent"), i = Qt), b.createElement(W.Z, {
+                            display: W.L.Inline,
                             className: "chat-line__mod-icons"
                         }, b.createElement("button", {
                             className: "mod-icon",
                             onClick: e,
-                            "data-a-target": a
-                        }, b.createElement(Z._33, {
-                            label: i
-                        }, b.createElement(Z._12, {
+                            "data-a-target": i
+                        }, b.createElement(W._33, {
+                            label: a
+                        }, b.createElement(W._12, {
                             width: 16,
                             height: 16,
-                            type: Z._14.Inherit,
+                            type: W._14.Inherit,
                             asset: n
                         }))), b.createElement("button", {
                             className: "mod-icon",
                             onClick: t.timeoutUser,
                             "data-a-target": Jt
-                        }, b.createElement(Z._33, {
+                        }, b.createElement(W._33, {
                             label: Object(p.d)("Timeout", "ChatMessageEvent")
-                        }, b.createElement(Z._12, {
+                        }, b.createElement(W._12, {
                             width: 16,
                             height: 16,
-                            type: Z._14.Inherit,
-                            asset: Z._13.Timeout
+                            type: W._14.Inherit,
+                            asset: W._13.Timeout
                         }))))
                     }, t.renderMessageBody = function() {
                         if (t.props.isDeleted && !t.state.alwaysShowMessage) {
@@ -3218,26 +3197,26 @@ webpackJsonp([42], {
                     var e = this.props,
                         t = e.badgeSets,
                         n = e.className,
-                        i = e.message,
-                        a = e.showTimestamps,
+                        a = e.message,
+                        i = e.showTimestamps,
                         r = {},
                         s = ": ";
-                    i.type === ft.a.Action && (r = {
-                        color: i.user.color
+                    a.type === ft.a.Action && (r = {
+                        color: a.user.color
                     }, s = " ");
                     var o = null;
-                    return a && (o = Object(Gt.s)(i.timestamp)), b.createElement("div", {
+                    return i && (o = Object(Gt.s)(a.timestamp)), b.createElement("div", {
                         className: U(n, "chat-line__message"),
                         style: r,
                         "data-a-target": "chat-line-message"
-                    }, o, this.renderModerationIcons(), b.createElement(Vt.b, {
+                    }, o, this.renderModerationIcons(), b.createElement(Ht.b, {
                         badgeSets: t,
-                        badgesToRender: i.badges
+                        badgesToRender: a.badges
                     }), b.createElement("button", {
                         onClick: this.usernameClickHandler,
                         className: "chat-line__username"
-                    }, b.createElement(Zt.a, {
-                        userData: i.user
+                    }, b.createElement(Wt.a, {
+                        userData: a.user
                     })), b.createElement("span", {
                         key: "separator"
                     }, s), this.renderMessageBody())
@@ -3260,28 +3239,28 @@ webpackJsonp([42], {
                             onUnbanUser: function(n) {
                                 return m.__awaiter(e, void 0, void 0, function() {
                                     var e;
-                                    return m.__generator(this, function(i) {
-                                        switch (i.label) {
+                                    return m.__generator(this, function(a) {
+                                        switch (a.label) {
                                             case 0:
                                                 if (!t.mutate) return [3, 5];
-                                                i.label = 1;
+                                                a.label = 1;
                                             case 1:
-                                                return i.trys.push([1, 3, , 4]), [4, t.mutate(Object(P.a)({
+                                                return a.trys.push([1, 3, , 4]), [4, t.mutate(Object(P.a)({
                                                     channelID: t.ownProps.channelID,
                                                     bannedUserLogin: n
                                                 }))];
                                             case 2:
-                                                return i.sent(), t.ownProps.onPushMessage(Object(It.a)(function(e) {
+                                                return a.sent(), t.ownProps.onPushMessage(Object(It.a)(function(e) {
                                                     return Object(p.d)("{bannedUserLogin} is no longer banned from this room.", {
                                                         bannedUserLogin: e
                                                     }, "UnbanUserMutation")
                                                 }(n))), [3, 4];
                                             case 3:
-                                                return e = i.sent(), p.i.error(e, "Unable to ban user"), t.ownProps.onPushMessage(Object(It.a)(l())), [3, 4];
+                                                return e = a.sent(), p.i.error(e, "Unable to ban user"), t.ownProps.onPushMessage(Object(It.a)(l())), [3, 4];
                                             case 4:
                                                 return [3, 6];
                                             case 5:
-                                                t.ownProps.onPushMessage(Object(It.a)(l())), i.label = 6;
+                                                t.ownProps.onPushMessage(Object(It.a)(l())), a.label = 6;
                                             case 6:
                                                 return [2]
                                         }
@@ -3376,32 +3355,32 @@ webpackJsonp([42], {
                     var t = Object(Ot.a)(e, an, F.a, !1, rn);
                     switch (this.props.message.type) {
                         case ft.a.AutoModRejectedPrompt:
-                            if (this.state.isResolved) return b.createElement(Z.Z, {
+                            if (this.state.isResolved) return b.createElement(W.Z, {
                                 className: "chat-line__status"
                             }, Object(Gt.g)());
                             var n = ["chat-line__message--alert", "chat-line__message--special", "chat-line__message--clearfix"];
-                            return b.createElement(Z.Z, {
+                            return b.createElement(W.Z, {
                                 className: "chat-line__message"
-                            }, b.createElement(Wt.a, {
+                            }, b.createElement(Zt.a, {
                                 badgeSets: this.props.badgeSets,
                                 badgesToRender: t.badges
-                            }), b.createElement(Zt.a, {
+                            }), b.createElement(Wt.a, {
                                 userData: t.user
                             }), b.createElement("span", {
                                 key: "separator"
-                            }, ": "), Object(Gt.j)(t.messageParts, this.props.currentUserDisplayName, this.props.currentUserLogin), b.createElement(Z.Z, {
+                            }, ": "), Object(Gt.j)(t.messageParts, this.props.currentUserDisplayName, this.props.currentUserLogin), b.createElement(W.Z, {
                                 key: "automod-prompt",
                                 className: "chat-line__nested-component--float-right"
-                            }, b.createElement(Z.u, {
-                                size: Z.x.Small,
+                            }, b.createElement(W.u, {
+                                size: W.x.Small,
                                 onClick: this.allowAutoModRejectedMessage,
-                                type: Z.z.Text
-                            }, Object(p.d)("Allow", "AutoModLine")), b.createElement(Z._25, {
-                                type: Z._30.Span
-                            }, "•"), b.createElement(Z.u, {
-                                size: Z.x.Small,
+                                type: W.z.Text
+                            }, Object(p.d)("Allow", "AutoModLine")), b.createElement(W._25, {
+                                type: W._30.Span
+                            }, "•"), b.createElement(W.u, {
+                                size: W.x.Small,
                                 onClick: this.denyAutoModRejectedMessage,
-                                type: Z.z.Text
+                                type: W.z.Text
                             }, Object(p.d)("Deny", "AutoModLine"))), b.createElement(en, m.__assign({}, this.props, {
                                 isDeleted: !1,
                                 showTimestamps: !1,
@@ -3411,13 +3390,13 @@ webpackJsonp([42], {
                         case ft.a.AutoModMessageRejected:
                         case ft.a.AutoModMessageAllowed:
                         case ft.a.AutoModMessageDenied:
-                            var i = ["chat-line__message", "chat-line__message--special", "chat-line__message--alert"];
-                            return b.createElement(Z.Z, {
-                                className: U(i)
-                            }, b.createElement(Wt.a, {
+                            var a = ["chat-line__message", "chat-line__message--special", "chat-line__message--alert"];
+                            return b.createElement(W.Z, {
+                                className: U(a)
+                            }, b.createElement(Zt.a, {
                                 badgeSets: this.props.badgeSets,
                                 badgesToRender: t.badges
-                            }), b.createElement(Zt.a, {
+                            }), b.createElement(Wt.a, {
                                 userData: t.user
                             }), b.createElement("span", {
                                 key: "separator"
@@ -3443,25 +3422,25 @@ webpackJsonp([42], {
                     var e = this.props.message.params,
                         t = this.props.data,
                         n = t.channel,
-                        i = t.loading,
-                        a = t.error;
-                    if (i || a) return null;
+                        a = t.loading,
+                        i = t.error;
+                    if (a || i) return null;
                     var r = Object(p.d)("{displayName} is raiding with a party of {viewerCount}.", {
                         displayName: b.createElement("strong", null, n.displayName),
                         viewerCount: b.createElement("strong", null, e.viewerCount)
                     }, "RaidIncomingMessage");
-                    return b.createElement(Z.Z, {
+                    return b.createElement(W.Z, {
                         className: "chat-line__raid",
                         "data-test-selector": "incoming-raid"
-                    }, b.createElement(Z.Z, {
-                        display: Z.L.Flex,
-                        alignItems: Z.c.Center
-                    }, b.createElement(Z.l, {
+                    }, b.createElement(W.Z, {
+                        display: W.L.Flex,
+                        alignItems: W.c.Center
+                    }, b.createElement(W.l, {
                         alt: n.displayName,
                         src: n.profileImageURL,
                         size: 30
-                    }), b.createElement(Z._21, {
-                        color: Z.I.Base,
+                    }), b.createElement(W._21, {
+                        color: W.I.Base,
                         margin: {
                             left: 1
                         }
@@ -3492,12 +3471,12 @@ webpackJsonp([42], {
                     var e = this.props.event;
                     if (e.user) {
                         var t = null;
-                        e.badges && (t = b.createElement(Vt.b, {
+                        e.badges && (t = b.createElement(Ht.b, {
                             badgeSets: this.props.badgeSets,
                             badgesToRender: e.badges
                         }));
                         var n = e.isPrime ? Object(Gt.a)(e.user.userDisplayName, Object(Gt.u)(e.channel)) : Object(Gt.b)(e.user.userDisplayName, e.tier),
-                            i = [b.createElement("span", {
+                            a = [b.createElement("span", {
                                 key: "chat--resubbed"
                             }, n, b.createElement("span", {
                                 key: "sub-separator"
@@ -3506,23 +3485,23 @@ webpackJsonp([42], {
                                 months: e.months
                             }, "ChatLine"))];
                         if (e.messageParts && e.user && !this.props.isDeleted) {
-                            var a = null;
-                            this.props.showTimestamps && e.timestamp && (a = Object(Gt.s)(e.timestamp)), i.push(b.createElement("div", {
+                            var i = null;
+                            this.props.showTimestamps && e.timestamp && (i = Object(Gt.s)(e.timestamp)), a.push(b.createElement("div", {
                                 key: "resub-message",
                                 className: "chat-line__subscribe--message"
-                            }, a, t, b.createElement("button", {
+                            }, i, t, b.createElement("button", {
                                 className: "chat-line__username",
                                 onClick: this.usernameClickHandler,
                                 "data-test-selector": "resub-sender-login"
-                            }, b.createElement(Zt.a, {
+                            }, b.createElement(Wt.a, {
                                 userData: e.user
                             })), b.createElement("span", {
                                 key: "separator"
                             }, ": "), Object(Gt.j)(e.messageParts, this.props.currentUserDisplayName, this.props.currentUserLogin)))
                         }
-                        return b.createElement(Z.Z, {
+                        return b.createElement(W.Z, {
                             className: "chat-line__subscribe"
-                        }, i)
+                        }, a)
                     }
                     return null
                 }, t
@@ -3554,7 +3533,7 @@ webpackJsonp([42], {
                     var e = this.props.event.message;
                     if (e.user && !this.props.isDeleted) {
                         var t = null;
-                        e.badges && (t = b.createElement(Vt.b, {
+                        e.badges && (t = b.createElement(Ht.b, {
                             badgeSets: this.props.badgeSets,
                             badgesToRender: e.badges
                         }));
@@ -3565,7 +3544,7 @@ webpackJsonp([42], {
                             className: "chat-line__username",
                             onClick: this.usernameClickHandler,
                             "data-test-selector": "ritual-sender-login"
-                        }, b.createElement(Zt.a, {
+                        }, b.createElement(Wt.a, {
                             userData: e.user
                         })), b.createElement("span", null, ": "), Object(Gt.j)(e.messageParts, this.props.currentUserDisplayName, this.props.currentUserLogin)))
                     }
@@ -3584,10 +3563,10 @@ webpackJsonp([42], {
                     return t.state = {
                         drawerOpen: !1
                     }, t.renderBitsLoot = function(e) {
-                        return b.createElement(Z.Z, {
+                        return b.createElement(W.Z, {
                             key: e.quantity,
                             className: "chat-line__purchase-loot"
-                        }, b.createElement(W.a, {
+                        }, b.createElement(Z.a, {
                             bitsConfig: t.props.bitsConfig,
                             count: e.quantity,
                             withImage: !0
@@ -3603,22 +3582,22 @@ webpackJsonp([42], {
                 return m.__extends(t, e), t.prototype.render = function() {
                     var e, t = this,
                         n = this.props.purchase,
-                        i = n.crateLoot,
-                        a = n.numCrates,
+                        a = n.crateLoot,
+                        i = n.numCrates,
                         r = n.purchased;
-                    if (a > 0) {
+                    if (i > 0) {
                         var s = Object(p.d)("{numCrates, plural, one {Plus # Twitch Crate with {lootCount} rewards!} other {Plus # Twitch Crates with {lootCount} rewards!}}", {
-                            numCrates: a,
-                            lootCount: i.length
+                            numCrates: i,
+                            lootCount: a.length
                         }, "SharePurchaseLineRewardText");
-                        e = b.createElement(Z.Z, {
+                        e = b.createElement(W.Z, {
                             className: "chat-line__purchase-reward-text",
                             margin: {
                                 top: .5
                             }
                         }, s)
                     }
-                    var o, l = i.map(function(e) {
+                    var o, l = a.map(function(e) {
                         switch (e.type) {
                             case vn.a.Badge:
                                 return t.renderBadgeLoot(e);
@@ -3632,67 +3611,67 @@ webpackJsonp([42], {
                                 return ""
                         }
                     });
-                    if (i.length <= 2) o = 0 === i.length ? "" : b.createElement(Z._21, {
+                    if (a.length <= 2) o = 0 === a.length ? "" : b.createElement(W._21, {
                         className: "chat-line__purchase-loot-box",
-                        alignItems: Z.c.Center,
+                        alignItems: W.c.Center,
                         borderLeft: !0,
-                        display: Z.L.Flex,
-                        flexDirection: Z.N.Row,
+                        display: W.L.Flex,
+                        flexDirection: W.N.Row,
                         flexShrink: 0,
-                        flexWrap: Z.O.NoWrap,
-                        justifyContent: Z.Y.Center,
+                        flexWrap: W.O.NoWrap,
+                        justifyContent: W.Y.Center,
                         padding: .5
                     }, l);
                     else if (this.state.drawerOpen) o = b.createElement("span", {
                         className: "chat-line__purchase-loot-toggle",
                         onClick: this.toggleDrawer,
                         "data-test-selector": "purchase-loot-toggle"
-                    }, b.createElement(Z._21, {
+                    }, b.createElement(W._21, {
                         className: "chat-line__purchase-loot-box",
-                        alignItems: Z.c.Center,
+                        alignItems: W.c.Center,
                         borderLeft: !0,
-                        display: Z.L.Flex,
-                        flexDirection: Z.N.Row,
+                        display: W.L.Flex,
+                        flexDirection: W.N.Row,
                         flexShrink: 0,
-                        flexWrap: Z.O.NoWrap,
-                        justifyContent: Z.Y.Center,
+                        flexWrap: W.O.NoWrap,
+                        justifyContent: W.Y.Center,
                         padding: .5
-                    }, b.createElement(Z._12, {
-                        asset: Z._13.GlyphArrUp
+                    }, b.createElement(W._12, {
+                        asset: W._13.GlyphArrUp
                     })));
                     else {
-                        var c = "+" + (i.length - 1);
+                        var c = "+" + (a.length - 1);
                         o = b.createElement("span", {
                             className: "chat-line__purchase-loot-toggle",
                             onClick: this.toggleDrawer,
                             "data-test-selector": "purchase-loot-toggle"
-                        }, b.createElement(Z._21, {
+                        }, b.createElement(W._21, {
                             className: "chat-line__purchase-loot-box",
-                            alignItems: Z.c.Center,
+                            alignItems: W.c.Center,
                             borderLeft: !0,
-                            display: Z.L.Flex,
-                            flexDirection: Z.N.Row,
+                            display: W.L.Flex,
+                            flexDirection: W.N.Row,
                             flexShrink: 0,
-                            flexWrap: Z.O.NoWrap,
-                            justifyContent: Z.Y.Center,
+                            flexWrap: W.O.NoWrap,
+                            justifyContent: W.Y.Center,
                             padding: .5
-                        }, l[0], b.createElement(Z._3, {
+                        }, l[0], b.createElement(W._3, {
                             label: c,
-                            type: Z._4.Notification
+                            type: W._4.Notification
                         })))
                     }
-                    var d = i.length <= 2 || !this.state.drawerOpen ? "" : b.createElement(Z._21, {
+                    var d = a.length <= 2 || !this.state.drawerOpen ? "" : b.createElement(W._21, {
                         className: "chat-line__purchase-loot-drawer",
-                        alignItems: Z.c.Center,
-                        display: Z.L.Flex,
-                        flexDirection: Z.N.Row,
+                        alignItems: W.c.Center,
+                        display: W.L.Flex,
+                        flexDirection: W.N.Row,
                         flexShrink: 0,
-                        flexWrap: Z.O.NoWrap,
-                        justifyContent: Z.Y.End,
+                        flexWrap: W.O.NoWrap,
+                        justifyContent: W.Y.End,
                         padding: .5,
                         "data-test-selector": "purchase-loot-drawer"
                     }, l);
-                    return b.createElement(Z._21, {
+                    return b.createElement(W._21, {
                         className: "chat-line__purchase",
                         elevation: 1,
                         margin: {
@@ -3701,22 +3680,22 @@ webpackJsonp([42], {
                             right: 2,
                             top: 0
                         }
-                    }, b.createElement(Z.Z, {
-                        display: Z.L.Flex,
-                        flexDirection: Z.N.Row,
-                        flexWrap: Z.O.NoWrap
-                    }, b.createElement(Z.Z, {
+                    }, b.createElement(W.Z, {
+                        display: W.L.Flex,
+                        flexDirection: W.N.Row,
+                        flexWrap: W.O.NoWrap
+                    }, b.createElement(W.Z, {
                         flexGrow: 0,
                         flexShrink: 0,
                         margin: .5
                     }, b.createElement("img", {
                         className: "chat-line__purchase-boxart",
                         src: r.boxart
-                    })), b.createElement(Z.Z, {
+                    })), b.createElement(W.Z, {
                         flexGrow: 1,
                         margin: .5
-                    }, b.createElement(Z._21, {
-                        fontSize: Z.P.Size4
+                    }, b.createElement(W._21, {
+                        fontSize: W.P.Size4
                     }, r.title), e), o), d)
                 }, t.prototype.renderBadgeLoot = function(e) {
                     return b.createElement("img", {
@@ -3778,37 +3757,37 @@ webpackJsonp([42], {
                                 currentUserLogin: this.props.currentUserLogin
                             });
                         case ft.a.Connected:
-                            return b.createElement(Z.Z, {
+                            return b.createElement(W.Z, {
                                 className: "chat-line__status",
                                 "data-a-target": "chat-welcome-message"
-                            }, b.createElement(Z._25, {
-                                type: Z._30.Span
+                            }, b.createElement(W._25, {
+                                type: W._30.Span
                             }, Object(p.d)("Welcome to the chat room!", "ChatLine")));
                         case ft.a.Disconnected:
-                            return e.reason ? b.createElement(Z.Z, {
+                            return e.reason ? b.createElement(W.Z, {
                                 className: "chat-line__status"
-                            }, b.createElement(Z._25, {
-                                type: Z._30.Span
+                            }, b.createElement(W._25, {
+                                type: W._30.Span
                             }, Object(p.d)("You have been disconnected from chat for the following reason: {reason}", {
                                 reason: e.reason
-                            }, "ChatLine"))) : b.createElement(Z.Z, {
+                            }, "ChatLine"))) : b.createElement(W.Z, {
                                 className: "chat-line__status"
-                            }, b.createElement(Z._25, {
-                                type: Z._30.Span
+                            }, b.createElement(W._25, {
+                                type: W._30.Span
                             }, Object(p.d)("Sorry, we were unable to connect to chat. Attempting to reconnect...", "ChatLine")));
                         case ft.a.Hosting:
-                            return b.createElement(Z.Z, {
+                            return b.createElement(W.Z, {
                                 className: "chat-line__status"
-                            }, b.createElement(Z._25, {
-                                type: Z._30.Span
+                            }, b.createElement(W._25, {
+                                type: W._30.Span
                             }, Object(p.d)("Now hosting {channel}", {
                                 channel: e.hostedChannel
                             }, "ChatLine")));
                         case ft.a.Unhost:
-                            return b.createElement(Z.Z, {
+                            return b.createElement(W.Z, {
                                 className: "chat-line__status"
-                            }, b.createElement(Z._25, {
-                                type: Z._30.Span
+                            }, b.createElement(W._25, {
+                                type: W._30.Span
                             }, Object(p.d)("No longer hosting.", "ChatLine")));
                         case ft.a.Post:
                         case ft.a.PostWithMention:
@@ -3829,19 +3808,19 @@ webpackJsonp([42], {
                             }) : null;
                         case ft.a.Ban:
                         case ft.a.Timeout:
-                            return this.props.isCurrentUserModerator ? b.createElement(Z.Z, {
+                            return this.props.isCurrentUserModerator ? b.createElement(W.Z, {
                                 className: "chat-line__moderation"
                             }, Object(Gt.k)(e)) : null;
                         case ft.a.Subscription:
-                            return b.createElement(Z.Z, {
+                            return b.createElement(W.Z, {
                                 className: "chat-line__subscribe"
                             }, Object(Gt.r)(e));
                         case ft.a.SubGift:
-                            return b.createElement(Z.Z, {
+                            return b.createElement(W.Z, {
                                 className: "chat-line__subscribe"
                             }, Object(Gt.q)(e));
                         case ft.a.BitsCharity:
-                            return b.createElement(Z.Z, {
+                            return b.createElement(W.Z, {
                                 className: "chat-line__bits-charity",
                                 padding: {
                                     right: 2,
@@ -3858,33 +3837,33 @@ webpackJsonp([42], {
                                 showTimestamps: this.props.showTimestamps
                             });
                         case ft.a.RoomMods:
-                            return b.createElement(Z.Z, {
+                            return b.createElement(W.Z, {
                                 className: "chat-line__status"
                             }, Object(Gt.n)(e.moderatorLogins));
                         case ft.a.SlowMode:
-                            return b.createElement(Z.Z, {
+                            return b.createElement(W.Z, {
                                 className: "chat-line__status"
                             }, Object(Gt.o)(e));
                         case ft.a.SubscriberOnlyMode:
-                            return b.createElement(Z.Z, {
+                            return b.createElement(W.Z, {
                                 className: "chat-line__status"
                             }, Object(Gt.p)(e));
                         case ft.a.FollowerOnlyMode:
-                            return b.createElement(Z.Z, {
+                            return b.createElement(W.Z, {
                                 className: "chat-line__status"
                             }, Object(Gt.h)(e));
                         case ft.a.EmoteOnlyMode:
-                            return b.createElement(Z.Z, {
+                            return b.createElement(W.Z, {
                                 className: "chat-line__status"
                             }, Object(Gt.f)(e));
                         case ft.a.Clear:
-                            return b.createElement(Z.Z, {
+                            return b.createElement(W.Z, {
                                 className: "chat-line__status"
                             }, Object(Gt.d)());
                         case ft.a.Notice:
                             if (function(e) {
                                     return e.msgid in c()
-                                }(e)) return b.createElement(Z.Z, {
+                                }(e)) return b.createElement(W.Z, {
                                 className: "chat-line__status"
                             }, b.createElement(un, {
                                 message: e
@@ -3894,18 +3873,18 @@ webpackJsonp([42], {
                                 case yn:
                                     return null
                             }
-                            return b.createElement(Z.Z, {
+                            return b.createElement(W.Z, {
                                 className: "chat-line__status"
                             }, Object(Gt.l)(e));
                         case ft.a.Info:
-                            return b.createElement(Z.Z, {
+                            return b.createElement(W.Z, {
                                 className: "chat-line__status"
                             }, Object(Gt.i)(e));
                         case ft.a.Purchase:
                             var t = e.message.user.isIntl ? e.message.user.userDisplayName + " (" + e.message.user.userLogin + ")" : e.message.user.userDisplayName;
-                            return b.createElement(Z.Z, {
+                            return b.createElement(W.Z, {
                                 className: "chat-line__message--special"
-                            }, b.createElement(Z.Z, {
+                            }, b.createElement(W.Z, {
                                 className: "chat-line__status"
                             }, Object(Gt.m)(t, e.purchase.purchased.title, e.purchase.numCrates)), b.createElement(en, {
                                 channelID: this.props.channelID,
@@ -3927,13 +3906,13 @@ webpackJsonp([42], {
                                 message: e
                             });
                         case ft.a.Unraid:
-                            return b.createElement(Z.Z, {
+                            return b.createElement(W.Z, {
                                 className: "chat-line__raid"
                             }, Object(Gt.v)());
                         case ft.a.CrateGift:
                             return Object(Gt.e)(e);
                         case ft.a.Ritual:
-                            return b.createElement(Z.Z, {
+                            return b.createElement(W.Z, {
                                 className: "chat-line__ritual"
                             }, b.createElement(fn, {
                                 badgeSets: this.props.badgeSets,
@@ -3979,18 +3958,18 @@ webpackJsonp([42], {
                     this.calcRecentCheerExpiry(e)
                 }, t.prototype.shouldComponentUpdate = function(e, t) {
                     var n = this.getDisplayData(this.props, this.state),
-                        i = this.getDisplayData(e, t);
-                    return (n.displayCheer && n.displayCheer.id) !== (i.displayCheer && i.displayCheer.id)
+                        a = this.getDisplayData(e, t);
+                    return (n.displayCheer && n.displayCheer.id) !== (a.displayCheer && a.displayCheer.id)
                 }, t.prototype.componentDidUpdate = function() {
                     var e = this.getDisplayData(this.props, this.state),
                         t = e.isRecent,
                         n = e.remainingRecentCheerTime;
                     if (t && (clearTimeout(this.recentCheerTimeout), this.recentCheerTimeout = setTimeout(this.handleProgressExpired, n + 100)), this.renderedMessage) {
-                        var i = this.renderedMessage.getElementsByClassName(En);
-                        if (i.length) {
-                            var a = i[0].getBoundingClientRect().height > 42;
-                            this.state.cheerIsTall !== a && this.setState({
-                                cheerIsTall: a
+                        var a = this.renderedMessage.getElementsByClassName(En);
+                        if (a.length) {
+                            var i = a[0].getBoundingClientRect().height > 42;
+                            this.state.cheerIsTall !== i && this.setState({
+                                cheerIsTall: i
                             })
                         }
                     }
@@ -4000,10 +3979,10 @@ webpackJsonp([42], {
                     var e = this.getDisplayData(this.props, this.state),
                         t = e.isRecent,
                         n = e.remainingRecentCheerTime,
-                        i = e.displayCheer,
-                        a = e.isExpandable;
-                    if (!i) return null;
-                    for (var r = "", s = 0, o = 0, l = i.messageParts; o < l.length; o++) {
+                        a = e.displayCheer,
+                        i = e.isExpandable;
+                    if (!a) return null;
+                    for (var r = "", s = 0, o = 0, l = a.messageParts; o < l.length; o++) {
                         var c = l[o];
                         if (c.type === yt.a.Emote && c.content.cheerAmount && c.content.alt) {
                             var d = c.content.alt.replace(wn, "").toLowerCase();
@@ -4015,18 +3994,18 @@ webpackJsonp([42], {
                             "pinned-cheer__rendered-message--recent": t,
                             "pinned-cheer__rendered-message--top": !t
                         },
-                        h = b.createElement(Zt.a, {
-                            userData: i.user
+                        h = b.createElement(Wt.a, {
+                            userData: a.user
                         }),
                         g = b.createElement("div", {
                             ref: this.saveRenderedMessageRef,
                             className: U(m)
-                        }, b.createElement(Z._21, {
+                        }, b.createElement(W._21, {
                             margin: {
                                 x: 2
                             },
                             borderTop: !0
-                        }), b.createElement(Z.Z, {
+                        }), b.createElement(W.Z, {
                             padding: {
                                 y: .5
                             },
@@ -4037,23 +4016,23 @@ webpackJsonp([42], {
                             currentUserDisplayName: this.props.currentUserDisplayName,
                             currentUserLogin: this.props.currentUserLogin,
                             isCurrentUserModerator: !1,
-                            message: i,
+                            message: a,
                             showModerationIcons: !1,
                             showTimestamps: !1
                         }))),
                         f = null;
-                    if (t) u = b.createElement(Z._25, {
-                        type: Z._30.Strong
+                    if (t) u = b.createElement(W._25, {
+                        type: W._30.Strong
                     }, Object(p.d)("Recent Cheer", "Bits--PinnedCheer"));
                     else {
-                        u = b.createElement(Z._25, {
-                            type: Z._30.Strong
+                        u = b.createElement(W._25, {
+                            type: W._30.Strong
                         }, Object(p.d)("Top Cheer by {user}", {
                             user: h
                         }, "Bits--PinnedCheer"), " :");
                         var v = Object(Gt.j)(Object(F.c)(r + s.toString(), this.props.bitsConfig), this.props.currentUserDisplayName, this.props.currentUserLogin);
-                        f = b.createElement(Z.Z, {
-                            display: Z.L.Inline,
+                        f = b.createElement(W.Z, {
+                            display: W.L.Inline,
                             margin: {
                                 left: .5
                             }
@@ -4064,67 +4043,67 @@ webpackJsonp([42], {
                         }, _[Nn] = this.collapseCheer, _),
                         y = {
                             "pinned-cheer__headline": !0,
-                            "pinned-cheer__headline--clickable": a
+                            "pinned-cheer__headline--clickable": i
                         },
                         C = null;
-                    return t && (C = b.createElement(Z.Z, {
+                    return t && (C = b.createElement(W.Z, {
                         className: "pinned-cheer__progress-bar-placeholder"
-                    }, b.createElement(Z.Z, {
+                    }, b.createElement(W.Z, {
                         className: "pinned-cheer__progress-bar",
-                        display: Z.L.Flex,
-                        flexDirection: Z.N.Column,
-                        justifyContent: Z.Y.End
-                    }, b.createElement(Z._9, {
-                        key: i.id,
+                        display: W.L.Flex,
+                        flexDirection: W.N.Column,
+                        justifyContent: W.Y.End
+                    }, b.createElement(W._9, {
+                        key: a.id,
                         countdown: n / 1e3,
-                        size: Z._10.ExtraSmall,
+                        size: W._10.ExtraSmall,
                         onCountdownEnd: this.onProgressAnimationEnd
                     })))), Dn.debug("Rendering pinned cheer", {
                         remainingRecentCheerTime: n,
                         isRecent: t,
                         recentCheerExpireTime: this.state.recentCheerExpireTime
-                    }), b.createElement(Z.Z, {
+                    }), b.createElement(W.Z, {
                         className: "pinned-cheer",
                         flexGrow: 0,
                         flexShrink: 0,
-                        zIndex: Z._42.Default
+                        zIndex: W._42.Default
                     }, b.createElement("div", {
                         className: U(k),
                         ref: this.saveRootRef
-                    }, b.createElement(Z.U, {
+                    }, b.createElement(W.U, {
                         padding: {
                             x: 2,
                             y: 1
                         },
-                        display: Z.L.Flex,
-                        flexDirection: Z.N.Row,
-                        flexWrap: Z.O.NoWrap
+                        display: W.L.Flex,
+                        flexDirection: W.N.Row,
+                        flexWrap: W.O.NoWrap
                     }, b.createElement("div", {
                         className: U(y),
-                        onClick: a ? this.handleHeadlineClick : void 0
-                    }, b.createElement(Z.Z, {
+                        onClick: i ? this.handleHeadlineClick : void 0
+                    }, b.createElement(W.Z, {
                         flexGrow: 1,
                         flexShrink: 1,
-                        display: Z.L.Flex,
-                        alignItems: Z.c.Center
-                    }, b.createElement(Z._12, {
-                        asset: t ? Z._13.HourGlass : Z._13.Trophy,
+                        display: W.L.Flex,
+                        alignItems: W.c.Center
+                    }, b.createElement(W._12, {
+                        asset: t ? W._13.HourGlass : W._13.Trophy,
                         height: 18,
                         width: 18
-                    }), b.createElement(Z.Z, {
+                    }), b.createElement(W.Z, {
                         margin: {
                             left: .5
                         },
-                        display: Z.L.Inline
-                    }, u), f), b.createElement(Z.Z, {
+                        display: W.L.Inline
+                    }, u), f), b.createElement(W.Z, {
                         className: "pinned-cheer__expand-caret",
                         flexShrink: 0,
                         flexGrow: 0,
-                        display: Z.L.Flex,
-                        justifyContent: Z.Y.Between,
-                        alignItems: Z.c.Center
-                    }, a ? b.createElement(Z._12, {
-                        asset: Z._13.AngleLeft
+                        display: W.L.Flex,
+                        justifyContent: W.Y.Between,
+                        alignItems: W.c.Center
+                    }, i ? b.createElement(W._12, {
+                        asset: W._13.AngleLeft
                     }) : null))), g, C));
                     var _
                 }, t.prototype.calcRecentCheerExpiry = function(e) {
@@ -4136,21 +4115,21 @@ webpackJsonp([42], {
                 }, t.prototype.getDisplayData = function(e, t) {
                     var n = 0;
                     t.recentCheerExpireTime && (n = Math.max(0, t.recentCheerExpireTime - Date.now()));
-                    var i = !!e.recentCheer && !!e.topCheer && e.recentCheer.id === e.topCheer.id,
-                        a = !!n && !!e.recentCheer && !i;
+                    var a = !!e.recentCheer && !!e.topCheer && e.recentCheer.id === e.topCheer.id,
+                        i = !!n && !!e.recentCheer && !a;
                     return {
                         remainingRecentCheerTime: n,
-                        isRecent: a,
-                        displayCheer: a ? e.recentCheer : e.topCheer,
-                        isExpandable: !a || t.cheerIsTall
+                        isRecent: i,
+                        displayCheer: i ? e.recentCheer : e.topCheer,
+                        isExpandable: !i || t.cheerIsTall
                     }
                 }, t = m.__decorate([Object(k.a)(Sn, {
                     props: function(e) {
-                        var t, n, i;
-                        return e.data && e.data.user && e.data.user.cheer && (i = e.data.user.cheer.recentTimeoutMs, e.data.user.cheer.top && (t = Object(_n.a)(e.data.user.cheer.top, e.ownProps.bitsConfig, e.ownProps.blockLinks)), e.data.user.cheer.recent && (n = Object(_n.a)(e.data.user.cheer.recent, e.ownProps.bitsConfig, e.ownProps.blockLinks))), {
+                        var t, n, a;
+                        return e.data && e.data.user && e.data.user.cheer && (a = e.data.user.cheer.recentTimeoutMs, e.data.user.cheer.top && (t = Object(_n.a)(e.data.user.cheer.top, e.ownProps.bitsConfig, e.ownProps.blockLinks)), e.data.user.cheer.recent && (n = Object(_n.a)(e.data.user.cheer.recent, e.ownProps.bitsConfig, e.ownProps.blockLinks))), {
                             topCheer: t,
                             recentCheer: n,
-                            recentTimeoutMs: i
+                            recentTimeoutMs: a
                         }
                     },
                     options: function(e) {
@@ -4168,17 +4147,17 @@ webpackJsonp([42], {
                         variables: {
                             channelID: e.channelID
                         },
-                        topic: Object(H.b)(e.channelID),
+                        topic: Object(V.b)(e.channelID),
                         type: A.c.BitsPinEvent,
                         mutator: function(t, n) {
                             if (n.user.cheer) {
-                                var i = JSON.parse(t.msg);
-                                if (i.channel_id === e.channelID) return Dn.debug("Received pubsub update", {
-                                    hasTopCheer: !!i.top && i.top.has_top_event,
-                                    hasNewTopCheer: !n.user.cheer.top || null !== i.top.tags && n.user.cheer.top.id !== i.top.tags.msg_id,
-                                    hasRecentCheer: !!i.recent && i.recent.has_recent_event,
-                                    hasNewRecentCheer: !n.user.cheer.recent || null !== i.recent.tags && n.user.cheer.recent.id !== i.recent.tags.msg_id
-                                }), i.top && (i.top.has_top_event || "dimiss" === i.action) ? (!n.user.cheer.top || null !== i.top.tags && n.user.cheer.top.id !== i.top.tags.msg_id || "dismiss" === i.action) && (n.user.cheer.top = Object(_n.c)(i.top)) : n.user.cheer.top = null, i.recent && (i.recent.has_recent_event || "dismiss" === i.action) ? (!n.user.cheer.recent || null !== i.recent.tags && n.user.cheer.recent.id !== i.recent.tags.msg_id || "dismiss" === i.action) && (n.user.cheer.recent = Object(_n.c)(i.recent), n.user.cheer.recentTimeoutMs = n.user.cheer.settings.recentTimeoutMs) : n.user.cheer.recent = null, n
+                                var a = JSON.parse(t.msg);
+                                if (a.channel_id === e.channelID) return Dn.debug("Received pubsub update", {
+                                    hasTopCheer: !!a.top && a.top.has_top_event,
+                                    hasNewTopCheer: !n.user.cheer.top || null !== a.top.tags && n.user.cheer.top.id !== a.top.tags.msg_id,
+                                    hasRecentCheer: !!a.recent && a.recent.has_recent_event,
+                                    hasNewRecentCheer: !n.user.cheer.recent || null !== a.recent.tags && n.user.cheer.recent.id !== a.recent.tags.msg_id
+                                }), a.top && (a.top.has_top_event || "dimiss" === a.action) ? (!n.user.cheer.top || null !== a.top.tags && n.user.cheer.top.id !== a.top.tags.msg_id || "dismiss" === a.action) && (n.user.cheer.top = Object(_n.c)(a.top)) : n.user.cheer.top = null, a.recent && (a.recent.has_recent_event || "dismiss" === a.action) ? (!n.user.cheer.recent || null !== a.recent.tags && n.user.cheer.recent.id !== a.recent.tags.msg_id || "dismiss" === a.action) && (n.user.cheer.recent = Object(_n.c)(a.recent), n.user.cheer.recentTimeoutMs = n.user.cheer.settings.recentTimeoutMs) : n.user.cheer.recent = null, n
                             }
                         }
                     }
@@ -4201,7 +4180,7 @@ webpackJsonp([42], {
                         }, {
                             "bits-leaderboard-medal__profile-image--bronze": this.props.medal === hn.Bronze
                         });
-                    return b.createElement(Z.Z, {
+                    return b.createElement(W.Z, {
                         className: "bits-leaderboard-medal"
                     }, e, b.createElement("img", {
                         className: t,
@@ -4547,22 +4526,22 @@ webpackJsonp([42], {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return m.__extends(t, e), t.prototype.render = function() {
-                    if (this.props.data && this.props.data.loading) return b.createElement(Z.Z, {
-                        display: Z.L.InlineBlock,
-                        alignItems: Z.c.Center,
+                    if (this.props.data && this.props.data.loading) return b.createElement(W.Z, {
+                        display: W.L.InlineBlock,
+                        alignItems: W.c.Center,
                         flexGrow: 1
                     });
-                    if (this.props.data && !this.props.data.loading && this.props.data.error) return b.createElement(Z.Z, {
-                        display: Z.L.InlineBlock,
-                        alignItems: Z.c.Center,
+                    if (this.props.data && !this.props.data.loading && this.props.data.error) return b.createElement(W.Z, {
+                        display: W.L.InlineBlock,
+                        alignItems: W.c.Center,
                         flexGrow: 1
-                    }, b.createElement(Z.Z, {
+                    }, b.createElement(W.Z, {
                         padding: {
                             top: 1,
                             x: 4
                         }
-                    }, b.createElement(Z._12, {
-                        asset: Z._13.DeadGlitch,
+                    }, b.createElement(W._12, {
+                        asset: W._13.DeadGlitch,
                         height: 24,
                         width: 24
                     })));
@@ -4571,45 +4550,45 @@ webpackJsonp([42], {
                         n = "";
                     if (this.props.data && this.props.data.user) {
                         n = this.props.data.user.displayName || this.props.data.user.login;
-                        var i = b.createElement(Z._25, {
+                        var a = b.createElement(W._25, {
                             ellipsis: !0,
                             bold: !0
                         }, n);
-                        this.props.selfId && this.props.selfId === this.props.id && (i = b.createElement(Z._3, {
+                        this.props.selfId && this.props.selfId === this.props.id && (a = b.createElement(W._3, {
                             label: n,
-                            type: Z._4.Brand
-                        })), t = b.createElement(Z.Z, {
+                            type: W._4.Brand
+                        })), t = b.createElement(W.Z, {
                             ellipsis: !0,
                             className: "bits-leaderboard-header-first-entry__username"
-                        }, i)
+                        }, a)
                     }
-                    var a;
+                    var i;
                     if (this.props.isEmpty || this.props.data && !this.props.data.user) {
                         var r = d(1);
-                        a = b.createElement(Z.Z, {
+                        i = b.createElement(W.Z, {
                             className: "bits-leaderboard-header-first-entry__text"
-                        }, b.createElement(Z._25, {
-                            color: Z.I.Link,
+                        }, b.createElement(W._25, {
+                            color: W.I.Link,
                             bold: !0
                         }, r))
                     } else {
                         var s = this.props.data && this.props.data.user && this.props.data.user.profileImageURL || p.a.defaultAvatarURL;
-                        a = b.createElement(Z.Z, {
-                            overflow: Z._2.Hidden,
-                            display: Z.L.InlineFlex,
+                        i = b.createElement(W.Z, {
+                            overflow: W._2.Hidden,
+                            display: W.L.InlineFlex,
                             flexGrow: 1
-                        }, b.createElement(Z.Z, {
+                        }, b.createElement(W.Z, {
                             flexShrink: 0
                         }, b.createElement(Ln, {
                             size: 32,
                             medal: hn.Gold,
                             profileImageUrl: s
-                        })), b.createElement(Z.Z, {
+                        })), b.createElement(W.Z, {
                             className: "bits-leaderboard-header-first-entry__text",
                             margin: {
                                 left: .5
                             }
-                        }, t, b.createElement(Z.Z, {
+                        }, t, b.createElement(W.Z, {
                             className: "bits-leaderboard-header-first-entry__score"
                         }, b.createElement(Tn.a, {
                             animated: !1,
@@ -4618,16 +4597,16 @@ webpackJsonp([42], {
                             prefix: "Cheer",
                             bitsConfig: e,
                             size: Tn.b.ExtremelySmall,
-                            display: Z.L.InlineFlex,
+                            display: W.L.InlineFlex,
                             amount: this.props.score,
                             formattedNumber: !0,
-                            alignItems: Z.c.Center
+                            alignItems: W.c.Center
                         }))))
                     }
-                    return this.props.isEmpty || (a = b.createElement(Z._33, {
+                    return this.props.isEmpty || (i = b.createElement(W._33, {
                         label: n,
-                        direction: Z._35.Bottom
-                    }, a)), b.createElement(Z.Z, {
+                        direction: W._35.Bottom
+                    }, i)), b.createElement(W.Z, {
                         className: "bits-leaderboard-header-first-entry",
                         padding: {
                             x: 1,
@@ -4635,8 +4614,8 @@ webpackJsonp([42], {
                             top: 1
                         },
                         flexShrink: 0,
-                        alignItems: Z.c.Center
-                    }, a)
+                        alignItems: W.c.Center
+                    }, i)
                 }, t
             }(b.Component)),
             Fn = Object(C.d)(Object(k.a)(xn, {
@@ -4658,22 +4637,22 @@ webpackJsonp([42], {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return m.__extends(t, e), t.prototype.render = function() {
-                    if (this.props.data && this.props.data.loading) return b.createElement(Z.Z, {
-                        display: Z.L.InlineFlex,
-                        alignItems: Z.c.Center,
+                    if (this.props.data && this.props.data.loading) return b.createElement(W.Z, {
+                        display: W.L.InlineFlex,
+                        alignItems: W.c.Center,
                         flexGrow: 1
                     });
-                    if (this.props.data && !this.props.data.loading && this.props.data.error) return b.createElement(Z.Z, {
-                        display: Z.L.InlineFlex,
-                        alignItems: Z.c.Center,
+                    if (this.props.data && !this.props.data.loading && this.props.data.error) return b.createElement(W.Z, {
+                        display: W.L.InlineFlex,
+                        alignItems: W.c.Center,
                         flexGrow: 1
-                    }, b.createElement(Z.Z, {
+                    }, b.createElement(W.Z, {
                         padding: {
                             top: 1,
                             x: 4
                         }
-                    }, b.createElement(Z._12, {
-                        asset: Z._13.DeadGlitch,
+                    }, b.createElement(W._12, {
+                        asset: W._13.DeadGlitch,
                         height: 24,
                         width: 24
                     })));
@@ -4682,46 +4661,46 @@ webpackJsonp([42], {
                         n = "";
                     if (this.props.data && this.props.data.user) {
                         n = this.props.data.user.displayName || this.props.data.user.login;
-                        var i = b.createElement(Z._25, {
+                        var a = b.createElement(W._25, {
                             ellipsis: !0,
                             bold: !0
                         }, n);
-                        this.props.selfId && this.props.selfId === this.props.id && (i = b.createElement(Z._3, {
+                        this.props.selfId && this.props.selfId === this.props.id && (a = b.createElement(W._3, {
                             label: n,
-                            type: Z._4.Brand
-                        })), t = b.createElement(Z.Z, {
+                            type: W._4.Brand
+                        })), t = b.createElement(W.Z, {
                             ellipsis: !0,
                             className: "bits-leaderboard-header-runner-up-entry__username",
                             margin: {
                                 x: .5
                             }
-                        }, i)
+                        }, a)
                     }
-                    var a;
+                    var i;
                     if (this.props.isEmpty || this.props.data && !this.props.data.user) {
                         var r = d(1);
-                        a = b.createElement(Z.Z, {
+                        i = b.createElement(W.Z, {
                             className: "bits-leaderboard-header-runner-up-entry__text",
                             margin: {
                                 left: .5
                             }
-                        }, b.createElement(Z._25, {
-                            color: Z.I.Link,
+                        }, b.createElement(W._25, {
+                            color: W.I.Link,
                             bold: !0
                         }, r))
                     } else {
                         var s = this.props.data && this.props.data.user && this.props.data.user.profileImageURL || p.a.defaultAvatarURL;
-                        a = b.createElement(Z.Z, {
-                            overflow: Z._2.Hidden,
-                            display: Z.L.InlineFlex,
+                        i = b.createElement(W.Z, {
+                            overflow: W._2.Hidden,
+                            display: W.L.InlineFlex,
                             flexGrow: 1
-                        }, b.createElement(Z.Z, {
+                        }, b.createElement(W.Z, {
                             flexShrink: 0
                         }, b.createElement(Ln, {
                             size: 20,
                             medal: this.props.medal,
                             profileImageUrl: s
-                        })), t, b.createElement(Z.Z, {
+                        })), t, b.createElement(W.Z, {
                             flexShrink: 0,
                             className: "bits-leaderboard-header-runner-up-entry__score",
                             margin: {
@@ -4734,20 +4713,20 @@ webpackJsonp([42], {
                             prefix: "Cheer",
                             bitsConfig: e,
                             size: Tn.b.ExtremelySmall,
-                            display: Z.L.InlineFlex,
+                            display: W.L.InlineFlex,
                             amount: this.props.score,
                             formattedNumber: !0,
-                            alignItems: Z.c.Center
+                            alignItems: W.c.Center
                         })))
                     }
-                    return this.props.isEmpty || (a = b.createElement(Z._33, {
+                    return this.props.isEmpty || (i = b.createElement(W._33, {
                         label: n,
-                        direction: Z._35.Bottom
-                    }, a)), b.createElement(Z.Z, {
+                        direction: W._35.Bottom
+                    }, i)), b.createElement(W.Z, {
                         className: "bits-leaderboard-header-runner-up-entry",
-                        display: Z.L.Block,
-                        alignItems: Z.c.Center
-                    }, a)
+                        display: W.L.Block,
+                        alignItems: W.c.Center
+                    }, i)
                 }, t
             }(b.Component)),
             Un = Object(C.d)(Object(k.a)(xn, {
@@ -4778,7 +4757,7 @@ webpackJsonp([42], {
                             bitsConfig: t.props.bitsConfig
                         }) : b.createElement(Fn, {
                             isEmpty: !0
-                        }), b.createElement(Z.U, {
+                        }), b.createElement(W.U, {
                             key: 1
                         }, n)
                     }, t
@@ -4787,23 +4766,23 @@ webpackJsonp([42], {
                     var e = this.renderFirstPlaceEntry(),
                         t = this.renderRunnerUpEntry(2, hn.Silver),
                         n = this.renderRunnerUpEntry(3, hn.Bronze);
-                    return b.createElement(Z._21, {
+                    return b.createElement(W._21, {
                         className: "pinned-cheer-v2-header",
-                        background: Z.m.Base
-                    }, b.createElement(Z.Z, {
-                        display: Z.L.Flex,
-                        flexWrap: Z.O.NoWrap,
-                        justifyContent: Z.Y.Between,
+                        background: W.m.Base
+                    }, b.createElement(W.Z, {
+                        display: W.L.Flex,
+                        flexWrap: W.O.NoWrap,
+                        justifyContent: W.Y.Between,
                         fullHeight: !0,
                         fullWidth: !0
-                    }, e, b.createElement(Z.Z, {
+                    }, e, b.createElement(W.Z, {
                         className: "pinned-cheer-v2-header__runner-up-entries"
                     }, t, n)))
                 }, t.prototype.renderRunnerUpEntry = function(e, t) {
                     var n = null;
                     this.props.topEdges && this.props.topEdges[e - 1] && (n = this.props.topEdges[e - 1]);
-                    var i;
-                    return i = n ? b.createElement(Un, {
+                    var a;
+                    return a = n ? b.createElement(Un, {
                         selfId: this.props.selfId,
                         id: n.node.id,
                         score: n.node.score,
@@ -4812,9 +4791,9 @@ webpackJsonp([42], {
                     }) : b.createElement(Un, {
                         isEmpty: !0,
                         medal: hn.Gold
-                    }), b.createElement(Z.U, {
+                    }), b.createElement(W.U, {
                         key: e
-                    }, i)
+                    }, a)
                 }, t
             }(b.Component)),
             An = n("aK1p"),
@@ -4833,21 +4812,21 @@ webpackJsonp([42], {
                     if (this.props.data.loading || this.props.data.error || !this.props.data.user || null === this.props.data.user.cheer || null === this.props.data.user.cheer.leaderboard) return null;
                     var e = this.props.data.user.cheer.leaderboard.entries.edges.slice(0, 3),
                         t = null;
-                    this.state.isExpanded && (t = b.createElement(Z.Z, null));
+                    this.state.isExpanded && (t = b.createElement(W.Z, null));
                     var n;
-                    n = this.state.isExpanded ? Z._13.GlyphArrUp : Z._13.GlyphArrDown;
-                    var i = b.createElement(Z.Z, {
-                        textAlign: Z._26.Right,
+                    n = this.state.isExpanded ? W._13.GlyphArrUp : W._13.GlyphArrDown;
+                    var a = b.createElement(W.Z, {
+                        textAlign: W._26.Right,
                         className: "pinned-cheer-v2__arrow",
-                        position: Z._6.Relative
-                    }, b.createElement(Z.u, {
-                        type: Z.z.Text,
+                        position: W._6.Relative
+                    }, b.createElement(W.u, {
+                        type: W.z.Text,
                         icon: n,
                         onClick: this.toggleIsExpanded
                     }));
-                    return this.state.isExpanded || (i = null), b.createElement(Z.Z, {
+                    return this.state.isExpanded || (a = null), b.createElement(W.Z, {
                         className: "pinned-cheer-v2"
-                    }, b.createElement(Z._21, {
+                    }, b.createElement(W._21, {
                         borderBottom: !0
                     }, b.createElement(jn, {
                         leaderboardId: this.props.data.user.cheer.leaderboard.id,
@@ -4855,10 +4834,10 @@ webpackJsonp([42], {
                         toggleExpand: this.toggleIsExpanded,
                         selfId: this.props.userID,
                         bitsConfig: this.props.bitsConfig
-                    }), t), i)
+                    }), t), a)
                 }, t
             }(b.Component)),
-            Hn = Object(C.d)(Object(k.a)(An, {
+            Vn = Object(C.d)(Object(k.a)(An, {
                 name: "data",
                 options: function(e) {
                     return {
@@ -4869,7 +4848,7 @@ webpackJsonp([42], {
                 }
             }), Object(tt.a)(function(e) {
                 return {
-                    topic: e.data.user && e.data.user.cheer && e.data.user.cheer.leaderboard ? Object(H.a)(e.data.user.cheer.leaderboard) : "",
+                    topic: e.data.user && e.data.user.cheer && e.data.user.cheer.leaderboard ? Object(V.a)(e.data.user.cheer.leaderboard) : "",
                     mutator: function(e, t) {
                         if (t.user && null !== t.user.cheer && null !== t.user.cheer.leaderboard) {
                             L.j.debug("Received pubsub update from leaderboard");
@@ -4886,7 +4865,7 @@ webpackJsonp([42], {
                     }
                 }
             }))(Pn),
-            Vn = function(e) {
+            Hn = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -4900,7 +4879,7 @@ webpackJsonp([42], {
                     this.getGiftingExperimentAssignment()
                 }, t.prototype.render = function() {
                     var e = null;
-                    return this.props.bitsConfig && (e = this.state && this.state.pcheersV2Enabled && this.props.isStaff ? b.createElement(Hn, {
+                    return this.props.bitsConfig && (e = this.state && this.state.pcheersV2Enabled && this.props.isStaff ? b.createElement(Vn, {
                         channelID: this.props.channelID,
                         userID: this.props.userID,
                         bitsConfig: this.props.bitsConfig
@@ -4934,16 +4913,16 @@ webpackJsonp([42], {
                     })
                 }, t
             }(b.Component),
-            Wn = Object(f.b)(function(e) {
+            Zn = Object(f.b)(function(e) {
                 var t = Object(v.c)(e);
                 return {
                     isStaff: t && t.roles && t.roles.isStaff
                 }
-            })(Vn);
+            })(Hn);
         ! function(e) {
             e.Badge = "badge_update", e.Balance = "balance_update"
         }(On || (On = {}));
-        var Zn, Gn = n("6BvN"),
+        var Wn, Gn = n("6BvN"),
             qn = n("HM6l"),
             zn = n("c3pS"),
             Yn = (n("56e8"), function(e) {
@@ -4955,13 +4934,13 @@ webpackJsonp([42], {
                         srcSet: e.badge.image1x + " 1x, " + e.badge.image2x + " 2x, " + e.badge.image4x + " 4x"
                     });
                 if (!t) return n;
-                var i = e.progress ? Math.max(Math.round(18 * (1 - e.progress)), 1) : 18;
+                var a = e.progress ? Math.max(Math.round(18 * (1 - e.progress)), 1) : 18;
                 return b.createElement("div", {
                     className: "cheer-badge__progress-container"
                 }, n, b.createElement("div", {
                     className: "cheer-badge__progress-overlay",
                     style: {
-                        width: i + "px"
+                        width: a + "px"
                     },
                     "data-test-selector": "cheer-progress"
                 }))
@@ -4969,12 +4948,12 @@ webpackJsonp([42], {
             $n = n("3iBR"),
             Qn = function(e) {
                 var t;
-                e.selfBitsBadge && (e.selfBitsBadge.current || e.selfBitsBadge.next) && (t = b.createElement(Z.Z, {
+                e.selfBitsBadge && (e.selfBitsBadge.current || e.selfBitsBadge.next) && (t = b.createElement(W.Z, {
                     padding: {
                         bottom: .5
                     }
-                }, e.selfBitsBadge.current && b.createElement(Z.Z, {
-                    display: Z.L.Inline,
+                }, e.selfBitsBadge.current && b.createElement(W.Z, {
+                    display: W.L.Inline,
                     margin: {
                         right: .5
                     }
@@ -4987,7 +4966,7 @@ webpackJsonp([42], {
                     bitsToNextBadge: e.selfBitsBadge.nextBits - e.selfBitsBadge.totalBits
                 }, "Bits--BalanceFooter")));
                 var n = Object(p.d)("{bitsGem} Log in to see your Bits balance", {
-                    bitsGem: b.createElement(W.a, {
+                    bitsGem: b.createElement(Z.a, {
                         count: 100,
                         withImage: !0,
                         bitsConfig: e.bitsConfig,
@@ -4995,23 +4974,23 @@ webpackJsonp([42], {
                     })
                 }, "Bits--BalanceFooter");
                 return void 0 !== e.balance && null !== e.balance && (n = Object(p.d)("You have {currentBits}", {
-                    currentBits: b.createElement(W.a, {
+                    currentBits: b.createElement(Z.a, {
                         count: e.balance,
                         withImage: !0,
                         withText: !0,
                         bitsConfig: e.bitsConfig,
                         themeOverride: _.a.Dark
                     })
-                }, "Bits--BalanceFooter")), b.createElement(Z.Z, {
+                }, "Bits--BalanceFooter")), b.createElement(W.Z, {
                     flexGrow: 1,
                     padding: 1,
                     className: "bits-balance-footer"
-                }, t, b.createElement(Z.Z, {
-                    display: Z.L.Flex,
+                }, t, b.createElement(W.Z, {
+                    display: W.L.Flex,
                     flexGrow: 1,
-                    alignItems: Z.c.Center,
-                    justifyContent: Z.Y.Between
-                }, b.createElement("div", null, n), b.createElement(Z.u, {
+                    alignItems: W.c.Center,
+                    justifyContent: W.Y.Between
+                }, b.createElement("div", null, n), b.createElement(W.u, {
                     disabled: void 0 === e.balance || void 0 !== e.balance && e.balance > $n.i,
                     onClick: e.onClickGetBits,
                     "data-test-selector": "get-bits-button",
@@ -5019,42 +4998,42 @@ webpackJsonp([42], {
                 }, Object(p.d)("Get Bits", "Bits--BalanceFooter"))))
             },
             Jn = function() {
-                return b.createElement(Z._21, {
+                return b.createElement(W._21, {
                     className: "t-bits-card",
-                    display: Z.L.Flex,
-                    flexDirection: Z.N.Column,
-                    alignItems: Z.c.Center,
-                    justifyContent: Z.Y.Center,
-                    textAlign: Z._26.Center,
+                    display: W.L.Flex,
+                    flexDirection: W.N.Column,
+                    alignItems: W.c.Center,
+                    justifyContent: W.Y.Center,
+                    textAlign: W._26.Center,
                     padding: 1,
                     border: !0,
-                    background: Z.m.Base,
+                    background: W.m.Base,
                     elevation: 3,
                     fullWidth: !0
-                }, b.createElement(Z._25, {
+                }, b.createElement(W._25, {
                     italic: !0
                 }, Object(p.d)("Have no fear, your Bits inventory is safe! The ability to Cheer will return shortly.", "BitsCard")))
             },
             Kn = n("QRuM"),
             Xn = n("ySfT"),
-            ei = function(e) {
-                return b.createElement(Z.Z, {
-                    display: Z.L.Flex,
+            ea = function(e) {
+                return b.createElement(W.Z, {
+                    display: W.L.Flex,
                     flexGrow: 1,
-                    flexDirection: Z.N.Column,
-                    justifyContent: Z.Y.Center,
-                    alignItems: Z.c.Center,
+                    flexDirection: W.N.Column,
+                    justifyContent: W.Y.Center,
+                    alignItems: W.c.Center,
                     padding: 1
-                }, b.createElement(Z.Z, {
+                }, b.createElement(W.Z, {
                     padding: {
                         top: 2,
                         bottom: 2
                     }
-                }, b.createElement(Z._25, {
-                    type: Z._30.H5,
-                    color: Z.I.Link,
+                }, b.createElement(W._25, {
+                    type: W._30.H5,
+                    color: W.I.Link,
                     bold: !0
-                }, Object(p.d)("Cheering Supports Your Streamer!", "Bits--CheermoteIntro"))), b.createElement(Z._25, null, Object(p.d)("Select a Cheermote to start your Cheer", "Bits--CheermoteIntro")), b.createElement(Z.Z, {
+                }, Object(p.d)("Cheering Supports Your Streamer!", "Bits--CheermoteIntro"))), b.createElement(W._25, null, Object(p.d)("Select a Cheermote to start your Cheer", "Bits--CheermoteIntro")), b.createElement(W.Z, {
                     padding: {
                         top: 2,
                         bottom: 1
@@ -5065,7 +5044,7 @@ webpackJsonp([42], {
                     "data-test-selector": "help-link"
                 }, Object(p.d)("How do I cheer?", "Bits--CheermoteIntro"))))
             },
-            ti = function(e) {
+            ta = function(e) {
                 var t = e.headline || e.prefix + (e.tier || "");
                 if (e.tournament && e.tier <= 0) {
                     var n = e.tournament.teams.find(function(t) {
@@ -5073,114 +5052,114 @@ webpackJsonp([42], {
                     });
                     n && (t = n.name + " - " + e.prefix)
                 }
-                var i = e.tier;
-                return e.event && !e.tier && (i = 1), b.createElement(Z.Z, {
-                    display: Z.L.Flex,
-                    flexDirection: Z.N.Column,
-                    alignItems: Z.c.Center,
+                var a = e.tier;
+                return e.event && !e.tier && (a = 1), b.createElement(W.Z, {
+                    display: W.L.Flex,
+                    flexDirection: W.N.Column,
+                    alignItems: W.c.Center,
                     padding: 1
-                }, b.createElement(Z._25, {
-                    type: Z._30.H4,
+                }, b.createElement(W._25, {
+                    type: W._30.H4,
                     bold: !0
                 }, t), b.createElement(Tn.a, {
                     prefix: e.prefix,
-                    amount: i,
+                    amount: a,
                     bitsConfig: e.bitsConfig,
                     showImage: !0,
                     showAmount: !(e.event && !e.tier)
                 }))
             },
-            ni = (n("DVR9"), function(e) {
+            na = (n("DVR9"), function(e) {
                 var t = null;
-                e.minToCheer > 1 && (t = b.createElement(Z._25, {
-                    color: Z.I.Alt2,
+                e.minToCheer > 1 && (t = b.createElement(W._25, {
+                    color: W.I.Alt2,
                     italic: !0
                 }, Object(p.d)("This channel has a Cheer minimum of {minToCheer} Bits", {
                     minToCheer: e.minToCheer
                 }, "Bits--CheermoteTierIntro")));
                 var n = null;
-                return e.minToPin > 0 && (n = b.createElement(Z._25, {
-                    color: Z.I.Alt2,
+                return e.minToPin > 0 && (n = b.createElement(W._25, {
+                    color: W.I.Alt2,
                     italic: !0
                 }, Object(p.d)("Pinning your Cheer is a minimum of {minToPin} Bits", {
                     minToPin: e.minToPin
-                }, "Bits--CheermoteTierIntro"))), b.createElement(Z.Z, {
-                    display: Z.L.Flex,
+                }, "Bits--CheermoteTierIntro"))), b.createElement(W.Z, {
+                    display: W.L.Flex,
                     flexGrow: 1,
-                    flexDirection: Z.N.Column,
-                    alignItems: Z.c.Center,
-                    justifyContent: Z.Y.Center,
+                    flexDirection: W.N.Column,
+                    alignItems: W.c.Center,
+                    justifyContent: W.Y.Center,
                     padding: 1,
                     className: "cheermote-tier-intro"
-                }, b.createElement(Z.Z, {
+                }, b.createElement(W.Z, {
                     padding: {
                         x: 4
                     },
                     margin: {
                         bottom: 1
                     }
-                }, b.createElement(Z._25, {
-                    color: Z.I.Alt2
+                }, b.createElement(W._25, {
+                    color: W.I.Alt2
                 }, Object(p.d)("Cheermotes have multiple tiers, rollover below to see each one!", "Bits--CheermoteTierIntro"))), t, n)
             }),
-            ii = n("1bR2"),
-            ai = n.n(ii),
-            ri = n("vDGQ"),
-            si = (n("CGWe"), function(e) {
-                return Object(ri.d)({
-                    action: ri.a.View,
-                    type: ri.c.BitsIntro,
+            aa = n("1bR2"),
+            ia = n.n(aa),
+            ra = n("vDGQ"),
+            sa = (n("CGWe"), function(e) {
+                return Object(ra.d)({
+                    action: ra.a.View,
+                    type: ra.c.BitsIntro,
                     channelId: e.channelID
-                }), b.createElement(Z.Z, {
+                }), b.createElement(W.Z, {
                     "data-test-selector": "crate-intro"
-                }, b.createElement(Z.Z, {
+                }, b.createElement(W.Z, {
                     padding: {
                         x: 1,
                         top: 2,
                         bottom: 1
                     }
-                }, b.createElement(Z._25, {
-                    fontSize: Z.P.Size4,
+                }, b.createElement(W._25, {
+                    fontSize: W.P.Size4,
                     bold: !0
-                }, Object(p.d)("Share the Holiday Cheer!", "Crates"))), b.createElement(Z._21, {
+                }, Object(p.d)("Share the Holiday Cheer!", "Crates"))), b.createElement(W._21, {
                     className: "crates-holiday-background",
-                    background: Z.m.Alt,
+                    background: W.m.Alt,
                     padding: 1,
                     margin: {
                         y: 1
                     },
-                    display: Z.L.Flex,
-                    justifyContent: Z.Y.Around,
-                    alignItems: Z.c.End,
+                    display: W.L.Flex,
+                    justifyContent: W.Y.Around,
+                    alignItems: W.c.End,
                     borderTop: !0,
                     borderBottom: !0
-                }, b.createElement(Z.e, {
-                    type: Z.i.BounceIn,
-                    delay: Z.f.Long,
+                }, b.createElement(W.e, {
+                    type: W.i.BounceIn,
+                    delay: W.f.Long,
                     enabled: !0
-                }, b.createElement(Z._33, {
+                }, b.createElement(W._33, {
                     label: "XmasRaid"
                 }, b.createElement("img", {
                     height: "28",
                     width: "28",
                     srcSet: "https://static-cdn.jtvnw.net/emoticons/v1/633161/1.0 1.0x, https://static-cdn.jtvnw.net/emoticons/v1/633161/2.0 2.0x, https://static-cdn.jtvnw.net/emoticons/v1/633161/3.0 3.0x",
                     alt: "XmasRaid"
-                }))), b.createElement(Z.e, {
-                    type: Z.i.BounceIn,
-                    delay: Z.f.Medium,
+                }))), b.createElement(W.e, {
+                    type: W.i.BounceIn,
+                    delay: W.f.Medium,
                     enabled: !0
-                }, b.createElement(Z._33, {
+                }, b.createElement(W._33, {
                     label: "MerryPurple"
                 }, b.createElement("img", {
                     height: "28",
                     width: "28",
                     srcSet: "https://static-cdn.jtvnw.net/emoticons/v1/633177/1.0 1.0x, https://static-cdn.jtvnw.net/emoticons/v1/633177/2.0 2.0x, https://static-cdn.jtvnw.net/emoticons/v1/633177/3.0 3.0x",
                     alt: "MerryPurple"
-                }))), b.createElement(Z.e, {
-                    type: Z.i.BounceIn,
-                    delay: Z.f.Short,
+                }))), b.createElement(W.e, {
+                    type: W.i.BounceIn,
+                    delay: W.f.Short,
                     enabled: !0
-                }, b.createElement(Z._33, {
+                }, b.createElement(W._33, {
                     label: "GiftRage"
                 }, b.createElement("img", {
                     height: "28",
@@ -5188,68 +5167,68 @@ webpackJsonp([42], {
                     srcSet: "https://static-cdn.jtvnw.net/emoticons/v1/634141/1.0 1.0x, https://static-cdn.jtvnw.net/emoticons/v1/634141/2.0 2.0x, https://static-cdn.jtvnw.net/emoticons/v1/634141/3.0 3.0x",
                     alt: "GiftRage"
                 }))), b.createElement("img", {
-                    src: ai.a,
+                    src: ia.a,
                     height: "50",
                     width: "50"
-                }), b.createElement(Z.e, {
-                    type: Z.i.BounceIn,
-                    delay: Z.f.Short,
+                }), b.createElement(W.e, {
+                    type: W.i.BounceIn,
+                    delay: W.f.Short,
                     enabled: !0
-                }, b.createElement(Z._33, {
+                }, b.createElement(W._33, {
                     label: "RudolphWhoa"
                 }, b.createElement("img", {
                     height: "28",
                     width: "28",
                     srcSet: "https://static-cdn.jtvnw.net/emoticons/v1/633166/1.0 1.0x, https://static-cdn.jtvnw.net/emoticons/v1/633166/2.0 2.0x, https://static-cdn.jtvnw.net/emoticons/v1/633166/3.0 3.0x",
                     alt: "RudolphWhoa"
-                }))), b.createElement(Z.e, {
-                    type: Z.i.BounceIn,
-                    delay: Z.f.Medium,
+                }))), b.createElement(W.e, {
+                    type: W.i.BounceIn,
+                    delay: W.f.Medium,
                     enabled: !0
-                }, b.createElement(Z._33, {
+                }, b.createElement(W._33, {
                     label: "FeelsGingerMan"
                 }, b.createElement("img", {
                     height: "28",
                     width: "28",
                     srcSet: "https://static-cdn.jtvnw.net/emoticons/v1/633171/1.0 1x,https://static-cdn.jtvnw.net/emoticons/v1/633171/2.0 2x,https://static-cdn.jtvnw.net/emoticons/v1/633171/3.0 4x",
                     alt: "FeelsGingerMan"
-                }))), b.createElement(Z.e, {
-                    type: Z.i.BounceIn,
-                    delay: Z.f.Long,
+                }))), b.createElement(W.e, {
+                    type: W.i.BounceIn,
+                    delay: W.f.Long,
                     enabled: !0
-                }, b.createElement(Z._33, {
+                }, b.createElement(W._33, {
                     label: "OrnaMental"
                 }, b.createElement("img", {
                     height: "28",
                     width: "28",
                     srcSet: "https://static-cdn.jtvnw.net/emoticons/v1/633170/1.0 1.0x, https://static-cdn.jtvnw.net/emoticons/v1/633170/2.0 2.0x, https://static-cdn.jtvnw.net/emoticons/v1/633170/3.0 3.0x",
                     alt: "OrnaMental"
-                })))), b.createElement(Z.Z, {
+                })))), b.createElement(W.Z, {
                     padding: 1
-                }, b.createElement(Z._25, {
-                    type: Z._30.P
+                }, b.createElement(W._25, {
+                    type: W._30.P
                 }, Object(p.d)("Cheer any amount to support your streamer, and get a holiday gift! Cheer {minBits, number} Bits or more, and others in chat can get a gift too!", {
                     minBits: 250
-                }, "Crates")), b.createElement(Z._25, {
-                    type: Z._30.Strong
+                }, "Crates")), b.createElement(W._25, {
+                    type: W._30.Strong
                 }, b.createElement("a", {
                     href: "http://link.twitch.tv/holiday-emotes",
                     target: "_blank",
                     rel: "noreferrer noopener"
                 }, Object(p.d)("Details", "Crates")))))
             }),
-            oi = (n("kjfG"), function() {
-                return b.createElement(Z.Z, {
+            oa = (n("kjfG"), function() {
+                return b.createElement(W.Z, {
                     className: "owl-2018-introduction"
-                }, b.createElement(Z.Z, {
+                }, b.createElement(W.Z, {
                     padding: {
                         top: 2,
                         bottom: 1
                     }
-                }, b.createElement(Z._25, {
-                    fontSize: Z.P.Size5,
+                }, b.createElement(W._25, {
+                    fontSize: W.P.Size5,
                     bold: !0
-                }, Object(p.d)("Cheer with Bits and unlock loot!", "OWL2018Introduction"))), b.createElement(Z.Z, {
+                }, Object(p.d)("Cheer with Bits and unlock loot!", "OWL2018Introduction"))), b.createElement(W.Z, {
                     className: "owl-2018-introduction__banner-background",
                     padding: {
                         top: 1
@@ -5257,43 +5236,43 @@ webpackJsonp([42], {
                 }, b.createElement("img", {
                     className: "owl-2018-introduction__banner-image",
                     src: $n.c + "/owl-2017/overwatch-wide.png"
-                })), b.createElement(Z.Z, {
+                })), b.createElement(W.Z, {
                     padding: {
                         x: 2,
                         top: 1,
                         bottom: .5
                     }
-                }, b.createElement(Z._25, null, Object(p.d)("Cheer with Bits to encourage your team and unlock exclusive emotes and in-game skins. Cheer 250 Bits or more and unlock an emote for others in chat!", "OWL2018Introduction"))), b.createElement(Z.Z, {
+                }, b.createElement(W._25, null, Object(p.d)("Cheer with Bits to encourage your team and unlock exclusive emotes and in-game skins. Cheer 250 Bits or more and unlock an emote for others in chat!", "OWL2018Introduction"))), b.createElement(W.Z, {
                     padding: {
                         bottom: 1
                     }
-                }, b.createElement(Z._25, {
-                    color: Z.I.Link,
+                }, b.createElement(W._25, {
+                    color: W.I.Link,
                     bold: !0
                 }, Object(p.d)("Details", "OWL2018Introduction"))))
             });
         ! function(e) {
-            e.CratesChristmas = "CratesChristmas", e.OWL2018 = "overwatchleague"
-        }(Zn || (Zn = {}));
-        var li, ci = function(e) {
+            e.CratesChristmas = "CratesChristmas", e.OWL2018 = "owl2018"
+        }(Wn || (Wn = {}));
+        var la, ca = function(e) {
                 switch (e.event) {
-                    case Zn.OWL2018:
-                        return b.createElement(oi, null);
-                    case Zn.CratesChristmas:
-                        return b.createElement(si, {
+                    case Wn.OWL2018:
+                        return b.createElement(oa, null);
+                    case Wn.CratesChristmas:
+                        return b.createElement(sa, {
                             onClickHelp: e.onClickHelp,
                             channelID: e.channelID
                         });
                     default:
-                        return b.createElement(ei, {
+                        return b.createElement(ea, {
                             onClickHelp: e.onClickHelp
                         })
                 }
             },
-            di = n("N221"),
-            ui = n("cv4W"),
-            mi = n.n(ui),
-            pi = function(e) {
+            da = n("N221"),
+            ua = n("cv4W"),
+            ma = n.n(ua),
+            pa = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -5305,33 +5284,33 @@ webpackJsonp([42], {
                             bitsToGo: t
                         }, "Crates")
                     } else e = Object(p.d)("Your Cheer will share gifts with chat!", "Crates");
-                    return b.createElement(Z._21, {
+                    return b.createElement(W._21, {
                         className: "crate-christmas-2017-reminder",
-                        background: Z.m.Alt,
+                        background: W.m.Alt,
                         borderTop: !0,
                         padding: 1
-                    }, b.createElement(Z.Z, {
-                        display: Z.L.Inline,
+                    }, b.createElement(W.Z, {
+                        display: W.L.Inline,
                         margin: {
                             right: .5
                         }
                     }, b.createElement("img", {
-                        src: mi.a,
+                        src: ma.a,
                         height: "22",
                         width: "22"
-                    })), b.createElement(Z._25, {
-                        type: Z._30.Strong
+                    })), b.createElement(W._25, {
+                        type: W._30.Strong
                     }, e))
                 }, t
             }(b.Component),
-            hi = function(e) {
+            ha = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return m.__extends(t, e), t.prototype.render = function() {
                     switch (this.props.event) {
-                        case Zn.CratesChristmas:
-                            return b.createElement(pi, {
+                        case Wn.CratesChristmas:
+                            return b.createElement(pa, {
                                 amount: this.props.amount
                             });
                         default:
@@ -5339,9 +5318,9 @@ webpackJsonp([42], {
                     }
                 }, t
             }(b.Component),
-            gi = function(e) {
+            ga = function(e) {
                 var t = e.prefixes.map(function(t, n) {
-                    if (t.alt && t.cheerAmount) return b.createElement(Z.U, {
+                    if (t.alt && t.cheerAmount) return b.createElement(W.U, {
                         key: n,
                         padding: {
                             x: 1
@@ -5355,23 +5334,23 @@ webpackJsonp([42], {
                         showImage: !0
                     })))
                 });
-                return b.createElement(Z.Z, {
-                    display: Z.L.Flex,
-                    flexDirection: Z.N.Row,
-                    alignItems: Z.c.End,
-                    justifyContent: Z.Y.Center,
-                    flexWrap: Z.O.Wrap,
+                return b.createElement(W.Z, {
+                    display: W.L.Flex,
+                    flexDirection: W.N.Row,
+                    alignItems: W.c.End,
+                    justifyContent: W.Y.Center,
+                    flexWrap: W.O.Wrap,
                     margin: {
                         top: 1
                     },
                     className: "pending-cheer-list"
                 }, t)
             },
-            fi = (n("KWLn"), function(e) {
+            fa = (n("KWLn"), function(e) {
                 var t;
                 if (e.prefixes && 1 === e.prefixes.length) {
                     var n = e.prefixes[0].alt;
-                    n && (t = b.createElement(Z.Z, {
+                    n && (t = b.createElement(W.Z, {
                         padding: {
                             top: 2
                         }
@@ -5382,33 +5361,33 @@ webpackJsonp([42], {
                         showImage: !0,
                         showAmount: !0
                     })))
-                } else if (e.prefixes) t = b.createElement(Z.Z, {
+                } else if (e.prefixes) t = b.createElement(W.Z, {
                     margin: {
                         top: 1
                     }
-                }, b.createElement(di.b, {
+                }, b.createElement(da.b, {
                     className: "pending-cheer__scroll-container"
-                }, b.createElement(gi, {
+                }, b.createElement(ga, {
                     prefixes: e.prefixes,
                     bitsConfig: e.bitsConfig
                 })));
                 else {
-                    var i = Object(p.d)("You are using a total of {totalBits} Bits to cheer in {channelName}!", {
+                    var a = Object(p.d)("You are using a total of {totalBits} Bits to cheer in {channelName}!", {
                         totalBits: b.createElement("strong", null, e.amount),
                         channelName: e.channelDisplayName
                     }, "Bits--PendingCheer");
-                    t = b.createElement(Z.Z, {
+                    t = b.createElement(W.Z, {
                         padding: {
                             top: 2,
                             x: 5
                         }
-                    }, b.createElement(Z._25, {
-                        color: Z.I.Alt2,
+                    }, b.createElement(W._25, {
+                        color: W.I.Alt2,
                         "data-a-target": "total-bits-message"
-                    }, i))
+                    }, a))
                 }
-                var a = null;
-                e.purchaseMore && e.purchaseMore > 0 && (a = b.createElement(Z._25, {
+                var i = null;
+                e.purchaseMore && e.purchaseMore > 0 && (i = b.createElement(W._25, {
                     "data-a-target": "need-more-bits-error"
                 }, Object(p.d)("Please purchase {neededBits} more Bits to Cheer", {
                     neededBits: e.purchaseMore
@@ -5418,7 +5397,7 @@ webpackJsonp([42], {
                     var s = Object(p.d)("{maximumCheerSize} is the largest Cheer emote, add another emote to Cheer louder!", {
                         maximumCheerSize: $n.k
                     }, "Bits--PendingCheer");
-                    a = b.createElement(Z._25, {
+                    i = b.createElement(W._25, {
                         "data-a-target": "max-cheer-bits-error"
                     }, s)
                 }
@@ -5426,7 +5405,7 @@ webpackJsonp([42], {
                     var o = Object(p.d)("Add {moreBitsAmount} Bits to reach this channel's minimum Cheer.", {
                         moreBitsAmount: e.minToCheer - e.amount
                     }, "Bits--PendingCheer");
-                    a = b.createElement(Z._25, {
+                    i = b.createElement(W._25, {
                         "data-a-target": "min-cheer-bits-error"
                     }, o)
                 }
@@ -5434,8 +5413,8 @@ webpackJsonp([42], {
                     var l = Object(p.d)("This channel has set a minimum of {minPerEmote} Bits to use a Cheer emote in chat.", {
                         minPerEmote: e.minPerEmote
                     }, "Bits--PendingCheer");
-                    r = b.createElement(Z._25, {
-                        color: Z.I.Alt2,
+                    r = b.createElement(W._25, {
+                        color: W.I.Alt2,
                         italic: !0,
                         "data-a-target": "min-emote-bits-error"
                     }, l)
@@ -5444,38 +5423,38 @@ webpackJsonp([42], {
                     amount: e.amount,
                     prefix: $n.g,
                     bitsConfig: e.bitsConfig,
-                    display: Z.L.Inline,
+                    display: W.L.Inline,
                     showImage: !1,
                     showAmount: !0,
                     size: Tn.b.Medium
                 });
-                return b.createElement(Z.Z, null, b.createElement(Z.Z, {
-                    display: Z.L.Flex,
-                    flexDirection: Z.N.Column,
-                    alignItems: Z.c.Center,
+                return b.createElement(W.Z, null, b.createElement(W.Z, {
+                    display: W.L.Flex,
+                    flexDirection: W.N.Column,
+                    alignItems: W.c.Center,
                     padding: 1,
                     className: "pending-cheer"
-                }, b.createElement(Z._25, {
-                    fontSize: Z.P.Size4,
+                }, b.createElement(W._25, {
+                    fontSize: W.P.Size4,
                     bold: !0
                 }, Object(p.d)("Cheering {totalBits} Bits", {
                     totalBits: c
-                }, "Bits--PendingCheer")), !r && t, !r && a && b.createElement(Z.Z, {
+                }, "Bits--PendingCheer")), !r && t, !r && i && b.createElement(W.Z, {
                     padding: {
                         top: 1
                     }
-                }, a), r && b.createElement(Z.Z, {
+                }, i), r && b.createElement(W.Z, {
                     padding: {
                         top: 3,
                         x: 3
                     }
-                }, r)), !r && !a && b.createElement(hi, {
+                }, r)), !r && !i && b.createElement(ha, {
                     event: e.event,
                     amount: e.amount
                 }))
             }),
-            vi = n("qe65"),
-            bi = (n("f1ZS"), {
+            va = n("qe65"),
+            ba = (n("f1ZS"), {
                 themed: !0,
                 dark: {
                     "1x": $n.b + "/dark/animated/promo/intro.gif"
@@ -5484,82 +5463,82 @@ webpackJsonp([42], {
                     "1x": $n.b + "/light/animated/promo/intro.gif"
                 }
             }),
-            ki = function() {
-                return b.createElement(Z.Z, {
-                    display: Z.L.Flex,
-                    flexDirection: Z.N.Column,
-                    alignItems: Z.c.Center,
-                    justifyContent: Z.Y.Center,
+            ka = function() {
+                return b.createElement(W.Z, {
+                    display: W.L.Flex,
+                    flexDirection: W.N.Column,
+                    alignItems: W.c.Center,
+                    justifyContent: W.Y.Center,
                     flexGrow: 1,
                     className: "bits-sending"
-                }, b.createElement(Z.Z, {
+                }, b.createElement(W.Z, {
                     padding: {
                         bottom: 1
                     }
-                }, b.createElement(vi.a, {
-                    sources: bi
-                })), b.createElement(Z._25, {
+                }, b.createElement(va.a, {
+                    sources: ba
+                })), b.createElement(W._25, {
                     italic: !0
                 }, Object(p.d)("Your Cheer is currently processing.", "Bits--SendingBits")))
             },
-            yi = (n("ZoRy"), function(e) {
+            ya = (n("ZoRy"), function(e) {
                 var t = Object(p.d)("You are using {totalBits} Bits to cheer in {channelName}'s chat.", {
                         totalBits: e.totalBits,
                         channelName: e.channelDisplayName
                     }, "Bits--UndoPrompt"),
                     n = null;
-                if (e.prefixes && e.prefixes.length > 1) n = b.createElement(di.b, {
+                if (e.prefixes && e.prefixes.length > 1) n = b.createElement(da.b, {
                     className: "bits-undo-prompt__scroll-container"
-                }, b.createElement(Z.Z, {
+                }, b.createElement(W.Z, {
                     margin: {
                         top: 1
                     }
-                }, b.createElement(gi, {
+                }, b.createElement(ga, {
                     prefixes: e.prefixes,
                     bitsConfig: e.bitsConfig
                 })));
                 else {
-                    var i = e.prefixes[0].alt;
-                    i && (n = b.createElement(Z.Z, {
+                    var a = e.prefixes[0].alt;
+                    a && (n = b.createElement(W.Z, {
                         padding: {
                             bottom: 1
                         }
                     }, b.createElement(Tn.a, {
-                        prefix: i,
+                        prefix: a,
                         amount: e.totalBits,
                         bitsConfig: e.bitsConfig,
                         showAmount: !0,
                         showImage: !0
                     })))
                 }
-                return b.createElement(Z.Z, {
-                    display: Z.L.Flex,
-                    flexDirection: Z.N.Column,
-                    alignItems: Z.c.Center,
-                    justifyContent: Z.Y.Center,
+                return b.createElement(W.Z, {
+                    display: W.L.Flex,
+                    flexDirection: W.N.Column,
+                    alignItems: W.c.Center,
+                    justifyContent: W.Y.Center,
                     flexGrow: 1,
                     padding: 1,
                     className: "bits-undo-prompt"
-                }, n, b.createElement(Z._25, null, t))
+                }, n, b.createElement(W._25, null, t))
             }),
-            Ci = function(e) {
+            Ca = function(e) {
                 var t = p.b.get("crate_snowman_launch", Kn.a.Off),
-                    n = t === Kn.a.On || t === Kn.a.StaffOnly && e.isStaff ? Zn.CratesChristmas : null,
-                    i = e.event || n;
-                if (e.isSending) return e.totalBits < $n.l ? b.createElement(ki, null) : b.createElement(yi, {
+                    n = t === Kn.a.On || t === Kn.a.StaffOnly && e.isStaff ? Wn.CratesChristmas : null,
+                    a = e.event || n;
+                if (e.isSending) return e.totalBits < $n.l ? b.createElement(ka, null) : b.createElement(ya, {
                     bitsConfig: e.bitsConfig,
                     channelDisplayName: e.displayName,
                     prefixes: e.currentCheers,
                     totalBits: e.totalBits
                 });
-                if (e.hoveredCheermote) return b.createElement(ti, {
+                if (e.hoveredCheermote) return b.createElement(ta, {
                     event: e.event,
                     tournament: e.tournament,
                     bitsConfig: e.bitsConfig,
                     prefix: e.hoveredCheermote,
                     tier: e.hoveredTier
                 });
-                if (e.totalBits) return b.createElement(fi, {
+                if (e.totalBits) return b.createElement(fa, {
                     bitsConfig: e.bitsConfig,
                     prefixes: e.currentCheers,
                     amount: e.totalBits,
@@ -5569,28 +5548,28 @@ webpackJsonp([42], {
                     smallestCheermote: e.smallestCheermote,
                     minPerEmote: e.emoteMinimumBits,
                     minToCheer: e.cheerMinimumBits,
-                    event: i
+                    event: a
                 });
                 if (e.helpRequested) return b.createElement(Xn.a, null);
                 if (e.chosenCheermote) {
-                    var a = e.recentMinimumBits,
+                    var i = e.recentMinimumBits,
                         r = e.cheerMinimumBits;
-                    return b.createElement(ni, {
-                        minToPin: a,
+                    return b.createElement(na, {
+                        minToPin: i,
                         minToCheer: r
                     })
                 }
-                return i ? b.createElement(ci, {
-                    event: i,
+                return a ? b.createElement(ca, {
+                    event: a,
                     onClickHelp: e.showHelp,
                     channelID: e.channelID
-                }) : b.createElement(ei, {
+                }) : b.createElement(ea, {
                     onClickHelp: e.showHelp
                 })
             },
-            _i = n("WVx7"),
-            Si = n("w9tK"),
-            Ei = (n("9uTb"), function(e) {
+            _a = n("WVx7"),
+            Sa = n("w9tK"),
+            Ea = (n("9uTb"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -5617,10 +5596,10 @@ webpackJsonp([42], {
                             }, b.createElement("div", {
                                 className: "cheermote-list__placeholder"
                             })));
-                            var i = "";
-                            t.key && (i = t.key.replace(":", ""));
-                            var a = null;
-                            e.props.showCheermoteAmount && t.key && (a = b.createElement(Tn.a, {
+                            var a = "";
+                            t.key && (a = t.key.replace(":", ""));
+                            var i = null;
+                            e.props.showCheermoteAmount && t.key && (i = b.createElement(Tn.a, {
                                 bitsConfig: e.props.bitsConfig,
                                 prefix: "",
                                 amount: +t.key.split(":")[1],
@@ -5637,12 +5616,12 @@ webpackJsonp([42], {
                                 onMouseEnter: e.handleCheermoteHover,
                                 onMouseLeave: e.handleCheermoteUnhover,
                                 onClick: e.handleCheermoteClick,
-                                "data-a-target": "cheermote-" + i
+                                "data-a-target": "cheermote-" + a
                             }, b.createElement("img", {
                                 alt: t.key,
                                 src: e.props.darkModeEnabled ? t.imgSrcDark : t.imgSrc
-                            })), a);
-                            return e.props.showCheermoteAmount ? r : b.createElement(Z.U, {
+                            })), i);
+                            return e.props.showCheermoteAmount ? r : b.createElement(W.U, {
                                 key: t.key,
                                 margin: {
                                     bottom: 1
@@ -5650,55 +5629,55 @@ webpackJsonp([42], {
                             }, r)
                         }),
                         n = null;
-                    this.props.showCheermoteAmount && (n = b.createElement(Z.Z, {
+                    this.props.showCheermoteAmount && (n = b.createElement(W.Z, {
                         padding: {
                             right: 2
                         },
                         fullWidth: !0,
                         className: "cheermote-list__back-button"
-                    }, b.createElement(Z.u, {
+                    }, b.createElement(W.u, {
                         "data-a-target": "bits-card-back-button",
-                        type: Z.z.Text,
+                        type: W.z.Text,
                         fullWidth: !0,
                         onClick: this.props.onClose
                     }, Object(p.d)("Show All Cheermotes", "CheermoteCarousel"))));
-                    var i = b.createElement(Z.U, {
+                    var a = b.createElement(W.U, {
                             className: "cheermote-list__cheermotes",
-                            display: Z.L.Flex,
-                            flexWrap: Z.O.Wrap,
-                            flexDirection: Z.N.Row,
-                            justifyContent: this.props.showCheermoteAmount ? Z.Y.Between : Z.Y.Start,
-                            alignItems: Z.c.End,
+                            display: W.L.Flex,
+                            flexWrap: W.O.Wrap,
+                            flexDirection: W.N.Row,
+                            justifyContent: this.props.showCheermoteAmount ? W.Y.Between : W.Y.Start,
+                            alignItems: W.c.End,
                             padding: {
                                 bottom: 1
                             }
                         }, b.createElement("ul", null, t, n)),
-                        a = U("cheermote-list", {
+                        i = U("cheermote-list", {
                             "cheermote-list__tier-selection": this.props.showCheermoteAmount
                         }, {
                             "cheermote-list__cheermote-selection": !this.props.showCheermoteAmount
                         });
-                    return this.props.showCheermoteAmount ? b.createElement(Z.Z, {
+                    return this.props.showCheermoteAmount ? b.createElement(W.Z, {
                         flexGrow: 1,
-                        overflow: Z._2.Hidden,
-                        className: a
-                    }, i) : b.createElement(Z.Z, {
+                        overflow: W._2.Hidden,
+                        className: i
+                    }, a) : b.createElement(W.Z, {
                         flexGrow: 1,
-                        overflow: Z._2.Hidden,
-                        className: a
-                    }, b.createElement(di.b, null, i))
+                        overflow: W._2.Hidden,
+                        className: i
+                    }, b.createElement(da.b, null, a))
                 }, t
             }(b.Component)),
-            Ni = Object(y.compose)(Object(Ft.d)("CheermoteCarousel", {
+            Na = Object(y.compose)(Object(Ft.d)("CheermoteCarousel", {
                 autoReportInteractive: !0,
-                destination: Si.a.CheermoteCarousel
-            }))(Ei),
-            wi = Object(f.b)(function(e) {
+                destination: Sa.a.CheermoteCarousel
+            }))(Ea),
+            wa = Object(f.b)(function(e) {
                 return {
                     darkModeEnabled: Object(w.a)(e) === _.a.Dark
                 }
-            })(Ni),
-            Di = function(e) {
+            })(Na),
+            Da = function(e) {
                 return e.event, b.createElement(Qn, {
                     bitsConfig: e.bitsConfig,
                     onClickGetBits: e.onClickGetBits,
@@ -5706,31 +5685,31 @@ webpackJsonp([42], {
                     selfBitsBadge: e.selfBitsBadge
                 })
             },
-            Ii = function(e) {
-                return b.createElement(Z.Z, {
+            Ia = function(e) {
+                return b.createElement(W.Z, {
                     flexGrow: 1
-                }, b.createElement(Z.Z, {
+                }, b.createElement(W.Z, {
                     className: "undo-prompt__footer",
                     padding: 1,
-                    display: Z.L.Flex,
-                    justifyContent: Z.Y.Between
-                }, b.createElement(Z.u, {
+                    display: W.L.Flex,
+                    justifyContent: W.Y.Between
+                }, b.createElement(W.u, {
                     onClick: e.onCancel || void 0,
-                    type: Z.z.Hollow,
+                    type: W.z.Hollow,
                     overlay: !0,
                     "data-test-selector": "cancel-button"
-                }, Object(p.d)("Cancel", "Bits--UndoPrompt")), b.createElement(Z.u, {
+                }, Object(p.d)("Cancel", "Bits--UndoPrompt")), b.createElement(W.u, {
                     onClick: e.onConfirm || void 0,
                     "data-test-selector": "confirm-button"
-                }, Object(p.d)("Send", "Bits--UndoPrompt"))), b.createElement(Z._9, {
-                    size: Z._10.ExtraSmall,
+                }, Object(p.d)("Send", "Bits--UndoPrompt"))), b.createElement(W._9, {
+                    size: W._10.ExtraSmall,
                     countdown: $n.m.UNDO_PROMPT_DURATION / 1e3
                 }))
             },
-            Oi = n("ZJYd"),
-            Li = n("/LBW"),
-            Ti = n("iWdz"),
-            xi = (n("2B/Z"), function(e) {
+            Oa = n("ZJYd"),
+            La = n("/LBW"),
+            Ta = n("iWdz"),
+            xa = (n("2B/Z"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -5748,7 +5727,7 @@ webpackJsonp([42], {
                         n.length < 2 || (t.setState({
                             hoveredTier: +n[1],
                             hoveredCheermote: n[0]
-                        }), t.props.trackBitsCardInteraction(Li.a.PreviewEmote, {
+                        }), t.props.trackBitsCardInteraction(La.a.PreviewEmote, {
                             emoteType: n[0],
                             emoteLevel: +n[1]
                         }))
@@ -5765,7 +5744,7 @@ webpackJsonp([42], {
                         clearTimeout(t.unhoverTimeout), t.setState({
                             hoveredCheermote: e,
                             hoveredTier: 0
-                        }), t.props.trackBitsCardInteraction(Li.a.PreviewEmote, {
+                        }), t.props.trackBitsCardInteraction(La.a.PreviewEmote, {
                             emoteType: e,
                             emoteLevel: 100
                         })
@@ -5792,7 +5771,7 @@ webpackJsonp([42], {
                     }, t.handleClickBuy = function() {
                         t.setState({
                             buyingBits: !0
-                        }), t.props.trackBitsCardInteraction(Li.a.BuyMain)
+                        }), t.props.trackBitsCardInteraction(La.a.BuyMain)
                     }, t.handleCloseBuy = function() {
                         return t.setState({
                             buyingBits: !1
@@ -5803,8 +5782,8 @@ webpackJsonp([42], {
                     var t = this.props.visible || !!this.props.currentCheers.length,
                         n = e.visible || !!e.currentCheers.length;
                     if (!t && n) {
-                        var i = Date.now();
-                        i - this.lastRefetchTime > 1e3 && this.props.data && e.data && !e.data.loading && (this.lastRefetchTime = i, e.data.refetch())
+                        var a = Date.now();
+                        a - this.lastRefetchTime > 1e3 && this.props.data && e.data && !e.data.loading && (this.lastRefetchTime = a, e.data.refetch())
                     }
                     if (t && !n && this.setState({
                             chosenCheermote: null,
@@ -5812,10 +5791,10 @@ webpackJsonp([42], {
                             hoveredTier: 0,
                             buyingBits: !1
                         }), this.props.currentCheers !== e.currentCheers) {
-                        var a = Object(Oi.a)(e.currentCheers),
-                            r = a.total,
-                            s = a.largestCheermote,
-                            o = a.smallestCheermote;
+                        var i = Object(Oa.a)(e.currentCheers),
+                            r = i.total,
+                            s = i.largestCheermote,
+                            o = i.smallestCheermote;
                         this.setState({
                             totalBits: r,
                             largestCheermote: s,
@@ -5827,7 +5806,7 @@ webpackJsonp([42], {
                     if (!this.props.visible && !this.props.currentCheers.length) return null;
                     var t, n = {
                         border: !0,
-                        background: Z.m.Base,
+                        background: W.m.Base,
                         elevation: 3,
                         fullWidth: !0
                     };
@@ -5836,52 +5815,52 @@ webpackJsonp([42], {
                             onClick: this.props.onUserClose,
                             "data-test-selector": "cancel-button",
                             "data-a-target": "bits-card-close-button"
-                        }, b.createElement(Z._12, {
-                            asset: Z._13.Close,
+                        }, b.createElement(W._12, {
+                            asset: W._13.Close,
                             height: 11,
                             width: 11
-                        }))), !this.props.data || this.props.data.loading) return b.createElement(Z._21, m.__assign({
+                        }))), !this.props.data || this.props.data.loading) return b.createElement(W._21, m.__assign({
                         className: "t-bits-card",
-                        display: Z.L.Flex,
-                        flexDirection: Z.N.Column,
-                        alignItems: Z.c.Center,
-                        justifyContent: Z.Y.Center
-                    }, n), b.createElement(Z._1, {
+                        display: W.L.Flex,
+                        flexDirection: W.N.Column,
+                        alignItems: W.c.Center,
+                        justifyContent: W.Y.Center
+                    }, n), b.createElement(W._1, {
                         delay: 0
-                    }), b.createElement(Z.Z, {
+                    }), b.createElement(W.Z, {
                         padding: {
                             top: 2
                         }
-                    }, b.createElement(Z._25, {
+                    }, b.createElement(W._25, {
                         italic: !0
                     }, Object(p.d)("Fetching Bits", "BitsCard"))));
                     if (this.props.data.error || !this.props.bitsConfig) return b.createElement(Jn, null);
-                    if (this.props.data.currentUser && this.props.data.currentUser.login === this.props.channelLogin) return b.createElement(Z._21, m.__assign({
+                    if (this.props.data.currentUser && this.props.data.currentUser.login === this.props.channelLogin) return b.createElement(W._21, m.__assign({
                         className: "t-bits-card",
-                        display: Z.L.Flex,
-                        flexDirection: Z.N.Column,
-                        alignItems: Z.c.Center,
-                        justifyContent: Z.Y.Center,
-                        textAlign: Z._26.Center,
+                        display: W.L.Flex,
+                        flexDirection: W.N.Column,
+                        alignItems: W.c.Center,
+                        justifyContent: W.Y.Center,
+                        textAlign: W._26.Center,
                         padding: {
                             top: 2,
                             x: 1,
                             bottom: 1
                         }
-                    }, n), t, b.createElement(Z._25, {
-                        color: Z.I.Error,
+                    }, n), t, b.createElement(W._25, {
+                        color: W.I.Error,
                         italic: !0
                     }, Object(p.d)("You cannot Cheer in your own channel.", "BitsCard")));
-                    if (this.state.buyingBits) return b.createElement(_i.a, {
+                    if (this.state.buyingBits) return b.createElement(_a.a, {
                         bitsConfig: this.props.bitsConfig,
                         channelLogin: this.props.channelLogin,
                         closeAllBits: this.props.onUserClose,
                         onClose: this.handleCloseBuy,
                         trackBitsCardInteraction: this.props.trackBitsCardInteraction,
-                        location: Li.b.ChatTooltip
+                        location: La.b.ChatTooltip
                     });
-                    var i = null,
-                        a = this.state.helpRequested && !this.props.currentCheers.length,
+                    var a = null,
+                        i = this.state.helpRequested && !this.props.currentCheers.length,
                         r = null;
                     if (this.props.data.user.cheer.settings.event && (r = this.props.data.user.cheer.settings.event.toLowerCase().replace("_", "-")), this.state.chosenCheermote) {
                         var s = this.props.bitsConfig.indexedActions[this.state.chosenCheermote.toLowerCase()];
@@ -5895,9 +5874,9 @@ webpackJsonp([42], {
                                     key: s.prefix + ":" + e.bits
                                 }
                             }).reverse();
-                            i = b.createElement(wi, {
+                            a = b.createElement(wa, {
                                 bitsConfig: this.props.bitsConfig,
-                                hide: a,
+                                hide: i,
                                 cheermotes: o,
                                 showCheermoteAmount: !0,
                                 event: r,
@@ -5908,22 +5887,22 @@ webpackJsonp([42], {
                             })
                         }
                     }
-                    if (!i) {
+                    if (!a) {
                         o = this.props.bitsConfig.orderedActions.filter(function(e) {
                             return e.type !== $n.e
                         }).map(function(t) {
                             var n = $n.h;
                             e.props.data && e.props.data.user.cheer.settings.event && (n = 1);
-                            var i = t.indexedTiers.get(n);
-                            return i ? {
-                                imgSrc: i.indexedImages.LIGHT.static.get(2),
-                                imgSrcDark: i.indexedImages.DARK.static.get(2),
+                            var a = t.indexedTiers.get(n);
+                            return a ? {
+                                imgSrc: a.indexedImages.LIGHT.static.get(2),
+                                imgSrcDark: a.indexedImages.DARK.static.get(2),
                                 key: t.prefix
                             } : null
                         });
-                        i = b.createElement(wi, {
+                        a = b.createElement(wa, {
                             bitsConfig: this.props.bitsConfig,
-                            hide: a,
+                            hide: i,
                             cheermotes: o,
                             event: r,
                             onHover: this.handleCheermoteHover,
@@ -5932,10 +5911,10 @@ webpackJsonp([42], {
                         })
                     }
                     var l = null;
-                    this.props.isSending ? this.state.totalBits >= $n.l && (l = b.createElement(Ii, {
+                    this.props.isSending ? this.state.totalBits >= $n.l && (l = b.createElement(Ia, {
                         onCancel: this.props.onCancelSend,
                         onConfirm: this.props.onConfirmSend
-                    })) : l = r ? b.createElement(Di, {
+                    })) : l = r ? b.createElement(Da, {
                         event: r,
                         selfBitsBadge: this.props.data.user.self && this.props.data.user.self.bitsBadge,
                         bitsConfig: this.props.bitsConfig,
@@ -5948,31 +5927,31 @@ webpackJsonp([42], {
                         balance: this.props.data.currentUser && this.props.data.currentUser.bitsBalance
                     });
                     var c;
-                    a && (c = b.createElement("button", {
+                    i && (c = b.createElement("button", {
                         className: "t-bits-card__go-back t-bits-card__top-controls",
                         onClick: this.closeHelp,
                         "data-a-target": "bits-card-back-button"
-                    }, b.createElement(Z._12, {
-                        asset: Z._13.Play,
+                    }, b.createElement(W._12, {
+                        asset: W._13.Play,
                         height: 8
                     }), " ", Object(p.d)("Back", "BitsCard")));
                     var d = U("t-bits-card", {
                         "t-bits-card--tall": !this.props.isSending
                     });
-                    return b.createElement(Z._21, m.__assign({
+                    return b.createElement(W._21, m.__assign({
                         className: d,
-                        display: Z.L.Flex,
-                        flexDirection: Z.N.Column,
+                        display: W.L.Flex,
+                        flexDirection: W.N.Column,
                         "data-a-target": "bits-card"
-                    }, n), !this.props.isSending && c, t, b.createElement(Z._21, {
+                    }, n), !this.props.isSending && c, t, b.createElement(W._21, {
                         className: "t-bits-card__contents",
-                        display: Z.L.Flex,
+                        display: W.L.Flex,
                         flexGrow: 0,
-                        flexDirection: Z.N.Column,
-                        alignContent: Z.b.Stretch,
-                        textAlign: Z._26.Center,
+                        flexDirection: W.N.Column,
+                        alignContent: W.b.Stretch,
+                        textAlign: W._26.Center,
                         borderBottom: !this.props.isSending
-                    }, b.createElement(Ci, {
+                    }, b.createElement(Ca, {
                         bitsBalance: this.props.data.currentUser && this.props.data.currentUser.bitsBalance,
                         bitsConfig: this.props.bitsConfig,
                         cheerMinimumBits: this.props.data.user.cheer.settings.cheerMinimumBits,
@@ -5993,11 +5972,11 @@ webpackJsonp([42], {
                         channelID: this.props.channelID,
                         showHelp: this.showHelp,
                         isStaff: this.props.isStaff
-                    })), !this.props.isSending && i, l && b.createElement(Z.Z, {
+                    })), !this.props.isSending && a, l && b.createElement(W.Z, {
                         className: "t-bits-card__footer",
-                        display: Z.L.Flex
+                        display: W.L.Flex
                     }, l))
-                }, t = m.__decorate([Object(k.a)(Ti, {
+                }, t = m.__decorate([Object(k.a)(Ta, {
                     name: "data",
                     skip: function(e) {
                         return !e.channelID
@@ -6012,12 +5991,12 @@ webpackJsonp([42], {
                     }
                 })], t)
             }(b.Component)),
-            Mi = n("KSGD"),
-            Bi = n("2emZ"),
-            Fi = function(e) {
+            Ma = n("KSGD"),
+            Ba = n("2emZ"),
+            Fa = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
-                    return t.autocompleteType = Bi.a.Hashtag, t.canBeTriggeredByTab = !1, t.getMatches = function(e) {
+                    return t.autocompleteType = Ba.a.Hashtag, t.canBeTriggeredByTab = !1, t.getMatches = function(e) {
                         if (!e.startsWith("#")) return null;
                         if (null !== t.props.hashTags.edges) {
                             return t.props.hashTags.edges.filter(function(t) {
@@ -6032,12 +6011,12 @@ webpackJsonp([42], {
                         }
                         return null
                     }, t.genearateHashtagDisplay = function(e) {
-                        return b.createElement(Z.Z, {
+                        return b.createElement(W.Z, {
                             padding: {
                                 right: .5
                             },
                             key: "hashtag:" + e
-                        }, b.createElement(Z._25, null, e))
+                        }, b.createElement(W._25, null, e))
                     }, t
                 }
                 return m.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -6047,35 +6026,35 @@ webpackJsonp([42], {
                 }, t.prototype.render = function() {
                     return null
                 }, t.contextTypes = {
-                    registerAutocompleteProvider: Mi.func
+                    registerAutocompleteProvider: Ma.func
                 }, t
             }(b.Component),
-            Ri = n("Lx+S"),
-            Ui = n("SZoP"),
-            ji = n("Bir6"),
-            Ai = n("e1CU"),
-            Pi = 5,
-            Hi = function(e) {
+            Ra = n("Lx+S"),
+            Ua = n("SZoP"),
+            ja = n("Bir6"),
+            Aa = n("e1CU"),
+            Pa = 5,
+            Va = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
-                    return n.autocompleteType = Bi.a.Mention, n.canBeTriggeredByTab = !0, n.getMatches = function(e, t) {
+                    return n.autocompleteType = Ba.a.Mention, n.canBeTriggeredByTab = !0, n.getMatches = function(e, t) {
                         return t || e.startsWith("@") ? n.getMentions(e, t) : null
                     }, n.getMentions = function(e, t) {
-                        var i = t ? e : e.substring(1),
-                            a = new RegExp("^" + Object(ji.a)(i), "i");
+                        var a = t ? e : e.substring(1),
+                            i = new RegExp("^" + Object(ja.a)(a), "i");
                         return n.state.sortedChatMembers.filter(function(e) {
-                            return a.test(e.userLogin) || a.test(e.userDisplayName)
-                        }).slice(0, Pi).map(function(i) {
+                            return i.test(e.userLogin) || i.test(e.userDisplayName)
+                        }).slice(0, Pa).map(function(a) {
                             return {
                                 current: e,
-                                replacement: (t ? "" : "@") + i.userDisplayName,
-                                element: n.renderMention(i)
+                                replacement: (t ? "" : "@") + a.userDisplayName,
+                                element: n.renderMention(a)
                             }
                         })
                     }, n.renderMention = function(e) {
-                        return b.createElement("span", null, Object(Ui.a)(e.userLogin, e.userDisplayName))
+                        return b.createElement("span", null, Object(Ua.a)(e.userLogin, e.userDisplayName))
                     }, n.sortChatMembers = function(e) {
-                        var t = [m.__assign({}, Object(Ai.a)(e.channelDisplayName, e.channelLogin), {
+                        var t = [m.__assign({}, Object(Aa.a)(e.channelDisplayName, e.channelLogin), {
                                 userID: e.channelID,
                                 userLogin: e.channelLogin,
                                 userType: Dt.a.Owner
@@ -6099,38 +6078,38 @@ webpackJsonp([42], {
                 }, t.prototype.render = function() {
                     return null
                 }, t.contextTypes = {
-                    registerAutocompleteProvider: Mi.func
+                    registerAutocompleteProvider: Ma.func
                 }, t
             }(b.Component),
-            Vi = function() {
-                return b.createElement(Z.p, {
-                    direction: Z.q.TopLeft,
+            Ha = function() {
+                return b.createElement(W.p, {
+                    direction: W.q.TopLeft,
                     offsetY: "11px",
                     show: !0
-                }, b.createElement(Z.Z, {
+                }, b.createElement(W.Z, {
                     padding: 1,
                     "data-test-selector": "raids-settings-tooltip"
                 }, Object(p.d)("If a raid is offensive, moderate in chat settings.", "RaidReportingChat")))
             },
-            Wi = n("QCOJ"),
-            Zi = n("hcyD"),
-            Gi = function(e) {
+            Za = n("QCOJ"),
+            Wa = n("hcyD"),
+            Ga = function(e) {
                 var t = m.__assign({}, Object(Bt.a)(e), {
                     mentioned_user_display_name: e.mentionedUserDisplayName,
                     user: e.userLogin
                 });
-                p.m.track(V.SpadeEventType.ChatMentionUsed, t)
+                p.m.track(H.SpadeEventType.ChatMentionUsed, t)
             },
-            qi = n("Umoc"),
-            zi = n("ieBa"),
-            Yi = n("ACWz"),
-            $i = n("2I50"),
-            Qi = /\S/,
-            Ji = 3;
+            qa = n("Umoc"),
+            za = n("ieBa"),
+            Ya = n("ACWz"),
+            $a = n("2I50"),
+            Qa = /\S/,
+            Ja = 3;
         ! function(e) {
             e[e.Bits = 0] = "Bits", e[e.Emotes = 1] = "Emotes", e[e.None = 2] = "None"
-        }(li || (li = {}));
-        var Ki, Xi, ea = function(e) {
+        }(la || (la = {}));
+        var Ka, Xa, ei = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.cancelDelayedSend = null, n.confirmDelayedSend = null, n.hasConfirmedInEmbed = !1, n.hasSeenConfirmationPrompt = !1, n.syncMembers = function() {
@@ -6142,14 +6121,14 @@ webpackJsonp([42], {
                     }, n.setAutocompleteInputRef = function(e) {
                         return n.autocompleteInputRef = e
                     }, n.onChatSettingsToggle = function(e) {
-                        n.handleRaidReportingToggle(e), e || Object(qi.b)({
+                        n.handleRaidReportingToggle(e), e || Object(qa.b)({
                             channelLogin: n.props.channelLogin,
                             isHostMode: n.props.isHostMode
                         })
                     }, n.handleRaidReportingToggle = function(e) {
                         n.props.raidReceived && (n.state.showRaidsSettingsTooltip && (n.setState({
                             showRaidsSettingsTooltip: !1
-                        }), p.k.set("raidsModerationTooltipsSeenNumTimes", Ji)), e && n.setState({
+                        }), p.k.set("raidsModerationTooltipsSeenNumTimes", Ja)), e && n.setState({
                             showRaidsFollowerOnlyTooltip: !1
                         }))
                     }, n.onKeyDown = function(e) {
@@ -6158,8 +6137,8 @@ webpackJsonp([42], {
                             case Gn.a.Enter:
                                 return void(e.shiftKey || (e.preventDefault(), n.onMessageSend()));
                             case Gn.a.Esc:
-                                return void(n.state.showCard === li.Bits && n.setState({
-                                    showCard: li.None
+                                return void(n.state.showCard === la.Bits && n.setState({
+                                    showCard: la.None
                                 }));
                             case Gn.a.Tab:
                                 return void e.preventDefault();
@@ -6180,11 +6159,11 @@ webpackJsonp([42], {
                         })
                     }, n.onChatCommand = function(e) {
                         n.props.onChatCommand(e), n.trackChatEvent()
-                    }, n.confirmEmbedAction = function(e, t, i) {
-                        var a = n,
-                            r = a.hasConfirmedInEmbed;
-                        if (a.hasSeenConfirmationPrompt) return r;
-                        var s = window.confirm(n.confirmationMessage(e, t, i));
+                    }, n.confirmEmbedAction = function(e, t, a) {
+                        var i = n,
+                            r = i.hasConfirmedInEmbed;
+                        if (i.hasSeenConfirmationPrompt) return r;
+                        var s = window.confirm(n.confirmationMessage(e, t, a));
                         return n.hasSeenConfirmationPrompt = !0, n.hasConfirmedInEmbed = s, s
                     }, n.confirmationMessage = function(e, t, n) {
                         return Object(p.d)('Hi {displayName}. You are attempting to send "{message}" in {channelLogin}\'s chat via an embedded version of Twitch Chat. Are you sure you want to do this? This setting will persist until you refresh the page', {
@@ -6194,11 +6173,11 @@ webpackJsonp([42], {
                         }, "ChatInput")
                     }, n.onMessageSend = function() {
                         return m.__awaiter(n, void 0, void 0, function() {
-                            var e, t, n, i, a = this;
+                            var e, t, n, a, i = this;
                             return m.__generator(this, function(r) {
                                 switch (r.label) {
                                     case 0:
-                                        return this.props.authToken ? this.props.channelID ? (e = Qi.test(this.state.value)) ? this.state.isSendingBits ? (p.i.debug("[ChatInput] Supressing chat message send. Bits spending is still in progress."), [2]) : this.props.isEmbedded && (this.props.isCurrentUserModerator || this.props.data && this.props.data.currentUser && this.props.data.currentUser.isPartner) && this.props.sessionUser && !this.confirmEmbedAction(this.props.sessionUser.displayName, this.state.value || "", this.props.channelLogin) ? (p.i.debug("[ChatInput] Embed Confirmation check failed. Not sending message"), [2]) : this.props.data && this.props.data.currentUser ? 0 === (t = Object(Oi.a)(this.state.messageCheers)).total ? (this.sendRegularMessage(), [2]) : this.props.data.user ? this.props.data.user.cheer ? this.props.data.user.cheer.settings ? (n = Object(Oi.f)({
+                                        return this.props.authToken ? this.props.channelID ? (e = Qa.test(this.state.value)) ? this.state.isSendingBits ? (p.i.debug("[ChatInput] Supressing chat message send. Bits spending is still in progress."), [2]) : this.props.isEmbedded && (this.props.isCurrentUserModerator || this.props.data && this.props.data.currentUser && this.props.data.currentUser.isPartner) && this.props.sessionUser && !this.confirmEmbedAction(this.props.sessionUser.displayName, this.state.value || "", this.props.channelLogin) ? (p.i.debug("[ChatInput] Embed Confirmation check failed. Not sending message"), [2]) : this.props.data && this.props.data.currentUser ? 0 === (t = Object(Oa.a)(this.state.messageCheers)).total ? (this.sendRegularMessage(), [2]) : this.props.data.user ? this.props.data.user.cheer ? this.props.data.user.cheer.settings ? (n = Object(Oa.f)({
                                             messageBits: t,
                                             balance: this.props.data.currentUser.bitsBalance,
                                             cheerMinimumBits: this.props.data.user.cheer.settings.cheerMinimumBits,
@@ -6209,11 +6188,11 @@ webpackJsonp([42], {
                                         }), t.total >= $n.l ? [4, new Promise(function(e) {
                                             var t = setTimeout(e, $n.m.UNDO_PROMPT_DURATION),
                                                 n = function(n) {
-                                                    void 0 === n && (n = !1), clearTimeout(t), a.cancelDelayedSend = null, a.confirmDelayedSend = null, e(n)
+                                                    void 0 === n && (n = !1), clearTimeout(t), i.cancelDelayedSend = null, i.confirmDelayedSend = null, e(n)
                                                 };
-                                            a.cancelDelayedSend = function() {
+                                            i.cancelDelayedSend = function() {
                                                 return n(!0)
-                                            }, a.confirmDelayedSend = function() {
+                                            }, i.confirmDelayedSend = function() {
                                                 return n(!1)
                                             }
                                         })] : [3, 2]) : (p.i.warn("[Chat Input] No GraphQL mutation for sending cheers attached."), [2]) : (p.i.warn("[Chat Input] Spending bits forbidden.", n), [2]) : (p.i.warn("[Chat Input] Cheer Settings are undefined."), [2]) : (p.i.warn("[Chat Input] Cheer is null."), [2]) : (p.i.warn("[Chat Input] User is null."), [2]) : (this.sendRegularMessage(), [2]) : (p.i.debug("[ChatInput] Supressing chat message send. Input failed to pass validation.", {
@@ -6226,12 +6205,12 @@ webpackJsonp([42], {
                                         }), this.chatInputRef.focus(), [2];
                                         r.label = 2;
                                     case 2:
-                                        i = Object(qn.a)(), r.label = 3;
+                                        a = Object(qn.a)(), r.label = 3;
                                     case 3:
                                         return r.trys.push([3, 5, , 6]), [4, this.props.sendCheer({
                                             variables: {
                                                 input: {
-                                                    id: i,
+                                                    id: a,
                                                     targetID: this.props.channelID,
                                                     bits: t.total,
                                                     content: this.state.value
@@ -6247,7 +6226,7 @@ webpackJsonp([42], {
                                     case 6:
                                         return this.setState({
                                             isSendingBits: !1,
-                                            showCard: li.None,
+                                            showCard: la.None,
                                             value: ""
                                         }), this.chatInputRef.focus(), this.autocompleteInputRef.setValue(""), [2]
                                 }
@@ -6256,21 +6235,21 @@ webpackJsonp([42], {
                     }, n.onEmotePickerToggle = function() {
                         n.setState(function(e) {
                             if (!e.messageCheers.length) return {
-                                showCard: e.showCard === li.Emotes ? li.None : li.Emotes
+                                showCard: e.showCard === la.Emotes ? la.None : la.Emotes
                             }
                         })
                     }, n.onBitsIconClick = function() {
-                        n.state.showCard === li.Bits ? n.trackBitsCardInteraction(Li.a.CloseCard) : n.trackBitsCardInteraction(Li.a.OpenCard), n.setState({
-                            showCard: n.state.showCard === li.Bits ? li.None : li.Bits
+                        n.state.showCard === la.Bits ? n.trackBitsCardInteraction(La.a.CloseCard) : n.trackBitsCardInteraction(La.a.OpenCard), n.setState({
+                            showCard: n.state.showCard === la.Bits ? la.None : la.Bits
                         })
                     }, n.onShowViewersList = function() {
-                        n.state.showCard !== li.None && n.setState({
-                            showCard: li.None
+                        n.state.showCard !== la.None && n.setState({
+                            showCard: la.None
                         }), n.props.showViewersList()
                     }, n.onBitsClose = function() {
-                        n.state.showCard === li.Bits && n.setState({
-                            showCard: li.None
-                        }), n.trackBitsCardInteraction(Li.a.CloseCard)
+                        n.state.showCard === la.Bits && n.setState({
+                            showCard: la.None
+                        }), n.trackBitsCardInteraction(La.a.CloseCard)
                     }, n.onClickEmote = function(e) {
                         var t = n.state.value;
                         n.state.value && n.state.value.length > 0 && !n.state.value.endsWith(" ") && (t += " "), t += e + " ", n.autocompleteInputRef.setValue(t)
@@ -6279,21 +6258,21 @@ webpackJsonp([42], {
                             showEmotePickerButton: !0
                         })
                     }, n.trackBitsCardInteraction = function(e, t) {
-                        var i = {
+                        var a = {
                             actionName: e,
                             emoteType: t && t.emoteType,
                             emoteLevel: t && t.emoteLevel,
                             location: t && t.location,
                             displayedBalance: n.props.data && n.props.data.currentUser && n.props.data.currentUser.bitsBalance || 0
                         };
-                        Object(Li.h)(i)
+                        Object(La.h)(a)
                     }, n.state = {
                         chatMembers: t.activeChatters.getActiveChatters(),
                         hasInteractedOrPageload: t.firstPageLoaded,
                         isSendingBits: !1,
                         messageCheers: [],
                         showBuyBits: !1,
-                        showCard: li.None,
+                        showCard: la.None,
                         showEmotePickerButton: !!t.authToken,
                         showRaidsSettingsTooltip: !1,
                         showRaidsFollowerOnlyTooltip: !1,
@@ -6305,16 +6284,16 @@ webpackJsonp([42], {
                 }, t.prototype.componentWillUpdate = function(e, t) {
                     var n = this;
                     if (t.value !== this.state.value && this.props.bitsConfig) {
-                        var i = [];
+                        var a = [];
                         Object(F.c)(t.value, this.props.bitsConfig).forEach(function(e) {
-                            e.type === yt.a.Emote && i.push(e.content)
-                        }), i.length && t.showCard === li.Emotes && this.setState({
-                            showCard: li.None
+                            e.type === yt.a.Emote && a.push(e.content)
+                        }), a.length && t.showCard === la.Emotes && this.setState({
+                            showCard: la.None
                         }), this.setState({
-                            messageCheers: i
+                            messageCheers: a
                         })
                     }
-                    this.props.isCurrentUserModerator && !this.props.raidReceived && e.raidReceived && (p.k.get("raidsModerationTooltipsSeenNumTimes", 0), Number(p.k.get("raidsModerationTooltipsSeenNumTimes", 0)) < Ji && this.setState({
+                    this.props.isCurrentUserModerator && !this.props.raidReceived && e.raidReceived && (p.k.get("raidsModerationTooltipsSeenNumTimes", 0), Number(p.k.get("raidsModerationTooltipsSeenNumTimes", 0)) < Ja && this.setState({
                         showRaidsSettingsTooltip: !0,
                         showRaidsFollowerOnlyTooltip: !0
                     }, function() {
@@ -6332,27 +6311,27 @@ webpackJsonp([42], {
                     this.syncMembersHandle && (clearInterval(this.syncMembersHandle), this.syncMembersHandle = 0)
                 }, t.prototype.render = function() {
                     var e = [];
-                    this.props.bitsConfig && e.push(b.createElement(Z.v, {
+                    this.props.bitsConfig && e.push(b.createElement(W.v, {
                         key: "bits",
-                        icon: Z._13.Bits,
+                        icon: W._13.Bits,
                         ariaLabel: Object(p.d)("Bits", "ChatInput"),
-                        type: Z.w.Secondary,
+                        type: W.w.Secondary,
                         onClick: this.onBitsIconClick,
                         "data-a-target": "bits-button"
-                    })), this.state.showEmotePickerButton && e.push(b.createElement(zi.b, {
+                    })), this.state.showEmotePickerButton && e.push(b.createElement(za.b, {
                         key: "emote-picker",
                         onClick: this.onEmotePickerToggle
                     }));
                     var t = null;
-                    this.state.hasInteractedOrPageload && (t = b.createElement(zi.c, {
+                    this.state.hasInteractedOrPageload && (t = b.createElement(za.c, {
                         channelOwnerID: this.props.channelID,
                         onClickEmote: this.onClickEmote,
                         onLoad: this.onEmotePickerDataLoaded,
                         toggleVisibility: this.onEmotePickerToggle,
-                        visible: this.state.showCard === li.Emotes
+                        visible: this.state.showCard === la.Emotes
                     }));
                     var n = null;
-                    this.state.hasInteractedOrPageload && this.props.bitsConfig && (n = b.createElement(xi, {
+                    this.state.hasInteractedOrPageload && this.props.bitsConfig && (n = b.createElement(xa, {
                         bitsConfig: this.props.bitsConfig,
                         channelID: this.props.channelID,
                         channelLogin: this.props.channelLogin,
@@ -6364,20 +6343,20 @@ webpackJsonp([42], {
                         onConfirmSend: this.confirmDelayedSend,
                         onUserClose: this.onBitsClose,
                         trackBitsCardInteraction: this.trackBitsCardInteraction,
-                        visible: this.state.showCard === li.Bits
+                        visible: this.state.showCard === la.Bits
                     }));
-                    var i = null;
-                    return this.props.data.user && this.props.data.user.cheer && this.props.data.user.cheer.hashtags && this.state.messageCheers.length > 0 && (i = b.createElement(Fi, {
+                    var a = null;
+                    return this.props.data.user && this.props.data.user.cheer && this.props.data.user.cheer.hashtags && this.state.messageCheers.length > 0 && (a = b.createElement(Fa, {
                         hashTags: this.props.data.user.cheer.hashtags
-                    })), b.createElement(Z.Z, {
+                    })), b.createElement(W.Z, {
                         className: "chat-input",
                         padding: {
                             x: 2,
                             bottom: 2
                         }
-                    }, b.createElement(Z.U, {
-                        position: Z._6.Relative,
-                        zIndex: Z._42.Above
+                    }, b.createElement(W.U, {
+                        position: W._6.Relative,
+                        zIndex: W._42.Above
                     }, b.createElement("div", {
                         onMouseEnter: this.onMouseEnterInput
                     }, t, n, b.createElement(zn.b, {
@@ -6397,28 +6376,28 @@ webpackJsonp([42], {
                         containerElement: this.props.containerElement
                     }, b.createElement(zn.d, {
                         emotes: this.props.emotes
-                    }), b.createElement(Hi, {
+                    }), b.createElement(Va, {
                         channelDisplayName: this.props.channelDisplayName,
                         channelID: this.props.channelID,
                         channelLogin: this.props.channelLogin,
                         chatMembers: this.state.chatMembers
-                    }), i), b.createElement(Z.Z, {
-                        position: Z._6.Absolute,
+                    }), a), b.createElement(W.Z, {
+                        position: W._6.Absolute,
                         attachRight: !0,
                         attachTop: !0
-                    }, e))), b.createElement(Z.Z, {
+                    }, e))), b.createElement(W.Z, {
                         className: "chat-input__buttons-container",
-                        display: Z.L.Flex,
-                        justifyContent: Z.Y.Between,
+                        display: W.L.Flex,
+                        justifyContent: W.Y.Between,
                         margin: {
                             top: 1
                         }
-                    }, b.createElement(Z.Z, {
-                        display: Z.L.Flex,
-                        flexDirection: Z.N.Row
-                    }, b.createElement(Z.Z, {
-                        position: Z._6.Relative
-                    }, b.createElement(Ri.a, {
+                    }, b.createElement(W.Z, {
+                        display: W.L.Flex,
+                        flexDirection: W.N.Row
+                    }, b.createElement(W.Z, {
+                        position: W._6.Relative
+                    }, b.createElement(Ra.a, {
                         disabled: this.props.isEmbedded,
                         onToggle: this.onChatSettingsToggle,
                         channelLogin: this.props.channelLogin,
@@ -6429,16 +6408,16 @@ webpackJsonp([42], {
                         isPopout: this.props.isPopout,
                         channelID: this.props.channelID,
                         sawFirstRaidPrompt: this.state.showRaidsFollowerOnlyTooltip
-                    }), this.state.showRaidsSettingsTooltip ? b.createElement(Vi, null) : null), b.createElement(Z.v, {
+                    }), this.state.showRaidsSettingsTooltip ? b.createElement(Ha, null) : null), b.createElement(W.v, {
                         ariaLabel: Object(p.d)("Viewer list", "ChatInput"),
                         "data-a-target": "chat-viewer-list",
                         "data-test-selector": "chat-viewer-list",
-                        icon: Z._13.ViewerList,
+                        icon: W._13.ViewerList,
                         onClick: this.onShowViewersList
                     })), this.renderSendButton()))
                 }, t.prototype.renderSendButton = function() {
                     var e;
-                    return e = this.state.value && null !== Object(Fe.n)(this.state.value) ? Object(p.d)("Whisper", "ChatInput") : Object(p.d)("Chat", "ChatInput"), b.createElement(Z.u, {
+                    return e = this.state.value && null !== Object(Fe.n)(this.state.value) ? Object(p.d)("Whisper", "ChatInput") : Object(p.d)("Chat", "ChatInput"), b.createElement(W.u, {
                         onClick: this.onMessageSend,
                         "data-a-target": "chat-send-button",
                         "data-test-selector": "chat-send-button",
@@ -6446,21 +6425,21 @@ webpackJsonp([42], {
                     }, e)
                 }, t.prototype.sendRegularMessage = function() {
                     this.props.onSendMessage && this.props.onSendMessage(this.state.value) && (this.trackChatEvent(), this.trackMentions(), this.autocompleteInputRef.setValue(""), this.setState({
-                        showCard: li.None
+                        showCard: la.None
                     }))
                 }, t.prototype.trackChatEvent = function() {
-                    Object(Zi.a)({
+                    Object(Wa.a)({
                         channelID: this.props.channelID,
                         channelLogin: this.props.channelLogin,
                         isHostMode: this.props.isHostMode,
-                        player: this.props.isPopout ? Wi.a.Embed : Wi.a.Web,
+                        player: this.props.isPopout ? Za.a.Embed : Za.a.Web,
                         subOnlyMode: this.props.isSubsOnlyModeEnabled
                     })
                 }, t.prototype.trackMentions = function() {
                     if (this.state.value && this.props.sessionUser)
                         for (var e = 0, t = Object(Ot.c)(this.state.value, this.props.sessionUser.displayName, !1); e < t.length; e++) {
                             var n = t[e];
-                            n.type === yt.a.Mention && n.content.recipient !== n.content.sender && Gi({
+                            n.type === yt.a.Mention && n.content.recipient !== n.content.sender && Ga({
                                 channelLogin: this.props.channelLogin,
                                 isHostMode: this.props.isHostMode,
                                 mentionedUserDisplayName: n.content.recipient,
@@ -6469,9 +6448,9 @@ webpackJsonp([42], {
                         } else p.i.warn("[ChatInput] trackMentions was called in a nonsensical state.")
                 }, t
             }(b.Component),
-            ta = Object(y.compose)(Object(k.a)($i, {
+            ti = Object(y.compose)(Object(k.a)($a, {
                 name: "sendCheer"
-            }), Object(k.a)(Yi), Object(Ft.d)("ChatInput", {
+            }), Object(k.a)(Ya), Object(Ft.d)("ChatInput", {
                 autoReportInteractive: !0
             }), Object(f.b)(function(e) {
                 return {
@@ -6484,13 +6463,13 @@ webpackJsonp([42], {
                         return Object(we.f)(Ne.a.Chat)
                     }
                 }, e)
-            }))(ea),
-            na = n("pexS"),
-            ia = n("DtWM"),
-            aa = n("zCIC"),
-            ra = (n("rMeN"), ["scroll", "wheel", "mousewheel", "DOMMouseScroll", "keyup", "mousedown"]),
-            sa = 10,
-            oa = function(e) {
+            }))(ei),
+            ni = n("pexS"),
+            ai = n("DtWM"),
+            ii = n("zCIC"),
+            ri = (n("rMeN"), ["scroll", "wheel", "mousewheel", "DOMMouseScroll", "keyup", "mousedown"]),
+            si = 10,
+            oi = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -6499,7 +6478,7 @@ webpackJsonp([42], {
                         return t.scroll = e
                     }, t.handleScrollEvent = function(e) {
                         if (t.scroll && (e.which > 0 || "mousedown" === e.type || "mousewheel" === e.type || "wheel" === e.type)) {
-                            t.scroll.scrollContent.scrollHeight - t.scroll.scrollContent.scrollTop - t.scroll.scrollContent.offsetHeight <= sa ? t.setState({
+                            t.scroll.scrollContent.scrollHeight - t.scroll.scrollContent.scrollTop - t.scroll.scrollContent.offsetHeight <= si ? t.setState({
                                 isAutoScrolling: !0
                             }) : t.setState({
                                 isAutoScrolling: !1
@@ -6517,12 +6496,12 @@ webpackJsonp([42], {
                 }
                 return m.__extends(t, e), t.prototype.componentDidMount = function() {
                     var e = this;
-                    ra.forEach(function(t) {
+                    ri.forEach(function(t) {
                         return e.scroll.scrollContent.addEventListener(t, e.handleScrollEvent)
                     })
                 }, t.prototype.componentWillUnmount = function() {
                     var e = this;
-                    ra.forEach(function(t) {
+                    ri.forEach(function(t) {
                         return e.scroll.scrollContent.removeEventListener(t, e.handleScrollEvent)
                     })
                 }, t.prototype.componentDidUpdate = function(e) {
@@ -6544,41 +6523,41 @@ webpackJsonp([42], {
                                 doesNotUpdate: !0
                             })
                         });
-                    return b.createElement(Z.Z, {
+                    return b.createElement(W.Z, {
                         refDelegate: this.props.containerRef,
                         className: "chat-list",
-                        display: Z.L.Flex,
-                        flexDirection: Z.N.Column,
-                        flexWrap: Z.O.NoWrap,
-                        overflow: Z._2.Hidden,
+                        display: W.L.Flex,
+                        flexDirection: W.N.Column,
+                        flexWrap: W.O.NoWrap,
+                        overflow: W._2.Hidden,
                         flexGrow: 1
-                    }, b.createElement(ia.a, {
+                    }, b.createElement(ai.a, {
                         onResize: this.handleResize
-                    }), b.createElement(Z.U, {
+                    }), b.createElement(W.U, {
                         flexGrow: 1
-                    }, b.createElement(aa.b, {
+                    }, b.createElement(ii.b, {
                         className: "chat-list__lines",
                         scrollRef: this.saveScrollRef,
                         "data-a-target": "chat-scroller"
-                    }, b.createElement(Z.Z, {
+                    }, b.createElement(W.Z, {
                         flexGrow: 1,
                         fullHeight: !0,
                         padding: {
                             bottom: 1
                         }
-                    }, t))), b.createElement(Z.Z, {
+                    }, t))), b.createElement(W.Z, {
                         className: "chat-list__more-messages-placeholder",
-                        position: Z._6.Relative,
+                        position: W._6.Relative,
                         margin: {
                             x: 2
                         }
                     }, this.moreMessages()))
                 }, t.prototype.moreMessages = function() {
-                    return this.state.isAutoScrolling ? null : b.createElement(Z.U, {
-                        display: Z.L.Flex,
-                        justifyContent: Z.Y.Center,
-                        alignItems: Z.c.Center,
-                        position: Z._6.Absolute,
+                    return this.state.isAutoScrolling ? null : b.createElement(W.U, {
+                        display: W.L.Flex,
+                        justifyContent: W.Y.Center,
+                        alignItems: W.c.Center,
+                        position: W._6.Absolute,
                         padding: .5,
                         attachBottom: !0,
                         fullWidth: !0
@@ -6588,14 +6567,14 @@ webpackJsonp([42], {
                     }, Object(p.d)("More messages below.", "ChatList")))
                 }, t
             }(b.Component),
-            la = function(e) {
+            li = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return m.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
                     var t = e.pubsub.messages.chatRichEmbedInfo;
                     t && this.props.pubsub.messages.chatRichEmbedInfo !== t && p.n.apollo.client.writeQuery({
-                        query: na,
+                        query: ni,
                         variables: {
                             slug: t.data.twitch_metadata.clip_metadata.slug
                         },
@@ -6627,7 +6606,7 @@ webpackJsonp([42], {
                         }(t)
                     })
                 }, t.prototype.render = function() {
-                    return b.createElement(oa, {
+                    return b.createElement(oi, {
                         channelID: this.props.channelID,
                         badgeSets: this.props.badgeSets,
                         currentUserDisplayName: this.props.currentUserDisplayName,
@@ -6643,7 +6622,7 @@ webpackJsonp([42], {
                     })
                 }, t
             }(b.Component),
-            ca = Object(C.d)(Object(f.b)(function(e, t) {
+            ci = Object(C.d)(Object(f.b)(function(e, t) {
                 return {
                     messages: Object(u.a)(e, t.channelLogin),
                     showModerationIcons: e.chat.showModIcons,
@@ -6654,11 +6633,11 @@ webpackJsonp([42], {
                     return !e.channelID
                 },
                 topic: function(e) {
-                    return e.channelID ? Object(H.i)(e.channelID) : ""
+                    return e.channelID ? Object(V.i)(e.channelID) : ""
                 },
-                mapMessageTypesToProps: (Ki = {}, Ki[A.c.StreamChatRoomChatRichEmbed] = "chatRichEmbedInfo", Ki)
-            }]))(la),
-            da = (n("HuX0"), function(e) {
+                mapMessageTypesToProps: (Ka = {}, Ka[A.c.StreamChatRoomChatRichEmbed] = "chatRichEmbedInfo", Ka)
+            }]))(li),
+            di = (n("HuX0"), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     n.onClickConfirm = function() {
@@ -6666,41 +6645,41 @@ webpackJsonp([42], {
                             showRules: !1
                         })
                     };
-                    var i = n.getRoomsSeen();
+                    var a = n.getRoomsSeen();
                     return n.state = {
-                        showRules: n.props.chatRules && n.props.chatRules.length > 0 && !i[n.props.channelLogin]
+                        showRules: n.props.chatRules && n.props.chatRules.length > 0 && !a[n.props.channelLogin]
                     }, n
                 }
                 return m.__extends(t, e), t.prototype.render = function() {
-                    return this.state.showRules ? b.createElement(Z.Z, {
+                    return this.state.showRules ? b.createElement(W.Z, {
                         className: "chat-rules",
-                        position: Z._6.Relative
-                    }, b.createElement(Z._21, {
+                        position: W._6.Relative
+                    }, b.createElement(W._21, {
                         border: !0,
-                        background: Z.m.Base,
+                        background: W.m.Base,
                         margin: {
                             bottom: 1
                         }
-                    }, b.createElement(Z.Z, {
+                    }, b.createElement(W.Z, {
                         padding: 1
-                    }, b.createElement(Z.Z, {
+                    }, b.createElement(W.Z, {
                         margin: {
                             bottom: 1
                         }
-                    }, b.createElement(Z._25, {
-                        type: Z._30.H6
-                    }, Object(p.d)("Chat Rules:", "ChatRules"))), b.createElement(Z.Z, null, b.createElement("ul", null, this.props.chatRules.map(function(e, t) {
+                    }, b.createElement(W._25, {
+                        type: W._30.H6
+                    }, Object(p.d)("Chat Rules:", "ChatRules"))), b.createElement(W.Z, null, b.createElement("ul", null, this.props.chatRules.map(function(e, t) {
                         return b.createElement("li", {
                             key: t
                         }, e)
-                    }))), b.createElement(Z.Z, {
+                    }))), b.createElement(W.Z, {
                         margin: {
                             top: 1
                         },
-                        display: Z.L.Flex,
-                        justifyContent: Z.Y.Center
-                    }, b.createElement(Z.u, {
-                        size: Z.x.Small,
+                        display: W.L.Flex,
+                        justifyContent: W.Y.Center
+                    }, b.createElement(W.u, {
+                        size: W.x.Small,
                         onClick: this.onClickConfirm
                     }, Object(p.d)("Ok, got it!", "ChatRules")))))) : null
                 }, t.prototype.getRoomsSeen = function() {
@@ -6710,8 +6689,8 @@ webpackJsonp([42], {
                     e[this.props.channelLogin] = !0, p.k.set("chat_rules_shown", e)
                 }, t
             }(b.Component)),
-            ua = 3,
-            ma = (n("Bsuy"), function(e) {
+            ui = 3,
+            mi = (n("Bsuy"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.usernameClickHandler = function(e) {
@@ -6723,29 +6702,29 @@ webpackJsonp([42], {
                     var e = this,
                         t = this.props,
                         n = t.viewers,
-                        i = t.header,
-                        a = n.map(function(t) {
+                        a = t.header,
+                        i = n.map(function(t) {
                             return b.createElement("div", {
                                 key: "chat-viewers-list-item-" + t
                             }, b.createElement("button", {
                                 className: "chat-viewers-list__button",
                                 "data-username": t,
                                 onClick: e.usernameClickHandler
-                            }, b.createElement(Z._25, {
-                                transform: Z._29.Capitalize
+                            }, b.createElement(W._25, {
+                                transform: W._29.Capitalize
                             }, t)))
                         });
-                    return b.createElement(Z.Z, {
+                    return b.createElement(W.Z, {
                         className: "chat-viewers-list",
                         padding: {
                             bottom: 2
                         }
-                    }, b.createElement("div", null, b.createElement(Z._25, {
-                        transform: Z._29.Uppercase
-                    }, i)), a)
+                    }, b.createElement("div", null, b.createElement(W._25, {
+                        transform: W._29.Uppercase
+                    }, a)), i)
                 }, t
             }(b.Component)),
-            pa = (n("gwjw"), function(e) {
+            pi = (n("gwjw"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -6781,32 +6760,32 @@ webpackJsonp([42], {
                     }, t.getRenderedViewers = function(e, t) {
                         return e ? e.slice(0, 100 * (t || 1)) : []
                     }, t.handleFilter = function(e, n) {
-                        var i = function(e, t) {
+                        var a = function(e, t) {
                                 if (!t) return e;
                                 var n = Object.assign({}, e);
                                 return Object.keys(n).forEach(function(e) {
-                                    var i = n[e];
-                                    Array.isArray(i) && (n[e] = i.filter(function(e) {
+                                    var a = n[e];
+                                    Array.isArray(a) && (n[e] = a.filter(function(e) {
                                         return -1 !== e.toLowerCase().indexOf(t)
                                     }))
                                 }), n
                             }(n, e),
-                            a = t.getRenderedViewers(i.viewers, 1);
+                            i = t.getRenderedViewers(a.viewers, 1);
                         t.scroll && t.scroll.scrollToTop(), t.setState({
-                            filteredViewers: i,
+                            filteredViewers: a,
                             isLoading: !1,
-                            renderedViewers: a,
+                            renderedViewers: i,
                             viewersPage: 1
                         })
                     }, t.handleFilterChange = function(e) {
                         var n = e.target.value,
-                            i = n.toLowerCase().trim();
+                            a = n.toLowerCase().trim();
                         t.setState({
-                            filter: i,
+                            filter: a,
                             inputValue: n,
                             isLoading: !0
                         }), clearTimeout(t.filterTimeout), t.filterTimeout = setTimeout(function() {
-                            t.handleFilter(i, t.props.viewers)
+                            t.handleFilter(a, t.props.viewers)
                         }, 350)
                     }, t
                 }
@@ -6816,118 +6795,118 @@ webpackJsonp([42], {
                     var e = this.props.onShowViewerCard,
                         t = [],
                         n = this.state.filteredViewers;
-                    n.staff && n.staff.length > 0 && t.push(b.createElement(ma, {
+                    n.staff && n.staff.length > 0 && t.push(b.createElement(mi, {
                         key: "chat-viewers-list-staff",
                         header: Object(p.d)("Staff", "ChatViewers"),
                         viewers: n.staff,
                         onUsernameClick: e
-                    })), n.admins && n.admins.length > 0 && t.push(b.createElement(ma, {
+                    })), n.admins && n.admins.length > 0 && t.push(b.createElement(mi, {
                         key: "chat-viewers-list-admins",
                         header: Object(p.d)("Admins", "ChatViewers"),
                         viewers: n.admins,
                         onUsernameClick: e
-                    })), n.global_mods && n.global_mods.length > 0 && t.push(b.createElement(ma, {
+                    })), n.global_mods && n.global_mods.length > 0 && t.push(b.createElement(mi, {
                         key: "chat-viewers-list-global-mods",
                         header: Object(p.d)("Global Moderators", "ChatViewers"),
                         viewers: n.global_mods,
                         onUsernameClick: e
-                    })), n.moderators && n.moderators.length > 0 && t.push(b.createElement(ma, {
+                    })), n.moderators && n.moderators.length > 0 && t.push(b.createElement(mi, {
                         key: "chat-viewers-list-moderators",
                         header: Object(p.d)("Moderators", "ChatViewers"),
                         viewers: n.moderators,
                         onUsernameClick: e
-                    })), n.viewers && n.viewers.length > 0 && t.push(b.createElement(ma, {
+                    })), n.viewers && n.viewers.length > 0 && t.push(b.createElement(mi, {
                         key: "chat-viewers-list-viewers",
                         "data-test-selector": "chat-viewers-list-viewers",
                         header: Object(p.d)("Viewers", "ChatViewers"),
                         viewers: this.state.renderedViewers,
                         onUsernameClick: e
                     }));
-                    var i = this.props.isLoading || this.state.isLoading,
-                        a = i && b.createElement(Z.Z, {
+                    var a = this.props.isLoading || this.state.isLoading,
+                        i = a && b.createElement(W.Z, {
                             className: "chat-viewers__loading",
-                            display: Z.L.Flex,
-                            alignItems: Z.c.Center,
-                            justifyContent: Z.Y.Center,
-                            zIndex: Z._42.Above,
-                            position: Z._6.Absolute,
+                            display: W.L.Flex,
+                            alignItems: W.c.Center,
+                            justifyContent: W.Y.Center,
+                            zIndex: W._42.Above,
+                            position: W._6.Absolute,
                             attachTop: !0,
                             attachBottom: !0,
                             attachLeft: !0,
                             attachRight: !0
-                        }, b.createElement(Z._1, null));
-                    return b.createElement(Z.Z, {
+                        }, b.createElement(W._1, null));
+                    return b.createElement(W.Z, {
                         className: "chat-viewers__container",
                         fullWidth: !0,
                         fullHeight: !0,
                         flexShrink: 0,
-                        zIndex: Z._42.Default
-                    }, b.createElement(Z.Z, {
+                        zIndex: W._42.Default
+                    }, b.createElement(W.Z, {
                         className: "chat-viewers__pane",
-                        display: Z.L.Flex,
-                        flexDirection: Z.N.Column,
-                        flexWrap: Z.O.NoWrap,
-                        position: Z._6.Absolute,
+                        display: W.L.Flex,
+                        flexDirection: W.N.Column,
+                        flexWrap: W.O.NoWrap,
+                        position: W._6.Absolute,
                         attachBottom: !0,
                         attachLeft: !0,
                         attachRight: !0
-                    }, b.createElement(Z.Z, {
+                    }, b.createElement(W.Z, {
                         className: "chat-viewers__header",
-                        display: Z.L.Flex,
-                        justifyContent: Z.Y.Center,
-                        alignItems: Z.c.Center,
+                        display: W.L.Flex,
+                        justifyContent: W.Y.Center,
+                        alignItems: W.c.Center,
                         padding: {
                             y: 1
                         },
                         flexShrink: 0
-                    }, b.createElement(Z.Z, {
-                        position: Z._6.Absolute,
+                    }, b.createElement(W.Z, {
+                        position: W._6.Absolute,
                         attachLeft: !0,
                         margin: {
                             left: 1
                         }
-                    }, b.createElement(Z.v, {
-                        icon: Z._13.Close,
+                    }, b.createElement(W.v, {
+                        icon: W._13.Close,
                         ariaLabel: Object(p.d)("Close", "ChatViewers"),
                         "data-a-target": "chat-viewer-list",
                         onClick: this.props.closeViewersList
                     })), b.createElement("p", {
                         "data-a-target": "chat-viewers_header-channel-name"
-                    }, Object(p.d)("Viewer List", "ChatViewers"))), b.createElement(Z.Z, {
-                        display: Z.L.Flex,
-                        flexDirection: Z.N.Column,
-                        flexWrap: Z.O.NoWrap,
+                    }, Object(p.d)("Viewer List", "ChatViewers"))), b.createElement(W.Z, {
+                        display: W.L.Flex,
+                        flexDirection: W.N.Column,
+                        flexWrap: W.O.NoWrap,
                         fullHeight: !0
-                    }, b.createElement(Z.Z, {
+                    }, b.createElement(W.Z, {
                         className: "chat-viewers__filter",
                         margin: {
                             x: 2,
                             y: 1
                         }
-                    }, b.createElement(Z.V, {
-                        type: Z.W.Search,
+                    }, b.createElement(W.V, {
+                        type: W.W.Search,
                         name: "viewers-filter",
                         placeholder: Object(p.d)("Filter Viewers", "ChatViewers"),
                         readOnly: this.props.isLoading,
                         onChange: this.handleFilterChange,
                         value: this.state.inputValue
-                    })), b.createElement(aa.b, {
+                    })), b.createElement(ii.b, {
                         className: "chat-viewers__list",
                         scrollRef: this.saveScrollRef,
                         suppressScrollX: !0,
                         scrollContentClassName: "chat-viewers__scroll-container"
-                    }, b.createElement(Z.Z, {
+                    }, b.createElement(W.Z, {
                         padding: {
                             x: 2
                         }
-                    }, t, b.createElement(aa.a, {
+                    }, t, b.createElement(ii.a, {
                         key: this.state.filter,
-                        enabled: !i,
+                        enabled: !a,
                         loadMore: this.loadMore
-                    })))), a))
+                    })))), i))
                 }, t
             }(b.Component)),
-            ha = function(e) {
+            hi = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.state = {
@@ -6945,7 +6924,7 @@ webpackJsonp([42], {
                         })
                     })
                 }, t.prototype.render = function() {
-                    return b.createElement(pa, {
+                    return b.createElement(pi, {
                         channelLogin: this.props.channelLogin,
                         closeViewersList: this.props.closeViewersList,
                         viewers: this.state.viewers,
@@ -6955,21 +6934,21 @@ webpackJsonp([42], {
                     })
                 }, t.prototype.updateViewers = function(e) {
                     return m.__awaiter(this, void 0, void 0, function() {
-                        var t, n, i;
-                        return m.__generator(this, function(a) {
-                            switch (a.label) {
+                        var t, n, a;
+                        return m.__generator(this, function(i) {
+                            switch (i.label) {
                                 case 0:
                                     return this.setState({
                                         isLoading: !0
                                     }), [4, function(e) {
                                         return m.__awaiter(this, void 0, void 0, function() {
-                                            var t, n, i, a, r;
+                                            var t, n, a, i, r;
                                             return m.__generator(this, function(s) {
                                                 switch (s.label) {
                                                     case 0:
                                                         t = "https://tmi.twitch.tv/group/user/" + e.toLowerCase() + "/chatters", n = 1, s.label = 1;
                                                     case 1:
-                                                        if (!(n <= ua)) return [3, 7];
+                                                        if (!(n <= ui)) return [3, 7];
                                                         s.label = 2;
                                                     case 2:
                                                         return s.trys.push([2, 5, , 6]), [4, fetch(t, {
@@ -6980,11 +6959,11 @@ webpackJsonp([42], {
                                                             }
                                                         })];
                                                     case 3:
-                                                        return i = s.sent(), [4, i.json()];
+                                                        return a = s.sent(), [4, a.json()];
                                                     case 4:
-                                                        return a = s.sent(), p.i.debug("[update] getViewers done."), [2, a];
+                                                        return i = s.sent(), p.i.debug("[update] getViewers done."), [2, i];
                                                     case 5:
-                                                        if (r = s.sent(), n === ua) throw r;
+                                                        if (r = s.sent(), n === ui) throw r;
                                                         return [3, 6];
                                                     case 6:
                                                         return ++n, [3, 1];
@@ -6995,9 +6974,9 @@ webpackJsonp([42], {
                                         })
                                     }(e)];
                                 case 1:
-                                    return t = a.sent(), n = t ? t.chatters : {}, i = t ? t.chatter_count : 0, p.i.debug("Updated viewers list with " + i + " viewers"), this.setState({
+                                    return t = i.sent(), n = t ? t.chatters : {}, a = t ? t.chatter_count : 0, p.i.debug("Updated viewers list with " + a + " viewers"), this.setState({
                                         viewers: n,
-                                        viewerCount: i,
+                                        viewerCount: a,
                                         isLoading: !1
                                     }), [2]
                             }
@@ -7005,17 +6984,17 @@ webpackJsonp([42], {
                     })
                 }, t
             }(b.Component),
-            ga = Object(f.b)(null, function(e) {
+            gi = Object(f.b)(null, function(e) {
                 return Object(C.b)({
                     onShowViewerCard: h.d
                 }, e)
-            })(ha),
-            fa = n("tjbt"),
-            va = n("V5M+"),
-            ba = n("oSFp"),
-            ka = n("E9Qg"),
-            ya = n("5s0/"),
-            Ca = function(e) {
+            })(hi),
+            fi = n("tjbt"),
+            vi = n("V5M+"),
+            bi = n("oSFp"),
+            ki = n("E9Qg"),
+            yi = n("5s0/"),
+            Ci = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -7035,14 +7014,14 @@ webpackJsonp([42], {
                 }, t.prototype.render = function() {
                     if (this.state.isIgnored) {
                         var e = Object(p.d)("Unblock User", "ViewerCardIgnoreAction");
-                        return b.createElement(Z._33, {
+                        return b.createElement(W._33, {
                             key: "Ignore",
                             label: e,
-                            direction: Z._35.Top,
-                            align: Z._34.Right,
+                            direction: W._35.Top,
+                            align: W._34.Right,
                             offsetX: "15%"
-                        }, b.createElement(Z.v, {
-                            icon: Z._13.Unignore,
+                        }, b.createElement(W.v, {
+                            icon: W._13.Unignore,
                             ariaLabel: Object(p.d)("Unblock {displayName}", {
                                 displayName: this.props.targetDisplayName
                             }, "ViewerCardIgnoreAction"),
@@ -7051,14 +7030,14 @@ webpackJsonp([42], {
                         }))
                     }
                     var t = Object(p.d)("Block User", "ViewerCardIgnoreAction");
-                    return b.createElement(Z._33, {
+                    return b.createElement(W._33, {
                         key: "Ignore",
                         label: t,
-                        direction: Z._35.Top,
-                        align: Z._34.Right,
+                        direction: W._35.Top,
+                        align: W._34.Right,
                         offsetX: "15%"
-                    }, b.createElement(Z.v, {
-                        icon: Z._13.Ignore,
+                    }, b.createElement(W.v, {
+                        icon: W._13.Ignore,
                         ariaLabel: Object(p.d)("Block {displayName}", {
                             displayName: this.props.targetDisplayName
                         }, "ViewerCardIgnoreAction"),
@@ -7067,124 +7046,124 @@ webpackJsonp([42], {
                     }))
                 }, t = m.__decorate([Object(Ft.d)("ViewerCardIgnoreAction")], t)
             }(b.Component),
-            _a = n("Dc1A"),
-            Sa = n("1Eny"),
-            Ea = n("zVM8"),
-            Na = "10 minutes",
-            wa = function(e) {
+            _i = n("Dc1A"),
+            Si = n("1Eny"),
+            Ei = n("zVM8"),
+            Ni = "10 minutes",
+            wi = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onBanClick = function() {
                         var e = t.props,
                             n = e.banUser,
-                            i = e.channelID,
-                            a = e.userLogin;
+                            a = e.channelID,
+                            i = e.userLogin;
                         n(Object(P.a)({
-                            channelID: i,
-                            bannedUserLogin: a
+                            channelID: a,
+                            bannedUserLogin: i
                         }))
                     }, t.onTimeoutClick = function() {
                         var e = t.props,
                             n = e.banUser,
-                            i = e.channelID,
-                            a = e.userLogin;
+                            a = e.channelID,
+                            i = e.userLogin;
                         n(Object(P.a)({
-                            channelID: i,
-                            bannedUserLogin: a,
-                            expiresIn: Na
+                            channelID: a,
+                            bannedUserLogin: i,
+                            expiresIn: Ni
                         }))
                     }, t.onUnbanClick = function() {
                         var e = t.props,
                             n = e.unbanUser,
-                            i = e.channelID,
-                            a = e.userLogin;
+                            a = e.channelID,
+                            i = e.userLogin;
                         n(Object(P.a)({
-                            channelID: i,
-                            bannedUserLogin: a
+                            channelID: a,
+                            bannedUserLogin: i
                         }))
                     }, t
                 }
                 return m.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return b.createElement(Z.Z, {
-                        display: Z.L.InlineFlex
+                    return b.createElement(W.Z, {
+                        display: W.L.InlineFlex
                     }, this.getContent())
                 }, t.prototype.getContent = function() {
                     return this.props.data.loading || this.props.data.error ? [this.renderBanAction(!0), this.renderTimeoutAction(!0)] : this.props.data.chatRoomBanStatus ? this.props.data.chatRoomBanStatus.isPermanent ? [this.renderUnbanAction(), this.renderTimeoutAction(!0)] : [this.renderBanAction(), this.renderUntimeoutAction()] : [this.renderBanAction(), this.renderTimeoutAction()]
                 }, t.prototype.renderTimeoutAction = function(e) {
                     void 0 === e && (e = !1);
                     var t = Object(p.d)("Timeout User", "ViewerCardModActions");
-                    return b.createElement(Z._33, {
+                    return b.createElement(W._33, {
                         key: "Timeout",
                         label: t,
-                        direction: Z._35.Top,
-                        align: Z._34.Left,
+                        direction: W._35.Top,
+                        align: W._34.Left,
                         offsetX: "15%"
-                    }, b.createElement(Z.Z, {
+                    }, b.createElement(W.Z, {
                         margin: {
                             right: 1
                         }
-                    }, b.createElement(Z.v, {
-                        icon: Z._13.Timeout,
+                    }, b.createElement(W.v, {
+                        icon: W._13.Timeout,
                         disabled: e,
                         ariaLabel: t,
                         onClick: this.onTimeoutClick
                     })))
                 }, t.prototype.renderUntimeoutAction = function() {
                     var e = Object(p.d)("Untimeout User", "ViewerCardModActions");
-                    return b.createElement(Z._33, {
+                    return b.createElement(W._33, {
                         key: "Untimeout",
                         label: e,
-                        direction: Z._35.Top,
-                        align: Z._34.Left,
+                        direction: W._35.Top,
+                        align: W._34.Left,
                         offsetX: "15%"
-                    }, b.createElement(Z.Z, {
+                    }, b.createElement(W.Z, {
                         margin: {
                             right: 1
                         }
-                    }, b.createElement(Z.v, {
-                        icon: Z._13.FollowCheck,
+                    }, b.createElement(W.v, {
+                        icon: W._13.FollowCheck,
                         ariaLabel: e,
                         onClick: this.onUnbanClick
                     })))
                 }, t.prototype.renderBanAction = function(e) {
                     void 0 === e && (e = !1);
                     var t = Object(p.d)("Ban User", "ViewerCardModActions");
-                    return b.createElement(Z._33, {
+                    return b.createElement(W._33, {
                         key: "Ban",
                         label: t,
-                        direction: Z._35.Top,
-                        align: Z._34.Left,
+                        direction: W._35.Top,
+                        align: W._34.Left,
                         offsetX: "32%"
-                    }, b.createElement(Z.Z, {
+                    }, b.createElement(W.Z, {
                         margin: {
                             right: 1
                         }
-                    }, b.createElement(Z.v, {
-                        icon: Z._13.Ban,
+                    }, b.createElement(W.v, {
+                        icon: W._13.Ban,
                         disabled: e,
                         ariaLabel: t,
                         onClick: this.onBanClick
                     })))
                 }, t.prototype.renderUnbanAction = function() {
                     var e = Object(p.d)("Unban User", "ViewerCardModActions");
-                    return b.createElement(Z._33, {
+                    return b.createElement(W._33, {
                         key: "Unban",
                         label: e,
-                        direction: Z._35.Top,
-                        align: Z._34.Left,
+                        direction: W._35.Top,
+                        align: W._34.Left,
                         offsetX: "32%"
-                    }, b.createElement(Z.Z, {
+                    }, b.createElement(W.Z, {
                         margin: {
                             right: 1
                         }
-                    }, b.createElement(Z.v, {
-                        icon: Z._13.FollowCheck,
+                    }, b.createElement(W.v, {
+                        icon: W._13.FollowCheck,
                         ariaLabel: e,
                         onClick: this.onUnbanClick
                     })))
-                }, t = m.__decorate([Object(Ft.d)("ViewerCardModActions"), Object(k.a)(Ea, {
+                }, t = m.__decorate([Object(Ft.d)("ViewerCardModActions"), Object(k.a)(Ei, {
                     options: function(e) {
                         return {
                             variables: {
@@ -7194,58 +7173,58 @@ webpackJsonp([42], {
                             fetchPolicy: "cache-and-network"
                         }
                     }
-                }), Object(k.a)(_a, {
+                }), Object(k.a)(_i, {
                     name: "banUser",
                     options: function(e) {
                         return {
                             update: function(t, n) {
                                 ! function(e, t, n) {
-                                    var i = e.readQuery({
-                                        query: Ea,
+                                    var a = e.readQuery({
+                                        query: Ei,
                                         variables: {
                                             targetUserID: n.userID,
                                             channelID: n.channelID
                                         }
                                     });
-                                    i && (t && t.data && (i.chatRoomBanStatus = {
+                                    a && (t && t.data && (a.chatRoomBanStatus = {
                                         isPermanent: !0,
                                         __typename: "ChatRoomBanStatus"
                                     }), e.writeQuery({
-                                        query: Ea,
+                                        query: Ei,
                                         variables: {
                                             targetUserID: n.userID,
                                             channelID: n.channelID
                                         },
-                                        data: i
+                                        data: a
                                     }))
                                 }(t, n, e)
                             }
                         }
                     }
-                }), Object(k.a)(Sa, {
+                }), Object(k.a)(Si, {
                     name: "unbanUser",
                     options: function(e) {
                         return {
                             update: function(t) {
                                 ! function(e, t) {
                                     var n = e.readQuery({
-                                        query: Ea,
+                                        query: Ei,
                                         variables: {
                                             targetUserID: t.userID,
                                             channelID: t.channelID
                                         }
                                     });
                                     if (n) {
-                                        var i = m.__assign({}, n, {
+                                        var a = m.__assign({}, n, {
                                             chatRoomBanStatus: null
                                         });
                                         e.writeQuery({
-                                            query: Ea,
+                                            query: Ei,
                                             variables: {
                                                 targetUserID: t.userID,
                                                 channelID: t.channelID
                                             },
-                                            data: i
+                                            data: a
                                         })
                                     }
                                 }(t, e)
@@ -7254,7 +7233,7 @@ webpackJsonp([42], {
                     }
                 })], t)
             }(b.Component),
-            Da = function(e) {
+            Di = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.modUser = function() {
@@ -7274,43 +7253,43 @@ webpackJsonp([42], {
                 }, t.prototype.render = function() {
                     if (this.state.isModerator) {
                         var e = Object(p.d)("Unmod User", "ViewerCardOwnerActions");
-                        return b.createElement(Z._33, {
+                        return b.createElement(W._33, {
                             label: e,
-                            direction: Z._35.Top,
-                            align: Z._34.Center
-                        }, b.createElement(Z.Z, {
+                            direction: W._35.Top,
+                            align: W._34.Center
+                        }, b.createElement(W.Z, {
                             key: "OP",
                             margin: {
                                 right: 1
                             }
-                        }, b.createElement(Z.v, {
-                            icon: Z._13.FollowCheck,
+                        }, b.createElement(W.v, {
+                            icon: W._13.FollowCheck,
                             ariaLabel: e,
                             onClick: this.unmodUser
                         })))
                     }
                     e = Object(p.d)("Mod User", "ViewerCardOwnerActions");
-                    return b.createElement(Z._33, {
+                    return b.createElement(W._33, {
                         label: e,
-                        direction: Z._35.Top,
-                        align: Z._34.Center
-                    }, b.createElement(Z.Z, {
+                        direction: W._35.Top,
+                        align: W._34.Center
+                    }, b.createElement(W.Z, {
                         key: "OP",
                         margin: {
                             right: 1
                         }
-                    }, b.createElement(Z.v, {
-                        icon: Z._13.OP,
+                    }, b.createElement(W.v, {
+                        icon: W._13.OP,
                         ariaLabel: e,
                         onClick: this.modUser
                     })))
                 }, t = m.__decorate([Object(Ft.d)("ViewerCardOwnerActions")], t)
             }(b.Component),
-            Ia = n("O1nh"),
-            Oa = n("mw/a"),
-            La = n("daN3"),
-            Ta = n("YH6m"),
-            xa = function(e) {
+            Ii = n("O1nh"),
+            Oi = n("mw/a"),
+            Li = n("daN3"),
+            Ti = n("YH6m"),
+            xi = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onGiftSelect = function() {
@@ -7322,23 +7301,23 @@ webpackJsonp([42], {
                     }, t
                 }
                 return m.__extends(t, e), t.prototype.render = function() {
-                    return b.createElement(Z.Z, null, b.createElement(Z.Z, {
-                        display: Z.L.Flex,
-                        justifyContent: Z.Y.Between,
-                        alignItems: Z.c.Center,
+                    return b.createElement(W.Z, null, b.createElement(W.Z, {
+                        display: W.L.Flex,
+                        justifyContent: W.Y.Between,
+                        alignItems: W.c.Center,
                         fullWidth: !0
-                    }, b.createElement(Z._25, {
+                    }, b.createElement(W._25, {
                         bold: !0,
-                        type: Z._30.H5
-                    }, Object(p.d)("Choose A Gift Subscription", "GiftTierTabs")), b.createElement(Z.u, {
-                        type: Z.z.Text,
-                        icon: Z._13.AngleLeft,
+                        type: W._30.H5
+                    }, Object(p.d)("Choose A Gift Subscription", "GiftTierTabs")), b.createElement(W.u, {
+                        type: W.z.Text,
+                        icon: W._13.AngleLeft,
                         onClick: this.props.onBack,
                         "data-test-selector": "sub-gift-select-back-button"
-                    }, b.createElement(Z.Z, {
-                        alignItems: Z.c.Center,
-                        display: Z.L.InlineFlex
-                    }, b.createElement(Z._25, null, Object(p.d)("Back", "GiftTierTabs"))))), b.createElement(Ta.a, {
+                    }, b.createElement(W.Z, {
+                        alignItems: W.c.Center,
+                        display: W.L.InlineFlex
+                    }, b.createElement(W._25, null, Object(p.d)("Back", "GiftTierTabs"))))), b.createElement(Ti.a, {
                         canPrimeSubscribe: !1,
                         channelDisplayName: this.props.channelDisplayName,
                         giftRecipient: this.props.giftRecipient,
@@ -7352,65 +7331,65 @@ webpackJsonp([42], {
                     }))
                 }, t
             }(b.Component),
-            Ma = n("pQNb"),
-            Ba = n("CwIZ"),
-            Fa = (n("VSa1"), n("BBNG"));
+            Mi = n("pQNb"),
+            Bi = n("CwIZ"),
+            Fi = (n("VSa1"), n("BBNG"));
         ! function(e) {
             e[e.ActionsPage = 0] = "ActionsPage", e[e.SubGiftSelectPage = 1] = "SubGiftSelectPage"
-        }(Xi || (Xi = {}));
-        var Ra = function(e) {
+        }(Xa || (Xa = {}));
+        var Ri = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        currentPage: Xi.ActionsPage
+                        currentPage: Xa.ActionsPage
                     }, t.getContent = function() {
                         if (t.props.data.loading || t.props.data.error) return t.renderHideButton();
                         var e = {
-                                backgroundImage: "url(" + (t.props.data.targetUser.bannerImageURL || ka) + ")"
+                                backgroundImage: "url(" + (t.props.data.targetUser.bannerImageURL || ki) + ")"
                             },
-                            n = t.state.currentPage === Xi.ActionsPage ? t.renderActions() : t.renderSubGiftSelect();
-                        return b.createElement(Z.Z, null, b.createElement(Z._21, {
+                            n = t.state.currentPage === Xa.ActionsPage ? t.renderActions() : t.renderSubGiftSelect();
+                        return b.createElement(W.Z, null, b.createElement(W._21, {
                             elevation: 1,
                             border: !0
                         }, b.createElement("div", {
                             className: "viewer-card",
                             style: e
-                        }, b.createElement(Z.Z, {
-                            display: Z.L.Flex,
-                            flexDirection: Z.N.Column,
+                        }, b.createElement(W.Z, {
+                            display: W.L.Flex,
+                            flexDirection: W.N.Column,
                             fullHeight: !0,
                             fullWidth: !0,
                             className: "viewer-card__overlay"
-                        }, b.createElement(Z.Z, {
+                        }, b.createElement(W.Z, {
                             padding: 1,
-                            alignItems: Z.c.Start,
-                            justifyContent: Z.Y.Start,
-                            display: Z.L.Flex,
-                            flexDirection: Z.N.Row,
-                            textAlign: Z._26.Center,
+                            alignItems: W.c.Start,
+                            justifyContent: W.Y.Start,
+                            display: W.L.Flex,
+                            flexDirection: W.N.Row,
+                            textAlign: W._26.Center,
                             fullWidth: !0,
                             flexGrow: 1,
-                            position: Z._6.Relative,
+                            position: W._6.Relative,
                             className: "viewer-card__banner"
-                        }, b.createElement(Z.l, {
+                        }, b.createElement(W.l, {
                             src: t.props.data.targetUser.profileImageURL,
                             size: 50,
                             alt: t.props.data.targetUser.displayName
-                        }), b.createElement(Z.Z, {
-                            alignItems: Z.c.Center,
+                        }), b.createElement(W.Z, {
+                            alignItems: W.c.Center,
                             margin: 1,
                             className: "viewer-card__display-name",
                             ellipsis: !0
-                        }, b.createElement(Z._25, {
-                            type: Z._30.H4
+                        }, b.createElement(W._25, {
+                            type: W._30.H4
                         }, b.createElement("a", {
                             className: "viewer-card__display-name-link",
                             href: "/" + t.props.targetLogin,
                             target: "_blank"
                         }, t.props.data.targetUser.displayName))), t.renderHideButton(), t.renderIgnoreButton()))), n))
                     }, t.toggleGiftPage = function() {
-                        var e = t.state.currentPage === Xi.ActionsPage ? Xi.SubGiftSelectPage : Xi.ActionsPage;
-                        e === Xi.SubGiftSelectPage && t.trackGiftEvent(), t.setState({
+                        var e = t.state.currentPage === Xa.ActionsPage ? Xa.SubGiftSelectPage : Xa.ActionsPage;
+                        e === Xa.SubGiftSelectPage && t.trackGiftEvent(), t.setState({
                             currentPage: e
                         })
                     }, t.onWhisperButtonClick = function() {
@@ -7430,8 +7409,8 @@ webpackJsonp([42], {
                             }, "ReportUserModalTitle")
                         })
                     }, t.trackBuyGiftSubEvent = function(e) {
-                        Object(Ba.b)(m.__assign({}, e, {
-                            action: Ba.a.BuyGiftSub,
+                        Object(Bi.b)(m.__assign({}, e, {
+                            action: Bi.a.BuyGiftSub,
                             channelID: t.props.channelID || "",
                             channelLogin: t.props.data.channelUser.login || "",
                             isMenuOpen: null,
@@ -7442,8 +7421,8 @@ webpackJsonp([42], {
                             giftRecipient: t.props.data.targetUser.login
                         }))
                     }, t.trackGiftEvent = function() {
-                        Object(Ba.b)({
-                            action: Ba.a.GiftASub,
+                        Object(Bi.b)({
+                            action: Bi.a.GiftASub,
                             channelID: t.props.channelID || "",
                             channelLogin: t.props.data.channelUser.login || "",
                             isMenuOpen: null,
@@ -7461,45 +7440,45 @@ webpackJsonp([42], {
                     return this.props.data.error ? null : this.getContent()
                 }, t.prototype.renderIgnoreButton = function() {
                     var e = this.props.data.currentUser;
-                    return this.props.isEmbedded || e && e.login === this.props.targetLogin ? null : b.createElement(Z.Z, {
+                    return this.props.isEmbedded || e && e.login === this.props.targetLogin ? null : b.createElement(W.Z, {
                         key: "Ignore",
-                        position: Z._6.Absolute,
+                        position: W._6.Absolute,
                         attachRight: !0,
                         attachBottom: !0,
                         margin: {
                             bottom: .5,
                             right: .5
                         }
-                    }, b.createElement(Ca, {
+                    }, b.createElement(Ci, {
                         targetDisplayName: this.props.data.targetUser.displayName,
                         targetLogin: this.props.targetLogin,
                         sendMessageToTMI: this.props.sendMessageToTMI
                     }))
                 }, t.prototype.renderHideButton = function() {
-                    return b.createElement(Z.Z, {
+                    return b.createElement(W.Z, {
                         className: "viewer-card__hide",
-                        position: Z._6.Absolute,
+                        position: W._6.Absolute,
                         attachRight: !0,
                         attachTop: !0,
                         margin: {
                             top: .5,
                             right: .5
                         }
-                    }, b.createElement(Z.v, {
-                        icon: Z._13.Close,
+                    }, b.createElement(W.v, {
+                        icon: W._13.Close,
                         onClick: this.props.hideViewerCard,
                         ariaLabel: Object(p.d)("Hide", "ViewerCard"),
                         overlay: !0
                     }))
                 }, t.prototype.renderActions = function() {
                     var e = this.props.data.currentUser;
-                    return this.props.isEmbedded || e && e.login === this.props.targetLogin ? null : b.createElement(Z._21, {
+                    return this.props.isEmbedded || e && e.login === this.props.targetLogin ? null : b.createElement(W._21, {
                         className: "viewer-card__actions",
                         "data-test-selector": "viewer-card-actions",
                         attachBottom: !0
-                    }, this.renderSocialActions(), b.createElement(Z._21, {
-                        display: Z.L.Flex,
-                        background: Z.m.Alt2,
+                    }, this.renderSocialActions(), b.createElement(W._21, {
+                        display: W.L.Flex,
+                        background: W.m.Alt2,
                         fullWidth: !0,
                         padding: {
                             x: 1,
@@ -7510,85 +7489,85 @@ webpackJsonp([42], {
                     var e = null;
                     return this.isModeratorOrHigher && (e = b.createElement(ye.a, {
                         key: "MoreOptionsButton"
-                    }, b.createElement(Z.v, {
+                    }, b.createElement(W.v, {
                         ariaLabel: Object(p.d)("More options", "ViewerCard"),
-                        icon: Z._13.More,
+                        icon: W._13.More,
                         "data-a-target": "viewer-card-more-button"
-                    }), b.createElement(Z.p, {
-                        direction: Z.q.BottomRight,
+                    }), b.createElement(W.p, {
+                        direction: W.q.BottomRight,
                         "data-a-target": "viewer-card-more-balloon"
-                    }, b.createElement(Z.Z, {
+                    }, b.createElement(W.Z, {
                         padding: {
                             y: 1
                         }
-                    }, b.createElement(Z.X, {
+                    }, b.createElement(W.X, {
                         onClick: this.handleReportUserClick,
                         "data-a-target": "viewer-card-report-button"
-                    }, b.createElement(Z.Z, {
+                    }, b.createElement(W.Z, {
                         padding: {
                             x: 1
                         }
                     }, Object(p.d)("Report {user}", {
                         user: this.props.targetLogin
-                    }, "ViewerCard"))))))), [b.createElement(Z._21, {
-                        display: Z.L.Flex,
-                        background: Z.m.Base,
-                        flexDirection: Z.N.Row,
+                    }, "ViewerCard"))))))), [b.createElement(W._21, {
+                        display: W.L.Flex,
+                        background: W.m.Base,
+                        flexDirection: W.N.Row,
                         fullWidth: !0,
                         padding: {
                             y: 1,
                             left: 1,
                             right: .5
                         }
-                    }, b.createElement(Z.Z, {
+                    }, b.createElement(W.Z, {
                         key: "FriendButton",
                         margin: {
                             right: .5
                         }
-                    }, b.createElement(Ia.a, {
+                    }, b.createElement(Ii.a, {
                         channelID: this.props.data.targetUser.id
-                    })), b.createElement(Z.Z, {
+                    })), b.createElement(W.Z, {
                         key: "WhisperButton",
                         margin: {
                             right: .5
                         }
-                    }, this.renderWhisperButton()), b.createElement(Z.Z, {
+                    }, this.renderWhisperButton()), b.createElement(W.Z, {
                         key: "GiftButton",
                         margin: {
                             right: .5
                         }
-                    }, this.renderGiftSubscriptionButton()), b.createElement(Z.Z, {
+                    }, this.renderGiftSubscriptionButton()), b.createElement(W.Z, {
                         key: "ReportButton",
                         flexGrow: 1,
-                        textAlign: Z._26.Right
+                        textAlign: W._26.Right
                     }, e))]
                 }, t.prototype.renderWhisperButton = function() {
                     if (!this.props.data.currentUser || !this.props.data.targetUser) return null;
                     var e = Object(pt.a)(this.props.data.currentUser.id, this.props.data.targetUser.id);
-                    return b.createElement(ya.a, {
+                    return b.createElement(yi.a, {
                         onClick: this.onWhisperButtonClick,
                         threadID: e
                     })
                 }, t.prototype.renderGiftSubscriptionButton = function() {
-                    return !this.props.data.channelUser || !this.props.data.channelUser.subscriptionProducts || this.props.data.channelUser.subscriptionProducts.length < 1 ? null : b.createElement(La.a, {
+                    return !this.props.data.channelUser || !this.props.data.channelUser.subscriptionProducts || this.props.data.channelUser.subscriptionProducts.length < 1 ? null : b.createElement(Li.a, {
                         onClick: this.toggleGiftPage,
                         subProductId: this.props.data.channelUser.subscriptionProducts[0].id,
                         giftRecipient: this.props.targetLogin
                     })
                 }, t.prototype.renderSubGiftSelect = function() {
-                    return b.createElement(Z.Z, null, b.createElement(Ma.a, {
+                    return b.createElement(W.Z, null, b.createElement(Mi.a, {
                         subscriptionProducts: this.props.data.channelUser.subscriptionProducts,
                         isGift: !0
-                    }), b.createElement(Z._21, {
-                        background: Z.m.Base,
+                    }), b.createElement(W._21, {
+                        background: W.m.Base,
                         attachBottom: !0,
-                        display: Z.L.Flex,
-                        flexDirection: Z.N.Row,
-                        justifyContent: Z.Y.Between,
+                        display: W.L.Flex,
+                        flexDirection: W.N.Row,
+                        justifyContent: W.Y.Between,
                         fullWidth: !0,
                         flexGrow: 0,
                         padding: 2
-                    }, b.createElement(xa, {
+                    }, b.createElement(xi, {
                         onBack: this.toggleGiftPage,
                         channelDisplayName: this.props.data.channelUser.displayName,
                         subscriptionProducts: this.props.data.channelUser.subscriptionProducts,
@@ -7597,12 +7576,12 @@ webpackJsonp([42], {
                     })))
                 }, t.prototype.renderChatActions = function() {
                     var e = [];
-                    return this.isModeratorOrHigher() && e.push(b.createElement(wa, {
+                    return this.isModeratorOrHigher() && e.push(b.createElement(wi, {
                         key: "ModActions",
                         channelID: this.props.data.channelUser.id,
                         userID: this.props.data.targetUser.id,
                         userLogin: this.props.targetLogin
-                    })), this.isOwnerOrHigher() && e.push(b.createElement(Da, {
+                    })), this.isOwnerOrHigher() && e.push(b.createElement(Di, {
                         key: "OwnerActions",
                         sendMessageToTMI: this.props.sendMessageToTMI,
                         targetLogin: this.props.targetLogin
@@ -7618,14 +7597,14 @@ webpackJsonp([42], {
                 }, t.prototype.reportContentTypeFromSourceType = function(e) {
                     switch (e) {
                         case qt.a.chat_message:
-                            return Oa.a.Chat;
+                            return Oi.a.Chat;
                         case qt.a.recent_raids:
-                            return Oa.a.Raid;
+                            return Oi.a.Raid;
                         case qt.a.viewer_list:
                         default:
-                            return Oa.a.User
+                            return Oi.a.User
                     }
-                }, t = m.__decorate([Object(Ft.d)("ViewerCard"), Object(k.a)(Fa, {
+                }, t = m.__decorate([Object(Ft.d)("ViewerCard"), Object(k.a)(Fi, {
                     options: function(e) {
                         return {
                             variables: {
@@ -7636,7 +7615,7 @@ webpackJsonp([42], {
                     }
                 })], t)
             }(b.Component),
-            Ua = (n("PqoY"), function(e) {
+            Ui = (n("PqoY"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -7644,10 +7623,10 @@ webpackJsonp([42], {
                     this.props.hideViewerCard()
                 }, t.prototype.render = function() {
                     var e = null;
-                    return this.props.viewerCardOptions && (e = b.createElement(Z.Z, {
+                    return this.props.viewerCardOptions && (e = b.createElement(W.Z, {
                         className: "viewer-card-layer",
-                        position: Z._6.Relative
-                    }, b.createElement(Ra, {
+                        position: W._6.Relative
+                    }, b.createElement(Ri, {
                         isEmbedded: this.props.isEmbedded,
                         targetLogin: this.props.viewerCardOptions.targetLogin,
                         hideViewerCard: this.props.hideViewerCard,
@@ -7659,7 +7638,7 @@ webpackJsonp([42], {
                     }))), e
                 }, t
             }(b.Component)),
-            ja = Object(f.b)(function(e) {
+            ji = Object(f.b)(function(e) {
                 return {
                     viewerCardOptions: e.viewerCard.viewerCardOptions
                 }
@@ -7668,13 +7647,13 @@ webpackJsonp([42], {
                     hideViewerCard: h.c,
                     showReportUserModal: function(e) {
                         var t = m.__rest(e, []);
-                        return Object(va.d)(ba.a, t)
+                        return Object(vi.d)(bi.a, t)
                     }
                 }, e)
-            })(Ua),
-            Aa = n("vLl9"),
-            Pa = (n("dVd7"), p.i.withCategory("chat-room")),
-            Ha = function(e) {
+            })(Ui),
+            Ai = n("vLl9"),
+            Pi = (n("dVd7"), p.i.withCategory("chat-room")),
+            Vi = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     n.closeViewersList = function() {
@@ -7694,38 +7673,38 @@ webpackJsonp([42], {
                             chatListElement: e
                         })
                     };
-                    var i = new Vt.c([], [], n.props.channelLogin);
+                    var a = new Ht.c([], [], n.props.channelLogin);
                     return n.state = {
                         showChatRules: !1,
                         showViewersList: !1,
-                        badgeSets: i
+                        badgeSets: a
                     }, n
                 }
                 return m.__extends(t, e), t.prototype.render = function() {
                     var e = void 0 !== Qe.parse(this.props.location.search).darkpopout,
                         t = (s = {}, s[Object(Ut.c)(_.a.Dark)] = e, s);
-                    if (this.props.isHidden) return b.createElement(Z._21, {
-                        alignItems: Z.c.Center,
-                        background: Z.m.Alt2,
+                    if (this.props.isHidden) return b.createElement(W._21, {
+                        alignItems: W.c.Center,
+                        background: W.m.Alt2,
                         borderLeft: !0,
-                        display: Z.L.Flex,
-                        flexDirection: Z.N.Column,
+                        display: W.L.Flex,
+                        flexDirection: W.N.Column,
                         fullHeight: !0,
                         fullWidth: !0,
-                        justifyContent: Z.Y.Center,
-                        color: Z.I.Base,
-                        position: Z._6.Relative
-                    }, b.createElement(Z.Z, {
+                        justifyContent: W.Y.Center,
+                        color: W.I.Base,
+                        position: W._6.Relative
+                    }, b.createElement(W.Z, {
                         margin: {
                             bottom: 1
                         }
-                    }, b.createElement(Z._25, {
-                        fontSize: Z.P.Size5
-                    }, Object(p.d)("Chat is hidden.", "ChatRoom"))), b.createElement(Z.u, {
+                    }, b.createElement(W._25, {
+                        fontSize: W.P.Size5
+                    }, Object(p.d)("Chat is hidden.", "ChatRoom"))), b.createElement(W.u, {
                         onClick: this.props.onChatUnhide,
                         "data-a-target": "show-chat-button"
                     }, Object(p.d)("Show Chat", "ChatRoom")));
-                    var n = this.props.bitsConfig && this.props.firstPageLoaded && b.createElement(Wn, {
+                    var n = this.props.bitsConfig && this.props.firstPageLoaded && b.createElement(Zn, {
                             badgeData: this.state.badgeSets,
                             bitsConfig: this.props.bitsConfig,
                             blockLinks: this.props.blockLinks,
@@ -7734,54 +7713,54 @@ webpackJsonp([42], {
                             currentUserLogin: this.props.currentUserLogin,
                             userID: this.props.userID
                         }),
-                        i = this.state.showViewersList && b.createElement(ga, {
+                        a = this.state.showViewersList && b.createElement(gi, {
                             channelLogin: this.props.channelLogin,
                             closeViewersList: this.closeViewersList
                         }),
-                        a = !!this.props.authToken && !this.props.isEmbedded,
+                        i = !!this.props.authToken && !this.props.isEmbedded,
                         r = null;
-                    return this.state.showChatRules && (r = b.createElement(Z.Z, {
+                    return this.state.showChatRules && (r = b.createElement(W.Z, {
                         padding: {
                             x: 2
                         }
-                    }, b.createElement(da, {
+                    }, b.createElement(di, {
                         chatRules: this.props.chatRules,
                         channelLogin: this.props.channelLogin
-                    }))), b.createElement(Z.Z, {
+                    }))), b.createElement(W.Z, {
                         className: U("chat-room__container", t),
                         "data-a-target": this.props.theme === _.a.Dark ? "chat-theme-dark" : "chat-theme-light",
                         flexShrink: 1,
                         flexGrow: 1,
-                        display: Z.L.Flex,
-                        flexDirection: Z.N.Column,
-                        overflow: Z._2.Hidden,
+                        display: W.L.Flex,
+                        flexDirection: W.N.Column,
+                        overflow: W._2.Hidden,
                         fullWidth: !0,
                         fullHeight: !0
-                    }, b.createElement(Z._21, {
-                        background: Z.m.Alt2,
+                    }, b.createElement(W._21, {
+                        background: W.m.Alt2,
                         borderLeft: !0,
-                        display: Z.L.Flex,
-                        flexDirection: Z.N.Column,
-                        flexWrap: Z.O.NoWrap,
-                        position: Z._6.Relative,
+                        display: W.L.Flex,
+                        flexDirection: W.N.Column,
+                        flexWrap: W.O.NoWrap,
+                        position: W._6.Relative,
                         flexGrow: 1,
                         fullHeight: !0,
-                        overflow: Z._2.Hidden,
-                        color: Z.I.Base
-                    }, b.createElement(Z._21, {
-                        background: Z.m.Alt2,
+                        overflow: W._2.Hidden,
+                        color: W.I.Base
+                    }, b.createElement(W._21, {
+                        background: W.m.Alt2,
                         borderBottom: !0,
                         className: "chat-room__header",
-                        display: Z.L.Flex,
-                        justifyContent: Z.Y.Center,
-                        alignItems: Z.c.Center,
+                        display: W.L.Flex,
+                        justifyContent: W.Y.Center,
+                        alignItems: W.c.Center,
                         padding: {
                             y: 1
                         },
                         flexShrink: 0
                     }, b.createElement("p", {
                         "data-a-target": "chat-room__header-channel-name"
-                    }, this.props.channelLogin)), this.props.chatRoomHeader, n, b.createElement(ca, {
+                    }, this.props.channelLogin)), this.props.chatRoomHeader, n, b.createElement(ci, {
                         badgeSets: this.state.badgeSets,
                         channelID: this.props.channelID,
                         channelLogin: this.props.channelLogin,
@@ -7791,21 +7770,21 @@ webpackJsonp([42], {
                         isCurrentUserModerator: this.props.isCurrentUserModerator,
                         onPushMessage: this.props.onPushMessage,
                         containerRef: this.setChatListElement
-                    }), b.createElement(Z.Z, {
+                    }), b.createElement(W.Z, {
                         className: "chat-room__viewer-card",
-                        position: Z._6.Absolute
-                    }, b.createElement(ja, {
+                        position: W._6.Absolute
+                    }, b.createElement(ji, {
                         isEmbedded: this.props.isEmbedded,
                         onSendMessage: this.props.onSendMessage,
                         channelID: this.props.channelID
-                    })), b.createElement(Z.Z, {
+                    })), b.createElement(W.Z, {
                         className: "chat-room__notifications",
-                        position: Z._6.Absolute,
-                        zIndex: Z._42.Default,
+                        position: W._6.Absolute,
+                        zIndex: W._42.Default,
                         fullWidth: !0
-                    }, this.props.children), r, this.props.isOwnChannel && !this.props.isEmbedded && b.createElement(Ht, {
+                    }, this.props.children), r, this.props.isOwnChannel && !this.props.isEmbedded && b.createElement(Vt, {
                         hostedChannelLogin: this.props.hostedChannelLogin
-                    }), i, b.createElement(fa.a, {
+                    }), a, b.createElement(fi.a, {
                         channelID: this.props.channelID,
                         channelLogin: this.props.channelLogin,
                         isEmbedded: this.props.isEmbedded,
@@ -7813,10 +7792,10 @@ webpackJsonp([42], {
                         isPopout: this.props.isPopout,
                         onPushMessage: this.props.onPushMessage,
                         onSendMessage: this.props.onSendMessage
-                    }), b.createElement(ta, {
+                    }), b.createElement(ti, {
                         activeChatters: this.props.activeChatters,
                         authToken: this.props.authToken,
-                        bitsConfig: a ? this.props.bitsConfig : void 0,
+                        bitsConfig: i ? this.props.bitsConfig : void 0,
                         channelDisplayName: this.props.channelDisplayName,
                         channelID: this.props.channelID,
                         channelLogin: this.props.channelLogin,
@@ -7839,7 +7818,7 @@ webpackJsonp([42], {
                     var s
                 }, t.prototype.componentWillReceiveProps = function(e) {
                     if (e.data && e.data.badges && e.data.user && e.data.user.broadcastBadges && this.setState({
-                            badgeSets: new Vt.c(e.data.badges, e.data.user.broadcastBadges, e.channelLogin)
+                            badgeSets: new Ht.c(e.data.badges, e.data.user.broadcastBadges, e.channelLogin)
                         }), e.data && e.data.user && e.data.user.self && e.data.user.self.displayBadges) {
                         var t = {};
                         e.data.user.self.displayBadges.forEach(function(e) {
@@ -7848,7 +7827,7 @@ webpackJsonp([42], {
                     }
                 }, t
             }(b.Component),
-            Va = Object(C.d)(Object(k.a)(Aa, {
+            Hi = Object(C.d)(Object(k.a)(Ai, {
                 options: function(e) {
                     return {
                         name: "data",
@@ -7859,32 +7838,32 @@ webpackJsonp([42], {
                 }
             }), Object(tt.a)(function(e) {
                 return {
-                    query: Aa,
+                    query: Ai,
                     variables: {
                         channelLogin: e.channelLogin
                     },
-                    topic: Object(H.m)(e.userID),
+                    topic: Object(V.m)(e.userID),
                     type: A.c.UserBitsBadgeUpdate,
                     skip: !e.userID,
                     mutator: function(t, n) {
-                        if (Pa.debug("Received bits-user-update-v1 pubsub update", {
+                        if (Pi.debug("Received bits-user-update-v1 pubsub update", {
                                 data: n,
                                 event: t
                             }), !n.badges || t.message_type === On.Balance || null === t.data.newest_version || t.data.channel_id !== e.channelID) return n;
-                        var i = n.badges.find(function(e) {
+                        var a = n.badges.find(function(e) {
                             return "bits" === e.setID && e.version === t.data.newest_version
                         });
-                        return void 0 !== i && n.user.self.displayBadges && "bits" === n.user.self.selectedBadge.setID && (n.user.self.selectedBadge = i, n.user.self.displayBadges = n.user.self.displayBadges.map(function(e) {
-                            return "bits" === e.setID && e.version !== i.version ? i : e
+                        return void 0 !== a && n.user.self.displayBadges && "bits" === n.user.self.selectedBadge.setID && (n.user.self.selectedBadge = a, n.user.self.displayBadges = n.user.self.displayBadges.map(function(e) {
+                            return "bits" === e.setID && e.version !== a.version ? a : e
                         })), n
                     }
                 }
-            }), Ee.e)(Ha),
-            Wa = "(?:\\W|^)",
-            Za = "(?:$|\\W)",
-            Ga = 150,
-            qa = "PowerUpL DarkMode PowerUpR",
-            za = function(e) {
+            }), Ee.e)(Vi),
+            Zi = "(?:\\W|^)",
+            Wi = "(?:$|\\W)",
+            Gi = 150,
+            qi = "PowerUpL DarkMode PowerUpR",
+            zi = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.state = {
@@ -7953,7 +7932,7 @@ webpackJsonp([42], {
                         n.outgoingTokenMatchers = e.map(function(e) {
                             return {
                                 token: e,
-                                regex: new RegExp("" + Wa + e + Za)
+                                regex: new RegExp("" + Zi + e + Wi)
                             }
                         })
                     }, n.parseOutgoingMessage = function(e) {
@@ -7962,9 +7941,9 @@ webpackJsonp([42], {
                         })
                     }, n.onOutgoingTokenMatch = function(e, t) {
                         switch (e) {
-                            case qa:
-                                var i = n.props.theme === _.a.Light ? _.a.Dark : _.a.Light;
-                                n.props.onThemeChange(i);
+                            case qi:
+                                var a = n.props.theme === _.a.Light ? _.a.Dark : _.a.Light;
+                                n.props.onThemeChange(a);
                                 break;
                             default:
                                 return
@@ -7975,7 +7954,7 @@ webpackJsonp([42], {
                         })
                     }, n.clearBufferHandle = function() {
                         n.syncBufferHandle && (clearTimeout(n.syncBufferHandle), n.syncBufferHandle = 0)
-                    }, n.chatService = new xt(t.userLogin, t.channelLogin, n.onChatMessage), n.logger = p.i.withCategory("chat-room"), n.registerCustomLatencyEvents(), n.createOutgoingTokenMatchers([qa]), n.activeChatters = new kt(t.channelID), n.chatBuffer = new Nt(Ga, n.onChatBufferUpdate), n.chatBuffer.setBlockedUsers(t.blockedUsers), t.userLogin && n.chatBuffer.setCurrentUserLogin(t.userLogin), t.userID && n.activeChatters.setCurrentUserID(t.userID), n
+                    }, n.chatService = new xt(t.userLogin, t.channelLogin, n.onChatMessage), n.logger = p.i.withCategory("chat-room"), n.registerCustomLatencyEvents(), n.createOutgoingTokenMatchers([qi]), n.activeChatters = new kt(t.channelID), n.chatBuffer = new Nt(Gi, n.onChatBufferUpdate), n.chatBuffer.setBlockedUsers(t.blockedUsers), t.userLogin && n.chatBuffer.setCurrentUserLogin(t.userLogin), t.userID && n.activeChatters.setCurrentUserID(t.userID), n
                 }
                 return m.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.connect(this.props), this.props.bitsConfig && this.updateBitsConfig(this.props.bitsConfig), this.updateBlockLinks(this.props.blockLinks), this.chatService.disabled && this.props.latencyTracking.reportInteractive(), this.props.emoteSetsData && this.props.emoteSetsData.emoteSets && (this.logger.debug("Updating emote sets after mount", {
@@ -7989,19 +7968,19 @@ webpackJsonp([42], {
                     e.isHidden && !t.isHidden || !e.rightColumnExpanded && t.rightColumnExpanded ? this.disconnect() : (n = e.channelLogin !== t.channelLogin || e.userLogin !== t.userLogin || e.authToken !== t.authToken || !e.isHidden && t.isHidden || e.rightColumnExpanded && !t.rightColumnExpanded) && (this.logger.debug("Reconnecting..."), this.registerCustomLatencyEvents(), this.connect(e), this.setState({
                         hostedChannelLogin: null
                     }));
-                    var i = e.emoteSetsData && e.emoteSetsData.emoteSets,
-                        a = t.emoteSetsData && t.emoteSetsData.emoteSets;
-                    i && (i !== a || n) && (this.logger.debug("Updating emote sets on props change", {
+                    var a = e.emoteSetsData && e.emoteSetsData.emoteSets,
+                        i = t.emoteSetsData && t.emoteSetsData.emoteSets;
+                    a && (a !== i || n) && (this.logger.debug("Updating emote sets on props change", {
                         shouldReconnect: n,
-                        prevEmoteSets: a,
-                        nextEmoteSets: i
-                    }), this.chatService.updateEmotes(i)), (e.bitsConfig !== t.bitsConfig || n) && this.updateBitsConfig(e.bitsConfig), (e.blockLinks !== t.blockLinks || n) && this.updateBlockLinks(e.blockLinks);
+                        prevEmoteSets: i,
+                        nextEmoteSets: a
+                    }), this.chatService.updateEmotes(a)), (e.bitsConfig !== t.bitsConfig || n) && this.updateBitsConfig(e.bitsConfig), (e.blockLinks !== t.blockLinks || n) && this.updateBlockLinks(e.blockLinks);
                     var r = e.isCurrentUserModerator ? 0 : e.chatDelayMS;
                     this.chatBuffer.setDelay(r), e.userLogin && t.userLogin !== e.userLogin && this.chatBuffer.setCurrentUserLogin(e.userLogin), e.userID && t.userID !== e.userID && this.activeChatters.setCurrentUserID(e.userID), t.channelID !== e.channelID && this.activeChatters.resetWithChannelID(e.channelID), t.blockedUsers !== e.blockedUsers && this.chatBuffer.setBlockedUsers(e.blockedUsers), !this.moderationActionService && e.userID && e.channelID && (this.moderationActionService = new Mt(e.channelID, e.userID, this.chatBuffer.consumeChatEvent))
                 }, t.prototype.render = function() {
                     var e = this.props.emoteSetsData && this.props.emoteSetsData.emoteSets || [],
                         t = this.props.emoteSetsData && this.props.emoteSetsData.emoteMap || {};
-                    return b.createElement(Va, {
+                    return b.createElement(Hi, {
                         authToken: this.props.authToken,
                         bitsConfig: this.props.bitsConfig,
                         blockLinks: this.props.blockLinks,
@@ -8084,7 +8063,7 @@ webpackJsonp([42], {
                     configurable: !0
                 }), t
             }(b.Component),
-            Ya = Object(y.compose)(Object(f.b)(function(e) {
+            Yi = Object(y.compose)(Object(f.b)(function(e) {
                 return {
                     firstPageLoaded: e.session.firstPageLoaded,
                     isHidden: e.chat.isHidden,
@@ -8156,10 +8135,10 @@ webpackJsonp([42], {
                 skip: function(e) {
                     return !e.authToken
                 }
-            }), Object(S.a)())(za),
-            $a = n("/eFD"),
-            Qa = n("KNSH"),
-            Ja = function(e) {
+            }), Object(S.a)())(zi),
+            $i = n("/eFD"),
+            Qi = n("KNSH"),
+            Ji = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -8171,16 +8150,16 @@ webpackJsonp([42], {
                     var e = this.props.channelData.channel,
                         t = this.props.userData && this.props.userData.user,
                         n = !1,
-                        i = !1;
+                        a = !1;
                     if (t && e && e.self) {
-                        var a = t.login === e.login,
+                        var i = t.login === e.login,
                             r = t.roles.isGlobalMod || t.roles.isSiteAdmin || t.roles.isStaff;
-                        n = e.self.isModerator || r || a, i = t.roles.isStaff
+                        n = e.self.isModerator || r || i, a = t.roles.isStaff
                     }
                     var s = e && e.chatSettings && e.chatSettings.rules,
                         o = e && e.chatSettings && e.chatSettings.chatDelayMs,
                         l = !(!e || !e.chatSettings) && e.chatSettings.blockLinks;
-                    return b.createElement(Ya, {
+                    return b.createElement(Yi, {
                         key: this.props.channelLogin,
                         authToken: this.props.user && this.props.user.authToken,
                         blockLinks: l,
@@ -8198,9 +8177,9 @@ webpackJsonp([42], {
                         userDisplayName: this.props.user && this.props.user.displayName,
                         userID: this.props.user && this.props.user.id.toString(),
                         userLogin: this.props.user && this.props.user.login,
-                        isStaff: i
+                        isStaff: a
                     })
-                }, t = m.__decorate([Object(k.a)($a, {
+                }, t = m.__decorate([Object(k.a)($i, {
                     name: "channelData",
                     options: function(e) {
                         return {
@@ -8209,22 +8188,22 @@ webpackJsonp([42], {
                             }
                         }
                     }
-                }), Object(k.a)(Qa, {
+                }), Object(k.a)(Qi, {
                     name: "userData",
                     skip: function(e) {
                         return !e.user
                     }
                 }), Object(Ft.d)("Chat")], t)
             }(b.Component),
-            Ka = Object(f.b)(function(e) {
+            Ki = Object(f.b)(function(e) {
                 return {
                     user: Object(v.c)(e)
                 }
-            })(Ja);
+            })(Ji);
         n.d(t, !1, function() {
-            return Ja
+            return Ji
         }), n.d(t, "a", function() {
-            return Ka
+            return Ki
         })
     },
     "1Eny": function(e, t) {
@@ -8326,7 +8305,7 @@ webpackJsonp([42], {
     "1OO3": function(e, t, n) {
         "use strict";
 
-        function i() {
+        function a() {
             return Object(r.d)("Unable to ban user", "BlockUserMutation")
         }
         t.a = function(e) {
@@ -8335,15 +8314,15 @@ webpackJsonp([42], {
                 props: function(n) {
                     return {
                         onBanUser: function(s, u) {
-                            return void 0 === u && (u = null), a.__awaiter(t, void 0, void 0, function() {
+                            return void 0 === u && (u = null), i.__awaiter(t, void 0, void 0, function() {
                                 var t, v, b, k, y, C;
-                                return a.__generator(this, function(a) {
-                                    switch (a.label) {
+                                return i.__generator(this, function(i) {
+                                    switch (i.label) {
                                         case 0:
                                             if (t = u ? d.a.Timeout : d.a.Ban, v = e(n.ownProps), b = v.channelID, k = v.onPushMessage, !n.mutate) return [3, 5];
-                                            a.label = 1;
+                                            i.label = 1;
                                         case 1:
-                                            return a.trys.push([1, 3, , 4]), [4, n.mutate(Object(o.a)({
+                                            return i.trys.push([1, 3, , 4]), [4, n.mutate(Object(o.a)({
                                                 channelID: b,
                                                 bannedUserLogin: s,
                                                 expiresIn: u && function(e) {
@@ -8351,12 +8330,12 @@ webpackJsonp([42], {
                                                     var t = e,
                                                         n = "";
                                                     if (t > f) {
-                                                        var i = Math.floor(t / f);
-                                                        t -= i * f, n += i + "mo"
+                                                        var a = Math.floor(t / f);
+                                                        t -= a * f, n += a + "mo"
                                                     }
                                                     if (t > g) {
-                                                        var a = Math.floor(t / g);
-                                                        t -= a * g, n += a + "w"
+                                                        var i = Math.floor(t / g);
+                                                        t -= i * g, n += i + "w"
                                                     }
                                                     if (t > h) {
                                                         var r = Math.floor(t / h);
@@ -8374,13 +8353,13 @@ webpackJsonp([42], {
                                                 }(u)
                                             }))];
                                         case 2:
-                                            return a.sent(), y = Object(c.a)(t, s, null, u), k && k(y), [2, y];
+                                            return i.sent(), y = Object(c.a)(t, s, null, u), k && k(y), [2, y];
                                         case 3:
-                                            throw C = a.sent(), r.i.error(C, "Unable to ban user"), k && k(Object(l.a)(i())), new Error(i());
+                                            throw C = i.sent(), r.i.error(C, "Unable to ban user"), k && k(Object(l.a)(a())), new Error(a());
                                         case 4:
                                             return [3, 6];
                                         case 5:
-                                            throw k && k(Object(l.a)(i())), new Error(i());
+                                            throw k && k(Object(l.a)(a())), new Error(a());
                                         case 6:
                                             return [2]
                                     }
@@ -8391,7 +8370,7 @@ webpackJsonp([42], {
                 }
             })
         };
-        var a = n("TToO"),
+        var i = n("TToO"),
             r = n("6sO2"),
             s = n("7vx8"),
             o = n("oIkB"),
@@ -8622,8 +8601,8 @@ webpackJsonp([42], {
     },
     "3T7g": function(e, t, n) {
         "use strict";
-        var i = n("RbGx"),
-            a = n("mbxv"),
+        var a = n("RbGx"),
+            i = n("mbxv"),
             r = n("+V/3"),
             s = (n("AwFw"), n("TToO")),
             o = function() {
@@ -8638,16 +8617,16 @@ webpackJsonp([42], {
                         n && e.clickAction === r.b && (e = s.__assign({}, e, {
                             channelName: n
                         }));
-                        var i = t.get(e.setID);
-                        i || (i = new Map, t.set(e.setID, i)), i.set(e.version, e)
+                        var a = t.get(e.setID);
+                        a || (a = new Map, t.set(e.setID, a)), a.set(e.version, e)
                     })
                 }, e
             }();
         new o([], [], "");
         n.d(t, "b", function() {
-            return i.a
-        }), n.d(t, "a", function() {
             return a.a
+        }), n.d(t, "a", function() {
+            return i.a
         }), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "c", function() {
             return o
         })
@@ -8656,22 +8635,22 @@ webpackJsonp([42], {
     "4JjK": function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
-            return i
+            return a
         });
-        var i;
+        var a;
         ! function(e) {
             e[e.Ready = 0] = "Ready", e[e.Dimensions = 1] = "Dimensions", e[e.RequestAd = 2] = "RequestAd", e[e.OnStart = 3] = "OnStart", e[e.OnCredit = 4] = "OnCredit", e[e.OnFinish = 5] = "OnFinish", e[e.OnClose = 6] = "OnClose", e[e.OnError = 7] = "OnError", e[e.Adblock = 8] = "Adblock", e[e.LimitReached = 9] = "LimitReached"
-        }(i || (i = {}))
+        }(a || (a = {}))
     },
     "4Q9N": function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
-            return i
+            return a
         });
-        var i;
+        var a;
         ! function(e) {
             e.ProfileImage = "profile_image", e.ProfileBanner = "profile_banner", e.ChannelOfflineImage = "channel_offline_image"
-        }(i || (i = {}))
+        }(a || (a = {}))
     },
     "54rb": function(e, t) {},
     "56e8": function(e, t) {},
@@ -8861,12 +8840,12 @@ webpackJsonp([42], {
         n.d(t, "a", function() {
             return o
         });
-        var i = n("HW6M"),
-            a = (n.n(i), n("U7vG")),
-            r = (n.n(a), n("ysVA")),
+        var a = n("HW6M"),
+            i = (n.n(a), n("U7vG")),
+            r = (n.n(i), n("ysVA")),
             s = (n.n(r), "chat-author__intl-login"),
             o = function(e) {
-                var t = [a.createElement("span", {
+                var t = [i.createElement("span", {
                     key: "username-display",
                     className: "chat-author__display-name",
                     "data-a-target": "chat-message-username",
@@ -8876,8 +8855,8 @@ webpackJsonp([42], {
                     }
                 }, e.userData.userDisplayName)];
                 if (e.userData.isIntl) {
-                    var n = i((r = {}, r[s] = !e.highlighted, r["chat-author__intl-login--highlighted"] = e.highlighted, r));
-                    t.push(a.createElement("span", {
+                    var n = a((r = {}, r[s] = !e.highlighted, r["chat-author__intl-login--highlighted"] = e.highlighted, r));
+                    t.push(i.createElement("span", {
                         key: "username-login",
                         style: {
                             color: e.userData.color
@@ -8886,7 +8865,7 @@ webpackJsonp([42], {
                         "data-test-selector": "message-username-canonical"
                     }, " (" + e.userData.userLogin + ")"))
                 }
-                return a.createElement("span", {
+                return i.createElement("span", {
                     key: e.userData.userID + "-authorlabel"
                 }, t);
                 var r
@@ -8894,8 +8873,8 @@ webpackJsonp([42], {
     },
     "5vPJ": function(e, t, n) {
         "use strict";
-        var i = n("TToO"),
-            a = n("U7vG"),
+        var a = n("TToO"),
+            i = n("U7vG"),
             r = n("6sO2"),
             s = n("7vx8"),
             o = n("GxDs"),
@@ -8908,7 +8887,7 @@ webpackJsonp([42], {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = c, t.timeoutID = null, t
                 }
-                return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                return a.__extends(t, e), t.prototype.componentDidMount = function() {
                     var e = this;
                     this.props.data.clip || (this.timeoutID = setTimeout(function() {
                         e.setState({
@@ -8923,13 +8902,13 @@ webpackJsonp([42], {
                     var e = this.props.data,
                         t = e.clip,
                         n = e.error,
-                        i = e.loading;
-                    return n || this.state.isTimedOut ? a.createElement(o.a, {
+                        a = e.loading;
+                    return n || this.state.isTimedOut ? i.createElement(o.a, {
                         error: {
                             title: Object(r.d)("Something went wrong", "ClipsChatCard"),
                             description: Object(r.d)("We couldn't find that Clip", "ClipsChatCard")
                         }
-                    }) : i || !t ? a.createElement(o.a, null) : a.createElement(o.a, {
+                    }) : a || !t ? i.createElement(o.a, null) : i.createElement(o.a, {
                         data: {
                             title: t.title ? t.title : Object(r.d)("Clip of {broadcaster}", {
                                 broadcaster: t.broadcaster.displayName
@@ -8942,7 +8921,7 @@ webpackJsonp([42], {
                         }
                     })
                 }, t
-            }(a.Component),
+            }(i.Component),
             u = function(e) {
                 return {
                     variables: {
@@ -8972,12 +8951,12 @@ webpackJsonp([42], {
     "6Agf": function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
-            return i
+            return a
         });
-        var i;
+        var a;
         ! function(e) {
             e.Admin = "admin", e.GlobalMod = "global_mod", e.Moderator = "mod", e.Owner = "owner", e.Staff = "staff", e.Subscriber = "subscriber", e.User = ""
-        }(i || (i = {}))
+        }(a || (a = {}))
     },
     "6Rwu": function(e, t) {},
     "6lb1": function(e, t) {},
@@ -9101,7 +9080,7 @@ webpackJsonp([42], {
         e.exports = n
     },
     "9fnI": function(e, t, n) {
-        var i = {
+        var a = {
             kind: "Document",
             definitions: [{
                 kind: "OperationDefinition",
@@ -9181,7 +9160,7 @@ webpackJsonp([42], {
                 end: 149
             }
         };
-        i.loc.source = {
+        a.loc.source = {
             body: '#import "twilight/features/chat/models/cheer-fragment.gql"\nquery ChatList_Bits($channelLogin: String!) {\nuser(login: $channelLogin) {\nid\n...cheer\n}\n}',
             name: "GraphQL request",
             locationOffset: {
@@ -9189,117 +9168,117 @@ webpackJsonp([42], {
                 column: 1
             }
         };
-        var a = {};
-        i.definitions = i.definitions.concat(function(e) {
+        var i = {};
+        a.definitions = a.definitions.concat(function(e) {
             return e.filter(function(e) {
                 if ("FragmentDefinition" !== e.kind) return !0;
                 var t = e.name.value;
-                return !a[t] && (a[t] = !0, !0)
+                return !i[t] && (i[t] = !0, !0)
             })
-        }(n("576g").definitions)), e.exports = i
+        }(n("576g").definitions)), e.exports = a
     },
     "9u8h": function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return o
         });
-        var i = n("TToO"),
-            a = n("6sO2"),
+        var a = n("TToO"),
+            i = n("6sO2"),
             r = n("Aj/L"),
             s = "application/json; charset=UTF-8",
             o = function() {
                 function e() {}
                 return e.get = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, void 0, function() {
-                        return i.__generator(this, function(a) {
-                            switch (a.label) {
+                    return void 0 === t && (t = {}), void 0 === n && (n = {}), a.__awaiter(this, void 0, void 0, function() {
+                        return a.__generator(this, function(i) {
+                            switch (i.label) {
                                 case 0:
-                                    return [4, this.request(e, i.__assign({}, t, {
+                                    return [4, this.request(e, a.__assign({}, t, {
                                         method: "GET"
                                     }), n)];
                                 case 1:
-                                    return [2, a.sent()]
-                            }
-                        })
-                    })
-                }, e.put = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, void 0, function() {
-                        return i.__generator(this, function(a) {
-                            switch (a.label) {
-                                case 0:
-                                    return [4, this.request(e, i.__assign({}, t, {
-                                        method: "PUT"
-                                    }), n)];
-                                case 1:
-                                    return [2, a.sent()]
-                            }
-                        })
-                    })
-                }, e.post = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, void 0, function() {
-                        return i.__generator(this, function(a) {
-                            switch (a.label) {
-                                case 0:
-                                    return [4, this.request(e, i.__assign({}, t, {
-                                        method: "POST"
-                                    }), n)];
-                                case 1:
-                                    return [2, a.sent()]
-                            }
-                        })
-                    })
-                }, e.delete = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, void 0, function() {
-                        return i.__generator(this, function(a) {
-                            switch (a.label) {
-                                case 0:
-                                    return [4, this.request(e, i.__assign({}, t, {
-                                        method: "DELETE"
-                                    }), n)];
-                                case 1:
-                                    return [2, a.sent()]
-                            }
-                        })
-                    })
-                }, e.request = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, void 0, function() {
-                        var a, r;
-                        return i.__generator(this, function(i) {
-                            switch (i.label) {
-                                case 0:
-                                    return t = this.constructOptions(t, n), a = t.headers ? t.headers["Content-Type"] : void 0, t.body = this.serialize(t.body, a), [4, this._fetch(e, t)];
-                                case 1:
-                                    return r = i.sent(), [4, this.constructLegacyAPIResponse(r)];
-                                case 2:
                                     return [2, i.sent()]
                             }
                         })
                     })
-                }, e.getAPIURL = function(e) {
-                    return new URL(e, a.n.config.apiBaseURL)
-                }, e.constructLegacyAPIResponse = function(e) {
-                    return i.__awaiter(this, void 0, void 0, function() {
-                        var t, n, a;
-                        return i.__generator(this, function(i) {
+                }, e.put = function(e, t, n) {
+                    return void 0 === t && (t = {}), void 0 === n && (n = {}), a.__awaiter(this, void 0, void 0, function() {
+                        return a.__generator(this, function(i) {
                             switch (i.label) {
+                                case 0:
+                                    return [4, this.request(e, a.__assign({}, t, {
+                                        method: "PUT"
+                                    }), n)];
+                                case 1:
+                                    return [2, i.sent()]
+                            }
+                        })
+                    })
+                }, e.post = function(e, t, n) {
+                    return void 0 === t && (t = {}), void 0 === n && (n = {}), a.__awaiter(this, void 0, void 0, function() {
+                        return a.__generator(this, function(i) {
+                            switch (i.label) {
+                                case 0:
+                                    return [4, this.request(e, a.__assign({}, t, {
+                                        method: "POST"
+                                    }), n)];
+                                case 1:
+                                    return [2, i.sent()]
+                            }
+                        })
+                    })
+                }, e.delete = function(e, t, n) {
+                    return void 0 === t && (t = {}), void 0 === n && (n = {}), a.__awaiter(this, void 0, void 0, function() {
+                        return a.__generator(this, function(i) {
+                            switch (i.label) {
+                                case 0:
+                                    return [4, this.request(e, a.__assign({}, t, {
+                                        method: "DELETE"
+                                    }), n)];
+                                case 1:
+                                    return [2, i.sent()]
+                            }
+                        })
+                    })
+                }, e.request = function(e, t, n) {
+                    return void 0 === t && (t = {}), void 0 === n && (n = {}), a.__awaiter(this, void 0, void 0, function() {
+                        var i, r;
+                        return a.__generator(this, function(a) {
+                            switch (a.label) {
+                                case 0:
+                                    return t = this.constructOptions(t, n), i = t.headers ? t.headers["Content-Type"] : void 0, t.body = this.serialize(t.body, i), [4, this._fetch(e, t)];
+                                case 1:
+                                    return r = a.sent(), [4, this.constructLegacyAPIResponse(r)];
+                                case 2:
+                                    return [2, a.sent()]
+                            }
+                        })
+                    })
+                }, e.getAPIURL = function(e) {
+                    return new URL(e, i.n.config.apiBaseURL)
+                }, e.constructLegacyAPIResponse = function(e) {
+                    return a.__awaiter(this, void 0, void 0, function() {
+                        var t, n, i;
+                        return a.__generator(this, function(a) {
+                            switch (a.label) {
                                 case 0:
                                     t = {
                                         status: e.status
-                                    }, i.label = 1;
+                                    }, a.label = 1;
                                 case 1:
-                                    return i.trys.push([1, 3, , 4]), [4, e.json()];
+                                    return a.trys.push([1, 3, , 4]), [4, e.json()];
                                 case 2:
-                                    return n = i.sent(), e.ok ? t.body = n : t.error = n, [3, 4];
+                                    return n = a.sent(), e.ok ? t.body = n : t.error = n, [3, 4];
                                 case 3:
-                                    return a = i.sent(), t.requestError = a, [3, 4];
+                                    return i = a.sent(), t.requestError = i, [3, 4];
                                 case 4:
                                     return [2, t]
                             }
                         })
                     })
                 }, e._fetch = function(e, t) {
-                    return void 0 === t && (t = {}), i.__awaiter(this, void 0, void 0, function() {
-                        return i.__generator(this, function(n) {
+                    return void 0 === t && (t = {}), a.__awaiter(this, void 0, void 0, function() {
+                        return a.__generator(this, function(n) {
                             switch (n.label) {
                                 case 0:
                                     return [4, fetch(this.getAPIURL(e).toString(), t)];
@@ -9310,23 +9289,23 @@ webpackJsonp([42], {
                     })
                 }, e.constructOptions = function(e, t) {
                     return e = Object.assign({}, e, {
-                        headers: i.__assign({}, this.getDefaultHeaders(e, t), e.headers)
+                        headers: a.__assign({}, this.getDefaultHeaders(e, t), e.headers)
                     })
                 }, e.serialize = function(e, t) {
                     return t === s ? JSON.stringify(e) : e
                 }, e.getDefaultHeaders = function(e, t) {
-                    var n = a.n.store.getState(),
-                        i = {
+                    var n = i.n.store.getState(),
+                        a = {
                             Accept: "application/vnd.twitchtv.v" + (t.version || 5) + "+json; charset=UTF-8",
                             "Accept-Language": "en-us",
-                            "Client-ID": a.n.config.legacyClientID,
+                            "Client-ID": i.n.config.legacyClientID,
                             "X-Requested-With": "XMLHttpRequest"
                         };
-                    e.body && FormData.prototype.isPrototypeOf(e.body) || (i["Content-Type"] = s);
+                    e.body && FormData.prototype.isPrototypeOf(e.body) || (a["Content-Type"] = s);
                     var o = Object(r.c)(n);
-                    return o && (i.Authorization = "OAuth " + o.authToken, o.legacyCSRFToken && (i["Twitch-Api-Token"] = o.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
-                        i[e] && delete i[e]
-                    }), i
+                    return o && (a.Authorization = "OAuth " + o.authToken, o.legacyCSRFToken && (a["Twitch-Api-Token"] = o.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
+                        a[e] && delete a[e]
+                    }), a
                 }, e
             }()
     },
@@ -9601,7 +9580,7 @@ webpackJsonp([42], {
     AL3x: function(e, t) {},
     AQmT: function(e, t) {},
     AaXK: function(e, t, n) {
-        var i = {
+        var a = {
             kind: "Document",
             definitions: [{
                 kind: "OperationDefinition",
@@ -9782,7 +9761,7 @@ webpackJsonp([42], {
                 end: 288
             }
         };
-        i.loc.source = {
+        a.loc.source = {
             body: '#import "twilight/features/badges/models/badge-fragment.gql"\nquery ChatSettings_Badges($channelLogin: String!) {\ncurrentUser {\nid\nselectedBadge {\n...badge\n}\navailableBadges {\n...badge\n}\n}\nuser(login: $channelLogin) {\nid\nself {\nselectedBadge {\n...badge\n}\navailableBadges {\n...badge\n}\n}\n}\n}',
             name: "GraphQL request",
             locationOffset: {
@@ -9790,14 +9769,14 @@ webpackJsonp([42], {
                 column: 1
             }
         };
-        var a = {};
-        i.definitions = i.definitions.concat(function(e) {
+        var i = {};
+        a.definitions = a.definitions.concat(function(e) {
             return e.filter(function(e) {
                 if ("FragmentDefinition" !== e.kind) return !0;
                 var t = e.name.value;
-                return !a[t] && (a[t] = !0, !0)
+                return !i[t] && (i[t] = !0, !0)
             })
-        }(n("QU+n").definitions)), e.exports = i
+        }(n("QU+n").definitions)), e.exports = a
     },
     As4U: function(e, t) {},
     AwFw: function(e, t) {},
@@ -10299,46 +10278,46 @@ webpackJsonp([42], {
     FsFC: function(e, t, n) {
         "use strict";
 
-        function i(e, t) {
-            return e === a.SECOND ? Object(r.d)("{secondCount, plural, one {# second} other {# seconds}}", {
+        function a(e, t) {
+            return e === i.SECOND ? Object(r.d)("{secondCount, plural, one {# second} other {# seconds}}", {
                 secondCount: t
-            }, "formatDuration") : e === a.MINUTE ? Object(r.d)("{minuteCount, plural, one {# minute} other {# minutes}}", {
+            }, "formatDuration") : e === i.MINUTE ? Object(r.d)("{minuteCount, plural, one {# minute} other {# minutes}}", {
                 minuteCount: t
-            }, "formatDuration") : e === a.DAY ? Object(r.d)("{dayCount, plural, one {# day} other {# days}}", {
+            }, "formatDuration") : e === i.DAY ? Object(r.d)("{dayCount, plural, one {# day} other {# days}}", {
                 dayCount: t
-            }, "formatDuration") : e === a.HOUR ? Object(r.d)("{hourCount, plural, one {# hour} other {# hours}}", {
+            }, "formatDuration") : e === i.HOUR ? Object(r.d)("{hourCount, plural, one {# hour} other {# hours}}", {
                 hourCount: t
-            }, "formatDuration") : e === a.WEEK ? Object(r.d)("{weekCount, plural, one {# week} other {# weeks}}", {
+            }, "formatDuration") : e === i.WEEK ? Object(r.d)("{weekCount, plural, one {# week} other {# weeks}}", {
                 weekCount: t
-            }, "formatDuration") : e === a.MONTH ? Object(r.d)("{monthCount, plural, one {# month} other {# months}}", {
+            }, "formatDuration") : e === i.MONTH ? Object(r.d)("{monthCount, plural, one {# month} other {# months}}", {
                 monthCount: t
             }, "formatDuration") : ""
         }
         t.a = function(e) {
-            if (e < 60) return i(a.SECOND, e);
+            if (e < 60) return a(i.SECOND, e);
             var t = Math.floor(e / 60),
                 n = e % 60;
-            if (t < 60) return n ? i(a.MINUTE, t) + " " + i(a.SECOND, n) : i(a.MINUTE, t);
+            if (t < 60) return n ? a(i.MINUTE, t) + " " + a(i.SECOND, n) : a(i.MINUTE, t);
             var r = Math.floor(t / 60);
-            if (t %= 60, r < 24) return t ? i(a.HOUR, r) + " " + i(a.MINUTE, t) : i(a.HOUR, r);
+            if (t %= 60, r < 24) return t ? a(i.HOUR, r) + " " + a(i.MINUTE, t) : a(i.HOUR, r);
             var s = Math.floor(r / 24);
-            if (r %= 24, s < 7) return r ? i(a.DAY, s) + " " + i(a.HOUR, r) : i(a.DAY, s);
+            if (r %= 24, s < 7) return r ? a(i.DAY, s) + " " + a(i.HOUR, r) : a(i.DAY, s);
             if (s <= 26) {
                 var o = Math.floor(s / 7);
-                return (s %= 7) ? i(a.WEEK, o) + " " + i(a.DAY, s) : i(a.WEEK, o)
+                return (s %= 7) ? a(i.WEEK, o) + " " + a(i.DAY, s) : a(i.WEEK, o)
             }
             var l = Math.round((s + 3) / 30);
-            return i(a.MONTH, l)
+            return a(i.MONTH, l)
         };
-        var a, r = n("6sO2");
+        var i, r = n("6sO2");
         ! function(e) {
             e[e.SECOND = 0] = "SECOND", e[e.MINUTE = 1] = "MINUTE", e[e.HOUR = 2] = "HOUR", e[e.DAY = 3] = "DAY", e[e.WEEK = 4] = "WEEK", e[e.MONTH = 5] = "MONTH"
-        }(a || (a = {}))
+        }(i || (i = {}))
     },
     GxDs: function(e, t, n) {
         "use strict";
-        var i = n("TToO"),
-            a = n("U7vG"),
+        var a = n("TToO"),
+            i = n("U7vG"),
             r = n("F8kA"),
             s = n("yDzg"),
             o = n("vH/s"),
@@ -10355,20 +10334,20 @@ webpackJsonp([42], {
                         })
                     }, t
                 }
-                return i.__extends(t, e), t.prototype.componentWillReceiveProps = function() {
+                return a.__extends(t, e), t.prototype.componentWillReceiveProps = function() {
                     this.setState({
                         hasImageLoadingError: !1
                     })
                 }, t.prototype.render = function() {
                     var e = l.a.defaultStreamPreviewURL;
-                    return !this.state.hasImageLoadingError && this.props.imageURL && (e = this.props.imageURL), a.createElement(c.C, {
+                    return !this.state.hasImageLoadingError && this.props.imageURL && (e = this.props.imageURL), i.createElement(c.C, {
                         aspect: c.k.Aspect16x9,
                         alt: this.props.altText,
                         src: e,
                         onError: this.handleImageError
                     })
                 }, t
-            }(a.Component),
+            }(i.Component),
             u = (n("1tZx"), "https://static-cdn.jtvnw.net/emoticons/v1/58765/2.0"),
             m = {
                 ERROR: "chat-card-error",
@@ -10379,59 +10358,59 @@ webpackJsonp([42], {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderErrorCard = function() {
-                        var e = a.createElement("img", {
+                        var e = i.createElement("img", {
                             "data-test-selector": m.ERROR,
                             src: u,
                             className: "chat-card__error-img"
                         });
                         return t.renderCardContent(e, t.props.error)
                     }, t.renderCardContent = function(e, t) {
-                        var n, i;
-                        return t ? (n = a.createElement(c._25, {
+                        var n, a;
+                        return t ? (n = i.createElement(c._25, {
                             type: c._30.Span,
                             fontSize: c.P.Size5,
                             "data-test-selector": m.TITLE,
                             title: t.title
-                        }, t.title), i = a.createElement(c._25, {
+                        }, t.title), a = i.createElement(c._25, {
                             type: c._30.Span,
                             fontSize: c.P.Size6,
                             color: c.I.Alt2,
                             "data-test-selector": m.DESCRIPTION
-                        }, t.description)) : (e = a.createElement(c._5, {
+                        }, t.description)) : (e = i.createElement(c._5, {
                             overlay: !0
-                        }), n = a.createElement(c._5, {
+                        }), n = i.createElement(c._5, {
                             width: 180
-                        }), i = a.createElement(c._5, {
+                        }), a = i.createElement(c._5, {
                             width: 120
-                        })), a.createElement(c._21, {
+                        })), i.createElement(c._21, {
                             background: c.m.Base,
                             display: c.L.Flex,
                             flexWrap: c.O.NoWrap,
                             padding: .5
-                        }, a.createElement(c._21, {
+                        }, i.createElement(c._21, {
                             className: "chat-card__preview-img",
                             background: c.m.Alt2,
                             display: c.L.Flex,
                             alignItems: c.c.Center,
                             justifyContent: c.Y.Center,
                             flexShrink: 0
-                        }, e), a.createElement(c.Z, {
+                        }, e), i.createElement(c.Z, {
                             display: c.L.Flex,
                             alignItems: c.c.Center
-                        }, a.createElement(c.Z, {
+                        }, i.createElement(c.Z, {
                             margin: {
                                 left: 1
                             },
                             fullWidth: !0
-                        }, a.createElement(c.Z, {
+                        }, i.createElement(c.Z, {
                             className: "chat-card__title",
                             ellipsis: !0
-                        }, n), a.createElement(c.Z, {
+                        }, n), i.createElement(c.Z, {
                             ellipsis: !0
-                        }, i))))
+                        }, a))))
                     }, t
                 }
-                return i.__extends(t, e), t.prototype.render = function() {
+                return a.__extends(t, e), t.prototype.render = function() {
                     var e;
                     if (this.props.error) e = this.renderErrorCard();
                     else if (this.props.data) {
@@ -10439,11 +10418,11 @@ webpackJsonp([42], {
                                 tt_medium: o.PageviewMedium.Chat,
                                 tt_content: o.PageviewContent.ChatCard
                             }),
-                            n = a.createElement(d, {
+                            n = i.createElement(d, {
                                 altText: this.props.data.title,
                                 imageURL: this.props.data.previewImageURL
                             });
-                        e = a.createElement(r.a, {
+                        e = i.createElement(r.a, {
                             className: "chat-card__link",
                             to: t,
                             target: "_blank"
@@ -10452,14 +10431,14 @@ webpackJsonp([42], {
                             description: this.props.data.description
                         }))
                     } else e = this.renderCardContent();
-                    return a.createElement(c._21, {
+                    return i.createElement(c._21, {
                         elevation: 1,
                         margin: {
                             top: .5
                         }
                     }, e)
                 }, t
-            }(a.Component),
+            }(i.Component),
             h = p;
         n.d(t, !1, function() {
             return u
@@ -10680,7 +10659,7 @@ webpackJsonp([42], {
         }
     },
     J7iJ: function(e, t, n) {
-        var i = {
+        var a = {
             kind: "Document",
             definitions: [{
                 kind: "OperationDefinition",
@@ -10756,7 +10735,7 @@ webpackJsonp([42], {
                 end: 153
             }
         };
-        i.loc.source = {
+        a.loc.source = {
             body: '#import "twilight/features/chat/models/rituals-enabled-fragment.gql"\nquery RitualsEnabled_User($id: ID!) {\nchannel: user(id: $id) {\n...ritualsEnabled\n}\n}',
             name: "GraphQL request",
             locationOffset: {
@@ -10764,23 +10743,23 @@ webpackJsonp([42], {
                 column: 1
             }
         };
-        var a = {};
-        i.definitions = i.definitions.concat(function(e) {
+        var i = {};
+        a.definitions = a.definitions.concat(function(e) {
             return e.filter(function(e) {
                 if ("FragmentDefinition" !== e.kind) return !0;
                 var t = e.name.value;
-                return !a[t] && (a[t] = !0, !0)
+                return !i[t] && (i[t] = !0, !0)
             })
-        }(n("v2Uk").definitions)), e.exports = i
+        }(n("v2Uk").definitions)), e.exports = a
     },
     J8WN: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return o
         });
-        var i = n("TToO"),
-            a = n("U7vG"),
-            r = (n.n(a), n("Odds")),
+        var a = n("TToO"),
+            i = n("U7vG"),
+            r = (n.n(i), n("Odds")),
             s = n("yU6t"),
             o = (n.n(s), function(e) {
                 function t() {
@@ -10803,18 +10782,18 @@ webpackJsonp([42], {
                         }), t.finalizeSelections(e.dataTransfer.files)
                     }, t
                 }
-                return i.__extends(t, e), t.prototype.render = function() {
-                    return a.createElement(r.M, {
+                return a.__extends(t, e), t.prototype.render = function() {
+                    return i.createElement(r.M, {
                         dragOver: this.state.isDraggingOver,
                         error: this.props.error
-                    }, a.createElement(r.U, {
+                    }, i.createElement(r.U, {
                         position: r._6.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
                         fullWidth: !0,
                         fullHeight: !0,
                         zIndex: r._42.Above
-                    }, a.createElement("input", {
+                    }, i.createElement("input", {
                         "data-test-selector": "file-picker-input",
                         className: "drag-and-drop-file-picker__input",
                         accept: this.props.allowedFileTypes.join(","),
@@ -10828,12 +10807,12 @@ webpackJsonp([42], {
                 }, t.prototype.finalizeSelections = function(e) {
                     e && this.props.onFilesSubmitted(Array.from(e))
                 }, t
-            }(a.Component))
+            }(i.Component))
     },
     J92i: function(e, t, n) {
         "use strict";
-        var i = n("TToO"),
-            a = n("HW6M"),
+        var a = n("TToO"),
+            i = n("HW6M"),
             r = n("U7vG"),
             s = n("6sO2"),
             o = n("J8WN"),
@@ -10861,7 +10840,7 @@ webpackJsonp([42], {
                     fullHeight: !0,
                     fullWidth: !0,
                     position: u._6.Relative,
-                    className: a(t)
+                    className: i(t)
                 }, r.createElement("img", {
                     alt: Object(s.d)("Default Avatar Number {index, number}", {
                         index: e.index
@@ -10916,9 +10895,9 @@ webpackJsonp([42], {
                         var n;
                         if (null !== e) {
                             n = e[0];
-                            var i = Object(h.a)(n),
-                                a = (n.size / 1024 / 1024).toFixed(4);
-                            parseInt(a, 10) > 10 ? t.setState({
+                            var a = Object(h.a)(n),
+                                i = (n.size / 1024 / 1024).toFixed(4);
+                            parseInt(i, 10) > 10 ? t.setState({
                                 statusMessage: f.b.BadSizeError
                             }) : (t.setState({
                                 selectedImageIndex: void 0,
@@ -10931,24 +10910,24 @@ webpackJsonp([42], {
                                 })
                             }, function(e) {
                                 var n = new Image,
-                                    a = !1;
+                                    i = !1;
                                 n.onload = function() {
-                                    n.width < n.height && (a = !0), t.setState({
-                                        currentImageHasTallAspectRatio: a
+                                    n.width < n.height && (i = !0), t.setState({
+                                        currentImageHasTallAspectRatio: i
                                     })
                                 }, n.src = e, t.setState({
                                     imagePreviewURL: e,
-                                    imageFormat: i
+                                    imageFormat: a
                                 })
                             }))
                         } else t.setState({
                             statusMessage: f.b.ImageNotSelected
                         })
                     }, t.onUpdateButtonClick = function(e) {
-                        return i.__awaiter(t, void 0, void 0, function() {
-                            var t, n, a, r, o = this;
-                            return i.__generator(this, function(i) {
-                                switch (i.label) {
+                        return a.__awaiter(t, void 0, void 0, function() {
+                            var t, n, i, r, o = this;
+                            return a.__generator(this, function(a) {
+                                switch (a.label) {
                                     case 0:
                                         if (e.preventDefault(), void 0 !== this.state.selectedImageIndex) return this.setDefaultAvatar(), [2];
                                         if (!this.currentImage) return this.setState({
@@ -10956,13 +10935,13 @@ webpackJsonp([42], {
                                         }), [2];
                                         this.setState({
                                             statusMessage: f.b.Uploading
-                                        }), i.label = 1;
+                                        }), a.label = 1;
                                     case 1:
-                                        return i.trys.push([1, 3, , 4]), [4, Object(g.a)(this.props.userID, this.props.authToken, p.a.ProfileImage, this.state.imageFormat)];
+                                        return a.trys.push([1, 3, , 4]), [4, Object(g.a)(this.props.userID, this.props.authToken, p.a.ProfileImage, this.state.imageFormat)];
                                     case 2:
-                                        return t = i.sent(), n = t.upload_url, a = t.upload_id, [3, 4];
+                                        return t = a.sent(), n = t.upload_url, i = t.upload_id, [3, 4];
                                     case 3:
-                                        return r = i.sent(), this.logger.error(r, "Request for upload ID failed to get expected response from server."), this.setState({
+                                        return r = a.sent(), this.logger.error(r, "Request for upload ID failed to get expected response from server."), this.setState({
                                             statusMessage: f.b.UnexpectedError
                                         }), [2];
                                     case 4:
@@ -10993,7 +10972,7 @@ webpackJsonp([42], {
                                                 })
                                             },
                                             onMessage: function(e) {
-                                                if (e.upload_id === a) {
+                                                if (e.upload_id === i) {
                                                     clearTimeout(o.timeoutHandle);
                                                     var t = null;
                                                     t = e.status === f.a.Success ? f.b.Success : e.status === f.a.BadSize ? f.b.BadSizeError : e.status === f.a.NonImage ? f.b.NonImageError : e.status === f.a.WrongFormat ? f.b.WrongFormatError : f.b.UnexpectedError, o.unsubscribe && o.unsubscribe(), o.setState({
@@ -11022,7 +11001,7 @@ webpackJsonp([42], {
                         })
                     }, t
                 }
-                return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                return a.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.componentWillUnmount = function() {
                     void 0 !== this.unsubscribe && this.unsubscribe(), this.timeoutHandle && clearTimeout(this.timeoutHandle)
@@ -11044,12 +11023,12 @@ webpackJsonp([42], {
                         }),
                         n = null;
                     if ("" !== this.state.imagePreviewURL) {
-                        var i = {
+                        var a = {
                             "profile-edit__image-preview": !0,
                             "profile-edit__image-preview-tall": this.state.currentImageHasTallAspectRatio
                         };
                         n = r.createElement(u.Z, {
-                            className: a(i),
+                            className: i(a),
                             "data-test-selector": "preview-image",
                             position: u._6.Relative
                         }, r.createElement("img", {
@@ -11163,20 +11142,20 @@ webpackJsonp([42], {
                         size: u.x.Large
                     }, Object(s.d)("Update", "Profile Edit"))))), d)
                 }, t.prototype.setDefaultAvatar = function() {
-                    return i.__awaiter(this, void 0, void 0, function() {
+                    return a.__awaiter(this, void 0, void 0, function() {
                         var e, t, n;
-                        return i.__generator(this, function(i) {
-                            switch (i.label) {
+                        return a.__generator(this, function(a) {
+                            switch (a.label) {
                                 case 0:
                                     this.setState({
                                         statusMessage: f.b.Uploading
-                                    }), e = f.b.UnexpectedError, i.label = 1;
+                                    }), e = f.b.UnexpectedError, a.label = 1;
                                 case 1:
-                                    return i.trys.push([1, 3, , 4]), [4, Object(g.b)(this.props.userID, this.props.authToken, this.state.selectedImageIndex)];
+                                    return a.trys.push([1, 3, , 4]), [4, Object(g.b)(this.props.userID, this.props.authToken, this.state.selectedImageIndex)];
                                 case 2:
-                                    return 204 === (t = i.sent()).status || 200 === t.status ? e = f.b.Success : this.logger.error(new Error("Default Avatar PUT failed. Fetch returned non-200 status: " + t.status), "Default Avatar PUT failed. Fetch returned non-200 status: " + t.status), [3, 4];
+                                    return 204 === (t = a.sent()).status || 200 === t.status ? e = f.b.Success : this.logger.error(new Error("Default Avatar PUT failed. Fetch returned non-200 status: " + t.status), "Default Avatar PUT failed. Fetch returned non-200 status: " + t.status), [3, 4];
                                 case 3:
-                                    return n = i.sent(), this.logger.error(n, "Default Avatar PUT failed."), [3, 4];
+                                    return n = a.sent(), this.logger.error(n, "Default Avatar PUT failed."), [3, 4];
                                 case 4:
                                     return this.setState({
                                         statusMessage: e,
@@ -11185,7 +11164,7 @@ webpackJsonp([42], {
                             }
                         })
                     })
-                }, t = i.__decorate([Object(c.a)(b, {
+                }, t = a.__decorate([Object(c.a)(b, {
                     options: function(e) {
                         return {
                             variables: {
@@ -11315,8 +11294,8 @@ webpackJsonp([42], {
         }), n.d(t, "c", function() {
             return d
         });
-        var i = n("6sO2"),
-            a = n("vH/s"),
+        var a = n("6sO2"),
+            i = n("vH/s"),
             r = n("aSvS"),
             s = function(e) {
                 var t = {
@@ -11325,7 +11304,7 @@ webpackJsonp([42], {
                     user_banner: e.bannerMessage,
                     user_message: null
                 };
-                i.m.track(a.SpadeEventType.NewChatterTokenStatus, t)
+                a.m.track(i.SpadeEventType.NewChatterTokenStatus, t)
             },
             o = function(e) {
                 var t = {
@@ -11334,7 +11313,7 @@ webpackJsonp([42], {
                     user_banner: e.bannerMessage,
                     user_message: e.userMessage
                 };
-                i.m.track(a.SpadeEventType.NewChatterTokenStatus, t)
+                a.m.track(i.SpadeEventType.NewChatterTokenStatus, t)
             },
             l = function(e) {
                 var t = {
@@ -11343,7 +11322,7 @@ webpackJsonp([42], {
                     user_banner: null,
                     user_message: null
                 };
-                i.m.track(a.SpadeEventType.NewChatterTokenStatus, t)
+                a.m.track(i.SpadeEventType.NewChatterTokenStatus, t)
             },
             c = function(e) {
                 var t = {
@@ -11352,14 +11331,14 @@ webpackJsonp([42], {
                     user_banner: e.bannerMessage,
                     user_message: null
                 };
-                i.m.track(a.SpadeEventType.NewChatterTokenStatus, t)
+                a.m.track(i.SpadeEventType.NewChatterTokenStatus, t)
             },
             d = function(e) {
                 var t = {
                     action: e.action,
                     channel_id: e.channelID
                 };
-                i.m.track(a.SpadeEventType.NewChatterOnboardingInteraction, t)
+                a.m.track(i.SpadeEventType.NewChatterOnboardingInteraction, t)
             }
     },
     L0RX: function(e, t) {
@@ -11461,7 +11440,7 @@ webpackJsonp([42], {
     "Lx+S": function(e, t, n) {
         "use strict";
 
-        function i(e) {
+        function a(e) {
             var t = r.createElement(L._25, {
                     bold: !0,
                     type: L._30.Span
@@ -11469,7 +11448,7 @@ webpackJsonp([42], {
                     style: {
                         color: e.chatColor
                     },
-                    "data-a-target": H
+                    "data-a-target": V
                 }, Object(U.a)(e.login, e.displayName))),
                 n = null;
             return e.editAppearance || (n = r.createElement(L.Z, {
@@ -11501,7 +11480,7 @@ webpackJsonp([42], {
                 })
             }), t), n)
         }
-        var a = n("TToO"),
+        var i = n("TToO"),
             r = n("U7vG"),
             s = n("RH2O"),
             o = n("CIox"),
@@ -11536,7 +11515,7 @@ webpackJsonp([42], {
                         n && t.props.onColorSelected(n)
                     }, t
                 }
-                return a.__extends(t, e), t.prototype.render = function() {
+                return i.__extends(t, e), t.prototype.render = function() {
                     var e = this,
                         t = O.map(function(t) {
                             var n = {
@@ -11604,7 +11583,7 @@ webpackJsonp([42], {
                         t.setChannelBadge(t.props.channelLogin, t.props.userLogin, n || "")
                     }, t
                 }
-                return a.__extends(t, e), t.prototype.render = function() {
+                return i.__extends(t, e), t.prototype.render = function() {
                     return this.props.data && !this.props.data.loading && this.props.data.user && this.props.data.currentUser ? r.createElement("div", null, r.createElement(T, {
                         selectedColor: this.props.userChatColor,
                         onColorSelected: this.props.onColorSelected,
@@ -11615,8 +11594,8 @@ webpackJsonp([42], {
                     if (this.props.data) {
                         var t = this.props.data.user.self.availableBadges,
                             n = this.props.data.user.self.selectedBadge,
-                            i = this.props.data.currentUser.availableBadges,
-                            a = this.props.data.currentUser.selectedBadge;
+                            a = this.props.data.currentUser.availableBadges,
+                            i = this.props.data.currentUser.selectedBadge;
                         if (!t) return null;
                         var s = void 0 === this.state.channelBadgeID && n ? n.setID : this.state.channelBadgeID,
                             o = {
@@ -11625,7 +11604,7 @@ webpackJsonp([42], {
                             },
                             l = Object(E.d)("No channel badges :(", "ChatSettings");
                         t && t.length > 0 && (l = t.map(function(t) {
-                            var i = {
+                            var a = {
                                 "edit-appearance__badge-chooser": !0,
                                 "edit-appearance__badge-chooser--selected": n && t.setID === s
                             };
@@ -11633,7 +11612,7 @@ webpackJsonp([42], {
                                 "data-badge": t.setID,
                                 onClick: e.onChannelBadgeClicked,
                                 key: t.setID + "/" + t.version,
-                                className: I(i),
+                                className: I(a),
                                 "data-test-selector": B + "_" + t.setID,
                                 "data-a-target": B + "_" + t.setID
                             }, r.createElement(L._33, {
@@ -11657,16 +11636,16 @@ webpackJsonp([42], {
                         }, r.createElement(L._12, {
                             asset: L._13.Global
                         })))));
-                        var c = void 0 === this.state.globalBadgeID && a ? a.setID : this.state.globalBadgeID,
+                        var c = void 0 === this.state.globalBadgeID && i ? i.setID : this.state.globalBadgeID,
                             d = {
                                 "edit-appearance__badge-chooser": !0,
                                 "edit-appearance__badge-chooser--selected": !c
                             },
                             u = Object(E.d)("No global badges :(", "ChatSettings");
-                        return i && i.length > 0 && (u = i.map(function(t) {
+                        return a && a.length > 0 && (u = a.map(function(t) {
                             var n = {
                                 "edit-appearance__badge-chooser": !0,
-                                "edit-appearance__badge-chooser--selected": a && t.setID === c
+                                "edit-appearance__badge-chooser--selected": i && t.setID === c
                             };
                             return r.createElement("div", {
                                 "data-badge": t.setID,
@@ -11758,12 +11737,12 @@ webpackJsonp([42], {
                         }, l)))
                     }
                 }, t.prototype.setChannelBadge = function(e, t, n) {
-                    return a.__awaiter(this, void 0, void 0, function() {
-                        var i, r, s;
-                        return a.__generator(this, function(a) {
-                            switch (a.label) {
+                    return i.__awaiter(this, void 0, void 0, function() {
+                        var a, r, s;
+                        return i.__generator(this, function(i) {
+                            switch (i.label) {
                                 case 0:
-                                    return i = {
+                                    return a = {
                                         "Client-ID": E.n.config.legacyClientID,
                                         Accept: "application/vnd.twitchtv.v4+json; charset=UTF-8",
                                         "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
@@ -11774,20 +11753,20 @@ webpackJsonp([42], {
                                         body: x.stringify({
                                             selected_badge: n
                                         }),
-                                        headers: i
+                                        headers: a
                                     })];
                                 case 1:
-                                    return (s = a.sent()) && s.ok && (this.props.onBadgesChanged(), this.setState({
+                                    return (s = i.sent()) && s.ok && (this.props.onBadgesChanged(), this.setState({
                                         channelBadgeID: n
                                     })), [2]
                             }
                         })
                     })
                 }, t.prototype.setGlobalBadge = function(e, t) {
-                    return a.__awaiter(this, void 0, void 0, function() {
-                        var n, i, r;
-                        return a.__generator(this, function(a) {
-                            switch (a.label) {
+                    return i.__awaiter(this, void 0, void 0, function() {
+                        var n, a, r;
+                        return i.__generator(this, function(i) {
+                            switch (i.label) {
                                 case 0:
                                     return n = {
                                         "Client-ID": E.n.config.legacyClientID,
@@ -11795,7 +11774,7 @@ webpackJsonp([42], {
                                         "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
                                         "Accept-Language": "en-us",
                                         Authorization: "OAuth " + this.props.authToken
-                                    }, i = "https://api.twitch.tv/kraken/users/" + e + "/chat/badges", [4, fetch(i, {
+                                    }, a = "https://api.twitch.tv/kraken/users/" + e + "/chat/badges", [4, fetch(a, {
                                         method: "PUT",
                                         body: x.stringify({
                                             selected_badge: t
@@ -11803,13 +11782,13 @@ webpackJsonp([42], {
                                         headers: n
                                     }).catch(console.error)];
                                 case 1:
-                                    return (r = a.sent()) && r.ok && (this.props.onBadgesChanged(), this.setState({
+                                    return (r = i.sent()) && r.ok && (this.props.onBadgesChanged(), this.setState({
                                         globalBadgeID: t
                                     })), [2]
                             }
                         })
                     })
-                }, t = a.__decorate([Object(D.a)(M, {
+                }, t = i.__decorate([Object(D.a)(M, {
                     options: function(e) {
                         return {
                             variables: {
@@ -11823,12 +11802,12 @@ webpackJsonp([42], {
             j = n("3T7g"),
             A = "edit-appearance-button",
             P = "edit-appearance-button",
-            H = "edit-display-name",
-            V = function(e) {
+            V = "edit-display-name",
+            H = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return a.__extends(t, e), t.prototype.render = function() {
+                return i.__extends(t, e), t.prototype.render = function() {
                     return r.createElement(L.Z, {
                         "data-toggle-balloon-id": "raids-follower-only-tooltip",
                         margin: {
@@ -11855,8 +11834,8 @@ webpackJsonp([42], {
                     }, "i"))))
                 }, t
             }(r.Component),
-            W = n("V5M+"),
-            Z = n("oSFp"),
+            Z = n("V5M+"),
+            W = n("oSFp"),
             G = n("F8kA"),
             q = n("9u8h"),
             z = function(e) {
@@ -11864,17 +11843,17 @@ webpackJsonp([42], {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.targetChannelID = t.props.targetChannelID, t
                 }
-                return a.__extends(t, e), t.fetchRecentRaidsList = function(e) {
-                    return a.__awaiter(this, void 0, void 0, function() {
+                return i.__extends(t, e), t.fetchRecentRaidsList = function(e) {
+                    return i.__awaiter(this, void 0, void 0, function() {
                         var t, n;
-                        return a.__generator(this, function(i) {
-                            switch (i.label) {
+                        return i.__generator(this, function(a) {
+                            switch (a.label) {
                                 case 0:
-                                    return i.trys.push([0, 2, , 3]), [4, q.a.get("/kraken/raids?client_id=" + E.a.authClientID + "&api_version=" + E.a.defaultAPIVersion + "&target_id=" + e)];
+                                    return a.trys.push([0, 2, , 3]), [4, q.a.get("/kraken/raids?client_id=" + E.a.authClientID + "&api_version=" + E.a.defaultAPIVersion + "&target_id=" + e)];
                                 case 1:
-                                    return t = i.sent(), [2, this.deserialize(t)];
+                                    return t = a.sent(), [2, this.deserialize(t)];
                                 case 2:
-                                    return n = i.sent(), E.i.error(n, "Couldn't fetch raids list"), [2, []];
+                                    return n = a.sent(), E.i.error(n, "Couldn't fetch raids list"), [2, []];
                                 case 3:
                                     return [2]
                             }
@@ -11885,13 +11864,13 @@ webpackJsonp([42], {
                     if (e.body && e.body.raids) {
                         for (var n in e.body.raids)
                             if (n.hasOwnProperty) {
-                                var i = {
+                                var a = {
                                     raidID: e.body.raids[n]._id,
                                     raidAt: e.body.raids[n].raid_at,
                                     userID: e.body.raids[n].creator_user._id,
                                     name: e.body.raids[n].creator_user.name
                                 };
-                                t.push(i)
+                                t.push(a)
                             }
                         return t
                     }
@@ -11909,25 +11888,25 @@ webpackJsonp([42], {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onUsernameClick = function(e) {
                         var n = e.currentTarget.getAttribute("data-username"),
-                            i = e.currentTarget.getAttribute("data-raid-id") || "";
-                        n && t.props.onUsernameClick(n, Q.a.recent_raids, i)
+                            a = e.currentTarget.getAttribute("data-raid-id") || "";
+                        n && t.props.onUsernameClick(n, Q.a.recent_raids, a)
                     }, t.onBanButtonClick = function(e) {
                         var n = e.currentTarget.getAttribute("data-channel-id") || "",
-                            i = e.currentTarget.getAttribute("data-target-user-login") || "";
+                            a = e.currentTarget.getAttribute("data-target-user-login") || "";
                         (0, t.props.banUser)(Object(Y.a)({
                             channelID: n,
-                            bannedUserLogin: i
+                            bannedUserLogin: a
                         }))
                     }, t.onUnbanButtonClick = function(e) {
                         var n = e.currentTarget.getAttribute("data-channel-id") || "",
-                            i = e.currentTarget.getAttribute("data-target-user-login") || "";
+                            a = e.currentTarget.getAttribute("data-target-user-login") || "";
                         (0, t.props.unbanUser)(Object(Y.a)({
                             channelID: n,
-                            bannedUserLogin: i
+                            bannedUserLogin: a
                         }))
                     }, t
                 }
-                return a.__extends(t, e), t.prototype.render = function() {
+                return i.__extends(t, e), t.prototype.render = function() {
                     return r.createElement(L.Z, {
                         key: "recent-raids-layout2-" + this.props.raiderUserID,
                         className: "recent-raids-item",
@@ -11981,7 +11960,7 @@ webpackJsonp([42], {
                         zIndex: L._42.Above,
                         "data-a-target": "recent-raids-item-hover"
                     }, this.props.slideInContent, e)
-                }, t = a.__decorate([Object(D.a)(K, {
+                }, t = i.__decorate([Object(D.a)(K, {
                     options: function(e) {
                         return {
                             variables: {
@@ -11997,14 +11976,14 @@ webpackJsonp([42], {
                         return {
                             update: function(t, n) {
                                 ! function(e, t, n) {
-                                    var i = e.readQuery({
+                                    var a = e.readQuery({
                                         query: K,
                                         variables: {
                                             targetUserID: n.raiderUserID,
                                             channelID: n.channelID
                                         }
                                     });
-                                    i && (t && t.data && (i.chatRoomBanStatus = {
+                                    a && (t && t.data && (a.chatRoomBanStatus = {
                                         isPermanent: !0,
                                         __typename: "ChatRoomBanStatus"
                                     }), e.writeQuery({
@@ -12013,7 +11992,7 @@ webpackJsonp([42], {
                                             targetUserID: n.raiderUserID,
                                             channelID: n.channelID
                                         },
-                                        data: i
+                                        data: a
                                     }))
                                 }(t, n, e)
                             }
@@ -12033,7 +12012,7 @@ webpackJsonp([42], {
                                         }
                                     });
                                     if (n) {
-                                        var i = a.__assign({}, n, {
+                                        var a = i.__assign({}, n, {
                                             chatRoomBanStatus: null
                                         });
                                         e.writeQuery({
@@ -12042,7 +12021,7 @@ webpackJsonp([42], {
                                                 targetUserID: t.raiderUserID,
                                                 channelID: t.channelID
                                             },
-                                            data: i
+                                            data: a
                                         })
                                     }
                                 }(t, e)
@@ -12057,27 +12036,27 @@ webpackJsonp([42], {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {}, t.onReportButtonClick = function(e) {
                         var n = e.currentTarget.getAttribute("data-raid-id") || "",
-                            i = e.currentTarget.getAttribute("data-target-user-id") || "",
-                            a = e.currentTarget.getAttribute("data-target-user-login") || "";
+                            a = e.currentTarget.getAttribute("data-target-user-id") || "",
+                            i = e.currentTarget.getAttribute("data-target-user-login") || "";
                         t.props.showReportUserModal({
                             reportContext: {
                                 contentType: te.a.Raid,
-                                targetUserID: i,
+                                targetUserID: a,
                                 contentID: n,
                                 extra: JSON.stringify({
-                                    channel_id: i.toString()
+                                    channel_id: a.toString()
                                 })
                             },
                             title: Object(E.d)("Report {channelDisplayName}", {
-                                channelDisplayName: a
+                                channelDisplayName: i
                             }, "ReportUserModal")
                         })
                     }, t
                 }
-                return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                    return a.__awaiter(this, void 0, void 0, function() {
+                return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return i.__awaiter(this, void 0, void 0, function() {
                         var e;
-                        return a.__generator(this, function(t) {
+                        return i.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
                                     return [4, z.fetchRecentRaidsList(this.props.targetChannelID)];
@@ -12097,13 +12076,13 @@ webpackJsonp([42], {
                             key: "recent-raids-no-raids",
                             type: L._30.P
                         }, Object(E.d)("You have no recent raids", "RecentRaids")));
-                        for (var i in this.state.raidChannels)
-                            if (i.hasOwnProperty) {
-                                var a = this.state.raidChannels[i];
-                                this.state.raidChannels.hasOwnProperty(i) && void 0 === n[a.userID] && (t.push(r.createElement(ee, {
-                                    key: "recent-raids-item-" + a.userID,
+                        for (var a in this.state.raidChannels)
+                            if (a.hasOwnProperty) {
+                                var i = this.state.raidChannels[a];
+                                this.state.raidChannels.hasOwnProperty(a) && void 0 === n[i.userID] && (t.push(r.createElement(ee, {
+                                    key: "recent-raids-item-" + i.userID,
                                     slideInContent: [r.createElement(L._21, {
-                                        key: "recent-raids-item-report-area-" + a.userID,
+                                        key: "recent-raids-item-report-area-" + i.userID,
                                         color: L.I.Alt2,
                                         display: L.L.InlineFlex
                                     }, r.createElement(L.u, {
@@ -12112,23 +12091,23 @@ webpackJsonp([42], {
                                         type: L.z.Text,
                                         onClick: this.onReportButtonClick,
                                         "data-a-target": "recent-raid-item-button",
-                                        "data-raid-id": a.raidID,
-                                        "data-target-user-login": a.name,
-                                        "data-target-user-id": a.userID
+                                        "data-raid-id": i.raidID,
+                                        "data-target-user-login": i.name,
+                                        "data-target-user-id": i.userID
                                     }, Object(E.d)("Report", "RecentRaid")), r.createElement(L._33, {
                                         align: L._34.Right,
                                         width: 150,
                                         label: Object(E.d)("Banning a user prevents them from future chatting or raiding", "RecentRaid")
                                     }))],
-                                    timestamp: a.raidAt,
-                                    channelLogin: a.name,
-                                    raiderUserID: a.userID,
+                                    timestamp: i.raidAt,
+                                    channelLogin: i.name,
+                                    raiderUserID: i.userID,
                                     channelID: this.props.targetChannelID,
-                                    raiderLogin: a.name,
-                                    raidID: a.raidID,
+                                    raiderLogin: i.name,
+                                    raidID: i.raidID,
                                     onUsernameClick: this.props.onUsernameClick,
                                     showReportUserModal: this.props.showReportUserModal
-                                })), n[a.userID] = !0)
+                                })), n[i.userID] = !0)
                             }
                     }
                     var s = null;
@@ -12182,17 +12161,17 @@ webpackJsonp([42], {
                     }, "i"))))), r.createElement(L.Z, null, s))
                 }, t
             }(r.Component),
-            ie = Object(s.b)(function() {
+            ae = Object(s.b)(function() {
                 return {}
             }, function(e) {
                 return Object(l.b)({
                     showReportUserModal: function(e) {
-                        var t = a.__rest(e, []);
-                        return Object(W.d)(Z.a, t)
+                        var t = i.__rest(e, []);
+                        return Object(Z.d)(W.a, t)
                     }
                 }, e)
             })(ne),
-            ae = n("pg5l"),
+            ie = n("pg5l"),
             re = (n("Vaxm"), "chat-settings-back-button"),
             se = function(e) {
                 function t() {
@@ -12223,20 +12202,20 @@ webpackJsonp([42], {
                             chatColor: e
                         }), t.props.onColorSelected(e)
                     }, t.onBadgesChanged = function() {
-                        return a.__awaiter(t, void 0, void 0, function() {
+                        return i.__awaiter(t, void 0, void 0, function() {
                             var e, t, n;
-                            return a.__generator(this, function(i) {
-                                switch (i.label) {
+                            return i.__generator(this, function(a) {
+                                switch (a.label) {
                                     case 0:
                                         return !this.props.data || this.props.data.loading ? [3, 2] : [4, this.props.data.refetch()];
                                     case 1:
-                                        if ((e = i.sent()).data) {
+                                        if ((e = a.sent()).data) {
                                             if (!(t = e.data).user.self) return [2];
                                             n = {}, t.user.self.displayBadges.forEach(function(e) {
                                                 n[e.setID] = e.version
                                             }), E.n.tmi.client.updateChannelBadges(this.props.channelLogin, n)
                                         }
-                                        i.label = 2;
+                                        a.label = 2;
                                     case 2:
                                         return [2]
                                 }
@@ -12244,12 +12223,12 @@ webpackJsonp([42], {
                         })
                     }, t
                 }
-                return a.__extends(t, e), t.prototype.render = function() {
+                return i.__extends(t, e), t.prototype.render = function() {
                     if (!this.props.data || this.props.data.loading) return null;
                     var e = null;
                     if (this.props.isLoggedIn && this.props.data.currentUser) {
                         var t = this.props.data.user.self ? this.props.data.user.self.displayBadges : [];
-                        e = r.createElement(i, {
+                        e = r.createElement(a, {
                             key: "name-display",
                             login: this.props.data.currentUser.login,
                             displayName: this.props.data.currentUser.displayName,
@@ -12308,7 +12287,7 @@ webpackJsonp([42], {
                         key: "recent-raids-title",
                         color: L.I.Alt2,
                         transform: L._29.Uppercase
-                    }, Object(E.d)("Recent Raids", "ChatSettings"))))), r.createElement(ie, {
+                    }, Object(E.d)("Recent Raids", "ChatSettings"))))), r.createElement(ae, {
                         key: "recent-raids",
                         targetChannelID: this.props.channelID,
                         recentRaids: this.state.recentRaids,
@@ -12438,7 +12417,7 @@ webpackJsonp([42], {
                         id: "chat-settings-followers-only",
                         label: Object(E.d)("Followers-Only Chat", "ChatSettings"),
                         onChange: this.props.onFollowerModeToggle
-                    }), this.showRaidsTooltip ? r.createElement(V, {
+                    }), this.showRaidsTooltip ? r.createElement(H, {
                         text: Object(E.d)("Prevent offensive raiders from chatting.", "RaidReportingChat")
                     }) : null, r.createElement(L.Z, {
                         alignItems: L.c.Center,
@@ -12483,7 +12462,7 @@ webpackJsonp([42], {
                         id: "chat-settings-slow-mode",
                         label: Object(E.d)("Slow Mode", "ChatSettings"),
                         onChange: this.props.onSlowModeToggle
-                    })), r.createElement(ie, {
+                    })), r.createElement(ae, {
                         key: "recent-raids",
                         recentRaids: this.state.recentRaids,
                         onClickRecentRaids: this.onClickRecentRaids,
@@ -12507,7 +12486,7 @@ webpackJsonp([42], {
                             padding: .5
                         }, Object(k.c)(t)))
                     })
-                }, t = a.__decorate([Object(D.a)(ae, {
+                }, t = i.__decorate([Object(D.a)(ie, {
                     options: function(e) {
                         return {
                             variables: {
@@ -12611,7 +12590,7 @@ webpackJsonp([42], {
                         t.props.isLoggedIn ? t.props.onChatCommand(Object(C.b)(e)) : t.props.login()
                     }, t
                 }
-                return a.__extends(t, e), t.prototype.render = function() {
+                return i.__extends(t, e), t.prototype.render = function() {
                     return r.createElement(de, {
                         disabled: this.props.disabled,
                         onToggle: this.handleSettingsToggle
@@ -12828,8 +12807,8 @@ webpackJsonp([42], {
     MSFW: function(e, t) {},
     MSvX: function(e, t, n) {
         "use strict";
-        var i = n("TToO"),
-            a = n("OAwv"),
+        var a = n("TToO"),
+            i = n("OAwv"),
             r = n("U7vG"),
             s = n("6sO2"),
             o = n("Ejve"),
@@ -12844,9 +12823,9 @@ webpackJsonp([42], {
                             try {
                                 if (e.pathname.match(t)) {
                                     n.logger.debug("Found legacy route. Reloading...");
-                                    var i = "" !== e.search ? a.parse(e.search) : {};
-                                    i["from-redirect"] = "true";
-                                    var r = a.stringify(i),
+                                    var a = "" !== e.search ? i.parse(e.search) : {};
+                                    a["from-redirect"] = "true";
+                                    var r = i.stringify(a),
                                         l = s.a.buildType === o.a.Dev ? window.location.host : window.location.hostname,
                                         c = window.location.protocol + "//" + l + e.pathname + "?" + r;
                                     return n.logger.debug("Redirecting to legacy route", {
@@ -12861,12 +12840,12 @@ webpackJsonp([42], {
                         })) : n.logger.debug("Unable to process history change. Path is null or empty.") : n.logger.debug("Skipping legacy route processing, due to history replace.") : n.logger.debug("Legacy routing not enabled.")
                     }, n.processRedirectParam = function(e) {
                         if (e && e.pathname && e.search) {
-                            var t = "" !== e.search ? a.parse(e.search) : {};
+                            var t = "" !== e.search ? i.parse(e.search) : {};
                             if (t["from-redirect"]) {
                                 delete t["from-redirect"];
-                                var i = a.stringify(t),
+                                var a = i.stringify(t),
                                     r = "";
-                                i.length > 0 && (r = "?" + i), n.props.history.replace({
+                                a.length > 0 && (r = "?" + a), n.props.history.replace({
                                     pathname: e.pathname,
                                     hash: e.hash,
                                     search: r
@@ -12875,7 +12854,7 @@ webpackJsonp([42], {
                         }
                     }, n.isEnabled = s.b.get(l, !1), n.logger = s.i.withCategory("legacy-routes"), n.legacyRoutes = n.buildRoutes(), n.props.history.listen(n.onHistoryChange), n
                 }
-                return i.__extends(t, e), t.prototype.render = function() {
+                return a.__extends(t, e), t.prototype.render = function() {
                     return null
                 }, t.prototype.componentDidMount = function() {
                     this.processRedirectParam(this.props.history.location)
@@ -12885,14 +12864,14 @@ webpackJsonp([42], {
                     var e = s.b.get("legacy_routes", []),
                         t = [];
                     if (!e || 0 === e.length) return this.logger.debug("No legacy routes found in settings."), t;
-                    for (var n = 0, i = e; n < i.length; n++) {
-                        var a = i[n];
+                    for (var n = 0, a = e; n < a.length; n++) {
+                        var i = a[n];
                         try {
-                            var r = new RegExp(a, "i");
+                            var r = new RegExp(i, "i");
                             t.push(r)
                         } catch (e) {
                             this.logger.debug("Failed to parse route!", {
-                                val: a,
+                                val: i,
                                 err: e
                             })
                         }
@@ -12911,7 +12890,7 @@ webpackJsonp([42], {
         })
     },
     Mful: function(e, t, n) {
-        var i = {
+        var a = {
             kind: "Document",
             definitions: [{
                 kind: "FragmentDefinition",
@@ -13064,7 +13043,7 @@ webpackJsonp([42], {
                 end: 232
             }
         };
-        i.loc.source = {
+        a.loc.source = {
             body: '#import "twilight/features/chat/models/embedded-emote-fragment.gql"\nfragment chatMessage on ChatMessage {\nid\nauthorName\nauthorColor\nauthor {\nid\nlogin\n}\nbody {\ncontent\nemotes {\n...embeddedEmote\n}\n}\nbadges {\nsetID\nversion\n}\nbitsUsed\n}',
             name: "GraphQL request",
             locationOffset: {
@@ -13072,14 +13051,14 @@ webpackJsonp([42], {
                 column: 1
             }
         };
-        var a = {};
-        i.definitions = i.definitions.concat(function(e) {
+        var i = {};
+        a.definitions = a.definitions.concat(function(e) {
             return e.filter(function(e) {
                 if ("FragmentDefinition" !== e.kind) return !0;
                 var t = e.name.value;
-                return !a[t] && (a[t] = !0, !0)
+                return !i[t] && (i[t] = !0, !0)
             })
-        }(n("0ImK").definitions)), e.exports = i
+        }(n("0ImK").definitions)), e.exports = a
     },
     NPzy: function(e, t) {
         var n = {
@@ -13156,16 +13135,16 @@ webpackJsonp([42], {
     NZkJ: function(e, t) {},
     Ncf8: function(e, t, n) {
         "use strict";
-        t.a = function(e, t, n, a) {
+        t.a = function(e, t, n, i) {
             return {
                 type: e,
-                id: Object(i.a)(t + "-mod"),
+                id: Object(a.a)(t + "-mod"),
                 userLogin: t,
                 reason: n,
-                duration: a
+                duration: i
             }
         };
-        var i = n("INp2")
+        var a = n("INp2")
     },
     O0Qc: function(e, t, n) {
         "use strict";
@@ -13214,7 +13193,7 @@ webpackJsonp([42], {
                 handled: !1
             };
             var r = n[1],
-                s = i.n.store.getState().chat.commandHandlers[n[1].toLowerCase()];
+                s = a.n.store.getState().chat.commandHandlers[n[1].toLowerCase()];
             if (!s) return {
                 command: r,
                 handled: !1
@@ -13230,7 +13209,7 @@ webpackJsonp([42], {
                     result: s(o, c)
                 }
             } catch (e) {
-                return a.warn("Exception thrown from chat command handler", {
+                return i.warn("Exception thrown from chat command handler", {
                     command: n[1],
                     err: e
                 }), {
@@ -13238,8 +13217,8 @@ webpackJsonp([42], {
                 }
             }
         };
-        var i = n("6sO2"),
-            a = i.n.logger.withCategory("chat-commands"),
+        var a = n("6sO2"),
+            i = a.n.logger.withCategory("chat-commands"),
             r = "/unraid",
             s = /^\/w(?:$|\s+)(\S+)?\s*(.+)?/i,
             o = /^(\S+)?\s+(.+)?$/,
@@ -13248,12 +13227,12 @@ webpackJsonp([42], {
     O9wU: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
-            return i
+            return a
         });
-        var i;
+        var a;
         ! function(e) {
             e[e.recent_raids = 0] = "recent_raids", e[e.chat_message = 1] = "chat_message", e[e.viewer_list = 2] = "viewer_list", e[e.test = 3] = "test"
-        }(i || (i = {}))
+        }(a || (a = {}))
     },
     OLKT: function(e, t) {},
     OcEY: function(e, t) {
@@ -13510,9 +13489,9 @@ webpackJsonp([42], {
     Ouuk: function(e, t, n) {
         "use strict";
         t.a = function(e) {
-            return e || (e = navigator.userAgent), !!i.exec(e)
+            return e || (e = navigator.userAgent), !!a.exec(e)
         };
-        var i = /\scurse\/\d/
+        var a = /\scurse\/\d/
     },
     PJOa: function(e, t) {},
     PK6A: function(e, t) {},
@@ -13521,17 +13500,17 @@ webpackJsonp([42], {
     QCOJ: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
-            return i
+            return a
         });
-        var i = {
+        var a = {
             Embed: "embed",
             Web: "web"
         }
     },
     QFW6: function(e, t, n) {
         "use strict";
-        var i = n("6sO2"),
-            a = n("vH/s"),
+        var a = n("6sO2"),
+            i = n("vH/s"),
             r = "public";
         n.d(t, "a", function() {
             return s
@@ -13547,7 +13526,7 @@ webpackJsonp([42], {
                 }
             },
             o = function(e) {
-                i.m.track(a.SpadeEventType.ChatRoomJoined, s(e))
+                a.m.track(i.SpadeEventType.ChatRoomJoined, s(e))
             }
     },
     QMHY: function(e, t) {
@@ -13766,24 +13745,24 @@ webpackJsonp([42], {
     },
     QRuM: function(e, t, n) {
         "use strict";
-        var i, a = n("TToO"),
+        var a, i = n("TToO"),
             r = n("U7vG"),
             s = n("6sO2");
         ! function(e) {
             e.On = "on", e.Off = "off", e.StaffOnly = "staff"
-        }(i || (i = {}));
+        }(a || (a = {}));
         var o = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return a.__extends(t, e), t.prototype.render = function() {
-                    var e = s.b.get(this.props.name, i.Off);
-                    return e === i.On || e === i.StaffOnly && this.props.isStaff ? r.Children.only(this.props.children) : null
+                return i.__extends(t, e), t.prototype.render = function() {
+                    var e = s.b.get(this.props.name, a.Off);
+                    return e === a.On || e === a.StaffOnly && this.props.isStaff ? r.Children.only(this.props.children) : null
                 }, t
             }(r.Component),
             l = o;
         n.d(t, "a", function() {
-            return i
+            return a
         }), n.d(t, !1, function() {
             return o
         }), n.d(t, "b", function() {
@@ -13942,7 +13921,7 @@ webpackJsonp([42], {
         e.exports = n
     },
     QsiC: function(e, t, n) {
-        var i = {
+        var a = {
             kind: "Document",
             definitions: [{
                 kind: "OperationDefinition",
@@ -14117,7 +14096,7 @@ webpackJsonp([42], {
                 end: 275
             }
         };
-        i.loc.source = {
+        a.loc.source = {
             body: '#import "twilight/features/chat/models/chat-message-fragment.gql"\nquery PinnedCheer_Cheers($channelID: ID!) {\nuser(id: $channelID) {\nid\ncheer {\nid\ntop {\n...chatMessage\n}\nrecent {\n...chatMessage\n}\nrecentTimeoutMs\nsettings {\nisRecentEnabled\nisTopEnabled\nrecentTimeoutMs\n}\n}\n}\n}',
             name: "GraphQL request",
             locationOffset: {
@@ -14125,30 +14104,30 @@ webpackJsonp([42], {
                 column: 1
             }
         };
-        var a = {};
-        i.definitions = i.definitions.concat(function(e) {
+        var i = {};
+        a.definitions = a.definitions.concat(function(e) {
             return e.filter(function(e) {
                 if ("FragmentDefinition" !== e.kind) return !0;
                 var t = e.name.value;
-                return !a[t] && (a[t] = !0, !0)
+                return !i[t] && (i[t] = !0, !0)
             })
-        }(n("Mful").definitions)), e.exports = i
+        }(n("Mful").definitions)), e.exports = a
     },
     R9op: function(e, t, n) {
         "use strict";
         t.a = function(e, t) {
             return e.chat && e.chat.messages ? e.chat.messages[t] || [] : []
         };
-        var i = n("TToO"),
-            a = n("LIeg"),
-            r = (n.n(a), n("6sO2")),
+        var a = n("TToO"),
+            i = n("LIeg"),
+            r = (n.n(i), n("6sO2")),
             s = n("vh75"),
             o = n("UzRK"),
             l = n("VsL1");
         r.n.store.registerReducer("chat", function(e, t) {
             switch (void 0 === e && (e = function() {
                 var e = Object(l.a)();
-                return i.__assign({}, e, {
+                return a.__assign({}, e, {
                     commandHandlers: {},
                     emoteSets: [],
                     followerDuration: o.a,
@@ -14160,84 +14139,84 @@ webpackJsonp([42], {
                 })
             }()), t.type) {
                 case s.b:
-                    return i.__assign({}, e, {
+                    return a.__assign({}, e, {
                         isHidden: !0
                     });
                 case s.c:
-                    return i.__assign({}, e, {
+                    return a.__assign({}, e, {
                         emoteSets: [],
                         messages: {}
                     });
                 case s.d:
-                    return i.__assign({}, e, {
+                    return a.__assign({}, e, {
                         isHidden: !1
                     });
                 case s.e:
-                    return i.__assign({}, e, {
+                    return a.__assign({}, e, {
                         emoteSets: t.emoteSets
                     });
                 case s.f:
-                    return i.__assign({}, e, {
+                    return a.__assign({}, e, {
                         followerMode: !1
                     });
                 case s.g:
-                    return i.__assign({}, e, {
+                    return a.__assign({}, e, {
                         followerDuration: t.duration
                     });
                 case s.h:
-                    return i.__assign({}, e, {
-                        lastUsedFollowerDurations: i.__assign({}, e.lastUsedFollowerDurations, (n = {}, n[t.channelLogin] = t.duration, n))
+                    return a.__assign({}, e, {
+                        lastUsedFollowerDurations: a.__assign({}, e.lastUsedFollowerDurations, (n = {}, n[t.channelLogin] = t.duration, n))
                     });
                 case s.i:
-                    return i.__assign({}, e, {
+                    return a.__assign({}, e, {
                         followerMode: !0
                     });
                 case s.j:
-                    return a(e, function(e) {
+                    return i(e, function(e) {
                         return e.messages
                     }, function(e) {
                         return e[t.channel] = t.messages, e
                     });
                 case s.k:
-                    return i.__assign({}, e, {
+                    return a.__assign({}, e, {
                         showModIcons: !1
                     });
                 case s.l:
-                    return i.__assign({}, e, {
+                    return a.__assign({}, e, {
                         showModIcons: !0
                     });
                 case s.n:
-                    return i.__assign({}, e, {
+                    return a.__assign({}, e, {
                         slowMode: !1
                     });
                 case s.o:
-                    return i.__assign({}, e, {
+                    return a.__assign({}, e, {
                         slowMode: !0
                     });
                 case s.p:
-                    return i.__assign({}, e, {
+                    return a.__assign({}, e, {
                         subsOnlyMode: !1
                     });
                 case s.q:
-                    return i.__assign({}, e, {
+                    return a.__assign({}, e, {
                         subsOnlyMode: !0
                     });
                 case s.r:
-                    return i.__assign({}, e, {
+                    return a.__assign({}, e, {
                         showTimestamps: !1
                     });
                 case s.s:
-                    return i.__assign({}, e, {
+                    return a.__assign({}, e, {
                         showTimestamps: !0
                     });
                 case s.a:
-                    return a(e, function(e) {
+                    return i(e, function(e) {
                         return e.commandHandlers
                     }, function(e) {
                         return e[t.command] = t.handler, e
                     });
                 case s.m:
-                    return a(e, function(e) {
+                    return i(e, function(e) {
                         return e.commandHandlers
                     }, function(e) {
                         return delete e[t.command], e
@@ -14253,20 +14232,20 @@ webpackJsonp([42], {
         n.d(t, "a", function() {
             return r
         });
-        var i = n("U7vG"),
-            a = (n.n(i), n("mbxv")),
+        var a = n("U7vG"),
+            i = (n.n(a), n("mbxv")),
             r = function(e) {
                 var t = Object.keys(e.badgesToRender).map(function(t) {
                     var n = e.badgesToRender[t],
                         r = e.badgeSets.getBadge(t, n);
-                    return null === r ? null : i.createElement(a.a, {
+                    return null === r ? null : a.createElement(i.a, {
                         key: r.setID + "/" + r.version,
                         badge: r
                     })
                 }).filter(function(e) {
                     return null !== e
                 });
-                return i.createElement("span", null, t)
+                return a.createElement("span", null, t)
             }
     },
     RkXA: function(e, t) {},
@@ -14404,17 +14383,17 @@ webpackJsonp([42], {
     },
     SI0h: function(e, t, n) {
         "use strict";
-        var i = n("TPVZ");
+        var a = n("TPVZ");
         n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "b", function() {
-            return i.b
+            return a.b
         }), n.d(t, "a", function() {
-            return i.a
+            return a.a
         })
     },
     TPVZ: function(e, t, n) {
         "use strict";
-        var i = n("TToO"),
-            a = n("HW6M"),
+        var a = n("TToO"),
+            i = n("HW6M"),
             r = n("U7vG"),
             s = n("F8kA"),
             o = n("6sO2"),
@@ -14447,7 +14426,7 @@ webpackJsonp([42], {
                         n && t.props.onPromoBuyClose(n)
                     }, t
                 }
-                return i.__extends(t, e), t.prototype.render = function() {
+                return a.__extends(t, e), t.prototype.render = function() {
                     var e = r.createElement(_.Z, null, r.createElement(_.Z, {
                         padding: {
                             x: 5,
@@ -14537,21 +14516,21 @@ webpackJsonp([42], {
                     return t.state = {
                         hideFirstTimeUserIntro: !1
                     }, t.trackBitsCardInteraction = function(e, n) {
-                        var i = {
+                        var a = {
                             actionName: e,
                             emoteType: n && n.emoteType,
                             emoteLevel: n && n.emoteLevel,
                             location: C.b.GetBitsButton,
                             displayedBalance: t.props.bitsBalance || 0
                         };
-                        Object(C.h)(i)
+                        Object(C.h)(a)
                     }, t.onClose = function() {}, t.onPromoBuyClose = function(e) {
                         Object(f.a)(e, function() {
                             t.props.data && t.props.data.refetch()
                         })
                     }, t
                 }
-                return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                return a.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     if (this.props.loading) return r.createElement(_._21, {
@@ -14621,8 +14600,8 @@ webpackJsonp([42], {
                             bitsConfig: this.props.bitsConfig
                         })
                     }, "Bits--GetBitsButton"))));
-                    var i = null;
-                    return this.props.bitsConfig && this.props.channelLogin && (i = r.createElement(b.a, {
+                    var a = null;
+                    return this.props.bitsConfig && this.props.channelLogin && (a = r.createElement(b.a, {
                         bitsConfig: this.props.bitsConfig,
                         channelLogin: this.props.channelLogin,
                         closeAllBits: this.onClose,
@@ -14634,17 +14613,17 @@ webpackJsonp([42], {
                         fullsize: !0
                     })), r.createElement(g.b, {
                         className: "get-bits-button-content"
-                    }, r.createElement(_.Z, null, n, e, i))
-                }, t = i.__decorate([Object(w.d)("GetBitsButtonContent"), Object(u.a)(D, {
+                    }, r.createElement(_.Z, null, n, e, a))
+                }, t = a.__decorate([Object(w.d)("GetBitsButtonContent"), Object(u.a)(D, {
                     name: "data",
                     props: function(e) {
                         var t, n;
                         e.data && e.data.user && e.data.user.cheer && (t = Object(N.a)(e.data.user.cheer.emotes), n = e.data.user.id);
-                        var i, a;
-                        return e.data && e.data.currentUser ? (a = e.data.currentUser.bitsBalance, i = e.data.currentUser.bitsOffers) : e.data && e.data.bitsOffers && (i = e.data.bitsOffers), {
+                        var a, i;
+                        return e.data && e.data.currentUser ? (i = e.data.currentUser.bitsBalance, a = e.data.currentUser.bitsOffers) : e.data && e.data.bitsOffers && (a = e.data.bitsOffers), {
                             loading: e.data && e.data.loading,
-                            bitsOffers: i,
-                            bitsBalance: a,
+                            bitsOffers: a,
+                            bitsBalance: i,
                             bitsConfig: t,
                             channelID: n
                         }
@@ -14684,7 +14663,7 @@ webpackJsonp([42], {
                         })
                     }, t
                 }
-                return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                return a.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     var e = null;
@@ -14702,7 +14681,7 @@ webpackJsonp([42], {
                         direction: _.q.BottomRight,
                         size: _.r.Large
                     }, e))
-                }, t = i.__decorate([Object(w.d)("GetBitsButton")], t)
+                }, t = a.__decorate([Object(w.d)("GetBitsButton")], t)
             }(r.Component),
             L = Object(p.b)(function(e) {
                 return {
@@ -14732,18 +14711,18 @@ webpackJsonp([42], {
                         t.props.data && t.props.data.refetch()
                     }, t
                 }
-                return i.__extends(t, e), t.prototype.render = function() {
+                return a.__extends(t, e), t.prototype.render = function() {
                     var e, t, n = {
                             "channel-banner--open": !this.props.collapsed
                         },
-                        i = this.props.data;
-                    if (i && i.loading || !this.props.firstPageLoaded) e = r.createElement(_._5, {
+                        a = this.props.data;
+                    if (a && a.loading || !this.props.firstPageLoaded) e = r.createElement(_._5, {
                         height: 380,
                         "data-test-selector": "channel-banner__placeholder"
                     });
                     else {
-                        i && i.user && i.user.bannerImageURL ? t = {
-                            backgroundImage: "url(" + i.user.bannerImageURL + ")"
+                        a && a.user && a.user.bannerImageURL ? t = {
+                            backgroundImage: "url(" + a.user.bannerImageURL + ")"
                         } : (n["channel-banner--default"] = !0, t = {
                             backgroundImage: "url(" + M + ")"
                         });
@@ -14775,7 +14754,7 @@ webpackJsonp([42], {
                         }, s)
                     }
                     return r.createElement("div", {
-                        className: a("channel-banner", n),
+                        className: i("channel-banner", n),
                         onTransitionEnd: this.props.onTransitionEnd
                     }, r.createElement(_.U, {
                         fullWidth: !0
@@ -14807,7 +14786,7 @@ webpackJsonp([42], {
                 }, e)
             })(j),
             P = n("x9n8"),
-            H = (n("WClm"), function(e) {
+            V = (n("WClm"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.openModal = function(e) {
@@ -14819,7 +14798,7 @@ webpackJsonp([42], {
                         })
                     }, t
                 }
-                return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                return a.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     return r.createElement(_.Z, {
@@ -14835,15 +14814,15 @@ webpackJsonp([42], {
                         icon: _._13.Edit,
                         onClick: this.openModal
                     }))
-                }, t = i.__decorate([Object(w.d)("EditProfileOverlay")], t)
+                }, t = a.__decorate([Object(w.d)("EditProfileOverlay")], t)
             }(r.Component)),
-            V = Object(p.b)(null, function(e) {
+            H = Object(p.b)(null, function(e) {
                 return Object(T.b)({
                     showModal: x.d
                 }, e)
-            })(H),
-            W = n("70dR"),
-            Z = (n("z4Db"), n("kOMe"));
+            })(V),
+            Z = n("70dR"),
+            W = (n("z4Db"), n("kOMe"));
         n.d(t, "b", function() {
             return G
         }), n.d(t, "a", function() {
@@ -14900,7 +14879,7 @@ webpackJsonp([42], {
                         display: _.L.InlineFlex,
                         alignItems: _.c.Center,
                         justifyContent: _.Y.Center
-                    }, r.createElement(V, {
+                    }, r.createElement(H, {
                         userID: t.props.data.user.id,
                         login: t.props.data.user.login,
                         displayName: t.props.data.user.displayName
@@ -14932,7 +14911,7 @@ webpackJsonp([42], {
                     return t.channelHeader = e
                 }, t
             }
-            return i.__extends(t, e), t.prototype.componentWillMount = function() {
+            return a.__extends(t, e), t.prototype.componentWillMount = function() {
                 this.updateLiveState(this.props)
             }, t.prototype.componentDidMount = function() {
                 window.addEventListener("resize", this.onUpdateDebounce), !this.props.data || this.props.data.loading || this.props.data.error || this.getChannelHeaderSize(), this.reportInteractive()
@@ -14947,12 +14926,12 @@ webpackJsonp([42], {
                 void 0 !== this.width && (this.prevWidth = this.width), this.width !== e && (this.width = e), t && (this.resizeAnimationFrame && (cancelAnimationFrame(this.resizeAnimationFrame), this.resizeAnimationFrame = null), this.onUpdateDebounce())
             }, t.prototype.render = function() {
                 var e, t, n = 0,
-                    i = 0,
+                    a = 0,
                     u = 0,
                     m = o.a.defaultAvatarURL;
-                this.props.data && this.props.data.user && !this.props.data.loading && !this.props.data.error && (n = this.props.data.user.videos.totalCount, i = this.props.data.user.followers.totalCount, u = this.props.data.user.follows.totalCount, m = this.props.data.user.profileImageURL, e = this.props.data.user.displayName, t = this.props.data.user.roles.isPartner);
+                this.props.data && this.props.data.user && !this.props.data.loading && !this.props.data.error && (n = this.props.data.user.videos.totalCount, a = this.props.data.user.followers.totalCount, u = this.props.data.user.follows.totalCount, m = this.props.data.user.profileImageURL, e = this.props.data.user.displayName, t = this.props.data.user.roles.isPartner);
                 var p = this.state.live && !this.isActiveTab(G.Channel),
-                    h = this.createChannelLinks(n, i, u),
+                    h = this.createChannelLinks(n, a, u),
                     g = {
                         "channel-header__user": !0,
                         "channel-header__user--selected": this.isActiveTab(G.Channel)
@@ -15030,7 +15009,7 @@ webpackJsonp([42], {
                     flexWrap: _.O.NoWrap,
                     "data-target": "channel-header-left"
                 }, r.createElement(_.U, {
-                    className: a(g),
+                    className: i(g),
                     padding: {
                         y: .5,
                         right: 2
@@ -15081,7 +15060,7 @@ webpackJsonp([42], {
                     margin: {
                         left: 1
                     }
-                }, r.createElement(W.a, {
+                }, r.createElement(Z.a, {
                     updateContainerWidth: this.onUpdateDebounce,
                     channelLogin: this.props.channelLogin
                 })), f)), r.createElement(c.a, {
@@ -15095,8 +15074,8 @@ webpackJsonp([42], {
                 void 0 === e && (e = ""), void 0 === t && (t = !1);
                 var n = this.props.data && this.props.data.user && this.props.data.user.login;
                 if (!n) return "#";
-                var i = "/" + n + "/" + e;
-                return t ? Object(m.a)(i) : i
+                var a = "/" + n + "/" + e;
+                return t ? Object(m.a)(a) : a
             }, t.prototype.renderTabs = function(e) {
                 var t = this;
                 return e.map(function(e) {
@@ -15110,17 +15089,17 @@ webpackJsonp([42], {
                             type: _._30.Span,
                             fontSize: _.P.Size5
                         }, e.count)) : null,
-                        a = t.generateUserLink(e.pathSuffix, e.isExternal),
+                        i = t.generateUserLink(e.pathSuffix, e.isExternal),
                         o = {};
                     return e.isExternal && (o.target = Object(m.b)() ? "_blank" : ""), r.createElement(_.U, {
                         key: "channel-header__item--" + e.label,
                         alignItems: _.c.Center,
                         flexShrink: 0
-                    }, r.createElement(s.a, i.__assign({
+                    }, r.createElement(s.a, a.__assign({
                         className: "channel-header__item channel-header__item--hide " + (e.isSelected ? "channel-header__item--selected" : "")
                     }, o, {
-                        to: a,
-                        disabled: "#" === a,
+                        to: i,
+                        disabled: "#" === i,
                         "data-target": "channel-header-item",
                         "data-a-target": e.label.toLowerCase() + "-channel-header-item"
                     }), r.createElement(_.Z, {
@@ -15146,14 +15125,14 @@ webpackJsonp([42], {
                         }, r.createElement(_._25, {
                             type: _._30.Span
                         }, e.count)) : null,
-                        a = t.generateUserLink(e.pathSuffix, e.isExternal),
+                        i = t.generateUserLink(e.pathSuffix, e.isExternal),
                         s = {};
                     return e.isExternal && (s.targetBlank = !0), r.createElement(_.Z, {
                         key: "channel-header__dropdown-item--" + e.label,
                         "data-target": "channel-header-dropdown-item"
-                    }, r.createElement(_.X, i.__assign({
-                        linkTo: a,
-                        disabled: "#" === a
+                    }, r.createElement(_.X, a.__assign({
+                        linkTo: i,
+                        disabled: "#" === i
                     }, s), r.createElement(_.Z, {
                         className: "channel-header__dropdown-hover-target",
                         padding: {
@@ -15209,15 +15188,15 @@ webpackJsonp([42], {
                     var e = this.channelHeader.querySelector('[data-target="channel-header-left"]'),
                         t = this.channelHeader.querySelector('[data-target="channel-header-right"]'),
                         n = this.channelHeader.querySelectorAll('[data-target="channel-header-item"]'),
-                        i = this.channelHeader.querySelectorAll('[data-target="channel-header-dropdown-item"]');
+                        a = this.channelHeader.querySelectorAll('[data-target="channel-header-dropdown-item"]');
                     if (n.length) {
-                        var a = this.getWidth(this.channelHeader).width,
-                            r = this.getWidth(e).width + this.getWidth(t).width + 20 - a;
+                        var i = this.getWidth(this.channelHeader).width,
+                            r = this.getWidth(e).width + this.getWidth(t).width + 20 - i;
                         if (r > 0)
                             for (var s = n.length - 1; s >= 0; s--) {
                                 if (!(l = n[s]).classList.contains("channel-header__item--hide")) {
                                     var o = this.getWidth(l);
-                                    if (l.classList.add("channel-header__item--hide"), i[s].classList.remove("channel-header__item--hide"), (r -= o.width) <= 0) break
+                                    if (l.classList.add("channel-header__item--hide"), a[s].classList.remove("channel-header__item--hide"), (r -= o.width) <= 0) break
                                 }
                             } else
                                 for (s = 0; s < n.length; s++) {
@@ -15228,7 +15207,7 @@ webpackJsonp([42], {
                                             l.classList.add("channel-header__item--hide");
                                             break
                                         }
-                                        l.classList.remove("channel-header__item--hide"), i[s].classList.add("channel-header__item--hide"), r += o.width
+                                        l.classList.remove("channel-header__item--hide"), a[s].classList.add("channel-header__item--hide"), r += o.width
                                     }
                                 }
                         var c = this.channelHeader.querySelector('[data-target="channel-header-button"]');
@@ -15248,7 +15227,7 @@ webpackJsonp([42], {
                 }
             }, t.prototype.reportInteractive = function() {
                 !this.props.data || this.props.data.loading || this.props.data.error || this.props.latencyTracking.reportInteractive()
-            }, t = i.__decorate([Object(u.a)(Z, {
+            }, t = a.__decorate([Object(u.a)(W, {
                 options: function(e) {
                     return {
                         variables: {
@@ -15263,7 +15242,7 @@ webpackJsonp([42], {
         }(r.Component)
     },
     "Ti/Y": function(e, t, n) {
-        var i = {
+        var a = {
             kind: "Document",
             definitions: [{
                 kind: "OperationDefinition",
@@ -15367,7 +15346,7 @@ webpackJsonp([42], {
                 end: 185
             }
         };
-        i.loc.source = {
+        a.loc.source = {
             body: '#import "./ritual-token-fragment.gql"\nmutation DismissNewChatterToken($input: DismissRitualTokenInput!) {\ndismissRitualToken(input: $input) {\nerror {\ncode\n}\ntoken {\n...ritualToken\n}\n}\n}',
             name: "GraphQL request",
             locationOffset: {
@@ -15375,22 +15354,22 @@ webpackJsonp([42], {
                 column: 1
             }
         };
-        var a = {};
-        i.definitions = i.definitions.concat(function(e) {
+        var i = {};
+        a.definitions = a.definitions.concat(function(e) {
             return e.filter(function(e) {
                 if ("FragmentDefinition" !== e.kind) return !0;
                 var t = e.name.value;
-                return !a[t] && (a[t] = !0, !0)
+                return !i[t] && (i[t] = !0, !0)
             })
-        }(n("j/3B").definitions)), e.exports = i
+        }(n("j/3B").definitions)), e.exports = a
     },
     TlYw: function(e, t) {},
     TnJK: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
-            return i
+            return a
         });
-        var i = {
+        var a = {
             DarkMode: "darkMode",
             FollowerDuration: "followerDuration",
             FollowerMode: "followerMode",
@@ -15405,14 +15384,14 @@ webpackJsonp([42], {
     Tt3k: function(e, t, n) {
         "use strict";
         t.b = function(e, t, n) {
-            var i = new FileReader;
-            i.onloadend = function() {
-                n && n(i.result)
-            }, i.readAsDataURL(e);
             var a = new FileReader;
             a.onloadend = function() {
-                t(a.result)
-            }, a.readAsArrayBuffer(e)
+                n && n(a.result)
+            }, a.readAsDataURL(e);
+            var i = new FileReader;
+            i.onloadend = function() {
+                t(i.result)
+            }, i.readAsArrayBuffer(e)
         }, t.a = function(e) {
             var t = "";
             if (e && e.name) {
@@ -15424,16 +15403,16 @@ webpackJsonp([42], {
     },
     Tur5: function(e, t, n) {
         "use strict";
-        var i = n("bgpf");
+        var a = n("bgpf");
         n.d(t, "RitualTokenMutationErrors", function() {
-            return i.a
+            return a.a
         }), n.d(t, "RitualTokenStatus", function() {
-            return i.b
+            return a.b
         }), n.d(t, "RitualTokenType", function() {
-            return i.c
+            return a.c
         });
-        var a = n("AQmT"),
-            r = (n.n(a), n("xfb5")),
+        var i = n("AQmT"),
+            r = (n.n(i), n("xfb5")),
             s = (n.n(r), n("6vcJ"));
         n.n(s)
     },
@@ -15658,81 +15637,81 @@ webpackJsonp([42], {
         }), n.d(t, "c", function() {
             return d
         });
-        var i = n("TToO"),
-            a = n("6sO2"),
+        var a = n("TToO"),
+            i = n("6sO2"),
             r = n("vH/s"),
             s = n("TnJK"),
             o = n("QFW6"),
             l = function(e) {
-                a.m.track(r.SpadeEventType.ChatSettingsOpened, Object(o.a)(e))
+                i.m.track(r.SpadeEventType.ChatSettingsOpened, Object(o.a)(e))
             },
             c = function(e) {
-                var t = i.__assign({}, Object(o.a)(e), {
+                var t = a.__assign({}, Object(o.a)(e), {
                     setting_name: e.settingName,
                     new_value: e.newValue.toString()
                 });
-                a.m.track(r.SpadeEventType.ChatSettingsChanged, t)
+                i.m.track(r.SpadeEventType.ChatSettingsChanged, t)
             },
             d = function(e) {
-                var t = i.__assign({}, Object(o.a)(e), {
+                var t = a.__assign({}, Object(o.a)(e), {
                     setting_name: s.a.FollowerDuration,
                     new_value: e.newValue.toString(),
                     follower_mode_on: e.followerModeOn
                 });
-                a.m.track(r.SpadeEventType.ChatSettingsChanged, t)
+                i.m.track(r.SpadeEventType.ChatSettingsChanged, t)
             }
     },
     UzRK: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
-            return a
+            return i
         }), n.d(t, "b", function() {
             return r
         }), t.c = function(e) {
             switch (e) {
                 case 0:
-                    return Object(i.d)("0 minutes (Any followers)", "FollowersOnlyLabel");
+                    return Object(a.d)("0 minutes (Any followers)", "FollowersOnlyLabel");
                 case 10:
-                    return Object(i.d)("10 minutes (Most used)", "FollowersOnlyLabel");
+                    return Object(a.d)("10 minutes (Most used)", "FollowersOnlyLabel");
                 case 30:
-                    return Object(i.d)("30 minutes", "FollowersOnlyLabel");
+                    return Object(a.d)("30 minutes", "FollowersOnlyLabel");
                 case 60:
-                    return Object(i.d)("1 hour", "FollowersOnlyLabel");
+                    return Object(a.d)("1 hour", "FollowersOnlyLabel");
                 case 1440:
-                    return Object(i.d)("1 day", "FollowersOnlyLabel");
+                    return Object(a.d)("1 day", "FollowersOnlyLabel");
                 case 10080:
-                    return Object(i.d)("1 week", "FollowersOnlyLabel");
+                    return Object(a.d)("1 week", "FollowersOnlyLabel");
                 case 43200:
-                    return Object(i.d)("1 month", "FollowersOnlyLabel");
+                    return Object(a.d)("1 month", "FollowersOnlyLabel");
                 case 129600:
-                    return Object(i.d)("3 months", "FollowersOnlyLabel");
+                    return Object(a.d)("3 months", "FollowersOnlyLabel");
                 default:
-                    return i.i.warn("[FollowersOnlyLabel] Tried to generate a label for a non-preset.", e), ""
+                    return a.i.warn("[FollowersOnlyLabel] Tried to generate a label for a non-preset.", e), ""
             }
         }, t.d = function(e) {
             switch (e) {
                 case 0:
-                    return Object(i.d)("0 min", "FollowersOnlyShorthand");
+                    return Object(a.d)("0 min", "FollowersOnlyShorthand");
                 case 10:
-                    return Object(i.d)("10 min", "FollowersOnlyShorthand");
+                    return Object(a.d)("10 min", "FollowersOnlyShorthand");
                 case 30:
-                    return Object(i.d)("30 min", "FollowersOnlyShorthand");
+                    return Object(a.d)("30 min", "FollowersOnlyShorthand");
                 case 60:
-                    return Object(i.d)("1 hr", "FollowersOnlyShorthand");
+                    return Object(a.d)("1 hr", "FollowersOnlyShorthand");
                 case 1440:
-                    return Object(i.d)("1 day", "FollowersOnlyShorthand");
+                    return Object(a.d)("1 day", "FollowersOnlyShorthand");
                 case 10080:
-                    return Object(i.d)("1 wk", "FollowersOnlyShorthand");
+                    return Object(a.d)("1 wk", "FollowersOnlyShorthand");
                 case 43200:
-                    return Object(i.d)("1 mo", "FollowersOnlyShorthand");
+                    return Object(a.d)("1 mo", "FollowersOnlyShorthand");
                 case 129600:
-                    return Object(i.d)("3 mo", "FollowersOnlyShorthand");
+                    return Object(a.d)("3 mo", "FollowersOnlyShorthand");
                 default:
-                    return Object(i.d)("custom", "FollowersOnlyShorthand")
+                    return Object(a.d)("custom", "FollowersOnlyShorthand")
             }
         };
-        var i = n("6sO2"),
-            a = 30,
+        var a = n("6sO2"),
+            i = 30,
             r = [0, 10, 30, 60, 1440, 10080, 43200, 129600]
     },
     VSa1: function(e, t) {},
@@ -15740,9 +15719,9 @@ webpackJsonp([42], {
     VsL1: function(e, t, n) {
         "use strict";
 
-        function i() {
+        function a() {
             var e = r.k.get(o, {});
-            return a.__assign({
+            return i.__assign({
                 lastUsedFollowerDurations: {},
                 showAutoModActions: !0,
                 showMessageFlags: !0,
@@ -15752,14 +15731,14 @@ webpackJsonp([42], {
                 zachModeStatus: s
             }, e)
         }
-        var a = n("TToO"),
+        var i = n("TToO"),
             r = n("6sO2"),
             s = "control";
-        t.a = i, t.b = function(e, t) {
-            var n = i();
+        t.a = a, t.b = function(e, t) {
+            var n = a();
             n[e] = t, r.k.set(o, n)
         }, t.c = function(e, t) {
-            var n = i();
+            var n = a();
             n.lastUsedFollowerDurations[e] = t, r.k.set(o, n)
         };
         var o = "chatSettings"
@@ -15776,7 +15755,7 @@ webpackJsonp([42], {
             })
         }, t.b = function(e, t, n) {
             if (void 0 === n) throw new Error("No default avatar selected.");
-            return fetch(a.a.krakenEndpoint + "/users/" + e + "/default_images?client_id=" + a.a.authClientID + "&api_version=" + a.a.defaultAPIVersion, {
+            return fetch(i.a.krakenEndpoint + "/users/" + e + "/default_images?client_id=" + i.a.authClientID + "&api_version=" + i.a.defaultAPIVersion, {
                 method: "PUT",
                 headers: {
                     Authorization: "OAuth " + t,
@@ -15788,34 +15767,34 @@ webpackJsonp([42], {
                 })
             })
         }, t.a = function(e, t, n, r) {
-            return i.__awaiter(this, void 0, void 0, function() {
+            return a.__awaiter(this, void 0, void 0, function() {
                 var s;
-                return i.__generator(this, function(i) {
-                    switch (i.label) {
+                return a.__generator(this, function(a) {
+                    switch (a.label) {
                         case 0:
-                            return [4, fetch(a.a.krakenEndpoint + "/users/" + e + "/upload_image?client_id=" + a.a.authClientID + "&api_version=" + a.a.defaultAPIVersion + "&image_type=" + n + "&format=" + r, {
+                            return [4, fetch(i.a.krakenEndpoint + "/users/" + e + "/upload_image?client_id=" + i.a.authClientID + "&api_version=" + i.a.defaultAPIVersion + "&image_type=" + n + "&format=" + r, {
                                 method: "POST",
                                 headers: {
                                     Authorization: "OAuth " + t
                                 }
                             })];
                         case 1:
-                            return s = i.sent(), [2, s.json()]
+                            return s = a.sent(), [2, s.json()]
                     }
                 })
             })
         };
-        var i = n("TToO"),
-            a = n("6sO2"),
+        var a = n("TToO"),
+            i = n("6sO2"),
             r = n("J92i")
     },
     WClm: function(e, t) {},
     WVx7: function(e, t, n) {
         "use strict";
 
-        function i(e) {
+        function a(e) {
             return u.__awaiter(this, void 0, void 0, function() {
-                var t, n, i, a, r;
+                var t, n, a, i, r;
                 return u.__generator(this, function(s) {
                     switch (s.label) {
                         case 0:
@@ -15824,9 +15803,9 @@ webpackJsonp([42], {
                         case 1:
                             return s.trys.push([1, 5, , 6]), [4, fetch(n + "?placement.key=" + t + "&user.uid=" + e + "&max_activities=1")];
                         case 2:
-                            return (i = s.sent()).ok ? [4, i.json()] : [3, 4];
+                            return (a = s.sent()).ok ? [4, a.json()] : [3, 4];
                         case 3:
-                            if ((a = s.sent()) && Array.isArray(a) && a.length) return [2, b.Available];
+                            if ((i = s.sent()) && Array.isArray(i) && i.length) return [2, b.Available];
                             s.label = 4;
                         case 4:
                             return [2, b.Unavailable];
@@ -15839,7 +15818,7 @@ webpackJsonp([42], {
             })
         }
 
-        function a(e) {
+        function i(e) {
             return {
                 adModalOpen: Object(c.b)(e, E),
                 isLoggedIn: Object(d.d)(e)
@@ -15876,7 +15855,7 @@ webpackJsonp([42], {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {}, t.hasAwarded = !1, t.messageHandler = function(e) {
                         return u.__awaiter(t, void 0, void 0, function() {
-                            var t, n, i, a, r;
+                            var t, n, a, i, r;
                             return u.__generator(this, function(o) {
                                 switch (o.label) {
                                     case 0:
@@ -15908,9 +15887,9 @@ webpackJsonp([42], {
                                         }, e.source.postMessage(n, "*"), [2];
                                     case 2:
                                         try {
-                                            if (!(i = JSON.parse(t.activityJSON))) return [2];
+                                            if (!(a = JSON.parse(t.activityJSON))) return [2];
                                             Object(y.g)({
-                                                campaignID: i.campaign_id.toString(),
+                                                campaignID: a.campaign_id.toString(),
                                                 requestID: t.requestID,
                                                 requestMethod: this.props.requestRef
                                             })
@@ -15925,11 +15904,11 @@ webpackJsonp([42], {
                                         }), [3, 10];
                                     case 4:
                                         try {
-                                            if (!(i = JSON.parse(t.activityJSON))) return [2];
+                                            if (!(a = JSON.parse(t.activityJSON))) return [2];
                                             Object(y.f)({
                                                 requestID: t.requestID,
                                                 adblock: !1,
-                                                campaignID: i.campaign_id.toString()
+                                                campaignID: a.campaign_id.toString()
                                             })
                                         } catch (e) {}
                                         return [2];
@@ -15946,7 +15925,7 @@ webpackJsonp([42], {
                                             targetID: this.props.channelID
                                         }))];
                                     case 6:
-                                        return a = o.sent(), this.hasAwarded = !0, this.props.onBitsAwarded && this.props.onBitsAwarded(a.data.redeemTrueXAd.grantedBits), [3, 8];
+                                        return i = o.sent(), this.hasAwarded = !0, this.props.onBitsAwarded && this.props.onBitsAwarded(i.data.redeemTrueXAd.grantedBits), [3, 8];
                                     case 7:
                                         return r = o.sent(), h.i.warn("Error while redeeming bits for truex ad", r), this.props.onError && this.props.onError(s.Unknown), [3, 8];
                                     case 8:
@@ -16042,7 +16021,7 @@ webpackJsonp([42], {
                         return u.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return [4, i(this.props.truexUserID)];
+                                    return [4, a(this.props.truexUserID)];
                                 case 1:
                                     return e = t.sent(), Object(y.e)({
                                         channel: this.props.channelLogin,
@@ -16071,7 +16050,7 @@ webpackJsonp([42], {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleBuyClick = function(e) {
                         var n = t.props.channelID || "",
-                            i = Object(U.b)({
+                            a = Object(U.b)({
                                 trackBitsCardInteraction: t.props.trackBitsCardInteraction,
                                 channelID: n,
                                 purchaseUrl: e.currentTarget.dataset.purchaseUrl,
@@ -16079,7 +16058,7 @@ webpackJsonp([42], {
                                 closeAllBits: t.props.closeAllBits,
                                 location: t.props.location
                             });
-                        i && (t.props.onBuyPopupClose(i), t.props.onClose())
+                        a && (t.props.onBuyPopupClose(a), t.props.onClose())
                     }, t
                 }
                 return u.__extends(t, e), t.prototype.render = function() {
@@ -16113,12 +16092,12 @@ webpackJsonp([42], {
                     }, Object(h.d)("{percentOff,number,percent} discount", {
                         percentOff: this.props.offer.discount
                     }, "Bits--BuyCard")));
-                    var i = null;
-                    (Object(U.c)(this.props.offer) || Object(U.e)(this.props.offer)) && (i = m.createElement("div", {
+                    var a = null;
+                    (Object(U.c)(this.props.offer) || Object(U.e)(this.props.offer)) && (a = m.createElement("div", {
                         className: "bits-buy-card-offer-row__sub-text"
                     }, Object(h.d)("one per account", "Bits--BuyCard")));
-                    var a = this.props.isLastRow ? C._21 : C.Z;
-                    return m.createElement(a, {
+                    var i = this.props.isLastRow ? C._21 : C.Z;
+                    return m.createElement(i, {
                         className: "bits-buy-card-offer-row",
                         flexShrink: 0,
                         display: C.L.Flex,
@@ -16149,13 +16128,13 @@ webpackJsonp([42], {
                         "data-purchase-url": this.props.offer.url,
                         "data-bits-amount": this.props.offer.bits,
                         "data-a-target": "bits-purchase-button-" + this.props.offer.bits
-                    }, this.props.offer.price), (n || i) && m.createElement(C.Z, {
+                    }, this.props.offer.price), (n || a) && m.createElement(C.Z, {
                         alignSelf: C.d.Stretch,
                         textAlign: C._26.Right,
                         margin: {
                             top: .5
                         }
-                    }, n, i))))
+                    }, n, a))))
                 }, t.prototype.getAvailableTiers = function(e) {
                     var t = this.props.bitsConfig.indexedActions[F.g];
                     t || (t = Object(j.b)());
@@ -16175,14 +16154,14 @@ webpackJsonp([42], {
                     }))
                 }, t
             }(m.Component)),
-            H = (n("sgUC"), function(e) {
+            V = (n("sgUC"), function(e) {
                 var t = [],
                     n = [],
-                    i = null;
-                return e.offers.forEach(function(a, r) {
+                    a = null;
+                return e.offers.forEach(function(i, r) {
                     var s = m.createElement(P, {
-                            key: a.id,
-                            offer: a,
+                            key: i.id,
+                            offer: i,
                             isLastRow: r + 1 < e.offers.length,
                             bitsConfig: e.bitsConfig,
                             channelID: e.channelID,
@@ -16195,26 +16174,26 @@ webpackJsonp([42], {
                             closeAllBits: e.closeAllBits,
                             trackBitsCardInteraction: e.trackBitsCardInteraction
                         }),
-                        o = Object(U.d)(a),
-                        l = Object(U.c)(a),
-                        c = a.type === B.a;
-                    l && !e.hidePromos ? t.push(s) : o && !l ? t.push(s) : c && !e.hideWateb ? i = s : c || o || n.push(s)
+                        o = Object(U.d)(i),
+                        l = Object(U.c)(i),
+                        c = i.type === B.a;
+                    l && !e.hidePromos ? t.push(s) : o && !l ? t.push(s) : c && !e.hideWateb ? a = s : c || o || n.push(s)
                 }), e.fullsize ? m.createElement(C.Z, {
                     className: "bits-buy-card-offers__full-size",
                     flexGrow: 1,
                     flexWrap: C.O.NoWrap,
                     display: C.L.Flex,
                     flexDirection: C.N.Column
-                }, i, t, n) : m.createElement(O.b, {
+                }, a, t, n) : m.createElement(O.b, {
                     className: "bits-buy-card-offers__scroll-view"
                 }, m.createElement(C.Z, {
                     flexGrow: 1,
                     flexWrap: C.O.NoWrap,
                     display: C.L.Flex,
                     flexDirection: C.N.Column
-                }, i, t, n))
+                }, a, t, n))
             }),
-            V = function(e) {
+            H = function(e) {
                 var t = null;
                 e.pricesIncludeVAT && (t = m.createElement(C._25, {
                     italic: !0,
@@ -16228,8 +16207,8 @@ webpackJsonp([42], {
                     displayName: e.displayName,
                     minBits: e.minBitsToCheer
                 }, "Bits--BuyCard")));
-                var i = null;
-                return void 0 !== e.bitsBalance && null !== e.bitsBalance && (i = m.createElement(C._25, {
+                var a = null;
+                return void 0 !== e.bitsBalance && null !== e.bitsBalance && (a = m.createElement(C._25, {
                     color: C.I.Alt
                 }, Object(h.d)("You have {totalBits} Bits", {
                     totalBits: m.createElement("strong", {
@@ -16250,10 +16229,10 @@ webpackJsonp([42], {
                 }, m.createElement(C._25, {
                     type: C._30.H4,
                     color: C.I.Alt
-                }, Object(h.d)("Purchase Bits", "Bits--BuyCard")), t), i, n)
+                }, Object(h.d)("Purchase Bits", "Bits--BuyCard")), t), a, n)
             },
-            W = n("nrdj"),
-            Z = function(e) {
+            Z = n("nrdj"),
+            W = function(e) {
                 return m.createElement(C.Z, {
                     display: C.L.Flex,
                     flexGrow: 1,
@@ -16264,7 +16243,7 @@ webpackJsonp([42], {
                     padding: {
                         y: 1
                     }
-                }, m.createElement(W.a, {
+                }, m.createElement(Z.a, {
                     prefix: "cheer",
                     amount: e.amount,
                     bitsConfig: e.bitsConfig,
@@ -16320,7 +16299,7 @@ webpackJsonp([42], {
                         return u.__generator(this, function(e) {
                             switch (e.label) {
                                 case 0:
-                                    return [4, i(this.props.truexUserID)];
+                                    return [4, a(this.props.truexUserID)];
                                 case 1:
                                     return e.sent() !== b.Available && this.setState({
                                         hasAdAvailable: !1
@@ -16329,7 +16308,7 @@ webpackJsonp([42], {
                         })
                     })
                 }, t.prototype.render = function() {
-                    return m.createElement(Z, u.__assign({}, this.props, {
+                    return m.createElement(W, u.__assign({}, this.props, {
                         hasAdAvailable: this.state.hasAdAvailable
                     }))
                 }, t
@@ -16337,18 +16316,18 @@ webpackJsonp([42], {
             q = (n("q8Cw"), function(e) {
                 var t = Object(h.d)("Something's wrong!", "Bits--WatchAdError"),
                     n = Object(h.d)("Something went wrong. Wait a while and try again.", "Bits--WatchAdError"),
-                    i = "adserrorgeneric";
+                    a = "adserrorgeneric";
                 switch (e.type) {
                     case s.Adblock:
-                        i = "adserroradblock", n = Object(h.d)("We can't load this Ad, probably because Ad Blocking software is running. To watch an ad and get Bits, please disable all Ad Blocking software.", "Bits--WatchAdError");
+                        a = "adserroradblock", n = Object(h.d)("We can't load this Ad, probably because Ad Blocking software is running. To watch an ad and get Bits, please disable all Ad Blocking software.", "Bits--WatchAdError");
                         break;
                     case s.LimitReached:
-                        i = "adserrorlimit", t = Object(h.d)("Ad Limit Reached", "Bits--WatchAdError"), n = Object(h.d)("That's all the Ads we have for now. Try again tomorrow!", "Bits--WatchAdError");
+                        a = "adserrorlimit", t = Object(h.d)("Ad Limit Reached", "Bits--WatchAdError"), n = Object(h.d)("That's all the Ads we have for now. Try again tomorrow!", "Bits--WatchAdError");
                         break;
                     case s.ExitEarly:
                         n = Object(h.d)("To get Bits, you must view and interact with the Ad for the minimum amount of time.", "Bits--WatchAdError")
                 }
-                var a = m.createElement(C.Z, {
+                var i = m.createElement(C.Z, {
                     className: "watch-ad-error__footer",
                     display: C.L.Flex,
                     padding: {
@@ -16359,7 +16338,7 @@ webpackJsonp([42], {
                 }, m.createElement(C.u, {
                     onClick: e.onTryAgain
                 }, Object(h.d)("Try Again", "Bits--WatchAdError")));
-                return e.type === s.LimitReached && (a = m.createElement(C.Z, {
+                return e.type === s.LimitReached && (i = m.createElement(C.Z, {
                     className: "watch-ad-error__footer",
                     display: C.L.Flex,
                     padding: {
@@ -16388,7 +16367,7 @@ webpackJsonp([42], {
                     }
                 }, m.createElement("img", {
                     className: "watch-ad-error__error-image",
-                    src: F.b + "/light/static/1/" + i + ".png"
+                    src: F.b + "/light/static/1/" + a + ".png"
                 })), m.createElement(C.Z, {
                     padding: {
                         bottom: 1
@@ -16398,7 +16377,7 @@ webpackJsonp([42], {
                     bold: !0
                 }, t)), m.createElement(C._25, {
                     color: C.I.Alt2
-                }, n), a)
+                }, n), i)
             }),
             z = n("CSlQ"),
             Y = n("aqNN");
@@ -16496,8 +16475,8 @@ webpackJsonp([42], {
                     }, e), n, m.createElement(C._25, {
                         italic: !0
                     }, Object(h.d)("Bits prices are unavailable right now. Check back again later.", "Bits--BuyCard")));
-                    var i = this.renderWatebCard();
-                    if (i) return m.createElement(C._21, u.__assign({
+                    var a = this.renderWatebCard();
+                    if (a) return m.createElement(C._21, u.__assign({
                         className: N(t, "bits-buy-card--shorter"),
                         display: C.L.Flex,
                         flexDirection: C.N.Column,
@@ -16505,17 +16484,17 @@ webpackJsonp([42], {
                         justifyContent: C.Y.Center,
                         textAlign: C._26.Center,
                         padding: 1
-                    }, e), n, i);
-                    var a = [];
-                    this.props.data.currentUser ? a = this.props.data.currentUser.bitsOffers : this.props.data.bitsOffers && (a = this.props.data.bitsOffers);
-                    var r = a.filter(function(e) {
+                    }, e), n, a);
+                    var i = [];
+                    this.props.data.currentUser ? i = this.props.data.currentUser.bitsOffers : this.props.data.bitsOffers && (i = this.props.data.bitsOffers);
+                    var r = i.filter(function(e) {
                             return e.type === B.b
                         }).some(function(e) {
                             return e.includesVAT
                         }),
                         s = this.props.data.user ? this.props.data.user.id : "",
-                        o = m.createElement(H, {
-                            offers: a,
+                        o = m.createElement(V, {
+                            offers: i,
                             fullsize: this.props.fullsize,
                             hidePromos: this.props.hidePromos,
                             hideWateb: this.props.hideWateb,
@@ -16531,7 +16510,7 @@ webpackJsonp([42], {
                             trackBitsCardInteraction: this.props.trackBitsCardInteraction
                         }),
                         l = null;
-                    return this.props.location === y.b.ChatTooltip && (l = m.createElement(V, {
+                    return this.props.location === y.b.ChatTooltip && (l = m.createElement(H, {
                         bitsBalance: this.props.data && this.props.data.currentUser && this.props.data.currentUser.bitsBalance,
                         displayName: this.props.data && this.props.data.user && this.props.data.user.displayName || this.props.channelLogin || "",
                         minBitsToCheer: this.props.data && this.props.data.user && this.props.data.user.cheer && this.props.data.user.cheer.settings.cheerMinimumBits,
@@ -16581,9 +16560,9 @@ webpackJsonp([42], {
                 autoReportInteractive: !0,
                 destination: I.a.BitsBuyCard
             }))($),
-            J = Object(o.b)(a, r)(Q);
+            J = Object(o.b)(i, r)(Q);
         n.d(t, !1, function() {
-            return a
+            return i
         }), n.d(t, !1, function() {
             return r
         }), n.d(t, "a", function() {
@@ -16821,32 +16800,32 @@ webpackJsonp([42], {
     ZJYd: function(e, t, n) {
         "use strict";
 
-        function i(e) {
+        function a(e) {
             return e.type === s.b && null !== e.promotion && !!e.promotion
         }
         t.c = function(e) {
-            return e.type !== s.a && i(e) && null !== e.promotion && e.promotion.type === s.d
+            return e.type !== s.a && a(e) && null !== e.promotion && e.promotion.type === s.d
         }, t.e = function(e) {
-            return e.type !== s.a && i(e) && null !== e.promotion && e.promotion.type === s.e
-        }, t.d = i, t.a = function(e) {
+            return e.type !== s.a && a(e) && null !== e.promotion && e.promotion.type === s.e
+        }, t.d = a, t.a = function(e) {
             var t = 0,
                 n = 0,
-                i = 0;
+                a = 0;
             return e.forEach(function(e) {
-                e.cheerAmount && (t = Math.max(t, e.cheerAmount), n = n ? Math.min(n, e.cheerAmount) : e.cheerAmount, i += e.cheerAmount)
+                e.cheerAmount && (t = Math.max(t, e.cheerAmount), n = n ? Math.min(n, e.cheerAmount) : e.cheerAmount, a += e.cheerAmount)
             }), {
-                total: i,
+                total: a,
                 smallestCheermote: n,
                 largestCheermote: t
             }
         }, t.f = function(e) {
             var t = e.messageBits,
                 n = t.total,
-                i = t.largestCheermote,
+                a = t.largestCheermote,
                 r = t.smallestCheermote;
             if (n) {
                 var s = {
-                    cheerAboveMaxBitsPerEmote: i > o.k,
+                    cheerAboveMaxBitsPerEmote: a > o.k,
                     totalAboveBalance: n > e.balance,
                     totalBelowCheerMinimum: n < e.cheerMinimumBits,
                     totalBelowEmoteMinimum: r < e.emoteMinimumBits,
@@ -16855,7 +16834,7 @@ webpackJsonp([42], {
                 };
                 if (Object.keys(s).some(function(e) {
                         return s[e]
-                    })) return a.__assign({
+                    })) return i.__assign({
                     canSpend: !1
                 }, s)
             }
@@ -16869,13 +16848,13 @@ webpackJsonp([42], {
                     location: e.location
                 });
                 var n = t.replace("{channelID}", e.channelID),
-                    i = window.open(n, "Twitch", "width=1024,height=600,scrollbars=yes");
-                return !i || Object(r.a)() ? (e.closeAllBits && e.closeAllBits(), void e.trackBitsCardInteraction(l.a.CloseCard, {
+                    a = window.open(n, "Twitch", "width=1024,height=600,scrollbars=yes");
+                return !a || Object(r.a)() ? (e.closeAllBits && e.closeAllBits(), void e.trackBitsCardInteraction(l.a.CloseCard, {
                     location: e.location
-                })) : (i.focus(), i)
+                })) : (a.focus(), a)
             }
         };
-        var a = n("TToO"),
+        var i = n("TToO"),
             r = n("Ouuk"),
             s = n("jxGs"),
             o = n("3iBR"),
@@ -16883,7 +16862,7 @@ webpackJsonp([42], {
     },
     ZoRy: function(e, t) {},
     aK1p: function(e, t, n) {
-        var i = {
+        var a = {
             kind: "Document",
             definitions: [{
                 kind: "OperationDefinition",
@@ -17044,7 +17023,7 @@ webpackJsonp([42], {
                 end: 282
             }
         };
-        i.loc.source = {
+        a.loc.source = {
             body: '#import "twilight/features/bits/models/bits-leaderboard-entry-fragment.gql"\nquery BitsPinnedCheerV2_Leaderboards($channelID: ID!) {\nuser(id: $channelID) {\nid\ncheer {\nid\nleaderboard (first: 10) {\nid\n...leaderboardEntry\n}\n}\nself {\nbitsLeaderboardPosition {\n...leaderboardEntry\n}\n}\n}\n}',
             name: "GraphQL request",
             locationOffset: {
@@ -17052,52 +17031,52 @@ webpackJsonp([42], {
                 column: 1
             }
         };
-        var a = {};
-        i.definitions = i.definitions.concat(function(e) {
+        var i = {};
+        a.definitions = a.definitions.concat(function(e) {
             return e.filter(function(e) {
                 if ("FragmentDefinition" !== e.kind) return !0;
                 var t = e.name.value;
-                return !a[t] && (a[t] = !0, !0)
+                return !i[t] && (i[t] = !0, !0)
             })
-        }(n("HQaX").definitions)), e.exports = i
+        }(n("HQaX").definitions)), e.exports = a
     },
     aSvS: function(e, t, n) {
         "use strict";
         n.d(t, "b", function() {
-            return i
-        }), n.d(t, "a", function() {
             return a
+        }), n.d(t, "a", function() {
+            return i
         });
-        var i;
-        ! function(e) {
-            e.DismissToken = "token_dismissed", e.RedeemToken = "token_redeemed", e.RequestEligibility = "eligibility_requested", e.RequestToken = "token_requested"
-        }(i || (i = {}));
         var a;
         ! function(e) {
+            e.DismissToken = "token_dismissed", e.RedeemToken = "token_redeemed", e.RequestEligibility = "eligibility_requested", e.RequestToken = "token_requested"
+        }(a || (a = {}));
+        var i;
+        ! function(e) {
             e.Click = "clicked_manage_in_dashboards", e.Dismiss = "dismissed"
-        }(a || (a = {}))
+        }(i || (i = {}))
     },
     aUOx: function(e, t, n) {
         "use strict";
         t.a = function(e) {
             return {
-                type: i.a.Info,
-                id: Object(a.a)("notice"),
+                type: a.a.Info,
+                id: Object(i.a)("notice"),
                 message: e
             }
         };
-        var i = n("qkCi"),
-            a = n("INp2")
+        var a = n("qkCi"),
+            i = n("INp2")
     },
     annQ: function(e, t, n) {
-        function i(e) {
+        function a(e) {
             return e.filter(function(e) {
                 if ("FragmentDefinition" !== e.kind) return !0;
                 var t = e.name.value;
                 return !r[t] && (r[t] = !0, !0)
             })
         }
-        var a = {
+        var i = {
             kind: "Document",
             definitions: [{
                 kind: "OperationDefinition",
@@ -17349,7 +17328,7 @@ webpackJsonp([42], {
                 end: 748
             }
         };
-        a.loc.source = {
+        i.loc.source = {
             body: '# Documentation about how to use GraphQL is located in the Data Access Guide:\n# https://git-aws.internal.justin.tv/pages/twilight/twilight-docs/docs/guides/data-access.html\n# Additionally use the GraphQL explorer (https://api.twitch.tv/gql/explore) to browse\n# available GraphQL data and construct your query.\n#import "twilight/features/bits/models/bits-offers-fragment.gql"\n#import "twilight/features/chat/models/cheer-fragment.gql"\nquery GetBitsButton_Bits($isLoggedIn: Boolean! $withChannel: Boolean! $login: String!) {\nbitsOffers @skip(if: $isLoggedIn) {\n...bitsOffersFragment\n}\ncurrentUser @include(if: $isLoggedIn) {\nid\nidSHA1\nbitsBalance\nbitsOffers {\n...bitsOffersFragment\n}\n}\nuser(login: $login) @include(if: $withChannel) {\nid\n...cheer\n}\n}',
             name: "GraphQL request",
             locationOffset: {
@@ -17358,10 +17337,10 @@ webpackJsonp([42], {
             }
         };
         var r = {};
-        a.definitions = a.definitions.concat(i(n("OcEY").definitions)), a.definitions = a.definitions.concat(i(n("576g").definitions)), e.exports = a
+        i.definitions = i.definitions.concat(a(n("OcEY").definitions)), i.definitions = i.definitions.concat(a(n("576g").definitions)), e.exports = i
     },
     aqNN: function(e, t, n) {
-        var i = {
+        var a = {
             kind: "Document",
             definitions: [{
                 kind: "OperationDefinition",
@@ -17654,7 +17633,7 @@ webpackJsonp([42], {
                 end: 440
             }
         };
-        i.loc.source = {
+        a.loc.source = {
             body: '#import "twilight/features/bits/models/bits-offers-fragment.gql"\nquery Bits_BuyCard_Offers($withChannel: Boolean! $isLoggedIn: Boolean! $channelLogin: String!) {\nbitsOffers @skip(if: $isLoggedIn) {\n...bitsOffersFragment\n}\ncurrentUser @include(if: $isLoggedIn) {\nid\nidSHA1\nbitsBalance\nbitsOffers {\n...bitsOffersFragment\n}\n}\nuser(login: $channelLogin) @include(if: $withChannel) {\nid\ndisplayName\ncheer {\nid\nsettings {\ncheerMinimumBits\n}\n}\n}\n}',
             name: "GraphQL request",
             locationOffset: {
@@ -17662,28 +17641,28 @@ webpackJsonp([42], {
                 column: 1
             }
         };
-        var a = {};
-        i.definitions = i.definitions.concat(function(e) {
+        var i = {};
+        a.definitions = a.definitions.concat(function(e) {
             return e.filter(function(e) {
                 if ("FragmentDefinition" !== e.kind) return !0;
                 var t = e.name.value;
-                return !a[t] && (a[t] = !0, !0)
+                return !i[t] && (i[t] = !0, !0)
             })
-        }(n("OcEY").definitions)), e.exports = i
+        }(n("OcEY").definitions)), e.exports = a
     },
     ass3: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
-            return i
-        }), n.d(t, "b", function() {
             return a
+        }), n.d(t, "b", function() {
+            return i
         }), t.c = function() {
             return {
-                type: i
+                type: a
             }
         }, t.d = function(e, t, n) {
             return {
-                type: a,
+                type: i,
                 viewerCardOptions: {
                     targetLogin: e,
                     sourceType: t,
@@ -17691,41 +17670,41 @@ webpackJsonp([42], {
                 }
             }
         };
-        var i = "viewer-card.VIEWER_CARD_HIDDEN",
-            a = "viewer-card.VIEWER_CARD_SHOWN"
+        var a = "viewer-card.VIEWER_CARD_HIDDEN",
+            i = "viewer-card.VIEWER_CARD_SHOWN"
     },
     bQ8d: function(e, t, n) {
         "use strict";
 
-        function i(e, t) {
+        function a(e, t) {
             if (void 0 === t && (t = 0), t > e) {
                 var n = t;
                 t = e, e = n
             }
             return t + Math.floor(Math.random() * (e - t + 1))
         }
-        t.a = i, t.b = function(e) {
-            return e[i(e.length - 1)]
+        t.a = a, t.b = function(e) {
+            return e[a(e.length - 1)]
         }, t.c = function(e, t) {
-            for (var n = 0, i = []; n < e;) i.push(t(n)), n += 1;
-            return i
+            for (var n = 0, a = []; n < e;) a.push(t(n)), n += 1;
+            return a
         }
     },
     bgpf: function(e, t, n) {
         "use strict";
         n.d(t, "c", function() {
-            return i
-        }), n.d(t, "b", function() {
             return a
+        }), n.d(t, "b", function() {
+            return i
         }), n.d(t, "a", function() {
             return r
         });
-        var i;
-        (i || (i = {})).NewChatter = "NEW_CHATTER";
         var a;
+        (a || (a = {})).NewChatter = "NEW_CHATTER";
+        var i;
         ! function(e) {
             e.Available = "AVAILABLE", e.Dismissed = "DISMISSED", e.Eligible = "ELIGIBLE", e.Redeemed = "REDEEMED"
-        }(a || (a = {}));
+        }(i || (i = {}));
         var r;
         ! function(e) {
             e.TokenNotAvailable = "TOKEN_NOT_AVAILABLE", e.TokenNotFound = "TOKEN_NOT_FOUND", e.UserBanned = "USER_CHAT_BANNED", e.UserNotFollowing = "FOLLOWER_ONLY_MODE_ENFORCEMENT_FAILED", e.UserNotSubbed = "SUB_ONLY_MODE_ENFORCEMENT_FAILED", e.UserTimedOut = "USER_CHAT_TIMED_OUT"
@@ -17734,21 +17713,21 @@ webpackJsonp([42], {
     bkpq: function(e, t, n) {
         "use strict";
 
-        function i(e) {
+        function a(e) {
             var t = new Map,
                 n = new Map,
-                i = new Map,
+                a = new Map,
                 r = new Map;
             return e.images.forEach(function(e) {
-                "LIGHT" === e.theme ? e.isAnimated ? n.set(e.dpiScale, e.url) : t.set(e.dpiScale, e.url) : e.isAnimated ? r.set(e.dpiScale, e.url) : i.set(e.dpiScale, e.url)
-            }), a.__assign({
+                "LIGHT" === e.theme ? e.isAnimated ? n.set(e.dpiScale, e.url) : t.set(e.dpiScale, e.url) : e.isAnimated ? r.set(e.dpiScale, e.url) : a.set(e.dpiScale, e.url)
+            }), i.__assign({
                 indexedImages: {
                     LIGHT: {
                         static: t,
                         animated: n
                     },
                     DARK: {
-                        static: i,
+                        static: a,
                         animated: r
                     }
                 }
@@ -17759,24 +17738,24 @@ webpackJsonp([42], {
                 n = {};
             return e.forEach(function(e) {
                 var o = e.tiers.map(function(e) {
-                    return i(e)
+                    return a(e)
                 });
                 "Cheer" === e.prefix && o.push(function() {
                     var e = ["DARK", "LIGHT"],
                         t = ["static", "animated"],
                         n = [];
-                    return [1, 1.5, 2, 3, 4].forEach(function(i) {
+                    return [1, 1.5, 2, 3, 4].forEach(function(a) {
                         e.forEach(function(e) {
                             t.forEach(function(t) {
                                 n.push({
-                                    url: s.a + "/cheer/" + e.toLowerCase() + "/" + t + "/100000/" + i + "." + ("static" === t ? "png" : "gif"),
+                                    url: s.a + "/cheer/" + e.toLowerCase() + "/" + t + "/100000/" + a + "." + ("static" === t ? "png" : "gif"),
                                     isAnimated: "animated" === t,
                                     theme: e,
-                                    dpiScale: i
+                                    dpiScale: a
                                 })
                             })
                         })
-                    }), i({
+                    }), a({
                         id: "Cheer:100000",
                         bits: 1e5,
                         color: s.f[r.a.Yellow],
@@ -17785,7 +17764,7 @@ webpackJsonp([42], {
                 }()), o.sort(function(e, t) {
                     return t.bits - e.bits
                 });
-                var l = a.__assign({}, e, {
+                var l = i.__assign({}, e, {
                     indexedTiers: new Map(o.map(function(e) {
                         return [e.bits, e]
                     })),
@@ -17808,7 +17787,7 @@ webpackJsonp([42], {
                 __typename: "BitsLeaderboardEdge"
             }
         };
-        var a = n("TToO"),
+        var i = n("TToO"),
             r = n("I89S"),
             s = n("3iBR")
     },
@@ -17816,7 +17795,7 @@ webpackJsonp([42], {
         e.exports = n.p + "assets/gift3-03f7dd6edab76b3567ff92bba447d5cb.png"
     },
     cxe8: function(e, t, n) {
-        var i = {
+        var a = {
             kind: "Document",
             definitions: [{
                 kind: "OperationDefinition",
@@ -18160,7 +18139,7 @@ webpackJsonp([42], {
                 end: 433
             }
         };
-        i.loc.source = {
+        a.loc.source = {
             body: '#import "twilight/features/badges/models/badge-fragment.gql"\nquery Chat_SharePurchase_ChannelData($channelLogin: String!) {\nuser(login: $channelLogin) {\nid\nsettings {\nisCommerceRevShareEnabled\n}\nself {\npurchaseTokens {\nid\ntitle\nasin\nimageThumbnail: imageURL(width: 40)\nimageURL\nemoteSets {\nid\nemoteSet {\nid\nemotes {\nid\ntoken\n}\n}\n}\nbadges {\nid\nbadge{\n...badge\n}\n}\nbits {\nid\nquantity\n}\ninGameContents {\nid\nimageURL(width: 30)\n}\n}\n}\n}\n}',
             name: "GraphQL request",
             locationOffset: {
@@ -18168,31 +18147,31 @@ webpackJsonp([42], {
                 column: 1
             }
         };
-        var a = {};
-        i.definitions = i.definitions.concat(function(e) {
+        var i = {};
+        a.definitions = a.definitions.concat(function(e) {
             return e.filter(function(e) {
                 if ("FragmentDefinition" !== e.kind) return !0;
                 var t = e.name.value;
-                return !a[t] && (a[t] = !0, !0)
+                return !i[t] && (i[t] = !0, !0)
             })
-        }(n("QU+n").definitions)), e.exports = i
+        }(n("QU+n").definitions)), e.exports = a
     },
     czpb: function(e, t, n) {
         "use strict";
-        var i = n("6sO2"),
-            a = n("Ejve"),
+        var a = n("6sO2"),
+            i = n("Ejve"),
             r = n("MSvX");
         t.a = function(e) {
-            return i.b.get(r.a, !1) || i.a.buildType !== a.a.Production ? "string" == typeof e ? e : e.pathname || "" : "string" == typeof e ? s + e : s + e.pathname
+            return a.b.get(r.a, !1) || a.a.buildType !== i.a.Production ? "string" == typeof e ? e : e.pathname || "" : "string" == typeof e ? s + e : s + e.pathname
         }, t.b = function() {
-            return !i.b.get(r.a, !1) && i.a.buildType === a.a.Production
+            return !a.b.get(r.a, !1) && a.a.buildType === i.a.Production
         };
         var s = "https://www.twitch.tv"
     },
     dQj3: function(e, t, n) {
         "use strict";
 
-        function i(e) {
+        function a(e) {
             var t = [];
             return e.forEach(function(e) {
                 t[e.from] = {
@@ -18211,8 +18190,8 @@ webpackJsonp([42], {
                 }
             }), t
         }
-        t.b = i, t.a = function(e, t, n) {
-            var c = i(e.body.emotes),
+        t.b = a, t.a = function(e, t, n) {
+            var c = a(e.body.emotes),
                 d = e.badges.reduce(function(e, t) {
                     return e[t.setID] = t.version, e
                 }, {});
@@ -18223,7 +18202,7 @@ webpackJsonp([42], {
                 bits: e.bitsUsed,
                 timestamp: 0,
                 deleted: !1,
-                user: a.__assign({
+                user: i.__assign({
                     userID: e.author.id,
                     userLogin: e.author.login,
                     userType: r.a.User,
@@ -18272,7 +18251,7 @@ webpackJsonp([42], {
                 bitsUsed: e.bits_used
             }
         };
-        var a = n("TToO"),
+        var i = n("TToO"),
             r = n("6Agf"),
             s = n("qkCi"),
             o = n("l21v"),
@@ -18281,56 +18260,54 @@ webpackJsonp([42], {
     dVd7: function(e, t) {},
     "e9/y": function(e, t, n) {
         "use strict";
-        var i = n("TToO"),
-            a = n("U7vG"),
+        var a = n("TToO"),
+            i = n("U7vG"),
             r = n("6sO2"),
             s = n("yWCw"),
             o = n("zCIC"),
-            l = n("Ejve"),
-            c = n("J4ib"),
-            d = n("SI0h"),
-            u = n("11M/"),
-            m = n("RxMT"),
-            p = n("2aoH"),
-            h = n("iPhu"),
-            g = n("Odds"),
-            f = (n("7zg1"), function(e) {
+            l = n("J4ib"),
+            c = n("SI0h"),
+            d = n("11M/"),
+            u = n("RxMT"),
+            m = n("2aoH"),
+            p = n("iPhu"),
+            h = n("Odds"),
+            g = (n("7zg1"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return i.__extends(t, e), t.prototype.render = function() {
-                    var e = this;
-                    if (r.a.buildType === l.a.Production) return null;
-                    var t = !1,
+                return a.__extends(t, e), t.prototype.render = function() {
+                    var e = this,
+                        t = !1,
                         n = null,
-                        i = this.props.channelLogin;
-                    if (this.props.error) n = a.createElement(s.a, {
+                        a = this.props.channelLogin;
+                    if (this.props.error) n = i.createElement(s.a, {
                         message: Object(r.d)("Error loading Follow List", "ChannelFollowListing")
                     });
                     else if (this.props.loading || this.props.userExist) {
                         if (this.props.userExist)
-                            if (this.props.followEdge && 0 === this.props.followEdge.length || !this.props.followEdge) n = a.createElement(g.Z, {
+                            if (this.props.followEdge && 0 === this.props.followEdge.length || !this.props.followEdge) n = i.createElement(h.Z, {
                                 margin: {
                                     top: 5
                                 },
-                                display: g.L.Flex,
-                                flexDirection: g.N.Row,
-                                justifyContent: g.Y.Center
-                            }, a.createElement(g._25, {
-                                type: g._30.H4,
-                                color: g.I.Alt2,
+                                display: h.L.Flex,
+                                flexDirection: h.N.Row,
+                                justifyContent: h.Y.Center
+                            }, i.createElement(h._25, {
+                                type: h._30.H4,
+                                color: h.I.Alt2,
                                 italic: !0
                             }, Object(r.d)("No Users Found", "ChannelFollowListing")));
                             else {
-                                var f = this.props.followEdge.map(function(t) {
+                                var g = this.props.followEdge.map(function(t) {
                                     if (!t || !t.node) return null;
                                     var n = {
                                             user: t.node
                                         },
-                                        i = a.createElement(h.a, {
+                                        a = i.createElement(p.a, {
                                             id: t.node.id,
                                             showButtonsOnHover: !0,
-                                            balloonDirection: g.q.Right
+                                            balloonDirection: h.q.Right
                                         });
                                     if (e.props.currentUser) {
                                         var r = {
@@ -18351,85 +18328,85 @@ webpackJsonp([42], {
                                             s = {
                                                 currentUser: e.props.currentUser
                                             };
-                                        i = a.createElement(h.a, {
+                                        a = i.createElement(p.a, {
                                             id: t.node.id,
                                             showButtonsOnHover: !0,
                                             userData: n,
                                             followData: r,
                                             friendsData: s,
-                                            balloonDirection: g.q.Right
+                                            balloonDirection: h.q.Right
                                         })
                                     }
-                                    return a.createElement(g.Z, {
+                                    return i.createElement(h.Z, {
                                         key: t.node.id,
                                         margin: {
                                             bottom: 2
                                         }
-                                    }, i)
+                                    }, a)
                                 });
-                                n = a.createElement(g._36, {
+                                n = i.createElement(h._36, {
                                     placeholderItems: 10,
                                     center: !0,
-                                    gutterSize: g._38.Small,
-                                    childWidth: g._37.Large
-                                }, f), t = this.props.hasNextPage
+                                    gutterSize: h._38.Small,
+                                    childWidth: h._37.Large
+                                }, g), t = this.props.hasNextPage
                             }
-                    } else n = a.createElement(s.a, {
+                    } else n = i.createElement(s.a, {
                         message: Object(r.d)("User does not exist", "ChannelFollowListing")
                     });
-                    return a.createElement(g.Z, {
+                    return i.createElement(h.Z, {
                         className: "channel-follow-listing",
-                        display: g.L.Flex,
-                        flexDirection: g.N.Column,
-                        flexWrap: g.O.NoWrap,
+                        display: h.L.Flex,
+                        flexDirection: h.N.Column,
+                        flexWrap: h.O.NoWrap,
                         fullHeight: !0,
                         fullWidth: !0
-                    }, a.createElement(p.a, null, a.createElement(d.a, {
+                    }, i.createElement(m.a, null, i.createElement(c.a, {
                         currentPage: this.props.channelHeaderTab,
-                        channelLogin: i
-                    })), a.createElement(g.Z, {
-                        display: g.L.Flex,
+                        channelLogin: a
+                    })), i.createElement(h.Z, {
+                        display: h.L.Flex,
                         flexGrow: 1,
                         fullHeight: !0
-                    }, a.createElement(g.Z, {
+                    }, i.createElement(h.Z, {
                         fullWidth: !0,
                         padding: {
                             x: 3,
                             y: 2
                         }
-                    }, n, a.createElement(o.a, {
+                    }, n, i.createElement(o.a, {
                         loadMore: this.props.loadMore,
                         enabled: t && !this.props.loading,
                         pixelThreshold: 100
-                    }), this.props.loading && a.createElement(g._1, {
+                    }), this.props.loading && i.createElement(h._1, {
                         fillContent: !0
-                    })), a.createElement(m.b, null, a.createElement(g._21, {
+                    })), i.createElement(u.b, null, i.createElement(h._21, {
                         className: "channel-follow-listing__right-column",
-                        background: g.m.Alt2,
-                        display: g.L.Flex,
+                        background: h.m.Alt2,
+                        display: h.L.Flex,
                         flexGrow: 0,
                         flexShrink: 0,
-                        overflow: g._2.Hidden,
-                        flexDirection: g.N.Column,
-                        flexWrap: g.O.NoWrap,
+                        overflow: h._2.Hidden,
+                        flexDirection: h.N.Column,
+                        flexWrap: h.O.NoWrap,
                         fullHeight: !0
-                    }, a.createElement(u.a, {
-                        channelLogin: i,
-                        clientID: c.o.config.legacyClientID
+                    }, i.createElement(d.a, {
+                        channelLogin: a,
+                        clientID: l.o.config.legacyClientID
                     })))))
                 }, t
-            }(a.Component));
+            }(i.Component));
         n.d(t, !1, function() {
             return 15
         }), n.d(t, "a", function() {
-            return f
+            return g
         })
     },
     e9ZN: function(e, t) {},
     ebTC: function(e, t, n) {
         "use strict";
-        var i = n("RH2O"),
-            a = n("2KeS"),
+        var a = n("RH2O"),
+            i = n("2KeS"),
             r = n("V5M+"),
             s = n("Aj/L"),
             o = n("TToO"),
@@ -18460,21 +18437,21 @@ webpackJsonp([42], {
                             t.setState({
                                 loading: !0
                             }), n = e[0];
-                            var i = Object(g.a)(n),
-                                a = (n.size / 1024 / 1024).toFixed(4);
-                            parseInt(a, 10) > 10 ? t.setState({
+                            var a = Object(g.a)(n),
+                                i = (n.size / 1024 / 1024).toFixed(4);
+                            parseInt(i, 10) > 10 ? t.setState({
                                 statusMessage: v.b.BadSizeError
                             }) : Object(g.b)(n, function(e) {
                                 return o.__awaiter(t, void 0, void 0, function() {
-                                    var t, n, a, r, s = this;
+                                    var t, n, i, r, s = this;
                                     return o.__generator(this, function(o) {
                                         switch (o.label) {
                                             case 0:
                                                 this.currentImage = e, o.label = 1;
                                             case 1:
-                                                return o.trys.push([1, 3, , 4]), [4, Object(f.a)(this.props.userID, this.props.authToken, this.props.imageType, i)];
+                                                return o.trys.push([1, 3, , 4]), [4, Object(f.a)(this.props.userID, this.props.authToken, this.props.imageType, a)];
                                             case 2:
-                                                return t = o.sent(), n = t.upload_url, a = t.upload_id, [3, 4];
+                                                return t = o.sent(), n = t.upload_url, i = t.upload_id, [3, 4];
                                             case 3:
                                                 return r = o.sent(), this.logger.error(r, "Request for upload ID failed to get expected response from server."), this.setState({
                                                     statusMessage: v.b.UnexpectedError
@@ -18502,7 +18479,7 @@ webpackJsonp([42], {
                                                         })
                                                     },
                                                     onMessage: function(e) {
-                                                        if (e.upload_id === a) {
+                                                        if (e.upload_id === i) {
                                                             clearTimeout(s.timeoutHandle);
                                                             var t = null;
                                                             e.status === v.a.Success ? t = v.b.Success : e.status === v.a.BadSize ? (t = v.b.BadSizeError, s.currentImage = null) : e.status === v.a.NonImage ? (t = v.b.NonImageError, s.currentImage = null) : e.status === v.a.WrongFormat ? (t = v.b.WrongFormatError, s.currentImage = null) : (t = v.b.UnexpectedError, s.currentImage = null), s.unsubscribe && s.unsubscribe(), s.setState({
@@ -18558,8 +18535,8 @@ webpackJsonp([42], {
                         height: 76
                     }));
                     else {
-                        var i = Object(c.d)("Recommended image size: 1200x380 and less than 10MB.", "UserImageUploader");
-                        this.props.imageType === h.a.ChannelOfflineImage && (i = Object(c.d)("Recommended image size: 1920x1080 and less than 10MB.", "UserImageUploader")), n = l.createElement(k.Z, null, l.createElement(k.Z, {
+                        var a = Object(c.d)("Recommended image size: 1200x380 and less than 10MB.", "UserImageUploader");
+                        this.props.imageType === h.a.ChannelOfflineImage && (a = Object(c.d)("Recommended image size: 1920x1080 and less than 10MB.", "UserImageUploader")), n = l.createElement(k.Z, null, l.createElement(k.Z, {
                             className: "user-image-uploader__upload-info"
                         }, l.createElement(k.Z, null, l.createElement(k._12, {
                             asset: k._13.Plus,
@@ -18585,10 +18562,10 @@ webpackJsonp([42], {
                             color: k.I.Alt2,
                             fontSize: k.P.Size8,
                             align: k._40.TextBottom
-                        }, i)))
+                        }, a)))
                     }
-                    var a = null;
-                    this.props.showCloser && (a = l.createElement(u.a, null));
+                    var i = null;
+                    this.props.showCloser && (i = l.createElement(u.a, null));
                     var r = null;
                     if (null !== this.state.statusMessage) {
                         var s = Object(v.c)(this.state.statusMessage);
@@ -18641,7 +18618,7 @@ webpackJsonp([42], {
                         position: k._6.Relative,
                         textAlign: k._26.Center,
                         className: "user-image-uploader__status-message"
-                    }, r))), a)
+                    }, r))), i)
                 }, t = o.__decorate([Object(m.a)(y, {
                     options: function(e) {
                         return {
@@ -18653,12 +18630,12 @@ webpackJsonp([42], {
                 })], t)
             }(l.Component),
             S = Object(b.d)("User Image Upload")(_),
-            E = Object(i.b)(function(e) {
+            E = Object(a.b)(function(e) {
                 return {
                     authToken: Object(s.a)(e)
                 }
             }, function(e, t) {
-                return Object(a.b)({
+                return Object(i.b)({
                     closeModal: function() {
                         return t.successCallback && t.successCallback(), Object(r.c)()
                     }
@@ -18673,7 +18650,7 @@ webpackJsonp([42], {
     g7wA: function(e, t, n) {
         "use strict";
 
-        function i(e, t) {
+        function a(e, t) {
             return o.createElement("a", {
                 key: e,
                 className: "chat-line__message--link",
@@ -18683,7 +18660,7 @@ webpackJsonp([42], {
             }, t.content.displayText)
         }
 
-        function a(e) {
+        function i(e) {
             var t = Object(m.a)("https://twitch.amazon.com/prime", {
                 ref: "subscriptionMessage",
                 channel: e
@@ -18714,31 +18691,31 @@ webpackJsonp([42], {
                 key: "thankyou"
             }, Object(l.d)("Thank you for your feedback!", "ChatLine"))
         }, t.j = function(e, t, n) {
-            var a = null,
+            var i = null,
                 r = e.reduce(function(r, s, l) {
                     switch (s.type) {
                         case b.a.Text:
                             var c = l > 0;
-                            return r.concat(function(e, t, n, i, a) {
+                            return r.concat(function(e, t, n, a, i) {
                                 var r = [],
                                     s = "";
-                                i && (s = s.concat(" "));
+                                a && (s = s.concat(" "));
                                 var l = e.content.split(/\s+/);
-                                return l.forEach(function(e, i) {
+                                return l.forEach(function(e, a) {
                                     if ("" !== e) {
-                                        var a = i < l.length - 1 ? e + " " : e;
+                                        var i = a < l.length - 1 ? e + " " : e;
                                         (t || n) && function(e, t, n) {
-                                            var i = e.trim().toLowerCase();
-                                            return t && i === t.toLowerCase() || n && i === n.toLowerCase()
+                                            var a = e.trim().toLowerCase();
+                                            return t && a === t.toLowerCase() || n && a === n.toLowerCase()
                                         }(e, t, n) ? (r = (r = r.concat(s)).concat(o.createElement(k.Z, {
                                             className: "chat-line__message--mention-recipient",
                                             display: k.L.InlineFlex,
-                                            key: "" + e + i,
+                                            key: "" + e + a,
                                             "data-a-target": "chat-message-mention"
-                                        }, a)), s = "") : s = s.concat(a)
+                                        }, i)), s = "") : s = s.concat(i)
                                     }
                                 }), r = r.concat(s), o.createElement("span", {
-                                    key: "chat-line__message-text-" + a,
+                                    key: "chat-line__message-text-" + i,
                                     "data-a-target": "chat-message-text"
                                 }, r)
                             }(s, t, n, c, l));
@@ -18755,19 +18732,19 @@ webpackJsonp([42], {
                                 "data-a-target": "chat-message-mention"
                             }, "@" + s.content.recipient));
                         case b.a.Link:
-                            return r = r.concat(i(l, s)), e.length > l + 1 && e[l + 1].type === b.a.Link && r.push(" "), r;
+                            return r = r.concat(a(l, s)), e.length > l + 1 && e[l + 1].type === b.a.Link && r.push(" "), r;
                         case b.a.Emote:
                             return r = r.concat(o.createElement(h.a, {
                                 key: l,
                                 emote: s.content
                             })), e.length > l + 1 && e[l + 1].type === b.a.Emote && r.push(" "), r;
                         case b.a.ClipLink:
-                            return a ? r.concat(i(l, s)) : (a = o.createElement(g.a, {
+                            return i ? r.concat(a(l, s)) : (i = o.createElement(g.a, {
                                 key: l,
                                 slug: s.content.slug
                             }), r);
                         case b.a.VideoLink:
-                            return a ? r.concat(i(l, s)) : (a = o.createElement(f.a, {
+                            return i ? r.concat(a(l, s)) : (i = o.createElement(f.a, {
                                 key: l,
                                 id: s.content.id,
                                 url: s.content.url
@@ -18778,7 +18755,7 @@ webpackJsonp([42], {
                             }))
                     }
                 }, []);
-            return a && (r = r.concat(a)), r
+            return i && (r = r.concat(i)), r
         }, t.k = function(e) {
             if (e.type === v.a.Ban) return e.reason ? o.createElement("span", {
                 className: "chat-line__moderation--ban-with-reason"
@@ -18806,8 +18783,8 @@ webpackJsonp([42], {
                 userLogin: e.userLogin,
                 duration: e.duration
             }, "ChatLine")) : void 0
-        }, t.u = a, t.a = r, t.b = s, t.r = function(e) {
-            return e.isPrime ? o.createElement("span", null, r(e.userLogin, a(e.channel))) : o.createElement("span", null, s(e.userLogin, e.tier))
+        }, t.u = i, t.a = r, t.b = s, t.r = function(e) {
+            return e.isPrime ? o.createElement("span", null, r(e.userLogin, i(e.channel))) : o.createElement("span", null, s(e.userLogin, e.tier))
         }, t.q = function(e) {
             return "custom" === e.tier ? o.createElement("span", null, function(e, t) {
                 return Object(l.d)("{userLogin} gifted a subscription to {recipient}!", {
@@ -18897,8 +18874,8 @@ webpackJsonp([42], {
                 var t = e.getHours() % 12;
                 0 === t && (t = 12);
                 var n = e.getMinutes(),
-                    i = n.toString();
-                return n < 10 && (i = "0" + i), t + ":" + i
+                    a = n.toString();
+                return n < 10 && (a = "0" + a), t + ":" + a
             }(new Date(e)))
         }, t.t = function(e) {
             return o.createElement("span", {
@@ -18991,17 +18968,17 @@ webpackJsonp([42], {
         n.d(t, "a", function() {
             return r
         });
-        var i = n("U7vG"),
-            a = (n.n(i), n("8RKZ")),
+        var a = n("U7vG"),
+            i = (n.n(a), n("8RKZ")),
             r = function(e) {
                 var t, n = e.emote,
                     r = n.alt || "";
-                return n.cheerAmount && (r += " " + n.cheerAmount.toString(), t = i.createElement("strong", {
+                return n.cheerAmount && (r += " " + n.cheerAmount.toString(), t = a.createElement("strong", {
                     className: "chat-line__message--cheer-amount",
                     style: {
                         color: n.cheerColor
                     }
-                }, n.cheerAmount)), i.createElement(a.a, {
+                }, n.cheerAmount)), a.createElement(i.a, {
                     alt: r,
                     cheerText: t,
                     className: "chat-line__message--emote",
@@ -19015,21 +18992,21 @@ webpackJsonp([42], {
         n.d(t, "a", function() {
             return c
         });
-        var i = n("TToO"),
-            a = n("6sO2"),
+        var a = n("TToO"),
+            i = n("6sO2"),
             r = n("vH/s"),
             s = n("l7/s"),
             o = (n.n(s), n("QFW6")),
             l = this,
             c = function(e) {
-                return i.__awaiter(l, void 0, void 0, function() {
+                return a.__awaiter(l, void 0, void 0, function() {
                     var t, n, l, c;
-                    return i.__generator(this, function(d) {
+                    return a.__generator(this, function(d) {
                         switch (d.label) {
                             case 0:
                                 t = null, d.label = 1;
                             case 1:
-                                return d.trys.push([1, 3, , 4]), [4, a.n.apollo.client.query({
+                                return d.trys.push([1, 3, , 4]), [4, i.n.apollo.client.query({
                                     query: s,
                                     variables: {
                                         id: e.channelID
@@ -19038,19 +19015,19 @@ webpackJsonp([42], {
                             case 2:
                                 return t = d.sent(), [3, 4];
                             case 3:
-                                return n = d.sent(), a.i.error(n, "ChatEvent query failed."), [3, 4];
+                                return n = d.sent(), i.i.error(n, "ChatEvent query failed."), [3, 4];
                             case 4:
-                                return t && t.data || a.i.warn("ChatEvent query failed; Chat tracking data sent may be incomplete."), l = t && t.data && t.data.user || null, c = i.__assign({}, Object(o.a)(e), {
-                                    broadcast_id: a.m.getVideoPlayerTrackingData().broadcastID,
+                                return t && t.data || i.i.warn("ChatEvent query failed; Chat tracking data sent may be incomplete."), l = t && t.data && t.data.user || null, c = a.__assign({}, Object(o.a)(e), {
+                                    broadcast_id: i.m.getVideoPlayerTrackingData().broadcastID,
                                     channel_id: e.channelID,
                                     game: l && l.stream && l.stream.game && l.stream.game.name,
                                     live: !!(l && l.stream && l.stream.id.length > 0),
                                     partner: l && l.isPartner || !1,
-                                    play_session_id: a.m.getVideoPlayerTrackingData().playSessionID,
+                                    play_session_id: i.m.getVideoPlayerTrackingData().playSessionID,
                                     player: e.player,
                                     ritual_nca: e.fromNewChatterRitual || !1,
                                     sub_only_mode: e.subOnlyMode
-                                }), a.m.track(r.SpadeEventType.Chat, c), [2]
+                                }), i.m.track(r.SpadeEventType.Chat, c), [2]
                         }
                     })
                 })
@@ -19598,33 +19575,33 @@ webpackJsonp([42], {
     iMOk: function(e, t, n) {
         "use strict";
 
-        function i(e) {
+        function a(e) {
             var t, n = Object(r.d)("{bitsAmount} Bits", {
                 bitsAmount: e.count.toString()
             }, "Bits--BitsCount");
             if (e.withImage) {
-                var i = e.bitsConfig.indexedActions[o.g];
-                i || (i = Object(c.b)());
-                var u = i.orderedTiers.find(function(t) {
+                var a = e.bitsConfig.indexedActions[o.g];
+                a || (a = Object(c.b)());
+                var u = a.orderedTiers.find(function(t) {
                     return t.bits <= e.count
                 });
                 if (u) {
                     var m = Object(l.b)(u);
-                    return void 0 !== e.themeOverride && (e.themeOverride === s.a.Light ? m.dark = m.light : m.light = m.dark), t = a.createElement(d.a, {
+                    return void 0 !== e.themeOverride && (e.themeOverride === s.a.Light ? m.dark = m.light : m.light = m.dark), t = i.createElement(d.a, {
                         className: "bits-count--img",
                         sources: m
-                    }), a.createElement("strong", {
+                    }), i.createElement("strong", {
                         className: "bits-count",
                         "data-a-target": "bits-count"
-                    }, a.createElement("span", null, t, " ", e.withText ? n : ""))
+                    }, i.createElement("span", null, t, " ", e.withText ? n : ""))
                 }
             }
-            return a.createElement("strong", {
+            return i.createElement("strong", {
                 className: "bits-count",
                 "data-a-target": "bits-count"
-            }, a.createElement("span", null, n))
+            }, i.createElement("span", null, n))
         }
-        var a = n("U7vG"),
+        var i = n("U7vG"),
             r = n("6sO2"),
             s = n("NXs7"),
             o = n("3iBR"),
@@ -19633,11 +19610,11 @@ webpackJsonp([42], {
             d = n("qe65");
         n("1pvm");
         n.d(t, "a", function() {
-            return i
+            return a
         })
     },
     iWdz: function(e, t, n) {
-        var i = {
+        var a = {
             kind: "Document",
             definitions: [{
                 kind: "OperationDefinition",
@@ -19960,7 +19937,7 @@ webpackJsonp([42], {
                 end: 381
             }
         };
-        i.loc.source = {
+        a.loc.source = {
             body: '#import "twilight/features/badges/models/badge-fragment.gql"\nquery BitsCard_Bits($name: ID!) {\ncurrentUser {\nid\nbitsBalance\nlogin\n}\nuser(id: $name) {\nid\ndisplayName\ncheer {\nid\nsettings {\nemoteMinimumBits\ncheerMinimumBits\nrecentMinimumBits\nevent\n}\n}\nself {\nbitsBadge {\nid\ntotalBits\nnextBits\nprogress\ncurrent {\n...badge\n}\nnext {\n...badge\n}\n}\n}\ntournament {\nid\nteams {\nid\nname\n}\n}\n}\n}',
             name: "GraphQL request",
             locationOffset: {
@@ -19968,17 +19945,17 @@ webpackJsonp([42], {
                 column: 1
             }
         };
-        var a = {};
-        i.definitions = i.definitions.concat(function(e) {
+        var i = {};
+        a.definitions = a.definitions.concat(function(e) {
             return e.filter(function(e) {
                 if ("FragmentDefinition" !== e.kind) return !0;
                 var t = e.name.value;
-                return !a[t] && (a[t] = !0, !0)
+                return !i[t] && (i[t] = !0, !0)
             })
-        }(n("QU+n").definitions)), e.exports = i
+        }(n("QU+n").definitions)), e.exports = a
     },
     imaO: function(e, t, n) {
-        var i = {
+        var a = {
             kind: "Document",
             definitions: [{
                 kind: "OperationDefinition",
@@ -20082,7 +20059,7 @@ webpackJsonp([42], {
                 end: 182
             }
         };
-        i.loc.source = {
+        a.loc.source = {
             body: '#import "./ritual-token-fragment.gql"\nmutation RedeemNewChatterToken($input: RedeemRitualTokenInput!) {\nredeemRitualToken(input: $input) {\nerror {\ncode\n}\ntoken {\n...ritualToken\n}\n}\n}',
             name: "GraphQL request",
             locationOffset: {
@@ -20090,14 +20067,14 @@ webpackJsonp([42], {
                 column: 1
             }
         };
-        var a = {};
-        i.definitions = i.definitions.concat(function(e) {
+        var i = {};
+        a.definitions = a.definitions.concat(function(e) {
             return e.filter(function(e) {
                 if ("FragmentDefinition" !== e.kind) return !0;
                 var t = e.name.value;
-                return !a[t] && (a[t] = !0, !0)
+                return !i[t] && (i[t] = !0, !0)
             })
-        }(n("j/3B").definitions)), e.exports = i
+        }(n("j/3B").definitions)), e.exports = a
     },
     "j/3B": function(e, t) {
         var n = {
@@ -20171,41 +20148,41 @@ webpackJsonp([42], {
     "j7/Y": function(e, t, n) {
         "use strict";
 
-        function i(e) {
+        function a(e) {
             return function(t) {
                 var n = function(n) {
-                    function i(t) {
-                        var i = n.call(this, t) || this;
-                        return i.tracked = !1, i.referenceTracking = {}, i.trackPageview = function() {
-                            if (!(i.tracked || e.skip && e.skip(i.props))) {
-                                i.tracked = !0;
+                    function a(t) {
+                        var a = n.call(this, t) || this;
+                        return a.tracked = !1, a.referenceTracking = {}, a.trackPageview = function() {
+                            if (!(a.tracked || e.skip && e.skip(a.props))) {
+                                a.tracked = !0;
                                 var t = {};
-                                "function" == typeof e.properties ? t = e.properties(i.props) : e.properties && (t = a.__assign({}, e.properties));
-                                var n = a.__assign({}, i.props);
+                                "function" == typeof e.properties ? t = e.properties(a.props) : e.properties && (t = i.__assign({}, e.properties));
+                                var n = i.__assign({}, a.props);
                                 n.location && n.location.state && (t.medium = n.location.state.medium, t.content = n.location.state.content, t.content_index = n.location.state.content_index);
-                                var r = i.referenceTracking,
+                                var r = a.referenceTracking,
                                     s = r.content,
                                     o = r.medium,
                                     c = r.content_index;
-                                l.n.tracking.trackPageview(a.__assign({
+                                l.n.tracking.trackPageview(i.__assign({
                                     content: s,
                                     medium: o,
                                     content_index: c,
                                     location: e.location
                                 }, t))
                             }
-                        }, l.i.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : l.i.warn("No latency tracker exists! This means no data will be sent to Spade.", e), i
+                        }, l.i.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : l.i.warn("No latency tracker exists! This means no data will be sent to Spade.", e), a
                     }
-                    return a.__extends(i, n), i.prototype.componentDidMount = function() {
+                    return i.__extends(a, n), a.prototype.componentDidMount = function() {
                         var e = this;
                         this.referenceTracking = this.stripTTParams(this.props.history.location), this.trackPageview(), this.props.history.listen(function(t, n) {
                             "REPLACE" !== n && (e.tracked = !1, e.referenceTracking = {})
                         })
-                    }, i.prototype.componentDidUpdate = function() {
+                    }, a.prototype.componentDidUpdate = function() {
                         this.trackPageview()
-                    }, i.prototype.render = function() {
-                        return s.createElement(t, a.__assign({}, this.props))
-                    }, i.prototype.stripTTParams = function(e) {
+                    }, a.prototype.render = function() {
+                        return s.createElement(t, i.__assign({}, this.props))
+                    }, a.prototype.stripTTParams = function(e) {
                         var t = "" !== e.search ? r.parse(e.search) : {},
                             n = {
                                 content: t.tt_content,
@@ -20213,49 +20190,49 @@ webpackJsonp([42], {
                                 medium: t.tt_medium
                             };
                         if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, n.medium || n.content) {
-                            var i = "",
-                                a = r.stringify(t);
-                            a.length > 0 && (i = "?" + a), this.props.history.replace({
+                            var a = "",
+                                i = r.stringify(t);
+                            i.length > 0 && (a = "?" + i), this.props.history.replace({
                                 pathname: e.pathname,
                                 hash: e.hash,
-                                search: i
+                                search: a
                             })
                         }
                         return n
-                    }, i
+                    }, a
                 }(s.Component);
                 return Object(o.f)(n)
             }
         }
-        var a = n("TToO"),
+        var i = n("TToO"),
             r = n("OAwv"),
             s = n("U7vG"),
             o = n("F8kA"),
             l = n("6sO2");
         n.d(t, "a", function() {
-            return i
+            return a
         })
     },
     jF7o: function(e, t, n) {
         "use strict";
         t.a = function(e, t) {
             if (e) var n = setInterval(function() {
-                var i = !1,
-                    a = !1;
+                var a = !1,
+                    i = !1;
                 try {
-                    i = e.closed, a = !!e.success
+                    a = e.closed, i = !!e.success
                 } catch (e) {}
-                if (i || a) {
-                    t(a);
+                if (a || i) {
+                    t(i);
                     try {
                         e.close()
                     } catch (e) {}
                     clearInterval(n)
                 }
             }, 500);
-            else i.i.warn("[onPopupClose] Attempted to observe a window that failed to open.")
+            else a.i.warn("[onPopupClose] Attempted to observe a window that failed to open.")
         };
-        var i = n("6sO2")
+        var a = n("6sO2")
     },
     jML9: function(e, t) {
         var n = {
@@ -20408,9 +20385,9 @@ webpackJsonp([42], {
     jxGs: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
-            return i
-        }), n.d(t, "b", function() {
             return a
+        }), n.d(t, "b", function() {
+            return i
         }), n.d(t, "d", function() {
             return r
         }), n.d(t, "e", function() {
@@ -20418,16 +20395,16 @@ webpackJsonp([42], {
         }), n.d(t, "c", function() {
             return o
         });
-        var i = "AD",
-            a = "BUNDLE",
+        var a = "AD",
+            i = "BUNDLE",
             r = "first_time_purchase",
             s = "single_purchase",
             o = "black_friday_2017"
     },
     "kBA+": function(e, t, n) {
         "use strict";
-        var i = n("TToO"),
-            a = n("U7vG"),
+        var a = n("TToO"),
+            i = n("U7vG"),
             r = n("6sO2"),
             s = n("7vx8"),
             o = n("SZoP"),
@@ -20441,20 +20418,20 @@ webpackJsonp([42], {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return i.__extends(t, e), t.prototype.render = function() {
+                return a.__extends(t, e), t.prototype.render = function() {
                     var e = this.props.data,
                         t = e.video,
                         n = e.error,
-                        i = e.loading;
-                    if (n || t && !t.owner) return a.createElement(l.a, {
+                        a = e.loading;
+                    if (n || t && !t.owner) return i.createElement(l.a, {
                         error: {
                             title: Object(r.d)("Something went wrong", "VideoChatCard"),
                             description: Object(r.d)("We couldn't find that video", "VideoChatCard")
                         }
                     });
-                    if (i || !t) return a.createElement(l.a, null);
-                    var s = a.createElement(c._25, null, Object(r.c)(new Date(t.publishedAt), "medium"), a.createElement("span", null, " · "), Object(o.a)(t.owner.login, t.owner.displayName));
-                    return a.createElement(l.a, {
+                    if (a || !t) return i.createElement(l.a, null);
+                    var s = i.createElement(c._25, null, Object(r.c)(new Date(t.publishedAt), "medium"), i.createElement("span", null, " · "), Object(o.a)(t.owner.login, t.owner.displayName));
+                    return i.createElement(l.a, {
                         data: {
                             title: t.title,
                             description: s,
@@ -20463,7 +20440,7 @@ webpackJsonp([42], {
                         }
                     })
                 }, t
-            }(a.Component),
+            }(i.Component),
             p = function(e) {
                 return {
                     variables: {
@@ -21015,8 +20992,8 @@ webpackJsonp([42], {
     "mR/9": function(e, t) {},
     mbxv: function(e, t, n) {
         "use strict";
-        var i = n("TToO"),
-            a = n("U7vG"),
+        var a = n("TToO"),
+            i = n("U7vG"),
             r = n("+V/3"),
             s = n("Odds"),
             o = (n("2IkU"), n("6sO2")),
@@ -21040,23 +21017,23 @@ webpackJsonp([42], {
                     })
                 }, t
             }
-            return i.__extends(t, e), t.prototype.render = function() {
+            return a.__extends(t, e), t.prototype.render = function() {
                 var e = this.props.badge,
                     t = e.title,
                     n = e.image1x,
-                    i = e.image2x,
+                    a = e.image2x,
                     r = e.image4x,
-                    o = a.createElement("img", {
+                    o = i.createElement("img", {
                         alt: t,
                         className: "chat-badge",
                         src: n,
-                        srcSet: n + " 1x, " + i + " 2x, " + r + " 4x"
+                        srcSet: n + " 1x, " + a + " 2x, " + r + " 4x"
                     });
-                return this.targetURL = this.getTargetURL(), "" !== this.targetURL && (o = a.createElement("a", {
+                return this.targetURL = this.getTargetURL(), "" !== this.targetURL && (o = i.createElement("a", {
                     href: this.targetURL,
                     onClick: this.onBadgeClickHandler,
                     target: "_blank"
-                }, o)), a.createElement(s._33, {
+                }, o)), i.createElement(s._33, {
                     align: s._34.Left,
                     "data-a-target": "chat-badge",
                     display: s.L.Inline,
@@ -21079,7 +21056,7 @@ webpackJsonp([42], {
             }, t.prototype.getSubscriberLink = function() {
                 return "https://www.twitch.tv/" + this.props.badge.channelName + "/subscribe?ref=in_chat_subscriber_link"
             }, t
-        }(a.Component)
+        }(i.Component)
     },
     nmDn: function(e, t) {
         var n = {
@@ -21193,7 +21170,7 @@ webpackJsonp([42], {
     },
     nrdj: function(e, t, n) {
         "use strict";
-        var i, a = n("HW6M"),
+        var a, i = n("HW6M"),
             r = n("U7vG"),
             s = n("6sO2"),
             o = n("iydZ"),
@@ -21203,7 +21180,7 @@ webpackJsonp([42], {
         n("PPK2");
         ! function(e) {
             e[e.Large = 4] = "Large", e[e.Medium = 3] = "Medium", e[e.Small = 2] = "Small", e[e.ExtraSmall = 1.5] = "ExtraSmall", e[e.ExtremelySmall = 1] = "ExtremelySmall"
-        }(i || (i = {}));
+        }(a || (a = {}));
         var u = function(e) {
             var t = e.bitsConfig.indexedActions[e.prefix.toLowerCase()];
             t || (t = Object(l.b)());
@@ -21213,20 +21190,20 @@ webpackJsonp([42], {
             n || (n = t.orderedTiers[0]);
             var u = e.display === d.L.Inline || e.display === d.L.InlineFlex || e.display === d.L.InlineBlock,
                 m = null,
-                p = a("cheermote-for-amount__cheer-amount", {
+                p = i("cheermote-for-amount__cheer-amount", {
                     "cheermote-for-amount__display--table-cell": !u
                 }, {
-                    "cheermote-for-amount__cheer-amount--medium": e.size === i.Medium
+                    "cheermote-for-amount__cheer-amount--medium": e.size === a.Medium
                 }, {
-                    "cheermote-for-amount__cheer-amount--small": e.size === i.Small || e.size === i.ExtraSmall
+                    "cheermote-for-amount__cheer-amount--small": e.size === a.Small || e.size === a.ExtraSmall
                 }, {
-                    "cheermote-for-amount__cheer-amount--extremely-small": e.size === i.ExtremelySmall
+                    "cheermote-for-amount__cheer-amount--extremely-small": e.size === a.ExtremelySmall
                 });
             if (e.amount && e.showAmount) {
                 var h = e.formattedNumber ? Object(s.e)(e.amount) : e.amount;
                 m = r.createElement(d.U, {
-                    padding: e.size === i.Small ? 0 : void 0,
-                    textAlign: e.size === i.Small ? d._26.Center : void 0
+                    padding: e.size === a.Small ? 0 : void 0,
+                    textAlign: e.size === a.Small ? d._26.Center : void 0
                 }, r.createElement("strong", {
                     className: p,
                     style: {
@@ -21234,20 +21211,20 @@ webpackJsonp([42], {
                     }
                 }, h))
             }
-            var g = a("cheermote-for-amount__cheer-image", {
+            var g = i("cheermote-for-amount__cheer-image", {
                     "cheermote-for-amount__display--table-cell": !u
                 }, {
                     "cheermote-for-amount__cheer--inline": u
                 }, {
-                    "cheermote-for-amount__cheer-image--small": e.size === i.Small
+                    "cheermote-for-amount__cheer-image--small": e.size === a.Small
                 }, {
-                    "cheermote-for-amount__cheer-image--extra-small": e.size === i.ExtraSmall
+                    "cheermote-for-amount__cheer-image--extra-small": e.size === a.ExtraSmall
                 }, {
-                    "cheermote-for-amount__cheer-image--extremely-small": e.size === i.ExtremelySmall
+                    "cheermote-for-amount__cheer-image--extremely-small": e.size === a.ExtremelySmall
                 }),
                 f = r.createElement(c.a, {
                     className: g,
-                    sources: Object(o.b)(n, e.size || i.Large, e.animated)
+                    sources: Object(o.b)(n, e.size || a.Large, e.animated)
                 });
             return e.showImage || (f = null), r.createElement(d.Z, {
                 className: "cheermote-for-amount",
@@ -21258,7 +21235,7 @@ webpackJsonp([42], {
         n.d(t, "a", function() {
             return u
         }), n.d(t, "b", function() {
-            return i
+            return a
         })
     },
     "pV+t": function(e, t) {
@@ -21522,7 +21499,7 @@ webpackJsonp([42], {
         e.exports = n
     },
     pg5l: function(e, t, n) {
-        var i = {
+        var a = {
             kind: "Document",
             definitions: [{
                 kind: "OperationDefinition",
@@ -21670,7 +21647,7 @@ webpackJsonp([42], {
                 end: 236
             }
         };
-        i.loc.source = {
+        a.loc.source = {
             body: '#import "twilight/features/badges/models/badge-fragment.gql"\nquery ChatSettings_CurrentUser($channelLogin: String!) {\ncurrentUser {\nid\nlogin\ndisplayName\nchatColor\n}\nuser(login: $channelLogin) {\nid\nself {\ndisplayBadges {\n...badge\n}\n}\n}\n}',
             name: "GraphQL request",
             locationOffset: {
@@ -21678,14 +21655,14 @@ webpackJsonp([42], {
                 column: 1
             }
         };
-        var a = {};
-        i.definitions = i.definitions.concat(function(e) {
+        var i = {};
+        a.definitions = a.definitions.concat(function(e) {
             return e.filter(function(e) {
                 if ("FragmentDefinition" !== e.kind) return !0;
                 var t = e.name.value;
-                return !a[t] && (a[t] = !0, !0)
+                return !i[t] && (i[t] = !0, !0)
             })
-        }(n("QU+n").definitions)), e.exports = i
+        }(n("QU+n").definitions)), e.exports = a
     },
     q4rf: function(e, t) {},
     q8Cw: function(e, t) {},
@@ -21693,21 +21670,21 @@ webpackJsonp([42], {
     qkCi: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
-            return i
+            return a
         });
-        var i;
+        var a;
         ! function(e) {
             e[e.Post = 0] = "Post", e[e.Action = 1] = "Action", e[e.PostWithMention = 2] = "PostWithMention", e[e.Ban = 3] = "Ban", e[e.Timeout = 4] = "Timeout", e[e.AutoModRejectedPrompt = 5] = "AutoModRejectedPrompt", e[e.AutoModMessageRejected = 6] = "AutoModMessageRejected", e[e.AutoModMessageAllowed = 7] = "AutoModMessageAllowed", e[e.AutoModMessageDenied = 8] = "AutoModMessageDenied", e[e.Connected = 9] = "Connected", e[e.Disconnected = 10] = "Disconnected", e[e.Reconnect = 11] = "Reconnect", e[e.Hosting = 12] = "Hosting", e[e.Unhost = 13] = "Unhost", e[e.Subscription = 14] = "Subscription", e[e.Resubscription = 15] = "Resubscription", e[e.SubGift = 16] = "SubGift", e[e.Clear = 17] = "Clear", e[e.SubscriberOnlyMode = 18] = "SubscriberOnlyMode", e[e.FollowerOnlyMode = 19] = "FollowerOnlyMode", e[e.SlowMode = 20] = "SlowMode", e[e.EmoteOnlyMode = 21] = "EmoteOnlyMode", e[e.RoomMods = 22] = "RoomMods", e[e.RoomState = 23] = "RoomState", e[e.Raid = 24] = "Raid", e[e.Unraid = 25] = "Unraid", e[e.Ritual = 26] = "Ritual", e[e.Notice = 27] = "Notice", e[e.Info = 28] = "Info", e[e.BadgesUpdated = 29] = "BadgesUpdated", e[e.Purchase = 30] = "Purchase", e[e.BitsCharity = 31] = "BitsCharity", e[e.CrateGift = 32] = "CrateGift"
-        }(i || (i = {}))
+        }(a || (a = {}))
     },
     rIzn: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
-            return a
+            return i
         });
-        var i = n("6sO2"),
-            a = function() {
-                return i.k.get("ritualsFeatureFlagOverride", i.b.get("viewer_milestones_enabled", !1))
+        var a = n("6sO2"),
+            i = function() {
+                return a.k.get("ritualsFeatureFlagOverride", a.b.get("viewer_milestones_enabled", !1))
             }
     },
     rMeN: function(e, t) {},
@@ -21877,7 +21854,7 @@ webpackJsonp([42], {
     },
     sgUC: function(e, t) {},
     ssrl: function(e, t, n) {
-        var i = {
+        var a = {
             kind: "Document",
             definitions: [{
                 kind: "OperationDefinition",
@@ -22005,7 +21982,7 @@ webpackJsonp([42], {
                 end: 167
             }
         };
-        i.loc.source = {
+        a.loc.source = {
             body: '#import "./ritual-token-fragment.gql"\nquery NewChatterRitual_Channel($id: ID!) {\nchannel: user(id: $id) {\nid\nself {\nritualTokens {\n...ritualToken\n}\n}\nstream {\nid\n}\n}\n}',
             name: "GraphQL request",
             locationOffset: {
@@ -22013,17 +21990,17 @@ webpackJsonp([42], {
                 column: 1
             }
         };
-        var a = {};
-        i.definitions = i.definitions.concat(function(e) {
+        var i = {};
+        a.definitions = a.definitions.concat(function(e) {
             return e.filter(function(e) {
                 if ("FragmentDefinition" !== e.kind) return !0;
                 var t = e.name.value;
-                return !a[t] && (a[t] = !0, !0)
+                return !i[t] && (i[t] = !0, !0)
             })
-        }(n("j/3B").definitions)), e.exports = i
+        }(n("j/3B").definitions)), e.exports = a
     },
     thJT: function(e, t, n) {
-        var i = {
+        var a = {
             kind: "Document",
             definitions: [{
                 kind: "OperationDefinition",
@@ -22127,7 +22104,7 @@ webpackJsonp([42], {
                 end: 185
             }
         };
-        i.loc.source = {
+        a.loc.source = {
             body: '#import "./ritual-token-fragment.gql"\nmutation RequestNewChatterToken($input: RequestRitualTokenInput!) {\nrequestRitualToken(input: $input) {\nerror {\ncode\n}\ntoken {\n...ritualToken\n}\n}\n}',
             name: "GraphQL request",
             locationOffset: {
@@ -22135,25 +22112,25 @@ webpackJsonp([42], {
                 column: 1
             }
         };
-        var a = {};
-        i.definitions = i.definitions.concat(function(e) {
+        var i = {};
+        a.definitions = a.definitions.concat(function(e) {
             return e.filter(function(e) {
                 if ("FragmentDefinition" !== e.kind) return !0;
                 var t = e.name.value;
-                return !a[t] && (a[t] = !0, !0)
+                return !i[t] && (i[t] = !0, !0)
             })
-        }(n("j/3B").definitions)), e.exports = i
+        }(n("j/3B").definitions)), e.exports = a
     },
     tjbt: function(e, t, n) {
         "use strict";
         (function(e) {
-            function i(e) {
+            function a(e) {
                 return !e.firstPageLoaded || !Object(k.a)() || !e.isLoggedIn || e.isEmbedded || e.isPopout
             }
             n.d(t, "a", function() {
                 return L
             });
-            var a, r = n("TToO"),
+            var i, r = n("TToO"),
                 s = n("U7vG"),
                 o = (n.n(s), n("3zLD")),
                 l = (n.n(o), n("RH2O")),
@@ -22192,8 +22169,8 @@ webpackJsonp([42], {
                         }, t.setEligibilityTimeouts = function(e) {
                             for (var n = new Set(e.map(function(e) {
                                     return e.id
-                                })), i = 0, a = Object.keys(t.eligibilityTimeouts); i < a.length; i++) {
-                                var r = a[i];
+                                })), a = 0, i = Object.keys(t.eligibilityTimeouts); a < i.length; a++) {
+                                var r = i[a];
                                 n.has(r) || (clearTimeout(t.eligibilityTimeouts[r]), delete t.eligibilityTimeouts[r])
                             }
                             n.forEach(function(e) {
@@ -22228,8 +22205,8 @@ webpackJsonp([42], {
                         }, t.setExpirationTimeouts = function(e) {
                             for (var n = new Set(e.map(function(e) {
                                     return e.id
-                                })), i = 0, a = Object.keys(t.expirationTimeouts); i < a.length; i++) {
-                                var r = a[i];
+                                })), a = 0, i = Object.keys(t.expirationTimeouts); a < i.length; a++) {
+                                var r = i[a];
                                 n.has(r) || (clearTimeout(t.expirationTimeouts[r]), delete t.expirationTimeouts[r])
                             }
                             e.forEach(function(e) {
@@ -22249,7 +22226,7 @@ webpackJsonp([42], {
                             })
                         }, t.redeemRitualToken = function(e, n) {
                             return r.__awaiter(t, void 0, void 0, function() {
-                                var t, i, a;
+                                var t, a, i;
                                 return r.__generator(this, function(s) {
                                     switch (s.label) {
                                         case 0:
@@ -22282,15 +22259,15 @@ webpackJsonp([42], {
                                                         }
                                                     }
                                                 }
-                                            }), i = null, s.label = 1;
+                                            }), a = null, s.label = 1;
                                         case 1:
                                             return s.trys.push([1, 3, , 4]), [4, this.props.redeemToken(t)];
                                         case 2:
-                                            return i = s.sent(), [3, 4];
+                                            return a = s.sent(), [3, 4];
                                         case 3:
-                                            return a = s.sent(), c.i.error(a, "Failed to redeem new chatter ritual."), this.handleGenericError(), [2];
+                                            return i = s.sent(), c.i.error(i, "Failed to redeem new chatter ritual."), this.handleGenericError(), [2];
                                         case 4:
-                                            if (i.data.redeemRitualToken.error) switch (i.data.redeemRitualToken.error.code) {
+                                            if (a.data.redeemRitualToken.error) switch (a.data.redeemRitualToken.error.code) {
                                                 case S.RitualTokenMutationErrors.UserBanned:
                                                 case S.RitualTokenMutationErrors.UserNotFollowing:
                                                 case S.RitualTokenMutationErrors.UserNotSubbed:
@@ -22301,15 +22278,15 @@ webpackJsonp([42], {
                                                 default:
                                                     return this.handleGenericError(), [2]
                                             }
-                                            return i.data.redeemRitualToken.token ? [2] : (this.handleGenericError(), [2])
+                                            return a.data.redeemRitualToken.token ? [2] : (this.handleGenericError(), [2])
                                     }
                                 })
                             })
                         }, t.dismissRitualToken = function(e) {
                             return r.__awaiter(t, void 0, void 0, function() {
-                                var t, n, i;
-                                return r.__generator(this, function(a) {
-                                    switch (a.label) {
+                                var t, n, a;
+                                return r.__generator(this, function(i) {
+                                    switch (i.label) {
                                         case 0:
                                             Object(C.a)({
                                                 bannerMessage: this.getBannerMessage(),
@@ -22331,13 +22308,13 @@ webpackJsonp([42], {
                                                         }
                                                     }
                                                 }
-                                            }), n = null, a.label = 1;
+                                            }), n = null, i.label = 1;
                                         case 1:
-                                            return a.trys.push([1, 3, , 4]), [4, this.props.dismissToken(t)];
+                                            return i.trys.push([1, 3, , 4]), [4, this.props.dismissToken(t)];
                                         case 2:
-                                            return n = a.sent(), [3, 4];
+                                            return n = i.sent(), [3, 4];
                                         case 3:
-                                            return i = a.sent(), c.i.error(i, "Failed to redeem new chatter ritual."), [3, 4];
+                                            return a = i.sent(), c.i.error(a, "Failed to redeem new chatter ritual."), [3, 4];
                                         case 4:
                                             return n && n.data.dismissRitualToken.token ? [2] : (this.handleGenericError(), [2])
                                     }
@@ -22349,13 +22326,13 @@ webpackJsonp([42], {
                             })
                         }, t.clearAllTimers = function() {
                             for (var e = 0, n = Object.keys(t.eligibilityTimeouts); e < n.length; e++) {
-                                var i = n[e];
-                                clearTimeout(t.eligibilityTimeouts[i])
+                                var a = n[e];
+                                clearTimeout(t.eligibilityTimeouts[a])
                             }
                             t.eligibilityTimeouts = {};
-                            for (var a = 0, r = Object.keys(t.expirationTimeouts); a < r.length; a++) {
-                                i = r[a];
-                                clearTimeout(t.expirationTimeouts[i])
+                            for (var i = 0, r = Object.keys(t.expirationTimeouts); i < r.length; i++) {
+                                a = r[i];
+                                clearTimeout(t.expirationTimeouts[a])
                             }
                             t.expirationTimeouts = {}
                         }, t
@@ -22400,7 +22377,7 @@ webpackJsonp([42], {
                             }
                         }
                     },
-                    skip: i
+                    skip: a
                 }), Object(m.a)(function(t) {
                     return {
                         query: E,
@@ -22409,19 +22386,19 @@ webpackJsonp([42], {
                         },
                         topic: Object(g.i)(t.channelID),
                         type: p.c.UpdatedChannelChatProperty,
-                        mutator: function(n, i) {
+                        mutator: function(n, a) {
                             return n.data.is_rituals_enabled ? e(function() {
                                 t.data && t.data.refetch && t.data.refetch()
-                            }) : i.channel && i.channel.self && (i.channel.self.ritualTokens = []), i
+                            }) : a.channel && a.channel.self && (a.channel.self.ritualTokens = []), a
                         },
-                        skip: i(t)
+                        skip: a(t)
                     }
                 }), Object(u.a)([{
                     topic: function(e) {
                         return Object(g.q)(e.channelID)
                     },
-                    mapMessageTypesToProps: (a = {}, a[p.c.ChannelStreamUp] = "streamUp", a[p.c.ChannelStreamDown] = "streamDown", a),
-                    skip: i
+                    mapMessageTypesToProps: (i = {}, i[p.c.ChannelStreamUp] = "streamUp", i[p.c.ChannelStreamDown] = "streamDown", i),
+                    skip: a
                 }]), Object(d.a)(N, {
                     name: "dismissToken"
                 }), Object(d.a)(w, {
@@ -22507,7 +22484,7 @@ webpackJsonp([42], {
     vDGQ: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
-            return i
+            return a
         }), n.d(t, "b", function() {
             return s
         }), n.d(t, "c", function() {
@@ -22524,14 +22501,14 @@ webpackJsonp([42], {
                     user_id: e.userId,
                     time: Date.now()
                 };
-                a.n.tracking.track(r.SpadeEventType.CrateNotificationAction, t)
+                i.n.tracking.track(r.SpadeEventType.CrateNotificationAction, t)
             }
         };
-        var i, a = n("6sO2"),
+        var a, i = n("6sO2"),
             r = n("vH/s");
         ! function(e) {
             e.Close = "close", e.DontShowThis = "dont_show_this", e.LearnMore = "learn_more", e.OpenLater = "open_later", e.OpenNow = "open_now", e.Timeout = "timeout", e.TryBeta = "try_beta", e.View = "view"
-        }(i || (i = {}));
+        }(a || (a = {}));
         var s;
         ! function(e) {
             e.Inventory = "inventory", e.OpenCrate = "open_crate"
@@ -22542,7 +22519,7 @@ webpackJsonp([42], {
         }(o || (o = {}))
     },
     vLl9: function(e, t, n) {
-        var i = {
+        var a = {
             kind: "Document",
             definitions: [{
                 kind: "OperationDefinition",
@@ -22703,7 +22680,7 @@ webpackJsonp([42], {
                 end: 256
             }
         };
-        i.loc.source = {
+        a.loc.source = {
             body: '#import "twilight/features/badges/models/badge-fragment.gql"\nquery ChatList_Badges($channelLogin: String!) {\nbadges {\n...badge\n}\nuser(login: $channelLogin) {\nid\nbroadcastBadges {\n...badge\n}\nself {\nselectedBadge {\n...badge\n}\ndisplayBadges {\n...badge\n}\n}\n}\n}',
             name: "GraphQL request",
             locationOffset: {
@@ -22711,21 +22688,21 @@ webpackJsonp([42], {
                 column: 1
             }
         };
-        var a = {};
-        i.definitions = i.definitions.concat(function(e) {
+        var i = {};
+        a.definitions = a.definitions.concat(function(e) {
             return e.filter(function(e) {
                 if ("FragmentDefinition" !== e.kind) return !0;
                 var t = e.name.value;
-                return !a[t] && (a[t] = !0, !0)
+                return !i[t] && (i[t] = !0, !0)
             })
-        }(n("QU+n").definitions)), e.exports = i
+        }(n("QU+n").definitions)), e.exports = a
     },
     vh75: function(e, t, n) {
         "use strict";
         n.d(t, "b", function() {
-            return i
-        }), n.d(t, "c", function() {
             return a
+        }), n.d(t, "c", function() {
+            return i
         }), n.d(t, "d", function() {
             return r
         }), n.d(t, "e", function() {
@@ -22768,7 +22745,7 @@ webpackJsonp([42], {
             }
         }, t.w = function() {
             return {
-                type: a
+                type: i
             }
         }, t.G = function() {
             return {
@@ -22784,7 +22761,7 @@ webpackJsonp([42], {
             }
         }, t.H = function() {
             return {
-                type: i
+                type: a
             }
         }, t.D = function() {
             return {
@@ -22841,8 +22818,8 @@ webpackJsonp([42], {
                 command: e.toLowerCase()
             }
         };
-        var i = "chat.CHAT_HIDDEN",
-            a = "chat.CHAT_RESET",
+        var a = "chat.CHAT_HIDDEN",
+            i = "chat.CHAT_RESET",
             r = "chat.CHAT_SHOWN",
             s = "chat.EMOTE_SETS_UPDATED",
             o = "chat.FOLLOWER_MODE_ENABLED",
@@ -22865,17 +22842,17 @@ webpackJsonp([42], {
     x583: function(e, t) {},
     x9n8: function(e, t, n) {
         "use strict";
-        var i = n("RH2O"),
-            a = n("2KeS"),
+        var a = n("RH2O"),
+            i = n("2KeS"),
             r = n("V5M+"),
             s = n("Aj/L"),
             o = n("J92i"),
-            l = Object(i.b)(function(e) {
+            l = Object(a.b)(function(e) {
                 return {
                     authToken: Object(s.a)(e)
                 }
             }, function(e, t) {
-                return Object(a.b)({
+                return Object(i.b)({
                     closeModal: function() {
                         return t.successCallback && t.successCallback(), Object(r.c)()
                     }
@@ -22973,63 +22950,63 @@ webpackJsonp([42], {
     xgnX: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
-            return i
+            return a
         }), n.d(t, "b", function() {
             return s
         }), t.c = function(e) {
             switch (e) {
                 case s.Success:
                     return {
-                        message: Object(a.d)("Success!", "Profile Edit"),
+                        message: Object(i.d)("Success!", "Profile Edit"),
                         type: r._4.Success
                     };
                 case s.UnexpectedError:
                     return {
-                        message: Object(a.d)("Unexpected error, please try again.", "Profile Edit"),
+                        message: Object(i.d)("Unexpected error, please try again.", "Profile Edit"),
                         type: r._4.Alert
                     };
                 case s.BadSizeError:
                     return {
-                        message: Object(a.d)("Image might exceed 10MB.", "Profile Edit"),
+                        message: Object(i.d)("Image might exceed 10MB.", "Profile Edit"),
                         type: r._4.Alert
                     };
                 case s.NonImageError:
                     return {
-                        message: Object(a.d)("You must upload an image.", "Profile Edit"),
+                        message: Object(i.d)("You must upload an image.", "Profile Edit"),
                         type: r._4.Alert
                     };
                 case s.WrongFormatError:
                     return {
-                        message: Object(a.d)("You must select a valid image type.", "Profile Edit"),
+                        message: Object(i.d)("You must select a valid image type.", "Profile Edit"),
                         type: r._4.Alert
                     };
                 case s.TimeoutError:
                     return {
-                        message: Object(a.d)("Upload timed-out. Please try again.", "Profile Edit"),
+                        message: Object(i.d)("Upload timed-out. Please try again.", "Profile Edit"),
                         type: r._4.Alert
                     };
                 case s.Uploading:
                     return {
-                        message: Object(a.d)("Uploading....", "Profile Edit"),
+                        message: Object(i.d)("Uploading....", "Profile Edit"),
                         type: r._4.Brand
                     };
                 case s.ImageNotSelected:
                     return {
-                        message: Object(a.d)("Select a image first.", "Profile Edit"),
+                        message: Object(i.d)("Select a image first.", "Profile Edit"),
                         type: r._4.Alert
                     };
                 default:
                     return {
-                        message: Object(a.d)("Please try again.", "Profile Edit"),
+                        message: Object(i.d)("Please try again.", "Profile Edit"),
                         type: r._4.Alert
                     }
             }
         };
-        var i, a = n("6sO2"),
+        var a, i = n("6sO2"),
             r = n("Odds");
         ! function(e) {
             e.Success = "SUCCESS", e.NonImage = "IS_IMAGE_VALIDATION_FAILED", e.WrongFormat = "IMAGE_FORMAT_VALIDATION_FAILED", e.BadSize = "FILE_SIZE_VALIDATION_FAILED"
-        }(i || (i = {}));
+        }(a || (a = {}));
         var s;
         ! function(e) {
             e[e.Success = 0] = "Success", e[e.UnexpectedError = 1] = "UnexpectedError", e[e.BadSizeError = 2] = "BadSizeError", e[e.NonImageError = 3] = "NonImageError", e[e.WrongFormatError = 4] = "WrongFormatError", e[e.TimeoutError = 5] = "TimeoutError", e[e.Uploading = 6] = "Uploading", e[e.ImageNotSelected = 7] = "ImageNotSelected"
@@ -23154,8 +23131,8 @@ webpackJsonp([42], {
     },
     ySfT: function(e, t, n) {
         "use strict";
-        var i = n("U7vG"),
-            a = n("6sO2"),
+        var a = n("U7vG"),
+            i = n("6sO2"),
             r = n("3iBR"),
             s = n("qe65"),
             o = n("Odds"),
@@ -23169,7 +23146,7 @@ webpackJsonp([42], {
                 }
             }),
             c = function() {
-                return i.createElement(o.Z, {
+                return a.createElement(o.Z, {
                     display: o.L.Flex,
                     padding: {
                         top: 5
@@ -23178,15 +23155,15 @@ webpackJsonp([42], {
                     flexDirection: o.N.Column,
                     justifyContent: o.Y.Center,
                     alignItems: o.c.Center
-                }, i.createElement(o._25, {
+                }, a.createElement(o._25, {
                     type: o._30.H4,
                     bold: !0
-                }, i.createElement(s.a, {
+                }, a.createElement(s.a, {
                     className: "cheermote-help__tutorial-image",
                     sources: l
-                }), Object(a.d)("How to Cheer", "Bits--CheermoteHelp")), i.createElement("p", {
+                }), Object(i.d)("How to Cheer", "Bits--CheermoteHelp")), a.createElement("p", {
                     className: "t-bits-card__contents-body t-bits-card__contents-body--narrow"
-                }, Object(a.d)('Type "cheer" + the number of Bits you want to Cheer.', "Bits--CheermoteHelp")))
+                }, Object(i.d)('Type "cheer" + the number of Bits you want to Cheer.', "Bits--CheermoteHelp")))
             };
         n.d(t, "a", function() {
             return c
@@ -23198,9 +23175,9 @@ webpackJsonp([42], {
         n.d(t, "a", function() {
             return u
         });
-        var i = n("TToO"),
-            a = n("U7vG"),
-            r = (n.n(a), n("6sO2")),
+        var a = n("TToO"),
+            i = n("U7vG"),
+            r = (n.n(i), n("6sO2")),
             s = n("l21v"),
             o = n("Odds"),
             l = n("Tur5"),
@@ -23231,32 +23208,32 @@ webpackJsonp([42], {
                         }) || null
                     }, n.renderedTokenID = null, n
                 }
-                return i.__extends(t, e), t.prototype.render = function() {
+                return a.__extends(t, e), t.prototype.render = function() {
                     var e = this,
                         t = this.getAvailableToken();
                     if (this.renderedTokenID = t ? t.id : null, !t) return null;
                     var n = d.map(function(t) {
-                        return a.createElement(o.Z, {
+                        return i.createElement(o.Z, {
                             key: t.id,
                             flexShrink: 0,
                             margin: {
                                 right: .5
                             }
-                        }, a.createElement(o._33, {
+                        }, i.createElement(o._33, {
                             label: t.alt
-                        }, a.createElement(o.X, {
+                        }, i.createElement(o.X, {
                             alpha: !0,
                             onClick: e.onEmoteClick,
                             "data-emote-string": t.alt,
                             "data-test-selector": "emote-button"
-                        }, a.createElement(o.Z, {
+                        }, i.createElement(o.Z, {
                             padding: .5
-                        }, a.createElement("img", {
+                        }, i.createElement("img", {
                             className: "new-chatter-ritual__emote",
                             src: Object(s.e)(t.id, 3)
                         })))))
                     });
-                    return a.createElement(o._21, {
+                    return i.createElement(o._21, {
                         background: o.m.Base,
                         border: !0,
                         className: "new-chatter-ritual",
@@ -23268,19 +23245,19 @@ webpackJsonp([42], {
                             left: .5,
                             y: .5
                         }
-                    }, a.createElement(o.Z, {
+                    }, i.createElement(o.Z, {
                         alignItems: o.c.Center,
                         display: o.L.Flex,
                         flexWrap: o.O.NoWrap
-                    }, a.createElement(o.Z, {
+                    }, i.createElement(o.Z, {
                         flexShrink: 1,
                         margin: {
                             right: .5
                         }
-                    }, this.props.bannerMessage), n, a.createElement(o._21, {
+                    }, this.props.bannerMessage), n, i.createElement(o._21, {
                         borderLeft: !0,
                         flexShrink: 0
-                    }, a.createElement(o.v, {
+                    }, i.createElement(o.v, {
                         ariaLabel: "close",
                         icon: o._13.Close,
                         onClick: this.onCloseButtonClick,
@@ -23288,7 +23265,7 @@ webpackJsonp([42], {
                         "data-test-selector": "dismiss-button"
                     }))))
                 }, t
-            }(a.Component)
+            }(i.Component)
     },
     ysVA: function(e, t) {},
     z4Db: function(e, t) {},
@@ -23415,8 +23392,8 @@ webpackJsonp([42], {
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var i = n("TToO"),
-            a = n("U7vG"),
+        var a = n("TToO"),
+            i = n("U7vG"),
             r = n("7vx8"),
             s = n("j7/Y"),
             o = n("oIkB"),
@@ -23430,7 +23407,7 @@ webpackJsonp([42], {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
-                return i.__extends(t, e), t.prototype.componentDidUpdate = function() {
+                return a.__extends(t, e), t.prototype.componentDidUpdate = function() {
                     var e = this.props.data;
                     if (!e.loading) {
                         var t = 0;
@@ -23438,7 +23415,7 @@ webpackJsonp([42], {
                     }
                 }, t.prototype.render = function() {
                     var e = this.props.data;
-                    return e.loading ? null : a.createElement(d.a, {
+                    return e.loading ? null : i.createElement(d.a, {
                         loading: e.loading,
                         channelLogin: this.props.match.params.channelLogin,
                         hasNextPage: !!(e.user && e.user.follows && e.user.follows.pageInfo.hasNextPage),
@@ -23449,7 +23426,7 @@ webpackJsonp([42], {
                         channelHeaderTab: u.b.Following,
                         userExist: !(!e.user || !e.user.id)
                     })
-                }, t = i.__decorate([Object(r.a)(p, {
+                }, t = a.__decorate([Object(r.a)(p, {
                     options: function(e) {
                         return {
                             variables: {
@@ -23459,7 +23436,7 @@ webpackJsonp([42], {
                         }
                     },
                     props: function(e) {
-                        return i.__assign({}, e, {
+                        return a.__assign({}, e, {
                             loadMore: function() {
                                 var t = e.data.user && e.data.user.follows && e.data.user.follows.edges;
                                 return e.data.fetchMore({
@@ -23472,13 +23449,13 @@ webpackJsonp([42], {
                                     updateQuery: function(e, t) {
                                         var n = t.fetchMoreResult;
                                         return {
-                                            user: i.__assign({}, n.user, {
+                                            user: a.__assign({}, n.user, {
                                                 follows: {
-                                                    user: n.user ? i.__assign({}, n.user.follows) : null,
+                                                    user: n.user ? a.__assign({}, n.user.follows) : null,
                                                     edges: Object(o.b)(e.user && e.user.follows && e.user.follows.edges || [], n.user && n.user.follows && n.user.follows.edges || [])
                                                 }
                                             }),
-                                            currentUser: n.currentUser ? i.__assign({}, n.currentUser) : null
+                                            currentUser: n.currentUser ? a.__assign({}, n.currentUser) : null
                                         }
                                     }
                                 })
@@ -23490,7 +23467,7 @@ webpackJsonp([42], {
                 }), Object(s.a)({
                     location: c.PageviewLocation.Followers
                 })], t)
-            }(a.Component);
+            }(i.Component);
         n.d(t, "REQUEST_LIMIT", function() {
             return 15
         }), n.d(t, "ChannelFollowingPage", function() {
@@ -23582,4 +23559,4 @@ webpackJsonp([42], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-following-9dc2cf16bda4602be3d13e10e6a9ee52.js.map
+//# sourceMappingURL=pages.channel-following-a860cc9cb0156261c4818c6683a5876d.js.map

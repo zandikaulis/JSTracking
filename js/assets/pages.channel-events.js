@@ -1488,43 +1488,16 @@ webpackJsonp([41], {
             ve = (n("W266"), "nativeBroadcastNotifDismissed"),
             be = [{
                 title: "English",
-                login: "PlayHearthstone"
+                login: "esamarathon"
             }, {
-                title: "中文 繁體",
-                login: "HearthstonezhTW"
-            }, {
-                title: "한국어",
-                login: "playhearthstonekr"
-            }, {
-                title: "Русский",
-                login: "PlayHearthstoneRU"
+                title: "Français",
+                login: "LeFrenchRestream"
             }, {
                 title: "Deutsch",
-                login: "C4mlann"
+                login: "GermenchRestream"
             }, {
-                title: "Italiano",
-                login: "GDivision"
-            }, {
-                title: "Polski",
-                login: "BlackFIreIce"
-            }, {
-                title: "Français",
-                login: "originhs"
-            }, {
-                title: "Français",
-                login: "armatvhs"
-            }, {
-                title: "Español - España",
-                login: "OGSeries"
-            }, {
-                title: "ภาษาไทย",
-                login: "HearthstoneTH"
-            }, {
-                title: "Español - Latinoamérica",
-                login: "CopaAmerica_ES1"
-            }, {
-                title: "Português - Brasil",
-                login: "CopaAmerica_pt1"
+                title: "Русский",
+                login: "SpeedrunsRussia"
             }],
             ke = function(e) {
                 function t() {
@@ -1568,7 +1541,7 @@ webpackJsonp([41], {
                     if (!this.isEventChannel(this.props.channelLogin)) return null;
                     if (this.hasDismissedForChannel(this.props.channelLogin)) return null;
                     var e = Date.now();
-                    if (e < 15161904e5 || e >= 15167088e5) return null;
+                    if (e < 15191352e5 || e >= 15195132e5) return null;
                     var t = this.getChannelLinks();
                     return t.length ? b.createElement(W._21, {
                         attachLeft: !0,
@@ -1584,7 +1557,13 @@ webpackJsonp([41], {
                         }
                     }, b.createElement(W._25, {
                         type: W._30.H4
-                    }, Object(p.d)("Want to watch HCT?", "NativeBroadcastNotification"))), b.createElement("ul", null, t), b.createElement(W.Z, {
+                    }, Object(p.d)("ESA Winter 2018", "NativeBroadcastNotification"))), b.createElement(W.Z, {
+                        margin: {
+                            bottom: 1
+                        }
+                    }, b.createElement(W._25, {
+                        color: W.I.OverlayAlt
+                    }, Object(p.d)("Want to watch ESA in you local language? Try one of these international broadcasts!", "NativeBroadcastNotification"))), b.createElement("ul", null, t), b.createElement(W.Z, {
                         attachRight: !0,
                         attachTop: !0,
                         margin: 1,
@@ -1611,7 +1590,7 @@ webpackJsonp([41], {
                     }).includes(e.toLowerCase())
                 }, t.prototype.hasDismissedForChannel = function(e) {
                     var t = p.k.get(ve, {})[e.toLowerCase()];
-                    return !!t && t >= 15161904e5
+                    return !!t && t >= 15191352e5
                 }, t
             }(b.Component),
             ye = n("+Znq"),
@@ -5273,7 +5252,7 @@ webpackJsonp([41], {
                 }, Object(p.d)("Details", "OWL2018Introduction"))))
             });
         ! function(e) {
-            e.CratesChristmas = "CratesChristmas", e.OWL2018 = "overwatchleague"
+            e.CratesChristmas = "CratesChristmas", e.OWL2018 = "owl2018"
         }(Wn || (Wn = {}));
         var la, ca = function(e) {
                 switch (e.event) {
@@ -24645,4 +24624,4 @@ webpackJsonp([41], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-events-36854640391294dc817bd1986edee2eb.js.map
+//# sourceMappingURL=pages.channel-events-26c333f6651f79a0d07686a5489fa065.js.map

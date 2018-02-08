@@ -13500,7 +13500,7 @@ webpackJsonp([32], {
                         },
                         yes: function() {
                             return St.a.wrap(function() {
-                                return n.e(78).then(n.bind(null, "UVy3"))
+                                return n.e(79).then(n.bind(null, "UVy3"))
                             }, "ChannelAnalyticsPage")(e)
                         }
                     },
@@ -22322,7 +22322,7 @@ webpackJsonp([32], {
                         },
                         enabled: function() {
                             return St.a.wrap(function() {
-                                return n.e(68).then(n.bind(null, "Dk8+"))
+                                return n.e(69).then(n.bind(null, "Dk8+"))
                             }, "CollectionEditorPage")(e)
                         }
                     },
@@ -22344,7 +22344,7 @@ webpackJsonp([32], {
                         },
                         enabled: function() {
                             return St.a.wrap(function() {
-                                return n.e(68).then(n.bind(null, "Dk8+"))
+                                return n.e(69).then(n.bind(null, "Dk8+"))
                             }, "CollectionManagerPage")(e)
                         }
                     },
@@ -22355,10 +22355,10 @@ webpackJsonp([32], {
                 return bt.createElement(nr.a, yt.__assign({}, t))
             },
             Lm = St.a.wrap(function() {
-                return n.e(67).then(n.bind(null, "aeDV"))
+                return n.e(68).then(n.bind(null, "aeDV"))
             }, "ChannelClipsManagerPage"),
             Em = St.a.wrap(function() {
-                return n.e(67).then(n.bind(null, "aeDV"))
+                return n.e(68).then(n.bind(null, "aeDV"))
             }, "MyClipsManagerPage"),
             xm = function(e) {
                 var t = e.match.params.pageName,
@@ -31811,7 +31811,8 @@ webpackJsonp([32], {
                 }), a.createElement(i.Z, {
                     margin: {
                         left: 1
-                    }
+                    },
+                    ellipsis: !0
                 }, a.createElement(i.B, {
                     overflow: i._2.Hidden
                 }, a.createElement(i._25, {
@@ -46986,4 +46987,4 @@ webpackJsonp([32], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.dashboard-cfec7df6a45c1c36300cd488b6efb704.js.map
+//# sourceMappingURL=pages.dashboard-1d99c7b953aba17cfed0c6e2aec57d17.js.map

@@ -1,4 +1,4 @@
-webpackJsonp([48], {
+webpackJsonp([49], {
     "+GT7": function(e, t, n) {
         "use strict";
         var i, a = n("TToO"),
@@ -22,7 +22,7 @@ webpackJsonp([48], {
                     return a.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(71).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(72).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -34,7 +34,7 @@ webpackJsonp([48], {
                     return a.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(70).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(71).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -3346,11 +3346,11 @@ webpackJsonp([48], {
                             }
                         }, r[s.FOLLOWING_BASIC] = function() {
                             return J.a.wrap(function() {
-                                return n.e(69).then(n.bind(null, "BmWY"))
+                                return n.e(70).then(n.bind(null, "BmWY"))
                             }, "FinishWatchingTower")(t)
                         }, r[s.FOLLOWING_ADVANCED] = function() {
                             return J.a.wrap(function() {
-                                return n.e(69).then(n.bind(null, "BmWY"))
+                                return n.e(70).then(n.bind(null, "BmWY"))
                             }, "FinishWatchingTower")(i)
                         }, r),
                         loader: function() {
@@ -3369,7 +3369,7 @@ webpackJsonp([48], {
                         },
                         enabled: function() {
                             return J.a.wrap(function() {
-                                return n.e(77).then(n.bind(null, "IwGL"))
+                                return n.e(78).then(n.bind(null, "IwGL"))
                             }, "LatestVideosFromFollowedCarousel")(e)
                         }
                     },
@@ -3560,7 +3560,7 @@ webpackJsonp([48], {
                 })], t)
             }(g.Component),
             le = function() {
-                return n.e(81).then(n.bind(null, "oms2"))
+                return n.e(82).then(n.bind(null, "oms2"))
             },
             de = n("wx0k"),
             ce = n("F8kA"),
@@ -9324,4 +9324,4 @@ webpackJsonp([48], {
     },
     "zH/G": function(e, t) {}
 });
-//# sourceMappingURL=pages.following-32080def516332ee3429652582c023bd.js.map
+//# sourceMappingURL=pages.following-e8b7eabc39cc2f893fbefeeb0faaf940.js.map

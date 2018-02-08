@@ -1,4 +1,4 @@
-webpackJsonp([39, 74], {
+webpackJsonp([39, 75], {
     "+GT7": function(e, t, n) {
         "use strict";
         var i, r = n("TToO"),
@@ -22,7 +22,7 @@ webpackJsonp([39, 74], {
                     return r.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(71).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(72).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -34,7 +34,7 @@ webpackJsonp([39, 74], {
                     return r.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(70).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(71).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -7896,7 +7896,7 @@ webpackJsonp([39, 74], {
             a = function() {
                 return i.__awaiter(r, void 0, void 0, function() {
                     return i.__generator(this, function(e) {
-                        return [2, n.e(80).then(n.bind(null, "Revh"))]
+                        return [2, n.e(81).then(n.bind(null, "Revh"))]
                     })
                 })
             }
@@ -17326,16 +17326,16 @@ webpackJsonp([39, 74], {
             ie = n("0Mfl"),
             re = n("CSlQ"),
             ae = ee.a.wrap(function() {
-                return n.e(49).then(n.bind(null, "8U1+"))
+                return n.e(50).then(n.bind(null, "8U1+"))
             }, "AnonFrontPage"),
             oe = ee.a.wrap(function() {
-                return n.e(52).then(n.bind(null, "Dd84"))
+                return n.e(53).then(n.bind(null, "Dd84"))
             }, "BrowseRootPage"),
             se = ee.a.wrap(function() {
                 return n.e(40).then(n.bind(null, "gZGZ"))
             }, "ChannelClipsPage"),
             le = ee.a.wrap(function() {
-                return n.e(50).then(n.bind(null, "zfLI"))
+                return n.e(51).then(n.bind(null, "zfLI"))
             }, "ChannelCollectionsPage"),
             de = ee.a.wrap(function() {
                 return n.e(41).then(n.bind(null, "lW0T"))
@@ -17353,91 +17353,94 @@ webpackJsonp([39, 74], {
                 return n.e(34).then(n.bind(null, "g8mI"))
             }, "ChannelVideosPage"),
             he = ee.a.wrap(function() {
-                return n.e(61).then(n.bind(null, "yMnN"))
+                return n.e(62).then(n.bind(null, "yMnN"))
             }, "DevOnlyRoot"),
             ge = ee.a.wrap(function() {
-                return n.e(45).then(n.bind(null, "7yeK"))
+                return n.e(46).then(n.bind(null, "7yeK"))
             }, "DirectoryRootPage"),
             fe = ee.a.wrap(function() {
-                return n.e(57).then(n.bind(null, "IzAE"))
+                return n.e(58).then(n.bind(null, "IzAE"))
             }, "DevOnlyTestingCarouselPage"),
             ve = ee.a.wrap(function() {
-                return n.e(59).then(n.bind(null, "Tj44"))
+                return n.e(60).then(n.bind(null, "Tj44"))
             }, "EmailVerificationPage"),
             be = ee.a.wrap(function() {
-                return n.e(46).then(n.bind(null, "NTi8"))
+                return n.e(47).then(n.bind(null, "NTi8"))
             }, "EventLandingPage"),
             ke = ee.a.wrap(function() {
-                return n.e(48).then(n.bind(null, "IpE8"))
+                return n.e(49).then(n.bind(null, "IpE8"))
             }, "FollowingRootPage"),
             ye = ee.a.wrap(function() {
-                return n.e(53).then(n.bind(null, "lTLe"))
+                return n.e(54).then(n.bind(null, "lTLe"))
             }, "FinishWatchingPage"),
             Se = ee.a.wrap(function() {
-                return n.e(47).then(n.bind(null, "IOEW"))
+                return n.e(48).then(n.bind(null, "IOEW"))
             }, "FrontPage"),
             _e = ee.a.wrap(function() {
-                return n.e(54).then(n.bind(null, "DZCb"))
+                return n.e(55).then(n.bind(null, "DZCb"))
             }, "InventoryPage"),
             Ne = ee.a.wrap(function() {
-                return n.e(62).then(n.bind(null, "o8EG"))
+                return n.e(63).then(n.bind(null, "o8EG"))
             }, "ManagerRedirectPage"),
             Ee = ee.a.wrap(function() {
-                return n.e(60).then(n.bind(null, "DkuH"))
-            }, "ReportUserPage"),
+                return n.e(45).then(n.bind(null, "gZLf"))
+            }, "PaymentsLandingPage"),
             Ce = ee.a.wrap(function() {
-                return n.e(51).then(n.bind(null, "K4jf"))
-            }, "SettingsRoot"),
+                return n.e(61).then(n.bind(null, "DkuH"))
+            }, "ReportUserPage"),
             Te = ee.a.wrap(function() {
+                return n.e(52).then(n.bind(null, "K4jf"))
+            }, "SettingsRoot"),
+            we = ee.a.wrap(function() {
                 return n.e(36).then(n.bind(null, "uiPj"))
             }, "VideoWatchPage"),
-            we = ee.a.wrap(function() {
-                return n.e(56).then(n.bind(null, "6Vx1"))
+            Oe = ee.a.wrap(function() {
+                return n.e(57).then(n.bind(null, "6Vx1"))
             }, "DevOnlyTestingAmazonOffersPage"),
-            Oe = function() {
+            Ie = function() {
                 return s.createElement(J.c, {
                     path: "/",
                     to: "/directory/following"
                 })
             },
-            Ie = function() {
+            De = function() {
                 return window.location.reload(), null
             },
-            De = function(e) {
+            Fe = function(e) {
                 var t = Object(ne.a)(e.match.params.videoID);
                 return s.createElement(J.c, {
                     to: "/videos/" + t
                 })
             },
-            Fe = function(e) {
+            Pe = function(e) {
                 return s.createElement(J.c, {
                     to: "/popout/" + e.match.params.channelLogin + "/chat"
                 })
             },
-            Pe = function(e) {
+            xe = function(e) {
                 return s.createElement(J.c, {
                     to: "/" + e.match.params.channelLogin + "/videos/all"
                 })
             },
-            xe = function(e) {
+            Re = function(e) {
                 return s.createElement(J.c, {
                     to: "/" + e.match.params.channelLogin + "/videos/archive"
                 })
             },
-            Re = function(e) {
+            Le = function(e) {
                 return s.createElement(J.c, {
                     to: "/directory/game/" + e.match.params.encodedCommunityName + "/videos/all"
                 })
             },
-            Le = function() {
+            Ue = function() {
                 return s.createElement(J.c, {
                     to: "/directory/all/xbox"
                 })
             },
-            Ue = function() {
+            Ae = function() {
                 return window.location.replace(ie.a), null
             },
-            Ae = Object(re.d)("DefaultRootRouter", {
+            je = Object(re.d)("DefaultRootRouter", {
                 autoReportInteractive: !0
             })(function(e) {
                 var t = e.isLoggedIn;
@@ -17446,7 +17449,7 @@ webpackJsonp([39, 74], {
                     component: fe
                 }), O.a.buildType !== te.a.Production && s.createElement(J.d, {
                     path: "/_dev/testing/amazon-offers/:channelName",
-                    component: we
+                    component: Oe
                 }), O.a.buildType !== te.a.Production && s.createElement(J.d, {
                     path: "/_dev",
                     component: he
@@ -17456,10 +17459,10 @@ webpackJsonp([39, 74], {
                     component: t ? Se : ae
                 }), s.createElement(J.d, {
                     path: "/bits",
-                    render: Ie
+                    render: De
                 }), s.createElement(J.d, {
                     path: "/collections/:collectionID",
-                    component: Te
+                    component: we
                 }), s.createElement(J.d, {
                     path: "/communities/:encodedCommunityName/details",
                     component: ge
@@ -17489,7 +17492,7 @@ webpackJsonp([39, 74], {
                     component: ge
                 }), s.createElement(J.d, {
                     path: "/directory/game/:encodedCommunityName/videos",
-                    render: Re
+                    render: Le
                 }), s.createElement(J.d, {
                     path: "/directory/game/:encodedCommunityName/:encodedLanguage",
                     component: ge
@@ -17501,7 +17504,7 @@ webpackJsonp([39, 74], {
                     component: oe
                 }), s.createElement(J.d, {
                     path: "/directory/all/xb1",
-                    component: Le
+                    component: Ue
                 }), s.createElement(J.d, {
                     path: "/directory/all/xbox",
                     component: oe
@@ -17523,54 +17526,57 @@ webpackJsonp([39, 74], {
                 }), s.createElement(J.d, {
                     path: "/email-verification/:emailOpaqueId",
                     component: ve
+                }), O.a.buildType !== te.a.Production && s.createElement(J.d, {
+                    path: "/payments",
+                    component: Ee
                 }), s.createElement(J.d, {
                     path: "/following",
-                    component: Oe
-                }), O.a.buildType !== te.a.Production && s.createElement(J.d, {
+                    component: Ie
+                }), s.createElement(J.d, {
                     path: "/inventory",
                     component: _e
                 }), s.createElement(J.d, {
                     path: "/popout/:channelName/chat",
-                    render: Ie
-                }), s.createElement(J.d, {
-                    path: "/videos/v:videoID",
                     render: De
                 }), s.createElement(J.d, {
+                    path: "/videos/v:videoID",
+                    render: Fe
+                }), s.createElement(J.d, {
                     path: "/videos/:videoID",
-                    component: Te
+                    component: we
                 }), s.createElement(J.d, {
                     path: "/store",
-                    render: Ue
+                    render: Ae
                 }), s.createElement(J.d, {
                     path: "/store/merch",
-                    render: Ue
+                    render: Ae
                 }), s.createElement(J.d, {
                     path: "/subs",
-                    render: Ie
+                    render: De
                 }), s.createElement(J.d, {
                     path: "/settings/:tab?",
-                    component: Ce
+                    component: Te
                 }), s.createElement(J.d, {
                     path: "/manager/:pageName?",
                     component: Ne
                 }), s.createElement(J.d, {
                     path: "/:channelName/report",
-                    component: Ee
+                    component: Ce
                 }), s.createElement(J.d, {
                     path: "/:channelLogin/videos/(past_broadcasts?)",
-                    render: xe
+                    render: Re
                 }), s.createElement(J.d, {
                     path: "/:channelLogin/videos/:filter(all|archive|upload|highlight|past_premiere)",
                     component: me
                 }), s.createElement(J.d, {
                     path: "/:channelLogin/videos/:unknownFilter?",
-                    render: Pe
+                    render: xe
                 }), s.createElement(J.d, {
                     path: "/:channelName/clips",
                     component: se
                 }), s.createElement(J.d, {
                     path: "/:channelLogin/chat",
-                    render: Fe
+                    render: Pe
                 }), s.createElement(J.d, {
                     path: "/:channelLogin/collections",
                     component: le
@@ -17592,12 +17598,12 @@ webpackJsonp([39, 74], {
                 }))
             });
         n.d(t, "b", function() {
-            return je
-        }), n.d(t, "a", function() {
             return Me
+        }), n.d(t, "a", function() {
+            return Be
         });
-        var je = "twilight-main",
-            Me = function(e) {
+        var Me = "twilight-main",
+            Be = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {}, t.setRootScrollableContentRef = function(e) {
@@ -17621,10 +17627,10 @@ webpackJsonp([39, 74], {
                         display: U.L.Flex,
                         flexDirection: U.N.Column
                     }, s.createElement("main", {
-                        className: je
+                        className: Me
                     }, s.createElement(b.b, null), s.createElement(c.a, {
                         contentRefDelegate: this.setRootScrollableContentRef
-                    }, s.createElement(Ae, {
+                    }, s.createElement(je, {
                         isLoggedIn: this.props.isLoggedIn
                     }), s.createElement(l.b, {
                         mainRef: this.state.rootScrollableContentRef
@@ -23948,7 +23954,7 @@ webpackJsonp([39, 74], {
                                 case 0:
                                     e = [], i.label = 1;
                                 case 1:
-                                    return i.trys.push([1, 3, , 4]), [4, n.e(79).then(n.bind(null, "GZxo"))];
+                                    return i.trys.push([1, 3, , 4]), [4, n.e(80).then(n.bind(null, "GZxo"))];
                                 case 2:
                                     return e = i.sent(), [3, 4];
                                 case 3:
@@ -26753,4 +26759,4 @@ webpackJsonp([39, 74], {
         }
     }
 });
-//# sourceMappingURL=pages.onboarding-8584ce355e4c77550f4a27bb04fb795b.js.map
+//# sourceMappingURL=pages.onboarding-a9016a559e7d87eae62526bf15dbe279.js.map
