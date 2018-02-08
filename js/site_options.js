@@ -2254,11 +2254,11 @@ window.SiteOptions = {
         },
         "6a2630a4-edc7-4f2a-8cfe-e4de75eb0d98": {
             "name": "rtqos",
-            "v": 3009,
+            "v": 3012,
             "t": 1,
             "s": 1,
             "groups": [{
-                "weight": 70,
+                "weight": 50,
                 "value": "control"
             }, {
                 "weight": 10,
@@ -2266,6 +2266,9 @@ window.SiteOptions = {
             }, {
                 "weight": 20,
                 "value": "direct"
+            }, {
+                "weight": 20,
+                "value": "control20"
             }]
         },
         "6a587617-eb7c-475e-8bc3-991d4f38fc87": {
