@@ -1479,11 +1479,11 @@ webpackJsonp([45], {
             h = n("Odds"),
             y = function(e) {
                 var t = ("XXXX XXXX XXXX " + e.lastFourDigits).replace(/X/g, "•");
-                return d.createElement(h._25, {
+                return d.createElement(h._27, {
                     bold: !0,
                     color: h.I.Alt2,
-                    type: h._30.P,
-                    fontSize: h.P.Size6
+                    type: h._32.P,
+                    fontSize: h.Q.Size6
                 }, t)
             },
             x = function(e) {
@@ -1520,13 +1520,13 @@ webpackJsonp([45], {
                         })
                     }
                 }, t.prototype.render = function() {
-                    return this.state.payPalLoaded ? d.createElement(h.Z, {
+                    return this.state.payPalLoaded ? d.createElement(h._1, {
                         margin: {
                             y: 2
                         }
                     }, d.createElement(h.u, {
                         onClick: this.handleClick
-                    }, Object(m.d)("Checkout with Paypal", "PayPal"))) : d.createElement(h._1, {
+                    }, Object(m.d)("Checkout with Paypal", "PayPal"))) : d.createElement(h._3, {
                         fillContent: !0
                     })
                 }, t.prototype.setupConfigs = function() {
@@ -1553,46 +1553,46 @@ webpackJsonp([45], {
                         }), e.setupConfigs()
                     }
                 }, t.prototype.render = function() {
-                    return this.state.recurlyLoaded ? d.createElement(h.Z, {
+                    return this.state.recurlyLoaded ? d.createElement(h._1, {
                         fullWidth: !0
                     }, d.createElement("form", {
                         className: "recurly-form"
-                    }, d.createElement(h.Z, {
+                    }, d.createElement(h._1, {
                         margin: {
                             bottom: 1
                         }
-                    }, d.createElement(h.Q, {
+                    }, d.createElement(h.R, {
                         id: "recurly-name",
                         label: Object(m.d)("Name", "RecurlyCard")
                     }, d.createElement("div", {
                         id: "recurly-name"
-                    }, d.createElement(h.S, {
-                        gutterSize: h.T.Medium
+                    }, d.createElement(h.T, {
+                        gutterSize: h.U.Medium
                     }, d.createElement(h.J, {
                         cols: 6
-                    }, d.createElement(h.V, {
+                    }, d.createElement(h.X, {
                         id: "recurly-first-name",
-                        type: h.W.Text,
+                        type: h.Y.Text,
                         placeholder: Object(m.d)("First Name", "RecurlyCard"),
                         "data-recurly": "first_name"
                     })), d.createElement(h.J, {
                         cols: 6
-                    }, d.createElement(h.V, {
+                    }, d.createElement(h.X, {
                         id: "recurly-last-name",
-                        type: h.W.Text,
+                        type: h.Y.Text,
                         placeholder: Object(m.d)("Last Name", "RecurlyCard"),
                         "data-recurly": "last_name"
-                    })))))), d.createElement(h.Z, {
+                    })))))), d.createElement(h._1, {
                         margin: {
                             bottom: 1
                         }
-                    }, d.createElement(h.Q, {
+                    }, d.createElement(h.R, {
                         id: "recurly-credit-card",
                         label: Object(m.d)("Credit Card", "RecurlyCard")
                     }, d.createElement("div", {
                         id: "recurly-credit-card"
-                    }, d.createElement(h.S, {
-                        gutterSize: h.T.Medium
+                    }, d.createElement(h.T, {
+                        gutterSize: h.U.Medium
                     }, d.createElement(h.J, {
                         cols: 8
                     }, d.createElement("div", {
@@ -1603,17 +1603,17 @@ webpackJsonp([45], {
                     }, d.createElement("div", {
                         id: "recurly-cvv",
                         "data-recurly": "cvv"
-                    })))))), d.createElement(h.Z, {
+                    })))))), d.createElement(h._1, {
                         margin: {
                             bottom: 1
                         }
-                    }, d.createElement(h.Q, {
+                    }, d.createElement(h.R, {
                         id: "recurly-credit-card",
                         label: Object(m.d)("Expiration Date", "RecurlyCard")
                     }, d.createElement("div", {
                         id: "recurly-credit-card"
-                    }, d.createElement(h.S, {
-                        gutterSize: h.T.Medium
+                    }, d.createElement(h.T, {
+                        gutterSize: h.U.Medium
                     }, d.createElement(h.J, {
                         cols: 6
                     }, d.createElement("div", {
@@ -1628,7 +1628,7 @@ webpackJsonp([45], {
                         type: "hidden",
                         name: "recurly-token",
                         "data-recurly": "token"
-                    }), d.createElement(h.u, null, Object(m.d)("Update Card", "RecurlyCard")))) : d.createElement(h._1, {
+                    }), d.createElement(h.u, null, Object(m.d)("Update Card", "RecurlyCard")))) : d.createElement(h._3, {
                         fillContent: !0
                     })
                 }, t.prototype.setupConfigs = function() {
@@ -1690,7 +1690,7 @@ webpackJsonp([45], {
         ! function(e) {
             e.CreditCard = "credit-card", e.PayWithAmazon = "pay-with-amazon", e.PayPal = "paypal"
         }(a || (a = {}));
-        var D, M = function(e) {
+        var M, D = function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.state = {
@@ -1702,22 +1702,22 @@ webpackJsonp([45], {
                 }, t
             }
             return l.__extends(t, e), t.prototype.render = function() {
-                return d.createElement(h.Z, {
+                return d.createElement(h._1, {
                     fullWidth: !0
-                }, d.createElement(h.Z, {
+                }, d.createElement(h._1, {
                     margin: {
                         y: 2
                     }
-                }, d.createElement(h.Q, {
+                }, d.createElement(h.R, {
                     id: "payment-option",
                     label: Object(m.d)("Payment Option", "RecurlyCardWrapper")
                 }, d.createElement("div", {
                     id: "payment-option"
-                }, d.createElement(h.Z, {
+                }, d.createElement(h._1, {
                     margin: {
                         right: 2
                     },
-                    display: h.L.Inline
+                    display: h.M.Inline
                 }, d.createElement("input", {
                     type: "radio",
                     id: a.CreditCard,
@@ -1735,11 +1735,11 @@ webpackJsonp([45], {
                     src: "http://twitch.com/images/recurly/credit_cards/visa.png"
                 }), d.createElement("img", {
                     src: "http://twitch.com/images/recurly/credit_cards/discover.png"
-                }))), d.createElement(h.Z, {
+                }))), d.createElement(h._1, {
                     margin: {
                         right: 2
                     },
-                    display: h.L.Inline
+                    display: h.M.Inline
                 }, d.createElement("input", {
                     type: "radio",
                     id: a.PayWithAmazon,
@@ -1751,11 +1751,11 @@ webpackJsonp([45], {
                     htmlFor: a.PayWithAmazon
                 }, d.createElement("img", {
                     src: "http://twitch.com/images/recurly/credit_cards/amazon.png"
-                }))), d.createElement(h.Z, {
+                }))), d.createElement(h._1, {
                     margin: {
                         right: 2
                     },
-                    display: h.L.Inline
+                    display: h.M.Inline
                 }, d.createElement("input", {
                     type: "radio",
                     id: a.PayPal,
@@ -1767,18 +1767,18 @@ webpackJsonp([45], {
                     htmlFor: a.PayPal
                 }, d.createElement("img", {
                     src: "http://twitch.com/images/recurly/credit_cards/paypal.png"
-                }))), d.createElement(h.Z, {
-                    display: this.state.selectedOption === a.CreditCard ? h.L.Block : h.L.Hide
+                }))), d.createElement(h._1, {
+                    display: this.state.selectedOption === a.CreditCard ? h.M.Block : h.M.Hide
                 }, d.createElement(w, {
                     publicKey: this.props.config.publicKey
-                })), d.createElement(h.Z, {
-                    display: this.state.selectedOption === a.PayWithAmazon ? h.L.Block : h.L.Hide
+                })), d.createElement(h._1, {
+                    display: this.state.selectedOption === a.PayWithAmazon ? h.M.Block : h.M.Hide
                 }, d.createElement(x, {
                     clientID: this.props.config.payWithAmazonConfigs.clientID,
                     isProduction: this.props.config.payWithAmazonConfigs.isProduction,
                     sellerID: this.props.config.payWithAmazonConfigs.sellerID
-                })), d.createElement(h.Z, {
-                    display: this.state.selectedOption === a.PayPal ? h.L.Block : h.L.Hide
+                })), d.createElement(h._1, {
+                    display: this.state.selectedOption === a.PayPal ? h.M.Block : h.M.Hide
                 }, d.createElement(b, {
                     publicKey: this.props.config.publicKey,
                     braintreeClientAuthorization: this.props.config.braintreeClientAuthorization
@@ -1787,12 +1787,12 @@ webpackJsonp([45], {
         }(d.Component);
         ! function(e) {
             e.Tier1 = "1000", e.Tier2 = "2000", e.Tier3 = "3000"
-        }(D || (D = {}));
-        var T, S, E = (T = {}, T[D.Tier1] = function() {
+        }(M || (M = {}));
+        var T, E, S = (T = {}, T[M.Tier1] = function() {
                 return Object(m.d)("Tier 1", "SubscriptionTier")
-            }, T[D.Tier2] = function() {
+            }, T[M.Tier2] = function() {
                 return Object(m.d)("Tier 2", "SubscriptionTier")
-            }, T[D.Tier3] = function() {
+            }, T[M.Tier3] = function() {
                 return Object(m.d)("Tier 3", "SubscriptionTier")
             }, T),
             O = n("wuJz"),
@@ -1813,7 +1813,7 @@ webpackJsonp([45], {
                     var e = this.props.subscriptions.slice(0, 5),
                         t = this.state.showMore ? this.props.subscriptions : e,
                         n = this.state.showMore ? Object(m.d)("Show More", "SubscriptionRows") : Object(m.d)("Show Less", "SubscriptionRows");
-                    return d.createElement(h._21, {
+                    return d.createElement(h._23, {
                         background: h.m.Base,
                         borderLeft: !0,
                         borderBottom: !0,
@@ -1828,7 +1828,7 @@ webpackJsonp([45], {
                             subExpirationDate: r(e.expiresAt)
                         }, "SubscriptionRows") : Object(m.d)("Expires {subExpirationDate, date, short}", {
                             subExpirationDate: r(e.expiresAt)
-                        }, "SubscriptionRows"), d.createElement(h._21, {
+                        }, "SubscriptionRows"), d.createElement(h._23, {
                             borderBottom: n !== t.length - 1,
                             fullWidth: !0,
                             key: e.subscriptionBenefit.user.displayName + e.subscriptionBenefit.tier,
@@ -1836,64 +1836,64 @@ webpackJsonp([45], {
                                 x: 1,
                                 y: .5
                             }
-                        }, d.createElement(h.S, null, d.createElement(h.J, {
+                        }, d.createElement(h.T, null, d.createElement(h.J, {
                             cols: 5
-                        }, d.createElement(h.Z, {
-                            display: h.L.Flex,
+                        }, d.createElement(h._1, {
+                            display: h.M.Flex,
                             alignItems: h.c.Center,
                             fullHeight: !0
                         }, d.createElement(h.l, {
                             alt: e.subscriptionBenefit.user.displayName,
                             src: e.subscriptionBenefit.user.profileImageURL,
                             size: 40
-                        }), d.createElement(h.Z, {
+                        }), d.createElement(h._1, {
                             padding: {
                                 left: .5
                             }
-                        }, d.createElement(h._25, {
+                        }, d.createElement(h._27, {
                             "data-test-selector": "subscription-rows__display-name-text"
                         }, e.subscriptionBenefit.user.displayName)))), d.createElement(h.J, {
                             cols: 1
-                        }, d.createElement(h.Z, {
-                            display: h.L.Flex,
+                        }, d.createElement(h._1, {
+                            display: h.M.Flex,
                             alignItems: h.c.Center,
-                            justifyContent: h.Y.End,
+                            justifyContent: h._0.End,
                             padding: {
                                 right: 1
                             },
                             fullHeight: !0
-                        }, d.createElement(h._25, {
+                        }, d.createElement(h._27, {
                             "data-test-selector": "subscription-rows__tier-text",
                             bold: !0
-                        }, E[e.subscriptionBenefit.tier]()))), d.createElement(h.J, {
+                        }, S[e.subscriptionBenefit.tier]()))), d.createElement(h.J, {
                             cols: 1
-                        }, d.createElement(h.Z, {
-                            display: h.L.Flex,
+                        }, d.createElement(h._1, {
+                            display: h.M.Flex,
                             alignItems: h.c.Center,
-                            justifyContent: h.Y.Start,
+                            justifyContent: h._0.Start,
                             padding: {
                                 left: 1
                             },
                             fullHeight: !0
-                        }, d.createElement(h._25, {
+                        }, d.createElement(h._27, {
                             "data-test-selector": "subscription-rows__cost-text"
                         }, Object(m.e)(e.renewalPrice / 100, {
                             style: "currency",
                             currency: e.renewalCurrency
                         }), "/", Object(m.d)("month", "SubscriptionRows")))), d.createElement(h.J, {
                             cols: 5
-                        }, d.createElement(h.Z, {
-                            display: h.L.Flex,
+                        }, d.createElement(h._1, {
+                            display: h.M.Flex,
                             alignItems: h.c.Center,
-                            justifyContent: h.Y.End,
+                            justifyContent: h._0.End,
                             padding: {
                                 left: 1
                             },
                             fullHeight: !0
-                        }, d.createElement(h._25, {
+                        }, d.createElement(h._27, {
                             "data-test-selector": "subscription-rows__renewal-date-text"
                         }, a)))))
-                    }), this.props.subscriptions.length > 5 && d.createElement(h.Z, {
+                    }), this.props.subscriptions.length > 5 && d.createElement(h._1, {
                         margin: {
                             y: 1
                         }
@@ -1920,9 +1920,9 @@ webpackJsonp([45], {
                     })
                 }, t.prototype.render = function() {
                     var e = this;
-                    return this.state.xsollaLoaded ? d.createElement(h.Z, {
+                    return this.state.xsollaLoaded ? d.createElement(h._1, {
                         fullWidth: !0,
-                        display: this.state.xsollaLoaded ? h.L.Inline : h.L.Hide
+                        display: this.state.xsollaLoaded ? h.M.Inline : h.M.Hide
                     }, d.createElement("iframe", {
                         ref: function(t) {
                             return e.iframe = t
@@ -1931,7 +1931,7 @@ webpackJsonp([45], {
                         src: this.props.config.iframeURL,
                         width: "580px",
                         height: "650px"
-                    })) : d.createElement(h._1, {
+                    })) : d.createElement(h._3, {
                         fillContent: !0
                     })
                 }, t
@@ -1967,11 +1967,11 @@ webpackJsonp([45], {
                         return !0
                     })
                 }, t.prototype.render = function() {
-                    return d.createElement(h.Z, {
+                    return d.createElement(h._1, {
                         fullWidth: !0
                     }, d.createElement("div", {
                         id: "zuora_payment"
-                    }), d.createElement(h.Z, {
+                    }), d.createElement(h._1, {
                         margin: {
                             y: 1
                         }
@@ -1982,7 +1982,7 @@ webpackJsonp([45], {
             }(d.Component);
         ! function(e) {
             e.Recurly = "recurly", e.Xsolla = "xsolla", e.Zuora = "zuora"
-        }(S || (S = {}));
+        }(E || (E = {}));
         var I = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -1994,13 +1994,13 @@ webpackJsonp([45], {
                         }, 0) / 100
                     }, t.renderPaymentProvider = function() {
                         var e = t.props.paymentProviderConfig;
-                        return e.provider === S.Recurly ? d.createElement(M, {
+                        return e.provider === E.Recurly ? d.createElement(D, {
                             config: e
-                        }) : e.provider === S.Zuora ? d.createElement(C, {
+                        }) : e.provider === E.Zuora ? d.createElement(C, {
                             config: e
-                        }) : e.provider === S.Xsolla ? d.createElement(A, {
+                        }) : e.provider === E.Xsolla ? d.createElement(A, {
                             config: e
-                        }) : d.createElement(h._25, null, Object(m.d)("Oops! Payment provider is unavailable. Please try again later.", "PaymentMethodCard"))
+                        }) : d.createElement(h._27, null, Object(m.d)("Oops! Payment provider is unavailable. Please try again later.", "PaymentMethodCard"))
                     }, t.toggleButton = function() {
                         t.setState(function(e, t) {
                             return {
@@ -2030,61 +2030,61 @@ webpackJsonp([45], {
                         a = Object(m.d)("{totalPriceI18n} / month", {
                             totalPriceI18n: r
                         }, "PaymentMethodCard");
-                    return d.createElement(h.Z, {
+                    return d.createElement(h._1, {
                         margin: {
                             y: 3
                         }
-                    }, d.createElement(h._21, {
+                    }, d.createElement(h._23, {
                         border: !0,
                         fullWidth: !0,
                         background: h.m.Base
-                    }, d.createElement(h._21, {
+                    }, d.createElement(h._23, {
                         fullWidth: !0,
                         padding: {
                             x: 2,
                             y: 1
                         },
-                        display: h.L.Flex,
-                        flexDirection: h.N.Column
-                    }, d.createElement(h.Z, {
+                        display: h.M.Flex,
+                        flexDirection: h.O.Column
+                    }, d.createElement(h._1, {
                         fullWidth: !0,
-                        display: h.L.Flex
-                    }, d.createElement(h.Z, {
-                        display: h.L.Flex,
-                        flexDirection: h.N.Column,
+                        display: h.M.Flex
+                    }, d.createElement(h._1, {
+                        display: h.M.Flex,
+                        flexDirection: h.O.Column,
                         flexGrow: 2
-                    }, d.createElement(h.Z, {
-                        display: h.L.Flex,
+                    }, d.createElement(h._1, {
+                        display: h.M.Flex,
                         margin: {
                             bottom: .5
                         }
-                    }, d.createElement(h._25, {
-                        type: h._30.P
-                    }, "CC_LOGO_HERE"), d.createElement(h.Z, {
+                    }, d.createElement(h._27, {
+                        type: h._32.P
+                    }, "CC_LOGO_HERE"), d.createElement(h._1, {
                         margin: {
                             left: 2
                         }
-                    }, d.createElement(h._25, {
-                        type: h._30.P
+                    }, d.createElement(h._27, {
+                        type: h._32.P
                     }, this.props.lastFour && d.createElement(y, {
                         lastFourDigits: this.props.lastFour
-                    })))), d.createElement(h._25, {
+                    })))), d.createElement(h._27, {
                         bold: !0,
                         color: h.I.Alt2,
-                        type: h._30.P,
+                        type: h._32.P,
                         "data-test-selector": "payment-method-card__total-sub-price-text"
-                    }, t, " (", a, ")")), d.createElement(h.Z, {
+                    }, t, " (", a, ")")), d.createElement(h._1, {
                         alignItems: h.c.Center,
                         flexShrink: 1,
-                        display: h.L.Flex
-                    }, e)), this.state.updating && d.createElement(h.Z, {
+                        display: h.M.Flex
+                    }, e)), this.state.updating && d.createElement(h._1, {
                         fullWidth: !0
-                    }, d.createElement(h.Z, {
+                    }, d.createElement(h._1, {
                         fullWidth: !0,
                         margin: {
                             y: 1
                         }
-                    }, this.renderPaymentProvider()), d.createElement(h._25, null, n)))), !this.state.updating && d.createElement(k, {
+                    }, this.renderPaymentProvider()), d.createElement(h._27, null, n)))), !this.state.updating && d.createElement(k, {
                         subscriptions: this.props.subscriptions
                     }))
                 }, t
@@ -2097,35 +2097,35 @@ webpackJsonp([45], {
                 return l.__extends(t, e), t.prototype.componentDidUpdate = function() {
                     this.props.data.loading && !this.props.data.error || this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    if (this.props.data.loading) return d.createElement(h._1, {
+                    if (this.props.data.loading) return d.createElement(h._3, {
                         fillContent: !0
                     });
                     if (this.props.data.error) return d.createElement(p.a, {
                         message: Object(m.d)("Error loading payment methods.", "PaymentMethodsTabComponent")
                     });
                     var e = this.renderPaymentMethodCards();
-                    return e.length ? d.createElement(h.Z, null, e) : d.createElement(h._21, {
+                    return e.length ? d.createElement(h._1, null, e) : d.createElement(h._23, {
                         background: h.m.Alt,
                         border: !0,
-                        display: h.L.Flex,
-                        justifyContent: h.Y.Center,
+                        display: h.M.Flex,
+                        justifyContent: h._0.Center,
                         padding: 1
-                    }, d.createElement(h._25, {
+                    }, d.createElement(h._27, {
                         color: h.I.Alt2
                     }, Object(m.d)("You have no subscriptions on record.", "PaymentMethodsTabComponent")))
                 }, t.prototype.renderPaymentMethodCards = function() {
                     var e = this.props.data.currentUser.paymentMethodConfigs;
                     return this.props.data.currentUser.paymentMethods.map(function(t) {
                         var n, r = t.provider;
-                        if ("xsolla_v3" === t.provider && (r = S.Xsolla), function(e) {
-                                return e === S.Recurly
+                        if ("xsolla_v3" === t.provider && (r = E.Xsolla), function(e) {
+                                return e === E.Recurly
                             }(r)) n = e.recurly;
                         else if (function(e) {
-                                return e === S.Xsolla
+                                return e === E.Xsolla
                             }(r)) n = e.xsolla;
                         else {
                             if (! function(e) {
-                                    return e === S.Zuora
+                                    return e === E.Zuora
                                 }(r)) throw new Error("Received invalid payment provider type: " + r);
                             n = e.zuora
                         }
@@ -2142,15 +2142,15 @@ webpackJsonp([45], {
                 }, t
             }(d.Component),
             Y = Object(f.compose)(Object(g.a)(F), Object(v.d)("PaymentMethodsTab"))(N),
-            P = function(e) {
+            _ = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return l.__extends(t, e), t.prototype.render = function() {
-                    return d.createElement(h._25, null, "TRANSACTION HISTORY CONTENT")
+                    return d.createElement(h._27, null, "TRANSACTION HISTORY CONTENT")
                 }, t
             }(d.Component),
-            z = (n("d2v6"), function(e) {
+            P = (n("d2v6"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -2166,43 +2166,43 @@ webpackJsonp([45], {
                     }, t
                 }
                 return l.__extends(t, e), t.prototype.render = function() {
-                    return this.props.isLoggedIn ? d.createElement(h._21, {
+                    return this.props.isLoggedIn ? d.createElement(h._23, {
                         background: h.m.Alt,
                         fullWidth: !0,
                         alignContent: h.b.Center
-                    }, d.createElement(h.Z, {
+                    }, d.createElement(h._1, {
                         className: "payments-page",
                         margin: {
                             x: 4,
                             y: 3
                         }
-                    }, d.createElement(h._25, {
-                        type: h._30.H2
-                    }, Object(m.d)("Payments", "PaymentsLandingPagePresentationComponent")), d.createElement(h.Z, {
+                    }, d.createElement(h._27, {
+                        type: h._32.H2
+                    }, Object(m.d)("Payments", "PaymentsLandingPagePresentationComponent")), d.createElement(h._1, {
                         margin: {
                             top: 2
                         }
-                    }, d.createElement(h._23, null, d.createElement(h._22, {
+                    }, d.createElement(h._25, null, d.createElement(h._24, {
                         active: !this.state.txnHistoryTabActive,
                         onClick: this.switchToPaymentMethodsTab
-                    }, Object(m.d)("Payment Methods", "PaymentsLandingPagePresentationComponent")), d.createElement(h._22, {
+                    }, Object(m.d)("Payment Methods", "PaymentsLandingPagePresentationComponent")), d.createElement(h._24, {
                         active: this.state.txnHistoryTabActive,
                         onClick: this.switchToTxnTab
-                    }, Object(m.d)("Transaction History", "PaymentsLandingPagePresentationComponent"))), d.createElement(h.Z, {
+                    }, Object(m.d)("Transaction History", "PaymentsLandingPagePresentationComponent"))), d.createElement(h._1, {
                         fullHeight: !0,
                         fullWidth: !0,
                         margin: {
                             y: 2
                         }
-                    }, this.state.txnHistoryTabActive ? d.createElement(P, null) : d.createElement(Y, null))))) : (this.props.onAnonymousVisit(), d.createElement(p.a, {
+                    }, this.state.txnHistoryTabActive ? d.createElement(_, null) : d.createElement(Y, null))))) : (this.props.onAnonymousVisit(), d.createElement(p.a, {
                         message: Object(m.d)("You must be logged in to view this page", "PaymentsLandingPagePresentationComponent")
                     }))
                 }, t
             }(d.Component)),
-            H = Object(f.compose)(Object(v.d)("PaymentsLandingPagePresentation", {
+            z = Object(f.compose)(Object(v.d)("PaymentsLandingPagePresentation", {
                 autoReportInteractive: !0
-            }))(z),
-            W = Object(i.b)(function(e) {
+            }))(P),
+            H = Object(i.b)(function(e) {
                 return {
                     isLoggedIn: Object(c.d)(e)
                 }
@@ -2212,9 +2212,9 @@ webpackJsonp([45], {
                         return Object(s.f)(u.a.PaymentsLandingPage)
                     }
                 }, e)
-            })(H);
+            })(z);
         n.d(t, "PaymentsLandingPage", function() {
-            return W
+            return H
         })
     },
     hUHO: function(e, t, n) {
@@ -2398,18 +2398,18 @@ webpackJsonp([45], {
             m > 0 ? (g = a(e), h = a(t)) : (g = a(t), h = a(e));
             var x, b = i(h, g),
                 w = h.getTimezoneOffset() - g.getTimezoneOffset(),
-                D = Math.round(b / 60) - w;
-            if (D < 2) return f.includeSeconds ? b < 5 ? v("lessThanXSeconds", 5, y) : b < 10 ? v("lessThanXSeconds", 10, y) : b < 20 ? v("lessThanXSeconds", 20, y) : b < 40 ? v("halfAMinute", null, y) : v(b < 60 ? "lessThanXMinutes" : "xMinutes", 1, y) : 0 === D ? v("lessThanXMinutes", 1, y) : v("xMinutes", D, y);
-            if (D < 45) return v("xMinutes", D, y);
-            if (D < 90) return v("aboutXHours", 1, y);
-            if (D < s) return v("aboutXHours", Math.round(D / 60), y);
-            if (D < c) return v("xDays", 1, y);
-            if (D < l) return v("xDays", Math.round(D / s), y);
-            if (D < d) return x = Math.round(D / l), v("aboutXMonths", x, y);
-            if ((x = o(h, g)) < 12) return v("xMonths", Math.round(D / l), y);
-            var M = x % 12,
+                M = Math.round(b / 60) - w;
+            if (M < 2) return f.includeSeconds ? b < 5 ? v("lessThanXSeconds", 5, y) : b < 10 ? v("lessThanXSeconds", 10, y) : b < 20 ? v("lessThanXSeconds", 20, y) : b < 40 ? v("halfAMinute", null, y) : v(b < 60 ? "lessThanXMinutes" : "xMinutes", 1, y) : 0 === M ? v("lessThanXMinutes", 1, y) : v("xMinutes", M, y);
+            if (M < 45) return v("xMinutes", M, y);
+            if (M < 90) return v("aboutXHours", 1, y);
+            if (M < s) return v("aboutXHours", Math.round(M / 60), y);
+            if (M < c) return v("xDays", 1, y);
+            if (M < l) return v("xDays", Math.round(M / s), y);
+            if (M < d) return x = Math.round(M / l), v("aboutXMonths", x, y);
+            if ((x = o(h, g)) < 12) return v("xMonths", Math.round(M / l), y);
+            var D = x % 12,
                 T = Math.floor(x / 12);
-            return M < 3 ? v("aboutXYears", T, y) : M < 9 ? v("overXYears", T, y) : v("almostXYears", T + 1, y)
+            return D < 3 ? v("aboutXYears", T, y) : D < 9 ? v("overXYears", T, y) : v("almostXYears", T + 1, y)
         }
     },
     nZeo: function(e, t, n) {
@@ -2545,16 +2545,16 @@ webpackJsonp([45], {
                 comparison: d
             };
             d > 0 ? (p = a(e), v = a(t)) : (p = a(t), v = a(e));
-            var h, y, x, b, w, D = Math[l.partialMethod ? String(l.partialMethod) : "floor"],
-                M = i(v, p),
+            var h, y, x, b, w, M = Math[l.partialMethod ? String(l.partialMethod) : "floor"],
+                D = i(v, p),
                 T = v.getTimezoneOffset() - p.getTimezoneOffset(),
-                S = D(M / 60) - T;
-            if ("s" === (h = l.unit ? String(l.unit) : S < 1 ? "s" : S < 60 ? "m" : S < u ? "h" : S < s ? "d" : S < c ? "M" : "Y")) return m("xSeconds", M, g);
-            if ("m" === h) return m("xMinutes", S, g);
-            if ("h" === h) return y = D(S / 60), m("xHours", y, g);
-            if ("d" === h) return x = D(S / u), m("xDays", x, g);
-            if ("M" === h) return b = D(S / s), m("xMonths", b, g);
-            if ("Y" === h) return w = D(S / c), m("xYears", w, g);
+                E = M(D / 60) - T;
+            if ("s" === (h = l.unit ? String(l.unit) : E < 1 ? "s" : E < 60 ? "m" : E < u ? "h" : E < s ? "d" : E < c ? "M" : "Y")) return m("xSeconds", D, g);
+            if ("m" === h) return m("xMinutes", E, g);
+            if ("h" === h) return y = M(E / 60), m("xHours", y, g);
+            if ("d" === h) return x = M(E / u), m("xDays", x, g);
+            if ("M" === h) return b = M(E / s), m("xMonths", b, g);
+            if ("Y" === h) return w = M(E / c), m("xYears", w, g);
             throw new Error("Unknown unit: " + h)
         }
     },
@@ -2831,20 +2831,20 @@ webpackJsonp([45], {
             x = /^(\d{2}([.,]\d*)?)$/,
             b = /^(\d{2}):?(\d{2}([.,]\d*)?)$/,
             w = /^(\d{2}):?(\d{2}):?(\d{2}([.,]\d*)?)$/,
-            D = /([Z+-].*)$/,
-            M = /^(Z)$/,
+            M = /([Z+-].*)$/,
+            D = /^(Z)$/,
             T = /^([+-])(\d{2})$/,
-            S = /^([+-])(\d{2}):?(\d{2})$/;
+            E = /^([+-])(\d{2}):?(\d{2})$/;
         e.exports = function(e, t) {
             if (a(e)) return new Date(e.getTime());
             if ("string" != typeof e) return new Date(e);
             var n = (t || {}).additionalDigits;
             n = null == n ? u : Number(n);
-            var E = function(e) {
+            var S = function(e) {
                     var t, n = {},
                         r = e.split(s);
                     if (c.test(r[0]) ? (n.date = null, t = r[0]) : (n.date = r[0], t = r[1]), t) {
-                        var a = D.exec(t);
+                        var a = M.exec(t);
                         a ? (n.time = t.replace(a[1], ""), n.timezone = a[1]) : n.time = t
                     }
                     return n
@@ -2869,7 +2869,7 @@ webpackJsonp([45], {
                     return {
                         year: null
                     }
-                }(E.date, n),
+                }(S.date, n),
                 k = O.year,
                 A = function(e, t) {
                     if (null === t) return null;
@@ -2897,7 +2897,7 @@ webpackJsonp([45], {
             if (A) {
                 var C, I = A.getTime(),
                     F = 0;
-                return E.time && (F = function(e) {
+                return S.time && (F = function(e) {
                     var t, n, r;
                     if (t = x.exec(e)) return (n = parseFloat(t[1].replace(",", "."))) % 24 * i;
                     if (t = b.exec(e)) return n = parseInt(t[1], 10), r = parseFloat(t[2].replace(",", ".")), n % 24 * i + r * o;
@@ -2907,10 +2907,10 @@ webpackJsonp([45], {
                         return n % 24 * i + r * o + 1e3 * a
                     }
                     return null
-                }(E.time)), E.timezone ? C = function(e) {
+                }(S.time)), S.timezone ? C = function(e) {
                     var t, n;
-                    return (t = M.exec(e)) ? 0 : (t = T.exec(e)) ? (n = 60 * parseInt(t[2], 10), "+" === t[1] ? -n : n) : (t = S.exec(e)) ? (n = 60 * parseInt(t[2], 10) + parseInt(t[3], 10), "+" === t[1] ? -n : n) : 0
-                }(E.timezone) : (C = new Date(I + F).getTimezoneOffset(), C = new Date(I + F + C * o).getTimezoneOffset()), new Date(I + F + C * o)
+                    return (t = D.exec(e)) ? 0 : (t = T.exec(e)) ? (n = 60 * parseInt(t[2], 10), "+" === t[1] ? -n : n) : (t = E.exec(e)) ? (n = 60 * parseInt(t[2], 10) + parseInt(t[3], 10), "+" === t[1] ? -n : n) : 0
+                }(S.timezone) : (C = new Date(I + F).getTimezoneOffset(), C = new Date(I + F + C * o).getTimezoneOffset()), new Date(I + F + C * o)
             }
             return new Date(e)
         }
@@ -2977,4 +2977,4 @@ webpackJsonp([45], {
         }
     }
 });
-//# sourceMappingURL=pages.payments-22062815f8eed8fd3328cbe4cd049a69.js.map
+//# sourceMappingURL=pages.payments-708a7baa6cb697e420e70bcb15ca99f4.js.map

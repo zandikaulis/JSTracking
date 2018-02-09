@@ -10,14 +10,14 @@ webpackJsonp([56], {
             c = n("TToO"),
             d = n("HW6M"),
             p = n("U7vG"),
-            m = n("6sO2"),
-            u = n("rCmJ"),
+            u = n("6sO2"),
+            m = n("rCmJ"),
             h = n("7vx8"),
             f = n("NXs7"),
             g = n("VAT8"),
-            v = n("CSlQ"),
-            k = n("Odds"),
-            _ = n("Kkxm"),
+            _ = n("CSlQ"),
+            v = n("Odds"),
+            k = n("Kkxm"),
             E = (n("e6tx"), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
@@ -45,52 +45,52 @@ webpackJsonp([56], {
                 }, t.prototype.componentDidUpdate = function() {
                     this.reportInteractive()
                 }, t.prototype.render = function() {
-                    if (this.props.data.loading || this.props.data.error) return p.createElement(k._5, null);
-                    if (this.props.isOnboarding) return p.createElement(k.Z, {
-                        display: k.L.Flex,
+                    if (this.props.data.loading || this.props.data.error) return p.createElement(v._7, null);
+                    if (this.props.isOnboarding) return p.createElement(v._1, {
+                        display: v.M.Flex,
                         className: "minimal-top-nav__user",
                         fullHeight: !0
-                    }, p.createElement(k.Z, {
-                        display: k.L.Flex,
-                        flexWrap: k.O.NoWrap,
-                        alignItems: k.c.Center,
+                    }, p.createElement(v._1, {
+                        display: v.M.Flex,
+                        flexWrap: v.P.NoWrap,
+                        alignItems: v.c.Center,
                         flexGrow: 1,
                         padding: {
                             right: 1
                         },
                         fullHeight: !0
-                    }, p.createElement(k.Z, {
+                    }, p.createElement(v._1, {
                         margin: {
                             x: 1
                         },
                         flexShrink: 0
-                    }, p.createElement(k.Z, null, p.createElement(k.l, {
+                    }, p.createElement(v._1, null, p.createElement(v.l, {
                         size: 30,
                         src: this.props.data.currentUser.profileImageURL,
                         alt: "User avatar"
-                    }))), p.createElement(k.Z, {
+                    }))), p.createElement(v._1, {
                         flexGrow: 1,
                         flexShrink: 1,
-                        flexDirection: k.N.Column,
+                        flexDirection: v.O.Column,
                         ellipsis: !0
-                    }, p.createElement(k._21, {
+                    }, p.createElement(v._23, {
                         className: "minimal-top-nav__username"
                     }, this.props.data.currentUser.displayName))));
                     if (this.props.isLoggedIn) {
                         var e = null;
-                        this.props.darkModeEnabled && (e = p.createElement(k._21, {
+                        this.props.darkModeEnabled && (e = p.createElement(v._23, {
                             borderBottom: !0,
                             margin: {
                                 y: 1
                             }
-                        }, p.createElement(k.Z, {
+                        }, p.createElement(v._1, {
                             margin: {
                                 x: 2,
                                 bottom: 1
                             }
-                        }, p.createElement(k.H, {
+                        }, p.createElement(v.H, {
                             id: "dark-mode-toggle",
-                            label: Object(m.d)("Dark Mode", "MinimalUser"),
+                            label: Object(u.d)("Dark Mode", "MinimalUser"),
                             "data-a-target": "dark-mode-toggle",
                             "data-test-selector": "dark-mode-toggle",
                             "data-a-value": this.props.theme,
@@ -105,87 +105,87 @@ webpackJsonp([56], {
                             }, {
                                 "minimal-top-nav__dropdown": !this.state.dropdownOpen
                             });
-                        return p.createElement(u.a, {
+                        return p.createElement(m.a, {
                             onClickOut: this.onClickOut,
                             className: t
-                        }, p.createElement(k.Z, {
-                            display: k.L.Flex,
+                        }, p.createElement(v._1, {
+                            display: v.M.Flex,
                             className: "minimal-top-nav__user",
                             fullHeight: !0
-                        }, p.createElement(k.X, {
+                        }, p.createElement(v.Z, {
                             onClick: this.onCardClick,
                             "data-test-selector": "user-menu-toggle"
-                        }, p.createElement(k.Z, {
-                            display: k.L.Flex,
-                            flexWrap: k.O.NoWrap,
-                            alignItems: k.c.Center,
+                        }, p.createElement(v._1, {
+                            display: v.M.Flex,
+                            flexWrap: v.P.NoWrap,
+                            alignItems: v.c.Center,
                             flexGrow: 1,
                             padding: {
                                 right: 1
                             },
                             fullHeight: !0
-                        }, p.createElement(k.Z, {
+                        }, p.createElement(v._1, {
                             margin: {
                                 x: 1
                             },
                             flexShrink: 0
-                        }, p.createElement(k.Z, null, p.createElement(k.l, {
+                        }, p.createElement(v._1, null, p.createElement(v.l, {
                             size: 30,
                             src: this.props.data.currentUser.profileImageURL,
                             alt: "User avatar"
-                        }))), p.createElement(k.Z, {
+                        }))), p.createElement(v._1, {
                             flexGrow: 1,
                             flexShrink: 1,
-                            flexDirection: k.N.Column,
+                            flexDirection: v.O.Column,
                             ellipsis: !0
-                        }, p.createElement(k._21, {
+                        }, p.createElement(v._23, {
                             className: "minimal-top-nav__username"
-                        }, this.props.data.currentUser.displayName)), p.createElement(k._21, {
-                            display: k.L.Flex,
+                        }, this.props.data.currentUser.displayName)), p.createElement(v._23, {
+                            display: v.M.Flex,
                             flexShrink: 0,
                             className: "minimal-top-nav__expand"
-                        }, p.createElement(k._12, {
-                            asset: k._13.GlyphArrDown
-                        }))))), p.createElement(k._21, {
+                        }, p.createElement(v._14, {
+                            asset: v._15.GlyphArrDown
+                        }))))), p.createElement(v._23, {
                             fullWidth: !0,
-                            overflow: k._2.Hidden,
-                            position: k._6.Absolute,
+                            overflow: v._4.Hidden,
+                            position: v._8.Absolute,
                             padding: {
                                 y: 1
                             },
-                            background: k.m.Base,
+                            background: v.m.Base,
                             className: n,
                             "data-test-selector": "dropdown-down"
-                        }, e, p.createElement(k.X, {
+                        }, e, p.createElement(v.Z, {
                             onClick: this.onLogoutClick
-                        }, p.createElement(k._21, {
-                            color: k.I.Alt,
-                            display: k.L.Flex,
-                            alignItems: k.c.Center,
+                        }, p.createElement(v._23, {
+                            color: v.I.Alt,
+                            display: v.M.Flex,
+                            alignItems: v.c.Center,
                             padding: {
                                 x: 2,
                                 y: .5
                             }
-                        }, p.createElement(k.Z, {
-                            display: k.L.Flex,
-                            alignItems: k.c.Center,
+                        }, p.createElement(v._1, {
+                            display: v.M.Flex,
+                            alignItems: v.c.Center,
                             margin: {
                                 right: 1
                             }
-                        }, p.createElement(k._12, {
-                            asset: k._13.NavLogout,
+                        }, p.createElement(v._14, {
+                            asset: v._15.NavLogout,
                             height: 18,
                             width: 18
-                        })), p.createElement(k._25, null, Object(m.d)("Log Out", "MinimalUser"))))))
+                        })), p.createElement(v._27, null, Object(u.d)("Log Out", "MinimalUser"))))))
                     }
-                    return p.createElement(k.Z, {
+                    return p.createElement(v._1, {
                         margin: 1
-                    }, p.createElement(k.u, {
+                    }, p.createElement(v.u, {
                         onClick: this.onLoginClick
-                    }, Object(m.d)("Log in", "MinimalUser")))
+                    }, Object(u.d)("Log in", "MinimalUser")))
                 }, t.prototype.reportInteractive = function() {
                     !this.props.data || this.props.data.loading && !this.props.data.error || this.props.latencyTracking.reportInteractive()
-                }, t = c.__decorate([Object(v.d)("MinimalUser"), Object(h.a)(_)], t)
+                }, t = c.__decorate([Object(_.d)("MinimalUser"), Object(h.a)(k)], t)
             }(p.Component)),
             b = Object(a.b)(function(e) {
                 return {
@@ -229,8 +229,8 @@ webpackJsonp([56], {
             c = n("ZyA2"),
             d = n("VAT8"),
             p = n("tnNl"),
-            m = n("Odds"),
-            u = s.a.wrap(function() {
+            u = n("Odds"),
+            m = s.a.wrap(function() {
                 return n.e(74).then(n.bind(null, "HQb3"))
             }, "BitsLandingPage"),
             h = function(e) {
@@ -238,10 +238,10 @@ webpackJsonp([56], {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return o.__extends(t, e), t.prototype.render = function() {
-                    return l.createElement(m.Z, {
+                    return l.createElement(u._1, {
                         className: "bits-root " + Object(d.c)(this.props.theme),
-                        position: m._6.Absolute,
-                        overflow: m._2.Hidden,
+                        position: u._8.Absolute,
+                        overflow: u._4.Hidden,
                         attachRight: !0,
                         attachTop: !0,
                         attachBottom: !0,
@@ -251,14 +251,14 @@ webpackJsonp([56], {
                         }
                     }, l.createElement(p.a, {
                         darkModeEnabled: !0
-                    }), l.createElement(m.Z, {
-                        display: m.L.Flex,
-                        flexWrap: m.O.NoWrap,
+                    }), l.createElement(u._1, {
+                        display: u.M.Flex,
+                        flexWrap: u.P.NoWrap,
                         fullHeight: !0,
-                        position: m._6.Relative
-                    }, l.createElement(m.U, {
-                        display: m.L.Flex,
-                        position: m._6.Relative,
+                        position: u._8.Relative
+                    }, l.createElement(u.V, {
+                        display: u.M.Flex,
+                        position: u._8.Relative,
                         flexGrow: 1,
                         fullHeight: !0,
                         fullWidth: !0
@@ -266,7 +266,7 @@ webpackJsonp([56], {
                         className: "bits-root__main"
                     }, l.createElement(r.d, {
                         path: "/bits",
-                        component: u
+                        component: m
                     }))), l.createElement(c.a, null)))
                 }, t
             }(l.Component),
@@ -381,38 +381,9 @@ webpackJsonp([56], {
     e6tx: function(e, t) {},
     rCmJ: function(e, t, n) {
         "use strict";
-        var a = n("TToO"),
-            r = n("U7vG"),
-            i = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.setContainerRef = function(e) {
-                        t.container = e
-                    }, t.handleGlobalClick = function(e) {
-                        var n = e.target;
-                        t.isParentOf(n) || t.props.onClickOut(e)
-                    }, t
-                }
-                return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                    document.addEventListener("click", this.handleGlobalClick, !0)
-                }, t.prototype.componentWillUnmount = function() {
-                    document.removeEventListener("click", this.handleGlobalClick, !0)
-                }, t.prototype.render = function() {
-                    var e = this.props,
-                        t = (e.onClickOut, a.__rest(e, ["onClickOut"]));
-                    return r.createElement("div", a.__assign({}, t, {
-                        ref: this.setContainerRef
-                    }), this.props.children)
-                }, t.prototype.isParentOf = function(e) {
-                    for (var t = e; t;) {
-                        if (t === this.container) return !0;
-                        t = t.parentElement
-                    }
-                    return !1
-                }, t
-            }(r.Component);
+        var a = n("zgdU");
         n.d(t, "a", function() {
-            return i
+            return a.a
         })
     },
     tnNl: function(e, t, n) {
@@ -429,21 +400,21 @@ webpackJsonp([56], {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(c.U, {
-                        position: c._6.Fixed,
+                    return r.createElement(c.V, {
+                        position: c._8.Fixed,
                         attachTop: !0,
                         fullWidth: !0
                     }, r.createElement("nav", {
                         className: "minimal-top-nav"
-                    }, r.createElement(c.Z, {
+                    }, r.createElement(c._1, {
                         className: "minimal-top-nav__menu",
-                        display: c.L.Flex,
+                        display: c.M.Flex,
                         alignItems: c.c.Stretch,
-                        flexWrap: c.O.NoWrap,
+                        flexWrap: c.P.NoWrap,
                         fullHeight: !0,
-                        justifyContent: c.Y.Between
-                    }, r.createElement(c.U, {
-                        display: c.L.InlineFlex,
+                        justifyContent: c._0.Between
+                    }, r.createElement(c.V, {
+                        display: c.M.InlineFlex,
                         alignItems: c.c.Center,
                         flexShrink: 0
                     }, r.createElement(i.a, {
@@ -455,8 +426,8 @@ webpackJsonp([56], {
                             }
                         },
                         className: "minimal-top-nav__home-link"
-                    }, r.createElement(c._12, {
-                        asset: c._13.LogoTwitch,
+                    }, r.createElement(c._14, {
+                        asset: c._15.LogoTwitch,
                         width: 94,
                         height: 32
                     }))), r.createElement(s.a, {
@@ -522,6 +493,42 @@ webpackJsonp([56], {
             i = n("6WAQ"),
             o = n("NikC"),
             l = n("vH/s")
+    },
+    zgdU: function(e, t, n) {
+        "use strict";
+        n.d(t, "a", function() {
+            return i
+        });
+        var a = n("TToO"),
+            r = n("U7vG"),
+            i = (n.n(r), function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.setContainerRef = function(e) {
+                        t.container = e
+                    }, t.handleGlobalClick = function(e) {
+                        var n = e.target;
+                        t.isParentOf(n) || t.props.onClickOut(e)
+                    }, t
+                }
+                return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                    document.addEventListener("click", this.handleGlobalClick, !0)
+                }, t.prototype.componentWillUnmount = function() {
+                    document.removeEventListener("click", this.handleGlobalClick, !0)
+                }, t.prototype.render = function() {
+                    var e = this.props,
+                        t = (e.onClickOut, a.__rest(e, ["onClickOut"]));
+                    return r.createElement("div", a.__assign({}, t, {
+                        ref: this.setContainerRef
+                    }), this.props.children)
+                }, t.prototype.isParentOf = function(e) {
+                    for (var t = e; t;) {
+                        if (t === this.container) return !0;
+                        t = t.parentElement
+                    }
+                    return !1
+                }, t
+            }(r.Component))
     }
 });
-//# sourceMappingURL=pages.bits-79d0436993fb5008bdb769d4f4736707.js.map
+//# sourceMappingURL=pages.bits-449528b87ddae56ba0e0f31e7b990c83.js.map

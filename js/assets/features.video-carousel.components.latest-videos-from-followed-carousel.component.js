@@ -240,22 +240,22 @@ webpackJsonp([78], {
                 }, t.prototype.componentWillUnmount = function() {
                     this.unregisterScrollHandler && this.unregisterScrollHandler()
                 }, t.prototype.render = function() {
-                    return c.createElement(v.U, a.__assign({}, this.props, {
+                    return c.createElement(v.V, a.__assign({}, this.props, {
                         margin: {
                             bottom: 2,
                             top: 1
                         },
-                        position: v._6.Relative
+                        position: v._8.Relative
                     }), c.createElement("div", {
                         className: "video-carousel",
                         ref: this.refHandler
-                    }, c.createElement(v.Z, {
+                    }, c.createElement(v._1, {
                         className: "video-carousel__child-container",
-                        overflow: v._2.Hidden,
-                        position: v._6.Relative,
+                        overflow: v._4.Hidden,
+                        position: v._8.Relative,
                         fullWidth: !0,
                         "data-test-selector": "child-container"
-                    }, c.createElement(v.U, {
+                    }, c.createElement(v.V, {
                         margin: {
                             bottom: 3
                         }
@@ -265,17 +265,17 @@ webpackJsonp([78], {
                             transform: this.transformString()
                         },
                         "data-test-selector": "carousel-body"
-                    }, c.createElement(v._36, {
+                    }, c.createElement(v._38, {
                         noWrap: !0,
                         noGrow: !0,
-                        childWidth: this.props.videoCardSize || v._37.Large,
-                        gutterSize: v._38.Small,
+                        childWidth: this.props.videoCardSize || v._39.Large,
+                        gutterSize: v._40.Small,
                         "data-js-selector": h
-                    }, this.getVideoCards())))), c.createElement(v.Z, {
+                    }, this.getVideoCards())))), c.createElement(v._1, {
                         className: "video-carousel__nav",
-                        display: v.L.Flex,
+                        display: v.M.Flex,
                         alignItems: v.c.Center,
-                        position: v._6.Absolute,
+                        position: v._8.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
                         fullHeight: !0
@@ -283,11 +283,11 @@ webpackJsonp([78], {
                         direction: k.DirectionPrevious,
                         disabled: !this.state.childrenRendered || this.isBackButtonDisabled(),
                         onClickHandler: this.moveCarouselBackward
-                    })), c.createElement(v.Z, {
+                    })), c.createElement(v._1, {
                         className: "video-carousel__nav",
-                        display: v.L.Flex,
+                        display: v.M.Flex,
                         alignItems: v.c.Center,
-                        position: v._6.Absolute,
+                        position: v._8.Absolute,
                         attachTop: !0,
                         attachRight: !0,
                         fullHeight: !0
@@ -334,25 +334,25 @@ webpackJsonp([78], {
                 DirectionPrevious: "previous",
                 DirectionNext: "next"
             },
-            C = (i = {}, i[k.DirectionPrevious] = "previous", i[k.DirectionNext] = "next", i),
-            _ = (r = {}, r[k.DirectionPrevious] = v._13.AngleLeft, r[k.DirectionNext] = v._13.AngleRight, r),
+            _ = (i = {}, i[k.DirectionPrevious] = "previous", i[k.DirectionNext] = "next", i),
+            C = (r = {}, r[k.DirectionPrevious] = v._15.AngleLeft, r[k.DirectionNext] = v._15.AngleRight, r),
             b = function(e) {
-                var t = C[e.direction],
+                var t = _[e.direction],
                     n = (r = {}, r[k.DirectionPrevious] = Object(l.d)("previous", "CarouselNavButton"), r[k.DirectionNext] = Object(l.d)("next", "CarouselNavButton"), r),
                     i = s("video-carousel__button", "video-carousel__button--" + t, {
                         "video-carousel__button--disabled": e.disabled
                     });
-                return c.createElement(v.Z, {
+                return c.createElement(v._1, {
                     className: i,
-                    position: v._6.Relative,
-                    display: v.L.Flex,
+                    position: v._8.Relative,
+                    display: v.M.Flex,
                     alignItems: v.c.Stretch
                 }, c.createElement(v.v, {
                     "data-test-selector": t + "-button",
                     onClick: e.onClickHandler,
                     disabled: e.disabled,
                     ariaLabel: n[e.direction],
-                    icon: _[e.direction],
+                    icon: C[e.direction],
                     size: v.x.Large
                 }));
                 var r
@@ -396,14 +396,14 @@ webpackJsonp([78], {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     var e = this.props.data && !this.props.data.loading && this.props.data.currentUser && Object(l.a)(this.props.data.currentUser.followedVideos) || null;
-                    return !this.props.data || this.props.data.loading || e && 0 !== e.length ? r.createElement(u.Z, null, r.createElement(u.Z, {
+                    return !this.props.data || this.props.data.loading || e && 0 !== e.length ? r.createElement(u._1, null, r.createElement(u._1, {
                         padding: {
                             bottom: 1
                         }
-                    }, r.createElement(u._25, {
-                        type: u._30.H4,
-                        fontSize: u.P.Size5,
-                        transform: u._29.Uppercase,
+                    }, r.createElement(u._27, {
+                        type: u._32.H4,
+                        fontSize: u.Q.Size5,
+                        transform: u._31.Uppercase,
                         color: u.I.Alt2
                     }, Object(a.d)("Latest videos", "LatestVideosFromFollowedCarousel"))), r.createElement(c.a, {
                         currentlyWatchingVideoID: this.props.currentlyWatchingVideoID,
@@ -414,7 +414,7 @@ webpackJsonp([78], {
                             medium: this.props.tracking.medium,
                             source: {}
                         },
-                        videoCardSize: u._37.Medium,
+                        videoCardSize: u._39.Medium,
                         videos: e
                     })) : null
                 }, t
@@ -433,4 +433,4 @@ webpackJsonp([78], {
     },
     yF7E: function(e, t) {}
 });
-//# sourceMappingURL=features.video-carousel.components.latest-videos-from-followed-carousel.component-01ce6f632a740cd20ec30e5f3a4b2dd5.js.map
+//# sourceMappingURL=features.video-carousel.components.latest-videos-from-followed-carousel.component-0cce31db90e8020f3d1002f68bb4a12b.js.map

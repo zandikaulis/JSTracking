@@ -2195,7 +2195,7 @@ webpackJsonp([64], {
                             screenX: o + n.clientX,
                             screenY: i + n.clientY
                         }))
-                    }, 1e3), n.destroy = function() {
+                    }, 1e3), n.isVisible = !0, n.destroy = function() {
                         n.unsetupListeners(), n.contextManager.destroy(), n.coordinator.destroy(), n.iframe.remove()
                     }, n.linkIdentity = function() {
                         var e = n.extension.clientId,
@@ -2206,8 +2206,6 @@ webpackJsonp([64], {
                                 extension_interaction: "grant"
                             })
                         })
-                    }, n.setGame = function(e) {
-                        n.contextManager.setGame(e)
                     }, n.unlinkIdentity = function() {
                         var e = n.extension.clientId,
                             t = a.tokenManager.getToken(e);
@@ -2226,6 +2224,12 @@ webpackJsonp([64], {
                                 pct_view_visible: 75,
                                 px_view_visible: Math.floor(75 * t / 100)
                             }), n.hasSentViewEvent = !0)
+                        }
+                    }, n.setVisible = function(e) {
+                        if (n.hasLoaded && n.isVisible !== e) {
+                            n.isVisible = e;
+                            var t = e ? n.contextManager.context : null;
+                            n.coordinator.sendVisibilityChanged(e, t)
                         }
                     }, n.buildTracker = function() {
                         var e = n.params;
@@ -2277,21 +2281,21 @@ webpackJsonp([64], {
                             i = document.createElement("iframe");
                         switch (i.setAttribute("class", e), i.setAttribute("sandbox", x.join(" ")), i.setAttribute("frameBorder", "0"), i.setAttribute("scrolling", "no"), i.setAttribute("src", d.supervisor.supervisorURL), o) {
                             case "viewer":
-                                n.applyAnchorAttributes(i, t), n.applyViewerPanelWhitelist(i);
+                                n.applyAnchorAttributes(i, t), n.applyViewerSandboxAttrs(i);
                                 break;
                             case "dashboard":
                                 var s = n.extension.panelHeight || 300;
-                                i.setAttribute("style", "height: " + s + "px;"), n.applyConfigWhitelist(i);
+                                i.setAttribute("style", "height: " + s + "px;"), n.applyConfigSandboxAttrs(i);
                                 break;
                             case "config":
-                                i.setAttribute("style", "width: 100%; height: " + E + "px;"), n.applyConfigWhitelist(i)
+                                i.setAttribute("style", "width: 100%; height: " + E + "px;"), n.applyConfigSandboxAttrs(i)
                         }
                         return i.style.display = "none", i
                     }, n.initSupervisedExtension = function() {
                         var e, t;
                         switch (n.params.mode) {
                             case "viewer":
-                                e = n.extension.viewerUrl, t = n.getViewerPanelWhiteList();
+                                e = n.extension.viewerUrl, t = n.createViewerSandboxAttrs();
                                 break;
                             case "dashboard":
                                 e = n.extension.liveConfigUrl, t = n.getConfigWhitelist();
@@ -2340,7 +2344,7 @@ webpackJsonp([64], {
                     }, n.sendBootstrap = function(e) {
                         n.hasBootstrapped = !0, n.sendIdentityLinkUpdate(e), n.coordinator.sendExtensionBootstrap(n.getExtensionAuth())
                     }, n.sendIdentityLinkUpdate = function(e) {
-                        var t = e.isUserLoggedIn && !e.isBroadcaster && (e.isLinked || n.extension.requestIdentityLink);
+                        var t = e.isUserLoggedIn && n.canRequestIdLink;
                         n.emit(u.ExtensionFrameEvents.IdentityLinked, e.isLinked, t)
                     }, n.beginPurchase = function(e) {
                         var t = e.payload.sku,
@@ -2361,7 +2365,7 @@ webpackJsonp([64], {
                                 vendor_code: r,
                                 sku: o.sku
                             };
-                            n.tracker.trackEvent("extension_start_buy", i), n.onBeginPurchase(n.formatExensionProductForDisplay(o), function() {
+                            n.tracker.trackEvent("extension_start_buy", i), n.onBeginPurchase(n.formatExtensionProductForDisplay(o), function() {
                                 return n.tracker.trackEvent("extension_confirm_buy", i), Promise.resolve().then(function() {
                                     n.linkIdentity()
                                 }).then(function() {
@@ -2369,6 +2373,8 @@ webpackJsonp([64], {
                                 })
                             })
                         })
+                    }, n.onContextUpdate = function(e, t) {
+                        n.isVisible && n.coordinator.sendContext(e, t)
                     }, n.setupListeners = function() {
                         n.eventListeners = [{
                             target: n.iframe,
@@ -2376,9 +2382,9 @@ webpackJsonp([64], {
                             callback: n.onMouseEnter.bind(n)
                         }], n.eventListeners.forEach(function(e) {
                             e.target.addEventListener(e.event, e.callback)
-                        }), n.contextManager.on("context", n.coordinator.sendContext), n.coordinator.on(u.SupervisorAction.SupervisorReady, n.initSupervisedExtension), n.coordinator.on(u.ExtensionAction.TwitchExtLoaded, n.onExtensionLoaded), n.coordinator.on(u.ExtensionAction.TwitchExtNetworkTiming, n.onExtensionNetworkTraffic), n.coordinator.on(u.ExtensionAction.TwitchExtUserAction, n.onExtensionUserAction), n.registerFunctionModals(), n.onBeginPurchase && n.coordinator.on(u.ExtensionAction.TwitchExtBeginPurchase, n.beginPurchase), a.tokenManager.subscribe(n.extension.clientId, n.handleToken);
+                        }), n.contextManager.on("context", n.onContextUpdate), n.coordinator.on(u.SupervisorAction.SupervisorReady, n.initSupervisedExtension), n.coordinator.on(u.ExtensionAction.TwitchExtLoaded, n.onExtensionLoaded), n.coordinator.on(u.ExtensionAction.TwitchExtNetworkTiming, n.onExtensionNetworkTraffic), n.coordinator.on(u.ExtensionAction.TwitchExtUserAction, n.onExtensionUserAction), n.onBeginPurchase && n.coordinator.on(u.ExtensionAction.TwitchExtBeginPurchase, n.beginPurchase), a.tokenManager.subscribe(n.extension.clientId, n.handleToken);
                         var e = a.tokenManager.getToken(n.extension.clientId);
-                        e.isNearExpiration || n.handleToken(e, e)
+                        e && !e.isNearExpiration && n.handleToken(e, e)
                     }, n.reloadExtension = function() {
                         n.hasLoaded = !1, n.hasBootstrapped = !1, n.coordinator.sendExtensionReloadMessage()
                     }, n.unsetupListeners = function() {
@@ -2386,7 +2392,7 @@ webpackJsonp([64], {
                             e.target.removeEventListener(e.event, e.callback)
                         }), n.contextManager.off("context", n.coordinator.sendContext), n.coordinator.off(u.ExtensionAction.TwitchExtLoaded, n.onExtensionLoaded), n.coordinator.off(u.ExtensionAction.TwitchExtNetworkTiming, n.onExtensionNetworkTraffic), n.coordinator.off(u.ExtensionAction.TwitchExtUserAction, n.onExtensionUserAction), n.unregisterFunctionModals(), a.tokenManager.unsubscribe(n.extension.clientId, n.handleToken)
                     }, n.registerFunctionModals = function() {
-                        n.functionManager.registerFunctionModal(u.FunctionAction.FollowAction, new g.FollowModal(n.params.loginId, n.tracker)), n.extension.requestIdentityLink && n.functionManager.registerFunctionModal(u.FunctionAction.IdShareRequest, new b.SimpleRequestModal)
+                        n.functionManager.registerFunctionModal(u.FunctionAction.FollowAction, new g.FollowModal(n.params.loginId, n.tracker)), n.canRequestIdLink && n.functionManager.registerFunctionModal(u.FunctionAction.IdShareRequest, new b.SimpleRequestModal)
                     }, n.unregisterFunctionModals = function() {
                         n.functionManager.unregisterFunctionModal(u.FunctionAction.FollowAction)
                     }, n.handlePurchaseCompleted = function(e) {
@@ -2396,7 +2402,7 @@ webpackJsonp([64], {
                                 return e.sku === t
                             }) && n.coordinator.sendExtensionReloadEntitlementsMessage()
                         })
-                    }, n.params = t, n.iframe = n.createSupervisorIFrame(t.iframeClassName, n.extension.anchor, n.extensionOptions), void 0 !== t.onBeginPurchase && (n.onBeginPurchase = t.onBeginPurchase), n.setupListeners(), n.tracker.trackEvent("extension_render", {}), t.parentElement.appendChild(n.iframe), n.visibilityChanged(), n.params.loginId && _.extensionService.onPurchaseCompleted(n.params.loginId, n.handlePurchaseCompleted), n
+                    }, n.params = t, n.iframe = n.createSupervisorIFrame(t.iframeClassName, n.extension.anchor, n.extensionOptions), void 0 !== t.onBeginPurchase && (n.onBeginPurchase = t.onBeginPurchase), n.setupListeners(), n.extension.token && !a.tokenManager.getToken(n.extension.clientId) && a.tokenManager.registerToken(n.extension.clientId, n.extension.token), n.registerFunctionModals(), n.tracker.trackEvent("extension_render", {}), t.parentElement.appendChild(n.iframe), n.visibilityChanged(), n.params.loginId && _.extensionService.onPurchaseCompleted(n.params.loginId, n.handlePurchaseCompleted), n
                 }
                 return w(t, e), Object.defineProperty(t.prototype, "tracker", {
                     get: function() {
@@ -2424,12 +2430,13 @@ webpackJsonp([64], {
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "extensionOptions", {
                     get: function() {
-                        return {
+                        var e = {
                             anchor: this.extension.anchor,
                             language: this.language,
                             mode: this.params.mode,
                             state: c.ExtensionStateMap[this.extension.state]
-                        }
+                        };
+                        return this.params.platform && (e.platform = this.params.platform), e
                     },
                     enumerable: !0,
                     configurable: !0
@@ -2457,16 +2464,28 @@ webpackJsonp([64], {
                     },
                     enumerable: !0,
                     configurable: !0
-                }), t.prototype.getViewerPanelWhiteList = function() {
+                }), Object.defineProperty(t.prototype, "canRequestIdLink", {
+                    get: function() {
+                        var e = a.tokenManager.getToken(this.extension.clientId);
+                        return !e.isBroadcaster && (e.isLinked || this.extension.requestIdentityLink)
+                    },
+                    enumerable: !0,
+                    configurable: !0
+                }), t.prototype.createViewerSandboxAttrs = function() {
                     var e = this.params.mode,
                         t = this.extension,
-                        n = t.whitelistedPanelUrls;
-                    return "panel" === t.anchor && n.length && "viewer" === e ? x.concat(["allow-popups", "allow-popups-to-escape-sandbox"]).join(" ") : x.join(" ")
+                        n = t.whitelistedPanelUrls,
+                        r = t.anchor,
+                        o = function(e) {
+                            return [137512364, 188863650, 188864445, 190160460, 192718746, 138600360, 138601808].indexOf(e) > -1
+                        }(this.params.channelId),
+                        i = "panel" === r && n.length && "viewer" === e;
+                    return o || i ? x.concat(["allow-popups", "allow-popups-to-escape-sandbox"]).join(" ") : x.join(" ")
                 }, t.prototype.getConfigWhitelist = function() {
                     return this.extension.whitelistedConfigUrls.length ? x.concat(["allow-popups", "allow-popups-to-escape-sandbox"]).join(" ") : x.join(" ")
-                }, t.prototype.applyViewerPanelWhitelist = function(e) {
-                    e.setAttribute("sandbox", this.getViewerPanelWhiteList())
-                }, t.prototype.applyConfigWhitelist = function(e) {
+                }, t.prototype.applyViewerSandboxAttrs = function(e) {
+                    e.setAttribute("sandbox", this.createViewerSandboxAttrs())
+                }, t.prototype.applyConfigSandboxAttrs = function(e) {
                     e.setAttribute("sandbox", this.getConfigWhitelist())
                 }, Object.defineProperty(t.prototype, "extensionProducts", {
                     get: function() {
@@ -2481,7 +2500,7 @@ webpackJsonp([64], {
                     },
                     enumerable: !0,
                     configurable: !0
-                }), t.prototype.formatExensionProductForDisplay = function(e) {
+                }), t.prototype.formatExtensionProductForDisplay = function(e) {
                     return {
                         description: e.description,
                         developerName: e.developer_name,
@@ -3118,10 +3137,13 @@ webpackJsonp([64], {
                         "Content-Type": "application/json",
                         "Client-ID": this.clientId
                     }, this.setApiOptions = function(t) {
-                        e.apiUrl = t.apiUrl ? t.apiUrl : e.apiUrl
+                        e.apiUrl = t.apiUrl ? t.apiUrl : e.apiUrl, e.authToken = t.authToken ? t.authToken : null
                     }
                 }
                 return e.prototype.tokenRequest = function() {
+                    if (this.authToken) return Promise.resolve({
+                        token: this.authToken
+                    });
                     var e = this.tokenRequestCache;
                     if (!e) {
                         var t = new Headers(this.defaultHeaders),
@@ -10502,7 +10524,7 @@ webpackJsonp([64], {
         }(o || (t.ExtensionMode = o = {}));
         var i = t.ExtensionAction = void 0;
         ! function(e) {
-            e.TwitchExtAuth = "twitch-ext-auth", e.TwitchExtBootstrap = "twitch-ext-bootstrap", e.TwitchExtContext = "twitch-ext-context", e.TwitchExtError = "twitch-ext-error", e.TwitchExtLoaded = "twitch-ext-loaded", e.TwitchExtNetworkTiming = "twitch-ext-network-timing", e.TwitchExtReload = "twitch-ext-reload", e.TwitchExtUserAction = "twitch-ext-user-action", e.TwitchExtConfirmationRequest = "twitch-ext-confirmation-request", e.TwitchExtBeginPurchase = "twitch-ext-begin-purchase", e.TwitchExtReloadEntitlements = "twitch-ext-reload-entitlements", e.TwitchExtProductPrices = "twitch-ext-product-prices"
+            e.TwitchExtAuth = "twitch-ext-auth", e.TwitchExtBootstrap = "twitch-ext-bootstrap", e.TwitchExtContext = "twitch-ext-context", e.TwitchExtError = "twitch-ext-error", e.TwitchExtLoaded = "twitch-ext-loaded", e.TwitchExtNetworkTiming = "twitch-ext-network-timing", e.TwitchExtReload = "twitch-ext-reload", e.TwitchExtUserAction = "twitch-ext-user-action", e.TwitchExtConfirmationRequest = "twitch-ext-confirmation-request", e.TwitchExtBeginPurchase = "twitch-ext-begin-purchase", e.TwitchExtReloadEntitlements = "twitch-ext-reload-entitlements", e.TwitchExtProductPrices = "twitch-ext-product-prices", e.TwitchExtVisibilityChanged = "twitch-ext-visibility-changed"
         }(i || (t.ExtensionAction = i = {}))
     },
     DuR2: function(e, t) {
@@ -14225,6 +14247,12 @@ webpackJsonp([64], {
                         n.sendMessage({
                             action: r.ExtensionAction.TwitchExtReloadEntitlements
                         })
+                    }, n.sendVisibilityChanged = function(e, t) {
+                        n.sendMessage({
+                            action: r.ExtensionAction.TwitchExtVisibilityChanged,
+                            isVisible: e,
+                            context: t
+                        })
                     }, n.handleMessage = function(e) {
                         var t = e.source,
                             r = e.data;
@@ -15001,7 +15029,8 @@ webpackJsonp([64], {
         var r = n("JNfv"),
             o = n("BwgW"),
             i = n("MSsg"),
-            s = function() {
+            s = n("fjcJ"),
+            a = function() {
                 var e = Object.setPrototypeOf || {
                     __proto__: []
                 }
@@ -15017,39 +15046,60 @@ webpackJsonp([64], {
                     e(t, n), t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r)
                 }
             }(),
-            a = t.DEFAULT_LANGUAGE = "en",
-            u = function(e) {
-                function t(t, n) {
-                    void 0 === n && (n = a);
-                    var r = e.call(this) || this;
-                    return r.extensionMode = t, r.language = n, r.context = {}, r.isContextInitialized = !1, r.currentGame = "", r.destroy = function() {
-                        o.extensionService.off(i.EVENT_PLAYER_CONTEXT_UPDATE, r.updateLocalContext)
-                    }, r.initializeContext = function() {
-                        r.isContextInitialized = !0, r.updateLocalContext()
-                    }, r.setGame = function(e) {
-                        r.currentGame = e, r.updateLocalContext()
-                    }, r.refreshContext = function() {
-                        var e = o.extensionService.player,
-                            t = {
-                                mode: r.extensionMode,
-                                language: r.language
-                            };
-                        if ("viewer" === r.extensionMode && (t.game = r.currentGame), "viewer" === r.extensionMode && e) {
-                            var n = e.getPlaybackStats();
-                            t.bitrate = n.playbackRate, t.bufferSize = n.bufferSize, t.displayResolution = n.displayResolution, t.hlsLatencyBroadcaster = n.hlsLatencyBroadcaster, t.isFullScreen = e.getFullscreen(), t.isPaused = e.isPaused(), t.isTheatreMode = e.getTheatre(), t.videoResolution = n.videoResolution
-                        }
-                        return t
-                    }, r.updateLocalContext = function() {
-                        var e = r.refreshContext(),
-                            t = Object.keys(e).reduce(function(t, n) {
-                                return r.context[n] !== e[n] && t.push(n), t
-                            }, []);
-                        r.isContextInitialized && t.length > 0 && (r.context = e, r.emit("context", r.context, t))
-                    }, o.extensionService.on(i.EVENT_PLAYER_CONTEXT_UPDATE, r.updateLocalContext), r
+            u = Object.assign || function(e) {
+                for (var t, n = 1, r = arguments.length; n < r; n++) {
+                    t = arguments[n];
+                    for (var o in t) Object.prototype.hasOwnProperty.call(t, o) && (e[o] = t[o])
                 }
-                return s(t, e), t
+                return e
+            },
+            c = t.DEFAULT_LANGUAGE = "en",
+            l = function(e) {
+                function t(t, n) {
+                    void 0 === n && (n = c);
+                    var r = e.call(this) || this;
+                    return r.extensionMode = t, r.language = n, r.context = {}, r.isContextInitialized = !1, r.destroy = function() {
+                        o.extensionService.off(i.EVENT_PLAYER_CONTEXT_UPDATE, r.updateLocalContext), o.extensionService.off(i.EVENT_CONTEXT_UPDATE, r.updateLocalContext)
+                    }, r.initializeContext = function() {
+                        r.isContextInitialized = !0, r.emit("context", r.context, Object.keys(r.context))
+                    }, r.getPlayerContext = function() {
+                        var e = o.extensionService.player;
+                        if (!e) return {};
+                        var t = e.getPlaybackStats();
+                        return {
+                            bitrate: t.playbackRate,
+                            bufferSize: t.bufferSize,
+                            displayResolution: t.displayResolution,
+                            hlsLatencyBroadcaster: t.hlsLatencyBroadcaster,
+                            isFullScreen: e.getFullscreen(),
+                            isPaused: e.isPaused(),
+                            isTheatreMode: e.getTheatre(),
+                            videoResolution: t.videoResolution
+                        }
+                    }, r.getBaseContext = function() {
+                        return {
+                            mode: r.extensionMode,
+                            language: r.language
+                        }
+                    }, r.updateLocalContext = function(e) {
+                        void 0 === e && (e = {});
+                        var t = u({}, r.context, e, r.getPlayerContext(), r.getBaseContext());
+                        void 0 !== t.theme && (t.theme = r.translateTheme(t.theme)), r.diffAndEmitContext(t)
+                    }, r.diffAndEmitContext = function(e) {
+                        var t = r.context;
+                        if (r.context = e, r.isContextInitialized) {
+                            var n = Object.keys(e).reduce(function(n, r) {
+                                return t[r] !== e[r] && n.push(r), n
+                            }, []);
+                            n.length > 0 && r.emit("context", e, n)
+                        }
+                    }, r.translateTheme = function(e) {
+                        return "number" == typeof e ? s.TWILIGHT_THEME_MAP[e] || s.Theme.Light : e
+                    }, o.extensionService.on(i.EVENT_PLAYER_CONTEXT_UPDATE, r.updateLocalContext), o.extensionService.on(i.EVENT_CONTEXT_UPDATE, r.updateLocalContext), r.context = r.getBaseContext(), r.context.theme = (0, s.getTheme)(), "viewer" === t && (r.context.game = ""), r
+                }
+                return a(t, e), t
             }(r.EventEmitter2);
-        t.ContextManager = u
+        t.ContextManager = l
     },
     "KFm+": function(e, t, n) {
         "use strict";
@@ -15965,7 +16015,7 @@ webpackJsonp([64], {
         "use strict";
         Object.defineProperty(t, "__esModule", {
             value: !0
-        }), t.extensionService = t.ExtensionService = t.EVENT_PLAYER_CONTEXT_UPDATE = void 0;
+        }), t.extensionService = t.ExtensionService = t.EVENT_CONTEXT_UPDATE = t.EVENT_PLAYER_CONTEXT_UPDATE = void 0;
         var r = n("2R7C"),
             o = n("yqgX"),
             i = n("8WNk"),
@@ -15992,7 +16042,8 @@ webpackJsonp([64], {
                 }
             }(),
             h = t.EVENT_PLAYER_CONTEXT_UPDATE = "playercontext",
-            d = function(e) {
+            d = t.EVENT_CONTEXT_UPDATE = "contextupdate",
+            y = function(e) {
                 function t(t) {
                     var n = e.call(this) || this;
                     return n.currentControlHandlers = {
@@ -16000,10 +16051,17 @@ webpackJsonp([64], {
                         onDestroyExtension: function() {}
                     }, n.currentExtensionUnsubscribes = (0, o.dict)(), n.hasPurchaseCompletedSubscriptionList = (0, o.dict)(), n.onPlayerContextUpdate = function() {
                         n.emit(h)
+                    }, n.onTwilightContextUpdate = function(e) {
+                        n.emit(d, e)
                     }, n.onExtensionControlMessage = function(e) {
                         switch (e.status) {
                             case "activate":
-                                n.currentControlHandlers.onShouldFetchExtensions();
+                                if (e.maxDelayMS > 0) {
+                                    var t = Math.random() * e.maxDelayMS;
+                                    setTimeout(function() {
+                                        n.currentControlHandlers.onShouldFetchExtensions()
+                                    }, t)
+                                } else n.currentControlHandlers.onShouldFetchExtensions();
                                 break;
                             case "deactivate":
                             case "uninstall":
@@ -16019,19 +16077,23 @@ webpackJsonp([64], {
                 return p(t, e), t.prototype.getInstalledExtensions = function(e) {
                     var t = this;
                     return (0, c.getExtensionsForChannel)(e).then(function(e) {
-                        return a.tokenManager.setClockSkew(e.issued_at), e.tokens.forEach(function(n) {
-                            var r = e.installed_extensions.reduce(function(e, t) {
-                                    var r = t.extension,
-                                        o = t.installation_status;
-                                    return e || (r.id === n.extension_id ? "active" === o.activation_state : e)
-                                }, !1),
-                                o = new u.Token(n.token).isBroadcaster;
-                            (r || o) && (a.tokenManager.registerToken(n.extension_id, n.token), t.subscribeToMassExtensionControl(n.extension_id))
-                        }), e
+                        return t.registerExtensionInstallations(e)
                     })
+                }, t.prototype.registerExtensionInstallations = function(e) {
+                    var t = this;
+                    return a.tokenManager.setClockSkew(e.issued_at), e.tokens.forEach(function(n) {
+                        var r = e.installed_extensions.reduce(function(e, t) {
+                                var r = t.extension,
+                                    o = t.installation_status;
+                                return e || (r.id === n.extension_id ? "active" === o.activation_state : e)
+                            }, !1),
+                            o = new u.Token(n.token).isBroadcaster;
+                        (r || o) && (a.tokenManager.registerToken(n.extension_id, n.token), t.subscribeToMassExtensionControl(n.extension_id))
+                    }), e
                 }, t.prototype.setEnvironmentOptions = function(e) {
-                    e.env && (this.pubsub.setEnvironment(this.getPubsubEnvironment(e.env)), i.supervisor.environment = e.env), e.apiUrl && r.api.setApiOptions({
-                        apiUrl: e.apiUrl
+                    e.env && (this.pubsub.setEnvironment(this.getPubsubEnvironment(e.env)), i.supervisor.environment = e.env), r.api.setApiOptions({
+                        apiUrl: e.apiUrl,
+                        authToken: e.authToken
                     })
                 }, t.prototype.subscribeToExtensionControl = function(e, t) {
                     e !== this.currentChannelId && this.unsubscribeFromExtensionControl(this.currentChannelId), this.currentChannelId = e, this.currentControlHandlers = t, this.currentChannelUnsubscribe = this.pubsub.subscribe({
@@ -16052,6 +16114,22 @@ webpackJsonp([64], {
                     this.player = e, (0, f.isVideoPlayer)(this.player) && this.player.setStatsEnabled(!0), this.player.addEventListener("pause", this.onPlayerContextUpdate), this.player.addEventListener("play", this.onPlayerContextUpdate), this.player.addEventListener("statsupdate", this.onPlayerContextUpdate)
                 }, t.prototype.unregisterPlayer = function() {
                     this.player && ((0, f.isVideoPlayer)(this.player) && this.player.setStatsEnabled(!1), this.player.removeEventListener("pause", this.onPlayerContextUpdate), this.player.removeEventListener("play", this.onPlayerContextUpdate), this.player.removeEventListener("statsupdate", this.onPlayerContextUpdate), this.player = void 0)
+                }, t.prototype.setPlayerWindow = function(e) {
+                    this.playerWindow = e
+                }, t.prototype.postContext = function(e) {
+                    this.playerWindow && this.playerWindow.postMessage({
+                        event: d,
+                        context: e
+                    }, "*"), this.emit(d, e)
+                }, t.prototype.listenForContext = function() {
+                    var e = this;
+                    window.addEventListener("message", function(t) {
+                        var n = t.data;
+                        if (t.origin === window.location.origin && n.event && n.event === d) {
+                            var r = n.context;
+                            e.onTwilightContextUpdate(r)
+                        }
+                    }, !1)
                 }, t.prototype.onPurchaseCompleted = function(e, t) {
                     var n = this,
                         o = "purchase-completed." + e;
@@ -16079,8 +16157,8 @@ webpackJsonp([64], {
                     }))
                 }, t
             }(l.EventEmitter2);
-        t.ExtensionService = d;
-        t.extensionService = new d
+        t.ExtensionService = y;
+        t.extensionService = new y
     },
     MWDd: function(e, t, n) {
         "use strict";
@@ -27482,6 +27560,32 @@ webpackJsonp([64], {
             return r(e, !1)
         }
     },
+    fjcJ: function(e, t, n) {
+        "use strict";
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }), t.getTheme = function() {
+            var e = window.localStorage.getItem("twilight.theme");
+            if (e) return o[e];
+            if (e = window.localStorage.getItem("storage:theme")) {
+                var t = JSON.parse(e);
+                if (t.activeTheme) return i[t.activeTheme] || r.Light
+            }
+            return r.Light
+        };
+        var r = t.Theme = void 0;
+        ! function(e) {
+            e.Light = "light", e.Dark = "dark"
+        }(r || (t.Theme = r = {}));
+        var o = t.TWILIGHT_THEME_MAP = {
+                0: r.Light,
+                1: r.Dark
+            },
+            i = {
+                "": r.Light,
+                "theme--dark": r.Dark
+            }
+    },
     fzFz: function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
@@ -33294,7 +33398,7 @@ webpackJsonp([64], {
                     var e = this;
                     this.clockSkew = 0, this.tokens = {}, this.timers = {}, this.tokenEmitter = new r.EventEmitter2, this.clearTokenManager = function() {
                         e.clockSkew = 0, e.tokenEmitter.removeAllListeners();
-                        for (var t in e.timers) e.timers[t] && e.timers[t] && (clearTimeout(e.timers[t]), delete e.timers[t])
+                        for (var t in e.tokens) e.tokens[t] && (delete e.tokens[t], e.timers[t] && (clearTimeout(e.timers[t]), delete e.timers[t]))
                     }, this.getToken = function(t) {
                         return e.tokens[t]
                     }, this.registerToken = function(t, n) {
@@ -35527,7 +35631,7 @@ webpackJsonp([64], {
             return a
         }), n.d(t, !1, function() {
             return s
-        }), n.d(t, !1, function() {
+        }), n.d(t, "d", function() {
             return h
         }), n.d(t, !1, function() {
             return o
@@ -37210,4 +37314,4 @@ webpackJsonp([64], {
         e.exports = l
     }
 });
-//# sourceMappingURL=vendor-586256c7d16c0108b6ff474808264cae.js.map
+//# sourceMappingURL=vendor-5a5aa919f41cb12fa7628c7756711191.js.map
