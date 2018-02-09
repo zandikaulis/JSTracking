@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".2bfd17db29efc4cc7d5c.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".e70d60c33b330ef1c894.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -3780,7 +3780,7 @@
                     prev_quality: s.current,
                     new_quality: e,
                     serving_id: o.serving_id
-                }), n({
+                }), e !== k && n(Object(p.F)(!0)), n({
                     type: v,
                     quality: e,
                     bitrate: t
@@ -8953,7 +8953,7 @@
                                 i = n[1],
                                 a = n[2],
                                 u = {};
-                            return u.rtqos = i, u.fast_bread = "treatment" === a && o.a.chrome, e._restrictedBitrates = JSON.parse(r.token).chansub.restricted_bitrates, u
+                            return u.rtqos = i, u.fast_bread = "control" !== a && o.a.chrome, e._restrictedBitrates = JSON.parse(r.token).chansub.restricted_bitrates, u
                         })
                     }
                 }, {
@@ -9459,12 +9459,28 @@
             var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : m,
                 t = arguments[1];
             switch (t.type) {
-                case c.e:
-                    return o()({}, e, u()(t.playback, k));
+                case d.a:
+                    return o()({}, e, {
+                        transitionScheme: h
+                    });
+                case d.d:
+                    return o()({}, e, {
+                        transitionScheme: p
+                    });
+                case d.e:
+                    return o()({}, e, {
+                        transitionScheme: h
+                    });
+                case d.h:
+                    return o()({}, e, {
+                        transitionScheme: p
+                    });
                 case l.a:
                     return t.stream === f.b ? o()({}, e, w, {
                         paused: !1
                     }) : o()({}, e, w);
+                case c.e:
+                    return o()({}, e, u()(t.playback, k));
                 case c.k:
                     return o()({}, e, y, _);
                 case c.t:
@@ -9525,22 +9541,6 @@
                     });
                 case c.b:
                     return o()({}, e, _);
-                case d.d:
-                    return o()({}, e, {
-                        transitionScheme: p
-                    });
-                case d.e:
-                    return o()({}, e, {
-                        transitionScheme: h
-                    });
-                case d.h:
-                    return o()({}, e, {
-                        transitionScheme: p
-                    });
-                case d.a:
-                    return o()({}, e, {
-                        transitionScheme: h
-                    });
                 case c.g:
                     return o()({}, e, {
                         playbackRate: t.playbackRate
@@ -27989,7 +27989,7 @@
                     u = ko.a(!0),
                     c = Po.v() === Po.k ? null : jo;
                 return {
-                    app_version: "2018.02.09-183506+ce414caf57c4e712eee89c8bc046176185d84814",
+                    app_version: "2018.02.09-193719+76b98f5b59916f92c8449076eb0c478acb00475a",
                     flash_version: r,
                     referrer_url: i,
                     referrer_host: a.host,
