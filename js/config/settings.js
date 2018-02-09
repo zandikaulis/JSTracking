@@ -64,7 +64,7 @@ window.__twilightSettings = {
     "twilight_video_manager_public": false,
     "twilight_video_manager_staff": true,
     "update_chunks": ["core.css", "core.js", "pages.anon-front.js", "pages.browse.js", "pages.channel.js", "pages.directory-game.js", "pages.following.js", "pages.front.js", "vendor.js"],
-    "update_manager_enabled": true,
+    "update_manager_enabled": false,
     "viewer_milestones_enabled": true,
     "experiments": {
         "011d1499-61b3-49b2-92b2-b2ffd353ef00": {
