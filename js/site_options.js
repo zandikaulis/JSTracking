@@ -1504,6 +1504,18 @@ window.SiteOptions = {
                 "value": "streams"
             }]
         },
+        "47e578cf-6e7a-47ea-ba0d-5fb6a51a3b1d": {
+            "name": "android_extensions_dev_release",
+            "v": 3039,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
         "48ec769e-fc80-4464-8b89-b95f9654f7ea": {
             "name": "android_videoplayer_v2",
             "v": 2315,
