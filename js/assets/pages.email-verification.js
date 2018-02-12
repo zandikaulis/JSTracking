@@ -161,9 +161,9 @@ webpackJsonp([60], {
                 }, t.prototype.render = function() {
                     return n.createElement(f._1, {
                         padding: 3
-                    }, n.createElement(f._27, {
+                    }, n.createElement(f._34, {
                         className: "title",
-                        type: f._32.H2
+                        type: f._39.H2
                     }, Object(a.d)("Email Verification", "EmailVerification")), this.renderVerificationStatus())
                 }, t.prototype.renderVerificationStatus = function() {
                     if (this.state.isLoading) return n.createElement(f._1, {
@@ -171,8 +171,8 @@ webpackJsonp([60], {
                             top: 1
                         },
                         "data-test-selector": "verify-loading"
-                    }, n.createElement(f._27, {
-                        type: f._32.Strong
+                    }, n.createElement(f._34, {
+                        type: f._39.Strong
                     }, Object(a.d)("Verifying Email...", "EmailVerification")));
                     if (this.state.isEmailVerified) return n.createElement(f._1, {
                         margin: {
@@ -188,9 +188,9 @@ webpackJsonp([60], {
                             top: 1
                         },
                         "data-test-selector": "verify-error"
-                    }, n.createElement(f._27, {
+                    }, n.createElement(f._34, {
                         color: f.I.Error,
-                        type: f._32.Strong
+                        type: f._39.Strong
                     }, e))
                 }, t.prototype.maybeGetLocalizedErrorMessage = function(e) {
                     return e ? "Not Found" === e ? Object(a.d)("Not Found", "EmailVerification") : e : Object(a.d)("Unknown Error", "EmailVerification")
@@ -319,4 +319,4 @@ webpackJsonp([60], {
         })
     }
 });
-//# sourceMappingURL=pages.email-verification-09da35f1c6fb94ad35de7e9002f5c066.js.map
+//# sourceMappingURL=pages.email-verification-ae81489d72183e6426d2e5b0831d8a52.js.map

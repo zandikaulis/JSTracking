@@ -77,7 +77,7 @@ webpackJsonp([54], {
                         className: "language-select-menu__balloon"
                     }, s.createElement(v._1, {
                         padding: .5
-                    }, Object(p.b)().map(this.renderLanguageOption))), s.createElement(v._23, {
+                    }, Object(p.b)().map(this.renderLanguageOption))), s.createElement(v._24, {
                         background: v.m.Alt,
                         borderTop: !0,
                         className: "language-select-menu__footer"
@@ -111,11 +111,11 @@ webpackJsonp([54], {
                 flexDirection: o.O.Column,
                 justifyContent: o._0.Center,
                 display: o.M.Flex
-            }, i.createElement(o._27, {
+            }, i.createElement(o._34, {
                 color: o.I.Link,
                 fontSize: o.Q.Size4,
                 noWrap: !0
-            }, Object(r.d)("View All", "Following--ViewAllButton")), i.createElement(o._27, {
+            }, Object(r.d)("View All", "Following--ViewAllButton")), i.createElement(o._34, {
                 color: o.I.Alt2,
                 fontSize: o.Q.Size4,
                 noWrap: !0
@@ -129,7 +129,7 @@ webpackJsonp([54], {
                 "data-test-selector": s
             }, i.createElement(o._1, null, i.createElement(o.j, {
                 ratio: e.aspectRatio
-            }, i.createElement(o._23, {
+            }, i.createElement(o._24, {
                 background: o.m.Alt2,
                 fullHeight: !0
             }, t))))
@@ -435,9 +435,9 @@ webpackJsonp([54], {
                         video: t
                     }))
                 });
-                return a.createElement(d._38, {
-                    gutterSize: d._40.Small,
-                    childWidth: e.videoCardSize || d._39.Large,
+                return a.createElement(d._45, {
+                    gutterSize: d._47.Small,
+                    childWidth: e.videoCardSize || d._46.Large,
                     placeholderItems: 20
                 }, t, n)
             },
@@ -539,11 +539,11 @@ webpackJsonp([54], {
                             margin: {
                                 bottom: 2
                             }
-                        }, a.createElement(u._27, {
-                            type: u._32.H4,
+                        }, a.createElement(u._34, {
+                            type: u._39.H4,
                             color: u.I.Alt2,
                             fontSize: u.Q.Size5,
-                            transform: u._31.Uppercase
+                            transform: u._38.Uppercase
                         }, Object(r.d)("Based on your viewing history", "SuggestedVideos"))),
                         t = [];
                     if (this.props.data.currentUser.recommendations.videos && (t = this.props.data.currentUser.recommendations.videos.edges.map(function(e) {
@@ -555,7 +555,7 @@ webpackJsonp([54], {
                     return a.createElement("div", null, e, a.createElement(c.b, {
                         trackingMedium: l.PageviewMedium.Following,
                         trackingContent: l.PageviewContent.SuggestedVideos,
-                        videoCardSize: u._39.Medium,
+                        videoCardSize: u._46.Medium,
                         videos: t
                     }))
                 }, t = i.__decorate([Object(o.a)(p, {
@@ -945,9 +945,9 @@ webpackJsonp([54], {
                     margin: {
                         top: 1
                     }
-                }, i.createElement(a._27, null, i.createElement(a._7, {
+                }, i.createElement(a._34, null, i.createElement(a._7, {
                     width: 150
-                })), i.createElement(a._27, {
+                })), i.createElement(a._34, {
                     fontSize: a.Q.Size7
                 }, i.createElement(a._7, {
                     width: 100
@@ -1018,38 +1018,38 @@ webpackJsonp([54], {
                         onClick: this.onClickHandler,
                         onMouseEnter: this.onMouseEnterHandler,
                         onMouseLeave: this.onMouseLeaveHandler
-                    }, Object(p._45)(this.props)), o.createElement(p.A, null, o.createElement(p._1, {
+                    }, Object(p._52)(this.props)), o.createElement(p.A, null, o.createElement(p._1, {
                         fullWidth: !0
                     }, o.createElement(p.j, {
                         overflow: !0
-                    }, o.createElement("div", null, o.createElement(p._23, {
+                    }, o.createElement("div", null, o.createElement(p._24, {
                         display: p.M.InlineFlex,
                         position: p._8.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
                         margin: .5,
-                        zIndex: p._44.Default,
+                        zIndex: p._51.Default,
                         fontSize: p.Q.Size6,
                         background: p.m.Overlay,
                         color: p.I.Overlay,
                         className: "video-preview-card__preview-overlay-stat"
-                    }, o.createElement(p._22, {
+                    }, o.createElement(p._23, {
                         "data-test-selector": "video-view-count",
                         icon: p._15.GlyphViews,
                         label: Object(s.d)("views", "VideoPreviewCard"),
                         value: Object(s.f)(this.props.video.viewCount)
-                    })), o.createElement(p._23, {
+                    })), o.createElement(p._24, {
                         display: p.M.InlineFlex,
                         position: p._8.Absolute,
                         attachTop: !0,
                         attachRight: !0,
                         margin: .5,
-                        zIndex: p._44.Default,
+                        zIndex: p._51.Default,
                         fontSize: p.Q.Size6,
                         background: p.m.Overlay,
                         color: p.I.Overlay,
                         className: "video-preview-card__preview-overlay-stat"
-                    }, o.createElement(p._22, {
+                    }, o.createElement(p._23, {
                         "data-test-selector": "video-length",
                         icon: p._15.GlyphLength,
                         label: Object(s.d)("length", "VideoPreviewCard"),
@@ -1128,9 +1128,9 @@ webpackJsonp([54], {
                         }
                     }, o.createElement("figure", {
                         className: "video-preview-card__game-art"
-                    }, o.createElement(p._35, {
+                    }, o.createElement(p._42, {
                         display: p.M.Block,
-                        direction: p._37.Bottom,
+                        direction: p._44.Bottom,
                         label: e.name
                     }, o.createElement("div", {
                         className: n,
@@ -1164,7 +1164,7 @@ webpackJsonp([54], {
                         "data-test-selector": "video-title",
                         overflow: p._4.Hidden,
                         position: p._8.Relative
-                    }, o.createElement(p._27, {
+                    }, o.createElement(p._34, {
                         color: p.I.Base,
                         fontSize: p.Q.Size5,
                         lineHeight: p._2.Heading
@@ -1181,8 +1181,8 @@ webpackJsonp([54], {
                         flexShrink: 0,
                         flexGrow: 0,
                         ellipsis: !0
-                    }, o.createElement(p._27, {
-                        type: p._32.Span,
+                    }, o.createElement(p._34, {
+                        type: p._39.Span,
                         color: p.I.Alt2,
                         ellipsis: !0,
                         title: this.formatTitle(e)
@@ -1375,8 +1375,8 @@ webpackJsonp([54], {
                         margin: {
                             bottom: 2
                         }
-                    }, d.createElement(_._27, {
-                        type: _._32.H4,
+                    }, d.createElement(_._34, {
+                        type: _._39.H4,
                         color: _.I.Alt2,
                         fontSize: _.Q.Size5
                     }, Object(u.d)("Oops, viewing history failed to load. Check out some other videos you might like:", "FinishWatchingPage"))), d.createElement(f.a, {
@@ -1392,8 +1392,8 @@ webpackJsonp([54], {
                             margin: {
                                 bottom: 2
                             }
-                        }, d.createElement(_._27, {
-                            type: _._32.H4,
+                        }, d.createElement(_._34, {
+                            type: _._39.H4,
                             color: _.I.Alt2,
                             fontSize: _.Q.Size5
                         }, Object(u.d)("You haven't watched any videos yet! Here are some to start you off:", "FinishWatchingPage"))), d.createElement(f.a, {
@@ -1419,11 +1419,11 @@ webpackJsonp([54], {
                         margin: {
                             bottom: 2
                         }
-                    }, d.createElement(_._27, {
-                        type: _._32.H2,
+                    }, d.createElement(_._34, {
+                        type: _._39.H2,
                         color: _.I.Alt2,
                         fontSize: _.Q.Size4,
-                        transform: _._31.Uppercase
+                        transform: _._38.Uppercase
                     }, Object(u.d)("Viewing History", "FinishWatchingPage"))), e)
                 }, t.prototype.onRender = function() {
                     this.props.data.loading || (this.props.data.currentUser && u.n.setPageTitle(Object(u.d)("{currentUser} - Viewing History", {
@@ -1716,4 +1716,4 @@ webpackJsonp([54], {
     },
     vQzq: function(e, t) {}
 });
-//# sourceMappingURL=pages.finish-watching-70fa8b83f2f327dd1c9940580f935515.js.map
+//# sourceMappingURL=pages.finish-watching-e6b32cd096ff3f6e1cb9ab0f6ebfe7a7.js.map

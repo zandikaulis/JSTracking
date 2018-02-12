@@ -31,7 +31,7 @@ webpackJsonp([55], {
                             }
                         }, c.createElement(h.j, {
                             ratio: h.k.Aspect1x1
-                        }, c.createElement(h._23, {
+                        }, c.createElement(h._24, {
                             fullHeight: !0,
                             fullWidth: !0,
                             display: h.M.Flex,
@@ -44,8 +44,8 @@ webpackJsonp([55], {
                             src: e.imageURL,
                             title: e.title,
                             alt: e.title
-                        })))), c.createElement(h._27, {
-                            type: h._32.Strong
+                        })))), c.createElement(h._34, {
+                            type: h._39.Strong
                         }, e.title))
                     }, t
                 }
@@ -69,17 +69,17 @@ webpackJsonp([55], {
                         margin: {
                             right: 1
                         }
-                    }, c.createElement(h._27, {
-                        type: h._32.H3
-                    }, Object(d.d)("Badges from Crates", "BadgesList"))), c.createElement(h._27, {
-                        type: h._32.H3,
+                    }, c.createElement(h._34, {
+                        type: h._39.H3
+                    }, Object(d.d)("Badges from Crates", "BadgesList"))), c.createElement(h._34, {
+                        type: h._39.H3,
                         color: h.I.Alt2
                     }, Object(d.e)(e.length))), c.createElement(h._1, {
                         margin: {
                             bottom: 1
                         }
-                    }, c.createElement(h._27, null, Object(d.d)('You can find your chat badge in Chat Settings under "Edit Appearance".', "BadgesList"))), c.createElement(h._38, {
-                        childWidth: h._39.Small,
+                    }, c.createElement(h._34, null, Object(d.d)('You can find your chat badge in Chat Settings under "Edit Appearance".', "BadgesList"))), c.createElement(h._45, {
+                        childWidth: h._46.Small,
                         placeholderItems: 8
                     }, t))
                 }, t
@@ -100,7 +100,7 @@ webpackJsonp([55], {
                             "data-open-url": e.openURL
                         }, c.createElement(h.j, {
                             ratio: h.k.Aspect1x1
-                        }, c.createElement(h._23, {
+                        }, c.createElement(h._24, {
                             fullHeight: !0,
                             fullWidth: !0,
                             display: h.M.Flex,
@@ -112,7 +112,7 @@ webpackJsonp([55], {
                         }, c.createElement("img", {
                             alt: Object(d.d)("Crate", "CratesList"),
                             src: e.iconURL
-                        })))), c.createElement(h._27, null, "Open Now")))
+                        })))), c.createElement(h._34, null, "Open Now")))
                     }, t.handleOpenClick = function(e) {
                         ! function(e, t) {
                             var n = window.open(e, "Twitch", "width=1024,height=600,scrollbars=yes");
@@ -145,13 +145,13 @@ webpackJsonp([55], {
                         margin: {
                             right: 1
                         }
-                    }, c.createElement(h._27, {
-                        type: h._32.H3
-                    }, Object(d.d)("Twitch Crates", "CratesList"))), c.createElement(h._27, {
-                        type: h._32.H3,
+                    }, c.createElement(h._34, {
+                        type: h._39.H3
+                    }, Object(d.d)("Twitch Crates", "CratesList"))), c.createElement(h._34, {
+                        type: h._39.H3,
                         color: h.I.Alt2
-                    }, Object(d.e)(e.length))), c.createElement(h._38, {
-                        childWidth: h._39.Small,
+                    }, Object(d.e)(e.length))), c.createElement(h._45, {
+                        childWidth: h._46.Small,
                         placeholderItems: 8
                     }, t))
                 }, t
@@ -184,7 +184,7 @@ webpackJsonp([55], {
                             },
                             display: h.M.InlineFlex,
                             flexDirection: h.O.Column
-                        }, c.createElement(h._23, {
+                        }, c.createElement(h._24, {
                             fullHeight: !0,
                             fullWidth: !0,
                             display: h.M.Flex,
@@ -198,7 +198,7 @@ webpackJsonp([55], {
                             padding: {
                                 y: .5
                             }
-                        }, c.createElement(h._27, {
+                        }, c.createElement(h._34, {
                             bold: !0,
                             ellipsis: !0
                         }, e.node.game.name)))
@@ -229,16 +229,16 @@ webpackJsonp([55], {
                         margin: {
                             right: 1
                         }
-                    }, c.createElement(h._27, {
-                        type: h._32.H3
-                    }, Object(d.d)("Drops", "DropsList"))), c.createElement(h._27, {
-                        type: h._32.H3,
+                    }, c.createElement(h._34, {
+                        type: h._39.H3
+                    }, Object(d.d)("Drops", "DropsList"))), c.createElement(h._34, {
+                        type: h._39.H3,
                         color: h.I.Alt2
                     }, Object(d.e)(t.length))), c.createElement(h._1, {
                         margin: {
                             bottom: 1
                         }
-                    }, c.createElement(h._27, null, this.getDropsDescription(t))), n)
+                    }, c.createElement(h._34, null, this.getDropsDescription(t))), n)
                 }, t.prototype.postRender = function() {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
                 }, t = l.__decorate([Object(u.a)(S)], t)
@@ -258,7 +258,7 @@ webpackJsonp([55], {
                             }
                         }, c.createElement(h.j, {
                             ratio: h.k.Aspect1x1
-                        }, c.createElement(h._23, {
+                        }, c.createElement(h._24, {
                             fullHeight: !0,
                             fullWidth: !0,
                             display: h.M.Flex,
@@ -271,8 +271,8 @@ webpackJsonp([55], {
                             src: n,
                             title: t.displayName,
                             alt: t.displayName
-                        })))), c.createElement(h._27, {
-                            type: h._32.Strong
+                        })))), c.createElement(h._34, {
+                            type: h._39.Strong
                         }, t.displayName))
                     }, t
                 }
@@ -308,17 +308,17 @@ webpackJsonp([55], {
                         margin: {
                             right: 1
                         }
-                    }, c.createElement(h._27, {
-                        type: h._32.H3
-                    }, Object(d.d)("Emotes from Crates", "EmoticonsList"))), c.createElement(h._27, {
-                        type: h._32.H3,
+                    }, c.createElement(h._34, {
+                        type: h._39.H3
+                    }, Object(d.d)("Emotes from Crates", "EmoticonsList"))), c.createElement(h._34, {
+                        type: h._39.H3,
                         color: h.I.Alt2
                     }, Object(d.e)(t.length))), c.createElement(h._1, {
                         margin: {
                             bottom: 1
                         }
-                    }, c.createElement(h._27, null, Object(d.d)("You can find your new emote in the emote selector for Chat, Pulse, Feeds, and Whispers.", "EmoticonsList"))), c.createElement(h._38, {
-                        childWidth: h._39.Small,
+                    }, c.createElement(h._34, null, Object(d.d)("You can find your new emote in the emote selector for Chat, Pulse, Feeds, and Whispers.", "EmoticonsList"))), c.createElement(h._45, {
+                        childWidth: h._46.Small,
                         placeholderItems: 8
                     }, t))
                 }, t
@@ -336,7 +336,7 @@ webpackJsonp([55], {
                 }
                 return l.__extends(t, e), t.prototype.render = function() {
                     var e = Object(d.d)("Inventory", "InventoryTitleBar");
-                    if (this.props.loading) return c.createElement(h._23, {
+                    if (this.props.loading) return c.createElement(h._24, {
                         className: "title-bar",
                         display: h.M.Flex,
                         borderBottom: !0,
@@ -345,8 +345,8 @@ webpackJsonp([55], {
                         }
                     }, c.createElement(h._1, {
                         flexGrow: 1
-                    }, c.createElement(h._27, {
-                        type: h._32.H2
+                    }, c.createElement(h._34, {
+                        type: h._39.H2
                     }, e)), c.createElement(h._1, {
                         display: h.M.Flex,
                         margin: {
@@ -377,7 +377,7 @@ webpackJsonp([55], {
                                 withText: !0
                             })
                         }, "InventoryTitleBar");
-                    return c.createElement(h._23, {
+                    return c.createElement(h._24, {
                         className: "title-bar",
                         display: h.M.Flex,
                         borderBottom: !0,
@@ -386,15 +386,15 @@ webpackJsonp([55], {
                         }
                     }, c.createElement(h._1, {
                         flexGrow: 1
-                    }, c.createElement(h._27, {
-                        type: h._32.H2
+                    }, c.createElement(h._34, {
+                        type: h._39.H2
                     }, e)), c.createElement(h._1, {
                         display: h.M.Flex,
                         margin: {
                             right: 3
                         },
                         alignItems: h.c.Center
-                    }, c.createElement(h._27, null, n)), c.createElement(h._1, {
+                    }, c.createElement(h._34, null, n)), c.createElement(h._1, {
                         alignSelf: h.d.Baseline
                     }, c.createElement(w.a, null, c.createElement(h.u, {
                         type: h.z.Hollow
@@ -1092,4 +1092,4 @@ webpackJsonp([55], {
         r.definitions = r.definitions.concat(i(n("UP6l").definitions)), r.definitions = r.definitions.concat(i(n("l83l").definitions)), e.exports = r
     }
 });
-//# sourceMappingURL=pages.inventory-62ab1f4e05491abb33d37d147754639e.js.map
+//# sourceMappingURL=pages.inventory-77635c014c3b75b557e55653d73b973d.js.map

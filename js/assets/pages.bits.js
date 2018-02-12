@@ -73,12 +73,12 @@ webpackJsonp([56], {
                         flexShrink: 1,
                         flexDirection: v.O.Column,
                         ellipsis: !0
-                    }, p.createElement(v._23, {
+                    }, p.createElement(v._24, {
                         className: "minimal-top-nav__username"
                     }, this.props.data.currentUser.displayName))));
                     if (this.props.isLoggedIn) {
                         var e = null;
-                        this.props.darkModeEnabled && (e = p.createElement(v._23, {
+                        this.props.darkModeEnabled && (e = p.createElement(v._24, {
                             borderBottom: !0,
                             margin: {
                                 y: 1
@@ -138,15 +138,15 @@ webpackJsonp([56], {
                             flexShrink: 1,
                             flexDirection: v.O.Column,
                             ellipsis: !0
-                        }, p.createElement(v._23, {
+                        }, p.createElement(v._24, {
                             className: "minimal-top-nav__username"
-                        }, this.props.data.currentUser.displayName)), p.createElement(v._23, {
+                        }, this.props.data.currentUser.displayName)), p.createElement(v._24, {
                             display: v.M.Flex,
                             flexShrink: 0,
                             className: "minimal-top-nav__expand"
                         }, p.createElement(v._14, {
                             asset: v._15.GlyphArrDown
-                        }))))), p.createElement(v._23, {
+                        }))))), p.createElement(v._24, {
                             fullWidth: !0,
                             overflow: v._4.Hidden,
                             position: v._8.Absolute,
@@ -158,7 +158,7 @@ webpackJsonp([56], {
                             "data-test-selector": "dropdown-down"
                         }, e, p.createElement(v.Z, {
                             onClick: this.onLogoutClick
-                        }, p.createElement(v._23, {
+                        }, p.createElement(v._24, {
                             color: v.I.Alt,
                             display: v.M.Flex,
                             alignItems: v.c.Center,
@@ -176,7 +176,7 @@ webpackJsonp([56], {
                             asset: v._15.NavLogout,
                             height: 18,
                             width: 18
-                        })), p.createElement(v._27, null, Object(u.d)("Log Out", "MinimalUser"))))))
+                        })), p.createElement(v._34, null, Object(u.d)("Log Out", "MinimalUser"))))))
                     }
                     return p.createElement(v._1, {
                         margin: 1
@@ -231,7 +231,7 @@ webpackJsonp([56], {
             p = n("tnNl"),
             u = n("Odds"),
             m = s.a.wrap(function() {
-                return n.e(74).then(n.bind(null, "HQb3"))
+                return n.e(73).then(n.bind(null, "HQb3"))
             }, "BitsLandingPage"),
             h = function(e) {
                 function t() {
@@ -531,4 +531,4 @@ webpackJsonp([56], {
             }(r.Component))
     }
 });
-//# sourceMappingURL=pages.bits-449528b87ddae56ba0e0f31e7b990c83.js.map
+//# sourceMappingURL=pages.bits-09d8862739e8f6c535ca8e6e3457ed06.js.map

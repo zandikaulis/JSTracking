@@ -51,7 +51,7 @@ webpackJsonp([61], {
                         margin: {
                             bottom: 1
                         }
-                    }, c.createElement(k._27, {
+                    }, c.createElement(k._34, {
                         fontSize: k.Q.Size5
                     }, Object(u.d)("There was an unexpected error. Please refresh the page and try again", "ReportUserPage"))) : this.props.userToReportData && !this.props.userToReportData.loading && this.props.userToReportData.user ? c.createElement(f.a, {
                         onClose: this.handleReportUserClose,
@@ -70,7 +70,7 @@ webpackJsonp([61], {
                         margin: {
                             bottom: 1
                         }
-                    }, c.createElement(k._27, {
+                    }, c.createElement(k._34, {
                         fontSize: k.Q.Size5
                     }, Object(u.d)("You must be logged in to report {channelName}. Please log in to complete.", {
                         channelName: this.props.match.params.channelName
@@ -192,4 +192,4 @@ webpackJsonp([61], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.report-user-page-9dc1d0095c70580eebddb0a90bf3ed86.js.map
+//# sourceMappingURL=pages.report-user-page-614c5bbae0ed362576718a5c051e5d83.js.map

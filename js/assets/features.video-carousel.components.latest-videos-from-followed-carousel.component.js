@@ -1,4 +1,4 @@
-webpackJsonp([78], {
+webpackJsonp([79], {
     "97Ye": function(e, t, n) {
         var i = {
             kind: "Document",
@@ -265,11 +265,11 @@ webpackJsonp([78], {
                             transform: this.transformString()
                         },
                         "data-test-selector": "carousel-body"
-                    }, c.createElement(v._38, {
+                    }, c.createElement(v._45, {
                         noWrap: !0,
                         noGrow: !0,
-                        childWidth: this.props.videoCardSize || v._39.Large,
-                        gutterSize: v._40.Small,
+                        childWidth: this.props.videoCardSize || v._46.Large,
+                        gutterSize: v._47.Small,
                         "data-js-selector": h
                     }, this.getVideoCards())))), c.createElement(v._1, {
                         className: "video-carousel__nav",
@@ -400,10 +400,10 @@ webpackJsonp([78], {
                         padding: {
                             bottom: 1
                         }
-                    }, r.createElement(u._27, {
-                        type: u._32.H4,
+                    }, r.createElement(u._34, {
+                        type: u._39.H4,
                         fontSize: u.Q.Size5,
-                        transform: u._31.Uppercase,
+                        transform: u._38.Uppercase,
                         color: u.I.Alt2
                     }, Object(a.d)("Latest videos", "LatestVideosFromFollowedCarousel"))), r.createElement(c.a, {
                         currentlyWatchingVideoID: this.props.currentlyWatchingVideoID,
@@ -414,7 +414,7 @@ webpackJsonp([78], {
                             medium: this.props.tracking.medium,
                             source: {}
                         },
-                        videoCardSize: u._39.Medium,
+                        videoCardSize: u._46.Medium,
                         videos: e
                     })) : null
                 }, t
@@ -433,4 +433,4 @@ webpackJsonp([78], {
     },
     yF7E: function(e, t) {}
 });
-//# sourceMappingURL=features.video-carousel.components.latest-videos-from-followed-carousel.component-0cce31db90e8020f3d1002f68bb4a12b.js.map
+//# sourceMappingURL=features.video-carousel.components.latest-videos-from-followed-carousel.component-4a24c079dc9db3595ec88adde83684e0.js.map

@@ -18,8 +18,8 @@ webpackJsonp([58], {
                     return a.createElement(i.b, null, a.createElement(l._1, {
                         className: "testing-carousel",
                         padding: 3
-                    }, a.createElement(l._27, {
-                        type: l._32.H2
+                    }, a.createElement(l._34, {
+                        type: l._39.H2
                     }, "Media Carousel - Standard"), a.createElement(l._1, {
                         "data-a-target": "carousel-standard"
                     }, a.createElement(l.V, {
@@ -29,8 +29,8 @@ webpackJsonp([58], {
                         }
                     }, a.createElement(o.a, {
                         items: this.renderStandardItems()
-                    }))), a.createElement(l._27, {
-                        type: l._32.H2
+                    }))), a.createElement(l._34, {
+                        type: l._39.H2
                     }, "Media Carousel - Tiny"), a.createElement(l._1, {
                         "data-a-target": "carousel-standard-tiny"
                     }, a.createElement(l.V, {
@@ -40,8 +40,8 @@ webpackJsonp([58], {
                         }
                     }, a.createElement(o.a, {
                         items: this.renderStandardTinyItems()
-                    }))), a.createElement(l._27, {
-                        type: l._32.H2
+                    }))), a.createElement(l._34, {
+                        type: l._39.H2
                     }, "Media Carousel - HUGE"), a.createElement(l._1, {
                         "data-a-target": "carousel-standard-huge"
                     }, a.createElement(l.V, {
@@ -51,8 +51,8 @@ webpackJsonp([58], {
                         }
                     }, a.createElement(o.a, {
                         items: this.renderStandardHugeItems()
-                    }))), a.createElement(l._27, {
-                        type: l._32.H2
+                    }))), a.createElement(l._34, {
+                        type: l._39.H2
                     }, "Media Carousel - Single"), a.createElement(l._1, {
                         "data-a-target": "carousel-single"
                     }, a.createElement(l.V, {
@@ -62,8 +62,8 @@ webpackJsonp([58], {
                         }
                     }, a.createElement(o.a, {
                         items: this.renderSingleItem()
-                    }))), a.createElement(l._27, {
-                        type: l._32.H2
+                    }))), a.createElement(l._34, {
+                        type: l._39.H2
                     }, "Media Carousel - Single and HUGE"), a.createElement(l._1, {
                         "data-a-target": "carousel-single-huge"
                     }, a.createElement(l.V, {
@@ -73,8 +73,8 @@ webpackJsonp([58], {
                         }
                     }, a.createElement(o.a, {
                         items: this.renderSingleHugeItem()
-                    }))), a.createElement(l._27, {
-                        type: l._32.H2
+                    }))), a.createElement(l._34, {
+                        type: l._39.H2
                     }, "Media Carousel - Various Widths"), a.createElement(l._1, {
                         "data-a-target": "carousel-various-widths"
                     }, a.createElement(l.V, {
@@ -99,8 +99,8 @@ webpackJsonp([58], {
                                 width: 200,
                                 height: 100
                             }
-                        }, a.createElement(l._27, {
-                            type: l._32.H1,
+                        }, a.createElement(l._34, {
+                            type: l._39.H1,
                             color: l.I.Overlay
                         }, e)))
                     })
@@ -118,8 +118,8 @@ webpackJsonp([58], {
                                 width: 20,
                                 height: 100
                             }
-                        }, a.createElement(l._27, {
-                            type: l._32.H1,
+                        }, a.createElement(l._34, {
+                            type: l._39.H1,
                             color: l.I.Overlay
                         }, e)))
                     })
@@ -137,8 +137,8 @@ webpackJsonp([58], {
                                 width: 2e3,
                                 height: 100
                             }
-                        }, a.createElement(l._27, {
-                            type: l._32.H1,
+                        }, a.createElement(l._34, {
+                            type: l._39.H1,
                             color: l.I.Overlay
                         }, e)))
                     })
@@ -156,8 +156,8 @@ webpackJsonp([58], {
                                 width: 200,
                                 height: 100
                             }
-                        }, a.createElement(l._27, {
-                            type: l._32.H1,
+                        }, a.createElement(l._34, {
+                            type: l._39.H1,
                             color: l.I.Overlay
                         }, e)))
                     })
@@ -175,8 +175,8 @@ webpackJsonp([58], {
                                 width: 2e3,
                                 height: 100
                             }
-                        }, a.createElement(l._27, {
-                            type: l._32.H1,
+                        }, a.createElement(l._34, {
+                            type: l._39.H1,
                             color: l.I.Overlay
                         }, e)))
                     })
@@ -194,8 +194,8 @@ webpackJsonp([58], {
                                 width: 30 * (e + 1),
                                 height: 100
                             }
-                        }, a.createElement(l._27, {
-                            type: l._32.H1,
+                        }, a.createElement(l._34, {
+                            type: l._39.H1,
                             color: l.I.Overlay
                         }, e)))
                     })
@@ -379,4 +379,4 @@ webpackJsonp([58], {
     M4d4: function(e, t) {},
     WWVW: function(e, t) {}
 });
-//# sourceMappingURL=pages.dev-only-testing-carousel-80555e52b499e5e945be406ff7e852fb.js.map
+//# sourceMappingURL=pages.dev-only-testing-carousel-23bea37f98a8d8abe129cf19bd5d2d4d.js.map

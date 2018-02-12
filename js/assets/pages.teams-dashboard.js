@@ -6534,7 +6534,7 @@ webpackJsonp([36], {
                         attachLeft: !0,
                         fullWidth: !0,
                         fullHeight: !0,
-                        zIndex: i._44.Above
+                        zIndex: i._51.Above
                     }, r.createElement("input", {
                         "data-test-selector": "file-picker-input",
                         className: "drag-and-drop-file-picker__input",
@@ -16150,7 +16150,7 @@ webpackJsonp([36], {
                         changedSinceSubmit: !1
                     }, t.renderDescriptor = function() {
                         return t.props.descriptor.split("\n").map(function(e, t) {
-                            return c.createElement(p._27, {
+                            return c.createElement(p._34, {
                                 key: t
                             }, e)
                         })
@@ -16159,9 +16159,9 @@ webpackJsonp([36], {
                                 disabled: t.state.buttonDisabled,
                                 onClick: t.handleSubmit
                             }, t.props.buttonText),
-                            n = c.createElement(p._35, {
+                            n = c.createElement(p._42, {
                                 label: t.props.errorString,
-                                direction: p._37.Right,
+                                direction: p._44.Right,
                                 show: !0
                             }, e);
                         return t.props.errorString.length && !t.state.changedSinceSubmit ? n : e
@@ -16225,45 +16225,45 @@ webpackJsonp([36], {
                         var e = t.props.buttonConfiguration === M.AllButtons,
                             n = e || t.props.buttonConfiguration === M.MoveUpAndRemoveOnly,
                             a = e || t.props.buttonConfiguration === M.MoveDownAndRemoveOnly;
-                        return c.createElement(p._1, null, n && c.createElement(p._35, {
+                        return c.createElement(p._1, null, n && c.createElement(p._42, {
                             label: Object(m.d)("Move To Top", "TeamsDashboard"),
-                            direction: p._37.Left
+                            direction: p._44.Left
                         }, c.createElement(p.u, {
                             type: p.z.Text,
                             blurAfterClick: !0,
                             icon: p._15.ToTop,
                             onClick: t.handleOnMoveClick(r.ToTop),
                             disabled: t.props.isDisabled
-                        })), n && c.createElement(p._35, {
+                        })), n && c.createElement(p._42, {
                             label: Object(m.d)("Move Up", "TeamsDashboard"),
-                            direction: p._37.Left
+                            direction: p._44.Left
                         }, c.createElement(p.u, {
                             type: p.z.Text,
                             blurAfterClick: !0,
                             icon: p._15.ArrowUp,
                             onClick: t.handleOnMoveClick(r.Up),
                             disabled: t.props.isDisabled
-                        })), a && c.createElement(p._35, {
+                        })), a && c.createElement(p._42, {
                             label: Object(m.d)("Move Down", "TeamsDashboard"),
-                            direction: p._37.Left
+                            direction: p._44.Left
                         }, c.createElement(p.u, {
                             type: p.z.Text,
                             blurAfterClick: !0,
                             icon: p._15.ArrowDown,
                             onClick: t.handleOnMoveClick(r.Down),
                             disabled: t.props.isDisabled
-                        })), a && c.createElement(p._35, {
+                        })), a && c.createElement(p._42, {
                             label: Object(m.d)("Move To Bottom", "TeamsDashboard"),
-                            direction: p._37.Left
+                            direction: p._44.Left
                         }, c.createElement(p.u, {
                             type: p.z.Text,
                             blurAfterClick: !0,
                             icon: p._15.ToBottom,
                             onClick: t.handleOnMoveClick(r.ToBottom),
                             disabled: t.props.isDisabled
-                        })), c.createElement(p._35, {
+                        })), c.createElement(p._42, {
                             label: Object(m.d)("Remove", "TeamsDashboard"),
-                            direction: p._37.Left
+                            direction: p._44.Left
                         }, c.createElement(p.u, {
                             type: p.z.Text,
                             blurAfterClick: !0,
@@ -16295,7 +16295,7 @@ webpackJsonp([36], {
                         "data-test-selector": this.props.listItemsSelector,
                         onMouseEnter: this.handleMouseEnter,
                         onMouseLeave: this.handleMouseLeave
-                    }, c.createElement(p._23, {
+                    }, c.createElement(p._24, {
                         display: p.M.Flex,
                         flexDirection: p.O.Row,
                         justifyContent: p._0.Between,
@@ -16314,7 +16314,7 @@ webpackJsonp([36], {
                         margin: {
                             left: 1
                         }
-                    }, c.createElement(p._27, null, this.props.member.displayName))), c.createElement(p._1, {
+                    }, c.createElement(p._34, null, this.props.member.displayName))), c.createElement(p._1, {
                         display: p.M.Flex,
                         flexDirection: p.O.Row,
                         alignItems: p.c.Center
@@ -16350,8 +16350,8 @@ webpackJsonp([36], {
                         top: 2,
                         bottom: 2
                     }
-                }, e.header && c.createElement(p._27, {
-                    type: p._32.H3
+                }, e.header && c.createElement(p._34, {
+                    type: p._39.H3
                 }, e.header), e.members.length ? function(n) {
                     var a = e.onMoveClick ? t : void 0;
                     return c.createElement(y.b, null, c.createElement(p._1, {
@@ -16373,7 +16373,7 @@ webpackJsonp([36], {
                             isDisabled: e.isDisabled
                         })
                     })))
-                }(e.members) : c.createElement(p._27, null, e.emptyStateText))
+                }(e.members) : c.createElement(p._34, null, e.emptyStateText))
             },
             D = function(e) {
                 return c.createElement(y.b, null, c.createElement(p._1, {
@@ -16387,9 +16387,9 @@ webpackJsonp([36], {
                         bottom: 2
                     },
                     fullWidth: !0
-                }, c.createElement(p._27, {
+                }, c.createElement(p._34, {
                     "data-test-selector": e.titleSelector,
-                    type: p._32.H1
+                    type: p._39.H1
                 }, e.title)), e.children))
             };
         ! function(e) {
@@ -17113,29 +17113,29 @@ webpackJsonp([36], {
         }(Q || (Q = {}));
         var be, Le = function(e) {
                 var t, n;
-                return e.isLoading ? (t = c.createElement(p._27, {
-                    type: p._32.H5
+                return e.isLoading ? (t = c.createElement(p._34, {
+                    type: p._39.H5
                 }, c.createElement(p._7, {
                     width: 90
                 })), n = c.createElement(p._1, null, c.createElement(p._7, {
                     width: 140,
                     height: e.magnified ? 40 : 30
-                }))) : (t = c.createElement(p._27, {
+                }))) : (t = c.createElement(p._34, {
                     color: p.I.Alt2,
-                    type: p._32.H5,
+                    type: p._39.H5,
                     "data-test-selector": Q.Title
                 }, e.title), n = c.createElement(p._1, {
                     alignItems: p.c.Start,
                     display: p.M.Flex,
                     flexDirection: p.O.Row
-                }, c.createElement(p._27, {
-                    type: e.magnified ? p._32.H4 : p._32.H5,
+                }, c.createElement(p._34, {
+                    type: e.magnified ? p._39.H4 : p._39.H5,
                     "data-test-selector": Q.Symbol
-                }, "$ "), c.createElement(p._27, {
-                    type: e.magnified ? p._32.H1 : p._32.H2,
+                }, "$ "), c.createElement(p._34, {
+                    type: e.magnified ? p._39.H1 : p._39.H2,
                     "data-test-selector": Q.Dollars
-                }, Object(m.e)(Math.floor(e.cents / 100))), c.createElement(p._27, {
-                    type: e.magnified ? p._32.H4 : p._32.H5,
+                }, Object(m.e)(Math.floor(e.cents / 100))), c.createElement(p._34, {
+                    type: e.magnified ? p._39.H4 : p._39.H5,
                     "data-test-selector": Q.Cents
                 }, Object(m.e)(Math.round(e.cents % 100), {
                     minimumIntegerDigits: 2
@@ -17162,7 +17162,7 @@ webpackJsonp([36], {
                             cents: t.cents
                         })
                     });
-                return c.createElement(p._23, {
+                return c.createElement(p._24, {
                     borderMarked: !0,
                     border: !0,
                     fullWidth: !0,
@@ -17232,7 +17232,7 @@ webpackJsonp([36], {
                             noTail: !0
                         }, c.createElement(y.b, {
                             className: "team-members-select-menu__scroller"
-                        }, c.createElement(p._1, null, c.createElement(p._23, {
+                        }, c.createElement(p._1, null, c.createElement(p._24, {
                             borderBottom: !0,
                             padding: {
                                 top: 1,
@@ -17251,7 +17251,7 @@ webpackJsonp([36], {
                                 onChange: t.props.toggleMemberChecked.bind(t, n),
                                 disabled: e >= T && !n.checked
                             };
-                            return c.createElement(p._23, {
+                            return c.createElement(p._24, {
                                 margin: {
                                     x: .5,
                                     y: 0
@@ -17471,7 +17471,7 @@ webpackJsonp([36], {
                     return c.createElement(D, {
                         title: P(v.Revenue),
                         titleSelector: "revenue-page-title"
-                    }, c.createElement(p._23, {
+                    }, c.createElement(p._24, {
                         border: !0,
                         fullWidth: !0
                     }, c.createElement(p._1, {
@@ -17499,7 +17499,7 @@ webpackJsonp([36], {
                         earliestDate: this.props.earliestDataDate,
                         currentDate: this.props.currentDate,
                         onMonthSelection: this.handleTimeRangeChange
-                    })), c.createElement(p._1, null, c.createElement(p._27, {
+                    })), c.createElement(p._1, null, c.createElement(p._34, {
                         color: p.I.Alt2
                     }, Object(m.d)("* All revenue values are estimated (in $USD)", "TeamsDashboard")))), c.createElement(p._1, {
                         display: p.M.Flex,
@@ -17511,14 +17511,14 @@ webpackJsonp([36], {
                         data: this.state.revenues,
                         totalTitle: Object(m.d)("Total Revenue", "TeamsDashboard"),
                         summaryItemTitleSuffix: "*"
-                    })), c.createElement(p._23, {
+                    })), c.createElement(p._24, {
                         padding: 2,
                         background: p.m.Base,
                         borderTop: !0
                     }, c.createElement(ve, {
                         data: this.state.revenues
                     }), c.createElement(p._1, {
-                        textAlign: p._28.Right
+                        textAlign: p._35.Right
                     }, c.createElement(p.u, {
                         disabled: e,
                         "data-test-selector": "revenue-csv-button",
@@ -17541,7 +17541,7 @@ webpackJsonp([36], {
                 var t = function(t) {
                     return Je(e.page === t ? Ve : "side-nav-bar__option")
                 };
-                return c.createElement(p._23, {
+                return c.createElement(p._24, {
                     display: p.M.Block,
                     className: "side-nav-bar",
                     fullHeight: !0,
@@ -17554,8 +17554,8 @@ webpackJsonp([36], {
                     margin: {
                         bottom: .5
                     }
-                }, c.createElement(p._27, {
-                    type: p._32.H4,
+                }, c.createElement(p._34, {
+                    type: p._39.H4,
                     fontSize: p.Q.Size5
                 }, Object(m.d)("Team Dashboard", "TeamsDashboard"))), c.createElement("ul", null, c.createElement("li", null, c.createElement(p.Z, {
                     linkTo: "/teams/" + e.teamName + "/dashboard/" + v.Revenue,
@@ -17697,7 +17697,7 @@ webpackJsonp([36], {
                 }, c.createElement(p.R, {
                     label: Object(m.d)("Description", "TeamsDashboard"),
                     hint: Object(m.d)("Supports most HTML", "TeamsDashboard")
-                }, c.createElement(p._29, {
+                }, c.createElement(p._36, {
                     noResize: !0,
                     rows: 5,
                     value: e.description
@@ -17748,13 +17748,13 @@ webpackJsonp([36], {
                 return e ? c.createElement("img", {
                     src: e
                 }) : c.createElement(p._1, {
-                    textAlign: p._28.Center
+                    textAlign: p._35.Center
                 }, c.createElement(p._14, {
                     asset: p._15.Upload,
                     type: p._16.Alt2,
                     height: 36,
                     width: 36
-                }), c.createElement(p._27, {
+                }), c.createElement(p._34, {
                     fontSize: p.Q.Size6,
                     color: p.I.Alt2
                 }, Object(m.d)("Choose a file", "TeamDashboard")))
@@ -18043,19 +18043,19 @@ webpackJsonp([36], {
                     cols: {
                         default: 4
                     }
-                }, c.createElement(p._27, {
+                }, c.createElement(p._34, {
                     bold: !0
                 }, t)), c.createElement(p.J, {
                     cols: {
                         default: 2
                     }
-                }, c.createElement(p._27, {
+                }, c.createElement(p._34, {
                     bold: !0
                 }, Object(m.d)("Views", "TeamsDashboard"))), c.createElement(p.J, {
                     cols: {
                         default: 2
                     }
-                }, c.createElement(p._27, {
+                }, c.createElement(p._34, {
                     bold: !0
                 }, Object(m.d)("Percent", "TeamsDashboard"))))
             },
@@ -18076,17 +18076,17 @@ webpackJsonp([36], {
                     cols: {
                         default: 4
                     }
-                }, c.createElement(p._27, {
+                }, c.createElement(p._34, {
                     ellipsis: !0
                 }, t.name)), c.createElement(p.J, {
                     cols: {
                         default: 2
                     }
-                }, c.createElement(p._27, null, Object(m.e)(t.views))), c.createElement(p.J, {
+                }, c.createElement(p._34, null, Object(m.e)(t.views))), c.createElement(p.J, {
                     cols: {
                         default: 2
                     }
-                }, c.createElement(p._27, null, Object(m.e)(t.percent), "%")))
+                }, c.createElement(p._34, null, Object(m.e)(t.percent), "%")))
             },
             ft = function(e, t, n, a) {
                 return 0 === e.length ? gt() : a && 1 === e.length ? yt(e[0].name) : Mt(e, n, t)
@@ -18101,12 +18101,12 @@ webpackJsonp([36], {
                 }, "TeamsDashboard")
             },
             gt = function() {
-                return c.createElement(p._27, {
+                return c.createElement(p._34, {
                     color: p.I.Alt2
                 }, Object(m.d)("Not enough data for us to display", "TeamsDashboard"))
             },
             yt = function(e) {
-                return c.createElement(p._27, null, Object(m.d)("The top viewer location was {name}", {
+                return c.createElement(p._34, null, Object(m.d)("The top viewer location was {name}", {
                     name: e
                 }, "TeamsDashboard"))
             },
@@ -18139,7 +18139,7 @@ webpackJsonp([36], {
                     width: 180
                 }) : pt(e.tableName, a.length);
                 var r;
-                return r = e.isLoading ? c.createElement(p._1, null, c.createElement(p._27, null, c.createElement(p._7, null)), c.createElement(p._27, null, c.createElement(p._7, null))) : ft(a, n, e.columnName, e.isGeo), c.createElement(p._1, {
+                return r = e.isLoading ? c.createElement(p._1, null, c.createElement(p._34, null, c.createElement(p._7, null)), c.createElement(p._34, null, c.createElement(p._7, null))) : ft(a, n, e.columnName, e.isGeo), c.createElement(p._1, {
                     display: p.M.Flex,
                     flexDirection: p.O.Column,
                     padding: 2,
@@ -18150,15 +18150,15 @@ webpackJsonp([36], {
                     margin: {
                         bottom: 1
                     }
-                }, c.createElement(p._27, {
-                    type: p._32.H4
+                }, c.createElement(p._34, {
+                    type: p._39.H4
                 }, t)), r)
             },
             bt = Object(m.d)("Referrer", "TeamsDashboard"),
             Lt = function(e) {
                 var t = Object(m.d)("Views by Referrer", "TeamsDashboard"),
                     n = "";
-                return e.internalReferral && e.internalReferral.length && (t = Object(m.d)("Views from Outside Twitch", "TeamsDashboard"), n = c.createElement(p._23, {
+                return e.internalReferral && e.internalReferral.length && (t = Object(m.d)("Views from Outside Twitch", "TeamsDashboard"), n = c.createElement(p._24, {
                     display: p.M.Flex,
                     flexGrow: 1,
                     borderBottom: !0,
@@ -18168,7 +18168,7 @@ webpackJsonp([36], {
                     tableName: Object(m.d)("Views from Twitch", "TeamsDashboard"),
                     columnName: bt,
                     rowData: e.internalReferral
-                }))), c.createElement(p._23, {
+                }))), c.createElement(p._24, {
                     className: "all-tables-wrapper",
                     display: p.M.Flex,
                     flexDirection: p.O.Row,
@@ -18178,7 +18178,7 @@ webpackJsonp([36], {
                     flexGrow: 1,
                     flexDirection: p.O.Column,
                     flexWrap: p.P.NoWrap
-                }, c.createElement(p._23, {
+                }, c.createElement(p._24, {
                     display: p.M.Flex,
                     flexGrow: 1,
                     borderBottom: !0
@@ -18188,7 +18188,7 @@ webpackJsonp([36], {
                     columnName: Object(m.d)("Location", "TeamsDashboard"),
                     rowData: e.geographical,
                     isGeo: !0
-                })), c.createElement(p._23, {
+                })), c.createElement(p._24, {
                     display: p.M.Flex,
                     flexGrow: 1
                 }, c.createElement(vt, {
@@ -18201,7 +18201,7 @@ webpackJsonp([36], {
                     flexGrow: 1,
                     flexDirection: p.O.Column,
                     flexWrap: p.P.NoWrap
-                }, n, c.createElement(p._23, {
+                }, n, c.createElement(p._24, {
                     display: p.M.Flex,
                     flexGrow: 1,
                     borderLeft: !0
@@ -18724,7 +18724,7 @@ webpackJsonp([36], {
                     return c.createElement(D, {
                         title: P(v.Stats),
                         titleSelector: "stats-page-title"
-                    }, c.createElement(p._23, {
+                    }, c.createElement(p._24, {
                         border: !0,
                         fullWidth: !0
                     }, c.createElement(p._1, {
@@ -21680,4 +21680,4 @@ webpackJsonp([36], {
         }
     }
 });
-//# sourceMappingURL=pages.teams-dashboard-cc652189f46b1721a4cc61ec1af3f486.js.map
+//# sourceMappingURL=pages.teams-dashboard-2997d9a09dd562ea8b1a38ff0186b497.js.map

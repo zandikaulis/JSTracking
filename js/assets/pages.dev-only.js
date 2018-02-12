@@ -238,8 +238,8 @@ webpackJsonp([62], {
                     margin: {
                         top: 2
                     }
-                }, u.createElement(k._27, {
-                    type: k._32.H2
+                }, u.createElement(k._34, {
+                    type: k._39.H2
                 }, " Infinite Scroll Test"), u.createElement(f, null))))
             }),
             _ = n("3zLD"),
@@ -465,4 +465,4 @@ webpackJsonp([62], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.dev-only-8bff5bf448b808d59b6325147e67ebaa.js.map
+//# sourceMappingURL=pages.dev-only-6f9ecb3333a6498e58801c35aeb3e63c.js.map
