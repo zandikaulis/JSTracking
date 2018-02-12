@@ -113,6 +113,18 @@ window.__twilightSettings = {
                 "value": "no_archives"
             }]
         },
+        "1adeeefb-a0cc-48a4-adbd-8c9a1bdaa06f": {
+            "name": "TWILIGHT_PAYMENTS_MANAGEMENT_PAGE",
+            "v": 3038,
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "yes"
+            }, {
+                "weight": 100,
+                "value": "no"
+            }]
+        },
         "298a5f39-228a-487a-ad06-422c18458403": {
             "name": "twilight_merch_store_launch",
             "v": 2159,

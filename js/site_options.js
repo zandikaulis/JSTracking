@@ -564,6 +564,18 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
+        "1adeeefb-a0cc-48a4-adbd-8c9a1bdaa06f": {
+            "name": "TWILIGHT_PAYMENTS_MANAGEMENT_PAGE",
+            "v": 3038,
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "yes"
+            }, {
+                "weight": 100,
+                "value": "no"
+            }]
+        },
         "1b6d4038-40ca-455a-81c7-e239d7568de9": {
             "name": "ios_dynamic_spade_url",
             "v": 2199,
@@ -4609,6 +4621,18 @@ window.SiteOptions = {
             }, {
                 "weight": 25,
                 "value": "opt_in"
+            }]
+        },
+        "e3fbd5de-c36b-4f0b-a495-3e40de2667df": {
+            "name": "PAYMENTS_MANAGEMENT_PAGE_V2",
+            "v": 3037,
+            "t": 2,
+            "groups": [{
+                "weight": 0,
+                "value": "yes"
+            }, {
+                "weight": 100,
+                "value": "no"
             }]
         },
         "e51aab46-7708-49cb-a7a3-57e2c95c7570": {
