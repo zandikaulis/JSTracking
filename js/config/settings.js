@@ -64,7 +64,7 @@ window.__twilightSettings = {
     "tvapp_xbox_ads_enabled": true,
     "tvapp_xbox_preroll_duration": 30,
     "tvapp_xbox_preroll_frequency": 900,
-    "twilight_clips_already": "off",
+    "twilight_clips_already": "on",
     "twilight_routes": ["channel", "channelFollowing", "channelFollowers", "channelEvents", "clips", "collections", "community", "dashboardAchievements", "dashboardModeration", "dashboardStreamSummary", "directoryAllChannels", "directoryCommunities", "directoryCreative", "directoryFollowing", "directoryFollowingCommunities", "directoryFollowingChannels", "directoryFollowingGames", "directoryFollowingHosts", "directoryGame", "directoryGameDetails", "directoryGames", "directoryGameClips", "directoryGameVideos", "directoryVideos", "event", "index", "inventory", "managerClips", "managerClipsChannel", "managerHighlights", "managerIndex", "managerPastBroadcast", "managerUploads", "merchStore", "settingsNotifications", "video", "videos"],
     "twilight_routes_enabled": true,
     "twilight_routes_test_users": ["tanexion", "codecrshr", "adamar", "major_mosey", "kashinwins", "legypsy", "cathadan", "zenhaplo", "diresqrl", "kugleburg", "polygoose", "r_demerzel", "digisaint", "molu", "bennyguitar", "cresseye", "lunacyhatter", "lawls544", "delthios"],
@@ -151,13 +151,13 @@ window.__twilightSettings = {
         },
         "2d6bf24d-39b8-491b-936e-4daebd3cc17c": {
             "name": "twilight_clips_already",
-            "v": 2999,
+            "v": 3049,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 0,
                 "value": "off"
             }, {
-                "weight": 0,
+                "weight": 100,
                 "value": "on"
             }]
         },
