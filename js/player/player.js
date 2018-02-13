@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".1687c64cb8b215a87d72.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".44898354fed5376878ce.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -1534,7 +1534,7 @@
             j = ["usherfail", o.AD_END, o.AD_START, o.COMPANION_RENDERED, o.AD_IMPRESSION, o.AD_IMPRESSION_COMPLETE, c.a, s.b, s.c, s.d, s.i, s.k, s.l, s.p, s.f, s.m, s.s, s.t, s.v, s.A, s.C, s.D, s.I, s.a, s.n, s.w, s.r, s.q, s.y, s.x],
             I = i()(R, j),
             A = [u.q, s.b],
-            L = Object.freeze(["channel", "video", "collection", "muted", "autoplay", "time", "t", "debug", "debug_ads", "html5", "flash", "quality", "controls", "playsinline", "stream", "channelId", "tt_content", "tt_medium", "force_manifest_node", "origin"]),
+            L = Object.freeze(["autoplay", "channel", "channelId", "collection", "controls", "debug", "debug_ads", "force_manifest_node", "html5", "flash", "muted", "origin", "playsinline", "quality", "showMature", "stream", "t", "time", "tt_content", "tt_medium", "video"]),
             N = .1,
             M = "//pubads.g.doubleclick.net/gampad/ads",
             D = "//pubads.g.doubleclick.net/gampad/live/ads",
@@ -21489,23 +21489,26 @@
             }(),
             M = "mature",
             D = {
+                contentIsShowing: l.a.func,
+                showMatureOption: l.a.bool,
+                mutePlayer: l.a.func,
+                play: l.a.func,
                 playback: l.a.object,
                 playerType: l.a.string,
-                streamMetadata: l.a.object,
-                mutePlayer: l.a.func,
-                contentIsShowing: l.a.func,
-                play: l.a.func,
                 pause: l.a.func,
-                requestAds: l.a.func
+                requestAds: l.a.func,
+                streamMetadata: l.a.object
             },
             q = function(e) {
                 var t = e.env,
                     n = e.playback,
-                    r = e.streamMetadata;
+                    r = e.playerOptions,
+                    i = e.streamMetadata;
                 return {
                     playback: n,
                     playerType: t.playerType,
-                    streamMetadata: r
+                    showMatureOption: r.showMature,
+                    streamMetadata: i
                 }
             },
             U = function(e) {
@@ -21549,8 +21552,11 @@
                 }, {
                     key: "_shouldShowOverlay",
                     value: function(e) {
-                        var t = e.streamMetadata;
-                        return t.channel.mature && !C.a.get(M) && this.props.playerType !== I.e && !T()(Object.keys(L.a), t.channel.name)
+                        var t = e.showMatureOption,
+                            n = e.streamMetadata,
+                            r = n.channel.mature,
+                            i = this.props.showMatureOption;
+                        return void 0 !== t && (i = t), r && !C.a.get(M) && i && this.props.playerType !== I.e && !T()(Object.keys(L.a), n.channel.name)
                     }
                 }, {
                     key: "render",
@@ -28626,7 +28632,7 @@
                     u = So.a(!0),
                     c = Oo.v() === Oo.k ? null : Ao;
                 return {
-                    app_version: "2018.02.13-212830+bee28847cabff6501bb1efeec40ecc246d62259f",
+                    app_version: "2018.02.13-225205+0e343277d1626531bbc3a42a7249808301cdd6a7",
                     flash_version: r,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -32938,7 +32944,7 @@
         }
 
         function Fi(e) {
-            var t = to()(e, ["branding", "showInfo", "collection", "channel", "channelId", "video", "showtheatre", "tt_content", "tt_medium", "force_preroll", "force_midroll", "force_preroll_id", "force_midroll_id"]);
+            var t = to()(e, ["branding", "collection", "channel", "channelId", "force_preroll", "force_midroll", "force_preroll_id", "force_midroll_id", "showInfo", "showMature", "showtheatre", "tt_content", "tt_medium", "video"]);
             return {
                 type: Q_,
                 playerOptions: t
@@ -42550,9 +42556,10 @@
             K_ = n(77),
             G_ = n.n(K_),
             Q_ = "set provided options",
-            Y_ = {
+            Y_ = Object.freeze({
                 branding: !0,
                 showInfo: !0,
+                showMature: !0,
                 showtheatre: !1,
                 collection: "",
                 channel: "",
@@ -42560,7 +42567,7 @@
                 video: "",
                 tt_content: "",
                 tt_medium: ""
-            },
+            }),
             $_ = {
                 hasError: !1,
                 code: -1
