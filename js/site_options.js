@@ -542,10 +542,10 @@ window.SiteOptions = {
         },
         "19cc1327-9436-4019-b71c-e2a1e41d3cb3": {
             "name": "test",
-            "v": 3059,
+            "v": 3060,
             "t": 1,
             "groups": [{
-                "weight": 5,
+                "weight": 2,
                 "value": "a"
             }, {
                 "weight": 3,
