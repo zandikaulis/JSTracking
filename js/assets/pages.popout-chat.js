@@ -7011,7 +7011,8 @@ webpackJsonp([35], {
                         onChatCommand: this.onChatCommand,
                         isPopout: this.props.isPopout,
                         channelID: this.props.channelID,
-                        sawFirstRaidPrompt: this.state.showRaidsFollowerOnlyTooltip
+                        sawFirstRaidPrompt: this.state.showRaidsFollowerOnlyTooltip,
+                        containerElement: this.props.containerElement
                     }), this.state.showRaidsSettingsTooltip ? f.createElement(fi, null) : null), f.createElement(W.v, {
                         ariaLabel: Object(u.d)("Viewer list", "ChatInput"),
                         "data-a-target": "chat-viewer-list",
@@ -14534,7 +14535,7 @@ webpackJsonp([35], {
                         n = l({
                             isPreviewable: e && e.room.isPreviewable,
                             minimumAllowedRole: e && e.room.minimumAllowedRole
-                        }, e.room.self.permissions.sendMessages), i = e.room.self.isUnread, a = e.room.self.isMuted
+                        }, e.room.self.permissions.sendMessages), i = e.room.self.isUnread && e.room.owner.self.isChannelMember, a = e.room.self.isMuted && e.room.owner.self.isChannelMember
                     }
                     return b.createElement(L._24, {
                         position: L._8.Relative,
@@ -15220,7 +15221,7 @@ webpackJsonp([35], {
                     var t = this;
                     if (!this.props.data || e.isPopout || !this.props.data.loading && this.props.channelID === e.channelID || e.data.loading || (this.setState({
                             showRoomPicker: !e.isChannelLive
-                        }), e.isChannelLive || this.dismissGeneralOnboarding()), this.props.sessionUser && this.props.routedRoomName && this.props.data && this.props.data.loading && !this.props.data.user && !e.data.loading && e.data.user && e.data.user.self.isChannelMember) {
+                        }), e.isChannelLive || this.dismissGeneralOnboarding()), this.props.data && e.data && !this.props.data.loading && !e.data.loading && this.props.data.user.self && e.data.user.self && !e.data.user.self.isChannelMember && this.props.data.user.self.isChannelMember !== e.data.user.self.isChannelMember && this.goToStreamChat(), this.props.sessionUser && this.props.routedRoomName && this.props.data && this.props.data.loading && !this.props.data.user && !e.data.loading && e.data.user && e.data.user.self.isChannelMember) {
                         var n = e.data.user.channelRooms.find(function(e) {
                             return e.name === t.props.routedRoomName
                         });
@@ -15228,10 +15229,7 @@ webpackJsonp([35], {
                             activeRoomID: n.id,
                             activeRoomName: n.name
                         })
-                    } else this.props.channelID !== e.channelID && this.state.activeRoomID !== ni && this.setState({
-                        activeRoomID: ni,
-                        activeRoomName: ni
-                    })
+                    } else this.props.channelID !== e.channelID && this.state.activeRoomID !== ni && this.goToStreamChat()
                 }, t.prototype.render = function() {
                     return b.createElement(L._1, {
                         fullWidth: !0,
@@ -15280,9 +15278,8 @@ webpackJsonp([35], {
                         display: L.M.Flex
                     }, b.createElement(L._14, {
                         asset: L._15.RoomList
-                    })), this.state.showRoomPicker && b.createElement(L.v, {
-                        ariaLabel: "RoomListOpen",
-                        icon: L._15.RoomListOpen
+                    })), this.state.showRoomPicker && b.createElement(L._14, {
+                        asset: L._15.RoomListOpen
                     })));
                     this.state.showRoomPicker || (e = b.createElement(L._1, {
                         position: L._8.Relative
@@ -15305,13 +15302,11 @@ webpackJsonp([35], {
                             right: 1
                         }
                     }, this.renderActiveRoomName(), e);
-                    return this.state.showRoomPicker ? b.createElement("button", {
+                    return this.state.showRoomPicker && (t = b.createElement("button", {
                         className: "room-selector__open-header-wrapper",
                         "data-test-selector": "close-room-picker-button",
                         onClick: this.headerClick
-                    }, b.createElement(L._1, {
-                        zIndex: L._51.Above
-                    }, t)) : t
+                    }, t)), t
                 }, t.prototype.renderRoomPicker = function() {
                     if (this.state.showRoomPicker && this.props.channelID) return b.createElement(_.a, {
                         onClickOut: this.closeRoomPicker
@@ -15905,12 +15900,12 @@ webpackJsonp([35], {
                         }
                     }) : i || !t ? a.createElement(s.a, null) : a.createElement(s.a, {
                         data: {
-                            title: t.title ? t.title : Object(r.d)("Clip of {broadcaster}", {
+                            title: t.title || (t.broadcaster ? Object(r.d)("Clip of {broadcaster}", {
                                 broadcaster: t.broadcaster.displayName
-                            }, "ClipsChatCard"),
-                            description: Object(r.d)("Clipped by {curator}", {
+                            }, "ClipsChatCard") : ""),
+                            description: t.curator ? Object(r.d)("Clipped by {curator}", {
                                 curator: t.curator.displayName
-                            }, "ClipsChatCard"),
+                            }, "ClipsChatCard") : "",
                             previewImageURL: t.thumbnailURL,
                             contentURL: t.url
                         }
@@ -23423,7 +23418,7 @@ webpackJsonp([35], {
                         recentRaids: !1,
                         chatColor: null,
                         raidsTooltipDismissed: !1
-                    }, t.dismissRaidsTooltip = function() {
+                    }, t.resizeAnimationFrame = 0, t.dismissRaidsTooltip = function() {
                         t.setState({
                             raidsTooltipDismissed: !0
                         })
@@ -23464,9 +23459,20 @@ webpackJsonp([35], {
                                 }
                             })
                         })
+                    }, t.onResize = function() {
+                        t.resizeAnimationFrame || (t.resizeAnimationFrame = requestAnimationFrame(t.setContainerHeight))
+                    }, t.setContainerHeight = function() {
+                        var e = t.props.containerElement && t.props.containerElement.clientHeight || 700;
+                        t.setState({
+                            containerHeight: e
+                        }), t.resizeAnimationFrame = 0
                     }, t
                 }
-                return a.__extends(t, e), t.prototype.render = function() {
+                return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                    window.addEventListener("resize", this.onResize, !0), this.setContainerHeight()
+                }, t.prototype.componentWillUnmount = function() {
+                    window.removeEventListener("resize", this.onResize, !0), this.resizeAnimationFrame && cancelAnimationFrame(this.resizeAnimationFrame)
+                }, t.prototype.render = function() {
                     if (!this.props.data || this.props.data.loading) return null;
                     var e = null;
                     if (this.props.isLoggedIn && this.props.data.currentUser) {
@@ -23541,7 +23547,10 @@ webpackJsonp([35], {
                         onColorSelected: this.props.onColorSelected
                     }), this.renderUniversalOptions()], r.createElement(N.b, {
                         className: "chat-settings",
-                        suppressScrollX: !0
+                        suppressScrollX: !0,
+                        style: {
+                            maxHeight: this.state.containerHeight
+                        }
                     }, r.createElement("div", {
                         onClick: this.dismissRaidsTooltip
                     }, r.createElement(T._24, {
@@ -23867,7 +23876,8 @@ webpackJsonp([35], {
                         onClickEditAppearance: this.onEdit,
                         onLeaveEditAppearance: this.onLeaveEdit,
                         sawFirstRaidPrompt: this.props.sawFirstRaidPrompt,
-                        onShowViewerCard: this.props.onShowViewerCard
+                        onShowViewerCard: this.props.onShowViewerCard,
+                        containerElement: this.props.containerElement
                     }))
                 }, t
             }(r.Component),
@@ -25664,9 +25674,9 @@ webpackJsonp([35], {
                 }
                 var n = {
                     channel: e.channelLogin,
+                    chatroom_type: t,
                     is_host_mode: e.isHostMode,
-                    is_using_web_sockets: !0,
-                    room_type: t
+                    is_using_web_sockets: !0
                 };
                 return e.roomID && (n.chatroom_id = e.roomID), n
             },
@@ -42215,4 +42225,4 @@ webpackJsonp([35], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.popout-chat-53114f181de6c876876cb4deb5b5fa14.js.map
+//# sourceMappingURL=pages.popout-chat-68f21eb8144b46f521be8d2fc35a6e40.js.map

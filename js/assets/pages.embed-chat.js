@@ -1,4 +1,4 @@
-webpackJsonp([38], {
+webpackJsonp([39], {
     "+5Qw": function(e, t) {},
     "+FQU": function(e, t) {},
     "+V/3": function(e, t, n) {
@@ -6805,7 +6805,8 @@ webpackJsonp([38], {
                         onChatCommand: this.onChatCommand,
                         isPopout: this.props.isPopout,
                         channelID: this.props.channelID,
-                        sawFirstRaidPrompt: this.state.showRaidsFollowerOnlyTooltip
+                        sawFirstRaidPrompt: this.state.showRaidsFollowerOnlyTooltip,
+                        containerElement: this.props.containerElement
                     }), this.state.showRaidsSettingsTooltip ? f.createElement(fi, null) : null), f.createElement(H.v, {
                         ariaLabel: Object(u.d)("Viewer list", "ChatInput"),
                         "data-a-target": "chat-viewer-list",
@@ -10628,12 +10629,12 @@ webpackJsonp([38], {
                         }
                     }) : i || !t ? a.createElement(o.a, null) : a.createElement(o.a, {
                         data: {
-                            title: t.title ? t.title : Object(r.d)("Clip of {broadcaster}", {
+                            title: t.title || (t.broadcaster ? Object(r.d)("Clip of {broadcaster}", {
                                 broadcaster: t.broadcaster.displayName
-                            }, "ClipsChatCard"),
-                            description: Object(r.d)("Clipped by {curator}", {
+                            }, "ClipsChatCard") : ""),
+                            description: t.curator ? Object(r.d)("Clipped by {curator}", {
                                 curator: t.curator.displayName
-                            }, "ClipsChatCard"),
+                            }, "ClipsChatCard") : "",
                             previewImageURL: t.thumbnailURL,
                             contentURL: t.url
                         }
@@ -16948,7 +16949,7 @@ webpackJsonp([38], {
                         recentRaids: !1,
                         chatColor: null,
                         raidsTooltipDismissed: !1
-                    }, t.dismissRaidsTooltip = function() {
+                    }, t.resizeAnimationFrame = 0, t.dismissRaidsTooltip = function() {
                         t.setState({
                             raidsTooltipDismissed: !0
                         })
@@ -16989,9 +16990,20 @@ webpackJsonp([38], {
                                 }
                             })
                         })
+                    }, t.onResize = function() {
+                        t.resizeAnimationFrame || (t.resizeAnimationFrame = requestAnimationFrame(t.setContainerHeight))
+                    }, t.setContainerHeight = function() {
+                        var e = t.props.containerElement && t.props.containerElement.clientHeight || 700;
+                        t.setState({
+                            containerHeight: e
+                        }), t.resizeAnimationFrame = 0
                     }, t
                 }
-                return a.__extends(t, e), t.prototype.render = function() {
+                return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                    window.addEventListener("resize", this.onResize, !0), this.setContainerHeight()
+                }, t.prototype.componentWillUnmount = function() {
+                    window.removeEventListener("resize", this.onResize, !0), this.resizeAnimationFrame && cancelAnimationFrame(this.resizeAnimationFrame)
+                }, t.prototype.render = function() {
                     if (!this.props.data || this.props.data.loading) return null;
                     var e = null;
                     if (this.props.isLoggedIn && this.props.data.currentUser) {
@@ -17066,7 +17078,10 @@ webpackJsonp([38], {
                         onColorSelected: this.props.onColorSelected
                     }), this.renderUniversalOptions()], r.createElement(N.b, {
                         className: "chat-settings",
-                        suppressScrollX: !0
+                        suppressScrollX: !0,
+                        style: {
+                            maxHeight: this.state.containerHeight
+                        }
                     }, r.createElement("div", {
                         onClick: this.dismissRaidsTooltip
                     }, r.createElement(O._24, {
@@ -17392,7 +17407,8 @@ webpackJsonp([38], {
                         onClickEditAppearance: this.onEdit,
                         onLeaveEditAppearance: this.onLeaveEdit,
                         sawFirstRaidPrompt: this.props.sawFirstRaidPrompt,
-                        onShowViewerCard: this.props.onShowViewerCard
+                        onShowViewerCard: this.props.onShowViewerCard,
+                        containerElement: this.props.containerElement
                     }))
                 }, t
             }(r.Component),
@@ -18938,9 +18954,9 @@ webpackJsonp([38], {
                 }
                 var n = {
                     channel: e.channelLogin,
+                    chatroom_type: t,
                     is_host_mode: e.isHostMode,
-                    is_using_web_sockets: !0,
-                    room_type: t
+                    is_using_web_sockets: !0
                 };
                 return e.roomID && (n.chatroom_id = e.roomID), n
             },
@@ -31630,4 +31646,4 @@ webpackJsonp([38], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.embed-chat-5f15832007b98632cf13807540561ed4.js.map
+//# sourceMappingURL=pages.embed-chat-3a54060afadf30a59c680c33b0bfd1fc.js.map

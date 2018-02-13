@@ -3740,12 +3740,12 @@ webpackJsonp([33], {
                         }
                     }) : a || !t ? r.createElement(s.a, null) : r.createElement(s.a, {
                         data: {
-                            title: t.title ? t.title : Object(i.d)("Clip of {broadcaster}", {
+                            title: t.title || (t.broadcaster ? Object(i.d)("Clip of {broadcaster}", {
                                 broadcaster: t.broadcaster.displayName
-                            }, "ClipsChatCard"),
-                            description: Object(i.d)("Clipped by {curator}", {
+                            }, "ClipsChatCard") : ""),
+                            description: t.curator ? Object(i.d)("Clipped by {curator}", {
                                 curator: t.curator.displayName
-                            }, "ClipsChatCard"),
+                            }, "ClipsChatCard") : "",
                             previewImageURL: t.thumbnailURL,
                             contentURL: t.url
                         }
@@ -9736,7 +9736,7 @@ webpackJsonp([33], {
                 return yt.__generator(this, function(u) {
                     switch (u.label) {
                         case 0:
-                            if ((r = Object(os.d)(a)).length > 0) return e({
+                            if ((r = Object(os.d)(n.isEmailVerified, a)).length > 0) return e({
                                 type: Hs,
                                 name: a.name,
                                 errors: r
@@ -10233,20 +10233,21 @@ webpackJsonp([33], {
             })
         }
 
-        function je(e, t) {
-            return function(n, a) {
-                var r = t.map(function(t) {
+        function je(e, t, n) {
+            return function(a, r) {
+                var i = n.map(function(n) {
                     return Object(os.c)({
                         ownerID: e,
-                        title: t.name,
-                        fileSizeBytes: t.size
+                        isEmailVerified: t,
+                        title: n.name,
+                        fileSizeBytes: n.size
                     })
                 });
-                n({
+                a({
                     type: js,
-                    videoUploads: r
+                    videoUploads: i
                 });
-                for (var i = 0; i < t.length; ++i) ge(n, a, r[i], t[i])
+                for (var o = 0; o < n.length; ++o) ge(a, r, i[o], n[o])
             }
         }
 
@@ -21906,7 +21907,7 @@ webpackJsonp([33], {
                             closeModal: t.props.closeModal
                         })
                     }, t.handleUploadFilesSubmitted = function(e) {
-                        t.props.data.user && t.props.data.user.id && t.props.submitVideoUploadFiles(t.props.data.user.id, e)
+                        t.props.data.user && t.props.data.user.id && t.props.submitVideoUploadFiles(t.props.data.user.id, t.props.data.user.isEmailVerified, e)
                     }, t.closeModal = function() {
                         t.props.history.push(Object(si.d)(t.props.match.params.channelName))
                     }, t
@@ -25405,7 +25406,7 @@ webpackJsonp([33], {
                         recentRaids: !1,
                         chatColor: null,
                         raidsTooltipDismissed: !1
-                    }, t.dismissRaidsTooltip = function() {
+                    }, t.resizeAnimationFrame = 0, t.dismissRaidsTooltip = function() {
                         t.setState({
                             raidsTooltipDismissed: !0
                         })
@@ -25446,9 +25447,20 @@ webpackJsonp([33], {
                                 }
                             })
                         })
+                    }, t.onResize = function() {
+                        t.resizeAnimationFrame || (t.resizeAnimationFrame = requestAnimationFrame(t.setContainerHeight))
+                    }, t.setContainerHeight = function() {
+                        var e = t.props.containerElement && t.props.containerElement.clientHeight || 700;
+                        t.setState({
+                            containerHeight: e
+                        }), t.resizeAnimationFrame = 0
                     }, t
                 }
-                return r.__extends(t, e), t.prototype.render = function() {
+                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    window.addEventListener("resize", this.onResize, !0), this.setContainerHeight()
+                }, t.prototype.componentWillUnmount = function() {
+                    window.removeEventListener("resize", this.onResize, !0), this.resizeAnimationFrame && cancelAnimationFrame(this.resizeAnimationFrame)
+                }, t.prototype.render = function() {
                     if (!this.props.data || this.props.data.loading) return null;
                     var e = null;
                     if (this.props.isLoggedIn && this.props.data.currentUser) {
@@ -25523,7 +25535,10 @@ webpackJsonp([33], {
                         onColorSelected: this.props.onColorSelected
                     }), this.renderUniversalOptions()], i.createElement(D.b, {
                         className: "chat-settings",
-                        suppressScrollX: !0
+                        suppressScrollX: !0,
+                        style: {
+                            maxHeight: this.state.containerHeight
+                        }
                     }, i.createElement("div", {
                         onClick: this.dismissRaidsTooltip
                     }, i.createElement(T._24, {
@@ -25849,7 +25864,8 @@ webpackJsonp([33], {
                         onClickEditAppearance: this.onEdit,
                         onLeaveEditAppearance: this.onLeaveEdit,
                         sawFirstRaidPrompt: this.props.sawFirstRaidPrompt,
-                        onShowViewerCard: this.props.onShowViewerCard
+                        onShowViewerCard: this.props.onShowViewerCard,
+                        containerElement: this.props.containerElement
                     }))
                 }, t
             }(i.Component),
@@ -26142,17 +26158,17 @@ webpackJsonp([33], {
                 status: l.queued,
                 progressPercentage: 0
             }, e)
-        }, t.d = function(e) {
-            var t = [];
-            if (!d.includes(e.type)) {
-                var n = "." + e.name.split(".").pop();
-                d.includes(n) || t.push(new Error(Object(r.d)("File type {filetype} is not currently supported", {
-                    filetype: e.type ? e.type : n
+        }, t.d = function(e, t) {
+            var n = [];
+            if (e || n.push(new Error(Object(r.d)("Only accounts with verified email addresses can upload files. Please check your inbox for the verification email", "VideoUploadModel"))), !d.includes(t.type)) {
+                var a = "." + t.name.split(".").pop();
+                d.includes(a) || n.push(new Error(Object(r.d)("File type {filetype} is not currently supported", {
+                    filetype: t.type ? t.type : a
                 }, "VideoUploadModel")))
             }
-            return e.size > o && t.push(new Error(Object(r.d)("File too large. The maximum file size is {maxFileSizeLabel}", {
+            return t.size > o && n.push(new Error(Object(r.d)("File too large. The maximum file size is {maxFileSizeLabel}", {
                 maxFileSizeLabel: s
-            }, "VideoUploadModel"))), t
+            }, "VideoUploadModel"))), n
         };
         var a, r = n("6sO2"),
             i = n("HM6l"),
@@ -28579,9 +28595,9 @@ webpackJsonp([33], {
                 }
                 var n = {
                     channel: e.channelLogin,
+                    chatroom_type: t,
                     is_host_mode: e.isHostMode,
-                    is_using_web_sockets: !0,
-                    room_type: t
+                    is_using_web_sockets: !0
                 };
                 return e.roomID && (n.chatroom_id = e.roomID), n
             },
@@ -33130,6 +33146,14 @@ webpackJsonp([33], {
                                 kind: "Field",
                                 name: {
                                     kind: "Name",
+                                    value: "isEmailVerified"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
                                     value: "roles"
                                 },
                                 arguments: [],
@@ -33161,11 +33185,11 @@ webpackJsonp([33], {
             }],
             loc: {
                 start: 0,
-                end: 186
+                end: 202
             }
         };
         n.loc.source = {
-            body: "query VideoManager_User($login: String!) {\ncurrentUser {\nid\nlogin\ndisplayName\nroles {\nisSiteAdmin\nisStaff\n}\n}\nuser(login: $login) {\nid\nlogin\ndisplayName\nroles {\nisSiteAdmin\nisStaff\n}\n}\n}",
+            body: "query VideoManager_User($login: String!) {\ncurrentUser {\nid\nlogin\ndisplayName\nroles {\nisSiteAdmin\nisStaff\n}\n}\nuser(login: $login) {\nid\nlogin\ndisplayName\nisEmailVerified\nroles {\nisSiteAdmin\nisStaff\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -47117,4 +47141,4 @@ webpackJsonp([33], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.dashboard-4f00fc7a1940cc2e6f562b3787355327.js.map
+//# sourceMappingURL=pages.dashboard-fa79ac1047579e138d40a09e8d9b8036.js.map

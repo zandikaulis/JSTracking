@@ -1,4 +1,4 @@
-webpackJsonp([39], {
+webpackJsonp([38], {
     "+/J2": function(e, t, n) {
         var a = n("xA5w");
         e.exports = function(e, t) {
@@ -607,6 +607,9 @@ webpackJsonp([39], {
             if (s > i || o > d) throw new Error("The start of the range cannot be after the end of the range");
             return s < d && o < i
         }
+    },
+    "2nfn": function(e, t, n) {
+        e.exports = n.p + "assets/amazon_pay_1x-fefdf0d968c43fd5bb59446d0b4725ac.png"
     },
     "2pmY": function(e, t, n) {
         ! function(e, t) {
@@ -1323,6 +1326,7 @@ webpackJsonp([39], {
             })
         })
     },
+    "5i0q": function(e, t) {},
     "5j66": function(e, t, n) {
         ! function(e, t) {
             t(n("PJh5"))
@@ -1610,11 +1614,11 @@ webpackJsonp([39], {
                     for (a in t)(r = void 0 !== e[a]) && "object" == typeof t[a] && null !== t[a] && void 0 === t[a].nodeName ? u(t[a]) ? n && (e[a] = new Date(t[a].getTime())) : d(t[a]) ? n && (e[a] = t[a].slice(0)) : e[a] = h({}, t[a], n) : !n && r || (e[a] = t[a]);
                     return e
                 },
-                M = function(e, t, n) {
+                f = function(e, t, n) {
                     var r;
                     a.createEvent ? ((r = a.createEvent("HTMLEvents")).initEvent(t, !0, !1), r = h(r, n), e.dispatchEvent(r)) : a.createEventObject && (r = a.createEventObject(), r = h(r, n), e.fireEvent("on" + t, r))
                 },
-                f = function(e) {
+                M = function(e) {
                     return e.month < 0 && (e.year -= Math.ceil(Math.abs(e.month) / 12), e.month += 12), e.month > 11 && (e.year += Math.floor(Math.abs(e.month) / 12), e.month -= 12), e
                 },
                 y = {
@@ -1687,12 +1691,12 @@ webpackJsonp([39], {
                     var i, o, u, _, l, m = e._o,
                         c = n === m.minYear,
                         h = n === m.maxYear,
-                        M = '<div id="' + s + '" class="pika-title" role="heading" aria-live="assertive">',
-                        f = !0,
+                        f = '<div id="' + s + '" class="pika-title" role="heading" aria-live="assertive">',
+                        M = !0,
                         y = !0;
                     for (u = [], i = 0; i < 12; i++) u.push('<option value="' + (n === r ? i - t : 12 + i - t) + '"' + (i === a ? ' selected="selected"' : "") + (c && i < m.minMonth || h && i > m.maxMonth ? 'disabled="disabled"' : "") + ">" + m.i18n.months[i] + "</option>");
                     for (_ = '<div class="pika-label">' + m.i18n.months[a] + '<select class="pika-select pika-select-month" tabindex="-1">' + u.join("") + "</select></div>", d(m.yearRange) ? (i = m.yearRange[0], o = m.yearRange[1] + 1) : (i = n - m.yearRange, o = 1 + n + m.yearRange), u = []; i < o && i <= m.maxYear; i++) i >= m.minYear && u.push('<option value="' + i + '"' + (i === n ? ' selected="selected"' : "") + ">" + i + "</option>");
-                    return l = '<div class="pika-label">' + n + m.yearSuffix + '<select class="pika-select pika-select-year" tabindex="-1">' + u.join("") + "</select></div>", m.showMonthAfterYear ? M += l + _ : M += _ + l, c && (0 === a || m.minMonth >= a) && (f = !1), h && (11 === a || m.maxMonth <= a) && (y = !1), 0 === t && (M += '<button class="pika-prev' + (f ? "" : " is-disabled") + '" type="button">' + m.i18n.previousMonth + "</button>"), t === e._o.numberOfMonths - 1 && (M += '<button class="pika-next' + (y ? "" : " is-disabled") + '" type="button">' + m.i18n.nextMonth + "</button>"), M += "</div>"
+                    return l = '<div class="pika-label">' + n + m.yearSuffix + '<select class="pika-select pika-select-year" tabindex="-1">' + u.join("") + "</select></div>", m.showMonthAfterYear ? f += l + _ : f += _ + l, c && (0 === a || m.minMonth >= a) && (M = !1), h && (11 === a || m.maxMonth <= a) && (y = !1), 0 === t && (f += '<button class="pika-prev' + (M ? "" : " is-disabled") + '" type="button">' + m.i18n.previousMonth + "</button>"), t === e._o.numberOfMonths - 1 && (f += '<button class="pika-next' + (y ? "" : " is-disabled") + '" type="button">' + m.i18n.nextMonth + "</button>"), f += "</div>"
                 },
                 k = function(e, t, n) {
                     return '<table cellpadding="0" cellspacing="0" class="pika-table" role="grid" aria-labelledby="' + n + '">' + function(e) {
@@ -1793,13 +1797,13 @@ webpackJsonp([39], {
                     return u(this._d) ? new Date(this._d.getTime()) : null
                 },
                 setDate: function(e, t) {
-                    if (!e) return this._d = null, this._o.field && (this._o.field.value = "", M(this._o.field, "change", {
+                    if (!e) return this._d = null, this._o.field && (this._o.field.value = "", f(this._o.field, "change", {
                         firedBy: this
                     })), this.draw();
                     if ("string" == typeof e && (e = new Date(Date.parse(e))), u(e)) {
                         var n = this._o.minDate,
                             a = this._o.maxDate;
-                        u(n) && e < n ? e = n : u(a) && e > a && (e = a), this._d = new Date(e.getTime()), m(this._d), this.gotoDate(this._d), this._o.field && (this._o.field.value = this.toString(), M(this._o.field, "change", {
+                        u(n) && e < n ? e = n : u(a) && e > a && (e = a), this._d = new Date(e.getTime()), m(this._d), this.gotoDate(this._d), this._o.field && (this._o.field.value = this.toString(), f(this._o.field, "change", {
                             firedBy: this
                         })), t || "function" != typeof this._o.onSelect || this._o.onSelect.call(this, this.getDate())
                     }
@@ -1825,8 +1829,8 @@ webpackJsonp([39], {
                     "add" === e ? n = new Date(a.valueOf() + r) : "subtract" === e && (n = new Date(a.valueOf() - r)), this.setDate(n)
                 },
                 adjustCalendars: function() {
-                    this.calendars[0] = f(this.calendars[0]);
-                    for (var e = 1; e < this._o.numberOfMonths; e++) this.calendars[e] = f({
+                    this.calendars[0] = M(this.calendars[0]);
+                    for (var e = 1; e < this._o.numberOfMonths; e++) this.calendars[e] = M({
                         month: this.calendars[0].month + e,
                         year: this.calendars[0].year
                     });
@@ -1891,38 +1895,38 @@ webpackJsonp([39], {
                         o = [],
                         d = [];
                     m(r), a.firstDay > 0 && (i -= a.firstDay) < 0 && (i += 7);
-                    for (var h = 0 === t ? 11 : t - 1, M = 11 === t ? 0 : t + 1, f = 0 === t ? e - 1 : e, y = 11 === t ? e + 1 : e, p = l(f, h), D = s + i, v = D; v > 7;) v -= 7;
+                    for (var h = 0 === t ? 11 : t - 1, f = 11 === t ? 0 : t + 1, M = 0 === t ? e - 1 : e, y = 11 === t ? e + 1 : e, p = l(M, h), D = s + i, v = D; v > 7;) v -= 7;
                     D += 7 - v;
-                    for (var T = !1, w = 0, b = 0; w < D; w++) {
-                        var S = new Date(e, t, w - i + 1),
+                    for (var w = !1, T = 0, b = 0; T < D; T++) {
+                        var S = new Date(e, t, T - i + 1),
                             x = !!u(this._d) && c(S, this._d),
                             H = c(S, r),
                             j = -1 !== a.events.indexOf(S.toDateString()),
-                            P = w < i || w >= s + i,
-                            O = w - i + 1,
+                            P = T < i || T >= s + i,
+                            O = T - i + 1,
                             E = t,
-                            F = e,
-                            A = a.startRange && c(a.startRange, S),
+                            A = e,
+                            F = a.startRange && c(a.startRange, S),
                             W = a.endRange && c(a.endRange, S),
                             C = a.startRange && a.endRange && a.startRange < S && S < a.endRange,
-                            N = a.minDate && S < a.minDate || a.maxDate && S > a.maxDate || a.disableWeekends && _(S) || a.disableDayFn && a.disableDayFn(S);
-                        P && (w < i ? (O = p + O, E = h, F = f) : (O -= s, E = M, F = y));
-                        var z = {
+                            z = a.minDate && S < a.minDate || a.maxDate && S > a.maxDate || a.disableWeekends && _(S) || a.disableDayFn && a.disableDayFn(S);
+                        P && (T < i ? (O = p + O, E = h, A = M) : (O -= s, E = f, A = y));
+                        var N = {
                             day: O,
                             month: E,
-                            year: F,
+                            year: A,
                             hasEvent: j,
                             isSelected: x,
                             isToday: H,
-                            isDisabled: N,
+                            isDisabled: z,
                             isEmpty: P,
-                            isStartRange: A,
+                            isStartRange: F,
                             isEndRange: W,
                             isInRange: C,
                             showDaysInNextAndPreviousMonths: a.showDaysInNextAndPreviousMonths,
                             enableSelectionDaysInNextAndPreviousMonths: a.enableSelectionDaysInNextAndPreviousMonths
                         };
-                        a.pickWholeWeek && x && (T = !0), d.push(L(z)), 7 == ++b && (a.showWeekNumber && d.unshift(Y(w - i, t, e)), o.push(g(d, a.isRTL, a.pickWholeWeek, T)), d = [], b = 0, T = !1)
+                        a.pickWholeWeek && x && (w = !0), d.push(L(N)), 7 == ++b && (a.showWeekNumber && d.unshift(Y(T - i, t, e)), o.push(g(d, a.isRTL, a.pickWholeWeek, w)), d = [], b = 0, w = !1)
                     }
                     return k(a, o, n)
                 },
@@ -2036,6 +2040,9 @@ webpackJsonp([39], {
                 }
             })
         })
+    },
+    "6hIG": function(e, t, n) {
+        e.exports = n.p + "assets/paypal_1x-e73468ceec0d534f9073b626a3e5020c.png"
     },
     "6udH": function(e, t, n) {
         var a = n("xA5w");
@@ -2478,12 +2485,147 @@ webpackJsonp([39], {
             return a(e) - a(t)
         }
     },
+    "9pOZ": function(e, t, n) {
+        e.exports = n.p + "assets/xsolla_2x-759b35ad726df976b5f4452e3999583f.png"
+    },
     "9r5b": function(e, t, n) {
         var a = n("nfOx");
         e.exports = function(e, t) {
             var n = Number(t);
             return a(e, -n)
         }
+    },
+    "9u8h": function(e, t, n) {
+        "use strict";
+        n.d(t, "a", function() {
+            return o
+        });
+        var a = n("TToO"),
+            r = n("6sO2"),
+            s = n("Aj/L"),
+            i = "application/json; charset=UTF-8",
+            o = function() {
+                function e() {}
+                return e.get = function(e, t, n) {
+                    return void 0 === t && (t = {}), void 0 === n && (n = {}), a.__awaiter(this, void 0, void 0, function() {
+                        return a.__generator(this, function(r) {
+                            switch (r.label) {
+                                case 0:
+                                    return [4, this.request(e, a.__assign({}, t, {
+                                        method: "GET"
+                                    }), n)];
+                                case 1:
+                                    return [2, r.sent()]
+                            }
+                        })
+                    })
+                }, e.put = function(e, t, n) {
+                    return void 0 === t && (t = {}), void 0 === n && (n = {}), a.__awaiter(this, void 0, void 0, function() {
+                        return a.__generator(this, function(r) {
+                            switch (r.label) {
+                                case 0:
+                                    return [4, this.request(e, a.__assign({}, t, {
+                                        method: "PUT"
+                                    }), n)];
+                                case 1:
+                                    return [2, r.sent()]
+                            }
+                        })
+                    })
+                }, e.post = function(e, t, n) {
+                    return void 0 === t && (t = {}), void 0 === n && (n = {}), a.__awaiter(this, void 0, void 0, function() {
+                        return a.__generator(this, function(r) {
+                            switch (r.label) {
+                                case 0:
+                                    return [4, this.request(e, a.__assign({}, t, {
+                                        method: "POST"
+                                    }), n)];
+                                case 1:
+                                    return [2, r.sent()]
+                            }
+                        })
+                    })
+                }, e.delete = function(e, t, n) {
+                    return void 0 === t && (t = {}), void 0 === n && (n = {}), a.__awaiter(this, void 0, void 0, function() {
+                        return a.__generator(this, function(r) {
+                            switch (r.label) {
+                                case 0:
+                                    return [4, this.request(e, a.__assign({}, t, {
+                                        method: "DELETE"
+                                    }), n)];
+                                case 1:
+                                    return [2, r.sent()]
+                            }
+                        })
+                    })
+                }, e.request = function(e, t, n) {
+                    return void 0 === t && (t = {}), void 0 === n && (n = {}), a.__awaiter(this, void 0, void 0, function() {
+                        var r, s;
+                        return a.__generator(this, function(a) {
+                            switch (a.label) {
+                                case 0:
+                                    return t = this.constructOptions(t, n), r = t.headers ? t.headers["Content-Type"] : void 0, t.body = this.serialize(t.body, r), [4, this._fetch(e, t)];
+                                case 1:
+                                    return s = a.sent(), [4, this.constructLegacyAPIResponse(s)];
+                                case 2:
+                                    return [2, a.sent()]
+                            }
+                        })
+                    })
+                }, e.getAPIURL = function(e) {
+                    return new URL(e, r.n.config.apiBaseURL)
+                }, e.constructLegacyAPIResponse = function(e) {
+                    return a.__awaiter(this, void 0, void 0, function() {
+                        var t, n, r;
+                        return a.__generator(this, function(a) {
+                            switch (a.label) {
+                                case 0:
+                                    t = {
+                                        status: e.status
+                                    }, a.label = 1;
+                                case 1:
+                                    return a.trys.push([1, 3, , 4]), [4, e.json()];
+                                case 2:
+                                    return n = a.sent(), e.ok ? t.body = n : t.error = n, [3, 4];
+                                case 3:
+                                    return r = a.sent(), t.requestError = r, [3, 4];
+                                case 4:
+                                    return [2, t]
+                            }
+                        })
+                    })
+                }, e._fetch = function(e, t) {
+                    return void 0 === t && (t = {}), a.__awaiter(this, void 0, void 0, function() {
+                        return a.__generator(this, function(n) {
+                            switch (n.label) {
+                                case 0:
+                                    return [4, fetch(this.getAPIURL(e).toString(), t)];
+                                case 1:
+                                    return [2, n.sent()]
+                            }
+                        })
+                    })
+                }, e.constructOptions = function(e, t) {
+                    return e = Object.assign({}, e, {
+                        headers: a.__assign({}, this.getDefaultHeaders(e, t), e.headers)
+                    })
+                }, e.serialize = function(e, t) {
+                    return t === i ? JSON.stringify(e) : e
+                }, e.getDefaultHeaders = function(e, t) {
+                    var n = r.n.store.getState(),
+                        a = {
+                            Accept: "application/vnd.twitchtv.v" + (t.version || 5) + "+json; charset=UTF-8",
+                            "Accept-Language": "en-us",
+                            "Client-ID": r.n.config.legacyClientID,
+                            "X-Requested-With": "XMLHttpRequest"
+                        };
+                    e.body && FormData.prototype.isPrototypeOf(e.body) || (a["Content-Type"] = i);
+                    var o = Object(s.c)(n);
+                    return o && (a.Authorization = "OAuth " + o.authToken, o.legacyCSRFToken && (a["Twitch-Api-Token"] = o.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
+                        a[e] && delete a[e]
+                    }), a
+                }, e
+            }()
     },
     A2zO: function(e, t, n) {
         var a = n("Be26");
@@ -2882,6 +3024,9 @@ webpackJsonp([39], {
                 }
             })
         })
+    },
+    "C+Nv": function(e, t, n) {
+        e.exports = n.p + "assets/paypal_wide_1x-a2a2f7d96b4384f9f1d7639977bfdc73.png"
     },
     C7av: function(e, t, n) {
         ! function(e, t) {
@@ -3569,6 +3714,9 @@ webpackJsonp([39], {
             })
         })
     },
+    Fdap: function(e, t, n) {
+        e.exports = n.p + "assets/amazon_pay_wide_1x-4ab721898d3218d2ed55b0a18876943d.png"
+    },
     FlzV: function(e, t, n) {
         ! function(e, t) {
             t(n("PJh5"))
@@ -4090,6 +4238,9 @@ webpackJsonp([39], {
             var s = r(n);
             return s.setMilliseconds(s.getMilliseconds() - 1), s
         }
+    },
+    KVSr: function(e, t, n) {
+        e.exports = n.p + "assets/xsolla_1x-c6969240378e5851f4f5fa98dc49cb69.png"
     },
     LLTj: function(e, t, n) {
         var a = n("xA5w");
@@ -4945,19 +5096,19 @@ webpackJsonp([39], {
                     return null != e ? _(m(t), e) : m(t).userInvalidated = !0, t
                 }
 
-                function M(e, t) {
+                function f(e, t) {
                     var n, a, r;
                     if (s(t._isAMomentObject) || (e._isAMomentObject = t._isAMomentObject), s(t._i) || (e._i = t._i), s(t._f) || (e._f = t._f), s(t._l) || (e._l = t._l), s(t._strict) || (e._strict = t._strict), s(t._tzm) || (e._tzm = t._tzm), s(t._isUTC) || (e._isUTC = t._isUTC), s(t._offset) || (e._offset = t._offset), s(t._pf) || (e._pf = m(t)), s(t._locale) || (e._locale = t._locale), Qe.length > 0)
                         for (n = 0; n < Qe.length; n++) s(r = t[a = Qe[n]]) || (e[a] = r);
                     return e
                 }
 
-                function f(e) {
-                    M(this, e), this._d = new Date(null != e._d ? e._d.getTime() : NaN), this.isValid() || (this._d = new Date(NaN)), !1 === $e && ($e = !0, t.updateOffset(this), $e = !1)
+                function M(e) {
+                    f(this, e), this._d = new Date(null != e._d ? e._d.getTime() : NaN), this.isValid() || (this._d = new Date(NaN)), !1 === $e && ($e = !0, t.updateOffset(this), $e = !1)
                 }
 
                 function y(e) {
-                    return e instanceof f || null != e && null != e._isAMomentObject
+                    return e instanceof M || null != e && null != e._isAMomentObject
                 }
 
                 function p(e) {
@@ -5008,14 +5159,14 @@ webpackJsonp([39], {
                     return e instanceof Function || "[object Function]" === Object.prototype.toString.call(e)
                 }
 
-                function T(e, t) {
+                function w(e, t) {
                     var n, a = _({}, e);
                     for (n in t) u(t, n) && (r(e[n]) && r(t[n]) ? (a[n] = {}, _(a[n], e[n]), _(a[n], t[n])) : null != t[n] ? a[n] = t[n] : delete a[n]);
                     for (n in e) u(e, n) && !u(t, n) && r(e[n]) && (a[n] = _({}, a[n]));
                     return a
                 }
 
-                function w(e) {
+                function T(e) {
                     null != e && this.set(e)
                 }
 
@@ -5058,7 +5209,7 @@ webpackJsonp([39], {
                     return (e >= 0 ? n ? "+" : "" : "-") + Math.pow(10, Math.max(0, r)).toString().substr(1) + a
                 }
 
-                function F(e, t, n, a) {
+                function A(e, t, n, a) {
                     var r = a;
                     "string" == typeof a && (r = function() {
                         return this[a]()
@@ -5069,14 +5220,14 @@ webpackJsonp([39], {
                     })
                 }
 
-                function A(e) {
+                function F(e) {
                     return e.match(/\[[\s\S]/) ? e.replace(/^\[|\]$/g, "") : e.replace(/\\/g, "")
                 }
 
                 function W(e, t) {
                     return e.isValid() ? (t = C(t, e.localeData()), it[t] = it[t] || function(e) {
                         var t, n, a = e.match(rt);
-                        for (t = 0, n = a.length; t < n; t++) ot[a[t]] ? a[t] = ot[a[t]] : a[t] = A(a[t]);
+                        for (t = 0, n = a.length; t < n; t++) ot[a[t]] ? a[t] = ot[a[t]] : a[t] = F(a[t]);
                         return function(t) {
                             var r, s = "";
                             for (r = 0; r < n; r++) s += v(a[r]) ? a[r].call(t, e) : a[r];
@@ -5094,13 +5245,13 @@ webpackJsonp([39], {
                     return e
                 }
 
-                function N(e, t, n) {
+                function z(e, t, n) {
                     vt[e] = v(t) ? t : function(e, a) {
                         return e && n ? n : t
                     }
                 }
 
-                function z(e, t) {
+                function N(e, t) {
                     return u(vt, e) ? vt[e](t._strict, t._locale) : new RegExp(function(e) {
                         return I(e.replace("\\", "").replace(/\\(\[)|\\(\])|\[([^\]\[]*)\]|\\(.)/g, function(e, t, n, a, r) {
                             return t || n || a || r
@@ -5116,7 +5267,7 @@ webpackJsonp([39], {
                     var n, a = t;
                     for ("string" == typeof e && (e = [e]), i(t) && (a = function(e, n) {
                             n[t] = L(e)
-                        }), n = 0; n < e.length; n++) Tt[e[n]] = a
+                        }), n = 0; n < e.length; n++) wt[e[n]] = a
                 }
 
                 function R(e, t) {
@@ -5126,7 +5277,7 @@ webpackJsonp([39], {
                 }
 
                 function U(e, t, n) {
-                    null != t && u(Tt, e) && Tt[e](t, n._a, n, e)
+                    null != t && u(wt, e) && wt[e](t, n._a, n, e)
                 }
 
                 function G(e, t) {
@@ -5218,7 +5369,7 @@ webpackJsonp([39], {
                 }
 
                 function re(e, t) {
-                    F(e, 0, 0, function() {
+                    A(e, 0, 0, function() {
                         return this.localeData().meridiem(this.hours(), this.minutes(), t)
                     })
                 }
@@ -5255,7 +5406,7 @@ webpackJsonp([39], {
                             }), null;
                             n = Xt[t.parentLocale]._config
                         }
-                        return Xt[e] = new w(T(n, t)), Qt[e] && Qt[e].forEach(function(e) {
+                        return Xt[e] = new T(w(n, t)), Qt[e] && Qt[e].forEach(function(e) {
                             ue(e.name, e.config)
                         }), de(e), Xt[e]
                     }
@@ -5284,7 +5435,7 @@ webpackJsonp([39], {
 
                 function le(e) {
                     var t, n = e._a;
-                    return n && -2 === m(e).overflow && (t = n[bt] < 0 || n[bt] > 11 ? bt : n[St] < 1 || n[St] > G(n[wt], n[bt]) ? St : n[xt] < 0 || n[xt] > 24 || 24 === n[xt] && (0 !== n[Ht] || 0 !== n[jt] || 0 !== n[Pt]) ? xt : n[Ht] < 0 || n[Ht] > 59 ? Ht : n[jt] < 0 || n[jt] > 59 ? jt : n[Pt] < 0 || n[Pt] > 999 ? Pt : -1, m(e)._overflowDayOfYear && (t < wt || t > St) && (t = St), m(e)._overflowWeeks && -1 === t && (t = Ot), m(e)._overflowWeekday && -1 === t && (t = Et), m(e).overflow = t), e
+                    return n && -2 === m(e).overflow && (t = n[bt] < 0 || n[bt] > 11 ? bt : n[St] < 1 || n[St] > G(n[Tt], n[bt]) ? St : n[xt] < 0 || n[xt] > 24 || 24 === n[xt] && (0 !== n[Ht] || 0 !== n[jt] || 0 !== n[Pt]) ? xt : n[Ht] < 0 || n[Ht] > 59 ? Ht : n[jt] < 0 || n[jt] > 59 ? jt : n[Pt] < 0 || n[Pt] > 999 ? Pt : -1, m(e)._overflowDayOfYear && (t < Tt || t > St) && (t = St), m(e)._overflowWeeks && -1 === t && (t = Ot), m(e)._overflowWeekday && -1 === t && (t = Et), m(e).overflow = t), e
                 }
 
                 function me(e) {
@@ -5310,7 +5461,7 @@ webpackJsonp([39], {
                             if (!tn.exec(d[4])) return void(e._isValid = !1);
                             i = "Z"
                         }
-                        e._f = r + (s || "") + (i || ""), fe(e)
+                        e._f = r + (s || "") + (i || ""), Me(e)
                     } else e._isValid = !1
                 }
 
@@ -5341,7 +5492,7 @@ webpackJsonp([39], {
                             default:
                                 o = u[" GMT"]
                         }
-                        n[5] = o, e._i = n.splice(1).join(""), i = " ZZ", e._f = a + r + s + i, fe(e), m(e).rfc2822 = !0
+                        n[5] = o, e._i = n.splice(1).join(""), i = " ZZ", e._f = a + r + s + i, Me(e), m(e).rfc2822 = !0
                     } else e._isValid = !1
                 }
 
@@ -5349,7 +5500,7 @@ webpackJsonp([39], {
                     return null != e ? e : null != t ? t : n
                 }
 
-                function Me(e) {
+                function fe(e) {
                     var n, a, r, s, i = [];
                     if (!e._d) {
                         for (r = function(e) {
@@ -5357,14 +5508,14 @@ webpackJsonp([39], {
                                 return e._useUTC ? [n.getUTCFullYear(), n.getUTCMonth(), n.getUTCDate()] : [n.getFullYear(), n.getMonth(), n.getDate()]
                             }(e), e._w && null == e._a[St] && null == e._a[bt] && function(e) {
                                 var t, n, a, r, s, i, o, d;
-                                if (null != (t = e._w).GG || null != t.W || null != t.E) s = 1, i = 4, n = he(t.GG, e._a[wt], ee(Le(), 1, 4).year), a = he(t.W, 1), ((r = he(t.E, 1)) < 1 || r > 7) && (d = !0);
+                                if (null != (t = e._w).GG || null != t.W || null != t.E) s = 1, i = 4, n = he(t.GG, e._a[Tt], ee(Le(), 1, 4).year), a = he(t.W, 1), ((r = he(t.E, 1)) < 1 || r > 7) && (d = !0);
                                 else {
                                     s = e._locale._week.dow, i = e._locale._week.doy;
                                     var u = ee(Le(), s, i);
-                                    n = he(t.gg, e._a[wt], u.year), a = he(t.w, u.week), null != t.d ? ((r = t.d) < 0 || r > 6) && (d = !0) : null != t.e ? (r = t.e + s, (t.e < 0 || t.e > 6) && (d = !0)) : r = s
+                                    n = he(t.gg, e._a[Tt], u.year), a = he(t.w, u.week), null != t.d ? ((r = t.d) < 0 || r > 6) && (d = !0) : null != t.e ? (r = t.e + s, (t.e < 0 || t.e > 6) && (d = !0)) : r = s
                                 }
-                                a < 1 || a > te(n, s, i) ? m(e)._overflowWeeks = !0 : null != d ? m(e)._overflowWeekday = !0 : (o = $(n, a, r, s, i), e._a[wt] = o.year, e._dayOfYear = o.dayOfYear)
-                            }(e), null != e._dayOfYear && (s = he(e._a[wt], r[wt]), (e._dayOfYear > q(s) || 0 === e._dayOfYear) && (m(e)._overflowDayOfYear = !0), a = X(s, 0, e._dayOfYear), e._a[bt] = a.getUTCMonth(), e._a[St] = a.getUTCDate()), n = 0; n < 3 && null == e._a[n]; ++n) e._a[n] = i[n] = r[n];
+                                a < 1 || a > te(n, s, i) ? m(e)._overflowWeeks = !0 : null != d ? m(e)._overflowWeekday = !0 : (o = $(n, a, r, s, i), e._a[Tt] = o.year, e._dayOfYear = o.dayOfYear)
+                            }(e), null != e._dayOfYear && (s = he(e._a[Tt], r[Tt]), (e._dayOfYear > q(s) || 0 === e._dayOfYear) && (m(e)._overflowDayOfYear = !0), a = X(s, 0, e._dayOfYear), e._a[bt] = a.getUTCMonth(), e._a[St] = a.getUTCDate()), n = 0; n < 3 && null == e._a[n]; ++n) e._a[n] = i[n] = r[n];
                         for (; n < 7; n++) e._a[n] = i[n] = null == e._a[n] ? 2 === n ? 1 : 0 : e._a[n];
                         24 === e._a[xt] && 0 === e._a[Ht] && 0 === e._a[jt] && 0 === e._a[Pt] && (e._nextDay = !0, e._a[xt] = 0), e._d = (e._useUTC ? X : function(e, t, n, a, r, s, i) {
                             var o = new Date(e, t, n, a, r, s, i);
@@ -5373,19 +5524,19 @@ webpackJsonp([39], {
                     }
                 }
 
-                function fe(e) {
+                function Me(e) {
                     if (e._f !== t.ISO_8601)
                         if (e._f !== t.RFC_2822) {
                             e._a = [], m(e).empty = !0;
                             var n, a, r, s, i, o = "" + e._i,
                                 d = o.length,
                                 u = 0;
-                            for (r = C(e._f, e._locale).match(rt) || [], n = 0; n < r.length; n++) s = r[n], (a = (o.match(z(s, e)) || [])[0]) && ((i = o.substr(0, o.indexOf(a))).length > 0 && m(e).unusedInput.push(i), o = o.slice(o.indexOf(a) + a.length), u += a.length), ot[s] ? (a ? m(e).empty = !1 : m(e).unusedTokens.push(s), U(s, a, e)) : e._strict && !a && m(e).unusedTokens.push(s);
+                            for (r = C(e._f, e._locale).match(rt) || [], n = 0; n < r.length; n++) s = r[n], (a = (o.match(N(s, e)) || [])[0]) && ((i = o.substr(0, o.indexOf(a))).length > 0 && m(e).unusedInput.push(i), o = o.slice(o.indexOf(a) + a.length), u += a.length), ot[s] ? (a ? m(e).empty = !1 : m(e).unusedTokens.push(s), U(s, a, e)) : e._strict && !a && m(e).unusedTokens.push(s);
                             m(e).charsLeftOver = d - u, o.length > 0 && m(e).unusedInput.push(o), e._a[xt] <= 12 && !0 === m(e).bigHour && e._a[xt] > 0 && (m(e).bigHour = void 0), m(e).parsedDateParts = e._a.slice(0), m(e).meridiem = e._meridiem, e._a[xt] = function(e, t, n) {
                                 var a;
                                 if (null == n) return t;
                                 return null != e.meridiemHour ? e.meridiemHour(t, n) : null != e.isPM ? ((a = e.isPM(n)) && t < 12 && (t += 12), a || 12 !== t || (t = 0), t) : t
-                            }(e._locale, e._a[xt], e._meridiem), Me(e), le(e)
+                            }(e._locale, e._a[xt], e._meridiem), fe(e), le(e)
                         } else ce(e);
                     else me(e)
                 }
@@ -5395,24 +5546,24 @@ webpackJsonp([39], {
                         u = e._f;
                     return e._locale = e._locale || _e(e._l), null === n || void 0 === u && "" === n ? h({
                         nullInput: !0
-                    }) : ("string" == typeof n && (e._i = n = e._locale.preparse(n)), y(n) ? new f(le(n)) : (o(n) ? e._d = n : a(u) ? function(e) {
+                    }) : ("string" == typeof n && (e._i = n = e._locale.preparse(n)), y(n) ? new M(le(n)) : (o(n) ? e._d = n : a(u) ? function(e) {
                         var t, n, a, r, s;
                         if (0 === e._f.length) return m(e).invalidFormat = !0, void(e._d = new Date(NaN));
-                        for (r = 0; r < e._f.length; r++) s = 0, t = M({}, e), null != e._useUTC && (t._useUTC = e._useUTC), t._f = e._f[r], fe(t), c(t) && (s += m(t).charsLeftOver, s += 10 * m(t).unusedTokens.length, m(t).score = s, (null == a || s < a) && (a = s, n = t));
+                        for (r = 0; r < e._f.length; r++) s = 0, t = f({}, e), null != e._useUTC && (t._useUTC = e._useUTC), t._f = e._f[r], Me(t), c(t) && (s += m(t).charsLeftOver, s += 10 * m(t).unusedTokens.length, m(t).score = s, (null == a || s < a) && (a = s, n = t));
                         _(e, n || t)
-                    }(e) : u ? fe(e) : function(e) {
+                    }(e) : u ? Me(e) : function(e) {
                         var n = e._i;
                         s(n) ? e._d = new Date(t.now()) : o(n) ? e._d = new Date(n.valueOf()) : "string" == typeof n ? function(e) {
                             var n = rn.exec(e._i);
                             null === n ? (me(e), !1 === e._isValid && (delete e._isValid, ce(e), !1 === e._isValid && (delete e._isValid, t.createFromInputFallback(e)))) : e._d = new Date(+n[1])
                         }(e) : a(n) ? (e._a = d(n.slice(0), function(e) {
                             return parseInt(e, 10)
-                        }), Me(e)) : r(n) ? function(e) {
+                        }), fe(e)) : r(n) ? function(e) {
                             if (!e._d) {
                                 var t = x(e._i);
                                 e._a = d([t.year, t.month, t.day || t.date, t.hour, t.minute, t.second, t.millisecond], function(e) {
                                     return e && parseInt(e, 10)
-                                }), Me(e)
+                                }), fe(e)
                             }
                         }(e) : i(n) ? e._d = new Date(n) : t.createFromInputFallback(e)
                     }(e), c(e) || (e._d = null), e))
@@ -5426,7 +5577,7 @@ webpackJsonp([39], {
                             return !0
                         }(e) || a(e) && 0 === e.length) && (e = void 0), o._isAMomentObject = !0, o._useUTC = o._isUTC = i, o._l = n, o._i = e, o._f = t, o._strict = s,
                         function(e) {
-                            var t = new f(le(ye(e)));
+                            var t = new M(le(ye(e)));
                             return t._nextDay && (t.add(1, "d"), t._nextDay = void 0), t
                         }(o)
                 }
@@ -5474,14 +5625,14 @@ webpackJsonp([39], {
                 }
 
                 function ve(e, t) {
-                    F(e, 0, 0, function() {
+                    A(e, 0, 0, function() {
                         var e = this.utcOffset(),
                             n = "+";
                         return e < 0 && (e = -e, n = "-"), n + E(~~(e / 60), 2) + t + E(~~e % 60, 2)
                     })
                 }
 
-                function Te(e, t) {
+                function we(e, t) {
                     var n = (t || "").match(e);
                     if (null === n) return null;
                     var a = ((n[n.length - 1] || []) + "").match(_n) || ["-", 0, 0],
@@ -5489,7 +5640,7 @@ webpackJsonp([39], {
                     return 0 === r ? 0 : "+" === a[0] ? r : -r
                 }
 
-                function we(e, n) {
+                function Te(e, n) {
                     var a, r;
                     return n._isUTC ? (a = n.clone(), r = (y(e) || o(e) ? e.valueOf() : Le(e).valueOf()) - a.valueOf(), a._d.setTime(a._d.valueOf() + r), t.updateOffset(a, !1), a) : Le(e).local()
                 }
@@ -5530,7 +5681,7 @@ webpackJsonp([39], {
                             milliseconds: 0,
                             months: 0
                         };
-                        t = we(t, e), e.isBefore(t) ? n = je(e, t) : ((n = je(t, e)).milliseconds = -n.milliseconds, n.months = -n.months);
+                        t = Te(t, e), e.isBefore(t) ? n = je(e, t) : ((n = je(t, e)).milliseconds = -n.milliseconds, n.months = -n.months);
                         return n
                     }(Le(s.from), Le(s.to)), (s = {}).ms = r.milliseconds, s.M = r.months), a = new ge(s), De(e) && u(e, "_locale") && (a._locale = e._locale), a
                 }
@@ -5567,12 +5718,12 @@ webpackJsonp([39], {
                     return void 0 === e ? this._locale._abbr : (null != (t = _e(e)) && (this._locale = t), this)
                 }
 
-                function Fe() {
+                function Ae() {
                     return this._locale
                 }
 
-                function Ae(e, t) {
-                    F(0, [e, e.length], 0, t)
+                function Fe(e, t) {
+                    A(0, [e, e.length], 0, t)
                 }
 
                 function We(e, t, n, a, r) {
@@ -5588,20 +5739,20 @@ webpackJsonp([39], {
                     t[Pt] = L(1e3 * ("0." + e))
                 }
 
-                function Ne(e) {
+                function ze(e) {
                     return e
                 }
 
-                function ze(e, t, n, a) {
+                function Ne(e, t, n, a) {
                     var r = _e(),
                         s = l().set(a, t);
                     return r[n](s, e)
                 }
 
                 function Ie(e, t, n) {
-                    if (i(e) && (t = e, e = void 0), e = e || "", null != t) return ze(e, t, n, "month");
+                    if (i(e) && (t = e, e = void 0), e = e || "", null != t) return Ne(e, t, n, "month");
                     var a, r = [];
-                    for (a = 0; a < 12; a++) r[a] = ze(e, a, n, "month");
+                    for (a = 0; a < 12; a++) r[a] = Ne(e, a, n, "month");
                     return r
                 }
 
@@ -5609,9 +5760,9 @@ webpackJsonp([39], {
                     "boolean" == typeof e ? (i(t) && (n = t, t = void 0), t = t || "") : (n = t = e, e = !1, i(t) && (n = t, t = void 0), t = t || "");
                     var r = _e(),
                         s = e ? r._week.dow : 0;
-                    if (null != n) return ze(t, (n + s) % 7, a, "day");
+                    if (null != n) return Ne(t, (n + s) % 7, a, "day");
                     var o, d = [];
-                    for (o = 0; o < 7; o++) d[o] = ze(t, (o + s) % 7, a, "day");
+                    for (o = 0; o < 7; o++) d[o] = Ne(t, (o + s) % 7, a, "day");
                     return d
                 }
 
@@ -5686,8 +5837,8 @@ webpackJsonp([39], {
                     mt = /[+-]?\d{6}/,
                     ct = /\d\d?/,
                     ht = /\d\d\d\d?/,
-                    Mt = /\d\d\d\d\d\d?/,
-                    ft = /\d{1,3}/,
+                    ft = /\d\d\d\d\d\d?/,
+                    Mt = /\d{1,3}/,
                     yt = /\d{1,4}/,
                     pt = /[+-]?\d{1,6}/,
                     Lt = /\d+/,
@@ -5696,8 +5847,8 @@ webpackJsonp([39], {
                     Dt = /Z|[+-]\d\d(?::?\d\d)?/gi,
                     kt = /[0-9]*['a-z\u00A0-\u05FF\u0700-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+|[\u0600-\u06FF\/]+(\s*?[\u0600-\u06FF]+){1,2}/i,
                     vt = {},
-                    Tt = {},
-                    wt = 0,
+                    wt = {},
+                    Tt = 0,
                     bt = 1,
                     St = 2,
                     xt = 3,
@@ -5706,21 +5857,21 @@ webpackJsonp([39], {
                     Pt = 6,
                     Ot = 7,
                     Et = 8,
-                    Ft = Array.prototype.indexOf ? Array.prototype.indexOf : function(e) {
+                    At = Array.prototype.indexOf ? Array.prototype.indexOf : function(e) {
                         var t;
                         for (t = 0; t < this.length; ++t)
                             if (this[t] === e) return t;
                         return -1
                     };
-                F("M", ["MM", 2], "Mo", function() {
+                A("M", ["MM", 2], "Mo", function() {
                     return this.month() + 1
-                }), F("MMM", 0, 0, function(e) {
+                }), A("MMM", 0, 0, function(e) {
                     return this.localeData().monthsShort(this, e)
-                }), F("MMMM", 0, 0, function(e) {
+                }), A("MMMM", 0, 0, function(e) {
                     return this.localeData().months(this, e)
-                }), b("month", "M"), H("month", 8), N("M", ct), N("MM", ct, ut), N("MMM", function(e, t) {
+                }), b("month", "M"), H("month", 8), z("M", ct), z("MM", ct, ut), z("MMM", function(e, t) {
                     return t.monthsShortRegex(e)
-                }), N("MMMM", function(e, t) {
+                }), z("MMMM", function(e, t) {
                     return t.monthsRegex(e)
                 }), J(["M", "MM"], function(e, t) {
                     t[bt] = L(e) - 1
@@ -5728,40 +5879,40 @@ webpackJsonp([39], {
                     var r = n._locale.monthsParse(e, a, n._strict);
                     null != r ? t[bt] = r : m(n).invalidMonth = e
                 });
-                var At = /D[oD]?(\[[^\[\]]*\]|\s)+MMMM?/,
+                var Ft = /D[oD]?(\[[^\[\]]*\]|\s)+MMMM?/,
                     Wt = "January_February_March_April_May_June_July_August_September_October_November_December".split("_"),
                     Ct = "Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec".split("_"),
-                    Nt = kt,
-                    zt = kt;
-                F("Y", 0, 0, function() {
+                    zt = kt,
+                    Nt = kt;
+                A("Y", 0, 0, function() {
                     var e = this.year();
                     return e <= 9999 ? "" + e : "+" + e
-                }), F(0, ["YY", 2], 0, function() {
+                }), A(0, ["YY", 2], 0, function() {
                     return this.year() % 100
-                }), F(0, ["YYYY", 4], 0, "year"), F(0, ["YYYYY", 5], 0, "year"), F(0, ["YYYYYY", 6, !0], 0, "year"), b("year", "y"), H("year", 1), N("Y", Yt), N("YY", ct, ut), N("YYYY", yt, lt), N("YYYYY", pt, mt), N("YYYYYY", pt, mt), J(["YYYYY", "YYYYYY"], wt), J("YYYY", function(e, n) {
-                    n[wt] = 2 === e.length ? t.parseTwoDigitYear(e) : L(e)
+                }), A(0, ["YYYY", 4], 0, "year"), A(0, ["YYYYY", 5], 0, "year"), A(0, ["YYYYYY", 6, !0], 0, "year"), b("year", "y"), H("year", 1), z("Y", Yt), z("YY", ct, ut), z("YYYY", yt, lt), z("YYYYY", pt, mt), z("YYYYYY", pt, mt), J(["YYYYY", "YYYYYY"], Tt), J("YYYY", function(e, n) {
+                    n[Tt] = 2 === e.length ? t.parseTwoDigitYear(e) : L(e)
                 }), J("YY", function(e, n) {
-                    n[wt] = t.parseTwoDigitYear(e)
+                    n[Tt] = t.parseTwoDigitYear(e)
                 }), J("Y", function(e, t) {
-                    t[wt] = parseInt(e, 10)
+                    t[Tt] = parseInt(e, 10)
                 }), t.parseTwoDigitYear = function(e) {
                     return L(e) + (L(e) > 68 ? 1900 : 2e3)
                 };
                 var It = j("FullYear", !0);
-                F("w", ["ww", 2], "wo", "week"), F("W", ["WW", 2], "Wo", "isoWeek"), b("week", "w"), b("isoWeek", "W"), H("week", 5), H("isoWeek", 5), N("w", ct), N("ww", ct, ut), N("W", ct), N("WW", ct, ut), R(["w", "ww", "W", "WW"], function(e, t, n, a) {
+                A("w", ["ww", 2], "wo", "week"), A("W", ["WW", 2], "Wo", "isoWeek"), b("week", "w"), b("isoWeek", "W"), H("week", 5), H("isoWeek", 5), z("w", ct), z("ww", ct, ut), z("W", ct), z("WW", ct, ut), R(["w", "ww", "W", "WW"], function(e, t, n, a) {
                     t[a.substr(0, 1)] = L(e)
                 });
-                F("d", 0, "do", "day"), F("dd", 0, 0, function(e) {
+                A("d", 0, "do", "day"), A("dd", 0, 0, function(e) {
                     return this.localeData().weekdaysMin(this, e)
-                }), F("ddd", 0, 0, function(e) {
+                }), A("ddd", 0, 0, function(e) {
                     return this.localeData().weekdaysShort(this, e)
-                }), F("dddd", 0, 0, function(e) {
+                }), A("dddd", 0, 0, function(e) {
                     return this.localeData().weekdays(this, e)
-                }), F("e", 0, 0, "weekday"), F("E", 0, 0, "isoWeekday"), b("day", "d"), b("weekday", "e"), b("isoWeekday", "E"), H("day", 11), H("weekday", 11), H("isoWeekday", 11), N("d", ct), N("e", ct), N("E", ct), N("dd", function(e, t) {
+                }), A("e", 0, 0, "weekday"), A("E", 0, 0, "isoWeekday"), b("day", "d"), b("weekday", "e"), b("isoWeekday", "E"), H("day", 11), H("weekday", 11), H("isoWeekday", 11), z("d", ct), z("e", ct), z("E", ct), z("dd", function(e, t) {
                     return t.weekdaysMinRegex(e)
-                }), N("ddd", function(e, t) {
+                }), z("ddd", function(e, t) {
                     return t.weekdaysShortRegex(e)
-                }), N("dddd", function(e, t) {
+                }), z("dddd", function(e, t) {
                     return t.weekdaysRegex(e)
                 }), R(["dd", "ddd", "dddd"], function(e, t, n, a) {
                     var r = n._locale.weekdaysParse(e, a, n._strict);
@@ -5775,17 +5926,17 @@ webpackJsonp([39], {
                     Gt = kt,
                     Vt = kt,
                     Bt = kt;
-                F("H", ["HH", 2], 0, "hour"), F("h", ["hh", 2], 0, ae), F("k", ["kk", 2], 0, function() {
+                A("H", ["HH", 2], 0, "hour"), A("h", ["hh", 2], 0, ae), A("k", ["kk", 2], 0, function() {
                     return this.hours() || 24
-                }), F("hmm", 0, 0, function() {
+                }), A("hmm", 0, 0, function() {
                     return "" + ae.apply(this) + E(this.minutes(), 2)
-                }), F("hmmss", 0, 0, function() {
+                }), A("hmmss", 0, 0, function() {
                     return "" + ae.apply(this) + E(this.minutes(), 2) + E(this.seconds(), 2)
-                }), F("Hmm", 0, 0, function() {
+                }), A("Hmm", 0, 0, function() {
                     return "" + this.hours() + E(this.minutes(), 2)
-                }), F("Hmmss", 0, 0, function() {
+                }), A("Hmmss", 0, 0, function() {
                     return "" + this.hours() + E(this.minutes(), 2) + E(this.seconds(), 2)
-                }), re("a", !0), re("A", !1), b("hour", "h"), H("hour", 13), N("a", se), N("A", se), N("H", ct), N("h", ct), N("k", ct), N("HH", ct, ut), N("hh", ct, ut), N("kk", ct, ut), N("hmm", ht), N("hmmss", Mt), N("Hmm", ht), N("Hmmss", Mt), J(["H", "HH"], xt), J(["k", "kk"], function(e, t, n) {
+                }), re("a", !0), re("A", !1), b("hour", "h"), H("hour", 13), z("a", se), z("A", se), z("H", ct), z("h", ct), z("k", ct), z("HH", ct, ut), z("hh", ct, ut), z("kk", ct, ut), z("hmm", ht), z("hmmss", ft), z("Hmm", ht), z("Hmmss", ft), J(["H", "HH"], xt), J(["k", "kk"], function(e, t, n) {
                     var a = L(e);
                     t[xt] = 24 === a ? 0 : a
                 }), J(["a", "A"], function(e, t, n) {
@@ -5898,8 +6049,8 @@ webpackJsonp([39], {
                         return this.isValid() && e.isValid() ? e > this ? this : e : h()
                     }),
                     un = ["year", "quarter", "month", "week", "day", "hour", "minute", "second", "millisecond"];
-                ve("Z", ":"), ve("ZZ", ""), N("Z", Dt), N("ZZ", Dt), J(["Z", "ZZ"], function(e, t, n) {
-                    n._useUTC = !0, n._tzm = Te(Dt, e)
+                ve("Z", ":"), ve("ZZ", ""), z("Z", Dt), z("ZZ", Dt), J(["Z", "ZZ"], function(e, t, n) {
+                    n._useUTC = !0, n._tzm = we(Dt, e)
                 });
                 var _n = /([\+\-]|\d\d)/gi;
                 t.updateOffset = function() {};
@@ -5911,65 +6062,65 @@ webpackJsonp([39], {
                 var cn = Pe(1, "add"),
                     hn = Pe(-1, "subtract");
                 t.defaultFormat = "YYYY-MM-DDTHH:mm:ssZ", t.defaultFormatUtc = "YYYY-MM-DDTHH:mm:ss[Z]";
-                var Mn = D("moment().lang() is deprecated. Instead, use moment().localeData() to get the language configuration. Use moment().locale() to change languages.", function(e) {
+                var fn = D("moment().lang() is deprecated. Instead, use moment().localeData() to get the language configuration. Use moment().locale() to change languages.", function(e) {
                     return void 0 === e ? this.localeData() : this.locale(e)
                 });
-                F(0, ["gg", 2], 0, function() {
+                A(0, ["gg", 2], 0, function() {
                     return this.weekYear() % 100
-                }), F(0, ["GG", 2], 0, function() {
+                }), A(0, ["GG", 2], 0, function() {
                     return this.isoWeekYear() % 100
-                }), Ae("gggg", "weekYear"), Ae("ggggg", "weekYear"), Ae("GGGG", "isoWeekYear"), Ae("GGGGG", "isoWeekYear"), b("weekYear", "gg"), b("isoWeekYear", "GG"), H("weekYear", 1), H("isoWeekYear", 1), N("G", Yt), N("g", Yt), N("GG", ct, ut), N("gg", ct, ut), N("GGGG", yt, lt), N("gggg", yt, lt), N("GGGGG", pt, mt), N("ggggg", pt, mt), R(["gggg", "ggggg", "GGGG", "GGGGG"], function(e, t, n, a) {
+                }), Fe("gggg", "weekYear"), Fe("ggggg", "weekYear"), Fe("GGGG", "isoWeekYear"), Fe("GGGGG", "isoWeekYear"), b("weekYear", "gg"), b("isoWeekYear", "GG"), H("weekYear", 1), H("isoWeekYear", 1), z("G", Yt), z("g", Yt), z("GG", ct, ut), z("gg", ct, ut), z("GGGG", yt, lt), z("gggg", yt, lt), z("GGGGG", pt, mt), z("ggggg", pt, mt), R(["gggg", "ggggg", "GGGG", "GGGGG"], function(e, t, n, a) {
                     t[a.substr(0, 2)] = L(e)
                 }), R(["gg", "GG"], function(e, n, a, r) {
                     n[r] = t.parseTwoDigitYear(e)
-                }), F("Q", 0, "Qo", "quarter"), b("quarter", "Q"), H("quarter", 7), N("Q", dt), J("Q", function(e, t) {
+                }), A("Q", 0, "Qo", "quarter"), b("quarter", "Q"), H("quarter", 7), z("Q", dt), J("Q", function(e, t) {
                     t[bt] = 3 * (L(e) - 1)
-                }), F("D", ["DD", 2], "Do", "date"), b("date", "D"), H("date", 9), N("D", ct), N("DD", ct, ut), N("Do", function(e, t) {
+                }), A("D", ["DD", 2], "Do", "date"), b("date", "D"), H("date", 9), z("D", ct), z("DD", ct, ut), z("Do", function(e, t) {
                     return e ? t._dayOfMonthOrdinalParse || t._ordinalParse : t._dayOfMonthOrdinalParseLenient
                 }), J(["D", "DD"], St), J("Do", function(e, t) {
                     t[St] = L(e.match(ct)[0])
                 });
-                var fn = j("Date", !0);
-                F("DDD", ["DDDD", 3], "DDDo", "dayOfYear"), b("dayOfYear", "DDD"), H("dayOfYear", 4), N("DDD", ft), N("DDDD", _t), J(["DDD", "DDDD"], function(e, t, n) {
+                var Mn = j("Date", !0);
+                A("DDD", ["DDDD", 3], "DDDo", "dayOfYear"), b("dayOfYear", "DDD"), H("dayOfYear", 4), z("DDD", Mt), z("DDDD", _t), J(["DDD", "DDDD"], function(e, t, n) {
                     n._dayOfYear = L(e)
-                }), F("m", ["mm", 2], 0, "minute"), b("minute", "m"), H("minute", 14), N("m", ct), N("mm", ct, ut), J(["m", "mm"], Ht);
+                }), A("m", ["mm", 2], 0, "minute"), b("minute", "m"), H("minute", 14), z("m", ct), z("mm", ct, ut), J(["m", "mm"], Ht);
                 var yn = j("Minutes", !1);
-                F("s", ["ss", 2], 0, "second"), b("second", "s"), H("second", 15), N("s", ct), N("ss", ct, ut), J(["s", "ss"], jt);
+                A("s", ["ss", 2], 0, "second"), b("second", "s"), H("second", 15), z("s", ct), z("ss", ct, ut), J(["s", "ss"], jt);
                 var pn = j("Seconds", !1);
-                F("S", 0, 0, function() {
+                A("S", 0, 0, function() {
                     return ~~(this.millisecond() / 100)
-                }), F(0, ["SS", 2], 0, function() {
+                }), A(0, ["SS", 2], 0, function() {
                     return ~~(this.millisecond() / 10)
-                }), F(0, ["SSS", 3], 0, "millisecond"), F(0, ["SSSS", 4], 0, function() {
+                }), A(0, ["SSS", 3], 0, "millisecond"), A(0, ["SSSS", 4], 0, function() {
                     return 10 * this.millisecond()
-                }), F(0, ["SSSSS", 5], 0, function() {
+                }), A(0, ["SSSSS", 5], 0, function() {
                     return 100 * this.millisecond()
-                }), F(0, ["SSSSSS", 6], 0, function() {
+                }), A(0, ["SSSSSS", 6], 0, function() {
                     return 1e3 * this.millisecond()
-                }), F(0, ["SSSSSSS", 7], 0, function() {
+                }), A(0, ["SSSSSSS", 7], 0, function() {
                     return 1e4 * this.millisecond()
-                }), F(0, ["SSSSSSSS", 8], 0, function() {
+                }), A(0, ["SSSSSSSS", 8], 0, function() {
                     return 1e5 * this.millisecond()
-                }), F(0, ["SSSSSSSSS", 9], 0, function() {
+                }), A(0, ["SSSSSSSSS", 9], 0, function() {
                     return 1e6 * this.millisecond()
-                }), b("millisecond", "ms"), H("millisecond", 16), N("S", ft, dt), N("SS", ft, ut), N("SSS", ft, _t);
+                }), b("millisecond", "ms"), H("millisecond", 16), z("S", Mt, dt), z("SS", Mt, ut), z("SSS", Mt, _t);
                 var Ln;
-                for (Ln = "SSSS"; Ln.length <= 9; Ln += "S") N(Ln, Lt);
+                for (Ln = "SSSS"; Ln.length <= 9; Ln += "S") z(Ln, Lt);
                 for (Ln = "S"; Ln.length <= 9; Ln += "S") J(Ln, Ce);
                 var Yn = j("Milliseconds", !1);
-                F("z", 0, 0, "zoneAbbr"), F("zz", 0, 0, "zoneName");
-                var gn = f.prototype;
+                A("z", 0, 0, "zoneAbbr"), A("zz", 0, 0, "zoneName");
+                var gn = M.prototype;
                 gn.add = cn, gn.calendar = function(e, n) {
                     var a = e || Le(),
-                        r = we(a, this).startOf("day"),
+                        r = Te(a, this).startOf("day"),
                         s = t.calendarFormat(this, r) || "sameElse",
                         i = n && (v(n[s]) ? n[s].call(this, a) : n[s]);
                     return this.format(i || this.localeData().calendar(s, this, Le(a)))
                 }, gn.clone = function() {
-                    return new f(this)
+                    return new M(this)
                 }, gn.diff = function(e, t, n) {
                     var a, r, s, i;
-                    return this.isValid() && (a = we(e, this)).isValid() ? (r = 6e4 * (a.utcOffset() - this.utcOffset()), "year" === (t = S(t)) || "month" === t || "quarter" === t ? (i = function(e, t) {
+                    return this.isValid() && (a = Te(e, this)).isValid() ? (r = 6e4 * (a.utcOffset() - this.utcOffset()), "year" === (t = S(t)) || "month" === t || "quarter" === t ? (i = function(e, t) {
                         var n, a, r = 12 * (t.year() - e.year()) + (t.month() - e.month()),
                             s = e.clone().add(r, "months");
                         return t - s < 0 ? (n = e.clone().add(r - 1, "months"), a = (t - s) / (s - n)) : (n = e.clone().add(r + 1, "months"), a = (t - s) / (n - s)), -(r + a) || 0
@@ -6015,7 +6166,7 @@ webpackJsonp([39], {
                     return this.isSame(e, t) || this.isBefore(e, t)
                 }, gn.isValid = function() {
                     return c(this)
-                }, gn.lang = Mn, gn.locale = Ee, gn.localeData = Fe, gn.max = dn, gn.min = on, gn.parsingFlags = function() {
+                }, gn.lang = fn, gn.locale = Ee, gn.localeData = Ae, gn.max = dn, gn.min = on, gn.parsingFlags = function() {
                     return _({}, m(this))
                 }, gn.set = function(e, t) {
                     if ("object" == typeof e)
@@ -6115,7 +6266,7 @@ webpackJsonp([39], {
                     return te(this.year(), e.dow, e.doy)
                 }, gn.isoWeeksInYear = function() {
                     return te(this.year(), 1, 4)
-                }, gn.date = fn, gn.day = gn.days = function(e) {
+                }, gn.date = Mn, gn.day = gn.days = function(e) {
                     if (!this.isValid()) return null != e ? this : NaN;
                     var t = this._isUTC ? this._d.getUTCDay() : this._d.getDay();
                     return null != e ? (e = function(e, t) {
@@ -6142,7 +6293,7 @@ webpackJsonp([39], {
                     if (!this.isValid()) return null != e ? this : NaN;
                     if (null != e) {
                         if ("string" == typeof e) {
-                            if (null === (e = Te(Dt, e))) return this
+                            if (null === (e = we(Dt, e))) return this
                         } else Math.abs(e) < 16 && !a && (e *= 60);
                         return !this._isUTC && n && (r = be(this)), this._offset = e, this._isUTC = !0, null != r && this.add(r, "m"), s !== e && (!n || this._changeInProgress ? Oe(this, xe(e - s, "m"), 1, !1) : this._changeInProgress || (this._changeInProgress = !0, t.updateOffset(this, !0), this._changeInProgress = null)), this
                     }
@@ -6154,7 +6305,7 @@ webpackJsonp([39], {
                 }, gn.parseZone = function() {
                     if (null != this._tzm) this.utcOffset(this._tzm, !1, !0);
                     else if ("string" == typeof this._i) {
-                        var e = Te(gt, this._i);
+                        var e = we(gt, this._i);
                         null != e ? this.utcOffset(e) : this.utcOffset(0, !0)
                     }
                     return this
@@ -6170,18 +6321,18 @@ webpackJsonp([39], {
                     return this._isUTC ? "UTC" : ""
                 }, gn.zoneName = function() {
                     return this._isUTC ? "Coordinated Universal Time" : ""
-                }, gn.dates = D("dates accessor is deprecated. Use date instead.", fn), gn.months = D("months accessor is deprecated. Use month instead", B), gn.years = D("years accessor is deprecated. Use year instead", It), gn.zone = D("moment().zone is deprecated, use moment().utcOffset instead. http://momentjs.com/guides/#/warnings/zone/", function(e, t) {
+                }, gn.dates = D("dates accessor is deprecated. Use date instead.", Mn), gn.months = D("months accessor is deprecated. Use month instead", B), gn.years = D("years accessor is deprecated. Use year instead", It), gn.zone = D("moment().zone is deprecated, use moment().utcOffset instead. http://momentjs.com/guides/#/warnings/zone/", function(e, t) {
                     return null != e ? ("string" != typeof e && (e = -e), this.utcOffset(e, t), this) : -this.utcOffset()
                 }), gn.isDSTShifted = D("isDSTShifted is deprecated. See http://momentjs.com/guides/#/warnings/dst-shifted/ for more information", function() {
                     if (!s(this._isDSTShifted)) return this._isDSTShifted;
                     var e = {};
-                    if (M(e, this), (e = ye(e))._a) {
+                    if (f(e, this), (e = ye(e))._a) {
                         var t = e._isUTC ? l(e._a) : Le(e._a);
                         this._isDSTShifted = this.isValid() && Y(e._a, t.toArray()) > 0
                     } else this._isDSTShifted = !1;
                     return this._isDSTShifted
                 });
-                var Dn = w.prototype;
+                var Dn = T.prototype;
                 Dn.calendar = function(e, t, n) {
                     var a = this._calendar[e] || this._calendar.sameElse;
                     return v(a) ? a.call(t, n) : a
@@ -6195,7 +6346,7 @@ webpackJsonp([39], {
                     return this._invalidDate
                 }, Dn.ordinal = function(e) {
                     return this._ordinal.replace("%d", e)
-                }, Dn.preparse = Ne, Dn.postformat = Ne, Dn.relativeTime = function(e, t, n, a) {
+                }, Dn.preparse = ze, Dn.postformat = ze, Dn.relativeTime = function(e, t, n, a) {
                     var r = this._relativeTime[n];
                     return v(r) ? r(e, t, n, a) : r.replace(/%d/i, e)
                 }, Dn.pastFuture = function(e, t) {
@@ -6206,16 +6357,16 @@ webpackJsonp([39], {
                     for (n in e) v(t = e[n]) ? this[n] = t : this["_" + n] = t;
                     this._config = e, this._dayOfMonthOrdinalParseLenient = new RegExp((this._dayOfMonthOrdinalParse.source || this._ordinalParse.source) + "|" + /\d{1,2}/.source)
                 }, Dn.months = function(e, t) {
-                    return e ? a(this._months) ? this._months[e.month()] : this._months[(this._months.isFormat || At).test(t) ? "format" : "standalone"][e.month()] : a(this._months) ? this._months : this._months.standalone
+                    return e ? a(this._months) ? this._months[e.month()] : this._months[(this._months.isFormat || Ft).test(t) ? "format" : "standalone"][e.month()] : a(this._months) ? this._months : this._months.standalone
                 }, Dn.monthsShort = function(e, t) {
-                    return e ? a(this._monthsShort) ? this._monthsShort[e.month()] : this._monthsShort[At.test(t) ? "format" : "standalone"][e.month()] : a(this._monthsShort) ? this._monthsShort : this._monthsShort.standalone
+                    return e ? a(this._monthsShort) ? this._monthsShort[e.month()] : this._monthsShort[Ft.test(t) ? "format" : "standalone"][e.month()] : a(this._monthsShort) ? this._monthsShort : this._monthsShort.standalone
                 }, Dn.monthsParse = function(e, t, n) {
                     var a, r, s;
                     if (this._monthsParseExact) return function(e, t, n) {
                         var a, r, s, i = e.toLocaleLowerCase();
                         if (!this._monthsParse)
                             for (this._monthsParse = [], this._longMonthsParse = [], this._shortMonthsParse = [], a = 0; a < 12; ++a) s = l([2e3, a]), this._shortMonthsParse[a] = this.monthsShort(s, "").toLocaleLowerCase(), this._longMonthsParse[a] = this.months(s, "").toLocaleLowerCase();
-                        return n ? "MMM" === t ? -1 !== (r = Ft.call(this._shortMonthsParse, i)) ? r : null : -1 !== (r = Ft.call(this._longMonthsParse, i)) ? r : null : "MMM" === t ? -1 !== (r = Ft.call(this._shortMonthsParse, i)) ? r : -1 !== (r = Ft.call(this._longMonthsParse, i)) ? r : null : -1 !== (r = Ft.call(this._longMonthsParse, i)) ? r : -1 !== (r = Ft.call(this._shortMonthsParse, i)) ? r : null
+                        return n ? "MMM" === t ? -1 !== (r = At.call(this._shortMonthsParse, i)) ? r : null : -1 !== (r = At.call(this._longMonthsParse, i)) ? r : null : "MMM" === t ? -1 !== (r = At.call(this._shortMonthsParse, i)) ? r : -1 !== (r = At.call(this._longMonthsParse, i)) ? r : null : -1 !== (r = At.call(this._longMonthsParse, i)) ? r : -1 !== (r = At.call(this._shortMonthsParse, i)) ? r : null
                     }.call(this, e, t, n);
                     for (this._monthsParse || (this._monthsParse = [], this._longMonthsParse = [], this._shortMonthsParse = []), a = 0; a < 12; a++) {
                         if (r = l([2e3, a]), n && !this._longMonthsParse[a] && (this._longMonthsParse[a] = new RegExp("^" + this.months(r, "").replace(".", "") + "$", "i"), this._shortMonthsParse[a] = new RegExp("^" + this.monthsShort(r, "").replace(".", "") + "$", "i")), n || this._monthsParse[a] || (s = "^" + this.months(r, "") + "|^" + this.monthsShort(r, ""), this._monthsParse[a] = new RegExp(s.replace(".", ""), "i")), n && "MMMM" === t && this._longMonthsParse[a].test(e)) return a;
@@ -6223,9 +6374,9 @@ webpackJsonp([39], {
                         if (!n && this._monthsParse[a].test(e)) return a
                     }
                 }, Dn.monthsRegex = function(e) {
-                    return this._monthsParseExact ? (u(this, "_monthsRegex") || Z.call(this), e ? this._monthsStrictRegex : this._monthsRegex) : (u(this, "_monthsRegex") || (this._monthsRegex = zt), this._monthsStrictRegex && e ? this._monthsStrictRegex : this._monthsRegex)
+                    return this._monthsParseExact ? (u(this, "_monthsRegex") || Z.call(this), e ? this._monthsStrictRegex : this._monthsRegex) : (u(this, "_monthsRegex") || (this._monthsRegex = Nt), this._monthsStrictRegex && e ? this._monthsStrictRegex : this._monthsRegex)
                 }, Dn.monthsShortRegex = function(e) {
-                    return this._monthsParseExact ? (u(this, "_monthsRegex") || Z.call(this), e ? this._monthsShortStrictRegex : this._monthsShortRegex) : (u(this, "_monthsShortRegex") || (this._monthsShortRegex = Nt), this._monthsShortStrictRegex && e ? this._monthsShortStrictRegex : this._monthsShortRegex)
+                    return this._monthsParseExact ? (u(this, "_monthsRegex") || Z.call(this), e ? this._monthsShortStrictRegex : this._monthsShortRegex) : (u(this, "_monthsShortRegex") || (this._monthsShortRegex = zt), this._monthsShortStrictRegex && e ? this._monthsShortStrictRegex : this._monthsShortRegex)
                 }, Dn.week = function(e) {
                     return ee(e, this._week.dow, this._week.doy).week
                 }, Dn.firstDayOfYear = function() {
@@ -6244,7 +6395,7 @@ webpackJsonp([39], {
                         var a, r, s, i = e.toLocaleLowerCase();
                         if (!this._weekdaysParse)
                             for (this._weekdaysParse = [], this._shortWeekdaysParse = [], this._minWeekdaysParse = [], a = 0; a < 7; ++a) s = l([2e3, 1]).day(a), this._minWeekdaysParse[a] = this.weekdaysMin(s, "").toLocaleLowerCase(), this._shortWeekdaysParse[a] = this.weekdaysShort(s, "").toLocaleLowerCase(), this._weekdaysParse[a] = this.weekdays(s, "").toLocaleLowerCase();
-                        return n ? "dddd" === t ? -1 !== (r = Ft.call(this._weekdaysParse, i)) ? r : null : "ddd" === t ? -1 !== (r = Ft.call(this._shortWeekdaysParse, i)) ? r : null : -1 !== (r = Ft.call(this._minWeekdaysParse, i)) ? r : null : "dddd" === t ? -1 !== (r = Ft.call(this._weekdaysParse, i)) ? r : -1 !== (r = Ft.call(this._shortWeekdaysParse, i)) ? r : -1 !== (r = Ft.call(this._minWeekdaysParse, i)) ? r : null : "ddd" === t ? -1 !== (r = Ft.call(this._shortWeekdaysParse, i)) ? r : -1 !== (r = Ft.call(this._weekdaysParse, i)) ? r : -1 !== (r = Ft.call(this._minWeekdaysParse, i)) ? r : null : -1 !== (r = Ft.call(this._minWeekdaysParse, i)) ? r : -1 !== (r = Ft.call(this._weekdaysParse, i)) ? r : -1 !== (r = Ft.call(this._shortWeekdaysParse, i)) ? r : null
+                        return n ? "dddd" === t ? -1 !== (r = At.call(this._weekdaysParse, i)) ? r : null : "ddd" === t ? -1 !== (r = At.call(this._shortWeekdaysParse, i)) ? r : null : -1 !== (r = At.call(this._minWeekdaysParse, i)) ? r : null : "dddd" === t ? -1 !== (r = At.call(this._weekdaysParse, i)) ? r : -1 !== (r = At.call(this._shortWeekdaysParse, i)) ? r : -1 !== (r = At.call(this._minWeekdaysParse, i)) ? r : null : "ddd" === t ? -1 !== (r = At.call(this._shortWeekdaysParse, i)) ? r : -1 !== (r = At.call(this._weekdaysParse, i)) ? r : -1 !== (r = At.call(this._minWeekdaysParse, i)) ? r : null : -1 !== (r = At.call(this._minWeekdaysParse, i)) ? r : -1 !== (r = At.call(this._weekdaysParse, i)) ? r : -1 !== (r = At.call(this._shortWeekdaysParse, i)) ? r : null
                     }.call(this, e, t, n);
                     for (this._weekdaysParse || (this._weekdaysParse = [], this._minWeekdaysParse = [], this._shortWeekdaysParse = [], this._fullWeekdaysParse = []), a = 0; a < 7; a++) {
                         if (r = l([2e3, 1]).day(a), n && !this._fullWeekdaysParse[a] && (this._fullWeekdaysParse[a] = new RegExp("^" + this.weekdays(r, "").replace(".", ".?") + "$", "i"), this._shortWeekdaysParse[a] = new RegExp("^" + this.weekdaysShort(r, "").replace(".", ".?") + "$", "i"), this._minWeekdaysParse[a] = new RegExp("^" + this.weekdaysMin(r, "").replace(".", ".?") + "$", "i")), this._weekdaysParse[a] || (s = "^" + this.weekdays(r, "") + "|^" + this.weekdaysShort(r, "") + "|^" + this.weekdaysMin(r, ""), this._weekdaysParse[a] = new RegExp(s.replace(".", ""), "i")), n && "dddd" === t && this._fullWeekdaysParse[a].test(e)) return a;
@@ -6271,8 +6422,8 @@ webpackJsonp([39], {
                 }), t.lang = D("moment.lang is deprecated. Use moment.locale instead.", de), t.langData = D("moment.langData is deprecated. Use moment.localeData instead.", _e);
                 var kn = Math.abs,
                     vn = Be("ms"),
-                    Tn = Be("s"),
-                    wn = Be("m"),
+                    wn = Be("s"),
+                    Tn = Be("m"),
                     bn = Be("h"),
                     Sn = Be("d"),
                     xn = Be("w"),
@@ -6281,12 +6432,12 @@ webpackJsonp([39], {
                     Pn = Ze("milliseconds"),
                     On = Ze("seconds"),
                     En = Ze("minutes"),
-                    Fn = Ze("hours"),
-                    An = Ze("days"),
+                    An = Ze("hours"),
+                    Fn = Ze("days"),
                     Wn = Ze("months"),
                     Cn = Ze("years"),
-                    Nn = Math.round,
-                    zn = {
+                    zn = Math.round,
+                    Nn = {
                         ss: 44,
                         s: 45,
                         m: 45,
@@ -6325,7 +6476,7 @@ webpackJsonp([39], {
                             default:
                                 throw new Error("Unknown unit " + e)
                         }
-                    }, Jn.asMilliseconds = vn, Jn.asSeconds = Tn, Jn.asMinutes = wn, Jn.asHours = bn, Jn.asDays = Sn, Jn.asWeeks = xn, Jn.asMonths = Hn, Jn.asYears = jn, Jn.valueOf = function() {
+                    }, Jn.asMilliseconds = vn, Jn.asSeconds = wn, Jn.asMinutes = Tn, Jn.asHours = bn, Jn.asDays = Sn, Jn.asWeeks = xn, Jn.asMonths = Hn, Jn.asYears = jn, Jn.valueOf = function() {
                         return this.isValid() ? this._milliseconds + 864e5 * this._days + this._months % 12 * 2592e6 + 31536e6 * L(this._months / 12) : NaN
                     }, Jn._bubble = function() {
                         var e, t, n, a, r, s = this._milliseconds,
@@ -6335,27 +6486,27 @@ webpackJsonp([39], {
                         return s >= 0 && i >= 0 && o >= 0 || s <= 0 && i <= 0 && o <= 0 || (s += 864e5 * Ue(Ve(o) + i), i = 0, o = 0), d.milliseconds = s % 1e3, e = p(s / 1e3), d.seconds = e % 60, t = p(e / 60), d.minutes = t % 60, n = p(t / 60), d.hours = n % 24, i += p(n / 24), r = p(Ge(i)), o += r, i -= Ue(Ve(r)), a = p(o / 12), o %= 12, d.days = i, d.months = o, d.years = a, this
                     }, Jn.get = function(e) {
                         return e = S(e), this.isValid() ? this[e + "s"]() : NaN
-                    }, Jn.milliseconds = Pn, Jn.seconds = On, Jn.minutes = En, Jn.hours = Fn, Jn.days = An, Jn.weeks = function() {
+                    }, Jn.milliseconds = Pn, Jn.seconds = On, Jn.minutes = En, Jn.hours = An, Jn.days = Fn, Jn.weeks = function() {
                         return p(this.days() / 7)
                     }, Jn.months = Wn, Jn.years = Cn, Jn.humanize = function(e) {
                         if (!this.isValid()) return this.localeData().invalidDate();
                         var t = this.localeData(),
                             n = function(e, t, n) {
                                 var a = xe(e).abs(),
-                                    r = Nn(a.as("s")),
-                                    s = Nn(a.as("m")),
-                                    i = Nn(a.as("h")),
-                                    o = Nn(a.as("d")),
-                                    d = Nn(a.as("M")),
-                                    u = Nn(a.as("y")),
-                                    _ = r <= zn.ss && ["s", r] || r < zn.s && ["ss", r] || s <= 1 && ["m"] || s < zn.m && ["mm", s] || i <= 1 && ["h"] || i < zn.h && ["hh", i] || o <= 1 && ["d"] || o < zn.d && ["dd", o] || d <= 1 && ["M"] || d < zn.M && ["MM", d] || u <= 1 && ["y"] || ["yy", u];
+                                    r = zn(a.as("s")),
+                                    s = zn(a.as("m")),
+                                    i = zn(a.as("h")),
+                                    o = zn(a.as("d")),
+                                    d = zn(a.as("M")),
+                                    u = zn(a.as("y")),
+                                    _ = r <= Nn.ss && ["s", r] || r < Nn.s && ["ss", r] || s <= 1 && ["m"] || s < Nn.m && ["mm", s] || i <= 1 && ["h"] || i < Nn.h && ["hh", i] || o <= 1 && ["d"] || o < Nn.d && ["dd", o] || d <= 1 && ["M"] || d < Nn.M && ["MM", d] || u <= 1 && ["y"] || ["yy", u];
                                 return _[2] = t, _[3] = +e > 0, _[4] = n,
                                     function(e, t, n, a, r) {
                                         return r.relativeTime(t || 1, !!n, e, a)
                                     }.apply(null, _)
                             }(this, !e, t);
                         return e && (n = t.pastFuture(+this, n)), t.postformat(n)
-                    }, Jn.toISOString = qe, Jn.toString = qe, Jn.toJSON = qe, Jn.locale = Ee, Jn.localeData = Fe, Jn.toIsoString = D("toIsoString() is deprecated. Please use toISOString() instead (notice the capitals)", qe), Jn.lang = Mn, F("X", 0, 0, "unix"), F("x", 0, 0, "valueOf"), N("x", Yt), N("X", /[+-]?\d+(\.\d{1,3})?/), J("X", function(e, t, n) {
+                    }, Jn.toISOString = qe, Jn.toString = qe, Jn.toJSON = qe, Jn.locale = Ee, Jn.localeData = Ae, Jn.toIsoString = D("toIsoString() is deprecated. Please use toISOString() instead (notice the capitals)", qe), Jn.lang = fn, A("X", 0, 0, "unix"), A("x", 0, 0, "valueOf"), z("x", Yt), z("X", /[+-]?\d+(\.\d{1,3})?/), J("X", function(e, t, n) {
                         n._d = new Date(1e3 * parseFloat(e, 10))
                     }), J("x", function(e, t, n) {
                         n._d = new Date(L(e))
@@ -6383,7 +6534,7 @@ webpackJsonp([39], {
                     }, t.defineLocale = ue, t.updateLocale = function(e, t) {
                         if (null != t) {
                             var n, a = Kt;
-                            null != Xt[e] && (a = Xt[e]._config), (n = new w(t = T(a, t))).parentLocale = Xt[e], Xt[e] = n, de(e)
+                            null != Xt[e] && (a = Xt[e]._config), (n = new T(t = w(a, t))).parentLocale = Xt[e], Xt[e] = n, de(e)
                         } else null != Xt[e] && (null != Xt[e].parentLocale ? Xt[e] = Xt[e].parentLocale : null != Xt[e] && delete Xt[e]);
                         return Xt[e]
                     }, t.locales = function() {
@@ -6391,9 +6542,9 @@ webpackJsonp([39], {
                     }, t.weekdaysShort = function(e, t, n) {
                         return Je(e, t, n, "weekdaysShort")
                     }, t.normalizeUnits = S, t.relativeTimeRounding = function(e) {
-                        return void 0 === e ? Nn : "function" == typeof e && (Nn = e, !0)
+                        return void 0 === e ? zn : "function" == typeof e && (zn = e, !0)
                     }, t.relativeTimeThreshold = function(e, t) {
-                        return void 0 !== zn[e] && (void 0 === t ? zn[e] : (zn[e] = t, "s" === e && (zn.ss = t - 1), !0))
+                        return void 0 !== Nn[e] && (void 0 === t ? Nn[e] : (Nn[e] = t, "s" === e && (Nn.ss = t - 1), !0))
                     }, t.calendarFormat = function(e, t) {
                         var n = e.diff(t, "days", !0);
                         return n < -6 ? "sameElse" : n < -1 ? "lastWeek" : n < 0 ? "lastDay" : n < 1 ? "sameDay" : n < 2 ? "nextDay" : n < 7 ? "nextWeek" : "sameElse"
@@ -7094,6 +7245,9 @@ webpackJsonp([39], {
             })
         })
     },
+    WE8T: function(e, t, n) {
+        e.exports = n.p + "assets/generic_credit_card_2x-9e855c7d5c5359ac92089b01e55c4eee.png"
+    },
     WNGz: function(e, t, n) {
         var a = n("xA5w");
         e.exports = function(e) {
@@ -7328,134 +7482,6 @@ webpackJsonp([39], {
                 }
             })
         })
-    },
-    YNUd: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "mutation",
-                name: {
-                    kind: "Name",
-                    value: "PaymentMethodsTab_SetDefaultPaymentMethod"
-                },
-                variableDefinitions: [{
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "input"
-                        }
-                    },
-                    type: {
-                        kind: "NonNullType",
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "SetDefaultPaymentMethodInput"
-                            }
-                        }
-                    }
-                }],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "setDefaultPaymentMethod"
-                        },
-                        arguments: [{
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "input"
-                            },
-                            value: {
-                                kind: "Variable",
-                                name: {
-                                    kind: "Name",
-                                    value: "input"
-                                }
-                            }
-                        }],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "paymentMethod"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "provider"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }, {
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "paymentType"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }, {
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "cardType"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }, {
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "extMethodID"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }, {
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "lastFour"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }]
-                                }
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 205
-            }
-        };
-        n.loc.source = {
-            body: "mutation PaymentMethodsTab_SetDefaultPaymentMethod($input: SetDefaultPaymentMethodInput!) {\nsetDefaultPaymentMethod(input: $input) {\npaymentMethod {\nprovider\npaymentType\ncardType\nextMethodID\nlastFour\n}\n}\n}",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
     },
     YPf8: function(e, t, n) {
         var a = n("xA5w");
@@ -9714,7 +9740,7 @@ webpackJsonp([39], {
         "use strict";
 
         function a(e) {
-            return Object(E.parse)(e)
+            return Object(V.parse)(e)
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -9729,44 +9755,148 @@ webpackJsonp([39], {
             m = n("3zLD"),
             c = n("6sO2"),
             h = n("yWCw"),
-            M = n("CSlQ"),
-            f = n("7vx8"),
-            y = n("Odds"),
-            p = function(e) {
+            f = n("CSlQ"),
+            M = n("7vx8"),
+            y = n("2nfn"),
+            p = n.n(y),
+            L = n("ywmo"),
+            Y = n.n(L),
+            g = n("tWfJ"),
+            D = n.n(g),
+            k = n("WE8T"),
+            v = n.n(k),
+            w = n("6hIG"),
+            T = n.n(w),
+            b = n("siAa"),
+            S = n.n(b),
+            x = n("KVSr"),
+            H = n.n(x),
+            j = n("9pOZ"),
+            P = n.n(j),
+            O = n("9u8h"),
+            E = n("Odds"),
+            A = function(e) {
                 var t = ("XXXX XXXX XXXX " + e.lastFourDigits).replace(/X/g, "•");
-                return l.createElement(y._34, {
+                return l.createElement(E._34, {
                     bold: !0,
-                    color: y.I.Alt2,
-                    type: y._39.P,
-                    fontSize: y.Q.Size6
+                    color: E.I.Alt2,
+                    type: E._39.P,
+                    fontSize: E.Q.Size6
                 }, t)
             },
-            L = function(e) {
+            F = (n("5i0q"), function() {
+                function e(e) {}
+                e.prototype.bind = function(e) {}
+            }(), function(e) {
                 function t() {
-                    return null !== e && e.apply(this, arguments) || this
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        amazonScriptLoaded: null,
+                        walletLoaded: null,
+                        billingAgreementId: null,
+                        updatingPaymentMethod: !1
+                    }, t.handleUpdateCardClick = function() {
+                        return _.__awaiter(t, void 0, void 0, function() {
+                            return _.__generator(this, function(e) {
+                                switch (e.label) {
+                                    case 0:
+                                        this.setState({
+                                            updatingPaymentMethod: !0
+                                        }), e.label = 1;
+                                    case 1:
+                                        return e.trys.push([1, 3, , 4]), [4, this.props.updatePaymentMethod("recurly", "amazon", this.state.billingAgreementId || "")];
+                                    case 2:
+                                        return e.sent(), this.forceUpdate(), [3, 4];
+                                    case 3:
+                                        return e.sent(), this.setState({
+                                            updatingPaymentMethod: !1
+                                        }), [3, 4];
+                                    case 4:
+                                        return [2]
+                                }
+                            })
+                        })
+                    }, t
                 }
                 return _.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.initPayWithAmazon()
+                    var e = this;
+                    window.onAmazonLoginReady = function() {
+                        window.amazon.Login.setClientId(e.props.clientID)
+                    }, window.onAmazonPaymentsReady = function() {
+                        e.setState({
+                            amazonScriptLoaded: !0
+                        }), window.OffAmazonPayments.Button("pay-with-amazon-container__button", e.props.sellerID, {
+                            type: "PwA",
+                            color: "DarkGray",
+                            useAmazonAddressBook: !1,
+                            agreementType: "BillingAgreement",
+                            authorization: function() {
+                                window.amazon.Login.authorize({
+                                    scope: "profile payments:widget payments:autopay_consent",
+                                    popup: !0
+                                }, function(e) {
+                                    if (e.error) return "err"
+                                })
+                            },
+                            onSignIn: function(t) {
+                                e.setState({
+                                    walletLoaded: !0,
+                                    billingAgreementId: t.getAmazonBillingAgreementId()
+                                }), e.initWidget()
+                            }
+                        })
+                    };
+                    var t = document.querySelector("#pwa-script");
+                    t && document.body.removeChild(t);
+                    var n = document.createElement("script");
+                    n.type = "text/javascript", n.id = "pwa-script", n.src = "https://static-na.payments-amazon.com/OffAmazonPayments/us" + (this.props.isProduction ? "" : "/sandbox") + "/js/Widgets.js?sellerId=" + this.props.sellerID, n.async = !0, document.body.appendChild(n)
+                }, t.prototype.initWidget = function() {
+                    var e = {
+                        agreementType: "BillingAgreement",
+                        amazonBillingAgreementId: this.state.billingAgreementId,
+                        sellerId: this.props.sellerID,
+                        design: {
+                            designMode: "responsive"
+                        },
+                        onPaymentSelect: function() {
+                            return !0
+                        },
+                        onError: function() {
+                            return !1
+                        }
+                    };
+                    new window.OffAmazonPayments.Widgets.Wallet(e).bind("pay-with-amazon-container__wallet")
                 }, t.prototype.render = function() {
-                    return l.createElement("div", null, l.createElement("div", {
-                        id: "pay-with-amazon"
-                    }), l.createElement("div", {
-                        id: "wallet"
-                    }), l.createElement("div", {
-                        id: "consent"
-                    }))
-                }, t.prototype.initPayWithAmazon = function() {}, t
-            }(l.Component),
-            Y = n("oIkB");
+                    return this.state.amazonScriptLoaded ? l.createElement(E._1, {
+                        padding: {
+                            top: 1
+                        },
+                        className: "pay-with-amazon-container"
+                    }, l.createElement(E._1, {
+                        display: this.state.walletLoaded ? E.M.Hide : E.M.Block
+                    }, l.createElement("div", {
+                        id: "pay-with-amazon-container__button"
+                    })), l.createElement(E._1, {
+                        display: this.state.walletLoaded ? E.M.Block : E.M.Hide
+                    }, l.createElement("div", {
+                        id: "pay-with-amazon-container__wallet",
+                        className: "pay-with-amazon-container__wallet"
+                    }), l.createElement(E._1, {
+                        padding: {
+                            top: 1
+                        }
+                    }, l.createElement(E.u, {
+                        onClick: this.handleUpdateCardClick,
+                        state: this.state.updatingPaymentMethod ? E.y.Loading : E.y.Default,
+                        disabled: this.state.updatingPaymentMethod
+                    }, Object(c.d)("Update Card", "PayWithAmazon"))))) : l.createElement(E._3, null)
+                }, t
+            }(l.Component));
         ! function(e) {
             e.NotConfigured = "not-configured", e.MissingPublicKey = "missing-public-key", e.InvalidPublicKey = "invalid-public-key", e.AlreadyConfigured = "already-configured", e.MissingHostedFieldTarget = "missing-hosted-field-target", e.Validation = "validation", e.InvalidParameter = "invalid-parameter", e.APIError = "api-error", e.PayPalNotConfigured = "paypal-not-configured", e.PayPalCanceled = "paypal-canceled", e.PayPalError = "paypal-error", e.InvalidRoutingNumber = "invalid-routing-number", e.NotFound = "not-found", e.MissingPlan = "missing-plan", e.InvalidAddon = "invalid-addon", e.InvalidCurrency = "invalid-currency", e.GiftCardCurrencyMisMatch = "gift-card-currency-mismatch"
         }(r || (r = {}));
-        var g;
-        ! function(e) {
-            e.Recurly = "RECURLY", e.Zuora = "ZUORA"
-        }(g || (g = {}));
-        var D, k = n("YNUd"),
-            v = (n("zgXz"), function() {
+        n("zgXz");
+        var W, C = function() {
                 return {
                     fields: {
                         cvv: !1,
@@ -9775,55 +9905,33 @@ webpackJsonp([39], {
                         month: !1,
                         number: !1,
                         year: !1
-                    },
-                    hasServerError: !1
+                    }
                 }
-            }),
-            T = function(e) {
+            },
+            z = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        recurlyLoaded: !1,
                         firstName: "",
                         lastName: "",
-                        buttonState: y.y.Default,
-                        errorState: v()
-                    }, t.logger = c.n.logger.withCategory("recurly-credit-card"), t.renderErrorMessage = function() {
-                        return l.createElement(y._1, {
-                            margin: {
-                                y: 1
-                            }
-                        }, l.createElement(y._34, {
-                            color: y.I.Error
-                        }, Object(c.d)("Your request could not be processed. Please try again later.", "RecurlyCardComponent")))
+                        recurlyReady: !1,
+                        updatingPaymentMethod: !1,
+                        errorState: C()
                     }, t.handleSubmit = function(e) {
                         return _.__awaiter(t, void 0, void 0, function() {
                             var t = this;
                             return _.__generator(this, function(n) {
                                 return e.preventDefault(), this.setState(function(e) {
                                     return {
-                                        buttonState: y.y.Loading,
-                                        errorState: _.__assign({}, e.errorState, {
-                                            hasServerError: !1
-                                        })
+                                        updatingPaymentMethod: !0,
+                                        errorState: _.__assign({}, e.errorState)
                                     }
                                 }), recurly.token(this.form, function(e, n) {
                                     return _.__awaiter(t, void 0, void 0, function() {
                                         return _.__generator(this, function(t) {
-                                            switch (t.label) {
-                                                case 0:
-                                                    return e ? (this.handleValidationError(e), this.setState({
-                                                        buttonState: y.y.Default
-                                                    }), [3, 3]) : [3, 1];
-                                                case 1:
-                                                    return [4, this.handleValidationSuccess(n)];
-                                                case 2:
-                                                    t.sent(), this.state.errorState.hasServerError || (this.setState({
-                                                        buttonState: y.y.Success
-                                                    }), window.location.reload()), t.label = 3;
-                                                case 3:
-                                                    return [2]
-                                            }
+                                            return e ? (this.handleValidationError(e), this.setState({
+                                                updatingPaymentMethod: !1
+                                            })) : this.handleValidationSuccess(n), [2]
                                         })
                                     })
                                 }), [2]
@@ -9831,26 +9939,19 @@ webpackJsonp([39], {
                         })
                     }, t.handleValidationSuccess = function(e) {
                         return _.__awaiter(t, void 0, void 0, function() {
-                            var t;
-                            return _.__generator(this, function(n) {
-                                switch (n.label) {
+                            return _.__generator(this, function(t) {
+                                switch (t.label) {
                                     case 0:
-                                        return n.trys.push([0, 2, , 3]), [4, this.props.setDefaultPaymentMethod(Object(Y.a)({
-                                            provider: g.Recurly,
-                                            recurlyToken: e.id,
-                                            userID: this.props.userID
-                                        }))];
+                                        return t.trys.push([0, 2, , 3]), [4, this.props.updatePaymentMethod("recurly", "cc", e.id)];
                                     case 1:
-                                        return n.sent(), [3, 3];
+                                        return t.sent(), [3, 3];
                                     case 2:
-                                        return t = n.sent(), this.setState(function(e) {
+                                        return t.sent(), this.setState(function(e) {
                                             return {
-                                                buttonState: y.y.Default,
-                                                errorState: _.__assign({}, e.errorState, {
-                                                    hasServerError: !0
-                                                })
+                                                updatingPaymentMethod: !1,
+                                                errorState: _.__assign({}, e.errorState)
                                             }
-                                        }), this.logger.error(t, "Error in SetDefaultPaymentMethod mutation"), [3, 3];
+                                        }), [3, 3];
                                     case 3:
                                         return [2]
                                 }
@@ -9858,15 +9959,15 @@ webpackJsonp([39], {
                         })
                     }, t.handleValidationError = function(e) {
                         if (e.code === r.Validation) {
-                            var n = v();
+                            var n = C();
                             e.fields.forEach(function(e) {
                                 n.fields[e] = !0
                             }), t.setState({
                                 errorState: n
                             })
                         } else if (e.code) {
-                            var a = v();
-                            a.hasServerError = !0, t.setState({
+                            var a = C();
+                            t.setState({
                                 errorState: a
                             })
                         }
@@ -9889,35 +9990,35 @@ webpackJsonp([39], {
                     clearInterval(this.recurlyPollId), clearInterval(this.hostedFieldPollId)
                 }, t.prototype.render = function() {
                     var e = this;
-                    return l.createElement(y._1, {
+                    return l.createElement(E._1, {
                         fullWidth: !0
-                    }, l.createElement(y._1, {
-                        display: this.state.recurlyLoaded ? y.M.Hide : y.M.Block
-                    }, l.createElement(y._3, {
+                    }, l.createElement(E._1, {
+                        display: this.state.recurlyReady ? E.M.Hide : E.M.Block
+                    }, l.createElement(E._3, {
                         fillContent: !0
-                    })), l.createElement(y._1, {
-                        display: this.state.recurlyLoaded ? y.M.Block : y.M.Hide
+                    })), l.createElement(E._1, {
+                        display: this.state.recurlyReady ? E.M.Block : E.M.Hide
                     }, l.createElement("form", {
                         className: "recurly-form",
                         ref: function(t) {
                             return e.form = t
                         }
-                    }, l.createElement(y._1, {
+                    }, l.createElement(E._1, {
                         margin: {
                             bottom: 1
                         }
-                    }, l.createElement(y.R, {
+                    }, l.createElement(E.R, {
                         id: "recurly-name",
                         label: Object(c.d)("Name", "RecurlyCardComponent")
                     }, l.createElement("div", {
                         id: "recurly-name"
-                    }, l.createElement(y.T, {
-                        gutterSize: y.U.Medium
-                    }, l.createElement(y.J, {
+                    }, l.createElement(E.T, {
+                        gutterSize: E.U.Medium
+                    }, l.createElement(E.J, {
                         cols: 6
-                    }, l.createElement(y.X, {
+                    }, l.createElement(E.X, {
                         id: "recurly-first-name",
-                        type: y.Y.Text,
+                        type: E.Y.Text,
                         placeholder: Object(c.d)("First Name", "RecurlyCardComponent"),
                         value: this.state.firstName,
                         onChange: this.handleFirstName,
@@ -9926,11 +10027,11 @@ webpackJsonp([39], {
                         type: "hidden",
                         "data-recurly": "first_name",
                         value: this.state.firstName
-                    })), l.createElement(y.J, {
+                    })), l.createElement(E.J, {
                         cols: 6
-                    }, l.createElement(y.X, {
+                    }, l.createElement(E.X, {
                         id: "recurly-last-name",
-                        type: y.Y.Text,
+                        type: E.Y.Text,
                         placeholder: Object(c.d)("Last Name", "RecurlyCardComponent"),
                         value: this.state.lastName,
                         onChange: this.handleLastName,
@@ -9939,47 +10040,47 @@ webpackJsonp([39], {
                         type: "hidden",
                         "data-recurly": "last_name",
                         value: this.state.lastName
-                    })))))), l.createElement(y._1, {
+                    })))))), l.createElement(E._1, {
                         margin: {
                             bottom: 1
                         }
-                    }, l.createElement(y.R, {
+                    }, l.createElement(E.R, {
                         id: "recurly-credit-card",
                         label: Object(c.d)("Credit Card", "RecurlyCardComponent")
                     }, l.createElement("div", {
                         id: "recurly-credit-card"
-                    }, l.createElement(y.T, {
-                        gutterSize: y.U.Medium
-                    }, l.createElement(y.J, {
+                    }, l.createElement(E.T, {
+                        gutterSize: E.U.Medium
+                    }, l.createElement(E.J, {
                         cols: 8
                     }, l.createElement("div", {
                         id: "recurly-number",
                         "data-recurly": "number",
                         className: this.state.errorState.fields.number ? "recurly-error" : ""
-                    })), l.createElement(y.J, {
+                    })), l.createElement(E.J, {
                         cols: 4
                     }, l.createElement("div", {
                         id: "recurly-cvv",
                         "data-recurly": "cvv",
                         className: this.state.errorState.fields.cvv ? "recurly-error" : ""
-                    })))))), l.createElement(y._1, {
+                    })))))), l.createElement(E._1, {
                         margin: {
                             bottom: 1
                         }
-                    }, l.createElement(y.R, {
+                    }, l.createElement(E.R, {
                         id: "recurly-credit-card",
                         label: Object(c.d)("Expiration Date", "RecurlyCardComponent")
                     }, l.createElement("div", {
                         id: "recurly-credit-card"
-                    }, l.createElement(y.T, {
-                        gutterSize: y.U.Medium
-                    }, l.createElement(y.J, {
+                    }, l.createElement(E.T, {
+                        gutterSize: E.U.Medium
+                    }, l.createElement(E.J, {
                         cols: 6
                     }, l.createElement("div", {
                         id: "recurly-month",
                         "data-recurly": "month",
                         className: this.state.errorState.fields.month ? "recurly-error" : ""
-                    })), l.createElement(y.J, {
+                    })), l.createElement(E.J, {
                         cols: 6
                     }, l.createElement("div", {
                         id: "recurly-year",
@@ -9989,15 +10090,16 @@ webpackJsonp([39], {
                         type: "hidden",
                         name: "recurly-token",
                         "data-recurly": "token"
-                    }), l.createElement(y.u, {
-                        state: this.state.buttonState,
-                        onClick: this.handleSubmit
-                    }, Object(c.d)("Update Card", "RecurlyCardComponent"))), this.state.errorState.hasServerError && this.renderErrorMessage()))
+                    }), l.createElement(E.u, {
+                        onClick: this.handleSubmit,
+                        state: this.state.updatingPaymentMethod ? E.y.Loading : E.y.Default,
+                        disabled: this.state.updatingPaymentMethod
+                    }, Object(c.d)("Update Card", "RecurlyCardComponent")))))
                 }, t.prototype.pollForHostedField = function() {
                     var e = this;
                     this.hostedFieldPollId = setInterval(function() {
                         document.querySelector(".recurly-hosted-field > iframe") && (e.setState({
-                            recurlyLoaded: !0
+                            recurlyReady: !0
                         }), clearInterval(e.hostedFieldPollId))
                     }, 500)
                 }, t.prototype.setupConfigs = function() {
@@ -10056,63 +10158,64 @@ webpackJsonp([39], {
                     })
                 }, t
             }(l.Component),
-            w = Object(f.a)(k, {
-                name: "setDefaultPaymentMethod"
-            })(T),
-            b = function(e) {
+            N = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        buttonState: y.y.Default,
+                        paypalConfigured: !1,
+                        updatingPaymentMethod: !1,
                         hasError: !1
-                    }, t.logger = c.n.logger.withCategory("recurly-paypal"), t.renderErrorMessage = function() {
-                        return l.createElement(y._1, {
-                            margin: {
-                                y: 2
-                            }
-                        }, l.createElement(y._34, {
-                            color: y.I.Error
-                        }, Object(c.d)("Your request could not be processed. Please try again later.", "PayPalComponent")))
-                    }, t.handleValidationError = function() {
-                        t.setState({
-                            hasError: !0
-                        })
                     }, t.handleValidationSuccess = function(e) {
                         return _.__awaiter(t, void 0, void 0, function() {
                             return _.__generator(this, function(t) {
                                 switch (t.label) {
                                     case 0:
-                                        return [4, this.props.setDefaultPaymentMethod(Object(Y.a)({
-                                            provider: g.Recurly,
-                                            recurlyToken: e.id,
-                                            userID: this.props.userID
-                                        }))];
+                                        return t.trys.push([0, 2, , 3]), [4, this.props.updatePaymentMethod("recurly", "paypal", e.id)];
                                     case 1:
-                                        return t.sent(), [2]
+                                        return t.sent(), [3, 3];
+                                    case 2:
+                                        return t.sent(), this.setState({
+                                            updatingPaymentMethod: !1
+                                        }), [3, 3];
+                                    case 3:
+                                        return [2]
                                 }
                             })
                         })
+                    }, t.handleValidationError = function() {
+                        t.setState({
+                            hasError: !0
+                        })
                     }, t.handleClick = function() {
                         t.setState({
-                            buttonState: y.y.Loading,
+                            updatingPaymentMethod: !0,
                             hasError: !1
                         }), t.paypalInstance.start()
                     }, t
                 }
                 return _.__extends(t, e), t.prototype.componentDidMount = function() {
-                    var e = this,
-                        t = setInterval(function() {
-                            recurly && (clearInterval(t), e.setupConfigs())
-                        }, 500)
+                    var e = this;
+                    this.pollForRecurly = setInterval(function() {
+                        recurly && (clearInterval(e.pollForRecurly), e.setupConfigs(), e.setState({
+                            paypalConfigured: !0
+                        }))
+                    }, 500)
+                }, t.prototype.componentWillUnmount = function() {
+                    clearInterval(this.pollForRecurly)
                 }, t.prototype.render = function() {
-                    return l.createElement(y._1, {
+                    return this.state.paypalConfigured ? l.createElement(E._1, {
                         margin: {
                             y: 2
                         }
-                    }, l.createElement(y.u, {
+                    }, l.createElement(E.u, {
                         onClick: this.handleClick,
-                        state: this.state.buttonState
-                    }, Object(c.d)("Checkout with Paypal", "PayPal")), this.state.hasError && this.renderErrorMessage())
+                        state: this.state.updatingPaymentMethod ? E.y.Loading : E.y.Default,
+                        disabled: this.state.updatingPaymentMethod
+                    }, Object(c.d)("Update with PayPal", "PayPal"))) : l.createElement(E._1, {
+                        margin: {
+                            y: 2
+                        }
+                    }, l.createElement(E._3, null))
                 }, t.prototype.setupConfigs = function() {
                     var e = this;
                     recurly.configure(this.props.publicKey);
@@ -10122,48 +10225,26 @@ webpackJsonp([39], {
                         }
                     });
                     t.on("token", function(t) {
-                        return _.__awaiter(e, void 0, void 0, function() {
-                            var e;
-                            return _.__generator(this, function(n) {
-                                switch (n.label) {
-                                    case 0:
-                                        return n.trys.push([0, 2, , 3]), [4, this.handleValidationSuccess(t)];
-                                    case 1:
-                                        return n.sent(), this.setState({
-                                            buttonState: y.y.Success
-                                        }), [3, 3];
-                                    case 2:
-                                        return e = n.sent(), this.setState({
-                                            hasError: !0,
-                                            buttonState: y.y.Default
-                                        }), this.logger.error(e, "Error in SetDefaultPaymentMethod mutation"), [3, 3];
-                                    case 3:
-                                        return [2]
-                                }
-                            })
-                        })
+                        e.handleValidationSuccess(t)
                     }), t.on("error", function() {
                         e.handleValidationError(), e.setState({
-                            buttonState: y.y.Default
+                            updatingPaymentMethod: !1
                         })
                     }), t.on("cancel", function() {
                         e.setState({
-                            buttonState: y.y.Default
+                            updatingPaymentMethod: !1
                         })
                     }), this.paypalInstance = t
                 }, t
-            }(l.Component),
-            S = Object(f.a)(k, {
-                name: "setDefaultPaymentMethod"
-            })(b);
+            }(l.Component);
         ! function(e) {
             e.CreditCard = "credit-card", e.PayWithAmazon = "pay-with-amazon", e.PayPal = "paypal"
-        }(D || (D = {}));
-        var x, H = function(e) {
+        }(W || (W = {}));
+        var I, J = function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.state = {
-                    selectedOption: D.CreditCard
+                    selectedOption: W.CreditCard
                 }, t.handleOptionChange = function(e) {
                     t.setState({
                         selectedOption: e.currentTarget.value
@@ -10176,31 +10257,29 @@ webpackJsonp([39], {
                     e.src = "https://js.recurly.com/v4/recurly.js", e.async = !0, e.id = "recurly-script", document.body.appendChild(e)
                 }
             }, t.prototype.render = function() {
-                return l.createElement(y._1, {
-                    fullWidth: !0
-                }, l.createElement(y._1, {
+                return l.createElement(E._1, {
                     margin: {
-                        y: 2
+                        top: 2
                     }
-                }, l.createElement(y.R, {
+                }, l.createElement(E.R, {
                     id: "payment-option",
                     label: Object(c.d)("Payment Option", "RecurlyCardWrapper")
                 }, l.createElement("div", {
                     id: "payment-option"
-                }, l.createElement(y._1, {
+                }, l.createElement(E._1, {
                     margin: {
                         right: 2
                     },
-                    display: y.M.Inline
+                    display: E.M.Inline
                 }, l.createElement("input", {
                     type: "radio",
-                    id: D.CreditCard,
+                    id: W.CreditCard,
                     name: "pay-option",
-                    value: D.CreditCard,
+                    value: W.CreditCard,
                     onChange: this.handleOptionChange,
-                    checked: this.state.selectedOption === D.CreditCard
+                    checked: this.state.selectedOption === W.CreditCard
                 }), l.createElement("label", {
-                    htmlFor: D.CreditCard
+                    htmlFor: W.CreditCard
                 }, l.createElement("img", {
                     src: "http://twitch.com/images/recurly/credit_cards/mastercard.png"
                 }), l.createElement("img", {
@@ -10209,81 +10288,82 @@ webpackJsonp([39], {
                     src: "http://twitch.com/images/recurly/credit_cards/visa.png"
                 }), l.createElement("img", {
                     src: "http://twitch.com/images/recurly/credit_cards/discover.png"
-                }))), l.createElement(y._1, {
+                }))), l.createElement(E._1, {
                     margin: {
                         right: 2
                     },
-                    display: y.M.Inline
+                    display: E.M.Inline
                 }, l.createElement("input", {
                     type: "radio",
-                    id: D.PayWithAmazon,
+                    id: W.PayWithAmazon,
                     name: "pay-option",
-                    value: D.PayWithAmazon,
+                    value: W.PayWithAmazon,
                     onChange: this.handleOptionChange,
-                    checked: this.state.selectedOption === D.PayWithAmazon
+                    checked: this.state.selectedOption === W.PayWithAmazon
                 }), l.createElement("label", {
-                    htmlFor: D.PayWithAmazon
+                    htmlFor: W.PayWithAmazon
                 }, l.createElement("img", {
                     src: "http://twitch.com/images/recurly/credit_cards/amazon.png"
-                }))), l.createElement(y._1, {
+                }))), l.createElement(E._1, {
                     margin: {
                         right: 2
                     },
-                    display: y.M.Inline
+                    display: E.M.Inline
                 }, l.createElement("input", {
                     type: "radio",
-                    id: D.PayPal,
+                    id: W.PayPal,
                     name: "pay-option",
-                    value: D.PayPal,
+                    value: W.PayPal,
                     onChange: this.handleOptionChange,
-                    checked: this.state.selectedOption === D.PayPal
+                    checked: this.state.selectedOption === W.PayPal
                 }), l.createElement("label", {
-                    htmlFor: D.PayPal
+                    htmlFor: W.PayPal
                 }, l.createElement("img", {
                     src: "http://twitch.com/images/recurly/credit_cards/paypal.png"
-                }))), l.createElement(y._1, {
-                    display: this.state.selectedOption === D.CreditCard ? y.M.Block : y.M.Hide
-                }, l.createElement(w, {
+                }))), l.createElement(E._1, {
+                    display: this.state.selectedOption === W.CreditCard ? E.M.Block : E.M.Hide
+                }, l.createElement(z, {
                     publicKey: this.props.config.publicKey,
-                    userID: this.props.userID
-                })), l.createElement(y._1, {
-                    display: this.state.selectedOption === D.PayWithAmazon ? y.M.Block : y.M.Hide
-                }, l.createElement(L, {
+                    updatePaymentMethod: this.props.updatePaymentMethod
+                })), l.createElement(E._1, {
+                    display: this.state.selectedOption === W.PayWithAmazon ? E.M.Block : E.M.Hide
+                }, l.createElement(F, {
                     clientID: this.props.config.payWithAmazonConfigs.clientID,
                     isProduction: this.props.config.payWithAmazonConfigs.isProduction,
-                    sellerID: this.props.config.payWithAmazonConfigs.sellerID
-                })), l.createElement(y._1, {
-                    display: this.state.selectedOption === D.PayPal ? y.M.Block : y.M.Hide
-                }, l.createElement(S, {
+                    sellerID: this.props.config.payWithAmazonConfigs.sellerID,
+                    updatePaymentMethod: this.props.updatePaymentMethod
+                })), l.createElement(E._1, {
+                    display: this.state.selectedOption === W.PayPal ? E.M.Block : E.M.Hide
+                }, l.createElement(N, {
                     publicKey: this.props.config.publicKey,
                     braintreeClientAuthorization: this.props.config.braintreeClientAuthorization,
-                    userID: this.props.userID
-                }))))))
+                    updatePaymentMethod: this.props.updatePaymentMethod
+                })))))
             }, t
         }(l.Component);
         ! function(e) {
             e.Tier1 = "1000", e.Tier2 = "2000", e.Tier3 = "3000"
-        }(x || (x = {}));
-        var j, P, O = (j = {}, j[x.Tier1] = function() {
+        }(I || (I = {}));
+        var R, U, G = (R = {}, R[I.Tier1] = function() {
                 return Object(c.d)("Tier 1", "SubscriptionTier")
-            }, j[x.Tier2] = function() {
+            }, R[I.Tier2] = function() {
                 return Object(c.d)("Tier 2", "SubscriptionTier")
-            }, j[x.Tier3] = function() {
+            }, R[I.Tier3] = function() {
                 return Object(c.d)("Tier 3", "SubscriptionTier")
-            }, j),
-            E = n("wuJz"),
-            F = function(e) {
+            }, R),
+            V = n("wuJz"),
+            B = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         showingMore: !1
                     }, t.renderNoActiveSubscriptionsMessage = function() {
-                        return l.createElement(y._1, {
-                            display: y.M.Flex,
-                            justifyContent: y._0.Center,
+                        return l.createElement(E._1, {
+                            display: E.M.Flex,
+                            justifyContent: E._0.Center,
                             padding: 1
-                        }, l.createElement(y._34, {
-                            color: y.I.Alt2
+                        }, l.createElement(E._34, {
+                            color: E.I.Alt2
                         }, Object(c.d)("You have no active subscriptions right now.", "SubscriptionRows")))
                     }, t.toggleShowMore = function() {
                         t.setState(function(e, t) {
@@ -10297,8 +10377,8 @@ webpackJsonp([39], {
                     var e = this.props.subscriptions.slice(0, 5),
                         t = this.state.showingMore ? this.props.subscriptions : e,
                         n = this.state.showingMore ? Object(c.d)("Show Less", "SubscriptionRows") : Object(c.d)("Show More", "SubscriptionRows");
-                    return l.createElement(y._24, {
-                        background: y.m.Base,
+                    return l.createElement(E._24, {
+                        background: E.m.Base,
                         borderLeft: !0,
                         borderBottom: !0,
                         borderRight: !0,
@@ -10312,7 +10392,7 @@ webpackJsonp([39], {
                             subExpirationDate: a(e.expiresAt)
                         }, "SubscriptionRows") : Object(c.d)("Expires {subExpirationDate, date, short}", {
                             subExpirationDate: a(e.expiresAt)
-                        }, "SubscriptionRows"), l.createElement(y._24, {
+                        }, "SubscriptionRows"), l.createElement(E._24, {
                             borderBottom: n !== t.length - 1,
                             fullWidth: !0,
                             key: e.id,
@@ -10320,75 +10400,123 @@ webpackJsonp([39], {
                                 x: 1,
                                 y: .5
                             }
-                        }, l.createElement(y.T, null, l.createElement(y.J, {
+                        }, l.createElement(E.T, null, l.createElement(E.J, {
                             cols: 5
-                        }, l.createElement(y._1, {
-                            display: y.M.Flex,
-                            alignItems: y.c.Center,
+                        }, l.createElement(E._1, {
+                            display: E.M.Flex,
+                            alignItems: E.c.Center,
                             fullHeight: !0
-                        }, l.createElement(y.l, {
-                            alt: e.subscriptionBenefit.user.displayName,
-                            src: e.subscriptionBenefit.user.profileImageURL,
+                        }, l.createElement(E.l, {
+                            alt: e.subscriptionBenefit ? e.subscriptionBenefit.user.displayName : "turbo",
+                            src: e.subscriptionBenefit ? e.subscriptionBenefit.user.profileImageURL : "",
                             size: 40
-                        }), l.createElement(y._1, {
+                        }), l.createElement(E._1, {
                             padding: {
                                 left: .5
                             }
-                        }, l.createElement(y._34, {
+                        }, l.createElement(E._34, {
                             "data-test-selector": "subscription-rows__display-name-text"
-                        }, e.subscriptionBenefit.user.displayName)))), l.createElement(y.J, {
+                        }, e.subscriptionBenefit ? e.subscriptionBenefit.user.displayName : Object(c.d)("Twitch Turbo", "SubscriptionRows"))))), l.createElement(E.J, {
                             cols: 1
-                        }, l.createElement(y._1, {
-                            display: y.M.Flex,
-                            alignItems: y.c.Center,
-                            justifyContent: y._0.End,
+                        }, l.createElement(E._1, {
+                            display: E.M.Flex,
+                            alignItems: E.c.Center,
+                            justifyContent: E._0.End,
                             padding: {
                                 right: 1
                             },
                             fullHeight: !0
-                        }, l.createElement(y._34, {
+                        }, l.createElement(E._34, {
                             "data-test-selector": "subscription-rows__tier-text",
                             bold: !0
-                        }, O[e.subscriptionBenefit.tier]()))), l.createElement(y.J, {
+                        }, e.subscriptionBenefit ? G[e.subscriptionBenefit.tier]() : "Turbo"))), l.createElement(E.J, {
                             cols: 1
-                        }, l.createElement(y._1, {
-                            display: y.M.Flex,
-                            alignItems: y.c.Center,
-                            justifyContent: y._0.Start,
+                        }, l.createElement(E._1, {
+                            display: E.M.Flex,
+                            alignItems: E.c.Center,
+                            justifyContent: E._0.Start,
                             padding: {
                                 left: 1
                             },
                             fullHeight: !0
-                        }, l.createElement(y._34, {
+                        }, l.createElement(E._34, {
                             "data-test-selector": "subscription-rows__cost-text"
                         }, Object(c.e)(e.renewalPrice / 100, {
                             style: "currency",
                             currency: e.renewalCurrency
-                        }), "/", Object(c.d)("month", "SubscriptionRows")))), l.createElement(y.J, {
+                        }), "/", Object(c.d)("month", "SubscriptionRows")))), l.createElement(E.J, {
                             cols: 5
-                        }, l.createElement(y._1, {
-                            display: y.M.Flex,
-                            alignItems: y.c.Center,
-                            justifyContent: y._0.End,
+                        }, l.createElement(E._1, {
+                            display: E.M.Flex,
+                            alignItems: E.c.Center,
+                            justifyContent: E._0.End,
                             padding: {
                                 left: 1
                             },
                             fullHeight: !0
-                        }, l.createElement(y._34, {
+                        }, l.createElement(E._34, {
                             "data-test-selector": "subscription-rows__renewal-date-text"
                         }, r)))))
-                    }), !t.length && this.renderNoActiveSubscriptionsMessage(), this.props.subscriptions.length > 5 && l.createElement(y._1, {
+                    }), !t.length && this.renderNoActiveSubscriptionsMessage(), this.props.subscriptions.length > 5 && l.createElement(E._1, {
                         margin: {
                             y: 1
                         }
-                    }, l.createElement(y.u, {
-                        type: y.z.Text,
+                    }, l.createElement(E.u, {
+                        type: E.z.Text,
                         fullWidth: !0,
                         onClick: this.toggleShowMore
                     }, n)))
                 }, t
             }(l.Component),
-            A = function(e) {
+            q = n("l21v"),
+            K = "64138",
+            X = "SeemsGood",
+            Q = function(e) {
+                return l.createElement(E._1, {
+                    padding: {
+                        y: 5
+                    }
+                }, l.createElement(E._1, {
+                    display: E.M.Flex,
+                    justifyContent: E._0.Center,
+                    margin: {
+                        y: 2
+                    }
+                }, l.createElement(E.K, {
+                    src: Object(q.e)(K, 2),
+                    alt: X
+                })), l.createElement(E._1, {
+                    display: E.M.Flex,
+                    justifyContent: E._0.Center,
+                    margin: {
+                        y: 2
+                    }
+                }, l.createElement(E._1, {
+                    display: E.M.InlineBlock,
+                    margin: {
+                        right: .5
+                    }
+                }, l.createElement(E._14, {
+                    asset: E._15.Check,
+                    type: E._16.Success
+                })), l.createElement(E._34, null, Object(c.d)("Your payment method has been updated.", "UpdatePaymentSuccess"))), l.createElement(E._1, {
+                    display: E.M.Flex,
+                    justifyContent: E._0.Center,
+                    margin: {
+                        y: 2
+                    }
+                }, l.createElement(E._1, {
+                    margin: {
+                        x: 1
+                    }
+                }, l.createElement(E.u, {
+                    onClick: e.onDoneClick
+                }, Object(c.d)("Done", "UpdatePaymentSuccess"))), l.createElement(E.u, {
+                    type: E.z.Hollow,
+                    onClick: e.onStartOverClick
+                }, Object(c.d)("Start Over", "UpdatePaymentSuccess"))))
+            },
+            $ = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -10404,34 +10532,34 @@ webpackJsonp([39], {
                     })
                 }, t.prototype.render = function() {
                     var e = this;
-                    return l.createElement(y._1, {
+                    return l.createElement(E._1, {
                         fullWidth: !0
-                    }, l.createElement(y._1, {
-                        display: this.state.xsollaLoaded ? y.M.Hide : y.M.Inline
-                    }, l.createElement(y._3, {
+                    }, l.createElement(E._1, {
+                        display: this.state.xsollaLoaded ? E.M.Hide : E.M.Inline
+                    }, l.createElement(E._3, {
                         fillContent: !0
-                    })), l.createElement(y._1, {
+                    })), l.createElement(E._1, {
                         fullWidth: !0,
-                        display: this.state.xsollaLoaded ? y.M.Inline : y.M.Hide
+                        display: this.state.xsollaLoaded ? E.M.Inline : E.M.Hide
                     }, l.createElement("iframe", {
                         ref: function(t) {
                             return e.iframe = t
                         },
                         id: "xsolla",
                         src: this.props.config.iframeURL,
-                        width: "580px",
+                        width: "100%",
                         height: "650px"
                     })))
                 }, t
             }(l.Component),
-            W = function(e) {
+            ee = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        buttonState: y.y.Default,
                         errorMessages: [],
-                        isZuoraLoaded: !1
-                    }, t.logger = c.n.logger.withCategory("zuora-credit-card"), t.renderErrorMessage = function() {
+                        zuoraConfigured: !1,
+                        updatingPaymentMethod: !1
+                    }, t.renderErrorMessage = function() {
                         var e = t.state.errorMessages.map(function(e) {
                             return l.createElement("li", {
                                 key: e,
@@ -10439,18 +10567,18 @@ webpackJsonp([39], {
                                 style: {
                                     listStylePosition: "outside"
                                 }
-                            }, l.createElement(y._34, {
-                                color: y.I.Error
+                            }, l.createElement(E._34, {
+                                color: E.I.Error
                             }, e))
                         });
-                        return l.createElement(y._1, {
+                        return l.createElement(E._1, {
                             margin: {
                                 y: 1
                             },
-                            display: t.state.errorMessages.length ? y.M.Flex : y.M.Hide,
-                            flexDirection: y.O.Column
-                        }, l.createElement(y._34, {
-                            color: y.I.Error
+                            display: t.state.errorMessages.length ? E.M.Flex : E.M.Hide,
+                            flexDirection: E.O.Column
+                        }, l.createElement(E._34, {
+                            color: E.I.Error
                         }, Object(c.d)("Your credit card could not be processed. Please correct the fields below.", "ZuoraCardComponent")), l.createElement("ul", {
                             style: {
                                 listStyle: "disc",
@@ -10459,29 +10587,22 @@ webpackJsonp([39], {
                         }, e))
                     }, t.handleSubmit = function() {
                         t.setState({
-                            buttonState: y.y.Loading,
+                            updatingPaymentMethod: !0,
                             errorMessages: []
                         }), Z.submit()
                     }, t.successCallback = function(e) {
                         return _.__awaiter(t, void 0, void 0, function() {
-                            var t;
-                            return _.__generator(this, function(n) {
-                                switch (n.label) {
+                            return _.__generator(this, function(t) {
+                                switch (t.label) {
                                     case 0:
                                         if (!e.success) return [2];
-                                        n.label = 1;
+                                        t.label = 1;
                                     case 1:
-                                        return n.trys.push([1, 3, , 4]), [4, this.props.setDefaultPaymentMethod(Object(Y.a)({
-                                            provider: g.Zuora,
-                                            zuoraPaymentMethodID: e.refId,
-                                            userID: this.props.userID
-                                        }))];
+                                        return t.trys.push([1, 3, , 4]), [4, this.props.updatePaymentMethod("zuora", "cc", e.refId)];
                                     case 2:
-                                        return n.sent(), this.setState({
-                                            buttonState: y.y.Success
-                                        }), window.location.reload(), [3, 4];
+                                        return t.sent(), [3, 4];
                                     case 3:
-                                        return t = n.sent(), this.errorCallback("", "unknown", ""), this.logger.error(t, "Error in SetDefaultPaymentMethod mutation"), [3, 4];
+                                        return t.sent(), this.errorCallback("", "unknown", ""), [3, 4];
                                     case 4:
                                         return [2]
                                 }
@@ -10489,12 +10610,12 @@ webpackJsonp([39], {
                         })
                     }, t.errorCallback = function(e, n, a) {
                         t.setState({
-                            buttonState: y.y.Default
+                            updatingPaymentMethod: !1
                         }), "unknown" === n && t.setState({
                             errorMessages: t.parseGatewayErrorMessage(a)
                         })
                     }, t.parseGatewayErrorMessage = function(e) {
-                        return e.includes("NullValue") ? t.parseNullValueErrorMessage(e) : e.includes("Invalid CC Number") ? [Object(c.d)("You entered an invalid card number. Please update your card and try again.", "ZuoraCardComponent")] : [Object(c.d)("Your request could not be processed. Please try again later.", "ZuoraCardComponent")]
+                        return e.includes("NullValue") ? t.parseNullValueErrorMessage(e) : e.includes("Invalid CC Number") ? [Object(c.d)("You entered an invalid card number. Please update your card and try again.", "ZuoraCardComponent")] : []
                     }, t.parseNullValueErrorMessage = function(e) {
                         var t = e.replace("[HostedPageFieldValidationError]&nbsp; ", "").replace(/\s/g, "").split(":NullValue,"),
                             n = {
@@ -10521,21 +10642,22 @@ webpackJsonp([39], {
                         }
                     }
                 }, t.prototype.render = function() {
-                    return l.createElement(y._1, {
+                    return l.createElement(E._1, {
                         fullWidth: !0
-                    }, !this.state.isZuoraLoaded && l.createElement(y._3, {
+                    }, !this.state.zuoraConfigured && l.createElement(E._3, {
                         fillContent: !0
-                    }), l.createElement(y._1, {
-                        display: this.state.isZuoraLoaded ? y.M.Block : y.M.Hide
+                    }), l.createElement(E._1, {
+                        display: this.state.zuoraConfigured ? E.M.Block : E.M.Hide
                     }, l.createElement("div", {
                         id: "zuora_payment"
-                    }), this.renderErrorMessage(), l.createElement(y._1, {
+                    }), this.renderErrorMessage(), l.createElement(E._1, {
                         margin: {
                             y: 1
                         }
-                    }, l.createElement(y.u, {
+                    }, l.createElement(E.u, {
                         onClick: this.handleSubmit,
-                        state: this.state.buttonState
+                        state: this.state.updatingPaymentMethod ? E.y.Loading : E.y.Default,
+                        disabled: this.state.updatingPaymentMethod
                     }, Object(c.d)("Update Card", "ZuoraCardComponent")))))
                 }, t.prototype.initZuoraIFrame = function() {
                     var e = this,
@@ -10556,52 +10678,134 @@ webpackJsonp([39], {
                     var n = document.getElementById("z_hppm_iframe");
                     n && n.addEventListener("load", function() {
                         e.setState({
-                            isZuoraLoaded: !0
+                            zuoraConfigured: !0
                         })
                     })
                 }, t
             }(l.Component),
-            C = Object(f.a)(k, {
-                name: "setDefaultPaymentMethod"
-            })(W);
+            te = "xsolla_v3";
         ! function(e) {
             e.Recurly = "recurly", e.Xsolla = "xsolla", e.Zuora = "zuora"
-        }(P || (P = {}));
-        var N, z = function(e) {
+        }(U || (U = {}));
+        var ne;
+        ! function(e) {
+            e.Amazon = "amazon", e.CreditCard = "credit_card", e.Paypal = "paypal"
+        }(ne || (ne = {}));
+        var ae, re = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        updating: !1
+                        showUpdatePaymentMethod: !1,
+                        showUpdatePaymentSuccess: !1,
+                        showUpdatePaymentError: !1
+                    }, t.renderPaymentProvider = function() {
+                        var e = t.props.paymentProviderConfig;
+                        return e.provider === U.Recurly ? l.createElement(J, {
+                            config: e,
+                            updatePaymentMethod: t.updatePaymentMethod
+                        }) : e.provider === U.Zuora ? l.createElement(ee, {
+                            config: e,
+                            updatePaymentMethod: t.updatePaymentMethod
+                        }) : e.provider === U.Xsolla ? l.createElement($, {
+                            config: e
+                        }) : l.createElement(E._34, null, Object(c.d)("Oops! Payment provider is unavailable. Please try again later.", "PaymentMethodCard"))
+                    }, t.renderPaymentTypeImage = function() {
+                        if (t.props.paymentProviderConfig.provider === U.Xsolla) return l.createElement(E.K, {
+                            src: H.a,
+                            alt: Object(c.d)("xsolla icon", "PaymentMethodCard"),
+                            srcSet: {
+                                "1x": H.a,
+                                "2x": P.a
+                            }
+                        });
+                        switch (t.props.paymentType) {
+                            case ne.Amazon:
+                                return l.createElement(E.K, {
+                                    src: p.a,
+                                    alt: Object(c.d)("amazon pay icon", "PaymentMethodCard"),
+                                    srcSet: {
+                                        "1x": p.a,
+                                        "2x": Y.a
+                                    }
+                                });
+                            case ne.Paypal:
+                                return l.createElement(E.K, {
+                                    src: T.a,
+                                    alt: Object(c.d)("paypal icon", "PaymentMethodCard"),
+                                    srcSet: {
+                                        "1x": T.a,
+                                        "2x": S.a
+                                    }
+                                });
+                            default:
+                                return l.createElement(E.K, {
+                                    src: D.a,
+                                    alt: Object(c.d)("credit card icon", "PaymentMethodCard"),
+                                    srcSet: {
+                                        "1x": D.a,
+                                        "2x": v.a
+                                    }
+                                })
+                        }
                     }, t.getTotalPrice = function(e) {
                         return e.reduce(function(e, t) {
                             return e + t.renewalPrice
                         }, 0) / 100
-                    }, t.renderPaymentProvider = function() {
-                        var e = t.props.paymentProviderConfig;
-                        return e.provider === P.Recurly ? l.createElement(H, {
-                            config: e,
-                            userID: t.props.userID
-                        }) : e.provider === P.Zuora ? l.createElement(C, {
-                            config: e,
-                            userID: t.props.userID
-                        }) : e.provider === P.Xsolla ? l.createElement(A, {
-                            config: e
-                        }) : l.createElement(y._34, null, Object(c.d)("Oops! Payment provider is unavailable. Please try again later.", "PaymentMethodCard"))
                     }, t.toggleButton = function() {
                         t.setState(function(e, t) {
                             return {
-                                updating: !e.updating
+                                showUpdatePaymentMethod: !e.showUpdatePaymentMethod,
+                                showUpdatePaymentError: !1
                             }
+                        })
+                    }, t.onDoneClick = function() {
+                        t.setState({
+                            showUpdatePaymentSuccess: !1
+                        })
+                    }, t.onStartOverClick = function() {
+                        t.setState({
+                            showUpdatePaymentMethod: !1,
+                            showUpdatePaymentSuccess: !1
+                        })
+                    }, t.updatePaymentMethod = function(e, n, a) {
+                        return _.__awaiter(t, void 0, void 0, function() {
+                            var t, r;
+                            return _.__generator(this, function(s) {
+                                switch (s.label) {
+                                    case 0:
+                                        return this.setState({
+                                            showUpdatePaymentError: !1
+                                        }), t = "/v5/checkout/users/" + this.props.userID + "/payment_methods", r = {
+                                            provider: e,
+                                            gateway: n,
+                                            token: a
+                                        }, [4, O.a.put(t, {
+                                            body: r
+                                        }, {
+                                            version: 5
+                                        })];
+                                    case 1:
+                                        return s.sent().error ? (this.setState({
+                                            showUpdatePaymentSuccess: !1,
+                                            showUpdatePaymentError: !0
+                                        }), [2, Promise.reject(null)]) : [4, this.props.refetchPaymentMethodsData()];
+                                    case 2:
+                                        return s.sent(), this.setState({
+                                            showUpdatePaymentMethod: !1,
+                                            showUpdatePaymentSuccess: !0
+                                        }), [2]
+                                }
+                            })
                         })
                     }, t
                 }
                 return _.__extends(t, e), t.prototype.render = function() {
-                    var e = l.createElement(y.u, {
+                    var e = l.createElement(E.u, {
                         onClick: this.toggleButton
                     }, Object(c.d)("Update", "PaymentMethodCard"));
-                    this.state.updating && (e = l.createElement(y.u, {
+                    this.state.showUpdatePaymentMethod && (e = l.createElement(E.u, {
                         onClick: this.toggleButton,
-                        type: y.z.Text
+                        type: E.z.Text
                     }, Object(c.d)("Close", "PaymentMethodCard")));
                     var t = Object(c.d)("{subscriptionsCount, plural, one {# subscription} other {# subscriptions}}", {
                             subscriptionsCount: this.props.subscriptions.length
@@ -10616,131 +10820,152 @@ webpackJsonp([39], {
                         r = Object(c.d)("{totalPriceI18n} / month", {
                             totalPriceI18n: a
                         }, "PaymentMethodCard");
-                    return l.createElement(y._1, {
+                    return l.createElement(E._1, {
                         margin: {
                             y: 3
                         }
-                    }, l.createElement(y._24, {
+                    }, l.createElement(E._24, {
                         border: !0,
                         fullWidth: !0,
-                        background: y.m.Base
-                    }, l.createElement(y._24, {
+                        background: E.m.Base
+                    }, l.createElement(E._24, {
                         fullWidth: !0,
                         padding: {
                             x: 2,
                             y: 1
                         },
-                        display: y.M.Flex,
-                        flexDirection: y.O.Column
-                    }, l.createElement(y._1, {
+                        display: E.M.Flex,
+                        flexDirection: E.O.Column
+                    }, l.createElement(E._1, {
                         fullWidth: !0,
-                        display: y.M.Flex
-                    }, l.createElement(y._1, {
-                        display: y.M.Flex,
-                        flexDirection: y.O.Column,
+                        display: E.M.Flex
+                    }, l.createElement(E._1, {
+                        display: E.M.Flex,
+                        flexDirection: E.O.Column,
                         flexGrow: 2
-                    }, l.createElement(y._1, {
-                        display: y.M.Flex,
+                    }, l.createElement(E._1, {
+                        display: E.M.Flex,
                         margin: {
-                            bottom: .5
+                            y: .5
                         }
-                    }, l.createElement(y._34, {
-                        type: y._39.P
-                    }, "CC_LOGO_HERE"), l.createElement(y._1, {
+                    }, this.renderPaymentTypeImage(), l.createElement(E._1, {
                         margin: {
                             left: 2
                         }
-                    }, l.createElement(y._34, {
-                        type: y._39.P
-                    }, this.props.lastFour && l.createElement(p, {
+                    }, l.createElement(E._34, {
+                        type: E._39.P
+                    }, this.props.lastFour && l.createElement(A, {
                         lastFourDigits: this.props.lastFour
-                    })))), l.createElement(y._34, {
+                    })))), l.createElement(E._34, {
                         bold: !0,
-                        color: y.I.Alt2,
-                        type: y._39.P,
+                        color: E.I.Alt2,
+                        type: E._39.P,
                         "data-test-selector": "payment-method-card__total-sub-price-text"
-                    }, t, " (", r, ")")), l.createElement(y._1, {
-                        alignItems: y.c.Center,
+                    }, t, " (", r, ")")), l.createElement(E._1, {
+                        alignItems: E.c.Center,
                         flexShrink: 1,
-                        display: y.M.Flex
-                    }, e)), this.state.updating && l.createElement(y._1, {
+                        display: E.M.Flex
+                    }, e)), this.state.showUpdatePaymentSuccess && l.createElement(Q, {
+                        onDoneClick: this.onDoneClick,
+                        onStartOverClick: this.onStartOverClick
+                    }), this.state.showUpdatePaymentMethod && l.createElement(E._1, {
                         fullWidth: !0
-                    }, l.createElement(y._1, {
+                    }, l.createElement(E._1, {
                         fullWidth: !0,
                         margin: {
                             y: 1
                         }
-                    }, this.renderPaymentProvider()), l.createElement(y._34, {
-                        color: y.I.Alt2
-                    }, n)))), !this.state.updating && l.createElement(F, {
+                    }, this.renderPaymentProvider()), this.state.showUpdatePaymentError && l.createElement(E._1, {
+                        margin: {
+                            y: 1
+                        }
+                    }, l.createElement(E._34, {
+                        color: E.I.Error
+                    }, Object(c.d)("Your request could not be processed. Please try again later.", "PaymentMethodCard"))), l.createElement(E._34, {
+                        color: E.I.Alt2
+                    }, n)))), !this.state.showUpdatePaymentMethod && !this.state.showUpdatePaymentSuccess && l.createElement(B, {
                         subscriptions: this.props.subscriptions
                     }))
                 }, t
             }(l.Component),
-            I = (n("2bN8"), n("e9RI")),
-            J = function(e) {
+            se = (n("2bN8"), n("e9RI")),
+            ie = function(e) {
                 function t() {
-                    return null !== e && e.apply(this, arguments) || this
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.refetchPaymentMethodsData = function() {
+                        return t.props.data.refetch()
+                    }, t
                 }
                 return _.__extends(t, e), t.prototype.componentDidUpdate = function() {
                     this.props.data.loading && !this.props.data.error || this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    if (this.props.data.loading) return l.createElement(y._3, {
+                    if (this.props.data.loading) return l.createElement(E._3, {
                         fillContent: !0
                     });
                     if (this.props.data.error) return l.createElement(h.a, {
                         message: Object(c.d)("Error loading payment methods.", "PaymentMethodsTabComponent")
                     });
                     var e = this.renderPaymentMethodCards();
-                    return e.length ? l.createElement(y._1, {
+                    return e && e.length ? l.createElement(E._1, {
                         className: "payment-methods-tab"
-                    }, e) : l.createElement(y._24, {
-                        background: y.m.Alt,
+                    }, e) : l.createElement(E._24, {
+                        background: E.m.Alt,
                         border: !0,
                         className: "payment-methods-tab",
-                        display: y.M.Flex,
-                        justifyContent: y._0.Center,
+                        display: E.M.Flex,
+                        justifyContent: E._0.Center,
                         padding: 1
-                    }, l.createElement(y._34, {
-                        color: y.I.Alt2
+                    }, l.createElement(E._34, {
+                        color: E.I.Alt2
                     }, Object(c.d)("You have no payment methods on record.", "PaymentMethodsTabComponent")))
                 }, t.prototype.renderPaymentMethodCards = function() {
                     var e = this,
-                        t = this.props.data.currentUser.paymentMethodConfigs;
-                    return this.props.data.currentUser.paymentMethods.map(function(n) {
+                        t = this.props.data.currentUser.paymentMethodConfigs,
+                        n = this.props.data.currentUser.paymentMethods;
+                    return n && n.map(function(n) {
                         var a, r = n.provider;
-                        if ("xsolla_v3" === n.provider && (r = P.Xsolla), function(e) {
-                                return e === P.Recurly
+                        if (n.provider === te && (r = U.Xsolla), function(e) {
+                                return e === U.Recurly
                             }(r)) a = t.recurly;
                         else if (function(e) {
-                                return e === P.Xsolla
+                                return e === U.Xsolla
                             }(r)) a = t.xsolla;
                         else {
                             if (! function(e) {
-                                    return e === P.Zuora
+                                    return e === U.Zuora
                                 }(r)) throw new Error("Received invalid payment provider type: " + r);
                             a = t.zuora
                         }
                         var s = _.__assign({}, a, {
                             provider: r
                         });
-                        return l.createElement(z, {
+                        return l.createElement(re, {
                             lastFour: n.lastFour,
                             subscriptions: n.purchaseProfiles,
                             paymentProviderConfig: s,
+                            paymentType: n.paymentType,
                             key: n.provider,
-                            userID: e.props.data.currentUser.id
+                            userID: e.props.data.currentUser.id,
+                            refetchPaymentMethodsData: e.refetchPaymentMethodsData
                         })
                     })
                 }, t
             }(l.Component),
-            R = Object(m.compose)(Object(f.a)(I), Object(M.d)("PaymentMethodsTab"))(J),
-            U = n("pSMk"),
-            G = function(e, t) {
+            oe = Object(m.compose)(Object(M.a)(se), Object(f.d)("PaymentMethodsTab"))(ie),
+            de = n("Fdap"),
+            ue = n.n(de),
+            _e = n("kR29"),
+            le = n.n(_e),
+            me = n("C+Nv"),
+            ce = n.n(me),
+            he = n("rRWX"),
+            fe = n.n(he),
+            Me = n("pSMk"),
+            ye = function(e, t) {
                 if (void 0 === e && (e = 1), void 0 === t && (t = 10), t < e) throw new Error("Invalid range");
                 return Array.from(Array(t + 1).keys()).slice(e)
             },
-            V = function(e) {
+            pe = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -10751,142 +10976,168 @@ webpackJsonp([39], {
                     if (t < n) throw new Error("Current page cannot be greater than total number of pages.");
                     var a = t - 3;
                     if (t <= 10) {
-                        var r = G(1, Math.max(t, 1)).map(function(t) {
+                        var r = ye(1, Math.max(t, 1)).map(function(t) {
                             return e.renderButton(t)
                         });
                         return this.renderWrapper(r)
                     }
-                    var s = G(1, 2).map(function(t) {
+                    var s = ye(1, 2).map(function(t) {
                             return e.renderButton(t)
                         }),
-                        i = G(t - 1, t).map(function(t) {
+                        i = ye(t - 1, t).map(function(t) {
                             return e.renderButton(t)
                         }),
-                        o = G(n - 1, n + 1).map(function(t) {
+                        o = ye(n - 1, n + 1).map(function(t) {
                             return e.renderButton(t)
                         }),
                         d = this.renderEllipsis("start"),
                         u = this.renderEllipsis("end");
-                    return n <= 4 ? (s = G(1, Math.max(n + 1, 2)).map(function(t) {
+                    return n <= 4 ? (s = ye(1, Math.max(n + 1, 2)).map(function(t) {
                         return e.renderButton(t)
-                    }), this.renderWrapper(s.concat([d], i))) : n >= a ? (i = G(n - 1, t).map(function(t) {
+                    }), this.renderWrapper(s.concat([d], i))) : n >= a ? (i = ye(n - 1, t).map(function(t) {
                         return e.renderButton(t)
                     }), this.renderWrapper(s.concat([d], i))) : this.renderWrapper(s.concat([d], o, [u], i))
                 }, t.prototype.renderWrapper = function(e) {
-                    return l.createElement(y._1, {
-                        display: y.M.Flex
-                    }, l.createElement(y._1, {
+                    return l.createElement(E._1, {
+                        display: E.M.Flex
+                    }, l.createElement(E._1, {
                         margin: {
                             right: .5
                         }
-                    }, l.createElement(y.u, {
-                        type: y.z.Hollow,
-                        icon: y._15.AngleLeft,
+                    }, l.createElement(E.u, {
+                        type: E.z.Hollow,
+                        icon: E._15.AngleLeft,
                         onClick: this.props.onBack,
                         disabled: 1 === this.props.currentPage,
                         "data-test-selector": "table-pagination__back-button"
-                    })), e, l.createElement(y._1, {
+                    })), e, l.createElement(E._1, {
                         margin: {
                             left: .5
                         }
-                    }, l.createElement(y.u, {
-                        type: y.z.Hollow,
-                        icon: y._15.AngleRight,
+                    }, l.createElement(E.u, {
+                        type: E.z.Hollow,
+                        icon: E._15.AngleRight,
                         onClick: this.props.onNext,
                         disabled: this.props.currentPage === this.props.totalNumberPages,
                         "data-test-selector": "table-pagination__next-button"
                     })))
                 }, t.prototype.renderButton = function(e) {
-                    return l.createElement(y._1, {
+                    return l.createElement(E._1, {
                         margin: {
                             x: .5
                         },
                         key: e
-                    }, l.createElement(y.u, {
-                        type: e === this.props.currentPage ? y.z.Default : y.z.Hollow,
+                    }, l.createElement(E.u, {
+                        type: e === this.props.currentPage ? E.z.Default : E.z.Hollow,
                         onClick: this.props.onPageJump,
                         key: e,
                         "data-page": e
                     }, e))
                 }, t.prototype.renderEllipsis = function(e) {
-                    return l.createElement(y._34, {
+                    return l.createElement(E._34, {
                         key: e,
                         "data-test-selector": "table-pagination__ellipsis-text"
                     }, "...")
                 }, t
             }(l.Component),
-            B = n("b9g4"),
-            q = n("T2Gu");
+            Le = n("b9g4"),
+            Ye = n("T2Gu");
         ! function(e) {
             e.PurchaseDateDesc = "PURCHASE_DATE_DESC", e.PurchaseDateAsc = "PURCHASE_DATE_ASC", e.PriceDesc = "PRICE_DESC", e.PriceAsc = "PRICE_ASC"
-        }(N || (N = {}));
-        var K;
+        }(ae || (ae = {}));
+        var ge;
         ! function(e) {
             e.All = "ALL", e.Subscriptions = "SUBSCRIPTIONS"
-        }(K || (K = {}));
-        var X, Q = 15;
-        ! function(e) {
-            e.Amazon = "amazon", e.CreditCard = "credit_card", e.PayPal = "paypal"
-        }(X || (X = {}));
-        var $, ee = ($ = {}, $[X.Amazon] = function() {
-                return Object(c.d)("Amazon", "TransactionHistoryTab")
-            }, $[X.CreditCard] = function() {
-                return Object(c.d)("Credit Card", "TransactionHistoryTab")
-            }, $[X.PayPal] = function() {
-                return Object(c.d)("PayPal", "TransactionHistoryTab")
-            }, $),
-            te = function(e) {
+        }(ge || (ge = {}));
+        var De = 15,
+            ke = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         currentIndex: 0,
                         currentFilters: _.__assign({}, t.props.data.variables.filters),
-                        dateSortType: y._21.Descending,
-                        costSortType: y._21.Default
+                        dateSortType: E._21.Descending,
+                        costSortType: E._21.Default
                     }, t.renderNoTransactionsMessage = function() {
                         var e = Object(c.d)("A subscription would sure look good here. <x:link>Go find one you like</x:link>.", {
                             "x:link": function(e) {
-                                return l.createElement(y.L, {
+                                return l.createElement(E.L, {
                                     to: "https://www.twitch.tv/directory/following"
                                 }, e)
                             }
                         }, "TransactionHistoryTab");
-                        return l.createElement(y._24, {
-                            alignItems: y.c.Center,
+                        return l.createElement(E._24, {
+                            alignItems: E.c.Center,
                             borderBottom: !0,
                             borderLeft: !0,
                             borderRight: !0,
-                            color: y.I.Alt2,
-                            display: y.M.Flex,
-                            flexDirection: y.O.Column,
+                            color: E.I.Alt2,
+                            display: E.M.Flex,
+                            flexDirection: E.O.Column,
                             padding: 2
-                        }, l.createElement(y._34, {
+                        }, l.createElement(E._34, {
                             bold: !0
-                        }, Object(c.d)("No Transactions", "TransactionHistoryTab")), l.createElement(y._1, {
+                        }, Object(c.d)("No Transactions", "TransactionHistoryTab")), l.createElement(E._1, {
                             margin: .5
-                        }, l.createElement(y._34, null, e)))
+                        }, l.createElement(E._34, null, e)))
                     }, t.displayDate = function(e) {
                         return e ? Object(c.c)(a(e), "medium") : "-"
                     }, t.displayTier = function(e) {
-                        return e ? O[e]() : "-"
+                        return e ? G[e]() : "-"
                     }, t.displayCost = function(e, t) {
                         return void 0 === t && (t = "USD"), e ? Object(c.e)(e / 100, {
                             style: "currency",
                             currency: t
                         }) : "-"
-                    }, t.displayPaymentMethod = function(e) {
-                        return e ? ee[e]() : "-"
+                    }, t.renderPaymentMethod = function(e, t) {
+                        if (e === te) return l.createElement(E.K, {
+                            src: H.a,
+                            alt: "xsolla icon",
+                            srcSet: {
+                                "1x": H.a,
+                                "2x": P.a
+                            }
+                        });
+                        switch (t) {
+                            case ne.Amazon:
+                                return l.createElement(E.K, {
+                                    src: ue.a,
+                                    alt: Object(c.d)("Amazon", "TransactionHistoryTab"),
+                                    srcSet: {
+                                        "1x": ue.a,
+                                        "2x": le.a
+                                    }
+                                });
+                            case ne.Paypal:
+                                return l.createElement(E.K, {
+                                    src: ce.a,
+                                    alt: Object(c.d)("PayPal", "TransactionHistoryTab"),
+                                    srcSet: {
+                                        "1x": ce.a,
+                                        "2x": fe.a
+                                    }
+                                });
+                            default:
+                                return l.createElement(E.K, {
+                                    src: D.a,
+                                    alt: Object(c.d)("Credit Card", "TransactionHistoryTab"),
+                                    srcSet: {
+                                        "1x": D.a,
+                                        "2x": v.a
+                                    }
+                                })
+                        }
                     }, t.getCurrentPage = function() {
-                        return Math.floor(t.state.currentIndex / Q) + 1
+                        return Math.floor(t.state.currentIndex / De) + 1
                     }, t.getTotalPages = function() {
-                        return Math.ceil(t.props.data.currentUser.paymentTransactions.totalCount / Q) || 1
+                        return Math.ceil(t.props.data.currentUser.paymentTransactions.totalCount / De) || 1
                     }, t.handlePageJump = function(e) {
                         return _.__awaiter(t, void 0, void 0, function() {
                             var t, n;
                             return _.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
-                                        return (t = e.currentTarget.dataset.page) ? (n = (parseInt(t, 10) - 1) * Q, [4, this.queryPageJump(n)]) : [3, 2];
+                                        return (t = e.currentTarget.dataset.page) ? (n = (parseInt(t, 10) - 1) * De, [4, this.queryPageJump(n)]) : [3, 2];
                                     case 1:
                                         a.sent(), this.setState({
                                             currentIndex: n
@@ -10912,11 +11163,11 @@ webpackJsonp([39], {
                             return _.__generator(this, function(e) {
                                 switch (e.label) {
                                     case 0:
-                                        return [4, this.queryPageJump(this.state.currentIndex + Q)];
+                                        return [4, this.queryPageJump(this.state.currentIndex + De)];
                                     case 1:
                                         return e.sent(), this.setState(function(e) {
                                             return {
-                                                currentIndex: e.currentIndex + Q
+                                                currentIndex: e.currentIndex + De
                                             }
                                         }), [2]
                                 }
@@ -10927,11 +11178,11 @@ webpackJsonp([39], {
                             return _.__generator(this, function(e) {
                                 switch (e.label) {
                                     case 0:
-                                        return [4, this.queryPageJump(this.state.currentIndex - Q)];
+                                        return [4, this.queryPageJump(this.state.currentIndex - De)];
                                     case 1:
                                         return e.sent(), this.setState(function(e) {
                                             return {
-                                                currentIndex: e.currentIndex - Q
+                                                currentIndex: e.currentIndex - De
                                             }
                                         }), [2]
                                 }
@@ -10943,15 +11194,15 @@ webpackJsonp([39], {
                             return _.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
-                                        return e = this.state.dateSortType, t = e === y._21.Default || e === y._21.Ascending ? y._21.Descending : y._21.Ascending, n = _.__assign({}, this.state.currentFilters, {
-                                            sortBy: t === y._21.Descending ? N.PurchaseDateDesc : N.PurchaseDateAsc
+                                        return e = this.state.dateSortType, t = e === E._21.Default || e === E._21.Ascending ? E._21.Descending : E._21.Ascending, n = _.__assign({}, this.state.currentFilters, {
+                                            sortBy: t === E._21.Descending ? ae.PurchaseDateDesc : ae.PurchaseDateAsc
                                         }), [4, this.props.getFilteredQuery(n)];
                                     case 1:
                                         return a.sent(), this.setState({
                                             currentIndex: 0,
                                             currentFilters: n,
                                             dateSortType: t,
-                                            costSortType: y._21.Default
+                                            costSortType: E._21.Default
                                         }), [2]
                                 }
                             })
@@ -10962,15 +11213,15 @@ webpackJsonp([39], {
                             return _.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
-                                        return e = this.state.costSortType, t = e === y._21.Default || e === y._21.Ascending ? y._21.Descending : y._21.Ascending, n = _.__assign({}, this.state.currentFilters, {
-                                            sortBy: t === y._21.Descending ? N.PriceDesc : N.PriceAsc
+                                        return e = this.state.costSortType, t = e === E._21.Default || e === E._21.Ascending ? E._21.Descending : E._21.Ascending, n = _.__assign({}, this.state.currentFilters, {
+                                            sortBy: t === E._21.Descending ? ae.PriceDesc : ae.PriceAsc
                                         }), [4, this.props.getFilteredQuery(n)];
                                     case 1:
                                         return a.sent(), this.setState({
                                             currentIndex: 0,
                                             currentFilters: n,
                                             costSortType: t,
-                                            dateSortType: y._21.Default
+                                            dateSortType: E._21.Default
                                         }), [2]
                                 }
                             })
@@ -11020,110 +11271,110 @@ webpackJsonp([39], {
                 }
                 return _.__extends(t, e), t.prototype.render = function() {
                     var e = this;
-                    if (this.props.data.loading) return l.createElement(y._3, {
+                    if (this.props.data.loading) return l.createElement(E._3, {
                         fillContent: !0
                     });
                     var t = this.getMinDateDefault(),
                         n = this.getMaxDateDefault(),
                         a = this.props.data.currentUser.paymentTransactions.edges.map(function(t) {
                             var n = t.node;
-                            return l.createElement(y._32, {
+                            return l.createElement(E._32, {
                                 key: n.id
-                            }, l.createElement(y._29, null, e.displayDate(n.purchasedAt)), l.createElement(y._29, null, l.createElement(y._1, {
-                                display: y.M.Flex
-                            }, l.createElement(y.l, {
+                            }, l.createElement(E._29, null, l.createElement(E._34, null, e.displayDate(n.purchasedAt))), l.createElement(E._29, null, l.createElement(E._1, {
+                                display: E.M.Flex
+                            }, l.createElement(E.l, {
                                 alt: n.product.name,
                                 src: n.product.owner.profileImageURL,
                                 size: 40
-                            }), l.createElement(y._1, {
-                                display: y.M.Flex,
+                            }), l.createElement(E._1, {
+                                display: E.M.Flex,
                                 padding: {
                                     x: 1
                                 },
-                                alignItems: y.c.Center
-                            }, l.createElement(y._34, null, n.product.name)))), l.createElement(y._29, null, l.createElement(y._34, null, e.displayTier(n.product.tier))), l.createElement(y._29, null, l.createElement(y._1, {
-                                display: y.M.Flex,
-                                justifyContent: y._0.End
-                            }, l.createElement(y._34, {
-                                color: n.grossAmount < 0 ? y.I.Error : y.I.Alt
-                            }, e.displayCost(n.grossAmount, n.currency)))), l.createElement(y._29, null, l.createElement(y._34, null, e.displayPaymentMethod(n.paymentMethod.paymentType))))
+                                alignItems: E.c.Center
+                            }, l.createElement(E._34, null, n.product.name)))), l.createElement(E._29, null, l.createElement(E._34, null, e.displayTier(n.product.tier))), l.createElement(E._29, null, l.createElement(E._1, {
+                                display: E.M.Flex,
+                                justifyContent: E._0.End
+                            }, l.createElement(E._34, {
+                                color: n.grossAmount < 0 ? E.I.Error : E.I.Alt
+                            }, e.displayCost(n.grossAmount, n.currency)))), l.createElement(E._29, null, e.renderPaymentMethod(n.paymentMethod.provider, n.paymentMethod.paymentType)))
                         });
-                    return l.createElement(y._1, null, l.createElement(y._1, {
-                        display: y.M.Flex,
-                        justifyContent: y._0.Between,
-                        flexWrap: y.P.Wrap
-                    }, l.createElement(y._1, {
-                        display: y.M.Flex,
-                        flexWrap: y.P.NoWrap,
+                    return l.createElement(E._1, null, l.createElement(E._1, {
+                        display: E.M.Flex,
+                        justifyContent: E._0.Between,
+                        flexWrap: E.P.Wrap
+                    }, l.createElement(E._1, {
+                        display: E.M.Flex,
+                        flexWrap: E.P.NoWrap,
                         margin: {
                             y: .5
                         }
-                    }, l.createElement(y.T, null, l.createElement(y.J, {
+                    }, l.createElement(E.T, null, l.createElement(E.J, {
                         cols: 6
-                    }, l.createElement(y._1, {
-                        display: y.M.Flex,
-                        flexDirection: y.O.Column
-                    }, l.createElement(y._34, {
+                    }, l.createElement(E._1, {
+                        display: E.M.Flex,
+                        flexDirection: E.O.Column
+                    }, l.createElement(E._34, {
                         bold: !0
-                    }, Object(c.d)("Start", "TransactionHistoryTab")), l.createElement(U.a, {
+                    }, Object(c.d)("Start", "TransactionHistoryTab")), l.createElement(Me.a, {
                         defaultDate: t,
                         onChange: this.handleMinDate
-                    }))), l.createElement(y.J, {
+                    }))), l.createElement(E.J, {
                         cols: 6
-                    }, l.createElement(y._1, {
-                        display: y.M.Flex,
-                        flexDirection: y.O.Column
-                    }, l.createElement(y._34, {
+                    }, l.createElement(E._1, {
+                        display: E.M.Flex,
+                        flexDirection: E.O.Column
+                    }, l.createElement(E._34, {
                         bold: !0
-                    }, Object(c.d)("End", "TransactionHistoryTab")), l.createElement(U.a, {
+                    }, Object(c.d)("End", "TransactionHistoryTab")), l.createElement(Me.a, {
                         defaultDate: n,
                         onChange: this.handleMaxDate
-                    }))))), l.createElement(y._1, {
-                        display: y.M.Flex
-                    }, l.createElement(y._1, {
+                    }))))), l.createElement(E._1, {
+                        display: E.M.Flex
+                    }, l.createElement(E._1, {
                         margin: {
                             y: .5,
                             right: 1
                         },
-                        display: y.M.Flex,
-                        alignItems: y.c.End
-                    }, l.createElement(y.u, {
-                        type: y.z.Hollow,
+                        display: E.M.Flex,
+                        alignItems: E.c.End
+                    }, l.createElement(E.u, {
+                        type: E.z.Hollow,
                         linkTo: "https://www.amazon.com/gp/your-account/order-history/ref=oh_aui_search?opt=ab&search=Twitch",
                         targetBlank: !0
-                    }, Object(c.d)("View Your Amazon Order History", "TransactionHistoryTab"))), l.createElement(y._1, {
+                    }, Object(c.d)("View Your Amazon Order History", "TransactionHistoryTab"))), l.createElement(E._1, {
                         margin: {
                             y: .5
                         },
-                        display: y.M.Flex,
-                        alignItems: y.c.End
-                    }, l.createElement(y.u, {
-                        type: y.z.Hollow,
+                        display: E.M.Flex,
+                        alignItems: E.c.End
+                    }, l.createElement(E.u, {
+                        type: E.z.Hollow,
                         linkTo: "https://www.paypal.com/mep/dashboard",
                         targetBlank: !0
-                    }, Object(c.d)("View Your PayPal Order History", "TransactionHistoryTab"))))), l.createElement(y._24, {
-                        background: y.m.Base,
+                    }, Object(c.d)("View Your PayPal Order History", "TransactionHistoryTab"))))), l.createElement(E._24, {
+                        background: E.m.Base,
                         elevation: 2,
                         margin: {
                             y: 2
                         }
-                    }, l.createElement(y._27, {
+                    }, l.createElement(E._27, {
                         alternateRows: !0
-                    }, l.createElement(y._30, null, l.createElement(y._31, {
+                    }, l.createElement(E._30, null, l.createElement(E._31, {
                         label: Object(c.d)("Date", "TransactionHistoryTab"),
                         sorting: this.state.dateSortType,
                         onClick: this.handleSortDate
-                    }), l.createElement(y._31, {
+                    }), l.createElement(E._31, {
                         label: Object(c.d)("Channel", "TransactionHistoryTab")
-                    }), l.createElement(y._31, {
+                    }), l.createElement(E._31, {
                         label: Object(c.d)("Product", "TransactionHistoryTab")
-                    }), l.createElement(y._31, {
+                    }), l.createElement(E._31, {
                         label: Object(c.d)("Price", "TransactionHistoryTab"),
                         sorting: this.state.costSortType,
                         onClick: this.handleSortCost
-                    }), l.createElement(y._31, {
+                    }), l.createElement(E._31, {
                         label: Object(c.d)("Payment Method", "TransactionHistoryTab")
-                    })), l.createElement(y._28, null, a)), !a.length && this.renderNoTransactionsMessage()), l.createElement(V, {
+                    })), l.createElement(E._28, null, a)), !a.length && this.renderNoTransactionsMessage()), l.createElement(pe, {
                         currentPage: this.getCurrentPage(),
                         totalNumberPages: this.getTotalPages(),
                         onNext: this.handleNextPage,
@@ -11132,16 +11383,16 @@ webpackJsonp([39], {
                     }))
                 }, t
             }(l.Component),
-            ne = Object(i.d)(Object(f.a)(q), Object(f.a)(B, {
+            ve = Object(i.d)(Object(M.a)(Ye), Object(M.a)(Le, {
                 options: function(e) {
                     return {
                         variables: {
-                            first: Q,
+                            first: De,
                             after: "0",
                             filters: {
                                 userID: e.data.currentUser.id,
-                                sortBy: N.PurchaseDateDesc,
-                                type: K.All
+                                sortBy: ae.PurchaseDateDesc,
+                                type: ge.All
                             }
                         }
                     }
@@ -11150,7 +11401,7 @@ webpackJsonp([39], {
                     return _.__assign({}, e, {
                         getOffsetQuery: function(t, n) {
                             return e.data.fetchMore({
-                                query: B,
+                                query: Le,
                                 variables: {
                                     first: e.data.variables.first,
                                     after: "" + t,
@@ -11163,7 +11414,7 @@ webpackJsonp([39], {
                         },
                         getFilteredQuery: function(t) {
                             return e.data.fetchMore({
-                                query: B,
+                                query: Le,
                                 variables: {
                                     first: e.data.variables.first,
                                     after: "0",
@@ -11176,8 +11427,8 @@ webpackJsonp([39], {
                         }
                     })
                 }
-            }))(te),
-            ae = function(e) {
+            }))(ke),
+            we = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -11193,42 +11444,42 @@ webpackJsonp([39], {
                     }, t
                 }
                 return _.__extends(t, e), t.prototype.render = function() {
-                    return this.props.isLoggedIn ? l.createElement(y._24, {
-                        background: y.m.Alt,
+                    return this.props.isLoggedIn ? l.createElement(E._24, {
+                        background: E.m.Alt,
                         fullWidth: !0,
-                        alignContent: y.b.Center
-                    }, l.createElement(y._1, {
+                        alignContent: E.b.Center
+                    }, l.createElement(E._1, {
                         margin: {
                             x: 4,
                             y: 3
                         }
-                    }, l.createElement(y._34, {
-                        type: y._39.H2
-                    }, Object(c.d)("Payments", "PaymentsLandingPagePresentationComponent")), l.createElement(y._1, {
+                    }, l.createElement(E._34, {
+                        type: E._39.H2
+                    }, Object(c.d)("Payments", "PaymentsLandingPagePresentationComponent")), l.createElement(E._1, {
                         margin: {
                             top: 2
                         }
-                    }, l.createElement(y._26, null, l.createElement(y._25, {
+                    }, l.createElement(E._26, null, l.createElement(E._25, {
                         active: !this.state.txnHistoryTabActive,
                         onClick: this.switchToPaymentMethodsTab
-                    }, Object(c.d)("Payment Methods", "PaymentsLandingPagePresentationComponent")), l.createElement(y._25, {
+                    }, Object(c.d)("Payment Methods", "PaymentsLandingPagePresentationComponent")), l.createElement(E._25, {
                         active: this.state.txnHistoryTabActive,
                         onClick: this.switchToTxnTab
-                    }, Object(c.d)("Transaction History", "PaymentsLandingPagePresentationComponent"))), l.createElement(y._1, {
+                    }, Object(c.d)("Transaction History", "PaymentsLandingPagePresentationComponent"))), l.createElement(E._1, {
                         fullHeight: !0,
                         fullWidth: !0,
                         margin: {
                             y: 2
                         }
-                    }, this.state.txnHistoryTabActive ? l.createElement(ne, null) : l.createElement(R, null))))) : (this.props.onAnonymousVisit(), l.createElement(h.a, {
+                    }, this.state.txnHistoryTabActive ? l.createElement(ve, null) : l.createElement(oe, null))))) : (this.props.onAnonymousVisit(), l.createElement(h.a, {
                         message: Object(c.d)("You must be logged in to view this page", "PaymentsLandingPagePresentationComponent")
                     }))
                 }, t
             }(l.Component),
-            re = Object(m.compose)(Object(M.d)("PaymentsLandingPagePresentation", {
+            Te = Object(m.compose)(Object(f.d)("PaymentsLandingPagePresentation", {
                 autoReportInteractive: !0
-            }))(ae),
-            se = Object(s.b)(function(e) {
+            }))(we),
+            be = Object(s.b)(function(e) {
                 return {
                     isLoggedIn: Object(u.d)(e)
                 }
@@ -11238,9 +11489,9 @@ webpackJsonp([39], {
                         return Object(d.f)(o.a.PaymentsLandingPage)
                     }
                 }, e)
-            })(re);
+            })(Te);
         n.d(t, "PaymentsLandingPage", function() {
-            return se
+            return be
         })
     },
     hPuz: function(e, t, n) {
@@ -11765,6 +12016,9 @@ webpackJsonp([39], {
             return a(e, -n)
         }
     },
+    kR29: function(e, t, n) {
+        e.exports = n.p + "assets/amazon_pay_wide_2x-35b60eef5393e76d13be06e142966608.png"
+    },
     kRs6: function(e, t, n) {
         var a = n("Qxz6");
         e.exports = function(e) {
@@ -12022,27 +12276,27 @@ webpackJsonp([39], {
             var m = n || {},
                 c = a(e, t),
                 h = m.locale,
-                M = o.distanceInWords.localize;
-            h && h.distanceInWords && h.distanceInWords.localize && (M = h.distanceInWords.localize);
-            var f, y, p = {
+                f = o.distanceInWords.localize;
+            h && h.distanceInWords && h.distanceInWords.localize && (f = h.distanceInWords.localize);
+            var M, y, p = {
                 addSuffix: Boolean(m.addSuffix),
                 comparison: c
             };
-            c > 0 ? (f = r(e), y = r(t)) : (f = r(t), y = r(e));
-            var L, Y = s(y, f),
-                g = y.getTimezoneOffset() - f.getTimezoneOffset(),
+            c > 0 ? (M = r(e), y = r(t)) : (M = r(t), y = r(e));
+            var L, Y = s(y, M),
+                g = y.getTimezoneOffset() - M.getTimezoneOffset(),
                 D = Math.round(Y / 60) - g;
-            if (D < 2) return m.includeSeconds ? Y < 5 ? M("lessThanXSeconds", 5, p) : Y < 10 ? M("lessThanXSeconds", 10, p) : Y < 20 ? M("lessThanXSeconds", 20, p) : Y < 40 ? M("halfAMinute", null, p) : M(Y < 60 ? "lessThanXMinutes" : "xMinutes", 1, p) : 0 === D ? M("lessThanXMinutes", 1, p) : M("xMinutes", D, p);
-            if (D < 45) return M("xMinutes", D, p);
-            if (D < 90) return M("aboutXHours", 1, p);
-            if (D < d) return M("aboutXHours", Math.round(D / 60), p);
-            if (D < u) return M("xDays", 1, p);
-            if (D < _) return M("xDays", Math.round(D / d), p);
-            if (D < l) return L = Math.round(D / _), M("aboutXMonths", L, p);
-            if ((L = i(y, f)) < 12) return M("xMonths", Math.round(D / _), p);
+            if (D < 2) return m.includeSeconds ? Y < 5 ? f("lessThanXSeconds", 5, p) : Y < 10 ? f("lessThanXSeconds", 10, p) : Y < 20 ? f("lessThanXSeconds", 20, p) : Y < 40 ? f("halfAMinute", null, p) : f(Y < 60 ? "lessThanXMinutes" : "xMinutes", 1, p) : 0 === D ? f("lessThanXMinutes", 1, p) : f("xMinutes", D, p);
+            if (D < 45) return f("xMinutes", D, p);
+            if (D < 90) return f("aboutXHours", 1, p);
+            if (D < d) return f("aboutXHours", Math.round(D / 60), p);
+            if (D < u) return f("xDays", 1, p);
+            if (D < _) return f("xDays", Math.round(D / d), p);
+            if (D < l) return L = Math.round(D / _), f("aboutXMonths", L, p);
+            if ((L = i(y, M)) < 12) return f("xMonths", Math.round(D / _), p);
             var k = L % 12,
                 v = Math.floor(L / 12);
-            return k < 3 ? M("aboutXYears", v, p) : k < 9 ? M("overXYears", v, p) : M("almostXYears", v + 1, p)
+            return k < 3 ? f("aboutXYears", v, p) : k < 9 ? f("overXYears", v, p) : f("almostXYears", v + 1, p)
         }
     },
     nE8X: function(e, t, n) {
@@ -12781,6 +13035,9 @@ webpackJsonp([39], {
             return n.setFullYear(n.getFullYear() - o * d), o * (d - (s(n, i) === -o))
         }
     },
+    rRWX: function(e, t, n) {
+        e.exports = n.p + "assets/paypal_wide_2x-bddabc156344e695fa56cf9767f3c155.png"
+    },
     sdTe: function(e, t, n) {
         var a = n("xA5w");
         e.exports = function(e, t) {
@@ -12788,6 +13045,9 @@ webpackJsonp([39], {
                 r = a(t);
             return n.getTime() === r.getTime()
         }
+    },
+    siAa: function(e, t, n) {
+        e.exports = n.p + "assets/paypal_2x-6531b3cc1807e11e165fdfad1072ff58.png"
     },
     sqLM: function(e, t, n) {
         ! function(e, t) {
@@ -13079,21 +13339,21 @@ webpackJsonp([39], {
                 m = _.locale,
                 c = i.distanceInWords.localize;
             m && m.distanceInWords && m.distanceInWords.localize && (c = m.distanceInWords.localize);
-            var h, M, f = {
+            var h, f, M = {
                 addSuffix: Boolean(_.addSuffix),
                 comparison: l
             };
-            l > 0 ? (h = r(e), M = r(t)) : (h = r(t), M = r(e));
+            l > 0 ? (h = r(e), f = r(t)) : (h = r(t), f = r(e));
             var y, p, L, Y, g, D = Math[_.partialMethod ? String(_.partialMethod) : "floor"],
-                k = s(M, h),
-                v = M.getTimezoneOffset() - h.getTimezoneOffset(),
-                T = D(k / 60) - v;
-            if ("s" === (y = _.unit ? String(_.unit) : T < 1 ? "s" : T < 60 ? "m" : T < o ? "h" : T < d ? "d" : T < u ? "M" : "Y")) return c("xSeconds", k, f);
-            if ("m" === y) return c("xMinutes", T, f);
-            if ("h" === y) return p = D(T / 60), c("xHours", p, f);
-            if ("d" === y) return L = D(T / o), c("xDays", L, f);
-            if ("M" === y) return Y = D(T / d), c("xMonths", Y, f);
-            if ("Y" === y) return g = D(T / u), c("xYears", g, f);
+                k = s(f, h),
+                v = f.getTimezoneOffset() - h.getTimezoneOffset(),
+                w = D(k / 60) - v;
+            if ("s" === (y = _.unit ? String(_.unit) : w < 1 ? "s" : w < 60 ? "m" : w < o ? "h" : w < d ? "d" : w < u ? "M" : "Y")) return c("xSeconds", k, M);
+            if ("m" === y) return c("xMinutes", w, M);
+            if ("h" === y) return p = D(w / 60), c("xHours", p, M);
+            if ("d" === y) return L = D(w / o), c("xDays", L, M);
+            if ("M" === y) return Y = D(w / d), c("xMonths", Y, M);
+            if ("Y" === y) return g = D(w / u), c("xYears", g, M);
             throw new Error("Unknown unit: " + y)
         }
     },
@@ -13104,6 +13364,9 @@ webpackJsonp([39], {
                 weekStartsOn: 1
             })
         }
+    },
+    tWfJ: function(e, t, n) {
+        e.exports = n.p + "assets/generic_credit_card_1x-a6b9cd93075728ab4114b816e5d46b2d.png"
     },
     tkWw: function(e, t, n) {
         ! function(e, t) {
@@ -14322,8 +14585,8 @@ webpackJsonp([39], {
             m = /^(\d{4})/,
             c = [/^([+-]\d{4})/, /^([+-]\d{5})/, /^([+-]\d{6})/],
             h = /^-(\d{2})$/,
-            M = /^-?(\d{3})$/,
-            f = /^-?(\d{2})-?(\d{2})$/,
+            f = /^-?(\d{3})$/,
+            M = /^-?(\d{2})-?(\d{2})$/,
             y = /^-?W(\d{2})$/,
             p = /^-?W(\d{2})-?(\d{1})$/,
             L = /^(\d{2}([.,]\d*)?)$/,
@@ -14332,13 +14595,13 @@ webpackJsonp([39], {
             D = /([Z+-].*)$/,
             k = /^(Z)$/,
             v = /^([+-])(\d{2})$/,
-            T = /^([+-])(\d{2}):?(\d{2})$/;
+            w = /^([+-])(\d{2}):?(\d{2})$/;
         e.exports = function(e, t) {
             if (r(e)) return new Date(e.getTime());
             if ("string" != typeof e) return new Date(e);
             var n = (t || {}).additionalDigits;
             n = null == n ? o : Number(n);
-            var w = function(e) {
+            var T = function(e) {
                     var t, n = {},
                         a = e.split(d);
                     if (u.test(a[0]) ? (n.date = null, t = a[0]) : (n.date = a[0], t = a[1]), t) {
@@ -14367,19 +14630,19 @@ webpackJsonp([39], {
                     return {
                         year: null
                     }
-                }(w.date, n),
+                }(T.date, n),
                 S = b.year,
                 x = function(e, t) {
                     if (null === t) return null;
                     var n, r, s, i;
                     if (0 === e.length) return (r = new Date(0)).setUTCFullYear(t), r;
                     if (n = h.exec(e)) return r = new Date(0), s = parseInt(n[1], 10) - 1, r.setUTCFullYear(t, s), r;
-                    if (n = M.exec(e)) {
+                    if (n = f.exec(e)) {
                         r = new Date(0);
                         var o = parseInt(n[1], 10);
                         return r.setUTCFullYear(t, 0, o), r
                     }
-                    if (n = f.exec(e)) {
+                    if (n = M.exec(e)) {
                         r = new Date(0), s = parseInt(n[1], 10) - 1;
                         var d = parseInt(n[2], 10);
                         return r.setUTCFullYear(t, s, d), r
@@ -14395,7 +14658,7 @@ webpackJsonp([39], {
             if (x) {
                 var H, j = x.getTime(),
                     P = 0;
-                return w.time && (P = function(e) {
+                return T.time && (P = function(e) {
                     var t, n, a;
                     if (t = L.exec(e)) return (n = parseFloat(t[1].replace(",", "."))) % 24 * s;
                     if (t = Y.exec(e)) return n = parseInt(t[1], 10), a = parseFloat(t[2].replace(",", ".")), n % 24 * s + a * i;
@@ -14405,10 +14668,10 @@ webpackJsonp([39], {
                         return n % 24 * s + a * i + 1e3 * r
                     }
                     return null
-                }(w.time)), w.timezone ? H = function(e) {
+                }(T.time)), T.timezone ? H = function(e) {
                     var t, n;
-                    return (t = k.exec(e)) ? 0 : (t = v.exec(e)) ? (n = 60 * parseInt(t[2], 10), "+" === t[1] ? -n : n) : (t = T.exec(e)) ? (n = 60 * parseInt(t[2], 10) + parseInt(t[3], 10), "+" === t[1] ? -n : n) : 0
-                }(w.timezone) : (H = new Date(j + P).getTimezoneOffset(), H = new Date(j + P + H * i).getTimezoneOffset()), new Date(j + P + H * i)
+                    return (t = k.exec(e)) ? 0 : (t = v.exec(e)) ? (n = 60 * parseInt(t[2], 10), "+" === t[1] ? -n : n) : (t = w.exec(e)) ? (n = 60 * parseInt(t[2], 10) + parseInt(t[3], 10), "+" === t[1] ? -n : n) : 0
+                }(T.timezone) : (H = new Date(j + P).getTimezoneOffset(), H = new Date(j + P + H * i).getTimezoneOffset()), new Date(j + P + H * i)
             }
             return new Date(e)
         }
@@ -14596,6 +14859,9 @@ webpackJsonp([39], {
             return 4 === a(e).getDay()
         }
     },
+    ywmo: function(e, t, n) {
+        e.exports = n.p + "assets/amazon_pay_2x-a96ba0932b1fa747baaa9899950befca.png"
+    },
     z3hR: function(e, t, n) {
         ! function(e, t) {
             t(n("PJh5"))
@@ -14719,4 +14985,4 @@ webpackJsonp([39], {
     },
     zgXz: function(e, t) {}
 });
-//# sourceMappingURL=pages.payments-447fff5ece45973d90b231935721ffc4.js.map
+//# sourceMappingURL=pages.payments-5450733bb1030b013654c34b0bc4cd26.js.map

@@ -2541,10 +2541,7 @@ webpackJsonp([53], {
                     if (t.length > 0) {
                         var n = D._46.Large,
                             a = !this.props.data.loading && !this.props.data.error && !!this.props.data.streams.pageInfo.hasNextPage;
-                        e = l.createElement(D._1, {
-                            flexShrink: 0,
-                            "data-target": we
-                        }, l.createElement(D._45, {
+                        e = l.createElement(D._1, null, l.createElement(D._45, {
                             gutterSize: D._47.Small,
                             childWidth: n,
                             placeholderItems: 20
@@ -2586,11 +2583,7 @@ webpackJsonp([53], {
                         }, r))
                     }
                     return l.createElement(D._1, {
-                        margin: {
-                            bottom: 2
-                        },
-                        display: D.M.Flex,
-                        flexDirection: D.O.Row
+                        "data-target": we
                     }, l.createElement(N.b, {
                         addPaddingWhenPlayerIsPersisting: !0
                     }), l.createElement(E.a, {
@@ -4765,4 +4758,4 @@ webpackJsonp([53], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.browse-064a54d5e96bb5ab1d0dbb5cf9517360.js.map
+//# sourceMappingURL=pages.browse-57e7be3fe0643f333c512008cf65482e.js.map

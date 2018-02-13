@@ -3888,373 +3888,6 @@ webpackJsonp([47], {
                 }, t
             }(a.Component))
     },
-    J92i: function(e, t, n) {
-        "use strict";
-        var i = n("TToO"),
-            a = n("HW6M"),
-            r = n("U7vG"),
-            o = n("6sO2"),
-            s = n("J8WN"),
-            l = n("+8VM"),
-            d = n("7vx8"),
-            c = n("HZww"),
-            m = n("Odds"),
-            u = (n("weaG"), function(e) {
-                var t = {
-                    "default-avatar__selected": e.selected,
-                    "default-avatar": !0
-                };
-                return r.createElement(m._1, {
-                    padding: {
-                        bottom: 1
-                    }
-                }, r.createElement("div", {
-                    onClick: function() {
-                        e.onSelect(e.index)
-                    },
-                    "aria-label": Object(o.d)("Click to select Default Avatar Number {index, number}", {
-                        index: e.index
-                    }, "Default Avatar")
-                }, r.createElement(m._24, {
-                    fullHeight: !0,
-                    fullWidth: !0,
-                    position: m._8.Relative,
-                    className: a(t)
-                }, r.createElement("img", {
-                    alt: Object(o.d)("Default Avatar Number {index, number}", {
-                        index: e.index
-                    }, "Default Avatar"),
-                    src: e.imageSrc
-                }))))
-            }),
-            p = n("4Q9N"),
-            v = n("Tt3k"),
-            g = n("W6ca"),
-            h = n("xgnX"),
-            f = n("CSlQ"),
-            k = (n("AL3x"), n("nmDn"));
-        n.d(t, "b", function() {
-            return b
-        }), n.d(t, "a", function() {
-            return E
-        });
-        var b = [{
-                id: "profile_image_001",
-                uri: "https://static-cdn.jtvnw.net/user-default-pictures/bb97f7e6-f11a-4194-9708-52bf5a5125e8-profile_image-300x300.jpg"
-            }, {
-                id: "profile_image_002",
-                uri: "https://static-cdn.jtvnw.net/user-default-pictures/27103734-3cda-44d6-a384-f2ab71e4bb85-profile_image-300x300.jpg"
-            }, {
-                id: "profile_image_003",
-                uri: "https://static-cdn.jtvnw.net/user-default-pictures/49988c7b-57bc-4dee-bd4f-6df4ad215d3a-profile_image-300x300.jpg"
-            }, {
-                id: "profile_image_004",
-                uri: "https://static-cdn.jtvnw.net/user-default-pictures/0ecbb6c3-fecb-4016-8115-aa467b7c36ed-profile_image-300x300.jpg"
-            }, {
-                id: "profile_image_005",
-                uri: "https://static-cdn.jtvnw.net/user-default-pictures/cd618d3e-f14d-4960-b7cf-094231b04735-profile_image-300x300.jpg"
-            }, {
-                id: "profile_image_006",
-                uri: "https://static-cdn.jtvnw.net/user-default-pictures/4cbf10f1-bb9f-4f57-90e1-15bf06cfe6f5-profile_image-300x300.jpg"
-            }, {
-                id: "profile_image_007",
-                uri: "https://static-cdn.jtvnw.net/user-default-pictures/b83b1794-7df9-4878-916c-88c2ad2e4f9f-profile_image-300x300.jpg"
-            }],
-            _ = ["image/*"],
-            y = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        statusMessage: null,
-                        imagePreviewURL: "",
-                        profileUpdated: !1,
-                        currentImageHasTallAspectRatio: !1,
-                        imageFormat: ""
-                    }, t.currentImage = null, t.logger = o.i.withCategory("ProfileImagePicker"), t.onImageInputChange = function(e) {
-                        var n;
-                        if (null !== e) {
-                            n = e[0];
-                            var i = Object(v.a)(n),
-                                a = (n.size / 1024 / 1024).toFixed(4);
-                            parseInt(a, 10) > 10 ? t.setState({
-                                statusMessage: h.b.BadSizeError
-                            }) : (t.setState({
-                                selectedImageIndex: void 0,
-                                imagePreviewURL: "",
-                                imageFormat: "",
-                                currentImageHasTallAspectRatio: !1
-                            }), Object(v.b)(n, function(e) {
-                                t.currentImage = e, t.setState({
-                                    statusMessage: null
-                                })
-                            }, function(e) {
-                                var n = new Image,
-                                    a = !1;
-                                n.onload = function() {
-                                    n.width < n.height && (a = !0), t.setState({
-                                        currentImageHasTallAspectRatio: a
-                                    })
-                                }, n.src = e, t.setState({
-                                    imagePreviewURL: e,
-                                    imageFormat: i
-                                })
-                            }))
-                        } else t.setState({
-                            statusMessage: h.b.ImageNotSelected
-                        })
-                    }, t.onUpdateButtonClick = function(e) {
-                        return i.__awaiter(t, void 0, void 0, function() {
-                            var t, n, a, r, s = this;
-                            return i.__generator(this, function(i) {
-                                switch (i.label) {
-                                    case 0:
-                                        if (e.preventDefault(), void 0 !== this.state.selectedImageIndex) return this.setDefaultAvatar(), [2];
-                                        if (!this.currentImage) return this.setState({
-                                            statusMessage: h.b.ImageNotSelected
-                                        }), [2];
-                                        this.setState({
-                                            statusMessage: h.b.Uploading
-                                        }), i.label = 1;
-                                    case 1:
-                                        return i.trys.push([1, 3, , 4]), [4, Object(g.a)(this.props.userID, this.props.authToken, p.a.ProfileImage, this.state.imageFormat)];
-                                    case 2:
-                                        return t = i.sent(), n = t.upload_url, a = t.upload_id, [3, 4];
-                                    case 3:
-                                        return r = i.sent(), this.logger.error(r, "Request for upload ID failed to get expected response from server."), this.setState({
-                                            statusMessage: h.b.UnexpectedError
-                                        }), [2];
-                                    case 4:
-                                        return this.unsubscribe = o.j.subscribe({
-                                            topic: Object(c.g)(this.props.userID),
-                                            success: function() {
-                                                try {
-                                                    Object(g.c)(n, s.currentImage)
-                                                } catch (e) {
-                                                    s.logger.error(e, "Profile Image upload failed."), s.unsubscribe(), s.setState({
-                                                        statusMessage: h.b.UnexpectedError,
-                                                        selectedImageIndex: void 0,
-                                                        imagePreviewURL: "",
-                                                        imageFormat: "",
-                                                        currentImageHasTallAspectRatio: !1
-                                                    })
-                                                }
-                                                s.timeoutHandle = setTimeout(function() {
-                                                    return s.handlePubSubTimeout()
-                                                }, 1e4)
-                                            },
-                                            failure: function() {
-                                                s.setState({
-                                                    statusMessage: h.b.UnexpectedError,
-                                                    selectedImageIndex: void 0,
-                                                    imagePreviewURL: "",
-                                                    currentImageHasTallAspectRatio: !1
-                                                })
-                                            },
-                                            onMessage: function(e) {
-                                                if (e.upload_id === a) {
-                                                    clearTimeout(s.timeoutHandle);
-                                                    var t = null;
-                                                    t = e.status === h.a.Success ? h.b.Success : e.status === h.a.BadSize ? h.b.BadSizeError : e.status === h.a.NonImage ? h.b.NonImageError : e.status === h.a.WrongFormat ? h.b.WrongFormatError : h.b.UnexpectedError, s.unsubscribe && s.unsubscribe(), s.setState({
-                                                        statusMessage: t
-                                                    }), s.state.statusMessage === h.b.Success ? s.setState({
-                                                        profileUpdated: !0
-                                                    }) : (s.setState({
-                                                        profileUpdated: !1,
-                                                        imagePreviewURL: "",
-                                                        imageFormat: ""
-                                                    }), s.currentImage = null)
-                                                }
-                                            }
-                                        }), [2]
-                                }
-                            })
-                        })
-                    }, t.onDefaultImageSelected = function(e) {
-                        t.setState({
-                            selectedImageIndex: e,
-                            imagePreviewURL: b[e].uri
-                        })
-                    }, t.handlePubSubTimeout = function() {
-                        t.unsubscribe(), t.setState({
-                            statusMessage: h.b.TimeoutError
-                        })
-                    }, t
-                }
-                return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive()
-                }, t.prototype.componentWillUnmount = function() {
-                    void 0 !== this.unsubscribe && this.unsubscribe(), this.timeoutHandle && clearTimeout(this.timeoutHandle)
-                }, t.prototype.componentDidUpdate = function() {
-                    var e = this;
-                    this.state.profileUpdated && setTimeout(function() {
-                        e.props.data && e.props.data.refetch(), e.props.closeModal()
-                    }, 1e3)
-                }, t.prototype.render = function() {
-                    var e = this,
-                        t = b.map(function(t, n) {
-                            return r.createElement(u, {
-                                key: t.id,
-                                imageSrc: t.uri,
-                                index: n,
-                                onSelect: e.onDefaultImageSelected,
-                                selected: e.state.selectedImageIndex === n
-                            })
-                        }),
-                        n = null;
-                    if ("" !== this.state.imagePreviewURL) {
-                        var i = {
-                            "profile-edit__image-preview": !0,
-                            "profile-edit__image-preview-tall": this.state.currentImageHasTallAspectRatio
-                        };
-                        n = r.createElement(m._1, {
-                            className: a(i),
-                            "data-test-selector": "preview-image",
-                            position: m._8.Relative
-                        }, r.createElement("img", {
-                            src: "" + this.state.imagePreviewURL
-                        }))
-                    }
-                    var d = null;
-                    "" === this.state.imagePreviewURL && (d = r.createElement(m._1, {
-                        className: "profile-edit__upload-info"
-                    }, r.createElement(m._1, null, r.createElement(m._14, {
-                        asset: m._15.Plus,
-                        type: m._16.Alt2,
-                        height: 20,
-                        width: 20
-                    })), r.createElement(m._34, {
-                        type: m._39.H3,
-                        color: m.I.Alt2,
-                        fontSize: m.Q.Size4
-                    }, Object(o.d)("Upload a Photo", "Profile Edit"))));
-                    var c = null;
-                    this.props.showCloser && (c = r.createElement(l.a, null));
-                    var p = null;
-                    if (null !== this.state.statusMessage) {
-                        var v = Object(h.c)(this.state.statusMessage),
-                            g = v.message,
-                            f = v.type;
-                        p = r.createElement(m._5, {
-                            label: g,
-                            type: f
-                        })
-                    }
-                    var k = this.props.login;
-                    return this.props.displayName && (k = this.props.displayName), r.createElement(m._1, {
-                        className: "profile-edit",
-                        position: m._8.Relative,
-                        fullHeight: !0
-                    }, r.createElement(m._24, {
-                        className: "profile-edit__background-container",
-                        background: m.m.Base,
-                        fullWidth: !0
-                    }, r.createElement(m._1, {
-                        padding: 2,
-                        display: m.M.InlineBlock,
-                        position: m._8.Relative,
-                        textAlign: m._35.Center,
-                        fullWidth: !0
-                    }, r.createElement(m._24, {
-                        textAlign: m._35.Left,
-                        borderBottom: !0,
-                        padding: {
-                            bottom: 1
-                        },
-                        margin: {
-                            bottom: 2
-                        }
-                    }, r.createElement(m._34, {
-                        type: m._39.H3,
-                        color: m.I.Alt2,
-                        fontSize: m.Q.Size4
-                    }, Object(o.d)("Edit Profile Picture for {userName}", {
-                        userName: k
-                    }, "Profile Edit"), " ")), r.createElement(m._1, {
-                        className: "profile-edit__upload-container",
-                        display: m.M.InlineBlock,
-                        position: m._8.Relative,
-                        textAlign: m._35.Center,
-                        margin: {
-                            bottom: 1
-                        }
-                    }, r.createElement(m._1, {
-                        className: "profile-edit__upload",
-                        display: m.M.InlineBlock,
-                        position: m._8.Relative,
-                        textAlign: m._35.Center
-                    }, r.createElement(s.a, {
-                        allowedFileTypes: _,
-                        onFilesSubmitted: this.onImageInputChange
-                    }, d), n)), r.createElement(m._24, {
-                        "data-test-selector": "status-message",
-                        fontSize: m.Q.Size4,
-                        position: m._8.Relative,
-                        textAlign: m._35.Center,
-                        className: "profile-edit__status-message"
-                    }, p), r.createElement(m._24, {
-                        borderBottom: !0,
-                        padding: {
-                            bottom: .5
-                        },
-                        margin: {
-                            bottom: 2
-                        }
-                    }, r.createElement(m._1, {
-                        textAlign: m._35.Left,
-                        margin: {
-                            bottom: 1
-                        }
-                    }, r.createElement(m._34, {
-                        type: m._39.H3,
-                        color: m.I.Alt2,
-                        fontSize: m.Q.Size5
-                    }, Object(o.d)("Or select one of these", "Profile Edit"))), r.createElement(m._45, {
-                        childWidth: m._46.ExtraSmall,
-                        gutterSize: m._47.ExtraSmall,
-                        placeholderItems: 3
-                    }, t)), r.createElement(m._1, {
-                        display: m.M.Flex,
-                        justifyContent: m._0.Center
-                    }, r.createElement(m.u, {
-                        "data-test-selector": "update-button",
-                        onClick: this.onUpdateButtonClick,
-                        size: m.x.Large
-                    }, Object(o.d)("Update", "Profile Edit"))))), c)
-                }, t.prototype.setDefaultAvatar = function() {
-                    return i.__awaiter(this, void 0, void 0, function() {
-                        var e, t, n;
-                        return i.__generator(this, function(i) {
-                            switch (i.label) {
-                                case 0:
-                                    this.setState({
-                                        statusMessage: h.b.Uploading
-                                    }), e = h.b.UnexpectedError, i.label = 1;
-                                case 1:
-                                    return i.trys.push([1, 3, , 4]), [4, Object(g.b)(this.props.userID, this.props.authToken, this.state.selectedImageIndex)];
-                                case 2:
-                                    return 204 === (t = i.sent()).status || 200 === t.status ? e = h.b.Success : this.logger.error(new Error("Default Avatar PUT failed. Fetch returned non-200 status: " + t.status), "Default Avatar PUT failed. Fetch returned non-200 status: " + t.status), [3, 4];
-                                case 3:
-                                    return n = i.sent(), this.logger.error(n, "Default Avatar PUT failed."), [3, 4];
-                                case 4:
-                                    return this.setState({
-                                        statusMessage: e,
-                                        profileUpdated: e === h.b.Success
-                                    }), [2]
-                            }
-                        })
-                    })
-                }, t = i.__decorate([Object(d.a)(k, {
-                    options: function(e) {
-                        return {
-                            variables: {
-                                login: e.login
-                            }
-                        }
-                    }
-                })], t)
-            }(r.Component),
-            E = Object(f.d)("Profile Edit")(y)
-    },
     MQiv: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
@@ -4676,7 +4309,7 @@ webpackJsonp([47], {
             }(v.Component)),
             I = Object(E.d)("EventLandingAction")(F),
             O = n("1jVX"),
-            x = (n("9bpq"), function(e) {
+            T = (n("9bpq"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -4696,8 +4329,8 @@ webpackJsonp([47], {
                     }, Object(O.a)(e, [], "", !0)))
                 }, t = p.__decorate([Object(E.d)("EventLandingDescription")], t)
             }(v.Component)),
-            T = n("OFFm"),
-            L = n("E+X/"),
+            L = n("OFFm"),
+            x = n("E+X/"),
             U = n("QdVH"),
             B = n("MQiv"),
             D = (n("ea40"), function(e) {
@@ -4726,7 +4359,7 @@ webpackJsonp([47], {
                                 medium: "event_page"
                             }
                         }
-                    }, Object(g.d)("Watch Now", "EventLandingTitle")) : e === w.FUTURE && (t = v.createElement(T.a, {
+                    }, Object(g.d)("Watch Now", "EventLandingTitle")) : e === w.FUTURE && (t = v.createElement(L.a, {
                         eventID: this.props.id,
                         areNotificationsEnabled: !(!this.props.self || !this.props.self.isFollowing),
                         channelID: this.props.channel.id,
@@ -4757,7 +4390,7 @@ webpackJsonp([47], {
                         channelID: this.props.channel.id,
                         channelLogin: this.props.channel.login,
                         eventLocation: B.a.EventDetails
-                    })), v.createElement(L.a, {
+                    })), v.createElement(x.a, {
                         targetUser: {
                             id: this.props.channel.id,
                             displayName: this.props.channel.displayName || this.props.channel.login
@@ -4767,8 +4400,8 @@ webpackJsonp([47], {
                     })))
                 }, t
             }(v.Component)),
-            j = Object(E.d)("EventLandingTitle")(D),
-            R = n("ISok"),
+            R = Object(E.d)("EventLandingTitle")(D),
+            j = n("ISok"),
             P = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -4803,7 +4436,7 @@ webpackJsonp([47], {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     var e = null;
-                    return this.props.pastPremiere && (e = v.createElement(R.a, {
+                    return this.props.pastPremiere && (e = v.createElement(j.a, {
                         trackingContent: _.PageviewContent.EventPast,
                         trackingMedium: _.PageviewMedium.EventDetails,
                         videos: [this.pastPremiereToPreviewCardVideo(this.props.pastPremiere)]
@@ -4847,7 +4480,7 @@ webpackJsonp([47], {
                     var t = null;
                     return this.props.eventType === C.PREMIERE_EVENT && this.props.premiere && this.props.premiere.pastPremiere && this.props.premiere.pastPremiere.id && (t = v.createElement(P, {
                         pastPremiere: this.props.premiere.pastPremiere
-                    })), v.createElement(A._1, null, v.createElement(j, {
+                    })), v.createElement(A._1, null, v.createElement(R, {
                         id: this.props.id,
                         title: this.props.title,
                         startAt: this.props.startAt,
@@ -4856,7 +4489,7 @@ webpackJsonp([47], {
                         self: this.props.self,
                         premiere: this.props.premiere,
                         eventType: this.props.eventType
-                    }), e, t, v.createElement(x, {
+                    }), e, t, v.createElement(T, {
                         description: this.props.description
                     }))
                 }, t = p.__decorate([Object(E.d)("EventLandingBody", {
@@ -5106,7 +4739,7 @@ webpackJsonp([47], {
                     endAt: e.upcomingSegment.endAt,
                     eventType: C.SEGMENT_EVENT
                 }));
-                var r = v.createElement(T.a, {
+                var r = v.createElement(L.a, {
                     eventID: e.id,
                     areNotificationsEnabled: e.isFollowing,
                     channelID: "",
@@ -5140,7 +4773,7 @@ webpackJsonp([47], {
                         channelID: "",
                         channelLogin: "",
                         eventLocation: B.a.EventDetails
-                    })), e.owner && v.createElement(L.a, {
+                    })), e.owner && v.createElement(x.a, {
                         targetUser: e.owner,
                         eventID: e.id,
                         balloonDirection: A.q.Bottom
@@ -5198,7 +4831,7 @@ webpackJsonp([47], {
                     }
                 }, v.createElement(A._1, {
                     margin: 1
-                }, v.createElement(x, {
+                }, v.createElement(T, {
                     description: e.description
                 }))))
             }),
@@ -5375,7 +5008,7 @@ webpackJsonp([47], {
                         type: A._39.H5,
                         ellipsis: !0
                     }, this.props.event.title)))));
-                    var o = v.createElement(T.a, {
+                    var o = v.createElement(L.a, {
                         eventID: this.props.event.id,
                         areNotificationsEnabled: this.props.event.self.isFollowing,
                         channelID: this.props.event.channel.id,
@@ -5486,7 +5119,7 @@ webpackJsonp([47], {
                             endAt: this.props.event.endAt,
                             eventType: C.SEGMENT_EVENT
                         }),
-                        o = v.createElement(T.a, {
+                        o = v.createElement(L.a, {
                             eventID: this.props.event.id,
                             areNotificationsEnabled: this.props.event.self.isFollowing,
                             channelID: this.props.event.channel.id,
@@ -5667,14 +5300,14 @@ webpackJsonp([47], {
                         channelID: this.props.event.channel.id,
                         channelLogin: this.props.event.channel.login,
                         eventLocation: B.a.EventDetails
-                    })), v.createElement(L.a, {
+                    })), v.createElement(x.a, {
                         targetUser: this.props.event.channel,
                         eventID: this.props.event.id,
                         balloonDirection: A.q.BottomRight,
                         tailOffset: 10
                     })))))))), v.createElement(A._1, {
                         margin: 2
-                    }, v.createElement(x, {
+                    }, v.createElement(T, {
                         description: this.props.event.description
                     })))
                 }, t
@@ -6859,13 +6492,13 @@ webpackJsonp([47], {
                     isLoggedIn: Object(v.d)(e)
                 }
             })(I),
-            x = n("2KeS"),
-            T = n("V5M+"),
-            L = n("E9Qg"),
+            T = n("2KeS"),
+            L = n("V5M+"),
+            x = n("E9Qg"),
             U = n("ebTC"),
             B = n("4Q9N"),
             D = (n("4Jix"), n("Ojfd")),
-            j = function(e) {
+            R = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.openModal = function() {
@@ -6895,7 +6528,7 @@ webpackJsonp([47], {
                         i && i.user && i.user.bannerImageURL ? t = {
                             backgroundImage: "url(" + i.user.bannerImageURL + ")"
                         } : (n["channel-banner--default"] = !0, t = {
-                            backgroundImage: "url(" + L + ")"
+                            backgroundImage: "url(" + x + ")"
                         });
                         var o = null;
                         this.props.canEdit && (o = r.createElement(E.Z, {
@@ -6934,7 +6567,7 @@ webpackJsonp([47], {
                     this.props.closeModal()
                 }, t
             }(r.Component),
-            R = Object(m.a)(D, {
+            j = Object(m.a)(D, {
                 options: function(e) {
                     return {
                         variables: {
@@ -6945,17 +6578,17 @@ webpackJsonp([47], {
                 skip: function(e) {
                     return !e.channelLogin || !e.firstPageLoaded
                 }
-            })(j),
+            })(R),
             P = Object(p.b)(function(e) {
                 return {
                     firstPageLoaded: e.session.firstPageLoaded
                 }
             }, function(e) {
-                return Object(x.b)({
-                    closeModal: T.c,
-                    showModal: T.d
+                return Object(T.b)({
+                    closeModal: L.c,
+                    showModal: L.d
                 }, e)
-            })(R),
+            })(j),
             M = n("x9n8"),
             V = (n("WClm"), function(e) {
                 function t() {
@@ -6988,8 +6621,8 @@ webpackJsonp([47], {
                 }, t = i.__decorate([Object(C.d)("EditProfileOverlay")], t)
             }(r.Component)),
             W = Object(p.b)(null, function(e) {
-                return Object(x.b)({
-                    showModal: T.d
+                return Object(T.b)({
+                    showModal: L.d
                 }, e)
             })(V),
             H = n("70dR"),
@@ -7474,7 +7107,7 @@ webpackJsonp([47], {
         };
         var i = n("TToO"),
             a = n("6sO2"),
-            r = n("J92i")
+            r = n("puy8")
     },
     WClm: function(e, t) {},
     WVx7: function(e, t, n) {
@@ -7657,7 +7290,7 @@ webpackJsonp([47], {
         ! function(e) {
             e[e.Error = 0] = "Error", e[e.AdBlocked = 1] = "AdBlocked", e[e.Unavailable = 2] = "Unavailable", e[e.Available = 3] = "Available"
         }(k || (k = {}));
-        var O, x = function(e) {
+        var O, T = function(e) {
                 var t = null;
                 return e.disableWatchAd && (t = Object(v.d)("Try again later", "Bits--WatchAdOffer")), u.createElement(y._24, {
                     className: "bits-buy-card__offer-row",
@@ -7695,8 +7328,8 @@ webpackJsonp([47], {
                     }
                 }, t)))
             },
-            T = /version\/([\w\.]+).+?(mobile\s?safari|safari)/i,
-            L = function(e) {
+            L = /version\/([\w\.]+).+?(mobile\s?safari|safari)/i,
+            x = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -7722,7 +7355,7 @@ webpackJsonp([47], {
                         })
                     })
                 }, t.prototype.render = function() {
-                    return T.test(navigator.userAgent) ? null : u.createElement(x, m.__assign({}, this.props, {
+                    return L.test(navigator.userAgent) ? null : u.createElement(T, m.__assign({}, this.props, {
                         disableWatchAd: !this.state.enableWatchAd
                     }))
                 }, t
@@ -7730,15 +7363,15 @@ webpackJsonp([47], {
             U = n("jxGs"),
             B = n("3iBR"),
             D = n("iydZ"),
-            j = n("ZJYd"),
-            R = n("CFVp"),
+            R = n("ZJYd"),
+            j = n("CFVp"),
             P = n("qe65"),
             M = (n("OLKT"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleBuyClick = function(e) {
                         var n = t.props.channelID || "",
-                            i = Object(j.b)({
+                            i = Object(R.b)({
                                 trackBitsCardInteraction: t.props.trackBitsCardInteraction,
                                 channelID: n,
                                 purchaseUrl: e.currentTarget.dataset.purchaseUrl,
@@ -7753,7 +7386,7 @@ webpackJsonp([47], {
                     if (this.props.offer.type === U.a) {
                         if (!this.props.channelLogin) return null;
                         var e = this.props.currentUserSHA || "";
-                        return u.createElement(L, {
+                        return u.createElement(x, {
                             key: "wateb",
                             minPayout: this.props.offer.bits,
                             onWatchAdClick: this.props.handleWatchAdClick,
@@ -7763,12 +7396,12 @@ webpackJsonp([47], {
                         })
                     }
                     var t = null;
-                    Object(j.c)(this.props.offer) ? t = u.createElement(y._1, {
+                    Object(R.c)(this.props.offer) ? t = u.createElement(y._1, {
                         className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline"
                     }, u.createElement(y._34, {
                         type: y._39.Strong,
                         fontSize: y.Q.Size6
-                    }, Object(v.d)("Special Offer: 1st Time Buyers", "Bits--BuyCard"))) : Object(j.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === U.c && (t = u.createElement(y._1, {
+                    }, Object(v.d)("Special Offer: 1st Time Buyers", "Bits--BuyCard"))) : Object(R.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === U.c && (t = u.createElement(y._1, {
                         className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline"
                     }, u.createElement(y._34, {
                         type: y._39.Strong,
@@ -7781,7 +7414,7 @@ webpackJsonp([47], {
                         percentOff: this.props.offer.discount
                     }, "Bits--BuyCard")));
                     var i = null;
-                    (Object(j.c)(this.props.offer) || Object(j.e)(this.props.offer)) && (i = u.createElement("div", {
+                    (Object(R.c)(this.props.offer) || Object(R.e)(this.props.offer)) && (i = u.createElement("div", {
                         className: "bits-buy-card-offer-row__sub-text"
                     }, Object(v.d)("one per account", "Bits--BuyCard")));
                     var a = this.props.isLastRow ? y._24 : y._1;
@@ -7825,7 +7458,7 @@ webpackJsonp([47], {
                     }, n, i))))
                 }, t.prototype.getAvailableTiers = function(e) {
                     var t = this.props.bitsConfig.indexedActions[B.g];
-                    t || (t = Object(R.b)());
+                    t || (t = Object(j.b)());
                     var n = t.orderedTiers.filter(function(t) {
                         return t.bits <= e
                     }).reverse();
@@ -7862,8 +7495,8 @@ webpackJsonp([47], {
                             closeAllBits: e.closeAllBits,
                             trackBitsCardInteraction: e.trackBitsCardInteraction
                         }),
-                        s = Object(j.d)(a),
-                        l = Object(j.c)(a),
+                        s = Object(R.d)(a),
+                        l = Object(R.c)(a),
                         d = a.type === U.a;
                     l && !e.hidePromos ? t.push(o) : s && !l ? t.push(o) : d && !e.hideWateb ? i = o : d || s || n.push(o)
                 }), e.fullsize ? u.createElement(y._1, {
@@ -11033,8 +10666,345 @@ webpackJsonp([47], {
             a = n("2KeS"),
             r = n("V5M+"),
             o = n("Aj/L"),
-            s = n("J92i"),
-            l = Object(i.b)(function(e) {
+            s = n("TToO"),
+            l = n("HW6M"),
+            d = n("U7vG"),
+            c = n("6sO2"),
+            m = n("J8WN"),
+            u = n("+8VM"),
+            p = n("7vx8"),
+            v = n("puy8"),
+            g = n("HZww"),
+            h = n("Odds"),
+            f = (n("weaG"), function(e) {
+                var t = {
+                    "default-avatar__selected": e.selected,
+                    "default-avatar": !0
+                };
+                return d.createElement(h._1, {
+                    padding: {
+                        bottom: 1
+                    }
+                }, d.createElement("div", {
+                    onClick: function() {
+                        e.onSelect(e.index)
+                    },
+                    "aria-label": Object(c.d)("Click to select Default Avatar Number {index, number}", {
+                        index: e.index
+                    }, "Default Avatar")
+                }, d.createElement(h._24, {
+                    fullHeight: !0,
+                    fullWidth: !0,
+                    position: h._8.Relative,
+                    className: l(t)
+                }, d.createElement("img", {
+                    alt: Object(c.d)("Default Avatar Number {index, number}", {
+                        index: e.index
+                    }, "Default Avatar"),
+                    src: e.imageSrc
+                }))))
+            }),
+            k = n("4Q9N"),
+            b = n("Tt3k"),
+            _ = n("W6ca"),
+            y = n("xgnX"),
+            E = n("CSlQ"),
+            N = (n("AL3x"), n("nmDn")),
+            S = ["image/*"],
+            w = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        statusMessage: null,
+                        imagePreviewURL: "",
+                        profileUpdated: !1,
+                        currentImageHasTallAspectRatio: !1,
+                        imageFormat: ""
+                    }, t.currentImage = null, t.logger = c.i.withCategory("ProfileImagePicker"), t.onImageInputChange = function(e) {
+                        var n;
+                        if (null !== e) {
+                            n = e[0];
+                            var i = Object(b.a)(n),
+                                a = (n.size / 1024 / 1024).toFixed(4);
+                            parseInt(a, 10) > 10 ? t.setState({
+                                statusMessage: y.b.BadSizeError
+                            }) : (t.setState({
+                                selectedImageIndex: void 0,
+                                imagePreviewURL: "",
+                                imageFormat: "",
+                                currentImageHasTallAspectRatio: !1
+                            }), Object(b.b)(n, function(e) {
+                                t.currentImage = e, t.setState({
+                                    statusMessage: null
+                                })
+                            }, function(e) {
+                                var n = new Image,
+                                    a = !1;
+                                n.onload = function() {
+                                    n.width < n.height && (a = !0), t.setState({
+                                        currentImageHasTallAspectRatio: a
+                                    })
+                                }, n.src = e, t.setState({
+                                    imagePreviewURL: e,
+                                    imageFormat: i
+                                })
+                            }))
+                        } else t.setState({
+                            statusMessage: y.b.ImageNotSelected
+                        })
+                    }, t.onUpdateButtonClick = function(e) {
+                        return s.__awaiter(t, void 0, void 0, function() {
+                            var t, n, i, a, r = this;
+                            return s.__generator(this, function(o) {
+                                switch (o.label) {
+                                    case 0:
+                                        if (e.preventDefault(), void 0 !== this.state.selectedImageIndex) return this.setDefaultAvatar(), [2];
+                                        if (!this.currentImage) return this.setState({
+                                            statusMessage: y.b.ImageNotSelected
+                                        }), [2];
+                                        this.setState({
+                                            statusMessage: y.b.Uploading
+                                        }), o.label = 1;
+                                    case 1:
+                                        return o.trys.push([1, 3, , 4]), [4, Object(_.a)(this.props.userID, this.props.authToken, k.a.ProfileImage, this.state.imageFormat)];
+                                    case 2:
+                                        return t = o.sent(), n = t.upload_url, i = t.upload_id, [3, 4];
+                                    case 3:
+                                        return a = o.sent(), this.logger.error(a, "Request for upload ID failed to get expected response from server."), this.setState({
+                                            statusMessage: y.b.UnexpectedError
+                                        }), [2];
+                                    case 4:
+                                        return this.unsubscribe = c.j.subscribe({
+                                            topic: Object(g.g)(this.props.userID),
+                                            success: function() {
+                                                try {
+                                                    Object(_.c)(n, r.currentImage)
+                                                } catch (e) {
+                                                    r.logger.error(e, "Profile Image upload failed."), r.unsubscribe(), r.setState({
+                                                        statusMessage: y.b.UnexpectedError,
+                                                        selectedImageIndex: void 0,
+                                                        imagePreviewURL: "",
+                                                        imageFormat: "",
+                                                        currentImageHasTallAspectRatio: !1
+                                                    })
+                                                }
+                                                r.timeoutHandle = setTimeout(function() {
+                                                    return r.handlePubSubTimeout()
+                                                }, 1e4)
+                                            },
+                                            failure: function() {
+                                                r.setState({
+                                                    statusMessage: y.b.UnexpectedError,
+                                                    selectedImageIndex: void 0,
+                                                    imagePreviewURL: "",
+                                                    currentImageHasTallAspectRatio: !1
+                                                })
+                                            },
+                                            onMessage: function(e) {
+                                                if (e.upload_id === i) {
+                                                    clearTimeout(r.timeoutHandle);
+                                                    var t = null;
+                                                    t = e.status === y.a.Success ? y.b.Success : e.status === y.a.BadSize ? y.b.BadSizeError : e.status === y.a.NonImage ? y.b.NonImageError : e.status === y.a.WrongFormat ? y.b.WrongFormatError : y.b.UnexpectedError, r.unsubscribe && r.unsubscribe(), r.setState({
+                                                        statusMessage: t
+                                                    }), r.state.statusMessage === y.b.Success ? r.setState({
+                                                        profileUpdated: !0
+                                                    }) : (r.setState({
+                                                        profileUpdated: !1,
+                                                        imagePreviewURL: "",
+                                                        imageFormat: ""
+                                                    }), r.currentImage = null)
+                                                }
+                                            }
+                                        }), [2]
+                                }
+                            })
+                        })
+                    }, t.onDefaultImageSelected = function(e) {
+                        t.setState({
+                            selectedImageIndex: e,
+                            imagePreviewURL: Object(v.a)(v.b[e], 300)
+                        })
+                    }, t.handlePubSubTimeout = function() {
+                        t.unsubscribe(), t.setState({
+                            statusMessage: y.b.TimeoutError
+                        })
+                    }, t
+                }
+                return s.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.props.latencyTracking.reportInteractive()
+                }, t.prototype.componentWillUnmount = function() {
+                    void 0 !== this.unsubscribe && this.unsubscribe(), this.timeoutHandle && clearTimeout(this.timeoutHandle)
+                }, t.prototype.componentDidUpdate = function() {
+                    var e = this;
+                    this.state.profileUpdated && setTimeout(function() {
+                        e.props.data && e.props.data.refetch(), e.props.closeModal()
+                    }, 1e3)
+                }, t.prototype.render = function() {
+                    var e = this,
+                        t = v.b.map(function(t, n) {
+                            return d.createElement(f, {
+                                key: t.id,
+                                imageSrc: Object(v.a)(t, 300),
+                                index: n,
+                                onSelect: e.onDefaultImageSelected,
+                                selected: e.state.selectedImageIndex === n
+                            })
+                        }),
+                        n = null;
+                    if ("" !== this.state.imagePreviewURL) {
+                        var i = {
+                            "profile-edit__image-preview": !0,
+                            "profile-edit__image-preview-tall": this.state.currentImageHasTallAspectRatio
+                        };
+                        n = d.createElement(h._1, {
+                            className: l(i),
+                            "data-test-selector": "preview-image",
+                            position: h._8.Relative
+                        }, d.createElement("img", {
+                            src: "" + this.state.imagePreviewURL
+                        }))
+                    }
+                    var a = null;
+                    "" === this.state.imagePreviewURL && (a = d.createElement(h._1, {
+                        className: "profile-edit__upload-info"
+                    }, d.createElement(h._1, null, d.createElement(h._14, {
+                        asset: h._15.Plus,
+                        type: h._16.Alt2,
+                        height: 20,
+                        width: 20
+                    })), d.createElement(h._34, {
+                        type: h._39.H3,
+                        color: h.I.Alt2,
+                        fontSize: h.Q.Size4
+                    }, Object(c.d)("Upload a Photo", "Profile Edit"))));
+                    var r = null;
+                    this.props.showCloser && (r = d.createElement(u.a, null));
+                    var o = null;
+                    if (null !== this.state.statusMessage) {
+                        var s = Object(y.c)(this.state.statusMessage),
+                            p = s.message,
+                            g = s.type;
+                        o = d.createElement(h._5, {
+                            label: p,
+                            type: g
+                        })
+                    }
+                    var k = this.props.login;
+                    return this.props.displayName && (k = this.props.displayName), d.createElement(h._1, {
+                        className: "profile-edit",
+                        position: h._8.Relative,
+                        fullHeight: !0
+                    }, d.createElement(h._24, {
+                        className: "profile-edit__background-container",
+                        background: h.m.Base,
+                        fullWidth: !0
+                    }, d.createElement(h._1, {
+                        padding: 2,
+                        display: h.M.InlineBlock,
+                        position: h._8.Relative,
+                        textAlign: h._35.Center,
+                        fullWidth: !0
+                    }, d.createElement(h._24, {
+                        textAlign: h._35.Left,
+                        borderBottom: !0,
+                        padding: {
+                            bottom: 1
+                        },
+                        margin: {
+                            bottom: 2
+                        }
+                    }, d.createElement(h._34, {
+                        type: h._39.H3,
+                        color: h.I.Alt2,
+                        fontSize: h.Q.Size4
+                    }, Object(c.d)("Edit Profile Picture for {userName}", {
+                        userName: k
+                    }, "Profile Edit"), " ")), d.createElement(h._1, {
+                        className: "profile-edit__upload-container",
+                        display: h.M.InlineBlock,
+                        position: h._8.Relative,
+                        textAlign: h._35.Center,
+                        margin: {
+                            bottom: 1
+                        }
+                    }, d.createElement(h._1, {
+                        className: "profile-edit__upload",
+                        display: h.M.InlineBlock,
+                        position: h._8.Relative,
+                        textAlign: h._35.Center
+                    }, d.createElement(m.a, {
+                        allowedFileTypes: S,
+                        onFilesSubmitted: this.onImageInputChange
+                    }, a), n)), d.createElement(h._24, {
+                        "data-test-selector": "status-message",
+                        fontSize: h.Q.Size4,
+                        position: h._8.Relative,
+                        textAlign: h._35.Center,
+                        className: "profile-edit__status-message"
+                    }, o), d.createElement(h._24, {
+                        borderBottom: !0,
+                        padding: {
+                            bottom: .5
+                        },
+                        margin: {
+                            bottom: 2
+                        }
+                    }, d.createElement(h._1, {
+                        textAlign: h._35.Left,
+                        margin: {
+                            bottom: 1
+                        }
+                    }, d.createElement(h._34, {
+                        type: h._39.H3,
+                        color: h.I.Alt2,
+                        fontSize: h.Q.Size5
+                    }, Object(c.d)("Or select one of these", "Profile Edit"))), d.createElement(h._45, {
+                        childWidth: h._46.ExtraSmall,
+                        gutterSize: h._47.ExtraSmall,
+                        placeholderItems: 3
+                    }, t)), d.createElement(h._1, {
+                        display: h.M.Flex,
+                        justifyContent: h._0.Center
+                    }, d.createElement(h.u, {
+                        "data-test-selector": "update-button",
+                        onClick: this.onUpdateButtonClick,
+                        size: h.x.Large
+                    }, Object(c.d)("Update", "Profile Edit"))))), r)
+                }, t.prototype.setDefaultAvatar = function() {
+                    return s.__awaiter(this, void 0, void 0, function() {
+                        var e, t, n;
+                        return s.__generator(this, function(i) {
+                            switch (i.label) {
+                                case 0:
+                                    this.setState({
+                                        statusMessage: y.b.Uploading
+                                    }), e = y.b.UnexpectedError, i.label = 1;
+                                case 1:
+                                    return i.trys.push([1, 3, , 4]), [4, Object(_.b)(this.props.userID, this.props.authToken, this.state.selectedImageIndex)];
+                                case 2:
+                                    return 204 === (t = i.sent()).status || 200 === t.status ? e = y.b.Success : this.logger.error(new Error("Default Avatar PUT failed. Fetch returned non-200 status: " + t.status), "Default Avatar PUT failed. Fetch returned non-200 status: " + t.status), [3, 4];
+                                case 3:
+                                    return n = i.sent(), this.logger.error(n, "Default Avatar PUT failed."), [3, 4];
+                                case 4:
+                                    return this.setState({
+                                        statusMessage: e,
+                                        profileUpdated: e === y.b.Success
+                                    }), [2]
+                            }
+                        })
+                    })
+                }, t = s.__decorate([Object(p.a)(N, {
+                    options: function(e) {
+                        return {
+                            variables: {
+                                login: e.login
+                            }
+                        }
+                    }
+                })], t)
+            }(d.Component),
+            C = Object(E.d)("Profile Edit")(w),
+            A = Object(i.b)(function(e) {
                 return {
                     authToken: Object(o.a)(e)
                 }
@@ -11044,9 +11014,9 @@ webpackJsonp([47], {
                         return t.successCallback && t.successCallback(), Object(r.c)()
                     }
                 }, e)
-            })(s.a);
+            })(C);
         n.d(t, "a", function() {
-            return l
+            return A
         })
     },
     xgnX: function(e, t, n) {
@@ -11242,4 +11212,4 @@ webpackJsonp([47], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.event-landing-41f34f7e4221d9ab8ab51840dd3bbbb0.js.map
+//# sourceMappingURL=pages.event-landing-989837b06d38d4c37ecba862cd050fb8.js.map
