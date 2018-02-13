@@ -73,9 +73,12 @@ window.__twilightSettings = {
     "update_chunks": ["core.css", "core.js", "pages.anon-front.js", "pages.browse.js", "pages.channel.js", "pages.directory-game.js", "pages.following.js", "pages.front.js", "vendor.js"],
     "update_manager_enabled": true,
     "viewer_milestones_enabled": true,
+    "withgraphql_retry_delay_backoff_multiplier": 3,
     "withgraphql_retry_enabled": false,
     "withgraphql_retry_initial_delay": 2000,
+    "withgraphql_retry_jitter_window_multiplier": 0.5,
     "withgraphql_retry_max_attempts": 3,
+    "withgraphql_retry_min_jitter_window": 1000,
     "experiments": {
         "011d1499-61b3-49b2-92b2-b2ffd353ef00": {
             "name": "twilight_sub_gifting",
