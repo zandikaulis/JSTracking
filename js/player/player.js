@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".44898354fed5376878ce.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".c8afa00df1e354efb7cf.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -10031,33 +10031,43 @@
                     return t.stream === f.b ? o()({}, e, w, {
                         paused: !1
                     }) : o()({}, e, w);
-                case c.e:
-                    return o()({}, e, u()(t.playback, k));
-                case c.k:
-                    return o()({}, e, y, _);
-                case c.t:
-                    return o()({}, e, v);
-                case c.f:
-                    return o()({}, e, g);
+                case c.a:
+                    return o()({}, e, {
+                        restrictedQualityError: !1
+                    });
+                case c.b:
+                    return o()({}, e, _);
                 case c.c:
                     return o()({}, e, b);
+                case c.d:
+                    return o()({}, e, {
+                        bufferEmpties: e.bufferEmpties + 1
+                    });
+                case c.e:
+                    return o()({}, e, u()(t.playback, k));
+                case c.f:
+                    return o()({}, e, g);
+                case c.g:
+                    return o()({}, e, {
+                        playbackRate: t.playbackRate
+                    });
                 case c.h:
                     return o()({}, e, {
                         muted: t.muted
                     });
-                case c.s:
+                case c.i:
                     return o()({}, e, {
-                        volume: t.volume
+                        isSeeking: !1
                     });
-                case c.r:
-                    return o()({}, e, u()(t.playback, k));
+                case c.j:
+                    return o()({}, e, {
+                        isSeeking: !0
+                    });
+                case c.k:
+                    return o()({}, e, y, _);
                 case c.l:
                     return o()({}, e, {
                         restrictedQualityError: !0
-                    });
-                case c.a:
-                    return o()({}, e, {
-                        restrictedQualityError: !1
                     });
                 case c.m:
                     return o()({}, e, {
@@ -10068,17 +10078,10 @@
                     return o()({}, e, {
                         isLoading: t.isLoading
                     });
-                case c.j:
+                case c.o:
                     return o()({}, e, {
-                        isSeeking: !0
-                    });
-                case c.i:
-                    return o()({}, e, {
-                        isSeeking: !1
-                    });
-                case c.q:
-                    return o()({}, e, {
-                        currentTime: t.currentTime
+                        startTime: t.startTime,
+                        startTimeSet: !0
                     });
                 case c.p:
                     return o()({}, e, {
@@ -10087,21 +10090,18 @@
                             end: t.end
                         }
                     });
-                case c.d:
+                case c.q:
                     return o()({}, e, {
-                        bufferEmpties: e.bufferEmpties + 1
+                        currentTime: t.currentTime
                     });
-                case c.b:
-                    return o()({}, e, _);
-                case c.g:
+                case c.r:
+                    return o()({}, e, u()(t.playback, k));
+                case c.s:
                     return o()({}, e, {
-                        playbackRate: t.playbackRate
+                        volume: t.volume
                     });
-                case c.o:
-                    return o()({}, e, {
-                        startTime: t.startTime,
-                        startTimeSet: !0
-                    });
+                case c.t:
+                    return o()({}, e, v);
                 default:
                     return e
             }
@@ -28632,7 +28632,7 @@
                     u = So.a(!0),
                     c = Oo.v() === Oo.k ? null : Ao;
                 return {
-                    app_version: "2018.02.13-225205+0e343277d1626531bbc3a42a7249808301cdd6a7",
+                    app_version: "2018.02.14-001943+6a74e63bc785bd873eb5b653bbb3b5e05dea3851",
                     flash_version: r,
                     referrer_url: i,
                     referrer_host: a.host,
