@@ -1227,7 +1227,7 @@ window.SiteOptions = {
         },
         "3a823fae-acbe-40c4-9ed8-6b1e685eb4b2": {
             "name": "ios_notification_center",
-            "v": 1456,
+            "v": 3067,
             "t": 1,
             "groups": [{
                 "weight": 100,
