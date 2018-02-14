@@ -1065,7 +1065,9 @@ webpackJsonp([65], {
                 ChatRoomDeleted: "deleted_room",
                 ChatRoomUpdated: "updated_room",
                 ChatRoomsUserModAction: "user_moderation_action",
-                ChatRoomsNewMessage: "created_room_message",
+                ChatRoomMessageCreated: "created_room_message",
+                ChatRoomMessageEdited: "edited_room_message",
+                ChatRoomMessageDeleted: "deleted_room_message",
                 ChatRoomsRoomViewUpdated: "updated_room_view",
                 ImageUploadSuccess: "imageuploadsuccess",
                 ModerationAction: "moderation_action",
@@ -2585,7 +2587,8 @@ webpackJsonp([65], {
                             }, Object(re.e)());
                         case i.Whisper:
                             return a.createElement(M._1, {
-                                className: "thread-message__message"
+                                className: "thread-message__message",
+                                "data-a-target": "whisper-message"
                             }, Object(re.f)(e));
                         case i.NewMessages:
                             return a.createElement(M._24, {
@@ -4215,7 +4218,8 @@ webpackJsonp([65], {
                 return c.__extends(t, e), t.prototype.render = function() {
                     var e = Object(u.d)("Whisper", "WhisperButton");
                     return d.createElement(m.u, {
-                        onClick: this.handleClick
+                        onClick: this.handleClick,
+                        "data-a-target": "usercard-whisper-button"
                     }, e)
                 }, t = c.__decorate([Object(p.d)("WhisperButton", {
                     autoReportInteractive: !0
@@ -14239,14 +14243,15 @@ webpackJsonp([65], {
                         is_app_launch: a,
                         time_from_fetch: r
                     })
-                }, e.prototype.trackCustomEvent = function(e, t) {
+                }, e.prototype.trackCustomEvent = function(e, t, n) {
                     this.tracking.trackCustomEventBenchmark({
                         benchmark: e.benchmark,
                         duration: Math.round(e.duration && e.duration.value || 0),
                         group: e.group,
                         key: e.key,
                         label: e.label,
-                        is_app_launch: t
+                        is_app_launch: t,
+                        lost_visibility: n
                     })
                 }, e.prototype.trackAppBooted = function(e, t, n, i, r, a) {
                     this.tracking.trackBenchmark(I.SpadeEventType.AppBooted, {
@@ -14332,7 +14337,7 @@ webpackJsonp([65], {
                         }, n.setPage = function(e, t) {
                             n.page = e, n.destination = t, n.sentinel.setPageComponentName(e.componentName)
                         }, n.sendCustomEventToSpade = function(e) {
-                            n.componentEventsEnabled && n.tracker.trackCustomEvent(e, n.isFirstLoad)
+                            n.componentEventsEnabled && n.tracker.trackCustomEvent(e, n.isFirstLoad, n.hasLostVisibility)
                         }, n.sendAllEvents = function() {
                             n.networkMonitor && (n.networkMonitor.flush(), n.doReconcileQueries(!0)), n.sendBenchmarkEventsToSpade(), n.sendNetworkRequestsToSpade()
                         }, n.sendFetchStartEvent = function(e, t, i) {
@@ -14353,7 +14358,7 @@ webpackJsonp([65], {
                                         key: Z.b.FirstPaint,
                                         label: Z.c.FirstPaint,
                                         startTime: n.navigationStart
-                                    }, n.isFirstLoad))
+                                    }, n.isFirstLoad, n.hasLostVisibility))
                                 } catch (e) {
                                     n.logger.debug("First paint metrics not available on this platform", e)
                                 }
@@ -16325,6 +16330,8 @@ webpackJsonp([65], {
                         var n = e.data.currentUser.followedLiveUsers.nodes.slice(),
                             i = (e.data.currentUser.follows.edges || []).map(function(e) {
                                 return e.node
+                            }).filter(function(e) {
+                                return !!e
                             }),
                             r = (e.videoData && e.videoData.currentUser && e.videoData.currentUser.followedVideos && e.videoData.currentUser.followedVideos.edges || []).map(function(e) {
                                 return e.node
@@ -18366,7 +18373,7 @@ webpackJsonp([65], {
                     var e = this;
                     if (!this.props.friendsData && this.props.data && (this.props.data.loading || this.props.data.error)) return !1;
                     return !!(this.props.friendsData || this.props.data).currentUser.friends.edges.find(function(t) {
-                        return t.node.id === e.props.channelID
+                        return !!t.node && t.node.id === e.props.channelID
                     })
                 }, t = l.__decorate([Object(m.d)("FriendButton"), Object(u.a)(f, {
                     skip: function(e) {
@@ -22630,7 +22637,8 @@ webpackJsonp([65], {
                             padding: {
                                 y: .5,
                                 x: 1
-                            }
+                            },
+                            "data-a-target": "language-" + e.languageCode
                         }, e.name))
                     }, t
                 }
@@ -23142,7 +23150,8 @@ webpackJsonp([65], {
                         flexDirection: U.O.Row,
                         flexWrap: U.P.NoWrap,
                         fullWidth: !0,
-                        alignItems: U.c.Center
+                        alignItems: U.c.Center,
+                        "data-a-target": "whisper-with-" + e.login
                     }, s.createElement(U._1, {
                         className: "whispers-list-item__avatar",
                         margin: {
@@ -23897,7 +23906,7 @@ webpackJsonp([65], {
                 return s.createElement(oe.a, o.__assign({}, e))
             },
             ce = te.a.wrap(function() {
-                return n.e(50).then(n.bind(null, "8U1+"))
+                return n.e(51).then(n.bind(null, "8U1+"))
             }, "AnonFrontPage"),
             de = te.a.wrap(function() {
                 return n.e(53).then(n.bind(null, "Dd84"))
@@ -23906,7 +23915,7 @@ webpackJsonp([65], {
                 return n.e(41).then(n.bind(null, "gZGZ"))
             }, "ChannelClipsPage"),
             pe = te.a.wrap(function() {
-                return n.e(51).then(n.bind(null, "zfLI"))
+                return n.e(52).then(n.bind(null, "zfLI"))
             }, "ChannelCollectionsPage"),
             me = te.a.wrap(function() {
                 return n.e(42).then(n.bind(null, "lW0T"))
@@ -23927,7 +23936,7 @@ webpackJsonp([65], {
                 return n.e(62).then(n.bind(null, "yMnN"))
             }, "DevOnlyRoot"),
             ye = te.a.wrap(function() {
-                return n.e(46).then(n.bind(null, "7yeK"))
+                return n.e(47).then(n.bind(null, "7yeK"))
             }, "DirectoryRootPage"),
             ke = te.a.wrap(function() {
                 return n.e(58).then(n.bind(null, "IzAE"))
@@ -23936,16 +23945,16 @@ webpackJsonp([65], {
                 return n.e(60).then(n.bind(null, "Tj44"))
             }, "EmailVerificationPage"),
             Se = te.a.wrap(function() {
-                return n.e(47).then(n.bind(null, "NTi8"))
+                return n.e(48).then(n.bind(null, "NTi8"))
             }, "EventLandingPage"),
             we = te.a.wrap(function() {
-                return n.e(49).then(n.bind(null, "IpE8"))
+                return n.e(50).then(n.bind(null, "IpE8"))
             }, "FollowingRootPage"),
             Ee = te.a.wrap(function() {
                 return n.e(54).then(n.bind(null, "lTLe"))
             }, "FinishWatchingPage"),
             Ce = te.a.wrap(function() {
-                return n.e(48).then(n.bind(null, "IOEW"))
+                return n.e(49).then(n.bind(null, "IOEW"))
             }, "FrontPage"),
             Ne = te.a.wrap(function() {
                 return n.e(55).then(n.bind(null, "DZCb"))
@@ -23957,7 +23966,7 @@ webpackJsonp([65], {
                 return n.e(61).then(n.bind(null, "DkuH"))
             }, "ReportUserPage"),
             Ie = te.a.wrap(function() {
-                return n.e(52).then(n.bind(null, "K4jf"))
+                return n.e(45).then(n.bind(null, "K4jf"))
             }, "SettingsRoot"),
             De = te.a.wrap(function() {
                 return n.e(37).then(n.bind(null, "uiPj"))
@@ -32077,11 +32086,11 @@ webpackJsonp([65], {
         function r(e, t, n) {
             var r = [],
                 a = 0,
-                u = Object(c.d)(e);
+                p = Object(c.d)(e);
             if (t.forEach(function(t) {
                     var n = t.from,
                         s = t.to,
-                        p = {
+                        m = {
                             themed: !1,
                             sources: {
                                 "1x": Object(c.e)("" + t.emoteID, 1),
@@ -32090,31 +32099,33 @@ webpackJsonp([65], {
                             }
                         };
                     if (n > a) {
-                        var m = u ? u.slice(a, n).join("") : e.slice(a, n);
+                        var h = p ? p.slice(a, n).join("") : e.slice(a, n);
                         r.push(o.createElement("span", {
                             key: "str-" + a,
+                            "data-a-target": u,
                             className: "thread-message__message--part"
-                        }, i(m)))
+                        }, i(h)))
                     }
-                    var h = u ? u.slice(n, s + 1).join("") : e.slice(n, s + 1);
+                    var g = p ? p.slice(n, s + 1).join("") : e.slice(n, s + 1);
                     r.push(o.createElement(l.a, {
                         key: "emote-" + a,
                         tooltipDirection: d._44.Top,
                         className: "thread-message__message--emote",
-                        srcSet: p,
+                        srcSet: m,
                         srcKey: "1x",
-                        alt: h
+                        alt: g
                     })), a = s + 1
                 }), a < e.length) {
-                var p = u ? u.slice(a, u.length).join("") : e.slice(a, e.length);
+                var m = p ? p.slice(a, p.length).join("") : e.slice(a, e.length);
                 r.push(o.createElement("span", {
                     key: "str-" + a,
+                    "data-a-target": u,
                     className: "thread-message__message--part"
-                }, i(p)))
+                }, i(m)))
             }
             if (n) {
-                var m = Object(s.d)("edited", "ThreadMessage"),
-                    h = Object(s.d)("{timestamp, date, full} {timestamp, time, long}", {
+                var h = Object(s.d)("edited", "ThreadMessage"),
+                    g = Object(s.d)("{timestamp, date, full} {timestamp, time, long}", {
                         timestamp: new Date(n)
                     }, "ThreadMessage");
                 r.push(o.createElement(d.V, {
@@ -32125,9 +32136,9 @@ webpackJsonp([65], {
                 }, o.createElement(d._34, {
                     type: d._39.Span,
                     className: "thread-message__message--edited",
-                    title: h,
+                    title: g,
                     color: d.I.Alt2
-                }, "(" + m + ")")))
+                }, "(" + h + ")")))
             }
             return r
         }
@@ -32140,17 +32151,18 @@ webpackJsonp([65], {
         }(a || (a = {}));
         var d = n("Odds");
         t.a = r, n.d(t, "f", function() {
-            return u
-        }), n.d(t, "e", function() {
             return p
-        }), n.d(t, "d", function() {
+        }), n.d(t, "e", function() {
             return m
-        }), n.d(t, "c", function() {
+        }), n.d(t, "d", function() {
             return h
-        }), n.d(t, "b", function() {
+        }), n.d(t, "c", function() {
             return g
+        }), n.d(t, "b", function() {
+            return f
         });
-        var u = function(e) {
+        var u = "whisper-message-part",
+            p = function(e) {
                 var t = r(e.content, e.emotes, e.editedAt);
                 if (e.deletedAt) return null;
                 var n = e.from && e.from.chatColor || "",
@@ -32165,12 +32177,13 @@ webpackJsonp([65], {
                     }
                 }, o.createElement("span", {
                     className: "thread-message__message--user-name",
+                    "data-a-target": "whisper-message-name",
                     style: {
                         color: n
                     }
                 }, i), o.createElement("span", null, ": "), t)
             },
-            p = function() {
+            m = function() {
                 return o.createElement(d._1, {
                     padding: {
                         y: .5,
@@ -32178,7 +32191,7 @@ webpackJsonp([65], {
                     }
                 }, Object(s.d)("Please don't share passwords or personal information.", "whispers"))
             },
-            m = function(e) {
+            h = function(e) {
                 var t = new Date,
                     n = Object(s.d)("Today, {timestamp, time, medium}", {
                         timestamp: e.timestamp
@@ -32194,7 +32207,7 @@ webpackJsonp([65], {
                     textAlign: d._35.Center
                 }, "" + r)
             },
-            h = function(e) {
+            g = function(e) {
                 return o.createElement(d._1, {
                     padding: {
                         y: .5,
@@ -32205,7 +32218,7 @@ webpackJsonp([65], {
                     color: d.I.Alt2
                 }, e.content))
             },
-            g = function() {
+            f = function() {
                 return o.createElement(d._1, {
                     textAlign: d._35.Center,
                     padding: {
@@ -39980,4 +39993,4 @@ webpackJsonp([65], {
             }(r.Component))
     }
 }, [4]);
-//# sourceMappingURL=core-603f5f44bf7fff855a9232bbcd32d71b.js.map
+//# sourceMappingURL=core-02322e53ea3269e809d41c2ae97a5f67.js.map

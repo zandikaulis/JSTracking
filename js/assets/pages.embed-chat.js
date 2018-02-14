@@ -475,7 +475,9 @@ webpackJsonp([39], {
                 ChatRoomDeleted: "deleted_room",
                 ChatRoomUpdated: "updated_room",
                 ChatRoomsUserModAction: "user_moderation_action",
-                ChatRoomsNewMessage: "created_room_message",
+                ChatRoomMessageCreated: "created_room_message",
+                ChatRoomMessageEdited: "edited_room_message",
+                ChatRoomMessageDeleted: "deleted_room_message",
                 ChatRoomsRoomViewUpdated: "updated_room_view",
                 ImageUploadSuccess: "imageuploadsuccess",
                 ModerationAction: "moderation_action",
@@ -4738,17 +4740,16 @@ webpackJsonp([39], {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderExpandArrow = function() {
                         return f.createElement(H._1, {
-                            fullWidth: !0,
+                            position: H._8.Absolute,
+                            attachRight: !0,
+                            attachTop: !0,
+                            className: "bits-leaderboard-expanded__arrow",
                             display: H.M.Flex,
-                            alignItems: H.c.Stretch,
-                            flexDirection: H.O.Column,
-                            margin: {
-                                top: 1
-                            }
+                            alignItems: H.c.Stretch
                         }, f.createElement(H.u, {
                             icon: H._15.AngleUp,
-                            onClick: t.props.toggleExpand,
-                            size: H.x.Small
+                            size: H.x.Small,
+                            onClick: t.props.toggleExpand
                         }))
                     }, t
                 }
@@ -5245,9 +5246,13 @@ webpackJsonp([39], {
                     mutator: function(t, n) {
                         if (n.user && null !== n.user.cheer && null !== n.user.cheer.leaderboard) {
                             T.j.debug("Received pubsub update from leaderboard");
-                            for (var i = t.top.map(function(e) {
-                                    return Object(R.b)(e)
-                                }), a = 0; a < n.user.cheer.leaderboard.entries.edges.length; a++) {
+                            var i = t.top.map(function(e) {
+                                return Object(R.b)(e)
+                            });
+                            0 !== i.length && 0 !== n.user.cheer.leaderboard.entries.edges.length && i.length === n.user.cheer.leaderboard.entries.edges.length || setTimeout(function() {
+                                e && e.data && e.data.refetch && e.data.refetch()
+                            });
+                            for (var a = 0; a < n.user.cheer.leaderboard.entries.edges.length; a++) {
                                 if (n.user.cheer.leaderboard.entries.edges[a].node.score !== i[a].node.score) {
                                     setTimeout(function() {
                                         e && e.data && e.data.refetch && e.data.refetch()
@@ -7514,6 +7519,7 @@ webpackJsonp([39], {
                         containerRef: this.setChatListElement
                     }), f.createElement(H._1, {
                         className: "chat-room__viewer-card",
+                        "data-a-target": "chat-user-card",
                         position: H._8.Absolute
                     }, f.createElement(qi.a, {
                         isEmbedded: this.props.isEmbedded,
@@ -8836,7 +8842,8 @@ webpackJsonp([39], {
                             }, Object(ae.e)());
                         case i.Whisper:
                             return r.createElement(F._1, {
-                                className: "thread-message__message"
+                                className: "thread-message__message",
+                                "data-a-target": "whisper-message"
                             }, Object(ae.f)(e));
                         case i.NewMessages:
                             return r.createElement(F._24, {
@@ -10507,6 +10514,7 @@ webpackJsonp([39], {
                     key: "username-display",
                     className: "chat-author__display-name",
                     "data-a-target": "chat-message-username",
+                    "data-a-user": e.userData.userLogin,
                     "data-test-selector": "message-username",
                     style: {
                         color: e.userData.color
@@ -10566,7 +10574,8 @@ webpackJsonp([39], {
                 return c.__extends(t, e), t.prototype.render = function() {
                     var e = Object(u.d)("Whisper", "WhisperButton");
                     return d.createElement(m.u, {
-                        onClick: this.handleClick
+                        onClick: this.handleClick,
+                        "data-a-target": "usercard-whisper-button"
                     }, e)
                 }, t = c.__decorate([Object(p.d)("WhisperButton", {
                     autoReportInteractive: !0
@@ -18063,7 +18072,7 @@ webpackJsonp([39], {
                     var e = this;
                     if (!this.props.friendsData && this.props.data && (this.props.data.loading || this.props.data.error)) return !1;
                     return !!(this.props.friendsData || this.props.data).currentUser.friends.edges.find(function(t) {
-                        return t.node.id === e.props.channelID
+                        return !!t.node && t.node.id === e.props.channelID
                     })
                 }, t = l.__decorate([Object(m.d)("FriendButton"), Object(u.a)(f, {
                     skip: function(e) {
@@ -25718,11 +25727,11 @@ webpackJsonp([39], {
         function a(e, t, n) {
             var a = [],
                 r = 0,
-                u = Object(c.d)(e);
+                p = Object(c.d)(e);
             if (t.forEach(function(t) {
                     var n = t.from,
                         o = t.to,
-                        p = {
+                        m = {
                             themed: !1,
                             sources: {
                                 "1x": Object(c.e)("" + t.emoteID, 1),
@@ -25731,31 +25740,33 @@ webpackJsonp([39], {
                             }
                         };
                     if (n > r) {
-                        var m = u ? u.slice(r, n).join("") : e.slice(r, n);
+                        var h = p ? p.slice(r, n).join("") : e.slice(r, n);
                         a.push(s.createElement("span", {
                             key: "str-" + r,
+                            "data-a-target": u,
                             className: "thread-message__message--part"
-                        }, i(m)))
+                        }, i(h)))
                     }
-                    var h = u ? u.slice(n, o + 1).join("") : e.slice(n, o + 1);
+                    var g = p ? p.slice(n, o + 1).join("") : e.slice(n, o + 1);
                     a.push(s.createElement(l.a, {
                         key: "emote-" + r,
                         tooltipDirection: d._44.Top,
                         className: "thread-message__message--emote",
-                        srcSet: p,
+                        srcSet: m,
                         srcKey: "1x",
-                        alt: h
+                        alt: g
                     })), r = o + 1
                 }), r < e.length) {
-                var p = u ? u.slice(r, u.length).join("") : e.slice(r, e.length);
+                var m = p ? p.slice(r, p.length).join("") : e.slice(r, e.length);
                 a.push(s.createElement("span", {
                     key: "str-" + r,
+                    "data-a-target": u,
                     className: "thread-message__message--part"
-                }, i(p)))
+                }, i(m)))
             }
             if (n) {
-                var m = Object(o.d)("edited", "ThreadMessage"),
-                    h = Object(o.d)("{timestamp, date, full} {timestamp, time, long}", {
+                var h = Object(o.d)("edited", "ThreadMessage"),
+                    g = Object(o.d)("{timestamp, date, full} {timestamp, time, long}", {
                         timestamp: new Date(n)
                     }, "ThreadMessage");
                 a.push(s.createElement(d.V, {
@@ -25766,9 +25777,9 @@ webpackJsonp([39], {
                 }, s.createElement(d._34, {
                     type: d._39.Span,
                     className: "thread-message__message--edited",
-                    title: h,
+                    title: g,
                     color: d.I.Alt2
-                }, "(" + m + ")")))
+                }, "(" + h + ")")))
             }
             return a
         }
@@ -25781,17 +25792,18 @@ webpackJsonp([39], {
         }(r || (r = {}));
         var d = n("Odds");
         t.a = a, n.d(t, "f", function() {
-            return u
-        }), n.d(t, "e", function() {
             return p
-        }), n.d(t, "d", function() {
+        }), n.d(t, "e", function() {
             return m
-        }), n.d(t, "c", function() {
+        }), n.d(t, "d", function() {
             return h
-        }), n.d(t, "b", function() {
+        }), n.d(t, "c", function() {
             return g
+        }), n.d(t, "b", function() {
+            return f
         });
-        var u = function(e) {
+        var u = "whisper-message-part",
+            p = function(e) {
                 var t = a(e.content, e.emotes, e.editedAt);
                 if (e.deletedAt) return null;
                 var n = e.from && e.from.chatColor || "",
@@ -25806,12 +25818,13 @@ webpackJsonp([39], {
                     }
                 }, s.createElement("span", {
                     className: "thread-message__message--user-name",
+                    "data-a-target": "whisper-message-name",
                     style: {
                         color: n
                     }
                 }, i), s.createElement("span", null, ": "), t)
             },
-            p = function() {
+            m = function() {
                 return s.createElement(d._1, {
                     padding: {
                         y: .5,
@@ -25819,7 +25832,7 @@ webpackJsonp([39], {
                     }
                 }, Object(o.d)("Please don't share passwords or personal information.", "whispers"))
             },
-            m = function(e) {
+            h = function(e) {
                 var t = new Date,
                     n = Object(o.d)("Today, {timestamp, time, medium}", {
                         timestamp: e.timestamp
@@ -25835,7 +25848,7 @@ webpackJsonp([39], {
                     textAlign: d._35.Center
                 }, "" + a)
             },
-            h = function(e) {
+            g = function(e) {
                 return s.createElement(d._1, {
                     padding: {
                         y: .5,
@@ -25846,7 +25859,7 @@ webpackJsonp([39], {
                     color: d.I.Alt2
                 }, e.content))
             },
-            g = function() {
+            f = function() {
                 return s.createElement(d._1, {
                     textAlign: d._35.Center,
                     padding: {
@@ -31646,4 +31659,4 @@ webpackJsonp([39], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.embed-chat-3a54060afadf30a59c680c33b0bfd1fc.js.map
+//# sourceMappingURL=pages.embed-chat-016f25537758981f37649a2fceb52d49.js.map

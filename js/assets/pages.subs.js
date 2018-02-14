@@ -1,4 +1,4 @@
-webpackJsonp([45], {
+webpackJsonp([46], {
     "+R+X": function(e, t) {
         var n = {
             kind: "Document",
@@ -960,7 +960,9 @@ webpackJsonp([45], {
                 ChatRoomDeleted: "deleted_room",
                 ChatRoomUpdated: "updated_room",
                 ChatRoomsUserModAction: "user_moderation_action",
-                ChatRoomsNewMessage: "created_room_message",
+                ChatRoomMessageCreated: "created_room_message",
+                ChatRoomMessageEdited: "edited_room_message",
+                ChatRoomMessageDeleted: "deleted_room_message",
                 ChatRoomsRoomViewUpdated: "updated_room_view",
                 ImageUploadSuccess: "imageuploadsuccess",
                 ModerationAction: "moderation_action",
@@ -2295,7 +2297,8 @@ webpackJsonp([45], {
                             }, Object(re.e)());
                         case i.Whisper:
                             return a.createElement(U._1, {
-                                className: "thread-message__message"
+                                className: "thread-message__message",
+                                "data-a-target": "whisper-message"
                             }, Object(re.f)(e));
                         case i.NewMessages:
                             return a.createElement(U._24, {
@@ -4108,7 +4111,8 @@ webpackJsonp([45], {
                 return d.__extends(t, e), t.prototype.render = function() {
                     var e = Object(u.d)("Whisper", "WhisperButton");
                     return c.createElement(m.u, {
-                        onClick: this.handleClick
+                        onClick: this.handleClick,
+                        "data-a-target": "usercard-whisper-button"
                     }, e)
                 }, t = d.__decorate([Object(p.d)("WhisperButton", {
                     autoReportInteractive: !0
@@ -11068,6 +11072,8 @@ webpackJsonp([45], {
                         var n = e.data.currentUser.followedLiveUsers.nodes.slice(),
                             i = (e.data.currentUser.follows.edges || []).map(function(e) {
                                 return e.node
+                            }).filter(function(e) {
+                                return !!e
                             }),
                             r = (e.videoData && e.videoData.currentUser && e.videoData.currentUser.followedVideos && e.videoData.currentUser.followedVideos.edges || []).map(function(e) {
                                 return e.node
@@ -12836,7 +12842,7 @@ webpackJsonp([45], {
                     var e = this;
                     if (!this.props.friendsData && this.props.data && (this.props.data.loading || this.props.data.error)) return !1;
                     return !!(this.props.friendsData || this.props.data).currentUser.friends.edges.find(function(t) {
-                        return t.node.id === e.props.channelID
+                        return !!t.node && t.node.id === e.props.channelID
                     })
                 }, t = l.__decorate([Object(m.d)("FriendButton"), Object(u.a)(g, {
                     skip: function(e) {
@@ -13979,7 +13985,8 @@ webpackJsonp([45], {
                         flexDirection: L.O.Row,
                         flexWrap: L.P.NoWrap,
                         fullWidth: !0,
-                        alignItems: L.c.Center
+                        alignItems: L.c.Center,
+                        "data-a-target": "whisper-with-" + e.login
                     }, o.createElement(L._1, {
                         className: "whispers-list-item__avatar",
                         margin: {
@@ -14734,7 +14741,7 @@ webpackJsonp([45], {
                 return o.createElement(se.a, s.__assign({}, e))
             },
             de = te.a.wrap(function() {
-                return n.e(50).then(n.bind(null, "8U1+"))
+                return n.e(51).then(n.bind(null, "8U1+"))
             }, "AnonFrontPage"),
             ce = te.a.wrap(function() {
                 return n.e(53).then(n.bind(null, "Dd84"))
@@ -14743,7 +14750,7 @@ webpackJsonp([45], {
                 return n.e(41).then(n.bind(null, "gZGZ"))
             }, "ChannelClipsPage"),
             pe = te.a.wrap(function() {
-                return n.e(51).then(n.bind(null, "zfLI"))
+                return n.e(52).then(n.bind(null, "zfLI"))
             }, "ChannelCollectionsPage"),
             me = te.a.wrap(function() {
                 return n.e(42).then(n.bind(null, "lW0T"))
@@ -14764,7 +14771,7 @@ webpackJsonp([45], {
                 return n.e(62).then(n.bind(null, "yMnN"))
             }, "DevOnlyRoot"),
             ke = te.a.wrap(function() {
-                return n.e(46).then(n.bind(null, "7yeK"))
+                return n.e(47).then(n.bind(null, "7yeK"))
             }, "DirectoryRootPage"),
             ye = te.a.wrap(function() {
                 return n.e(58).then(n.bind(null, "IzAE"))
@@ -14773,16 +14780,16 @@ webpackJsonp([45], {
                 return n.e(60).then(n.bind(null, "Tj44"))
             }, "EmailVerificationPage"),
             _e = te.a.wrap(function() {
-                return n.e(47).then(n.bind(null, "NTi8"))
+                return n.e(48).then(n.bind(null, "NTi8"))
             }, "EventLandingPage"),
             Te = te.a.wrap(function() {
-                return n.e(49).then(n.bind(null, "IpE8"))
+                return n.e(50).then(n.bind(null, "IpE8"))
             }, "FollowingRootPage"),
             Ne = te.a.wrap(function() {
                 return n.e(54).then(n.bind(null, "lTLe"))
             }, "FinishWatchingPage"),
             Ce = te.a.wrap(function() {
-                return n.e(48).then(n.bind(null, "IOEW"))
+                return n.e(49).then(n.bind(null, "IOEW"))
             }, "FrontPage"),
             Ee = te.a.wrap(function() {
                 return n.e(55).then(n.bind(null, "DZCb"))
@@ -14794,7 +14801,7 @@ webpackJsonp([45], {
                 return n.e(61).then(n.bind(null, "DkuH"))
             }, "ReportUserPage"),
             De = te.a.wrap(function() {
-                return n.e(52).then(n.bind(null, "K4jf"))
+                return n.e(45).then(n.bind(null, "K4jf"))
             }, "SettingsRoot"),
             Oe = te.a.wrap(function() {
                 return n.e(37).then(n.bind(null, "uiPj"))
@@ -18812,11 +18819,11 @@ webpackJsonp([45], {
         function r(e, t, n) {
             var r = [],
                 a = 0,
-                u = Object(d.d)(e);
+                p = Object(d.d)(e);
             if (t.forEach(function(t) {
                     var n = t.from,
                         o = t.to,
-                        p = {
+                        m = {
                             themed: !1,
                             sources: {
                                 "1x": Object(d.e)("" + t.emoteID, 1),
@@ -18825,31 +18832,33 @@ webpackJsonp([45], {
                             }
                         };
                     if (n > a) {
-                        var m = u ? u.slice(a, n).join("") : e.slice(a, n);
+                        var h = p ? p.slice(a, n).join("") : e.slice(a, n);
                         r.push(s.createElement("span", {
                             key: "str-" + a,
+                            "data-a-target": u,
                             className: "thread-message__message--part"
-                        }, i(m)))
+                        }, i(h)))
                     }
-                    var h = u ? u.slice(n, o + 1).join("") : e.slice(n, o + 1);
+                    var f = p ? p.slice(n, o + 1).join("") : e.slice(n, o + 1);
                     r.push(s.createElement(l.a, {
                         key: "emote-" + a,
                         tooltipDirection: c._44.Top,
                         className: "thread-message__message--emote",
-                        srcSet: p,
+                        srcSet: m,
                         srcKey: "1x",
-                        alt: h
+                        alt: f
                     })), a = o + 1
                 }), a < e.length) {
-                var p = u ? u.slice(a, u.length).join("") : e.slice(a, e.length);
+                var m = p ? p.slice(a, p.length).join("") : e.slice(a, e.length);
                 r.push(s.createElement("span", {
                     key: "str-" + a,
+                    "data-a-target": u,
                     className: "thread-message__message--part"
-                }, i(p)))
+                }, i(m)))
             }
             if (n) {
-                var m = Object(o.d)("edited", "ThreadMessage"),
-                    h = Object(o.d)("{timestamp, date, full} {timestamp, time, long}", {
+                var h = Object(o.d)("edited", "ThreadMessage"),
+                    f = Object(o.d)("{timestamp, date, full} {timestamp, time, long}", {
                         timestamp: new Date(n)
                     }, "ThreadMessage");
                 r.push(s.createElement(c.V, {
@@ -18860,9 +18869,9 @@ webpackJsonp([45], {
                 }, s.createElement(c._34, {
                     type: c._39.Span,
                     className: "thread-message__message--edited",
-                    title: h,
+                    title: f,
                     color: c.I.Alt2
-                }, "(" + m + ")")))
+                }, "(" + h + ")")))
             }
             return r
         }
@@ -18875,17 +18884,18 @@ webpackJsonp([45], {
         }(a || (a = {}));
         var c = n("Odds");
         t.a = r, n.d(t, "f", function() {
-            return u
-        }), n.d(t, "e", function() {
             return p
-        }), n.d(t, "d", function() {
+        }), n.d(t, "e", function() {
             return m
-        }), n.d(t, "c", function() {
+        }), n.d(t, "d", function() {
             return h
-        }), n.d(t, "b", function() {
+        }), n.d(t, "c", function() {
             return f
+        }), n.d(t, "b", function() {
+            return g
         });
-        var u = function(e) {
+        var u = "whisper-message-part",
+            p = function(e) {
                 var t = r(e.content, e.emotes, e.editedAt);
                 if (e.deletedAt) return null;
                 var n = e.from && e.from.chatColor || "",
@@ -18900,12 +18910,13 @@ webpackJsonp([45], {
                     }
                 }, s.createElement("span", {
                     className: "thread-message__message--user-name",
+                    "data-a-target": "whisper-message-name",
                     style: {
                         color: n
                     }
                 }, i), s.createElement("span", null, ": "), t)
             },
-            p = function() {
+            m = function() {
                 return s.createElement(c._1, {
                     padding: {
                         y: .5,
@@ -18913,7 +18924,7 @@ webpackJsonp([45], {
                     }
                 }, Object(o.d)("Please don't share passwords or personal information.", "whispers"))
             },
-            m = function(e) {
+            h = function(e) {
                 var t = new Date,
                     n = Object(o.d)("Today, {timestamp, time, medium}", {
                         timestamp: e.timestamp
@@ -18929,7 +18940,7 @@ webpackJsonp([45], {
                     textAlign: c._35.Center
                 }, "" + r)
             },
-            h = function(e) {
+            f = function(e) {
                 return s.createElement(c._1, {
                     padding: {
                         y: .5,
@@ -18940,7 +18951,7 @@ webpackJsonp([45], {
                     color: c.I.Alt2
                 }, e.content))
             },
-            f = function() {
+            g = function() {
                 return s.createElement(c._1, {
                     textAlign: c._35.Center,
                     padding: {
@@ -22381,4 +22392,4 @@ webpackJsonp([45], {
             }(r.Component))
     }
 });
-//# sourceMappingURL=pages.subs-34b8188fe82c2363be921357b1703b73.js.map
+//# sourceMappingURL=pages.subs-1fed934b0a41a0cc7be5b914eb778c2d.js.map

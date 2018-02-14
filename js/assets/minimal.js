@@ -643,7 +643,7 @@ webpackJsonp([66], {
                 return n.e(56).then(n.bind(null, "JeT+"))
             }, "BitsRoot"),
             C = p.a.wrap(function() {
-                return n.e(45).then(n.bind(null, "RY+8"))
+                return n.e(46).then(n.bind(null, "RY+8"))
             }, "SubsRoot"),
             k = p.a.wrap(function() {
                 return n.e(39).then(n.bind(null, "2FAx"))
@@ -2257,8 +2257,8 @@ webpackJsonp([66], {
                     }
                 }
             }),
-            O = n("bejq"),
-            V = function() {
+            V = n("bejq"),
+            O = function() {
                 function e(e) {
                     this.authToken = null, this.batchID = 0, this.eventEmitter = new A.EventEmitter, this.queryID = 0, this.config = e.config, this.logger = e.logger.withCategory("apollo"), this.store = e.store, this.session = e.session, this.client = this.createApolloClient()
                 }
@@ -2302,7 +2302,7 @@ webpackJsonp([66], {
                             return m.__generator(this, function(u) {
                                 switch (u.label) {
                                     case 0:
-                                        return i.status && i.status >= 400 || i.status < 200 ? 401 !== i.status ? [3, 1] : this.config.embedded ? (this.logger.warn("Received 401 response from GraphQL."), [3, 3]) : (this.logger.warn("Received 401 response from GraphQL, logging user out."), Object(O.e)(), window.location.reload(!0), [2]) : [3, 4];
+                                        return i.status && i.status >= 400 || i.status < 200 ? 401 !== i.status ? [3, 1] : this.config.embedded ? (this.logger.warn("Received 401 response from GraphQL."), [3, 3]) : (this.logger.warn("Received 401 response from GraphQL, logging user out."), Object(V.e)(), window.location.reload(!0), [2]) : [3, 4];
                                     case 1:
                                         return t = (e = this.logger).error, o = [new Error("Received non-200 response from GraphQL."), "Received non-200 response from GraphQL."], a = {
                                             status: i.status
@@ -2714,14 +2714,15 @@ webpackJsonp([66], {
                         is_app_launch: o,
                         time_from_fetch: r
                     })
-                }, e.prototype.trackCustomEvent = function(e, t) {
+                }, e.prototype.trackCustomEvent = function(e, t, n) {
                     this.tracking.trackCustomEventBenchmark({
                         benchmark: e.benchmark,
                         duration: Math.round(e.duration && e.duration.value || 0),
                         group: e.group,
                         key: e.key,
                         label: e.label,
-                        is_app_launch: t
+                        is_app_launch: t,
+                        lost_visibility: n
                     })
                 }, e.prototype.trackAppBooted = function(e, t, n, i, r, o) {
                     this.tracking.trackBenchmark(M.SpadeEventType.AppBooted, {
@@ -2807,7 +2808,7 @@ webpackJsonp([66], {
                         }, n.setPage = function(e, t) {
                             n.page = e, n.destination = t, n.sentinel.setPageComponentName(e.componentName)
                         }, n.sendCustomEventToSpade = function(e) {
-                            n.componentEventsEnabled && n.tracker.trackCustomEvent(e, n.isFirstLoad)
+                            n.componentEventsEnabled && n.tracker.trackCustomEvent(e, n.isFirstLoad, n.hasLostVisibility)
                         }, n.sendAllEvents = function() {
                             n.networkMonitor && (n.networkMonitor.flush(), n.doReconcileQueries(!0)), n.sendBenchmarkEventsToSpade(), n.sendNetworkRequestsToSpade()
                         }, n.sendFetchStartEvent = function(e, t, i) {
@@ -2828,7 +2829,7 @@ webpackJsonp([66], {
                                         key: Z.b.FirstPaint,
                                         label: Z.c.FirstPaint,
                                         startTime: n.navigationStart
-                                    }, n.isFirstLoad))
+                                    }, n.isFirstLoad, n.hasLostVisibility))
                                 } catch (e) {
                                     n.logger.debug("First paint metrics not available on this platform", e)
                                 }
@@ -3342,7 +3343,7 @@ webpackJsonp([66], {
                     t.sentinel.report(e.flush())
                 }), this.adBlockDetector = new p({
                     logger: this.logger
-                }), this.adBlockDetector.addTwitchGlobal(), this.adBlockDetector.detectAdBlock(), this.apollo = new V({
+                }), this.adBlockDetector.addTwitchGlobal(), this.adBlockDetector.detectAdBlock(), this.apollo = new O({
                     config: this.config,
                     dynamicSettings: this.dynamicSettings,
                     logger: this.logger,
@@ -3646,11 +3647,11 @@ webpackJsonp([66], {
         ! function(e) {
             e[e.Block = 1] = "Block", e[e.Flex = 2] = "Flex", e[e.Inline = 3] = "Inline", e[e.InlineBlock = 4] = "InlineBlock", e[e.InlineFlex = 5] = "InlineFlex", e[e.Hide = 6] = "Hide", e[e.HideAccessible = 7] = "HideAccessible"
         }(g || (g = {}));
-        var v, w = (O = {}, O[g.Block] = "block", O[g.Flex] = "flex", O[g.Inline] = "inline", O[g.InlineBlock] = "inline-block", O[g.InlineFlex] = "inline-flex", O[g.Hide] = "hide", O[g.HideAccessible] = "hide-accessible", O);
+        var v, w = (V = {}, V[g.Block] = "block", V[g.Flex] = "flex", V[g.Inline] = "inline", V[g.InlineBlock] = "inline-block", V[g.InlineFlex] = "inline-flex", V[g.Hide] = "hide", V[g.HideAccessible] = "hide-accessible", V);
         ! function(e) {
             e[e.Column = 1] = "Column", e[e.ColumnReverse = 2] = "ColumnReverse", e[e.Row = 3] = "Row", e[e.RowReverse = 4] = "RowReverse"
         }(v || (v = {}));
-        var y, b = (V = {}, V[v.Column] = "flex-column", V[v.ColumnReverse] = "flex-column-reverse", V[v.Row] = "flex-row", V[v.RowReverse] = "flex-row-reverse", V);
+        var y, b = (O = {}, O[v.Column] = "flex-column", O[v.ColumnReverse] = "flex-column-reverse", O[v.Row] = "flex-row", O[v.RowReverse] = "flex-row-reverse", O);
         ! function(e) {
             e[e.Wrap = 1] = "Wrap", e[e.NoWrap = 2] = "NoWrap", e[e.WrapReverse = 3] = "WrapReverse"
         }(y || (y = {}));
@@ -3682,7 +3683,7 @@ webpackJsonp([66], {
         ! function(e) {
             e[e.Default = 1] = "Default", e[e.Above = 2] = "Above", e[e.Below = 3] = "Below"
         }(I || (I = {}));
-        var P, A, H, O, V, B, F, U, q, G, W, j, Q, K, Z = (Q = {}, Q[I.Default] = "tw-z-default", Q[I.Above] = "tw-z-above", Q[I.Below] = "tw-z-below", Q),
+        var P, A, H, V, O, B, F, U, q, G, W, j, Q, K, Z = (Q = {}, Q[I.Default] = "tw-z-default", Q[I.Above] = "tw-z-above", Q[I.Below] = "tw-z-below", Q),
             X = new Set([0, .5, 1, 2, 3, 4, 5, "auto"]),
             Y = function(e) {
                 function t() {
@@ -3842,7 +3843,7 @@ webpackJsonp([66], {
         ! function(e) {
             e[e.Base = 1] = "Base", e[e.Alt = 2] = "Alt", e[e.Alt2 = 3] = "Alt2", e[e.Link = 4] = "Link", e[e.Live = 5] = "Live", e[e.Error = 6] = "Error", e[e.Overlay = 7] = "Overlay", e[e.OverlayAlt = 8] = "OverlayAlt"
         }(Le || (Le = {}));
-        var xe, Me = (Ve = {}, Ve[Le.Base] = "tw-c-text", Ve[Le.Alt] = "tw-c-text-alt", Ve[Le.Alt2] = "tw-c-text-alt-2", Ve[Le.Link] = "tw-c-text-link", Ve[Le.Live] = "tw-c-text-live", Ve[Le.Error] = "tw-c-text-error", Ve[Le.Overlay] = "tw-c-text-overlay", Ve[Le.OverlayAlt] = "tw-c-text-overlay-alt", Ve);
+        var xe, Me = (Oe = {}, Oe[Le.Base] = "tw-c-text", Oe[Le.Alt] = "tw-c-text-alt", Oe[Le.Alt2] = "tw-c-text-alt-2", Oe[Le.Link] = "tw-c-text-link", Oe[Le.Live] = "tw-c-text-live", Oe[Le.Error] = "tw-c-text-error", Oe[Le.Overlay] = "tw-c-text-overlay", Oe[Le.OverlayAlt] = "tw-c-text-overlay-alt", Oe);
         ! function(e) {
             e[e.Size1 = 1] = "Size1", e[e.Size2 = 2] = "Size2", e[e.Size3 = 3] = "Size3", e[e.Size4 = 4] = "Size4", e[e.Size5 = 5] = "Size5", e[e.Size6 = 6] = "Size6", e[e.Size7 = 7] = "Size7", e[e.Size8 = 8] = "Size8"
         }(xe || (xe = {}));
@@ -3862,11 +3863,11 @@ webpackJsonp([66], {
         ! function(e) {
             e.P = "p", e.Span = "span", e.H1 = "h1", e.H2 = "h2", e.H3 = "h3", e.H4 = "h4", e.H5 = "h5", e.H6 = "h6", e.Strong = "strong", e.Em = "em"
         }(Ae || (Ae = {}));
-        var Oe;
+        var Ve;
         ! function(e) {
             e[e.Top = 1] = "Top", e[e.Middle = 2] = "Middle", e[e.Baseline = 3] = "Baseline", e[e.Bottom = 4] = "Bottom", e[e.TextTop = 5] = "TextTop", e[e.TextBottom = 6] = "TextBottom"
-        }(Oe || (Oe = {}));
-        var Ve, Be, Fe, Ue, qe, Ge, We, je = (Ge = {}, Ge[Oe.Top] = "tw-align-top", Ge[Oe.Middle] = "tw-align-middle", Ge[Oe.Baseline] = "tw-align-baseline", Ge[Oe.Bottom] = "tw-align-bottom", Ge[Oe.TextTop] = "tw-align-text-top", Ge[Oe.TextBottom] = "tw-align-text-bottom", Ge),
+        }(Ve || (Ve = {}));
+        var Oe, Be, Fe, Ue, qe, Ge, We, je = (Ge = {}, Ge[Ve.Top] = "tw-align-top", Ge[Ve.Middle] = "tw-align-middle", Ge[Ve.Baseline] = "tw-align-baseline", Ge[Ve.Bottom] = "tw-align-bottom", Ge[Ve.TextTop] = "tw-align-text-top", Ge[Ve.TextBottom] = "tw-align-text-bottom", Ge),
             Qe = function(e) {
                 var t = (r = {
                     "tw-ellipsis": e.ellipsis || e.lines && e.lines > 0,
@@ -5226,14 +5227,14 @@ webpackJsonp([66], {
         ! function(e) {
             e[e.Default = 0] = "Default", e[e.Loading = 1] = "Loading", e[e.Success = 2] = "Success"
         }(Dt || (Dt = {}));
-        var At, Ht, Ot, Vt, Bt, Ft = (Ot = {}, Ot[Dt.Loading] = "tw-button--state-loading", Ot[Dt.Success] = "tw-button--state-success", Ot),
-            Ut = (Vt = {}, Vt[Rt.Small] = {
+        var At, Ht, Vt, Ot, Bt, Ft = (Vt = {}, Vt[Dt.Loading] = "tw-button--state-loading", Vt[Dt.Success] = "tw-button--state-success", Vt),
+            Ut = (Ot = {}, Ot[Rt.Small] = {
                 width: 12,
                 height: 12
-            }, Vt[Rt.Large] = {
+            }, Ot[Rt.Large] = {
                 width: 20,
                 height: 20
-            }, Vt),
+            }, Ot),
             qt = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -5951,7 +5952,7 @@ webpackJsonp([66], {
         ! function(e) {
             e[e.Notification = 1] = "Notification", e[e.Brand = 2] = "Brand", e[e.Live = 3] = "Live", e[e.Alert = 4] = "Alert", e[e.Success = 5] = "Success", e[e.Prime = 6] = "Prime", e[e.Overlay = 7] = "Overlay"
         }(In || (In = {}));
-        var On, Vn, Bn = (On = {}, On[In.Notification] = "tw-pill--notification", On[In.Brand] = "tw-pill--brand", On[In.Live] = "tw-pill--live", On[In.Alert] = "tw-pill--alert", On[In.Success] = "tw-pill--success", On[In.Prime] = "tw-pill--prime", On[In.Overlay] = "tw-pill--overlay", On),
+        var Vn, On, Bn = (Vn = {}, Vn[In.Notification] = "tw-pill--notification", Vn[In.Brand] = "tw-pill--brand", Vn[In.Live] = "tw-pill--live", Vn[In.Alert] = "tw-pill--alert", Vn[In.Success] = "tw-pill--success", Vn[In.Prime] = "tw-pill--prime", Vn[In.Overlay] = "tw-pill--overlay", Vn),
             Fn = function(e) {
                 var t = {
                     "tw-pill": !0
@@ -5963,8 +5964,8 @@ webpackJsonp([66], {
         n("3+CI");
         ! function(e) {
             e[e.Default = 0] = "Default", e[e.Small = 1] = "Small", e[e.ExtraSmall = 2] = "ExtraSmall"
-        }(Vn || (Vn = {}));
-        var Un, qn = (Gn = {}, Gn[Vn.Small] = "tw-progress-bar--sm", Gn[Vn.ExtraSmall] = "tw-progress-bar--xs", Gn);
+        }(On || (On = {}));
+        var Un, qn = (Gn = {}, Gn[On.Small] = "tw-progress-bar--sm", Gn[On.ExtraSmall] = "tw-progress-bar--xs", Gn);
         ! function(e) {
             e[e.Default = 0] = "Default", e[e.Caution = 1] = "Caution", e[e.Error = 2] = "Error", e[e.Success = 3] = "Success"
         }(Un || (Un = {}));
@@ -6577,7 +6578,7 @@ webpackJsonp([66], {
         }), n.d(t, "_11", function() {
             return Kn
         }), n.d(t, "_12", function() {
-            return Vn
+            return On
         }), n.d(t, !1, function() {
             return Un
         }), n.d(t, "_13", function() {
@@ -6597,7 +6598,7 @@ webpackJsonp([66], {
         }), n.d(t, "_39", function() {
             return Ae
         }), n.d(t, "_49", function() {
-            return Oe
+            return Ve
         }), n.d(t, "_41", function() {
             return Xn
         }), n.d(t, !1, function() {
@@ -9145,4 +9146,4 @@ webpackJsonp([66], {
         }(i || (i = {}))
     }
 }, [5]);
-//# sourceMappingURL=minimal-0c95ca7a717b150ebc603ca1ec1858ad.js.map
+//# sourceMappingURL=minimal-dd7d4d2f9057e79ddc7758bb3d1f575f.js.map

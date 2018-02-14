@@ -1,4 +1,4 @@
-webpackJsonp([50], {
+webpackJsonp([51], {
     "+GT7": function(e, t, n) {
         "use strict";
         var r, a = n("TToO"),
@@ -3753,7 +3753,8 @@ webpackJsonp([50], {
                             padding: {
                                 y: .5,
                                 x: 1
-                            }
+                            },
+                            "data-a-target": "language-" + e.languageCode
                         }, e.name))
                     }, t
                 }
@@ -5958,4 +5959,4 @@ webpackJsonp([50], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.anon-front-5382cbc99030adabc76efa39b98afb4f.js.map
+//# sourceMappingURL=pages.anon-front-46675707f5560293114b56997e2b147c.js.map

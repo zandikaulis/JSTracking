@@ -1,4 +1,4 @@
-webpackJsonp([51], {
+webpackJsonp([52], {
     "+Aaf": function(e, t) {},
     "/LBW": function(e, t, n) {
         "use strict";
@@ -5361,4 +5361,4 @@ webpackJsonp([51], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-collections-ddf821d99825a376d604e3826f462d31.js.map
+//# sourceMappingURL=pages.channel-collections-d095b4647279316b08d02b2c898bb218.js.map

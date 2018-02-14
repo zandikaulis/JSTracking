@@ -1,4 +1,4 @@
-webpackJsonp([46], {
+webpackJsonp([47], {
     "+GT7": function(e, t, n) {
         "use strict";
         var i, a = n("TToO"),
@@ -1517,9 +1517,9 @@ webpackJsonp([46], {
                         type: S.w.Primary,
                         icon: S._15.AngleLeft,
                         onClick: this.updateClipBackward,
-                        "data-test-selector": "clips-view-modal-content-back"
+                        "data-test-selector": "clips-view-modal-navigation-back"
                     }))), a.createElement(S._1, {
-                        className: "clips-view-modal-content"
+                        className: "clips-view-modal-navigation"
                     }, e, a.createElement(M, {
                         clip: this.props.clip,
                         updateModalViewState: this.props.updateModalViewState,
@@ -1535,7 +1535,7 @@ webpackJsonp([46], {
                         type: S.w.Primary,
                         icon: S._15.AngleRight,
                         onClick: this.updateClipForward,
-                        "data-test-selector": "clips-view-modal-content-forward"
+                        "data-test-selector": "clips-view-modal-navigation-forward"
                     })))
                 }, t.prototype.componentWillUnmount = function() {
                     document.removeEventListener("keydown", this.onKeyDown)
@@ -11780,6 +11780,26 @@ webpackJsonp([46], {
                                                         },
                                                         arguments: [],
                                                         directives: []
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "champBadge"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: {
+                                                            kind: "SelectionSet",
+                                                            selections: [{
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "id"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }]
+                                                        }
                                                     }]
                                                 }
                                             }]
@@ -11793,11 +11813,11 @@ webpackJsonp([46], {
             }],
             loc: {
                 start: 0,
-                end: 444
+                end: 462
             }
         };
         n.loc.source = {
-            body: "query ClipsCards__Game($gameName: String! $limit: Int $cursor: Cursor $criteria: GameClipsInput) {\ngame(name: $gameName) {\nid\nclips(first: $limit after: $cursor criteria: $criteria) {\npageInfo {\nhasNextPage\n}\nedges {\ncursor\nnode {\nid\nslug\nurl\nembedURL\ntitle\nviewCount\nlanguage\ncurator {\nid\nlogin\ndisplayName\n}\ngame {\nid\nname\nboxArtURL(width: 52 height: 72)\n}\nbroadcaster {\nid\nlogin\ndisplayName\n}\nthumbnailURL\ncreatedAt\ndurationSeconds\n}\n}\n}\n}\n}",
+            body: "query ClipsCards__Game($gameName: String! $limit: Int $cursor: Cursor $criteria: GameClipsInput) {\ngame(name: $gameName) {\nid\nclips(first: $limit after: $cursor criteria: $criteria) {\npageInfo {\nhasNextPage\n}\nedges {\ncursor\nnode {\nid\nslug\nurl\nembedURL\ntitle\nviewCount\nlanguage\ncurator {\nid\nlogin\ndisplayName\n}\ngame {\nid\nname\nboxArtURL(width: 52 height: 72)\n}\nbroadcaster {\nid\nlogin\ndisplayName\n}\nthumbnailURL\ncreatedAt\ndurationSeconds\nchampBadge {\nid\n}\n}\n}\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -17256,4 +17276,4 @@ webpackJsonp([46], {
     zSAx: function(e, t) {},
     zu64: function(e, t) {}
 });
-//# sourceMappingURL=pages.directory-game-94f7d7f7e3e395d7e6000416fc7d3f42.js.map
+//# sourceMappingURL=pages.directory-game-0df3d3ee8fcb9ba9fa4939ed6059835e.js.map

@@ -475,7 +475,9 @@ webpackJsonp([35], {
                 ChatRoomDeleted: "deleted_room",
                 ChatRoomUpdated: "updated_room",
                 ChatRoomsUserModAction: "user_moderation_action",
-                ChatRoomsNewMessage: "created_room_message",
+                ChatRoomMessageCreated: "created_room_message",
+                ChatRoomMessageEdited: "edited_room_message",
+                ChatRoomMessageDeleted: "deleted_room_message",
                 ChatRoomsRoomViewUpdated: "updated_room_view",
                 ImageUploadSuccess: "imageuploadsuccess",
                 ModerationAction: "moderation_action",
@@ -4944,17 +4946,16 @@ webpackJsonp([35], {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderExpandArrow = function() {
                         return f.createElement(W._1, {
-                            fullWidth: !0,
+                            position: W._8.Absolute,
+                            attachRight: !0,
+                            attachTop: !0,
+                            className: "bits-leaderboard-expanded__arrow",
                             display: W.M.Flex,
-                            alignItems: W.c.Stretch,
-                            flexDirection: W.O.Column,
-                            margin: {
-                                top: 1
-                            }
+                            alignItems: W.c.Stretch
                         }, f.createElement(W.u, {
                             icon: W._15.AngleUp,
-                            onClick: t.props.toggleExpand,
-                            size: W.x.Small
+                            size: W.x.Small,
+                            onClick: t.props.toggleExpand
                         }))
                     }, t
                 }
@@ -5451,9 +5452,13 @@ webpackJsonp([35], {
                     mutator: function(t, n) {
                         if (n.user && null !== n.user.cheer && null !== n.user.cheer.leaderboard) {
                             w.j.debug("Received pubsub update from leaderboard");
-                            for (var i = t.top.map(function(e) {
-                                    return Object(x.b)(e)
-                                }), a = 0; a < n.user.cheer.leaderboard.entries.edges.length; a++) {
+                            var i = t.top.map(function(e) {
+                                return Object(x.b)(e)
+                            });
+                            0 !== i.length && 0 !== n.user.cheer.leaderboard.entries.edges.length && i.length === n.user.cheer.leaderboard.entries.edges.length || setTimeout(function() {
+                                e && e.data && e.data.refetch && e.data.refetch()
+                            });
+                            for (var a = 0; a < n.user.cheer.leaderboard.entries.edges.length; a++) {
                                 if (n.user.cheer.leaderboard.entries.edges[a].node.score !== i[a].node.score) {
                                     setTimeout(function() {
                                         e && e.data && e.data.refetch && e.data.refetch()
@@ -7720,6 +7725,7 @@ webpackJsonp([35], {
                         containerRef: this.setChatListElement
                     }), f.createElement(W._1, {
                         className: "chat-room__viewer-card",
+                        "data-a-target": "chat-user-card",
                         position: W._8.Absolute
                     }, f.createElement(qi.a, {
                         isEmbedded: this.props.isEmbedded,
@@ -9042,7 +9048,8 @@ webpackJsonp([35], {
                             }, Object(ae.e)());
                         case i.Whisper:
                             return r.createElement(U._1, {
-                                className: "thread-message__message"
+                                className: "thread-message__message",
+                                "data-a-target": "whisper-message"
                             }, Object(ae.f)(e));
                         case i.NewMessages:
                             return r.createElement(U._24, {
@@ -11131,6 +11138,12 @@ webpackJsonp([35], {
                         maxChars: t
                     }, "RoomErrorCodes")
                 },
+                SLOW_MODE_ENFORCEMENT_FAILED: function(e) {
+                    var t = e.remainingDurationSeconds;
+                    return Object(y.d)("This room is in slow mode and you are sending messages too quickly. You will be able to talk again in {remainingDurationSeconds} seconds.", {
+                        remainingDurationSeconds: t
+                    }, "RoomErrorCodes")
+                },
                 TOPIC_LENGTH_INVALID: function(e) {
                     var t = e.maxChars;
                     return Object(y.d)("The topic may not exceed {maxChars} characters.", {
@@ -11163,7 +11176,7 @@ webpackJsonp([35], {
                 R9K_MODE_ENFORCEMENT_FAILED: function() {
                     return Object(y.d)("This Room is in R9K mode and your message is not unique enough.", "RoomErrorCodes")
                 },
-                SLOW_MODE_ENFORCEMENT_FAILED: function() {
+                RATE_LIMIT_FAILED: function() {
                     return Object(y.d)("Your message was not sent because you are sending messages too quickly.", "RoomErrorCodes")
                 },
                 SPAM_ENFORCEMENT_FAILED: function() {
@@ -11802,7 +11815,7 @@ webpackJsonp([35], {
             ge = n("ass3"),
             fe = n("uekS");
         ! function(e) {
-            e[e.RoomMessageEvent = 0] = "RoomMessageEvent", e[e.ModerationEvent = 1] = "ModerationEvent", e[e.SystemMessageEvent = 2] = "SystemMessageEvent"
+            e[e.RoomMessageEvent = 0] = "RoomMessageEvent", e[e.ModerationEvent = 1] = "ModerationEvent", e[e.SystemMessageEvent = 2] = "SystemMessageEvent", e[e.DeletedMessageEvent = 3] = "DeletedMessageEvent"
         }(me || (me = {}));
         var ve, be = n("X7fs"),
             ke = n("INp2"),
@@ -11913,6 +11926,13 @@ webpackJsonp([35], {
                                     }), r._isDirty = !0, r.onBufferUpdate())
                                 }
                                 return null;
+                            case me.DeletedMessageEvent:
+                                var a = r.buffer.findIndex(function(t) {
+                                    return t.kind === me.RoomMessageEvent && t.id === e.id
+                                });
+                                return a && (r.buffer[a] = v.__assign({}, r.buffer[a], {
+                                    deletedAt: (new Date).toISOString()
+                                }), r._isDirty = !0, r.onBufferUpdate()), null;
                             case me.RoomMessageEvent:
                                 return e.sender.id && r.blockedUsers.has(e.sender.id) ? null : e;
                             case me.SystemMessageEvent:
@@ -12031,7 +12051,18 @@ webpackJsonp([35], {
                                     __typename: "RoomMessageEdge"
                                 }
                             }(e);
-                            i.consumeRoomEvent(d(t.node), t.cursor)
+                            switch (e.type) {
+                                case E.PubsubMessageType.ChatRoomMessageCreated:
+                                    i.consumeRoomEvent(d(t.node), t.cursor);
+                                    break;
+                                case E.PubsubMessageType.ChatRoomMessageDeleted:
+                                    i.consumeRoomEvent(function(e) {
+                                        return {
+                                            kind: me.DeletedMessageEvent,
+                                            id: e.id
+                                        }
+                                    }(t.node))
+                            }
                         }
                     }), this.unsubscribeChatRoomsChanneTopic = y.j.subscribe({
                         topic: Object(N.d)(this.channelID),
@@ -15156,15 +15187,19 @@ webpackJsonp([35], {
                         activeRoomID: ni,
                         activeRoomName: ni,
                         hasSeenGeneralOnboarding: Zn(Pn.ViewRooms),
-                        hasSeenMentionOnboarding: Zn(Pn.MentionPill),
                         isActiveRoomDeleted: !1,
                         showRoomPicker: !1
-                    }, t.isShowingMentionOnboarding = !1, t.renderOnboardingBalloon = function() {
-                        return !t.props.data || t.props.data.loading || t.state.showRoomPicker || t.state.hasSeenGeneralOnboarding ? null : b.createElement(L.p, {
+                    }, t.renderOnboardingBalloon = function() {
+                        if (t.state.showRoomPicker || t.state.hasSeenGeneralOnboarding) return null;
+                        if (!t.props.data || t.props.data.loading) return null;
+                        var e = t.props.sessionUser && t.props.sessionUser.id === t.props.channelID;
+                        return 0 !== t.props.data.user.channelRooms.length || e ? b.createElement(L.p, {
                             direction: L.q.BottomRight,
                             offsetX: "1rem",
                             show: !0,
                             size: L.r.Small
+                        }, b.createElement(_.a, {
+                            onClickOut: t.dismissGeneralOnboarding
                         }, b.createElement(L._1, {
                             padding: 3,
                             textAlign: L._35.Center
@@ -15179,9 +15214,9 @@ webpackJsonp([35], {
                             color: L.I.Alt2
                         }, Object(y.d)("Rooms help you keep the conversation going", "RoomSelector"))), b.createElement(L.u, {
                             onClick: t.headerClick
-                        }, Object(y.d)("View rooms", "RoomSelector"))))
+                        }, Object(y.d)("View rooms", "RoomSelector"))))) : null
                     }, t.headerClick = function() {
-                        t.dismissGeneralOnboarding(), t.isShowingMentionOnboarding && t.dismissMentionOnboarding(), t.setState(function(e) {
+                        t.dismissGeneralOnboarding(), t.setState(function(e) {
                             return {
                                 showRoomPicker: !e.showRoomPicker
                             }
@@ -15203,10 +15238,6 @@ webpackJsonp([35], {
                         t.setState({
                             hasSeenGeneralOnboarding: !0
                         }), Xn(Pn.ViewRooms)
-                    }, t.dismissMentionOnboarding = function() {
-                        t.setState({
-                            hasSeenMentionOnboarding: !0
-                        }), Xn(Pn.MentionPill)
                     }, t.closeRoomPicker = function() {
                         t.setState({
                             showRoomPicker: !1
@@ -15331,20 +15362,9 @@ webpackJsonp([35], {
                         n = t.data;
                     if (!t.channelID || n.loading || n.error || !n.user.self || !n.user.self.isChannelMember) return null;
                     var i = n.user.channelRooms.reduce(function(t, n) {
-                            return n.self.isMuted || n.id === e.state.activeRoomID ? t : t + n.self.unreadMentionCount
-                        }, 0),
-                        a = null;
-                    return i > 0 && !this.state.showRoomPicker && !this.state.hasSeenMentionOnboarding && this.state.hasSeenGeneralOnboarding ? (a = b.createElement(L.p, {
-                        direction: L.q.BottomRight,
-                        show: !0
-                    }, b.createElement("button", {
-                        className: "room-selector__mention-onboarding",
-                        onClick: this.dismissMentionOnboarding
-                    }, b.createElement(L._1, {
-                        padding: .5
-                    }, b.createElement(L._34, {
-                        color: L.I.Alt2
-                    }, Object(y.d)("New @mention!", "RoomSelector"))))), this.isShowingMentionOnboarding = !0) : (a = null, this.isShowingMentionOnboarding = !1), i > 0 ? b.createElement(L._1, {
+                        return n.self.isMuted || n.id === e.state.activeRoomID ? t : t + n.self.unreadMentionCount
+                    }, 0);
+                    return i > 0 ? b.createElement(L._1, {
                         display: L.M.InlineBlock,
                         padding: {
                             left: .5
@@ -15353,7 +15373,7 @@ webpackJsonp([35], {
                     }, b.createElement(L._5, {
                         label: i.toString(),
                         type: L._6.Alert
-                    }), a) : void 0
+                    })) : void 0
                 }, t.prototype.renderHiddenState = function() {
                     return !this.props.isHidden || this.props.isPopout ? null : b.createElement(L._24, {
                         alignItems: L.c.Center,
@@ -15778,6 +15798,7 @@ webpackJsonp([35], {
                     key: "username-display",
                     className: "chat-author__display-name",
                     "data-a-target": "chat-message-username",
+                    "data-a-user": e.userData.userLogin,
                     "data-test-selector": "message-username",
                     style: {
                         color: e.userData.color
@@ -15837,7 +15858,8 @@ webpackJsonp([35], {
                 return d.__extends(t, e), t.prototype.render = function() {
                     var e = Object(u.d)("Whisper", "WhisperButton");
                     return c.createElement(p.u, {
-                        onClick: this.handleClick
+                        onClick: this.handleClick,
+                        "data-a-target": "usercard-whisper-button"
                     }, e)
                 }, t = d.__decorate([Object(m.d)("WhisperButton", {
                     autoReportInteractive: !0
@@ -24535,7 +24557,7 @@ webpackJsonp([35], {
                     var e = this;
                     if (!this.props.friendsData && this.props.data && (this.props.data.loading || this.props.data.error)) return !1;
                     return !!(this.props.friendsData || this.props.data).currentUser.friends.edges.find(function(t) {
-                        return t.node.id === e.props.channelID
+                        return !!t.node && t.node.id === e.props.channelID
                     })
                 }, t = l.__decorate([Object(p.d)("FriendButton"), Object(u.a)(f, {
                     skip: function(e) {
@@ -34758,11 +34780,11 @@ webpackJsonp([35], {
         function a(e, t, n) {
             var a = [],
                 r = 0,
-                u = Object(d.d)(e);
+                m = Object(d.d)(e);
             if (t.forEach(function(t) {
                     var n = t.from,
                         s = t.to,
-                        m = {
+                        p = {
                             themed: !1,
                             sources: {
                                 "1x": Object(d.e)("" + t.emoteID, 1),
@@ -34771,31 +34793,33 @@ webpackJsonp([35], {
                             }
                         };
                     if (n > r) {
-                        var p = u ? u.slice(r, n).join("") : e.slice(r, n);
+                        var h = m ? m.slice(r, n).join("") : e.slice(r, n);
                         a.push(o.createElement("span", {
                             key: "str-" + r,
+                            "data-a-target": u,
                             className: "thread-message__message--part"
-                        }, i(p)))
+                        }, i(h)))
                     }
-                    var h = u ? u.slice(n, s + 1).join("") : e.slice(n, s + 1);
+                    var g = m ? m.slice(n, s + 1).join("") : e.slice(n, s + 1);
                     a.push(o.createElement(l.a, {
                         key: "emote-" + r,
                         tooltipDirection: c._44.Top,
                         className: "thread-message__message--emote",
-                        srcSet: m,
+                        srcSet: p,
                         srcKey: "1x",
-                        alt: h
+                        alt: g
                     })), r = s + 1
                 }), r < e.length) {
-                var m = u ? u.slice(r, u.length).join("") : e.slice(r, e.length);
+                var p = m ? m.slice(r, m.length).join("") : e.slice(r, e.length);
                 a.push(o.createElement("span", {
                     key: "str-" + r,
+                    "data-a-target": u,
                     className: "thread-message__message--part"
-                }, i(m)))
+                }, i(p)))
             }
             if (n) {
-                var p = Object(s.d)("edited", "ThreadMessage"),
-                    h = Object(s.d)("{timestamp, date, full} {timestamp, time, long}", {
+                var h = Object(s.d)("edited", "ThreadMessage"),
+                    g = Object(s.d)("{timestamp, date, full} {timestamp, time, long}", {
                         timestamp: new Date(n)
                     }, "ThreadMessage");
                 a.push(o.createElement(c.V, {
@@ -34806,9 +34830,9 @@ webpackJsonp([35], {
                 }, o.createElement(c._34, {
                     type: c._39.Span,
                     className: "thread-message__message--edited",
-                    title: h,
+                    title: g,
                     color: c.I.Alt2
-                }, "(" + p + ")")))
+                }, "(" + h + ")")))
             }
             return a
         }
@@ -34821,17 +34845,18 @@ webpackJsonp([35], {
         }(r || (r = {}));
         var c = n("Odds");
         t.a = a, n.d(t, "f", function() {
-            return u
-        }), n.d(t, "e", function() {
             return m
-        }), n.d(t, "d", function() {
+        }), n.d(t, "e", function() {
             return p
-        }), n.d(t, "c", function() {
+        }), n.d(t, "d", function() {
             return h
-        }), n.d(t, "b", function() {
+        }), n.d(t, "c", function() {
             return g
+        }), n.d(t, "b", function() {
+            return f
         });
-        var u = function(e) {
+        var u = "whisper-message-part",
+            m = function(e) {
                 var t = a(e.content, e.emotes, e.editedAt);
                 if (e.deletedAt) return null;
                 var n = e.from && e.from.chatColor || "",
@@ -34846,12 +34871,13 @@ webpackJsonp([35], {
                     }
                 }, o.createElement("span", {
                     className: "thread-message__message--user-name",
+                    "data-a-target": "whisper-message-name",
                     style: {
                         color: n
                     }
                 }, i), o.createElement("span", null, ": "), t)
             },
-            m = function() {
+            p = function() {
                 return o.createElement(c._1, {
                     padding: {
                         y: .5,
@@ -34859,7 +34885,7 @@ webpackJsonp([35], {
                     }
                 }, Object(s.d)("Please don't share passwords or personal information.", "whispers"))
             },
-            p = function(e) {
+            h = function(e) {
                 var t = new Date,
                     n = Object(s.d)("Today, {timestamp, time, medium}", {
                         timestamp: e.timestamp
@@ -34875,7 +34901,7 @@ webpackJsonp([35], {
                     textAlign: c._35.Center
                 }, "" + a)
             },
-            h = function(e) {
+            g = function(e) {
                 return o.createElement(c._1, {
                     padding: {
                         y: .5,
@@ -34886,7 +34912,7 @@ webpackJsonp([35], {
                     color: c.I.Alt2
                 }, e.content))
             },
-            g = function() {
+            f = function() {
                 return o.createElement(c._1, {
                     textAlign: c._35.Center,
                     padding: {
@@ -42225,4 +42251,4 @@ webpackJsonp([35], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.popout-chat-68f21eb8144b46f521be8d2fc35a6e40.js.map
+//# sourceMappingURL=pages.popout-chat-ae89bb8f133c841d47a68fe5a9d7ee0e.js.map

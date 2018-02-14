@@ -4559,17 +4559,16 @@ webpackJsonp([34, 79], {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderExpandArrow = function() {
                         return f.createElement(W._1, {
-                            fullWidth: !0,
+                            position: W._8.Absolute,
+                            attachRight: !0,
+                            attachTop: !0,
+                            className: "bits-leaderboard-expanded__arrow",
                             display: W.M.Flex,
-                            alignItems: W.c.Stretch,
-                            flexDirection: W.O.Column,
-                            margin: {
-                                top: 1
-                            }
+                            alignItems: W.c.Stretch
                         }, f.createElement(W.u, {
                             icon: W._15.AngleUp,
-                            onClick: t.props.toggleExpand,
-                            size: W.x.Small
+                            size: W.x.Small,
+                            onClick: t.props.toggleExpand
                         }))
                     }, t
                 }
@@ -5066,9 +5065,13 @@ webpackJsonp([34, 79], {
                     mutator: function(t, n) {
                         if (n.user && null !== n.user.cheer && null !== n.user.cheer.leaderboard) {
                             D.j.debug("Received pubsub update from leaderboard");
-                            for (var a = t.top.map(function(e) {
-                                    return Object(L.b)(e)
-                                }), i = 0; i < n.user.cheer.leaderboard.entries.edges.length; i++) {
+                            var a = t.top.map(function(e) {
+                                return Object(L.b)(e)
+                            });
+                            0 !== a.length && 0 !== n.user.cheer.leaderboard.entries.edges.length && a.length === n.user.cheer.leaderboard.entries.edges.length || setTimeout(function() {
+                                e && e.data && e.data.refetch && e.data.refetch()
+                            });
+                            for (var i = 0; i < n.user.cheer.leaderboard.entries.edges.length; i++) {
                                 if (n.user.cheer.leaderboard.entries.edges[i].node.score !== a[i].node.score) {
                                     setTimeout(function() {
                                         e && e.data && e.data.refetch && e.data.refetch()
@@ -7335,6 +7338,7 @@ webpackJsonp([34, 79], {
                         containerRef: this.setChatListElement
                     }), f.createElement(W._1, {
                         className: "chat-room__viewer-card",
+                        "data-a-target": "chat-user-card",
                         position: W._8.Absolute
                     }, f.createElement(za.a, {
                         isEmbedded: this.props.isEmbedded,
@@ -8562,6 +8566,7 @@ webpackJsonp([34, 79], {
                     key: "username-display",
                     className: "chat-author__display-name",
                     "data-a-target": "chat-message-username",
+                    "data-a-user": e.userData.userLogin,
                     "data-test-selector": "message-username",
                     style: {
                         color: e.userData.color
@@ -28909,4 +28914,4 @@ webpackJsonp([34, 79], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-videos-caff132698dcfefc989396a8a5604447.js.map
+//# sourceMappingURL=pages.channel-videos-f24c6c98dd4591d6cfa8a4fde4164948.js.map

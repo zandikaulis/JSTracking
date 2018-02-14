@@ -1521,6 +1521,7 @@ webpackJsonp([37, 79], {
                     key: "username-display",
                     className: "chat-author__display-name",
                     "data-a-target": "chat-message-username",
+                    "data-a-user": e.userData.userLogin,
                     "data-test-selector": "message-username",
                     style: {
                         color: e.userData.color
@@ -19920,4 +19921,4 @@ webpackJsonp([37, 79], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.video-watch-19a849ce8632dc21e4e9a83bdad1cc96.js.map
+//# sourceMappingURL=pages.video-watch-a8f0a7618d41332640c68ba6582025ad.js.map
