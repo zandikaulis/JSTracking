@@ -1,4 +1,4 @@
-webpackJsonp([59], {
+webpackJsonp([60], {
     "9u8h": function(e, t, i) {
         "use strict";
         i.d(t, "a", function() {
@@ -275,26 +275,26 @@ webpackJsonp([59], {
                 }, t.prototype.isVisible = function() {
                     return this.state.verifyEmailBarState !== S.INITIAL && this.state.verifyEmailBarState !== S.DISMISSED
                 }, t.prototype.renderClickToVerify = function() {
-                    return a.createElement(v._1, {
+                    return a.createElement(v._2, {
                         fullWidth: !0,
-                        position: v._8.Relative
-                    }, a.createElement(v._24, {
+                        position: v._9.Relative
+                    }, a.createElement(v._25, {
                         className: "verify-email-banner",
-                        display: v.M.Flex,
-                        justifyContent: v._0.Center,
+                        display: v.N.Flex,
+                        justifyContent: v._1.Center,
                         alignItems: v.c.Center
-                    }, a.createElement(v.V, {
+                    }, a.createElement(v.W, {
                         fullHeight: !0,
                         fullWidth: !0
                     }, a.createElement("button", {
                         onClick: this.onClickToVerify,
                         "data-test-selector": b
-                    }, a.createElement(v._34, {
+                    }, a.createElement(v._35, {
                         color: v.I.Alt,
-                        fontSize: v.Q.Size5
-                    }, Object(u.d)("Click here to verify your email", "VerifyEmail")))), a.createElement(v._24, {
+                        fontSize: v.R.Size5
+                    }, Object(u.d)("Click here to verify your email", "VerifyEmail")))), a.createElement(v._25, {
                         className: "verify-email-banner__dismiss",
-                        position: v._8.Absolute,
+                        position: v._9.Absolute,
                         attachRight: !0,
                         margin: {
                             right: 2
@@ -305,28 +305,28 @@ webpackJsonp([59], {
                         "data-test-selector": T
                     }, Object(u.d)("Not Now", "VerifyEmail")))))
                 }, t.prototype.renderEmailSent = function() {
-                    return a.createElement(v._24, {
+                    return a.createElement(v._25, {
                         className: "verify-email-banner verify-email-banner--success",
-                        display: v.M.Flex,
-                        justifyContent: v._0.Center,
+                        display: v.N.Flex,
+                        justifyContent: v._1.Center,
                         alignItems: v.c.Center
-                    }, a.createElement(v._1, {
+                    }, a.createElement(v._2, {
                         className: "verify-email-banner__body"
-                    }, a.createElement(v._34, {
-                        fontSize: v.Q.Size5
+                    }, a.createElement(v._35, {
+                        fontSize: v.R.Size5
                     }, Object(u.d)("Verification email sent to {email}", {
                         email: this.props.data.currentUser.email
                     }, "VerifyEmail"))))
                 }, t.prototype.renderErrorSending = function() {
-                    return a.createElement(v._24, {
+                    return a.createElement(v._25, {
                         className: "verify-email-banner verify-email-banner--error",
-                        display: v.M.Flex,
-                        justifyContent: v._0.Center,
+                        display: v.N.Flex,
+                        justifyContent: v._1.Center,
                         alignItems: v.c.Center
-                    }, a.createElement(v._1, {
+                    }, a.createElement(v._2, {
                         className: "verify-email-banner__body"
-                    }, a.createElement(v._34, {
-                        fontSize: v.Q.Size5
+                    }, a.createElement(v._35, {
+                        fontSize: v.R.Size5
                     }, Object(u.d)("Unable to send an email to {email}. Please try again later.", {
                         email: this.props.data.currentUser.email
                     }, "VerifyEmail"))))
@@ -454,4 +454,4 @@ webpackJsonp([59], {
     },
     yY1M: function(e, t) {}
 });
-//# sourceMappingURL=features.verify-email.components.verify-email-bar.component-c4a16485d76c34c5b53dd9fb3ae5c47c.js.map
+//# sourceMappingURL=features.verify-email.components.verify-email-bar.component-2769106537d23ce6bcd7b717b74c6d22.js.map
