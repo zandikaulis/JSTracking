@@ -20,7 +20,7 @@ window.SiteOptions = {
     "community_theatres": ".",
     "creative_promoted_communities": "animation",
     "creative_banned_tags": "n3devtest,doonest,cosmos,doonbot,bobross,misterrogers,jwahbatest1,twitchpresents,shoutfactorytv,food",
-    "creative_fpage_darklaunch": 0.7,
+    "creative_fpage_darklaunch": 0.8,
     "channel_feed_overrides": "food",
     "authentic_biscuit": false,
     "enable_rollbar_js": false,
@@ -3911,7 +3911,7 @@ window.SiteOptions = {
         },
         "be1eb677-a362-4f12-ae40-cce0ef58e545": {
             "name": "android_wateb",
-            "v": 2957,
+            "v": 3077,
             "t": 1,
             "groups": [{
                 "weight": 100,
