@@ -58,7 +58,7 @@ window.__twilightSettings = {
     "spade_url": "https://video-edge-716fa8.sjc01.hls.ttvnw.net/v1/playlist/CgCVAnSgnLYHTicSXK523UyXxC2I-xDoYMxL69Zu6JXOkAblshFmfkm-T4TiE9yJMPbFoKPE5-OyrJD0hukgc_UXlx3WGPZkLSL2DBYgrhUpCAd_a-G0CC6dAlIW_0BxU11UHQOfqVreEMttuDS5boh_2VPtTEWhGDwQ9riJzgLkMTWHZwO2sHRbbVpuw4vg5Z3Fc3AUSxCdBnWeOzudWvphjdEnqHL-KNTAFBm4cun5SXkOwOW1yVilXth_4-aGMGrccI14dc9DUZYCCON82wfkcANu15qLUY8spq7w8E7x1Xt6YNxVFzlJDQ7C1yvZzzh6I6oNColVGtzDBAPttaMaIAOVQtFmBBnupcggMzUSSkeno4IMPExXnC_DNW_RhhVb9ICDEGfY2kExJF5F7Isz41e_zVhNi54V__jOsBGL1pNevtlQViMnQwvW3LIpXnZv.m3u8",
     "streamer_trailers_start_date": "2017-10-12T23:00:25.75536206Z",
     "tvapp_ps4_ads_enabled": true,
-    "tvapp_ps4_channel_blacklist": [133497623],
+    "tvapp_ps4_channel_blacklist": [133497623, 157092761],
     "tvapp_ps4_preroll_duration": 30,
     "tvapp_ps4_preroll_frequency": 900,
     "tvapp_xbox_ads_enabled": true,
