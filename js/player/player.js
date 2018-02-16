@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".3dfbdaafa3f571e664cd.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".1a4b9b386f176325acc5.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -27113,7 +27113,7 @@
                     key: "getClipsButtonComponent",
                     value: function() {
                         function e() {
-                            n("control" !== t)
+                            n("variant2" === t)
                         }
                         var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "control",
                             n = this.onClip;
@@ -28705,7 +28705,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.02.15-220129+38fd7b9c638b5a149baeba417da551e8380f149b",
+                    app_version: "2018.02.16-173932+03d5c3d34a0d5b88c03a0a32d7a68e340a336c50",
                     flash_version: r,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -34293,7 +34293,7 @@
                 }]), e
             }(),
             Eo = n(100),
-            So = "//video-edge-ffe8f9.sjc01.hls.ttvnw.net/v1/playlist/Cn6ef_ALonPvxjZNo7Taz9xjPaopN2VpuK6hy4JKEhiezN5oGmTHVob5CclXP81nXt-ox5kZHU7fB-sgE6xekpt7KeUCXg7hyXgHTCZVgVMu11AoqBpP2SfUuhO1_-C5IolYSR8o_ld-XnXi51ipkhW1xY39W3jMLA5y3Lm3TnseKxb3fsJRH8wM-bzkoVzA1CRWErknc6Cts_w2VbOwh1FoeSOK9GaSQpZ2g-S8z0pKuOik5JUiOPjH5jZHDoKtzwo62oKh-ELXjVAajhhvI10WkwJZwGxXvuKLjE1xj8OILxITDE-mjCMI9dQ76gHgPwhTNsbukLUMFrseZ85zvuLDnLotJ7WaETke2tx6RppWbqCmSgN5arLo-7GVm_1t7TPY3NSDO0JmXxqDYNKUMtSnqvRWnrjYMQszaBjlZVJsPHhVzp1xq-j5YWrGlrgeSVUD3pmvHMnafQir9budg.m3u8",
+            So = "//video-edge-716fa8.sjc01.hls.ttvnw.net/v1/playlist/CgCVAnSgnLYHTicSXK523UyXxC2I-xDoYMxL69Zu6JXOkAblshFmfkm-T4TiE9yJMPbFoKPE5-OyrJD0hukgc_UXlx3WGPZkLSL2DBYgrhUpCAd_a-G0CC6dAlIW_0BxU11UHQOfqVreEMttuDS5boh_2VPtTEWhGDwQ9riJzgLkMTWHZwO2sHRbbVpuw4vg5Z3Fc3AUSxCdBnWeOzudWvphjdEnqHL-KNTAFBm4cun5SXkOwOW1yVilXth_4-aGMGrccI14dc9DUZYCCON82wfkcANu15qLUY8spq7w8E7x1Xt6YNxVFzlJDQ7C1yvZzzh6I6oNColVGtzDBAPttaMaIAOVQtFmBBnupcggMzUSSkeno4IMPExXnC_DNW_RhhVb9ICDEGfY2kExJF5F7Isz41e_zVhNi54V__jOsBGL1pNevtlQViMnQwvW3LIpXnZv.m3u8",
             Po = n(45),
             Co = n(248),
             Oo = n(131),
