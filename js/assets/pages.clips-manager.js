@@ -398,7 +398,7 @@ webpackJsonp([72], {
             U = n("NY9D"),
             F = n("yDzg"),
             B = n("bhVC"),
-            V = n("0i+s"),
+            V = n("AoO8"),
             H = n("Odds"),
             G = [{
                 type: B.b.Twitter,
@@ -3495,4 +3495,4 @@ webpackJsonp([72], {
         }(n("kUjr").definitions)), e.exports = a
     }
 });
-//# sourceMappingURL=pages.clips-manager-7b220314c621417537681f60e6e57360.js.map
+//# sourceMappingURL=pages.clips-manager-65490cb0dd0b23704d3787a39b49e45d.js.map

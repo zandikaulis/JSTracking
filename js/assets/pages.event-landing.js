@@ -4473,7 +4473,7 @@ webpackJsonp([48], {
                             status: this.props.premiere ? this.props.premiere.status : ""
                         },
                         eventType: this.props.eventType
-                    }) === S.LIVE && (e = p.createElement(F, {
+                    }) !== S.LIVE || this.props.noRedirect || (e = p.createElement(F, {
                         id: this.props.id,
                         login: this.props.channel.login,
                         eventType: this.props.eventType,
@@ -5495,6 +5495,7 @@ webpackJsonp([48], {
                         self: t.self,
                         eventType: t.eventType,
                         premiere: t.premiere,
+                        noRedirect: this.props.location.state && this.props.location.state.noRedirect,
                         goToVideo: this.goToVideo
                     })))) : this.errorPage()
                 }, t.prototype.errorPage = function() {
@@ -9083,7 +9084,7 @@ webpackJsonp([48], {
                                                 }), [2];
                                             case 4:
                                                 return this.unsubscribe = d.j.subscribe({
-                                                    topic: Object(p.g)(this.props.userID),
+                                                    topic: Object(p.h)(this.props.userID),
                                                     success: function() {
                                                         try {
                                                             Object(h.c)(n, o.currentImage)
@@ -10777,7 +10778,7 @@ webpackJsonp([48], {
                                         }), [2];
                                     case 4:
                                         return this.unsubscribe = c.j.subscribe({
-                                            topic: Object(g.g)(this.props.userID),
+                                            topic: Object(g.h)(this.props.userID),
                                             success: function() {
                                                 try {
                                                     Object(_.c)(n, r.currentImage)
@@ -11214,4 +11215,4 @@ webpackJsonp([48], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.event-landing-8fc1986d9a67b453b6a7c4cf5b27aa57.js.map
+//# sourceMappingURL=pages.event-landing-95874b21b8517ff0c5b57ede68a95083.js.map

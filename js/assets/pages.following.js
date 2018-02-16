@@ -876,19 +876,6 @@ webpackJsonp([50], {
             return C
         })
     },
-    "3yQz": function(e, t, n) {
-        "use strict";
-        n.d(t, "b", function() {
-            return a
-        }), n.d(t, "a", function() {
-            return r
-        });
-        var i, a = "VIEWS",
-            r = "TIME";
-        ! function(e) {
-            e.Popular = "VIEWS", e.Newest = "TIME"
-        }(i || (i = {}))
-    },
     4194: function(e, t) {},
     "4az8": function(e, t) {},
     "5G5w": function(e, t, n) {
@@ -3369,7 +3356,7 @@ webpackJsonp([50], {
                         },
                         enabled: function() {
                             return J.a.wrap(function() {
-                                return n.e(83).then(n.bind(null, "IwGL"))
+                                return n.e(84).then(n.bind(null, "IwGL"))
                             }, "LatestVideosFromFollowedCarousel")(e)
                         }
                     },
@@ -3894,69 +3881,6 @@ webpackJsonp([50], {
         n.d(t, "FollowingRootPage", function() {
             return Ne
         })
-    },
-    JpYe: function(e, t, n) {
-        "use strict";
-
-        function i(e) {
-            return r(s.parse(e.location.search).sort || "")
-        }
-
-        function a(e) {
-            switch (e.match.params.filter) {
-                case d.a.Archive.toLowerCase():
-                    return d.a.Archive;
-                case d.a.Highlight.toLowerCase():
-                    return d.a.Highlight;
-                case d.a.Upload.toLowerCase():
-                    return d.a.Upload;
-                case d.a.PastPremiere.toLowerCase():
-                    return d.a.PastPremiere;
-                default:
-                    return
-            }
-        }
-
-        function r(e) {
-            switch (e.toUpperCase()) {
-                case c.b:
-                    return c.b;
-                case c.a:
-                    return c.a;
-                default:
-                    return null
-            }
-        }
-        t.d = function(e, t, n, r) {
-            var s = r || i(t),
-                d = "";
-            s && (d = "?sort=" + function(e) {
-                switch (e) {
-                    case c.b:
-                        return o.Popular;
-                    case c.a:
-                        return o.Newest;
-                    default:
-                        var t = e;
-                        return t
-                }
-            }(s));
-            var m = n ? n.toLowerCase() : function(e) {
-                var t = a(e);
-                return t ? t.toLowerCase() : "all"
-            }(t);
-            l.n.history.push(e + "/" + m + d)
-        }, t.c = i, t.b = a, t.a = function(e) {
-            var t = s.parse(e.location.search);
-            return e.match.params.collectionID || t.collection || ""
-        }, t.e = r;
-        var o, s = n("OAwv"),
-            l = (n.n(s), n("6sO2")),
-            d = n("6WAQ"),
-            c = n("3yQz");
-        ! function(e) {
-            e.Popular = "views", e.Newest = "time"
-        }(o || (o = {}))
     },
     "LEV+": function(e, t) {},
     LVbz: function(e, t) {
@@ -6124,7 +6048,7 @@ webpackJsonp([50], {
                         i = Object(o.d)("Past Broadcasts", "VideoFilter"),
                         s = Object(o.d)("Highlights", "VideoFilter"),
                         p = Object(o.d)("Uploads", "VideoFilter"),
-                        g = this.props.selectedSort && Object(c.e)(this.props.selectedSort) || m.a;
+                        g = this.props.selectedSort && Object(c.f)(this.props.selectedSort) || m.a;
                     switch (this.props.broadcastType) {
                         case d.a.PastPremiere:
                             e = n;
@@ -9273,4 +9197,4 @@ webpackJsonp([50], {
     },
     "zH/G": function(e, t) {}
 });
-//# sourceMappingURL=pages.following-0e8391ae54233050e7ab5f358167dc28.js.map
+//# sourceMappingURL=pages.following-4385d9651e6fa57f866b40429ea8ba7f.js.map

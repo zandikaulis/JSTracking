@@ -1,12 +1,5 @@
-webpackJsonp([80], {
+webpackJsonp([81], {
     "/brc": function(e, t) {},
-    "1opg": function(e, t, n) {
-        "use strict";
-        n.d(t, "a", function() {
-            return i
-        });
-        var i = "https://static-cdn.jtvnw.net/ttv-playlists-thumbnails-prod/missing-video-thumb-320x180.png"
-    },
     "4o7v": function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
@@ -132,26 +125,6 @@ webpackJsonp([80], {
                                 },
                                 arguments: [],
                                 directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "owner"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "login"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }]
-                                }
                             }, {
                                 kind: "Field",
                                 name: {
@@ -381,26 +354,6 @@ webpackJsonp([80], {
                                                                 },
                                                                 arguments: [],
                                                                 directives: []
-                                                            }, {
-                                                                kind: "Field",
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "owner"
-                                                                },
-                                                                arguments: [],
-                                                                directives: [],
-                                                                selectionSet: {
-                                                                    kind: "SelectionSet",
-                                                                    selections: [{
-                                                                        kind: "Field",
-                                                                        name: {
-                                                                            kind: "Name",
-                                                                            value: "login"
-                                                                        },
-                                                                        arguments: [],
-                                                                        directives: []
-                                                                    }]
-                                                                }
                                                             }]
                                                         }
                                                     }]
@@ -416,11 +369,11 @@ webpackJsonp([80], {
             }],
             loc: {
                 start: 0,
-                end: 440
+                end: 408
             }
         };
         n.loc.source = {
-            body: "query CollectionManager_EditCollection($collectionID: ID! $after: Cursor) {\ncollection(id: $collectionID) {\nid\nlengthSeconds\nowner {\nlogin\n}\ntitle\nviewCount\nupdatedAt\nthumbnailURL(width: 320 height: 180)\nitems(first: 15 after: $after) {\ntotalCount\npageInfo {\nhasNextPage\n}\nedges {\ncursor\nnode {\n... on Video {\nid\nbroadcastType\ntitle\nlengthSeconds\npreviewThumbnailURL(width: 240 height: 135)\npublishedAt\nviewCount\nowner {\nlogin\n}\n}\n}\n}\n}\n}\n}",
+            body: "query CollectionManager_EditCollection($collectionID: ID! $after: Cursor) {\ncollection(id: $collectionID) {\nid\nlengthSeconds\ntitle\nviewCount\nupdatedAt\nthumbnailURL(width: 320 height: 180)\nitems(first: 15 after: $after) {\ntotalCount\npageInfo {\nhasNextPage\n}\nedges {\ncursor\nnode {\n... on Video {\nid\nbroadcastType\ntitle\nlengthSeconds\npreviewThumbnailURL(width: 240 height: 135)\npublishedAt\nviewCount\n}\n}\n}\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -444,9 +397,10 @@ webpackJsonp([80], {
             u = n("vH/s"),
             m = n("CSlQ"),
             p = n("PQ4i"),
-            g = n("1opg"),
+            g = n("kk4f"),
+            h = n("jcM9"),
             v = n("Odds"),
-            h = function(e) {
+            k = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -467,9 +421,12 @@ webpackJsonp([80], {
                         color: v.I.Alt,
                         type: v._40.H6,
                         bold: !0
-                    }, Object(r.d)("Collection Thumbnail", "CollectionEditorInfoCard"))), a.createElement(v.K, {
-                        src: this.props.collection.thumbnailURL || g.a,
-                        alt: this.props.collection.title
+                    }, Object(r.d)("Collection Thumbnail", "CollectionEditorInfoCard"))), a.createElement(g.a, {
+                        alt: this.props.collection.title,
+                        sizes: [{
+                            size: "320px"
+                        }],
+                        src: this.props.collection.thumbnailURL
                     })), a.createElement(v._2, {
                         display: v.N.Flex,
                         flexDirection: v.P.Column,
@@ -502,34 +459,43 @@ webpackJsonp([80], {
                         updatedAt: Object(r.c)(new Date(this.props.collection.updatedAt), "long")
                     }, "CollectionEditorInfoCard"))), this.managerMenu()))
                 }, t.prototype.managerMenu = function() {
-                    return a.createElement(v._2, null, a.createElement(v.u, {
+                    return a.createElement(v._2, {
+                        display: v.N.Flex,
+                        flexDirection: v.P.Row
+                    }, a.createElement(v.u, {
                         icon: v._16.Play,
                         type: v.z.Text
                     }, Object(r.d)("Play All", "CollectionEditorInfoCard")), a.createElement(v.u, {
                         icon: v._16.Plus,
                         type: v.z.Text
-                    }, Object(r.d)("Add", "CollectionEditorInfoCard")), a.createElement(v.u, {
-                        icon: v._16.Share,
-                        type: v.z.Text
-                    }, Object(r.d)("Share", "CollectionEditorInfoCard")), a.createElement(v.u, {
+                    }, Object(r.d)("Add", "CollectionEditorInfoCard")), a.createElement(h.a, {
+                        balloonDirection: v.q.BottomCenter,
+                        buttonType: v.z.Text,
+                        content: {
+                            collectionID: this.props.collection.id
+                        },
+                        tracking: {
+                            location: u.PageviewLocation.VideoManagerCollectionEditor
+                        }
+                    }), a.createElement(v.u, {
                         icon: v._16.Trash,
                         type: v.z.Text
                     }, Object(r.d)("Delete", "CollectionEditorInfoCard")))
                 }, t
             }(a.Component),
-            k = n("F8kA"),
-            f = n("mi6k"),
-            E = n("5RjZ"),
-            C = n("KRtN"),
-            _ = n("4o7v"),
-            y = n("PwTO"),
-            b = n("N8CH"),
-            N = n("Z8qZ"),
-            I = (n("dAJe"), {
+            f = n("F8kA"),
+            E = n("mi6k"),
+            C = n("5RjZ"),
+            _ = n("KRtN"),
+            y = n("4o7v"),
+            b = n("PwTO"),
+            N = n("N8CH"),
+            I = n("Z8qZ"),
+            x = (n("dAJe"), {
                 ItemLength: "ItemLength",
                 VideoLink: "VideoLink"
             }),
-            x = function(e) {
+            w = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.subHeader = function(e) {
@@ -555,9 +521,9 @@ webpackJsonp([80], {
                             display: v.N.Flex,
                             alignItems: v.c.Center
                         }, a.createElement(v._24, {
-                            "data-test-selector": I.ItemLength,
+                            "data-test-selector": x.ItemLength,
                             label: Object(r.d)("Length", "CollectionItemCard"),
-                            value: Object(f.a)(e.lengthSeconds),
+                            value: Object(E.a)(e.lengthSeconds),
                             icon: v._16.GlyphLength
                         })), a.createElement(v._2, {
                             padding: {
@@ -567,7 +533,7 @@ webpackJsonp([80], {
                             alignItems: v.c.Center
                         }, a.createElement(v._24, {
                             label: Object(r.d)("Video Type", "CollectionItemCard"),
-                            value: Object(E.a)(e.broadcastType),
+                            value: Object(C.a)(e.broadcastType),
                             icon: v._16.NavVideos
                         })))
                     }, t.reportImageInteractive = function() {
@@ -581,7 +547,7 @@ webpackJsonp([80], {
                         margin: {
                             y: 1
                         }
-                    }, a.createElement(N.a, null, a.createElement(v._25, {
+                    }, a.createElement(I.a, null, a.createElement(v._25, {
                         background: v.m.Alt,
                         display: v.N.Flex,
                         className: "collection-item__drag-handle"
@@ -600,13 +566,13 @@ webpackJsonp([80], {
                         size: v.D.Size16,
                         onLoad: this.reportImageInteractive,
                         onError: this.reportImageInteractive,
-                        src: e.previewThumbnailURL ? e.previewThumbnailURL : g.a,
+                        src: e.previewThumbnailURL ? e.previewThumbnailURL : "https://static-cdn.jtvnw.net/ttv-playlists-thumbnails-prod/missing-video-thumb-320x180.png",
                         alt: e.title
-                    })), a.createElement(b.a, null, a.createElement(v._35, {
+                    })), a.createElement(N.a, null, a.createElement(v._35, {
                         type: v._40.H5,
                         color: v.I.Alt
-                    }, a.createElement(k.a, {
-                        "data-test-selector": I.VideoLink,
+                    }, a.createElement(f.a, {
+                        "data-test-selector": x.VideoLink,
                         to: {
                             pathname: "/videos/" + this.props.collectionItem.id,
                             state: {
@@ -614,11 +580,11 @@ webpackJsonp([80], {
                                 medium: u.PageviewMedium.VideoManagerCollectionEditor
                             }
                         }
-                    }, e.title)), this.subHeader(e)), a.createElement(y.a, null, a.createElement(_.a, {
+                    }, e.title)), this.subHeader(e)), a.createElement(b.a, null, a.createElement(y.a, {
                         value: e.viewCount.toString(),
                         icon: v._16.GlyphViews,
                         label: Object(r.d)("Total videos", "CollectionItemCard")
-                    })), a.createElement(C.a, {
+                    })), a.createElement(_.a, {
                         options: this.collectionMenuOptions(e)
                     })))
                 }, t.prototype.collectionMenuOptions = function(e) {
@@ -631,13 +597,13 @@ webpackJsonp([80], {
                     }]
                 }, t
             }(a.Component),
-            w = Object(o.compose)(Object(m.d)("CollectionItemCard"))(x),
+            O = Object(o.compose)(Object(m.d)("CollectionItemCard"))(w),
             S = n("Dz2i");
         n("/brc");
         ! function(e) {
             e[e.BackButton = 0] = "BackButton"
         }(i || (i = {}));
-        var O = function(e) {
+        var T = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -692,7 +658,7 @@ webpackJsonp([80], {
                     }), a.createElement(v._35, {
                         align: v._50.Middle,
                         bold: !0
-                    }, Object(r.d)("All collections", "CollectionEditorPagePresentation"))))), this.props.data.collection && a.createElement(h, {
+                    }, Object(r.d)("All collections", "CollectionEditorPagePresentation"))))), this.props.data.collection && a.createElement(k, {
                         collection: this.props.data.collection
                     }), e, a.createElement(c.a, {
                         enabled: t,
@@ -703,7 +669,7 @@ webpackJsonp([80], {
                     }, a.createElement(v.u, null, Object(r.d)("Save changes", "CollectionEditorPagePresentation")))))
                 }, t.prototype.renderCollectionItems = function(e) {
                     return e.map(function(e, t) {
-                        return a.createElement(w, {
+                        return a.createElement(O, {
                             key: t,
                             collectionItem: e.node,
                             position: t + 1
@@ -723,13 +689,13 @@ webpackJsonp([80], {
                     return a.createElement("div", null)
                 }, t
             }(a.Component),
-            F = function(e, t) {
+            D = function(e, t) {
                 var n = t.fetchMoreResult;
                 if (!n || !n.collection || !n.collection.items) return e;
                 var i = e.collection && e.collection.items.edges || [];
                 return n.collection.items.edges = i.concat(n.collection.items.edges), n
             },
-            T = Object(o.compose)(Object(o.graphql)(S, {
+            F = Object(o.compose)(Object(o.graphql)(S, {
                 options: function(e) {
                     return {
                         variables: {
@@ -750,7 +716,7 @@ webpackJsonp([80], {
                                     }
                                 }(e.ownProps, e.data),
                                 query: S,
-                                updateQuery: F
+                                updateQuery: D
                             })
                         }
                     })
@@ -767,16 +733,16 @@ webpackJsonp([80], {
                 skip: function(e) {
                     return e.data.loading
                 }
-            }))(O),
+            }))(T),
             P = n("L2R7"),
-            D = function(e) {
+            j = function(e) {
                 return window.location.replace("https://www.twitch.tv/" + encodeURIComponent(e.match.params.creatorLogin) + "/manager/collections/edit/" + e.match.params.collectionID), null
             },
-            j = function(e) {
-                return Object(P.a)() ? a.createElement(T, l.__assign({}, e)) : a.createElement(D, l.__assign({}, e))
+            A = function(e) {
+                return Object(P.a)() ? a.createElement(F, l.__assign({}, e)) : a.createElement(j, l.__assign({}, e))
             };
         n.d(t, "CollectionEditorPage", function() {
-            return j
+            return A
         })
     },
     KRtN: function(e, t, n) {
@@ -928,4 +894,4 @@ webpackJsonp([80], {
     },
     dAJe: function(e, t) {}
 });
-//# sourceMappingURL=pages.video-tools.pages.collection-editor-0803d51ef964b57725077be3b3546b25.js.map
+//# sourceMappingURL=pages.video-tools.pages.collection-editor-42d2c810c4a3af8a0702ae9eb1118e09.js.map

@@ -1,4 +1,4 @@
-webpackJsonp([45], {
+webpackJsonp([46], {
     "+66z": function(e, t) {
         var n = Object.prototype.toString;
         e.exports = function(e) {
@@ -6951,7 +6951,7 @@ webpackJsonp([45], {
                                                 }), [2];
                                             case 4:
                                                 return this.unsubscribe = c.j.subscribe({
-                                                    topic: Object(f.g)(this.props.userID),
+                                                    topic: Object(f.h)(this.props.userID),
                                                     success: function() {
                                                         try {
                                                             Object(m.c)(n, o.currentImage)
@@ -8442,7 +8442,7 @@ webpackJsonp([45], {
                                         }), [2];
                                     case 4:
                                         return this.unsubscribe = u.j.subscribe({
-                                            topic: Object(g.g)(this.props.userID),
+                                            topic: Object(g.h)(this.props.userID),
                                             success: function() {
                                                 try {
                                                     Object(S.c)(n, a.currentImage)
@@ -9019,4 +9019,4 @@ webpackJsonp([45], {
         }
     }
 });
-//# sourceMappingURL=pages.settings-e9b6761aa8362b8a006caa0f98ff90cb.js.map
+//# sourceMappingURL=pages.settings-023e5b9a9836873ce242fb0ee5cc7510.js.map

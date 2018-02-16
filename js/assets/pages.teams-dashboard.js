@@ -2795,7 +2795,7 @@ webpackJsonp([36], {
                     this.status = e.status, this.body = e.body, this.error = e.error, this.requestError = e.requestError, this.request = t
                 }
                 return e.prototype.isSuccess = function() {
-                    return this.status >= 200 && !this.requestError
+                    return this.status >= 200 && this.status < 400 && !this.requestError
                 }, e.prototype.isError = function() {
                     return !this.isSuccess()
                 }, e
@@ -15615,513 +15615,513 @@ webpackJsonp([36], {
         function a(e) {
             switch (e.toUpperCase()) {
                 case "A1":
-                    return Object(m.d)("Anonymous Proxy", "format-country");
+                    return Object(_.d)("Anonymous Proxy", "format-country");
                 case "A2":
-                    return Object(m.d)("Satellite Provider", "format-country");
+                    return Object(_.d)("Satellite Provider", "format-country");
                 case "AD":
-                    return Object(m.d)("Andorra", "format-country");
+                    return Object(_.d)("Andorra", "format-country");
                 case "AE":
-                    return Object(m.d)("United Arab Emirates", "format-country");
+                    return Object(_.d)("United Arab Emirates", "format-country");
                 case "AF":
-                    return Object(m.d)("Afghanistan", "format-country");
+                    return Object(_.d)("Afghanistan", "format-country");
                 case "AG":
-                    return Object(m.d)("Antigua and Barbuda", "format-country");
+                    return Object(_.d)("Antigua and Barbuda", "format-country");
                 case "AI":
-                    return Object(m.d)("Anguilla", "format-country");
+                    return Object(_.d)("Anguilla", "format-country");
                 case "AL":
-                    return Object(m.d)("Albania", "format-country");
+                    return Object(_.d)("Albania", "format-country");
                 case "AM":
-                    return Object(m.d)("Armenia", "format-country");
+                    return Object(_.d)("Armenia", "format-country");
                 case "AO":
-                    return Object(m.d)("Angola", "format-country");
+                    return Object(_.d)("Angola", "format-country");
                 case "AP":
-                    return Object(m.d)("Asia/Pacific Region", "format-country");
+                    return Object(_.d)("Asia/Pacific Region", "format-country");
                 case "AQ":
-                    return Object(m.d)("Antarctica", "format-country");
+                    return Object(_.d)("Antarctica", "format-country");
                 case "AR":
-                    return Object(m.d)("Argentina", "format-country");
+                    return Object(_.d)("Argentina", "format-country");
                 case "AS":
-                    return Object(m.d)("American Samoa", "format-country");
+                    return Object(_.d)("American Samoa", "format-country");
                 case "AT":
-                    return Object(m.d)("Austria", "format-country");
+                    return Object(_.d)("Austria", "format-country");
                 case "AU":
-                    return Object(m.d)("Australia", "format-country");
+                    return Object(_.d)("Australia", "format-country");
                 case "AW":
-                    return Object(m.d)("Aruba", "format-country");
+                    return Object(_.d)("Aruba", "format-country");
                 case "AX":
-                    return Object(m.d)("Aland Islands", "format-country");
+                    return Object(_.d)("Aland Islands", "format-country");
                 case "AZ":
-                    return Object(m.d)("Azerbaijan", "format-country");
+                    return Object(_.d)("Azerbaijan", "format-country");
                 case "BA":
-                    return Object(m.d)("Bosnia and Herzegovina", "format-country");
+                    return Object(_.d)("Bosnia and Herzegovina", "format-country");
                 case "BB":
-                    return Object(m.d)("Barbados", "format-country");
+                    return Object(_.d)("Barbados", "format-country");
                 case "BD":
-                    return Object(m.d)("Bangladesh", "format-country");
+                    return Object(_.d)("Bangladesh", "format-country");
                 case "BE":
-                    return Object(m.d)("Belgium", "format-country");
+                    return Object(_.d)("Belgium", "format-country");
                 case "BF":
-                    return Object(m.d)("Burkina Faso", "format-country");
+                    return Object(_.d)("Burkina Faso", "format-country");
                 case "BG":
-                    return Object(m.d)("Bulgaria", "format-country");
+                    return Object(_.d)("Bulgaria", "format-country");
                 case "BH":
-                    return Object(m.d)("Bahrain", "format-country");
+                    return Object(_.d)("Bahrain", "format-country");
                 case "BI":
-                    return Object(m.d)("Burundi", "format-country");
+                    return Object(_.d)("Burundi", "format-country");
                 case "BJ":
-                    return Object(m.d)("Benin", "format-country");
+                    return Object(_.d)("Benin", "format-country");
                 case "BL":
-                    return Object(m.d)("Saint Bartelemey", "format-country");
+                    return Object(_.d)("Saint Bartelemey", "format-country");
                 case "BM":
-                    return Object(m.d)("Bermuda", "format-country");
+                    return Object(_.d)("Bermuda", "format-country");
                 case "BN":
-                    return Object(m.d)("Brunei", "format-country");
+                    return Object(_.d)("Brunei", "format-country");
                 case "BO":
-                    return Object(m.d)("Bolivia", "format-country");
+                    return Object(_.d)("Bolivia", "format-country");
                 case "BQ":
-                    return Object(m.d)("Bonaire, Saint Eustatius, and Saba", "format-country");
+                    return Object(_.d)("Bonaire, Saint Eustatius, and Saba", "format-country");
                 case "BR":
-                    return Object(m.d)("Brazil", "format-country");
+                    return Object(_.d)("Brazil", "format-country");
                 case "BS":
-                    return Object(m.d)("Bahamas", "format-country");
+                    return Object(_.d)("Bahamas", "format-country");
                 case "BT":
-                    return Object(m.d)("Bhutan", "format-country");
+                    return Object(_.d)("Bhutan", "format-country");
                 case "BV":
-                    return Object(m.d)("Bouvet Island", "format-country");
+                    return Object(_.d)("Bouvet Island", "format-country");
                 case "BW":
-                    return Object(m.d)("Botswana", "format-country");
+                    return Object(_.d)("Botswana", "format-country");
                 case "BY":
-                    return Object(m.d)("Belarus", "format-country");
+                    return Object(_.d)("Belarus", "format-country");
                 case "BZ":
-                    return Object(m.d)("Belize", "format-country");
+                    return Object(_.d)("Belize", "format-country");
                 case "CA":
-                    return Object(m.d)("Canada", "format-country");
+                    return Object(_.d)("Canada", "format-country");
                 case "CC":
-                    return Object(m.d)("Cocos (Keeling) Islands", "format-country");
+                    return Object(_.d)("Cocos (Keeling) Islands", "format-country");
                 case "CD":
-                    return Object(m.d)("Congo, The Democratic Republic of the", "format-country");
+                    return Object(_.d)("Congo, The Democratic Republic of the", "format-country");
                 case "CF":
-                    return Object(m.d)("Central African Republic", "format-country");
+                    return Object(_.d)("Central African Republic", "format-country");
                 case "CG":
-                    return Object(m.d)("Congo", "format-country");
+                    return Object(_.d)("Congo", "format-country");
                 case "CH":
-                    return Object(m.d)("Switzerland", "format-country");
+                    return Object(_.d)("Switzerland", "format-country");
                 case "CI":
-                    return Object(m.d)("Ivory Coast", "format-country");
+                    return Object(_.d)("Ivory Coast", "format-country");
                 case "CK":
-                    return Object(m.d)("Cook Islands", "format-country");
+                    return Object(_.d)("Cook Islands", "format-country");
                 case "CL":
-                    return Object(m.d)("Chile", "format-country");
+                    return Object(_.d)("Chile", "format-country");
                 case "CM":
-                    return Object(m.d)("Cameroon", "format-country");
+                    return Object(_.d)("Cameroon", "format-country");
                 case "CN":
-                    return Object(m.d)("China", "format-country");
+                    return Object(_.d)("China", "format-country");
                 case "CO":
-                    return Object(m.d)("Colombia", "format-country");
+                    return Object(_.d)("Colombia", "format-country");
                 case "CR":
-                    return Object(m.d)("Costa Rica", "format-country");
+                    return Object(_.d)("Costa Rica", "format-country");
                 case "CU":
-                    return Object(m.d)("Cuba", "format-country");
+                    return Object(_.d)("Cuba", "format-country");
                 case "CV":
-                    return Object(m.d)("Cape Verde", "format-country");
+                    return Object(_.d)("Cape Verde", "format-country");
                 case "CW":
-                    return Object(m.d)("Curacao", "format-country");
+                    return Object(_.d)("Curacao", "format-country");
                 case "CX":
-                    return Object(m.d)("Christmas Island", "format-country");
+                    return Object(_.d)("Christmas Island", "format-country");
                 case "CY":
-                    return Object(m.d)("Cyprus", "format-country");
+                    return Object(_.d)("Cyprus", "format-country");
                 case "CZ":
-                    return Object(m.d)("Czech Republic", "format-country");
+                    return Object(_.d)("Czech Republic", "format-country");
                 case "DE":
-                    return Object(m.d)("Germany", "format-country");
+                    return Object(_.d)("Germany", "format-country");
                 case "DJ":
-                    return Object(m.d)("Djibouti", "format-country");
+                    return Object(_.d)("Djibouti", "format-country");
                 case "DK":
-                    return Object(m.d)("Denmark", "format-country");
+                    return Object(_.d)("Denmark", "format-country");
                 case "DM":
-                    return Object(m.d)("Dominica", "format-country");
+                    return Object(_.d)("Dominica", "format-country");
                 case "DO":
-                    return Object(m.d)("Dominican Republic", "format-country");
+                    return Object(_.d)("Dominican Republic", "format-country");
                 case "DZ":
-                    return Object(m.d)("Algeria", "format-country");
+                    return Object(_.d)("Algeria", "format-country");
                 case "EC":
-                    return Object(m.d)("Ecuador", "format-country");
+                    return Object(_.d)("Ecuador", "format-country");
                 case "EE":
-                    return Object(m.d)("Estonia", "format-country");
+                    return Object(_.d)("Estonia", "format-country");
                 case "EG":
-                    return Object(m.d)("Egypt", "format-country");
+                    return Object(_.d)("Egypt", "format-country");
                 case "EH":
-                    return Object(m.d)("Western Sahara", "format-country");
+                    return Object(_.d)("Western Sahara", "format-country");
                 case "ER":
-                    return Object(m.d)("Eritrea", "format-country");
+                    return Object(_.d)("Eritrea", "format-country");
                 case "ES":
-                    return Object(m.d)("Spain", "format-country");
+                    return Object(_.d)("Spain", "format-country");
                 case "ET":
-                    return Object(m.d)("Ethiopia", "format-country");
+                    return Object(_.d)("Ethiopia", "format-country");
                 case "EU":
-                    return Object(m.d)("Europe", "format-country");
+                    return Object(_.d)("Europe", "format-country");
                 case "FI":
-                    return Object(m.d)("Finland", "format-country");
+                    return Object(_.d)("Finland", "format-country");
                 case "FJ":
-                    return Object(m.d)("Fiji", "format-country");
+                    return Object(_.d)("Fiji", "format-country");
                 case "FK":
-                    return Object(m.d)("Falkland Islands (Malvinas)", "format-country");
+                    return Object(_.d)("Falkland Islands (Malvinas)", "format-country");
                 case "FM":
-                    return Object(m.d)("Micronesia", "format-country");
+                    return Object(_.d)("Micronesia", "format-country");
                 case "FO":
-                    return Object(m.d)("Faroe Islands", "format-country");
+                    return Object(_.d)("Faroe Islands", "format-country");
                 case "FR":
-                    return Object(m.d)("France", "format-country");
+                    return Object(_.d)("France", "format-country");
                 case "GA":
-                    return Object(m.d)("Gabon", "format-country");
+                    return Object(_.d)("Gabon", "format-country");
                 case "GB":
-                    return Object(m.d)("United Kingdom", "format-country");
+                    return Object(_.d)("United Kingdom", "format-country");
                 case "GD":
-                    return Object(m.d)("Grenada", "format-country");
+                    return Object(_.d)("Grenada", "format-country");
                 case "GE":
-                    return Object(m.d)("Georgia", "format-country");
+                    return Object(_.d)("Georgia", "format-country");
                 case "GF":
-                    return Object(m.d)("French Guiana", "format-country");
+                    return Object(_.d)("French Guiana", "format-country");
                 case "GG":
-                    return Object(m.d)("Guernsey", "format-country");
+                    return Object(_.d)("Guernsey", "format-country");
                 case "GH":
-                    return Object(m.d)("Ghana", "format-country");
+                    return Object(_.d)("Ghana", "format-country");
                 case "GI":
-                    return Object(m.d)("Gibraltar", "format-country");
+                    return Object(_.d)("Gibraltar", "format-country");
                 case "GL":
-                    return Object(m.d)("Greenland", "format-country");
+                    return Object(_.d)("Greenland", "format-country");
                 case "GM":
-                    return Object(m.d)("Gambia", "format-country");
+                    return Object(_.d)("Gambia", "format-country");
                 case "GN":
-                    return Object(m.d)("Guinea", "format-country");
+                    return Object(_.d)("Guinea", "format-country");
                 case "GP":
-                    return Object(m.d)("Guadeloupe", "format-country");
+                    return Object(_.d)("Guadeloupe", "format-country");
                 case "GQ":
-                    return Object(m.d)("Equatorial Guinea", "format-country");
+                    return Object(_.d)("Equatorial Guinea", "format-country");
                 case "GR":
-                    return Object(m.d)("Greece", "format-country");
+                    return Object(_.d)("Greece", "format-country");
                 case "GS":
-                    return Object(m.d)("South Georgia and the South Sandwich Islands", "format-country");
+                    return Object(_.d)("South Georgia and the South Sandwich Islands", "format-country");
                 case "GT":
-                    return Object(m.d)("Guatemala", "format-country");
+                    return Object(_.d)("Guatemala", "format-country");
                 case "GU":
-                    return Object(m.d)("Guam", "format-country");
+                    return Object(_.d)("Guam", "format-country");
                 case "GW":
-                    return Object(m.d)("Guinea-Bissau", "format-country");
+                    return Object(_.d)("Guinea-Bissau", "format-country");
                 case "GY":
-                    return Object(m.d)("Guyana", "format-country");
+                    return Object(_.d)("Guyana", "format-country");
                 case "HK":
-                    return Object(m.d)("Hong Kong", "format-country");
+                    return Object(_.d)("Hong Kong", "format-country");
                 case "HM":
-                    return Object(m.d)("Heard Island and McDonald Islands", "format-country");
+                    return Object(_.d)("Heard Island and McDonald Islands", "format-country");
                 case "HN":
-                    return Object(m.d)("Honduras", "format-country");
+                    return Object(_.d)("Honduras", "format-country");
                 case "HR":
-                    return Object(m.d)("Croatia", "format-country");
+                    return Object(_.d)("Croatia", "format-country");
                 case "HT":
-                    return Object(m.d)("Haiti", "format-country");
+                    return Object(_.d)("Haiti", "format-country");
                 case "HU":
-                    return Object(m.d)("Hungary", "format-country");
+                    return Object(_.d)("Hungary", "format-country");
                 case "ID":
-                    return Object(m.d)("Indonesia", "format-country");
+                    return Object(_.d)("Indonesia", "format-country");
                 case "IE":
-                    return Object(m.d)("Ireland", "format-country");
+                    return Object(_.d)("Ireland", "format-country");
                 case "IL":
-                    return Object(m.d)("Israel", "format-country");
+                    return Object(_.d)("Israel", "format-country");
                 case "IM":
-                    return Object(m.d)("Isle of Man", "format-country");
+                    return Object(_.d)("Isle of Man", "format-country");
                 case "IN":
-                    return Object(m.d)("India", "format-country");
+                    return Object(_.d)("India", "format-country");
                 case "IO":
-                    return Object(m.d)("British Indian Ocean Territory", "format-country");
+                    return Object(_.d)("British Indian Ocean Territory", "format-country");
                 case "IQ":
-                    return Object(m.d)("Iraq", "format-country");
+                    return Object(_.d)("Iraq", "format-country");
                 case "IR":
-                    return Object(m.d)("Iran", "format-country");
+                    return Object(_.d)("Iran", "format-country");
                 case "IS":
-                    return Object(m.d)("Iceland", "format-country");
+                    return Object(_.d)("Iceland", "format-country");
                 case "IT":
-                    return Object(m.d)("Italy", "format-country");
+                    return Object(_.d)("Italy", "format-country");
                 case "JE":
-                    return Object(m.d)("Jersey", "format-country");
+                    return Object(_.d)("Jersey", "format-country");
                 case "JM":
-                    return Object(m.d)("Jamaica", "format-country");
+                    return Object(_.d)("Jamaica", "format-country");
                 case "JO":
-                    return Object(m.d)("Jordan", "format-country");
+                    return Object(_.d)("Jordan", "format-country");
                 case "JP":
-                    return Object(m.d)("Japan", "format-country");
+                    return Object(_.d)("Japan", "format-country");
                 case "KE":
-                    return Object(m.d)("Kenya", "format-country");
+                    return Object(_.d)("Kenya", "format-country");
                 case "KG":
-                    return Object(m.d)("Kyrgyzstan", "format-country");
+                    return Object(_.d)("Kyrgyzstan", "format-country");
                 case "KH":
-                    return Object(m.d)("Cambodia", "format-country");
+                    return Object(_.d)("Cambodia", "format-country");
                 case "KI":
-                    return Object(m.d)("Kiribati", "format-country");
+                    return Object(_.d)("Kiribati", "format-country");
                 case "KM":
-                    return Object(m.d)("Comoros", "format-country");
+                    return Object(_.d)("Comoros", "format-country");
                 case "KN":
-                    return Object(m.d)("Saint Kitts and Nevis", "format-country");
+                    return Object(_.d)("Saint Kitts and Nevis", "format-country");
                 case "KP":
-                    return Object(m.d)("North Korea", "format-country");
+                    return Object(_.d)("North Korea", "format-country");
                 case "KR":
-                    return Object(m.d)("South Korea", "format-country");
+                    return Object(_.d)("South Korea", "format-country");
                 case "KW":
-                    return Object(m.d)("Kuwait", "format-country");
+                    return Object(_.d)("Kuwait", "format-country");
                 case "KY":
-                    return Object(m.d)("Cayman Islands", "format-country");
+                    return Object(_.d)("Cayman Islands", "format-country");
                 case "KZ":
-                    return Object(m.d)("Kazakhstan", "format-country");
+                    return Object(_.d)("Kazakhstan", "format-country");
                 case "LA":
-                    return Object(m.d)("Laos", "format-country");
+                    return Object(_.d)("Laos", "format-country");
                 case "LB":
-                    return Object(m.d)("Lebanon", "format-country");
+                    return Object(_.d)("Lebanon", "format-country");
                 case "LC":
-                    return Object(m.d)("Saint Lucia", "format-country");
+                    return Object(_.d)("Saint Lucia", "format-country");
                 case "LI":
-                    return Object(m.d)("Liechtenstein", "format-country");
+                    return Object(_.d)("Liechtenstein", "format-country");
                 case "LK":
-                    return Object(m.d)("Sri Lanka", "format-country");
+                    return Object(_.d)("Sri Lanka", "format-country");
                 case "LR":
-                    return Object(m.d)("Liberia", "format-country");
+                    return Object(_.d)("Liberia", "format-country");
                 case "LS":
-                    return Object(m.d)("Lesotho", "format-country");
+                    return Object(_.d)("Lesotho", "format-country");
                 case "LT":
-                    return Object(m.d)("Lithuania", "format-country");
+                    return Object(_.d)("Lithuania", "format-country");
                 case "LU":
-                    return Object(m.d)("Luxembourg", "format-country");
+                    return Object(_.d)("Luxembourg", "format-country");
                 case "LV":
-                    return Object(m.d)("Latvia", "format-country");
+                    return Object(_.d)("Latvia", "format-country");
                 case "LY":
-                    return Object(m.d)("Libya", "format-country");
+                    return Object(_.d)("Libya", "format-country");
                 case "MA":
-                    return Object(m.d)("Morocco", "format-country");
+                    return Object(_.d)("Morocco", "format-country");
                 case "MC":
-                    return Object(m.d)("Monaco", "format-country");
+                    return Object(_.d)("Monaco", "format-country");
                 case "MD":
-                    return Object(m.d)("Moldova", "format-country");
+                    return Object(_.d)("Moldova", "format-country");
                 case "ME":
-                    return Object(m.d)("Montenegro", "format-country");
+                    return Object(_.d)("Montenegro", "format-country");
                 case "MF":
-                    return Object(m.d)("Saint Martin", "format-country");
+                    return Object(_.d)("Saint Martin", "format-country");
                 case "MG":
-                    return Object(m.d)("Madagascar", "format-country");
+                    return Object(_.d)("Madagascar", "format-country");
                 case "MH":
-                    return Object(m.d)("Marshall Islands", "format-country");
+                    return Object(_.d)("Marshall Islands", "format-country");
                 case "MK":
-                    return Object(m.d)("Macedonia", "format-country");
+                    return Object(_.d)("Macedonia", "format-country");
                 case "ML":
-                    return Object(m.d)("Mali", "format-country");
+                    return Object(_.d)("Mali", "format-country");
                 case "MM":
-                    return Object(m.d)("Myanmar", "format-country");
+                    return Object(_.d)("Myanmar", "format-country");
                 case "MN":
-                    return Object(m.d)("Mongolia", "format-country");
+                    return Object(_.d)("Mongolia", "format-country");
                 case "MO":
-                    return Object(m.d)("Macao", "format-country");
+                    return Object(_.d)("Macao", "format-country");
                 case "MP":
-                    return Object(m.d)("Northern Mariana Islands", "format-country");
+                    return Object(_.d)("Northern Mariana Islands", "format-country");
                 case "MQ":
-                    return Object(m.d)("Martinique", "format-country");
+                    return Object(_.d)("Martinique", "format-country");
                 case "MR":
-                    return Object(m.d)("Mauritania", "format-country");
+                    return Object(_.d)("Mauritania", "format-country");
                 case "MS":
-                    return Object(m.d)("Montserrat", "format-country");
+                    return Object(_.d)("Montserrat", "format-country");
                 case "MT":
-                    return Object(m.d)("Malta", "format-country");
+                    return Object(_.d)("Malta", "format-country");
                 case "MU":
-                    return Object(m.d)("Mauritius", "format-country");
+                    return Object(_.d)("Mauritius", "format-country");
                 case "MV":
-                    return Object(m.d)("Maldives", "format-country");
+                    return Object(_.d)("Maldives", "format-country");
                 case "MW":
-                    return Object(m.d)("Malawi", "format-country");
+                    return Object(_.d)("Malawi", "format-country");
                 case "MX":
-                    return Object(m.d)("Mexico", "format-country");
+                    return Object(_.d)("Mexico", "format-country");
                 case "MY":
-                    return Object(m.d)("Malaysia", "format-country");
+                    return Object(_.d)("Malaysia", "format-country");
                 case "MZ":
-                    return Object(m.d)("Mozambique", "format-country");
+                    return Object(_.d)("Mozambique", "format-country");
                 case "NA":
-                    return Object(m.d)("Namibia", "format-country");
+                    return Object(_.d)("Namibia", "format-country");
                 case "NC":
-                    return Object(m.d)("New Caledonia", "format-country");
+                    return Object(_.d)("New Caledonia", "format-country");
                 case "NE":
-                    return Object(m.d)("Niger", "format-country");
+                    return Object(_.d)("Niger", "format-country");
                 case "NF":
-                    return Object(m.d)("Norfolk Island", "format-country");
+                    return Object(_.d)("Norfolk Island", "format-country");
                 case "NG":
-                    return Object(m.d)("Nigeria", "format-country");
+                    return Object(_.d)("Nigeria", "format-country");
                 case "NI":
-                    return Object(m.d)("Nicaragua", "format-country");
+                    return Object(_.d)("Nicaragua", "format-country");
                 case "NL":
-                    return Object(m.d)("Netherlands", "format-country");
+                    return Object(_.d)("Netherlands", "format-country");
                 case "NO":
-                    return Object(m.d)("Norway", "format-country");
+                    return Object(_.d)("Norway", "format-country");
                 case "NP":
-                    return Object(m.d)("Nepal", "format-country");
+                    return Object(_.d)("Nepal", "format-country");
                 case "NR":
-                    return Object(m.d)("Nauru", "format-country");
+                    return Object(_.d)("Nauru", "format-country");
                 case "NU":
-                    return Object(m.d)("Niue", "format-country");
+                    return Object(_.d)("Niue", "format-country");
                 case "NZ":
-                    return Object(m.d)("New Zealand", "format-country");
+                    return Object(_.d)("New Zealand", "format-country");
                 case "O1":
-                    return Object(m.d)("Other Country", "format-country");
+                    return Object(_.d)("Other Country", "format-country");
                 case "OM":
-                    return Object(m.d)("Oman", "format-country");
+                    return Object(_.d)("Oman", "format-country");
                 case "PA":
-                    return Object(m.d)("Panama", "format-country");
+                    return Object(_.d)("Panama", "format-country");
                 case "PE":
-                    return Object(m.d)("Peru", "format-country");
+                    return Object(_.d)("Peru", "format-country");
                 case "PF":
-                    return Object(m.d)("French Polynesia", "format-country");
+                    return Object(_.d)("French Polynesia", "format-country");
                 case "PG":
-                    return Object(m.d)("Papua New Guinea", "format-country");
+                    return Object(_.d)("Papua New Guinea", "format-country");
                 case "PH":
-                    return Object(m.d)("Philippines", "format-country");
+                    return Object(_.d)("Philippines", "format-country");
                 case "PK":
-                    return Object(m.d)("Pakistan", "format-country");
+                    return Object(_.d)("Pakistan", "format-country");
                 case "PL":
-                    return Object(m.d)("Poland", "format-country");
+                    return Object(_.d)("Poland", "format-country");
                 case "PM":
-                    return Object(m.d)("Saint Pierre and Miquelon", "format-country");
+                    return Object(_.d)("Saint Pierre and Miquelon", "format-country");
                 case "PN":
-                    return Object(m.d)("Pitcairn", "format-country");
+                    return Object(_.d)("Pitcairn", "format-country");
                 case "PR":
-                    return Object(m.d)("Puerto Rico", "format-country");
+                    return Object(_.d)("Puerto Rico", "format-country");
                 case "PS":
-                    return Object(m.d)("Palestine", "format-country");
+                    return Object(_.d)("Palestine", "format-country");
                 case "PT":
-                    return Object(m.d)("Portugal", "format-country");
+                    return Object(_.d)("Portugal", "format-country");
                 case "PW":
-                    return Object(m.d)("Palau", "format-country");
+                    return Object(_.d)("Palau", "format-country");
                 case "PY":
-                    return Object(m.d)("Paraguay", "format-country");
+                    return Object(_.d)("Paraguay", "format-country");
                 case "QA":
-                    return Object(m.d)("Qatar", "format-country");
+                    return Object(_.d)("Qatar", "format-country");
                 case "RE":
-                    return Object(m.d)("Reunion", "format-country");
+                    return Object(_.d)("Reunion", "format-country");
                 case "RO":
-                    return Object(m.d)("Romania", "format-country");
+                    return Object(_.d)("Romania", "format-country");
                 case "RS":
-                    return Object(m.d)("Serbia", "format-country");
+                    return Object(_.d)("Serbia", "format-country");
                 case "RU":
-                    return Object(m.d)("Russia", "format-country");
+                    return Object(_.d)("Russia", "format-country");
                 case "RW":
-                    return Object(m.d)("Rwanda", "format-country");
+                    return Object(_.d)("Rwanda", "format-country");
                 case "SA":
-                    return Object(m.d)("Saudi Arabia", "format-country");
+                    return Object(_.d)("Saudi Arabia", "format-country");
                 case "SB":
-                    return Object(m.d)("Solomon Islands", "format-country");
+                    return Object(_.d)("Solomon Islands", "format-country");
                 case "SC":
-                    return Object(m.d)("Seychelles", "format-country");
+                    return Object(_.d)("Seychelles", "format-country");
                 case "SD":
-                    return Object(m.d)("Sudan", "format-country");
+                    return Object(_.d)("Sudan", "format-country");
                 case "SE":
-                    return Object(m.d)("Sweden", "format-country");
+                    return Object(_.d)("Sweden", "format-country");
                 case "SG":
-                    return Object(m.d)("Singapore", "format-country");
+                    return Object(_.d)("Singapore", "format-country");
                 case "SH":
-                    return Object(m.d)("Saint Helena", "format-country");
+                    return Object(_.d)("Saint Helena", "format-country");
                 case "SI":
-                    return Object(m.d)("Slovenia", "format-country");
+                    return Object(_.d)("Slovenia", "format-country");
                 case "SJ":
-                    return Object(m.d)("Svalbard and Jan Mayen", "format-country");
+                    return Object(_.d)("Svalbard and Jan Mayen", "format-country");
                 case "SK":
-                    return Object(m.d)("Slovakia", "format-country");
+                    return Object(_.d)("Slovakia", "format-country");
                 case "SL":
-                    return Object(m.d)("Sierra Leone", "format-country");
+                    return Object(_.d)("Sierra Leone", "format-country");
                 case "SM":
-                    return Object(m.d)("San Marino", "format-country");
+                    return Object(_.d)("San Marino", "format-country");
                 case "SN":
-                    return Object(m.d)("Senegal", "format-country");
+                    return Object(_.d)("Senegal", "format-country");
                 case "SO":
-                    return Object(m.d)("Somalia", "format-country");
+                    return Object(_.d)("Somalia", "format-country");
                 case "SR":
-                    return Object(m.d)("Suriname", "format-country");
+                    return Object(_.d)("Suriname", "format-country");
                 case "SS":
-                    return Object(m.d)("South Sudan", "format-country");
+                    return Object(_.d)("South Sudan", "format-country");
                 case "ST":
-                    return Object(m.d)("Sao Tome and Principe", "format-country");
+                    return Object(_.d)("Sao Tome and Principe", "format-country");
                 case "SV":
-                    return Object(m.d)("El Salvador", "format-country");
+                    return Object(_.d)("El Salvador", "format-country");
                 case "SX":
-                    return Object(m.d)("Sint Maarten", "format-country");
+                    return Object(_.d)("Sint Maarten", "format-country");
                 case "SY":
-                    return Object(m.d)("Syria", "format-country");
+                    return Object(_.d)("Syria", "format-country");
                 case "SZ":
-                    return Object(m.d)("Swaziland", "format-country");
+                    return Object(_.d)("Swaziland", "format-country");
                 case "TC":
-                    return Object(m.d)("Turks and Caicos Islands", "format-country");
+                    return Object(_.d)("Turks and Caicos Islands", "format-country");
                 case "TD":
-                    return Object(m.d)("Chad", "format-country");
+                    return Object(_.d)("Chad", "format-country");
                 case "TF":
-                    return Object(m.d)("French Southern Territories", "format-country");
+                    return Object(_.d)("French Southern Territories", "format-country");
                 case "TG":
-                    return Object(m.d)("Togo", "format-country");
+                    return Object(_.d)("Togo", "format-country");
                 case "TH":
-                    return Object(m.d)("Thailand", "format-country");
+                    return Object(_.d)("Thailand", "format-country");
                 case "TJ":
-                    return Object(m.d)("Tajikistan", "format-country");
+                    return Object(_.d)("Tajikistan", "format-country");
                 case "TK":
-                    return Object(m.d)("Tokelau", "format-country");
+                    return Object(_.d)("Tokelau", "format-country");
                 case "TL":
-                    return Object(m.d)("East Timor", "format-country");
+                    return Object(_.d)("East Timor", "format-country");
                 case "TM":
-                    return Object(m.d)("Turkmenistan", "format-country");
+                    return Object(_.d)("Turkmenistan", "format-country");
                 case "TN":
-                    return Object(m.d)("Tunisia", "format-country");
+                    return Object(_.d)("Tunisia", "format-country");
                 case "TO":
-                    return Object(m.d)("Tonga", "format-country");
+                    return Object(_.d)("Tonga", "format-country");
                 case "TR":
-                    return Object(m.d)("Turkey", "format-country");
+                    return Object(_.d)("Turkey", "format-country");
                 case "TT":
-                    return Object(m.d)("Trinidad and Tobago", "format-country");
+                    return Object(_.d)("Trinidad and Tobago", "format-country");
                 case "TV":
-                    return Object(m.d)("Tuvalu", "format-country");
+                    return Object(_.d)("Tuvalu", "format-country");
                 case "TW":
-                    return Object(m.d)("Taiwan", "format-country");
+                    return Object(_.d)("Taiwan", "format-country");
                 case "TZ":
-                    return Object(m.d)("Tanzania", "format-country");
+                    return Object(_.d)("Tanzania", "format-country");
                 case "UA":
-                    return Object(m.d)("Ukraine", "format-country");
+                    return Object(_.d)("Ukraine", "format-country");
                 case "UG":
-                    return Object(m.d)("Uganda", "format-country");
+                    return Object(_.d)("Uganda", "format-country");
                 case "UM":
-                    return Object(m.d)("United States Minor Outlying Islands", "format-country");
+                    return Object(_.d)("United States Minor Outlying Islands", "format-country");
                 case "US":
-                    return Object(m.d)("United States", "format-country");
+                    return Object(_.d)("United States", "format-country");
                 case "UY":
-                    return Object(m.d)("Uruguay", "format-country");
+                    return Object(_.d)("Uruguay", "format-country");
                 case "UZ":
-                    return Object(m.d)("Uzbekistan", "format-country");
+                    return Object(_.d)("Uzbekistan", "format-country");
                 case "VA":
-                    return Object(m.d)("Vatican City", "format-country");
+                    return Object(_.d)("Vatican City", "format-country");
                 case "VC":
-                    return Object(m.d)("Saint Vincent and the Grenadines", "format-country");
+                    return Object(_.d)("Saint Vincent and the Grenadines", "format-country");
                 case "VE":
-                    return Object(m.d)("Venezuela", "format-country");
+                    return Object(_.d)("Venezuela", "format-country");
                 case "VG":
-                    return Object(m.d)("British Virgin Islands", "format-country");
+                    return Object(_.d)("British Virgin Islands", "format-country");
                 case "VI":
-                    return Object(m.d)("U.S. Virgin Islands", "format-country");
+                    return Object(_.d)("U.S. Virgin Islands", "format-country");
                 case "VN":
-                    return Object(m.d)("Vietnam", "format-country");
+                    return Object(_.d)("Vietnam", "format-country");
                 case "VU":
-                    return Object(m.d)("Vanuatu", "format-country");
+                    return Object(_.d)("Vanuatu", "format-country");
                 case "WF":
-                    return Object(m.d)("Wallis and Futuna", "format-country");
+                    return Object(_.d)("Wallis and Futuna", "format-country");
                 case "WS":
-                    return Object(m.d)("Samoa", "format-country");
+                    return Object(_.d)("Samoa", "format-country");
                 case "YE":
-                    return Object(m.d)("Yemen", "format-country");
+                    return Object(_.d)("Yemen", "format-country");
                 case "YT":
-                    return Object(m.d)("Mayotte", "format-country");
+                    return Object(_.d)("Mayotte", "format-country");
                 case "ZA":
-                    return Object(m.d)("South Africa", "format-country");
+                    return Object(_.d)("South Africa", "format-country");
                 case "ZM":
-                    return Object(m.d)("Zambia", "format-country");
+                    return Object(_.d)("Zambia", "format-country");
                 case "ZW":
-                    return Object(m.d)("Zimbabwe", "format-country");
+                    return Object(_.d)("Zimbabwe", "format-country");
                 default:
                     return e
             }
@@ -16137,11 +16137,12 @@ webpackJsonp([36], {
             l = n("TToO"),
             c = n("U7vG"),
             h = n("CIox"),
-            m = n("6sO2"),
-            _ = n("w9tK"),
-            f = n("CSlQ"),
-            p = n("Odds"),
-            g = function(e) {
+            m = n("68hr"),
+            _ = n("6sO2"),
+            f = n("w9tK"),
+            p = n("CSlQ"),
+            g = n("Odds"),
+            y = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -16150,18 +16151,18 @@ webpackJsonp([36], {
                         changedSinceSubmit: !1
                     }, t.renderDescriptor = function() {
                         return t.props.descriptor.split("\n").map(function(e, t) {
-                            return c.createElement(p._35, {
+                            return c.createElement(g._35, {
                                 key: t
                             }, e)
                         })
                     }, t.renderButton = function() {
-                        var e = c.createElement(p.u, {
+                        var e = c.createElement(g.u, {
                                 disabled: t.state.buttonDisabled,
                                 onClick: t.handleSubmit
                             }, t.props.buttonText),
-                            n = c.createElement(p._43, {
+                            n = c.createElement(g._43, {
                                 label: t.props.errorString,
-                                direction: p._45.Right,
+                                direction: g._45.Right,
                                 show: !0
                             }, e);
                         return t.props.errorString.length && !t.state.changedSinceSubmit ? n : e
@@ -16191,15 +16192,15 @@ webpackJsonp([36], {
                     }, t
                 }
                 return l.__extends(t, e), t.prototype.render = function() {
-                    return c.createElement(p._2, {
-                        alignSelf: p.d.Start,
-                        display: p.N.Flex,
-                        flexDirection: p.P.Column
-                    }, this.renderDescriptor(), c.createElement(p._2, {
-                        display: p.N.Flex,
-                        flexDirection: p.P.Row
-                    }, c.createElement(p._2, null, c.createElement(p.Y, {
-                        type: p.Z.Text,
+                    return c.createElement(g._2, {
+                        alignSelf: g.d.Start,
+                        display: g.N.Flex,
+                        flexDirection: g.P.Column
+                    }, this.renderDescriptor(), c.createElement(g._2, {
+                        display: g.N.Flex,
+                        flexDirection: g.P.Row
+                    }, c.createElement(g._2, null, c.createElement(g.Y, {
+                        type: g.Z.Text,
                         placeholder: this.props.placeholder,
                         value: this.state.inputValue,
                         onChange: this.handleChangeInput,
@@ -16207,67 +16208,67 @@ webpackJsonp([36], {
                     })), this.renderButton()))
                 }, t
             }(c.Component),
-            y = n("zCIC");
+            M = n("zCIC");
         n("A5K9");
         ! function(e) {
             e.ToTop = "move-to-top", e.Up = "move-up", e.Down = "move-down", e.ToBottom = "move-to-bottom"
         }(r || (r = {}));
-        var M;
+        var v;
         ! function(e) {
             e.AllButtons = "all-buttons", e.RemoveOnly = "remove-button-only", e.MoveUpAndRemoveOnly = "move-up-and-remove-buttons-only", e.MoveDownAndRemoveOnly = "move-down-and-remove-buttons-only"
-        }(M || (M = {}));
-        var v, b = function(e) {
+        }(v || (v = {}));
+        var b, L = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         isHovered: !1
                     }, t.renderButtons = function() {
-                        var e = t.props.buttonConfiguration === M.AllButtons,
-                            n = e || t.props.buttonConfiguration === M.MoveUpAndRemoveOnly,
-                            a = e || t.props.buttonConfiguration === M.MoveDownAndRemoveOnly;
-                        return c.createElement(p._2, null, n && c.createElement(p._43, {
-                            label: Object(m.d)("Move To Top", "TeamsDashboard"),
-                            direction: p._45.Left
-                        }, c.createElement(p.u, {
-                            type: p.z.Text,
+                        var e = t.props.buttonConfiguration === v.AllButtons,
+                            n = e || t.props.buttonConfiguration === v.MoveUpAndRemoveOnly,
+                            a = e || t.props.buttonConfiguration === v.MoveDownAndRemoveOnly;
+                        return c.createElement(g._2, null, n && c.createElement(g._43, {
+                            label: Object(_.d)("Move To Top", "TeamsDashboard"),
+                            direction: g._45.Left
+                        }, c.createElement(g.u, {
+                            type: g.z.Text,
                             blurAfterClick: !0,
-                            icon: p._16.ToTop,
+                            icon: g._16.ToTop,
                             onClick: t.handleOnMoveClick(r.ToTop),
                             disabled: t.props.isDisabled
-                        })), n && c.createElement(p._43, {
-                            label: Object(m.d)("Move Up", "TeamsDashboard"),
-                            direction: p._45.Left
-                        }, c.createElement(p.u, {
-                            type: p.z.Text,
+                        })), n && c.createElement(g._43, {
+                            label: Object(_.d)("Move Up", "TeamsDashboard"),
+                            direction: g._45.Left
+                        }, c.createElement(g.u, {
+                            type: g.z.Text,
                             blurAfterClick: !0,
-                            icon: p._16.ArrowUp,
+                            icon: g._16.ArrowUp,
                             onClick: t.handleOnMoveClick(r.Up),
                             disabled: t.props.isDisabled
-                        })), a && c.createElement(p._43, {
-                            label: Object(m.d)("Move Down", "TeamsDashboard"),
-                            direction: p._45.Left
-                        }, c.createElement(p.u, {
-                            type: p.z.Text,
+                        })), a && c.createElement(g._43, {
+                            label: Object(_.d)("Move Down", "TeamsDashboard"),
+                            direction: g._45.Left
+                        }, c.createElement(g.u, {
+                            type: g.z.Text,
                             blurAfterClick: !0,
-                            icon: p._16.ArrowDown,
+                            icon: g._16.ArrowDown,
                             onClick: t.handleOnMoveClick(r.Down),
                             disabled: t.props.isDisabled
-                        })), a && c.createElement(p._43, {
-                            label: Object(m.d)("Move To Bottom", "TeamsDashboard"),
-                            direction: p._45.Left
-                        }, c.createElement(p.u, {
-                            type: p.z.Text,
+                        })), a && c.createElement(g._43, {
+                            label: Object(_.d)("Move To Bottom", "TeamsDashboard"),
+                            direction: g._45.Left
+                        }, c.createElement(g.u, {
+                            type: g.z.Text,
                             blurAfterClick: !0,
-                            icon: p._16.ToBottom,
+                            icon: g._16.ToBottom,
                             onClick: t.handleOnMoveClick(r.ToBottom),
                             disabled: t.props.isDisabled
-                        })), c.createElement(p._43, {
-                            label: Object(m.d)("Remove", "TeamsDashboard"),
-                            direction: p._45.Left
-                        }, c.createElement(p.u, {
-                            type: p.z.Text,
+                        })), c.createElement(g._43, {
+                            label: Object(_.d)("Remove", "TeamsDashboard"),
+                            direction: g._45.Left
+                        }, c.createElement(g.u, {
+                            type: g.z.Text,
                             blurAfterClick: !0,
-                            icon: p._16.Trash,
+                            icon: g._16.Trash,
                             onClick: t.handleDeleteClick,
                             disabled: t.props.isDisabled
                         })))
@@ -16288,40 +16289,40 @@ webpackJsonp([36], {
                     }, t
                 }
                 return l.__extends(t, e), t.prototype.render = function() {
-                    var e = Object(m.d)("{displayName}'s Avatar Image", {
+                    var e = Object(_.d)("{displayName}'s Avatar Image", {
                         displayName: this.props.member.displayName
                     }, "TeamsDashboard");
                     return c.createElement("div", {
                         "data-test-selector": this.props.listItemsSelector,
                         onMouseEnter: this.handleMouseEnter,
                         onMouseLeave: this.handleMouseLeave
-                    }, c.createElement(p._25, {
-                        display: p.N.Flex,
-                        flexDirection: p.P.Row,
-                        justifyContent: p._1.Between,
+                    }, c.createElement(g._25, {
+                        display: g.N.Flex,
+                        flexDirection: g.P.Row,
+                        justifyContent: g._1.Between,
                         padding: 1,
                         borderBottom: !0,
                         fullWidth: !0
-                    }, c.createElement(p._2, {
-                        display: p.N.Flex,
-                        flexDirection: p.P.Row,
-                        alignItems: p.c.Center
-                    }, c.createElement(p.l, {
+                    }, c.createElement(g._2, {
+                        display: g.N.Flex,
+                        flexDirection: g.P.Row,
+                        alignItems: g.c.Center
+                    }, c.createElement(g.l, {
                         src: this.props.member.avatarSrc,
                         alt: e,
                         size: 30
-                    }), c.createElement(p._2, {
+                    }), c.createElement(g._2, {
                         margin: {
                             left: 1
                         }
-                    }, c.createElement(p._35, null, this.props.member.displayName))), c.createElement(p._2, {
-                        display: p.N.Flex,
-                        flexDirection: p.P.Row,
-                        alignItems: p.c.Center
+                    }, c.createElement(g._35, null, this.props.member.displayName))), c.createElement(g._2, {
+                        display: g.N.Flex,
+                        flexDirection: g.P.Row,
+                        alignItems: g.c.Center
                     }, this.state.isHovered && this.renderButtons())))
                 }, t
             }(c.Component),
-            L = function(e) {
+            D = function(e) {
                 var t = function(t, n) {
                     var a, i = e.members.findIndex(function(e) {
                         return e.id === t
@@ -16344,27 +16345,27 @@ webpackJsonp([36], {
                     }
                     e.onMoveClick(t, a)
                 };
-                return c.createElement(p._2, {
+                return c.createElement(g._2, {
                     fullWidth: !0,
                     margin: {
                         top: 2,
                         bottom: 2
                     }
-                }, e.header && c.createElement(p._35, {
-                    type: p._40.H3
+                }, e.header && c.createElement(g._35, {
+                    type: g._40.H3
                 }, e.header), e.members.length ? function(n) {
                     var a = e.onMoveClick ? t : void 0;
-                    return c.createElement(y.b, null, c.createElement(p._2, {
-                        display: p.N.Flex,
-                        flexDirection: p.P.Column
+                    return c.createElement(M.b, null, c.createElement(g._2, {
+                        display: g.N.Flex,
+                        flexDirection: g.P.Column
                     }, n.map(function(t, r) {
-                        return c.createElement(b, {
+                        return c.createElement(L, {
                             key: t.id,
                             buttonConfiguration: function(t, n) {
-                                if (!e.onMoveClick) return M.RemoveOnly;
+                                if (!e.onMoveClick) return v.RemoveOnly;
                                 var a = 0 === t,
                                     r = t === n - 1;
-                                return a && r ? M.RemoveOnly : a ? M.MoveDownAndRemoveOnly : r ? M.MoveUpAndRemoveOnly : M.AllButtons
+                                return a && r ? v.RemoveOnly : a ? v.MoveDownAndRemoveOnly : r ? v.MoveUpAndRemoveOnly : v.AllButtons
                             }(r, n.length),
                             member: t,
                             listItemsSelector: e.listItemsSelector,
@@ -16373,155 +16374,155 @@ webpackJsonp([36], {
                             isDisabled: e.isDisabled
                         })
                     })))
-                }(e.members) : c.createElement(p._35, null, e.emptyStateText))
+                }(e.members) : c.createElement(g._35, null, e.emptyStateText))
             },
-            D = function(e) {
-                return c.createElement(y.b, null, c.createElement(p._2, {
-                    display: p.N.Flex,
-                    flexDirection: p.P.Column,
-                    alignItems: p.c.Start,
+            k = function(e) {
+                return c.createElement(M.b, null, c.createElement(g._2, {
+                    display: g.N.Flex,
+                    flexDirection: g.P.Column,
+                    alignItems: g.c.Start,
                     padding: 2
-                }, c.createElement(p._2, {
-                    display: p.N.Flex,
+                }, c.createElement(g._2, {
+                    display: g.N.Flex,
                     padding: {
                         bottom: 2
                     },
                     fullWidth: !0
-                }, c.createElement(p._35, {
+                }, c.createElement(g._35, {
                     "data-test-selector": e.titleSelector,
-                    type: p._40.H1
+                    type: g._40.H1
                 }, e.title)), e.children))
             };
         ! function(e) {
             e.Revenue = "revenue", e.Stats = "stats", e.Members = "members", e.FeaturedChannels = "featured-channels", e.Settings = "settings"
-        }(v || (v = {}));
-        var k;
+        }(b || (b = {}));
+        var Y;
         ! function(e) {
             e.ChannelNotFoundByLogin = "CHANNEL_NOT_FOUND_BY_LOGIN", e.ChannelPendingInvitation = "CHANNEL_PENDING_INVITATION", e.ChannelAlreadyMember = "CHANNEL_ALREADY_MEMBER", e.ChannelAlreadyFeatured = "CHANNEL_ALREADY_FEATURED"
-        }(k || (k = {}));
-        var Y, w = function(e) {
-                for (var t in k)
-                    if (e.includes(k[t])) return k[t];
+        }(Y || (Y = {}));
+        var w, x = function(e) {
+                for (var t in Y)
+                    if (e.includes(Y[t])) return Y[t];
                 return ""
             },
-            x = function(e) {
+            T = function(e) {
                 switch (e) {
-                    case k.ChannelNotFoundByLogin:
-                        return Object(m.d)("Channel not found", "TeamsDashboard");
-                    case k.ChannelPendingInvitation:
-                        return Object(m.d)("Channel has a pending invitation", "TeamsDashboard");
-                    case k.ChannelAlreadyMember:
-                        return Object(m.d)("Channel is already a member", "TeamsDashboard");
-                    case k.ChannelAlreadyFeatured:
-                        return Object(m.d)("Channel is already featured", "TeamsDashboard");
+                    case Y.ChannelNotFoundByLogin:
+                        return Object(_.d)("Channel not found", "TeamsDashboard");
+                    case Y.ChannelPendingInvitation:
+                        return Object(_.d)("Channel has a pending invitation", "TeamsDashboard");
+                    case Y.ChannelAlreadyMember:
+                        return Object(_.d)("Channel is already a member", "TeamsDashboard");
+                    case Y.ChannelAlreadyFeatured:
+                        return Object(_.d)("Channel is already featured", "TeamsDashboard");
                     default:
-                        return Object(m.d)("Unknown Error", "TeamsDashboard")
+                        return Object(_.d)("Unknown Error", "TeamsDashboard")
                 }
             },
-            T = 100,
-            S = function(e) {
-                return e.map(O)
-            },
+            S = 100,
             O = function(e) {
+                return e.map(j)
+            },
+            j = function(e) {
                 return {
                     id: e._id,
                     displayName: e.display_name,
                     avatarSrc: e.logo
                 }
             },
-            j = function(e, t) {
+            H = function(e, t) {
                 return e.map(function(e, n) {
                     return {
                         id: e.id,
                         displayName: e.displayName,
                         avatarSrc: e.avatarSrc,
-                        checked: t && n < T
+                        checked: t && n < S
                     }
                 })
             },
-            H = function(e) {
+            P = function(e) {
                 return e.filter(function(e) {
                     return e.checked
                 }).map(function(e) {
                     return e.id
                 })
             },
-            P = function() {
-                return Object(m.d)("Enter channel login", "TeamsDashboard")
+            C = function() {
+                return Object(_.d)("Enter channel login", "TeamsDashboard")
             },
-            C = function(e) {
+            A = function(e) {
                 switch (e) {
-                    case v.Revenue:
-                        return Object(m.d)("Revenue", "TeamsDashboard");
-                    case v.Stats:
-                        return Object(m.d)("Stats", "TeamsDashboard");
-                    case v.Members:
-                        return Object(m.d)("Members", "TeamsDashboard");
-                    case v.FeaturedChannels:
-                        return Object(m.d)("Featured Channels", "TeamsDashboard");
-                    case v.Settings:
-                        return Object(m.d)("Settings", "TeamsDashboard");
+                    case b.Revenue:
+                        return Object(_.d)("Revenue", "TeamsDashboard");
+                    case b.Stats:
+                        return Object(_.d)("Stats", "TeamsDashboard");
+                    case b.Members:
+                        return Object(_.d)("Members", "TeamsDashboard");
+                    case b.FeaturedChannels:
+                        return Object(_.d)("Featured Channels", "TeamsDashboard");
+                    case b.Settings:
+                        return Object(_.d)("Settings", "TeamsDashboard");
                     default:
                         return ""
                 }
             },
-            A = n("9u8h"),
-            F = this,
-            E = function(e, t) {
-                return l.__awaiter(F, void 0, void 0, function() {
+            F = n("9u8h"),
+            E = this,
+            W = function(e, t) {
+                return l.__awaiter(E, void 0, void 0, function() {
                     var n, a, r, i;
                     return l.__generator(this, function(s) {
                         switch (s.label) {
                             case 0:
-                                return n = "/v5/teams/" + e + "/dashboard/featured_channels", [4, A.a.post(n, {
+                                return n = "/v5/teams/" + e + "/dashboard/featured_channels", [4, F.a.post(n, {
                                     body: {
                                         channel_login: t
                                     }
                                 })];
                             case 1:
-                                return (a = s.sent()).body && 200 === a.status ? [2, O(a.body.featured_channel.channel)] : (r = a.error.message) && "" !== (i = w(r)) ? [2, Promise.reject(i)] : [2, Promise.reject(JSON.stringify(a.error))]
+                                return (a = s.sent()).body && 200 === a.status ? [2, j(a.body.featured_channel.channel)] : (r = a.error.message) && "" !== (i = x(r)) ? [2, Promise.reject(i)] : [2, Promise.reject(JSON.stringify(a.error))]
                         }
                     })
                 })
             },
-            W = this,
             I = this,
-            N = function(e, t) {
-                return B("/v5/teams/" + e + "/dashboard/channels/" + t + "/membership")
-            },
+            N = this,
             R = function(e, t) {
-                return B("/v5/teams/" + e + "/dashboard/featured_channels/" + t)
+                return J("/v5/teams/" + e + "/dashboard/channels/" + t + "/membership")
             },
             z = function(e, t) {
-                return B("/v5/teams/" + e + "/dashboard/channels/" + t + "/invitation")
+                return J("/v5/teams/" + e + "/dashboard/featured_channels/" + t)
             },
-            B = function(e) {
-                return l.__awaiter(I, void 0, void 0, function() {
+            B = function(e, t) {
+                return J("/v5/teams/" + e + "/dashboard/channels/" + t + "/invitation")
+            },
+            J = function(e) {
+                return l.__awaiter(N, void 0, void 0, function() {
                     var t;
                     return l.__generator(this, function(n) {
                         switch (n.label) {
                             case 0:
-                                return [4, A.a.delete(e)];
+                                return [4, F.a.delete(e)];
                             case 1:
                                 return t = n.sent(), [2, 204 === t.status]
                         }
                     })
                 })
             },
-            J = this,
-            V = function(e, t, n) {
-                return G("/v5/teams/" + e + "/dashboard/channels/" + t + "/membership", n)
-            },
+            V = this,
             U = function(e, t, n) {
-                return G("/v5/teams/" + e + "/dashboard/featured_channels/" + t, n)
+                return q("/v5/teams/" + e + "/dashboard/channels/" + t + "/membership", n)
             },
-            G = function(e, t) {
-                return l.__awaiter(J, void 0, void 0, function() {
+            G = function(e, t, n) {
+                return q("/v5/teams/" + e + "/dashboard/featured_channels/" + t, n)
+            },
+            q = function(e, t) {
+                return l.__awaiter(V, void 0, void 0, function() {
                     var n;
                     return l.__generator(this, function(a) {
                         switch (a.label) {
                             case 0:
-                                return [4, A.a.put(e, {
+                                return [4, F.a.put(e, {
                                     body: {
                                         display_position: t
                                     }
@@ -16532,7 +16533,7 @@ webpackJsonp([36], {
                     })
                 })
             },
-            q = function(e) {
+            K = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -16549,14 +16550,14 @@ webpackJsonp([36], {
                                             tooltipError: ""
                                         }), a.label = 1;
                                     case 1:
-                                        return a.trys.push([1, 3, , 4]), [4, E(this.props.teamName, e)];
+                                        return a.trys.push([1, 3, , 4]), [4, W(this.props.teamName, e)];
                                     case 2:
                                         return t = a.sent(), this.setState({
                                             featuredChannels: this.state.featuredChannels.concat(t)
                                         }), [3, 4];
                                     case 3:
                                         return n = a.sent(), this.setState({
-                                            tooltipError: x(n)
+                                            tooltipError: T(n)
                                         }), [3, 4];
                                     case 4:
                                         return [2]
@@ -16570,7 +16571,7 @@ webpackJsonp([36], {
                                     case 0:
                                         return this.setState({
                                             isDisabled: !0
-                                        }), [4, R(this.props.teamName, e)];
+                                        }), [4, z(this.props.teamName, e)];
                                     case 1:
                                         return t.sent() && this.setState({
                                             featuredChannels: this.state.featuredChannels.filter(function(t) {
@@ -16590,7 +16591,7 @@ webpackJsonp([36], {
                                     case 0:
                                         return this.setState({
                                             isDisabled: !0
-                                        }), [4, U(this.props.teamName, e, n)];
+                                        }), [4, G(this.props.teamName, e, n)];
                                     case 1:
                                         return r.sent() && (t = this.state.featuredChannels.findIndex(function(t) {
                                             return t.id === e
@@ -16611,16 +16612,16 @@ webpackJsonp([36], {
                             switch (n.label) {
                                 case 0:
                                     return e = this.setState, t = {}, [4, function(e) {
-                                        return l.__awaiter(W, void 0, void 0, function() {
+                                        return l.__awaiter(I, void 0, void 0, function() {
                                             var t, n, a;
                                             return l.__generator(this, function(r) {
                                                 switch (r.label) {
                                                     case 0:
-                                                        return t = "/v5/teams/" + e + "/dashboard/featured_channels", [4, A.a.get(t)];
+                                                        return t = "/v5/teams/" + e + "/dashboard/featured_channels", [4, F.a.get(t)];
                                                     case 1:
                                                         return !(n = r.sent()).body || 200 !== n.status || n.error || n.requestError ? [2, []] : (a = n.body.featured_channels.map(function(e) {
                                                             return e.channel
-                                                        }), [2, S(a)])
+                                                        }), [2, O(a)])
                                                 }
                                             })
                                         })
@@ -16631,68 +16632,68 @@ webpackJsonp([36], {
                         })
                     })
                 }, t.prototype.render = function() {
-                    return c.createElement(D, {
-                        title: C(v.FeaturedChannels),
+                    return c.createElement(k, {
+                        title: A(b.FeaturedChannels),
                         titleSelector: "featured-channels-page-title"
-                    }, c.createElement(g, {
-                        descriptor: Object(m.d)("Pick channels to feature. Featured channels do not need to be a member of the team.\nIf none of the featured channels are live, your team will feature a live member based on member ordering.", "TeamsDashboard"),
-                        placeholder: P(),
-                        buttonText: Object(m.d)("Add", "TeamsDashboard"),
+                    }, c.createElement(y, {
+                        descriptor: Object(_.d)("Pick channels to feature. Featured channels do not need to be a member of the team.\nIf none of the featured channels are live, your team will feature a live member based on member ordering.", "TeamsDashboard"),
+                        placeholder: C(),
+                        buttonText: Object(_.d)("Add", "TeamsDashboard"),
                         submitAction: this.handleAddFeaturedChannel,
                         errorString: this.state.tooltipError
-                    }), c.createElement(L, {
-                        emptyStateText: Object(m.d)("No featured channels.", "TeamsDashboard"),
+                    }), c.createElement(D, {
+                        emptyStateText: Object(_.d)("No featured channels.", "TeamsDashboard"),
                         members: this.state.featuredChannels,
                         listItemsSelector: "featured-channels-list-items",
                         onDeleteClick: this.handleDeleteFeaturedChannel,
                         isDisabled: this.state.isDisabled,
                         onMoveClick: this.handleMoveFeaturedChannel
                     }))
-                }, t = l.__decorate([Object(f.d)("FeaturedChannelsPage", {
+                }, t = l.__decorate([Object(p.d)("FeaturedChannelsPage", {
                     autoReportInteractive: !0,
-                    destination: _.a.TeamsDashboardFeaturedChannels
+                    destination: f.a.TeamsDashboardFeaturedChannels
                 })], t)
             }(c.Component),
-            K = n("PGY2"),
-            Z = this,
-            X = this;
+            Z = n("PGY2"),
+            X = this,
+            Q = this;
         ! function(e) {
             e.StatsRevealed = "stats_revealed", e.RevenueRevealed = "revenue_revealed"
-        }(Y || (Y = {}));
-        var Q, $ = function(e, t) {
-                return l.__awaiter(X, void 0, void 0, function() {
+        }(w || (w = {}));
+        var $, ee = function(e, t) {
+                return l.__awaiter(Q, void 0, void 0, function() {
                     var n, a, r, i;
                     return l.__generator(this, function(s) {
                         switch (s.label) {
                             case 0:
-                                return n = t ? "?" + t + "=true" : "", a = "/v5/teams/" + e + "/dashboard/members" + n, [4, Object(K.d)({
+                                return n = t ? "?" + t + "=true" : "", a = "/v5/teams/" + e + "/dashboard/members" + n, [4, Object(Z.d)({
                                     path: a
                                 })];
                             case 1:
-                                return r = s.sent(), i = r.body ? r.body.channels : [], [2, S(i)]
+                                return r = s.sent(), i = r.body ? r.body.channels : [], [2, O(i)]
                         }
                     })
                 })
             },
-            ee = this,
-            te = function(e, t) {
-                return l.__awaiter(ee, void 0, void 0, function() {
+            te = this,
+            ne = function(e, t) {
+                return l.__awaiter(te, void 0, void 0, function() {
                     var n, a, r, i;
                     return l.__generator(this, function(s) {
                         switch (s.label) {
                             case 0:
-                                return n = "/v5/teams/" + e + "/dashboard/invitations", [4, A.a.post(n, {
+                                return n = "/v5/teams/" + e + "/dashboard/invitations", [4, F.a.post(n, {
                                     body: {
                                         channel_login: t
                                     }
                                 })];
                             case 1:
-                                return (a = s.sent()).body && 200 === a.status ? [2, O(a.body.invitation.channel)] : (r = a.error.message) && "" !== (i = w(r)) ? [2, Promise.reject(i)] : [2, Promise.reject(JSON.stringify(a.error))]
+                                return (a = s.sent()).body && 200 === a.status ? [2, j(a.body.invitation.channel)] : (r = a.error.message) && "" !== (i = x(r)) ? [2, Promise.reject(i)] : [2, Promise.reject(JSON.stringify(a.error))]
                         }
                     })
                 })
             },
-            ne = function(e) {
+            ae = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -16710,14 +16711,14 @@ webpackJsonp([36], {
                                             invitationError: ""
                                         }), r.label = 1;
                                     case 1:
-                                        return r.trys.push([1, 3, , 4]), [4, te(this.props.teamName, e)];
+                                        return r.trys.push([1, 3, , 4]), [4, ne(this.props.teamName, e)];
                                     case 2:
                                         return t = r.sent(), n = this.state.invitations.concat(t), this.setState({
                                             invitations: n
                                         }), [3, 4];
                                     case 3:
                                         return a = r.sent(), this.setState({
-                                            invitationError: x(a)
+                                            invitationError: T(a)
                                         }), [3, 4];
                                     case 4:
                                         return [2]
@@ -16732,7 +16733,7 @@ webpackJsonp([36], {
                                     case 0:
                                         return this.setState({
                                             isDisabled: !0
-                                        }), [4, V(this.props.teamName, e, n)];
+                                        }), [4, U(this.props.teamName, e, n)];
                                     case 1:
                                         return r.sent() && (t = this.state.members.findIndex(function(t) {
                                             return t.id === e
@@ -16751,7 +16752,7 @@ webpackJsonp([36], {
                                     case 0:
                                         return this.setState({
                                             isDisabled: !0
-                                        }), [4, z(this.props.teamName, e)];
+                                        }), [4, B(this.props.teamName, e)];
                                     case 1:
                                         return t.sent() && this.setState({
                                             invitations: this.state.invitations.filter(function(t) {
@@ -16769,7 +16770,7 @@ webpackJsonp([36], {
                                     case 0:
                                         return this.setState({
                                             isDisabled: !0
-                                        }), [4, N(this.props.teamName, e)];
+                                        }), [4, R(this.props.teamName, e)];
                                     case 1:
                                         return t.sent() && this.setState({
                                             members: this.state.members.filter(function(t) {
@@ -16788,19 +16789,19 @@ webpackJsonp([36], {
                         return l.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return [4, Promise.all([$(this.props.teamName), function(e) {
-                                        return l.__awaiter(Z, void 0, void 0, function() {
+                                    return [4, Promise.all([ee(this.props.teamName), function(e) {
+                                        return l.__awaiter(X, void 0, void 0, function() {
                                             var t, n, a;
                                             return l.__generator(this, function(r) {
                                                 switch (r.label) {
                                                     case 0:
-                                                        return t = "/v5/teams/" + e + "/dashboard/invitations", [4, Object(K.d)({
+                                                        return t = "/v5/teams/" + e + "/dashboard/invitations", [4, Object(Z.d)({
                                                             path: t
                                                         })];
                                                     case 1:
                                                         return n = r.sent(), a = n.body ? n.body.invitations.map(function(e) {
                                                             return e.channel
-                                                        }) : [], [2, S(a)]
+                                                        }) : [], [2, O(a)]
                                                 }
                                             })
                                         })
@@ -16814,78 +16815,78 @@ webpackJsonp([36], {
                         })
                     })
                 }, t.prototype.render = function() {
-                    return c.createElement(D, {
-                        title: C(v.Members),
+                    return c.createElement(k, {
+                        title: A(b.Members),
                         titleSelector: "members-page-title"
-                    }, c.createElement(g, {
-                        descriptor: Object(m.d)("Live team members will always be at the top. Order is respected for live members and offline members.\nOrder also determines which member will be featured in the video player.", "TeamsDashboard"),
-                        placeholder: P(),
-                        buttonText: Object(m.d)("Invite", "TeamsDashboard"),
+                    }, c.createElement(y, {
+                        descriptor: Object(_.d)("Live team members will always be at the top. Order is respected for live members and offline members.\nOrder also determines which member will be featured in the video player.", "TeamsDashboard"),
+                        placeholder: C(),
+                        buttonText: Object(_.d)("Invite", "TeamsDashboard"),
                         submitAction: this.onInviteClick,
                         errorString: this.state.invitationError
-                    }), c.createElement(L, {
-                        emptyStateText: Object(m.d)("No pending invitations.", "TeamsDashboard"),
-                        header: Object(m.d)("Pending Team Invitations", "TeamsDashboard"),
+                    }), c.createElement(D, {
+                        emptyStateText: Object(_.d)("No pending invitations.", "TeamsDashboard"),
+                        header: Object(_.d)("Pending Team Invitations", "TeamsDashboard"),
                         members: this.state.invitations,
                         listItemsSelector: "invitations-list-items",
                         onDeleteClick: this.handleDeleteInvitation,
                         isDisabled: this.state.isDisabled
-                    }), c.createElement(L, {
-                        emptyStateText: Object(m.d)("No team members yet.", "TeamsDashboard"),
-                        header: Object(m.d)("Current Members", "TeamsDashboard"),
+                    }), c.createElement(D, {
+                        emptyStateText: Object(_.d)("No team members yet.", "TeamsDashboard"),
+                        header: Object(_.d)("Current Members", "TeamsDashboard"),
                         members: this.state.members,
                         listItemsSelector: "members-list-items",
                         onDeleteClick: this.handleDeleteMember,
                         onMoveClick: this.handleMoveMember,
                         isDisabled: this.state.isDisabled
                     }))
-                }, t = l.__decorate([Object(f.d)("MembersPage", {
+                }, t = l.__decorate([Object(p.d)("MembersPage", {
                     autoReportInteractive: !0,
-                    destination: _.a.TeamsDashboardMembers
+                    destination: f.a.TeamsDashboardMembers
                 })], t)
             }(c.Component),
-            ae = function(e) {
-                return Object(m.c)(e, {
+            re = function(e) {
+                return Object(_.c)(e, {
                     month: "long",
                     year: "numeric",
                     timeZone: "UTC"
                 })
             },
-            re = function(e) {
+            ie = function(e) {
                 var t = Math.floor(e / 3600),
                     n = Math.floor(e % 3600 / 60),
                     a = e % 60 + "s";
                 return n && (a = n + "m" + a), t && (a = t + "h" + a), a
             },
-            ie = function(e) {
+            se = function(e) {
                 return new Date(Date.UTC(e.getUTCFullYear(), e.getUTCMonth()))
             },
-            se = function(e, t) {
+            oe = function(e, t) {
                 var n = new Date(Date.UTC(e.getUTCFullYear(), e.getUTCMonth() + 1));
                 return n.getTime() > t.getTime() ? t : n
             },
-            oe = function(e) {
+            de = function(e) {
                 return new Date(Date.UTC(e.getUTCFullYear(), e.getUTCMonth() - 1))
             },
-            de = function(e) {
+            ue = function(e) {
                 var t = new Date(e.toISOString());
                 return t.setUTCHours(e.getUTCHours() + 4), t
             },
-            ue = function(e) {
+            le = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.handleChange = function(e) {
                         var t = new Date(e.currentTarget.value),
-                            a = ie(t),
-                            r = se(a, n.validatedCurrentDate);
+                            a = se(t),
+                            r = oe(a, n.validatedCurrentDate);
                         n.props.onMonthSelection(a, r)
                     }, n.getDropdownOptions = function(e, t) {
-                        for (var n = [], a = ie(e); a >= t; a = oe(a)) {
+                        for (var n = [], a = se(e); a >= t; a = de(a)) {
                             var r = a.toISOString();
                             n.push(c.createElement("option", {
                                 key: r,
                                 value: r
-                            }, ae(a)))
+                            }, re(a)))
                         }
                         return n
                     }, n.validatedCurrentDate = t.currentDate < t.earliestDate ? t.earliestDate : t.currentDate, n
@@ -16893,46 +16894,46 @@ webpackJsonp([36], {
                 return l.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return c.createElement(p._2, {
+                    return c.createElement(g._2, {
                         className: "month-select-menu"
-                    }, c.createElement(p._21, {
+                    }, c.createElement(g._21, {
                         disabled: this.props.isDisabled,
                         onChange: this.handleChange
                     }, this.getDropdownOptions(this.validatedCurrentDate, this.props.earliestDate)))
-                }, t = l.__decorate([Object(f.d)("MonthSelectMenuComponent")], t)
+                }, t = l.__decorate([Object(p.d)("MonthSelectMenuComponent")], t)
             }(c.Component),
-            le = ["twitch_subscriptions", "prime_subscriptions", "bits", "ads"],
-            ce = function(e) {
+            ce = ["twitch_subscriptions", "prime_subscriptions", "bits", "ads"],
+            he = function(e) {
                 switch (e) {
                     case "twitch_subscriptions":
-                        return Object(m.d)("Sub Revenue", "TeamsDashboard");
+                        return Object(_.d)("Sub Revenue", "TeamsDashboard");
                     case "prime_subscriptions":
-                        return Object(m.d)("Twitch Prime Revenue", "TeamsDashboard");
+                        return Object(_.d)("Twitch Prime Revenue", "TeamsDashboard");
                     case "bits":
-                        return Object(m.d)("Bits Revenue", "TeamsDashboard");
+                        return Object(_.d)("Bits Revenue", "TeamsDashboard");
                     case "ads":
-                        return Object(m.d)("Ad Revenue", "TeamsDashboard");
+                        return Object(_.d)("Ad Revenue", "TeamsDashboard");
                     default:
                         return ""
                 }
             },
-            he = n("WaEV"),
-            me = function(e) {
-                return Object(m.e)(e / 100, {
+            me = n("WaEV"),
+            _e = function(e) {
+                return Object(_.e)(e / 100, {
                     style: "currency",
                     currency: "USD"
                 })
             },
-            _e = 800,
-            fe = 380,
-            pe = function(e) {
+            fe = 800,
+            pe = 380,
+            ge = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return l.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.setCanvasResolution(), this.myChart = new he(this.canvas, {
+                    this.setCanvasResolution(), this.myChart = new me(this.canvas, {
                         type: "bar",
-                        data: ye(this.props.datasets, this.props.timestampLabels),
+                        data: Me(this.props.datasets, this.props.timestampLabels),
                         options: {
                             tooltips: {
                                 backgroundColor: "rgba(0,0,0,0.8)",
@@ -16960,8 +16961,8 @@ webpackJsonp([36], {
                                         }).reduce(function(e, t) {
                                             return e + Math.round(parseFloat(t))
                                         }, 0);
-                                        return me(t) + " - " + function(e) {
-                                            return Object(m.c)(e, {
+                                        return _e(t) + " - " + function(e) {
+                                            return Object(_.c)(e, {
                                                 weekday: "short",
                                                 month: "short",
                                                 day: "numeric",
@@ -16971,7 +16972,7 @@ webpackJsonp([36], {
                                         }(new Date(e[0].xLabel || "1970-01-01Z"))
                                     },
                                     label: function(e, t) {
-                                        return " " + me(Math.round(parseFloat(e.yLabel || "0"))) + " " + (void 0 !== e.datasetIndex && t.datasets ? t.datasets[e.datasetIndex].label : "")
+                                        return " " + _e(Math.round(parseFloat(e.yLabel || "0"))) + " " + (void 0 !== e.datasetIndex && t.datasets ? t.datasets[e.datasetIndex].label : "")
                                     }
                                 }
                             },
@@ -17004,7 +17005,7 @@ webpackJsonp([36], {
                                         min: 0,
                                         maxTicksLimit: 5,
                                         callback: function(e) {
-                                            return me(e)
+                                            return _e(e)
                                         }
                                     }
                                 }]
@@ -17014,10 +17015,10 @@ webpackJsonp([36], {
                 }, t.prototype.componentWillUnmount = function() {
                     this.myChart && this.myChart.destroy()
                 }, t.prototype.componentWillUpdate = function(e) {
-                    this.myChart.data = ye(e.datasets, e.timestampLabels), this.myChart.update()
+                    this.myChart.data = Me(e.datasets, e.timestampLabels), this.myChart.update()
                 }, t.prototype.render = function() {
                     var e = this;
-                    return c.createElement(p.W, {
+                    return c.createElement(g.W, {
                         flexGrow: 0,
                         flexShrink: 1,
                         fullWidth: !0
@@ -17027,16 +17028,16 @@ webpackJsonp([36], {
                         }
                     }))
                 }, t.prototype.setCanvasResolution = function() {
-                    var e = _e,
-                        t = fe,
-                        n = ge(this.canvas.getContext("2d"));
+                    var e = fe,
+                        t = pe,
+                        n = ye(this.canvas.getContext("2d"));
                     this.canvas.width = e * n, this.canvas.height = t * n, this.canvas.style.width = e + "px", this.canvas.style.height = t + "px", this.canvas.getContext("2d").setTransform(n, 0, 0, n, 0, 0)
-                }, t = l.__decorate([Object(f.d)("RevenueCanvas")], t)
+                }, t = l.__decorate([Object(p.d)("RevenueCanvas")], t)
             }(c.Component),
-            ge = function(e) {
+            ye = function(e) {
                 return 1 / (e.webkitBackingStorePixelRatio || e.mozBackingStorePixelRatio || e.msBackingStorePixelRatio || e.oBackingStorePixelRatio || e.backingStorePixelRatio || 1)
             },
-            ye = function(e, t) {
+            Me = function(e, t) {
                 return {
                     labels: t.slice(0),
                     datasets: e.map(function(e) {
@@ -17062,36 +17063,36 @@ webpackJsonp([36], {
                     })
                 }
             },
-            Me = pe,
-            ve = function(e) {
+            ve = ge,
+            be = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.formatRevenueChartData = function(e) {
                         var t = {
                             twitch_subscriptions: {
-                                categoryLabel: ce("twitch_subscriptions"),
+                                categoryLabel: he("twitch_subscriptions"),
                                 color: "#7752ba",
                                 data: []
                             },
                             prime_subscriptions: {
-                                categoryLabel: ce("prime_subscriptions"),
+                                categoryLabel: he("prime_subscriptions"),
                                 color: "#059bdc",
                                 data: []
                             },
                             bits: {
-                                categoryLabel: ce("bits"),
+                                categoryLabel: he("bits"),
                                 color: "#3dc7ae",
                                 data: []
                             },
                             ads: {
-                                categoryLabel: ce("ads"),
+                                categoryLabel: he("ads"),
                                 color: "#c5b6e2",
                                 data: []
                             },
                             timestampLabels: []
                         };
                         return Object.keys(e).sort().reduce(function(t, n) {
-                            return t.timestampLabels.push(n), le.forEach(function(a) {
+                            return t.timestampLabels.push(n), ce.forEach(function(a) {
                                 t[a].data.push(e[n][a])
                             }), t
                         }, t)
@@ -17099,10 +17100,10 @@ webpackJsonp([36], {
                 }
                 return l.__extends(t, e), t.prototype.render = function() {
                     var e = this.formatRevenueChartData(this.props.data),
-                        t = le.map(function(t) {
+                        t = ce.map(function(t) {
                             return e[t]
                         });
-                    return c.createElement(Me, {
+                    return c.createElement(ve, {
                         datasets: t,
                         timestampLabels: e.timestampLabels
                     })
@@ -17110,76 +17111,76 @@ webpackJsonp([36], {
             }(c.PureComponent);
         ! function(e) {
             e.Title = "revenue-summary-item-title", e.Symbol = "revenue-summary-item-symbol", e.Dollars = "revenue-summary-item-dollars", e.Cents = "revenue-summary-item-cents"
-        }(Q || (Q = {}));
-        var be, Le = function(e) {
+        }($ || ($ = {}));
+        var Le, De = function(e) {
                 var t, n;
-                return e.isLoading ? (t = c.createElement(p._35, {
-                    type: p._40.H5
-                }, c.createElement(p._8, {
+                return e.isLoading ? (t = c.createElement(g._35, {
+                    type: g._40.H5
+                }, c.createElement(g._8, {
                     width: 90
-                })), n = c.createElement(p._2, null, c.createElement(p._8, {
+                })), n = c.createElement(g._2, null, c.createElement(g._8, {
                     width: 140,
                     height: e.magnified ? 40 : 30
-                }))) : (t = c.createElement(p._35, {
-                    color: p.I.Alt2,
-                    type: p._40.H5,
-                    "data-test-selector": Q.Title
-                }, e.title), n = c.createElement(p._2, {
-                    alignItems: p.c.Start,
-                    display: p.N.Flex,
-                    flexDirection: p.P.Row
-                }, c.createElement(p._35, {
-                    type: e.magnified ? p._40.H4 : p._40.H5,
-                    "data-test-selector": Q.Symbol
-                }, "$ "), c.createElement(p._35, {
-                    type: e.magnified ? p._40.H1 : p._40.H2,
-                    "data-test-selector": Q.Dollars
-                }, Object(m.e)(Math.floor(e.cents / 100))), c.createElement(p._35, {
-                    type: e.magnified ? p._40.H4 : p._40.H5,
-                    "data-test-selector": Q.Cents
-                }, Object(m.e)(Math.round(e.cents % 100), {
+                }))) : (t = c.createElement(g._35, {
+                    color: g.I.Alt2,
+                    type: g._40.H5,
+                    "data-test-selector": $.Title
+                }, e.title), n = c.createElement(g._2, {
+                    alignItems: g.c.Start,
+                    display: g.N.Flex,
+                    flexDirection: g.P.Row
+                }, c.createElement(g._35, {
+                    type: e.magnified ? g._40.H4 : g._40.H5,
+                    "data-test-selector": $.Symbol
+                }, "$ "), c.createElement(g._35, {
+                    type: e.magnified ? g._40.H1 : g._40.H2,
+                    "data-test-selector": $.Dollars
+                }, Object(_.e)(Math.floor(e.cents / 100))), c.createElement(g._35, {
+                    type: e.magnified ? g._40.H4 : g._40.H5,
+                    "data-test-selector": $.Cents
+                }, Object(_.e)(Math.round(e.cents % 100), {
                     minimumIntegerDigits: 2
-                })))), c.createElement(p._2, {
-                    display: p.N.Flex,
-                    flexDirection: p.P.Column,
+                })))), c.createElement(g._2, {
+                    display: g.N.Flex,
+                    flexDirection: g.P.Column,
                     flexGrow: 1,
                     margin: 1
-                }, c.createElement(p._2, {
+                }, c.createElement(g._2, {
                     margin: e.magnified ? {
                         bottom: .5
                     } : {}
                 }, t), n)
             },
-            De = function(e) {
+            ke = function(e) {
                 var t = e.revenues.reduce(function(e, t) {
                         return e + t.cents
                     }, 0),
                     n = e.revenues.map(function(t, n) {
-                        return c.createElement(Le, {
+                        return c.createElement(De, {
                             key: n,
                             isLoading: e.isLoading,
                             title: t.title + " " + e.summaryItemTitleSuffix,
                             cents: t.cents
                         })
                     });
-                return c.createElement(p._25, {
+                return c.createElement(g._25, {
                     borderMarked: !0,
                     border: !0,
                     fullWidth: !0,
-                    background: p.m.Base,
-                    display: p.N.Flex,
-                    justifyContent: p._1.Between,
-                    alignItems: p.c.Center,
+                    background: g.m.Base,
+                    display: g.N.Flex,
+                    justifyContent: g._1.Between,
+                    alignItems: g.c.Center,
                     padding: 1
-                }, c.createElement(Le, {
+                }, c.createElement(De, {
                     isLoading: e.isLoading,
                     title: e.totalTitle + " " + e.summaryItemTitleSuffix,
                     cents: t,
                     magnified: !0
                 }), n)
             },
-            ke = function(e) {
-                return c.createElement(De, {
+            Ye = function(e) {
+                return c.createElement(ke, {
                     isLoading: e.isLoading,
                     revenues: function(e) {
                         var t = {
@@ -17190,12 +17191,12 @@ webpackJsonp([36], {
                         };
                         return Object.keys(e).forEach(function(n) {
                             var a = e[n];
-                            le.forEach(function(e) {
+                            ce.forEach(function(e) {
                                 t[e] += Math.round(a[e])
                             })
-                        }), le.map(function(e) {
+                        }), ce.map(function(e) {
                             return {
-                                title: ce(e),
+                                title: he(e),
                                 cents: t[e]
                             }
                         })
@@ -17204,35 +17205,35 @@ webpackJsonp([36], {
                     summaryItemTitleSuffix: e.summaryItemTitleSuffix
                 })
             },
-            Ye = n("+Znq"),
-            we = function(e) {
+            we = n("+Znq"),
+            xe = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderMenu = function() {
-                        if (t.props.isLoading) return c.createElement(p._8, {
+                        if (t.props.isLoading) return c.createElement(g._8, {
                             width: 180,
                             height: 30
                         });
                         var e = t.props.members.filter(function(e) {
                                 return e.checked
                             }).length,
-                            n = Object(m.d)("Select All", "TeamsDashboard");
-                        return t.props.members.length > T && (n = Object(m.d)("Select First {maxSelected, number}", {
-                            maxSelected: T
-                        }, "TeamsDashboard")), c.createElement(Ye.a, {
+                            n = Object(_.d)("Select All", "TeamsDashboard");
+                        return t.props.members.length > S && (n = Object(_.d)("Select First {maxSelected, number}", {
+                            maxSelected: S
+                        }, "TeamsDashboard")), c.createElement(we.a, {
                             onToggle: t.toggleOpenClose
-                        }, c.createElement(p.u, {
+                        }, c.createElement(g.u, {
                             dropdown: !0,
-                            type: p.z.Hollow,
+                            type: g.z.Hollow,
                             disabled: t.props.isDisabled
-                        }, Object(m.d)("{checkedCount, plural, one {Stats for # Team Member} other {Stats for # Team Members}}", {
+                        }, Object(_.d)("{checkedCount, plural, one {Stats for # Team Member} other {Stats for # Team Members}}", {
                             checkedCount: e
-                        }, "TeamsDashboard")), c.createElement(p.p, {
-                            direction: p.q.BottomLeft,
+                        }, "TeamsDashboard")), c.createElement(g.p, {
+                            direction: g.q.BottomLeft,
                             noTail: !0
-                        }, c.createElement(y.b, {
+                        }, c.createElement(M.b, {
                             className: "team-members-select-menu__scroller"
-                        }, c.createElement(p._2, null, c.createElement(p._25, {
+                        }, c.createElement(g._2, null, c.createElement(g._25, {
                             borderBottom: !0,
                             padding: {
                                 top: 1,
@@ -17240,7 +17241,7 @@ webpackJsonp([36], {
                                 right: .5,
                                 bottom: .5
                             }
-                        }, c.createElement(p.H, {
+                        }, c.createElement(g.H, {
                             label: n,
                             checked: t.props.groupChecked,
                             onChange: t.props.toggleGroupChecked
@@ -17249,90 +17250,90 @@ webpackJsonp([36], {
                                 label: n.displayName,
                                 checked: n.checked,
                                 onChange: t.props.toggleMemberChecked.bind(t, n),
-                                disabled: e >= T && !n.checked
+                                disabled: e >= S && !n.checked
                             };
-                            return c.createElement(p._25, {
+                            return c.createElement(g._25, {
                                 margin: {
                                     x: .5,
                                     y: 0
                                 },
                                 key: n.id
-                            }, c.createElement(p.H, l.__assign({}, a)))
+                            }, c.createElement(g.H, l.__assign({}, a)))
                         })))))
                     }, t.toggleOpenClose = function(e) {
                         e && JSON.stringify(t.props.members) !== t.membersPreviouslyCheckedJSON ? t.props.onMemberSelectClose(t.props.members) : t.membersPreviouslyCheckedJSON = JSON.stringify(t.props.members)
                     }, t
                 }
                 return l.__extends(t, e), t.prototype.render = function() {
-                    return c.createElement(p._2, {
+                    return c.createElement(g._2, {
                         className: "team-members-select-menu"
                     }, this.renderMenu())
-                }, t = l.__decorate([Object(f.d)("TeamMembersSelectMenu", {
+                }, t = l.__decorate([Object(p.d)("TeamMembersSelectMenu", {
                     autoReportInteractive: !0
                 })], t)
             }(c.Component),
-            xe = function(e, t, n) {
+            Te = function(e, t, n) {
                 return Object.keys(e).reduce(function(n, a) {
                     return n + t(new Date(a), e[a])
                 }, n)
             },
-            Te = function(e, t) {
+            Se = function(e, t) {
                 var n = encodeURIComponent(e),
                     a = document.createElement("a");
                 a.href = "data:text/csv;charset=utf-8," + n, a.download = t, document.body.appendChild(a), a.click(), document.body.removeChild(a)
             },
-            Se = function() {
-                return Object(m.d)("Time Zone", "TeamsDashboard")
-            },
             Oe = function() {
-                return Object(m.d)("Export Data", "TeamsDashboard")
+                return Object(_.d)("Time Zone", "TeamsDashboard")
             },
-            je = function(e) {
-                return He(e) + " " + Pe(e)
+            je = function() {
+                return Object(_.d)("Export Data", "TeamsDashboard")
             },
             He = function(e) {
-                return e.getUTCFullYear() + "-" + Ce(e.getUTCMonth() + 1) + "-" + Ce(e.getUTCDate())
+                return Pe(e) + " " + Ce(e)
             },
             Pe = function(e) {
-                return Ce(e.getUTCHours()) + ":" + Ce(e.getUTCMinutes()) + ":" + Ce(e.getUTCSeconds())
+                return e.getUTCFullYear() + "-" + Ae(e.getUTCMonth() + 1) + "-" + Ae(e.getUTCDate())
             },
             Ce = function(e) {
-                return Object(m.e)(e, {
+                return Ae(e.getUTCHours()) + ":" + Ae(e.getUTCMinutes()) + ":" + Ae(e.getUTCSeconds())
+            },
+            Ae = function(e) {
+                return Object(_.e)(e, {
                     minimumIntegerDigits: 2,
                     maximumFractionDigits: 0
                 })
             },
-            Ae = this,
-            Fe = function(e, t, n, a) {
-                return l.__awaiter(Ae, void 0, void 0, function() {
+            Fe = this,
+            Ee = function(e, t, n, a) {
+                return l.__awaiter(Fe, void 0, void 0, function() {
                     var r, i, s;
                     return l.__generator(this, function(o) {
                         switch (o.label) {
                             case 0:
-                                return r = "/v5/teams/" + e + "/revenues?channel_ids=" + t + "&start_date=" + n + "&end_date=" + a + "&fraction=day", [4, Object(K.d)({
+                                return r = "/v5/teams/" + e + "/revenues?channel_ids=" + t + "&start_date=" + n + "&end_date=" + a + "&fraction=day", [4, Object(Z.d)({
                                     path: r
                                 })];
                             case 1:
-                                return i = o.sent(), s = Ee(n, a, i.body && i.body.revenues ? i.body.revenues : {}), [2, s]
+                                return i = o.sent(), s = We(n, a, i.body && i.body.revenues ? i.body.revenues : {}), [2, s]
                         }
                     })
                 })
             },
-            Ee = function(e, t, n) {
-                for (var a = We(e, t), r = 0, i = Object.keys(n); r < i.length; r++)
+            We = function(e, t, n) {
+                for (var a = Ie(e, t), r = 0, i = Object.keys(n); r < i.length; r++)
                     for (var s = i[r], o = 0, d = Object.keys(n[s]); o < d.length; o++) {
                         var u = d[o];
-                        if (le.includes(u))
+                        if (ce.includes(u))
                             for (var l = 0, c = n[s][u]; l < c.length; l++) {
                                 var h = c[l],
-                                    m = Ie(h.timestamp);
+                                    m = Ne(h.timestamp);
                                 a[m] && (a[m][u] += h.cents)
                             }
                     }
                 return a
             },
-            We = function(e, t) {
-                for (var n = {}, a = new Date(Ie(e)); a < new Date(t); a.setUTCDate(a.getUTCDate() + 1)) n[a.toISOString()] = {
+            Ie = function(e, t) {
+                for (var n = {}, a = new Date(Ne(e)); a < new Date(t); a.setUTCDate(a.getUTCDate() + 1)) n[a.toISOString()] = {
                     twitch_subscriptions: 0,
                     prime_subscriptions: 0,
                     bits: 0,
@@ -17340,35 +17341,35 @@ webpackJsonp([36], {
                 };
                 return n
             },
-            Ie = function(e) {
+            Ne = function(e) {
                 var t = new Date(e);
                 return new Date(Date.UTC(t.getUTCFullYear(), t.getUTCMonth(), t.getUTCDate())).toISOString()
             },
-            Ne = function() {
-                var e = Object(m.d)("Date", "TeamsDashboard") + "," + Se(),
-                    t = "," + Object(m.d)("Total", "TeamsDashboard") + "\n";
-                return le.reduce(function(e, t) {
-                    return e + "," + ce(t)
+            Re = function() {
+                var e = Object(_.d)("Date", "TeamsDashboard") + "," + Oe(),
+                    t = "," + Object(_.d)("Total", "TeamsDashboard") + "\n";
+                return ce.reduce(function(e, t) {
+                    return e + "," + he(t)
                 }, e) + t
             },
-            Re = function(e, t) {
-                var n = He(e) + ",UTC",
-                    a = le.reduce(function(e, n) {
+            ze = function(e, t) {
+                var n = Pe(e) + ",UTC",
+                    a = ce.reduce(function(e, n) {
                         return e + Math.round(t[n])
                     }, 0),
-                    r = "," + ze(a) + "\n";
-                return le.reduce(function(e, n) {
-                    return e + "," + ze(t[n])
+                    r = "," + Be(a) + "\n";
+                return ce.reduce(function(e, n) {
+                    return e + "," + Be(t[n])
                 }, n) + r
             },
-            ze = function(e) {
-                return Object(m.e)(e / 100, {
+            Be = function(e) {
+                return Object(_.e)(e / 100, {
                     useGrouping: !1,
                     minimumFractionDigits: 2,
                     maximumFractionDigits: 2
                 })
             },
-            Be = function(e) {
+            Je = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.toggleMemberChecked = function(e) {
@@ -17382,7 +17383,7 @@ webpackJsonp([36], {
                         })
                     }, n.toggleGroupChecked = function() {
                         var e = !n.state.groupChecked,
-                            t = j(n.state.members, e);
+                            t = H(n.state.members, e);
                         n.setState({
                             groupChecked: e,
                             members: t
@@ -17395,7 +17396,7 @@ webpackJsonp([36], {
                                     case 0:
                                         return this.setState({
                                             isLoadingRevenues: !0
-                                        }), [4, Fe(this.props.teamName, H(this.state.members), e.toISOString(), t.toISOString())];
+                                        }), [4, Ee(this.props.teamName, P(this.state.members), e.toISOString(), t.toISOString())];
                                     case 1:
                                         return n = a.sent(), this.setState({
                                             startTime: e,
@@ -17414,7 +17415,7 @@ webpackJsonp([36], {
                                     case 0:
                                         return this.setState({
                                             isLoadingRevenues: !0
-                                        }), [4, Fe(this.props.teamName, H(this.state.members), this.state.startTime.toISOString(), this.state.endTime.toISOString())];
+                                        }), [4, Ee(this.props.teamName, P(this.state.members), this.state.startTime.toISOString(), this.state.endTime.toISOString())];
                                     case 1:
                                         return e = t.sent(), this.setState({
                                             revenues: e,
@@ -17424,12 +17425,12 @@ webpackJsonp([36], {
                             })
                         })
                     }, n.handleCSVClick = function() {
-                        var e = xe(n.state.revenues, Re, Ne());
-                        Te(e, C(v.Revenue) + " - " + ae(n.state.startTime) + ".csv")
+                        var e = Te(n.state.revenues, ze, Re());
+                        Se(e, A(b.Revenue) + " - " + re(n.state.startTime) + ".csv")
                     }, n.state = {
                         isLoadingMembers: !0,
                         members: [],
-                        startTime: ie(n.props.currentDate),
+                        startTime: se(n.props.currentDate),
                         endTime: n.props.currentDate,
                         groupChecked: !0,
                         isLoadingRevenues: !0,
@@ -17442,18 +17443,18 @@ webpackJsonp([36], {
                         return l.__generator(this, function(n) {
                             switch (n.label) {
                                 case 0:
-                                    return [4, $(this.props.teamName, Y.RevenueRevealed)];
+                                    return [4, ee(this.props.teamName, w.RevenueRevealed)];
                                 case 1:
                                     return e = n.sent(), this.setState({
                                         isLoadingMembers: !1,
-                                        members: j(e, !0)
+                                        members: H(e, !0)
                                     }, function() {
                                         return l.__awaiter(t, void 0, void 0, function() {
                                             var e;
                                             return l.__generator(this, function(t) {
                                                 switch (t.label) {
                                                     case 0:
-                                                        return [4, Fe(this.props.teamName, H(this.state.members), this.state.startTime.toISOString(), this.state.endTime.toISOString())];
+                                                        return [4, Ee(this.props.teamName, P(this.state.members), this.state.startTime.toISOString(), this.state.endTime.toISOString())];
                                                     case 1:
                                                         return e = t.sent(), this.setState({
                                                             isLoadingRevenues: !1,
@@ -17468,25 +17469,25 @@ webpackJsonp([36], {
                     })
                 }, t.prototype.render = function() {
                     var e = this.state.isLoadingMembers || this.state.isLoadingRevenues;
-                    return c.createElement(D, {
-                        title: C(v.Revenue),
+                    return c.createElement(k, {
+                        title: A(b.Revenue),
                         titleSelector: "revenue-page-title"
-                    }, c.createElement(p._25, {
+                    }, c.createElement(g._25, {
                         border: !0,
                         fullWidth: !0
-                    }, c.createElement(p._2, {
-                        display: p.N.Flex,
-                        flexDirection: p.P.Row,
-                        justifyContent: p._1.Between,
+                    }, c.createElement(g._2, {
+                        display: g.N.Flex,
+                        flexDirection: g.P.Row,
+                        justifyContent: g._1.Between,
                         margin: 2
-                    }, c.createElement(p._2, {
-                        display: p.N.Flex,
-                        flexDirection: p.P.Row
-                    }, c.createElement(p._2, {
+                    }, c.createElement(g._2, {
+                        display: g.N.Flex,
+                        flexDirection: g.P.Row
+                    }, c.createElement(g._2, {
                         margin: {
                             right: 1
                         }
-                    }, c.createElement(we, {
+                    }, c.createElement(xe, {
                         isDisabled: e,
                         isLoading: this.state.isLoadingMembers,
                         members: this.state.members,
@@ -17494,59 +17495,59 @@ webpackJsonp([36], {
                         onMemberSelectClose: this.handleMemberSelectionChange,
                         toggleMemberChecked: this.toggleMemberChecked,
                         toggleGroupChecked: this.toggleGroupChecked
-                    })), c.createElement(ue, {
+                    })), c.createElement(le, {
                         isDisabled: e,
                         earliestDate: this.props.earliestDataDate,
                         currentDate: this.props.currentDate,
                         onMonthSelection: this.handleTimeRangeChange
-                    })), c.createElement(p._2, null, c.createElement(p._35, {
-                        color: p.I.Alt2
-                    }, Object(m.d)("* All revenue values are estimated (in $USD)", "TeamsDashboard")))), c.createElement(p._2, {
-                        display: p.N.Flex,
-                        flexDirection: p.P.Row,
-                        justifyContent: p._1.Between,
+                    })), c.createElement(g._2, null, c.createElement(g._35, {
+                        color: g.I.Alt2
+                    }, Object(_.d)("* All revenue values are estimated (in $USD)", "TeamsDashboard")))), c.createElement(g._2, {
+                        display: g.N.Flex,
+                        flexDirection: g.P.Row,
+                        justifyContent: g._1.Between,
                         margin: 2
-                    }, c.createElement(ke, {
+                    }, c.createElement(Ye, {
                         isLoading: e,
                         data: this.state.revenues,
-                        totalTitle: Object(m.d)("Total Revenue", "TeamsDashboard"),
+                        totalTitle: Object(_.d)("Total Revenue", "TeamsDashboard"),
                         summaryItemTitleSuffix: "*"
-                    })), c.createElement(p._25, {
+                    })), c.createElement(g._25, {
                         padding: 2,
-                        background: p.m.Base,
+                        background: g.m.Base,
                         borderTop: !0
-                    }, c.createElement(ve, {
+                    }, c.createElement(be, {
                         data: this.state.revenues
-                    }), c.createElement(p._2, {
-                        textAlign: p._36.Right
-                    }, c.createElement(p.u, {
+                    }), c.createElement(g._2, {
+                        textAlign: g._36.Right
+                    }, c.createElement(g.u, {
                         disabled: e,
                         "data-test-selector": "revenue-csv-button",
-                        icon: p._16.Download,
+                        icon: g._16.Download,
                         onClick: this.handleCSVClick
-                    }, Oe())))))
-                }, t = l.__decorate([Object(f.d)("RevenuePage", {
+                    }, je())))))
+                }, t = l.__decorate([Object(p.d)("RevenuePage", {
                     autoReportInteractive: !0,
-                    destination: _.a.TeamsDashboardRevenue
+                    destination: f.a.TeamsDashboardRevenue
                 })], t)
             }(c.Component),
-            Je = n("HW6M"),
-            Ve = {
+            Ve = n("HW6M"),
+            Ue = {
                 "side-nav-bar__option": !0,
                 "side-nav-bar__option--active": !0
             },
-            Ue = Object(f.d)("Navbar", {
+            Ge = Object(p.d)("Navbar", {
                 autoReportInteractive: !0
             })(function(e) {
                 var t = function(t) {
-                    return Je(e.page === t ? Ve : "side-nav-bar__option")
+                    return Ve(e.page === t ? Ue : "side-nav-bar__option")
                 };
-                return c.createElement(p._25, {
-                    display: p.N.Block,
+                return c.createElement(g._25, {
+                    display: g.N.Block,
                     className: "side-nav-bar",
                     fullHeight: !0,
                     borderRight: !0
-                }, c.createElement(p._2, {
+                }, c.createElement(g._2, {
                     padding: {
                         top: 2,
                         x: 2
@@ -17554,56 +17555,56 @@ webpackJsonp([36], {
                     margin: {
                         bottom: .5
                     }
-                }, c.createElement(p._35, {
-                    type: p._40.H4,
-                    fontSize: p.R.Size5
-                }, Object(m.d)("Team Dashboard", "TeamsDashboard"))), c.createElement("ul", null, c.createElement("li", null, c.createElement(p._0, {
-                    linkTo: "/teams/" + e.teamName + "/dashboard/" + v.Revenue,
+                }, c.createElement(g._35, {
+                    type: g._40.H4,
+                    fontSize: g.R.Size5
+                }, Object(_.d)("Team Dashboard", "TeamsDashboard"))), c.createElement("ul", null, c.createElement("li", null, c.createElement(g._0, {
+                    linkTo: "/teams/" + e.teamName + "/dashboard/" + b.Revenue,
                     "data-test-selector": "side-nav-revenue"
-                }, c.createElement(p._2, {
+                }, c.createElement(g._2, {
                     padding: {
                         x: 2,
                         y: .5
                     },
-                    className: t(v.Revenue)
-                }, C(v.Revenue)))), c.createElement("li", null, c.createElement(p._0, {
-                    linkTo: "/teams/" + e.teamName + "/dashboard/" + v.Stats,
+                    className: t(b.Revenue)
+                }, A(b.Revenue)))), c.createElement("li", null, c.createElement(g._0, {
+                    linkTo: "/teams/" + e.teamName + "/dashboard/" + b.Stats,
                     "data-test-selector": "side-nav-stats"
-                }, c.createElement(p._2, {
+                }, c.createElement(g._2, {
                     padding: {
                         x: 2,
                         y: .5
                     },
-                    className: t(v.Stats)
-                }, C(v.Stats)))), c.createElement("li", null, c.createElement(p._0, {
-                    linkTo: "/teams/" + e.teamName + "/dashboard/" + v.Members
-                }, c.createElement(p._2, {
+                    className: t(b.Stats)
+                }, A(b.Stats)))), c.createElement("li", null, c.createElement(g._0, {
+                    linkTo: "/teams/" + e.teamName + "/dashboard/" + b.Members
+                }, c.createElement(g._2, {
                     padding: {
                         x: 2,
                         y: .5
                     },
-                    className: t(v.Members)
-                }, C(v.Members)))), c.createElement("li", null, c.createElement(p._0, {
-                    linkTo: "/teams/" + e.teamName + "/dashboard/" + v.FeaturedChannels
-                }, c.createElement(p._2, {
+                    className: t(b.Members)
+                }, A(b.Members)))), c.createElement("li", null, c.createElement(g._0, {
+                    linkTo: "/teams/" + e.teamName + "/dashboard/" + b.FeaturedChannels
+                }, c.createElement(g._2, {
                     padding: {
                         x: 2,
                         y: .5
                     },
-                    className: t(v.FeaturedChannels)
-                }, C(v.FeaturedChannels)))), c.createElement("li", null, c.createElement(p._0, {
-                    linkTo: "/teams/" + e.teamName + "/dashboard/" + v.Settings
-                }, c.createElement(p._2, {
+                    className: t(b.FeaturedChannels)
+                }, A(b.FeaturedChannels)))), c.createElement("li", null, c.createElement(g._0, {
+                    linkTo: "/teams/" + e.teamName + "/dashboard/" + b.Settings
+                }, c.createElement(g._2, {
                     padding: {
                         x: 2,
                         y: .5
                     },
-                    className: t(v.Settings)
-                }, C(v.Settings))))))
+                    className: t(b.Settings)
+                }, A(b.Settings))))))
             }),
-            Ge = n("J8WN"),
-            qe = this,
-            Ke = function(e) {
+            qe = n("J8WN"),
+            Ke = this,
+            Ze = function(e) {
                 var t = e.team;
                 return {
                     name: t.name,
@@ -17614,13 +17615,13 @@ webpackJsonp([36], {
                     backgroundImageURL: t.background_image_url
                 }
             },
-            Ze = function() {
-                return l.__awaiter(qe, void 0, void 0, function() {
+            Xe = function() {
+                return l.__awaiter(Ke, void 0, void 0, function() {
                     var e;
                     return l.__generator(this, function(t) {
                         switch (t.label) {
                             case 0:
-                                return e = Ke, [4, l.__awaiter(qe, void 0, void 0, function() {
+                                return e = Ze, [4, l.__awaiter(Ke, void 0, void 0, function() {
                                     return l.__generator(this, function(e) {
                                         return [2, Promise.resolve({
                                             team: {
@@ -17646,8 +17647,8 @@ webpackJsonp([36], {
             };
         ! function(e) {
             e.Logo = "logoURL", e.Banner = "bannerURL", e.BackgroundImage = "backgroundImageURL"
-        }(be || (be = {}));
-        var Xe, Qe = function(e) {
+        }(Le || (Le = {}));
+        var Qe, $e = function(e) {
             function t(t) {
                 var n = e.call(this, t) || this;
                 return n.state = {
@@ -17667,7 +17668,7 @@ webpackJsonp([36], {
                     return l.__generator(this, function(t) {
                         switch (t.label) {
                             case 0:
-                                return [4, Ze()];
+                                return [4, Xe()];
                             case 1:
                                 return e = t.sent(), this.setState({
                                     team: e
@@ -17677,87 +17678,87 @@ webpackJsonp([36], {
                 })
             }, t.prototype.render = function() {
                 var e = this.state.team;
-                return c.createElement(D, {
-                    title: C(v.Settings),
+                return c.createElement(k, {
+                    title: A(b.Settings),
                     titleSelector: "settings-page-title"
-                }, c.createElement(p._2, {
+                }, c.createElement(g._2, {
                     className: "settings-page"
-                }, c.createElement(p._2, {
+                }, c.createElement(g._2, {
                     fullWidth: !0
-                }, c.createElement(p.S, {
-                    label: Object(m.d)("Display Name", "TeamsDashboard")
-                }, c.createElement(p.Y, {
-                    type: p.Z.Text,
+                }, c.createElement(g.S, {
+                    label: Object(_.d)("Display Name", "TeamsDashboard")
+                }, c.createElement(g.Y, {
+                    type: g.Z.Text,
                     value: e.displayName
-                }))), c.createElement(p._2, {
+                }))), c.createElement(g._2, {
                     margin: {
                         top: 2
                     },
                     fullWidth: !0
-                }, c.createElement(p.S, {
-                    label: Object(m.d)("Description", "TeamsDashboard"),
-                    hint: Object(m.d)("Supports most HTML", "TeamsDashboard")
-                }, c.createElement(p._37, {
+                }, c.createElement(g.S, {
+                    label: Object(_.d)("Description", "TeamsDashboard"),
+                    hint: Object(_.d)("Supports most HTML", "TeamsDashboard")
+                }, c.createElement(g._37, {
                     noResize: !0,
                     rows: 5,
                     value: e.description
-                }))), c.createElement(p._2, {
+                }))), c.createElement(g._2, {
                     margin: {
                         top: 2
                     }
-                }, c.createElement(p.S, {
-                    label: Object(m.d)("Logo", "TeamsDashboard"),
-                    hint: Object(m.d)("Square JPG or PNG at least 600x600px. Max 500 KB.", "TeamsDashboard")
-                }, c.createElement(p._2, {
+                }, c.createElement(g.S, {
+                    label: Object(_.d)("Logo", "TeamsDashboard"),
+                    hint: Object(_.d)("Square JPG or PNG at least 600x600px. Max 500 KB.", "TeamsDashboard")
+                }, c.createElement(g._2, {
                     className: "logo"
-                }, c.createElement(Ge.a, {
+                }, c.createElement(qe.a, {
                     allowedFileTypes: [".jpg", ".png"],
-                    onFilesSubmitted: this.onFilesSubmitted.bind(this, be.Logo)
-                }, this.filePickerChildrenGenerator(e.logoURL))))), c.createElement(p._2, {
+                    onFilesSubmitted: this.onFilesSubmitted.bind(this, Le.Logo)
+                }, this.filePickerChildrenGenerator(e.logoURL))))), c.createElement(g._2, {
                     margin: {
                         top: 2
                     }
-                }, c.createElement(p.S, {
-                    label: Object(m.d)("Banner", "TeamsDashboard"),
-                    hint: Object(m.d)("JPG or PNG at least 640x125px. Max 500 KB.", "TeamsDashboard")
-                }, c.createElement(p._2, {
+                }, c.createElement(g.S, {
+                    label: Object(_.d)("Banner", "TeamsDashboard"),
+                    hint: Object(_.d)("JPG or PNG at least 640x125px. Max 500 KB.", "TeamsDashboard")
+                }, c.createElement(g._2, {
                     fullWidth: !0,
                     className: "banner"
-                }, c.createElement(Ge.a, {
+                }, c.createElement(qe.a, {
                     allowedFileTypes: [".jpg", ".png"],
-                    onFilesSubmitted: this.onFilesSubmitted.bind(this, be.Banner)
-                }, this.filePickerChildrenGenerator(e.bannerURL))))), c.createElement(p._2, {
+                    onFilesSubmitted: this.onFilesSubmitted.bind(this, Le.Banner)
+                }, this.filePickerChildrenGenerator(e.bannerURL))))), c.createElement(g._2, {
                     margin: {
                         top: 2
                     }
-                }, c.createElement(p.S, {
-                    label: Object(m.d)("Background Image", "TeamsDashboard"),
-                    hint: Object(m.d)("JPG or PNG. Max 500 KB.", "TeamsDashboard")
-                }, c.createElement(p._2, {
+                }, c.createElement(g.S, {
+                    label: Object(_.d)("Background Image", "TeamsDashboard"),
+                    hint: Object(_.d)("JPG or PNG. Max 500 KB.", "TeamsDashboard")
+                }, c.createElement(g._2, {
                     fullWidth: !0,
                     className: "background-image"
-                }, c.createElement(Ge.a, {
+                }, c.createElement(qe.a, {
                     allowedFileTypes: [".jpg", ".png"],
-                    onFilesSubmitted: this.onFilesSubmitted.bind(this, be.BackgroundImage)
-                }, this.filePickerChildrenGenerator(e.backgroundImageURL))))), c.createElement(p._2, {
+                    onFilesSubmitted: this.onFilesSubmitted.bind(this, Le.BackgroundImage)
+                }, this.filePickerChildrenGenerator(e.backgroundImageURL))))), c.createElement(g._2, {
                     margin: {
                         top: 2
                     }
-                }, c.createElement(p.u, null, Object(m.d)("Save Changes", "TeamsDashboard")))))
+                }, c.createElement(g.u, null, Object(_.d)("Save Changes", "TeamsDashboard")))))
             }, t.prototype.filePickerChildrenGenerator = function(e) {
                 return e ? c.createElement("img", {
                     src: e
-                }) : c.createElement(p._2, {
-                    textAlign: p._36.Center
-                }, c.createElement(p._15, {
-                    asset: p._16.Upload,
-                    type: p._17.Alt2,
+                }) : c.createElement(g._2, {
+                    textAlign: g._36.Center
+                }, c.createElement(g._15, {
+                    asset: g._16.Upload,
+                    type: g._17.Alt2,
                     height: 36,
                     width: 36
-                }), c.createElement(p._35, {
-                    fontSize: p.R.Size6,
-                    color: p.I.Alt2
-                }, Object(m.d)("Choose a file", "TeamDashboard")))
+                }), c.createElement(g._35, {
+                    fontSize: g.R.Size6,
+                    color: g.I.Alt2
+                }, Object(_.d)("Choose a file", "TeamDashboard")))
             }, t.prototype.onFilesSubmitted = function(e, t) {
                 var n = this,
                     a = new FileReader;
@@ -17767,80 +17768,80 @@ webpackJsonp([36], {
                     });
                     var t
                 }, a.readAsDataURL(t[0])
-            }, t = l.__decorate([Object(f.d)("SettingsPage", {
+            }, t = l.__decorate([Object(p.d)("SettingsPage", {
                 autoReportInteractive: !0,
-                destination: _.a.TeamsDashboardRevenue
+                destination: f.a.TeamsDashboardRevenue
             })], t)
         }(c.Component);
         ! function(e) {
             e.AverageViewers = "AverageViewers", e.NewFollowers = "NewFollowers", e.AverageChatters = "AverageChatters", e.ChatMessages = "ChatMessages", e.AdBreakDuration = "AdBreakDuration", e.AdBreaks = "AdBreaks"
-        }(Xe || (Xe = {}));
-        var $e;
+        }(Qe || (Qe = {}));
+        var et;
         ! function(e) {
             e.Ads = "Ads", e.Audience = "Audience", e.Chat = "Chat"
-        }($e || ($e = {}));
-        var et, tt, nt = (et = {}, et[Xe.AverageViewers] = "concurrent_viewers", et[Xe.NewFollowers] = "follows", et[Xe.AverageChatters] = "chat_activities", et[Xe.ChatMessages] = "chat_activities", et[Xe.AdBreakDuration] = "commercials", et),
-            at = (tt = {}, tt[Xe.AverageViewers] = "line", tt[Xe.NewFollowers] = "line", tt[Xe.AverageChatters] = "bar", tt[Xe.ChatMessages] = "bar", tt[Xe.AdBreakDuration] = "bar", tt),
-            rt = function(e) {
-                switch (e) {
-                    case $e.Ads:
-                        return Object(m.d)("Ads", "TeamsDashboard");
-                    case $e.Audience:
-                        return Object(m.d)("Audience", "TeamsDashboard");
-                    case $e.Chat:
-                        return Object(m.d)("Chat", "TeamsDashboard");
-                    default:
-                        return ""
-                }
-            },
+        }(et || (et = {}));
+        var tt, nt, at = (tt = {}, tt[Qe.AverageViewers] = "concurrent_viewers", tt[Qe.NewFollowers] = "follows", tt[Qe.AverageChatters] = "chat_activities", tt[Qe.ChatMessages] = "chat_activities", tt[Qe.AdBreakDuration] = "commercials", tt),
+            rt = (nt = {}, nt[Qe.AverageViewers] = "line", nt[Qe.NewFollowers] = "line", nt[Qe.AverageChatters] = "bar", nt[Qe.ChatMessages] = "bar", nt[Qe.AdBreakDuration] = "bar", nt),
             it = function(e) {
                 switch (e) {
-                    case Xe.AverageViewers:
-                        return Object(m.d)("Avg. Viewers", "TeamsDashboard");
-                    case Xe.NewFollowers:
-                        return Object(m.d)("New Followers", "TeamsDashboard");
-                    case Xe.AverageChatters:
-                        return Object(m.d)("Avg. Chatters", "TeamsDashboard");
-                    case Xe.ChatMessages:
-                        return Object(m.d)("Chat Messages", "TeamsDashboard");
-                    case Xe.AdBreakDuration:
-                        return Object(m.d)("Ad Break Duration", "TeamsDashboard");
-                    case Xe.AdBreaks:
-                        return Object(m.d)("Ad Breaks", "TeamsDashboard");
+                    case et.Ads:
+                        return Object(_.d)("Ads", "TeamsDashboard");
+                    case et.Audience:
+                        return Object(_.d)("Audience", "TeamsDashboard");
+                    case et.Chat:
+                        return Object(_.d)("Chat", "TeamsDashboard");
                     default:
                         return ""
                 }
             },
             st = function(e) {
-                return c.createElement(p._2, {
+                switch (e) {
+                    case Qe.AverageViewers:
+                        return Object(_.d)("Avg. Viewers", "TeamsDashboard");
+                    case Qe.NewFollowers:
+                        return Object(_.d)("New Followers", "TeamsDashboard");
+                    case Qe.AverageChatters:
+                        return Object(_.d)("Avg. Chatters", "TeamsDashboard");
+                    case Qe.ChatMessages:
+                        return Object(_.d)("Chat Messages", "TeamsDashboard");
+                    case Qe.AdBreakDuration:
+                        return Object(_.d)("Ad Break Duration", "TeamsDashboard");
+                    case Qe.AdBreaks:
+                        return Object(_.d)("Ad Breaks", "TeamsDashboard");
+                    default:
+                        return ""
+                }
+            },
+            ot = function(e) {
+                return c.createElement(g._2, {
                     className: "metric-select-menu"
-                }, c.createElement(p._21, {
+                }, c.createElement(g._21, {
                     disabled: e.isDisabled,
                     value: "" + e.metric,
                     onChange: function(t) {
                         e.onChange(t.target.value)
                     }
                 }, c.createElement("optgroup", {
-                    label: rt($e.Ads)
+                    label: it(et.Ads)
                 }, c.createElement("option", {
-                    value: Xe.AdBreakDuration
-                }, it(Xe.AdBreakDuration))), c.createElement("optgroup", {
-                    label: rt($e.Audience)
+                    value: Qe.AdBreakDuration
+                }, st(Qe.AdBreakDuration))), c.createElement("optgroup", {
+                    label: it(et.Audience)
                 }, c.createElement("option", {
-                    value: Xe.AverageViewers
-                }, it(Xe.AverageViewers)), c.createElement("option", {
-                    value: Xe.NewFollowers
-                }, it(Xe.NewFollowers))), c.createElement("optgroup", {
-                    label: rt($e.Chat)
+                    value: Qe.AverageViewers
+                }, st(Qe.AverageViewers)), c.createElement("option", {
+                    value: Qe.NewFollowers
+                }, st(Qe.NewFollowers))), c.createElement("optgroup", {
+                    label: it(et.Chat)
                 }, c.createElement("option", {
-                    value: Xe.AverageChatters
-                }, it(Xe.AverageChatters)), c.createElement("option", {
-                    value: Xe.ChatMessages
-                }, it(Xe.ChatMessages)))))
+                    value: Qe.AverageChatters
+                }, st(Qe.AverageChatters)), c.createElement("option", {
+                    value: Qe.ChatMessages
+                }, st(Qe.ChatMessages)))))
             },
-            ot = 800,
-            dt = 380,
-            ut = function(e) {
+            dt = 800,
+            ut = 380,
+            lt = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -17852,7 +17853,7 @@ webpackJsonp([36], {
                     this.myChart && this.props.chartData.chartType === e.chartData.chartType ? this.updateChartData(e.chartData) : this.rebuildChart(e)
                 }, t.prototype.render = function() {
                     var e = this;
-                    return c.createElement(p.W, {
+                    return c.createElement(g.W, {
                         flexGrow: 0,
                         flexShrink: 1,
                         fullWidth: !0
@@ -17863,7 +17864,7 @@ webpackJsonp([36], {
                     }))
                 }, t.prototype.rebuildChart = function(e) {
                     var t = this;
-                    this.myChart && this.myChart.destroy(), this.setCanvasResolution(), this.myChart = new he(this.canvas, {
+                    this.myChart && this.myChart.destroy(), this.setCanvasResolution(), this.myChart = new me(this.canvas, {
                         type: e.chartData.chartType,
                         data: {
                             datasets: [{
@@ -17895,17 +17896,17 @@ webpackJsonp([36], {
                                             a = e[0];
                                         return t && t.labels && (n = t.labels[a.index || 0]),
                                             function(e) {
-                                                var t = de(e);
-                                                return Object(m.c)(e, {
+                                                var t = ue(e);
+                                                return Object(_.c)(e, {
                                                     weekday: "short",
                                                     year: "numeric",
                                                     month: "short",
                                                     day: "numeric",
                                                     timeZone: "UTC"
-                                                }) + " | " + Object(m.c)(e, {
+                                                }) + " | " + Object(_.c)(e, {
                                                     hour: "numeric",
                                                     timeZone: "UTC"
-                                                }) + " - " + Object(m.c)(t, {
+                                                }) + " - " + Object(_.c)(t, {
                                                     hour: "numeric",
                                                     timeZone: "UTC"
                                                 }) + " (4h)"
@@ -17939,7 +17940,7 @@ webpackJsonp([36], {
                                         callback: function(e) {
                                             var t = new Date(e);
                                             return 0 === t.getUTCHours() ? function(e) {
-                                                return Object(m.c)(e, {
+                                                return Object(_.c)(e, {
                                                     weekday: "short",
                                                     month: "short",
                                                     day: "numeric",
@@ -17967,17 +17968,17 @@ webpackJsonp([36], {
                 }, t.prototype.updateChartData = function(e) {
                     this.myChart.data.datasets && (this.myChart.data.labels = e.timeLabels, this.myChart.data.datasets[0].label = e.chartLabel, this.myChart.data.datasets[0].data = e.data, this.myChart.update())
                 }, t.prototype.setCanvasResolution = function() {
-                    var e = ot,
-                        t = dt,
-                        n = lt(this.canvas.getContext("2d"));
+                    var e = dt,
+                        t = ut,
+                        n = ct(this.canvas.getContext("2d"));
                     this.canvas.width = e * n, this.canvas.height = t * n, this.canvas.style.width = e + "px", this.canvas.style.height = t + "px", this.canvas.getContext("2d").setTransform(n, 0, 0, n, 0, 0)
-                }, t = l.__decorate([Object(f.d)("StatsCanvas")], t)
+                }, t = l.__decorate([Object(p.d)("StatsCanvas")], t)
             }(c.Component),
-            lt = function(e) {
+            ct = function(e) {
                 return 1 / (e.webkitBackingStorePixelRatio || e.mozBackingStorePixelRatio || e.msBackingStorePixelRatio || e.oBackingStorePixelRatio || e.backingStorePixelRatio || 1)
             },
-            ct = ut,
-            ht = function(e) {
+            ht = lt,
+            mt = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -17986,8 +17987,8 @@ webpackJsonp([36], {
                         t = e.data,
                         n = e.dataType,
                         a = {
-                            chartType: at[n],
-                            chartLabel: it(n),
+                            chartType: rt[n],
+                            chartLabel: st(n),
                             timeLabels: Object.keys(t).sort(function(e, t) {
                                 return e.localeCompare(t, void 0, {
                                     numeric: !0
@@ -17998,27 +17999,27 @@ webpackJsonp([36], {
                             dataFooters: []
                         };
                     switch (n) {
-                        case Xe.AverageViewers:
-                        case Xe.ChatMessages:
-                        case Xe.AverageChatters:
+                        case Qe.AverageViewers:
+                        case Qe.ChatMessages:
+                        case Qe.AverageChatters:
                             a.data = a.timeLabels.map(function(e) {
                                 return t[e].count
                             }), a.dataLabels = a.data.map(function(e) {
                                 return "" + Math.floor(e)
                             }), a.dataFooters = Array(a.data.length).fill("");
                             break;
-                        case Xe.AdBreakDuration:
+                        case Qe.AdBreakDuration:
                             a.data = a.timeLabels.map(function(e) {
                                 return t[e].count
                             }), a.dataLabels = a.data.map(function(e) {
-                                return re(e)
+                                return ie(e)
                             }), a.dataFooters = a.timeLabels.map(function(e) {
-                                return Object(m.d)("{adBreakCount, plural, one {# Ad Break} other {# Ad Breaks}}", {
+                                return Object(_.d)("{adBreakCount, plural, one {# Ad Break} other {# Ad Breaks}}", {
                                     adBreakCount: t[e].numberOfDatapoints
                                 }, "TeamsDashboard")
                             });
                             break;
-                        case Xe.NewFollowers:
+                        case Qe.NewFollowers:
                             a.data = a.timeLabels.reduce(function(e, n) {
                                 return e.push(t[n].count + (e.length ? e[e.length - 1] : 0)), e
                             }, []), a.dataLabels = a.data.map(function(e) {
@@ -18028,94 +18029,94 @@ webpackJsonp([36], {
                         default:
                             throw new Error("Data type: " + n + " is unrecognized")
                     }
-                    return c.createElement(ct, {
+                    return c.createElement(ht, {
                         chartData: a
                     })
                 }, t
             }(c.PureComponent),
-            mt = function(e) {
-                var t = e.columnName;
-                return c.createElement(p.U, null, c.createElement(p.J, {
-                    cols: {
-                        default: 4
-                    }
-                }), c.createElement(p.J, {
-                    cols: {
-                        default: 4
-                    }
-                }, c.createElement(p._35, {
-                    bold: !0
-                }, t)), c.createElement(p.J, {
-                    cols: {
-                        default: 2
-                    }
-                }, c.createElement(p._35, {
-                    bold: !0
-                }, Object(m.d)("Views", "TeamsDashboard"))), c.createElement(p.J, {
-                    cols: {
-                        default: 2
-                    }
-                }, c.createElement(p._35, {
-                    bold: !0
-                }, Object(m.d)("Percent", "TeamsDashboard"))))
-            },
             _t = function(e) {
-                var t = e.rowContent;
-                return c.createElement(p.U, null, c.createElement(p.J, {
+                var t = e.columnName;
+                return c.createElement(g.U, null, c.createElement(g.J, {
                     cols: {
                         default: 4
                     }
-                }, c.createElement(p._2, {
+                }), c.createElement(g.J, {
+                    cols: {
+                        default: 4
+                    }
+                }, c.createElement(g._35, {
+                    bold: !0
+                }, t)), c.createElement(g.J, {
+                    cols: {
+                        default: 2
+                    }
+                }, c.createElement(g._35, {
+                    bold: !0
+                }, Object(_.d)("Views", "TeamsDashboard"))), c.createElement(g.J, {
+                    cols: {
+                        default: 2
+                    }
+                }, c.createElement(g._35, {
+                    bold: !0
+                }, Object(_.d)("Percent", "TeamsDashboard"))))
+            },
+            ft = function(e) {
+                var t = e.rowContent;
+                return c.createElement(g.U, null, c.createElement(g.J, {
+                    cols: {
+                        default: 4
+                    }
+                }, c.createElement(g._2, {
                     fullHeight: !0,
-                    display: p.N.Flex,
-                    alignItems: p.c.Center
-                }, c.createElement(p._12, {
+                    display: g.N.Flex,
+                    alignItems: g.c.Center
+                }, c.createElement(g._12, {
                     value: t.percent,
                     mask: !0
-                }))), c.createElement(p.J, {
+                }))), c.createElement(g.J, {
                     cols: {
                         default: 4
                     }
-                }, c.createElement(p._35, {
+                }, c.createElement(g._35, {
                     ellipsis: !0
-                }, t.name)), c.createElement(p.J, {
+                }, t.name)), c.createElement(g.J, {
                     cols: {
                         default: 2
                     }
-                }, c.createElement(p._35, null, Object(m.e)(t.views))), c.createElement(p.J, {
+                }, c.createElement(g._35, null, Object(_.e)(t.views))), c.createElement(g.J, {
                     cols: {
                         default: 2
                     }
-                }, c.createElement(p._35, null, Object(m.e)(t.percent), "%")))
+                }, c.createElement(g._35, null, Object(_.e)(t.percent), "%")))
             },
-            ft = function(e, t, n, a) {
-                return 0 === e.length ? gt() : a && 1 === e.length ? yt(e[0].name) : Mt(e, n, t)
+            pt = function(e, t, n, a) {
+                return 0 === e.length ? yt() : a && 1 === e.length ? Mt(e[0].name) : vt(e, n, t)
             },
-            pt = function(e, t) {
-                return t > 10 ? Object(m.d)("{tableName} (Top 10)", {
+            gt = function(e, t) {
+                return t > 10 ? Object(_.d)("{tableName} (Top 10)", {
                     tableName: e
-                }, "TeamsDashboard") : t > 1 ? Object(m.d)("{tableName} (All)", {
+                }, "TeamsDashboard") : t > 1 ? Object(_.d)("{tableName} (All)", {
                     tableName: e
-                }, "TeamsDashboard") : Object(m.d)("{tableName}", {
+                }, "TeamsDashboard") : Object(_.d)("{tableName}", {
                     tableName: e
                 }, "TeamsDashboard")
             },
-            gt = function() {
-                return c.createElement(p._35, {
-                    color: p.I.Alt2
-                }, Object(m.d)("Not enough data for us to display", "TeamsDashboard"))
+            yt = function() {
+                return c.createElement(g._35, {
+                    color: g.I.Alt2
+                }, Object(_.d)("Not enough data for us to display", "TeamsDashboard"))
             },
-            yt = function(e) {
-                return c.createElement(p._35, null, Object(m.d)("The top viewer location was {name}", {
+            Mt = function(e) {
+                return c.createElement(g._35, null, Object(_.d)("The top viewer location was {name}", {
                     name: e
                 }, "TeamsDashboard"))
             },
-            Mt = function(e, t, n) {
+            vt = function(e, t, n) {
                 var a = e.slice(0, 10).map(function(e, t) {
                     var a = e.name,
                         r = e.views,
                         i = Math.round(r / n * 100);
-                    return c.createElement(_t, {
+                    return c.createElement(ft, {
                         key: t,
                         rowContent: {
                             name: a,
@@ -18124,117 +18125,117 @@ webpackJsonp([36], {
                         }
                     })
                 });
-                return c.createElement(p._2, null, c.createElement(mt, {
+                return c.createElement(g._2, null, c.createElement(_t, {
                     columnName: t
                 }), a)
             },
-            vt = function(e) {
+            bt = function(e) {
                 var t, n = e.rowData.reduce(function(e, t) {
                         return e + t.views
                     }, 0),
                     a = e.rowData.sort(function(e, t) {
                         return t.views - e.views || e.name.localeCompare(t.name)
                     });
-                t = e.isLoading ? c.createElement(p._8, {
+                t = e.isLoading ? c.createElement(g._8, {
                     width: 180
-                }) : pt(e.tableName, a.length);
+                }) : gt(e.tableName, a.length);
                 var r;
-                return r = e.isLoading ? c.createElement(p._2, null, c.createElement(p._35, null, c.createElement(p._8, null)), c.createElement(p._35, null, c.createElement(p._8, null))) : ft(a, n, e.columnName, e.isGeo), c.createElement(p._2, {
-                    display: p.N.Flex,
-                    flexDirection: p.P.Column,
+                return r = e.isLoading ? c.createElement(g._2, null, c.createElement(g._35, null, c.createElement(g._8, null)), c.createElement(g._35, null, c.createElement(g._8, null))) : pt(a, n, e.columnName, e.isGeo), c.createElement(g._2, {
+                    display: g.N.Flex,
+                    flexDirection: g.P.Column,
                     padding: 2,
                     className: "table",
-                    flexWrap: p.Q.NoWrap,
+                    flexWrap: g.Q.NoWrap,
                     fullWidth: !0
-                }, c.createElement(p._2, {
+                }, c.createElement(g._2, {
                     margin: {
                         bottom: 1
                     }
-                }, c.createElement(p._35, {
-                    type: p._40.H4
+                }, c.createElement(g._35, {
+                    type: g._40.H4
                 }, t)), r)
             },
-            bt = Object(m.d)("Referrer", "TeamsDashboard"),
-            Lt = function(e) {
-                var t = Object(m.d)("Views by Referrer", "TeamsDashboard"),
+            Lt = Object(_.d)("Referrer", "TeamsDashboard"),
+            Dt = function(e) {
+                var t = Object(_.d)("Views by Referrer", "TeamsDashboard"),
                     n = "";
-                return e.internalReferral && e.internalReferral.length && (t = Object(m.d)("Views from Outside Twitch", "TeamsDashboard"), n = c.createElement(p._25, {
-                    display: p.N.Flex,
+                return e.internalReferral && e.internalReferral.length && (t = Object(_.d)("Views from Outside Twitch", "TeamsDashboard"), n = c.createElement(g._25, {
+                    display: g.N.Flex,
                     flexGrow: 1,
                     borderBottom: !0,
                     borderLeft: !0
-                }, c.createElement(vt, {
+                }, c.createElement(bt, {
                     isLoading: e.isLoading,
-                    tableName: Object(m.d)("Views from Twitch", "TeamsDashboard"),
-                    columnName: bt,
+                    tableName: Object(_.d)("Views from Twitch", "TeamsDashboard"),
+                    columnName: Lt,
                     rowData: e.internalReferral
-                }))), c.createElement(p._25, {
+                }))), c.createElement(g._25, {
                     className: "all-tables-wrapper",
-                    display: p.N.Flex,
-                    flexDirection: p.P.Row,
+                    display: g.N.Flex,
+                    flexDirection: g.P.Row,
                     borderTop: !0
-                }, c.createElement(p._2, {
-                    display: p.N.Flex,
+                }, c.createElement(g._2, {
+                    display: g.N.Flex,
                     flexGrow: 1,
-                    flexDirection: p.P.Column,
-                    flexWrap: p.Q.NoWrap
-                }, c.createElement(p._25, {
-                    display: p.N.Flex,
+                    flexDirection: g.P.Column,
+                    flexWrap: g.Q.NoWrap
+                }, c.createElement(g._25, {
+                    display: g.N.Flex,
                     flexGrow: 1,
                     borderBottom: !0
-                }, c.createElement(vt, {
+                }, c.createElement(bt, {
                     isLoading: e.isLoading,
-                    tableName: Object(m.d)("Views by Location", "TeamsDashboard"),
-                    columnName: Object(m.d)("Location", "TeamsDashboard"),
+                    tableName: Object(_.d)("Views by Location", "TeamsDashboard"),
+                    columnName: Object(_.d)("Location", "TeamsDashboard"),
                     rowData: e.geographical,
                     isGeo: !0
-                })), c.createElement(p._25, {
-                    display: p.N.Flex,
+                })), c.createElement(g._25, {
+                    display: g.N.Flex,
                     flexGrow: 1
-                }, c.createElement(vt, {
+                }, c.createElement(bt, {
                     isLoading: e.isLoading,
-                    tableName: Object(m.d)("Views by Platform", "TeamsDashboard"),
-                    columnName: Object(m.d)("Platform", "TeamsDashboard"),
+                    tableName: Object(_.d)("Views by Platform", "TeamsDashboard"),
+                    columnName: Object(_.d)("Platform", "TeamsDashboard"),
                     rowData: e.platform
-                }))), c.createElement(p._2, {
-                    display: p.N.Flex,
+                }))), c.createElement(g._2, {
+                    display: g.N.Flex,
                     flexGrow: 1,
-                    flexDirection: p.P.Column,
-                    flexWrap: p.Q.NoWrap
-                }, n, c.createElement(p._25, {
-                    display: p.N.Flex,
+                    flexDirection: g.P.Column,
+                    flexWrap: g.Q.NoWrap
+                }, n, c.createElement(g._25, {
+                    display: g.N.Flex,
                     flexGrow: 1,
                     borderLeft: !0
-                }, c.createElement(vt, {
+                }, c.createElement(bt, {
                     isLoading: e.isLoading,
                     tableName: t,
-                    columnName: bt,
+                    columnName: Lt,
                     rowData: e.externalReferral
                 }))))
             },
-            Dt = this,
-            kt = {
+            kt = this,
+            Yt = {
                 geographical: [],
                 platform: [],
                 internalReferral: [],
                 externalReferral: []
             },
-            Yt = function(e, t, n, a) {
-                return l.__awaiter(Dt, void 0, void 0, function() {
+            wt = function(e, t, n, a) {
+                return l.__awaiter(kt, void 0, void 0, function() {
                     var r, i, s, o;
                     return l.__generator(this, function(d) {
                         switch (d.label) {
                             case 0:
-                                return r = kt, t.length < 1 ? [2, r] : (i = t.join(","), s = "/v5/teams/" + e + "/stats/video_play_demographics?channel_ids=" + i + "&start_time=" + n + "&end_time=" + a, [4, Object(K.d)({
+                                return r = Yt, t.length < 1 ? [2, r] : (i = t.join(","), s = "/v5/teams/" + e + "/stats/video_play_demographics?channel_ids=" + i + "&start_time=" + n + "&end_time=" + a, [4, Object(Z.d)({
                                     path: s
                                 })]);
                             case 1:
-                                return o = d.sent(), [2, o.body ? wt(o.body) : r]
+                                return o = d.sent(), [2, o.body ? xt(o.body) : r]
                         }
                     })
                 })
             },
-            wt = function(e) {
+            xt = function(e) {
                 for (var t = e.video_play_demographics, n = {
                         geographical: [],
                         platform: [],
@@ -18250,125 +18251,125 @@ webpackJsonp([36], {
                 for (var o = 0, d = Object.keys(t.platform); o < d.length; o++) {
                     s = d[o];
                     n.platform.push({
-                        name: Tt(s),
+                        name: St(s),
                         views: t.platform[s]
                     })
                 }
                 for (var u = 0, l = Object.keys(t.referrer.internal); u < l.length; u++) {
                     s = l[u];
                     n.internalReferral.push({
-                        name: St(s),
+                        name: Ot(s),
                         views: t.referrer.internal[s]
                     })
                 }
                 for (var c = 0, h = Object.keys(t.referrer.external); c < h.length; c++) {
                     s = h[c];
                     n.externalReferral.push({
-                        name: Ot(s),
+                        name: jt(s),
                         views: t.referrer.external[s]
                     })
                 }
                 return n
             },
-            xt = Object(m.d)("Other", "TeamsDashboard"),
-            Tt = function(e) {
-                return {
-                    unknown: Object(m.d)("Unknown", "TeamsDashboard"),
-                    tv: Object(m.d)("TV", "TeamsDashboard"),
-                    ios: Object(m.d)("iOS App", "TeamsDashboard"),
-                    web: Object(m.d)("Web", "TeamsDashboard"),
-                    android: Object(m.d)("Android App", "TeamsDashboard"),
-                    mobile_web: Object(m.d)("Mobile Web", "TeamsDashboard"),
-                    mobile_aggregated: Object(m.d)("Mobile", "TeamsDashboard"),
-                    console: Object(m.d)("Console", "TeamsDashboard"),
-                    other: xt
-                }[e] || e
-            },
+            Tt = Object(_.d)("Other", "TeamsDashboard"),
             St = function(e) {
                 return {
-                    other: xt,
-                    front_page_featured: Object(m.d)("Featured Section - Front Page", "TeamsDashboard"),
-                    creative_page_featured: Object(m.d)("Featured Section - Creative Page", "TeamsDashboard"),
-                    hosted: Object(m.d)("Hosts", "TeamsDashboard"),
-                    email_live_notification: Object(m.d)("Notifications - Email", "TeamsDashboard"),
-                    onsite_notification: Object(m.d)("Notifications - Onsite", "TeamsDashboard"),
-                    followed_channel: Object(m.d)("Followers", "TeamsDashboard"),
-                    directory_browse: Object(m.d)("Browse Page", "TeamsDashboard"),
-                    search: Object(m.d)("Searches", "TeamsDashboard"),
-                    clips_live: Object(m.d)("Clips", "TeamsDashboard"),
-                    friend_presence: Object(m.d)("Friends", "TeamsDashboard"),
-                    top_nav_bar: Object(m.d)("Your Channel Page", "TeamsDashboard"),
-                    recommended_channel: Object(m.d)("Recommendations", "TeamsDashboard"),
-                    other_channel_page: Object(m.d)("Other Channel Page", "TeamsDashboard")
-                }[e] || Object(m.d)("{name}'s Channel Page", {
+                    unknown: Object(_.d)("Unknown", "TeamsDashboard"),
+                    tv: Object(_.d)("TV", "TeamsDashboard"),
+                    ios: Object(_.d)("iOS App", "TeamsDashboard"),
+                    web: Object(_.d)("Web", "TeamsDashboard"),
+                    android: Object(_.d)("Android App", "TeamsDashboard"),
+                    mobile_web: Object(_.d)("Mobile Web", "TeamsDashboard"),
+                    mobile_aggregated: Object(_.d)("Mobile", "TeamsDashboard"),
+                    console: Object(_.d)("Console", "TeamsDashboard"),
+                    other: Tt
+                }[e] || e
+            },
+            Ot = function(e) {
+                return {
+                    other: Tt,
+                    front_page_featured: Object(_.d)("Featured Section - Front Page", "TeamsDashboard"),
+                    creative_page_featured: Object(_.d)("Featured Section - Creative Page", "TeamsDashboard"),
+                    hosted: Object(_.d)("Hosts", "TeamsDashboard"),
+                    email_live_notification: Object(_.d)("Notifications - Email", "TeamsDashboard"),
+                    onsite_notification: Object(_.d)("Notifications - Onsite", "TeamsDashboard"),
+                    followed_channel: Object(_.d)("Followers", "TeamsDashboard"),
+                    directory_browse: Object(_.d)("Browse Page", "TeamsDashboard"),
+                    search: Object(_.d)("Searches", "TeamsDashboard"),
+                    clips_live: Object(_.d)("Clips", "TeamsDashboard"),
+                    friend_presence: Object(_.d)("Friends", "TeamsDashboard"),
+                    top_nav_bar: Object(_.d)("Your Channel Page", "TeamsDashboard"),
+                    recommended_channel: Object(_.d)("Recommendations", "TeamsDashboard"),
+                    other_channel_page: Object(_.d)("Other Channel Page", "TeamsDashboard")
+                }[e] || Object(_.d)("{name}'s Channel Page", {
                     name: e
                 }, "TeamsDashboard")
             },
-            Ot = function(e) {
+            jt = function(e) {
                 return (t = {
-                    facebook: Object(m.d)("Facebook", "TeamsDashboard"),
-                    google: Object(m.d)("Google", "TeamsDashboard"),
-                    reddit: Object(m.d)("Reddit", "TeamsDashboard"),
-                    youtube: Object(m.d)("Youtube", "TeamsDashboard")
-                }, t["t.co"] = Object(m.d)("Twitter", "TeamsDashboard"), t.unknown = Object(m.d)("Direct/Unknown", "TeamsDashboard"), t.twitch_aggregate = Object(m.d)("Twitch", "TeamsDashboard"), t.external_aggregate = Object(m.d)("External", "TeamsDashboard"), t)[e] || e;
+                    facebook: Object(_.d)("Facebook", "TeamsDashboard"),
+                    google: Object(_.d)("Google", "TeamsDashboard"),
+                    reddit: Object(_.d)("Reddit", "TeamsDashboard"),
+                    youtube: Object(_.d)("Youtube", "TeamsDashboard")
+                }, t["t.co"] = Object(_.d)("Twitter", "TeamsDashboard"), t.unknown = Object(_.d)("Direct/Unknown", "TeamsDashboard"), t.twitch_aggregate = Object(_.d)("Twitch", "TeamsDashboard"), t.external_aggregate = Object(_.d)("External", "TeamsDashboard"), t)[e] || e;
                 var t
             },
-            jt = this,
-            Ht = function(e, t, n, a, r) {
-                return l.__awaiter(jt, void 0, void 0, function() {
+            Ht = this,
+            Pt = function(e, t, n, a, r) {
+                return l.__awaiter(Ht, void 0, void 0, function() {
                     var i, s, o, d, u, c, h;
                     return l.__generator(this, function(l) {
                         switch (l.label) {
                             case 0:
                                 if (0 === n.length) return [2, Promise.resolve({})];
-                                switch (i = "/v5/teams/" + t + "/stats/" + nt[e] + "?channel_ids=" + n + "&start_time=" + a + "&end_time=" + r, e) {
-                                    case Xe.AverageViewers:
+                                switch (i = "/v5/teams/" + t + "/stats/" + at[e] + "?channel_ids=" + n + "&start_time=" + a + "&end_time=" + r, e) {
+                                    case Qe.AverageViewers:
                                         return [3, 1];
-                                    case Xe.NewFollowers:
+                                    case Qe.NewFollowers:
                                         return [3, 3];
-                                    case Xe.AverageChatters:
+                                    case Qe.AverageChatters:
                                         return [3, 5];
-                                    case Xe.ChatMessages:
+                                    case Qe.ChatMessages:
                                         return [3, 7];
-                                    case Xe.AdBreakDuration:
+                                    case Qe.AdBreakDuration:
                                         return [3, 9]
                                 }
                                 return [3, 11];
                             case 1:
-                                return o = Wt, [4, Pt(i)];
+                                return o = It, [4, Ct(i)];
                             case 2:
-                                return s = o.apply(void 0, [l.sent(), a, r, Nt]), [3, 12];
+                                return s = o.apply(void 0, [l.sent(), a, r, Rt]), [3, 12];
                             case 3:
-                                return d = Wt, [4, At(i)];
+                                return d = It, [4, Ft(i)];
                             case 4:
-                                return s = d.apply(void 0, [l.sent(), a, r, Rt]), [3, 12];
+                                return s = d.apply(void 0, [l.sent(), a, r, zt]), [3, 12];
                             case 5:
-                                return u = Wt, [4, Ct(i)];
+                                return u = It, [4, At(i)];
                             case 6:
-                                return s = u.apply(void 0, [l.sent(), a, r, zt]), [3, 12];
+                                return s = u.apply(void 0, [l.sent(), a, r, Bt]), [3, 12];
                             case 7:
-                                return c = Wt, [4, Ct(i)];
+                                return c = It, [4, At(i)];
                             case 8:
-                                return s = c.apply(void 0, [l.sent(), a, r, Bt]), [3, 12];
+                                return s = c.apply(void 0, [l.sent(), a, r, Jt]), [3, 12];
                             case 9:
-                                return h = It, [4, Ft(i)];
+                                return h = Nt, [4, Et(i)];
                             case 10:
-                                return s = h.apply(void 0, [l.sent(), a, r, Jt]), [3, 12];
+                                return s = h.apply(void 0, [l.sent(), a, r, Vt]), [3, 12];
                             case 11:
                                 throw new Error("fetch type is not in StatsMetric enum");
                             case 12:
-                                return [2, Et(s)]
+                                return [2, Wt(s)]
                         }
                     })
                 })
             },
-            Pt = function(e) {
-                return l.__awaiter(jt, void 0, void 0, function() {
+            Ct = function(e) {
+                return l.__awaiter(Ht, void 0, void 0, function() {
                     var t;
                     return l.__generator(this, function(n) {
                         switch (n.label) {
                             case 0:
-                                return [4, Object(K.d)({
+                                return [4, Object(Z.d)({
                                     path: e
                                 })];
                             case 1:
@@ -18377,13 +18378,13 @@ webpackJsonp([36], {
                     })
                 })
             },
-            Ct = function(e) {
-                return l.__awaiter(jt, void 0, void 0, function() {
+            At = function(e) {
+                return l.__awaiter(Ht, void 0, void 0, function() {
                     var t;
                     return l.__generator(this, function(n) {
                         switch (n.label) {
                             case 0:
-                                return [4, Object(K.d)({
+                                return [4, Object(Z.d)({
                                     path: e
                                 })];
                             case 1:
@@ -18392,13 +18393,13 @@ webpackJsonp([36], {
                     })
                 })
             },
-            At = function(e) {
-                return l.__awaiter(jt, void 0, void 0, function() {
+            Ft = function(e) {
+                return l.__awaiter(Ht, void 0, void 0, function() {
                     var t;
                     return l.__generator(this, function(n) {
                         switch (n.label) {
                             case 0:
-                                return [4, Object(K.d)({
+                                return [4, Object(Z.d)({
                                     path: e
                                 })];
                             case 1:
@@ -18407,13 +18408,13 @@ webpackJsonp([36], {
                     })
                 })
             },
-            Ft = function(e) {
-                return l.__awaiter(jt, void 0, void 0, function() {
+            Et = function(e) {
+                return l.__awaiter(Ht, void 0, void 0, function() {
                     var t;
                     return l.__generator(this, function(n) {
                         switch (n.label) {
                             case 0:
-                                return [4, Object(K.d)({
+                                return [4, Object(Z.d)({
                                     path: e
                                 })];
                             case 1:
@@ -18422,7 +18423,7 @@ webpackJsonp([36], {
                     })
                 })
             },
-            Et = function(e) {
+            Wt = function(e) {
                 for (var t = {}, n = 0, a = Object.keys(e); n < a.length; n++)
                     for (var r = 0, i = e[a[n]]; r < i.length; r++) {
                         var s = i[r],
@@ -18436,13 +18437,6 @@ webpackJsonp([36], {
                     }
                 return t
             },
-            Wt = function(e, t, n, a) {
-                for (var r = {}, i = 0, s = Object.keys(e); i < s.length; i++) {
-                    var o = s[i];
-                    r[o] = a(t, n, e[o])
-                }
-                return r
-            },
             It = function(e, t, n, a) {
                 for (var r = {}, i = 0, s = Object.keys(e); i < s.length; i++) {
                     var o = s[i];
@@ -18450,14 +18444,21 @@ webpackJsonp([36], {
                 }
                 return r
             },
-            Nt = function(e, t, n) {
-                for (var a = Vt(e, t).map(function(e) {
+            Nt = function(e, t, n, a) {
+                for (var r = {}, i = 0, s = Object.keys(e); i < s.length; i++) {
+                    var o = s[i];
+                    r[o] = a(t, n, e[o])
+                }
+                return r
+            },
+            Rt = function(e, t, n) {
+                for (var a = Ut(e, t).map(function(e) {
                         return l.__assign({}, e, {
                             sampleSize: 0
                         })
                     }), r = function(e, t) {
                         var n = a.find(function(t) {
-                            return t.timestamp === Ut(e)
+                            return t.timestamp === Gt(e)
                         });
                         n && 0 !== t && (n.count += t, n.sampleSize += 1)
                     }, i = 0, s = n; i < s.length; i++) {
@@ -18472,10 +18473,10 @@ webpackJsonp([36], {
                     }
                 })
             },
-            Rt = function(e, t, n) {
-                for (var a = Vt(e, t), r = function(e, t) {
+            zt = function(e, t, n) {
+                for (var a = Ut(e, t), r = function(e, t) {
                         var n = a.find(function(t) {
-                            return t.timestamp === Ut(e)
+                            return t.timestamp === Gt(e)
                         });
                         n && (n.count += t)
                     }, i = 0, s = n; i < s.length; i++) {
@@ -18484,14 +18485,14 @@ webpackJsonp([36], {
                 }
                 return a
             },
-            zt = function(e, t, n) {
-                for (var a = Vt(e, t).map(function(e) {
+            Bt = function(e, t, n) {
+                for (var a = Ut(e, t).map(function(e) {
                         return l.__assign({}, e, {
                             sampleSize: 0
                         })
                     }), r = function(e, t) {
                         var n = a.find(function(t) {
-                            return t.timestamp === Ut(e)
+                            return t.timestamp === Gt(e)
                         });
                         n && 0 !== t && (n.count += t, n.sampleSize += 1)
                     }, i = 0, s = n; i < s.length; i++) {
@@ -18506,10 +18507,10 @@ webpackJsonp([36], {
                     }
                 })
             },
-            Bt = function(e, t, n) {
-                for (var a = Vt(e, t), r = function(e, t) {
+            Jt = function(e, t, n) {
+                for (var a = Ut(e, t), r = function(e, t) {
                         var n = a.find(function(t) {
-                            return t.timestamp === Ut(e)
+                            return t.timestamp === Gt(e)
                         });
                         n && (n.count += t)
                     }, i = 0, s = n; i < s.length; i++) {
@@ -18518,10 +18519,10 @@ webpackJsonp([36], {
                 }
                 return a
             },
-            Jt = function(e, t, n) {
-                for (var a = Vt(e, t), r = function(e, t) {
+            Vt = function(e, t, n) {
+                for (var a = Ut(e, t), r = function(e, t) {
                         var n = a.find(function(t) {
-                            return t.timestamp === Ut(e)
+                            return t.timestamp === Gt(e)
                         });
                         n && (n.count += t, n.numberOfDatapoints += 1)
                     }, i = 0, s = n; i < s.length; i++) {
@@ -18530,55 +18531,55 @@ webpackJsonp([36], {
                 }
                 return a
             },
-            Vt = function(e, t) {
-                for (var n = [], a = new Date(Ut(e)), r = new Date(t); a < r;) n.push({
+            Ut = function(e, t) {
+                for (var n = [], a = new Date(Gt(e)), r = new Date(t); a < r;) n.push({
                     timestamp: a.toISOString(),
                     count: 0,
                     numberOfDatapoints: 0
-                }), a = de(a);
+                }), a = ue(a);
                 return n
             },
-            Ut = function(e) {
+            Gt = function(e) {
                 var t = new Date(e),
                     n = t.getUTCHours() - t.getUTCHours() % 4;
                 return new Date(Date.UTC(t.getUTCFullYear(), t.getUTCMonth(), t.getUTCDate(), n)).toISOString()
             },
-            Gt = this,
-            qt = [Xe.AverageViewers, Xe.NewFollowers, Xe.AverageChatters, Xe.ChatMessages, Xe.AdBreaks, Xe.AdBreakDuration],
-            Kt = Object.keys(nt),
-            Zt = function(e, t, n, a) {
-                return l.__awaiter(Gt, void 0, void 0, function() {
+            qt = this,
+            Kt = [Qe.AverageViewers, Qe.NewFollowers, Qe.AverageChatters, Qe.ChatMessages, Qe.AdBreaks, Qe.AdBreakDuration],
+            Zt = Object.keys(at),
+            Xt = function(e, t, n, a) {
+                return l.__awaiter(qt, void 0, void 0, function() {
                     var r, i, s, o, d, u, c, h, m, _, f, p;
                     return l.__generator(this, function(l) {
                         switch (l.label) {
                             case 0:
-                                for (r = {}, i = [], s = 0, o = Kt; s < o.length; s++) h = o[s], i.push(Ht(h, e, t, n, a));
+                                for (r = {}, i = [], s = 0, o = Zt; s < o.length; s++) h = o[s], i.push(Pt(h, e, t, n, a));
                                 return [4, Promise.all(i)];
                             case 1:
-                                for (d = l.sent(), u = 0, c = Kt; u < c.length; u++) {
+                                for (d = l.sent(), u = 0, c = Zt; u < c.length; u++) {
                                     if (h = c[u], m = d.shift() || {}, 0 === Object.keys(m).length) return [2, {}];
-                                    for (_ = 0, f = Object.keys(m); _ < f.length; _++) p = f[_], r[p] || (r[p] = {}), r[p][h] = m[p].count, h === Xe.AdBreakDuration && (r[p][Xe.AdBreaks] = m[p].numberOfDatapoints)
+                                    for (_ = 0, f = Object.keys(m); _ < f.length; _++) p = f[_], r[p] || (r[p] = {}), r[p][h] = m[p].count, h === Qe.AdBreakDuration && (r[p][Qe.AdBreaks] = m[p].numberOfDatapoints)
                                 }
                                 return [2, r]
                         }
                     })
                 })
             },
-            Xt = function() {
-                var e = Object(m.d)("Start Time", "TeamsDashboard") + "," + Object(m.d)("End Time", "TeamsDashboard") + "," + Se();
-                return qt.reduce(function(e, t) {
-                    return e + "," + it(t)
+            Qt = function() {
+                var e = Object(_.d)("Start Time", "TeamsDashboard") + "," + Object(_.d)("End Time", "TeamsDashboard") + "," + Oe();
+                return Kt.reduce(function(e, t) {
+                    return e + "," + st(t)
                 }, e) + "\n"
             },
-            Qt = function(e, t) {
-                var n = de(e),
-                    a = je(e) + "," + je(n) + ",UTC";
-                return qt.reduce(function(e, n) {
+            $t = function(e, t) {
+                var n = ue(e),
+                    a = He(e) + "," + He(n) + ",UTC";
+                return Kt.reduce(function(e, n) {
                     var a = "" + t[n];
-                    return n === Xe.AdBreakDuration && (a = re(t[n])), e + "," + a
+                    return n === Qe.AdBreakDuration && (a = ie(t[n])), e + "," + a
                 }, a) + "\n"
             },
-            $t = function(e) {
+            en = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.toggleMemberChecked = function(e) {
@@ -18592,7 +18593,7 @@ webpackJsonp([36], {
                         }))
                     }, n.toggleGroupChecked = function() {
                         var e = !n.state.groupChecked,
-                            t = j(n.state.members, e);
+                            t = H(n.state.members, e);
                         n.setState({
                             groupChecked: e,
                             members: t
@@ -18615,20 +18616,20 @@ webpackJsonp([36], {
                             return l.__generator(this, function(u) {
                                 switch (u.label) {
                                     case 0:
-                                        return n = H(this.state.members), r = e.toISOString(), i = t.toISOString(), s = {
+                                        return n = P(this.state.members), r = e.toISOString(), i = t.toISOString(), s = {
                                             isLoadingDemographics: !1,
-                                            demographics: kt,
+                                            demographics: Yt,
                                             isLoadingStats: !1,
                                             data: {}
-                                        }, a !== Xe.AverageViewers ? [3, 2] : (this.setState({
+                                        }, a !== Qe.AverageViewers ? [3, 2] : (this.setState({
                                             isLoadingDemographics: !0
-                                        }), o = s, [4, Yt(this.props.teamName, n, r, i)]);
+                                        }), o = s, [4, wt(this.props.teamName, n, r, i)]);
                                     case 1:
                                         o.demographics = u.sent(), u.label = 2;
                                     case 2:
                                         return this.setState({
                                             isLoadingStats: !0
-                                        }), d = s, [4, Ht(a, this.props.teamName, n, r, i)];
+                                        }), d = s, [4, Pt(a, this.props.teamName, n, r, i)];
                                     case 3:
                                         return d.data = u.sent(), [2, s]
                                 }
@@ -18640,9 +18641,9 @@ webpackJsonp([36], {
                             return l.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
-                                        return [4, Zt(this.props.teamName, H(this.state.members), this.state.startTime.toISOString(), this.state.endTime.toISOString())];
+                                        return [4, Xt(this.props.teamName, P(this.state.members), this.state.startTime.toISOString(), this.state.endTime.toISOString())];
                                     case 1:
-                                        return e = n.sent(), 0 === Object.keys(e).length ? [2] : (t = xe(e, Qt, Xt()), Te(t, C(v.Stats) + " - " + ae(this.state.startTime) + ".csv"), [2])
+                                        return e = n.sent(), 0 === Object.keys(e).length ? [2] : (t = Te(e, $t, Qt()), Se(t, A(b.Stats) + " - " + re(this.state.startTime) + ".csv"), [2])
                                 }
                             })
                         })
@@ -18676,7 +18677,7 @@ webpackJsonp([36], {
                             })
                         })
                     }, n.renderViewershipTables = function() {
-                        return c.createElement(Lt, l.__assign({
+                        return c.createElement(Dt, l.__assign({
                             isLoading: n.state.isLoadingDemographics
                         }, n.state.demographics))
                     }, n.state = {
@@ -18685,11 +18686,11 @@ webpackJsonp([36], {
                         isLoadingStats: !0,
                         data: {},
                         isLoadingDemographics: !0,
-                        demographics: kt,
-                        startTime: ie(n.props.currentDate),
+                        demographics: Yt,
+                        startTime: se(n.props.currentDate),
                         endTime: n.props.currentDate,
                         groupChecked: !0,
-                        metric: Xe.AverageViewers
+                        metric: Qe.AverageViewers
                     }, n
                 }
                 return l.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -18698,11 +18699,11 @@ webpackJsonp([36], {
                         return l.__generator(this, function(n) {
                             switch (n.label) {
                                 case 0:
-                                    return [4, $(this.props.teamName, Y.StatsRevealed)];
+                                    return [4, ee(this.props.teamName, w.StatsRevealed)];
                                 case 1:
                                     return e = n.sent(), this.setState({
                                         isLoadingMembers: !1,
-                                        members: j(e, !0)
+                                        members: H(e, !0)
                                     }, function() {
                                         return l.__awaiter(t, void 0, void 0, function() {
                                             var e;
@@ -18721,25 +18722,25 @@ webpackJsonp([36], {
                     })
                 }, t.prototype.render = function() {
                     var e = this.state.isLoadingMembers || this.state.isLoadingStats || this.state.isLoadingDemographics;
-                    return c.createElement(D, {
-                        title: C(v.Stats),
+                    return c.createElement(k, {
+                        title: A(b.Stats),
                         titleSelector: "stats-page-title"
-                    }, c.createElement(p._25, {
+                    }, c.createElement(g._25, {
                         border: !0,
                         fullWidth: !0
-                    }, c.createElement(p._2, {
-                        display: p.N.Flex,
-                        flexDirection: p.P.Row,
-                        justifyContent: p._1.Between,
+                    }, c.createElement(g._2, {
+                        display: g.N.Flex,
+                        flexDirection: g.P.Row,
+                        justifyContent: g._1.Between,
                         margin: 2
-                    }, c.createElement(p._2, {
-                        display: p.N.Flex,
-                        flexDirection: p.P.Row
-                    }, c.createElement(p._2, {
+                    }, c.createElement(g._2, {
+                        display: g.N.Flex,
+                        flexDirection: g.P.Row
+                    }, c.createElement(g._2, {
                         margin: {
                             right: 1
                         }
-                    }, c.createElement(we, {
+                    }, c.createElement(xe, {
                         isDisabled: e,
                         isLoading: this.state.isLoadingMembers,
                         members: this.state.members,
@@ -18747,93 +18748,106 @@ webpackJsonp([36], {
                         onMemberSelectClose: this.handleMemberSelectionChange,
                         toggleMemberChecked: this.toggleMemberChecked,
                         toggleGroupChecked: this.toggleGroupChecked
-                    })), c.createElement(st, {
+                    })), c.createElement(ot, {
                         isDisabled: e,
                         metric: this.state.metric,
                         onChange: this.onMetricChange
-                    }), c.createElement(ue, {
+                    }), c.createElement(le, {
                         isDisabled: e,
                         earliestDate: this.props.earliestDataDate,
                         currentDate: this.props.currentDate,
                         onMonthSelection: this.handleTimeRangeChange
-                    })), c.createElement(p._2, null, c.createElement(p.u, {
+                    })), c.createElement(g._2, null, c.createElement(g.u, {
                         disabled: e,
                         "data-test-selector": "stats-csv-button",
-                        icon: p._16.Download,
+                        icon: g._16.Download,
                         onClick: this.handleCSVClick
-                    }, Oe()))), c.createElement(p._2, {
+                    }, je()))), c.createElement(g._2, {
                         fullWidth: !0
-                    }, c.createElement(ht, {
+                    }, c.createElement(mt, {
                         data: this.state.data,
                         dataType: this.state.metric
-                    })), this.state.metric === Xe.AverageViewers ? this.renderViewershipTables() : ""))
-                }, t = l.__decorate([Object(f.d)("StatsPage", {
+                    })), this.state.metric === Qe.AverageViewers ? this.renderViewershipTables() : ""))
+                }, t = l.__decorate([Object(p.d)("StatsPage", {
                     autoReportInteractive: !0,
-                    destination: _.a.TeamsDashboardStats
+                    destination: f.a.TeamsDashboardStats
                 })], t)
             }(c.Component),
-            en = new Date(Date.UTC(2016, 0)),
-            tn = function(e) {
+            tn = new Date(Date.UTC(2016, 0)),
+            nn = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
-                    return n.renderRevenuePage = function() {
-                        return c.createElement(Be, {
+                    return n.redirectToRevenuePage = function() {
+                        return c.createElement(h.a, {
+                            to: "/teams/" + n.props.match.params.teamName + "/dashboard/" + b.Revenue
+                        })
+                    }, n.renderRevenuePage = function() {
+                        return c.createElement(Je, {
                             teamName: n.props.match.params.teamName,
                             earliestDataDate: n.earliestDataDate,
                             currentDate: n.currentDate
                         })
                     }, n.renderStatsPage = function() {
-                        return c.createElement($t, {
+                        return c.createElement(en, {
                             teamName: n.props.match.params.teamName,
                             earliestDataDate: n.earliestDataDate,
                             currentDate: n.currentDate
                         })
                     }, n.renderMembersPage = function() {
-                        return c.createElement(ne, {
+                        return c.createElement(ae, {
                             teamName: n.props.match.params.teamName
                         })
                     }, n.renderFeaturedChannelsPage = function() {
-                        return c.createElement(q, {
+                        return c.createElement(K, {
                             teamName: n.props.match.params.teamName
                         })
                     }, n.renderSettingsPage = function() {
-                        return c.createElement(Qe, null)
-                    }, n.earliestDataDate = en, n.currentDate = t.currentDate || new Date, n.currentDate < n.earliestDataDate && (n.currentDate = n.earliestDataDate), n
+                        return c.createElement($e, null)
+                    }, n.earliestDataDate = tn, n.currentDate = t.currentDate || new Date, n.currentDate < n.earliestDataDate && (n.currentDate = n.earliestDataDate), n
                 }
                 return l.__extends(t, e), t.prototype.render = function() {
-                    return this.props.isLoggedIn ? c.createElement(p._2, {
-                        display: p.N.Flex,
-                        flexWrap: p.Q.NoWrap,
+                    return this.props.isLoggedIn ? c.createElement(g._2, {
+                        display: g.N.Flex,
+                        flexWrap: g.Q.NoWrap,
                         fullWidth: !0,
                         fullHeight: !0
-                    }, c.createElement(Ue, {
+                    }, c.createElement(Ge, {
                         teamName: this.props.match.params.teamName,
                         page: this.props.match.params.pageName
-                    }), c.createElement(p._2, {
+                    }), c.createElement(g._2, {
                         fullWidth: !0
                     }, c.createElement(h.d, null, c.createElement(h.b, {
-                        path: "/teams/" + this.props.match.params.teamName + "/dashboard/" + v.Revenue,
+                        exact: !0,
+                        path: "/teams/" + this.props.match.params.teamName + "/dashboard",
+                        render: this.redirectToRevenuePage
+                    }), c.createElement(h.b, {
+                        exact: !0,
+                        path: "/teams/" + this.props.match.params.teamName + "/dashboard/" + b.Revenue,
                         render: this.renderRevenuePage
                     }), c.createElement(h.b, {
-                        path: "/teams/" + this.props.match.params.teamName + "/dashboard/" + v.Stats,
+                        exact: !0,
+                        path: "/teams/" + this.props.match.params.teamName + "/dashboard/" + b.Stats,
                         render: this.renderStatsPage
                     }), c.createElement(h.b, {
-                        path: "/teams/" + this.props.match.params.teamName + "/dashboard/" + v.Members,
+                        exact: !0,
+                        path: "/teams/" + this.props.match.params.teamName + "/dashboard/" + b.Members,
                         render: this.renderMembersPage
                     }), c.createElement(h.b, {
-                        path: "/teams/" + this.props.match.params.teamName + "/dashboard/" + v.FeaturedChannels,
+                        exact: !0,
+                        path: "/teams/" + this.props.match.params.teamName + "/dashboard/" + b.FeaturedChannels,
                         render: this.renderFeaturedChannelsPage
                     }), c.createElement(h.b, {
-                        path: "/teams/" + this.props.match.params.teamName + "/dashboard/" + v.Settings,
+                        exact: !0,
+                        path: "/teams/" + this.props.match.params.teamName + "/dashboard/" + b.Settings,
                         render: this.renderSettingsPage
-                    }), c.createElement(h.a, {
-                        to: "/teams/" + this.props.match.params.teamName + "/dashboard/" + v.Revenue
-                    })))) : (this.props.onAnonymousVisit(), c.createElement(p._4, {
+                    }), c.createElement(h.b, {
+                        component: m.a
+                    })))) : (this.props.onAnonymousVisit(), c.createElement(g._4, {
                         fillContent: !0
                     }))
                 }, t
             }(c.Component),
-            nn = Object(i.b)(function(e) {
+            an = Object(i.b)(function(e) {
                 return {
                     isLoggedIn: Object(u.d)(e)
                 }
@@ -18843,9 +18857,9 @@ webpackJsonp([36], {
                         return Object(d.f)(o.a.DashboardPage)
                     }
                 }, e)
-            })(tn);
+            })(nn);
         n.d(t, "TeamsDashboardRoot", function() {
-            return nn
+            return an
         })
     },
     rBmI: function(e, t, n) {
@@ -21680,4 +21694,4 @@ webpackJsonp([36], {
         }
     }
 });
-//# sourceMappingURL=pages.teams-dashboard-de46a170b165a349429142af7819722a.js.map
+//# sourceMappingURL=pages.teams-dashboard-a20503d575ac3198d8c87d60eb405f45.js.map

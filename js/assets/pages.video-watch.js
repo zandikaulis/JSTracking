@@ -1,4 +1,4 @@
-webpackJsonp([37, 83], {
+webpackJsonp([37, 84], {
     "+/J2": function(e, t, n) {
         var i = n("xA5w");
         e.exports = function(e, t) {
@@ -880,24 +880,6 @@ webpackJsonp([37, 83], {
             return Math.round((s - l) / a)
         }
     },
-    "0i+s": function(e, t, n) {
-        "use strict";
-        t.a = function(e, t) {
-            void 0 === t && (t = r);
-            var n = i.__assign({}, r, t),
-                a = '<iframe src="' + e + '" frameborder="0" ' + (n.allowFullscreen ? 'allowfullscreen="true" ' : "") + (n.allowScrolling ? "" : 'scrolling="no" ') + 'height="' + n.height + '" width="' + n.width + '"></iframe>';
-            return n.textLink && (a += function(e, t) {
-                return '<a href="' + e + '" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px; text-decoration:underline;">' + t + "</a>"
-            }(n.textLink.url, n.textLink.text)), a
-        };
-        var i = n("TToO"),
-            r = {
-                height: 378,
-                width: 620,
-                allowScrolling: !0,
-                allowFullscreen: !0
-            }
-    },
     "0oN5": function(e, t, n) {
         var i = n("WNGz");
         e.exports = function(e) {
@@ -923,7 +905,7 @@ webpackJsonp([37, 83], {
                 operation: "query",
                 name: {
                     kind: "Name",
-                    value: "VideoShareBox_Tracking_Video"
+                    value: "VideoShareBox_TrackingVideoContext"
                 },
                 variableDefinitions: [{
                     kind: "VariableDefinition",
@@ -1070,11 +1052,11 @@ webpackJsonp([37, 83], {
             }],
             loc: {
                 start: 0,
-                end: 150
+                end: 156
             }
         };
         n.loc.source = {
-            body: "query VideoShareBox_Tracking_Video($videoID: ID!) {\nvideo(id: $videoID) {\nid\nbroadcastType\nowner {\nid\nlogin\nroles {\nisPartner\n}\n}\ngame {\nid\nname\n}\n}\n}",
+            body: "query VideoShareBox_TrackingVideoContext($videoID: ID!) {\nvideo(id: $videoID) {\nid\nbroadcastType\nowner {\nid\nlogin\nroles {\nisPartner\n}\n}\ngame {\nid\nname\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -1251,19 +1233,6 @@ webpackJsonp([37, 83], {
             var n = i(e, t) / r;
             return n > 0 ? Math.floor(n) : Math.ceil(n)
         }
-    },
-    "3yQz": function(e, t, n) {
-        "use strict";
-        n.d(t, "b", function() {
-            return r
-        }), n.d(t, "a", function() {
-            return a
-        });
-        var i, r = "VIEWS",
-            a = "TIME";
-        ! function(e) {
-            e.Popular = "VIEWS", e.Newest = "TIME"
-        }(i || (i = {}))
     },
     "3znZ": function(e, t, n) {
         var i = n("u/4p");
@@ -2447,6 +2416,35 @@ webpackJsonp([37, 83], {
             return t.setFullYear(t.getFullYear(), n + 1, 0), t.setHours(0, 0, 0, 0), t
         }
     },
+    AoO8: function(e, t, n) {
+        "use strict";
+
+        function i(e, t) {
+            void 0 === t && (t = l);
+            var n = r.__assign({}, l, t),
+                i = '<iframe src="' + e + '" frameborder="0" ' + (n.allowFullscreen ? 'allowfullscreen="true" ' : "") + (n.allowScrolling ? "" : 'scrolling="no" ') + 'height="' + n.height + '" width="' + n.width + '"></iframe>';
+            return n.textLink && (i += function(e, t) {
+                return '<a href="' + e + '" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px; text-decoration:underline;">' + t + "</a>"
+            }(n.textLink.url, n.textLink.text)), i
+        }
+        t.b = function(e, t) {
+            return i(function(e) {
+                e.video && (e.video = Object(o.b)(e.video));
+                var t = a.stringify(e);
+                return s + "/?" + t
+            }(e), t)
+        }, t.a = i;
+        var r = n("TToO"),
+            a = n("OAwv"),
+            o = (n.n(a), n("JpYe")),
+            s = "https://player.twitch.tv",
+            l = {
+                height: 378,
+                width: 620,
+                allowScrolling: !0,
+                allowFullscreen: !0
+            }
+    },
     AwFw: function(e, t) {},
     B0KL: function(e, t) {
         var n = {
@@ -3360,17 +3358,17 @@ webpackJsonp([37, 83], {
                 }));
                 var r
             },
-            S = Object(m.d)("VideoCarousel", {
+            C = Object(m.d)("VideoCarousel", {
                 autoReportInteractive: !0
             })(v);
         n.d(t, "a", function() {
-            return C
+            return S
         });
-        var C = Object(a.b)(function(e) {
+        var S = Object(a.b)(function(e) {
             return {
                 firstPageLoaded: e.session.firstPageLoaded
             }
-        })(S)
+        })(C)
     },
     GvNH: function(e, t, n) {
         var i = n("WNGz");
@@ -3719,69 +3717,6 @@ webpackJsonp([37, 83], {
             return i(e) ? 366 : 365
         }
     },
-    JpYe: function(e, t, n) {
-        "use strict";
-
-        function i(e) {
-            return a(s.parse(e.location.search).sort || "")
-        }
-
-        function r(e) {
-            switch (e.match.params.filter) {
-                case c.a.Archive.toLowerCase():
-                    return c.a.Archive;
-                case c.a.Highlight.toLowerCase():
-                    return c.a.Highlight;
-                case c.a.Upload.toLowerCase():
-                    return c.a.Upload;
-                case c.a.PastPremiere.toLowerCase():
-                    return c.a.PastPremiere;
-                default:
-                    return
-            }
-        }
-
-        function a(e) {
-            switch (e.toUpperCase()) {
-                case d.b:
-                    return d.b;
-                case d.a:
-                    return d.a;
-                default:
-                    return null
-            }
-        }
-        t.d = function(e, t, n, a) {
-            var s = a || i(t),
-                c = "";
-            s && (c = "?sort=" + function(e) {
-                switch (e) {
-                    case d.b:
-                        return o.Popular;
-                    case d.a:
-                        return o.Newest;
-                    default:
-                        var t = e;
-                        return t
-                }
-            }(s));
-            var u = n ? n.toLowerCase() : function(e) {
-                var t = r(e);
-                return t ? t.toLowerCase() : "all"
-            }(t);
-            l.n.history.push(e + "/" + u + c)
-        }, t.c = i, t.b = r, t.a = function(e) {
-            var t = s.parse(e.location.search);
-            return e.match.params.collectionID || t.collection || ""
-        }, t.e = a;
-        var o, s = n("OAwv"),
-            l = (n.n(s), n("6sO2")),
-            c = n("6WAQ"),
-            d = n("3yQz");
-        ! function(e) {
-            e.Popular = "views", e.Newest = "time"
-        }(o || (o = {}))
-    },
     Jtuq: function(e, t, n) {
         var i = n("lQzg"),
             r = n("xA5w");
@@ -3941,9 +3876,9 @@ webpackJsonp([37, 83], {
             }, a.createElement("div", {
                 className: "chat-settings__edit-button",
                 onClick: e.onClickEdit,
-                "data-a-target": V,
-                "data-test-selector": B
-            }, Object(w.d)("Edit Appearance", "ChatSettings")))), a.createElement(I._25, {
+                "data-a-target": B,
+                "data-test-selector": V
+            }, Object(E.d)("Edit Appearance", "ChatSettings")))), a.createElement(I._25, {
                 background: I.m.Base,
                 color: I.I.Base,
                 display: I.N.InlineFlex,
@@ -3952,7 +3887,7 @@ webpackJsonp([37, 83], {
             }, a.createElement(I._35, {
                 color: I.I.Alt2,
                 transform: I._39.Uppercase
-            }, Object(w.d)("Name Display", "ChatSettings")), a.createElement(I._2, {
+            }, Object(E.d)("Name Display", "ChatSettings")), a.createElement(I._2, {
                 margin: {
                     top: 2
                 }
@@ -3981,10 +3916,10 @@ webpackJsonp([37, 83], {
             k = n("UzRK"),
             y = n("TnJK"),
             _ = n("O0Qc"),
-            S = n("VsL1"),
-            C = n("Umoc"),
-            w = n("6sO2"),
-            E = n("zCIC"),
+            C = n("VsL1"),
+            S = n("Umoc"),
+            E = n("6sO2"),
+            w = n("zCIC"),
             N = n("+Znq"),
             O = n("7vx8"),
             D = n("HW6M"),
@@ -4020,7 +3955,7 @@ webpackJsonp([37, 83], {
                         n = a.createElement(I._35, {
                             transform: I._39.Uppercase,
                             color: I.I.Alt2
-                        }, Object(w.d)("Name Color", "ChatSettings"));
+                        }, Object(E.d)("Name Color", "ChatSettings"));
                     return this.props.borderTop && (n = a.createElement(I._25, {
                         margin: {
                             top: 2
@@ -4048,12 +3983,12 @@ webpackJsonp([37, 83], {
                         fontSize: I.R.Size7
                     }, a.createElement("a", {
                         href: "https://twitch.tv/products/turbo?ref=more_colors_direct"
-                    }, Object(w.d)("more colors →", "ChatSettings")))))
+                    }, Object(E.d)("more colors →", "ChatSettings")))))
                 }, t
             }(a.Component)),
             A = n("OAwv"),
-            M = n("AaXK"),
-            F = (n("7LVu"), "channel_badge"),
+            F = n("AaXK"),
+            M = (n("7LVu"), "channel_badge"),
             R = "global_badge",
             L = function(e) {
                 function t() {
@@ -4085,7 +4020,7 @@ webpackJsonp([37, 83], {
                                 "edit-appearance__badge-chooser": !0,
                                 "edit-appearance__badge-chooser--selected": !o
                             },
-                            l = Object(w.d)("No channel badges :(", "ChatSettings");
+                            l = Object(E.d)("No channel badges :(", "ChatSettings");
                         t && t.length > 0 && (l = t.map(function(t) {
                             var i = {
                                 "edit-appearance__badge-chooser": !0,
@@ -4096,8 +4031,8 @@ webpackJsonp([37, 83], {
                                 onClick: e.onChannelBadgeClicked,
                                 key: t.setID + "/" + t.version,
                                 className: D(i),
-                                "data-test-selector": F + "_" + t.setID,
-                                "data-a-target": F + "_" + t.setID
+                                "data-test-selector": M + "_" + t.setID,
+                                "data-a-target": M + "_" + t.setID
                             }, a.createElement(I._43, {
                                 label: t.title
                             }, a.createElement("img", {
@@ -4110,10 +4045,10 @@ webpackJsonp([37, 83], {
                             "data-badge": "",
                             onClick: this.onChannelBadgeClicked,
                             className: D(s),
-                            "data-test-selector": F + "_none",
-                            "data-a-target": F + "_none"
+                            "data-test-selector": M + "_none",
+                            "data-a-target": M + "_none"
                         }, a.createElement(I._43, {
-                            label: Object(w.d)("Same as Global", "ChatSettings")
+                            label: Object(E.d)("Same as Global", "ChatSettings")
                         }, a.createElement("div", {
                             className: "edit-appearance__badge-chooser__none"
                         }, a.createElement(I._15, {
@@ -4124,7 +4059,7 @@ webpackJsonp([37, 83], {
                                 "edit-appearance__badge-chooser": !0,
                                 "edit-appearance__badge-chooser--selected": !c
                             },
-                            u = Object(w.d)("No global badges :(", "ChatSettings");
+                            u = Object(E.d)("No global badges :(", "ChatSettings");
                         return i && i.length > 0 && (u = i.map(function(t) {
                             var n = {
                                 "edit-appearance__badge-chooser": !0,
@@ -4152,7 +4087,7 @@ webpackJsonp([37, 83], {
                             "data-test-selector": R + "_none",
                             "data-a-target": R + "_none"
                         }, a.createElement(I._43, {
-                            label: Object(w.d)("None", "ChatSettings")
+                            label: Object(E.d)("None", "ChatSettings")
                         }, a.createElement("div", {
                             className: "edit-appearance__badge-chooser__none"
                         }, a.createElement(I._15, {
@@ -4173,12 +4108,12 @@ webpackJsonp([37, 83], {
                             borderTop: !0
                         }, a.createElement(I._43, {
                             align: I._44.Left,
-                            label: Object(w.d)("Your global badge is shown when chatting and whispering.", "ChatSettings"),
+                            label: Object(E.d)("Your global badge is shown when chatting and whispering.", "ChatSettings"),
                             width: 175
                         }, a.createElement(I._35, {
                             color: I.I.Alt2,
                             transform: I._39.Uppercase
-                        }, Object(w.d)("Global Badge [?]", "ChatSettings")))), a.createElement(I._2, {
+                        }, Object(E.d)("Global Badge [?]", "ChatSettings")))), a.createElement(I._2, {
                             margin: {
                                 y: 1
                             },
@@ -4203,12 +4138,12 @@ webpackJsonp([37, 83], {
                             borderTop: !0
                         }, a.createElement(I._43, {
                             align: I._44.Left,
-                            label: Object(w.d)("Change the badge shown when chatting in this channel.", "ChatSettings"),
+                            label: Object(E.d)("Change the badge shown when chatting in this channel.", "ChatSettings"),
                             width: 175
                         }, a.createElement(I._35, {
                             color: I.I.Alt2,
                             transform: I._39.Uppercase
-                        }, Object(w.d)("Channel Badge [?]", "ChatSettings")))), a.createElement(I._2, {
+                        }, Object(E.d)("Channel Badge [?]", "ChatSettings")))), a.createElement(I._2, {
                             margin: {
                                 y: 1
                             },
@@ -4226,7 +4161,7 @@ webpackJsonp([37, 83], {
                             switch (r.label) {
                                 case 0:
                                     return i = {
-                                        "Client-ID": w.n.config.legacyClientID,
+                                        "Client-ID": E.n.config.legacyClientID,
                                         Accept: "application/vnd.twitchtv.v4+json; charset=UTF-8",
                                         "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
                                         "Accept-Language": "en-us",
@@ -4252,7 +4187,7 @@ webpackJsonp([37, 83], {
                             switch (r.label) {
                                 case 0:
                                     return n = {
-                                        "Client-ID": w.n.config.legacyClientID,
+                                        "Client-ID": E.n.config.legacyClientID,
                                         Accept: "application/vnd.twitchtv.v4+json; charset=UTF-8",
                                         "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
                                         "Accept-Language": "en-us",
@@ -4271,7 +4206,7 @@ webpackJsonp([37, 83], {
                             }
                         })
                     })
-                }, t = r.__decorate([Object(O.a)(M, {
+                }, t = r.__decorate([Object(O.a)(F, {
                     options: function(e) {
                         return {
                             variables: {
@@ -4283,8 +4218,8 @@ webpackJsonp([37, 83], {
             }(a.Component),
             U = n("SZoP"),
             j = n("3T7g"),
-            B = "edit-appearance-button",
             V = "edit-appearance-button",
+            B = "edit-appearance-button",
             P = "edit-display-name",
             H = function(e) {
                 function t() {
@@ -4332,11 +4267,11 @@ webpackJsonp([37, 83], {
                         return r.__generator(this, function(i) {
                             switch (i.label) {
                                 case 0:
-                                    return i.trys.push([0, 2, , 3]), [4, G.a.get("/kraken/raids?client_id=" + w.a.authClientID + "&api_version=" + w.a.defaultAPIVersion + "&target_id=" + e)];
+                                    return i.trys.push([0, 2, , 3]), [4, G.a.get("/kraken/raids?client_id=" + E.a.authClientID + "&api_version=" + E.a.defaultAPIVersion + "&target_id=" + e)];
                                 case 1:
                                     return t = i.sent(), [2, this.deserialize(t)];
                                 case 2:
-                                    return n = i.sent(), w.i.error(n, "Couldn't fetch raids list"), [2, []];
+                                    return n = i.sent(), E.i.error(n, "Couldn't fetch raids list"), [2, []];
                                 case 3:
                                     return [2]
                             }
@@ -4361,8 +4296,8 @@ webpackJsonp([37, 83], {
                 }, t
             }(a.Component),
             Q = n("oIkB"),
-            K = n("g7wA"),
-            $ = n("O9wU"),
+            $ = n("g7wA"),
+            K = n("O9wU"),
             J = n("jPU6"),
             Z = n("y1/w"),
             X = (n("MSFW"), n("L0RX")),
@@ -4372,7 +4307,7 @@ webpackJsonp([37, 83], {
                     return t.onUsernameClick = function(e) {
                         var n = e.currentTarget.getAttribute("data-username"),
                             i = e.currentTarget.getAttribute("data-raid-id") || "";
-                        n && t.props.onUsernameClick(n, $.a.recent_raids, i)
+                        n && t.props.onUsernameClick(n, K.a.recent_raids, i)
                     }, t.onBanButtonClick = function(e) {
                         var n = e.currentTarget.getAttribute("data-channel-id") || "",
                             i = e.currentTarget.getAttribute("data-target-user-login") || "";
@@ -4413,7 +4348,7 @@ webpackJsonp([37, 83], {
                         position: I._9.Relative
                     }, a.createElement(I._2, {
                         className: "recent-raids-item__timestamp"
-                    }, Object(K.u)(Date.parse(this.props.timestamp))), this.getCardSlideInContent())))
+                    }, Object($.u)(Date.parse(this.props.timestamp))), this.getCardSlideInContent())))
                 }, t.prototype.getCardSlideInContent = function() {
                     if (!this.props.slideInContent) return null;
                     var e = null;
@@ -4427,7 +4362,7 @@ webpackJsonp([37, 83], {
                         "data-target-user-login": this.props.raiderLogin,
                         "data-target-user-id": this.props.raiderUserID,
                         "data-channel-id": this.props.channelID
-                    }, Object(w.d)("Unban", "RecentRaid")) : a.createElement(I.u, {
+                    }, Object(E.d)("Unban", "RecentRaid")) : a.createElement(I.u, {
                         key: "recent-raids-ban-button-" + this.props.raiderUserID,
                         size: I.x.Small,
                         type: I.z.Text,
@@ -4437,7 +4372,7 @@ webpackJsonp([37, 83], {
                         "data-target-user-login": this.props.raiderLogin,
                         "data-target-user-id": this.props.raiderUserID,
                         "data-channel-id": this.props.channelID
-                    }, Object(w.d)("Ban", "RecentRaid")), a.createElement(I._2, {
+                    }, Object(E.d)("Ban", "RecentRaid")), a.createElement(I._2, {
                         key: "recent-raids-layout-" + this.props.raiderUserID,
                         className: "recent-raids-item__hover-content",
                         zIndex: I._52.Above,
@@ -4530,7 +4465,7 @@ webpackJsonp([37, 83], {
                                     channel_id: i.toString()
                                 })
                             },
-                            title: Object(w.d)("Report {channelDisplayName}", {
+                            title: Object(E.d)("Report {channelDisplayName}", {
                                 channelDisplayName: r
                             }, "ReportUserModal")
                         })
@@ -4558,7 +4493,7 @@ webpackJsonp([37, 83], {
                         0 === this.state.raidChannels.length && e.push(a.createElement(I._35, {
                             key: "recent-raids-no-raids",
                             type: I._40.P
-                        }, Object(w.d)("You have no recent raids", "RecentRaids")));
+                        }, Object(E.d)("You have no recent raids", "RecentRaids")));
                         for (var i in this.state.raidChannels)
                             if (i.hasOwnProperty) {
                                 var r = this.state.raidChannels[i];
@@ -4577,10 +4512,10 @@ webpackJsonp([37, 83], {
                                         "data-raid-id": r.raidID,
                                         "data-target-user-login": r.name,
                                         "data-target-user-id": r.userID
-                                    }, Object(w.d)("Report", "RecentRaid")), a.createElement(I._43, {
+                                    }, Object(E.d)("Report", "RecentRaid")), a.createElement(I._43, {
                                         align: I._44.Right,
                                         width: 150,
-                                        label: Object(w.d)("Banning a user prevents them from future chatting or raiding", "RecentRaid")
+                                        label: Object(E.d)("Banning a user prevents them from future chatting or raiding", "RecentRaid")
                                     }))],
                                     timestamp: r.raidAt,
                                     channelLogin: r.name,
@@ -4607,7 +4542,7 @@ webpackJsonp([37, 83], {
                         to: {
                             pathname: "/broadcast/dashboard/settings/raids"
                         }
-                    }, Object(w.d)("Manage Raid Settings", "RecentRaids")))), e, t) : (o = a.createElement(I._2, {
+                    }, Object(E.d)("Manage Raid Settings", "RecentRaids")))), e, t) : (o = a.createElement(I._2, {
                         key: "recent-raids",
                         margin: {
                             top: 1,
@@ -4620,7 +4555,7 @@ webpackJsonp([37, 83], {
                         className: "chat-settings__edit-button",
                         onClick: this.props.onClickRecentRaids,
                         "data-test-selector": "recent-raids-button"
-                    }, Object(w.d)("See Recent Raids", "ChatSettings")), this.props.tooltipText && a.createElement(I._2, {
+                    }, Object(E.d)("See Recent Raids", "ChatSettings")), this.props.tooltipText && a.createElement(I._2, {
                         position: I._9.Relative
                     }, a.createElement(I._43, {
                         align: I._44.Right,
@@ -4697,7 +4632,7 @@ webpackJsonp([37, 83], {
                                             if (!(t = e.data).user.self) return [2];
                                             n = {}, t.user.self.displayBadges.forEach(function(e) {
                                                 n[e.setID] = e.version
-                                            }), w.n.tmi.client.updateChannelBadges(this.props.channelLogin, n)
+                                            }), E.n.tmi.client.updateChannelBadges(this.props.channelLogin, n)
                                         }
                                         i.label = 2;
                                     case 2:
@@ -4751,7 +4686,7 @@ webpackJsonp([37, 83], {
                         asset: I._16.ChatSettingsBack,
                         height: 10,
                         width: 10
-                    }), Object(w.d)("Back", "ChatSettingsAppearance")))), e, a.createElement(L, {
+                    }), Object(E.d)("Back", "ChatSettingsAppearance")))), e, a.createElement(L, {
                         key: "edit-appearance",
                         onColorSelected: this.onColorSelected,
                         editAppearance: this.props.editAppearance,
@@ -4774,7 +4709,7 @@ webpackJsonp([37, 83], {
                         asset: I._16.ChatSettingsBack,
                         height: 10,
                         width: 10
-                    }), Object(w.d)("Back", "ChatSettingsRecentRaids")), a.createElement(I._2, {
+                    }), Object(E.d)("Back", "ChatSettingsRecentRaids")), a.createElement(I._2, {
                         margin: {
                             top: 2
                         }
@@ -4782,7 +4717,7 @@ webpackJsonp([37, 83], {
                         key: "recent-raids-title",
                         color: I.I.Alt2,
                         transform: I._39.Uppercase
-                    }, Object(w.d)("Recent Raids", "ChatSettings"))))), a.createElement(ie, {
+                    }, Object(E.d)("Recent Raids", "ChatSettings"))))), a.createElement(ie, {
                         key: "recent-raids",
                         targetChannelID: this.props.channelID,
                         recentRaids: this.state.recentRaids,
@@ -4791,7 +4726,7 @@ webpackJsonp([37, 83], {
                     })] : (n = [e, this.renderUniversalOptions()], this.props.isCurrentUserModerator && n.push(this.renderModTools())) : n = [a.createElement(T, {
                         key: "color-chooser",
                         onColorSelected: this.props.onColorSelected
-                    }), this.renderUniversalOptions()], a.createElement(E.b, {
+                    }), this.renderUniversalOptions()], a.createElement(w.b, {
                         className: "chat-settings",
                         suppressScrollX: !0,
                         style: {
@@ -4813,23 +4748,23 @@ webpackJsonp([37, 83], {
                             "data-a-target": "darkmode-checkbox",
                             "data-test-selector": "dark-mode-checkbox",
                             id: "chat-settings-dark-mode",
-                            label: Object(w.d)("Dark Mode", "ChatSettings"),
+                            label: Object(E.d)("Dark Mode", "ChatSettings"),
                             onChange: this.props.onDarkModeToggle
                         }),
                         t = (!this.props.isPopout || Object(re.a)()) && a.createElement("button", {
                             onClick: this.props.onChatPopout,
                             "data-a-target": "popout-chat-button",
                             "data-test-selector": "popout-button"
-                        }, Object(w.d)("Popout", "ChatSettings")),
+                        }, Object(E.d)("Popout", "ChatSettings")),
                         n = !this.props.isPopout && (window.BetterTTV || window.FrankerFaceZ) && a.createElement("button", {
                             onClick: this.props.onLegacyChatPopout,
                             "data-test-selector": "legacy-popout-button"
-                        }, Object(w.d)("Legacy Popout", "ChatSettings")),
+                        }, Object(E.d)("Legacy Popout", "ChatSettings")),
                         i = (!this.props.isPopout || !re.a) && a.createElement("button", {
                             onClick: this.props.onChatHide,
                             "data-a-target": "hide-chat-button",
                             "data-test-selector": "hide-chat-button"
-                        }, Object(w.d)("Hide Chat", "ChatSettings"));
+                        }, Object(E.d)("Hide Chat", "ChatSettings"));
                     return a.createElement(I._2, {
                         key: "chat-options"
                     }, a.createElement(I._25, {
@@ -4843,7 +4778,7 @@ webpackJsonp([37, 83], {
                     }, a.createElement(I._35, {
                         color: I.I.Alt2,
                         transform: I._39.Uppercase
-                    }, Object(w.d)("Chat Options", "ChatSettings"))), a.createElement(I._2, {
+                    }, Object(E.d)("Chat Options", "ChatSettings"))), a.createElement(I._2, {
                         margin: {
                             bottom: 1
                         }
@@ -4852,7 +4787,7 @@ webpackJsonp([37, 83], {
                         "data-a-target": "timestamp-checkbox",
                         "data-test-selector": "timestamps-selector",
                         id: "chat-settings-timestamp",
-                        label: Object(w.d)("Timestamps", "ChatSettings"),
+                        label: Object(E.d)("Timestamps", "ChatSettings"),
                         onChange: this.props.onTimestampToggle
                     })), a.createElement(I._2, {
                         margin: {
@@ -4891,7 +4826,7 @@ webpackJsonp([37, 83], {
                     }, a.createElement(I._35, {
                         color: I.I.Alt2,
                         transform: I._39.Uppercase
-                    }, Object(w.d)("Mod Tools", "ChatSettings"))), a.createElement(I._2, {
+                    }, Object(E.d)("Mod Tools", "ChatSettings"))), a.createElement(I._2, {
                         margin: {
                             bottom: 1
                         }
@@ -4900,7 +4835,7 @@ webpackJsonp([37, 83], {
                         "data-a-target": "mod-icons-checkbox",
                         "data-test-selector": "mod-icons-checkbox",
                         id: "chat-settings-mod-icons",
-                        label: Object(w.d)("Mod Icons", "ChatSettings"),
+                        label: Object(E.d)("Mod Icons", "ChatSettings"),
                         onChange: this.props.onModIconsToggle
                     })), a.createElement(I._25, {
                         margin: {
@@ -4914,10 +4849,10 @@ webpackJsonp([37, 83], {
                         "data-a-target": "follower-mode-checkbox",
                         "data-test-selector": "follower-mode-checkbox",
                         id: "chat-settings-followers-only",
-                        label: Object(w.d)("Followers-Only Chat", "ChatSettings"),
+                        label: Object(E.d)("Followers-Only Chat", "ChatSettings"),
                         onChange: this.props.onFollowerModeToggle
                     }), this.showRaidsTooltip ? a.createElement(H, {
-                        text: Object(w.d)("Prevent offensive raiders from chatting.", "RaidReportingChat")
+                        text: Object(E.d)("Prevent offensive raiders from chatting.", "RaidReportingChat")
                     }) : null, a.createElement(I._2, {
                         alignItems: I.c.Center,
                         display: I.N.Flex,
@@ -4931,7 +4866,7 @@ webpackJsonp([37, 83], {
                         color: I.I.Alt2,
                         fontSize: I.R.Size7,
                         type: I._40.Span
-                    }, Object(w.d)("Must have followed for", "ChatSettings"))), a.createElement(I._2, {
+                    }, Object(E.d)("Must have followed for", "ChatSettings"))), a.createElement(I._2, {
                         className: "chat-settings__mod-tools-follower-button",
                         flexShrink: 0
                     }, a.createElement(N.a, {
@@ -4948,7 +4883,7 @@ webpackJsonp([37, 83], {
                         padding: .5
                     }, a.createElement(I._35, {
                         color: I.I.Alt2
-                    }, Object(w.d)("Followers can chat if they have followed for at least", "ChatSettings"))), a.createElement(I._25, {
+                    }, Object(E.d)("Followers can chat if they have followed for at least", "ChatSettings"))), a.createElement(I._25, {
                         color: I.I.Link
                     }, this.renderFollowerModeOptions())))))), a.createElement(I._2, {
                         margin: {
@@ -4959,7 +4894,7 @@ webpackJsonp([37, 83], {
                         "data-a-target": "slow-mode-checkbox",
                         "data-test-selector": "slow-mode-checkbox",
                         id: "chat-settings-slow-mode",
-                        label: Object(w.d)("Slow Mode", "ChatSettings"),
+                        label: Object(E.d)("Slow Mode", "ChatSettings"),
                         onChange: this.props.onSlowModeToggle
                     })), a.createElement(ie, {
                         key: "recent-raids",
@@ -4967,12 +4902,12 @@ webpackJsonp([37, 83], {
                         onClickRecentRaids: this.onClickRecentRaids,
                         onUsernameClick: b.d,
                         targetChannelID: this.props.channelID,
-                        tooltipText: this.showRaidsTooltip ? Object(w.d)("View recent raids with option to report or ban.", "RaidReportingChat") : ""
+                        tooltipText: this.showRaidsTooltip ? Object(E.d)("View recent raids with option to report or ban.", "RaidReportingChat") : ""
                     }), a.createElement("button", {
                         onClick: this.props.onChatClear,
                         "data-a-target": "clear-chat-button",
                         "data-test-selector": "clear-chat-button"
-                    }, Object(w.d)("Clear Chat", "ChatSettings")))
+                    }, Object(E.d)("Clear Chat", "ChatSettings")))
                 }, t.prototype.renderFollowerModeOptions = function() {
                     var e = this;
                     return k.b.map(function(t) {
@@ -5014,21 +4949,21 @@ webpackJsonp([37, 83], {
                         })
                     }, t.onDarkModeToggle = function() {
                         var e = t.props.darkModeEnabled ? c.a.Light : c.a.Dark;
-                        t.props.onThemeChanged(e, !t.props.isPopout), Object(C.a)({
+                        t.props.onThemeChanged(e, !t.props.isPopout), Object(S.a)({
                             channelLogin: t.props.channelLogin,
                             isHostMode: t.props.isHostMode,
                             newValue: !t.props.darkModeEnabled,
                             settingName: y.a.DarkMode
                         })
                     }, t.onTimestampToggle = function() {
-                        Object(S.b)("showTimestamps", !t.props.showTimestamps), t.props.showTimestamps ? t.props.onTimestampsDisable() : t.props.onTimestampsEnable(), Object(C.a)({
+                        Object(C.b)("showTimestamps", !t.props.showTimestamps), t.props.showTimestamps ? t.props.onTimestampsDisable() : t.props.onTimestampsEnable(), Object(S.a)({
                             channelLogin: t.props.channelLogin,
                             isHostMode: t.props.isHostMode,
                             newValue: !t.props.showTimestamps,
                             settingName: y.a.ShowTimestamps
                         })
                     }, t.onChatHide = function() {
-                        t.props.onChatHide(), Object(C.a)({
+                        t.props.onChatHide(), Object(S.a)({
                             channelLogin: t.props.channelLogin,
                             isHostMode: t.props.isHostMode,
                             newValue: !0,
@@ -5047,7 +4982,7 @@ webpackJsonp([37, 83], {
                             t.props.onChatUnhide()
                         }))
                     }, t.onModIconsToggle = function() {
-                        Object(S.b)("showModIcons", !t.props.showModerationIcons), t.props.showModerationIcons ? t.props.onModIconsDisable() : t.props.onModIconsEnable(), Object(C.a)({
+                        Object(C.b)("showModIcons", !t.props.showModerationIcons), t.props.showModerationIcons ? t.props.onModIconsDisable() : t.props.onModIconsEnable(), Object(S.a)({
                             channelLogin: t.props.channelLogin,
                             isHostMode: t.props.isHostMode,
                             newValue: !t.props.showModerationIcons,
@@ -5059,21 +4994,21 @@ webpackJsonp([37, 83], {
                             var e = t.getSelectedFollowerDuration();
                             t.props.onChatCommand(Object(_.f)(e)), t.props.onFollowerModeDurationChange(e), t.props.onFollowerModeEnable()
                         }
-                        Object(C.a)({
+                        Object(S.a)({
                             channelLogin: t.props.channelLogin,
                             isHostMode: t.props.isHostMode,
                             newValue: !t.props.followerModeEnabled,
                             settingName: y.a.FollowerMode
                         })
                     }, t.onFollowerDurationChange = function(e) {
-                        Object(S.c)(t.props.channelLogin, e), t.props.onFollowerModeDurationPreferenceChange(t.props.channelLogin, e), t.props.followerModeEnabled && (t.props.onChatCommand(Object(_.f)(e)), t.props.onFollowerModeDurationChange(e)), Object(C.c)({
+                        Object(C.c)(t.props.channelLogin, e), t.props.onFollowerModeDurationPreferenceChange(t.props.channelLogin, e), t.props.followerModeEnabled && (t.props.onChatCommand(Object(_.f)(e)), t.props.onFollowerModeDurationChange(e)), Object(S.c)({
                             channelLogin: t.props.channelLogin,
                             followerModeOn: t.props.followerModeEnabled,
                             isHostMode: t.props.isHostMode,
                             newValue: e
                         })
                     }, t.onSlowModeToggle = function() {
-                        t.props.slowModeEnabled ? (t.props.onChatCommand(Object(_.e)()), t.props.onSlowModeDisable()) : (t.props.onChatCommand(Object(_.g)()), t.props.onSlowModeEnable()), Object(C.a)({
+                        t.props.slowModeEnabled ? (t.props.onChatCommand(Object(_.e)()), t.props.onSlowModeDisable()) : (t.props.onChatCommand(Object(_.g)()), t.props.onSlowModeEnable()), Object(S.a)({
                             channelLogin: t.props.channelLogin,
                             isHostMode: t.props.isHostMode,
                             newValue: !t.props.slowModeEnabled,
@@ -5142,40 +5077,40 @@ webpackJsonp([37, 83], {
             }, function(e) {
                 return Object(l.b)({
                     onChatHide: function() {
-                        return v.H()
+                        return v.I()
                     },
                     onChatUnhide: function() {
-                        return v.K()
+                        return v.L()
                     },
                     onFollowerModeDisable: function() {
-                        return v.x()
-                    },
-                    onFollowerModeDurationChange: function(e) {
-                        return v.u(e)
-                    },
-                    onFollowerModeDurationPreferenceChange: function(e, t) {
-                        return v.v(e, t)
-                    },
-                    onFollowerModeEnable: function() {
-                        return v.C()
-                    },
-                    onModIconsDisable: function() {
                         return v.y()
                     },
-                    onModIconsEnable: function() {
+                    onFollowerModeDurationChange: function(e) {
+                        return v.v(e)
+                    },
+                    onFollowerModeDurationPreferenceChange: function(e, t) {
+                        return v.w(e, t)
+                    },
+                    onFollowerModeEnable: function() {
                         return v.D()
                     },
-                    onSlowModeDisable: function() {
+                    onModIconsDisable: function() {
                         return v.z()
                     },
-                    onSlowModeEnable: function() {
+                    onModIconsEnable: function() {
                         return v.E()
                     },
+                    onSlowModeDisable: function() {
+                        return v.A()
+                    },
+                    onSlowModeEnable: function() {
+                        return v.F()
+                    },
                     onTimestampsDisable: function() {
-                        return v.B()
+                        return v.C()
                     },
                     onTimestampsEnable: function() {
-                        return v.G()
+                        return v.H()
                     },
                     onShowViewerCard: b.d,
                     onThemeChanged: function(e) {
@@ -5192,7 +5127,7 @@ webpackJsonp([37, 83], {
                     onToggle: e.onToggle
                 }, a.createElement(I.v, {
                     icon: I._16.Gear,
-                    ariaLabel: Object(w.d)("Chat settings", "ChatInput"),
+                    ariaLabel: Object(E.d)("Chat settings", "ChatInput"),
                     "data-a-target": "chat-settings",
                     disabled: !!e.disabled
                 }), a.createElement(I.p, {
@@ -6088,6 +6023,8 @@ webpackJsonp([37, 83], {
         "use strict";
         t.a = function(e, t) {
             return e.chat && e.chat.messages ? e.chat.messages[t] || [] : []
+        }, t.c = function(e) {
+            return e.chat.renderSent
         }, t.b = function(e) {
             var t = [];
             if (e.chat && e.chat.commandHandlers)
@@ -6111,7 +6048,8 @@ webpackJsonp([37, 83], {
                     isHidden: !1,
                     messages: {},
                     slowMode: !1,
-                    subsOnlyMode: !1
+                    subsOnlyMode: !1,
+                    renderSent: null
                 })
             }()), t.type) {
                 case o.b:
@@ -6161,27 +6099,27 @@ webpackJsonp([37, 83], {
                     return i.__assign({}, e, {
                         showModIcons: !0
                     });
-                case o.n:
+                case o.o:
                     return i.__assign({}, e, {
                         slowMode: !1
                     });
-                case o.o:
+                case o.p:
                     return i.__assign({}, e, {
                         slowMode: !0
                     });
-                case o.p:
+                case o.q:
                     return i.__assign({}, e, {
                         subsOnlyMode: !1
                     });
-                case o.q:
+                case o.r:
                     return i.__assign({}, e, {
                         subsOnlyMode: !0
                     });
-                case o.r:
+                case o.s:
                     return i.__assign({}, e, {
                         showTimestamps: !1
                     });
-                case o.s:
+                case o.t:
                     return i.__assign({}, e, {
                         showTimestamps: !0
                     });
@@ -6196,6 +6134,10 @@ webpackJsonp([37, 83], {
                         return e.commandHandlers
                     }, function(e) {
                         return delete e[t.command], e
+                    });
+                case o.n:
+                    return i.__assign({}, e, {
+                        renderSent: t.customEvent
                     });
                 default:
                     return e
@@ -6306,8 +6248,8 @@ webpackJsonp([37, 83], {
             k = n("ySfT"),
             y = n("ZJYd"),
             _ = n("/LBW"),
-            S = n("Odds"),
-            C = (n("fHoP"), function(e) {
+            C = n("Odds"),
+            S = (n("fHoP"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handlePromoBuy = function(e) {
@@ -6322,43 +6264,43 @@ webpackJsonp([37, 83], {
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    var e = a.createElement(S._2, null, a.createElement(S._2, {
+                    var e = a.createElement(C._2, null, a.createElement(C._2, {
                         padding: {
                             x: 5,
                             y: 2
                         },
-                        textAlign: S._36.Center
-                    }, a.createElement(S._35, {
-                        type: S._40.H4,
+                        textAlign: C._36.Center
+                    }, a.createElement(C._35, {
+                        type: C._40.H4,
                         bold: !0
-                    }, Object(s.d)("Cheer Bits for your Favorite Streamer!", "Bits--FirstTimeUserPrompt"))), a.createElement(S._2, {
+                    }, Object(s.d)("Cheer Bits for your Favorite Streamer!", "Bits--FirstTimeUserPrompt"))), a.createElement(C._2, {
                         padding: {
                             x: 2,
                             bottom: 1
                         }
-                    }, a.createElement(S._35, {
-                        type: S._40.Span,
-                        color: S.I.Alt
-                    }, Object(s.d)("Bits are fun, animated emotes. Cheering Bits celebrates moments you love with the community right in chat and similar to subscribing, helps support Partners and Affiliates.", "Bits--FirstTimeUserPrompt"), a.createElement(S.W, {
+                    }, a.createElement(C._35, {
+                        type: C._40.Span,
+                        color: C.I.Alt
+                    }, Object(s.d)("Bits are fun, animated emotes. Cheering Bits celebrates moments you love with the community right in chat and similar to subscribing, helps support Partners and Affiliates.", "Bits--FirstTimeUserPrompt"), a.createElement(C.W, {
                         margin: {
                             left: .5
                         }
                     }, a.createElement("a", {
                         onClick: this.props.toggleShowTutorial
-                    }, Object(s.d)("How do I cheer?", "Bits--FirstTimeUserPrompt"))))), a.createElement(S._2, {
+                    }, Object(s.d)("How do I cheer?", "Bits--FirstTimeUserPrompt"))))), a.createElement(C._2, {
                         padding: {
                             bottom: 2
                         },
-                        textAlign: S._36.Center
-                    }, a.createElement(S.W, {
+                        textAlign: C._36.Center
+                    }, a.createElement(C.W, {
                         margin: {
                             bottom: 1
                         }
-                    }, a.createElement(S._35, {
-                        type: S._40.H6,
+                    }, a.createElement(C._35, {
+                        type: C._40.H6,
                         bold: !0,
                         className: "bits-first-time-user-prompt__promo-header"
-                    }, Object(s.d)("First Time Purchaser Discount Pack!", "Bits--FirstTimeUserPrompt"))), a.createElement(S.u, {
+                    }, Object(s.d)("First Time Purchaser Discount Pack!", "Bits--FirstTimeUserPrompt"))), a.createElement(C.u, {
                         onClick: this.handlePromoBuy,
                         "data-purchase-url": this.props.promo.url,
                         "data-bits-amount": this.props.promo.bits,
@@ -6367,42 +6309,42 @@ webpackJsonp([37, 83], {
                         price: this.props.promo.price,
                         amount: this.props.promo.bits
                     }, "Bits--FirstTimeUserPrompt"))));
-                    return this.props.isShowingTutorial ? a.createElement(S._2, {
+                    return this.props.isShowingTutorial ? a.createElement(C._2, {
                         className: "bits-first-time-user-prompt",
                         fullWidth: !0
-                    }, a.createElement(S._2, {
+                    }, a.createElement(C._2, {
                         className: "bits-first-time-user-prompt__tutorial-back-button"
-                    }, a.createElement(S.u, {
+                    }, a.createElement(C.u, {
                         onClick: this.props.toggleShowTutorial,
-                        type: S.z.Text
-                    }, a.createElement(S._15, {
-                        asset: S._16.Play,
+                        type: C.z.Text
+                    }, a.createElement(C._15, {
+                        asset: C._16.Play,
                         height: 8
-                    }), " ", Object(s.d)("Back", "Bits--FirstTimeUserPrompt"))), a.createElement(S._2, {
-                        textAlign: S._36.Center,
+                    }), " ", Object(s.d)("Back", "Bits--FirstTimeUserPrompt"))), a.createElement(C._2, {
+                        textAlign: C._36.Center,
                         padding: {
                             x: 2,
                             bottom: 2,
                             top: 5
                         },
                         fullHeight: !0
-                    }, a.createElement(S.e, {
-                        type: S.i.SlideInLeft,
-                        duration: S.g.Long,
+                    }, a.createElement(C.e, {
+                        type: C.i.SlideInLeft,
+                        duration: C.g.Long,
                         enabled: !0
-                    }, a.createElement(k.a, null)))) : this.props.animateFirstTimeUserIntro ? a.createElement(S.W, {
+                    }, a.createElement(k.a, null)))) : this.props.animateFirstTimeUserIntro ? a.createElement(C.W, {
                         className: "bits-first-time-user-prompt"
-                    }, a.createElement(S.e, {
-                        type: S.i.SlideInRight,
-                        duration: S.g.Long,
+                    }, a.createElement(C.e, {
+                        type: C.i.SlideInRight,
+                        duration: C.g.Long,
                         enabled: this.props.animateFirstTimeUserIntro
-                    }, e)) : a.createElement(S._2, {
+                    }, e)) : a.createElement(C._2, {
                         className: "bits-first-time-user-prompt"
                     }, e)
                 }, t
             }(a.Component)),
-            w = n("jxGs"),
-            E = n("bkpq"),
+            E = n("jxGs"),
+            w = n("bkpq"),
             N = n("CSlQ"),
             O = n("annQ"),
             D = (n("lGVF"), function(e) {
@@ -6428,23 +6370,23 @@ webpackJsonp([37, 83], {
                 return i.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    if (this.props.loading) return a.createElement(S._25, {
+                    if (this.props.loading) return a.createElement(C._25, {
                         "data-a-target": "get-bits-button-content-loading",
-                        display: S.N.Flex,
-                        flexDirection: S.P.Column,
-                        alignItems: S.c.Center,
-                        justifyContent: S._1.Center,
-                        textAlign: S._36.Center,
+                        display: C.N.Flex,
+                        flexDirection: C.P.Column,
+                        alignItems: C.c.Center,
+                        justifyContent: C._1.Center,
+                        textAlign: C._36.Center,
                         padding: {
                             y: 5
                         }
-                    }, a.createElement(S._4, {
+                    }, a.createElement(C._4, {
                         delay: 0
-                    }), a.createElement(S._2, {
+                    }), a.createElement(C._2, {
                         padding: {
                             top: 2
                         }
-                    }, a.createElement(S._35, {
+                    }, a.createElement(C._35, {
                         italic: !0
                     }, Object(s.d)("Fetching bits", "Bits--GetBitsButtonContent"))));
                     var e = null;
@@ -6452,7 +6394,7 @@ webpackJsonp([37, 83], {
                         var t = this.props.bitsOffers.find(function(e) {
                             return Object(y.c)(e)
                         });
-                        t && t.type === w.b && this.props.channelID && !this.state.hideFirstTimeUserIntro && (e = a.createElement(C, {
+                        t && t.type === E.b && this.props.channelID && !this.state.hideFirstTimeUserIntro && (e = a.createElement(S, {
                             promo: t,
                             animateFirstTimeUserIntro: this.props.animateFirstTimeUserIntro,
                             isShowingTutorial: this.props.isShowingTutorial,
@@ -6463,15 +6405,15 @@ webpackJsonp([37, 83], {
                         }))
                     }
                     var n = null;
-                    void 0 !== this.props.bitsBalance && this.props.bitsConfig ? n = a.createElement(S._25, {
+                    void 0 !== this.props.bitsBalance && this.props.bitsConfig ? n = a.createElement(C._25, {
                         borderBottom: !0,
-                        textAlign: S._36.Center,
+                        textAlign: C._36.Center,
                         fullWidth: !0,
                         padding: {
                             y: .5
                         }
-                    }, a.createElement(S._35, {
-                        type: S._40.Span
+                    }, a.createElement(C._35, {
+                        type: C._40.Span
                     }, Object(s.d)("You have {bitsBalance}", {
                         bitsBalance: a.createElement(v.a, {
                             withImage: !0,
@@ -6479,15 +6421,15 @@ webpackJsonp([37, 83], {
                             count: this.props.bitsBalance,
                             bitsConfig: this.props.bitsConfig
                         })
-                    }, "Bits--GetBitsButton"))) : void 0 === this.props.bitsBalance && this.props.bitsConfig && (n = a.createElement(S._25, {
+                    }, "Bits--GetBitsButton"))) : void 0 === this.props.bitsBalance && this.props.bitsConfig && (n = a.createElement(C._25, {
                         borderBottom: !0,
-                        textAlign: S._36.Center,
+                        textAlign: C._36.Center,
                         fullWidth: !0,
                         padding: {
                             y: .5
                         }
-                    }, a.createElement(S._35, {
-                        type: S._40.Span
+                    }, a.createElement(C._35, {
+                        type: C._40.Span
                     }, Object(s.d)("{bitsGem} Log in to see your Bits balance", {
                         bitsGem: a.createElement(v.a, {
                             count: 100,
@@ -6508,12 +6450,12 @@ webpackJsonp([37, 83], {
                         fullsize: !0
                     })), a.createElement(f.b, {
                         className: "get-bits-button-content"
-                    }, a.createElement(S._2, null, n, e, i))
+                    }, a.createElement(C._2, null, n, e, i))
                 }, t = i.__decorate([Object(N.d)("GetBitsButtonContent"), Object(u.a)(O, {
                     name: "data",
                     props: function(e) {
                         var t, n;
-                        e.data && e.data.user && e.data.user.cheer && (t = Object(E.a)(e.data.user.cheer.emotes), n = e.data.user.id);
+                        e.data && e.data.user && e.data.user.cheer && (t = Object(w.a)(e.data.user.cheer.emotes), n = e.data.user.id);
                         var i, r;
                         return e.data && e.data.currentUser ? (r = e.data.currentUser.bitsBalance, i = e.data.currentUser.bitsOffers) : e.data && e.data.bitsOffers && (i = e.data.bitsOffers), {
                             loading: e.data && e.data.loading,
@@ -6570,11 +6512,11 @@ webpackJsonp([37, 83], {
                         animateFirstTimeUserIntro: this.state.animateFirstTimeUserIntro
                     })), a.createElement(d.a, {
                         onToggle: this.toggleBalloon
-                    }, a.createElement(S.u, {
+                    }, a.createElement(C.u, {
                         dropdown: !0
-                    }, Object(s.d)("Get Bits", "Bits--GetBitsButton")), a.createElement(S.p, {
-                        direction: S.q.BottomRight,
-                        size: S.r.Large
+                    }, Object(s.d)("Get Bits", "Bits--GetBitsButton")), a.createElement(C.p, {
+                        direction: C.q.BottomRight,
+                        size: C.r.Large
                     }, e))
                 }, t = i.__decorate([Object(N.d)("GetBitsButton")], t)
             }(a.Component),
@@ -6585,8 +6527,8 @@ webpackJsonp([37, 83], {
             })(x),
             T = n("2KeS"),
             A = n("V5M+"),
-            M = n("E9Qg"),
-            F = n("ebTC"),
+            F = n("E9Qg"),
+            M = n("ebTC"),
             R = n("4Q9N"),
             L = (n("4Jix"), n("Ojfd")),
             U = function(e) {
@@ -6594,7 +6536,7 @@ webpackJsonp([37, 83], {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.openModal = function() {
                         var e = t.props.data && t.props.data.user;
-                        e && t.props.showModal(F.a, {
+                        e && t.props.showModal(M.a, {
                             userID: e.id,
                             login: e.login,
                             displayName: e.displayName,
@@ -6611,7 +6553,7 @@ webpackJsonp([37, 83], {
                             "channel-banner--open": !this.props.collapsed
                         },
                         i = this.props.data;
-                    if (i && i.loading || !this.props.firstPageLoaded) e = a.createElement(S._8, {
+                    if (i && i.loading || !this.props.firstPageLoaded) e = a.createElement(C._8, {
                         height: 380,
                         "data-test-selector": "channel-banner__placeholder"
                     });
@@ -6619,29 +6561,29 @@ webpackJsonp([37, 83], {
                         i && i.user && i.user.bannerImageURL ? t = {
                             backgroundImage: "url(" + i.user.bannerImageURL + ")"
                         } : (n["channel-banner--default"] = !0, t = {
-                            backgroundImage: "url(" + M + ")"
+                            backgroundImage: "url(" + F + ")"
                         });
                         var o = null;
-                        this.props.canEdit && (o = a.createElement(S._0, {
+                        this.props.canEdit && (o = a.createElement(C._0, {
                             "data-test-selector": "channel-banner__edit-overlay-interactable",
                             onClick: this.openModal
-                        }, a.createElement(S._25, {
+                        }, a.createElement(C._25, {
                             className: "channel-banner__edit-overlay",
-                            background: S.m.Overlay,
-                            position: S._9.Absolute,
+                            background: C.m.Overlay,
+                            position: C._9.Absolute,
                             attachTop: !0,
                             attachLeft: !0,
                             fullWidth: !0,
-                            display: S.N.InlineFlex,
-                            alignItems: S.c.Center,
-                            justifyContent: S._1.Center
-                        }, a.createElement(S._2, {
-                            display: S.N.Flex,
-                            alignItems: S.c.Center,
-                            flexDirection: S.P.Column,
-                            justifyContent: S._1.Center
-                        }, a.createElement(S._2, null, a.createElement(S._15, {
-                            asset: S._16.Edit
+                            display: C.N.InlineFlex,
+                            alignItems: C.c.Center,
+                            justifyContent: C._1.Center
+                        }, a.createElement(C._2, {
+                            display: C.N.Flex,
+                            alignItems: C.c.Center,
+                            flexDirection: C.P.Column,
+                            justifyContent: C._1.Center
+                        }, a.createElement(C._2, null, a.createElement(C._15, {
+                            asset: C._16.Edit
                         })), Object(s.d)("Update Profile Banner", "ChannelBanner"))))), e = a.createElement("div", {
                             className: "channel-banner__image",
                             "data-test-selector": "channel-banner",
@@ -6651,7 +6593,7 @@ webpackJsonp([37, 83], {
                     return a.createElement("div", {
                         className: r("channel-banner", n),
                         onTransitionEnd: this.props.onTransitionEnd
-                    }, a.createElement(S.W, {
+                    }, a.createElement(C.W, {
                         fullWidth: !0
                     }, e))
                 }, t.prototype.componentWillUnmount = function() {
@@ -6670,7 +6612,7 @@ webpackJsonp([37, 83], {
                     return !e.channelLogin || !e.firstPageLoaded
                 }
             })(U),
-            B = Object(p.b)(function(e) {
+            V = Object(p.b)(function(e) {
                 return {
                     firstPageLoaded: e.session.firstPageLoaded
                 }
@@ -6680,12 +6622,12 @@ webpackJsonp([37, 83], {
                     showModal: A.d
                 }, e)
             })(j),
-            V = n("x9n8"),
+            B = n("x9n8"),
             P = (n("WClm"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.openModal = function(e) {
-                        e.stopPropagation(), t.props.showModal(V.a, {
+                        e.stopPropagation(), t.props.showModal(B.a, {
                             userID: t.props.userID,
                             login: t.props.login,
                             displayName: t.props.displayName,
@@ -6696,17 +6638,17 @@ webpackJsonp([37, 83], {
                 return i.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return a.createElement(S._2, {
+                    return a.createElement(C._2, {
                         className: "edit-profile-overlay",
-                        display: S.N.Flex,
-                        justifyContent: S._1.Center,
-                        alignContent: S.b.Center,
+                        display: C.N.Flex,
+                        justifyContent: C._1.Center,
+                        alignContent: C.b.Center,
                         fullHeight: !0,
                         fullWidth: !0
-                    }, a.createElement(S.v, {
+                    }, a.createElement(C.v, {
                         overlay: !0,
                         ariaLabel: Object(s.d)("Edit Profile", "ChannelHeader"),
-                        icon: S._16.Edit,
+                        icon: C._16.Edit,
                         onClick: this.openModal
                     }))
                 }, t = i.__decorate([Object(N.d)("EditProfileOverlay")], t)
@@ -6726,8 +6668,8 @@ webpackJsonp([37, 83], {
         var q, G = "channel-header__edit-profile-overlay",
             Y = "user-channel-header-item",
             Q = "channel-header__verified-badge",
-            K = "channel-header__live-indicator",
-            $ = "channel-header__channel-link";
+            $ = "channel-header__live-indicator",
+            K = "channel-header__channel-link";
         ! function(e) {
             e[e.Channel = 1] = "Channel", e[e.Clips = 2] = "Clips", e[e.Collections = 3] = "Collections", e[e.Events = 4] = "Events", e[e.Success = 5] = "Success", e[e.Followers = 6] = "Followers", e[e.Following = 7] = "Following", e[e.Videos = 8] = "Videos"
         }(q || (q = {}));
@@ -6738,42 +6680,42 @@ webpackJsonp([37, 83], {
                     live: !1,
                     bannerHidden: !0,
                     bannerSlideIn: !1
-                }, t.verifiedBadgeElement = a.createElement(S._43, {
+                }, t.verifiedBadgeElement = a.createElement(C._43, {
                     label: Object(s.d)("Verified", "ChannelHeader"),
-                    direction: S._45.Right
-                }, a.createElement(S._2, {
+                    direction: C._45.Right
+                }, a.createElement(C._2, {
                     className: "channel-header__verified",
                     "data-target": Q,
-                    display: S.N.Flex,
-                    alignItems: S.c.Center,
+                    display: C.N.Flex,
+                    alignItems: C.c.Center,
                     margin: {
                         left: 1
                     }
-                }, a.createElement(S._15, {
-                    asset: S._16.Verified
-                }))), t.ChannelStatusIndicatorElement = a.createElement(S._2, {
+                }, a.createElement(C._15, {
+                    asset: C._16.Verified
+                }))), t.ChannelStatusIndicatorElement = a.createElement(C._2, {
                     margin: {
                         left: 1
                     },
-                    "data-target": K
-                }, a.createElement(S._43, {
+                    "data-target": $
+                }, a.createElement(C._43, {
                     label: Object(s.d)("Live Now", "ChannelHeader"),
-                    direction: S._45.Right
-                }, a.createElement(S.E, {
-                    status: S.G.Live,
+                    direction: C._45.Right
+                }, a.createElement(C.E, {
+                    status: C.G.Live,
                     pulse: !0
                 }))), t.renderAvatarEditButton = function() {
-                    return t.props.data && t.isChannelEditor() ? a.createElement(S._25, {
+                    return t.props.data && t.isChannelEditor() ? a.createElement(C._25, {
                         className: G,
-                        background: S.m.Overlay,
-                        position: S._9.Absolute,
+                        background: C.m.Overlay,
+                        position: C._9.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
                         fullHeight: !0,
                         fullWidth: !0,
-                        display: S.N.InlineFlex,
-                        alignItems: S.c.Center,
-                        justifyContent: S._1.Center
+                        display: C.N.InlineFlex,
+                        alignItems: C.c.Center,
+                        justifyContent: C._1.Center
                     }, a.createElement(H, {
                         userID: t.props.data.user.id,
                         login: t.props.data.user.login,
@@ -6832,118 +6774,118 @@ webpackJsonp([37, 83], {
                         "channel-header__user--selected": this.isActiveTab(q.Channel)
                     },
                     g = null;
-                this.canRenderBitsButton() && (g = a.createElement(S._2, {
+                this.canRenderBitsButton() && (g = a.createElement(C._2, {
                     margin: {
                         left: 1
                     }
                 }, a.createElement(I, {
                     channelLogin: this.props.channelLogin
                 })));
-                var v, b = a.createElement(S._2, {
-                    display: S.N.Flex,
-                    flexWrap: S.Q.NoWrap,
-                    alignItems: S.c.Center,
+                var v, b = a.createElement(C._2, {
+                    display: C.N.Flex,
+                    flexWrap: C.Q.NoWrap,
+                    alignItems: C.c.Center,
                     flexShrink: 0
-                }, a.createElement(S._2, {
+                }, a.createElement(C._2, {
                     className: "channel-header__user-avatar channel-header__user-avatar--active",
                     margin: {
                         right: 1
                     },
-                    display: S.N.Flex,
+                    display: C.N.Flex,
                     flexShrink: 0,
-                    alignItems: S.c.Stretch
-                }, a.createElement(S._2, {
-                    position: S._9.Relative
-                }, a.createElement(S.l, {
+                    alignItems: C.c.Stretch
+                }, a.createElement(C._2, {
+                    position: C._9.Relative
+                }, a.createElement(C.l, {
                     size: 36,
                     src: m,
                     alt: e || ""
-                }), this.renderAvatarEditButton())), e ? a.createElement(S._35, {
-                    type: S._40.H5
-                }, e) : a.createElement(S._2, {
-                    alignItems: S.c.Center
-                }, a.createElement(S._8, {
+                }), this.renderAvatarEditButton())), e ? a.createElement(C._35, {
+                    type: C._40.H5
+                }, e) : a.createElement(C._2, {
+                    alignItems: C.c.Center
+                }, a.createElement(C._8, {
                     lineCount: 1,
                     width: 120
                 })), p && this.ChannelStatusIndicatorElement, t && this.verifiedBadgeElement);
                 v = this.isActiveTab(q.Channel) ? a.createElement("div", {
                     className: "channel-header__banner-toggle",
                     onClick: this.toggleChannelBanner,
-                    "data-target": $,
+                    "data-target": K,
                     "data-a-target": Y
                 }, b) : this.props.data && this.props.data.user && this.props.data.user.login ? a.createElement(o.a, {
                     to: "/" + this.props.data.user.login,
-                    "data-target": $,
+                    "data-target": K,
                     "data-a-target": Y
                 }, b) : b;
-                var k = this.state.bannerHidden ? S.N.HideAccessible : S.N.Block,
+                var k = this.state.bannerHidden ? C.N.HideAccessible : C.N.Block,
                     y = null;
-                return this.isActiveTab(q.Channel) && (y = a.createElement(S._2, {
+                return this.isActiveTab(q.Channel) && (y = a.createElement(C._2, {
                     display: k
-                }, a.createElement(B, {
+                }, a.createElement(V, {
                     channelLogin: this.props.channelLogin,
                     canEdit: this.isChannelEditor(),
                     collapsed: !this.state.bannerSlideIn,
                     onTransitionEnd: this.completedBannerAnimation
-                }))), a.createElement(S._2, {
+                }))), a.createElement(C._2, {
                     className: "channel-header",
                     flexShrink: 0
-                }, y, a.createElement(S._2, {
-                    display: S.N.Flex,
-                    justifyContent: S._1.Between,
-                    flexWrap: S.Q.NoWrap,
+                }, y, a.createElement(C._2, {
+                    display: C.N.Flex,
+                    justifyContent: C._1.Between,
+                    flexWrap: C.Q.NoWrap,
                     fullHeight: !0,
                     refDelegate: this.saveChannelHeaderRef,
                     margin: {
                         x: 3
                     }
-                }, a.createElement(S._2, {
-                    display: S.N.Flex,
-                    alignItems: S.c.Stretch,
+                }, a.createElement(C._2, {
+                    display: C.N.Flex,
+                    alignItems: C.c.Stretch,
                     flexShrink: 0,
-                    flexWrap: S.Q.NoWrap,
+                    flexWrap: C.Q.NoWrap,
                     "data-target": "channel-header-left"
-                }, a.createElement(S.W, {
+                }, a.createElement(C.W, {
                     className: r(f),
                     padding: {
                         y: .5,
                         right: 2
                     },
-                    display: S.N.Flex,
-                    flexWrap: S.Q.NoWrap,
-                    alignItems: S.c.Center,
+                    display: C.N.Flex,
+                    flexWrap: C.Q.NoWrap,
+                    alignItems: C.c.Center,
                     flexShrink: 0
-                }, v), this.renderTabs(h), a.createElement(S._2, {
+                }, v), this.renderTabs(h), a.createElement(C._2, {
                     className: "channel-header__item channel-header__item--no-underline",
                     padding: {
                         x: 1
                     },
                     flexShrink: 0,
-                    alignSelf: S.d.Center,
+                    alignSelf: C.d.Center,
                     "data-target": "channel-header-button"
                 }, a.createElement(d.a, {
                     alwaysMountBalloonContent: !0
-                }, a.createElement(S.v, {
-                    icon: S._16.NavMore,
+                }, a.createElement(C.v, {
+                    icon: C._16.NavMore,
                     ariaLabel: Object(s.d)("More", "ChannelHeader")
-                }), a.createElement(S.p, {
-                    direction: S.q.Bottom,
+                }), a.createElement(C.p, {
+                    direction: C.q.Bottom,
                     noTail: !0
-                }, a.createElement(S._2, {
+                }, a.createElement(C._2, {
                     padding: {
                         y: 1
                     }
-                }, this.renderDropdown(h)))))), a.createElement(S._2, {
-                    display: S.N.Flex,
-                    flexWrap: S.Q.NoWrap,
+                }, this.renderDropdown(h)))))), a.createElement(C._2, {
+                    display: C.N.Flex,
+                    flexWrap: C.Q.NoWrap,
                     flexShrink: 0,
-                    alignItems: S.c.Center,
+                    alignItems: C.c.Center,
                     className: "channel-header__right",
                     "data-target": "channel-header-right"
-                }, a.createElement(S._2, {
+                }, a.createElement(C._2, {
                     className: "channel-header__follow-button",
-                    display: S.N.Flex,
-                    alignItems: S.c.Stretch,
+                    display: C.N.Flex,
+                    alignItems: C.c.Stretch,
                     margin: {
                         left: 1
                     }
@@ -6951,7 +6893,7 @@ webpackJsonp([37, 83], {
                     updateContainerWidth: this.onUpdateDebounce,
                     isHostedFollow: !1,
                     channelLogin: this.props.channelLogin
-                })), a.createElement(S._2, {
+                })), a.createElement(C._2, {
                     margin: {
                         left: 1
                     }
@@ -6974,21 +6916,21 @@ webpackJsonp([37, 83], {
             }, t.prototype.renderTabs = function(e) {
                 var t = this;
                 return e.map(function(e) {
-                    var n = e.count ? a.createElement(S._2, {
+                    var n = e.count ? a.createElement(C._2, {
                             className: "channel-header__item-count",
-                            display: S.N.Flex,
+                            display: C.N.Flex,
                             margin: {
                                 left: .5
                             }
-                        }, a.createElement(S._35, {
-                            type: S._40.Span,
-                            fontSize: S.R.Size5
+                        }, a.createElement(C._35, {
+                            type: C._40.Span,
+                            fontSize: C.R.Size5
                         }, e.count)) : null,
                         r = t.generateUserLink(e.pathSuffix, e.isExternal),
                         s = {};
-                    return e.isExternal && (s.target = Object(m.b)() ? "_blank" : ""), a.createElement(S.W, {
+                    return e.isExternal && (s.target = Object(m.b)() ? "_blank" : ""), a.createElement(C.W, {
                         key: "channel-header__item--" + e.label,
-                        alignItems: S.c.Center,
+                        alignItems: C.c.Center,
                         flexShrink: 0
                     }, a.createElement(o.a, i.__assign({
                         className: "channel-header__item channel-header__item--hide " + (e.isSelected ? "channel-header__item--selected" : "")
@@ -6997,46 +6939,46 @@ webpackJsonp([37, 83], {
                         disabled: "#" === r,
                         "data-target": "channel-header-item",
                         "data-a-target": e.label.toLowerCase() + "-channel-header-item"
-                    }), a.createElement(S._2, {
+                    }), a.createElement(C._2, {
                         padding: {
                             x: 2,
                             y: .5
                         },
-                        display: S.N.Flex
-                    }, a.createElement(S._35, {
-                        type: S._40.Span,
-                        fontSize: S.R.Size5
+                        display: C.N.Flex
+                    }, a.createElement(C._35, {
+                        type: C._40.Span,
+                        fontSize: C.R.Size5
                     }, e.label), n)))
                 })
             }, t.prototype.renderDropdown = function(e) {
                 var t = this;
                 return e.map(function(e) {
-                    var n = e.count ? a.createElement(S._2, {
+                    var n = e.count ? a.createElement(C._2, {
                             className: "channel-header__item-count",
-                            display: S.N.Flex,
+                            display: C.N.Flex,
                             margin: {
                                 left: .5
                             }
-                        }, a.createElement(S._35, {
-                            type: S._40.Span
+                        }, a.createElement(C._35, {
+                            type: C._40.Span
                         }, e.count)) : null,
                         r = t.generateUserLink(e.pathSuffix, e.isExternal),
                         o = {};
-                    return e.isExternal && (o.targetBlank = !0), a.createElement(S._2, {
+                    return e.isExternal && (o.targetBlank = !0), a.createElement(C._2, {
                         key: "channel-header__dropdown-item--" + e.label,
                         "data-target": "channel-header-dropdown-item"
-                    }, a.createElement(S._0, i.__assign({
+                    }, a.createElement(C._0, i.__assign({
                         linkTo: r,
                         disabled: "#" === r
-                    }, o), a.createElement(S._2, {
+                    }, o), a.createElement(C._2, {
                         className: "channel-header__dropdown-hover-target",
                         padding: {
                             y: .5,
                             x: 1
                         },
-                        display: S.N.Flex
-                    }, a.createElement(S._35, {
-                        type: S._40.Span
+                        display: C.N.Flex
+                    }, a.createElement(C._35, {
+                        type: C._40.Span
                     }, e.label), n)))
                 })
             }, t.prototype.createChannelLinks = function(e, t, n) {
@@ -7813,7 +7755,7 @@ webpackJsonp([37, 83], {
 
         function r(e) {
             return {
-                adModalOpen: Object(c.b)(e, w),
+                adModalOpen: Object(c.b)(e, E),
                 isLoggedIn: Object(d.d)(e)
             }
         }
@@ -7821,7 +7763,7 @@ webpackJsonp([37, 83], {
         function a(e) {
             return {
                 showWatchAdModal: function(t) {
-                    return e(Object(l.d)(w, t))
+                    return e(Object(l.d)(E, t))
                 }
             }
         }
@@ -7842,8 +7784,8 @@ webpackJsonp([37, 83], {
         var b, k = n("4JjK"),
             y = n("/LBW"),
             _ = n("Odds"),
-            S = n("zzpv"),
-            C = (n("x583"), function(e) {
+            C = n("zzpv"),
+            S = (n("x583"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {}, t.hasAwarded = !1, t.messageHandler = function(e) {
@@ -7945,16 +7887,16 @@ webpackJsonp([37, 83], {
                     }, m.createElement(f.a, null), m.createElement("iframe", {
                         src: "/products/bits/ad"
                     })))
-                }, t = u.__decorate([Object(g.a)(S, {
+                }, t = u.__decorate([Object(g.a)(C, {
                     name: "redeemTrueXAd"
                 })], t)
             }(m.Component)),
-            w = Object(s.b)(null, function(e) {
+            E = Object(s.b)(null, function(e) {
                 return Object(p.b)({
                     closeModal: l.c
                 }, e)
-            })(C),
-            E = n("HW6M"),
+            })(S),
+            w = n("HW6M"),
             N = n("3zLD"),
             O = n("jF7o"),
             D = n("w9tK"),
@@ -8001,7 +7943,7 @@ webpackJsonp([37, 83], {
                 }, t)))
             },
             A = /version\/([\w\.]+).+?(mobile\s?safari|safari)/i,
-            M = function(e) {
+            F = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -8032,13 +7974,13 @@ webpackJsonp([37, 83], {
                     }))
                 }, t
             }(m.Component),
-            F = n("jxGs"),
+            M = n("jxGs"),
             R = n("3iBR"),
             L = n("iydZ"),
             U = n("ZJYd"),
             j = n("CFVp"),
-            B = n("qe65"),
-            V = (n("OLKT"), function(e) {
+            V = n("qe65"),
+            B = (n("OLKT"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleBuyClick = function(e) {
@@ -8055,10 +7997,10 @@ webpackJsonp([37, 83], {
                     }, t
                 }
                 return u.__extends(t, e), t.prototype.render = function() {
-                    if (this.props.offer.type === F.a) {
+                    if (this.props.offer.type === M.a) {
                         if (!this.props.channelLogin) return null;
                         var e = this.props.currentUserSHA || "";
-                        return m.createElement(M, {
+                        return m.createElement(F, {
                             key: "wateb",
                             minPayout: this.props.offer.bits,
                             onWatchAdClick: this.props.handleWatchAdClick,
@@ -8073,7 +8015,7 @@ webpackJsonp([37, 83], {
                     }, m.createElement(_._35, {
                         type: _._40.Strong,
                         fontSize: _.R.Size6
-                    }, Object(h.d)("Special Offer: 1st Time Buyers", "Bits--BuyCard"))) : Object(U.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === F.c && (t = m.createElement(_._2, {
+                    }, Object(h.d)("Special Offer: 1st Time Buyers", "Bits--BuyCard"))) : Object(U.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === M.c && (t = m.createElement(_._2, {
                         className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline"
                     }, m.createElement(_._35, {
                         type: _._40.Strong,
@@ -8140,7 +8082,7 @@ webpackJsonp([37, 83], {
                         },
                         className: "bits-buy-card-offer-row__tier-bits-images"
                     }, n.map(function(e) {
-                        return m.createElement(B.a, {
+                        return m.createElement(V.a, {
                             key: e.bits,
                             sources: Object(L.b)(e, 2, !1)
                         })
@@ -8152,7 +8094,7 @@ webpackJsonp([37, 83], {
                     n = [],
                     i = null;
                 return e.offers.forEach(function(r, a) {
-                    var o = m.createElement(V, {
+                    var o = m.createElement(B, {
                             key: r.id,
                             offer: r,
                             isLastRow: a + 1 < e.offers.length,
@@ -8169,7 +8111,7 @@ webpackJsonp([37, 83], {
                         }),
                         s = Object(U.d)(r),
                         l = Object(U.c)(r),
-                        c = r.type === F.a;
+                        c = r.type === M.a;
                     l && !e.hidePromos ? t.push(o) : s && !l ? t.push(o) : c && !e.hideWateb ? i = o : c || s || n.push(o)
                 }), e.fullsize ? m.createElement(_._2, {
                     className: "bits-buy-card-offers__full-size",
@@ -8378,7 +8320,7 @@ webpackJsonp([37, 83], {
         ! function(e) {
             e[e.Inactive = 0] = "Inactive", e[e.Error = 1] = "Error", e[e.Awarded = 2] = "Awarded"
         }(I || (I = {}));
-        var K = function(e) {
+        var $ = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -8426,7 +8368,7 @@ webpackJsonp([37, 83], {
                             fullWidth: !0,
                             elevation: 3
                         },
-                        t = E({
+                        t = w({
                             "bits-buy-card": !0,
                             "bits-buy-card__chat-tooltip": this.props.location === y.b.ChatTooltip
                         }),
@@ -8457,7 +8399,7 @@ webpackJsonp([37, 83], {
                         italic: !0
                     }, Object(h.d)("Fetching bits", "Bits--BuyCard"))));
                     if (this.props.data.error) return m.createElement(_._2, u.__assign({
-                        className: E(t, "bits-buy-card--shorter"),
+                        className: w(t, "bits-buy-card--shorter"),
                         display: _.N.Flex,
                         flexDirection: _.P.Column,
                         alignItems: _.c.Center,
@@ -8470,7 +8412,7 @@ webpackJsonp([37, 83], {
                     }, Object(h.d)("Bits prices are unavailable right now. Check back again later.", "Bits--BuyCard")));
                     var i = this.renderWatebCard();
                     if (i) return m.createElement(_._25, u.__assign({
-                        className: E(t, "bits-buy-card--shorter"),
+                        className: w(t, "bits-buy-card--shorter"),
                         display: _.N.Flex,
                         flexDirection: _.P.Column,
                         alignItems: _.c.Center,
@@ -8481,7 +8423,7 @@ webpackJsonp([37, 83], {
                     var r = [];
                     this.props.data.currentUser ? r = this.props.data.currentUser.bitsOffers : this.props.data.bitsOffers && (r = this.props.data.bitsOffers);
                     var a = r.filter(function(e) {
-                            return e.type === F.b
+                            return e.type === M.b
                         }).some(function(e) {
                             return e.includesVAT
                         }),
@@ -8549,11 +8491,11 @@ webpackJsonp([37, 83], {
                     }
                 })], t)
             }(m.Component),
-            $ = Object(N.compose)(Object(Y.d)("BitsBuyCard", {
+            K = Object(N.compose)(Object(Y.d)("BitsBuyCard", {
                 autoReportInteractive: !0,
                 destination: D.a.BitsBuyCard
-            }))(K),
-            J = Object(s.b)(r, a)($);
+            }))($),
+            J = Object(s.b)(r, a)(K);
         n.d(t, !1, function() {
             return r
         }), n.d(t, !1, function() {
@@ -8710,8 +8652,8 @@ webpackJsonp([37, 83], {
                     autoReportInteractive: !0
                 }), Object(s.a)(y)], t)
             }(r.Component),
-            S = n("FNUa"),
-            C = function(e) {
+            C = n("FNUa"),
+            S = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -8741,14 +8683,14 @@ webpackJsonp([37, 83], {
                     }))
                 }, t
             }(r.Component),
-            w = Object(a.compose)(Object(c.d)("RecentCreatorVideosCarousel", {
+            E = Object(a.compose)(Object(c.d)("RecentCreatorVideosCarousel", {
                 autoReportInteractive: !0
-            }), Object(s.a)(S, {
+            }), Object(s.a)(C, {
                 skip: function(e) {
                     return !e.creatorID
                 }
-            }))(C),
-            E = n("RH2O"),
+            }))(S),
+            w = n("RH2O"),
             N = n("Aj/L"),
             O = n("pwi9"),
             D = function(e) {
@@ -8786,14 +8728,14 @@ webpackJsonp([37, 83], {
                     return !e.isLoggedIn
                 }
             }))(D),
-            I = Object(E.b)(function(e) {
+            I = Object(w.b)(function(e) {
                 return {
                     isLoggedIn: Object(N.d)(e)
                 }
             })(x),
             T = n("wuJz"),
             A = n("VUr8"),
-            M = function(e) {
+            F = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -8834,18 +8776,18 @@ webpackJsonp([37, 83], {
                     }))
                 }, t
             }(r.Component),
-            F = Object(a.compose)(Object(s.a)(A, {
+            M = Object(a.compose)(Object(s.a)(A, {
                 skip: function(e) {
                     return !e.isLoggedIn
                 }
             }), Object(c.d)("ResumeWatchingVideoCarousel", {
                 autoReportInteractive: !0
-            }))(M),
-            R = Object(E.b)(function(e) {
+            }))(F),
+            R = Object(w.b)(function(e) {
                 return {
                     isLoggedIn: Object(N.d)(e)
                 }
-            })(F);
+            })(M);
         n.d(t, "a", function() {
             return f
         }), n.d(t, !1, function() {
@@ -8855,7 +8797,7 @@ webpackJsonp([37, 83], {
         }), n.d(t, "c", function() {
             return _
         }), n.d(t, "d", function() {
-            return w
+            return E
         }), n.d(t, "e", function() {
             return I
         }), n.d(t, "f", function() {
@@ -10019,106 +9961,97 @@ webpackJsonp([37, 83], {
     cAee: function(e, t, n) {
         "use strict";
 
-        function i(e, t) {
-            return {
-                id: e.id,
-                owner: t.owner || null,
-                broadcastType: t.broadcastType,
-                game: t.game
-            }
+        function i(e, t, n) {
+            return o.__awaiter(this, void 0, void 0, function() {
+                var r, a, d, m;
+                return o.__generator(this, function(o) {
+                    switch (o.label) {
+                        case 0:
+                            return o.trys.push([0, 2, , 3]), [4, n.query({
+                                query: u,
+                                variables: {
+                                    videoID: e.id
+                                }
+                            })];
+                        case 1:
+                            return r = o.sent().data, a = function(e, t) {
+                                return {
+                                    id: e.id,
+                                    owner: t.owner,
+                                    broadcastType: t.broadcastType,
+                                    game: t.game
+                                }
+                            }(e, r.video), d = {
+                                channel: a.owner ? a.owner.login : null,
+                                channel_id: Number(e.owner.id),
+                                game: a.game ? a.game.name : null,
+                                partner: !!a.owner && a.owner.roles.isPartner,
+                                location: t.location,
+                                share_context: t.collectionID ? l.ShareItemContext.Collection : null,
+                                share_platform: t.platform,
+                                shared_item_id: t.collectionID ? t.collectionID : a.id,
+                                shared_item_type: t.collectionID ? l.ShareItemType.Collection : Object(c.a)(a.broadcastType),
+                                shared_item_url: t.shareURL,
+                                source_item_id: a.id,
+                                source_item_type: Object(c.a)(a.broadcastType)
+                            }, s.n.tracking.track(l.SpadeEventType.ShareItem, d), [3, 3];
+                        case 2:
+                            return m = o.sent(), s.i.error(m.toString(), i.name), [3, 3];
+                        case 3:
+                            return [2]
+                    }
+                })
+            })
+        }
+
+        function r(e, t, n) {
+            return o.__awaiter(this, void 0, void 0, function() {
+                var i, a, c;
+                return o.__generator(this, function(o) {
+                    switch (o.label) {
+                        case 0:
+                            return o.trys.push([0, 2, , 3]), [4, n.query({
+                                query: d,
+                                variables: {
+                                    creatorID: e.owner.id
+                                }
+                            })];
+                        case 1:
+                            return i = o.sent().data, a = {
+                                channel: i.user ? i.user.login : null,
+                                channel_id: Number(e.owner.id),
+                                game: null,
+                                partner: !!i.user && i.user.roles.isPartner,
+                                location: t.location,
+                                share_context: null,
+                                share_platform: t.platform,
+                                shared_item_id: e.id,
+                                shared_item_type: l.ShareItemType.Collection,
+                                shared_item_url: t.shareURL,
+                                source_item_id: e.id,
+                                source_item_type: l.SourceItemType.Collection
+                            }, s.n.tracking.track(l.SpadeEventType.ShareItem, a), [3, 3];
+                        case 2:
+                            return c = o.sent(), s.i.error(c.toString(), r.name), [3, 3];
+                        case 3:
+                            return [2]
+                    }
+                })
+            })
         }
         n.d(t, "a", function() {
-            return r
-        }), n.d(t, "c", function() {
-            return u
-        }), n.d(t, "b", function() {
-            return m
-        });
-        var r, a = n("TToO"),
-            o = n("6sO2"),
-            s = n("vH/s"),
-            l = n("xrVp"),
-            c = n("164Z"),
-            d = (n.n(c), this);
+            return a
+        }), t.c = i, t.b = r;
+        var a, o = n("TToO"),
+            s = n("6sO2"),
+            l = n("vH/s"),
+            c = n("xrVp"),
+            d = n("mvQ0"),
+            u = (n.n(d), n("164Z"));
+        n.n(u);
         ! function(e) {
-            e.Video = "video", e.Collection = "collection"
-        }(r || (r = {}));
-        var u = function(e, t, n) {
-                return a.__awaiter(d, void 0, void 0, function() {
-                    var r, d, m, p;
-                    return a.__generator(this, function(a) {
-                        switch (a.label) {
-                            case 0:
-                                if (!e) return [2];
-                                a.label = 1;
-                            case 1:
-                                return a.trys.push([1, 3, , 4]), [4, n.query({
-                                    query: c,
-                                    variables: {
-                                        videoID: e.id
-                                    }
-                                })];
-                            case 2:
-                                return r = a.sent().data, d = i(e, r.video), m = {
-                                    channel: d.owner ? d.owner.login : null,
-                                    channel_id: d.owner ? Number(d.owner.id) : null,
-                                    game: d.game ? d.game.name : null,
-                                    partner: !!d.owner && d.owner.roles.isPartner,
-                                    location: s.PageviewLocation.VideoWatchPage,
-                                    share_context: t.collectionID ? s.ShareItemContext.Collection : null,
-                                    share_platform: t.sharePlatform,
-                                    shared_item_id: d.id,
-                                    shared_item_type: Object(l.a)(d.broadcastType),
-                                    shared_item_url: t.shareURL,
-                                    source_item_id: d.id,
-                                    source_item_type: Object(l.a)(d.broadcastType)
-                                }, o.n.tracking.track(s.SpadeEventType.ShareItem, m), [3, 4];
-                            case 3:
-                                return p = a.sent(), o.i.error(p.toString(), u.name), [3, 4];
-                            case 4:
-                                return [2]
-                        }
-                    })
-                })
-            },
-            m = function(e, t, n) {
-                return a.__awaiter(d, void 0, void 0, function() {
-                    var r, d, u, p;
-                    return a.__generator(this, function(a) {
-                        switch (a.label) {
-                            case 0:
-                                if (!e || !t.collectionID) return [2];
-                                a.label = 1;
-                            case 1:
-                                return a.trys.push([1, 3, , 4]), [4, n.query({
-                                    query: c,
-                                    variables: {
-                                        videoID: e.id
-                                    }
-                                })];
-                            case 2:
-                                return r = a.sent().data, d = i(e, r.video), u = {
-                                    channel: d.owner ? d.owner.login : null,
-                                    channel_id: d.owner ? Number(d.owner.id) : null,
-                                    game: null,
-                                    partner: !!d.owner && d.owner.roles.isPartner,
-                                    location: s.PageviewLocation.VideoWatchPage,
-                                    share_context: null,
-                                    share_platform: t.sharePlatform,
-                                    shared_item_id: t.collectionID,
-                                    shared_item_type: s.ShareItemType.Collection,
-                                    shared_item_url: t.shareURL,
-                                    source_item_id: d.id,
-                                    source_item_type: Object(l.a)(d.broadcastType)
-                                }, o.n.tracking.track(s.SpadeEventType.ShareItem, u), [3, 4];
-                            case 3:
-                                return p = a.sent(), o.i.error(p.toString(), m.name), [3, 4];
-                            case 4:
-                                return [2]
-                        }
-                    })
-                })
-            }
+            e.Copy = "link", e.Embed = "option_embed", e.Facebook = "fb", e.Link = "option_link", e.Reddit = "reddit", e.Twitter = "twitter", e.Unknown = "", e.VKontakte = "vk"
+        }(a || (a = {}))
     },
     cONr: function(e, t, n) {
         var i = n("f+sD");
@@ -10261,7 +10194,7 @@ webpackJsonp([37, 83], {
             k = n("Odds"),
             y = (n("+Aaf"), n("0H+u")),
             _ = ["image/*"],
-            S = function(e) {
+            C = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -10295,7 +10228,7 @@ webpackJsonp([37, 83], {
                                                 }), [2];
                                             case 4:
                                                 return this.unsubscribe = c.j.subscribe({
-                                                    topic: Object(p.g)(this.props.userID),
+                                                    topic: Object(p.h)(this.props.userID),
                                                     success: function() {
                                                         try {
                                                             Object(g.c)(n, o.currentImage)
@@ -10466,8 +10399,8 @@ webpackJsonp([37, 83], {
                     }
                 })], t)
             }(l.Component),
-            C = Object(b.d)("User Image Upload")(S),
-            w = Object(i.b)(function(e) {
+            S = Object(b.d)("User Image Upload")(C),
+            E = Object(i.b)(function(e) {
                 return {
                     authToken: Object(o.a)(e)
                 }
@@ -10477,9 +10410,9 @@ webpackJsonp([37, 83], {
                         return t.successCallback && t.successCallback(), Object(a.c)()
                     }
                 }, e)
-            })(C);
+            })(S);
         n.d(t, "a", function() {
-            return w
+            return E
         })
     },
     eeM1: function(e, t) {
@@ -11712,6 +11645,312 @@ webpackJsonp([37, 83], {
         };
         var i = n("6sO2")
     },
+    jOt7: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "ShareVideo_Content"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "videoID"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "ID"
+                            }
+                        }
+                    }
+                }, {
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "collectionID"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "ID"
+                            }
+                        }
+                    }
+                }, {
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "hasVideo"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "Boolean"
+                            }
+                        }
+                    }
+                }, {
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "hasCollection"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "Boolean"
+                            }
+                        }
+                    }
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "video"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "id"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "videoID"
+                                }
+                            }
+                        }, {
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "options"
+                            },
+                            value: {
+                                kind: "ObjectValue",
+                                fields: [{
+                                    kind: "ObjectField",
+                                    name: {
+                                        kind: "Name",
+                                        value: "includePrivate"
+                                    },
+                                    value: {
+                                        kind: "BooleanValue",
+                                        value: !0
+                                    }
+                                }]
+                            }
+                        }],
+                        directives: [{
+                            kind: "Directive",
+                            name: {
+                                kind: "Name",
+                                value: "include"
+                            },
+                            arguments: [{
+                                kind: "Argument",
+                                name: {
+                                    kind: "Name",
+                                    value: "if"
+                                },
+                                value: {
+                                    kind: "Variable",
+                                    name: {
+                                        kind: "Name",
+                                        value: "hasVideo"
+                                    }
+                                }
+                            }]
+                        }],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "owner"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "id"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }, {
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "displayName"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }]
+                                }
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "title"
+                                },
+                                arguments: [],
+                                directives: []
+                            }]
+                        }
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "collection"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "id"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "collectionID"
+                                }
+                            }
+                        }],
+                        directives: [{
+                            kind: "Directive",
+                            name: {
+                                kind: "Name",
+                                value: "include"
+                            },
+                            arguments: [{
+                                kind: "Argument",
+                                name: {
+                                    kind: "Name",
+                                    value: "if"
+                                },
+                                value: {
+                                    kind: "Variable",
+                                    name: {
+                                        kind: "Name",
+                                        value: "hasCollection"
+                                    }
+                                }
+                            }]
+                        }],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "owner"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "id"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }, {
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "displayName"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }]
+                                }
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "title"
+                                },
+                                arguments: [],
+                                directives: []
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 451
+            }
+        };
+        n.loc.source = {
+            body: "query ShareVideo_Content($videoID: ID! $collectionID: ID! $hasVideo: Boolean! $hasCollection: Boolean!) {\n# If the page specifies a video ID query it directly.\nvideo(id: $videoID options: { includePrivate: true }) @include(if: $hasVideo) {\nid\nowner {\nid\ndisplayName\n}\ntitle\n}\n# If the page is a collection page grab the first video from the collection.\ncollection(id: $collectionID) @include(if: $hasCollection) {\nid\nowner {\nid\ndisplayName\n}\ntitle\n}\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
     jPU6: function(e, t) {
         var n = {
             kind: "Document",
@@ -11868,38 +12107,484 @@ webpackJsonp([37, 83], {
     },
     jcM9: function(e, t, n) {
         "use strict";
-        var i = n("TToO"),
-            r = n("U7vG"),
-            a = n("6sO2"),
-            o = n("cAee"),
-            s = n("zAjo"),
-            l = function(e) {
+
+        function i(e, t) {
+            var n = new URL("https://www.twitch.tv/collections/" + e);
+            return t && (n.search = h.stringify(t)), n.toString()
+        }
+
+        function r(e, t) {
+            var n = new URL("https://www.twitch.tv/videos/" + e);
+            return t && (n.search = h.stringify(l.__assign({}, t, {
+                t: "number" == typeof t.t ? Object(f.a)(t.t) : void 0
+            }))), n.toString()
+        }
+
+        function a(e) {
+            switch (e.type) {
+                case s.Collection:
+                    return e.currentVideo || null;
+                case s.Video:
+                    return e;
+                default:
+                    return e
+            }
+        }
+
+        function o(e) {
+            return e.owner && e.title ? {
+                type: s.Video,
+                id: e.id,
+                owner: {
+                    id: e.owner.id,
+                    displayName: e.owner.displayName
+                },
+                title: e.title
+            } : null
+        }
+        var s, l = n("TToO"),
+            c = n("3zLD"),
+            d = n("6sO2"),
+            u = n("U7vG"),
+            m = n("+Znq"),
+            p = n("xX9u"),
+            h = n("OAwv"),
+            f = n("Ryxq"),
+            g = n("Odds"),
+            v = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return l.__extends(t, e), t.prototype.render = function() {
+                    var e = this,
+                        t = i(this.props.collection.id);
+                    return u.createElement("div", null, u.createElement(g._35, null, Object(d.d)("Collection Link", "VideoShareBox")), u.createElement(p.a, {
+                        onClick: function() {
+                            e.props.onClick(t)
+                        },
+                        value: t
+                    }))
+                }, t
+            }(u.Component),
+            b = n("cAee"),
+            k = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
-                    return t.onTrackHandler = function(e) {
-                        switch (e.shareTrackingType) {
-                            case o.a.Video:
-                                return Object(o.c)(t.props.video, e, a.n.apollo.client);
-                            case o.a.Collection:
-                                return Object(o.b)(t.props.video, e, a.n.apollo.client);
+                    return t.onClickHandler = function(e) {
+                        var n = {
+                            location: t.props.tracking.location,
+                            platform: b.a.Link,
+                            shareURL: e
+                        };
+                        Object(b.b)(t.props.collection, n, d.n.apollo.client)
+                    }, t
+                }
+                return l.__extends(t, e), t.prototype.render = function() {
+                    return u.createElement(v, l.__assign({}, this.props, {
+                        onClick: this.onClickHandler
+                    }))
+                }, t
+            }(u.Component),
+            y = n("AoO8"),
+            _ = n("vH/s");
+        ! function(e) {
+            e[e.Collection = 0] = "Collection", e[e.Video = 1] = "Video"
+        }(s || (s = {}));
+        var C = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return l.__extends(t, e), t.prototype.render = function() {
+                    var e = this,
+                        t = this.props.content,
+                        n = this.getEmbedPlayerContentURL(t);
+                    return u.createElement("div", null, u.createElement(g._35, null, Object(d.d)("Embed Video", "VideoShareBox")), u.createElement(p.a, {
+                        onClick: function() {
+                            e.props.onClick(n)
+                        },
+                        value: this.getEmbedPlayerCode(t)
+                    }))
+                }, t.prototype.getEmbedPlayerCode = function(e) {
+                    var t = function(e, t) {
+                            var n = {
+                                autoplay: !1
+                            };
+                            switch (e.type) {
+                                case s.Collection:
+                                    e.currentVideo ? (n.video = e.currentVideo.id, n.t = t ? Object(f.a)(t) : void 0) : n.collection = e.id;
+                                    break;
+                                case s.Video:
+                                    n.video = e.id, n.t = t ? Object(f.a)(t) : void 0
+                            }
+                            return n
+                        }(e, null !== this.props.selectedVideoStartTime ? this.props.selectedVideoStartTime : void 0),
+                        n = e.owner.displayName,
+                        i = e.title,
+                        r = Object(d.d)("Watch {title} from {displayName} on www.twitch.tv", {
+                            displayName: n,
+                            title: i
+                        }, "VideoShareBox");
+                    return Object(y.b)(t, {
+                        textLink: {
+                            url: this.getEmbedPlayerContentURL(e),
+                            text: r
+                        },
+                        allowScrolling: !1,
+                        allowFullscreen: !0
+                    })
+                }, t.prototype.getEmbedPlayerContentURL = function(e) {
+                    switch (e.type) {
+                        case s.Collection:
+                            return e.currentVideo ? r(e.currentVideo.id, {
+                                tt_medium: _.PageviewMedium.VideoEmbed,
+                                tt_content: _.PageviewContent.TextLink,
+                                t: this.props.selectedVideoStartTime
+                            }) : i(e.id, {
+                                tt_medium: _.PageviewMedium.VideoEmbed,
+                                tt_content: _.PageviewContent.TextLink
+                            });
+                        case s.Video:
+                            return r(e.id, {
+                                tt_medium: _.PageviewMedium.VideoEmbed,
+                                tt_content: _.PageviewContent.TextLink,
+                                t: this.props.selectedVideoStartTime
+                            });
+                        default:
+                            return e
+                    }
+                }, t
+            }(u.Component),
+            S = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.onClickHandler = function(e) {
+                        var n = t.props.content;
+                        switch (n.type) {
+                            case s.Collection:
+                                n.currentVideo ? t.trackVideoShare(e, n.currentVideo) : t.trackCollectionShare(e, n);
+                                break;
+                            case s.Video:
+                                t.trackVideoShare(e, n);
+                                break;
                             default:
-                                return e.shareTrackingType
+                                return n
                         }
                     }, t
                 }
-                return i.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(s.b, {
-                        collectionID: this.props.collectionID,
-                        video: this.props.video,
-                        buttonType: this.props.buttonType,
-                        balloonDirection: this.props.balloonDirection,
-                        onShareClick: this.onTrackHandler,
-                        lastVideoOffset: this.props.lastVideoOffset
-                    })
+                return l.__extends(t, e), t.prototype.render = function() {
+                    return u.createElement(C, l.__assign({}, this.props, {
+                        onClick: this.onClickHandler
+                    }))
+                }, t.prototype.trackCollectionShare = function(e, t) {
+                    var n = {
+                        location: this.props.tracking.location,
+                        platform: b.a.Embed,
+                        shareURL: e
+                    };
+                    Object(b.b)(t, n, d.n.apollo.client)
+                }, t.prototype.trackVideoShare = function(e, t) {
+                    var n = {
+                        location: this.props.tracking.location,
+                        platform: b.a.Embed,
+                        shareURL: e
+                    };
+                    Object(b.c)(t, n, d.n.apollo.client)
                 }, t
-            }(r.Component);
+            }(u.Component),
+            E = n("bhVC"),
+            w = [{
+                type: E.b.Twitter,
+                selector: "twitter-button"
+            }, {
+                type: E.b.Facebook,
+                selector: "fb-button"
+            }, {
+                type: E.b.VKontakte,
+                selector: "vk-button"
+            }, {
+                type: E.b.Reddit,
+                selector: "reddit-button"
+            }, {
+                type: E.b.Copy,
+                selector: "copy-link-button"
+            }],
+            N = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return l.__extends(t, e), t.prototype.render = function() {
+                    var e = this,
+                        t = this.props.content,
+                        n = this.getContentURL(t),
+                        i = this.getSocialShareContextTitle(t),
+                        r = w.map(function(t) {
+                            return u.createElement(E.a, {
+                                "data-test-selector": t.selector,
+                                key: t.type,
+                                onShareClick: function(t) {
+                                    e.props.onClick(n, t)
+                                },
+                                text: i,
+                                type: t.type,
+                                url: n
+                            })
+                        });
+                    return u.createElement(g._2, {
+                        display: g.N.Flex,
+                        justifyContent: g._1.Between
+                    }, r)
+                }, t.prototype.getSocialShareContextTitle = function(e) {
+                    return Object(d.d)("Check out {title} from {displayName} on www.twitch.tv", {
+                        displayName: e.owner.displayName,
+                        title: e.title
+                    }, "VideoShareBox")
+                }, t.prototype.getContentURL = function(e) {
+                    switch (e.type) {
+                        case s.Collection:
+                            return e.currentVideo ? r(e.currentVideo.id, {
+                                collection: e.id,
+                                t: this.props.selectedVideoStartTime
+                            }) : i(e.id);
+                        case s.Video:
+                            return r(e.id, {
+                                t: this.props.selectedVideoStartTime
+                            });
+                        default:
+                            return e
+                    }
+                }, t
+            }(u.Component),
+            O = function(e) {
+                switch (e) {
+                    case E.b.Twitter:
+                        return b.a.Twitter;
+                    case E.b.Reddit:
+                        return b.a.Reddit;
+                    case E.b.VKontakte:
+                        return b.a.VKontakte;
+                    case E.b.Facebook:
+                        return b.a.Facebook;
+                    case E.b.Copy:
+                        return b.a.Copy;
+                    case E.b.CopyInput:
+                        return b.a.Link;
+                    default:
+                        return e
+                }
+            },
+            D = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.onClickHandler = function(e, n) {
+                        var i = t.props.content;
+                        switch (i.type) {
+                            case s.Collection:
+                                i.currentVideo ? t.trackVideoShare(e, i.currentVideo, n, i.id) : t.trackCollectionShare(e, i, n);
+                                break;
+                            case s.Video:
+                                t.trackVideoShare(e, i, n);
+                                break;
+                            default:
+                                return i
+                        }
+                    }, t
+                }
+                return l.__extends(t, e), t.prototype.render = function() {
+                    return u.createElement(N, l.__assign({}, this.props, {
+                        onClick: this.onClickHandler
+                    }))
+                }, t.prototype.trackCollectionShare = function(e, t, n) {
+                    var i = {
+                        location: this.props.tracking.location,
+                        platform: O(n),
+                        shareURL: e
+                    };
+                    Object(b.b)(t, i, d.n.apollo.client)
+                }, t.prototype.trackVideoShare = function(e, t, n, i) {
+                    var r = {
+                        collectionID: i,
+                        location: this.props.tracking.location,
+                        platform: O(n),
+                        shareURL: e
+                    };
+                    Object(b.c)(t, r, d.n.apollo.client)
+                }, t
+            }(u.Component),
+            x = n("m9YJ"),
+            I = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.onShareTimestampClick = function(e) {
+                        void 0 !== t.props.currentVideoTime && t.props.onVideoStartTimeChange(e.currentTarget.checked ? t.props.currentVideoTime : void 0)
+                    }, t
+                }
+                return l.__extends(t, e), t.prototype.render = function() {
+                    var e = this,
+                        t = {};
+                    this.props.collectionID && (t.collection = this.props.collectionID), this.props.selectedVideoStartTime && (t.t = this.props.selectedVideoStartTime);
+                    var n = r(this.props.video.id, t);
+                    return u.createElement("div", null, u.createElement(g._35, null, Object(d.d)("Video Link", "VideoShareBox")), u.createElement(p.a, {
+                        onClick: function() {
+                            e.props.onInputClick(n)
+                        },
+                        value: n
+                    }), this.renderCurrentVideoOffsetLinkOption())
+                }, t.prototype.renderCurrentVideoOffsetLinkOption = function() {
+                    if (void 0 === this.props.currentVideoTime) return null;
+                    var e = this.props.selectedVideoStartTime || this.props.currentVideoTime,
+                        t = Object(x.u)(e);
+                    return u.createElement(g._2, {
+                        padding: {
+                            top: .5
+                        }
+                    }, u.createElement(g.H, {
+                        id: "video-share-timestamp-toggle",
+                        label: Object(d.d)("Skip to {deeplinkTimestamp}", {
+                            deeplinkTimestamp: t
+                        }, "VideoShareBox"),
+                        "data-a-target": "video-share-timestamp-toggle",
+                        "data-a-value": void 0 !== this.props.selectedVideoStartTime,
+                        checked: !!this.props.selectedVideoStartTime,
+                        onChange: this.onShareTimestampClick
+                    }))
+                }, t
+            }(u.Component),
+            T = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.onClickHandler = function(e, n) {
+                        var i = {
+                            collectionID: n,
+                            location: t.props.tracking.location,
+                            platform: b.a.Link,
+                            shareURL: e
+                        };
+                        Object(b.c)(t.props.video, i, d.n.apollo.client)
+                    }, t
+                }
+                return l.__extends(t, e), t.prototype.render = function() {
+                    return u.createElement(I, l.__assign({}, this.props, {
+                        onInputClick: this.onClickHandler
+                    }))
+                }, t
+            }(u.Component),
+            A = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {}, t.onVideoStartTimeChangeHandler = function(e) {
+                        t.setState({
+                            selectedVideoStartTime: e
+                        })
+                    }, t
+                }
+                return l.__extends(t, e), t.prototype.render = function() {
+                    var e = null;
+                    return this.props.content && (e = this.shareBalloonContent(this.props.content)), u.createElement(m.a, null, u.createElement(g.u, {
+                        disabled: !this.props.content,
+                        icon: g._16.Share,
+                        type: this.props.buttonType
+                    }, Object(d.d)("Share", "VideoShareBox")), u.createElement(g.p, {
+                        direction: this.props.balloonDirection,
+                        size: g.r.Small
+                    }, e))
+                }, t.prototype.shareBalloonContent = function(e) {
+                    return u.createElement(g._2, {
+                        padding: 1
+                    }, u.createElement(D, {
+                        content: e,
+                        selectedVideoStartTime: this.state.selectedVideoStartTime,
+                        tracking: this.props.tracking
+                    }), this.renderCollectionShareInput(e), this.renderVideoShareInput(e), this.renderEmbedPlayerInput(e))
+                }, t.prototype.renderCollectionShareInput = function(e) {
+                    return e.type !== s.Collection ? null : u.createElement(g._2, {
+                        padding: {
+                            top: 1
+                        }
+                    }, u.createElement(k, {
+                        collection: e,
+                        tracking: this.props.tracking
+                    }))
+                }, t.prototype.renderVideoShareInput = function(e) {
+                    var t, n;
+                    if (e.type === s.Collection) {
+                        if (!e.currentVideo) return null;
+                        n = e.id, t = e.currentVideo
+                    } else t = e;
+                    return u.createElement(g._2, {
+                        padding: {
+                            top: 1
+                        }
+                    }, u.createElement(T, {
+                        collectionID: n,
+                        currentVideoTime: this.props.currentVideoTime,
+                        onVideoStartTimeChange: this.onVideoStartTimeChangeHandler,
+                        selectedVideoStartTime: this.state.selectedVideoStartTime,
+                        tracking: this.props.tracking,
+                        video: t
+                    }))
+                }, t.prototype.renderEmbedPlayerInput = function(e) {
+                    return u.createElement(g._2, {
+                        padding: {
+                            top: 1
+                        }
+                    }, u.createElement(S, {
+                        content: e,
+                        selectedVideoStartTime: this.state.selectedVideoStartTime,
+                        tracking: this.props.tracking
+                    }))
+                }, t
+            }(u.Component),
+            F = n("jOt7"),
+            M = Object(c.compose)(Object(c.graphql)(F, {
+                options: function(e) {
+                    var t = e.content;
+                    return t ? {
+                        variables: {
+                            collectionID: t.collectionID || "",
+                            hasCollection: !!t.collectionID,
+                            hasVideo: !!t.videoID,
+                            videoID: t.videoID || ""
+                        }
+                    } : {
+                        variables: {
+                            collectionID: "",
+                            hasCollection: !1,
+                            hasVideo: !1,
+                            videoID: ""
+                        }
+                    }
+                },
+                props: function(e) {
+                    var t = l.__assign({}, e, {
+                            content: void 0
+                        }),
+                        n = e.data;
+                    return n.loading ? t : n.error ? (d.i.error(n.error, "VideoShareBoxContainer"), t) : (n.collection ? t.content = function(e, t) {
+                        var n;
+                        if (t) {
+                            var i = o(t);
+                            if (!i) return null;
+                            n = i
+                        }
+                        return e.owner && e.title ? {
+                            type: s.Collection,
+                            id: e.id,
+                            owner: {
+                                id: e.owner.id,
+                                displayName: e.owner.displayName
+                            },
+                            title: e.title,
+                            currentVideo: n
+                        } : null
+                    }(n.collection, n.video) || void 0 : n.video && (t.content = o(n.video) || void 0), t)
+                }
+            }))(A);
         n.d(t, "a", function() {
-            return l
+            return M
+        }), n.d(t, !1, function() {
+            return s
+        }), n.d(t, !1, function() {
+            return a
         })
     },
     jvcJ: function(e, t) {},
@@ -12373,7 +13058,7 @@ webpackJsonp([37, 83], {
 
         function c(e) {
             var t = function(e) {
-                return new URL(Be + "/videos/" + e)
+                return new URL(Ve + "/videos/" + e)
             }(e);
             return new URL(t.toString() + "/comments")
         }
@@ -12384,7 +13069,7 @@ webpackJsonp([37, 83], {
         }
 
         function u(e) {
-            return new URL(Be + "/videos/comments/" + e)
+            return new URL(Ve + "/videos/comments/" + e)
         }
 
         function m(e, t) {
@@ -12402,7 +13087,7 @@ webpackJsonp([37, 83], {
                     }
                 }(t),
                 r = {
-                    method: Ve,
+                    method: Be,
                     body: JSON.stringify(i)
                 };
             return e.doAuthRequest(n, r).then(function(e) {
@@ -12448,11 +13133,11 @@ webpackJsonp([37, 83], {
             return n = function(e) {
                 return "userId" in e
             }(e) ? function(e) {
-                var t = new URL(Be + "/videos/comments/"),
+                var t = new URL(Ve + "/videos/comments/"),
                     n = new URLSearchParams;
                 return n.append(ut, pt.toString()), n.append(dt, e.userId), void 0 !== e.cursor && n.append(ot, e.cursor), t.search = "?" + n, t
             }(e) : function(e) {
-                var t = new URL(Be + "/videos/comments/"),
+                var t = new URL(Ve + "/videos/comments/"),
                     n = new URLSearchParams;
                 return n.append(ut, pt.toString()), n.append(mt, e.videoId), void 0 !== e.cursor && n.append(ot, e.cursor), t.search = "?" + n, t
             }(e), t.doAuthRequest(n, {}).then(function(t) {
@@ -12462,10 +13147,10 @@ webpackJsonp([37, 83], {
 
         function b(e, t) {
             var n = new URL(function(e) {
-                    return new URL(Be + "/videos/channels/" + e.targetChannel + "/bans")
+                    return new URL(Ve + "/videos/channels/" + e.targetChannel + "/bans")
                 }(e).toString()),
                 i = {
-                    method: Ve,
+                    method: Be,
                     body: JSON.stringify({
                         commenter_id: e.bannedUser
                     })
@@ -12493,7 +13178,7 @@ webpackJsonp([37, 83], {
             return e.past !== de
         }
 
-        function S(e, t) {
+        function C(e, t) {
             return function(n, i) {
                 e({
                     dispatch: n,
@@ -12502,7 +13187,7 @@ webpackJsonp([37, 83], {
             }
         }
 
-        function C(e, t) {
+        function S(e, t) {
             return function(n, i) {
                 e({
                     dispatch: n,
@@ -12511,8 +13196,8 @@ webpackJsonp([37, 83], {
             }
         }
         n("R9op");
-        var w = n("2KeS"),
-            E = n("6sO2"),
+        var E = n("2KeS"),
+            w = n("6sO2"),
             N = n("TToO"),
             O = "vodChat.channel-moderation-comments.RESULTS_RECEIVED",
             D = "vodChat.channel-moderation-comments.RESULTS_FAILED",
@@ -12520,8 +13205,8 @@ webpackJsonp([37, 83], {
             I = "vodChat.channel-moderation-comments.SEARCH_SUCCESS",
             T = "videoChat.is_replay_mode",
             A = "videoChat.hide_timestamps",
-            M = "vodChat.comments.DELETED_SUCCESS",
-            F = "vodChat.comments.CREATED_SUCCESS",
+            F = "vodChat.comments.DELETED_SUCCESS",
+            M = "vodChat.comments.CREATED_SUCCESS",
             R = "vodChat.comments.CREATE_FAILED",
             L = "vodChat.comments.DISPLAY_ERROR",
             U = function(e) {
@@ -12531,8 +13216,8 @@ webpackJsonp([37, 83], {
                 }
             },
             j = "vodChat.comments.UPDATED_SUCCESS",
-            B = "vodChat.comments.CURSOR_RECEIVED",
-            V = "vodChat.comments.OFFSET_RECEIVED",
+            V = "vodChat.comments.CURSOR_RECEIVED",
+            B = "vodChat.comments.OFFSET_RECEIVED",
             P = "vodChat.comments.QUERY_FAILED",
             H = "vodChat.comments.CLEARED",
             W = function() {
@@ -12553,10 +13238,10 @@ webpackJsonp([37, 83], {
                     type: Y
                 }
             },
-            K = "vodChat.comments.REPLAY_FILTER_CHANGED",
-            $ = function(e) {
-                return E.k.set(T, e), {
-                    type: K,
+            $ = "vodChat.comments.REPLAY_FILTER_CHANGED",
+            K = function(e) {
+                return w.k.set(T, e), {
+                    type: $,
                     isReplayFilterOn: e
                 }
             },
@@ -12568,7 +13253,7 @@ webpackJsonp([37, 83], {
             },
             X = "vodChat.comments.TIMESTAMP_MODE_CHANGED",
             ee = function(e) {
-                return E.k.set(A, e), {
+                return w.k.set(A, e), {
                     type: X,
                     hideTimestamps: e
                 }
@@ -12577,8 +13262,8 @@ webpackJsonp([37, 83], {
             ne = function() {
                 return {
                     type: te,
-                    isReplayFilterOn: E.k.get(T, !1),
-                    hideTimestamps: E.k.get(A, !1)
+                    isReplayFilterOn: w.k.get(T, !1),
+                    hideTimestamps: w.k.get(A, !1)
                 }
             },
             ie = function(e) {
@@ -12645,21 +13330,21 @@ webpackJsonp([37, 83], {
             },
             ve = function(e, t) {
                 var n = _e(e);
-                return ue(t) ? we(n, t.parentId, t.id) : Ce(n, t.id)
+                return ue(t) ? Ee(n, t.parentId, t.id) : Se(n, t.id)
             },
             be = function(e, t) {
                 if (e.commentCount < t || ye(e)) return e;
-                for (var n = e; n.commentCount > t && !ye(e);) n = Ee(n, n.minOffset);
+                for (var n = e; n.commentCount > t && !ye(e);) n = we(n, n.minOffset);
                 return n
             },
             ke = function(e, t) {
                 var n = _e(e);
                 return Object.keys(e.parentComments).forEach(function(i) {
                     var r = e.parentComments[i];
-                    t(r) || (n = Ce(n, r.id))
+                    t(r) || (n = Se(n, r.id))
                 }), Object.keys(e.replies).forEach(function(i) {
                     e.replies[i].forEach(function(e) {
-                        t(e) || (n = we(n, e.id, e.parentId))
+                        t(e) || (n = Ee(n, e.id, e.parentId))
                     })
                 }), n
             },
@@ -12671,17 +13356,17 @@ webpackJsonp([37, 83], {
                     commentCount: e.commentCount,
                     maxOffset: e.maxOffset,
                     minOffset: e.minOffset,
-                    offsets: Se(e.offsets),
+                    offsets: Ce(e.offsets),
                     parentComments: N.__assign({}, e.parentComments),
                     replies: N.__assign({}, e.replies)
                 }
             },
-            Se = function(e) {
+            Ce = function(e) {
                 return Object.keys(e).reduce(function(t, n) {
                     return t[Number(n)] = e[Number(n)].slice(), t
                 }, {})
             },
-            Ce = function(e, t) {
+            Se = function(e, t) {
                 if (!(t in e.parentComments)) return e;
                 var n = e.parentComments[t].contentOffset,
                     i = e.offsets[n],
@@ -12694,7 +13379,7 @@ webpackJsonp([37, 83], {
                 }
                 return e
             },
-            we = function(e, t, n) {
+            Ee = function(e, t, n) {
                 if (!(t in e.replies)) return e;
                 var i = e.replies[t].length,
                     r = e.replies[t].filter(function(e) {
@@ -12704,9 +13389,9 @@ webpackJsonp([37, 83], {
                 var a = i - r.length;
                 return e.commentCount -= a, e
             },
-            Ee = function(e, t) {
+            we = function(e, t) {
                 return t >= e.minOffset && t <= e.maxOffset && !ye(e) ? (t in e.offsets && e.offsets[t].forEach(function(t) {
-                    e = Ce(e, t)
+                    e = Se(e, t)
                 }), delete e.offsets[t], e.maxOffset === t ? e.maxOffset-- : e.minOffset === t && e.minOffset++, e) : e
             },
             Ne = function() {
@@ -12763,10 +13448,10 @@ webpackJsonp([37, 83], {
                     users: {}
                 }, e)
             },
-            Me = Object(w.c)({
+            Fe = Object(E.c)({
                 comments: function(e, t) {
                     switch (void 0 === e && (e = De()), t.type) {
-                        case F:
+                        case M:
                             var n = N.__assign({}, t.comments[0], {
                                 highlight: !0,
                                 source: ce
@@ -12783,7 +13468,7 @@ webpackJsonp([37, 83], {
                             return N.__assign({}, e, {
                                 errorMessage: t.errorMessage
                             });
-                        case B:
+                        case V:
                             var r = t.comments[0].parentId,
                                 a = e.cursor,
                                 o = e.replyCursorMap,
@@ -12805,7 +13490,7 @@ webpackJsonp([37, 83], {
                                 hasLoadedData: !0,
                                 replyCursorMap: o
                             });
-                        case V:
+                        case B:
                             return N.__assign({}, e, {
                                 comments: fe(he(), t.comments),
                                 hasLoadedData: !0,
@@ -12835,7 +13520,7 @@ webpackJsonp([37, 83], {
                         case re:
                         case H:
                             return N.__assign({}, De());
-                        case M:
+                        case F:
                             return N.__assign({}, e, {
                                 comments: ve(e.comments, t.comment)
                             });
@@ -12865,7 +13550,7 @@ webpackJsonp([37, 83], {
                             return N.__assign({}, e, {
                                 comments: fe(e.comments, t.comments)
                             });
-                        case K:
+                        case $:
                             return N.__assign({}, e, {
                                 isReplayFilterOn: t.isReplayFilterOn
                             });
@@ -12892,10 +13577,10 @@ webpackJsonp([37, 83], {
                 },
                 users: function(e, t) {
                     switch (void 0 === e && (e = Te), t.type) {
-                        case B:
                         case V:
+                        case B:
                         case O:
-                        case F:
+                        case M:
                             return {
                                 users: r(e.users, t.users)
                             };
@@ -12929,8 +13614,8 @@ webpackJsonp([37, 83], {
                     }
                 }
             });
-        E.n.store.registerReducer("vodChat", Me);
-        var Fe, Re = n("Aj/L"),
+        w.n.store.registerReducer("vodChat", Fe);
+        var Me, Re = n("Aj/L"),
             Le = n("i5XQ"),
             Ue = function(e, t) {
                 void 0 === e && (e = {}), void 0 === t && (t = {});
@@ -12941,11 +13626,11 @@ webpackJsonp([37, 83], {
                 }), i
             },
             je = "Authorization",
-            Be = "https://api.twitch.tv/v5",
-            Ve = "POST",
+            Ve = "https://api.twitch.tv/v5",
+            Be = "POST",
             Pe = "PUT",
             He = "DELETE",
-            We = (Fe = {}, Fe.Accept = "application/vnd.twitchtv.v5+json", Fe["Content-Type"] = "application/json", Fe["CLIENT-ID"] = "jzkbprff40iqj646a697cyrvl0zt2m6", Fe),
+            We = (Me = {}, Me.Accept = "application/vnd.twitchtv.v5+json", Me["Content-Type"] = "application/json", Me["CLIENT-ID"] = "jzkbprff40iqj646a697cyrvl0zt2m6", Me),
             ze = function() {
                 function e(e) {
                     this.chatOAuthToken = e
@@ -13021,15 +13706,15 @@ webpackJsonp([37, 83], {
                     userColor: e.user_color ? e.user_color : Object(Ye.b)(t)
                 }
             },
-            Ke = function() {
+            $e = function() {
                 return function(e) {
                     this.bio = e.bio, this.createdAt = e.createdAt, this.displayName = e.displayName, this.id = e.id, this.logo = e.logo, this.name = e.name, this.type = e.type, this.updatedAt = e.updatedAt
                 }
             }(),
-            $e = "https://static-cdn.jtvnw.net",
-            Je = $e + "/emoticons/v1/",
+            Ke = "https://static-cdn.jtvnw.net",
+            Je = Ke + "/emoticons/v1/",
             Ze = function(e) {
-                return new Ke({
+                return new $e({
                     id: e._id,
                     name: e.name,
                     logo: new URL(e.logo || "https://static-cdn.jtvnw.net/jtv_user_pictures/xarth/404_user_150x150.png"),
@@ -13176,7 +13861,7 @@ webpackJsonp([37, 83], {
                 return Array.from(new Ne(o)).reduce(function(r, s) {
                     return s.offset > a ? r : (s.comments.forEach(function(a) {
                         var s = ge(o, a);
-                        if (void 0 !== s && (n || !vt(i, s))) return "comment" === s.source && Nt(e.vodChat.comments.isReplayFilterOn, t) ? r : r.push(St(s, e, n, i, t))
+                        if (void 0 !== s && (n || !vt(i, s))) return "comment" === s.source && Nt(e.vodChat.comments.isReplayFilterOn, t) ? r : r.push(Ct(s, e, n, i, t))
                     }), r)
                 }, []).sort(yt)
             },
@@ -13185,7 +13870,7 @@ webpackJsonp([37, 83], {
                     return e.vodChat.comments.comments
                 }(e);
                 return Object.keys(t.parentComments).map(function(n) {
-                    return wt(t.parentComments[n], e)
+                    return Et(t.parentComments[n], e)
                 }).filter(function(e) {
                     return void 0 !== e.video
                 }).sort(_t)
@@ -13196,13 +13881,13 @@ webpackJsonp([37, 83], {
             _t = function(e, t) {
                 return e.comment.createdAt.getTime() === t.comment.createdAt.getTime() ? t.comment.contentOffset - e.comment.contentOffset : t.lastUpdated.getTime() - e.lastUpdated.getTime()
             },
-            St = function(e, t, n, i, r) {
+            Ct = function(e, t, n, i, r) {
                 var a = new Array,
                     o = new Array,
                     s = t.vodChat.comments.comments.replies[e.id],
                     l = e.createdAt;
                 return Array.isArray(s) && s.forEach(function(e) {
-                    !n && vt(i, e) || (e.source === ce && Nt(t.vodChat.comments.isReplayFilterOn, r) ? (o.push(St(e, t, n, i)), l = Ot(l, e.createdAt)) : (a.push(St(e, t, n, i)), l = Ot(l, e.createdAt)))
+                    !n && vt(i, e) || (e.source === ce && Nt(t.vodChat.comments.isReplayFilterOn, r) ? (o.push(Ct(e, t, n, i)), l = Ot(l, e.createdAt)) : (a.push(Ct(e, t, n, i)), l = Ot(l, e.createdAt)))
                 }), Nt(t.vodChat.comments.isReplayFilterOn, r) ? {
                     author: t.vodChat.users.users[e.commenter],
                     comment: e,
@@ -13215,12 +13900,12 @@ webpackJsonp([37, 83], {
                     replies: a.sort(yt)
                 }
             },
-            Ct = function(e, t) {
+            St = function(e, t) {
                 var n = new Array,
                     i = t.vodChat.comments.comments.replies[e.id],
                     r = e.createdAt;
                 return Array.isArray(i) && i.forEach(function(e) {
-                    n.push(Ct(e, t)), r = Ot(r, e.createdAt)
+                    n.push(St(e, t)), r = Ot(r, e.createdAt)
                 }), {
                     author: t.vodChat.users.users[e.commenter],
                     comment: e,
@@ -13228,15 +13913,15 @@ webpackJsonp([37, 83], {
                     replies: n.sort(yt)
                 }
             },
-            wt = function(e, t) {
-                var n = Ct(e, t);
+            Et = function(e, t) {
+                var n = St(e, t);
                 return N.__assign({}, n, {
                     video: t.vodChat.moderation.videos[function(e) {
                         return "v" + e
                     }(e.contentId)]
                 })
             },
-            Et = function(e) {
+            wt = function(e) {
                 return 0 === e.commentCount ? gt : {
                     beginSec: e.minOffset,
                     endSec: e.maxOffset
@@ -13253,7 +13938,7 @@ webpackJsonp([37, 83], {
             It = n("MAZT"),
             Tt = n("uTyw"),
             At = n("E8Jt"),
-            Mt = function(e, t) {
+            Ft = function(e, t) {
                 var n = s(e);
                 return v(t, n).then(function(n) {
                     e.dispatch(function(e, t) {
@@ -13272,7 +13957,7 @@ webpackJsonp([37, 83], {
                     }(Object(Oe.d)("Unable to retrieve messages, please try again.", "routines-moderation")))
                 })
             },
-            Ft = function(e, t) {
+            Mt = function(e, t) {
                 var n = s(e);
                 return b(t, n).then(function() {
                     e.dispatch(function(e) {
@@ -13291,7 +13976,7 @@ webpackJsonp([37, 83], {
                 })
             },
             Rt = function(e, t) {
-                var n = new It.a(E.a.algoliaApplicationID, E.a.algoliaAPIKey),
+                var n = new It.a(w.a.algoliaApplicationID, w.a.algoliaAPIKey),
                     i = Dt.a(),
                     r = Object(At.b)({
                         broadcastType: xt.d,
@@ -13317,22 +14002,22 @@ webpackJsonp([37, 83], {
                 return Lt.createElement(Ut.u, {
                     type: Ut.z.Text,
                     onClick: e.onClick
-                }, Object(E.d)("Show more replies...", "chomments.moderation.showMoreRepliesAction"))
+                }, Object(w.d)("Show more replies...", "chomments.moderation.showMoreRepliesAction"))
             },
-            Bt = n("vH/s"),
-            Vt = n("IWpL"),
-            Pt = n("xrVp"),
-            Ht = n("Ryxq"),
-            Wt = n("zAjo"),
+            Vt = n("vH/s"),
+            Bt = n("JpYe"),
+            Pt = n("IWpL"),
+            Ht = n("xrVp"),
+            Wt = n("cAee"),
             zt = n("B0KL"),
             qt = this,
             Gt = "replay_mode",
             Yt = "timestamp_mode",
             Qt = "on",
-            Kt = "off",
-            $t = "frontend",
+            $t = "off",
+            Kt = "frontend",
             Jt = function(e) {
-                E.m.track(Vt.SpadeEventType.VideoChatSettingChanged, e)
+                w.m.track(Pt.SpadeEventType.VideoChatSettingChanged, e)
             },
             Zt = function(e, t) {
                 return N.__awaiter(qt, void 0, void 0, function() {
@@ -13340,7 +14025,7 @@ webpackJsonp([37, 83], {
                     return N.__generator(this, function(o) {
                         switch (o.label) {
                             case 0:
-                                return o.trys.push([0, 2, , 3]), [4, E.n.apollo.client.query({
+                                return o.trys.push([0, 2, , 3]), [4, w.n.apollo.client.query({
                                     query: zt,
                                     variables: {
                                         videoCreatorID: e.channelId,
@@ -13352,18 +14037,18 @@ webpackJsonp([37, 83], {
                                     channel: n.video.owner.login,
                                     channel_id: Number(e.channelId),
                                     game: n.video.game ? n.video.game.name : null,
-                                    location: Bt.PageviewLocation.VideoWatchPage,
+                                    location: Vt.PageviewLocation.VideoWatchPage,
                                     share_platform: Wt.a.Link,
-                                    share_context: Bt.ShareItemContext.Chomment,
-                                    shared_item_id: Object(Ht.a)(e.contentId),
-                                    shared_item_type: Object(Pt.a)(n.video.broadcastType),
+                                    share_context: Vt.ShareItemContext.Chomment,
+                                    shared_item_id: Object(Bt.b)(e.contentId),
+                                    shared_item_type: Object(Ht.a)(n.video.broadcastType),
                                     shared_item_url: t.toString(),
                                     partner: n.video.owner.roles.isPartner,
                                     source_item_id: e.id,
-                                    source_item_type: Bt.ShareItemSourceItemType.Chomment
-                                }, r = Xt(e, n, Wt.a.Link), E.m.track(Vt.SpadeEventType.ChommentUIAction, r), E.m.track(Vt.SpadeEventType.ShareItem, i), [3, 3];
+                                    source_item_type: Vt.SourceItemType.Chomment
+                                }, r = Xt(e, n, Wt.a.Link), w.m.track(Pt.SpadeEventType.ChommentUIAction, r), w.m.track(Pt.SpadeEventType.ShareItem, i), [3, 3];
                             case 2:
-                                return a = o.sent(), E.i.error(a.toString(), Zt.name), [3, 3];
+                                return a = o.sent(), w.i.error(a.toString(), Zt.name), [3, 3];
                             case 3:
                                 return [2]
                         }
@@ -13377,14 +14062,14 @@ webpackJsonp([37, 83], {
                     channel: t.video.owner.login,
                     channel_id: Number(e.channelId),
                     comment_id: e.id,
-                    event_source: $t,
+                    event_source: Kt,
                     game: t.video.game ? t.video.game.name : null,
                     login: t.currentUser ? t.currentUser.login : null,
                     user_id: t.currentUser ? Number(t.currentUser.id) : null,
                     vod_id: Number(e.contentId),
                     vod_title: t.video.title,
                     vod_ts: e.contentOffset,
-                    vod_type: Object(Pt.a)(t.video.broadcastType),
+                    vod_type: Object(Ht.a)(t.video.broadcastType),
                     share_platform: n
                 }
             },
@@ -13395,7 +14080,7 @@ webpackJsonp([37, 83], {
             an = function(e) {
                 if (e.includes("FollowersOnlyError")) {
                     return function(e) {
-                        return Object(E.d)("This room is in {duration} followers-only mode. Follow this channel to join the community", {
+                        return Object(w.d)("This room is in {duration} followers-only mode. Follow this channel to join the community", {
                             duration: e
                         }, "routines-comments")
                     }(function(e) {
@@ -13414,17 +14099,17 @@ webpackJsonp([37, 83], {
                     }(e))
                 }
                 var t = {
-                        CommenterBannedError: Object(E.d)("You are banned from sending messages in this channel", "routines-comments"),
-                        CommentingDisabledError: Object(E.d)("Sending messages in this channel is disabled", "routines-comments"),
-                        UserNotVerifiedError: Object(E.d)("Account email verification required to send a message", "routines-comments"),
-                        MaxChildCommentsError: Object(E.d)("The reply limit for this message has been reached", "routines-comments"),
-                        MessageLikelySpamError: Object(E.d)("Your message was blocked by the spam filter", "routines-comments"),
-                        MessageContainsBannedWordsError: Object(E.d)("Your message wasn't posted due to conflicts with the channel's moderation settings", "routines-comments")
+                        CommenterBannedError: Object(w.d)("You are banned from sending messages in this channel", "routines-comments"),
+                        CommentingDisabledError: Object(w.d)("Sending messages in this channel is disabled", "routines-comments"),
+                        UserNotVerifiedError: Object(w.d)("Account email verification required to send a message", "routines-comments"),
+                        MaxChildCommentsError: Object(w.d)("The reply limit for this message has been reached", "routines-comments"),
+                        MessageLikelySpamError: Object(w.d)("Your message was blocked by the spam filter", "routines-comments"),
+                        MessageContainsBannedWordsError: Object(w.d)("Your message wasn't posted due to conflicts with the channel's moderation settings", "routines-comments")
                     },
                     n = Object.keys(t).find(function(t) {
                         return e.includes(t)
                     });
-                return n ? t[n] : Object(E.d)("Unable to send a new message at this time", "routines-comments")
+                return n ? t[n] : Object(w.d)("Unable to send a new message at this time", "routines-comments")
             },
             on = "",
             sn = -1,
@@ -13445,15 +14130,15 @@ webpackJsonp([37, 83], {
                         return n = s(e), ln = !0, [2, p(n, t).then(function(n) {
                             ln = !1, g(t) && t.offset === sn ? e.dispatch(function(e) {
                                 return N.__assign({
-                                    type: V
+                                    type: B
                                 }, e)
                             }(n)) : e.dispatch(function(e) {
                                 return N.__assign({
-                                    type: B
+                                    type: V
                                 }, e)
                             }(n))
                         }, function(t) {
-                            ln = !1, E.n.logger.error(t, "VideoChat: unable to fetch messages"), e.dispatch({
+                            ln = !1, w.n.logger.error(t, "VideoChat: unable to fetch messages"), e.dispatch({
                                 type: P
                             })
                         })]
@@ -13467,9 +14152,9 @@ webpackJsonp([37, 83], {
                         return n = s(e), [2, m(n, t).then(function(t) {
                             e.dispatch(function(e) {
                                 return N.__assign({
-                                    type: F
+                                    type: M
                                 }, e)
-                            }(t)), e.dispatch(C(pn, t)), setTimeout(function() {
+                            }(t)), e.dispatch(S(pn, t)), setTimeout(function() {
                                 e.dispatch({
                                     type: z
                                 })
@@ -13505,15 +14190,15 @@ webpackJsonp([37, 83], {
                             case 2:
                                 return r.sent(), e.dispatch(function(e) {
                                     return N.__assign({
-                                        type: M
+                                        type: F
                                     }, e)
                                 }({
                                     comment: t
-                                })), e.dispatch(C(hn, {
+                                })), e.dispatch(S(hn, {
                                     comment: t
                                 })), [3, 4];
                             case 3:
-                                return i = r.sent(), E.i.error(i.toString(), un.name), [3, 4];
+                                return i = r.sent(), w.i.error(i.toString(), un.name), [3, 4];
                             case 4:
                                 return [2]
                         }
@@ -13549,7 +14234,7 @@ webpackJsonp([37, 83], {
                                     }, e)
                                 }(i)), [3, 4];
                             case 3:
-                                return r = a.sent(), E.i.error(r.toString(), mn.name), [3, 4];
+                                return r = a.sent(), w.i.error(r.toString(), mn.name), [3, 4];
                             case 4:
                                 return [2]
                         }
@@ -13570,7 +14255,7 @@ webpackJsonp([37, 83], {
                                     }
                                 })];
                             case 1:
-                                return e = a.sent().data, i.track(Bt.SpadeEventType.ChommentCreated, function(e, t) {
+                                return e = a.sent().data, i.track(Vt.SpadeEventType.ChommentCreated, function(e, t) {
                                     var n = e.users[0],
                                         i = e.comments[0];
                                     return {
@@ -13578,20 +14263,20 @@ webpackJsonp([37, 83], {
                                         channel_id: Number(i.channelId),
                                         comment_id: i.id,
                                         comment_state: i.state,
-                                        event_source: $t,
+                                        event_source: Kt,
                                         game: t.video.game ? t.video.game.name : null,
                                         login: n.name,
-                                        play_session_id: E.m.getVideoPlayerTrackingData().playSessionID,
+                                        play_session_id: w.m.getVideoPlayerTrackingData().playSessionID,
                                         reply_to_comment_id: ue(i) ? i.parentId : null,
                                         user_id: Number(n.id),
                                         vod_id: Number(i.contentId),
                                         vod_title: t.video.title,
                                         vod_ts: i.contentOffset,
-                                        vod_type: Object(Pt.a)(t.video.broadcastType)
+                                        vod_type: Object(Ht.a)(t.video.broadcastType)
                                     }
                                 }(t, e)), [3, 3];
                             case 2:
-                                return r = a.sent(), E.i.error(r.toString(), pn.name), [3, 3];
+                                return r = a.sent(), w.i.error(r.toString(), pn.name), [3, 3];
                             case 3:
                                 return [2]
                         }
@@ -13613,25 +14298,25 @@ webpackJsonp([37, 83], {
                                     }
                                 })];
                             case 1:
-                                return r = o.sent().data, i.track(Bt.SpadeEventType.ChommentDeleted, function(e, t, n) {
+                                return r = o.sent().data, i.track(Vt.SpadeEventType.ChommentDeleted, function(e, t, n) {
                                     return {
                                         author_id: Number(e.comment.commenter),
                                         author_login: n.users[1].login,
                                         channel: n.users[0].login,
                                         channel_id: Number(e.comment.channelId),
                                         comment_id: e.comment.id,
-                                        event_source: $t,
+                                        event_source: Kt,
                                         game: n.video.game ? n.video.game.name : null,
                                         login: t.session.user.login,
                                         user_id: Number(t.session.user.id),
                                         vod_id: Number(e.comment.contentId),
                                         vod_title: n.video.title,
-                                        vod_type: Object(Pt.a)(n.video.broadcastType),
+                                        vod_type: Object(Ht.a)(n.video.broadcastType),
                                         vod_ts: e.comment.contentOffset
                                     }
                                 }(t, e.getState(), r)), [3, 3];
                             case 2:
-                                return a = o.sent(), E.i.error(a.toString(), hn.name), [3, 3];
+                                return a = o.sent(), w.i.error(a.toString(), hn.name), [3, 3];
                             case 3:
                                 return [2]
                         }
@@ -13651,24 +14336,24 @@ webpackJsonp([37, 83], {
                                     }
                                 })];
                             case 1:
-                                return r = o.sent().data, i.track(Bt.SpadeEventType.ChommentUIAction, function(e, t, n) {
+                                return r = o.sent().data, i.track(Vt.SpadeEventType.ChommentUIAction, function(e, t, n) {
                                     return {
                                         action: "ban_user",
                                         author_id: Number(e.bannedUser),
                                         channel_id: Number(e.targetChannel),
-                                        event_source: $t,
+                                        event_source: Kt,
                                         game: n.video.game ? n.video.game.name : null,
                                         login: t.session.user.login,
                                         target_user_id: Number(e.bannedUser),
                                         user_id: Number(t.session.user.id),
                                         vod_id: Number(n.video.id),
                                         vod_title: n.video.title,
-                                        vod_type: Object(Pt.a)(n.video.broadcastType),
+                                        vod_type: Object(Ht.a)(n.video.broadcastType),
                                         vod_ts: e.comment.contentOffset
                                     }
                                 }(t, e.getState(), r)), [3, 3];
                             case 2:
-                                return a = o.sent(), E.i.error(a.toString(), fn.name), [3, 3];
+                                return a = o.sent(), w.i.error(a.toString(), fn.name), [3, 3];
                             case 3:
                                 return [2]
                         }
@@ -13690,7 +14375,7 @@ webpackJsonp([37, 83], {
                                     }
                                 })];
                             case 1:
-                                return r = o.sent().data, i.track(Bt.SpadeEventType.ChommentUIAction, function(e, t, n) {
+                                return r = o.sent().data, i.track(Vt.SpadeEventType.ChommentUIAction, function(e, t, n) {
                                     return {
                                         action: "delete",
                                         author_id: Number(e.commenter),
@@ -13698,19 +14383,19 @@ webpackJsonp([37, 83], {
                                         channel: n.users[0].login,
                                         channel_id: Number(e.channelId),
                                         comment_id: e.id,
-                                        event_source: $t,
+                                        event_source: Kt,
                                         game: n.video.game ? n.video.game.name : null,
                                         login: t.session.user.login,
                                         reply_to_comment_id: e.parentId ? e.parentId : null,
                                         user_id: Number(t.session.user.id),
                                         vod_id: Number(e.contentId),
                                         vod_title: n.video.title,
-                                        vod_type: Object(Pt.a)(n.video.broadcastType),
+                                        vod_type: Object(Ht.a)(n.video.broadcastType),
                                         vod_ts: e.contentOffset
                                     }
                                 }(t, e.getState(), r)), [3, 3];
                             case 2:
-                                return a = o.sent(), E.i.error(a.toString(), gn.name), [3, 3];
+                                return a = o.sent(), w.i.error(a.toString(), gn.name), [3, 3];
                             case 3:
                                 return [2]
                         }
@@ -13730,7 +14415,7 @@ webpackJsonp([37, 83], {
                                     }
                                 })];
                             case 1:
-                                return o = l.sent().data, i.track(Bt.SpadeEventType.ChommentUIAction, function(e, t, n) {
+                                return o = l.sent().data, i.track(Vt.SpadeEventType.ChommentUIAction, function(e, t, n) {
                                     var i = null,
                                         r = Object.keys(t.vodChat.comments.comments.parentComments);
                                     if (r.length > 0) {
@@ -13741,7 +14426,7 @@ webpackJsonp([37, 83], {
                                         action: "create",
                                         channel_id: i ? Number(i) : null,
                                         comment_body: e.message,
-                                        event_source: $t,
+                                        event_source: Kt,
                                         game: n.video.game ? n.video.game.name : null,
                                         login: t.session.user ? t.session.user.login : null,
                                         reply_to_comment_id: h(e) ? e.parentId : null,
@@ -13749,11 +14434,11 @@ webpackJsonp([37, 83], {
                                         vod_id: Number(n.video.id),
                                         vod_title: n.video.title,
                                         vod_ts: h(e) ? null : Number(e.contentOffsetSeconds),
-                                        vod_type: Object(Pt.a)(n.video.broadcastType)
+                                        vod_type: Object(Ht.a)(n.video.broadcastType)
                                     }
                                 }(t, e.getState(), o)), [3, 3];
                             case 2:
-                                return s = l.sent(), E.i.error(s.toString(), vn.name), [3, 3];
+                                return s = l.sent(), w.i.error(s.toString(), vn.name), [3, 3];
                             case 3:
                                 return [2]
                         }
@@ -13773,25 +14458,25 @@ webpackJsonp([37, 83], {
                                     }
                                 })];
                             case 1:
-                                return r = o.sent().data, i.track(Bt.SpadeEventType.ChommentUIAction, function(e, t, n) {
+                                return r = o.sent().data, i.track(Vt.SpadeEventType.ChommentUIAction, function(e, t, n) {
                                     var i = e.comment.id,
                                         r = e.comment.channelId;
                                     return {
                                         action: "published" === e.state ? "publish" : "unpublish",
                                         channel_id: Number(r),
                                         comment_id: i,
-                                        event_source: $t,
+                                        event_source: Kt,
                                         game: n.video.game ? n.video.game.name : null,
                                         login: t.session.user.login,
                                         user_id: Number(t.session.user.id),
                                         vod_id: Number(n.video.id),
                                         vod_title: n.video.title,
                                         vod_ts: e.comment.contentOffset,
-                                        vod_type: Object(Pt.a)(n.video.broadcastType)
+                                        vod_type: Object(Ht.a)(n.video.broadcastType)
                                     }
                                 }(t, e.getState(), r)), [3, 3];
                             case 2:
-                                return a = o.sent(), E.i.error(a.toString(), bn.name), [3, 3];
+                                return a = o.sent(), w.i.error(a.toString(), bn.name), [3, 3];
                             case 3:
                                 return [2]
                         }
@@ -13812,25 +14497,25 @@ webpackJsonp([37, 83], {
                                     }
                                 })];
                             case 1:
-                                return r = o.sent().data, i.track(Bt.SpadeEventType.ChommentUIAction, function(e, t, n) {
+                                return r = o.sent().data, i.track(Vt.SpadeEventType.ChommentUIAction, function(e, t, n) {
                                     return {
                                         action: "sync_vod_to_time",
                                         author_id: Number(e.commenter),
                                         channel: n.user.login,
                                         channel_id: Number(e.channelId),
                                         comment_id: e.id,
-                                        event_source: $t,
+                                        event_source: Kt,
                                         game: n.video.game ? n.video.game.name : null,
                                         login: t.session.user ? t.session.user.login : null,
                                         user_id: t.session.user ? Number(t.session.user.id) : null,
                                         vod_id: Number(e.contentId),
                                         vod_title: n.video.title,
                                         vod_ts: e.contentOffset,
-                                        vod_type: Object(Pt.a)(n.video.broadcastType)
+                                        vod_type: Object(Ht.a)(n.video.broadcastType)
                                     }
                                 }(t, e.getState(), r)), [3, 3];
                             case 2:
-                                return a = o.sent(), E.i.error(a.toString(), kn.name), [3, 3];
+                                return a = o.sent(), w.i.error(a.toString(), kn.name), [3, 3];
                             case 3:
                                 return [2]
                         }
@@ -13839,8 +14524,8 @@ webpackJsonp([37, 83], {
             },
             yn = (n("FKWv"), n("+8VM")),
             _n = (n("smiM"), "confirm-button"),
-            Sn = "deny-button",
-            Cn = function(e) {
+            Cn = "deny-button",
+            Sn = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -13865,27 +14550,27 @@ webpackJsonp([37, 83], {
                     }, Lt.createElement(Ut.u, {
                         onClick: this.props.onDenyClick,
                         type: Ut.z.Hollow,
-                        "data-test-selector": Sn
-                    }, Object(E.d)("Cancel", "ConfirmationModal"))), Lt.createElement(Ut.u, {
+                        "data-test-selector": Cn
+                    }, Object(w.d)("Cancel", "ConfirmationModal"))), Lt.createElement(Ut.u, {
                         onClick: this.props.onConfirmClick,
                         type: Ut.z.Alert,
                         disabled: this.props.isConfirmDisabled,
                         "data-test-selector": _n
-                    }, Object(E.d)("Ok", "ConfirmationModal"))), Lt.createElement(yn.a, {
+                    }, Object(w.d)("Ok", "ConfirmationModal"))), Lt.createElement(yn.a, {
                         closeOnBackdropClick: !0
                     }))
                 }, t
             }(Lt.Component),
-            wn = function(e) {
+            En = function(e) {
                 var t = e,
                     n = Math.floor(t / 3600);
                 t -= 3600 * n;
                 var i = Math.floor(t / 60);
                 t -= 60 * i;
                 var r = Math.floor(t);
-                return n > 0 ? n + ":" + En(i) + ":" + En(r) : i + ":" + En(r)
+                return n > 0 ? n + ":" + wn(i) + ":" + wn(r) : i + ":" + wn(r)
             },
-            En = function(e) {
+            wn = function(e) {
                 return e < 10 ? "0" + e : "" + e
             },
             Nn = (n("9CWX"), function(e) {
@@ -13930,7 +14615,7 @@ webpackJsonp([37, 83], {
                     }, Lt.createElement(Ut._35, {
                         className: "search-card-row__link",
                         ellipsis: !0
-                    }, Object(E.c)(new Date(1e3 * this.props.video.publishedAt), "medium"), Lt.createElement("span", null, " · "), wn(this.props.video.lengthSeconds)))))))
+                    }, Object(w.c)(new Date(1e3 * this.props.video.publishedAt), "medium"), Lt.createElement("span", null, " · "), En(this.props.video.lengthSeconds)))))))
                 }, t
             }(Lt.Component)),
             On = n("hXeO"),
@@ -13988,20 +14673,20 @@ webpackJsonp([37, 83], {
             },
             Tn = n("6Agf"),
             An = /^[\x00-\x7F]*$/,
-            Mn = function(e) {
+            Fn = function(e) {
                 return !An.test(e)
             },
-            Fn = function(e) {
-                return Mn(e.displayName) ? e.displayName + " (" + e.name + ")" : e.displayName
+            Mn = function(e) {
+                return Fn(e.displayName) ? e.displayName + " (" + e.name + ")" : e.displayName
             },
             Rn = n("3zLD"),
             Ln = n("RH2O"),
             Un = n("bkpq"),
             jn = n("O0Qc"),
-            Bn = function(e, t, n) {
+            Vn = function(e, t, n) {
                 return e && t && !n
             },
-            Vn = n("HW6M"),
+            Bn = n("HW6M"),
             Pn = n("3T7g"),
             Hn = n("CSlQ"),
             Wn = 15e3,
@@ -14063,15 +14748,15 @@ webpackJsonp([37, 83], {
             Gn = n("Lx+S"),
             Yn = n("YhVV"),
             Qn = n("ieBa"),
-            Kn = n("Tzcg"),
-            $n = n("czpb"),
+            $n = n("Tzcg"),
+            Kn = n("czpb"),
             Jn = (n("9kjL"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.buildModerationDashboardURL = function() {
-                        return Object($n.a)("/" + t.props.videoOwnerLogin + "/dashboard/moderation")
+                        return Object(Kn.a)("/" + t.props.videoOwnerLogin + "/dashboard/moderation")
                     }, t.buildModerationPrefsURL = function() {
-                        return Object($n.a)("/" + t.props.videoOwnerLogin + "/dashboard/settings/moderation")
+                        return Object(Kn.a)("/" + t.props.videoOwnerLogin + "/dashboard/settings/moderation")
                     }, t.onReplayModeChange = function(e) {
                         t.props.onReplayModeChange(e.currentTarget.checked)
                     }, t.onTimestampModeChange = function(e) {
@@ -14088,7 +14773,7 @@ webpackJsonp([37, 83], {
                         padding: {
                             bottom: 1
                         }
-                    }, Lt.createElement(Ut._2, null, Object(E.d)("Show me only messages posted during the live broadcast", "VideoChatSettings")), Lt.createElement(Ut._2, {
+                    }, Lt.createElement(Ut._2, null, Object(w.d)("Show me only messages posted during the live broadcast", "VideoChatSettings")), Lt.createElement(Ut._2, {
                         flexShrink: 0
                     }, Lt.createElement(Ut._42, {
                         checked: this.props.isReplayFilterOn,
@@ -14098,22 +14783,22 @@ webpackJsonp([37, 83], {
                     var t = [Lt.createElement(Ut._35, {
                         key: "moderationHeader",
                         bold: !0
-                    }, Object(E.d)("Mod Tools", "VideoChatSettings"))];
+                    }, Object(w.d)("Mod Tools", "VideoChatSettings"))];
                     return this.props.canSessionEditModerationSettings && t.push(Lt.createElement(Ut.W, {
                         key: "moderationPrefs",
                         display: Ut.N.InlineBlock
                     }, Lt.createElement("a", {
-                        target: Object($n.b)() ? "_blank" : "",
+                        target: Object(Kn.b)() ? "_blank" : "",
                         href: this.buildModerationPrefsURL(),
                         "data-test-selector": "video_chat_settings_mod_prefs"
-                    }, Object(E.d)("Change moderation preferences", "VideoChatSettings")))), this.props.canSessionModerateMessages && t.push(Lt.createElement(Ut.W, {
+                    }, Object(w.d)("Change moderation preferences", "VideoChatSettings")))), this.props.canSessionModerateMessages && t.push(Lt.createElement(Ut.W, {
                         key: "moderationDashboard",
                         display: Ut.N.InlineBlock
                     }, Lt.createElement("a", {
-                        target: Object($n.b)() ? "_blank" : "",
+                        target: Object(Kn.b)() ? "_blank" : "",
                         href: this.buildModerationDashboardURL(),
                         "data-test-selector": "video_chat_settings_mod_dashboard"
-                    }, Object(E.d)("Moderate messages", "VideoChatSettings")))), Lt.createElement(Ut._2, {
+                    }, Object(w.d)("Moderate messages", "VideoChatSettings")))), Lt.createElement(Ut._2, {
                         className: "video-chat__settings",
                         padding: {
                             x: 2,
@@ -14121,13 +14806,13 @@ webpackJsonp([37, 83], {
                         }
                     }, Lt.createElement(Ut._35, {
                         bold: !0
-                    }, Object(E.d)("Viewer Settings", "VideoChatSettings")), e, Lt.createElement(Ut._2, {
+                    }, Object(w.d)("Viewer Settings", "VideoChatSettings")), e, Lt.createElement(Ut._2, {
                         display: Ut.N.Flex,
                         justifyContent: Ut._1.Between,
                         padding: {
                             bottom: 1
                         }
-                    }, Lt.createElement(Ut._2, null, Object(E.d)("Hide timestamps", "VideoChatSettings")), Lt.createElement(Ut._2, {
+                    }, Lt.createElement(Ut._2, null, Object(w.d)("Hide timestamps", "VideoChatSettings")), Lt.createElement(Ut._2, {
                         flexShrink: 0
                     }, Lt.createElement(Ut._42, {
                         "data-test-selector": "timestamp-mode",
@@ -14147,13 +14832,13 @@ webpackJsonp([37, 83], {
                     onReplayModeChange: function(t) {
                         Jt({
                             setting: Gt,
-                            value: t ? Qt : Kt
-                        }), e($(t))
+                            value: t ? Qt : $t
+                        }), e(K(t))
                     },
                     onTimestampModeChange: function(t) {
                         Jt({
                             setting: Yt,
-                            value: t ? Qt : Kt
+                            value: t ? Qt : $t
                         }), e(ee(t))
                     }
                 }
@@ -14208,7 +14893,7 @@ webpackJsonp([37, 83], {
                         return Object.keys(e).map(function(t) {
                             return {
                                 id: t,
-                                emotes: Object(Kn.b)([e[t]])
+                                emotes: Object($n.b)([e[t]])
                             }
                         })
                     };
@@ -14247,7 +14932,7 @@ webpackJsonp([37, 83], {
                         componentRefDelegate: this.setTextareaRef,
                         refDelegate: this.setAutocompleteInputRef,
                         paddingRight: 30,
-                        placeholder: Object(E.d)("Post a message", "VideoChatInput"),
+                        placeholder: Object(w.d)("Post a message", "VideoChatInput"),
                         noResize: !0,
                         "data-a-target": "video-chat-input",
                         disabled: this.state.showCoolDownState
@@ -14270,14 +14955,14 @@ webpackJsonp([37, 83], {
                         "data-a-target": "video-chat-submit-button"
                     }, Lt.createElement(Ut._2, {
                         display: Ut.N.Flex
-                    }, Lt.createElement("span", null, Object(E.d)("Post at ", "CommentInput")), Lt.createElement(Ut._2, {
+                    }, Lt.createElement("span", null, Object(w.d)("Post at ", "CommentInput")), Lt.createElement(Ut._2, {
                         margin: {
                             x: .5
                         },
                         display: Ut.N.Flex
                     }, Lt.createElement(Ut._15, {
                         asset: Ut._16.GlyphLength
-                    })), Lt.createElement("span", null, wn(this.props.currentVideoTime))))))
+                    })), Lt.createElement("span", null, En(this.props.currentVideoTime))))))
                 }, t
             }(Lt.Component),
             ai = Object(Hn.d)("MessageInput", {
@@ -14289,7 +14974,7 @@ webpackJsonp([37, 83], {
                 return Lt.createElement(Ut._43, {
                     align: Ut._44.Left,
                     direction: Ut._45.Top,
-                    label: Object(E.d)("Jump to video", "TimeStamp")
+                    label: Object(w.d)("Jump to video", "TimeStamp")
                 }, Lt.createElement(Ut.W, {
                     className: "vod-message__timestamp",
                     margin: {
@@ -14300,7 +14985,7 @@ webpackJsonp([37, 83], {
                     }
                 }, Lt.createElement("button", {
                     onClick: n
-                }, wn(t))))
+                }, En(t))))
             }),
             si = n("+V/3"),
             li = n("5Nu7"),
@@ -14315,14 +15000,15 @@ webpackJsonp([37, 83], {
                 }
                 return n
             },
-            pi = "ban-user",
-            hi = "delete-comment-button",
-            fi = "reply-button",
-            gi = "relative-time-title",
-            vi = "share-button",
-            bi = "share-button-clicked",
-            ki = 3e3,
-            yi = function(e) {
+            pi = n("Ryxq"),
+            hi = "ban-user",
+            fi = "delete-comment-button",
+            gi = "reply-button",
+            vi = "relative-time-title",
+            bi = "share-button",
+            ki = "share-button-clicked",
+            yi = 3e3,
+            _i = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -14348,7 +15034,7 @@ webpackJsonp([37, 83], {
                             }
                         }, Lt.createElement(Ut._35, {
                             type: Ut._40.Span
-                        }, Object(E.d)("Are you sure you want to perform this action?", "chomments.moderation.confirmAction"))), Lt.createElement(Ut._2, {
+                        }, Object(w.d)("Are you sure you want to perform this action?", "chomments.moderation.confirmAction"))), Lt.createElement(Ut._2, {
                             display: Ut.N.Flex,
                             justifyContent: Ut._1.Center,
                             alignItems: Ut.c.Center
@@ -14361,17 +15047,17 @@ webpackJsonp([37, 83], {
                             type: Ut.z.Alert,
                             onClick: t.onContinueClickHandler,
                             "data-test-selector": _n
-                        }, Object(E.d)("Yes", "MessageOptionsMenu"))), Lt.createElement(Ut.u, {
+                        }, Object(w.d)("Yes", "MessageOptionsMenu"))), Lt.createElement(Ut.u, {
                             type: Ut.z.Hollow,
                             onClick: t.onCancelClickHandler,
-                            "data-test-selector": Sn
-                        }, Object(E.d)("No", "MessageOptionsMenu"))));
+                            "data-test-selector": Cn
+                        }, Object(w.d)("No", "MessageOptionsMenu"))));
                         var e = [];
                         t.props.isExpandedLayout || e.push(Lt.createElement(Ut._25, {
                             key: t.props.context.comment.id,
                             color: Ut.I.Alt2,
                             display: Ut.N.Flex,
-                            "data-test-selector": gi
+                            "data-test-selector": vi
                         }, Lt.createElement(Ut._25, {
                             margin: {
                                 x: 1
@@ -14383,20 +15069,20 @@ webpackJsonp([37, 83], {
                             borderBottom: !0
                         }, Lt.createElement(Ut._35, {
                             type: Ut._40.Span
-                        }, Object(E.d)("Posted ", "MessageOptionsMenu"), Object(E.g)(t.props.context.comment.createdAt)))), Lt.createElement(Ut._25, {
+                        }, Object(w.d)("Posted ", "MessageOptionsMenu"), Object(w.g)(t.props.context.comment.createdAt)))), Lt.createElement(Ut._25, {
                             key: t.props.context.comment.id + "2",
                             display: Ut.N.Flex,
                             color: Ut.I.Link
                         }, Lt.createElement(Ut._0, {
                             onClick: t.onReplyClickHandler,
-                            "data-test-selector": fi
+                            "data-test-selector": gi
                         }, Lt.createElement(Ut._2, {
                             padding: {
                                 y: .5,
                                 x: 1
                             }
-                        }, Object(E.d)("Reply to {userName}", {
-                            userName: Fn(t.props.context.author)
+                        }, Object(w.d)("Reply to {userName}", {
+                            userName: Mn(t.props.context.author)
                         }, "MessageOptionsMenu")))));
                         var n = [];
                         t.props.isCurrentUserModerator && n.push(Lt.createElement(Ut._2, {
@@ -14405,7 +15091,7 @@ webpackJsonp([37, 83], {
                         }, Lt.createElement(Ut._0, {
                             alert: !0,
                             onClick: t.onDeleteButtonClickHandler,
-                            "data-test-selector": hi
+                            "data-test-selector": fi
                         }, Lt.createElement(Ut._25, {
                             margin: {
                                 x: 1
@@ -14414,38 +15100,38 @@ webpackJsonp([37, 83], {
                                 y: .5
                             },
                             borderBottom: !0
-                        }, Object(E.d)("Delete", "MessageOptionsMenu")))), Lt.createElement(Ut._2, {
+                        }, Object(w.d)("Delete", "MessageOptionsMenu")))), Lt.createElement(Ut._2, {
                             key: t.props.context.comment.id + "2",
                             display: Ut.N.Flex
                         }, Lt.createElement(Ut._0, {
                             alert: !0,
                             onClick: t.onBanUserClickHandler,
-                            "data-test-selector": pi
+                            "data-test-selector": hi
                         }, Lt.createElement(Ut._2, {
                             padding: {
                                 y: .5,
                                 x: 1
                             }
-                        }, Object(E.d)("Ban User", "MessageOptionsMenu")))));
+                        }, Object(w.d)("Ban User", "MessageOptionsMenu")))));
                         var i = Lt.createElement(Ut._0, {
                             onClick: t.onShareClick,
-                            "data-test-selector": vi
+                            "data-test-selector": bi
                         }, Lt.createElement(Ut._2, {
                             padding: {
                                 y: .5,
                                 x: 1
                             }
-                        }, Object(E.d)("Copy Link", "MessageOptionsMenu")));
+                        }, Object(w.d)("Copy Link", "MessageOptionsMenu")));
                         t.state.isLinkCopied && (i = Lt.createElement(Ut.u, {
                             fullWidth: !0,
                             icon: Ut._16.Check,
                             type: Ut.z.Success,
-                            "data-test-selector": bi
+                            "data-test-selector": ki
                         }, Lt.createElement(Ut._2, {
                             display: Ut.N.Flex,
                             alignItems: Ut.c.Center,
                             justifyContent: Ut._1.Start
-                        }, Object(E.d)("Copied to clipboard", "MessageOptionsMenu"))));
+                        }, Object(w.d)("Copied to clipboard", "MessageOptionsMenu"))));
                         var r = Lt.createElement(Ut._25, {
                             display: Ut.N.Flex,
                             fullWidth: !0,
@@ -14469,7 +15155,7 @@ webpackJsonp([37, 83], {
                             i = mi(n, {
                                 tt_medium: "video_chat",
                                 tt_content: "message_share_link",
-                                t: Object(Ht.b)(e.contentOffset),
+                                t: Object(pi.a)(e.contentOffset),
                                 comment: e.id
                             });
                         return Object(di.a)(i.toString()), t.setState({
@@ -14479,10 +15165,10 @@ webpackJsonp([37, 83], {
                                 t.setState({
                                     isLinkCopied: !1
                                 })
-                            }, ki)
+                            }, yi)
                         }), Zt(e, i)
                     }, t.onReplyClickHandler = function() {
-                        t.props.onReplyClick(Fn(t.props.context.author)), t.closeMenu()
+                        t.props.onReplyClick(Mn(t.props.context.author)), t.closeMenu()
                     }, t.onBanUserClickHandler = function() {
                         t.setState(function(e) {
                             return N.__assign({}, e, {
@@ -14513,7 +15199,7 @@ webpackJsonp([37, 83], {
                     }, Lt.createElement(ci.a, {
                         onClickOut: this.closeMenu
                     }, Lt.createElement(Ut.v, {
-                        ariaLabel: Object(E.d)("Message Actions Menu", "VideoCommentsMenu"),
+                        ariaLabel: Object(w.d)("Message Actions Menu", "VideoCommentsMenu"),
                         size: Ut.x.Small,
                         type: Ut.w.Secondary,
                         "data-test-selector": "menu-button",
@@ -14527,7 +15213,7 @@ webpackJsonp([37, 83], {
                     }, this.getContent())))
                 }, t
             }(Lt.Component),
-            _i = (n("k2hM"), "video-chat__message-author"),
+            Ci = (n("k2hM"), "video-chat__message-author"),
             Si = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -14558,14 +15244,14 @@ webpackJsonp([37, 83], {
                         i = e.currentUser,
                         r = !!i && t.comment.commenter === i.id,
                         a = void 0 !== t.comment.userBadges[si.a],
-                        o = Vn("video-chat__message-menu", {
+                        o = Bn("video-chat__message-menu", {
                             "video-chat__message-menu--force-visible": this.state.forceMenuVisibility
                         }),
                         s = Lt.createElement(Ut._2, {
                             className: o,
                             "data-test-selector": "menu-options-wrapper",
                             flexShrink: 0
-                        }, Lt.createElement(yi, {
+                        }, Lt.createElement(_i, {
                             context: t,
                             isCurrentUserModerator: this.props.isCurrentUserModerator,
                             isExpandedLayout: this.props.isExpandedLayout,
@@ -14575,7 +15261,7 @@ webpackJsonp([37, 83], {
                             onOpen: this.onMenuOpenHandler,
                             onReplyClick: this.props.onReplyClick
                         })),
-                        l = Vn(_i, (u = {}, u["video-chat__message-author--me"] = r, u["video-chat__message-author--creator"] = a, u)),
+                        l = Bn(Ci, (u = {}, u["video-chat__message-author--me"] = r, u["video-chat__message-author--creator"] = a, u)),
                         c = r || a ? "" : t.comment.message.userColor,
                         d = Lt.createElement(Ut.W, {
                             padding: {
@@ -14609,7 +15295,7 @@ webpackJsonp([37, 83], {
                                 userID: e.id,
                                 userDisplayName: e.displayName,
                                 userType: Tn.a.User,
-                                isIntl: Mn(e.displayName),
+                                isIntl: Fn(e.displayName),
                                 userLogin: e.name,
                                 color: t
                             }
@@ -14626,15 +15312,15 @@ webpackJsonp([37, 83], {
                     var u
                 }, t
             }(Lt.Component),
-            Ci = (n("jvcJ"), function(e) {
+            Ei = (n("jvcJ"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onReplyClickHandler = function() {
-                        t.props.replyCommentContext ? t.props.onReplyClick(Fn(t.props.replyCommentContext.author)) : t.props.onReplyClick()
+                        t.props.replyCommentContext ? t.props.onReplyClick(Mn(t.props.replyCommentContext.author)) : t.props.onReplyClick()
                     }, t
                 }
                 return N.__extends(t, e), t.prototype.render = function() {
-                    var e = Object(E.d)("Reply", "DashboardModerationReplyButton");
+                    var e = Object(w.d)("Reply", "DashboardModerationReplyButton");
                     return "vod-message" === this.props.context ? Lt.createElement("button", {
                         className: "video-chat-reply-button",
                         onClick: this.onReplyClickHandler,
@@ -14721,7 +15407,7 @@ webpackJsonp([37, 83], {
                         noResize: !0,
                         onChange: this.onChange,
                         onKeyDown: this.onKeyDown,
-                        placeholder: Object(E.d)("Reply", "ReplyForm"),
+                        placeholder: Object(w.d)("Reply", "ReplyForm"),
                         refDelegate: this.setTextareaRef,
                         value: this.state.newReplyText
                     }), Lt.createElement(Qn.a, {
@@ -14734,7 +15420,7 @@ webpackJsonp([37, 83], {
                     }))
                 }, t
             }(Lt.Component)),
-            Ei = function(e) {
+            Ni = function(e) {
                 return Lt.createElement(Ut._2, {
                     padding: {
                         y: .5,
@@ -14754,16 +15440,16 @@ webpackJsonp([37, 83], {
                     onReplyClick: e.onReplyClick
                 })))
             },
-            Ni = "vod-message-reply",
-            Oi = function(e) {
+            Oi = "vod-message-reply",
+            Di = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.makeReplyButtonAndRelativeTime = function(e) {
                         return Lt.createElement(Ut._2, {
                             display: Ut.N.Flex,
                             alignItems: Ut.c.Center
-                        }, Lt.createElement(Ci, {
-                            context: Ni,
+                        }, Lt.createElement(Ei, {
+                            context: Oi,
                             onReplyClick: t.props.onReplyClick,
                             replyCommentContext: e
                         }), Lt.createElement(Ut.W, {
@@ -14774,12 +15460,12 @@ webpackJsonp([37, 83], {
                             color: Ut.I.Alt2,
                             fontSize: 7,
                             type: Ut._40.Span
-                        }, " • " + Object(E.g)(e.comment.createdAt))))
+                        }, " • " + Object(w.g)(e.comment.createdAt))))
                     }, t.makeReply = function(e) {
                         var n = null;
                         return t.props.isExpandedLayout && (n = t.makeReplyButtonAndRelativeTime(e)), Lt.createElement("li", {
                             key: e.comment.id
-                        }, Lt.createElement(Ei, {
+                        }, Lt.createElement(Ni, {
                             badgeSets: t.props.badgeSets,
                             context: e,
                             currentUser: t.props.currentUser,
@@ -14797,7 +15483,7 @@ webpackJsonp([37, 83], {
                     return Lt.createElement("ul", null, e)
                 }, t
             }(Lt.Component),
-            Di = (n("PNnM"), function(e) {
+            xi = (n("PNnM"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -14828,7 +15514,7 @@ webpackJsonp([37, 83], {
                     return this.props.isExpandedLayout && (n = Lt.createElement(Ut._2, {
                         alignItems: Ut.c.Center,
                         display: Ut.N.Flex
-                    }, Lt.createElement(Ci, {
+                    }, Lt.createElement(Ei, {
                         context: "vod-message",
                         onReplyClick: this.props.onReplyClick,
                         replyCommentContext: this.props.parentMessage
@@ -14840,13 +15526,13 @@ webpackJsonp([37, 83], {
                         color: Ut.I.Alt2,
                         fontSize: 7,
                         type: Ut._40.Span
-                    }, " • " + Object(E.g)(this.props.parentMessage.comment.createdAt))))), Lt.createElement(Ut._2, null, n, Lt.createElement(Ut._2, {
+                    }, " • " + Object(w.g)(this.props.parentMessage.comment.createdAt))))), Lt.createElement(Ut._2, null, n, Lt.createElement(Ut._2, {
                         margin: {
                             y: .5,
                             left: .5
                         },
-                        className: Vn("vod-message__reply", "qa-vod-chat-reply")
-                    }, e, Lt.createElement(Oi, {
+                        className: Bn("vod-message__reply", "qa-vod-chat-reply")
+                    }, e, Lt.createElement(Di, {
                         badgeSets: this.props.badgeSets,
                         currentUser: this.props.currentUser,
                         isCurrentUserModerator: this.props.isCurrentUserModerator,
@@ -14859,7 +15545,7 @@ webpackJsonp([37, 83], {
                     }), t))
                 }, t
             }(Lt.Component)),
-            xi = (n("WULK"), function(e) {
+            Ii = (n("WULK"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -14890,7 +15576,7 @@ webpackJsonp([37, 83], {
                 }
                 return N.__extends(t, e), t.prototype.render = function() {
                     var e = null;
-                    (this.props.isExpandedLayout || this.props.messageContext.replies.length > 0 || this.state.showReplyForm) && (e = Lt.createElement(Di, {
+                    (this.props.isExpandedLayout || this.props.messageContext.replies.length > 0 || this.state.showReplyForm) && (e = Lt.createElement(xi, {
                         badgeSets: this.props.badgeSets,
                         currentUser: this.props.currentUser,
                         isCreationCoolDownActive: this.props.isCreationCoolDownActive,
@@ -14920,7 +15606,7 @@ webpackJsonp([37, 83], {
                         offset: this.props.messageContext.comment.contentOffset,
                         onClick: this.onTimestampClickHandler
                     })));
-                    var n = Vn("vod-message", (r = {}, r["vod-message--focused"] = this.shouldFocusMessage(), r)),
+                    var n = Bn("vod-message", (r = {}, r["vod-message--focused"] = this.shouldFocusMessage(), r)),
                         i = Lt.createElement(Ut._2, {
                             alignItems: Ut.c.Start,
                             className: n,
@@ -14958,7 +15644,7 @@ webpackJsonp([37, 83], {
                     return this.props.highlight
                 }, t
             }(Lt.Component)),
-            Ii = (n("cPfx"), function(e) {
+            Ti = (n("cPfx"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -14986,7 +15672,7 @@ webpackJsonp([37, 83], {
                 }, t.prototype.componentDidUpdate = function() {
                     this.preventScrolling = !0, this.props.isScrollingSynced && (this.preventScrolling = !1, this.componentInitiatedScroll = !0, this.commentListRef.scrollTop = this.commentListRef.scrollHeight)
                 }, t.prototype.render = function() {
-                    var e = Vn("video-chat__message-list-wrapper", (n = {}, n["video-chat__message-list-wrapper--unsynced"] = !this.props.isScrollingSynced, n)),
+                    var e = Bn("video-chat__message-list-wrapper", (n = {}, n["video-chat__message-list-wrapper--unsynced"] = !this.props.isScrollingSynced, n)),
                         t = null;
                     return !1 === this.props.isScrollingSynced && (t = Lt.createElement(Ut.W, {
                         className: "video-chat__sync-button",
@@ -15019,8 +15705,8 @@ webpackJsonp([37, 83], {
                     }), !1)
                 }, t
             }(Lt.Component)),
-            Ti = (n("PeVI"), 5e3),
-            Ai = function(e) {
+            Ai = (n("PeVI"), 5e3),
+            Fi = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -15061,7 +15747,7 @@ webpackJsonp([37, 83], {
                             t.setState({
                                 commentAlreadyFocused: !0
                             })
-                        }, Ti)
+                        }, Ai)
                     }, t
                 }
                 return N.__extends(t, e), t.prototype.componentWillMount = function() {
@@ -15132,7 +15818,7 @@ webpackJsonp([37, 83], {
                                 } : {},
                                 key: e.comment.id,
                                 fullWidth: !0
-                            }, Lt.createElement("li", null, Lt.createElement(xi, {
+                            }, Lt.createElement("li", null, Lt.createElement(Ii, {
                                 badgeSets: t.badgeSets,
                                 currentUser: a.currentUser,
                                 highlight: i,
@@ -15184,7 +15870,7 @@ webpackJsonp([37, 83], {
                         videoOwnerID: this.props.data.video.owner.id,
                         videoOwnerLogin: this.props.data.video.owner.login
                     }), Lt.createElement(Ut._25, {
-                        className: Vn("video-chat", "qa-vod-chat"),
+                        className: Bn("video-chat", "qa-vod-chat"),
                         display: Ut.N.Flex,
                         background: Ut.m.Alt2,
                         borderLeft: !0,
@@ -15203,7 +15889,7 @@ webpackJsonp([37, 83], {
                         justifyContent: Ut._1.Center
                     }, Lt.createElement(Ut._35, {
                         type: Ut._40.Span
-                    }, Object(Oe.d)("Chat on Videos", "VideoChatPresentation"))), l, Lt.createElement(Ii, {
+                    }, Object(Oe.d)("Chat on Videos", "VideoChatPresentation"))), l, Lt.createElement(Ti, {
                         startSynced: s,
                         isScrollingSynced: this.props.isScrollingSynced,
                         onScrollOffBottom: this.props.onDisableSync,
@@ -15234,10 +15920,10 @@ webpackJsonp([37, 83], {
                     this.props.isLoggedIn ? this.props.onCreate(e) : this.props.onShowLogin()
                 }, t
             }(Lt.Component),
-            Mi = Object(Hn.d)("VideoChat")(Ai),
-            Fi = n("0TFF"),
-            Ri = 2,
-            Li = Object(Ln.b)(function(e, t) {
+            Mi = Object(Hn.d)("VideoChat")(Fi),
+            Ri = n("0TFF"),
+            Li = 2,
+            Ui = Object(Ln.b)(function(e, t) {
                 var n = {
                     comments: [],
                     currentVideoTime: e.vodChat.comments.currentVideoTime,
@@ -15250,7 +15936,7 @@ webpackJsonp([37, 83], {
                     isLoggedIn: Object(Re.d)(e),
                     isReplayFilterOn: e.vodChat.comments.isReplayFilterOn,
                     isScrollingSynced: e.vodChat.comments.isScrollingSynced,
-                    offsetRange: Et(e.vodChat.comments.comments),
+                    offsetRange: wt(e.vodChat.comments.comments),
                     replyCursorMap: e.vodChat.comments.replyCursorMap,
                     shouldSendReplayFilterError: !1,
                     hideTimestamps: e.vodChat.comments.hideTimestamps,
@@ -15264,7 +15950,7 @@ webpackJsonp([37, 83], {
                         var n = e.id === t.id,
                             i = e.roles.isGlobalMod || e.roles.isSiteAdmin || e.roles.isStaff;
                         return !!t.self && t.self.isModerator || i || n
-                    }(r, a.owner)), n.comments = bt(e, t.data.video.broadcastType, n.isCurrentUserModerator, t.blockedUsers), n.shouldSendReplayFilterError = Bn(e.vodChat.comments.isReplayFilterOn, t.data.video.broadcastType !== ht.a.Upload, e.vodChat.comments.hasDismissedChatReplayError)
+                    }(r, a.owner)), n.comments = bt(e, t.data.video.broadcastType, n.isCurrentUserModerator, t.blockedUsers), n.shouldSendReplayFilterError = Vn(e.vodChat.comments.isReplayFilterOn, t.data.video.broadcastType !== ht.a.Upload, e.vodChat.comments.hasDismissedChatReplayError)
                 }
                 return n
             }, function(e, t) {
@@ -15278,7 +15964,7 @@ webpackJsonp([37, 83], {
                                     videoID: n.videoID
                                 };
                                 if (n.highlightTimestamp && n.currentVideoTime !== n.highlightTimestamp) return;
-                                return n.highlightedMessageID && (r.highlightedMessageID = n.highlightedMessageID), void e(S(cn, r))
+                                return n.highlightedMessageID && (r.highlightedMessageID = n.highlightedMessageID), void e(C(cn, r))
                             }
                             if (n.offsetRange !== gt) {
                                 if (function(e) {
@@ -15294,8 +15980,8 @@ webpackJsonp([37, 83], {
                                         cursor: n.cursor,
                                         currentVideoTime: n.currentVideoTime,
                                         offsetEndTime: n.offsetRange.endSec,
-                                        offsetThreshold: Ri
-                                    })) return void e(S(cn, {
+                                        offsetThreshold: Li
+                                    })) return void e(C(cn, {
                                     bitsConfig: t.bitsConfig,
                                     cursor: n.cursor.future,
                                     videoID: n.videoID
@@ -15304,7 +15990,7 @@ webpackJsonp([37, 83], {
                                         var t = e.currentVideoTime < e.offsetRange.beginSec,
                                             n = e.currentVideoTime > e.offsetRange.endSec;
                                         return t && _(e.cursor) || n && y(e.cursor)
-                                    }(n)) return void e(S(cn, {
+                                    }(n)) return void e(C(cn, {
                                     bitsConfig: t.bitsConfig,
                                     offset: n.currentVideoTime,
                                     videoID: n.videoID
@@ -15316,7 +16002,7 @@ webpackJsonp([37, 83], {
                         if (Object(jn.m)(t.message)) {
                             var n = Object(Oe.d)("Sorry, commands are not supported in Chat on Videos yet.", "VideoChatPresentation");
                             e(U(n))
-                        } else e(S(dn, t)), e(C(vn, t))
+                        } else e(C(dn, t)), e(S(vn, t))
                     },
                     onError: function(t) {
                         e(U(t))
@@ -15328,7 +16014,7 @@ webpackJsonp([37, 83], {
                         e(W())
                     },
                     onLoadMoreReplies: function(t, n, i, r) {
-                        e(S(cn, k(t, n, i, r)))
+                        e(C(cn, k(t, n, i, r)))
                     },
                     onDisableSync: function() {
                         e(Q())
@@ -15338,16 +16024,16 @@ webpackJsonp([37, 83], {
                     },
                     onShowLogin: t.onShowLogin,
                     onBanUser: function(t) {
-                        e(S(Ft, t)), e(C(fn, t))
+                        e(C(Mt, t)), e(S(fn, t))
                     },
                     onDeleteComment: function(t) {
-                        e(S(un, t)), e(C(gn, t))
+                        e(C(un, t)), e(S(gn, t))
                     },
                     onPlayerSeekRequest: function(n, i) {
-                        t.onPlayerSeekRequest(n), void 0 !== i && e(C(kn, i))
+                        t.onPlayerSeekRequest(n), void 0 !== i && e(S(kn, i))
                     },
                     onTurnOffReplayFilter: function() {
-                        e($(!1))
+                        e(K(!1))
                     },
                     onWillMount: function() {
                         e(ne())
@@ -15365,7 +16051,7 @@ webpackJsonp([37, 83], {
                     data: n.data
                 })
             })(Mi),
-            Ui = Object(Rn.graphql)(Fi, {
+            ji = Object(Rn.graphql)(Ri, {
                 options: function(e) {
                     return {
                         variables: {
@@ -15386,9 +16072,9 @@ webpackJsonp([37, 83], {
                         blockedUsers: r
                     })
                 }
-            })(Li);
+            })(Ui);
         n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {
-            return Ke
+            return $e
         }), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "C", function() {
             return kt
         }), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "p", function() {
@@ -15402,15 +16088,15 @@ webpackJsonp([37, 83], {
         }), n.d(t, "o", function() {
             return k
         }), n.d(t, "n", function() {
-            return Ft
-        }), n.d(t, "z", function() {
             return Mt
+        }), n.d(t, "z", function() {
+            return Ft
         }), n.d(t, "B", function() {
             return Rt
         }), n.d(t, "D", function() {
-            return S
-        }), n.d(t, "E", function() {
             return C
+        }), n.d(t, "E", function() {
+            return S
         }), n.d(t, "l", function() {
             return jt
         }), n.d(t, "q", function() {
@@ -15440,27 +16126,27 @@ webpackJsonp([37, 83], {
         }), n.d(t, !1, function() {}), n.d(t, "y", function() {
             return ue
         }), n.d(t, "e", function() {
-            return Cn
+            return Sn
         }), n.d(t, !1, function() {}), n.d(t, "k", function() {
             return Nn
         }), n.d(t, "h", function() {
             return In
         }), n.d(t, "u", function() {
-            return wn
+            return En
         }), n.d(t, "v", function() {
             return ft
         }), n.d(t, "t", function() {
-            return Fn
+            return Mn
         }), n.d(t, "f", function() {
             return "mod-dashboard"
         }), n.d(t, "g", function() {
             return "mod-comment"
         }), n.d(t, "m", function() {
-            return Ui
+            return ji
         }), n.d(t, !1, function() {}), n.d(t, "j", function() {
             return wi
         }), n.d(t, "i", function() {
-            return Ci
+            return Ei
         })
     },
     mSFb: function(e, t) {
@@ -15496,18 +16182,18 @@ webpackJsonp([37, 83], {
             p > 0 ? (g = r(e), v = r(t)) : (g = r(t), v = r(e));
             var k, y = a(v, g),
                 _ = v.getTimezoneOffset() - g.getTimezoneOffset(),
-                S = Math.round(y / 60) - _;
-            if (S < 2) return m.includeSeconds ? y < 5 ? f("lessThanXSeconds", 5, b) : y < 10 ? f("lessThanXSeconds", 10, b) : y < 20 ? f("lessThanXSeconds", 20, b) : y < 40 ? f("halfAMinute", null, b) : f(y < 60 ? "lessThanXMinutes" : "xMinutes", 1, b) : 0 === S ? f("lessThanXMinutes", 1, b) : f("xMinutes", S, b);
-            if (S < 45) return f("xMinutes", S, b);
-            if (S < 90) return f("aboutXHours", 1, b);
-            if (S < l) return f("aboutXHours", Math.round(S / 60), b);
-            if (S < c) return f("xDays", 1, b);
-            if (S < d) return f("xDays", Math.round(S / l), b);
-            if (S < u) return k = Math.round(S / d), f("aboutXMonths", k, b);
-            if ((k = o(v, g)) < 12) return f("xMonths", Math.round(S / d), b);
-            var C = k % 12,
-                w = Math.floor(k / 12);
-            return C < 3 ? f("aboutXYears", w, b) : C < 9 ? f("overXYears", w, b) : f("almostXYears", w + 1, b)
+                C = Math.round(y / 60) - _;
+            if (C < 2) return m.includeSeconds ? y < 5 ? f("lessThanXSeconds", 5, b) : y < 10 ? f("lessThanXSeconds", 10, b) : y < 20 ? f("lessThanXSeconds", 20, b) : y < 40 ? f("halfAMinute", null, b) : f(y < 60 ? "lessThanXMinutes" : "xMinutes", 1, b) : 0 === C ? f("lessThanXMinutes", 1, b) : f("xMinutes", C, b);
+            if (C < 45) return f("xMinutes", C, b);
+            if (C < 90) return f("aboutXHours", 1, b);
+            if (C < l) return f("aboutXHours", Math.round(C / 60), b);
+            if (C < c) return f("xDays", 1, b);
+            if (C < d) return f("xDays", Math.round(C / l), b);
+            if (C < u) return k = Math.round(C / d), f("aboutXMonths", k, b);
+            if ((k = o(v, g)) < 12) return f("xMonths", Math.round(C / d), b);
+            var S = k % 12,
+                E = Math.floor(k / 12);
+            return S < 3 ? f("aboutXYears", E, b) : S < 9 ? f("overXYears", E, b) : f("almostXYears", E + 1, b)
         }
     },
     mbxv: function(e, t, n) {
@@ -15603,6 +16289,118 @@ webpackJsonp([37, 83], {
                 a = Math.floor(e / 3600);
             return t && t.zeroPadAll ? i(a, 2) + ":" + i(r, 2) + ":" + i(n, 2) : a ? a + ":" + i(r, 2) + ":" + i(n, 2) : r + ":" + i(n, 2)
         }
+    },
+    mvQ0: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "VideoShareBox_CollectionTrackingMeta"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "creatorID"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "ID"
+                            }
+                        }
+                    }
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "user"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "id"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "creatorID"
+                                }
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "login"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "roles"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "isPartner"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 117
+            }
+        };
+        n.loc.source = {
+            body: "query VideoShareBox_CollectionTrackingMeta($creatorID: ID!) {\nuser(id: $creatorID) {\nid\nlogin\nroles {\nisPartner\n}\n}\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
     },
     n2E0: function(e, t, n) {
         "use strict";
@@ -17004,16 +17802,16 @@ webpackJsonp([37, 83], {
                 comparison: u
             };
             u > 0 ? (h = r(e), f = r(t)) : (h = r(t), f = r(e));
-            var v, b, k, y, _, S = Math[d.partialMethod ? String(d.partialMethod) : "floor"],
-                C = a(f, h),
-                w = f.getTimezoneOffset() - h.getTimezoneOffset(),
-                E = S(C / 60) - w;
-            if ("s" === (v = d.unit ? String(d.unit) : E < 1 ? "s" : E < 60 ? "m" : E < s ? "h" : E < l ? "d" : E < c ? "M" : "Y")) return p("xSeconds", C, g);
-            if ("m" === v) return p("xMinutes", E, g);
-            if ("h" === v) return b = S(E / 60), p("xHours", b, g);
-            if ("d" === v) return k = S(E / s), p("xDays", k, g);
-            if ("M" === v) return y = S(E / l), p("xMonths", y, g);
-            if ("Y" === v) return _ = S(E / c), p("xYears", _, g);
+            var v, b, k, y, _, C = Math[d.partialMethod ? String(d.partialMethod) : "floor"],
+                S = a(f, h),
+                E = f.getTimezoneOffset() - h.getTimezoneOffset(),
+                w = C(S / 60) - E;
+            if ("s" === (v = d.unit ? String(d.unit) : w < 1 ? "s" : w < 60 ? "m" : w < s ? "h" : w < l ? "d" : w < c ? "M" : "Y")) return p("xSeconds", S, g);
+            if ("m" === v) return p("xMinutes", w, g);
+            if ("h" === v) return b = C(w / 60), p("xHours", b, g);
+            if ("d" === v) return k = C(w / s), p("xDays", k, g);
+            if ("M" === v) return y = C(w / l), p("xMonths", y, g);
+            if ("Y" === v) return _ = C(w / c), p("xYears", _, g);
             throw new Error("Unknown unit: " + v)
         }
     },
@@ -17396,7 +18194,7 @@ webpackJsonp([37, 83], {
                                     if (i && i.requestError) throw i.requestError;
                                     throw new Error("Could not delete video. Request returned " + i.status)
                                 }
-                                return q.o.history.push(Object($.d)(t)), [2]
+                                return q.o.history.push(Object(K.d)(t)), [2]
                         }
                     })
                 })
@@ -17420,10 +18218,10 @@ webpackJsonp([37, 83], {
             k = n("j7/Y"),
             y = n("NXs7"),
             _ = n("VAT8"),
-            S = n("JpYe"),
-            C = n("w9tK"),
-            w = n("vH/s"),
-            E = n("n2E0"),
+            C = n("JpYe"),
+            S = n("w9tK"),
+            E = n("vH/s"),
+            w = n("n2E0"),
             N = n("SI0h"),
             O = n("CSlQ"),
             D = n("BC6Q"),
@@ -17431,8 +18229,8 @@ webpackJsonp([37, 83], {
             I = n("fc0G"),
             T = n("Ic9h"),
             A = n("fTsm"),
-            M = n("/nNw"),
-            F = n("7tMz"),
+            F = n("/nNw"),
+            M = n("7tMz"),
             R = n("WzS7"),
             L = n("Odds"),
             U = function(e) {
@@ -17481,13 +18279,13 @@ webpackJsonp([37, 83], {
                     }) : null
                 }, t
             }(f.Component),
-            j = Object(g.compose)(Object(F.a)("BelowFoldRecommendations"))(U),
-            B = Object(s.b)(function(e) {
+            j = Object(g.compose)(Object(M.a)("BelowFoldRecommendations"))(U),
+            V = Object(s.b)(function(e) {
                 return {
                     firstPageLoaded: e.session.firstPageLoaded
                 }
             })(j),
-            V = n("F8kA"),
+            B = n("F8kA"),
             P = (n("sZED"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -17525,14 +18323,14 @@ webpackJsonp([37, 83], {
                         height: 20
                     })), f.createElement(L._35, null, Object(v.d)("This video is private. To Premiere or edit your video, visit your <x:link>video manager</x:link>", {
                         "x:link": function(t) {
-                            return f.createElement(V.a, {
+                            return f.createElement(B.a, {
                                 "data-test-selector": "private-video-banner-header-link",
                                 key: "private-video-banner-" + e.props.ownerLogin,
                                 to: {
                                     pathname: "/" + e.props.ownerLogin + "/manager",
                                     state: {
-                                        medium: w.PageviewMedium.VideoWatchPage,
-                                        content: w.PageviewContent.Video
+                                        medium: E.PageviewMedium.VideoWatchPage,
+                                        content: E.PageviewContent.Video
                                     }
                                 }
                             }, f.createElement(L._35, {
@@ -17647,8 +18445,8 @@ webpackJsonp([37, 83], {
                     autoReportInteractive: !0
                 })], t)
             }(f.Component),
-            K = n("cSst"),
-            $ = n("NY9D"),
+            $ = n("cSst"),
+            K = n("NY9D"),
             J = /\S/,
             Z = function(e) {
                 var t = e.video,
@@ -17672,7 +18470,7 @@ webpackJsonp([37, 83], {
             })(function(e) {
                 var t = e.video,
                     n = null;
-                if (t && t.scope === M.VideoScope.Private && (n = f.createElement(L._25, {
+                if (t && t.scope === F.VideoScope.Private && (n = f.createElement(L._25, {
                         fontSize: L.R.Size4
                     }, f.createElement(L._6, {
                         label: Object(v.d)("Private", "VideoTitle")
@@ -17684,8 +18482,8 @@ webpackJsonp([37, 83], {
                     "data-test-selector": "game-image-placeholder",
                     height: 55,
                     width: 40
-                }) : null !== t.game && (i = f.createElement(V.a, {
-                    to: Object($.c)(t.game.name),
+                }) : null !== t.game && (i = f.createElement(B.a, {
+                    to: Object(K.c)(t.game.name),
                     "data-a-target": "video-info-game-boxart-link"
                 }, f.createElement(L.C, {
                     src: t.game.boxArtURL,
@@ -17706,12 +18504,12 @@ webpackJsonp([37, 83], {
                     width: 240
                 })) : null !== t.game && (r = f.createElement("div", null, n, f.createElement(Z, {
                     video: t
-                }), f.createElement(K.a, {
+                }), f.createElement($.a, {
                     linkTo: {
-                        pathname: Object($.c)(t.game.name),
+                        pathname: Object(K.c)(t.game.name),
                         state: {
-                            content: w.PageviewContent.Game,
-                            medium: w.PageviewMedium.VideoWatchPage
+                            content: E.PageviewContent.Game,
+                            medium: E.PageviewMedium.VideoWatchPage
                         }
                     },
                     tooltip: Object(v.d)("Game", "VideoInfo"),
@@ -17970,7 +18768,7 @@ webpackJsonp([37, 83], {
                 }, t.prototype.isVODOwner = function(e, t) {
                     return t && e.owner && t.id === e.owner.id
                 }, t.prototype.getVideoReportExtraField = function() {
-                    var e = Object(S.a)(this.props),
+                    var e = Object(C.a)(this.props),
                         t = {
                             timestamp: Object(ae.a)(this.props.lastVideoOffset, {
                                 zeroPadAll: !0
@@ -17998,90 +18796,101 @@ webpackJsonp([37, 83], {
                     }
                 }, e)
             })(Object(ee.e)(me)),
-            he = (n("YhgU"), Object(O.d)("VideoInfoBar", {
+            he = (n("YhgU"), function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return m.__extends(t, e), t.prototype.render = function() {
+                    var e = null;
+                    return this.props.video && this.props.video.description && (e = f.createElement(L._25, {
+                        borderTop: !0,
+                        "data-test-selector": "video-description"
+                    }, f.createElement(Q, {
+                        description: this.props.video.description,
+                        broadcastType: this.props.video.broadcastType
+                    }))), f.createElement(L._25, {
+                        background: L.m.Base,
+                        border: !0
+                    }, f.createElement(L._25, {
+                        alignItems: L.c.Center,
+                        breakpointMedium: {
+                            flexDirection: L.P.Row
+                        },
+                        display: L.N.Flex,
+                        flexWrap: L.Q.NoWrap,
+                        flexDirection: L.P.Column,
+                        justifyContent: L._1.Start
+                    }, f.createElement(L._25, {
+                        flexGrow: 1,
+                        fullWidth: !0,
+                        fullHeight: !0,
+                        overflow: L._5.Hidden,
+                        padding: 1
+                    }, f.createElement(X, {
+                        video: this.props.video
+                    })), f.createElement(L._25, {
+                        alignItems: L.c.Center,
+                        className: "video-info-bar__action-container",
+                        display: L.N.Flex,
+                        flexDirection: L.P.Row,
+                        flexShrink: 0,
+                        fullHeight: !0,
+                        padding: 1
+                    }, this.props.video && f.createElement(L._25, {
+                        alignItems: L.c.Center,
+                        "data-test-selector": "total-views",
+                        display: L.N.Flex,
+                        color: L.I.Alt2,
+                        flexGrow: 1,
+                        fontSize: L.R.Size5
+                    }, f.createElement(L._24, {
+                        value: Object(v.e)(this.props.video.viewCount),
+                        label: Object(v.d)("Total Views", "VideoInfoBar"),
+                        icon: L._16.GlyphViews
+                    })), f.createElement(L._2, {
+                        display: L.N.Flex,
+                        flexGrow: 0
+                    }, f.createElement(L._2, {
+                        padding: {
+                            x: 1
+                        }
+                    }, f.createElement(H.a, {
+                        balloonDirection: L.q.TopRight,
+                        buttonType: L.z.Hollow,
+                        content: {
+                            collectionID: this.props.collectionID,
+                            videoID: this.props.video ? this.props.video.id : void 0
+                        },
+                        currentVideoTime: this.props.lastVideoOffset,
+                        tracking: {
+                            location: E.PageviewLocation.VideoWatchPage
+                        }
+                    })), f.createElement(pe, {
+                        currentUser: this.props.currentUser,
+                        video: this.props.video,
+                        lastVideoOffset: this.props.lastVideoOffset
+                    })))), e)
+                }, t
+            }(f.Component)),
+            fe = Object(O.d)("VideoInfoBar", {
                 autoReportInteractive: !0
-            })(function(e) {
-                var t = null;
-                return e.video && e.video.description && (t = f.createElement(L._25, {
-                    borderTop: !0,
-                    "data-test-selector": "video-description"
-                }, f.createElement(Q, {
-                    description: e.video.description,
-                    broadcastType: e.video.broadcastType
-                }))), f.createElement(L._25, {
-                    background: L.m.Base,
-                    border: !0
-                }, f.createElement(L._25, {
-                    alignItems: L.c.Center,
-                    breakpointMedium: {
-                        flexDirection: L.P.Row
-                    },
-                    display: L.N.Flex,
-                    flexWrap: L.Q.NoWrap,
-                    flexDirection: L.P.Column,
-                    justifyContent: L._1.Start
-                }, f.createElement(L._25, {
-                    flexGrow: 1,
-                    fullWidth: !0,
-                    fullHeight: !0,
-                    overflow: L._5.Hidden,
-                    padding: 1
-                }, f.createElement(X, {
-                    video: e.video
-                })), f.createElement(L._25, {
-                    alignItems: L.c.Center,
-                    className: "video-info-bar__action-container",
-                    display: L.N.Flex,
-                    flexDirection: L.P.Row,
-                    flexShrink: 0,
-                    fullHeight: !0,
-                    padding: 1
-                }, e.video && f.createElement(L._25, {
-                    alignItems: L.c.Center,
-                    "data-test-selector": "total-views",
-                    display: L.N.Flex,
-                    color: L.I.Alt2,
-                    flexGrow: 1,
-                    fontSize: L.R.Size5
-                }, f.createElement(L._24, {
-                    value: Object(v.e)(e.video.viewCount),
-                    label: Object(v.d)("Total Views", "VideoInfoBar"),
-                    icon: L._16.GlyphViews
-                })), f.createElement(L._2, {
-                    display: L.N.Flex,
-                    flexGrow: 0
-                }, f.createElement(L._2, {
-                    padding: {
-                        x: 1
-                    }
-                }, f.createElement(H.a, {
-                    collectionID: e.collectionID,
-                    video: e.video,
-                    buttonType: L.z.Hollow,
-                    balloonDirection: L.q.TopRight,
-                    lastVideoOffset: e.lastVideoOffset
-                })), f.createElement(pe, {
-                    currentUser: e.currentUser,
-                    video: e.video,
-                    lastVideoOffset: e.lastVideoOffset
-                })))), t)
-            })),
-            fe = n("Aj/L"),
-            ge = Object(s.b)(function(e) {
+            })(he),
+            ge = n("Aj/L"),
+            ve = Object(s.b)(function(e) {
                 return {
-                    isLoggedIn: Object(fe.d)(e)
+                    isLoggedIn: Object(ge.d)(e)
                 }
             })(function(e) {
                 var t;
                 return t = e.isLoggedIn ? f.createElement(R.e, {
                     tracking: {
-                        medium: w.PageviewMedium.VideoNotFoundPage,
-                        location: w.PageviewLocation.VideoWatchPage
+                        medium: E.PageviewMedium.VideoNotFoundPage,
+                        location: E.PageviewLocation.VideoWatchPage
                     }
                 }) : f.createElement(R.c, {
                     tracking: {
-                        medium: w.PageviewMedium.VideoNotFoundPage,
-                        location: w.PageviewLocation.VideoWatchPage
+                        medium: E.PageviewMedium.VideoNotFoundPage,
+                        location: E.PageviewLocation.VideoWatchPage
                     }
                 }), f.createElement(L._25, {
                     display: L.N.Flex,
@@ -18122,9 +18931,9 @@ webpackJsonp([37, 83], {
                     }
                 }, t))
             }),
-            ve = (n("VnsS"), n("eeM1")),
-            be = -1,
-            ke = function(e) {
+            be = (n("VnsS"), n("eeM1")),
+            ke = -1,
+            ye = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.onPlayerSeekRequest = function(e) {
@@ -18138,11 +18947,11 @@ webpackJsonp([37, 83], {
                         return e.t ? function(e) {
                             var t = /^((\d+)[Hh])?((\d+)[Mm])?((\d+)[Ss])?$/.exec(e || "");
                             return t ? 3600 * (parseInt(t[2], 10) || 0) + 60 * (parseInt(t[4], 10) || 0) + (parseInt(t[6], 10) || 0) : 0
-                        }(e.t) : be
+                        }(e.t) : ke
                     }, n.onPlayerNavigationEvent = function(e) {
                         var t = n.getVideo(),
                             i = t ? t.id : "",
-                            r = Object(S.a)(n.props);
+                            r = Object(C.a)(n.props);
                         Object(I.d)(e, n.props.history, {
                             currentVideoID: i,
                             currentCollectionID: r
@@ -18154,7 +18963,7 @@ webpackJsonp([37, 83], {
                         }, function() {
                             n.props.onVideoTimeChange(t)
                         }) : n.state.requestedVideoOffset === t && n.setState({
-                            requestedVideoOffset: be
+                            requestedVideoOffset: ke
                         })
                     }, n.getMiniPlayerTitle = function() {
                         var e = n.getVideo();
@@ -18163,7 +18972,7 @@ webpackJsonp([37, 83], {
                         return e || t ? !e && t ? "/collections/" + t : "/videos/" + e + (t ? "?collection=" + t : "") : (v.i.withCategory("VideoWatchPage").error(new Error, "Tried to generate a mini player URL based on the current route, but critical options were missing."), "/")
                     }, n.state = {
                         requestedVideoOffset: n.getInitialVideoOffsetTime(),
-                        lastVideoOffset: be,
+                        lastVideoOffset: ke,
                         miniPlayerRouteLink: n.getMiniPlayerURL(t.match.params.videoID, t.match.params.collectionID)
                     }, n
                 }
@@ -18184,20 +18993,20 @@ webpackJsonp([37, 83], {
                     this.reportInteractive()
                 }, t.prototype.render = function() {
                     var e = this.getVideo(),
-                        t = Object(S.a)(this.props),
+                        t = Object(C.a)(this.props),
                         n = !this.props.data.loading && t && this.props.data.collection && 0 === this.props.data.collection.items.totalCount,
                         i = this.getOwner();
                     if (this.props.data.error || e && e.id && !e.owner) return f.createElement(b.a, {
                         message: Object(v.d)("Whoops, we can't load that video right now.", "VideoWatchPage")
                     });
-                    if (!this.props.data.loading && (!e || e && "" === e.id) && !t) return f.createElement(ge, null);
+                    if (!this.props.data.loading && (!e || e && "" === e.id) && !t) return f.createElement(ve, null);
                     var r = p("video-watch-page__right-column", (l = {}, l[Object(_.c)(y.a.Dark)] = this.props.theatreModeEnabled, l)),
                         a = {};
-                    this.state.requestedVideoOffset !== be && (a.nextVideoOffset = this.state.requestedVideoOffset), "" !== t && (a.collectionID = t);
+                    this.state.requestedVideoOffset !== ke && (a.nextVideoOffset = this.state.requestedVideoOffset), "" !== t && (a.collectionID = t);
                     var o = this.props.match.params.videoID;
                     o && (a.vodID = o);
                     var s = null;
-                    return e && e.scope === M.VideoScope.Private && e.owner && e.owner.login && (s = f.createElement(P, {
+                    return e && e.scope === F.VideoScope.Private && e.owner && e.owner.login && (s = f.createElement(P, {
                         ownerLogin: i.login
                     })), f.createElement(L._2, {
                         fullHeight: !0
@@ -18215,12 +19024,12 @@ webpackJsonp([37, 83], {
                         }, a),
                         miniPlayerTitle: this.getMiniPlayerTitle(),
                         miniPlayerContentRoute: this.state.miniPlayerRouteLink
-                    })), !n && f.createElement(he, {
-                        collectionID: Object(S.a)(this.props),
+                    })), !n && f.createElement(fe, {
+                        collectionID: Object(C.a)(this.props),
                         currentUser: this.props.data.currentUser || null,
                         video: e || null,
                         lastVideoOffset: this.state.lastVideoOffset
-                    }), f.createElement(B, {
+                    }), f.createElement(V, {
                         creator: e && e.owner ? {
                             id: e.owner.id,
                             displayName: e.owner.displayName
@@ -18228,8 +19037,8 @@ webpackJsonp([37, 83], {
                         currentGameName: e && e.game ? e.game.name : "",
                         currentVideoID: e ? e.id : "",
                         tracking: {
-                            medium: w.PageviewMedium.VideoWatchPage,
-                            location: w.PageviewLocation.VideoWatchPage
+                            medium: E.PageviewMedium.VideoWatchPage,
+                            location: E.PageviewLocation.VideoWatchPage
                         }
                     })), !n && f.createElement(x.b, null, f.createElement(L._25, {
                         className: r,
@@ -18251,7 +19060,7 @@ webpackJsonp([37, 83], {
                     var e = {},
                         t = h.parse(this.props.location.search),
                         n = this.getInitialVideoOffsetTime();
-                    return n !== be && (e.highlightTimestamp = n), t.comment && (e.highlightedMessageID = t.comment), e
+                    return n !== ke && (e.highlightTimestamp = n), t.comment && (e.highlightedMessageID = t.comment), e
                 }, t.prototype.reportInteractive = function() {
                     this.props.data && !this.props.data.loading && this.props.latencyTracking.reportInteractive()
                 }, t.prototype.getVideo = function() {
@@ -18266,20 +19075,20 @@ webpackJsonp([37, 83], {
                     }
                 }, t
             }(f.Component),
-            ye = Object(g.compose)(Object(g.graphql)(ve, {
+            _e = Object(g.compose)(Object(g.graphql)(be, {
                 options: function(e) {
                     return {
                         variables: {
                             videoID: e.match.params.videoID,
-                            collectionID: Object(S.a)(e) || void 0,
-                            useCollectionID: !!Object(S.a)(e) && !e.match.params.videoID
+                            collectionID: Object(C.a)(e) || void 0,
+                            useCollectionID: !!Object(C.a)(e) && !e.match.params.videoID
                         }
                     }
                 }
             }), Object(O.d)("VideoWatchPage", {
-                destination: C.a.VideoWatchPage
+                destination: S.a.VideoWatchPage
             }), Object(k.a)({
-                location: w.PageviewLocation.VideoWatchPage,
+                location: E.PageviewLocation.VideoWatchPage,
                 properties: function(e) {
                     var t = null,
                         n = null,
@@ -18288,14 +19097,14 @@ webpackJsonp([37, 83], {
                         a = null,
                         o = null;
                     if (e.match.params.videoID) t = e.match.params.videoID, e.data.video && e.data.video.owner && (n = e.data.video.broadcastType, i = e.data.video.game ? e.data.video.game.name : null, r = e.data.video.language, a = e.data.video.owner.login, o = Number(e.data.video.owner.id));
-                    else if (Object(S.a)(e) && e.data.collection && e.data.collection.items.edges.length > 0) {
+                    else if (Object(C.a)(e) && e.data.collection && e.data.collection.items.edges.length > 0) {
                         var s = e.data.collection.items.edges[0].node;
                         t = s.id, n = s.broadcastType, i = s.game ? s.game.name : null, r = s.language, a = s.owner ? s.owner.login : null, o = s.owner ? Number(s.owner.id) : null
                     }
                     return {
                         channel: a,
                         channel_id: o,
-                        vod_type: n ? Object(E.b)(n) : null,
+                        vod_type: n ? Object(w.b)(n) : null,
                         vod_id: t,
                         game: i,
                         language: r
@@ -18304,8 +19113,8 @@ webpackJsonp([37, 83], {
                 skip: function(e) {
                     return e.data.loading
                 }
-            }))(ke),
-            _e = Object(s.b)(function(e) {
+            }))(ye),
+            Ce = Object(s.b)(function(e) {
                 return {
                     theatreModeEnabled: e.ui.theatreModeEnabled
                 }
@@ -18316,9 +19125,9 @@ webpackJsonp([37, 83], {
                     },
                     onVideoTimeChange: u.r
                 }, e)
-            })(ye);
+            })(_e);
         n.d(t, "VideoWatchPage", function() {
-            return _e
+            return Ce
         })
     },
     uwZN: function(e, t, n) {
@@ -18371,101 +19180,108 @@ webpackJsonp([37, 83], {
             return m
         }), n.d(t, "k", function() {
             return p
-        }), n.d(t, "o", function() {
-            return h
-        }), n.d(t, "n", function() {
-            return f
-        }), n.d(t, "q", function() {
-            return g
         }), n.d(t, "p", function() {
-            return v
-        }), n.d(t, "s", function() {
-            return b
+            return h
+        }), n.d(t, "o", function() {
+            return f
         }), n.d(t, "r", function() {
+            return g
+        }), n.d(t, "q", function() {
+            return v
+        }), n.d(t, "t", function() {
+            return b
+        }), n.d(t, "s", function() {
             return k
         }), n.d(t, "a", function() {
             return y
         }), n.d(t, "m", function() {
             return _
-        }), t.I = function(e, t) {
+        }), n.d(t, "n", function() {
+            return C
+        }), t.J = function(e, t) {
             return {
                 type: u,
                 channel: e,
                 messages: t
             }
-        }, t.w = function() {
+        }, t.x = function() {
             return {
                 type: r
             }
-        }, t.G = function() {
+        }, t.H = function() {
             return {
                 type: b
             }
-        }, t.B = function() {
+        }, t.C = function() {
             return {
                 type: k
             }
-        }, t.K = function() {
+        }, t.L = function() {
             return {
                 type: a
             }
-        }, t.H = function() {
+        }, t.I = function() {
             return {
                 type: i
             }
-        }, t.D = function() {
+        }, t.E = function() {
             return {
                 type: m
             }
-        }, t.y = function() {
+        }, t.z = function() {
             return {
                 type: p
             }
-        }, t.C = function() {
+        }, t.D = function() {
             return {
                 type: s
             }
-        }, t.v = function(e, t) {
+        }, t.w = function(e, t) {
             return {
                 type: d,
                 channelLogin: e,
                 duration: t
             }
-        }, t.u = function(e) {
+        }, t.v = function(e) {
             return {
                 type: c,
                 duration: e
             }
-        }, t.x = function() {
+        }, t.y = function() {
             return {
                 type: l
             }
-        }, t.E = function() {
+        }, t.F = function() {
             return {
                 type: h
             }
-        }, t.z = function() {
+        }, t.A = function() {
             return {
                 type: f
             }
-        }, t.F = function() {
+        }, t.G = function() {
             return {
                 type: g
             }
-        }, t.A = function() {
+        }, t.B = function() {
             return {
                 type: v
             }
-        }, t.t = function(e, t) {
+        }, t.u = function(e, t) {
             return {
                 type: y,
                 command: e.toLowerCase(),
                 handler: t
             }
-        }, t.J = function(e) {
+        }, t.K = function(e) {
             return {
                 type: _,
                 command: e.toLowerCase()
+            }
+        }, t.M = function(e) {
+            return {
+                type: C,
+                customEvent: e
             }
         };
         var i = "chat.CHAT_HIDDEN",
@@ -18486,7 +19302,8 @@ webpackJsonp([37, 83], {
             b = "chat.TIMESTAMPS_ENABLED",
             k = "chat.TIMESTAMPS_DISABLED",
             y = "chat.ADD_COMMAND",
-            _ = "chat.REMOVE_COMMAND"
+            _ = "chat.REMOVE_COMMAND",
+            C = "chat.RENDER_SENT_CHAT_MESSAGE"
     },
     vjRp: function(e, t) {
         var n = {
@@ -18867,10 +19684,10 @@ webpackJsonp([37, 83], {
             k = n("Tt3k"),
             y = n("W6ca"),
             _ = n("xgnX"),
-            S = n("CSlQ"),
-            C = (n("AL3x"), n("nmDn")),
-            w = ["image/*"],
-            E = function(e) {
+            C = n("CSlQ"),
+            S = (n("AL3x"), n("nmDn")),
+            E = ["image/*"],
+            w = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -18934,7 +19751,7 @@ webpackJsonp([37, 83], {
                                         }), [2];
                                     case 4:
                                         return this.unsubscribe = d.j.subscribe({
-                                            topic: Object(f.g)(this.props.userID),
+                                            topic: Object(f.h)(this.props.userID),
                                             success: function() {
                                                 try {
                                                     Object(y.c)(n, a.currentImage)
@@ -19092,7 +19909,7 @@ webpackJsonp([37, 83], {
                         position: g._9.Relative,
                         textAlign: g._36.Center
                     }, c.createElement(u.a, {
-                        allowedFileTypes: w,
+                        allowedFileTypes: E,
                         onFilesSubmitted: this.onImageInputChange
                     }, r), n)), c.createElement(g._25, {
                         "data-test-selector": "status-message",
@@ -19152,7 +19969,7 @@ webpackJsonp([37, 83], {
                             }
                         })
                     })
-                }, t = s.__decorate([Object(p.a)(C, {
+                }, t = s.__decorate([Object(p.a)(S, {
                     options: function(e) {
                         return {
                             variables: {
@@ -19162,7 +19979,7 @@ webpackJsonp([37, 83], {
                     }
                 })], t)
             }(c.Component),
-            N = Object(S.d)("Profile Edit")(E),
+            N = Object(C.d)("Profile Edit")(w),
             O = Object(i.b)(function(e) {
                 return {
                     authToken: Object(o.a)(e)
@@ -19204,10 +20021,10 @@ webpackJsonp([37, 83], {
             k = /^(\d{2}([.,]\d*)?)$/,
             y = /^(\d{2}):?(\d{2}([.,]\d*)?)$/,
             _ = /^(\d{2}):?(\d{2}):?(\d{2}([.,]\d*)?)$/,
-            S = /([Z+-].*)$/,
-            C = /^(Z)$/,
-            w = /^([+-])(\d{2})$/,
-            E = /^([+-])(\d{2}):?(\d{2})$/;
+            C = /([Z+-].*)$/,
+            S = /^(Z)$/,
+            E = /^([+-])(\d{2})$/,
+            w = /^([+-])(\d{2}):?(\d{2})$/;
         e.exports = function(e, t) {
             if (r(e)) return new Date(e.getTime());
             if ("string" != typeof e) return new Date(e);
@@ -19217,7 +20034,7 @@ webpackJsonp([37, 83], {
                     var t, n = {},
                         i = e.split(l);
                     if (c.test(i[0]) ? (n.date = null, t = i[0]) : (n.date = i[0], t = i[1]), t) {
-                        var r = S.exec(t);
+                        var r = C.exec(t);
                         r ? (n.time = t.replace(r[1], ""), n.timezone = r[1]) : n.time = t
                     }
                     return n
@@ -19282,7 +20099,7 @@ webpackJsonp([37, 83], {
                     return null
                 }(N.time)), N.timezone ? I = function(e) {
                     var t, n;
-                    return (t = C.exec(e)) ? 0 : (t = w.exec(e)) ? (n = 60 * parseInt(t[2], 10), "+" === t[1] ? -n : n) : (t = E.exec(e)) ? (n = 60 * parseInt(t[2], 10) + parseInt(t[3], 10), "+" === t[1] ? -n : n) : 0
+                    return (t = S.exec(e)) ? 0 : (t = E.exec(e)) ? (n = 60 * parseInt(t[2], 10), "+" === t[1] ? -n : n) : (t = w.exec(e)) ? (n = 60 * parseInt(t[2], 10) + parseInt(t[3], 10), "+" === t[1] ? -n : n) : 0
                 }(N.timezone) : (I = new Date(T + A).getTimezoneOffset(), I = new Date(T + A + I * o).getTimezoneOffset()), new Date(T + A + I * o)
             }
             return new Date(e)
@@ -19575,230 +20392,6 @@ webpackJsonp([37, 83], {
         }
     },
     z4Db: function(e, t) {},
-    zAjo: function(e, t, n) {
-        "use strict";
-        n.d(t, "a", function() {
-            return i
-        }), n.d(t, "b", function() {
-            return b
-        });
-        var i, r = n("TToO"),
-            a = n("OAwv"),
-            o = (n.n(a), n("U7vG")),
-            s = (n.n(o), n("6sO2")),
-            l = n("xX9u"),
-            c = n("bhVC"),
-            d = n("+Znq"),
-            u = n("0i+s"),
-            m = n("vH/s"),
-            p = n("m9YJ"),
-            h = n("Ryxq"),
-            f = n("cAee"),
-            g = n("Odds"),
-            v = "collection-link";
-        ! function(e) {
-            e.Embed = "option_embed", e.Link = "option_link", e.Twitter = "twitter", e.Reddit = "reddit", e.VKontakte = "vk", e.Facebook = "fb", e.Copy = "link", e.Unknown = ""
-        }(i || (i = {}));
-        var b = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        timestampToShare: null
-                    }, t.getShareText = function() {
-                        if (t.props.video) {
-                            var e = t.props.video.owner ? t.props.video.owner.displayName : null,
-                                n = t.props.video.title;
-                            return e && n ? Object(s.d)("Check out {title} from {displayName} on www.twitch.tv", {
-                                displayName: e,
-                                title: n
-                            }, "VideoShareBox") : e && !n ? Object(s.d)("Check out this video from {displayName} on www.twitch.tv", {
-                                displayName: e
-                            }, "VideoShareBox") : !e && n ? Object(s.d)("Check out {title} on www.twitch.tv", {
-                                title: n
-                            }, "VideoShareBox") : Object(s.d)("Check out this video on www.twitch.tv", "VideoShareBox")
-                        }
-                    }, t.getVideoEmbedCode = function() {
-                        if (!t.props.video) return "";
-                        var e, n = t.props.video.owner ? t.props.video.owner.displayName : null,
-                            i = t.props.video.title,
-                            r = null !== t.state.timestampToShare ? t.state.timestampToShare : void 0,
-                            a = S(t.props.video.id, r),
-                            o = t.getVideoEmbedLink();
-                        return e = n && i ? Object(s.d)("Watch {title} from {displayName} on www.twitch.tv", {
-                            displayName: n,
-                            title: i
-                        }, "VideoShareBox") : n && !i ? Object(s.d)("Watch video from {displayName} on www.twitch.tv", {
-                            displayName: n
-                        }, "VideoShareBox") : !n && i ? Object(s.d)("Watch {title} on www.twitch.tv", {
-                            title: i
-                        }, "VideoShareBox") : Object(s.d)("Watch on www.twitch.tv", "VideoShareBox"), Object(u.a)(a, {
-                            textLink: {
-                                url: o,
-                                text: e
-                            },
-                            allowScrolling: !1,
-                            allowFullscreen: !0
-                        })
-                    }, t.getVideoEmbedLink = function() {
-                        return t.props.video ? _(t.props.video.id, {
-                            tt_medium: m.PageviewMedium.VideoEmbed,
-                            tt_content: m.PageviewContent.TextLink,
-                            t: t.state.timestampToShare ? Object(h.b)(t.state.timestampToShare) : void 0
-                        }) : ""
-                    }, t.getVideoLink = function() {
-                        if (!t.props.video) return "";
-                        var e = {
-                            collection: t.props.collectionID ? t.props.collectionID : void 0,
-                            t: t.state.timestampToShare ? Object(h.b)(t.state.timestampToShare) : void 0
-                        };
-                        return _(t.props.video.id, e)
-                    }, t.renderCollectionLink = function() {
-                        if (t.props.collectionID && "" !== t.props.collectionID && t.props.video) return o.createElement(g._2, {
-                            padding: {
-                                top: 1
-                            },
-                            "data-test-selector": v
-                        }, o.createElement(g._35, null, Object(s.d)("Collection Link", "VideoShareBox")), o.createElement(l.a, {
-                            value: y(t.props.collectionID),
-                            onClick: t.onShareClickCollectionLinkHandler
-                        }))
-                    }, t.onShareClickEmbedHandler = function() {
-                        t.props.onShareClick({
-                            shareTrackingType: f.a.Video,
-                            sharePlatform: i.Embed,
-                            shareURL: t.getVideoEmbedLink()
-                        })
-                    }, t.onShareClickCollectionLinkHandler = function() {
-                        t.props.collectionID && "" !== t.props.collectionID ? t.props.onShareClick({
-                            shareTrackingType: f.a.Collection,
-                            sharePlatform: i.Link,
-                            collectionID: t.props.collectionID,
-                            shareURL: y(t.props.collectionID)
-                        }) : s.i.withCategory("video-share-box").error(new Error("Expected a collection ID for collection share link, got " + t.props.collectionID), "Expected a collection ID for collection share link, got " + t.props.collectionID)
-                    }, t.onShareClickVideoLinkHandler = function() {
-                        var e = {
-                            shareTrackingType: f.a.Video,
-                            sharePlatform: i.Link,
-                            shareURL: t.getVideoLink()
-                        };
-                        t.props.collectionID && (e.collectionID = t.props.collectionID), t.props.onShareClick(e)
-                    }, t.onShareClickSocialHandler = function(e) {
-                        t.props.onShareClick({
-                            shareTrackingType: f.a.Video,
-                            sharePlatform: k(e),
-                            shareURL: t.getVideoLink()
-                        })
-                    }, t.onShareTimestampClick = function() {
-                        t.setState({
-                            timestampToShare: null === t.state.timestampToShare ? t.props.lastVideoOffset || 0 : null
-                        })
-                    }, t
-                }
-                return r.__extends(t, e), t.prototype.render = function() {
-                    var e = this,
-                        t = this.getVideoLink(),
-                        n = Object(p.u)(null !== this.state.timestampToShare ? this.state.timestampToShare : this.props.lastVideoOffset || 0);
-                    return o.createElement(d.a, null, o.createElement(g.u, {
-                        type: this.props.buttonType,
-                        "data-test-selector": "dropdown-button",
-                        icon: g._16.Share
-                    }, Object(s.d)("Share", "VideoShareBox")), this.props.video ? o.createElement(g.p, {
-                        direction: this.props.balloonDirection,
-                        size: g.r.Small
-                    }, o.createElement(g._2, {
-                        padding: 1
-                    }, o.createElement(g._2, {
-                        display: g.N.Flex,
-                        justifyContent: g._1.Between
-                    }, C.map(function(n) {
-                        return o.createElement(c.a, {
-                            key: n.type,
-                            onShareClick: e.onShareClickSocialHandler,
-                            type: n.type,
-                            text: e.getShareText(),
-                            "data-test-selector": n.selector,
-                            url: t
-                        })
-                    })), this.renderCollectionLink(), o.createElement(g._2, {
-                        "data-test-selector": "video-link",
-                        padding: {
-                            top: 1
-                        }
-                    }, o.createElement(g._35, null, Object(s.d)("Video Link", "VideoShareBox")), o.createElement(l.a, {
-                        value: t,
-                        onClick: this.onShareClickVideoLinkHandler
-                    }), void 0 !== this.props.lastVideoOffset && o.createElement(g._2, {
-                        padding: {
-                            top: .5
-                        }
-                    }, o.createElement(g.H, {
-                        id: "video-share-timestamp-toggle",
-                        label: Object(s.d)("Skip to {deeplinkTimestamp}", {
-                            deeplinkTimestamp: n
-                        }, "VideoShareBox"),
-                        "data-a-target": "video-share-timestamp-toggle",
-                        "data-test-selector": "video-share-timestamp-selector",
-                        "data-a-value": null !== this.state.timestampToShare,
-                        checked: null !== this.state.timestampToShare,
-                        onChange: this.onShareTimestampClick
-                    }))), o.createElement(g._2, {
-                        "data-test-selector": "embed-link",
-                        padding: {
-                            top: 1
-                        }
-                    }, o.createElement(g._35, null, Object(s.d)("Embed Video", "VideoShareBox")), o.createElement(l.a, {
-                        value: this.getVideoEmbedCode(),
-                        onClick: this.onShareClickEmbedHandler
-                    })))) : o.createElement(g.p, null))
-                }, t
-            }(o.Component),
-            k = function(e) {
-                switch (e) {
-                    case c.b.Twitter:
-                        return i.Twitter;
-                    case c.b.Reddit:
-                        return i.Reddit;
-                    case c.b.VKontakte:
-                        return i.VKontakte;
-                    case c.b.Facebook:
-                        return i.Facebook;
-                    case c.b.Copy:
-                        return i.Copy;
-                    default:
-                        return s.i.withCategory("video-share-box").error(new Error("Unknown social button type: " + e), "Unknown social button type: " + e), i.Unknown
-                }
-            },
-            y = function(e) {
-                return new URL("https://www.twitch.tv/collections/" + e).toString()
-            },
-            _ = function(e, t) {
-                var n = new URL("https://www.twitch.tv/videos/" + e);
-                return t && (n.search = a.stringify(t)), n.toString()
-            },
-            S = function(e, t) {
-                return "https://player.twitch.tv/?" + a.stringify({
-                    video: "v" + e,
-                    autoplay: !1,
-                    t: t ? Object(h.b)(t) : void 0
-                })
-            },
-            C = [{
-                type: c.b.Twitter,
-                selector: "twitter-button"
-            }, {
-                type: c.b.Facebook,
-                selector: "fb-button"
-            }, {
-                type: c.b.VKontakte,
-                selector: "vk-button"
-            }, {
-                type: c.b.Reddit,
-                selector: "reddit-button"
-            }, {
-                type: c.b.Copy,
-                selector: "copy-link-button"
-            }]
-    },
     zGmo: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
@@ -19921,4 +20514,4 @@ webpackJsonp([37, 83], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.video-watch-531af68d70447c832a8a01e8c0b434e3.js.map
+//# sourceMappingURL=pages.video-watch-4842dcae1ebcefc79fd9e3b4b7f7f931.js.map

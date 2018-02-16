@@ -1,17 +1,4 @@
 webpackJsonp([55], {
-    "3yQz": function(e, t, n) {
-        "use strict";
-        n.d(t, "b", function() {
-            return a
-        }), n.d(t, "a", function() {
-            return r
-        });
-        var i, a = "VIEWS",
-            r = "TIME";
-        ! function(e) {
-            e.Popular = "VIEWS", e.Newest = "TIME"
-        }(i || (i = {}))
-    },
     "6yQB": function(e, t, n) {
         "use strict";
         var i = n("RH2O"),
@@ -452,69 +439,6 @@ webpackJsonp([55], {
             return u
         })
     },
-    JpYe: function(e, t, n) {
-        "use strict";
-
-        function i(e) {
-            return r(l.parse(e.location.search).sort || "")
-        }
-
-        function a(e) {
-            switch (e.match.params.filter) {
-                case d.a.Archive.toLowerCase():
-                    return d.a.Archive;
-                case d.a.Highlight.toLowerCase():
-                    return d.a.Highlight;
-                case d.a.Upload.toLowerCase():
-                    return d.a.Upload;
-                case d.a.PastPremiere.toLowerCase():
-                    return d.a.PastPremiere;
-                default:
-                    return
-            }
-        }
-
-        function r(e) {
-            switch (e.toUpperCase()) {
-                case c.b:
-                    return c.b;
-                case c.a:
-                    return c.a;
-                default:
-                    return null
-            }
-        }
-        t.d = function(e, t, n, r) {
-            var l = r || i(t),
-                d = "";
-            l && (d = "?sort=" + function(e) {
-                switch (e) {
-                    case c.b:
-                        return o.Popular;
-                    case c.a:
-                        return o.Newest;
-                    default:
-                        var t = e;
-                        return t
-                }
-            }(l));
-            var u = n ? n.toLowerCase() : function(e) {
-                var t = a(e);
-                return t ? t.toLowerCase() : "all"
-            }(t);
-            s.n.history.push(e + "/" + u + d)
-        }, t.c = i, t.b = a, t.a = function(e) {
-            var t = l.parse(e.location.search);
-            return e.match.params.collectionID || t.collection || ""
-        }, t.e = r;
-        var o, l = n("OAwv"),
-            s = (n.n(l), n("6sO2")),
-            d = n("6WAQ"),
-            c = n("3yQz");
-        ! function(e) {
-            e.Popular = "views", e.Newest = "time"
-        }(o || (o = {}))
-    },
     MZUk: function(e, t, n) {
         "use strict";
         var i = n("TToO"),
@@ -781,7 +705,7 @@ webpackJsonp([55], {
                         i = Object(o.d)("Past Broadcasts", "VideoFilter"),
                         l = Object(o.d)("Highlights", "VideoFilter"),
                         m = Object(o.d)("Uploads", "VideoFilter"),
-                        v = this.props.selectedSort && Object(c.e)(this.props.selectedSort) || u.a;
+                        v = this.props.selectedSort && Object(c.f)(this.props.selectedSort) || u.a;
                     switch (this.props.broadcastType) {
                         case d.a.PastPremiere:
                             e = n;
@@ -1716,4 +1640,4 @@ webpackJsonp([55], {
     },
     vQzq: function(e, t) {}
 });
-//# sourceMappingURL=pages.finish-watching-bcec103f26c650d1812ab06af17d4133.js.map
+//# sourceMappingURL=pages.finish-watching-a5b0b6c164ed857af78dc180efd0e9a6.js.map
