@@ -55,7 +55,7 @@ window.__twilightSettings = {
     "sizmek_versatag_events": ["YeUmkUI9R5GKR5WGtg046A", "f4aK8duASJKiAYAiETsUvw", "WN1Ly4NxRgOrSNWOSG40PQ", "YFCU_dppR6Oor32XLPrU2w", "2HsLVRMUTnqChbVy5YSsfg", "f4aK8duASJKiAYAiETsUvw"],
     "sizmek_versatag_games": ["496712", "Call of Duty: WWII", "497571", "Wrestling"],
     "sizmek_versatag_teams": ["wrestling"],
-    "spade_url": "https://video-edge-ffe8f9.sjc01.hls.ttvnw.net/v1/playlist/Cn6ef_ALonPvxjZNo7Taz9xjPaopN2VpuK6hy4JKEhiezN5oGmTHVob5CclXP81nXt-ox5kZHU7fB-sgE6xekpt7KeUCXg7hyXgHTCZVgVMu11AoqBpP2SfUuhO1_-C5IolYSR8o_ld-XnXi51ipkhW1xY39W3jMLA5y3Lm3TnseKxb3fsJRH8wM-bzkoVzA1CRWErknc6Cts_w2VbOwh1FoeSOK9GaSQpZ2g-S8z0pKuOik5JUiOPjH5jZHDoKtzwo62oKh-ELXjVAajhhvI10WkwJZwGxXvuKLjE1xj8OILxITDE-mjCMI9dQ76gHgPwhTNsbukLUMFrseZ85zvuLDnLotJ7WaETke2tx6RppWbqCmSgN5arLo-7GVm_1t7TPY3NSDO0JmXxqDYNKUMtSnqvRWnrjYMQszaBjlZVJsPHhVzp1xq-j5YWrGlrgeSVUD3pmvHMnafQir9budg.m3u8",
+    "spade_url": "https://video-edge-716fa8.sjc01.hls.ttvnw.net/v1/playlist/CgCVAnSgnLYHTicSXK523UyXxC2I-xDoYMxL69Zu6JXOkAblshFmfkm-T4TiE9yJMPbFoKPE5-OyrJD0hukgc_UXlx3WGPZkLSL2DBYgrhUpCAd_a-G0CC6dAlIW_0BxU11UHQOfqVreEMttuDS5boh_2VPtTEWhGDwQ9riJzgLkMTWHZwO2sHRbbVpuw4vg5Z3Fc3AUSxCdBnWeOzudWvphjdEnqHL-KNTAFBm4cun5SXkOwOW1yVilXth_4-aGMGrccI14dc9DUZYCCON82wfkcANu15qLUY8spq7w8E7x1Xt6YNxVFzlJDQ7C1yvZzzh6I6oNColVGtzDBAPttaMaIAOVQtFmBBnupcggMzUSSkeno4IMPExXnC_DNW_RhhVb9ICDEGfY2kExJF5F7Isz41e_zVhNi54V__jOsBGL1pNevtlQViMnQwvW3LIpXnZv.m3u8",
     "streamer_trailers_start_date": "2017-10-12T23:00:25.75536206Z",
     "tvapp_ps4_ads_enabled": true,
     "tvapp_ps4_channel_blacklist": [133497623],
