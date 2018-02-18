@@ -544,9 +544,9 @@ webpackJsonp([69], {
                                         else {
                                             var v = l[f][c.Skip],
                                                 w = l[f][c.Include],
-                                                b = o(i, s);
-                                            if (v && void 0 !== b[v] && b[v]) continue;
-                                            if (w && void 0 !== b[w] && !b[w]) continue;
+                                                y = o(i, s);
+                                            if (v && void 0 !== y[v] && y[v]) continue;
+                                            if (w && void 0 !== y[w] && !y[w]) continue;
                                             h = !0, r[f] = t[f]
                                         }
                                     }
@@ -634,8 +634,8 @@ webpackJsonp([69], {
             f = n("cVFG"),
             v = (n("rrpS"), n("CSlQ")),
             w = n("08LF"),
-            b = n("c8Is"),
-            y = n("Odds"),
+            y = n("c8Is"),
+            b = n("Odds"),
             _ = (n("jgzB"), p.a.wrap(function() {
                 return n.e(35).then(n.bind(null, "swra"))
             }, "PopoutChatPage")),
@@ -663,10 +663,10 @@ webpackJsonp([69], {
                 }, t.prototype.componentDidUpdate = function() {
                     this.reportInteractive()
                 }, t.prototype.render = function() {
-                    return this.props.isReady ? r.createElement(y._2, {
+                    return this.props.isReady ? r.createElement(b._2, {
                         className: "twilight-minimal-root",
-                        position: y._9.Absolute,
-                        overflow: y._5.Hidden,
+                        position: b._9.Absolute,
+                        overflow: b._5.Hidden,
                         attachTop: !0,
                         attachRight: !0,
                         attachBottom: !0,
@@ -691,7 +691,7 @@ webpackJsonp([69], {
                         render: T
                     })), r.createElement(f.a, null), a.n.benchmarking.toolsEnabled && r.createElement(v.c, {
                         benchmarking: a.n.benchmarking
-                    }), a.a.buildType !== m.a.Production && this.props.firstPageLoaded && r.createElement(w.a, null), this.props.firstPageLoaded && r.createElement(b.a, {
+                    }), a.a.buildType !== m.a.Production && this.props.firstPageLoaded && r.createElement(w.a, null), this.props.firstPageLoaded && r.createElement(y.a, {
                         history: this.props.history
                     })) : null
                 }, t.prototype.reportInteractive = function() {
@@ -852,7 +852,7 @@ webpackJsonp([69], {
                     }, Math.round(this.props.metric.value), " ms")
                 }, t
             }(r.Component),
-            b = (n("C2vp"), function(e) {
+            y = (n("C2vp"), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     n.onClickExpand = function() {
@@ -898,14 +898,14 @@ webpackJsonp([69], {
                     }, r.createElement(w, {
                         metric: e.componentDuration
                     }))), r.createElement("ul", null, this.state.isExpanded && e.children.map(function(e) {
-                        return r.createElement(b, {
+                        return r.createElement(y, {
                             tracker: e,
                             key: e.id
                         })
                     })))
                 }, t
             }(r.Component)),
-            y = function(e) {
+            b = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -1365,7 +1365,7 @@ webpackJsonp([69], {
                         className: "latency-metrics__item-stats"
                     }, r.createElement("span", {
                         className: "latency-metrics__item-stats-label"
-                    }, "Batches:"), r.createElement(y, {
+                    }, "Batches:"), r.createElement(b, {
                         metric: i.batchCount
                     }), r.createElement("span", {
                         className: "latency-metrics__item-stats-label"
@@ -1429,7 +1429,7 @@ webpackJsonp([69], {
                 }, t.prototype.renderComponentsTab = function() {
                     return r.createElement(u.b, {
                         className: "latency-metrics__scroller"
-                    }, r.createElement(b, {
+                    }, r.createElement(y, {
                         tracker: this.tracker
                     }))
                 }, t.prototype.renderRequestsTab = function() {
@@ -1738,7 +1738,7 @@ webpackJsonp([69], {
             f = n("JMIN"),
             v = n("OAwv"),
             w = n("6sO2"),
-            b = {
+            y = {
                 "4f952587-515d-44ac-b0cc-86769f543c72": "no",
                 "4d3d19a7-38c5-4328-9730-7d99565d5edd": "no",
                 "ef25ca44-13bd-4e89-99d2-f9939c013fec": "off",
@@ -1762,7 +1762,7 @@ webpackJsonp([69], {
                 "0dc9a9c9-fee5-4b5f-a462-f07675713e5e": "control",
                 "5cfa2a90-54f0-4dcc-b28c-45f33935718e": "control"
             },
-            y = {
+            b = {
                 TWILIGHT_ALL_THE_STATS: "4f952587-515d-44ac-b0cc-86769f543c72",
                 TWILIGHT_PREMIERE_UPLOAD_FLOW: "4d3d19a7-38c5-4328-9730-7d99565d5edd",
                 STREAMER_TRAILERS: "ef25ca44-13bd-4e89-99d2-f9939c013fec",
@@ -1805,11 +1805,11 @@ webpackJsonp([69], {
                                 case 0:
                                     return this.ignoreExperiments ? (this.logger.debug("Ingoring experiments because local storage key is present"), [2, null]) : [4, this.initialize()];
                                 case 1:
-                                    if (s.sent(), !y[e]) return this.logger.warn("Experiment name not in mapping", e), [2, null];
-                                    if (n = y[e], !this.experiments[n]) return this.logger.warn("Unable to find experiment configuration", {
+                                    if (s.sent(), !b[e]) return this.logger.warn("Experiment name not in mapping", e), [2, null];
+                                    if (n = b[e], !this.experiments[n]) return this.logger.warn("Unable to find experiment configuration", {
                                         name: e,
                                         id: n
-                                    }), b[n] && this.overrides[n] ? (this.logger.warn("Using experiment override despite missing experiment configuration", {
+                                    }), y[n] && this.overrides[n] ? (this.logger.warn("Using experiment override despite missing experiment configuration", {
                                         name: e,
                                         id: n,
                                         assignment: this.overrides[n]
@@ -1871,7 +1871,7 @@ webpackJsonp([69], {
                     var t = this,
                         n = {};
                     e && Object.keys(_).forEach(function(e) {
-                        y[e] ? _[e] && (n[y[e]] = _[e]) : t.logger.warn("Staff experiment name is not in mapping", e)
+                        b[e] ? _[e] && (n[b[e]] = _[e]) : t.logger.warn("Staff experiment name is not in mapping", e)
                     });
                     var i = {};
                     try {
@@ -1879,7 +1879,7 @@ webpackJsonp([69], {
                         if (r) {
                             var o = JSON.parse(r);
                             Object.keys(o).forEach(function(e) {
-                                b[e] ? i[e] = o[e] : t.logger.warn("Cookie experiment ID is not in DEFAULT_ASSIGNMENTS mapping", e)
+                                y[e] ? i[e] = o[e] : t.logger.warn("Cookie experiment ID is not in DEFAULT_ASSIGNMENTS mapping", e)
                             })
                         }
                     } catch (e) {
@@ -1890,7 +1890,7 @@ webpackJsonp([69], {
                     if (s.experiments) try {
                         var l = JSON.parse(s.experiments);
                         Object.keys(l).forEach(function(e) {
-                            y[e] ? a[y[e]] = l[e] : t.logger.warn("URL override experiment name is not in mapping", e)
+                            b[e] ? a[b[e]] = l[e] : t.logger.warn("URL override experiment name is not in mapping", e)
                         })
                     } catch (e) {
                         this.logger.warn("Unable to parse URL overrides", e)
@@ -1899,10 +1899,10 @@ webpackJsonp([69], {
                 }, e.prototype.determineAssignments = function(e, t, n) {
                     var i = this,
                         r = {};
-                    return Object.keys(b).forEach(function(o) {
+                    return Object.keys(y).forEach(function(o) {
                         if (e[o]) {
                             var a = e[o];
-                            1 === a.t ? r[o] = Object(f.selectTreatment)(o, a, t) : 2 === a.t && n ? r[o] = Object(f.selectTreatment)(o, a, n) : r[o] = b[o]
+                            1 === a.t ? r[o] = Object(f.selectTreatment)(o, a, t) : 2 === a.t && n ? r[o] = Object(f.selectTreatment)(o, a, n) : r[o] = y[o]
                         } else i.logger.warn("Experiment is deprecated", o)
                     }), r
                 }, e
@@ -2274,7 +2274,6 @@ webpackJsonp([69], {
                         }),
                         queryDeduplication: !0,
                         link: new P.a({
-                            batchMax: 20,
                             fetch: this.createApolloFetcher()
                         })
                     })
@@ -3265,9 +3264,9 @@ webpackJsonp([69], {
             }(),
             we = n("XEoX");
         n.d(t, "o", function() {
-            return be
-        }), n.d(t, "a", function() {
             return ye
+        }), n.d(t, "a", function() {
+            return be
         }), n.d(t, "b", function() {
             return _e
         }), n.d(t, "c", function() {
@@ -3293,9 +3292,9 @@ webpackJsonp([69], {
         }), n.d(t, "n", function() {
             return Me
         }), t.i = function(e) {
-            be = new Ie(e), ye = be.config, _e = be.dynamicSettings, Ee = be.intl.formatDate, Ce = be.intl.formatMessage, ke = be.intl.formatNumber, Le = be.intl.formatNumberShort, be.intl.formatPastRelativeDate, Se = be.intl.formatRelativeDate, Te = be.intl.formatTime, xe = be.logger, Ne = be.pubsub, Re = be.storage, ze = be.tempStorage, Me = be.tracking
+            ye = new Ie(e), be = ye.config, _e = ye.dynamicSettings, Ee = ye.intl.formatDate, Ce = ye.intl.formatMessage, ke = ye.intl.formatNumber, Le = ye.intl.formatNumberShort, ye.intl.formatPastRelativeDate, Se = ye.intl.formatRelativeDate, Te = ye.intl.formatTime, xe = ye.logger, Ne = ye.pubsub, Re = ye.storage, ze = ye.tempStorage, Me = ye.tracking
         };
-        var be, ye, _e, Ee, Ce, ke, Le, Se, Te, xe, Ne, Re, ze, Me, Ie = function() {
+        var ye, be, _e, Ee, Ce, ke, Le, Se, Te, xe, Ne, Re, ze, Me, Ie = function() {
             function e(e) {
                 var t = this;
                 this.history = function(e) {
@@ -3653,11 +3652,11 @@ webpackJsonp([69], {
         ! function(e) {
             e[e.Column = 1] = "Column", e[e.ColumnReverse = 2] = "ColumnReverse", e[e.Row = 3] = "Row", e[e.RowReverse = 4] = "RowReverse"
         }(v || (v = {}));
-        var b, y = (V = {}, V[v.Column] = "flex-column", V[v.ColumnReverse] = "flex-column-reverse", V[v.Row] = "flex-row", V[v.RowReverse] = "flex-row-reverse", V);
+        var y, b = (V = {}, V[v.Column] = "flex-column", V[v.ColumnReverse] = "flex-column-reverse", V[v.Row] = "flex-row", V[v.RowReverse] = "flex-row-reverse", V);
         ! function(e) {
             e[e.Wrap = 1] = "Wrap", e[e.NoWrap = 2] = "NoWrap", e[e.WrapReverse = 3] = "WrapReverse"
-        }(b || (b = {}));
-        var _, E = (O = {}, O[b.Wrap] = "flex-wrap", O[b.NoWrap] = "flex-nowrap", O[b.WrapReverse] = "flex-wrap-reverse", O);
+        }(y || (y = {}));
+        var _, E = (O = {}, O[y.Wrap] = "flex-wrap", O[y.NoWrap] = "flex-nowrap", O[y.WrapReverse] = "flex-wrap-reverse", O);
         ! function(e) {
             e[e.Start = 1] = "Start", e[e.End = 2] = "End", e[e.Center = 3] = "Center", e[e.Between = 4] = "Between", e[e.Around = 5] = "Around"
         }(_ || (_ = {}));
@@ -3709,7 +3708,7 @@ webpackJsonp([69], {
                 }, t.prototype.getBreakpointClasses = function(e, t) {
                     if (!e) return "";
                     var n = [];
-                    if (t = t ? "tw-" + t + "-" : "tw-", e.alignContent && n.push(t + h[e.alignContent]), e.alignItems && n.push(t + m[e.alignItems]), e.alignSelf && n.push(t + f[e.alignSelf]), e.display && n.push(t + w[e.display]), e.flexDirection && n.push(t + y[e.flexDirection]), void 0 !== e.flexGrow && n.push(t + "flex-grow-" + e.flexGrow), void 0 !== e.flexOrder && n.push(t + "item-order-" + e.flexOrder), void 0 !== e.flexShrink && n.push(t + "flex-shrink-" + e.flexShrink), e.flexWrap && n.push(t + E[e.flexWrap]), e.justifyContent && n.push(t + k[e.justifyContent]), e.position && n.push(t + x[e.position]), e.textAlign && n.push(t + M[e.textAlign]), e.visibility && n.push(t + D[e.visibility]), void 0 !== e.margin) {
+                    if (t = t ? "tw-" + t + "-" : "tw-", e.alignContent && n.push(t + h[e.alignContent]), e.alignItems && n.push(t + m[e.alignItems]), e.alignSelf && n.push(t + f[e.alignSelf]), e.display && n.push(t + w[e.display]), e.flexDirection && n.push(t + b[e.flexDirection]), void 0 !== e.flexGrow && n.push(t + "flex-grow-" + e.flexGrow), void 0 !== e.flexOrder && n.push(t + "item-order-" + e.flexOrder), void 0 !== e.flexShrink && n.push(t + "flex-shrink-" + e.flexShrink), e.flexWrap && n.push(t + E[e.flexWrap]), e.justifyContent && n.push(t + k[e.justifyContent]), e.position && n.push(t + x[e.position]), e.textAlign && n.push(t + M[e.textAlign]), e.visibility && n.push(t + D[e.visibility]), void 0 !== e.margin) {
                         "string" == typeof(i = this.getSpacingClasses("mg", e.margin)) ? n.push(t + i): i.forEach(function(e) {
                             n.push(t + e)
                         })
@@ -3786,13 +3785,13 @@ webpackJsonp([69], {
         ! function(e) {
             e[e.Top = 1] = "Top", e[e.Center = 2] = "Center", e[e.Bottom = 3] = "Bottom"
         }(ge || (ge = {}));
-        var fe, ve, we, be = (fe = {}, fe[he.Aspect21x9] = "tw-aspect--21x9", fe[he.Aspect16x9] = "tw-aspect--16x9", fe[he.Aspect4x3] = "tw-aspect--4x3", fe[he.Aspect1x1] = "tw-aspect--1x1", fe[he.Aspect3x4] = "tw-aspect--3x4", fe[he.BoxArt] = "tw-aspect--3x4", fe),
-            ye = (ve = {}, ve[ge.Top] = "tw-aspect--align-top", ve[ge.Center] = "tw-aspect--align-center", ve[ge.Bottom] = "tw-aspect--align-bottom", ve),
+        var fe, ve, we, ye = (fe = {}, fe[he.Aspect21x9] = "tw-aspect--21x9", fe[he.Aspect16x9] = "tw-aspect--16x9", fe[he.Aspect4x3] = "tw-aspect--4x3", fe[he.Aspect1x1] = "tw-aspect--1x1", fe[he.Aspect3x4] = "tw-aspect--3x4", fe[he.BoxArt] = "tw-aspect--3x4", fe),
+            be = (ve = {}, ve[ge.Top] = "tw-aspect--align-top", ve[ge.Center] = "tw-aspect--align-center", ve[ge.Bottom] = "tw-aspect--align-bottom", ve),
             _e = function(e) {
                 var t = {
                     "tw-aspect--overflow": e.overflow
                 };
-                return e.ratio ? t[be[e.ratio]] = !0 : t[be[he.Aspect16x9]] = !0, e.align ? t[ye[e.align]] = !0 : t[ye[ge.Top]] = !0, u.createElement("figure", l.__assign({
+                return e.ratio ? t[ye[e.ratio]] = !0 : t[ye[he.Aspect16x9]] = !0, e.align ? t[be[e.align]] = !0 : t[be[ge.Top]] = !0, u.createElement("figure", l.__assign({
                     className: c("tw-aspect", t)
                 }, i(e)), e.children)
             },
@@ -5078,12 +5077,12 @@ webpackJsonp([69], {
         ! function(e) {
             e[e.Notification = 1] = "Notification", e[e.Alt = 2] = "Alt", e[e.Alt2 = 3] = "Alt2", e[e.Brand = 4] = "Brand", e[e.Live = 5] = "Live", e[e.Alert = 6] = "Alert", e[e.Success = 7] = "Success", e[e.Prime = 8] = "Prime", e[e.Dashboard = 9] = "Dashboard"
         }(mt || (mt = {}));
-        var vt, wt, bt = (vt = {}, vt[mt.Notification] = "tw-badge--notification", vt[mt.Alt] = "tw-badge--alt", vt[mt.Alt2] = "tw-badge--alt-2", vt[mt.Brand] = "tw-badge--brand", vt[mt.Live] = "tw-badge--live", vt[mt.Alert] = "tw-badge--alert", vt[mt.Success] = "tw-badge--success", vt[mt.Prime] = "tw-badge--prime", vt[mt.Dashboard] = "tw-badge--dashboard", vt),
-            yt = function(e) {
+        var vt, wt, yt = (vt = {}, vt[mt.Notification] = "tw-badge--notification", vt[mt.Alt] = "tw-badge--alt", vt[mt.Alt2] = "tw-badge--alt-2", vt[mt.Brand] = "tw-badge--brand", vt[mt.Live] = "tw-badge--live", vt[mt.Alert] = "tw-badge--alert", vt[mt.Success] = "tw-badge--success", vt[mt.Prime] = "tw-badge--prime", vt[mt.Dashboard] = "tw-badge--dashboard", vt),
+            bt = function(e) {
                 var t = {
                     "tw-badge": !0
                 };
-                e.type && (t[bt[e.type]] = !0);
+                e.type && (t[yt[e.type]] = !0);
                 var n = {
                         width: e.size,
                         height: e.size
@@ -5125,7 +5124,7 @@ webpackJsonp([69], {
                     background: e.background,
                     color: r,
                     border: e.border,
-                    flexWrap: b.NoWrap
+                    flexWrap: y.NoWrap
                 }, e.children))
             },
             kt = function(e) {
@@ -5376,7 +5375,7 @@ webpackJsonp([69], {
                     var v;
                     this.props.targetBlank && (v = "_blank");
                     var w = [n, r, a, s, e, t],
-                        b = l.__assign({
+                        y = l.__assign({
                             tabIndex: f,
                             onClick: this.onClick,
                             "aria-label": this.props.ariaLabel,
@@ -5389,19 +5388,19 @@ webpackJsonp([69], {
                                 target: v,
                                 ref: this.refHandler,
                                 download: this.props.download
-                            }, b), w);
+                            }, y), w);
                             throw new Error("External links with Location descriptors are not implemented in core-ui.button! Pass a string as linkTo instead.")
                         }
                         return u.createElement(_t.a, l.__assign({
                             to: this.props.linkTo,
                             target: v,
                             download: this.props.download
-                        }, b), w)
+                        }, y), w)
                     }
                     return u.createElement("button", l.__assign({
                         disabled: h,
                         ref: this.refHandler
-                    }, b), w)
+                    }, y), w)
                 }, t.prototype.getSpinnerSize = function(e) {
                     switch (e) {
                         case It.Small:
@@ -5796,8 +5795,8 @@ webpackJsonp([69], {
         ! function(e) {
             e[e.Default = 0] = "Default", e[e.Inherit = 1] = "Inherit", e[e.Overlay = 2] = "Overlay"
         }(mn || (mn = {}));
-        var vn, wn, bn = (vn = {}, vn[mn.Default] = "", vn[mn.Inherit] = "tw-link--inherit", vn[mn.Overlay] = "tw-link--overlay", vn),
-            yn = function(e) {
+        var vn, wn, yn = (vn = {}, vn[mn.Default] = "", vn[mn.Inherit] = "tw-link--inherit", vn[mn.Overlay] = "tw-link--overlay", vn),
+            bn = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.refHandler = function(e) {
@@ -5812,7 +5811,7 @@ webpackJsonp([69], {
                         "tw-link--hover-underline-none": this.props.hoverUnderlineNone,
                         "tw-link--button": !this.props.to
                     };
-                    if (this.props.type && (e[bn[this.props.type]] = !0), this.props.to) {
+                    if (this.props.type && (e[yn[this.props.type]] = !0), this.props.to) {
                         if (o(this.props.to)) {
                             if ("string" == typeof this.props.to) return u.createElement("a", l.__assign({
                                 href: this.props.to,
@@ -5859,7 +5858,7 @@ webpackJsonp([69], {
             }, e.errorMessage)), e.orientation === wn.Horizontal ? u.createElement(J, l.__assign({
                 className: c(r),
                 display: g.Flex,
-                flexWrap: b.NoWrap
+                flexWrap: y.NoWrap
             }, i(e)), u.createElement(J, {
                 className: "tw-form-group__label-container",
                 flexShrink: 0,
@@ -6332,7 +6331,7 @@ webpackJsonp([69], {
                     fullWidth: !0
                 }, u.createElement(lt, {
                     display: g.Flex,
-                    flexWrap: b.NoWrap,
+                    flexWrap: y.NoWrap,
                     className: c({
                         "tw-toast": !0
                     }),
@@ -6444,17 +6443,17 @@ webpackJsonp([69], {
         ! function(e) {
             e[e.Default = 0] = "Default", e[e.ExtraSmall = 1] = "ExtraSmall", e[e.Small = 2] = "Small", e[e.Large = 3] = "Large", e[e.None = 4] = "None"
         }(gi || (gi = {}));
-        var wi, bi = (yi = {}, yi[gi.ExtraSmall] = "tw-tower--gutter-xs", yi[gi.Small] = "tw-tower--gutter-sm", yi[gi.Large] = "tw-tower--gutter-lg", yi[gi.None] = "tw-tower--gutter-none", yi);
+        var wi, yi = (bi = {}, bi[gi.ExtraSmall] = "tw-tower--gutter-xs", bi[gi.Small] = "tw-tower--gutter-sm", bi[gi.Large] = "tw-tower--gutter-lg", bi[gi.None] = "tw-tower--gutter-none", bi);
         ! function(e) {
             e[e.ExtraSmall = 1] = "ExtraSmall", e[e.Small = 2] = "Small", e[e.Medium = 3] = "Medium", e[e.Large = 4] = "Large"
         }(wi || (wi = {}));
-        var yi, _i, Ei = (_i = {}, _i[wi.ExtraSmall] = "tw-tower--120", _i[wi.Small] = "tw-tower--180", _i[wi.Medium] = "tw-tower--240", _i[wi.Large] = "tw-tower--300", _i),
+        var bi, _i, Ei = (_i = {}, _i[wi.ExtraSmall] = "tw-tower--120", _i[wi.Small] = "tw-tower--180", _i[wi.Medium] = "tw-tower--240", _i[wi.Large] = "tw-tower--300", _i),
             Ci = function(e) {
                 var t = {
                     "tw-tower": !0,
                     "tw-tower--nogrow": e.noGrow
                 };
-                e.gutterSize && (t[bi[e.gutterSize]] = !0), e.childWidth && (t[Ei[e.childWidth]] = !0);
+                e.gutterSize && (t[yi[e.gutterSize]] = !0), e.childWidth && (t[Ei[e.childWidth]] = !0);
                 var n = new Array;
                 if (e.placeholderItems)
                     for (var r = 0; r < e.placeholderItems; ++r) n.push(u.createElement("div", {
@@ -6463,7 +6462,7 @@ webpackJsonp([69], {
                     }));
                 return u.createElement(J, l.__assign({
                     justifyContent: e.center ? _.Center : void 0,
-                    flexWrap: e.noWrap ? b.NoWrap : b.Wrap,
+                    flexWrap: e.noWrap ? y.NoWrap : y.Wrap,
                     className: c(t)
                 }, i(e)), e.children, n)
             },
@@ -6495,7 +6494,7 @@ webpackJsonp([69], {
         }), n.d(t, "l", function() {
             return ct
         }), n.d(t, !1, function() {}), n.d(t, "n", function() {
-            return yt
+            return bt
         }), n.d(t, "o", function() {
             return mt
         }), n.d(t, "t", function() {
@@ -6551,7 +6550,7 @@ webpackJsonp([69], {
         }), n.d(t, "_0", function() {
             return fn
         }), n.d(t, "L", function() {
-            return yn
+            return bn
         }), n.d(t, "M", function() {
             return mn
         }), n.d(t, "S", function() {
@@ -6581,7 +6580,7 @@ webpackJsonp([69], {
         }), n.d(t, "P", function() {
             return v
         }), n.d(t, "Q", function() {
-            return b
+            return y
         }), n.d(t, "_1", function() {
             return _
         }), n.d(t, !1, function() {
@@ -7721,7 +7720,7 @@ webpackJsonp([69], {
         ! function(e) {
             e.ivwUrl = "ivw_url", e.ivwCountries = "ivw_countries", e.ivwLanguages = "ivw_languages", e.miscGames = "ivw_misc_games", e.codeGameDirectory = "ivw_code_game_directory", e.codeMiscDirectory = "ivw_code_misc_directory", e.codeGameVideo = "ivw_code_game_video", e.codeMiscVideo = "ivw_code_misc_video", e.codeFrontpage = "ivw_code_frontpage"
         }(i || (i = {}));
-        var b = function(e) {
+        var y = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     n.loadSettings = function() {
@@ -7813,7 +7812,7 @@ webpackJsonp([69], {
                     s.m.eventEmitter.removeListener(w.SpadeEventType.Pageview, this.trackPageView)
                 }, t = r.__decorate([Object(d.d)("IVW")], t)
             }(a.Component),
-            y = n("lbHh"),
+            b = n("lbHh"),
             _ = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
@@ -7844,7 +7843,7 @@ webpackJsonp([69], {
                         var t = "kx" + e;
                         if (window.localStorage) return window.localStorage[t] || "";
                         if (navigator.cookieEnabled) {
-                            var n = y.get(t);
+                            var n = b.get(t);
                             return n && decodeURI(n[1]) || ""
                         }
                         return ""
@@ -7914,7 +7913,7 @@ webpackJsonp([69], {
                     countryCode: e
                 }), a.createElement(f, null), a.createElement(E, {
                     countryCode: e
-                }), a.createElement(g, null), a.createElement(b, {
+                }), a.createElement(g, null), a.createElement(y, {
                     countryCode: e
                 }))
             }, t.prototype.reportInteractive = function() {
@@ -8051,8 +8050,8 @@ webpackJsonp([69], {
             f = n("bejq"),
             v = n("+xm8"),
             w = n("vH/s"),
-            b = n("ZVME"),
-            y = n("o/qv"),
+            y = n("ZVME"),
+            b = n("o/qv"),
             _ = n("CSlQ"),
             E = n("Odds"),
             C = (n("lw07"), 5e3),
@@ -8153,16 +8152,16 @@ webpackJsonp([69], {
                         })
                     }, n.registerCustomLatencyEvents = function() {
                         n.resetCustomLatencyEvents();
-                        var e = n.props.initialTab === a.Login ? b.b.PassportLoginLoaded : b.b.PassportSignUpLoaded;
+                        var e = n.props.initialTab === a.Login ? y.b.PassportLoginLoaded : y.b.PassportSignUpLoaded;
                         n.passportLoadedLatencyEvent = n.props.latencyTracking.registerCustomEvent({
                             benchmark: 1e3,
-                            group: b.a.Passport,
-                            label: b.c.Loaded,
-                            start: b.d.Registration,
+                            group: y.a.Passport,
+                            label: y.c.Loaded,
+                            start: y.d.Registration,
                             key: e
                         })
                     }, n.resetCustomLatencyEvents = function() {
-                        n.props.latencyTracking.resetCustomEvents(b.a.Passport)
+                        n.props.latencyTracking.resetCustomEvents(y.a.Passport)
                     }, n.setFrameRef = function(e) {
                         return n.frameRef = e
                     }, n.state = {
@@ -8188,7 +8187,7 @@ webpackJsonp([69], {
                             return Object(f.g)(t), Object(g.a)(l.a.passportAuthURL, n)
                         }(n.props.initialTab)
                     }, c.set(k, n.nonce, {
-                        domain: Object(y.a)(),
+                        domain: Object(b.a)(),
                         secure: "https:" === window.location.protocol
                     }), n
                 }
@@ -9195,4 +9194,4 @@ webpackJsonp([69], {
         }(i || (i = {}))
     }
 }, [5]);
-//# sourceMappingURL=minimal-1beacfd7cf0c670a7ef3761327dcd61c.js.map
+//# sourceMappingURL=minimal-86dfbb6e4f8bcaff1b1c7bf74ef1c1e4.js.map
