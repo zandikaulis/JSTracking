@@ -5940,9 +5940,10 @@ webpackJsonp([35], {
                     }
                 }, t
             }(f.Component),
-            Wn = function(e) {
+            Wn = (n("WT1Y"), function(e) {
                 var t = e.prefixes.map(function(t, n) {
                     if (t.alt && t.cheerAmount) return f.createElement(W.W, {
+                        className: "pending-cheer-list__list-item",
                         key: n,
                         padding: {
                             x: 1
@@ -5967,7 +5968,7 @@ webpackJsonp([35], {
                     },
                     className: "pending-cheer-list"
                 }, t)
-            },
+            }),
             Gn = (n("KWLn"), function(e) {
                 var t;
                 if (e.prefixes && 1 === e.prefixes.length) {
@@ -28654,6 +28655,7 @@ webpackJsonp([35], {
             return i
         })
     },
+    WT1Y: function(e, t) {},
     WVx7: function(e, t, n) {
         "use strict";
 
@@ -42435,4 +42437,4 @@ webpackJsonp([35], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.popout-chat-28ff8a545ed41e5333ac02c32d8f20e1.js.map
+//# sourceMappingURL=pages.popout-chat-408aa6d47c5eca83bcf512d4b5a947a0.js.map
