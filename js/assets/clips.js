@@ -2023,7 +2023,6 @@ webpackJsonp([70], {
                         }),
                         queryDeduplication: !0,
                         link: new H.a({
-                            batchMax: 20,
                             fetch: this.createApolloFetcher()
                         })
                     })
@@ -9050,4 +9049,4 @@ webpackJsonp([70], {
             }(r.Component))
     }
 }, [6]);
-//# sourceMappingURL=clips-3c143516c168a93eb52c38a79c535411.js.map
+//# sourceMappingURL=clips-0108a4a4e4ac12e1ea2bb38c093b9e41.js.map
