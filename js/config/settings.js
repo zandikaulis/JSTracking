@@ -131,6 +131,18 @@ window.__twilightSettings = {
                 "value": "no"
             }]
         },
+        "1f57c754-ceb2-40e4-8d49-c51cfc007f14": {
+            "name": "TWILIGHT_SUB_CHECKOUT",
+            "v": 3092,
+            "t": 2,
+            "groups": [{
+                "weight": 0,
+                "value": "yes"
+            }, {
+                "weight": 100,
+                "value": "no"
+            }]
+        },
         "298a5f39-228a-487a-ad06-422c18458403": {
             "name": "twilight_merch_store_launch",
             "v": 2159,
