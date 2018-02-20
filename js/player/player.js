@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".1a4b9b386f176325acc5.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".e8133e836d89c1a32eb1.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -4227,7 +4227,7 @@
         function a(e) {
             var t, n;
             return new l.a({
-                defaults: (t = {}, r(t, m, "no"), r(t, y, "no"), r(t, v, "no"), r(t, g, "keep"), r(t, b, "pad_control"), r(t, _, "no"), r(t, w, "control"), r(t, k, "control"), r(t, E, "control"), r(t, S, "2.1.0"), r(t, P, "no"), r(t, C, "no"), r(t, O, "control"), r(t, x, "control"), t),
+                defaults: (t = {}, r(t, m, "no"), r(t, y, "no"), r(t, v, "no"), r(t, g, "keep"), r(t, b, "pad_control"), r(t, _, "no"), r(t, w, "control"), r(t, k, "control"), r(t, E, "control"), r(t, S, "2.1.0"), r(t, P, "no"), r(t, C, "no"), r(t, O, "control"), r(t, x, "control"), r(t, T, "variant1"), t),
                 deviceID: e.deviceID,
                 overrides: u()((n = {}, r(n, y, i("vca")), r(n, v, i("yes")), r(n, _, i("yes")), r(n, k, i("show")), r(n, S, i("2.0.0")), r(n, P, i("yes")), r(n, T, "variant1"), n), JSON.parse(o.cookie.get("experiment_overrides", "{}"))),
                 platform: "web",
@@ -28705,7 +28705,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.02.16-173932+03d5c3d34a0d5b88c03a0a32d7a68e340a336c50",
+                    app_version: "2018.02.20-171503+2b60406254045d3d318f08e59de8b95d9d242a43",
                     flash_version: r,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -34293,7 +34293,7 @@
                 }]), e
             }(),
             Eo = n(100),
-            So = "//video-edge-716fa8.sjc01.hls.ttvnw.net/v1/playlist/CgCVAnSgnLYHTicSXK523UyXxC2I-xDoYMxL69Zu6JXOkAblshFmfkm-T4TiE9yJMPbFoKPE5-OyrJD0hukgc_UXlx3WGPZkLSL2DBYgrhUpCAd_a-G0CC6dAlIW_0BxU11UHQOfqVreEMttuDS5boh_2VPtTEWhGDwQ9riJzgLkMTWHZwO2sHRbbVpuw4vg5Z3Fc3AUSxCdBnWeOzudWvphjdEnqHL-KNTAFBm4cun5SXkOwOW1yVilXth_4-aGMGrccI14dc9DUZYCCON82wfkcANu15qLUY8spq7w8E7x1Xt6YNxVFzlJDQ7C1yvZzzh6I6oNColVGtzDBAPttaMaIAOVQtFmBBnupcggMzUSSkeno4IMPExXnC_DNW_RhhVb9ICDEGfY2kExJF5F7Isz41e_zVhNi54V__jOsBGL1pNevtlQViMnQwvW3LIpXnZv.m3u8",
+            So = "//video-edge-d83705.sjc01.hls.ttvnw.net/v1/playlist/ChXT0Oy_0_WTPR1hwmBJxdJj0pb_XHyTJlpBi8VFlyz8xxE5PvN4IrkLQURSt9XK7xDaNJC5pp_3uGs4I1UZKz-QZrQOm_f5t912Dhuy_hsYrlLq6iPFN7M8wqMEbOUdtq57DfYCH9knBgy8E3cRis6JEME3s251HoFbFPNuYcTPYffh-I47YxczmIailCAfpN1JpaZD83HZZkYY9ishZ9OTRbPr5RqiUXkigSRFrnd6coL6xqNny8AhfyRY7z21PO3y3JfhVhF30202qc-b91CTtTeMCeI8PclA4btaWvmqIxEmP8InyZAUUzEViRxhgtSRbjICThKx8VXre81RqwB9kCSraaWb5bNuspOlRVuntd17GiAHfd5c6-qq_eVa03mMF75NeS5yxMBC_yIlnQmcsnvA4BEI9S8HW2-apJItTZUN4DUGE9m.m3u8",
             Po = n(45),
             Co = n(248),
             Oo = n(131),
