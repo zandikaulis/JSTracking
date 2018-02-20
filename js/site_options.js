@@ -4727,13 +4727,13 @@ window.SiteOptions = {
         },
         "e51aab46-7708-49cb-a7a3-57e2c95c7570": {
             "name": "EXTENSIONS_MAINTENANCE",
-            "v": 3066,
+            "v": 3093,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 0,
                 "value": "no"
             }, {
-                "weight": 0,
+                "weight": 100,
                 "value": "yes"
             }]
         },
