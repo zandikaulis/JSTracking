@@ -991,7 +991,7 @@ var HEARTBEAT_INTERVAL = 1500; // Max interval without checking sink status
  */
 var MediaSink = exports.MediaSink = function MediaSink(config) {
     this._video = document.createElement('video');
-    this._tracks = new Map();
+    this._tracks = {};
     this._metadataTrack = this._video.addTextTrack('metadata');
     this._atExit = [];
     this._ontimeupdate = config.ontimeupdate || noop;
@@ -1045,7 +1045,7 @@ MediaSink.prototype.configure = function (track) {
     }
 
     // Add track if it doesn't exist
-    if (!this._tracks.has(trackID)) {
+    if (!(trackID in this._tracks)) {
         var track = this._mediaSource.then(function (mediaSource) {
             var srcBuf = mediaSource.addSourceBuffer(mimeType);
             return new SafeSourceBuffer(video, srcBuf)
@@ -1060,7 +1060,7 @@ MediaSink.prototype.configure = function (track) {
             });
         }.bind(this));
 
-        this._tracks.set(trackID, track);
+        this._tracks[trackID] = track;
     }
 };
 
@@ -1069,7 +1069,7 @@ MediaSink.prototype.configure = function (track) {
  * @param {TypedArray} buf - fmp4 audio buffer
  */
 MediaSink.prototype.enqueue = function (sample) {
-    var track = this._tracks.get(sample.trackID);
+    var track = this._tracks[sample.trackID];
     if (track) {
         track.then(function (srcBuf) {
             srcBuf.appendBuffer(sample.buffer);
@@ -1105,7 +1105,7 @@ MediaSink.prototype.pause = function () {
  */
 MediaSink.prototype.reset = function () {
     this._mediaSource = null;
-    this._tracks.clear();
+    this._tracks = {};
     this._idle = true;
     this._outstandingPauseEvents = 0;
 
@@ -1132,9 +1132,12 @@ MediaSink.prototype.remove = function (range) {
     function removeRange(srcBuf) {
         srcBuf.remove(start, end);
     }
-    this._tracks.forEach(function (track) {
-        track.then(removeRange);
-    });
+    for (var key in this._tracks) {
+        if (this._tracks.hasOwnProperty(key)) {
+            var track = this._tracks[key];
+            track.then(removeRange);
+        }
+    }
 
     // Handle metadata track explicitly
     removeCues(this._metadataTrack, start, end);
@@ -1151,9 +1154,13 @@ MediaSink.prototype.seekTo = function (playhead) {
     function scheduleUpdate(srcBuf) {
         return srcBuf.schedule();
     }
-    this._tracks.forEach(function (track) {
-        scheduled.push(track.then(scheduleUpdate));
-    });
+
+    for (var key in this._tracks) {
+        if (this._tracks.hasOwnProperty(key)) {
+            var track = this._tracks[key];
+            scheduled.push(track.then(scheduleUpdate));
+        }
+    }
 
     Promise.all(scheduled).then(function () {
         this._video.currentTime = playhead;
@@ -1336,7 +1343,7 @@ MediaSink.prototype._fixStall = function (bufferDuration) {
 };
 
 MediaSink.prototype._createOnVideoTimeUpdate = function () {
-    var lastUpdateTime = global.performance.now()
+    var lastUpdateTime = global.performance.now(),
         lastBufEnd = 0;
 
     var checkBufferUpdate = function (bufEnd) {
