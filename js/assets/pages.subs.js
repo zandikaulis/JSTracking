@@ -927,6 +927,8 @@ webpackJsonp([45], {
         });
         var i, r = {
                 BitsLeaderboardEvents: "leaderboard-events-v1",
+                CampaignGlobalEvents: "campaign-events",
+                CampaignUserEvents: "user-campaign-events",
                 ChannelBitsEvents: "channel-bits-events-v1",
                 ChannelBitsPinEvents: "channel-bit-events-public",
                 ChannelEventUpdates: "channel-event-updates",
@@ -985,6 +987,8 @@ webpackJsonp([45], {
                 UploadService: "upload",
                 UserBitsBalanceUpdate: "balance_update",
                 UserBitsBadgeUpdate: "badge_update",
+                UserCampaignProgressEvent: "progress",
+                UserCampaignRewardEvent: "reward",
                 UserCrateEvent: "crate-event",
                 UserGiftEvent: "gift-event",
                 UserMention: "user_mention",
@@ -2742,7 +2746,7 @@ webpackJsonp([45], {
                 }
             }), Object(v.a)([{
                 topic: function(e) {
-                    return Object(S.v)(e.currentUserID)
+                    return Object(S.x)(e.currentUserID)
                 },
                 mapMessageTypesToProps: {
                     whisper_received: "whisperReceived",
@@ -2988,7 +2992,7 @@ webpackJsonp([45], {
                             }, i.prototype.render = function() {
                                 return o.createElement(t, h.__assign({}, this.props))
                             }, i.prototype.subscribe = function(e) {
-                                this.unsubscriber = Object(f.n)({
+                                this.unsubscriber = Object(f.o)({
                                     fragment: e.fragment,
                                     id: e.id,
                                     topic: e.topic,
@@ -3006,7 +3010,7 @@ webpackJsonp([45], {
                         id: "User:" + n.id,
                         skip: n.skip,
                         fragment: b,
-                        topic: Object(f.k)(n.currentUserID),
+                        topic: Object(f.l)(n.currentUserID),
                         type: g.PubsubMessageType.Presence,
                         mutator: function(e, t) {
                             if (!t) return null;
@@ -5300,7 +5304,7 @@ webpackJsonp([45], {
                     }
                 }), Object(p.a)([{
                     topic: function(e) {
-                        return Object(f.t)(e.data.currentUser && e.data.currentUser.id || "")
+                        return Object(f.v)(e.data.currentUser && e.data.currentUser.id || "")
                     },
                     mapMessageTypesToProps: {
                         "*": "subscriptionInfo"
@@ -8839,17 +8843,17 @@ webpackJsonp([45], {
             return r.PubsubTopic.ChatRoomsChannel + "." + e
         }, t.f = function(e) {
             return r.PubsubTopic.ChatRoomsUser + "." + e
-        }, t.h = function(e) {
+        }, t.i = function(e) {
             return r.PubsubTopic.ImageUpload + "." + e
-        }, t.p = function(e) {
+        }, t.q = function(e) {
             return r.PubsubTopic.UploadService + "." + e
-        }, t.u = function(e) {
+        }, t.w = function(e) {
             return r.PubsubTopic.VideoPlaybackById + "." + e
-        }, t.k = function(e) {
-            return r.PubsubTopic.Presence + "." + e
-        }, t.i = function(e, t) {
-            return r.PubsubTopic.ModerationActionsByUserAndChannel + "." + e + "." + t
         }, t.l = function(e) {
+            return r.PubsubTopic.Presence + "." + e
+        }, t.j = function(e, t) {
+            return r.PubsubTopic.ModerationActionsByUserAndChannel + "." + e + "." + t
+        }, t.m = function(e) {
             return r.PubsubTopic.Raid + "." + e
         }, t.g = function(e) {
             return r.PubsubTopic.Friendship + "." + e
@@ -8857,23 +8861,27 @@ webpackJsonp([45], {
             return r.PubsubTopic.ChannelBitsPinEvents + "." + e
         }, t.a = function(e) {
             return r.PubsubTopic.BitsLeaderboardEvents + "." + e.id
-        }, t.q = function(e) {
-            return r.PubsubTopic.UserBitsUpdates + "." + e
-        }, t.t = function(e) {
-            return r.PubsubTopic.UserSubscribeEvents + "." + e
-        }, t.s = function(e) {
-            return r.PubsubTopic.UserCrateEvents + "." + e
         }, t.r = function(e) {
-            return r.PubsubTopic.UserCommerceEvents + "." + e
+            return r.PubsubTopic.UserBitsUpdates + "." + e
         }, t.v = function(e) {
+            return r.PubsubTopic.UserSubscribeEvents + "." + e
+        }, t.u = function(e) {
+            return r.PubsubTopic.UserCrateEvents + "." + e
+        }, t.h = function(e) {
+            return r.PubsubTopic.CampaignGlobalEvents + "." + e
+        }, t.s = function(e) {
+            return r.PubsubTopic.CampaignUserEvents + "." + e
+        }, t.t = function(e) {
+            return r.PubsubTopic.UserCommerceEvents + "." + e
+        }, t.x = function(e) {
             return r.PubsubTopic.Whispers + "." + e
-        }, t.j = function(e) {
+        }, t.k = function(e) {
             return r.PubsubTopic.OnsiteNotifications + "." + e
-        }, t.m = function(e) {
+        }, t.n = function(e) {
             return r.PubsubTopic.StreamChatRoom + "." + e
         }, t.c = function(e) {
             return r.PubsubTopic.ChannelEventUpdates + "." + e
-        }, t.o = function(e) {
+        }, t.p = function(e) {
             return i.j.subscribe({
                 topic: e.topic,
                 onMessage: function(t) {
@@ -8884,7 +8892,7 @@ webpackJsonp([45], {
                     })
                 }
             })
-        }, t.n = function(e) {
+        }, t.o = function(e) {
             return i.j.subscribe({
                 topic: e.topic,
                 onMessage: function(t) {
@@ -11479,7 +11487,7 @@ webpackJsonp([45], {
                     return {
                         query: ue,
                         skip: !e.friends || 0 === e.friends.length,
-                        topic: Object(ee.k)(e.selfID || ""),
+                        topic: Object(ee.l)(e.selfID || ""),
                         type: X.PubsubMessageType.Presence,
                         mutator: function(t, n) {
                             if (!n.currentUser || !n.currentUser.friends) return n;
@@ -13648,10 +13656,10 @@ webpackJsonp([45], {
             p = n("T8ns"),
             m = n("Odds"),
             h = (n("w+Qa"), l.a.wrap(function() {
-                return n.e(80).then(n.bind(null, "kd/b"))
+                return n.e(79).then(n.bind(null, "kd/b"))
             }, "SubsLandingPage")),
             f = l.a.wrap(function() {
-                return n.e(82).then(n.bind(null, "uy5s"))
+                return n.e(80).then(n.bind(null, "uy5s"))
             }, "SubsBroadcasterPage"),
             g = function(e) {
                 function t() {
@@ -14708,7 +14716,7 @@ webpackJsonp([45], {
                         types: [C.PubsubMessageType.WhisperDeleted, C.PubsubMessageType.WhisperEdited, C.PubsubMessageType.WhisperSent, C.PubsubMessageType.WhisperAllThreadsUpdate, C.PubsubMessageType.WhisperReceived, C.PubsubMessageType.WhisperThreadUpdate],
                         variables: s.__assign({}, e.data.variables),
                         skip: !e.data.currentUser || void 0 === e.data.currentUser.id,
-                        topic: Object(w.v)(e.data.currentUser && e.data.currentUser.id || ""),
+                        topic: Object(w.x)(e.data.currentUser && e.data.currentUser.id || ""),
                         mutator: function(t, n) {
                             if (!n.currentUser) return n;
                             if (r(t) || a(t)) {
@@ -14862,7 +14870,7 @@ webpackJsonp([45], {
                 return o.createElement(oe.a, s.__assign({}, e))
             },
             ce = ie.a.wrap(function() {
-                return n.e(52).then(n.bind(null, "8U1+"))
+                return n.e(51).then(n.bind(null, "8U1+"))
             }, "AnonFrontPage"),
             ue = ie.a.wrap(function() {
                 return n.e(54).then(n.bind(null, "Dd84"))
@@ -14871,7 +14879,7 @@ webpackJsonp([45], {
                 return n.e(41).then(n.bind(null, "gZGZ"))
             }, "ChannelClipsPage"),
             me = ie.a.wrap(function() {
-                return n.e(51).then(n.bind(null, "zfLI"))
+                return n.e(50).then(n.bind(null, "zfLI"))
             }, "ChannelCollectionsPage"),
             he = ie.a.wrap(function() {
                 return n.e(42).then(n.bind(null, "lW0T"))
@@ -14883,7 +14891,7 @@ webpackJsonp([45], {
                 return n.e(43).then(n.bind(null, "ztSx"))
             }, "ChannelFollowingPage"),
             ve = ie.a.wrap(function() {
-                return n.e(32).then(n.bind(null, "oFVJ"))
+                return n.e(33).then(n.bind(null, "oFVJ"))
             }, "ChannelPage"),
             be = ie.a.wrap(function() {
                 return n.e(34).then(n.bind(null, "g8mI"))
@@ -14892,7 +14900,7 @@ webpackJsonp([45], {
                 return n.e(63).then(n.bind(null, "yMnN"))
             }, "DevOnlyRoot"),
             ye = ie.a.wrap(function() {
-                return n.e(47).then(n.bind(null, "7yeK"))
+                return n.e(46).then(n.bind(null, "7yeK"))
             }, "DirectoryRootPage"),
             Se = ie.a.wrap(function() {
                 return n.e(59).then(n.bind(null, "IzAE"))
@@ -14901,16 +14909,16 @@ webpackJsonp([45], {
                 return n.e(61).then(n.bind(null, "Tj44"))
             }, "EmailVerificationPage"),
             Ne = ie.a.wrap(function() {
-                return n.e(48).then(n.bind(null, "NTi8"))
+                return n.e(47).then(n.bind(null, "NTi8"))
             }, "EventLandingPage"),
             Te = ie.a.wrap(function() {
-                return n.e(50).then(n.bind(null, "IpE8"))
+                return n.e(49).then(n.bind(null, "IpE8"))
             }, "FollowingRootPage"),
             Ce = ie.a.wrap(function() {
                 return n.e(55).then(n.bind(null, "lTLe"))
             }, "FinishWatchingPage"),
             Ee = ie.a.wrap(function() {
-                return n.e(49).then(n.bind(null, "IOEW"))
+                return n.e(48).then(n.bind(null, "IOEW"))
             }, "FrontPage"),
             we = ie.a.wrap(function() {
                 return n.e(56).then(n.bind(null, "DZCb"))
@@ -14922,7 +14930,7 @@ webpackJsonp([45], {
                 return n.e(62).then(n.bind(null, "DkuH"))
             }, "ReportUserPage"),
             Oe = ie.a.wrap(function() {
-                return n.e(46).then(n.bind(null, "K4jf"))
+                return n.e(52).then(n.bind(null, "K4jf"))
             }, "SettingsRoot"),
             Pe = ie.a.wrap(function() {
                 return n.e(37).then(n.bind(null, "uiPj"))
@@ -16178,7 +16186,7 @@ webpackJsonp([45], {
                     }, i.prototype.render = function() {
                         return a.createElement(t, r.__assign({}, this.props))
                     }, i.prototype.subscribe = function(e) {
-                        this.unsubscriber = Object(s.o)({
+                        this.unsubscriber = Object(s.p)({
                             query: e.query,
                             variables: e.variables,
                             topic: e.topic,
@@ -22514,4 +22522,4 @@ webpackJsonp([45], {
             }(r.Component))
     }
 });
-//# sourceMappingURL=pages.subs-09625b5326662ea5abc676a9c5d6baad.js.map
+//# sourceMappingURL=pages.subs-0b9def475af67d083d5db29124f37398.js.map

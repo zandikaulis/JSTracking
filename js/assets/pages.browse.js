@@ -16,33 +16,9 @@ webpackJsonp([54], {
         ! function(e) {
             e[e.Hearthstone = 0] = "Hearthstone", e[e.LeagueOfLegends = 1] = "LeagueOfLegends", e[e.Overwatch = 2] = "Overwatch"
         }(a || (a = {}));
-        var y = this,
-            v = function() {
-                return r.__awaiter(y, void 0, void 0, function() {
-                    return r.__generator(this, function(e) {
-                        switch (e.label) {
-                            case 0:
-                                return [4, n.e(75).then(n.bind(null, "e/M0"))];
-                            case 1:
-                                return [2, e.sent()]
-                        }
-                    })
-                })
-            },
-            f = function() {
-                return r.__awaiter(y, void 0, void 0, function() {
-                    return r.__generator(this, function(e) {
-                        switch (e.label) {
-                            case 0:
-                                return [4, n.e(74).then(n.bind(null, "sQp1"))];
-                            case 1:
-                                return [2, e.sent()]
-                        }
-                    })
-                })
-            },
-            b = n("Odds"),
-            k = (n("AHWf"), function(e) {
+        var y = n("LgcN"),
+            v = n("Odds"),
+            f = (n("AHWf"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -69,19 +45,19 @@ webpackJsonp([54], {
                             }), t.getOverwatchData())
                         }
                     }, t.renderIcon = function(e, t, n, a, r, o) {
-                        return n ? i.createElement(b._2, {
-                            display: b.N.Flex,
-                            flexDirection: b.P.Column,
-                            alignItems: b.c.Center,
-                            justifyContent: b._1.Center,
+                        return n ? i.createElement(v._2, {
+                            display: v.N.Flex,
+                            flexDirection: v.P.Column,
+                            alignItems: v.c.Center,
+                            justifyContent: v._1.Center,
                             fullHeight: !0,
                             margin: {
                                 left: 1
                             }
-                        }, i.createElement(b._43, {
-                            direction: b._45.Left,
+                        }, i.createElement(v._43, {
+                            direction: v._45.Left,
                             label: e
-                        }, i.createElement(b._2, {
+                        }, i.createElement(v._2, {
                             className: "metadata-icon"
                         }, i.createElement("div", {
                             style: {
@@ -100,7 +76,7 @@ webpackJsonp([54], {
                             return r.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
-                                        return a.trys.push([0, 2, , 3]), [4, v()];
+                                        return a.trys.push([0, 2, , 3]), [4, Object(y.a)()];
                                     case 1:
                                         return e = a.sent(), this.didUnmount ? [2] : (t = {}, e[0].Class.forEach(function(e) {
                                             t[e.class] = e
@@ -126,7 +102,7 @@ webpackJsonp([54], {
                             return r.__generator(this, function(r) {
                                 switch (r.label) {
                                     case 0:
-                                        return r.trys.push([0, 2, , 3]), [4, f()];
+                                        return r.trys.push([0, 2, , 3]), [4, Object(y.c)()];
                                     case 1:
                                         if (e = r.sent(), this.didUnmount) return [2];
                                         for (t = !1, n = void 0, a = 0, i = e; a < i.length && (n = i[a], !t); a++)
@@ -169,7 +145,7 @@ webpackJsonp([54], {
                     return n ? this.renderIcon(n.display_name, this.state.gameSprite || "", n.image_width, n.image_height, n.sprite_x_offset, n.sprite_y_offset) : null
                 }, t
             }(i.Component)),
-            _ = Object(d.b)(function(e) {
+            b = Object(d.b)(function(e) {
                 return {
                     leagueOfLegends: {
                         championsMap: e.directory.leagueOfLegends.championsMap,
@@ -182,8 +158,8 @@ webpackJsonp([54], {
                 return Object(c.b)({
                     onLoadLeagueOfLegendsChampions: u.a
                 }, e)
-            })(k),
-            S = (n("LEV+"), function(e) {
+            })(f),
+            k = (n("LEV+"), function(e) {
                 function t() {
                     var t = e.call(this) || this;
                     return t.state = {
@@ -205,12 +181,12 @@ webpackJsonp([54], {
                     })
                 }, t.prototype.render = function() {
                     var e = null;
-                    !0 !== this.state.isPremiereExperimentActive && this.props.vodcast && (e = i.createElement(b._2, {
-                        display: b.N.InlineBlock,
+                    !0 !== this.state.isPremiereExperimentActive && this.props.vodcast && (e = i.createElement(v._2, {
+                        display: v.N.InlineBlock,
                         padding: {
                             right: .5
                         }
-                    }, i.createElement(b._6, {
+                    }, i.createElement(v._6, {
                         label: Object(s.d)("Vodcast", "LiveChannelCard")
                     })));
                     var t = Object(s.d)("{viewerCount, plural, one {# viewer on {channel}} other {# viewers on {channel}}}", {
@@ -223,48 +199,48 @@ webpackJsonp([54], {
                     }, "Live Channel Card");
                     return i.createElement("div", r.__assign({
                         className: "live-channel-card"
-                    }, Object(b._53)(this.props)), i.createElement(b.A, {
+                    }, Object(v._53)(this.props)), i.createElement(v.A, {
                         key: this.props.title
-                    }, i.createElement(b._2, {
+                    }, i.createElement(v._2, {
                         fullWidth: !0
-                    }, i.createElement(b.j, {
+                    }, i.createElement(v.j, {
                         overflow: !0
                     }, i.createElement("div", null, i.createElement(o.a, {
                         to: this.props.linkTo,
                         title: this.props.title,
                         "data-a-target": "live-channel-card-thumbnail-link"
-                    }, i.createElement(b.C, {
+                    }, i.createElement(v.C, {
                         alt: this.props.imageAlt,
                         src: this.props.imageSrc,
-                        aspect: b.k.Aspect16x9
-                    }), this.renderContentType()), this.renderGameBoxArt()))), i.createElement(b.B, null, i.createElement(b._2, {
-                        display: b.N.Flex,
-                        flexWrap: b.Q.NoWrap
-                    }, i.createElement(b._2, {
+                        aspect: v.k.Aspect16x9
+                    }), this.renderContentType()), this.renderGameBoxArt()))), i.createElement(v.B, null, i.createElement(v._2, {
+                        display: v.N.Flex,
+                        flexWrap: v.Q.NoWrap
+                    }, i.createElement(v._2, {
                         flexGrow: 1,
                         ellipsis: !0
                     }, i.createElement(o.a, {
                         to: this.props.linkTo,
                         className: "live-channel-card__channel",
                         "data-a-target": "live-channel-card-title-link"
-                    }, i.createElement(b.W, {
+                    }, i.createElement(v.W, {
                         margin: {
                             top: .5
                         }
-                    }, i.createElement(b._35, {
-                        type: b._40.H3,
-                        fontSize: b.R.Size5,
-                        lineHeight: b._3.Body,
+                    }, i.createElement(v._35, {
+                        type: v._40.H3,
+                        fontSize: v.R.Size5,
+                        lineHeight: v._3.Body,
                         ellipsis: !0,
                         className: "live-channel-card__title"
-                    }, this.props.title))), i.createElement(b._2, {
+                    }, this.props.title))), i.createElement(v._2, {
                         className: "live-channel-card__meta",
-                        display: b.N.Flex,
-                        flexWrap: b.Q.NoWrap
-                    }, e, i.createElement(b._35, {
-                        type: b._40.Span,
+                        display: v.N.Flex,
+                        flexWrap: v.Q.NoWrap
+                    }, e, i.createElement(v._35, {
+                        type: v._40.Span,
                         ellipsis: !0
-                    }, t))), i.createElement(b._2, {
+                    }, t))), i.createElement(v._2, {
                         flexGrow: 0,
                         flexShrink: 0
                     }, this.renderStreamMetadata())))))
@@ -276,23 +252,23 @@ webpackJsonp([54], {
                         to: e,
                         title: t,
                         "data-a-target": "live-channel-card-game-link"
-                    }, i.createElement(b._25, {
+                    }, i.createElement(v._25, {
                         className: "live-channel-card__boxart",
-                        position: b._9.Absolute,
+                        position: v._9.Absolute,
                         attachRight: !0,
                         attachBottom: !0
-                    }, i.createElement(b._43, {
-                        display: b.N.Block,
-                        direction: b._45.Bottom,
+                    }, i.createElement(v._43, {
+                        display: v.N.Block,
+                        direction: v._45.Bottom,
                         label: t
-                    }, i.createElement(b.C, {
+                    }, i.createElement(v.C, {
                         src: n,
                         alt: t,
-                        aspect: b.k.BoxArt
+                        aspect: v.k.BoxArt
                     })))) : null
                 }, t.prototype.renderContentType = function() {
-                    return !0 !== this.state.isPremiereExperimentActive ? null : "string" == typeof this.props.streamType && this.props.streamType ? i.createElement(b._2, {
-                        position: b._9.Absolute,
+                    return !0 !== this.state.isPremiereExperimentActive ? null : "string" == typeof this.props.streamType && this.props.streamType ? i.createElement(v._2, {
+                        position: v._9.Absolute,
                         attachLeft: !0,
                         attachTop: !0,
                         padding: .5
@@ -301,16 +277,16 @@ webpackJsonp([54], {
                         hosting: this.props.hosting
                     })) : null
                 }, t.prototype.renderStreamMetadata = function() {
-                    return this.props.streamMetadata ? i.createElement(_, {
+                    return this.props.streamMetadata ? i.createElement(b, {
                         streamMetadata: this.props.streamMetadata
                     }) : null
                 }, t
             }(i.Component)),
-            C = S;
+            _ = k;
         n.d(t, !1, function() {
-            return S
+            return k
         }), n.d(t, "a", function() {
-            return C
+            return _
         })
     },
     "/+to": function(e, t, n) {
@@ -3218,6 +3194,54 @@ webpackJsonp([54], {
         })
     },
     "LEV+": function(e, t) {},
+    LgcN: function(e, t, n) {
+        "use strict";
+        n.d(t, "a", function() {
+            return i
+        }), n.d(t, "b", function() {
+            return o
+        }), n.d(t, "c", function() {
+            return s
+        });
+        var a = n("TToO"),
+            r = this,
+            i = function() {
+                return a.__awaiter(r, void 0, void 0, function() {
+                    return a.__generator(this, function(e) {
+                        switch (e.label) {
+                            case 0:
+                                return [4, n.e(88).then(n.bind(null, "e/M0"))];
+                            case 1:
+                                return [2, e.sent()]
+                        }
+                    })
+                })
+            },
+            o = function() {
+                return a.__awaiter(r, void 0, void 0, function() {
+                    return a.__generator(this, function(e) {
+                        switch (e.label) {
+                            case 0:
+                                return [4, n.e(87).then(n.bind(null, "Dan5"))];
+                            case 1:
+                                return [2, e.sent()]
+                        }
+                    })
+                })
+            },
+            s = function() {
+                return a.__awaiter(r, void 0, void 0, function() {
+                    return a.__generator(this, function(e) {
+                        switch (e.label) {
+                            case 0:
+                                return [4, n.e(86).then(n.bind(null, "sQp1"))];
+                            case 1:
+                                return [2, e.sent()]
+                        }
+                    })
+                })
+            }
+    },
     MMhf: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
@@ -4802,4 +4826,4 @@ webpackJsonp([54], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.browse-6dfd1c171fd5fb30a3a9bd6a02a6b9b2.js.map
+//# sourceMappingURL=pages.browse-c3692652fff61512c8922b71b8aed6e8.js.map

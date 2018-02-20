@@ -813,6 +813,9 @@ webpackJsonp([38], {
             })
         })
     },
+    "2xjY": function(e, t, n) {
+        e.exports = n.p + "assets/credit_cards_2x-ede753dedc96e44eff73086128897a22.png"
+    },
     "3CJN": function(e, t, n) {
         ! function(e, t) {
             t(n("PJh5"))
@@ -1896,23 +1899,23 @@ webpackJsonp([38], {
                     m(r), a.firstDay > 0 && (i -= a.firstDay) < 0 && (i += 7);
                     for (var h = 0 === t ? 11 : t - 1, f = 11 === t ? 0 : t + 1, M = 0 === t ? e - 1 : e, p = 11 === t ? e + 1 : e, y = l(M, h), D = s + i, v = D; v > 7;) v -= 7;
                     D += 7 - v;
-                    for (var w = !1, T = 0, b = 0; T < D; T++) {
-                        var S = new Date(e, t, T - i + 1),
+                    for (var T = !1, w = 0, b = 0; w < D; w++) {
+                        var S = new Date(e, t, w - i + 1),
                             x = !!u(this._d) && c(S, this._d),
                             H = c(S, r),
                             j = -1 !== a.events.indexOf(S.toDateString()),
-                            P = T < i || T >= s + i,
-                            O = T - i + 1,
-                            E = t,
+                            P = w < i || w >= s + i,
+                            E = w - i + 1,
+                            O = t,
                             A = e,
                             F = a.startRange && c(a.startRange, S),
                             W = a.endRange && c(a.endRange, S),
                             N = a.startRange && a.endRange && a.startRange < S && S < a.endRange,
                             C = a.minDate && S < a.minDate || a.maxDate && S > a.maxDate || a.disableWeekends && _(S) || a.disableDayFn && a.disableDayFn(S);
-                        P && (T < i ? (O = y + O, E = h, A = M) : (O -= s, E = f, A = p));
+                        P && (w < i ? (E = y + E, O = h, A = M) : (E -= s, O = f, A = p));
                         var z = {
-                            day: O,
-                            month: E,
+                            day: E,
+                            month: O,
                             year: A,
                             hasEvent: j,
                             isSelected: x,
@@ -1925,7 +1928,7 @@ webpackJsonp([38], {
                             showDaysInNextAndPreviousMonths: a.showDaysInNextAndPreviousMonths,
                             enableSelectionDaysInNextAndPreviousMonths: a.enableSelectionDaysInNextAndPreviousMonths
                         };
-                        a.pickWholeWeek && x && (w = !0), d.push(L(z)), 7 == ++b && (a.showWeekNumber && d.unshift(Y(T - i, t, e)), o.push(g(d, a.isRTL, a.pickWholeWeek, w)), d = [], b = 0, w = !1)
+                        a.pickWholeWeek && x && (T = !0), d.push(L(z)), 7 == ++b && (a.showWeekNumber && d.unshift(Y(w - i, t, e)), o.push(g(d, a.isRTL, a.pickWholeWeek, T)), d = [], b = 0, T = !1)
                     }
                     return k(a, o, n)
                 },
@@ -5156,14 +5159,14 @@ webpackJsonp([38], {
                     return e instanceof Function || "[object Function]" === Object.prototype.toString.call(e)
                 }
 
-                function w(e, t) {
+                function T(e, t) {
                     var n, a = _({}, e);
                     for (n in t) u(t, n) && (r(e[n]) && r(t[n]) ? (a[n] = {}, _(a[n], e[n]), _(a[n], t[n])) : null != t[n] ? a[n] = t[n] : delete a[n]);
                     for (n in e) u(e, n) && !u(t, n) && r(e[n]) && (a[n] = _({}, a[n]));
                     return a
                 }
 
-                function T(e) {
+                function w(e) {
                     null != e && this.set(e)
                 }
 
@@ -5188,7 +5191,7 @@ webpackJsonp([38], {
 
                 function j(e, n) {
                     return function(a) {
-                        return null != a ? (O(this, e, a), t.updateOffset(this, n), this) : P(this, e)
+                        return null != a ? (E(this, e, a), t.updateOffset(this, n), this) : P(this, e)
                     }
                 }
 
@@ -5196,11 +5199,11 @@ webpackJsonp([38], {
                     return e.isValid() ? e._d["get" + (e._isUTC ? "UTC" : "") + t]() : NaN
                 }
 
-                function O(e, t, n) {
+                function E(e, t, n) {
                     e.isValid() && e._d["set" + (e._isUTC ? "UTC" : "") + t](n)
                 }
 
-                function E(e, t, n) {
+                function O(e, t, n) {
                     var a = "" + Math.abs(e),
                         r = t - a.length;
                     return (e >= 0 ? n ? "+" : "" : "-") + Math.pow(10, Math.max(0, r)).toString().substr(1) + a
@@ -5211,7 +5214,7 @@ webpackJsonp([38], {
                     "string" == typeof a && (r = function() {
                         return this[a]()
                     }), e && (ot[e] = r), t && (ot[t[0]] = function() {
-                        return E(r.apply(this, arguments), t[1], t[2])
+                        return O(r.apply(this, arguments), t[1], t[2])
                     }), n && (ot[n] = function() {
                         return this.localeData().ordinal(r.apply(this, arguments), e)
                     })
@@ -5264,7 +5267,7 @@ webpackJsonp([38], {
                     var n, a = t;
                     for ("string" == typeof e && (e = [e]), i(t) && (a = function(e, n) {
                             n[t] = L(e)
-                        }), n = 0; n < e.length; n++) wt[e[n]] = a
+                        }), n = 0; n < e.length; n++) Tt[e[n]] = a
                 }
 
                 function R(e, t) {
@@ -5274,14 +5277,14 @@ webpackJsonp([38], {
                 }
 
                 function U(e, t, n) {
-                    null != t && u(wt, e) && wt[e](t, n._a, n, e)
+                    null != t && u(Tt, e) && Tt[e](t, n._a, n, e)
                 }
 
                 function G(e, t) {
                     return new Date(Date.UTC(e, t + 1, 0)).getUTCDate()
                 }
 
-                function V(e, t) {
+                function B(e, t) {
                     var n;
                     if (!e.isValid()) return e;
                     if ("string" == typeof t)
@@ -5290,8 +5293,8 @@ webpackJsonp([38], {
                     return n = Math.min(e.date(), G(e.year(), t)), e._d["set" + (e._isUTC ? "UTC" : "") + "Month"](t, n), e
                 }
 
-                function B(e) {
-                    return null != e ? (V(this, e), t.updateOffset(this, !0), this) : P(this, "Month")
+                function V(e) {
+                    return null != e ? (B(this, e), t.updateOffset(this, !0), this) : P(this, "Month")
                 }
 
                 function Z() {
@@ -5403,7 +5406,7 @@ webpackJsonp([38], {
                             }), null;
                             n = Xt[t.parentLocale]._config
                         }
-                        return Xt[e] = new T(w(n, t)), Qt[e] && Qt[e].forEach(function(e) {
+                        return Xt[e] = new w(T(n, t)), Qt[e] && Qt[e].forEach(function(e) {
                             ue(e.name, e.config)
                         }), de(e), Xt[e]
                     }
@@ -5432,7 +5435,7 @@ webpackJsonp([38], {
 
                 function le(e) {
                     var t, n = e._a;
-                    return n && -2 === m(e).overflow && (t = n[bt] < 0 || n[bt] > 11 ? bt : n[St] < 1 || n[St] > G(n[Tt], n[bt]) ? St : n[xt] < 0 || n[xt] > 24 || 24 === n[xt] && (0 !== n[Ht] || 0 !== n[jt] || 0 !== n[Pt]) ? xt : n[Ht] < 0 || n[Ht] > 59 ? Ht : n[jt] < 0 || n[jt] > 59 ? jt : n[Pt] < 0 || n[Pt] > 999 ? Pt : -1, m(e)._overflowDayOfYear && (t < Tt || t > St) && (t = St), m(e)._overflowWeeks && -1 === t && (t = Ot), m(e)._overflowWeekday && -1 === t && (t = Et), m(e).overflow = t), e
+                    return n && -2 === m(e).overflow && (t = n[bt] < 0 || n[bt] > 11 ? bt : n[St] < 1 || n[St] > G(n[wt], n[bt]) ? St : n[xt] < 0 || n[xt] > 24 || 24 === n[xt] && (0 !== n[Ht] || 0 !== n[jt] || 0 !== n[Pt]) ? xt : n[Ht] < 0 || n[Ht] > 59 ? Ht : n[jt] < 0 || n[jt] > 59 ? jt : n[Pt] < 0 || n[Pt] > 999 ? Pt : -1, m(e)._overflowDayOfYear && (t < wt || t > St) && (t = St), m(e)._overflowWeeks && -1 === t && (t = Et), m(e)._overflowWeekday && -1 === t && (t = Ot), m(e).overflow = t), e
                 }
 
                 function me(e) {
@@ -5505,14 +5508,14 @@ webpackJsonp([38], {
                                 return e._useUTC ? [n.getUTCFullYear(), n.getUTCMonth(), n.getUTCDate()] : [n.getFullYear(), n.getMonth(), n.getDate()]
                             }(e), e._w && null == e._a[St] && null == e._a[bt] && function(e) {
                                 var t, n, a, r, s, i, o, d;
-                                if (null != (t = e._w).GG || null != t.W || null != t.E) s = 1, i = 4, n = he(t.GG, e._a[Tt], ee(Le(), 1, 4).year), a = he(t.W, 1), ((r = he(t.E, 1)) < 1 || r > 7) && (d = !0);
+                                if (null != (t = e._w).GG || null != t.W || null != t.E) s = 1, i = 4, n = he(t.GG, e._a[wt], ee(Le(), 1, 4).year), a = he(t.W, 1), ((r = he(t.E, 1)) < 1 || r > 7) && (d = !0);
                                 else {
                                     s = e._locale._week.dow, i = e._locale._week.doy;
                                     var u = ee(Le(), s, i);
-                                    n = he(t.gg, e._a[Tt], u.year), a = he(t.w, u.week), null != t.d ? ((r = t.d) < 0 || r > 6) && (d = !0) : null != t.e ? (r = t.e + s, (t.e < 0 || t.e > 6) && (d = !0)) : r = s
+                                    n = he(t.gg, e._a[wt], u.year), a = he(t.w, u.week), null != t.d ? ((r = t.d) < 0 || r > 6) && (d = !0) : null != t.e ? (r = t.e + s, (t.e < 0 || t.e > 6) && (d = !0)) : r = s
                                 }
-                                a < 1 || a > te(n, s, i) ? m(e)._overflowWeeks = !0 : null != d ? m(e)._overflowWeekday = !0 : (o = $(n, a, r, s, i), e._a[Tt] = o.year, e._dayOfYear = o.dayOfYear)
-                            }(e), null != e._dayOfYear && (s = he(e._a[Tt], r[Tt]), (e._dayOfYear > q(s) || 0 === e._dayOfYear) && (m(e)._overflowDayOfYear = !0), a = X(s, 0, e._dayOfYear), e._a[bt] = a.getUTCMonth(), e._a[St] = a.getUTCDate()), n = 0; n < 3 && null == e._a[n]; ++n) e._a[n] = i[n] = r[n];
+                                a < 1 || a > te(n, s, i) ? m(e)._overflowWeeks = !0 : null != d ? m(e)._overflowWeekday = !0 : (o = $(n, a, r, s, i), e._a[wt] = o.year, e._dayOfYear = o.dayOfYear)
+                            }(e), null != e._dayOfYear && (s = he(e._a[wt], r[wt]), (e._dayOfYear > q(s) || 0 === e._dayOfYear) && (m(e)._overflowDayOfYear = !0), a = X(s, 0, e._dayOfYear), e._a[bt] = a.getUTCMonth(), e._a[St] = a.getUTCDate()), n = 0; n < 3 && null == e._a[n]; ++n) e._a[n] = i[n] = r[n];
                         for (; n < 7; n++) e._a[n] = i[n] = null == e._a[n] ? 2 === n ? 1 : 0 : e._a[n];
                         24 === e._a[xt] && 0 === e._a[Ht] && 0 === e._a[jt] && 0 === e._a[Pt] && (e._nextDay = !0, e._a[xt] = 0), e._d = (e._useUTC ? X : function(e, t, n, a, r, s, i) {
                             var o = new Date(e, t, n, a, r, s, i);
@@ -5625,11 +5628,11 @@ webpackJsonp([38], {
                     A(e, 0, 0, function() {
                         var e = this.utcOffset(),
                             n = "+";
-                        return e < 0 && (e = -e, n = "-"), n + E(~~(e / 60), 2) + t + E(~~e % 60, 2)
+                        return e < 0 && (e = -e, n = "-"), n + O(~~(e / 60), 2) + t + O(~~e % 60, 2)
                     })
                 }
 
-                function we(e, t) {
+                function Te(e, t) {
                     var n = (t || "").match(e);
                     if (null === n) return null;
                     var a = ((n[n.length - 1] || []) + "").match(_n) || ["-", 0, 0],
@@ -5637,7 +5640,7 @@ webpackJsonp([38], {
                     return 0 === r ? 0 : "+" === a[0] ? r : -r
                 }
 
-                function Te(e, n) {
+                function we(e, n) {
                     var a, r;
                     return n._isUTC ? (a = n.clone(), r = (p(e) || o(e) ? e.valueOf() : Le(e).valueOf()) - a.valueOf(), a._d.setTime(a._d.valueOf() + r), t.updateOffset(a, !1), a) : Le(e).local()
                 }
@@ -5678,7 +5681,7 @@ webpackJsonp([38], {
                             milliseconds: 0,
                             months: 0
                         };
-                        t = Te(t, e), e.isBefore(t) ? n = je(e, t) : ((n = je(t, e)).milliseconds = -n.milliseconds, n.months = -n.months);
+                        t = we(t, e), e.isBefore(t) ? n = je(e, t) : ((n = je(t, e)).milliseconds = -n.milliseconds, n.months = -n.months);
                         return n
                     }(Le(s.from), Le(s.to)), (s = {}).ms = r.milliseconds, s.M = r.months), a = new ge(s), De(e) && u(e, "_locale") && (a._locale = e._locale), a
                 }
@@ -5699,18 +5702,18 @@ webpackJsonp([38], {
                 function Pe(e, t) {
                     return function(n, a) {
                         var r, s;
-                        return null === a || isNaN(+a) || (k(t, "moment()." + t + "(period, number) is deprecated. Please use moment()." + t + "(number, period). See http://momentjs.com/guides/#/warnings/add-inverted-param/ for more info."), s = n, n = a, a = s), n = "string" == typeof n ? +n : n, r = xe(n, a), Oe(this, r, e), this
+                        return null === a || isNaN(+a) || (k(t, "moment()." + t + "(period, number) is deprecated. Please use moment()." + t + "(number, period). See http://momentjs.com/guides/#/warnings/add-inverted-param/ for more info."), s = n, n = a, a = s), n = "string" == typeof n ? +n : n, r = xe(n, a), Ee(this, r, e), this
                     }
                 }
 
-                function Oe(e, n, a, r) {
+                function Ee(e, n, a, r) {
                     var s = n._milliseconds,
                         i = ke(n._days),
                         o = ke(n._months);
-                    e.isValid() && (r = null == r || r, s && e._d.setTime(e._d.valueOf() + s * a), i && O(e, "Date", P(e, "Date") + i * a), o && V(e, P(e, "Month") + o * a), r && t.updateOffset(e, i || o))
+                    e.isValid() && (r = null == r || r, s && e._d.setTime(e._d.valueOf() + s * a), i && E(e, "Date", P(e, "Date") + i * a), o && B(e, P(e, "Month") + o * a), r && t.updateOffset(e, i || o))
                 }
 
-                function Ee(e) {
+                function Oe(e) {
                     var t;
                     return void 0 === e ? this._locale._abbr : (null != (t = _e(e)) && (this._locale = t), this)
                 }
@@ -5776,11 +5779,11 @@ webpackJsonp([38], {
                     return 4800 * e / 146097
                 }
 
-                function Ve(e) {
+                function Be(e) {
                     return 146097 * e / 4800
                 }
 
-                function Be(e) {
+                function Ve(e) {
                     return function() {
                         return this.as(e)
                     }
@@ -5844,16 +5847,16 @@ webpackJsonp([38], {
                     Dt = /Z|[+-]\d\d(?::?\d\d)?/gi,
                     kt = /[0-9]*['a-z\u00A0-\u05FF\u0700-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+|[\u0600-\u06FF\/]+(\s*?[\u0600-\u06FF]+){1,2}/i,
                     vt = {},
-                    wt = {},
-                    Tt = 0,
+                    Tt = {},
+                    wt = 0,
                     bt = 1,
                     St = 2,
                     xt = 3,
                     Ht = 4,
                     jt = 5,
                     Pt = 6,
-                    Ot = 7,
-                    Et = 8,
+                    Et = 7,
+                    Ot = 8,
                     At = Array.prototype.indexOf ? Array.prototype.indexOf : function(e) {
                         var t;
                         for (t = 0; t < this.length; ++t)
@@ -5886,12 +5889,12 @@ webpackJsonp([38], {
                     return e <= 9999 ? "" + e : "+" + e
                 }), A(0, ["YY", 2], 0, function() {
                     return this.year() % 100
-                }), A(0, ["YYYY", 4], 0, "year"), A(0, ["YYYYY", 5], 0, "year"), A(0, ["YYYYYY", 6, !0], 0, "year"), b("year", "y"), H("year", 1), C("Y", Yt), C("YY", ct, ut), C("YYYY", pt, lt), C("YYYYY", yt, mt), C("YYYYYY", yt, mt), J(["YYYYY", "YYYYYY"], Tt), J("YYYY", function(e, n) {
-                    n[Tt] = 2 === e.length ? t.parseTwoDigitYear(e) : L(e)
+                }), A(0, ["YYYY", 4], 0, "year"), A(0, ["YYYYY", 5], 0, "year"), A(0, ["YYYYYY", 6, !0], 0, "year"), b("year", "y"), H("year", 1), C("Y", Yt), C("YY", ct, ut), C("YYYY", pt, lt), C("YYYYY", yt, mt), C("YYYYYY", yt, mt), J(["YYYYY", "YYYYYY"], wt), J("YYYY", function(e, n) {
+                    n[wt] = 2 === e.length ? t.parseTwoDigitYear(e) : L(e)
                 }), J("YY", function(e, n) {
-                    n[Tt] = t.parseTwoDigitYear(e)
+                    n[wt] = t.parseTwoDigitYear(e)
                 }), J("Y", function(e, t) {
-                    t[Tt] = parseInt(e, 10)
+                    t[wt] = parseInt(e, 10)
                 }), t.parseTwoDigitYear = function(e) {
                     return L(e) + (L(e) > 68 ? 1900 : 2e3)
                 };
@@ -5921,18 +5924,18 @@ webpackJsonp([38], {
                     Rt = "Sun_Mon_Tue_Wed_Thu_Fri_Sat".split("_"),
                     Ut = "Su_Mo_Tu_We_Th_Fr_Sa".split("_"),
                     Gt = kt,
-                    Vt = kt,
-                    Bt = kt;
+                    Bt = kt,
+                    Vt = kt;
                 A("H", ["HH", 2], 0, "hour"), A("h", ["hh", 2], 0, ae), A("k", ["kk", 2], 0, function() {
                     return this.hours() || 24
                 }), A("hmm", 0, 0, function() {
-                    return "" + ae.apply(this) + E(this.minutes(), 2)
+                    return "" + ae.apply(this) + O(this.minutes(), 2)
                 }), A("hmmss", 0, 0, function() {
-                    return "" + ae.apply(this) + E(this.minutes(), 2) + E(this.seconds(), 2)
+                    return "" + ae.apply(this) + O(this.minutes(), 2) + O(this.seconds(), 2)
                 }), A("Hmm", 0, 0, function() {
-                    return "" + this.hours() + E(this.minutes(), 2)
+                    return "" + this.hours() + O(this.minutes(), 2)
                 }), A("Hmmss", 0, 0, function() {
-                    return "" + this.hours() + E(this.minutes(), 2) + E(this.seconds(), 2)
+                    return "" + this.hours() + O(this.minutes(), 2) + O(this.seconds(), 2)
                 }), re("a", !0), re("A", !1), b("hour", "h"), H("hour", 13), C("a", se), C("A", se), C("H", ct), C("h", ct), C("k", ct), C("HH", ct, ut), C("hh", ct, ut), C("kk", ct, ut), C("hmm", ht), C("hmmss", ft), C("Hmm", ht), C("Hmmss", ft), J(["H", "HH"], xt), J(["k", "kk"], function(e, t, n) {
                     var a = L(e);
                     t[xt] = 24 === a ? 0 : a
@@ -6047,7 +6050,7 @@ webpackJsonp([38], {
                     }),
                     un = ["year", "quarter", "month", "week", "day", "hour", "minute", "second", "millisecond"];
                 ve("Z", ":"), ve("ZZ", ""), C("Z", Dt), C("ZZ", Dt), J(["Z", "ZZ"], function(e, t, n) {
-                    n._useUTC = !0, n._tzm = we(Dt, e)
+                    n._useUTC = !0, n._tzm = Te(Dt, e)
                 });
                 var _n = /([\+\-]|\d\d)/gi;
                 t.updateOffset = function() {};
@@ -6109,7 +6112,7 @@ webpackJsonp([38], {
                 var gn = M.prototype;
                 gn.add = cn, gn.calendar = function(e, n) {
                     var a = e || Le(),
-                        r = Te(a, this).startOf("day"),
+                        r = we(a, this).startOf("day"),
                         s = t.calendarFormat(this, r) || "sameElse",
                         i = n && (v(n[s]) ? n[s].call(this, a) : n[s]);
                     return this.format(i || this.localeData().calendar(s, this, Le(a)))
@@ -6117,7 +6120,7 @@ webpackJsonp([38], {
                     return new M(this)
                 }, gn.diff = function(e, t, n) {
                     var a, r, s, i;
-                    return this.isValid() && (a = Te(e, this)).isValid() ? (r = 6e4 * (a.utcOffset() - this.utcOffset()), "year" === (t = S(t)) || "month" === t || "quarter" === t ? (i = function(e, t) {
+                    return this.isValid() && (a = we(e, this)).isValid() ? (r = 6e4 * (a.utcOffset() - this.utcOffset()), "year" === (t = S(t)) || "month" === t || "quarter" === t ? (i = function(e, t) {
                         var n, a, r = 12 * (t.year() - e.year()) + (t.month() - e.month()),
                             s = e.clone().add(r, "months");
                         return t - s < 0 ? (n = e.clone().add(r - 1, "months"), a = (t - s) / (s - n)) : (n = e.clone().add(r + 1, "months"), a = (t - s) / (n - s)), -(r + a) || 0
@@ -6163,7 +6166,7 @@ webpackJsonp([38], {
                     return this.isSame(e, t) || this.isBefore(e, t)
                 }, gn.isValid = function() {
                     return c(this)
-                }, gn.lang = fn, gn.locale = Ee, gn.localeData = Ae, gn.max = dn, gn.min = on, gn.parsingFlags = function() {
+                }, gn.lang = fn, gn.locale = Oe, gn.localeData = Ae, gn.max = dn, gn.min = on, gn.parsingFlags = function() {
                     return _({}, m(this))
                 }, gn.set = function(e, t) {
                     if ("object" == typeof e)
@@ -6250,7 +6253,7 @@ webpackJsonp([38], {
                     return We.call(this, e, this.isoWeek(), this.isoWeekday(), 1, 4)
                 }, gn.quarter = gn.quarters = function(e) {
                     return null == e ? Math.ceil((this.month() + 1) / 3) : this.month(3 * (e - 1) + this.month() % 3)
-                }, gn.month = B, gn.daysInMonth = function() {
+                }, gn.month = V, gn.daysInMonth = function() {
                     return G(this.year(), this.month())
                 }, gn.week = gn.weeks = function(e) {
                     var t = this.localeData().week(this);
@@ -6290,9 +6293,9 @@ webpackJsonp([38], {
                     if (!this.isValid()) return null != e ? this : NaN;
                     if (null != e) {
                         if ("string" == typeof e) {
-                            if (null === (e = we(Dt, e))) return this
+                            if (null === (e = Te(Dt, e))) return this
                         } else Math.abs(e) < 16 && !a && (e *= 60);
-                        return !this._isUTC && n && (r = be(this)), this._offset = e, this._isUTC = !0, null != r && this.add(r, "m"), s !== e && (!n || this._changeInProgress ? Oe(this, xe(e - s, "m"), 1, !1) : this._changeInProgress || (this._changeInProgress = !0, t.updateOffset(this, !0), this._changeInProgress = null)), this
+                        return !this._isUTC && n && (r = be(this)), this._offset = e, this._isUTC = !0, null != r && this.add(r, "m"), s !== e && (!n || this._changeInProgress ? Ee(this, xe(e - s, "m"), 1, !1) : this._changeInProgress || (this._changeInProgress = !0, t.updateOffset(this, !0), this._changeInProgress = null)), this
                     }
                     return this._isUTC ? s : be(this)
                 }, gn.utc = function(e) {
@@ -6302,7 +6305,7 @@ webpackJsonp([38], {
                 }, gn.parseZone = function() {
                     if (null != this._tzm) this.utcOffset(this._tzm, !1, !0);
                     else if ("string" == typeof this._i) {
-                        var e = we(gt, this._i);
+                        var e = Te(gt, this._i);
                         null != e ? this.utcOffset(e) : this.utcOffset(0, !0)
                     }
                     return this
@@ -6318,7 +6321,7 @@ webpackJsonp([38], {
                     return this._isUTC ? "UTC" : ""
                 }, gn.zoneName = function() {
                     return this._isUTC ? "Coordinated Universal Time" : ""
-                }, gn.dates = D("dates accessor is deprecated. Use date instead.", Mn), gn.months = D("months accessor is deprecated. Use month instead", B), gn.years = D("years accessor is deprecated. Use year instead", It), gn.zone = D("moment().zone is deprecated, use moment().utcOffset instead. http://momentjs.com/guides/#/warnings/zone/", function(e, t) {
+                }, gn.dates = D("dates accessor is deprecated. Use date instead.", Mn), gn.months = D("months accessor is deprecated. Use month instead", V), gn.years = D("years accessor is deprecated. Use year instead", It), gn.zone = D("moment().zone is deprecated, use moment().utcOffset instead. http://momentjs.com/guides/#/warnings/zone/", function(e, t) {
                     return null != e ? ("string" != typeof e && (e = -e), this.utcOffset(e, t), this) : -this.utcOffset()
                 }), gn.isDSTShifted = D("isDSTShifted is deprecated. See http://momentjs.com/guides/#/warnings/dst-shifted/ for more information", function() {
                     if (!s(this._isDSTShifted)) return this._isDSTShifted;
@@ -6329,7 +6332,7 @@ webpackJsonp([38], {
                     } else this._isDSTShifted = !1;
                     return this._isDSTShifted
                 });
-                var Dn = T.prototype;
+                var Dn = w.prototype;
                 Dn.calendar = function(e, t, n) {
                     var a = this._calendar[e] || this._calendar.sameElse;
                     return v(a) ? a.call(t, n) : a
@@ -6403,9 +6406,9 @@ webpackJsonp([38], {
                 }, Dn.weekdaysRegex = function(e) {
                     return this._weekdaysParseExact ? (u(this, "_weekdaysRegex") || ne.call(this), e ? this._weekdaysStrictRegex : this._weekdaysRegex) : (u(this, "_weekdaysRegex") || (this._weekdaysRegex = Gt), this._weekdaysStrictRegex && e ? this._weekdaysStrictRegex : this._weekdaysRegex)
                 }, Dn.weekdaysShortRegex = function(e) {
-                    return this._weekdaysParseExact ? (u(this, "_weekdaysRegex") || ne.call(this), e ? this._weekdaysShortStrictRegex : this._weekdaysShortRegex) : (u(this, "_weekdaysShortRegex") || (this._weekdaysShortRegex = Vt), this._weekdaysShortStrictRegex && e ? this._weekdaysShortStrictRegex : this._weekdaysShortRegex)
+                    return this._weekdaysParseExact ? (u(this, "_weekdaysRegex") || ne.call(this), e ? this._weekdaysShortStrictRegex : this._weekdaysShortRegex) : (u(this, "_weekdaysShortRegex") || (this._weekdaysShortRegex = Bt), this._weekdaysShortStrictRegex && e ? this._weekdaysShortStrictRegex : this._weekdaysShortRegex)
                 }, Dn.weekdaysMinRegex = function(e) {
-                    return this._weekdaysParseExact ? (u(this, "_weekdaysRegex") || ne.call(this), e ? this._weekdaysMinStrictRegex : this._weekdaysMinRegex) : (u(this, "_weekdaysMinRegex") || (this._weekdaysMinRegex = Bt), this._weekdaysMinStrictRegex && e ? this._weekdaysMinStrictRegex : this._weekdaysMinRegex)
+                    return this._weekdaysParseExact ? (u(this, "_weekdaysRegex") || ne.call(this), e ? this._weekdaysMinStrictRegex : this._weekdaysMinRegex) : (u(this, "_weekdaysMinRegex") || (this._weekdaysMinRegex = Vt), this._weekdaysMinStrictRegex && e ? this._weekdaysMinStrictRegex : this._weekdaysMinRegex)
                 }, Dn.isPM = function(e) {
                     return "p" === (e + "").toLowerCase().charAt(0)
                 }, Dn.meridiem = function(e, t, n) {
@@ -6418,17 +6421,17 @@ webpackJsonp([38], {
                     }
                 }), t.lang = D("moment.lang is deprecated. Use moment.locale instead.", de), t.langData = D("moment.langData is deprecated. Use moment.localeData instead.", _e);
                 var kn = Math.abs,
-                    vn = Be("ms"),
-                    wn = Be("s"),
-                    Tn = Be("m"),
-                    bn = Be("h"),
-                    Sn = Be("d"),
-                    xn = Be("w"),
-                    Hn = Be("M"),
-                    jn = Be("y"),
+                    vn = Ve("ms"),
+                    Tn = Ve("s"),
+                    wn = Ve("m"),
+                    bn = Ve("h"),
+                    Sn = Ve("d"),
+                    xn = Ve("w"),
+                    Hn = Ve("M"),
+                    jn = Ve("y"),
                     Pn = Ze("milliseconds"),
-                    On = Ze("seconds"),
-                    En = Ze("minutes"),
+                    En = Ze("seconds"),
+                    On = Ze("minutes"),
                     An = Ze("hours"),
                     Fn = Ze("days"),
                     Wn = Ze("months"),
@@ -6457,7 +6460,7 @@ webpackJsonp([38], {
                         if (!this.isValid()) return NaN;
                         var t, n, a = this._milliseconds;
                         if ("month" === (e = S(e)) || "year" === e) return t = this._days + a / 864e5, n = this._months + Ge(t), "month" === e ? n : n / 12;
-                        switch (t = this._days + Math.round(Ve(this._months)), e) {
+                        switch (t = this._days + Math.round(Be(this._months)), e) {
                             case "week":
                                 return t / 7 + a / 6048e5;
                             case "day":
@@ -6473,17 +6476,17 @@ webpackJsonp([38], {
                             default:
                                 throw new Error("Unknown unit " + e)
                         }
-                    }, Jn.asMilliseconds = vn, Jn.asSeconds = wn, Jn.asMinutes = Tn, Jn.asHours = bn, Jn.asDays = Sn, Jn.asWeeks = xn, Jn.asMonths = Hn, Jn.asYears = jn, Jn.valueOf = function() {
+                    }, Jn.asMilliseconds = vn, Jn.asSeconds = Tn, Jn.asMinutes = wn, Jn.asHours = bn, Jn.asDays = Sn, Jn.asWeeks = xn, Jn.asMonths = Hn, Jn.asYears = jn, Jn.valueOf = function() {
                         return this.isValid() ? this._milliseconds + 864e5 * this._days + this._months % 12 * 2592e6 + 31536e6 * L(this._months / 12) : NaN
                     }, Jn._bubble = function() {
                         var e, t, n, a, r, s = this._milliseconds,
                             i = this._days,
                             o = this._months,
                             d = this._data;
-                        return s >= 0 && i >= 0 && o >= 0 || s <= 0 && i <= 0 && o <= 0 || (s += 864e5 * Ue(Ve(o) + i), i = 0, o = 0), d.milliseconds = s % 1e3, e = y(s / 1e3), d.seconds = e % 60, t = y(e / 60), d.minutes = t % 60, n = y(t / 60), d.hours = n % 24, i += y(n / 24), r = y(Ge(i)), o += r, i -= Ue(Ve(r)), a = y(o / 12), o %= 12, d.days = i, d.months = o, d.years = a, this
+                        return s >= 0 && i >= 0 && o >= 0 || s <= 0 && i <= 0 && o <= 0 || (s += 864e5 * Ue(Be(o) + i), i = 0, o = 0), d.milliseconds = s % 1e3, e = y(s / 1e3), d.seconds = e % 60, t = y(e / 60), d.minutes = t % 60, n = y(t / 60), d.hours = n % 24, i += y(n / 24), r = y(Ge(i)), o += r, i -= Ue(Be(r)), a = y(o / 12), o %= 12, d.days = i, d.months = o, d.years = a, this
                     }, Jn.get = function(e) {
                         return e = S(e), this.isValid() ? this[e + "s"]() : NaN
-                    }, Jn.milliseconds = Pn, Jn.seconds = On, Jn.minutes = En, Jn.hours = An, Jn.days = Fn, Jn.weeks = function() {
+                    }, Jn.milliseconds = Pn, Jn.seconds = En, Jn.minutes = On, Jn.hours = An, Jn.days = Fn, Jn.weeks = function() {
                         return y(this.days() / 7)
                     }, Jn.months = Wn, Jn.years = Nn, Jn.humanize = function(e) {
                         if (!this.isValid()) return this.localeData().invalidDate();
@@ -6503,7 +6506,7 @@ webpackJsonp([38], {
                                     }.apply(null, _)
                             }(this, !e, t);
                         return e && (n = t.pastFuture(+this, n)), t.postformat(n)
-                    }, Jn.toISOString = qe, Jn.toString = qe, Jn.toJSON = qe, Jn.locale = Ee, Jn.localeData = Ae, Jn.toIsoString = D("toIsoString() is deprecated. Please use toISOString() instead (notice the capitals)", qe), Jn.lang = fn, A("X", 0, 0, "unix"), A("x", 0, 0, "valueOf"), C("x", Yt), C("X", /[+-]?\d+(\.\d{1,3})?/), J("X", function(e, t, n) {
+                    }, Jn.toISOString = qe, Jn.toString = qe, Jn.toJSON = qe, Jn.locale = Oe, Jn.localeData = Ae, Jn.toIsoString = D("toIsoString() is deprecated. Please use toISOString() instead (notice the capitals)", qe), Jn.lang = fn, A("X", 0, 0, "unix"), A("x", 0, 0, "valueOf"), C("x", Yt), C("X", /[+-]?\d+(\.\d{1,3})?/), J("X", function(e, t, n) {
                         n._d = new Date(1e3 * parseFloat(e, 10))
                     }), J("x", function(e, t, n) {
                         n._d = new Date(L(e))
@@ -6531,7 +6534,7 @@ webpackJsonp([38], {
                     }, t.defineLocale = ue, t.updateLocale = function(e, t) {
                         if (null != t) {
                             var n, a = Kt;
-                            null != Xt[e] && (a = Xt[e]._config), (n = new T(t = w(a, t))).parentLocale = Xt[e], Xt[e] = n, de(e)
+                            null != Xt[e] && (a = Xt[e]._config), (n = new w(t = T(a, t))).parentLocale = Xt[e], Xt[e] = n, de(e)
                         } else null != Xt[e] && (null != Xt[e].parentLocale ? Xt[e] = Xt[e].parentLocale : null != Xt[e] && delete Xt[e]);
                         return Xt[e]
                     }, t.locales = function() {
@@ -8860,6 +8863,14 @@ webpackJsonp([38], {
                                                 kind: "Field",
                                                 name: {
                                                     kind: "Name",
+                                                    value: "productType"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }, {
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
                                                     value: "subscriptionBenefit"
                                                 },
                                                 arguments: [],
@@ -8917,6 +8928,14 @@ webpackJsonp([38], {
                                                                         value: "50"
                                                                     }
                                                                 }],
+                                                                directives: []
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "login"
+                                                                },
+                                                                arguments: [],
                                                                 directives: []
                                                             }]
                                                         }
@@ -9097,11 +9116,11 @@ webpackJsonp([38], {
             }],
             loc: {
                 start: 0,
-                end: 531
+                end: 549
             }
         };
         n.loc.source = {
-            body: "query PaymentMethodsTab_UserPaymentMethods {\ncurrentUser {\nid\npaymentMethods {\nprovider\npaymentType\ncardType\nlastFour\nextMethodID\npurchaseProfiles {\nid\nwillRenew\nexpiresAt\nrenewalPrice\nrenewalCurrency\nsubscriptionBenefit {\nid\ntier\nuser {\ndisplayName\nprofileImageURL(width: 50)\n}\n}\n}\n}\npaymentMethodConfigs {\nrecurly {\nbraintreeClientAuthorization\npayWithAmazonConfigs {\nclientID\nisProduction\nsellerID\n}\npublicKey\n}\nxsolla {\niframeURL\n}\nzuora {\nexternalAccountID\nhostedPageID\nhostedPageURL\npublicKey\nsignature\ntenantID\ntoken\n}\n}\n}\n}",
+            body: "query PaymentMethodsTab_UserPaymentMethods {\ncurrentUser {\nid\npaymentMethods {\nprovider\npaymentType\ncardType\nlastFour\nextMethodID\npurchaseProfiles {\nid\nwillRenew\nexpiresAt\nrenewalPrice\nrenewalCurrency\nproductType\nsubscriptionBenefit {\nid\ntier\nuser {\ndisplayName\nprofileImageURL(width: 50)\nlogin\n}\n}\n}\n}\npaymentMethodConfigs {\nrecurly {\nbraintreeClientAuthorization\npayWithAmazonConfigs {\nclientID\nisProduction\nsellerID\n}\npublicKey\n}\nxsolla {\niframeURL\n}\nzuora {\nexternalAccountID\nhostedPageID\nhostedPageURL\npublicKey\nsignature\ntenantID\ntoken\n}\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -9754,7 +9773,7 @@ webpackJsonp([38], {
         "use strict";
 
         function a(e) {
-            return Object(le.parse)(e)
+            return Object(fe.parse)(e)
         }
         Object.defineProperty(t, "__esModule", {
             value: !0
@@ -9781,17 +9800,17 @@ webpackJsonp([38], {
             D = n("ywmo"),
             k = n.n(D),
             v = n("yBkN"),
-            w = n.n(v),
-            T = n("Ob63"),
-            b = n.n(T),
+            T = n.n(v),
+            w = n("Ob63"),
+            b = n.n(w),
             S = n("tWfJ"),
             x = n.n(S),
             H = n("WE8T"),
             j = n.n(H),
             P = n("6hIG"),
-            O = n.n(P),
-            E = n("siAa"),
-            A = n.n(E),
+            E = n.n(P),
+            O = n("siAa"),
+            A = n.n(O),
             F = n("pNNA"),
             W = n.n(F),
             N = n("lL4Y"),
@@ -9805,7 +9824,7 @@ webpackJsonp([38], {
         ! function(e) {
             e.Amazon = "amazon", e.CreditCard = "credit_card", e.Paypal = "paypal"
         }(y || (y = {}));
-        var V, B = function(e) {
+        var B, V = function(e) {
                 var t = ("XXXX XXXX XXXX " + e.lastFourDigits).replace(/X/g, "•");
                 return l.createElement(L._35, {
                     bold: !0,
@@ -9814,21 +9833,25 @@ webpackJsonp([38], {
                     fontSize: L.R.Size6
                 }, t)
             },
-            Z = n("NXs7"),
-            q = n("0nzt");
+            Z = n("uVdc"),
+            q = n.n(Z),
+            K = n("2xjY"),
+            X = n.n(K),
+            Q = n("NXs7"),
+            $ = n("0nzt");
         ! function(e) {
             e.NotConfigured = "not-configured", e.MissingPublicKey = "missing-public-key", e.InvalidPublicKey = "invalid-public-key", e.AlreadyConfigured = "already-configured", e.MissingHostedFieldTarget = "missing-hosted-field-target", e.Validation = "validation", e.InvalidParameter = "invalid-parameter", e.APIError = "api-error", e.PayPalNotConfigured = "paypal-not-configured", e.PayPalCanceled = "paypal-canceled", e.PayPalError = "paypal-error", e.InvalidRoutingNumber = "invalid-routing-number", e.NotFound = "not-found", e.MissingPlan = "missing-plan", e.InvalidAddon = "invalid-addon", e.InvalidCurrency = "invalid-currency", e.GiftCardCurrencyMisMatch = "gift-card-currency-mismatch"
-        }(V || (V = {}));
+        }(B || (B = {}));
         n("SWLI");
-        var K, X = {
+        var ee, te = {
                 light: "#000",
                 dark: "#fff"
             },
-            Q = {
+            ne = {
                 light: "#a49fad",
                 dark: "#898395"
             },
-            $ = function() {
+            ae = function() {
                 return {
                     cvv: !1,
                     first_name: !1,
@@ -9838,7 +9861,7 @@ webpackJsonp([38], {
                     year: !1
                 }
             },
-            ee = function(e) {
+            re = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -9847,7 +9870,7 @@ webpackJsonp([38], {
                         recurlyReady: !1,
                         updatingPaymentMethod: !1,
                         errorMessage: "",
-                        errorState: $()
+                        errorState: ae()
                     }, t.handleSubmit = function() {
                         t.setState(function(e) {
                             return {
@@ -9880,8 +9903,8 @@ webpackJsonp([38], {
                             })
                         })
                     }, t.handleValidationError = function(e) {
-                        if (e.code === V.Validation || e.code === V.InvalidParameter) {
-                            var n = $();
+                        if (e.code === B.Validation || e.code === B.InvalidParameter) {
+                            var n = ae();
                             e.fields && e.fields.forEach(function(e) {
                                 n[e] = !0
                             }), t.setState({
@@ -9890,7 +9913,7 @@ webpackJsonp([38], {
                             })
                         } else e.code && t.setState({
                             errorMessage: Object(c.d)("The transaction was declined due to invalid data. Please make sure you have entered the correct information.", "RecurlyCard"),
-                            errorState: $()
+                            errorState: ae()
                         })
                     }, t.handleFirstName = function(e) {
                         t.setState({
@@ -10048,9 +10071,9 @@ webpackJsonp([38], {
                                 style: {
                                     height: "auto",
                                     fontSize: "12px",
-                                    fontColor: this.props.darkModeEnabled ? X.dark : X.light,
+                                    fontColor: this.props.darkModeEnabled ? te.dark : te.light,
                                     placeholder: {
-                                        color: this.props.darkModeEnabled ? Q.dark : Q.light
+                                        color: this.props.darkModeEnabled ? ne.dark : ne.light
                                     }
                                 }
                             },
@@ -10090,12 +10113,12 @@ webpackJsonp([38], {
                     })
                 }, t
             }(l.Component),
-            te = Object(s.b)(function(e) {
+            se = Object(s.b)(function(e) {
                 return {
-                    darkModeEnabled: Object(q.a)(e) === Z.a.Dark
+                    darkModeEnabled: Object($.a)(e) === Q.a.Dark
                 }
-            })(ee),
-            ne = (n("hX+y"), function() {
+            })(re),
+            ie = (n("hX+y"), function() {
                 function e(e) {}
                 e.prototype.bind = function(e) {}
             }(), function(e) {
@@ -10180,9 +10203,10 @@ webpackJsonp([38], {
                 }, t.prototype.render = function() {
                     return this.state.amazonScriptLoaded ? l.createElement(L._2, {
                         padding: {
-                            top: 1
+                            top: 2,
+                            bottom: 1
                         },
-                        className: "pay-with-amazon-container"
+                        textAlign: L._36.Center
                     }, l.createElement(L._2, {
                         display: this.state.walletLoaded ? L.N.Hide : L.N.Block
                     }, l.createElement("div", {
@@ -10203,7 +10227,7 @@ webpackJsonp([38], {
                     }, Object(c.d)("Update Card", "PayWithAmazon"))))) : l.createElement(L._4, null)
                 }, t
             }(l.Component)),
-            ae = function(e) {
+            oe = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -10284,12 +10308,12 @@ webpackJsonp([38], {
             }(l.Component);
         ! function(e) {
             e.CreditCard = "credit-card", e.PayWithAmazon = "pay-with-amazon", e.PayPal = "paypal"
-        }(K || (K = {}));
-        var re, se = function(e) {
+        }(ee || (ee = {}));
+        var de, ue = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        selectedOption: K.CreditCard
+                        selectedOption: ee.CreditCard
                     }, t.handleOptionChange = function(e) {
                         t.setState({
                             selectedOption: e.currentTarget.value
@@ -10316,90 +10340,126 @@ webpackJsonp([38], {
                             right: 2
                         },
                         display: L.N.Inline
+                    }, l.createElement(L.W, {
+                        margin: {
+                            right: .5
+                        }
                     }, l.createElement("input", {
                         type: "radio",
-                        id: K.CreditCard,
+                        className: "payment-option__radio-button",
+                        id: ee.CreditCard,
                         name: "pay-option",
-                        value: K.CreditCard,
+                        value: ee.CreditCard,
                         onChange: this.handleOptionChange,
-                        checked: this.state.selectedOption === K.CreditCard
-                    }), l.createElement("label", {
-                        htmlFor: K.CreditCard
-                    }, l.createElement("img", {
-                        src: "http://twitch.com/images/recurly/credit_cards/mastercard.png"
-                    }), l.createElement("img", {
-                        src: "http://twitch.com/images/recurly/credit_cards/amex.png"
-                    }), l.createElement("img", {
-                        src: "http://twitch.com/images/recurly/credit_cards/visa.png"
-                    }), l.createElement("img", {
-                        src: "http://twitch.com/images/recurly/credit_cards/discover.png"
+                        checked: this.state.selectedOption === ee.CreditCard
+                    })), l.createElement("label", {
+                        htmlFor: ee.CreditCard
+                    }, l.createElement(L.K, {
+                        src: q.a,
+                        alt: "Credit Card",
+                        srcSet: {
+                            "1x": q.a,
+                            "2x": X.a
+                        }
                     }))), l.createElement(L._2, {
                         margin: {
                             right: 2
                         },
                         display: L.N.Inline
+                    }, l.createElement(L.W, {
+                        margin: {
+                            right: .5
+                        }
                     }, l.createElement("input", {
                         type: "radio",
-                        id: K.PayWithAmazon,
+                        className: "payment-option__radio-button",
+                        id: ee.PayWithAmazon,
                         name: "pay-option",
-                        value: K.PayWithAmazon,
+                        value: ee.PayWithAmazon,
                         onChange: this.handleOptionChange,
-                        checked: this.state.selectedOption === K.PayWithAmazon
-                    }), l.createElement("label", {
-                        htmlFor: K.PayWithAmazon
-                    }, l.createElement("img", {
-                        src: "http://twitch.com/images/recurly/credit_cards/amazon.png"
+                        checked: this.state.selectedOption === ee.PayWithAmazon
+                    })), l.createElement("label", {
+                        htmlFor: ee.PayWithAmazon
+                    }, l.createElement(G.a, {
+                        alt: "Amazon Pay",
+                        sources: {
+                            themed: !0,
+                            light: {
+                                "1x": g.a,
+                                "2x": k.a
+                            },
+                            dark: {
+                                "1x": T.a,
+                                "2x": b.a
+                            }
+                        }
                     }))), l.createElement(L._2, {
                         margin: {
                             right: 2
                         },
                         display: L.N.Inline
+                    }, l.createElement(L.W, {
+                        margin: {
+                            right: .5
+                        }
                     }, l.createElement("input", {
                         type: "radio",
-                        id: K.PayPal,
+                        className: "payment-option__radio-button",
+                        id: ee.PayPal,
                         name: "pay-option",
-                        value: K.PayPal,
+                        value: ee.PayPal,
                         onChange: this.handleOptionChange,
-                        checked: this.state.selectedOption === K.PayPal
-                    }), l.createElement("label", {
-                        htmlFor: K.PayPal
-                    }, l.createElement("img", {
-                        src: "http://twitch.com/images/recurly/credit_cards/paypal.png"
+                        checked: this.state.selectedOption === ee.PayPal
+                    })), l.createElement("label", {
+                        htmlFor: ee.PayPal
+                    }, l.createElement(G.a, {
+                        alt: "PayPal",
+                        sources: {
+                            themed: !0,
+                            light: {
+                                "1x": E.a,
+                                "2x": A.a
+                            },
+                            dark: {
+                                "1x": W.a,
+                                "2x": C.a
+                            }
+                        }
                     }))), l.createElement(L._2, {
-                        display: this.state.selectedOption === K.CreditCard ? L.N.Block : L.N.Hide
-                    }, l.createElement(te, {
+                        display: this.state.selectedOption === ee.CreditCard ? L.N.Block : L.N.Hide
+                    }, l.createElement(se, {
                         publicKey: this.props.config.publicKey,
                         updatePaymentMethod: this.props.updatePaymentMethod
                     })), l.createElement(L._2, {
-                        display: this.state.selectedOption === K.PayWithAmazon ? L.N.Block : L.N.Hide
-                    }, l.createElement(ne, {
+                        display: this.state.selectedOption === ee.PayWithAmazon ? L.N.Block : L.N.Hide
+                    }, l.createElement(ie, {
                         clientID: this.props.config.payWithAmazonConfigs.clientID,
                         isProduction: this.props.config.payWithAmazonConfigs.isProduction,
                         sellerID: this.props.config.payWithAmazonConfigs.sellerID,
                         updatePaymentMethod: this.props.updatePaymentMethod
                     })), l.createElement(L._2, {
-                        display: this.state.selectedOption === K.PayPal ? L.N.Block : L.N.Hide
-                    }, l.createElement(ae, {
+                        display: this.state.selectedOption === ee.PayPal ? L.N.Block : L.N.Hide
+                    }, l.createElement(oe, {
                         publicKey: this.props.config.publicKey,
                         braintreeClientAuthorization: this.props.config.braintreeClientAuthorization,
                         updatePaymentMethod: this.props.updatePaymentMethod
                     })))))
                 }, t
             }(l.Component),
-            ie = n("ibiB"),
-            oe = n.n(ie);
+            _e = n("ibiB"),
+            le = n.n(_e);
         ! function(e) {
             e.Tier1 = "1000", e.Tier2 = "2000", e.Tier3 = "3000"
-        }(re || (re = {}));
-        var de, ue, _e = (de = {}, de[re.Tier1] = function() {
+        }(de || (de = {}));
+        var me, ce, he = (me = {}, me[de.Tier1] = function() {
                 return Object(c.d)("Tier 1", "SubscriptionTier")
-            }, de[re.Tier2] = function() {
+            }, me[de.Tier2] = function() {
                 return Object(c.d)("Tier 2", "SubscriptionTier")
-            }, de[re.Tier3] = function() {
+            }, me[de.Tier3] = function() {
                 return Object(c.d)("Tier 3", "SubscriptionTier")
-            }, de),
-            le = n("wuJz"),
-            me = function(e) {
+            }, me),
+            fe = n("wuJz"),
+            Me = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -10429,9 +10489,9 @@ webpackJsonp([38], {
                         borderLeft: !0,
                         borderBottom: !0,
                         borderRight: !0,
-                        fullWidth: !0,
                         padding: {
-                            y: .5
+                            x: 2,
+                            y: 1
                         }
                     }, t.map(function(e, n) {
                         var r = "";
@@ -10444,26 +10504,31 @@ webpackJsonp([38], {
                             fullWidth: !0,
                             key: e.id,
                             padding: {
-                                x: 1,
-                                y: .5
+                                y: 1
                             }
                         }, l.createElement(L.U, null, l.createElement(L.J, {
                             cols: 5
                         }, l.createElement(L._2, {
                             display: L.N.Flex,
-                            alignItems: L.c.Center,
-                            fullHeight: !0
+                            alignItems: L.c.Center
+                        }, l.createElement(L.L, {
+                            to: e.subscriptionBenefit && e.subscriptionBenefit.user ? "/" + e.subscriptionBenefit.user.login : void 0
                         }, l.createElement(L.l, {
-                            alt: e.subscriptionBenefit ? e.subscriptionBenefit.user.displayName : "turbo",
-                            src: e.subscriptionBenefit ? e.subscriptionBenefit.user.profileImageURL : oe.a,
+                            alt: "turbo" === e.productType ? "turbo" : e.subscriptionBenefit && e.subscriptionBenefit.user ? e.subscriptionBenefit.user.displayName : "",
+                            src: "turbo" === e.productType ? le.a : e.subscriptionBenefit && e.subscriptionBenefit.user ? e.subscriptionBenefit.user.profileImageURL : void 0,
                             size: 40
-                        }), l.createElement(L._2, {
+                        })), l.createElement(L._2, {
                             padding: {
-                                left: .5
+                                left: 1
                             }
                         }, l.createElement(L._35, {
-                            "data-test-selector": "subscription-rows__display-name-text"
-                        }, e.subscriptionBenefit ? e.subscriptionBenefit.user.displayName : Object(c.d)("Twitch Turbo", "SubscriptionRows"))))), l.createElement(L.J, {
+                            "data-test-selector": "subscription-rows__display-name-text",
+                            bold: !0
+                        }, l.createElement(L.L, {
+                            type: L.M.Inherit,
+                            to: e.subscriptionBenefit && e.subscriptionBenefit.user ? "/" + e.subscriptionBenefit.user.login : void 0,
+                            hoverUnderlineNone: !0
+                        }, "turbo" === e.productType ? Object(c.d)("Twitch Turbo", "SubscriptionRows") : e.subscriptionBenefit && e.subscriptionBenefit.user ? e.subscriptionBenefit.user.displayName : void 0))))), l.createElement(L.J, {
                             cols: 1
                         }, l.createElement(L._2, {
                             display: L.N.Flex,
@@ -10476,7 +10541,7 @@ webpackJsonp([38], {
                         }, l.createElement(L._35, {
                             "data-test-selector": "subscription-rows__tier-text",
                             bold: !0
-                        }, e.subscriptionBenefit ? _e[e.subscriptionBenefit.tier]() : Object(c.d)("Turbo", "SubscriptionRows")))), l.createElement(L.J, {
+                        }, e.subscriptionBenefit ? he[e.subscriptionBenefit.tier]() : Object(c.d)("Turbo", "SubscriptionRows")))), l.createElement(L.J, {
                             cols: 1
                         }, l.createElement(L._2, {
                             display: L.N.Flex,
@@ -10515,10 +10580,10 @@ webpackJsonp([38], {
                     }, n)))
                 }, t
             }(l.Component),
-            ce = n("l21v"),
-            he = "64138",
-            fe = "SeemsGood",
-            Me = function(e) {
+            pe = n("l21v"),
+            ye = "64138",
+            Le = "SeemsGood",
+            Ye = function(e) {
                 return l.createElement(L._2, {
                     padding: {
                         y: 5
@@ -10530,8 +10595,8 @@ webpackJsonp([38], {
                         y: 2
                     }
                 }, l.createElement(L.K, {
-                    src: Object(ce.e)(he, 2),
-                    alt: fe
+                    src: Object(pe.e)(ye, 2),
+                    alt: Le
                 })), l.createElement(L._2, {
                     display: L.N.Flex,
                     justifyContent: L._1.Center,
@@ -10563,7 +10628,7 @@ webpackJsonp([38], {
                     onClick: e.onStartOverClick
                 }, Object(c.d)("Start Over", "UpdatePaymentSuccess"))))
             },
-            pe = function(e) {
+            ge = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -10602,8 +10667,8 @@ webpackJsonp([38], {
         n("AUiJ");
         ! function(e) {
             e.ZUORA_PARENT_LAYOUT = "zuora-payment-method__zuora-parent-layout", e.UPDATE_PAYMENT_BUTTON = "zuora-payment-method__update-payment-button"
-        }(ue || (ue = {}));
-        var ye, Le = function(e) {
+        }(ce || (ce = {}));
+        var De, ke = function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.state = {
@@ -10715,7 +10780,7 @@ webpackJsonp([38], {
                     fillContent: !0
                 })), l.createElement(L._2, {
                     display: this.state.zuoraConfigured ? L.N.Block : L.N.Hide,
-                    "data-test-selector": ue.ZUORA_PARENT_LAYOUT
+                    "data-test-selector": ce.ZUORA_PARENT_LAYOUT
                 }, this.renderErrorMessage(), l.createElement("div", {
                     id: "zuora_payment",
                     className: this.state.updatingPaymentMethod ? "zuora-disabled" : ""
@@ -10729,7 +10794,7 @@ webpackJsonp([38], {
                     onClick: this.handleSubmit,
                     state: this.state.updatingPaymentMethod ? L.y.Loading : L.y.Default,
                     disabled: this.state.updatingPaymentMethod,
-                    "data-test-selector": ue.UPDATE_PAYMENT_BUTTON
+                    "data-test-selector": ce.UPDATE_PAYMENT_BUTTON
                 }, Object(c.d)("Update Card", "ZuoraCardComponent")))))
             }, t.prototype.initZuoraIFrame = function() {
                 var e = this,
@@ -10757,26 +10822,26 @@ webpackJsonp([38], {
         }(l.Component);
         ! function(e) {
             e[e.SubRows = 0] = "SubRows", e[e.UpdatePayment = 1] = "UpdatePayment", e[e.UpdateSuccess = 2] = "UpdateSuccess"
-        }(ye || (ye = {}));
-        var Ye;
+        }(De || (De = {}));
+        var ve;
         ! function(e) {
             e.TOTAL_SUB_PRICE_TEXT = "payment-method-card__total-sub-price-text", e.UPDATE_BUTTON = "payment-method-card__update-button", e.CLOSE_BUTTON = "payment-method-card__close-button"
-        }(Ye || (Ye = {}));
-        var ge, De = function(e) {
+        }(ve || (ve = {}));
+        var Te, we = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        viewType: ye.SubRows,
+                        viewType: De.SubRows,
                         updatePaymentError: !1
                     }, t.renderPaymentProvider = function() {
                         var e = t.props.paymentProviderConfig;
-                        return e.provider === r.Recurly ? l.createElement(se, {
+                        return e.provider === r.Recurly ? l.createElement(ue, {
                             config: e,
                             updatePaymentMethod: t.updatePaymentMethod
-                        }) : e.provider === r.Zuora ? l.createElement(Le, {
+                        }) : e.provider === r.Zuora ? l.createElement(ke, {
                             config: e,
                             updatePaymentMethod: t.updatePaymentMethod
-                        }) : e.provider === r.Xsolla ? l.createElement(pe, {
+                        }) : e.provider === r.Xsolla ? l.createElement(ge, {
                             config: e
                         }) : l.createElement(L._35, null, Object(c.d)("Oops! Payment provider is unavailable. Please try again later.", "PaymentMethodCard"))
                     }, t.renderPaymentTypeImage = function() {
@@ -10799,7 +10864,7 @@ webpackJsonp([38], {
                                             "2x": k.a
                                         },
                                         dark: {
-                                            "1x": w.a,
+                                            "1x": T.a,
                                             "2x": b.a
                                         }
                                     }
@@ -10810,7 +10875,7 @@ webpackJsonp([38], {
                                     sources: {
                                         themed: !0,
                                         light: {
-                                            "1x": O.a,
+                                            "1x": E.a,
                                             "2x": A.a
                                         },
                                         dark: {
@@ -10830,21 +10895,21 @@ webpackJsonp([38], {
                                 })
                         }
                     }, t.toggleButton = function() {
-                        return t.state.viewType === ye.SubRows ? t.setState({
-                            viewType: ye.UpdatePayment,
+                        return t.state.viewType === De.SubRows ? t.setState({
+                            viewType: De.UpdatePayment,
                             updatePaymentError: !1
                         }) : t.setState({
-                            viewType: ye.SubRows,
+                            viewType: De.SubRows,
                             updatePaymentError: !1
                         })
                     }, t.onDoneClick = function() {
                         t.setState({
-                            viewType: ye.SubRows,
+                            viewType: De.SubRows,
                             updatePaymentError: !1
                         })
                     }, t.onStartOverClick = function() {
                         return t.setState({
-                            viewType: ye.UpdatePayment,
+                            viewType: De.UpdatePayment,
                             updatePaymentError: !1
                         })
                     }, t.updatePaymentMethod = function(e, n, a) {
@@ -10866,12 +10931,12 @@ webpackJsonp([38], {
                                         })];
                                     case 1:
                                         return s.sent().error ? (this.setState({
-                                            viewType: ye.UpdatePayment,
+                                            viewType: De.UpdatePayment,
                                             updatePaymentError: !0
                                         }), [2, Promise.reject(null)]) : [4, this.props.refetchPaymentMethodsData()];
                                     case 2:
                                         return s.sent(), [2, this.setState({
-                                            viewType: ye.UpdateSuccess,
+                                            viewType: De.UpdateSuccess,
                                             updatePaymentError: !1
                                         })]
                                 }
@@ -10903,34 +10968,39 @@ webpackJsonp([38], {
                     }, l.createElement(L._2, {
                         display: L.N.Flex,
                         margin: {
-                            y: .5
+                            y: 1
                         }
                     }, this.renderPaymentTypeImage(), l.createElement(L._2, {
+                        display: L.N.Flex,
                         margin: {
-                            left: 2
+                            left: 1
                         }
-                    }, this.props.lastFour && l.createElement(B, {
+                    }, this.props.lastFour && l.createElement(L._2, {
+                        display: L.N.Flex,
+                        flexDirection: L.P.Column,
+                        justifyContent: L._1.Center
+                    }, l.createElement(V, {
                         lastFourDigits: this.props.lastFour
-                    }))), l.createElement(L._35, {
+                    })))), l.createElement(L._35, {
                         bold: !0,
                         color: L.I.Alt2,
                         type: L._40.P,
-                        "data-test-selector": Ye.TOTAL_SUB_PRICE_TEXT
+                        "data-test-selector": ve.TOTAL_SUB_PRICE_TEXT
                     }, this.numOfSubscriptions, " (", this.pricePerMonth, ")")), l.createElement(L._2, {
                         alignItems: L.c.Center,
                         flexShrink: 1,
                         display: L.N.Flex
-                    }, this.state.viewType === ye.SubRows ? l.createElement(L.u, {
+                    }, this.state.viewType === De.SubRows ? l.createElement(L.u, {
                         onClick: this.toggleButton,
-                        "data-test-selector": Ye.UPDATE_BUTTON
+                        "data-test-selector": ve.UPDATE_BUTTON
                     }, Object(c.d)("Update", "PaymentMethodCard")) : l.createElement(L.u, {
                         onClick: this.toggleButton,
                         type: L.z.Text,
-                        "data-test-selector": Ye.CLOSE_BUTTON
-                    }, Object(c.d)("Close", "PaymentMethodCard")))), this.state.viewType === ye.UpdateSuccess && l.createElement(Me, {
+                        "data-test-selector": ve.CLOSE_BUTTON
+                    }, Object(c.d)("Close", "PaymentMethodCard")))), this.state.viewType === De.UpdateSuccess && l.createElement(Ye, {
                         onDoneClick: this.onDoneClick,
                         onStartOverClick: this.onStartOverClick
-                    }), this.state.viewType === ye.UpdatePayment && l.createElement("div", null, l.createElement(L._2, {
+                    }), this.state.viewType === De.UpdatePayment && l.createElement("div", null, l.createElement(L._2, {
                         margin: {
                             y: 1
                         }
@@ -10942,7 +11012,7 @@ webpackJsonp([38], {
                         color: L.I.Error
                     }, Object(c.d)("Your request could not be processed. Please try again later.", "PaymentMethodCard"))), l.createElement(L._35, {
                         color: L.I.Alt2
-                    }, this.numOfSubscriptionsWillRenew)))), this.state.viewType === ye.SubRows && l.createElement(me, {
+                    }, this.numOfSubscriptionsWillRenew)))), this.state.viewType === De.SubRows && l.createElement(Me, {
                         subscriptions: this.props.subscriptions
                     }))
                 }, Object.defineProperty(t.prototype, "numOfSubscriptions", {
@@ -10983,8 +11053,8 @@ webpackJsonp([38], {
                     configurable: !0
                 }), t
             }(l.Component),
-            ke = (n("2bN8"), n("e9RI")),
-            ve = function(e) {
+            be = (n("2bN8"), n("e9RI")),
+            Se = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.refetchPaymentMethodsData = function() {
@@ -10994,9 +11064,13 @@ webpackJsonp([38], {
                 return _.__extends(t, e), t.prototype.componentDidUpdate = function() {
                     this.props.data.loading && !this.props.data.error || this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    if (this.props.data.loading) return l.createElement(L._4, {
+                    if (this.props.data.loading) return l.createElement(L._2, {
+                        padding: {
+                            y: 5
+                        }
+                    }, l.createElement(L._4, {
                         fillContent: !0
-                    });
+                    }));
                     if (this.props.data.error) return l.createElement(h.a, {
                         message: Object(c.d)("Error loading payment methods.", "PaymentMethodsTabComponent")
                     });
@@ -11034,7 +11108,7 @@ webpackJsonp([38], {
                         var i = _.__assign({}, a, {
                             provider: s
                         });
-                        return l.createElement(De, {
+                        return l.createElement(we, {
                             lastFour: n.lastFour,
                             subscriptions: n.purchaseProfiles,
                             paymentProviderConfig: i,
@@ -11046,13 +11120,13 @@ webpackJsonp([38], {
                     })
                 }, t
             }(l.Component),
-            we = Object(m.compose)(Object(M.a)(ke), Object(f.d)("PaymentMethodsTab"))(ve),
-            Te = n("pSMk"),
-            be = function(e, t) {
+            xe = Object(m.compose)(Object(M.a)(be), Object(f.d)("PaymentMethodsTab"))(Se),
+            He = n("pSMk"),
+            je = function(e, t) {
                 if (void 0 === e && (e = 1), void 0 === t && (t = 10), t < e) throw new Error("Invalid range");
                 return Array.from(Array(t + 1).keys()).slice(e)
             },
-            Se = function(e) {
+            Pe = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -11063,25 +11137,25 @@ webpackJsonp([38], {
                     if (t < n) throw new Error("Current page cannot be greater than total number of pages.");
                     var a = t - 3;
                     if (t <= 10) {
-                        var r = be(1, Math.max(t, 1)).map(function(t) {
+                        var r = je(1, Math.max(t, 1)).map(function(t) {
                             return e.renderButton(t)
                         });
                         return this.renderWrapper(r)
                     }
-                    var s = be(1, 2).map(function(t) {
+                    var s = je(1, 2).map(function(t) {
                             return e.renderButton(t)
                         }),
-                        i = be(t - 1, t).map(function(t) {
+                        i = je(t - 1, t).map(function(t) {
                             return e.renderButton(t)
                         }),
-                        o = be(n - 1, n + 1).map(function(t) {
+                        o = je(n - 1, n + 1).map(function(t) {
                             return e.renderButton(t)
                         }),
                         d = this.renderEllipsis("start"),
                         u = this.renderEllipsis("end");
-                    return n <= 4 ? (s = be(1, Math.max(n + 1, 2)).map(function(t) {
+                    return n <= 4 ? (s = je(1, Math.max(n + 1, 2)).map(function(t) {
                         return e.renderButton(t)
-                    }), this.renderWrapper(s.concat([d], i))) : n >= a ? (i = be(n - 1, t).map(function(t) {
+                    }), this.renderWrapper(s.concat([d], i))) : n >= a ? (i = je(n - 1, t).map(function(t) {
                         return e.renderButton(t)
                     }), this.renderWrapper(s.concat([d], i))) : this.renderWrapper(s.concat([d], o, [u], i))
                 }, t.prototype.renderWrapper = function(e) {
@@ -11130,18 +11204,18 @@ webpackJsonp([38], {
         n("r7/5");
         ! function(e) {
             e.Tier1 = "1000", e.Tier2 = "2000", e.Tier3 = "3000"
-        }(ge || (ge = {}));
-        var xe, He = function() {
+        }(Te || (Te = {}));
+        var Ee, Oe = function() {
                 return Object(c.d)("Twitch Turbo", "TransactionHistoryTab")
             },
-            je = function(e) {
+            Ae = function(e) {
                 return l.createElement(L._33, null, l.createElement(L._30, null, l.createElement(L._35, null, e.purchasedAt ? Object(c.c)(a(e.purchasedAt), "medium") : "-")), l.createElement(L._30, null, l.createElement(L._2, {
                     display: L.N.Flex
                 }, l.createElement(L.L, {
                     to: e.product.owner ? "/" + e.product.owner.login : void 0
                 }, l.createElement(L.l, {
-                    alt: "turbo" === e.product.name ? He() : e.product.name,
-                    src: "turbo" === e.product.name ? oe.a : e.product.owner ? e.product.owner.profileImageURL : void 0,
+                    alt: "Turbo" === e.product.name ? Oe() : e.product.name,
+                    src: "Turbo" === e.product.name ? le.a : e.product.owner ? e.product.owner.profileImageURL : void 0,
                     size: 40
                 })), l.createElement(L._2, {
                     display: L.N.Flex,
@@ -11155,26 +11229,26 @@ webpackJsonp([38], {
                     type: L.M.Inherit,
                     to: e.product.owner ? "/" + e.product.owner.login : void 0,
                     hoverUnderlineNone: !0
-                }, "turbo" === e.product.name ? He() : e.product.name))))), l.createElement(L._30, null, l.createElement(L._35, null, function(e, t) {
+                }, "Turbo" === e.product.name ? Oe() : e.product.name))))), l.createElement(L._30, null, l.createElement(L._35, null, function(e, t) {
                     if ("SUBSCRIPTION" === e.type) {
-                        if ("turbo" === e.name) return Object(c.d)("Turbo - Subscription", "TransactionHistoryTab");
+                        if ("Turbo" === e.name) return Object(c.d)("Turbo - Subscription", "TransactionHistoryTab");
                         if (e.tier) {
                             if (t.gift) switch (e.tier) {
-                                case ge.Tier1:
+                                case Te.Tier1:
                                     return Object(c.d)("Gift Subscription - Tier 1", "TransactionHistoryTab");
-                                case ge.Tier2:
+                                case Te.Tier2:
                                     return Object(c.d)("Gift Subscription - Tier 2", "TransactionHistoryTab");
-                                case ge.Tier3:
+                                case Te.Tier3:
                                     return Object(c.d)("Gift Subscription - Tier 3", "TransactionHistoryTab");
                                 default:
                                     return "-"
                             }
                             switch (e.tier) {
-                                case ge.Tier1:
+                                case Te.Tier1:
                                     return Object(c.d)("Channel Subscription - Tier 1", "TransactionHistoryTab");
-                                case ge.Tier2:
+                                case Te.Tier2:
                                     return Object(c.d)("Channel Subscription - Tier 2", "TransactionHistoryTab");
-                                case ge.Tier3:
+                                case Te.Tier3:
                                     return Object(c.d)("Channel Subscription - Tier 3", "TransactionHistoryTab");
                                 default:
                                     return "-"
@@ -11198,7 +11272,9 @@ webpackJsonp([38], {
                         return e < 0 ? "+" + n : n
                     }
                     return "-"
-                }(e.grossAmount, e.currency)))), l.createElement(L._30, null, function(e, t) {
+                }(e.grossAmount, e.currency)))), l.createElement(L._30, null, l.createElement(L._2, {
+                    textAlign: L._36.Center
+                }, function(e, t) {
                     if (e === p) return l.createElement(L.K, {
                         src: I.a,
                         alt: "xsolla icon",
@@ -11218,7 +11294,7 @@ webpackJsonp([38], {
                                         "2x": k.a
                                     },
                                     dark: {
-                                        "1x": w.a,
+                                        "1x": T.a,
                                         "2x": b.a
                                     }
                                 }
@@ -11229,7 +11305,7 @@ webpackJsonp([38], {
                                 sources: {
                                     themed: !0,
                                     light: {
-                                        "1x": O.a,
+                                        "1x": E.a,
                                         "2x": A.a
                                     },
                                     dark: {
@@ -11248,19 +11324,19 @@ webpackJsonp([38], {
                                 }
                             })
                     }
-                }(e.paymentMethod.provider, e.paymentMethod.paymentType)))
+                }(e.paymentMethod.provider, e.paymentMethod.paymentType))))
             },
-            Pe = n("b9g4"),
-            Oe = n("T2Gu");
+            Fe = n("b9g4"),
+            We = n("T2Gu");
         ! function(e) {
             e.PurchaseDateDesc = "PURCHASE_DATE_DESC", e.PurchaseDateAsc = "PURCHASE_DATE_ASC", e.PriceDesc = "PRICE_DESC", e.PriceAsc = "PRICE_ASC"
-        }(xe || (xe = {}));
-        var Ee;
+        }(Ee || (Ee = {}));
+        var Ne;
         ! function(e) {
             e.All = "ALL", e.Subscriptions = "SUBSCRIPTIONS"
-        }(Ee || (Ee = {}));
-        var Ae = 15,
-            Fe = function(e) {
+        }(Ne || (Ne = {}));
+        var Ce = 15,
+            ze = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -11290,16 +11366,16 @@ webpackJsonp([38], {
                             }
                         }, "TransactionHistoryTab"))))
                     }, t.getCurrentPage = function() {
-                        return Math.floor(t.state.currentIndex / Ae) + 1
+                        return Math.floor(t.state.currentIndex / Ce) + 1
                     }, t.getTotalPages = function() {
-                        return Math.ceil(t.props.data.currentUser.paymentTransactions.totalCount / Ae) || 1
+                        return Math.ceil(t.props.data.currentUser.paymentTransactions.totalCount / Ce) || 1
                     }, t.handlePageJump = function(e) {
                         return _.__awaiter(t, void 0, void 0, function() {
                             var t, n;
                             return _.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
-                                        return (t = e.currentTarget.dataset.page) ? (n = (parseInt(t, 10) - 1) * Ae, [4, this.queryPageJump(n)]) : [3, 2];
+                                        return (t = e.currentTarget.dataset.page) ? (n = (parseInt(t, 10) - 1) * Ce, [4, this.queryPageJump(n)]) : [3, 2];
                                     case 1:
                                         a.sent(), this.setState({
                                             currentIndex: n
@@ -11325,11 +11401,11 @@ webpackJsonp([38], {
                             return _.__generator(this, function(e) {
                                 switch (e.label) {
                                     case 0:
-                                        return [4, this.queryPageJump(this.state.currentIndex + Ae)];
+                                        return [4, this.queryPageJump(this.state.currentIndex + Ce)];
                                     case 1:
                                         return e.sent(), this.setState(function(e) {
                                             return {
-                                                currentIndex: e.currentIndex + Ae
+                                                currentIndex: e.currentIndex + Ce
                                             }
                                         }), [2]
                                 }
@@ -11340,11 +11416,11 @@ webpackJsonp([38], {
                             return _.__generator(this, function(e) {
                                 switch (e.label) {
                                     case 0:
-                                        return [4, this.queryPageJump(this.state.currentIndex - Ae)];
+                                        return [4, this.queryPageJump(this.state.currentIndex - Ce)];
                                     case 1:
                                         return e.sent(), this.setState(function(e) {
                                             return {
-                                                currentIndex: e.currentIndex - Ae
+                                                currentIndex: e.currentIndex - Ce
                                             }
                                         }), [2]
                                 }
@@ -11357,7 +11433,7 @@ webpackJsonp([38], {
                                 switch (a.label) {
                                     case 0:
                                         return e = this.state.dateSortType, t = e === L._22.Default || e === L._22.Ascending ? L._22.Descending : L._22.Ascending, n = _.__assign({}, this.state.currentFilters, {
-                                            sortBy: t === L._22.Descending ? xe.PurchaseDateDesc : xe.PurchaseDateAsc
+                                            sortBy: t === L._22.Descending ? Ee.PurchaseDateDesc : Ee.PurchaseDateAsc
                                         }), [4, this.props.getFilteredQuery(n)];
                                     case 1:
                                         return a.sent(), this.setState({
@@ -11376,7 +11452,7 @@ webpackJsonp([38], {
                                 switch (a.label) {
                                     case 0:
                                         return e = this.state.costSortType, t = e === L._22.Default || e === L._22.Ascending ? L._22.Descending : L._22.Ascending, n = _.__assign({}, this.state.currentFilters, {
-                                            sortBy: t === L._22.Descending ? xe.PriceDesc : xe.PriceAsc
+                                            sortBy: t === L._22.Descending ? Ee.PriceDesc : Ee.PriceAsc
                                         }), [4, this.props.getFilteredQuery(n)];
                                     case 1:
                                         return a.sent(), this.setState({
@@ -11439,7 +11515,7 @@ webpackJsonp([38], {
                         t = this.getMaxDateDefault(),
                         n = this.props.data.currentUser.paymentTransactions.edges.map(function(e, t) {
                             var n = e.node;
-                            return l.createElement(je, _.__assign({
+                            return l.createElement(Ae, _.__assign({
                                 key: t
                             }, n))
                         });
@@ -11460,7 +11536,7 @@ webpackJsonp([38], {
                         flexDirection: L.P.Column
                     }, l.createElement(L._35, {
                         bold: !0
-                    }, Object(c.d)("Start", "TransactionHistoryTab")), l.createElement(Te.a, {
+                    }, Object(c.d)("Start", "TransactionHistoryTab")), l.createElement(He.a, {
                         defaultDate: e,
                         onChange: this.handleMinDate
                     }))), l.createElement(L.J, {
@@ -11470,7 +11546,7 @@ webpackJsonp([38], {
                         flexDirection: L.P.Column
                     }, l.createElement(L._35, {
                         bold: !0
-                    }, Object(c.d)("End", "TransactionHistoryTab")), l.createElement(Te.a, {
+                    }, Object(c.d)("End", "TransactionHistoryTab")), l.createElement(He.a, {
                         defaultDate: t,
                         onChange: this.handleMaxDate
                     }))))), l.createElement(L._2, {
@@ -11518,7 +11594,7 @@ webpackJsonp([38], {
                         onClick: this.handleSortCost
                     }), l.createElement(L._32, {
                         label: Object(c.d)("Payment Method", "TransactionHistoryTab")
-                    })), l.createElement(L._29, null, n)), !n.length && this.renderNoTransactionsMessage()), l.createElement(Se, {
+                    })), l.createElement(L._29, null, n)), !n.length && this.renderNoTransactionsMessage()), l.createElement(Pe, {
                         currentPage: this.getCurrentPage(),
                         totalNumberPages: this.getTotalPages(),
                         onNext: this.handleNextPage,
@@ -11527,16 +11603,16 @@ webpackJsonp([38], {
                     }))
                 }, t
             }(l.Component),
-            We = Object(i.d)(Object(M.a)(Oe), Object(M.a)(Pe, {
+            Ie = Object(i.d)(Object(M.a)(We), Object(M.a)(Fe, {
                 options: function(e) {
                     return {
                         variables: {
-                            first: Ae,
+                            first: Ce,
                             after: "0",
                             filters: {
                                 userID: e.data.currentUser.id,
-                                sortBy: xe.PurchaseDateDesc,
-                                type: Ee.All
+                                sortBy: Ee.PurchaseDateDesc,
+                                type: Ne.All
                             }
                         }
                     }
@@ -11545,7 +11621,7 @@ webpackJsonp([38], {
                     return _.__assign({}, e, {
                         getOffsetQuery: function(t, n) {
                             return e.data.fetchMore({
-                                query: Pe,
+                                query: Fe,
                                 variables: {
                                     first: e.data.variables.first,
                                     after: "" + t,
@@ -11558,7 +11634,7 @@ webpackJsonp([38], {
                         },
                         getFilteredQuery: function(t) {
                             return e.data.fetchMore({
-                                query: Pe,
+                                query: Fe,
                                 variables: {
                                     first: e.data.variables.first,
                                     after: "0",
@@ -11571,8 +11647,8 @@ webpackJsonp([38], {
                         }
                     })
                 }
-            }))(Fe),
-            Ne = function(e) {
+            }))(ze),
+            Je = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -11615,15 +11691,15 @@ webpackJsonp([38], {
                         margin: {
                             y: 2
                         }
-                    }, this.state.txnHistoryTabActive ? l.createElement(We, null) : l.createElement(we, null))))) : (this.props.onAnonymousVisit(), l.createElement(h.a, {
+                    }, this.state.txnHistoryTabActive ? l.createElement(Ie, null) : l.createElement(xe, null))))) : (this.props.onAnonymousVisit(), l.createElement(h.a, {
                         message: Object(c.d)("You must be logged in to view this page", "PaymentsLandingPagePresentationComponent")
                     }))
                 }, t
             }(l.Component),
-            Ce = Object(m.compose)(Object(f.d)("PaymentsLandingPagePresentation", {
+            Re = Object(m.compose)(Object(f.d)("PaymentsLandingPagePresentation", {
                 autoReportInteractive: !0
-            }))(Ne),
-            ze = Object(s.b)(function(e) {
+            }))(Je),
+            Ue = Object(s.b)(function(e) {
                 return {
                     isLoggedIn: Object(u.d)(e)
                 }
@@ -11633,9 +11709,9 @@ webpackJsonp([38], {
                         return Object(d.f)(o.a.PaymentsLandingPage)
                     }
                 }, e)
-            })(Ce);
+            })(Re);
         n.d(t, "PaymentsLandingPage", function() {
-            return ze
+            return Ue
         })
     },
     hPuz: function(e, t, n) {
@@ -13496,13 +13572,13 @@ webpackJsonp([38], {
             var p, y, L, Y, g, D = Math[_.partialMethod ? String(_.partialMethod) : "floor"],
                 k = s(f, h),
                 v = f.getTimezoneOffset() - h.getTimezoneOffset(),
-                w = D(k / 60) - v;
-            if ("s" === (p = _.unit ? String(_.unit) : w < 1 ? "s" : w < 60 ? "m" : w < o ? "h" : w < d ? "d" : w < u ? "M" : "Y")) return c("xSeconds", k, M);
-            if ("m" === p) return c("xMinutes", w, M);
-            if ("h" === p) return y = D(w / 60), c("xHours", y, M);
-            if ("d" === p) return L = D(w / o), c("xDays", L, M);
-            if ("M" === p) return Y = D(w / d), c("xMonths", Y, M);
-            if ("Y" === p) return g = D(w / u), c("xYears", g, M);
+                T = D(k / 60) - v;
+            if ("s" === (p = _.unit ? String(_.unit) : T < 1 ? "s" : T < 60 ? "m" : T < o ? "h" : T < d ? "d" : T < u ? "M" : "Y")) return c("xSeconds", k, M);
+            if ("m" === p) return c("xMinutes", T, M);
+            if ("h" === p) return y = D(T / 60), c("xHours", y, M);
+            if ("d" === p) return L = D(T / o), c("xDays", L, M);
+            if ("M" === p) return Y = D(T / d), c("xMonths", Y, M);
+            if ("Y" === p) return g = D(T / u), c("xYears", g, M);
             throw new Error("Unknown unit: " + p)
         }
     },
@@ -13707,6 +13783,9 @@ webpackJsonp([38], {
                 }
             })
         })
+    },
+    uVdc: function(e, t, n) {
+        e.exports = n.p + "assets/credit_cards_1x-3ceef2323563b8454856389c384a7b6c.png"
     },
     ulq9: function(e, t, n) {
         ! function(e, t) {
@@ -14744,13 +14823,13 @@ webpackJsonp([38], {
             D = /([Z+-].*)$/,
             k = /^(Z)$/,
             v = /^([+-])(\d{2})$/,
-            w = /^([+-])(\d{2}):?(\d{2})$/;
+            T = /^([+-])(\d{2}):?(\d{2})$/;
         e.exports = function(e, t) {
             if (r(e)) return new Date(e.getTime());
             if ("string" != typeof e) return new Date(e);
             var n = (t || {}).additionalDigits;
             n = null == n ? o : Number(n);
-            var T = function(e) {
+            var w = function(e) {
                     var t, n = {},
                         a = e.split(d);
                     if (u.test(a[0]) ? (n.date = null, t = a[0]) : (n.date = a[0], t = a[1]), t) {
@@ -14779,7 +14858,7 @@ webpackJsonp([38], {
                     return {
                         year: null
                     }
-                }(T.date, n),
+                }(w.date, n),
                 S = b.year,
                 x = function(e, t) {
                     if (null === t) return null;
@@ -14807,7 +14886,7 @@ webpackJsonp([38], {
             if (x) {
                 var H, j = x.getTime(),
                     P = 0;
-                return T.time && (P = function(e) {
+                return w.time && (P = function(e) {
                     var t, n, a;
                     if (t = L.exec(e)) return (n = parseFloat(t[1].replace(",", "."))) % 24 * s;
                     if (t = Y.exec(e)) return n = parseInt(t[1], 10), a = parseFloat(t[2].replace(",", ".")), n % 24 * s + a * i;
@@ -14817,10 +14896,10 @@ webpackJsonp([38], {
                         return n % 24 * s + a * i + 1e3 * r
                     }
                     return null
-                }(T.time)), T.timezone ? H = function(e) {
+                }(w.time)), w.timezone ? H = function(e) {
                     var t, n;
-                    return (t = k.exec(e)) ? 0 : (t = v.exec(e)) ? (n = 60 * parseInt(t[2], 10), "+" === t[1] ? -n : n) : (t = w.exec(e)) ? (n = 60 * parseInt(t[2], 10) + parseInt(t[3], 10), "+" === t[1] ? -n : n) : 0
-                }(T.timezone) : (H = new Date(j + P).getTimezoneOffset(), H = new Date(j + P + H * i).getTimezoneOffset()), new Date(j + P + H * i)
+                    return (t = k.exec(e)) ? 0 : (t = v.exec(e)) ? (n = 60 * parseInt(t[2], 10), "+" === t[1] ? -n : n) : (t = T.exec(e)) ? (n = 60 * parseInt(t[2], 10) + parseInt(t[3], 10), "+" === t[1] ? -n : n) : 0
+                }(w.timezone) : (H = new Date(j + P).getTimezoneOffset(), H = new Date(j + P + H * i).getTimezoneOffset()), new Date(j + P + H * i)
             }
             return new Date(e)
         }
@@ -15136,4 +15215,4 @@ webpackJsonp([38], {
         }
     }
 });
-//# sourceMappingURL=pages.payments-99178d6aeaaf86ef8c51e813b17cef17.js.map
+//# sourceMappingURL=pages.payments-2cc788379dbbc643041990e86d2bb1f9.js.map

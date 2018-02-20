@@ -1032,6 +1032,8 @@ webpackJsonp([68], {
         });
         var i, r = {
                 BitsLeaderboardEvents: "leaderboard-events-v1",
+                CampaignGlobalEvents: "campaign-events",
+                CampaignUserEvents: "user-campaign-events",
                 ChannelBitsEvents: "channel-bits-events-v1",
                 ChannelBitsPinEvents: "channel-bit-events-public",
                 ChannelEventUpdates: "channel-event-updates",
@@ -1090,6 +1092,8 @@ webpackJsonp([68], {
                 UploadService: "upload",
                 UserBitsBalanceUpdate: "balance_update",
                 UserBitsBadgeUpdate: "badge_update",
+                UserCampaignProgressEvent: "progress",
+                UserCampaignRewardEvent: "reward",
                 UserCrateEvent: "crate-event",
                 UserGiftEvent: "gift-event",
                 UserMention: "user_mention",
@@ -3032,7 +3036,7 @@ webpackJsonp([68], {
                 }
             }), Object(v.a)([{
                 topic: function(e) {
-                    return Object(_.v)(e.currentUserID)
+                    return Object(_.x)(e.currentUserID)
                 },
                 mapMessageTypesToProps: {
                     whisper_received: "whisperReceived",
@@ -3279,7 +3283,7 @@ webpackJsonp([68], {
                             }, i.prototype.render = function() {
                                 return s.createElement(t, h.__assign({}, this.props))
                             }, i.prototype.subscribe = function(e) {
-                                this.unsubscriber = Object(g.n)({
+                                this.unsubscriber = Object(g.o)({
                                     fragment: e.fragment,
                                     id: e.id,
                                     topic: e.topic,
@@ -3297,7 +3301,7 @@ webpackJsonp([68], {
                         id: "User:" + n.id,
                         skip: n.skip,
                         fragment: b,
-                        topic: Object(g.k)(n.currentUserID),
+                        topic: Object(g.l)(n.currentUserID),
                         type: f.PubsubMessageType.Presence,
                         mutator: function(e, t) {
                             if (!t) return null;
@@ -5510,7 +5514,7 @@ webpackJsonp([68], {
                     }
                 }), Object(p.a)([{
                     topic: function(e) {
-                        return Object(g.t)(e.data.currentUser && e.data.currentUser.id || "")
+                        return Object(g.v)(e.data.currentUser && e.data.currentUser.id || "")
                     },
                     mapMessageTypesToProps: {
                         "*": "subscriptionInfo"
@@ -12265,17 +12269,17 @@ webpackJsonp([68], {
             return r.PubsubTopic.ChatRoomsChannel + "." + e
         }, t.f = function(e) {
             return r.PubsubTopic.ChatRoomsUser + "." + e
-        }, t.h = function(e) {
+        }, t.i = function(e) {
             return r.PubsubTopic.ImageUpload + "." + e
-        }, t.p = function(e) {
+        }, t.q = function(e) {
             return r.PubsubTopic.UploadService + "." + e
-        }, t.u = function(e) {
+        }, t.w = function(e) {
             return r.PubsubTopic.VideoPlaybackById + "." + e
-        }, t.k = function(e) {
-            return r.PubsubTopic.Presence + "." + e
-        }, t.i = function(e, t) {
-            return r.PubsubTopic.ModerationActionsByUserAndChannel + "." + e + "." + t
         }, t.l = function(e) {
+            return r.PubsubTopic.Presence + "." + e
+        }, t.j = function(e, t) {
+            return r.PubsubTopic.ModerationActionsByUserAndChannel + "." + e + "." + t
+        }, t.m = function(e) {
             return r.PubsubTopic.Raid + "." + e
         }, t.g = function(e) {
             return r.PubsubTopic.Friendship + "." + e
@@ -12283,23 +12287,27 @@ webpackJsonp([68], {
             return r.PubsubTopic.ChannelBitsPinEvents + "." + e
         }, t.a = function(e) {
             return r.PubsubTopic.BitsLeaderboardEvents + "." + e.id
-        }, t.q = function(e) {
-            return r.PubsubTopic.UserBitsUpdates + "." + e
-        }, t.t = function(e) {
-            return r.PubsubTopic.UserSubscribeEvents + "." + e
-        }, t.s = function(e) {
-            return r.PubsubTopic.UserCrateEvents + "." + e
         }, t.r = function(e) {
-            return r.PubsubTopic.UserCommerceEvents + "." + e
+            return r.PubsubTopic.UserBitsUpdates + "." + e
         }, t.v = function(e) {
+            return r.PubsubTopic.UserSubscribeEvents + "." + e
+        }, t.u = function(e) {
+            return r.PubsubTopic.UserCrateEvents + "." + e
+        }, t.h = function(e) {
+            return r.PubsubTopic.CampaignGlobalEvents + "." + e
+        }, t.s = function(e) {
+            return r.PubsubTopic.CampaignUserEvents + "." + e
+        }, t.t = function(e) {
+            return r.PubsubTopic.UserCommerceEvents + "." + e
+        }, t.x = function(e) {
             return r.PubsubTopic.Whispers + "." + e
-        }, t.j = function(e) {
+        }, t.k = function(e) {
             return r.PubsubTopic.OnsiteNotifications + "." + e
-        }, t.m = function(e) {
+        }, t.n = function(e) {
             return r.PubsubTopic.StreamChatRoom + "." + e
         }, t.c = function(e) {
             return r.PubsubTopic.ChannelEventUpdates + "." + e
-        }, t.o = function(e) {
+        }, t.p = function(e) {
             return i.j.subscribe({
                 topic: e.topic,
                 onMessage: function(t) {
@@ -12310,7 +12318,7 @@ webpackJsonp([68], {
                     })
                 }
             })
-        }, t.n = function(e) {
+        }, t.o = function(e) {
             return i.j.subscribe({
                 topic: e.topic,
                 onMessage: function(t) {
@@ -16739,7 +16747,7 @@ webpackJsonp([68], {
                     return {
                         query: ue,
                         skip: !e.friends || 0 === e.friends.length,
-                        topic: Object(ee.k)(e.selfID || ""),
+                        topic: Object(ee.l)(e.selfID || ""),
                         type: X.PubsubMessageType.Presence,
                         mutator: function(t, n) {
                             if (!n.currentUser || !n.currentUser.friends) return n;
@@ -23920,7 +23928,7 @@ webpackJsonp([68], {
                         types: [C.PubsubMessageType.WhisperDeleted, C.PubsubMessageType.WhisperEdited, C.PubsubMessageType.WhisperSent, C.PubsubMessageType.WhisperAllThreadsUpdate, C.PubsubMessageType.WhisperReceived, C.PubsubMessageType.WhisperThreadUpdate],
                         variables: o.__assign({}, e.data.variables),
                         skip: !e.data.currentUser || void 0 === e.data.currentUser.id,
-                        topic: Object(T.v)(e.data.currentUser && e.data.currentUser.id || ""),
+                        topic: Object(T.x)(e.data.currentUser && e.data.currentUser.id || ""),
                         mutator: function(t, n) {
                             if (!n.currentUser) return n;
                             if (r(t) || a(t)) {
@@ -24074,7 +24082,7 @@ webpackJsonp([68], {
                 return s.createElement(se.a, o.__assign({}, e))
             },
             de = ie.a.wrap(function() {
-                return n.e(52).then(n.bind(null, "8U1+"))
+                return n.e(51).then(n.bind(null, "8U1+"))
             }, "AnonFrontPage"),
             ue = ie.a.wrap(function() {
                 return n.e(54).then(n.bind(null, "Dd84"))
@@ -24083,7 +24091,7 @@ webpackJsonp([68], {
                 return n.e(41).then(n.bind(null, "gZGZ"))
             }, "ChannelClipsPage"),
             me = ie.a.wrap(function() {
-                return n.e(51).then(n.bind(null, "zfLI"))
+                return n.e(50).then(n.bind(null, "zfLI"))
             }, "ChannelCollectionsPage"),
             he = ie.a.wrap(function() {
                 return n.e(42).then(n.bind(null, "lW0T"))
@@ -24095,7 +24103,7 @@ webpackJsonp([68], {
                 return n.e(43).then(n.bind(null, "ztSx"))
             }, "ChannelFollowingPage"),
             ve = ie.a.wrap(function() {
-                return n.e(32).then(n.bind(null, "oFVJ"))
+                return n.e(33).then(n.bind(null, "oFVJ"))
             }, "ChannelPage"),
             be = ie.a.wrap(function() {
                 return n.e(34).then(n.bind(null, "g8mI"))
@@ -24104,7 +24112,7 @@ webpackJsonp([68], {
                 return n.e(63).then(n.bind(null, "yMnN"))
             }, "DevOnlyRoot"),
             ke = ie.a.wrap(function() {
-                return n.e(47).then(n.bind(null, "7yeK"))
+                return n.e(46).then(n.bind(null, "7yeK"))
             }, "DirectoryRootPage"),
             _e = ie.a.wrap(function() {
                 return n.e(59).then(n.bind(null, "IzAE"))
@@ -24113,16 +24121,16 @@ webpackJsonp([68], {
                 return n.e(61).then(n.bind(null, "Tj44"))
             }, "EmailVerificationPage"),
             we = ie.a.wrap(function() {
-                return n.e(48).then(n.bind(null, "NTi8"))
+                return n.e(47).then(n.bind(null, "NTi8"))
             }, "EventLandingPage"),
             Ee = ie.a.wrap(function() {
-                return n.e(50).then(n.bind(null, "IpE8"))
+                return n.e(49).then(n.bind(null, "IpE8"))
             }, "FollowingRootPage"),
             Ce = ie.a.wrap(function() {
                 return n.e(55).then(n.bind(null, "lTLe"))
             }, "FinishWatchingPage"),
             Ne = ie.a.wrap(function() {
-                return n.e(49).then(n.bind(null, "IOEW"))
+                return n.e(48).then(n.bind(null, "IOEW"))
             }, "FrontPage"),
             Te = ie.a.wrap(function() {
                 return n.e(56).then(n.bind(null, "DZCb"))
@@ -24134,7 +24142,7 @@ webpackJsonp([68], {
                 return n.e(62).then(n.bind(null, "DkuH"))
             }, "ReportUserPage"),
             De = ie.a.wrap(function() {
-                return n.e(46).then(n.bind(null, "K4jf"))
+                return n.e(52).then(n.bind(null, "K4jf"))
             }, "SettingsRoot"),
             Le = ie.a.wrap(function() {
                 return n.e(37).then(n.bind(null, "uiPj"))
@@ -25979,7 +25987,7 @@ webpackJsonp([68], {
                     })
                 }, t = c.__decorate([Object(_.d)("OnsiteNotificationToastManager"), Object(Z.a)([{
                     topic: function(e) {
-                        return Object(y.j)("" + (e.currentUser && e.currentUser.id))
+                        return Object(y.k)("" + (e.currentUser && e.currentUser.id))
                     },
                     mapMessageTypesToProps: (l = {}, l[v.PubsubMessageType.OnsiteNotificationCreate] = "info", l[v.PubsubMessageType.OnsiteNotificationUpdate] = "info", l),
                     skip: function(e) {
@@ -26425,7 +26433,7 @@ webpackJsonp([68], {
                     return {
                         query: se,
                         skip: !e.currentUser,
-                        topic: Object(y.j)("" + (e.currentUser && e.currentUser.id)),
+                        topic: Object(y.k)("" + (e.currentUser && e.currentUser.id)),
                         types: [v.PubsubMessageType.OnsiteNotificationSummaryUpdate, v.PubsubMessageType.OnsiteNotificationUpdate, v.PubsubMessageType.OnsiteNotificationCreate, v.PubsubMessageType.OnsiteNotificationDelete],
                         mutator: a
                     }
@@ -26436,7 +26444,7 @@ webpackJsonp([68], {
                             language: e.languageCode
                         }),
                         skip: !(e.currentUser && e.listData && e.listData.currentUser && e.listData.currentUser.notifications && e.listData.currentUser.notifications.edges),
-                        topic: Object(y.j)("" + (e.currentUser && e.currentUser.id)),
+                        topic: Object(y.k)("" + (e.currentUser && e.currentUser.id)),
                         types: [v.PubsubMessageType.OnsiteNotificationsRead, v.PubsubMessageType.OnsiteNotificationUpdate, v.PubsubMessageType.OnsiteNotificationCreate, v.PubsubMessageType.OnsiteNotificationDelete],
                         mutator: o
                     }
@@ -26458,7 +26466,7 @@ webpackJsonp([68], {
         n.d(t, "a", function() {
             return u
         });
-        var d = new Set([o.SpadeEventType.AutoHostToggle, o.SpadeEventType.Chat, o.SpadeEventType.DeprioritizeVodcastToggle, o.SpadeEventType.Follow, o.SpadeEventType.TeamHostToggle, o.SpadeEventType.Unfollow]),
+        var d = new Set([o.SpadeEventType.Chat, o.SpadeEventType.DeprioritizeVodcastToggle, o.SpadeEventType.Follow, o.SpadeEventType.TeamHostToggle, o.SpadeEventType.Unfollow]),
             u = function() {
                 function e(e) {
                     var t = this;
@@ -27572,7 +27580,7 @@ webpackJsonp([68], {
                     }, i.prototype.render = function() {
                         return a.createElement(t, r.__assign({}, this.props))
                     }, i.prototype.subscribe = function(e) {
-                        this.unsubscriber = Object(o.o)({
+                        this.unsubscriber = Object(o.p)({
                             query: e.query,
                             variables: e.variables,
                             topic: e.topic,
@@ -33558,7 +33566,7 @@ webpackJsonp([68], {
         });
         var i;
         ! function(e) {
-            e.AchievementSpotlightImpression = "achievement_spotlight_impression", e.AchievementQuestBannerClick = "achievement_quest_banner_click", e.APIQuery = "benchmark_api_query", e.AppBooted = "benchmark_app_booted", e.ArchiveDownload = "archive_download", e.AutoHostChannelUpdate = "autohost_channel_update", e.AutohostChatImpression = "autohost_chat_impression", e.AutohostChatYes = "autohost_chat_yes", e.AutohostChatDismiss = "autohost_chat_dismiss", e.AutohostChatSettings = "autohost_chat_settings", e.AutoHostToggle = "autohost_toggle", e.BitsAdsAvailability = "bits_ads_availability", e.BitsAdsImpression = "bits_ads_impression", e.BitsAdsRequest = "bits_ads_request", e.BitsCardInteraction = "bits_card_interaction", e.BrowseForYou = "browse_for_you", e.BrowserFingerprint = "browser_fingerprint", e.BrowserPushNotificationPrompt = "browser_notification_prompt", e.BrowserPushNotificationDisable = "browser_notification_disable", e.BTTV = "bttv_check", e.Chat = "chat", e.ChatBadgeClick = "chat_badge_click", e.ChatMentionUsed = "chat_mention_used", e.ChatRoomJoined = "chat_room_join", e.ChatRoomWatched = "chatroom-watched", e.ChatSettingsChanged = "chat_client_setting_changed", e.ChatSettingsOpened = "chat_client_settings_open", e.ChatSuggestion = "chat-suggestions", e.ChatSuggestionComplete = "chat-completed-suggestion", e.ChommentCreated = "chomment_create", e.ChommentDeleted = "chomment_delete", e.ChommentUIAction = "chomment_ui_action", e.ClipEdit = "clip_edit", e.ClipChampHelpClick = "clip_champ_help_click", e.CollectionCreate = "collection_create", e.CollectionAddItem = "collection_add_item", e.CollectionRemoveItem = "collection_remove_item", e.CommunityEdit = "community_client_edit", e.CommunityFollow = "community_client_follow", e.CommunityModeration = "community_client_channel_moderation", e.CommunityReport = "community_client_report", e.CommunityUnfollow = "community_client_unfollow", e.CompleteTransition = "benchmark_complete_transition", e.ComponentInitializing = "benchmark_component_initializing", e.ComponentInteractive = "benchmark_component_interactive", e.CustomEvent = "benchmark_custom_event", e.CrateNotificationAction = "crate_notification_action", e.DeprioritizeVodcastToggle = "autohost_deprioritize_vodcast_toggle", e.EventFollowing = "oracle_user_notification_client", e.EventShare = "oracle_event_share", e.ExperimentBranch = "experiment_branch", e.FeaturedEventPresentation = "event_suggestions_shown", e.FeedCardImpression = "feed_client_card_impression", e.FeedCardEmbedImpression = "feed_client_card_embed_impression", e.FeedCardEmbedPlay = "feed_client_card_embed_play", e.FeedPost = "feed_client_post", e.FeedReaction = "feed_client_reaction", e.FetchStart = "benchmark_fetch_start", e.FFZ = "ffz_check", e.Follow = "follow", e.FrontPageCarouselClick = "frontpage_carousel_click", e.FrontPageCarouselDisplay = "carousel_display", e.FrontPageCarouselPromotionCardClick = "promotion_card_click", e.FrontPageCarouselPromotionCardView = "promotion_card_view", e.FrontPageCarouselNavButtonClick = "carousel_nav_button_click", e.FuelBuyButton = "fuel_buy_button", e.FuelGetGameClick = "fuel_get_game_click", e.FuelOfferView = "offer_view", e.FuelOfferInteraction = "offer_interaction", e.FuelSocialShare = "fuel_social_share", e.GameFollow = "follow-game", e.GameUnfollow = "unfollow-game", e.ItemSectionClick = "item_section_click", e.ItemSectionLoad = "item_section_load", e.OnboardingEvent = "onboarding_web", e.NetworkRequest = "network_request", e.NewChatterTokenStatus = "nca_client_token_status", e.NewChatterOnboardingInteraction = "nca_onboarding_chatbox_interaction", e.NotificationCenterInteraction = "notification_center_interaction", e.NotificationImpression = "notification_impression", e.NotificationInteraction = "notification_interaction", e.Pageview = "pageview", e.PartnerAffiliateSettings = "partner_affiliate_settings", e.PassportHide = "auth_exit", e.PassportShow = "auth_show", e.PresenceClick = "friend_presence_click", e.RaidPromptJoin = "raid_prompt_join", e.RaidPromptLeave = "raid_prompt_leave", e.RaidPromptImpression = "raid_prompt_impression", e.ShareItem = "share_item", e.SideNavChannelClick = "sidenav_channel_click", e.SideNavDetails = "sidenav_details", e.SideNavLoadMore = "sidenav_load_more", e.SimilarHostToggle = "autohost_similar_channels_toggle", e.SiteLayoutMod = "site_layout_mod", e.SiteToggle = "twilight_site_toggle", e.StreamSummarySpotlightImpression = "summary_spotlight_impression", e.StreamSummarySpotlightClick = "summary_spotlight_click", e.StoreMerchClick = "store_item_select", e.StoreMerchView = "store_item_view", e.Subscription = "subscribe_button", e.SubsLandingStreamerClick = "subs_landing_streamer_click", e.TeamHostToggle = "autohost_team_toggle", e.ThemeChange = "dark_mode_toggle", e.Unfollow = "unfollow", e.VerifyEmailBar = "verify_email_bar", e.VideoChatSettingChanged = "video_chat_setting_changed", e.VideoShare = "video_share", e.WhisperAllThreadsMod = "chat_convo_mod_global", e.WhisperIgnoreUser = "chat_ignore_client", e.WhisperReceived = "whisper_received", e.WhisperSearchClick = "search_click", e.WhisperSent = "whisper", e.WhisperThreadCreate = "chat_convo_create", e.WhisperThreadMod = "chat_convo_mod"
+            e.AchievementSpotlightImpression = "achievement_spotlight_impression", e.AchievementQuestBannerClick = "achievement_quest_banner_click", e.APIQuery = "benchmark_api_query", e.AppBooted = "benchmark_app_booted", e.AutoHostChannelUpdate = "autohost_channel_update", e.AutohostChatImpression = "autohost_chat_impression", e.AutohostChatYes = "autohost_chat_yes", e.AutohostChatDismiss = "autohost_chat_dismiss", e.AutohostChatSettings = "autohost_chat_settings", e.BitsAdsAvailability = "bits_ads_availability", e.BitsAdsImpression = "bits_ads_impression", e.BitsAdsRequest = "bits_ads_request", e.BitsCardInteraction = "bits_card_interaction", e.BrowseForYou = "browse_for_you", e.BrowserFingerprint = "browser_fingerprint", e.BrowserPushNotificationPrompt = "browser_notification_prompt", e.BrowserPushNotificationDisable = "browser_notification_disable", e.BTTV = "bttv_check", e.Chat = "chat", e.ChatBadgeClick = "chat_badge_click", e.ChatMentionUsed = "chat_mention_used", e.ChatRoomJoined = "chat_room_join", e.ChatRoomWatched = "chatroom-watched", e.ChatSettingsChanged = "chat_client_setting_changed", e.ChatSettingsOpened = "chat_client_settings_open", e.ChatSuggestion = "chat-suggestions", e.ChatSuggestionComplete = "chat-completed-suggestion", e.ChommentCreated = "chomment_create", e.ChommentDeleted = "chomment_delete", e.ChommentUIAction = "chomment_ui_action", e.ClipEdit = "clip_edit", e.ClipChampHelpClick = "clip_champ_help_click", e.CollectionCreate = "collection_create", e.CollectionAddItem = "collection_add_item", e.CollectionRemoveItem = "collection_remove_item", e.CommunityEdit = "community_client_edit", e.CommunityFollow = "community_client_follow", e.CommunityModeration = "community_client_channel_moderation", e.CommunityReport = "community_client_report", e.CommunityUnfollow = "community_client_unfollow", e.CompleteTransition = "benchmark_complete_transition", e.ComponentInitializing = "benchmark_component_initializing", e.ComponentInteractive = "benchmark_component_interactive", e.CustomEvent = "benchmark_custom_event", e.CrateNotificationAction = "crate_notification_action", e.DeprioritizeVodcastToggle = "autohost_deprioritize_vodcast_toggle", e.EventFollowing = "oracle_user_notification_client", e.EventShare = "oracle_event_share", e.ExperimentBranch = "experiment_branch", e.FeaturedEventPresentation = "event_suggestions_shown", e.FeedCardImpression = "feed_client_card_impression", e.FeedCardEmbedImpression = "feed_client_card_embed_impression", e.FeedCardEmbedPlay = "feed_client_card_embed_play", e.FeedPost = "feed_client_post", e.FeedReaction = "feed_client_reaction", e.FetchStart = "benchmark_fetch_start", e.FFZ = "ffz_check", e.Follow = "follow", e.FrontPageCarouselClick = "frontpage_carousel_click", e.FrontPageCarouselDisplay = "carousel_display", e.FrontPageCarouselPromotionCardClick = "promotion_card_click", e.FrontPageCarouselPromotionCardView = "promotion_card_view", e.FrontPageCarouselNavButtonClick = "carousel_nav_button_click", e.FuelBuyButton = "fuel_buy_button", e.FuelGetGameClick = "fuel_get_game_click", e.FuelOfferView = "offer_view", e.FuelOfferInteraction = "offer_interaction", e.FuelSocialShare = "fuel_social_share", e.GameFollow = "follow-game", e.GameUnfollow = "unfollow-game", e.ItemSectionClick = "item_section_click", e.ItemSectionLoad = "item_section_load", e.OnboardingEvent = "onboarding_web", e.NetworkRequest = "network_request", e.NewChatterTokenStatus = "nca_client_token_status", e.NewChatterOnboardingInteraction = "nca_onboarding_chatbox_interaction", e.NotificationCenterInteraction = "notification_center_interaction", e.NotificationImpression = "notification_impression", e.NotificationInteraction = "notification_interaction", e.Pageview = "pageview", e.PartnerAffiliateSettings = "partner_affiliate_settings", e.PassportHide = "auth_exit", e.PassportShow = "auth_show", e.PresenceClick = "friend_presence_click", e.RaidPromptJoin = "raid_prompt_join", e.RaidPromptLeave = "raid_prompt_leave", e.RaidPromptImpression = "raid_prompt_impression", e.ShareItem = "share_item", e.SideNavChannelClick = "sidenav_channel_click", e.SideNavDetails = "sidenav_details", e.SideNavLoadMore = "sidenav_load_more", e.SimilarHostToggle = "autohost_similar_channels_toggle", e.SiteLayoutMod = "site_layout_mod", e.SiteToggle = "twilight_site_toggle", e.StreamSummarySpotlightImpression = "summary_spotlight_impression", e.StreamSummarySpotlightClick = "summary_spotlight_click", e.StoreMerchClick = "store_item_select", e.StoreMerchView = "store_item_view", e.Subscription = "subscribe_button", e.SubsLandingStreamerClick = "subs_landing_streamer_click", e.TeamHostToggle = "autohost_team_toggle", e.ThemeChange = "dark_mode_toggle", e.Unfollow = "unfollow", e.VerifyEmailBar = "verify_email_bar", e.VideoChatSettingChanged = "video_chat_setting_changed", e.VideoShare = "video_share", e.VODDownloadClick = "vod_download_click", e.VODExportClick = "vod_export_click", e.WhisperAllThreadsMod = "chat_convo_mod_global", e.WhisperIgnoreUser = "chat_ignore_client", e.WhisperReceived = "whisper_received", e.WhisperSearchClick = "search_click", e.WhisperSent = "whisper", e.WhisperThreadCreate = "chat_convo_create", e.WhisperThreadMod = "chat_convo_mod"
         }(i || (i = {}))
     },
     kIPx: function(e, t) {},
@@ -37025,7 +37033,9 @@ webpackJsonp([68], {
             Ze = (n("/Urv"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
-                    return t.onLogoutClick = function(e) {
+                    return t.state = {
+                        hasPaymentsPageExperiment: !1
+                    }, t.onLogoutClick = function(e) {
                         e.preventDefault(), t.props.logout()
                     }, t.onShareCheckboxClick = function() {
                         t.props.data && !t.props.data.error && t.props.data.currentUser && t.props.toggleShareActivity()
@@ -37036,10 +37046,24 @@ webpackJsonp([68], {
                         t.props.data && !t.props.data.error && t.props.data.currentUser && (e && e.stopPropagation(), t.props.toggleVisibility(ze.a.Online))
                     }, t.onInvisibleClick = function(e) {
                         t.props.data && !t.props.data.error && t.props.data.currentUser && (e && e.stopPropagation(), t.props.toggleVisibility(ze.a.Offline))
+                    }, t.setPaymentsPageExperiment = function() {
+                        return b.__awaiter(t, void 0, void 0, function() {
+                            var e;
+                            return b.__generator(this, function(t) {
+                                switch (t.label) {
+                                    case 0:
+                                        return [4, p.n.experiments.getAssignment("TWILIGHT_PAYMENTS_MANAGEMENT_PAGE")];
+                                    case 1:
+                                        return e = t.sent(), this.setState({
+                                            hasPaymentsPageExperiment: "yes" === e
+                                        }), [2]
+                                }
+                            })
+                        })
                     }, t
                 }
                 return b.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive()
+                    this.props.latencyTracking.reportInteractive(), this.setPaymentsPageExperiment()
                 }, t.prototype.render = function() {
                     var e = ce("top-nav-user-menu-dropdown", {
                             "top-nav-user-menu-dropdown--toggled": this.props.dropdownOpen
@@ -37302,7 +37326,7 @@ webpackJsonp([68], {
                             right: 1
                         }
                     }, d.createElement(fe._15, {
-                        asset: fe._16.NavBackpack,
+                        asset: fe._16.Star,
                         height: 18,
                         width: 18
                     })), d.createElement(fe._35, null, Object(p.d)("Subscriptions", "UserMenuDropdown")))), d.createElement(fe._0, {
@@ -37326,7 +37350,28 @@ webpackJsonp([68], {
                         asset: fe._16.Crate,
                         height: 18,
                         width: 18
-                    })), d.createElement(fe._35, null, Object(p.d)("Inventory", "UserMenuDropdown")))), d.createElement(fe._25, {
+                    })), d.createElement(fe._35, null, Object(p.d)("Inventory", "UserMenuDropdown")))), this.state.hasPaymentsPageExperiment && d.createElement(fe._0, {
+                        linkTo: "/payments",
+                        "data-a-target": "payments-dropdown-link"
+                    }, d.createElement(fe._25, {
+                        color: fe.I.Alt,
+                        display: fe.N.Flex,
+                        alignItems: fe.c.Center,
+                        padding: {
+                            x: 2,
+                            y: .5
+                        }
+                    }, d.createElement(fe._2, {
+                        display: fe.N.Flex,
+                        alignItems: fe.c.Center,
+                        margin: {
+                            right: 1
+                        }
+                    }, d.createElement(fe._15, {
+                        asset: fe._16.NavBackpack,
+                        height: 18,
+                        width: 18
+                    })), d.createElement(fe._35, null, Object(p.d)("Payments", "UserMenuDropdown")))), d.createElement(fe._25, {
                         borderBottom: !0,
                         margin: {
                             x: 2,
@@ -37428,7 +37473,7 @@ webpackJsonp([68], {
                 }), Object(Ve.a)(function(e) {
                     return {
                         query: Xe,
-                        topic: e.data && e.data.currentUser ? Object(qe.k)(e.data.currentUser.id) : "",
+                        topic: e.data && e.data.currentUser ? Object(qe.l)(e.data.currentUser.id) : "",
                         skip: !(e.data && !e.data.loading && !e.data.error && e.data.currentUser),
                         type: We.PubsubMessageType.PresenceSettings,
                         mutator: function(e, t) {
@@ -37718,7 +37763,7 @@ webpackJsonp([68], {
                 }, t = b.__decorate([Object(O.a)(at), Object(Ve.a)(function(e) {
                     return {
                         query: at,
-                        topic: e.data.currentUser ? Object(qe.k)(e.data.currentUser.id) : "",
+                        topic: e.data.currentUser ? Object(qe.l)(e.data.currentUser.id) : "",
                         skip: !(e.data && !e.data.loading && !e.data.error && e.data.currentUser),
                         type: We.PubsubMessageType.PresenceSettings,
                         mutator: function(e, t) {
@@ -37727,7 +37772,7 @@ webpackJsonp([68], {
                     }
                 }), Object(He.a)([{
                     topic: function(e) {
-                        return e.data.currentUser ? Object(qe.k)(e.data.currentUser.id) : ""
+                        return e.data.currentUser ? Object(qe.l)(e.data.currentUser.id) : ""
                     },
                     mapMessageTypesToProps: (l = {}, l[We.PubsubMessageType.Presence] = "presence", l),
                     skip: function(e) {
@@ -38285,7 +38330,7 @@ webpackJsonp([68], {
                 }
             })(wt.a),
             Ct = (n("WqMu"), k.a.wrap(function() {
-                return n.e(33).then(n.bind(null, "EkQQ"))
+                return n.e(32).then(n.bind(null, "EkQQ"))
             }, "DashboardRoot")),
             Nt = k.a.wrap(function() {
                 return n.e(36).then(n.bind(null, "r7VP"))
@@ -40164,4 +40209,4 @@ webpackJsonp([68], {
             }(r.Component))
     }
 }, [4]);
-//# sourceMappingURL=core-3b36f61ab95c1dfb5c07fd638679fc29.js.map
+//# sourceMappingURL=core-b62890185448abab6516c58fba122a5c.js.map

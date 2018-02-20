@@ -1,4 +1,4 @@
-webpackJsonp([37, 84], {
+webpackJsonp([37, 82], {
     "+/J2": function(e, t, n) {
         var i = n("xA5w");
         e.exports = function(e, t) {
@@ -353,24 +353,26 @@ webpackJsonp([37, 84], {
     "/nNw": function(e, t, n) {
         "use strict";
         var i = n("3Ybq");
-        n.d(t, "VIDEO_STATUS_FAILED", function() {
-            return i.f
-        }), n.d(t, "VIDEO_STATUS_PENDING_TRANSCODE", function() {
+        n.d(t, "ExportDestination", function() {
+            return i.a
+        }), n.d(t, "VIDEO_STATUS_FAILED", function() {
             return i.g
-        }), n.d(t, "VIDEO_STATUS_RECORDED", function() {
+        }), n.d(t, "VIDEO_STATUS_PENDING_TRANSCODE", function() {
             return i.h
-        }), n.d(t, "VIDEO_STATUS_TRANSCODING", function() {
+        }), n.d(t, "VIDEO_STATUS_RECORDED", function() {
             return i.i
-        }), n.d(t, "VIDEO_STATUS_UPLOADING", function() {
+        }), n.d(t, "VIDEO_STATUS_TRANSCODING", function() {
             return i.j
-        }), n.d(t, "VideoPremiereStatus", function() {
+        }), n.d(t, "VIDEO_STATUS_UPLOADING", function() {
             return i.k
-        }), n.d(t, "VideoScope", function() {
+        }), n.d(t, "VideoPremiereStatus", function() {
             return i.l
-        }), n.d(t, "availableVideoStatuses", function() {
+        }), n.d(t, "VideoScope", function() {
             return i.m
-        }), n.d(t, "pendingVideoStatuses", function() {
+        }), n.d(t, "availableVideoStatuses", function() {
             return i.n
+        }), n.d(t, "pendingVideoStatuses", function() {
+            return i.o
         });
         n("NfL5");
         var r = n("Rv0e");
@@ -1168,34 +1170,36 @@ webpackJsonp([37, 84], {
     },
     "3Ybq": function(e, t, n) {
         "use strict";
-        n.d(t, "b", function() {
+        n.d(t, "c", function() {
             return r
-        }), n.d(t, "a", function() {
+        }), n.d(t, "b", function() {
             return a
-        }), n.d(t, "l", function() {
-            return i
-        }), n.d(t, "j", function() {
-            return o
-        }), n.d(t, "g", function() {
-            return s
-        }), n.d(t, "i", function() {
-            return l
-        }), n.d(t, "f", function() {
-            return c
-        }), n.d(t, "h", function() {
-            return d
         }), n.d(t, "m", function() {
+            return i
+        }), n.d(t, "k", function() {
+            return s
+        }), n.d(t, "h", function() {
+            return l
+        }), n.d(t, "j", function() {
+            return c
+        }), n.d(t, "g", function() {
+            return d
+        }), n.d(t, "i", function() {
             return u
         }), n.d(t, "n", function() {
             return m
-        }), n.d(t, "d", function() {
+        }), n.d(t, "o", function() {
             return p
-        }), n.d(t, "c", function() {
-            return h
         }), n.d(t, "e", function() {
+            return h
+        }), n.d(t, "d", function() {
             return f
-        }), n.d(t, "k", function() {
+        }), n.d(t, "f", function() {
             return g
+        }), n.d(t, "l", function() {
+            return v
+        }), n.d(t, "a", function() {
+            return o
         });
         n("zGmo");
         var i, r = "generated",
@@ -1203,22 +1207,23 @@ webpackJsonp([37, 84], {
         ! function(e) {
             e.Private = "PRIVATE", e.Public = "PUBLIC"
         }(i || (i = {}));
-        var o = "uploading",
-            s = "pending_transcode",
-            l = "transcoding",
-            c = "failed",
-            d = "recorded",
-            u = [d, "recording"],
-            m = [l, s, c],
-            p = "FORMAT_NOT_SUPPORTED",
-            h = "BAD_ASSET",
-            f = "INTERNAL_ERROR",
-            g = {
+        var o, s = "uploading",
+            l = "pending_transcode",
+            c = "transcoding",
+            d = "failed",
+            u = "recorded",
+            m = [u, "recording"],
+            p = [c, l, d],
+            h = "FORMAT_NOT_SUPPORTED",
+            f = "BAD_ASSET",
+            g = "INTERNAL_ERROR",
+            v = {
                 VIDEO_PREMIERE_STATUS_UNSCHEDULED: "unscheduled",
                 VIDEO_PREMIERE_STATUS_SCHEDULED: "scheduled",
                 VIDEO_PREMIERE_STATUS_STARTED: "started",
                 VIDEO_PREMIERE_STATUS_FAILED: "failed"
-            }
+            };
+        (o || (o = {})).Youtube = "youtube"
     },
     "3g9B": function(e, t, n) {
         var i = n("xA5w");
@@ -10228,7 +10233,7 @@ webpackJsonp([37, 84], {
                                                 }), [2];
                                             case 4:
                                                 return this.unsubscribe = c.j.subscribe({
-                                                    topic: Object(p.h)(this.props.userID),
+                                                    topic: Object(p.i)(this.props.userID),
                                                     success: function() {
                                                         try {
                                                             Object(g.c)(n, o.currentImage)
@@ -10630,6 +10635,14 @@ webpackJsonp([37, 84], {
                                 kind: "Field",
                                 name: {
                                     kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
                                     value: "items"
                                 },
                                 arguments: [{
@@ -10974,11 +10987,11 @@ webpackJsonp([37, 84], {
             }],
             loc: {
                 start: 0,
-                end: 846
+                end: 849
             }
         };
         n.loc.source = {
-            body: "query VideoWatchPage_Video($videoID: ID $collectionID: ID! $useCollectionID: Boolean!) {\ncurrentUser {\nid\ndisplayName\n}\n# If the page specifies a video ID query it directly.\nvideo(id: $videoID options: { includePrivate: true }) @skip(if: $useCollectionID) {\n...videoFields\n}\n# If the page is a collection page grab the first video from the collection.\ncollection(id: $collectionID) @include(if: $useCollectionID) {\nitems(first: 1) {\ntotalCount\nedges {\nnode {\n... on Video {\n...videoFields\n}\n}\n}\n}\nowner {\nid\nlogin\ndisplayName\n}\n}\n}\n# These are the fields used by the watch page.\nfragment videoFields on Video {\nid\nbroadcastType\ntitle\ndescription\nlengthSeconds\npublishedAt\nviewCount\nscope\npreviewThumbnailURL(width: 126 height: 71)\ngame {\nid\nboxArtURL(width: 138 height: 190)\nname\n}\nowner {\nid\ndisplayName\nlogin\nchatSettings {\nrules\n}\n}\nlanguage\n}",
+            body: "query VideoWatchPage_Video($videoID: ID $collectionID: ID! $useCollectionID: Boolean!) {\ncurrentUser {\nid\ndisplayName\n}\n# If the page specifies a video ID query it directly.\nvideo(id: $videoID options: { includePrivate: true }) @skip(if: $useCollectionID) {\n...videoFields\n}\n# If the page is a collection page grab the first video from the collection.\ncollection(id: $collectionID) @include(if: $useCollectionID) {\nid\nitems(first: 1) {\ntotalCount\nedges {\nnode {\n... on Video {\n...videoFields\n}\n}\n}\n}\nowner {\nid\nlogin\ndisplayName\n}\n}\n}\n# These are the fields used by the watch page.\nfragment videoFields on Video {\nid\nbroadcastType\ntitle\ndescription\nlengthSeconds\npublishedAt\nviewCount\nscope\npreviewThumbnailURL(width: 126 height: 71)\ngame {\nid\nboxArtURL(width: 138 height: 190)\nname\n}\nowner {\nid\ndisplayName\nlogin\nchatSettings {\nrules\n}\n}\nlanguage\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -19751,7 +19764,7 @@ webpackJsonp([37, 84], {
                                         }), [2];
                                     case 4:
                                         return this.unsubscribe = d.j.subscribe({
-                                            topic: Object(f.h)(this.props.userID),
+                                            topic: Object(f.i)(this.props.userID),
                                             success: function() {
                                                 try {
                                                     Object(y.c)(n, a.currentImage)
@@ -20514,4 +20527,4 @@ webpackJsonp([37, 84], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.video-watch-4842dcae1ebcefc79fd9e3b4b7f7f931.js.map
+//# sourceMappingURL=pages.video-watch-5d2a9b0f928e1431275b44aef8394454.js.map

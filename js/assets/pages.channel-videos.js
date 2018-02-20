@@ -1,4 +1,4 @@
-webpackJsonp([34, 84], {
+webpackJsonp([34, 82], {
     "+/J2": function(e, t, n) {
         var a = n("xA5w");
         e.exports = function(e, t) {
@@ -1429,7 +1429,7 @@ webpackJsonp([34, 84], {
                     }
                 }), Object(B.a)([{
                     topic: function(e) {
-                        return Object(P.r)(e.currentUserID)
+                        return Object(P.t)(e.currentUserID)
                     },
                     mapMessageTypesToProps: (O = {}, O[j.PubsubMessageType.ChatNotification] = "userCommerceUpdateEvent", O)
                 }])], t)
@@ -2111,7 +2111,7 @@ webpackJsonp([34, 84], {
                     variables: {
                         id: e.channelID
                     },
-                    topic: Object(P.m)(e.channelID),
+                    topic: Object(P.n)(e.channelID),
                     type: j.PubsubMessageType.UpdatedChannelChatProperty,
                     mutator: function(e, t) {
                         return t.channel.settings.isRitualsEnabled = e.data.is_rituals_enabled, t
@@ -2615,7 +2615,7 @@ webpackJsonp([34, 84], {
             ze = function() {
                 return function(e, t, n) {
                     this.channelID = e, this.sessionUserID = t, this.unsubscribe = u.j.subscribe({
-                        topic: Object(P.i)(this.sessionUserID, this.channelID),
+                        topic: Object(P.j)(this.sessionUserID, this.channelID),
                         onMessage: function(e) {
                             switch (e.data.moderation_action) {
                                 case j.ModerationActions.AutoModRejected:
@@ -6878,7 +6878,7 @@ webpackJsonp([34, 84], {
                     return !e.channelID
                 },
                 topic: function(e) {
-                    return e.channelID ? Object(P.m)(e.channelID) : ""
+                    return e.channelID ? Object(P.n)(e.channelID) : ""
                 },
                 mapMessageTypesToProps: (wa = {}, wa[j.PubsubMessageType.StreamChatRoomChatRichEmbed] = "chatRichEmbedInfo", wa)
             }]))(Aa),
@@ -7439,7 +7439,7 @@ webpackJsonp([34, 84], {
                     variables: {
                         channelLogin: e.channelLogin
                     },
-                    topic: Object(P.q)(e.userID),
+                    topic: Object(P.r)(e.userID),
                     type: j.PubsubMessageType.UserBitsBadgeUpdate,
                     skip: !e.userID,
                     mutator: function(t, n) {
@@ -10721,7 +10721,7 @@ webpackJsonp([34, 84], {
                     }))
                 }, t.prototype.subscribe = function() {
                     this.unsubscribe = c.n.pubsub.subscribe({
-                        topic: Object(u.l)(this.props.channelID),
+                        topic: Object(u.m)(this.props.channelID),
                         onMessage: this.handlePubsubMessage
                     })
                 }, t.prototype.renderCTAButton = function() {
@@ -22136,7 +22136,7 @@ webpackJsonp([34, 84], {
                                                 }), [2];
                                             case 4:
                                                 return this.unsubscribe = c.j.subscribe({
-                                                    topic: Object(p.h)(this.props.userID),
+                                                    topic: Object(p.i)(this.props.userID),
                                                     success: function() {
                                                         try {
                                                             Object(f.c)(n, s.currentImage)
@@ -26865,7 +26865,7 @@ webpackJsonp([34, 84], {
                         variables: {
                             id: t.channelID
                         },
-                        topic: Object(g.m)(t.channelID),
+                        topic: Object(g.n)(t.channelID),
                         type: p.PubsubMessageType.UpdatedChannelChatProperty,
                         mutator: function(n, a) {
                             return n.data.is_rituals_enabled ? e(function() {
@@ -26876,7 +26876,7 @@ webpackJsonp([34, 84], {
                     }
                 }), Object(u.a)([{
                     topic: function(e) {
-                        return Object(g.u)(e.channelID)
+                        return Object(g.w)(e.channelID)
                     },
                     mapMessageTypesToProps: (i = {}, i[p.PubsubMessageType.ChannelStreamUp] = "streamUp", i[p.PubsubMessageType.ChannelStreamDown] = "streamDown", i),
                     skip: a
@@ -27858,7 +27858,7 @@ webpackJsonp([34, 84], {
                                         }), [2];
                                     case 4:
                                         return this.unsubscribe = d.j.subscribe({
-                                            topic: Object(g.h)(this.props.userID),
+                                            topic: Object(g.i)(this.props.userID),
                                             success: function() {
                                                 try {
                                                     Object(y.c)(n, r.currentImage)
@@ -28884,4 +28884,4 @@ webpackJsonp([34, 84], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-videos-0228e78e709e06fe4aa7959a1fd111e6.js.map
+//# sourceMappingURL=pages.channel-videos-ceac46e4bb0817b8d47d5a74a7832e53.js.map
