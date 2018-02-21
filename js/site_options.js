@@ -590,13 +590,13 @@ window.SiteOptions = {
         },
         "1adeeefb-a0cc-48a4-adbd-8c9a1bdaa06f": {
             "name": "TWILIGHT_PAYMENTS_MANAGEMENT_PAGE",
-            "v": 3114,
+            "v": 3115,
             "t": 1,
             "groups": [{
-                "weight": 25,
+                "weight": 50,
                 "value": "yes"
             }, {
-                "weight": 75,
+                "weight": 50,
                 "value": "no"
             }]
         },
@@ -4865,13 +4865,13 @@ window.SiteOptions = {
         },
         "ec70bd08-dbc8-4f48-9f60-d035fec3eb20": {
             "name": "CVP Player Core 2.0 Mediaplayer Experiment Aug 2017",
-            "v": 3104,
+            "v": 3117,
             "t": 1,
             "groups": [{
-                "weight": 5,
+                "weight": 10,
                 "value": "2.2.9"
             }, {
-                "weight": 95,
+                "weight": 90,
                 "value": "2.2.402"
             }]
         },
@@ -4894,6 +4894,18 @@ window.SiteOptions = {
             }, {
                 "weight": 100,
                 "value": "yes_play_1050"
+            }]
+        },
+        "ee491c3c-d6f7-4f00-8c53-c630dfa10f41": {
+            "name": "twilight_mobile_subs_tier_names",
+            "v": 3116,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "price"
+            }, {
+                "weight": 0,
+                "value": "name"
             }]
         },
         "ef25ca44-13bd-4e89-99d2-f9939c013fec": {
