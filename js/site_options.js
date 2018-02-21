@@ -2371,14 +2371,14 @@ window.SiteOptions = {
         },
         "6a2630a4-edc7-4f2a-8cfe-e4de75eb0d98": {
             "name": "rtqos",
-            "v": 3082,
+            "v": 3119,
             "t": 1,
-            "s": 1,
+            "s": 2,
             "groups": [{
-                "weight": 45,
+                "weight": 30,
                 "value": "control"
             }, {
-                "weight": 10,
+                "weight": 20,
                 "value": "realtime"
             }, {
                 "weight": 20,
@@ -2387,7 +2387,7 @@ window.SiteOptions = {
                 "weight": 20,
                 "value": "control20"
             }, {
-                "weight": 5,
+                "weight": 10,
                 "value": "updating_v1"
             }]
         },
