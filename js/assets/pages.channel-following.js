@@ -18668,7 +18668,7 @@ webpackJsonp([43], {
                             }, Object(r.d)("No Users Found", "ChannelFollowListing")));
                             else {
                                 var g = this.props.followEdge.map(function(t) {
-                                    if (!t || !t.node) return null;
+                                    if (!t || !t.node || !t.node.id) return null;
                                     var n = {
                                             user: t.node
                                         },
@@ -24485,4 +24485,4 @@ webpackJsonp([43], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-following-09e5a721e0a4a109c9b3730f0d8359fd.js.map
+//# sourceMappingURL=pages.channel-following-b795b0fee1a5072a43787a38f74f9a56.js.map

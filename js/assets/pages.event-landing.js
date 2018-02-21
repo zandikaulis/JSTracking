@@ -3220,9 +3220,13 @@ webpackJsonp([47], {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        name: {
+                        alias: {
                             kind: "Name",
                             value: "unfollowEvent"
+                        },
+                        name: {
+                            kind: "Name",
+                            value: "unfollowDeprecatedEvent"
                         },
                         arguments: [{
                             kind: "Argument",
@@ -3288,11 +3292,11 @@ webpackJsonp([47], {
             }],
             loc: {
                 start: 0,
-                end: 127
+                end: 152
             }
         };
         n.loc.source = {
-            body: "mutation Events_FollowEvent($input: UnfollowEventInput!) {\nunfollowEvent(input: $input) {\nevent {\nid\nself {\nisFollowing\n}\n}\n}\n}",
+            body: "mutation Events_FollowEvent($input: UnfollowEventInput!) {\nunfollowEvent: unfollowDeprecatedEvent(input: $input) {\nevent {\nid\nself {\nisFollowing\n}\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -3428,9 +3432,13 @@ webpackJsonp([47], {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        name: {
+                        alias: {
                             kind: "Name",
                             value: "event"
+                        },
+                        name: {
+                            kind: "Name",
+                            value: "deprecatedEvent"
                         },
                         arguments: [{
                             kind: "Argument",
@@ -3590,11 +3598,11 @@ webpackJsonp([47], {
             }],
             loc: {
                 start: 0,
-                end: 604
+                end: 621
             }
         };
         a.loc.source = {
-            body: '#import "twilight/pages/event-landing/models/_timetable-event.gql"\n#import "twilight/pages/event-landing/models/_single-event.gql"\n#import "twilight/pages/event-landing/models/_premiere-event.gql"\nquery EventLandingPage_Event($eventName: ID! $endsAfter: Time $afterLimit: Int $afterCursor: Cursor $beforeLimit: Int $beforeCursor: Cursor) {\nevent(id: $eventName) {\n__typename\n...on SingleEvent {\n...SingleLanding\n}\n...on PremiereEvent {\n...PremiereLanding\n}\n...on TimetableEvent {\n...TimetableLanding\n}\n...on SegmentEvent {\nid\ntitle\nparent {\n...on TimetableEvent {\n...TimetableFromSegmentLanding\n}\n}\n}\n}\n}',
+            body: '#import "twilight/pages/event-landing/models/_timetable-event.gql"\n#import "twilight/pages/event-landing/models/_single-event.gql"\n#import "twilight/pages/event-landing/models/_premiere-event.gql"\nquery EventLandingPage_Event($eventName: ID! $endsAfter: Time $afterLimit: Int $afterCursor: Cursor $beforeLimit: Int $beforeCursor: Cursor) {\nevent: deprecatedEvent(id: $eventName) {\n__typename\n...on SingleEvent {\n...SingleLanding\n}\n...on PremiereEvent {\n...PremiereLanding\n}\n...on TimetableEvent {\n...TimetableLanding\n}\n...on SegmentEvent {\nid\ntitle\nparent {\n...on TimetableEvent {\n...TimetableFromSegmentLanding\n}\n}\n}\n}\n}',
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -4402,8 +4410,8 @@ webpackJsonp([47], {
                     })))
                 }, t
             }(p.Component)),
-            B = Object(y.d)("EventLandingTitle")(R),
-            D = n("ISok"),
+            D = Object(y.d)("EventLandingTitle")(R),
+            B = n("ISok"),
             j = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -4438,7 +4446,7 @@ webpackJsonp([47], {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     var e = null;
-                    return this.props.pastPremiere && (e = p.createElement(D.a, {
+                    return this.props.pastPremiere && (e = p.createElement(B.a, {
                         trackingContent: b.PageviewContent.EventPast,
                         trackingMedium: b.PageviewMedium.EventDetails,
                         videos: [this.pastPremiereToPreviewCardVideo(this.props.pastPremiere)]
@@ -4482,7 +4490,7 @@ webpackJsonp([47], {
                     var t = null;
                     return this.props.eventType === w.PREMIERE_EVENT && this.props.premiere && this.props.premiere.pastPremiere && this.props.premiere.pastPremiere.id && (t = p.createElement(j, {
                         pastPremiere: this.props.premiere.pastPremiere
-                    })), p.createElement(C._2, null, p.createElement(B, {
+                    })), p.createElement(C._2, null, p.createElement(D, {
                         id: this.props.id,
                         title: this.props.title,
                         startAt: this.props.startAt,
@@ -6107,9 +6115,13 @@ webpackJsonp([47], {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        name: {
+                        alias: {
                             kind: "Name",
                             value: "followEvent"
+                        },
+                        name: {
+                            kind: "Name",
+                            value: "followDeprecatedEvent"
                         },
                         arguments: [{
                             kind: "Argument",
@@ -6175,11 +6187,11 @@ webpackJsonp([47], {
             }],
             loc: {
                 start: 0,
-                end: 123
+                end: 146
             }
         };
         n.loc.source = {
-            body: "mutation Events_FollowEvent($input: FollowEventInput!) {\nfollowEvent(input: $input) {\nevent {\nid\nself {\nisFollowing\n}\n}\n}\n}",
+            body: "mutation Events_FollowEvent($input: FollowEventInput!) {\nfollowEvent: followDeprecatedEvent(input: $input) {\nevent {\nid\nself {\nisFollowing\n}\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -6500,8 +6512,8 @@ webpackJsonp([47], {
             x = n("E9Qg"),
             U = n("ebTC"),
             R = n("4Q9N"),
-            B = (n("4Jix"), n("Ojfd")),
-            D = function(e) {
+            D = (n("4Jix"), n("Ojfd")),
+            B = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.openModal = function() {
@@ -6570,7 +6582,7 @@ webpackJsonp([47], {
                     this.props.closeModal()
                 }, t
             }(r.Component),
-            j = Object(m.a)(B, {
+            j = Object(m.a)(D, {
                 options: function(e) {
                     return {
                         variables: {
@@ -6581,7 +6593,7 @@ webpackJsonp([47], {
                 skip: function(e) {
                     return !e.channelLogin || !e.firstPageLoaded
                 }
-            })(D),
+            })(B),
             P = Object(p.b)(function(e) {
                 return {
                     firstPageLoaded: e.session.firstPageLoaded
@@ -7365,8 +7377,8 @@ webpackJsonp([47], {
             }(u.Component),
             U = n("jxGs"),
             R = n("3iBR"),
-            B = n("iydZ"),
-            D = n("ZJYd"),
+            D = n("iydZ"),
+            B = n("ZJYd"),
             j = n("CFVp"),
             P = n("qe65"),
             M = (n("OLKT"), function(e) {
@@ -7374,7 +7386,7 @@ webpackJsonp([47], {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleBuyClick = function(e) {
                         var n = t.props.channelID || "",
-                            i = Object(D.b)({
+                            i = Object(B.b)({
                                 trackBitsCardInteraction: t.props.trackBitsCardInteraction,
                                 channelID: n,
                                 purchaseUrl: e.currentTarget.dataset.purchaseUrl,
@@ -7399,12 +7411,12 @@ webpackJsonp([47], {
                         })
                     }
                     var t = null;
-                    Object(D.c)(this.props.offer) ? t = u.createElement(y._2, {
+                    Object(B.c)(this.props.offer) ? t = u.createElement(y._2, {
                         className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline"
                     }, u.createElement(y._35, {
                         type: y._40.Strong,
                         fontSize: y.R.Size6
-                    }, Object(v.d)("Special Offer: 1st Time Buyers", "Bits--BuyCard"))) : Object(D.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === U.c && (t = u.createElement(y._2, {
+                    }, Object(v.d)("Special Offer: 1st Time Buyers", "Bits--BuyCard"))) : Object(B.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === U.c && (t = u.createElement(y._2, {
                         className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline"
                     }, u.createElement(y._35, {
                         type: y._40.Strong,
@@ -7417,7 +7429,7 @@ webpackJsonp([47], {
                         percentOff: this.props.offer.discount
                     }, "Bits--BuyCard")));
                     var i = null;
-                    (Object(D.c)(this.props.offer) || Object(D.e)(this.props.offer)) && (i = u.createElement("div", {
+                    (Object(B.c)(this.props.offer) || Object(B.e)(this.props.offer)) && (i = u.createElement("div", {
                         className: "bits-buy-card-offer-row__sub-text"
                     }, Object(v.d)("one per account", "Bits--BuyCard")));
                     var a = this.props.isLastRow ? y._25 : y._2;
@@ -7473,7 +7485,7 @@ webpackJsonp([47], {
                     }, n.map(function(e) {
                         return u.createElement(P.a, {
                             key: e.bits,
-                            sources: Object(B.b)(e, 2, !1)
+                            sources: Object(D.b)(e, 2, !1)
                         })
                     }))
                 }, t
@@ -7498,8 +7510,8 @@ webpackJsonp([47], {
                             closeAllBits: e.closeAllBits,
                             trackBitsCardInteraction: e.trackBitsCardInteraction
                         }),
-                        s = Object(D.d)(a),
-                        l = Object(D.c)(a),
+                        s = Object(B.d)(a),
+                        l = Object(B.c)(a),
                         d = a.type === U.a;
                     l && !e.hidePromos ? t.push(o) : s && !l ? t.push(o) : d && !e.hideWateb ? i = o : d || s || n.push(o)
                 }), e.fullsize ? u.createElement(y._2, {
@@ -11215,4 +11227,4 @@ webpackJsonp([47], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.event-landing-0d287f3060b7c37ae6e528749278d244.js.map
+//# sourceMappingURL=pages.event-landing-f34f823f24e09579c49a205c38b36ef8.js.map

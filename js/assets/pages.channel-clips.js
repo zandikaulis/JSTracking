@@ -9126,13 +9126,13 @@ webpackJsonp([41], {
                             break;
                         case a.Delete:
                             e = i.createElement(b.d, {
-                                clip: this.props.clip,
+                                slug: this.props.clip.slug,
                                 onClose: this.setToViewState
                             });
                             break;
                         case a.DeleteAll:
                             e = i.createElement(b.e, {
-                                clip: this.props.clip,
+                                slug: this.props.clip.slug,
                                 onClose: this.setToViewState
                             });
                             break;
@@ -12653,6 +12653,170 @@ webpackJsonp([41], {
         };
         n.loc.source = {
             body: "mutation RecentRaidsModActions_UnbanUser($input: UnbanUserFromChatRoomInput!) {\nunbanUserFromChatRoom(input: $input) {\nban {\nisPermanent\n}\n}\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
+    LnKh: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "Clips_ModalDelete"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "slug"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "ID"
+                            }
+                        }
+                    }
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "clip"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "slug"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "slug"
+                                }
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "broadcaster"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "id"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }]
+                                }
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "curator"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "id"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }, {
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "login"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }]
+                                }
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "thumbnailURL"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "createdAt"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "viewCount"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "title"
+                                },
+                                arguments: [],
+                                directives: []
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 143
+            }
+        };
+        n.loc.source = {
+            body: "query Clips_ModalDelete($slug: ID!) {\nclip(slug: $slug) {\nid\nbroadcaster {\nid\n}\ncurator {\nid\nlogin\n}\nthumbnailURL\ncreatedAt\nviewCount\ntitle\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -23857,13 +24021,14 @@ webpackJsonp([41], {
             })(h)),
             f = n("7vx8"),
             b = n("wnjK"),
-            v = (n("lTii"), this),
-            k = {
+            v = n("LnKh"),
+            k = (n("lTii"), this),
+            y = {
                 isLoading: !1,
                 hasErrored: !1,
                 hasSucceeded: !1
             },
-            y = function(e) {
+            _ = function(e) {
                 function t() {
                     var t = e.call(this) || this;
                     return t.onDeleteClick = function() {
@@ -23877,7 +24042,7 @@ webpackJsonp([41], {
                                             hasErrored: !1
                                         }), e.label = 1;
                                     case 1:
-                                        return e.trys.push([1, 3, , 4]), [4, this.props.deleteClip(this.props.clip)];
+                                        return e.trys.push([1, 3, , 4]), this.props.data.clip ? [4, this.props.deleteClip(this.props.slug)] : [2];
                                     case 2:
                                         return e.sent(), this.setState({
                                             isLoading: !1,
@@ -23893,24 +24058,25 @@ webpackJsonp([41], {
                                 }
                             })
                         })
-                    }, t.state = k, t
+                    }, t.state = y, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
                     var e = [r.createElement(l._35, {
-                            key: "title",
-                            type: l._40.H4
-                        }, Object(s.d)("Delete This Clip", "ClipsModalDelete")), r.createElement(l._2, {
-                            key: "message",
-                            margin: {
-                                top: 1
-                            }
-                        }, r.createElement(l._35, {
-                            type: l._40.P,
-                            color: l.I.Alt2
-                        }, Object(s.d)("This clip will be permanently deleted.", "ClipsModalDelete")))],
-                        t = null;
-                    this.props.clip.curator && (t = r.createElement("span", null, " • ", Object(s.d)("Clipped by {curator}", {
-                        curator: this.props.clip.curator.login
+                        key: "title",
+                        type: l._40.H4
+                    }, Object(s.d)("Delete This Clip", "ClipsModalDelete")), r.createElement(l._2, {
+                        key: "message",
+                        margin: {
+                            top: 1
+                        }
+                    }, r.createElement(l._35, {
+                        type: l._40.P,
+                        color: l.I.Alt2
+                    }, Object(s.d)("This clip will be permanently deleted.", "ClipsModalDelete")))];
+                    if (!this.props.data.clip) return null;
+                    var t = null;
+                    this.props.data.clip.curator && (t = r.createElement("span", null, " • ", Object(s.d)("Clipped by {curator}", {
+                        curator: this.props.data.clip.curator.login
                     }, "ClipsModalDelete")));
                     var n = r.createElement(l._25, {
                         display: l.N.Flex,
@@ -23923,17 +24089,17 @@ webpackJsonp([41], {
                     }, r.createElement(l.j, {
                         ratio: l.k.Aspect16x9
                     }, r.createElement("img", {
-                        src: this.props.clip.thumbnailURL
+                        src: this.props.data.clip.thumbnailURL
                     }))), r.createElement(l._2, null, r.createElement(l._35, {
                         type: l._40.H5
-                    }, this.props.clip.title), r.createElement(l._35, {
+                    }, this.props.data.clip.title), r.createElement(l._35, {
                         color: l.I.Alt2
                     }, Object(s.d)("{created, date, medium}", {
-                        created: new Date(this.props.clip.createdAt)
+                        created: new Date(this.props.data.clip.createdAt)
                     }, "ClipsModalDelete"), t), r.createElement(l._35, {
                         color: l.I.Alt2
                     }, Object(s.d)("{viewCount, number} views", {
-                        viewCount: this.props.clip.viewCount
+                        viewCount: this.props.data.clip.viewCount
                     }, "ClipsModalDelete"))));
                     return r.createElement(d, {
                         onSubmit: this.onDeleteClick,
@@ -23949,11 +24115,11 @@ webpackJsonp([41], {
                     })
                 }, t
             }(r.Component),
-            _ = a({
+            C = Object(f.a)(v)(a({
                 props: function(e) {
                     return {
                         deleteClip: function(t) {
-                            return i.__awaiter(v, void 0, void 0, function() {
+                            return i.__awaiter(k, void 0, void 0, function() {
                                 var n;
                                 return i.__generator(this, function(a) {
                                     switch (a.label) {
@@ -23961,7 +24127,7 @@ webpackJsonp([41], {
                                             return a.trys.push([0, 2, , 3]), [4, e.mutate({
                                                 variables: {
                                                     input: {
-                                                        slugs: [t.slug]
+                                                        slugs: [t]
                                                     }
                                                 }
                                             })];
@@ -23977,16 +24143,16 @@ webpackJsonp([41], {
                         }
                     }
                 }
-            })(y),
-            C = n("3zLD"),
-            E = n("wqRA"),
-            S = this,
-            N = {
+            })(_)),
+            E = n("3zLD"),
+            S = n("wqRA"),
+            N = this,
+            w = {
                 isLoading: !1,
                 hasErrored: !1,
                 hasSucceeded: !1
             },
-            w = function(e) {
+            D = function(e) {
                 function t() {
                     var t = e.call(this) || this;
                     return t.deleteAll = function() {
@@ -24020,7 +24186,7 @@ webpackJsonp([41], {
                         return t.state.hasSucceeded ? Object(s.d)("A request has been made to delete the clip. Please wait a few minutes for this to take effect.", "ClipsModalDeleteAll") : null
                     }, t.renderFailure = function() {
                         return t.state.hasErrored ? Object(s.d)("There was a problem deleting this clip.", "ClipsModalDeleteAll") : null
-                    }, t.state = N, t
+                    }, t.state = w, t
                 }
                 return i.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
@@ -24044,11 +24210,11 @@ webpackJsonp([41], {
                     })
                 }, t
             }(r.Component),
-            D = Object(C.compose)(Object(p.d)("ClipsModalDeleteAll"), a({
+            I = Object(E.compose)(Object(p.d)("ClipsModalDeleteAll"), a({
                 props: function(e) {
                     return {
                         deleteAllClips: function(t, n) {
-                            return i.__awaiter(S, void 0, void 0, function() {
+                            return i.__awaiter(N, void 0, void 0, function() {
                                 var a, r, o;
                                 return i.__generator(this, function(i) {
                                     switch (i.label) {
@@ -24086,7 +24252,7 @@ webpackJsonp([41], {
                         }
                     }
                 }
-            }), Object(f.a)(E, {
+            }), Object(f.a)(S, {
                 props: function(e) {
                     var t = e.data.clip;
                     return t ? {
@@ -24100,18 +24266,18 @@ webpackJsonp([41], {
                 options: function(e) {
                     return {
                         variables: {
-                            slug: e.clip.slug
+                            slug: e.slug
                         }
                     }
                 }
-            }))(w),
-            I = this,
-            O = {
+            }))(D),
+            O = this,
+            T = {
                 isLoading: !1,
                 hasErrored: !1,
                 hasSucceeded: !1
             },
-            T = function(e) {
+            x = function(e) {
                 function t() {
                     var t = e.call(this) || this;
                     return t.renderSuccess = function() {
@@ -24145,7 +24311,7 @@ webpackJsonp([41], {
                                 }
                             })
                         })
-                    }, t.state = O, t
+                    }, t.state = T, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
                     var e = r.createElement(l._35, {
@@ -24168,11 +24334,11 @@ webpackJsonp([41], {
                     })
                 }, t
             }(r.Component),
-            x = a({
+            L = a({
                 props: function(e) {
                     return {
                         deleteClips: function() {
-                            return i.__awaiter(I, void 0, void 0, function() {
+                            return i.__awaiter(O, void 0, void 0, function() {
                                 var t;
                                 return i.__generator(this, function(n) {
                                     switch (n.label) {
@@ -24180,9 +24346,7 @@ webpackJsonp([41], {
                                             return n.trys.push([0, 2, , 3]), [4, e.mutate({
                                                 variables: {
                                                     input: {
-                                                        slugs: e.ownProps.clips.map(function(e) {
-                                                            return e.slug
-                                                        })
+                                                        slugs: e.ownProps.clipSlugs
                                                     }
                                                 }
                                             })];
@@ -24198,17 +24362,17 @@ webpackJsonp([41], {
                         }
                     }
                 }
-            })(T);
+            })(x);
         n.d(t, "a", function() {
             return d
         }), n.d(t, "b", function() {
             return g
         }), n.d(t, "d", function() {
-            return _
+            return C
         }), n.d(t, "e", function() {
-            return D
+            return I
         }), n.d(t, "c", function() {
-            return x
+            return L
         })
     },
     ssrl: function(e, t, n) {
@@ -26578,4 +26742,4 @@ webpackJsonp([41], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-clips-b3d8a6e82f3f79e6a1c02ccc366042d5.js.map
+//# sourceMappingURL=pages.channel-clips-2d4605d75f0ceb78e661736e17f8df6f.js.map

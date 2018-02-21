@@ -34959,9 +34959,13 @@ webpackJsonp([33], {
                                 directives: []
                             }, {
                                 kind: "Field",
-                                name: {
+                                alias: {
                                     kind: "Name",
                                     value: "liveEvent"
+                                },
+                                name: {
+                                    kind: "Name",
+                                    value: "liveDeprecatedEvent"
                                 },
                                 arguments: [],
                                 directives: [],
@@ -35076,11 +35080,11 @@ webpackJsonp([33], {
             }],
             loc: {
                 start: 0,
-                end: 214
+                end: 235
             }
         };
         n.loc.source = {
-            body: "query LiveEventBanner_User($login: String!) {\nuser(login: $login) {\nid\nliveEvent {\nid\n...on SingleEvent {\ntitle\n}\n...on PremiereEvent {\ntitle\n}\n...on SegmentEvent {\nparent {\n...on TimetableEvent {\ntitle\n}\n}\n}\n}\n}\n}",
+            body: "query LiveEventBanner_User($login: String!) {\nuser(login: $login) {\nid\nliveEvent: liveDeprecatedEvent {\nid\n...on SingleEvent {\ntitle\n}\n...on PremiereEvent {\ntitle\n}\n...on SegmentEvent {\nparent {\n...on TimetableEvent {\ntitle\n}\n}\n}\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -59706,4 +59710,4 @@ webpackJsonp([33], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-9348f5ddba6549df46b0779bd5ffe8f7.js.map
+//# sourceMappingURL=pages.channel-2362042107c30e05af36bf4d1345b9d8.js.map

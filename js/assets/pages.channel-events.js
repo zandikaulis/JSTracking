@@ -8650,9 +8650,13 @@ webpackJsonp([42], {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        name: {
+                        alias: {
                             kind: "Name",
                             value: "unfollowEvent"
+                        },
+                        name: {
+                            kind: "Name",
+                            value: "unfollowDeprecatedEvent"
                         },
                         arguments: [{
                             kind: "Argument",
@@ -8718,11 +8722,11 @@ webpackJsonp([42], {
             }],
             loc: {
                 start: 0,
-                end: 127
+                end: 152
             }
         };
         n.loc.source = {
-            body: "mutation Events_FollowEvent($input: UnfollowEventInput!) {\nunfollowEvent(input: $input) {\nevent {\nid\nself {\nisFollowing\n}\n}\n}\n}",
+            body: "mutation Events_FollowEvent($input: UnfollowEventInput!) {\nunfollowEvent: unfollowDeprecatedEvent(input: $input) {\nevent {\nid\nself {\nisFollowing\n}\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -14574,9 +14578,13 @@ webpackJsonp([42], {
                     kind: "SelectionSet",
                     selections: [{
                         kind: "Field",
-                        name: {
+                        alias: {
                             kind: "Name",
                             value: "followEvent"
+                        },
+                        name: {
+                            kind: "Name",
+                            value: "followDeprecatedEvent"
                         },
                         arguments: [{
                             kind: "Argument",
@@ -14642,11 +14650,11 @@ webpackJsonp([42], {
             }],
             loc: {
                 start: 0,
-                end: 123
+                end: 146
             }
         };
         n.loc.source = {
-            body: "mutation Events_FollowEvent($input: FollowEventInput!) {\nfollowEvent(input: $input) {\nevent {\nid\nself {\nisFollowing\n}\n}\n}\n}",
+            body: "mutation Events_FollowEvent($input: FollowEventInput!) {\nfollowEvent: followDeprecatedEvent(input: $input) {\nevent {\nid\nself {\nisFollowing\n}\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -25550,4 +25558,4 @@ webpackJsonp([42], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-events-5cff0b5baaf52786fd550f60a09d9170.js.map
+//# sourceMappingURL=pages.channel-events-8113ce2e255b3f757e4213063c45097d.js.map
