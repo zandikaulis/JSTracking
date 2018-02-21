@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".7fdd4ea8751ee4940a02.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".57099609828c397c37d2.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -6203,6 +6203,7 @@
                             var u = (new Date).getTime();
                             this.trackEvent(ue.a.BUFFER_REFILL, {
                                 buffering_time: (u - this.bufferEmptyStartTime) / 1e3,
+                                buffer_empty_count: this.bufferEmptyCount,
                                 broadcast_id: a.broadcastID,
                                 community_ids: r.ids,
                                 manifest_broadcast_id: s.broadcast_id
@@ -28712,7 +28713,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.02.21-190455+0f75259e66497efc81dabc8e07f897dc9aaa5b1a",
+                    app_version: "2018.02.21-193613+546c15b824561a203c20bc65079adf61b5c553eb",
                     flash_version: r,
                     referrer_url: i,
                     referrer_host: a.host,
