@@ -4337,13 +4337,13 @@ window.SiteOptions = {
         },
         "d22b1724-f9ba-4470-99ab-f3f193034394": {
             "name": "ios_autoplay_feed_v5.9",
-            "v": 2998,
+            "v": 3107,
             "t": 1,
             "groups": [{
-                "weight": 99,
+                "weight": 95,
                 "value": "control"
             }, {
-                "weight": 1,
+                "weight": 5,
                 "value": "active"
             }]
         },
