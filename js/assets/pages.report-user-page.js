@@ -1,4 +1,4 @@
-webpackJsonp([62], {
+webpackJsonp([61], {
     DkuH: function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
@@ -11,7 +11,7 @@ webpackJsonp([62], {
             s = n("Aj/L"),
             l = n("TToO"),
             p = n("OAwv"),
-            c = n("U7vG"),
+            c = n("GiK3"),
             u = n("6sO2"),
             d = n("7vx8"),
             m = n("w9tK"),
@@ -90,19 +90,19 @@ webpackJsonp([62], {
                     autoReportInteractive: !0,
                     destination: m.a.ReportUserPage
                 })], t)
-            }(c.Component),
-            y = Object(r.b)(function(e) {
-                return {
-                    isLoggedIn: Object(s.d)(e),
-                    currentUser: Object(s.c)(e)
+            }(c.Component);
+        var y = Object(r.b)(function(e) {
+            return {
+                isLoggedIn: Object(s.d)(e),
+                currentUser: Object(s.c)(e)
+            }
+        }, function(e) {
+            return Object(o.b)({
+                login: function() {
+                    return Object(i.f)(a.a.ReportChannel)
                 }
-            }, function(e) {
-                return Object(o.b)({
-                    login: function() {
-                        return Object(i.f)(a.a.ReportChannel)
-                    }
-                }, e)
-            })(v);
+            }, e)
+        })(v);
         n.d(t, "ReportUserPage", function() {
             return y
         })
@@ -192,4 +192,4 @@ webpackJsonp([62], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.report-user-page-bdfe052e27d2a89ce7de6e8240d690a3.js.map
+//# sourceMappingURL=pages.report-user-page-4d70bf1b0a53fa7872e6e6b23a7cead4.js.map

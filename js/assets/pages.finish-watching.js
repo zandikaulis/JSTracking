@@ -1,4 +1,4 @@
-webpackJsonp([55], {
+webpackJsonp([54], {
     "6yQB": function(e, t, n) {
         "use strict";
         var i = n("RH2O"),
@@ -6,7 +6,7 @@ webpackJsonp([55], {
             r = n("iJpA"),
             o = n("c8Oh"),
             l = n("TToO"),
-            s = n("U7vG"),
+            s = n("GiK3"),
             d = n("6sO2"),
             c = n("zCIC"),
             u = n("+Znq"),
@@ -74,17 +74,17 @@ webpackJsonp([55], {
                         "data-a-target": "language-clear-all"
                     }, Object(d.d)("Clear all", "LanguageSelectMenu"))))))
                 }, t = l.__decorate([Object(m.d)("LanguageSelectMenu")], t)
-            }(s.Component)),
-            h = Object(i.b)(function(e) {
-                return {
-                    languagePreferences: Object(o.a)(e)
-                }
-            }, function(e) {
-                return Object(a.b)({
-                    updateLanguagePreferences: r.c,
-                    clearLanguagePreferences: r.a
-                }, e)
-            })(g);
+            }(s.Component));
+        var h = Object(i.b)(function(e) {
+            return {
+                languagePreferences: Object(o.a)(e)
+            }
+        }, function(e) {
+            return Object(a.b)({
+                updateLanguagePreferences: r.c,
+                clearLanguagePreferences: r.a
+            }, e)
+        })(g);
         n.d(t, "a", function() {
             return h
         })
@@ -107,10 +107,11 @@ webpackJsonp([55], {
                 fontSize: o.R.Size4,
                 noWrap: !0
             }, e.subHeader));
-            return e.linkTo && (t = i.createElement(a.a, {
+            e.linkTo && (t = i.createElement(a.a, {
                 to: e.linkTo,
                 className: "following__view-all__link"
-            }, t)), i.createElement("div", {
+            }, t));
+            return i.createElement("div", {
                 className: "following__view-all",
                 onClick: e.onClickViewAll,
                 "data-test-selector": s
@@ -121,7 +122,7 @@ webpackJsonp([55], {
                 fullHeight: !0
             }, t))))
         };
-        var i = n("U7vG"),
+        var i = n("GiK3"),
             a = (n.n(i), n("F8kA")),
             r = n("6sO2"),
             o = n("Odds"),
@@ -271,42 +272,30 @@ webpackJsonp([55], {
             }
         };
         var a = {};
-        i.definitions = i.definitions.concat(function(e) {
-            return e.filter(function(e) {
-                if ("FragmentDefinition" !== e.kind) return !0;
-                var t = e.name.value;
-                return !a[t] && (a[t] = !0, !0)
-            })
-        }(n("qjMx").definitions)), e.exports = i
+        i.definitions = i.definitions.concat(n("qjMx").definitions.filter(function(e) {
+            if ("FragmentDefinition" !== e.kind) return !0;
+            var t = e.name.value;
+            return !a[t] && (a[t] = !0, !0)
+        })), e.exports = i
     },
     C2pI: function(e, t) {},
     D9fv: function(e, t, n) {
         "use strict";
-
-        function i(e) {
-            return void 0 === e && (e = !1), [{
-                code: "asl",
-                label: "American Sign Language"
-            }, {
-                code: "other",
-                label: e ? Object(a.d)("Other", "broadcaster-languages") : "Other"
-            }]
-        }
         n.d(t, "a", function() {
             return o
         }), t.b = function() {
-            var e = a.n.intl.getLanguageCode(),
+            var e = i.n.intl.getLanguageCode(),
                 t = function(t) {
                     return "en" === t.code ? 0 : e && e.startsWith(t.code) ? 1 : 2
                 };
-            return r.slice().sort(function(e, n) {
+            return a.slice().sort(function(e, n) {
                 var i = t(e),
                     a = t(n);
                 return i !== a ? i - a : i + ":" + e.label < a + ":" + n.label ? -1 : 1
-            }).concat(i(!0))
+            }).concat(r(!0))
         };
-        var a = n("6sO2"),
-            r = [{
+        var i = n("6sO2"),
+            a = [{
                 code: "ar",
                 label: "العربية"
             }, {
@@ -384,15 +373,25 @@ webpackJsonp([55], {
             }, {
                 code: "zh",
                 label: "中文"
-            }],
-            o = new Set(r.concat(i()).map(function(e) {
-                return e.code
-            }))
+            }];
+
+        function r(e) {
+            return void 0 === e && (e = !1), [{
+                code: "asl",
+                label: "American Sign Language"
+            }, {
+                code: "other",
+                label: e ? Object(i.d)("Other", "broadcaster-languages") : "Other"
+            }]
+        }
+        var o = new Set(a.concat(r()).map(function(e) {
+            return e.code
+        }))
     },
     ISok: function(e, t, n) {
         "use strict";
         var i = n("TToO"),
-            a = n("U7vG"),
+            a = n("GiK3"),
             r = n("WxKK"),
             o = n("CSlQ"),
             l = n("81qH"),
@@ -442,7 +441,7 @@ webpackJsonp([55], {
     MZUk: function(e, t, n) {
         "use strict";
         var i = n("TToO"),
-            a = n("U7vG"),
+            a = n("GiK3"),
             r = n("6sO2"),
             o = n("7vx8"),
             l = n("vH/s"),
@@ -630,13 +629,11 @@ webpackJsonp([55], {
             }
         };
         var a = {};
-        i.definitions = i.definitions.concat(function(e) {
-            return e.filter(function(e) {
-                if ("FragmentDefinition" !== e.kind) return !0;
-                var t = e.name.value;
-                return !a[t] && (a[t] = !0, !0)
-            })
-        }(n("qjMx").definitions)), e.exports = i
+        i.definitions = i.definitions.concat(n("qjMx").definitions.filter(function(e) {
+            if ("FragmentDefinition" !== e.kind) return !0;
+            var t = e.name.value;
+            return !a[t] && (a[t] = !0, !0)
+        })), e.exports = i
     },
     V9YC: function(e, t, n) {
         "use strict";
@@ -654,7 +651,7 @@ webpackJsonp([55], {
         "use strict";
         var i = n("TToO"),
             a = n("HW6M"),
-            r = n("U7vG"),
+            r = n("GiK3"),
             o = n("6sO2"),
             l = n("6yQB"),
             s = n("+Znq"),
@@ -845,7 +842,7 @@ webpackJsonp([55], {
         n.d(t, "a", function() {
             return r
         });
-        var i = n("U7vG"),
+        var i = n("GiK3"),
             a = (n.n(i), n("Odds")),
             r = function() {
                 return i.createElement(a.A, null, i.createElement(a.j, {
@@ -888,7 +885,7 @@ webpackJsonp([55], {
         var i = n("TToO"),
             a = n("HW6M"),
             r = (n.n(a), n("OAwv")),
-            o = (n.n(r), n("U7vG")),
+            o = (n.n(r), n("GiK3")),
             l = (n.n(o), n("F8kA")),
             s = n("6sO2"),
             d = n("SZoP"),
@@ -1155,77 +1152,82 @@ webpackJsonp([55], {
     },
     iJpA: function(e, t, n) {
         "use strict";
-
-        function i() {
-            return r.k.get(s, []).filter(function(e) {
-                return o.a.has(e)
-            })
-        }
         t.c = function(e, t) {
             var n = this;
-            return function(o) {
-                return a.__awaiter(n, void 0, void 0, function() {
+            return function(r) {
+                return i.__awaiter(n, void 0, void 0, function() {
                     var n, d;
-                    return a.__generator(this, function(a) {
-                        return n = new Set(i()), t ? n.add(e) : n.delete(e), d = Array.from(n), r.k.set(s, d), o(Object(l.b)(d)), [2]
+                    return i.__generator(this, function(i) {
+                        return n = new Set(s()), t ? n.add(e) : n.delete(e), d = Array.from(n), a.k.set(l, d), r(Object(o.b)(d)), [2]
                     })
                 })
             }
         }, t.a = function() {
             var e = this;
             return function(t) {
-                return a.__awaiter(e, void 0, void 0, function() {
-                    return a.__generator(this, function(e) {
-                        return r.k.set(s, []), t(Object(l.b)([])), [2]
+                return i.__awaiter(e, void 0, void 0, function() {
+                    return i.__generator(this, function(e) {
+                        return a.k.set(l, []), t(Object(o.b)([])), [2]
                     })
                 })
             }
-        }, t.b = i;
-        var a = n("TToO"),
-            r = n("6sO2"),
-            o = n("D9fv"),
-            l = n("V9YC"),
-            s = "languageDirectoryFilters"
+        }, t.b = s;
+        var i = n("TToO"),
+            a = n("6sO2"),
+            r = n("D9fv"),
+            o = n("V9YC"),
+            l = "languageDirectoryFilters";
+
+        function s() {
+            return a.k.get(l, []).filter(function(e) {
+                return r.a.has(e)
+            })
+        }
     },
     "j7/Y": function(e, t, n) {
         "use strict";
+        var i = n("TToO"),
+            a = n("OAwv"),
+            r = n("GiK3"),
+            o = n("F8kA"),
+            l = n("6sO2");
 
-        function i(e) {
+        function s(e) {
             return function(t) {
                 var n = function(n) {
-                    function i(t) {
-                        var i = n.call(this, t) || this;
-                        return i.tracked = !1, i.referenceTracking = {}, i.trackPageview = function() {
-                            if (!(i.tracked || e.skip && e.skip(i.props))) {
-                                i.tracked = !0;
+                    function o(t) {
+                        var a = n.call(this, t) || this;
+                        return a.tracked = !1, a.referenceTracking = {}, a.trackPageview = function() {
+                            if (!(a.tracked || e.skip && e.skip(a.props))) {
+                                a.tracked = !0;
                                 var t = {};
-                                "function" == typeof e.properties ? t = e.properties(i.props) : e.properties && (t = a.__assign({}, e.properties));
-                                var n = a.__assign({}, i.props);
+                                "function" == typeof e.properties ? t = e.properties(a.props) : e.properties && (t = i.__assign({}, e.properties));
+                                var n = i.__assign({}, a.props);
                                 n.location && n.location.state && (t.medium = n.location.state.medium, t.content = n.location.state.content, t.content_index = n.location.state.content_index);
-                                var r = i.referenceTracking,
+                                var r = a.referenceTracking,
                                     o = r.content,
-                                    l = r.medium,
+                                    s = r.medium,
                                     d = r.content_index;
-                                s.n.tracking.trackPageview(a.__assign({
+                                l.n.tracking.trackPageview(i.__assign({
                                     content: o,
-                                    medium: l,
+                                    medium: s,
                                     content_index: d,
                                     location: e.location
                                 }, t))
                             }
-                        }, s.i.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : s.i.warn("No latency tracker exists! This means no data will be sent to Spade.", e), i
+                        }, l.i.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : l.i.warn("No latency tracker exists! This means no data will be sent to Spade.", e), a
                     }
-                    return a.__extends(i, n), i.prototype.componentDidMount = function() {
+                    return i.__extends(o, n), o.prototype.componentDidMount = function() {
                         var e = this;
                         this.referenceTracking = this.stripTTParams(this.props.history.location), this.trackPageview(), this.props.history.listen(function(t, n) {
                             "REPLACE" !== n && (e.tracked = !1, e.referenceTracking = {})
                         })
-                    }, i.prototype.componentDidUpdate = function() {
+                    }, o.prototype.componentDidUpdate = function() {
                         this.trackPageview()
-                    }, i.prototype.render = function() {
-                        return o.createElement(t, a.__assign({}, this.props))
-                    }, i.prototype.stripTTParams = function(e) {
-                        var t = "" !== e.search ? r.parse(e.search) : {},
+                    }, o.prototype.render = function() {
+                        return r.createElement(t, i.__assign({}, this.props))
+                    }, o.prototype.stripTTParams = function(e) {
+                        var t = "" !== e.search ? a.parse(e.search) : {},
                             n = {
                                 content: t.tt_content,
                                 content_index: t.tt_content_index,
@@ -1233,26 +1235,21 @@ webpackJsonp([55], {
                             };
                         if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, n.medium || n.content) {
                             var i = "",
-                                a = r.stringify(t);
-                            a.length > 0 && (i = "?" + a), this.props.history.replace({
+                                r = a.stringify(t);
+                            r.length > 0 && (i = "?" + r), this.props.history.replace({
                                 pathname: e.pathname,
                                 hash: e.hash,
                                 search: i
                             })
                         }
                         return n
-                    }, i
-                }(o.Component);
-                return Object(l.f)(n)
+                    }, o
+                }(r.Component);
+                return Object(o.f)(n)
             }
         }
-        var a = n("TToO"),
-            r = n("OAwv"),
-            o = n("U7vG"),
-            l = n("F8kA"),
-            s = n("6sO2");
         n.d(t, "a", function() {
-            return i
+            return s
         })
     },
     lTLe: function(e, t, n) {
@@ -1266,7 +1263,7 @@ webpackJsonp([55], {
             o = n("f2i/"),
             l = n("Aj/L"),
             s = n("TToO"),
-            d = n("U7vG"),
+            d = n("GiK3"),
             c = n("3zLD"),
             u = n("6sO2"),
             p = n("yWCw"),
@@ -1365,18 +1362,18 @@ webpackJsonp([55], {
                 destination: g.a.DirectoryVideosHistory
             }), Object(v.a)({
                 location: h.PageviewLocation.Directory
-            }))(y),
-            S = Object(i.b)(function(e) {
-                return {
-                    isLoggedIn: Object(l.d)(e)
+            }))(y);
+        var S = Object(i.b)(function(e) {
+            return {
+                isLoggedIn: Object(l.d)(e)
+            }
+        }, function(e) {
+            return Object(a.b)({
+                login: function() {
+                    return Object(o.f)(r.a.FollowingPage)
                 }
-            }, function(e) {
-                return Object(a.b)({
-                    login: function() {
-                        return Object(o.f)(r.a.FollowingPage)
-                    }
-                }, e)
-            })(E);
+            }, e)
+        })(E);
         n.d(t, "FinishWatchingPage", function() {
             return S
         })
@@ -1398,7 +1395,9 @@ webpackJsonp([55], {
     peXu: function(e, t, n) {
         "use strict";
         t.a = function(e, t, n) {
-            return void 0 === n && (n = 1), t && e ? Math.floor(e / t) * n : -1
+            void 0 === n && (n = 1);
+            if (!t || !e) return -1;
+            return Math.floor(e / t) * n
         }
     },
     qjMx: function(e, t) {
@@ -1640,4 +1639,4 @@ webpackJsonp([55], {
     },
     vQzq: function(e, t) {}
 });
-//# sourceMappingURL=pages.finish-watching-a5b0b6c164ed857af78dc180efd0e9a6.js.map
+//# sourceMappingURL=pages.finish-watching-c872750f5d9bd36b4c433aa3435e422e.js.map

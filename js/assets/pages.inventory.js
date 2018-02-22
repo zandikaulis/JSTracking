@@ -1,4 +1,4 @@
-webpackJsonp([56], {
+webpackJsonp([55], {
     "1pvm": function(e, t) {},
     DZCb: function(e, t, n) {
         "use strict";
@@ -11,7 +11,7 @@ webpackJsonp([56], {
             o = n("f2i/"),
             s = n("Aj/L"),
             l = n("TToO"),
-            c = n("U7vG"),
+            c = n("GiK3"),
             d = n("6sO2"),
             m = n("yWCw"),
             u = n("7vx8"),
@@ -88,8 +88,8 @@ webpackJsonp([56], {
                 autoReportInteractive: !0
             }))(k),
             y = n("Ouuk"),
-            b = n("jF7o"),
-            E = function(e) {
+            b = n("jF7o");
+        var E = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderCrate = function(e) {
@@ -329,7 +329,7 @@ webpackJsonp([56], {
             w = n("+Znq"),
             T = n("iMOk"),
             D = n("CFVp"),
-            U = function(e) {
+            I = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.bitsConfig = Object(D.a)(), t
@@ -403,9 +403,9 @@ webpackJsonp([56], {
                     }, t)))))
                 }, t
             }(c.Component),
-            I = Object(r.d)(Object(f.d)("TitleBar", {
+            U = Object(r.d)(Object(f.d)("TitleBar", {
                 autoReportInteractive: !0
-            }))(U),
+            }))(I),
             R = n("xpYL"),
             A = function(e) {
                 function t() {
@@ -429,7 +429,7 @@ webpackJsonp([56], {
                     return this.props.data.loading || this.props.data.error || (e = !1, t = this.props.data.currentUser.amazonMarketplaces, n = this.props.data.currentUser.bitsBalance, i = this.props.data.currentUser.availableBadges, r = this.props.data.currentUser.crates, a = this.props.data.currentUser.emoteSets), c.createElement(h._2, {
                         className: "inventory",
                         padding: 3
-                    }, c.createElement(I, {
+                    }, c.createElement(U, {
                         bitsBalance: n,
                         loading: e,
                         amazonMarketplaces: t
@@ -451,18 +451,18 @@ webpackJsonp([56], {
                 destination: g.a.Inventory
             }), Object(p.a)({
                 location: v.PageviewLocation.Inventory
-            }))(A),
-            H = Object(i.b)(function(e) {
-                return {
-                    isLoggedIn: Object(s.d)(e)
+            }))(A);
+        var H = Object(i.b)(function(e) {
+            return {
+                isLoggedIn: Object(s.d)(e)
+            }
+        }, function(e) {
+            return Object(r.b)({
+                onAnonymousVisit: function() {
+                    return Object(o.f)(a.a.InventoryPage)
                 }
-            }, function(e) {
-                return Object(r.b)({
-                    onAnonymousVisit: function() {
-                        return Object(o.f)(a.a.InventoryPage)
-                    }
-                }, e)
-            })(B);
+            }, e)
+        })(B);
         n.d(t, "InventoryPage", function() {
             return H
         })
@@ -471,7 +471,8 @@ webpackJsonp([56], {
     Ouuk: function(e, t, n) {
         "use strict";
         t.a = function(e) {
-            return e || (e = navigator.userAgent), !!i.exec(e)
+            e || (e = navigator.userAgent);
+            return !!i.exec(e)
         };
         var i = /\scurse\/\d/
     },
@@ -666,84 +667,89 @@ webpackJsonp([56], {
     },
     iMOk: function(e, t, n) {
         "use strict";
+        var i = n("GiK3"),
+            r = n("6sO2"),
+            a = n("NXs7"),
+            o = n("3iBR"),
+            s = n("iydZ"),
+            l = n("CFVp"),
+            c = n("qe65");
+        n("1pvm");
 
-        function i(e) {
-            var t, n = Object(a.d)("{bitsAmount} Bits", {
+        function d(e) {
+            var t, n = Object(r.d)("{bitsAmount} Bits", {
                 bitsAmount: e.count.toString()
             }, "Bits--BitsCount");
             if (e.withImage) {
-                var i = e.bitsConfig.indexedActions[s.g];
-                i || (i = Object(c.b)());
-                var m = i.orderedTiers.find(function(t) {
+                var d = e.bitsConfig.indexedActions[o.g];
+                d || (d = Object(l.b)());
+                var m = d.orderedTiers.find(function(t) {
                     return t.bits <= e.count
                 });
                 if (m) {
-                    var u = Object(l.b)(m);
-                    return void 0 !== e.themeOverride && (e.themeOverride === o.a.Light ? u.dark = u.light : u.light = u.dark), t = r.createElement(d.a, {
+                    var u = Object(s.b)(m);
+                    return void 0 !== e.themeOverride && (e.themeOverride === a.a.Light ? u.dark = u.light : u.light = u.dark), t = i.createElement(c.a, {
                         className: "bits-count--img",
                         sources: u
-                    }), r.createElement("strong", {
+                    }), i.createElement("strong", {
                         className: "bits-count",
                         "data-a-target": "bits-count"
-                    }, r.createElement("span", null, t, " ", e.withText ? n : ""))
+                    }, i.createElement("span", null, t, " ", e.withText ? n : ""))
                 }
             }
-            return r.createElement("strong", {
+            return i.createElement("strong", {
                 className: "bits-count",
                 "data-a-target": "bits-count"
-            }, r.createElement("span", null, n))
+            }, i.createElement("span", null, n))
         }
-        var r = n("U7vG"),
-            a = n("6sO2"),
-            o = n("NXs7"),
-            s = n("3iBR"),
-            l = n("iydZ"),
-            c = n("CFVp"),
-            d = n("qe65");
-        n("1pvm");
         n.d(t, "a", function() {
-            return i
+            return d
         })
     },
     "j7/Y": function(e, t, n) {
         "use strict";
+        var i = n("TToO"),
+            r = n("OAwv"),
+            a = n("GiK3"),
+            o = n("F8kA"),
+            s = n("6sO2");
 
-        function i(e) {
+        function l(e) {
             return function(t) {
                 var n = function(n) {
-                    function i(t) {
-                        var i = n.call(this, t) || this;
-                        return i.tracked = !1, i.referenceTracking = {}, i.trackPageview = function() {
-                            if (!(i.tracked || e.skip && e.skip(i.props))) {
-                                i.tracked = !0;
+                    function o(t) {
+                        var r = n.call(this, t) || this;
+                        return r.tracked = !1, r.referenceTracking = {}, r.trackPageview = function() {
+                            if (!(r.tracked || e.skip && e.skip(r.props))) {
+                                r.tracked = !0;
                                 var t = {};
-                                "function" == typeof e.properties ? t = e.properties(i.props) : e.properties && (t = r.__assign({}, e.properties));
-                                var n = r.__assign({}, i.props);
+                                "function" == typeof e.properties ? t = e.properties(r.props) : e.properties && (t = i.__assign({}, e.properties));
+                                var n = i.__assign({}, r.props);
                                 n.location && n.location.state && (t.medium = n.location.state.medium, t.content = n.location.state.content, t.content_index = n.location.state.content_index);
-                                var a = i.referenceTracking,
+                                var a = r.referenceTracking,
                                     o = a.content,
-                                    s = a.medium,
+                                    l = a.medium,
                                     c = a.content_index;
-                                l.n.tracking.trackPageview(r.__assign({
+                                s.n.tracking.trackPageview(i.__assign({
                                     content: o,
-                                    medium: s,
+                                    medium: l,
                                     content_index: c,
                                     location: e.location
                                 }, t))
                             }
-                        }, l.i.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : l.i.warn("No latency tracker exists! This means no data will be sent to Spade.", e), i
+                        }, s.i.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : s.i.warn("No latency tracker exists! This means no data will be sent to Spade.", e), r
                     }
-                    return r.__extends(i, n), i.prototype.componentDidMount = function() {
+                    return i.__extends(o, n), o.prototype.componentDidMount = function() {
                         var e = this;
                         this.referenceTracking = this.stripTTParams(this.props.history.location), this.trackPageview(), this.props.history.listen(function(t, n) {
                             "REPLACE" !== n && (e.tracked = !1, e.referenceTracking = {})
                         })
-                    }, i.prototype.componentDidUpdate = function() {
+                    }, o.prototype.componentDidUpdate = function() {
                         this.trackPageview()
-                    }, i.prototype.render = function() {
-                        return o.createElement(t, r.__assign({}, this.props))
-                    }, i.prototype.stripTTParams = function(e) {
-                        var t = "" !== e.search ? a.parse(e.search) : {},
+                    }, o.prototype.render = function() {
+                        return a.createElement(t, i.__assign({}, this.props))
+                    }, o.prototype.stripTTParams = function(e) {
+                        var t = "" !== e.search ? r.parse(e.search) : {},
                             n = {
                                 content: t.tt_content,
                                 content_index: t.tt_content_index,
@@ -751,32 +757,28 @@ webpackJsonp([56], {
                             };
                         if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, n.medium || n.content) {
                             var i = "",
-                                r = a.stringify(t);
-                            r.length > 0 && (i = "?" + r), this.props.history.replace({
+                                a = r.stringify(t);
+                            a.length > 0 && (i = "?" + a), this.props.history.replace({
                                 pathname: e.pathname,
                                 hash: e.hash,
                                 search: i
                             })
                         }
                         return n
-                    }, i
-                }(o.Component);
-                return Object(s.f)(n)
+                    }, o
+                }(a.Component);
+                return Object(o.f)(n)
             }
         }
-        var r = n("TToO"),
-            a = n("OAwv"),
-            o = n("U7vG"),
-            s = n("F8kA"),
-            l = n("6sO2");
         n.d(t, "a", function() {
-            return i
+            return l
         })
     },
     jF7o: function(e, t, n) {
         "use strict";
         t.a = function(e, t) {
-            if (e) var n = setInterval(function() {
+            if (!e) return void i.i.warn("[onPopupClose] Attempted to observe a window that failed to open.");
+            var n = setInterval(function() {
                 var i = !1,
                     r = !1;
                 try {
@@ -789,8 +791,7 @@ webpackJsonp([56], {
                     } catch (e) {}
                     clearInterval(n)
                 }
-            }, 500);
-            else i.i.warn("[onPopupClose] Attempted to observe a window that failed to open.")
+            }, 500)
         };
         var i = n("6sO2")
     },
@@ -872,14 +873,7 @@ webpackJsonp([56], {
         e.exports = n
     },
     xpYL: function(e, t, n) {
-        function i(e) {
-            return e.filter(function(e) {
-                if ("FragmentDefinition" !== e.kind) return !0;
-                var t = e.name.value;
-                return !a[t] && (a[t] = !0, !0)
-            })
-        }
-        var r = {
+        var i = {
             kind: "Document",
             definitions: [{
                 kind: "OperationDefinition",
@@ -1080,7 +1074,7 @@ webpackJsonp([56], {
                 end: 344
             }
         };
-        r.loc.source = {
+        i.loc.source = {
             body: '#import "twilight/features/fuel/models/amazon-marketplace.gql"\n#import "twilight/features/fuel/models/crate.gql"\nquery Inventory {\ncurrentUser{\nid\namazonMarketplaces {\n...amazonMarketplace\n}\nbitsBalance\ncrates {\n...crate\n}\navailableBadges(domains:CRATE){\nid\nimageURL(size:QUADRUPLE)\ntitle\n}\nemoteSets(domains:CRATE){\nid\nemotes{\nid\ntoken\n}\n}\n}\n}',
             name: "GraphQL request",
             locationOffset: {
@@ -1088,8 +1082,16 @@ webpackJsonp([56], {
                 column: 1
             }
         };
-        var a = {};
-        r.definitions = r.definitions.concat(i(n("UP6l").definitions)), r.definitions = r.definitions.concat(i(n("l83l").definitions)), e.exports = r
+        var r = {};
+
+        function a(e) {
+            return e.filter(function(e) {
+                if ("FragmentDefinition" !== e.kind) return !0;
+                var t = e.name.value;
+                return !r[t] && (r[t] = !0, !0)
+            })
+        }
+        i.definitions = i.definitions.concat(a(n("UP6l").definitions)), i.definitions = i.definitions.concat(a(n("l83l").definitions)), e.exports = i
     }
 });
-//# sourceMappingURL=pages.inventory-92807d35e3cc52fadec1eacaffb61cf6.js.map
+//# sourceMappingURL=pages.inventory-97a2be5a222a69113e53a505e6722db9.js.map

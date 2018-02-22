@@ -1,20 +1,20 @@
-webpackJsonp([59], {
-    IzAE: function(e, t, r) {
+webpackJsonp([58], {
+    IzAE: function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var n = r("TToO"),
-            a = r("U7vG"),
-            i = r("zCIC"),
-            o = r("KqsW"),
-            l = r("Odds"),
-            s = (r("WWVW"), function(e) {
+        var r = n("TToO"),
+            a = n("GiK3"),
+            i = n("zCIC"),
+            o = n("KqsW"),
+            l = n("Odds"),
+            s = (n("WWVW"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {}, t
                 }
-                return n.__extends(t, e), t.prototype.render = function() {
+                return r.__extends(t, e), t.prototype.render = function() {
                     return a.createElement(i.b, null, a.createElement(l._2, {
                         className: "testing-carousel",
                         padding: 3
@@ -201,27 +201,27 @@ webpackJsonp([59], {
                     })
                 }, t
             }(a.Component));
-        r.d(t, "DevOnlyTestingCarouselPage", function() {
+        n.d(t, "DevOnlyTestingCarouselPage", function() {
             return s
         })
     },
-    KqsW: function(e, t, r) {
+    KqsW: function(e, t, n) {
         "use strict";
-        r.d(t, "a", function() {
+        n.d(t, "a", function() {
             return h
         });
-        var n, a = r("TToO"),
-            i = r("HW6M"),
-            o = (r.n(i), r("U7vG")),
-            l = (r.n(o), r("6sO2")),
-            s = r("CSlQ"),
-            d = r("Odds"),
-            c = r("M4d4"),
-            u = (r.n(c), "[data-js-selector=carousel-content]");
+        var r, a = n("TToO"),
+            i = n("HW6M"),
+            o = (n.n(i), n("GiK3")),
+            l = (n.n(o), n("6sO2")),
+            s = n("CSlQ"),
+            d = n("Odds"),
+            c = n("M4d4"),
+            u = (n.n(c), "[data-js-selector=carousel-content]");
         ! function(e) {
             e.Previous = "previous", e.Next = "next"
-        }(n || (n = {}));
-        var m, g = (m = {}, m[n.Previous] = d._16.AngleLeft, m[n.Next] = d._16.AngleRight, m),
+        }(r || (r = {}));
+        var m, g = ((m = {})[r.Previous] = d._16.AngleLeft, m[r.Next] = d._16.AngleRight, m),
             h = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -235,34 +235,34 @@ webpackJsonp([59], {
                         })
                     }, t.moveCarouselForward = function() {
                         if (!t.isForwardButtonDisabled() && t.props.items) {
-                            for (var e = t.getCarouselChildren(), r = t.getCarouselWidth(), n = t.state.currentElementIndex + 1, a = n; a < e.length; a++) {
-                                if (e[a].getBoundingClientRect().right - t.getBaseOffset() > r) {
-                                    n = a;
+                            for (var e = t.getCarouselChildren(), n = t.getCarouselWidth(), r = t.state.currentElementIndex + 1, a = r; a < e.length; a++) {
+                                if (e[a].getBoundingClientRect().right - t.getBaseOffset() > n) {
+                                    r = a;
                                     break
                                 }
                             }
                             t.setState({
-                                currentElementIndex: n
+                                currentElementIndex: r
                             })
                         }
                     }, t.moveCarouselBackward = function() {
                         if (!t.isBackButtonDisabled()) {
-                            for (var e = t.getCarouselChildren(), r = t.getCarouselWidth(), n = t.state.currentElementIndex - 1, a = n - 1; a >= 0; a--) {
-                                if (r < -1 * (e[a].getBoundingClientRect().left - t.getBaseOffset())) break;
-                                n = a
+                            for (var e = t.getCarouselChildren(), n = t.getCarouselWidth(), r = t.state.currentElementIndex - 1, a = r - 1; a >= 0; a--) {
+                                if (n < -1 * (e[a].getBoundingClientRect().left - t.getBaseOffset())) break;
+                                r = a
                             }
                             t.setState({
-                                currentElementIndex: n
+                                currentElementIndex: r
                             })
                         }
                     }, t.isForwardButtonDisabled = function() {
                         if (!t.carouselContainerRef) return !0;
                         if (t.props.items) {
                             var e = t.getCarouselWidth(),
-                                r = t.getCarouselChildren();
-                            if (t.state.currentElementIndex >= r.length - 1) return !0;
-                            var n = r[t.state.currentElementIndex].getBoundingClientRect().left;
-                            if (r[r.length - 1].getBoundingClientRect().right - n > e) return !1
+                                n = t.getCarouselChildren();
+                            if (t.state.currentElementIndex >= n.length - 1) return !0;
+                            var r = n[t.state.currentElementIndex].getBoundingClientRect().left;
+                            if (n[n.length - 1].getBoundingClientRect().right - r > e) return !1
                         }
                         return !0
                     }, t.isBackButtonDisabled = function() {
@@ -270,8 +270,7 @@ webpackJsonp([59], {
                     }, t.getCarouselChildren = function() {
                         if (!t.carouselContainerRef) return [];
                         var e = t.getCarouselSlider();
-                        if (!e || !e.children.length) return [];
-                        return Array.prototype.slice.call(e.children)
+                        return e && e.children.length ? Array.prototype.slice.call(e.children) : []
                     }, t.getCarouselSlider = function() {
                         return t.carouselContainerRef.querySelector(u)
                     }, t.getCarouselWidth = function() {
@@ -283,25 +282,25 @@ webpackJsonp([59], {
                         var e = t.getCarouselSlider();
                         return e ? e.getBoundingClientRect().left : 0
                     }, t.getChildOffset = function(e) {
-                        var r = t.getCarouselChildren();
-                        return 0 === r.length || r.length <= e ? 0 : r[e].getBoundingClientRect().left
+                        var n = t.getCarouselChildren();
+                        return 0 === n.length || n.length <= e ? 0 : n[e].getBoundingClientRect().left
                     }, t.transformString = function() {
                         return -1 * (t.getChildOffset(t.state.currentElementIndex) - t.getSliderOffset()) + "px"
                     }, t.refHandler = function(e) {
                         return t.state.childrenRendered || null === t.props.items || t.setState({
                             childrenRendered: !0
                         }), t.carouselContainerRef = e
-                    }, t.renderNavButton = function(e, r, a) {
-                        var s = (u = {}, u[n.Previous] = Object(l.d)("previous", "MediaCarouselNavButton"), u[n.Next] = Object(l.d)("next", "MediaCarouselNavButton"), u),
-                            c = i("media-carousel__button", {
-                                "media-carousel__button--previous": e === n.Previous,
-                                "media-carousel__button--next": e === n.Next,
-                                "media-carousel__button--disabled": r
+                    }, t.renderNavButton = function(e, n, a) {
+                        var s, c = ((s = {})[r.Previous] = Object(l.d)("previous", "MediaCarouselNavButton"), s[r.Next] = Object(l.d)("next", "MediaCarouselNavButton"), s),
+                            u = i("media-carousel__button", {
+                                "media-carousel__button--previous": e === r.Previous,
+                                "media-carousel__button--next": e === r.Next,
+                                "media-carousel__button--disabled": n
                             }, {
                                 "media-carousel__button--inset": !0 === t.props.insetStyle
                             });
                         return o.createElement(d._2, {
-                            className: c,
+                            className: u,
                             position: d._9.Relative,
                             display: d.N.Flex,
                             alignItems: d.c.Stretch
@@ -309,12 +308,11 @@ webpackJsonp([59], {
                             "data-test-selector": e + "-button",
                             "data-a-target": e + "-button",
                             onClick: a,
-                            disabled: r,
-                            ariaLabel: s[e],
+                            disabled: n,
+                            ariaLabel: c[e],
                             icon: g[e],
                             size: d.x.Large
-                        }));
-                        var u
+                        }))
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.componentDidUpdate = function() {
@@ -362,7 +360,7 @@ webpackJsonp([59], {
                         attachTop: !0,
                         attachLeft: !0,
                         fullHeight: !0
-                    }, this.renderNavButton(n.Previous, !this.state.childrenRendered || this.isBackButtonDisabled(), this.moveCarouselBackward)), o.createElement(d._2, {
+                    }, this.renderNavButton(r.Previous, !this.state.childrenRendered || this.isBackButtonDisabled(), this.moveCarouselBackward)), o.createElement(d._2, {
                         className: "media-carousel__nav",
                         display: d.N.Flex,
                         alignItems: d.c.Center,
@@ -370,7 +368,7 @@ webpackJsonp([59], {
                         attachTop: !0,
                         attachRight: !0,
                         fullHeight: !0
-                    }, this.renderNavButton(n.Next, !this.state.childrenRendered || this.isForwardButtonDisabled(), this.moveCarouselForward))))
+                    }, this.renderNavButton(r.Next, !this.state.childrenRendered || this.isForwardButtonDisabled(), this.moveCarouselForward))))
                 }, t = a.__decorate([Object(s.d)("MediaCarousel", {
                     autoReportInteractive: !0
                 })], t)
@@ -379,4 +377,4 @@ webpackJsonp([59], {
     M4d4: function(e, t) {},
     WWVW: function(e, t) {}
 });
-//# sourceMappingURL=pages.dev-only-testing-carousel-9dc06ea4f763dec42137a54b391c4f72.js.map
+//# sourceMappingURL=pages.dev-only-testing-carousel-7de40bc7a08deb4123032ade521072e6.js.map

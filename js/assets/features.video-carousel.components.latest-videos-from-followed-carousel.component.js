@@ -1,4 +1,4 @@
-webpackJsonp([82], {
+webpackJsonp([81], {
     "97Ye": function(e, t, n) {
         var i = {
             kind: "Document",
@@ -113,27 +113,26 @@ webpackJsonp([82], {
             }
         };
         var r = {};
-        i.definitions = i.definitions.concat(function(e) {
-            return e.filter(function(e) {
-                if ("FragmentDefinition" !== e.kind) return !0;
-                var t = e.name.value;
-                return !r[t] && (r[t] = !0, !0)
-            })
-        }(n("qjMx").definitions)), e.exports = i
+        i.definitions = i.definitions.concat(n("qjMx").definitions.filter(function(e) {
+            if ("FragmentDefinition" !== e.kind) return !0;
+            var t = e.name.value;
+            return !r[t] && (r[t] = !0, !0)
+        })), e.exports = i
     },
     GJxf: function(e, t, n) {
         "use strict";
-        var i, r, o = n("RH2O"),
-            a = n("TToO"),
-            s = n("HW6M"),
-            d = n("KSGD"),
-            c = n("U7vG"),
-            l = n("6sO2"),
-            u = n("vH/s"),
-            p = n("CSlQ"),
-            m = n("81qH"),
-            v = n("Odds"),
-            h = (n("yF7E"), "carousel-content"),
+        var i = n("RH2O"),
+            r = n("TToO"),
+            o = n("HW6M"),
+            a = n("KSGD"),
+            s = n("GiK3"),
+            d = n("6sO2"),
+            c = n("vH/s"),
+            l = n("CSlQ"),
+            u = n("81qH"),
+            p = n("Odds");
+        n("yF7E");
+        var m, v, h = "carousel-content",
             f = 10,
             g = function(e) {
                 function t() {
@@ -145,11 +144,11 @@ webpackJsonp([82], {
                     }, t.onPreviewCardClick = function(e) {
                         if (t.props.videos) {
                             var n = t.props.videos[e];
-                            l.m.trackItemSectionClick(a.__assign({
+                            d.m.trackItemSectionClick(r.__assign({
                                 carousel_content: t.props.tracking.content,
                                 item_id: n.id,
                                 item_index: e,
-                                item_type: u.TwitchDataType.Video,
+                                item_type: c.TwitchDataType.Video,
                                 item_viewcount: n.viewCount,
                                 location: t.props.tracking.location
                             }, t.props.tracking.source))
@@ -157,7 +156,7 @@ webpackJsonp([82], {
                     }, t.getVideoCards = function() {
                         var e = t.props.videos;
                         if (null === e) {
-                            for (var n = [], i = 0; i < f; i++) n.push(c.createElement(m.VideoPreviewCardPlaceholder, {
+                            for (var n = [], i = 0; i < f; i++) n.push(s.createElement(u.VideoPreviewCardPlaceholder, {
                                 key: "carousel-placeholder-" + i
                             }));
                             return n
@@ -165,7 +164,7 @@ webpackJsonp([82], {
                         for (var r = [], o = 0; o < e.length; o++)
                             if (o < f || t.props.firstPageLoaded) {
                                 if (e[o].id === t.props.currentlyWatchingVideoID) continue;
-                                r.push(c.createElement(m.VideoPreviewCard, {
+                                r.push(s.createElement(u.VideoPreviewCard, {
                                     collectionID: t.props.collectionID,
                                     onClick: t.onPreviewCardClick,
                                     key: "video-" + o,
@@ -177,7 +176,7 @@ webpackJsonp([82], {
                                     overrideImageInteractivity: t.props.overrideCardImageInteractivity,
                                     video: e[o]
                                 }))
-                            } else r.push(c.createElement(m.VideoPreviewCardPlaceholder, {
+                            } else r.push(s.createElement(u.VideoPreviewCardPlaceholder, {
                                 key: "carousel-placeholder-" + o
                             }));
                         return r
@@ -232,7 +231,7 @@ webpackJsonp([82], {
                         return "translate3d(" + t.pixelOffset() + "px, 0px, 0px)"
                     }, t
                 }
-                return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                return r.__extends(t, e), t.prototype.componentDidMount = function() {
                     var e = this.context.registerReceiver;
                     e && (this.unregisterScrollHandler = e(this)), null !== this.props.videos && this.onDataLoaded()
                 }, t.prototype.componentDidUpdate = function(e) {
@@ -240,58 +239,58 @@ webpackJsonp([82], {
                 }, t.prototype.componentWillUnmount = function() {
                     this.unregisterScrollHandler && this.unregisterScrollHandler()
                 }, t.prototype.render = function() {
-                    return c.createElement(v.W, a.__assign({}, this.props, {
+                    return s.createElement(p.W, r.__assign({}, this.props, {
                         margin: {
                             bottom: 2,
                             top: 1
                         },
-                        position: v._9.Relative
-                    }), c.createElement("div", {
+                        position: p._9.Relative
+                    }), s.createElement("div", {
                         className: "video-carousel",
                         ref: this.refHandler
-                    }, c.createElement(v._2, {
+                    }, s.createElement(p._2, {
                         className: "video-carousel__child-container",
-                        overflow: v._5.Hidden,
-                        position: v._9.Relative,
+                        overflow: p._5.Hidden,
+                        position: p._9.Relative,
                         fullWidth: !0,
                         "data-test-selector": "child-container"
-                    }, c.createElement(v.W, {
+                    }, s.createElement(p.W, {
                         margin: {
                             bottom: 3
                         }
-                    }, c.createElement("div", {
+                    }, s.createElement("div", {
                         className: "video-carousel__body",
                         style: {
                             transform: this.transformString()
                         },
                         "data-test-selector": "carousel-body"
-                    }, c.createElement(v._46, {
+                    }, s.createElement(p._46, {
                         noWrap: !0,
                         noGrow: !0,
-                        childWidth: this.props.videoCardSize || v._47.Large,
-                        gutterSize: v._48.Small,
+                        childWidth: this.props.videoCardSize || p._47.Large,
+                        gutterSize: p._48.Small,
                         "data-js-selector": h
-                    }, this.getVideoCards())))), c.createElement(v._2, {
+                    }, this.getVideoCards())))), s.createElement(p._2, {
                         className: "video-carousel__nav",
-                        display: v.N.Flex,
-                        alignItems: v.c.Center,
-                        position: v._9.Absolute,
+                        display: p.N.Flex,
+                        alignItems: p.c.Center,
+                        position: p._9.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
                         fullHeight: !0
-                    }, c.createElement(b, {
+                    }, s.createElement(b, {
                         direction: k.DirectionPrevious,
                         disabled: !this.state.childrenRendered || this.isBackButtonDisabled(),
                         onClickHandler: this.moveCarouselBackward
-                    })), c.createElement(v._2, {
+                    })), s.createElement(p._2, {
                         className: "video-carousel__nav",
-                        display: v.N.Flex,
-                        alignItems: v.c.Center,
-                        position: v._9.Absolute,
+                        display: p.N.Flex,
+                        alignItems: p.c.Center,
+                        position: p._9.Absolute,
                         attachTop: !0,
                         attachRight: !0,
                         fullHeight: !0
-                    }, c.createElement(b, {
+                    }, s.createElement(b, {
                         direction: k.DirectionNext,
                         disabled: !this.state.childrenRendered || this.isForwardButtonDisabled(),
                         onClickHandler: this.moveCarouselForward
@@ -305,16 +304,16 @@ webpackJsonp([82], {
                         return !(t.right < 0 || t.bottom < 0 || t.left > n || t.top > i)
                     }(this.carouselContainerRef) && this.trackSectionLoad()
                 }, t.prototype.trackSectionLoad = function() {
-                    for (var e = this.props.videos ? this.props.videos : [], t = [], n = [], i = 0, r = e; i < r.length; i++) {
-                        var o = r[i];
-                        t.push(o.id), n.push(o.viewCount)
+                    for (var e = this.props.videos ? this.props.videos : [], t = [], n = [], i = 0, o = e; i < o.length; i++) {
+                        var a = o[i];
+                        t.push(a.id), n.push(a.viewCount)
                     }
-                    l.m.trackItemSectionLoad(a.__assign({
+                    d.m.trackItemSectionLoad(r.__assign({
                         carousel_content: this.props.tracking.content,
                         location: this.props.tracking.location,
                         rendered_item_count: e.length,
                         rendered_item_list: t,
-                        rendered_item_types: [u.TwitchDataType.Video],
+                        rendered_item_types: [c.TwitchDataType.Video],
                         rendered_items_viewcounts: n
                     }, this.props.tracking.source)), this.setState({
                         hasTrackedItemSectionLoad: !0
@@ -327,43 +326,42 @@ webpackJsonp([82], {
                         e.checkVisible()
                     })
                 }, t.contextTypes = {
-                    registerReceiver: d.func
+                    registerReceiver: a.func
                 }, t
-            }(c.Component),
+            }(s.Component),
             k = {
                 DirectionPrevious: "previous",
                 DirectionNext: "next"
             },
-            _ = (i = {}, i[k.DirectionPrevious] = "previous", i[k.DirectionNext] = "next", i),
-            C = (r = {}, r[k.DirectionPrevious] = v._16.AngleLeft, r[k.DirectionNext] = v._16.AngleRight, r),
+            _ = ((m = {})[k.DirectionPrevious] = "previous", m[k.DirectionNext] = "next", m),
+            C = ((v = {})[k.DirectionPrevious] = p._16.AngleLeft, v[k.DirectionNext] = p._16.AngleRight, v),
             b = function(e) {
-                var t = _[e.direction],
-                    n = (r = {}, r[k.DirectionPrevious] = Object(l.d)("previous", "CarouselNavButton"), r[k.DirectionNext] = Object(l.d)("next", "CarouselNavButton"), r),
-                    i = s("video-carousel__button", "video-carousel__button--" + t, {
+                var t, n = _[e.direction],
+                    i = ((t = {})[k.DirectionPrevious] = Object(d.d)("previous", "CarouselNavButton"), t[k.DirectionNext] = Object(d.d)("next", "CarouselNavButton"), t),
+                    r = o("video-carousel__button", "video-carousel__button--" + n, {
                         "video-carousel__button--disabled": e.disabled
                     });
-                return c.createElement(v._2, {
-                    className: i,
-                    position: v._9.Relative,
-                    display: v.N.Flex,
-                    alignItems: v.c.Stretch
-                }, c.createElement(v.v, {
-                    "data-test-selector": t + "-button",
+                return s.createElement(p._2, {
+                    className: r,
+                    position: p._9.Relative,
+                    display: p.N.Flex,
+                    alignItems: p.c.Stretch
+                }, s.createElement(p.v, {
+                    "data-test-selector": n + "-button",
                     onClick: e.onClickHandler,
                     disabled: e.disabled,
-                    ariaLabel: n[e.direction],
+                    ariaLabel: i[e.direction],
                     icon: C[e.direction],
-                    size: v.x.Large
-                }));
-                var r
+                    size: p.x.Large
+                }))
             },
-            S = Object(p.d)("VideoCarousel", {
+            S = Object(l.d)("VideoCarousel", {
                 autoReportInteractive: !0
             })(g);
         n.d(t, "a", function() {
             return w
         });
-        var w = Object(o.b)(function(e) {
+        var w = Object(i.b)(function(e) {
             return {
                 firstPageLoaded: e.session.firstPageLoaded
             }
@@ -379,7 +377,7 @@ webpackJsonp([82], {
             return v
         });
         var i = n("TToO"),
-            r = n("U7vG"),
+            r = n("GiK3"),
             o = (n.n(r), n("3zLD")),
             a = (n.n(o), n("6sO2")),
             s = n("7vx8"),
@@ -433,4 +431,4 @@ webpackJsonp([82], {
     },
     yF7E: function(e, t) {}
 });
-//# sourceMappingURL=features.video-carousel.components.latest-videos-from-followed-carousel.component-ecd102190ff4aee5c9a8b5c85c15ff12.js.map
+//# sourceMappingURL=features.video-carousel.components.latest-videos-from-followed-carousel.component-82005214f0ad2b64e2205b7d7bed0f25.js.map

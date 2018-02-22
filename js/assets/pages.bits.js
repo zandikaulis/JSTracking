@@ -1,4 +1,4 @@
-webpackJsonp([57], {
+webpackJsonp([56], {
     "2b/B": function(e, t, n) {
         "use strict";
         var a = n("RH2O"),
@@ -9,7 +9,7 @@ webpackJsonp([57], {
             s = n("Aj/L"),
             c = n("TToO"),
             d = n("HW6M"),
-            p = n("U7vG"),
+            p = n("GiK3"),
             u = n("6sO2"),
             m = n("rCmJ"),
             h = n("7vx8"),
@@ -186,34 +186,34 @@ webpackJsonp([57], {
                 }, t.prototype.reportInteractive = function() {
                     !this.props.data || this.props.data.loading && !this.props.data.error || this.props.latencyTracking.reportInteractive()
                 }, t = c.__decorate([Object(_.d)("MinimalUser"), Object(h.a)(k)], t)
-            }(p.Component)),
-            b = Object(a.b)(function(e) {
-                return {
-                    isLoggedIn: Object(s.d)(e),
-                    theme: e.ui.theme
-                }
-            }, function(e) {
-                return Object(r.b)({
-                    logout: o.g,
-                    login: function() {
-                        return o.f(i.a.TopNavLoginButton)
-                    },
-                    changeTheme: l.b
-                }, e)
-            })(E);
+            }(p.Component));
+        var b = Object(a.b)(function(e) {
+            return {
+                isLoggedIn: Object(s.d)(e),
+                theme: e.ui.theme
+            }
+        }, function(e) {
+            return Object(r.b)({
+                logout: o.g,
+                login: function() {
+                    return o.f(i.a.TopNavLoginButton)
+                },
+                changeTheme: l.b
+            }, e)
+        })(E);
         n.d(t, "a", function() {
             return b
         })
     },
     "6WAQ": function(e, t, n) {
         "use strict";
-        n.d(t, "a", function() {
-            return a
-        });
         var a;
-        ! function(e) {
-            e.Archive = "ARCHIVE", e.Highlight = "HIGHLIGHT", e.Upload = "UPLOAD", e.WatchParty = "WATCH_PARTY", e.PastPremiere = "PAST_PREMIERE", e.PremiereUpload = "PREMIERE_UPLOAD"
-        }(a || (a = {}))
+        n.d(t, "a", function() {
+                return a
+            }),
+            function(e) {
+                e.Archive = "ARCHIVE", e.Highlight = "HIGHLIGHT", e.Upload = "UPLOAD", e.WatchParty = "WATCH_PARTY", e.PastPremiere = "PAST_PREMIERE", e.PremiereUpload = "PREMIERE_UPLOAD"
+            }(a || (a = {}))
     },
     "JeT+": function(e, t, n) {
         "use strict";
@@ -224,14 +224,14 @@ webpackJsonp([57], {
             r = n("F8kA"),
             i = n("Aj/L"),
             o = n("TToO"),
-            l = n("U7vG"),
+            l = n("GiK3"),
             s = n("bZTi"),
             c = n("ZyA2"),
             d = n("VAT8"),
             p = n("tnNl"),
             u = n("Odds"),
             m = s.a.wrap(function() {
-                return n.e(75).then(n.bind(null, "HQb3"))
+                return n.e(74).then(n.bind(null, "HQb3"))
             }, "BitsLandingPage"),
             h = function(e) {
                 function t() {
@@ -269,8 +269,8 @@ webpackJsonp([57], {
                         component: m
                     }))), l.createElement(c.a, null)))
                 }, t
-            }(l.Component),
-            f = Object(a.b)(function(e) {
+            }(l.Component);
+        var f = Object(a.b)(function(e) {
                 return {
                     firstPageLoaded: !!e.session.firstPageLoaded,
                     isLoggedIn: Object(i.d)(e),
@@ -365,10 +365,10 @@ webpackJsonp([57], {
         n.d(t, "a", function() {
             return a
         }), t.b = function(e, t, n) {
-            return void 0 === n && (n = !0),
-                function(a) {
-                    a(Object(i.s)(e)), n && Object(r.d)(e), t && Object(o.b)(e, t)
-                }
+            void 0 === n && (n = !0);
+            return function(a) {
+                a(Object(i.s)(e)), n && Object(r.d)(e), t && Object(o.b)(e, t)
+            }
         };
         var a, r = n("VAT8"),
             i = n("7enT"),
@@ -389,7 +389,7 @@ webpackJsonp([57], {
     tnNl: function(e, t, n) {
         "use strict";
         var a = n("TToO"),
-            r = n("U7vG"),
+            r = n("GiK3"),
             i = n("F8kA"),
             o = n("vH/s"),
             l = n("CSlQ"),
@@ -485,7 +485,8 @@ webpackJsonp([57], {
                 case i.a.PremiereUpload:
                     return l.SpadeVideoBroadcastType.PremiereUpload;
                 default:
-                    return e
+                    var t = e;
+                    return t
             }
         };
         var a = n("6sO2"),
@@ -500,7 +501,7 @@ webpackJsonp([57], {
             return i
         });
         var a = n("TToO"),
-            r = n("U7vG"),
+            r = n("GiK3"),
             i = (n.n(r), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -531,4 +532,4 @@ webpackJsonp([57], {
             }(r.Component))
     }
 });
-//# sourceMappingURL=pages.bits-6c55c762547bde9780417eb16b3c3d20.js.map
+//# sourceMappingURL=pages.bits-3880cdac6e86efdb106901a58eb7290d.js.map

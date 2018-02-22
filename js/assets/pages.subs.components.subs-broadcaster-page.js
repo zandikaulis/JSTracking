@@ -1,4 +1,4 @@
-webpackJsonp([80], {
+webpackJsonp([79], {
     "027l": function(e, t) {
         var n = {
             kind: "Document",
@@ -476,43 +476,48 @@ webpackJsonp([80], {
     bPto: function(e, t) {},
     "j7/Y": function(e, t, n) {
         "use strict";
+        var i = n("TToO"),
+            r = n("OAwv"),
+            s = n("GiK3"),
+            a = n("F8kA"),
+            o = n("6sO2");
 
-        function i(e) {
+        function c(e) {
             return function(t) {
                 var n = function(n) {
-                    function i(t) {
-                        var i = n.call(this, t) || this;
-                        return i.tracked = !1, i.referenceTracking = {}, i.trackPageview = function() {
-                            if (!(i.tracked || e.skip && e.skip(i.props))) {
-                                i.tracked = !0;
+                    function a(t) {
+                        var r = n.call(this, t) || this;
+                        return r.tracked = !1, r.referenceTracking = {}, r.trackPageview = function() {
+                            if (!(r.tracked || e.skip && e.skip(r.props))) {
+                                r.tracked = !0;
                                 var t = {};
-                                "function" == typeof e.properties ? t = e.properties(i.props) : e.properties && (t = r.__assign({}, e.properties));
-                                var n = r.__assign({}, i.props);
+                                "function" == typeof e.properties ? t = e.properties(r.props) : e.properties && (t = i.__assign({}, e.properties));
+                                var n = i.__assign({}, r.props);
                                 n.location && n.location.state && (t.medium = n.location.state.medium, t.content = n.location.state.content, t.content_index = n.location.state.content_index);
-                                var s = i.referenceTracking,
+                                var s = r.referenceTracking,
                                     a = s.content,
-                                    o = s.medium,
+                                    c = s.medium,
                                     u = s.content_index;
-                                c.n.tracking.trackPageview(r.__assign({
+                                o.n.tracking.trackPageview(i.__assign({
                                     content: a,
-                                    medium: o,
+                                    medium: c,
                                     content_index: u,
                                     location: e.location
                                 }, t))
                             }
-                        }, c.i.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : c.i.warn("No latency tracker exists! This means no data will be sent to Spade.", e), i
+                        }, o.i.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : o.i.warn("No latency tracker exists! This means no data will be sent to Spade.", e), r
                     }
-                    return r.__extends(i, n), i.prototype.componentDidMount = function() {
+                    return i.__extends(a, n), a.prototype.componentDidMount = function() {
                         var e = this;
                         this.referenceTracking = this.stripTTParams(this.props.history.location), this.trackPageview(), this.props.history.listen(function(t, n) {
                             "REPLACE" !== n && (e.tracked = !1, e.referenceTracking = {})
                         })
-                    }, i.prototype.componentDidUpdate = function() {
+                    }, a.prototype.componentDidUpdate = function() {
                         this.trackPageview()
-                    }, i.prototype.render = function() {
-                        return a.createElement(t, r.__assign({}, this.props))
-                    }, i.prototype.stripTTParams = function(e) {
-                        var t = "" !== e.search ? s.parse(e.search) : {},
+                    }, a.prototype.render = function() {
+                        return s.createElement(t, i.__assign({}, this.props))
+                    }, a.prototype.stripTTParams = function(e) {
+                        var t = "" !== e.search ? r.parse(e.search) : {},
                             n = {
                                 content: t.tt_content,
                                 content_index: t.tt_content_index,
@@ -520,26 +525,21 @@ webpackJsonp([80], {
                             };
                         if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, n.medium || n.content) {
                             var i = "",
-                                r = s.stringify(t);
-                            r.length > 0 && (i = "?" + r), this.props.history.replace({
+                                s = r.stringify(t);
+                            s.length > 0 && (i = "?" + s), this.props.history.replace({
                                 pathname: e.pathname,
                                 hash: e.hash,
                                 search: i
                             })
                         }
                         return n
-                    }, i
-                }(a.Component);
-                return Object(o.f)(n)
+                    }, a
+                }(s.Component);
+                return Object(a.f)(n)
             }
         }
-        var r = n("TToO"),
-            s = n("OAwv"),
-            a = n("U7vG"),
-            o = n("F8kA"),
-            c = n("6sO2");
         n.d(t, "a", function() {
-            return i
+            return c
         })
     },
     uy5s: function(e, t, n) {
@@ -549,7 +549,7 @@ webpackJsonp([80], {
         });
         var i, r = n("RH2O"),
             s = n("TToO"),
-            a = n("U7vG"),
+            a = n("GiK3"),
             o = n("6sO2"),
             c = n("yWCw"),
             u = n("zCIC"),
@@ -803,7 +803,7 @@ webpackJsonp([80], {
                 return s.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return this.props.data.loading ? a.createElement("div", {
+                    return this.props.data.loading || !this.props.data.user ? a.createElement("div", {
                         className: "subs-broadcaster-banner"
                     }, a.createElement(T._2, {
                         className: "subs-broadcaster-banner__broadcaster-info",
@@ -899,7 +899,7 @@ webpackJsonp([80], {
                         color: T.I.Overlay
                     }, this.props.data.user.description)), this.verifiedPartner()))
                 }, t.prototype.verifiedPartner = function() {
-                    return this.props.data.user.roles.isPartner ? a.createElement(T._2, {
+                    return this.props.data.user && this.props.data.user.roles.isPartner ? a.createElement(T._2, {
                         display: T.N.Flex
                     }, a.createElement(T._15, {
                         asset: T._16.Verified,
@@ -1047,8 +1047,7 @@ webpackJsonp([80], {
                         bonusEmoteCount: t
                     }, "SubsPlanTiers")) : null
                 }, t.prototype.bonusEmotes = function(e) {
-                    var t = [],
-                        n = [];
+                    var t, n = [];
                     switch (e) {
                         case 2:
                             n.push(this.props.subscriptionProducts[1]), n.push(this.props.subscriptionProducts[2]);
@@ -1170,4 +1169,4 @@ webpackJsonp([80], {
         })
     }
 });
-//# sourceMappingURL=pages.subs.components.subs-broadcaster-page-071f7e57d65bb9c933fd72461dca511e.js.map
+//# sourceMappingURL=pages.subs.components.subs-broadcaster-page-ea033de5efc69a3f84f07378e91ef8a8.js.map

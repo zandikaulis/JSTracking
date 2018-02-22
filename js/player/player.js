@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".eb25f75e1645bf408640.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".5d557b1892dbcc9b2d84.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -28712,7 +28712,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.02.22-025040+84aaa333fac26ba8ebda6f1d11bd989759d1828f",
+                    app_version: "2018.02.22-202042+d4da2428ba1b9d4667c63ae822c04af686446771",
                     flash_version: r,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -47173,7 +47173,7 @@
             };
         e.exports = i
     }, function(e, t, n) {
-        e.exports = n.p + "vendor/TwitchPlayer.7cfe0f2e9d071ac72c5a539139bcedd4.swf"
+        e.exports = n.p + "vendor/TwitchPlayer.250f7f6efecae6bede6405426d583ce9.swf"
     }, function(e, t) {
         function n() {
             this._events = this._events || {}, this._maxListeners = this._maxListeners || void 0

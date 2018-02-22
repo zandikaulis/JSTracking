@@ -1,14 +1,13 @@
-webpackJsonp([60], {
+webpackJsonp([59], {
     "9u8h": function(e, t, i) {
         "use strict";
         i.d(t, "a", function() {
-            return o
+            return s
         });
         var r = i("TToO"),
             n = i("6sO2"),
             a = i("Aj/L"),
-            s = "application/json; charset=UTF-8",
-            o = function() {
+            s = function() {
                 function e() {}
                 return e.get = function(e, t, i) {
                     return void 0 === t && (t = {}), void 0 === i && (i = {}), r.__awaiter(this, void 0, void 0, function() {
@@ -114,7 +113,7 @@ webpackJsonp([60], {
                         headers: r.__assign({}, this.getDefaultHeaders(e, t), e.headers)
                     })
                 }, e.serialize = function(e, t) {
-                    return t === s ? JSON.stringify(e) : e
+                    return "application/json; charset=UTF-8" === t ? JSON.stringify(e) : e
                 }, e.getDefaultHeaders = function(e, t) {
                     var i = n.n.store.getState(),
                         r = {
@@ -123,9 +122,9 @@ webpackJsonp([60], {
                             "Client-ID": n.n.config.legacyClientID,
                             "X-Requested-With": "XMLHttpRequest"
                         };
-                    e.body && FormData.prototype.isPrototypeOf(e.body) || (r["Content-Type"] = s);
-                    var o = Object(a.c)(i);
-                    return o && (r.Authorization = "OAuth " + o.authToken, o.legacyCSRFToken && (r["Twitch-Api-Token"] = o.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
+                    e.body && FormData.prototype.isPrototypeOf(e.body) || (r["Content-Type"] = "application/json; charset=UTF-8");
+                    var s = Object(a.c)(i);
+                    return s && (r.Authorization = "OAuth " + s.authToken, s.legacyCSRFToken && (r["Twitch-Api-Token"] = s.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
                         r[e] && delete r[e]
                     }), r
                 }, e
@@ -137,7 +136,7 @@ webpackJsonp([60], {
             value: !0
         });
         var r, n = i("TToO"),
-            a = i("U7vG"),
+            a = i("GiK3"),
             s = i("CIox"),
             o = i("2KeS"),
             u = i("6sO2"),
@@ -177,38 +176,39 @@ webpackJsonp([60], {
         var v = i("Odds"),
             _ = (i("yY1M"), i("RDCx"));
         i.d(t, "DISMISSAL_DATA_STORAGE_KEY", function() {
-            return E
+            return S
         }), i.d(t, "DISMISS_BTN_SELECTOR", function() {
             return T
         }), i.d(t, "VERIFY_BTN_SELECTOR", function() {
-            return b
-        }), i.d(t, "VerifyEmailBarPresentation", function() {
             return C
+        }), i.d(t, "VerifyEmailBarPresentation", function() {
+            return b
         }), i.d(t, "VerifyEmailBar", function() {
             return k
         });
-        var S, E = "verifyemailbar_dismissal",
+        var E, S = "verifyemailbar_dismissal",
             I = 18e5,
             g = 5e3,
             D = new Set(["/"]),
             T = "dimiss-btn",
-            b = "verify-email-btn";
+            C = "verify-email-btn";
         ! function(e) {
             e[e.INITIAL = 0] = "INITIAL", e[e.CLICK_TO_VERIFY = 1] = "CLICK_TO_VERIFY", e[e.EMAIL_SENT = 2] = "EMAIL_SENT", e[e.ERROR_SENDING = 3] = "ERROR_SENDING", e[e.DISMISSED = 4] = "DISMISSED"
-        }(S || (S = {}));
-        var C = function(e) {
+        }(E || (E = {}));
+        var b = function(e) {
                 function t(t) {
                     var i = e.call(this, t) || this;
                     return i.state = {
-                        verifyEmailBarState: S.INITIAL
-                    }, i.resetAfterDismissalTimeoutID = null, i.afterVerifyDismissTimeoutID = null, i.dismissalData = null, i.dismissBarClickHandler = function(e) {
+                        isError: !1,
+                        verifyEmailBarState: E.INITIAL
+                    }, i.resetAfterDismissalTimeoutID = null, i.afterVerifyDismissTimeoutID = null, i.dismissalData = null, i.logger = u.n.logger.withCategory("verify-email-bar"), i.dismissBarClickHandler = function(e) {
                         e && e.stopPropagation();
                         var t = i.dismissalData ? i.dismissalData.dismissalCount : 0;
                         i.dismissalData = {
                             dismissalCount: t + 1,
                             dismissalDateTimeMs: Date.now()
-                        }, u.k.set(E, i.dismissalData), i.setState({
-                            verifyEmailBarState: S.DISMISSED
+                        }, u.k.set(S, i.dismissalData), i.setState({
+                            verifyEmailBarState: E.DISMISSED
                         }), i.resetAfterDismissalTimeoutID = setTimeout(function() {
                             return n.__awaiter(i, void 0, void 0, function() {
                                 return n.__generator(this, function(e) {
@@ -217,7 +217,7 @@ webpackJsonp([60], {
                                             return [4, this.props.data.refetch()];
                                         case 1:
                                             return e.sent(), this.setState({
-                                                verifyEmailBarState: S.INITIAL
+                                                verifyEmailBarState: E.INITIAL
                                             }), this.resetAfterDismissalTimeoutID = null, [2]
                                     }
                                 })
@@ -234,12 +234,12 @@ webpackJsonp([60], {
                                         return e && e.currentTarget && (t = e.currentTarget) && t.blur(), [4, p(this.props.data.currentUser.id, this.props.data.currentUser.email)];
                                     case 1:
                                         return n.sent() ? this.setState({
-                                            verifyEmailBarState: S.EMAIL_SENT
+                                            verifyEmailBarState: E.EMAIL_SENT
                                         }) : this.setState({
-                                            verifyEmailBarState: S.ERROR_SENDING
+                                            verifyEmailBarState: E.ERROR_SENDING
                                         }), this.afterVerifyDismissTimeoutID = setTimeout(function() {
                                             i.setState({
-                                                verifyEmailBarState: S.DISMISSED
+                                                verifyEmailBarState: E.DISMISSED
                                             }), i.afterVerifyDismissTimeoutID = null
                                         }, g), u.n.tracking.track(y.SpadeEventType.VerifyEmailBar, {
                                             action: r.Click
@@ -247,33 +247,43 @@ webpackJsonp([60], {
                                 }
                             })
                         })
-                    }, i.dismissalData = u.k.getOptional(E), i
+                    }, i.dismissalData = u.k.getOptional(S), i
                 }
-                return n.__extends(t, e), t.prototype.componentWillUnmount = function() {
+                return n.__extends(t, e), t.prototype.componentDidCatch = function(e, t) {
+                    var i = this;
+                    this.setState({
+                        isError: !0
+                    }, function() {
+                        i.logger.error(e, "A unhandled exception occurred in the component hierarchy", {
+                            info: t
+                        })
+                    })
+                }, t.prototype.componentWillUnmount = function() {
                     null !== this.resetAfterDismissalTimeoutID && clearTimeout(this.resetAfterDismissalTimeoutID), null !== this.afterVerifyDismissTimeoutID && clearTimeout(this.afterVerifyDismissTimeoutID)
                 }, t.prototype.componentDidMount = function() {
                     this.maybeChangeBarState()
                 }, t.prototype.componentDidUpdate = function() {
                     this.maybeChangeBarState(), this.props.data.loading || this.props.latencyTracking.reportInteractive()
                 }, t.prototype.maybeChangeBarState = function() {
-                    this.state.verifyEmailBarState !== S.EMAIL_SENT && this.state.verifyEmailBarState !== S.ERROR_SENDING && (this.isVisible() && this.shouldHide() ? this.setState({
-                        verifyEmailBarState: S.INITIAL
-                    }) : this.state.verifyEmailBarState !== S.INITIAL || this.shouldHide() || this.setState({
-                        verifyEmailBarState: S.CLICK_TO_VERIFY
+                    this.state.verifyEmailBarState !== E.EMAIL_SENT && this.state.verifyEmailBarState !== E.ERROR_SENDING && (this.isVisible() && this.shouldHide() ? this.setState({
+                        verifyEmailBarState: E.INITIAL
+                    }) : this.state.verifyEmailBarState !== E.INITIAL || this.shouldHide() || this.setState({
+                        verifyEmailBarState: E.CLICK_TO_VERIFY
                     }))
                 }, t.prototype.render = function() {
+                    if (this.state.isError) return null;
                     switch (this.state.verifyEmailBarState) {
-                        case S.CLICK_TO_VERIFY:
+                        case E.CLICK_TO_VERIFY:
                             return this.renderClickToVerify();
-                        case S.EMAIL_SENT:
+                        case E.EMAIL_SENT:
                             return this.renderEmailSent();
-                        case S.ERROR_SENDING:
+                        case E.ERROR_SENDING:
                             return this.renderErrorSending();
                         default:
                             return null
                     }
                 }, t.prototype.isVisible = function() {
-                    return this.state.verifyEmailBarState !== S.INITIAL && this.state.verifyEmailBarState !== S.DISMISSED
+                    return this.state.verifyEmailBarState !== E.INITIAL && this.state.verifyEmailBarState !== E.DISMISSED
                 }, t.prototype.renderClickToVerify = function() {
                     return a.createElement(v._2, {
                         fullWidth: !0,
@@ -288,7 +298,7 @@ webpackJsonp([60], {
                         fullWidth: !0
                     }, a.createElement("button", {
                         onClick: this.onClickToVerify,
-                        "data-test-selector": b
+                        "data-test-selector": C
                     }, a.createElement(v._35, {
                         color: v.I.Alt,
                         fontSize: v.R.Size5
@@ -346,7 +356,7 @@ webpackJsonp([60], {
                     return this.props.data && !(this.props.data.loading || this.props.data.error) && this.props.data.currentUser && this.props.data.requestInfo
                 }, t
             }(a.Component),
-            k = Object(o.d)(Object(l.d)("VerifyEmail"), Object(c.a)(_), s.e)(C)
+            k = Object(o.d)(Object(l.d)("VerifyEmail"), Object(c.a)(_), s.e)(b)
     },
     RDCx: function(e, t) {
         var i = {
@@ -454,4 +464,4 @@ webpackJsonp([60], {
     },
     yY1M: function(e, t) {}
 });
-//# sourceMappingURL=features.verify-email.components.verify-email-bar.component-a519556e29e77bb3df7233e6238ea015.js.map
+//# sourceMappingURL=features.verify-email.components.verify-email-bar.component-aeb9ba157378985ef3dd52d81d6c16c9.js.map

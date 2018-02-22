@@ -1,4 +1,4 @@
-webpackJsonp([73], {
+webpackJsonp([72], {
     "0shC": function(e, i, n) {
         var t = {
             kind: "Document",
@@ -130,13 +130,11 @@ webpackJsonp([73], {
             }
         };
         var r = {};
-        t.definitions = t.definitions.concat(function(e) {
-            return e.filter(function(e) {
-                if ("FragmentDefinition" !== e.kind) return !0;
-                var i = e.name.value;
-                return !r[i] && (r[i] = !0, !0)
-            })
-        }(n("qjMx").definitions)), e.exports = t
+        t.definitions = t.definitions.concat(n("qjMx").definitions.filter(function(e) {
+            if ("FragmentDefinition" !== e.kind) return !0;
+            var i = e.name.value;
+            return !r[i] && (r[i] = !0, !0)
+        })), e.exports = t
     },
     BmWY: function(e, i, n) {
         "use strict";
@@ -144,13 +142,13 @@ webpackJsonp([73], {
             value: !0
         });
         var t = n("TToO"),
-            r = n("U7vG"),
+            r = n("GiK3"),
             o = n("3zLD"),
             a = n("6sO2"),
             d = n("7vx8"),
             s = n("vH/s"),
-            c = n("peXu"),
-            l = n("CSlQ"),
+            l = n("peXu"),
+            c = n("CSlQ"),
             u = n("VDV3"),
             m = n("Odds"),
             p = n("0shC"),
@@ -168,7 +166,7 @@ webpackJsonp([73], {
                         return e.node
                     });
                     if (i && this.props.directoryWidth > 0) {
-                        var n = Object(c.a)(this.props.directoryWidth, 240, 2);
+                        var n = Object(l.a)(this.props.directoryWidth, 240, 2);
                         this.props.viewAllButton && i.length > n ? (i = i.slice(0, n - 1), e = {
                             subHeader: Object(a.d)("Viewing History", "ViewingHistory"),
                             linkTo: {
@@ -204,7 +202,7 @@ webpackJsonp([73], {
                         limit: 30
                     }
                 }
-            }), Object(l.d)("ViewedVideos"))(v);
+            }), Object(c.d)("ViewedVideos"))(v);
         n.d(i, "FinishWatchingTowerComponent", function() {
             return v
         }), n.d(i, "FinishWatchingTower", function() {
@@ -212,4 +210,4 @@ webpackJsonp([73], {
         })
     }
 });
-//# sourceMappingURL=features.following.components.finish-watching-tower-02d334e6e29b224ad0e7828f7f0d5321.js.map
+//# sourceMappingURL=features.following.components.finish-watching-tower-908e6aea828c6874d176747a6195205c.js.map
