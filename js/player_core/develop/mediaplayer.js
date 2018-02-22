@@ -991,7 +991,6 @@ var HEARTBEAT_INTERVAL = 1500; // Max interval without checking sink status
  */
 var MediaSink = exports.MediaSink = function MediaSink(config) {
     this._video = document.createElement('video');
-    this._tracks = {};
     this._metadataTrack = this._video.addTextTrack('metadata');
     this._atExit = [];
     this._ontimeupdate = config.ontimeupdate || noop;
@@ -1105,7 +1104,7 @@ MediaSink.prototype.pause = function () {
  */
 MediaSink.prototype.reset = function () {
     this._mediaSource = null;
-    this._tracks = {};
+    this._tracks = Object.create(null);
     this._idle = true;
     this._outstandingPauseEvents = 0;
 
@@ -1133,10 +1132,7 @@ MediaSink.prototype.remove = function (range) {
         srcBuf.remove(start, end);
     }
     for (var key in this._tracks) {
-        if (this._tracks.hasOwnProperty(key)) {
-            var track = this._tracks[key];
-            track.then(removeRange);
-        }
+        this._tracks[key].then(removeRange);
     }
 
     // Handle metadata track explicitly
@@ -1156,10 +1152,7 @@ MediaSink.prototype.seekTo = function (playhead) {
     }
 
     for (var key in this._tracks) {
-        if (this._tracks.hasOwnProperty(key)) {
-            var track = this._tracks[key];
-            scheduled.push(track.then(scheduleUpdate));
-        }
+        scheduled.push(this._tracks[key].then(scheduleUpdate));
     }
 
     Promise.all(scheduled).then(function () {
