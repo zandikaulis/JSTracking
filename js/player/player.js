@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".08e363e3b149cc87e5a7.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".eb25f75e1645bf408640.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -7820,7 +7820,7 @@
             }
 
             function f(e) {
-                s()(e.volume) && ($e = Math.min(Math.max(e.volume, 0), 1), Me.emit(g.r))
+                s()(e.volume) && (Je || ($e = Math.min(Math.max(e.volume, 0), 1), Me.emit(g.r)))
             }
 
             function h(e) {
@@ -8141,12 +8141,11 @@
                 }, Ie.getVolume = function() {
                     return $e
                 }, Ie.setVolume = function(e) {
-                    e > 0 && (Je = e), je("setVolume", [e])
+                    $e = e, je("setVolume", [e])
                 }, Ie.getMuted = function() {
-                    return 0 === Ie.getVolume()
+                    return Je
                 }, Ie.setMuted = function(e) {
-                    var t = e ? 0 : Je || .5;
-                    Ie.setVolume(t)
+                    Je = e, je("setVolume", [e ? 0 : $e])
                 }, Ie.getVideoInfo = c()(function() {
                     var e = Ae("getVideoInfo");
                     return e ? p()({}, A, e) : A
@@ -28713,7 +28712,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.02.22-005043+01954cfb71027552d60b5d514e0e64267fe2786a",
+                    app_version: "2018.02.22-025040+84aaa333fac26ba8ebda6f1d11bd989759d1828f",
                     flash_version: r,
                     referrer_url: i,
                     referrer_host: a.host,
