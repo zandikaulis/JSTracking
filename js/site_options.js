@@ -4572,6 +4572,18 @@ window.SiteOptions = {
                 "value": "variant3"
             }]
         },
+        "d9bc21e1-9cf9-4594-9b66-066eecfe0f7b": {
+            "name": "mobile_web_aa80",
+            "v": 3131,
+            "t": 1,
+            "groups": [{
+                "weight": 80,
+                "value": "control"
+            }, {
+                "weight": 20,
+                "value": "treatment"
+            }]
+        },
         "dadbbe2e-7a79-4d10-8d29-cbff8101ac30": {
             "name": "clips_make_me",
             "v": 2130,
