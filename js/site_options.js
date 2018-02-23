@@ -5219,8 +5219,9 @@ window.SiteOptions = {
         },
         "fd5223cb-3ae7-4a9f-9af8-ce0d44d4b9f1": {
             "name": "pad_thai",
-            "v": 3133,
+            "v": 3137,
             "t": 1,
+            "s": 1,
             "groups": [{
                 "weight": 94,
                 "value": "control"
