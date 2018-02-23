@@ -18185,7 +18185,7 @@ webpackJsonp([42], {
             }
         }, t.b = function(e) {
             return {
-                cursor: e.entry_key,
+                cursor: "" + e.rank,
                 node: {
                     id: e.entry_key,
                     rank: e.rank,
@@ -24532,4 +24532,4 @@ webpackJsonp([42], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-following-99ae17dfd58fbb4def2aae73d82ede74.js.map
+//# sourceMappingURL=pages.channel-following-fc751952b87ad41f2370583127ea9797.js.map

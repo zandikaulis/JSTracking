@@ -21536,7 +21536,7 @@ webpackJsonp([33, 81], {
             }
         }, t.b = function(e) {
             return {
-                cursor: e.entry_key,
+                cursor: "" + e.rank,
                 node: {
                     id: e.entry_key,
                     rank: e.rank,
@@ -28914,4 +28914,4 @@ webpackJsonp([33, 81], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-videos-e114dc21e4295ee9e3cc394198f1080a.js.map
+//# sourceMappingURL=pages.channel-videos-67108fb57f3c70c0bb42d2037e8fd7df.js.map

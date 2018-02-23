@@ -189,41 +189,47 @@ webpackJsonp([74], {
 
         function d(e, t) {
             var n = [a.a.Red, a.a.Blue, a.a.Green, a.a.Purple, a.a.Gray],
-                r = new Map,
-                l = n.map(function(t) {
-                    var n = function(e, t) {
-                        for (var n = [], a = {}, r = 0, l = o; r < l.length; r++)
-                            for (var c = l[r], d = 0, m = s; d < m.length; d++) {
-                                var p = m[d];
-                                a[c] || (a[c] = {
-                                    animated: new Map,
-                                    static: new Map
-                                });
-                                var h = u(e, c, !0, t, p);
-                                n.push(h), a[c].animated.set(p, h.url);
-                                var g = u(e, c, !1, t, p);
-                                n.push(g), a[c].static.set(p, g.url)
-                            }
-                        return {
-                            id: e + ";" + t,
-                            bits: t,
-                            color: i.f[t],
-                            images: n,
-                            indexedImages: a
-                        }
-                    }(e, t);
-                    return r.set(t, n), n
-                });
-            return {
+                i = new Map,
+                r = [];
+            if ("Cheer" === e) {
+                var o = u(e, a.a.Yellow);
+                i.set(a.a.Yellow, o), r.push(o)
+            }
+            return r.push.apply(r, n.map(function(t) {
+                var n = u(e, t);
+                return i.set(t, n), n
+            })), {
                 prefix: e,
                 type: t,
-                tiers: l,
-                orderedTiers: l,
-                indexedTiers: r
+                tiers: r,
+                orderedTiers: r,
+                indexedTiers: i
             }
         }
 
-        function u(e, t, n, a, i) {
+        function u(e, t) {
+            for (var n = [], a = {}, r = 0, l = o; r < l.length; r++)
+                for (var c = l[r], d = 0, u = s; d < u.length; d++) {
+                    var p = u[d];
+                    a[c] || (a[c] = {
+                        animated: new Map,
+                        static: new Map
+                    });
+                    var h = m(e, c, !0, t, p);
+                    n.push(h), a[c].animated.set(p, h.url);
+                    var g = m(e, c, !1, t, p);
+                    n.push(g), a[c].static.set(p, g.url)
+                }
+            return {
+                id: e + ";" + t,
+                bits: t,
+                color: i.f[t],
+                images: n,
+                indexedImages: a
+            }
+        }
+
+        function m(e, t, n, a, i) {
             var r = n ? "gif" : "png";
             return {
                 theme: t,
@@ -317,7 +323,7 @@ webpackJsonp([74], {
                     bold: !0
                 }, e.title)), t)
             }),
-            B = {
+            C = {
                 title: Object(d.d)("Cheer with Bits to celebrate and show support!", "BitsLandingPage"),
                 info: Object(d.d)("Bits are a virtual good you can buy and use to Cheer. A Cheer is a chat message that uses Bits, and includes animated emotes to amplify your voice in chat and celebrate the moment. Cheering is another way to support Partners and Affiliates, similar to subscribing.", "BitsLandingPage"),
                 tutorialTitle: Object(d.d)("How to Cheer", "BitsLandingPage"),
@@ -353,7 +359,7 @@ webpackJsonp([74], {
                     }
                 }, "BitsLandingPage")
             },
-            C = function(e) {
+            B = function(e) {
                 var t = ["Cheer", "Kappa", "Kreygasm", "VoHiYo"].map(function(t) {
                         return c.createElement(b.a, {
                             key: t,
@@ -378,22 +384,22 @@ webpackJsonp([74], {
                 }, c.createElement(y._2, {
                     className: "bits-landing-page-cheermote-intro"
                 }, c.createElement(k, {
-                    title: B.tutorialTitle,
-                    additionalInfo: B.tutorialInfo
+                    title: C.tutorialTitle,
+                    additionalInfo: C.tutorialInfo
                 }), c.createElement(k, {
-                    title: B.valuePropositionTitle,
-                    additionalInfo: B.valuePropositionInfo
+                    title: C.valuePropositionTitle,
+                    additionalInfo: C.valuePropositionInfo
                 }), c.createElement(v, {
-                    title: B.globalCheermotesTitle,
-                    additionInfo: [B.globalCheermotesInfo],
+                    title: C.globalCheermotesTitle,
+                    additionInfo: [C.globalCheermotesInfo],
                     cheermoteImaages: t
                 }), c.createElement(v, {
-                    title: B.partnerCheermotesTitle,
-                    additionInfo: [B.partnerCheermotesInfo, B.partnerCheermotesInfo2],
+                    title: C.partnerCheermotesTitle,
+                    additionInfo: [C.partnerCheermotesInfo, C.partnerCheermotesInfo2],
                     cheermoteImaages: n
                 })))
             },
-            A = function(e) {
+            w = function(e) {
                 return c.createElement(y._2, {
                     className: "bits-landing-page-faq-section"
                 }, c.createElement(y.W, {
@@ -409,24 +415,24 @@ webpackJsonp([74], {
                     text: e.answer
                 }), e.additionalContent)
             },
-            w = [{
-                question: B.paymentMethodsQuestion,
-                answer: B.paymentMethodsAnswer
+            A = [{
+                question: C.paymentMethodsQuestion,
+                answer: C.paymentMethodsAnswer
             }, {
-                question: B.howToCheerQuestion,
-                answer: B.howToCheerAnswer
+                question: C.howToCheerQuestion,
+                answer: C.howToCheerAnswer
             }, {
-                question: B.cheeringSupportStreamersQuestion,
-                answer: B.cheeringSupportStreamersAnswer
+                question: C.cheeringSupportStreamersQuestion,
+                answer: C.cheeringSupportStreamersAnswer
             }, {
-                question: B.bitsGemQuestion,
-                answer: B.bitsGemAnswer
+                question: C.bitsGemQuestion,
+                answer: C.bitsGemAnswer
             }, {
-                question: B.whatAreCheermotesQuestion,
-                answer: B.whatAreCheermotesAnswer
+                question: C.whatAreCheermotesQuestion,
+                answer: C.whatAreCheermotesAnswer
             }, {
-                question: B.additionalHelpQuestion,
-                answer: B.additionalHelpAnswer
+                question: C.additionalHelpQuestion,
+                answer: C.additionalHelpAnswer
             }],
             E = (n("XdS0"), function(e) {
                 var t = [1, 100, 1e3, 5e3, 1e4].map(function(t) {
@@ -471,9 +477,9 @@ webpackJsonp([74], {
                         },
                         margin: "auto"
                     }, t),
-                    a = w.map(function(e, t) {
+                    a = A.map(function(e, t) {
                         var a = void 0;
-                        return e.question === B.bitsGemQuestion && (a = n), c.createElement(A, {
+                        return e.question === C.bitsGemQuestion && (a = n), c.createElement(w, {
                             key: "faqsection:" + t,
                             question: e.question,
                             answer: e.answer,
@@ -483,7 +489,7 @@ webpackJsonp([74], {
                 return c.createElement(y._2, {
                     className: "bits-landing-page-faq"
                 }, c.createElement(k, {
-                    title: B.faqs
+                    title: C.faqs
                 }), c.createElement(y._2, {
                     className: "bits-landing-page-faq__content"
                 }, a))
@@ -530,8 +536,8 @@ webpackJsonp([74], {
                 return c.createElement(y._2, {
                     className: "bits-landing-page-intro"
                 }, c.createElement(x, {
-                    text: B.title,
-                    additionalInfo: B.info
+                    text: C.title,
+                    additionalInfo: C.info
                 }))
             },
             I = n("WVx7"),
@@ -608,7 +614,7 @@ webpackJsonp([74], {
                     type: y._40.H3,
                     color: y.I.Link,
                     bold: !0
-                }, B.buyBits)), c.createElement(S, {
+                }, C.buyBits)), c.createElement(S, {
                     bitsBalance: e.bitsBalance,
                     bitsConfig: e.bitsConfig,
                     isLoggedIn: e.isLoggedIn,
@@ -629,7 +635,7 @@ webpackJsonp([74], {
                         right: 1
                     },
                     alignItems: y.c.Center
-                }, c.createElement(y._35, null, B.paypalHeader)), c.createElement(y._2, {
+                }, c.createElement(y._35, null, C.paypalHeader)), c.createElement(y._2, {
                     alignItems: y.c.Center,
                     display: y.N.Flex
                 }, c.createElement("img", {
@@ -701,7 +707,7 @@ webpackJsonp([74], {
                         breakpointSmall: {
                             display: y.N.InlineBlock
                         }
-                    }, c.createElement(C, {
+                    }, c.createElement(B, {
                         bitsConfig: this.bitsConfig
                     }), c.createElement(E, {
                         bitsConfig: this.bitsConfig
@@ -1085,10 +1091,10 @@ webpackJsonp([74], {
                     closeModal: r.c
                 }, e)
             })(_),
-            B = n("HW6M"),
-            C = n("3zLD"),
-            A = n("jF7o"),
-            w = n("w9tK"),
+            C = n("HW6M"),
+            B = n("3zLD"),
+            w = n("jF7o"),
+            A = n("w9tK"),
             E = n("zCIC");
 
         function x(e) {
@@ -1542,7 +1548,7 @@ webpackJsonp([74], {
                         watebError: null,
                         bitsAwarded: 0
                     }, t.onBuyPopupClose = function(e) {
-                        Object(A.a)(e, function() {
+                        Object(w.a)(e, function() {
                             t.props.data && t.props.data.refetch()
                         })
                     }, t.onAdBitsAwarded = function(e) {
@@ -1582,7 +1588,7 @@ webpackJsonp([74], {
                             fullWidth: !0,
                             elevation: 3
                         },
-                        t = B({
+                        t = C({
                             "bits-buy-card": !0,
                             "bits-buy-card__chat-tooltip": this.props.location === f.b.ChatTooltip
                         }),
@@ -1613,7 +1619,7 @@ webpackJsonp([74], {
                         italic: !0
                     }, Object(u.d)("Fetching bits", "Bits--BuyCard"))));
                     if (this.props.data.error) return c.createElement(b._2, l.__assign({
-                        className: B(t, "bits-buy-card--shorter"),
+                        className: C(t, "bits-buy-card--shorter"),
                         display: b.N.Flex,
                         flexDirection: b.P.Column,
                         alignItems: b.c.Center,
@@ -1626,7 +1632,7 @@ webpackJsonp([74], {
                     }, Object(u.d)("Bits prices are unavailable right now. Check back again later.", "Bits--BuyCard")));
                     var a = this.renderWatebCard();
                     if (a) return c.createElement(b._25, l.__assign({
-                        className: B(t, "bits-buy-card--shorter"),
+                        className: C(t, "bits-buy-card--shorter"),
                         display: b.N.Flex,
                         flexDirection: b.P.Column,
                         alignItems: b.c.Center,
@@ -1705,9 +1711,9 @@ webpackJsonp([74], {
                     }
                 })], t)
             }(c.Component),
-            K = Object(C.compose)(Object(z.d)("BitsBuyCard", {
+            K = Object(B.compose)(Object(z.d)("BitsBuyCard", {
                 autoReportInteractive: !0,
-                destination: w.a.BitsBuyCard
+                destination: A.a.BitsBuyCard
             }))(Q);
 
         function Y(e) {
@@ -2556,4 +2562,4 @@ webpackJsonp([74], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.bits.components.bits-landing-page-67adcdb890631e9f834518c78732edcc.js.map
+//# sourceMappingURL=pages.bits.components.bits-landing-page-1365566a97825075046be94fc84db701.js.map

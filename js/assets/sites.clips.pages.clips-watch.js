@@ -1371,41 +1371,47 @@ webpackJsonp([49], {
 
         function c(e, t) {
             var n = [i.a.Red, i.a.Blue, i.a.Green, i.a.Purple, i.a.Gray],
-                r = new Map,
-                l = n.map(function(t) {
-                    var n = function(e, t) {
-                        for (var n = [], i = {}, r = 0, l = o; r < l.length; r++)
-                            for (var d = l[r], c = 0, p = s; c < p.length; c++) {
-                                var m = p[c];
-                                i[d] || (i[d] = {
-                                    animated: new Map,
-                                    static: new Map
-                                });
-                                var v = u(e, d, !0, t, m);
-                                n.push(v), i[d].animated.set(m, v.url);
-                                var h = u(e, d, !1, t, m);
-                                n.push(h), i[d].static.set(m, h.url)
-                            }
-                        return {
-                            id: e + ";" + t,
-                            bits: t,
-                            color: a.f[t],
-                            images: n,
-                            indexedImages: i
-                        }
-                    }(e, t);
-                    return r.set(t, n), n
-                });
-            return {
+                a = new Map,
+                r = [];
+            if ("Cheer" === e) {
+                var o = u(e, i.a.Yellow);
+                a.set(i.a.Yellow, o), r.push(o)
+            }
+            return r.push.apply(r, n.map(function(t) {
+                var n = u(e, t);
+                return a.set(t, n), n
+            })), {
                 prefix: e,
                 type: t,
-                tiers: l,
-                orderedTiers: l,
-                indexedTiers: r
+                tiers: r,
+                orderedTiers: r,
+                indexedTiers: a
             }
         }
 
-        function u(e, t, n, i, a) {
+        function u(e, t) {
+            for (var n = [], i = {}, r = 0, l = o; r < l.length; r++)
+                for (var d = l[r], c = 0, u = s; c < u.length; c++) {
+                    var m = u[c];
+                    i[d] || (i[d] = {
+                        animated: new Map,
+                        static: new Map
+                    });
+                    var v = p(e, d, !0, t, m);
+                    n.push(v), i[d].animated.set(m, v.url);
+                    var h = p(e, d, !1, t, m);
+                    n.push(h), i[d].static.set(m, h.url)
+                }
+            return {
+                id: e + ";" + t,
+                bits: t,
+                color: a.f[t],
+                images: n,
+                indexedImages: i
+            }
+        }
+
+        function p(e, t, n, i, a) {
             var r = n ? "gif" : "png";
             return {
                 theme: t,
@@ -7251,4 +7257,4 @@ webpackJsonp([49], {
         e.exports = n
     }
 });
-//# sourceMappingURL=sites.clips.pages.clips-watch-aa728625a920c793df5f5e3bc10ab3d0.js.map
+//# sourceMappingURL=sites.clips.pages.clips-watch-f5a3bf10a90c7c25547989e2f758c9fb.js.map

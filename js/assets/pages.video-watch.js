@@ -9897,7 +9897,7 @@ webpackJsonp([36, 81], {
             }
         }, t.b = function(e) {
             return {
-                cursor: e.entry_key,
+                cursor: "" + e.rank,
                 node: {
                     id: e.entry_key,
                     rank: e.rank,
@@ -20440,4 +20440,4 @@ webpackJsonp([36, 81], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.video-watch-1490f5e8370f6d0abec68bd1c4456768.js.map
+//# sourceMappingURL=pages.video-watch-045ebebd93ec815621e1c70044c118e0.js.map

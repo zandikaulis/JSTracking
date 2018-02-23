@@ -11494,7 +11494,7 @@ webpackJsonp([37], {
                     }))
                 }, t
             }(_.Component),
-            Ge = Object(l.compose)(Object(M.d)("PaymentsLandingPagePresentation", {
+            Ge = Object(l.compose)(Object(M.d)("PaymentsLandingPage", {
                 autoReportInteractive: !0
             }), Object(h.a)({
                 location: f.PageviewLocation.PaymentsLandingPage
@@ -15015,4 +15015,4 @@ webpackJsonp([37], {
         }
     }
 });
-//# sourceMappingURL=pages.payments-8bc1715d6d00f45684cf38d80c52f9cb.js.map
+//# sourceMappingURL=pages.payments-3e8822f3883aa4af697b767bdbca82c2.js.map

@@ -35103,7 +35103,7 @@ webpackJsonp([31], {
             }
         }, t.b = function(e) {
             return {
-                cursor: e.entry_key,
+                cursor: "" + e.rank,
                 node: {
                     id: e.entry_key,
                     rank: e.rank,
@@ -51677,4 +51677,4 @@ webpackJsonp([31], {
         }
     }
 });
-//# sourceMappingURL=pages.dashboard-6080b5d945f537071fab2e17a0af246a.js.map
+//# sourceMappingURL=pages.dashboard-f6fcdf7896faad662fdc6db14d9ea909.js.map
