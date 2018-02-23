@@ -1,4 +1,4 @@
-webpackJsonp([33, 81], {
+webpackJsonp([33, 82], {
     "+/J2": function(e, t, n) {
         var a = n("xA5w");
         e.exports = function(e, t) {
@@ -4987,8 +4987,10 @@ webpackJsonp([33, 81], {
                     return t.state = {
                         isExpanded: !1
                     }, t.toggleIsExpanded = function() {
-                        t.setState({
-                            isExpanded: !t.state.isExpanded
+                        t.setState(function(e) {
+                            return {
+                                isExpanded: !e.isExpanded
+                            }
                         })
                     }, t
                 }
@@ -28914,4 +28916,4 @@ webpackJsonp([33, 81], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-videos-67108fb57f3c70c0bb42d2037e8fd7df.js.map
+//# sourceMappingURL=pages.channel-videos-b4bbf046ba2162e6772a0f46289a5e0d.js.map

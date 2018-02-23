@@ -4682,8 +4682,10 @@ webpackJsonp([42], {
                     return t.state = {
                         isExpanded: !1
                     }, t.toggleIsExpanded = function() {
-                        t.setState({
-                            isExpanded: !t.state.isExpanded
+                        t.setState(function(e) {
+                            return {
+                                isExpanded: !e.isExpanded
+                            }
                         })
                     }, t
                 }
@@ -24532,4 +24534,4 @@ webpackJsonp([42], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-following-fc751952b87ad41f2370583127ea9797.js.map
+//# sourceMappingURL=pages.channel-following-89d251d1f417c1f63f0d39ad7bc85217.js.map

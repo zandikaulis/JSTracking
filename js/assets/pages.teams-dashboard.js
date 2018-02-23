@@ -18649,27 +18649,27 @@ webpackJsonp([35], {
                         fullWidth: !0
                     }, c.createElement(m.d, null, c.createElement(m.b, {
                         exact: !0,
-                        path: "/teams/" + this.props.match.params.teamName + "/dashboard",
+                        path: "/teams/:teamName/dashboard",
                         render: this.redirectToRevenuePage
                     }), c.createElement(m.b, {
                         exact: !0,
-                        path: "/teams/" + this.props.match.params.teamName + "/dashboard/" + b.Revenue,
+                        path: "/teams/:teamName/dashboard/" + b.Revenue,
                         render: this.renderRevenuePage
                     }), c.createElement(m.b, {
                         exact: !0,
-                        path: "/teams/" + this.props.match.params.teamName + "/dashboard/" + b.Stats,
+                        path: "/teams/:teamName/dashboard/" + b.Stats,
                         render: this.renderStatsPage
                     }), c.createElement(m.b, {
                         exact: !0,
-                        path: "/teams/" + this.props.match.params.teamName + "/dashboard/" + b.Members,
+                        path: "/teams/:teamName/dashboard/" + b.Members,
                         render: this.renderMembersPage
                     }), c.createElement(m.b, {
                         exact: !0,
-                        path: "/teams/" + this.props.match.params.teamName + "/dashboard/" + b.FeaturedChannels,
+                        path: "/teams/:teamName/dashboard/" + b.FeaturedChannels,
                         render: this.renderFeaturedChannelsPage
                     }), c.createElement(m.b, {
                         exact: !0,
-                        path: "/teams/" + this.props.match.params.teamName + "/dashboard/" + b.Settings,
+                        path: "/teams/:teamName/dashboard/" + b.Settings,
                         render: this.renderSettingsPage
                     }), c.createElement(m.b, {
                         component: f.a
@@ -21489,4 +21489,4 @@ webpackJsonp([35], {
         }
     }
 });
-//# sourceMappingURL=pages.teams-dashboard-6de9f85cdd9a881b140dcec5d640055b.js.map
+//# sourceMappingURL=pages.teams-dashboard-e65d7163b6228afa2a71530dcf42e940.js.map

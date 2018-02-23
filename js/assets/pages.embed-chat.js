@@ -5173,8 +5173,10 @@ webpackJsonp([38], {
                     return t.state = {
                         isExpanded: !1
                     }, t.toggleIsExpanded = function() {
-                        t.setState({
-                            isExpanded: !t.state.isExpanded
+                        t.setState(function(e) {
+                            return {
+                                isExpanded: !e.isExpanded
+                            }
                         })
                     }, t
                 }
@@ -8691,10 +8693,11 @@ webpackJsonp([38], {
                         "data-click-out-id": "thread-expand-close",
                         flexWrap: j.Q.NoWrap
                     }, a.createElement(j._2, {
-                        fullHeight: !0,
-                        flexGrow: 1,
                         display: j.N.Flex,
-                        flexDirection: j.P.Column
+                        flexDirection: j.P.Column,
+                        flexGrow: 1,
+                        fullHeight: !0,
+                        overflow: j._5.Hidden
                     }, a.createElement(j._2, {
                         display: j.N.Flex,
                         flexGrow: 1,
@@ -31792,4 +31795,4 @@ webpackJsonp([38], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.embed-chat-fe01ac5d4445f4c283cd2514b9a440db.js.map
+//# sourceMappingURL=pages.embed-chat-5a2f788514637ae3df21818455eaf18d.js.map

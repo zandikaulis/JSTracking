@@ -1,4 +1,4 @@
-webpackJsonp([76], {
+webpackJsonp([77], {
     "/brc": function(e, t) {},
     "4o7v": function(e, t, n) {
         "use strict";
@@ -565,8 +565,8 @@ webpackJsonp([76], {
             I = n("i61F"),
             x = n("F8kA"),
             w = n("mi6k"),
-            T = n("5RjZ"),
-            j = n("KRtN"),
+            j = n("5RjZ"),
+            T = n("KRtN"),
             F = n("4o7v"),
             M = n("PwTO"),
             P = n("N8CH"),
@@ -618,7 +618,7 @@ webpackJsonp([76], {
                             alignItems: C.c.Center
                         }, o.createElement(C._24, {
                             label: Object(a.d)("Video Type", "CollectionItemCard"),
-                            value: Object(T.a)(e.broadcastType),
+                            value: Object(j.a)(e.broadcastType),
                             icon: C._16.NavVideos
                         })))
                     }, t.reportImageInteractive = function() {
@@ -651,7 +651,10 @@ webpackJsonp([76], {
                         onError: this.reportImageInteractive,
                         src: e.previewThumbnailURL ? e.previewThumbnailURL : "https://static-cdn.jtvnw.net/ttv-playlists-thumbnails-prod/missing-video-thumb-320x180.png",
                         alt: e.title
-                    })), o.createElement(P.a, null, o.createElement(C._35, {
+                    })), o.createElement(P.a, null, o.createElement(C._43, {
+                        label: Object(a.d)("Watch this video", "CollectionItemCard"),
+                        direction: C._45.Right
+                    }, o.createElement(C._35, {
                         type: C._40.H5,
                         color: C.I.Alt
                     }, o.createElement(x.a, {
@@ -663,11 +666,11 @@ webpackJsonp([76], {
                                 medium: d.PageviewMedium.VideoManagerCollectionEditor
                             }
                         }
-                    }, e.title)), this.subHeader(e)), o.createElement(M.a, null, o.createElement(F.a, {
+                    }, e.title))), this.subHeader(e)), o.createElement(M.a, null, o.createElement(F.a, {
                         value: e.viewCount.toString(),
                         icon: C._16.GlyphViews,
                         label: Object(a.d)("Total videos", "CollectionItemCard")
-                    })), o.createElement(j.a, {
+                    })), o.createElement(T.a, {
                         options: this.collectionMenuOptions(e)
                     })))
                 }, t.prototype.collectionMenuOptions = function(e) {
@@ -898,11 +901,11 @@ webpackJsonp([76], {
             $ = function(e) {
                 return window.location.replace("https://www.twitch.tv/" + encodeURIComponent(e.match.params.creatorLogin) + "/manager/collections/edit/" + e.match.params.collectionID), null
             },
-            Y = function(e) {
+            W = function(e) {
                 return Object(Z.a)() ? o.createElement(Q, i.__assign({}, e)) : o.createElement($, i.__assign({}, e))
             };
         n.d(t, "CollectionEditorPage", function() {
-            return Y
+            return W
         })
     },
     KRtN: function(e, t, n) {
@@ -1574,4 +1577,4 @@ webpackJsonp([76], {
         })(C)
     }
 });
-//# sourceMappingURL=pages.video-tools.pages.collection-editor-1fa5a71e2c0a8b5a54cf6b0e3e45aa1f.js.map
+//# sourceMappingURL=pages.video-tools.pages.collection-editor-a9cfa0aa16e50214a411e237797f24ed.js.map
