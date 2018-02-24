@@ -215,14 +215,14 @@ window.SiteOptions = {
         },
         "06379cc6-3e00-4359-b1fa-e79850909226": {
             "name": "mobile_web_aa90",
-            "v": 3113,
+            "v": 3140,
             "t": 1,
             "groups": [{
                 "weight": 90,
                 "value": "control"
             }, {
                 "weight": 10,
-                "value": "variant"
+                "value": "treatment"
             }]
         },
         "0670f0ea-3b5c-41a8-946d-114ef4a42540": {
