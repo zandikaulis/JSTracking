@@ -4784,13 +4784,13 @@ window.SiteOptions = {
         },
         "e33a85a2-43ab-425b-bc2e-555a650b7f2a": {
             "name": "BROADCASTER_AD_REVENUE_ESTIMATE",
-            "v": 3147,
+            "v": 3148,
             "t": 3,
             "groups": [{
-                "weight": 5,
+                "weight": 0,
                 "value": "yes"
             }, {
-                "weight": 5,
+                "weight": 10,
                 "value": "no"
             }]
         },
