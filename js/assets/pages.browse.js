@@ -2644,7 +2644,7 @@ webpackJsonp([53], {
                     var n = _.PageviewMedium.Browse,
                         a = this.props.data.streams.edges.map(function(e, t) {
                             var a = e.node;
-                            return a.broadcaster.id ? v.createElement("div", {
+                            return a.broadcaster && a.broadcaster.id ? v.createElement("div", {
                                 key: a.id,
                                 "data-target": t ? "" : Oe,
                                 style: {
@@ -5066,4 +5066,4 @@ webpackJsonp([53], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.browse-ec0142f6be2330f1990b2bcb1d80781c.js.map
+//# sourceMappingURL=pages.browse-35eb862a53c0994b7da1acbd7e500a39.js.map

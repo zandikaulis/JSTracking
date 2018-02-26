@@ -2384,11 +2384,13 @@ webpackJsonp([75], {
     oIkB: function(e, t, n) {
         "use strict";
         t.b = function(e, t) {
-            var n = new Set(e.map(function(e) {
+            var n = new Set(e.filter(function(e) {
+                return !!e.node
+            }).map(function(e) {
                 return e.node.id
             }));
             return e.concat(t.filter(function(e) {
-                return !n.has(e.node.id)
+                return !e.node || !n.has(e.node.id)
             }))
         }, t.a = function(e) {
             return {
@@ -2562,4 +2564,4 @@ webpackJsonp([75], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.bits.components.bits-landing-page-ce6817a116f94f4f6818559f84fa2ea4.js.map
+//# sourceMappingURL=pages.bits.components.bits-landing-page-c27d2e82140cd3dff4f77db4c1884e6c.js.map

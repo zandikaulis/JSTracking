@@ -391,6 +391,14 @@ webpackJsonp([80], {
                                                 },
                                                 arguments: [],
                                                 directives: []
+                                            }, {
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "platform"
+                                                },
+                                                arguments: [],
+                                                directives: []
                                             }]
                                         }
                                     }]
@@ -402,11 +410,11 @@ webpackJsonp([80], {
             }],
             loc: {
                 start: 0,
-                end: 290
+                end: 299
             }
         };
         n.loc.source = {
-            body: "query SubsBroadcaster($currentChannelLogin: String!) {\nuser(login: $currentChannelLogin) {\nid\ndisplayName\nlogin\nsubscriptionProducts{\nid\nurl\nprice\nemotes{\nid\ntoken\n}\nemoteSetID\nself {\npromotion {\nnewPrice\noldPrice\ndiscountValue\ndiscountType\n}\n}\n}\nself{\nsubscriptionBenefit {\nid\ntier\n}\n}\n}\n}",
+            body: "query SubsBroadcaster($currentChannelLogin: String!) {\nuser(login: $currentChannelLogin) {\nid\ndisplayName\nlogin\nsubscriptionProducts{\nid\nurl\nprice\nemotes{\nid\ntoken\n}\nemoteSetID\nself {\npromotion {\nnewPrice\noldPrice\ndiscountValue\ndiscountType\n}\n}\n}\nself{\nsubscriptionBenefit {\nid\ntier\nplatform\n}\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -565,7 +573,7 @@ webpackJsonp([80], {
             v = n("YEG/"),
             f = n("FDYX"),
             T = n("Odds"),
-            E = function(e) {
+            S = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -591,12 +599,12 @@ webpackJsonp([80], {
                     })
                 }, t
             }(a.Component),
-            y = n("XFEc");
+            E = n("XFEc");
         n("CqGj");
         ! function(e) {
             e[e.Tier1 = 0] = "Tier1", e[e.Tier2 = 1] = "Tier2", e[e.Tier3 = 2] = "Tier3"
         }(i || (i = {}));
-        var S = function(e) {
+        var P = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -604,6 +612,7 @@ webpackJsonp([80], {
                         emoteSetId: void 0
                     }, t.messages = {
                         subscribe: Object(o.d)("Subscribe Now", "SubsBroadcasterPlanTabs"),
+                        mobileSubbed: Object(o.d)("Subscribed", "SubsBroadcasterPlanTabs"),
                         perkChat: Object(o.d)("Chat During Subscriber-Only Mode", "SubsBroadcasterPlanTabs"),
                         includedEmotes: Object(o.d)("Included Emotes", "SubsBroadcasterPlanTabs")
                     }, t.toggleActiveTab = function(e) {
@@ -624,7 +633,7 @@ webpackJsonp([80], {
                                 })
                         }
                     }, t.onSubClick = function(e) {
-                        Object(y.b)({
+                        Object(E.b)({
                             action: e.action,
                             canSubscribe: !t.props.subTier || "3000" !== t.props.subTier,
                             channelID: t.props.channelId,
@@ -644,6 +653,7 @@ webpackJsonp([80], {
                 return s.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
+                    var e = "IOS" === this.props.subbedPlatform || "ANDROID" === this.props.subbedPlatform ? this.messages.mobileSubbed : this.messages.subscribe;
                     return !this.props.subscriptionProducts || this.props.subscriptionProducts.length < 1 ? a.createElement(T._2, {
                         display: T.N.Flex,
                         justifyContent: T._1.Center,
@@ -660,7 +670,7 @@ webpackJsonp([80], {
                         type: T._40.H3,
                         color: T.I.Link,
                         bold: !0
-                    }, this.messages.subscribe)), this.makeTabs(), this.makeTabContents())
+                    }, e)), "IOS" !== this.props.subbedPlatform && "ANDROID" !== this.props.subbedPlatform ? this.makeTabs() : null, this.makeTabContents())
                 }, t.prototype.makeTabs = function() {
                     return !this.props.subscriptionProducts || this.props.subscriptionProducts.length < 1 ? a.createElement(T._8, null) : 1 === this.props.subscriptionProducts.length ? a.createElement(T._27, null, a.createElement(T._26, {
                         active: !0,
@@ -720,7 +730,13 @@ webpackJsonp([80], {
                             e = this.props.subscriptionProducts[0]
                     }
                     var t = e.price;
-                    return Object(f.d)([e]) && (t = Object(f.a)(e)), a.createElement(T._2, {
+                    Object(f.d)([e]) && (t = Object(f.a)(e));
+                    var n = "IOS" === this.props.subbedPlatform || "ANDROID" === this.props.subbedPlatform ? a.createElement(T._35, {
+                        type: T._40.H5
+                    }, Object(o.d)("Tier 1 Subscription", "SubsBroadcasterPlanTabs")) : a.createElement(_.a, {
+                        subscriptionProduct: e
+                    });
+                    return a.createElement(T._2, {
                         margin: {
                             top: 1
                         }
@@ -728,9 +744,7 @@ webpackJsonp([80], {
                         margin: {
                             top: 1
                         }
-                    }, a.createElement(_.a, {
-                        subscriptionProduct: e
-                    })), a.createElement(T._2, {
+                    }, n), a.createElement(T._2, {
                         margin: {
                             top: 1
                         }
@@ -765,14 +779,14 @@ webpackJsonp([80], {
                     var e = [];
                     if (this.state.activeTab === i.Tier2 || this.state.activeTab === i.Tier3) {
                         var t = this.props.subscriptionProducts[1];
-                        e.push(a.createElement(E, {
+                        e.push(a.createElement(S, {
                             key: "bonus-emote-" + i.Tier2,
                             subscriptionProduct: t
                         }))
                     }
                     if (this.state.activeTab === i.Tier3) {
                         t = this.props.subscriptionProducts[2];
-                        e.push(a.createElement(E, {
+                        e.push(a.createElement(S, {
                             key: "bonus-emote-" + i.Tier3,
                             subscriptionProduct: t
                         }))
@@ -795,7 +809,7 @@ webpackJsonp([80], {
                     }))
                 }, t = s.__decorate([Object(h.d)("SubPlanTabs")], t)
             }(a.Component),
-            P = (n("bPto"), n("027l")),
+            y = (n("bPto"), n("027l")),
             N = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -911,7 +925,7 @@ webpackJsonp([80], {
                     }, a.createElement(T._35, {
                         color: T.I.Overlay
                     }, Object(o.d)("Verified Twitch Partner", "SubsBroadcasterBanner")))) : null
-                }, t = s.__decorate([Object(h.d)("SubsBroadcasterBanner"), Object(l.a)(P, {
+                }, t = s.__decorate([Object(h.d)("SubsBroadcasterBanner"), Object(l.a)(y, {
                     options: function(e) {
                         return {
                             variables: {
@@ -925,7 +939,7 @@ webpackJsonp([80], {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onSubClick = function(e) {
-                        Object(y.b)({
+                        Object(E.b)({
                             action: e.action,
                             canSubscribe: !t.props.subTier || "3000" !== t.props.subTier,
                             channelID: t.props.channelId,
@@ -945,7 +959,10 @@ webpackJsonp([80], {
                 return s.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return !this.props.subscriptionProducts || this.props.subscriptionProducts.length < 1 ? a.createElement(T._8, null) : (this.setMessages(), a.createElement(T._2, {
+                    if (!this.props.subscriptionProducts || this.props.subscriptionProducts.length < 1) return a.createElement(T._8, null);
+                    this.setMessages();
+                    var e = "IOS" === this.props.subbedPlatform || "ANDROID" === this.props.subbedPlatform ? this.messages.subscribed : this.messages.subscribeNow;
+                    return a.createElement(T._2, {
                         className: "subs-plan-tiers",
                         alignItems: T.c.Center,
                         flexDirection: T.P.Column,
@@ -959,19 +976,49 @@ webpackJsonp([80], {
                         type: T._40.H3,
                         color: T.I.Link,
                         bold: !0
-                    }, this.messages.subscribeNow)), a.createElement(T.W, {
+                    }, e)), a.createElement(T.W, {
                         margin: 1,
                         textAlign: T._36.Center
                     }, a.createElement(T._35, null, this.messages.subscriptionPerks)), this.baseEmotes(), a.createElement(T._2, {
                         margin: 1,
                         display: T.N.Flex,
                         justifyContent: T._1.Center
-                    }, this.makePlanWrappers())))
+                    }, this.makePlanWrappers()))
                 }, t.prototype.makePlanWrappers = function() {
                     var e = this;
                     return !this.props.subscriptionProducts || this.props.subscriptionProducts.length < 1 ? [a.createElement(T._8, {
                         key: "subs-broadcaster__emote-placeholder"
-                    })] : this.props.subscriptionProducts.map(function(t, n) {
+                    })] : "IOS" === this.props.subbedPlatform || "ANDROID" === this.props.subbedPlatform ? [a.createElement(T._25, {
+                        "data-test-selector": "mobile-sub-container",
+                        key: "subs-broadcaster-plan-0",
+                        className: "subs-plan-tiers__plan",
+                        margin: 1,
+                        elevation: 2,
+                        display: T.N.Flex,
+                        flexDirection: T.P.Column,
+                        padding: 2,
+                        textAlign: T._36.Center
+                    }, a.createElement(T.W, {
+                        margin: 1
+                    }, a.createElement(T._35, {
+                        type: T._40.H3,
+                        color: T.I.Link
+                    }, Object(o.d)("Tier 1 Subscription", "SubsPlanTiers"))), a.createElement(T._2, {
+                        margin: 1,
+                        display: T.N.Flex,
+                        flexWrap: T.Q.Wrap,
+                        flexGrow: 1,
+                        alignItems: T.c.Center,
+                        justifyContent: T._1.Center
+                    }, a.createElement(T._35, null, this.messages.includes), this.bonusEmotesMessage(0)), this.bonusEmotes(0), a.createElement(T._2, {
+                        margin: 1
+                    }, a.createElement(v.a, {
+                        isSubbedToTier: this.isSubbedToTier(0),
+                        tierPrice: "6.99",
+                        reportSubAction: this.onSubClick,
+                        url: "/ticket",
+                        targetBlank: !1
+                    })))] : this.props.subscriptionProducts.map(function(t, n) {
                         var i = t.price;
                         return Object(f.d)([t]) && (i = Object(f.a)(t)), a.createElement(T._25, {
                             key: "subs-broadcaster-plan-" + n,
@@ -1056,7 +1103,7 @@ webpackJsonp([80], {
                             n.push(this.props.subscriptionProducts[1])
                     }
                     return t = n.map(function(e, t) {
-                        return a.createElement(E, {
+                        return a.createElement(S, {
                             key: "subs-broadcaster__bonus-emote-" + t,
                             subscriptionProduct: e,
                             hidePrice: !0
@@ -1069,6 +1116,7 @@ webpackJsonp([80], {
                 }, t.prototype.setMessages = function() {
                     this.messages = {
                         subscribeNow: Object(o.d)("Subscribe Now", "SubsPlanTiers"),
+                        subscribed: Object(o.d)("Subscribed", "SubsPlanTiers"),
                         subscriptionPerks: Object(o.d)("{emoteCount, plural, one {All subscriptions include Ad-Free Viewing, Subscriber Badges and # Emote. Chat During Subscriber-Only Mode} other {All subscriptions include Ad-Free Viewing, Subscriber Badges and # Emotes. Chat During Subscriber-Only Mode}}", {
                             emoteCount: this.props.subscriptionProducts[0].emotes.length
                         }, "SubsPlanTiers"),
@@ -1076,7 +1124,7 @@ webpackJsonp([80], {
                     }
                 }, t = s.__decorate([Object(h.d)("SubsPlanTiers")], t)
             }(a.Component)),
-            w = n("Ie7/"),
+            O = n("Ie7/"),
             I = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -1085,7 +1133,8 @@ webpackJsonp([80], {
                         emoteSetId: "",
                         subscriptionProducts: [],
                         isSubscribed: !1,
-                        subTier: null
+                        subTier: null,
+                        subPlatform: null
                     }, t
                 }
                 return s.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -1100,9 +1149,10 @@ webpackJsonp([80], {
                                 subscriptionProducts: e.data.user.subscriptionProducts
                             })
                         }
-                        e.data.user.self && e.data.user.self.subscriptionBenefit && this.setState({
+                        e.data.user && e.data.user.self && e.data.user.self.subscriptionBenefit && this.setState({
                             isSubscribed: !0,
-                            subTier: e.data.user.self.subscriptionBenefit.tier
+                            subTier: e.data.user.self.subscriptionBenefit.tier,
+                            subPlatform: e.data.user.self.subscriptionBenefit.platform
                         })
                     }
                 }, t.prototype.render = function() {
@@ -1128,7 +1178,8 @@ webpackJsonp([80], {
                         breakpointMedium: {
                             display: T.N.Hide
                         }
-                    }, a.createElement(S, {
+                    }, a.createElement(P, {
+                        subbedPlatform: this.state.subPlatform,
                         channelDisplayName: this.props.data.user.displayName,
                         channelId: this.props.data.user.id,
                         channelLogin: this.props.data.user.login,
@@ -1144,12 +1195,13 @@ webpackJsonp([80], {
                             display: T.N.Flex
                         }
                     }, a.createElement(C, {
+                        subbedPlatform: this.state.subPlatform,
                         subscriptionProducts: this.state.subscriptionProducts,
                         subTier: this.state.subTier,
                         channelId: this.props.data.user.id,
                         channelLogin: this.props.data.user.login
                     }))))
-                }, t = s.__decorate([Object(l.a)(w, {
+                }, t = s.__decorate([Object(l.a)(O, {
                     options: function(e) {
                         return {
                             variables: {
@@ -1163,10 +1215,10 @@ webpackJsonp([80], {
                     location: m.PageviewLocation.SubsBroadcasterPage
                 })], t)
             }(a.Component),
-            O = Object(r.b)()(I);
+            x = Object(r.b)()(I);
         n.d(t, "SubsBroadcasterPage", function() {
-            return O
+            return x
         })
     }
 });
-//# sourceMappingURL=pages.subs.components.subs-broadcaster-page-29e138123c8f9515eb7186219ff1db3b.js.map
+//# sourceMappingURL=pages.subs.components.subs-broadcaster-page-8b0cbc56dbc608131b26d744b91c1820.js.map

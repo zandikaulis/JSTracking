@@ -4892,7 +4892,8 @@ webpackJsonp([45], {
                     this.props.data && !this.props.data.loading && !this.props.data.error && this.props.data.directory && (this.props.data.directory.coverURL ? o = {
                         backgroundImage: "url(" + this.props.data.directory.coverURL + ")"
                     } : this.props.data.directory.streams.edges.length && this.props.data.directory.streams.edges.filter(function(e) {
-                        return e.node.previewImageURL
+                        var t = e.node;
+                        return t && t.previewImageURL
                     }).map(function(e) {
                         var t = e.node;
                         r = !0, o = {
@@ -17713,4 +17714,4 @@ webpackJsonp([45], {
     zSAx: function(e, t) {},
     zu64: function(e, t) {}
 });
-//# sourceMappingURL=pages.directory-game-6836eb3493238b3cc26f6c6b3232a884.js.map
+//# sourceMappingURL=pages.directory-game-4a8cb35a841cfb0cfd469c5c8600fc05.js.map
