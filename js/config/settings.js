@@ -74,7 +74,7 @@ window.__twilightSettings = {
     "update_manager_enabled": false,
     "viewer_milestones_enabled": true,
     "withgraphql_retry_delay_backoff_multiplier": 3,
-    "withgraphql_retry_enabled": false,
+    "withgraphql_retry_enabled": true,
     "withgraphql_retry_initial_delay": 2000,
     "withgraphql_retry_jitter_window_multiplier": 0.5,
     "withgraphql_retry_max_attempts": 3,
