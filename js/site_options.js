@@ -4770,6 +4770,18 @@ window.SiteOptions = {
                 "value": "enabled"
             }]
         },
+        "e2a164da-899d-4cfd-b4c2-8862a5fce8bf": {
+            "name": "ios_extensions_onboarding",
+            "v": 3153,
+            "t": 1,
+            "groups": [{
+                "weight": 5,
+                "value": "disabled"
+            }, {
+                "weight": 95,
+                "value": "enabled"
+            }]
+        },
         "e2f109ce-23ba-432b-b328-9e3d0e44d8c2": {
             "name": "android_profile_tab_order",
             "v": 2958,
