@@ -399,7 +399,7 @@ webpackJsonp([75], {
                     cheermoteImaages: n
                 })))
             },
-            w = function(e) {
+            A = function(e) {
                 return c.createElement(y._2, {
                     className: "bits-landing-page-faq-section"
                 }, c.createElement(y.W, {
@@ -415,7 +415,7 @@ webpackJsonp([75], {
                     text: e.answer
                 }), e.additionalContent)
             },
-            A = [{
+            w = [{
                 question: C.paymentMethodsQuestion,
                 answer: C.paymentMethodsAnswer
             }, {
@@ -477,9 +477,9 @@ webpackJsonp([75], {
                         },
                         margin: "auto"
                     }, t),
-                    a = A.map(function(e, t) {
+                    a = w.map(function(e, t) {
                         var a = void 0;
-                        return e.question === C.bitsGemQuestion && (a = n), c.createElement(w, {
+                        return e.question === C.bitsGemQuestion && (a = n), c.createElement(A, {
                             key: "faqsection:" + t,
                             question: e.question,
                             answer: e.answer,
@@ -540,8 +540,8 @@ webpackJsonp([75], {
                     additionalInfo: C.info
                 }))
             },
-            I = n("WVx7"),
-            O = n("/LBW"),
+            O = n("WVx7"),
+            I = n("/LBW"),
             S = function(e) {
                 if (!e.isLoggedIn) return c.createElement(y._2, {
                     display: y.N.Inline,
@@ -641,12 +641,12 @@ webpackJsonp([75], {
                 }, c.createElement("img", {
                     src: "https://d3aqoihi2n8ty8.cloudfront.net/landing-page/pp_m_white.png",
                     className: "bits-landing-page-right-pane__paypal-promo-banner-container--logo"
-                }))), c.createElement(I.a, {
+                }))), c.createElement(O.a, {
                     bitsConfig: e.bitsConfig,
                     closeAllBits: T,
                     onClose: T,
                     trackBitsCardInteraction: T,
-                    location: O.b.BitsLandingPage,
+                    location: I.b.BitsLandingPage,
                     hideWateb: !0,
                     fullsize: !0
                 }))
@@ -1093,8 +1093,8 @@ webpackJsonp([75], {
             })(_),
             C = n("HW6M"),
             B = n("3zLD"),
-            w = n("jF7o"),
-            A = n("w9tK"),
+            A = n("jF7o"),
+            w = n("w9tK"),
             E = n("zCIC");
 
         function x(e) {
@@ -1124,7 +1124,7 @@ webpackJsonp([75], {
         }! function(e) {
             e[e.Error = 0] = "Error", e[e.AdBlocked = 1] = "AdBlocked", e[e.Unavailable = 2] = "Unavailable", e[e.Available = 3] = "Available"
         }(v || (v = {}));
-        var N, I = function(e) {
+        var N, O = function(e) {
                 var t = null;
                 return e.disableWatchAd && (t = Object(u.d)("Try again later", "Bits--WatchAdOffer")), c.createElement(b._25, {
                     className: "bits-buy-card__offer-row",
@@ -1162,7 +1162,7 @@ webpackJsonp([75], {
                     }
                 }, t)))
             },
-            O = /version\/([\w\.]+).+?(mobile\s?safari|safari)/i,
+            I = /version\/([\w\.]+).+?(mobile\s?safari|safari)/i,
             S = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -1189,7 +1189,7 @@ webpackJsonp([75], {
                         })
                     })
                 }, t.prototype.render = function() {
-                    return O.test(navigator.userAgent) ? null : c.createElement(I, l.__assign({}, this.props, {
+                    return I.test(navigator.userAgent) ? null : c.createElement(O, l.__assign({}, this.props, {
                         disableWatchAd: !this.state.enableWatchAd
                     }))
                 }, t
@@ -1540,7 +1540,7 @@ webpackJsonp([75], {
         ! function(e) {
             e[e.Inactive = 0] = "Inactive", e[e.Error = 1] = "Error", e[e.Awarded = 2] = "Awarded"
         }(N || (N = {}));
-        var Q = function(e) {
+        var K = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -1548,7 +1548,7 @@ webpackJsonp([75], {
                         watebError: null,
                         bitsAwarded: 0
                     }, t.onBuyPopupClose = function(e) {
-                        Object(w.a)(e, function() {
+                        Object(A.a)(e, function() {
                             t.props.data && t.props.data.refetch()
                         })
                     }, t.onAdBitsAwarded = function(e) {
@@ -1711,10 +1711,10 @@ webpackJsonp([75], {
                     }
                 })], t)
             }(c.Component),
-            K = Object(B.compose)(Object(z.d)("BitsBuyCard", {
+            Q = Object(B.compose)(Object(z.d)("BitsBuyCard", {
                 autoReportInteractive: !0,
-                destination: A.a.BitsBuyCard
-            }))(Q);
+                destination: w.a.BitsBuyCard
+            }))(K);
 
         function Y(e) {
             return {
@@ -1730,7 +1730,7 @@ webpackJsonp([75], {
                 }
             }
         }
-        var J = Object(i.b)(Y, X)(K);
+        var J = Object(i.b)(Y, X)(Q);
         n.d(t, !1, function() {
             return Y
         }), n.d(t, !1, function() {
@@ -2381,63 +2381,6 @@ webpackJsonp([75], {
             return a
         })
     },
-    oIkB: function(e, t, n) {
-        "use strict";
-        t.b = function(e, t) {
-            var n = new Set(e.filter(function(e) {
-                return !!e.node
-            }).map(function(e) {
-                return e.node.id
-            }));
-            return e.concat(t.filter(function(e) {
-                return !e.node || !n.has(e.node.id)
-            }))
-        }, t.a = function(e) {
-            return {
-                variables: {
-                    input: e
-                }
-            }
-        }, t.d = function(e, t, n, r) {
-            void 0 === t && (t = {});
-            try {
-                var o = i.n.apollo.client.readQuery({
-                    query: e,
-                    variables: t
-                });
-                if (!o || r && r(o)) return;
-                var s = a(o, n);
-                i.n.apollo.client.writeQuery({
-                    query: e,
-                    variables: t,
-                    data: s
-                })
-            } catch (e) {
-                i.i.warn("Failed writing updated query to Apollo", e)
-            }
-        }, t.c = function(e) {
-            try {
-                var t = e.id,
-                    n = e.fragment,
-                    r = e.mutator,
-                    o = i.n.apollo.client.readFragment({
-                        id: t,
-                        fragment: n
-                    }),
-                    s = a(o, r);
-                i.n.apollo.client.writeFragment({
-                    fragment: n,
-                    id: t,
-                    data: s
-                })
-            } catch (e) {
-                i.i.warn("Failed writing updated query to Apollo", e)
-            }
-        };
-        n("+dIz");
-        var a = n("LIeg"),
-            i = (n.n(a), n("6sO2"))
-    },
     q8Cw: function(e, t) {},
     qe65: function(e, t, n) {
         "use strict";
@@ -2564,4 +2507,4 @@ webpackJsonp([75], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.bits.components.bits-landing-page-c27d2e82140cd3dff4f77db4c1884e6c.js.map
+//# sourceMappingURL=pages.bits.components.bits-landing-page-c6b4be1c335b0f0a702195432d54392a.js.map

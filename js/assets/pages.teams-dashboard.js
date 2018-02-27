@@ -7525,7 +7525,22 @@ webpackJsonp([35], {
             return a && n ? e > t ? 1 : e < t ? -1 : 0 : a ? -1 : n ? 1 : 0
         }! function(e) {
             e[e.Ascending = 1] = "Ascending", e[e.Descending = -1] = "Descending"
-        }(o || (o = {})), a.d(t, "c", function() {
+        }(o || (o = {}));
+        var g = a("6sO2");
+
+        function y(e) {
+            var t = Math.abs(e.hours),
+                a = Math.abs(e.minutes);
+            return t && a ? Object(g.d)("{hours, number}h{minutes, number}m", {
+                hours: t,
+                minutes: a
+            }, "StreamSummaryDuration") : t ? Object(g.d)("{hours, number}h", {
+                hours: t
+            }, "StreamSummaryDuration") : Object(g.d)("{minutes, number}m", {
+                minutes: a
+            }, "StreamSummaryDuration")
+        }
+        a.d(t, "c", function() {
             return n
         }), a.d(t, "d", function() {
             return s.a
@@ -7533,14 +7548,16 @@ webpackJsonp([35], {
             return d.a
         }), a.d(t, "b", function() {
             return h
-        }), a.d(t, "f", function() {
+        }), a.d(t, "g", function() {
             return _
         }), a.d(t, !1, function() {
             return m
         }), a.d(t, "a", function() {
             return o
-        }), a.d(t, "e", function() {
+        }), a.d(t, "f", function() {
             return f
+        }), a.d(t, "e", function() {
+            return y
         })
     },
     PJh5: function(e, t, a) {
@@ -21489,4 +21506,4 @@ webpackJsonp([35], {
         }
     }
 });
-//# sourceMappingURL=pages.teams-dashboard-e65d7163b6228afa2a71530dcf42e940.js.map
+//# sourceMappingURL=pages.teams-dashboard-20be9b3207f7a791471c4f2b430f3265.js.map

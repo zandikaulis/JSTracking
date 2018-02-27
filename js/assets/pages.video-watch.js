@@ -1,4 +1,4 @@
-webpackJsonp([36, 82], {
+webpackJsonp([36, 81], {
     "+/J2": function(e, t, n) {
         var i = n("xA5w");
         e.exports = function(e, t) {
@@ -11191,10 +11191,10 @@ webpackJsonp([36, 82], {
             }, Object(r.d)("Thank you for your feedback!", "ChatLine"))
         }, t.k = function(e, t, n) {
             var r = null,
-                a = e.reduce(function(a, o, s) {
+                a = e.reduce(function(a, o, l) {
                     switch (o.type) {
-                        case h.a.Text:
-                            var l = s > 0;
+                        case f.a.Text:
+                            var c = l > 0;
                             return a.concat(function(e, t, n, r, a) {
                                 var o = [],
                                     s = "";
@@ -11206,9 +11206,9 @@ webpackJsonp([36, 82], {
                                         (t || n) && function(e, t, n) {
                                             var i = e.trim().toLowerCase();
                                             return t && i === t.toLowerCase() || n && i === n.toLowerCase()
-                                        }(e, t, n) ? (o = (o = o.concat(s)).concat(i.createElement(f._2, {
+                                        }(e, t, n) ? (o = (o = o.concat(s)).concat(i.createElement(g._2, {
                                             className: "chat-line__message--mention-recipient",
-                                            display: f.N.InlineFlex,
+                                            display: g.N.InlineFlex,
                                             key: "" + e + r,
                                             "data-a-target": "chat-message-mention"
                                         }, a)), s = "") : s = s.concat(a)
@@ -11217,47 +11217,48 @@ webpackJsonp([36, 82], {
                                     key: "chat-line__message-text-" + a,
                                     "data-a-target": "chat-message-text"
                                 }, o)
-                            }(o, t, n, l, s));
-                        case h.a.Mention:
-                            var c = "";
+                            }(o, t, n, c, l));
+                        case f.a.Mention:
+                            var d = "";
                             return function(e) {
                                 return e.content && e.content.sender
-                            }(o) && t && o.content.sender.toLowerCase() === t.toLowerCase() ? c = "chat-line__message--mention-sender" : function(e) {
+                            }(o) && t && o.content.sender.toLowerCase() === t.toLowerCase() ? d = "chat-line__message--mention-sender" : function(e) {
                                 return e.content && e.content.recipient
-                            }(o) && t && o.content.recipient.toLowerCase() === t.toLowerCase() && (c = "chat-line__message--mention-recipient"), a.concat(i.createElement(f._2, {
-                                className: c,
-                                display: f.N.InlineFlex,
-                                key: s,
+                            }(o) && t && o.content.recipient.toLowerCase() === t.toLowerCase() && (d = "chat-line__message--mention-recipient"), a.concat(i.createElement(g._2, {
+                                className: d,
+                                display: g.N.InlineFlex,
+                                key: l,
                                 "data-a-target": "chat-message-mention"
                             }, "@" + o.content.recipient));
-                        case h.a.Link:
-                            return a = a.concat(g(s, o)), e.length > s + 1 && e[s + 1].type === h.a.Link && a.push(" "), a;
-                        case h.a.Emote:
-                            return a = a.concat(i.createElement(d.a, {
-                                key: s,
+                        case f.a.Link:
+                            return a = a.concat(v(l, o)), e.length > l + 1 && e[l + 1].type === f.a.Link && a.push(" "), a;
+                        case f.a.Emote:
+                            return a = a.concat(i.createElement(u.a, {
+                                key: l,
                                 emote: o.content
-                            })), e.length > s + 1 && e[s + 1].type === h.a.Emote && a.push(" "), a;
-                        case h.a.ClipLink:
-                            return r ? a.concat(g(s, o)) : (r = i.createElement(u.a, {
-                                key: s,
+                            })), e.length > l + 1 && e[l + 1].type === f.a.Emote && a.push(" "), a;
+                        case f.a.ClipLink:
+                            return r ? a.concat(v(l, o)) : (r = i.createElement(s.a, {
+                                key: l
+                            }, i.createElement(m.a, {
                                 slug: o.content.slug
-                            }), a);
-                        case h.a.VideoLink:
-                            return r ? a.concat(g(s, o)) : (r = i.createElement(m.a, {
-                                key: s,
+                            })), a);
+                        case f.a.VideoLink:
+                            return r ? a.concat(v(l, o)) : (r = i.createElement(p.a, {
+                                key: l,
                                 id: o.content.id,
                                 url: o.content.url
                             }), a);
                         default:
                             return a.concat(i.createElement("span", {
-                                key: s
+                                key: l
                             }))
                     }
                 }, []);
             r && (a = a.concat(r));
             return a
         }, t.l = function(e) {
-            if (e.moderationType === p.e.Ban) return e.reason ? i.createElement("span", {
+            if (e.moderationType === h.e.Ban) return e.reason ? i.createElement("span", {
                 className: "chat-line__moderation--ban-with-reason"
             }, Object(r.d)("{userLogin} has been banned. Reason: {reason}", {
                 userLogin: e.userLogin,
@@ -11283,9 +11284,9 @@ webpackJsonp([36, 82], {
                 userLogin: e.userLogin,
                 duration: e.duration
             }, "ChatLine"))
-        }, t.v = v, t.a = b, t.b = k, t.s = function(e) {
-            if (e.isPrime) return i.createElement("span", null, b(e.userLogin, v(e.channel)));
-            return i.createElement("span", null, k(e.userLogin, e.tier))
+        }, t.v = b, t.a = k, t.b = y, t.s = function(e) {
+            if (e.isPrime) return i.createElement("span", null, k(e.userLogin, b(e.channel)));
+            return i.createElement("span", null, y(e.userLogin, e.tier))
         }, t.r = function(e) {
             if ("custom" === e.tier) return i.createElement("span", null, (t = e.userLogin, n = e.recipient, Object(r.d)("{userLogin} gifted a subscription to {recipient}!", {
                 userLogin: t,
@@ -11303,7 +11304,7 @@ webpackJsonp([36, 82], {
             var t = e.daysLeft;
             0 === t && (t = e.hoursLeft);
             var n = {
-                bitsTotal: i.createElement("strong", null, Object(c.e)(e.total, {
+                bitsTotal: i.createElement("strong", null, Object(d.e)(e.total, {
                     style: "currency",
                     currency: "USD"
                 })),
@@ -11313,7 +11314,7 @@ webpackJsonp([36, 82], {
                     target: "_blank"
                 }, e.learnMore),
                 hashtag: i.createElement("strong", null, e.hashtag),
-                timeRemaining: Object(c.e)(t)
+                timeRemaining: Object(d.e)(t)
             };
             return i.createElement("span", null, 0 === e.daysLeft ? (a = n, Object(r.d)("{bitsTotal} total raised so far for {charityName}! {timeRemaining} more hours to show support. Cheer and include {hashtag}. Learn More at {learnMoreURL}", {
                 bitsTotal: a.bitsTotal,
@@ -11352,7 +11353,7 @@ webpackJsonp([36, 82], {
         }, t.i = function(e) {
             if (e.enabled) {
                 var t = 0 === e.length ? Object(r.d)("This room is in followers-only mode.", "ChatLine") : Object(r.d)("This room is now in {length} followers-only mode.", {
-                    length: Object(s.a)(60 * e.length)
+                    length: Object(l.a)(60 * e.length)
                 }, "ChatLine");
                 return i.createElement("span", null, t)
             }
@@ -11364,13 +11365,13 @@ webpackJsonp([36, 82], {
             return i.createElement("span", null, t)
         }, t.e = function() {
             return i.createElement("span", null, Object(r.d)("Chat was cleared by a moderator", "ChatLine"))
-        }, t.c = y, t.t = function(e) {
+        }, t.c = _, t.t = function(e) {
             return i.createElement("span", {
                 key: "timestamp",
                 className: "chat-line__timestamp",
                 "data-a-target": "chat-timestamp",
                 "data-test-selector": "chat-timestamp"
-            }, y(new Date(e)))
+            }, _(new Date(e)))
         }, t.u = function(e) {
             return i.createElement("span", {
                 key: "timestamp",
@@ -11388,21 +11389,21 @@ webpackJsonp([36, 82], {
         }, t.w = function() {
             return i.createElement("span", null, Object(r.d)("The raid has been cancelled.", "RaidCancelMessage"))
         }, t.f = function(e) {
-            return i.createElement(f._25, {
+            return i.createElement(g._25, {
                 borderMarked: !0,
                 borderBottom: !1
-            }, i.createElement(f._2, {
+            }, i.createElement(g._2, {
                 className: "chat-line__status",
-                display: f.N.Flex,
-                alignItems: f.c.Center,
-                flexWrap: f.Q.NoWrap
-            }, i.createElement(f.W, {
+                display: g.N.Flex,
+                alignItems: g.c.Center,
+                flexWrap: g.Q.NoWrap
+            }, i.createElement(g.W, {
                 flexShrink: 0
             }, i.createElement("img", {
                 src: o.a,
                 height: "32",
                 width: "32"
-            })), i.createElement(f._2, {
+            })), i.createElement(g._2, {
                 margin: {
                     left: .5
                 }
@@ -11410,21 +11411,21 @@ webpackJsonp([36, 82], {
                 userName: e.message.user.userDisplayName,
                 numberOfGifts: e.selectedCount,
                 "x:boldpurple": function(e) {
-                    return i.createElement(f._35, {
-                        type: f._40.Span,
+                    return i.createElement(g._35, {
+                        type: g._40.Span,
                         bold: !0,
-                        color: f.I.Link
+                        color: g.I.Link
                     }, e)
                 },
                 "x:bold": function(e) {
                     return i.createElement("strong", null, e)
                 }
-            }, "Crates"))), i.createElement(f._25, {
+            }, "Crates"))), i.createElement(g._25, {
                 className: "chat-line__status",
-                background: f.m.Alt2
-            }, i.createElement(f._35, {
+                background: g.m.Alt2
+            }, i.createElement(g._35, {
                 bold: !0,
-                color: f.I.Link
+                color: g.I.Link
             }, Object(r.d)("Cheer 250+ to unlock gifts for others in chat!", "Crates"))))
         }, t.n = function(e, t, n) {
             if (0 === n) return Object(r.d)("<x:bold>{userName}</x:bold> bought <x:bold>{gameTitle}!</x:bold>", {
@@ -11447,17 +11448,18 @@ webpackJsonp([36, 82], {
             r = (n.n(i), n("6sO2")),
             a = n("cv4W"),
             o = n.n(a),
-            s = n("FsFC"),
-            l = n("yDzg"),
-            c = n("J4ib"),
-            d = n("hXeO"),
-            u = n("5vPJ"),
-            m = n("kBA+"),
-            p = n("qkCi"),
-            h = n("mwvJ"),
-            f = n("Odds");
+            s = n("o5l+"),
+            l = n("FsFC"),
+            c = n("yDzg"),
+            d = n("J4ib"),
+            u = n("hXeO"),
+            m = n("5vPJ"),
+            p = n("kBA+"),
+            h = n("qkCi"),
+            f = n("mwvJ"),
+            g = n("Odds");
 
-        function g(e, t) {
+        function v(e, t) {
             return i.createElement("a", {
                 key: e,
                 className: "chat-line__message--link",
@@ -11467,8 +11469,8 @@ webpackJsonp([36, 82], {
             }, t.content.displayText)
         }
 
-        function v(e) {
-            var t = Object(l.a)("https://twitch.amazon.com/prime", {
+        function b(e) {
+            var t = Object(c.a)("https://twitch.amazon.com/prime", {
                 ref: "subscriptionMessage",
                 channel: e
             });
@@ -11480,21 +11482,21 @@ webpackJsonp([36, 82], {
             }, Object(r.d)("Twitch Prime", "ChatLine"))
         }
 
-        function b(e, t) {
+        function k(e, t) {
             return Object(r.d)("{userLogin} just subscribed with {service}!", {
                 userLogin: e,
                 service: t
             }, "ChatLine")
         }
 
-        function k(e, t) {
+        function y(e, t) {
             return Object(r.d)("{userLogin} just subscribed with a {subTier} sub!", {
                 userLogin: e,
                 subTier: t
             }, "ChatLine")
         }
 
-        function y(e) {
+        function _(e) {
             var t = e.getHours() % 12;
             0 === t && (t = 12);
             var n = e.getMinutes(),
@@ -17354,9 +17356,8 @@ webpackJsonp([36, 82], {
             return r
         });
         var i = n("6sO2"),
-            r = function(e) {
-                var t = i.n.store.getState().session.user;
-                return !i.b.get("chatrooms_enabled", !1) && (t && t.roles && t.roles.isStaff || e) ? i.b.get("chatrooms_staff_beta", !1) : i.b.get("chatrooms_enabled", !1)
+            r = function() {
+                return i.b.get("chatrooms_enabled", !1)
             }
     },
     qNYo: function(e, t, n) {
@@ -20589,4 +20590,4 @@ webpackJsonp([36, 82], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.video-watch-f4d1c53bd5e737e8478f8dda2b03841e.js.map
+//# sourceMappingURL=pages.video-watch-2506d672baabde1f1762809a7ab1cbf7.js.map

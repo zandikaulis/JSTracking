@@ -1,4 +1,4 @@
-webpackJsonp([80], {
+webpackJsonp([79], {
     "027l": function(e, t) {
         var n = {
             kind: "Document",
@@ -1116,16 +1116,16 @@ webpackJsonp([80], {
                 }, t.prototype.setMessages = function() {
                     this.messages = {
                         subscribeNow: Object(o.d)("Subscribe Now", "SubsPlanTiers"),
-                        subscribed: Object(o.d)("Subscribed", "SubsPlanTiers"),
-                        subscriptionPerks: Object(o.d)("{emoteCount, plural, one {All subscriptions include Ad-Free Viewing, Subscriber Badges and # Emote. Chat During Subscriber-Only Mode} other {All subscriptions include Ad-Free Viewing, Subscriber Badges and # Emotes. Chat During Subscriber-Only Mode}}", {
+                        subscriptionPerks: Object(o.d)("{emoteCount, plural, one {All subscriptions include Subscriber Badges and # Emote.} other {All subscriptions include Subscriber Badges and # Emotes.}}", {
                             emoteCount: this.props.subscriptionProducts[0].emotes.length
                         }, "SubsPlanTiers"),
+                        subscribed: Object(o.d)("Subscribed", "SubsPlanTiers"),
                         includes: Object(o.d)("Includes everything listed above.", "SubsPlanTiers")
                     }
                 }, t = s.__decorate([Object(h.d)("SubsPlanTiers")], t)
             }(a.Component)),
-            O = n("Ie7/"),
-            I = function(e) {
+            I = n("Ie7/"),
+            O = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -1201,7 +1201,7 @@ webpackJsonp([80], {
                         channelId: this.props.data.user.id,
                         channelLogin: this.props.data.user.login
                     }))))
-                }, t = s.__decorate([Object(l.a)(O, {
+                }, t = s.__decorate([Object(l.a)(I, {
                     options: function(e) {
                         return {
                             variables: {
@@ -1215,10 +1215,10 @@ webpackJsonp([80], {
                     location: m.PageviewLocation.SubsBroadcasterPage
                 })], t)
             }(a.Component),
-            x = Object(r.b)()(I);
+            x = Object(r.b)()(O);
         n.d(t, "SubsBroadcasterPage", function() {
             return x
         })
     }
 });
-//# sourceMappingURL=pages.subs.components.subs-broadcaster-page-8b0cbc56dbc608131b26d744b91c1820.js.map
+//# sourceMappingURL=pages.subs.components.subs-broadcaster-page-6042de413adcfe3308dba23b090a76bb.js.map

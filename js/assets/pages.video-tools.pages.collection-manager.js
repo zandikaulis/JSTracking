@@ -1,4 +1,4 @@
-webpackJsonp([78], {
+webpackJsonp([77], {
     "1myv": function(e, t) {
         var n = {
             kind: "Document",
@@ -15,7 +15,7 @@ webpackJsonp([78], {
                         kind: "Variable",
                         name: {
                             kind: "Name",
-                            value: "title"
+                            value: "input"
                         }
                     },
                     type: {
@@ -24,26 +24,7 @@ webpackJsonp([78], {
                             kind: "NamedType",
                             name: {
                                 kind: "Name",
-                                value: "String"
-                            }
-                        }
-                    }
-                }, {
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "creatorID"
-                        }
-                    },
-                    type: {
-                        kind: "NonNullType",
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "String"
+                                value: "CreateCollectionInput"
                             }
                         }
                     }
@@ -61,26 +42,13 @@ webpackJsonp([78], {
                             kind: "Argument",
                             name: {
                                 kind: "Name",
-                                value: "title"
+                                value: "input"
                             },
                             value: {
                                 kind: "Variable",
                                 name: {
                                     kind: "Name",
-                                    value: "title"
-                                }
-                            }
-                        }, {
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "ownerID"
-                            },
-                            value: {
-                                kind: "Variable",
-                                name: {
-                                    kind: "Name",
-                                    value: "creatorID"
+                                    value: "input"
                                 }
                             }
                         }],
@@ -105,6 +73,14 @@ webpackJsonp([78], {
                                         },
                                         arguments: [],
                                         directives: []
+                                    }, {
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "title"
+                                        },
+                                        arguments: [],
+                                        directives: []
                                     }]
                                 }
                             }]
@@ -114,11 +90,11 @@ webpackJsonp([78], {
             }],
             loc: {
                 start: 0,
-                end: 158
+                end: 139
             }
         };
         n.loc.source = {
-            body: "mutation CollectionManager_CreateCollection($title: String! $creatorID: String!) {\ncreateCollection(title: $title ownerID: $creatorID) {\ncollection {\nid\n}\n}\n}",
+            body: "mutation CollectionManager_CreateCollection($input: CreateCollectionInput!) {\ncreateCollection(input: $input) {\ncollection {\nid\ntitle\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -180,10 +156,10 @@ webpackJsonp([78], {
             u = n("vH/s"),
             m = n("CSlQ"),
             p = n("Z8qZ"),
-            g = n("PwTO"),
-            k = n("N8CH"),
+            h = n("PwTO"),
+            g = n("N8CH"),
             v = n("Odds"),
-            h = function(e) {
+            k = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -191,13 +167,13 @@ webpackJsonp([78], {
                     return o.createElement(p.a, null, o.createElement(v._2, null, o.createElement(v._8, {
                         height: 75,
                         width: 133
-                    })), o.createElement(k.a, null, o.createElement(v._35, null, o.createElement(v._8, {
+                    })), o.createElement(g.a, null, o.createElement(v._35, null, o.createElement(v._8, {
                         width: 600,
                         lineCount: 1
                     }), o.createElement(v._8, {
                         width: 200,
                         lineCount: 1
-                    }))), o.createElement(g.a, null, o.createElement(v._35, null, o.createElement(v._8, {
+                    }))), o.createElement(h.a, null, o.createElement(v._35, null, o.createElement(v._8, {
                         width: 40,
                         lineCount: 1
                     }))), o.createElement(v._2, {
@@ -217,14 +193,15 @@ webpackJsonp([78], {
             }(o.PureComponent),
             f = n("CIox"),
             C = n("7vx8"),
-            _ = n("1myv"),
+            _ = n("jXn2"),
+            E = n("1myv"),
             b = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         collectionTitle: "",
                         creationErrorMessage: ""
-                    }, t.onNameInputChangeHandler = function(e) {
+                    }, t.defaultCreationError = Object(a.d)("Creation attempt failed. Please try again.", "CollectionCreator"), t.onNameInputChangeHandler = function(e) {
                         t.setState({
                             collectionTitle: e.currentTarget.value,
                             creationErrorMessage: ""
@@ -234,23 +211,34 @@ webpackJsonp([78], {
                             creationErrorMessage: ""
                         }, function() {
                             return i.__awaiter(t, void 0, void 0, function() {
-                                var e, t, n;
+                                var e, t, n, o, r, l, c, d;
                                 return i.__generator(this, function(i) {
                                     switch (i.label) {
                                         case 0:
-                                            e = Object(s.a)({
-                                                ownerID: this.props.creatorID || "",
+                                            if (!this.props.context) return a.i.error(new Error("Collection creation attempt occurred without valid creation context"), "CreateCollection"), this.setState({
+                                                creationErrorMessage: this.defaultCreationError
+                                            }), [2];
+                                            e = this.props.context, t = e.ownerID, n = e.ownerLogin, o = e.sessionUserID, r = Object(s.a)({
+                                                ownerID: t,
                                                 title: this.state.collectionTitle
                                             }), i.label = 1;
                                         case 1:
-                                            return i.trys.push([1, 3, , 4]), [4, this.props.createCollection(e)];
+                                            return i.trys.push([1, 3, , 4]), [4, this.props.createCollection(r)];
                                         case 2:
-                                            return t = i.sent(), this.props.history.push("/" + this.props.creatorLogin + "/manager/collections/" + t.collection.id), [3, 4];
+                                            return l = i.sent().data, c = l.createCollection.collection, Object(_.b)({
+                                                channelID: t,
+                                                playlistID: c.id,
+                                                userID: o,
+                                                title: c.title
+                                            }), this.props.history.push("/" + n + "/manager/collections/" + c.id, {
+                                                content: u.PageviewContent.CollectionCreator,
+                                                medium: u.PageviewMedium.VideoManagerCollectionManager
+                                            }), [3, 4];
                                         case 3:
-                                            return n = i.sent(), a.i.error(n, "createCollection", {
-                                                mutationInput: e
+                                            return d = i.sent(), a.i.error(d, "CreateCollection", {
+                                                mutationInput: r
                                             }), this.setState({
-                                                creationErrorMessage: Object(a.d)("Creation attempt failed. Please try again.", "CollectionCreator")
+                                                creationErrorMessage: this.defaultCreationError
                                             }), [3, 4];
                                         case 4:
                                             return [2]
@@ -279,7 +267,7 @@ webpackJsonp([78], {
                             xl: 2
                         }
                     }, o.createElement(v.Y, {
-                        disabled: null === this.props.creatorID,
+                        disabled: !this.props.context,
                         maxLength: 100,
                         onChange: this.onNameInputChangeHandler,
                         placeholder: Object(a.d)("Collection name", "CollectionCreator"),
@@ -287,19 +275,24 @@ webpackJsonp([78], {
                     }), t), o.createElement(v.J, {
                         cols: 3
                     }, o.createElement(v.u, {
-                        disabled: null === this.props.creatorID || "" === this.state.collectionTitle,
+                        disabled: !this.props.context || "" === this.state.collectionTitle,
                         onClick: this.onCreateButtonClickHandler
                     }, Object(a.d)("Create Collection", "CollectionCreator")))))
                 }, t
             }(o.Component),
-            y = Object(r.compose)(Object(C.a)(_, {
+            y = Object(r.compose)(Object(C.a)(E, {
                 name: "createCollection"
             }))(Object(f.e)(b)),
-            E = n("rvrg"),
+            S = n("rvrg"),
             N = n("I9kX"),
-            S = function(e) {
+            O = function(e) {
                 function t() {
-                    return null !== e && e.apply(this, arguments) || this
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.onDeleteCollectionHandler = function() {
+                        t.props.data.refetch({
+                            creatorLogin: t.props.match.params.creatorLogin
+                        })
+                    }, t
                 }
                 return i.__extends(t, e), t.prototype.componentDidUpdate = function(e) {
                     e.data.loading && !this.props.data.loading && this.props.latencyTracking.reportInteractive()
@@ -318,8 +311,11 @@ webpackJsonp([78], {
                     }, o.createElement(v._35, {
                         type: v._40.H2
                     }, Object(a.d)("Collections", "CollectionManager"))), o.createElement(y, {
-                        creatorID: this.props.data.user ? this.props.data.user.id : null,
-                        creatorLogin: this.props.match.params.creatorLogin
+                        context: this.props.data.user && this.props.data.currentUser ? {
+                            ownerID: this.props.data.user.id,
+                            ownerLogin: this.props.match.params.creatorLogin,
+                            sessionUserID: this.props.data.currentUser.id
+                        } : void 0
                     }), o.createElement(v._2, {
                         fullWidth: !0,
                         padding: {
@@ -337,9 +333,9 @@ webpackJsonp([78], {
                             margin: {
                                 bottom: 1
                             }
-                        }, o.createElement(E.a, {
+                        }, o.createElement(S.a, {
                             collection: e.node,
-                            creatorLogin: t.props.match.params.creatorLogin
+                            onDelete: t.onDeleteCollectionHandler
                         }))
                     })
                 }, t.prototype.collectionCardPlaceholders = function() {
@@ -348,7 +344,7 @@ webpackJsonp([78], {
                         margin: {
                             bottom: 1
                         }
-                    }, o.createElement(h, null)));
+                    }, o.createElement(k, null)));
                     return e
                 }, t.prototype.noCollectionsCTA = function() {
                     return o.createElement("div", null)
@@ -356,7 +352,7 @@ webpackJsonp([78], {
                     return o.createElement("div", null)
                 }, t
             }(o.Component),
-            D = Object(r.compose)(Object(r.graphql)(N, {
+            M = Object(r.compose)(Object(r.graphql)(N, {
                 options: function(e) {
                     return {
                         variables: {
@@ -403,16 +399,16 @@ webpackJsonp([78], {
                 skip: function(e) {
                     return e.data.loading
                 }
-            }))(S),
-            O = n("L2R7"),
-            M = function(e) {
+            }))(O),
+            D = n("L2R7"),
+            w = function(e) {
                 return window.location.replace("https://www.twitch.tv/" + encodeURIComponent(e.match.params.creatorLogin) + "/manager/collections"), null
             },
-            w = function(e) {
-                return Object(O.a)() ? o.createElement(D, i.__assign({}, e)) : o.createElement(M, i.__assign({}, e))
+            x = function(e) {
+                return Object(D.a)() ? o.createElement(M, i.__assign({}, e)) : o.createElement(w, i.__assign({}, e))
             };
         n.d(t, "CollectionManagerPage", function() {
-            return w
+            return x
         })
     },
     I9kX: function(e, t) {
@@ -608,6 +604,34 @@ webpackJsonp([78], {
                                                         kind: "Field",
                                                         name: {
                                                             kind: "Name",
+                                                            value: "owner"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: {
+                                                            kind: "SelectionSet",
+                                                            selections: [{
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "id"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }, {
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "login"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }]
+                                                        }
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
                                                             value: "lengthSeconds"
                                                         },
                                                         arguments: [],
@@ -692,16 +716,36 @@ webpackJsonp([78], {
                                 }
                             }]
                         }
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "currentUser"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: []
+                            }]
+                        }
                     }]
                 }
             }],
             loc: {
                 start: 0,
-                end: 343
+                end: 381
             }
         };
         n.loc.source = {
-            body: "query CollectionManager_CreatorCollections($creatorLogin: String! $after: Cursor) {\nuser(login: $creatorLogin) {\nid\ncollections(first: 15 after: $after options: { includeEmpty: true }) {\nedges {\ncursor\nnode {\nid\nitems {\ntotalCount\n}\nlengthSeconds\nthumbnailURL(width: 160 height: 90)\ntitle\nupdatedAt\nviewCount\n}\n}\npageInfo {\nhasNextPage\n}\n}\n}\n}",
+            body: "query CollectionManager_CreatorCollections($creatorLogin: String! $after: Cursor) {\nuser(login: $creatorLogin) {\nid\ncollections(first: 15 after: $after options: { includeEmpty: true }) {\nedges {\ncursor\nnode {\nid\nitems {\ntotalCount\n}\nowner {\nid\nlogin\n}\nlengthSeconds\nthumbnailURL(width: 160 height: 90)\ntitle\nupdatedAt\nviewCount\n}\n}\npageInfo {\nhasNextPage\n}\n}\n}\ncurrentUser {\nid\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -798,195 +842,154 @@ webpackJsonp([78], {
             r = n("GiK3"),
             a = n("3zLD"),
             l = n("RH2O"),
-            c = n("2KeS"),
-            s = n("6sO2"),
-            d = n("7vx8"),
+            c = n("6sO2"),
+            s = n("7vx8"),
+            d = n("oIkB"),
             u = n("V5M+"),
             m = n("+8VM"),
             p = n("rvrg"),
-            g = n("Odds");
+            h = n("Odds");
         ! function(e) {
             e[e.CancelButton = 0] = "CancelButton", e[e.ConfirmButton = 1] = "ConfirmButton", e[e.ErrorAlert = 2] = "ErrorAlert"
         }(i || (i = {}));
-        var k = function(e) {
+        var g = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return o.__extends(t, e), t.prototype.render = function() {
                     var e = this.props.collection,
                         t = null;
-                    return this.props.error && (t = r.createElement(g.e, {
-                        delay: g.f.Short,
-                        type: g.i.BounceIn,
+                    return this.props.error && (t = r.createElement(h.e, {
+                        delay: h.f.Short,
+                        type: h.i.BounceIn,
                         enabled: !0
-                    }, r.createElement(g._25, {
+                    }, r.createElement(h._25, {
                         border: !0,
                         margin: {
                             bottom: 1
                         },
                         padding: 1,
                         fullWidth: !0
-                    }, r.createElement(g._35, {
+                    }, r.createElement(h._35, {
                         bold: !0,
-                        color: g.I.Error,
+                        color: h.I.Error,
                         "data-test-selector": i.ErrorAlert
-                    }, this.props.error)))), r.createElement(g.e, {
-                        type: g.i.FadeIn,
-                        delay: g.f.Medium,
-                        duration: g.g.Medium,
+                    }, this.props.error)))), r.createElement(h.e, {
+                        type: h.i.FadeIn,
+                        delay: h.f.Medium,
+                        duration: h.g.Medium,
                         enabled: !0
-                    }, r.createElement(g._25, {
-                        background: g.m.Base,
+                    }, r.createElement(h._25, {
+                        background: h.m.Base,
                         padding: {
                             x: 3,
                             top: 2,
                             bottom: 3
                         }
-                    }, r.createElement(g.W, {
+                    }, r.createElement(h.W, {
                         padding: {
                             bottom: 1
                         }
-                    }, r.createElement(g._35, {
-                        fontSize: g.R.Size3
-                    }, Object(s.d)("Delete Collection", "DeleteCollectionModal"))), r.createElement(g._35, {
-                        fontSize: g.R.Size6
-                    }, Object(s.d)("Are you sure you want to delete this collection?", "DeleteCollectionModal")), r.createElement(g._35, {
-                        fontSize: g.R.Size6
-                    }, Object(s.d)("This action cannot be undone. ", "DeleteCollectionModal")), r.createElement(g._2, {
+                    }, r.createElement(h._35, {
+                        fontSize: h.R.Size3
+                    }, Object(c.d)("Delete Collection", "DeleteCollectionModal"))), r.createElement(h._35, {
+                        fontSize: h.R.Size6
+                    }, Object(c.d)("Are you sure you want to delete this collection?", "DeleteCollectionModal")), r.createElement(h._35, {
+                        fontSize: h.R.Size6
+                    }, Object(c.d)("This action cannot be undone. ", "DeleteCollectionModal")), r.createElement(h._2, {
                         padding: {
                             y: 2
                         }
                     }, r.createElement(p.a, {
                         collection: e,
-                        creatorLogin: this.props.creatorLogin,
                         hideOptionsMenu: !0
-                    })), t, r.createElement(g._2, {
-                        display: g.N.Flex,
-                        flexDirection: g.P.Row,
-                        justifyContent: g._1.Center
-                    }, r.createElement(g._2, {
+                    })), t, r.createElement(h._2, {
+                        display: h.N.Flex,
+                        flexDirection: h.P.Row,
+                        justifyContent: h._1.Center
+                    }, r.createElement(h._2, {
                         margin: {
                             x: .5
                         }
-                    }, r.createElement(g.u, {
+                    }, r.createElement(h.u, {
                         "data-test-selector": i.CancelButton,
                         onClick: this.props.onCancel,
-                        type: g.z.Hollow
-                    }, Object(s.d)("Cancel", "DeleteCollectionModal"))), r.createElement(g._2, {
+                        type: h.z.Hollow
+                    }, Object(c.d)("Cancel", "DeleteCollectionModal"))), r.createElement(h._2, {
                         margin: {
                             x: .5
                         }
-                    }, r.createElement(g.u, {
+                    }, r.createElement(h.u, {
                         "data-test-selector": i.ConfirmButton,
-                        onClick: this.props.onDelete,
-                        type: g.z.Alert
-                    }, Object(s.d)("Delete", "DeleteCollectionModal")))), r.createElement(m.a, null)))
+                        onClick: this.props.onDeleteRequest,
+                        type: h.z.Alert
+                    }, Object(c.d)("Delete", "DeleteCollectionModal")))), r.createElement(m.a, {
+                        closeOnBackdropClick: !0
+                    })))
                 }, t
             }(r.Component),
-            v = n("kL3X"),
-            h = n("e6eF");
+            v = n("e6eF");
         n.d(t, "a", function() {
-            return b
+            return C
         });
-        var f = this,
-            C = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {}, t.onCancelHandler = function() {
-                        t.props.onClose()
-                    }, t.onDeleteHandler = function() {
-                        t.setState({
-                            deletionError: void 0
-                        }, function() {
-                            return o.__awaiter(t, void 0, void 0, function() {
-                                return o.__generator(this, function(e) {
-                                    switch (e.label) {
-                                        case 0:
-                                            return e.trys.push([0, 2, , 3]), [4, this.props.onDeleteRequest({
-                                                collectionID: this.props.collection.id,
-                                                creatorID: this.props.creatorID
-                                            })];
-                                        case 1:
-                                            return e.sent(), [3, 3];
-                                        case 2:
-                                            return e.sent(), this.setState({
-                                                deletionError: Object(s.d)("Unable to delete this collection, try again.", "DeleteCollectionModal")
-                                            }), [2];
-                                        case 3:
-                                            return this.props.onClose(), [2]
-                                    }
-                                })
+        var k = function(e) {
+            function t() {
+                var t = null !== e && e.apply(this, arguments) || this;
+                return t.state = {}, t.defaultUserError = Object(c.d)("Unable to delete this collection, try again later.", "DeleteCollectionModal"), t.onCancelHandler = function() {
+                    t.props.onClose()
+                }, t.onDeleteHandler = function() {
+                    t.setState({
+                        deletionError: void 0
+                    }, function() {
+                        return o.__awaiter(t, void 0, void 0, function() {
+                            var e;
+                            return o.__generator(this, function(t) {
+                                switch (t.label) {
+                                    case 0:
+                                        if (!this.props.collection.owner) return this.setState({
+                                            deletionError: this.defaultUserError
+                                        }), [2];
+                                        t.label = 1;
+                                    case 1:
+                                        return t.trys.push([1, 3, , 4]), [4, this.props.onDeleteRequest(Object(d.a)({
+                                            collectionID: this.props.collection.id
+                                        }))];
+                                    case 2:
+                                        return t.sent(), [3, 4];
+                                    case 3:
+                                        return e = t.sent(), c.i.error(e, "DeleteCollectionModal"), this.setState({
+                                            deletionError: this.defaultUserError
+                                        }), [2];
+                                    case 4:
+                                        return this.props.onSuccess(), [2]
+                                }
                             })
                         })
-                    }, t
-                }
-                return o.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(k, {
-                        collection: this.props.collection,
-                        creatorLogin: this.props.creatorLogin,
-                        error: this.state.deletionError,
-                        onCancel: this.onCancelHandler,
-                        onDelete: this.onDeleteHandler
                     })
                 }, t
-            }(r.Component);
-        var _ = Object(a.compose)(Object(d.a)(h, {
-                name: "onDeleteRequest",
-                props: function(e) {
-                    return {
-                        onDeleteRequest: function(t) {
-                            return o.__awaiter(f, void 0, void 0, function() {
-                                var n;
-                                return o.__generator(this, function(i) {
-                                    if (!e.mutate) throw n = new Error("No mutation function exists, cannot delete collection"), s.i.error(n, "DeleteCollectionModal"), n;
-                                    return [2, function(e, t) {
-                                        return o.__awaiter(this, void 0, void 0, function() {
-                                            var n;
-                                            return o.__generator(this, function(i) {
-                                                switch (i.label) {
-                                                    case 0:
-                                                        return i.trys.push([0, 2, , 3]), [4, e({
-                                                            variables: {
-                                                                collectionID: t.collectionID
-                                                            },
-                                                            update: function(e) {
-                                                                var n = {
-                                                                        creatorID: t.creatorID
-                                                                    },
-                                                                    i = e.readQuery({
-                                                                        query: v,
-                                                                        variables: n
-                                                                    });
-                                                                i && i.user && i.user.collections && (i.user.collections.edges = i.user.collections.edges.filter(function(e) {
-                                                                    return e.node.id !== t.collectionID
-                                                                }), e.writeQuery({
-                                                                    query: v,
-                                                                    variables: n,
-                                                                    data: i
-                                                                }))
-                                                            }
-                                                        })];
-                                                    case 1:
-                                                        return i.sent(), [3, 3];
-                                                    case 2:
-                                                        throw n = i.sent(), s.i.error(n, "DeleteCollectionModal"), n;
-                                                    case 3:
-                                                        return [2]
-                                                }
-                                            })
-                                        })
-                                    }(e.mutate, t)]
-                                })
-                            })
-                        }
+            }
+            return o.__extends(t, e), t.prototype.render = function() {
+                return r.createElement(g, {
+                    collection: this.props.collection,
+                    error: this.state.deletionError,
+                    onCancel: this.onCancelHandler,
+                    onDeleteRequest: this.onDeleteHandler
+                })
+            }, t
+        }(r.Component);
+        var f = Object(a.compose)(Object(s.a)(v, {
+                name: "onDeleteRequest"
+            }))(k),
+            C = Object(l.b)(null, function(e, t) {
+                return {
+                    onClose: function() {
+                        e(Object(u.c)())
+                    },
+                    onSuccess: function() {
+                        e(Object(u.c)()), t.onSuccess && t.onSuccess()
                     }
                 }
-            }))(C),
-            b = Object(l.b)(null, function(e) {
-                return Object(c.b)({
-                    onClose: u.c
-                }, e)
-            })(_)
+            })(f)
     },
     N8CH: function(e, t, n) {
         "use strict";
@@ -1069,7 +1072,7 @@ webpackJsonp([78], {
                         kind: "Variable",
                         name: {
                             kind: "Name",
-                            value: "collectionID"
+                            value: "input"
                         }
                     },
                     type: {
@@ -1078,7 +1081,7 @@ webpackJsonp([78], {
                             kind: "NamedType",
                             name: {
                                 kind: "Name",
-                                value: "String"
+                                value: "DeleteCollectionInput"
                             }
                         }
                     }
@@ -1099,21 +1102,11 @@ webpackJsonp([78], {
                                 value: "input"
                             },
                             value: {
-                                kind: "ObjectValue",
-                                fields: [{
-                                    kind: "ObjectField",
-                                    name: {
-                                        kind: "Name",
-                                        value: "collectionID"
-                                    },
-                                    value: {
-                                        kind: "Variable",
-                                        name: {
-                                            kind: "Name",
-                                            value: "collectionID"
-                                        }
-                                    }
-                                }]
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "input"
+                                }
                             }
                         }],
                         directives: [],
@@ -1146,131 +1139,11 @@ webpackJsonp([78], {
             }],
             loc: {
                 start: 0,
-                end: 150
+                end: 133
             }
         };
         n.loc.source = {
-            body: "mutation CollectionManager_DeleteCollection($collectionID: String!) {\ndeleteCollection(input: { collectionID: $collectionID }) {\ncollection {\nid\n}\n}\n}",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
-    kL3X: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "CollectionManager_CreatorCollectionsForDelete"
-                },
-                variableDefinitions: [{
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "creatorID"
-                        }
-                    },
-                    type: {
-                        kind: "NonNullType",
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "String"
-                            }
-                        }
-                    }
-                }],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "user"
-                        },
-                        arguments: [{
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "id"
-                            },
-                            value: {
-                                kind: "Variable",
-                                name: {
-                                    kind: "Name",
-                                    value: "creatorID"
-                                }
-                            }
-                        }],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "collections"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "edges"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "node"
-                                                },
-                                                arguments: [],
-                                                directives: [],
-                                                selectionSet: {
-                                                    kind: "SelectionSet",
-                                                    selections: [{
-                                                        kind: "Field",
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "id"
-                                                        },
-                                                        arguments: [],
-                                                        directives: []
-                                                    }]
-                                                }
-                                            }]
-                                        }
-                                    }]
-                                }
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 139
-            }
-        };
-        n.loc.source = {
-            body: "query CollectionManager_CreatorCollectionsForDelete($creatorID: String!) {\nuser(id: $creatorID) {\ncollections {\nedges {\nnode {\nid\n}\n}\n}\n}\n}",
+            body: "mutation CollectionManager_DeleteCollection($input: DeleteCollectionInput!) {\ndeleteCollection(input: $input) {\ncollection {\nid\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -1292,23 +1165,20 @@ webpackJsonp([78], {
             u = n("CSlQ"),
             m = n("Z8qZ"),
             p = n("KRtN"),
-            g = n("4o7v"),
-            k = n("PwTO"),
+            h = n("4o7v"),
+            g = n("PwTO"),
             v = n("N8CH"),
-            h = n("Odds"),
+            k = n("Odds"),
             f = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onDeleteOptionClickHandler = function() {
-                        t.props.onDeleteOptionClick(t.props.collection, t.props.creatorLogin)
+                        t.props.onDeleteOptionClick(t.props.collection)
                     }, t
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
-                    var e = this.props.collection,
-                        t = null;
-                    return this.props.hideOptionsMenu || (t = a.createElement(p.a, {
-                        options: this.collectionMenuOptions()
-                    })), a.createElement(m.a, null, a.createElement(h._2, {
+                    var e = this.props.collection;
+                    return a.createElement(m.a, null, a.createElement(k._2, {
                         flexShrink: 0
                     }, a.createElement(d.a, {
                         alt: e.title,
@@ -1317,21 +1187,22 @@ webpackJsonp([78], {
                         }],
                         src: e.thumbnailURL,
                         videoCount: e.items.totalCount
-                    })), a.createElement(v.a, null, a.createElement(h._35, {
+                    })), a.createElement(v.a, null, a.createElement(k._35, {
                         bold: !0,
-                        type: h._40.H4,
-                        color: h.I.Alt
-                    }, e.title), a.createElement(h._43, {
-                        direction: h._45.Bottom,
+                        type: k._40.H4,
+                        color: k.I.Alt
+                    }, e.title), a.createElement(k._43, {
+                        direction: k._45.Bottom,
                         label: Object(l.d)("Last Updated", "CollectionManagerCard")
-                    }, a.createElement(h._35, {
-                        color: h.I.Alt2
-                    }, Object(l.c)(new Date(e.updatedAt), "long")))), a.createElement(k.a, null, this.collectionStats(e)), t)
-                }, t.prototype.collectionMenuOptions = function() {
-                    return [{
-                        asset: h._16.Edit,
+                    }, a.createElement(k._35, {
+                        color: k.I.Alt2
+                    }, Object(l.c)(new Date(e.updatedAt), "long")))), a.createElement(g.a, null, this.collectionStats(e)), this.renderCardMenu())
+                }, t.prototype.renderCardMenu = function() {
+                    if (this.props.hideOptionsMenu || !this.props.collection.owner) return null;
+                    var e = [{
+                        asset: k._16.Edit,
                         linkTo: {
-                            pathname: "/" + this.props.creatorLogin + "/manager/collections/" + this.props.collection.id,
+                            pathname: "/" + this.props.collection.owner.login + "/manager/collections/" + this.props.collection.id,
                             state: {
                                 content: s.PageviewContent.CollectionCard,
                                 medium: s.PageviewMedium.VideoManagerCollectionManager
@@ -1339,21 +1210,24 @@ webpackJsonp([78], {
                         },
                         title: Object(l.d)("Edit", "CollectionManagerCard")
                     }, {
-                        asset: h._16.Trash,
+                        asset: k._16.Trash,
                         onClick: this.onDeleteOptionClickHandler,
                         title: Object(l.d)("Delete", "CollectionManagerCard")
-                    }]
+                    }];
+                    return a.createElement(p.a, {
+                        options: e
+                    })
                 }, t.prototype.collectionStats = function(e) {
                     return [{
                         value: Object(c.a)(e.lengthSeconds),
-                        icon: h._16.GlyphLength,
+                        icon: k._16.GlyphLength,
                         label: Object(l.d)("Collection length", "CollectionManagerCard")
                     }, {
                         value: "" + e.viewCount,
-                        icon: h._16.GlyphViews,
+                        icon: k._16.GlyphViews,
                         label: Object(l.d)("Views", "CollectionManagerCard")
                     }].map(function(e, t) {
-                        return a.createElement(g.a, r.__assign({
+                        return a.createElement(h.a, r.__assign({
                             key: t
                         }, e))
                     })
@@ -1364,18 +1238,18 @@ webpackJsonp([78], {
             })(f),
             _ = n("M0wY");
         n.d(t, "a", function() {
-            return b
+            return E
         });
-        var b = Object(i.b)(null, function(e) {
+        var E = Object(i.b)(null, function(e, t) {
             return {
-                onDeleteOptionClick: function(t, n) {
+                onDeleteOptionClick: function(n) {
                     e(Object(o.d)(_.a, {
-                        collection: t,
-                        creatorLogin: n
+                        collection: n,
+                        onSuccess: t.onDelete
                     }))
                 }
             }
         })(C)
     }
 });
-//# sourceMappingURL=pages.video-tools.pages.collection-manager-8080e2f4121ce597dc589a684b392474.js.map
+//# sourceMappingURL=pages.video-tools.pages.collection-manager-e7be5947d826ec081cca5ee53baaf814.js.map

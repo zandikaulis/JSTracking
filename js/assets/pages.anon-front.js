@@ -2358,10 +2358,10 @@ webpackJsonp([51], {
                 }), Object(c.d)("TopChannels")], t)
             }(i.Component)),
             L = (n("9zTP"), m.a.wrap(function() {
-                return n.e(76).then(n.bind(null, "yEZg"))
+                return n.e(74).then(n.bind(null, "yEZg"))
             }, "FeaturedGenres")),
             P = m.a.wrap(function() {
-                return n.e(74).then(n.bind(null, "2hMh"))
+                return n.e(73).then(n.bind(null, "2hMh"))
             }, "TopCreative"),
             D = function(e) {
                 function t() {
@@ -3587,7 +3587,7 @@ webpackJsonp([51], {
                     return r.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(89).then(n.bind(null, "tk3B"))];
+                                return [4, n.e(88).then(n.bind(null, "tk3B"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -3599,7 +3599,7 @@ webpackJsonp([51], {
                     return r.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(88).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(87).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -3611,7 +3611,7 @@ webpackJsonp([51], {
                     return r.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(87).then(n.bind(null, "Dan5"))];
+                                return [4, n.e(86).then(n.bind(null, "Dan5"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -3623,7 +3623,7 @@ webpackJsonp([51], {
                     return r.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(86).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(85).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -3802,60 +3802,80 @@ webpackJsonp([51], {
         "use strict";
         var r = n("RH2O"),
             a = n("2KeS"),
-            i = n("FuaS");
+            i = n("TToO"),
+            o = n("FuaS"),
+            s = n("U9pL");
 
-        function o(e) {
+        function l(e, t) {
+            var n = this;
             return function() {
-                Object(i.c)(e), window.location.reload(!0)
+                return i.__awaiter(n, void 0, void 0, function() {
+                    return i.__generator(this, function(n) {
+                        switch (n.label) {
+                            case 0:
+                                return t ? [4, Object(s.c)({
+                                    userID: t,
+                                    preferredLanguageTag: Object(s.b)(e)
+                                })] : [3, 2];
+                            case 1:
+                                n.sent(), n.label = 2;
+                            case 2:
+                                return Object(o.c)(e), window.location.reload(!0), [2]
+                        }
+                    })
+                })
             }
         }
-        var s = n("TToO"),
-            l = n("GiK3"),
-            c = n("6sO2"),
-            d = n("Odds"),
-            u = (n("2Nqs"), function(e) {
+        var c = n("GiK3"),
+            d = n("6sO2"),
+            u = n("Odds"),
+            m = (n("2Nqs"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderLink = function(e) {
-                        return l.createElement(d._0, {
+                        return c.createElement(u._0, {
                             key: e.languageCode,
-                            onClick: function() {
-                                return t.props.changeLanguage(e.languageCode)
-                            },
-                            "data-target": "language-selector-link"
-                        }, l.createElement(d._2, {
+                            onClick: t.handleLanguageClick,
+                            "data-target": "language-selector-link",
+                            "data-language": e.languageCode
+                        }, c.createElement(u._2, {
                             padding: {
                                 y: .5,
                                 x: 1
                             },
                             "data-a-target": "language-" + e.languageCode
                         }, e.name))
+                    }, t.handleLanguageClick = function(e) {
+                        var n = e.currentTarget.getAttribute("data-language");
+                        n && t.props.changeLanguage(n, t.props.currentUserID)
                     }, t
                 }
-                return s.__extends(t, e), t.prototype.render = function() {
-                    var e = Math.floor(c.a.locales.length / 2);
-                    return l.createElement(d._2, {
+                return i.__extends(t, e), t.prototype.render = function() {
+                    var e = Math.floor(d.a.locales.length / 2);
+                    return c.createElement(u._2, {
                         className: "language-selector",
-                        display: d.N.Flex,
+                        display: u.N.Flex,
                         padding: {
                             y: 1
                         }
-                    }, l.createElement("div", {
+                    }, c.createElement("div", {
                         className: "language-selector__list language-selector__list--border-right"
-                    }, c.a.locales.slice(0, e).map(this.renderLink)), l.createElement("div", {
+                    }, d.a.locales.slice(0, e).map(this.renderLink)), c.createElement("div", {
                         className: "language-selector__list"
-                    }, c.a.locales.slice(e).map(this.renderLink)))
+                    }, d.a.locales.slice(e).map(this.renderLink)))
                 }, t
-            }(l.Component));
-        var m = Object(r.b)(function() {
-            return {}
+            }(c.Component));
+        var p = Object(r.b)(function(e) {
+            return {
+                currentUserID: e.session.user && e.session.user.id || null
+            }
         }, function(e) {
             return Object(a.b)({
-                changeLanguage: o
+                changeLanguage: l
             }, e)
-        })(u);
+        })(m);
         n.d(t, "a", function() {
-            return m
+            return p
         })
     },
     R0Kh: function(e, t, n) {
@@ -6030,4 +6050,4 @@ webpackJsonp([51], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.anon-front-53fb3e2cef02fec05e6010702a00e5a7.js.map
+//# sourceMappingURL=pages.anon-front-1605e102cad2a59af6893f3884c29082.js.map
