@@ -1837,39 +1837,40 @@ webpackJsonp([51], {
         var r, a = n("TToO"),
             i = n("GiK3"),
             o = n("6sO2"),
-            s = n("Qk3C"),
-            l = n("+Znq"),
-            c = n("CSlQ"),
-            d = n("Odds"),
-            u = (n("//Ty"), Object(c.d)("Footer", {
+            s = n("o5l+"),
+            l = n("Qk3C"),
+            c = n("+Znq"),
+            d = n("CSlQ"),
+            u = n("Odds"),
+            m = (n("//Ty"), Object(d.d)("Footer", {
                 autoReportInteractive: !0
             })(function() {
-                return i.createElement(d._2, {
+                return i.createElement(u._2, {
                     className: "footer",
                     padding: {
                         y: 3
                     }
-                }, i.createElement(d._2, {
+                }, i.createElement(u._2, {
                     className: "footer__link-container",
-                    display: d.N.Flex,
-                    alignItems: d.c.Center,
-                    justifyContent: d._1.Center,
+                    display: u.N.Flex,
+                    alignItems: u.c.Center,
+                    justifyContent: u._1.Center,
                     margin: "auto",
                     padding: {
                         y: 3
                     }
-                }, i.createElement(d._2, {
+                }, i.createElement(u._2, {
                     className: "footer__glitch",
-                    display: d.N.Flex,
-                    alignItems: d.c.Center,
+                    display: u.N.Flex,
+                    alignItems: u.c.Center,
                     margin: {
                         right: 2
                     }
-                }, i.createElement(d._15, {
-                    asset: d._16.LogoGlitch,
+                }, i.createElement(u._15, {
+                    asset: u._16.LogoGlitch,
                     width: 30,
                     height: 30
-                })), i.createElement(d._2, {
+                })), i.createElement(u._2, {
                     margin: {
                         right: 1
                     }
@@ -1878,7 +1879,7 @@ webpackJsonp([51], {
                     className: "footer__link",
                     href: "https://www.twitch.tv/p/about/",
                     "data-a-target": "frontpage-footer-about-link"
-                }, Object(o.d)("About", "Footer"))), i.createElement(d._2, {
+                }, Object(o.d)("About", "Footer"))), i.createElement(u._2, {
                     margin: {
                         right: 1
                     }
@@ -1887,7 +1888,7 @@ webpackJsonp([51], {
                     className: "footer__link",
                     href: "https://blog.twitch.tv/",
                     "data-a-target": "frontpage-footer-blog-link"
-                }, Object(o.d)("Blog", "Footer"))), i.createElement(d._2, {
+                }, Object(o.d)("Blog", "Footer"))), i.createElement(u._2, {
                     margin: {
                         right: 1
                     }
@@ -1896,7 +1897,7 @@ webpackJsonp([51], {
                     className: "footer__link",
                     href: "https://www.twitch.tv/products/turbo/ticket?ref=footer",
                     "data-a-target": "frontpage-footer-turbo-link"
-                }, Object(o.d)("Turbo", "Footer"))), i.createElement(d._2, {
+                }, Object(o.d)("Turbo", "Footer"))), i.createElement(u._2, {
                     margin: {
                         right: 1
                     }
@@ -1905,7 +1906,7 @@ webpackJsonp([51], {
                     className: "footer__link",
                     href: "https://music.twitch.tv/",
                     "data-a-target": "frontpage-footer-music-link"
-                }, Object(o.d)("Music", "Footer"))), i.createElement(d._2, {
+                }, Object(o.d)("Music", "Footer"))), i.createElement(u._2, {
                     margin: {
                         right: 1
                     }
@@ -1914,7 +1915,7 @@ webpackJsonp([51], {
                     className: "footer__link",
                     href: "http://twitchadvertising.tv/",
                     "data-a-target": "frontpage-footer-advertising-link"
-                }, Object(o.d)("Advertise", "Footer"))), i.createElement(d._2, {
+                }, Object(o.d)("Advertise", "Footer"))), i.createElement(u._2, {
                     margin: {
                         right: 1
                     }
@@ -1923,7 +1924,7 @@ webpackJsonp([51], {
                     className: "footer__link",
                     href: "https://dev.twitch.tv/",
                     "data-a-target": "frontpage-footer-developers-link"
-                }, Object(o.d)("Developers", "Footer"))), i.createElement(d._2, {
+                }, Object(o.d)("Developers", "Footer"))), i.createElement(u._2, {
                     margin: {
                         right: 1
                     }
@@ -1932,7 +1933,7 @@ webpackJsonp([51], {
                     className: "footer__link",
                     href: "https://www.twitch.tv/p/partners/",
                     "data-a-target": "frontpage-footer-partners-link"
-                }, Object(o.d)("Partners", "Footer"))), i.createElement(d._2, {
+                }, Object(o.d)("Partners", "Footer"))), i.createElement(u._2, {
                     margin: {
                         right: 1
                     }
@@ -1941,7 +1942,7 @@ webpackJsonp([51], {
                     className: "footer__link",
                     href: "https://www.twitch.tv/p/platforms/",
                     "data-a-target": "frontpage-footer-mobile-link"
-                }, Object(o.d)("Mobile", "Footer"))), i.createElement(d._2, {
+                }, Object(o.d)("Mobile", "Footer"))), i.createElement(u._2, {
                     margin: {
                         right: 1
                     }
@@ -1950,7 +1951,7 @@ webpackJsonp([51], {
                     className: "footer__link",
                     href: "https://www.twitch.tv/p/jobs/",
                     "data-a-target": "frontpage-footer-jobs-link"
-                }, Object(o.d)("Jobs", "Footer"))), i.createElement(d._2, {
+                }, Object(o.d)("Jobs", "Footer"))), i.createElement(u._2, {
                     margin: {
                         right: 1
                     }
@@ -1959,7 +1960,7 @@ webpackJsonp([51], {
                     className: "footer__link",
                     href: "https://help.twitch.tv/",
                     "data-a-target": "frontpage-footer-help-link"
-                }, Object(o.d)("Help", "Footer"))), i.createElement(d._2, {
+                }, Object(o.d)("Help", "Footer"))), i.createElement(u._2, {
                     margin: {
                         right: 1
                     }
@@ -1968,7 +1969,7 @@ webpackJsonp([51], {
                     className: "footer__link",
                     href: "https://www.twitch.tv/p/legal/terms-of-service/",
                     "data-a-target": "frontpage-footer-terms-link"
-                }, Object(o.d)("Terms", "Footer"))), i.createElement(d._2, {
+                }, Object(o.d)("Terms", "Footer"))), i.createElement(u._2, {
                     margin: {
                         right: 1
                     }
@@ -1977,7 +1978,7 @@ webpackJsonp([51], {
                     className: "footer__link",
                     href: "https://www.twitch.tv/p/legal/privacy-policy/",
                     "data-a-target": "frontpage-footer-privacy-link"
-                }, Object(o.d)("Privacy Policy", "Footer"))), i.createElement(d._2, {
+                }, Object(o.d)("Privacy Policy", "Footer"))), i.createElement(u._2, {
                     margin: {
                         right: 1
                     }
@@ -1986,7 +1987,7 @@ webpackJsonp([51], {
                     className: "footer__link",
                     href: "https://www.twitch.tv/p/legal/ad-choices/",
                     "data-a-target": "frontpage-footer-choices-link"
-                }, Object(o.d)("Ad Choices", "Footer"))), i.createElement(d._2, {
+                }, Object(o.d)("Ad Choices", "Footer"))), i.createElement(u._2, {
                     margin: {
                         right: 1
                     }
@@ -1995,75 +1996,75 @@ webpackJsonp([51], {
                     className: "footer__link",
                     href: "https://www.twitch.tv/p/legal/cookie-policy/",
                     "data-a-target": "frontpage-footer-cookie-link"
-                }, Object(o.d)("Cookie Policy", "Footer"))), i.createElement(d._2, {
+                }, Object(o.d)("Cookie Policy", "Footer"))), i.createElement(u._2, {
                     margin: {
                         left: 5
                     }
-                }, i.createElement(l.a, null, i.createElement("span", {
+                }, i.createElement(c.a, null, i.createElement("span", {
                     className: "footer__link",
                     "data-a-target": "frontpage-footer-language-link"
-                }, Object(o.d)("Language", "Footer")), i.createElement(d.p, {
+                }, Object(o.d)("Language", "Footer")), i.createElement(u.p, {
                     "data-a-target": "frontpage-footer-language-options",
-                    size: d.r.Medium,
-                    direction: d.q.TopRight
-                }, i.createElement(s.a, null))))))
+                    size: u.r.Medium,
+                    direction: u.q.TopRight
+                }, i.createElement(l.a, null))))))
             })),
-            m = n("bZTi"),
-            p = n("j7/Y"),
-            f = n("w9tK"),
-            g = n("Us7i"),
-            h = n("vH/s"),
-            v = n("/+to"),
-            _ = n("QG7y"),
-            k = n("86JD"),
-            y = n("DBTH"),
-            b = n("2aoH"),
-            E = n("8PKe"),
-            N = n("F8kA"),
-            S = n("7vx8"),
-            O = n("NY9D"),
-            C = n("dXGo"),
-            w = (n("APTF"), function(e) {
+            p = n("bZTi"),
+            f = n("j7/Y"),
+            g = n("w9tK"),
+            h = n("Us7i"),
+            v = n("vH/s"),
+            _ = n("/+to"),
+            k = n("QG7y"),
+            y = n("86JD"),
+            b = n("DBTH"),
+            E = n("2aoH"),
+            N = n("8PKe"),
+            S = n("F8kA"),
+            O = n("7vx8"),
+            C = n("NY9D"),
+            w = n("dXGo"),
+            x = (n("APTF"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         adDisplayed: !1
                     }, t.getItems = function() {
                         if (t.props.data.loading || t.props.data.error) {
-                            for (var e = [], n = 0; n < 12; n++) e.push(i.createElement(d.J, {
+                            for (var e = [], n = 0; n < 12; n++) e.push(i.createElement(u.J, {
                                 cols: 2,
                                 key: "placeholder-" + n
-                            }, i.createElement(d._2, {
+                            }, i.createElement(u._2, {
                                 key: n,
                                 margin: {
                                     bottom: n < 6 ? 4 : 0
                                 }
-                            }, i.createElement(d._2, {
+                            }, i.createElement(u._2, {
                                 margin: {
                                     bottom: .5
                                 }
-                            }, i.createElement(d.j, {
-                                ratio: d.k.Aspect3x4
-                            }, i.createElement(d._8, null))), i.createElement(d._35, null, i.createElement(d._8, {
+                            }, i.createElement(u.j, {
+                                ratio: u.k.Aspect3x4
+                            }, i.createElement(u._8, null))), i.createElement(u._35, null, i.createElement(u._8, {
                                 width: 120
-                            })), i.createElement(d._35, {
-                                fontSize: d.R.Size7
-                            }, i.createElement(d._8, {
+                            })), i.createElement(u._35, {
+                                fontSize: u.R.Size7
+                            }, i.createElement(u._8, {
                                 width: 80
                             })))));
                             return e
                         }
                         var r = t.props.data.games.edges.slice(0, t.state.adDisplayed ? 10 : 12).map(function(e, t) {
                                 var n = e.node;
-                                return i.createElement(d.J, {
+                                return i.createElement(u.J, {
                                     cols: 2,
                                     key: "game-" + n.id
-                                }, i.createElement(d._2, {
+                                }, i.createElement(u._2, {
                                     margin: {
                                         bottom: t < 6 ? 4 : 0
                                     }
-                                }, i.createElement(d.t, {
-                                    linkTo: Object(O.c)(n.name),
+                                }, i.createElement(u.t, {
+                                    linkTo: Object(C.c)(n.name),
                                     title: n.name,
                                     alt: n.name + " cover image",
                                     src: n.boxArtURL,
@@ -2074,17 +2075,17 @@ webpackJsonp([51], {
                                     "data-a-id": "card-" + n.name.replace(/ /g, "")
                                 })))
                             }),
-                            a = i.createElement(d._2, {
-                                display: d.N.Flex,
+                            a = i.createElement(u._2, {
+                                display: u.N.Flex,
                                 flexGrow: 1,
-                                justifyContent: d._1.Center,
+                                justifyContent: u._1.Center,
                                 key: "ad"
-                            }, i.createElement(v.a, {
-                                adSize: _.c.anonFront.rect,
-                                adUnit: _.d.frontpage,
-                                slotID: _.b.anonFront.rect,
+                            }, i.createElement(_.a, {
+                                adSize: k.c.anonFront.rect,
+                                adUnit: k.d.frontpage,
+                                slotID: k.b.anonFront.rect,
                                 targeting: {
-                                    pagetype: _.a.frontpage
+                                    pagetype: k.a.frontpage
                                 },
                                 slotRendered: t.onSlotRendered,
                                 autoEnable: !1
@@ -2101,86 +2102,86 @@ webpackJsonp([51], {
                 }, t.prototype.componentDidUpdate = function() {
                     this.postRender()
                 }, t.prototype.render = function() {
-                    var e = i.createElement(d._2, {
-                            display: d.N.Flex,
-                            flexDirection: d.P.Row,
-                            alignItems: d.c.Baseline,
+                    var e = i.createElement(u._2, {
+                            display: u.N.Flex,
+                            flexDirection: u.P.Row,
+                            alignItems: u.c.Baseline,
                             margin: {
                                 bottom: 1
                             }
-                        }, i.createElement(d._35, {
-                            fontSize: d.R.Size2,
-                            color: d.I.Base
-                        }, Object(o.d)("Featured Games", "FeaturedGames")), i.createElement(d._2, {
+                        }, i.createElement(u._35, {
+                            fontSize: u.R.Size2,
+                            color: u.I.Base
+                        }, Object(o.d)("Featured Games", "FeaturedGames")), i.createElement(u._2, {
                             className: "anon-featured-games__subheader",
                             margin: {
                                 left: 2
                             }
-                        }, i.createElement(d._35, {
-                            fontSize: d.R.Size3,
-                            color: d.I.Alt2
+                        }, i.createElement(u._35, {
+                            fontSize: u.R.Size3,
+                            color: u.I.Alt2
                         }, Object(o.d)("Games people are watching now", "FeaturedGames")))),
-                        t = i.createElement(d._2, {
-                            display: d.N.Flex,
-                            justifyContent: d._1.End
-                        }, i.createElement(d.W, {
-                            display: d.N.Flex,
-                            alignItems: d.c.Center
-                        }, i.createElement(N.a, {
+                        t = i.createElement(u._2, {
+                            display: u.N.Flex,
+                            justifyContent: u._1.End
+                        }, i.createElement(u.W, {
+                            display: u.N.Flex,
+                            alignItems: u.c.Center
+                        }, i.createElement(S.a, {
                             to: "/directory",
                             "data-a-target": "see-all-live-games-link"
-                        }, i.createElement(d._35, {
-                            fontSize: d.R.Size4
-                        }, Object(o.d)("See all live games", "FeaturedGames")), i.createElement(d._25, {
-                            color: d.I.Link,
+                        }, i.createElement(u._35, {
+                            fontSize: u.R.Size4
+                        }, Object(o.d)("See all live games", "FeaturedGames")), i.createElement(u._25, {
+                            color: u.I.Link,
                             margin: {
                                 left: .5
                             },
-                            display: d.N.InlineFlex,
-                            alignItems: d.c.Center
-                        }, i.createElement(d._15, {
-                            asset: d._16.AngleRight,
+                            display: u.N.InlineFlex,
+                            alignItems: u.c.Center
+                        }, i.createElement(u._15, {
+                            asset: u._16.AngleRight,
                             width: 14,
                             height: 14
                         })))));
-                    return i.createElement(d._25, {
+                    return i.createElement(u._25, {
                         className: "anon-featured-games",
-                        background: d.m.Base,
+                        background: u.m.Base,
                         padding: {
                             x: 1
                         }
-                    }, e, i.createElement(d.U, null, this.getItems()), t)
+                    }, e, i.createElement(u.U, null, this.getItems()), t)
                 }, t.prototype.postRender = function() {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
-                }, t = a.__decorate([Object(S.a)(C), Object(c.d)("FeaturedGames")], t)
+                }, t = a.__decorate([Object(O.a)(w), Object(d.d)("FeaturedGames")], t)
             }(i.Component)),
-            x = n("+GT7"),
-            F = n("SZoP");
+            F = n("+GT7"),
+            I = n("SZoP");
         ! function(e) {
             e[e.All = 1] = "All", e[e.Xbox = 2] = "Xbox", e[e.PS4 = 3] = "PS4"
         }(r || (r = {}));
-        var I = n("262o"),
-            T = (n("GrwT"), function(e) {
+        var T = n("262o"),
+            L = (n("GrwT"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getItems = function() {
                         if (t.props.data.loading || t.props.data.error) {
-                            for (var e = [], n = 0; n < 6; n++) e.push(i.createElement(d._2, {
+                            for (var e = [], n = 0; n < 6; n++) e.push(i.createElement(u._2, {
                                 key: n,
                                 margin: {
                                     bottom: 2
                                 }
-                            }, i.createElement(d._2, {
+                            }, i.createElement(u._2, {
                                 margin: {
                                     bottom: .5
                                 }
-                            }, i.createElement(d.j, {
-                                ratio: d.k.Aspect16x9
-                            }, i.createElement(d._8, null))), i.createElement(d._35, null, i.createElement(d._8, {
+                            }, i.createElement(u.j, {
+                                ratio: u.k.Aspect16x9
+                            }, i.createElement(u._8, null))), i.createElement(u._35, null, i.createElement(u._8, {
                                 width: 150
-                            })), i.createElement(d._35, {
-                                fontSize: d.R.Size7
-                            }, i.createElement(d._8, {
+                            })), i.createElement(u._35, {
+                                fontSize: u.R.Size7
+                            }, i.createElement(u._8, {
                                 width: 100
                             }))));
                             return e
@@ -2188,20 +2189,20 @@ webpackJsonp([51], {
                         return t.props.data.streams.edges.map(function(e, n) {
                             if (!e.node.broadcaster.id) return null;
                             var r = e.node,
-                                a = Object(F.a)(r.broadcaster.login, r.broadcaster.displayName),
+                                a = Object(I.a)(r.broadcaster.login, r.broadcaster.displayName),
                                 s = {
-                                    medium: h.PageviewMedium.Following,
-                                    content: h.PageviewContent.Live,
+                                    medium: v.PageviewMedium.Following,
+                                    content: v.PageviewContent.Live,
                                     content_index: n
                                 },
-                                l = r && r.game ? Object(O.c)(r.game.name) : "";
-                            return i.createElement(d._2, {
+                                l = r && r.game ? Object(C.c)(r.game.name) : "";
+                            return i.createElement(u._2, {
                                 className: "anon-top-channels",
                                 key: r.broadcaster.id,
                                 margin: {
                                     bottom: 2
                                 }
-                            }, i.createElement(x.a, {
+                            }, i.createElement(F.a, {
                                 imageSrc: r && r.previewImageURL || o.a.defaultStreamPreviewURL,
                                 imageAlt: r && r.title || "",
                                 viewerCount: r && r.viewersCount || 0,
@@ -2231,52 +2232,52 @@ webpackJsonp([51], {
                 }, t.prototype.componentDidUpdate = function() {
                     this.postRender()
                 }, t.prototype.render = function() {
-                    var e = i.createElement(d._2, {
-                            display: d.N.Flex,
-                            flexDirection: d.P.Row,
-                            alignItems: d.c.Baseline,
+                    var e = i.createElement(u._2, {
+                            display: u.N.Flex,
+                            flexDirection: u.P.Row,
+                            alignItems: u.c.Baseline,
                             margin: {
                                 bottom: 1
                             }
-                        }, i.createElement(d._35, {
-                            fontSize: d.R.Size2,
-                            color: d.I.Base
-                        }, this.getTitle()), i.createElement(d._2, {
+                        }, i.createElement(u._35, {
+                            fontSize: u.R.Size2,
+                            color: u.I.Base
+                        }, this.getTitle()), i.createElement(u._2, {
                             className: "anon-top-channels__subheader",
                             margin: {
                                 left: 2
                             }
-                        }, i.createElement(d._35, {
-                            fontSize: d.R.Size3,
-                            color: d.I.Alt2
+                        }, i.createElement(u._35, {
+                            fontSize: u.R.Size3,
+                            color: u.I.Alt2
                         }, this.getSubtitle()))),
-                        t = i.createElement(d._2, {
+                        t = i.createElement(u._2, {
                             className: "anon-top-channels__footer",
-                            display: d.N.Flex,
-                            justifyContent: d._1.End
-                        }, i.createElement(d.W, {
-                            display: d.N.Flex,
-                            alignItems: d.c.Center
-                        }, i.createElement(N.a, {
+                            display: u.N.Flex,
+                            justifyContent: u._1.End
+                        }, i.createElement(u.W, {
+                            display: u.N.Flex,
+                            alignItems: u.c.Center
+                        }, i.createElement(S.a, {
                             to: this.getLink(),
                             "data-a-target": "see-all-" + this.getDataProp() + "-channels-link"
-                        }, i.createElement(d._35, {
-                            fontSize: d.R.Size4
-                        }, this.getFooter()), i.createElement(d._25, {
-                            color: d.I.Link,
+                        }, i.createElement(u._35, {
+                            fontSize: u.R.Size4
+                        }, this.getFooter()), i.createElement(u._25, {
+                            color: u.I.Link,
                             margin: {
                                 left: .5
                             },
-                            display: d.N.InlineFlex,
-                            alignItems: d.c.Center
-                        }, i.createElement(d._15, {
-                            asset: d._16.AngleRight,
+                            display: u.N.InlineFlex,
+                            alignItems: u.c.Center
+                        }, i.createElement(u._15, {
+                            asset: u._16.AngleRight,
                             width: 14,
                             height: 14
                         })))));
-                    return i.createElement("div", null, e, i.createElement(d._46, {
-                        gutterSize: d._48.Small,
-                        childWidth: d._47.Large,
+                    return i.createElement("div", null, e, i.createElement(u._46, {
+                        gutterSize: u._48.Small,
+                        childWidth: u._47.Large,
                         placeholderItems: 6
                     }, this.getItems()), t)
                 }, t.prototype.postRender = function() {
@@ -2336,7 +2337,7 @@ webpackJsonp([51], {
                         default:
                             return ""
                     }
-                }, t = a.__decorate([Object(S.a)(I, {
+                }, t = a.__decorate([Object(O.a)(T, {
                     options: function(e) {
                         var t = "";
                         switch (e.type) {
@@ -2355,15 +2356,15 @@ webpackJsonp([51], {
                             }
                         }
                     }
-                }), Object(c.d)("TopChannels")], t)
+                }), Object(d.d)("TopChannels")], t)
             }(i.Component)),
-            L = (n("9zTP"), m.a.wrap(function() {
+            P = (n("9zTP"), p.a.wrap(function() {
                 return n.e(74).then(n.bind(null, "yEZg"))
             }, "FeaturedGenres")),
-            P = m.a.wrap(function() {
+            D = p.a.wrap(function() {
                 return n.e(73).then(n.bind(null, "2hMh"))
             }, "TopCreative"),
-            D = function(e) {
+            R = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -2376,20 +2377,20 @@ webpackJsonp([51], {
                     }, t.renderFeaturedGamesOrGenres = function() {
                         if (void 0 !== t.state.categoriesExperimentAssignment) {
                             if (t.state.categoriesExperimentAssignment) {
-                                var e = t.state.categoriesExperimentAssignment === y.a.Streams;
-                                return i.createElement(L, {
-                                    trackingMedium: h.PageviewMedium.AnonFrontPage,
+                                var e = t.state.categoriesExperimentAssignment === b.a.Streams;
+                                return i.createElement(P, {
+                                    trackingMedium: v.PageviewMedium.AnonFrontPage,
                                     withStreams: e
                                 })
                             }
-                            return i.createElement(w, null)
+                            return i.createElement(x, null)
                         }
                     }, t.renderTopCreative = function() {
                         if (t.state.categoriesExperimentAssignment) {
-                            var e = t.state.categoriesExperimentAssignment === y.a.Streams;
-                            return i.createElement(d._25, {
+                            var e = t.state.categoriesExperimentAssignment === b.a.Streams;
+                            return i.createElement(u._25, {
                                 className: "anon-front__content-section",
-                                background: d.m.Base,
+                                background: u.m.Base,
                                 margin: {
                                     x: "auto"
                                 },
@@ -2398,55 +2399,55 @@ webpackJsonp([51], {
                                     top: 5,
                                     bottom: 3
                                 }
-                            }, i.createElement(P, {
-                                trackingMedium: h.PageviewMedium.AnonFrontPage,
+                            }, i.createElement(D, {
+                                trackingMedium: v.PageviewMedium.AnonFrontPage,
                                 withStreams: e
                             }))
                         }
                     }, t.renderSocialBar = function() {
-                        return i.createElement(d._25, {
+                        return i.createElement(u._25, {
                             className: "anon-front__social-container",
-                            alignItems: d.c.Center,
-                            display: d.N.Flex,
-                            flexDirection: d.P.Column,
-                            justifyContent: d._1.Center,
+                            alignItems: u.c.Center,
+                            display: u.N.Flex,
+                            flexDirection: u.P.Column,
+                            justifyContent: u._1.Center,
                             borderTop: !0,
                             borderBottom: !0,
                             padding: {
                                 y: 3,
                                 x: 2
                             }
-                        }, i.createElement(d._35, {
-                            fontSize: d.R.Size3
-                        }, Object(o.d)("Follow the latest Twitch news", "AnonFrontPage")), i.createElement(d._2, {
+                        }, i.createElement(u._35, {
+                            fontSize: u.R.Size3
+                        }, Object(o.d)("Follow the latest Twitch news", "AnonFrontPage")), i.createElement(u._2, {
                             margin: {
                                 top: 1
                             },
-                            display: d.N.Flex,
-                            flexDirection: d.P.Row
-                        }, i.createElement(d.u, {
+                            display: u.N.Flex,
+                            flexDirection: u.P.Row
+                        }, i.createElement(u.u, {
                             linkTo: "https://www.facebook.com/twitch",
                             targetBlank: !0,
-                            size: d.x.Large,
+                            size: u.x.Large,
                             "data-a-target": "frontpage-facebook-link"
-                        }, Object(o.d)("Facebook", "AnonFrontPage")), i.createElement(d._2, {
+                        }, Object(o.d)("Facebook", "AnonFrontPage")), i.createElement(u._2, {
                             margin: {
                                 x: .5
                             }
-                        }, i.createElement(d.u, {
+                        }, i.createElement(u.u, {
                             linkTo: "https://www.twitter.com/twitch",
                             targetBlank: !0,
-                            size: d.x.Large,
+                            size: u.x.Large,
                             "data-a-target": "frontpage-twitter-link"
-                        }, Object(o.d)("Twitter", "AnonFrontPage"))), i.createElement(d.u, {
+                        }, Object(o.d)("Twitter", "AnonFrontPage"))), i.createElement(u.u, {
                             linkTo: "https://blog.twitch.tv/",
                             targetBlank: !0,
-                            size: d.x.Large,
+                            size: u.x.Large,
                             "data-a-target": "frontpage-blog-link"
                         }, Object(o.d)("Official Blog", "AnonFrontPage"))))
                     }, t.renderPlatformTopChannels = function() {
-                        return i.createElement(d._2, null, i.createElement(d._25, {
-                            background: d.m.Base,
+                        return i.createElement(u._2, null, i.createElement(u._25, {
+                            background: u.m.Base,
                             padding: {
                                 x: 2,
                                 y: 3
@@ -2455,11 +2456,11 @@ webpackJsonp([51], {
                                 x: "auto"
                             },
                             className: "anon-front__content-section"
-                        }, i.createElement(T, {
+                        }, i.createElement(L, {
                             type: r.PS4,
                             key: "channels.ps4"
-                        })), i.createElement(d._25, {
-                            background: d.m.Base,
+                        })), i.createElement(u._25, {
+                            background: u.m.Base,
                             padding: {
                                 x: 2,
                                 y: 3
@@ -2468,93 +2469,93 @@ webpackJsonp([51], {
                                 x: "auto"
                             },
                             className: "anon-front__content-section"
-                        }, i.createElement(T, {
+                        }, i.createElement(L, {
                             type: r.Xbox,
                             key: "channels.xbox"
                         })))
                     }, t.onSlotAdded = function() {
                         t.setState(function(e) {
                             var t = e.numSlotsAdded + 1;
-                            return t === Object.keys(_.b.anonFront).length && g.a.display(_.b.anonFront.takeover), {
+                            return t === Object.keys(k.b.anonFront).length && h.a.display(k.b.anonFront.takeover), {
                                 numSlotsAdded: t
                             }
                         })
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.componentWillMount = function() {
-                    _.g.addListener(_.e, this.onSlotAdded)
+                    k.g.addListener(k.e, this.onSlotAdded)
                 }, t.prototype.componentDidMount = function() {
                     return a.__awaiter(this, void 0, void 0, function() {
                         var e;
                         return a.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return [4, o.n.experiments.getAssignment(y.f)];
+                                    return [4, o.n.experiments.getAssignment(b.f)];
                                 case 1:
                                     return e = t.sent(), this.setState({
-                                        categoriesExperimentAssignment: Object(y.m)(e) ? e : null
+                                        categoriesExperimentAssignment: Object(b.m)(e) ? e : null
                                     }), this.props.latencyTracking.reportInteractive(), o.n.setPageTitle(), [2]
                             }
                         })
                     })
                 }, t.prototype.render = function() {
                     var e = void 0 !== this.state.categoriesExperimentAssignment && !this.state.categoriesExperimentAssignment;
-                    return i.createElement(d._2, {
+                    return i.createElement(u._2, {
                         fullHeight: !0
-                    }, i.createElement(b.a, null, i.createElement(E.a, null)), i.createElement(d._25, {
+                    }, i.createElement(E.a, null, i.createElement(N.a, null)), i.createElement(u._25, {
                         className: "anon-front",
-                        background: d.m.Base,
-                        position: d._9.Relative,
+                        background: u.m.Base,
+                        position: u._9.Relative,
                         fullHeight: !0
                     }, i.createElement("div", {
                         id: "mantle_skin",
                         className: this.state.takeoverRendered ? "anon-front__takeover" : ""
-                    }, i.createElement(v.a, {
-                        adSize: _.c.anonFront.takeover,
-                        adUnit: _.d.frontpage,
-                        slotID: _.b.anonFront.takeover,
+                    }, i.createElement(_.a, {
+                        adSize: k.c.anonFront.takeover,
+                        adUnit: k.d.frontpage,
+                        slotID: k.b.anonFront.takeover,
                         targeting: {
-                            pagetype: _.a.frontpage
+                            pagetype: k.a.frontpage
                         },
                         slotRendered: this.onTakeoverRendered,
                         autoEnable: !1
-                    }), i.createElement(d._2, {
+                    }), i.createElement(u._2, {
                         className: "anon-front__featured-section",
-                        display: d.N.Flex,
-                        flexWrap: d.Q.Wrap,
-                        justifyContent: d._1.Center
-                    }, i.createElement(d._2, {
+                        display: u.N.Flex,
+                        flexWrap: u.Q.Wrap,
+                        justifyContent: u._1.Center
+                    }, i.createElement(u._2, {
                         className: "anon-front__banner"
-                    }, i.createElement(v.a, {
-                        adSize: _.c.anonFront.banner,
-                        adUnit: _.d.frontpage,
-                        slotID: _.b.anonFront.banner,
+                    }, i.createElement(_.a, {
+                        adSize: k.c.anonFront.banner,
+                        adUnit: k.d.frontpage,
+                        slotID: k.b.anonFront.banner,
                         targeting: {
-                            pagetype: _.a.frontpage
+                            pagetype: k.a.frontpage
                         },
                         injectStyles: {
                             display: "flex"
                         },
                         autoEnable: !1
-                    })), i.createElement(d._2, {
+                    })), i.createElement(u._2, {
                         className: "anon-front__content-section",
                         padding: this.state.takeoverRendered ? 2 : 0
-                    }, i.createElement(k.b, {
-                        renderContext: k.a.AnonFront
-                    })), i.createElement(d._2, {
+                    }, i.createElement(y.b, {
+                        renderContext: y.a.AnonFront
+                    })), i.createElement(u._2, {
                         className: "anon-front__sizzle-strip",
-                        display: d.N.Flex,
-                        justifyContent: d._1.Center
-                    }, i.createElement(v.a, {
-                        adSize: _.c.anonFront.sizzle,
-                        adUnit: _.d.sizzle,
-                        slotID: _.b.anonFront.sizzle,
+                        display: u.N.Flex,
+                        justifyContent: u._1.Center
+                    }, i.createElement(_.a, {
+                        adSize: k.c.anonFront.sizzle,
+                        adUnit: k.d.sizzle,
+                        slotID: k.b.anonFront.sizzle,
                         targeting: {
-                            pagetype: _.a.frontpage
+                            pagetype: k.a.frontpage
                         },
                         autoEnable: !1
-                    }))), i.createElement(d._25, {
-                        background: d.m.Base,
+                    }))), i.createElement(s.a, null, i.createElement(u._25, {
+                        background: u.m.Base,
                         margin: {
                             x: "auto"
                         },
@@ -2564,8 +2565,8 @@ webpackJsonp([51], {
                             bottom: 3
                         },
                         className: "anon-front__content-section"
-                    }, this.renderFeaturedGamesOrGenres()), this.renderTopCreative(), e && this.renderSocialBar(), i.createElement(d._25, {
-                        background: d.m.Base,
+                    }, this.renderFeaturedGamesOrGenres())), this.renderTopCreative(), e && this.renderSocialBar(), i.createElement(u._25, {
+                        background: u.m.Base,
                         padding: {
                             x: 2,
                             top: 3,
@@ -2575,35 +2576,35 @@ webpackJsonp([51], {
                             x: "auto"
                         },
                         className: "anon-front__content-section"
-                    }, i.createElement(T, {
+                    }, i.createElement(L, {
                         type: r.All,
                         key: "channels.all"
-                    })), e && this.renderPlatformTopChannels(), i.createElement(d._2, {
+                    })), e && this.renderPlatformTopChannels(), i.createElement(u._2, {
                         className: "anon-front__bottom",
-                        display: d.N.Flex,
-                        justifyContent: d._1.Center
-                    }, i.createElement(v.a, {
-                        adSize: _.c.anonFront.bottom,
-                        adUnit: _.d.frontpage,
-                        slotID: _.b.anonFront.bottom,
+                        display: u.N.Flex,
+                        justifyContent: u._1.Center
+                    }, i.createElement(_.a, {
+                        adSize: k.c.anonFront.bottom,
+                        adUnit: k.d.frontpage,
+                        slotID: k.b.anonFront.bottom,
                         targeting: {
-                            pagetype: _.a.frontpage
+                            pagetype: k.a.frontpage
                         },
                         injectStyles: {
                             display: "flex"
                         },
                         autoEnable: !1
-                    })), i.createElement(u, null))))
+                    })), i.createElement(m, null))))
                 }, t.prototype.componentWillUnmount = function() {
-                    _.g.removeListener(_.e, this.onSlotAdded)
-                }, t = a.__decorate([Object(c.d)("AnonFrontPage", {
-                    destination: f.a.Index
-                }), Object(p.a)({
-                    location: h.PageviewLocation.FrontPage
+                    k.g.removeListener(k.e, this.onSlotAdded)
+                }, t = a.__decorate([Object(d.d)("AnonFrontPage", {
+                    destination: g.a.Index
+                }), Object(f.a)({
+                    location: v.PageviewLocation.FrontPage
                 })], t)
             }(i.Component);
         n.d(t, "AnonFrontPage", function() {
-            return D
+            return R
         })
     },
     "8atL": function(e, t) {
@@ -6050,4 +6051,4 @@ webpackJsonp([51], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.anon-front-1605e102cad2a59af6893f3884c29082.js.map
+//# sourceMappingURL=pages.anon-front-5d5e71ed6807ff1cd745b65efafa8060.js.map
