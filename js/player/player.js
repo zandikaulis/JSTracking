@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".d1f862e3e94698c1a63a.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".0771039805f7884eb134.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -28710,7 +28710,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.02.26-235242+09c7896cd63e3b139d7983007508a49dce449b6c",
+                    app_version: "2018.02.27-025650+6a399c04d20fcba87235c2191d8ea662245c8a82",
                     flash_version: r,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -34318,7 +34318,7 @@
                 }]), e
             }(),
             So = n(100),
-            Po = "//video-edge-e938d1.sjc01.hls.ttvnw.net/v1/playlist/Cg1wv1RErd1vQ9mJ5yehSgqNpD7mwUegJ2LC0miiSYkpAO6fL60uq2f1yi7AXbicFR2iGh-nWPFbdgQTS1EMrSVU1aAzrJ23tuqCE8m7-0VYHHzQKyfbh-Rckn7Wa61xo024poDKC-jdqVnnFoiism1ULY2JTZrgTLsm1wYHWhDU72gzZ4T6_bmOwm4Nx5y9b4OC3NbFCTGN3bFu4y6_zPSubLDAtE6_fofRJoqEHsVAbz_eiB93oZliAvUplM0QsHORcP0mJAKZV9Udz6GrfcrxM_4ixr0BcSG8ylNxxscoEduGgBW4YH3vulPrmRYutJVQn3Aib8vkn_PaxEyEOoFxC8onSrH0m2mL9He6TVEvuUhmw9S_oAMKyfHOvCqzhj04hn4Oz38JSlvc5pSw_8jny1L7GSQDtn_b5HTCl7VoWpcCFagyNysSRtOqLU_Ks9FCzMKmoPJq4ImM3.m3u8",
+            Po = "//video-edge-6865c3.sjc01.hls.ttvnw.net/v1/playlist/Cr-iSlzJyduQwmCmS0tW4C0o4qhevau0YrdW9OHx3tXKfpzuyGauri9n5tg0gQ4Kc4gHcIJgadEJvpaInT38kyf4wsw2Fhx32_HQTHZfzdnbkm_XwVbUZiud72Dn6rAc11Po018rMuLsVZyeELsLRnKoPn6R3Njiley8kHn7tegzrNa59PlE2P5_VRFw1KMSU-536WGQtTgIB3IQzp90r-sT02iDcPJJr6LAWBAGhKW5-Xi9JnwcMwEc8k8d4fJXFgOP9SY4-YcqLNuPT0_Jmku0YmNJHudY0oeKVU9ilKWA6PPfOsBtAC2CFS1G5Aye4TtZBhlA38c1oJ8rl__OkDfyZqRBZXAFm8EJ0Thi7G4TJC5ozBj1UI-NjCWFjbWuA_P8wq_BjRYaTECXSuaqHqRKF91vOMlL31hoOtin-UU1NMoDFHdYW4He51oUvY.m3u8",
             Co = n(45),
             Oo = n(247),
             To = n(131),
