@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".0771039805f7884eb134.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".4f32563ae3c7e1e426b0.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -8434,7 +8434,7 @@
                 function e() {
                     var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                         n = arguments[1];
-                    i(this, e), this.store = n, this._options = t, this._mediaPlayer = null, this._eventEmitter = new l.a, this._apiCallQueue = [], this._cache = {}, this._readyState = _.d, this._networkState = w.d, this._fireLoadedMetadata = !1, this._hasRetried = !1, this._src = "", this._currentCaptionData = {}, this._mediaPlayerLogLevel = t["cvp-log"] || "error", this.initialize()
+                    i(this, e), this.store = n, this._options = t, this._mediaPlayer = null, this._eventEmitter = new l.a, this._apiCallQueue = [], this._cache = {}, this._readyStateStatus = _.d, this._networkState = w.d, this._fireLoadedMetadata = !1, this._hasRetried = !1, this._src = "", this._currentCaptionData = {}, this._mediaPlayerLogLevel = t["cvp-log"] || "error", this.initialize()
                 }
                 return C(e, [{
                     key: "initialize",
@@ -8661,7 +8661,7 @@
                 }, {
                     key: "getReadyState",
                     value: function() {
-                        return this._readyState
+                        return this._readyStateStatus
                     }
                 }, {
                     key: "getNetworkState",
@@ -8832,33 +8832,148 @@
                         return 509 === e ? this._onCCUCapReached() : this._onOfflineError()
                     }
                 }, {
-                    key: "_attachInternalListeners",
+                    key: "onMediaplayerInitialized",
+                    value: function() {
+                        this._eventEmitter.emit(a.p)
+                    }
+                }, {
+                    key: "onPlaying",
+                    value: function() {
+                        this._readyStateStatus <= _.a && (this._readyStateStatus = _.b), this._eventEmitter.emit(u.g), this._eventEmitter.emit(u.l)
+                    }
+                }, {
+                    key: "onQualityChanged",
+                    value: function() {
+                        var e = this._cache.currentQuality,
+                            t = this._mediaPlayer.getQuality(),
+                            n = this._mediaPlayer.getAutoSwitchQuality();
+                        if (this._cache.currentQuality = t, this._eventEmitter.emit(a.s, {
+                                quality: t.group,
+                                isAuto: n
+                            }), n && e.group !== t.group) {
+                            var r = Object.assign({
+                                stream_format_previous: e.group,
+                                stream_format_current: t.group
+                            }, this._mediaPlayer.getABSStats());
+                            this._eventEmitter.emit(a.a, r)
+                        }
+                    }
+                }, {
+                    key: "onDurationChanged",
+                    value: function() {
+                        this._fireLoadedMetadata && (this._fireLoadedMetadata = !1, this._eventEmitter.emit(u.h)), this._eventEmitter.emit(u.d)
+                    }
+                }, {
+                    key: "onPlaybackRateChanged",
+                    value: function() {
+                        this._eventEmitter.emit(u.m, this._mediaPlayer.getPlaybackRate())
+                    }
+                }, {
+                    key: "onRebuffering",
+                    value: function() {
+                        this._readyStateStatus = _.a, this._eventEmitter.emit(u.s)
+                    }
+                }, {
+                    key: "onTimeUpdate",
+                    value: function() {
+                        this._eventEmitter.emit(u.q)
+                    }
+                }, {
+                    key: "onBufferUpdate",
+                    value: function() {
+                        this._eventEmitter.emit(a.b, this._mediaPlayer.getBuffered())
+                    }
+                }, {
+                    key: "onSeekCompleted",
+                    value: function() {
+                        this._eventEmitter.emit(u.b), this._eventEmitter.emit(u.n)
+                    }
+                }, {
+                    key: "onTrackingEvent",
                     value: function(e) {
-                        var t = this,
-                            n = this._mediaPlayer;
-                        n.addEventListener(e.PlayerEvent.INITIALIZED, function() {
-                            t._eventEmitter.emit(a.p)
-                        }), n.addEventListener(e.PlayerState.PLAYING, function() {
-                            t._readyState <= _.a && (t._readyState = _.b), t._eventEmitter.emit(u.g), t._eventEmitter.emit(u.l)
-                        }), n.addEventListener(e.PlayerEvent.QUALITY_CHANGED, function() {
-                            var e = t._cache.currentQuality,
-                                n = t._mediaPlayer.getQuality(),
-                                r = t._mediaPlayer.getAutoSwitchQuality();
-                            if (t._cache.currentQuality = n, t._eventEmitter.emit(a.s, {
-                                    quality: n.group,
-                                    isAuto: r
-                                }), r && e.group !== n.group) {
-                                var i = Object.assign({
-                                    stream_format_previous: e.group,
-                                    stream_format_current: n.group
-                                }, t._mediaPlayer.getABSStats());
-                                t._eventEmitter.emit(a.a, i)
-                            }
-                        }), n.addEventListener(e.PlayerEvent.DURATION_CHANGED, function() {
-                            t._fireLoadedMetadata && (t._fireLoadedMetadata = !1, t._eventEmitter.emit(u.h)), t._eventEmitter.emit(u.d)
-                        }), n.addEventListener(e.PlayerEvent.PLAYBACK_RATE_CHANGED, function() {
-                            t._eventEmitter.emit(u.m, t._mediaPlayer.getPlaybackRate())
-                        }), n.addEventListener(e.PlayerEvent.ERROR, function(n) {
+                        var t = e.name,
+                            n = e.properties;
+                        "video_error" === t && (n.broadcast_id = this.store.getState().streamMetadata.broadcastID, n.manifest_broadcast_id = this.store.getState().manifestInfo.broadcast_id, this.store.dispatch(Object(k.d)(t, n)))
+                    }
+                }, {
+                    key: "onBuffering",
+                    value: function() {
+                        this._readyStateStatus = _.a, this._networkState = w.c
+                    }
+                }, {
+                    key: "onIdle",
+                    value: function() {
+                        this._readyStateStatus = _.d, this._networkState = w.b, this._eventEmitter.emit(u.j)
+                    }
+                }, {
+                    key: "onEnded",
+                    value: function() {
+                        this._readyStateStatus = _.d, this._networkState = w.a, this._eventEmitter.emit(u.e)
+                    }
+                }, {
+                    key: "onReady",
+                    value: function() {
+                        this._hasRetried = !1, this._readyStateStatus = _.c, this._networkState = w.b;
+                        var e = this.store.getState(),
+                            t = e.analytics;
+                        this.store.dispatch(Object(k.d)(o.h, {
+                            time_since_load_start: Date.now() - t.playSessionStartTime
+                        }));
+                        var n = h()(this._mediaPlayer.getManifestInfo(), function(e, t, n) {
+                            return e[n.toLowerCase().replace(/-/g, "_")] = t, e
+                        }, {});
+                        this._eventEmitter.emit(a.i, n), this._eventEmitter.emit(u.b), this._fireLoadedMetadata = !0, this._cache.currentQuality = this._mediaPlayer.getQuality()
+                    }
+                }, {
+                    key: "onID3",
+                    value: function(e) {
+                        var t = f()(e, function(e) {
+                                return "TOFN" === e.id
+                            }),
+                            n = f()(e, function(e) {
+                                return "TXXX" === e.id
+                            });
+                        if (t && this._eventEmitter.emit(a.v, {
+                                name: t.info[0]
+                            }), n && "content" !== n.desc) {
+                            var r = JSON.parse(n.info[0]);
+                            "commercial" === r.cmd && this._eventEmitter.emit(a.j, {
+                                duration: r.length
+                            })
+                        }
+                    }
+                }, {
+                    key: "onCaption",
+                    value: function(e) {
+                        this._currentCaptionData = e, this._eventEmitter.emit(a.c)
+                    }
+                }, {
+                    key: "onSpliceOut",
+                    value: function(e) {
+                        this._eventEmitter.emit(a.y, e)
+                    }
+                }, {
+                    key: "onSpliceIn",
+                    value: function() {
+                        this._eventEmitter.emit(a.x)
+                    }
+                }, {
+                    key: "_attachPlayerEventListeners",
+                    value: function(e) {
+                        var t = e.PlayerEvent;
+                        this._mediaPlayer.addEventListener(t.INITIALIZED, this.onMediaplayerInitialized.bind(this)), this._mediaPlayer.addEventListener(t.QUALITY_CHANGED, this.onQualityChanged.bind(this)), this._mediaPlayer.addEventListener(t.DURATION_CHANGED, this.onDurationChanged.bind(this)), this._mediaPlayer.addEventListener(t.PLAYBACK_RATE_CHANGED, this.onPlaybackRateChanged.bind(this)), this._mediaPlayer.addEventListener(t.REBUFFERING, this.onRebuffering.bind(this)), this._mediaPlayer.addEventListener(t.TIME_UPDATE, this.onTimeUpdate.bind(this)), this._mediaPlayer.addEventListener(t.BUFFER_UPDATE, this.onBufferUpdate.bind(this)), this._mediaPlayer.addEventListener(t.SEEK_COMPLETED, this.onSeekCompleted.bind(this)), this._mediaPlayer.addEventListener(t.TRACKING, this.onTrackingEvent.bind(this))
+                    }
+                }, {
+                    key: "_attachPlayerStateListeners",
+                    value: function(e) {
+                        var t = e.PlayerState;
+                        this._mediaPlayer.addEventListener(t.PLAYING, this.onPlaying.bind(this)), this._mediaPlayer.addEventListener(t.BUFFERING, this.onBuffering.bind(this)), this._mediaPlayer.addEventListener(t.IDLE, this.onIdle.bind(this)), this._mediaPlayer.addEventListener(t.ENDED, this.onEnded.bind(this)), this._mediaPlayer.addEventListener(t.READY, this.onReady.bind(this))
+                    }
+                }, {
+                    key: "_attachErrorListeners",
+                    value: function(e) {
+                        var t = this;
+                        this._mediaPlayer.addEventListener(e.PlayerEvent.ERROR, function(n) {
                             var r = n.type,
                                 i = n.source,
                                 a = n.code;
@@ -8881,57 +8996,18 @@
                                 playback_error_code: 8001,
                                 playback_error_msg: "fatal_error"
                             })), t.store.dispatch(Object(S.d)(t._errorCode))
-                        }), n.addEventListener(e.PlayerEvent.REBUFFERING, function() {
-                            t._readyState = _.a, t._eventEmitter.emit(u.s)
-                        }), n.addEventListener(e.PlayerEvent.TIME_UPDATE, function() {
-                            t._eventEmitter.emit(u.q)
-                        }), n.addEventListener(e.PlayerEvent.BUFFER_UPDATE, function() {
-                            t._eventEmitter.emit(a.b, t._mediaPlayer.getBuffered())
-                        }), n.addEventListener(e.PlayerEvent.SEEK_COMPLETED, function() {
-                            t._eventEmitter.emit(u.b), t._eventEmitter.emit(u.n)
-                        }), n.addEventListener(e.PlayerEvent.TRACKING, function(e) {
-                            var n = e.name,
-                                r = e.properties;
-                            "video_error" === n && (r.broadcast_id = t.store.getState().streamMetadata.broadcastID, r.manifest_broadcast_id = t.store.getState().manifestInfo.broadcast_id, t.store.dispatch(Object(k.d)(n, r)))
-                        }), n.addEventListener(e.PlayerState.BUFFERING, function() {
-                            t._readyState = _.a, t._networkState = w.c
-                        }), n.addEventListener(e.PlayerState.IDLE, function() {
-                            t._readyState = _.d, t._networkState = w.b, t._eventEmitter.emit(u.j)
-                        }), n.addEventListener(e.PlayerState.ENDED, function() {
-                            t._readyState = _.d, t._networkState = w.a, t._eventEmitter.emit(u.e)
-                        }), n.addEventListener(e.PlayerState.READY, function() {
-                            t._hasRetried = !1, t._readyState = _.c, t._networkState = w.b;
-                            var e = t.store.getState(),
-                                r = e.analytics;
-                            t.store.dispatch(Object(k.d)(o.h, {
-                                time_since_load_start: Date.now() - r.playSessionStartTime
-                            }));
-                            var i = h()(t._mediaPlayer.getManifestInfo(), function(e, t, n) {
-                                return e[n.toLowerCase().replace(/-/g, "_")] = t, e
-                            }, {});
-                            t._eventEmitter.emit(a.i, i), t._eventEmitter.emit(u.b), t._fireLoadedMetadata = !0, t._cache.currentQuality = n.getQuality()
-                        }), n.addEventListener(e.MetadataEvent.ID3, function(e) {
-                            var n = f()(e, function(e) {
-                                    return "TOFN" === e.id
-                                }),
-                                r = f()(e, function(e) {
-                                    return "TXXX" === e.id
-                                });
-                            if (n && t._eventEmitter.emit(a.v, {
-                                    name: n.info[0]
-                                }), r && "content" !== r.desc) {
-                                var i = JSON.parse(r.info[0]);
-                                "commercial" === i.cmd && t._eventEmitter.emit(a.j, {
-                                    duration: i.length
-                                })
-                            }
-                        }), n.addEventListener(e.MetadataEvent.CAPTION, function(e) {
-                            t._currentCaptionData = e, t._eventEmitter.emit(a.c)
-                        }), n.addEventListener(e.MetadataEvent.SPLICE_OUT, function(e) {
-                            t._eventEmitter.emit(a.y, e)
-                        }), n.addEventListener(e.MetadataEvent.SPLICE_IN, function() {
-                            t._eventEmitter.emit(a.x)
                         })
+                    }
+                }, {
+                    key: "_attachMetadataListeners",
+                    value: function(e) {
+                        var t = e.MetadataEvent;
+                        this._mediaPlayer.addEventListener(t.ID3, this.onID3.bind(this)), this._mediaPlayer.addEventListener(t.CAPTION, this.onCaption.bind(this)), this._mediaPlayer.addEventListener(t.SPLICE_OUT, this.onSpliceOut.bind(this)), this._mediaPlayer.addEventListener(t.SPLICE_IN, this.onSpliceIn.bind(this))
+                    }
+                }, {
+                    key: "_attachInternalListeners",
+                    value: function(e) {
+                        this._attachPlayerEventListeners(e), this._attachPlayerStateListeners(e), this._attachErrorListeners(e), this._attachMetadataListeners(e)
                     }
                 }]), e
             }();
@@ -28710,7 +28786,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.02.27-025650+6a399c04d20fcba87235c2191d8ea662245c8a82",
+                    app_version: "2018.02.27-185214+1a2afd438fb2526d481ddf8d856174b87fbc0e5d",
                     flash_version: r,
                     referrer_url: i,
                     referrer_host: a.host,
