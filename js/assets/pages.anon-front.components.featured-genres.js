@@ -1506,8 +1506,8 @@ webpackJsonp([74], {
                     onShowModal: f.d
                 }, e)
             })(A),
-            U = n("BwgW"),
-            M = n("fc0G"),
+            M = n("BwgW"),
+            U = n("fc0G"),
             R = n("L3z0"),
             B = n("5MsU"),
             z = {
@@ -1517,7 +1517,7 @@ webpackJsonp([74], {
                 controls: !1,
                 height: "100%",
                 playsinline: !0,
-                player: M.b.AnimatedThumbnails,
+                player: U.b.AnimatedThumbnails,
                 showInfo: !1,
                 trackingProperties: {
                     client_app: "twilight"
@@ -1575,12 +1575,12 @@ webpackJsonp([74], {
                     var e = this;
                     this.checkPlayerDependencyAnimationFrame && cancelAnimationFrame(this.checkPlayerDependencyAnimationFrame), window.removeEventListener("beforeunload", function() {
                         return e.resetVolume()
-                    }), this.resetVolume(), this.player && (this.player.removeEventListener(B.a.PlayerReady, this.onPlayerReady), this.player.removeEventListener(R.a.Play, this.onPlayerPlay), this.player.removeEventListener(R.a.Playing, this.onPlayerPlaying), U.extensionService.unregisterPlayer(), this.player.destroy())
+                    }), this.resetVolume(), this.player && (this.player.removeEventListener(B.a.PlayerReady, this.onPlayerReady), this.player.removeEventListener(R.a.Play, this.onPlayerPlay), this.player.removeEventListener(R.a.Playing, this.onPlayerPlaying), M.extensionService.unregisterPlayer(), this.player.destroy())
                 }, t.prototype.initializePlayer = function() {
                     var e = z;
                     this.props.channelLogin && (e.channel = this.props.channelLogin);
                     var t = new window.Twitch.Player(this.playerRef, e);
-                    this.player = t, t.addEventListener(B.a.PlayerReady, this.onPlayerReady), t.addEventListener(R.a.Play, this.onPlayerPlay), t.addEventListener(R.a.Playing, this.onPlayerPlaying), U.extensionService.registerPlayer(this.player)
+                    this.player = t, t.addEventListener(B.a.PlayerReady, this.onPlayerReady), t.addEventListener(R.a.Play, this.onPlayerPlay), t.addEventListener(R.a.Playing, this.onPlayerPlaying), M.extensionService.registerPlayer(this.player)
                 }, t.prototype.resetVolume = function() {
                     this.userVolumeSetting && window.localStorage.setItem("volume", this.userVolumeSetting), this.userMuteSetting && window.localStorage.setItem("muted", this.userMuteSetting)
                 }, t.tagInjected = !1, t = n = a.__decorate([Object(_.d)("LiveChannelPreviewCard")], t);
@@ -1734,6 +1734,7 @@ webpackJsonp([74], {
                         linkTo: this.getLinkTo("/" + e.broadcaster.login, t),
                         channelNameLinkTo: this.getLinkTo("/" + e.broadcaster.login + "/videos", t),
                         streamType: e.type,
+                        streamMetadata: e.streamMetadata,
                         "data-a-target": "card-" + t,
                         "data-a-id": "card-" + (e.broadcaster.login || "").replace(/ /g, "")
                     }), a && r.createElement(p, {
@@ -1749,6 +1750,7 @@ webpackJsonp([74], {
                         linkTo: this.getLinkTo("/" + e.broadcaster.login, t),
                         channelNameLinkTo: this.getLinkTo("/" + e.broadcaster.login + "/videos", t),
                         streamType: e.type,
+                        streamMetadata: e.streamMetadata,
                         videoPlayer: this.getVideoPlayer()
                     }), this.renderStreamFlag()))
                 }, t
@@ -3815,4 +3817,4 @@ webpackJsonp([74], {
         })
     }
 });
-//# sourceMappingURL=pages.anon-front.components.featured-genres-e596c821d02d50b5f63b0e3e92ca81cf.js.map
+//# sourceMappingURL=pages.anon-front.components.featured-genres-7d44b9b825cd0dfb1032dcf3819724d2.js.map

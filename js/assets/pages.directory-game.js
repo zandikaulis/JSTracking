@@ -4796,7 +4796,7 @@ webpackJsonp([45], {
                             }
                         }, Pt()))) : null
                     }, t.trackBannerEdit = function(e) {
-                        a.n.tracking.track(K.SpadeEventType.CommunityEdit, {
+                        t.props.data.directory && a.n.tracking.track(K.SpadeEventType.CommunityEdit, {
                             community_id: t.props.data.directory.id,
                             name: t.props.data.directory.name,
                             is_official: !1,
@@ -4817,7 +4817,7 @@ webpackJsonp([45], {
                         return i.__awaiter(t, void 0, void 0, function() {
                             var e, t;
                             return i.__generator(this, function(n) {
-                                return this.props.data && this.props.data.directory && this.props.data.directory.id && this.props.createUploadURLMutation ? (e = new $t(this.getBannerUploadURL, this.onBannerDoneUploading), t = {
+                                return this.props.data.directory && this.props.data.directory.id && this.props.createUploadURLMutation ? (e = new $t(this.getBannerUploadURL, this.onBannerDoneUploading), t = {
                                     imageDimensions: "600x800",
                                     maxFileSizeMegabytes: 1,
                                     isRequiredImageDimensions: !0,
@@ -4831,10 +4831,10 @@ webpackJsonp([45], {
                             return i.__generator(this, function(t) {
                                 switch (t.label) {
                                     case 0:
-                                        return [4, _t.a.delete(xt(this.props.data.directory.id))];
+                                        return this.props.data.directory ? [4, _t.a.delete(xt(this.props.data.directory.id))] : [2];
                                     case 1:
                                         return t.sent(), this.trackBannerEdit(), e = function(e) {
-                                            return e.directory.coverURL = Rt, e
+                                            return e.directory && (e.directory.coverURL = Rt), e
                                         }, Object(q.d)(Xt, {
                                             name: this.props.directoryName,
                                             type: Object(Pe.a)(this.props.directoryType)
@@ -4870,12 +4870,7 @@ webpackJsonp([45], {
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
                     var e;
-                    if (this.props.data.loading || this.props.data.error || !this.props.data.directory) e = M.createElement(re._8, {
-                        width: 200,
-                        height: 20,
-                        overlay: !0
-                    });
-                    else {
+                    if (this.props.data.directory) {
                         var t = Object(a.d)("{followerCount,number} Followers", {
                                 followerCount: this.props.data.directory.followersCount
                             }, "DirectoryHeader"),
@@ -4886,20 +4881,21 @@ webpackJsonp([45], {
                             color: re.I.Overlay,
                             type: re._40.P
                         }, t, " · ", n)
-                    }
+                    } else e = M.createElement(re._8, {
+                        width: 200,
+                        height: 20,
+                        overlay: !0
+                    });
                     var r = !1,
                         o = {};
-                    this.props.data && !this.props.data.loading && !this.props.data.error && this.props.data.directory && (this.props.data.directory.coverURL ? o = {
+                    this.props.data.directory && (this.props.data.directory.coverURL ? o = {
                         backgroundImage: "url(" + this.props.data.directory.coverURL + ")"
-                    } : this.props.data.directory.streams.edges.length && this.props.data.directory.streams.edges.filter(function(e) {
+                    } : this.props.data.directory.streams && (r = this.props.data.directory.streams.edges.some(function(e) {
                         var t = e.node;
-                        return t && t.previewImageURL
-                    }).map(function(e) {
-                        var t = e.node;
-                        r = !0, o = {
+                        return !(!t || !t.previewImageURL) && (o = {
                             backgroundImage: "url(" + t.previewImageURL + ")"
-                        }
-                    }));
+                        }, !0)
+                    })));
                     var s = me("directory-header__banner", {
                         "directory-header__banner--blur": r
                     });
@@ -8402,6 +8398,7 @@ webpackJsonp([45], {
                         linkTo: this.getLinkTo("/" + e.broadcaster.login, t),
                         channelNameLinkTo: this.getLinkTo("/" + e.broadcaster.login + "/videos", t),
                         streamType: e.type,
+                        streamMetadata: e.streamMetadata,
                         "data-a-target": "card-" + t,
                         "data-a-id": "card-" + (e.broadcaster.login || "").replace(/ /g, "")
                     }), i && a.createElement(p, {
@@ -8417,6 +8414,7 @@ webpackJsonp([45], {
                         linkTo: this.getLinkTo("/" + e.broadcaster.login, t),
                         channelNameLinkTo: this.getLinkTo("/" + e.broadcaster.login + "/videos", t),
                         streamType: e.type,
+                        streamMetadata: e.streamMetadata,
                         videoPlayer: this.getVideoPlayer()
                     }), this.renderStreamFlag()))
                 }, t
@@ -17714,4 +17712,4 @@ webpackJsonp([45], {
     zSAx: function(e, t) {},
     zu64: function(e, t) {}
 });
-//# sourceMappingURL=pages.directory-game-9e098a12e42afffba3017e0c2fa5b6bb.js.map
+//# sourceMappingURL=pages.directory-game-f42af86cdd55d46e0bba3f9453f11c87.js.map

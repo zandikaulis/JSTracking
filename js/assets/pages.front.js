@@ -3317,8 +3317,8 @@ webpackJsonp([47], {
                     autoReportInteractive: !0
                 })], t)
             }(r.Component),
-            C = n("OkeX"),
-            w = function(e) {
+            C = n("OkeX");
+        var w = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -3327,12 +3327,19 @@ webpackJsonp([47], {
                 }, t.prototype.componentDidUpdate = function() {
                     this.postRender()
                 }, t.prototype.render = function() {
-                    var e = [];
+                    var e, t, n = [];
                     return this.props.data.error ? r.createElement(y.a, {
                         message: Object(a.d)("Followed Games are unavailable at this time.", "FollowedGamesCompoment")
-                    }) : (this.props.data.loading || (e = this.props.data.currentUser.followedGames && this.props.data.currentUser.followedGames.nodes || []), this.props.data.loading || e && e.length > 0 ? r.createElement(O, {
+                    }) : (this.props.data.loading || (e = this.props.data, t = [], (e.currentUser.followedGames && e.currentUser.followedGames.nodes || []).forEach(function(e) {
+                        return e && e.id && t.push({
+                            id: e.id,
+                            name: e.name,
+                            viewersCount: e.viewersCount,
+                            boxArtURL: e.boxArtURL
+                        })
+                    }), n = t), this.props.data.loading || n && n.length > 0 ? r.createElement(O, {
                         "data-a-target": "view-all-followed-games-link",
-                        items: e,
+                        items: n,
                         limit: 18,
                         loading: this.props.data.loading,
                         title: Object(a.d)("Followed Games", "FollowedGamesCompoment"),
@@ -3641,7 +3648,7 @@ webpackJsonp([47], {
                         message: Object(a.d)("Top Games are unavailable at this time.", "TopGamesCompoment")
                     }) : (this.props.data.loading || (e = this.props.data, t = [], e.games.edges.map(function(e) {
                         var n = e.node;
-                        return t.push({
+                        return n && n.id && t.push({
                             id: n.id,
                             name: n.name,
                             viewersCount: n.viewersCount,
@@ -9881,4 +9888,4 @@ webpackJsonp([47], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.front-799acc3088b3d42f7069acaed84e10bd.js.map
+//# sourceMappingURL=pages.front-2ef7d51fdf4b84f67604399f5129cca6.js.map

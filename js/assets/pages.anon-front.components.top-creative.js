@@ -1857,6 +1857,7 @@ webpackJsonp([73, 74], {
                         linkTo: this.getLinkTo("/" + e.broadcaster.login, t),
                         channelNameLinkTo: this.getLinkTo("/" + e.broadcaster.login + "/videos", t),
                         streamType: e.type,
+                        streamMetadata: e.streamMetadata,
                         "data-a-target": "card-" + t,
                         "data-a-id": "card-" + (e.broadcaster.login || "").replace(/ /g, "")
                     }), a && r.createElement(p, {
@@ -1872,6 +1873,7 @@ webpackJsonp([73, 74], {
                         linkTo: this.getLinkTo("/" + e.broadcaster.login, t),
                         channelNameLinkTo: this.getLinkTo("/" + e.broadcaster.login + "/videos", t),
                         streamType: e.type,
+                        streamMetadata: e.streamMetadata,
                         videoPlayer: this.getVideoPlayer()
                     }), this.renderStreamFlag()))
                 }, t
@@ -4105,4 +4107,4 @@ webpackJsonp([73, 74], {
         })
     }
 });
-//# sourceMappingURL=pages.anon-front.components.top-creative-836c8c3c9a0da1e967c05e4d45298fd6.js.map
+//# sourceMappingURL=pages.anon-front.components.top-creative-3440d53ec5a1e1e81a4feb3e4477032b.js.map
