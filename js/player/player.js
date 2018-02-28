@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".c5aa8cd3a8d962d2de64.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".1f7cdc048c8cd51f5534.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -25765,6 +25765,7 @@
             }(),
             ct = {
                 afterSliderChildren: Se.a.oneOfType([Se.a.arrayOf(Se.a.element), Se.a.element]),
+                alwaysShowThumb: Se.a.bool,
                 behindSliderChildren: Se.a.oneOfType([Se.a.arrayOf(Se.a.element), Se.a.element]),
                 classNames: Se.a.shape({
                     slider: Se.a.string,
@@ -25798,7 +25799,8 @@
                     return 0
                 },
                 onMouseMove: function() {},
-                onMouseOut: function() {}
+                onMouseOut: function() {},
+                alwaysShowThumb: !1
             },
             dt = function(e) {
                 function t() {
@@ -25837,52 +25839,53 @@
                     value: function() {
                         var e, t = this.props,
                             n = t.afterSliderChildren,
-                            r = t.behindSliderChildren,
-                            i = t.classNames,
-                            a = t.max,
-                            o = t.min,
-                            s = t.onBlur,
-                            u = t.onKeyDown,
-                            l = t.sliderTabIndex,
-                            d = t.value,
-                            p = t.valueOptimizationEnabled,
-                            f = 0;
-                        f = this.state.isDragging ? this.state.currentDragValue : p ? this.state.optimizedValue : d;
-                        var h = ke.a.createElement(Xe, {
-                                className: i.sliderLeft,
-                                max: a,
-                                min: o,
-                                value: f
+                            r = t.alwaysShowThumb,
+                            i = t.behindSliderChildren,
+                            a = t.classNames,
+                            o = t.max,
+                            s = t.min,
+                            u = t.onBlur,
+                            l = t.onKeyDown,
+                            d = t.sliderTabIndex,
+                            p = t.value,
+                            f = t.valueOptimizationEnabled,
+                            h = 0;
+                        h = this.state.isDragging ? this.state.currentDragValue : f ? this.state.optimizedValue : p;
+                        var m = ke.a.createElement(Xe, {
+                                className: a.sliderLeft,
+                                max: o,
+                                min: s,
+                                value: h
                             }),
-                            m = null;
-                        (this.state.isHovering || this.state.isDragging) && (m = ke.a.createElement(rt, {
-                            className: i.sliderThumb,
-                            max: a,
-                            min: o,
+                            y = null;
+                        (this.state.isHovering || this.state.isDragging || r) && (y = ke.a.createElement(rt, {
+                            className: a.sliderThumb,
+                            max: o,
+                            min: s,
                             onTouchStart: this.handleTouchStart,
                             onMouseDown: this.handleMouseDown,
-                            value: f
+                            value: h
                         }));
-                        var y = Ie()((e = {}, c(e, i.slider, !0), c(e, "slider--no-outline", "mouse" === this.state.currentInputMethod), e));
+                        var v = Ie()((e = {}, c(e, a.slider, !0), c(e, "slider--no-outline", "mouse" === this.state.currentInputMethod), e));
                         return ke.a.createElement("div", {
-                            "aria-valuemax": a,
-                            "aria-valuemin": o,
-                            "aria-valuenow": f,
-                            className: y,
-                            onBlur: s,
+                            "aria-valuemax": o,
+                            "aria-valuemin": s,
+                            "aria-valuenow": h,
+                            className: v,
+                            onBlur: u,
                             onClick: this.handleClick,
                             onFocus: this.handleFocus,
-                            onKeyDown: u,
+                            onKeyDown: l,
                             onMouseMove: this.handleMouseMove,
                             onMouseLeave: this.handleMouseOut,
                             onMouseDown: this.handleMouseDown,
                             onTouchStart: this.handleTouchStart,
                             ref: this._sliderRefHandler,
                             role: "slider",
-                            tabIndex: l
-                        }, r, h, n, ke.a.createElement(at.a, {
+                            tabIndex: d
+                        }, i, m, n, ke.a.createElement(at.a, {
                             component: "div"
-                        }, m))
+                        }, y))
                     }
                 }, {
                     key: "_sliderRefHandler",
@@ -26103,6 +26106,7 @@
                             className: "player-volume__slider-container"
                         }, ke.a.createElement(dt, {
                             classNames: gt,
+                            alwaysShowThumb: !0,
                             max: 1,
                             min: 0,
                             value: r,
@@ -29020,7 +29024,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.02.28-205943+0f1916d896a5440d46bd8a8ff290f51ca32bd6eb",
+                    app_version: "2018.02.28-211441+bdadd31a08303638beb4d6663dbd7a1d72b3d58b",
                     flash_version: r,
                     referrer_url: i,
                     referrer_host: a.host,
