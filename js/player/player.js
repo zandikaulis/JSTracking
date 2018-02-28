@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".7f01009eb90d83f3e7b1.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".cdcd4e757c22829f66d8.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -6194,39 +6194,43 @@
                         var e = this,
                             t = this.store.getState(),
                             n = t.analytics,
-                            r = t.communities,
-                            i = t.stream,
-                            a = t.streamMetadata,
-                            o = t.collection,
-                            s = t.manifestInfo;
+                            r = t.collection,
+                            i = t.communities,
+                            a = t.manifestInfo,
+                            o = t.performance,
+                            s = t.stream,
+                            u = t.streamMetadata;
                         if (null !== this.bufferEmptyStartTime) {
-                            var u = (new Date).getTime();
+                            var c = (new Date).getTime();
                             this.trackEvent(ue.a.BUFFER_REFILL, {
-                                buffering_time: (u - this.bufferEmptyStartTime) / 1e3,
+                                buffering_time: (c - this.bufferEmptyStartTime) / 1e3,
                                 buffer_empty_count: this.bufferEmptyCount,
-                                broadcast_id: a.broadcastID,
-                                community_ids: r.ids,
-                                manifest_broadcast_id: s.broadcast_id
+                                broadcast_id: u.broadcastID,
+                                community_ids: i.ids,
+                                manifest_broadcast_id: a.broadcast_id
                             }), this.bufferEmptyStartTime = null
                         }
                         if (!this.hasPlayed) {
-                            var c = {
+                            var l = {
                                 time_since_load_start: Date.now() - n.playSessionStartTime,
-                                community_ids: r.ids,
-                                manifest_broadcast_id: s.broadcast_id,
-                                broadcast_id: a.broadcastID,
+                                community_ids: i.ids,
+                                manifest_broadcast_id: a.broadcast_id,
+                                broadcast_id: u.broadcastID,
                                 autoplayed: this.options.autoplay
                             };
-                            if (i.contentType === K.a && (Object(W.A)(i.videoId).then(function(t) {
+                            if (o.milestones.forEach(function(e) {
+                                    var t = "time_to_" + e.name;
+                                    l[t] = e.time
+                                }), s.contentType === K.a && (Object(W.A)(s.videoId).then(function(t) {
                                     e.countessTracker.trackVODView(t)
-                                }), o.id)) {
-                                var l = x.b.get(de.j),
-                                    d = l ? l[de.i] : "";
-                                c.collection_item_position = C()(o.items, {
-                                    itemId: i.videoId.substr(1)
-                                }), c.collection_id = o.id, c.collection_session_id = d
+                                }), r.id)) {
+                                var d = x.b.get(de.j),
+                                    f = d ? d[de.i] : "";
+                                l.collection_item_position = C()(r.items, {
+                                    itemId: s.videoId.substr(1)
+                                }), l.collection_id = r.id, l.collection_session_id = f
                             }
-                            this.trackEvent(ue.a.VIDEO_PLAY, c), this.hasPlayed = !0, this.valveClient.notify(), this.store.dispatch(G.c()), this.store.dispatch(G.d())
+                            this.trackEvent(ue.a.VIDEO_PLAY, l), this.hasPlayed = !0, this.valveClient.notify(), this.store.dispatch(G.c()), this.store.dispatch(G.d())
                         }
                         this.minutesWatchedTimer.start()
                     }
@@ -28967,7 +28971,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.02.27-235949+e88ba78dd89c08c4f0487417098ac3eaf81e4c21",
+                    app_version: "2018.02.28-183621+bd9ae04806782da22a3b9225dfd5e4ea552df1ea",
                     flash_version: r,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -34467,7 +34471,7 @@
                 }]), e
             }(),
             go = n(100),
-            bo = "//video-edge-6865c3.sjc01.hls.ttvnw.net/v1/playlist/Cr-iSlzJyduQwmCmS0tW4C0o4qhevau0YrdW9OHx3tXKfpzuyGauri9n5tg0gQ4Kc4gHcIJgadEJvpaInT38kyf4wsw2Fhx32_HQTHZfzdnbkm_XwVbUZiud72Dn6rAc11Po018rMuLsVZyeELsLRnKoPn6R3Njiley8kHn7tegzrNa59PlE2P5_VRFw1KMSU-536WGQtTgIB3IQzp90r-sT02iDcPJJr6LAWBAGhKW5-Xi9JnwcMwEc8k8d4fJXFgOP9SY4-YcqLNuPT0_Jmku0YmNJHudY0oeKVU9ilKWA6PPfOsBtAC2CFS1G5Aye4TtZBhlA38c1oJ8rl__OkDfyZqRBZXAFm8EJ0Thi7G4TJC5ozBj1UI-NjCWFjbWuA_P8wq_BjRYaTECXSuaqHqRKF91vOMlL31hoOtin-UU1NMoDFHdYW4He51oUvY.m3u8",
+            bo = "//video-edge-f8cb0c.sjc01.hls.ttvnw.net/v1/playlist/Cn48MMRXQ-PihG3x8yrlLtdmaA2LIxg_K3mslrgYqIdbfE6Wl4txzvk7t3qinZ6aAbaf-m7klnOb0pSD4OCrHb0Ssex4rPrajame6FCp_9s8dsmmtr5H7OCwF8wtpRkqdF22ZAFEqHRIqRcgT2dGdAMt-jVg_oA9G5M6IFSOuuA8CfROlwJ4R9Qu803PsBPZpv5hybpToXsKwcQfE55RNuyDbeaW0_iDbA-EDkpkh0i4DN4T8kvLq22rZoxtg4fLujUkBRfSflL_k5JaR4MHQJ_1Y-en-nGCjxnD27ZehfJHCYdXKP9ZNyovU3r-ddcKDtZ16bJaM_revze4oJqm1uRY1aE8bDOB1sae3f438QnORqZonsmnWNRHcrKh-H2KpGzhljxmFb12iILqfDieL73KoHYJGcoXsU2kEup2OrnqogoHwO-pcNxEArlaRQJ3BQq7wMrWmBIk_XKK2QJQL.m3u8",
             _o = n(45),
             wo = n(249),
             ko = n(131),
@@ -40573,9 +40577,7 @@
                 trackEvent: Wo.a.func.isRequired,
                 onClose: Wo.a.func.isRequired,
                 t: Wo.a.func.isRequired,
-                i18n: Wo.a.shape({
-                    langCode: Wo.a.string.isRequired
-                }),
+                lang: Wo.a.object.isRequired,
                 windowObj: Wo.a.object.isRequired
             },
             Im = Go()("pl-rec", "pl-flex", "pl-flex--stretch", "pl-flex--horizontalCenter"),
@@ -40611,8 +40613,8 @@
                             i = t.height,
                             a = t.onClose,
                             o = t.t,
-                            s = t.i18n,
-                            u = t.windowObj,
+                            s = t.windowObj,
+                            u = t.lang,
                             c = this._getNumOfCardsVisible(i, r),
                             l = n.map(function(t, n) {
                                 var r = Go()({
@@ -40632,8 +40634,8 @@
                                 });
                                 var i = Ho.a.createElement(Tm, {
                                     length: t.duration,
-                                    date: new u.Date(t.creationDate),
-                                    languageCode: s.langCode
+                                    date: new s.Date(t.creationDate),
+                                    languageCode: u.langCode
                                 });
                                 return Ho.a.createElement(Kh, {
                                     key: t.id + "_" + (n >= c),
@@ -40698,12 +40700,12 @@
             }(),
             Um = {
                 videos: Wo.a.array.isRequired,
-                i18n: Wo.a.object.isRequired,
                 onSelectVOD: Wo.a.func.isRequired,
                 playerHeight: Wo.a.number.isRequired,
                 playerWidth: Wo.a.number.isRequired,
                 onExit: Wo.a.func.isRequired,
                 trackEvent: Wo.a.func.isRequired,
+                lang: Wo.a.object.isRequired,
                 windowObj: Wo.a.object.isRequired,
                 streamWasOnline: Wo.a.bool.isRequired
             },
@@ -40728,7 +40730,7 @@
                     value: function() {
                         var e = this.props,
                             t = e.videos,
-                            n = e.i18n,
+                            n = e.lang,
                             r = e.windowObj,
                             i = e.playerHeight,
                             a = e.playerWidth,
@@ -40743,13 +40745,12 @@
                                 onSelect: o,
                                 onClose: s,
                                 trackEvent: u,
-                                windowObj: r,
-                                i18n: n
+                                lang: n,
+                                windowObj: r
                             }),
                             d = Ho.a.createElement(lm, {
                                 onClose: this.handleCloseFeaturedPane,
                                 onSelect: o,
-                                i18n: n,
                                 width: a,
                                 video: t[0],
                                 trackEvent: u
@@ -40789,12 +40790,12 @@
             Vm = {
                 recommendedVideos: Wo.a.array.isRequired,
                 recommendationType: Wo.a.string.isRequired,
+                lang: Wo.a.object.isRequired,
                 windowObj: Wo.a.object.isRequired,
                 showRecommendations: Wo.a.bool.isRequired,
                 selectRecommendedVideo: Wo.a.func.isRequired,
                 popScreen: Wo.a.func.isRequired,
                 clearRecommendedVODs: Wo.a.func.isRequired,
-                i18n: Wo.a.object.isRequired,
                 playerDimensions: Wo.a.shape({
                     height: Wo.a.number,
                     width: Wo.a.number
@@ -40815,8 +40816,8 @@
                     recommendationType: r.type,
                     windowObj: i,
                     showRecommendations: n[0] === ic.m && s.ended,
-                    i18n: t,
                     playerDimensions: a,
+                    lang: t,
                     trackEvent: o.trackEvent,
                     streamHasPlayed: s.hasPlayed
                 }
@@ -40845,25 +40846,25 @@
                     value: function() {
                         var e = this.props,
                             t = e.recommendedVideos,
-                            n = e.windowObj,
-                            r = e.showRecommendations,
-                            i = e.i18n,
+                            n = e.lang,
+                            r = e.windowObj,
+                            i = e.showRecommendations,
                             a = e.playerDimensions,
                             o = e.recommendationType,
                             s = e.trackEvent,
                             u = e.streamHasPlayed;
-                        if (t.length > 0 && this._preloadVideoThumbnails(), !r || 0 === t.length) return null;
+                        if (t.length > 0 && this._preloadVideoThumbnails(), !i || 0 === t.length) return null;
                         switch (o) {
                             case "offline recommendations":
                                 return Ho.a.createElement(Bm, {
                                     videos: t,
-                                    i18n: i,
                                     onSelectVOD: this.handleSelectVOD,
-                                    windowObj: n,
+                                    windowObj: r,
                                     playerHeight: a.height,
                                     playerWidth: a.width,
                                     onExit: this.handleExitRecommendations,
                                     trackEvent: s,
+                                    lang: n,
                                     streamWasOnline: u
                                 });
                             default:
@@ -41055,12 +41056,12 @@
             uy = Go()("player-overlay", "recommendations-overlay", "pl-rec-wrapper"),
             cy = {
                 videos: Wo.a.array.isRequired,
-                i18n: Wo.a.object.isRequired,
                 onSelectVOD: Wo.a.func.isRequired,
                 playerHeight: Wo.a.number.isRequired,
                 playerWidth: Wo.a.number.isRequired,
                 onExit: Wo.a.func.isRequired,
                 trackEvent: Wo.a.func.isRequired,
+                lang: Wo.a.object.isRequired,
                 windowObj: Wo.a.object.isRequired,
                 isMiniPlayer: Wo.a.bool.isRequired
             },
@@ -41091,34 +41092,33 @@
                     value: function() {
                         var e = this.props,
                             t = e.videos,
-                            n = e.i18n,
-                            r = e.windowObj,
-                            i = e.playerHeight,
-                            a = e.playerWidth,
-                            o = e.onSelectVOD,
-                            s = e.onExit,
-                            u = e.trackEvent,
-                            c = e.isMiniPlayer,
+                            n = e.windowObj,
+                            r = e.playerHeight,
+                            i = e.playerWidth,
+                            a = e.onSelectVOD,
+                            o = e.onExit,
+                            s = e.trackEvent,
+                            u = e.isMiniPlayer,
+                            c = e.lang,
                             l = this.state.showAutoplayingVOD;
-                        if (c) return null;
+                        if (u) return null;
                         var d = Ho.a.createElement(Dm, {
-                                height: i,
-                                width: a,
+                                height: r,
+                                width: i,
                                 videos: t,
-                                onSelect: o,
-                                onClose: s,
-                                trackEvent: u,
-                                windowObj: r,
-                                i18n: n
+                                onSelect: a,
+                                onClose: o,
+                                trackEvent: s,
+                                lang: c,
+                                windowObj: n
                             }),
                             f = Ho.a.createElement(oy, {
                                 onClose: this.handleCancelAutoplayVOD,
-                                onSelect: o,
-                                i18n: n,
-                                width: a,
+                                onSelect: a,
+                                width: i,
                                 video: t[0],
-                                trackEvent: u,
-                                windowObj: r
+                                trackEvent: s,
+                                windowObj: n
                             }),
                             p = l ? f : d;
                         return Ho.a.createElement("div", {
@@ -41151,10 +41151,10 @@
                 hasVideoEnded: Wo.a.bool.isRequired,
                 recommendedVideos: Wo.a.array.isRequired,
                 windowObj: Wo.a.object.isRequired,
+                lang: Wo.a.object.isRequired,
                 selectRecommendedVideo: Wo.a.func.isRequired,
                 popScreen: Wo.a.func.isRequired,
                 clearRecommendedVODs: Wo.a.func.isRequired,
-                i18n: Wo.a.object.isRequired,
                 playerDimensions: Wo.a.shape({
                     height: Wo.a.number,
                     width: Wo.a.number
@@ -41184,7 +41184,7 @@
                     hasVideoEnded: n.ended,
                     recommendedVideos: t.videos,
                     windowObj: a,
-                    i18n: r,
+                    lang: r,
                     playerDimensions: o,
                     trackEvent: s.trackEvent,
                     isMiniPlayer: u.isMini,
@@ -41242,20 +41242,21 @@
                         var e = this.props,
                             t = e.recommendedVideos,
                             n = e.windowObj,
-                            r = e.i18n,
-                            i = e.playerDimensions,
-                            a = e.trackEvent,
-                            o = e.isMiniPlayer;
-                        return e.screen[0] !== ic.m ? null : Ho.a.createElement(ly, {
+                            r = e.playerDimensions,
+                            i = e.trackEvent,
+                            a = e.isMiniPlayer,
+                            o = e.screen,
+                            s = e.lang;
+                        return o[0] !== ic.m ? null : Ho.a.createElement(ly, {
                             videos: t,
-                            i18n: r,
                             onSelectVOD: this.handleSelectVOD,
                             windowObj: n,
-                            playerHeight: i.height,
-                            playerWidth: i.width,
+                            playerHeight: r.height,
+                            playerWidth: r.width,
                             onExit: this.handleExitRecommendations,
-                            trackEvent: a,
-                            isMiniPlayer: o
+                            trackEvent: i,
+                            isMiniPlayer: a,
+                            lang: s
                         })
                     }
                 }, {
