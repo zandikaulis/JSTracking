@@ -4268,13 +4268,13 @@ window.SiteOptions = {
         },
         "c96f651c-0d69-43cf-9127-7eab817e5ebd": {
             "name": "android_dead_channel_to_profile",
-            "v": 2961,
+            "v": 3159,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 50,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 50,
                 "value": "active"
             }]
         },
@@ -4808,13 +4808,13 @@ window.SiteOptions = {
         },
         "e2f109ce-23ba-432b-b328-9e3d0e44d8c2": {
             "name": "android_profile_tab_order",
-            "v": 2958,
+            "v": 3160,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 50,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 50,
                 "value": "active"
             }]
         },
