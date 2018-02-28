@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".cdcd4e757c22829f66d8.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".f3a8dbc00671555ce09e.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -2598,7 +2598,7 @@
             }(),
             C = n(12),
             O = n(10),
-            T = n(25),
+            T = n(26),
             x = n(7),
             R = n.n(x),
             j = n(39),
@@ -3114,7 +3114,7 @@
         }), n.d(t, "o", function() {
             return ee
         }), t.x = r, t.u = i, t.J = a, t.K = o, t.E = s, t.z = u, t.L = c, t.F = l, t.I = d, t.H = f, t.w = p, t.v = h, t.y = m, t.G = y, t.B = v, t.A = g, t.D = b, t.C = _;
-        var P = n(25),
+        var P = n(26),
             C = n(21),
             O = n(35),
             T = n(6),
@@ -3267,6 +3267,96 @@
             s = "online",
             u = "offline",
             c = "unknown"
+    }, function(e, t, n) {
+        "use strict";
+
+        function r(e) {
+            return {
+                type: d,
+                value: e
+            }
+        }
+
+        function i() {
+            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : b;
+            return {
+                type: f,
+                value: e
+            }
+        }
+
+        function a(e) {
+            return {
+                type: p,
+                showUI: e
+            }
+        }
+
+        function o() {
+            return {
+                type: h
+            }
+        }
+
+        function s() {
+            return {
+                type: m
+            }
+        }
+
+        function u() {
+            return {
+                type: y
+            }
+        }
+
+        function c() {
+            return {
+                type: v
+            }
+        }
+
+        function l(e) {
+            return {
+                type: f,
+                value: w,
+                extensionsSubmenu: e
+            }
+        }
+        n.d(t, "d", function() {
+            return d
+        }), n.d(t, "f", function() {
+            return f
+        }), n.d(t, "e", function() {
+            return p
+        }), n.d(t, "g", function() {
+            return h
+        }), n.d(t, "a", function() {
+            return m
+        }), n.d(t, "c", function() {
+            return y
+        }), n.d(t, "b", function() {
+            return v
+        }), n.d(t, "h", function() {
+            return g
+        }), n.d(t, "j", function() {
+            return b
+        }), n.d(t, "k", function() {
+            return _
+        }), n.d(t, "i", function() {
+            return w
+        }), t.o = r, t.r = i, t.p = a, t.s = o, t.l = s, t.n = u, t.m = c, t.q = l;
+        var d = "set miniplayer",
+            f = "show settings menu",
+            p = "set ui display",
+            h = "show ui with auto hide",
+            m = "hide ui",
+            y = "hovering on ui element",
+            v = "hovering off ui element",
+            g = "show volume slider",
+            b = "none",
+            _ = "settings",
+            w = "extensions"
     }, function(e, t) {
         function n(e) {
             var t = typeof e;
@@ -3385,96 +3475,6 @@
             c = new s(i("sessionStorage")),
             l = new s(i("localStorage"));
         new s(new u)
-    }, function(e, t, n) {
-        "use strict";
-
-        function r(e) {
-            return {
-                type: d,
-                value: e
-            }
-        }
-
-        function i() {
-            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : b;
-            return {
-                type: f,
-                value: e
-            }
-        }
-
-        function a(e) {
-            return {
-                type: p,
-                showUI: e
-            }
-        }
-
-        function o() {
-            return {
-                type: h
-            }
-        }
-
-        function s() {
-            return {
-                type: m
-            }
-        }
-
-        function u() {
-            return {
-                type: y
-            }
-        }
-
-        function c() {
-            return {
-                type: v
-            }
-        }
-
-        function l(e) {
-            return {
-                type: f,
-                value: w,
-                extensionsSubmenu: e
-            }
-        }
-        n.d(t, "d", function() {
-            return d
-        }), n.d(t, "f", function() {
-            return f
-        }), n.d(t, "e", function() {
-            return p
-        }), n.d(t, "g", function() {
-            return h
-        }), n.d(t, "a", function() {
-            return m
-        }), n.d(t, "c", function() {
-            return y
-        }), n.d(t, "b", function() {
-            return v
-        }), n.d(t, "h", function() {
-            return g
-        }), n.d(t, "j", function() {
-            return b
-        }), n.d(t, "k", function() {
-            return _
-        }), n.d(t, "i", function() {
-            return w
-        }), t.o = r, t.r = i, t.p = a, t.s = o, t.l = s, t.n = u, t.m = c, t.q = l;
-        var d = "set miniplayer",
-            f = "show settings menu",
-            p = "set ui display",
-            h = "show ui with auto hide",
-            m = "hide ui",
-            y = "hovering on ui element",
-            v = "hovering off ui element",
-            g = "show volume slider",
-            b = "none",
-            _ = "settings",
-            w = "extensions"
     }, function(e, t, n) {
         e.exports = n(339)
     }, function(e, t, n) {
@@ -4049,7 +4049,7 @@
         }), n.d(t, "i", function() {
             return R
         }), t.m = i, t.r = a, t.k = o, t.o = c, t.n = l, t.q = d, t.s = f, t.p = y, t.l = v;
-        var g = n(25),
+        var g = n(26),
             b = n(80),
             _ = n(257),
             w = "request collection",
@@ -4157,7 +4157,7 @@
             f = n.n(d),
             p = n(267),
             h = n(84),
-            m = n(25),
+            m = n(26),
             y = "captionsEnabled",
             v = "captionsPreset",
             g = "captionsStyle",
@@ -4491,7 +4491,7 @@
         var d = n(7),
             f = n.n(d),
             p = n(18),
-            h = n(25),
+            h = n(26),
             m = n(37),
             y = n.n(m),
             v = "select quality",
@@ -5616,7 +5616,7 @@
             C = n.n(P),
             O = n(123),
             T = n(284),
-            x = n(25),
+            x = n(26),
             R = n(28);
         r.prototype._trackEvent = function(e) {
             (new Image).src = e
@@ -9162,7 +9162,7 @@
             return t == s || t == u || t == o || t == c
         }
         var i = n(49),
-            a = n(24),
+            a = n(25),
             o = "[object AsyncFunction]",
             s = "[object Function]",
             u = "[object GeneratorFunction]",
@@ -10303,7 +10303,7 @@
         var i = n(71),
             a = n(44),
             o = n(107),
-            s = n(24);
+            s = n(25);
         e.exports = r
     }, function(e, t) {
         function n(e, t) {
@@ -10366,7 +10366,7 @@
             var n = c.test(e);
             return n || l.test(e) ? d(e.slice(2), n ? 2 : 8) : u.test(e) ? o : +e
         }
-        var i = n(24),
+        var i = n(25),
             a = n(113),
             o = NaN,
             s = /^\s+|\s+$/g,
@@ -12377,7 +12377,7 @@
         }), n.d(t, "b", function() {
             return c
         }), t.e = r, t.d = i, t.c = a;
-        var o = n(25),
+        var o = n(26),
             s = n(62),
             u = "initialize ui settings",
             c = "set persistence"
@@ -14559,7 +14559,7 @@
             Se = n(67),
             Pe = n(86),
             Ce = n(275),
-            Oe = n(26),
+            Oe = n(24),
             Te = n(36),
             xe = n(13),
             Re = function() {
@@ -16874,7 +16874,7 @@
         var i = n(119),
             a = n(73),
             o = n(107),
-            s = n(24),
+            s = n(25),
             u = n(74);
         e.exports = r
     }, function(e, t, n) {
@@ -17393,7 +17393,7 @@
         function r(e) {
             return e === e && !i(e)
         }
-        var i = n(24);
+        var i = n(25);
         e.exports = r
     }, function(e, t) {
         function n(e, t) {
@@ -21890,7 +21890,7 @@
             };
         r.propTypes = S;
         var P = Object(m.c)()(r),
-            C = n(25),
+            C = n(26),
             O = n(7),
             T = n.n(O),
             x = n(14),
@@ -22548,7 +22548,7 @@
             O = n.n(C),
             T = n(5),
             x = n.n(T),
-            R = n(24),
+            R = n(25),
             j = n.n(R),
             A = n(459),
             I = n.n(A),
@@ -22570,7 +22570,7 @@
             }),
             D = Object.freeze((g = {}, r(g, M.JANUARY, 31), r(g, M.FEBRUARY, 28), r(g, M.MARCH, 31), r(g, M.APRIL, 30), r(g, M.MAY, 31), r(g, M.JUNE, 30), r(g, M.JULY, 31), r(g, M.AUGUST, 31), r(g, M.SEPTEMBER, 30), r(g, M.OCTOBER, 31), r(g, M.NOVEMBER, 30), r(g, M.DECEMBER, 31), g)),
             q = Object.freeze(x()({}, D, r({}, M.FEBRUARY, 29))),
-            U = n(25),
+            U = n(26),
             B = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -23432,7 +23432,7 @@
             b = n(19),
             _ = n(109),
             w = n(491),
-            k = n(24),
+            k = n(25),
             E = n(493),
             S = n(50),
             P = 1,
@@ -26121,7 +26121,7 @@
                 }, ke.a.createElement(We, null), ke.a.createElement(wt, null))
             },
             Et = n(182),
-            St = n(26),
+            St = n(24),
             Pt = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -28433,7 +28433,7 @@
             u = n(1),
             c = n.n(u),
             l = n(3),
-            d = n(26),
+            d = n(24),
             f = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -28535,7 +28535,7 @@
             u = n(1),
             c = n.n(u),
             l = n(3),
-            d = n(26),
+            d = n(24),
             f = n(2),
             p = n.n(f),
             h = function() {
@@ -28971,7 +28971,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.02.28-183621+bd9ae04806782da22a3b9225dfd5e4ea552df1ea",
+                    app_version: "2018.02.28-185954+07d5f345bde37fbe6389ad8943b1bf8225cb56dd",
                     flash_version: r,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -34516,7 +34516,7 @@
             Do = "qFEaZsFQnwEdUIs",
             qo = "//d1xfq2052q7thw.cloudfront.net/1.7.461.js",
             Uo = n(17),
-            Bo = n(25),
+            Bo = n(26),
             Fo = n(182),
             Vo = n(0),
             Ho = n.n(Vo),
@@ -36162,10 +36162,10 @@
             vc = n(274),
             gc = n(276),
             bc = "ID3_AD",
-            _c = n(24),
+            _c = n(25),
             wc = n.n(_c),
             kc = n(16),
-            Ec = n(26),
+            Ec = n(24),
             Sc = n(35),
             Pc = n(56),
             Cc = n.n(Pc),
@@ -36422,7 +36422,7 @@
                     key: "_initSubscriptions",
                     value: function() {
                         var e = this;
-                        this._unsubscribes.push(Object(Uo.a)(this._store, ["analytics.playSessionId", "captions.available", "manifestInfo.broadcast_id", "stream", "clipsModeration." + Bc.e, "clipsModeration." + Bc.d, "clipsModeration." + Bc.c], function() {
+                        this._unsubscribes.push(Object(Uo.a)(this._store, ["analytics.playSessionId", "captions.available", "manifestInfo.broadcast_id", "stream", "clipsModeration." + Bc.e, "clipsModeration." + Bc.d, "clipsModeration." + Bc.c, "ui.showSettings"], function() {
                             e._sendStoreState()
                         })), this._unsubscribes.push(Object(Uo.a)(this._store, ["error"], this.onError.bind(this))), this.onError(this._store.getState()), this._unsubscribes.push(Object(Uo.a)(this._store, ["analytics.playSessionId", "manifestInfo.broadcast_id"], function() {})), this._unsubscribes.push(Object(Uo.a)(this._store, ["viewercount"], function() {
                             e._sendStoreState(), e._sendPlayerEvent("viewerschange")
@@ -36722,7 +36722,8 @@
                             a = e.stats,
                             o = e.stream,
                             s = e.viewercount,
-                            u = e.clipsModeration;
+                            u = e.clipsModeration,
+                            c = e.ui;
                         return {
                             captions: {
                                 available: n.available
@@ -36737,6 +36738,9 @@
                             stream: {
                                 contentId: o.contentType === Dc.a ? o.contentId : "",
                                 customerId: o.contentType === Dc.a ? o.customerId : ""
+                            },
+                            ui: {
+                                isSettingsShown: c.showSettings !== Ec.j
                             },
                             clipsModeration: {
                                 isClipsReportModalOpen: u[Bc.e] === Bc.g,
@@ -43975,7 +43979,7 @@
         }
         var i = n(91),
             a = n(301),
-            o = n(24),
+            o = n(25),
             s = n(204),
             u = /[\\^$.*+?()[\]{}|]/g,
             c = /^\[object .+?Constructor\]$/,
@@ -44081,7 +44085,7 @@
             for (var r in e)("constructor" != r || !t && u.call(e, r)) && n.push(r);
             return n
         }
-        var i = n(24),
+        var i = n(25),
             a = n(110),
             o = n(310),
             s = Object.prototype,
@@ -44737,7 +44741,7 @@
             a = n(227),
             o = n(164),
             s = n(367),
-            u = n(24),
+            u = n(25),
             c = n(59),
             l = n(231);
         e.exports = r
@@ -44778,14 +44782,14 @@
             d = n(167),
             f = n(109),
             p = n(91),
-            h = n(24),
+            h = n(25),
             m = n(168),
             y = n(148),
             v = n(231),
             g = n(369);
         e.exports = r
     }, function(e, t, n) {
-        var r = n(24),
+        var r = n(25),
             i = Object.create,
             a = function() {
                 function e() {}
@@ -47191,7 +47195,7 @@
             })
         }
         var i = n(477),
-            a = n(24),
+            a = n(25),
             o = "Expected a function";
         e.exports = r
     }, function(e, t, n) {
@@ -47253,7 +47257,7 @@
             if ("function" != typeof e) throw new TypeError(s);
             return t = o(t) || 0, i(n) && (P = !!n.leading, C = "maxWait" in n, _ = C ? u(o(n.maxWait) || 0, t) : _, O = "trailing" in n ? !!n.trailing : O), v.cancel = m, v.flush = y, v
         }
-        var i = n(24),
+        var i = n(25),
             a = n(478),
             o = n(112),
             s = "Expected a function",
