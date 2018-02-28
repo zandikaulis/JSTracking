@@ -119,6 +119,119 @@ webpackJsonp([42], {
             return f
         })
     },
+    "+po9": function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "FragmentDefinition",
+                name: {
+                    kind: "Name",
+                    value: "leaderboardItem"
+                },
+                typeCondition: {
+                    kind: "NamedType",
+                    name: {
+                        kind: "Name",
+                        value: "BitsLeaderboard"
+                    }
+                },
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "items"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "edges"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "cursor"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }, {
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "node"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "id"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }, {
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "entryKey"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }, {
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "rank"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }, {
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "score"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }]
+                                        }
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 106
+            }
+        };
+        n.loc.source = {
+            body: "fragment leaderboardItem on BitsLeaderboard {\nitems {\nedges {\ncursor\nnode {\nid\nentryKey\nrank\nscore\n}\n}\n}\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
     "/LBW": function(e, t, n) {
         "use strict";
         t.h = function(e) {
@@ -1292,8 +1405,8 @@ webpackJsonp([42], {
                     asset: F._16.Neck
                 })))
             }),
-            Y = 3;
-        var K, J = n("nEoF"),
+            K = 3;
+        var Y, J = n("nEoF"),
             X = n("S20p"),
             Z = function(e) {
                 function t() {
@@ -1337,7 +1450,7 @@ webpackJsonp([42], {
                                                         case 0:
                                                             o = "https://api.twitch.tv/api/channels/" + e + "/use_chat_notification_token", s = 1, a.label = 1;
                                                         case 1:
-                                                            if (!(s <= Y)) return [3, 7];
+                                                            if (!(s <= K)) return [3, 7];
                                                             a.label = 2;
                                                         case 2:
                                                             return a.trys.push([2, 5, , 6]), [4, fetch(o, {
@@ -1358,7 +1471,7 @@ webpackJsonp([42], {
                                                         case 4:
                                                             return [2, a.sent()];
                                                         case 5:
-                                                            if (l = a.sent(), s === Y) throw l;
+                                                            if (l = a.sent(), s === K) throw l;
                                                             return [3, 6];
                                                         case 6:
                                                             return ++s, [3, 1];
@@ -1441,7 +1554,7 @@ webpackJsonp([42], {
         n("NZkJ");
         ! function(e) {
             e[e.Resub = 1] = "Resub", e[e.Purchase = 2] = "Purchase"
-        }(K || (K = {}));
+        }(Y || (Y = {}));
         var ee = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -1462,23 +1575,23 @@ webpackJsonp([42], {
                             }
                         })
                     }, t.requestResubSpace = function() {
-                        t.addSpace(K.Resub)
+                        t.addSpace(Y.Resub)
                     }, t.dismissResubSpace = function() {
-                        t.removeSpace(K.Resub)
+                        t.removeSpace(Y.Resub)
                     }, t.requestPurchaseSpace = function() {
-                        t.addSpace(K.Purchase)
+                        t.addSpace(Y.Purchase)
                     }, t.dismissPurchaseSpace = function() {
-                        t.removeSpace(K.Purchase)
+                        t.removeSpace(Y.Purchase)
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
                     var e = null;
                     this.state.requestedSpaces.size && (e = Array.from(this.state.requestedSpaces.values()).sort()[0]);
                     var t = O({
-                            "share-to-chat__space--hidden": e !== K.Resub
+                            "share-to-chat__space--hidden": e !== Y.Resub
                         }),
                         n = O({
-                            "share-to-chat__space--hidden": e !== K.Purchase
+                            "share-to-chat__space--hidden": e !== Y.Purchase
                         });
                     return c.createElement(F._2, null, c.createElement(F._2, {
                         className: t
@@ -2572,8 +2685,8 @@ webpackJsonp([42], {
             ze = n("CSlQ"),
             Qe = n("9fnI"),
             $e = n("OAwv"),
-            Ye = n("CIox"),
-            Ke = n("VAT8"),
+            Ke = n("CIox"),
+            Ye = n("VAT8"),
             Je = function() {
                 function e() {}
                 return e.fetchChannelsList = function() {
@@ -4337,8 +4450,8 @@ webpackJsonp([42], {
                     })))) : null
                 }, t
             }(c.Component),
-            Yt = n("nrdj"),
-            Kt = n("XFkZ"),
+            Kt = n("nrdj"),
+            Yt = n("XFkZ"),
             Jt = n("CFVp"),
             Xt = (n("A0Hf"), function(e) {
                 function t() {
@@ -4372,7 +4485,7 @@ webpackJsonp([42], {
                         }, i)
                     }
                     var a, o = null;
-                    o = this.props.selfId && this.props.selfId === this.props.id ? c.createElement(F._6, {
+                    o = this.props.selfId && this.props.selfId === this.props.value ? c.createElement(F._6, {
                         label: this.props.rank.toString(),
                         type: F._7.Brand
                     }) : c.createElement(F._35, {
@@ -4401,13 +4514,13 @@ webpackJsonp([42], {
                             left: "auto"
                         },
                         display: F.N.InlineBlock
-                    }, c.createElement(Yt.a, {
+                    }, c.createElement(Kt.a, {
                         animated: !1,
                         showImage: !0,
                         showAmount: !0,
                         prefix: "Cheer",
                         bitsConfig: e,
-                        size: Yt.b.ExtremelySmall,
+                        size: Kt.b.ExtremelySmall,
                         display: F.N.InlineFlex,
                         amount: this.props.score,
                         formattedNumber: !0,
@@ -4419,7 +4532,7 @@ webpackJsonp([42], {
                     }, a)
                 }, t
             }(c.Component)),
-            Zt = Object(p.d)(Object(u.a)(Kt, {
+            Zt = Object(p.d)(Object(u.a)(Yt, {
                 name: "data",
                 skip: function(e) {
                     return !e.id
@@ -4427,7 +4540,7 @@ webpackJsonp([42], {
                 options: function(e) {
                     return {
                         variables: {
-                            userID: e.id,
+                            userID: e.value,
                             profileImageWidth: 50
                         }
                     }
@@ -4452,7 +4565,7 @@ webpackJsonp([42], {
                             ellipsis: !0,
                             bold: !0
                         }, n);
-                        this.props.selfId && this.props.selfId === this.props.id && (i = c.createElement(F._35, {
+                        this.props.selfId && this.props.selfId === this.props.value && (i = c.createElement(F._35, {
                             ellipsis: !0,
                             color: F.I.Link,
                             bold: !0
@@ -4466,7 +4579,7 @@ webpackJsonp([42], {
                         }, i)
                     }
                     var a, o = null;
-                    o = this.props.selfId && this.props.selfId === this.props.id ? c.createElement(F._6, {
+                    o = this.props.selfId && this.props.selfId === this.props.value ? c.createElement(F._6, {
                         label: this.props.rank.toString(),
                         type: F._7.Brand
                     }) : c.createElement(F._35, {
@@ -4493,13 +4606,13 @@ webpackJsonp([42], {
                             left: "auto"
                         },
                         display: F.N.InlineBlock
-                    }, c.createElement(Yt.a, {
+                    }, c.createElement(Kt.a, {
                         animated: !1,
                         showImage: !0,
                         showAmount: !0,
                         prefix: "Cheer",
                         bitsConfig: e,
-                        size: Yt.b.ExtremelySmall,
+                        size: Kt.b.ExtremelySmall,
                         display: F.N.InlineFlex,
                         amount: this.props.score,
                         formattedNumber: !0,
@@ -4510,7 +4623,7 @@ webpackJsonp([42], {
                     }, a)
                 }, t
             }(c.Component)),
-            tn = Object(p.d)(Object(u.a)(Kt, {
+            tn = Object(p.d)(Object(u.a)(Yt, {
                 name: "data",
                 skip: function(e) {
                     return !e.id
@@ -4518,7 +4631,7 @@ webpackJsonp([42], {
                 options: function(e) {
                     return {
                         variables: {
-                            userID: e.id,
+                            userID: e.value,
                             profileImageWidth: 50
                         }
                     }
@@ -4641,6 +4754,7 @@ webpackJsonp([42], {
                     }
                 }, c.createElement(tn, {
                     id: e.node.id,
+                    value: e.node.entryKey,
                     score: e.node.score,
                     bitsConfig: this.props.bitsConfig,
                     medal: t,
@@ -4661,6 +4775,7 @@ webpackJsonp([42], {
                     }
                 }, c.createElement(Zt, {
                     id: e.id,
+                    value: e.entryKey,
                     score: e.score,
                     bitsConfig: this.props.bitsConfig,
                     selfId: this.props.selfId,
@@ -4671,7 +4786,7 @@ webpackJsonp([42], {
                 if (!this.props.topEdges) return !1;
                 var t = !0;
                 return this.props.topEdges.forEach(function(n) {
-                    n.node.id === e.props.selfId && (t = !1)
+                    n.node.entryKey === e.props.selfId && (t = !1)
                 }), t
             }, t.prototype.renderUserPlaceEntry = function() {
                 if (!this.props.userPlaceEdge) return null;
@@ -4722,7 +4837,7 @@ webpackJsonp([42], {
                             ellipsis: !0,
                             bold: !0
                         }, i);
-                        this.props.selfId && this.props.selfId === this.props.id && (a = c.createElement(F._6, {
+                        this.props.selfId && this.props.selfId === this.props.entryKey && (a = c.createElement(F._6, {
                             label: i,
                             type: F._7.Brand
                         })), n = c.createElement(F._2, {
@@ -4773,13 +4888,13 @@ webpackJsonp([42], {
                             }
                         }, n, c.createElement(F._2, {
                             className: "bits-leaderboard-header-first-entry__score"
-                        }, c.createElement(Yt.a, {
+                        }, c.createElement(Kt.a, {
                             animated: !1,
                             showImage: !0,
                             showAmount: !0,
                             prefix: "Cheer",
                             bitsConfig: t,
-                            size: Yt.b.ExtremelySmall,
+                            size: Kt.b.ExtremelySmall,
                             display: F.N.InlineFlex,
                             amount: this.props.score,
                             formattedNumber: !0,
@@ -4800,15 +4915,15 @@ webpackJsonp([42], {
                     }, e)
                 }, t
             }(c.Component),
-            on = Object(p.d)(Object(u.a)(Kt, {
+            on = Object(p.d)(Object(u.a)(Yt, {
                 name: "data",
                 skip: function(e) {
-                    return !e.id
+                    return !e.id || !e.entryKey
                 },
                 options: function(e) {
                     return {
                         variables: {
-                            userID: e.id,
+                            userID: e.entryKey,
                             profileImageWidth: 50
                         }
                     }
@@ -4833,7 +4948,7 @@ webpackJsonp([42], {
                             ellipsis: !0,
                             bold: !0
                         }, i);
-                        this.props.selfId && this.props.selfId === this.props.id && (a = c.createElement(F._6, {
+                        this.props.selfId && this.props.selfId === this.props.entryKey && (a = c.createElement(F._6, {
                             label: i,
                             type: F._7.Brand
                         })), n = c.createElement(F._2, {
@@ -4887,13 +5002,13 @@ webpackJsonp([42], {
                             margin: {
                                 left: "auto"
                             }
-                        }, c.createElement(Yt.a, {
+                        }, c.createElement(Kt.a, {
                             animated: !1,
                             showImage: !0,
                             showAmount: !0,
                             prefix: "Cheer",
                             bitsConfig: t,
-                            size: Yt.b.ExtremelySmall,
+                            size: Kt.b.ExtremelySmall,
                             display: F.N.InlineFlex,
                             amount: this.props.score,
                             formattedNumber: !0,
@@ -4910,15 +5025,15 @@ webpackJsonp([42], {
                     }, e)
                 }, t
             }(c.Component)),
-            ln = Object(p.d)(Object(u.a)(Kt, {
+            ln = Object(p.d)(Object(u.a)(Yt, {
                 name: "data",
                 skip: function(e) {
-                    return !e.id
+                    return !e.id || !e.entryKey
                 },
                 options: function(e) {
                     return {
                         variables: {
-                            userID: e.id,
+                            userID: e.entryKey,
                             profileImageWidth: 50
                         }
                     }
@@ -4932,6 +5047,7 @@ webpackJsonp([42], {
                         return t.props.topEdges && t.props.topEdges[0] && (n = t.props.topEdges[0]), e = n ? c.createElement(on, {
                             selfId: t.props.selfId,
                             id: n.node.id,
+                            entryKey: n.node.entryKey,
                             score: n.node.score,
                             bitsConfig: t.props.bitsConfig
                         }) : c.createElement(on, {
@@ -4991,6 +5107,7 @@ webpackJsonp([42], {
                     return e > 0 && this.props.topEdges && this.props.topEdges[e - 1] && (i = this.props.topEdges[e - 1]), n = i ? c.createElement(ln, {
                         selfId: this.props.selfId,
                         id: i.node.id,
+                        entryKey: i.node.entryKey,
                         score: i.node.score,
                         medal: t,
                         bitsConfig: this.props.bitsConfig
@@ -5179,10 +5296,10 @@ webpackJsonp([42], {
                 }, t.prototype.renderLeaderboard = function() {
                     if (this.props.data.error || !this.props.data.user || null === this.props.data.user.cheer || null === this.props.data.user.cheer.leaderboard) return null;
                     if (!this.props.data.user.cheer.settings || !this.props.data.user.cheer.settings.leaderboard || !this.props.data.user.cheer.settings.leaderboard.isEnabled) return null;
-                    var e = this.props.data.user.cheer.leaderboard.entries.edges.slice(0, 10),
+                    var e = this.props.data.user.cheer.leaderboard.items.edges.slice(0, 10),
                         t = null,
                         n = this.props.data.user.cheer.settings.leaderboard.timePeriodType ? this.props.data.user.cheer.settings.leaderboard.timePeriodType : Qt.AllTime;
-                    this.props.data.user.self && this.props.data.user.self.bitsLeaderboardEntry && (t = this.props.data.user.self.bitsLeaderboardEntry);
+                    this.props.data.user.self && this.props.data.user.self.bitsLeaderboardItem && (t = this.props.data.user.self.bitsLeaderboardItem);
                     var i = null;
                     this.state.isExpanded && (i = c.createElement(nn, {
                         topEdges: e,
@@ -5248,7 +5365,7 @@ webpackJsonp([42], {
                 }
             }), Object(me.a)(function(e) {
                 return {
-                    query: hn,
+                    query: Ht,
                     variables: {
                         channelID: e.channelID
                     },
@@ -5265,7 +5382,7 @@ webpackJsonp([42], {
                     }
                 }
             }), Object(me.a)(function(e) {
-                return Object(pn.a)(hn, e.channelID, e.data.user && e.data.user.cheer && e.data.user.cheer.leaderboard)
+                return Object(pn.a)(hn, e.channelID, e.data.user && e.data.user.cheer && e.data.user.cheer.leaderboard, e.userID)
             }))(gn),
             vn = function(e) {
                 function t() {
@@ -5472,7 +5589,7 @@ webpackJsonp([42], {
                 }, c.createElement(F._35, {
                     type: F._40.H4,
                     bold: !0
-                }, t), c.createElement(Yt.a, {
+                }, t), c.createElement(Kt.a, {
                     prefix: e.prefix,
                     amount: i,
                     bitsConfig: e.bitsConfig,
@@ -5738,11 +5855,11 @@ webpackJsonp([42], {
                         padding: {
                             x: 1
                         }
-                    }, c.createElement("li", null, c.createElement(Yt.a, {
+                    }, c.createElement("li", null, c.createElement(Kt.a, {
                         prefix: t.alt,
                         amount: t.cheerAmount > In.k ? In.k : t.cheerAmount,
                         bitsConfig: e.bitsConfig,
-                        size: Yt.b.Small,
+                        size: Kt.b.Small,
                         showAmount: !0,
                         showImage: !0
                     })))
@@ -5767,7 +5884,7 @@ webpackJsonp([42], {
                         padding: {
                             top: 2
                         }
-                    }, c.createElement(Yt.a, {
+                    }, c.createElement(Kt.a, {
                         prefix: n,
                         amount: e.amount > In.k ? In.k : e.amount,
                         bitsConfig: e.bitsConfig,
@@ -5832,14 +5949,14 @@ webpackJsonp([42], {
                         "data-a-target": "min-emote-bits-error"
                     }, d)
                 }
-                var u = c.createElement(Yt.a, {
+                var u = c.createElement(Kt.a, {
                     amount: e.amount,
                     prefix: In.g,
                     bitsConfig: e.bitsConfig,
                     display: F.N.Inline,
                     showImage: !1,
                     showAmount: !0,
-                    size: Yt.b.Medium
+                    size: Kt.b.Medium
                 });
                 return c.createElement(F._2, null, c.createElement(F._2, {
                     display: F.N.Flex,
@@ -5866,8 +5983,8 @@ webpackJsonp([42], {
                     amount: e.amount
                 }))
             }),
-            Yn = n("qe65"),
-            Kn = (n("f1ZS"), {
+            Kn = n("qe65"),
+            Yn = (n("f1ZS"), {
                 themed: !0,
                 dark: {
                     "1x": In.b + "/dark/animated/promo/intro.gif"
@@ -5888,8 +6005,8 @@ webpackJsonp([42], {
                     padding: {
                         bottom: 1
                     }
-                }, c.createElement(Yn.a, {
-                    sources: Kn
+                }, c.createElement(Kn.a, {
+                    sources: Yn
                 })), c.createElement(F._35, {
                     italic: !0
                 }, Object(r.d)("Your Cheer is currently processing.", "Bits--SendingBits")))
@@ -5916,7 +6033,7 @@ webpackJsonp([42], {
                         padding: {
                             bottom: 1
                         }
-                    }, c.createElement(Yt.a, {
+                    }, c.createElement(Kt.a, {
                         prefix: i,
                         amount: e.totalBits,
                         bitsConfig: e.bitsConfig,
@@ -6012,13 +6129,13 @@ webpackJsonp([42], {
                             var i = "";
                             t.key && (i = t.key.replace(":", ""));
                             var a = null;
-                            e.props.showCheermoteAmount && t.key && (a = c.createElement(Yt.a, {
+                            e.props.showCheermoteAmount && t.key && (a = c.createElement(Kt.a, {
                                 bitsConfig: e.props.bitsConfig,
                                 prefix: "",
                                 amount: +t.key.split(":")[1],
                                 showImage: !1,
                                 showAmount: !0,
-                                size: Yt.b.Small
+                                size: Kt.b.Small
                             }));
                             var r = c.createElement("li", {
                                 key: t.key,
@@ -7419,8 +7536,8 @@ webpackJsonp([42], {
                     onShowViewerCard: o.d
                 }, e)
             })(Qi),
-            Yi = n("tjbt"),
-            Ki = n("ZiSq"),
+            Ki = n("tjbt"),
+            Yi = n("ZiSq"),
             Ji = n("vLl9"),
             Xi = (n("dVd7"), r.i.withCategory("chat-room")),
             Zi = function(e) {
@@ -7454,7 +7571,7 @@ webpackJsonp([42], {
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
                     var e = void 0 !== $e.parse(this.props.location.search).darkpopout,
-                        t = ((n = {})[Object(Ke.c)(h.a.Dark)] = e, n);
+                        t = ((n = {})[Object(Ye.c)(h.a.Dark)] = e, n);
                     if (this.props.isBackground) return null;
                     if (this.props.isHidden && !this.props.isPopout) return c.createElement(F._25, {
                         alignItems: F.c.Center,
@@ -7551,7 +7668,7 @@ webpackJsonp([42], {
                         fullWidth: !0
                     }, this.props.children), s, this.props.isOwnChannel && !this.props.isEmbedded && c.createElement(Ze, {
                         hostedChannelLogin: this.props.hostedChannelLogin
-                    }), a, c.createElement(Yi.a, {
+                    }), a, c.createElement(Ki.a, {
                         channelID: this.props.channelID,
                         channelLogin: this.props.channelLogin,
                         isEmbedded: this.props.isEmbedded,
@@ -7588,7 +7705,7 @@ webpackJsonp([42], {
                         fullWidth: !0,
                         position: F._9.Absolute,
                         "data-a-target": "chat-user-card"
-                    }, c.createElement(Ki.a, {
+                    }, c.createElement(Yi.a, {
                         isEmbedded: this.props.isEmbedded,
                         onSendMessage: this.props.onSendMessage,
                         channelID: this.props.channelID
@@ -7635,7 +7752,7 @@ webpackJsonp([42], {
                         }), (!n.user.self.selectedBadge || i.setID === bn.Bits && n.user.self.selectedBadge.setID === bn.Bits) && (n.user.self.selectedBadge = i), n.user.self.selectedBadge && (i.setID !== bn.Leaderboard || n.user.self.selectedBadge.setID !== bn.Bits && n.user.self.selectedBadge.setID !== bn.Leaderboard) || (n.user.self.selectedBadge = i)), n
                     }
                 }
-            }), Ye.e)(Zi),
+            }), Ke.e)(Zi),
             ta = "(?:\\W|^)",
             na = "(?:$|\\W)",
             ia = 150,
@@ -12293,111 +12410,6 @@ webpackJsonp([42], {
         };
         e.exports = n
     },
-    HQaX: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "FragmentDefinition",
-                name: {
-                    kind: "Name",
-                    value: "leaderboardEntry"
-                },
-                typeCondition: {
-                    kind: "NamedType",
-                    name: {
-                        kind: "Name",
-                        value: "BitsLeaderboard"
-                    }
-                },
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "entries"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "edges"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "cursor"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }, {
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "node"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "id"
-                                                },
-                                                arguments: [],
-                                                directives: []
-                                            }, {
-                                                kind: "Field",
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "rank"
-                                                },
-                                                arguments: [],
-                                                directives: []
-                                            }, {
-                                                kind: "Field",
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "score"
-                                                },
-                                                arguments: [],
-                                                directives: []
-                                            }]
-                                        }
-                                    }]
-                                }
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 100
-            }
-        };
-        n.loc.source = {
-            body: "fragment leaderboardEntry on BitsLeaderboard {\nentries {\nedges {\ncursor\nnode {\nid\nrank\nscore\n}\n}\n}\n}",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
     HuX0: function(e, t) {},
     IEOs: function(e, t) {
         var n = {
@@ -13780,7 +13792,7 @@ webpackJsonp([42], {
                     }, "i"))))), a.createElement(I._2, null, o))
                 }, t
             }(a.Component);
-        var Y = Object(r.b)(function() {
+        var K = Object(r.b)(function() {
                 return {}
             }, function(e) {
                 return Object(s.b)({
@@ -13790,7 +13802,7 @@ webpackJsonp([42], {
                     }
                 }, e)
             })($),
-            K = n("UzRK"),
+            Y = n("UzRK"),
             J = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -13804,7 +13816,7 @@ webpackJsonp([42], {
                     }, t.getSelectedFollowerDuration = function() {
                         if (t.props.followerModeEnabled) return t.props.followerModeDuration;
                         var e = t.props.lastUsedFollowerDurations[t.props.channelLogin];
-                        return "number" == typeof e ? e : K.a
+                        return "number" == typeof e ? e : Y.a
                     }, t.onFollowerModeToggle = function() {
                         if (t.props.followerModeEnabled) t.props.onChatCommand(Object(k.d)()), t.props.onFollowerModeDisable();
                         else {
@@ -13858,7 +13870,7 @@ webpackJsonp([42], {
                     var e = this;
                     if (!this.props.isCurrentUserModerator) return null;
                     var t = this.getSelectedFollowerDuration(),
-                        n = K.b.map(function(n) {
+                        n = Y.b.map(function(n) {
                             return a.createElement(I._0, {
                                 "data-duration": n,
                                 key: n,
@@ -13866,7 +13878,7 @@ webpackJsonp([42], {
                                 selected: n === t
                             }, a.createElement(I._2, {
                                 padding: .5
-                            }, Object(K.c)(n)))
+                            }, Object(Y.c)(n)))
                         });
                     return a.createElement(I._25, {
                         key: "mod-tools",
@@ -13936,7 +13948,7 @@ webpackJsonp([42], {
                         "data-a-target": "follower-mode-dropdown",
                         "data-test-selector": "follower-mode-duration-menu",
                         dropdown: !0
-                    }, Object(K.d)(t)), a.createElement(I.p, {
+                    }, Object(Y.d)(t)), a.createElement(I.p, {
                         direction: I.q.TopRight
                     }, a.createElement(I._2, {
                         padding: .5
@@ -13977,7 +13989,7 @@ webpackJsonp([42], {
                         id: "chat-settings-show-automod-messages",
                         label: Object(C.d)("Show Messages Caught by AutoMod", "ChatSettings"),
                         onChange: this.onShowAutoModActionsToggle
-                    })), a.createElement(Y, {
+                    })), a.createElement(K, {
                         key: "recent-raids",
                         recentRaids: this.props.recentRaids,
                         onClickRecentRaids: this.onClickRecentRaids,
@@ -14229,7 +14241,7 @@ webpackJsonp([42], {
                         key: "recent-raids-title",
                         color: I.I.Alt2,
                         transform: I._39.Uppercase
-                    }, Object(C.d)("Recent Raids", "ChatSettings"))))), a.createElement(Y, {
+                    }, Object(C.d)("Recent Raids", "ChatSettings"))))), a.createElement(K, {
                         key: "recent-raids",
                         targetChannelID: this.props.channelID,
                         recentRaids: this.state.recentRaids,
@@ -17382,7 +17394,7 @@ webpackJsonp([42], {
         n.d(t, "b", function() {
             return q
         }), n.d(t, "a", function() {
-            return Y
+            return K
         });
         var q, z = "channel-header__edit-profile-overlay",
             Q = "channel-header__verified-badge",
@@ -17390,7 +17402,7 @@ webpackJsonp([42], {
         ! function(e) {
             e[e.Channel = 1] = "Channel", e[e.Clips = 2] = "Clips", e[e.Collections = 3] = "Collections", e[e.Events = 4] = "Events", e[e.Success = 5] = "Success", e[e.Followers = 6] = "Followers", e[e.Following = 7] = "Following", e[e.Videos = 8] = "Videos"
         }(q || (q = {}));
-        var Y = function(e) {
+        var K = function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.state = {
@@ -19315,11 +19327,11 @@ webpackJsonp([42], {
             z = n("aqNN"),
             Q = (n("6Rwu"), "storage.wateb.agreedToWatebTerms.v1"),
             $ = "bits-show-wateb-terms",
-            Y = "bits-agree-wateb-terms";
+            K = "bits-agree-wateb-terms";
         ! function(e) {
             e[e.Inactive = 0] = "Inactive", e[e.Error = 1] = "Error", e[e.Awarded = 2] = "Awarded"
         }(I || (I = {}));
-        var K = function(e) {
+        var Y = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -19395,7 +19407,7 @@ webpackJsonp([42], {
                         }, d.createElement(v.u, {
                             size: v.x.Small,
                             onClick: t.onAgreeToWatebTerms,
-                            "data-a-target": Y
+                            "data-a-target": K
                         }, Object(u.d)("Continue", "Bits--Watch-Ad-Terms"))))
                     }, t.onAgreeToWatebTerms = function() {
                         u.k.set(Q, !0), t.setState({
@@ -19569,7 +19581,7 @@ webpackJsonp([42], {
             J = Object(N.compose)(Object(q.d)("BitsBuyCard", {
                 autoReportInteractive: !0,
                 destination: E.a.BitsBuyCard
-            }))(K);
+            }))(Y);
 
         function X(e) {
             return {
@@ -20077,6 +20089,14 @@ webpackJsonp([42], {
                                 kind: "Field",
                                 name: {
                                     kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
                                     value: "displayName"
                                 },
                                 arguments: [],
@@ -20117,11 +20137,11 @@ webpackJsonp([42], {
             }],
             loc: {
                 start: 0,
-                end: 165
+                end: 168
             }
         };
         n.loc.source = {
-            body: "query BitsPinnedCheerV2_LeaderboardEntry($userID: ID! $profileImageWidth: Int!) {\nuser(id: $userID) {\ndisplayName\nlogin\nprofileImageURL(width:$profileImageWidth)\n}\n}",
+            body: "query BitsPinnedCheerV2_LeaderboardEntry($userID: ID! $profileImageWidth: Int!) {\nuser(id: $userID) {\nid\ndisplayName\nlogin\nprofileImageURL(width:$profileImageWidth)\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -20133,16 +20153,30 @@ webpackJsonp([42], {
     XViT: function(e, t) {},
     XYVN: function(e, t, n) {
         "use strict";
-        t.a = function(e, t, n) {
+        t.a = function(e, t, n, o) {
             return {
                 topic: n ? Object(a.a)(n) : "",
                 type: i.PubsubMessageType.BitsLeaderboardEvent,
                 mutator: function(e, t) {
                     if (!t || !n) return t;
                     var i = e.top.map(function(e) {
-                        return Object(r.b)(e)
-                    });
-                    return t.user && (t.user.tournament && t.user.tournament.teamLeaderboard && (t.user.tournament.teamLeaderboard.entries.edges = i), t.user.tournament && t.user.tournament.globalLeaderboard && (t.user.tournament.globalLeaderboard.entries.edges = i), t.user.cheer && t.user.cheer.leaderboard && (t.user.cheer.leaderboard.entries.edges = i)), t
+                            return Object(r.b)(e)
+                        }),
+                        a = e.top.map(function(e) {
+                            return Object(r.c)(e, n.id)
+                        });
+                    if (t.user && (t.user.tournament && t.user.tournament.teamLeaderboard && (t.user.tournament.teamLeaderboard.entries.edges = i), t.user.tournament && t.user.tournament.globalLeaderboard && (t.user.tournament.globalLeaderboard.entries.edges = i), t.user.cheer && t.user.cheer.leaderboard && (t.user.cheer.leaderboard.items.edges = a, t.user.self && t.user.self.bitsLeaderboardItem))) {
+                        var s = e.top.find(function(e) {
+                            return e.entry_key === o
+                        });
+                        s && (t.user.self.bitsLeaderboardItem = {
+                            id: n.id + "_" + s.entry_key,
+                            entryKey: s.entry_key,
+                            rank: s.rank,
+                            score: s.score
+                        })
+                    }
+                    return t
                 },
                 skip: !n,
                 query: e,
@@ -20749,11 +20783,11 @@ webpackJsonp([42], {
             Q = 3,
             $ = 100;
 
-        function Y(e) {
+        function K(e) {
             return q.test(e)
         }
 
-        function K(e) {
+        function Y(e) {
             return e.length > z
         }
 
@@ -20784,8 +20818,8 @@ webpackJsonp([42], {
                         })
                     }, t.updateRoomName = function(e) {
                         var n;
-                        if (Y(e)) {
-                            if (K(e)) {
+                        if (K(e)) {
+                            if (Y(e)) {
                                 n = G("NAME_LENGTH_INVALID", {
                                     maxChars: z,
                                     minChars: Q
@@ -21950,8 +21984,8 @@ webpackJsonp([42], {
                     chatCommands: Object(ze.b)(e)
                 }
             })(Qe),
-            Ye = n("uLsu"),
-            Ke = function(e) {
+            Ke = n("uLsu"),
+            Ye = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.sendMessage = function(e) {
@@ -22811,7 +22845,7 @@ webpackJsonp([42], {
                     }
                 }), Object(b.d)("RoomSettings")], t)
             }(a.Component);
-        var Yt, Kt = Object(o.b)(function(e) {
+        var Kt, Yt = Object(o.b)(function(e) {
                 return {
                     darkModeEnabled: Object(Wt.a)(e) === Vt.a.Dark,
                     showModerationIcons: e.chat.showModIcons,
@@ -22847,7 +22881,7 @@ webpackJsonp([42], {
             Jt = /\S/;
         ! function(e) {
             e[e.Bits = 0] = "Bits", e[e.Emotes = 1] = "Emotes", e[e.None = 2] = "None"
-        }(Yt || (Yt = {}));
+        }(Kt || (Kt = {}));
         var Xt = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
@@ -22870,13 +22904,13 @@ webpackJsonp([42], {
                             currentMessageInput: t
                         }), n.autocompleteInputRef.setValue(t)
                     }, n.onShowMemberList = function() {
-                        n.state.showCard !== Yt.None && n.setState({
-                            showCard: Yt.None
+                        n.state.showCard !== Kt.None && n.setState({
+                            showCard: Kt.None
                         }), n.props.showMemberList()
                     }, n.onEmotePickerToggle = function() {
                         n.setState(function(e) {
                             return {
-                                showCard: e.showCard !== Yt.Emotes ? Yt.Emotes : Yt.None
+                                showCard: e.showCard !== Kt.Emotes ? Kt.Emotes : Kt.None
                             }
                         })
                     }, n.syncMembers = function() {
@@ -22890,7 +22924,7 @@ webpackJsonp([42], {
                     }, n.state = {
                         roomMembers: t.activeMembers.getActiveMembers(),
                         currentMessageInput: "",
-                        showCard: Yt.None
+                        showCard: Kt.None
                     }, n
                 }
                 return i.__extends(t, e), t.prototype.componentWillMount = function() {
@@ -22903,12 +22937,12 @@ webpackJsonp([42], {
                         Object(Rt.c)(t.currentMessageInput, e.bitsConfig).forEach(function(e) {
                             e.type === Ce.a.Emote && (n = !0)
                         }), n ? (this.setState({
-                            showCard: Yt.Bits
+                            showCard: Kt.Bits
                         }), Object(Tt.h)({
                             actionName: Tt.a.CheeringInRoom,
                             displayedBalance: 0
                         })) : this.setState({
-                            showCard: Yt.None
+                            showCard: Kt.None
                         })
                     }
                 }, t.prototype.render = function() {
@@ -22925,11 +22959,11 @@ webpackJsonp([42], {
                     }, a.createElement(E._2, {
                         position: E._9.Relative,
                         zIndex: E._52.Default
-                    }, this.state.showCard === Yt.Bits && a.createElement(Pt, null), a.createElement(Mt.c, {
+                    }, this.state.showCard === Kt.Bits && a.createElement(Pt, null), a.createElement(Mt.c, {
                         channelOwnerID: this.props.channelID,
                         onClickEmote: this.onClickEmote,
                         toggleVisibility: this.onEmotePickerToggle,
-                        visible: this.state.showCard === Yt.Emotes
+                        visible: this.state.showCard === Kt.Emotes
                     }), a.createElement(Ot.b, {
                         componentType: Ot.a.TextArea,
                         suggestionSource: Ot.c.Chat,
@@ -22968,7 +23002,7 @@ webpackJsonp([42], {
                         direction: E.q.Top,
                         noTail: !0,
                         offsetY: "11px"
-                    }, a.createElement(Kt, {
+                    }, a.createElement(Yt, {
                         roomID: this.props.roomID,
                         isPopout: this.props.isPopout,
                         sendMessage: this.props.sendMessage
@@ -23681,9 +23715,9 @@ webpackJsonp([42], {
                         channelID: this.props.channelID
                     }), a.createElement(He, null), a.createElement(qe, {
                         roomID: this.props.roomID
-                    }), a.createElement($e, null), a.createElement(Ye.a, {
+                    }), a.createElement($e, null), a.createElement(Ke.a, {
                         currentUserLogin: this.props.sessionUser && this.props.sessionUser.login
-                    }), a.createElement(Ke, {
+                    }), a.createElement(Ye, {
                         sendMessage: this.sendRoomMessage
                     }), a.createElement(st, {
                         channelID: this.props.channelID
@@ -24073,8 +24107,8 @@ webpackJsonp([42], {
                         }) : n.props.onCloseRoomCreator()
                     }, n.onRoomNameChange = function(e) {
                         var t, i = e.target.value.toLowerCase();
-                        if (Y(i)) {
-                            if (K(i)) {
+                        if (K(i)) {
+                            if (Y(i)) {
                                 t = G("NAME_LENGTH_INVALID", {
                                     maxChars: z,
                                     minChars: Q
@@ -24528,14 +24562,14 @@ webpackJsonp([42], {
                 })], t)
             }(a.Component),
             $n = n("QY1R"),
-            Yn = (n("nhCy"), "Stream Chat"),
-            Kn = function(e) {
+            Kn = (n("nhCy"), "Stream Chat"),
+            Yn = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         shouldShowRoomCreator: !1
                     }, t.onPickChat = function() {
-                        t.props.handleRoomSelect(Yn, Yn)
+                        t.props.handleRoomSelect(Kn, Kn)
                     }, t.showRoomCreator = function() {
                         t.setState({
                             shouldShowRoomCreator: !0
@@ -24617,8 +24651,8 @@ webpackJsonp([42], {
                         "data-test-selector": "stream-chat-room-picker-option",
                         onClick: this.onPickChat
                     }, a.createElement(E._2, {
-                        className: "room-picker__label " + (this.props.activeRoomID === Yn ? "room-picker__label--active-main" : ""),
-                        key: Yn,
+                        className: "room-picker__label " + (this.props.activeRoomID === Kn ? "room-picker__label--active-main" : ""),
+                        key: Kn,
                         padding: {
                             y: .5,
                             x: 2
@@ -24821,7 +24855,7 @@ webpackJsonp([42], {
                 sessionUser: Object(l.c)(e),
                 isLoggedIn: Object(l.d)(e)
             }
-        })(Kn);
+        })(Yn);
         ! function(e) {
             e.MentionPill = "mentionPill", e.ViewRooms = "viewRooms"
         }(Jn || (Jn = {}));
@@ -26126,7 +26160,7 @@ webpackJsonp([42], {
                                                 kind: "FragmentSpread",
                                                 name: {
                                                     kind: "Name",
-                                                    value: "leaderboardEntry"
+                                                    value: "leaderboardItem"
                                                 },
                                                 directives: []
                                             }, {
@@ -26238,7 +26272,7 @@ webpackJsonp([42], {
                                         kind: "Field",
                                         name: {
                                             kind: "Name",
-                                            value: "bitsLeaderboardEntry"
+                                            value: "bitsLeaderboardItem"
                                         },
                                         arguments: [],
                                         directives: [],
@@ -26268,6 +26302,14 @@ webpackJsonp([42], {
                                                 },
                                                 arguments: [],
                                                 directives: []
+                                            }, {
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "entryKey"
+                                                },
+                                                arguments: [],
+                                                directives: []
                                             }]
                                         }
                                     }]
@@ -26279,11 +26321,11 @@ webpackJsonp([42], {
             }],
             loc: {
                 start: 0,
-                end: 484
+                end: 490
             }
         };
         i.loc.source = {
-            body: '#import "twilight/features/bits/models/bits-leaderboard-entry-fragment.gql"\n#import "twilight/features/chat/models/chat-message-fragment.gql"\nquery BitsPinnedCheerV2_Leaderboards($channelID: ID!) {\nuser(id: $channelID) {\nid\ncheer {\nid\nleaderboard (first: 10) {\nid\n...leaderboardEntry\nsecondsRemaining\n}\nsettings {\nleaderboard {\nisEnabled\ntimePeriodType\n}\nisRecentEnabled\nrecentTimeoutMs\n}\nrecent {\n...chatMessage\n}\nrecentTimeoutMs\n}\nself {\nbitsLeaderboardEntry {\nid\nrank\nscore\n}\n}\n}\n}',
+            body: '#import "twilight/features/bits/models/bits-leaderboard-item-fragment.gql"\n#import "twilight/features/chat/models/chat-message-fragment.gql"\nquery BitsPinnedCheerV2_Leaderboards($channelID: ID!) {\nuser(id: $channelID) {\nid\ncheer {\nid\nleaderboard (first: 10) {\nid\n...leaderboardItem\nsecondsRemaining\n}\nsettings {\nleaderboard {\nisEnabled\ntimePeriodType\n}\nisRecentEnabled\nrecentTimeoutMs\n}\nrecent {\n...chatMessage\n}\nrecentTimeoutMs\n}\nself {\nbitsLeaderboardItem {\nid\nrank\nscore\nentryKey\n}\n}\n}\n}',
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -26299,7 +26341,7 @@ webpackJsonp([42], {
                 return !a[t] && (a[t] = !0, !0)
             })
         }
-        i.definitions = i.definitions.concat(r(n("HQaX").definitions)), i.definitions = i.definitions.concat(r(n("Mful").definitions)), e.exports = i
+        i.definitions = i.definitions.concat(r(n("+po9").definitions)), i.definitions = i.definitions.concat(r(n("Mful").definitions)), e.exports = i
     },
     aSvS: function(e, t, n) {
         "use strict";
@@ -27022,6 +27064,18 @@ webpackJsonp([42], {
                     __typename: "BitsLeaderboardEntry"
                 },
                 __typename: "BitsLeaderboardEdge"
+            }
+        }, t.c = function(e, t) {
+            return {
+                cursor: "" + e.rank,
+                node: {
+                    id: t + "_" + e.entry_key,
+                    entryKey: e.entry_key,
+                    rank: e.rank,
+                    score: e.score,
+                    __typename: "BitsLeaderboardItem"
+                },
+                __typename: "BitsLeaderboardItemEdge"
             }
         };
         var i = n("TToO"),
@@ -35764,4 +35818,4 @@ webpackJsonp([42], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-followers-d016732d342bfe094052ba16c206c442.js.map
+//# sourceMappingURL=pages.channel-followers-e26340fa7029a14fcd199415ae8d9588.js.map

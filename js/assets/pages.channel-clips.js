@@ -119,6 +119,119 @@ webpackJsonp([39], {
             return f
         })
     },
+    "+po9": function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "FragmentDefinition",
+                name: {
+                    kind: "Name",
+                    value: "leaderboardItem"
+                },
+                typeCondition: {
+                    kind: "NamedType",
+                    name: {
+                        kind: "Name",
+                        value: "BitsLeaderboard"
+                    }
+                },
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "items"
+                        },
+                        arguments: [],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "edges"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "cursor"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }, {
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "node"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "id"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }, {
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "entryKey"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }, {
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "rank"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }, {
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "score"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }]
+                                        }
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 106
+            }
+        };
+        n.loc.source = {
+            body: "fragment leaderboardItem on BitsLeaderboard {\nitems {\nedges {\ncursor\nnode {\nid\nentryKey\nrank\nscore\n}\n}\n}\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
     "/+aa": function(e, t) {},
     "/LBW": function(e, t, n) {
         "use strict";
@@ -4373,7 +4486,7 @@ webpackJsonp([39], {
                         }, i)
                     }
                     var a, o = null;
-                    o = this.props.selfId && this.props.selfId === this.props.id ? c.createElement(F._6, {
+                    o = this.props.selfId && this.props.selfId === this.props.value ? c.createElement(F._6, {
                         label: this.props.rank.toString(),
                         type: F._7.Brand
                     }) : c.createElement(F._35, {
@@ -4428,7 +4541,7 @@ webpackJsonp([39], {
                 options: function(e) {
                     return {
                         variables: {
-                            userID: e.id,
+                            userID: e.value,
                             profileImageWidth: 50
                         }
                     }
@@ -4453,7 +4566,7 @@ webpackJsonp([39], {
                             ellipsis: !0,
                             bold: !0
                         }, n);
-                        this.props.selfId && this.props.selfId === this.props.id && (i = c.createElement(F._35, {
+                        this.props.selfId && this.props.selfId === this.props.value && (i = c.createElement(F._35, {
                             ellipsis: !0,
                             color: F.I.Link,
                             bold: !0
@@ -4467,7 +4580,7 @@ webpackJsonp([39], {
                         }, i)
                     }
                     var a, o = null;
-                    o = this.props.selfId && this.props.selfId === this.props.id ? c.createElement(F._6, {
+                    o = this.props.selfId && this.props.selfId === this.props.value ? c.createElement(F._6, {
                         label: this.props.rank.toString(),
                         type: F._7.Brand
                     }) : c.createElement(F._35, {
@@ -4519,7 +4632,7 @@ webpackJsonp([39], {
                 options: function(e) {
                     return {
                         variables: {
-                            userID: e.id,
+                            userID: e.value,
                             profileImageWidth: 50
                         }
                     }
@@ -4642,6 +4755,7 @@ webpackJsonp([39], {
                     }
                 }, c.createElement(tn, {
                     id: e.node.id,
+                    value: e.node.entryKey,
                     score: e.node.score,
                     bitsConfig: this.props.bitsConfig,
                     medal: t,
@@ -4662,6 +4776,7 @@ webpackJsonp([39], {
                     }
                 }, c.createElement(Zt, {
                     id: e.id,
+                    value: e.entryKey,
                     score: e.score,
                     bitsConfig: this.props.bitsConfig,
                     selfId: this.props.selfId,
@@ -4672,7 +4787,7 @@ webpackJsonp([39], {
                 if (!this.props.topEdges) return !1;
                 var t = !0;
                 return this.props.topEdges.forEach(function(n) {
-                    n.node.id === e.props.selfId && (t = !1)
+                    n.node.entryKey === e.props.selfId && (t = !1)
                 }), t
             }, t.prototype.renderUserPlaceEntry = function() {
                 if (!this.props.userPlaceEdge) return null;
@@ -4723,7 +4838,7 @@ webpackJsonp([39], {
                             ellipsis: !0,
                             bold: !0
                         }, i);
-                        this.props.selfId && this.props.selfId === this.props.id && (a = c.createElement(F._6, {
+                        this.props.selfId && this.props.selfId === this.props.entryKey && (a = c.createElement(F._6, {
                             label: i,
                             type: F._7.Brand
                         })), n = c.createElement(F._2, {
@@ -4804,12 +4919,12 @@ webpackJsonp([39], {
             on = Object(p.d)(Object(u.a)(Yt, {
                 name: "data",
                 skip: function(e) {
-                    return !e.id
+                    return !e.id || !e.entryKey
                 },
                 options: function(e) {
                     return {
                         variables: {
-                            userID: e.id,
+                            userID: e.entryKey,
                             profileImageWidth: 50
                         }
                     }
@@ -4834,7 +4949,7 @@ webpackJsonp([39], {
                             ellipsis: !0,
                             bold: !0
                         }, i);
-                        this.props.selfId && this.props.selfId === this.props.id && (a = c.createElement(F._6, {
+                        this.props.selfId && this.props.selfId === this.props.entryKey && (a = c.createElement(F._6, {
                             label: i,
                             type: F._7.Brand
                         })), n = c.createElement(F._2, {
@@ -4914,12 +5029,12 @@ webpackJsonp([39], {
             ln = Object(p.d)(Object(u.a)(Yt, {
                 name: "data",
                 skip: function(e) {
-                    return !e.id
+                    return !e.id || !e.entryKey
                 },
                 options: function(e) {
                     return {
                         variables: {
-                            userID: e.id,
+                            userID: e.entryKey,
                             profileImageWidth: 50
                         }
                     }
@@ -4933,6 +5048,7 @@ webpackJsonp([39], {
                         return t.props.topEdges && t.props.topEdges[0] && (n = t.props.topEdges[0]), e = n ? c.createElement(on, {
                             selfId: t.props.selfId,
                             id: n.node.id,
+                            entryKey: n.node.entryKey,
                             score: n.node.score,
                             bitsConfig: t.props.bitsConfig
                         }) : c.createElement(on, {
@@ -4992,6 +5108,7 @@ webpackJsonp([39], {
                     return e > 0 && this.props.topEdges && this.props.topEdges[e - 1] && (i = this.props.topEdges[e - 1]), n = i ? c.createElement(ln, {
                         selfId: this.props.selfId,
                         id: i.node.id,
+                        entryKey: i.node.entryKey,
                         score: i.node.score,
                         medal: t,
                         bitsConfig: this.props.bitsConfig
@@ -5180,10 +5297,10 @@ webpackJsonp([39], {
                 }, t.prototype.renderLeaderboard = function() {
                     if (this.props.data.error || !this.props.data.user || null === this.props.data.user.cheer || null === this.props.data.user.cheer.leaderboard) return null;
                     if (!this.props.data.user.cheer.settings || !this.props.data.user.cheer.settings.leaderboard || !this.props.data.user.cheer.settings.leaderboard.isEnabled) return null;
-                    var e = this.props.data.user.cheer.leaderboard.entries.edges.slice(0, 10),
+                    var e = this.props.data.user.cheer.leaderboard.items.edges.slice(0, 10),
                         t = null,
                         n = this.props.data.user.cheer.settings.leaderboard.timePeriodType ? this.props.data.user.cheer.settings.leaderboard.timePeriodType : Qt.AllTime;
-                    this.props.data.user.self && this.props.data.user.self.bitsLeaderboardEntry && (t = this.props.data.user.self.bitsLeaderboardEntry);
+                    this.props.data.user.self && this.props.data.user.self.bitsLeaderboardItem && (t = this.props.data.user.self.bitsLeaderboardItem);
                     var i = null;
                     this.state.isExpanded && (i = c.createElement(nn, {
                         topEdges: e,
@@ -5249,7 +5366,7 @@ webpackJsonp([39], {
                 }
             }), Object(me.a)(function(e) {
                 return {
-                    query: hn,
+                    query: Ht,
                     variables: {
                         channelID: e.channelID
                     },
@@ -5266,7 +5383,7 @@ webpackJsonp([39], {
                     }
                 }
             }), Object(me.a)(function(e) {
-                return Object(pn.a)(hn, e.channelID, e.data.user && e.data.user.cheer && e.data.user.cheer.leaderboard)
+                return Object(pn.a)(hn, e.channelID, e.data.user && e.data.user.cheer && e.data.user.cheer.leaderboard, e.userID)
             }))(gn),
             vn = function(e) {
                 function t() {
@@ -13830,111 +13947,6 @@ webpackJsonp([39], {
         };
         e.exports = n
     },
-    HQaX: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "FragmentDefinition",
-                name: {
-                    kind: "Name",
-                    value: "leaderboardEntry"
-                },
-                typeCondition: {
-                    kind: "NamedType",
-                    name: {
-                        kind: "Name",
-                        value: "BitsLeaderboard"
-                    }
-                },
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "entries"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "edges"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "cursor"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }, {
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "node"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "id"
-                                                },
-                                                arguments: [],
-                                                directives: []
-                                            }, {
-                                                kind: "Field",
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "rank"
-                                                },
-                                                arguments: [],
-                                                directives: []
-                                            }, {
-                                                kind: "Field",
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "score"
-                                                },
-                                                arguments: [],
-                                                directives: []
-                                            }]
-                                        }
-                                    }]
-                                }
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 100
-            }
-        };
-        n.loc.source = {
-            body: "fragment leaderboardEntry on BitsLeaderboard {\nentries {\nedges {\ncursor\nnode {\nid\nrank\nscore\n}\n}\n}\n}",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
     HuX0: function(e, t) {},
     IEOs: function(e, t) {
         var n = {
@@ -21936,6 +21948,14 @@ webpackJsonp([39], {
                                 kind: "Field",
                                 name: {
                                     kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
                                     value: "displayName"
                                 },
                                 arguments: [],
@@ -21976,11 +21996,11 @@ webpackJsonp([39], {
             }],
             loc: {
                 start: 0,
-                end: 165
+                end: 168
             }
         };
         n.loc.source = {
-            body: "query BitsPinnedCheerV2_LeaderboardEntry($userID: ID! $profileImageWidth: Int!) {\nuser(id: $userID) {\ndisplayName\nlogin\nprofileImageURL(width:$profileImageWidth)\n}\n}",
+            body: "query BitsPinnedCheerV2_LeaderboardEntry($userID: ID! $profileImageWidth: Int!) {\nuser(id: $userID) {\nid\ndisplayName\nlogin\nprofileImageURL(width:$profileImageWidth)\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -21993,16 +22013,30 @@ webpackJsonp([39], {
     XViT: function(e, t) {},
     XYVN: function(e, t, n) {
         "use strict";
-        t.a = function(e, t, n) {
+        t.a = function(e, t, n, o) {
             return {
                 topic: n ? Object(a.a)(n) : "",
                 type: i.PubsubMessageType.BitsLeaderboardEvent,
                 mutator: function(e, t) {
                     if (!t || !n) return t;
                     var i = e.top.map(function(e) {
-                        return Object(r.b)(e)
-                    });
-                    return t.user && (t.user.tournament && t.user.tournament.teamLeaderboard && (t.user.tournament.teamLeaderboard.entries.edges = i), t.user.tournament && t.user.tournament.globalLeaderboard && (t.user.tournament.globalLeaderboard.entries.edges = i), t.user.cheer && t.user.cheer.leaderboard && (t.user.cheer.leaderboard.entries.edges = i)), t
+                            return Object(r.b)(e)
+                        }),
+                        a = e.top.map(function(e) {
+                            return Object(r.c)(e, n.id)
+                        });
+                    if (t.user && (t.user.tournament && t.user.tournament.teamLeaderboard && (t.user.tournament.teamLeaderboard.entries.edges = i), t.user.tournament && t.user.tournament.globalLeaderboard && (t.user.tournament.globalLeaderboard.entries.edges = i), t.user.cheer && t.user.cheer.leaderboard && (t.user.cheer.leaderboard.items.edges = a, t.user.self && t.user.self.bitsLeaderboardItem))) {
+                        var s = e.top.find(function(e) {
+                            return e.entry_key === o
+                        });
+                        s && (t.user.self.bitsLeaderboardItem = {
+                            id: n.id + "_" + s.entry_key,
+                            entryKey: s.entry_key,
+                            rank: s.rank,
+                            score: s.score
+                        })
+                    }
+                    return t
                 },
                 skip: !n,
                 query: e,
@@ -27986,7 +28020,7 @@ webpackJsonp([39], {
                                                 kind: "FragmentSpread",
                                                 name: {
                                                     kind: "Name",
-                                                    value: "leaderboardEntry"
+                                                    value: "leaderboardItem"
                                                 },
                                                 directives: []
                                             }, {
@@ -28098,7 +28132,7 @@ webpackJsonp([39], {
                                         kind: "Field",
                                         name: {
                                             kind: "Name",
-                                            value: "bitsLeaderboardEntry"
+                                            value: "bitsLeaderboardItem"
                                         },
                                         arguments: [],
                                         directives: [],
@@ -28128,6 +28162,14 @@ webpackJsonp([39], {
                                                 },
                                                 arguments: [],
                                                 directives: []
+                                            }, {
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "entryKey"
+                                                },
+                                                arguments: [],
+                                                directives: []
                                             }]
                                         }
                                     }]
@@ -28139,11 +28181,11 @@ webpackJsonp([39], {
             }],
             loc: {
                 start: 0,
-                end: 484
+                end: 490
             }
         };
         i.loc.source = {
-            body: '#import "twilight/features/bits/models/bits-leaderboard-entry-fragment.gql"\n#import "twilight/features/chat/models/chat-message-fragment.gql"\nquery BitsPinnedCheerV2_Leaderboards($channelID: ID!) {\nuser(id: $channelID) {\nid\ncheer {\nid\nleaderboard (first: 10) {\nid\n...leaderboardEntry\nsecondsRemaining\n}\nsettings {\nleaderboard {\nisEnabled\ntimePeriodType\n}\nisRecentEnabled\nrecentTimeoutMs\n}\nrecent {\n...chatMessage\n}\nrecentTimeoutMs\n}\nself {\nbitsLeaderboardEntry {\nid\nrank\nscore\n}\n}\n}\n}',
+            body: '#import "twilight/features/bits/models/bits-leaderboard-item-fragment.gql"\n#import "twilight/features/chat/models/chat-message-fragment.gql"\nquery BitsPinnedCheerV2_Leaderboards($channelID: ID!) {\nuser(id: $channelID) {\nid\ncheer {\nid\nleaderboard (first: 10) {\nid\n...leaderboardItem\nsecondsRemaining\n}\nsettings {\nleaderboard {\nisEnabled\ntimePeriodType\n}\nisRecentEnabled\nrecentTimeoutMs\n}\nrecent {\n...chatMessage\n}\nrecentTimeoutMs\n}\nself {\nbitsLeaderboardItem {\nid\nrank\nscore\nentryKey\n}\n}\n}\n}',
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -28159,7 +28201,7 @@ webpackJsonp([39], {
                 return !a[t] && (a[t] = !0, !0)
             })
         }
-        i.definitions = i.definitions.concat(r(n("HQaX").definitions)), i.definitions = i.definitions.concat(r(n("Mful").definitions)), e.exports = i
+        i.definitions = i.definitions.concat(r(n("+po9").definitions)), i.definitions = i.definitions.concat(r(n("Mful").definitions)), e.exports = i
     },
     aSvS: function(e, t, n) {
         "use strict";
@@ -28883,6 +28925,18 @@ webpackJsonp([39], {
                     __typename: "BitsLeaderboardEntry"
                 },
                 __typename: "BitsLeaderboardEdge"
+            }
+        }, t.c = function(e, t) {
+            return {
+                cursor: "" + e.rank,
+                node: {
+                    id: t + "_" + e.entry_key,
+                    entryKey: e.entry_key,
+                    rank: e.rank,
+                    score: e.score,
+                    __typename: "BitsLeaderboardItem"
+                },
+                __typename: "BitsLeaderboardItemEdge"
             }
         };
         var i = n("TToO"),
@@ -38029,4 +38083,4 @@ webpackJsonp([39], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-clips-5e71de058d4839c6b30e406f8015484b.js.map
+//# sourceMappingURL=pages.channel-clips-24b927f02d9527035fb08397db98aee8.js.map

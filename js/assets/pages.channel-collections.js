@@ -863,7 +863,7 @@ webpackJsonp([50], {
         }), n.d(t, "b", function() {
             return w
         }), n.d(t, "c", function() {
-            return A
+            return I
         }), t.e = function(e, t) {
             var n = this;
             return C(function(i) {
@@ -886,7 +886,7 @@ webpackJsonp([50], {
                                 }), [3, 4];
                             case 3:
                                 return a = r.sent(), o.i.error(a, "Failed to fetch collections"), i.store.dispatch({
-                                    type: A,
+                                    type: I,
                                     errorType: "Fetch Failed",
                                     errorMessage: "Fetching collections for channel " + e + " and video " + t + " failed."
                                 }), [3, 4];
@@ -932,7 +932,7 @@ webpackJsonp([50], {
                                 }), [3, 5];
                             case 4:
                                 return _ = r.sent(), o.i.error(_, "Failed to add new collection with video"), a.store.dispatch({
-                                    type: I,
+                                    type: A,
                                     errorType: "Create Failed",
                                     errorMessage: "Creating collections for channel " + e + " and video " + n + " with title " + t + "."
                                 }), [3, 5];
@@ -1010,8 +1010,8 @@ webpackJsonp([50], {
             },
             N = "collections.COLLECTIONS_FETCHED",
             w = "collections.COLLECTIONS_FETCHED_FOR_VIDEO_ID",
-            A = "collections.COLLECTIONS_FETCH_FAILED",
-            I = "collections.COLLECTIONS_CREATE_FAILED",
+            I = "collections.COLLECTIONS_FETCH_FAILED",
+            A = "collections.COLLECTIONS_CREATE_FAILED",
             O = "collections.COLLECTIONS_UPDATE_FAILED";
         var B = function(e, t, n) {
             return n.apiClient.doAuthRequest(e, {
@@ -1641,8 +1641,8 @@ webpackJsonp([50], {
             S = n("jxGs"),
             N = n("bkpq"),
             w = n("CSlQ"),
-            A = n("annQ"),
-            I = (n("lGVF"), function(e) {
+            I = n("annQ"),
+            A = (n("lGVF"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -1746,7 +1746,7 @@ webpackJsonp([50], {
                     })), r.createElement(g.b, {
                         className: "get-bits-button-content"
                     }, r.createElement(E._2, null, n, e, i))
-                }, t = i.__decorate([Object(w.d)("GetBitsButtonContent"), Object(u.a)(A, {
+                }, t = i.__decorate([Object(w.d)("GetBitsButtonContent"), Object(u.a)(I, {
                     name: "data",
                     props: function(e) {
                         var t, n, i, a;
@@ -1797,7 +1797,7 @@ webpackJsonp([50], {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     var e = null;
-                    return this.props.channelLogin && (e = r.createElement(I, {
+                    return this.props.channelLogin && (e = r.createElement(A, {
                         isLoggedIn: this.props.isLoggedIn,
                         channelLogin: this.props.channelLogin,
                         toggleShowTutorial: this.toggleShowTutorial,
@@ -2665,7 +2665,7 @@ webpackJsonp([50], {
             N = n("w9tK"),
             w = n("zCIC");
 
-        function A(e) {
+        function I(e) {
             return l.__awaiter(this, void 0, void 0, function() {
                 var t, n, i, a, r;
                 return l.__generator(this, function(o) {
@@ -2692,7 +2692,7 @@ webpackJsonp([50], {
         }! function(e) {
             e[e.Error = 0] = "Error", e[e.AdBlocked = 1] = "AdBlocked", e[e.Unavailable = 2] = "Unavailable", e[e.Available = 3] = "Available"
         }(y || (y = {}));
-        var I, O = function(e) {
+        var A, O = function(e) {
                 var t = null;
                 return e.disableWatchAd && (t = Object(u.d)("Try again later", "Bits--WatchAdOffer")), c.createElement(v._25, {
                     className: "bits-buy-card__offer-row",
@@ -2744,7 +2744,7 @@ webpackJsonp([50], {
                         return l.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return [4, A(this.props.truexUserID)];
+                                    return [4, I(this.props.truexUserID)];
                                 case 1:
                                     return e = t.sent(), Object(f.e)({
                                         channel: this.props.channelLogin,
@@ -3022,7 +3022,7 @@ webpackJsonp([50], {
                         return l.__generator(this, function(e) {
                             switch (e.label) {
                                 case 0:
-                                    return [4, A(this.props.truexUserID)];
+                                    return [4, I(this.props.truexUserID)];
                                 case 1:
                                     return e.sent() !== y.Available && this.setState({
                                         hasAdAvailable: !1
@@ -3109,12 +3109,12 @@ webpackJsonp([50], {
             $ = "bits-agree-wateb-terms";
         ! function(e) {
             e[e.Inactive = 0] = "Inactive", e[e.Error = 1] = "Error", e[e.Awarded = 2] = "Awarded"
-        }(I || (I = {}));
+        }(A || (A = {}));
         var X = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        wateb: I.Inactive,
+                        wateb: A.Inactive,
                         watebError: null,
                         bitsAwarded: 0,
                         showWatebTerms: !1,
@@ -3125,7 +3125,7 @@ webpackJsonp([50], {
                         })
                     }, t.onAdBitsAwarded = function(e) {
                         t.props.data && !t.props.data.loading && t.props.data.refetch(), t.setState({
-                            wateb: I.Awarded,
+                            wateb: A.Awarded,
                             bitsAwarded: e
                         })
                     }, t.renderWatebTerms = function(e, n) {
@@ -3207,12 +3207,12 @@ webpackJsonp([50], {
                         })
                     }, t.receiveAdErrorState = function(e) {
                         t.setState({
-                            wateb: I.Error,
+                            wateb: A.Error,
                             watebError: e
                         })
                     }, t.resetAdErrorState = function() {
-                        t.state.wateb === I.Error && (t.setState({
-                            wateb: I.Inactive
+                        t.state.wateb === A.Error && (t.setState({
+                            wateb: A.Inactive
                         }), t.props.data && t.props.data.refetch())
                     }, t
                 }
@@ -3319,7 +3319,7 @@ webpackJsonp([50], {
                     }, e), n, d, s)
                 }, t.prototype.renderWatebCard = function() {
                     if (this.props.data && this.props.data.currentUser) switch (this.state.wateb) {
-                        case I.Awarded:
+                        case A.Awarded:
                             return c.createElement(z, {
                                 bitsConfig: this.props.bitsConfig,
                                 amount: this.state.bitsAwarded,
@@ -3327,7 +3327,7 @@ webpackJsonp([50], {
                                 onWatchAnother: this.handleWatchAdClick,
                                 truexUserID: this.props.data.currentUser.idSHA1
                             });
-                        case I.Error:
+                        case A.Error:
                             return c.createElement(V, {
                                 type: this.state.watebError || i.Unknown,
                                 onClose: this.props.onClose,
@@ -4085,6 +4085,18 @@ webpackJsonp([50], {
                     __typename: "BitsLeaderboardEntry"
                 },
                 __typename: "BitsLeaderboardEdge"
+            }
+        }, t.c = function(e, t) {
+            return {
+                cursor: "" + e.rank,
+                node: {
+                    id: t + "_" + e.entry_key,
+                    entryKey: e.entry_key,
+                    rank: e.rank,
+                    score: e.score,
+                    __typename: "BitsLeaderboardItem"
+                },
+                __typename: "BitsLeaderboardItemEdge"
             }
         };
         var i = n("TToO"),
@@ -5589,7 +5601,7 @@ webpackJsonp([50], {
                 })], t)
             }(c.Component),
             w = Object(E.d)("Profile Edit")(N);
-        var A = Object(i.b)(function(e) {
+        var I = Object(i.b)(function(e) {
             return {
                 authToken: Object(o.a)(e)
             }
@@ -5601,7 +5613,7 @@ webpackJsonp([50], {
             }, e)
         })(w);
         n.d(t, "a", function() {
-            return A
+            return I
         })
     },
     xgnX: function(e, t, n) {
@@ -6069,4 +6081,4 @@ webpackJsonp([50], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-collections-471325bf5fb005f4e8da8ad48669764c.js.map
+//# sourceMappingURL=pages.channel-collections-2fec8838473833501bfcc13360baf07b.js.map

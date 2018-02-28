@@ -2056,7 +2056,7 @@ webpackJsonp([51], {
                         }
                         var r = t.props.data.games.edges.slice(0, t.state.adDisplayed ? 10 : 12).map(function(e, t) {
                                 var n = e.node;
-                                return i.createElement(u.J, {
+                                return n && n.id ? i.createElement(u.J, {
                                     cols: 2,
                                     key: "game-" + n.id
                                 }, i.createElement(u._2, {
@@ -2073,7 +2073,7 @@ webpackJsonp([51], {
                                     }, "FeaturedGames"),
                                     "data-a-target": "card-" + t,
                                     "data-a-id": "card-" + n.name.replace(/ /g, "")
-                                })))
+                                }))) : null
                             }),
                             a = i.createElement(u._2, {
                                 display: u.N.Flex,
@@ -6051,4 +6051,4 @@ webpackJsonp([51], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.anon-front-5d5e71ed6807ff1cd745b65efafa8060.js.map
+//# sourceMappingURL=pages.anon-front-8271081a89919db27f9f4982b2ba2ed3.js.map

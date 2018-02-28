@@ -10119,6 +10119,18 @@ webpackJsonp([36, 81], {
                 },
                 __typename: "BitsLeaderboardEdge"
             }
+        }, t.c = function(e, t) {
+            return {
+                cursor: "" + e.rank,
+                node: {
+                    id: t + "_" + e.entry_key,
+                    entryKey: e.entry_key,
+                    rank: e.rank,
+                    score: e.score,
+                    __typename: "BitsLeaderboardItem"
+                },
+                __typename: "BitsLeaderboardItemEdge"
+            }
         };
         var i = n("TToO"),
             r = n("I89S"),
@@ -20696,4 +20708,4 @@ webpackJsonp([36, 81], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.video-watch-f703542f805396177c05033f3a2ca80c.js.map
+//# sourceMappingURL=pages.video-watch-7bae7a2cf1cdc15be815ed9819c28285.js.map

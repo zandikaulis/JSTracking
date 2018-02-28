@@ -2901,7 +2901,7 @@ webpackJsonp([48], {
                     }, n.getAndStoreShuffledGameCards = function() {
                         n.props.data && n.props.data.games && (n.shuffledGameCards = Object(A.a)(n.props.data.games.edges.map(function(e, t) {
                             var i = e.node;
-                            return d.createElement(w._2, {
+                            return i && i.id ? d.createElement(w._2, {
                                 key: i.id
                             }, d.createElement(D.a, {
                                 info: "",
@@ -2911,7 +2911,7 @@ webpackJsonp([48], {
                                 onFollow: n.onFollow,
                                 onUnfollow: n.onUnfollow,
                                 "data-a-target": "follow-game-card-" + t
-                            }))
+                            })) : null
                         })))
                     }, n.onClickContinue = function() {
                         n.props.onContinue && n.props.onContinue(), m.n.store.dispatch(Object(L.c)())
@@ -9471,4 +9471,4 @@ webpackJsonp([48], {
     },
     "zH/G": function(e, t) {}
 });
-//# sourceMappingURL=pages.following-6d8e5fd0e80bedd3bd33ea23dfbaee20.js.map
+//# sourceMappingURL=pages.following-e5ff634fc67d4f62cd293b006e096dd9.js.map

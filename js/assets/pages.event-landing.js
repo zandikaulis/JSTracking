@@ -4344,7 +4344,7 @@ webpackJsonp([46], {
                 })], t)
             }(s.Component),
             L = n("5GFz"),
-            R = function(e) {
+            B = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -4366,7 +4366,7 @@ webpackJsonp([46], {
                     autoReportInteractive: !0
                 })], t)
             }(s.Component),
-            B = n("F8kA"),
+            R = n("F8kA"),
             D = n("NY9D"),
             U = n("FsFC");
         var j = function(e) {
@@ -4429,7 +4429,7 @@ webpackJsonp([46], {
                         transform: b._39.Uppercase,
                         type: b._40.H5,
                         color: b.I.Alt2
-                    }, Object(l.d)("Streaming", "EventLandingInfo")), s.createElement(B.a, {
+                    }, Object(l.d)("Streaming", "EventLandingInfo")), s.createElement(R.a, {
                         to: {
                             pathname: Object(D.c)(this.props.game.displayName),
                             state: {
@@ -4512,7 +4512,7 @@ webpackJsonp([46], {
                         transform: b._39.Uppercase,
                         type: b._40.H5,
                         color: b.I.Alt2
-                    }, Object(l.d)("Starring", "EventLandingInfo")), s.createElement(B.a, {
+                    }, Object(l.d)("Starring", "EventLandingInfo")), s.createElement(R.a, {
                         to: {
                             pathname: "/" + this.props.channel.login,
                             state: {
@@ -4548,7 +4548,7 @@ webpackJsonp([46], {
                         background: b.m.Base
                     }, s.createElement(b._25, {
                         border: !0
-                    }, s.createElement(R, {
+                    }, s.createElement(B, {
                         title: this.props.title,
                         imageURL: this.props.imageURL,
                         startAt: this.props.startAt
@@ -4716,7 +4716,7 @@ webpackJsonp([46], {
                     return this.props.offsetSeconds && this.props.offsetSeconds > 0 && (e += Object(z.a)(this.props.offsetSeconds)), s.createElement("div", o.__assign({
                         onMouseEnter: this.onMouseEnterHandler,
                         onMouseLeave: this.onMouseLeaveHandler
-                    }, Object(b._53)(this.props)), s.createElement(b.A, null, s.createElement(B.a, {
+                    }, Object(b._53)(this.props)), s.createElement(b.A, null, s.createElement(R.a, {
                         to: {
                             pathname: "/videos/" + this.props.video.id,
                             search: e,
@@ -4944,7 +4944,7 @@ webpackJsonp([46], {
                     }))), s.createElement(b._35, {
                         fontSize: b.R.Size5,
                         ellipsis: !0
-                    }, s.createElement(B.a, {
+                    }, s.createElement(R.a, {
                         to: "/directory/game/" + encodeURIComponent(this.props.event.game.name)
                     }, this.props.event.game.displayName)))), d))))
                 }, t.prototype.expandedSegment = function() {
@@ -5123,7 +5123,7 @@ webpackJsonp([46], {
                     }))), s.createElement(b._35, {
                         fontSize: b.R.Size5,
                         ellipsis: !0
-                    }, s.createElement(B.a, {
+                    }, s.createElement(R.a, {
                         to: "/directory/game/" + encodeURIComponent(this.props.event.game.name)
                     }, this.props.event.game.displayName))), s.createElement(b._2, {
                         display: b.N.Flex,
@@ -6492,19 +6492,19 @@ webpackJsonp([46], {
             O = n("2KeS"),
             x = n("V5M+"),
             L = n("E9Qg"),
-            R = n("ebTC"),
-            B = n("4Q9N"),
+            B = n("ebTC"),
+            R = n("4Q9N"),
             D = (n("4Jix"), n("Ojfd")),
             U = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.openModal = function() {
                         var e = t.props.data && t.props.data.user;
-                        e && t.props.showModal(R.a, {
+                        e && t.props.showModal(B.a, {
                             userID: e.id,
                             login: e.login,
                             displayName: e.displayName,
-                            imageType: B.a.ProfileBanner,
+                            imageType: R.a.ProfileBanner,
                             showCloser: !0,
                             successCallback: t.imageUploaded
                         })
@@ -7339,8 +7339,8 @@ webpackJsonp([46], {
             }(d.Component),
             x = n("jxGs"),
             L = n("3iBR"),
-            R = n("iydZ"),
-            B = n("ZJYd"),
+            B = n("iydZ"),
+            R = n("ZJYd"),
             D = n("CFVp"),
             U = n("qe65"),
             j = (n("OLKT"), function(e) {
@@ -7348,7 +7348,7 @@ webpackJsonp([46], {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleBuyClick = function(e) {
                         var n = t.props.channelID || "",
-                            i = Object(B.b)({
+                            i = Object(R.b)({
                                 trackBitsCardInteraction: t.props.trackBitsCardInteraction,
                                 channelID: n,
                                 purchaseUrl: e.currentTarget.dataset.purchaseUrl,
@@ -7373,12 +7373,12 @@ webpackJsonp([46], {
                         })
                     }
                     var t = null;
-                    Object(B.c)(this.props.offer) ? t = d.createElement(f._2, {
+                    Object(R.c)(this.props.offer) ? t = d.createElement(f._2, {
                         className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline"
                     }, d.createElement(f._35, {
                         type: f._40.Strong,
                         fontSize: f.R.Size6
-                    }, Object(m.d)("Special Offer: 1st Time Buyers", "Bits--BuyCard"))) : Object(B.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === x.c && (t = d.createElement(f._2, {
+                    }, Object(m.d)("Special Offer: 1st Time Buyers", "Bits--BuyCard"))) : Object(R.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === x.c && (t = d.createElement(f._2, {
                         className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline"
                     }, d.createElement(f._35, {
                         type: f._40.Strong,
@@ -7391,7 +7391,7 @@ webpackJsonp([46], {
                         percentOff: this.props.offer.discount
                     }, "Bits--BuyCard")));
                     var i = null;
-                    (Object(B.c)(this.props.offer) || Object(B.e)(this.props.offer)) && (i = d.createElement("div", {
+                    (Object(R.c)(this.props.offer) || Object(R.e)(this.props.offer)) && (i = d.createElement("div", {
                         className: "bits-buy-card-offer-row__sub-text"
                     }, Object(m.d)("one per account", "Bits--BuyCard")));
                     var a = this.props.isLastRow ? f._25 : f._2;
@@ -7447,7 +7447,7 @@ webpackJsonp([46], {
                     }, n.map(function(e) {
                         return d.createElement(U.a, {
                             key: e.bits,
-                            sources: Object(R.b)(e, 2, !1)
+                            sources: Object(B.b)(e, 2, !1)
                         })
                     }))
                 }, t
@@ -7472,8 +7472,8 @@ webpackJsonp([46], {
                             closeAllBits: e.closeAllBits,
                             trackBitsCardInteraction: e.trackBitsCardInteraction
                         }),
-                        s = Object(B.d)(a),
-                        l = Object(B.c)(a),
+                        s = Object(R.d)(a),
+                        l = Object(R.c)(a),
                         c = a.type === x.a;
                     l && !e.hidePromos ? t.push(o) : s && !l ? t.push(o) : c && !e.hideWateb ? i = o : c || s || n.push(o)
                 }), e.fullsize ? d.createElement(f._2, {
@@ -8964,6 +8964,18 @@ webpackJsonp([46], {
                     __typename: "BitsLeaderboardEntry"
                 },
                 __typename: "BitsLeaderboardEdge"
+            }
+        }, t.c = function(e, t) {
+            return {
+                cursor: "" + e.rank,
+                node: {
+                    id: t + "_" + e.entry_key,
+                    entryKey: e.entry_key,
+                    rank: e.rank,
+                    score: e.score,
+                    __typename: "BitsLeaderboardItem"
+                },
+                __typename: "BitsLeaderboardItemEdge"
             }
         };
         var i = n("TToO"),
@@ -11297,4 +11309,4 @@ webpackJsonp([46], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.event-landing-808400707262f61cf5891c07555a9bb5.js.map
+//# sourceMappingURL=pages.event-landing-3c62af3e25cf05086201940bb22945b4.js.map
