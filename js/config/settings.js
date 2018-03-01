@@ -94,13 +94,13 @@ window.__twilightSettings = {
         },
         "0ca9c0f5-f9fc-40c6-be3f-52a9fa69a8b9": {
             "name": "twilight_animated_directory_thumbnails",
-            "v": 3171,
+            "v": 3172,
             "t": 1,
             "groups": [{
-                "weight": 99,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 1,
+                "weight": 0,
                 "value": "experiment"
             }]
         },
