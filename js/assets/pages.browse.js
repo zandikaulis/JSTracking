@@ -1,4 +1,4 @@
-webpackJsonp([53], {
+webpackJsonp([52], {
     "+GT7": function(e, t, n) {
         "use strict";
         var a, r = n("TToO"),
@@ -807,6 +807,90 @@ webpackJsonp([53], {
         };
         e.exports = n
     },
+    "6Vb7": function(e, t, n) {
+        "use strict";
+        var a = n("TToO"),
+            r = n("OAwv"),
+            i = n("GiK3"),
+            o = n("6sO2"),
+            s = n("Ejve"),
+            l = "legacy_routes_enabled",
+            d = function(e) {
+                function t(t) {
+                    var n = e.call(this, t) || this;
+                    return n.isEnabled = !1, n.onHistoryChange = function(e, t) {
+                        n.isEnabled ? "REPLACE" !== t ? e && e.pathname ? (n.logger.debug("Location changed", {
+                            path: e.pathname
+                        }), n.legacyRoutes.forEach(function(t) {
+                            try {
+                                if (e.pathname.match(t)) {
+                                    n.logger.debug("Found legacy route. Reloading...");
+                                    var a = "" !== e.search ? r.parse(e.search) : {};
+                                    a["from-redirect"] = "true";
+                                    var i = r.stringify(a),
+                                        l = o.a.buildType === s.a.Dev ? window.location.host : window.location.hostname,
+                                        d = window.location.protocol + "//" + l + e.pathname + "?" + i;
+                                    return n.logger.debug("Redirecting to legacy route", {
+                                        newUrl: d
+                                    }), void window.location.replace(d)
+                                }
+                            } catch (e) {
+                                o.i.withCategory("legacy").error(e, "Unable to determine legacy reload match", {
+                                    regex: t
+                                })
+                            }
+                        })) : n.logger.debug("Unable to process history change. Path is null or empty.") : n.logger.debug("Skipping legacy route processing, due to history replace.") : n.logger.debug("Legacy routing not enabled.")
+                    }, n.processRedirectParam = function(e) {
+                        if (e && e.pathname && e.search) {
+                            var t = "" !== e.search ? r.parse(e.search) : {};
+                            if (t["from-redirect"]) {
+                                delete t["from-redirect"];
+                                var a = r.stringify(t),
+                                    i = "";
+                                a.length > 0 && (i = "?" + a), n.props.history.replace({
+                                    pathname: e.pathname,
+                                    hash: e.hash,
+                                    search: i
+                                })
+                            }
+                        }
+                    }, n.isEnabled = o.b.get(l, !1), n.logger = o.i.withCategory("legacy-routes"), n.legacyRoutes = n.buildRoutes(), n.props.history.listen(n.onHistoryChange), n
+                }
+                return a.__extends(t, e), t.prototype.render = function() {
+                    return null
+                }, t.prototype.componentDidMount = function() {
+                    this.processRedirectParam(this.props.history.location)
+                }, t.prototype.buildRoutes = function() {
+                    if (!this.isEnabled) return [];
+                    this.logger.debug("Building legacy routes...");
+                    var e = o.b.get("legacy_routes", []),
+                        t = [];
+                    if (!e || 0 === e.length) return this.logger.debug("No legacy routes found in settings."), t;
+                    for (var n = 0, a = e; n < a.length; n++) {
+                        var r = a[n];
+                        try {
+                            var i = new RegExp(r, "i");
+                            t.push(i)
+                        } catch (e) {
+                            this.logger.debug("Failed to parse route!", {
+                                val: r,
+                                err: e
+                            })
+                        }
+                    }
+                    return this.logger.debug("Done building legacy routes!", {
+                        count: t.length
+                    }), t
+                }, t
+            }(i.Component);
+        n.d(t, "a", function() {
+            return l
+        }), n.d(t, !1, function() {
+            return "legacy_routes"
+        }), n.d(t, "b", function() {
+            return d
+        })
+    },
     "6yQB": function(e, t, n) {
         "use strict";
         var a = n("RH2O"),
@@ -1248,8 +1332,8 @@ webpackJsonp([53], {
                     onCloseModal: v.c
                 }, e)
             })(T),
-            L = (n("npyu"), n("plcU")),
-            I = "error-message",
+            I = (n("npyu"), n("plcU")),
+            L = "error-message",
             D = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -1265,7 +1349,7 @@ webpackJsonp([53], {
                         }, r.createElement(m._35, {
                             color: m.I.Error,
                             type: m._40.H4,
-                            "data-test-selector": I
+                            "data-test-selector": L
                         }, C(t.state.error))) : null
                     }, t.onReasonChange = function(e) {
                         var n = e.target.value;
@@ -1392,7 +1476,7 @@ webpackJsonp([53], {
                     })))
                 }, t
             }(r.Component),
-            R = Object(_.compose)(Object(b.a)(L, {
+            R = Object(_.compose)(Object(b.a)(I, {
                 name: "timeoutUserFromCommunity"
             }))(D);
         var j = Object(h.b)(null, function(e) {
@@ -1401,7 +1485,7 @@ webpackJsonp([53], {
                 }, e)
             })(R),
             F = n("PO03"),
-            x = function(e) {
+            A = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onStreamBanClick = function() {
@@ -1466,12 +1550,12 @@ webpackJsonp([53], {
                     autoReportInteractive: !0
                 })], t)
             }(r.Component);
-        var A = Object(h.b)(null, function(e) {
+        var B = Object(h.b)(null, function(e) {
                 return Object(y.b)({
                     onShowModal: v.d
                 }, e)
-            })(x),
-            B = n("BwgW"),
+            })(A),
+            x = n("BwgW"),
             M = n("fc0G"),
             U = n("L3z0"),
             H = n("5MsU"),
@@ -1491,14 +1575,14 @@ webpackJsonp([53], {
                 oauth_token: ""
             };
 
-        function G() {
+        function z() {
             return !!window.Twitch && !!window.Twitch.Player
         }
-        var z = function(e) {
+        var G = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.checkPlayerDependencyStatus = function() {
-                        G() ? (n.setState({
+                        z() ? (n.setState({
                             canInitializePlayer: !0
                         }), n.checkPlayerDependencyAnimationFrame = null) : n.checkPlayerDependencyAnimationFrame = requestAnimationFrame(n.checkPlayerDependencyStatus)
                     }, n.attachRef = function(e) {
@@ -1512,7 +1596,7 @@ webpackJsonp([53], {
                     }, n.onPlayerPlaying = function() {
                         n.player.setQuality("160p30"), n.props.onPlayerPlaying && n.props.onPlayerPlaying()
                     }, n.state = {
-                        canInitializePlayer: G(),
+                        canInitializePlayer: z(),
                         playerInitialized: !1
                     }, n
                 }
@@ -1540,12 +1624,12 @@ webpackJsonp([53], {
                     var e = this;
                     this.checkPlayerDependencyAnimationFrame && cancelAnimationFrame(this.checkPlayerDependencyAnimationFrame), window.removeEventListener("beforeunload", function() {
                         return e.resetVolume()
-                    }), this.resetVolume(), this.player && (this.player.removeEventListener(H.a.PlayerReady, this.onPlayerReady), this.player.removeEventListener(U.a.Play, this.onPlayerPlay), this.player.removeEventListener(U.a.Playing, this.onPlayerPlaying), B.extensionService.unregisterPlayer(), this.player.destroy())
+                    }), this.resetVolume(), this.player && (this.player.removeEventListener(H.a.PlayerReady, this.onPlayerReady), this.player.removeEventListener(U.a.Play, this.onPlayerPlay), this.player.removeEventListener(U.a.Playing, this.onPlayerPlaying), x.extensionService.unregisterPlayer(), this.player.destroy())
                 }, t.prototype.initializePlayer = function() {
                     var e = V;
                     this.props.channelLogin && (e.channel = this.props.channelLogin);
                     var t = new window.Twitch.Player(this.playerRef, e);
-                    this.player = t, t.addEventListener(H.a.PlayerReady, this.onPlayerReady), t.addEventListener(U.a.Play, this.onPlayerPlay), t.addEventListener(U.a.Playing, this.onPlayerPlaying), B.extensionService.registerPlayer(this.player)
+                    this.player = t, t.addEventListener(H.a.PlayerReady, this.onPlayerReady), t.addEventListener(U.a.Play, this.onPlayerPlay), t.addEventListener(U.a.Playing, this.onPlayerPlaying), x.extensionService.registerPlayer(this.player)
                 }, t.prototype.resetVolume = function() {
                     this.userVolumeSetting && window.localStorage.setItem("volume", this.userVolumeSetting), this.userMuteSetting && window.localStorage.setItem("muted", this.userMuteSetting)
                 }, t.tagInjected = !1, t = n = a.__decorate([Object(k.d)("LiveChannelPreviewCard")], t);
@@ -1575,7 +1659,7 @@ webpackJsonp([53], {
                             position: m._9.Absolute,
                             attachTop: !0,
                             attachRight: !0
-                        }, r.createElement(A, {
+                        }, r.createElement(B, {
                             communityName: n.props.directoryName,
                             login: e.broadcaster.login,
                             displayName: e.broadcaster.displayName,
@@ -1628,7 +1712,7 @@ webpackJsonp([53], {
                         var e = {
                             onPlayerPlaying: n.onStreamLoaded
                         };
-                        if (n.props.showPreview && n.state.hovered && n.props.streamNode.broadcaster && n.props.streamNode.broadcaster.login) return r.createElement(z, a.__assign({
+                        if (n.props.showPreview && n.state.hovered && n.props.streamNode.broadcaster && n.props.streamNode.broadcaster.login) return r.createElement(G, a.__assign({
                             channelLogin: n.props.streamNode.broadcaster.login
                         }, e))
                     }, n.clearTimeouts = function() {
@@ -1925,8 +2009,8 @@ webpackJsonp([53], {
             O = n("zCIC"),
             T = n("7vx8"),
             P = n("oIkB"),
-            L = n("NY9D"),
-            I = n("Us7i"),
+            I = n("NY9D"),
+            L = n("Us7i"),
             D = n("/+to"),
             R = n("QG7y"),
             j = n("Odds"),
@@ -1959,9 +2043,9 @@ webpackJsonp([53], {
                     asset: j._16.Drops
                 })))))
             }),
-            x = n("eXld"),
-            A = n("v5ho"),
-            B = n("lYCI"),
+            A = n("eXld"),
+            B = n("v5ho"),
+            x = n("lYCI"),
             M = "directory-first-item",
             U = "directory-container",
             H = function(e) {
@@ -1982,7 +2066,7 @@ webpackJsonp([53], {
                     }, t.onSlotAdded = function() {
                         t.setState(function(e) {
                             var t = e.numSlotsAdded + 1;
-                            return t === Object.keys(R.b.directory).length && I.a.display(R.b.directory.banner), {
+                            return t === Object.keys(R.b.directory).length && L.a.display(R.b.directory.banner), {
                                 numSlotsAdded: t
                             }
                         })
@@ -2047,7 +2131,7 @@ webpackJsonp([53], {
                             }), o && v.createElement(F, null)))
                         }),
                         a = !this.props.data.loading && !this.props.data.error && !!this.props.data.directories.pageInfo.hasNextPage;
-                    return v.createElement(j._2, null, v.createElement(x.b, {
+                    return v.createElement(j._2, null, v.createElement(A.b, {
                         addPaddingWhenPlayerIsPersisting: !0
                     }), v.createElement("div", {
                         "data-target": U
@@ -2078,12 +2162,12 @@ webpackJsonp([53], {
                         pixelThreshold: 300
                     })), this.props.children)
                 }, t.prototype.getPathURL = function(e, t) {
-                    return "COMMUNITY" === t || this.props.category === l.Communities || this.props.category === l.CreativeCommunities ? Object(L.a)(e) : Object(L.c)(e)
+                    return "COMMUNITY" === t || this.props.category === l.Communities || this.props.category === l.CreativeCommunities ? Object(I.a)(e) : Object(I.c)(e)
                 }, t.prototype.onRender = function() {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive(), this.updateDisplayAdOrder()
                 }, t
             }(v.Component),
-            V = Object(f.compose)(Object(w.d)("BrowseDirectory"), Object(T.a)(B, {
+            V = Object(f.compose)(Object(w.d)("BrowseDirectory"), Object(T.a)(x, {
                 options: function(e) {
                     return {
                         fetchPolicy: "network-only",
@@ -2093,13 +2177,13 @@ webpackJsonp([53], {
                             directoryFilters: function(e) {
                                 switch (e) {
                                     case l.Communities:
-                                        return [A.a.Communities, A.a.Creative];
+                                        return [B.a.Communities, B.a.Creative];
                                     case l.Games:
-                                        return [A.a.Games];
+                                        return [B.a.Games];
                                     case l.CreativeCommunities:
-                                        return [A.a.Creative];
+                                        return [B.a.Creative];
                                     default:
-                                        return [A.a.Communities, A.a.Creative, A.a.Games]
+                                        return [B.a.Communities, B.a.Creative, B.a.Games]
                                 }
                             }(e.browseType),
                             directorySort: (t = e.sortBy, t === a.Relevancy ? "RELEVANCE" : "VIEWER_COUNT")
@@ -2111,7 +2195,7 @@ webpackJsonp([53], {
                     return r.__assign({}, e, {
                         loadMore: function() {
                             return e.data.fetchMore({
-                                query: B,
+                                query: x,
                                 variables: r.__assign({}, e.data.variables, {
                                     cursor: e.data.directories.edges[e.data.directories.edges.length - 5].cursor
                                 }),
@@ -2128,7 +2212,7 @@ webpackJsonp([53], {
                     })
                 }
             }))(Object(E.f)(H));
-        var G, z = Object(S.b)(function(e) {
+        var z, G = Object(S.b)(function(e) {
                 return {
                     browseType: e.browse.browseType,
                     lastBrowsePath: e.browse.lastBrowsePath,
@@ -2147,7 +2231,7 @@ webpackJsonp([53], {
                 return r.__extends(t, e), t.prototype.componentDidMount = function() {
                     i.n.setPageTitle(Object(i.d)("Communities", "BrowseCommunitiesPage"))
                 }, t.prototype.render = function() {
-                    return v.createElement(z, {
+                    return v.createElement(G, {
                         category: l.Communities
                     })
                 }, t
@@ -2185,7 +2269,7 @@ webpackJsonp([53], {
                 return r.__extends(t, e), t.prototype.componentDidMount = function() {
                     i.n.setPageTitle(Object(i.d)("Creative", "BrowseCreativePage"))
                 }, t.prototype.render = function() {
-                    return v.createElement(z, {
+                    return v.createElement(G, {
                         category: l.CreativeCommunities
                     }, v.createElement($, null))
                 }, t
@@ -2201,7 +2285,7 @@ webpackJsonp([53], {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
-                    return v.createElement(z, {
+                    return v.createElement(G, {
                         category: l.GamesAndCommunities
                     })
                 }, t
@@ -2232,26 +2316,26 @@ webpackJsonp([53], {
             }
         }! function(e) {
             e.Communities = "/directory/communities", e.CreativeCommunities = "/directory/creative", e.Games = "/directory/games", e.GamesAndCommunities = "/directory", e.DirectoryCategory = "/directory/:category?", e.Popular = "/directory/all", e.PopularEncodedLanguage = "/directory/all/:encodedLanguage", e.PopularPlaystation = "/directory/all/ps4", e.PopularXbox = "/directory/all/xbox"
-        }(G || (G = {}));
+        }(z || (z = {}));
         var ae = function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.typeChangeHandler = function(e) {
                     switch (t.balloonWrapperRef.toggleBalloon(!1), e.currentTarget.getAttribute("data-filter-type")) {
                         case l.Channels:
-                            i.n.history.push(G.Popular), t.props.changeBrowseType(l.Channels);
+                            i.n.history.push(z.Popular), t.props.changeBrowseType(l.Channels);
                             break;
                         case l.Communities:
-                            i.n.history.push(G.Communities), t.props.changeBrowseType(l.Communities);
+                            i.n.history.push(z.Communities), t.props.changeBrowseType(l.Communities);
                             break;
                         case l.CreativeCommunities:
-                            i.n.history.push(G.CreativeCommunities), t.props.changeBrowseType(l.CreativeCommunities);
+                            i.n.history.push(z.CreativeCommunities), t.props.changeBrowseType(l.CreativeCommunities);
                             break;
                         case l.Games:
-                            i.n.history.push(G.GamesAndCommunities), t.props.changeBrowseType(l.Games);
+                            i.n.history.push(z.GamesAndCommunities), t.props.changeBrowseType(l.Games);
                             break;
                         default:
-                            i.n.history.push(G.GamesAndCommunities), t.props.changeBrowseType(l.GamesAndCommunities)
+                            i.n.history.push(z.GamesAndCommunities), t.props.changeBrowseType(l.GamesAndCommunities)
                     }
                 }, t.saveBalloonWrapperRef = function(e) {
                     t.balloonWrapperRef = e
@@ -2363,7 +2447,7 @@ webpackJsonp([53], {
                 }, e)
             })(oe),
             le = function(e) {
-                return e === G.Popular || e === G.PopularEncodedLanguage || e === G.PopularPlaystation || e === G.PopularXbox
+                return e === z.Popular || e === z.PopularEncodedLanguage || e === z.PopularPlaystation || e === z.PopularXbox
             },
             de = n("HW6M"),
             ce = (n("R0TX"), function(e) {
@@ -2468,7 +2552,7 @@ webpackJsonp([53], {
                             }, v.createElement(se, null))
                         }, "NewBrowseHeader")
                     }, t.renderCreateCommunity = function() {
-                        return t.props.location.pathname !== G.Communities ? null : v.createElement(j.u, {
+                        return t.props.location.pathname !== z.Communities ? null : v.createElement(j.u, {
                             type: j.z.Hollow,
                             linkTo: Object(ee.a)("/communities/create"),
                             "data-test-selector": me
@@ -2548,7 +2632,7 @@ webpackJsonp([53], {
                     }).map(function(e, t) {
                         var n = e.node;
                         return v.createElement(we.b, {
-                            directoryType: A.a.Communities,
+                            directoryType: B.a.Communities,
                             streamIndex: t,
                             streamNode: n,
                             key: n.id,
@@ -2604,7 +2688,7 @@ webpackJsonp([53], {
                     }, t.onSlotAdded = function() {
                         t.setState(function(e) {
                             var t = e.numSlotsAdded + 1;
-                            return t === Object.keys(R.b.directory).length && I.a.display(R.b.directory.banner), {
+                            return t === Object.keys(R.b.directory).length && L.a.display(R.b.directory.banner), {
                                 numSlotsAdded: t
                             }
                         })
@@ -2674,7 +2758,7 @@ webpackJsonp([53], {
                                 gameImageSrc: a.game && a.game.boxArtURL || i.a.defaultBoxArtURL,
                                 gameTitle: a.game && a.game.name || "",
                                 gameLinkTo: {
-                                    pathname: Object(L.c)(a.game && a.game.name || ""),
+                                    pathname: Object(I.c)(a.game && a.game.name || ""),
                                     state: {
                                         medium: n,
                                         content: _.PageviewContent.Live,
@@ -2698,7 +2782,7 @@ webpackJsonp([53], {
                     return v.createElement(j._2, {
                         flexShrink: 0,
                         "data-target": Te
-                    }, v.createElement(x.b, {
+                    }, v.createElement(A.b, {
                         addPaddingWhenPlayerIsPersisting: !0
                     }), e, t, v.createElement(j._46, {
                         gutterSize: j._48.Small,
@@ -2773,7 +2857,7 @@ webpackJsonp([53], {
                     location: _.PageviewLocation.DirectoryPopular
                 })], t)
             }(v.Component);
-        var Le = Object(S.b)(function(e) {
+        var Ie = Object(S.b)(function(e) {
                 return {
                     languageCode: e.session.languageCode,
                     languagePreferences: e.userPreferences.languagePreferences,
@@ -2785,7 +2869,7 @@ webpackJsonp([53], {
                     changeLastBrowsePath: p
                 }, e)
             })(Pe),
-            Ie = n("yFXh"),
+            Le = n("yFXh"),
             De = "directory-container",
             Re = function(e) {
                 function t(t) {
@@ -2801,7 +2885,7 @@ webpackJsonp([53], {
                     }, n.onSlotAdded = function() {
                         n.setState(function(e) {
                             var t = e.numSlotsCreated + 1;
-                            return t === Object.keys(R.b.directory).length && I.a.display(R.b.directory.banner), {
+                            return t === Object.keys(R.b.directory).length && L.a.display(R.b.directory.banner), {
                                 numSlotsCreated: t
                             }
                         })
@@ -2833,7 +2917,7 @@ webpackJsonp([53], {
                     }).map(function(e, t) {
                         var n = e.node;
                         return v.createElement(we.b, {
-                            directoryType: A.a.Communities,
+                            directoryType: B.a.Communities,
                             streamIndex: t,
                             streamNode: n,
                             key: n.id,
@@ -2886,7 +2970,7 @@ webpackJsonp([53], {
                     }
                     return v.createElement(j._2, {
                         "data-target": De
-                    }, v.createElement(x.b, {
+                    }, v.createElement(A.b, {
                         addPaddingWhenPlayerIsPersisting: !0
                     }), v.createElement(D.a, {
                         injectStyles: {
@@ -2906,7 +2990,7 @@ webpackJsonp([53], {
                     }), e)
                 }, t.prototype.onRender = function() {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
-                }, t = r.__decorate([Object(T.a)(Ie, {
+                }, t = r.__decorate([Object(T.a)(Le, {
                     options: function(e) {
                         return {
                             variables: {
@@ -2919,7 +3003,7 @@ webpackJsonp([53], {
                         return r.__assign({}, e, {
                             loadMore: function() {
                                 return e.data.fetchMore({
-                                    query: Ie,
+                                    query: Le,
                                     variables: r.__assign({}, e.data.variables, {
                                         cursor: e.data.streams.edges[e.data.streams.edges.length - 1].cursor
                                     }),
@@ -2956,7 +3040,7 @@ webpackJsonp([53], {
                 return r.__extends(t, e), t.prototype.componentDidMount = function() {
                     return r.__awaiter(this, void 0, void 0, function() {
                         return r.__generator(this, function(e) {
-                            return this.props.match.path === G.DirectoryCategory ? this.props.changeBrowseType(l.Games) : this.setBrowseType(this.props.match.path), this.setCorrectPageTitle(this.props.browseType), [2]
+                            return this.props.match.path === z.DirectoryCategory ? this.props.changeBrowseType(l.Games) : this.setBrowseType(this.props.match.path), this.setCorrectPageTitle(this.props.browseType), [2]
                         })
                     })
                 }, t.prototype.componentWillReceiveProps = function(e) {
@@ -2977,25 +3061,25 @@ webpackJsonp([53], {
                         },
                         autoEnable: !1
                     }), this.renderBrowseHeader(), v.createElement(J.d, null, v.createElement(J.b, {
-                        path: G.Communities,
+                        path: z.Communities,
                         component: q
                     }), v.createElement(J.b, {
-                        path: G.CreativeCommunities,
+                        path: z.CreativeCommunities,
                         component: K
                     }), v.createElement(J.b, {
-                        path: G.PopularPlaystation,
-                        component: Le
+                        path: z.PopularPlaystation,
+                        component: Ie
                     }), v.createElement(J.b, {
-                        path: G.PopularXbox,
-                        component: Le
+                        path: z.PopularXbox,
+                        component: Ie
                     }), v.createElement(J.b, {
-                        path: G.PopularEncodedLanguage,
+                        path: z.PopularEncodedLanguage,
                         component: Re
                     }), v.createElement(J.b, {
-                        path: G.Popular,
-                        component: Le
+                        path: z.Popular,
+                        component: Ie
                     }), v.createElement(J.b, {
-                        path: G.DirectoryCategory,
+                        path: z.DirectoryCategory,
                         component: X
                     })))
                 }, t.prototype.renderBrowseHeader = function() {
@@ -3003,7 +3087,7 @@ webpackJsonp([53], {
                 }, t.prototype.setCorrectPageTitle = function(e) {
                     e === l.GamesAndCommunities ? i.n.setPageTitle(Object(i.d)("Games and Communities", "BrowseGamesAndCommunitiesPage")) : e === l.Games && i.n.setPageTitle(Object(i.d)("All Games", "BrowseGamePage"))
                 }, t.prototype.setBrowseType = function(e) {
-                    e === G.Communities ? this.props.changeBrowseType(l.Communities) : e === G.CreativeCommunities ? this.props.changeBrowseType(l.CreativeCommunities) : le(e) && this.props.changeBrowseType(l.Channels)
+                    e === z.Communities ? this.props.changeBrowseType(l.Communities) : e === z.CreativeCommunities ? this.props.changeBrowseType(l.CreativeCommunities) : le(e) && this.props.changeBrowseType(l.Channels)
                 }, t
             }(v.Component);
         var Fe = Object(S.b)(function(e) {
@@ -3541,90 +3625,6 @@ webpackJsonp([53], {
                 }
             }
     },
-    MSvX: function(e, t, n) {
-        "use strict";
-        var a = n("TToO"),
-            r = n("OAwv"),
-            i = n("GiK3"),
-            o = n("6sO2"),
-            s = n("Ejve"),
-            l = "legacy_routes_enabled",
-            d = function(e) {
-                function t(t) {
-                    var n = e.call(this, t) || this;
-                    return n.isEnabled = !1, n.onHistoryChange = function(e, t) {
-                        n.isEnabled ? "REPLACE" !== t ? e && e.pathname ? (n.logger.debug("Location changed", {
-                            path: e.pathname
-                        }), n.legacyRoutes.forEach(function(t) {
-                            try {
-                                if (e.pathname.match(t)) {
-                                    n.logger.debug("Found legacy route. Reloading...");
-                                    var a = "" !== e.search ? r.parse(e.search) : {};
-                                    a["from-redirect"] = "true";
-                                    var i = r.stringify(a),
-                                        l = o.a.buildType === s.a.Dev ? window.location.host : window.location.hostname,
-                                        d = window.location.protocol + "//" + l + e.pathname + "?" + i;
-                                    return n.logger.debug("Redirecting to legacy route", {
-                                        newUrl: d
-                                    }), void window.location.replace(d)
-                                }
-                            } catch (e) {
-                                o.i.withCategory("legacy").error(e, "Unable to determine legacy reload match", {
-                                    regex: t
-                                })
-                            }
-                        })) : n.logger.debug("Unable to process history change. Path is null or empty.") : n.logger.debug("Skipping legacy route processing, due to history replace.") : n.logger.debug("Legacy routing not enabled.")
-                    }, n.processRedirectParam = function(e) {
-                        if (e && e.pathname && e.search) {
-                            var t = "" !== e.search ? r.parse(e.search) : {};
-                            if (t["from-redirect"]) {
-                                delete t["from-redirect"];
-                                var a = r.stringify(t),
-                                    i = "";
-                                a.length > 0 && (i = "?" + a), n.props.history.replace({
-                                    pathname: e.pathname,
-                                    hash: e.hash,
-                                    search: i
-                                })
-                            }
-                        }
-                    }, n.isEnabled = o.b.get(l, !1), n.logger = o.i.withCategory("legacy-routes"), n.legacyRoutes = n.buildRoutes(), n.props.history.listen(n.onHistoryChange), n
-                }
-                return a.__extends(t, e), t.prototype.render = function() {
-                    return null
-                }, t.prototype.componentDidMount = function() {
-                    this.processRedirectParam(this.props.history.location)
-                }, t.prototype.buildRoutes = function() {
-                    if (!this.isEnabled) return [];
-                    this.logger.debug("Building legacy routes...");
-                    var e = o.b.get("legacy_routes", []),
-                        t = [];
-                    if (!e || 0 === e.length) return this.logger.debug("No legacy routes found in settings."), t;
-                    for (var n = 0, a = e; n < a.length; n++) {
-                        var r = a[n];
-                        try {
-                            var i = new RegExp(r, "i");
-                            t.push(i)
-                        } catch (e) {
-                            this.logger.debug("Failed to parse route!", {
-                                val: r,
-                                err: e
-                            })
-                        }
-                    }
-                    return this.logger.debug("Done building legacy routes!", {
-                        count: t.length
-                    }), t
-                }, t
-            }(i.Component);
-        n.d(t, "a", function() {
-            return l
-        }), n.d(t, !1, function() {
-            return "legacy_routes"
-        }), n.d(t, "b", function() {
-            return d
-        })
-    },
     PLRK: function(e, t, n) {
         "use strict";
         var a = n("TToO"),
@@ -4029,15 +4029,15 @@ webpackJsonp([53], {
     },
     czpb: function(e, t, n) {
         "use strict";
-        var a = n("6sO2"),
-            r = n("Ejve"),
-            i = n("MSvX");
         t.a = function(e) {
             return a.b.get(i.a, !1) || a.a.buildType !== r.a.Production ? "string" == typeof e ? e : e.pathname || "" : "string" == typeof e ? o + e : o + e.pathname
         }, t.b = function() {
             return !a.b.get(i.a, !1) && a.a.buildType === r.a.Production
         };
-        var o = "https://www.twitch.tv"
+        var a = n("6sO2"),
+            r = n("Ejve"),
+            i = n("6Vb7"),
+            o = "https://www.twitch.tv"
     },
     ehrk: function(e, t) {},
     i3hh: function(e, t) {},
@@ -4074,74 +4074,6 @@ webpackJsonp([53], {
                 return i.a.has(e)
             })
         }
-    },
-    "j7/Y": function(e, t, n) {
-        "use strict";
-        var a = n("TToO"),
-            r = n("OAwv"),
-            i = n("GiK3"),
-            o = n("F8kA"),
-            s = n("6sO2");
-
-        function l(e) {
-            return function(t) {
-                var n = function(n) {
-                    function o(t) {
-                        var r = n.call(this, t) || this;
-                        return r.tracked = !1, r.referenceTracking = {}, r.trackPageview = function() {
-                            if (!(r.tracked || e.skip && e.skip(r.props))) {
-                                r.tracked = !0;
-                                var t = {};
-                                "function" == typeof e.properties ? t = e.properties(r.props) : e.properties && (t = a.__assign({}, e.properties));
-                                var n = a.__assign({}, r.props);
-                                n.location && n.location.state && (t.medium = n.location.state.medium, t.content = n.location.state.content, t.content_index = n.location.state.content_index);
-                                var i = r.referenceTracking,
-                                    o = i.content,
-                                    l = i.medium,
-                                    d = i.content_index;
-                                s.n.tracking.trackPageview(a.__assign({
-                                    content: o,
-                                    medium: l,
-                                    content_index: d,
-                                    location: e.location
-                                }, t))
-                            }
-                        }, s.i.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : s.i.warn("No latency tracker exists! This means no data will be sent to Spade.", e), r
-                    }
-                    return a.__extends(o, n), o.prototype.componentDidMount = function() {
-                        var e = this;
-                        this.referenceTracking = this.stripTTParams(this.props.history.location), this.trackPageview(), this.props.history.listen(function(t, n) {
-                            "REPLACE" !== n && (e.tracked = !1, e.referenceTracking = {})
-                        })
-                    }, o.prototype.componentDidUpdate = function() {
-                        this.trackPageview()
-                    }, o.prototype.render = function() {
-                        return i.createElement(t, a.__assign({}, this.props))
-                    }, o.prototype.stripTTParams = function(e) {
-                        var t = "" !== e.search ? r.parse(e.search) : {},
-                            n = {
-                                content: t.tt_content,
-                                content_index: t.tt_content_index,
-                                medium: t.tt_medium
-                            };
-                        if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, n.medium || n.content) {
-                            var a = "",
-                                i = r.stringify(t);
-                            i.length > 0 && (a = "?" + i), this.props.history.replace({
-                                pathname: e.pathname,
-                                hash: e.hash,
-                                search: a
-                            })
-                        }
-                        return n
-                    }, o
-                }(i.Component);
-                return Object(o.f)(n)
-            }
-        }
-        n.d(t, "a", function() {
-            return l
-        })
     },
     lYCI: function(e, t) {
         var n = {
@@ -5068,4 +5000,4 @@ webpackJsonp([53], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.browse-503ee52ee3e89132effa6e0ae1001318.js.map
+//# sourceMappingURL=pages.browse-72fd7c171c46184a6b0bff0916c081f8.js.map

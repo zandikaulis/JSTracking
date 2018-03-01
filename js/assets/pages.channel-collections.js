@@ -1,4 +1,4 @@
-webpackJsonp([50], {
+webpackJsonp([49], {
     "+Aaf": function(e, t) {},
     "/LBW": function(e, t, n) {
         "use strict";
@@ -745,6 +745,90 @@ webpackJsonp([50], {
         e.exports = n
     },
     "6Rwu": function(e, t) {},
+    "6Vb7": function(e, t, n) {
+        "use strict";
+        var i = n("TToO"),
+            a = n("OAwv"),
+            r = n("GiK3"),
+            o = n("6sO2"),
+            s = n("Ejve"),
+            l = "legacy_routes_enabled",
+            c = function(e) {
+                function t(t) {
+                    var n = e.call(this, t) || this;
+                    return n.isEnabled = !1, n.onHistoryChange = function(e, t) {
+                        n.isEnabled ? "REPLACE" !== t ? e && e.pathname ? (n.logger.debug("Location changed", {
+                            path: e.pathname
+                        }), n.legacyRoutes.forEach(function(t) {
+                            try {
+                                if (e.pathname.match(t)) {
+                                    n.logger.debug("Found legacy route. Reloading...");
+                                    var i = "" !== e.search ? a.parse(e.search) : {};
+                                    i["from-redirect"] = "true";
+                                    var r = a.stringify(i),
+                                        l = o.a.buildType === s.a.Dev ? window.location.host : window.location.hostname,
+                                        c = window.location.protocol + "//" + l + e.pathname + "?" + r;
+                                    return n.logger.debug("Redirecting to legacy route", {
+                                        newUrl: c
+                                    }), void window.location.replace(c)
+                                }
+                            } catch (e) {
+                                o.i.withCategory("legacy").error(e, "Unable to determine legacy reload match", {
+                                    regex: t
+                                })
+                            }
+                        })) : n.logger.debug("Unable to process history change. Path is null or empty.") : n.logger.debug("Skipping legacy route processing, due to history replace.") : n.logger.debug("Legacy routing not enabled.")
+                    }, n.processRedirectParam = function(e) {
+                        if (e && e.pathname && e.search) {
+                            var t = "" !== e.search ? a.parse(e.search) : {};
+                            if (t["from-redirect"]) {
+                                delete t["from-redirect"];
+                                var i = a.stringify(t),
+                                    r = "";
+                                i.length > 0 && (r = "?" + i), n.props.history.replace({
+                                    pathname: e.pathname,
+                                    hash: e.hash,
+                                    search: r
+                                })
+                            }
+                        }
+                    }, n.isEnabled = o.b.get(l, !1), n.logger = o.i.withCategory("legacy-routes"), n.legacyRoutes = n.buildRoutes(), n.props.history.listen(n.onHistoryChange), n
+                }
+                return i.__extends(t, e), t.prototype.render = function() {
+                    return null
+                }, t.prototype.componentDidMount = function() {
+                    this.processRedirectParam(this.props.history.location)
+                }, t.prototype.buildRoutes = function() {
+                    if (!this.isEnabled) return [];
+                    this.logger.debug("Building legacy routes...");
+                    var e = o.b.get("legacy_routes", []),
+                        t = [];
+                    if (!e || 0 === e.length) return this.logger.debug("No legacy routes found in settings."), t;
+                    for (var n = 0, i = e; n < i.length; n++) {
+                        var a = i[n];
+                        try {
+                            var r = new RegExp(a, "i");
+                            t.push(r)
+                        } catch (e) {
+                            this.logger.debug("Failed to parse route!", {
+                                val: a,
+                                err: e
+                            })
+                        }
+                    }
+                    return this.logger.debug("Done building legacy routes!", {
+                        count: t.length
+                    }), t
+                }, t
+            }(r.Component);
+        n.d(t, "a", function() {
+            return l
+        }), n.d(t, !1, function() {
+            return "legacy_routes"
+        }), n.d(t, "b", function() {
+            return c
+        })
+    },
     "6lb1": function(e, t) {},
     AL3x: function(e, t) {},
     B9Px: function(e, t, n) {
@@ -1166,90 +1250,6 @@ webpackJsonp([50], {
                     e && this.props.onFilesSubmitted(Array.from(e))
                 }, t
             }(a.Component))
-    },
-    MSvX: function(e, t, n) {
-        "use strict";
-        var i = n("TToO"),
-            a = n("OAwv"),
-            r = n("GiK3"),
-            o = n("6sO2"),
-            s = n("Ejve"),
-            l = "legacy_routes_enabled",
-            c = function(e) {
-                function t(t) {
-                    var n = e.call(this, t) || this;
-                    return n.isEnabled = !1, n.onHistoryChange = function(e, t) {
-                        n.isEnabled ? "REPLACE" !== t ? e && e.pathname ? (n.logger.debug("Location changed", {
-                            path: e.pathname
-                        }), n.legacyRoutes.forEach(function(t) {
-                            try {
-                                if (e.pathname.match(t)) {
-                                    n.logger.debug("Found legacy route. Reloading...");
-                                    var i = "" !== e.search ? a.parse(e.search) : {};
-                                    i["from-redirect"] = "true";
-                                    var r = a.stringify(i),
-                                        l = o.a.buildType === s.a.Dev ? window.location.host : window.location.hostname,
-                                        c = window.location.protocol + "//" + l + e.pathname + "?" + r;
-                                    return n.logger.debug("Redirecting to legacy route", {
-                                        newUrl: c
-                                    }), void window.location.replace(c)
-                                }
-                            } catch (e) {
-                                o.i.withCategory("legacy").error(e, "Unable to determine legacy reload match", {
-                                    regex: t
-                                })
-                            }
-                        })) : n.logger.debug("Unable to process history change. Path is null or empty.") : n.logger.debug("Skipping legacy route processing, due to history replace.") : n.logger.debug("Legacy routing not enabled.")
-                    }, n.processRedirectParam = function(e) {
-                        if (e && e.pathname && e.search) {
-                            var t = "" !== e.search ? a.parse(e.search) : {};
-                            if (t["from-redirect"]) {
-                                delete t["from-redirect"];
-                                var i = a.stringify(t),
-                                    r = "";
-                                i.length > 0 && (r = "?" + i), n.props.history.replace({
-                                    pathname: e.pathname,
-                                    hash: e.hash,
-                                    search: r
-                                })
-                            }
-                        }
-                    }, n.isEnabled = o.b.get(l, !1), n.logger = o.i.withCategory("legacy-routes"), n.legacyRoutes = n.buildRoutes(), n.props.history.listen(n.onHistoryChange), n
-                }
-                return i.__extends(t, e), t.prototype.render = function() {
-                    return null
-                }, t.prototype.componentDidMount = function() {
-                    this.processRedirectParam(this.props.history.location)
-                }, t.prototype.buildRoutes = function() {
-                    if (!this.isEnabled) return [];
-                    this.logger.debug("Building legacy routes...");
-                    var e = o.b.get("legacy_routes", []),
-                        t = [];
-                    if (!e || 0 === e.length) return this.logger.debug("No legacy routes found in settings."), t;
-                    for (var n = 0, i = e; n < i.length; n++) {
-                        var a = i[n];
-                        try {
-                            var r = new RegExp(a, "i");
-                            t.push(r)
-                        } catch (e) {
-                            this.logger.debug("Failed to parse route!", {
-                                val: a,
-                                err: e
-                            })
-                        }
-                    }
-                    return this.logger.debug("Done building legacy routes!", {
-                        count: t.length
-                    }), t
-                }, t
-            }(r.Component);
-        n.d(t, "a", function() {
-            return l
-        }), n.d(t, !1, function() {
-            return "legacy_routes"
-        }), n.d(t, "b", function() {
-            return c
-        })
     },
     OLKT: function(e, t) {},
     OcEY: function(e, t) {
@@ -1916,7 +1916,7 @@ webpackJsonp([50], {
                 }, e)
             })(P),
             R = n("x9n8"),
-            M = (n("WClm"), function(e) {
+            H = (n("WClm"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.openModal = function(e) {
@@ -1946,11 +1946,11 @@ webpackJsonp([50], {
                     }))
                 }, t = i.__decorate([Object(w.d)("EditProfileOverlay")], t)
             }(r.Component));
-        var H = Object(p.b)(null, function(e) {
+        var M = Object(p.b)(null, function(e) {
                 return Object(x.b)({
                     showModal: T.d
                 }, e)
-            })(M),
+            })(H),
             z = n("70dR"),
             V = (n("z4Db"), n("kOMe"));
         n.d(t, "b", function() {
@@ -2007,7 +2007,7 @@ webpackJsonp([50], {
                         display: E.N.InlineFlex,
                         alignItems: E.c.Center,
                         justifyContent: E._1.Center
-                    }, r.createElement(H, {
+                    }, r.createElement(M, {
                         userID: t.props.data.user.id,
                         login: t.props.data.user.login,
                         displayName: t.props.data.user.displayName
@@ -2954,8 +2954,8 @@ webpackJsonp([50], {
                     color: v.I.Alt
                 }, Object(u.d)("Purchase Bits", "Bits--BuyCard")), t), i, n)
             },
-            M = n("nrdj"),
-            H = function(e) {
+            H = n("nrdj"),
+            M = function(e) {
                 return c.createElement(v._2, {
                     display: v.N.Flex,
                     flexGrow: 1,
@@ -2966,7 +2966,7 @@ webpackJsonp([50], {
                     padding: {
                         y: 1
                     }
-                }, c.createElement(M.a, {
+                }, c.createElement(H.a, {
                     prefix: "cheer",
                     amount: e.amount,
                     bitsConfig: e.bitsConfig,
@@ -3031,7 +3031,7 @@ webpackJsonp([50], {
                         })
                     })
                 }, t.prototype.render = function() {
-                    return c.createElement(H, l.__assign({}, this.props, {
+                    return c.createElement(M, l.__assign({}, this.props, {
                         hasAdAvailable: this.state.hasAdAvailable
                     }))
                 }, t
@@ -4126,15 +4126,15 @@ webpackJsonp([50], {
     },
     czpb: function(e, t, n) {
         "use strict";
-        var i = n("6sO2"),
-            a = n("Ejve"),
-            r = n("MSvX");
         t.a = function(e) {
             return i.b.get(r.a, !1) || i.a.buildType !== a.a.Production ? "string" == typeof e ? e : e.pathname || "" : "string" == typeof e ? o + e : o + e.pathname
         }, t.b = function() {
             return !i.b.get(r.a, !1) && i.a.buildType === a.a.Production
         };
-        var o = "https://www.twitch.tv"
+        var i = n("6sO2"),
+            a = n("Ejve"),
+            r = n("6Vb7"),
+            o = "https://www.twitch.tv"
     },
     dL0Y: function(e, t, n) {
         "use strict";
@@ -4470,74 +4470,6 @@ webpackJsonp([50], {
         }
         n.d(t, "a", function() {
             return d
-        })
-    },
-    "j7/Y": function(e, t, n) {
-        "use strict";
-        var i = n("TToO"),
-            a = n("OAwv"),
-            r = n("GiK3"),
-            o = n("F8kA"),
-            s = n("6sO2");
-
-        function l(e) {
-            return function(t) {
-                var n = function(n) {
-                    function o(t) {
-                        var a = n.call(this, t) || this;
-                        return a.tracked = !1, a.referenceTracking = {}, a.trackPageview = function() {
-                            if (!(a.tracked || e.skip && e.skip(a.props))) {
-                                a.tracked = !0;
-                                var t = {};
-                                "function" == typeof e.properties ? t = e.properties(a.props) : e.properties && (t = i.__assign({}, e.properties));
-                                var n = i.__assign({}, a.props);
-                                n.location && n.location.state && (t.medium = n.location.state.medium, t.content = n.location.state.content, t.content_index = n.location.state.content_index);
-                                var r = a.referenceTracking,
-                                    o = r.content,
-                                    l = r.medium,
-                                    c = r.content_index;
-                                s.n.tracking.trackPageview(i.__assign({
-                                    content: o,
-                                    medium: l,
-                                    content_index: c,
-                                    location: e.location
-                                }, t))
-                            }
-                        }, s.i.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : s.i.warn("No latency tracker exists! This means no data will be sent to Spade.", e), a
-                    }
-                    return i.__extends(o, n), o.prototype.componentDidMount = function() {
-                        var e = this;
-                        this.referenceTracking = this.stripTTParams(this.props.history.location), this.trackPageview(), this.props.history.listen(function(t, n) {
-                            "REPLACE" !== n && (e.tracked = !1, e.referenceTracking = {})
-                        })
-                    }, o.prototype.componentDidUpdate = function() {
-                        this.trackPageview()
-                    }, o.prototype.render = function() {
-                        return r.createElement(t, i.__assign({}, this.props))
-                    }, o.prototype.stripTTParams = function(e) {
-                        var t = "" !== e.search ? a.parse(e.search) : {},
-                            n = {
-                                content: t.tt_content,
-                                content_index: t.tt_content_index,
-                                medium: t.tt_medium
-                            };
-                        if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, n.medium || n.content) {
-                            var i = "",
-                                r = a.stringify(t);
-                            r.length > 0 && (i = "?" + r), this.props.history.replace({
-                                pathname: e.pathname,
-                                hash: e.hash,
-                                search: i
-                            })
-                        }
-                        return n
-                    }, o
-                }(r.Component);
-                return Object(o.f)(n)
-            }
-        }
-        n.d(t, "a", function() {
-            return l
         })
     },
     jF7o: function(e, t, n) {
@@ -6081,4 +6013,4 @@ webpackJsonp([50], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-collections-2fec8838473833501bfcc13360baf07b.js.map
+//# sourceMappingURL=pages.channel-collections-eb9db294e5f6c7bb7a0d5de8e2527a21.js.map

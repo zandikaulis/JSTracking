@@ -2711,7 +2711,7 @@ webpackJsonp([73, 74], {
                         }, r.createElement(f._46, {
                             gutterSize: f._48.Small,
                             childWidth: t.props.cardSize,
-                            placeholderItems: a,
+                            placeholderItems: t.props.placeholderItems ? t.props.placeholderItems : a,
                             noWrap: e
                         }, n))
                     }, t.renderCardGridWithAdSlot = function() {
@@ -3493,7 +3493,8 @@ webpackJsonp([73, 74], {
                             games: this.props.gameData,
                             directoryType: N.a.Games,
                             cardSize: b._47.Medium,
-                            followGameCardOptions: t
+                            followGameCardOptions: t,
+                            placeholderItems: 99
                         })
                     }
                     if (this.props.categoryData) {
@@ -4107,4 +4108,4 @@ webpackJsonp([73, 74], {
         })
     }
 });
-//# sourceMappingURL=pages.anon-front.components.top-creative-3440d53ec5a1e1e81a4feb3e4477032b.js.map
+//# sourceMappingURL=pages.anon-front.components.top-creative-69ae4708bbef9d5a91d6705a412ef31a.js.map

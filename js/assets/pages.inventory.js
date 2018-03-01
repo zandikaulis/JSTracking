@@ -1,4 +1,4 @@
-webpackJsonp([56], {
+webpackJsonp([57], {
     "1pvm": function(e, t) {},
     DZCb: function(e, t, n) {
         "use strict";
@@ -9,8 +9,8 @@ webpackJsonp([56], {
             r = n("2KeS"),
             a = n("+xm8"),
             o = n("f2i/"),
-            s = n("Aj/L"),
-            l = n("TToO"),
+            l = n("Aj/L"),
+            s = n("TToO"),
             c = n("GiK3"),
             d = n("6sO2"),
             m = n("yWCw"),
@@ -49,7 +49,7 @@ webpackJsonp([56], {
                         }, e.title))
                     }, t
                 }
-                return l.__extends(t, e), t.prototype.render = function() {
+                return s.__extends(t, e), t.prototype.render = function() {
                     if (this.props.loading) return c.createElement(h._4, {
                         fillContent: !0
                     });
@@ -84,11 +84,11 @@ webpackJsonp([56], {
                     }, t))
                 }, t
             }(c.Component),
-            _ = Object(r.d)(Object(f.d)("BadgesList", {
+            y = Object(r.d)(Object(f.d)("BadgesList", {
                 autoReportInteractive: !0
             }))(k),
-            y = n("Ouuk"),
-            b = n("jF7o");
+            b = n("Ouuk"),
+            _ = n("jF7o");
         var E = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -116,7 +116,7 @@ webpackJsonp([56], {
                     }, t.handleOpenClick = function(e) {
                         ! function(e, t) {
                             var n = window.open(e, "Twitch", "width=1024,height=600,scrollbars=yes");
-                            n && !Object(y.a)() && (n.focus(), Object(b.a)(n, function(e) {
+                            n && !Object(b.a)() && (n.focus(), Object(_.a)(n, function(e) {
                                 t(e)
                             }))
                         }(e.currentTarget.dataset.openUrl || "", t.reload)
@@ -124,7 +124,7 @@ webpackJsonp([56], {
                         t.props.refetchData && t.props.refetchData()
                     }, t
                 }
-                return l.__extends(t, e), t.prototype.render = function() {
+                return s.__extends(t, e), t.prototype.render = function() {
                     if (this.props.loading) return c.createElement(h._4, {
                         fillContent: !0
                     });
@@ -156,10 +156,10 @@ webpackJsonp([56], {
                     }, t))
                 }, t
             }(c.Component),
-            O = Object(r.d)(Object(f.d)("CratesList", {
+            N = Object(r.d)(Object(f.d)("CratesList", {
                 autoReportInteractive: !0
             }))(E),
-            N = n("bdhb"),
+            O = n("bdhb"),
             S = (n("Jc4Y"), "drops-list_drop-award"),
             j = function(e) {
                 function t() {
@@ -204,7 +204,7 @@ webpackJsonp([56], {
                         }, e.node.game.name)))
                     }, t
                 }
-                return l.__extends(t, e), t.prototype.componentDidMount = function() {
+                return s.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.postRender()
                 }, t.prototype.componentDidUpdate = function() {
                     this.postRender()
@@ -241,15 +241,15 @@ webpackJsonp([56], {
                     }, c.createElement(h._35, null, this.getDropsDescription(t))), n)
                 }, t.prototype.postRender = function() {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
-                }, t = l.__decorate([Object(u.a)(N)], t)
+                }, t = s.__decorate([Object(u.a)(O)], t)
             }(c.Component),
-            C = Object(r.d)(Object(f.d)("DropsList"))(j),
-            F = n("Tzcg"),
-            x = function(e) {
+            F = Object(r.d)(Object(f.d)("DropsList"))(j),
+            C = n("Tzcg"),
+            L = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderEmote = function(e) {
-                        var t = Object(F.b)([e])[0],
+                        var t = Object(C.b)([e])[0],
                             n = t.srcSet.split(", ").pop().split(" ").shift();
                         return c.createElement(h._2, {
                             key: t.id,
@@ -276,7 +276,7 @@ webpackJsonp([56], {
                         }, t.displayName))
                     }, t
                 }
-                return l.__extends(t, e), t.prototype.render = function() {
+                return s.__extends(t, e), t.prototype.render = function() {
                     if (this.props.loading) return c.createElement(h._4, {
                         fillContent: !0
                     });
@@ -323,18 +323,18 @@ webpackJsonp([56], {
                     }, t))
                 }, t
             }(c.Component),
-            L = Object(r.d)(Object(f.d)("EmoticonsList", {
+            x = Object(r.d)(Object(f.d)("EmoticonsList", {
                 autoReportInteractive: !0
-            }))(x),
+            }))(L),
             w = n("+Znq"),
-            T = n("iMOk"),
-            D = n("CFVp"),
-            I = function(e) {
+            D = n("iMOk"),
+            I = n("CFVp"),
+            U = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
-                    return t.bitsConfig = Object(D.a)(), t
+                    return t.bitsConfig = Object(I.a)(), t
                 }
-                return l.__extends(t, e), t.prototype.render = function() {
+                return s.__extends(t, e), t.prototype.render = function() {
                     var e = Object(d.d)("Inventory", "InventoryTitleBar");
                     if (this.props.loading) return c.createElement(h._25, {
                         className: "title-bar",
@@ -370,7 +370,7 @@ webpackJsonp([56], {
                             }, e.displayText)
                         }),
                         n = Object(d.d)("You have {bitsComponent}", {
-                            bitsComponent: c.createElement(T.a, {
+                            bitsComponent: c.createElement(D.a, {
                                 count: this.props.bitsBalance,
                                 bitsConfig: this.bitsConfig,
                                 withImage: !0,
@@ -403,10 +403,10 @@ webpackJsonp([56], {
                     }, t)))))
                 }, t
             }(c.Component),
-            U = Object(r.d)(Object(f.d)("TitleBar", {
+            R = Object(r.d)(Object(f.d)("TitleBar", {
                 autoReportInteractive: !0
-            }))(I),
-            R = n("xpYL"),
+            }))(U),
+            T = n("xpYL"),
             A = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -414,7 +414,7 @@ webpackJsonp([56], {
                         t.props.data && t.props.data.refetch && t.props.data.refetch()
                     }, t
                 }
-                return l.__extends(t, e), t.prototype.componentDidMount = function() {
+                return s.__extends(t, e), t.prototype.componentDidMount = function() {
                     d.n.setPageTitle(Object(d.d)("Inventory", "InventoryPage"))
                 }, t.prototype.render = function() {
                     if (!this.props.isLoggedIn) return this.props.onAnonymousVisit(), c.createElement(m.a, {
@@ -429,22 +429,22 @@ webpackJsonp([56], {
                     return this.props.data.loading || this.props.data.error || (e = !1, t = this.props.data.currentUser.amazonMarketplaces, n = this.props.data.currentUser.bitsBalance, i = this.props.data.currentUser.availableBadges, r = this.props.data.currentUser.crates, a = this.props.data.currentUser.emoteSets), c.createElement(h._2, {
                         className: "inventory",
                         padding: 3
-                    }, c.createElement(U, {
+                    }, c.createElement(R, {
                         bitsBalance: n,
                         loading: e,
                         amazonMarketplaces: t
-                    }), c.createElement(O, {
+                    }), c.createElement(N, {
                         refetchData: this.refetchData,
                         crates: r,
                         loading: e
-                    }), c.createElement(L, {
+                    }), c.createElement(x, {
                         emoteSets: a,
                         loading: e
-                    }), c.createElement(_, {
+                    }), c.createElement(y, {
                         badges: i,
                         loading: e
-                    }), c.createElement(C, null))
-                }, t = l.__decorate([Object(u.a)(R)], t)
+                    }), c.createElement(F, null))
+                }, t = s.__decorate([Object(u.a)(T)], t)
             }(c.Component),
             B = Object(r.d)(Object(f.d)("InventoryPage", {
                 autoReportInteractive: !0,
@@ -454,7 +454,7 @@ webpackJsonp([56], {
             }))(A);
         var H = Object(i.b)(function(e) {
             return {
-                isLoggedIn: Object(s.d)(e)
+                isLoggedIn: Object(l.d)(e)
             }
         }, function(e) {
             return Object(r.b)({
@@ -671,8 +671,8 @@ webpackJsonp([56], {
             r = n("6sO2"),
             a = n("NXs7"),
             o = n("3iBR"),
-            s = n("iydZ"),
-            l = n("CFVp"),
+            l = n("iydZ"),
+            s = n("CFVp"),
             c = n("qe65");
         n("1pvm");
 
@@ -682,12 +682,12 @@ webpackJsonp([56], {
             }, "Bits--BitsCount");
             if (e.withImage) {
                 var d = e.bitsConfig.indexedActions[o.g];
-                d || (d = Object(l.b)());
+                d || (d = Object(s.b)());
                 var m = d.orderedTiers.find(function(t) {
                     return t.bits <= e.count
                 });
                 if (m) {
-                    var u = Object(s.b)(m);
+                    var u = Object(l.b)(m);
                     return void 0 !== e.themeOverride && (e.themeOverride === a.a.Light ? u.dark = u.light : u.light = u.dark), t = i.createElement(c.a, {
                         className: "bits-count--img",
                         sources: u
@@ -704,74 +704,6 @@ webpackJsonp([56], {
         }
         n.d(t, "a", function() {
             return d
-        })
-    },
-    "j7/Y": function(e, t, n) {
-        "use strict";
-        var i = n("TToO"),
-            r = n("OAwv"),
-            a = n("GiK3"),
-            o = n("F8kA"),
-            s = n("6sO2");
-
-        function l(e) {
-            return function(t) {
-                var n = function(n) {
-                    function o(t) {
-                        var r = n.call(this, t) || this;
-                        return r.tracked = !1, r.referenceTracking = {}, r.trackPageview = function() {
-                            if (!(r.tracked || e.skip && e.skip(r.props))) {
-                                r.tracked = !0;
-                                var t = {};
-                                "function" == typeof e.properties ? t = e.properties(r.props) : e.properties && (t = i.__assign({}, e.properties));
-                                var n = i.__assign({}, r.props);
-                                n.location && n.location.state && (t.medium = n.location.state.medium, t.content = n.location.state.content, t.content_index = n.location.state.content_index);
-                                var a = r.referenceTracking,
-                                    o = a.content,
-                                    l = a.medium,
-                                    c = a.content_index;
-                                s.n.tracking.trackPageview(i.__assign({
-                                    content: o,
-                                    medium: l,
-                                    content_index: c,
-                                    location: e.location
-                                }, t))
-                            }
-                        }, s.i.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : s.i.warn("No latency tracker exists! This means no data will be sent to Spade.", e), r
-                    }
-                    return i.__extends(o, n), o.prototype.componentDidMount = function() {
-                        var e = this;
-                        this.referenceTracking = this.stripTTParams(this.props.history.location), this.trackPageview(), this.props.history.listen(function(t, n) {
-                            "REPLACE" !== n && (e.tracked = !1, e.referenceTracking = {})
-                        })
-                    }, o.prototype.componentDidUpdate = function() {
-                        this.trackPageview()
-                    }, o.prototype.render = function() {
-                        return a.createElement(t, i.__assign({}, this.props))
-                    }, o.prototype.stripTTParams = function(e) {
-                        var t = "" !== e.search ? r.parse(e.search) : {},
-                            n = {
-                                content: t.tt_content,
-                                content_index: t.tt_content_index,
-                                medium: t.tt_medium
-                            };
-                        if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, n.medium || n.content) {
-                            var i = "",
-                                a = r.stringify(t);
-                            a.length > 0 && (i = "?" + a), this.props.history.replace({
-                                pathname: e.pathname,
-                                hash: e.hash,
-                                search: i
-                            })
-                        }
-                        return n
-                    }, o
-                }(a.Component);
-                return Object(o.f)(n)
-            }
-        }
-        n.d(t, "a", function() {
-            return l
         })
     },
     jF7o: function(e, t, n) {
@@ -1094,4 +1026,4 @@ webpackJsonp([56], {
         i.definitions = i.definitions.concat(a(n("UP6l").definitions)), i.definitions = i.definitions.concat(a(n("l83l").definitions)), e.exports = i
     }
 });
-//# sourceMappingURL=pages.inventory-f13f9052054047e8d367d485bc65f084.js.map
+//# sourceMappingURL=pages.inventory-40e91c50e28edef160a9a19ff4d1f8c3.js.map

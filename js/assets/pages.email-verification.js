@@ -1,13 +1,13 @@
-webpackJsonp([61], {
+webpackJsonp([63], {
     "9u8h": function(e, t, r) {
         "use strict";
         r.d(t, "a", function() {
-            return o
+            return s
         });
         var i = r("TToO"),
             n = r("6sO2"),
             a = r("Aj/L"),
-            o = function() {
+            s = function() {
                 function e() {}
                 return e.get = function(e, t, r) {
                     return void 0 === t && (t = {}), void 0 === r && (r = {}), i.__awaiter(this, void 0, void 0, function() {
@@ -123,8 +123,8 @@ webpackJsonp([61], {
                             "X-Requested-With": "XMLHttpRequest"
                         };
                     e.body && FormData.prototype.isPrototypeOf(e.body) || (i["Content-Type"] = "application/json; charset=UTF-8");
-                    var o = Object(a.c)(r);
-                    return o && (i.Authorization = "OAuth " + o.authToken, o.legacyCSRFToken && (i["Twitch-Api-Token"] = o.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
+                    var s = Object(a.c)(r);
+                    return s && (i.Authorization = "OAuth " + s.authToken, s.legacyCSRFToken && (i["Twitch-Api-Token"] = s.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
                         i[e] && delete i[e]
                     }), i
                 }, e
@@ -138,8 +138,8 @@ webpackJsonp([61], {
         var i = r("TToO"),
             n = r("GiK3"),
             a = r("2KeS"),
-            o = r("6sO2"),
-            s = r("j7/Y"),
+            s = r("6sO2"),
+            o = r("j7/Y"),
             c = r("w9tK"),
             u = r("vH/s"),
             d = r("CSlQ"),
@@ -153,7 +153,7 @@ webpackJsonp([61], {
                         isError: !1,
                         isEmailVerified: !1,
                         errorMessage: ""
-                    }, t.logger = o.n.logger.withCategory("email-verification"), t
+                    }, t.logger = s.n.logger.withCategory("email-verification"), t
                 }
                 return i.__extends(t, e), t.prototype.componentWillMount = function() {
                     this.verifyEmail().then(function() {})
@@ -163,7 +163,7 @@ webpackJsonp([61], {
                     }, n.createElement(f._35, {
                         className: "title",
                         type: f._40.H2
-                    }, Object(o.d)("Email Verification", "EmailVerification")), this.renderVerificationStatus())
+                    }, Object(s.d)("Email Verification", "EmailVerification")), this.renderVerificationStatus())
                 }, t.prototype.renderVerificationStatus = function() {
                     if (this.state.isLoading) return n.createElement(f._2, {
                         margin: {
@@ -172,14 +172,14 @@ webpackJsonp([61], {
                         "data-test-selector": "verify-loading"
                     }, n.createElement(f._35, {
                         type: f._40.Strong
-                    }, Object(o.d)("Verifying Email...", "EmailVerification")));
+                    }, Object(s.d)("Verifying Email...", "EmailVerification")));
                     if (this.state.isEmailVerified) return n.createElement(f._2, {
                         margin: {
                             top: 1
                         },
                         "data-test-selector": "verify-success"
-                    }, Object(o.d)("Your email address has been successfully validated.", "EmailVerification"));
-                    var e = Object(o.d)("Couldn't validate your email: {errorMessage}", {
+                    }, Object(s.d)("Your email address has been successfully validated.", "EmailVerification"));
+                    var e = Object(s.d)("Couldn't validate your email: {errorMessage}", {
                         errorMessage: this.maybeGetLocalizedErrorMessage(this.state.errorMessage)
                     }, "EmailVerification");
                     return n.createElement(f._2, {
@@ -192,7 +192,7 @@ webpackJsonp([61], {
                         type: f._40.Strong
                     }, e))
                 }, t.prototype.maybeGetLocalizedErrorMessage = function(e) {
-                    return e ? "Not Found" === e ? Object(o.d)("Not Found", "EmailVerification") : e : Object(o.d)("Unknown Error", "EmailVerification")
+                    return e ? "Not Found" === e ? Object(s.d)("Not Found", "EmailVerification") : e : Object(s.d)("Unknown Error", "EmailVerification")
                 }, t.prototype.verifyEmail = function() {
                     return i.__awaiter(this, void 0, void 0, function() {
                         var e, t, r, n;
@@ -240,82 +240,14 @@ webpackJsonp([61], {
                     })
                 }, t
             }(n.Component),
-            p = Object(a.d)(Object(d.d)("EmailVerification", {
+            g = Object(a.d)(Object(d.d)("EmailVerification", {
                 destination: c.a.EmailVerification
-            }), Object(s.a)({
+            }), Object(o.a)({
                 location: u.PageviewLocation.EmailVerification
             }))(h);
         r.d(t, "EmailVerificationPage", function() {
-            return p
-        })
-    },
-    "j7/Y": function(e, t, r) {
-        "use strict";
-        var i = r("TToO"),
-            n = r("OAwv"),
-            a = r("GiK3"),
-            o = r("F8kA"),
-            s = r("6sO2");
-
-        function c(e) {
-            return function(t) {
-                var r = function(r) {
-                    function o(t) {
-                        var n = r.call(this, t) || this;
-                        return n.tracked = !1, n.referenceTracking = {}, n.trackPageview = function() {
-                            if (!(n.tracked || e.skip && e.skip(n.props))) {
-                                n.tracked = !0;
-                                var t = {};
-                                "function" == typeof e.properties ? t = e.properties(n.props) : e.properties && (t = i.__assign({}, e.properties));
-                                var r = i.__assign({}, n.props);
-                                r.location && r.location.state && (t.medium = r.location.state.medium, t.content = r.location.state.content, t.content_index = r.location.state.content_index);
-                                var a = n.referenceTracking,
-                                    o = a.content,
-                                    c = a.medium,
-                                    u = a.content_index;
-                                s.n.tracking.trackPageview(i.__assign({
-                                    content: o,
-                                    medium: c,
-                                    content_index: u,
-                                    location: e.location
-                                }, t))
-                            }
-                        }, s.i.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : s.i.warn("No latency tracker exists! This means no data will be sent to Spade.", e), n
-                    }
-                    return i.__extends(o, r), o.prototype.componentDidMount = function() {
-                        var e = this;
-                        this.referenceTracking = this.stripTTParams(this.props.history.location), this.trackPageview(), this.props.history.listen(function(t, r) {
-                            "REPLACE" !== r && (e.tracked = !1, e.referenceTracking = {})
-                        })
-                    }, o.prototype.componentDidUpdate = function() {
-                        this.trackPageview()
-                    }, o.prototype.render = function() {
-                        return a.createElement(t, i.__assign({}, this.props))
-                    }, o.prototype.stripTTParams = function(e) {
-                        var t = "" !== e.search ? n.parse(e.search) : {},
-                            r = {
-                                content: t.tt_content,
-                                content_index: t.tt_content_index,
-                                medium: t.tt_medium
-                            };
-                        if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, r.medium || r.content) {
-                            var i = "",
-                                a = n.stringify(t);
-                            a.length > 0 && (i = "?" + a), this.props.history.replace({
-                                pathname: e.pathname,
-                                hash: e.hash,
-                                search: i
-                            })
-                        }
-                        return r
-                    }, o
-                }(a.Component);
-                return Object(o.f)(r)
-            }
-        }
-        r.d(t, "a", function() {
-            return c
+            return g
         })
     }
 });
-//# sourceMappingURL=pages.email-verification-bd9570a05e7ec6e4f7f51f613eb93dd2.js.map
+//# sourceMappingURL=pages.email-verification-1f651b7db9dc623f3d6f5c98ea2e2849.js.map

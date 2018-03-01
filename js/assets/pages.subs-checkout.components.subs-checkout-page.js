@@ -1286,8 +1286,8 @@ webpackJsonp([55], {
             p = n("2KeS"),
             m = n("+xm8"),
             g = n("f2i/"),
-            h = n("Aj/L"),
-            y = n("9u8h"),
+            y = n("Aj/L"),
+            h = n("9u8h"),
             v = n("CSlQ"),
             f = n("Odds"),
             b = (n("aMOL"), function() {
@@ -1697,7 +1697,7 @@ webpackJsonp([55], {
                     darkModeEnabled: Object(_.a)(e) === k.a.Dark
                 }
             })(P),
-            O = (n("t2Wb"), function(e) {
+            I = (n("t2Wb"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -1786,7 +1786,7 @@ webpackJsonp([55], {
                     }), this.paypalInstance = t
                 }, t = i.__decorate([Object(v.d)("RecurlyPaypal")], t)
             }(a.Component)),
-            I = function(e) {
+            O = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -2004,7 +2004,7 @@ webpackJsonp([55], {
                                 submitButtonCopy: e,
                                 onSuccess: this.props.onSuccess
                             }),
-                            "recurly-paypal": a.createElement(O, {
+                            "recurly-paypal": a.createElement(I, {
                                 publicKey: this.props.configs.recurly.publicKey,
                                 braintreeClientAuthorization: this.props.configs.recurly.braintreeClientAuthorization,
                                 submitButtonCopy: e,
@@ -2014,7 +2014,7 @@ webpackJsonp([55], {
                                 submitButtonCopy: e,
                                 onSuccess: this.props.onSuccess
                             }, this.props.configs.recurly.payWithAmazonConfigs)),
-                            "xsolla-more-methods": a.createElement(I, i.__assign({}, this.props.configs.xsolla)),
+                            "xsolla-more-methods": a.createElement(O, i.__assign({}, this.props.configs.xsolla)),
                             "zuora-credit-card": a.createElement(A, i.__assign({
                                 submitButtonCopy: e,
                                 onSuccess: this.props.onSuccess
@@ -2048,8 +2048,8 @@ webpackJsonp([55], {
                 }, t = i.__decorate([Object(v.d)("PaymentMethods")], t)
             }(a.Component)),
             R = n("3T7g"),
-            T = n("7LIQ"),
-            j = n("Tzcg"),
+            j = n("7LIQ"),
+            T = n("Tzcg"),
             x = (n("2dVl"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -2170,10 +2170,10 @@ webpackJsonp([55], {
                         }, []);
                         if (0 === t.length) return a.createElement("div", null, a.createElement(f._35, {
                             className: "ticket-description__description__line-item"
-                        }, t.length, " Subscriber Emotes"), a.createElement(T.a, {
+                        }, t.length, " Subscriber Emotes"), a.createElement(j.a, {
                             emoteSet: {
                                 id: "",
-                                emotes: Object(j.b)(t)
+                                emotes: Object(T.b)(t)
                             },
                             onClickEmote: void 0,
                             locked: !1
@@ -2499,7 +2499,7 @@ webpackJsonp([55], {
                                     case 0:
                                         t = "/kraken/checkout/users/" + this.props.data.currentUser.id + "/products/" + this.props.productShortName + "/purchase/complete", n.label = 1;
                                     case 1:
-                                        return n.trys.push([1, 3, , 4]), [4, y.a.post(t, {
+                                        return n.trys.push([1, 3, , 4]), [4, h.a.post(t, {
                                             body: e
                                         }, {
                                             version: 5
@@ -2596,7 +2596,7 @@ webpackJsonp([55], {
             }(a.Component));
         var q = Object(u.b)(function(e) {
                 return {
-                    isLoggedIn: Object(h.d)(e)
+                    isLoggedIn: Object(y.d)(e)
                 }
             }, function(e) {
                 return Object(p.b)({
@@ -2839,74 +2839,6 @@ webpackJsonp([55], {
     },
     aMOL: function(e, t) {},
     gKy9: function(e, t) {},
-    "j7/Y": function(e, t, n) {
-        "use strict";
-        var i = n("TToO"),
-            r = n("OAwv"),
-            a = n("GiK3"),
-            s = n("F8kA"),
-            o = n("6sO2");
-
-        function c(e) {
-            return function(t) {
-                var n = function(n) {
-                    function s(t) {
-                        var r = n.call(this, t) || this;
-                        return r.tracked = !1, r.referenceTracking = {}, r.trackPageview = function() {
-                            if (!(r.tracked || e.skip && e.skip(r.props))) {
-                                r.tracked = !0;
-                                var t = {};
-                                "function" == typeof e.properties ? t = e.properties(r.props) : e.properties && (t = i.__assign({}, e.properties));
-                                var n = i.__assign({}, r.props);
-                                n.location && n.location.state && (t.medium = n.location.state.medium, t.content = n.location.state.content, t.content_index = n.location.state.content_index);
-                                var a = r.referenceTracking,
-                                    s = a.content,
-                                    c = a.medium,
-                                    l = a.content_index;
-                                o.n.tracking.trackPageview(i.__assign({
-                                    content: s,
-                                    medium: c,
-                                    content_index: l,
-                                    location: e.location
-                                }, t))
-                            }
-                        }, o.i.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : o.i.warn("No latency tracker exists! This means no data will be sent to Spade.", e), r
-                    }
-                    return i.__extends(s, n), s.prototype.componentDidMount = function() {
-                        var e = this;
-                        this.referenceTracking = this.stripTTParams(this.props.history.location), this.trackPageview(), this.props.history.listen(function(t, n) {
-                            "REPLACE" !== n && (e.tracked = !1, e.referenceTracking = {})
-                        })
-                    }, s.prototype.componentDidUpdate = function() {
-                        this.trackPageview()
-                    }, s.prototype.render = function() {
-                        return a.createElement(t, i.__assign({}, this.props))
-                    }, s.prototype.stripTTParams = function(e) {
-                        var t = "" !== e.search ? r.parse(e.search) : {},
-                            n = {
-                                content: t.tt_content,
-                                content_index: t.tt_content_index,
-                                medium: t.tt_medium
-                            };
-                        if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, n.medium || n.content) {
-                            var i = "",
-                                a = r.stringify(t);
-                            a.length > 0 && (i = "?" + a), this.props.history.replace({
-                                pathname: e.pathname,
-                                hash: e.hash,
-                                search: i
-                            })
-                        }
-                        return n
-                    }, s
-                }(a.Component);
-                return Object(s.f)(n)
-            }
-        }
-        n.d(t, "a", function() {
-            return c
-        })
-    },
     l7ua: function(e, t, n) {
         "use strict";
         var i;
@@ -3003,4 +2935,4 @@ webpackJsonp([55], {
     ssJt: function(e, t) {},
     t2Wb: function(e, t) {}
 });
-//# sourceMappingURL=pages.subs-checkout.components.subs-checkout-page-d93dd700758051a474ff64e742d15326.js.map
+//# sourceMappingURL=pages.subs-checkout.components.subs-checkout-page-e320003fb7a3eba31e0a1f284715fd3c.js.map

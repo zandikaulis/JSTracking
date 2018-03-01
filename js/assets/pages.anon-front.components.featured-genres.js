@@ -1284,8 +1284,8 @@ webpackJsonp([74], {
                 }, e)
             })(O),
             x = (n("npyu"), n("plcU")),
-            D = "error-message",
-            I = function(e) {
+            I = "error-message",
+            D = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -1300,7 +1300,7 @@ webpackJsonp([74], {
                         }, r.createElement(u._35, {
                             color: u.I.Error,
                             type: u._40.H4,
-                            "data-test-selector": D
+                            "data-test-selector": I
                         }, C(t.state.error))) : null
                     }, t.onReasonChange = function(e) {
                         var n = e.target.value;
@@ -1429,7 +1429,7 @@ webpackJsonp([74], {
             }(r.Component),
             G = Object(b.compose)(Object(k.a)(x, {
                 name: "timeoutUserFromCommunity"
-            }))(I);
+            }))(D);
         var j = Object(h.b)(null, function(e) {
                 return Object(y.b)({
                     onCloseModal: f.c
@@ -2421,7 +2421,7 @@ webpackJsonp([74], {
                         }, r.createElement(y._46, {
                             gutterSize: y._48.Small,
                             childWidth: t.props.cardSize,
-                            placeholderItems: a,
+                            placeholderItems: t.props.placeholderItems ? t.props.placeholderItems : a,
                             noWrap: e
                         }, n))
                     }, t.renderCardGridWithAdSlot = function() {
@@ -2971,8 +2971,8 @@ webpackJsonp([74], {
         });
         var F = "onboarding_game",
             x = 100,
-            D = 500,
-            I = 3,
+            I = 500,
+            D = 3,
             G = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -3025,11 +3025,11 @@ webpackJsonp([74], {
                         var e = "" === location.search ? "?tt_medium=onboarding" : location.search + "&tt_medium=onboarding";
                         window.location.assign("/directory/following/foryou" + e)
                     }, t.isButtonDisabled = function() {
-                        return t.getNumFollowedGames() < I
+                        return t.getNumFollowedGames() < D
                     }, t.onGameInputChange = function(e) {
                         e.persist(), t.inputTimer && (clearTimeout(t.inputTimer), t.inputTimer = 0), t.inputTimer = setTimeout(function() {
                             t.props.onSearchChange(e.target.value), t.inputTimer = 0
-                        }, D)
+                        }, I)
                     }, t.userFollowedGamesDataLoaded = function(e) {
                         return e.data && !e.data.loading && !e.data.error && e.data.currentUser
                     }, t
@@ -3137,7 +3137,7 @@ webpackJsonp([74], {
                         })
                     }), t
                 }, t.prototype.calculateProgress = function() {
-                    return Math.min(1 + this.getNumFollowedGames() / I * 99, 100)
+                    return Math.min(1 + this.getNumFollowedGames() / D * 99, 100)
                 }, t.prototype.shouldRedirect = function(e) {
                     return !e.data.currentUser || e.data.currentUser.followedGames.nodes.length >= 10
                 }, t.prototype.renderTitleText = function() {
@@ -3203,7 +3203,8 @@ webpackJsonp([74], {
                             games: this.props.gameData,
                             directoryType: N.a.Games,
                             cardSize: b._47.Medium,
-                            followGameCardOptions: t
+                            followGameCardOptions: t,
+                            placeholderItems: 99
                         })
                     }
                     if (this.props.categoryData) {
@@ -3817,4 +3818,4 @@ webpackJsonp([74], {
         })
     }
 });
-//# sourceMappingURL=pages.anon-front.components.featured-genres-7d44b9b825cd0dfb1032dcf3819724d2.js.map
+//# sourceMappingURL=pages.anon-front.components.featured-genres-97dd65bfec81339a7b81711115d9bf16.js.map

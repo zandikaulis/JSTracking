@@ -564,6 +564,90 @@ webpackJsonp([46], {
             }(i || (i = {}))
     },
     "6Rwu": function(e, t) {},
+    "6Vb7": function(e, t, n) {
+        "use strict";
+        var i = n("TToO"),
+            a = n("OAwv"),
+            r = n("GiK3"),
+            o = n("6sO2"),
+            s = n("Ejve"),
+            l = "legacy_routes_enabled",
+            d = function(e) {
+                function t(t) {
+                    var n = e.call(this, t) || this;
+                    return n.isEnabled = !1, n.onHistoryChange = function(e, t) {
+                        n.isEnabled ? "REPLACE" !== t ? e && e.pathname ? (n.logger.debug("Location changed", {
+                            path: e.pathname
+                        }), n.legacyRoutes.forEach(function(t) {
+                            try {
+                                if (e.pathname.match(t)) {
+                                    n.logger.debug("Found legacy route. Reloading...");
+                                    var i = "" !== e.search ? a.parse(e.search) : {};
+                                    i["from-redirect"] = "true";
+                                    var r = a.stringify(i),
+                                        l = o.a.buildType === s.a.Dev ? window.location.host : window.location.hostname,
+                                        d = window.location.protocol + "//" + l + e.pathname + "?" + r;
+                                    return n.logger.debug("Redirecting to legacy route", {
+                                        newUrl: d
+                                    }), void window.location.replace(d)
+                                }
+                            } catch (e) {
+                                o.i.withCategory("legacy").error(e, "Unable to determine legacy reload match", {
+                                    regex: t
+                                })
+                            }
+                        })) : n.logger.debug("Unable to process history change. Path is null or empty.") : n.logger.debug("Skipping legacy route processing, due to history replace.") : n.logger.debug("Legacy routing not enabled.")
+                    }, n.processRedirectParam = function(e) {
+                        if (e && e.pathname && e.search) {
+                            var t = "" !== e.search ? a.parse(e.search) : {};
+                            if (t["from-redirect"]) {
+                                delete t["from-redirect"];
+                                var i = a.stringify(t),
+                                    r = "";
+                                i.length > 0 && (r = "?" + i), n.props.history.replace({
+                                    pathname: e.pathname,
+                                    hash: e.hash,
+                                    search: r
+                                })
+                            }
+                        }
+                    }, n.isEnabled = o.b.get(l, !1), n.logger = o.i.withCategory("legacy-routes"), n.legacyRoutes = n.buildRoutes(), n.props.history.listen(n.onHistoryChange), n
+                }
+                return i.__extends(t, e), t.prototype.render = function() {
+                    return null
+                }, t.prototype.componentDidMount = function() {
+                    this.processRedirectParam(this.props.history.location)
+                }, t.prototype.buildRoutes = function() {
+                    if (!this.isEnabled) return [];
+                    this.logger.debug("Building legacy routes...");
+                    var e = o.b.get("legacy_routes", []),
+                        t = [];
+                    if (!e || 0 === e.length) return this.logger.debug("No legacy routes found in settings."), t;
+                    for (var n = 0, i = e; n < i.length; n++) {
+                        var a = i[n];
+                        try {
+                            var r = new RegExp(a, "i");
+                            t.push(r)
+                        } catch (e) {
+                            this.logger.debug("Failed to parse route!", {
+                                val: a,
+                                err: e
+                            })
+                        }
+                    }
+                    return this.logger.debug("Done building legacy routes!", {
+                        count: t.length
+                    }), t
+                }, t
+            }(r.Component);
+        n.d(t, "a", function() {
+            return l
+        }), n.d(t, !1, function() {
+            return "legacy_routes"
+        }), n.d(t, "b", function() {
+            return d
+        })
+    },
     "6lb1": function(e, t) {},
     "6suJ": function(e, t) {},
     "7FW4": function(e, t, n) {
@@ -3946,90 +4030,6 @@ webpackJsonp([46], {
             e.RemindMeOpen = "remind_me_open_modal", e.EmailReminderOn = "email_reminder_on", e.EmailReminderOff = "email_reminder_off"
         }(a || (a = {}))
     },
-    MSvX: function(e, t, n) {
-        "use strict";
-        var i = n("TToO"),
-            a = n("OAwv"),
-            r = n("GiK3"),
-            o = n("6sO2"),
-            s = n("Ejve"),
-            l = "legacy_routes_enabled",
-            d = function(e) {
-                function t(t) {
-                    var n = e.call(this, t) || this;
-                    return n.isEnabled = !1, n.onHistoryChange = function(e, t) {
-                        n.isEnabled ? "REPLACE" !== t ? e && e.pathname ? (n.logger.debug("Location changed", {
-                            path: e.pathname
-                        }), n.legacyRoutes.forEach(function(t) {
-                            try {
-                                if (e.pathname.match(t)) {
-                                    n.logger.debug("Found legacy route. Reloading...");
-                                    var i = "" !== e.search ? a.parse(e.search) : {};
-                                    i["from-redirect"] = "true";
-                                    var r = a.stringify(i),
-                                        l = o.a.buildType === s.a.Dev ? window.location.host : window.location.hostname,
-                                        d = window.location.protocol + "//" + l + e.pathname + "?" + r;
-                                    return n.logger.debug("Redirecting to legacy route", {
-                                        newUrl: d
-                                    }), void window.location.replace(d)
-                                }
-                            } catch (e) {
-                                o.i.withCategory("legacy").error(e, "Unable to determine legacy reload match", {
-                                    regex: t
-                                })
-                            }
-                        })) : n.logger.debug("Unable to process history change. Path is null or empty.") : n.logger.debug("Skipping legacy route processing, due to history replace.") : n.logger.debug("Legacy routing not enabled.")
-                    }, n.processRedirectParam = function(e) {
-                        if (e && e.pathname && e.search) {
-                            var t = "" !== e.search ? a.parse(e.search) : {};
-                            if (t["from-redirect"]) {
-                                delete t["from-redirect"];
-                                var i = a.stringify(t),
-                                    r = "";
-                                i.length > 0 && (r = "?" + i), n.props.history.replace({
-                                    pathname: e.pathname,
-                                    hash: e.hash,
-                                    search: r
-                                })
-                            }
-                        }
-                    }, n.isEnabled = o.b.get(l, !1), n.logger = o.i.withCategory("legacy-routes"), n.legacyRoutes = n.buildRoutes(), n.props.history.listen(n.onHistoryChange), n
-                }
-                return i.__extends(t, e), t.prototype.render = function() {
-                    return null
-                }, t.prototype.componentDidMount = function() {
-                    this.processRedirectParam(this.props.history.location)
-                }, t.prototype.buildRoutes = function() {
-                    if (!this.isEnabled) return [];
-                    this.logger.debug("Building legacy routes...");
-                    var e = o.b.get("legacy_routes", []),
-                        t = [];
-                    if (!e || 0 === e.length) return this.logger.debug("No legacy routes found in settings."), t;
-                    for (var n = 0, i = e; n < i.length; n++) {
-                        var a = i[n];
-                        try {
-                            var r = new RegExp(a, "i");
-                            t.push(r)
-                        } catch (e) {
-                            this.logger.debug("Failed to parse route!", {
-                                val: a,
-                                err: e
-                            })
-                        }
-                    }
-                    return this.logger.debug("Done building legacy routes!", {
-                        count: t.length
-                    }), t
-                }, t
-            }(r.Component);
-        n.d(t, "a", function() {
-            return l
-        }), n.d(t, !1, function() {
-            return "legacy_routes"
-        }), n.d(t, "b", function() {
-            return d
-        })
-    },
     NTi8: function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
@@ -4248,8 +4248,8 @@ webpackJsonp([46], {
                 }, t
             }(s.Component)),
             I = Object(g.d)("EventLandingTitle")(F),
-            T = n("ISok"),
-            O = function(e) {
+            O = n("ISok"),
+            T = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.pastPremiereToPreviewCardVideo = function(e) {
@@ -4283,7 +4283,7 @@ webpackJsonp([46], {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     var e = null;
-                    return this.props.pastPremiere && (e = s.createElement(T.a, {
+                    return this.props.pastPremiere && (e = s.createElement(O.a, {
                         trackingContent: p.PageviewContent.EventPast,
                         trackingMedium: p.PageviewMedium.EventDetails,
                         videos: [this.pastPremiereToPreviewCardVideo(this.props.pastPremiere)]
@@ -4302,7 +4302,7 @@ webpackJsonp([46], {
                     }, s.createElement(b._2, null, e)))
                 }, t = o.__decorate([Object(g.d)("EventLandingVideos")], t)
             }(s.Component),
-            x = function(e) {
+            L = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onCountdownSuccess = function() {
@@ -4325,7 +4325,7 @@ webpackJsonp([46], {
                         onCountdownSuccess: this.onCountdownSuccess
                     }));
                     var t = null;
-                    return this.props.eventType === r.PREMIERE_EVENT && this.props.premiere && this.props.premiere.pastPremiere && this.props.premiere.pastPremiere.id && (t = s.createElement(O, {
+                    return this.props.eventType === r.PREMIERE_EVENT && this.props.premiere && this.props.premiere.pastPremiere && this.props.premiere.pastPremiere.id && (t = s.createElement(T, {
                         pastPremiere: this.props.premiere.pastPremiere
                     })), s.createElement(b._2, null, s.createElement(I, {
                         id: this.props.id,
@@ -4343,7 +4343,7 @@ webpackJsonp([46], {
                     autoReportInteractive: !0
                 })], t)
             }(s.Component),
-            L = n("5GFz"),
+            x = n("5GFz"),
             B = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -4359,7 +4359,7 @@ webpackJsonp([46], {
                         aspect: b.k.Aspect16x9,
                         src: this.props.imageURL,
                         alt: "" !== this.props.imageURL ? this.props.title : ""
-                    }, s.createElement(L.a, {
+                    }, s.createElement(x.a, {
                         date: e
                     }))))
                 }, t = o.__decorate([Object(g.d)("EventLandingImage", {
@@ -4367,8 +4367,8 @@ webpackJsonp([46], {
                 })], t)
             }(s.Component),
             R = n("F8kA"),
-            D = n("NY9D"),
-            U = n("FsFC");
+            U = n("NY9D"),
+            D = n("FsFC");
         var j = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -4431,7 +4431,7 @@ webpackJsonp([46], {
                         color: b.I.Alt2
                     }, Object(l.d)("Streaming", "EventLandingInfo")), s.createElement(R.a, {
                         to: {
-                            pathname: Object(D.c)(this.props.game.displayName),
+                            pathname: Object(U.c)(this.props.game.displayName),
                             state: {
                                 content: "event_game",
                                 medium: "event_page"
@@ -4503,7 +4503,7 @@ webpackJsonp([46], {
                         fontSize: b.R.Size5
                     }, function(e, t) {
                         var n = Math.abs(e.getTime() / 1e3 - t.getTime() / 1e3);
-                        return Object(U.a)(n)
+                        return Object(D.a)(n)
                     }(e, t)))), n, s.createElement(b._2, {
                         margin: {
                             top: 3
@@ -5482,7 +5482,7 @@ webpackJsonp([46], {
                         eventType: t.eventType
                     })), s.createElement(b._2, {
                         flexGrow: 1
-                    }, s.createElement(x, {
+                    }, s.createElement(L, {
                         id: t.id,
                         title: t.title,
                         description: t.description,
@@ -6484,18 +6484,18 @@ webpackJsonp([46], {
                     }, e))
                 }, t = i.__decorate([Object(C.d)("GetBitsButton")], t)
             }(r.Component),
-            T = Object(p.b)(function(e) {
+            O = Object(p.b)(function(e) {
                 return {
                     isLoggedIn: Object(v.d)(e)
                 }
             })(I),
-            O = n("2KeS"),
-            x = n("V5M+"),
-            L = n("E9Qg"),
+            T = n("2KeS"),
+            L = n("V5M+"),
+            x = n("E9Qg"),
             B = n("ebTC"),
             R = n("4Q9N"),
-            D = (n("4Jix"), n("Ojfd")),
-            U = function(e) {
+            U = (n("4Jix"), n("Ojfd")),
+            D = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.openModal = function() {
@@ -6525,7 +6525,7 @@ webpackJsonp([46], {
                         i && i.user && i.user.bannerImageURL ? t = {
                             backgroundImage: "url(" + i.user.bannerImageURL + ")"
                         } : (n["channel-banner--default"] = !0, t = {
-                            backgroundImage: "url(" + L + ")"
+                            backgroundImage: "url(" + x + ")"
                         });
                         var o = null;
                         this.props.canEdit && (o = r.createElement(N._0, {
@@ -6564,7 +6564,7 @@ webpackJsonp([46], {
                     this.props.closeModal()
                 }, t
             }(r.Component),
-            j = Object(m.a)(D, {
+            j = Object(m.a)(U, {
                 options: function(e) {
                     return {
                         variables: {
@@ -6575,15 +6575,15 @@ webpackJsonp([46], {
                 skip: function(e) {
                     return !e.channelLogin || !e.firstPageLoaded
                 }
-            })(U);
+            })(D);
         var P = Object(p.b)(function(e) {
                 return {
                     firstPageLoaded: e.session.firstPageLoaded
                 }
             }, function(e) {
-                return Object(O.b)({
-                    closeModal: x.c,
-                    showModal: x.d
+                return Object(T.b)({
+                    closeModal: L.c,
+                    showModal: L.d
                 }, e)
             })(j),
             M = n("x9n8"),
@@ -6618,8 +6618,8 @@ webpackJsonp([46], {
                 }, t = i.__decorate([Object(C.d)("EditProfileOverlay")], t)
             }(r.Component));
         var V = Object(p.b)(null, function(e) {
-                return Object(O.b)({
-                    showModal: x.d
+                return Object(T.b)({
+                    showModal: L.d
                 }, e)
             })(W),
             H = n("70dR"),
@@ -6740,7 +6740,7 @@ webpackJsonp([46], {
                     margin: {
                         left: 1
                     }
-                }, r.createElement(T, {
+                }, r.createElement(O, {
                     channelLogin: this.props.channelLogin
                 })));
                 var f, k = r.createElement(N._2, {
@@ -7305,8 +7305,8 @@ webpackJsonp([46], {
                     }
                 }, t)))
             },
-            T = /version\/([\w\.]+).+?(mobile\s?safari|safari)/i,
-            O = function(e) {
+            O = /version\/([\w\.]+).+?(mobile\s?safari|safari)/i,
+            T = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -7332,17 +7332,17 @@ webpackJsonp([46], {
                         })
                     })
                 }, t.prototype.render = function() {
-                    return T.test(navigator.userAgent) ? null : d.createElement(I, l.__assign({}, this.props, {
+                    return O.test(navigator.userAgent) ? null : d.createElement(I, l.__assign({}, this.props, {
                         disableWatchAd: !this.state.enableWatchAd
                     }))
                 }, t
             }(d.Component),
-            x = n("jxGs"),
-            L = n("3iBR"),
+            L = n("jxGs"),
+            x = n("3iBR"),
             B = n("iydZ"),
             R = n("ZJYd"),
-            D = n("CFVp"),
-            U = n("qe65"),
+            U = n("CFVp"),
+            D = n("qe65"),
             j = (n("OLKT"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -7360,10 +7360,10 @@ webpackJsonp([46], {
                     }, t
                 }
                 return l.__extends(t, e), t.prototype.render = function() {
-                    if (this.props.offer.type === x.a) {
+                    if (this.props.offer.type === L.a) {
                         if (!this.props.channelLogin) return null;
                         var e = this.props.currentUserSHA || "";
-                        return d.createElement(O, {
+                        return d.createElement(T, {
                             key: "wateb",
                             minPayout: this.props.offer.bits,
                             onWatchAdClick: this.props.handleWatchAdClick,
@@ -7378,7 +7378,7 @@ webpackJsonp([46], {
                     }, d.createElement(f._35, {
                         type: f._40.Strong,
                         fontSize: f.R.Size6
-                    }, Object(m.d)("Special Offer: 1st Time Buyers", "Bits--BuyCard"))) : Object(R.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === x.c && (t = d.createElement(f._2, {
+                    }, Object(m.d)("Special Offer: 1st Time Buyers", "Bits--BuyCard"))) : Object(R.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === L.c && (t = d.createElement(f._2, {
                         className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline"
                     }, d.createElement(f._35, {
                         type: f._40.Strong,
@@ -7434,8 +7434,8 @@ webpackJsonp([46], {
                         }
                     }, n, i))))
                 }, t.prototype.getAvailableTiers = function(e) {
-                    var t = this.props.bitsConfig.indexedActions[L.g];
-                    t || (t = Object(D.b)());
+                    var t = this.props.bitsConfig.indexedActions[x.g];
+                    t || (t = Object(U.b)());
                     var n = t.orderedTiers.filter(function(t) {
                         return t.bits <= e
                     }).reverse();
@@ -7445,7 +7445,7 @@ webpackJsonp([46], {
                         },
                         className: "bits-buy-card-offer-row__tier-bits-images"
                     }, n.map(function(e) {
-                        return d.createElement(U.a, {
+                        return d.createElement(D.a, {
                             key: e.bits,
                             sources: Object(B.b)(e, 2, !1)
                         })
@@ -7474,7 +7474,7 @@ webpackJsonp([46], {
                         }),
                         s = Object(R.d)(a),
                         l = Object(R.c)(a),
-                        c = a.type === x.a;
+                        c = a.type === L.a;
                     l && !e.hidePromos ? t.push(o) : s && !l ? t.push(o) : c && !e.hideWateb ? i = o : c || s || n.push(o)
                 }), e.fullsize ? d.createElement(f._2, {
                     className: "bits-buy-card-offers__full-size",
@@ -7665,7 +7665,7 @@ webpackJsonp([46], {
                     }
                 }, d.createElement("img", {
                     className: "watch-ad-error__error-image",
-                    src: L.b + "/light/static/1/" + a + ".png"
+                    src: x.b + "/light/static/1/" + a + ".png"
                 })), d.createElement(f._2, {
                     padding: {
                         bottom: 1
@@ -7856,7 +7856,7 @@ webpackJsonp([46], {
                     var a = [];
                     this.props.data.currentUser ? a = this.props.data.currentUser.bitsOffers : this.props.data.bitsOffers && (a = this.props.data.bitsOffers);
                     var r = a.filter(function(e) {
-                            return e.type === x.b
+                            return e.type === L.b
                         }).some(function(e) {
                             return e.includesVAT
                         }),
@@ -9005,15 +9005,15 @@ webpackJsonp([46], {
     },
     czpb: function(e, t, n) {
         "use strict";
-        var i = n("6sO2"),
-            a = n("Ejve"),
-            r = n("MSvX");
         t.a = function(e) {
             return i.b.get(r.a, !1) || i.a.buildType !== a.a.Production ? "string" == typeof e ? e : e.pathname || "" : "string" == typeof e ? o + e : o + e.pathname
         }, t.b = function() {
             return !i.b.get(r.a, !1) && i.a.buildType === a.a.Production
         };
-        var o = "https://www.twitch.tv"
+        var i = n("6sO2"),
+            a = n("Ejve"),
+            r = n("6Vb7"),
+            o = "https://www.twitch.tv"
     },
     dQj3: function(e, t, n) {
         "use strict";
@@ -9391,74 +9391,6 @@ webpackJsonp([46], {
         })
     },
     ioX4: function(e, t) {},
-    "j7/Y": function(e, t, n) {
-        "use strict";
-        var i = n("TToO"),
-            a = n("OAwv"),
-            r = n("GiK3"),
-            o = n("F8kA"),
-            s = n("6sO2");
-
-        function l(e) {
-            return function(t) {
-                var n = function(n) {
-                    function o(t) {
-                        var a = n.call(this, t) || this;
-                        return a.tracked = !1, a.referenceTracking = {}, a.trackPageview = function() {
-                            if (!(a.tracked || e.skip && e.skip(a.props))) {
-                                a.tracked = !0;
-                                var t = {};
-                                "function" == typeof e.properties ? t = e.properties(a.props) : e.properties && (t = i.__assign({}, e.properties));
-                                var n = i.__assign({}, a.props);
-                                n.location && n.location.state && (t.medium = n.location.state.medium, t.content = n.location.state.content, t.content_index = n.location.state.content_index);
-                                var r = a.referenceTracking,
-                                    o = r.content,
-                                    l = r.medium,
-                                    d = r.content_index;
-                                s.n.tracking.trackPageview(i.__assign({
-                                    content: o,
-                                    medium: l,
-                                    content_index: d,
-                                    location: e.location
-                                }, t))
-                            }
-                        }, s.i.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : s.i.warn("No latency tracker exists! This means no data will be sent to Spade.", e), a
-                    }
-                    return i.__extends(o, n), o.prototype.componentDidMount = function() {
-                        var e = this;
-                        this.referenceTracking = this.stripTTParams(this.props.history.location), this.trackPageview(), this.props.history.listen(function(t, n) {
-                            "REPLACE" !== n && (e.tracked = !1, e.referenceTracking = {})
-                        })
-                    }, o.prototype.componentDidUpdate = function() {
-                        this.trackPageview()
-                    }, o.prototype.render = function() {
-                        return r.createElement(t, i.__assign({}, this.props))
-                    }, o.prototype.stripTTParams = function(e) {
-                        var t = "" !== e.search ? a.parse(e.search) : {},
-                            n = {
-                                content: t.tt_content,
-                                content_index: t.tt_content_index,
-                                medium: t.tt_medium
-                            };
-                        if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, n.medium || n.content) {
-                            var i = "",
-                                r = a.stringify(t);
-                            r.length > 0 && (i = "?" + r), this.props.history.replace({
-                                pathname: e.pathname,
-                                hash: e.hash,
-                                search: i
-                            })
-                        }
-                        return n
-                    }, o
-                }(r.Component);
-                return Object(o.f)(n)
-            }
-        }
-        n.d(t, "a", function() {
-            return l
-        })
-    },
     jF7o: function(e, t, n) {
         "use strict";
         t.a = function(e, t) {
@@ -11309,4 +11241,4 @@ webpackJsonp([46], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.event-landing-3c62af3e25cf05086201940bb22945b4.js.map
+//# sourceMappingURL=pages.event-landing-f3f810f7df5b3c86653edc35d25fd04f.js.map

@@ -241,22 +241,22 @@ webpackJsonp([78], {
     XFEc: function(e, t, n) {
         "use strict";
         t.a = function(e) {
-            return r.__awaiter(this, void 0, void 0, function() {
+            return s.__awaiter(this, void 0, void 0, function() {
                 var t;
-                return r.__generator(this, function(n) {
+                return s.__generator(this, function(n) {
                     return t = {
                         login: e.login,
                         user_id: Number(e.userId),
                         channel: e.channel,
                         channel_id: e.channelId,
                         clickthrough_location: e.clickthroughLocation
-                    }, s.m.track(a.SpadeEventType.SubsLandingStreamerClick, t), [2]
+                    }, r.m.track(a.SpadeEventType.SubsLandingStreamerClick, t), [2]
                 })
             })
         }, t.b = function(e) {
-            return r.__awaiter(this, void 0, void 0, function() {
+            return s.__awaiter(this, void 0, void 0, function() {
                 var t, n;
-                return r.__generator(this, function(r) {
+                return s.__generator(this, function(s) {
                     if (t = null, e.isSubscribedCurrentTier) switch (e.isSubscribedCurrentTier) {
                         case "1000":
                             t = "$4.99";
@@ -288,89 +288,21 @@ webpackJsonp([78], {
                         vod_type: "",
                         viewport_height: window.innerHeight,
                         viewport_width: window.innerWidth
-                    }, s.m.track(a.SpadeEventType.Subscription, n), [2]
+                    }, r.m.track(a.SpadeEventType.Subscription, n), [2]
                 })
             })
         };
-        var r = n("TToO"),
-            s = n("6sO2"),
+        var s = n("TToO"),
+            r = n("6sO2"),
             a = n("vH/s")
-    },
-    "j7/Y": function(e, t, n) {
-        "use strict";
-        var r = n("TToO"),
-            s = n("OAwv"),
-            a = n("GiK3"),
-            i = n("F8kA"),
-            o = n("6sO2");
-
-        function l(e) {
-            return function(t) {
-                var n = function(n) {
-                    function i(t) {
-                        var s = n.call(this, t) || this;
-                        return s.tracked = !1, s.referenceTracking = {}, s.trackPageview = function() {
-                            if (!(s.tracked || e.skip && e.skip(s.props))) {
-                                s.tracked = !0;
-                                var t = {};
-                                "function" == typeof e.properties ? t = e.properties(s.props) : e.properties && (t = r.__assign({}, e.properties));
-                                var n = r.__assign({}, s.props);
-                                n.location && n.location.state && (t.medium = n.location.state.medium, t.content = n.location.state.content, t.content_index = n.location.state.content_index);
-                                var a = s.referenceTracking,
-                                    i = a.content,
-                                    l = a.medium,
-                                    c = a.content_index;
-                                o.n.tracking.trackPageview(r.__assign({
-                                    content: i,
-                                    medium: l,
-                                    content_index: c,
-                                    location: e.location
-                                }, t))
-                            }
-                        }, o.i.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : o.i.warn("No latency tracker exists! This means no data will be sent to Spade.", e), s
-                    }
-                    return r.__extends(i, n), i.prototype.componentDidMount = function() {
-                        var e = this;
-                        this.referenceTracking = this.stripTTParams(this.props.history.location), this.trackPageview(), this.props.history.listen(function(t, n) {
-                            "REPLACE" !== n && (e.tracked = !1, e.referenceTracking = {})
-                        })
-                    }, i.prototype.componentDidUpdate = function() {
-                        this.trackPageview()
-                    }, i.prototype.render = function() {
-                        return a.createElement(t, r.__assign({}, this.props))
-                    }, i.prototype.stripTTParams = function(e) {
-                        var t = "" !== e.search ? s.parse(e.search) : {},
-                            n = {
-                                content: t.tt_content,
-                                content_index: t.tt_content_index,
-                                medium: t.tt_medium
-                            };
-                        if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, n.medium || n.content) {
-                            var r = "",
-                                a = s.stringify(t);
-                            a.length > 0 && (r = "?" + a), this.props.history.replace({
-                                pathname: e.pathname,
-                                hash: e.hash,
-                                search: r
-                            })
-                        }
-                        return n
-                    }, i
-                }(a.Component);
-                return Object(i.f)(n)
-            }
-        }
-        n.d(t, "a", function() {
-            return l
-        })
     },
     "kd/b": function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var r = n("RH2O"),
-            s = n("TToO"),
+        var s = n("RH2O"),
+            r = n("TToO"),
             a = n("GiK3"),
             i = n("6sO2"),
             o = n("tKQv"),
@@ -385,10 +317,10 @@ webpackJsonp([78], {
             f = n("2KeS"),
             _ = n("+xm8"),
             b = n("f2i/"),
-            k = n("Aj/L"),
-            v = n("7vx8"),
-            y = n("oIkB"),
-            S = n("F8kA"),
+            S = n("Aj/L"),
+            k = n("7vx8"),
+            v = n("oIkB"),
+            y = n("F8kA"),
             w = n("Odds"),
             E = (n("1KsR"), function(e) {
                 function t() {
@@ -397,11 +329,11 @@ webpackJsonp([78], {
                         t.props.onClick(t.props.followedChannel.id, t.props.followedChannel.login)
                     }, t
                 }
-                return s.__extends(t, e), t.prototype.componentDidMount = function() {
+                return r.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     var e = this.props.followedChannel.profileImageURL;
-                    return e || (e = "https://static-cdn.jtvnw.net/jtv_user_pictures/xarth/404_user_150x150.png"), a.createElement(S.a, {
+                    return e || (e = "https://static-cdn.jtvnw.net/jtv_user_pictures/xarth/404_user_150x150.png"), a.createElement(y.a, {
                         className: "followed-channel-link",
                         to: "/subs/" + this.props.followedChannel.login,
                         onClick: this.handleClick
@@ -429,7 +361,7 @@ webpackJsonp([78], {
                         ellipsis: !0,
                         noWrap: !0
                     }, this.props.followedChannel.displayName))))
-                }, t = s.__decorate([Object(h.d)("FollowedChannelLink")], t)
+                }, t = r.__decorate([Object(h.d)("FollowedChannelLink")], t)
             }(a.Component)),
             C = n("XFEc"),
             N = n("2oK2"),
@@ -483,7 +415,7 @@ webpackJsonp([78], {
                         if (!t.props.data.loading && !t.props.data.error && t.props.data.currentUser.follows && t.props.data.currentUser.follows.pageInfo.hasNextPage) return t.props.loadMore()
                     }, t
                 }
-                return s.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
+                return r.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
                     if (e.data.currentUser && e.data.currentUser.follows) {
                         var t = (e.data.currentUser.follows.edges || []).map(function(e) {
                             return e.node
@@ -521,7 +453,7 @@ webpackJsonp([78], {
                         onClick: this.onLoginClick,
                         "data-a-target": "login-button"
                     }, this.messages.login), a.createElement(w._35, null, this.messages.loginTitle))
-                }, t = s.__decorate([Object(v.a)(N, {
+                }, t = r.__decorate([Object(k.a)(N, {
                     options: function() {
                         return {
                             variables: {
@@ -531,20 +463,20 @@ webpackJsonp([78], {
                         }
                     },
                     props: function(e) {
-                        return s.__assign({}, e, {
+                        return r.__assign({}, e, {
                             loadMore: function() {
                                 return e.data.fetchMore({
                                     query: N,
-                                    variables: s.__assign({}, e.data.variables, {
+                                    variables: r.__assign({}, e.data.variables, {
                                         cursor: e.data.currentUser.follows ? e.data.currentUser.follows.edges[e.data.currentUser.follows.edges.length - 1].cursor : ""
                                     }),
                                     updateQuery: function(e, t) {
                                         var n = t.fetchMoreResult,
-                                            r = [];
-                                        return e.currentUser.follows && n.currentUser.follows ? r = Object(y.b)(e.currentUser.follows.edges, n.currentUser.follows.edges) : !e.currentUser.follows && n.currentUser.follows ? r = n.currentUser.follows.edges : e.currentUser.follows && !n.currentUser.follows && (r = e.currentUser.follows.edges), {
-                                            currentUser: s.__assign({}, n.currentUser, {
-                                                follows: s.__assign({}, n.currentUser.follows, {
-                                                    edges: r
+                                            s = [];
+                                        return e.currentUser.follows && n.currentUser.follows ? s = Object(v.b)(e.currentUser.follows.edges, n.currentUser.follows.edges) : !e.currentUser.follows && n.currentUser.follows ? s = n.currentUser.follows.edges : e.currentUser.follows && !n.currentUser.follows && (s = e.currentUser.follows.edges), {
+                                            currentUser: r.__assign({}, n.currentUser, {
+                                                follows: r.__assign({}, n.currentUser.follows, {
+                                                    edges: s
                                                 })
                                             })
                                         }
@@ -555,9 +487,9 @@ webpackJsonp([78], {
                     }
                 })], t)
             }(a.Component));
-        var x = Object(r.b)(function(e) {
+        var x = Object(s.b)(function(e) {
                 return {
-                    isLoggedIn: Object(k.d)(e)
+                    isLoggedIn: Object(S.d)(e)
                 }
             }, function(e) {
                 return Object(f.b)({
@@ -569,11 +501,11 @@ webpackJsonp([78], {
             I = n("6BvN"),
             F = n("HM6l"),
             L = n("5LoI"),
-            T = n("MAZT"),
-            R = n("uTyw"),
-            j = n("rCmJ"),
+            R = n("MAZT"),
+            j = n("uTyw"),
+            U = n("rCmJ"),
             P = n("SZoP"),
-            U = (n("np4D"), function(e) {
+            T = (n("np4D"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onStreamerClick = function(e) {
@@ -584,7 +516,7 @@ webpackJsonp([78], {
                         })
                     }, t
                 }
-                return s.__extends(t, e), t.prototype.render = function() {
+                return r.__extends(t, e), t.prototype.render = function() {
                     var e;
                     return e = this.props.isWaiting ? a.createElement(w._4, {
                         fillContent: !0
@@ -668,7 +600,7 @@ webpackJsonp([78], {
                         t.props.onChange(e.target.value)
                     }, t
                 }
-                return s.__extends(t, e), t.prototype.render = function() {
+                return r.__extends(t, e), t.prototype.render = function() {
                     return a.createElement(w._2, {
                         margin: {
                             top: 2
@@ -682,7 +614,7 @@ webpackJsonp([78], {
                         position: w._9.Relative
                     }, a.createElement("div", {
                         className: this.props.isOpen ? "streamer-search__container streamer-search__container--open" : "streamer-search__container"
-                    }, a.createElement(j.a, {
+                    }, a.createElement(U.a, {
                         onClickOut: this.props.onClickOut
                     }, a.createElement(w._18, {
                         onChange: this.handleChange,
@@ -695,7 +627,7 @@ webpackJsonp([78], {
                         noTail: !0,
                         size: w.r.ExtraLarge,
                         show: this.props.isOpen
-                    }, a.createElement(U, {
+                    }, a.createElement(T, {
                         isOpen: this.props.isOpen,
                         streamerResults: this.props.userResults,
                         isErrored: this.props.isErrored,
@@ -707,7 +639,7 @@ webpackJsonp([78], {
                 }, t
             }(a.Component),
             M = 50;
-        var A = function(e) {
+        var H = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.onChange = function(e) {
@@ -741,9 +673,9 @@ webpackJsonp([78], {
                         }, e);
                         Object(C.a)(t)
                     }, n.loadMore = function() {
-                        return s.__awaiter(n, void 0, void 0, function() {
-                            var e, t, n, r;
-                            return s.__generator(this, function(a) {
+                        return r.__awaiter(n, void 0, void 0, function() {
+                            var e, t, n, s;
+                            return r.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
                                         if (this.state.queryID || !0 === this.state.exhaustedHits) return [2];
@@ -756,32 +688,32 @@ webpackJsonp([78], {
                                     case 2:
                                         return t = a.sent(), [3, 4];
                                     case 3:
-                                        return n = a.sent(), i.i.error(n, "Algolia page search failed"), this.setState(s.__assign({}, this.getEmptyState(), {
+                                        return n = a.sent(), i.i.error(n, "Algolia page search failed"), this.setState(r.__assign({}, this.getEmptyState(), {
                                             isErrored: !0,
                                             isOpen: !0
                                         })), [2];
                                     case 4:
-                                        return t ? (r = Object(R.b)({
+                                        return t ? (s = Object(j.b)({
                                             searchResults: t,
                                             append: e > 0,
                                             currentUserResults: this.state.currentUserResults
                                         }), this.setState({
-                                            currentUserResults: r.currentUserResults,
+                                            currentUserResults: s.currentUserResults,
                                             term: this.state.term,
                                             isOpen: !0,
                                             isWaiting: !1,
                                             currentPage: e,
-                                            exhaustedHits: r.exhaustedHits
-                                        }), [2]) : (this.setState(s.__assign({}, this.getEmptyState(), {
+                                            exhaustedHits: s.exhaustedHits
+                                        }), [2]) : (this.setState(r.__assign({}, this.getEmptyState(), {
                                             isErrored: !0,
                                             isOpen: !0
                                         })), [2])
                                 }
                             })
                         })
-                    }, n.state = n.getEmptyState(), n.searchClient = new T.a(i.a.algoliaApplicationID, i.a.algoliaAPIKey), n
+                    }, n.state = n.getEmptyState(), n.searchClient = new R.a(i.a.algoliaApplicationID, i.a.algoliaAPIKey), n
                 }
-                return s.__extends(t, e), t.prototype.componentDidMount = function() {
+                return r.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     return a.createElement(D, {
@@ -798,9 +730,9 @@ webpackJsonp([78], {
                     })
                 }, t.prototype.focusNext = function(e) {
                     var t, n = document.querySelectorAll("[data-ts_selectable=true]"),
-                        r = document.activeElement,
-                        s = Array.prototype.indexOf.call(n, r);
-                    if ((t = s < 0 ? e > 0 ? 0 : n.length - 1 : s + e) < 0 && (t = 0), !(t >= n.length)) {
+                        s = document.activeElement,
+                        r = Array.prototype.indexOf.call(n, s);
+                    if ((t = r < 0 ? e > 0 ? 0 : n.length - 1 : r + e) < 0 && (t = 0), !(t >= n.length)) {
                         var a = n.item(t);
                         a.focus(), a.tabIndex = 0, this.state.currentFocus && (this.state.currentFocus.tabIndex = -1), this.setState({
                             currentFocus: a
@@ -822,14 +754,14 @@ webpackJsonp([78], {
                         exhaustedHits: !1
                     }
                 }, t.prototype.doSearch = function(e) {
-                    return s.__awaiter(this, void 0, void 0, function() {
-                        var t, n, r, a, o, l;
-                        return s.__generator(this, function(c) {
+                    return r.__awaiter(this, void 0, void 0, function() {
+                        var t, n, s, a, o, l;
+                        return r.__generator(this, function(c) {
                             switch (c.label) {
                                 case 0:
-                                    this.inputTimer = 0, t = -1, n = F.a(), r = "INPUT" === document.activeElement.tagName, this.setState({
+                                    this.inputTimer = 0, t = -1, n = F.a(), s = "INPUT" === document.activeElement.tagName, this.setState({
                                         queryID: n,
-                                        focusSelectable: !r && !!this.state.currentFocus
+                                        focusSelectable: !s && !!this.state.currentFocus
                                     }), c.label = 1;
                                 case 1:
                                     return c.trys.push([1, 3, , 4]), t = 0, [4, this.searchClient.queryForType(L.a.Users, e, n, {
@@ -838,24 +770,24 @@ webpackJsonp([78], {
                                 case 2:
                                     return a = c.sent(), [3, 4];
                                 case 3:
-                                    return o = c.sent(), i.i.error(o, "Algolia top results search failed"), this.setState(s.__assign({}, this.getEmptyState(), {
+                                    return o = c.sent(), i.i.error(o, "Algolia top results search failed"), this.setState(r.__assign({}, this.getEmptyState(), {
                                         isErrored: !0,
                                         isOpen: !0,
                                         term: e
                                     })), [2];
                                 case 4:
-                                    return a ? this.state.queryID !== a.id ? [2] : (l = Object(R.b)({
+                                    return a ? this.state.queryID !== a.id ? [2] : (l = Object(j.b)({
                                         searchResults: a,
                                         append: !1
                                     }), this.setState(function(n) {
-                                        return s.__assign({}, n, l, {
+                                        return r.__assign({}, n, l, {
                                             queryID: "",
                                             term: e,
                                             isOpen: !0,
                                             isWaiting: !1,
                                             currentPage: t
                                         })
-                                    }), [2]) : (this.setState(s.__assign({}, this.getEmptyState(), {
+                                    }), [2]) : (this.setState(r.__assign({}, this.getEmptyState(), {
                                         isErrored: !0,
                                         isOpen: !0,
                                         term: e
@@ -863,13 +795,13 @@ webpackJsonp([78], {
                             }
                         })
                     })
-                }, t = s.__decorate([Object(h.d)("StreamerSearch")], t)
+                }, t = r.__decorate([Object(h.d)("StreamerSearch")], t)
             }(a.Component),
-            H = Object(r.b)(function(e) {
+            A = Object(s.b)(function(e) {
                 return {
-                    user: Object(k.c)(e)
+                    user: Object(S.c)(e)
                 }
-            })(A),
+            })(H),
             z = (n("rbRz"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -884,7 +816,7 @@ webpackJsonp([78], {
                         emotesInfo: Object(i.d)("Subscribing to a streamer unlocks custom emotes, usable on any channel on Twitch. The more subs a streamer has, the more custom emotes slots will be unlocked, so more support equals more rewards for everyone.", "SubsLandingPage")
                     }, t
                 }
-                return s.__extends(t, e), t.prototype.componentDidMount = function() {
+                return r.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive(), i.n.setPageTitle("Subscriptions")
                 }, t.prototype.render = function() {
                     return a.createElement(w._2, {
@@ -946,7 +878,7 @@ webpackJsonp([78], {
                     }, a.createElement(w._35, {
                         type: w._40.P,
                         fontSize: w.R.Size5
-                    }, this.messages.searchInfo)), a.createElement(H, null), a.createElement(x, null), a.createElement(w._2, {
+                    }, this.messages.searchInfo)), a.createElement(A, null), a.createElement(x, null), a.createElement(w._2, {
                         className: "subs-landing-page-contents__section",
                         display: w.N.Flex,
                         justifyContent: w._1.Center,
@@ -1028,13 +960,13 @@ webpackJsonp([78], {
                         type: w._40.P,
                         fontSize: w.R.Size5
                     }, this.messages.emotesInfo)))))))))
-                }, t = s.__decorate([Object(h.d)("SubsLandingPage", {
+                }, t = r.__decorate([Object(h.d)("SubsLandingPage", {
                     destination: m.a.SubsLandingPage
                 }), Object(p.a)({
                     location: g.PageviewLocation.SubsLandingPage
                 })], t)
             }(a.Component)),
-            K = Object(r.b)()(z);
+            K = Object(s.b)()(z);
         n.d(t, "SubsLandingPage", function() {
             return K
         })
@@ -1046,4 +978,4 @@ webpackJsonp([78], {
     },
     yoqf: function(e, t) {}
 });
-//# sourceMappingURL=pages.subs.components.subs-landing-page-8c4e213be0f6bcf4c2924e029ff81326.js.map
+//# sourceMappingURL=pages.subs.components.subs-landing-page-12bbfbdad5fe842943def94225999ace.js.map

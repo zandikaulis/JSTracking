@@ -1,4 +1,4 @@
-webpackJsonp([40], {
+webpackJsonp([41], {
     "+5Qw": function(e, t) {},
     "+Aaf": function(e, t) {},
     "+FQU": function(e, t) {},
@@ -4080,10 +4080,9 @@ webpackJsonp([40], {
                         position: F._9.Relative
                     }, e, n)
                 }, t.prototype.renderMedalSVG = function(e, t) {
-                    var n = t === xt.Big ? 32 : 18;
+                    var n = t === xt.Big ? "bits-leaderboard-medal__big" : "bits-leaderboard-medal__small";
                     return e === Lt.Gold ? c.createElement("svg", {
-                        width: n,
-                        height: n,
+                        className: n,
                         viewBox: "0 0 32 32",
                         xmlns: "http://www.w3.org/2000/svg",
                         xmlnsXlink: "http://www.w3.org/1999/xlink"
@@ -4184,8 +4183,7 @@ webpackJsonp([40], {
                         cy: "16",
                         r: "11.5"
                     }))))) : e === Lt.Silver ? c.createElement("svg", {
-                        width: n,
-                        height: n,
+                        className: n,
                         viewBox: "0 0 32 32",
                         xmlns: "http://www.w3.org/2000/svg",
                         xmlnsXlink: "http://www.w3.org/1999/xlink"
@@ -4303,8 +4301,7 @@ webpackJsonp([40], {
                         cy: "16",
                         r: "11.5"
                     }))))) : e === Lt.Bronze ? c.createElement("svg", {
-                        width: n,
-                        height: n,
+                        className: n,
                         viewBox: "0 0 32 32",
                         xmlns: "http://www.w3.org/2000/svg",
                         xmlnsXlink: "http://www.w3.org/1999/xlink"
@@ -4419,8 +4416,7 @@ webpackJsonp([40], {
                         cy: "16",
                         r: "11.5"
                     }))))) : e === Lt.Default ? c.createElement("svg", {
-                        width: n,
-                        height: n,
+                        className: n,
                         viewBox: "0 0 20 20",
                         xmlns: "http://www.w3.org/2000/svg",
                         xmlnsXlink: "http://www.w3.org/1999/xlink"
@@ -4683,7 +4679,8 @@ webpackJsonp([40], {
                     background: F.m.Base,
                     padding: {
                         top: 1
-                    }
+                    },
+                    position: F._9.Relative
                 }, a, c.createElement("ul", null, t, c.createElement(F._2, {
                     className: O(s)
                 }), n, c.createElement(F._2, {
@@ -4954,6 +4951,7 @@ webpackJsonp([40], {
                         })), n = c.createElement(F._2, {
                             ellipsis: !0,
                             className: "bits-leaderboard-header-runner-up-entry__username",
+                            flexShrink: 1,
                             margin: {
                                 x: .5
                             }
@@ -4963,7 +4961,7 @@ webpackJsonp([40], {
                         var o = an(this.props.rank ? this.props.rank : 0);
                         e = c.createElement(F._2, {
                             overflow: F._5.Hidden,
-                            display: F.N.InlineFlex,
+                            display: F.N.Flex,
                             alignItems: F.c.Center,
                             flexGrow: 0,
                             fullWidth: !0
@@ -4975,6 +4973,7 @@ webpackJsonp([40], {
                         })), c.createElement(F._2, {
                             ellipsis: !0,
                             className: "bits-leaderboard-header-runner-up-entry__username",
+                            flexShrink: 1,
                             margin: {
                                 x: .5
                             }
@@ -4986,7 +4985,7 @@ webpackJsonp([40], {
                         var s = this.props.data && this.props.data.user && this.props.data.user.profileImageURL || r.a.defaultAvatarURL;
                         e = c.createElement(F._2, {
                             overflow: F._5.Hidden,
-                            display: F.N.InlineFlex,
+                            display: F.N.Flex,
                             alignItems: F.c.Center,
                             flexGrow: 0,
                             fullWidth: !0
@@ -5018,9 +5017,10 @@ webpackJsonp([40], {
                     return this.props.isEmpty || (e = c.createElement(F._43, {
                         label: i,
                         direction: F._45.Bottom,
-                        display: F.N.Block
+                        display: F.N.Flex
                     }, e)), c.createElement(F._2, {
                         className: "bits-leaderboard-header-runner-up-entry",
+                        display: F.N.Flex,
                         alignItems: F.c.Center
                     }, e)
                 }, t
@@ -5058,12 +5058,11 @@ webpackJsonp([40], {
                     }, t.renderExpandArrow = function() {
                         return c.createElement(F._2, {
                             className: "pinned-cheer-v2-header--arrow",
-                            flexGrow: 0,
-                            flexShrink: 0,
-                            justifyContent: F._1.End,
                             alignItems: F.c.Stretch,
                             fullHeight: !0,
-                            display: F.N.Flex
+                            display: F.N.InlineFlex,
+                            attachTop: !0,
+                            position: F._9.Absolute
                         }, c.createElement(F.u, {
                             size: F.x.Small,
                             fullWidth: !0,
@@ -5088,20 +5087,22 @@ webpackJsonp([40], {
                     }
                     return c.createElement(F._25, {
                         className: "pinned-cheer-v2-header",
-                        background: F.m.Base
+                        background: F.m.Base,
+                        position: F._9.Relative
                     }, c.createElement(F._2, {
-                        display: F.N.Flex,
+                        className: "pinned-cheer-v2-header__users",
+                        display: F.N.InlineFlex,
                         flexWrap: F.Q.NoWrap,
                         justifyContent: F._1.Between,
-                        fullHeight: !0,
-                        fullWidth: !0
+                        fullHeight: !0
                     }, e, c.createElement(F._2, {
                         className: "pinned-cheer-v2-header__runner-up-entries",
                         display: F.N.Flex,
+                        flexShrink: 1,
                         flexWrap: F.Q.NoWrap,
                         justifyContent: F._1.Between,
                         flexDirection: F.P.Column
-                    }, t, n), i))
+                    }, t, n)), i)
                 }, t.prototype.renderRunnerUpEntry = function(e, t) {
                     var n, i = null;
                     return e > 0 && this.props.topEdges && this.props.topEdges[e - 1] && (i = this.props.topEdges[e - 1]), n = i ? c.createElement(ln, {
@@ -5294,7 +5295,7 @@ webpackJsonp([40], {
                         zIndex: F._52.Default
                     }, e, t)
                 }, t.prototype.renderLeaderboard = function() {
-                    if (this.props.data.error || !this.props.data.user || null === this.props.data.user.cheer || null === this.props.data.user.cheer.leaderboard) return null;
+                    if (this.props.data.error || !(this.props.data.user && this.props.data.user.cheer && this.props.data.user.cheer.leaderboard)) return null;
                     if (!this.props.data.user.cheer.settings || !this.props.data.user.cheer.settings.leaderboard || !this.props.data.user.cheer.settings.leaderboard.isEnabled) return null;
                     var e = this.props.data.user.cheer.leaderboard.items.edges.slice(0, 10),
                         t = null,
@@ -5325,13 +5326,13 @@ webpackJsonp([40], {
                 }, t.prototype.getRecentCheerInfo = function(e, t) {
                     var n = !1,
                         i = void 0;
-                    this.state.isExpanded || !e.data.error && e.data.user && null !== e.data.user.cheer && null !== e.data.user.cheer.recent && e.data.user.cheer.settings.isRecentEnabled && t.recentCheerExpireTime && 0 !== Math.max(0, t.recentCheerExpireTime - Date.now()) && (n = !0, i = Object(Vt.a)(e.data.user.cheer.recent, this.props.bitsConfig, this.props.blockLinks));
+                    this.state.isExpanded || !e.data.error && e.data.user && e.data.user.cheer && e.data.user.cheer.recent && e.data.user.cheer.settings.isRecentEnabled && t.recentCheerExpireTime && 0 !== Math.max(0, t.recentCheerExpireTime - Date.now()) && (n = !0, i = Object(Vt.a)(e.data.user.cheer.recent, this.props.bitsConfig, this.props.blockLinks));
                     return {
                         shouldRender: n,
                         recentCheer: i
                     }
                 }, t.prototype.renderRecentCheer = function() {
-                    if (this.props.data.error || !this.props.data.user || null === this.props.data.user.cheer || null === this.props.data.user.cheer.recent) return null;
+                    if (this.props.data.error || !(this.props.data.user && this.props.data.user.cheer && this.props.data.user.cheer.recent)) return null;
                     var e = this.getRecentCheerInfo(this.props, this.state);
                     return e.shouldRender ? c.createElement(mn, {
                         badgeData: this.props.badgeData,
@@ -9230,6 +9231,90 @@ webpackJsonp([40], {
             }(i || (i = {}))
     },
     "6Rwu": function(e, t) {},
+    "6Vb7": function(e, t, n) {
+        "use strict";
+        var i = n("TToO"),
+            a = n("OAwv"),
+            r = n("GiK3"),
+            o = n("6sO2"),
+            s = n("Ejve"),
+            l = "legacy_routes_enabled",
+            d = function(e) {
+                function t(t) {
+                    var n = e.call(this, t) || this;
+                    return n.isEnabled = !1, n.onHistoryChange = function(e, t) {
+                        n.isEnabled ? "REPLACE" !== t ? e && e.pathname ? (n.logger.debug("Location changed", {
+                            path: e.pathname
+                        }), n.legacyRoutes.forEach(function(t) {
+                            try {
+                                if (e.pathname.match(t)) {
+                                    n.logger.debug("Found legacy route. Reloading...");
+                                    var i = "" !== e.search ? a.parse(e.search) : {};
+                                    i["from-redirect"] = "true";
+                                    var r = a.stringify(i),
+                                        l = o.a.buildType === s.a.Dev ? window.location.host : window.location.hostname,
+                                        d = window.location.protocol + "//" + l + e.pathname + "?" + r;
+                                    return n.logger.debug("Redirecting to legacy route", {
+                                        newUrl: d
+                                    }), void window.location.replace(d)
+                                }
+                            } catch (e) {
+                                o.i.withCategory("legacy").error(e, "Unable to determine legacy reload match", {
+                                    regex: t
+                                })
+                            }
+                        })) : n.logger.debug("Unable to process history change. Path is null or empty.") : n.logger.debug("Skipping legacy route processing, due to history replace.") : n.logger.debug("Legacy routing not enabled.")
+                    }, n.processRedirectParam = function(e) {
+                        if (e && e.pathname && e.search) {
+                            var t = "" !== e.search ? a.parse(e.search) : {};
+                            if (t["from-redirect"]) {
+                                delete t["from-redirect"];
+                                var i = a.stringify(t),
+                                    r = "";
+                                i.length > 0 && (r = "?" + i), n.props.history.replace({
+                                    pathname: e.pathname,
+                                    hash: e.hash,
+                                    search: r
+                                })
+                            }
+                        }
+                    }, n.isEnabled = o.b.get(l, !1), n.logger = o.i.withCategory("legacy-routes"), n.legacyRoutes = n.buildRoutes(), n.props.history.listen(n.onHistoryChange), n
+                }
+                return i.__extends(t, e), t.prototype.render = function() {
+                    return null
+                }, t.prototype.componentDidMount = function() {
+                    this.processRedirectParam(this.props.history.location)
+                }, t.prototype.buildRoutes = function() {
+                    if (!this.isEnabled) return [];
+                    this.logger.debug("Building legacy routes...");
+                    var e = o.b.get("legacy_routes", []),
+                        t = [];
+                    if (!e || 0 === e.length) return this.logger.debug("No legacy routes found in settings."), t;
+                    for (var n = 0, i = e; n < i.length; n++) {
+                        var a = i[n];
+                        try {
+                            var r = new RegExp(a, "i");
+                            t.push(r)
+                        } catch (e) {
+                            this.logger.debug("Failed to parse route!", {
+                                val: a,
+                                err: e
+                            })
+                        }
+                    }
+                    return this.logger.debug("Done building legacy routes!", {
+                        count: t.length
+                    }), t
+                }, t
+            }(r.Component);
+        n.d(t, "a", function() {
+            return l
+        }), n.d(t, !1, function() {
+            return "legacy_routes"
+        }), n.d(t, "b", function() {
+            return d
+        })
+    },
     "6lb1": function(e, t) {},
     "6suJ": function(e, t) {},
     "6vcJ": function(e, t) {},
@@ -14946,90 +15031,6 @@ webpackJsonp([40], {
         }(a || (a = {}))
     },
     MSFW: function(e, t) {},
-    MSvX: function(e, t, n) {
-        "use strict";
-        var i = n("TToO"),
-            a = n("OAwv"),
-            r = n("GiK3"),
-            o = n("6sO2"),
-            s = n("Ejve"),
-            l = "legacy_routes_enabled",
-            d = function(e) {
-                function t(t) {
-                    var n = e.call(this, t) || this;
-                    return n.isEnabled = !1, n.onHistoryChange = function(e, t) {
-                        n.isEnabled ? "REPLACE" !== t ? e && e.pathname ? (n.logger.debug("Location changed", {
-                            path: e.pathname
-                        }), n.legacyRoutes.forEach(function(t) {
-                            try {
-                                if (e.pathname.match(t)) {
-                                    n.logger.debug("Found legacy route. Reloading...");
-                                    var i = "" !== e.search ? a.parse(e.search) : {};
-                                    i["from-redirect"] = "true";
-                                    var r = a.stringify(i),
-                                        l = o.a.buildType === s.a.Dev ? window.location.host : window.location.hostname,
-                                        d = window.location.protocol + "//" + l + e.pathname + "?" + r;
-                                    return n.logger.debug("Redirecting to legacy route", {
-                                        newUrl: d
-                                    }), void window.location.replace(d)
-                                }
-                            } catch (e) {
-                                o.i.withCategory("legacy").error(e, "Unable to determine legacy reload match", {
-                                    regex: t
-                                })
-                            }
-                        })) : n.logger.debug("Unable to process history change. Path is null or empty.") : n.logger.debug("Skipping legacy route processing, due to history replace.") : n.logger.debug("Legacy routing not enabled.")
-                    }, n.processRedirectParam = function(e) {
-                        if (e && e.pathname && e.search) {
-                            var t = "" !== e.search ? a.parse(e.search) : {};
-                            if (t["from-redirect"]) {
-                                delete t["from-redirect"];
-                                var i = a.stringify(t),
-                                    r = "";
-                                i.length > 0 && (r = "?" + i), n.props.history.replace({
-                                    pathname: e.pathname,
-                                    hash: e.hash,
-                                    search: r
-                                })
-                            }
-                        }
-                    }, n.isEnabled = o.b.get(l, !1), n.logger = o.i.withCategory("legacy-routes"), n.legacyRoutes = n.buildRoutes(), n.props.history.listen(n.onHistoryChange), n
-                }
-                return i.__extends(t, e), t.prototype.render = function() {
-                    return null
-                }, t.prototype.componentDidMount = function() {
-                    this.processRedirectParam(this.props.history.location)
-                }, t.prototype.buildRoutes = function() {
-                    if (!this.isEnabled) return [];
-                    this.logger.debug("Building legacy routes...");
-                    var e = o.b.get("legacy_routes", []),
-                        t = [];
-                    if (!e || 0 === e.length) return this.logger.debug("No legacy routes found in settings."), t;
-                    for (var n = 0, i = e; n < i.length; n++) {
-                        var a = i[n];
-                        try {
-                            var r = new RegExp(a, "i");
-                            t.push(r)
-                        } catch (e) {
-                            this.logger.debug("Failed to parse route!", {
-                                val: a,
-                                err: e
-                            })
-                        }
-                    }
-                    return this.logger.debug("Done building legacy routes!", {
-                        count: t.length
-                    }), t
-                }, t
-            }(r.Component);
-        n.d(t, "a", function() {
-            return l
-        }), n.d(t, !1, function() {
-            return "legacy_routes"
-        }), n.d(t, "b", function() {
-            return d
-        })
-    },
     Mful: function(e, t, n) {
         var i = {
             kind: "Document",
@@ -22221,7 +22222,7 @@ webpackJsonp([40], {
                         })
                     }, t.updateRoomName = function(e) {
                         var n;
-                        if (K(e)) {
+                        if (K(e = e.toLowerCase())) {
                             if (Y(e)) {
                                 n = G("NAME_LENGTH_INVALID", {
                                     maxChars: z,
@@ -29058,15 +29059,15 @@ webpackJsonp([40], {
     },
     czpb: function(e, t, n) {
         "use strict";
-        var i = n("6sO2"),
-            a = n("Ejve"),
-            r = n("MSvX");
         t.a = function(e) {
             return i.b.get(r.a, !1) || i.a.buildType !== a.a.Production ? "string" == typeof e ? e : e.pathname || "" : "string" == typeof e ? o + e : o + e.pathname
         }, t.b = function() {
             return !i.b.get(r.a, !1) && i.a.buildType === a.a.Production
         };
-        var o = "https://www.twitch.tv"
+        var i = n("6sO2"),
+            a = n("Ejve"),
+            r = n("6Vb7"),
+            o = "https://www.twitch.tv"
     },
     d7Cs: function(e, t) {
         var n = {
@@ -31306,74 +31307,6 @@ webpackJsonp([40], {
             }
         };
         e.exports = n
-    },
-    "j7/Y": function(e, t, n) {
-        "use strict";
-        var i = n("TToO"),
-            a = n("OAwv"),
-            r = n("GiK3"),
-            o = n("F8kA"),
-            s = n("6sO2");
-
-        function l(e) {
-            return function(t) {
-                var n = function(n) {
-                    function o(t) {
-                        var a = n.call(this, t) || this;
-                        return a.tracked = !1, a.referenceTracking = {}, a.trackPageview = function() {
-                            if (!(a.tracked || e.skip && e.skip(a.props))) {
-                                a.tracked = !0;
-                                var t = {};
-                                "function" == typeof e.properties ? t = e.properties(a.props) : e.properties && (t = i.__assign({}, e.properties));
-                                var n = i.__assign({}, a.props);
-                                n.location && n.location.state && (t.medium = n.location.state.medium, t.content = n.location.state.content, t.content_index = n.location.state.content_index);
-                                var r = a.referenceTracking,
-                                    o = r.content,
-                                    l = r.medium,
-                                    d = r.content_index;
-                                s.n.tracking.trackPageview(i.__assign({
-                                    content: o,
-                                    medium: l,
-                                    content_index: d,
-                                    location: e.location
-                                }, t))
-                            }
-                        }, s.i.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : s.i.warn("No latency tracker exists! This means no data will be sent to Spade.", e), a
-                    }
-                    return i.__extends(o, n), o.prototype.componentDidMount = function() {
-                        var e = this;
-                        this.referenceTracking = this.stripTTParams(this.props.history.location), this.trackPageview(), this.props.history.listen(function(t, n) {
-                            "REPLACE" !== n && (e.tracked = !1, e.referenceTracking = {})
-                        })
-                    }, o.prototype.componentDidUpdate = function() {
-                        this.trackPageview()
-                    }, o.prototype.render = function() {
-                        return r.createElement(t, i.__assign({}, this.props))
-                    }, o.prototype.stripTTParams = function(e) {
-                        var t = "" !== e.search ? a.parse(e.search) : {},
-                            n = {
-                                content: t.tt_content,
-                                content_index: t.tt_content_index,
-                                medium: t.tt_medium
-                            };
-                        if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, n.medium || n.content) {
-                            var i = "",
-                                r = a.stringify(t);
-                            r.length > 0 && (i = "?" + r), this.props.history.replace({
-                                pathname: e.pathname,
-                                hash: e.hash,
-                                search: i
-                            })
-                        }
-                        return n
-                    }, o
-                }(r.Component);
-                return Object(o.f)(n)
-            }
-        }
-        n.d(t, "a", function() {
-            return l
-        })
     },
     jF7o: function(e, t, n) {
         "use strict";
@@ -36886,4 +36819,4 @@ webpackJsonp([40], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-events-dbbb96b9387398739c7de25217eec60b.js.map
+//# sourceMappingURL=pages.channel-events-e71bd22192828fb564163932fccf611c.js.map
