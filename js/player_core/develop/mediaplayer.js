@@ -1107,6 +1107,7 @@ MediaSink.prototype.reset = function () {
     this._tracks = Object.create(null);
     this._idle = true;
     this._outstandingPauseEvents = 0;
+    this._iosFullScreen = false;
 
     removeCues(this._metadataTrack, 0, Infinity);
 
@@ -1295,6 +1296,9 @@ MediaSink.prototype._attachHandlers = function () {
     addListener(this._video, 'timeupdate', this._createOnVideoTimeUpdate());
     addListener(this._video, 'pause', this._onVideoPause.bind(this));
     addListener(this._video, 'error', this._onVideoError.bind(this));
+    // Following listeners are for ios < 10
+    addListener(this._video, 'webkitbeginfullscreen', this._onWebkitBeginFullscreen.bind(this));
+    addListener(this._video, 'webkitendfullscreen', this._onWebkitEndFullscreen.bind(this));
 };
 
 MediaSink.prototype._updateIdle = function (bufferDuration) {
@@ -1380,10 +1384,20 @@ MediaSink.prototype._createOnVideoTimeUpdate = function () {
     return onTimeUpdate;
 };
 
+MediaSink.prototype._onWebkitBeginFullscreen = function() {
+    this._iosFullScreen = true;
+};
+
+MediaSink.prototype._onWebkitEndFullscreen = function() {
+    this._iosFullScreen = false;
+}
+
 MediaSink.prototype._onVideoPause = function () {
     if (this._outstandingPauseEvents > 0) {
         this._outstandingPauseEvents--;
-    } else {
+    } else if (!this._iosFullScreen){
+        // If video pauses when ios is fullscreen, the native playback controls are active.
+        // The calls to play/pause affect the video element directly and our APIs are never called
         // this event wasn't caused by one of our pause actions,
         // so the browser paused on its own.
         this._onstop();
