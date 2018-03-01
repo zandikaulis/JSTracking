@@ -1155,13 +1155,13 @@ window.SiteOptions = {
         },
         "31935f88-873a-484d-83be-c238a2a5693e": {
             "name": "ios_app_badge_5.10",
-            "v": 3087,
+            "v": 3174,
             "t": 2,
             "groups": [{
-                "weight": 100,
+                "weight": 95,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 5,
                 "value": "enabled"
             }]
         },
@@ -5027,13 +5027,10 @@ window.SiteOptions = {
         },
         "ec70bd08-dbc8-4f48-9f60-d035fec3eb20": {
             "name": "CVP Player Core 2.0 Mediaplayer Experiment Aug 2017",
-            "v": 3169,
+            "v": 3173,
             "t": 1,
             "groups": [{
-                "weight": 95,
-                "value": "2.2.403"
-            }, {
-                "weight": 5,
+                "weight": 100,
                 "value": "2.2.404"
             }]
         },
