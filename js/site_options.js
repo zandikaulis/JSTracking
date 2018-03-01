@@ -297,6 +297,18 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
+        "0ca9c0f5-f9fc-40c6-be3f-52a9fa69a8b9": {
+            "name": "twilight_animated_directory_thumbnails",
+            "v": 3171,
+            "t": 1,
+            "groups": [{
+                "weight": 99,
+                "value": "control"
+            }, {
+                "weight": 1,
+                "value": "experiment"
+            }]
+        },
         "0d140c71-9264-4646-bc2c-743089cb9386": {
             "name": "clips_shelter",
             "v": 1725,

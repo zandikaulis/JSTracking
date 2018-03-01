@@ -71,7 +71,7 @@ window.__twilightSettings = {
     "twilight_video_manager_public": false,
     "twilight_video_manager_staff": true,
     "update_chunks": ["core.css", "core.js", "pages.anon-front.js", "pages.browse.js", "pages.channel.js", "pages.directory-game.js", "pages.following.js", "pages.front.js", "vendor.js"],
-    "update_manager_enabled": true,
+    "update_manager_enabled": false,
     "viewer_milestones_enabled": true,
     "withgraphql_retry_delay_backoff_multiplier": 3,
     "withgraphql_retry_enabled": true,
@@ -90,6 +90,18 @@ window.__twilightSettings = {
             }, {
                 "weight": 0,
                 "value": "no"
+            }]
+        },
+        "0ca9c0f5-f9fc-40c6-be3f-52a9fa69a8b9": {
+            "name": "twilight_animated_directory_thumbnails",
+            "v": 3171,
+            "t": 1,
+            "groups": [{
+                "weight": 99,
+                "value": "control"
+            }, {
+                "weight": 1,
+                "value": "experiment"
             }]
         },
         "0dc9a9c9-fee5-4b5f-a462-f07675713e5e": {
