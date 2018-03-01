@@ -216,6 +216,18 @@ window.__twilightSettings = {
                 "value": "recs"
             }]
         },
+        "3fc50829-31d6-449a-a757-7a3f44d77ab3": {
+            "name": "twilight_new_reporting_wizard",
+            "v": 3170,
+            "t": 2,
+            "groups": [{
+                "weight": 0,
+                "value": "yes"
+            }, {
+                "weight": 100,
+                "value": "no"
+            }]
+        },
         "416c1ee6-9adc-43e1-8e98-cd761068bc0b": {
             "name": "twilight_player_version",
             "v": 2325,
