@@ -2180,6 +2180,21 @@ window.SiteOptions = {
                 "value": "control"
             }]
         },
+        "5c8e4a59-8c63-4000-9c4e-6224f34b7c21": {
+            "name": "twilight_web_onboarding_channel_surfing",
+            "v": 3184,
+            "t": 2,
+            "groups": [{
+                "weight": 1,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "chat"
+            }, {
+                "weight": 0,
+                "value": "no-chat"
+            }]
+        },
         "5cfa2a90-54f0-4dcc-b28c-45f33935718e": {
             "name": "TWILIGHT_VOD_REDITUS",
             "v": 2940,
@@ -5095,18 +5110,6 @@ window.SiteOptions = {
             }, {
                 "weight": 99,
                 "value": "false"
-            }]
-        },
-        "f0d18017-e8c8-497f-a5bc-ff43ffe67301": {
-            "name": "android_profile_tab_order",
-            "v": 2960,
-            "t": 1,
-            "groups": [{
-                "weight": 100,
-                "value": "control"
-            }, {
-                "weight": 0,
-                "value": "active"
             }]
         },
         "f164d19e-cbbd-4774-86c7-106f21d892c0": {
