@@ -4836,18 +4836,6 @@ window.SiteOptions = {
                 "value": "enabled"
             }]
         },
-        "e2f109ce-23ba-432b-b328-9e3d0e44d8c2": {
-            "name": "android_profile_tab_order",
-            "v": 3160,
-            "t": 1,
-            "groups": [{
-                "weight": 50,
-                "value": "control"
-            }, {
-                "weight": 50,
-                "value": "active"
-            }]
-        },
         "e33a85a2-43ab-425b-bc2e-555a650b7f2a": {
             "name": "BROADCASTER_AD_REVENUE_ESTIMATE",
             "v": 3148,
