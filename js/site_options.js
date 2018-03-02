@@ -5294,21 +5294,15 @@ window.SiteOptions = {
         },
         "fd5223cb-3ae7-4a9f-9af8-ce0d44d4b9f1": {
             "name": "pad_thai",
-            "v": 3137,
+            "v": 3176,
             "t": 1,
             "s": 1,
             "groups": [{
-                "weight": 94,
+                "weight": 95,
                 "value": "control"
             }, {
-                "weight": 2,
-                "value": "treatment"
-            }, {
-                "weight": 2,
-                "value": "spdlow"
-            }, {
-                "weight": 2,
-                "value": "jorge"
+                "weight": 5,
+                "value": "sjorge"
             }]
         },
         "fd74ad1d-d885-4d12-9036-f571fc82e6df": {
