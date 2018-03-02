@@ -7456,10 +7456,11 @@ webpackJsonp([66], {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.shouldShowPlaceholders = function() {
+                        if (!t.props.offersData) return !0;
                         var e = t.props.offersData,
                             n = e.primeOffers,
                             i = null == n;
-                        return e.loading || !e.error && i && t.props.showByDefault
+                        return e.loading || !e.error && i
                     }, t.renderOfferPlaceholders = function() {
                         for (var e = [], t = 0; t < 3; ++t) e.push(o.createElement(F, {
                             key: t
@@ -7467,10 +7468,7 @@ webpackJsonp([66], {
                         return e
                     }, t
                 }
-                return r.__extends(t, e), t.prototype.componentDidUpdate = function() {
-                    var e = this.props.offersData;
-                    e && e.primeOffers && this.props.latencyTracking.reportInteractive(e.primeOffers.length)
-                }, t.prototype.render = function() {
+                return r.__extends(t, e), t.prototype.render = function() {
                     return o.createElement(g.b, {
                         className: "prime-offer-listing"
                     }, o.createElement(m._2, {
@@ -7485,7 +7483,7 @@ webpackJsonp([66], {
                     }, this.renderUpsell(), this.renderOfferExperience()))
                 }, t.prototype.renderUpsell = function() {
                     var e = this.props.userData;
-                    if (!e.loading && !e.error && !this.currentUserHasPrime(e)) return o.createElement(M, null)
+                    if (e && !e.loading && !e.error && !this.currentUserHasPrime(e)) return o.createElement(M, null)
                 }, t.prototype.renderOfferExperience = function() {
                     var e = this.props.offersData;
                     if (this.shouldShowPlaceholders()) return this.renderOfferPlaceholders();
@@ -7502,22 +7500,23 @@ webpackJsonp([66], {
                     }
                     return o.createElement(f, null)
                 }, t.prototype.getSortedOffers = function() {
-                    var e = this.props.offersData.primeOffers,
-                        t = this.getUserId();
-                    if (t) {
+                    var e = this.getUserId();
+                    if (!e || !this.props.offersData || !this.props.offersData.primeOffers) return [];
+                    var t = this.props.offersData.primeOffers;
+                    if (e) {
                         var n = Object(y.c)(),
-                            i = e.filter(function(e) {
-                                return !n.includes(Object(y.b)(e.id, t))
+                            i = t.filter(function(t) {
+                                return !n.includes(Object(y.b)(t.id, e))
                             }).sort(y.i),
-                            r = e.filter(function(e) {
+                            r = t.filter(function(e) {
                                 return !i.includes(e)
                             }).sort(y.i);
                         return i.concat(r)
                     }
-                    return e.slice().sort(y.i)
+                    return t.slice().sort(y.i)
                 }, t.prototype.getUserId = function() {
                     var e = this.props.userData;
-                    return !e.loading && !e.error && e.currentUser && e.currentUser.id ? e.currentUser.id : ""
+                    return e && !e.loading && !e.error && e.currentUser && e.currentUser.id ? e.currentUser.id : ""
                 }, t.prototype.currentUserHasPrime = function(e) {
                     var t = e.currentUser;
                     return t && t.hasPrime
@@ -7529,14 +7528,27 @@ webpackJsonp([66], {
                                 dateOverride: Object(y.d)()
                             }
                         }
+                    },
+                    skip: function(e) {
+                        return !e.firstPageLoaded
                     }
                 }), Object(c.a)(A, {
-                    name: "userData"
-                }), Object(p.d)("PrimeOfferList")], t)
-            }(o.Component),
-            B = n("tTbW"),
-            H = (n("9856"), n("wjhu")),
-            V = function(e) {
+                    name: "userData",
+                    skip: function(e) {
+                        return !e.firstPageLoaded
+                    }
+                }), Object(p.d)("PrimeOfferList", {
+                    autoReportInteractive: !0
+                })], t)
+            }(o.Component);
+        var B = Object(i.b)(function(e) {
+                return {
+                    firstPageLoaded: e.session.firstPageLoaded
+                }
+            })(j),
+            H = n("tTbW"),
+            V = (n("9856"), n("wjhu")),
+            z = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -7589,9 +7601,7 @@ webpackJsonp([66], {
                             className: "prime-offers__list"
                         }, o.createElement(h, {
                             numOfUnseenOffers: t.state.numOfUnseenOffers
-                        }), o.createElement(j, {
-                            showByDefault: n
-                        })) : null
+                        }), o.createElement(B, null)) : null
                     }, t
                 }
                 return r.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -7640,7 +7650,7 @@ webpackJsonp([66], {
                         label: e.toString(),
                         type: m._7.Notification
                     })))
-                }, t = r.__decorate([Object(c.a)(B, {
+                }, t = r.__decorate([Object(c.a)(H, {
                     name: "offersData",
                     skip: function(e) {
                         return !e.firstPageLoaded
@@ -7652,19 +7662,19 @@ webpackJsonp([66], {
                             }
                         }
                     }
-                }), Object(c.a)(H, {
+                }), Object(c.a)(V, {
                     name: "userData"
                 }), Object(p.d)("PrimeOffers", {
                     autoReportInteractive: !0
                 })], t)
             }(o.Component);
-        var z = Object(i.b)(function(e) {
+        var W = Object(i.b)(function(e) {
                 return {
                     firstPageLoaded: !!e.session.firstPageLoaded
                 }
-            })(V),
-            W = (n("ukY1"), n("F1v6")),
-            G = function(e) {
+            })(z),
+            G = (n("ukY1"), n("F1v6")),
+            q = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -7772,7 +7782,7 @@ webpackJsonp([66], {
                         target: "_blank",
                         rel: "noopener noreferrer"
                     }, l)))))
-                }, t = r.__decorate([Object(c.a)(W, {
+                }, t = r.__decorate([Object(c.a)(G, {
                     options: function() {
                         return {
                             variables: {
@@ -7784,9 +7794,9 @@ webpackJsonp([66], {
                 }), Object(p.d)("BlueBarComponent")], t)
             }(o.Component);
         n.d(t, "b", function() {
-            return z
+            return W
         }), n.d(t, "a", function() {
-            return G
+            return q
         }), n.d(t, !1, function() {
             return T
         }), n.d(t, "c", function() {
@@ -42799,4 +42809,4 @@ webpackJsonp([66], {
             }(r.Component))
     }
 }, [5]);
-//# sourceMappingURL=core-32484bc69f13dccffcbf1192754e8373.js.map
+//# sourceMappingURL=core-eed74aac3c075edbc7b95598b3e227c5.js.map
