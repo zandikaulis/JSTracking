@@ -7024,6 +7024,7 @@ webpackJsonp([66], {
                 return r.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
+                    var e = this.props.message || Object(s.d)("Something has gone wrong. Please try again later.", "PrimeError");
                     return o.createElement(m._25, {
                         background: m.m.Alt2,
                         display: m.N.Flex,
@@ -7061,7 +7062,7 @@ webpackJsonp([66], {
                         type: m._17.Alert,
                         width: 20,
                         height: 20
-                    })), Object(s.d)("Something has gone wrong. Please try again later.", "PrimeError"))))
+                    })), e)))
                 }, t = r.__decorate([Object(p.d)("PrimeError")], t)
             }(o.Component),
             O = (n("nFc2"), function(e) {
@@ -7244,15 +7245,19 @@ webpackJsonp([66], {
                                 claimData: ""
                             },
                             r = (t.props.data || {}).currentUser || {};
-                        if (t.state.error) return o.createElement(T, {
-                            fontSize: m.R.Size6,
-                            testTarget: "prime-offer-error"
-                        });
+                        if (t.state.error) {
+                            var a = Object(s.d)("Oh no! Unable to claim. Another linked Twitch account may have already claimed this content. Please check accounts and try again.", "PrimeOffer");
+                            return o.createElement(T, {
+                                fontSize: m.R.Size6,
+                                testTarget: "prime-offer-error",
+                                message: a
+                            })
+                        }
                         if ((t.isCurrentOfferClaimed(e) || t.state.claimed) && r && r.hasPrime) {
-                            var a = t.state.claimData || i.claimData;
+                            var l = t.state.claimData || i.claimData;
                             return o.createElement(x, {
                                 claimInstructions: e.claimInstructions,
-                                code: a,
+                                code: l,
                                 deliveryMethod: e.deliveryMethod
                             })
                         }
@@ -7778,13 +7783,13 @@ webpackJsonp([66], {
                     }
                 }), Object(p.d)("BlueBarComponent")], t)
             }(o.Component);
-        n.d(t, "c", function() {
+        n.d(t, "b", function() {
             return z
         }), n.d(t, "a", function() {
             return G
-        }), n.d(t, "b", function() {
+        }), n.d(t, !1, function() {
             return T
-        }), n.d(t, "d", function() {
+        }), n.d(t, "c", function() {
             return y.d
         })
     },
@@ -25794,7 +25799,7 @@ webpackJsonp([66], {
                         },
                         yes: function() {
                             return re.a.wrap(function() {
-                                return n.e(38).then(n.bind(null, "gZLf"))
+                                return n.e(37).then(n.bind(null, "gZLf"))
                             }, "PaymentsLandingPage")({})
                         }
                     },
@@ -25805,19 +25810,19 @@ webpackJsonp([66], {
                 return r.createElement(Pe.a, i.__assign({}, e))
             },
             Fe = re.a.wrap(function() {
-                return n.e(53).then(n.bind(null, "8U1+"))
+                return n.e(51).then(n.bind(null, "8U1+"))
             }, "AnonFrontPage"),
             Me = re.a.wrap(function() {
-                return n.e(52).then(n.bind(null, "Dd84"))
+                return n.e(53).then(n.bind(null, "Dd84"))
             }, "BrowseRootPage"),
             Ue = re.a.wrap(function() {
                 return n.e(39).then(n.bind(null, "gZGZ"))
             }, "ChannelClipsPage"),
             Ae = re.a.wrap(function() {
-                return n.e(49).then(n.bind(null, "zfLI"))
+                return n.e(50).then(n.bind(null, "zfLI"))
             }, "ChannelCollectionsPage"),
             je = re.a.wrap(function() {
-                return n.e(41).then(n.bind(null, "lW0T"))
+                return n.e(40).then(n.bind(null, "lW0T"))
             }, "ChannelEventsPage"),
             Be = re.a.wrap(function() {
                 return n.e(43).then(n.bind(null, "35Zp"))
@@ -25847,13 +25852,13 @@ webpackJsonp([66], {
                 return n.e(46).then(n.bind(null, "NTi8"))
             }, "EventLandingPage"),
             $e = re.a.wrap(function() {
-                return n.e(47).then(n.bind(null, "IpE8"))
+                return n.e(48).then(n.bind(null, "IpE8"))
             }, "FollowingRootPage"),
             Ye = re.a.wrap(function() {
                 return n.e(54).then(n.bind(null, "lTLe"))
             }, "FinishWatchingPage"),
             Ze = re.a.wrap(function() {
-                return n.e(50).then(n.bind(null, "IOEW"))
+                return n.e(47).then(n.bind(null, "IOEW"))
             }, "FrontPage"),
             Xe = re.a.wrap(function() {
                 return n.e(57).then(n.bind(null, "DZCb"))
@@ -25865,7 +25870,7 @@ webpackJsonp([66], {
                 return n.e(60).then(n.bind(null, "DkuH"))
             }, "ReportUserPage"),
             tt = re.a.wrap(function() {
-                return n.e(51).then(n.bind(null, "K4jf"))
+                return n.e(52).then(n.bind(null, "K4jf"))
             }, "SettingsRoot"),
             nt = re.a.wrap(function() {
                 return n.e(36).then(n.bind(null, "uiPj"))
@@ -35602,10 +35607,9 @@ webpackJsonp([66], {
             a = n("6sO2"),
             o = 3;
         var s = n("CwIZ"),
-            l = n("8PKe"),
-            c = n("Odds"),
-            d = "subscribe-button__subscribe-with-prime",
-            u = function(e) {
+            l = n("Odds"),
+            c = "subscribe-button__subscribe-with-prime",
+            d = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -35686,53 +35690,49 @@ webpackJsonp([66], {
                     var e = this.props.isSubscribedWithPrime && this.props.canPrimeSubscribe;
                     if (!this.props.userHasPrime) {
                         var t = Object(a.d)("Start Your Free Trial", "SubscribeWithPrime");
-                        return r.createElement(c.u, i.__assign({
+                        return r.createElement(l.u, i.__assign({
                             ariaLabel: t,
-                            "data-test-selector": d,
-                            icon: c._16.Crown,
+                            "data-test-selector": c,
+                            icon: l._16.Crown,
                             linkTo: a.a.tryPrimeURI,
                             onClick: this.handleStartPrimeTrialClick
-                        }, Object(c._53)(this.props), {
+                        }, Object(l._53)(this.props), {
                             targetBlank: !0
                         }), t)
                     }
                     if (this.props.isSubscribed && !e) {
                         var n = Object(a.d)("Subscribed", "SubscribeWithPrime");
-                        return r.createElement(c.u, i.__assign({
+                        return r.createElement(l.u, i.__assign({
                             ariaLabel: n,
-                            "data-test-selector": d,
+                            "data-test-selector": c,
                             disabled: !0,
-                            icon: c._16.Crown
-                        }, Object(c._53)(this.props)), n)
+                            icon: l._16.Crown
+                        }, Object(l._53)(this.props)), n)
                     }
                     if (!this.props.canPrimeSubscribe) {
                         var o = Object(a.d)("Not yet!", "SubscribeWithPrime");
-                        return r.createElement(c.u, i.__assign({
+                        return r.createElement(l.u, i.__assign({
                             ariaLabel: o,
-                            "data-test-selector": d,
+                            "data-test-selector": c,
                             disabled: !0,
-                            icon: c._16.Crown
-                        }, Object(c._53)(this.props)), o)
+                            icon: l._16.Crown
+                        }, Object(l._53)(this.props)), o)
                     }
-                    if (this.state.primeSubFailure) return r.createElement(l.b, {
-                        fontSize: c.R.Size6,
-                        testTarget: "prime-sub-error"
-                    });
                     var s = e ? Object(a.d)("Resubscribe Free", "SubscribeWithPrime") : Object(a.d)("Subscribe Free", "SubscribeWithPrime");
-                    return r.createElement(c.u, i.__assign({
+                    return r.createElement(l.u, i.__assign({
                         ariaLabel: s,
-                        "data-test-selector": d,
+                        "data-test-selector": c,
                         disabled: this.state.isSubscribing,
-                        icon: c._16.Crown,
-                        state: this.state.isSubscribing ? c.y.Loading : c.y.Default,
+                        icon: l._16.Crown,
+                        state: this.state.isSubscribing ? l.y.Loading : l.y.Default,
                         onClick: this.handleSubWithPrimeClick
-                    }, Object(c._53)(this.props)), s)
+                    }, Object(l._53)(this.props)), s)
                 }, t
             }(r.Component);
         n.d(t, !1, function() {
-            return d
+            return c
         }), n.d(t, "a", function() {
-            return u
+            return d
         })
     },
     jetF: function(e, t, n) {
@@ -39574,7 +39574,7 @@ webpackJsonp([66], {
                             },
                             alignSelf: he.d.Center,
                             flexWrap: he.Q.NoWrap
-                        }, !e && i.createElement(ot.c, null))
+                        }, !e && i.createElement(ot.b, null))
                     }, t.renderStoreLink = function() {
                         var e = !1;
                         if (t.props.data) {
@@ -42799,4 +42799,4 @@ webpackJsonp([66], {
             }(r.Component))
     }
 }, [5]);
-//# sourceMappingURL=core-79a24010560d0dc057093af702486e34.js.map
+//# sourceMappingURL=core-32484bc69f13dccffcbf1192754e8373.js.map

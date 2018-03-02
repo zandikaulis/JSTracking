@@ -1,4 +1,4 @@
-webpackJsonp([41], {
+webpackJsonp([40], {
     "+5Qw": function(e, t) {},
     "+Aaf": function(e, t) {},
     "+FQU": function(e, t) {},
@@ -36819,4 +36819,4 @@ webpackJsonp([41], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-events-e71bd22192828fb564163932fccf611c.js.map
+//# sourceMappingURL=pages.channel-events-b974e8898126b529def07718e4f7238d.js.map
