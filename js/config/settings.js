@@ -393,7 +393,7 @@ window.__twilightSettings = {
         },
         "5c8e4a59-8c63-4000-9c4e-6224f34b7c21": {
             "name": "twilight_web_onboarding_channel_surfing",
-            "v": 3184,
+            "v": 3185,
             "t": 2,
             "groups": [{
                 "weight": 1,
@@ -403,7 +403,7 @@ window.__twilightSettings = {
                 "value": "chat"
             }, {
                 "weight": 0,
-                "value": "no-chat"
+                "value": "no_chat"
             }]
         },
         "5cfa2a90-54f0-4dcc-b28c-45f33935718e": {
