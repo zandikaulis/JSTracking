@@ -1,7 +1,7 @@
-webpackJsonp([51], {
+webpackJsonp([53], {
     "+GT7": function(e, t, n) {
         "use strict";
-        var r, a = n("TToO"),
+        var a, r = n("TToO"),
             i = n("GiK3"),
             o = n("F8kA"),
             s = n("6sO2"),
@@ -11,14 +11,14 @@ webpackJsonp([51], {
             u = n("PPNL"),
             m = n("HW6M"),
             p = n("YUUt"),
-            f = n.n(p),
-            g = n("/SNv"),
-            h = n.n(g),
+            g = n.n(p),
+            h = n("/SNv"),
+            f = n.n(h),
             v = n("Vr3l"),
             _ = n.n(v);
         ! function(e) {
             e[e.CounterStrike = 0] = "CounterStrike", e[e.Hearthstone = 1] = "Hearthstone", e[e.LeagueOfLegends = 2] = "LeagueOfLegends", e[e.Overwatch = 3] = "Overwatch"
-        }(r || (r = {}));
+        }(a || (a = {}));
         var k = n("LgcN"),
             y = n("Odds"),
             b = (n("AHWf"), function(e) {
@@ -31,35 +31,35 @@ webpackJsonp([51], {
                         if (!t.state.isLoading && !t.state.isError && t.props.streamMetadata && !t.state.content) {
                             var e = t.props.streamMetadata.counterStrikeGlobalOffensive && t.props.streamMetadata.counterStrikeGlobalOffensive.skill,
                                 n = t.props.streamMetadata.hearthstone && t.props.streamMetadata.hearthstone.broadcasterHeroClass,
-                                a = t.props.streamMetadata.leagueOfLegends && t.props.streamMetadata.leagueOfLegends.championID,
+                                r = t.props.streamMetadata.leagueOfLegends && t.props.streamMetadata.leagueOfLegends.championID,
                                 i = t.props.streamMetadata.overwatch && t.props.streamMetadata.overwatch.broadcasterCharacter;
                             e ? (t.setState({
-                                game: r.CounterStrike,
-                                gameSprite: f.a,
+                                game: a.CounterStrike,
+                                gameSprite: g.a,
                                 item: String(e),
                                 isLoading: !0
                             }), t.getCounterStrikeData(e)) : n ? (t.setState({
-                                game: r.Hearthstone,
-                                gameSprite: h.a,
+                                game: a.Hearthstone,
+                                gameSprite: f.a,
                                 item: n,
                                 isLoading: !0
-                            }), t.getHearthstoneData()) : a ? (t.setState({
-                                game: r.LeagueOfLegends,
-                                item: String(a)
+                            }), t.getHearthstoneData()) : r ? (t.setState({
+                                game: a.LeagueOfLegends,
+                                item: String(r)
                             }), t.getLeagueData()) : i && (t.setState({
-                                game: r.Overwatch,
+                                game: a.Overwatch,
                                 gameSprite: _.a,
                                 item: i,
                                 isLoading: !0
                             }), t.getOverwatchData())
                         }
-                    }, t.renderIcon = function(e, n, a, o, s, l) {
-                        if (!a) return null;
+                    }, t.renderIcon = function(e, n, r, o, s, l) {
+                        if (!r) return null;
                         var c = m("metadata-icon", {
-                                "metadata-icon--csgo-skill": t.state.game === r.CounterStrike
+                                "metadata-icon--csgo-skill": t.state.game === a.CounterStrike
                             }),
                             d = 30;
-                        return t.state.game === r.CounterStrike && (d = 50), i.createElement(y._2, {
+                        return t.state.game === a.CounterStrike && (d = 50), i.createElement(y._2, {
                             display: y.N.Flex,
                             flexDirection: y.P.Column,
                             alignItems: y.c.Center,
@@ -78,25 +78,25 @@ webpackJsonp([51], {
                                 backgroundImage: "url(" + n + ")",
                                 backgroundPositionX: s ? -1 * s : 0,
                                 backgroundPositionY: l ? -1 * l : 0,
-                                width: a ? a + "px" : "3rem",
-                                height: a ? o + "px" : "3rem",
-                                transform: "scale(" + (a > 0 ? d / a : 1) + ")",
+                                width: r ? r + "px" : "3rem",
+                                height: r ? o + "px" : "3rem",
+                                transform: "scale(" + (r > 0 ? d / r : 1) + ")",
                                 transformOrigin: "0 0"
                             }
                         }))))
                     }, t.getCounterStrikeData = function(e) {
-                        return a.__awaiter(t, void 0, void 0, function() {
-                            var t, n, r;
-                            return a.__generator(this, function(a) {
-                                switch (a.label) {
+                        return r.__awaiter(t, void 0, void 0, function() {
+                            var t, n, a;
+                            return r.__generator(this, function(r) {
+                                switch (r.label) {
                                     case 0:
-                                        return a.trys.push([0, 2, , 3]), [4, Object(k.a)()];
+                                        return r.trys.push([0, 2, , 3]), [4, Object(k.a)()];
                                     case 1:
-                                        return t = a.sent(), this.didUnmount ? [2] : ((n = {})[e] = t[0]["Skill Group"][e - 1], this.setState({
+                                        return t = r.sent(), this.didUnmount ? [2] : ((n = {})[e] = t[0]["Skill Group"][e - 1], this.setState({
                                             content: n
                                         }), [3, 3]);
                                     case 2:
-                                        return r = a.sent(), this.logger.error(r, "Failed to load Counter-Strike skill group data"), this.setState({
+                                        return a = r.sent(), this.logger.error(a, "Failed to load Counter-Strike skill group data"), this.setState({
                                             isError: !0,
                                             isLoading: !1
                                         }), [3, 3];
@@ -106,21 +106,21 @@ webpackJsonp([51], {
                             })
                         })
                     }, t.getHearthstoneData = function() {
-                        return a.__awaiter(t, void 0, void 0, function() {
+                        return r.__awaiter(t, void 0, void 0, function() {
                             var e, t, n;
-                            return a.__generator(this, function(r) {
-                                switch (r.label) {
+                            return r.__generator(this, function(a) {
+                                switch (a.label) {
                                     case 0:
-                                        return r.trys.push([0, 2, , 3]), [4, Object(k.b)()];
+                                        return a.trys.push([0, 2, , 3]), [4, Object(k.b)()];
                                     case 1:
-                                        return e = r.sent(), this.didUnmount ? [2] : (t = {}, e[0].Class.forEach(function(e) {
+                                        return e = a.sent(), this.didUnmount ? [2] : (t = {}, e[0].Class.forEach(function(e) {
                                             t[e.class] = e
                                         }), this.setState({
                                             content: t,
                                             isLoading: !1
                                         }), [3, 3]);
                                     case 2:
-                                        return n = r.sent(), this.logger.error(n, "Failed to load Hearthstone class data"), this.setState({
+                                        return n = a.sent(), this.logger.error(n, "Failed to load Hearthstone class data"), this.setState({
                                             isError: !0,
                                             isLoading: !1
                                         }), [3, 3];
@@ -132,15 +132,15 @@ webpackJsonp([51], {
                     }, t.getLeagueData = function() {
                         t.props.leagueOfLegends.isLoading || t.props.leagueOfLegends.isError || t.props.leagueOfLegends.championsMap || t.props.onLoadLeagueOfLegendsChampions()
                     }, t.getOverwatchData = function() {
-                        return a.__awaiter(t, void 0, void 0, function() {
-                            var e, t, n, r, i, o, s, l, c, d, u, m, p;
-                            return a.__generator(this, function(a) {
-                                switch (a.label) {
+                        return r.__awaiter(t, void 0, void 0, function() {
+                            var e, t, n, a, i, o, s, l, c, d, u, m, p;
+                            return r.__generator(this, function(r) {
+                                switch (r.label) {
                                     case 0:
-                                        return a.trys.push([0, 2, , 3]), [4, Object(k.d)()];
+                                        return r.trys.push([0, 2, , 3]), [4, Object(k.d)()];
                                     case 1:
-                                        if (e = a.sent(), this.didUnmount) return [2];
-                                        for (t = !1, n = void 0, r = 0, i = e; r < i.length && (n = i[r], !t); r++)
+                                        if (e = r.sent(), this.didUnmount) return [2];
+                                        for (t = !1, n = void 0, a = 0, i = e; a < i.length && (n = i[a], !t); a++)
                                             for (o in n)
                                                 if (n.hasOwnProperty(o))
                                                     for (s = n[o], l = 0, c = s; l < c.length; l++)
@@ -153,7 +153,7 @@ webpackJsonp([51], {
                                                         }
                                         return [3, 3];
                                     case 2:
-                                        return m = a.sent(), this.logger.error(m, "Failed to load Overwatch character data"), this.setState({
+                                        return m = r.sent(), this.logger.error(m, "Failed to load Overwatch character data"), this.setState({
                                             isError: !0,
                                             isLoading: !1
                                         }), [3, 3];
@@ -164,13 +164,13 @@ webpackJsonp([51], {
                         })
                     }, t
                 }
-                return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                return r.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.loadData()
                 }, t.prototype.componentWillUnmount = function() {
                     this.didUnmount = !0
                 }, t.prototype.render = function() {
                     if (!this.state.item) return null;
-                    if (this.state.game === r.LeagueOfLegends) {
+                    if (this.state.game === a.LeagueOfLegends) {
                         if (!this.props.leagueOfLegends.championsMap) return null;
                         var e = this.props.leagueOfLegends.championsMap[this.state.item],
                             t = "https://ddragon.leagueoflegends.com/cdn/" + this.props.leagueOfLegends.version + "/img/sprite/" + e.image.sprite;
@@ -194,16 +194,16 @@ webpackJsonp([51], {
                     onLoadLeagueOfLegendsChampions: u.a
                 }, e)
             })(b),
-            N = (n("LEV+"), function(e) {
+            S = (n("LEV+"), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.state = {
                         isPremiereExperimentActive: !1
                     }, n
                 }
-                return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                    return a.__awaiter(this, void 0, void 0, function() {
-                        return a.__generator(this, function(e) {
+                return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return r.__awaiter(this, void 0, void 0, function() {
+                        return r.__generator(this, function(e) {
                             switch (e.label) {
                                 case 0:
                                     return [4, s.n.experiments.getAssignment("TWILIGHT_PREMIERE_UPLOAD_FLOW")];
@@ -232,7 +232,7 @@ webpackJsonp([51], {
                             "data-a-target": "live-channel-card-channel-name-link"
                         }, this.props.channelName)
                     }, "Live Channel Card");
-                    return i.createElement("div", a.__assign({
+                    return i.createElement("div", r.__assign({
                         className: "live-channel-card"
                     }, Object(y._53)(this.props)), i.createElement(y.A, {
                         key: this.props.title
@@ -317,17 +317,17 @@ webpackJsonp([51], {
                     }) : null
                 }, t
             }(i.Component)),
-            S = N;
+            w = S;
         n.d(t, !1, function() {
-            return N
-        }), n.d(t, "a", function() {
             return S
+        }), n.d(t, "a", function() {
+            return w
         })
     },
     "/+to": function(e, t, n) {
         "use strict";
-        var r = n("RH2O"),
-            a = n("TToO"),
+        var a = n("RH2O"),
+            r = n("TToO"),
             i = n("GiK3"),
             o = n("6sO2"),
             s = n("Us7i"),
@@ -338,9 +338,9 @@ webpackJsonp([51], {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.logger = o.i.withCategory("ad-slot"), n.createSlot = function(e) {
-                        return a.__awaiter(n, void 0, void 0, function() {
+                        return r.__awaiter(n, void 0, void 0, function() {
                             var t;
-                            return a.__generator(this, function(n) {
+                            return r.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
                                         if (this.state.slotCreated) return [2];
@@ -385,13 +385,13 @@ webpackJsonp([51], {
                             }, function() {
                                 return n.slotRendered(e.slot)
                             }));
-                            var r;
-                            if (n.props.slotID === l.b.directory.banner) return void((r = n.slotRef.querySelector(c)) && 1 !== r.clientWidth && n.setState({
+                            var a;
+                            if (n.props.slotID === l.b.directory.banner) return void((a = n.slotRef.querySelector(c)) && 1 !== a.clientWidth && n.setState({
                                 shouldDisplay: !0
                             }, function() {
                                 return n.slotRendered(e.slot)
                             }));
-                            if (n.props.slotID === l.b.directory.rectangle) return void((r = n.slotRef.querySelector(d)) && 1 !== r.clientWidth && n.setState({
+                            if (n.props.slotID === l.b.directory.rectangle) return void((a = n.slotRef.querySelector(d)) && 1 !== a.clientWidth && n.setState({
                                 shouldDisplay: !0
                             }, function() {
                                 return n.slotRendered(e.slot)
@@ -408,7 +408,7 @@ webpackJsonp([51], {
                         shouldDisplay: !1
                     }, n
                 }
-                return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                return r.__extends(t, e), t.prototype.componentDidMount = function() {
                     l.g.addListener(l.f, this.onSlotRenderEnd), this.props.trackingSet ? (this.logger.debug("Tracking is set. Creating slot (componentDidMount)", this.props.slotID), this.createSlot(this.props)) : this.logger.debug("Tracking is not set. Skipping slot creation (componentDidMount)", this.props.slotID)
                 }, t.prototype.componentWillReceiveProps = function(e) {
                     this.state.slotCreated || (e.trackingSet && !this.props.trackingSet ? (this.logger.debug("Tracking is set. Creating slot (componentWillReceiveProps)", this.props.slotID), this.createSlot(e)) : this.logger.debug("Tracking is not set. Skipping slot creation (componentWillReceiveProps)", this.props.slotID))
@@ -417,7 +417,7 @@ webpackJsonp([51], {
                 }, t.prototype.shouldComponentUpdate = function(e, t) {
                     return t.shouldDisplay !== this.state.shouldDisplay
                 }, t.prototype.render = function() {
-                    var e = a.__assign({}, this.props.injectStyles);
+                    var e = r.__assign({}, this.props.injectStyles);
                     return this.state.shouldDisplay || (e.display = "none"), i.createElement("div", {
                         style: e,
                         id: this.props.slotID,
@@ -425,7 +425,7 @@ webpackJsonp([51], {
                     })
                 }, t
             }(i.Component);
-        var m = Object(r.b)(function(e) {
+        var m = Object(a.b)(function(e) {
             return {
                 trackingSet: e.ads.trackingSet
             }
@@ -438,27 +438,27 @@ webpackJsonp([51], {
     "/7C1": function(e, t, n) {
         "use strict";
         n.d(t, "b", function() {
-            return r
-        }), n.d(t, "c", function() {
             return a
+        }), n.d(t, "c", function() {
+            return r
         }), n.d(t, "a", function() {
             return i
         }), t.e = function(e) {
             return {
-                type: r,
+                type: a,
                 player: e
             }
         }, t.f = function() {
             return {
-                type: a
+                type: r
             }
         }, t.d = function() {
             return {
                 type: i
             }
         };
-        var r = "carouselPlayer.CAROUSEL_REGISTERED",
-            a = "carouselPlayer.CAROUSEL_UNREGISTERED",
+        var a = "carouselPlayer.CAROUSEL_REGISTERED",
+            r = "carouselPlayer.CAROUSEL_UNREGISTERED",
             i = "carouselPlayer.CAROUSEL_PAUSED"
     },
     "/SNv": function(e, t, n) {
@@ -717,72 +717,10 @@ webpackJsonp([51], {
         };
         e.exports = n
     },
-    "2Nqs": function(e, t) {},
-    "65au": function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "Current_User"
-                },
-                variableDefinitions: [],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "currentUser"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "hasPrime"
-                                },
-                                arguments: [],
-                                directives: []
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 50
-            }
-        };
-        n.loc.source = {
-            body: "query Current_User {\ncurrentUser {\nid\nhasPrime\n}\n}",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
-    "7L7x": function(e, t) {},
     "86JD": function(e, t, n) {
         "use strict";
-        var r = n("TToO"),
-            a = n("GiK3"),
+        var a = n("TToO"),
+            r = n("GiK3"),
             i = n("6sO2"),
             o = n("iOr9"),
             s = n("bZTi"),
@@ -798,14 +736,14 @@ webpackJsonp([51], {
                                 return new Promise(function(e) {
                                     e()
                                 }).then(n.bind(null, "o8Pq"))
-                            }, "FeaturedBroadcasters")(r.__assign({}, e))
+                            }, "FeaturedBroadcasters")(a.__assign({}, e))
                         },
                         mixed: function() {
                             return s.a.wrap(function() {
                                 return new Promise(function(e) {
                                     e()
                                 }).then(n.bind(null, "Wjt1"))
-                            }, "FeaturedContent")(r.__assign({}, e, {
+                            }, "FeaturedContent")(a.__assign({}, e, {
                                 shouldMixContent: !0
                             }))
                         },
@@ -814,7 +752,7 @@ webpackJsonp([51], {
                                 return new Promise(function(e) {
                                     e()
                                 }).then(n.bind(null, "Wjt1"))
-                            }, "FeaturedContent")(r.__assign({}, e, {
+                            }, "FeaturedContent")(a.__assign({}, e, {
                                 shouldMixContent: !1
                             }))
                         }
@@ -823,7 +761,7 @@ webpackJsonp([51], {
                         return Object(c.c)(e.renderContext)
                     }
                 };
-                return "en" === i.n.intl.getLanguageCode() ? a.createElement(o.a, r.__assign({}, t)) : a.createElement(l.FeaturedBroadcasters, {
+                return "en" === i.n.intl.getLanguageCode() ? r.createElement(o.a, a.__assign({}, t)) : r.createElement(l.FeaturedBroadcasters, {
                     renderContext: e.renderContext
                 })
             };
@@ -833,1028 +771,12 @@ webpackJsonp([51], {
             return u
         })
     },
-    "8PKe": function(e, t, n) {
-        "use strict";
-        var r = n("RH2O"),
-            a = n("TToO"),
-            i = n("OAwv"),
-            o = n("GiK3"),
-            s = n("6sO2"),
-            l = n("+Znq"),
-            c = n("7vx8"),
-            d = n("S1vB"),
-            u = n("ZVME"),
-            m = n("CSlQ"),
-            p = n("Odds"),
-            f = (n("f8UT"), function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive()
-                }, t.prototype.render = function() {
-                    return o.createElement(p._2, null, o.createElement(p._25, {
-                        className: "prime-offer-header",
-                        borderBottom: !0,
-                        background: p.m.Alt2,
-                        padding: {
-                            x: 1,
-                            y: .5
-                        }
-                    }, o.createElement(p._35, {
-                        bold: !0,
-                        type: p._40.H6
-                    }, Object(s.d)("Free with Prime", "PrimeOfferHeader"))), this.getNumOfUnseenOffersDisplay())
-                }, t.prototype.getNumOfUnseenOffersDisplay = function() {
-                    var e = this.props.numOfUnseenOffers;
-                    if (e) return o.createElement(p._25, {
-                        className: "prime-offer__new-offer-header",
-                        borderBottom: !0,
-                        background: p.m.Alt2,
-                        padding: {
-                            x: 1,
-                            y: .5
-                        }
-                    }, o.createElement(p._2, {
-                        fullWidth: !0,
-                        display: p.N.Flex,
-                        alignItems: p.c.Center
-                    }, o.createElement(p._2, {
-                        flexGrow: 1
-                    }, o.createElement(p._35, {
-                        bold: !0,
-                        type: p._40.H6
-                    }, Object(s.d)("New Prime Loot", "PrimeOfferHeader"))), o.createElement(p._2, {
-                        className: "prime-offer__new-offer-header-count",
-                        textAlign: p._36.Center
-                    }, o.createElement(p._25, {
-                        className: "prime-offer__new-offer-header-count__text",
-                        background: p.m.Base,
-                        color: p.I.Base,
-                        display: p.N.Flex,
-                        alignItems: p.c.Center,
-                        justifyContent: p._1.Center
-                    }, o.createElement(p._35, null, e.toString())))))
-                }, t = a.__decorate([Object(m.d)("PrimeOfferHeader")], t)
-            }(o.Component)),
-            g = n("zCIC"),
-            h = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive()
-                }, t.prototype.render = function() {
-                    var e = Object(s.d)("You'll get characters, vehicles, skins, and boosts for games like {hearthstone} and {smite}, plus surprises like a rotating selection of indie games.", {
-                        hearthstone: o.createElement(p._35, {
-                            italic: !0,
-                            type: p._40.Span
-                        }, Object(s.d)("Hearthstone", "PrimeEmpty")),
-                        smite: o.createElement(p._35, {
-                            italic: !0,
-                            type: p._40.Span
-                        }, Object(s.d)("Smite", "PrimeEmpty"))
-                    }, "PrimeEmpty");
-                    return o.createElement(p._2, {
-                        className: "prime-empty",
-                        margin: 2
-                    }, o.createElement(p._2, {
-                        textAlign: p._36.Center,
-                        margin: 2
-                    }, o.createElement("img", {
-                        className: "prime-empty__image",
-                        src: "https://m.media-amazon.com/images/G/01/sm/landing/Trunk_w_Star_transparent._V530838660_.png",
-                        alt: Object(s.d)("Prime Treasure Chest", "PrimeEmpty")
-                    })), o.createElement(p._35, {
-                        type: p._40.P,
-                        bold: !0
-                    }, Object(s.d)("Free in-game loot every month, plus surprises", "PrimeEmpty")), o.createElement("div", null, e))
-                }, t = a.__decorate([Object(m.d)("PrimeEmpty")], t)
-            }(o.Component),
-            v = n("lfvs"),
-            _ = n("oIkB"),
-            k = n("R0Kh"),
-            y = (n("w/8h"), n("sq7i")),
-            b = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive()
-                }, t.prototype.render = function() {
-                    return o.createElement(p._2, {
-                        className: "prime-claim-button"
-                    }, this.getClaimButton())
-                }, t.prototype.getClaimButton = function() {
-                    var e = this.props,
-                        t = this.getButtonText(),
-                        n = o.createElement(p.u, {
-                            fullWidth: !0,
-                            state: this.props.claiming ? p.y.Loading : p.y.Default,
-                            disabled: this.props.claiming,
-                            onClick: this.props.claimCallback,
-                            "data-a-target": "prime-claim-button"
-                        }, t);
-                    return e.offerType === k.a.EXTERNAL_OFFER ? o.createElement(p.u, {
-                        fullWidth: !0,
-                        linkTo: e.offerLinkUri,
-                        targetBlank: !0
-                    }, t) : o.createElement(p._2, {
-                        position: p._9.Relative
-                    }, n)
-                }, t.prototype.getButtonText = function() {
-                    return this.props.offerType === k.a.CLAIM_CODE ? Object(s.d)("Get Code", "PrimeClaimButton") : this.props.offerType === k.a.EXTERNAL_OFFER ? Object(s.d)("Learn More", "PrimeClaimButton") : Object(s.d)("Claim Offer", "PrimeClaimButton")
-                }, t = a.__decorate([Object(c.a)(y), Object(m.d)("PrimeClaimButton")], t)
-            }(o.Component),
-            E = function(e) {
-                function t(t) {
-                    var n = e.call(this, t) || this;
-                    return n.toggleShowDescription = function() {
-                        n.setState({
-                            showDescription: !n.state.showDescription
-                        })
-                    }, n.state = {
-                        showDescription: !1
-                    }, n
-                }
-                return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive()
-                }, t.prototype.render = function() {
-                    return o.createElement(p._2, {
-                        className: "prime-claim-description",
-                        margin: {
-                            top: 1
-                        }
-                    }, o.createElement(p.u, {
-                        fullWidth: !0,
-                        type: p.z.Hollow,
-                        onClick: this.toggleShowDescription
-                    }, this.getDescriptionButtonText()), this.getDescriptionBlock())
-                }, t.prototype.getDescriptionButtonText = function() {
-                    return this.state.showDescription ? Object(s.d)("Close Info", "PrimeClaimDescription") : Object(s.d)("More Info", "PrimeClaimDescription")
-                }, t.prototype.getDescriptionBlock = function() {
-                    var e = null;
-                    return this.state.showDescription && (e = o.createElement(p._25, {
-                        className: "prime-claim-description__body",
-                        background: p.m.Alt2,
-                        border: !0
-                    }, o.createElement(p._2, {
-                        margin: {
-                            bottom: 2
-                        },
-                        padding: 1
-                    }, o.createElement(v, {
-                        source: this.props.description || ""
-                    })))), e
-                }, t = a.__decorate([Object(m.d)("PrimeClaimDescription")], t)
-            }(o.Component),
-            N = n("Hs3O"),
-            S = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive()
-                }, t.prototype.getLink = function() {
-                    return this.props.externalUri ? this.props.externalUri : Object(N.d)(N.c, window.location.pathname.substring(1))
-                }, t.prototype.render = function() {
-                    return o.createElement(p._2, {
-                        className: "prime-upsell-button",
-                        margin: {
-                            top: 2,
-                            bottom: 1
-                        }
-                    }, o.createElement(p.u, {
-                        fullWidth: !0,
-                        linkTo: this.getLink(),
-                        targetBlank: !0
-                    }, Object(s.d)("Start Your Free Trial", "PrimeUpsellButton")))
-                }, t = a.__decorate([Object(m.d)("PrimeUpsellButton")], t)
-            }(o.Component),
-            O = n("e2wA"),
-            C = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive()
-                }, t.prototype.render = function() {
-                    return o.createElement(p._2, {
-                        className: "prime-claim",
-                        margin: {
-                            top: 2,
-                            bottom: 1
-                        }
-                    }, this.getCallToAction(), this.getClaimDescriptionSection())
-                }, t.prototype.getCallToAction = function() {
-                    var e = this.props.data;
-                    return !e.loading && !e.error && e.currentUser && e.currentUser.hasPrime ? o.createElement(b, {
-                        offerType: this.props.offerType,
-                        offerId: this.props.offerId,
-                        claimCallback: this.props.claimCallback,
-                        claiming: this.props.claiming,
-                        offerLinkUri: this.props.externalUri
-                    }) : o.createElement(S, {
-                        externalUri: this.props.externalUri
-                    })
-                }, t.prototype.getClaimDescriptionSection = function() {
-                    return this.props.offerType === k.a.EXTERNAL_OFFER ? null : o.createElement(E, {
-                        description: this.props.offerDescription
-                    })
-                }, t = a.__decorate([Object(c.a)(O), Object(m.d)("PrimeInstructions")], t)
-            }(o.Component),
-            w = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive()
-                }, t.prototype.render = function() {
-                    var e = this.props.message || Object(s.d)("Something has gone wrong. Please try again later.", "PrimeError");
-                    return o.createElement(p._25, {
-                        background: p.m.Alt2,
-                        display: p.N.Flex,
-                        justifyContent: p._1.Center,
-                        padding: {
-                            y: 1
-                        },
-                        margin: {
-                            bottom: 1
-                        },
-                        textAlign: p._36.Center,
-                        "data-test-selector": this.props.testTarget,
-                        "data-a-target": this.props.testTarget
-                    }, o.createElement(p._35, {
-                        type: p._40.H4,
-                        align: p._50.Middle
-                    }, o.createElement(p._25, {
-                        padding: 1,
-                        display: p.N.InlineFlex,
-                        flexGrow: 1,
-                        flexWrap: p.Q.NoWrap,
-                        alignItems: p.c.Center,
-                        fontSize: this.props.fontSize ? this.props.fontSize : p.R.Size5,
-                        "data-a-target": "prime-error-glitch"
-                    }, o.createElement(p._2, {
-                        margin: {
-                            right: 1
-                        },
-                        display: p.N.InlineFlex,
-                        flexGrow: 1,
-                        flexWrap: p.Q.NoWrap,
-                        alignItems: p.c.Center
-                    }, o.createElement(p._15, {
-                        asset: p._16.DeadGlitch,
-                        type: p._17.Alert,
-                        width: 20,
-                        height: 20
-                    })), e)))
-                }, t = a.__decorate([Object(m.d)("PrimeError")], t)
-            }(o.Component),
-            F = (n("nFc2"), function(e) {
-                function t(t) {
-                    var n = e.call(this, t) || this;
-                    return n.setRef = function(e) {
-                        n.setState({
-                            clipboardInput: e
-                        })
-                    }, n.copy = function() {
-                        var e;
-                        try {
-                            n.state.clipboardInput && n.state.clipboardInput.select(), e = document.execCommand("copy")
-                        } catch (t) {
-                            e = !1
-                        }
-                        return n.setState({
-                            copied: e
-                        }), e
-                    }, n.state = {
-                        copied: !1,
-                        clipboardInput: null
-                    }, n
-                }
-                return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive()
-                }, t.prototype.render = function() {
-                    var e = this.state.copied ? Object(s.d)("copied", "CopyButton") : Object(s.d)("copy", "CopyButton");
-                    return o.createElement(p._2, {
-                        className: "copy-button copy-btn",
-                        display: p.N.Flex,
-                        "data-test-target": "copy-button"
-                    }, o.createElement(p.W, {
-                        className: "copy-button__btn"
-                    }, o.createElement(p.u, {
-                        onClick: this.copy,
-                        type: this.state.copied ? p.z.Success : p.z.Default
-                    }, e)), o.createElement("input", {
-                        className: "copy-button__copy-input",
-                        ref: this.setRef,
-                        value: this.props.clipboardText,
-                        readOnly: !0
-                    }))
-                }, t = a.__decorate([Object(m.d)("CopyButton")], t)
-            }(o.Component)),
-            x = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.onChange = function(e) {
-                        t.setState({
-                            value: e.currentTarget.value,
-                            copied: !1
-                        })
-                    }, t
-                }
-                return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive()
-                }, t.prototype.componentWillMount = function() {
-                    this.props.initialText && this.setState({
-                        value: this.props.initialText,
-                        copied: !1
-                    })
-                }, t.prototype.render = function() {
-                    return this.state && this.state.value ? o.createElement(p._2, {
-                        className: "copyable-item",
-                        display: p.N.Flex,
-                        flexGrow: 1
-                    }, o.createElement(p._2, {
-                        flexGrow: 1
-                    }, o.createElement(p.Y, {
-                        type: p.Z.Text,
-                        onChange: this.onChange,
-                        value: this.state.value,
-                        disabled: this.props.disabled,
-                        readOnly: this.props.readOnly
-                    })), o.createElement(p._2, null, o.createElement(F, {
-                        clipboardText: this.state.value
-                    }))) : null
-                }, t = a.__decorate([Object(m.d)("CopyableItem")], t)
-            }(o.Component),
-            I = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive()
-                }, t.prototype.render = function() {
-                    return o.createElement(p._25, {
-                        className: "prime-claim-instructions",
-                        background: p.m.Alt2,
-                        border: !0,
-                        padding: 1,
-                        fontSize: p.R.Size6
-                    }, o.createElement(p._49, null, o.createElement(v, {
-                        source: this.props.claimInstructions || "",
-                        escapeHtml: !0,
-                        renderers: {
-                            Link: function(e) {
-                                return o.createElement("a", {
-                                    href: e.href,
-                                    target: "_blank",
-                                    rel: "nofollow noopener noreferrer"
-                                }, e.children)
-                            }
-                        }
-                    })))
-                }, t = a.__decorate([Object(m.d)("PrimeClaimInstructions")], t)
-            }(o.Component),
-            L = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive()
-                }, t.prototype.render = function() {
-                    return o.createElement(p._2, {
-                        className: "prime-redeem",
-                        margin: {
-                            top: 1
-                        }
-                    }, this.getCodeOrConfirmation(), this.getPrimeClaimInstructions())
-                }, t.prototype.getCodeOrConfirmation = function() {
-                    return this.props.code && this.props.deliveryMethod === k.a.CLAIM_CODE ? o.createElement(p._2, null, o.createElement(x, {
-                        initialText: this.props.code,
-                        readOnly: !0,
-                        textCenter: !0
-                    })) : o.createElement(p._25, {
-                        background: p.m.Alt2,
-                        display: p.N.Flex,
-                        justifyContent: p._1.Center,
-                        padding: {
-                            y: 1
-                        },
-                        margin: {
-                            bottom: 1
-                        }
-                    }, o.createElement(p._35, {
-                        type: p._40.H4,
-                        align: p._50.Middle
-                    }, o.createElement(p._2, {
-                        padding: 1,
-                        display: p.N.InlineFlex,
-                        flexGrow: 1,
-                        flexWrap: p.Q.NoWrap,
-                        alignItems: p.c.Center,
-                        "data-a-target": "prime-redeem-check"
-                    }, o.createElement(p._2, {
-                        margin: {
-                            right: 1
-                        },
-                        display: p.N.InlineFlex,
-                        flexGrow: 1,
-                        flexWrap: p.Q.NoWrap,
-                        alignItems: p.c.Center
-                    }, o.createElement(p._15, {
-                        asset: p._16.Check,
-                        type: p._17.Success,
-                        width: 20,
-                        height: 20
-                    })), Object(s.d)("Added To Your Twitch Account", "PrimeRedeem"))))
-                }, t.prototype.getPrimeClaimInstructions = function() {
-                    if (this.props.claimInstructions) return o.createElement(I, {
-                        claimInstructions: this.props.claimInstructions || ""
-                    })
-                }, t = a.__decorate([Object(m.d)("PrimeRedeem")], t)
-            }(o.Component),
-            T = n("el3o"),
-            P = (n("v+rJ"), n("rM0q")),
-            D = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        claimed: !1,
-                        claiming: !1,
-                        error: !1,
-                        claimData: ""
-                    }, t.renderRedeemUpsellOrClaimSection = function(e) {
-                        var n = e.content || {},
-                            r = e.self || {
-                                claimData: ""
-                            },
-                            a = (t.props.data || {}).currentUser || {};
-                        if (t.state.error) {
-                            var i = Object(s.d)("Oh no! Unable to claim. Another linked Twitch account may have already claimed this content. Please check accounts and try again.", "PrimeOffer");
-                            return o.createElement(w, {
-                                fontSize: p.R.Size6,
-                                testTarget: "prime-offer-error",
-                                message: i
-                            })
-                        }
-                        if ((t.isCurrentOfferClaimed(e) || t.state.claimed) && a && a.hasPrime) {
-                            var l = t.state.claimData || r.claimData;
-                            return o.createElement(L, {
-                                claimInstructions: e.claimInstructions,
-                                code: l,
-                                deliveryMethod: e.deliveryMethod
-                            })
-                        }
-                        return o.createElement(C, {
-                            offerId: e.id,
-                            offerDescription: e.description || "",
-                            offerType: e.deliveryMethod || "",
-                            externalUri: n.externalURL || "",
-                            claimCallback: t.claimOffer,
-                            claiming: t.state.claiming
-                        })
-                    }, t.claimOffer = function(e) {
-                        e.nativeEvent.stopImmediatePropagation(), t.setState({
-                            claiming: !0
-                        });
-                        var n = t.props.data;
-                        if (!n.loading && !n.error && n.currentUser.id) {
-                            var r = n.currentUser.id,
-                                a = t.props.offer,
-                                i = Object(_.a)({
-                                    offerID: a.id
-                                });
-                            t.props.claimPrimeOffer(i).then(function(e) {
-                                var n = ((e.data || {}).claimPrimeOffer || {}).self || {};
-                                n && a && t.setState({
-                                    claimData: n.claimData
-                                }), t.markAsClaimedInLocalStorage(r)
-                            }).catch(function() {
-                                t.setState({
-                                    claiming: !1,
-                                    claimed: !1,
-                                    error: !0
-                                })
-                            })
-                        }
-                    }, t.markAsClaimedInLocalStorage = function(e) {
-                        var n = t.props.offer,
-                            r = k.b(n.id, e),
-                            a = k.c();
-                        a.push(r), k.f(a), t.setState({
-                            claiming: !1,
-                            claimed: !0,
-                            error: !1
-                        })
-                    }, t
-                }
-                return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive()
-                }, t.prototype.render = function() {
-                    var e = this.props.offer,
-                        t = this.props.isLast || !1;
-                    if (e) {
-                        var n = e.content || {},
-                            r = n.game || {},
-                            a = n.categories || [];
-                        return o.createElement(p._25, {
-                            className: "prime-offer",
-                            alignItems: p.c.Center,
-                            borderBottom: !t,
-                            padding: {
-                                x: 2,
-                                y: 1
-                            }
-                        }, o.createElement(p._2, {
-                            className: "prime-offer__title",
-                            padding: {
-                                y: .5
-                            }
-                        }, o.createElement(v, {
-                            className: "prime-offer__title__markdown",
-                            containerTagName: "h4",
-                            source: e.title || ""
-                        })), o.createElement("img", {
-                            src: e.imageURL
-                        }), o.createElement(p._2, {
-                            className: "prime-offer__description",
-                            padding: {
-                                top: .5
-                            }
-                        }, o.createElement(p._35, {
-                            type: p._40.P
-                        }, r.name, " ", a[0])), o.createElement(p._2, {
-                            className: "prime-offer__publisher"
-                        }, o.createElement(p._35, {
-                            type: p._40.P,
-                            color: p.I.Alt2,
-                            fontSize: p.R.Size7
-                        }, n.publisher)), this.renderRedeemUpsellOrClaimSection(e))
-                    }
-                    return null
-                }, t.prototype.isCurrentOfferClaimed = function(e) {
-                    return (e.self || {
-                        hasEntitlement: !1
-                    }).hasEntitlement || this.isCurrentOfferClaimedInLocalStorage()
-                }, t.prototype.isCurrentOfferClaimedInLocalStorage = function() {
-                    var e = this.props.data,
-                        t = this.props.offer;
-                    if (!e.loading && !e.error && e.currentUser) {
-                        var n = e.currentUser.id,
-                            r = k.b(t.id, n);
-                        return k.c().includes(r)
-                    }
-                }, t = a.__decorate([Object(c.a)(P, {
-                    name: "data"
-                }), Object(c.a)(T, {
-                    name: "claimPrimeOffer"
-                }), Object(m.d)("PrimeOffer")], t)
-            }(o.Component),
-            R = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive()
-                }, t.prototype.render = function() {
-                    return o.createElement(p._25, {
-                        className: "prime-offer-placeholder",
-                        alignItems: p.c.Center,
-                        borderBottom: !0,
-                        padding: {
-                            x: 2,
-                            y: 1
-                        }
-                    }, o.createElement(p._2, {
-                        className: "prime-offer-placeholder__title",
-                        padding: {
-                            y: .5
-                        }
-                    }, o.createElement(p._8, {
-                        height: 20
-                    })), o.createElement(p._8, {
-                        height: 160
-                    }), o.createElement(p._2, {
-                        className: "prime-offer-placeholder__description",
-                        padding: {
-                            y: .5
-                        }
-                    }, o.createElement(p._8, {
-                        height: 20,
-                        width: 160
-                    })), o.createElement(p._2, {
-                        className: "prime-offer-placeholder__publisher"
-                    }, o.createElement(p._8, {
-                        height: 20,
-                        width: 80
-                    })), o.createElement(p._2, {
-                        className: "prime-offer-placeholder__claim",
-                        margin: {
-                            top: 2,
-                            bottom: 1
-                        }
-                    }, o.createElement(p._8, {
-                        height: 40
-                    })))
-                }, t = a.__decorate([Object(m.d)("PrimeOfferPlaceholder")], t)
-            }(o.Component),
-            j = (n("7L7x"), function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive()
-                }, t.prototype.render = function() {
-                    return o.createElement(p._25, {
-                        "data-test-target": "prime-offers-upsell",
-                        "data-a-target": "prime-offers-upsell",
-                        className: "prime-offers-upsell",
-                        alignItems: p.c.Center,
-                        padding: {
-                            x: 2,
-                            y: 1
-                        },
-                        borderBottom: !0
-                    }, o.createElement(p._35, {
-                        type: p._40.H4
-                    }, Object(s.d)("Claim With Twitch Prime", "PrimeUpsell")), o.createElement(p._2, {
-                        className: "prime-upsell__logo-container",
-                        fullWidth: !0,
-                        margin: {
-                            y: 2
-                        },
-                        textAlign: p._36.Center
-                    }, o.createElement(p._15, {
-                        asset: p._16.LogoTwitchPrime,
-                        width: 330,
-                        height: 150,
-                        type: p._17.Brand
-                    })), o.createElement(p._35, {
-                        type: p._40.P
-                    }, Object(s.d)("Get free game loot like this every month plus surprises, ad-free viewing, and loads more with Twitch Prime.", "PrimeUpsell")), o.createElement(S, null))
-                }, t = a.__decorate([Object(m.d)("PrimeUpsell")], t)
-            }(o.Component)),
-            A = n("eY4D"),
-            U = (n("DgR+"), n("65au")),
-            B = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.shouldShowPlaceholders = function() {
-                        if (!t.props.offersData) return !0;
-                        var e = t.props.offersData,
-                            n = e.primeOffers,
-                            r = null == n;
-                        return e.loading || !e.error && r
-                    }, t.renderOfferPlaceholders = function() {
-                        for (var e = [], t = 0; t < 3; ++t) e.push(o.createElement(R, {
-                            key: t
-                        }));
-                        return e
-                    }, t
-                }
-                return a.__extends(t, e), t.prototype.render = function() {
-                    return o.createElement(g.b, {
-                        className: "prime-offer-listing"
-                    }, o.createElement(p._2, {
-                        className: "prime-offer-listing__content",
-                        alignItems: p.c.Center,
-                        padding: {
-                            top: 1,
-                            bottom: 2,
-                            left: 1,
-                            right: 1
-                        }
-                    }, this.renderUpsell(), this.renderOfferExperience()))
-                }, t.prototype.renderUpsell = function() {
-                    var e = this.props.userData;
-                    if (e && !e.loading && !e.error && !this.currentUserHasPrime(e)) return o.createElement(j, null)
-                }, t.prototype.renderOfferExperience = function() {
-                    var e = this.props.offersData;
-                    if (this.shouldShowPlaceholders()) return this.renderOfferPlaceholders();
-                    if (!e.error && e.primeOffers && e.primeOffers.length) {
-                        var t = this.getSortedOffers(),
-                            n = t[t.length - 1];
-                        return t.map(function(e) {
-                            return o.createElement(D, {
-                                key: e.id,
-                                offer: e,
-                                isLast: n.id === e.id
-                            })
-                        })
-                    }
-                    return o.createElement(h, null)
-                }, t.prototype.getSortedOffers = function() {
-                    var e = this.getUserId();
-                    if (!e || !this.props.offersData || !this.props.offersData.primeOffers) return [];
-                    var t = this.props.offersData.primeOffers;
-                    if (e) {
-                        var n = Object(k.c)(),
-                            r = t.filter(function(t) {
-                                return !n.includes(Object(k.b)(t.id, e))
-                            }).sort(k.i),
-                            a = t.filter(function(e) {
-                                return !r.includes(e)
-                            }).sort(k.i);
-                        return r.concat(a)
-                    }
-                    return t.slice().sort(k.i)
-                }, t.prototype.getUserId = function() {
-                    var e = this.props.userData;
-                    return e && !e.loading && !e.error && e.currentUser && e.currentUser.id ? e.currentUser.id : ""
-                }, t.prototype.currentUserHasPrime = function(e) {
-                    var t = e.currentUser;
-                    return t && t.hasPrime
-                }, t = a.__decorate([Object(c.a)(A, {
-                    name: "offersData",
-                    options: function() {
-                        return {
-                            variables: {
-                                dateOverride: Object(k.d)()
-                            }
-                        }
-                    },
-                    skip: function(e) {
-                        return !e.firstPageLoaded
-                    }
-                }), Object(c.a)(U, {
-                    name: "userData",
-                    skip: function(e) {
-                        return !e.firstPageLoaded
-                    }
-                }), Object(m.d)("PrimeOfferList", {
-                    autoReportInteractive: !0
-                })], t)
-            }(o.Component);
-        var z = Object(r.b)(function(e) {
-                return {
-                    firstPageLoaded: e.session.firstPageLoaded
-                }
-            })(B),
-            G = n("tTbW"),
-            W = (n("9856"), n("wjhu")),
-            M = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        numOfUnseenOffers: 0
-                    }, t.showOffersByDefault = function() {
-                        var e = location.search,
-                            n = i.parse(e);
-                        return n && !!n.expandoffers || t.props.openByDefault
-                    }, t.onToggleMenu = function(e) {
-                        t.offersLoadedEvent = t.registerOffersLoadedEvent();
-                        var n = t.props.offersData;
-                        !n || n.loading || n.error || t.props.latencyTracking.reportCustomEvent(t.offersLoadedEvent), t.seeOffers(), e && t.setState({
-                            numOfUnseenOffers: 0
-                        })
-                    }, t.registerOffersLoadedEvent = function() {
-                        return t.props.latencyTracking.registerCustomEvent({
-                            benchmark: 1e3,
-                            group: u.a.TwitchPrime,
-                            key: u.b.PrimeOfferLoaded,
-                            label: u.c.Loaded,
-                            start: u.d.Registration
-                        })
-                    }, t.getUnseenOffers = function(e) {
-                        var n = e.offersData;
-                        if (n && !n.loading && !n.error) {
-                            var r = n.primeOffers || [],
-                                a = k.e();
-                            t.setState({
-                                numOfUnseenOffers: r.filter(function(e) {
-                                    return !(a.includes(e.id) || t.offerIsClaimed(e))
-                                }).length
-                            })
-                        }
-                    }, t.offerIsClaimed = function(e) {
-                        return e.self && e.self.hasEntitlement
-                    }, t.seeOffers = function() {
-                        var e = t.props.offersData;
-                        if (e && !e.loading && !e.error) {
-                            var n = (e.primeOffers || []).map(function(e) {
-                                return "" + e.id
-                            });
-                            k.g(n)
-                        }
-                    }, t.renderOfferList = function() {
-                        var e = t.props.offersData,
-                            n = t.showOffersByDefault() || !1,
-                            r = e && !e.loading && !e.error;
-                        return t.offersLoadedEvent && r && t.props.latencyTracking.reportCustomEvent(t.offersLoadedEvent), r || n ? o.createElement(p._2, {
-                            "data-a-target": "offers-list",
-                            className: "prime-offers__list"
-                        }, o.createElement(f, {
-                            numOfUnseenOffers: t.state.numOfUnseenOffers
-                        }), o.createElement(z, null)) : null
-                    }, t
-                }
-                return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.getUnseenOffers(this.props)
-                }, t.prototype.componentWillReceiveProps = function(e) {
-                    this.getUnseenOffers(e)
-                }, t.prototype.render = function() {
-                    var e = this.props.userData && this.props.userData.requestInfo && Object(d.a)(this.props.userData.requestInfo.countryCode),
-                        t = this.props.userData && this.props.userData.currentUser && this.props.userData.currentUser.hasPrime;
-                    if (!e && !t) return null;
-                    var n = {
-                        align: p._44.Center,
-                        direction: p._45.Bottom,
-                        label: ""
-                    };
-                    return this.state.numOfUnseenOffers > 0 ? n.label = Object(s.d)("New Prime Loot", "PrimeOffers") : n.label = Object(s.d)("Prime Loot", "PrimeOffers"), o.createElement(p._2, {
-                        className: "prime-offers",
-                        position: p._9.Relative
-                    }, o.createElement(l.a, {
-                        onToggle: this.onToggleMenu,
-                        openByDefault: this.showOffersByDefault(),
-                        tooltipProps: n
-                    }, o.createElement(p.v, {
-                        ariaLabel: Object(s.d)("Prime offers", "PrimeOffers"),
-                        overlay: !0,
-                        size: p.x.Large,
-                        icon: p._16.Crown,
-                        "data-a-target": "prime-offers-icon",
-                        "data-target": "prime-offers-icon"
-                    }), o.createElement(p.p, {
-                        direction: p.q.BottomRight,
-                        size: p.r.Large,
-                        offsetX: "9px"
-                    }, this.renderOfferList())), this.renderUnseenOffersDisplay())
-                }, t.prototype.renderUnseenOffersDisplay = function() {
-                    var e = this.state.numOfUnseenOffers;
-                    if (e) return o.createElement(p._2, {
-                        className: "prime-offers__pill",
-                        position: p._9.Absolute
-                    }, o.createElement(p.e, {
-                        type: p.i.BounceIn,
-                        duration: p.g.Medium,
-                        timing: p.h.EaseIn,
-                        enabled: e > 0
-                    }, o.createElement(p._6, {
-                        label: e.toString(),
-                        type: p._7.Notification
-                    })))
-                }, t = a.__decorate([Object(c.a)(G, {
-                    name: "offersData",
-                    skip: function(e) {
-                        return !e.firstPageLoaded
-                    },
-                    options: function() {
-                        return {
-                            variables: {
-                                dateOverride: Object(k.d)()
-                            }
-                        }
-                    }
-                }), Object(c.a)(W, {
-                    name: "userData"
-                }), Object(m.d)("PrimeOffers", {
-                    autoReportInteractive: !0
-                })], t)
-            }(o.Component);
-        var H = Object(r.b)(function(e) {
-                return {
-                    firstPageLoaded: !!e.session.firstPageLoaded
-                }
-            })(M),
-            V = (n("ukY1"), n("F1v6")),
-            q = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive()
-                }, t.prototype.render = function() {
-                    var e = this.props.data.currentUser && this.props.data.currentUser.hasPrime,
-                        t = this.props.data.requestInfo && this.props.data.requestInfo.countryCode;
-                    if (!Object(k.h)(e, t)) return null;
-                    if (this.props.data.loading) return null;
-                    var n = Object(N.d)(N.a, ""),
-                        r = Object(s.d)("Twitch Prime", "BlueBar"),
-                        a = o.createElement("span", null, Object(s.d)("Free loot every month, plus exclusives and surprises, ad-free viewing, and loads more.", "BlueBar")),
-                        i = Object(N.d)(N.a, ""),
-                        l = Object(s.d)("Start Your Free Trial", "BlueBar");
-                    if (!this.props.data.loading && !this.props.data.error) {
-                        var c = this.props.data;
-                        c && c.primePromotions && c.primePromotions.forEach(function(e) {
-                            switch (e.id) {
-                                case "twitch.prime.bluebar.left1":
-                                    n = e.externalURL, r = e.text;
-                                    break;
-                                case "twitch.prime.bluebar.center1":
-                                    a = o.createElement(v, {
-                                        source: e.text,
-                                        renderers: {
-                                            Link: function(e) {
-                                                return o.createElement("a", {
-                                                    href: e.href,
-                                                    target: "_blank",
-                                                    rel: "noopener noreferrer"
-                                                }, e.children)
-                                            }
-                                        }
-                                    });
-                                    break;
-                                case "twitch.prime.bluebar.right1":
-                                    i = e.externalURL, l = e.text
-                            }
-                        })
-                    }
-                    return o.createElement(p._25, {
-                        color: p.I.Base,
-                        className: "blue-bar",
-                        position: p._9.Relative,
-                        fullWidth: !0
-                    }, o.createElement(p._2, {
-                        className: "blue-bar__bar",
-                        display: p.N.Flex,
-                        alignItems: p.c.Center,
-                        justifyContent: p._1.Between,
-                        flexWrap: p.Q.NoWrap,
-                        margin: "auto",
-                        padding: {
-                            x: 2,
-                            y: .5
-                        }
-                    }, o.createElement(p._2, {
-                        display: p.N.InlineFlex,
-                        alignItems: p.c.Center,
-                        padding: {
-                            right: .5
-                        }
-                    }, o.createElement(p._2, {
-                        className: "blue-bar__logo",
-                        display: p.N.InlineFlex,
-                        margin: {
-                            right: .5
-                        },
-                        flexShrink: 0
-                    }, o.createElement(p._15, {
-                        asset: p._16.Crown,
-                        width: 20,
-                        height: 13
-                    })), o.createElement(p._35, {
-                        bold: !0,
-                        type: p._40.Span,
-                        noWrap: !0,
-                        fontSize: p.R.Size6
-                    }, o.createElement(p.W, {
-                        padding: {
-                            x: 1
-                        }
-                    }, o.createElement("a", {
-                        className: "blue-bar__link",
-                        href: n,
-                        target: "_blank",
-                        rel: "noopener noreferrer"
-                    }, r))), o.createElement(p._35, {
-                        className: "blue-bar__headline",
-                        type: p._40.Span,
-                        fontSize: p.R.Size6
-                    }, a)), o.createElement(p._2, {
-                        display: p.N.InlineFlex,
-                        flexShrink: 0
-                    }, o.createElement(p._35, {
-                        bold: !0,
-                        type: p._40.Span,
-                        noWrap: !0,
-                        fontSize: p.R.Size6,
-                        color: p.I.Base
-                    }, o.createElement("a", {
-                        className: "blue-bar__link",
-                        href: i,
-                        target: "_blank",
-                        rel: "noopener noreferrer"
-                    }, l)))))
-                }, t = a.__decorate([Object(c.a)(V, {
-                    options: function() {
-                        return {
-                            variables: {
-                                stringIds: ["twitch.prime.bluebar.left1", "twitch.prime.bluebar.center1", "twitch.prime.bluebar.right1"],
-                                dateOverride: Object(k.d)()
-                            }
-                        }
-                    }
-                }), Object(m.d)("BlueBarComponent")], t)
-            }(o.Component);
-        n.d(t, "b", function() {
-            return H
-        }), n.d(t, "a", function() {
-            return q
-        }), n.d(t, !1, function() {
-            return w
-        }), n.d(t, "c", function() {
-            return k.d
-        })
-    },
     "8U1+": function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var r, a = n("TToO"),
+        var a, r = n("TToO"),
             i = n("GiK3"),
             o = n("6sO2"),
             s = n("o5l+"),
@@ -2030,21 +952,21 @@ webpackJsonp([51], {
                 }, i.createElement(l.a, null))))))
             })),
             p = n("bZTi"),
-            f = n("j7/Y"),
-            g = n("w9tK"),
-            h = n("Us7i"),
+            g = n("j7/Y"),
+            h = n("w9tK"),
+            f = n("Us7i"),
             v = n("vH/s"),
             _ = n("/+to"),
             k = n("QG7y"),
             y = n("86JD"),
             b = n("DBTH"),
             E = n("2aoH"),
-            N = n("8PKe"),
-            S = n("F8kA"),
-            O = n("7vx8"),
+            S = n("8PKe"),
+            w = n("F8kA"),
+            N = n("7vx8"),
             C = n("NY9D"),
-            w = n("dXGo"),
-            F = (n("APTF"), function(e) {
+            F = n("dXGo"),
+            x = (n("APTF"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -2074,7 +996,7 @@ webpackJsonp([51], {
                             })))));
                             return e
                         }
-                        var r = t.props.data.games.edges.slice(0, t.state.adDisplayed ? 10 : 12).map(function(e, t) {
+                        var a = t.props.data.games.edges.slice(0, t.state.adDisplayed ? 10 : 12).map(function(e, t) {
                                 var n = e.node;
                                 return n && n.id ? i.createElement(u.J, {
                                     cols: 2,
@@ -2095,7 +1017,7 @@ webpackJsonp([51], {
                                     "data-a-id": "card-" + n.name.replace(/ /g, "")
                                 }))) : null
                             }),
-                            a = i.createElement(u._2, {
+                            r = i.createElement(u._2, {
                                 display: u.N.Flex,
                                 flexGrow: 1,
                                 justifyContent: u._1.Center,
@@ -2110,14 +1032,14 @@ webpackJsonp([51], {
                                 slotRendered: t.onSlotRendered,
                                 autoEnable: !1
                             }));
-                        return r.splice(4, 0, a), r
+                        return a.splice(4, 0, r), a
                     }, t.onSlotRendered = function() {
                         t.state.adDisplayed || t.setState({
                             adDisplayed: !0
                         })
                     }, t
                 }
-                return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                return r.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.postRender()
                 }, t.prototype.componentDidUpdate = function() {
                     this.postRender()
@@ -2147,7 +1069,7 @@ webpackJsonp([51], {
                         }, i.createElement(u.W, {
                             display: u.N.Flex,
                             alignItems: u.c.Center
-                        }, i.createElement(S.a, {
+                        }, i.createElement(w.a, {
                             to: "/directory",
                             "data-a-target": "see-all-live-games-link"
                         }, i.createElement(u._35, {
@@ -2173,15 +1095,15 @@ webpackJsonp([51], {
                     }, e, i.createElement(u.U, null, this.getItems()), t)
                 }, t.prototype.postRender = function() {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
-                }, t = a.__decorate([Object(O.a)(w), Object(d.d)("FeaturedGames")], t)
+                }, t = r.__decorate([Object(N.a)(F), Object(d.d)("FeaturedGames")], t)
             }(i.Component)),
-            x = n("+GT7"),
-            I = n("SZoP");
+            O = n("+GT7"),
+            L = n("SZoP");
         ! function(e) {
             e[e.All = 1] = "All", e[e.Xbox = 2] = "Xbox", e[e.PS4 = 3] = "PS4"
-        }(r || (r = {}));
-        var L = n("262o"),
-            T = (n("GrwT"), function(e) {
+        }(a || (a = {}));
+        var T = n("262o"),
+            I = (n("GrwT"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getItems = function() {
@@ -2208,38 +1130,38 @@ webpackJsonp([51], {
                         }
                         return t.props.data.streams.edges.map(function(e, n) {
                             if (!e.node.broadcaster.id) return null;
-                            var r = e.node,
-                                a = Object(I.a)(r.broadcaster.login, r.broadcaster.displayName),
+                            var a = e.node,
+                                r = Object(L.a)(a.broadcaster.login, a.broadcaster.displayName),
                                 s = {
                                     medium: v.PageviewMedium.Following,
                                     content: v.PageviewContent.Live,
                                     content_index: n
                                 },
-                                l = r && r.game ? Object(C.c)(r.game.name) : "";
+                                l = a && a.game ? Object(C.c)(a.game.name) : "";
                             return i.createElement(u._2, {
                                 className: "anon-top-channels",
-                                key: r.broadcaster.id,
+                                key: a.broadcaster.id,
                                 margin: {
                                     bottom: 2
                                 }
-                            }, i.createElement(x.a, {
-                                imageSrc: r && r.previewImageURL || o.a.defaultStreamPreviewURL,
-                                imageAlt: r && r.title || "",
-                                viewerCount: r && r.viewersCount || 0,
-                                title: r && r.title || "",
-                                channelName: a,
-                                gameImageSrc: r && r.game && r.game.boxArtURL || o.a.defaultBoxArtURL,
-                                gameTitle: r && r.game ? r.game.name : "",
+                            }, i.createElement(O.a, {
+                                imageSrc: a && a.previewImageURL || o.a.defaultStreamPreviewURL,
+                                imageAlt: a && a.title || "",
+                                viewerCount: a && a.viewersCount || 0,
+                                title: a && a.title || "",
+                                channelName: r,
+                                gameImageSrc: a && a.game && a.game.boxArtURL || o.a.defaultBoxArtURL,
+                                gameTitle: a && a.game ? a.game.name : "",
                                 gameLinkTo: {
                                     pathname: l,
                                     state: s
                                 },
                                 linkTo: {
-                                    pathname: "/" + r.broadcaster.login,
+                                    pathname: "/" + a.broadcaster.login,
                                     state: s
                                 },
                                 channelNameLinkTo: {
-                                    pathname: "/" + r.broadcaster.login + "/videos",
+                                    pathname: "/" + a.broadcaster.login + "/videos",
                                     state: s
                                 },
                                 "data-a-target": "top-" + t.getDataProp() + "-channel-" + n
@@ -2247,7 +1169,7 @@ webpackJsonp([51], {
                         })
                     }, t
                 }
-                return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                return r.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.postRender()
                 }, t.prototype.componentDidUpdate = function() {
                     this.postRender()
@@ -2278,7 +1200,7 @@ webpackJsonp([51], {
                         }, i.createElement(u.W, {
                             display: u.N.Flex,
                             alignItems: u.c.Center
-                        }, i.createElement(S.a, {
+                        }, i.createElement(w.a, {
                             to: this.getLink(),
                             "data-a-target": "see-all-" + this.getDataProp() + "-channels-link"
                         }, i.createElement(u._35, {
@@ -2304,67 +1226,67 @@ webpackJsonp([51], {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
                 }, t.prototype.getFooter = function() {
                     switch (this.props.type) {
-                        case r.All:
+                        case a.All:
                             return Object(o.d)("See all live Channels", "TopChannels");
-                        case r.PS4:
+                        case a.PS4:
                             return Object(o.d)("See all PS4 Channels", "TopChannels");
-                        case r.Xbox:
+                        case a.Xbox:
                             return Object(o.d)("See all Xbox One Channels", "TopChannels");
                         default:
                             return ""
                     }
                 }, t.prototype.getSubtitle = function() {
                     switch (this.props.type) {
-                        case r.All:
+                        case a.All:
                             return Object(o.d)("Broadcasters people are watching now", "TopChannels");
-                        case r.PS4:
+                        case a.PS4:
                             return Object(o.d)("Channels broadcasted from Playstation 4", "TopChannels");
-                        case r.Xbox:
+                        case a.Xbox:
                             return Object(o.d)("Channels broadcasted from Xbox one", "TopChannels");
                         default:
                             return ""
                     }
                 }, t.prototype.getTitle = function() {
                     switch (this.props.type) {
-                        case r.All:
+                        case a.All:
                             return Object(o.d)("Top Live Channels", "TopChannels");
-                        case r.PS4:
+                        case a.PS4:
                             return Object(o.d)("Top PS4 Channels", "TopChannels");
-                        case r.Xbox:
+                        case a.Xbox:
                             return Object(o.d)("Top Xbox One Channels", "TopChannels");
                         default:
                             return ""
                     }
                 }, t.prototype.getDataProp = function() {
                     switch (this.props.type) {
-                        case r.All:
+                        case a.All:
                             return "live";
-                        case r.PS4:
+                        case a.PS4:
                             return "ps4";
-                        case r.Xbox:
+                        case a.Xbox:
                             return "xbox";
                         default:
                             return ""
                     }
                 }, t.prototype.getLink = function() {
                     switch (this.props.type) {
-                        case r.All:
+                        case a.All:
                             return "/directory/all";
-                        case r.PS4:
+                        case a.PS4:
                             return "/directory/all/ps4";
-                        case r.Xbox:
+                        case a.Xbox:
                             return "/directory/all/xbox";
                         default:
                             return ""
                     }
-                }, t = a.__decorate([Object(O.a)(L, {
+                }, t = r.__decorate([Object(N.a)(T, {
                     options: function(e) {
                         var t = "";
                         switch (e.type) {
-                            case r.PS4:
+                            case a.PS4:
                                 t = "ps4";
                                 break;
-                            case r.Xbox:
+                            case a.Xbox:
                                 t = "xbox";
                                 break;
                             default:
@@ -2378,13 +1300,13 @@ webpackJsonp([51], {
                     }
                 }), Object(d.d)("TopChannels")], t)
             }(i.Component)),
-            P = (n("9zTP"), p.a.wrap(function() {
-                return n.e(74).then(n.bind(null, "yEZg"))
+            R = (n("9zTP"), p.a.wrap(function() {
+                return n.e(75).then(n.bind(null, "yEZg"))
             }, "FeaturedGenres")),
-            D = p.a.wrap(function() {
-                return n.e(73).then(n.bind(null, "2hMh"))
+            P = p.a.wrap(function() {
+                return n.e(74).then(n.bind(null, "2hMh"))
             }, "TopCreative"),
-            R = function(e) {
+            A = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -2398,12 +1320,12 @@ webpackJsonp([51], {
                         if (void 0 !== t.state.categoriesExperimentAssignment) {
                             if (t.state.categoriesExperimentAssignment) {
                                 var e = t.state.categoriesExperimentAssignment === b.a.Streams;
-                                return i.createElement(P, {
+                                return i.createElement(R, {
                                     trackingMedium: v.PageviewMedium.AnonFrontPage,
                                     withStreams: e
                                 })
                             }
-                            return i.createElement(F, null)
+                            return i.createElement(x, null)
                         }
                     }, t.renderTopCreative = function() {
                         if (t.state.categoriesExperimentAssignment) {
@@ -2419,7 +1341,7 @@ webpackJsonp([51], {
                                     top: 5,
                                     bottom: 3
                                 }
-                            }, i.createElement(D, {
+                            }, i.createElement(P, {
                                 trackingMedium: v.PageviewMedium.AnonFrontPage,
                                 withStreams: e
                             }))
@@ -2476,8 +1398,8 @@ webpackJsonp([51], {
                                 x: "auto"
                             },
                             className: "anon-front__content-section"
-                        }, i.createElement(T, {
-                            type: r.PS4,
+                        }, i.createElement(I, {
+                            type: a.PS4,
                             key: "channels.ps4"
                         })), i.createElement(u._25, {
                             background: u.m.Base,
@@ -2489,25 +1411,25 @@ webpackJsonp([51], {
                                 x: "auto"
                             },
                             className: "anon-front__content-section"
-                        }, i.createElement(T, {
-                            type: r.Xbox,
+                        }, i.createElement(I, {
+                            type: a.Xbox,
                             key: "channels.xbox"
                         })))
                     }, t.onSlotAdded = function() {
                         t.setState(function(e) {
                             var t = e.numSlotsAdded + 1;
-                            return t === Object.keys(k.b.anonFront).length && h.a.display(k.b.anonFront.takeover), {
+                            return t === Object.keys(k.b.anonFront).length && f.a.display(k.b.anonFront.takeover), {
                                 numSlotsAdded: t
                             }
                         })
                     }, t
                 }
-                return a.__extends(t, e), t.prototype.componentWillMount = function() {
+                return r.__extends(t, e), t.prototype.componentWillMount = function() {
                     k.g.addListener(k.e, this.onSlotAdded)
                 }, t.prototype.componentDidMount = function() {
-                    return a.__awaiter(this, void 0, void 0, function() {
+                    return r.__awaiter(this, void 0, void 0, function() {
                         var e;
-                        return a.__generator(this, function(t) {
+                        return r.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
                                     return [4, o.n.experiments.getAssignment(b.f)];
@@ -2522,7 +1444,7 @@ webpackJsonp([51], {
                     var e = void 0 !== this.state.categoriesExperimentAssignment && !this.state.categoriesExperimentAssignment;
                     return i.createElement(u._2, {
                         fullHeight: !0
-                    }, i.createElement(E.a, null, i.createElement(N.a, null)), i.createElement(u._25, {
+                    }, i.createElement(E.a, null, i.createElement(S.a, null)), i.createElement(u._25, {
                         className: "anon-front",
                         background: u.m.Base,
                         position: u._9.Relative,
@@ -2596,8 +1518,8 @@ webpackJsonp([51], {
                             x: "auto"
                         },
                         className: "anon-front__content-section"
-                    }, i.createElement(T, {
-                        type: r.All,
+                    }, i.createElement(I, {
+                        type: a.All,
                         key: "channels.all"
                     })), e && this.renderPlatformTopChannels(), i.createElement(u._2, {
                         className: "anon-front__bottom",
@@ -2617,14 +1539,14 @@ webpackJsonp([51], {
                     })), i.createElement(m, null))))
                 }, t.prototype.componentWillUnmount = function() {
                     k.g.removeListener(k.e, this.onSlotAdded)
-                }, t = a.__decorate([Object(d.d)("AnonFrontPage", {
-                    destination: g.a.Index
-                }), Object(f.a)({
+                }, t = r.__decorate([Object(d.d)("AnonFrontPage", {
+                    destination: h.a.Index
+                }), Object(g.a)({
                     location: v.PageviewLocation.FrontPage
                 })], t)
             }(i.Component);
         n.d(t, "AnonFrontPage", function() {
-            return R
+            return A
         })
     },
     "8atL": function(e, t) {
@@ -3072,108 +1994,107 @@ webpackJsonp([51], {
         };
         e.exports = n
     },
-    9856: function(e, t) {},
     "9u8h": function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
             return o
         });
-        var r = n("TToO"),
-            a = n("6sO2"),
+        var a = n("TToO"),
+            r = n("6sO2"),
             i = n("Aj/L"),
             o = function() {
                 function e() {}
                 return e.get = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, void 0, function() {
-                        return r.__generator(this, function(a) {
-                            switch (a.label) {
+                    return void 0 === t && (t = {}), void 0 === n && (n = {}), a.__awaiter(this, void 0, void 0, function() {
+                        return a.__generator(this, function(r) {
+                            switch (r.label) {
                                 case 0:
-                                    return [4, this.request(e, r.__assign({}, t, {
+                                    return [4, this.request(e, a.__assign({}, t, {
                                         method: "GET"
                                     }), n)];
                                 case 1:
-                                    return [2, a.sent()]
-                            }
-                        })
-                    })
-                }, e.put = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, void 0, function() {
-                        return r.__generator(this, function(a) {
-                            switch (a.label) {
-                                case 0:
-                                    return [4, this.request(e, r.__assign({}, t, {
-                                        method: "PUT"
-                                    }), n)];
-                                case 1:
-                                    return [2, a.sent()]
-                            }
-                        })
-                    })
-                }, e.post = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, void 0, function() {
-                        return r.__generator(this, function(a) {
-                            switch (a.label) {
-                                case 0:
-                                    return [4, this.request(e, r.__assign({}, t, {
-                                        method: "POST"
-                                    }), n)];
-                                case 1:
-                                    return [2, a.sent()]
-                            }
-                        })
-                    })
-                }, e.delete = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, void 0, function() {
-                        return r.__generator(this, function(a) {
-                            switch (a.label) {
-                                case 0:
-                                    return [4, this.request(e, r.__assign({}, t, {
-                                        method: "DELETE"
-                                    }), n)];
-                                case 1:
-                                    return [2, a.sent()]
-                            }
-                        })
-                    })
-                }, e.request = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, void 0, function() {
-                        var a, i;
-                        return r.__generator(this, function(r) {
-                            switch (r.label) {
-                                case 0:
-                                    return t = this.constructOptions(t, n), a = t.headers ? t.headers["Content-Type"] : void 0, t.body = this.serialize(t.body, a), [4, this._fetch(e, t)];
-                                case 1:
-                                    return i = r.sent(), [4, this.constructLegacyAPIResponse(i)];
-                                case 2:
                                     return [2, r.sent()]
                             }
                         })
                     })
-                }, e.getAPIURL = function(e) {
-                    return new URL(e, a.n.config.apiBaseURL)
-                }, e.constructLegacyAPIResponse = function(e) {
-                    return r.__awaiter(this, void 0, void 0, function() {
-                        var t, n, a;
-                        return r.__generator(this, function(r) {
+                }, e.put = function(e, t, n) {
+                    return void 0 === t && (t = {}), void 0 === n && (n = {}), a.__awaiter(this, void 0, void 0, function() {
+                        return a.__generator(this, function(r) {
                             switch (r.label) {
+                                case 0:
+                                    return [4, this.request(e, a.__assign({}, t, {
+                                        method: "PUT"
+                                    }), n)];
+                                case 1:
+                                    return [2, r.sent()]
+                            }
+                        })
+                    })
+                }, e.post = function(e, t, n) {
+                    return void 0 === t && (t = {}), void 0 === n && (n = {}), a.__awaiter(this, void 0, void 0, function() {
+                        return a.__generator(this, function(r) {
+                            switch (r.label) {
+                                case 0:
+                                    return [4, this.request(e, a.__assign({}, t, {
+                                        method: "POST"
+                                    }), n)];
+                                case 1:
+                                    return [2, r.sent()]
+                            }
+                        })
+                    })
+                }, e.delete = function(e, t, n) {
+                    return void 0 === t && (t = {}), void 0 === n && (n = {}), a.__awaiter(this, void 0, void 0, function() {
+                        return a.__generator(this, function(r) {
+                            switch (r.label) {
+                                case 0:
+                                    return [4, this.request(e, a.__assign({}, t, {
+                                        method: "DELETE"
+                                    }), n)];
+                                case 1:
+                                    return [2, r.sent()]
+                            }
+                        })
+                    })
+                }, e.request = function(e, t, n) {
+                    return void 0 === t && (t = {}), void 0 === n && (n = {}), a.__awaiter(this, void 0, void 0, function() {
+                        var r, i;
+                        return a.__generator(this, function(a) {
+                            switch (a.label) {
+                                case 0:
+                                    return t = this.constructOptions(t, n), r = t.headers ? t.headers["Content-Type"] : void 0, t.body = this.serialize(t.body, r), [4, this._fetch(e, t)];
+                                case 1:
+                                    return i = a.sent(), [4, this.constructLegacyAPIResponse(i)];
+                                case 2:
+                                    return [2, a.sent()]
+                            }
+                        })
+                    })
+                }, e.getAPIURL = function(e) {
+                    return new URL(e, r.n.config.apiBaseURL)
+                }, e.constructLegacyAPIResponse = function(e) {
+                    return a.__awaiter(this, void 0, void 0, function() {
+                        var t, n, r;
+                        return a.__generator(this, function(a) {
+                            switch (a.label) {
                                 case 0:
                                     t = {
                                         status: e.status
-                                    }, r.label = 1;
+                                    }, a.label = 1;
                                 case 1:
-                                    return r.trys.push([1, 3, , 4]), [4, e.json()];
+                                    return a.trys.push([1, 3, , 4]), [4, e.json()];
                                 case 2:
-                                    return n = r.sent(), e.ok ? t.body = n : t.error = n, [3, 4];
+                                    return n = a.sent(), e.ok ? t.body = n : t.error = n, [3, 4];
                                 case 3:
-                                    return a = r.sent(), t.requestError = a, [3, 4];
+                                    return r = a.sent(), t.requestError = r, [3, 4];
                                 case 4:
                                     return [2, t]
                             }
                         })
                     })
                 }, e._fetch = function(e, t) {
-                    return void 0 === t && (t = {}), r.__awaiter(this, void 0, void 0, function() {
-                        return r.__generator(this, function(n) {
+                    return void 0 === t && (t = {}), a.__awaiter(this, void 0, void 0, function() {
+                        return a.__generator(this, function(n) {
                             switch (n.label) {
                                 case 0:
                                     return [4, fetch(this.getAPIURL(e).toString(), t)];
@@ -3184,23 +2105,23 @@ webpackJsonp([51], {
                     })
                 }, e.constructOptions = function(e, t) {
                     return e = Object.assign({}, e, {
-                        headers: r.__assign({}, this.getDefaultHeaders(e, t), e.headers)
+                        headers: a.__assign({}, this.getDefaultHeaders(e, t), e.headers)
                     })
                 }, e.serialize = function(e, t) {
                     return "application/json; charset=UTF-8" === t ? JSON.stringify(e) : e
                 }, e.getDefaultHeaders = function(e, t) {
-                    var n = a.n.store.getState(),
-                        r = {
+                    var n = r.n.store.getState(),
+                        a = {
                             Accept: "application/vnd.twitchtv.v" + (t.version || 5) + "+json; charset=UTF-8",
                             "Accept-Language": "en-us",
-                            "Client-ID": a.n.config.legacyClientID,
+                            "Client-ID": r.n.config.legacyClientID,
                             "X-Requested-With": "XMLHttpRequest"
                         };
-                    e.body && FormData.prototype.isPrototypeOf(e.body) || (r["Content-Type"] = "application/json; charset=UTF-8");
+                    e.body && FormData.prototype.isPrototypeOf(e.body) || (a["Content-Type"] = "application/json; charset=UTF-8");
                     var o = Object(i.c)(n);
-                    return o && (r.Authorization = "OAuth " + o.authToken, o.legacyCSRFToken && (r["Twitch-Api-Token"] = o.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
-                        r[e] && delete r[e]
-                    }), r
+                    return o && (a.Authorization = "OAuth " + o.authToken, o.legacyCSRFToken && (a["Twitch-Api-Token"] = o.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
+                        a[e] && delete a[e]
+                    }), a
                 }, e
             }()
     },
@@ -3208,324 +2129,19 @@ webpackJsonp([51], {
     AHWf: function(e, t) {},
     APTF: function(e, t) {},
     CybZ: function(e, t) {},
-    DBTH: function(e, t, n) {
-        "use strict";
-        n.d(t, "g", function() {
-            return i
-        }), n.d(t, "f", function() {
-            return o
-        }), n.d(t, "h", function() {
-            return s
-        }), n.d(t, "j", function() {
-            return l
-        }), n.d(t, "i", function() {
-            return c
-        }), n.d(t, "l", function() {
-            return d
-        }), n.d(t, "k", function() {
-            return u
-        }), n.d(t, "d", function() {
-            return a
-        }), n.d(t, "b", function() {
-            return p
-        }), n.d(t, "a", function() {
-            return f
-        }), n.d(t, "c", function() {
-            return h
-        }), n.d(t, "e", function() {
-            return v
-        }), n.d(t, "q", function() {
-            return k
-        }), n.d(t, "o", function() {
-            return y
-        }), n.d(t, "p", function() {
-            return b
-        }), n.d(t, "n", function() {
-            return E
-        }), n.d(t, "m", function() {
-            return N
-        }), n.d(t, "r", function() {
-            return S
-        });
-        var r, a, i = "TWILIGHT_WEB_ONBOARDING_CATEGORIES",
-            o = "TWILIGHT_WEB_ONBOARDING_CATEGORIES_ANON_FRONT_PAGE",
-            s = "TWILIGHT_WEB_ONBOARDING_CHANNEL_RANKING",
-            l = "TWILIGHT_WEB_ONBOARDING_FOLLOWING_FOR_YOU",
-            c = "TWILIGHT_WEB_ONBOARDING",
-            d = "TWILIGHT_WEB_ONBOARDING_RANDOMIZED_GAMES",
-            u = "TWILIGHT_WEB_ONBOARDING_FOLLOW_CATEGORIES";
-        ! function(e) {
-            e.NoSkip = "no_skip"
-        }(r || (r = {})),
-        function(e) {
-            e.First = "first", e.Last = "last"
-        }(a || (a = {}));
-        var m, p, f, g = new Set([a.First.toString(), a.Last.toString()]);
-        ! function(e) {
-            e.Yes = "yes"
-        }(m || (m = {})),
-        function(e) {
-            e.Yes = "yes"
-        }(p || (p = {})),
-        function(e) {
-            e.Games = "games", e.Streams = "streams"
-        }(f || (f = {}));
-        var h, v, _ = new Set([f.Games.toString(), f.Streams.toString()]);
-        ! function(e) {
-            e.ENABLED = "enabled"
-        }(h || (h = {})),
-        function(e) {
-            e.ENABLED = "enabled"
-        }(v || (v = {}));
-        var k = function(e) {
-                return e === r.NoSkip
-            },
-            y = function(e) {
-                return !!e && g.has(e)
-            },
-            b = function(e, t) {
-                return k(e) && y(t)
-            },
-            E = function(e, t, n) {
-                return k(e) && y(t) && n === m.Yes
-            },
-            N = function(e) {
-                return !!e && _.has(e)
-            },
-            S = function(e) {
-                return e.getTime() >= O().getTime()
-            },
-            O = function() {
-                return new Date((new Date).getTime() - 12096e5)
-            }
-    },
-    "DgR+": function(e, t) {},
-    F1v6: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "Prime_BlueBar_CurrentUser"
-                },
-                variableDefinitions: [{
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "stringIds"
-                        }
-                    },
-                    type: {
-                        kind: "ListType",
-                        type: {
-                            kind: "NonNullType",
-                            type: {
-                                kind: "NamedType",
-                                name: {
-                                    kind: "Name",
-                                    value: "ID"
-                                }
-                            }
-                        }
-                    }
-                }, {
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "dateOverride"
-                        }
-                    },
-                    type: {
-                        kind: "NamedType",
-                        name: {
-                            kind: "Name",
-                            value: "Time"
-                        }
-                    }
-                }],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "currentUser"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "hasPrime"
-                                },
-                                arguments: [],
-                                directives: []
-                            }]
-                        }
-                    }, {
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "primePromotions"
-                        },
-                        arguments: [{
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "ids"
-                            },
-                            value: {
-                                kind: "Variable",
-                                name: {
-                                    kind: "Name",
-                                    value: "stringIds"
-                                }
-                            }
-                        }, {
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "dateOverride"
-                            },
-                            value: {
-                                kind: "Variable",
-                                name: {
-                                    kind: "Name",
-                                    value: "dateOverride"
-                                }
-                            }
-                        }],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "text"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "externalURL"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "isExternalLink"
-                                },
-                                arguments: [],
-                                directives: []
-                            }]
-                        }
-                    }, {
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "requestInfo"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "countryCode"
-                                },
-                                arguments: [],
-                                directives: []
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 231
-            }
-        };
-        n.loc.source = {
-            body: "query Prime_BlueBar_CurrentUser($stringIds: [ID!] $dateOverride: Time) {\ncurrentUser {\nid\nhasPrime\n}\nprimePromotions (ids: $stringIds dateOverride: $dateOverride) {\nid\ntext\nexternalURL\nisExternalLink\n}\nrequestInfo {\ncountryCode\n}\n}",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
     GrwT: function(e, t) {},
-    Hs3O: function(e, t, n) {
-        "use strict";
-        n.d(t, "b", function() {
-            return a
-        }), n.d(t, "a", function() {
-            return i
-        }), n.d(t, "c", function() {
-            return o
-        }), t.d = function(e, t) {
-            var n = r.b.get(s, "https://twitch.amazon.com/prime"),
-                a = "";
-            try {
-                a = btoa(t)
-            } catch (e) {
-                l.error(e, "Could not decode location pathname substring for redirect")
-            }
-            return a ? n + "?ref_=" + e + "&redirectRoute=" + a : n + "?ref_=" + e
-        };
-        var r = n("6sO2"),
-            a = "sm_tw_tup_ntp_t_all",
-            i = "sm_tw_thp_blue_t_all",
-            o = "sm_w_tup_ntp_t_c",
-            s = "prime_landing_page_base_url",
-            l = r.i.withCategory("PrimeUtilsLogger")
-    },
     IOwa: function(e, t, n) {
         "use strict";
-        var r, a, i, o = n("TToO"),
+        var a, r, i, o = n("TToO"),
             s = n("HW6M"),
             l = n("GiK3"),
             c = n("6sO2"),
             d = n("2o2f"),
             u = n("Odds"),
-            m = (n("CybZ"), (r = {})[d.a.Live] = "stream-type-indicator--live", r[d.a.Premiere] = "stream-type-indicator--premiere", r[d.a.Rerun] = "stream-type-indicator--rerun", r[d.a.WatchParty] = "stream-type-indicator--rerun", r),
-            p = ((a = {})[d.a.Premiere] = u._16.VideoPremiere, a[d.a.Rerun] = u._16.VideoRerun, a[d.a.WatchParty] = u._16.VideoRerun, a),
-            f = ((i = {})[d.a.Premiere] = u._17.Live, i[d.a.Rerun] = u._17.Inherit, i[d.a.WatchParty] = u._17.Inherit, i),
-            g = function(e) {
+            m = (n("CybZ"), (a = {})[d.a.Live] = "stream-type-indicator--live", a[d.a.Premiere] = "stream-type-indicator--premiere", a[d.a.Rerun] = "stream-type-indicator--rerun", a[d.a.WatchParty] = "stream-type-indicator--rerun", a),
+            p = ((r = {})[d.a.Premiere] = u._16.VideoPremiere, r[d.a.Rerun] = u._16.VideoRerun, r[d.a.WatchParty] = u._16.VideoRerun, r),
+            g = ((i = {})[d.a.Premiere] = u._17.Live, i[d.a.Rerun] = u._17.Inherit, i[d.a.WatchParty] = u._17.Inherit, i),
+            h = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -3566,7 +2182,7 @@ webpackJsonp([51], {
                         size: u.F.Small
                     })) : l.createElement(u._15, {
                         asset: p[this.props.type],
-                        type: f[this.props.type],
+                        type: g[this.props.type],
                         width: 14,
                         height: 14
                     })
@@ -3586,7 +2202,7 @@ webpackJsonp([51], {
                 }, t
             }(l.Component);
         n.d(t, "a", function() {
-            return g
+            return h
         })
     },
     "LEV+": function(e, t) {},
@@ -3601,11 +2217,11 @@ webpackJsonp([51], {
         }), n.d(t, "d", function() {
             return l
         });
-        var r = n("TToO"),
-            a = this,
+        var a = n("TToO"),
+            r = this,
             i = function() {
-                return r.__awaiter(a, void 0, void 0, function() {
-                    return r.__generator(this, function(e) {
+                return a.__awaiter(r, void 0, void 0, function() {
+                    return a.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
                                 return [4, n.e(88).then(n.bind(null, "tk3B"))];
@@ -3616,8 +2232,8 @@ webpackJsonp([51], {
                 })
             },
             o = function() {
-                return r.__awaiter(a, void 0, void 0, function() {
-                    return r.__generator(this, function(e) {
+                return a.__awaiter(r, void 0, void 0, function() {
+                    return a.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
                                 return [4, n.e(87).then(n.bind(null, "e/M0"))];
@@ -3628,8 +2244,8 @@ webpackJsonp([51], {
                 })
             },
             s = function() {
-                return r.__awaiter(a, void 0, void 0, function() {
-                    return r.__generator(this, function(e) {
+                return a.__awaiter(r, void 0, void 0, function() {
+                    return a.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
                                 return [4, n.e(86).then(n.bind(null, "Dan5"))];
@@ -3640,8 +2256,8 @@ webpackJsonp([51], {
                 })
             },
             l = function() {
-                return r.__awaiter(a, void 0, void 0, function() {
-                    return r.__generator(this, function(e) {
+                return a.__awaiter(r, void 0, void 0, function() {
+                    return a.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
                                 return [4, n.e(85).then(n.bind(null, "sQp1"))];
@@ -3654,8 +2270,8 @@ webpackJsonp([51], {
     },
     PPNL: function(e, t, n) {
         "use strict";
-        var r = n("TToO"),
-            a = n("OAwv"),
+        var a = n("TToO"),
+            r = n("OAwv"),
             i = n("6sO2"),
             o = n("9u8h"),
             s = {
@@ -3689,21 +2305,21 @@ webpackJsonp([51], {
             var e = this;
             return function(t) {
                 clearTimeout(d), d = setTimeout(function() {
-                    return r.__awaiter(e, void 0, void 0, function() {
+                    return a.__awaiter(e, void 0, void 0, function() {
                         var e, n, s, d, u, m;
-                        return r.__generator(this, function(r) {
-                            switch (r.label) {
+                        return a.__generator(this, function(a) {
+                            switch (a.label) {
                                 case 0:
-                                    e = i.n.logger.withCategory("leagueoflegends-api"), t(Object(c.e)(!0)), r.label = 1;
+                                    e = i.n.logger.withCategory("leagueoflegends-api"), t(Object(c.e)(!0)), a.label = 1;
                                 case 1:
-                                    return r.trys.push([1, 3, , 4]), n = i.n.intl.getLanguageCode(), s = l(n), d = o.a.getAPIURL("/api/lol/champions?" + a.stringify({
+                                    return a.trys.push([1, 3, , 4]), n = i.n.intl.getLanguageCode(), s = l(n), d = o.a.getAPIURL("/api/lol/champions?" + r.stringify({
                                         locale: s,
                                         on_site: 1
                                     })).toString(), [4, o.a.get(d)];
                                 case 2:
-                                    return (u = r.sent()).body ? t(Object(c.f)(u.body)) : (e.warn("LoL champion API response body was empty."), t(Object(c.d)(!0))), [3, 4];
+                                    return (u = a.sent()).body ? t(Object(c.f)(u.body)) : (e.warn("LoL champion API response body was empty."), t(Object(c.d)(!0))), [3, 4];
                                 case 3:
-                                    throw m = r.sent(), t(Object(c.d)(!0)), e.error(m, "Failed to load LoL champion data"), m;
+                                    throw m = a.sent(), t(Object(c.d)(!0)), e.error(m, "Failed to load LoL champion data"), m;
                                 case 4:
                                     return [2]
                             }
@@ -3736,8 +2352,8 @@ webpackJsonp([51], {
         }, t.h = function(e) {
             u.emit(d, e)
         };
-        var r = n("BzvE"),
-            a = (n.n(r), n("6sO2")),
+        var a = n("BzvE"),
+            r = (n.n(a), n("6sO2")),
             i = {
                 directory: {
                     banner: "dfp-directory-banner",
@@ -3805,10 +2421,10 @@ webpackJsonp([51], {
                 }
             },
             s = {
-                directory: "/" + a.a.dfpNetworkCode + "/twitch/directory",
-                channel: "/" + a.a.dfpNetworkCode + "/twitch/channels",
-                frontpage: "/" + a.a.dfpNetworkCode + "/twitch/homepage",
-                sizzle: "/" + a.a.dfpNetworkCode + "/twitch/sizzle_strip"
+                directory: "/" + r.a.dfpNetworkCode + "/twitch/directory",
+                channel: "/" + r.a.dfpNetworkCode + "/twitch/channels",
+                frontpage: "/" + r.a.dfpNetworkCode + "/twitch/homepage",
+                sizzle: "/" + r.a.dfpNetworkCode + "/twitch/sizzle_strip"
             },
             l = {
                 games: "games",
@@ -3817,146 +2433,7 @@ webpackJsonp([51], {
             },
             c = "ads.slot-render-end",
             d = "ads.slot-ready",
-            u = new r.EventEmitter
-    },
-    Qk3C: function(e, t, n) {
-        "use strict";
-        var r = n("RH2O"),
-            a = n("2KeS"),
-            i = n("TToO"),
-            o = n("FuaS"),
-            s = n("U9pL");
-
-        function l(e, t) {
-            var n = this;
-            return function() {
-                return i.__awaiter(n, void 0, void 0, function() {
-                    return i.__generator(this, function(n) {
-                        switch (n.label) {
-                            case 0:
-                                return t ? [4, Object(s.c)({
-                                    userID: t,
-                                    preferredLanguageTag: Object(s.b)(e)
-                                })] : [3, 2];
-                            case 1:
-                                n.sent(), n.label = 2;
-                            case 2:
-                                return Object(o.c)(e), window.location.reload(!0), [2]
-                        }
-                    })
-                })
-            }
-        }
-        var c = n("GiK3"),
-            d = n("6sO2"),
-            u = n("Odds"),
-            m = (n("2Nqs"), function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.renderLink = function(e) {
-                        return c.createElement(u._0, {
-                            key: e.languageCode,
-                            onClick: t.handleLanguageClick,
-                            "data-target": "language-selector-link",
-                            "data-language": e.languageCode
-                        }, c.createElement(u._2, {
-                            padding: {
-                                y: .5,
-                                x: 1
-                            },
-                            "data-a-target": "language-" + e.languageCode
-                        }, e.name))
-                    }, t.handleLanguageClick = function(e) {
-                        var n = e.currentTarget.getAttribute("data-language");
-                        n && t.props.changeLanguage(n, t.props.currentUserID)
-                    }, t
-                }
-                return i.__extends(t, e), t.prototype.render = function() {
-                    var e = Math.floor(d.a.locales.length / 2);
-                    return c.createElement(u._2, {
-                        className: "language-selector",
-                        display: u.N.Flex,
-                        padding: {
-                            y: 1
-                        }
-                    }, c.createElement("div", {
-                        className: "language-selector__list language-selector__list--border-right"
-                    }, d.a.locales.slice(0, e).map(this.renderLink)), c.createElement("div", {
-                        className: "language-selector__list"
-                    }, d.a.locales.slice(e).map(this.renderLink)))
-                }, t
-            }(c.Component));
-        var p = Object(r.b)(function(e) {
-            return {
-                currentUserID: e.session.user && e.session.user.id || null
-            }
-        }, function(e) {
-            return Object(a.b)({
-                changeLanguage: l
-            }, e)
-        })(m);
-        n.d(t, "a", function() {
-            return p
-        })
-    },
-    R0Kh: function(e, t, n) {
-        "use strict";
-        n.d(t, "a", function() {
-            return o
-        }), n.d(t, "b", function() {
-            return s
-        }), n.d(t, "c", function() {
-            return l
-        }), n.d(t, "f", function() {
-            return c
-        }), n.d(t, "e", function() {
-            return d
-        }), n.d(t, "g", function() {
-            return u
-        }), n.d(t, "i", function() {
-            return m
-        }), n.d(t, "h", function() {
-            return f
-        }), n.d(t, "d", function() {
-            return g
-        });
-        var r = n("OAwv"),
-            a = (n.n(r), n("6sO2")),
-            i = n("S1vB"),
-            o = {
-                DIRECT_ENTITLEMENT: "DIRECT_ENTITLEMENT",
-                CLAIM_CODE: "CLAIM_CODE",
-                EXTERNAL_OFFER: "EXTERNAL_OFFER"
-            },
-            s = function(e, t) {
-                return e + "-" + t
-            },
-            l = function() {
-                return p("claimedOffers")
-            },
-            c = function(e) {
-                a.k.set("claimedOffers", e)
-            },
-            d = function() {
-                return p("seenOffers")
-            },
-            u = function(e) {
-                a.k.set("seenOffers", e)
-            },
-            m = function(e, t) {
-                return (e && (e.priority || 0 === e.priority) ? e.priority : 99999) - (t && (t.priority || 0 === t.priority) ? t.priority : 99999)
-            },
-            p = function(e) {
-                return a.k.get(e, [])
-            },
-            f = function(e, t) {
-                return void 0 !== e && void 0 !== t && (!e && Object(i.a)(t))
-            },
-            g = function() {
-                var e = location.search,
-                    t = r.parse(e);
-                return t && t.dateOverride || void 0
-            }
+            u = new a.EventEmitter
     },
     TUg1: function(e, t) {},
     Vr3l: function(e, t, n) {
@@ -3971,32 +2448,32 @@ webpackJsonp([51], {
         }), n.d(t, "e", function() {
             return s
         }), n.d(t, "c", function() {
-            return r
-        }), n.d(t, "b", function() {
             return a
+        }), n.d(t, "b", function() {
+            return r
         });
-        var r, a, i = "carousel-player__main-description",
+        var a, r, i = "carousel-player__main-description",
             o = "carousel-player-left-button",
             s = "carousel-player-right-button";
         ! function(e) {
             e[e.Horizontal = 1] = "Horizontal", e[e.Vertical = 2] = "Vertical"
-        }(r || (r = {})),
+        }(a || (a = {})),
         function(e) {
             e[e.Stream = 1] = "Stream", e[e.Vod = 2] = "Vod"
-        }(a || (a = {}))
+        }(r || (r = {}))
     },
     Wjt1: function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
             value: !0
         }), t.placeholderFeaturedBroadcasters = function(e) {
-            return f([], e, !0)
+            return g([], e, !0)
         }, n.d(t, "FeaturedContent", function() {
-            return g
+            return h
         });
-        var r = n("TToO"),
-            a = n("GiK3"),
-            i = (n.n(a), n("6sO2")),
+        var a = n("TToO"),
+            r = n("GiK3"),
+            i = (n.n(r), n("6sO2")),
             o = n("7vx8"),
             s = n("g91j"),
             l = n("WKwZ"),
@@ -4009,44 +2486,44 @@ webpackJsonp([51], {
             return c.FeaturedBroadcastersRenderContext
         });
 
-        function f(e, t, n) {
+        function g(e, t, n) {
             switch (t) {
                 case c.FeaturedBroadcastersRenderContext.AnonFront:
-                    return a.createElement(s.a, {
+                    return r.createElement(s.a, {
                         items: e,
                         isLoading: n,
                         layout: l.c.Horizontal,
                         darkTheme: !0
                     });
                 default:
-                    return a.createElement(p._25, {
+                    return r.createElement(p._25, {
                         className: "featured-content",
                         background: p.m.Base,
                         elevation: 1
-                    }, a.createElement(p._2, {
+                    }, r.createElement(p._2, {
                         padding: 1
                     }, function(e) {
-                        return e ? a.createElement(p._35, {
+                        return e ? r.createElement(p._35, {
                             fontSize: p.R.Size5,
                             color: p.I.Alt2
-                        }, a.createElement(p._8, {
+                        }, r.createElement(p._8, {
                             width: 100
-                        })) : a.createElement(p._35, {
+                        })) : r.createElement(p._35, {
                             fontSize: p.R.Size5,
                             color: p.I.Alt2
                         }, Object(i.d)("Featured", "FeaturedContentComponent"))
-                    }(n)), a.createElement(s.a, {
+                    }(n)), r.createElement(s.a, {
                         items: e,
                         isLoading: n,
                         layout: l.c.Vertical
                     }))
             }
         }
-        var g = function(e) {
+        var h = function(e) {
             function t() {
                 return null !== e && e.apply(this, arguments) || this
             }
-            return r.__extends(t, e), t.prototype.componentDidMount = function() {
+            return a.__extends(t, e), t.prototype.componentDidMount = function() {
                 this.postRender()
             }, t.prototype.componentDidUpdate = function() {
                 this.postRender()
@@ -4054,17 +2531,17 @@ webpackJsonp([51], {
                 var e = this.props.data.featuredStreams || [],
                     t = Object(u.a)(e),
                     n = this.props.data.featuredVideos || [],
-                    r = Object(u.b)(n);
-                if (t.length > 0 && t.splice(t.length - r.length), this.props.shouldMixContent && r.length > 0) {
-                    var a = 6 - r.length,
-                        i = t.splice(a);
-                    t = t.concat(r).concat(i)
-                } else t = t.concat(r);
+                    a = Object(u.b)(n);
+                if (t.length > 0 && t.splice(t.length - a.length), this.props.shouldMixContent && a.length > 0) {
+                    var r = 6 - a.length,
+                        i = t.splice(r);
+                    t = t.concat(a).concat(i)
+                } else t = t.concat(a);
                 var o = !(!this.props.data.loading && !this.props.data.error);
-                return f(t, this.props.renderContext, o)
+                return g(t, this.props.renderContext, o)
             }, t.prototype.postRender = function() {
                 this.props.data && !this.props.data.loading && this.props.latencyTracking.reportInteractive()
-            }, t = r.__decorate([Object(o.a)(d, {
+            }, t = a.__decorate([Object(o.a)(d, {
                 options: function() {
                     return {
                         variables: {
@@ -4073,7 +2550,7 @@ webpackJsonp([51], {
                     }
                 }
             }), Object(m.d)("FeaturedContent")], t)
-        }(a.Component)
+        }(r.Component)
     },
     Xg86: function(e, t, n) {
         "use strict";
@@ -4091,11 +2568,11 @@ webpackJsonp([51], {
                     content: {
                         id: n ? n.login : "",
                         gameName: t,
-                        type: r.b.Stream,
+                        type: a.b.Stream,
                         subType: e.stream ? e.stream.type : "",
                         viewersCount: e.stream ? e.stream.viewersCount : 0
                     },
-                    description: a(e.description || ""),
+                    description: r(e.description || ""),
                     imageURL: e.imageURL || "",
                     isScheduled: e.isScheduled || !1,
                     isSponsored: e.isSponsored || !1,
@@ -4117,11 +2594,11 @@ webpackJsonp([51], {
                     content: {
                         id: e.video ? e.video.id : "",
                         gameName: t,
-                        type: r.b.Vod,
+                        type: a.b.Vod,
                         subType: "video",
                         viewersCount: e.video ? e.video.viewCount : 0
                     },
-                    description: a(e.description || ""),
+                    description: r(e.description || ""),
                     imageURL: e.imageURL || "",
                     isScheduled: e.isScheduled || !1,
                     isSponsored: e.isSponsored || !1,
@@ -4130,9 +2607,9 @@ webpackJsonp([51], {
                 }
             })
         };
-        var r = n("WKwZ");
+        var a = n("WKwZ");
 
-        function a(e) {
+        function r(e) {
             return e.replace(/\[\]\(.+\)/, "")
         }
     },
@@ -4142,13 +2619,13 @@ webpackJsonp([51], {
     bNhH: function(e, t, n) {
         "use strict";
         n.d(t, "b", function() {
-            return r
+            return a
         }), t.c = function(e) {
-            return f([], e, !0)
+            return g([], e, !0)
         }, n.d(t, "a", function() {
-            return g
+            return h
         });
-        var r, a = n("TToO"),
+        var a, r = n("TToO"),
             i = n("GiK3"),
             o = (n.n(i), n("6sO2")),
             s = n("7vx8"),
@@ -4161,11 +2638,11 @@ webpackJsonp([51], {
         n.n(p);
         ! function(e) {
             e[e.AnonFront = 1] = "AnonFront", e[e.Front = 2] = "Front"
-        }(r || (r = {}));
+        }(a || (a = {}));
 
-        function f(e, t, n) {
+        function g(e, t, n) {
             switch (t) {
-                case r.AnonFront:
+                case a.AnonFront:
                     return i.createElement(l.a, {
                         items: e,
                         isLoading: n,
@@ -4189,15 +2666,15 @@ webpackJsonp([51], {
                     }))
             }
         }
-        var g = function(e) {
+        var h = function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.getRender = function(e) {
                     var n = !(!t.props.data.loading && !t.props.data.error);
-                    return f(e, t.props.renderContext, n)
+                    return g(e, t.props.renderContext, n)
                 }, t
             }
-            return a.__extends(t, e), t.prototype.componentDidMount = function() {
+            return r.__extends(t, e), t.prototype.componentDidMount = function() {
                 this.postRender()
             }, t.prototype.componentDidUpdate = function() {
                 this.postRender()
@@ -4207,7 +2684,7 @@ webpackJsonp([51], {
                 return this.getRender(t)
             }, t.prototype.postRender = function() {
                 this.props.data && !this.props.data.loading && this.props.latencyTracking.reportInteractive()
-            }, t = a.__decorate([Object(s.a)(p, {
+            }, t = r.__decorate([Object(s.a)(p, {
                 options: function(e) {
                     return {
                         variables: {
@@ -4349,395 +2826,9 @@ webpackJsonp([51], {
         };
         e.exports = n
     },
-    e2wA: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "Current_User"
-                },
-                variableDefinitions: [],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "currentUser"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "hasPrime"
-                                },
-                                arguments: [],
-                                directives: []
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 50
-            }
-        };
-        n.loc.source = {
-            body: "query Current_User {\ncurrentUser {\nid\nhasPrime\n}\n}",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
-    eY4D: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "Prime_PrimeOfferList_PrimeOffers"
-                },
-                variableDefinitions: [{
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "dateOverride"
-                        }
-                    },
-                    type: {
-                        kind: "NamedType",
-                        name: {
-                            kind: "Name",
-                            value: "Time"
-                        }
-                    }
-                }],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "primeOffers"
-                        },
-                        arguments: [{
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "dateOverride"
-                            },
-                            value: {
-                                kind: "Variable",
-                                name: {
-                                    kind: "Name",
-                                    value: "dateOverride"
-                                }
-                            }
-                        }],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "title"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "imageURL"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "claimInstructions"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "description"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "deliveryMethod"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "priority"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "content"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "game"
-                                        },
-                                        arguments: [],
-                                        directives: [],
-                                        selectionSet: {
-                                            kind: "SelectionSet",
-                                            selections: [{
-                                                kind: "Field",
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "id"
-                                                },
-                                                arguments: [],
-                                                directives: []
-                                            }, {
-                                                kind: "Field",
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "name"
-                                                },
-                                                arguments: [],
-                                                directives: []
-                                            }]
-                                        }
-                                    }, {
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "externalURL"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }, {
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "publisher"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }, {
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "categories"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }]
-                                }
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "self"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "hasEntitlement"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }, {
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "claimData"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }]
-                                }
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 276
-            }
-        };
-        n.loc.source = {
-            body: "query Prime_PrimeOfferList_PrimeOffers($dateOverride: Time) {\nprimeOffers(dateOverride: $dateOverride) {\nid\ntitle\nimageURL\nclaimInstructions\ndescription\ndeliveryMethod\npriority\ncontent {\ngame {\nid\nname\n}\nexternalURL\npublisher\ncategories\n}\nself {\nhasEntitlement\nclaimData\n}\n}\n}",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
-    el3o: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "mutation",
-                name: {
-                    kind: "Name",
-                    value: "claimPrimeOffer"
-                },
-                variableDefinitions: [{
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "input"
-                        }
-                    },
-                    type: {
-                        kind: "NonNullType",
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "ClaimPrimeOfferInput"
-                            }
-                        }
-                    }
-                }],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "claimPrimeOffer"
-                        },
-                        arguments: [{
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "input"
-                            },
-                            value: {
-                                kind: "Variable",
-                                name: {
-                                    kind: "Name",
-                                    value: "input"
-                                }
-                            }
-                        }],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "self"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "claimData"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }, {
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "hasEntitlement"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }]
-                                }
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 128
-            }
-        };
-        n.loc.source = {
-            body: "mutation claimPrimeOffer($input: ClaimPrimeOfferInput!) {\nclaimPrimeOffer(input: $input) {\nself {\nclaimData\nhasEntitlement\n}\n}\n}",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
-    f8UT: function(e, t) {},
     g91j: function(e, t, n) {
         "use strict";
-        var r, a = n("TToO"),
+        var a, r = n("TToO"),
             i = n("6sO2"),
             o = n("/7C1");
         i.n.store.registerReducer("carouselPlayer", function(e, t) {
@@ -4745,15 +2836,15 @@ webpackJsonp([51], {
                 isPlayerInitialized: !1
             }), t.type) {
                 case o.b:
-                    return r = t.player, a.__assign({}, e, {
+                    return a = t.player, r.__assign({}, e, {
                         isPlayerInitialized: !0
                     });
                 case o.c:
-                    return r = null, a.__assign({}, e, {
+                    return a = null, r.__assign({}, e, {
                         isPlayerInitialized: !1
                     });
                 case o.a:
-                    return e.isPlayerInitialized && r && r.pause(), e;
+                    return e.isPlayerInitialized && a && a.pause(), e;
                 default:
                     return e
             }
@@ -4765,34 +2856,34 @@ webpackJsonp([51], {
             u = n("NXs7"),
             m = n("VAT8"),
             p = n("WKwZ"),
-            f = n("CSlQ"),
-            g = n("Odds"),
-            h = (n("TUg1"), "carousel-card-live"),
+            g = n("CSlQ"),
+            h = n("Odds"),
+            f = (n("TUg1"), "carousel-card-live"),
             v = "carousel-card-vod",
             _ = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderIndicator = function() {
-                        return t.props.item.content.type === p.b.Stream ? d.createElement(g.E, {
-                            status: g.G.Live,
-                            size: g.F.Small,
-                            "data-test-selector": h
-                        }) : d.createElement(g._15, {
-                            asset: g._16.GlyphViews,
+                        return t.props.item.content.type === p.b.Stream ? d.createElement(h.E, {
+                            status: h.G.Live,
+                            size: h.F.Small,
+                            "data-test-selector": f
+                        }) : d.createElement(h._15, {
+                            asset: h._16.GlyphViews,
                             "data-test-selector": v
                         })
                     }, t.itemClick = function() {
                         t.props.itemClick(t.props.item)
                     }, t
                 }
-                return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                return r.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     var e = c({
                         "carousel-nav__item": !0,
                         "carousel-nav__item--active": this.props.itemActive
                     });
-                    return d.createElement(g._2, {
+                    return d.createElement(h._2, {
                         className: e,
                         margin: {
                             x: .5
@@ -4801,32 +2892,32 @@ webpackJsonp([51], {
                             bottom: .5
                         },
                         flexGrow: 1,
-                        position: g._9.Relative
-                    }, d.createElement(g._43, {
+                        position: h._9.Relative
+                    }, d.createElement(h._43, {
                         label: (this.props.item.isSponsored ? Object(i.d)("Sponsored", "CarouselCardComponent") : "") + " " + this.props.item.broadcaster.displayName,
-                        direction: g._45.Top,
-                        display: g.N.Block
-                    }, d.createElement(g._0, a.__assign({
+                        direction: h._45.Top,
+                        display: h.N.Block
+                    }, d.createElement(h._0, r.__assign({
                         onClick: this.itemClick
-                    }, Object(g._53)(this.props)), d.createElement(g.j, {
-                        ratio: g.k.Aspect16x9
-                    }, d.createElement(g._2, {
+                    }, Object(h._53)(this.props)), d.createElement(h.j, {
+                        ratio: h.k.Aspect16x9
+                    }, d.createElement(h._2, {
                         className: "carousel-nav__meta",
-                        alignItems: g.c.Center,
+                        alignItems: h.c.Center,
                         attachBottom: !0,
                         margin: {
                             left: .5
                         },
-                        zIndex: g._52.Above
-                    }, this.renderIndicator(), d.createElement(g._2, {
-                        display: g.N.InlineFlex,
+                        zIndex: h._52.Above
+                    }, this.renderIndicator(), d.createElement(h._2, {
+                        display: h.N.InlineFlex,
                         margin: {
                             left: .5
                         }
-                    }, d.createElement(g._35, {
-                        color: g.I.Overlay,
-                        type: g._40.Span
-                    }, Object(i.e)(this.props.item.content.viewersCount)))), d.createElement(g._2, {
+                    }, d.createElement(h._35, {
+                        color: h.I.Overlay,
+                        type: h._40.Span
+                    }, Object(i.e)(this.props.item.content.viewersCount)))), d.createElement(h._2, {
                         className: "carousel-nav__img-container"
                     }, d.createElement("img", {
                         className: "carousel-nav__img",
@@ -4834,24 +2925,24 @@ webpackJsonp([51], {
                         src: this.props.item.imageURL,
                         alt: this.props.item.broadcaster.displayName,
                         "data-a-target": "carousel-image"
-                    }), this.props.item.isSponsored ? d.createElement(g._2, {
-                        position: g._9.Absolute,
+                    }), this.props.item.isSponsored ? d.createElement(h._2, {
+                        position: h._9.Absolute,
                         attachRight: !0,
                         attachTop: !0
-                    }, d.createElement(g._15, {
-                        asset: g._16.Featured,
-                        type: g._17.Brand,
+                    }, d.createElement(h._15, {
+                        asset: h._16.Featured,
+                        type: h._17.Brand,
                         width: 20,
                         height: 20
                     })) : "")))))
-                }, t = a.__decorate([Object(f.d)("CarouselCard")], t)
+                }, t = r.__decorate([Object(g.d)("CarouselCard")], t)
             }(d.Component),
             k = n("lfvs"),
             y = n("F8kA"),
             b = n("SZoP"),
             E = n("fc0G");
 
-        function N(e) {
+        function S(e) {
             switch (e.type) {
                 case p.b.Stream:
                     return d.createElement(E.c, {
@@ -4877,11 +2968,11 @@ webpackJsonp([51], {
             }
         }
         n("i6UE");
-        var S = {
+        var w = {
                 content: "carousel",
                 medium: "twitch_home"
             },
-            O = function(e) {
+            N = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getContentRender = function() {
@@ -4892,45 +2983,45 @@ webpackJsonp([51], {
                                 game: d.createElement(y.a, {
                                     to: {
                                         pathname: "/directory/game/" + t.props.item.content.gameName,
-                                        state: S
+                                        state: w
                                     }
                                 }, t.props.item.content.gameName)
                             }, "HorizontalCarouselPlayer"),
-                            r = {
+                            a = {
                                 type: t.props.item.content.type,
                                 id: t.props.item.content.id,
                                 onPlayerInit: t.props.onPlayerInit,
                                 onPlayerDestroy: t.props.onPlayerDestroy,
                                 onVideoTimeChange: t.onVideoTimeChange
                             };
-                        return d.createElement(g._25, {
+                        return d.createElement(h._25, {
                             className: "horizontal-carousel-player",
                             margin: {
                                 bottom: 2
                             },
-                            display: g.N.Flex,
-                            flexDirection: g.P.Row,
-                            color: g.I.Alt
-                        }, d.createElement(g._2, {
+                            display: h.N.Flex,
+                            flexDirection: h.P.Row,
+                            color: h.I.Alt
+                        }, d.createElement(h._2, {
                             flexGrow: 1,
                             flexShrink: 0
-                        }, d.createElement(g._2, {
+                        }, d.createElement(h._2, {
                             className: "horizontal-carousel-player__video",
-                            position: g._9.Relative,
-                            overflow: g._5.Hidden
-                        }, N(r))), d.createElement(g._2, {
+                            position: h._9.Relative,
+                            overflow: h._5.Hidden
+                        }, S(a))), d.createElement(h._2, {
                             className: e,
                             flexGrow: 0,
                             padding: 2
-                        }, d.createElement(g._2, {
-                            display: g.N.Flex,
-                            flexWrap: g.Q.NoWrap,
-                            textAlign: g._36.Left,
-                            alignItems: g.c.Center,
+                        }, d.createElement(h._2, {
+                            display: h.N.Flex,
+                            flexWrap: h.Q.NoWrap,
+                            textAlign: h._36.Left,
+                            alignItems: h.c.Center,
                             padding: {
                                 bottom: .5
                             }
-                        }, d.createElement(g._2, {
+                        }, d.createElement(h._2, {
                             margin: {
                                 right: 1
                             },
@@ -4940,32 +3031,32 @@ webpackJsonp([51], {
                         }, d.createElement(y.a, {
                             to: {
                                 pathname: "/" + t.props.item.broadcaster.login,
-                                state: S
+                                state: w
                             },
                             "data-a-target": "carousel-profile-image"
-                        }, d.createElement(g.l, {
+                        }, d.createElement(h.l, {
                             src: t.props.item.broadcaster.profileImageURL,
                             alt: Object(i.d)("Profile Picture for {login}", {
                                 login: t.props.item.broadcaster.login
                             }, "HorizontalCarouselPlayer"),
                             size: 40
-                        })))), d.createElement(g._2, {
+                        })))), d.createElement(h._2, {
                             margin: {
                                 right: 1
                             },
                             flexGrow: 1
-                        }, d.createElement(g._35, {
-                            fontSize: g.R.Size4,
-                            color: g.I.Base,
-                            lineHeight: g._3.Heading,
+                        }, d.createElement(h._35, {
+                            fontSize: h.R.Size4,
+                            color: h.I.Base,
+                            lineHeight: h._3.Heading,
                             "data-a-target": "carousel-broadcaster-displayname"
-                        }, Object(b.a)(t.props.item.broadcaster.login, t.props.item.broadcaster.displayName)), d.createElement(g._35, {
-                            fontSize: g.R.Size6,
-                            color: g.I.Base,
+                        }, Object(b.a)(t.props.item.broadcaster.login, t.props.item.broadcaster.displayName)), d.createElement(h._35, {
+                            fontSize: h.R.Size6,
+                            color: h.I.Base,
                             "data-a-target": "carousel-user-playing-message"
                         }, d.createElement("span", {
                             onClick: t.promotionCardClick.bind(t, "game_name")
-                        }, n)))), d.createElement(g._2, {
+                        }, n)))), d.createElement(h._2, {
                             margin: {
                                 y: 1
                             }
@@ -4973,77 +3064,77 @@ webpackJsonp([51], {
                             onClick: t.promotionCardClick.bind(t, "stream_title")
                         }, d.createElement(y.a, {
                             to: t.getLinkForTitle()
-                        }, d.createElement(g._35, {
-                            type: g._40.Span,
+                        }, d.createElement(h._35, {
+                            type: h._40.Span,
                             "data-a-target": p.a,
-                            fontSize: g.R.Size3,
-                            lineHeight: g._3.Heading
+                            fontSize: h.R.Size3,
+                            lineHeight: h._3.Heading
                         }, t.props.item.title)))), d.createElement(k, {
                             source: t.props.item.description || ""
                         })))
                     }, t.getLinkForTitle = function() {
                         if (t.props.item.content.type === p.b.Stream) return {
                             pathname: "/" + t.props.item.broadcaster.login,
-                            state: S
+                            state: w
                         };
                         var e = t.state && t.state.videoOffset || 0;
                         return {
                             pathname: "/videos/" + t.props.item.content.id + "?t=" + e,
-                            state: S
+                            state: w
                         }
                     }, t.getPlaceholderRender = function() {
                         var e = c("horizontal-carousel-player__details", {
                             "horizontal-carousel-player__details--overlay": t.props.darkTheme
                         });
-                        return d.createElement(g._2, {
-                            display: g.N.Flex,
-                            flexWrap: g.Q.NoWrap,
+                        return d.createElement(h._2, {
+                            display: h.N.Flex,
+                            flexWrap: h.Q.NoWrap,
                             flexShrink: 0,
                             margin: {
                                 bottom: 2
                             }
-                        }, d.createElement(g._2, {
+                        }, d.createElement(h._2, {
                             flexGrow: 1,
                             flexShrink: 1,
                             fullWidth: !0
-                        }, d.createElement(g.j, {
-                            ratio: g.k.Aspect16x9
-                        }, d.createElement(g._8, {
+                        }, d.createElement(h.j, {
+                            ratio: h.k.Aspect16x9
+                        }, d.createElement(h._8, {
                             "data-test-selector": "carousel-player-placeholder"
-                        }))), d.createElement(g._2, {
+                        }))), d.createElement(h._2, {
                             className: c(e),
                             flexGrow: 0,
                             flexShrink: 0,
                             padding: 2
-                        }, d.createElement(g._2, {
-                            display: g.N.Flex,
-                            flexWrap: g.Q.NoWrap,
-                            textAlign: g._36.Left,
-                            alignItems: g.c.Start
-                        }, d.createElement(g._2, {
+                        }, d.createElement(h._2, {
+                            display: h.N.Flex,
+                            flexWrap: h.Q.NoWrap,
+                            textAlign: h._36.Left,
+                            alignItems: h.c.Start
+                        }, d.createElement(h._2, {
                             margin: {
                                 right: 1
                             },
                             flexShrink: 0
-                        }, d.createElement(g._8, {
+                        }, d.createElement(h._8, {
                             width: 40,
                             height: 40
-                        })), d.createElement(g._2, {
+                        })), d.createElement(h._2, {
                             margin: {
                                 right: 1
                             },
                             flexGrow: 1
-                        }, d.createElement(g._35, null, d.createElement(g._8, {
+                        }, d.createElement(h._35, null, d.createElement(h._8, {
                             width: 70
-                        })), d.createElement(g._35, null, d.createElement(g._8, {
+                        })), d.createElement(h._35, null, d.createElement(h._8, {
                             width: 70
-                        })))), d.createElement(g._2, {
+                        })))), d.createElement(h._2, {
                             margin: {
                                 y: 1
                             }
-                        }, d.createElement(g._35, null, d.createElement(g._8, {
+                        }, d.createElement(h._35, null, d.createElement(h._8, {
                             lineCount: 1
-                        })), d.createElement(g._35, null, d.createElement(g._8, {
+                        })), d.createElement(h._35, null, d.createElement(h._8, {
                             lineCount: 4
                         })))))
                     }, t.onVideoTimeChange = function(e) {
@@ -5054,14 +3145,14 @@ webpackJsonp([51], {
                         t.props.onPromotionCardClick(t.props.item, e)
                     }, t
                 }
-                return a.__extends(t, e), t.prototype.componentWillUpdate = function(e) {
+                return r.__extends(t, e), t.prototype.componentWillUpdate = function(e) {
                     e.item !== this.props.item && this.props.onPromotionCardView(e.item)
                 }, t.prototype.render = function() {
                     return this.props.item ? this.getContentRender() : this.getPlaceholderRender()
                 }, t
             }(d.Component),
             C = n("hdYS"),
-            w = (n("0v28"), function(e) {
+            F = (n("0v28"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getContentRender = function() {
@@ -5082,33 +3173,33 @@ webpackJsonp([51], {
                                     "data-a-target": "carousel-broadcaster-game-name"
                                 }, t.props.item.content.gameName))
                             }, "VerticalCarouselPlayer"),
-                            r = {
+                            a = {
                                 type: t.props.item.content.type,
                                 id: t.props.item.content.id,
                                 onPlayerInit: t.props.onPlayerInit,
                                 onPlayerDestroy: t.props.onPlayerDestroy
                             };
-                        return d.createElement(g._25, {
+                        return d.createElement(h._25, {
                             className: "vertical-carousel-player",
                             padding: {
                                 bottom: 1,
                                 x: 1
                             },
-                            color: g.I.Alt
-                        }, d.createElement(g._2, {
+                            color: h.I.Alt
+                        }, d.createElement(h._2, {
                             className: "vertical-carousel-player__video",
-                            position: g._9.Relative,
-                            overflow: g._5.Hidden
-                        }, N(r)), d.createElement(g._2, {
+                            position: h._9.Relative,
+                            overflow: h._5.Hidden
+                        }, S(a)), d.createElement(h._2, {
                             className: c(e),
-                            display: g.N.Flex,
-                            flexWrap: g.Q.NoWrap,
-                            textAlign: g._36.Left,
-                            alignItems: g.c.Center,
+                            display: h.N.Flex,
+                            flexWrap: h.Q.NoWrap,
+                            textAlign: h._36.Left,
+                            alignItems: h.c.Center,
                             padding: {
                                 y: 1
                             }
-                        }, d.createElement(g._2, {
+                        }, d.createElement(h._2, {
                             margin: {
                                 right: 1
                             },
@@ -5118,117 +3209,117 @@ webpackJsonp([51], {
                         }, d.createElement(y.a, {
                             to: "/" + t.props.item.broadcaster.login,
                             "data-a-target": "carousel-avatar-link"
-                        }, d.createElement(g.l, {
+                        }, d.createElement(h.l, {
                             src: t.props.item.broadcaster.profileImageURL,
                             alt: Object(i.d)("Profile Picture for {login}", {
                                 login: t.props.item.broadcaster.login
                             }, "VerticalCarouselPlayer"),
                             size: 40
-                        })))), d.createElement(g._2, {
+                        })))), d.createElement(h._2, {
                             margin: {
                                 right: 1
                             },
                             flexGrow: 1
-                        }, d.createElement(g._35, {
+                        }, d.createElement(h._35, {
                             "data-a-target": p.a,
-                            fontSize: g.R.Size5,
-                            color: g.I.Base,
+                            fontSize: h.R.Size5,
+                            color: h.I.Base,
                             bold: !0
-                        }, t.props.item.title), d.createElement(g._35, {
-                            fontSize: g.R.Size6,
-                            color: g.I.Base
-                        }, n)), d.createElement(g._2, {
+                        }, t.props.item.title), d.createElement(h._35, {
+                            fontSize: h.R.Size6,
+                            color: h.I.Base
+                        }, n)), d.createElement(h._2, {
                             flexShrink: 0
                         }, t.props.firstPageLoaded ? d.createElement(C.a, {
                             showLoadingPlaceholder: !0,
                             channelLogin: t.props.item.broadcaster.login,
                             "data-a-target": "carousel-follow-button"
-                        }) : d.createElement(g._8, {
+                        }) : d.createElement(h._8, {
                             width: 70,
                             height: 30
                         }))), d.createElement(k, {
                             source: t.props.item.description || ""
                         }))
                     }, t.getPlaceholderRender = function() {
-                        return d.createElement(g._2, {
+                        return d.createElement(h._2, {
                             padding: {
                                 bottom: 1,
                                 x: 1
                             }
-                        }, d.createElement(g.j, {
-                            ratio: g.k.Aspect16x9
-                        }, d.createElement(g._8, {
+                        }, d.createElement(h.j, {
+                            ratio: h.k.Aspect16x9
+                        }, d.createElement(h._8, {
                             "data-test-selector": "carousel-player-placeholder"
-                        })), d.createElement(g._2, {
-                            display: g.N.Flex,
-                            flexWrap: g.Q.NoWrap,
-                            textAlign: g._36.Left,
-                            alignItems: g.c.Center,
+                        })), d.createElement(h._2, {
+                            display: h.N.Flex,
+                            flexWrap: h.Q.NoWrap,
+                            textAlign: h._36.Left,
+                            alignItems: h.c.Center,
                             padding: {
                                 y: 1
                             }
-                        }, d.createElement(g._2, {
+                        }, d.createElement(h._2, {
                             margin: {
                                 right: 1
                             },
                             flexShrink: 0
-                        }, d.createElement(g._8, {
+                        }, d.createElement(h._8, {
                             width: 40,
                             height: 40
-                        })), d.createElement(g._2, {
+                        })), d.createElement(h._2, {
                             margin: {
                                 right: 1
                             },
                             flexGrow: 1
-                        }, d.createElement(g._35, null, d.createElement(g._8, {
+                        }, d.createElement(h._35, null, d.createElement(h._8, {
                             width: 150
-                        })), d.createElement(g._35, null, d.createElement(g._8, {
+                        })), d.createElement(h._35, null, d.createElement(h._8, {
                             width: 100
-                        }))), d.createElement(g._2, {
+                        }))), d.createElement(h._2, {
                             flexShrink: 0
-                        }, d.createElement(g._8, {
+                        }, d.createElement(h._8, {
                             width: 70,
                             height: 30
-                        }))), d.createElement(g._35, null, d.createElement(g._8, {
+                        }))), d.createElement(h._35, null, d.createElement(h._8, {
                             lineCount: 3
                         })))
                     }, t.promotionCardClick = function(e) {
                         t.props.onPromotionCardClick(t.props.item, e)
                     }, t
                 }
-                return a.__extends(t, e), t.prototype.render = function() {
+                return r.__extends(t, e), t.prototype.render = function() {
                     return this.props.item ? this.getContentRender() : this.getPlaceholderRender()
                 }, t
             }(d.Component));
-        var F = Object(s.b)(function(e) {
+        var x = Object(s.b)(function(e) {
                 return {
                     firstPageLoaded: e.session.firstPageLoaded
                 }
-            })(w),
-            x = n("vH/s");
+            })(F),
+            O = n("vH/s");
 
-        function I(e) {
-            i.m.track(x.SpadeEventType.FrontPageCarouselNavButtonClick, {
+        function L(e) {
+            i.m.track(O.SpadeEventType.FrontPageCarouselNavButtonClick, {
                 direction: e
             })
         }
         n("0OPT");
-        var L = 6,
-            T = function(e) {
+        var T = 6,
+            I = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         activeItem: t.props.items[0],
                         startingIndex: 0
                     }, t.displayEventFired = !1, t.renderLeftButton = function() {
-                        if (t.props.items.length > L) {
+                        if (t.props.items.length > T) {
                             var e = t.state.startingIndex > 0;
-                            return d.createElement(g._2, {
-                                display: g.N.Flex,
-                                alignItems: g.c.Stretch
-                            }, d.createElement(g.v, {
+                            return d.createElement(h._2, {
+                                display: h.N.Flex,
+                                alignItems: h.c.Stretch
+                            }, d.createElement(h.v, {
                                 ariaLabel: Object(i.d)("Page Left", "CarouselPlayerComponent"),
-                                icon: g._16.AngleLeft,
+                                icon: h._16.AngleLeft,
                                 onClick: t.handlePageLeft,
                                 "data-test-selector": p.d,
                                 disabled: !e
@@ -5236,14 +3327,14 @@ webpackJsonp([51], {
                         }
                         return null
                     }, t.renderRightButton = function() {
-                        if (t.props.items.length > L) {
-                            var e = t.props.items.length > t.state.startingIndex + L;
-                            return d.createElement(g._2, {
-                                display: g.N.Flex,
-                                alignItems: g.c.Stretch
-                            }, d.createElement(g.v, {
+                        if (t.props.items.length > T) {
+                            var e = t.props.items.length > t.state.startingIndex + T;
+                            return d.createElement(h._2, {
+                                display: h.N.Flex,
+                                alignItems: h.c.Stretch
+                            }, d.createElement(h.v, {
                                 ariaLabel: Object(i.d)("Page Right", "CarouselPlayerComponent"),
-                                icon: g._16.AngleRight,
+                                icon: h._16.AngleRight,
                                 onClick: t.handlePageRight,
                                 "data-test-selector": p.e,
                                 disabled: !e
@@ -5254,7 +3345,7 @@ webpackJsonp([51], {
                         var e, n;
                         if (t.state.activeItem) return t.displayEventFired || (e = t.props.items, n = {}, e.forEach(function(e, t) {
                             n["carousel_slot_" + t + "_channel"] = e.broadcaster.login, n["carousel_slot_" + t + "_priority"] = e.priorityLevel, n["carousel_slot_" + t + "_game"] = e.content.gameName, n["carousel_slot_" + t + "_ccu"] = e.content.viewersCount, n["carousel_slot_" + t + "_type"] = e.content.subType
-                        }), i.m.track(x.SpadeEventType.FrontPageCarouselDisplay, n), t.displayEventFired = !0), t.props.items.slice(t.state.startingIndex, t.state.startingIndex + L).map(function(e, n) {
+                        }), i.m.track(O.SpadeEventType.FrontPageCarouselDisplay, n), t.displayEventFired = !0), t.props.items.slice(t.state.startingIndex, t.state.startingIndex + T).map(function(e, n) {
                             return d.createElement(_, {
                                 key: e.content.id,
                                 item: e,
@@ -5263,22 +3354,22 @@ webpackJsonp([51], {
                                 "data-a-target": "carousel-card-" + n
                             })
                         });
-                        for (var r = [], a = 0; a < L; a++) r.push(d.createElement(g._2, {
-                            key: a,
+                        for (var a = [], r = 0; r < T; r++) a.push(d.createElement(h._2, {
+                            key: r,
                             margin: {
                                 x: .5
                             },
                             flexGrow: 1
-                        }, d.createElement(g.j, {
-                            ratio: g.k.Aspect16x9
-                        }, d.createElement(g._8, null)), d.createElement(g._2, {
+                        }, d.createElement(h.j, {
+                            ratio: h.k.Aspect16x9
+                        }, d.createElement(h._8, null)), d.createElement(h._2, {
                             margin: {
                                 top: .5
                             }
-                        }, d.createElement(g._8, {
+                        }, d.createElement(h._8, {
                             height: 4
                         }))));
-                        return r
+                        return a
                     }, t.getLayoutRender = function() {
                         var e = {
                             darkTheme: t.props.darkTheme || !1,
@@ -5290,9 +3381,9 @@ webpackJsonp([51], {
                         };
                         switch (t.props.layout) {
                             case p.c.Vertical:
-                                return d.createElement(F, a.__assign({}, e));
+                                return d.createElement(x, r.__assign({}, e));
                             default:
-                                return d.createElement(O, a.__assign({}, e))
+                                return d.createElement(N, r.__assign({}, e))
                         }
                     }, t.registerCarousel = function(e) {
                         t.props.registerCarousel && t.props.registerCarousel(e)
@@ -5302,7 +3393,7 @@ webpackJsonp([51], {
                         t.setState({
                             activeItem: e
                         });
-                        var n, r = {
+                        var n, a = {
                             broadcast_type: e.content.subType,
                             carousel_index: t.props.items.indexOf(e),
                             channel: e.broadcaster.login,
@@ -5310,26 +3401,26 @@ webpackJsonp([51], {
                             promotion_was_scheduled: e.isScheduled,
                             views: e.content.viewersCount
                         };
-                        n = r, i.m.track(x.SpadeEventType.FrontPageCarouselClick, n)
+                        n = a, i.m.track(O.SpadeEventType.FrontPageCarouselClick, n)
                     }, t.trackPromotionClick = function(e, n) {
-                        var r = e.broadcaster,
+                        var a = e.broadcaster,
                             o = e.content,
                             s = e.isScheduled;
                         ! function(e, t) {
-                            var n = a.__assign({
+                            var n = r.__assign({
                                 clicked_element: t
                             }, e);
-                            i.m.track(x.SpadeEventType.FrontPageCarouselPromotionCardClick, n)
+                            i.m.track(O.SpadeEventType.FrontPageCarouselPromotionCardClick, n)
                         }({
                             broadcast_type: o.subType,
                             carousel_index: t.props.items.indexOf(t.state.activeItem),
-                            channel: r.displayName,
+                            channel: a.displayName,
                             game: o.gameName,
                             promotion_was_scheduled: s,
                             views: o.viewersCount
                         }, n)
                     }, t.trackPromotionView = function(e) {
-                        var n, r = {
+                        var n, a = {
                             broadcast_type: e.content.subType,
                             carousel_index: t.props.items.indexOf(e),
                             channel: e.broadcaster.login,
@@ -5337,19 +3428,19 @@ webpackJsonp([51], {
                             promotion_was_scheduled: e.isScheduled,
                             views: e.content.viewersCount
                         };
-                        n = r, i.m.track(x.SpadeEventType.FrontPageCarouselPromotionCardView, n)
+                        n = a, i.m.track(O.SpadeEventType.FrontPageCarouselPromotionCardView, n)
                     }, t.handlePageRight = function() {
-                        var e = t.props.items.length - L;
-                        e !== t.state.startingIndex && (I("next"), t.setState({
+                        var e = t.props.items.length - T;
+                        e !== t.state.startingIndex && (L("next"), t.setState({
                             startingIndex: e
                         }))
                     }, t.handlePageLeft = function() {
-                        t.state.startingIndex > 0 && (I("prev"), t.setState({
+                        t.state.startingIndex > 0 && (L("prev"), t.setState({
                             startingIndex: 0
                         }))
                     }, t
                 }
-                return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                return r.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.componentWillUpdate = function(e) {
                     !this.state.activeItem && e.items.length > 0 && this.setState({
@@ -5357,52 +3448,51 @@ webpackJsonp([51], {
                     })
                 }, t.prototype.render = function() {
                     var e;
-                    return this.props.darkTheme && (e = Object(m.c)(u.a.Dark)), d.createElement(g._2, {
+                    return this.props.darkTheme && (e = Object(m.c)(u.a.Dark)), d.createElement(h._2, {
                         className: c("carousel-player", e)
-                    }, this.getLayoutRender(), d.createElement(g._25, {
-                        background: g.m.Alt
-                    }, d.createElement(g._2, {
-                        display: g.N.Flex,
-                        flexWrap: g.Q.NoWrap,
+                    }, this.getLayoutRender(), d.createElement(h._25, {
+                        background: h.m.Alt
+                    }, d.createElement(h._2, {
+                        display: h.N.Flex,
+                        flexWrap: h.Q.NoWrap,
                         padding: {
                             x: .5,
                             y: 1
                         }
                     }, this.renderLeftButton(), this.getCardsRender(), this.renderRightButton())))
-                }, t = a.__decorate([Object(f.d)("CarouselPlayer")], t)
+                }, t = r.__decorate([Object(g.d)("CarouselPlayer")], t)
             }(d.Component);
-        var P = Object(s.b)(null, function(e) {
+        var R = Object(s.b)(null, function(e) {
             return Object(l.b)({
                 registerCarousel: o.e,
                 unregisterCarousel: o.f
             }, e)
-        })(T);
+        })(I);
         n.d(t, "a", function() {
-            return P
+            return R
         })
     },
     i6UE: function(e, t) {},
-    nFc2: function(e, t) {},
     o8Pq: function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var r = n("bNhH");
+        var a = n("bNhH");
         n.d(t, "FeaturedBroadcastersRenderContext", function() {
-            return r.b
+            return a.b
         }), n.d(t, "placeholderFeaturedBroadcasters", function() {
-            return r.c
+            return a.c
         }), n.d(t, "FeaturedBroadcasters", function() {
-            return r.a
+            return a.a
         })
     },
     pqU3: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
-            return r
-        }), n.d(t, "c", function() {
             return a
+        }), n.d(t, "c", function() {
+            return r
         }), n.d(t, "b", function() {
             return i
         }), t.d = function(e) {
@@ -5412,244 +3502,23 @@ webpackJsonp([51], {
             }
         }, t.e = function(e) {
             return {
-                type: a,
+                type: r,
                 leagueOfLegendsChampionsLoading: e
             }
         }, t.f = function(e) {
             var t = {},
                 n = e.data;
-            for (var a in n) n.hasOwnProperty(a) && (t[n[a].id] = n[a]);
+            for (var r in n) n.hasOwnProperty(r) && (t[n[r].id] = n[r]);
             return {
-                type: r,
+                type: a,
                 apiData: e,
                 championsMap: t,
                 apiVersion: e.version
             }
         };
-        var r = "directory.LOL_CHAMPIONS_CHANGED",
-            a = "directory.LOL_CHAMPIONS_LOADING",
+        var a = "directory.LOL_CHAMPIONS_CHANGED",
+            r = "directory.LOL_CHAMPIONS_LOADING",
             i = "directory.LOL_CHAMPIONS_ERRORED"
-    },
-    rM0q: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "Current_User"
-                },
-                variableDefinitions: [],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "currentUser"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "hasPrime"
-                                },
-                                arguments: [],
-                                directives: []
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 50
-            }
-        };
-        n.loc.source = {
-            body: "query Current_User {\ncurrentUser {\nid\nhasPrime\n}\n}",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
-    sq7i: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "Current_User"
-                },
-                variableDefinitions: [],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "currentUser"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: []
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 41
-            }
-        };
-        n.loc.source = {
-            body: "query Current_User {\ncurrentUser {\nid\n}\n}",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
-    tTbW: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "Prime_PrimeOffers_PrimeOfferIds"
-                },
-                variableDefinitions: [{
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "dateOverride"
-                        }
-                    },
-                    type: {
-                        kind: "NamedType",
-                        name: {
-                            kind: "Name",
-                            value: "Time"
-                        }
-                    }
-                }],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "primeOffers"
-                        },
-                        arguments: [{
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "dateOverride"
-                            },
-                            value: {
-                                kind: "Variable",
-                                name: {
-                                    kind: "Name",
-                                    value: "dateOverride"
-                                }
-                            }
-                        }],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "self"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "hasEntitlement"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }, {
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "claimData"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }]
-                                }
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 144
-            }
-        };
-        n.loc.source = {
-            body: "query Prime_PrimeOffers_PrimeOfferIds($dateOverride: Time) {\nprimeOffers(dateOverride: $dateOverride) {\nid\nself {\nhasEntitlement\nclaimData\n}\n}\n}",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
     },
     uckt: function(e, t) {
         var n = {
@@ -5918,89 +3787,6 @@ webpackJsonp([51], {
             }
         };
         e.exports = n
-    },
-    ukY1: function(e, t) {},
-    "v+rJ": function(e, t) {},
-    "w/8h": function(e, t) {},
-    wjhu: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "Prime_PrimeOffers_CurrentUser"
-                },
-                variableDefinitions: [],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "currentUser"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "hasPrime"
-                                },
-                                arguments: [],
-                                directives: []
-                            }]
-                        }
-                    }, {
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "requestInfo"
-                        },
-                        arguments: [],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "countryCode"
-                                },
-                                arguments: [],
-                                directives: []
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 95
-            }
-        };
-        n.loc.source = {
-            body: "query Prime_PrimeOffers_CurrentUser {\ncurrentUser {\nid\nhasPrime\n}\nrequestInfo {\ncountryCode\n}\n}",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
     }
 });
-//# sourceMappingURL=pages.anon-front-e0790d42df19315c82bccc71c5a6f668.js.map
+//# sourceMappingURL=pages.anon-front-300a9c3c7f15ea55fad8001c4bafae54.js.map

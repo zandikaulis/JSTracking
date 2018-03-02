@@ -933,63 +933,63 @@ webpackJsonp([77], {
             return C
         });
         var k = function(e) {
-            function t() {
-                var t = null !== e && e.apply(this, arguments) || this;
-                return t.state = {}, t.defaultUserError = Object(c.d)("Unable to delete this collection, try again later.", "DeleteCollectionModal"), t.onCancelHandler = function() {
-                    t.props.onClose()
-                }, t.onDeleteHandler = function() {
-                    t.setState({
-                        deletionError: void 0
-                    }, function() {
-                        return o.__awaiter(t, void 0, void 0, function() {
-                            var e;
-                            return o.__generator(this, function(t) {
-                                switch (t.label) {
-                                    case 0:
-                                        if (!this.props.collection.owner) return this.setState({
-                                            deletionError: this.defaultUserError
-                                        }), [2];
-                                        t.label = 1;
-                                    case 1:
-                                        return t.trys.push([1, 3, , 4]), [4, this.props.onDeleteRequest(Object(d.a)({
-                                            collectionID: this.props.collection.id
-                                        }))];
-                                    case 2:
-                                        return t.sent(), [3, 4];
-                                    case 3:
-                                        return e = t.sent(), c.i.error(e, "DeleteCollectionModal"), this.setState({
-                                            deletionError: this.defaultUserError
-                                        }), [2];
-                                    case 4:
-                                        return this.props.onSuccess(), [2]
-                                }
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {}, t.defaultUserError = Object(c.d)("Unable to delete this collection, try again later.", "DeleteCollectionModal"), t.onCancelHandler = function() {
+                        t.props.onClose()
+                    }, t.onDeleteHandler = function() {
+                        t.setState({
+                            deletionError: void 0
+                        }, function() {
+                            return o.__awaiter(t, void 0, void 0, function() {
+                                var e;
+                                return o.__generator(this, function(t) {
+                                    switch (t.label) {
+                                        case 0:
+                                            if (!this.props.collection.owner) return this.setState({
+                                                deletionError: this.defaultUserError
+                                            }), [2];
+                                            t.label = 1;
+                                        case 1:
+                                            return t.trys.push([1, 3, , 4]), [4, this.props.onDeleteRequest(Object(d.a)({
+                                                collectionID: this.props.collection.id
+                                            }))];
+                                        case 2:
+                                            return t.sent(), [3, 4];
+                                        case 3:
+                                            return e = t.sent(), c.i.error(e, "DeleteCollectionModal"), this.setState({
+                                                deletionError: this.defaultUserError
+                                            }), [2];
+                                        case 4:
+                                            return this.props.onSuccess(), [2]
+                                    }
+                                })
                             })
                         })
+                    }, t
+                }
+                return o.__extends(t, e), t.prototype.render = function() {
+                    return r.createElement(g, {
+                        collection: this.props.collection,
+                        error: this.state.deletionError,
+                        onCancel: this.onCancelHandler,
+                        onDeleteRequest: this.onDeleteHandler
                     })
                 }, t
-            }
-            return o.__extends(t, e), t.prototype.render = function() {
-                return r.createElement(g, {
-                    collection: this.props.collection,
-                    error: this.state.deletionError,
-                    onCancel: this.onCancelHandler,
-                    onDeleteRequest: this.onDeleteHandler
-                })
-            }, t
-        }(r.Component);
-        var f = Object(a.compose)(Object(s.a)(v, {
+            }(r.Component),
+            f = Object(a.compose)(Object(s.a)(v, {
                 name: "onDeleteRequest"
-            }))(k),
-            C = Object(l.b)(null, function(e, t) {
-                return {
-                    onClose: function() {
-                        e(Object(u.c)())
-                    },
-                    onSuccess: function() {
-                        e(Object(u.c)()), t.onSuccess && t.onSuccess()
-                    }
+            }))(k);
+        var C = Object(l.b)(null, function(e, t) {
+            return {
+                onClose: function() {
+                    e(Object(u.c)())
+                },
+                onSuccess: function() {
+                    e(Object(u.c)()), t.onSuccess && t.onSuccess()
                 }
-            })(f)
+            }
+        })(f)
     },
     N8CH: function(e, t, n) {
         "use strict";
@@ -1252,4 +1252,4 @@ webpackJsonp([77], {
         })(C)
     }
 });
-//# sourceMappingURL=pages.video-tools.pages.collection-manager-e7be5947d826ec081cca5ee53baaf814.js.map
+//# sourceMappingURL=pages.video-tools.pages.collection-manager-1585f3cad342e22360f2206cf73ec280.js.map

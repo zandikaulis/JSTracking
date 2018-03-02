@@ -1,4 +1,4 @@
-webpackJsonp([34], {
+webpackJsonp([33], {
     "+5Qw": function(e, t) {},
     "+FQU": function(e, t) {},
     "+V/3": function(e, t, n) {
@@ -37014,22 +37014,22 @@ webpackJsonp([34], {
                             isSubscribing: !0
                         }, function() {
                             return i.__awaiter(t, void 0, void 0, function() {
-                                var e;
-                                return i.__generator(this, function(t) {
-                                    switch (t.label) {
+                                var e, t;
+                                return i.__generator(this, function(n) {
+                                    switch (n.label) {
                                         case 0:
-                                            return t.trys.push([0, 3, 4, 5]), this.props.authToken && this.props.userHasPrime && this.props.subLogin ? [4, function(e, t) {
+                                            return n.trys.push([0, 3, 4, 5]), this.props.authToken && this.props.userHasPrime && this.props.subLogin ? [4, function(e, t) {
                                                 return i.__awaiter(this, void 0, void 0, function() {
-                                                    var n, a, s;
+                                                    var n, a, s, l, d, c;
                                                     return i.__generator(this, function(i) {
                                                         switch (i.label) {
                                                             case 0:
                                                                 n = "https://api.twitch.tv/api/premium/credit/spend_token?channel_id=" + e, a = 1, i.label = 1;
                                                             case 1:
-                                                                if (!(a <= o)) return [3, 7];
+                                                                if (!(a <= o)) return [3, 8];
                                                                 i.label = 2;
                                                             case 2:
-                                                                return i.trys.push([2, 5, , 6]), [4, fetch(n, {
+                                                                return i.trys.push([2, 6, , 7]), [4, fetch(n, {
                                                                     method: "POST",
                                                                     headers: {
                                                                         "Client-ID": r.n.config.legacyClientID,
@@ -37039,26 +37039,36 @@ webpackJsonp([34], {
                                                                     }
                                                                 })];
                                                             case 3:
-                                                                return [4, i.sent().body];
+                                                                return [4, (s = i.sent()).body];
                                                             case 4:
-                                                                return [2, i.sent()];
+                                                                return l = i.sent(), [4, s.status];
                                                             case 5:
-                                                                if (s = i.sent(), a === o) throw s;
-                                                                return [3, 6];
+                                                                return d = i.sent(), [2, {
+                                                                    body: {
+                                                                        body: l
+                                                                    },
+                                                                    code: d
+                                                                }];
                                                             case 6:
-                                                                return ++a, [3, 1];
+                                                                if (c = i.sent(), a === o) throw c;
+                                                                return [3, 7];
                                                             case 7:
+                                                                return ++a, [3, 1];
+                                                            case 8:
                                                                 return [2]
                                                         }
                                                     })
                                                 })
                                             }(this.props.subLogin, this.props.authToken)] : [3, 2];
                                         case 1:
-                                            t.sent(), this.props.onSubscribedWithPrime(), t.label = 2;
+                                            (e = n.sent()) && 200 === e.code ? this.props.onSubscribedWithPrime() : this.setState({
+                                                isSubscribing: !1,
+                                                primeSubFailure: !0
+                                            }), n.label = 2;
                                         case 2:
                                             return [3, 5];
                                         case 3:
-                                            return e = t.sent(), r.i.error(e, "Failed to subscribe with Prime", {
+                                            return t = n.sent(), r.i.error(t, "Failed to subscribe with Prime", {
                                                 subLogin: this.props.subLogin
                                             }), this.setState({
                                                 isSubscribing: !1,
@@ -43167,4 +43177,4 @@ webpackJsonp([34], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.popout-chat-f2f0412565a01a60c383e0df71428894.js.map
+//# sourceMappingURL=pages.popout-chat-658f06c4642be4d54f66af592e8d1aa1.js.map

@@ -10,7 +10,7 @@ webpackJsonp([83], {
             games: ["Overwatch", "Counter-Strike: Global Offensive", "Tom Clancy's Rainbow Six: Siege", "Call of Duty: WWII", "Quake Champions", "Battlefield 4", "Squad"],
             name: "FPS"
         }, {
-            games: ["Hearthstone", "Magic: The Gathering", "Age of Empires II: The Conquerors", "Company of Heroes 2", "Warcraft III: The Frozen Throne", "Europa Universalis IV", "Age of Empires II: HD Edition"],
+            games: ["Hearthstone", "Magic: The Gathering", "Age of Empires II", "Company of Heroes 2", "Warcraft III: The Frozen Throne", "Europa Universalis IV", "Into the Breach"],
             name: "Strategy"
         }, {
             games: ["Tom Clancy's The Division", "Destiny 2", "Dark Souls III", "Bloodborne", "Diablo III: Reaper of Souls", "Dark Souls II: Scholar of the First Sin", "Demon's Souls"],
@@ -55,7 +55,7 @@ webpackJsonp([83], {
             games: ["Doki Doki Literature Club", "Yu-Gi-Oh! Duel Links", "Fate/Grand Order", "Danganronpa V3: Killing Harmony", "Danganronpa 2: Goodbye Despair", "Kantai Collection", "Persona 4 Golden"],
             name: "Anime"
         }, {
-            games: ["Age of Empires II: The Conquerors", "Sid Meier's Civilization V", "Europa Universalis IV", "Sid Meier's Civilization VI", "Crusader Kings II", "Age of Empires II: HD Edition", "Besiege"],
+            games: ["Age of Empires II", "Sid Meier's Civilization V", "Europa Universalis IV", "Sid Meier's Civilization VI", "Crusader Kings II", "Besiege", "Total War: Warhammer II"],
             name: "Historical"
         }, {
             games: ["iRacing.com", "Mario Kart Wii", "Forza Horizon 3", "Forza Motorsport 7", "Gran Turismo Sport", "Super Mario Kart", "Sonic & All-Stars Racing Transformed"],
@@ -78,4 +78,4 @@ webpackJsonp([83], {
         }]
     }
 });
-//# sourceMappingURL=assets.data.onboarding.community-selection-page.categories.json-e75c0077543c4dda3331f48c3d380f78.js.map
+//# sourceMappingURL=assets.data.onboarding.community-selection-page.categories.json-be3a8b21b9f855d5d837636d110c437d.js.map

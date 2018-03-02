@@ -1,4 +1,4 @@
-webpackJsonp([40], {
+webpackJsonp([38], {
     "+5Qw": function(e, t) {},
     "+Aaf": function(e, t) {},
     "+FQU": function(e, t) {},
@@ -9231,90 +9231,6 @@ webpackJsonp([40], {
             }(i || (i = {}))
     },
     "6Rwu": function(e, t) {},
-    "6Vb7": function(e, t, n) {
-        "use strict";
-        var i = n("TToO"),
-            a = n("OAwv"),
-            r = n("GiK3"),
-            o = n("6sO2"),
-            s = n("Ejve"),
-            l = "legacy_routes_enabled",
-            d = function(e) {
-                function t(t) {
-                    var n = e.call(this, t) || this;
-                    return n.isEnabled = !1, n.onHistoryChange = function(e, t) {
-                        n.isEnabled ? "REPLACE" !== t ? e && e.pathname ? (n.logger.debug("Location changed", {
-                            path: e.pathname
-                        }), n.legacyRoutes.forEach(function(t) {
-                            try {
-                                if (e.pathname.match(t)) {
-                                    n.logger.debug("Found legacy route. Reloading...");
-                                    var i = "" !== e.search ? a.parse(e.search) : {};
-                                    i["from-redirect"] = "true";
-                                    var r = a.stringify(i),
-                                        l = o.a.buildType === s.a.Dev ? window.location.host : window.location.hostname,
-                                        d = window.location.protocol + "//" + l + e.pathname + "?" + r;
-                                    return n.logger.debug("Redirecting to legacy route", {
-                                        newUrl: d
-                                    }), void window.location.replace(d)
-                                }
-                            } catch (e) {
-                                o.i.withCategory("legacy").error(e, "Unable to determine legacy reload match", {
-                                    regex: t
-                                })
-                            }
-                        })) : n.logger.debug("Unable to process history change. Path is null or empty.") : n.logger.debug("Skipping legacy route processing, due to history replace.") : n.logger.debug("Legacy routing not enabled.")
-                    }, n.processRedirectParam = function(e) {
-                        if (e && e.pathname && e.search) {
-                            var t = "" !== e.search ? a.parse(e.search) : {};
-                            if (t["from-redirect"]) {
-                                delete t["from-redirect"];
-                                var i = a.stringify(t),
-                                    r = "";
-                                i.length > 0 && (r = "?" + i), n.props.history.replace({
-                                    pathname: e.pathname,
-                                    hash: e.hash,
-                                    search: r
-                                })
-                            }
-                        }
-                    }, n.isEnabled = o.b.get(l, !1), n.logger = o.i.withCategory("legacy-routes"), n.legacyRoutes = n.buildRoutes(), n.props.history.listen(n.onHistoryChange), n
-                }
-                return i.__extends(t, e), t.prototype.render = function() {
-                    return null
-                }, t.prototype.componentDidMount = function() {
-                    this.processRedirectParam(this.props.history.location)
-                }, t.prototype.buildRoutes = function() {
-                    if (!this.isEnabled) return [];
-                    this.logger.debug("Building legacy routes...");
-                    var e = o.b.get("legacy_routes", []),
-                        t = [];
-                    if (!e || 0 === e.length) return this.logger.debug("No legacy routes found in settings."), t;
-                    for (var n = 0, i = e; n < i.length; n++) {
-                        var a = i[n];
-                        try {
-                            var r = new RegExp(a, "i");
-                            t.push(r)
-                        } catch (e) {
-                            this.logger.debug("Failed to parse route!", {
-                                val: a,
-                                err: e
-                            })
-                        }
-                    }
-                    return this.logger.debug("Done building legacy routes!", {
-                        count: t.length
-                    }), t
-                }, t
-            }(r.Component);
-        n.d(t, "a", function() {
-            return l
-        }), n.d(t, !1, function() {
-            return "legacy_routes"
-        }), n.d(t, "b", function() {
-            return d
-        })
-    },
     "6lb1": function(e, t) {},
     "6suJ": function(e, t) {},
     "6vcJ": function(e, t) {},
@@ -9322,40 +9238,37 @@ webpackJsonp([40], {
     "7X7f": function(e, t) {},
     "8Wuk": function(e, t, n) {
         "use strict";
-        var i = n("TToO"),
-            a = n("GiK3"),
-            r = n("6sO2"),
-            o = n("2hJ3"),
-            s = n("yDzg"),
-            l = "https://www.facebook.com/sharer/sharer.php",
-            d = "https://www.twitter.com/share",
-            c = "https://www.reddit.com/submit",
-            u = "https://vk.com/share.php";
-        var m, p = n("Odds");
-        n("bdk8");
         n.d(t, "b", function() {
-                return m
-            }), n.d(t, "a", function() {
-                return h
-            }),
-            function(e) {
-                e[e.Twitter = 0] = "Twitter", e[e.Reddit = 1] = "Reddit", e[e.VKontakte = 2] = "VKontakte", e[e.Facebook = 3] = "Facebook", e[e.Copy = 4] = "Copy", e[e.CopyInput = 5] = "CopyInput"
-            }(m || (m = {}));
-        var h = function(e) {
+            return i
+        }), n.d(t, "a", function() {
+            return u
+        });
+        var i, a = n("TToO"),
+            r = n("GiK3"),
+            o = (n.n(r), n("6sO2")),
+            s = n("2hJ3"),
+            l = n("f6Cj"),
+            d = n("Odds"),
+            c = n("bdk8");
+        n.n(c);
+        ! function(e) {
+            e[e.Twitter = 0] = "Twitter", e[e.Reddit = 1] = "Reddit", e[e.VKontakte = 2] = "VKontakte", e[e.Facebook = 3] = "Facebook", e[e.Copy = 4] = "Copy", e[e.CopyInput = 5] = "CopyInput"
+        }(i || (i = {}));
+        var u = function(e) {
             function t(t) {
                 var n = e.call(this, t) || this;
                 return n.renderLink = function() {
                     var e = "social-button__link " + n.addSocialClassModifier("social-button__link");
-                    return n.isLink() ? a.createElement("a", i.__assign({
+                    return n.isLink() ? r.createElement("a", a.__assign({
                         href: n.getLinkTarget(),
                         target: "_blank",
                         className: e,
                         onClick: n.onShareClickHandler
-                    }, Object(p._53)(n.props)), n.renderIcon()) : a.createElement("button", i.__assign({
+                    }, Object(d._53)(n.props)), n.renderIcon()) : r.createElement("button", a.__assign({
                         onClick: n.copyPageUrl,
                         onMouseLeave: n.clearIsCopiedStatus,
                         className: e
-                    }, Object(p._53)(n.props)), n.renderIcon())
+                    }, Object(d._53)(n.props)), n.renderIcon())
                 }, n.onShareClickHandler = function() {
                     n.props.onShareClick && n.props.onShareClick(n.props.type)
                 }, n.clearIsCopiedStatus = function() {
@@ -9365,60 +9278,60 @@ webpackJsonp([40], {
                 }, n.getUrl = function() {
                     return n.props.url || window.location.href
                 }, n.copyPageUrl = function(e) {
-                    e && e.preventDefault(), n.props.onShareClick && n.props.onShareClick(n.props.type), Object(o.a)(n.getUrl()), n.setState({
+                    e && e.preventDefault(), n.props.onShareClick && n.props.onShareClick(n.props.type), Object(s.a)(n.getUrl()), n.setState({
                         isCopied: !0
                     })
                 }, n.renderIcon = function() {
                     var e = n.getAssetFromType();
-                    return a.createElement(p._2, {
+                    return r.createElement(d._2, {
                         className: "social-button__icon " + n.addSocialClassModifier("social-button__icon")
-                    }, a.createElement(p._15, {
+                    }, r.createElement(d._15, {
                         asset: e,
                         width: 30,
                         height: 30
                     }))
                 }, n.isLink = function() {
-                    return n.props.type !== m.Copy
+                    return n.props.type !== i.Copy
                 }, n.getTooltipFromType = function() {
                     switch (n.props.type) {
-                        case m.Twitter:
+                        case i.Twitter:
                             return "Twitter";
-                        case m.Reddit:
+                        case i.Reddit:
                             return "Reddit";
-                        case m.Facebook:
+                        case i.Facebook:
                             return "Facebook";
-                        case m.VKontakte:
+                        case i.VKontakte:
                             return "VKontakte";
-                        case m.Copy:
-                            return n.state.isCopied ? Object(r.d)("Copied", "SocialButton") : Object(r.d)("Copy to clipboard", "SocialButton");
+                        case i.Copy:
+                            return n.state.isCopied ? Object(o.d)("Copied", "SocialButton") : Object(o.d)("Copy to clipboard", "SocialButton");
                         default:
                             return ""
                     }
                 }, n.getAssetFromType = function() {
                     switch (n.props.type) {
-                        case m.Twitter:
-                            return p._16.Twitter;
-                        case m.Facebook:
-                            return p._16.Facebook;
-                        case m.VKontakte:
-                            return p._16.VKontakte;
-                        case m.Reddit:
-                            return p._16.Reddit;
-                        case m.Copy:
+                        case i.Twitter:
+                            return d._16.Twitter;
+                        case i.Facebook:
+                            return d._16.Facebook;
+                        case i.VKontakte:
+                            return d._16.VKontakte;
+                        case i.Reddit:
+                            return d._16.Reddit;
+                        case i.Copy:
                         default:
-                            return p._16.Copy
+                            return d._16.Copy
                     }
                 }, n.addSocialClassModifier = function(e) {
                     switch (n.props.type) {
-                        case m.Twitter:
+                        case i.Twitter:
                             return e + "--twitter";
-                        case m.Reddit:
+                        case i.Reddit:
                             return e + "--reddit";
-                        case m.Facebook:
+                        case i.Facebook:
                             return e + "--facebook";
-                        case m.VKontakte:
+                        case i.VKontakte:
                             return e + "--vkontakte";
-                        case m.Copy:
+                        case i.Copy:
                             return e + "--copy";
                         default:
                             return ""
@@ -9426,36 +9339,18 @@ webpackJsonp([40], {
                 }, n.getLinkTarget = function() {
                     var e = n.props,
                         t = e.text,
-                        i = e.type,
-                        a = n.getUrl(),
-                        r = t || "";
-                    switch (i) {
-                        case m.Reddit:
-                            return function(e, t) {
-                                return Object(s.a)(c, {
-                                    url: e,
-                                    title: t
-                                })
-                            }(a, r);
-                        case m.VKontakte:
-                            return function(e) {
-                                return Object(s.a)(u, {
-                                    url: e
-                                })
-                            }(a);
-                        case m.Facebook:
-                            return function(e) {
-                                return Object(s.a)(l, {
-                                    u: e
-                                })
-                            }(a);
-                        case m.Twitter:
-                            return function(e, t) {
-                                return Object(s.a)(d, {
-                                    url: e,
-                                    text: t
-                                })
-                            }(a, r);
+                        a = e.type,
+                        r = n.getUrl(),
+                        o = t || "";
+                    switch (a) {
+                        case i.Reddit:
+                            return Object(l.b)(r, o);
+                        case i.VKontakte:
+                            return Object(l.d)(r);
+                        case i.Facebook:
+                            return Object(l.a)(r);
+                        case i.Twitter:
+                            return Object(l.c)(r, o);
                         default:
                             return ""
                     }
@@ -9463,15 +9358,15 @@ webpackJsonp([40], {
                     isCopied: !1
                 }, n
             }
-            return i.__extends(t, e), t.prototype.render = function() {
-                return a.createElement(p._2, {
+            return a.__extends(t, e), t.prototype.render = function() {
+                return r.createElement(d._2, {
                     className: "social-button"
-                }, a.createElement(p._43, {
+                }, r.createElement(d._43, {
                     label: this.getTooltipFromType(),
-                    direction: p._45.Top
+                    direction: d._45.Top
                 }, this.renderLink()))
             }, t
-        }(a.Component)
+        }(r.Component)
     },
     "90yy": function(e, t) {},
     "91zu": function(e, t) {
@@ -29057,18 +28952,6 @@ webpackJsonp([40], {
             return !a[t] && (a[t] = !0, !0)
         })), e.exports = i
     },
-    czpb: function(e, t, n) {
-        "use strict";
-        t.a = function(e) {
-            return i.b.get(r.a, !1) || i.a.buildType !== a.a.Production ? "string" == typeof e ? e : e.pathname || "" : "string" == typeof e ? o + e : o + e.pathname
-        }, t.b = function() {
-            return !i.b.get(r.a, !1) && i.a.buildType === a.a.Production
-        };
-        var i = n("6sO2"),
-            a = n("Ejve"),
-            r = n("6Vb7"),
-            o = "https://www.twitch.tv"
-    },
     d7Cs: function(e, t) {
         var n = {
             kind: "Document",
@@ -29517,6 +29400,33 @@ webpackJsonp([40], {
         })
     },
     f1ZS: function(e, t) {},
+    f6Cj: function(e, t, n) {
+        "use strict";
+        t.a = function(e) {
+            return Object(i.a)(a, {
+                u: e
+            })
+        }, t.c = function(e, t) {
+            return Object(i.a)(r, {
+                url: e,
+                text: t
+            })
+        }, t.b = function(e, t) {
+            return Object(i.a)(o, {
+                url: e,
+                title: t
+            })
+        }, t.d = function(e) {
+            return Object(i.a)(s, {
+                url: e
+            })
+        };
+        var i = n("yDzg"),
+            a = "https://www.facebook.com/sharer/sharer.php",
+            r = "https://www.twitter.com/share",
+            o = "https://www.reddit.com/submit",
+            s = "https://vk.com/share.php"
+    },
     fHoP: function(e, t) {},
     fNhT: function(e, t) {},
     fbnZ: function(e, t) {},
@@ -36819,4 +36729,4 @@ webpackJsonp([40], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-events-b974e8898126b529def07718e4f7238d.js.map
+//# sourceMappingURL=pages.channel-events-222149ab9d1aa4ec8c92ce55d2a85c32.js.map
