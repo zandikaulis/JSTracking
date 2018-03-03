@@ -81,6 +81,10 @@ var MetadataEvent = exports.MetadataEvent = __webpack_require__(14);
 var ErrorType = exports.ErrorType = __webpack_require__(15);
 var ErrorSource = exports.ErrorSource = __webpack_require__(16);
 
+// Chrome 63 and Opera have an issue (crbug.com/779962) that heavily throttle video in a
+// background tab while silent. So, we need to stop playback in that circumstance.
+var PAUSE_HIDDEN_SILENT_TAB = (Browser.name === 'chrome' && Browser.major === 63) || Browser.name === 'opera';
+
 // Prefix all localstorage keys to avoid namespace collisions
 var LOCAL_STORAGE_PREFIX = 'cvp.';
 
@@ -417,6 +421,8 @@ MediaPlayer.prototype._attachHandlers = function () {
     em.on(PlayerEvent.QUALITY_CHANGED, updateState);
     em.on(PlayerEvent.AUTO_SWITCH_QUALITY_CHANGED, updateState);
     em.on(PlayerEvent.DURATION_CHANGED, updateState);
+    em.on(PlayerEvent.VOLUME_CHANGED, this._onVolumeChanged.bind(this));
+    em.on(PlayerEvent.MUTED_CHANGED, this._onMutedChanged.bind(this));
     em.on(PlayerEvent.SEEK_COMPLETED, this._onSeekCompleted.bind(this));
     em.on(PlayerState.IDLE, updateState);
     em.on(PlayerState.READY, this._onReady.bind(this));
@@ -437,6 +443,18 @@ MediaPlayer.prototype._attachHandlers = function () {
     em.on(ClientMessage.SET_PLAYBACK_RATE, sink.setPlaybackRate.bind(sink));
     em.on(ClientMessage.ADD_CUE, this._addCue.bind(this));
     em.on(MetadataEvent.ID3, this._onID3.bind(this));
+};
+
+MediaPlayer.prototype._onVolumeChanged = function () {
+    if (PAUSE_HIDDEN_SILENT_TAB && document.hidden && this.getVolume() === 0) {
+        this._postMessage(WorkerMessage.PAUSE);
+    }
+};
+
+MediaPlayer.prototype._onMutedChanged = function () {
+    if (PAUSE_HIDDEN_SILENT_TAB && document.hidden && this.isMuted()) {
+        this._postMessage(WorkerMessage.PAUSE);
+    }
 };
 
 MediaPlayer.prototype._onSeekCompleted = function () {
@@ -520,10 +538,9 @@ MediaPlayer.prototype._onVisibilityChange = function () {
 
     // Chrome 63 bug: crbug.com/779962
     if (
-        Browser.name === 'chrome'
-        && Browser.major === 63
-        && document.hidden
+        PAUSE_HIDDEN_SILENT_TAB
         && !this._isPaused
+        && document.hidden
         && (this.isMuted() || this.getVolume() === 0)
     ) {
         this._postMessage(WorkerMessage.PAUSE);
@@ -1081,6 +1098,7 @@ MediaSink.prototype.enqueue = function (sample) {
  */
 MediaSink.prototype.play = function () {
     // Need to catch rejected promise or it will be logged to console
+    this._paused = false;
     var promise = this._video.play();
     if (promise) {
         promise.catch(noop);
@@ -1092,10 +1110,8 @@ MediaSink.prototype.play = function () {
  */
 MediaSink.prototype.pause = function () {
     this._idle = true;
-    if (!this._video.paused) {
-        this._outstandingPauseEvents++;
-        this._video.pause();
-    }
+    this._paused = true;
+    this._video.pause();
 };
 
 /**
@@ -1106,7 +1122,7 @@ MediaSink.prototype.reset = function () {
     this._mediaSource = null;
     this._tracks = Object.create(null);
     this._idle = true;
-    this._outstandingPauseEvents = 0;
+    this._paused = true;
     this._iosFullScreen = false;
 
     removeCues(this._metadataTrack, 0, Infinity);
@@ -1393,13 +1409,11 @@ MediaSink.prototype._onWebkitEndFullscreen = function() {
 }
 
 MediaSink.prototype._onVideoPause = function () {
-    if (this._outstandingPauseEvents > 0) {
-        this._outstandingPauseEvents--;
-    } else if (!this._iosFullScreen){
-        // If video pauses when ios is fullscreen, the native playback controls are active.
-        // The calls to play/pause affect the video element directly and our APIs are never called
-        // this event wasn't caused by one of our pause actions,
-        // so the browser paused on its own.
+    // Notify mediaplayer if the browser paused on its own. This can happen
+    // when the player is muted and hidden. When iOS is in fullscreen, native
+    // playback controls are shown. These may pause the video element directly,
+    // so don't count pause events while iOS is fullscreen as a 'browser' pause.
+    if (this._video.paused && !this._paused && !this._iosFullScreen){
         this._onstop();
     }
 };
