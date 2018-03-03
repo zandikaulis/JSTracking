@@ -117,6 +117,18 @@ window.__twilightSettings = {
                 "value": "enabled"
             }]
         },
+        "0e636d13-56a8-44f4-bd51-7e65cd5a5225": {
+            "name": "twilight_clips_howdy_partner",
+            "v": 3193,
+            "t": 1,
+            "groups": [{
+                "weight": 1,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant1"
+            }]
+        },
         "1318509a-bf97-475d-acdc-df6a24ef6e3e": {
             "name": "twilight_videos_in_sidenav",
             "v": 2842,
