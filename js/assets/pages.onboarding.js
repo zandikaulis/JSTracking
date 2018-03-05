@@ -1607,7 +1607,7 @@ webpackJsonp([50, 75], {
                     return new URL(e, r.n.config.apiBaseURL)
                 }, e.constructLegacyAPIResponse = function(e) {
                     return a.__awaiter(this, void 0, void 0, function() {
-                        var t, n, r;
+                        var t, n, r, i;
                         return a.__generator(this, function(a) {
                             switch (a.label) {
                                 case 0:
@@ -1619,7 +1619,7 @@ webpackJsonp([50, 75], {
                                 case 2:
                                     return n = a.sent(), e.ok ? t.body = n : t.error = n, [3, 4];
                                 case 3:
-                                    return r = a.sent(), t.requestError = r, [3, 4];
+                                    return r = a.sent(), e.headers && e.headers.get && (i = e.headers.get("Content-Type")) && -1 !== i.indexOf("application/json") && (t.requestError = r), [3, 4];
                                 case 4:
                                     return [2, t]
                             }
@@ -1849,12 +1849,12 @@ webpackJsonp([50, 75], {
             I = Object(w.compose)(Object(k.a)(N, {
                 name: "banUserFromCommunity"
             }))(T);
-        var D = Object(f.b)(null, function(e) {
+        var x = Object(f.b)(null, function(e) {
                 return Object(y.b)({
                     onCloseModal: v.c
                 }, e)
             })(I),
-            x = (n("npyu"), n("plcU")),
+            D = (n("npyu"), n("plcU")),
             F = "error-message",
             L = function(e) {
                 function t() {
@@ -1998,7 +1998,7 @@ webpackJsonp([50, 75], {
                     })))
                 }, t
             }(r.Component),
-            G = Object(w.compose)(Object(k.a)(x, {
+            G = Object(w.compose)(Object(k.a)(D, {
                 name: "timeoutUserFromCommunity"
             }))(L);
         var R = Object(f.b)(null, function(e) {
@@ -2012,7 +2012,7 @@ webpackJsonp([50, 75], {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onStreamBanClick = function() {
                         var e = Object(c.a)(t.props.login, t.props.displayName, !0);
-                        t.props.onShowModal(D, {
+                        t.props.onShowModal(x, {
                             communityID: t.props.data.community.id,
                             communityName: t.props.communityName,
                             currentUserID: t.props.data.currentUser.id,
@@ -2064,7 +2064,7 @@ webpackJsonp([50, 75], {
                         return {
                             fetchPolicy: "network-only",
                             variables: {
-                                name: decodeURIComponent(e.communityName)
+                                name: e.communityName
                             }
                         }
                     }
@@ -4331,8 +4331,8 @@ webpackJsonp([50, 75], {
             O = n("bZTi"),
             T = n("ZyA2"),
             I = n("NXs7"),
-            D = n("VAT8"),
-            x = n("2b/B"),
+            x = n("VAT8"),
+            D = n("2b/B"),
             F = n("Odds"),
             L = (n("l5N5"), function(e) {
                 function t() {
@@ -4377,7 +4377,7 @@ webpackJsonp([50, 75], {
                         flexWrap: F.Q.NoWrap,
                         flexGrow: 0,
                         flexShrink: 0
-                    }, r.createElement(x.a, {
+                    }, r.createElement(D.a, {
                         isOnboarding: !0
                     }))))) : (i.i.warn("OnboardingTopNavComponent is only meant to be used for logged in users."), null)
                 }, t = a.__decorate([Object(p.d)("OnboardingTopNav")], t)
@@ -4401,7 +4401,7 @@ webpackJsonp([50, 75], {
                     this.props.isLoggedIn || window.location.assign("/" + location.search)
                 }, t.prototype.render = function() {
                     return r.createElement(F._2, {
-                        className: Object(D.c)(I.a.Dark),
+                        className: Object(x.c)(I.a.Dark),
                         display: F.N.Flex,
                         flexWrap: F.Q.NoWrap,
                         position: F._9.Relative,
@@ -5047,4 +5047,4 @@ webpackJsonp([50, 75], {
         })
     }
 });
-//# sourceMappingURL=pages.onboarding-d5179a85000ccb9f63614741ecedd465.js.map
+//# sourceMappingURL=pages.onboarding-c2d725dd1878237841fa7bfb8634dc52.js.map

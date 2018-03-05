@@ -1288,7 +1288,7 @@ webpackJsonp([75], {
                         return {
                             fetchPolicy: "network-only",
                             variables: {
-                                name: decodeURIComponent(e.communityName)
+                                name: e.communityName
                             }
                         }
                     }
@@ -1296,12 +1296,12 @@ webpackJsonp([75], {
                     autoReportInteractive: !0
                 })], t)
             }(r.Component);
-        var U = Object(y.b)(null, function(e) {
+        var L = Object(y.b)(null, function(e) {
                 return Object(f.b)({
                     onShowModal: v.d
                 }, e)
             })(M),
-            L = n("BwgW"),
+            U = n("BwgW"),
             R = n("fc0G"),
             z = n("L3z0"),
             B = n("5MsU"),
@@ -1370,12 +1370,12 @@ webpackJsonp([75], {
                     var e = this;
                     this.checkPlayerDependencyAnimationFrame && cancelAnimationFrame(this.checkPlayerDependencyAnimationFrame), window.removeEventListener("beforeunload", function() {
                         return e.resetVolume()
-                    }), this.resetVolume(), this.player && (this.player.removeEventListener(B.a.PlayerReady, this.onPlayerReady), this.player.removeEventListener(z.a.Play, this.onPlayerPlay), this.player.removeEventListener(z.a.Playing, this.onPlayerPlaying), L.extensionService.unregisterPlayer(), this.player.destroy())
+                    }), this.resetVolume(), this.player && (this.player.removeEventListener(B.a.PlayerReady, this.onPlayerReady), this.player.removeEventListener(z.a.Play, this.onPlayerPlay), this.player.removeEventListener(z.a.Playing, this.onPlayerPlaying), U.extensionService.unregisterPlayer(), this.player.destroy())
                 }, t.prototype.initializePlayer = function() {
                     var e = V;
                     this.props.channelLogin && (e.channel = this.props.channelLogin);
                     var t = new window.Twitch.Player(this.playerRef, e);
-                    this.player = t, t.addEventListener(B.a.PlayerReady, this.onPlayerReady), t.addEventListener(z.a.Play, this.onPlayerPlay), t.addEventListener(z.a.Playing, this.onPlayerPlaying), L.extensionService.registerPlayer(this.player)
+                    this.player = t, t.addEventListener(B.a.PlayerReady, this.onPlayerReady), t.addEventListener(z.a.Play, this.onPlayerPlay), t.addEventListener(z.a.Playing, this.onPlayerPlaying), U.extensionService.registerPlayer(this.player)
                 }, t.prototype.resetVolume = function() {
                     this.userVolumeSetting && window.localStorage.setItem("volume", this.userVolumeSetting), this.userMuteSetting && window.localStorage.setItem("muted", this.userMuteSetting)
                 }, t.tagInjected = !1, t = n = a.__decorate([Object(_.d)("LiveChannelPreviewCard")], t);
@@ -1405,7 +1405,7 @@ webpackJsonp([75], {
                             position: p._9.Absolute,
                             attachTop: !0,
                             attachRight: !0
-                        }, r.createElement(U, {
+                        }, r.createElement(L, {
                             communityName: n.props.directoryName,
                             login: e.broadcaster.login,
                             displayName: e.broadcaster.displayName,
@@ -3463,4 +3463,4 @@ webpackJsonp([75], {
         })
     }
 });
-//# sourceMappingURL=pages.anon-front.components.featured-genres-efd606d88a6650fcec43fa7910003903.js.map
+//# sourceMappingURL=pages.anon-front.components.featured-genres-e5aa29c6214cb561477dd3e51c56eebd.js.map

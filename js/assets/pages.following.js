@@ -1520,7 +1520,7 @@ webpackJsonp([47], {
                     return new URL(e, a.n.config.apiBaseURL)
                 }, e.constructLegacyAPIResponse = function(e) {
                     return i.__awaiter(this, void 0, void 0, function() {
-                        var t, n, a;
+                        var t, n, a, r;
                         return i.__generator(this, function(i) {
                             switch (i.label) {
                                 case 0:
@@ -1532,7 +1532,7 @@ webpackJsonp([47], {
                                 case 2:
                                     return n = i.sent(), e.ok ? t.body = n : t.error = n, [3, 4];
                                 case 3:
-                                    return a = i.sent(), t.requestError = a, [3, 4];
+                                    return a = i.sent(), e.headers && e.headers.get && (r = e.headers.get("Content-Type")) && -1 !== r.indexOf("application/json") && (t.requestError = a), [3, 4];
                                 case 4:
                                     return [2, t]
                             }
@@ -1963,7 +1963,7 @@ webpackJsonp([47], {
                         return {
                             fetchPolicy: "network-only",
                             variables: {
-                                name: decodeURIComponent(e.communityName)
+                                name: e.communityName
                             }
                         }
                     }
@@ -9206,4 +9206,4 @@ webpackJsonp([47], {
     },
     "zH/G": function(e, t) {}
 });
-//# sourceMappingURL=pages.following-7b48bac9f0da54485db961c61c9013c0.js.map
+//# sourceMappingURL=pages.following-25dde9b8f0e17fe15e2d716b74664848.js.map

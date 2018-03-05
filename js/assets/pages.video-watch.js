@@ -1823,7 +1823,7 @@ webpackJsonp([42, 81], {
                     return new URL(e, a.n.config.apiBaseURL)
                 }, e.constructLegacyAPIResponse = function(e) {
                     return i.__awaiter(this, void 0, void 0, function() {
-                        var t, n, a;
+                        var t, n, a, r;
                         return i.__generator(this, function(i) {
                             switch (i.label) {
                                 case 0:
@@ -1835,7 +1835,7 @@ webpackJsonp([42, 81], {
                                 case 2:
                                     return n = i.sent(), e.ok ? t.body = n : t.error = n, [3, 4];
                                 case 3:
-                                    return a = i.sent(), t.requestError = a, [3, 4];
+                                    return a = i.sent(), e.headers && e.headers.get && (r = e.headers.get("Content-Type")) && -1 !== r.indexOf("application/json") && (t.requestError = a), [3, 4];
                                 case 4:
                                     return [2, t]
                             }
@@ -4249,9 +4249,8 @@ webpackJsonp([42, 81], {
                 })
             }), t), n)
         }
-        var ae = n("qLdk"),
-            re = n("pg5l"),
-            oe = (n("Vaxm"), function(e) {
+        var ae = n("pg5l"),
+            re = (n("Vaxm"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -4420,7 +4419,7 @@ webpackJsonp([42, 81], {
                             label: Object(C.d)("Dark Mode", "ChatSettings"),
                             onChange: this.props.onDarkModeToggle
                         }),
-                        t = (!this.props.isPopout || Object(ae.a)()) && a.createElement("button", {
+                        t = a.createElement("button", {
                             onClick: this.props.onChatPopout,
                             "data-a-target": "popout-chat-button",
                             "data-test-selector": "popout-button"
@@ -4429,7 +4428,7 @@ webpackJsonp([42, 81], {
                             onClick: this.props.onLegacyChatPopout,
                             "data-test-selector": "legacy-popout-button"
                         }, Object(C.d)("Legacy Popout", "ChatSettings")),
-                        i = (!this.props.isPopout || !ae.a) && a.createElement("button", {
+                        i = !this.props.isPopout && a.createElement("button", {
                             onClick: this.props.onChatHide,
                             "data-a-target": "hide-chat-button",
                             "data-test-selector": "hide-chat-button"
@@ -4477,7 +4476,7 @@ webpackJsonp([42, 81], {
                     },
                     enumerable: !0,
                     configurable: !0
-                }), t = i.__decorate([Object(E.a)(re, {
+                }), t = i.__decorate([Object(E.a)(ae, {
                     options: function(e) {
                         return {
                             variables: {
@@ -4487,7 +4486,7 @@ webpackJsonp([42, 81], {
                     }
                 })], t)
             }(a.Component)),
-            se = function(e) {
+            oe = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -4527,7 +4526,7 @@ webpackJsonp([42, 81], {
                             settingName: b.a.HideChat
                         })
                     }, t.onChatPopout = function() {
-                        t.props.onChatHide();
+                        t.props.isPopout || t.props.onChatHide();
                         var e = window.open("/popout/" + t.props.channelLogin + "/chat?popout=", "_blank", "right=50,top=50,width=400,height=600,resizable=yes,scrollbars=no,toolbar=no,location=no,directories=no,status=no,menubar=no,copyhistory=no");
                         e && !Object(d.a)() && (e.focus(), Object(c.a)(e, function() {
                             t.props.onChatUnhide()
@@ -4543,10 +4542,10 @@ webpackJsonp([42, 81], {
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return a.createElement(ce, {
+                    return a.createElement(de, {
                         disabled: this.props.disabled,
                         onToggle: this.handleSettingsToggle
-                    }, a.createElement(oe, {
+                    }, a.createElement(re, {
                         authToken: this.props.authToken,
                         darkModeEnabled: this.props.darkModeEnabled,
                         editAppearance: this.state.editAppearance,
@@ -4573,7 +4572,7 @@ webpackJsonp([42, 81], {
                     }))
                 }, t
             }(a.Component);
-        var le = Object(r.b)(function(e) {
+        var se = Object(r.b)(function(e) {
                 return {
                     isLoggedIn: Object(h.d)(e),
                     darkModeEnabled: Object(g.a)(e) === l.a.Dark,
@@ -4602,9 +4601,9 @@ webpackJsonp([42, 81], {
                     },
                     onShowViewerCard: v.d
                 }, e)
-            })(se),
-            de = Object(o.e)(le),
-            ce = function(e) {
+            })(oe),
+            le = Object(o.e)(se),
+            de = function(e) {
                 return a.createElement(F.a, {
                     onToggle: e.onToggle
                 }, a.createElement(I.v, {
@@ -4620,9 +4619,9 @@ webpackJsonp([42, 81], {
                 }, e.children))
             };
         n.d(t, "a", function() {
-            return de
+            return le
         }), n.d(t, "b", function() {
-            return ce
+            return de
         })
     },
     MSFW: function(e, t) {},
@@ -10274,9 +10273,9 @@ webpackJsonp([42, 81], {
                 userLogin: e.userLogin,
                 duration: e.duration
             }, "ChatLine"))
-        }, t.v = b, t.a = k, t.b = y, t.s = function(e) {
-            if (e.isPrime) return i.createElement("span", null, k(e.userLogin, b(e.channel)));
-            return i.createElement("span", null, y(e.userLogin, e.tier))
+        }, t.v = b, t.a = y, t.b = _, t.s = function(e) {
+            if (e.isPrime) return i.createElement("span", null, y(e.userLogin, b(e.channel)));
+            return i.createElement("span", null, _(e.userLogin, e.tier))
         }, t.r = function(e) {
             if ("custom" === e.tier) return i.createElement("span", null, (t = e.userLogin, n = e.recipient, Object(a.d)("{userLogin} gifted a subscription to {recipient}!", {
                 userLogin: t,
@@ -10284,9 +10283,10 @@ webpackJsonp([42, 81], {
             }, "ChatLine")));
             var t, n;
             return i.createElement("span", null, function(e, t, n) {
+                var i = k(t);
                 return Object(a.d)("{userLogin} gifted a {subTier} sub to {recipient}!", {
                     userLogin: e,
-                    subTier: t,
+                    subTier: i,
                     recipient: n
                 }, "ChatLine")
             }(e.userLogin, e.tier, e.recipient))
@@ -10355,13 +10355,13 @@ webpackJsonp([42, 81], {
             return i.createElement("span", null, t)
         }, t.e = function() {
             return i.createElement("span", null, Object(a.d)("Chat was cleared by a moderator", "ChatLine"))
-        }, t.c = _, t.t = function(e) {
+        }, t.c = C, t.t = function(e) {
             return i.createElement("span", {
                 key: "timestamp",
                 className: "chat-line__timestamp",
                 "data-a-target": "chat-timestamp",
                 "data-test-selector": "chat-timestamp"
-            }, _(new Date(e)))
+            }, C(new Date(e)))
         }, t.u = function(e) {
             return i.createElement("span", {
                 key: "timestamp",
@@ -10472,21 +10472,33 @@ webpackJsonp([42, 81], {
             }, Object(a.d)("Twitch Prime", "ChatLine"))
         }
 
-        function k(e, t) {
+        function k(e) {
+            switch (e) {
+                case "Tier 2":
+                    return Object(a.d)("Tier 2", "ChatLine");
+                case "Tier 3":
+                    return Object(a.d)("Tier 3", "ChatLine");
+                default:
+                    return Object(a.d)("Tier 1", "ChatLine")
+            }
+        }
+
+        function y(e, t) {
             return Object(a.d)("{userLogin} just subscribed with {service}!", {
                 userLogin: e,
                 service: t
             }, "ChatLine")
         }
 
-        function y(e, t) {
+        function _(e, t) {
+            var n = k(t);
             return Object(a.d)("{userLogin} just subscribed with a {subTier} sub!", {
                 userLogin: e,
-                subTier: t
+                subTier: n
             }, "ChatLine")
         }
 
-        function _(e) {
+        function C(e) {
             var t = e.getHours() % 12;
             0 === t && (t = 12);
             var n = e.getMinutes(),
@@ -15930,16 +15942,6 @@ webpackJsonp([42, 81], {
         })), e.exports = i
     },
     q8Cw: function(e, t) {},
-    qLdk: function(e, t, n) {
-        "use strict";
-        n.d(t, "a", function() {
-            return a
-        });
-        var i = n("6sO2"),
-            a = function() {
-                return i.b.get("chatrooms_enabled", !1)
-            }
-    },
     qjMx: function(e, t) {
         var n = {
             kind: "Document",
@@ -18577,14 +18579,17 @@ webpackJsonp([42, 81], {
         "use strict";
         n.d(t, "a", function() {
             return i
+        }), n.d(t, "b", function() {
+            return a
         });
         var i = {
-            Created: "created",
-            Downloading: "downloading",
-            Transmuxing: "transmuxing",
-            Failed: "failed",
-            Complete: "complete"
-        }
+                Created: "created",
+                Downloading: "downloading",
+                Transmuxing: "transmuxing",
+                Failed: "failed",
+                Complete: "complete"
+            },
+            a = "public"
     },
     zzpv: function(e, t) {
         var n = {
@@ -18671,4 +18676,4 @@ webpackJsonp([42, 81], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.video-watch-beb5df2497343988122ad433e5303394.js.map
+//# sourceMappingURL=pages.video-watch-f098c4b899c5dd14c904c6e69c49798a.js.map

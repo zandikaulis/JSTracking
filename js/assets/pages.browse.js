@@ -1017,7 +1017,7 @@ webpackJsonp([52], {
                     return new URL(e, r.n.config.apiBaseURL)
                 }, e.constructLegacyAPIResponse = function(e) {
                     return a.__awaiter(this, void 0, void 0, function() {
-                        var t, n, r;
+                        var t, n, r, i;
                         return a.__generator(this, function(a) {
                             switch (a.label) {
                                 case 0:
@@ -1029,7 +1029,7 @@ webpackJsonp([52], {
                                 case 2:
                                     return n = a.sent(), e.ok ? t.body = n : t.error = n, [3, 4];
                                 case 3:
-                                    return r = a.sent(), t.requestError = r, [3, 4];
+                                    return r = a.sent(), e.headers && e.headers.get && (i = e.headers.get("Content-Type")) && -1 !== i.indexOf("application/json") && (t.requestError = r), [3, 4];
                                 case 4:
                                     return [2, t]
                             }
@@ -1459,7 +1459,7 @@ webpackJsonp([52], {
                         return {
                             fetchPolicy: "network-only",
                             variables: {
-                                name: decodeURIComponent(e.communityName)
+                                name: e.communityName
                             }
                         }
                     }
@@ -4907,4 +4907,4 @@ webpackJsonp([52], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.browse-8ec6104b2c7d33a76d53b6b4cbc62ff6.js.map
+//# sourceMappingURL=pages.browse-52c3ca888180a5eb8737961b73eb4b92.js.map

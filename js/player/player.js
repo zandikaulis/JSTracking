@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".b1601eeb9dba66a2f1e4.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".9e4ffb0654aa92a96dcc.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -7246,7 +7246,7 @@
                     value: function(e) {
                         var t = e.mediaPlayerInstance,
                             n = e.mediaPlayerHandle;
-                        this._mediaPlayer = t, this._mediaPlayerHandle = n, this._cache = {
+                        this.sendPerformanceEvent(C.e), this._mediaPlayer = t, this._mediaPlayerHandle = n, this._cache = {
                             currentQuality: this._mediaPlayer.getQuality()
                         }, this._attachInternalListeners(n), this._eventEmitter.emit(a.p), this._apiCallQueue.forEach(function(e) {
                             e()
@@ -7335,9 +7335,8 @@
                         if (null === this._mediaPlayer) return void this._apiCallQueue.push(this.load.bind(this));
                         if (this._src) {
                             var e = this.store.getState(),
-                                t = e.playback,
-                                n = e.window;
-                            this.store.dispatch(Object(C.d)("mp_master_manifest_request", n.performance.now())), this._mediaPlayer.load(this._src), this._eventEmitter.emit(u.i), t.autoplay && (this._mediaPlayer.play(), this._eventEmitter.emit(u.k))
+                                t = e.playback;
+                            this.sendPerformanceEvent(C.d), this._mediaPlayer.load(this._src), this._eventEmitter.emit(u.i), t.autoplay && (this._mediaPlayer.play(), this._eventEmitter.emit(u.k))
                         }
                     }
                 }, {
@@ -7635,10 +7634,7 @@
                 }, {
                     key: "onPlaying",
                     value: function() {
-                        this._readyStateStatus <= _.a && (this._readyStateStatus = _.b);
-                        var e = this.store.getState(),
-                            t = e.window;
-                        this.store.dispatch(Object(C.d)(C.c, t.performance.now())), this._eventEmitter.emit(u.g), this._eventEmitter.emit(u.l)
+                        this._readyStateStatus <= _.a && (this._readyStateStatus = _.b), this.sendPerformanceEvent(C.f), this._eventEmitter.emit(u.g), this._eventEmitter.emit(u.l)
                     }
                 }, {
                     key: "onQualityChanged",
@@ -7697,7 +7693,7 @@
                 }, {
                     key: "onPerformanceEvent",
                     value: function(e) {
-                        this.store.dispatch(Object(C.d)(e.name, e.time))
+                        this.store.dispatch(Object(C.g)(e.name, e.time))
                     }
                 }, {
                     key: "onBuffering",
@@ -7718,15 +7714,14 @@
                     key: "onReady",
                     value: function() {
                         var e = this.store.getState(),
-                            t = e.analytics,
-                            n = e.window;
-                        this.store.dispatch(Object(C.d)("mp_master_manifest_ready", n.performance.now())), this._hasRetried = !1, this._readyStateStatus = _.c, this._networkState = w.b, this.store.dispatch(Object(k.d)(o.h, {
+                            t = e.analytics;
+                        this.sendPerformanceEvent(C.c), this._hasRetried = !1, this._readyStateStatus = _.c, this._networkState = w.b, this.store.dispatch(Object(k.d)(o.h, {
                             time_since_load_start: Date.now() - t.playSessionStartTime
                         }));
-                        var r = h()(this._mediaPlayer.getManifestInfo(), function(e, t, n) {
+                        var n = h()(this._mediaPlayer.getManifestInfo(), function(e, t, n) {
                             return e[n.toLowerCase().replace(/-/g, "_")] = t, e
                         }, {});
-                        this._eventEmitter.emit(a.i, r), this._eventEmitter.emit(u.b), this._fireLoadedMetadata = !0, this._cache.currentQuality = this._mediaPlayer.getQuality()
+                        this._eventEmitter.emit(a.i, n), this._eventEmitter.emit(u.b), this._fireLoadedMetadata = !0, this._cache.currentQuality = this._mediaPlayer.getQuality()
                     }
                 }, {
                     key: "onID3",
@@ -7812,6 +7807,13 @@
                     key: "_attachInternalListeners",
                     value: function(e) {
                         this._attachPlayerEventListeners(e), this._attachPlayerStateListeners(e), this._attachErrorListeners(e), this._attachMetadataListeners(e)
+                    }
+                }, {
+                    key: "sendPerformanceEvent",
+                    value: function(e) {
+                        var t = this.store.getState(),
+                            n = t.window;
+                        this.store.dispatch(Object(C.g)(e, n.performance.now()))
                     }
                 }]), e
             }();
@@ -8532,7 +8534,9 @@
             }
 
             function u() {
-                Be = !0, qe.resolve(), De.emit(b.p)
+                var e = t.getState(),
+                    n = e.window;
+                t.dispatch(Object(T.g)(T.e, n.performance.now())), Be = !0, qe.resolve(), De.emit(b.p)
             }
 
             function l(e) {
@@ -8573,7 +8577,7 @@
                 Qe && (Qe = !1, De.emit(g.k)), ot = !1, Ze = e.format, Pe(Ae("getVideoTime")), Ce(), Ve < w.c && (null !== Le.getChannel() && ($e = 1 / 0), Ve = w.c, De.emit(g.h)), Ve < w.a && (Ve = w.a, De.emit(g.g)), Ve = w.b;
                 var n = t.getState(),
                     r = n.window;
-                t.dispatch(Object(T.d)(T.c, r.performance.now())), De.emit(g.l)
+                t.dispatch(Object(T.g)(T.f, r.performance.now())), De.emit(g.l)
             }
 
             function X() {
@@ -10244,12 +10248,21 @@
             return a
         }), n.d(t, "b", function() {
             return o
-        }), n.d(t, "c", function() {
+        }), n.d(t, "f", function() {
             return s
-        }), t.d = r, t.e = i;
+        }), n.d(t, "e", function() {
+            return u
+        }), n.d(t, "d", function() {
+            return c
+        }), n.d(t, "c", function() {
+            return l
+        }), t.g = r, t.h = i;
         var a = "performance milestone reached",
             o = "player init milestone reached",
-            s = "web_playback_started"
+            s = "web_playback_started",
+            u = "web_backend_loaded",
+            c = "mp_master_manifest_request",
+            l = "mp_master_manifest_ready"
     }, function(e, t, n) {
         "use strict";
 
@@ -29065,7 +29078,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.03.05-183705+eee3cd5355093d301578ed46d659526510bc111c",
+                    app_version: "2018.03.05-200353+1e4f49e0bcf5eb4e68910cb1cf5c288357227d6a",
                     flash_version: r,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -29664,7 +29677,7 @@
             function r(r) {
                 var P = t.getState(),
                     C = P.window;
-                t.dispatch(Object(Pc.d)("web_backend_init", C.performance.now()));
+                t.dispatch(Object(Pc.g)("web_backend_init", C.performance.now()));
                 var O = document.createElement("div");
                 O.className = "player-video", e.appendChild(O);
                 var T = t.getState(),
@@ -34465,7 +34478,7 @@
                 },
                 function() {
                     var a = void 0;
-                    a = "string" == typeof e || e instanceof String ? document.getElementById(e) : e, v = Da(), v.dispatch(Object(Yw.b)(window)), v.dispatch(Object(Pc.e)(zk));
+                    a = "string" == typeof e || e instanceof String ? document.getElementById(e) : e, v = Da(), v.dispatch(Object(Yw.b)(window)), v.dispatch(Object(Pc.h)(zk));
                     var s = i(t);
                     v.dispatch(Gi(s)), Object(As.x)(s), s.debug && s.verbose && v.subscribe(function() {
                         console.debug("state change: %o", v.getState())

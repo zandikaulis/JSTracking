@@ -3292,7 +3292,7 @@ webpackJsonp([41], {
                     return new URL(e, r.n.config.apiBaseURL)
                 }, e.constructLegacyAPIResponse = function(e) {
                     return n.__awaiter(this, void 0, void 0, function() {
-                        var t, a, r;
+                        var t, a, r, i;
                         return n.__generator(this, function(n) {
                             switch (n.label) {
                                 case 0:
@@ -3304,7 +3304,7 @@ webpackJsonp([41], {
                                 case 2:
                                     return a = n.sent(), e.ok ? t.body = a : t.error = a, [3, 4];
                                 case 3:
-                                    return r = n.sent(), t.requestError = r, [3, 4];
+                                    return r = n.sent(), e.headers && e.headers.get && (i = e.headers.get("Content-Type")) && -1 !== i.indexOf("application/json") && (t.requestError = r), [3, 4];
                                 case 4:
                                     return [2, t]
                             }
@@ -20099,4 +20099,4 @@ webpackJsonp([41], {
         })(a("PJh5"))
     }
 });
-//# sourceMappingURL=pages.teams-dashboard-b5e8c63016af0b56d2137cf88dbafcd1.js.map
+//# sourceMappingURL=pages.teams-dashboard-a95d8ce0d61e2f7b336ee99e4c0eb1ed.js.map

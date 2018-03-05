@@ -2219,7 +2219,7 @@ webpackJsonp([43], {
                     return new URL(e, r.n.config.apiBaseURL)
                 }, e.constructLegacyAPIResponse = function(e) {
                     return n.__awaiter(this, void 0, void 0, function() {
-                        var t, a, r;
+                        var t, a, r, s;
                         return n.__generator(this, function(n) {
                             switch (n.label) {
                                 case 0:
@@ -2231,7 +2231,7 @@ webpackJsonp([43], {
                                 case 2:
                                     return a = n.sent(), e.ok ? t.body = a : t.error = a, [3, 4];
                                 case 3:
-                                    return r = n.sent(), t.requestError = r, [3, 4];
+                                    return r = n.sent(), e.headers && e.headers.get && (s = e.headers.get("Content-Type")) && -1 !== s.indexOf("application/json") && (t.requestError = r), [3, 4];
                                 case 4:
                                     return [2, t]
                             }
@@ -13204,4 +13204,4 @@ webpackJsonp([43], {
         })(a("PJh5"))
     }
 });
-//# sourceMappingURL=pages.payments-09befdc6b9363d775ada96cd548e6ac4.js.map
+//# sourceMappingURL=pages.payments-66272bd429d7436d1f808b29725158f3.js.map

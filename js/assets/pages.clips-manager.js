@@ -486,10 +486,34 @@ webpackJsonp([71], {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.renderForClipsViewing = function() {
-                        return i.createElement("div", null, n.renderInput(), n.renderSave(), i.createElement(u.u, {
+                        return i.createElement("div", null, i.createElement(u._37, {
+                            id: h.TITLE_INPUT,
+                            "data-test-selector": h.TITLE_INPUT,
+                            value: n.state.title,
+                            onChange: n.handleTitleEdit,
+                            onKeyDown: n.handleKeyDown
+                        }), i.createElement(u._2, {
+                            display: u.N.Flex,
+                            justifyContent: u._1.Between,
+                            alignItems: u.c.Center,
+                            padding: {
+                                top: 1
+                            }
+                        }, n.state.showError ? i.createElement(u._35, {
+                            color: u.I.Error
+                        }, n.getErrorMessage()) : i.createElement(u._35, {
+                            color: u.I.Alt2
+                        }, n.getRemainingCharacterText()), i.createElement(u._2, {
+                            display: u.N.Flex
+                        }, i.createElement(u.u, {
                             "data-test-selector": h.TITLE_SAVE,
-                            onClick: n.props.onCancel
-                        }, Object(l.d)("Cancel", "ClipsTitleEdit")), n.state.showError ? n.getErrorMessage() : n.getRemainingCharacterText())
+                            onClick: n.props.onCancel,
+                            type: u.z.Hollow
+                        }, Object(l.d)("Cancel", "ClipsTitleEdit")), i.createElement(u._2, {
+                            padding: {
+                                left: 1
+                            }
+                        }, n.renderSave()))))
                     }, n.renderForManager = function() {
                         return i.createElement(u.S, {
                             id: h.TITLE_INPUT,
@@ -503,7 +527,14 @@ webpackJsonp([71], {
                             margin: {
                                 right: 1
                             }
-                        }, n.renderInput()), i.createElement(u._2, {
+                        }, i.createElement(u.Y, {
+                            id: h.TITLE_INPUT,
+                            "data-test-selector": h.TITLE_INPUT,
+                            type: u.Z.Text,
+                            value: n.state.title,
+                            onChange: n.handleTitleEdit,
+                            onKeyDown: n.handleKeyDown
+                        })), i.createElement(u._2, {
                             flexShrink: 0,
                             flexGrow: 0
                         }, i.createElement(u._2, {
@@ -521,15 +552,6 @@ webpackJsonp([71], {
                         }, Object(l.d)("Title Saved!", "ClipsTitleEdit")) : i.createElement(u._35, {
                             color: u.I.Error
                         }, n.getErrorMessage()))))))))
-                    }, n.renderInput = function() {
-                        return i.createElement(u.Y, {
-                            id: h.TITLE_INPUT,
-                            "data-test-selector": h.TITLE_INPUT,
-                            type: u.Z.Text,
-                            value: n.state.title,
-                            onChange: n.handleTitleEdit,
-                            onKeyDown: n.handleKeyDown
-                        })
                     }, n.renderSave = function() {
                         return i.createElement(u.u, {
                             "data-test-selector": h.TITLE_SAVE,
@@ -3705,4 +3727,4 @@ webpackJsonp([71], {
         })), e.exports = a
     }
 });
-//# sourceMappingURL=pages.clips-manager-7c02aa31cae7bdc523337ff93ddf4a59.js.map
+//# sourceMappingURL=pages.clips-manager-6af05f8963ae3540fc6061378e7fc2f8.js.map

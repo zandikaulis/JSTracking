@@ -130,7 +130,7 @@ webpackJsonp([55], {
                     return new URL(e, i.n.config.apiBaseURL)
                 }, e.constructLegacyAPIResponse = function(e) {
                     return r.__awaiter(this, void 0, void 0, function() {
-                        var t, n, i;
+                        var t, n, i, a;
                         return r.__generator(this, function(r) {
                             switch (r.label) {
                                 case 0:
@@ -142,7 +142,7 @@ webpackJsonp([55], {
                                 case 2:
                                     return n = r.sent(), e.ok ? t.body = n : t.error = n, [3, 4];
                                 case 3:
-                                    return i = r.sent(), t.requestError = i, [3, 4];
+                                    return i = r.sent(), e.headers && e.headers.get && (a = e.headers.get("Content-Type")) && -1 !== a.indexOf("application/json") && (t.requestError = i), [3, 4];
                                 case 4:
                                     return [2, t]
                             }
@@ -1283,13 +1283,13 @@ webpackJsonp([55], {
             l = n("w9tK"),
             d = n("vH/s"),
             u = n("RH2O"),
-            m = n("2KeS"),
-            p = n("+xm8"),
+            p = n("2KeS"),
+            m = n("+xm8"),
             g = n("f2i/"),
             y = n("Aj/L"),
             h = n("9u8h"),
-            f = n("CSlQ"),
-            v = n("Odds"),
+            v = n("CSlQ"),
+            f = n("Odds"),
             b = (n("aMOL"), function() {
                 function e(e) {}
                 e.prototype.bind = function(e) {}
@@ -1379,35 +1379,35 @@ webpackJsonp([55], {
                     };
                     new window.OffAmazonPayments.Widgets.Wallet(e).bind("recurly-amazon-pay__wallet")
                 }, t.prototype.render = function() {
-                    return this.state.amazonScriptLoaded ? a.createElement(v._2, {
+                    return this.state.amazonScriptLoaded ? a.createElement(f._2, {
                         padding: {
                             top: 1
                         },
                         className: "recurly-amazon-pay"
-                    }, a.createElement(v._2, {
-                        display: this.state.walletLoaded ? v.N.Hide : v.N.Flex,
-                        alignItems: v.c.Center,
-                        justifyContent: v._1.Center
+                    }, a.createElement(f._2, {
+                        display: this.state.walletLoaded ? f.N.Hide : f.N.Flex,
+                        alignItems: f.c.Center,
+                        justifyContent: f._1.Center
                     }, a.createElement("div", {
                         id: "recurly-amazon-pay__button"
-                    })), a.createElement(v._2, {
-                        display: this.state.walletLoaded ? v.N.Flex : v.N.Hide,
-                        flexDirection: v.P.Column,
-                        alignItems: v.c.Center,
-                        justifyContent: v._1.Center
+                    })), a.createElement(f._2, {
+                        display: this.state.walletLoaded ? f.N.Flex : f.N.Hide,
+                        flexDirection: f.P.Column,
+                        alignItems: f.c.Center,
+                        justifyContent: f._1.Center
                     }, a.createElement("div", {
                         id: "recurly-amazon-pay__wallet",
                         className: "recurly-amazon-pay__wallet"
-                    }), a.createElement(v._2, {
+                    }), a.createElement(f._2, {
                         padding: {
                             top: 1
                         }
-                    }, a.createElement(v.u, {
+                    }, a.createElement(f.u, {
                         onClick: this.handleSubmit,
-                        state: this.state.awaitingResponse ? v.y.Loading : v.y.Default,
+                        state: this.state.awaitingResponse ? f.y.Loading : f.y.Default,
                         disabled: this.state.awaitingResponse
-                    }, this.props.submitButtonCopy)))) : a.createElement(v._4, null)
-                }, t = r.__decorate([Object(f.d)("RecurlyAmazonPay")], t)
+                    }, this.props.submitButtonCopy)))) : a.createElement(f._4, null)
+                }, t = r.__decorate([Object(v.d)("RecurlyAmazonPay")], t)
             }(a.Component)),
             k = n("NXs7"),
             _ = n("0nzt"),
@@ -1430,7 +1430,7 @@ webpackJsonp([55], {
                     year: !1
                 }
             },
-            P = function(e) {
+            C = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -1522,37 +1522,37 @@ webpackJsonp([55], {
                     window.recurly && this.props.darkModeEnabled !== e.darkModeEnabled && this.setupConfigs()
                 }, t.prototype.render = function() {
                     var e = this;
-                    return a.createElement(v._2, {
+                    return a.createElement(f._2, {
                         className: "recurly-credit-card"
-                    }, a.createElement(v._2, {
+                    }, a.createElement(f._2, {
                         fullWidth: !0
-                    }, a.createElement(v._2, {
-                        display: this.state.recurlyReady ? v.N.Hide : v.N.Block
-                    }, a.createElement(v._4, {
+                    }, a.createElement(f._2, {
+                        display: this.state.recurlyReady ? f.N.Hide : f.N.Block
+                    }, a.createElement(f._4, {
                         fillContent: !0
-                    })), a.createElement(v._2, {
-                        display: this.state.recurlyReady ? v.N.Block : v.N.Hide
+                    })), a.createElement(f._2, {
+                        display: this.state.recurlyReady ? f.N.Block : f.N.Hide
                     }, a.createElement("form", {
                         className: "recurly-form",
                         ref: function(t) {
                             return e.form = t
                         }
-                    }, a.createElement(v._2, {
+                    }, a.createElement(f._2, {
                         margin: {
                             bottom: 1
                         }
-                    }, a.createElement(v.S, {
+                    }, a.createElement(f.S, {
                         id: "recurly-name",
                         label: Object(s.d)("Name", "RecurlyCreditCard")
                     }, a.createElement("div", {
                         id: "recurly-name"
-                    }, a.createElement(v.U, {
-                        gutterSize: v.V.Medium
-                    }, a.createElement(v.J, {
+                    }, a.createElement(f.U, {
+                        gutterSize: f.V.Medium
+                    }, a.createElement(f.J, {
                         cols: 6
-                    }, a.createElement(v.Y, {
+                    }, a.createElement(f.Y, {
                         id: "recurly-first-name",
-                        type: v.Z.Text,
+                        type: f.Z.Text,
                         placeholder: Object(s.d)("First Name", "RecurlyCreditCard"),
                         value: this.state.firstName,
                         onChange: this.handleFirstName,
@@ -1561,11 +1561,11 @@ webpackJsonp([55], {
                         type: "hidden",
                         "data-recurly": "first_name",
                         value: this.state.firstName
-                    })), a.createElement(v.J, {
+                    })), a.createElement(f.J, {
                         cols: 6
-                    }, a.createElement(v.Y, {
+                    }, a.createElement(f.Y, {
                         id: "recurly-last-name",
-                        type: v.Z.Text,
+                        type: f.Z.Text,
                         placeholder: Object(s.d)("Last Name", "RecurlyCreditCard"),
                         value: this.state.lastName,
                         onChange: this.handleLastName,
@@ -1574,47 +1574,47 @@ webpackJsonp([55], {
                         type: "hidden",
                         "data-recurly": "last_name",
                         value: this.state.lastName
-                    })))))), a.createElement(v._2, {
+                    })))))), a.createElement(f._2, {
                         margin: {
                             bottom: 1
                         }
-                    }, a.createElement(v.S, {
+                    }, a.createElement(f.S, {
                         id: "recurly-credit-card",
                         label: Object(s.d)("Credit Card", "RecurlyCreditCard")
                     }, a.createElement("div", {
                         id: "recurly-credit-card"
-                    }, a.createElement(v.U, {
-                        gutterSize: v.V.Medium
-                    }, a.createElement(v.J, {
+                    }, a.createElement(f.U, {
+                        gutterSize: f.V.Medium
+                    }, a.createElement(f.J, {
                         cols: 8
                     }, a.createElement("div", {
                         id: "recurly-number",
                         "data-recurly": "number",
                         className: this.state.errorState.number ? "recurly-error" : ""
-                    })), a.createElement(v.J, {
+                    })), a.createElement(f.J, {
                         cols: 4
                     }, a.createElement("div", {
                         id: "recurly-cvv",
                         "data-recurly": "cvv",
                         className: this.state.errorState.cvv ? "recurly-error" : ""
-                    })))))), a.createElement(v._2, {
+                    })))))), a.createElement(f._2, {
                         margin: {
                             bottom: 1
                         }
-                    }, a.createElement(v.S, {
+                    }, a.createElement(f.S, {
                         id: "recurly-credit-card",
                         label: Object(s.d)("Expiration Date", "RecurlyCreditCard")
                     }, a.createElement("div", {
                         id: "recurly-credit-card"
-                    }, a.createElement(v.U, {
-                        gutterSize: v.V.Medium
-                    }, a.createElement(v.J, {
+                    }, a.createElement(f.U, {
+                        gutterSize: f.V.Medium
+                    }, a.createElement(f.J, {
                         cols: 6
                     }, a.createElement("div", {
                         id: "recurly-month",
                         "data-recurly": "month",
                         className: this.state.errorState.month ? "recurly-error" : ""
-                    })), a.createElement(v.J, {
+                    })), a.createElement(f.J, {
                         cols: 6
                     }, a.createElement("div", {
                         id: "recurly-year",
@@ -1624,9 +1624,9 @@ webpackJsonp([55], {
                         type: "hidden",
                         name: "recurly-token",
                         "data-recurly": "token"
-                    }), a.createElement(v.u, {
+                    }), a.createElement(f.u, {
                         onClick: this.handleSubmit,
-                        state: this.state.awaitingResponse ? v.y.Loading : v.y.Default,
+                        state: this.state.awaitingResponse ? f.y.Loading : f.y.Default,
                         disabled: this.state.awaitingResponse
                     }, this.props.submitButtonCopy)))))
                 }, t.prototype.pollForHostedField = function() {
@@ -1690,13 +1690,13 @@ webpackJsonp([55], {
                             }
                         }
                     })
-                }, t = r.__decorate([Object(f.d)("RecurlyCreditCard")], t)
+                }, t = r.__decorate([Object(v.d)("RecurlyCreditCard")], t)
             }(a.Component);
-        var C, F = Object(u.b)(function(e) {
+        var P, F = Object(u.b)(function(e) {
                 return {
                     darkModeEnabled: Object(_.a)(e) === k.a.Dark
                 }
-            })(P),
+            })(C),
             I = (n("t2Wb"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -1748,23 +1748,23 @@ webpackJsonp([55], {
                 }, t.prototype.componentWillUnmount = function() {
                     clearInterval(this.pollForRecurly)
                 }, t.prototype.render = function() {
-                    return this.state.paypalConfigured ? a.createElement(v._2, {
+                    return this.state.paypalConfigured ? a.createElement(f._2, {
                         className: "recurly-paypal",
-                        display: v.N.Flex,
-                        alignItems: v.c.Center,
-                        justifyContent: v._1.Center,
+                        display: f.N.Flex,
+                        alignItems: f.c.Center,
+                        justifyContent: f._1.Center,
                         margin: {
                             y: 2
                         }
-                    }, a.createElement(v.u, {
+                    }, a.createElement(f.u, {
                         onClick: this.handleClick,
-                        state: this.state.awaitingResponse ? v.y.Loading : v.y.Default,
+                        state: this.state.awaitingResponse ? f.y.Loading : f.y.Default,
                         disabled: this.state.awaitingResponse
-                    }, this.props.submitButtonCopy)) : a.createElement(v._2, {
+                    }, this.props.submitButtonCopy)) : a.createElement(f._2, {
                         margin: {
                             y: 2
                         }
-                    }, a.createElement(v._4, null))
+                    }, a.createElement(f._4, null))
                 }, t.prototype.setupConfigs = function() {
                     var e = this;
                     window.recurly.configure(this.props.publicKey);
@@ -1784,7 +1784,7 @@ webpackJsonp([55], {
                             awaitingResponse: !1
                         })
                     }), this.paypalInstance = t
-                }, t = r.__decorate([Object(f.d)("RecurlyPaypal")], t)
+                }, t = r.__decorate([Object(v.d)("RecurlyPaypal")], t)
             }(a.Component)),
             O = function(e) {
                 function t() {
@@ -1802,13 +1802,13 @@ webpackJsonp([55], {
                     })
                 }, t.prototype.render = function() {
                     var e = this;
-                    return a.createElement(v._2, {
+                    return a.createElement(f._2, {
                         fullWidth: !0
-                    }, !this.state.xsollaLoaded && a.createElement(v._4, {
+                    }, !this.state.xsollaLoaded && a.createElement(f._4, {
                         fillContent: !0
-                    }), a.createElement(v._2, {
+                    }), a.createElement(f._2, {
                         fullWidth: !0,
-                        display: this.state.xsollaLoaded ? v.N.Inline : v.N.Hide
+                        display: this.state.xsollaLoaded ? f.N.Inline : f.N.Hide
                     }, a.createElement("iframe", {
                         ref: function(t) {
                             return e.iframe = t
@@ -1818,12 +1818,12 @@ webpackJsonp([55], {
                         width: "100%",
                         height: "650px"
                     })))
-                }, t = r.__decorate([Object(f.d)("XsollaMoreMethods")], t)
+                }, t = r.__decorate([Object(v.d)("XsollaMoreMethods")], t)
             }(a.Component);
         n("7gLH");
         ! function(e) {
             e.ZUORA_PARENT_LAYOUT = "zuora-payment-method__zuora-parent-layout", e.UPDATE_PAYMENT_BUTTON = "zuora-payment-method__update-payment-button"
-        }(C || (C = {}));
+        }(P || (P = {}));
         var A = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -1841,32 +1841,32 @@ webpackJsonp([55], {
                     }, t.renderErrorMessage = function() {
                         if (t.state.nullValueErrors.length) {
                             var e = t.state.nullValueErrors.map(function(e, t) {
-                                return a.createElement(v._2, {
+                                return a.createElement(f._2, {
                                     key: t,
                                     margin: {
                                         left: 2
                                     }
-                                }, a.createElement(v._35, {
-                                    color: v.I.Error
+                                }, a.createElement(f._35, {
+                                    color: f.I.Error
                                 }, "• ", e))
                             });
-                            return a.createElement("div", null, a.createElement(v._2, {
+                            return a.createElement("div", null, a.createElement(f._2, {
                                 margin: {
                                     top: 1,
                                     left: 1,
                                     bottom: .5
                                 }
-                            }, a.createElement(v._35, {
-                                color: v.I.Error
+                            }, a.createElement(f._35, {
+                                color: f.I.Error
                             }, Object(s.d)("We are sorry but your credit card payment could not be processed. Please correct the fields below.", "ZuoraCreditCard"))), e)
                         }
-                        if (t.state.errorMessage) return a.createElement(v._2, {
+                        if (t.state.errorMessage) return a.createElement(f._2, {
                             margin: {
                                 top: 1,
                                 left: 1
                             }
-                        }, a.createElement(v._35, {
-                            color: v.I.Error
+                        }, a.createElement(f._35, {
+                            color: f.I.Error
                         }, t.state.errorMessage))
                     }, t.successCallback = function(e) {
                         return r.__awaiter(t, void 0, void 0, function() {
@@ -1934,29 +1934,29 @@ webpackJsonp([55], {
                         }
                     }
                 }, t.prototype.render = function() {
-                    return a.createElement("div", null, !this.state.zuoraConfigured && a.createElement(v._2, {
+                    return a.createElement("div", null, !this.state.zuoraConfigured && a.createElement(f._2, {
                         padding: {
                             y: 5
                         }
-                    }, a.createElement(v._4, {
+                    }, a.createElement(f._4, {
                         fillContent: !0
-                    })), a.createElement(v._2, {
-                        display: this.state.zuoraConfigured ? v.N.Block : v.N.Hide,
-                        "data-test-selector": C.ZUORA_PARENT_LAYOUT
+                    })), a.createElement(f._2, {
+                        display: this.state.zuoraConfigured ? f.N.Block : f.N.Hide,
+                        "data-test-selector": P.ZUORA_PARENT_LAYOUT
                     }, this.renderErrorMessage(), a.createElement("div", {
                         id: "zuora_payment",
                         className: this.state.awaitingResponse ? "zuora-disabled" : ""
-                    }), a.createElement(v._2, {
+                    }), a.createElement(f._2, {
                         margin: {
                             left: .5,
                             top: 2,
                             bottom: 1
                         }
-                    }, a.createElement(v.u, {
+                    }, a.createElement(f.u, {
                         onClick: this.handleSubmit,
-                        state: this.state.awaitingResponse ? v.y.Loading : v.y.Default,
+                        state: this.state.awaitingResponse ? f.y.Loading : f.y.Default,
                         disabled: this.state.awaitingResponse,
-                        "data-test-selector": C.UPDATE_PAYMENT_BUTTON
+                        "data-test-selector": P.UPDATE_PAYMENT_BUTTON
                     }, this.props.submitButtonCopy))))
                 }, t.prototype.initZuoraIFrame = function() {
                     var e = this,
@@ -1980,9 +1980,9 @@ webpackJsonp([55], {
                             zuoraConfigured: !0
                         })
                     })
-                }, t = r.__decorate([Object(f.d)("ZuoraCreditCard")], t)
+                }, t = r.__decorate([Object(v.d)("ZuoraCreditCard")], t)
             }(a.Component),
-            D = (n("ssJt"), function(e) {
+            D = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -2020,21 +2020,19 @@ webpackJsonp([55], {
                                 onSuccess: this.props.onSuccess
                             }, this.props.configs.zuora))
                         };
-                    return a.createElement(v._2, {
-                        className: "payment-methods"
-                    }, a.createElement(v.u, {
+                    return a.createElement(f._2, null, a.createElement(f.u, {
                         onClick: this.setProviderFactory("recurly-credit-card"),
                         disabled: "recurly-credit-card" === this.state.selectedProvider
-                    }, Object(s.d)("recurly-credit-card", "PaymentMethods")), a.createElement(v.u, {
+                    }, Object(s.d)("recurly-credit-card", "PaymentMethods")), a.createElement(f.u, {
                         onClick: this.setProviderFactory("recurly-paypal"),
                         disabled: "recurly-paypal" === this.state.selectedProvider
-                    }, Object(s.d)("recurly-paypal", "PaymentMethods")), a.createElement(v.u, {
+                    }, Object(s.d)("recurly-paypal", "PaymentMethods")), a.createElement(f.u, {
                         onClick: this.setProviderFactory("recurly-amazon-pay"),
                         disabled: "recurly-amazon-pay" === this.state.selectedProvider
-                    }, Object(s.d)("recurly-amazon-pay", "PaymentMethods")), a.createElement(v.u, {
+                    }, Object(s.d)("recurly-amazon-pay", "PaymentMethods")), a.createElement(f.u, {
                         onClick: this.setProviderFactory("xsolla-more-methods"),
                         disabled: "xsolla-more-methods" === this.state.selectedProvider
-                    }, Object(s.d)("xsolla-more-methods", "PaymentMethods")), a.createElement(v.u, {
+                    }, Object(s.d)("xsolla-more-methods", "PaymentMethods")), a.createElement(f.u, {
                         onClick: this.setProviderFactory("zuora-credit-card"),
                         disabled: "zuora-credit-card" === this.state.selectedProvider
                     }, Object(s.d)("zuora-credit-card", "PaymentMethods")), t[this.state.selectedProvider])
@@ -2045,11 +2043,11 @@ webpackJsonp([55], {
                             selectedProvider: e
                         })
                     }
-                }, t = r.__decorate([Object(f.d)("PaymentMethods")], t)
-            }(a.Component)),
+                }, t = r.__decorate([Object(v.d)("PaymentMethods")], t)
+            }(a.Component),
             R = n("3T7g"),
-            x = n("7LIQ"),
-            j = n("Tzcg"),
+            j = n("7LIQ"),
+            x = n("Tzcg"),
             T = (n("2dVl"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -2059,9 +2057,9 @@ webpackJsonp([55], {
                 }, t.prototype.render = function() {
                     var e = this.props.product,
                         t = this.props.owner;
-                    return t ? a.createElement(v._2, {
+                    return t ? a.createElement(f._2, {
                         className: "ticket-description"
-                    }, a.createElement(v.A, {
+                    }, a.createElement(f.A, {
                         border: !0,
                         elevation: 1
                     }, a.createElement("div", {
@@ -2069,13 +2067,13 @@ webpackJsonp([55], {
                         style: {
                             backgroundImage: "url(" + t.bannerImageURL
                         }
-                    }, a.createElement(v._2, {
+                    }, a.createElement(f._2, {
                         className: "ticket-description__broadcaster-info",
-                        textAlign: v._36.Center,
-                        display: v.N.Flex,
-                        flexDirection: v.P.Column,
-                        alignItems: v.c.Center,
-                        flexWrap: v.Q.NoWrap,
+                        textAlign: f._36.Center,
+                        display: f.N.Flex,
+                        flexDirection: f.P.Column,
+                        alignItems: f.c.Center,
+                        flexWrap: f.Q.NoWrap,
                         padding: {
                             x: 1,
                             y: 3
@@ -2086,65 +2084,66 @@ webpackJsonp([55], {
                         breakpointLarge: {
                             padding: 5
                         }
-                    }, a.createElement(v.W, {
+                    }, a.createElement(f.W, {
                         margin: 1,
                         breakpointLarge: {
                             margin: 2
                         }
-                    }, a.createElement(v.l, {
+                    }, a.createElement(f.l, {
                         alt: t.displayName,
                         size: 96,
                         src: t.profileImageURL
-                    })), a.createElement(v.W, {
+                    })), a.createElement(f.W, {
                         margin: 1,
                         breakpointLarge: {
                             margin: 1
                         }
-                    }, a.createElement(v._35, {
-                        type: v._40.H4,
+                    }, a.createElement(f._35, {
+                        type: f._40.H4,
                         bold: !0,
-                        color: v.I.Overlay
-                    }, t.displayName)), a.createElement(v._2, {
+                        color: f.I.Overlay
+                    }, t.displayName)), a.createElement(f._2, {
                         margin: 1,
                         breakpointLarge: {
                             margin: 2
                         }
-                    }, a.createElement(v._35, {
-                        type: v._40.H5,
-                        color: v.I.Overlay
-                    }, e.displayName)))), a.createElement(v.B, null, a.createElement(v._25, {
+                    }, a.createElement(f._35, {
+                        type: f._40.H5,
+                        color: f.I.Overlay
+                    }, e.displayName)))), a.createElement(f.B, null, a.createElement(f._25, {
                         borderBottom: !0,
-                        textAlign: v._36.Center,
-                        background: v.m.Alt,
+                        textAlign: f._36.Center,
+                        background: f.m.Alt,
                         padding: 2
-                    }, a.createElement(v._35, {
-                        type: v._40.H4
-                    }, a.createElement(v._35, {
-                        type: v._40.Span,
+                    }, a.createElement(f._35, {
+                        type: f._40.H4
+                    }, a.createElement(f._35, {
+                        type: f._40.Span,
                         bold: !0
-                    }, e.price), " / Month")), a.createElement(v._25, {
+                    }, e.price), " / Month")), a.createElement(f._25, {
                         className: "ticket-description__description",
-                        margin: {
-                            x: 1
+                        padding: {
+                            x: 1,
+                            bottom: 2
                         },
-                        textAlign: v._36.Left,
-                        background: v.m.Alt
-                    }, a.createElement(v.X, {
+                        textAlign: f._36.Left,
+                        background: f.m.Alt
+                    }, a.createElement(f.X, {
                         padding: {
                             y: 1
                         }
-                    }, a.createElement(v._35, {
+                    }, a.createElement(f._35, {
                         className: "ticket-description__description__line-item",
                         bold: !0
-                    }, "Subscription Benefits")), a.createElement(v._35, {
+                    }, "Subscription Benefits")), a.createElement(f._35, {
                         className: "ticket-description__description__line-item"
-                    }, "Directly Support The Broadcaster"), e.hasAdFree && a.createElement(v._35, {
+                    }, "Directly Support The Broadcaster"), e.hasAdFree && a.createElement(f._35, {
                         className: "ticket-description__description__line-item"
-                    }, "Ad-Free (with limited exceptions)"), a.createElement(v._35, {
+                    }, "Ad-Free (with limited exceptions)"), a.createElement(f._35, {
                         className: "ticket-description__description__line-item"
-                    }, "Chat During Subscriber-Only Mode"), e.hasFastChat && a.createElement(v._35, {
+                    }, "Chat During Subscriber-Only Mode"), e.hasFastChat && a.createElement(f._35, {
                         className: "ticket-description__description__line-item"
-                    }, "Not Affected By Chat Slow Mode"), e.hasSubonlyVideoArchive && a.createElement(v._35, {
+                    }, "Not Affected By Chat Slow Mode"), e.hasSubonlyVideoArchive && a.createElement(f._35, {
                         className: "ticket-description__description__line-item"
                     }, "Access to VODs"), this.subBadges(), this.subEmotes())))) : a.createElement("div", null)
                 }, t.prototype.subBadges = function() {
@@ -2156,19 +2155,19 @@ webpackJsonp([55], {
                         });
                         if (e.length) {
                             var t = e.map(function(e) {
-                                return a.createElement(v._2, {
+                                return a.createElement(f._2, {
                                     key: e.setID + "/" + e.version,
                                     margin: .5
                                 }, a.createElement(R.a, {
                                     badge: e
                                 }))
                             });
-                            return a.createElement(a.Fragment, null, a.createElement(v._35, {
+                            return a.createElement(a.Fragment, null, a.createElement(f._35, {
                                 className: "ticket-description__description__line-item"
-                            }, "Subscriber Badges:"), a.createElement(v._2, {
-                                display: v.N.Flex,
-                                flexWrap: v.Q.Wrap,
-                                justifyContent: v._1.Center
+                            }, "Subscriber Badges:"), a.createElement(f._2, {
+                                display: f.N.Flex,
+                                flexWrap: f.Q.Wrap,
+                                justifyContent: f._1.Center
                             }, t))
                         }
                     }
@@ -2182,42 +2181,42 @@ webpackJsonp([55], {
                         }).reduce(function(e, t) {
                             return e.concat(t)
                         }, []);
-                        if (0 !== t.length) return a.createElement("div", null, a.createElement(v._35, {
+                        if (0 !== t.length) return a.createElement("div", null, a.createElement(f._35, {
                             className: "ticket-description__description__line-item"
-                        }, t.length, " Subscriber Emotes:"), a.createElement(x.a, {
+                        }, t.length, " Subscriber Emotes:"), a.createElement(j.a, {
                             emoteSet: {
                                 id: "",
-                                emotes: Object(j.b)(t)
+                                emotes: Object(x.b)(t)
                             },
                             onClickEmote: void 0,
                             locked: !1
                         }))
                     }
-                }, t = r.__decorate([Object(f.d)("TicketDescription")], t)
+                }, t = r.__decorate([Object(v.d)("TicketDescription")], t)
             }(a.Component)),
             L = n("Heyg"),
             U = function(e) {
                 var t;
-                return t = e.canGift ? a.createElement(v._35, null, Object(s.d)("You are buying a single month {price} Gift Subscription for <x:strong>{recipientName}</x:strong>.", {
+                return t = e.canGift ? a.createElement(f._35, null, Object(s.d)("You are buying a single month {price} Gift Subscription for <x:strong>{recipientName}</x:strong>.", {
                     price: e.price,
                     "x:strong": function(e) {
-                        return a.createElement(v._35, {
-                            type: v._40.Span,
+                        return a.createElement(f._35, {
+                            type: f._40.Span,
                             bold: !0
                         }, e)
                     },
                     recipientName: e.recipientDisplayName || ""
-                }, "PurchaseSubInfo")) : a.createElement(v._35, {
-                    color: v.I.Error
+                }, "PurchaseSubInfo")) : a.createElement(f._35, {
+                    color: f.I.Error
                 }, Object(s.d)("Sorry, a Gift Subscription to this channel is not available for <x:strong>{recipientName}</x:strong>", {
                     recipientName: e.recipientDisplayName || "",
                     "x:strong": function(e) {
-                        return a.createElement(v._35, {
+                        return a.createElement(f._35, {
                             bold: !0
                         }, e)
                     }
-                }, "PurchaseSubInfo")), a.createElement("div", null, a.createElement(v._35, {
-                    type: v._40.H2,
+                }, "PurchaseSubInfo")), a.createElement("div", null, a.createElement(f._35, {
+                    type: f._40.H2,
                     bold: !0
                 }, Object(s.d)("Gift A Subscription", "PurchaseSubInfo")), t)
             },
@@ -2230,7 +2229,7 @@ webpackJsonp([55], {
                     }, t
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
-                    return a.createElement(v._2, {
+                    return a.createElement(f._2, {
                         className: "gift-sub-receipt__container",
                         padding: {
                             y: 2
@@ -2238,59 +2237,59 @@ webpackJsonp([55], {
                         margin: {
                             x: 2
                         }
-                    }, a.createElement(v._2, null, a.createElement(v._35, {
-                        type: v._40.H2,
+                    }, a.createElement(f._2, null, a.createElement(f._35, {
+                        type: f._40.H2,
                         bold: !0
-                    }, Object(s.d)("Purchase Successful", "GiftSubReceipt"))), a.createElement(v._2, {
+                    }, Object(s.d)("Purchase Successful", "GiftSubReceipt"))), a.createElement(f._2, {
                         padding: {
                             y: 3
                         }
-                    }, a.createElement(v._35, null, Object(s.d)("You have purchased a {price} Gift Subscription for <x:strong>{recipientDisplayName}</x:strong>", {
+                    }, a.createElement(f._35, null, Object(s.d)("You have purchased a {price} Gift Subscription for <x:strong>{recipientDisplayName}</x:strong>", {
                         price: Object(s.e)(this.props.invoicePrice / 100, {
                             style: "currency",
                             currency: this.props.invoiceCurrency
                         }),
                         recipientDisplayName: this.props.recipientDisplayName || "",
                         "x:strong": function(e) {
-                            return a.createElement(v._35, {
+                            return a.createElement(f._35, {
                                 key: "recipient-display-name",
-                                type: v._40.Span,
+                                type: f._40.Span,
                                 bold: !0
                             }, e)
                         }
-                    }, "GiftSubReceipt"))), a.createElement(v._25, {
+                    }, "GiftSubReceipt"))), a.createElement(f._25, {
                         borderTop: !0,
                         borderBottom: !0,
                         padding: {
                             y: 3
                         }
-                    }, a.createElement(v._2, {
+                    }, a.createElement(f._2, {
                         className: "gift-sub-receipt__label",
-                        display: v.N.InlineBlock
-                    }, a.createElement(v._35, {
+                        display: f.N.InlineBlock
+                    }, a.createElement(f._35, {
                         bold: !0
-                    }, Object(s.d)("Gift Status", "GiftSubReceipt"))), a.createElement(v._2, {
-                        display: v.N.InlineBlock
-                    }, a.createElement(v._35, null, Object(s.d)("Active", "GiftSubReceipt")))), a.createElement(v._25, {
+                    }, Object(s.d)("Gift Status", "GiftSubReceipt"))), a.createElement(f._2, {
+                        display: f.N.InlineBlock
+                    }, a.createElement(f._35, null, Object(s.d)("Active", "GiftSubReceipt")))), a.createElement(f._25, {
                         borderBottom: !0,
                         padding: {
                             y: 3
                         }
-                    }, a.createElement(v._2, {
+                    }, a.createElement(f._2, {
                         className: "gift-sub-receipt__label",
-                        display: v.N.InlineBlock
-                    }, a.createElement(v._35, {
+                        display: f.N.InlineBlock
+                    }, a.createElement(f._35, {
                         bold: !0
-                    }, Object(s.d)("Your Invoice Total", "GiftSubReceipt"))), a.createElement(v._2, {
-                        display: v.N.InlineBlock
-                    }, a.createElement(v._35, null, Object(s.e)(this.props.invoicePrice / 100, {
+                    }, Object(s.d)("Your Invoice Total", "GiftSubReceipt"))), a.createElement(f._2, {
+                        display: f.N.InlineBlock
+                    }, a.createElement(f._35, null, Object(s.e)(this.props.invoicePrice / 100, {
                         style: "currency",
                         currency: this.props.invoiceCurrency
-                    })))), a.createElement(v._2, {
+                    })))), a.createElement(f._2, {
                         margin: {
                             y: 3
                         }
-                    }, a.createElement(v.u, {
+                    }, a.createElement(f.u, {
                         onClick: this.goBackToChannel
                     }, Object(s.d)("Go back to {displayName}", {
                         displayName: this.props.productOwnerDisplayName
@@ -2300,41 +2299,41 @@ webpackJsonp([55], {
             B = Object(M.e)(z),
             G = n("j6Ui"),
             V = function(e) {
-                return a.createElement(v._25, {
-                    background: v.m.Base,
+                return a.createElement(f._25, {
+                    background: f.m.Base,
                     borderMarked: !0,
                     padding: 1,
                     margin: {
                         y: 1
                     }
-                }, a.createElement(v._2, {
+                }, a.createElement(f._2, {
                     margin: {
                         bottom: .5
                     }
-                }, a.createElement(v._35, null, Object(s.d)("You are currently subscribed for free with Twitch Prime. If you choose to upgrade to the {newPrice} subscription, you will be immediately billed for {newPrice} and your new subscription will auto-renew every month.", {
+                }, a.createElement(f._35, null, Object(s.d)("You are currently subscribed for free with Twitch Prime. If you choose to upgrade to the {newPrice} subscription, you will be immediately billed for {newPrice} and your new subscription will auto-renew every month.", {
                     newPrice: Object(s.e)(e.newPrice / 100, {
                         style: "currency",
                         currency: e.newCurrency
                     })
-                }, "UpgradePrimeWarning"))), a.createElement(v._2, {
+                }, "UpgradePrimeWarning"))), a.createElement(f._2, {
                     margin: {
                         bottom: .5
                     }
-                }, a.createElement(v._35, null, Object(s.d)("You'll be able to subscribe to another channel for free with Twitch Prime 30-days after you last used your free subscription.", "UpgradePrimeWarning"))), a.createElement(v._35, null, Object(s.d)("If you upgrade your subscription, your sub anniversary, sub streaks, and badge tenure will be maintained.", "UpgradePrimeWarning")))
+                }, a.createElement(f._35, null, Object(s.d)("You'll be able to subscribe to another channel for free with Twitch Prime 30-days after you last used your free subscription.", "UpgradePrimeWarning"))), a.createElement(f._35, null, Object(s.d)("If you upgrade your subscription, your sub anniversary, sub streaks, and badge tenure will be maintained.", "UpgradePrimeWarning")))
             },
             H = function(e) {
-                return a.createElement(v._25, {
-                    background: v.m.Base,
+                return a.createElement(f._25, {
+                    background: f.m.Base,
                     borderMarked: !0,
                     padding: 1,
                     margin: {
                         y: 1
                     }
-                }, a.createElement(v._2, {
+                }, a.createElement(f._2, {
                     margin: {
                         bottom: .5
                     }
-                }, a.createElement(v._35, null, Object(s.d)("You are currently subscribed to the {originalPrice} subscription plan. If you choose to upgrade to the {newPrice} subscription plan, you will be immediately billed for {newPrice} and your currently active subscription plan for {originalPrice} will not renew any further.", {
+                }, a.createElement(f._35, null, Object(s.d)("You are currently subscribed to the {originalPrice} subscription plan. If you choose to upgrade to the {newPrice} subscription plan, you will be immediately billed for {newPrice} and your currently active subscription plan for {originalPrice} will not renew any further.", {
                     originalPrice: Object(s.e)(e.originalPrice / 100, {
                         style: "currency",
                         currency: e.originalCurrency
@@ -2343,28 +2342,28 @@ webpackJsonp([55], {
                         style: "currency",
                         currency: e.newCurrency
                     })
-                }, "UpgradeTierWarning"))), a.createElement(v._2, {
+                }, "UpgradeTierWarning"))), a.createElement(f._2, {
                     margin: {
                         bottom: .5
                     }
-                }, a.createElement(v._35, null, Object(s.d)("Please note that pro-rated refunds cannot be offered for the remaining time on your {originalPrice} subscription plan", {
+                }, a.createElement(f._35, null, Object(s.d)("Please note that pro-rated refunds cannot be offered for the remaining time on your {originalPrice} subscription plan", {
                     originalPrice: Object(s.e)(e.originalPrice / 100, {
                         style: "currency",
                         currency: e.originalCurrency
                     })
-                }, "UpgradeTierWarning"))), a.createElement(v._35, null, Object(s.d)("If you upgrade your subscription, your sub anniversary, sub streaks, and badge tenure will be maintained.", "UpgradeTierWarning")))
+                }, "UpgradeTierWarning"))), a.createElement(f._35, null, Object(s.d)("If you upgrade your subscription, your sub anniversary, sub streaks, and badge tenure will be maintained.", "UpgradeTierWarning")))
             },
             W = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
-                    return a.createElement("div", null, a.createElement(v._2, {
+                    return a.createElement("div", null, a.createElement(f._2, {
                         margin: {
                             bottom: 1
                         }
-                    }, a.createElement(v._35, {
-                        type: v._40.H2,
+                    }, a.createElement(f._35, {
+                        type: f._40.H2,
                         bold: !0
                     }, Object(s.d)("Start Your Subscription", "PersonalSubPurchaseInfo"))), this.tierUpgrade && a.createElement(H, {
                         originalPrice: this.originalPrice,
@@ -2374,15 +2373,15 @@ webpackJsonp([55], {
                     }), this.primeUpgrade && a.createElement(V, {
                         newPrice: this.newPrice,
                         newCurrency: "USD"
-                    }), this.props.hasGift && this.props.giftEndsAt && a.createElement(v._25, {
-                        background: v.m.Base,
+                    }), this.props.hasGift && this.props.giftEndsAt && a.createElement(f._25, {
+                        background: f.m.Base,
                         borderMarked: !0,
                         padding: 1
-                    }, a.createElement(v._35, null, Object(s.d)("You will be charged when your Gift Subscription ends on <x:strong>{date}</x:strong>.", {
+                    }, a.createElement(f._35, null, Object(s.d)("You will be charged when your Gift Subscription ends on <x:strong>{date}</x:strong>.", {
                         date: Object(s.c)(Object(G.c)(this.props.giftEndsAt), "short"),
                         "x:strong": function(e) {
-                            return a.createElement(v._35, {
-                                type: v._40.Span,
+                            return a.createElement(f._35, {
+                                type: f._40.Span,
                                 bold: !0
                             }, e)
                         }
@@ -2428,13 +2427,13 @@ webpackJsonp([55], {
                     var e;
                     return e = this.props.giftSubEndsAt ? Object(s.d)("Your paid subscription will begin on <x:strong>{endsAt}</x:strong> after your Gift Subscription ends", {
                         "x:strong": function(e) {
-                            return a.createElement(v._35, {
-                                type: v._40.Span,
+                            return a.createElement(f._35, {
+                                type: f._40.Span,
                                 bold: !0
                             }, e)
                         },
                         endsAt: Object(s.c)(new Date(this.props.giftSubEndsAt), "long")
-                    }, "PersonalSubReceipt") : Object(s.d)("Active", "PersonalSubReceipt"), a.createElement(v._2, {
+                    }, "PersonalSubReceipt") : Object(s.d)("Active", "PersonalSubReceipt"), a.createElement(f._2, {
                         className: "personal-sub-receipt",
                         padding: {
                             y: 2
@@ -2442,58 +2441,58 @@ webpackJsonp([55], {
                         margin: {
                             x: 2
                         }
-                    }, a.createElement(v._25, {
+                    }, a.createElement(f._25, {
                         borderBottom: !0,
                         padding: {
                             bottom: 3
                         }
-                    }, a.createElement(v._35, {
-                        type: v._40.H2,
+                    }, a.createElement(f._35, {
+                        type: f._40.H2,
                         bold: !0
-                    }, Object(s.d)("Your Subscription", "PersonalSubReceipt"))), a.createElement(v._25, {
+                    }, Object(s.d)("Your Subscription", "PersonalSubReceipt"))), a.createElement(f._25, {
                         borderBottom: !0,
                         padding: {
                             y: 3
                         }
-                    }, a.createElement(v._2, {
+                    }, a.createElement(f._2, {
                         className: "personal-sub-receipt__label",
-                        display: v.N.InlineBlock
-                    }, a.createElement(v._35, {
+                        display: f.N.InlineBlock
+                    }, a.createElement(f._35, {
                         bold: !0
-                    }, Object(s.d)("Subscription for", "PersonalSubReceipt"))), a.createElement(v._2, {
-                        display: v.N.InlineBlock
-                    }, a.createElement(v._35, null, this.props.purchaserDisplayName))), a.createElement(v._25, {
+                    }, Object(s.d)("Subscription for", "PersonalSubReceipt"))), a.createElement(f._2, {
+                        display: f.N.InlineBlock
+                    }, a.createElement(f._35, null, this.props.purchaserDisplayName))), a.createElement(f._25, {
                         borderBottom: !0,
                         padding: {
                             y: 3
                         }
-                    }, a.createElement(v._2, {
+                    }, a.createElement(f._2, {
                         className: "personal-sub-receipt__label",
-                        display: v.N.InlineBlock
-                    }, a.createElement(v._35, {
+                        display: f.N.InlineBlock
+                    }, a.createElement(f._35, {
                         bold: !0
-                    }, Object(s.d)("Status", "PersonalSubReceipt"))), a.createElement(v._2, {
-                        display: v.N.InlineBlock
-                    }, a.createElement(v._35, null, e))), a.createElement(v._25, {
+                    }, Object(s.d)("Status", "PersonalSubReceipt"))), a.createElement(f._2, {
+                        display: f.N.InlineBlock
+                    }, a.createElement(f._35, null, e))), a.createElement(f._25, {
                         borderBottom: !0,
                         padding: {
                             y: 3
                         }
-                    }, a.createElement(v._2, {
+                    }, a.createElement(f._2, {
                         className: "personal-sub-receipt__label",
-                        display: v.N.InlineBlock
-                    }, a.createElement(v._35, {
+                        display: f.N.InlineBlock
+                    }, a.createElement(f._35, {
                         bold: !0
-                    }, Object(s.d)("Invoice Total", "PersonalSubReceipt"))), a.createElement(v._2, {
-                        display: v.N.InlineBlock
-                    }, a.createElement(v._35, null, Object(s.e)(this.props.invoicePrice / 100, {
+                    }, Object(s.d)("Invoice Total", "PersonalSubReceipt"))), a.createElement(f._2, {
+                        display: f.N.InlineBlock
+                    }, a.createElement(f._35, null, Object(s.e)(this.props.invoicePrice / 100, {
                         style: "currency",
                         currency: this.props.invoiceCurrency
-                    })))), a.createElement(v._2, {
+                    })))), a.createElement(f._2, {
                         margin: {
                             y: 3
                         }
-                    }, a.createElement(v.u, {
+                    }, a.createElement(f.u, {
                         onClick: this.goBackToChannel
                     }, Object(s.d)("Go back to {displayName}", {
                         displayName: this.props.productOwnerDisplayName
@@ -2567,58 +2566,30 @@ webpackJsonp([55], {
                 return r.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    if (this.props.data.loading || this.props.data.error) return a.createElement(v._2, null);
+                    if (this.props.data.loading || this.props.data.error) return a.createElement(f._2, null);
                     var e = this.props.data.subscriptionProduct.owner,
                         t = this.props.data.subscriptionProduct,
                         n = this.props.data.subscriptionProduct.self.checkoutConfigs.paymentProviderConfigs;
-                    return a.createElement(v._2, {
+                    return a.createElement(f._2, {
                         className: "checkout-payments",
                         padding: 3,
-                        overflow: v._5.Auto
-                    }, a.createElement(v.U, null, a.createElement(v.J, {
-                        offset: {
-                            default: 1,
-                            xs: 1,
-                            sm: 1,
-                            md: 1,
-                            lg: 1,
-                            xl: 2,
-                            xxl: 2
-                        },
-                        cols: {
-                            default: 11,
-                            xs: 11,
-                            sm: 11,
-                            md: 5,
-                            lg: 4,
-                            xl: 3,
-                            xxl: 3
+                        overflow: f._5.Auto
+                    }, a.createElement(f._2, {
+                        display: f.N.Flex,
+                        justifyContent: f._1.Center,
+                        flexWrap: f.Q.Wrap
+                    }, a.createElement(f._2, {
+                        display: f.N.Flex,
+                        alignItems: f.c.Center,
+                        margin: {
+                            bottom: 4
                         }
-                    }, a.createElement(v._2, {
-                        display: v.N.Flex,
-                        alignItems: v.c.Center,
-                        justifyContent: v._1.Center
                     }, a.createElement(T, {
                         owner: e,
                         product: t
-                    }))), a.createElement(v.J, {
-                        offset: {
-                            default: 1,
-                            xs: 1,
-                            sm: 1,
-                            md: 1,
-                            lg: 1,
-                            xl: 1,
-                            xxl: 1
-                        },
-                        cols: {
-                            default: 11,
-                            xs: 11,
-                            sm: 11,
-                            md: 5,
-                            lg: 6,
-                            xl: 6,
-                            xxl: 6
+                    })), a.createElement(f._2, {
+                        margin: {
+                            x: 4
                         }
                     }, this.purchased && this.renderReceipt(), !this.purchased && this.renderPurchaseInfo(), !this.purchased && a.createElement(D, {
                         onSuccess: this.completePurchase,
@@ -2636,7 +2607,7 @@ webpackJsonp([55], {
                     },
                     enumerable: !0,
                     configurable: !0
-                }), t = r.__decorate([Object(f.d)("CheckoutPayments"), Object(o.a)(L, {
+                }), t = r.__decorate([Object(v.d)("CheckoutPayments"), Object(o.a)(L, {
                     options: function(e) {
                         return {
                             fetchPolicy: "network-only",
@@ -2654,14 +2625,14 @@ webpackJsonp([55], {
                     isLoggedIn: Object(y.d)(e)
                 }
             }, function(e) {
-                return Object(m.b)({
+                return Object(p.b)({
                     promptLogin: function() {
-                        return Object(g.f)(p.a.DashboardPage)
+                        return Object(g.f)(m.a.DashboardPage)
                     }
                 }, e)
             })(q),
-            J = n("EaWz"),
-            Q = function(e) {
+            Q = n("EaWz"),
+            J = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {}, t
@@ -2688,11 +2659,11 @@ webpackJsonp([55], {
                         recipientID: t && t.id,
                         recipientDisplayName: t && t.displayName
                     })
-                }, t = r.__decorate([Object(f.d)("SubsCheckoutPage", {
+                }, t = r.__decorate([Object(v.d)("SubsCheckoutPage", {
                     destination: l.a.SubsCheckoutPage
                 }), Object(c.a)({
                     location: d.PageviewLocation.SubsCheckoutPage
-                }), Object(o.a)(J, {
+                }), Object(o.a)(Q, {
                     options: function(e) {
                         return {
                             fetchPolicy: "cache-first",
@@ -2704,7 +2675,7 @@ webpackJsonp([55], {
                 })], t)
             }(a.Component);
         n.d(t, "SubsCheckoutPage", function() {
-            return Q
+            return J
         })
     },
     McJK: function(e, t) {},
@@ -3012,7 +2983,6 @@ webpackJsonp([55], {
     },
     pDuT: function(e, t) {},
     pOYM: function(e, t) {},
-    ssJt: function(e, t) {},
     t2Wb: function(e, t) {}
 });
-//# sourceMappingURL=pages.subs-checkout.components.subs-checkout-page-9a2c83fb3244135af03637c26b530326.js.map
+//# sourceMappingURL=pages.subs-checkout.components.subs-checkout-page-d3ed0d88e8ef7bd50ffea46b1f2bd165.js.map

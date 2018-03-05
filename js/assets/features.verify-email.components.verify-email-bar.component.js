@@ -79,7 +79,7 @@ webpackJsonp([59], {
                     return new URL(e, n.n.config.apiBaseURL)
                 }, e.constructLegacyAPIResponse = function(e) {
                     return r.__awaiter(this, void 0, void 0, function() {
-                        var t, i, n;
+                        var t, i, n, a;
                         return r.__generator(this, function(r) {
                             switch (r.label) {
                                 case 0:
@@ -91,7 +91,7 @@ webpackJsonp([59], {
                                 case 2:
                                     return i = r.sent(), e.ok ? t.body = i : t.error = i, [3, 4];
                                 case 3:
-                                    return n = r.sent(), t.requestError = n, [3, 4];
+                                    return n = r.sent(), e.headers && e.headers.get && (a = e.headers.get("Content-Type")) && -1 !== a.indexOf("application/json") && (t.requestError = n), [3, 4];
                                 case 4:
                                     return [2, t]
                             }
@@ -464,4 +464,4 @@ webpackJsonp([59], {
     },
     yY1M: function(e, t) {}
 });
-//# sourceMappingURL=features.verify-email.components.verify-email-bar.component-aeb9ba157378985ef3dd52d81d6c16c9.js.map
+//# sourceMappingURL=features.verify-email.components.verify-email-bar.component-2bfa5a8a191ee1d779d7df998430607a.js.map

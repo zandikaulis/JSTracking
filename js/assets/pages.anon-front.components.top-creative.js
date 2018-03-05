@@ -1411,7 +1411,7 @@ webpackJsonp([74, 75], {
                         return {
                             fetchPolicy: "network-only",
                             variables: {
-                                name: decodeURIComponent(e.communityName)
+                                name: e.communityName
                             }
                         }
                     }
@@ -3753,4 +3753,4 @@ webpackJsonp([74, 75], {
         })
     }
 });
-//# sourceMappingURL=pages.anon-front.components.top-creative-ab3d7e4672032b0d4a2978dbe0e1321f.js.map
+//# sourceMappingURL=pages.anon-front.components.top-creative-71833345156ab4b84a98793530d0c166.js.map

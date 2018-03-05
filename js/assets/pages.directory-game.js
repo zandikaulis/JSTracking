@@ -3498,7 +3498,7 @@ webpackJsonp([44], {
                     }).map(function(t, n) {
                         var i = t.node;
                         return x.createElement(Oe.b, {
-                            directoryName: decodeURIComponent(e.props.directoryName),
+                            directoryName: e.props.directoryName,
                             directoryType: e.props.directoryType,
                             streamIndex: n,
                             streamNode: i,
@@ -3520,7 +3520,7 @@ webpackJsonp([44], {
                         return {
                             fetchPolicy: "network-only",
                             variables: {
-                                name: decodeURIComponent(e.directoryName),
+                                name: e.directoryName,
                                 limit: 30,
                                 languages: [e.languageCode],
                                 type: Object(Pe.a)(e.directoryType)
@@ -5275,7 +5275,7 @@ webpackJsonp([44], {
                         return {
                             fetchPolicy: "network-only",
                             variables: {
-                                name: decodeURIComponent(e.communityName)
+                                name: e.communityName
                             }
                         }
                     },
@@ -5435,7 +5435,7 @@ webpackJsonp([44], {
                         return {
                             fetchPolicy: "network-only",
                             variables: {
-                                name: decodeURIComponent(e.directoryName),
+                                name: e.directoryName,
                                 type: Object(Pe.a)(e.directoryType)
                             }
                         }
@@ -5520,7 +5520,7 @@ webpackJsonp([44], {
                                 buttonState: re.y.Loading
                             }), t.props.editCommunity(o).then(function(e) {
                                 Object(q.d)(Ln, {
-                                    name: decodeURIComponent(t.props.communityName)
+                                    name: t.props.communityName
                                 }, function(n) {
                                     return ["description", "summary", "rules"].forEach(function(i) {
                                         var r = n.community[i],
@@ -5627,7 +5627,7 @@ webpackJsonp([44], {
                         return {
                             fetchPolicy: "network-only",
                             variables: {
-                                name: decodeURIComponent(e.communityName)
+                                name: e.communityName
                             }
                         }
                     }
@@ -5726,7 +5726,7 @@ webpackJsonp([44], {
                     options: function(e) {
                         return {
                             variables: {
-                                gameName: decodeURIComponent(e.gameName),
+                                gameName: e.gameName,
                                 limit: 20,
                                 criteria: {
                                     languages: e.languagePreferences,
@@ -7557,7 +7557,7 @@ webpackJsonp([44], {
                     return new URL(e, a.n.config.apiBaseURL)
                 }, e.constructLegacyAPIResponse = function(e) {
                     return i.__awaiter(this, void 0, void 0, function() {
-                        var t, n, a;
+                        var t, n, a, r;
                         return i.__generator(this, function(i) {
                             switch (i.label) {
                                 case 0:
@@ -7569,7 +7569,7 @@ webpackJsonp([44], {
                                 case 2:
                                     return n = i.sent(), e.ok ? t.body = n : t.error = n, [3, 4];
                                 case 3:
-                                    return a = i.sent(), t.requestError = a, [3, 4];
+                                    return a = i.sent(), e.headers && e.headers.get && (r = e.headers.get("Content-Type")) && -1 !== r.indexOf("application/json") && (t.requestError = a), [3, 4];
                                 case 4:
                                     return [2, t]
                             }
@@ -8115,7 +8115,7 @@ webpackJsonp([44], {
                         return {
                             fetchPolicy: "network-only",
                             variables: {
-                                name: decodeURIComponent(e.communityName)
+                                name: e.communityName
                             }
                         }
                     }
@@ -17352,4 +17352,4 @@ webpackJsonp([44], {
     zSAx: function(e, t) {},
     zu64: function(e, t) {}
 });
-//# sourceMappingURL=pages.directory-game-66da767b56781b1afb45a5822ffcead1.js.map
+//# sourceMappingURL=pages.directory-game-380a2336484ecba439e076508ac9a649.js.map
