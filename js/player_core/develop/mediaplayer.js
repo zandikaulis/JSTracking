@@ -127,7 +127,7 @@ var MediaPlayer = exports.MediaPlayer = function MediaPlayer(config, worker) {
 
     // Create a companion instance instance in the worker.
     this._postMessage(WorkerMessage.CREATE, {
-        settings: loadSettings(config.settings),
+        settings: loadSettings(config.settings || config.latencyValue),
         logLevel: String(config.logLevel), // must be a string
         localStorage: getLocalStorage(LOCAL_STORAGE_PREFIX),
         clientTrackingInfo: getClientTrackingInfo(),
@@ -3220,8 +3220,7 @@ module.exports = {
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./ffdebug.json": 18,
-	"./future.json": 19
+	"./sjorge.json": 18
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -3243,13 +3242,7 @@ webpackContext.id = 17;
 /* 18 */
 /***/ (function(module, exports) {
 
-module.exports = {"logging":{"level":"debug"}}
-
-/***/ }),
-/* 19 */
-/***/ (function(module, exports) {
-
-module.exports = {"hlssource":{"prefetchSegments":true,"liveWindowSegments":1},"player":{"lowLatencyMode":false}}
+module.exports = {"buffercontrol":{"liveSpeedUpBuffer":7,"liveSpeedUpReset":4,"liveSpeedUpRate":1.03},"lowLatency":{"minBuffer":1,"rebufferPenalty":1,"maxRebufferDuration":6,"prefetchOffset":2}}
 
 /***/ })
 /******/ ]);
