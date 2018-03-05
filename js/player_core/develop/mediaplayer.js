@@ -309,6 +309,10 @@ MediaPlayer.prototype.setAdInsertionEnabled = function (enable) {
     this._postMessage(WorkerMessage.SET_AD_INSERTION_ENABLED, enable);
 }
 
+MediaPlayer.prototype.setLiveMaxLatency = function (latency) {
+    this._postMessage(WorkerMessage.SET_LIVE_MAX_LATENCY, latency);
+}
+
 // Extra Functions
 
 MediaPlayer.prototype.addEventListener = function (name, fn) {
@@ -2890,6 +2894,11 @@ module.exports = {
      * @param {bool} enable true to enable
      */
     SET_AD_INSERTION_ENABLED: 'WorkerSetAdInsertionEnabled',
+    /**
+     * Sets a target max latency for live streams
+     * @param {number} latency max latency value
+     */
+    SET_LIVE_MAX_LATENCY: 'WorkerSetLiveMaxLatency',
 };
 
 
