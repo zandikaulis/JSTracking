@@ -975,18 +975,6 @@ window.SiteOptions = {
                 "value": "enabled"
             }]
         },
-        "29ad6e4c-0a4e-4e21-96f1-79c9e3aa364c": {
-            "name": "android_profile_tab_order",
-            "v": 2959,
-            "t": 1,
-            "groups": [{
-                "weight": 100,
-                "value": "control"
-            }, {
-                "weight": 0,
-                "value": "active"
-            }]
-        },
         "2b5c426e-3b29-4bad-a4be-5f8bea3ad8af": {
             "name": "baking_bread_j",
             "v": 2771,
@@ -2794,6 +2782,18 @@ window.SiteOptions = {
             }, {
                 "weight": 100,
                 "value": "experiment"
+            }]
+        },
+        "7cb520ea-bb49-4bf4-88dc-b25db264dd70": {
+            "name": "android_profile_tab_order",
+            "v": 3200,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
             }]
         },
         "7d9127aa-c26f-4b80-a04d-e6ed38e18b78": {
