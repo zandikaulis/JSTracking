@@ -2783,13 +2783,13 @@ window.SiteOptions = {
         },
         "7cb520ea-bb49-4bf4-88dc-b25db264dd70": {
             "name": "android_profile_tab_order",
-            "v": 3200,
+            "v": 3207,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 50,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 50,
                 "value": "active"
             }]
         },
