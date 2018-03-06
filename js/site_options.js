@@ -2311,13 +2311,13 @@ window.SiteOptions = {
         },
         "5fbc7acf-f2ad-4024-9f23-987e9a74093c": {
             "name": "mobile_web_survey",
-            "v": 3203,
+            "v": 3220,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 99,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 1,
                 "value": "treatment"
             }]
         },
