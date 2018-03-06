@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".c12af84ae8577be0eba3.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".a7726cbc3a694dd600a2.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -29078,7 +29078,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.03.05-210142+7f59e956d094745fa281818eaae1038e0c7ddd3e",
+                    app_version: "2018.03.05-235224+7fcb14e1879839b6894d4ea1ae10d71f27240483",
                     flash_version: r,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -34330,7 +34330,7 @@
                 });
                 var r = v.getState().env.platform === vu.a,
                     i = Mo.a.name === Gk;
-                return (r || i) && t.autoplay && (t.muted = !0), t.tracking = Za()({}, t.tracking, t.trackingProperties, {
+                return (r || i) && t.autoplay && (jo.b.includes(t.player) ? t.autoplay = !1 : t.muted = !0), t.tracking = Za()({}, t.tracking, t.trackingProperties, {
                     player: t.player
                 }), t
             }
