@@ -1825,18 +1825,6 @@ window.SiteOptions = {
                 "value": "FullPageTakeover"
             }]
         },
-        "4c266e8f-176e-4280-8914-d991e6decee3": {
-            "name": "android_broadcast_abs",
-            "v": 2303,
-            "t": 1,
-            "groups": [{
-                "weight": 100,
-                "value": "control"
-            }, {
-                "weight": 0,
-                "value": "active"
-            }]
-        },
         "4ce15ce7-a4fc-40df-812d-847467f0572d": {
             "name": "ios_mobile_promotions",
             "v": 2867,
@@ -2381,18 +2369,6 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
-        "64b8e100-e37d-4796-b446-ff283f20b038": {
-            "name": "android_broadcast_abs",
-            "v": 2305,
-            "t": 1,
-            "groups": [{
-                "weight": 100,
-                "value": "control"
-            }, {
-                "weight": 0,
-                "value": "active"
-            }]
-        },
         "64c787d2-7a36-447b-bba3-8bbab6846da6": {
             "name": "android_browse_for_tablet",
             "v": 2836,
@@ -2562,18 +2538,6 @@ window.SiteOptions = {
                 "value": "control"
             }, {
                 "weight": 95,
-                "value": "active"
-            }]
-        },
-        "6dd84744-bc38-46a8-b146-0f41c5f167ba": {
-            "name": "android_broadcast_abs",
-            "v": 2307,
-            "t": 1,
-            "groups": [{
-                "weight": 100,
-                "value": "control"
-            }, {
-                "weight": 0,
                 "value": "active"
             }]
         },
@@ -4908,18 +4872,6 @@ window.SiteOptions = {
                 "value": "off"
             }]
         },
-        "e3b7d301-0820-40b5-aac4-bd1728282ee9": {
-            "name": "android_broadcast_abs",
-            "v": 2304,
-            "t": 1,
-            "groups": [{
-                "weight": 100,
-                "value": "control"
-            }, {
-                "weight": 0,
-                "value": "active"
-            }]
-        },
         "e3c3a143-0f85-4e84-9b08-73b3ee3ae171": {
             "name": "ios_onboarding_recommendations",
             "v": 1749,
@@ -5127,18 +5079,6 @@ window.SiteOptions = {
         "f164d19e-cbbd-4774-86c7-106f21d892c0": {
             "name": "ios_browse_game_display_tablet_layout",
             "v": 2102,
-            "t": 1,
-            "groups": [{
-                "weight": 100,
-                "value": "control"
-            }, {
-                "weight": 0,
-                "value": "active"
-            }]
-        },
-        "f30da83a-4869-4993-b09f-45d718ab6fab": {
-            "name": "android_broadcast_abs",
-            "v": 2302,
             "t": 1,
             "groups": [{
                 "weight": 100,
