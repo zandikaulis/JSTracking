@@ -12,14 +12,14 @@ webpackJsonp([48], {
                 emote_type: e.emoteType,
                 bits_location: e.location || o.ChatTooltip
             };
-            i.m.track(a.SpadeEventType.BitsCardInteraction, t)
+            i.n.track(a.SpadeEventType.BitsCardInteraction, t)
         }, n.d(t, "b", function() {
             return o
         }), n.d(t, "a", function() {
             return s
         }), t.d = function(e) {
             if (e && l[e]) return l[e];
-            return i.i.error(new Error('Buy Bits card contains improperly rendered offers, or offers unknown to Science. Tracking as "buy_100"'), 'Buy Bits card contains improperly rendered offers, or offers unknown to Science. Tracking as "buy_100"'), s.Buy100
+            return i.j.error(new Error('Buy Bits card contains improperly rendered offers, or offers unknown to Science. Tracking as "buy_100"'), 'Buy Bits card contains improperly rendered offers, or offers unknown to Science. Tracking as "buy_100"'), s.Buy100
         }, t.e = function(e) {
             var t = {
                 channel: e.channel,
@@ -27,30 +27,30 @@ webpackJsonp([48], {
                 available: e.available,
                 host: "twitch.tv"
             };
-            i.m.track(a.SpadeEventType.BitsAdsAvailability, t)
+            i.n.track(a.SpadeEventType.BitsAdsAvailability, t)
         }, t.f = function(e) {
             var t = {
-                distinct_id: i.n.session.deviceID,
+                distinct_id: i.o.session.deviceID,
                 host: "twitch.tv",
                 request_id: e.requestID,
                 campaign_id: e.campaignID,
                 adblock: e.adblock
             };
-            i.m.track(a.SpadeEventType.BitsAdsImpression, t)
+            i.n.track(a.SpadeEventType.BitsAdsImpression, t)
         }, n.d(t, "c", function() {
             return r
         }), t.g = function(e) {
-            var t = i.m.getLastPageview(),
+            var t = i.n.getLastPageview(),
                 n = {
                     location: t && t.location || "",
                     ad_returned: null,
                     campaign_id: e.campaignID,
-                    distinct_id: i.n.session.deviceID,
+                    distinct_id: i.o.session.deviceID,
                     host: "twitch.tv",
                     request_id: e.requestID,
                     request_method: e.requestMethod
                 };
-            i.m.track(a.SpadeEventType.BitsAdsRequest, n)
+            i.n.track(a.SpadeEventType.BitsAdsRequest, n)
         };
         var i = n("6sO2"),
             a = n("vH/s");
@@ -885,7 +885,7 @@ webpackJsonp([48], {
                                     videoID: t
                                 }), [3, 4];
                             case 3:
-                                return a = r.sent(), o.i.error(a, "Failed to fetch collections"), i.store.dispatch({
+                                return a = r.sent(), o.j.error(a, "Failed to fetch collections"), i.store.dispatch({
                                     type: I,
                                     errorType: "Fetch Failed",
                                     errorMessage: "Fetching collections for channel " + e + " and video " + t + " failed."
@@ -931,7 +931,7 @@ webpackJsonp([48], {
                                     userID: p
                                 }), [3, 5];
                             case 4:
-                                return _ = r.sent(), o.i.error(_, "Failed to add new collection with video"), a.store.dispatch({
+                                return _ = r.sent(), o.j.error(_, "Failed to add new collection with video"), a.store.dispatch({
                                     type: A,
                                     errorType: "Create Failed",
                                     errorMessage: "Creating collections for channel " + e + " and video " + n + " with title " + t + "."
@@ -993,7 +993,7 @@ webpackJsonp([48], {
                             case 5:
                                 return [3, 7];
                             case 6:
-                                return k = r.sent(), o.i.error(k, "Failed to fetch collections"), a.store.dispatch({
+                                return k = r.sent(), o.j.error(k, "Failed to fetch collections"), a.store.dispatch({
                                     type: O,
                                     errorType: "Update Failed",
                                     errorMessage: "Updating collection " + e.id + " for channel " + n + " and video " + t + " failed."
@@ -2541,7 +2541,7 @@ webpackJsonp([48], {
                                     case 6:
                                         return r = s.sent(), this.hasAwarded = !0, this.props.onBitsAwarded && this.props.onBitsAwarded(r.data.redeemTrueXAd.grantedBits), [3, 8];
                                     case 7:
-                                        return o = s.sent(), u.i.warn("Error while redeeming bits for truex ad", o), this.props.onError && this.props.onError(i.Unknown), [3, 8];
+                                        return o = s.sent(), u.j.warn("Error while redeeming bits for truex ad", o), this.props.onError && this.props.onError(i.Unknown), [3, 8];
                                     case 8:
                                         return [3, 10];
                                     case 9:
@@ -2587,7 +2587,7 @@ webpackJsonp([48], {
                 return l.__generator(this, function(o) {
                     switch (o.label) {
                         case 0:
-                            if (t = u.b.get("bits_truex_partner_hash", ""), !(n = u.b.get("bits_truex_api_url", "")) || !t) return u.i.warn("Truex API info missing from dynamic settings"), [2, y.Error];
+                            if (t = u.b.get("bits_truex_partner_hash", ""), !(n = u.b.get("bits_truex_api_url", "")) || !t) return u.j.warn("Truex API info missing from dynamic settings"), [2, y.Error];
                             o.label = 1;
                         case 1:
                             return o.trys.push([1, 5, , 6]), [4, fetch(n + "?placement.key=" + t + "&user.uid=" + e + "&max_activities=1")];
@@ -2599,7 +2599,7 @@ webpackJsonp([48], {
                         case 4:
                             return [2, y.Unavailable];
                         case 5:
-                            return r = o.sent(), u.i.warn("Failed checking ad availability from TrueX, probably due to AdBlock", r), [2, y.AdBlocked];
+                            return r = o.sent(), u.j.warn("Failed checking ad availability from TrueX, probably due to AdBlock", r), [2, y.AdBlocked];
                         case 6:
                             return [2]
                     }
@@ -3034,7 +3034,7 @@ webpackJsonp([48], {
                         watebError: null,
                         bitsAwarded: 0,
                         showWatebTerms: !1,
-                        agreedToWatebTerms: u.k.get(Q, !1)
+                        agreedToWatebTerms: u.l.get(Q, !1)
                     }, t.onBuyPopupClose = function(e) {
                         Object(S.a)(e, function() {
                             t.props.data && t.props.data.refetch()
@@ -3105,7 +3105,7 @@ webpackJsonp([48], {
                             "data-a-target": $
                         }, Object(u.d)("Continue", "Bits--Watch-Ad-Terms"))))
                     }, t.onAgreeToWatebTerms = function() {
-                        u.k.set(Q, !0), t.setState({
+                        u.l.set(Q, !0), t.setState({
                             agreedToWatebTerms: !0,
                             showWatebTerms: !1
                         }), t.showWatchAdModal()
@@ -3991,18 +3991,7 @@ webpackJsonp([48], {
                 indexedActions: n,
                 orderedActions: t
             }
-        }, t.b = function(e) {
-            return {
-                cursor: "" + e.rank,
-                node: {
-                    id: e.entry_key,
-                    rank: e.rank,
-                    score: e.score,
-                    __typename: "BitsLeaderboardEntry"
-                },
-                __typename: "BitsLeaderboardEdge"
-            }
-        }, t.c = function(e, t) {
+        }, t.b = function(e, t) {
             return {
                 cursor: "" + e.rank,
                 node: {
@@ -4048,7 +4037,7 @@ webpackJsonp([48], {
         var i = n("TToO"),
             a = n("6sO2"),
             r = n("B9Px");
-        a.n.store.registerReducer("collections", function(e, t) {
+        a.o.store.registerReducer("collections", function(e, t) {
             switch (void 0 === e && (e = {
                 collections: [],
                 videoID: "",
@@ -4102,7 +4091,7 @@ webpackJsonp([48], {
                         statusMessage: null,
                         imageUpdated: !1,
                         loading: !1
-                    }, t.currentImage = null, t.logger = c.i.withCategory("UserImageUploader"), t.onImageInputChange = function(e) {
+                    }, t.currentImage = null, t.logger = c.j.withCategory("UserImageUploader"), t.onImageInputChange = function(e) {
                         var n;
                         if (null !== e) {
                             t.setState({
@@ -4128,7 +4117,7 @@ webpackJsonp([48], {
                                                     statusMessage: v.b.UnexpectedError
                                                 }), [2];
                                             case 4:
-                                                return this.unsubscribe = c.j.subscribe({
+                                                return this.unsubscribe = c.k.subscribe({
                                                     topic: Object(p.i)(this.props.userID),
                                                     success: function() {
                                                         try {
@@ -4379,7 +4368,7 @@ webpackJsonp([48], {
     jF7o: function(e, t, n) {
         "use strict";
         t.a = function(e, t) {
-            if (!e) return void i.i.warn("[onPopupClose] Attempted to observe a window that failed to open.");
+            if (!e) return void i.j.warn("[onPopupClose] Attempted to observe a window that failed to open.");
             var n = setInterval(function() {
                 var i = !1,
                     a = !1;
@@ -4400,14 +4389,14 @@ webpackJsonp([48], {
     jXn2: function(e, t, n) {
         "use strict";
         t.b = function(e) {
-            i.m.track(a.SpadeEventType.CollectionCreate, {
+            i.n.track(a.SpadeEventType.CollectionCreate, {
                 channel_id: e.channelID,
                 playlist_id: e.playlistID,
                 user_id: e.userID,
                 title: e.title
             })
         }, t.a = function(e) {
-            i.m.track(a.SpadeEventType.CollectionAddItem, {
+            i.n.track(a.SpadeEventType.CollectionAddItem, {
                 channel_id: e.channelID,
                 item_id: e.itemID,
                 item_position: e.itemPosition,
@@ -4416,7 +4405,7 @@ webpackJsonp([48], {
                 user_id: e.userID
             })
         }, t.c = function(e) {
-            i.m.track(a.SpadeEventType.CollectionRemoveItem, {
+            i.n.track(a.SpadeEventType.CollectionRemoveItem, {
                 channel_id: e.channelID,
                 item_id: e.itemID,
                 item_position: e.itemPosition,
@@ -5140,7 +5129,7 @@ webpackJsonp([48], {
                         profileUpdated: !1,
                         currentImageHasTallAspectRatio: !1,
                         imageFormat: ""
-                    }, t.currentImage = null, t.logger = d.i.withCategory("ProfileImagePicker"), t.onImageInputChange = function(e) {
+                    }, t.currentImage = null, t.logger = d.j.withCategory("ProfileImagePicker"), t.onImageInputChange = function(e) {
                         var n;
                         if (null !== e) {
                             n = e[0];
@@ -5194,7 +5183,7 @@ webpackJsonp([48], {
                                             statusMessage: k.b.UnexpectedError
                                         }), [2];
                                     case 4:
-                                        return this.unsubscribe = d.j.subscribe({
+                                        return this.unsubscribe = d.k.subscribe({
                                             topic: Object(f.i)(this.props.userID),
                                             success: function() {
                                                 try {
@@ -5674,7 +5663,7 @@ webpackJsonp([48], {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return i.__extends(t, e), t.prototype.componentDidUpdate = function() {
-                    if (!this.props.data.loading && this.props.data.user) return o.n.setPageTitle(this.props.data.user.displayName), void this.props.latencyTracking.reportInteractive(this.props.data.user.collections.edges.length + 1);
+                    if (!this.props.data.loading && this.props.data.user) return o.o.setPageTitle(this.props.data.user.displayName), void this.props.latencyTracking.reportInteractive(this.props.data.user.collections.edges.length + 1);
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     var e;
@@ -5904,4 +5893,4 @@ webpackJsonp([48], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-collections-599b71fc8d98c5bdac4780316b170fc8.js.map
+//# sourceMappingURL=pages.channel-collections-11bb8c724488ea43d38023f140dc6d31.js.map

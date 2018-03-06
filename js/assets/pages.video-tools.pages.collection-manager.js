@@ -1,4 +1,4 @@
-webpackJsonp([77], {
+webpackJsonp([78], {
     "1myv": function(e, t) {
         var n = {
             kind: "Document",
@@ -215,7 +215,7 @@ webpackJsonp([77], {
                                 return i.__generator(this, function(i) {
                                     switch (i.label) {
                                         case 0:
-                                            if (!this.props.context) return a.i.error(new Error("Collection creation attempt occurred without valid creation context"), "CreateCollection"), this.setState({
+                                            if (!this.props.context) return a.j.error(new Error("Collection creation attempt occurred without valid creation context"), "CreateCollection"), this.setState({
                                                 creationErrorMessage: this.defaultCreationError
                                             }), [2];
                                             e = this.props.context, t = e.ownerID, n = e.ownerLogin, o = e.sessionUserID, r = Object(s.a)({
@@ -235,7 +235,7 @@ webpackJsonp([77], {
                                                 medium: u.PageviewMedium.VideoManagerCollectionManager
                                             }), [3, 4];
                                         case 3:
-                                            return d = i.sent(), a.i.error(d, "CreateCollection", {
+                                            return d = i.sent(), a.j.error(d, "CreateCollection", {
                                                 mutationInput: r
                                             }), this.setState({
                                                 creationErrorMessage: this.defaultCreationError
@@ -957,7 +957,7 @@ webpackJsonp([77], {
                                         case 2:
                                             return t.sent(), [3, 4];
                                         case 3:
-                                            return e = t.sent(), c.i.error(e, "DeleteCollectionModal"), this.setState({
+                                            return e = t.sent(), c.j.error(e, "DeleteCollectionModal"), this.setState({
                                                 deletionError: this.defaultUserError
                                             }), [2];
                                         case 4:
@@ -1252,4 +1252,4 @@ webpackJsonp([77], {
         })(C)
     }
 });
-//# sourceMappingURL=pages.video-tools.pages.collection-manager-1585f3cad342e22360f2206cf73ec280.js.map
+//# sourceMappingURL=pages.video-tools.pages.collection-manager-15a81766f68db8b90f25ab3b423bdd3d.js.map

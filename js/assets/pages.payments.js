@@ -2216,7 +2216,7 @@ webpackJsonp([43], {
                         })
                     })
                 }, e.getAPIURL = function(e) {
-                    return new URL(e, r.n.config.apiBaseURL)
+                    return new URL(e, r.o.config.apiBaseURL)
                 }, e.constructLegacyAPIResponse = function(e) {
                     return n.__awaiter(this, void 0, void 0, function() {
                         var t, a, r, s;
@@ -2255,11 +2255,11 @@ webpackJsonp([43], {
                 }, e.serialize = function(e, t) {
                     return "application/json; charset=UTF-8" === t ? JSON.stringify(e) : e
                 }, e.getDefaultHeaders = function(e, t) {
-                    var a = r.n.store.getState(),
+                    var a = r.o.store.getState(),
                         n = {
                             Accept: "application/vnd.twitchtv.v" + (t.version || 5) + "+json; charset=UTF-8",
                             "Accept-Language": "en-us",
-                            "Client-ID": r.n.config.legacyClientID,
+                            "Client-ID": r.o.config.legacyClientID,
                             "X-Requested-With": "XMLHttpRequest"
                         };
                     e.body && FormData.prototype.isPrototypeOf(e.body) || (n["Content-Type"] = "application/json; charset=UTF-8");
@@ -13204,4 +13204,4 @@ webpackJsonp([43], {
         })(a("PJh5"))
     }
 });
-//# sourceMappingURL=pages.payments-66272bd429d7436d1f808b29725158f3.js.map
+//# sourceMappingURL=pages.payments-e69d8260941b16326de5f63336d44283.js.map

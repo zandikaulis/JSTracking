@@ -144,7 +144,7 @@ webpackJsonp([81], {
                     }, t.onPreviewCardClick = function(e) {
                         if (t.props.videos) {
                             var n = t.props.videos[e];
-                            d.m.trackItemSectionClick(r.__assign({
+                            d.n.trackItemSectionClick(r.__assign({
                                 carousel_content: t.props.tracking.content,
                                 item_id: n.id,
                                 item_index: e,
@@ -308,7 +308,7 @@ webpackJsonp([81], {
                         var a = o[i];
                         t.push(a.id), n.push(a.viewCount)
                     }
-                    d.m.trackItemSectionLoad(r.__assign({
+                    d.n.trackItemSectionLoad(r.__assign({
                         carousel_content: this.props.tracking.content,
                         location: this.props.tracking.location,
                         rendered_item_count: e.length,
@@ -431,4 +431,4 @@ webpackJsonp([81], {
     },
     yF7E: function(e, t) {}
 });
-//# sourceMappingURL=features.video-carousel.components.latest-videos-from-followed-carousel.component-82005214f0ad2b64e2205b7d7bed0f25.js.map
+//# sourceMappingURL=features.video-carousel.components.latest-videos-from-followed-carousel.component-aaff2f3ef766574f06b7bf5ebec134d5.js.map

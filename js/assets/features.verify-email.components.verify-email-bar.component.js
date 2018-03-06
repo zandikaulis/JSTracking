@@ -76,7 +76,7 @@ webpackJsonp([59], {
                         })
                     })
                 }, e.getAPIURL = function(e) {
-                    return new URL(e, n.n.config.apiBaseURL)
+                    return new URL(e, n.o.config.apiBaseURL)
                 }, e.constructLegacyAPIResponse = function(e) {
                     return r.__awaiter(this, void 0, void 0, function() {
                         var t, i, n, a;
@@ -115,11 +115,11 @@ webpackJsonp([59], {
                 }, e.serialize = function(e, t) {
                     return "application/json; charset=UTF-8" === t ? JSON.stringify(e) : e
                 }, e.getDefaultHeaders = function(e, t) {
-                    var i = n.n.store.getState(),
+                    var i = n.o.store.getState(),
                         r = {
                             Accept: "application/vnd.twitchtv.v" + (t.version || 5) + "+json; charset=UTF-8",
                             "Accept-Language": "en-us",
-                            "Client-ID": n.n.config.legacyClientID,
+                            "Client-ID": n.o.config.legacyClientID,
                             "X-Requested-With": "XMLHttpRequest"
                         };
                     e.body && FormData.prototype.isPrototypeOf(e.body) || (r["Content-Type"] = "application/json; charset=UTF-8");
@@ -145,7 +145,7 @@ webpackJsonp([59], {
             d = i("R0Kh"),
             m = i("9u8h"),
             f = this,
-            h = u.n.logger.withCategory("verify-email"),
+            h = u.o.logger.withCategory("verify-email"),
             p = function(e, t) {
                 return n.__awaiter(f, void 0, void 0, function() {
                     var i, r;
@@ -184,7 +184,7 @@ webpackJsonp([59], {
         }), i.d(t, "VerifyEmailBarPresentation", function() {
             return b
         }), i.d(t, "VerifyEmailBar", function() {
-            return k
+            return N
         });
         var E, S = "verifyemailbar_dismissal",
             I = 18e5,
@@ -201,13 +201,13 @@ webpackJsonp([59], {
                     return i.state = {
                         isError: !1,
                         verifyEmailBarState: E.INITIAL
-                    }, i.resetAfterDismissalTimeoutID = null, i.afterVerifyDismissTimeoutID = null, i.dismissalData = null, i.logger = u.n.logger.withCategory("verify-email-bar"), i.dismissBarClickHandler = function(e) {
+                    }, i.resetAfterDismissalTimeoutID = null, i.afterVerifyDismissTimeoutID = null, i.dismissalData = null, i.logger = u.o.logger.withCategory("verify-email-bar"), i.dismissBarClickHandler = function(e) {
                         e && e.stopPropagation();
                         var t = i.dismissalData ? i.dismissalData.dismissalCount : 0;
                         i.dismissalData = {
                             dismissalCount: t + 1,
                             dismissalDateTimeMs: Date.now()
-                        }, u.k.set(S, i.dismissalData), i.setState({
+                        }, u.l.set(S, i.dismissalData), i.setState({
                             verifyEmailBarState: E.DISMISSED
                         }), i.resetAfterDismissalTimeoutID = setTimeout(function() {
                             return n.__awaiter(i, void 0, void 0, function() {
@@ -222,7 +222,7 @@ webpackJsonp([59], {
                                     }
                                 })
                             })
-                        }, 1.01 * I), u.n.tracking.track(y.SpadeEventType.VerifyEmailBar, {
+                        }, 1.01 * I), u.o.tracking.track(y.SpadeEventType.VerifyEmailBar, {
                             action: r.Dismiss
                         })
                     }, i.onClickToVerify = function(e) {
@@ -241,13 +241,13 @@ webpackJsonp([59], {
                                             i.setState({
                                                 verifyEmailBarState: E.DISMISSED
                                             }), i.afterVerifyDismissTimeoutID = null
-                                        }, g), u.n.tracking.track(y.SpadeEventType.VerifyEmailBar, {
+                                        }, g), u.o.tracking.track(y.SpadeEventType.VerifyEmailBar, {
                                             action: r.Click
                                         }), [2]
                                 }
                             })
                         })
-                    }, i.dismissalData = u.k.getOptional(S), i
+                    }, i.dismissalData = u.l.getOptional(S), i
                 }
                 return n.__extends(t, e), t.prototype.componentDidCatch = function(e, t) {
                     var i = this;
@@ -356,7 +356,7 @@ webpackJsonp([59], {
                     return this.props.data && !(this.props.data.loading || this.props.data.error) && this.props.data.currentUser && this.props.data.requestInfo
                 }, t
             }(a.Component),
-            k = Object(o.d)(Object(l.d)("VerifyEmail"), Object(c.a)(_), s.e)(b)
+            N = Object(o.d)(Object(l.d)("VerifyEmail"), Object(c.a)(_), s.e)(b)
     },
     RDCx: function(e, t) {
         var i = {
@@ -464,4 +464,4 @@ webpackJsonp([59], {
     },
     yY1M: function(e, t) {}
 });
-//# sourceMappingURL=features.verify-email.components.verify-email-bar.component-2bfa5a8a191ee1d779d7df998430607a.js.map
+//# sourceMappingURL=features.verify-email.components.verify-email-bar.component-b4d6b275bec335c5cbd5312a45d19268.js.map

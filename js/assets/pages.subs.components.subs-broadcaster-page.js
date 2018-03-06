@@ -1,4 +1,4 @@
-webpackJsonp([79], {
+webpackJsonp([80], {
     "027l": function(e, t) {
         var n = {
             kind: "Document",
@@ -435,7 +435,7 @@ webpackJsonp([79], {
                         channel: e.channel,
                         channel_id: e.channelId,
                         clickthrough_location: e.clickthroughLocation
-                    }, r.m.track(s.SpadeEventType.SubsLandingStreamerClick, t), [2]
+                    }, r.n.track(s.SpadeEventType.SubsLandingStreamerClick, t), [2]
                 })
             })
         }, t.b = function(e) {
@@ -473,7 +473,7 @@ webpackJsonp([79], {
                         vod_type: "",
                         viewport_height: window.innerHeight,
                         viewport_width: window.innerWidth
-                    }, r.m.track(s.SpadeEventType.Subscription, n), [2]
+                    }, r.n.track(s.SpadeEventType.Subscription, n), [2]
                 })
             })
         };
@@ -1070,7 +1070,7 @@ webpackJsonp([79], {
                     }, t
                 }
                 return s.__extends(t, e), t.prototype.componentDidMount = function() {
-                    o.n.setPageTitle("Subscriptions"), this.props.latencyTracking.reportInteractive()
+                    o.o.setPageTitle("Subscriptions"), this.props.latencyTracking.reportInteractive()
                 }, t.prototype.componentWillReceiveProps = function(e) {
                     if (!e.data.loading) {
                         if (e.data.user && e.data.user.subscriptionProducts && e.data.user.subscriptionProducts.length > 0) {
@@ -1153,4 +1153,4 @@ webpackJsonp([79], {
         })
     }
 });
-//# sourceMappingURL=pages.subs.components.subs-broadcaster-page-ef0e2149fb8dbb94c40effc691e01a0a.js.map
+//# sourceMappingURL=pages.subs.components.subs-broadcaster-page-a811a4862b70642a73d51dca7d992911.js.map

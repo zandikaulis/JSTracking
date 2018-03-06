@@ -83,7 +83,7 @@ webpackJsonp([74, 75], {
                         return a.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return [4, i.n.experiments.getAssignment(c.k)];
+                                    return [4, i.o.experiments.getAssignment(c.k)];
                                 case 1:
                                     return e = t.sent(), this.setState({
                                         isFollowCategoriesExperimentEnabled: e === c.c.ENABLED
@@ -360,7 +360,7 @@ webpackJsonp([74, 75], {
                 }
                 return a.__extends(t, e), t.prototype.componentDidMount = function() {
                     var e = this.context.registerReceiver;
-                    e ? this.unregister = e(this) : g.i.warn("<StreamThumbnailWithTrackingComponent /> initialized missing a <ScrollableArea /> provider")
+                    e ? this.unregister = e(this) : g.j.warn("<StreamThumbnailWithTrackingComponent /> initialized missing a <ScrollableArea /> provider")
                 }, t.prototype.componentWillUnmount = function() {
                     this.unregister && this.unregister()
                 }, t.prototype.render = function() {
@@ -1118,7 +1118,7 @@ webpackJsonp([74, 75], {
                                             }
                                         }), [4, this.props.banUserFromCommunity(e)]) : [2];
                                     case 1:
-                                        return null === (t = n.sent()).data.banUserFromCommunity.error ? (o.n.tracking.track(c.SpadeEventType.CommunityModeration, {
+                                        return null === (t = n.sent()).data.banUserFromCommunity.error ? (o.o.tracking.track(c.SpadeEventType.CommunityModeration, {
                                             community_id: this.props.communityID,
                                             name: this.props.communityName,
                                             is_official: !1,
@@ -1250,7 +1250,7 @@ webpackJsonp([74, 75], {
                                             }
                                         }), [4, this.props.timeoutUserFromCommunity(e)]) : [2];
                                     case 1:
-                                        return null === (t = n.sent()).data.timeoutUserFromCommunity.error ? (o.n.tracking.track(c.SpadeEventType.CommunityModeration, {
+                                        return null === (t = n.sent()).data.timeoutUserFromCommunity.error ? (o.o.tracking.track(c.SpadeEventType.CommunityModeration, {
                                             community_id: this.props.communityID,
                                             name: this.props.communityName,
                                             is_official: !1,
@@ -2288,31 +2288,31 @@ webpackJsonp([74, 75], {
                     source: e.source,
                     action: r.Start
                 };
-                i.m.track(o.SpadeEventType.OnboardingEvent, t)
+                i.n.track(o.SpadeEventType.OnboardingEvent, t)
             },
             l = function() {
                 var e = {
                     source: a.HomepageCTA,
                     action: r.Dismissed
                 };
-                i.m.track(o.SpadeEventType.OnboardingEvent, e)
+                i.n.track(o.SpadeEventType.OnboardingEvent, e)
             },
             d = function() {
                 var e = {
                     source: a.HomepageCTA,
                     action: r.Completed
                 };
-                i.m.track(o.SpadeEventType.OnboardingEvent, e)
+                i.n.track(o.SpadeEventType.OnboardingEvent, e)
             },
             m = function(e, t) {
                 var n = {
                     src: o.SpadeEventType.OnboardingEvent,
                     game: t
                 };
-                i.m.track(e, n)
+                i.n.track(e, n)
             },
             c = function(e) {
-                i.m.track(o.SpadeEventType.BrowseForYou, e)
+                i.n.track(o.SpadeEventType.BrowseForYou, e)
             }
     },
     XhYx: function(e, t, n) {
@@ -2962,7 +2962,7 @@ webpackJsonp([74, 75], {
                             return a.__generator(this, function(t) {
                                 switch (t.label) {
                                     case 0:
-                                        return Object(f.d)(), [4, o.n.experiments.getAssignment(y.j)];
+                                        return Object(f.d)(), [4, o.o.experiments.getAssignment(y.j)];
                                     case 1:
                                         return e = t.sent(), Object(y.o)(e) ? this.redirectToForYouPage() : this.redirectToFrontPage(), [2]
                                 }
@@ -2989,7 +2989,7 @@ webpackJsonp([74, 75], {
                         return a.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return o.n.setPageTitle(Object(o.d)("Welcome", "CommunitySelectionPage")), [4, o.n.experiments.getAssignment(y.i)];
+                                    return o.o.setPageTitle(Object(o.d)("Welcome", "CommunitySelectionPage")), [4, o.o.experiments.getAssignment(y.i)];
                                 case 1:
                                     return e = t.sent(), this.setState({
                                         inOnboardingExperiment: Object(y.q)(e)
@@ -3049,7 +3049,7 @@ webpackJsonp([74, 75], {
                         loadMore: this.props.onLoadMoreCategories,
                         orientation: l.b.Down,
                         pixelThreshold: 20
-                    })))) : this.props.data.error ? (o.i.warn("Data Error in Onboarding Community Selection", this.props.data.error), r.createElement(k._2, {
+                    })))) : this.props.data.error ? (o.j.warn("Data Error in Onboarding Community Selection", this.props.data.error), r.createElement(k._2, {
                         display: k.N.Flex
                     }, r.createElement(k._35, {
                         fontSize: k.R.Size5,
@@ -3732,7 +3732,7 @@ webpackJsonp([74, 75], {
                                         categoryData: t
                                     }), [3, 3];
                                 case 2:
-                                    return n = a.sent(), o.i.error(n, "Unable to fetch categories."), this.setState({
+                                    return n = a.sent(), o.j.error(n, "Unable to fetch categories."), this.setState({
                                         categoryData: null
                                     }), [3, 3];
                                 case 3:
@@ -3753,4 +3753,4 @@ webpackJsonp([74, 75], {
         })
     }
 });
-//# sourceMappingURL=pages.anon-front.components.top-creative-71833345156ab4b84a98793530d0c166.js.map
+//# sourceMappingURL=pages.anon-front.components.top-creative-b425458fe337e9b2e6dae907ab3af503.js.map

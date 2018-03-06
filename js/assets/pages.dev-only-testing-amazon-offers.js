@@ -19,7 +19,7 @@ webpackJsonp([58], {
                 category: "Monetization",
                 section_name: "amazon_associates"
             }, e);
-            d.m.track(p.SpadeEventType.PartnerAffiliateSettings, t)
+            d.n.track(p.SpadeEventType.PartnerAffiliateSettings, t)
         }! function(e) {
             e.PARTNER = "partner", e.AFFILIATE = "affiliate", e.NONE = "none"
         }(a || (a = {})),
@@ -744,7 +744,7 @@ webpackJsonp([58], {
     jF7o: function(e, t, n) {
         "use strict";
         t.a = function(e, t) {
-            if (!e) return void a.i.warn("[onPopupClose] Attempted to observe a window that failed to open.");
+            if (!e) return void a.j.warn("[onPopupClose] Attempted to observe a window that failed to open.");
             var n = setInterval(function() {
                 var a = !1,
                     i = !1;
@@ -991,4 +991,4 @@ webpackJsonp([58], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.dev-only-testing-amazon-offers-faf187312c08f877262d874db4e70204.js.map
+//# sourceMappingURL=pages.dev-only-testing-amazon-offers-8bd208f236ecdeedc0ad0de8363b945e.js.map

@@ -83,7 +83,7 @@ webpackJsonp([75], {
                         return a.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return [4, i.n.experiments.getAssignment(c.k)];
+                                    return [4, i.o.experiments.getAssignment(c.k)];
                                 case 1:
                                     return e = t.sent(), this.setState({
                                         isFollowCategoriesExperimentEnabled: e === c.c.ENABLED
@@ -238,7 +238,7 @@ webpackJsonp([75], {
                 }
                 return a.__extends(t, e), t.prototype.componentDidMount = function() {
                     var e = this.context.registerReceiver;
-                    e ? this.unregister = e(this) : g.i.warn("<StreamThumbnailWithTrackingComponent /> initialized missing a <ScrollableArea /> provider")
+                    e ? this.unregister = e(this) : g.j.warn("<StreamThumbnailWithTrackingComponent /> initialized missing a <ScrollableArea /> provider")
                 }, t.prototype.componentWillUnmount = function() {
                     this.unregister && this.unregister()
                 }, t.prototype.render = function() {
@@ -995,7 +995,7 @@ webpackJsonp([75], {
                                             }
                                         }), [4, this.props.banUserFromCommunity(e)]) : [2];
                                     case 1:
-                                        return null === (t = n.sent()).data.banUserFromCommunity.error ? (o.n.tracking.track(c.SpadeEventType.CommunityModeration, {
+                                        return null === (t = n.sent()).data.banUserFromCommunity.error ? (o.o.tracking.track(c.SpadeEventType.CommunityModeration, {
                                             community_id: this.props.communityID,
                                             name: this.props.communityName,
                                             is_official: !1,
@@ -1127,7 +1127,7 @@ webpackJsonp([75], {
                                             }
                                         }), [4, this.props.timeoutUserFromCommunity(e)]) : [2];
                                     case 1:
-                                        return null === (t = n.sent()).data.timeoutUserFromCommunity.error ? (o.n.tracking.track(c.SpadeEventType.CommunityModeration, {
+                                        return null === (t = n.sent()).data.timeoutUserFromCommunity.error ? (o.o.tracking.track(c.SpadeEventType.CommunityModeration, {
                                             community_id: this.props.communityID,
                                             name: this.props.communityName,
                                             is_official: !1,
@@ -1225,12 +1225,12 @@ webpackJsonp([75], {
             x = Object(w.compose)(Object(b.a)(D, {
                 name: "timeoutUserFromCommunity"
             }))(P);
-        var A = Object(y.b)(null, function(e) {
+        var j = Object(y.b)(null, function(e) {
                 return Object(f.b)({
                     onCloseModal: v.c
                 }, e)
             })(x),
-            j = n("PO03"),
+            A = n("PO03"),
             M = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -1245,7 +1245,7 @@ webpackJsonp([75], {
                         })
                     }, t.onStreamTimeoutClick = function() {
                         var e = Object(m.a)(t.props.login, t.props.displayName, !0);
-                        t.props.onShowModal(A, {
+                        t.props.onShowModal(j, {
                             communityID: t.props.data.community.id,
                             communityName: t.props.communityName,
                             currentUserID: t.props.data.currentUser.id,
@@ -1283,7 +1283,7 @@ webpackJsonp([75], {
                             x: 1
                         }
                     }, Object(o.d)("Timeout", "StreamFlag"))) : null
-                }, t = a.__decorate([Object(b.a)(j, {
+                }, t = a.__decorate([Object(b.a)(A, {
                     options: function(e) {
                         return {
                             fetchPolicy: "network-only",
@@ -1998,31 +1998,31 @@ webpackJsonp([75], {
                     source: e.source,
                     action: r.Start
                 };
-                i.m.track(o.SpadeEventType.OnboardingEvent, t)
+                i.n.track(o.SpadeEventType.OnboardingEvent, t)
             },
             l = function() {
                 var e = {
                     source: a.HomepageCTA,
                     action: r.Dismissed
                 };
-                i.m.track(o.SpadeEventType.OnboardingEvent, e)
+                i.n.track(o.SpadeEventType.OnboardingEvent, e)
             },
             m = function() {
                 var e = {
                     source: a.HomepageCTA,
                     action: r.Completed
                 };
-                i.m.track(o.SpadeEventType.OnboardingEvent, e)
+                i.n.track(o.SpadeEventType.OnboardingEvent, e)
             },
             d = function(e, t) {
                 var n = {
                     src: o.SpadeEventType.OnboardingEvent,
                     game: t
                 };
-                i.m.track(e, n)
+                i.n.track(e, n)
             },
             c = function(e) {
-                i.m.track(o.SpadeEventType.BrowseForYou, e)
+                i.n.track(o.SpadeEventType.BrowseForYou, e)
             }
     },
     XhYx: function(e, t, n) {
@@ -2672,7 +2672,7 @@ webpackJsonp([75], {
                             return a.__generator(this, function(t) {
                                 switch (t.label) {
                                     case 0:
-                                        return Object(f.d)(), [4, o.n.experiments.getAssignment(y.j)];
+                                        return Object(f.d)(), [4, o.o.experiments.getAssignment(y.j)];
                                     case 1:
                                         return e = t.sent(), Object(y.o)(e) ? this.redirectToForYouPage() : this.redirectToFrontPage(), [2]
                                 }
@@ -2699,7 +2699,7 @@ webpackJsonp([75], {
                         return a.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return o.n.setPageTitle(Object(o.d)("Welcome", "CommunitySelectionPage")), [4, o.n.experiments.getAssignment(y.i)];
+                                    return o.o.setPageTitle(Object(o.d)("Welcome", "CommunitySelectionPage")), [4, o.o.experiments.getAssignment(y.i)];
                                 case 1:
                                     return e = t.sent(), this.setState({
                                         inOnboardingExperiment: Object(y.q)(e)
@@ -2759,7 +2759,7 @@ webpackJsonp([75], {
                         loadMore: this.props.onLoadMoreCategories,
                         orientation: l.b.Down,
                         pixelThreshold: 20
-                    })))) : this.props.data.error ? (o.i.warn("Data Error in Onboarding Community Selection", this.props.data.error), r.createElement(k._2, {
+                    })))) : this.props.data.error ? (o.j.warn("Data Error in Onboarding Community Selection", this.props.data.error), r.createElement(k._2, {
                         display: k.N.Flex
                     }, r.createElement(k._35, {
                         fontSize: k.R.Size5,
@@ -3442,7 +3442,7 @@ webpackJsonp([75], {
                                         categoryData: t
                                     }), [3, 3];
                                 case 2:
-                                    return n = a.sent(), o.i.error(n, "Unable to fetch categories."), this.setState({
+                                    return n = a.sent(), o.j.error(n, "Unable to fetch categories."), this.setState({
                                         categoryData: null
                                     }), [3, 3];
                                 case 3:
@@ -3463,4 +3463,4 @@ webpackJsonp([75], {
         })
     }
 });
-//# sourceMappingURL=pages.anon-front.components.featured-genres-e5aa29c6214cb561477dd3e51c56eebd.js.map
+//# sourceMappingURL=pages.anon-front.components.featured-genres-d38f650fc6f3ad9b610e37a02e2b64bb.js.map

@@ -1,4 +1,4 @@
-webpackJsonp([45], {
+webpackJsonp([46], {
     "+Aaf": function(e, t) {},
     "/LBW": function(e, t, n) {
         "use strict";
@@ -12,14 +12,14 @@ webpackJsonp([45], {
                 emote_type: e.emoteType,
                 bits_location: e.location || o.ChatTooltip
             };
-            i.m.track(a.SpadeEventType.BitsCardInteraction, t)
+            i.n.track(a.SpadeEventType.BitsCardInteraction, t)
         }, n.d(t, "b", function() {
             return o
         }), n.d(t, "a", function() {
             return s
         }), t.d = function(e) {
             if (e && l[e]) return l[e];
-            return i.i.error(new Error('Buy Bits card contains improperly rendered offers, or offers unknown to Science. Tracking as "buy_100"'), 'Buy Bits card contains improperly rendered offers, or offers unknown to Science. Tracking as "buy_100"'), s.Buy100
+            return i.j.error(new Error('Buy Bits card contains improperly rendered offers, or offers unknown to Science. Tracking as "buy_100"'), 'Buy Bits card contains improperly rendered offers, or offers unknown to Science. Tracking as "buy_100"'), s.Buy100
         }, t.e = function(e) {
             var t = {
                 channel: e.channel,
@@ -27,30 +27,30 @@ webpackJsonp([45], {
                 available: e.available,
                 host: "twitch.tv"
             };
-            i.m.track(a.SpadeEventType.BitsAdsAvailability, t)
+            i.n.track(a.SpadeEventType.BitsAdsAvailability, t)
         }, t.f = function(e) {
             var t = {
-                distinct_id: i.n.session.deviceID,
+                distinct_id: i.o.session.deviceID,
                 host: "twitch.tv",
                 request_id: e.requestID,
                 campaign_id: e.campaignID,
                 adblock: e.adblock
             };
-            i.m.track(a.SpadeEventType.BitsAdsImpression, t)
+            i.n.track(a.SpadeEventType.BitsAdsImpression, t)
         }, n.d(t, "c", function() {
             return r
         }), t.g = function(e) {
-            var t = i.m.getLastPageview(),
+            var t = i.n.getLastPageview(),
                 n = {
                     location: t && t.location || "",
                     ad_returned: null,
                     campaign_id: e.campaignID,
-                    distinct_id: i.n.session.deviceID,
+                    distinct_id: i.o.session.deviceID,
                     host: "twitch.tv",
                     request_id: e.requestID,
                     request_method: e.requestMethod
                 };
-            i.m.track(a.SpadeEventType.BitsAdsRequest, n)
+            i.n.track(a.SpadeEventType.BitsAdsRequest, n)
         };
         var i = n("6sO2"),
             a = n("vH/s");
@@ -3010,7 +3010,7 @@ webpackJsonp([45], {
                 channel_id: e.channelID,
                 location: e.location
             };
-            return r.n.tracking.track(o.SpadeEventType.EventShare, t)
+            return r.o.tracking.track(o.SpadeEventType.EventShare, t)
         }, t.d = function(e) {
             var t = {
                 action: e.action,
@@ -3019,7 +3019,7 @@ webpackJsonp([45], {
                 event_id: e.eventID,
                 location: e.location
             };
-            return r.n.tracking.track(o.SpadeEventType.EventFollowing, t)
+            return r.o.tracking.track(o.SpadeEventType.EventFollowing, t)
         };
         var i, a, r = n("6sO2"),
             o = n("vH/s");
@@ -3125,14 +3125,14 @@ webpackJsonp([45], {
                     margin: {
                         left: .5
                     }
-                }, l.createElement(N._35, null, Object(d.d)("Happening Now", "TimetableHeader")))) : l.createElement(N._2, null, l.createElement(N._35, null, Object(d.h)(e.event.startAt, {
+                }, l.createElement(N._35, null, Object(d.d)("Happening Now", "TimetableHeader")))) : l.createElement(N._2, null, l.createElement(N._35, null, Object(d.i)(e.event.startAt, {
                     weekday: "long",
                     month: "short",
                     day: "numeric"
                 }))));
                 var a = null;
                 if (e.event.startAt && e.event.endAt) {
-                    var r = Object(d.h)(e.event.endAt, {
+                    var r = Object(d.i)(e.event.endAt, {
                         weekday: "long",
                         month: "short",
                         day: "numeric",
@@ -3570,7 +3570,7 @@ webpackJsonp([45], {
                         flexShrink: 0
                     }, l.createElement(N._35, {
                         type: N._40.H5
-                    }, Object(d.h)(this.props.event.startAt, {
+                    }, Object(d.i)(this.props.event.startAt, {
                         weekday: "long",
                         timezoneName: "short"
                     }))), l.createElement(N._2, {
@@ -3653,7 +3653,7 @@ webpackJsonp([45], {
                     }
                     var m = l.createElement(N._35, {
                         color: N.I.Overlay
-                    }, Object(d.h)(this.props.event.startAt, {
+                    }, Object(d.i)(this.props.event.startAt, {
                         weekday: "long",
                         month: "long",
                         day: "numeric",
@@ -3669,7 +3669,7 @@ webpackJsonp([45], {
                         day: "numeric"
                     })), l.createElement(N._35, {
                         color: N.I.Overlay
-                    }, Object(d.d)("Happening Now until", "TimeTableSegment") + " " + Object(d.h)(this.props.event.endAt, {
+                    }, Object(d.d)("Happening Now until", "TimeTableSegment") + " " + Object(d.i)(this.props.event.endAt, {
                         timeZoneName: "short"
                     }))));
                     var p = null;
@@ -3817,8 +3817,8 @@ webpackJsonp([45], {
                             expandedEvent: null
                         })
                     }, n.setExpanded = function(e) {
-                        d.n.history.replace(s.__assign({}, d.n.history.location, {
-                            state: s.__assign({}, d.n.history.location.state, {
+                        d.o.history.replace(s.__assign({}, d.o.history.location, {
+                            state: s.__assign({}, d.o.history.location.state, {
                                 expandedSegmentID: e
                             })
                         })), n.setState({
@@ -4382,7 +4382,7 @@ webpackJsonp([45], {
                     }, l.createElement(N._35, {
                         fontSize: N.R.Size5
                     }, function(e) {
-                        return Object(d.h)(e, {
+                        return Object(d.i)(e, {
                             timeZoneName: "short"
                         })
                     }(n))), l.createElement(N._2, {
@@ -4546,8 +4546,8 @@ webpackJsonp([45], {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.clearExpandedSegmentHistory = function() {
-                        t.props.location.state && d.n.history.replace(s.__assign({}, d.n.history.location, {
-                            state: s.__assign({}, d.n.history.location.state, {
+                        t.props.location.state && d.o.history.replace(s.__assign({}, d.o.history.location, {
+                            state: s.__assign({}, d.o.history.location.state, {
                                 expandedSegmentID: void 0
                             })
                         }))
@@ -4616,7 +4616,7 @@ webpackJsonp([45], {
                         fillContent: !0
                     }))
                 }, t.prototype.onRender = function() {
-                    this.props.data.event && (this.props.latencyTracking.reportInteractive(), this.props.data.event.title && d.n.setPageTitle(this.props.data.event.title)), this.clearExpandedSegmentHistory()
+                    this.props.data.event && (this.props.latencyTracking.reportInteractive(), this.props.data.event.title && d.o.setPageTitle(this.props.data.event.title)), this.clearExpandedSegmentHistory()
                 }, t = s.__decorate([Object(u.a)(le, {
                     options: function(e) {
                         return {
@@ -6280,7 +6280,7 @@ webpackJsonp([45], {
                                     case 6:
                                         return r = s.sent(), this.hasAwarded = !0, this.props.onBitsAwarded && this.props.onBitsAwarded(r.data.redeemTrueXAd.grantedBits), [3, 8];
                                     case 7:
-                                        return o = s.sent(), u.i.warn("Error while redeeming bits for truex ad", o), this.props.onError && this.props.onError(i.Unknown), [3, 8];
+                                        return o = s.sent(), u.j.warn("Error while redeeming bits for truex ad", o), this.props.onError && this.props.onError(i.Unknown), [3, 8];
                                     case 8:
                                         return [3, 10];
                                     case 9:
@@ -6326,7 +6326,7 @@ webpackJsonp([45], {
                 return l.__generator(this, function(o) {
                     switch (o.label) {
                         case 0:
-                            if (t = u.b.get("bits_truex_partner_hash", ""), !(n = u.b.get("bits_truex_api_url", "")) || !t) return u.i.warn("Truex API info missing from dynamic settings"), [2, _.Error];
+                            if (t = u.b.get("bits_truex_partner_hash", ""), !(n = u.b.get("bits_truex_api_url", "")) || !t) return u.j.warn("Truex API info missing from dynamic settings"), [2, _.Error];
                             o.label = 1;
                         case 1:
                             return o.trys.push([1, 5, , 6]), [4, fetch(n + "?placement.key=" + t + "&user.uid=" + e + "&max_activities=1")];
@@ -6338,7 +6338,7 @@ webpackJsonp([45], {
                         case 4:
                             return [2, _.Unavailable];
                         case 5:
-                            return r = o.sent(), u.i.warn("Failed checking ad availability from TrueX, probably due to AdBlock", r), [2, _.AdBlocked];
+                            return r = o.sent(), u.j.warn("Failed checking ad availability from TrueX, probably due to AdBlock", r), [2, _.AdBlocked];
                         case 6:
                             return [2]
                     }
@@ -6773,7 +6773,7 @@ webpackJsonp([45], {
                         watebError: null,
                         bitsAwarded: 0,
                         showWatebTerms: !1,
-                        agreedToWatebTerms: u.k.get(Q, !1)
+                        agreedToWatebTerms: u.l.get(Q, !1)
                     }, t.onBuyPopupClose = function(e) {
                         Object(S.a)(e, function() {
                             t.props.data && t.props.data.refetch()
@@ -6844,7 +6844,7 @@ webpackJsonp([45], {
                             "data-a-target": $
                         }, Object(u.d)("Continue", "Bits--Watch-Ad-Terms"))))
                     }, t.onAgreeToWatebTerms = function() {
-                        u.k.set(Q, !0), t.setState({
+                        u.l.set(Q, !0), t.setState({
                             agreedToWatebTerms: !0,
                             showWatebTerms: !1
                         }), t.showWatchAdModal()
@@ -8034,18 +8034,7 @@ webpackJsonp([45], {
                 indexedActions: n,
                 orderedActions: t
             }
-        }, t.b = function(e) {
-            return {
-                cursor: "" + e.rank,
-                node: {
-                    id: e.entry_key,
-                    rank: e.rank,
-                    score: e.score,
-                    __typename: "BitsLeaderboardEntry"
-                },
-                __typename: "BitsLeaderboardEdge"
-            }
-        }, t.c = function(e, t) {
+        }, t.b = function(e, t) {
             return {
                 cursor: "" + e.rank,
                 node: {
@@ -8202,7 +8191,7 @@ webpackJsonp([45], {
                         statusMessage: null,
                         imageUpdated: !1,
                         loading: !1
-                    }, t.currentImage = null, t.logger = d.i.withCategory("UserImageUploader"), t.onImageInputChange = function(e) {
+                    }, t.currentImage = null, t.logger = d.j.withCategory("UserImageUploader"), t.onImageInputChange = function(e) {
                         var n;
                         if (null !== e) {
                             t.setState({
@@ -8228,7 +8217,7 @@ webpackJsonp([45], {
                                                     statusMessage: f.b.UnexpectedError
                                                 }), [2];
                                             case 4:
-                                                return this.unsubscribe = d.j.subscribe({
+                                                return this.unsubscribe = d.k.subscribe({
                                                     topic: Object(p.i)(this.props.userID),
                                                     success: function() {
                                                         try {
@@ -8489,7 +8478,7 @@ webpackJsonp([45], {
     jF7o: function(e, t, n) {
         "use strict";
         t.a = function(e, t) {
-            if (!e) return void i.i.warn("[onPopupClose] Attempted to observe a window that failed to open.");
+            if (!e) return void i.j.warn("[onPopupClose] Attempted to observe a window that failed to open.");
             var n = setInterval(function() {
                 var i = !1,
                     a = !1;
@@ -9323,7 +9312,7 @@ webpackJsonp([45], {
                         profileUpdated: !1,
                         currentImageHasTallAspectRatio: !1,
                         imageFormat: ""
-                    }, t.currentImage = null, t.logger = c.i.withCategory("ProfileImagePicker"), t.onImageInputChange = function(e) {
+                    }, t.currentImage = null, t.logger = c.j.withCategory("ProfileImagePicker"), t.onImageInputChange = function(e) {
                         var n;
                         if (null !== e) {
                             n = e[0];
@@ -9377,7 +9366,7 @@ webpackJsonp([45], {
                                             statusMessage: y.b.UnexpectedError
                                         }), [2];
                                     case 4:
-                                        return this.unsubscribe = c.j.subscribe({
+                                        return this.unsubscribe = c.k.subscribe({
                                             topic: Object(h.i)(this.props.userID),
                                             success: function() {
                                                 try {
@@ -9813,4 +9802,4 @@ webpackJsonp([45], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.event-landing-6159b34f774568ed24f6a170f92f3f0a.js.map
+//# sourceMappingURL=pages.event-landing-4a24b8c029750d1d6e833a0f149c1de7.js.map

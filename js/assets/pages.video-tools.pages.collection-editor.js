@@ -901,7 +901,7 @@ webpackJsonp([76], {
                     }, t.onSave = function() {
                         t.state.collectionEdits && t.props.updateCollection(t.state.collectionEdits)
                     }, t.onCancel = function() {
-                        t.state.collectionEdits, r.n.history.goBack()
+                        t.state.collectionEdits, r.o.history.goBack()
                     }, t.isOriginalOrder = function(e) {
                         var n = t.props.data.collection && t.props.data.collection.items.edges.map(function(e) {
                                 return e.node.id
@@ -1263,7 +1263,7 @@ webpackJsonp([76], {
                                         case 2:
                                             return t.sent(), [3, 4];
                                         case 3:
-                                            return e = t.sent(), c.i.error(e, "DeleteCollectionModal"), this.setState({
+                                            return e = t.sent(), c.j.error(e, "DeleteCollectionModal"), this.setState({
                                                 deletionError: this.defaultUserError
                                             }), [2];
                                         case 4:
@@ -1560,4 +1560,4 @@ webpackJsonp([76], {
         })(k)
     }
 });
-//# sourceMappingURL=pages.video-tools.pages.collection-editor-de71edfa4dadd3f9b524cd137d0d1421.js.map
+//# sourceMappingURL=pages.video-tools.pages.collection-editor-1c18f5a8ab859023b9dd42c7c3e21fe3.js.map

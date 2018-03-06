@@ -76,7 +76,7 @@ webpackJsonp([63], {
                         })
                     })
                 }, e.getAPIURL = function(e) {
-                    return new URL(e, n.n.config.apiBaseURL)
+                    return new URL(e, n.o.config.apiBaseURL)
                 }, e.constructLegacyAPIResponse = function(e) {
                     return i.__awaiter(this, void 0, void 0, function() {
                         var t, r, n, a;
@@ -115,11 +115,11 @@ webpackJsonp([63], {
                 }, e.serialize = function(e, t) {
                     return "application/json; charset=UTF-8" === t ? JSON.stringify(e) : e
                 }, e.getDefaultHeaders = function(e, t) {
-                    var r = n.n.store.getState(),
+                    var r = n.o.store.getState(),
                         i = {
                             Accept: "application/vnd.twitchtv.v" + (t.version || 5) + "+json; charset=UTF-8",
                             "Accept-Language": "en-us",
-                            "Client-ID": n.n.config.legacyClientID,
+                            "Client-ID": n.o.config.legacyClientID,
                             "X-Requested-With": "XMLHttpRequest"
                         };
                     e.body && FormData.prototype.isPrototypeOf(e.body) || (i["Content-Type"] = "application/json; charset=UTF-8");
@@ -153,7 +153,7 @@ webpackJsonp([63], {
                         isError: !1,
                         isEmailVerified: !1,
                         errorMessage: ""
-                    }, t.logger = s.n.logger.withCategory("email-verification"), t
+                    }, t.logger = s.o.logger.withCategory("email-verification"), t
                 }
                 return i.__extends(t, e), t.prototype.componentWillMount = function() {
                     this.verifyEmail().then(function() {})
@@ -250,4 +250,4 @@ webpackJsonp([63], {
         })
     }
 });
-//# sourceMappingURL=pages.email-verification-9a6990b945f3cfd27af3c69aaa34f101.js.map
+//# sourceMappingURL=pages.email-verification-aa4e2d1030a272459791bbad9c743808.js.map

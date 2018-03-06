@@ -458,7 +458,7 @@ webpackJsonp([71], {
             c = n("vH/s"),
             d = function(e, t, n, a, r) {
                 var i = Date.now() / 1e3;
-                l.n.tracking.track(c.SpadeEventType.ClipEdit, {
+                l.o.tracking.track(c.SpadeEventType.ClipEdit, {
                     channel_id: e,
                     client_time: i,
                     clip_edit_session_id: t + "," + Math.floor(i),
@@ -659,7 +659,7 @@ webpackJsonp([71], {
                                     case 1:
                                         return a.sent(), [3, 3];
                                     case 2:
-                                        throw n = a.sent(), l.i.error(n, "Failed to edit clip title"), n;
+                                        throw n = a.sent(), l.j.error(n, "Failed to edit clip title"), n;
                                     case 3:
                                         return [2]
                                 }
@@ -724,7 +724,7 @@ webpackJsonp([71], {
             },
             u = function(e, t) {
                 return function(n) {
-                    r.n.tracking.track(l.SpadeEventType.VideoShare, {
+                    r.o.tracking.track(l.SpadeEventType.VideoShare, {
                         vod_id: e.id,
                         vod_type: "clip",
                         share_platform: s[n],
@@ -739,7 +739,7 @@ webpackJsonp([71], {
             p = function(e) {
                 var t = e.targetURL,
                     n = e.type;
-                r.n.tracking.track(l.SpadeEventType.ClipChampHelpClick, {
+                r.o.tracking.track(l.SpadeEventType.ClipChampHelpClick, {
                     target_url: t,
                     type: n.toLowerCase()
                 })
@@ -788,29 +788,29 @@ webpackJsonp([71], {
             I = n("rCmJ"),
             A = n("+Znq"),
             L = n("NY9D"),
-            F = n("yDzg"),
-            j = n("bhVC"),
+            j = n("yDzg"),
+            F = n("bhVC"),
             U = n("AoO8"),
             B = n("Odds"),
             V = [{
-                type: j.b.Twitter,
+                type: F.b.Twitter,
                 params: {
                     tt_medium: "twtr"
                 }
             }, {
-                type: j.b.Facebook,
+                type: F.b.Facebook,
                 params: {
                     tt_medium: "fb"
                 }
             }, {
-                type: j.b.VKontakte
+                type: F.b.VKontakte
             }, {
-                type: j.b.Reddit,
+                type: F.b.Reddit,
                 params: {
                     tt_medium: "redt"
                 }
             }, {
-                type: j.b.Copy
+                type: F.b.Copy
             }];
 
         function G(e) {
@@ -832,11 +832,11 @@ webpackJsonp([71], {
                     justifyContent: B._1.Between,
                     padding: 1
                 }, V.map(function(t) {
-                    return i.createElement(j.a, {
+                    return i.createElement(F.a, {
                         key: t.type,
                         type: t.type,
                         text: e.clip.title,
-                        url: Object(F.a)(e.clip.url, t.params),
+                        url: Object(j.a)(e.clip.url, t.params),
                         onShareClick: Object(M.d)(e.clip, e.pageType)
                     })
                 })), i.createElement(B._2, {
@@ -1054,7 +1054,7 @@ webpackJsonp([71], {
                     }, i.createElement(B.v, {
                         ariaLabel: Object(y.d)("Popout", "ClipsManagerExpandedRow"),
                         type: B.w.Hollow,
-                        linkTo: Object(F.a)(this.props.clip.url, {
+                        linkTo: Object(j.a)(this.props.clip.url, {
                             tt_medium: "my_clips"
                         }),
                         icon: B._16.Popout
@@ -1076,7 +1076,7 @@ webpackJsonp([71], {
                     }, i.createElement(B.j, {
                         ratio: B.k.Aspect16x9
                     }, i.createElement("iframe", {
-                        src: Object(F.a)(e.embedURL, {
+                        src: Object(j.a)(e.embedURL, {
                             autoplay: "false"
                         }),
                         frameBorder: 0,
@@ -1633,7 +1633,7 @@ webpackJsonp([71], {
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
                     var e = this.props.clip,
-                        t = Object(y.g)(new Date(e.createdAt));
+                        t = Object(y.h)(new Date(e.createdAt));
                     return i.createElement(B._2, {
                         "data-a-target": "clips-manager-table-row-container",
                         className: "clmgr-table__row",
@@ -2941,7 +2941,7 @@ webpackJsonp([71], {
                                         case 1:
                                             return a.sent(), e.ownProps.onDelete && e.ownProps.onDelete(t), [3, 3];
                                         case 2:
-                                            throw n = a.sent(), i.i.error(n, "Failed to delete clip"), n;
+                                            throw n = a.sent(), i.j.error(n, "Failed to delete clip"), n;
                                         case 3:
                                             return [2]
                                     }
@@ -3050,7 +3050,7 @@ webpackJsonp([71], {
                                         case 5:
                                             return e.ownProps.onDeleteAll && e.ownProps.onDeleteAll(r.deleteClips.clips), [3, 7];
                                         case 6:
-                                            throw s = a.sent(), i.i.error(s, "Failed to delete clips from VOD"), s;
+                                            throw s = a.sent(), i.j.error(s, "Failed to delete clips from VOD"), s;
                                         case 7:
                                             return [2]
                                     }
@@ -3160,7 +3160,7 @@ webpackJsonp([71], {
                                         case 1:
                                             return n.sent(), e.ownProps.onBatchDelete && e.ownProps.onBatchDelete(), [3, 3];
                                         case 2:
-                                            throw t = n.sent(), i.i.error(t, "Failed to delete clips"), t;
+                                            throw t = n.sent(), i.j.error(t, "Failed to delete clips"), t;
                                         case 3:
                                             return [2]
                                     }
@@ -3727,4 +3727,4 @@ webpackJsonp([71], {
         })), e.exports = a
     }
 });
-//# sourceMappingURL=pages.clips-manager-6af05f8963ae3540fc6061378e7fc2f8.js.map
+//# sourceMappingURL=pages.clips-manager-0f88ea2eca31431099a64da2b16f4049.js.map

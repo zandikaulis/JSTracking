@@ -3289,7 +3289,7 @@ webpackJsonp([41], {
                         })
                     })
                 }, e.getAPIURL = function(e) {
-                    return new URL(e, r.n.config.apiBaseURL)
+                    return new URL(e, r.o.config.apiBaseURL)
                 }, e.constructLegacyAPIResponse = function(e) {
                     return n.__awaiter(this, void 0, void 0, function() {
                         var t, a, r, i;
@@ -3328,11 +3328,11 @@ webpackJsonp([41], {
                 }, e.serialize = function(e, t) {
                     return "application/json; charset=UTF-8" === t ? JSON.stringify(e) : e
                 }, e.getDefaultHeaders = function(e, t) {
-                    var a = r.n.store.getState(),
+                    var a = r.o.store.getState(),
                         n = {
                             Accept: "application/vnd.twitchtv.v" + (t.version || 5) + "+json; charset=UTF-8",
                             "Accept-Language": "en-us",
-                            "Client-ID": r.n.config.legacyClientID,
+                            "Client-ID": r.o.config.legacyClientID,
                             "X-Requested-With": "XMLHttpRequest"
                         };
                     e.body && FormData.prototype.isPrototypeOf(e.body) || (n["Content-Type"] = "application/json; charset=UTF-8");
@@ -15990,8 +15990,7 @@ webpackJsonp([41], {
                         imageCategory: this.props.imageCategory,
                         imageSrc: this.props.imageSrc,
                         isUploading: this.state.isUploading,
-                        onFileSelected: this.handleFileSelected,
-                        teamName: this.props.teamName
+                        onFileSelected: this.handleFileSelected
                     })
                 }, t
             }(c.Component),
@@ -17654,7 +17653,7 @@ webpackJsonp([41], {
                         isError: !1,
                         isLoadingTeam: !0,
                         team: null
-                    }, a.logger = h.n.logger.withCategory("team-dashboard-root"), a.redirectToRevenuePage = function() {
+                    }, a.logger = h.o.logger.withCategory("team-dashboard-root"), a.redirectToRevenuePage = function() {
                         return c.createElement(m.a, {
                             to: "/teams/" + a.props.match.params.teamName + "/dashboard/" + v.Revenue
                         })
@@ -20099,4 +20098,4 @@ webpackJsonp([41], {
         })(a("PJh5"))
     }
 });
-//# sourceMappingURL=pages.teams-dashboard-a95d8ce0d61e2f7b336ee99e4c0eb1ed.js.map
+//# sourceMappingURL=pages.teams-dashboard-07fd8773c093b3bc3d19ab7a41fc79b9.js.map

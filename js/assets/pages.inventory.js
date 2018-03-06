@@ -415,7 +415,7 @@ webpackJsonp([57], {
                     }, t
                 }
                 return s.__extends(t, e), t.prototype.componentDidMount = function() {
-                    d.n.setPageTitle(Object(d.d)("Inventory", "InventoryPage"))
+                    d.o.setPageTitle(Object(d.d)("Inventory", "InventoryPage"))
                 }, t.prototype.render = function() {
                     if (!this.props.isLoggedIn) return this.props.onAnonymousVisit(), c.createElement(m.a, {
                         message: Object(d.d)("You must be logged in to view this page", "InventoryPage")
@@ -709,7 +709,7 @@ webpackJsonp([57], {
     jF7o: function(e, t, n) {
         "use strict";
         t.a = function(e, t) {
-            if (!e) return void i.i.warn("[onPopupClose] Attempted to observe a window that failed to open.");
+            if (!e) return void i.j.warn("[onPopupClose] Attempted to observe a window that failed to open.");
             var n = setInterval(function() {
                 var i = !1,
                     r = !1;
@@ -1026,4 +1026,4 @@ webpackJsonp([57], {
         i.definitions = i.definitions.concat(a(n("UP6l").definitions)), i.definitions = i.definitions.concat(a(n("l83l").definitions)), e.exports = i
     }
 });
-//# sourceMappingURL=pages.inventory-40e91c50e28edef160a9a19ff4d1f8c3.js.map
+//# sourceMappingURL=pages.inventory-d631adc817ec4ff1183c8b26158877ad.js.map

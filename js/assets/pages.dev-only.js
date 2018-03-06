@@ -207,27 +207,27 @@ webpackJsonp([61], {
             });
 
         function p() {
-            r.i.debug("debug message")
+            r.j.debug("debug message")
         }
 
         function g() {
-            r.i.info("info message")
+            r.j.info("info message")
         }
 
         function E() {
-            r.i.warn("warn message")
+            r.j.warn("warn message")
         }
 
         function v() {
             var e = {};
-            e.self = e, r.i.info("Can't serialize this arg, oh no.", e)
+            e.self = e, r.j.info("Can't serialize this arg, oh no.", e)
         }
 
         function k() {
             try {
                 throw new Error("throwing an error.")
             } catch (e) {
-                r.i.error(e, "Artisanal error handling.")
+                r.j.error(e, "Artisanal error handling.")
             }
         }
 
@@ -235,7 +235,7 @@ webpackJsonp([61], {
             try {
                 throw new Error("throwing a super bad unrecoverable error.")
             } catch (e) {
-                r.i.fatal(e, "Superb fatal error handling.")
+                r.j.fatal(e, "Superb fatal error handling.")
             }
         }
 
@@ -465,4 +465,4 @@ webpackJsonp([61], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.dev-only-2728ab158e8a36affed5bd3e37afd991.js.map
+//# sourceMappingURL=pages.dev-only-f6ead6e79052c90682cfb3397b81b5e0.js.map

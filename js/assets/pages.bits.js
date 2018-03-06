@@ -466,7 +466,7 @@ webpackJsonp([56], {
                 default:
                     i = "light"
             }
-            a.m.track(l.SpadeEventType.ThemeChange, {
+            a.n.track(l.SpadeEventType.ThemeChange, {
                 source: n,
                 mode: i
             })
@@ -532,4 +532,4 @@ webpackJsonp([56], {
             }(r.Component))
     }
 });
-//# sourceMappingURL=pages.bits-654f84b9b72e3987aeec2cba2722d418.js.map
+//# sourceMappingURL=pages.bits-4e711df2eb19e997cf9e4e0dde0aca71.js.map

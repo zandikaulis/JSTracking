@@ -27,7 +27,7 @@ webpackJsonp([47], {
                     return t.state = {
                         isLoading: !1,
                         isError: !1
-                    }, t.logger = s.n.logger.withCategory("metadata-icon"), t.didUnmount = !1, t.loadData = function() {
+                    }, t.logger = s.o.logger.withCategory("metadata-icon"), t.didUnmount = !1, t.loadData = function() {
                         if (!t.state.isLoading && !t.state.isError && t.props.streamMetadata && !t.state.content) {
                             var e = t.props.streamMetadata.counterStrikeGlobalOffensive && t.props.streamMetadata.counterStrikeGlobalOffensive.skill,
                                 n = t.props.streamMetadata.hearthstone && t.props.streamMetadata.hearthstone.broadcasterHeroClass,
@@ -206,7 +206,7 @@ webpackJsonp([47], {
                         return a.__generator(this, function(e) {
                             switch (e.label) {
                                 case 0:
-                                    return [4, s.n.experiments.getAssignment("TWILIGHT_PREMIERE_UPLOAD_FLOW")];
+                                    return [4, s.o.experiments.getAssignment("TWILIGHT_PREMIERE_UPLOAD_FLOW")];
                                 case 1:
                                     return "yes" === e.sent() && s.b.get("premiere_video_manager_staff", !1) && this.setState({
                                         isPremiereExperimentActive: !0
@@ -337,7 +337,7 @@ webpackJsonp([47], {
             c = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
-                    return n.logger = o.i.withCategory("ad-slot"), n.createSlot = function(e) {
+                    return n.logger = o.j.withCategory("ad-slot"), n.createSlot = function(e) {
                         return a.__awaiter(n, void 0, void 0, function() {
                             var t;
                             return a.__generator(this, function(n) {
@@ -585,7 +585,7 @@ webpackJsonp([47], {
                     enumerable: !0,
                     configurable: !0
                 }), t.prototype.track = function(e) {
-                    c.n.tracking.track(e, {
+                    c.o.tracking.track(e, {
                         src: this.props.src,
                         kind: e === g.SpadeEventType.GameFollow ? "follow" : "unfollow",
                         name: this.props.gameName
@@ -671,7 +671,7 @@ webpackJsonp([47], {
                 }
                 return i.__extends(t, e), t.prototype.componentDidMount = function() {
                     var e = this.context.registerReceiver;
-                    e ? this.unregister = e(this) : g.i.warn("<StreamThumbnailWithTrackingComponent /> initialized missing a <ScrollableArea /> provider")
+                    e ? this.unregister = e(this) : g.j.warn("<StreamThumbnailWithTrackingComponent /> initialized missing a <ScrollableArea /> provider")
                 }, t.prototype.componentWillUnmount = function() {
                     this.unregister && this.unregister()
                 }, t.prototype.render = function() {
@@ -1517,7 +1517,7 @@ webpackJsonp([47], {
                         })
                     })
                 }, e.getAPIURL = function(e) {
-                    return new URL(e, a.n.config.apiBaseURL)
+                    return new URL(e, a.o.config.apiBaseURL)
                 }, e.constructLegacyAPIResponse = function(e) {
                     return i.__awaiter(this, void 0, void 0, function() {
                         var t, n, a, r;
@@ -1556,11 +1556,11 @@ webpackJsonp([47], {
                 }, e.serialize = function(e, t) {
                     return "application/json; charset=UTF-8" === t ? JSON.stringify(e) : e
                 }, e.getDefaultHeaders = function(e, t) {
-                    var n = a.n.store.getState(),
+                    var n = a.o.store.getState(),
                         i = {
                             Accept: "application/vnd.twitchtv.v" + (t.version || 5) + "+json; charset=UTF-8",
                             "Accept-Language": "en-us",
-                            "Client-ID": a.n.config.legacyClientID,
+                            "Client-ID": a.o.config.legacyClientID,
                             "X-Requested-With": "XMLHttpRequest"
                         };
                     e.body && FormData.prototype.isPrototypeOf(e.body) || (i["Content-Type"] = "application/json; charset=UTF-8");
@@ -1670,7 +1670,7 @@ webpackJsonp([47], {
                                             }
                                         }), [4, this.props.banUserFromCommunity(e)]) : [2];
                                     case 1:
-                                        return null === (t = n.sent()).data.banUserFromCommunity.error ? (o.n.tracking.track(c.SpadeEventType.CommunityModeration, {
+                                        return null === (t = n.sent()).data.banUserFromCommunity.error ? (o.o.tracking.track(c.SpadeEventType.CommunityModeration, {
                                             community_id: this.props.communityID,
                                             name: this.props.communityName,
                                             is_official: !1,
@@ -1802,7 +1802,7 @@ webpackJsonp([47], {
                                             }
                                         }), [4, this.props.timeoutUserFromCommunity(e)]) : [2];
                                     case 1:
-                                        return null === (t = n.sent()).data.timeoutUserFromCommunity.error ? (o.n.tracking.track(c.SpadeEventType.CommunityModeration, {
+                                        return null === (t = n.sent()).data.timeoutUserFromCommunity.error ? (o.o.tracking.track(c.SpadeEventType.CommunityModeration, {
                                             community_id: this.props.communityID,
                                             name: this.props.communityName,
                                             is_official: !1,
@@ -2243,7 +2243,7 @@ webpackJsonp([47], {
         n.d(t, "a", function() {
             return o
         }), t.b = function() {
-            var e = i.n.intl.getLanguageCode(),
+            var e = i.o.intl.getLanguageCode(),
                 t = function(t) {
                     return "en" === t.code ? 0 : e && e.startsWith(t.code) ? 1 : 2
                 };
@@ -2624,9 +2624,9 @@ webpackJsonp([47], {
                         return l.__generator(this, function(n) {
                             switch (n.label) {
                                 case 0:
-                                    return [4, c.n.experiments.getAssignment(w.i)];
+                                    return [4, c.o.experiments.getAssignment(w.i)];
                                 case 1:
-                                    return e = n.sent(), [4, c.n.experiments.getAssignment(w.j)];
+                                    return e = n.sent(), [4, c.o.experiments.getAssignment(w.j)];
                                 case 2:
                                     return t = n.sent(), Object(w.p)(e, t) ? this.setState({
                                         forYouAssignment: t
@@ -2757,7 +2757,7 @@ webpackJsonp([47], {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return l.__extends(t, e), t.prototype.componentDidMount = function() {
-                    c.n.setPageTitle(Object(c.d)("Communities You Follow", "FollowingCommunitiesPage")), this.onRender()
+                    c.o.setPageTitle(Object(c.d)("Communities You Follow", "FollowingCommunitiesPage")), this.onRender()
                 }, t.prototype.componentDidUpdate = function() {
                     this.onRender()
                 }, t.prototype.render = function() {
@@ -2826,7 +2826,7 @@ webpackJsonp([47], {
                             })) : null
                         })))
                     }, n.onClickContinue = function() {
-                        n.props.onContinue && n.props.onContinue(), c.n.store.dispatch(Object(L.c)())
+                        n.props.onContinue && n.props.onContinue(), c.o.store.dispatch(Object(L.c)())
                     }, n.onFollow = function() {
                         n.setState(function(e) {
                             return {
@@ -3025,7 +3025,7 @@ webpackJsonp([47], {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return l.__extends(t, e), t.prototype.componentDidMount = function() {
-                    c.n.setPageTitle(Object(c.d)("Games You Follow", "FollowingGamesPage")), this.onRender()
+                    c.o.setPageTitle(Object(c.d)("Games You Follow", "FollowingGamesPage")), this.onRender()
                 }, t.prototype.componentDidUpdate = function() {
                     this.onRender()
                 }, t.prototype.render = function() {
@@ -3286,7 +3286,7 @@ webpackJsonp([47], {
                     }, t
                 }
                 return l.__extends(t, e), t.prototype.componentDidMount = function() {
-                    c.n.setPageTitle(Object(c.d)("Hosts You Follow", "FollowingHostsPage")), this.onRender()
+                    c.o.setPageTitle(Object(c.d)("Hosts You Follow", "FollowingHostsPage")), this.onRender()
                 }, t.prototype.componentDidUpdate = function() {
                     this.onRender()
                 }, t.prototype.render = function() {
@@ -3504,7 +3504,7 @@ webpackJsonp([47], {
                     }, t
                 }
                 return l.__extends(t, e), t.prototype.componentDidMount = function() {
-                    c.n.setPageTitle(Object(c.d)("Following", "FollowingPage")), this.onRender()
+                    c.o.setPageTitle(Object(c.d)("Following", "FollowingPage")), this.onRender()
                 }, t.prototype.componentDidUpdate = function() {
                     this.onRender()
                 }, t.prototype.render = function() {
@@ -3575,7 +3575,7 @@ webpackJsonp([47], {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return l.__extends(t, e), t.prototype.componentDidMount = function() {
-                    c.n.setPageTitle(Object(c.d)("Channels You Follow", "FollowingLivePage")), this.onRender()
+                    c.o.setPageTitle(Object(c.d)("Channels You Follow", "FollowingLivePage")), this.onRender()
                 }, t.prototype.componentDidUpdate = function() {
                     this.onRender()
                 }, t.prototype.render = function() {
@@ -3804,7 +3804,7 @@ webpackJsonp([47], {
                     return t.state = {
                         rankedChannelData: {},
                         loadingRankedChannelData: !1
-                    }, t.logger = c.n.logger.withCategory("for-you"), t.loadedChannelRankingsData = !1, t.renderPage = function() {
+                    }, t.logger = c.o.logger.withCategory("for-you"), t.loadedChannelRankingsData = !1, t.renderPage = function() {
                         return t.userFollowedGamesDataLoaded(t.props) ? t.props.data.currentUser.followedGames && t.props.data.currentUser.followedGames.nodes && t.props.data.currentUser.followedGames.nodes.length ? d.createElement(_._2, null, t.renderFollowedCommunityStreams(), d.createElement(_._2, {
                             margin: {
                                 top: .5
@@ -3869,7 +3869,7 @@ webpackJsonp([47], {
                             onContinue: t.refetchFollowedData
                         }))
                     }, t.redirectToFollowing = function() {
-                        c.n.history.push("/directory/following" + location.search)
+                        c.o.history.push("/directory/following" + location.search)
                     }, t.redirectToCommunitySelectionPage = function() {
                         window.location.assign("/hi" + location.search)
                     }, t.refetchFollowedData = function() {
@@ -3917,13 +3917,13 @@ webpackJsonp([47], {
                         return l.__generator(this, function(i) {
                             switch (i.label) {
                                 case 0:
-                                    return c.n.setPageTitle(Object(c.d)("For You", "ForYouPage")), [4, c.n.experiments.getAssignment(w.i)];
+                                    return c.o.setPageTitle(Object(c.d)("For You", "ForYouPage")), [4, c.o.experiments.getAssignment(w.i)];
                                 case 1:
-                                    return e = i.sent(), [4, c.n.experiments.getAssignment(w.j)];
+                                    return e = i.sent(), [4, c.o.experiments.getAssignment(w.j)];
                                 case 2:
                                     return t = i.sent(), Object(w.p)(e, t) ? [3, 3] : (this.redirectToFollowing(), [3, 5]);
                                 case 3:
-                                    return [4, c.n.experiments.getAssignment(w.h)];
+                                    return [4, c.o.experiments.getAssignment(w.h)];
                                 case 4:
                                     n = i.sent(), Object(w.n)(e, t, n) && this.loadChannelRankingsByGameData(), i.label = 5;
                                 case 5:
@@ -5531,9 +5531,9 @@ webpackJsonp([47], {
                         return i.__generator(this, function(i) {
                             switch (i.label) {
                                 case 0:
-                                    e = r.n.logger.withCategory("leagueoflegends-api"), t(Object(d.e)(!0)), i.label = 1;
+                                    e = r.o.logger.withCategory("leagueoflegends-api"), t(Object(d.e)(!0)), i.label = 1;
                                 case 1:
-                                    return i.trys.push([1, 3, , 4]), n = r.n.intl.getLanguageCode(), s = l(n), m = o.a.getAPIURL("/api/lol/champions?" + a.stringify({
+                                    return i.trys.push([1, 3, , 4]), n = r.o.intl.getLanguageCode(), s = l(n), m = o.a.getAPIURL("/api/lol/champions?" + a.stringify({
                                         locale: s,
                                         on_site: 1
                                     })).toString(), [4, o.a.get(m)];
@@ -5943,31 +5943,31 @@ webpackJsonp([47], {
                     source: e.source,
                     action: a.Start
                 };
-                r.m.track(o.SpadeEventType.OnboardingEvent, t)
+                r.n.track(o.SpadeEventType.OnboardingEvent, t)
             },
             l = function() {
                 var e = {
                     source: i.HomepageCTA,
                     action: a.Dismissed
                 };
-                r.m.track(o.SpadeEventType.OnboardingEvent, e)
+                r.n.track(o.SpadeEventType.OnboardingEvent, e)
             },
             d = function() {
                 var e = {
                     source: i.HomepageCTA,
                     action: a.Completed
                 };
-                r.m.track(o.SpadeEventType.OnboardingEvent, e)
+                r.n.track(o.SpadeEventType.OnboardingEvent, e)
             },
             m = function(e, t) {
                 var n = {
                     src: o.SpadeEventType.OnboardingEvent,
                     game: t
                 };
-                r.m.track(e, n)
+                r.n.track(e, n)
             },
             c = function(e) {
-                r.m.track(o.SpadeEventType.BrowseForYou, e)
+                r.n.track(o.SpadeEventType.BrowseForYou, e)
             }
     },
     T0IN: function(e, t, n) {
@@ -6130,7 +6130,7 @@ webpackJsonp([47], {
                         return i.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return [4, o.n.experiments.getAssignment("TWILIGHT_PREMIERE_UPLOAD_FLOW")];
+                                    return [4, o.o.experiments.getAssignment("TWILIGHT_PREMIERE_UPLOAD_FLOW")];
                                 case 1:
                                     return e = t.sent(), this.setState({
                                         isPremiereExperimentActive: "yes" === e
@@ -6898,7 +6898,7 @@ webpackJsonp([47], {
             a = n("6sO2"),
             r = n("V9YC"),
             o = n("iJpA");
-        a.n.store.registerReducer("userPreferences", function(e, t) {
+        a.o.store.registerReducer("userPreferences", function(e, t) {
             switch (void 0 === e && (e = {
                 languagePreferences: Object(o.b)()
             }), t.type) {
@@ -7725,7 +7725,7 @@ webpackJsonp([47], {
                 return i.__awaiter(n, void 0, void 0, function() {
                     var n, d;
                     return i.__generator(this, function(i) {
-                        return n = new Set(l()), t ? n.add(e) : n.delete(e), d = Array.from(n), a.k.set(s, d), r(Object(o.b)(d)), [2]
+                        return n = new Set(l()), t ? n.add(e) : n.delete(e), d = Array.from(n), a.l.set(s, d), r(Object(o.b)(d)), [2]
                     })
                 })
             }
@@ -7734,7 +7734,7 @@ webpackJsonp([47], {
             return function(t) {
                 return i.__awaiter(e, void 0, void 0, function() {
                     return i.__generator(this, function(e) {
-                        return a.k.set(s, []), t(Object(o.b)([])), [2]
+                        return a.l.set(s, []), t(Object(o.b)([])), [2]
                     })
                 })
             }
@@ -7746,7 +7746,7 @@ webpackJsonp([47], {
             s = "languageDirectoryFilters";
 
         function l() {
-            return a.k.get(s, []).filter(function(e) {
+            return a.l.get(s, []).filter(function(e) {
                 return r.a.has(e)
             })
         }
@@ -9206,4 +9206,4 @@ webpackJsonp([47], {
     },
     "zH/G": function(e, t) {}
 });
-//# sourceMappingURL=pages.following-25dde9b8f0e17fe15e2d716b74664848.js.map
+//# sourceMappingURL=pages.following-f90da37a88638186333808f32045e077.js.map

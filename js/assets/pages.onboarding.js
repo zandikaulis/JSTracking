@@ -27,7 +27,7 @@ webpackJsonp([50, 75], {
                     return t.state = {
                         isLoading: !1,
                         isError: !1
-                    }, t.logger = s.n.logger.withCategory("metadata-icon"), t.didUnmount = !1, t.loadData = function() {
+                    }, t.logger = s.o.logger.withCategory("metadata-icon"), t.didUnmount = !1, t.loadData = function() {
                         if (!t.state.isLoading && !t.state.isError && t.props.streamMetadata && !t.state.content) {
                             var e = t.props.streamMetadata.counterStrikeGlobalOffensive && t.props.streamMetadata.counterStrikeGlobalOffensive.skill,
                                 n = t.props.streamMetadata.hearthstone && t.props.streamMetadata.hearthstone.broadcasterHeroClass,
@@ -206,7 +206,7 @@ webpackJsonp([50, 75], {
                         return r.__generator(this, function(e) {
                             switch (e.label) {
                                 case 0:
-                                    return [4, s.n.experiments.getAssignment("TWILIGHT_PREMIERE_UPLOAD_FLOW")];
+                                    return [4, s.o.experiments.getAssignment("TWILIGHT_PREMIERE_UPLOAD_FLOW")];
                                 case 1:
                                     return "yes" === e.sent() && s.b.get("premiere_video_manager_staff", !1) && this.setState({
                                         isPremiereExperimentActive: !0
@@ -408,7 +408,7 @@ webpackJsonp([50, 75], {
                         return a.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return [4, i.n.experiments.getAssignment(m.k)];
+                                    return [4, i.o.experiments.getAssignment(m.k)];
                                 case 1:
                                     return e = t.sent(), this.setState({
                                         isFollowCategoriesExperimentEnabled: e === m.c.ENABLED
@@ -528,7 +528,7 @@ webpackJsonp([50, 75], {
             m = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
-                    return n.logger = o.i.withCategory("ad-slot"), n.createSlot = function(e) {
+                    return n.logger = o.j.withCategory("ad-slot"), n.createSlot = function(e) {
                         return r.__awaiter(n, void 0, void 0, function() {
                             var t;
                             return r.__generator(this, function(n) {
@@ -882,7 +882,7 @@ webpackJsonp([50, 75], {
                 }
                 return a.__extends(t, e), t.prototype.componentDidMount = function() {
                     var e = this.context.registerReceiver;
-                    e ? this.unregister = e(this) : h.i.warn("<StreamThumbnailWithTrackingComponent /> initialized missing a <ScrollableArea /> provider")
+                    e ? this.unregister = e(this) : h.j.warn("<StreamThumbnailWithTrackingComponent /> initialized missing a <ScrollableArea /> provider")
                 }, t.prototype.componentWillUnmount = function() {
                     this.unregister && this.unregister()
                 }, t.prototype.render = function() {
@@ -1604,7 +1604,7 @@ webpackJsonp([50, 75], {
                         })
                     })
                 }, e.getAPIURL = function(e) {
-                    return new URL(e, r.n.config.apiBaseURL)
+                    return new URL(e, r.o.config.apiBaseURL)
                 }, e.constructLegacyAPIResponse = function(e) {
                     return a.__awaiter(this, void 0, void 0, function() {
                         var t, n, r, i;
@@ -1643,11 +1643,11 @@ webpackJsonp([50, 75], {
                 }, e.serialize = function(e, t) {
                     return "application/json; charset=UTF-8" === t ? JSON.stringify(e) : e
                 }, e.getDefaultHeaders = function(e, t) {
-                    var n = r.n.store.getState(),
+                    var n = r.o.store.getState(),
                         a = {
                             Accept: "application/vnd.twitchtv.v" + (t.version || 5) + "+json; charset=UTF-8",
                             "Accept-Language": "en-us",
-                            "Client-ID": r.n.config.legacyClientID,
+                            "Client-ID": r.o.config.legacyClientID,
                             "X-Requested-With": "XMLHttpRequest"
                         };
                     e.body && FormData.prototype.isPrototypeOf(e.body) || (a["Content-Type"] = "application/json; charset=UTF-8");
@@ -1771,7 +1771,7 @@ webpackJsonp([50, 75], {
                                             }
                                         }), [4, this.props.banUserFromCommunity(e)]) : [2];
                                     case 1:
-                                        return null === (t = n.sent()).data.banUserFromCommunity.error ? (o.n.tracking.track(m.SpadeEventType.CommunityModeration, {
+                                        return null === (t = n.sent()).data.banUserFromCommunity.error ? (o.o.tracking.track(m.SpadeEventType.CommunityModeration, {
                                             community_id: this.props.communityID,
                                             name: this.props.communityName,
                                             is_official: !1,
@@ -1903,7 +1903,7 @@ webpackJsonp([50, 75], {
                                             }
                                         }), [4, this.props.timeoutUserFromCommunity(e)]) : [2];
                                     case 1:
-                                        return null === (t = n.sent()).data.timeoutUserFromCommunity.error ? (o.n.tracking.track(m.SpadeEventType.CommunityModeration, {
+                                        return null === (t = n.sent()).data.timeoutUserFromCommunity.error ? (o.o.tracking.track(m.SpadeEventType.CommunityModeration, {
                                             community_id: this.props.communityID,
                                             name: this.props.communityName,
                                             is_official: !1,
@@ -2001,13 +2001,13 @@ webpackJsonp([50, 75], {
             G = Object(w.compose)(Object(k.a)(D, {
                 name: "timeoutUserFromCommunity"
             }))(L);
-        var R = Object(f.b)(null, function(e) {
+        var j = Object(f.b)(null, function(e) {
                 return Object(y.b)({
                     onCloseModal: v.c
                 }, e)
             })(G),
-            P = n("PO03"),
-            A = function(e) {
+            R = n("PO03"),
+            P = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onStreamBanClick = function() {
@@ -2021,7 +2021,7 @@ webpackJsonp([50, 75], {
                         })
                     }, t.onStreamTimeoutClick = function() {
                         var e = Object(c.a)(t.props.login, t.props.displayName, !0);
-                        t.props.onShowModal(R, {
+                        t.props.onShowModal(j, {
                             communityID: t.props.data.community.id,
                             communityName: t.props.communityName,
                             currentUserID: t.props.data.currentUser.id,
@@ -2059,7 +2059,7 @@ webpackJsonp([50, 75], {
                             x: 1
                         }
                     }, Object(o.d)("Timeout", "StreamFlag"))) : null
-                }, t = a.__decorate([Object(k.a)(P, {
+                }, t = a.__decorate([Object(k.a)(R, {
                     options: function(e) {
                         return {
                             fetchPolicy: "network-only",
@@ -2072,11 +2072,11 @@ webpackJsonp([50, 75], {
                     autoReportInteractive: !0
                 })], t)
             }(r.Component);
-        var j = Object(f.b)(null, function(e) {
+        var A = Object(f.b)(null, function(e) {
                 return Object(y.b)({
                     onShowModal: v.d
                 }, e)
-            })(A),
+            })(P),
             M = n("BwgW"),
             U = n("fc0G"),
             H = n("L3z0"),
@@ -2181,7 +2181,7 @@ webpackJsonp([50, 75], {
                             position: p._9.Absolute,
                             attachTop: !0,
                             attachRight: !0
-                        }, r.createElement(j, {
+                        }, r.createElement(A, {
                             communityName: n.props.directoryName,
                             login: e.broadcaster.login,
                             displayName: e.broadcaster.displayName,
@@ -2883,9 +2883,9 @@ webpackJsonp([50, 75], {
                         return a.__generator(this, function(a) {
                             switch (a.label) {
                                 case 0:
-                                    e = i.n.logger.withCategory("leagueoflegends-api"), t(Object(c.e)(!0)), a.label = 1;
+                                    e = i.o.logger.withCategory("leagueoflegends-api"), t(Object(c.e)(!0)), a.label = 1;
                                 case 1:
-                                    return a.trys.push([1, 3, , 4]), n = i.n.intl.getLanguageCode(), s = l(n), d = o.a.getAPIURL("/api/lol/champions?" + r.stringify({
+                                    return a.trys.push([1, 3, , 4]), n = i.o.intl.getLanguageCode(), s = l(n), d = o.a.getAPIURL("/api/lol/champions?" + r.stringify({
                                         locale: s,
                                         on_site: 1
                                     })).toString(), [4, o.a.get(d)];
@@ -3064,31 +3064,31 @@ webpackJsonp([50, 75], {
                     source: e.source,
                     action: r.Start
                 };
-                i.m.track(o.SpadeEventType.OnboardingEvent, t)
+                i.n.track(o.SpadeEventType.OnboardingEvent, t)
             },
             l = function() {
                 var e = {
                     source: a.HomepageCTA,
                     action: r.Dismissed
                 };
-                i.m.track(o.SpadeEventType.OnboardingEvent, e)
+                i.n.track(o.SpadeEventType.OnboardingEvent, e)
             },
             c = function() {
                 var e = {
                     source: a.HomepageCTA,
                     action: r.Completed
                 };
-                i.m.track(o.SpadeEventType.OnboardingEvent, e)
+                i.n.track(o.SpadeEventType.OnboardingEvent, e)
             },
             d = function(e, t) {
                 var n = {
                     src: o.SpadeEventType.OnboardingEvent,
                     game: t
                 };
-                i.m.track(e, n)
+                i.n.track(e, n)
             },
             m = function(e) {
-                i.m.track(o.SpadeEventType.BrowseForYou, e)
+                i.n.track(o.SpadeEventType.BrowseForYou, e)
             }
     },
     T0IN: function(e, t, n) {
@@ -3905,7 +3905,7 @@ webpackJsonp([50, 75], {
                             return a.__generator(this, function(t) {
                                 switch (t.label) {
                                     case 0:
-                                        return Object(y.d)(), [4, o.n.experiments.getAssignment(f.j)];
+                                        return Object(y.d)(), [4, o.o.experiments.getAssignment(f.j)];
                                     case 1:
                                         return e = t.sent(), Object(f.o)(e) ? this.redirectToForYouPage() : this.redirectToFrontPage(), [2]
                                 }
@@ -3932,7 +3932,7 @@ webpackJsonp([50, 75], {
                         return a.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return o.n.setPageTitle(Object(o.d)("Welcome", "CommunitySelectionPage")), [4, o.n.experiments.getAssignment(f.i)];
+                                    return o.o.setPageTitle(Object(o.d)("Welcome", "CommunitySelectionPage")), [4, o.o.experiments.getAssignment(f.i)];
                                 case 1:
                                     return e = t.sent(), this.setState({
                                         inOnboardingExperiment: Object(f.q)(e)
@@ -3992,7 +3992,7 @@ webpackJsonp([50, 75], {
                         loadMore: this.props.onLoadMoreCategories,
                         orientation: l.b.Down,
                         pixelThreshold: 20
-                    })))) : this.props.data.error ? (o.i.warn("Data Error in Onboarding Community Selection", this.props.data.error), r.createElement(_._2, {
+                    })))) : this.props.data.error ? (o.j.warn("Data Error in Onboarding Community Selection", this.props.data.error), r.createElement(_._2, {
                         display: _.N.Flex
                     }, r.createElement(_._35, {
                         fontSize: _.R.Size5,
@@ -4187,7 +4187,7 @@ webpackJsonp([50, 75], {
                                             searchGameResults: r.currentGameResults ? r.currentGameResults.results : []
                                         })), [3, 4];
                                     case 3:
-                                        return o = a.sent(), i.i.error(o, "Algolia top results search failed"), this.setState({
+                                        return o = a.sent(), i.j.error(o, "Algolia top results search failed"), this.setState({
                                             searchGameResults: []
                                         }), [3, 4];
                                     case 4:
@@ -4250,7 +4250,7 @@ webpackJsonp([50, 75], {
                                 case 2:
                                     return e = a.sent(), [3, 4];
                                 case 3:
-                                    return t = a.sent(), i.i.error(t, "Could not fetch randomized game names"), [3, 4];
+                                    return t = a.sent(), i.j.error(t, "Could not fetch randomized game names"), [3, 4];
                                 case 4:
                                     return Object(u.a)(e), e = e.slice(0, 100), this.setState({
                                         randomizedGames: e
@@ -4309,9 +4309,9 @@ webpackJsonp([50, 75], {
                         return a.__generator(this, function(a) {
                             switch (a.label) {
                                 case 0:
-                                    return [4, i.n.experiments.getAssignment(o.l)];
+                                    return [4, i.o.experiments.getAssignment(o.l)];
                                 case 1:
-                                    return e = a.sent(), [4, i.n.experiments.getAssignment(o.g)];
+                                    return e = a.sent(), [4, i.o.experiments.getAssignment(o.g)];
                                 case 2:
                                     return t = a.sent(), n = e === o.e.ENABLED, r = t === o.b.Yes, this.setState({
                                         isRandomExperimentEnabled: n && !r,
@@ -4379,7 +4379,7 @@ webpackJsonp([50, 75], {
                         flexShrink: 0
                     }, r.createElement(D.a, {
                         isOnboarding: !0
-                    }))))) : (i.i.warn("OnboardingTopNavComponent is only meant to be used for logged in users."), null)
+                    }))))) : (i.j.warn("OnboardingTopNavComponent is only meant to be used for logged in users."), null)
                 }, t = a.__decorate([Object(p.d)("OnboardingTopNav")], t)
             }(r.Component));
         var G = Object(s.b)(function(e) {
@@ -4387,13 +4387,13 @@ webpackJsonp([50, 75], {
                     isLoggedIn: Object(m.d)(e)
                 }
             })(L),
-            R = n("T8ns"),
-            P = O.a.wrap(function() {
+            j = n("T8ns"),
+            R = O.a.wrap(function() {
                 return new Promise(function(e) {
                     e()
                 }).then(n.bind(null, "lI8O"))
             }, "CommunitySelectionPage"),
-            A = function(e) {
+            P = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -4413,24 +4413,24 @@ webpackJsonp([50, 75], {
                         fullHeight: !0,
                         fullWidth: !0
                     }, r.createElement("main", {
-                        className: R.b
+                        className: j.b
                     }, r.createElement(N.e, null, r.createElement(N.d, {
                         path: "/hi",
-                        component: P
+                        component: R
                     })))), r.createElement(T.a, null))
                 }, t = a.__decorate([Object(p.d)("OnboardingRoot", {
                     autoReportInteractive: !0
                 })], t)
             }(r.Component);
-        var j = Object(N.f)(Object(s.b)(function(e) {
+        var A = Object(N.f)(Object(s.b)(function(e) {
             return {
                 isLoggedIn: Object(m.d)(e)
             }
-        })(A));
+        })(P));
         n.d(t, "CommunitySelectionPage", function() {
             return E
         }), n.d(t, "OnboardingRoot", function() {
-            return j
+            return A
         })
     },
     nC3l: function(e, t) {
@@ -5026,7 +5026,7 @@ webpackJsonp([50, 75], {
                                         categoryData: t
                                     }), [3, 3];
                                 case 2:
-                                    return n = a.sent(), o.i.error(n, "Unable to fetch categories."), this.setState({
+                                    return n = a.sent(), o.j.error(n, "Unable to fetch categories."), this.setState({
                                         categoryData: null
                                     }), [3, 3];
                                 case 3:
@@ -5047,4 +5047,4 @@ webpackJsonp([50, 75], {
         })
     }
 });
-//# sourceMappingURL=pages.onboarding-c2d725dd1878237841fa7bfb8634dc52.js.map
+//# sourceMappingURL=pages.onboarding-7c8487ccbd8d6e68bedb6db9bb77dcf4.js.map

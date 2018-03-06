@@ -252,14 +252,14 @@ webpackJsonp([42, 81], {
                 emote_type: e.emoteType,
                 bits_location: e.location || o.ChatTooltip
             };
-            i.m.track(a.SpadeEventType.BitsCardInteraction, t)
+            i.n.track(a.SpadeEventType.BitsCardInteraction, t)
         }, n.d(t, "b", function() {
             return o
         }), n.d(t, "a", function() {
             return s
         }), t.d = function(e) {
             if (e && l[e]) return l[e];
-            return i.i.error(new Error('Buy Bits card contains improperly rendered offers, or offers unknown to Science. Tracking as "buy_100"'), 'Buy Bits card contains improperly rendered offers, or offers unknown to Science. Tracking as "buy_100"'), s.Buy100
+            return i.j.error(new Error('Buy Bits card contains improperly rendered offers, or offers unknown to Science. Tracking as "buy_100"'), 'Buy Bits card contains improperly rendered offers, or offers unknown to Science. Tracking as "buy_100"'), s.Buy100
         }, t.e = function(e) {
             var t = {
                 channel: e.channel,
@@ -267,30 +267,30 @@ webpackJsonp([42, 81], {
                 available: e.available,
                 host: "twitch.tv"
             };
-            i.m.track(a.SpadeEventType.BitsAdsAvailability, t)
+            i.n.track(a.SpadeEventType.BitsAdsAvailability, t)
         }, t.f = function(e) {
             var t = {
-                distinct_id: i.n.session.deviceID,
+                distinct_id: i.o.session.deviceID,
                 host: "twitch.tv",
                 request_id: e.requestID,
                 campaign_id: e.campaignID,
                 adblock: e.adblock
             };
-            i.m.track(a.SpadeEventType.BitsAdsImpression, t)
+            i.n.track(a.SpadeEventType.BitsAdsImpression, t)
         }, n.d(t, "c", function() {
             return r
         }), t.g = function(e) {
-            var t = i.m.getLastPageview(),
+            var t = i.n.getLastPageview(),
                 n = {
                     location: t && t.location || "",
                     ad_returned: null,
                     campaign_id: e.campaignID,
-                    distinct_id: i.n.session.deviceID,
+                    distinct_id: i.o.session.deviceID,
                     host: "twitch.tv",
                     request_id: e.requestID,
                     request_method: e.requestMethod
                 };
-            i.m.track(a.SpadeEventType.BitsAdsRequest, n)
+            i.n.track(a.SpadeEventType.BitsAdsRequest, n)
         };
         var i = n("6sO2"),
             a = n("vH/s");
@@ -1820,7 +1820,7 @@ webpackJsonp([42, 81], {
                         })
                     })
                 }, e.getAPIURL = function(e) {
-                    return new URL(e, a.n.config.apiBaseURL)
+                    return new URL(e, a.o.config.apiBaseURL)
                 }, e.constructLegacyAPIResponse = function(e) {
                     return i.__awaiter(this, void 0, void 0, function() {
                         var t, n, a, r;
@@ -1859,11 +1859,11 @@ webpackJsonp([42, 81], {
                 }, e.serialize = function(e, t) {
                     return "application/json; charset=UTF-8" === t ? JSON.stringify(e) : e
                 }, e.getDefaultHeaders = function(e, t) {
-                    var n = a.n.store.getState(),
+                    var n = a.o.store.getState(),
                         i = {
                             Accept: "application/vnd.twitchtv.v" + (t.version || 5) + "+json; charset=UTF-8",
                             "Accept-Language": "en-us",
-                            "Client-ID": a.n.config.legacyClientID,
+                            "Client-ID": a.o.config.legacyClientID,
                             "X-Requested-With": "XMLHttpRequest"
                         };
                     e.body && FormData.prototype.isPrototypeOf(e.body) || (i["Content-Type"] = "application/json; charset=UTF-8");
@@ -2605,7 +2605,7 @@ webpackJsonp([42, 81], {
                     }, t.onPreviewCardClick = function(e) {
                         if (t.props.videos) {
                             var n = t.props.videos[e];
-                            l.m.trackItemSectionClick(a.__assign({
+                            l.n.trackItemSectionClick(a.__assign({
                                 carousel_content: t.props.tracking.content,
                                 item_id: n.id,
                                 item_index: e,
@@ -2769,7 +2769,7 @@ webpackJsonp([42, 81], {
                         var o = r[i];
                         t.push(o.id), n.push(o.viewCount)
                     }
-                    l.m.trackItemSectionLoad(a.__assign({
+                    l.n.trackItemSectionLoad(a.__assign({
                         carousel_content: this.props.tracking.content,
                         location: this.props.tracking.location,
                         rendered_item_count: e.length,
@@ -3513,7 +3513,7 @@ webpackJsonp([42, 81], {
                             switch (i.label) {
                                 case 0:
                                     return a = {
-                                        "Client-ID": C.n.config.legacyClientID,
+                                        "Client-ID": C.o.config.legacyClientID,
                                         Accept: "application/vnd.twitchtv.v4+json; charset=UTF-8",
                                         "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
                                         "Accept-Language": "en-us",
@@ -3539,7 +3539,7 @@ webpackJsonp([42, 81], {
                             switch (i.label) {
                                 case 0:
                                     return n = {
-                                        "Client-ID": C.n.config.legacyClientID,
+                                        "Client-ID": C.o.config.legacyClientID,
                                         Accept: "application/vnd.twitchtv.v4+json; charset=UTF-8",
                                         "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
                                         "Accept-Language": "en-us",
@@ -3619,7 +3619,7 @@ webpackJsonp([42, 81], {
                                 case 1:
                                     return t = i.sent(), [2, this.deserialize(t)];
                                 case 2:
-                                    return n = i.sent(), C.i.error(n, "Couldn't fetch raids list"), [2, []];
+                                    return n = i.sent(), C.j.error(n, "Couldn't fetch raids list"), [2, []];
                                 case 3:
                                     return [2]
                             }
@@ -4287,7 +4287,7 @@ webpackJsonp([42, 81], {
                                             if (!(t = e.data).user.self) return [2];
                                             n = {}, t.user.self.displayBadges.forEach(function(e) {
                                                 n[e.setID] = e.version
-                                            }), C.n.tmi.client.updateChannelBadges(this.props.channelLogin, n)
+                                            }), C.o.tmi.client.updateChannelBadges(this.props.channelLogin, n)
                                         }
                                         i.label = 2;
                                     case 2:
@@ -4740,7 +4740,7 @@ webpackJsonp([42, 81], {
                 handled: !1
             };
             var r = n[1],
-                o = i.n.store.getState().chat.commandHandlers[n[1].toLowerCase()];
+                o = i.o.store.getState().chat.commandHandlers[n[1].toLowerCase()];
             if (!o) return {
                 command: r,
                 handled: !1
@@ -4765,7 +4765,7 @@ webpackJsonp([42, 81], {
             }
         };
         var i = n("6sO2"),
-            a = i.n.logger.withCategory("chat-commands"),
+            a = i.o.logger.withCategory("chat-commands"),
             r = "/unraid";
         var o = /^\/w(?:$|\s+)(\S+)?\s*(.+)?/i;
         var s = /^(\S+)?\s+(.+)?$/;
@@ -5099,10 +5099,10 @@ webpackJsonp([42, 81], {
                 return e.roomID && (n.chatroom_id = e.roomID), n
             },
             d = function(e) {
-                r.m.track(o.SpadeEventType.ChatRoomJoined, l(e))
+                r.n.track(o.SpadeEventType.ChatRoomJoined, l(e))
             },
             c = function(e) {
-                r.m.track(o.SpadeEventType.ChatRoomWatched, a.__assign({}, l(e), {
+                r.n.track(o.SpadeEventType.ChatRoomWatched, a.__assign({}, l(e), {
                     channel_id: e.channelID,
                     client_time: Math.floor(e.clientTime / 1e3)
                 }))
@@ -5278,7 +5278,7 @@ webpackJsonp([42, 81], {
             o = n("vh75"),
             s = n("UzRK"),
             l = n("VsL1");
-        r.n.store.registerReducer("chat", function(e, t) {
+        r.o.store.registerReducer("chat", function(e, t) {
             var n, r;
             switch (void 0 === e && (n = Object(l.a)(), e = i.__assign({}, n, {
                 commandHandlers: {},
@@ -6342,14 +6342,14 @@ webpackJsonp([42, 81], {
             o = n("TnJK"),
             s = n("QFW6"),
             l = function(e) {
-                a.m.track(r.SpadeEventType.ChatSettingsOpened, Object(s.a)(e))
+                a.n.track(r.SpadeEventType.ChatSettingsOpened, Object(s.a)(e))
             },
             d = function(e) {
                 var t = i.__assign({}, Object(s.a)(e), {
                     setting_name: e.settingName,
                     new_value: e.newValue.toString()
                 });
-                a.m.track(r.SpadeEventType.ChatSettingsChanged, t)
+                a.n.track(r.SpadeEventType.ChatSettingsChanged, t)
             },
             c = function(e) {
                 var t = i.__assign({}, Object(s.a)(e), {
@@ -6357,7 +6357,7 @@ webpackJsonp([42, 81], {
                     new_value: e.newValue.toString(),
                     follower_mode_on: e.followerModeOn
                 });
-                a.m.track(r.SpadeEventType.ChatSettingsChanged, t)
+                a.n.track(r.SpadeEventType.ChatSettingsChanged, t)
             }
     },
     Utj3: function(e, t, n) {
@@ -6481,7 +6481,7 @@ webpackJsonp([42, 81], {
                 case 129600:
                     return Object(i.d)("3 months", "FollowersOnlyLabel");
                 default:
-                    return i.i.warn("[FollowersOnlyLabel] Tried to generate a label for a non-preset.", e), ""
+                    return i.j.warn("[FollowersOnlyLabel] Tried to generate a label for a non-preset.", e), ""
             }
         }, t.d = function(e) {
             switch (e) {
@@ -6636,15 +6636,15 @@ webpackJsonp([42, 81], {
             r = "control";
         t.a = s, t.b = function(e, t) {
             var n = s();
-            n[e] = t, a.k.set(o, n)
+            n[e] = t, a.l.set(o, n)
         }, t.c = function(e, t) {
             var n = s();
-            n.lastUsedFollowerDurations[e] = t, a.k.set(o, n)
+            n.lastUsedFollowerDurations[e] = t, a.l.set(o, n)
         };
         var o = "chatSettings";
 
         function s() {
-            var e = a.k.get(o, {});
+            var e = a.l.get(o, {});
             return i.__assign({
                 lastUsedFollowerDurations: {},
                 showAutoModActions: !0,
@@ -6980,7 +6980,7 @@ webpackJsonp([42, 81], {
                                     case 6:
                                         return r = s.sent(), this.hasAwarded = !0, this.props.onBitsAwarded && this.props.onBitsAwarded(r.data.redeemTrueXAd.grantedBits), [3, 8];
                                     case 7:
-                                        return o = s.sent(), u.i.warn("Error while redeeming bits for truex ad", o), this.props.onError && this.props.onError(i.Unknown), [3, 8];
+                                        return o = s.sent(), u.j.warn("Error while redeeming bits for truex ad", o), this.props.onError && this.props.onError(i.Unknown), [3, 8];
                                     case 8:
                                         return [3, 10];
                                     case 9:
@@ -7026,7 +7026,7 @@ webpackJsonp([42, 81], {
                 return l.__generator(this, function(o) {
                     switch (o.label) {
                         case 0:
-                            if (t = u.b.get("bits_truex_partner_hash", ""), !(n = u.b.get("bits_truex_api_url", "")) || !t) return u.i.warn("Truex API info missing from dynamic settings"), [2, y.Error];
+                            if (t = u.b.get("bits_truex_partner_hash", ""), !(n = u.b.get("bits_truex_api_url", "")) || !t) return u.j.warn("Truex API info missing from dynamic settings"), [2, y.Error];
                             o.label = 1;
                         case 1:
                             return o.trys.push([1, 5, , 6]), [4, fetch(n + "?placement.key=" + t + "&user.uid=" + e + "&max_activities=1")];
@@ -7038,7 +7038,7 @@ webpackJsonp([42, 81], {
                         case 4:
                             return [2, y.Unavailable];
                         case 5:
-                            return r = o.sent(), u.i.warn("Failed checking ad availability from TrueX, probably due to AdBlock", r), [2, y.AdBlocked];
+                            return r = o.sent(), u.j.warn("Failed checking ad availability from TrueX, probably due to AdBlock", r), [2, y.AdBlocked];
                         case 6:
                             return [2]
                     }
@@ -7473,7 +7473,7 @@ webpackJsonp([42, 81], {
                         watebError: null,
                         bitsAwarded: 0,
                         showWatebTerms: !1,
-                        agreedToWatebTerms: u.k.get(Q, !1)
+                        agreedToWatebTerms: u.l.get(Q, !1)
                     }, t.onBuyPopupClose = function(e) {
                         Object(E.a)(e, function() {
                             t.props.data && t.props.data.refetch()
@@ -7544,7 +7544,7 @@ webpackJsonp([42, 81], {
                             "data-a-target": $
                         }, Object(u.d)("Continue", "Bits--Watch-Ad-Terms"))))
                     }, t.onAgreeToWatebTerms = function() {
-                        u.k.set(Q, !0), t.setState({
+                        u.l.set(Q, !0), t.setState({
                             agreedToWatebTerms: !0,
                             showWatebTerms: !1
                         }), t.showWatchAdModal()
@@ -9064,18 +9064,7 @@ webpackJsonp([42, 81], {
                 indexedActions: n,
                 orderedActions: t
             }
-        }, t.b = function(e) {
-            return {
-                cursor: "" + e.rank,
-                node: {
-                    id: e.entry_key,
-                    rank: e.rank,
-                    score: e.score,
-                    __typename: "BitsLeaderboardEntry"
-                },
-                __typename: "BitsLeaderboardEdge"
-            }
-        }, t.c = function(e, t) {
+        }, t.b = function(e, t) {
             return {
                 cursor: "" + e.rank,
                 node: {
@@ -9150,9 +9139,9 @@ webpackJsonp([42, 81], {
                                 shared_item_url: n.shareURL,
                                 source_item_id: c.id,
                                 source_item_type: Object(s.a)(c.broadcastType)
-                            }, r.n.tracking.track(o.SpadeEventType.ShareItem, u), [3, 3];
+                            }, r.o.tracking.track(o.SpadeEventType.ShareItem, u), [3, 3];
                         case 2:
-                            return m = a.sent(), r.i.error(m.toString(), e.name), [3, 3];
+                            return m = a.sent(), r.j.error(m.toString(), e.name), [3, 3];
                         case 3:
                             return [2]
                     }
@@ -9184,9 +9173,9 @@ webpackJsonp([42, 81], {
                                 shared_item_url: n.shareURL,
                                 source_item_id: t.id,
                                 source_item_type: o.SourceItemType.Collection
-                            }, r.n.tracking.track(o.SpadeEventType.ShareItem, d), [3, 3];
+                            }, r.o.tracking.track(o.SpadeEventType.ShareItem, d), [3, 3];
                         case 2:
-                            return c = a.sent(), r.i.error(c.toString(), e.name), [3, 3];
+                            return c = a.sent(), r.j.error(c.toString(), e.name), [3, 3];
                         case 3:
                             return [2]
                     }
@@ -9288,7 +9277,7 @@ webpackJsonp([42, 81], {
                         statusMessage: null,
                         imageUpdated: !1,
                         loading: !1
-                    }, t.currentImage = null, t.logger = d.i.withCategory("UserImageUploader"), t.onImageInputChange = function(e) {
+                    }, t.currentImage = null, t.logger = d.j.withCategory("UserImageUploader"), t.onImageInputChange = function(e) {
                         var n;
                         if (null !== e) {
                             t.setState({
@@ -9314,7 +9303,7 @@ webpackJsonp([42, 81], {
                                                     statusMessage: v.b.UnexpectedError
                                                 }), [2];
                                             case 4:
-                                                return this.unsubscribe = d.j.subscribe({
+                                                return this.unsubscribe = d.k.subscribe({
                                                     topic: Object(p.i)(this.props.userID),
                                                     success: function() {
                                                         try {
@@ -10370,7 +10359,7 @@ webpackJsonp([42, 81], {
                 "data-test-selector": "chat-timestamp"
             }, function(e, t) {
                 void 0 === t && (t = {});
-                var n = a.n.intl.getLanguageCode() || "en";
+                var n = a.o.intl.getLanguageCode() || "en";
                 return Intl.DateTimeFormat(n, t).format(e)
             }(new Date(e), {
                 hour: "numeric",
@@ -10595,7 +10584,7 @@ webpackJsonp([42, 81], {
     jF7o: function(e, t, n) {
         "use strict";
         t.a = function(e, t) {
-            if (!e) return void i.i.warn("[onPopupClose] Attempted to observe a window that failed to open.");
+            if (!e) return void i.j.warn("[onPopupClose] Attempted to observe a window that failed to open.");
             var n = setInterval(function() {
                 var i = !1,
                     a = !1;
@@ -11063,7 +11052,7 @@ webpackJsonp([42, 81], {
                             platform: f.a.Link,
                             shareURL: e
                         };
-                        Object(f.b)(t.props.collection, n, r.n.apollo.client)
+                        Object(f.b)(t.props.collection, n, r.o.apollo.client)
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
@@ -11178,14 +11167,14 @@ webpackJsonp([42, 81], {
                         platform: f.a.Embed,
                         shareURL: e
                     };
-                    Object(f.b)(t, n, r.n.apollo.client)
+                    Object(f.b)(t, n, r.o.apollo.client)
                 }, t.prototype.trackVideoShare = function(e, t) {
                     var n = {
                         location: this.props.tracking.location,
                         platform: f.a.Embed,
                         shareURL: e
                     };
-                    Object(f.c)(t, n, r.n.apollo.client)
+                    Object(f.c)(t, n, r.o.apollo.client)
                 }, t
             }(o.Component),
             S = n("bhVC"),
@@ -11296,7 +11285,7 @@ webpackJsonp([42, 81], {
                         platform: N(n),
                         shareURL: e
                     };
-                    Object(f.b)(t, i, r.n.apollo.client)
+                    Object(f.b)(t, i, r.o.apollo.client)
                 }, t.prototype.trackVideoShare = function(e, t, n, i) {
                     var a = {
                         collectionID: i,
@@ -11304,7 +11293,7 @@ webpackJsonp([42, 81], {
                         platform: N(n),
                         shareURL: e
                     };
-                    Object(f.c)(t, a, r.n.apollo.client)
+                    Object(f.c)(t, a, r.o.apollo.client)
                 }, t
             }(o.Component),
             I = n("m9YJ"),
@@ -11356,7 +11345,7 @@ webpackJsonp([42, 81], {
                             platform: f.a.Link,
                             shareURL: e
                         };
-                        Object(f.c)(t.props.video, i, r.n.apollo.client)
+                        Object(f.c)(t.props.video, i, r.o.apollo.client)
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
@@ -11468,7 +11457,7 @@ webpackJsonp([42, 81], {
                         content: void 0
                     }),
                     n = e.data;
-                return n.loading ? t : n.error ? (r.i.error(n.error, "VideoShareBoxContainer"), t) : (n.collection ? t.content = function(e, t) {
+                return n.loading ? t : n.error ? (r.j.error(n.error, "VideoShareBoxContainer"), t) : (n.collection ? t.content = function(e, t) {
                     var n;
                     if (t) {
                         var i = F(t);
@@ -11913,7 +11902,7 @@ webpackJsonp([42, 81], {
             },
             N = "vodChat.comments.REPLAY_FILTER_CHANGED",
             O = function(e) {
-                return a.k.set("videoChat.is_replay_mode", e), {
+                return a.l.set("videoChat.is_replay_mode", e), {
                     type: N,
                     isReplayFilterOn: e
                 }
@@ -11926,7 +11915,7 @@ webpackJsonp([42, 81], {
             },
             T = "vodChat.comments.TIMESTAMP_MODE_CHANGED",
             A = function(e) {
-                return a.k.set("videoChat.hide_timestamps", e), {
+                return a.l.set("videoChat.hide_timestamps", e), {
                     type: T,
                     hideTimestamps: e
                 }
@@ -11935,8 +11924,8 @@ webpackJsonp([42, 81], {
             F = function() {
                 return {
                     type: x,
-                    isReplayFilterOn: a.k.get("videoChat.is_replay_mode", !1),
-                    hideTimestamps: a.k.get("videoChat.hide_timestamps", !1)
+                    isReplayFilterOn: a.l.get("videoChat.is_replay_mode", !1),
+                    hideTimestamps: a.l.get("videoChat.hide_timestamps", !1)
                 }
             },
             R = function(e) {
@@ -12297,7 +12286,7 @@ webpackJsonp([42, 81], {
                 var n, i, a
             }
         });
-        a.n.store.registerReducer("vodChat", me);
+        a.o.store.registerReducer("vodChat", me);
         var pe = n("Aj/L"),
             he = n("i5XQ");
 
@@ -12815,7 +12804,7 @@ webpackJsonp([42, 81], {
                 e({
                     dispatch: n,
                     getState: i
-                }, t, ae.o.apollo.client)
+                }, t, ae.p.apollo.client)
             }
         }
 
@@ -12824,7 +12813,7 @@ webpackJsonp([42, 81], {
                 e({
                     dispatch: n,
                     getState: i
-                }, t, ae.o.apollo.client, ae.n)
+                }, t, ae.p.apollo.client, ae.o)
             }
         }
         var xt = n("GiK3"),
@@ -12847,7 +12836,7 @@ webpackJsonp([42, 81], {
             qt = "on",
             zt = "off",
             Gt = function(e) {
-                a.m.track(jt.SpadeEventType.VideoChatSettingChanged, e)
+                a.n.track(jt.SpadeEventType.VideoChatSettingChanged, e)
             },
             Qt = function(e, t) {
                 return r.__awaiter(Pt, void 0, void 0, function() {
@@ -12855,7 +12844,7 @@ webpackJsonp([42, 81], {
                     return r.__generator(this, function(r) {
                         switch (r.label) {
                             case 0:
-                                return r.trys.push([0, 2, , 3]), [4, a.n.apollo.client.query({
+                                return r.trys.push([0, 2, , 3]), [4, a.o.apollo.client.query({
                                     query: Bt,
                                     variables: {
                                         videoCreatorID: e.channelId,
@@ -12876,9 +12865,9 @@ webpackJsonp([42, 81], {
                                     partner: n.video.owner.roles.isPartner,
                                     source_item_id: e.id,
                                     source_item_type: Lt.SourceItemType.Chomment
-                                }, o = Kt(e, n, Vt.a.Link), a.m.track(jt.SpadeEventType.ChommentUIAction, o), a.m.track(jt.SpadeEventType.ShareItem, i), [3, 3];
+                                }, o = Kt(e, n, Vt.a.Link), a.n.track(jt.SpadeEventType.ChommentUIAction, o), a.n.track(jt.SpadeEventType.ShareItem, i), [3, 3];
                             case 2:
-                                return s = r.sent(), a.i.error(s.toString(), Qt.name), [3, 3];
+                                return s = r.sent(), a.j.error(s.toString(), Qt.name), [3, 3];
                             case 3:
                                 return [2]
                         }
@@ -12965,7 +12954,7 @@ webpackJsonp([42, 81], {
                                 }, e)
                             }(n))
                         }, function(t) {
-                            nn = !1, a.n.logger.error(t, "VideoChat: unable to fetch messages"), e.dispatch({
+                            nn = !1, a.o.logger.error(t, "VideoChat: unable to fetch messages"), e.dispatch({
                                 type: b
                             })
                         })]
@@ -13022,7 +13011,7 @@ webpackJsonp([42, 81], {
                                     comment: t
                                 })), [3, 4];
                             case 3:
-                                return i = o.sent(), a.i.error(i.toString(), on.name), [3, 4];
+                                return i = o.sent(), a.j.error(i.toString(), on.name), [3, 4];
                             case 4:
                                 return [2]
                         }
@@ -13056,7 +13045,7 @@ webpackJsonp([42, 81], {
                                     type: g
                                 }, l))), [3, 4];
                             case 3:
-                                return o = s.sent(), a.i.error(o.toString(), sn.name), [3, 4];
+                                return o = s.sent(), a.j.error(o.toString(), sn.name), [3, 4];
                             case 4:
                                 return [2]
                         }
@@ -13089,7 +13078,7 @@ webpackJsonp([42, 81], {
                                         event_source: "frontend",
                                         game: t.video.game ? t.video.game.name : null,
                                         login: n.name,
-                                        play_session_id: a.m.getVideoPlayerTrackingData().playSessionID,
+                                        play_session_id: a.n.getVideoPlayerTrackingData().playSessionID,
                                         reply_to_comment_id: H(i) ? i.parentId : null,
                                         user_id: Number(n.id),
                                         vod_id: Number(i.contentId),
@@ -13099,7 +13088,7 @@ webpackJsonp([42, 81], {
                                     }
                                 }(t, e)), [3, 3];
                             case 2:
-                                return o = r.sent(), a.i.error(o.toString(), ln.name), [3, 3];
+                                return o = r.sent(), a.j.error(o.toString(), ln.name), [3, 3];
                             case 3:
                                 return [2]
                         }
@@ -13139,7 +13128,7 @@ webpackJsonp([42, 81], {
                                     }
                                 }(t, e.getState(), o)), [3, 3];
                             case 2:
-                                return s = r.sent(), a.i.error(s.toString(), dn.name), [3, 3];
+                                return s = r.sent(), a.j.error(s.toString(), dn.name), [3, 3];
                             case 3:
                                 return [2]
                         }
@@ -13176,7 +13165,7 @@ webpackJsonp([42, 81], {
                                     }
                                 }(t, e.getState(), o)), [3, 3];
                             case 2:
-                                return s = r.sent(), a.i.error(s.toString(), cn.name), [3, 3];
+                                return s = r.sent(), a.j.error(s.toString(), cn.name), [3, 3];
                             case 3:
                                 return [2]
                         }
@@ -13218,7 +13207,7 @@ webpackJsonp([42, 81], {
                                     }
                                 }(t, e.getState(), o)), [3, 3];
                             case 2:
-                                return s = r.sent(), a.i.error(s.toString(), un.name), [3, 3];
+                                return s = r.sent(), a.j.error(s.toString(), un.name), [3, 3];
                             case 3:
                                 return [2]
                         }
@@ -13261,7 +13250,7 @@ webpackJsonp([42, 81], {
                                     }
                                 }(t, e.getState(), l)), [3, 3];
                             case 2:
-                                return d = r.sent(), a.i.error(d.toString(), mn.name), [3, 3];
+                                return d = r.sent(), a.j.error(d.toString(), mn.name), [3, 3];
                             case 3:
                                 return [2]
                         }
@@ -13299,7 +13288,7 @@ webpackJsonp([42, 81], {
                                     }
                                 }(t, e.getState(), o)), [3, 3];
                             case 2:
-                                return s = r.sent(), a.i.error(s.toString(), pn.name), [3, 3];
+                                return s = r.sent(), a.j.error(s.toString(), pn.name), [3, 3];
                             case 3:
                                 return [2]
                         }
@@ -13338,7 +13327,7 @@ webpackJsonp([42, 81], {
                                     }
                                 }(t, e.getState(), o)), [3, 3];
                             case 2:
-                                return s = r.sent(), a.i.error(s.toString(), hn.name), [3, 3];
+                                return s = r.sent(), a.j.error(s.toString(), hn.name), [3, 3];
                             case 3:
                                 return [2]
                         }
@@ -13836,7 +13825,7 @@ webpackJsonp([42, 81], {
                             borderBottom: !0
                         }, xt.createElement(Ft._35, {
                             type: Ft._40.Span
-                        }, Object(a.d)("Posted ", "MessageOptionsMenu"), Object(a.g)(t.props.context.comment.createdAt)))), xt.createElement(Ft._25, {
+                        }, Object(a.d)("Posted ", "MessageOptionsMenu"), Object(a.h)(t.props.context.comment.createdAt)))), xt.createElement(Ft._25, {
                             key: t.props.context.comment.id + "2",
                             display: Ft.N.Flex,
                             color: Ft.I.Link
@@ -14223,7 +14212,7 @@ webpackJsonp([42, 81], {
                             color: Ft.I.Alt2,
                             fontSize: 7,
                             type: Ft._40.Span
-                        }, " • " + Object(a.g)(e.comment.createdAt))))
+                        }, " • " + Object(a.h)(e.comment.createdAt))))
                     }, t.makeReply = function(e) {
                         var n = null;
                         return t.props.isExpandedLayout && (n = t.makeReplyButtonAndRelativeTime(e)), xt.createElement("li", {
@@ -14289,7 +14278,7 @@ webpackJsonp([42, 81], {
                         color: Ft.I.Alt2,
                         fontSize: 7,
                         type: Ft._40.Span
-                    }, " • " + Object(a.g)(this.props.parentMessage.comment.createdAt))))), xt.createElement(Ft._2, null, n, xt.createElement(Ft._2, {
+                    }, " • " + Object(a.h)(this.props.parentMessage.comment.createdAt))))), xt.createElement(Ft._2, null, n, xt.createElement(Ft._2, {
                         margin: {
                             y: .5,
                             left: .5
@@ -14907,7 +14896,7 @@ webpackJsonp([42, 81], {
             l = n("vH/s"),
             d = function(e) {
                 var t = Date.now() / 1e3;
-                e.badge_type = e.badge_type.toLowerCase().replace(/( |\s)/g, "_"), s.n.tracking.track(l.SpadeEventType.ChatBadgeClick, Object.assign({
+                e.badge_type = e.badge_type.toLowerCase().replace(/( |\s)/g, "_"), s.o.tracking.track(l.SpadeEventType.ChatBadgeClick, Object.assign({
                     client_time: t
                 }, e))
             };
@@ -16968,7 +16957,7 @@ webpackJsonp([42, 81], {
                     n = "",
                     i = "",
                     a = !!t.publishedAt;
-                a && (n = Object(p.g)(new Date(t.publishedAt)));
+                a && (n = Object(p.h)(new Date(t.publishedAt)));
                 var r = t.title && "" !== t.title && Y.test(t.title);
                 return r && a ? i = t.title + " · " + n : t.title && r && !a ? i = t.title : !r && a && (i = n), u.createElement(x._25, {
                     margin: {
@@ -17062,7 +17051,7 @@ webpackJsonp([42, 81], {
                                     if (i && i.requestError) throw i.requestError;
                                     throw new Error("Could not delete video. Request returned " + i.status)
                                 }
-                                return P.o.history.push(Object($.d)(t)), [2]
+                                return P.p.history.push(Object($.d)(t)), [2]
                         }
                     })
                 })
@@ -17101,7 +17090,7 @@ webpackJsonp([42, 81], {
                                             return e = t.sent(), this.setState({
                                                 errorMessage: Object(P.d)("Unexpected error, please try again.", "VideoDeleteModal"),
                                                 requestInProgress: !1
-                                            }), P.j.withCategory("video delete modal").error(e, "Attempted to delete video."), [3, 4];
+                                            }), P.k.withCategory("video delete modal").error(e, "Attempted to delete video."), [3, 4];
                                         case 4:
                                             return [2]
                                     }
@@ -17502,7 +17491,7 @@ webpackJsonp([42, 81], {
                         var e = n.getVideo();
                         return e && e.title || Object(p.d)("Watching video", "VideoWatchPage")
                     }, n.getMiniPlayerURL = function(e, t) {
-                        return e || t ? !e && t ? "/collections/" + t : "/videos/" + e + (t ? "?collection=" + t : "") : (p.i.withCategory("VideoWatchPage").error(new Error, "Tried to generate a mini player URL based on the current route, but critical options were missing."), "/")
+                        return e || t ? !e && t ? "/collections/" + t : "/videos/" + e + (t ? "?collection=" + t : "") : (p.j.withCategory("VideoWatchPage").error(new Error, "Tried to generate a mini player URL based on the current route, but critical options were missing."), "/")
                     }, n.state = {
                         requestedVideoOffset: n.getInitialVideoOffsetTime(),
                         lastVideoOffset: ke,
@@ -17517,11 +17506,11 @@ webpackJsonp([42, 81], {
                     })
                 }, t.prototype.componentDidUpdate = function() {
                     if (this.props.data && !this.props.data.loading && (this.props.data.video || this.props.data.collection))
-                        if (this.props.data.video && this.props.data.video.owner) p.n.setPageTitle(this.props.data.video.owner.displayName + " - " + this.props.data.video.title);
+                        if (this.props.data.video && this.props.data.video.owner) p.o.setPageTitle(this.props.data.video.owner.displayName + " - " + this.props.data.video.title);
                         else if (this.props.data.collection && this.props.data.collection.items.edges.length > 0) {
                         var e = this.props.data.collection.items.edges[0].node,
                             t = e.owner ? e.owner.displayName + " - " : "";
-                        p.n.setPageTitle("" + t + e.title)
+                        p.o.setPageTitle("" + t + e.title)
                     }
                     this.reportInteractive()
                 }, t.prototype.render = function() {
@@ -18027,7 +18016,7 @@ webpackJsonp([42, 81], {
                         profileUpdated: !1,
                         currentImageHasTallAspectRatio: !1,
                         imageFormat: ""
-                    }, t.currentImage = null, t.logger = c.i.withCategory("ProfileImagePicker"), t.onImageInputChange = function(e) {
+                    }, t.currentImage = null, t.logger = c.j.withCategory("ProfileImagePicker"), t.onImageInputChange = function(e) {
                         var n;
                         if (null !== e) {
                             n = e[0];
@@ -18081,7 +18070,7 @@ webpackJsonp([42, 81], {
                                             statusMessage: _.b.UnexpectedError
                                         }), [2];
                                     case 4:
-                                        return this.unsubscribe = c.j.subscribe({
+                                        return this.unsubscribe = c.k.subscribe({
                                             topic: Object(g.i)(this.props.userID),
                                             success: function() {
                                                 try {
@@ -18676,4 +18665,4 @@ webpackJsonp([42, 81], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.video-watch-f098c4b899c5dd14c904c6e69c49798a.js.map
+//# sourceMappingURL=pages.video-watch-2d86f6d70cbf3042883e5062b77cfd7e.js.map

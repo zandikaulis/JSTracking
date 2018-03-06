@@ -11,14 +11,14 @@ webpackJsonp([73], {
                 emote_type: e.emoteType,
                 bits_location: e.location || o.ChatTooltip
             };
-            a.m.track(i.SpadeEventType.BitsCardInteraction, t)
+            a.n.track(i.SpadeEventType.BitsCardInteraction, t)
         }, n.d(t, "b", function() {
             return o
         }), n.d(t, "a", function() {
             return s
         }), t.d = function(e) {
             if (e && l[e]) return l[e];
-            return a.i.error(new Error('Buy Bits card contains improperly rendered offers, or offers unknown to Science. Tracking as "buy_100"'), 'Buy Bits card contains improperly rendered offers, or offers unknown to Science. Tracking as "buy_100"'), s.Buy100
+            return a.j.error(new Error('Buy Bits card contains improperly rendered offers, or offers unknown to Science. Tracking as "buy_100"'), 'Buy Bits card contains improperly rendered offers, or offers unknown to Science. Tracking as "buy_100"'), s.Buy100
         }, t.e = function(e) {
             var t = {
                 channel: e.channel,
@@ -26,30 +26,30 @@ webpackJsonp([73], {
                 available: e.available,
                 host: "twitch.tv"
             };
-            a.m.track(i.SpadeEventType.BitsAdsAvailability, t)
+            a.n.track(i.SpadeEventType.BitsAdsAvailability, t)
         }, t.f = function(e) {
             var t = {
-                distinct_id: a.n.session.deviceID,
+                distinct_id: a.o.session.deviceID,
                 host: "twitch.tv",
                 request_id: e.requestID,
                 campaign_id: e.campaignID,
                 adblock: e.adblock
             };
-            a.m.track(i.SpadeEventType.BitsAdsImpression, t)
+            a.n.track(i.SpadeEventType.BitsAdsImpression, t)
         }, n.d(t, "c", function() {
             return r
         }), t.g = function(e) {
-            var t = a.m.getLastPageview(),
+            var t = a.n.getLastPageview(),
                 n = {
                     location: t && t.location || "",
                     ad_returned: null,
                     campaign_id: e.campaignID,
-                    distinct_id: a.n.session.deviceID,
+                    distinct_id: a.o.session.deviceID,
                     host: "twitch.tv",
                     request_id: e.requestID,
                     request_method: e.requestMethod
                 };
-            a.m.track(i.SpadeEventType.BitsAdsRequest, n)
+            a.n.track(i.SpadeEventType.BitsAdsRequest, n)
         };
         var a = n("6sO2"),
             i = n("vH/s");
@@ -659,7 +659,7 @@ webpackJsonp([73], {
                     return t.bitsConfig = Object(g.a)(), t
                 }
                 return l.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive(), d.n.setPageTitle("Purchase Bits")
+                    this.props.latencyTracking.reportInteractive(), d.o.setPageTitle("Purchase Bits")
                 }, t.prototype.render = function() {
                     return c.createElement(y._25, {
                         background: y.m.Base,
@@ -1057,7 +1057,7 @@ webpackJsonp([73], {
                                     case 6:
                                         return r = s.sent(), this.hasAwarded = !0, this.props.onBitsAwarded && this.props.onBitsAwarded(r.data.redeemTrueXAd.grantedBits), [3, 8];
                                     case 7:
-                                        return o = s.sent(), u.i.warn("Error while redeeming bits for truex ad", o), this.props.onError && this.props.onError(a.Unknown), [3, 8];
+                                        return o = s.sent(), u.j.warn("Error while redeeming bits for truex ad", o), this.props.onError && this.props.onError(a.Unknown), [3, 8];
                                     case 8:
                                         return [3, 10];
                                     case 9:
@@ -1103,7 +1103,7 @@ webpackJsonp([73], {
                 return l.__generator(this, function(o) {
                     switch (o.label) {
                         case 0:
-                            if (t = u.b.get("bits_truex_partner_hash", ""), !(n = u.b.get("bits_truex_api_url", "")) || !t) return u.i.warn("Truex API info missing from dynamic settings"), [2, v.Error];
+                            if (t = u.b.get("bits_truex_partner_hash", ""), !(n = u.b.get("bits_truex_api_url", "")) || !t) return u.j.warn("Truex API info missing from dynamic settings"), [2, v.Error];
                             o.label = 1;
                         case 1:
                             return o.trys.push([1, 5, , 6]), [4, fetch(n + "?placement.key=" + t + "&user.uid=" + e + "&max_activities=1")];
@@ -1115,7 +1115,7 @@ webpackJsonp([73], {
                         case 4:
                             return [2, v.Unavailable];
                         case 5:
-                            return r = o.sent(), u.i.warn("Failed checking ad availability from TrueX, probably due to AdBlock", r), [2, v.AdBlocked];
+                            return r = o.sent(), u.j.warn("Failed checking ad availability from TrueX, probably due to AdBlock", r), [2, v.AdBlocked];
                         case 6:
                             return [2]
                     }
@@ -1550,7 +1550,7 @@ webpackJsonp([73], {
                         watebError: null,
                         bitsAwarded: 0,
                         showWatebTerms: !1,
-                        agreedToWatebTerms: u.k.get(K, !1)
+                        agreedToWatebTerms: u.l.get(K, !1)
                     }, t.onBuyPopupClose = function(e) {
                         Object(w.a)(e, function() {
                             t.props.data && t.props.data.refetch()
@@ -1621,7 +1621,7 @@ webpackJsonp([73], {
                             "data-a-target": Y
                         }, Object(u.d)("Continue", "Bits--Watch-Ad-Terms"))))
                     }, t.onAgreeToWatebTerms = function() {
-                        u.k.set(K, !0), t.setState({
+                        u.l.set(K, !0), t.setState({
                             agreedToWatebTerms: !0,
                             showWatebTerms: !1
                         }), t.showWatchAdModal()
@@ -2295,14 +2295,14 @@ webpackJsonp([73], {
                                     o = r.content,
                                     l = r.medium,
                                     c = r.content_index;
-                                s.n.tracking.trackPageview(a.__assign({
+                                s.o.tracking.trackPageview(a.__assign({
                                     content: o,
                                     medium: l,
                                     content_index: c,
                                     location: e.location
                                 }, t))
                             }
-                        }, s.i.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : s.i.warn("No latency tracker exists! This means no data will be sent to Spade.", e), i
+                        }, s.j.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : s.j.warn("No latency tracker exists! This means no data will be sent to Spade.", e), i
                     }
                     return a.__extends(o, n), o.prototype.componentDidMount = function() {
                         var e = this;
@@ -2342,7 +2342,7 @@ webpackJsonp([73], {
     jF7o: function(e, t, n) {
         "use strict";
         t.a = function(e, t) {
-            if (!e) return void a.i.warn("[onPopupClose] Attempted to observe a window that failed to open.");
+            if (!e) return void a.j.warn("[onPopupClose] Attempted to observe a window that failed to open.");
             var n = setInterval(function() {
                 var a = !1,
                     i = !1;
@@ -2585,4 +2585,4 @@ webpackJsonp([73], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.bits.components.bits-landing-page-29c936590d06cd46ca3dce7d673d7faa.js.map
+//# sourceMappingURL=pages.bits.components.bits-landing-page-48f172d862a305905d3f479e12253d6a.js.map

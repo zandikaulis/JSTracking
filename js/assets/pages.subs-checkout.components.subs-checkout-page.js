@@ -127,7 +127,7 @@ webpackJsonp([55], {
                         })
                     })
                 }, e.getAPIURL = function(e) {
-                    return new URL(e, i.n.config.apiBaseURL)
+                    return new URL(e, i.o.config.apiBaseURL)
                 }, e.constructLegacyAPIResponse = function(e) {
                     return r.__awaiter(this, void 0, void 0, function() {
                         var t, n, i, a;
@@ -166,11 +166,11 @@ webpackJsonp([55], {
                 }, e.serialize = function(e, t) {
                     return "application/json; charset=UTF-8" === t ? JSON.stringify(e) : e
                 }, e.getDefaultHeaders = function(e, t) {
-                    var n = i.n.store.getState(),
+                    var n = i.o.store.getState(),
                         r = {
                             Accept: "application/vnd.twitchtv.v" + (t.version || 5) + "+json; charset=UTF-8",
                             "Accept-Language": "en-us",
-                            "Client-ID": i.n.config.legacyClientID,
+                            "Client-ID": i.o.config.legacyClientID,
                             "X-Requested-With": "XMLHttpRequest"
                         };
                     e.body && FormData.prototype.isPrototypeOf(e.body) || (r["Content-Type"] = "application/json; charset=UTF-8");
@@ -2642,7 +2642,7 @@ webpackJsonp([55], {
                         return r.__generator(this, function(e) {
                             switch (e.label) {
                                 case 0:
-                                    return [4, s.n.experiments.getAssignment("TWILIGHT_SUB_CHECKOUT")];
+                                    return [4, s.o.experiments.getAssignment("TWILIGHT_SUB_CHECKOUT")];
                                 case 1:
                                     return e.sent(), [2]
                             }
@@ -2910,7 +2910,7 @@ webpackJsonp([55], {
             c = n("vH/s"),
             l = function(e) {
                 var t = Date.now() / 1e3;
-                e.badge_type = e.badge_type.toLowerCase().replace(/( |\s)/g, "_"), o.n.tracking.track(c.SpadeEventType.ChatBadgeClick, Object.assign({
+                e.badge_type = e.badge_type.toLowerCase().replace(/( |\s)/g, "_"), o.o.tracking.track(c.SpadeEventType.ChatBadgeClick, Object.assign({
                     client_time: t
                 }, e))
             };
@@ -2985,4 +2985,4 @@ webpackJsonp([55], {
     pOYM: function(e, t) {},
     t2Wb: function(e, t) {}
 });
-//# sourceMappingURL=pages.subs-checkout.components.subs-checkout-page-d3ed0d88e8ef7bd50ffea46b1f2bd165.js.map
+//# sourceMappingURL=pages.subs-checkout.components.subs-checkout-page-ec0d339d964aab8b9514c0186fbeb7d9.js.map
