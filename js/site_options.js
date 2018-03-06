@@ -2429,6 +2429,18 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
+        "67118dd1-5594-41af-80e8-420571737679": {
+            "name": "android_profile_tab_order",
+            "v": 3215,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
         "676f7ba1-6f07-4782-adc2-99eaf7e04361": {
             "name": "SIGNUP_INTERCEPT",
             "v": 1875,
@@ -2794,18 +2806,6 @@ window.SiteOptions = {
             }, {
                 "weight": 100,
                 "value": "experiment"
-            }]
-        },
-        "7cb520ea-bb49-4bf4-88dc-b25db264dd70": {
-            "name": "android_profile_tab_order",
-            "v": 3207,
-            "t": 1,
-            "groups": [{
-                "weight": 50,
-                "value": "control"
-            }, {
-                "weight": 50,
-                "value": "active"
             }]
         },
         "7d9127aa-c26f-4b80-a04d-e6ed38e18b78": {
