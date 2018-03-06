@@ -496,7 +496,8 @@ MediaPlayer.prototype._onReady = function (state) {
     }
 };
 
-MediaPlayer.prototype._onEnded = function () {
+MediaPlayer.prototype._onEnded = function (state) {
+    objectAssign(this._state, state);
     this._isPaused = true;
 }
 
