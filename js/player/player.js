@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".292946cc9f4c90730e2f.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".36c779595d3bb43d22dd.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -14852,14 +14852,13 @@
             }(),
             Ue = {
                 isActive: W.a.bool,
-                qualityObj: W.a.shape({
-                    name: W.a.string
-                }).isRequired,
-                onQualitySelect: W.a.func
+                selectItem: W.a.object,
+                onSelectItem: W.a.func,
+                displayName: W.a.string
             },
             Be = {
                 isActive: !1,
-                onQualitySelect: function() {}
+                onSelectItem: function() {}
             },
             Fe = te()({
                 ellipsis: !0,
@@ -14869,19 +14868,19 @@
                 function t() {
                     d(this, t);
                     var e = p(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
-                    return e.handleSelectQuality = e.handleSelectQuality.bind(e), e
+                    return e.handleClick = e.handleClick.bind(e), e
                 }
                 return f(t, e), qe(t, [{
-                    key: "handleSelectQuality",
+                    key: "handleClick",
                     value: function() {
-                        this.props.onQualitySelect(this.props.qualityObj)
+                        this.props.onSelectItem(this.props.selectItem)
                     }
                 }, {
                     key: "render",
                     value: function() {
                         var e = this.props,
                             t = e.isActive,
-                            n = e.qualityObj,
+                            n = e.displayName,
                             r = te()({
                                 "pl-menu__item": !0,
                                 "pl-menu__item--block": !0,
@@ -14891,8 +14890,8 @@
                             className: r
                         }, H.a.createElement(re.a, {
                             className: Fe,
-                            onClick: this.handleSelectQuality
-                        }, H.a.createElement("span", null, n.name)))
+                            onClick: this.handleClick
+                        }, H.a.createElement("span", null, n)))
                     }
                 }]), t
             }(H.a.Component);
@@ -14910,7 +14909,8 @@
             }(),
             ze = {
                 availableQualities: W.a.arrayOf(W.a.shape({
-                    group: W.a.string
+                    group: W.a.string,
+                    name: W.a.string
                 })).isRequired,
                 selectedQuality: W.a.string.isRequired,
                 onMenuTransition: W.a.func,
@@ -14962,14 +14962,23 @@
                     value: function() {
                         var e = this.props,
                             t = e.selectedQuality,
-                            n = e.onQualitySelect;
+                            n = e.onQualitySelect,
+                            r = e.t;
                         return this.props.availableQualities.map(function(e) {
-                            var r = e.group === t;
+                            var i = e.group,
+                                a = e.name,
+                                o = i === t,
+                                s = a;
+                            if ("chunked" === i) {
+                                var u = a;
+                                G()(u, "(source)") && (u = u.slice(0, u.indexOf("(source)"))), u = u.trim(), s = u + " (" + r("Source") + ")"
+                            }
                             return H.a.createElement(Ve, {
-                                isActive: r,
-                                key: e.group,
-                                onQualitySelect: n,
-                                qualityObj: e
+                                isActive: o,
+                                key: i,
+                                displayName: s,
+                                selectItem: e,
+                                onSelectItem: n
                             })
                         })
                     }
@@ -29082,7 +29091,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.03.06-010531+e0e08081e675a889451d179876c8f653f8bc21c7",
+                    app_version: "2018.03.06-034026+a66d2c804fe74c2f164abd95fc967d16313681f0",
                     flash_version: r,
                     referrer_url: i,
                     referrer_host: a.host,
