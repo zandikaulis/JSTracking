@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".36c779595d3bb43d22dd.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".bd30a3a056d3c806d182.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -29091,7 +29091,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.03.06-034026+a66d2c804fe74c2f164abd95fc967d16313681f0",
+                    app_version: "2018.03.06-034650+f7ab8edb4b1bf8648f83a2f3d4463730b5ca93ad",
                     flash_version: r,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -31812,8 +31812,12 @@
                 n = e.value,
                 r = e.t;
             return Yo.a.createElement("li", {
-                className: "pl-playback-stats--stat"
-            }, r(t) + ":", Yo.a.createElement("div", null, Yo.a.createElement("span", null, n)))
+                className: "pl-stat"
+            }, Yo.a.createElement("div", {
+                className: "pl-stat__name"
+            }, Yo.a.createElement("span", null, r(t) + ":")), Yo.a.createElement("div", {
+                className: "pl-stat__value"
+            }, Yo.a.createElement("span", null, n)))
         }
 
         function Xn(e) {
@@ -31834,7 +31838,7 @@
                     time: Iy()(t.hlsLatencyEncoder, 2)
                 })
             })), Yo.a.createElement("ul", {
-                className: "pl-playback-stats js-playback-stats"
+                className: "pl-stats-list js-playback-stats"
             }, Yo.a.createElement(Od.a, {
                 className: My,
                 onClick: r
