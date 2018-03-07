@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".3e85e2b1cf8bcf5bc2fb.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".0c7852ca6a38d6c9024b.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -2245,27 +2245,29 @@
             return s
         }), n.d(t, "c", function() {
             return u
-        }), n.d(t, "j", function() {
-            return c
-        }), n.d(t, "k", function() {
-            return l
-        }), n.d(t, "m", function() {
-            return d
-        }), n.d(t, "n", function() {
-            return p
-        }), n.d(t, "f", function() {
-            return f
-        }), n.d(t, "d", function() {
-            return h
-        }), n.d(t, "e", function() {
-            return m
-        }), n.d(t, "h", function() {
-            return y
         }), n.d(t, "l", function() {
-            return v
+            return c
+        }), n.d(t, "m", function() {
+            return l
+        }), n.d(t, "j", function() {
+            return d
         }), n.d(t, "i", function() {
+            return p
+        }), n.d(t, "o", function() {
+            return f
+        }), n.d(t, "f", function() {
+            return h
+        }), n.d(t, "d", function() {
+            return m
+        }), n.d(t, "e", function() {
+            return y
+        }), n.d(t, "h", function() {
+            return v
+        }), n.d(t, "n", function() {
             return g
-        }), t.p = r, t.o = i;
+        }), n.d(t, "k", function() {
+            return b
+        }), t.q = r, t.p = i;
         var a = "push screen",
             o = "pop screen",
             s = "content",
@@ -2273,13 +2275,14 @@
             c = "advertisement-bb",
             l = "stormwarning",
             d = "vodrecommendations",
-            p = "vodrestrictedscreen",
-            f = "collectionemptyscreen",
-            h = "clip-sharing-screen",
-            m = "clip-shortcut-screen",
-            y = "error",
-            v = "unmute",
-            g = "qualityrestrictedscreen"
+            p = "offlinerecommendations",
+            f = "vodrestrictedscreen",
+            h = "collectionemptyscreen",
+            m = "clip-sharing-screen",
+            y = "clip-shortcut-screen",
+            v = "error",
+            g = "unmute",
+            b = "qualityrestrictedscreen"
     }, function(e, t, n) {
         "use strict";
 
@@ -14737,7 +14740,7 @@
                         e(Object(Te.k)(!0))
                     },
                     showClipsShortcutOverlay: function() {
-                        e(Object(xe.p)(xe.e))
+                        e(Object(xe.q)(xe.e))
                     },
                     openClipsModerationModal: function(t) {
                         e(Object(oe.i)(t))
@@ -28009,7 +28012,7 @@
             Oi = function(e) {
                 return {
                     showSharing: function() {
-                        e(Object(Pi.p)(Pi.d))
+                        e(Object(Pi.q)(Pi.d))
                     }
                 }
             },
@@ -29293,7 +29296,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.03.06-211435+18c3babd6c6605b0ac56b692c8c93b53fbe4ddfe",
+                    app_version: "2018.03.07-165319+3fa791e70597604a1cf29133d02001b8390113b5",
                     flash_version: r,
                     referrer_url: i,
                     referrer_host: a.host,
@@ -30120,9 +30123,9 @@
 
             function q() {
                 $.addEventListener(uu.AD_START, function() {
-                    t.dispatch(Object(sc.p)(sc.c))
+                    t.dispatch(Object(sc.q)(sc.c))
                 }), $.addEventListener(uu.AD_END, function() {
-                    Wo.a.set("lastAdDisplay", (new Date).getTime()), t.dispatch(Object(sc.o)())
+                    Wo.a.set("lastAdDisplay", (new Date).getTime()), t.dispatch(Object(sc.p)())
                 }), J.addEventListener(Ws.d, function(e) {
                     t.dispatch(Object(nc.e)(e));
                     var n = vc()(J.getDevice()) ? J.getDevice() : "Chromecast";
@@ -32877,13 +32880,13 @@
                         time: (new Date).getTime() / 1e3,
                         stormDetected: t,
                         stormDialog: i,
-                        stormWarning: n.getState().screen === sc.k
+                        stormWarning: n.getState().screen === sc.m
                     }), i) return p(e)
             }
 
             function d() {
-                n.dispatch(Object(sc.p)(sc.k)), setTimeout(function() {
-                    n.dispatch(Object(sc.o)())
+                n.dispatch(Object(sc.q)(sc.m)), setTimeout(function() {
+                    n.dispatch(Object(sc.p)())
                 }, 1e3 * uo.v.warningDuration)
             }
 
@@ -33881,9 +33884,9 @@
                         case ou.g.IMA:
                             return e[0] !== sc.c ? [sc.c].concat(e) : e;
                         case ou.g.STITCHED:
-                            return e[0] !== sc.j ? [sc.j].concat(e) : e;
+                            return e[0] !== sc.l ? [sc.l].concat(e) : e;
                         case ou.g.NONE:
-                            return no()([sc.c, sc.j], e[0]) ? e.slice(1) : e;
+                            return no()([sc.c, sc.l], e[0]) ? e.slice(1) : e;
                         default:
                             return e
                     }
@@ -33892,9 +33895,9 @@
                 case sc.a:
                     return 1 === e.length ? [sc.g] : e.slice(1);
                 case Rc.a:
-                    return no()([sc.m, sc.n, sc.f], e[0]) ? e.slice(1) : e;
+                    return no()([sc.i, sc.j, sc.o, sc.f], e[0]) ? e.slice(1) : e;
                 case Qs.b:
-                    return no()([sc.h, sc.n, sc.i], e[0]) ? e : [sc.h].concat(e);
+                    return no()([sc.h, sc.o, sc.k], e[0]) ? e : [sc.h].concat(e);
                 case Qs.a:
                     return e[0] === sc.h ? e.slice(1) : e;
                 default:
@@ -34851,7 +34854,7 @@
                 }]), e
             }(),
             Eo = n(102),
-            So = "//video-edge-1ceccd.sjc01.hls.ttvnw.net/v1/playlist/Cn4kc5ZIod-_Da4hwcbJYZdBbPF2SJUd6qCoRb4E4AZierbP0DvL2-zTvWMp-uM0teqnZI-EWizp_VzuOqTSNh1S68fpgM4qqJfji25A4v0BsGM6zDePM7PxoVydsdKUsELpWdlav4IjugE79T2x5rE6zNglDItDq5CLWXhOzgDIoeAjdnug2pHOUbLFDntC4mziswuq7XP71NIFJvOqNjtlQW9kirALGsjwksZJ6fqhF-g6q_Iz6xG3EVyvQ1BBdlkLJfjcbZBjK_XnVwenRJiZ4wrhxvmiDlxWnw6iaOtpyuQK34s-O4patCkNxx62XaRTA-v8Njh5yU0lQc0fScbkFiiZvirzEz3jwvkN_Stm_MEs-hfTcHrElZcajCono-SXBxrL8u7CPwGKbnsklTZYME0fHNHTu81qMCrpW1E40OI3VN0FBJ1hRlv.m3u8",
+            So = "//video-edge-affcce.sjc01.hls.ttvnw.net/v1/playlist/CvRwLOk25zpRac1i_zONwlDy9muz7p2bKpOfXB9NVx4jfuq8PNy_VIBiUrfM0LBkojzQmZVTcogGBCKERmKuds5Cd5aYpop5xJp8B3mfan2JDqA-pY2t5l9ory42g-CcgUSQKrZavN9noepWJLqKWvtn9_uuNDcTk5LdWlIvsXVCnb3C46zDxx9qyKC04cqgAUiXTQoJCx5Kj6xBYg2HSnUxiWYZOC_GSdgqPD8N0k6Gm80sp3sssvwvFCDScDJIaLdfSxNj7tsEEu8SSOXhGlDD-S64XP57IOnI9PjVsEzHzksbdExJyBcwowey2UsA3rXG5eoyRsXguf8ofyLpCqweJWbUfORXeiK1tVgLUk85sGZPufLNc9iogbp0ymrDy-glG5V_DZPJlSQRE1AlH9ohjdVQ_uW9NKA46ujidz4lMJbVcyzUQ5x_rtEZEzSLFVkjLk_zKedUY_x7Baa.m3u8",
             Po = n(47),
             Co = n(249),
             Oo = n(133),
@@ -38437,7 +38440,7 @@
                 isWatchParty: $o.a.bool,
                 isRerun: $o.a.bool,
                 isPremiere: $o.a.bool,
-                showingRecommendations: $o.a.bool
+                showingOfflineRecs: $o.a.bool
             },
             ld = function(e) {
                 var t = e.lang,
@@ -38454,7 +38457,7 @@
                     isWatchParty: "watch_party" === a.streamType,
                     isRerun: "rerun" === a.streamType,
                     isPremiere: "premiere" === a.streamType,
-                    showingRecommendations: o[0] === sc.m
+                    showingOfflineRecs: o[0] === sc.i
                 }
             },
             dd = Xo()("player-streamstatus"),
@@ -38466,7 +38469,7 @@
                     a = e.isWatchParty,
                     o = e.isRerun,
                     s = e.isPremiere,
-                    u = e.showingRecommendations,
+                    u = e.showingOfflineRecs,
                     c = null;
                 if (!i && !u) {
                     var l = Xo()("player-streamstatus__icon", "player-streamstatus__icon--live", "qa-live-label"),
@@ -40250,7 +40253,7 @@
                         name: o.channel.displayName
                     },
                     playerType: n.playerType,
-                    showFollowNotification: r.showFollowNotification && !l.isMini && (i.ended || o.streamType === Wp.a) && (u[0] === sc.m || u[0] === sc.g),
+                    showFollowNotification: r.showFollowNotification && !l.isMini && (i.ended || o.streamType === Wp.a) && (u[0] === sc.i || u[0] === sc.g),
                     relationship: {
                         notificationsEnabled: r.notificationsEnabled,
                         following: r.following
@@ -40620,7 +40623,7 @@
                     showSidebar: t.currentView === al.b,
                     currentVideoId: n.contentType === Is.a ? n.videoId : "",
                     windowObj: r,
-                    shouldRender: !i.isMini && a[0] !== sc.j && a[0] !== sc.c && "" !== t.id && n.contentType === Is.a
+                    shouldRender: !i.isMini && a[0] !== sc.l && a[0] !== sc.c && "" !== t.id && n.contentType === Is.a
                 }
             },
             Vh = function(e) {
@@ -40748,7 +40751,7 @@
                     errorCode: t.code,
                     errorMessage: t.hasError ? Gs.a.getMessage(t.code) : "",
                     hasError: t.hasError,
-                    isVODRestricted: n[0] === sc.n
+                    isVODRestricted: n[0] === sc.o
                 }
             };
         hn.propTypes = em;
@@ -41459,7 +41462,7 @@
                     recommendedVideos: r.videos,
                     recommendationType: r.type,
                     windowObj: i,
-                    showRecommendations: n[0] === sc.m && s.ended,
+                    showRecommendations: n[0] === sc.i && s.ended,
                     playerDimensions: a,
                     lang: t,
                     trackEvent: o.trackEvent,
@@ -41472,7 +41475,7 @@
                         e(Object(ic.D)(t))
                     },
                     popScreen: function() {
-                        e(Object(sc.o)())
+                        e(Object(sc.p)())
                     },
                     clearRecommendedVODs: function() {
                         e(In())
@@ -41843,13 +41846,13 @@
                         e(Cn(Bm))
                     },
                     pushVODRecScreen: function() {
-                        e(Object(sc.p)(sc.m))
+                        e(Object(sc.q)(sc.j))
                     },
                     selectRecommendedVideo: function(t) {
                         e(Object(ic.D)(t))
                     },
                     popScreen: function() {
-                        e(Object(sc.o)())
+                        e(Object(sc.p)())
                     },
                     clearRecommendedVODs: function() {
                         e(In())
@@ -41874,10 +41877,10 @@
                     value: function(e) {
                         if (!ly()(this.props, e)) {
                             var t = e.recommendedVideos !== this.props.recommendedVideos,
-                                n = e.screen[0] !== sc.m && e.shouldShowRecommendations,
+                                n = e.screen[0] !== sc.j && e.shouldShowRecommendations,
                                 r = this.props.hasVideoEnded && 0 === this.props.recommendedVideos.length && e.recommendedVideos.length > 0,
                                 i = !this.props.hasVideoEnded && e.hasVideoEnded && this.props.recommendedVideos.length > 0;
-                            return t && e.recommendedVideos.length > 0 && !1 === this.state.isImagePreloadingComplete && this._preloadVideoThumbnails(e.recommendedVideos), (r || i) && n ? void this.props.pushVODRecScreen() : e.shouldFetchRecommendations ? void this.props.fetchRecommendedVODs() : e.shouldShowRecommendations || e.screen[0] !== sc.m ? void 0 : void this.props.popScreen()
+                            return t && e.recommendedVideos.length > 0 && !1 === this.state.isImagePreloadingComplete && this._preloadVideoThumbnails(e.recommendedVideos), (r || i) && n ? void this.props.pushVODRecScreen() : e.shouldFetchRecommendations ? void this.props.fetchRecommendedVODs() : e.shouldShowRecommendations || e.screen[0] !== sc.j ? void 0 : void this.props.popScreen()
                         }
                     }
                 }, {
@@ -41891,7 +41894,7 @@
                             a = e.isMiniPlayer,
                             o = e.screen,
                             s = e.lang;
-                        return o[0] !== sc.m ? null : Qo.a.createElement(Cy, {
+                        return o[0] !== sc.j ? null : Qo.a.createElement(Cy, {
                             videos: t,
                             onSelectVOD: this.handleSelectVOD,
                             windowObj: n,
@@ -42668,7 +42671,7 @@
                     p = a === Ec.a,
                     f = s.contentType === Is.a && i.ended,
                     h = t.castingState === Ks.c || t.castingState === Ks.b,
-                    m = o[0] === sc.m || o[0] === sc.c;
+                    m = o[0] === sc.i || o[0] === sc.j || o[0] === sc.c;
                 return {
                     collectionsSidebarOpen: n.currentView === al.b,
                     showOverlay: (c || f) && !h && !l && !m && !d && !p
@@ -42741,7 +42744,7 @@
                 var t = e.screen;
                 return {
                     channelName: e.streamMetadata.channel.name,
-                    shouldRenderSubOverlay: t[0] === sc.n
+                    shouldRenderSubOverlay: t[0] === sc.o
                 }
             },
             Ob = function(e) {
@@ -42794,7 +42797,7 @@
             },
             Nb = function(e) {
                 return {
-                    shouldRenderStormWarning: e.screen[0] === sc.k
+                    shouldRenderStormWarning: e.screen[0] === sc.m
                 }
             };
         Zr.propTypes = Ab, Zr.defaultProps = Lb;
@@ -42888,10 +42891,10 @@
                         }))
                     },
                     pushUnmuteScreen: function() {
-                        e(Object(sc.p)(sc.l))
+                        e(Object(sc.q)(sc.n))
                     },
                     popScreen: function() {
-                        e(Object(sc.o)())
+                        e(Object(sc.p)())
                     }
                 }
             },
@@ -42906,12 +42909,12 @@
                 return ai(t, e), zb(t, [{
                     key: "componentDidMount",
                     value: function() {
-                        this.props.isMuted && this.props.autoplayEnabled && this.props.isPlaying && this.props.isMobileWeb && !no()(this.props.screenStack, sc.l) && this.props.pushUnmuteScreen()
+                        this.props.isMuted && this.props.autoplayEnabled && this.props.isPlaying && this.props.isMobileWeb && !no()(this.props.screenStack, sc.n) && this.props.pushUnmuteScreen()
                     }
                 }, {
                     key: "componentWillReceiveProps",
                     value: function(e) {
-                        e.autoplayEnabled && e.isMobileWeb && (e.isMuted && e.isPlaying || e.screenStack[0] !== sc.l || this.props.popScreen(), e.isMuted && oi(this.props, e) && !no()(e.screenStack, sc.l) && this.props.pushUnmuteScreen(), this.props.screenStack[0] === sc.l && e.screenStack[0] !== sc.l && this.cancelTimeout(), this.props.screenStack[0] !== sc.l && e.screenStack[0] === sc.l && this.startTimeout())
+                        e.autoplayEnabled && e.isMobileWeb && (e.isMuted && e.isPlaying || e.screenStack[0] !== sc.n || this.props.popScreen(), e.isMuted && oi(this.props, e) && !no()(e.screenStack, sc.n) && this.props.pushUnmuteScreen(), this.props.screenStack[0] === sc.n && e.screenStack[0] !== sc.n && this.cancelTimeout(), this.props.screenStack[0] !== sc.n && e.screenStack[0] === sc.n && this.startTimeout())
                     }
                 }, {
                     key: "render",
@@ -42919,7 +42922,7 @@
                         var e = Qo.a.createElement(Hb, {
                                 onClick: this.handleClick
                             }),
-                            t = this.props.screenStack[0] === sc.l ? e : null;
+                            t = this.props.screenStack[0] === sc.n ? e : null;
                         return Qo.a.createElement(_h.a, {
                             component: "div"
                         }, t)
@@ -42930,7 +42933,7 @@
                         var e = this.props,
                             t = e.screenStack,
                             n = e.popScreen;
-                        t[0] === sc.l && n()
+                        t[0] === sc.n && n()
                     }
                 }, {
                     key: "startTimeout",
@@ -43012,10 +43015,10 @@
                         e(Object(ic.v)())
                     },
                     dispatchQualityRestrictedScreen: function() {
-                        e(Object(sc.p)(sc.i))
+                        e(Object(sc.q)(sc.k))
                     },
                     popScreen: function() {
-                        e(Object(sc.o)())
+                        e(Object(sc.p)())
                     },
                     clearQualityRestrictedError: function() {
                         e(Object(ic.u)())
@@ -43919,7 +43922,7 @@
                 }, {
                     key: "_showEmptyCollectionOverlay",
                     value: function() {
-                        this._store.dispatch(Object(sc.p)(sc.f)), this._store.dispatch(Object(du.p)())
+                        this._store.dispatch(Object(sc.q)(sc.f)), this._store.dispatch(Object(du.p)())
                     }
                 }, {
                     key: "_streamEnded",
@@ -44203,7 +44206,7 @@
                 }, {
                     key: "tryShowOfflineRecs",
                     value: function() {
-                        this._shouldShowOfflineRecs() && this._store.dispatch(Object(sc.p)(sc.m))
+                        this._shouldShowOfflineRecs() && this._store.dispatch(Object(sc.q)(sc.i))
                     }
                 }, {
                     key: "onDimensionsChange",
@@ -44213,9 +44216,9 @@
                             n = e.playerDimensions,
                             r = n.height,
                             i = n.width,
-                            a = t[0] === sc.m;
-                        if ((r < 300 || i < 560) && a) return void this._store.dispatch(Object(sc.o)());
-                        this._shouldShowOfflineRecs() && this._store.dispatch(Object(sc.p)(sc.m))
+                            a = t[0] === sc.i;
+                        if ((r < 300 || i < 560) && a) return void this._store.dispatch(Object(sc.p)());
+                        this._shouldShowOfflineRecs() && this._store.dispatch(Object(sc.q)(sc.i))
                     }
                 }, {
                     key: "_shouldShowOfflineRecs",
@@ -44231,7 +44234,7 @@
                             u = r.height,
                             c = r.width,
                             l = u >= 300 && c >= 560,
-                            d = !no()(t, sc.m),
+                            d = !no()(t, sc.i),
                             p = s.currentMetadata.contentType === ou.g.NONE,
                             f = "offline recommendations" === n.type,
                             h = i.contentType === As.a && o === Ec.a,
@@ -44423,7 +44426,7 @@
                                 var n = qk(t, 2),
                                     r = n[0],
                                     i = n[1];
-                                Object(Rs.n)(i, r) && e._store.dispatch(Object(sc.p)(sc.n))
+                                Object(Rs.n)(i, r) && e._store.dispatch(Object(sc.q)(sc.o))
                             })
                         }
                     }
