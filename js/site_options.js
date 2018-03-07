@@ -299,13 +299,13 @@ window.SiteOptions = {
         },
         "0ca9c0f5-f9fc-40c6-be3f-52a9fa69a8b9": {
             "name": "twilight_animated_directory_thumbnails",
-            "v": 3201,
+            "v": 3227,
             "t": 1,
             "groups": [{
-                "weight": 97,
+                "weight": 95,
                 "value": "control"
             }, {
-                "weight": 3,
+                "weight": 5,
                 "value": "experiment"
             }]
         },

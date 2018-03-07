@@ -42,6 +42,7 @@ window.__twilightSettings = {
     "passport_hosts": ["https://api.twitch.tv", "https://passport.twitch.tv", "https://passport-staging.internal.twitch.tv", "https://passport-dev1.internal.twitch.tv", "https://passport-dev2.internal.twitch.tv", "https://passport-dev3.internal.twitch.tv", "https://id.twitch.tv", "https://id-dev.twitch.tv"],
     "player_routes_exact": ["store", "directory", "following", "popout", ""],
     "player_routes_startswith": ["event/", "store/", "collections/", "communities/", "directory/"],
+    "premiere_publish_flow": false,
     "premiere_video_manager_public": true,
     "premiere_video_manager_staff": true,
     "prime_blocked_regions": ["IN", "IND", "CU", "CUB", "SD", "SUD", "IR", "IRN", "CHN", "CN", "SY", "SYR", "PRK", "KP"],
@@ -95,13 +96,13 @@ window.__twilightSettings = {
         },
         "0ca9c0f5-f9fc-40c6-be3f-52a9fa69a8b9": {
             "name": "twilight_animated_directory_thumbnails",
-            "v": 3201,
+            "v": 3227,
             "t": 1,
             "groups": [{
-                "weight": 97,
+                "weight": 95,
                 "value": "control"
             }, {
-                "weight": 3,
+                "weight": 5,
                 "value": "experiment"
             }]
         },
