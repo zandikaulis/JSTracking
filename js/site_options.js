@@ -617,14 +617,17 @@ window.SiteOptions = {
         },
         "19f5492f-19f1-430c-8f22-1db077308950": {
             "name": "ios_broadcast_abs",
-            "v": 2168,
+            "v": 3231,
             "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "enabled"
             }, {
-                "weight": 100,
+                "weight": 50,
                 "value": "control"
+            }, {
+                "weight": 50,
+                "value": "enabled_v2"
             }]
         },
         "1a42d36b-3f3f-4b80-8252-bdd6cc675ec3": {
