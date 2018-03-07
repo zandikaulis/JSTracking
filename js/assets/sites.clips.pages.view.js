@@ -940,7 +940,7 @@ webpackJsonp([45], {
                     });
                     return r.createElement(y._35, {
                         fontSize: y.R.Size5
-                    }, Object(o.d)("clipped by {curatorName}", {
+                    }, Object(o.d)("Clipped by {curatorName}", {
                         curatorName: r.createElement("a", {
                             href: e,
                             target: "_blank"
@@ -1042,30 +1042,37 @@ webpackJsonp([45], {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = K, t.scrollPosition = 0, t.renderClipTitle = function() {
-                        var e = t.props.data.clip && t.props.data.clip.curator && t.props.data.clip.curator.login,
-                            n = t.props.slug;
+                        var e = t.props.data.clip,
+                            n = e && e.curator && e.curator.login,
+                            i = t.props.slug;
                         if (t.state.isEditingTitle) return r.createElement(W, {
-                            slug: n,
+                            slug: i,
                             editTitleToggle: t.editTitleToggle
                         });
-                        var i = r.createElement(y._2, {
+                        var a = r.createElement(y._2, {
+                            alignItems: y.c.Center,
+                            display: y.N.Flex,
+                            flexDirection: y.P.Row,
+                            justifyContent: y._1.Start,
                             margin: {
                                 y: 1
                             }
-                        }, r.createElement(P, {
-                            slug: n
+                        }, r.createElement(y._35, {
+                            type: y._40.Span
+                        }, t.createdAt), " • ", r.createElement(P, {
+                            slug: i
                         }));
-                        return t.props.userLogin !== e ? r.createElement(y._2, null, r.createElement(B, {
-                            slug: n
-                        }), i) : r.createElement(y._2, null, r.createElement("div", {
+                        return t.props.userLogin !== n ? r.createElement(y._2, null, r.createElement(B, {
+                            slug: i
+                        }), a) : r.createElement(y._2, null, r.createElement("div", {
                             className: "clips-chat-card-edit",
                             onClick: t.editTitleToggle,
                             "data-test-selector": "clips-chat-card-edit"
                         }, r.createElement(B, {
-                            slug: n
+                            slug: i
                         }), r.createElement(y._15, {
                             asset: y._16.Edit
-                        })), i)
+                        })), a)
                     }, t.setChatContentRef = function(e) {
                         t.chatContentRef = e
                     }, t.setScrollableAreaEl = function(e) {
@@ -1135,7 +1142,21 @@ webpackJsonp([45], {
                         var i = e.isChatContentCollapsed;
                         void 0 !== i && (t.isChatContentCollapsed = i), e.setState(t)
                     })
-                }, Object.defineProperty(t.prototype, "isChatContentCollapsed", {
+                }, Object.defineProperty(t.prototype, "createdAt", {
+                    get: function() {
+                        var e = this.props.data.clip;
+                        if (!e) return null;
+                        try {
+                            var t = new Date(e && e.createdAt.replace(/(Z)/i, "")),
+                                n = new Date(Date.UTC(t.getFullYear(), t.getMonth(), t.getDate(), t.getHours(), t.getMinutes(), t.getSeconds(), t.getMilliseconds()));
+                            return Object(o.g)(n)
+                        } catch (e) {
+                            return Object(o.d)("N/A", "ClipsInfoCard")
+                        }
+                    },
+                    enumerable: !0,
+                    configurable: !0
+                }), Object.defineProperty(t.prototype, "isChatContentCollapsed", {
                     get: function() {
                         var e = this.chatContentRef.getBoundingClientRect().top,
                             t = this.scrollableAreaEl.getBoundingClientRect().top,
@@ -9001,6 +9022,14 @@ webpackJsonp([45], {
                                 kind: "Field",
                                 name: {
                                     kind: "Name",
+                                    value: "createdAt"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
                                     value: "curator"
                                 },
                                 arguments: [],
@@ -9052,11 +9081,11 @@ webpackJsonp([45], {
             }],
             loc: {
                 start: 0,
-                end: 94
+                end: 104
             }
         };
         n.loc.source = {
-            body: "query ClipsChatCard($slug: ID!) {\nclip(slug: $slug) {\nid\ncurator {\nid\nlogin\n}\nvideo {\nid\n}\n}\n}",
+            body: "query ClipsChatCard($slug: ID!) {\nclip(slug: $slug) {\nid\ncreatedAt\ncurator {\nid\nlogin\n}\nvideo {\nid\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -10875,4 +10904,4 @@ webpackJsonp([45], {
     },
     zU1d: function(e, t) {}
 });
-//# sourceMappingURL=sites.clips.pages.view-75fb358d89930cecbcb801ea2fa42514.js.map
+//# sourceMappingURL=sites.clips.pages.view-6b6e8541aa04b6bbecfd510cd20970c9.js.map

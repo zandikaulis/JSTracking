@@ -7,33 +7,33 @@ webpackJsonp([76], {
         });
         var i = n("TToO"),
             o = n("GiK3"),
-            l = (n.n(o), n("5kgt")),
-            a = n("Odds"),
+            a = (n.n(o), n("5kgt")),
+            l = n("Odds"),
             r = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    var e = o.createElement(a._2, {
-                            alignItems: a.c.Center,
-                            display: a.N.Flex,
+                    var e = o.createElement(l._2, {
+                            alignItems: l.c.Center,
+                            display: l.N.Flex,
                             fullHeight: !0,
-                            justifyContent: a._1.Center,
+                            justifyContent: l._1.Center,
                             padding: 2
-                        }, o.createElement(a._24, {
+                        }, o.createElement(l._24, {
                             icon: this.props.icon,
                             label: this.props.label,
                             value: this.props.value
                         })),
-                        t = this.props.linkTo ? o.createElement(a._0, {
+                        t = this.props.linkTo ? o.createElement(l._0, {
                             alpha: !0,
                             linkTo: this.props.linkTo,
                             targetBlank: !0
                         }, e) : e;
-                    return o.createElement(a._2, i.__assign({
-                        display: a.N.InlineFlex,
+                    return o.createElement(l._2, i.__assign({
+                        display: l.N.InlineFlex,
                         fullHeight: !0
-                    }, Object(l.a)(this.props)), t)
+                    }, Object(a.a)(this.props)), t)
                 }, t
             }(o.Component)
     },
@@ -416,8 +416,8 @@ webpackJsonp([76], {
             value: !0
         });
         var i, o = n("TToO"),
-            l = n("GiK3"),
-            a = n("3zLD"),
+            a = n("GiK3"),
+            l = n("3zLD"),
             r = n("6sO2"),
             c = n("zCIC"),
             d = n("j7/Y"),
@@ -426,112 +426,191 @@ webpackJsonp([76], {
             m = n("CSlQ"),
             p = n("PQ4i"),
             h = n("RH2O"),
-            f = n("V5M+"),
-            g = n("+8VM"),
-            v = n("gT8s"),
-            C = n("Odds");
+            v = n("V5M+"),
+            f = n("+8VM"),
+            g = (n("gpuH"), n("h5eQ")),
+            k = n("Odds"),
+            C = n("j5vp");
         n("kt/X");
         ! function(e) {
             e[e.AddVideoButton = 0] = "AddVideoButton", e[e.DoneButton = 1] = "DoneButton"
         }(i || (i = {}));
-        var k = function(e) {
-            function t() {
-                var t = null !== e && e.apply(this, arguments) || this;
-                return t.state = {
-                    videosChanged: !1
-                }, t.onVideoSelectHandler = function(e) {
-                    t.setState({
-                        videosChanged: !0
-                    })
-                }, t.onLoadMoreHandler = function() {
-                    return Promise.resolve()
-                }, t.onCompleteClickHandler = function() {
-                    t.props.onComplete(t.state.videosChanged)
-                }, t
-            }
-            return o.__extends(t, e), t.prototype.render = function() {
-                var e = this,
-                    t = this.props.videos,
-                    n = t.map(function(n, o) {
-                        return l.createElement(C._2, {
-                            alignItems: C.c.Center,
-                            display: C.N.Flex,
-                            flexDirection: C.P.Row,
+        var E = 200,
+            b = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        videosChanged: !1
+                    }, t.onVideoSelectHandler = function(e) {
+                        t.setState({
+                            videosChanged: !0
+                        })
+                    }, t.onLoadMoreHandler = function() {
+                        if (!t.props.data.user || !t.props.data.user.searchVideos) return Promise.reject(new Error("Encountered unexpected null value for user or searchVideos, cannot load more."));
+                        var e = t.props.data.user.searchVideos.edges.length - 1,
+                            n = t.props.data.user.searchVideos.edges[e].cursor;
+                        return t.props.data.fetchMore({
+                            query: C,
+                            variables: {
+                                creatorID: t.props.collection.owner.id,
+                                after: n
+                            },
+                            updateQuery: _
+                        }).then(function() {})
+                    }, t.onCompleteClickHandler = function() {
+                        t.props.onComplete(t.state.videosChanged)
+                    }, t.onSearchInputChangeHandler = function(e) {
+                        var n = e.currentTarget.value;
+                        t.state.searchChangeTimeoutID && clearTimeout(t.state.searchChangeTimeoutID);
+                        var i = setTimeout(function() {
+                            return o.__awaiter(t, void 0, void 0, function() {
+                                return o.__generator(this, function(e) {
+                                    switch (e.label) {
+                                        case 0:
+                                            return e.trys.push([0, , 2, 3]), [4, this.props.data.refetch({
+                                                creatorID: this.props.collection.owner.id,
+                                                search: {
+                                                    term: n
+                                                }
+                                            })];
+                                        case 1:
+                                            return e.sent(), [3, 3];
+                                        case 2:
+                                            return this.setState({
+                                                searchChangeTimeoutID: void 0
+                                            }), [7];
+                                        case 3:
+                                            return [2]
+                                    }
+                                })
+                            })
+                        }, E);
+                        t.setState({
+                            searchChangeTimeoutID: i
+                        })
+                    }, t
+                }
+                return o.__extends(t, e), t.prototype.render = function() {
+                    var e = !!(this.props.data.user && this.props.data.user.searchVideos && this.props.data.user.searchVideos.pageInfo.hasNextPage);
+                    return a.createElement(k.e, {
+                        type: k.i.FadeIn,
+                        delay: k.f.Medium,
+                        duration: k.g.Medium,
+                        enabled: !0
+                    }, a.createElement(k._25, {
+                        background: k.m.Base,
+                        className: "collection-editor-item-selector",
+                        padding: {
+                            x: 3,
+                            y: 2
+                        }
+                    }, a.createElement(k._35, {
+                        fontSize: k.R.Size4
+                    }, Object(r.d)("Add videos to collection", "CollectionItemSelectorModal")), a.createElement(k._2, {
+                        padding: {
+                            y: 1
+                        }
+                    }, a.createElement(k.S, {
+                        label: Object(r.d)("Search your videos", "CollectionItemSelectorModal")
+                    }, a.createElement(k._18, {
+                        onChange: this.onSearchInputChangeHandler,
+                        placeholder: Object(r.d)("Filter by video title", "CollectionItemSelectorModal")
+                    }))), a.createElement(c.b, {
+                        suppressScrollX: !0
+                    }, a.createElement(k._2, {
+                        display: k.N.Flex,
+                        flexDirection: k.P.Column
+                    }, this.renderVideoSelectors(), a.createElement(c.a, {
+                        enabled: e,
+                        loadMore: this.onLoadMoreHandler
+                    }))), a.createElement(k._2, {
+                        display: k.N.Flex,
+                        justifyContent: k._1.Center,
+                        margin: {
+                            top: 2
+                        }
+                    }, a.createElement(k.u, {
+                        "data-test-selector": i.DoneButton,
+                        onClick: this.onCompleteClickHandler
+                    }, Object(r.d)("Done", "CollectionItemSelectorModal"))), a.createElement(f.a, {
+                        closeOnBackdropClick: !0
+                    })))
+                }, t.prototype.componentWillUnmount = function() {
+                    this.state.searchChangeTimeoutID && clearTimeout(this.state.searchChangeTimeoutID)
+                }, t.prototype.renderVideoSelectors = function() {
+                    var e = this;
+                    if (this.state.searchChangeTimeoutID || this.props.data.loading) return a.createElement(k._4, {
+                        fillContent: !0,
+                        delay: 500
+                    });
+                    if (this.props.data.error || !this.props.data.user || !this.props.data.user.searchVideos) return a.createElement("div", null);
+                    var t = this.props.data.user.searchVideos.edges.map(function(e) {
+                        return e.node
+                    });
+                    return 0 === t.length ? a.createElement("div", null) : t.map(function(n, o) {
+                        return a.createElement(k._2, {
+                            alignItems: k.c.Center,
+                            display: k.N.Flex,
+                            flexDirection: k.P.Row,
                             flexGrow: 1,
-                            key: o
-                        }, l.createElement(C._2, {
+                            key: o,
+                            padding: {
+                                y: .5
+                            }
+                        }, a.createElement(k._2, {
                             flexGrow: 1,
-                            flexShrink: 1
-                        }, l.createElement(v.a, {
+                            flexShrink: 1,
+                            padding: {
+                                right: .5
+                            }
+                        }, a.createElement(g.a, {
                             video: n
-                        })), l.createElement(C._2, {
+                        })), a.createElement(k._2, {
                             flexGrow: 0,
                             flexShrink: 0
-                        }, l.createElement(C.u, {
+                        }, a.createElement(k.u, {
                             "data-test-selector": i.AddVideoButton,
                             onClick: function() {
                                 e.onVideoSelectHandler(t[o].id)
                             }
                         }, Object(r.d)("Add", "CollectionItemSelectorModal"))))
-                    });
-                return l.createElement(C.e, {
-                    type: C.i.FadeIn,
-                    delay: C.f.Medium,
-                    duration: C.g.Medium,
-                    enabled: !0
-                }, l.createElement(C._25, {
-                    background: C.m.Base,
-                    className: "collection-editor-item-selector",
-                    padding: {
-                        x: 3,
-                        y: 2
-                    }
-                }, l.createElement(C._35, {
-                    fontSize: C.R.Size4
-                }, Object(r.d)("Add videos to collection", "CollectionItemSelectorModal")), l.createElement(C._2, {
-                    padding: {
-                        y: 1
-                    }
-                }, l.createElement(C.S, {
-                    label: Object(r.d)("Search your videos", "CollectionItemSelectorModal")
-                }, l.createElement(C._18, {
-                    placeholder: Object(r.d)("Filter by video title", "CollectionItemSelectorModal")
-                }))), l.createElement(c.b, {
-                    suppressScrollX: !0
-                }, l.createElement(C._2, {
-                    display: C.N.Flex,
-                    flexDirection: C.P.Column
-                }, n, l.createElement(c.a, {
-                    enabled: !1,
-                    loadMore: this.onLoadMoreHandler
-                }))), l.createElement(C._2, {
-                    display: C.N.Flex,
-                    justifyContent: C._1.Center,
-                    margin: {
-                        top: 2
-                    }
-                }, l.createElement(C.u, {
-                    "data-test-selector": i.DoneButton,
-                    onClick: this.onCompleteClickHandler
-                }, Object(r.d)("Done", "CollectionItemSelectorModal"))), l.createElement(g.a, {
-                    closeOnBackdropClick: !0
-                })))
-            }, t
-        }(l.Component);
-        var E, b = Object(h.b)(null, function(e, t) {
-                return {
-                    onComplete: function(n) {
-                        t.onComplete(n), e(Object(f.c)())
+                    })
+                }, t
+            }(a.Component),
+            _ = function(e, t) {
+                if (!t.fetchMoreResult) return e;
+                var n = t.fetchMoreResult;
+                return n.user && n.user.searchVideos ? {
+                    user: o.__assign({}, n.user, {
+                        searchVideos: o.__assign({}, n.user.searchVideos, {
+                            edges: e.user.searchVideos.edges.concat(n.user.searchVideos.edges)
+                        })
+                    })
+                } : e
+            },
+            y = Object(l.compose)(Object(l.graphql)(C, {
+                options: {
+                    variables: function(e) {
+                        return {
+                            creatorID: e.collection.owner.id
+                        }
                     }
                 }
-            })(k),
-            _ = n("M0wY"),
-            y = n("kk4f"),
-            O = n("jcM9");
+            }))(b);
+        var S, N = Object(h.b)(null, function(e, t) {
+                return {
+                    onComplete: function(n) {
+                        t.onComplete(n), e(Object(v.c)())
+                    }
+                }
+            })(y),
+            I = n("M0wY"),
+            O = n("kk4f"),
+            D = n("jcM9");
         ! function(e) {
             e[e.AddVideos = 0] = "AddVideos", e[e.DeleteButton = 1] = "DeleteButton", e[e.PlayAllButton = 2] = "PlayAllButton", e[e.Thumbnail = 3] = "Thumbnail"
-        }(E || (E = {}));
-        var S = function(e) {
+        }(S || (S = {}));
+        var x = function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.onAddVideosClickHandler = function() {
@@ -543,234 +622,215 @@ webpackJsonp([76], {
                 }, t
             }
             return o.__extends(t, e), t.prototype.render = function() {
-                return l.createElement(C._25, {
-                    background: C.m.Alt,
-                    display: C.N.Flex,
-                    flexDirection: C.P.Row,
-                    alignItems: C.c.Stretch
-                }, l.createElement(C._2, {
-                    display: C.N.Flex,
-                    flexDirection: C.P.Column
-                }, l.createElement(C._2, {
+                return a.createElement(k._25, {
+                    background: k.m.Alt,
+                    display: k.N.Flex,
+                    flexDirection: k.P.Row,
+                    alignItems: k.c.Stretch
+                }, a.createElement(k._2, {
+                    display: k.N.Flex,
+                    flexDirection: k.P.Column
+                }, a.createElement(k._2, {
                     margin: {
                         y: 1
                     }
-                }, l.createElement(C._35, {
-                    color: C.I.Alt,
-                    type: C._40.H6,
+                }, a.createElement(k._35, {
+                    color: k.I.Alt,
+                    type: k._40.H6,
                     bold: !0
-                }, Object(r.d)("Collection Thumbnail", "CollectionEditorInfoCard"))), l.createElement(y.a, {
-                    "data-test-selector": E.Thumbnail,
+                }, Object(r.d)("Collection Thumbnail", "CollectionEditorInfoCard"))), a.createElement(O.a, {
+                    "data-test-selector": S.Thumbnail,
                     alt: this.props.collection.title,
                     sizes: [{
                         size: "320px"
                     }],
                     src: this.props.collection.thumbnailURL
-                })), l.createElement(C._2, {
-                    display: C.N.Flex,
-                    flexDirection: C.P.Column,
+                })), a.createElement(k._2, {
+                    display: k.N.Flex,
+                    flexDirection: k.P.Column,
                     margin: {
                         left: 3
                     },
                     flexGrow: 2,
                     flexShrink: 0
-                }, l.createElement(C._2, {
+                }, a.createElement(k._2, {
                     margin: {
                         y: 1
                     }
-                }, l.createElement(C._35, {
-                    color: C.I.Alt,
-                    type: C._40.H6,
+                }, a.createElement(k._35, {
+                    color: k.I.Alt,
+                    type: k._40.H6,
                     bold: !0
-                }, Object(r.d)("Title", "CollectionEditorInfoCard"))), l.createElement(C.Y, {
-                    type: C.Z.Text,
+                }, Object(r.d)("Title", "CollectionEditorInfoCard"))), a.createElement(k.Y, {
+                    type: k.Z.Text,
                     defaultValue: this.props.collection.title,
                     onChange: this.onTitleChange
-                }), l.createElement(C._2, {
+                }), a.createElement(k._2, {
                     margin: {
                         top: 1,
                         bottom: 3
                     }
-                }, l.createElement(C._35, {
-                    type: C._40.Span,
-                    color: C.I.Alt2
+                }, a.createElement(k._35, {
+                    type: k._40.Span,
+                    color: k.I.Alt2
                 }, Object(r.d)("Last updated {updatedAt}", {
                     updatedAt: Object(r.c)(new Date(this.props.collection.updatedAt), "long")
                 }, "CollectionEditorInfoCard"))), this.managerMenu()))
             }, t.prototype.managerMenu = function() {
-                return l.createElement(C._2, {
-                    display: C.N.Flex,
-                    flexDirection: C.P.Row
-                }, l.createElement(C.u, {
-                    "data-test-selector": E.PlayAllButton,
-                    icon: C._16.Play,
-                    type: C.z.Text,
+                return a.createElement(k._2, {
+                    display: k.N.Flex,
+                    flexDirection: k.P.Row
+                }, a.createElement(k.u, {
+                    "data-test-selector": S.PlayAllButton,
+                    icon: k._16.Play,
+                    type: k.z.Text,
                     linkTo: "/collections/" + this.props.collection.id
-                }, Object(r.d)("Play All", "CollectionEditorInfoCard")), l.createElement(C.u, {
-                    "data-test-selector": E.AddVideos,
-                    icon: C._16.Plus,
+                }, Object(r.d)("Play All", "CollectionEditorInfoCard")), a.createElement(k.u, {
+                    "data-test-selector": S.AddVideos,
+                    icon: k._16.Plus,
                     onClick: this.onAddVideosClickHandler,
-                    type: C.z.Text
-                }, Object(r.d)("Add videos", "CollectionEditorInfoCard")), l.createElement(O.a, {
-                    balloonDirection: C.q.BottomCenter,
-                    buttonType: C.z.Text,
+                    type: k.z.Text
+                }, Object(r.d)("Add videos", "CollectionEditorInfoCard")), a.createElement(D.a, {
+                    balloonDirection: k.q.BottomCenter,
+                    buttonType: k.z.Text,
                     content: {
                         collectionID: this.props.collection.id
                     },
                     tracking: {
                         location: u.PageviewLocation.VideoManagerCollectionEditor
                     }
-                }), l.createElement(C.u, {
-                    "data-test-selector": E.DeleteButton,
-                    icon: C._16.Trash,
-                    type: C.z.Text,
+                }), a.createElement(k.u, {
+                    "data-test-selector": S.DeleteButton,
+                    icon: k._16.Trash,
+                    type: k.z.Text,
                     onClick: this.onDeleteOptionClickHandler
                 }, Object(r.d)("Delete", "CollectionEditorInfoCard")))
             }, t
-        }(l.Component);
-        var x, w = Object(h.b)(null, function(e) {
+        }(a.Component);
+        var w, V = Object(h.b)(null, function(e) {
                 return {
                     onDeleteOptionClick: function(t) {
-                        e(Object(f.d)(_.a, {
+                        e(Object(v.d)(I.a, {
                             collection: t
                         }))
                     },
                     onAddVideosClick: function(t, n) {
-                        e(Object(f.d)(b, {
+                        e(Object(v.d)(N, {
                             collection: t,
-                            onComplete: n,
-                            videos: [{
-                                id: "201494024",
-                                lengthSeconds: 24,
-                                previewThumbnailURL: "https://vod-secure.twitch.tv/_404/404_processing_160x90.png",
-                                publishedAt: "2017-11-15T18:36:12Z",
-                                title: ""
-                            }, {
-                                id: "98685611",
-                                lengthSeconds: 462,
-                                previewThumbnailURL: "https://static-cdn.jtvnw.net/s3_vods/deredowl/98685611/3d46266f-98b3-46c3-8d2a-877aad5c5ce5/thumb/index-0000000002-160x90.jpg",
-                                publishedAt: "2017-04-14T23:19:20Z",
-                                title: "Testerino"
-                            }, {
-                                id: "100247978",
-                                lengthSeconds: 32,
-                                previewThumbnailURL: "https://static-cdn.jtvnw.net/s3_vods/deredowl/100247978/a9643896-e29c-4c85-b80b-eae51e92ba17/thumb/index-0000000000-160x90.jpg",
-                                publishedAt: "2016-11-10T20:29:25Z",
-                                title: "index 0000014766"
-                            }]
+                            onComplete: n
                         }))
                     }
                 }
-            })(S),
-            N = function() {
-                return l.createElement(C._25, {
-                    background: C.m.Alt,
-                    display: C.N.Flex,
-                    flexDirection: C.P.Row,
-                    alignItems: C.c.Stretch,
+            })(x),
+            T = function() {
+                return a.createElement(k._25, {
+                    background: k.m.Alt,
+                    display: k.N.Flex,
+                    flexDirection: k.P.Row,
+                    alignItems: k.c.Stretch,
                     margin: {
                         bottom: 5
                     }
-                }, l.createElement(C._2, {
-                    display: C.N.Flex,
-                    flexDirection: C.P.Column
-                }, l.createElement(C._2, {
+                }, a.createElement(k._2, {
+                    display: k.N.Flex,
+                    flexDirection: k.P.Column
+                }, a.createElement(k._2, {
                     margin: {
                         y: 1
                     }
-                }, l.createElement(C._8, {
+                }, a.createElement(k._8, {
                     width: 100
-                })), l.createElement(C._8, {
+                })), a.createElement(k._8, {
                     height: 180,
                     width: 320
-                })), l.createElement(C._2, {
-                    display: C.N.Flex,
-                    flexDirection: C.P.Column,
+                })), a.createElement(k._2, {
+                    display: k.N.Flex,
+                    flexDirection: k.P.Column,
                     margin: {
                         left: 3
                     },
                     flexGrow: 2,
                     flexShrink: 0
-                }, l.createElement(C._2, {
+                }, a.createElement(k._2, {
                     margin: {
                         y: 1
                     }
-                }, l.createElement(C._8, {
+                }, a.createElement(k._8, {
                     width: 50
-                })), l.createElement(C._8, {
+                })), a.createElement(k._8, {
                     height: 25,
                     width: 400
-                }), l.createElement(C._2, {
+                }), a.createElement(k._2, {
                     margin: {
                         top: 1,
                         bottom: 3
                     }
-                }, l.createElement(C._8, {
+                }, a.createElement(k._8, {
                     height: 15,
                     width: 300
-                })), l.createElement(C._8, {
+                })), a.createElement(k._8, {
                     height: 30,
                     width: 400
                 })))
             },
-            I = n("i61F"),
-            D = n("F8kA"),
-            j = n("mi6k"),
-            T = n("5RjZ"),
-            M = n("KRtN"),
-            F = n("4o7v"),
-            A = n("PwTO"),
-            P = n("N8CH"),
-            V = n("Z8qZ"),
-            R = (n("dAJe"), {
+            j = n("i61F"),
+            F = n("F8kA"),
+            M = n("mi6k"),
+            A = n("5RjZ"),
+            P = n("KRtN"),
+            R = n("4o7v"),
+            H = n("PwTO"),
+            B = n("N8CH"),
+            L = n("Z8qZ"),
+            G = (n("dAJe"), {
                 ItemLength: "ItemLength",
                 VideoLink: "VideoLink"
             }),
-            H = Object(I.SortableHandle)(function() {
-                return l.createElement(C._15, {
-                    asset: C._16.DragHandle
+            z = Object(j.SortableHandle)(function() {
+                return a.createElement(k._15, {
+                    asset: k._16.DragHandle
                 })
             }),
-            B = function(e) {
+            U = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.subHeader = function(e) {
-                        return l.createElement(C._25, {
-                            display: C.N.Flex,
-                            flexDirection: C.P.Row,
+                        return a.createElement(k._25, {
+                            display: k.N.Flex,
+                            flexDirection: k.P.Row,
                             margin: {
                                 top: .5
                             },
-                            color: C.I.Alt2
-                        }, l.createElement(C._2, {
+                            color: k.I.Alt2
+                        }, a.createElement(k._2, {
                             padding: {
                                 right: 1
                             }
-                        }, l.createElement(C._43, {
-                            direction: C._45.Bottom,
-                            align: C._44.Center,
+                        }, a.createElement(k._43, {
+                            direction: k._45.Bottom,
+                            align: k._44.Center,
                             label: Object(r.d)("Published At", "CollectionItemCard")
-                        }, l.createElement(C._35, null, Object(r.c)(new Date(e.publishedAt), "long")))), l.createElement(C._2, {
+                        }, a.createElement(k._35, null, Object(r.c)(new Date(e.publishedAt), "long")))), a.createElement(k._2, {
                             padding: {
                                 right: 1
                             },
-                            display: C.N.Flex,
-                            alignItems: C.c.Center
-                        }, l.createElement(C._24, {
-                            "data-test-selector": R.ItemLength,
+                            display: k.N.Flex,
+                            alignItems: k.c.Center
+                        }, a.createElement(k._24, {
+                            "data-test-selector": G.ItemLength,
                             label: Object(r.d)("Length", "CollectionItemCard"),
-                            value: Object(j.a)(e.lengthSeconds),
-                            icon: C._16.GlyphLength
-                        })), l.createElement(C._2, {
+                            value: Object(M.a)(e.lengthSeconds),
+                            icon: k._16.GlyphLength
+                        })), a.createElement(k._2, {
                             padding: {
                                 right: 1
                             },
-                            display: C.N.Flex,
-                            alignItems: C.c.Center
-                        }, l.createElement(C._24, {
+                            display: k.N.Flex,
+                            alignItems: k.c.Center
+                        }, a.createElement(k._24, {
                             label: Object(r.d)("Video Type", "CollectionItemCard"),
-                            value: Object(T.a)(e.broadcastType),
-                            icon: C._16.NavVideos
+                            value: Object(A.a)(e.broadcastType),
+                            icon: k._16.NavVideos
                         })))
                     }, t.reportImageInteractive = function() {
                         t.props.latencyTracking.reportInteractive()
@@ -778,38 +838,38 @@ webpackJsonp([76], {
                 }
                 return o.__extends(t, e), t.prototype.render = function() {
                     var e = this.props.collectionItem;
-                    return l.createElement(C._2, {
+                    return a.createElement(k._2, {
                         className: "collection-item-card",
                         margin: {
                             y: 1
                         }
-                    }, l.createElement(V.a, null, l.createElement(C._25, {
-                        background: C.m.Alt,
-                        display: C.N.Flex,
+                    }, a.createElement(L.a, null, a.createElement(k._25, {
+                        background: k.m.Alt,
+                        display: k.N.Flex,
                         className: "collection-item__drag-handle"
-                    }, l.createElement(H, null)), l.createElement(C._2, {
-                        alignSelf: C.d.Center,
+                    }, a.createElement(z, null)), a.createElement(k._2, {
+                        alignSelf: k.d.Center,
                         padding: {
                             x: 1
                         }
-                    }, this.props.position), l.createElement(C._2, {
+                    }, this.props.position), a.createElement(k._2, {
                         flexGrow: 0,
                         flexShrink: 0
-                    }, l.createElement(C.C, {
-                        aspect: C.k.Aspect16x9,
-                        size: C.D.Size16,
+                    }, a.createElement(k.C, {
+                        aspect: k.k.Aspect16x9,
+                        size: k.D.Size16,
                         onLoad: this.reportImageInteractive,
                         onError: this.reportImageInteractive,
                         src: e.previewThumbnailURL ? e.previewThumbnailURL : "https://static-cdn.jtvnw.net/ttv-playlists-thumbnails-prod/missing-video-thumb-320x180.png",
                         alt: e.title
-                    })), l.createElement(P.a, null, l.createElement(C._43, {
+                    })), a.createElement(B.a, null, a.createElement(k._43, {
                         label: Object(r.d)("Watch this video", "CollectionItemCard"),
-                        direction: C._45.Right
-                    }, l.createElement(C._35, {
-                        type: C._40.H5,
-                        color: C.I.Alt
-                    }, l.createElement(D.a, {
-                        "data-test-selector": R.VideoLink,
+                        direction: k._45.Right
+                    }, a.createElement(k._35, {
+                        type: k._40.H5,
+                        color: k.I.Alt
+                    }, a.createElement(F.a, {
+                        "data-test-selector": G.VideoLink,
                         to: {
                             pathname: "/videos/" + this.props.collectionItem.id,
                             state: {
@@ -817,31 +877,31 @@ webpackJsonp([76], {
                                 medium: u.PageviewMedium.VideoManagerCollectionEditor
                             }
                         }
-                    }, e.title))), this.subHeader(e)), l.createElement(A.a, null, l.createElement(F.a, {
+                    }, e.title))), this.subHeader(e)), a.createElement(H.a, null, a.createElement(R.a, {
                         value: e.viewCount.toString(),
-                        icon: C._16.GlyphViews,
+                        icon: k._16.GlyphViews,
                         label: Object(r.d)("Total videos", "CollectionItemCard")
-                    })), l.createElement(M.a, {
+                    })), a.createElement(P.a, {
                         options: this.collectionMenuOptions(e)
                     })))
                 }, t.prototype.collectionMenuOptions = function(e) {
                     return [{
-                        asset: C._16.Edit,
+                        asset: k._16.Edit,
                         title: Object(r.d)("Set as collection thumbnail", "CollectionItemCard")
                     }, {
-                        asset: C._16.Trash,
+                        asset: k._16.Trash,
                         title: Object(r.d)("Remove from collection", "CollectionItemCard")
                     }]
                 }, t
-            }(l.Component),
-            L = Object(a.compose)(Object(m.d)("CollectionItemCard"))(B),
-            G = Object(I.SortableElement)(function(e) {
-                return l.createElement(L, o.__assign({}, e))
+            }(a.Component),
+            q = Object(l.compose)(Object(m.d)("CollectionItemCard"))(U),
+            K = Object(j.SortableElement)(function(e) {
+                return a.createElement(q, o.__assign({}, e))
             }),
-            z = Object(I.SortableContainer)(function(e) {
+            Q = Object(j.SortableContainer)(function(e) {
                 var t = e.items;
-                return l.createElement(C._2, null, t.map(function(e, t) {
-                    return l.createElement(G, {
+                return a.createElement(k._2, null, t.map(function(e, t) {
+                    return a.createElement(K, {
                         key: e.id,
                         index: t,
                         position: t + 1,
@@ -849,30 +909,30 @@ webpackJsonp([76], {
                     })
                 }))
             }),
-            U = function(e) {
+            $ = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onSortEnd = function(e) {
                         var n = e.oldIndex,
                             i = e.newIndex,
-                            o = Object(I.arrayMove)(t.props.items, n, i);
+                            o = Object(j.arrayMove)(t.props.items, n, i);
                         return t.props.onReorder(o), "foo"
                     }, t
                 }
                 return o.__extends(t, e), t.prototype.render = function() {
-                    return l.createElement(z, {
+                    return a.createElement(Q, {
                         items: this.props.items,
                         onSortEnd: this.onSortEnd,
                         useDragHandle: !0
                     })
                 }, t
-            }(l.Component),
-            K = n("Dz2i");
+            }(a.Component),
+            W = n("Dz2i");
         n("/brc");
         ! function(e) {
             e[e.BackButton = 0] = "BackButton"
-        }(x || (x = {}));
-        var q = function(e) {
+        }(w || (w = {}));
+        var Z = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -918,44 +978,44 @@ webpackJsonp([76], {
                     e.data.loading && !this.props.data.loading && this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     var e, t, n = !1;
-                    return this.props.data.loading ? (e = this.collectionInfoPlaceholder(), t = this.collectionCardPlaceholders()) : this.props.data.error || !this.props.data.collection ? (e = this.collectionUnavailableError(), t = this.collectionItemsUnavaibleError()) : this.props.data.collection ? (e = l.createElement(w, {
+                    return this.props.data.loading ? (e = this.collectionInfoPlaceholder(), t = this.collectionCardPlaceholders()) : this.props.data.error || !this.props.data.collection ? (e = this.collectionUnavailableError(), t = this.collectionItemsUnavaibleError()) : this.props.data.collection ? (e = a.createElement(V, {
                         collection: this.props.data.collection,
                         onTitleChange: this.onTitleChange,
                         onVideosChange: this.props.data.refetch
-                    }), t = l.createElement(U, {
+                    }), t = a.createElement($, {
                         items: this.props.data.collection.items.edges.map(function(e) {
                             return e.node
                         }),
                         onReorder: this.onItemsChange
-                    }), n = this.props.data.collection.items.pageInfo.hasNextPage || !1) : (e = this.collectionUnavailableError(), t = this.noCollectionItemsCTA()), l.createElement(c.b, null, l.createElement(C._2, {
+                    }), n = this.props.data.collection.items.pageInfo.hasNextPage || !1) : (e = this.collectionUnavailableError(), t = this.noCollectionItemsCTA()), a.createElement(c.b, null, a.createElement(k._2, {
                         padding: 3,
-                        display: C.N.Flex,
-                        flexDirection: C.P.Row,
+                        display: k.N.Flex,
+                        flexDirection: k.P.Row,
                         className: "collection-editor-page"
-                    }, l.createElement(C._2, {
+                    }, a.createElement(k._2, {
                         flexGrow: 1
-                    }, l.createElement(C._2, {
+                    }, a.createElement(k._2, {
                         margin: {
                             bottom: 1
                         },
                         flexGrow: 1,
-                        flexDirection: C.P.Row,
-                        display: C.N.Flex
-                    }, l.createElement(C._2, {
+                        flexDirection: k.P.Row,
+                        display: k.N.Flex
+                    }, a.createElement(k._2, {
                         flexGrow: 1
-                    }, l.createElement(C._35, {
-                        type: C._40.H3
-                    }, Object(r.d)("Edit Collection", "CollectionEditorPagePresentation"))), l.createElement(C._2, {
+                    }, a.createElement(k._35, {
+                        type: k._40.H3
+                    }, Object(r.d)("Edit Collection", "CollectionEditorPagePresentation"))), a.createElement(k._2, {
                         flexGrow: 0
-                    }, l.createElement(C.u, {
+                    }, a.createElement(k.u, {
                         onClick: this.onCancel,
-                        type: C.z.Text
-                    }, Object(r.d)("Cancel", "CollectionEditorPagePresentation")))), l.createElement(C._2, {
+                        type: k.z.Text
+                    }, Object(r.d)("Cancel", "CollectionEditorPagePresentation")))), a.createElement(k._2, {
                         padding: {
                             y: .5
                         }
-                    }, l.createElement(C.L, {
-                        "data-test-selector": x.BackButton,
+                    }, a.createElement(k.L, {
+                        "data-test-selector": w.BackButton,
                         hoverUnderlineNone: !0,
                         to: {
                             pathname: "/" + this.props.match.params.creatorLogin + "/manager/collections",
@@ -964,51 +1024,51 @@ webpackJsonp([76], {
                                 medium: u.PageviewMedium.VideoManagerCollectionEditor
                             }
                         }
-                    }, l.createElement(C._2, {
-                        display: C.N.Flex,
-                        flexDirection: C.P.Row,
-                        alignItems: C.c.Center
-                    }, l.createElement(C._15, {
-                        asset: C._16.ChatSettingsBack,
+                    }, a.createElement(k._2, {
+                        display: k.N.Flex,
+                        flexDirection: k.P.Row,
+                        alignItems: k.c.Center
+                    }, a.createElement(k._15, {
+                        asset: k._16.ChatSettingsBack,
                         height: 20,
                         width: 20
-                    }), l.createElement(C._35, {
-                        align: C._50.Middle,
+                    }), a.createElement(k._35, {
+                        align: k._50.Middle,
                         bold: !0
-                    }, Object(r.d)("All collections", "CollectionEditorPagePresentation"))))), e, t, l.createElement(c.a, {
+                    }, Object(r.d)("All collections", "CollectionEditorPagePresentation"))))), e, t, a.createElement(c.a, {
                         enabled: n,
                         loadMore: this.props.loadMore
-                    })), l.createElement(C._2, {
+                    })), a.createElement(k._2, {
                         flexGrow: 0,
                         className: "right-sidebar"
-                    }, l.createElement(C.u, {
+                    }, a.createElement(k.u, {
                         onClick: this.onSave
                     }, Object(r.d)("Save changes", "CollectionEditorPagePresentation")))))
                 }, t.prototype.collectionCardPlaceholders = function() {
-                    return [l.createElement(p.a, {
+                    return [a.createElement(p.a, {
                         key: 1
-                    }), l.createElement(p.a, {
+                    }), a.createElement(p.a, {
                         key: 2
-                    }), l.createElement(p.a, {
+                    }), a.createElement(p.a, {
                         key: 3
                     })]
                 }, t.prototype.collectionInfoPlaceholder = function() {
-                    return l.createElement(N, null)
+                    return a.createElement(T, null)
                 }, t.prototype.noCollectionItemsCTA = function() {
-                    return l.createElement("div", null)
+                    return a.createElement("div", null)
                 }, t.prototype.collectionItemsUnavaibleError = function() {
-                    return l.createElement("div", null)
+                    return a.createElement("div", null)
                 }, t.prototype.collectionUnavailableError = function() {
-                    return l.createElement("div", null)
+                    return a.createElement("div", null)
                 }, t
-            }(l.Component),
-            Z = function(e, t) {
+            }(a.Component),
+            Y = function(e, t) {
                 var n = t.fetchMoreResult;
                 if (!n || !n.collection || !n.collection.items) return e;
                 var i = e.collection && e.collection.items.edges || [];
                 return n.collection.items.edges = i.concat(n.collection.items.edges), n
             },
-            Q = Object(a.compose)(Object(a.graphql)(K, {
+            J = Object(l.compose)(Object(l.graphql)(W, {
                 options: function(e) {
                     return {
                         variables: {
@@ -1024,8 +1084,8 @@ webpackJsonp([76], {
                                     collectionID: t.match.params.collectionID,
                                     after: o
                                 }),
-                                query: K,
-                                updateQuery: Z
+                                query: W,
+                                updateQuery: Y
                             });
                             var t, n, i, o
                         },
@@ -1048,41 +1108,41 @@ webpackJsonp([76], {
                 skip: function(e) {
                     return e.data.loading
                 }
-            }))(q),
-            W = n("L2R7"),
-            Y = function(e) {
+            }))(Z),
+            X = n("L2R7"),
+            ee = function(e) {
                 return window.location.replace("https://www.twitch.tv/" + encodeURIComponent(e.match.params.creatorLogin) + "/manager/collections/edit/" + e.match.params.collectionID), null
             },
-            $ = function(e) {
-                return Object(W.a)() ? l.createElement(Q, o.__assign({}, e)) : l.createElement(Y, o.__assign({}, e))
+            te = function(e) {
+                return Object(X.a)() ? a.createElement(J, o.__assign({}, e)) : a.createElement(ee, o.__assign({}, e))
             };
         n.d(t, "CollectionEditorPage", function() {
-            return $
+            return te
         })
     },
     KRtN: function(e, t, n) {
         "use strict";
         var i = n("TToO"),
             o = n("GiK3"),
-            l = n("rCmJ"),
-            a = n("Odds"),
+            a = n("rCmJ"),
+            l = n("Odds"),
             r = function(e) {
-                var t = e.asset ? o.createElement(a._15, {
+                var t = e.asset ? o.createElement(l._15, {
                     asset: e.asset
                 }) : null;
-                return o.createElement(a._0, {
+                return o.createElement(l._0, {
                     linkTo: e.linkTo,
                     onClick: e.onClick
-                }, o.createElement(a._2, {
-                    alignItems: a.c.Center,
-                    display: a.N.Flex,
+                }, o.createElement(l._2, {
+                    alignItems: l.c.Center,
+                    display: l.N.Flex,
                     flexGrow: 1,
                     padding: 1
-                }, t, o.createElement(a.W, {
+                }, t, o.createElement(l.W, {
                     margin: {
                         left: 1
                     }
-                }, o.createElement(a._35, null, e.title))))
+                }, o.createElement(l._35, null, e.title))))
             };
         n.d(t, "a", function() {
             return c
@@ -1108,24 +1168,24 @@ webpackJsonp([76], {
             }
             return i.__extends(t, e), t.prototype.render = function() {
                 var e = null;
-                return this.state.showDropMenu && (e = this.dropMenu()), o.createElement(a._2, {
+                return this.state.showDropMenu && (e = this.dropMenu()), o.createElement(l._2, {
                     flexGrow: 0,
                     flexShrink: 0,
-                    display: a.N.Flex,
-                    position: a._9.Relative
-                }, o.createElement(a.W, {
+                    display: l.N.Flex,
+                    position: l._9.Relative
+                }, o.createElement(l.W, {
                     fullHeight: !0
-                }, o.createElement(l.a, {
+                }, o.createElement(a.a, {
                     onClickOut: this.clickOutHandler
-                }, o.createElement(a._2, {
+                }, o.createElement(l._2, {
                     fullHeight: !0,
-                    display: a.N.Flex,
-                    alignItems: a.c.Stretch
-                }, o.createElement(a.u, {
+                    display: l.N.Flex,
+                    alignItems: l.c.Stretch
+                }, o.createElement(l.u, {
                     disabled: 0 === this.props.options.length,
-                    icon: a._16.More,
+                    icon: l._16.More,
                     onClick: this.menuButtonClickHandler,
-                    type: a.z.Text
+                    type: l.z.Text
                 })), e)))
             }, t.prototype.dropMenu = function() {
                 var e = this.props.options.map(function(e, t) {
@@ -1133,9 +1193,9 @@ webpackJsonp([76], {
                         key: t
                     }, e))
                 });
-                return o.createElement(a.p, {
-                    size: a.r.Small,
-                    direction: a.q.BottomRight,
+                return o.createElement(l.p, {
+                    size: l.r.Small,
+                    direction: l.q.BottomRight,
                     noTail: !0,
                     show: !0
                 }, e)
@@ -1145,8 +1205,8 @@ webpackJsonp([76], {
     M0wY: function(e, t, n) {
         "use strict";
         var i, o = n("TToO"),
-            l = n("GiK3"),
-            a = n("3zLD"),
+            a = n("GiK3"),
+            l = n("3zLD"),
             r = n("RH2O"),
             c = n("6sO2"),
             d = n("7vx8"),
@@ -1158,87 +1218,87 @@ webpackJsonp([76], {
         ! function(e) {
             e[e.CancelButton = 0] = "CancelButton", e[e.ConfirmButton = 1] = "ConfirmButton", e[e.ErrorAlert = 2] = "ErrorAlert"
         }(i || (i = {}));
-        var f = function(e) {
+        var v = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return o.__extends(t, e), t.prototype.render = function() {
                     var e = this.props.collection,
                         t = null;
-                    return this.props.error && (t = l.createElement(h.e, {
+                    return this.props.error && (t = a.createElement(h.e, {
                         delay: h.f.Short,
                         type: h.i.BounceIn,
                         enabled: !0
-                    }, l.createElement(h._25, {
+                    }, a.createElement(h._25, {
                         border: !0,
                         margin: {
                             bottom: 1
                         },
                         padding: 1,
                         fullWidth: !0
-                    }, l.createElement(h._35, {
+                    }, a.createElement(h._35, {
                         bold: !0,
                         color: h.I.Error,
                         "data-test-selector": i.ErrorAlert
-                    }, this.props.error)))), l.createElement(h.e, {
+                    }, this.props.error)))), a.createElement(h.e, {
                         type: h.i.FadeIn,
                         delay: h.f.Medium,
                         duration: h.g.Medium,
                         enabled: !0
-                    }, l.createElement(h._25, {
+                    }, a.createElement(h._25, {
                         background: h.m.Base,
                         padding: {
                             x: 3,
                             top: 2,
                             bottom: 3
                         }
-                    }, l.createElement(h.W, {
+                    }, a.createElement(h.W, {
                         padding: {
                             bottom: 1
                         }
-                    }, l.createElement(h._35, {
+                    }, a.createElement(h._35, {
                         fontSize: h.R.Size3
-                    }, Object(c.d)("Delete Collection", "DeleteCollectionModal"))), l.createElement(h._35, {
+                    }, Object(c.d)("Delete Collection", "DeleteCollectionModal"))), a.createElement(h._35, {
                         fontSize: h.R.Size6
-                    }, Object(c.d)("Are you sure you want to delete this collection?", "DeleteCollectionModal")), l.createElement(h._35, {
+                    }, Object(c.d)("Are you sure you want to delete this collection?", "DeleteCollectionModal")), a.createElement(h._35, {
                         fontSize: h.R.Size6
-                    }, Object(c.d)("This action cannot be undone. ", "DeleteCollectionModal")), l.createElement(h._2, {
+                    }, Object(c.d)("This action cannot be undone. ", "DeleteCollectionModal")), a.createElement(h._2, {
                         padding: {
                             y: 2
                         }
-                    }, l.createElement(p.a, {
+                    }, a.createElement(p.a, {
                         collection: e,
                         hideOptionsMenu: !0
-                    })), t, l.createElement(h._2, {
+                    })), t, a.createElement(h._2, {
                         display: h.N.Flex,
                         flexDirection: h.P.Row,
                         justifyContent: h._1.Center
-                    }, l.createElement(h._2, {
+                    }, a.createElement(h._2, {
                         margin: {
                             x: .5
                         }
-                    }, l.createElement(h.u, {
+                    }, a.createElement(h.u, {
                         "data-test-selector": i.CancelButton,
                         onClick: this.props.onCancel,
                         type: h.z.Hollow
-                    }, Object(c.d)("Cancel", "DeleteCollectionModal"))), l.createElement(h._2, {
+                    }, Object(c.d)("Cancel", "DeleteCollectionModal"))), a.createElement(h._2, {
                         margin: {
                             x: .5
                         }
-                    }, l.createElement(h.u, {
+                    }, a.createElement(h.u, {
                         "data-test-selector": i.ConfirmButton,
                         onClick: this.props.onDeleteRequest,
                         type: h.z.Alert
-                    }, Object(c.d)("Delete", "DeleteCollectionModal")))), l.createElement(m.a, {
+                    }, Object(c.d)("Delete", "DeleteCollectionModal")))), a.createElement(m.a, {
                         closeOnBackdropClick: !0
                     })))
                 }, t
-            }(l.Component),
-            g = n("e6eF");
+            }(a.Component),
+            f = n("e6eF");
         n.d(t, "a", function() {
-            return k
+            return C
         });
-        var v = function(e) {
+        var g = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {}, t.defaultUserError = Object(c.d)("Unable to delete this collection, try again later.", "DeleteCollectionModal"), t.onCancelHandler = function() {
@@ -1275,18 +1335,18 @@ webpackJsonp([76], {
                     }, t
                 }
                 return o.__extends(t, e), t.prototype.render = function() {
-                    return l.createElement(f, {
+                    return a.createElement(v, {
                         collection: this.props.collection,
                         error: this.state.deletionError,
                         onCancel: this.onCancelHandler,
                         onDeleteRequest: this.onDeleteHandler
                     })
                 }, t
-            }(l.Component),
-            C = Object(a.compose)(Object(d.a)(g, {
+            }(a.Component),
+            k = Object(l.compose)(Object(d.a)(f, {
                 name: "onDeleteRequest"
-            }))(v);
-        var k = Object(r.b)(null, function(e, t) {
+            }))(g);
+        var C = Object(r.b)(null, function(e, t) {
             return {
                 onClose: function() {
                     e(Object(u.c)())
@@ -1295,16 +1355,16 @@ webpackJsonp([76], {
                     e(Object(u.c)()), t.onSuccess && t.onSuccess()
                 }
             }
-        })(C)
+        })(k)
     },
     N8CH: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
-            return l
+            return a
         });
         var i = n("GiK3"),
             o = (n.n(i), n("Odds")),
-            l = function(e) {
+            a = function(e) {
                 return i.createElement(o._2, {
                     alignItems: o.c.Start,
                     display: o.N.Flex,
@@ -1321,12 +1381,12 @@ webpackJsonp([76], {
     PwTO: function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
-            return a
+            return l
         });
         var i = n("GiK3"),
             o = (n.n(i), n("Odds")),
-            l = n("QmYP"),
-            a = (n.n(l), function(e) {
+            a = n("QmYP"),
+            l = (n.n(a), function(e) {
                 return i.createElement(o._2, {
                     className: "manager-card__stats-container",
                     display: o.N.Flex,
@@ -1343,23 +1403,23 @@ webpackJsonp([76], {
         "use strict";
         var i = n("TToO"),
             o = n("GiK3"),
-            l = n("Odds"),
-            a = function(e) {
+            a = n("Odds"),
+            l = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return o.createElement(l._25, {
-                        background: l.m.Base,
+                    return o.createElement(a._25, {
+                        background: a.m.Base,
                         elevation: 1,
-                        display: l.N.Flex,
-                        flexDirection: l.P.Row,
-                        alignItems: l.c.Stretch
+                        display: a.N.Flex,
+                        flexDirection: a.P.Row,
+                        alignItems: a.c.Stretch
                     }, this.props.children)
                 }, t
             }(o.Component);
         n.d(t, "a", function() {
-            return a
+            return l
         })
     },
     dAJe: function(e, t) {},
@@ -1459,13 +1519,242 @@ webpackJsonp([76], {
         };
         e.exports = n
     },
+    gpuH: function(e, t) {},
+    j5vp: function(e, t, n) {
+        var i = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "query",
+                name: {
+                    kind: "Name",
+                    value: "CollectionEditor_SearchCreatorVideos"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "creatorID"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "ID"
+                            }
+                        }
+                    }
+                }, {
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "after"
+                        }
+                    },
+                    type: {
+                        kind: "NamedType",
+                        name: {
+                            kind: "Name",
+                            value: "Cursor"
+                        }
+                    }
+                }, {
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "search"
+                        }
+                    },
+                    type: {
+                        kind: "NamedType",
+                        name: {
+                            kind: "Name",
+                            value: "VideoConnectionSearchParams"
+                        }
+                    }
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "user"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "id"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "creatorID"
+                                }
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "searchVideos"
+                                },
+                                arguments: [{
+                                    kind: "Argument",
+                                    name: {
+                                        kind: "Name",
+                                        value: "first"
+                                    },
+                                    value: {
+                                        kind: "IntValue",
+                                        value: "6"
+                                    }
+                                }, {
+                                    kind: "Argument",
+                                    name: {
+                                        kind: "Name",
+                                        value: "after"
+                                    },
+                                    value: {
+                                        kind: "Variable",
+                                        name: {
+                                            kind: "Name",
+                                            value: "after"
+                                        }
+                                    }
+                                }, {
+                                    kind: "Argument",
+                                    name: {
+                                        kind: "Name",
+                                        value: "search"
+                                    },
+                                    value: {
+                                        kind: "Variable",
+                                        name: {
+                                            kind: "Name",
+                                            value: "search"
+                                        }
+                                    }
+                                }],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "edges"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "cursor"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }, {
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "node"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: {
+                                                    kind: "SelectionSet",
+                                                    selections: [{
+                                                        kind: "FragmentSpread",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "SearchCardVideo"
+                                                        },
+                                                        directives: []
+                                                    }]
+                                                }
+                                            }]
+                                        }
+                                    }, {
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "pageInfo"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "hasNextPage"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }]
+                                        }
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 345
+            }
+        };
+        i.loc.source = {
+            body: '#import "twilight/features/video-search-card/models/search-card-video.gql"\nquery CollectionEditor_SearchCreatorVideos($creatorID: ID! $after: Cursor $search: VideoConnectionSearchParams) {\nuser(id: $creatorID) {\nid\nsearchVideos(first: 6 after: $after search: $search) {\nedges {\ncursor\nnode {\n...SearchCardVideo\n}\n}\npageInfo {\nhasNextPage\n}\n}\n}\n}',
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        var o = {};
+        i.definitions = i.definitions.concat(n("y+8p").definitions.filter(function(e) {
+            if ("FragmentDefinition" !== e.kind) return !0;
+            var t = e.name.value;
+            return !o[t] && (o[t] = !0, !0)
+        })), e.exports = i
+    },
     "kt/X": function(e, t) {},
     rvrg: function(e, t, n) {
         "use strict";
         var i = n("RH2O"),
             o = n("V5M+"),
-            l = n("TToO"),
-            a = n("GiK3"),
+            a = n("TToO"),
+            l = n("GiK3"),
             r = n("6sO2"),
             c = n("mi6k"),
             d = n("vH/s"),
@@ -1474,41 +1763,41 @@ webpackJsonp([76], {
             m = n("Z8qZ"),
             p = n("KRtN"),
             h = n("4o7v"),
-            f = n("PwTO"),
-            g = n("N8CH"),
-            v = n("Odds"),
-            C = function(e) {
+            v = n("PwTO"),
+            f = n("N8CH"),
+            g = n("Odds"),
+            k = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onDeleteOptionClickHandler = function() {
                         t.props.onDeleteOptionClick(t.props.collection)
                     }, t
                 }
-                return l.__extends(t, e), t.prototype.render = function() {
+                return a.__extends(t, e), t.prototype.render = function() {
                     var e = this.props.collection;
-                    return a.createElement(m.a, null, a.createElement(v._2, {
+                    return l.createElement(m.a, null, l.createElement(g._2, {
                         flexShrink: 0
-                    }, a.createElement(s.a, {
+                    }, l.createElement(s.a, {
                         alt: e.title,
                         sizes: [{
                             size: "160px"
                         }],
                         src: e.thumbnailURL,
                         videoCount: e.items.totalCount
-                    })), a.createElement(g.a, null, a.createElement(v._35, {
+                    })), l.createElement(f.a, null, l.createElement(g._35, {
                         bold: !0,
-                        type: v._40.H4,
-                        color: v.I.Alt
-                    }, e.title), a.createElement(v._43, {
-                        direction: v._45.Bottom,
+                        type: g._40.H4,
+                        color: g.I.Alt
+                    }, e.title), l.createElement(g._43, {
+                        direction: g._45.Bottom,
                         label: Object(r.d)("Last Updated", "CollectionManagerCard")
-                    }, a.createElement(v._35, {
-                        color: v.I.Alt2
-                    }, Object(r.c)(new Date(e.updatedAt), "long")))), a.createElement(f.a, null, this.collectionStats(e)), this.renderCardMenu())
+                    }, l.createElement(g._35, {
+                        color: g.I.Alt2
+                    }, Object(r.c)(new Date(e.updatedAt), "long")))), l.createElement(v.a, null, this.collectionStats(e)), this.renderCardMenu())
                 }, t.prototype.renderCardMenu = function() {
                     if (this.props.hideOptionsMenu || !this.props.collection.owner) return null;
                     var e = [{
-                        asset: v._16.Edit,
+                        asset: g._16.Edit,
                         linkTo: {
                             pathname: "/" + this.props.collection.owner.login + "/manager/collections/" + this.props.collection.id,
                             state: {
@@ -1518,32 +1807,32 @@ webpackJsonp([76], {
                         },
                         title: Object(r.d)("Edit", "CollectionManagerCard")
                     }, {
-                        asset: v._16.Trash,
+                        asset: g._16.Trash,
                         onClick: this.onDeleteOptionClickHandler,
                         title: Object(r.d)("Delete", "CollectionManagerCard")
                     }];
-                    return a.createElement(p.a, {
+                    return l.createElement(p.a, {
                         options: e
                     })
                 }, t.prototype.collectionStats = function(e) {
                     return [{
                         value: Object(c.a)(e.lengthSeconds),
-                        icon: v._16.GlyphLength,
+                        icon: g._16.GlyphLength,
                         label: Object(r.d)("Collection length", "CollectionManagerCard")
                     }, {
                         value: "" + e.viewCount,
-                        icon: v._16.GlyphViews,
+                        icon: g._16.GlyphViews,
                         label: Object(r.d)("Views", "CollectionManagerCard")
                     }].map(function(e, t) {
-                        return a.createElement(h.a, l.__assign({
+                        return l.createElement(h.a, a.__assign({
                             key: t
                         }, e))
                     })
                 }, t
-            }(a.Component),
-            k = Object(u.d)("CollectionManagerCard", {
+            }(l.Component),
+            C = Object(u.d)("CollectionManagerCard", {
                 autoReportInteractive: !0
-            })(C),
+            })(k),
             E = n("M0wY");
         n.d(t, "a", function() {
             return b
@@ -1557,7 +1846,104 @@ webpackJsonp([76], {
                     }))
                 }
             }
-        })(k)
+        })(C)
+    },
+    "y+8p": function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "FragmentDefinition",
+                name: {
+                    kind: "Name",
+                    value: "SearchCardVideo"
+                },
+                typeCondition: {
+                    kind: "NamedType",
+                    name: {
+                        kind: "Name",
+                        value: "Video"
+                    }
+                },
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "id"
+                        },
+                        arguments: [],
+                        directives: []
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "lengthSeconds"
+                        },
+                        arguments: [],
+                        directives: []
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "previewThumbnailURL"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "width"
+                            },
+                            value: {
+                                kind: "IntValue",
+                                value: "160"
+                            }
+                        }, {
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "height"
+                            },
+                            value: {
+                                kind: "IntValue",
+                                value: "90"
+                            }
+                        }],
+                        directives: []
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "publishedAt"
+                        },
+                        arguments: [],
+                        directives: []
+                    }, {
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "title"
+                        },
+                        arguments: [],
+                        directives: []
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 115
+            }
+        };
+        n.loc.source = {
+            body: "fragment SearchCardVideo on Video {\nid\nlengthSeconds\npreviewThumbnailURL(width: 160 height: 90)\npublishedAt\ntitle\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
     }
 });
-//# sourceMappingURL=pages.video-tools.pages.collection-editor-1c18f5a8ab859023b9dd42c7c3e21fe3.js.map
+//# sourceMappingURL=pages.video-tools.pages.collection-editor-62290d270ac92b4f943fe906867cf798.js.map

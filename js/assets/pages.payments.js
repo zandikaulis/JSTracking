@@ -9892,7 +9892,10 @@ webpackJsonp([43], {
             We = function(e) {
                 function t(t) {
                     var a = e.call(this, t) || this;
-                    return a.state = {
+                    return a.handlePageJump = function(e) {
+                        var t = e.currentTarget.dataset.page;
+                        t && a.props.onPageJump(parseInt(t, 10))
+                    }, a.state = {
                         currentPage: a.getAllowedCurrentPage(t.currentPage, t.totalNumberPages),
                         totalNumberPages: t.totalNumberPages
                     }, a
@@ -9961,7 +9964,7 @@ webpackJsonp([43], {
                         key: e
                     }, u.createElement(g.u, {
                         type: e === this.state.currentPage ? g.z.Default : g.z.Hollow,
-                        onClick: this.props.onPageJump,
+                        onClick: this.handlePageJump,
                         key: e,
                         "data-page": e
                     }, e))
@@ -10108,7 +10111,8 @@ webpackJsonp([43], {
             e.All = "ALL", e.Subscriptions = "SUBSCRIPTIONS"
         }(Ce || (Ce = {}));
         var Re = 15,
-            Ue = function(e) {
+            Ue = "no-transactions-text-selector",
+            Ve = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -10128,13 +10132,15 @@ webpackJsonp([43], {
                             flexDirection: g.P.Column,
                             padding: 2
                         }, u.createElement(g._35, {
-                            bold: !0
+                            bold: !0,
+                            "data-test-selector": Ue
                         }, Object(m.d)("No Transactions", "TransactionHistoryTab")), u.createElement(g._2, {
                             margin: .5
                         }, u.createElement(g._35, null, Object(m.d)("A subscription would sure look good here. <x:link>Go find one you like</x:link>.", {
                             "x:link": function(e) {
                                 return u.createElement(g.L, {
-                                    to: "https://www.twitch.tv/directory/following"
+                                    to: "https://www.twitch.tv/directory/following",
+                                    targetBlank: !0
                                 }, e)
                             }
                         }, "TransactionHistoryTab"))))
@@ -10144,17 +10150,15 @@ webpackJsonp([43], {
                         return Math.ceil(t.props.data.currentUser.paymentTransactions.totalCount / Re) || 1
                     }, t.handlePageJump = function(e) {
                         return _.__awaiter(t, void 0, void 0, function() {
-                            var t, a;
-                            return _.__generator(this, function(n) {
-                                switch (n.label) {
+                            var t;
+                            return _.__generator(this, function(a) {
+                                switch (a.label) {
                                     case 0:
-                                        return this.state.refetching ? [2] : (t = e.currentTarget.dataset.page) ? (a = (parseInt(t, 10) - 1) * Re, [4, this.queryPageJump(a)]) : [3, 2];
+                                        return this.state.refetching ? [2] : (t = (e - 1) * Re, [4, this.queryPageJump(t)]);
                                     case 1:
-                                        n.sent(), this.setState({
-                                            currentIndex: a
-                                        }), n.label = 2;
-                                    case 2:
-                                        return [2]
+                                        return a.sent(), this.setState({
+                                            currentIndex: t
+                                        }), [2]
                                 }
                             })
                         })
@@ -10360,7 +10364,8 @@ webpackJsonp([43], {
                     }, u.createElement(g._31, null, u.createElement(g._32, {
                         label: Object(m.d)("Date", "TransactionHistoryTab"),
                         sorting: this.state.dateSortType,
-                        onClick: this.handleSortDate
+                        onClick: this.handleSortDate,
+                        "data-test-selector": "date-table-heading-selector"
                     }), u.createElement(g._32, {
                         label: Object(m.d)("Channel", "TransactionHistoryTab")
                     }), u.createElement(g._32, {
@@ -10368,7 +10373,8 @@ webpackJsonp([43], {
                     }), u.createElement(g._32, {
                         label: Object(m.d)("Price", "TransactionHistoryTab"),
                         sorting: this.state.costSortType,
-                        onClick: this.handleSortCost
+                        onClick: this.handleSortCost,
+                        "data-test-selector": "price-table-heading-selector"
                     }), u.createElement(g._32, {
                         label: Object(m.d)("Payment Method", "TransactionHistoryTab")
                     })), u.createElement(g._29, null, a)), !a.length && this.renderNoTransactionsMessage()), u.createElement(We, {
@@ -10380,7 +10386,7 @@ webpackJsonp([43], {
                     }))
                 }, t
             }(u.Component),
-            Ve = Object(s.d)(Object(f.a)(Ie), Object(f.a)(Je, {
+            Be = Object(s.d)(Object(f.a)(Ie), Object(f.a)(Je, {
                 options: function(e) {
                     return {
                         variables: {
@@ -10424,8 +10430,8 @@ webpackJsonp([43], {
                         }
                     })
                 }
-            }))(Ue),
-            Be = function(e) {
+            }))(Ve),
+            Ge = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -10468,18 +10474,18 @@ webpackJsonp([43], {
                         margin: {
                             y: 2
                         }
-                    }, this.state.txnHistoryTabActive ? u.createElement(Ve, null) : u.createElement(Ee, null))))) : (this.props.onAnonymousVisit(), u.createElement(c.a, {
+                    }, this.state.txnHistoryTabActive ? u.createElement(Be, null) : u.createElement(Ee, null))))) : (this.props.onAnonymousVisit(), u.createElement(c.a, {
                         message: Object(m.d)("You must be logged in to view this page", "PaymentsLandingPagePresentationComponent")
                     }))
                 }, t
             }(u.Component),
-            Ge = Object(l.compose)(Object(p.d)("PaymentsLandingPage", {
+            qe = Object(l.compose)(Object(p.d)("PaymentsLandingPage", {
                 autoReportInteractive: !0,
                 destination: M.a.PaymentsLandingPage
             }), Object(h.a)({
                 location: y.PageviewLocation.PaymentsLandingPage
-            }))(Be);
-        var qe = Object(r.b)(function(e) {
+            }))(Ge);
+        var Ke = Object(r.b)(function(e) {
             return {
                 isLoggedIn: Object(o.d)(e)
             }
@@ -10489,9 +10495,9 @@ webpackJsonp([43], {
                     return Object(d.f)(i.a.PaymentsLandingPage)
                 }
             }, e)
-        })(Ge);
+        })(qe);
         a.d(t, "PaymentsLandingPage", function() {
-            return qe
+            return Ke
         })
     },
     hPuz: function(e, t, a) {
@@ -13204,4 +13210,4 @@ webpackJsonp([43], {
         })(a("PJh5"))
     }
 });
-//# sourceMappingURL=pages.payments-e69d8260941b16326de5f63336d44283.js.map
+//# sourceMappingURL=pages.payments-348633ab1fa39f456d02dd49b87b2ab6.js.map

@@ -3024,7 +3024,7 @@ webpackJsonp([46], {
         var i, a, r = n("6sO2"),
             o = n("vH/s");
         ! function(e) {
-            e.ChannelEvents = "channel_events", e.EventDetails = "event_details", e.EventManagment = "event_managment"
+            e.ChannelEvents = "channel_events", e.EventDetails = "event_details", e.EventManagment = "event_managment", e.EventSidebar = "event_sidebar"
         }(i || (i = {})),
         function(e) {
             e.RemindMeOpen = "remind_me_open_modal", e.EmailReminderOn = "email_reminder_on", e.EmailReminderOff = "email_reminder_off"
@@ -4678,7 +4678,8 @@ webpackJsonp([46], {
                         var n = e,
                             i = v._16.Heart;
                         return this.props.areNotificationsEnabled && (n = t, i = v._16.FollowCheck), d.createElement(v._43, {
-                            label: n
+                            label: n,
+                            direction: this.props.tooltipDirection
                         }, d.createElement(v.v, {
                             size: v.x.Default,
                             icon: i,
@@ -9802,4 +9803,4 @@ webpackJsonp([46], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.event-landing-4a24b8c029750d1d6e833a0f149c1de7.js.map
+//# sourceMappingURL=pages.event-landing-06477f54bafebef40830d471132d8f95.js.map

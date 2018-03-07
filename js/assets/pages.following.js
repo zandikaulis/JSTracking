@@ -3728,10 +3728,10 @@ webpackJsonp([47], {
                         var e = t.rankedChannelStreamsInputPresent() && t.rankedChannelStreamsLoaded();
                         if (e && t.communityStreamsLoaded() && t.props.communityStreamsData.directory.streams && t.props.communityStreamsData.directory.streams.edges) {
                             var n = t.props.rankedChannelData.users.filter(function(e) {
-                                return e.stream && e.stream.id && e.stream.broadcaster && e.stream.broadcaster.login
-                            }).map(function(e) {
+                                return e && e.stream && e.stream.id && e.stream.broadcaster && e.stream.broadcaster.login
+                            }).slice(0, he).map(function(e) {
                                 return e.stream
-                            }).slice(0, he);
+                            });
                             if (n.length === he) return n;
                             var i = new Set(n.map(function(e) {
                                     return e.id
@@ -9206,4 +9206,4 @@ webpackJsonp([47], {
     },
     "zH/G": function(e, t) {}
 });
-//# sourceMappingURL=pages.following-f90da37a88638186333808f32045e077.js.map
+//# sourceMappingURL=pages.following-d5498085dd8ae7b1757eacddff0b6344.js.map

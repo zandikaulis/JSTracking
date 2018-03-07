@@ -11132,7 +11132,7 @@ webpackJsonp([67], {
                 return s
             }),
             function(e) {
-                e.AutohostSettings = "autohost_settings", e.BitsLandingPage = "bits_landing", e.Browse = "browse", e.BrowseCommunities = "browse_communities", e.BrowseCreative = "browse_creative", e.BrowseForYou = "browse_for_you", e.Channel = "channel", e.ChannelClips = "channel_clips", e.ChannelClipsManager = "my_clips_channel", e.ChannelEvents = "channel_events", e.ChannelVideos = "channel_vods", e.ChannelCollections = "channel_collections", e.Chat = "chat", e.ClipsGame = "clips_game", e.ClipsViewing = "clips_viewing", e.Dashboard = "dashboard", e.DashboardAchievements = "dashboard/achievements", e.DashboardBounties = "dashboard/bounties", e.DashboardChannelAnalytics = "dashboard/channel-analytics", e.DashboardExtensions = "dashboard/extensions", e.DashboardSettingsIndex = "dashboard/settings", e.DashboardStreamSummary = "dashboard/stream-summary", e.Directory = "directory", e.DirectoryPopular = "directory.popular", e.EmailVerification = "email_verification", e.EventDetails = "event_details", e.ExtensionDetails = "extension_details", e.Followers = "followers", e.Follows = "follows", e.FrontPage = "home", e.GameDetail = "game_detail", e.Inventory = "inventory", e.MyClipsManager = "my_clips", e.None = "", e.OnboardingCommunitySelection = "onboarding/community-selection", e.PaymentsLandingPage = "payments_landing_page", e.StoreMerch = "store-merch", e.VideoWatchPage = "vod", e.SubsLandingPage = "subs-landing", e.SubsCheckoutPage = "subs_checkout", e.SettingsPage = "settings", e.SubsBroadcasterPage = "subs-broadcaster", e.VideoManager = "video_manager", e.VideoManagerCollectionManager = "video_manager_collections", e.VideoManagerCollectionEditor = "video_manager_collection_editor", e.VideoManagerHighlighter = "video_manager_highlighter"
+                e.AutohostSettings = "autohost_settings", e.BitsLandingPage = "bits_landing", e.Browse = "browse", e.BrowseCommunities = "browse_communities", e.BrowseCreative = "browse_creative", e.BrowseForYou = "browse_for_you", e.Channel = "channel", e.ChannelClips = "channel_clips", e.ChannelClipsManager = "my_clips_channel", e.ChannelEvents = "channel_events", e.ChannelVideos = "channel_vods", e.ChannelCollections = "channel_collections", e.Chat = "chat", e.ClipsGame = "clips_game", e.ClipsViewing = "clips_viewing", e.Dashboard = "dashboard", e.DashboardAchievements = "dashboard/achievements", e.DashboardBounties = "dashboard/bounties", e.DashboardChannelAnalytics = "dashboard/channel-analytics", e.DashboardExtensions = "dashboard/extensions", e.DashboardExtensionsConfigure = "dashboard/extensions/configure", e.DashboardSettingsIndex = "dashboard/settings", e.DashboardStreamSummary = "dashboard/stream-summary", e.Directory = "directory", e.DirectoryPopular = "directory.popular", e.EmailVerification = "email_verification", e.EventDetails = "event_details", e.ExtensionDetails = "extension_details", e.Followers = "followers", e.Follows = "follows", e.FrontPage = "home", e.GameDetail = "game_detail", e.Inventory = "inventory", e.MyClipsManager = "my_clips", e.None = "", e.OnboardingCommunitySelection = "onboarding/community-selection", e.PaymentsLandingPage = "payments_landing_page", e.StoreMerch = "store-merch", e.VideoWatchPage = "vod", e.SubsLandingPage = "subs-landing", e.SubsCheckoutPage = "subs_checkout", e.SettingsPage = "settings", e.SubsBroadcasterPage = "subs-broadcaster", e.VideoManager = "video_manager", e.VideoManagerCollectionManager = "video_manager_collections", e.VideoManagerCollectionEditor = "video_manager_collection_editor", e.VideoManagerHighlighter = "video_manager_highlighter"
             }(i || (i = {})),
             function(e) {
                 e.Channels = "channels", e.Communities = "communities", e.Games = "games", e.Hosts = "hosts", e.Mixed = "mixed", e.Videos = "vods"
@@ -13127,6 +13127,38 @@ webpackJsonp([67], {
             }
         };
         e.exports = n
+    },
+    HrG2: function(e, t, n) {
+        "use strict";
+        var i = n("GiK3"),
+            r = n("6sO2"),
+            a = n("Odds"),
+            o = function(e) {
+                return i.createElement(a._25, {
+                    background: a.m.Alt2,
+                    display: a.N.Flex,
+                    alignItems: a.c.Stretch
+                }, e.showDashboardLink && i.createElement(a._25, {
+                    border: !0,
+                    display: a.N.Flex,
+                    flexGrow: 0
+                }, i.createElement(a.v, {
+                    ariaLabel: Object(r.d)("View all extensions", "ExtensionPageHeader"),
+                    size: a.x.Large,
+                    linkTo: e.dashboardURL,
+                    icon: a._16.AngleLeft
+                })), i.createElement(a._25, {
+                    border: !0,
+                    display: a.N.Flex,
+                    flexGrow: 1,
+                    padding: 2
+                }, i.createElement(a._35, {
+                    type: a._40.H4
+                }, e.title)))
+            };
+        n.d(t, "a", function() {
+            return o
+        })
     },
     Hs3O: function(e, t, n) {
         "use strict";
@@ -17783,9 +17815,10 @@ webpackJsonp([67], {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getRecommendedFriends = function() {
                         return t.props.data.currentUser.recommendations.friends.slice(0, t.getDisplayCount(t.props)).map(function(e, n) {
-                            return e.user.id ? a.createElement(Se, {
-                                key: "recommended-friends-" + e.user.id,
-                                user: e.user,
+                            var i = e.user;
+                            return i && i.id ? a.createElement(Se, {
+                                key: "recommended-friends-" + i.id,
+                                user: i,
                                 collapsed: t.props.collapsed,
                                 onRecommendationChanged: t.onRecommendationDataChanged,
                                 "data-a-id": "recommended-friend-" + n,
@@ -25346,29 +25379,7 @@ webpackJsonp([67], {
             ve = n("j7/Y"),
             be = n("w9tK"),
             ye = n("vH/s"),
-            ke = function(e) {
-                return r.createElement(A._25, {
-                    background: A.m.Alt2,
-                    display: A.N.Flex,
-                    alignItems: A.c.Stretch
-                }, e.showDashboardLink && r.createElement(A._25, {
-                    border: !0,
-                    display: A.N.Flex,
-                    flexGrow: 0
-                }, r.createElement(A.v, {
-                    ariaLabel: Object(S.d)("View all extensions", "ExtensionPageHeader"),
-                    size: A.x.Large,
-                    linkTo: e.dashboardURL,
-                    icon: A._16.AngleLeft
-                })), r.createElement(A._25, {
-                    border: !0,
-                    display: A.N.Flex,
-                    flexGrow: 1,
-                    padding: 2
-                }, r.createElement(A._35, {
-                    type: A._40.H4
-                }, e.title)))
-            },
+            ke = n("HrG2"),
             _e = n("G8hb"),
             Se = n("XwK1"),
             we = n("GeUc"),
@@ -25695,7 +25706,7 @@ webpackJsonp([67], {
                     if (!t || t.error) return r.createElement(oe.a, {
                         message: Object(S.d)("An error occurred on this page", "ExtensionPage")
                     });
-                    var a = r.createElement(ke, {
+                    var a = r.createElement(ke.a, {
                         showDashboardLink: n,
                         dashboardURL: Object(Ee.b)(i),
                         title: Object(S.d)("Details", "ExtensionPageTitle")
@@ -25839,7 +25850,7 @@ webpackJsonp([67], {
                 return n.e(52).then(n.bind(null, "Dd84"))
             }, "BrowseRootPage"),
             Ae = ae.a.wrap(function() {
-                return n.e(36).then(n.bind(null, "gZGZ"))
+                return n.e(37).then(n.bind(null, "gZGZ"))
             }, "ChannelClipsPage"),
             je = ae.a.wrap(function() {
                 return n.e(48).then(n.bind(null, "zfLI"))
@@ -25893,7 +25904,7 @@ webpackJsonp([67], {
                 return n.e(60).then(n.bind(null, "DkuH"))
             }, "ReportUserPage"),
             nt = ae.a.wrap(function() {
-                return n.e(51).then(n.bind(null, "K4jf"))
+                return n.e(50).then(n.bind(null, "K4jf"))
             }, "SettingsRoot"),
             it = ae.a.wrap(function() {
                 return n.e(42).then(n.bind(null, "uiPj"))
@@ -27662,43 +27673,7 @@ webpackJsonp([67], {
                 }, t = c.__decorate([Object(v.d)("NavSearch")], t)
             }(d.Component),
             ee = Object(_.e)(J),
-            te = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.onLoginClick = function(e) {
-                        e.preventDefault(), t.props.login()
-                    }, t.onSignUpClick = function(e) {
-                        e.preventDefault(), t.props.signup()
-                    }, t
-                }
-                return c.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive()
-                }, t.prototype.render = function() {
-                    return d.createElement(B._2, {
-                        className: "anon-user",
-                        flexWrap: B.Q.NoWrap,
-                        display: B.N.Flex,
-                        margin: {
-                            left: 1
-                        },
-                        "data-a-target": "user-card"
-                    }, d.createElement(B._2, {
-                        margin: {
-                            right: 1
-                        }
-                    }, d.createElement(B.u, {
-                        onClick: this.onLoginClick,
-                        "data-a-target": "login-button"
-                    }, Object(u.d)("Log in", "top-nav"))), d.createElement(B._2, {
-                        margin: {
-                            right: 1
-                        }
-                    }, d.createElement(B.u, {
-                        onClick: this.onSignUpClick,
-                        "data-a-target": "signup-button"
-                    }, Object(u.d)("Sign up", "top-nav"))))
-                }, t = c.__decorate([Object(v.d)("AnonUser")], t)
-            }(d.Component),
+            te = n("Uhaz"),
             ne = n("ekcc"),
             ie = function(e) {
                 function t() {
@@ -28648,9 +28623,7 @@ webpackJsonp([67], {
                         }, t)
                     }
                     return d.createElement(B.W, {
-                        position: B._9.Fixed,
-                        attachTop: !0,
-                        fullWidth: !0
+                        position: B._9.Relative
                     }, d.createElement("nav", {
                         className: "top-nav",
                         "data-a-target": "top-nav-container",
@@ -28868,7 +28841,7 @@ webpackJsonp([67], {
                         flexWrap: B.Q.NoWrap,
                         flexGrow: 0,
                         flexShrink: 0
-                    }, this.props.isLoggedIn ? d.createElement(Pe, null) : d.createElement(te, {
+                    }, this.props.isLoggedIn ? d.createElement(Pe, null) : d.createElement(te.a, {
                         login: this.props.login,
                         signup: this.props.signup
                     })))))
@@ -31321,6 +31294,54 @@ webpackJsonp([67], {
             }
         };
         e.exports = n
+    },
+    Uhaz: function(e, t, n) {
+        "use strict";
+        var i = n("TToO"),
+            r = n("GiK3"),
+            a = n("6sO2"),
+            o = n("CSlQ"),
+            s = n("Odds"),
+            l = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.onLoginClick = function(e) {
+                        e.preventDefault(), t.props.login()
+                    }, t.onSignUpClick = function(e) {
+                        e.preventDefault(), t.props.signup()
+                    }, t
+                }
+                return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.props.latencyTracking.reportInteractive()
+                }, t.prototype.render = function() {
+                    return r.createElement(s._2, {
+                        className: "anon-user",
+                        flexWrap: s.Q.NoWrap,
+                        display: s.N.Flex,
+                        margin: {
+                            left: 1
+                        },
+                        "data-a-target": "user-card"
+                    }, r.createElement(s._2, {
+                        margin: {
+                            right: 1
+                        }
+                    }, r.createElement(s.u, {
+                        onClick: this.onLoginClick,
+                        "data-a-target": "login-button"
+                    }, Object(a.d)("Log in", "top-nav"))), r.createElement(s._2, {
+                        margin: {
+                            right: 1
+                        }
+                    }, r.createElement(s.u, {
+                        onClick: this.onSignUpClick,
+                        "data-a-target": "signup-button"
+                    }, Object(a.d)("Sign up", "top-nav"))))
+                }, t = i.__decorate([Object(o.d)("AnonUser")], t)
+            }(r.Component);
+        n.d(t, "a", function() {
+            return l
+        })
     },
     UhzT: function(e, t) {
         var n = {
@@ -33862,7 +33883,7 @@ webpackJsonp([67], {
                         var t = n.props.destination,
                             i = n.props.rootLatencyTracker;
                         switch (t || (t = i.getDestination()), t) {
-                            case v.a.BrowseGamesAndCommunities:
+                            case v.a.BrowseGames:
                             case v.a.BrowseCreative:
                             case v.a.BrowseCommunities:
                             case v.a.DirectoryPopular:
@@ -38233,7 +38254,7 @@ webpackJsonp([67], {
                 return i
             }),
             function(e) {
-                e.AbandonedSearch = "abandoned_search", e.AchievementSpotlightImpression = "achievement_spotlight_impression", e.AchievementQuestBannerClick = "achievement_quest_banner_click", e.APIQuery = "benchmark_api_query", e.AppBooted = "benchmark_app_booted", e.AutoHostChannelUpdate = "autohost_channel_update", e.AutohostChatImpression = "autohost_chat_impression", e.AutohostChatYes = "autohost_chat_yes", e.AutohostChatDismiss = "autohost_chat_dismiss", e.AutohostChatSettings = "autohost_chat_settings", e.BeganSearch = "began_search", e.BitsAdsAvailability = "bits_ads_availability", e.BitsAdsImpression = "bits_ads_impression", e.BitsAdsRequest = "bits_ads_request", e.BitsCardInteraction = "bits_card_interaction", e.BrowseForYou = "browse_for_you", e.BrowserFingerprint = "browser_fingerprint", e.BrowserPushNotificationPrompt = "browser_notification_prompt", e.BrowserPushNotificationDisable = "browser_notification_disable", e.BTTV = "bttv_check", e.Chat = "chat", e.ChatBadgeClick = "chat_badge_click", e.ChatMentionUsed = "chat_mention_used", e.ChatRoomJoined = "chat_room_join", e.ChatRoomWatched = "chatroom-watched", e.ChatSettingsChanged = "chat_client_setting_changed", e.ChatSettingsOpened = "chat_client_settings_open", e.ChatSuggestion = "chat-suggestions", e.ChatSuggestionComplete = "chat-completed-suggestion", e.ChommentCreated = "chomment_create", e.ChommentDeleted = "chomment_delete", e.ChommentUIAction = "chomment_ui_action", e.ClipEdit = "clip_edit", e.ClipChampHelpClick = "clip_champ_help_click", e.CollectionCreate = "collection_create", e.CollectionAddItem = "collection_add_item", e.CollectionRemoveItem = "collection_remove_item", e.CommunityEdit = "community_client_edit", e.CommunityFollow = "community_client_follow", e.CommunityModeration = "community_client_channel_moderation", e.CommunityReport = "community_client_report", e.CommunityUnfollow = "community_client_unfollow", e.CompleteTransition = "benchmark_complete_transition", e.CompletedSearch = "completed_search", e.ComponentInitializing = "benchmark_component_initializing", e.ComponentInteractive = "benchmark_component_interactive", e.CustomEvent = "benchmark_custom_event", e.CrateNotificationAction = "crate_notification_action", e.DeprioritizeVodcastToggle = "autohost_deprioritize_vodcast_toggle", e.EventFollowing = "oracle_user_notification_client", e.EventShare = "oracle_event_share", e.ExperimentBranch = "experiment_branch", e.FeaturedEventPresentation = "event_suggestions_shown", e.FeatureEducationUpdateBlock = "feature_education_update_block", e.FeatureEducationUpdateBlockImpression = "feature_education_update_block_impression", e.FeatureEducationTour = "feature_education_tour", e.FeatureEducationTourImpression = "feature_education_tour_impression", e.FeedCardImpression = "feed_client_card_impression", e.FeedCardEmbedImpression = "feed_client_card_embed_impression", e.FeedCardEmbedPlay = "feed_client_card_embed_play", e.FeedPost = "feed_client_post", e.FeedReaction = "feed_client_reaction", e.FetchStart = "benchmark_fetch_start", e.FFZ = "ffz_check", e.Follow = "follow", e.FrontPageCarouselClick = "frontpage_carousel_click", e.FrontPageCarouselDisplay = "carousel_display", e.FrontPageCarouselPromotionCardClick = "promotion_card_click", e.FrontPageCarouselPromotionCardView = "promotion_card_view", e.FrontPageCarouselNavButtonClick = "carousel_nav_button_click", e.FuelBuyButton = "fuel_buy_button", e.FuelGetGameClick = "fuel_get_game_click", e.FuelOfferView = "offer_view", e.FuelOfferInteraction = "offer_interaction", e.FuelSocialShare = "fuel_social_share", e.GameFollow = "follow-game", e.GameUnfollow = "unfollow-game", e.ItemSectionClick = "item_section_click", e.ItemSectionLoad = "item_section_load", e.OnboardingEvent = "onboarding_web", e.NetworkRequest = "network_request", e.NewChatterTokenStatus = "nca_client_token_status", e.NewChatterOnboardingInteraction = "nca_onboarding_chatbox_interaction", e.NotificationCenterInteraction = "notification_center_interaction", e.NotificationImpression = "notification_impression", e.NotificationInteraction = "notification_interaction", e.Pageview = "pageview", e.PartnerAffiliateSettings = "partner_affiliate_settings", e.PassportHide = "auth_exit", e.PassportShow = "auth_show", e.PlayerRecShow = "player_rec_show", e.PlayerShowFeatured = "player_show_featured", e.PlayerRecSelect = "player_rec_select", e.PlayerRecAutoplay = "player_rec_autoplay", e.PresenceClick = "friend_presence_click", e.RaidPromptJoin = "raid_prompt_join", e.RaidPromptLeave = "raid_prompt_leave", e.RaidPromptImpression = "raid_prompt_impression", e.SearchQuery = "search_query", e.ShareItem = "share_item", e.SideNavChannelClick = "sidenav_channel_click", e.SideNavDetails = "sidenav_details", e.SideNavLoadMore = "sidenav_load_more", e.SimilarHostToggle = "autohost_similar_channels_toggle", e.SiteLayoutMod = "site_layout_mod", e.SiteToggle = "twilight_site_toggle", e.StreamSummarySpotlightImpression = "summary_spotlight_impression", e.StreamSummarySpotlightClick = "summary_spotlight_click", e.StoreMerchClick = "store_item_select", e.StoreMerchView = "store_item_view", e.Subscription = "subscribe_button", e.SubsLandingStreamerClick = "subs_landing_streamer_click", e.TeamHostToggle = "autohost_team_toggle", e.ThemeChange = "dark_mode_toggle", e.Unfollow = "unfollow", e.VerifyEmailBar = "verify_email_bar", e.VideoChatSettingChanged = "video_chat_setting_changed", e.VideoShare = "video_share", e.VODDownloadClick = "vod_download_click", e.VODExportClick = "vod_export_click", e.WhisperAllThreadsMod = "chat_convo_mod_global", e.WhisperIgnoreUser = "chat_ignore_client", e.WhisperReceived = "whisper_received", e.WhisperSearchClick = "search_click", e.WhisperSent = "whisper", e.WhisperThreadCreate = "chat_convo_create", e.WhisperThreadMod = "chat_convo_mod"
+                e.AbandonedSearch = "abandoned_search", e.AchievementSpotlightImpression = "achievement_spotlight_impression", e.AchievementQuestBannerClick = "achievement_quest_banner_click", e.APIQuery = "benchmark_api_query", e.AppBooted = "benchmark_app_booted", e.AutoHostChannelUpdate = "autohost_channel_update", e.AutohostChatImpression = "autohost_chat_impression", e.AutohostChatYes = "autohost_chat_yes", e.AutohostChatDismiss = "autohost_chat_dismiss", e.AutohostChatSettings = "autohost_chat_settings", e.BeganSearch = "began_search", e.BitsAdsAvailability = "bits_ads_availability", e.BitsAdsImpression = "bits_ads_impression", e.BitsAdsRequest = "bits_ads_request", e.BitsCardInteraction = "bits_card_interaction", e.BrowseForYou = "browse_for_you", e.BrowserFingerprint = "browser_fingerprint", e.BrowserPushNotificationPrompt = "browser_notification_prompt", e.BrowserPushNotificationDisable = "browser_notification_disable", e.BTTV = "bttv_check", e.Chat = "chat", e.ChatBadgeClick = "chat_badge_click", e.ChatMentionUsed = "chat_mention_used", e.ChatRoomJoined = "chat_room_join", e.ChatRoomWatched = "chatroom-watched", e.ChatSettingsChanged = "chat_client_setting_changed", e.ChatSettingsOpened = "chat_client_settings_open", e.ChatSuggestion = "chat-suggestions", e.ChatSuggestionComplete = "chat-completed-suggestion", e.ChommentCreated = "chomment_create", e.ChommentDeleted = "chomment_delete", e.ChommentUIAction = "chomment_ui_action", e.ClipEdit = "clip_edit", e.ClipChampHelpClick = "clip_champ_help_click", e.CollectionCreate = "collection_create", e.CollectionAddItem = "collection_add_item", e.CollectionRemoveItem = "collection_remove_item", e.CommunityEdit = "community_client_edit", e.CommunityFollow = "community_client_follow", e.CommunityModeration = "community_client_channel_moderation", e.CommunityReport = "community_client_report", e.CommunityUnfollow = "community_client_unfollow", e.CompleteTransition = "benchmark_complete_transition", e.CompletedSearch = "completed_search", e.ComponentInitializing = "benchmark_component_initializing", e.ComponentInteractive = "benchmark_component_interactive", e.CustomEvent = "benchmark_custom_event", e.CrateNotificationAction = "crate_notification_action", e.DeprioritizeVodcastToggle = "autohost_deprioritize_vodcast_toggle", e.EventFollowing = "oracle_user_notification_client", e.EventShare = "oracle_event_share", e.ExperimentBranch = "experiment_branch", e.FeaturedEventPresentation = "event_suggestions_shown", e.FeatureEducationUpdateBlock = "feature_education_update_block", e.FeatureEducationUpdateBlockImpression = "feature_education_update_block_impression", e.FeatureEducationTour = "feature_education_tour", e.FeatureEducationTourImpression = "feature_education_tour_impression", e.FeedCardImpression = "feed_client_card_impression", e.FeedCardEmbedImpression = "feed_client_card_embed_impression", e.FeedCardEmbedPlay = "feed_client_card_embed_play", e.FeedPost = "feed_client_post", e.FeedReaction = "feed_client_reaction", e.FetchStart = "benchmark_fetch_start", e.FFZ = "ffz_check", e.Follow = "follow", e.FrontPageCarouselClick = "frontpage_carousel_click", e.FrontPageCarouselDisplay = "carousel_display", e.FrontPageCarouselPromotionCardClick = "promotion_card_click", e.FrontPageCarouselPromotionCardView = "promotion_card_view", e.FrontPageCarouselNavButtonClick = "carousel_nav_button_click", e.FuelBuyButton = "fuel_buy_button", e.FuelGetGameClick = "fuel_get_game_click", e.FuelOfferView = "offer_view", e.FuelOfferInteraction = "offer_interaction", e.FuelSocialShare = "fuel_social_share", e.GameFollow = "follow-game", e.GameUnfollow = "unfollow-game", e.ItemSectionClick = "item_section_click", e.ItemSectionLoad = "item_section_load", e.OnboardingEvent = "onboarding_web", e.NetworkRequest = "network_request", e.NewChatterTokenStatus = "nca_client_token_status", e.NewChatterOnboardingInteraction = "nca_onboarding_chatbox_interaction", e.NotificationCenterInteraction = "notification_center_interaction", e.NotificationImpression = "notification_impression", e.NotificationInteraction = "notification_interaction", e.Pageview = "pageview", e.PartnerAffiliateSettings = "partner_affiliate_settings", e.PassportHide = "auth_exit", e.PassportShow = "auth_show", e.PaymentFormInteraction = "payment_form_interaction", e.PlayerRecShow = "player_rec_show", e.PlayerShowFeatured = "player_show_featured", e.PlayerRecSelect = "player_rec_select", e.PlayerRecAutoplay = "player_rec_autoplay", e.PresenceClick = "friend_presence_click", e.RaidPromptJoin = "raid_prompt_join", e.RaidPromptLeave = "raid_prompt_leave", e.RaidPromptImpression = "raid_prompt_impression", e.SearchQuery = "search_query", e.ShareItem = "share_item", e.SideNavChannelClick = "sidenav_channel_click", e.SideNavDetails = "sidenav_details", e.SideNavLoadMore = "sidenav_load_more", e.SimilarHostToggle = "autohost_similar_channels_toggle", e.SiteLayoutMod = "site_layout_mod", e.SiteToggle = "twilight_site_toggle", e.StreamSummarySpotlightImpression = "summary_spotlight_impression", e.StreamSummarySpotlightClick = "summary_spotlight_click", e.StoreMerchClick = "store_item_select", e.StoreMerchView = "store_item_view", e.Subscription = "subscribe_button", e.SubsLandingStreamerClick = "subs_landing_streamer_click", e.TeamHostToggle = "autohost_team_toggle", e.ThemeChange = "dark_mode_toggle", e.Unfollow = "unfollow", e.VerifyEmailBar = "verify_email_bar", e.VideoChatSettingChanged = "video_chat_setting_changed", e.VideoShare = "video_share", e.VODDownloadClick = "vod_download_click", e.VODExportClick = "vod_export_click", e.WhisperAllThreadsMod = "chat_convo_mod_global", e.WhisperIgnoreUser = "chat_ignore_client", e.WhisperReceived = "whisper_received", e.WhisperSearchClick = "search_click", e.WhisperSent = "whisper", e.WhisperThreadCreate = "chat_convo_create", e.WhisperThreadMod = "chat_convo_mod"
             }(i || (i = {}))
     },
     kIPx: function(e, t) {},
@@ -40203,7 +40224,7 @@ webpackJsonp([67], {
                 return n.e(41).then(n.bind(null, "r7VP"))
             }, "TeamsDashboardRoot"),
             se = m.a.wrap(function() {
-                return n.e(50).then(n.bind(null, "lI8O"))
+                return n.e(51).then(n.bind(null, "lI8O"))
             }, "OnboardingRoot"),
             le = m.a.wrap(function() {
                 return n.e(55).then(n.bind(null, "Hvpt"))
@@ -40230,14 +40251,10 @@ webpackJsonp([67], {
                 }, t.prototype.render = function() {
                     return i.createElement("div", null, i.createElement(re._2, {
                         className: "twilight-root",
-                        position: re._9.Absolute,
                         overflow: re._5.Hidden,
                         display: re.N.Flex,
                         flexDirection: re.P.Column,
-                        flexWrap: re.Q.NoWrap,
-                        attachRight: !0,
-                        attachBottom: !0,
-                        attachLeft: !0
+                        flexWrap: re.Q.NoWrap
                     }, i.createElement(N, null), i.createElement(D.a, null), i.createElement(x.b, null), i.createElement(p.e, null, i.createElement(p.d, {
                         path: "/:channelName/dashboard/:pageName?",
                         component: ae
@@ -41564,7 +41581,7 @@ webpackJsonp([67], {
                 return i
             }),
             function(e) {
-                e.AutohostSettings = "channel.dashboard.settings.autohost", e.BitsBuyCard = "bits-buy-card", e.BrowseCommunities = "browse.communities", e.BrowseCreative = "browse.creative", e.BrowseGamesAndCommunities = "browse.games-and-communities", e.ChannelClips = "channel.clips", e.ChannelCollections = "channel.collections", e.ChannelClipsManager = "videoManager.clips.channel", e.ChannelDashboardAchievements = "channel.dashboard.achievements", e.ChannelDashboardBounties = "channel.dashboard.bounties", e.ChannelDashboardChannelAnalytics = "channel.dashboard.channel-analytics", e.ChannelDashboardExtensions = "channel.dashboard.extensions", e.ChannelDashboardModeration = "channel.dashboard.moderation", e.ChannelDashboardStreamSummary = "channel.dashboard.stream-summary", e.ChannelEvents = "channel.events", e.ChannelFollowers = "channel.followers", e.ChannelFollows = "channel.follows", e.ChannelIndex = "channel.index.index", e.ChatPopout = "chat", e.CheermoteCarousel = "cheermote-carousel", e.DashboardSettingsIndex = "channel.dashboard.settings.index", e.DevOnly = "dev", e.DirectoryCommunityByLanguage = "directory.community.language", e.DirectoryCommunityIndex = "directory.community.index", e.DirectoryCommunityDetails = "directory.community.details", e.DirectoryFollowingCommunities = "directory.following.communities", e.DirectoryFollowingGames = "directory.following.games", e.DirectoryFollowingHosts = "directory.following.hosts", e.DirectoryFollowingIndex = "directory.following.index", e.DirectoryFollowingLiveChannels = "directory.following.channels", e.DirectoryFollowingVideos = "directory.following.videos.video-type", e.DirectoryGameClips = "directory.game.clips", e.DirectoryGameDetails = "directory.game.details", e.DirectoryGameIndex = "directory.game.index", e.DirectoryGames = "directory.games", e.DirectoryPopular = "directory.popular", e.DirectoryPopularByLanguage = "directory.popular.language", e.DirectoryGameVideos = "directory.game.videos", e.DirectoryVideosHistory = "directory.videos.history", e.EmailVerification = "emailVerification", e.EventDetails = "event.details", e.ExtensionDetails = "extensions.extension", e.ForYou = "for-you", e.Index = "index", e.Inventory = "inventory", e.MyClipsManager = "videoManager.clips", e.NotificationSettingsPage = "settings.notificationSettings", e.OnboardingIndex = "onboarding.index", e.PaymentsLandingPage = "payments.landingPage", e.ReportUserPage = "reportUser.page", e.SettingsConnections = "private/embed-components", e.SettingsChannel = "private/embed-components", e.SettingsNotifications = "settings.notifications", e.SettingsPrime = "settings.prime", e.SettingsProfile = "settings.profile", e.SettingsSecurity = "private/embed-components", e.SettingsTurbo = "settings.turbo", e.StoreMerchPage = "store.merch", e.SubsLandingPage = "subs.landing", e.SubsCheckoutPage = "subs.checkout", e.TeamsDashboardRevenue = "teams.dashboard.revenue", e.TeamsDashboardStats = "teams.dashboard.stats", e.TeamsDashboardMembers = "teams.dashboard.members", e.TeamsDashboardFeaturedChannels = "teams.dashboard.featured-channels", e.TeamsDashboardSettings = "teams.dashboard.settings", e.SubsBroadcasterPage = "subs.broadcaster", e.VideoManagerEditPropertiesPage = "videoManager.edit", e.VideoManagerPage = "videoManager.page", e.VideoManagerUploadListPage = "videoManager.upload-list", e.VideoManagerUploadPage = "videoManager.upload", e.VideoManagerCollectionsManager = "videoManager.collections", e.VideoManagerCollectionsEditor = "videoManager.collections.editor", e.VideoManagerHighlighter = "videoManager.highlighter", e.VideosPage = "videos", e.VideoWatchPage = "video", e.Unknown = "unknown"
+                e.AutohostSettings = "channel.dashboard.settings.autohost", e.BitsBuyCard = "bits-buy-card", e.BrowseCommunities = "browse.communities", e.BrowseCreative = "browse.creative", e.BrowseGames = "browse.games", e.ChannelClips = "channel.clips", e.ChannelCollections = "channel.collections", e.ChannelClipsManager = "videoManager.clips.channel", e.ChannelDashboardAchievements = "channel.dashboard.achievements", e.ChannelDashboardBounties = "channel.dashboard.bounties", e.ChannelDashboardChannelAnalytics = "channel.dashboard.channel-analytics", e.ChannelDashboardExtensions = "channel.dashboard.extensions", e.ChannelDashboardExtensionsConfigure = "channel.dashboard.extensions.configure", e.ChannelDashboardModeration = "channel.dashboard.moderation", e.ChannelDashboardStreamSummary = "channel.dashboard.stream-summary", e.ChannelEvents = "channel.events", e.ChannelFollowers = "channel.followers", e.ChannelFollows = "channel.follows", e.ChannelIndex = "channel.index.index", e.ChatPopout = "chat", e.CheermoteCarousel = "cheermote-carousel", e.DashboardSettingsIndex = "channel.dashboard.settings.index", e.DevOnly = "dev", e.DirectoryCommunityByLanguage = "directory.community.language", e.DirectoryCommunityIndex = "directory.community.index", e.DirectoryCommunityDetails = "directory.community.details", e.DirectoryFollowingCommunities = "directory.following.communities", e.DirectoryFollowingGames = "directory.following.games", e.DirectoryFollowingHosts = "directory.following.hosts", e.DirectoryFollowingIndex = "directory.following.index", e.DirectoryFollowingLiveChannels = "directory.following.channels", e.DirectoryFollowingVideos = "directory.following.videos.video-type", e.DirectoryGameClips = "directory.game.clips", e.DirectoryGameDetails = "directory.game.details", e.DirectoryGameIndex = "directory.game.index", e.DirectoryGames = "directory.games", e.DirectoryPopular = "directory.popular", e.DirectoryPopularByLanguage = "directory.popular.language", e.DirectoryGameVideos = "directory.game.videos", e.DirectoryVideosHistory = "directory.videos.history", e.EmailVerification = "emailVerification", e.EventDetails = "event.details", e.ExtensionDetails = "extensions.extension", e.ForYou = "for-you", e.Index = "index", e.Inventory = "inventory", e.MyClipsManager = "videoManager.clips", e.NotificationSettingsPage = "settings.notificationSettings", e.OnboardingIndex = "onboarding.index", e.PaymentsLandingPage = "payments.landingPage", e.ReportUserPage = "reportUser.page", e.SettingsConnections = "private/embed-components", e.SettingsChannel = "private/embed-components", e.SettingsNotifications = "settings.notifications", e.SettingsPrime = "settings.prime", e.SettingsProfile = "settings.profile", e.SettingsSecurity = "private/embed-components", e.SettingsTurbo = "settings.turbo", e.StoreMerchPage = "store.merch", e.SubsLandingPage = "subs.landing", e.SubsCheckoutPage = "subs.checkout", e.TeamsDashboardRevenue = "teams.dashboard.revenue", e.TeamsDashboardStats = "teams.dashboard.stats", e.TeamsDashboardMembers = "teams.dashboard.members", e.TeamsDashboardFeaturedChannels = "teams.dashboard.featured-channels", e.TeamsDashboardSettings = "teams.dashboard.settings", e.SubsBroadcasterPage = "subs.broadcaster", e.VideoManagerEditPropertiesPage = "videoManager.edit", e.VideoManagerPage = "videoManager.page", e.VideoManagerUploadListPage = "videoManager.upload-list", e.VideoManagerUploadPage = "videoManager.upload", e.VideoManagerCollectionsManager = "videoManager.collections", e.VideoManagerCollectionsEditor = "videoManager.collections.editor", e.VideoManagerHighlighter = "videoManager.highlighter", e.VideosPage = "videos", e.VideoWatchPage = "video", e.Unknown = "unknown"
             }(i || (i = {}))
     },
     wG4N: function(e, t) {
@@ -42679,7 +42696,7 @@ webpackJsonp([67], {
             o = n("GiK3"),
             s = n("6sO2"),
             l = n("CSlQ"),
-            c = n("Odds"),
+            c = n("fc0G"),
             d = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -42704,7 +42721,7 @@ webpackJsonp([67], {
                         iframeClassName: this.props.className,
                         language: n,
                         locale: i,
-                        mode: r.ExtensionMode.Viewer,
+                        mode: this.props.extensionMode,
                         parentElement: this.iframeContainer,
                         platform: r.ExtensionPlatform.Web,
                         trackingProperties: {
@@ -42712,21 +42729,17 @@ webpackJsonp([67], {
                             device_id: s.o.session.deviceID,
                             login: this.props.login,
                             platform: s.o.tracking.getPlatform(),
-                            player_type: "embed"
+                            player_type: c.b.Site
                         },
                         onBeginPurchase: this.props.onBeginPurchase
-                    }), this.props.saveExtensionAPI(this.extensionFrameAPI)
+                    }), this.props.saveExtensionAPI && this.props.saveExtensionAPI(this.extensionFrameAPI)
                 }, t.prototype.componentWillUnmount = function() {
                     this.unregister && this.unregister(), this.extensionFrameAPI.destroy()
                 }, t.prototype.render = function() {
-                    return o.createElement(c._25, {
-                        borderTop: !0,
-                        borderRight: !0,
-                        borderLeft: !0
-                    }, o.createElement("div", {
+                    return o.createElement("div", {
                         ref: this.setIframeContainer,
                         "data-test-selector": "iframe_container_selector"
-                    }))
+                    })
                 }, t.prototype.checkVisible = function() {
                     this.extensionFrameAPI && this.extensionFrameAPI.visibilityChanged()
                 }, t.contextTypes = {
@@ -42777,7 +42790,8 @@ webpackJsonp([67], {
                         this.fetchExtensions()
                     }, a.prototype.componentWillReceiveProps = function(t) {
                         e.options(this.props).variables.channelID !== e.options(t).variables.channelID && this.setState({
-                            data: null
+                            data: null,
+                            loading: !0
                         }, this.fetchExtensions)
                     }, a.prototype.render = function() {
                         var n, r = ((n = {})[e.name || "data"] = {
@@ -42871,4 +42885,4 @@ webpackJsonp([67], {
             }(r.Component))
     }
 }, [5]);
-//# sourceMappingURL=core-f67491354f2dfd87a64373836f76599b.js.map
+//# sourceMappingURL=core-77181c1e0a0df8df27d4bc81fc16f275.js.map
