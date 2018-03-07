@@ -7508,7 +7508,7 @@ webpackJsonp([67], {
                     return o.createElement(f, null)
                 }, t.prototype.getSortedOffers = function() {
                     var e = this.getUserId();
-                    if (!e || !this.props.offersData || !this.props.offersData.primeOffers) return [];
+                    if (!this.props.offersData || !this.props.offersData.primeOffers) return [];
                     var t = this.props.offersData.primeOffers;
                     if (e) {
                         var n = Object(y.c)(),
@@ -42885,4 +42885,4 @@ webpackJsonp([67], {
             }(r.Component))
     }
 }, [5]);
-//# sourceMappingURL=core-77181c1e0a0df8df27d4bc81fc16f275.js.map
+//# sourceMappingURL=core-bc783e52133e840facdfc00af3548acd.js.map

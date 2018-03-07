@@ -17650,7 +17650,7 @@ webpackJsonp([33], {
                     return o.createElement(f, null)
                 }, t.prototype.getSortedOffers = function() {
                     var e = this.getUserId();
-                    if (!e || !this.props.offersData || !this.props.offersData.primeOffers) return [];
+                    if (!this.props.offersData || !this.props.offersData.primeOffers) return [];
                     var t = this.props.offersData.primeOffers;
                     if (e) {
                         var n = Object(k.c)(),
@@ -44898,4 +44898,4 @@ webpackJsonp([33], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.popout-chat-0b3a322d6d6e0d381c491ab4d05b25f2.js.map
+//# sourceMappingURL=pages.popout-chat-f02eca4cd8f7d237f63b3c3adee7486f.js.map

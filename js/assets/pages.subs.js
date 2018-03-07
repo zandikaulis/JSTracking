@@ -7101,7 +7101,7 @@ webpackJsonp([36], {
                     return s.createElement(g, null)
                 }, t.prototype.getSortedOffers = function() {
                     var e = this.getUserId();
-                    if (!e || !this.props.offersData || !this.props.offersData.primeOffers) return [];
+                    if (!this.props.offersData || !this.props.offersData.primeOffers) return [];
                     var t = this.props.offersData.primeOffers;
                     if (e) {
                         var n = Object(k.c)(),
@@ -32680,4 +32680,4 @@ webpackJsonp([36], {
             }(r.Component))
     }
 });
-//# sourceMappingURL=pages.subs-77539e28e7b562fe32067a78319108f5.js.map
+//# sourceMappingURL=pages.subs-0c383e9925e4327618b8a642a8cf70dd.js.map
