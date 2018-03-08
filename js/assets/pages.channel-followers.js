@@ -2550,7 +2550,7 @@ webpackJsonp([40], {
                         r.j.warn("Failed to send message, or message timeout", e)
                     }), n.result
                 }, e.prototype.updateEmotes = function(e) {
-                    this.selfEmotes = Object(Ve.a)(e), this.client.updateEmoteSets(e)
+                    this.selfEmotes = Object(Ve.b)(e), this.client.updateEmoteSets(e)
                 }, e.prototype.updateChannelBadges = function(e) {
                     this.client.updateChannelBadges(this.channelLogin, e)
                 }, e.prototype.updateBitsConfig = function(e) {
@@ -22304,7 +22304,9 @@ webpackJsonp([40], {
                 }, r.createElement(l.a, {
                     updateContainerWidth: this.onUpdateDebounce,
                     isHostedFollow: !1,
-                    channelLogin: this.props.channelLogin
+                    channelLogin: this.props.channelLogin,
+                    followUIType: l.b.IconAndText,
+                    unfollowUIType: l.b.IconOnly
                 })), r.createElement(C._2, {
                     margin: {
                         left: 1
@@ -35373,4 +35375,4 @@ webpackJsonp([40], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-followers-ac3a70f87940bdde830e2213a2872ce0.js.map
+//# sourceMappingURL=pages.channel-followers-ac90d308f6669d025c1181a5fa971405.js.map

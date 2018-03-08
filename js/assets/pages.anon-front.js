@@ -242,8 +242,9 @@ webpackJsonp([53], {
                         overflow: !0
                     }, i.createElement("div", null, i.createElement(o.a, {
                         to: this.props.linkTo,
-                        title: this.props.title,
-                        "data-a-target": "live-channel-card-thumbnail-link"
+                        title: this.props.hideTooltip ? void 0 : this.props.title,
+                        "data-a-target": "live-channel-card-thumbnail-link",
+                        "data-test-selector": "live-channel-card-link-selector"
                     }, this.props.children ? this.props.children : i.createElement(y.C, {
                         alt: this.props.imageAlt,
                         src: this.props.imageSrc,
@@ -319,6 +320,8 @@ webpackJsonp([53], {
             }(i.Component)),
             w = S;
         n.d(t, !1, function() {
+            return "live-channel-card-link-selector"
+        }), n.d(t, !1, function() {
             return S
         }), n.d(t, "a", function() {
             return w
@@ -3230,14 +3233,7 @@ webpackJsonp([53], {
                             color: h.I.Base
                         }, n)), d.createElement(h._2, {
                             flexShrink: 0
-                        }, t.props.firstPageLoaded ? d.createElement(C.a, {
-                            showLoadingPlaceholder: !0,
-                            channelLogin: t.props.item.broadcaster.login,
-                            "data-a-target": "carousel-follow-button"
-                        }) : d.createElement(h._8, {
-                            width: 70,
-                            height: 30
-                        }))), d.createElement(k, {
+                        }, t.renderFollowButton())), d.createElement(k, {
                             source: t.props.item.description || ""
                         }))
                     }, t.getPlaceholderRender = function() {
@@ -3289,6 +3285,17 @@ webpackJsonp([53], {
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
                     return this.props.item ? this.getContentRender() : this.getPlaceholderRender()
+                }, t.prototype.renderFollowButton = function() {
+                    return this.props.firstPageLoaded ? d.createElement(C.a, {
+                        "data-a-target": "carousel-follow-button",
+                        channelLogin: this.props.item.broadcaster.login,
+                        followUIType: C.b.IconAndText,
+                        unfollowUIType: C.b.IconOnly,
+                        showLoadingPlaceholder: !0
+                    }) : d.createElement(h._8, {
+                        width: 70,
+                        height: 30
+                    })
                 }, t
             }(d.Component));
         var x = Object(s.b)(function(e) {
@@ -3789,4 +3796,4 @@ webpackJsonp([53], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.anon-front-22e53ce073efd9716b7529fb3a0b76f5.js.map
+//# sourceMappingURL=pages.anon-front-c6b07cb61bd6d1ad97cb0234cd15a540.js.map

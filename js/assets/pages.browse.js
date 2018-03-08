@@ -242,8 +242,9 @@ webpackJsonp([52], {
                         overflow: !0
                     }, i.createElement("div", null, i.createElement(o.a, {
                         to: this.props.linkTo,
-                        title: this.props.title,
-                        "data-a-target": "live-channel-card-thumbnail-link"
+                        title: this.props.hideTooltip ? void 0 : this.props.title,
+                        "data-a-target": "live-channel-card-thumbnail-link",
+                        "data-test-selector": "live-channel-card-link-selector"
                     }, this.props.children ? this.props.children : i.createElement(k.C, {
                         alt: this.props.imageAlt,
                         src: this.props.imageSrc,
@@ -319,6 +320,8 @@ webpackJsonp([52], {
             }(i.Component)),
             C = w;
         n.d(t, !1, function() {
+            return "live-channel-card-link-selector"
+        }), n.d(t, !1, function() {
             return w
         }), n.d(t, "a", function() {
             return C
@@ -1719,7 +1722,8 @@ webpackJsonp([52], {
                         channelNameLinkTo: this.getLinkTo("/" + e.broadcaster.login + "/videos", t),
                         streamType: e.type,
                         streamMetadata: e.streamMetadata,
-                        videoPlayer: this.getVideoPlayer()
+                        videoPlayer: this.getVideoPlayer(),
+                        hideTooltip: !0
                     }), this.renderStreamFlag()))
                 }, t
             }(r.Component);
@@ -4898,4 +4902,4 @@ webpackJsonp([52], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.browse-564414f4aaa9710942a9168b68fa3d53.js.map
+//# sourceMappingURL=pages.browse-fb8eba74969f0da09528ac36ea7fd76c.js.map

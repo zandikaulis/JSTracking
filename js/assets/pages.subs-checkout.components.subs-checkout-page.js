@@ -1424,8 +1424,8 @@ webpackJsonp([55], {
             }(l.Component)),
             S = n("NXs7"),
             C = n("0nzt"),
-            P = n("l7ua"),
-            w = (n("pDuT"), {
+            w = n("l7ua"),
+            P = (n("pDuT"), {
                 light: "#000",
                 dark: "#fff"
             }),
@@ -1501,7 +1501,7 @@ webpackJsonp([55], {
                             })
                         })
                     }, t.handleValidationError = function(e) {
-                        if (e.code === P.a.Validation || e.code === P.a.InvalidParameter) {
+                        if (e.code === w.a.Validation || e.code === w.a.InvalidParameter) {
                             var n = I();
                             e.fields && e.fields.forEach(function(e) {
                                 n[e] = !0
@@ -1661,7 +1661,7 @@ webpackJsonp([55], {
                                 style: {
                                     height: "auto",
                                     fontSize: "12px",
-                                    fontColor: this.props.darkModeEnabled ? w.dark : w.light,
+                                    fontColor: this.props.darkModeEnabled ? P.dark : P.light,
                                     placeholder: {
                                         color: this.props.darkModeEnabled ? F.dark : F.light
                                     }
@@ -2939,10 +2939,11 @@ webpackJsonp([55], {
             var n = e.split(":");
             if (2 !== n.length) throw new Error("invalid time string: " + e);
             var i = parseInt(n[0], 10),
-                r = parseInt(n[1].substring(0, n[1].length - 2), 10),
+                r = parseInt(n[1].substring(0, 2), 10),
                 a = n[1].substring(n[1].length - 2);
-            12 === i && (i = 0);
-            "pm" === a && (i += 12);
+            12 === i && "am" === a && (i = 0);
+            "pm" === a && i < 12 && (i += 12);
+            if (isNaN(i) || i < 0 || i > 23 || isNaN(r) || r < 0 || r > 59) throw new Error("invalid time string: " + e);
             var o = t || new Date;
             return o.setHours(i, r), o
         };
@@ -3047,4 +3048,4 @@ webpackJsonp([55], {
     pOYM: function(e, t) {},
     t2Wb: function(e, t) {}
 });
-//# sourceMappingURL=pages.subs-checkout.components.subs-checkout-page-15d7e8bd84a5a54689bd9143057d498b.js.map
+//# sourceMappingURL=pages.subs-checkout.components.subs-checkout-page-3089e7530e9b889957927c8ca8d11e08.js.map

@@ -711,7 +711,13 @@ webpackJsonp([79], {
                                 }
                             })
                         })
-                    }, n.state = n.getEmptyState(), n.searchClient = new j.a(i.a.algoliaApplicationID, i.a.algoliaAPIKey), n
+                    }, n.state = n.getEmptyState(), n.searchClient = new j.a({
+                        appId: i.a.algoliaApplicationID,
+                        apiKey: i.a.algoliaAPIKey,
+                        apolloClient: i.o.apollo.client,
+                        logger: i.j,
+                        config: i.a
+                    }), n
                 }
                 return r.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
@@ -978,4 +984,4 @@ webpackJsonp([79], {
     },
     yoqf: function(e, t) {}
 });
-//# sourceMappingURL=pages.subs.components.subs-landing-page-3d4acecc80a718a82edaa6d5a9be4a2b.js.map
+//# sourceMappingURL=pages.subs.components.subs-landing-page-8c08ad0abda46b58ee0e08c84903fcc0.js.map

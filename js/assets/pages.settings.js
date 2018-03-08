@@ -1894,9 +1894,7 @@ webpackJsonp([50], {
                     return d.createElement(N._2, null, d.createElement(E.a, {
                         title: Object(ue.d)("Video Player Banner", "UploadVideoPlayerBanner"),
                         description: Object(ue.d)("This is displayed on the player when your channel is offline.", "UploadVideoPlayerBanner")
-                    }), d.createElement(_.a, null, d.createElement(pe.a, {
-                        title: "this is a test of the emergency broadcast system"
-                    }, d.createElement(N._2, {
+                    }), d.createElement(_.a, null, d.createElement(pe.a, null, d.createElement(N._2, {
                         display: N.N.Flex
                     }, e, d.createElement(N._2, {
                         padding: {
@@ -6289,4 +6287,4 @@ webpackJsonp([50], {
     yU6t: function(e, t) {},
     zpQV: function(e, t) {}
 });
-//# sourceMappingURL=pages.settings-2e3556aff2ec5dcf5d2fe5d995ffad6c.js.map
+//# sourceMappingURL=pages.settings-fe28bb7e575b6a3599ac5e2c8b7f30ec.js.map

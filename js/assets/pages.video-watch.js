@@ -333,24 +333,26 @@ webpackJsonp([42, 81], {
         var i = n("3Ybq");
         n.d(t, "ExportDestination", function() {
             return i.a
+        }), n.d(t, "ExtraFilterType", function() {
+            return i.b
         }), n.d(t, "VIDEO_STATUS_FAILED", function() {
-            return i.g
-        }), n.d(t, "VIDEO_STATUS_PENDING_TRANSCODE", function() {
             return i.h
-        }), n.d(t, "VIDEO_STATUS_RECORDED", function() {
+        }), n.d(t, "VIDEO_STATUS_PENDING_TRANSCODE", function() {
             return i.i
-        }), n.d(t, "VIDEO_STATUS_TRANSCODING", function() {
+        }), n.d(t, "VIDEO_STATUS_RECORDED", function() {
             return i.j
-        }), n.d(t, "VIDEO_STATUS_UPLOADING", function() {
+        }), n.d(t, "VIDEO_STATUS_TRANSCODING", function() {
             return i.k
-        }), n.d(t, "VideoPremiereStatus", function() {
+        }), n.d(t, "VIDEO_STATUS_UPLOADING", function() {
             return i.l
-        }), n.d(t, "VideoScope", function() {
+        }), n.d(t, "VideoPremiereStatus", function() {
             return i.m
-        }), n.d(t, "availableVideoStatuses", function() {
+        }), n.d(t, "VideoScope", function() {
             return i.n
-        }), n.d(t, "pendingVideoStatuses", function() {
+        }), n.d(t, "availableVideoStatuses", function() {
             return i.o
+        }), n.d(t, "pendingVideoStatuses", function() {
+            return i.p
         });
         n("NfL5");
         var a = n("Rv0e");
@@ -1040,36 +1042,38 @@ webpackJsonp([42, 81], {
     },
     "3Ybq": function(e, t, n) {
         "use strict";
-        n.d(t, "c", function() {
+        n.d(t, "d", function() {
             return a
-        }), n.d(t, "b", function() {
+        }), n.d(t, "c", function() {
             return r
-        }), n.d(t, "m", function() {
-            return i
-        }), n.d(t, "k", function() {
-            return s
-        }), n.d(t, "h", function() {
-            return l
-        }), n.d(t, "j", function() {
-            return d
-        }), n.d(t, "g", function() {
-            return c
-        }), n.d(t, "i", function() {
-            return u
         }), n.d(t, "n", function() {
+            return i
+        }), n.d(t, "l", function() {
+            return l
+        }), n.d(t, "i", function() {
+            return d
+        }), n.d(t, "k", function() {
+            return c
+        }), n.d(t, "h", function() {
+            return u
+        }), n.d(t, "j", function() {
             return m
         }), n.d(t, "o", function() {
             return p
-        }), n.d(t, "e", function() {
+        }), n.d(t, "p", function() {
             return h
-        }), n.d(t, "d", function() {
-            return g
         }), n.d(t, "f", function() {
+            return g
+        }), n.d(t, "e", function() {
             return f
-        }), n.d(t, "l", function() {
+        }), n.d(t, "g", function() {
             return v
+        }), n.d(t, "m", function() {
+            return b
         }), n.d(t, "a", function() {
             return o
+        }), n.d(t, "b", function() {
+            return s
         });
         n("zGmo");
         var i, a = "generated",
@@ -1077,17 +1081,17 @@ webpackJsonp([42, 81], {
         ! function(e) {
             e.Private = "PRIVATE", e.Public = "PUBLIC"
         }(i || (i = {}));
-        var o, s = "uploading",
-            l = "pending_transcode",
-            d = "transcoding",
-            c = "failed",
-            u = "recorded",
-            m = [u, "recording"],
-            p = [d, l, c],
-            h = "FORMAT_NOT_SUPPORTED",
-            g = "BAD_ASSET",
-            f = "INTERNAL_ERROR",
-            v = {
+        var o, s, l = "uploading",
+            d = "pending_transcode",
+            c = "transcoding",
+            u = "failed",
+            m = "recorded",
+            p = [m, "recording"],
+            h = [c, d, u],
+            g = "FORMAT_NOT_SUPPORTED",
+            f = "BAD_ASSET",
+            v = "INTERNAL_ERROR",
+            b = {
                 VIDEO_PREMIERE_STATUS_UNSCHEDULED: "unscheduled",
                 VIDEO_PREMIERE_STATUS_SCHEDULED: "scheduled",
                 VIDEO_PREMIERE_STATUS_STARTED: "started",
@@ -1095,7 +1099,10 @@ webpackJsonp([42, 81], {
             };
         ! function(e) {
             e.Youtube = "youtube"
-        }(o || (o = {}))
+        }(o || (o = {})),
+        function(e) {
+            e.None = "NONE", e.Expiring = "EXPIRING"
+        }(s || (s = {}))
     },
     "4Jix": function(e, t) {},
     "4JjK": function(e, t, n) {
@@ -6103,7 +6110,9 @@ webpackJsonp([42, 81], {
                 }, r.createElement(l.a, {
                     updateContainerWidth: this.onUpdateDebounce,
                     isHostedFollow: !1,
-                    channelLogin: this.props.channelLogin
+                    channelLogin: this.props.channelLogin,
+                    followUIType: l.b.IconAndText,
+                    unfollowUIType: l.b.IconOnly
                 })), r.createElement(C._2, {
                     margin: {
                         left: 1
@@ -12780,7 +12789,13 @@ webpackJsonp([42, 81], {
                 })
             },
             Dt = function(e, t) {
-                var n = new Et.a(a.a.algoliaApplicationID, a.a.algoliaAPIKey),
+                var n = new Et.a({
+                        appId: a.a.algoliaApplicationID,
+                        apiKey: a.a.algoliaAPIKey,
+                        apolloClient: a.o.apollo.client,
+                        logger: a.j,
+                        config: a.a
+                    }),
                     i = Ct.a(),
                     r = Object(Nt.b)({
                         broadcastType: St.d,
@@ -13645,7 +13660,7 @@ webpackJsonp([42, 81], {
                             newMessageText: n.state.newMessageText + " " + e
                         }), n.maybeUnpauseScrolling()
                     }, n.getSessionSpecificEmotes = function() {
-                        var e = Object(Bn.a)(n.props.currentUser.emoteSets);
+                        var e = Object(Bn.b)(n.props.currentUser.emoteSets);
                         return Object.keys(e).map(function(t) {
                             return {
                                 id: t,
@@ -18665,4 +18680,4 @@ webpackJsonp([42, 81], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.video-watch-2d86f6d70cbf3042883e5062b77cfd7e.js.map
+//# sourceMappingURL=pages.video-watch-91651dcf2b2c6da85364a3f4865c0bca.js.map

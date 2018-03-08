@@ -3045,7 +3045,7 @@ webpackJsonp([33], {
                         r.j.warn("Failed to send message, or message timeout", e)
                     }), n.result
                 }, e.prototype.updateEmotes = function(e) {
-                    this.selfEmotes = Object(Ve.a)(e), this.client.updateEmoteSets(e)
+                    this.selfEmotes = Object(Ve.b)(e), this.client.updateEmoteSets(e)
                 }, e.prototype.updateChannelBadges = function(e) {
                     this.client.updateChannelBadges(this.channelLogin, e)
                 }, e.prototype.updateBitsConfig = function(e) {
@@ -17463,6 +17463,7 @@ webpackJsonp([33], {
                             i = n.game || {},
                             a = n.categories || [];
                         return o.createElement(p._25, {
+                            "data-a-target": "prime-offer",
                             className: "prime-offer",
                             alignItems: p.c.Center,
                             borderBottom: !t,
@@ -24039,7 +24040,7 @@ webpackJsonp([33], {
                 props: function(e) {
                     if (e.data) {
                         var t = e.data.currentUser && e.data.currentUser.emoteSets,
-                            n = t && Object(r.a)(t);
+                            n = t && Object(r.b)(t);
                         return {
                             emoteSetsData: i.__assign({}, e.data, {
                                 emoteMap: n,
@@ -32031,7 +32032,7 @@ webpackJsonp([33], {
     },
     YhVV: function(e, t, n) {
         "use strict";
-        t.b = function(e, t) {
+        t.c = function(e, t) {
             var n = [];
             if (!e || !t) return n;
             var a = /\S+/g,
@@ -32061,7 +32062,9 @@ webpackJsonp([33], {
                 r = a.exec(e)
             }
             return n
-        }, t.a = function(e) {
+        }, n.d(t, "a", function() {
+            return a
+        }), t.b = function(e) {
             for (var t = {}, n = 0, i = e; n < i.length; n++)
                 for (var o = i[n], s = 0, l = o.emotes; s < l.length; s++)
                     for (var d = l[s], c = a[d.token] || [d.token], u = 0, m = c; u < m.length; u++) {
@@ -38891,7 +38894,7 @@ webpackJsonp([33], {
         t.a = function(e, t, n, a, r, o) {
             void 0 === o && (o = !1);
             var s;
-            s = r ? Object(l.b)(e, r) : function(e) {
+            s = r ? Object(l.c)(e, r) : function(e) {
                 var t = [];
                 e && Object.keys(e).forEach(function(n) {
                     var i = e[n];
@@ -44898,4 +44901,4 @@ webpackJsonp([33], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.popout-chat-f02eca4cd8f7d237f63b3c3adee7486f.js.map
+//# sourceMappingURL=pages.popout-chat-a3568d8d9a52b1eea77e9e3ddb02d73a.js.map

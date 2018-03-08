@@ -6350,14 +6350,7 @@ webpackJsonp([49], {
                             color: v.I.Base
                         }, n)), c.createElement(v._2, {
                             flexShrink: 0
-                        }, t.props.firstPageLoaded ? c.createElement(w.a, {
-                            showLoadingPlaceholder: !0,
-                            channelLogin: t.props.item.broadcaster.login,
-                            "data-a-target": "carousel-follow-button"
-                        }) : c.createElement(v._8, {
-                            width: 70,
-                            height: 30
-                        }))), c.createElement(b, {
+                        }, t.renderFollowButton())), c.createElement(b, {
                             source: t.props.item.description || ""
                         }))
                     }, t.getPlaceholderRender = function() {
@@ -6409,6 +6402,17 @@ webpackJsonp([49], {
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
                     return this.props.item ? this.getContentRender() : this.getPlaceholderRender()
+                }, t.prototype.renderFollowButton = function() {
+                    return this.props.firstPageLoaded ? c.createElement(w.a, {
+                        "data-a-target": "carousel-follow-button",
+                        channelLogin: this.props.item.broadcaster.login,
+                        followUIType: w.b.IconAndText,
+                        unfollowUIType: w.b.IconOnly,
+                        showLoadingPlaceholder: !0
+                    }) : c.createElement(v._8, {
+                        width: 70,
+                        height: 30
+                    })
                 }, t
             }(c.Component));
         var O = Object(d.b)(function(e) {
@@ -7597,4 +7601,4 @@ webpackJsonp([49], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.front-f84d164c1c6d61c0e631f3f746f402cd.js.map
+//# sourceMappingURL=pages.front-4ae4970e324a8dd3e9c2a543c3d3fde0.js.map

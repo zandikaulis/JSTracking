@@ -873,7 +873,7 @@ webpackJsonp([71], {
                 GAME_LINK: "cmgr-expanded-game-link",
                 CHANNEL_LINK: "cmgr-expanded-channel-link"
             }),
-            q = function(e) {
+            K = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.renderTitle = function() {
@@ -1185,13 +1185,13 @@ webpackJsonp([71], {
                     }, this.renderGameLink(e)))))))))))
                 }, t
             }(i.Component),
-            K = Object(C.d)("ClipsManagerExpandedRow")(Object(T.a)(W)(q));
+            q = Object(C.d)("ClipsManagerExpandedRow")(Object(T.a)(W)(K));
         var z = Object(v.b)(null, function(e) {
                 return Object(b.b)({
                     showModal: R.d,
                     closeModal: R.c
                 }, e)
-            })(K),
+            })(q),
             J = n("6BvN"),
             Y = n("MAZT"),
             $ = n("uTyw");
@@ -1481,7 +1481,13 @@ webpackJsonp([71], {
                         })
                     }, n.setSearchInputRef = function(e) {
                         n.searchInputRef = e
-                    }, n.searchClient = new Y.a(y.a.algoliaApplicationID, y.a.algoliaAPIKey), n.inputTimer = null, n.state = ne, n.searchResultRefs = [], n
+                    }, n.searchClient = new Y.a({
+                        appId: y.a.algoliaApplicationID,
+                        apiKey: y.a.algoliaAPIKey,
+                        apolloClient: y.o.apollo.client,
+                        logger: y.j,
+                        config: y.a
+                    }), n.inputTimer = null, n.state = ne, n.searchResultRefs = [], n
                 }
                 return r.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
@@ -3727,4 +3733,4 @@ webpackJsonp([71], {
         })), e.exports = a
     }
 });
-//# sourceMappingURL=pages.clips-manager-0f88ea2eca31431099a64da2b16f4049.js.map
+//# sourceMappingURL=pages.clips-manager-d2995d29da64d3f5079a71b65ac646da.js.map

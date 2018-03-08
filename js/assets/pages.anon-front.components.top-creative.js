@@ -1671,7 +1671,8 @@ webpackJsonp([74, 75], {
                         channelNameLinkTo: this.getLinkTo("/" + e.broadcaster.login + "/videos", t),
                         streamType: e.type,
                         streamMetadata: e.streamMetadata,
-                        videoPlayer: this.getVideoPlayer()
+                        videoPlayer: this.getVideoPlayer(),
+                        hideTooltip: !0
                     }), this.renderStreamFlag()))
                 }, t
             }(r.Component);
@@ -3753,4 +3754,4 @@ webpackJsonp([74, 75], {
         })
     }
 });
-//# sourceMappingURL=pages.anon-front.components.top-creative-b425458fe337e9b2e6dae907ab3af503.js.map
+//# sourceMappingURL=pages.anon-front.components.top-creative-d21b77dd6b764105caaaaa933e7b3e07.js.map

@@ -3185,8 +3185,8 @@ webpackJsonp([46], {
             C = n("F8kA"),
             A = n("IOwa"),
             I = n("2o2f"),
-            F = n("3Fw+"),
-            O = n("HW6M"),
+            O = n("3Fw+"),
+            F = n("HW6M"),
             x = n("mi6k"),
             L = (n("9i7Z"), function(e) {
                 function t() {
@@ -3217,7 +3217,7 @@ webpackJsonp([46], {
                     this.ignoreResumeTimeResponse = !0
                 }, t.prototype.render = function() {
                     var e = "?t=";
-                    return this.props.offsetSeconds && this.props.offsetSeconds > 0 && (e += Object(F.a)(this.props.offsetSeconds)), l.createElement("div", s.__assign({
+                    return this.props.offsetSeconds && this.props.offsetSeconds > 0 && (e += Object(O.a)(this.props.offsetSeconds)), l.createElement("div", s.__assign({
                         onMouseEnter: this.onMouseEnterHandler,
                         onMouseLeave: this.onMouseLeaveHandler
                     }, Object(N._53)(this.props)), l.createElement(N.A, null, l.createElement(C.a, {
@@ -3267,8 +3267,8 @@ webpackJsonp([46], {
                     })), this.videoPreviewImage()))))))
                 }, t.prototype.videoPreviewImage = function() {
                     var e = this.state.hovered && !this.state.didAnimatedPreviewFailToLoad ? this.props.video.animatedPreviewURL : this.props.video.previewThumbnailURL,
-                        t = O("event-video-card__image-wrapper"),
-                        n = O("event-video-card__preview-image", {
+                        t = F("event-video-card__image-wrapper"),
+                        n = F("event-video-card__preview-image", {
                             "event-video-card__preview-image--animated": this.state.hovered && this.state.didAnimatedPreviewLoad
                         });
                     return l.createElement(N.j, {
@@ -3606,7 +3606,7 @@ webpackJsonp([46], {
                     }, j);
                     else if (i === o.PAST && this.props.event.video && this.props.event.video.video) {
                         var r = "";
-                        this.props.event.video.offsetSeconds && (r = "t=" + Object(F.a)(this.props.event.video.offsetSeconds)), a = l.createElement(N.u, {
+                        this.props.event.video.offsetSeconds && (r = "t=" + Object(O.a)(this.props.event.video.offsetSeconds)), a = l.createElement(N.u, {
                             linkTo: {
                                 pathname: "/videos/" + this.props.event.video.video.id,
                                 search: r,
@@ -4048,7 +4048,7 @@ webpackJsonp([46], {
                 return s.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    var e = O({
+                    var e = F({
                             "event-landing-action__progress": this.state.countdownActive
                         }),
                         t = "";
@@ -5524,7 +5524,7 @@ webpackJsonp([46], {
                     }
                 })], t)
             }(r.Component));
-        var F = function(e) {
+        var O = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -5565,11 +5565,11 @@ webpackJsonp([46], {
                     }, e))
                 }, t = i.__decorate([Object(C.d)("GetBitsButton")], t)
             }(r.Component),
-            O = Object(p.b)(function(e) {
+            F = Object(p.b)(function(e) {
                 return {
                     isLoggedIn: Object(v.d)(e)
                 }
-            })(F),
+            })(O),
             x = n("2KeS"),
             L = n("V5M+"),
             T = n("E9Qg"),
@@ -5821,7 +5821,7 @@ webpackJsonp([46], {
                     margin: {
                         left: 1
                     }
-                }, r.createElement(O, {
+                }, r.createElement(F, {
                     channelLogin: this.props.channelLogin
                 })));
                 var f, k = r.createElement(E._2, {
@@ -5935,7 +5935,9 @@ webpackJsonp([46], {
                 }, r.createElement(l.a, {
                     updateContainerWidth: this.onUpdateDebounce,
                     isHostedFollow: !1,
-                    channelLogin: this.props.channelLogin
+                    channelLogin: this.props.channelLogin,
+                    followUIType: l.b.IconAndText,
+                    unfollowUIType: l.b.IconOnly
                 })), r.createElement(E._2, {
                     margin: {
                         left: 1
@@ -6348,7 +6350,7 @@ webpackJsonp([46], {
         }! function(e) {
             e[e.Error = 0] = "Error", e[e.AdBlocked = 1] = "AdBlocked", e[e.Unavailable = 2] = "Unavailable", e[e.Available = 3] = "Available"
         }(_ || (_ = {}));
-        var I, F = function(e) {
+        var I, O = function(e) {
                 var t = null;
                 return e.disableWatchAd && (t = Object(u.d)("Try again later", "Bits--WatchAdOffer")), d.createElement(f._25, {
                     className: "bits-buy-card__offer-row",
@@ -6386,7 +6388,7 @@ webpackJsonp([46], {
                     }
                 }, t)))
             },
-            O = /version\/([\w\.]+).+?(mobile\s?safari|safari)/i,
+            F = /version\/([\w\.]+).+?(mobile\s?safari|safari)/i,
             x = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -6413,7 +6415,7 @@ webpackJsonp([46], {
                         })
                     })
                 }, t.prototype.render = function() {
-                    return O.test(navigator.userAgent) ? null : d.createElement(F, l.__assign({}, this.props, {
+                    return F.test(navigator.userAgent) ? null : d.createElement(O, l.__assign({}, this.props, {
                         disableWatchAd: !this.state.enableWatchAd
                     }))
                 }, t
@@ -9803,4 +9805,4 @@ webpackJsonp([46], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.event-landing-06477f54bafebef40830d471132d8f95.js.map
+//# sourceMappingURL=pages.event-landing-74051701e3ddb4f3aca6044918d3c4a8.js.map

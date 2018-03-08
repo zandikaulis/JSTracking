@@ -2099,7 +2099,9 @@ webpackJsonp([48], {
                 }, r.createElement(l.a, {
                     updateContainerWidth: this.onUpdateDebounce,
                     isHostedFollow: !1,
-                    channelLogin: this.props.channelLogin
+                    channelLogin: this.props.channelLogin,
+                    followUIType: l.b.IconAndText,
+                    unfollowUIType: l.b.IconOnly
                 })), r.createElement(E._2, {
                     margin: {
                         left: 1
@@ -5893,4 +5895,4 @@ webpackJsonp([48], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-collections-11bb8c724488ea43d38023f140dc6d31.js.map
+//# sourceMappingURL=pages.channel-collections-e2f426f73fa0f90ecb1fbc40a91cdbaf.js.map

@@ -10714,10 +10714,11 @@ webpackJsonp([43], {
             var a = e.split(":");
             if (2 !== a.length) throw new Error("invalid time string: " + e);
             var n = parseInt(a[0], 10),
-                r = parseInt(a[1].substring(0, a[1].length - 2), 10),
+                r = parseInt(a[1].substring(0, 2), 10),
                 s = a[1].substring(a[1].length - 2);
-            12 === n && (n = 0);
-            "pm" === s && (n += 12);
+            12 === n && "am" === s && (n = 0);
+            "pm" === s && n < 12 && (n += 12);
+            if (isNaN(n) || n < 0 || n > 23 || isNaN(r) || r < 0 || r > 59) throw new Error("invalid time string: " + e);
             var i = t || new Date;
             return i.setHours(n, r), i
         };
@@ -13210,4 +13211,4 @@ webpackJsonp([43], {
         })(a("PJh5"))
     }
 });
-//# sourceMappingURL=pages.payments-348633ab1fa39f456d02dd49b87b2ab6.js.map
+//# sourceMappingURL=pages.payments-a5f8337bc77fb4584d75a2af83bb1350.js.map

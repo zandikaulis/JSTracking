@@ -15710,7 +15710,8 @@ webpackJsonp([41], {
                         disabled: e,
                         "data-test-selector": "revenue-csv-button",
                         icon: g._16.Download,
-                        onClick: this.handleCSVClick
+                        onClick: this.handleCSVClick,
+                        type: g.z.Text
                     }, He())))))
                 }, t = u.__decorate([Object(y.d)("RevenuePage", {
                     autoReportInteractive: !0,
@@ -17131,7 +17132,9 @@ webpackJsonp([41], {
                 }
                 return a
             },
-            Nt = Object(h.d)("Other", "TeamsDashboard"),
+            Nt = function() {
+                return Object(h.d)("Other", "TeamsDashboard")
+            },
             Rt = function(e) {
                 return {
                     unknown: Object(h.d)("Unknown", "TeamsDashboard"),
@@ -17142,12 +17145,12 @@ webpackJsonp([41], {
                     mobile_web: Object(h.d)("Mobile Web", "TeamsDashboard"),
                     mobile_aggregated: Object(h.d)("Mobile", "TeamsDashboard"),
                     console: Object(h.d)("Console", "TeamsDashboard"),
-                    other: Nt
+                    other: Nt()
                 }[e] || e
             },
             zt = function(e) {
                 return {
-                    other: Nt,
+                    other: Nt(),
                     front_page_featured: Object(h.d)("Featured Section - Front Page", "TeamsDashboard"),
                     creative_page_featured: Object(h.d)("Featured Section - Creative Page", "TeamsDashboard"),
                     hosted: Object(h.d)("Hosts", "TeamsDashboard"),
@@ -17621,7 +17624,8 @@ webpackJsonp([41], {
                         disabled: e,
                         "data-test-selector": "stats-csv-button",
                         icon: g._16.Download,
-                        onClick: this.handleCSVClick
+                        onClick: this.handleCSVClick,
+                        type: g.z.Text
                     }, He()))), c.createElement(g._2, {
                         fullWidth: !0
                     }, c.createElement(Dt, {
@@ -20098,4 +20102,4 @@ webpackJsonp([41], {
         })(a("PJh5"))
     }
 });
-//# sourceMappingURL=pages.teams-dashboard-07fd8773c093b3bc3d19ab7a41fc79b9.js.map
+//# sourceMappingURL=pages.teams-dashboard-a23f6959edf3de8a77442fc0f9059bcc.js.map
