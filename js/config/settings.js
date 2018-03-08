@@ -374,6 +374,18 @@ window.__twilightSettings = {
                 "value": "variant4"
             }]
         },
+        "50e947d4-24b7-4000-a046-f48f4072b7cf": {
+            "name": "TWILIGHT_SUBSCRIBED_CHANNELS_SIDENAV",
+            "v": 3243,
+            "t": 2,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant_a"
+            }]
+        },
         "54b18ea6-2b6a-4ed7-9128-2497572d31e2": {
             "name": "twilight_web_onboarding_following_for_you",
             "v": 2919,
