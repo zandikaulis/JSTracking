@@ -24176,6 +24176,7 @@ webpackJsonp([32], {
                             display: I.N.Flex,
                             flexWrap: I.Q.NoWrap,
                             position: I._9.Relative,
+                            overflow: I._5.Hidden,
                             fullHeight: !0
                         }, h.createElement(wr, {
                             channelName: e.props.match.params.channelName,
@@ -51551,4 +51552,4 @@ webpackJsonp([32], {
         }
     }
 });
-//# sourceMappingURL=pages.dashboard-4f8edbe630ccd8ce517c68633e0c125b.js.map
+//# sourceMappingURL=pages.dashboard-11fd35103dcce6142cc4864c88d5c277.js.map

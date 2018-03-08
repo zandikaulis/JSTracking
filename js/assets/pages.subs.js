@@ -19213,6 +19213,7 @@ webpackJsonp([36], {
                         display: A.N.Flex,
                         flexWrap: A.Q.NoWrap,
                         position: A._9.Relative,
+                        overflow: A._5.Hidden,
                         fullHeight: !0
                     }, r.createElement(m, null), r.createElement(A.W, {
                         overflow: A._5.Hidden,
@@ -32680,4 +32681,4 @@ webpackJsonp([36], {
             }(r.Component))
     }
 });
-//# sourceMappingURL=pages.subs-0c383e9925e4327618b8a642a8cf70dd.js.map
+//# sourceMappingURL=pages.subs-98a9785c5dc098177670d63a679900b5.js.map
