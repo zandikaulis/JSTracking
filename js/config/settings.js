@@ -11,6 +11,7 @@ window.__twilightSettings = {
     "bits_truex_partner_hash": "af4f4f3a5b1e302e3e17383b8dd300cb6867ec84",
     "bits_truex_script_url": "https://static.truex.com/js/client.js",
     "browser_notifications_launch": true,
+    "chatrooms_enabled": true,
     "chatrooms_staff_beta": true,
     "commerce_bar_experience": "amazon",
     "comscore_config_c1": 2,
