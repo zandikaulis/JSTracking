@@ -4089,6 +4089,18 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
+        "bf7566f3-241b-4ade-95d4-381a7e7dd390": {
+            "name": "android_wateb_6.0_release",
+            "v": 3241,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
         "bfc54618-1905-49ed-ab8e-e72af763f553": {
             "name": "android_story_card_v2.5",
             "v": 2363,
