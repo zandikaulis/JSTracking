@@ -345,18 +345,6 @@ window.SiteOptions = {
                 "value": "exoplayer_2"
             }]
         },
-        "0d73f2a4-46a0-4f6a-a985-134046be5e7e": {
-            "name": "android_track_network_request_latency",
-            "v": 2696,
-            "t": 1,
-            "groups": [{
-                "weight": 100,
-                "value": "control"
-            }, {
-                "weight": 0,
-                "value": "active"
-            }]
-        },
         "0dc9a9c9-fee5-4b5f-a462-f07675713e5e": {
             "name": "TWILIGHT_FOLLOWING_INDEX_LATEST_VIDEOS_V2",
             "v": 2874,
@@ -447,18 +435,6 @@ window.SiteOptions = {
                 "value": "no_archives"
             }]
         },
-        "143a0729-4294-48b3-bc05-e611afa52eb1": {
-            "name": "android_track_network_request_latency",
-            "v": 2826,
-            "t": 1,
-            "groups": [{
-                "weight": 99,
-                "value": "control"
-            }, {
-                "weight": 1,
-                "value": "active"
-            }]
-        },
         "143da2f9-bf80-4555-a661-76c378fcd5c8": {
             "name": "ios_aa",
             "v": 1919,
@@ -469,6 +445,18 @@ window.SiteOptions = {
             }, {
                 "weight": 5,
                 "value": "variant"
+            }]
+        },
+        "15a67dfe-256c-428c-928f-d3c4c13d0abf": {
+            "name": "android_broadcast_abs",
+            "v": 3236,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
             }]
         },
         "1710cf57-352c-4d09-b2c1-3d40bdf79b30": {
@@ -1409,18 +1397,6 @@ window.SiteOptions = {
             }, {
                 "weight": 5,
                 "value": "player_core"
-            }]
-        },
-        "409b22a0-4f72-49ca-881a-a08cb28d4f11": {
-            "name": "android_track_network_request_latency",
-            "v": 3175,
-            "t": 1,
-            "groups": [{
-                "weight": 99,
-                "value": "control"
-            }, {
-                "weight": 1,
-                "value": "active"
             }]
         },
         "409d6b75-c64e-449c-b6ec-130118312d3f": {
@@ -2862,6 +2838,18 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
+        "80f6e8da-d7c3-4b75-8e49-3a7abd33b032": {
+            "name": "android_track_network_request_latency",
+            "v": 3239,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
         "81134434-865b-4c9b-8349-239eae6596a1": {
             "name": "android_player_refactor_release",
             "v": 3164,
@@ -2895,18 +2883,6 @@ window.SiteOptions = {
                 "value": "control"
             }, {
                 "weight": 100,
-                "value": "active"
-            }]
-        },
-        "8250c31b-0103-4d62-a507-031ac0f9d875": {
-            "name": "android_broadcast_abs",
-            "v": 2306,
-            "t": 1,
-            "groups": [{
-                "weight": 100,
-                "value": "control"
-            }, {
-                "weight": 0,
                 "value": "active"
             }]
         },
