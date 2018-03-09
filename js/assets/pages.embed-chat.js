@@ -5383,7 +5383,7 @@ webpackJsonp([34], {
                 }, t.prototype.getRecentCheerInfo = function(e, t) {
                     var n = !1,
                         i = void 0;
-                    this.state.isExpanded || !e.data.error && e.data.user && e.data.user.cheer && e.data.user.cheer.recent && e.data.user.cheer.settings.isRecentEnabled && t.recentCheerExpireTime && 0 !== Math.max(0, t.recentCheerExpireTime - Date.now()) && (n = !0, i = Object(dn.a)(e.data.user.cheer.recent, this.props.bitsConfig, this.props.blockLinks));
+                    this.state.isExpanded || !e.data.error && e.data.user && e.data.user.cheer && e.data.user.cheer.recent && e.data.user.cheer.settings.isRecentEnabled && t.recentCheerExpireTime && 0 !== Math.max(0, t.recentCheerExpireTime - Date.now()) && (n = !0, i = Object(dn.a)(e.data.user.cheer.recent, this.props.bitsConfig, this.props.blockLinks) || void 0);
                     return {
                         shouldRender: n,
                         recentCheer: i
@@ -11221,12 +11221,14 @@ webpackJsonp([34], {
                         i = this.props.emoteSet.emotes.map(function(i, a) {
                             if (!i.srcSet) return null;
                             var c = r.createElement("img", {
+                                className: "emote-picker__emote-image",
                                 srcSet: i.srcSet,
                                 alt: i.displayName
                             });
                             if (0 === a) {
                                 var d = i.srcSet.split(" ")[0];
                                 c = r.createElement(o.b, {
+                                    className: "emote-picker__emote-image",
                                     src: d,
                                     srcSet: i.srcSet,
                                     alt: i.displayName
@@ -26161,6 +26163,7 @@ webpackJsonp([34], {
     dQj3: function(e, t, n) {
         "use strict";
         t.b = l, t.a = function(e, t, n) {
+            if (!e.author) return null;
             var c = l(e.body.emotes),
                 d = e.badges.reduce(function(e, t) {
                     return e[t.setID] = t.version, e
@@ -30686,11 +30689,11 @@ webpackJsonp([34], {
                     className: g,
                     sources: Object(o.b)(n, e.size || i.Large, e.animated)
                 });
-            return e.showImage || (f = null), r.createElement(d._2, {
+            return e.showImage || (f = null), r.createElement(d.W, {
                 className: "cheermote-for-amount",
                 alignItems: e.alignItems,
                 display: e.display
-            }, f, p)
+            }, r.createElement("span", null, f, p))
         };
         n.d(t, "a", function() {
             return u
@@ -34238,4 +34241,4 @@ webpackJsonp([34], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.embed-chat-d93005f4872d3951053f201773f05aa8.js.map
+//# sourceMappingURL=pages.embed-chat-e9ad6bc35d25fde63f24a7073877f233.js.map

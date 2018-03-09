@@ -6155,12 +6155,14 @@ webpackJsonp([67], {
                         i = this.props.emoteSet.emotes.map(function(i, r) {
                             if (!i.srcSet) return null;
                             var c = a.createElement("img", {
+                                className: "emote-picker__emote-image",
                                 srcSet: i.srcSet,
                                 alt: i.displayName
                             });
                             if (0 === r) {
                                 var d = i.srcSet.split(" ")[0];
                                 c = a.createElement(s.b, {
+                                    className: "emote-picker__emote-image",
                                     src: d,
                                     srcSet: i.srcSet,
                                     alt: i.displayName
@@ -11284,92 +11286,73 @@ webpackJsonp([67], {
     },
     DBTH: function(e, t, n) {
         "use strict";
-        n.d(t, "g", function() {
-            return a
-        }), n.d(t, "f", function() {
-            return o
-        }), n.d(t, "h", function() {
+        n.d(t, "f", function() {
             return s
-        }), n.d(t, "j", function() {
-            return l
-        }), n.d(t, "i", function() {
-            return c
-        }), n.d(t, "l", function() {
-            return d
-        }), n.d(t, "k", function() {
-            return u
-        }), n.d(t, "d", function() {
-            return r
-        }), n.d(t, "b", function() {
-            return m
-        }), n.d(t, "a", function() {
-            return h
-        }), n.d(t, "c", function() {
-            return f
         }), n.d(t, "e", function() {
-            return v
-        }), n.d(t, "q", function() {
-            return y
-        }), n.d(t, "o", function() {
-            return k
-        }), n.d(t, "p", function() {
-            return _
-        }), n.d(t, "n", function() {
-            return S
+            return l
+        }), n.d(t, "g", function() {
+            return c
+        }), n.d(t, "h", function() {
+            return d
+        }), n.d(t, "j", function() {
+            return u
+        }), n.d(t, "i", function() {
+            return p
+        }), n.d(t, "b", function() {
+            return a
+        }), n.d(t, "a", function() {
+            return o
+        }), n.d(t, "c", function() {
+            return m
+        }), n.d(t, "d", function() {
+            return h
         }), n.d(t, "m", function() {
-            return w
-        }), n.d(t, "r", function() {
-            return E
+            return f
+        }), n.d(t, "l", function() {
+            return v
+        }), n.d(t, "k", function() {
+            return b
+        }), n.d(t, "n", function() {
+            return y
         });
-        var i, r, a = "TWILIGHT_WEB_ONBOARDING_CATEGORIES",
-            o = "TWILIGHT_WEB_ONBOARDING_CATEGORIES_ANON_FRONT_PAGE",
-            s = "TWILIGHT_WEB_ONBOARDING_CHANNEL_RANKING",
-            l = "TWILIGHT_WEB_ONBOARDING_FOLLOWING_FOR_YOU",
-            c = "TWILIGHT_WEB_ONBOARDING",
-            d = "TWILIGHT_WEB_ONBOARDING_RANDOMIZED_GAMES",
-            u = "TWILIGHT_WEB_ONBOARDING_FOLLOW_CATEGORIES";
+        var i, r, a, o, s = "TWILIGHT_WEB_ONBOARDING_CATEGORIES",
+            l = "TWILIGHT_WEB_ONBOARDING_CATEGORIES_ANON_FRONT_PAGE",
+            c = "TWILIGHT_WEB_ONBOARDING_CHANNEL_RANKING",
+            d = "TWILIGHT_WEB_ONBOARDING",
+            u = "TWILIGHT_WEB_ONBOARDING_RANDOMIZED_GAMES",
+            p = "TWILIGHT_WEB_ONBOARDING_FOLLOW_CATEGORIES";
         ! function(e) {
             e.NoSkip = "no_skip"
         }(i || (i = {})),
         function(e) {
-            e.First = "first", e.Last = "last"
-        }(r || (r = {}));
-        var p, m, h, g = new Set([r.First.toString(), r.Last.toString()]);
-        ! function(e) {
             e.Yes = "yes"
-        }(p || (p = {})),
+        }(r || (r = {})),
         function(e) {
             e.Yes = "yes"
-        }(m || (m = {})),
+        }(a || (a = {})),
         function(e) {
             e.Games = "games", e.Streams = "streams"
-        }(h || (h = {}));
-        var f, v, b = new Set([h.Games.toString(), h.Streams.toString()]);
+        }(o || (o = {}));
+        var m, h, g = new Set([o.Games.toString(), o.Streams.toString()]);
         ! function(e) {
             e.ENABLED = "enabled"
-        }(f || (f = {})),
+        }(m || (m = {})),
         function(e) {
             e.ENABLED = "enabled"
-        }(v || (v = {}));
-        var y = function(e) {
+        }(h || (h = {}));
+        var f = function(e) {
                 return e === i.NoSkip
             },
-            k = function(e) {
+            v = function(e, t) {
+                return f(e) && t === r.Yes
+            },
+            b = function(e) {
                 return !!e && g.has(e)
             },
-            _ = function(e, t) {
-                return y(e) && k(t)
+            y = function(e) {
+                return e.getTime() >= k().getTime()
             },
-            S = function(e, t, n) {
-                return y(e) && k(t) && n === p.Yes
-            },
-            w = function(e) {
-                return !!e && b.has(e)
-            },
-            E = function(e) {
-                return e.getTime() >= C().getTime()
-            },
-            C = function() {
+            k = function() {
                 return new Date((new Date).getTime() - 12096e5)
             }
     },
@@ -12343,6 +12326,7 @@ webpackJsonp([67], {
                 privacyPolicyURL: e.privacyPolicyURL,
                 requiredBroadcasterAbilities: e.requiredBroadcasterAbilities,
                 screenshotURLs: e.screenshotURLs,
+                self: e.self,
                 SKU: e.SKU,
                 state: e.state,
                 summary: e.summary,
@@ -13890,7 +13874,7 @@ webpackJsonp([67], {
         var d = n("/wlI"),
             u = function() {
                 function e(e) {
-                    this.detect = !1, this.logger = e.logger.withCategory("ad-block-detector"), this.logger.debug("Created.")
+                    this.detect = !1, this.detected = !1, this.logger = e.logger.withCategory("ad-block-detector"), this.logger.debug("Created.")
                 }
                 return e.prototype.detectAdBlock = function() {
                     this.logger.debug("Start ad block tests."), this.detectEasyList(), this.detectEasyListPrivacy()
@@ -13904,7 +13888,7 @@ webpackJsonp([67], {
                     }).catch(function(t) {
                         e.logger.debug("DoubleClick is unreachable.", {
                             err: t
-                        }), e.detect = !0
+                        }), e.detect = !0, e.detected = !0
                     })
                 }, e.prototype.detectEasyListPrivacy = function() {
                     var e = this,
@@ -13931,12 +13915,14 @@ webpackJsonp([67], {
                     }).catch(function(t) {
                         e.logger.debug("Spade unreachable: ", {
                             err: t
-                        }), e.detect = !0
+                        }), e.detect = !0, e.detected = !0
                     })
                 }, e.prototype.addTwitchGlobal = function() {
                     window.Twitch || (window.Twitch = {}), window.Twitch.sentinel ? this.logger.debug("Sentinel global already exists.", {
                         sentinel: window.Twitch.sentinel
-                    }) : (window.Twitch.sentinel = this, this.logger.debug("Setting global sentinel."))
+                    }) : (window.Twitch.sentinel = this, window.Twitch.blockDetector ? this.logger.debug("Block Detecter global already exists.", {
+                        blockDetector: window.Twitch.blockDetector
+                    }) : (window.Twitch.blockDetector = this, this.logger.debug("Setting global sentinel.")))
                 }, e
             }(),
             p = n("TToO"),
@@ -17319,7 +17305,7 @@ webpackJsonp([67], {
                         sortedFollows: [],
                         displayAmount: 5
                     }, t.hasRequestedTracking = !1, t.followedVideoDict = {}, t.sortFollowedChannels = function(e) {
-                        if (e.data.loading || e.data.error || !e.data.currentUser || !e.data.currentUser.followedLiveUsers) return [];
+                        if (e.data.loading || e.data.error || !e.data.currentUser || !e.data.currentUser.followedLiveUsers || !e.data.currentUser.follows) return [];
                         var n = e.data.currentUser.followedLiveUsers.nodes.slice(),
                             i = (e.data.currentUser.follows.edges || []).map(function(e) {
                                 return e.node
@@ -17396,7 +17382,7 @@ webpackJsonp([67], {
                             })
                         }(e, t)
                     }, t.isRenderReady = function() {
-                        return !(t.props.data.loading || t.props.data.error || !t.props.data.currentUser) && (!t.props.data.currentUser.follows.edges || 0 === t.props.data.currentUser.follows.edges.length || t.props.data.currentUser.follows.edges.length > 0 && t.state.sortedFollows.length > 0)
+                        return !(t.props.data.loading || t.props.data.error || !t.props.data.currentUser) && (!t.props.data.currentUser.follows || !t.props.data.currentUser.follows.edges || 0 === t.props.data.currentUser.follows.edges.length || t.props.data.currentUser.follows.edges.length > 0 && t.state.sortedFollows.length > 0)
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.componentDidUpdate = function() {
@@ -17404,7 +17390,7 @@ webpackJsonp([67], {
                 }, t.prototype.componentWillReceiveProps = function(e) {
                     this.sortFollowedChannels(e)
                 }, t.prototype.render = function() {
-                    var e = !this.props.data.loading && !this.props.data.error && this.props.data.currentUser && (!this.props.data.currentUser.follows.edges || 0 === this.props.data.currentUser.follows.edges.length);
+                    var e = !this.props.data.loading && !this.props.data.error && this.props.data.currentUser && this.props.data.currentUser.follows && (!this.props.data.currentUser.follows.edges || 0 === this.props.data.currentUser.follows.edges.length);
                     return this.props.data.loading || this.props.data.error || !this.props.data.currentUser || this.hasRequestedTracking || (this.hasRequestedTracking = !0, function(e, t, n) {
                         var i = s.b.get("sidenav_follow_data_sample_rate", 1e4);
                         if (!Math.floor(Math.random() * i)) {
@@ -17412,7 +17398,7 @@ webpackJsonp([67], {
                                 is_collapsed: n,
                                 followed_channels_total: 0
                             };
-                            if (!t && (r.followed_channels_total = e.follows.edges ? e.follows.edges.length : 0, e.followedLiveUsers && e.followedLiveUsers.nodes)) {
+                            if (!t && (r.followed_channels_total = e.follows && e.follows.edges ? e.follows.edges.length : 0, e.followedLiveUsers && e.followedLiveUsers.nodes)) {
                                 var a = e.followedLiveUsers.nodes.reduce(function(e, t) {
                                     return Q(t) === G ? e + 1 : e
                                 }, 0);
@@ -17717,7 +17703,8 @@ webpackJsonp([67], {
                     return t.state = {
                         hasLoadedMore: !1
                     }, t.getRecommendedChannels = function() {
-                        return t.props.data.currentUser.recommendations.liveRecommendations.nodes.slice(0, t.getNodesToDisplayCount()).map(function(e, n) {
+                        var e = t.dataToDisplay();
+                        return e ? e.slice(0, t.getNodesToDisplayCount()).map(function(e, n) {
                             return e.broadcaster && e.broadcaster.id && e.broadcaster.login ? a.createElement(ge, {
                                 id: e.broadcaster.id,
                                 key: "recommended-channels-" + e.id,
@@ -17730,11 +17717,7 @@ webpackJsonp([67], {
                                 login: e.broadcaster.login,
                                 profileImageURL: e.broadcaster.profileImageURL
                             }) : null
-                        })
-                    }, t.hasDataToDisplay = function() {
-                        return !(t.props.data.loading || t.props.data.error || !t.props.data.currentUser || 0 === t.props.data.currentUser.recommendations.liveRecommendations.nodes.length)
-                    }, t.getNodesToDisplayCount = function() {
-                        return t.hasDataToDisplay ? t.state.hasLoadedMore ? t.props.data.currentUser.recommendations.liveRecommendations.nodes.length : Math.min(t.props.data.currentUser.recommendations.liveRecommendations.nodes.length, 3) : 0
+                        }) : []
                     }, t.onClickShowMore = function() {
                         t.setState({
                             hasLoadedMore: !0
@@ -17748,9 +17731,10 @@ webpackJsonp([67], {
                 return i.__extends(t, e), t.prototype.componentDidUpdate = function() {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    if (!this.hasDataToDisplay()) return null;
-                    var e = null;
-                    return !this.props.collapsed && this.props.data.currentUser.recommendations.liveRecommendations.nodes.length > 3 && (e = a.createElement(U, {
+                    var e = this.dataToDisplay();
+                    if (!e) return null;
+                    var t = null;
+                    return !this.props.collapsed && e.length > 3 && (t = a.createElement(U, {
                         onClickMore: this.onClickShowMore,
                         onClickLess: this.onClickShowLess,
                         lessDisabled: !this.state.hasLoadedMore,
@@ -17761,7 +17745,12 @@ webpackJsonp([67], {
                         title: Object(s.d)("Recommended Channels", "RecommendedChannels"),
                         collapsed: this.props.collapsed,
                         collapsedIcon: k._16.NavChannels
-                    }), this.getRecommendedChannels(), e)
+                    }), this.getRecommendedChannels(), t)
+                }, t.prototype.dataToDisplay = function() {
+                    return !this.props.data.loading && !this.props.data.error && this.props.data.currentUser && this.props.data.currentUser.recommendations && this.props.data.currentUser.recommendations.liveRecommendations && 0 !== this.props.data.currentUser.recommendations.liveRecommendations.nodes.length ? this.props.data.currentUser.recommendations.liveRecommendations.nodes : null
+                }, t.prototype.getNodesToDisplayCount = function() {
+                    var e = this.dataToDisplay();
+                    return e ? this.state.hasLoadedMore ? e.length : Math.min(e.length, 3) : 0
                 }, t = i.__decorate([Object(c.a)(fe, {
                     options: function() {
                         return {
@@ -17870,32 +17859,36 @@ webpackJsonp([67], {
             Ee = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
-                    return t.getRecommendedFriends = function() {
-                        return t.props.data.currentUser.recommendations.friends.slice(0, t.getDisplayCount(t.props)).map(function(e, n) {
-                            var i = e.user;
-                            return i && i.id ? a.createElement(Se, {
-                                key: "recommended-friends-" + i.id,
-                                user: i,
-                                collapsed: t.props.collapsed,
-                                onRecommendationChanged: t.onRecommendationDataChanged,
-                                "data-a-id": "recommended-friend-" + n,
-                                "data-a-target": "recommended-friend"
-                            }) : null
-                        })
-                    }, t.getDisplayCount = function(e) {
-                        return Math.min(5, e.data.currentUser.recommendations.friends.length)
-                    }, t.onRecommendationDataChanged = function() {
+                    return t.onRecommendationDataChanged = function() {
                         t.props.data.refetch()
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.componentDidUpdate = function() {
                     this.props.data.loading || this.props.data.error || this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    return this.props.collapsed || this.props.data.loading || this.props.data.error || 0 === this.props.data.currentUser.recommendations.friends.length ? null : a.createElement("div", {
+                    var e = this,
+                        t = this.getDisplayData();
+                    return t ? a.createElement("div", {
                         className: "recommended-friends"
                     }, a.createElement(N, {
                         title: Object(s.d)("Recommended Friends", "RecommendedFriends")
-                    }), this.getRecommendedFriends())
+                    }), t.map(function(t, n) {
+                        return a.createElement(Se, {
+                            key: "recommended-friends-" + t.id,
+                            user: t,
+                            collapsed: e.props.collapsed,
+                            onRecommendationChanged: e.onRecommendationDataChanged,
+                            "data-a-id": "recommended-friend-" + n,
+                            "data-a-target": "recommended-friend"
+                        })
+                    })) : null
+                }, t.prototype.getDisplayData = function() {
+                    if (this.props.collapsed || this.props.data.loading || this.props.data.error || !this.props.data.currentUser || !this.props.data.currentUser.recommendations) return null;
+                    var e = Math.min(5, this.props.data.currentUser.recommendations.friends.length),
+                        t = [];
+                    return this.props.data.currentUser.recommendations.friends.forEach(function(e) {
+                        e.user && e.user.id && t.push(e.user)
+                    }), 0 === t.length ? null : t.slice(0, e)
                 }, t = i.__decorate([Object(c.a)(we), Object(h.d)("RecommendedFriends")], t)
             }(a.Component),
             Ce = n("puy8"),
@@ -24066,6 +24059,26 @@ webpackJsonp([67], {
                                 kind: "Field",
                                 name: {
                                     kind: "Name",
+                                    value: "self"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "canInstall"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }]
+                                }
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
                                     value: "SKU"
                                 },
                                 arguments: [],
@@ -24205,11 +24218,11 @@ webpackJsonp([67], {
             }],
             loc: {
                 start: 0,
-                end: 430
+                end: 450
             }
         };
         n.loc.source = {
-            body: "query ExtensionPage_ExtensionDetails($extensionID: ID! $extensionVersion: String $isLoggedIn: Boolean!) {\nextension(id: $extensionID version: $extensionVersion) {\nid\nanchor\nauthorName\nclientID\ndescription\niconURL\nname\nprivacyPolicyURL\nrequiredBroadcasterAbilities\nscreenshotURLs\nSKU\nstate\nsummary\nsupportEmail\ntermsURL\nvendorCode\nversion\n}\ncurrentUser @include(if: $isLoggedIn) {\nid\ninstalledExtensions {\nid\nextension {\nid\n}\n}\n}\n}",
+            body: "query ExtensionPage_ExtensionDetails($extensionID: ID! $extensionVersion: String $isLoggedIn: Boolean!) {\nextension(id: $extensionID version: $extensionVersion) {\nid\nanchor\nauthorName\nclientID\ndescription\niconURL\nname\nprivacyPolicyURL\nrequiredBroadcasterAbilities\nscreenshotURLs\nself {\ncanInstall\n}\nSKU\nstate\nsummary\nsupportEmail\ntermsURL\nvendorCode\nversion\n}\ncurrentUser @include(if: $isLoggedIn) {\nid\ninstalledExtensions {\nid\nextension {\nid\n}\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -24539,13 +24552,15 @@ webpackJsonp([67], {
             c = n("sfWM"),
             d = n("F8kA"),
             u = n("6sO2"),
-            p = n("Odds"),
-            m = function(e) {
+            p = n("q7Ag"),
+            m = n("Odds"),
+            h = function(e) {
                 var t = e.extension,
-                    n = e.onContinue;
-                return r.createElement(p._2, null, r.createElement(p._35, {
-                    type: p._40.H5
-                }, Object(u.d)("Extension Installed Successfully!", "ExtensionInstalledModal")), r.createElement(p._25, {
+                    n = e.login,
+                    i = e.onContinue;
+                return r.createElement(m._2, null, r.createElement(m._35, {
+                    type: m._40.H5
+                }, Object(u.d)("Extension Installed Successfully!", "ExtensionInstalledModal")), r.createElement(m._25, {
                     borderTop: !0,
                     borderBottom: !0,
                     padding: {
@@ -24554,30 +24569,32 @@ webpackJsonp([67], {
                     margin: {
                         y: 1
                     }
-                }, r.createElement(p._35, null, Object(u.d)("Your extension will not display on your page until it is activated on the Extensions page.", "ExtensionInstalledModal")), r.createElement(p._2, {
+                }, r.createElement(m._35, null, Object(u.d)("Your extension will not display on your page until it is activated on the Extensions page.", "ExtensionInstalledModal")), r.createElement(m._2, {
                     margin: {
                         y: 1
                     }
-                }, r.createElement(p._35, null, Object(u.d)("Your extension may require additional configuration before it can be activated.", "ExtensionInstalledModal"))), r.createElement(p._35, null, Object(u.d)("Would you like to configure this extension now?", "ExtensionInstalledModal"))), r.createElement(p._2, {
-                    display: p.N.Flex,
-                    justifyContent: p._1.Center
-                }, r.createElement(p._2, {
+                }, r.createElement(m._35, null, Object(u.d)("Your extension may require additional configuration before it can be activated.", "ExtensionInstalledModal"))), r.createElement(m._35, null, Object(u.d)("Would you like to configure this extension now?", "ExtensionInstalledModal"))), r.createElement(m._2, {
+                    display: m.N.Flex,
+                    justifyContent: m._1.Center
+                }, r.createElement(m._2, {
                     padding: {
                         right: 1
                     }
-                }, r.createElement(p.u, {
-                    type: p.z.Hollow,
-                    onClick: n
+                }, r.createElement(m.u, {
+                    type: m.z.Hollow,
+                    onClick: i
                 }, Object(u.d)("Continue Browsing", "ExtensionInstalledModal"))), r.createElement(d.a, {
-                    to: "extensions/" + t.clientID + "-" + t.version + "/configure"
-                }, r.createElement(p.u, null, Object(u.d)("Configure", "ExtensionInstalledModal")))))
+                    to: Object(p.a)(n, t),
+                    onClick: i
+                }, r.createElement(m.u, null, Object(u.d)("Configure", "ExtensionInstalledModal")))))
             },
-            h = function(e) {
+            g = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(c.a, null, r.createElement(m, {
+                    return r.createElement(c.a, null, r.createElement(h, {
+                        login: this.props.login,
                         extension: this.props.extension,
                         onContinue: this.props.closeModal
                     }), r.createElement(s.a, {
@@ -24585,15 +24602,15 @@ webpackJsonp([67], {
                     }))
                 }, t
             }(r.Component);
-        var g = Object(a.b)(null, function(e) {
+        var f = Object(a.b)(null, function(e) {
             return Object(o.b)({
                 closeModal: l.c
             }, e)
-        })(h);
+        })(g);
         n.d(t, !1, function() {
-            return h
-        }), n.d(t, "a", function() {
             return g
+        }), n.d(t, "a", function() {
+            return f
         })
     },
     T8ns: function(e, t, n) {
@@ -25203,7 +25220,7 @@ webpackJsonp([67], {
                         n.state.threadsByID[e] || Object(N.d)(ee, {
                             cursor: null
                         }, function(e) {
-                            return e.currentUser && e.currentUser.whisperThreads.edges.unshift({
+                            return e.currentUser && e.currentUser.whisperThreads && e.currentUser.whisperThreads.edges.unshift({
                                 cursor: "0",
                                 node: i.__assign({}, t, {
                                     isArchived: !1
@@ -25221,12 +25238,12 @@ webpackJsonp([67], {
                             unreadCount: Q(o)
                         })
                     };
-                    var r = n.props.data.currentUser && K(n.props.data.currentUser.whisperThreads.edges.map(function(e) {
+                    var r = n.props.data.currentUser && n.props.data.currentUser.whisperThreads && K(n.props.data.currentUser.whisperThreads.edges.map(function(e) {
                         return e.node
                     })) || {};
                     return n.state = {
                         error: !!n.props.data.error,
-                        orderedThreadIDs: n.props.data.currentUser && n.props.data.currentUser.whisperThreads.edges.map(function(e) {
+                        orderedThreadIDs: n.props.data.currentUser && n.props.data.currentUser.whisperThreads && n.props.data.currentUser.whisperThreads.edges.map(function(e) {
                             return e.node.id
                         }) || [],
                         renderError: !1,
@@ -25247,7 +25264,7 @@ webpackJsonp([67], {
                     if (e.data.error) this.setState({
                         error: !!e.data.error
                     });
-                    else if (!e.data.loading && e.data.currentUser) {
+                    else if (!e.data.loading && e.data.currentUser && e.data.currentUser.whisperThreads) {
                         var t = K(e.data.currentUser.whisperThreads.edges.map(function(e) {
                             return e.node
                         }));
@@ -25296,15 +25313,19 @@ webpackJsonp([67], {
                                 return e.data.fetchMore({
                                     query: ee,
                                     variables: i.__assign({}, e.data.variables, {
-                                        cursor: e.data.currentUser && e.data.currentUser.whisperThreads.edges.length > 0 ? e.data.currentUser.whisperThreads.edges[e.data.currentUser.whisperThreads.edges.length - 1].cursor : null
+                                        cursor: e.data.currentUser && e.data.currentUser.whisperThreads && e.data.currentUser.whisperThreads.edges.length > 0 ? e.data.currentUser.whisperThreads.edges[e.data.currentUser.whisperThreads.edges.length - 1].cursor : null
                                     }),
                                     updateQuery: function(e, t) {
                                         var n = t.fetchMoreResult;
-                                        return n.currentUser ? e.currentUser ? {
+                                        return n.currentUser ? e.currentUser && e.currentUser.whisperThreads ? n.currentUser.whisperThreads ? {
                                             currentUser: i.__assign({}, n.currentUser, {
                                                 whisperThreads: i.__assign({}, n.currentUser.whisperThreads, {
                                                     edges: Object(N.b)(e.currentUser.whisperThreads.edges, n.currentUser.whisperThreads.edges)
                                                 })
+                                            })
+                                        } : {
+                                            currentUser: i.__assign({}, n.currentUser, {
+                                                whisperThreads: e.currentUser.whisperThreads
                                             })
                                         } : {
                                             currentUser: n.currentUser
@@ -25326,7 +25347,7 @@ webpackJsonp([67], {
                         skip: !e.data.currentUser || void 0 === e.data.currentUser.id,
                         topic: Object(T.y)(e.data.currentUser && e.data.currentUser.id || ""),
                         mutator: function(t, n) {
-                            if (!n.currentUser) return n;
+                            if (!n.currentUser || !n.currentUser.whisperThreads) return n;
                             if (Object(X.e)(t) || Object(X.d)(t)) {
                                 if (Object(X.d)(t)) {
                                     var i = n.currentUser.whisperThreads.edges.find(function(e) {
@@ -25343,7 +25364,7 @@ webpackJsonp([67], {
                                     }
                                 }
                                 return function(e, t, n, i) {
-                                    if (!t.currentUser) return t;
+                                    if (!t.currentUser || !t.currentUser.whisperThreads) return t;
                                     var r = S.m.get("whisperDoNotDisturb", !1),
                                         a = t.currentUser.whisperThreads.edges.find(function(t) {
                                             return t.node.id === e.data_object.thread_id
@@ -25371,7 +25392,7 @@ webpackJsonp([67], {
                                 }(t, n, e.focusedThreadID, e.openThread)
                             }
                             return Object(X.b)(t) ? function(e, t) {
-                                if (!t.currentUser) return t;
+                                if (!t.currentUser || !t.currentUser.whisperThreads) return t;
                                 var n = t.currentUser.whisperThreads.edges.find(function(t) {
                                     return t.node.id === e.data_object.thread_id
                                 });
@@ -25383,7 +25404,7 @@ webpackJsonp([67], {
                                 }
                                 return t
                             }(t, n) : Object(X.c)(t) ? function(e, t) {
-                                if (!t.currentUser) return t;
+                                if (!t.currentUser || !t.currentUser.whisperThreads) return t;
                                 var n = t.currentUser.whisperThreads.edges.find(function(t) {
                                     return t.node.id === e.data_object.thread_id
                                 });
@@ -25395,7 +25416,7 @@ webpackJsonp([67], {
                                 }
                                 return t
                             }(t, n) : Object(X.f)(t) ? function(e, t, n) {
-                                if (!t.currentUser) return t;
+                                if (!t.currentUser || !t.currentUser.whisperThreads) return t;
                                 var i = t.currentUser.whisperThreads.edges.findIndex(function(t) {
                                     return t.node.id === e.data_object.id
                                 });
@@ -25407,14 +25428,14 @@ webpackJsonp([67], {
                                 }
                                 return t
                             }(t, n, e.closeThread) : Object(X.a)(t) ? function(e, t) {
-                                return t.currentUser ? (e.data_object.mark_all_read && t.currentUser.whisperThreads.edges.forEach(function(e) {
+                                return t.currentUser && t.currentUser.whisperThreads ? (e.data_object.mark_all_read && t.currentUser.whisperThreads.edges.forEach(function(e) {
                                     e.node.unreadMessagesCount = 0
                                 }), t) : t
                             }(t, n) : n
                         },
                         skipMessage: function(e, t) {
                             if (Object(X.e)(e)) {
-                                if (!t.currentUser) return !1;
+                                if (!t.currentUser || !t.currentUser.whisperThreads) return !1;
                                 var n = t.currentUser.whisperThreads.edges.find(function(t) {
                                     return t.node.id === e.data_object.thread_id
                                 });
@@ -25540,6 +25561,8 @@ webpackJsonp([67], {
                     type: A._40.P
                 }, Object(S.d)("Support: {supportEmail}", {
                     supportEmail: r.createElement("a", {
+                        target: "_blank",
+                        rel: "noopener",
                         href: "mailto:" + t.supportEmail
                     }, t.supportEmail)
                 }, "ExtensionDetails")), r.createElement(A._35, {
@@ -25550,12 +25573,16 @@ webpackJsonp([67], {
                     type: A._40.P
                 }, Object(S.d)("Privacy Policy: {privacyPolicyURL}", {
                     privacyPolicyURL: r.createElement("a", {
+                        target: "_blank",
+                        rel: "noopener",
                         href: t.privacyPolicyURL
                     }, t.privacyPolicyURL)
                 }, "ExtensionDetails")), "" !== t.termsURL && r.createElement(A._35, {
                     type: A._40.P
                 }, Object(S.d)("User Agreement: {termsOfServiceURL}", {
                     termsOfServiceURL: r.createElement("a", {
+                        target: "_blank",
+                        rel: "noopener",
                         href: t.termsURL
                     }, t.termsURL)
                 }, "ExtensionDetails"))), Object(_e.g)(t) && r.createElement(A._25, {
@@ -25689,30 +25716,31 @@ webpackJsonp([67], {
                         })
                     }, t.onInstallExtension = function() {
                         return i.__awaiter(t, void 0, void 0, function() {
-                            var e, t, n, r, a, o, s, l, c;
-                            return i.__generator(this, function(d) {
-                                switch (d.label) {
+                            var e, t, n, r, a, o, s, l, c, d;
+                            return i.__generator(this, function(u) {
+                                switch (u.label) {
                                     case 0:
-                                        if (e = this.props, t = e.data, n = e.installExtension, r = e.showInstalledModal, a = e.showErrorModal, !(t && t.extension && t.currentUser)) return [3, 4];
-                                        o = t.extension, d.label = 1;
+                                        if (e = this.props, t = e.data, n = e.installExtension, r = e.loginName, a = e.showInstalledModal, o = e.showErrorModal, !(t && t.extension && t.currentUser)) return [3, 4];
+                                        s = t.extension, u.label = 1;
                                     case 1:
-                                        return d.trys.push([1, 3, , 4]), [4, n(i.__assign({}, Object(N.a)({
-                                            extensionID: o.id,
+                                        return u.trys.push([1, 3, , 4]), [4, n(i.__assign({}, Object(N.a)({
+                                            extensionID: s.id,
                                             channelID: t.currentUser.id
                                         })))];
                                     case 2:
-                                        return (s = d.sent()).data && (l = s.data.installExtension.installedExtension, c = function(e) {
+                                        return (l = u.sent()).data && (c = l.data.installExtension.installedExtension, d = function(e) {
                                             return e.currentUser && e.currentUser.installedExtensions.push({
-                                                id: l.id,
+                                                id: c.id,
                                                 extension: {
-                                                    id: l.extension.id
+                                                    id: c.extension.id
                                                 }
                                             }), e
-                                        }, Object(N.d)(Ie, i.__assign({}, xe(this.props)), c), r({
-                                            extension: Object(_e.f)(l.extension)
+                                        }, Object(N.d)(Ie, i.__assign({}, xe(this.props)), d), a({
+                                            login: r,
+                                            extension: Object(_e.f)(c.extension)
                                         })), [3, 4];
                                     case 3:
-                                        return d.sent(), a(), [3, 4];
+                                        return u.sent(), o(), [3, 4];
                                     case 4:
                                         return [2]
                                 }
@@ -25830,7 +25858,7 @@ webpackJsonp([67], {
                         color: A.I.Alt2
                     }, Object(S.d)("Created by {extensionAuthor}", {
                         extensionAuthor: o.authorName
-                    }, "ExtensionPage"))))), n && r.createElement(Ne, {
+                    }, "ExtensionPage"))))), n && o.self && o.self.canInstall && r.createElement(Ne, {
                         loginName: i,
                         extension: o,
                         isExtensionInstalled: this.state.isExtensionInstalled,
@@ -28681,16 +28709,14 @@ webpackJsonp([67], {
                     })
                 }, t.prototype.componentDidMount = function() {
                     return c.__awaiter(this, void 0, void 0, function() {
-                        var e, t;
-                        return c.__generator(this, function(n) {
-                            switch (n.label) {
+                        var e;
+                        return c.__generator(this, function(t) {
+                            switch (t.label) {
                                 case 0:
-                                    return this.props.latencyTracking.reportInteractive(), [4, u.o.experiments.getAssignment(b.i)];
+                                    return this.props.latencyTracking.reportInteractive(), [4, u.o.experiments.getAssignment(b.h)];
                                 case 1:
-                                    return e = n.sent(), [4, u.o.experiments.getAssignment(b.j)];
-                                case 2:
-                                    return t = n.sent(), Object(b.p)(e, t) && this.setState({
-                                        forYouAssignment: t
+                                    return e = t.sent(), this.setState({
+                                        inOnboarding: Object(b.m)(e)
                                     }), [2]
                             }
                         })
@@ -28699,11 +28725,12 @@ webpackJsonp([67], {
                     var e = null;
                     if (this.props.isLoggedIn) {
                         var t = Object(u.d)("Following", "TopNav"),
-                            n = this.state.forYouAssignment === b.d.First ? "/directory/following/foryou" : "/directory/following";
+                            n = this.props.data && this.props.data.currentUser && Object(b.n)(new Date(this.props.data.currentUser.createdAt)),
+                            i = this.state.inOnboarding && n ? "/directory/following/foryou" : "/directory/following";
                         e = d.createElement(r.b, {
                             activeClassName: "active",
                             to: {
-                                pathname: n,
+                                pathname: i,
                                 state: {
                                     medium: g.PageviewMedium.TopNav,
                                     content: g.PageviewContent.Following
@@ -30855,7 +30882,7 @@ webpackJsonp([67], {
                     var n = {
                         event: e,
                         properties: i.__assign({
-                            adblock: this.adBlockDetector.detect,
+                            adblock: this.adBlockDetector.detected,
                             app_version: this.config.buildID,
                             client_app: "twilight",
                             device_id: this.session.deviceID,
@@ -39494,6 +39521,14 @@ webpackJsonp([67], {
                                 kind: "Field",
                                 name: {
                                     kind: "Name",
+                                    value: "createdAt"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
                                     value: "hasPrime"
                                 },
                                 arguments: [],
@@ -39505,11 +39540,11 @@ webpackJsonp([67], {
             }],
             loc: {
                 start: 0,
-                end: 56
+                end: 66
             }
         };
         n.loc.source = {
-            body: "query TopNav_CurrentUser {\ncurrentUser {\nid\nhasPrime\n}\n}",
+            body: "query TopNav_CurrentUser {\ncurrentUser {\nid\ncreatedAt\nhasPrime\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -42999,4 +43034,4 @@ webpackJsonp([67], {
             }(r.Component))
     }
 }, [5]);
-//# sourceMappingURL=core-360ebef1971e47e67c046fe46a6966be.js.map
+//# sourceMappingURL=core-cbeef19c13101fcbc7decc488671dd57.js.map

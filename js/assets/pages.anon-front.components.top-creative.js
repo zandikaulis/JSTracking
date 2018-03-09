@@ -83,7 +83,7 @@ webpackJsonp([74, 75], {
                         return a.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return [4, i.o.experiments.getAssignment(c.k)];
+                                    return [4, i.o.experiments.getAssignment(c.i)];
                                 case 1:
                                     return e = t.sent(), this.setState({
                                         isFollowCategoriesExperimentEnabled: e === c.c.ENABLED
@@ -2959,14 +2959,8 @@ webpackJsonp([74, 75], {
                         }), Object(f.e)(u.SpadeEventType.GameUnfollow, e)
                     }, t.redirectAfterCompletion = function() {
                         return a.__awaiter(t, void 0, void 0, function() {
-                            var e;
-                            return a.__generator(this, function(t) {
-                                switch (t.label) {
-                                    case 0:
-                                        return Object(f.d)(), [4, o.o.experiments.getAssignment(y.j)];
-                                    case 1:
-                                        return e = t.sent(), Object(y.o)(e) ? this.redirectToForYouPage() : this.redirectToFrontPage(), [2]
-                                }
+                            return a.__generator(this, function(e) {
+                                return Object(f.d)(), this.redirectToForYouPage(), [2]
                             })
                         })
                     }, t.redirectToFrontPage = function() {
@@ -2990,10 +2984,10 @@ webpackJsonp([74, 75], {
                         return a.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return o.o.setPageTitle(Object(o.d)("Welcome", "CommunitySelectionPage")), [4, o.o.experiments.getAssignment(y.i)];
+                                    return o.o.setPageTitle(Object(o.d)("Welcome", "CommunitySelectionPage")), [4, o.o.experiments.getAssignment(y.h)];
                                 case 1:
                                     return e = t.sent(), this.setState({
-                                        inOnboardingExperiment: Object(y.q)(e)
+                                        inOnboardingExperiment: Object(y.m)(e)
                                     }), [2]
                             }
                         })
@@ -3754,4 +3748,4 @@ webpackJsonp([74, 75], {
         })
     }
 });
-//# sourceMappingURL=pages.anon-front.components.top-creative-d21b77dd6b764105caaaaa933e7b3e07.js.map
+//# sourceMappingURL=pages.anon-front.components.top-creative-a0c317609816a402f7f48ba98f680766.js.map

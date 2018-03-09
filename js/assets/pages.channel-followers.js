@@ -5092,7 +5092,7 @@ webpackJsonp([40], {
                 }, t.prototype.getRecentCheerInfo = function(e, t) {
                     var n = !1,
                         i = void 0;
-                    this.state.isExpanded || !e.data.error && e.data.user && e.data.user.cheer && e.data.user.cheer.recent && e.data.user.cheer.settings.isRecentEnabled && t.recentCheerExpireTime && 0 !== Math.max(0, t.recentCheerExpireTime - Date.now()) && (n = !0, i = Object(cn.a)(e.data.user.cheer.recent, this.props.bitsConfig, this.props.blockLinks));
+                    this.state.isExpanded || !e.data.error && e.data.user && e.data.user.cheer && e.data.user.cheer.recent && e.data.user.cheer.settings.isRecentEnabled && t.recentCheerExpireTime && 0 !== Math.max(0, t.recentCheerExpireTime - Date.now()) && (n = !0, i = Object(cn.a)(e.data.user.cheer.recent, this.props.bitsConfig, this.props.blockLinks) || void 0);
                     return {
                         shouldRender: n,
                         recentCheer: i
@@ -22117,7 +22117,7 @@ webpackJsonp([40], {
                     status: C.G.Live,
                     pulse: !0
                 }))), t.renderAvatarEditButton = function() {
-                    return t.props.data && t.isChannelEditor() ? r.createElement(C._25, {
+                    return t.props.data && t.props.data.user && t.isChannelEditor() ? r.createElement(C._25, {
                         className: z,
                         background: C.m.Overlay,
                         position: C._9.Absolute,
@@ -22178,7 +22178,7 @@ webpackJsonp([40], {
                     i = 0,
                     u = 0,
                     m = s.a.defaultAvatarURL;
-                this.props.data && this.props.data.user && !this.props.data.loading && !this.props.data.error && (n = this.props.data.user.videos.totalCount, i = this.props.data.user.followers.totalCount, u = this.props.data.user.follows.totalCount, m = this.props.data.user.profileImageURL, e = this.props.data.user.displayName, t = this.props.data.user.roles.isPartner);
+                this.props.data && this.props.data.user && !this.props.data.loading && !this.props.data.error && (n = this.props.data.user.videos.totalCount, i = this.props.data.user.followers.totalCount, u = this.props.data.user.follows.totalCount, m = this.props.data.user.profileImageURL, e = this.props.data.user.displayName, t = this.props.data.user.roles && this.props.data.user.roles.isPartner);
                 var p = this.state.live && !this.isActiveTab(q.Channel),
                     h = this.createChannelLinks(n, i, u),
                     g = {
@@ -22318,7 +22318,7 @@ webpackJsonp([40], {
                     onResize: this.onUpdateDebounce
                 }))
             }, t.prototype.updateLiveState = function(e) {
-                !e.data || e.data.loading || e.data.error || this.setState({
+                e.data && e.data.user && !e.data.loading && !e.data.error && this.setState({
                     live: !!e.data.user.stream && "" !== e.data.user.stream.id
                 })
             }, t.prototype.generateUserLink = function(e, t) {
@@ -22432,7 +22432,7 @@ webpackJsonp([40], {
             }, t.prototype.isActiveTab = function(e) {
                 return q[this.props.currentPage] === q[e]
             }, t.prototype.isChannelEditor = function() {
-                return this.props.data && this.props.data.currentUser && this.props.data.user && this.props.data.currentUser.roles && (this.props.data.currentUser.id === this.props.data.user.id || this.props.data.currentUser.roles.isStaff || this.props.data.currentUser.roles.isSiteAdmin)
+                return !!this.props.data && !!this.props.data.currentUser && !!this.props.data.user && !!this.props.data.currentUser.roles && (this.props.data.currentUser.id === this.props.data.user.id || this.props.data.currentUser.roles.isStaff || this.props.data.currentUser.roles.isSiteAdmin)
             }, t.prototype.getChannelHeaderSize = function() {
                 if (this.channelHeader) {
                     var e = this.channelHeader.querySelector('[data-target="channel-header-left"]'),
@@ -27060,6 +27060,7 @@ webpackJsonp([40], {
     dQj3: function(e, t, n) {
         "use strict";
         t.b = l, t.a = function(e, t, n) {
+            if (!e.author) return null;
             var d = l(e.body.emotes),
                 c = e.badges.reduce(function(e, t) {
                     return e[t.setID] = t.version, e
@@ -31395,11 +31396,11 @@ webpackJsonp([40], {
                     className: g,
                     sources: Object(s.b)(n, e.size || i.Large, e.animated)
                 });
-            return e.showImage || (f = null), r.createElement(c._2, {
+            return e.showImage || (f = null), r.createElement(c.W, {
                 className: "cheermote-for-amount",
                 alignItems: e.alignItems,
                 display: e.display
-            }, f, m)
+            }, r.createElement("span", null, f, m))
         };
         n.d(t, "a", function() {
             return u
@@ -35375,4 +35376,4 @@ webpackJsonp([40], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-followers-ac90d308f6669d025c1181a5fa971405.js.map
+//# sourceMappingURL=pages.channel-followers-d2d3667928410d034ac30b825652ccef.js.map

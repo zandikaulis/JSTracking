@@ -1912,7 +1912,7 @@ webpackJsonp([48], {
                     status: E.G.Live,
                     pulse: !0
                 }))), t.renderAvatarEditButton = function() {
-                    return t.props.data && t.isChannelEditor() ? r.createElement(E._25, {
+                    return t.props.data && t.props.data.user && t.isChannelEditor() ? r.createElement(E._25, {
                         className: G,
                         background: E.m.Overlay,
                         position: E._9.Absolute,
@@ -1973,7 +1973,7 @@ webpackJsonp([48], {
                     i = 0,
                     u = 0,
                     m = s.a.defaultAvatarURL;
-                this.props.data && this.props.data.user && !this.props.data.loading && !this.props.data.error && (n = this.props.data.user.videos.totalCount, i = this.props.data.user.followers.totalCount, u = this.props.data.user.follows.totalCount, m = this.props.data.user.profileImageURL, e = this.props.data.user.displayName, t = this.props.data.user.roles.isPartner);
+                this.props.data && this.props.data.user && !this.props.data.loading && !this.props.data.error && (n = this.props.data.user.videos.totalCount, i = this.props.data.user.followers.totalCount, u = this.props.data.user.follows.totalCount, m = this.props.data.user.profileImageURL, e = this.props.data.user.displayName, t = this.props.data.user.roles && this.props.data.user.roles.isPartner);
                 var p = this.state.live && !this.isActiveTab(q.Channel),
                     h = this.createChannelLinks(n, i, u),
                     f = {
@@ -2113,7 +2113,7 @@ webpackJsonp([48], {
                     onResize: this.onUpdateDebounce
                 }))
             }, t.prototype.updateLiveState = function(e) {
-                !e.data || e.data.loading || e.data.error || this.setState({
+                e.data && e.data.user && !e.data.loading && !e.data.error && this.setState({
                     live: !!e.data.user.stream && "" !== e.data.user.stream.id
                 })
             }, t.prototype.generateUserLink = function(e, t) {
@@ -2227,7 +2227,7 @@ webpackJsonp([48], {
             }, t.prototype.isActiveTab = function(e) {
                 return q[this.props.currentPage] === q[e]
             }, t.prototype.isChannelEditor = function() {
-                return this.props.data && this.props.data.currentUser && this.props.data.user && this.props.data.currentUser.roles && (this.props.data.currentUser.id === this.props.data.user.id || this.props.data.currentUser.roles.isStaff || this.props.data.currentUser.roles.isSiteAdmin)
+                return !!this.props.data && !!this.props.data.currentUser && !!this.props.data.user && !!this.props.data.currentUser.roles && (this.props.data.currentUser.id === this.props.data.user.id || this.props.data.currentUser.roles.isStaff || this.props.data.currentUser.roles.isSiteAdmin)
             }, t.prototype.getChannelHeaderSize = function() {
                 if (this.channelHeader) {
                     var e = this.channelHeader.querySelector('[data-target="channel-header-left"]'),
@@ -5055,11 +5055,11 @@ webpackJsonp([48], {
                     className: f,
                     sources: Object(s.b)(n, e.size || i.Large, e.animated)
                 });
-            return e.showImage || (g = null), r.createElement(d._2, {
+            return e.showImage || (g = null), r.createElement(d.W, {
                 className: "cheermote-for-amount",
                 alignItems: e.alignItems,
                 display: e.display
-            }, g, m)
+            }, r.createElement("span", null, g, m))
         };
         n.d(t, "a", function() {
             return u
@@ -5895,4 +5895,4 @@ webpackJsonp([48], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-collections-e2f426f73fa0f90ecb1fbc40a91cdbaf.js.map
+//# sourceMappingURL=pages.channel-collections-9c74e0de1991d248d08d71f769ecc82b.js.map

@@ -2447,11 +2447,11 @@ webpackJsonp([73], {
                     className: g,
                     sources: Object(s.b)(n, e.size || a.Large, e.animated)
                 });
-            return e.showImage || (f = null), r.createElement(d._2, {
+            return e.showImage || (f = null), r.createElement(d.W, {
                 className: "cheermote-for-amount",
                 alignItems: e.alignItems,
                 display: e.display
-            }, f, m)
+            }, r.createElement("span", null, f, m))
         };
         n.d(t, "a", function() {
             return u
@@ -2585,4 +2585,4 @@ webpackJsonp([73], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.bits.components.bits-landing-page-48f172d862a305905d3f479e12253d6a.js.map
+//# sourceMappingURL=pages.bits.components.bits-landing-page-c9287a6c4183ab64c564509005cf34b4.js.map

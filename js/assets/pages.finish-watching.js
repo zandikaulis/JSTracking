@@ -457,7 +457,7 @@ webpackJsonp([54], {
                 return i.__extends(t, e), t.prototype.componentDidUpdate = function() {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    if (this.props.data.loading || this.props.data.error || 0 === this.props.data.currentUser.recommendations.videos.edges.length) return null;
+                    if (this.props.data.loading || this.props.data.error || !this.props.data.currentUser || !this.props.data.currentUser.recommendations || 0 === this.props.data.currentUser.recommendations.videos.edges.length) return null;
                     var e = a.createElement(u._2, {
                             margin: {
                                 bottom: 2
@@ -1558,4 +1558,4 @@ webpackJsonp([54], {
     },
     vQzq: function(e, t) {}
 });
-//# sourceMappingURL=pages.finish-watching-e1c29b371c011cace0bc11fb526e18b4.js.map
+//# sourceMappingURL=pages.finish-watching-a0f8bed8033bded0d8575eec8eb49a28.js.map

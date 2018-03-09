@@ -17,41 +17,53 @@ webpackJsonp([53], {
             v = n("Vr3l"),
             _ = n.n(v);
         ! function(e) {
-            e[e.CounterStrike = 0] = "CounterStrike", e[e.Hearthstone = 1] = "Hearthstone", e[e.LeagueOfLegends = 2] = "LeagueOfLegends", e[e.Overwatch = 3] = "Overwatch"
+            e.CounterStrike = "counter-strike: global offensive", e.Hearthstone = "hearthstone", e.LeagueOfLegends = "league of legends", e.Overwatch = "overwatch"
         }(a || (a = {}));
         var k = n("LgcN"),
-            y = n("Odds"),
-            b = (n("AHWf"), function(e) {
+            y = function(e) {
+                try {
+                    return decodeURIComponent(e)
+                } catch (e) {
+                    return null
+                }
+            },
+            b = n("Odds"),
+            E = (n("AHWf"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         isLoading: !1,
-                        isError: !1
+                        isError: !1,
+                        game: ""
                     }, t.logger = s.o.logger.withCategory("metadata-icon"), t.didUnmount = !1, t.loadData = function() {
                         if (!t.state.isLoading && !t.state.isError && t.props.streamMetadata && !t.state.content) {
-                            var e = t.props.streamMetadata.counterStrikeGlobalOffensive && t.props.streamMetadata.counterStrikeGlobalOffensive.skill,
-                                n = t.props.streamMetadata.hearthstone && t.props.streamMetadata.hearthstone.broadcasterHeroClass,
-                                r = t.props.streamMetadata.leagueOfLegends && t.props.streamMetadata.leagueOfLegends.championID,
-                                i = t.props.streamMetadata.overwatch && t.props.streamMetadata.overwatch.broadcasterCharacter;
-                            e ? (t.setState({
-                                game: a.CounterStrike,
-                                gameSprite: g.a,
-                                item: String(e),
-                                isLoading: !0
-                            }), t.getCounterStrikeData(e)) : n ? (t.setState({
-                                game: a.Hearthstone,
-                                gameSprite: f.a,
-                                item: n,
-                                isLoading: !0
-                            }), t.getHearthstoneData()) : r ? (t.setState({
-                                game: a.LeagueOfLegends,
-                                item: String(r)
-                            }), t.getLeagueData()) : i && (t.setState({
-                                game: a.Overwatch,
-                                gameSprite: _.a,
-                                item: i,
-                                isLoading: !0
-                            }), t.getOverwatchData())
+                            var e = y(t.props.match.params.encodedCommunityName);
+                            if (e) {
+                                var n = e.toLowerCase(),
+                                    r = t.props.streamMetadata.counterStrikeGlobalOffensive && t.props.streamMetadata.counterStrikeGlobalOffensive.skill,
+                                    i = t.props.streamMetadata.hearthstone && t.props.streamMetadata.hearthstone.broadcasterHeroClass,
+                                    o = t.props.streamMetadata.leagueOfLegends && t.props.streamMetadata.leagueOfLegends.championID,
+                                    s = t.props.streamMetadata.overwatch && t.props.streamMetadata.overwatch.broadcasterCharacter;
+                                r && n === a.CounterStrike ? (t.setState({
+                                    game: n,
+                                    gameSprite: g.a,
+                                    item: String(r),
+                                    isLoading: !0
+                                }), t.getCounterStrikeData(r)) : i && n === a.Hearthstone ? (t.setState({
+                                    game: n,
+                                    gameSprite: f.a,
+                                    item: i,
+                                    isLoading: !0
+                                }), t.getHearthstoneData()) : o && n === a.LeagueOfLegends ? (t.setState({
+                                    game: n,
+                                    item: String(o)
+                                }), t.getLeagueData()) : s && n === a.Overwatch && (t.setState({
+                                    game: n,
+                                    gameSprite: _.a,
+                                    item: s,
+                                    isLoading: !0
+                                }), t.getOverwatchData())
+                            }
                         }
                     }, t.renderIcon = function(e, n, r, o, s, l) {
                         if (!r) return null;
@@ -59,19 +71,19 @@ webpackJsonp([53], {
                                 "metadata-icon--csgo-skill": t.state.game === a.CounterStrike
                             }),
                             d = 30;
-                        return t.state.game === a.CounterStrike && (d = 50), i.createElement(y._2, {
-                            display: y.N.Flex,
-                            flexDirection: y.P.Column,
-                            alignItems: y.c.Center,
-                            justifyContent: y._1.Center,
+                        return t.state.game === a.CounterStrike && (d = 50), i.createElement(b._2, {
+                            display: b.N.Flex,
+                            flexDirection: b.P.Column,
+                            alignItems: b.c.Center,
+                            justifyContent: b._1.Center,
                             fullHeight: !0,
                             margin: {
                                 left: 1
                             }
-                        }, i.createElement(y._43, {
-                            direction: y._45.Left,
+                        }, i.createElement(b._43, {
+                            direction: b._45.Left,
                             label: e
-                        }, i.createElement(y._2, {
+                        }, i.createElement(b._2, {
                             className: c
                         }, i.createElement("div", {
                             style: {
@@ -179,8 +191,9 @@ webpackJsonp([53], {
                     var n = this.state.content && this.state.content[this.state.item];
                     return n ? this.renderIcon(n.display_name, this.state.gameSprite || "", n.image_width, n.image_height, n.sprite_x_offset, n.sprite_y_offset) : null
                 }, t
-            }(i.Component));
-        var E = Object(c.b)(function(e) {
+            }(i.Component)),
+            S = Object(o.f)(E);
+        var w = Object(c.b)(function(e) {
                 return {
                     leagueOfLegends: {
                         championsMap: e.directory.leagueOfLegends.championsMap,
@@ -193,8 +206,8 @@ webpackJsonp([53], {
                 return Object(d.b)({
                     onLoadLeagueOfLegendsChampions: u.a
                 }, e)
-            })(b),
-            S = (n("LEV+"), function(e) {
+            })(S),
+            N = (n("LEV+"), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.state = {
@@ -216,12 +229,12 @@ webpackJsonp([53], {
                     })
                 }, t.prototype.render = function() {
                     var e = null;
-                    !0 !== this.state.isPremiereExperimentActive && this.props.vodcast && (e = i.createElement(y._2, {
-                        display: y.N.InlineBlock,
+                    !0 !== this.state.isPremiereExperimentActive && this.props.vodcast && (e = i.createElement(b._2, {
+                        display: b.N.InlineBlock,
                         padding: {
                             right: .5
                         }
-                    }, i.createElement(y._6, {
+                    }, i.createElement(b._6, {
                         label: Object(s.d)("Vodcast", "LiveChannelCard")
                     })));
                     var t = Object(s.d)("{viewerCount, plural, one {# viewer on {channel}} other {# viewers on {channel}}}", {
@@ -234,49 +247,49 @@ webpackJsonp([53], {
                     }, "Live Channel Card");
                     return i.createElement("div", r.__assign({
                         className: "live-channel-card"
-                    }, Object(y._53)(this.props)), i.createElement(y.A, {
+                    }, Object(b._53)(this.props)), i.createElement(b.A, {
                         key: this.props.title
-                    }, i.createElement(y._2, {
+                    }, i.createElement(b._2, {
                         fullWidth: !0
-                    }, i.createElement(y.j, {
+                    }, i.createElement(b.j, {
                         overflow: !0
                     }, i.createElement("div", null, i.createElement(o.a, {
                         to: this.props.linkTo,
                         title: this.props.hideTooltip ? void 0 : this.props.title,
                         "data-a-target": "live-channel-card-thumbnail-link",
                         "data-test-selector": "live-channel-card-link-selector"
-                    }, this.props.children ? this.props.children : i.createElement(y.C, {
+                    }, this.props.children ? this.props.children : i.createElement(b.C, {
                         alt: this.props.imageAlt,
                         src: this.props.imageSrc,
-                        aspect: y.k.Aspect16x9
-                    }), this.renderContentType()), this.renderGameBoxArt()))), i.createElement(y.B, null, i.createElement(y._2, {
-                        display: y.N.Flex,
-                        flexWrap: y.Q.NoWrap
-                    }, i.createElement(y._2, {
+                        aspect: b.k.Aspect16x9
+                    }), this.renderContentType()), this.renderGameBoxArt()))), i.createElement(b.B, null, i.createElement(b._2, {
+                        display: b.N.Flex,
+                        flexWrap: b.Q.NoWrap
+                    }, i.createElement(b._2, {
                         flexGrow: 1,
                         ellipsis: !0
                     }, i.createElement(o.a, {
                         to: this.props.linkTo,
                         className: "live-channel-card__channel",
                         "data-a-target": "live-channel-card-title-link"
-                    }, i.createElement(y.W, {
+                    }, i.createElement(b.W, {
                         margin: {
                             top: .5
                         }
-                    }, i.createElement(y._35, {
-                        type: y._40.H3,
-                        fontSize: y.R.Size5,
-                        lineHeight: y._3.Body,
+                    }, i.createElement(b._35, {
+                        type: b._40.H3,
+                        fontSize: b.R.Size5,
+                        lineHeight: b._3.Body,
                         ellipsis: !0,
                         className: "live-channel-card__title"
-                    }, this.props.title))), i.createElement(y._2, {
+                    }, this.props.title))), i.createElement(b._2, {
                         className: "live-channel-card__meta",
-                        display: y.N.Flex,
-                        flexWrap: y.Q.NoWrap
-                    }, e, i.createElement(y._35, {
-                        type: y._40.Span,
+                        display: b.N.Flex,
+                        flexWrap: b.Q.NoWrap
+                    }, e, i.createElement(b._35, {
+                        type: b._40.Span,
                         ellipsis: !0
-                    }, t))), i.createElement(y._2, {
+                    }, t))), i.createElement(b._2, {
                         flexGrow: 0,
                         flexShrink: 0
                     }, this.renderStreamMetadata())))))
@@ -288,23 +301,23 @@ webpackJsonp([53], {
                         to: e,
                         title: t,
                         "data-a-target": "live-channel-card-game-link"
-                    }, i.createElement(y._25, {
+                    }, i.createElement(b._25, {
                         className: "live-channel-card__boxart",
-                        position: y._9.Absolute,
+                        position: b._9.Absolute,
                         attachRight: !0,
                         attachBottom: !0
-                    }, i.createElement(y._43, {
-                        display: y.N.Block,
-                        direction: y._45.Bottom,
+                    }, i.createElement(b._43, {
+                        display: b.N.Block,
+                        direction: b._45.Bottom,
                         label: t
-                    }, i.createElement(y.C, {
+                    }, i.createElement(b.C, {
                         src: n,
                         alt: t,
-                        aspect: y.k.BoxArt
+                        aspect: b.k.BoxArt
                     })))) : null
                 }, t.prototype.renderContentType = function() {
-                    return !0 !== this.state.isPremiereExperimentActive ? null : "string" == typeof this.props.streamType && this.props.streamType ? i.createElement(y._2, {
-                        position: y._9.Absolute,
+                    return !0 !== this.state.isPremiereExperimentActive ? null : "string" == typeof this.props.streamType && this.props.streamType ? i.createElement(b._2, {
+                        position: b._9.Absolute,
                         attachLeft: !0,
                         attachTop: !0,
                         padding: .5
@@ -313,18 +326,18 @@ webpackJsonp([53], {
                         hosting: this.props.hosting
                     })) : null
                 }, t.prototype.renderStreamMetadata = function() {
-                    return this.props.streamMetadata ? i.createElement(E, {
+                    return this.props.streamMetadata ? i.createElement(w, {
                         streamMetadata: this.props.streamMetadata
                     }) : null
                 }, t
             }(i.Component)),
-            w = S;
+            C = N;
         n.d(t, !1, function() {
             return "live-channel-card-link-selector"
         }), n.d(t, !1, function() {
-            return S
+            return N
         }), n.d(t, "a", function() {
-            return w
+            return C
         })
     },
     "/+to": function(e, t, n) {
@@ -1435,10 +1448,10 @@ webpackJsonp([53], {
                         return r.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return [4, o.o.experiments.getAssignment(b.f)];
+                                    return [4, o.o.experiments.getAssignment(b.e)];
                                 case 1:
                                     return e = t.sent(), this.setState({
-                                        categoriesExperimentAssignment: Object(b.m)(e) ? e : null
+                                        categoriesExperimentAssignment: Object(b.k)(e) ? e : null
                                     }), this.props.latencyTracking.reportInteractive(), o.o.setPageTitle(), [2]
                             }
                         })
@@ -3796,4 +3809,4 @@ webpackJsonp([53], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.anon-front-c6b07cb61bd6d1ad97cb0234cd15a540.js.map
+//# sourceMappingURL=pages.anon-front-99755e01dd87d5b5f25a91a3e60d4aad.js.map
