@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".8007a762e046bd23f505.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".384d2a52eec954e018e2.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -2045,7 +2045,7 @@
                 })
             }),
             ae = N()(function() {
-                return j("query WebPlayerViewerInfo {\n    currentUser {\n        login\n        hasTurbo\n    }\n    requestInfo {\n        countryCode\n    }\n}")
+                return j("query WebPlayerUserInfo {\n    requestInfo {\n        countryCode\n    }\n}")
             })
     }, function(e, t, n) {
         "use strict";
@@ -2557,7 +2557,7 @@
             var i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0,
                 o = arguments[5];
             return m(n.stream).then(function(e) {
-                return Promise.all([Object(T.C)(), Object(T.b)(e), Object(T.a)(e), Object(T.d)(e), Object(T.g)(e), Object(T.h)(e), n.experiments.get(I.j), n.experiments.get(I.a), n.experiments.get(I.f)])
+                return Promise.all([Object(T.z)(), Object(T.b)(e), Object(T.a)(e), Object(T.d)(e), Object(T.g)(e), Object(T.h)(e), n.experiments.get(I.j), n.experiments.get(I.a), n.experiments.get(I.f)])
             }).then(function(a) {
                 var s = N(a, 9),
                     u = s[0],
@@ -2581,10 +2581,10 @@
                     state: n,
                     duration: t,
                     requestType: o,
-                    viewerInfo: u,
+                    userInfo: u,
                     channelAPIInfo: l,
                     channelInfo: c,
-                    channelViewerInfo: d,
+                    viewerInfo: d,
                     channelAdProperties: f,
                     creativeId: i,
                     padtimeExpGroup: h,
@@ -2637,10 +2637,10 @@
                         a = t.state,
                         s = t.lastAdDisplay,
                         u = t.forced,
-                        c = t.viewerInfo,
+                        c = t.userInfo,
                         l = t.channelInfo,
                         d = t.channelAPIInfo,
-                        f = t.channelViewerInfo,
+                        f = t.viewerInfo,
                         p = t.channelAdProperties,
                         h = t.creativeId,
                         m = t.padtimeExpGroup,
@@ -2649,12 +2649,12 @@
                         b = t.raid,
                         _ = t.embedPromo,
                         w = t.leviathanExpGroup;
-                    r(this, e), this.contentType = a.stream.contentType, this.adSessionId = Object(v.a)(S), this.adType = n, this.raid = b, this.channel = l.name, this.channelId = l._id, this.chansubToken = f.chansub, this.communityIds = P(y.communities), this.twitchCorrelator = Object(v.a)(), this.deviceId = k.a(!1), this.duration = i, this.requestType = o, this.hasAdFreeSubscription = Boolean(f.has_ad_free_subscription), this.lastAdDisplay = s, this.forced = u, this.padtime = m, this.requestTime = Date.now(), this.skippableExpGroup = g, this.creativeId = h, this.embedPromo = _, this.leviathanExpGroup = w, this._initViewerInfoFields(c), this._initChannelInfoFields(l, d), this._initStateFields(a), this._initAmazonFields(), this._initChannelAdPropertiesFields(p)
+                    r(this, e), this.contentType = a.stream.contentType, this.login = c.login, this.adSessionId = Object(v.a)(S), this.adType = n, this.raid = b, this.channel = l.name, this.channelId = l._id, this.chansubToken = f.chansub, this.communityIds = P(y.communities), this.twitchCorrelator = Object(v.a)(), this.deviceId = k.a(!1), this.duration = i, this.requestType = o, this.hasAdFreeSubscription = Boolean(f.has_ad_free_subscription), this.lastAdDisplay = s, this.forced = u, this.padtime = m, this.requestTime = Date.now(), this.skippableExpGroup = g, this.creativeId = h, this.embedPromo = _, this.leviathanExpGroup = w, this._initUserInfoFields(c), this._initChannelInfoFields(l, d), this._initStateFields(a), this._initAmazonFields(), this._initChannelAdPropertiesFields(p)
                 }
                 return E(e, [{
-                    key: "_initViewerInfoFields",
+                    key: "_initUserInfoFields",
                     value: function(e) {
-                        this.login = e.currentUser.login, this.hasTurbo = e.currentUser.hasTurbo
+                        this.login = e.login, this.turboToken = e.turbo
                     }
                 }, {
                     key: "_initChannelInfoFields",
@@ -29650,7 +29650,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.03.09-013044+06b1413afd3e711b10e679abbd6c754f656d0c18",
+                    app_version: "2018.03.09-025840+895133b0f7143720e6128191be4b5d8dd2414162",
                     flash_version: r,
                     referrer_url: i,
                     referrer_host: o.host,
@@ -30098,7 +30098,7 @@
             return {
                 reason_short_vod: e.adType === cu.c && e.contentType === Ls.a && e.vod.duration >= 0 && e.vod.duration < Cu,
                 reason_vod_creator: e.adType === cu.c && e.contentType === Ls.a && e.login === e.channel,
-                reason_turbo: Boolean(e.hasTurbo),
+                reason_turbo: Boolean(e.turboToken),
                 reason_ratelimit: e.adType === cu.c && e.requestTime - e.lastAdDisplay < Pu,
                 reason_channelsub: Boolean(e.chansubToken) && e.hasAdFreeSubscription,
                 reason_channeladfree: e.adType === cu.c && !e.prerollsEnabled || e.adType === cu.b && !e.postrollsEnabled,
