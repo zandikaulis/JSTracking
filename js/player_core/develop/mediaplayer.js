@@ -439,6 +439,7 @@ MediaPlayer.prototype._attachHandlers = function () {
     em.on(ClientMessage.SAVE_ITEM, this._saveItem.bind(this));
     em.on(ClientMessage.CONFIGURE, sink.configure.bind(sink));
     em.on(ClientMessage.ENQUEUE, sink.enqueue.bind(sink));
+    em.on(ClientMessage.SET_TIMESTAMP_OFFSET, sink.setTimestampOffset.bind(sink));
     em.on(ClientMessage.PLAY, sink.play.bind(sink));
     em.on(ClientMessage.PAUSE, sink.pause.bind(sink));
     em.on(ClientMessage.REMOVE, sink.remove.bind(sink));
@@ -1094,9 +1095,18 @@ MediaSink.prototype.enqueue = function (sample) {
     if (track) {
         track.then(function (srcBuf) {
             srcBuf.appendBuffer(sample.buffer);
-        }, noop); // Error sent when track failed to configure
+        }, noop); // Error already sent when track failed to configure
     }
 };
+
+MediaSink.prototype.setTimestampOffset = function (update) {
+    var track = this._tracks[update.trackID];
+    if (track) {
+        track.then(function (srcBuf) {
+            srcBuf.setTimestampOffset(update.offset)
+        }, noop) // Error already sent when track failed to configure
+    }
+}
 
 /**
  * Start/resume playback
@@ -1470,6 +1480,20 @@ SafeSourceBuffer.prototype.appendBuffer = function (buf) {
     } else {
         this._pending.push(function (srcBuf) {
             srcBuf.appendBuffer(buf);
+        });
+    }
+};
+
+/**
+ * Append a media buffer
+ * @param {TypedArray} buf - fmp4 media buffer
+ */
+SafeSourceBuffer.prototype.setTimestampOffset = function (offset) {
+    if (this._pending.empty() && !this._updating()) {
+        this._srcBuf.timestampOffset = offset;
+    } else {
+        this._pending.push(function (srcBuf) {
+            srcBuf.timestampOffset = offset;
         });
     }
 };
@@ -2943,6 +2967,12 @@ module.exports = {
      * @param {ArrayBuffer} sample.buffer - track buffer
      */
     ENQUEUE: 'ClientEnqueue',
+    /**
+     * Set the timestamp offset for a track
+     * @param {Number} update.trackID - which track to update timestamp offset.
+     * @param {ArrayBuffer} update.offset - offset in seconds
+     */
+    SET_TIMESTAMP_OFFSET: 'ClientSetTimestampOffset',
     /**
      * Start media playback. Playback wont begin until data in from
      * of the playhead has been added to the MSE sourc buffer
