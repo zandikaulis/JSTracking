@@ -1015,6 +1015,7 @@ var HEARTBEAT_INTERVAL = 1500; // Max interval without checking sink status
 var MediaSink = exports.MediaSink = function MediaSink(config) {
     this._video = document.createElement('video');
     this._metadataTrack = this._video.addTextTrack('metadata');
+    this._codecs = Object.create(null);
     this._atExit = [];
     this._ontimeupdate = config.ontimeupdate || noop;
     this._onbufferupdate = config.onbufferupdate || noop;
@@ -1045,7 +1046,12 @@ MediaSink.prototype.configure = function (track) {
 
     var video = this._video; // Capture 'video' so we don't need to bind 'this'
     var trackID = track.trackID;
-    var mimeType = track.mimeType;
+    var codec = track.codec;
+    if (codec) {
+        this._codecs[trackID] = codec;
+    } else {
+        codec = this._codecs[trackID];
+    }
 
     // Lazily attach a new MediaSource
     if (!this._mediaSource) {
@@ -1069,7 +1075,7 @@ MediaSink.prototype.configure = function (track) {
     // Add track if it doesn't exist
     if (!(trackID in this._tracks)) {
         var track = this._mediaSource.then(function (mediaSource) {
-            var srcBuf = mediaSource.addSourceBuffer(mimeType);
+            var srcBuf = mediaSource.addSourceBuffer('video/mp4;' + codec);
             return new SafeSourceBuffer(video, srcBuf)
         });
 
@@ -1428,7 +1434,7 @@ MediaSink.prototype._onVideoPause = function () {
     // when the player is muted and hidden. When iOS is in fullscreen, native
     // playback controls are shown. These may pause the video element directly,
     // so don't count pause events while iOS is fullscreen as a 'browser' pause.
-    if (this._video.paused && !this._paused && !this._iosFullScreen){
+    if (this._video.paused && !this._video.error && !this._paused && !this._iosFullScreen){
         this._onstop();
     }
 };
