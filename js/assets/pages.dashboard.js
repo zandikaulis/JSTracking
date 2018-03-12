@@ -10515,11 +10515,13 @@ webpackJsonp([32], {
             }))(Be),
             Ge = n("AQc/"),
             qe = (n("05iM"), function(e) {
-                return h.createElement(I._0, {
+                return h.createElement(I._25, {
+                    borderTop: !0
+                }, h.createElement(I._0, {
                     linkTo: e.linkTo
                 }, h.createElement(I._25, {
                     padding: 2,
-                    borderTop: !0,
+                    alignItems: I.c.Center,
                     display: I.N.Flex,
                     flexWrap: I.Q.NoWrap
                 }, h.createElement(I._2, {
@@ -10531,9 +10533,11 @@ webpackJsonp([32], {
                     flexGrow: 1
                 }, h.createElement(I._35, {
                     type: I._40.Span
-                }, e.description)), h.createElement(I._2, null, h.createElement(I._15, {
+                }, e.description)), h.createElement(I._2, {
+                    display: I.N.Flex
+                }, h.createElement(I._15, {
                     asset: I._16.AngleRight
-                }))))
+                })))))
             });
         ! function(e) {
             e.Random = "random", e.Ordered = "ordered"
@@ -10684,20 +10688,24 @@ webpackJsonp([32], {
                     }, "AutohostSettings"))), h.createElement(be.a, {
                         orientation: I.T.Horizontal,
                         label: Object(g.d)("Host Priority", "AutohostSettings")
+                    }, h.createElement(I._2, {
+                        padding: {
+                            bottom: 1
+                        }
                     }, h.createElement(I._14, {
-                        disabled: this.state.requestState === Ke.Loading,
-                        checked: this.state.autohostSettings.strategy === Ue.Random,
-                        onChange: this.handleSetRandomAutohostStrategy,
-                        label: Object(g.d)("Host channels randomly from the list.", "AutohostSettings"),
-                        name: "hostPriority",
-                        value: Ue.Random
-                    }), h.createElement(I._14, {
                         disabled: this.state.requestState === Ke.Loading,
                         checked: this.state.autohostSettings.strategy === Ue.Ordered,
                         onChange: this.handleSetOrderedAutohostStrategy,
                         label: Object(g.d)("Host channels by the order they appear in the list.", "AutohostSettings"),
                         name: "hostPriority",
                         value: Ue.Ordered
+                    })), h.createElement(I._14, {
+                        disabled: this.state.requestState === Ke.Loading,
+                        checked: this.state.autohostSettings.strategy === Ue.Random,
+                        onChange: this.handleSetRandomAutohostStrategy,
+                        label: Object(g.d)("Host channels randomly from the list.", "AutohostSettings"),
+                        name: "hostPriority",
+                        value: Ue.Random
                     })), h.createElement(qe, {
                         text: Object(g.d)("Host List", "AutohostSettings"),
                         description: Object(g.d)("Add and manage your hosted channels", "AutohostSettings"),
@@ -12674,11 +12682,11 @@ webpackJsonp([32], {
                     this.isLoading() || this.props.latencyTracking.reportInteractive()
                 }, t.prototype.componentWillMount = function() {
                     var e = this.props.extensionsForChannel;
-                    !e.loading && e.data && this.setState({
+                    e && !e.loading && e.data && this.setState({
                         installation: this.findExtensionFromExtensions(e)
                     })
                 }, t.prototype.componentWillReceiveProps = function(e) {
-                    this.state.installation || e.extensionsForChannel.loading || !e.extensionsForChannel.data || this.setState({
+                    !this.state.installation && e.extensionsForChannel && !e.extensionsForChannel.loading && e.extensionsForChannel.data && this.setState({
                         installation: this.findExtensionFromExtensions(e.extensionsForChannel)
                     })
                 }, t.prototype.render = function() {
@@ -12753,10 +12761,10 @@ webpackJsonp([32], {
                     }, i))))
                 }, t.prototype.findExtensionFromExtensions = function(e) {
                     var t = this;
-                    return e.data.find(function(e) {
+                    return e.data ? e.data.find(function(e) {
                         var n = e.extension;
                         return t.props.match.params.extensionID === n.clientId + "-" + n.version
-                    })
+                    }) : null
                 }, t.prototype.getFormattedPageTitle = function() {
                     return Object(g.d)("Extensions", "ExtensionConfigureComponent")
                 }, t.prototype.renderRedirect = function(e) {
@@ -12784,7 +12792,9 @@ webpackJsonp([32], {
                         width: 200
                     }))))
                 }, t.prototype.isLoading = function() {
-                    return this.props.data.loading || this.props.extensionsForChannel.loading
+                    var e = this.props.data.loading,
+                        t = !this.props.extensionsForChannel || !this.props.extensionsForChannel.data;
+                    return e || t
                 }, t
             }(h.Component),
             Qn = Object(a.compose)(Object(O.d)("ExtensionConfigurePage", {
@@ -12807,6 +12817,9 @@ webpackJsonp([32], {
                             channelID: e.data.user && e.data.user.id ? e.data.user.id : ""
                         }
                     }
+                },
+                skip: function(e) {
+                    return !e.data.user || !e.data.user.id
                 }
             }))(Jn);
         var Kn = Object(r.b)(function(e) {
@@ -24308,7 +24321,7 @@ webpackJsonp([32], {
                                     streamSummaryQuery: t
                                 })
                             }
-                        }), g.a.buildType !== b.a.Production && h.createElement(p.b, {
+                        }), h.createElement(p.b, {
                             path: "/:channelName/dashboard/extensions/:extensionID/configure",
                             component: Kn
                         }), h.createElement(p.b, {
@@ -46606,6 +46619,7 @@ webpackJsonp([32], {
                         onSelect: this.props.onChange,
                         theme: "inline",
                         minDate: this.props.minDate,
+                        maxDate: this.props.maxDate,
                         defaultDate: this.props.defaultDate,
                         setDefaultDate: !0,
                         container: this.containerElement,
@@ -46614,8 +46628,8 @@ webpackJsonp([32], {
                             return Object(r.format)(e, t)
                         }
                     })
-                }, t.prototype.componentWillReceiveProps = function(e) {
-                    this.setDateIfChanged(this.props.defaultDate, e.defaultDate)
+                }, t.prototype.componentDidUpdate = function(e) {
+                    (this.dateDidChange(e.minDate, this.props.minDate) || this.dateDidChange(e.maxDate, this.props.maxDate)) && this.setDateRangeIfPresent(this.props.minDate, this.props.maxDate), this.dateDidChange(e.minDate, this.props.defaultDate) && this.setDate(this.props.defaultDate)
                 }, t.prototype.render = function() {
                     var e = {};
                     return this.props.readOnly && (e.readOnly = !0), o.createElement(s._2, {
@@ -46627,9 +46641,12 @@ webpackJsonp([32], {
                         className: "date-picker__container",
                         ref: this.setContainerRef
                     }))
-                }, t.prototype.setDateIfChanged = function(e, t) {
-                    var n = e ? e.getTime() : null;
-                    (t ? t.getTime() : null) !== n && (null === t && (this.textInput.value = ""), this._picker.setDate(t || new Date, !0))
+                }, t.prototype.setDate = function(e) {
+                    e || (this.textInput.value = ""), this._picker.setDate(e || new Date, !0)
+                }, t.prototype.setDateRangeIfPresent = function(e, t) {
+                    e && this._picker.setMinDate(e), t && this._picker.setMaxDate(t)
+                }, t.prototype.dateDidChange = function(e, t) {
+                    return (e ? e.getTime() : null) !== (t ? t.getTime() : null)
                 }, t
             }(o.Component));
         n.d(t, "a", function() {
@@ -51674,4 +51691,4 @@ webpackJsonp([32], {
         }
     }
 });
-//# sourceMappingURL=pages.dashboard-83893e02a289ca17e8c1001daf9eaf1c.js.map
+//# sourceMappingURL=pages.dashboard-a4087918d9b7a7e208311f65ff57ae40.js.map

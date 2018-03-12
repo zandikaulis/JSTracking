@@ -5508,7 +5508,7 @@ webpackJsonp([37], {
                         top: 1,
                         bottom: .5
                     }
-                }, c.createElement(F._35, null, Object(r.d)("Cheer 150 Bits or more to hype your team and get a team emote! Cheer along with your fellow fans to unlock global loot based on everyone’s Cheers!", "OWL2018Introduction"))), c.createElement(F._2, {
+                }, c.createElement(F._35, null, Object(r.d)("Cheer 150 Bits or more to hype your team and get a team emote! Cheer along with your fellow fans to unlock in-game skins based on everyone’s Cheers!", "OWL2018Introduction"))), c.createElement(F._2, {
                     padding: {
                         bottom: 1
                     }
@@ -37611,4 +37611,4 @@ webpackJsonp([37], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-clips-edc30e58874e8d94ba194de6da9da267.js.map
+//# sourceMappingURL=pages.channel-clips-b1a7b158078862b2134cc68017a7c8d4.js.map

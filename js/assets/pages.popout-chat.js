@@ -564,6 +564,7 @@ webpackJsonp([33], {
                 ImageUpload: "user-image-update",
                 ModerationActionsByUserAndChannel: "chat_moderator_actions",
                 OnsiteNotifications: "onsite-notifications",
+                PayoutOnboardingEvents: "payout-onboarding-events",
                 Presence: "presence",
                 Raid: "raid",
                 StreamChange: "stream-change-v1",
@@ -600,6 +601,7 @@ webpackJsonp([33], {
                 OnsiteNotificationsRead: "read-notifications",
                 OnsiteNotificationSummaryUpdate: "update-summary",
                 OnsiteNotificationUpdate: "update-notification",
+                PayoutOnboardingEvent: "payout-onboarding-event",
                 Presence: "presence",
                 PresenceSettings: "settings",
                 PurgeMessageRequest: "purge_messages_request",
@@ -6002,7 +6004,7 @@ webpackJsonp([33], {
                         top: 1,
                         bottom: .5
                     }
-                }, c.createElement(j._35, null, Object(r.d)("Cheer 150 Bits or more to hype your team and get a team emote! Cheer along with your fellow fans to unlock global loot based on everyone’s Cheers!", "OWL2018Introduction"))), c.createElement(j._2, {
+                }, c.createElement(j._35, null, Object(r.d)("Cheer 150 Bits or more to hype your team and get a team emote! Cheer along with your fellow fans to unlock in-game skins based on everyone’s Cheers!", "OWL2018Introduction"))), c.createElement(j._2, {
                     padding: {
                         bottom: 1
                     }
@@ -20908,6 +20910,7 @@ webpackJsonp([33], {
                 SubWithPrime: "samus_spend_credit"
             })
     },
+    D3yV: function(e, t) {},
     DCOT: function(e, t, n) {
         "use strict";
         t.a = function(e, t) {
@@ -33781,7 +33784,7 @@ webpackJsonp([33], {
             }(o.Component),
             C = n("Bir6"),
             N = n("Tzcg"),
-            E = function(e) {
+            E = (n("D3yV"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.autocompleteType = h.a.Emote, t.canBeTriggeredByTab = !1, t.getMatches = function(e) {
@@ -33821,6 +33824,7 @@ webpackJsonp([33], {
                             },
                             key: "emote-img-" + e.id
                         }, o.createElement("img", {
+                            className: "emote-autocomplete-provider__image",
                             srcSet: e.srcSet
                         })), o.createElement(u._35, {
                             type: u._40.Span,
@@ -33851,7 +33855,7 @@ webpackJsonp([33], {
                 }, t.contextTypes = {
                     registerAutocompleteProvider: r.func
                 }, t
-            }(o.Component);
+            }(o.Component));
         n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "b", function() {
             return S
         }), n.d(t, "a", function() {
@@ -44904,4 +44908,4 @@ webpackJsonp([33], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.popout-chat-ad073a32dae7a4cca49df9b28d584835.js.map
+//# sourceMappingURL=pages.popout-chat-a9157c1597fdd5c3c5438193f9d8e60d.js.map

@@ -10245,13 +10245,6 @@ webpackJsonp([43], {
                                 }
                             })
                         })
-                    }, t.getMinDateDefault = function() {
-                        var e = t.props.data.currentUser.paymentTransactions.firstPurchasedAt;
-                        return e ? Object(he.c)(e) : new Date((new Date).getFullYear(), 0, 1)
-                    }, t.getMaxDateDefault = function() {
-                        var e = t.props.data.currentUser.paymentTransactions.lastPurchasedAt,
-                            a = new Date;
-                        return e ? Object(he.c)(e) : new Date(a.getFullYear(), a.getMonth(), a.getDay())
                     }, t.handleMinDate = function(e) {
                         return _.__awaiter(t, void 0, void 0, function() {
                             var t;
@@ -10288,18 +10281,20 @@ webpackJsonp([43], {
                         })
                     }, t
                 }
-                return _.__extends(t, e), t.prototype.render = function() {
+                return _.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
+                    this.props.data.loading && !e.data.loading && this.initializeDateFilterState(e.data.currentUser.paymentTransactions.firstPurchasedAt, e.data.currentUser.paymentTransactions.lastPurchasedAt)
+                }, t.prototype.componentDidMount = function() {
+                    this.props.data.currentUser && this.initializeDateFilterState(this.props.data.currentUser.paymentTransactions.firstPurchasedAt, this.props.data.currentUser.paymentTransactions.lastPurchasedAt)
+                }, t.prototype.render = function() {
                     if (this.props.data.loading) return u.createElement(g._4, {
                         fillContent: !0
                     });
-                    var e = this.getMinDateDefault(),
-                        t = this.getMaxDateDefault(),
-                        a = this.props.data.currentUser.paymentTransactions.edges.map(function(e, t) {
-                            var a = e.node;
-                            return u.createElement(ze, _.__assign({
-                                key: t
-                            }, a))
-                        });
+                    var e = this.props.data.currentUser.paymentTransactions.edges.map(function(e) {
+                        var t = e.node;
+                        return u.createElement(ze, _.__assign({
+                            key: t.id
+                        }, t))
+                    });
                     return u.createElement(g._2, null, u.createElement(g._2, {
                         display: g.N.Flex,
                         justifyContent: g._1.Between,
@@ -10318,8 +10313,10 @@ webpackJsonp([43], {
                     }, u.createElement(g._35, {
                         bold: !0
                     }, Object(m.d)("Start", "TransactionHistoryTab")), u.createElement(Oe.a, {
-                        defaultDate: e,
-                        onChange: this.handleMinDate
+                        defaultDate: this.state.currentFilters.purchasedAfter,
+                        maxDate: this.state.currentFilters.purchasedBefore,
+                        onChange: this.handleMinDate,
+                        "data-test-selector": "purchased-after-date-picker-selector"
                     }))), u.createElement(g.J, {
                         cols: 6
                     }, u.createElement(g._2, {
@@ -10328,8 +10325,10 @@ webpackJsonp([43], {
                     }, u.createElement(g._35, {
                         bold: !0
                     }, Object(m.d)("End", "TransactionHistoryTab")), u.createElement(Oe.a, {
-                        defaultDate: t,
-                        onChange: this.handleMaxDate
+                        defaultDate: this.state.currentFilters.purchasedBefore,
+                        minDate: this.state.currentFilters.purchasedAfter,
+                        onChange: this.handleMaxDate,
+                        "data-test-selector": "purchased-before-date-picker-selector"
                     }))))), u.createElement(g._2, {
                         display: g.N.Flex
                     }, u.createElement(g._2, {
@@ -10377,13 +10376,24 @@ webpackJsonp([43], {
                         "data-test-selector": "price-table-heading-selector"
                     }), u.createElement(g._32, {
                         label: Object(m.d)("Payment Method", "TransactionHistoryTab")
-                    })), u.createElement(g._29, null, a)), !a.length && this.renderNoTransactionsMessage()), u.createElement(We, {
+                    })), u.createElement(g._29, null, e)), !e.length && this.renderNoTransactionsMessage()), u.createElement(We, {
                         currentPage: this.getCurrentPage(),
                         totalNumberPages: this.getTotalPages(),
                         onNext: this.handleNextPage,
                         onBack: this.handlePreviousPage,
                         onPageJump: this.handlePageJump
                     }))
+                }, t.prototype.initializeDateFilterState = function(e, t) {
+                    var a = new Date,
+                        n = e ? Object(he.c)(e) : new Date((new Date).getFullYear(), 0, 1),
+                        r = t ? Object(he.c)(t) : new Date(a.getFullYear(), a.getMonth(), a.getDay()),
+                        s = _.__assign({}, this.state.currentFilters, {
+                            purchasedAfter: n,
+                            purchasedBefore: r
+                        });
+                    this.setState({
+                        currentFilters: s
+                    })
                 }, t
             }(u.Component),
             Be = Object(s.d)(Object(f.a)(Ie), Object(f.a)(Je, {
@@ -11567,6 +11577,7 @@ webpackJsonp([43], {
                         onSelect: this.props.onChange,
                         theme: "inline",
                         minDate: this.props.minDate,
+                        maxDate: this.props.maxDate,
                         defaultDate: this.props.defaultDate,
                         setDefaultDate: !0,
                         container: this.containerElement,
@@ -11575,8 +11586,8 @@ webpackJsonp([43], {
                             return Object(r.format)(e, t)
                         }
                     })
-                }, t.prototype.componentWillReceiveProps = function(e) {
-                    this.setDateIfChanged(this.props.defaultDate, e.defaultDate)
+                }, t.prototype.componentDidUpdate = function(e) {
+                    (this.dateDidChange(e.minDate, this.props.minDate) || this.dateDidChange(e.maxDate, this.props.maxDate)) && this.setDateRangeIfPresent(this.props.minDate, this.props.maxDate), this.dateDidChange(e.minDate, this.props.defaultDate) && this.setDate(this.props.defaultDate)
                 }, t.prototype.render = function() {
                     var e = {};
                     return this.props.readOnly && (e.readOnly = !0), i.createElement(d._2, {
@@ -11588,9 +11599,12 @@ webpackJsonp([43], {
                         className: "date-picker__container",
                         ref: this.setContainerRef
                     }))
-                }, t.prototype.setDateIfChanged = function(e, t) {
-                    var a = e ? e.getTime() : null;
-                    (t ? t.getTime() : null) !== a && (null === t && (this.textInput.value = ""), this._picker.setDate(t || new Date, !0))
+                }, t.prototype.setDate = function(e) {
+                    e || (this.textInput.value = ""), this._picker.setDate(e || new Date, !0)
+                }, t.prototype.setDateRangeIfPresent = function(e, t) {
+                    e && this._picker.setMinDate(e), t && this._picker.setMaxDate(t)
+                }, t.prototype.dateDidChange = function(e, t) {
+                    return (e ? e.getTime() : null) !== (t ? t.getTime() : null)
                 }, t
             }(i.Component));
         a.d(t, "a", function() {
@@ -13211,4 +13225,4 @@ webpackJsonp([43], {
         })(a("PJh5"))
     }
 });
-//# sourceMappingURL=pages.payments-a5f8337bc77fb4584d75a2af83bb1350.js.map
+//# sourceMappingURL=pages.payments-d19bbe87fddb7915b3331742a335f6dc.js.map

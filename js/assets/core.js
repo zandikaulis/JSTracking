@@ -1061,6 +1061,7 @@ webpackJsonp([67], {
                 ImageUpload: "user-image-update",
                 ModerationActionsByUserAndChannel: "chat_moderator_actions",
                 OnsiteNotifications: "onsite-notifications",
+                PayoutOnboardingEvents: "payout-onboarding-events",
                 Presence: "presence",
                 Raid: "raid",
                 StreamChange: "stream-change-v1",
@@ -1097,6 +1098,7 @@ webpackJsonp([67], {
                 OnsiteNotificationsRead: "read-notifications",
                 OnsiteNotificationSummaryUpdate: "update-summary",
                 OnsiteNotificationUpdate: "update-notification",
+                PayoutOnboardingEvent: "payout-onboarding-event",
                 Presence: "presence",
                 PresenceSettings: "settings",
                 PurgeMessageRequest: "purge_messages_request",
@@ -11284,6 +11286,7 @@ webpackJsonp([67], {
                 SubWithPrime: "samus_spend_credit"
             })
     },
+    D3yV: function(e, t) {},
     DBTH: function(e, t, n) {
         "use strict";
         n.d(t, "f", function() {
@@ -13935,12 +13938,12 @@ webpackJsonp([67], {
                 "4d3d19a7-38c5-4328-9730-7d99565d5edd": "no",
                 "ef25ca44-13bd-4e89-99d2-f9939c013fec": "off",
                 "a9667563-723a-4cf7-b253-674d9eef0a53": "control",
-                "54b18ea6-2b6a-4ed7-9128-2497572d31e2": "control",
                 "74156eb2-ed95-482c-b006-60c1428e8846": "control",
                 "e9fe3136-84bc-4a61-9079-0c7df78abeb3": "control",
                 "47c76558-9d79-4181-9e43-d7c440a1a148": "control",
                 "9619b63b-2e9a-4e20-af4b-cce72346691d": "control",
                 "29a37cfd-6a34-4624-970f-6b155b40636b": "control",
+                "5c8e4a59-8c63-4000-9c4e-6224f34b7c21": "control",
                 "72c14aa9-d78d-4095-8f27-d97b9aac4233": "no",
                 "1f57c754-ceb2-40e4-8d49-c51cfc007f14": "no",
                 "afc307f3-4011-40ba-9406-56c474b5922b": "control",
@@ -13961,12 +13964,12 @@ webpackJsonp([67], {
                 TWILIGHT_PREMIERE_UPLOAD_FLOW: "4d3d19a7-38c5-4328-9730-7d99565d5edd",
                 STREAMER_TRAILERS: "ef25ca44-13bd-4e89-99d2-f9939c013fec",
                 TWILIGHT_WEB_ONBOARDING: "a9667563-723a-4cf7-b253-674d9eef0a53",
-                TWILIGHT_WEB_ONBOARDING_FOLLOWING_FOR_YOU: "54b18ea6-2b6a-4ed7-9128-2497572d31e2",
                 TWILIGHT_WEB_ONBOARDING_CHANNEL_RANKING: "74156eb2-ed95-482c-b006-60c1428e8846",
                 TWILIGHT_WEB_ONBOARDING_CATEGORIES: "e9fe3136-84bc-4a61-9079-0c7df78abeb3",
                 TWILIGHT_WEB_ONBOARDING_CATEGORIES_ANON_FRONT_PAGE: "47c76558-9d79-4181-9e43-d7c440a1a148",
                 TWILIGHT_WEB_ONBOARDING_FOLLOW_CATEGORIES: "9619b63b-2e9a-4e20-af4b-cce72346691d",
                 TWILIGHT_WEB_ONBOARDING_RANDOMIZED_GAMES: "29a37cfd-6a34-4624-970f-6b155b40636b",
+                TWILIGHT_WEB_ONBOARDING_CHANNEL_SURFING: "5c8e4a59-8c63-4000-9c4e-6224f34b7c21",
                 TWILIGHT_SUB_CHECKOUT_POPUP: "72c14aa9-d78d-4095-8f27-d97b9aac4233",
                 TWILIGHT_SUB_CHECKOUT: "1f57c754-ceb2-40e4-8d49-c51cfc007f14",
                 TWILIGHT_VIDEO_FEATURO_EN: "afc307f3-4011-40ba-9406-56c474b5922b",
@@ -16527,10 +16530,12 @@ webpackJsonp([67], {
                         }))
                     }, t.onMouseLeave = function() {
                         t.props.tooltipLayer.hide()
+                    }, t.onMouseClick = function() {
+                        t.props.tooltipLayer.hide()
                     }, t.addEventListeners = function() {
-                        t.containerRef && (t.containerRef.addEventListener("mouseenter", t.onMouseEnter), t.containerRef.addEventListener("mouseleave", t.onMouseLeave))
+                        t.containerRef && (t.containerRef.addEventListener("mouseenter", t.onMouseEnter), t.containerRef.addEventListener("mouseleave", t.onMouseLeave), t.containerRef.addEventListener("click", t.onMouseClick))
                     }, t.removeEventListeners = function() {
-                        t.containerRef && (t.containerRef.removeEventListener("mouseenter", t.onMouseEnter), t.containerRef.removeEventListener("mouseleave", t.onMouseLeave))
+                        t.containerRef && (t.containerRef.removeEventListener("mouseenter", t.onMouseEnter), t.containerRef.removeEventListener("mouseleave", t.onMouseLeave), t.containerRef.removeEventListener("click", t.onMouseClick))
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -26168,7 +26173,7 @@ webpackJsonp([67], {
                     }), r.createElement(re.d, {
                         path: "/email-verification/:emailOpaqueId",
                         component: Ke
-                    }), S.a.buildType !== se.a.Production && r.createElement(re.d, {
+                    }), r.createElement(re.d, {
                         path: "/ext/:extensionID",
                         component: Pe
                     }), r.createElement(re.d, {
@@ -33807,7 +33812,7 @@ webpackJsonp([67], {
             }(o.Component),
             w = n("Bir6"),
             E = n("Tzcg"),
-            C = function(e) {
+            C = (n("D3yV"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.autocompleteType = h.a.Emote, t.canBeTriggeredByTab = !1, t.getMatches = function(e) {
@@ -33847,6 +33852,7 @@ webpackJsonp([67], {
                             },
                             key: "emote-img-" + e.id
                         }, o.createElement("img", {
+                            className: "emote-autocomplete-provider__image",
                             srcSet: e.srcSet
                         })), o.createElement(u._35, {
                             type: u._40.Span,
@@ -33877,7 +33883,7 @@ webpackJsonp([67], {
                 }, t.contextTypes = {
                     registerAutocompleteProvider: a.func
                 }, t
-            }(o.Component);
+            }(o.Component));
         n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "b", function() {
             return S
         }), n.d(t, "a", function() {
@@ -42905,10 +42911,10 @@ webpackJsonp([67], {
                         var t = null !== n && n.apply(this, arguments) || this;
                         return t.state = {
                             data: null,
-                            loading: !0
-                        }, t.fetchExtensions = function() {
+                            loading: !1
+                        }, t.fetchExtensions = function(n) {
                             return i.__awaiter(t, void 0, void 0, function() {
-                                var t, n, a;
+                                var t, a;
                                 return i.__generator(this, function(i) {
                                     switch (i.label) {
                                         case 0:
@@ -42916,19 +42922,18 @@ webpackJsonp([67], {
                                                 loading: !0
                                             }), t = null, i.label = 1;
                                         case 1:
-                                            return i.trys.push([1, 3, , 4]), n = e.options(this.props).variables.channelID, [4, r.extensionService.getInstalledExtensions(n)];
+                                            return i.trys.push([1, 3, , 4]), n = n || e.options(this.props).variables.channelID, [4, r.extensionService.getInstalledExtensions(n)];
                                         case 2:
                                             return a = i.sent(), t = Object(p.extensionInstallationsFromRest)(a), [3, 4];
                                         case 3:
                                             return i.sent(), this.setState({
-                                                data: null,
                                                 loading: !1,
                                                 error: "Failed to load data."
                                             }), [3, 4];
                                         case 4:
                                             return this.setState({
-                                                data: t,
-                                                loading: !1
+                                                loading: !1,
+                                                data: t
                                             }), [2]
                                     }
                                 })
@@ -42936,19 +42941,24 @@ webpackJsonp([67], {
                         }, t
                     }
                     return i.__extends(a, n), a.prototype.componentDidMount = function() {
-                        this.fetchExtensions()
+                        if (!this.shouldSkip(this.props)) {
+                            var t = e.options(this.props).variables.channelID;
+                            this.fetchExtensions(t)
+                        }
                     }, a.prototype.componentWillReceiveProps = function(t) {
-                        e.options(this.props).variables.channelID !== e.options(t).variables.channelID && this.setState({
-                            data: null,
-                            loading: !0
-                        }, this.fetchExtensions)
+                        if (!this.shouldSkip(t)) {
+                            var n = e.options(this.props).variables.channelID,
+                                i = e.options(t).variables.channelID;
+                            n !== i && this.fetchExtensions(i)
+                        }
                     }, a.prototype.render = function() {
-                        var n, r = ((n = {})[e.name || "data"] = {
-                            data: this.state.data,
-                            loading: this.state.loading,
+                        if (this.shouldSkip(this.props)) return o.createElement(t, i.__assign({}, this.props));
+                        var n, r = ((n = {})[e.name || "data"] = i.__assign({
                             refetch: this.fetchExtensions
-                        }, n);
+                        }, this.state), n);
                         return o.createElement(t, i.__assign({}, this.props, r))
+                    }, a.prototype.shouldSkip = function(t) {
+                        return void 0 !== e.skip && ("function" == typeof e.skip ? e.skip(t) : e.skip)
                     }, a
                 }(o.Component)
             }
@@ -43034,4 +43044,4 @@ webpackJsonp([67], {
             }(r.Component))
     }
 }, [5]);
-//# sourceMappingURL=core-cbeef19c13101fcbc7decc488671dd57.js.map
+//# sourceMappingURL=core-c162fce663bd90e6cef6d440e0ff9c80.js.map
