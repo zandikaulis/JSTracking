@@ -2910,6 +2910,18 @@ window.SiteOptions = {
                 "value": "no"
             }]
         },
+        "85ef02f8-911c-45f4-9042-8e0c9d9face3": {
+            "name": "android_onboarding_surf",
+            "v": 3253,
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "active"
+            }, {
+                "weight": 100,
+                "value": "control"
+            }]
+        },
         "8620d12c-8e03-48d8-92ab-65a8d542a17d": {
             "name": "Extensions Launch Announcement",
             "v": 1981,
@@ -4545,24 +4557,6 @@ window.SiteOptions = {
                 "value": "control"
             }]
         },
-        "d6386417-a815-4c24-a21b-20e78d5a9e07": {
-            "name": "android_onboarding_1_2",
-            "v": 2490,
-            "t": 1,
-            "groups": [{
-                "weight": 0,
-                "value": "control"
-            }, {
-                "weight": 0,
-                "value": "variant_a"
-            }, {
-                "weight": 100,
-                "value": "variant_b"
-            }, {
-                "weight": 0,
-                "value": "variant_c"
-            }]
-        },
         "d6ba259c-3f82-48ac-b158-bf4760fc864b": {
             "name": "android_playercore_6",
             "v": 1596,
@@ -4998,14 +4992,14 @@ window.SiteOptions = {
         },
         "ec70bd08-dbc8-4f48-9f60-d035fec3eb20": {
             "name": "CVP Player Core 2.0 Mediaplayer Experiment Aug 2017",
-            "v": 3230,
+            "v": 3254,
             "t": 1,
             "groups": [{
-                "weight": 90,
+                "weight": 95,
                 "value": "2.2.404"
             }, {
-                "weight": 10,
-                "value": "2.3.1"
+                "weight": 5,
+                "value": "2.3.2"
             }]
         },
         "ed516213-9b6f-49a0-96f7-1706aafc8e2d": {
