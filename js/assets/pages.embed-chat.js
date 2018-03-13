@@ -3765,7 +3765,7 @@ webpackJsonp([34], {
                 }
             }))(pt);
         ! function(e) {
-            e.Weekly = "WEEK", e.AllTime = "ALLTIME"
+            e.Weekly = "WEEK", e.AllTime = "ALLTIME", e.Monthly = "MONTHLY"
         }(rt || (rt = {}));
         n("GuSj");
         var ht = function(e) {
@@ -3835,7 +3835,7 @@ webpackJsonp([34], {
                     }, "Bits--PinnedCheerV2"));
                 return n < 1 && (i = d.createElement(A._35, {
                     type: A._40.Span
-                }, Object(r.d)("Resets in less than a day", "Bits--PinnedCheerV2"))), this.props.leaderboardMode === rt.AllTime && (e = Object(r.d)("All-time Top Cheerers", "Bits--PinnedCheerV2"), i = null), d.createElement(A._2, {
+                }, Object(r.d)("Resets in less than a day", "Bits--PinnedCheerV2"))), this.props.leaderboardMode === rt.AllTime ? (e = Object(r.d)("All-time Top Cheerers", "Bits--PinnedCheerV2"), i = null) : this.props.leaderboardMode === rt.Monthly && (e = Object(r.d)("Monthly Top Cheerers", "Bits--PinnedCheerV2")), d.createElement(A._2, {
                     display: A.N.Flex,
                     alignItems: A.c.Center,
                     flexDirection: A.P.Column
@@ -7721,6 +7721,7 @@ webpackJsonp([34], {
                         position: A._9.Absolute,
                         "data-a-target": "chat-user-card"
                     }, d.createElement(qi.a, {
+                        isPopout: this.props.isPopout,
                         isEmbedded: this.props.isEmbedded,
                         onSendMessage: this.props.onSendMessage,
                         channelID: this.props.channelID
@@ -10898,11 +10899,19 @@ webpackJsonp([34], {
                     }, t
                 }
                 return c.__extends(t, e), t.prototype.render = function() {
-                    var e = Object(u.d)("Whisper", "WhisperButton");
-                    return d.createElement(m.u, {
-                        onClick: this.handleClick,
-                        "data-a-target": "usercard-whisper-button"
-                    }, e)
+                    var e = !this.props.isPopout,
+                        t = Object(u.d)("Whisper", "WhisperButton"),
+                        n = d.createElement(m.u, {
+                            disabled: !e,
+                            onClick: this.handleClick,
+                            "data-a-target": "usercard-whisper-button",
+                            "data-test-selector": "whisper-button"
+                        }, t);
+                    return e ? n : d.createElement(m._43, {
+                        align: m._44.Left,
+                        direction: m._45.Top,
+                        label: Object(u.d)("Whispers are disabled in popout chat", "WhispersDisabledText")
+                    }, n)
                 }, t = c.__decorate([Object(p.d)("WhisperButton", {
                     autoReportInteractive: !0
                 })], t)
@@ -24693,6 +24702,7 @@ webpackJsonp([34], {
                     var e = Object(B.a)(this.props.data.currentUser.id, this.props.data.targetUser.id);
                     return u.createElement(g.a, {
                         onClick: this.onWhisperButtonClick,
+                        isPopout: this.props.isPopout,
                         threadID: e
                     })
                 }, t.prototype.renderGiftSubscriptionButton = function() {
@@ -24831,6 +24841,7 @@ webpackJsonp([34], {
                         }, u.createElement(W, {
                             channelID: this.props.channelID,
                             hideViewerCard: this.props.hideViewerCard,
+                            isPopout: this.props.isPopout,
                             isEmbedded: this.props.isEmbedded,
                             sendMessageToTMI: this.props.onSendMessage,
                             showReportUserModal: this.props.showReportUserModal,
@@ -34245,4 +34256,4 @@ webpackJsonp([34], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.embed-chat-43680ee629c744e2baff314b4e3fad5a.js.map
+//# sourceMappingURL=pages.embed-chat-9f8c4cd5957a6dfe727b2a095af1f1de.js.map

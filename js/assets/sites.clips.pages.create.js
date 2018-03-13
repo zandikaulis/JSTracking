@@ -1,23 +1,34 @@
 webpackJsonp([64], {
-    "7WFF": function(e, n, t) {
+    "7WFF": function(t, e, n) {
         "use strict";
-        Object.defineProperty(n, "__esModule", {
+        Object.defineProperty(e, "__esModule", {
             value: !0
         });
-        var r = t("TToO"),
-            u = t("GiK3"),
-            o = t("Odds"),
-            i = function(e) {
-                function n() {
-                    return null !== e && e.apply(this, arguments) || this
+        var s = n("TToO"),
+            o = n("GiK3"),
+            r = n("CIox"),
+            a = n("Odds"),
+            p = function(t) {
+                function e() {
+                    return null !== t && t.apply(this, arguments) || this
                 }
-                return r.__extends(n, e), n.prototype.render = function() {
-                    return u.createElement(o._2, null, "Create a clip!")
-                }, n
-            }(u.Component);
-        t.d(n, "ClipsCreate", function() {
-            return i
+                return s.__extends(e, t), e.prototype.render = function() {
+                    var t;
+                    return "/:slug/edit" === this.props.match.path ? (t = this.props.match.params.slug, o.createElement(r.a, {
+                        to: {
+                            pathname: "/create",
+                            state: {
+                                slug: t
+                            }
+                        }
+                    })) : this.props.location.state && this.props.location.state.slug ? (t = this.props.location.state.slug, o.createElement(a._2, null, t)) : o.createElement(r.a, {
+                        to: "/"
+                    })
+                }, e
+            }(o.Component);
+        n.d(e, "ClipsCreate", function() {
+            return p
         })
     }
 });
-//# sourceMappingURL=sites.clips.pages.create-fa192a1a9ee29c95aa8c548c71b3efb4.js.map
+//# sourceMappingURL=sites.clips.pages.create-d280644ac0e045e1290d6b5294bd8b10.js.map

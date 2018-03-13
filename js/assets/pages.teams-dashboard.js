@@ -6793,7 +6793,8 @@ webpackJsonp([41], {
         });
         var o = a("TToO"),
             s = a("OAwv"),
-            d = {
+            d = a("u4Vk"),
+            l = {
                 referral: {
                     internalChannel: function(e) {
                         return e
@@ -6807,10 +6808,10 @@ webpackJsonp([41], {
                 }
             };
 
-        function l(e, t) {
-            void 0 === t && (t = d);
+        function u(e, t) {
+            void 0 === t && (t = l);
             var a, n = e.video_play_demographics.reduce(function(e, t) {
-                return e.totals.geographical += c(e.counts.geographical, t.geographical), e.totals.referral.internalChannel += c(e.counts.referral.internalChannel, t.referral.internal_channel || {}), e.totals.referral.internalTwitch += c(e.counts.referral.internalTwitch, t.referral.internal_twitch || {}), e.totals.referral.external += c(e.counts.referral.external, t.referral.external || {}), e.totals.platform += c(e.counts.platform, t.platform), e
+                return e.totals.geographical += m(e.counts.geographical, t.geographical), e.totals.referral.internalChannel += m(e.counts.referral.internalChannel, t.referral.internal_channel || {}), e.totals.referral.internalTwitch += m(e.counts.referral.internalTwitch, t.referral.internal_twitch || {}), e.totals.referral.external += m(e.counts.referral.external, t.referral.external || {}), e.totals.platform += m(e.counts.platform, t.platform), e
             }, {
                 counts: {
                     geographical: {},
@@ -6832,9 +6833,9 @@ webpackJsonp([41], {
                 }
             });
             return n.counts.referral = {
-                internalChannel: u(n.counts.referral.internalChannel, t.referral.internalChannel),
-                internalTwitch: u(n.counts.referral.internalTwitch, t.referral.internalTwitch),
-                external: u(n.counts.referral.external, t.referral.external)
+                internalChannel: c(n.counts.referral.internalChannel, t.referral.internalChannel),
+                internalTwitch: c(n.counts.referral.internalTwitch, t.referral.internalTwitch),
+                external: c(n.counts.referral.external, t.referral.external)
             }, {
                 videoPlayCount: e.video_play_count,
                 totals: {
@@ -6847,66 +6848,66 @@ webpackJsonp([41], {
                         all: n.totals.referral.internalChannel + n.totals.referral.internalTwitch + n.totals.referral.external
                     }
                 },
-                byLocation: (a = n, _(a.counts.geographical, function(e, t) {
+                byLocation: (a = n, f(a.counts.geographical, function(e, t) {
                     return {
                         name: e,
                         count: t,
-                        share: h(t / a.totals.geographical)
+                        share: _(t / a.totals.geographical)
                     }
-                })).sort(m),
+                })).sort(h),
                 byReferralType: {
                     internalChannel: function(e) {
-                        return _(e.counts.referral.internalChannel, function(t, a) {
+                        return f(e.counts.referral.internalChannel, function(t, a) {
                             return {
                                 name: t,
                                 count: a,
-                                share: h(a / e.totals.referral.internalChannel)
+                                share: _(a / e.totals.referral.internalChannel)
                             }
                         })
-                    }(n).sort(m),
+                    }(n).sort(h),
                     internalTwitch: function(e) {
-                        return _(e.counts.referral.internalTwitch, function(t, a) {
+                        return f(e.counts.referral.internalTwitch, function(t, a) {
                             return {
                                 name: t,
                                 count: a,
-                                share: h(a / e.totals.referral.internalTwitch)
+                                share: _(a / e.totals.referral.internalTwitch)
                             }
                         })
-                    }(n).sort(m),
+                    }(n).sort(h),
                     external: function(e) {
-                        return _(e.counts.referral.external, function(t, a) {
+                        return f(e.counts.referral.external, function(t, a) {
                             return {
                                 name: t,
                                 count: a,
-                                share: h(a / e.totals.referral.external)
+                                share: _(a / e.totals.referral.external)
                             }
                         })
-                    }(n).sort(m),
+                    }(n).sort(h),
                     all: function(e) {
                         var t = o.__assign({}, e.counts.referral.internalChannel, e.counts.referral.internalTwitch, e.counts.referral.external),
                             a = e.totals.referral.internalChannel + e.totals.referral.internalTwitch + e.totals.referral.external;
-                        return _(t, function(e, t) {
+                        return f(t, function(e, t) {
                             return {
                                 name: e,
                                 count: t,
-                                share: h(t / a)
+                                share: _(t / a)
                             }
                         })
-                    }(n).sort(m)
+                    }(n).sort(h)
                 },
                 byPlatform: function(e) {
-                    return _(e.counts.platform, function(t, a) {
+                    return f(e.counts.platform, function(t, a) {
                         return {
                             name: t,
                             count: a,
-                            share: h(a / e.totals.platform)
+                            share: _(a / e.totals.platform)
                         }
                     })
-                }(n).sort(m)
+                }(n).sort(h)
             }
         }
 
-        function u(e, t) {
+        function c(e, t) {
             var a = {};
             for (var n in e) {
                 var r = t(n),
@@ -6916,26 +6917,26 @@ webpackJsonp([41], {
             return a
         }
 
-        function c(e, t) {
+        function m(e, t) {
             var a = 0;
             for (var n in t) e[n] = (e[n] || 0) + t[n], a += t[n];
             return a
         }
 
-        function m(e, t) {
+        function h(e, t) {
             return e.count === t.count ? e.name.localeCompare(t.name) : e.count > t.count ? -1 : 1
         }
 
-        function h(e) {
+        function _(e) {
             return Math.round(100 * e)
         }
 
-        function _(e, t) {
+        function f(e, t) {
             var a = [];
             for (var n in e) a.push(t(n, e[n]));
             return a
         }
-        var f = {
+        var p = {
             videoPlayCount: 0,
             totals: {
                 location: 0,
@@ -6957,13 +6958,13 @@ webpackJsonp([41], {
             }
         };
 
-        function p(e, t) {
+        function g(e, t) {
             return o.__awaiter(this, void 0, void 0, function() {
-                var a, n, r, i, d;
+                var a, n, r, i, l;
                 return o.__generator(this, function(o) {
                     switch (o.label) {
                         case 0:
-                            return a = "/v5/channels/" + e.id + "/analytics/video_play_demographics", n = T(t.start, t.end), r = [a, s.stringify(n)].join("?"), i = {
+                            return a = "/v5/channels/" + e.id + "/analytics/video_play_demographics", n = Object(d.f)(t), r = [a, s.stringify(n)].join("?"), i = {
                                 referral: {
                                     internalChannel: function(t) {
                                         return t === e.name ? "top_nav_bar" : t
@@ -6971,124 +6972,67 @@ webpackJsonp([41], {
                                     internalTwitch: function(e) {
                                         return e
                                     },
-                                    external: y
+                                    external: M
                                 }
-                            }, [4, Object(b.a)({
+                            }, [4, Object(v.a)({
                                 path: r
                             })];
                         case 1:
-                            return (d = o.sent()).isError() ? [2, {
+                            return (l = o.sent()).isError() ? [2, {
                                 isError: !0,
-                                referrals: f
+                                referrals: p
                             }] : [2, {
                                 isError: !1,
-                                referrals: l(d.body, i)
+                                referrals: u(l.body, i)
                             }]
                     }
                 })
             })
         }
-        var g = ["google", "youtube", "facebook", "t.co", "reddit"];
+        var y = ["google", "youtube", "facebook", "t.co", "reddit"];
 
-        function y(e) {
-            return g.find(function(t) {
+        function M(e) {
+            return y.find(function(t) {
                 return e.indexOf(t) >= 0
             }) || e
         }
-        var M, b = a("6w0d"),
-            v = a("b9IH"),
-            L = a("wuJz"),
-            k = 6e4,
-            D = 60 * k,
-            Y = function() {
-                function e(e) {
-                    this.totalMilliseconds = e, this.hours = Math.floor(e / D), this.minutes = Math.floor(e % D / k)
-                }
-                return e.prototype.isSameLengthAs = function(e) {
-                    return this.minutes === e.minutes && this.hours === e.hours
-                }, e.prototype.diff = function(t) {
-                    return new e(this.totalMilliseconds - t.totalMilliseconds)
-                }, e
-            }(),
-            w = function() {
-                function e(e, t) {
-                    this.start = "string" == typeof e ? new Date(e) : e, this.end = "string" == typeof t ? new Date(t) : t, this.duration = new Y(this.end.getTime() - this.start.getTime()), this.hours = this.duration.hours, this.minutes = this.duration.minutes
-                }
-                return e.lastNDays = function(t, a) {
-                    void 0 === a && (a = new Date);
-                    var n = Object(L.endOfDay)(a);
-                    return new e(Object(L.subDays)(n, t), n)
-                }, e.prototype.isSameLengthAs = function(e) {
-                    return this.duration.isSameLengthAs(e.duration)
-                }, e.prototype.diff = function(e) {
-                    return this.duration.diff(e.duration)
-                }, e
-            }();
+        var b, v = a("6w0d"),
+            L = a("b9IH");
 
-        function T(e, t) {
-            return {
-                start_time: e.toJSON(),
-                end_time: t.toJSON()
-            }
-        }
-
-        function x(e, t, a) {
+        function k(e, t, a) {
             return e.sort(function(e, n) {
                 for (var r = 0; r < t.length; r++) {
                     var i = t[r],
-                        o = a[r] || M.Ascending,
-                        s = S(i(e), i(n)) * o;
+                        o = a[r] || b.Ascending,
+                        s = D(i(e), i(n)) * o;
                     if (0 !== s) return s
                 }
                 return 0
             })
         }
 
-        function S(e, t) {
+        function D(e, t) {
             var a = null != e,
                 n = null != t;
             return a && n ? e > t ? 1 : e < t ? -1 : 0 : a ? -1 : n ? 1 : 0
         }! function(e) {
             e[e.Ascending = 1] = "Ascending", e[e.Descending = -1] = "Descending"
-        }(M || (M = {}));
-        var j = a("6sO2");
-
-        function O(e) {
-            var t = Math.abs(e.hours),
-                a = Math.abs(e.minutes);
-            return t && a ? Object(j.d)("{hours, number}h{minutes, number}m", {
-                hours: t,
-                minutes: a
-            }, "StreamSummaryDuration") : t ? Object(j.d)("{hours, number}h", {
-                hours: t
-            }, "StreamSummaryDuration") : Object(j.d)("{minutes, number}m", {
-                minutes: a
-            }, "StreamSummaryDuration")
-        }
-        a.d(t, "d", function() {
+        }(b || (b = {})), a.d(t, "c", function() {
             return n
         }), a.d(t, "b", function() {
-            return f
-        }), a.d(t, "e", function() {
             return p
-        }), a.d(t, "f", function() {
-            return b.a
-        }), a.d(t, !1, function() {}), a.d(t, !1, function() {
-            return l
-        }), a.d(t, !1, function() {
+        }), a.d(t, "d", function() {
+            return g
+        }), a.d(t, "e", function() {
             return v.a
-        }), a.d(t, "c", function() {
-            return w
-        }), a.d(t, "i", function() {
-            return T
+        }), a.d(t, !1, function() {}), a.d(t, !1, function() {
+            return u
         }), a.d(t, !1, function() {
-            return Y
+            return L.a
         }), a.d(t, "a", function() {
-            return M
-        }), a.d(t, "h", function() {
-            return x
-        }), a.d(t, "g", function() {
-            return O
+            return b
+        }), a.d(t, "f", function() {
+            return k
         })
     },
     PJh5: function(e, t, a) {
@@ -14860,7 +14804,7 @@ webpackJsonp([41], {
                     return u.__generator(this, function(i) {
                         switch (i.label) {
                             case 0:
-                                return a = "/v5/teams/" + e + "/dashboard/members" + (t ? "?" + t + "=true" : ""), [4, Object(X.f)({
+                                return a = "/v5/teams/" + e + "/dashboard/members" + (t ? "?" + t + "=true" : ""), [4, Object(X.e)({
                                     path: a
                                 })];
                             case 1:
@@ -14988,7 +14932,7 @@ webpackJsonp([41], {
                                         return u.__generator(this, function(r) {
                                             switch (r.label) {
                                                 case 0:
-                                                    return e = "/v5/teams/" + a + "/dashboard/invitations", [4, Object(X.f)({
+                                                    return e = "/v5/teams/" + a + "/dashboard/invitations", [4, Object(X.e)({
                                                         path: e
                                                     })];
                                                 case 1:
@@ -15117,16 +15061,14 @@ webpackJsonp([41], {
                     currency: "USD"
                 })
             },
-            pe = 800,
-            ge = 380,
-            ye = function(e) {
+            pe = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return u.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.canvas && (this.setCanvasResolution(), this.myChart = new _e(this.canvas, {
                         type: "bar",
-                        data: be(this.props.datasets, this.props.timestampLabels),
+                        data: ye(this.props.datasets, this.props.timestampLabels),
                         options: {
                             tooltips: {
                                 backgroundColor: "rgba(0,0,0,0.8)",
@@ -15211,12 +15153,10 @@ webpackJsonp([41], {
                 }, t.prototype.componentWillUnmount = function() {
                     this.myChart && this.myChart.destroy()
                 }, t.prototype.componentWillUpdate = function(e) {
-                    this.myChart.data = be(e.datasets, e.timestampLabels), this.myChart.update()
+                    this.myChart.data = ye(e.datasets, e.timestampLabels), this.myChart.update()
                 }, t.prototype.render = function() {
                     var e = this;
-                    return c.createElement(M._2, {
-                        fullWidth: !0
-                    }, c.createElement(M.W, {
+                    return c.createElement(M.W, {
                         flexGrow: 0,
                         flexShrink: 1,
                         fullWidth: !0
@@ -15224,20 +15164,20 @@ webpackJsonp([41], {
                         ref: function(t) {
                             return e.canvas = t
                         }
-                    })))
+                    }))
                 }, t.prototype.setCanvasResolution = function() {
                     if (this.canvas) {
-                        var e = pe,
-                            t = ge,
-                            a = Me(this.canvas.getContext("2d"));
-                        this.canvas.width = e * a, this.canvas.height = t * a, this.canvas.style.width = e + "px", this.canvas.style.height = t + "px", this.canvas.getContext("2d").setTransform(a, 0, 0, a, 0, 0)
+                        var e = ge(this.canvas.getContext("2d"));
+                        this.canvas.height = 36 * e, this.canvas.style.height = "36rem", this.canvas.getContext("2d").setTransform(e, 0, 0, e, 0, 0)
                     }
-                }, t = u.__decorate([Object(y.d)("RevenueCanvas")], t)
+                }, t = u.__decorate([Object(y.d)("RevenueCanvas", {
+                    autoReportInteractive: !0
+                })], t)
             }(c.Component),
-            Me = function(e) {
+            ge = function(e) {
                 return 1 / (e.webkitBackingStorePixelRatio || e.mozBackingStorePixelRatio || e.msBackingStorePixelRatio || e.oBackingStorePixelRatio || e.backingStorePixelRatio || 1)
             },
-            be = function(e, t) {
+            ye = function(e, t) {
                 return {
                     labels: t.slice(0),
                     datasets: e.map(function(e) {
@@ -15263,8 +15203,8 @@ webpackJsonp([41], {
                     })
                 }
             },
-            ve = ye,
-            Le = function(e) {
+            Me = pe,
+            be = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.formatRevenueChartData = function(e) {
@@ -15303,7 +15243,7 @@ webpackJsonp([41], {
                         t = me.map(function(t) {
                             return e[t]
                         });
-                    return c.createElement(ve, {
+                    return c.createElement(Me, {
                         datasets: t,
                         timestampLabels: e.timestampLabels
                     })
@@ -15312,7 +15252,7 @@ webpackJsonp([41], {
         ! function(e) {
             e.Title = "revenue-summary-item-title", e.Symbol = "revenue-summary-item-symbol", e.Dollars = "revenue-summary-item-dollars"
         }(ee || (ee = {}));
-        var ke, De, Ye = function(e) {
+        var ve, Le, ke = function(e) {
                 var t, a;
                 return e.isLoading ? (t = c.createElement(M._35, {
                     type: M._40.H5
@@ -15346,12 +15286,12 @@ webpackJsonp([41], {
                     margin: 1
                 }, t, a)
             },
-            we = function(e) {
+            De = function(e) {
                 var t = e.revenues.reduce(function(e, t) {
                         return e + t.cents
                     }, 0),
                     a = e.revenues.map(function(t, a) {
-                        return c.createElement(Ye, {
+                        return c.createElement(ke, {
                             cents: t.cents,
                             key: a,
                             isLoading: e.isLoading,
@@ -15367,19 +15307,19 @@ webpackJsonp([41], {
                     justifyContent: M._1.Between,
                     alignItems: M.c.Center,
                     padding: 1
-                }, c.createElement(Ye, {
+                }, c.createElement(ke, {
                     cents: t,
                     isLoading: e.isLoading,
                     title: Object(h.d)("Total", "TeamsDashboardRevenueSummaryBrick") + " *"
                 }), a)
             },
-            Te = function(e) {
-                return c.createElement(we, {
+            Ye = function(e) {
+                return c.createElement(De, {
                     isLoading: e.isLoading,
-                    revenues: xe(e.data)
+                    revenues: we(e.data)
                 })
             },
-            xe = function(e) {
+            we = function(e) {
                 var t = {
                     twitch_subscriptions: 0,
                     prime_subscriptions: 0,
@@ -15398,8 +15338,8 @@ webpackJsonp([41], {
                     }
                 })
             },
-            Se = a("+Znq"),
-            je = function(e) {
+            Te = a("+Znq"),
+            xe = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderMenu = function() {
@@ -15413,7 +15353,7 @@ webpackJsonp([41], {
                             a = Object(h.d)("Select All", "TeamsDashboard");
                         return t.props.members.length > j && (a = Object(h.d)("Select First {maxSelected, number}", {
                             maxSelected: j
-                        }, "TeamsDashboard")), c.createElement(Se.a, {
+                        }, "TeamsDashboard")), c.createElement(Te.a, {
                             onToggle: t.toggleOpenClose
                         }, c.createElement(M.u, {
                             dropdown: !0,
@@ -15458,68 +15398,68 @@ webpackJsonp([41], {
                     autoReportInteractive: !0
                 })], t)
             }(c.Component),
-            Oe = function(e, t, a) {
+            Se = function(e, t, a) {
                 return Object.keys(e).reduce(function(a, n) {
                     return a + t(new Date(n), e[n])
                 }, a)
             },
-            He = function(e, t) {
+            je = function(e, t) {
                 var a = encodeURIComponent(e),
                     n = document.createElement("a");
                 n.href = "data:text/csv;charset=utf-8," + a, n.download = t, document.body.appendChild(n), n.click(), document.body.removeChild(n)
             },
-            Ce = function() {
+            Oe = function() {
                 return Object(h.d)("Time Zone", "TeamsDashboard")
             },
-            Pe = function() {
+            He = function() {
                 return Object(h.d)("Export Data", "TeamsDashboard")
             },
+            Ce = function(e) {
+                return Pe(e) + " " + Ae(e)
+            },
+            Pe = function(e) {
+                return e.getUTCFullYear() + "-" + Ee(e.getUTCMonth() + 1) + "-" + Ee(e.getUTCDate())
+            },
             Ae = function(e) {
-                return Ee(e) + " " + Fe(e)
+                return Ee(e.getUTCHours()) + ":" + Ee(e.getUTCMinutes()) + ":" + Ee(e.getUTCSeconds())
             },
             Ee = function(e) {
-                return e.getUTCFullYear() + "-" + We(e.getUTCMonth() + 1) + "-" + We(e.getUTCDate())
-            },
-            Fe = function(e) {
-                return We(e.getUTCHours()) + ":" + We(e.getUTCMinutes()) + ":" + We(e.getUTCSeconds())
-            },
-            We = function(e) {
                 return Object(h.e)(e, {
                     minimumIntegerDigits: 2,
                     maximumFractionDigits: 0
                 })
             },
-            Ie = this,
-            Ne = function(e, t, a, n) {
-                return u.__awaiter(Ie, void 0, void 0, function() {
+            Fe = this,
+            We = function(e, t, a, n) {
+                return u.__awaiter(Fe, void 0, void 0, function() {
                     var r, i;
                     return u.__generator(this, function(o) {
                         switch (o.label) {
                             case 0:
-                                return r = "/v5/teams/" + e + "/revenues?channel_ids=" + t + "&start_date=" + a + "&end_date=" + n + "&fraction=day", [4, Object(X.f)({
+                                return r = "/v5/teams/" + e + "/revenues?channel_ids=" + t + "&start_date=" + a + "&end_date=" + n + "&fraction=day", [4, Object(X.e)({
                                     path: r
                                 })];
                             case 1:
-                                return i = o.sent(), [2, Re(a, n, i.body && i.body.revenues ? i.body.revenues : {})]
+                                return i = o.sent(), [2, Ie(a, n, i.body && i.body.revenues ? i.body.revenues : {})]
                         }
                     })
                 })
             },
-            Re = function(e, t, a) {
-                for (var n = ze(e, t), r = 0, i = Object.keys(a); r < i.length; r++)
+            Ie = function(e, t, a) {
+                for (var n = Ne(e, t), r = 0, i = Object.keys(a); r < i.length; r++)
                     for (var o = i[r], s = 0, d = Object.keys(a[o]); s < d.length; s++) {
                         var l = d[s];
                         if (me.includes(l))
                             for (var u = 0, c = a[o][l]; u < c.length; u++) {
                                 var m = c[u],
-                                    h = Be(m.timestamp);
+                                    h = Re(m.timestamp);
                                 n[h] && (n[h][l] += m.cents)
                             }
                     }
                 return n
             },
-            ze = function(e, t) {
-                for (var a = {}, n = new Date(Be(e)); n < new Date(t); n.setUTCDate(n.getUTCDate() + 1)) a[n.toISOString()] = {
+            Ne = function(e, t) {
+                for (var a = {}, n = new Date(Re(e)); n < new Date(t); n.setUTCDate(n.getUTCDate() + 1)) a[n.toISOString()] = {
                     twitch_subscriptions: 0,
                     prime_subscriptions: 0,
                     bits: 0,
@@ -15527,35 +15467,35 @@ webpackJsonp([41], {
                 };
                 return a
             },
-            Be = function(e) {
+            Re = function(e) {
                 var t = new Date(e);
                 return new Date(Date.UTC(t.getUTCFullYear(), t.getUTCMonth(), t.getUTCDate())).toISOString()
             },
-            Je = function() {
-                var e = Object(h.d)("Date", "TeamsDashboard") + "," + Ce(),
+            ze = function() {
+                var e = Object(h.d)("Date", "TeamsDashboard") + "," + Oe(),
                     t = "," + Object(h.d)("Total", "TeamsDashboard") + "\n";
                 return me.reduce(function(e, t) {
                     return e + "," + he(t)
                 }, e) + t
             },
-            Ve = function(e, t) {
-                var a = Ee(e) + ",UTC",
+            Be = function(e, t) {
+                var a = Pe(e) + ",UTC",
                     n = me.reduce(function(e, a) {
                         return e + Math.round(t[a])
                     }, 0),
-                    r = "," + Ue(n) + "\n";
+                    r = "," + Je(n) + "\n";
                 return me.reduce(function(e, a) {
-                    return e + "," + Ue(t[a])
+                    return e + "," + Je(t[a])
                 }, a) + r
             },
-            Ue = function(e) {
+            Je = function(e) {
                 return Object(h.e)(e / 100, {
                     useGrouping: !1,
                     minimumFractionDigits: 2,
                     maximumFractionDigits: 2
                 })
             },
-            Ge = function(e) {
+            Ve = function(e) {
                 function t(t) {
                     var a = e.call(this, t) || this;
                     return a.toggleMemberChecked = function(e) {
@@ -15574,6 +15514,19 @@ webpackJsonp([41], {
                             groupChecked: e,
                             members: t
                         })
+                    }, a.renderChartLoadingSpinner = function() {
+                        return c.createElement(M._25, {
+                            attachTop: !0,
+                            attachLeft: !0,
+                            background: M.m.Base,
+                            fullHeight: !0,
+                            fullWidth: !0,
+                            position: M._9.Absolute
+                        }, c.createElement(M._4, {
+                            delay: 100,
+                            fillContent: !0,
+                            size: M._23.Large
+                        }))
                     }, a.handleTimeRangeChange = function(e, t) {
                         return u.__awaiter(a, void 0, void 0, function() {
                             var a;
@@ -15582,7 +15535,7 @@ webpackJsonp([41], {
                                     case 0:
                                         return this.setState({
                                             isLoadingRevenues: !0
-                                        }), [4, Ne(this.props.teamName, P(this.state.members), e.toISOString(), t.toISOString())];
+                                        }), [4, We(this.props.teamName, P(this.state.members), e.toISOString(), t.toISOString())];
                                     case 1:
                                         return a = n.sent(), this.setState({
                                             startTime: e,
@@ -15601,7 +15554,7 @@ webpackJsonp([41], {
                                     case 0:
                                         return this.setState({
                                             isLoadingRevenues: !0
-                                        }), [4, Ne(this.props.teamName, P(this.state.members), this.state.startTime.toISOString(), this.state.endTime.toISOString())];
+                                        }), [4, We(this.props.teamName, P(this.state.members), this.state.startTime.toISOString(), this.state.endTime.toISOString())];
                                     case 1:
                                         return e = t.sent(), this.setState({
                                             revenues: e,
@@ -15611,8 +15564,8 @@ webpackJsonp([41], {
                             })
                         })
                     }, a.handleCSVClick = function() {
-                        var e = Oe(a.state.revenues, Ve, Je());
-                        He(e, E(L.Revenue) + " - " + ie(a.state.startTime) + ".csv")
+                        var e = Se(a.state.revenues, Be, ze());
+                        je(e, E(L.Revenue) + " - " + ie(a.state.startTime) + ".csv")
                     }, a.state = {
                         isLoadingMembers: !0,
                         members: [],
@@ -15640,7 +15593,7 @@ webpackJsonp([41], {
                                             return u.__generator(this, function(t) {
                                                 switch (t.label) {
                                                     case 0:
-                                                        return [4, Ne(this.props.teamName, P(this.state.members), this.state.startTime.toISOString(), this.state.endTime.toISOString())];
+                                                        return [4, We(this.props.teamName, P(this.state.members), this.state.startTime.toISOString(), this.state.endTime.toISOString())];
                                                     case 1:
                                                         return e = t.sent(), this.setState({
                                                             isLoadingRevenues: !1,
@@ -15673,7 +15626,7 @@ webpackJsonp([41], {
                         margin: {
                             right: 1
                         }
-                    }, c.createElement(je, {
+                    }, c.createElement(xe, {
                         isDisabled: e,
                         isLoading: this.state.isLoadingMembers,
                         members: this.state.members,
@@ -15692,9 +15645,9 @@ webpackJsonp([41], {
                         icon: M._16.Download,
                         onClick: this.handleCSVClick,
                         type: M.z.Hollow
-                    }, Pe()))), c.createElement(M._2, {
+                    }, He()))), c.createElement(M._2, {
                         margin: 2
-                    }, c.createElement(Te, {
+                    }, c.createElement(Ye, {
                         isLoading: e,
                         data: this.state.revenues
                     }), c.createElement(M._2, {
@@ -15704,19 +15657,22 @@ webpackJsonp([41], {
                     }, c.createElement(M._35, {
                         color: M.I.Alt2
                     }, Object(h.d)("* All revenue values are estimated (in $USD)", "TeamsDashboard")))), c.createElement(M._25, {
-                        padding: 2,
                         background: M.m.Base,
                         borderTop: !0
-                    }, c.createElement(Le, {
+                    }, c.createElement(M._2, {
+                        className: "chart-container",
+                        margin: 2,
+                        position: M._9.Relative
+                    }, c.createElement(be, {
                         data: this.state.revenues
-                    }))))
+                    }), e ? this.renderChartLoadingSpinner() : null))))
                 }, t = u.__decorate([Object(y.d)("RevenuePage", {
                     autoReportInteractive: !0,
                     destination: g.a.TeamsDashboardRevenue
                 })], t)
             }(c.Component),
-            qe = a("F8kA"),
-            Ke = function(e) {
+            Ue = a("F8kA"),
+            Ge = function(e) {
                 var t = e.teamName;
                 return c.createElement(M._25, {
                     className: "side-nav-bar",
@@ -15734,21 +15690,21 @@ webpackJsonp([41], {
                 }, c.createElement(M._35, {
                     type: M._40.H4,
                     fontSize: M.R.Size5
-                }, Object(h.d)("Team Dashboard", "TeamsDashboard"))), c.createElement("ul", null, c.createElement(Ze, {
+                }, Object(h.d)("Team Dashboard", "TeamsDashboard"))), c.createElement("ul", null, c.createElement(qe, {
                     to: "/teams/" + t + "/dashboard/" + L.Revenue,
                     testSelector: "side-nav-revenue"
-                }, E(L.Revenue)), c.createElement(Ze, {
+                }, E(L.Revenue)), c.createElement(qe, {
                     to: "/teams/" + t + "/dashboard/" + L.Stats,
                     testSelector: "side-nav-stats"
-                }, E(L.Stats)), c.createElement(Ze, {
+                }, E(L.Stats)), c.createElement(qe, {
                     to: "/teams/" + t + "/dashboard/" + L.Members
-                }, E(L.Members)), c.createElement(Ze, {
+                }, E(L.Members)), c.createElement(qe, {
                     to: "/teams/" + t + "/dashboard/" + L.FeaturedChannels
-                }, E(L.FeaturedChannels)), c.createElement(Ze, {
+                }, E(L.FeaturedChannels)), c.createElement(qe, {
                     to: "/teams/" + t + "/dashboard/" + L.Settings
                 }, E(L.Settings))))
             },
-            Ze = function(e) {
+            qe = function(e) {
                 return c.createElement("li", null, c.createElement(M.W, {
                     "data-test-selector": e.testSelector,
                     display: M.N.Block,
@@ -15756,29 +15712,30 @@ webpackJsonp([41], {
                         x: 2,
                         y: .5
                     }
-                }, c.createElement(qe.b, {
+                }, c.createElement(Ue.b, {
                     activeClassName: "side-nav-bar__option--active",
                     className: "side-nav-bar__option",
                     exact: !0,
                     to: e.to
                 }, e.children)))
-            };
+            },
+            Ke = a("HM6l");
         ! function(e) {
             e.Background = "background", e.Banner = "banner", e.Logo = "logo"
-        }(ke || (ke = {})),
+        }(ve || (ve = {})),
         function(e) {
             e.JPEG = "image/jpeg", e.PNG = "image/png"
-        }(De || (De = {}));
-        var Xe, Qe = this,
-            $e = function(e, t) {
-                return u.__awaiter(Qe, void 0, void 0, function() {
+        }(Le || (Le = {}));
+        var Ze, Xe = this,
+            Qe = function(e, t) {
+                return u.__awaiter(Xe, void 0, void 0, function() {
                     var a, n;
                     return u.__generator(this, function(r) {
                         switch (r.label) {
                             case 0:
-                                return r.trys.push([0, 3, , 4]), [4, et(e, t)];
+                                return r.trys.push([0, 3, , 4]), [4, $e(e, t)];
                             case 1:
-                                return a = r.sent(), [4, tt(a.url, t)];
+                                return a = r.sent(), [4, et(a.url, t)];
                             case 2:
                                 if (!r.sent()) throw new Error("failed to upload");
                                 return [2, u.__assign({}, t, {
@@ -15792,8 +15749,8 @@ webpackJsonp([41], {
                     })
                 })
             },
-            et = function(e, t) {
-                return u.__awaiter(Qe, void 0, void 0, function() {
+            $e = function(e, t) {
+                return u.__awaiter(Xe, void 0, void 0, function() {
                     var a, n, r;
                     return u.__generator(this, function(i) {
                         switch (i.label) {
@@ -15811,8 +15768,8 @@ webpackJsonp([41], {
                     })
                 })
             },
-            tt = function(e, t) {
-                return u.__awaiter(Qe, void 0, void 0, function() {
+            et = function(e, t) {
+                return u.__awaiter(Xe, void 0, void 0, function() {
                     var a, n;
                     return u.__generator(this, function(r) {
                         switch (r.label) {
@@ -15834,11 +15791,11 @@ webpackJsonp([41], {
                     })
                 })
             },
-            at = a("J8WN");
+            tt = a("J8WN");
         ! function(e) {
             e.HoverWrapper = "hover-wrapper", e.Image = "image", e.Placeholder = "placeholder", e.PlaceholderContainer = "placeholder-container"
-        }(Xe || (Xe = {}));
-        var nt, rt = function(e) {
+        }(Ze || (Ze = {}));
+        var at, nt = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -15861,10 +15818,10 @@ webpackJsonp([41], {
                         fullHeight: !0,
                         fullWidth: !0
                     }, c.createElement("div", {
-                        "data-test-selector": Xe.HoverWrapper,
+                        "data-test-selector": Ze.HoverWrapper,
                         onMouseOut: this.handleMouseHover,
                         onMouseOver: this.handleMouseHover
-                    }, c.createElement(at.a, {
+                    }, c.createElement(tt.a, {
                         allowedFileTypes: this.props.allowedFileTypes,
                         error: this.props.hasErrored,
                         onFilesSubmitted: this.handleFilesSubmitted
@@ -15892,14 +15849,14 @@ webpackJsonp([41], {
                         attachTop: !0,
                         background: t ? M.m.Overlay : 0,
                         color: t ? M.I.Overlay : M.I.Alt2,
-                        "data-test-selector": Xe.PlaceholderContainer,
+                        "data-test-selector": Ze.PlaceholderContainer,
                         display: !e || t ? M.N.Block : M.N.Hide,
                         position: M._9.Absolute
                     }, this.props.isUploading ? this.renderLoadingSpinner() : this.renderPlaceholder()))))))
                 }, t.prototype.renderImage = function() {
                     return c.createElement(M.K, {
                         alt: this.props.imageAlt,
-                        "data-test-selector": Xe.Image,
+                        "data-test-selector": Ze.Image,
                         src: this.props.imageSrc
                     })
                 }, t.prototype.renderLoadingSpinner = function() {
@@ -15910,7 +15867,7 @@ webpackJsonp([41], {
                 }, t.prototype.renderPlaceholder = function() {
                     return c.createElement(M._25, {
                         alignItems: M.c.Center,
-                        "data-test-selector": Xe.Placeholder,
+                        "data-test-selector": Ze.Placeholder,
                         display: M.N.Flex,
                         flexDirection: M.P.Column,
                         fullHeight: !0,
@@ -15926,9 +15883,9 @@ webpackJsonp([41], {
                     }, Object(h.d)("Choose a file", "TeamDashboard")))
                 }, t
             }(c.Component),
-            it = [De.JPEG, De.PNG],
-            ot = 5e5,
-            st = function(e) {
+            rt = [Le.JPEG, Le.PNG],
+            it = 5e5,
+            ot = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -15946,14 +15903,14 @@ webpackJsonp([41], {
                                         return u.__generator(this, function(i) {
                                             switch (i.label) {
                                                 case 0:
-                                                    if (a = it.includes(e.type), n = e.size <= ot, !a || !n) return [2, this.setState({
+                                                    if (a = rt.includes(e.type), n = e.size <= it, !a || !n) return [2, this.setState({
                                                         hasErrored: !0
                                                     })];
                                                     i.label = 1;
                                                 case 1:
                                                     return i.trys.push([1, 3, 4, 5]), this.setState({
                                                         isUploading: !0
-                                                    }), [4, $e(this.props.teamName, {
+                                                    }), [4, Qe(this.props.teamName, {
                                                         category: this.props.imageCategory,
                                                         fileType: e.type,
                                                         id: null,
@@ -15981,8 +15938,8 @@ webpackJsonp([41], {
                     }, t
                 }
                 return u.__extends(t, e), t.prototype.render = function() {
-                    return c.createElement(rt, {
-                        allowedFileTypes: it,
+                    return c.createElement(nt, {
+                        allowedFileTypes: rt,
                         hasErrored: this.state.hasErrored,
                         imageAlt: this.props.imageAlt,
                         imageCategory: this.props.imageCategory,
@@ -15992,8 +15949,8 @@ webpackJsonp([41], {
                     })
                 }, t
             }(c.Component),
-            dt = this,
-            lt = function(e) {
+            st = this,
+            dt = function(e) {
                 var t = e.team;
                 return {
                     name: t.name,
@@ -16007,9 +15964,9 @@ webpackJsonp([41], {
                     backgroundImageURL: t.background_image_url
                 }
             },
-            ut = this,
-            ct = function(e) {
-                return u.__awaiter(ut, void 0, void 0, function() {
+            lt = this,
+            ut = function(e) {
+                return u.__awaiter(lt, void 0, void 0, function() {
                     var t, a, n;
                     return u.__generator(this, function(r) {
                         switch (r.label) {
@@ -16024,16 +15981,16 @@ webpackJsonp([41], {
                                     body: a
                                 })];
                             case 1:
-                                return (n = r.sent()).body && 200 === n.status ? [2, lt(n.body)] : [2, Promise.reject(n.error)]
+                                return (n = r.sent()).body && 200 === n.status ? [2, dt(n.body)] : [2, Promise.reject(n.error)]
                         }
                     })
                 })
             },
-            mt = 1e3;
+            ct = 1e3;
         ! function(e) {
             e.PageTitle = "settings-page-title", e.FormGroupDisplayName = "form-group-display-name", e.FormGroupDescription = "form-group-description", e.FormGroupLogo = "form-group-logo", e.FormGroupBanner = "form-group-banner", e.FormGroupBackground = "form-group-background", e.Button = "button"
-        }(nt || (nt = {}));
-        var ht, _t, ft = function(e) {
+        }(at || (at = {}));
+        var mt, ht, _t = function(e) {
             function t(t) {
                 var a = e.call(this, t) || this;
                 return a.setTeam = function(e) {
@@ -16075,7 +16032,7 @@ webpackJsonp([41], {
                                         isSaving: !0
                                     }), a.label = 1;
                                 case 1:
-                                    return a.trys.push([1, 3, , 4]), [4, ct(this.state.team)];
+                                    return a.trys.push([1, 3, , 4]), [4, ut(this.state.team)];
                                 case 2:
                                     return e = a.sent(), [3, 4];
                                 case 3:
@@ -16086,7 +16043,7 @@ webpackJsonp([41], {
                                         t.setState({
                                             didError: !1
                                         })
-                                    }, mt), [2];
+                                    }, ct), [2];
                                 case 4:
                                     return this.setState({
                                         didSave: !0,
@@ -16097,7 +16054,7 @@ webpackJsonp([41], {
                                         t.setState({
                                             didSave: !1
                                         })
-                                    }, mt), this.props.onUpdate(e), [2]
+                                    }, ct), this.props.onUpdate(e), [2]
                             }
                         })
                     })
@@ -16117,23 +16074,26 @@ webpackJsonp([41], {
                     didError: !1,
                     didSave: !1,
                     team: t.team
-                }, a
+                }, a.inputID = Object(Ke.b)(), a.textAreaID = Object(Ke.b)(), a
             }
             return u.__extends(t, e), t.prototype.render = function() {
                 var e = this.state.team;
                 return c.createElement(w, {
                     title: E(L.Settings),
-                    titleSelector: nt.PageTitle
+                    titleSelector: at.PageTitle
                 }, c.createElement(M._2, {
                     className: "settings-page"
                 }, c.createElement(M._2, {
                     fullWidth: !0
                 }, c.createElement(M.S, {
-                    "data-test-selector": nt.FormGroupDisplayName,
+                    "data-test-selector": at.FormGroupDisplayName,
                     error: !e.displayName,
+                    id: this.inputID,
                     label: Object(h.d)("Display Name", "TeamsDashboard")
                 }, c.createElement(M.Y, {
+                    disabled: this.state.isSaving,
                     error: !e.displayName,
+                    id: this.inputID,
                     maxLength: 65,
                     onChange: this.handleDisplayNameChange,
                     required: !0,
@@ -16145,11 +16105,14 @@ webpackJsonp([41], {
                     },
                     fullWidth: !0
                 }, c.createElement(M.S, {
-                    "data-test-selector": nt.FormGroupDescription,
+                    "data-test-selector": at.FormGroupDescription,
+                    id: this.textAreaID,
                     label: Object(h.d)("Description", "TeamsDashboard"),
                     labelOptional: this.formatOptionalLabel(),
                     hint: Object(h.d)("Supports Markdown", "TeamsDashboard")
                 }, c.createElement(M._37, {
+                    disabled: this.state.isSaving,
+                    id: this.textAreaID,
                     maxLength: 1e4,
                     noResize: !0,
                     onChange: this.handleDescriptionChange,
@@ -16160,15 +16123,15 @@ webpackJsonp([41], {
                         top: 2
                     }
                 }, c.createElement(M.S, {
-                    "data-test-selector": nt.FormGroupLogo,
+                    "data-test-selector": at.FormGroupLogo,
                     label: this.formatLogoLabel(),
                     labelOptional: this.formatOptionalLabel(),
                     hint: Object(h.d)("Square JPG or PNG at least 600x600px. Max 500 KB.", "TeamsDashboard")
                 }, c.createElement(M._2, {
                     className: "logo"
-                }, c.createElement(st, {
+                }, c.createElement(ot, {
                     imageAlt: this.formatLogoLabel(),
-                    imageCategory: ke.Logo,
+                    imageCategory: ve.Logo,
                     imageSrc: e.logoURL,
                     onUpload: this.handleLogoUpload,
                     teamName: e.name
@@ -16177,16 +16140,16 @@ webpackJsonp([41], {
                         top: 2
                     }
                 }, c.createElement(M.S, {
-                    "data-test-selector": nt.FormGroupBanner,
+                    "data-test-selector": at.FormGroupBanner,
                     label: this.formatBannerLabel(),
                     labelOptional: this.formatOptionalLabel(),
                     hint: Object(h.d)("JPG or PNG at least 640x125px. Max 500 KB.", "TeamsDashboard")
                 }, c.createElement(M._2, {
                     fullWidth: !0,
                     className: "banner"
-                }, c.createElement(st, {
+                }, c.createElement(ot, {
                     imageAlt: this.formatBannerLabel(),
-                    imageCategory: ke.Banner,
+                    imageCategory: ve.Banner,
                     imageSrc: e.bannerURL,
                     onUpload: this.handleBannerUpload,
                     teamName: e.name
@@ -16195,16 +16158,16 @@ webpackJsonp([41], {
                         top: 2
                     }
                 }, c.createElement(M.S, {
-                    "data-test-selector": nt.FormGroupBackground,
+                    "data-test-selector": at.FormGroupBackground,
                     label: this.formatBackgroundLabel(),
                     labelOptional: this.formatOptionalLabel(),
                     hint: Object(h.d)("JPG or PNG. Max 500 KB.", "TeamsDashboard")
                 }, c.createElement(M._2, {
                     fullWidth: !0,
                     className: "background"
-                }, c.createElement(st, {
+                }, c.createElement(ot, {
                     imageAlt: this.formatBackgroundLabel(),
-                    imageCategory: ke.Background,
+                    imageCategory: ve.Background,
                     imageSrc: e.backgroundImageURL,
                     onUpload: this.handleBackgroundUpload,
                     teamName: e.name
@@ -16216,7 +16179,7 @@ webpackJsonp([41], {
             }, t.prototype.renderButton = function() {
                 var e, t, a, n = !this.fakeEnabled() && (!this.state.team.displayName || !this.state.isDirty || this.state.isSaving);
                 return e = this.state.didSave ? M.y.Success : this.state.isSaving ? M.y.Loading : M.y.Default, t = this.state.didSave ? M.z.Success : this.state.didError ? M.z.Alert : M.z.Default, a = this.state.didError ? Object(h.d)("Save Failed", "TeamsDashboard") : Object(h.d)("Save Changes", "TeamsDashboard"), c.createElement(M.u, {
-                    "data-test-selector": nt.Button,
+                    "data-test-selector": at.Button,
                     disabled: n,
                     onClick: this.handleClick,
                     state: e,
@@ -16234,45 +16197,45 @@ webpackJsonp([41], {
         }(c.Component);
         ! function(e) {
             e.AverageViewers = "AverageViewers", e.MinutesWatched = "MinutesWatched", e.NewFollowers = "NewFollowers", e.AverageChatters = "AverageChatters", e.ChatMessages = "ChatMessages", e.AdBreakDuration = "AdBreakDuration", e.AdBreaks = "AdBreaks"
-        }(ht || (ht = {})),
+        }(mt || (mt = {})),
         function(e) {
             e.Ads = "Ads", e.Audience = "Audience", e.Chat = "Chat"
-        }(_t || (_t = {}));
-        var pt, gt, yt = ((pt = {})[ht.AverageViewers] = "concurrent_viewers", pt[ht.MinutesWatched] = "concurrent_viewers", pt[ht.NewFollowers] = "follows", pt[ht.AverageChatters] = "chat_activities", pt[ht.ChatMessages] = "chat_activities", pt[ht.AdBreakDuration] = "commercials", pt),
-            Mt = ((gt = {})[ht.AverageViewers] = "line", gt[ht.MinutesWatched] = "line", gt[ht.NewFollowers] = "line", gt[ht.AverageChatters] = "bar", gt[ht.ChatMessages] = "bar", gt[ht.AdBreakDuration] = "bar", gt),
-            bt = function(e) {
+        }(ht || (ht = {}));
+        var ft, pt, gt = ((ft = {})[mt.AverageViewers] = "concurrent_viewers", ft[mt.MinutesWatched] = "concurrent_viewers", ft[mt.NewFollowers] = "follows", ft[mt.AverageChatters] = "chat_activities", ft[mt.ChatMessages] = "chat_activities", ft[mt.AdBreakDuration] = "commercials", ft),
+            yt = ((pt = {})[mt.AverageViewers] = "line", pt[mt.MinutesWatched] = "line", pt[mt.NewFollowers] = "line", pt[mt.AverageChatters] = "bar", pt[mt.ChatMessages] = "bar", pt[mt.AdBreakDuration] = "bar", pt),
+            Mt = function(e) {
                 switch (e) {
-                    case _t.Ads:
+                    case ht.Ads:
                         return Object(h.d)("Ads", "TeamsDashboard");
-                    case _t.Audience:
+                    case ht.Audience:
                         return Object(h.d)("Audience", "TeamsDashboard");
-                    case _t.Chat:
+                    case ht.Chat:
                         return Object(h.d)("Chat", "TeamsDashboard");
                     default:
                         return ""
                 }
             },
-            vt = function(e) {
+            bt = function(e) {
                 switch (e) {
-                    case ht.AverageViewers:
+                    case mt.AverageViewers:
                         return Object(h.d)("Avg. Viewers", "TeamsDashboard");
-                    case ht.MinutesWatched:
+                    case mt.MinutesWatched:
                         return Object(h.d)("Minutes Watched", "TeamsDashboard");
-                    case ht.NewFollowers:
+                    case mt.NewFollowers:
                         return Object(h.d)("New Followers", "TeamsDashboard");
-                    case ht.AverageChatters:
+                    case mt.AverageChatters:
                         return Object(h.d)("Avg. Chatters", "TeamsDashboard");
-                    case ht.ChatMessages:
+                    case mt.ChatMessages:
                         return Object(h.d)("Chat Messages", "TeamsDashboard");
-                    case ht.AdBreakDuration:
+                    case mt.AdBreakDuration:
                         return Object(h.d)("Ad Break Duration", "TeamsDashboard");
-                    case ht.AdBreaks:
+                    case mt.AdBreaks:
                         return Object(h.d)("Ad Breaks", "TeamsDashboard");
                     default:
                         return ""
                 }
             },
-            Lt = function(e) {
+            vt = function(e) {
                 return c.createElement(M._2, {
                     className: "metric-select-menu"
                 }, c.createElement(M._21, {
@@ -16282,28 +16245,26 @@ webpackJsonp([41], {
                         e.onChange(t.target.value)
                     }
                 }, c.createElement("optgroup", {
-                    label: bt(_t.Ads)
+                    label: Mt(ht.Ads)
                 }, c.createElement("option", {
-                    value: ht.AdBreakDuration
-                }, vt(ht.AdBreakDuration))), c.createElement("optgroup", {
-                    label: bt(_t.Audience)
+                    value: mt.AdBreakDuration
+                }, bt(mt.AdBreakDuration))), c.createElement("optgroup", {
+                    label: Mt(ht.Audience)
                 }, c.createElement("option", {
-                    value: ht.AverageViewers
-                }, vt(ht.AverageViewers)), c.createElement("option", {
-                    value: ht.MinutesWatched
-                }, vt(ht.MinutesWatched)), c.createElement("option", {
-                    value: ht.NewFollowers
-                }, vt(ht.NewFollowers))), c.createElement("optgroup", {
-                    label: bt(_t.Chat)
+                    value: mt.AverageViewers
+                }, bt(mt.AverageViewers)), c.createElement("option", {
+                    value: mt.MinutesWatched
+                }, bt(mt.MinutesWatched)), c.createElement("option", {
+                    value: mt.NewFollowers
+                }, bt(mt.NewFollowers))), c.createElement("optgroup", {
+                    label: Mt(ht.Chat)
                 }, c.createElement("option", {
-                    value: ht.AverageChatters
-                }, vt(ht.AverageChatters)), c.createElement("option", {
-                    value: ht.ChatMessages
-                }, vt(ht.ChatMessages)))))
+                    value: mt.AverageChatters
+                }, bt(mt.AverageChatters)), c.createElement("option", {
+                    value: mt.ChatMessages
+                }, bt(mt.ChatMessages)))))
             },
-            kt = 800,
-            Dt = 380,
-            Yt = function(e) {
+            Lt = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -16316,6 +16277,7 @@ webpackJsonp([41], {
                 }, t.prototype.render = function() {
                     var e = this;
                     return c.createElement(M._2, {
+                        fullHeight: !0,
                         fullWidth: !0
                     }, c.createElement(M.W, {
                         flexGrow: 0,
@@ -16434,18 +16396,16 @@ webpackJsonp([41], {
                     this.myChart.data.datasets && (this.myChart.data.labels = e.timeLabels, this.myChart.data.datasets[0].label = e.chartLabel, this.myChart.data.datasets[0].data = e.data, this.myChart.update())
                 }, t.prototype.setCanvasResolution = function() {
                     if (this.canvas) {
-                        var e = kt,
-                            t = Dt,
-                            a = wt(this.canvas.getContext("2d"));
-                        this.canvas.width = e * a, this.canvas.height = t * a, this.canvas.style.width = e + "px", this.canvas.style.height = t + "px", this.canvas.getContext("2d").setTransform(a, 0, 0, a, 0, 0)
+                        var e = kt(this.canvas.getContext("2d"));
+                        this.canvas.height = 36 * e, this.canvas.style.height = "36rem", this.canvas.getContext("2d").setTransform(e, 0, 0, e, 0, 0)
                     }
                 }, t = u.__decorate([Object(y.d)("StatsCanvas")], t)
             }(c.Component),
-            wt = function(e) {
+            kt = function(e) {
                 return 1 / (e.webkitBackingStorePixelRatio || e.mozBackingStorePixelRatio || e.msBackingStorePixelRatio || e.oBackingStorePixelRatio || e.backingStorePixelRatio || 1)
             },
-            Tt = Yt,
-            xt = function(e) {
+            Dt = Lt,
+            Yt = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -16454,8 +16414,8 @@ webpackJsonp([41], {
                         t = e.data,
                         a = e.dataType,
                         n = {
-                            chartType: Mt[a],
-                            chartLabel: vt(a),
+                            chartType: yt[a],
+                            chartLabel: bt(a),
                             timeLabels: Object.keys(t).sort(function(e, t) {
                                 return e.localeCompare(t, void 0, {
                                     numeric: !0
@@ -16466,17 +16426,17 @@ webpackJsonp([41], {
                             dataFooters: []
                         };
                     switch (a) {
-                        case ht.AverageViewers:
-                        case ht.ChatMessages:
-                        case ht.AverageChatters:
-                        case ht.MinutesWatched:
+                        case mt.AverageViewers:
+                        case mt.ChatMessages:
+                        case mt.AverageChatters:
+                        case mt.MinutesWatched:
                             n.data = n.timeLabels.map(function(e) {
                                 return t[e].count
                             }), n.dataLabels = n.data.map(function(e) {
                                 return "" + Math.floor(e)
                             }), n.dataFooters = Array(n.data.length).fill("");
                             break;
-                        case ht.AdBreakDuration:
+                        case mt.AdBreakDuration:
                             n.data = n.timeLabels.map(function(e) {
                                 return t[e].count
                             }), n.dataLabels = n.data.map(function(e) {
@@ -16487,7 +16447,7 @@ webpackJsonp([41], {
                                 }, "TeamsDashboard")
                             });
                             break;
-                        case ht.NewFollowers:
+                        case mt.NewFollowers:
                             n.data = n.timeLabels.reduce(function(e, a) {
                                 return e.push(t[a].count + (e.length ? e[e.length - 1] : 0)), e
                             }, []), n.dataLabels = n.data.map(function(e) {
@@ -16497,12 +16457,12 @@ webpackJsonp([41], {
                         default:
                             throw new Error("Data type: " + a + " is unrecognized")
                     }
-                    return c.createElement(Tt, {
+                    return c.createElement(Dt, {
                         chartData: n
                     })
                 }, t
             }(c.PureComponent),
-            St = function(e) {
+            wt = function(e) {
                 var t = e.columnName;
                 return c.createElement(M.U, null, c.createElement(M.J, {
                     cols: {
@@ -16532,7 +16492,7 @@ webpackJsonp([41], {
                     bold: !0
                 }, Object(h.d)("Percent", "TeamsDashboard")))))
             },
-            jt = function(e) {
+            Tt = function(e) {
                 var t = e.rowContent;
                 return c.createElement(M.U, null, c.createElement(M.J, {
                     cols: {
@@ -16565,10 +16525,10 @@ webpackJsonp([41], {
                     textAlign: M._36.Right
                 }, c.createElement(M._35, null, Object(h.e)(t.percent), "%"))))
             },
-            Ot = function(e, t, a, n) {
-                return 0 === e.length ? Ct() : n && 1 === e.length ? Pt(e[0].name) : At(e, a, t)
+            xt = function(e, t, a, n) {
+                return 0 === e.length ? jt() : n && 1 === e.length ? Ot(e[0].name) : Ht(e, a, t)
             },
-            Ht = function(e, t) {
+            St = function(e, t) {
                 return t > 10 ? Object(h.d)("{tableName} (Top 10)", {
                     tableName: e
                 }, "TeamsDashboard") : t > 1 ? Object(h.d)("{tableName} (All)", {
@@ -16577,22 +16537,22 @@ webpackJsonp([41], {
                     tableName: e
                 }, "TeamsDashboard")
             },
-            Ct = function() {
+            jt = function() {
                 return c.createElement(M._35, {
                     color: M.I.Alt2
                 }, Object(h.d)("Not enough data for us to display", "TeamsDashboard"))
             },
-            Pt = function(e) {
+            Ot = function(e) {
                 return c.createElement(M._35, null, Object(h.d)("The top viewer location was {name}", {
                     name: e
                 }, "TeamsDashboard"))
             },
-            At = function(e, t, a) {
+            Ht = function(e, t, a) {
                 var n = e.slice(0, 10).map(function(e, t) {
                     var n = e.name,
                         r = e.views,
                         i = Math.round(r / a * 100);
-                    return c.createElement(jt, {
+                    return c.createElement(Tt, {
                         key: t,
                         rowContent: {
                             name: n,
@@ -16601,11 +16561,11 @@ webpackJsonp([41], {
                         }
                     })
                 });
-                return c.createElement(M._2, null, c.createElement(St, {
+                return c.createElement(M._2, null, c.createElement(wt, {
                     columnName: t
                 }), n)
             },
-            Et = function(e) {
+            Ct = function(e) {
                 var t, a, n = e.rowData.reduce(function(e, t) {
                         return e + t.views
                     }, 0),
@@ -16614,7 +16574,7 @@ webpackJsonp([41], {
                     });
                 return t = e.isLoading ? c.createElement(M._8, {
                     width: 180
-                }) : Ht(e.tableName, r.length), a = e.isLoading ? c.createElement(M._2, null, c.createElement(M._35, null, c.createElement(M._8, null)), c.createElement(M._35, null, c.createElement(M._8, null))) : Ot(r, n, e.columnName, e.isGeo), c.createElement(M._2, {
+                }) : St(e.tableName, r.length), a = e.isLoading ? c.createElement(M._2, null, c.createElement(M._35, null, c.createElement(M._8, null)), c.createElement(M._35, null, c.createElement(M._8, null))) : xt(r, n, e.columnName, e.isGeo), c.createElement(M._2, {
                     display: M.N.Flex,
                     flexDirection: M.P.Column,
                     padding: 2,
@@ -16629,8 +16589,8 @@ webpackJsonp([41], {
                     type: M._40.H4
                 }, t)), a)
             },
-            Ft = Object(h.d)("Referrer", "TeamsDashboard"),
-            Wt = function(e) {
+            Pt = Object(h.d)("Referrer", "TeamsDashboard"),
+            At = function(e) {
                 var t = Object(h.d)("Views by Referrer", "TeamsDashboard"),
                     a = "";
                 return e.internalReferral && e.internalReferral.length && (t = Object(h.d)("Views from Outside Twitch", "TeamsDashboard"), a = c.createElement(M._25, {
@@ -16638,10 +16598,10 @@ webpackJsonp([41], {
                     flexGrow: 1,
                     borderBottom: !0,
                     borderLeft: !0
-                }, c.createElement(Et, {
+                }, c.createElement(Ct, {
                     isLoading: e.isLoading,
                     tableName: Object(h.d)("Views from Twitch", "TeamsDashboard"),
-                    columnName: Ft,
+                    columnName: Pt,
                     rowData: e.internalReferral
                 }))), c.createElement(M._25, {
                     className: "all-tables-wrapper",
@@ -16657,7 +16617,7 @@ webpackJsonp([41], {
                     display: M.N.Flex,
                     flexGrow: 1,
                     borderBottom: !0
-                }, c.createElement(Et, {
+                }, c.createElement(Ct, {
                     isLoading: e.isLoading,
                     tableName: Object(h.d)("Views by Location", "TeamsDashboard"),
                     columnName: Object(h.d)("Location", "TeamsDashboard"),
@@ -16666,7 +16626,7 @@ webpackJsonp([41], {
                 })), c.createElement(M._25, {
                     display: M.N.Flex,
                     flexGrow: 1
-                }, c.createElement(Et, {
+                }, c.createElement(Ct, {
                     isLoading: e.isLoading,
                     tableName: Object(h.d)("Views by Platform", "TeamsDashboard"),
                     columnName: Object(h.d)("Platform", "TeamsDashboard"),
@@ -16680,15 +16640,15 @@ webpackJsonp([41], {
                     display: M.N.Flex,
                     flexGrow: 1,
                     borderLeft: !0
-                }, c.createElement(Et, {
+                }, c.createElement(Ct, {
                     isLoading: e.isLoading,
                     tableName: t,
-                    columnName: Ft,
+                    columnName: Pt,
                     rowData: e.externalReferral
                 }))))
             };
 
-        function It(e) {
+        function Et(e) {
             switch (e.toUpperCase()) {
                 case "A1":
                     return Object(h.d)("Anonymous Proxy", "format-country");
@@ -17202,29 +17162,29 @@ webpackJsonp([41], {
                     return e
             }
         }
-        var Nt = this,
-            Rt = {
+        var Ft = this,
+            Wt = {
                 geographical: [],
                 platform: [],
                 internalReferral: [],
                 externalReferral: []
             },
-            zt = function(e, t, a, n) {
-                return u.__awaiter(Nt, void 0, void 0, function() {
+            It = function(e, t, a, n) {
+                return u.__awaiter(Ft, void 0, void 0, function() {
                     var r, i, o, s;
                     return u.__generator(this, function(d) {
                         switch (d.label) {
                             case 0:
-                                return r = Rt, t.length < 1 ? [2, r] : (i = t.join(","), o = "/v5/teams/" + e + "/stats/video_play_demographics?channel_ids=" + i + "&start_time=" + a + "&end_time=" + n, [4, Object(X.f)({
+                                return r = Wt, t.length < 1 ? [2, r] : (i = t.join(","), o = "/v5/teams/" + e + "/stats/video_play_demographics?channel_ids=" + i + "&start_time=" + a + "&end_time=" + n, [4, Object(X.e)({
                                     path: o
                                 })]);
                             case 1:
-                                return [2, (s = d.sent()).body ? Bt(s.body) : r]
+                                return [2, (s = d.sent()).body ? Nt(s.body) : r]
                         }
                     })
                 })
             },
-            Bt = function(e) {
+            Nt = function(e) {
                 for (var t = e.video_play_demographics, a = {
                         geographical: [],
                         platform: [],
@@ -17233,37 +17193,37 @@ webpackJsonp([41], {
                     }, n = 0, r = Object.keys(t.geo); n < r.length; n++) {
                     var i = r[n];
                     a.geographical.push({
-                        name: It(i),
+                        name: Et(i),
                         views: t.geo[i]
                     })
                 }
                 for (var o = 0, s = Object.keys(t.platform); o < s.length; o++) {
                     i = s[o];
                     a.platform.push({
-                        name: Vt(i),
+                        name: zt(i),
                         views: t.platform[i]
                     })
                 }
                 for (var d = 0, l = Object.keys(t.referrer.internal); d < l.length; d++) {
                     i = l[d];
                     a.internalReferral.push({
-                        name: Ut(i),
+                        name: Bt(i),
                         views: t.referrer.internal[i]
                     })
                 }
                 for (var u = 0, c = Object.keys(t.referrer.external); u < c.length; u++) {
                     i = c[u];
                     a.externalReferral.push({
-                        name: Gt(i),
+                        name: Jt(i),
                         views: t.referrer.external[i]
                     })
                 }
                 return a
             },
-            Jt = function() {
+            Rt = function() {
                 return Object(h.d)("Other", "TeamsDashboard")
             },
-            Vt = function(e) {
+            zt = function(e) {
                 return {
                     unknown: Object(h.d)("Unknown", "TeamsDashboard"),
                     tv: Object(h.d)("TV", "TeamsDashboard"),
@@ -17273,12 +17233,12 @@ webpackJsonp([41], {
                     mobile_web: Object(h.d)("Mobile Web", "TeamsDashboard"),
                     mobile_aggregated: Object(h.d)("Mobile", "TeamsDashboard"),
                     console: Object(h.d)("Console", "TeamsDashboard"),
-                    other: Jt()
+                    other: Rt()
                 }[e] || e
             },
-            Ut = function(e) {
+            Bt = function(e) {
                 return {
-                    other: Jt(),
+                    other: Rt(),
                     front_page_featured: Object(h.d)("Featured Section - Front Page", "TeamsDashboard"),
                     creative_page_featured: Object(h.d)("Featured Section - Creative Page", "TeamsDashboard"),
                     hosted: Object(h.d)("Hosts", "TeamsDashboard"),
@@ -17296,7 +17256,7 @@ webpackJsonp([41], {
                     name: e
                 }, "TeamsDashboard")
             },
-            Gt = function(e) {
+            Jt = function(e) {
                 var t;
                 return ((t = {
                     facebook: Object(h.d)("Facebook", "TeamsDashboard"),
@@ -17305,68 +17265,68 @@ webpackJsonp([41], {
                     youtube: Object(h.d)("Youtube", "TeamsDashboard")
                 })["t.co"] = Object(h.d)("Twitter", "TeamsDashboard"), t.unknown = Object(h.d)("Direct/Unknown", "TeamsDashboard"), t.twitch_aggregate = Object(h.d)("Twitch", "TeamsDashboard"), t.external_aggregate = Object(h.d)("External", "TeamsDashboard"), t)[e] || e
             },
-            qt = this,
-            Kt = function(e, t, a, n, r) {
-                return u.__awaiter(qt, void 0, void 0, function() {
+            Vt = this,
+            Ut = function(e, t, a, n, r) {
+                return u.__awaiter(Vt, void 0, void 0, function() {
                     var i, o, s, d, l, c, m, h, _;
                     return u.__generator(this, function(u) {
                         switch (u.label) {
                             case 0:
                                 if (0 === a.length) return [2, Promise.resolve({})];
-                                switch (i = "/v5/teams/" + t + "/stats/" + yt[e] + "?channel_ids=" + a + "&start_time=" + n + "&end_time=" + r, e) {
-                                    case ht.AverageViewers:
+                                switch (i = "/v5/teams/" + t + "/stats/" + gt[e] + "?channel_ids=" + a + "&start_time=" + n + "&end_time=" + r, e) {
+                                    case mt.AverageViewers:
                                         return [3, 1];
-                                    case ht.MinutesWatched:
+                                    case mt.MinutesWatched:
                                         return [3, 3];
-                                    case ht.NewFollowers:
+                                    case mt.NewFollowers:
                                         return [3, 5];
-                                    case ht.AverageChatters:
+                                    case mt.AverageChatters:
                                         return [3, 7];
-                                    case ht.ChatMessages:
+                                    case mt.ChatMessages:
                                         return [3, 9];
-                                    case ht.AdBreakDuration:
+                                    case mt.AdBreakDuration:
                                         return [3, 11]
                                 }
                                 return [3, 13];
                             case 1:
-                                return s = aa, [4, Zt(i)];
+                                return s = $t, [4, Gt(i)];
                             case 2:
-                                return o = s.apply(void 0, [u.sent(), n, r, ra]), [3, 14];
+                                return o = s.apply(void 0, [u.sent(), n, r, ta]), [3, 14];
                             case 3:
-                                return [4, Zt(i)];
+                                return [4, Gt(i)];
                             case 4:
-                                return d = u.sent(), l = ta(d), o = aa(l, n, r, ia), [3, 14];
+                                return d = u.sent(), l = Qt(d), o = $t(l, n, r, aa), [3, 14];
                             case 5:
-                                return c = aa, [4, Qt(i)];
+                                return c = $t, [4, Kt(i)];
                             case 6:
-                                return o = c.apply(void 0, [u.sent(), n, r, sa]), [3, 14];
+                                return o = c.apply(void 0, [u.sent(), n, r, ra]), [3, 14];
                             case 7:
-                                return m = aa, [4, Xt(i)];
+                                return m = $t, [4, qt(i)];
                             case 8:
-                                return o = m.apply(void 0, [u.sent(), n, r, da]), [3, 14];
+                                return o = m.apply(void 0, [u.sent(), n, r, ia]), [3, 14];
                             case 9:
-                                return h = aa, [4, Xt(i)];
+                                return h = $t, [4, qt(i)];
                             case 10:
-                                return o = h.apply(void 0, [u.sent(), n, r, la]), [3, 14];
+                                return o = h.apply(void 0, [u.sent(), n, r, oa]), [3, 14];
                             case 11:
-                                return _ = na, [4, $t(i)];
+                                return _ = ea, [4, Zt(i)];
                             case 12:
-                                return o = _.apply(void 0, [u.sent(), n, r, ua]), [3, 14];
+                                return o = _.apply(void 0, [u.sent(), n, r, sa]), [3, 14];
                             case 13:
                                 throw new Error("fetch type is not in StatsMetric enum");
                             case 14:
-                                return [2, ea(o)]
+                                return [2, Xt(o)]
                         }
                     })
                 })
             },
-            Zt = function(e) {
-                return u.__awaiter(qt, void 0, void 0, function() {
+            Gt = function(e) {
+                return u.__awaiter(Vt, void 0, void 0, function() {
                     var t;
                     return u.__generator(this, function(a) {
                         switch (a.label) {
                             case 0:
-                                return [4, Object(X.f)({
+                                return [4, Object(X.e)({
                                     path: e
                                 })];
                             case 1:
@@ -17375,13 +17335,13 @@ webpackJsonp([41], {
                     })
                 })
             },
-            Xt = function(e) {
-                return u.__awaiter(qt, void 0, void 0, function() {
+            qt = function(e) {
+                return u.__awaiter(Vt, void 0, void 0, function() {
                     var t;
                     return u.__generator(this, function(a) {
                         switch (a.label) {
                             case 0:
-                                return [4, Object(X.f)({
+                                return [4, Object(X.e)({
                                     path: e
                                 })];
                             case 1:
@@ -17390,13 +17350,13 @@ webpackJsonp([41], {
                     })
                 })
             },
-            Qt = function(e) {
-                return u.__awaiter(qt, void 0, void 0, function() {
+            Kt = function(e) {
+                return u.__awaiter(Vt, void 0, void 0, function() {
                     var t;
                     return u.__generator(this, function(a) {
                         switch (a.label) {
                             case 0:
-                                return [4, Object(X.f)({
+                                return [4, Object(X.e)({
                                     path: e
                                 })];
                             case 1:
@@ -17405,13 +17365,13 @@ webpackJsonp([41], {
                     })
                 })
             },
-            $t = function(e) {
-                return u.__awaiter(qt, void 0, void 0, function() {
+            Zt = function(e) {
+                return u.__awaiter(Vt, void 0, void 0, function() {
                     var t;
                     return u.__generator(this, function(a) {
                         switch (a.label) {
                             case 0:
-                                return [4, Object(X.f)({
+                                return [4, Object(X.e)({
                                     path: e
                                 })];
                             case 1:
@@ -17420,7 +17380,7 @@ webpackJsonp([41], {
                     })
                 })
             },
-            ea = function(e) {
+            Xt = function(e) {
                 for (var t = {}, a = 0, n = Object.keys(e); a < n.length; a++)
                     for (var r = 0, i = e[n[a]]; r < i.length; r++) {
                         var o = i[r],
@@ -17434,7 +17394,7 @@ webpackJsonp([41], {
                     }
                 return t
             },
-            ta = function(e) {
+            Qt = function(e) {
                 for (var t = {}, a = 0, n = Object.keys(e); a < n.length; a++) {
                     var r = n[a],
                         i = e[r];
@@ -17447,22 +17407,22 @@ webpackJsonp([41], {
                 }
                 return t
             },
-            aa = function(e, t, a, n) {
+            $t = function(e, t, a, n) {
                 for (var r = {}, i = 0, o = Object.keys(e); i < o.length; i++) {
                     var s = o[i];
                     r[s] = n(t, a, e[s])
                 }
                 return r
             },
-            na = function(e, t, a, n) {
+            ea = function(e, t, a, n) {
                 for (var r = {}, i = 0, o = Object.keys(e); i < o.length; i++) {
                     var s = o[i];
                     r[s] = n(t, a, e[s])
                 }
                 return r
             },
-            ra = function(e, t, a) {
-                return oa(e, t, a).map(function(e) {
+            ta = function(e, t, a) {
+                return na(e, t, a).map(function(e) {
                     return {
                         timestamp: e.timestamp,
                         count: e.sampleSize ? Math.floor(e.count / e.sampleSize) : 0,
@@ -17470,8 +17430,8 @@ webpackJsonp([41], {
                     }
                 })
             },
-            ia = function(e, t, a) {
-                return oa(e, t, a).map(function(e) {
+            aa = function(e, t, a) {
+                return na(e, t, a).map(function(e) {
                     return {
                         timestamp: e.timestamp,
                         count: e.sampleSize ? Math.floor(e.count) : 0,
@@ -17479,14 +17439,14 @@ webpackJsonp([41], {
                     }
                 })
             },
-            oa = function(e, t, a) {
-                for (var n = ca(e, t).map(function(e) {
+            na = function(e, t, a) {
+                for (var n = da(e, t).map(function(e) {
                         return u.__assign({}, e, {
                             sampleSize: 0
                         })
                     }), r = function(e, t) {
                         var a = n.find(function(t) {
-                            return t.timestamp === ma(e)
+                            return t.timestamp === la(e)
                         });
                         a && 0 !== t && (a.count += t, a.sampleSize += 1)
                     }, i = 0, o = a; i < o.length; i++) {
@@ -17495,10 +17455,10 @@ webpackJsonp([41], {
                 }
                 return n
             },
-            sa = function(e, t, a) {
-                for (var n = ca(e, t), r = function(e, t) {
+            ra = function(e, t, a) {
+                for (var n = da(e, t), r = function(e, t) {
                         var a = n.find(function(t) {
-                            return t.timestamp === ma(e)
+                            return t.timestamp === la(e)
                         });
                         a && (a.count += t)
                     }, i = 0, o = a; i < o.length; i++) {
@@ -17507,14 +17467,14 @@ webpackJsonp([41], {
                 }
                 return n
             },
-            da = function(e, t, a) {
-                for (var n = ca(e, t).map(function(e) {
+            ia = function(e, t, a) {
+                for (var n = da(e, t).map(function(e) {
                         return u.__assign({}, e, {
                             sampleSize: 0
                         })
                     }), r = function(e, t) {
                         var a = n.find(function(t) {
-                            return t.timestamp === ma(e)
+                            return t.timestamp === la(e)
                         });
                         a && 0 !== t && (a.count += t, a.sampleSize += 1)
                     }, i = 0, o = a; i < o.length; i++) {
@@ -17529,10 +17489,10 @@ webpackJsonp([41], {
                     }
                 })
             },
-            la = function(e, t, a) {
-                for (var n = ca(e, t), r = function(e, t) {
+            oa = function(e, t, a) {
+                for (var n = da(e, t), r = function(e, t) {
                         var a = n.find(function(t) {
-                            return t.timestamp === ma(e)
+                            return t.timestamp === la(e)
                         });
                         a && (a.count += t)
                     }, i = 0, o = a; i < o.length; i++) {
@@ -17541,10 +17501,10 @@ webpackJsonp([41], {
                 }
                 return n
             },
-            ua = function(e, t, a) {
-                for (var n = ca(e, t), r = function(e, t) {
+            sa = function(e, t, a) {
+                for (var n = da(e, t), r = function(e, t) {
                         var a = n.find(function(t) {
-                            return t.timestamp === ma(e)
+                            return t.timestamp === la(e)
                         });
                         a && (a.count += t, a.numberOfDatapoints += 1)
                     }, i = 0, o = a; i < o.length; i++) {
@@ -17553,55 +17513,55 @@ webpackJsonp([41], {
                 }
                 return n
             },
-            ca = function(e, t) {
-                for (var a = [], n = new Date(ma(e)), r = new Date(t); n < r;) a.push({
+            da = function(e, t) {
+                for (var a = [], n = new Date(la(e)), r = new Date(t); n < r;) a.push({
                     timestamp: n.toISOString(),
                     count: 0,
                     numberOfDatapoints: 0
                 }), n = ue(n);
                 return a
             },
-            ma = function(e) {
+            la = function(e) {
                 var t = new Date(e),
                     a = t.getUTCHours() - t.getUTCHours() % 4;
                 return new Date(Date.UTC(t.getUTCFullYear(), t.getUTCMonth(), t.getUTCDate(), a)).toISOString()
             },
-            ha = this,
-            _a = [ht.AverageViewers, ht.MinutesWatched, ht.NewFollowers, ht.AverageChatters, ht.ChatMessages, ht.AdBreaks, ht.AdBreakDuration],
-            fa = Object.keys(yt),
-            pa = function(e, t, a, n) {
-                return u.__awaiter(ha, void 0, void 0, function() {
+            ua = this,
+            ca = [mt.AverageViewers, mt.MinutesWatched, mt.NewFollowers, mt.AverageChatters, mt.ChatMessages, mt.AdBreaks, mt.AdBreakDuration],
+            ma = Object.keys(gt),
+            ha = function(e, t, a, n) {
+                return u.__awaiter(ua, void 0, void 0, function() {
                     var r, i, o, s, d, l, c, m, h, _, f, p;
                     return u.__generator(this, function(u) {
                         switch (u.label) {
                             case 0:
-                                for (r = {}, i = [], o = 0, s = fa; o < s.length; o++) m = s[o], i.push(Kt(m, e, t, a, n));
+                                for (r = {}, i = [], o = 0, s = ma; o < s.length; o++) m = s[o], i.push(Ut(m, e, t, a, n));
                                 return [4, Promise.all(i)];
                             case 1:
-                                for (d = u.sent(), l = 0, c = fa; l < c.length; l++) {
+                                for (d = u.sent(), l = 0, c = ma; l < c.length; l++) {
                                     if (m = c[l], h = d.shift() || {}, 0 === Object.keys(h).length) return [2, {}];
-                                    for (_ = 0, f = Object.keys(h); _ < f.length; _++) p = f[_], r[p] || (r[p] = {}), r[p][m] = h[p].count, m === ht.AdBreakDuration && (r[p][ht.AdBreaks] = h[p].numberOfDatapoints)
+                                    for (_ = 0, f = Object.keys(h); _ < f.length; _++) p = f[_], r[p] || (r[p] = {}), r[p][m] = h[p].count, m === mt.AdBreakDuration && (r[p][mt.AdBreaks] = h[p].numberOfDatapoints)
                                 }
                                 return [2, r]
                         }
                     })
                 })
             },
-            ga = function() {
-                var e = Object(h.d)("Start Time", "TeamsDashboard") + "," + Object(h.d)("End Time", "TeamsDashboard") + "," + Ce();
-                return _a.reduce(function(e, t) {
-                    return e + "," + vt(t)
+            _a = function() {
+                var e = Object(h.d)("Start Time", "TeamsDashboard") + "," + Object(h.d)("End Time", "TeamsDashboard") + "," + Oe();
+                return ca.reduce(function(e, t) {
+                    return e + "," + bt(t)
                 }, e) + "\n"
             },
-            ya = function(e, t) {
+            fa = function(e, t) {
                 var a = ue(e),
-                    n = Ae(e) + "," + Ae(a) + ",UTC";
-                return _a.reduce(function(e, a) {
+                    n = Ce(e) + "," + Ce(a) + ",UTC";
+                return ca.reduce(function(e, a) {
                     var n = "" + t[a];
-                    return a === ht.AdBreakDuration && (n = oe(t[a])), e + "," + n
+                    return a === mt.AdBreakDuration && (n = oe(t[a])), e + "," + n
                 }, n) + "\n"
             },
-            Ma = function(e) {
+            pa = function(e) {
                 function t(t) {
                     var a = e.call(this, t) || this;
                     return a.toggleMemberChecked = function(e) {
@@ -17640,18 +17600,18 @@ webpackJsonp([41], {
                                     case 0:
                                         return a = P(this.state.members), r = e.toISOString(), i = t.toISOString(), o = {
                                             isLoadingDemographics: !1,
-                                            demographics: Rt,
+                                            demographics: Wt,
                                             isLoadingStats: !1,
                                             data: {}
-                                        }, n !== ht.AverageViewers ? [3, 2] : (this.setState({
+                                        }, n !== mt.AverageViewers ? [3, 2] : (this.setState({
                                             isLoadingDemographics: !0
-                                        }), s = o, [4, zt(this.props.teamName, a, r, i)]);
+                                        }), s = o, [4, It(this.props.teamName, a, r, i)]);
                                     case 1:
                                         s.demographics = l.sent(), l.label = 2;
                                     case 2:
                                         return this.setState({
                                             isLoadingStats: !0
-                                        }), d = o, [4, Kt(n, this.props.teamName, a, r, i)];
+                                        }), d = o, [4, Ut(n, this.props.teamName, a, r, i)];
                                     case 3:
                                         return d.data = l.sent(), [2, o]
                                 }
@@ -17663,9 +17623,9 @@ webpackJsonp([41], {
                             return u.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
-                                        return [4, pa(this.props.teamName, P(this.state.members), this.state.startTime.toISOString(), this.state.endTime.toISOString())];
+                                        return [4, ha(this.props.teamName, P(this.state.members), this.state.startTime.toISOString(), this.state.endTime.toISOString())];
                                     case 1:
-                                        return e = a.sent(), 0 === Object.keys(e).length ? [2] : (t = Oe(e, ya, ga()), He(t, E(L.Stats) + " - " + ie(this.state.startTime) + ".csv"), [2])
+                                        return e = a.sent(), 0 === Object.keys(e).length ? [2] : (t = Se(e, fa, _a()), je(t, E(L.Stats) + " - " + ie(this.state.startTime) + ".csv"), [2])
                                 }
                             })
                         })
@@ -17675,12 +17635,12 @@ webpackJsonp([41], {
                             return u.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
-                                        return [4, this.fetchStats(e, t, this.state.metric)];
-                                    case 1:
-                                        return a = n.sent(), this.setState(u.__assign({
+                                        return this.setState({
                                             startTime: e,
                                             endTime: t
-                                        }, a)), [2]
+                                        }), [4, this.fetchStats(e, t, this.state.metric)];
+                                    case 1:
+                                        return a = n.sent(), this.setState(u.__assign({}, a)), [2]
                                 }
                             })
                         })
@@ -17690,16 +17650,29 @@ webpackJsonp([41], {
                             return u.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
-                                        return [4, this.fetchStats(this.state.startTime, this.state.endTime, e)];
-                                    case 1:
-                                        return t = a.sent(), this.setState(u.__assign({
+                                        return this.setState({
                                             metric: e
-                                        }, t)), [2]
+                                        }), [4, this.fetchStats(this.state.startTime, this.state.endTime, e)];
+                                    case 1:
+                                        return t = a.sent(), this.setState(u.__assign({}, t)), [2]
                                 }
                             })
                         })
+                    }, a.renderChartLoadingSpinner = function() {
+                        return c.createElement(M._25, {
+                            attachTop: !0,
+                            attachLeft: !0,
+                            background: M.m.Alt,
+                            fullHeight: !0,
+                            fullWidth: !0,
+                            position: M._9.Absolute
+                        }, c.createElement(M._4, {
+                            delay: 100,
+                            fillContent: !0,
+                            size: M._23.Large
+                        }))
                     }, a.renderViewershipTables = function() {
-                        return c.createElement(Wt, u.__assign({
+                        return c.createElement(At, u.__assign({
                             isLoading: a.state.isLoadingDemographics
                         }, a.state.demographics))
                     }, a.state = {
@@ -17708,11 +17681,11 @@ webpackJsonp([41], {
                         isLoadingStats: !0,
                         data: {},
                         isLoadingDemographics: !0,
-                        demographics: Rt,
+                        demographics: Wt,
                         startTime: se(a.props.currentDate),
                         endTime: a.props.currentDate,
                         groupChecked: !0,
-                        metric: ht.AverageViewers
+                        metric: mt.AverageViewers
                     }, a
                 }
                 return u.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -17762,7 +17735,7 @@ webpackJsonp([41], {
                         margin: {
                             right: 1
                         }
-                    }, c.createElement(je, {
+                    }, c.createElement(xe, {
                         isDisabled: e,
                         isLoading: this.state.isLoadingMembers,
                         members: this.state.members,
@@ -17779,7 +17752,7 @@ webpackJsonp([41], {
                         earliestDate: this.props.earliestDataDate,
                         currentDate: this.props.currentDate,
                         onMonthSelection: this.handleTimeRangeChange
-                    })), c.createElement(Lt, {
+                    })), c.createElement(vt, {
                         isDisabled: e,
                         metric: this.state.metric,
                         onChange: this.onMetricChange
@@ -17789,19 +17762,21 @@ webpackJsonp([41], {
                         icon: M._16.Download,
                         onClick: this.handleCSVClick,
                         type: M.z.Hollow
-                    }, Pe()))), c.createElement(M._2, {
-                        margin: 2
-                    }, c.createElement(xt, {
+                    }, He()))), c.createElement(M._2, {
+                        className: "chart-container",
+                        margin: 2,
+                        position: M._9.Relative
+                    }, c.createElement(Yt, {
                         data: this.state.data,
                         dataType: this.state.metric
-                    })), this.state.metric === ht.AverageViewers ? this.renderViewershipTables() : ""))
+                    }), e ? this.renderChartLoadingSpinner() : null), this.state.metric === mt.AverageViewers ? this.renderViewershipTables() : ""))
                 }, t = u.__decorate([Object(y.d)("StatsPage", {
                     autoReportInteractive: !0,
                     destination: g.a.TeamsDashboardStats
                 })], t)
             }(c.Component),
-            ba = new Date(Date.UTC(2017, 5)),
-            va = function(e) {
+            ga = new Date(Date.UTC(2017, 5)),
+            ya = function(e) {
                 function t(t) {
                     var a = e.call(this, t) || this;
                     return a.state = {
@@ -17813,13 +17788,13 @@ webpackJsonp([41], {
                             to: "/teams/" + a.props.match.params.teamName + "/dashboard/" + L.Revenue
                         })
                     }, a.renderRevenuePage = function() {
-                        return c.createElement(Ge, {
+                        return c.createElement(Ve, {
                             teamName: a.props.match.params.teamName,
                             earliestDataDate: a.earliestDataDate,
                             currentDate: a.currentDate
                         })
                     }, a.renderStatsPage = function() {
-                        return c.createElement(Ma, {
+                        return c.createElement(pa, {
                             teamName: a.props.match.params.teamName,
                             earliestDataDate: a.earliestDataDate,
                             currentDate: a.currentDate
@@ -17833,7 +17808,7 @@ webpackJsonp([41], {
                             teamName: a.props.match.params.teamName
                         })
                     }, a.renderSettingsPage = function() {
-                        return c.createElement(ft, {
+                        return c.createElement(_t, {
                             team: a.state.team,
                             onUpdate: a.handleUpdate
                         })
@@ -17841,7 +17816,7 @@ webpackJsonp([41], {
                         a.setState({
                             team: e
                         })
-                    }, a.earliestDataDate = ba, a.currentDate = t.currentDate || new Date, a.currentDate < a.earliestDataDate && (a.currentDate = a.earliestDataDate), a
+                    }, a.earliestDataDate = ga, a.currentDate = t.currentDate || new Date, a.currentDate < a.earliestDataDate && (a.currentDate = a.earliestDataDate), a
                 }
                 return u.__extends(t, e), t.prototype.componentDidCatch = function(e, t) {
                     var a = this;
@@ -17858,16 +17833,16 @@ webpackJsonp([41], {
                         return u.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return [4, (a = this.props.match.params.teamName, u.__awaiter(dt, void 0, void 0, function() {
+                                    return [4, (a = this.props.match.params.teamName, u.__awaiter(st, void 0, void 0, function() {
                                         var e, t;
                                         return u.__generator(this, function(n) {
                                             switch (n.label) {
                                                 case 0:
-                                                    return e = "/v5/teams/" + a, [4, Object(X.f)({
+                                                    return e = "/v5/teams/" + a, [4, Object(X.e)({
                                                         path: e
                                                     })];
                                                 case 1:
-                                                    return [2, (t = n.sent()).body ? lt(t.body) : null]
+                                                    return [2, (t = n.sent()).body ? dt(t.body) : null]
                                             }
                                         })
                                     }))];
@@ -17896,7 +17871,7 @@ webpackJsonp([41], {
                         flexWrap: M.Q.NoWrap,
                         fullWidth: !0,
                         fullHeight: !0
-                    }, c.createElement(Ke, {
+                    }, c.createElement(Ge, {
                         teamName: this.props.match.params.teamName
                     }), c.createElement(M._2, {
                         fullWidth: !0
@@ -17931,7 +17906,7 @@ webpackJsonp([41], {
                     }))
                 }, t
             }(c.Component);
-        var La = Object(i.b)(function(e) {
+        var Ma = Object(i.b)(function(e) {
             return {
                 isLoggedIn: Object(l.d)(e)
             }
@@ -17941,9 +17916,9 @@ webpackJsonp([41], {
                     return Object(d.f)(s.a.DashboardPage)
                 }
             }, e)
-        })(va);
+        })(ya);
         a.d(t, "TeamsDashboardRoot", function() {
-            return La
+            return Ma
         })
     },
     rGYv: function(e, t) {
@@ -19133,6 +19108,43 @@ webpackJsonp([41], {
             }
         }
     },
+    u4Vk: function(e, t, a) {
+        "use strict";
+        t.c = function(e, t) {
+            return Object(n.isEqual)(e.start, t.start) && Object(n.isEqual)(e.end, t.end)
+        }, t.d = function(e, t) {
+            return e.end.getTime() - e.start.getTime() == t.end.getTime() - t.start.getTime()
+        }, t.a = function(e) {
+            return Object(n.differenceInMinutes)(e.end, e.start)
+        }, t.f = function(e) {
+            return {
+                start_time: e.start.toJSON(),
+                end_time: e.end.toJSON()
+            }
+        }, t.b = function(e) {
+            var t, a = Object(n.differenceInMinutes)(e.end, e.start),
+                i = Math.floor(a / 60),
+                o = a % 60;
+            t = i && o ? Object(r.d)("{hours, number}h{minutes, number}m", {
+                hours: i,
+                minutes: o
+            }, "StreamSummaryDuration") : i ? Object(r.d)("{hours, number}h", {
+                hours: i
+            }, "StreamSummaryDuration") : Object(r.d)("{minutes, number}m", {
+                minutes: o
+            }, "StreamSummaryDuration");
+            return t
+        }, t.e = function(e, t) {
+            void 0 === t && (t = new Date);
+            var a = Object(n.endOfDay)(t);
+            return {
+                start: Object(n.subDays)(a, e),
+                end: a
+            }
+        };
+        var n = a("wuJz"),
+            r = (a.n(n), a("6sO2"))
+    },
     uSe8: function(e, t, a) {
         (function(e) {
             "use strict";
@@ -20264,4 +20276,4 @@ webpackJsonp([41], {
         })(a("PJh5"))
     }
 });
-//# sourceMappingURL=pages.teams-dashboard-18d6e9fcabe1fb163c6e82e370a7ba57.js.map
+//# sourceMappingURL=pages.teams-dashboard-2269f04d8654115c7730abbc5f5d0e7a.js.map

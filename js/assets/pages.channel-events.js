@@ -3472,7 +3472,7 @@ webpackJsonp([38], {
                 }
             }))(mt);
         ! function(e) {
-            e.Weekly = "WEEK", e.AllTime = "ALLTIME"
+            e.Weekly = "WEEK", e.AllTime = "ALLTIME", e.Monthly = "MONTHLY"
         }(rt || (rt = {}));
         n("GuSj");
         var ht = function(e) {
@@ -3542,7 +3542,7 @@ webpackJsonp([38], {
                     }, "Bits--PinnedCheerV2"));
                 return n < 1 && (i = c.createElement(F._35, {
                     type: F._40.Span
-                }, Object(r.d)("Resets in less than a day", "Bits--PinnedCheerV2"))), this.props.leaderboardMode === rt.AllTime && (e = Object(r.d)("All-time Top Cheerers", "Bits--PinnedCheerV2"), i = null), c.createElement(F._2, {
+                }, Object(r.d)("Resets in less than a day", "Bits--PinnedCheerV2"))), this.props.leaderboardMode === rt.AllTime ? (e = Object(r.d)("All-time Top Cheerers", "Bits--PinnedCheerV2"), i = null) : this.props.leaderboardMode === rt.Monthly && (e = Object(r.d)("Monthly Top Cheerers", "Bits--PinnedCheerV2")), c.createElement(F._2, {
                     display: F.N.Flex,
                     alignItems: F.c.Center,
                     flexDirection: F.P.Column
@@ -7428,6 +7428,7 @@ webpackJsonp([38], {
                         position: F._9.Absolute,
                         "data-a-target": "chat-user-card"
                     }, c.createElement(qi.a, {
+                        isPopout: this.props.isPopout,
                         isEmbedded: this.props.isEmbedded,
                         onSendMessage: this.props.onSendMessage,
                         channelID: this.props.channelID
@@ -11977,6 +11978,7 @@ webpackJsonp([38], {
                         position: E._9.Absolute,
                         zIndex: E._52.Default
                     }, l.createElement(gt.a, {
+                        isPopout: this.props.isPopout,
                         isEmbedded: !1,
                         onSendMessage: this.sendMessage,
                         channelID: this.props.channelID
@@ -26690,6 +26692,7 @@ webpackJsonp([38], {
                     var e = Object(U.a)(this.props.data.currentUser.id, this.props.data.targetUser.id);
                     return u.createElement(g.a, {
                         onClick: this.onWhisperButtonClick,
+                        isPopout: this.props.isPopout,
                         threadID: e
                     })
                 }, t.prototype.renderGiftSubscriptionButton = function() {
@@ -26828,6 +26831,7 @@ webpackJsonp([38], {
                         }, u.createElement(V, {
                             channelID: this.props.channelID,
                             hideViewerCard: this.props.hideViewerCard,
+                            isPopout: this.props.isPopout,
                             isEmbedded: this.props.isEmbedded,
                             sendMessageToTMI: this.props.onSendMessage,
                             showReportUserModal: this.props.showReportUserModal,
@@ -36247,4 +36251,4 @@ webpackJsonp([38], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-events-0f7f51cc00a7b458358c4cbb86ec1fac.js.map
+//# sourceMappingURL=pages.channel-events-a74c40870669716d0d69f7beafd5fd44.js.map

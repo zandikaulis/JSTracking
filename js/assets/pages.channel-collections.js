@@ -749,62 +749,38 @@ webpackJsonp([48], {
     AL3x: function(e, t) {},
     B9Px: function(e, t, n) {
         "use strict";
-        var i, a, r = n("TToO"),
-            o = n("6sO2"),
-            s = n("jXn2"),
-            l = n("Aj/L");
-        ! function(e) {
-            e.Public = "public"
-        }(i || (i = {})),
-        function(e) {
-            e.Staff = "staff"
-        }(a || (a = {}));
-        var c, d = function(e) {
-            return {
-                __typename: "Collection",
-                id: e._id,
-                title: e.title,
-                state: i.Public,
-                thumbnailSrc: e.thumbnails && e.thumbnails.small,
-                totalDuration: e.total_duration,
-                itemsCount: e.items_count
-            }
-        };
+        var i = n("TToO"),
+            a = n("6sO2"),
+            r = n("jXn2"),
+            o = n("Aj/L"),
+            s = n("O8Ns"),
+            l = n("dL0Y"),
+            c = n("i5XQ");
 
-        function u(e) {
-            return e.collections.map(function(e) {
-                return d(e)
-            })
-        }! function(e) {
-            e.Video = "video"
-        }(c || (c = {}));
-        var m = n("dL0Y"),
-            p = n("i5XQ");
-
-        function h(e, t) {
+        function d(e, t) {
             return fetch(e, t).then(function(e) {
                 return e.status >= 300 ? Promise.reject(e) : e
             })
         }
-        var f = function(e, t) {
+        var u = function(e, t) {
                 void 0 === e && (e = {}), void 0 === t && (t = {});
-                var n = new p.BrowserHeaders(t),
-                    i = new p.BrowserHeaders(e);
+                var n = new c.BrowserHeaders(t),
+                    i = new c.BrowserHeaders(e);
                 return n.forEach(function(e, t) {
                     i.set(e, t)
                 }), i
             },
-            g = "Authorization",
-            v = "https://api.twitch.tv",
-            b = "DELETE",
-            _ = ((k = {}).Accept = "application/vnd.twitchtv.v5+json", k["CLIENT-ID"] = "jzkbprff40iqj646a697cyrvl0zt2m6", k);
+            m = "Authorization",
+            p = "https://api.twitch.tv",
+            h = "DELETE",
+            f = ((v = {}).Accept = "application/vnd.twitchtv.v5+json", v["CLIENT-ID"] = "jzkbprff40iqj646a697cyrvl0zt2m6", v);
 
-        function y(e) {
+        function g(e) {
             void 0 === e && (e = "");
             var t = {};
-            return "" !== e && (t[g] = "OAuth " + e), t
+            return "" !== e && (t[m] = "OAuth " + e), t
         }
-        var k, E = function() {
+        var v, b = function() {
             function e(e) {
                 this.chatOAuthToken = e
             }
@@ -812,45 +788,45 @@ webpackJsonp([48], {
                 return void 0 === t && (t = ""), new e(t)
             }, e.prototype.doRequest = function(e, t) {
                 void 0 === t && (t = {});
-                var n = _;
-                t.body && t.body instanceof FormData || (n = Object.assign({}, _, ((i = {})["Content-Type"] = "application/json", i)));
-                var i, a = r.__assign({}, t, {
-                    headers: f(n, t.headers).toHeaders()
+                var n = f;
+                t.body && t.body instanceof FormData || (n = Object.assign({}, f, ((a = {})["Content-Type"] = "application/json", a)));
+                var a, r = i.__assign({}, t, {
+                    headers: u(n, t.headers).toHeaders()
                 });
                 return function(e, t) {
-                    return h(e, t).then(function(e) {
+                    return d(e, t).then(function(e) {
                         return e.json()
                     })
-                }(new Request(e.toString(), a))
+                }(new Request(e.toString(), r))
             }, e.prototype.doAuthRequest = function(e, t) {
                 void 0 === t && (t = {});
-                var n = r.__assign({}, t, {
-                    headers: f(y(this.chatOAuthToken), t.headers)
+                var n = i.__assign({}, t, {
+                    headers: u(g(this.chatOAuthToken), t.headers)
                 });
                 return this.doRequest(e, n)
             }, e.prototype.doRawRequest = function(e, t) {
                 void 0 === t && (t = {});
-                var n = r.__assign({}, t, {
-                    headers: f(_, t.headers).toHeaders()
+                var n = i.__assign({}, t, {
+                    headers: u(f, t.headers).toHeaders()
                 });
-                return h(new Request(e.toString(), n))
+                return d(new Request(e.toString(), n))
             }, e.prototype.doRawAuthRequest = function(e, t) {
                 void 0 === t && (t = {});
-                var n = r.__assign({}, t, {
-                    headers: f(y(this.chatOAuthToken), t.headers)
+                var n = i.__assign({}, t, {
+                    headers: u(g(this.chatOAuthToken), t.headers)
                 });
                 return this.doRawRequest(e, n)
             }, e
         }();
 
-        function C(e) {
+        function _(e) {
             return function(t, n) {
                 var i = {
                         dispatch: t,
                         getState: n
                     },
                     a = function(e) {
-                        return E.getClient(Object(l.a)(e.getState()))
+                        return b.getClient(Object(o.a)(e.getState()))
                     }(i);
                 return e({
                     store: i,
@@ -859,34 +835,34 @@ webpackJsonp([48], {
             }
         }
         n.d(t, "a", function() {
-            return N
+            return k
         }), n.d(t, "b", function() {
-            return w
+            return E
         }), n.d(t, "c", function() {
-            return I
+            return C
         }), t.e = function(e, t) {
             var n = this;
-            return C(function(i) {
-                return r.__awaiter(n, void 0, void 0, function() {
-                    var n, a;
-                    return r.__generator(this, function(r) {
-                        switch (r.label) {
+            return _(function(r) {
+                return i.__awaiter(n, void 0, void 0, function() {
+                    var n, o;
+                    return i.__generator(this, function(i) {
+                        switch (i.label) {
                             case 0:
-                                return r.trys.push([0, 3, , 4]), [4, i.apiClient.doAuthRequest(new URL(v + "/v5/channels/" + e + "/collections/?limit=100"))];
+                                return i.trys.push([0, 3, , 4]), [4, r.apiClient.doAuthRequest(new URL(p + "/v5/channels/" + e + "/collections/?limit=100"))];
                             case 1:
-                                return n = r.sent(), i.store.dispatch({
-                                    type: N,
-                                    collections: u(n)
-                                }), [4, i.apiClient.doAuthRequest(new URL(v + "/v5/channels/" + e + "/collections/?limit=100&containing_item=" + c.Video + ":" + t))];
+                                return n = i.sent(), r.store.dispatch({
+                                    type: k,
+                                    collections: Object(s.c)(n)
+                                }), [4, r.apiClient.doAuthRequest(new URL(p + "/v5/channels/" + e + "/collections/?limit=100&containing_item=" + s.a.Video + ":" + t))];
                             case 2:
-                                return n = r.sent(), i.store.dispatch({
-                                    type: w,
-                                    containingCollections: u(n),
+                                return n = i.sent(), r.store.dispatch({
+                                    type: E,
+                                    containingCollections: Object(s.c)(n),
                                     videoID: t
                                 }), [3, 4];
                             case 3:
-                                return a = r.sent(), o.j.error(a, "Failed to fetch collections"), i.store.dispatch({
-                                    type: I,
+                                return o = i.sent(), a.j.error(o, "Failed to fetch collections"), r.store.dispatch({
+                                    type: C,
                                     errorType: "Fetch Failed",
                                     errorMessage: "Fetching collections for channel " + e + " and video " + t + " failed."
                                 }), [3, 4];
@@ -897,42 +873,42 @@ webpackJsonp([48], {
                 })
             })
         }, t.d = function(e, t, n) {
-            var i = this;
-            return C(function(a) {
-                return r.__awaiter(i, void 0, void 0, function() {
-                    var i, u, m, p, h, f, g, b, _;
-                    return r.__generator(this, function(r) {
-                        switch (r.label) {
+            var l = this;
+            return _(function(c) {
+                return i.__awaiter(l, void 0, void 0, function() {
+                    var l, d, u, m, h, f, g, v, b;
+                    return i.__generator(this, function(i) {
+                        switch (i.label) {
                             case 0:
-                                i = a.store.getState(), u = i.collections, m = Object(l.c)(i), p = m ? m.id : "", r.label = 1;
+                                l = c.store.getState(), d = l.collections, u = Object(o.c)(l), m = u ? u.id : "", i.label = 1;
                             case 1:
-                                return r.trys.push([1, 4, , 5]), h = "title=" + encodeURIComponent(t), f = new URL(v + "/v5/channels/" + e + "/collections/"), [4, B(f, h, a)];
+                                return i.trys.push([1, 4, , 5]), h = "title=" + encodeURIComponent(t), f = new URL(p + "/v5/channels/" + e + "/collections/"), [4, w(f, h, c)];
                             case 2:
-                                return g = r.sent(), b = d(g), u.collections = [b].concat(u.collections), a.store.dispatch({
-                                    type: N,
-                                    collections: u.collections
-                                }), Object(s.b)({
+                                return g = i.sent(), v = Object(s.b)(g), d.collections = [v].concat(d.collections), c.store.dispatch({
+                                    type: k,
+                                    collections: d.collections
+                                }), Object(r.b)({
                                     channelID: e,
-                                    playlistID: b.id,
-                                    userID: p,
-                                    title: b.title
-                                }), h = "type=" + c.Video + "&id=" + n, f = new URL(v + "/v5/collections/" + b.id + "/items"), [4, B(f, h, a)];
+                                    playlistID: v.id,
+                                    userID: m,
+                                    title: v.title
+                                }), h = "type=" + s.a.Video + "&id=" + n, f = new URL(p + "/v5/collections/" + v.id + "/items"), [4, w(f, h, c)];
                             case 3:
-                                return r.sent(), u.containingCollections = [b].concat(u.containingCollections), a.store.dispatch({
-                                    type: w,
-                                    containingCollections: u.containingCollections,
+                                return i.sent(), d.containingCollections = [v].concat(d.containingCollections), c.store.dispatch({
+                                    type: E,
+                                    containingCollections: d.containingCollections,
                                     videoID: n
-                                }), Object(s.a)({
+                                }), Object(r.a)({
                                     channelID: e,
                                     itemID: n,
                                     itemPosition: -1,
-                                    itemType: c.Video,
-                                    playlistID: b.id,
-                                    userID: p
+                                    itemType: s.a.Video,
+                                    playlistID: v.id,
+                                    userID: m
                                 }), [3, 5];
                             case 4:
-                                return _ = r.sent(), o.j.error(_, "Failed to add new collection with video"), a.store.dispatch({
-                                    type: A,
+                                return b = i.sent(), a.j.error(b, "Failed to add new collection with video"), c.store.dispatch({
+                                    type: S,
                                     errorType: "Create Failed",
                                     errorMessage: "Creating collections for channel " + e + " and video " + n + " with title " + t + "."
                                 }), [3, 5];
@@ -943,58 +919,58 @@ webpackJsonp([48], {
                 })
             })
         }, t.f = function(e, t, n) {
-            var i = this;
-            return C(function(a) {
-                return r.__awaiter(i, void 0, void 0, function() {
-                    var i, d, u, p, h, f, g, _, y, k;
-                    return r.__generator(this, function(r) {
-                        switch (r.label) {
+            var c = this;
+            return _(function(d) {
+                return i.__awaiter(c, void 0, void 0, function() {
+                    var c, u, m, f, g, v, b, _, y, k;
+                    return i.__generator(this, function(i) {
+                        switch (i.label) {
                             case 0:
-                                i = a.store.getState(), d = Object(m.a)(i), u = Object(l.c)(i), p = u ? u.id : "", r.label = 1;
+                                c = d.store.getState(), u = Object(l.a)(c), m = Object(o.c)(c), f = m ? m.id : "", i.label = 1;
                             case 1:
-                                return r.trys.push([1, 6, , 7]), d.map(function(e) {
+                                return i.trys.push([1, 6, , 7]), u.map(function(e) {
                                     return e.id
-                                }).includes(e.id) ? (h = JSON.stringify({
-                                    type: c.Video,
+                                }).includes(e.id) ? (g = JSON.stringify({
+                                    type: s.a.Video,
                                     id: t
-                                }), f = btoa(h), [4, a.apiClient.doRawAuthRequest(new URL(v + "/v5/collections/" + e.id + "/items/" + f), {
-                                    method: b
+                                }), v = btoa(g), [4, d.apiClient.doRawAuthRequest(new URL(p + "/v5/collections/" + e.id + "/items/" + v), {
+                                    method: h
                                 })]) : [3, 3];
                             case 2:
-                                return r.sent(), y = d.filter(function(t) {
+                                return i.sent(), y = u.filter(function(t) {
                                     return t.id !== e.id
-                                }), a.store.dispatch({
-                                    type: w,
+                                }), d.store.dispatch({
+                                    type: E,
                                     containingCollections: y,
                                     videoID: t
-                                }), Object(s.c)({
+                                }), Object(r.c)({
                                     channelID: n,
                                     itemID: t,
                                     itemPosition: -1,
-                                    itemType: c.Video,
+                                    itemType: s.a.Video,
                                     playlistID: e.id,
-                                    userID: p
+                                    userID: f
                                 }), [3, 5];
                             case 3:
-                                return g = "type=" + c.Video + "&id=" + t, _ = new URL(v + "/v5/collections/" + e.id + "/items"), [4, B(_, g, a)];
+                                return b = "type=" + s.a.Video + "&id=" + t, _ = new URL(p + "/v5/collections/" + e.id + "/items"), [4, w(_, b, d)];
                             case 4:
-                                r.sent(), y = d.concat([e]), a.store.dispatch({
-                                    type: w,
+                                i.sent(), y = u.concat([e]), d.store.dispatch({
+                                    type: E,
                                     containingCollections: y,
                                     videoID: t
-                                }), Object(s.a)({
+                                }), Object(r.a)({
                                     channelID: n,
                                     itemID: t,
                                     itemPosition: -1,
-                                    itemType: c.Video,
+                                    itemType: s.a.Video,
                                     playlistID: e.id,
-                                    userID: p
-                                }), r.label = 5;
+                                    userID: f
+                                }), i.label = 5;
                             case 5:
                                 return [3, 7];
                             case 6:
-                                return k = r.sent(), o.j.error(k, "Failed to fetch collections"), a.store.dispatch({
-                                    type: O,
+                                return k = i.sent(), a.j.error(k, "Failed to fetch collections"), d.store.dispatch({
+                                    type: N,
                                     errorType: "Update Failed",
                                     errorMessage: "Updating collection " + e.id + " for channel " + n + " and video " + t + " failed."
                                 }), [3, 7];
@@ -1005,17 +981,17 @@ webpackJsonp([48], {
                 })
             })
         };
-        var S = {
+        var y = {
                 "content-type": "application/x-www-form-urlencoded"
             },
-            N = "collections.COLLECTIONS_FETCHED",
-            w = "collections.COLLECTIONS_FETCHED_FOR_VIDEO_ID",
-            I = "collections.COLLECTIONS_FETCH_FAILED",
-            A = "collections.COLLECTIONS_CREATE_FAILED",
-            O = "collections.COLLECTIONS_UPDATE_FAILED";
-        var B = function(e, t, n) {
+            k = "collections.COLLECTIONS_FETCHED",
+            E = "collections.COLLECTIONS_FETCHED_FOR_VIDEO_ID",
+            C = "collections.COLLECTIONS_FETCH_FAILED",
+            S = "collections.COLLECTIONS_CREATE_FAILED",
+            N = "collections.COLLECTIONS_UPDATE_FAILED";
+        var w = function(e, t, n) {
             return n.apiClient.doAuthRequest(e, {
-                headers: S,
+                headers: y,
                 method: "POST",
                 body: t
             })
@@ -1166,6 +1142,52 @@ webpackJsonp([48], {
                     e && this.props.onFilesSubmitted(Array.from(e))
                 }, t
             }(a.Component))
+    },
+    O8Ns: function(e, t, n) {
+        "use strict";
+        var i, a, r = function(e, t, n) {
+            var i = e.collectionItems || [];
+            return Boolean(i.find(function(e) {
+                return e.ObjectType === n && e.id === t
+            }))
+        };
+        ! function(e) {
+            e.Public = "public"
+        }(i || (i = {})),
+        function(e) {
+            e.Staff = "staff"
+        }(a || (a = {}));
+        var o, s = function(e) {
+            return {
+                __typename: "Collection",
+                id: e._id,
+                title: e.title,
+                state: i.Public,
+                thumbnailSrc: e.thumbnails && e.thumbnails.small,
+                totalDuration: e.total_duration,
+                itemsCount: e.items_count
+            }
+        };
+
+        function l(e) {
+            return e.collections.map(function(e) {
+                return s(e)
+            })
+        }! function(e) {
+            e.Video = "video"
+        }(o || (o = {})), n.d(t, !1, function() {
+            return r
+        }), n.d(t, !1, function() {
+            return i
+        }), n.d(t, !1, function() {
+            return a
+        }), n.d(t, "b", function() {
+            return s
+        }), n.d(t, "c", function() {
+            return l
+        }), n.d(t, "a", function() {
+            return o
+        })
     },
     OLKT: function(e, t) {},
     OcEY: function(e, t) {
@@ -5895,4 +5917,4 @@ webpackJsonp([48], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-collections-9c74e0de1991d248d08d71f769ecc82b.js.map
+//# sourceMappingURL=pages.channel-collections-0b5d6278fcf53a89149782a2467b1d64.js.map

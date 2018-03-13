@@ -825,11 +825,11 @@ webpackJsonp([45], {
             return "https://www.twitch.tv/" + e
         }
 
-        function D(e, t) {
+        function x(e, t) {
             return void 0 === t && (t = {}), Object(T.a)(R("" + e), t)
         }
 
-        function x(e, t) {
+        function D(e, t) {
             return void 0 === t && (t = {}), Object(T.a)(function(e) {
                 return R("directory/game/" + e)
             }(e) + "/clips", t)
@@ -837,11 +837,11 @@ webpackJsonp([45], {
 
         function L(e, t) {
             void 0 === t && (t = {});
-            var n = Object(T.a)(D(e) + "/clips", t);
+            var n = Object(T.a)(x(e) + "/clips", t);
             return Object(O.a)(window.navigator.userAgent) ? "intent://stream/" + e + "#Intent;scheme=twitch;package=tv.twitch.android.app;S.browser_fallback_url=" + n + ";end" : n
         }
-        var j = n("CMkR"),
-            A = n("U5tC"),
+        var A = n("CMkR"),
+            j = n("U5tC"),
             M = {
                 tt_content: "player_profile_img"
             },
@@ -894,7 +894,7 @@ webpackJsonp([45], {
                     }, this.props.data.clip.game && Object(l.d)("playing {gameName}", {
                         gameName: o.createElement("a", {
                             target: "_blank",
-                            href: x(this.props.data.clip.game.name, {
+                            href: D(this.props.data.clip.game.name, {
                                 tt_medium: "clips_web"
                             })
                         }, this.props.data.clip.game.displayName)
@@ -909,9 +909,9 @@ webpackJsonp([45], {
                         showLoadingPlaceholder: !0
                     }))) : o.createElement(f._2, null, this.renderPlaceholders())
                 }, t.prototype.pauseAutoplayTimer = function() {
-                    Object(j.e)(j.b.followButton)
+                    Object(A.e)(A.b.followButton)
                 }, t.prototype.restartAutoplayTimer = function() {
-                    Object(j.g)(j.b.followButton)
+                    Object(A.g)(A.b.followButton)
                 }, t.prototype.renderPlaceholders = function() {
                     return o.createElement(f._2, {
                         padding: 1,
@@ -953,7 +953,7 @@ webpackJsonp([45], {
                         height: 30,
                         width: 70
                     }))))
-                }, t = a.__decorate([Object(p.d)("ClipsBroadcasterInfo"), Object(u.a)(A)], t)
+                }, t = a.__decorate([Object(p.d)("ClipsBroadcasterInfo"), Object(u.a)(j)], t)
             }(o.Component),
             P = n("RH2O"),
             B = n("Aj/L"),
@@ -969,7 +969,7 @@ webpackJsonp([45], {
                     this.reportInteractive()
                 }, t.prototype.render = function() {
                     if (!this.props.data.clip || !this.props.data.clip.curator) return o.createElement(f._2, null, this.renderPlaceholders());
-                    var e = D(this.props.data.clip.curator.login, {
+                    var e = x(this.props.data.clip.curator.login, {
                         tt_medium: "clips_web",
                         tt_content: "curator_name"
                     });
@@ -1030,7 +1030,7 @@ webpackJsonp([45], {
                 }, t = a.__decorate([Object(p.d)("ClipsTitle"), Object(u.a)(H)], t)
             }(o.Component),
             W = n("0CQq"),
-            Q = function(e) {
+            $ = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -1079,7 +1079,7 @@ webpackJsonp([45], {
                     })))
                 }, t = a.__decorate([Object(p.d)("ClipsViewCount"), Object(u.a)(W)], t)
             }(o.Component),
-            $ = n("QIXk"),
+            Q = n("QIXk"),
             K = n("E5Ip"),
             Y = function(e) {
                 function t() {
@@ -1091,7 +1091,7 @@ webpackJsonp([45], {
                 return a.__extends(t, e), t.prototype.render = function() {
                     return this.props.data.clip ? o.createElement(f._2, {
                         className: "clips-view-title-edit"
-                    }, o.createElement($.a, {
+                    }, o.createElement(Q.a, {
                         clipId: this.props.data.clip.id,
                         clipSlug: this.props.slug,
                         clipTitle: this.props.data.clip.title,
@@ -1152,7 +1152,7 @@ webpackJsonp([45], {
                     }, t.autoScrollChatToBottom = function() {
                         t.state.isChatAutoScrolling && t.scrollChatToBottom()
                     }, t.editTitleToggle = function() {
-                        t.state.isEditingTitle ? Object(j.g)(j.b.titleEdit) : Object(j.e)(j.b.titleEdit), t.setState(function(e) {
+                        t.state.isEditingTitle ? Object(A.g)(A.b.titleEdit) : Object(A.e)(A.b.titleEdit), t.setState(function(e) {
                             return {
                                 isEditingTitle: !e.isEditingTitle
                             }
@@ -1201,7 +1201,7 @@ webpackJsonp([45], {
                             }
                         },
                         refDelegate: this.setChatContentRef
-                    }, o.createElement(Q, {
+                    }, o.createElement($, {
                         slug: e
                     }), this.renderClipTitle()), o.createElement(Se, {
                         autoScrollChatToBottom: this.autoScrollChatToBottom,
@@ -1550,7 +1550,7 @@ webpackJsonp([45], {
                         type: f._40.Span
                     }, "•")), o.createElement(f._2, {
                         flexShrink: 0
-                    }, o.createElement(Q, {
+                    }, o.createElement($, {
                         padding: {
                             bottom: 0
                         },
@@ -1600,9 +1600,9 @@ webpackJsonp([45], {
                     }, e)) : o.createElement(f._2, null, this.renderPlaceholders());
                     var e, t, n
                 }, t.prototype.pauseAutoplayTimer = function() {
-                    Object(j.e)(j.b.fullVideoButton)
+                    Object(A.e)(A.b.fullVideoButton)
                 }, t.prototype.restartAutoplayTimer = function() {
-                    Object(j.g)(j.b.fullVideoButton)
+                    Object(A.g)(A.b.fullVideoButton)
                 }, t.prototype.reportInteractive = function() {
                     this.props.data.clip && this.props.latencyTracking.reportInteractive()
                 }, t.prototype.renderPlaceholders = function() {
@@ -1621,8 +1621,8 @@ webpackJsonp([45], {
             Oe = n("f2i/"),
             Ie = n("+Znq"),
             Re = n("oIkB"),
-            De = n("287o"),
-            xe = function() {
+            xe = n("287o"),
+            De = function() {
                 return function(e) {
                     var t = this;
                     this.timerId = null, this.start = function() {
@@ -1637,8 +1637,8 @@ webpackJsonp([45], {
                 }
             }(),
             Le = n("HW6M"),
-            je = n("l21v"),
-            Ae = n("YhVV"),
+            Ae = n("l21v"),
+            je = n("YhVV"),
             Me = (n("HyIc"), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
@@ -1690,7 +1690,7 @@ webpackJsonp([45], {
                         }, o.createElement(f.X, {
                             fullWidth: !0
                         }, o.createElement("img", {
-                            src: Object(je.e)(n.props.emote.id, 1)
+                            src: Object(Ae.e)(n.props.emote.id, 1)
                         })))), t))
                     }, n.state = {
                         isAnimating: !1
@@ -1705,7 +1705,7 @@ webpackJsonp([45], {
                         isAnimating: !1
                     })
                 }, t.prototype.getToken = function(e) {
-                    var t = Ae.a[this.props.emote.token];
+                    var t = je.a[this.props.emote.token];
                     return t && t.length > 0 ? t[0] : e
                 }, t = a.__decorate([Object(p.d)("ClipsEmote", {
                     autoReportInteractive: !0
@@ -1893,7 +1893,7 @@ webpackJsonp([45], {
                     hasReacted: !1
                 }
             },
-            Qe = function(e) {
+            $e = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.state = {
@@ -1960,11 +1960,11 @@ webpackJsonp([45], {
                     }, n.removeActiveClipReaction = function() {
                         n.getActiveReaction() && n.removeClipReaction(n.getActiveReaction().emote)
                     }, n.addClipReaction = function(e) {
-                        n.toggleReaction(De.a.Add, e)
+                        n.toggleReaction(xe.a.Add, e)
                     }, n.removeClipReaction = function(e) {
-                        n.toggleReaction(De.a.Remove, e)
+                        n.toggleReaction(xe.a.Remove, e)
                     }, n.toggleReaction = function(e, t) {
-                        return n.props.isLoggedIn ? (n.updateReactionLocal(e, t), (e === De.a.Add ? n.props.addClipReaction : n.props.removeClipReaction)(Object(Re.a)({
+                        return n.props.isLoggedIn ? (n.updateReactionLocal(e, t), (e === xe.a.Add ? n.props.addClipReaction : n.props.removeClipReaction)(Object(Re.a)({
                             entityID: "clip:" + n.props.slug.toLowerCase(),
                             emoteID: t.id
                         }))) : (n.props.login(), Promise.reject(new Error("user not logged in")))
@@ -1975,7 +1975,7 @@ webpackJsonp([45], {
                         return e >= n.state.sortedReactions.length ? 0 : e
                     }, n.saveBalloonWrapperRef = function(e) {
                         n.balloonWrapperRef = e
-                    }, n.reactionCarouselTimer = new xe({
+                    }, n.reactionCarouselTimer = new De({
                         intervalMillis: Ge,
                         onInterval: n.showNextReaction
                     }), n
@@ -2021,7 +2021,7 @@ webpackJsonp([45], {
                         i = this.state.sortedReactions.slice();
                     if (-1 !== n) {
                         var a = this.state.sortedReactions[n],
-                            r = e === De.a.Add,
+                            r = e === xe.a.Add,
                             o = {
                                 count: a.count + (r ? 1 : -1),
                                 emote: a.emote,
@@ -2041,7 +2041,7 @@ webpackJsonp([45], {
                         sortedReactions: i
                     }), this.getActiveReaction().emote.id === t.id && this.reactionCarouselTimer.restart(1e3)
                 }, t.prototype.handleAutoplayTimer = function(e) {
-                    e ? Object(j.g)(j.b.emotePicker) : Object(j.e)(j.b.emotePicker)
+                    e ? Object(A.g)(A.b.emotePicker) : Object(A.e)(A.b.emotePicker)
                 }, t.prototype.renderPlaceholders = function() {
                     return o.createElement(f._2, {
                         padding: {
@@ -2062,7 +2062,7 @@ webpackJsonp([45], {
                     name: "removeClipReaction"
                 }), Object(u.a)(qe), Object(p.d)("ClipsReactionCarousel")], t)
             }(o.Component);
-        var $e = Object(P.b)(function(e) {
+        var Qe = Object(P.b)(function(e) {
                 return {
                     isLoggedIn: Object(B.d)(e)
                 }
@@ -2072,7 +2072,7 @@ webpackJsonp([45], {
                         return Object(Oe.f)(Te.a.FeedReactionToggle)
                     }
                 }, e)
-            })(Qe),
+            })($e),
             Ke = (n("mK8J"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
@@ -2103,7 +2103,7 @@ webpackJsonp([45], {
                         padding: {
                             x: 1
                         }
-                    }, o.createElement($e, {
+                    }, o.createElement(Qe, {
                         slug: e
                     }), o.createElement(we, {
                         slug: e
@@ -2195,7 +2195,7 @@ webpackJsonp([45], {
                         }, o.createElement(f._35, {
                             fontSize: f.R.Size5
                         }, Object(l.d)("Your clip was successfully shared to your Channel Feed.", "ClipsFeedShare"), " ", o.createElement("a", {
-                            href: D(t.props.login)
+                            href: x(t.props.login)
                         }, Object(l.d)("View it now", "ClipsFeedShare")))), o.createElement(f._25, {
                             padding: 1,
                             display: f.N.Flex,
@@ -2594,7 +2594,7 @@ webpackJsonp([45], {
                         value: this.props.data.clip.embedURL
                     })))))))))
                 }, t.prototype.cancelAutoplayTimer = function() {
-                    Object(j.d)(j.b.socialShare)
+                    Object(A.d)(A.b.socialShare)
                 }, t.prototype.reportInteractive = function() {
                     this.props.data.clip && this.props.latencyTracking.reportInteractive()
                 }, t.prototype.renderPlaceholders = function() {
@@ -2666,19 +2666,20 @@ webpackJsonp([45], {
                     }
                 }, e)
             })(mt),
-            ht = "MOST_RECENT_CLIPS_WATCHED_STORAGE_KEY",
-            gt = 10;
+            ht = n("BhGt"),
+            gt = "MOST_RECENT_CLIPS_WATCHED_STORAGE_KEY",
+            ft = 10;
 
-        function ft() {
-            return JSON.parse(l.l.get(ht, "[]"))
+        function kt() {
+            return JSON.parse(l.l.get(gt, "[]"))
         }
 
-        function kt(e) {
-            var t = ft();
-            t && t.length >= gt && (t = t.slice(1, gt)), l.l.set(ht, JSON.stringify(t.concat([e])))
+        function yt(e) {
+            var t = kt();
+            t && t.length >= ft && (t = t.slice(1, ft)), l.l.set(gt, JSON.stringify(t.concat([e])))
         }
         n("vtXo");
-        var yt = function(e) {
+        var bt = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.state = {
@@ -2687,7 +2688,7 @@ webpackJsonp([45], {
                     }, n.hasSetPlayerRef = !1, n.setInitialSlug = function(e) {
                         n.setState({
                             initialSlug: e
-                        }), kt(e), n.props.latencyTracking.reportInteractive()
+                        }), yt(e), n.props.latencyTracking.reportInteractive()
                     }, n.setPlayerRef = function(e) {
                         n.playerRef = e
                     }, n.setIsLoaded = function() {
@@ -2739,11 +2740,11 @@ webpackJsonp([45], {
                             method: ve,
                             arg: e
                         })
-                    }(e), I), kt(e))
+                    }(e), I), yt(e))
                 }, t = a.__decorate([Object(p.d)("ClipsVideoIframe")], t)
             }(o.Component),
-            bt = n("CIox"),
-            St = function(e) {
+            St = n("CIox"),
+            _t = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.setImage = function(e) {
@@ -2777,8 +2778,8 @@ webpackJsonp([45], {
                     })
                 }, t
             }(o.Component),
-            _t = 9,
-            Ct = (n("r+Hw"), Object(p.d)("ClipsAutoplayView")(function(e) {
+            Ct = 9,
+            Nt = (n("r+Hw"), Object(p.d)("ClipsAutoplayView")(function(e) {
                 var t, n = e.autoplayClip && e.autoplayClip.broadcaster && e.autoplayClip.game && Object(l.d)("{broadcasterDisplayName} playing {gameDisplayName}", {
                     broadcasterDisplayName: e.autoplayClip.broadcaster.displayName,
                     gameDisplayName: e.autoplayClip.game.displayName
@@ -2847,7 +2848,7 @@ webpackJsonp([45], {
                 }, o.createElement(f.j, {
                     ratio: f.k.Aspect16x9,
                     overflow: !1
-                }, o.createElement(St, {
+                }, o.createElement(_t, {
                     className: "clips-autoplay__image",
                     src: e.autoplayClip.thumbnailURL,
                     altText: Object(l.d)("clip image preview", "ClipsAutoplayView"),
@@ -2857,7 +2858,7 @@ webpackJsonp([45], {
                     attachBottom: !0,
                     fullWidth: !0
                 }, o.createElement(f._12, {
-                    countdown: _t,
+                    countdown: Ct,
                     size: f._13.Small
                 }))), o.createElement(f._25, {
                     position: f._9.Absolute,
@@ -2902,7 +2903,7 @@ webpackJsonp([45], {
                 }, n))))))
             }));
 
-        function Nt(e, t, n) {
+        function Et(e, t, n) {
             return {
                 vod: e.video ? e.video.id : null,
                 content_mode: "clip",
@@ -2913,27 +2914,27 @@ webpackJsonp([45], {
             }
         }
 
-        function Et(e, t, n) {
-            b(c.SpadeEventType.PlayerRecShow, e.slug, a.__assign({}, Nt(e, t, n), {
+        function wt(e, t, n) {
+            b(c.SpadeEventType.PlayerRecShow, e.slug, a.__assign({}, Et(e, t, n), {
                 type: "clip"
             }))
         }
 
-        function wt(e, t, n) {
-            b(c.SpadeEventType.PlayerShowFeatured, e.slug, a.__assign({}, Nt(e, t, n), {
+        function Ft(e, t, n) {
+            b(c.SpadeEventType.PlayerShowFeatured, e.slug, a.__assign({}, Et(e, t, n), {
                 type: "clip"
             }))
         }
-        var Ft = n("3yr7"),
-            Tt = function(e) {
+        var Tt = n("3yr7"),
+            Ot = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.state = {
-                        countdownValue: _t,
+                        countdownValue: Ct,
                         timerState: "running",
                         autoplayClip: null,
                         autoplayClipCategory: null
-                    }, n.autoplayTimerInfluencerState = j.c, n.hasSetAutoplayClip = !1, n.onTimerUpdate = function() {
+                    }, n.autoplayTimerInfluencerState = A.c, n.hasSetAutoplayClip = !1, n.onTimerUpdate = function() {
                         n.state.countdownValue > 0 ? n.setState(function(e) {
                             return {
                                 countdownValue: e.countdownValue - 1
@@ -2949,34 +2950,34 @@ webpackJsonp([45], {
                             r = t.autoplayClipCategory,
                             o = n.props.data.clip;
                         i && (o && r && e && function(e, t, n) {
-                            b(c.SpadeEventType.PlayerRecAutoplay, e.slug, a.__assign({}, Nt(e, t, n), {
+                            b(c.SpadeEventType.PlayerRecAutoplay, e.slug, a.__assign({}, Et(e, t, n), {
                                 recommended_vod_view: "featured"
                             }))
                         }(o, i, r), n.props.history.push("/" + i.slug))
                     }, n.onAutoplayInfluencerUpdate = function(e, t) {
                         if ("canceled" !== n.state.timerState)
-                            if (e !== j.a.cancel) {
-                                n.autoplayTimerInfluencerState = a.__assign({}, n.autoplayTimerInfluencerState, ((i = {})[t] = e === j.a.pause, i));
+                            if (e !== A.a.cancel) {
+                                n.autoplayTimerInfluencerState = a.__assign({}, n.autoplayTimerInfluencerState, ((i = {})[t] = e === A.a.pause, i));
                                 var i, r = Object.keys(n.autoplayTimerInfluencerState).some(function(e) {
                                     return n.autoplayTimerInfluencerState[e]
                                 });
                                 "running" === n.state.timerState || r ? "running" === n.state.timerState && r && (n.countdownTimer.stop(), n.setState({
                                     timerState: "paused"
                                 })) : (n.countdownTimer.start(), n.setState({
-                                    countdownValue: _t,
+                                    countdownValue: Ct,
                                     timerState: "running"
                                 }))
                             } else n.cancelTimer()
                     }, n.setAutoplayClip = function(e) {
                         if (!e.data.clip || n.hasSetAutoplayClip) return null;
                         n.hasSetAutoplayClip = !0;
-                        for (var t = ft(), i = 0; i < m.length; i++) {
+                        for (var t = kt(), i = 0; i < m.length; i++) {
                             var a = e.data.clip.relatedClips[m[i]].find(function(e) {
                                 return !t.includes(e.slug)
                             });
                             if (a) {
                                 var r = m[i];
-                                return Et(e.data.clip, a, r), wt(e.data.clip, a, r), void n.setState({
+                                return wt(e.data.clip, a, r), Ft(e.data.clip, a, r), void n.setState({
                                     autoplayClip: a,
                                     autoplayClipCategory: r
                                 })
@@ -2984,10 +2985,10 @@ webpackJsonp([45], {
                         }
                     }, n.setAutoplayRef = function(e) {
                         n.autoplayRef = e
-                    }, n.countdownTimer = new xe({
+                    }, n.countdownTimer = new De({
                         onInterval: n.onTimerUpdate,
                         intervalMillis: 1e3
-                    }), Object(j.f)(n.onAutoplayInfluencerUpdate), n
+                    }), Object(A.f)(n.onAutoplayInfluencerUpdate), n
                 }
                 return a.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.setUpContainerView(), this.setAutoplayClip(this.props), this.countdownTimer.start()
@@ -2999,11 +3000,11 @@ webpackJsonp([45], {
                     return a.__awaiter(this, void 0, void 0, function() {
                         var t;
                         return a.__generator(this, function(n) {
-                            return this.autoplayRef && (t = this.autoplayRef.getBoundingClientRect(), e.top > t.top + t.height / 4 ? Object(j.e)(j.b.playerView) : Object(j.g)(j.b.playerView)), [2]
+                            return this.autoplayRef && (t = this.autoplayRef.getBoundingClientRect(), e.top > t.top + t.height / 4 ? Object(A.e)(A.b.playerView) : Object(A.g)(A.b.playerView)), [2]
                         })
                     })
                 }, t.prototype.render = function() {
-                    return null === this.state.autoplayClip ? o.createElement(f._2, null) : o.createElement(Ct, {
+                    return null === this.state.autoplayClip ? o.createElement(f._2, null) : o.createElement(Nt, {
                         countdownValue: this.state.countdownValue,
                         timerState: this.state.timerState,
                         autoplayClip: this.state.autoplayClip,
@@ -3018,28 +3019,28 @@ webpackJsonp([45], {
                     registerReceiver: r.func
                 }, t
             }(o.Component),
-            Ot = Object(bt.e)(Object(u.a)(Ft)(Object(p.d)("ClipsAutoplayContainer")(Tt))),
-            It = function(e) {
+            It = Object(St.e)(Object(u.a)(Tt)(Object(p.d)("ClipsAutoplayContainer")(Ot))),
+            Rt = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
                     var e = "ended" === this.props.playerConnection.playerProps.playback;
-                    return Object(O.c)(navigator.userAgent), e ? o.createElement(Ot, {
+                    return Object(O.c)(navigator.userAgent), e ? o.createElement(It, {
                         slug: this.props.slug
                     }) : null
                 }, t
             }(o.Component),
-            Rt = oe({
+            xt = oe({
                 playerId: function(e) {
                     return e.slug
                 },
                 requestedPlayerProps: ["playback"]
             })(Object(p.d)("ClipsAutoplay", {
                 autoReportInteractive: !0
-            })(It)),
+            })(Rt)),
             Dt = (n("+g5R"), n("RsNJ")),
-            xt = function(e) {
+            Lt = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -3058,7 +3059,7 @@ webpackJsonp([45], {
                     var e = this.props.data.clip,
                         t = e.broadcaster,
                         n = e.game,
-                        i = D(t.login);
+                        i = x(t.login);
                     return o.createElement(f.X, {
                         className: "watch-live-prompt",
                         display: f.N.Flex,
@@ -3129,36 +3130,40 @@ webpackJsonp([45], {
                     })
                 }, t = a.__decorate([Object(u.a)(Dt)], t)
             }(o.Component),
-            Lt = oe({
+            At = oe({
                 playerId: function(e) {
                     return e.slug
                 },
                 requestedPlayerProps: ["currentTime", "duration", "playback", "ui"]
-            })(xt),
+            })(Lt),
             jt = (n("zU1d"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    return o.createElement(f._2, {
-                        position: f._9.Relative
+                    return o.createElement(f.W, {
+                        position: f._9.Relative,
+                        fullHeight: !0,
+                        fullWidth: !0
+                    }, o.createElement("div", {
+                        ref: this.props.setPlayerWrapperRef
                     }, o.createElement(f._25, {
                         className: "clips-video-overlay",
                         fullHeight: !0,
                         fullWidth: !0,
                         position: f._9.Absolute
-                    }, o.createElement(Rt, {
+                    }, o.createElement(xt, {
                         slug: this.props.slug
-                    }), !Object(O.c)(window.navigator.userAgent) && o.createElement(Lt, {
+                    }), !Object(O.c)(window.navigator.userAgent) && o.createElement(At, {
                         slug: this.props.slug
-                    })), o.createElement(f._2, null, this.props.children))
+                    })), o.createElement(f._2, null, this.props.children)))
                 }, t
             }(o.Component)),
-            At = n("sikP"),
-            Mt = n("oSFp"),
-            Ut = n("mw/a"),
-            Pt = n("Ev5K"),
-            Bt = function(e) {
+            Mt = n("sikP"),
+            Ut = n("oSFp"),
+            Pt = n("mw/a"),
+            Bt = n("Ev5K"),
+            Vt = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleModalOpened = function(e) {
@@ -3176,19 +3181,19 @@ webpackJsonp([45], {
                     if (!n || !t) return null;
                     if (!t.isClipsReportModalOpen && n.isClipsReportModalOpen) {
                         var i = this.props.data.clip && this.props.data.clip.broadcaster ? this.props.data.clip.broadcaster.id : "";
-                        this.props.showModal(Mt.a, {
+                        this.props.showModal(Ut.a, {
                             title: Object(l.d)("Report this Clip", "ClipsViewModerationModals"),
                             reportContext: {
-                                contentType: Ut.a.Clip,
+                                contentType: Pt.a.Clip,
                                 contentID: this.props.slug,
                                 targetUserID: i
                             },
                             onClose: this.props.closeModal
                         }), this.handleModalOpened("report")
-                    }!t.isClipsDeleteModalOpen && n.isClipsDeleteModalOpen && (this.props.showModal(At.d, {
+                    }!t.isClipsDeleteModalOpen && n.isClipsDeleteModalOpen && (this.props.showModal(Mt.d, {
                         slug: this.props.slug,
                         onClose: this.props.closeModal
-                    }), this.handleModalOpened("delete")), !t.isClipsDeleteAllModalOpen && n.isClipsDeleteAllModalOpen && (this.props.showModal(At.e, {
+                    }), this.handleModalOpened("delete")), !t.isClipsDeleteAllModalOpen && n.isClipsDeleteAllModalOpen && (this.props.showModal(Mt.e, {
                         slug: this.props.slug,
                         onClose: this.props.closeModal
                     }), this.handleModalOpened("deleteAll"))
@@ -3196,52 +3201,64 @@ webpackJsonp([45], {
                     return null
                 }, t
             }(o.Component),
-            Vt = oe({
+            zt = oe({
                 playerId: function(e) {
                     return e.slug
                 },
                 requestedPlayerProps: ["clipsModeration"]
-            })(Object(u.a)(Pt)(Object(p.d)("ClipsViewModerationModals")(Bt)));
-        var zt = Object(P.b)(null, function(e) {
+            })(Object(u.a)(Bt)(Object(p.d)("ClipsViewModerationModals")(Vt)));
+        var qt = Object(P.b)(null, function(e) {
                 return Object(Fe.b)({
                     showModal: Je.d,
                     closeModal: Je.c
                 }, e)
-            })(Vt),
-            qt = function(e) {
+            })(zt),
+            Ht = function(e) {
                 function t() {
-                    return null !== e && e.apply(this, arguments) || this
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.playerWrapperRef = null, t.setPlayerWrapperRef = function(e) {
+                        return t.playerWrapperRef = e
+                    }, t.sendExitFullscreenMessage = function() {
+                        t.props.playerConnection.sendMessage(pe({
+                            method: "fullscreen",
+                            arg: !1
+                        }))
+                    }, t
                 }
                 return a.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.componentWillReceiveProps = function(e) {
                     var t = this.props.playerConnection.playerProps.ui,
                         n = e.playerConnection.playerProps.ui;
-                    (t && t.isSettingsShown) !== (n && n.isSettingsShown) && (n && n.isSettingsShown ? Object(j.e)(j.b.playerMenu) : Object(j.g)(j.b.playerMenu));
-                    var i = this.props.playerConnection.playerProps.playSessionId,
-                        a = e.playerConnection.playerProps.playSessionId;
-                    i !== a && a && l.n.setVideoPlayerTrackingData({
-                        playSessionID: a
+                    (t && t.isSettingsShown) !== (n && n.isSettingsShown) && (n && n.isSettingsShown ? Object(A.e)(A.b.playerMenu) : Object(A.g)(A.b.playerMenu));
+                    var i = this.props.playerConnection.playerProps.screenMode,
+                        a = e.playerConnection.playerProps.screenMode;
+                    this.playerWrapperRef && (i && i.isFullScreen) !== (a && a.isFullScreen) && (ht.videoEnabled(this.playerWrapperRef) ? a && a.isFullScreen ? ht.request(this.playerWrapperRef, void 0, this.sendExitFullscreenMessage) : ht.exit() : this.sendExitFullscreenMessage());
+                    var r = this.props.playerConnection.playerProps.playSessionId,
+                        o = e.playerConnection.playerProps.playSessionId;
+                    r !== o && o && l.n.setVideoPlayerTrackingData({
+                        playSessionID: o
                     })
                 }, t.prototype.render = function() {
                     var e = this.props.slug;
                     return o.createElement(f._2, {
                         flexGrow: 1
-                    }, o.createElement(zt, {
+                    }, o.createElement(qt, {
                         slug: this.props.slug
                     }), o.createElement(jt, {
-                        slug: e
-                    }, o.createElement(yt, {
+                        slug: e,
+                        setPlayerWrapperRef: this.setPlayerWrapperRef
+                    }, o.createElement(bt, {
                         slug: e
                     })))
                 }, t = a.__decorate([oe({
                     playerId: function(e) {
                         return e.slug
                     },
-                    requestedPlayerProps: ["ui", "playSessionId"]
+                    requestedPlayerProps: ["ui", "screenMode", "playSessionId"]
                 }), Object(p.d)("ClipsVideoPlayer")], t)
             }(o.Component),
-            Ht = (n("IcDq"), function(e) {
+            Gt = (n("IcDq"), function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -3285,7 +3302,7 @@ webpackJsonp([45], {
                         breakpointLarge: {
                             flexDirection: f.P.Row
                         }
-                    }, o.createElement(qt, {
+                    }, o.createElement(Ht, {
                         slug: e
                     }), o.createElement(Ye, {
                         slug: e
@@ -3299,7 +3316,7 @@ webpackJsonp([45], {
                 })], t)
             }(o.Component));
         n.d(t, "ClipsView", function() {
-            return Ht
+            return Gt
         })
     },
     "1EXI": function(e, t) {
@@ -4641,6 +4658,172 @@ webpackJsonp([45], {
         }, null))(k)
     },
     AwFw: function(e, t) {},
+    BhGt: function(e, t, n) {
+        var i;
+        ! function(a, r, o) {
+            "use strict";
+
+            function l(e) {
+                var t = null;
+                if ("VIDEO" === e.tagName) t = e;
+                else {
+                    var n = e.getElementsByTagName("video");
+                    n[0] && (t = n[0])
+                }
+                return t
+            }
+
+            function s(e) {
+                var t = l(e);
+                if (t && t.webkitEnterFullscreen) {
+                    try {
+                        t.readyState < t.HAVE_METADATA ? (t.addEventListener("loadedmetadata", function e() {
+                            t.removeEventListener("loadedmetadata", e, !1), t.webkitEnterFullscreen(), v = !!t.getAttribute("controls")
+                        }, !1), t.load()) : (t.webkitEnterFullscreen(), v = !!t.getAttribute("controls")), m = t
+                    } catch (t) {
+                        return b("not_supported", e)
+                    }
+                    return !0
+                }
+                return b(void 0 === p.request ? "not_supported" : "not_enabled", e)
+            }
+
+            function d() {
+                S.element || (y(), c())
+            }
+
+            function c() {
+                o && "webkitfullscreenchange" === p.change && window.removeEventListener("resize", d, !1)
+            }
+            var u = /i(Pad|Phone|Pod)/.test(navigator.userAgent) && parseInt(navigator.userAgent.replace(/^.*OS (\d+)_(\d+).*$/, "$1.$2"), 10) >= 7,
+                p = function() {
+                    var e = r.createElement("video"),
+                        t = {
+                            request: ["requestFullscreen", "webkitRequestFullscreen", "webkitRequestFullScreen", "mozRequestFullScreen", "msRequestFullscreen"],
+                            exit: ["exitFullscreen", "webkitCancelFullScreen", "webkitExitFullscreen", "mozCancelFullScreen", "msExitFullscreen"],
+                            enabled: ["fullscreenEnabled", "webkitFullscreenEnabled", "mozFullScreenEnabled", "msFullscreenEnabled"],
+                            element: ["fullscreenElement", "webkitFullscreenElement", "webkitCurrentFullScreenElement", "mozFullScreenElement", "msFullscreenElement"],
+                            change: ["fullscreenchange", "webkitfullscreenchange", "mozfullscreenchange", "MSFullscreenChange"],
+                            error: ["fullscreenerror", "webkitfullscreenerror", "mozfullscreenerror", "MSFullscreenError"]
+                        },
+                        n = {};
+                    for (var i in t)
+                        for (var a = 0, o = t[i].length; o > a; a++)
+                            if (t[i][a] in e || t[i][a] in r || "on" + t[i][a].toLowerCase() in r) {
+                                n[i] = t[i][a];
+                                break
+                            }
+                    return n
+                }(),
+                m = null,
+                v = null,
+                h = function() {},
+                g = [],
+                f = !1;
+            navigator.userAgent.indexOf("Android") > -1 && navigator.userAgent.indexOf("Chrome") > -1 && (f = parseInt(navigator.userAgent.replace(/^.*Chrome\/(\d+).*$/, "$1"), 10) || !0);
+            var k = function(e) {
+                    var t = g[g.length - 1];
+                    t && (e !== t.element && e !== m || !t.hasEntered) && ("VIDEO" === e.tagName && (m = e), 1 === g.length && S.onenter(S.element), t.enter.call(t.element, e || t.element), t.hasEntered = !0)
+                },
+                y = function() {
+                    !m || v || u || (m.setAttribute("controls", "controls"), m.removeAttribute("controls")), m = null, v = null;
+                    var e = g.pop();
+                    e && (e.exit.call(e.element), S.element || (g.forEach(function(e) {
+                        e.exit.call(e.element)
+                    }), g = [], S.onexit()))
+                },
+                b = function(e, t) {
+                    if (g.length > 0) {
+                        var n = g.pop();
+                        t = t || n.element, n.error.call(t, e), S.onerror(t, e)
+                    }
+                },
+                S = {
+                    request: function(e, t, n, i) {
+                        if (e = e || r.body, g.push({
+                                element: e,
+                                enter: t || h,
+                                exit: n || h,
+                                error: i || h
+                            }), void 0 !== p.request)
+                            if (o && !1 === r[p.enabled]) s(e);
+                            else if (!1 !== f && 32 > f) s(e);
+                        else {
+                            if (o && void 0 === p.enabled) return p.enabled = "webkitFullscreenEnabled", e[p.request](), void setTimeout(function() {
+                                r[p.element] ? r[p.enabled] = !0 : (r[p.enabled] = !1, s(e))
+                            }, 250);
+                            try {
+                                e[p.request](), setTimeout(function() {
+                                    r[p.element] || b(o ? "not_enabled" : "not_allowed", e)
+                                }, 100)
+                            } catch (t) {
+                                b("not_enabled", e)
+                            }
+                        } else s(e)
+                    },
+                    exit: function() {
+                        c(), r[p.exit]()
+                    },
+                    toggle: function(e, t, n, i) {
+                        S.element ? S.exit() : S.request(e, t, n, i)
+                    },
+                    videoEnabled: function(e) {
+                        if (S.enabled) return !0;
+                        var t = l(e = e || r.body);
+                        return !(!t || void 0 === t.webkitSupportsFullscreen) && (t.readyState < t.HAVE_METADATA ? "maybe" : t.webkitSupportsFullscreen)
+                    },
+                    onenter: h,
+                    onexit: h,
+                    onchange: h,
+                    onerror: h
+                };
+            try {
+                Object.defineProperties(S, {
+                    element: {
+                        enumerable: !0,
+                        get: function() {
+                            return m && m.webkitDisplayingFullscreen ? m : r[p.element] || null
+                        }
+                    },
+                    enabled: {
+                        enumerable: !0,
+                        get: function() {
+                            return "webkitCancelFullScreen" === p.exit && !o || !(!1 !== f && 32 > f) && (r[p.enabled] || !1)
+                        }
+                    }
+                }), p.change && r.addEventListener(p.change, function(e) {
+                    if (S.onchange(S.element), S.element) {
+                        var t = g[g.length - 2];
+                        t && t.element === S.element ? y() : (k(S.element), o && "webkitfullscreenchange" === p.change && window.addEventListener("resize", d, !1))
+                    } else y()
+                }, !1), r.addEventListener("webkitbeginfullscreen", function(e) {
+                    var t = !0;
+                    if (g.length > 0)
+                        for (var n = 0, i = g.length; i > n; n++) {
+                            if (l(g[n].element) === e.srcElement) {
+                                t = !1;
+                                break
+                            }
+                        }
+                    t && g.push({
+                        element: e.srcElement,
+                        enter: h,
+                        exit: h,
+                        error: h
+                    }), S.onchange(e.srcElement), k(e.srcElement)
+                }, !0), r.addEventListener("webkitendfullscreen", function(e) {
+                    S.onchange(e.srcElement), y(e.srcElement)
+                }, !0), p.error && r.addEventListener(p.error, function(e) {
+                    b("not_allowed")
+                }, !1)
+            } catch (e) {
+                S.element = null, S.enabled = !1
+            }
+            void 0 === (i = function() {
+                return S
+            }.call(t, n, t, e)) || (e.exports = i)
+        }(0, document, self !== top)
+    },
     C5rq: function(e, t) {
         var n = {
             kind: "Document",
@@ -10046,7 +10229,7 @@ webpackJsonp([45], {
                     })
                 }, t
             }(a.Component),
-            D = f({
+            x = f({
                 props: function(e) {
                     return {
                         deleteClips: function() {
@@ -10084,7 +10267,7 @@ webpackJsonp([45], {
         }), n.d(t, "e", function() {
             return T
         }), n.d(t, "c", function() {
-            return D
+            return x
         })
     },
     tGx1: function(e, t) {
@@ -11173,4 +11356,4 @@ webpackJsonp([45], {
     },
     zU1d: function(e, t) {}
 });
-//# sourceMappingURL=sites.clips.pages.view-575a895a5d2c51d670c6ff497fbbf454.js.map
+//# sourceMappingURL=sites.clips.pages.view-f6e0fd3d6c8865a90b0397dc149a608a.js.map

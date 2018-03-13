@@ -3969,7 +3969,7 @@ webpackJsonp([33], {
                 }
             }))(mt);
         ! function(e) {
-            e.Weekly = "WEEK", e.AllTime = "ALLTIME"
+            e.Weekly = "WEEK", e.AllTime = "ALLTIME", e.Monthly = "MONTHLY"
         }(rt || (rt = {}));
         n("GuSj");
         var ht = function(e) {
@@ -4039,7 +4039,7 @@ webpackJsonp([33], {
                     }, "Bits--PinnedCheerV2"));
                 return n < 1 && (i = c.createElement(j._35, {
                     type: j._40.Span
-                }, Object(r.d)("Resets in less than a day", "Bits--PinnedCheerV2"))), this.props.leaderboardMode === rt.AllTime && (e = Object(r.d)("All-time Top Cheerers", "Bits--PinnedCheerV2"), i = null), c.createElement(j._2, {
+                }, Object(r.d)("Resets in less than a day", "Bits--PinnedCheerV2"))), this.props.leaderboardMode === rt.AllTime ? (e = Object(r.d)("All-time Top Cheerers", "Bits--PinnedCheerV2"), i = null) : this.props.leaderboardMode === rt.Monthly && (e = Object(r.d)("Monthly Top Cheerers", "Bits--PinnedCheerV2")), c.createElement(j._2, {
                     display: j.N.Flex,
                     alignItems: j.c.Center,
                     flexDirection: j.P.Column
@@ -7925,6 +7925,7 @@ webpackJsonp([33], {
                         position: j._9.Absolute,
                         "data-a-target": "chat-user-card"
                     }, c.createElement(qi.a, {
+                        isPopout: this.props.isPopout,
                         isEmbedded: this.props.isEmbedded,
                         onSendMessage: this.props.onSendMessage,
                         channelID: this.props.channelID
@@ -14327,6 +14328,7 @@ webpackJsonp([33], {
                         position: E._9.Absolute,
                         zIndex: E._52.Default
                     }, l.createElement(gt.a, {
+                        isPopout: this.props.isPopout,
                         isEmbedded: !1,
                         onSendMessage: this.sendMessage,
                         channelID: this.props.channelID
@@ -16249,11 +16251,19 @@ webpackJsonp([33], {
                     }, t
                 }
                 return d.__extends(t, e), t.prototype.render = function() {
-                    var e = Object(u.d)("Whisper", "WhisperButton");
-                    return c.createElement(p.u, {
-                        onClick: this.handleClick,
-                        "data-a-target": "usercard-whisper-button"
-                    }, e)
+                    var e = !this.props.isPopout,
+                        t = Object(u.d)("Whisper", "WhisperButton"),
+                        n = c.createElement(p.u, {
+                            disabled: !e,
+                            onClick: this.handleClick,
+                            "data-a-target": "usercard-whisper-button",
+                            "data-test-selector": "whisper-button"
+                        }, t);
+                    return e ? n : c.createElement(p._43, {
+                        align: p._44.Left,
+                        direction: p._45.Top,
+                        label: Object(u.d)("Whispers are disabled in popout chat", "WhispersDisabledText")
+                    }, n)
                 }, t = d.__decorate([Object(m.d)("WhisperButton", {
                     autoReportInteractive: !0
                 })], t)
@@ -32758,6 +32768,7 @@ webpackJsonp([33], {
                     var e = Object(B.a)(this.props.data.currentUser.id, this.props.data.targetUser.id);
                     return u.createElement(g.a, {
                         onClick: this.onWhisperButtonClick,
+                        isPopout: this.props.isPopout,
                         threadID: e
                     })
                 }, t.prototype.renderGiftSubscriptionButton = function() {
@@ -32896,6 +32907,7 @@ webpackJsonp([33], {
                         }, u.createElement(V, {
                             channelID: this.props.channelID,
                             hideViewerCard: this.props.hideViewerCard,
+                            isPopout: this.props.isPopout,
                             isEmbedded: this.props.isEmbedded,
                             sendMessageToTMI: this.props.onSendMessage,
                             showReportUserModal: this.props.showReportUserModal,
@@ -41686,7 +41698,8 @@ webpackJsonp([33], {
                         fullHeight: !0,
                         fullWidth: !0
                     }, o.createElement(h.a, {
-                        channelLogin: this.props.match.params.channelLogin
+                        channelLogin: this.props.match.params.channelLogin,
+                        isPopout: !0
                     }), o.createElement(s.a, null))) : null
                 }, t = r.__decorate([Object(p.d)("PopoutChatPage", {
                     autoReportInteractive: !0,
@@ -44908,4 +44921,4 @@ webpackJsonp([33], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.popout-chat-a9157c1597fdd5c3c5438193f9d8e60d.js.map
+//# sourceMappingURL=pages.popout-chat-82a181c0f29e579e5922e9a0733c2d8b.js.map

@@ -17433,17 +17433,19 @@ webpackJsonp([42, 81], {
                         location: y.PageviewLocation.VideoWatchPage
                     }
                 }), u.createElement(x._25, {
-                    display: x.N.Flex,
-                    color: x.I.Alt2,
-                    justifyContent: x._1.Center,
-                    fullWidth: !0,
-                    fullHeight: !0
-                }, u.createElement(x._2, {
-                    display: x.N.InlineFlex,
                     alignItems: x.c.Center,
+                    color: x.I.Alt2,
+                    display: x.N.Flex,
+                    flexDirection: x.P.Column,
+                    fullHeight: !0,
+                    fullWidth: !0,
+                    justifyContent: x._1.Center
+                }, u.createElement(x._2, {
+                    alignItems: x.c.Center,
+                    display: x.N.Flex,
                     flexWrap: x.Q.NoWrap,
                     padding: {
-                        x: 5
+                        bottom: 3
                     }
                 }, u.createElement(x._25, {
                     margin: {
@@ -18680,4 +18682,4 @@ webpackJsonp([42, 81], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.video-watch-95970fb2acc9b5b52964b5764624332c.js.map
+//# sourceMappingURL=pages.video-watch-7b81e5582683ca26c995dcc6946be5da.js.map
