@@ -21,7 +21,7 @@ webpackJsonp([64], {
                                 slug: t
                             }
                         }
-                    })) : this.props.location.state && this.props.location.state.slug ? (t = this.props.location.state.slug, o.createElement(a._2, null, t)) : o.createElement(r.a, {
+                    })) : this.props.location.state && this.props.location.state.slug ? (t = this.props.location.state.slug, o.createElement(a._4, null, t)) : o.createElement(r.a, {
                         to: "/"
                     })
                 }, e
@@ -31,4 +31,4 @@ webpackJsonp([64], {
         })
     }
 });
-//# sourceMappingURL=sites.clips.pages.create-d280644ac0e045e1290d6b5294bd8b10.js.map
+//# sourceMappingURL=sites.clips.pages.create-093869f20d5b55f5f1ded3ef026c725b.js.map

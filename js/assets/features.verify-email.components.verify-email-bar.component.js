@@ -178,19 +178,19 @@ webpackJsonp([59], {
         i.d(t, "DISMISSAL_DATA_STORAGE_KEY", function() {
             return S
         }), i.d(t, "DISMISS_BTN_SELECTOR", function() {
-            return T
+            return D
         }), i.d(t, "VERIFY_BTN_SELECTOR", function() {
             return C
         }), i.d(t, "VerifyEmailBarPresentation", function() {
             return b
         }), i.d(t, "VerifyEmailBar", function() {
-            return N
+            return k
         });
         var E, S = "verifyemailbar_dismissal",
             I = 18e5,
             g = 5e3,
-            D = new Set(["/"]),
-            T = "dimiss-btn",
+            T = new Set(["/"]),
+            D = "dimiss-btn",
             C = "verify-email-btn";
         ! function(e) {
             e[e.INITIAL = 0] = "INITIAL", e[e.CLICK_TO_VERIFY = 1] = "CLICK_TO_VERIFY", e[e.EMAIL_SENT = 2] = "EMAIL_SENT", e[e.ERROR_SENDING = 3] = "ERROR_SENDING", e[e.DISMISSED = 4] = "DISMISSED"
@@ -285,65 +285,65 @@ webpackJsonp([59], {
                 }, t.prototype.isVisible = function() {
                     return this.state.verifyEmailBarState !== E.INITIAL && this.state.verifyEmailBarState !== E.DISMISSED
                 }, t.prototype.renderClickToVerify = function() {
-                    return a.createElement(v._2, {
+                    return a.createElement(v._4, {
                         fullWidth: !0,
-                        position: v._9.Relative
-                    }, a.createElement(v._25, {
+                        position: v._11.Relative
+                    }, a.createElement(v._27, {
                         className: "verify-email-banner",
-                        display: v.N.Flex,
-                        justifyContent: v._1.Center,
+                        display: v.P.Flex,
+                        justifyContent: v._3.Center,
                         alignItems: v.c.Center
-                    }, a.createElement(v.W, {
+                    }, a.createElement(v.Y, {
                         fullHeight: !0,
                         fullWidth: !0
                     }, a.createElement("button", {
                         onClick: this.onClickToVerify,
                         "data-test-selector": C
-                    }, a.createElement(v._35, {
-                        color: v.I.Alt,
-                        fontSize: v.R.Size5
-                    }, Object(u.d)("Click here to verify your email", "VerifyEmail")))), a.createElement(v._25, {
+                    }, a.createElement(v.O, {
+                        color: v.J.Alt,
+                        fontSize: v.T.Size5
+                    }, Object(u.d)("Click here to verify your email", "VerifyEmail")))), a.createElement(v._27, {
                         className: "verify-email-banner__dismiss",
-                        position: v._9.Absolute,
+                        position: v._11.Absolute,
                         attachRight: !0,
                         margin: {
                             right: 2
                         }
                     }, a.createElement(v.u, {
-                        type: v.z.Text,
+                        type: v.A.Text,
                         onClick: this.dismissBarClickHandler,
-                        "data-test-selector": T
+                        "data-test-selector": D
                     }, Object(u.d)("Not Now", "VerifyEmail")))))
                 }, t.prototype.renderEmailSent = function() {
-                    return a.createElement(v._25, {
+                    return a.createElement(v._27, {
                         className: "verify-email-banner verify-email-banner--success",
-                        display: v.N.Flex,
-                        justifyContent: v._1.Center,
+                        display: v.P.Flex,
+                        justifyContent: v._3.Center,
                         alignItems: v.c.Center
-                    }, a.createElement(v._2, {
+                    }, a.createElement(v._4, {
                         className: "verify-email-banner__body"
-                    }, a.createElement(v._35, {
-                        fontSize: v.R.Size5
+                    }, a.createElement(v.O, {
+                        fontSize: v.T.Size5
                     }, Object(u.d)("Verification email sent to {email}", {
                         email: this.props.data.currentUser.email
                     }, "VerifyEmail"))))
                 }, t.prototype.renderErrorSending = function() {
-                    return a.createElement(v._25, {
+                    return a.createElement(v._27, {
                         className: "verify-email-banner verify-email-banner--error",
-                        display: v.N.Flex,
-                        justifyContent: v._1.Center,
+                        display: v.P.Flex,
+                        justifyContent: v._3.Center,
                         alignItems: v.c.Center
-                    }, a.createElement(v._2, {
+                    }, a.createElement(v._4, {
                         className: "verify-email-banner__body"
-                    }, a.createElement(v._35, {
-                        fontSize: v.R.Size5
+                    }, a.createElement(v.O, {
+                        fontSize: v.T.Size5
                     }, Object(u.d)("Unable to send an email to {email}. Please try again later.", {
                         email: this.props.data.currentUser.email
                     }, "VerifyEmail"))))
                 }, t.prototype.shouldHide = function() {
                     return !(this.isDataLoaded() && !this.props.data.currentUser.isEmailVerified) || (this.shouldRespectDismissal() || this.isShowingPrimeUpsell())
                 }, t.prototype.isShowingPrimeUpsell = function() {
-                    if (D.has(this.props.location.pathname)) {
+                    if (T.has(this.props.location.pathname)) {
                         var e = this.props.data.currentUser && this.props.data.currentUser.hasPrime,
                             t = this.props.data.requestInfo && this.props.data.requestInfo.countryCode;
                         return Object(d.h)(e, t)
@@ -356,7 +356,7 @@ webpackJsonp([59], {
                     return this.props.data && !(this.props.data.loading || this.props.data.error) && this.props.data.currentUser && this.props.data.requestInfo
                 }, t
             }(a.Component),
-            N = Object(o.d)(Object(l.d)("VerifyEmail"), Object(c.a)(_), s.e)(b)
+            k = Object(o.d)(Object(l.d)("VerifyEmail"), Object(c.a)(_), s.e)(b)
     },
     RDCx: function(e, t) {
         var i = {
@@ -464,4 +464,4 @@ webpackJsonp([59], {
     },
     yY1M: function(e, t) {}
 });
-//# sourceMappingURL=features.verify-email.components.verify-email-bar.component-b4d6b275bec335c5cbd5312a45d19268.js.map
+//# sourceMappingURL=features.verify-email.components.verify-email-bar.component-be50beb101b536360340b7093a086615.js.map
