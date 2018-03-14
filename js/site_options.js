@@ -449,13 +449,13 @@ window.SiteOptions = {
         },
         "15a67dfe-256c-428c-928f-d3c4c13d0abf": {
             "name": "android_broadcast_abs",
-            "v": 3236,
+            "v": 3262,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 50,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 50,
                 "value": "active"
             }]
         },
@@ -2843,13 +2843,13 @@ window.SiteOptions = {
         },
         "80f6e8da-d7c3-4b75-8e49-3a7abd33b032": {
             "name": "android_track_network_request_latency",
-            "v": 3239,
+            "v": 3263,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 99,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 1,
                 "value": "active"
             }]
         },
