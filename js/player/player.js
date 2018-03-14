@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".c885eef03dc30f30e9bc.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".d09247c7d1ff8ea53af0.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -29644,7 +29644,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.03.14-212617+0d394b80bcb6e6d404459be46a182aaa282b3b0e",
+                    app_version: "2018.03.14-224317+25a6e300b5fd6b2355da1de7a4d30761e221731c",
                     flash_version: r,
                     referrer_url: i,
                     referrer_host: o.host,
@@ -34857,22 +34857,24 @@
             function n() {
                 var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                     n = void 0;
-                n = "string" == typeof e || e instanceof String ? document.getElementById(e) : e, d.dispatch(Object(Ik.b)(window)), d.dispatch(Object(Gc.j)(u)), d.dispatch(uo(t)), Object(Js.x)(t), t.debug && t.verbose && d.subscribe(function() {
+                n = "string" == typeof e || e instanceof String ? document.getElementById(e) : e, d.dispatch(Object(Ik.b)(window)), d.dispatch(Object(Gc.j)(u));
+                var a = c._optionsWithClipsEmbedPlayerHack(t, window.location.href);
+                d.dispatch(uo(a)), Object(Js.x)(a), a.debug && a.verbose && d.subscribe(function() {
                     console.debug("state change: %o", d.getState())
-                }), t.force_manifest_node && d.dispatch(ne(t.force_manifest_node)), d.dispatch($i({
+                }), a.force_manifest_node && d.dispatch(ne(a.force_manifest_node)), d.dispatch($i({
                     login: Ms.cookie.get("login") || null,
                     deviceID: Va.a(!1),
                     userAgent: d.getState().window.navigator.userAgent
-                })), d.dispatch(to(d.getState().window.navigator, t.lang)), d.dispatch(Object(ml.d)({
+                })), d.dispatch(to(d.getState().window.navigator, a.lang)), d.dispatch(Object(ml.d)({
                     deviceId: Va.a(!1)
-                })), d.dispatch(Object(ml.e)(t.player)), d.dispatch(ae(t.tracking)), O.push(new nw(d, t)), O.push(new mE(d)), O.push(new vE(d)), O.push(new Ns(d)), O.push(new Vu(d)), O.push(new _E(d)), h = new l(d, t), d.dispatch(Object(vc.c)(h)), d.dispatch(Object(Cc.j)()), r(), m = t.allowfullscreen ? new rw.b(n, d) : new sw(n, d), k = new lE.c(d), E = new Zk(d), g = new re(n, d, t), v = new ou(g, d, h, t), t.debug && (window.state = v), S = new iE(d), S.observe(n), P = new sE(d), t.player === Wa.v && (O.push(new cE(d)), t.targetOrigin || console.error("Missing targetOrigin option"), d.dispatch(Object(ml.f)({
-                    targetOrigin: t.targetOrigin
+                })), d.dispatch(Object(ml.e)(a.player)), d.dispatch(ae(a.tracking)), O.push(new nw(d, a)), O.push(new mE(d)), O.push(new vE(d)), O.push(new Ns(d)), O.push(new Vu(d)), O.push(new _E(d)), h = new l(d, a), d.dispatch(Object(vc.c)(h)), d.dispatch(Object(Cc.j)()), r(), m = a.allowfullscreen ? new rw.b(n, d) : new sw(n, d), k = new lE.c(d), E = new Zk(d), g = new re(n, d, a), v = new ou(g, d, h, a), a.debug && (window.state = v), S = new iE(d), S.observe(n), P = new sE(d), a.player === Wa.v && (O.push(new cE(d)), a.targetOrigin || console.error("Missing targetOrigin option"), d.dispatch(Object(ml.f)({
+                    targetOrigin: a.targetOrigin
                 }))), ie(c, g), _ = new El(g, d, {
-                    origin: t.origin
-                }), b = new wa.a(g, h, d, t), d.dispatch(Object(Pc.E)(t.autoplay)), o(t), O.push(new jl(g, n, d, t)), t.controls && (w = new Qk(v, d), d.dispatch(Object($k.b)(w)), y = Ri(g, n, d, w, t)), C = new CE(g, v, d, t), i(t).then(function() {
+                    origin: a.origin
+                }), b = new wa.a(g, h, d, a), d.dispatch(Object(Pc.E)(a.autoplay)), o(a), O.push(new jl(g, n, d, a)), a.controls && (w = new Qk(v, d), d.dispatch(Object($k.b)(w)), y = Ri(g, n, d, w, a)), C = new CE(g, v, d, a), i(a).then(function() {
                     d.dispatch(ae({
-                        content: t.tt_content,
-                        medium: t.tt_medium
+                        content: a.tt_content,
+                        medium: a.tt_medium
                     })), d.dispatch(Object(ec.o)())
                 }), d.dispatch(po()), g.addEventListener(Xs.h, function() {
                     d.dispatch(Object(xc.f)(m.canFullScreen()))
@@ -34942,7 +34944,11 @@
                 P = void 0,
                 C = void 0,
                 O = [];
-            c._setLiveToVod = function(e, t) {
+            c._optionsWithClipsEmbedPlayerHack = function(e, t) {
+                return 0 !== t.indexOf("https://clips.twitch.tv/embed") ? e : Ya()({}, e, {
+                    player: Wa.f
+                })
+            }, c._setLiveToVod = function(e, t) {
                 var n = function(e) {
                     var n = d.getState(),
                         r = n.user,
