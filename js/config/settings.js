@@ -13,6 +13,7 @@ window.__twilightSettings = {
     "browser_notifications_launch": true,
     "chatrooms_enabled": true,
     "chatrooms_staff_beta": true,
+    "commerce_amendment_v2": "staff",
     "commerce_bar_experience": "amazon",
     "comscore_config_c1": 2,
     "comscore_config_c2": 6745306,
