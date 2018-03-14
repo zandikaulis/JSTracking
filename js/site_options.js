@@ -2449,7 +2449,7 @@ window.SiteOptions = {
         },
         "6a2630a4-edc7-4f2a-8cfe-e4de75eb0d98": {
             "name": "rtqos",
-            "v": 3257,
+            "v": 3260,
             "t": 1,
             "s": 2,
             "groups": [{
@@ -2463,7 +2463,7 @@ window.SiteOptions = {
                 "value": "control10"
             }, {
                 "weight": 10,
-                "value": "metro_bonus"
+                "value": "metro_bonus_4"
             }]
         },
         "6a587617-eb7c-475e-8bc3-991d4f38fc87": {
