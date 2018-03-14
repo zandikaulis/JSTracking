@@ -5007,14 +5007,14 @@ window.SiteOptions = {
         },
         "ec70bd08-dbc8-4f48-9f60-d035fec3eb20": {
             "name": "CVP Player Core 2.0 Mediaplayer Experiment Aug 2017",
-            "v": 3254,
+            "v": 3264,
             "t": 1,
             "groups": [{
                 "weight": 95,
                 "value": "2.2.404"
             }, {
                 "weight": 5,
-                "value": "2.3.2"
+                "value": "2.3.3"
             }]
         },
         "ed516213-9b6f-49a0-96f7-1706aafc8e2d": {
