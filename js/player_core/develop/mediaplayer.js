@@ -83,7 +83,11 @@ var ErrorSource = exports.ErrorSource = __webpack_require__(16);
 
 // Chrome 63 and Opera have an issue (crbug.com/779962) that heavily throttle video in a
 // background tab while silent. So, we need to stop playback in that circumstance.
-var PAUSE_HIDDEN_SILENT_TAB = (Browser.name === 'chrome' && Browser.major === 63) || Browser.name === 'opera';
+var PAUSE_HIDDEN_SILENT_TAB = (
+    (Browser.name === 'chrome' && Browser.major === 63)
+    || Browser.name === 'opera'
+    || Browser.name === 'safari'
+);
 
 // Prefix all localstorage keys to avoid namespace collisions
 var LOCAL_STORAGE_PREFIX = 'cvp.';
