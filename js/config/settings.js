@@ -43,7 +43,7 @@ window.__twilightSettings = {
     "passport_hosts": ["https://api.twitch.tv", "https://passport.twitch.tv", "https://passport-staging.internal.twitch.tv", "https://passport-dev1.internal.twitch.tv", "https://passport-dev2.internal.twitch.tv", "https://passport-dev3.internal.twitch.tv", "https://id.twitch.tv", "https://id-dev.twitch.tv"],
     "player_routes_exact": ["store", "directory", "following", "popout", ""],
     "player_routes_startswith": ["event/", "store/", "collections/", "communities/", "directory/"],
-    "premiere_publish_flow": false,
+    "premiere_publish_flow": true,
     "premiere_video_manager_public": true,
     "premiere_video_manager_staff": true,
     "prime_blocked_regions": ["IN", "IND", "CU", "CUB", "SD", "SUD", "IR", "IRN", "CHN", "CN", "SY", "SYR", "PRK", "KP"],

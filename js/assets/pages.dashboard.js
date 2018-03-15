@@ -23411,9 +23411,10 @@ webpackJsonp([31], {
                     }, a.onChange = function(e) {
                         var t = new Date;
                         a.setState(function(n) {
-                            return {
+                            var a = n.startNow;
+                            return e.startTime && e.startTime !== n.eventEdits.startTime && (a = Object(on.isValid)(e.startTime) && Object(on.isWithinRange)(e.startTime, Object(on.subMinutes)(t, 1), Object(on.addMinutes)(t, 1))), {
                                 isDirty: !0,
-                                startNow: e.startTime && Object(on.isWithinRange)(e.startTime, Object(on.subMinutes)(t, 1), Object(on.addMinutes)(t, 1)),
+                                startNow: a,
                                 eventEdits: m.__assign({}, n.eventEdits, e)
                             }
                         }), a.props.errors.length > 0 && a.props.clearErrors()
@@ -54499,4 +54500,4 @@ webpackJsonp([31], {
         }
     }
 });
-//# sourceMappingURL=pages.dashboard-cbb4b8ccaca07c922d858ae14761975b.js.map
+//# sourceMappingURL=pages.dashboard-c6afade3d6783eb844c88439bbfc9805.js.map
