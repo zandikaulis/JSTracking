@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".425eb60692d9f73c1a06.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".b97135736e9f0d5061f5.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -1327,7 +1327,7 @@
         var r = n(115),
             i = n(53),
             o = n(150),
-            a = n(45),
+            a = n(46),
             s = n(114),
             u = n(52),
             c = Object.prototype,
@@ -1426,7 +1426,7 @@
             return n < 0 && (n = c(l + n, 0)), a(e) ? n <= l && e.indexOf(t, n) > -1 : !!l && i(e, t, n) > -1
         }
         var i = n(145),
-            o = n(45),
+            o = n(46),
             a = n(108),
             s = n(72),
             u = n(202),
@@ -1733,7 +1733,7 @@
         }
 
         function c(e) {
-            return ie().then(function(e) {
+            return re().then(function(e) {
                 return e.token
             }, function(e) {
                 return null
@@ -1845,12 +1845,14 @@
                 var r = Promise.resolve({
                     token: n
                 });
-                ie.cache.set(void 0, r)
+                re.cache.set(void 0, r)
             }
         }
 
         function E(e, t) {
-            return null === e.chansub && !e.is_admin && F()(t.restrictions, function(e, t) {
+            var n = !!e.channel.viewer && null !== e.channel.viewer.subscriptionBenefit,
+                r = !!e.currentUser && e.currentUser.roles.isSiteAdmin;
+            return !n && !r && F()(t.restrictions, function(e, t) {
                 return e || "chansub" === t
             }, !1)
         }
@@ -1885,7 +1887,7 @@
         }
 
         function T(e) {
-            return ie().then(function(e) {
+            return re().then(function(e) {
                 return e.token
             }, function(e) {
                 return null
@@ -1919,7 +1921,7 @@
         }
 
         function R(e, t) {
-            return ie().then(function(e) {
+            return re().then(function(e) {
                 return e.token
             }, function(e) {
                 return null
@@ -1937,13 +1939,13 @@
             })
         }
 
-        function j(e) {
-            return ie().then(function(e) {
+        function j(e, t) {
+            return re().then(function(e) {
                 return e.token
             }, function(e) {
                 return null
-            }).then(function(t) {
-                return o(t).request(e)
+            }).then(function(n) {
+                return o(n).request(e, t)
             })
         }
         var I = n(5),
@@ -1968,15 +1970,15 @@
             return Z
         }), t.y = f, t.m = p, t.n = h, n.d(t, "g", function() {
             return ee
-        }), n.d(t, "d", function() {
-            return te
         }), t.j = y, t.v = v, t.w = g, n.d(t, "r", function() {
-            return ne
+            return te
         }), n.d(t, "a", function() {
-            return re
+            return ne
         }), t.h = b, t.i = _, t.e = w, n.d(t, "s", function() {
-            return ie
+            return re
         }), t.x = k, t.o = E, t.c = S, t.A = P, t.l = C, t.u = O, t.k = T, t.t = x, t.f = R, n.d(t, "B", function() {
+            return ie
+        }), n.d(t, "d", function() {
             return oe
         });
         var Q = "application/vnd.twitchtv.v3+json",
@@ -2014,20 +2016,15 @@
                     })
                 })
             }),
-            te = N()(function(e) {
-                return c({
-                    url: H.f + "/api/channels/" + a(e) + "/viewer"
-                })
-            }),
-            ne = N()(function() {
+            te = N()(function() {
                 return l("user")
             }),
-            re = N()(function(e) {
+            ne = N()(function(e) {
                 return c({
                     url: H.f + "/api/channels/" + e
                 })
             }),
-            ie = N()(function() {
+            re = N()(function() {
                 return fetch(H.f + "/api/viewer/token.json", {
                     credentials: "include",
                     headers: J
@@ -2037,8 +2034,13 @@
                     })
                 })
             }),
-            oe = N()(function() {
+            ie = N()(function() {
                 return j("query WebPlayerViewerInfo {\n    currentUser {\n        login\n        hasTurbo\n    }\n    requestInfo {\n        countryCode\n    }\n}")
+            }),
+            oe = N()(function(e) {
+                return j("query WebPlayerChannelViewer($channel: String) {\n    channel: user(login: $channel) {\n        viewer: self {\n            subscriptionBenefit {\n                product {\n                    name\n                }\n            }\n        }\n        subscriptionProducts {\n            name\n            hasAdFree\n        }\n    }\n    currentUser {\n        roles {\n            isSiteAdmin\n        }\n    }\n}", {
+                    channel: e
+                })
             })
     }, function(e, t, n) {
         "use strict";
@@ -2479,20 +2481,20 @@
                 var s = a(),
                     u = s.adsManager;
                 return p(e, t, a(), n, r, i).then(function(e) {
-                    e.mature && !T.a.get(A.a, !1) || a().manifestInfo.suppress || u.requestAds(e)
+                    e.mature && !R.a.get(N.a, !1) || a().manifestInfo.suppress || u.requestAds(e)
                 })
             }
         }
 
         function o(e) {
             return m(e) ? {
-                type: q,
+                type: B,
                 currentMetadata: e
-            } : H
+            } : W
         }
 
         function a() {
-            return o(z)
+            return o(K)
         }
 
         function s() {
@@ -2509,28 +2511,28 @@
 
         function c(e) {
             return {
-                type: M,
+                type: q,
                 detected: e
             }
         }
 
         function l(e) {
             return {
-                type: B,
+                type: V,
                 setting: e
             }
         }
 
         function d(e) {
             return {
-                type: D,
+                type: U,
                 URL: e
             }
         }
 
         function f(e) {
             return {
-                type: U,
+                type: F,
                 imaScriptLoaded: e
             }
         }
@@ -2539,9 +2541,9 @@
             var i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0,
                 o = arguments[5];
             return h(n.stream).then(function(e) {
-                return Promise.all([Object(O.B)(), Object(O.b)(e), Object(O.a)(e), Object(O.d)(e), Object(O.g)(e), Object(O.h)(e), n.experiments.get(j.j), n.experiments.get(j.a), n.experiments.get(j.f)])
+                return Promise.all([Object(x.B)(), Object(x.b)(e), Object(x.a)(e), Object(x.d)(e), Object(x.g)(e), Object(x.h)(e), n.experiments.get(A.j), n.experiments.get(A.a), n.experiments.get(A.f)])
             }).then(function(a) {
-                var s = L(a, 9),
+                var s = M(a, 9),
                     u = s[0],
                     c = s[1],
                     l = s[2],
@@ -2551,14 +2553,14 @@
                     h = s[6],
                     m = s[7],
                     y = s[8],
-                    v = Object(I.a)(n.window.location.href),
+                    v = Object(L.a)(n.window.location.href),
                     g = v.queryKey,
                     b = "raid" === g.referrer,
                     _ = "true" === g.promo;
-                return new P({
+                return new O({
                     adType: e,
                     sdk: n.sdk,
-                    lastAdDisplay: T.a.get("lastAdDisplay", 0),
+                    lastAdDisplay: R.a.get("lastAdDisplay", 0),
                     forced: r,
                     state: n,
                     duration: t,
@@ -2580,13 +2582,13 @@
         }
 
         function h(e) {
-            return e instanceof C.b ? Promise.resolve(e.channel) : e instanceof b.b ? Object(O.z)(e.videoId).then(function(e) {
+            return e instanceof T.b ? Promise.resolve(e.channel) : e instanceof b.b ? Object(x.z)(e.videoId).then(function(e) {
                 return e.channel.name
             }) : Promise.reject(new Error("Invalid stream: " + e))
         }
 
         function m(e) {
-            return !(!e.hasOwnProperty("contentType") || !e.hasOwnProperty("rollType")) && (!(!R()(F, e.contentType) || !R()(V, e.rollType)) && ((e.contentType !== F.NONE || e.rollType === V.NONE) && (e.rollType !== V.NONE || e.contentType === F.NONE)))
+            return !(!e.hasOwnProperty("contentType") || !e.hasOwnProperty("rollType")) && (!(!I()(H, e.contentType) || !I()(z, e.rollType)) && ((e.contentType !== H.NONE || e.rollType === z.NONE) && (e.rollType !== z.NONE || e.contentType === H.NONE)))
         }
         var y = n(82),
             v = n(249),
@@ -2594,7 +2596,9 @@
             b = n(11),
             _ = n(49),
             w = n(132),
-            k = function() {
+            k = n(43),
+            E = n.n(k),
+            S = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var r = t[n];
@@ -2605,13 +2609,13 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            E = 30,
-            S = function(e) {
+            P = 30,
+            C = function(e) {
                 return Array.isArray(e) && 0 !== e.length ? e.map(function(e) {
                     return e._id
                 }).join(",") : null
             },
-            P = function() {
+            O = function() {
                 function e(t) {
                     var n = t.adType,
                         i = t.duration,
@@ -2631,9 +2635,21 @@
                         b = t.raid,
                         _ = t.embedPromo,
                         k = t.leviathanExpGroup;
-                    r(this, e), this.contentType = a.stream.contentType, this.adSessionId = Object(y.a)(E), this.adType = n, this.raid = b, this.channel = l.name, this.channelId = l._id, this.chansubToken = f.chansub, this.communityIds = S(v.communities), this.twitchCorrelator = Object(y.a)(), this.deviceId = w.a(!1), this.duration = i, this.requestType = o, this.hasAdFreeSubscription = Boolean(f.has_ad_free_subscription), this.lastAdDisplay = s, this.forced = u, this.padtime = m, this.requestTime = Date.now(), this.skippableExpGroup = g, this.creativeId = h, this.embedPromo = _, this.leviathanExpGroup = k, this._initViewerInfoFields(c), this._initChannelInfoFields(l, d), this._initStateFields(a), this._initAmazonFields(), this._initChannelAdPropertiesFields(p)
+                    r(this, e), this.contentType = a.stream.contentType, this.adSessionId = Object(y.a)(P), this.adType = n, this.raid = b, this.channel = l.name, this.channelId = l._id, this.communityIds = C(v.communities), this.twitchCorrelator = Object(y.a)(), this.deviceId = w.a(!1), this.duration = i, this.requestType = o, this.lastAdDisplay = s, this.forced = u, this.padtime = m, this.requestTime = Date.now(), this.skippableExpGroup = g, this.creativeId = h, this.embedPromo = _, this.leviathanExpGroup = k, this._initViewerInfoFields(c), this._initChannelInfoFields(l, d), this._initStateFields(a), this._initAmazonFields(), this._initChannelAdPropertiesFields(p), this._initChannelViewerInfoFields(f)
                 }
-                return k(e, [{
+                return S(e, [{
+                    key: "_initChannelViewerInfoFields",
+                    value: function(e) {
+                        if (this.hasChanSub = !1, this.hasAdFreeSubscription = !1, null !== e.channel.viewer && null !== e.channel.viewer.subscriptionBenefit && (this.hasChanSub = !0, null !== e.channel.viewer.subscriptionBenefit.product)) {
+                            var t = e.channel.viewer.subscriptionBenefit.product.name,
+                                n = e.channel.subscriptionProducts || [],
+                                r = E()(n, function(e) {
+                                    return e.name === t
+                                });
+                            this.hasAdFreeSubscription = r.hasAdFree
+                        }
+                    }
+                }, {
                     key: "_initViewerInfoFields",
                     value: function(e) {
                         e.currentUser && (this.login = e.currentUser.login, this.hasTurbo = e.currentUser.hasTurbo)
@@ -2677,32 +2693,32 @@
                     }
                 }]), e
             }(),
-            C = n(12),
-            O = n(10),
-            T = n(26),
-            x = n(7),
-            R = n.n(x),
-            j = n(44),
-            I = n(47),
-            A = n(253);
+            T = n(12),
+            x = n(10),
+            R = n(26),
+            j = n(7),
+            I = n.n(j),
+            A = n(45),
+            L = n(47),
+            N = n(253);
         n.d(t, "h", function() {
-            return N
-        }), n.d(t, "b", function() {
-            return M
-        }), n.d(t, "d", function() {
             return D
-        }), n.d(t, "c", function() {
+        }), n.d(t, "b", function() {
             return q
-        }), n.d(t, "a", function() {
+        }), n.d(t, "d", function() {
             return U
-        }), n.d(t, "e", function() {
+        }), n.d(t, "c", function() {
             return B
-        }), n.d(t, "f", function() {
+        }), n.d(t, "a", function() {
             return F
-        }), n.d(t, "g", function() {
+        }), n.d(t, "e", function() {
             return V
+        }), n.d(t, "f", function() {
+            return H
+        }), n.d(t, "g", function() {
+            return z
         }), t.n = i, t.q = o, t.i = a, t.l = s, t.m = u, t.p = c, t.r = l, t.o = d, t.k = f, t.j = p;
-        var L = function() {
+        var M = function() {
                 function e(e, t) {
                     var n = [],
                         r = !0,
@@ -2727,29 +2743,29 @@
                     throw new TypeError("Invalid attempt to destructure non-iterable instance")
                 }
             }(),
-            N = 30,
-            M = "set adblock detected",
-            D = "set clickthrough url",
-            q = "set ad metadata",
-            U = "check to see if ima script loaded",
-            B = "set vod midroll archive setting",
-            F = Object.freeze({
+            D = 30,
+            q = "set adblock detected",
+            U = "set clickthrough url",
+            B = "set ad metadata",
+            F = "check to see if ima script loaded",
+            V = "set vod midroll archive setting",
+            H = Object.freeze({
                 NONE: "none",
                 IMA: "ima",
                 STITCHED: "stitched"
             }),
-            V = Object.freeze({
+            z = Object.freeze({
                 NONE: "none",
                 PREROLL: "preroll",
                 MIDROLL: "midroll",
                 POSTROLL: "postroll"
             }),
-            H = {
+            W = {
                 type: "an invalid ad action"
             },
-            z = {
-                contentType: F.NONE,
-                rollType: V.NONE
+            K = {
+                contentType: H.NONE,
+                rollType: z.NONE
             }
     }, function(e, t, n) {
         "use strict";
@@ -2900,7 +2916,7 @@
         }), n.d(t, "f", function() {
             return L
         }), t.h = r, t.g = u;
-        var f = n(44),
+        var f = n(45),
             p = n(12),
             h = n(11),
             m = n(101),
@@ -2913,7 +2929,7 @@
             k = n(66),
             E = n(84),
             S = n(23),
-            P = n(43),
+            P = n(44),
             C = n(85),
             O = n(8),
             T = n(259),
@@ -4851,6 +4867,11 @@
             }, s.isUnsupportedBrowser = i, s.compareVersions = r, s.check = o, s._detect = e, s.detect = e, s
         })
     }, function(e, t, n) {
+        var r = n(341),
+            i = n(77),
+            o = r(i);
+        e.exports = o
+    }, function(e, t, n) {
         "use strict";
 
         function r(e) {
@@ -4987,7 +5008,7 @@
             f = n.n(d),
             p = n(18),
             h = n(26),
-            m = n(46),
+            m = n(43),
             y = n.n(m),
             v = "select quality",
             g = "set current quality",
@@ -5095,11 +5116,6 @@
         var i = n(92),
             o = n(146);
         e.exports = r
-    }, function(e, t, n) {
-        var r = n(341),
-            i = n(77),
-            o = r(i);
-        e.exports = o
     }, function(e, t, n) {
         "use strict";
 
@@ -5250,7 +5266,7 @@
         }
         var i = n(462),
             o = n.n(i),
-            a = n(46),
+            a = n(43),
             s = n.n(a),
             u = Object.freeze({
                 ABORTED: {
@@ -5340,7 +5356,7 @@
         }
         var i = n(203),
             o = n(305),
-            a = n(45);
+            a = n(46);
         e.exports = r
     }, function(e, t, n) {
         function r(e, t, n, r) {
@@ -5733,7 +5749,7 @@
             b = n.n(g),
             _ = n(21),
             w = n.n(_),
-            k = n(46),
+            k = n(43),
             E = n.n(k),
             S = n(77),
             P = n.n(S),
@@ -5953,7 +5969,7 @@
                 }]), e
             }(),
             te = n(8),
-            ne = n(44),
+            ne = n(45),
             re = n(17),
             ie = n(6),
             oe = n(103),
@@ -6072,7 +6088,7 @@
                             var e = Object(z.d)(this.options.channel);
                             this.tracker.setProperties(e.then(function(e) {
                                 return {
-                                    subscriber: Boolean(e.chansub)
+                                    subscriber: Boolean(e.channel.viewer.subscriptionBenefit)
                                 }
                             }))
                         }
@@ -6485,7 +6501,7 @@
         }
         var i = n(203),
             o = n(316),
-            a = n(45);
+            a = n(46);
         e.exports = r
     }, function(e, t, n) {
         function r(e, t, n) {
@@ -6708,7 +6724,7 @@
         });
         var i = n(35),
             o = n.n(i),
-            a = n(43),
+            a = n(44),
             s = n(28),
             u = n(22),
             c = n(12),
@@ -6719,7 +6735,7 @@
             h = n(50),
             m = n(55),
             y = n(20),
-            v = n(46),
+            v = n(43),
             g = n.n(v),
             b = n(264),
             _ = n.n(b),
@@ -7255,7 +7271,7 @@
             u = n(22),
             c = n(470),
             l = n.n(c),
-            d = n(46),
+            d = n(43),
             f = n.n(d),
             p = n(63),
             h = n.n(p),
@@ -7263,7 +7279,7 @@
             y = n.n(m),
             v = n(264),
             g = n.n(v),
-            b = n(44),
+            b = n(45),
             _ = n(136),
             w = n(182),
             k = n(23),
@@ -10697,7 +10713,7 @@
             w = n(136),
             k = n(12),
             E = n(15),
-            S = n(43),
+            S = n(44),
             P = n(86),
             C = n(50),
             O = n(55),
@@ -12287,7 +12303,7 @@
             return !!("number" == r ? o(n) && a(t, n.length) : "string" == r && t in n) && i(n[t], e)
         }
         var i = n(73),
-            o = n(45),
+            o = n(46),
             a = n(113),
             s = n(25);
         e.exports = r
@@ -13571,7 +13587,7 @@
         function r(e) {
             return o(e) && i(e)
         }
-        var i = n(45),
+        var i = n(46),
             o = n(34);
         e.exports = r
     }, function(e, t, n) {
@@ -15267,7 +15283,7 @@
             }(H.a.Component);
         Ge.propTypes = He, Ge.defaultProps = ze;
         var Qe = Object(Y.c)()(Ge),
-            Ye = n(43),
+            Ye = n(44),
             $e = n(23),
             Je = {
                 availableQualities: W.a.array.isRequired,
@@ -15423,7 +15439,7 @@
             mt = n(141),
             yt = n(88),
             vt = n(278),
-            gt = n(44),
+            gt = n(45),
             bt = n(274),
             _t = function() {
                 function e(e, t) {
@@ -16196,7 +16212,7 @@
             return e.trim()
         }
         t.a = r;
-        var o = n(46),
+        var o = n(43),
             a = n.n(o),
             s = n(7),
             u = n.n(s),
@@ -25023,7 +25039,7 @@
                 height: 0,
                 cols: 0
             },
-            Z = n(44);
+            Z = n(45);
         n.d(t, "a", function() {
             return te
         }), n.d(t, "b", function() {
@@ -26362,7 +26378,7 @@
             }),
             rt = n(190),
             it = n.n(rt),
-            ot = n(46),
+            ot = n(43),
             at = n.n(ot),
             st = function() {
                 function e(e, t) {
@@ -27018,7 +27034,7 @@
             };
         Ht.propTypes = Ft, Ht.defaultProps = Vt;
         var zt = n(186),
-            Wt = n(43),
+            Wt = n(44),
             Kt = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -27992,7 +28008,7 @@
         Y.propTypes = xr;
         var Rr = n(191),
             jr = n(278),
-            Ir = n(44),
+            Ir = n(45),
             Ar = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -29673,7 +29689,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.03.15-175459+99f54f876cbbbc4e4e81f21b010e59eea04b33ac",
+                    app_version: "2018.03.15-200148+33987b059675ad03f52092fd61c898e6f3b02576",
                     flash_version: r,
                     referrer_url: i,
                     referrer_host: o.host,
@@ -30164,7 +30180,7 @@
                 reason_vod_creator: e.adType === xu.c && e.contentType === eu.a && e.login === e.channel,
                 reason_turbo: Boolean(e.hasTurbo),
                 reason_ratelimit: e.adType === xu.c && e.requestTime - e.lastAdDisplay < Wu,
-                reason_channelsub: Boolean(e.chansubToken) && e.hasAdFreeSubscription,
+                reason_channelsub: Boolean(e.hasChanSub) && e.hasAdFreeSubscription,
                 reason_channeladfree: e.adType === xu.c && !e.prerollsEnabled || e.adType === xu.b && !e.postrollsEnabled,
                 reason_frontpage: e.playerType === Ka.n,
                 reason_creative_player: e.playerType === Ka.h,
@@ -35114,7 +35130,7 @@
                 this.trackEvent(e.event, e.properties)
             }, this)
         };
-        var Ta = n(46),
+        var Ta = n(43),
             xa = n.n(Ta);
         i.prototype.trackEvent = function(e, t) {
             ba()(Pa.D, e) || (this._send({
@@ -36882,7 +36898,7 @@
             Sc = n(105),
             Pc = n(135),
             Cc = n(18),
-            Oc = n(43),
+            Oc = n(44),
             Tc = n(66),
             xc = n(13),
             Rc = n(29),
@@ -41382,7 +41398,7 @@
             }(ys.a.Component);
         Hm.defaultProps = Bm, Hm.propTypes = Um;
         var zm = Object(Ss.c)()(Hm),
-            Wm = n(44),
+            Wm = n(45),
             Km = "set VOD recommendations",
             Gm = "clear VOD recommendations",
             Qm = "set number of VOD recommendations visible",
@@ -45497,7 +45513,7 @@
             }
         }
         var i = n(76),
-            o = n(45),
+            o = n(46),
             a = n(52);
         e.exports = r
     }, function(e, t, n) {
@@ -45968,7 +45984,7 @@
                 return n
             }
         }
-        var i = n(45);
+        var i = n(46);
         e.exports = r
     }, function(e, t) {
         function n(e, t, n, r, i) {
@@ -48676,7 +48692,7 @@
             }), r
         }
         var i = n(128),
-            o = n(45);
+            o = n(46);
         e.exports = r
     }, function(e, t) {
         function n() {
