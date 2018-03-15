@@ -1,4 +1,4 @@
-webpackJsonp([53], {
+webpackJsonp([54], {
     "+GT7": function(e, t, n) {
         "use strict";
         var a, r = n("TToO"),
@@ -346,11 +346,12 @@ webpackJsonp([53], {
             r = n("TToO"),
             i = n("GiK3"),
             o = n("6sO2"),
-            s = n("Us7i"),
-            l = n("QG7y"),
-            c = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_0",
-            d = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_1",
-            u = function(e) {
+            s = n("5kgt"),
+            l = n("Us7i"),
+            c = n("QG7y"),
+            d = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_0",
+            u = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_1",
+            m = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.logger = o.j.withCategory("ad-slot"), n.createSlot = function(e) {
@@ -364,9 +365,9 @@ webpackJsonp([53], {
                                             slotCreated: !0
                                         }), n.label = 1;
                                     case 1:
-                                        return n.trys.push([1, 3, , 4]), [4, s.a.createSlot(e.slotID, e.adUnit, e.adSize, e.targeting, e.autoEnable)];
+                                        return n.trys.push([1, 3, , 4]), [4, l.a.createSlot(e.slotID, e.adUnit, e.adSize, e.targeting, e.autoEnable)];
                                     case 2:
-                                        return t = n.sent(), Object(l.h)(t.getSlotElementId()), this.setState({
+                                        return t = n.sent(), Object(c.h)(t.getSlotElementId()), this.setState({
                                             slot: t
                                         }), [3, 4];
                                     case 3:
@@ -396,18 +397,18 @@ webpackJsonp([53], {
                                     size: e.size
                                 }), e.isEmpty) return;
                             if (!n.slotRef) return;
-                            if (n.props.slotID === l.b.anonFront.takeover) return void(document.body.classList.contains("takeover") && n.setState({
+                            if (n.props.slotID === c.b.anonFront.takeover) return void(document.body.classList.contains("takeover") && n.setState({
                                 shouldDisplay: !0
                             }, function() {
                                 return n.slotRendered(e.slot)
                             }));
                             var a;
-                            if (n.props.slotID === l.b.directory.banner) return void((a = n.slotRef.querySelector(c)) && 1 !== a.clientWidth && n.setState({
+                            if (n.props.slotID === c.b.directory.banner) return void((a = n.slotRef.querySelector(d)) && 1 !== a.clientWidth && n.setState({
                                 shouldDisplay: !0
                             }, function() {
                                 return n.slotRendered(e.slot)
                             }));
-                            if (n.props.slotID === l.b.directory.rectangle) return void((a = n.slotRef.querySelector(d)) && 1 !== a.clientWidth && n.setState({
+                            if (n.props.slotID === c.b.directory.rectangle) return void((a = n.slotRef.querySelector(u)) && 1 !== a.clientWidth && n.setState({
                                 shouldDisplay: !0
                             }, function() {
                                 return n.slotRendered(e.slot)
@@ -425,29 +426,29 @@ webpackJsonp([53], {
                     }, n
                 }
                 return r.__extends(t, e), t.prototype.componentDidMount = function() {
-                    l.g.addListener(l.f, this.onSlotRenderEnd), this.props.trackingSet ? (this.logger.debug("Tracking is set. Creating slot (componentDidMount)", this.props.slotID), this.createSlot(this.props)) : this.logger.debug("Tracking is not set. Skipping slot creation (componentDidMount)", this.props.slotID)
+                    c.g.addListener(c.f, this.onSlotRenderEnd), this.props.trackingSet ? (this.logger.debug("Tracking is set. Creating slot (componentDidMount)", this.props.slotID), this.createSlot(this.props)) : this.logger.debug("Tracking is not set. Skipping slot creation (componentDidMount)", this.props.slotID)
                 }, t.prototype.componentWillReceiveProps = function(e) {
                     this.state.slotCreated || (e.trackingSet && !this.props.trackingSet ? (this.logger.debug("Tracking is set. Creating slot (componentWillReceiveProps)", this.props.slotID), this.createSlot(e)) : this.logger.debug("Tracking is not set. Skipping slot creation (componentWillReceiveProps)", this.props.slotID))
                 }, t.prototype.componentWillUnmount = function() {
-                    this.logger.debug("Destroying Slot (componentWillUnmount)", this.props.slotID), l.g.removeListener(l.f, this.onSlotRenderEnd), this.state.slot && s.a.destroySlot(this.state.slot)
+                    this.logger.debug("Destroying Slot (componentWillUnmount)", this.props.slotID), c.g.removeListener(c.f, this.onSlotRenderEnd), this.state.slot && l.a.destroySlot(this.state.slot)
                 }, t.prototype.shouldComponentUpdate = function(e, t) {
                     return t.shouldDisplay !== this.state.shouldDisplay
                 }, t.prototype.render = function() {
                     var e = r.__assign({}, this.props.injectStyles);
-                    return this.state.shouldDisplay || (e.display = "none"), i.createElement("div", {
+                    return this.state.shouldDisplay || (e.display = "none"), i.createElement("div", r.__assign({
                         style: e,
                         id: this.props.slotID,
                         ref: this.setRef
-                    })
+                    }, Object(s.a)(this.props)))
                 }, t
             }(i.Component);
-        var m = Object(a.b)(function(e) {
+        var p = Object(a.b)(function(e) {
             return {
                 trackingSet: e.ads.trackingSet
             }
-        })(u);
+        })(m);
         n.d(t, "a", function() {
-            return m
+            return p
         })
     },
     "//Ty": function(e, t) {},
@@ -981,8 +982,8 @@ webpackJsonp([53], {
             w = n("F8kA"),
             C = n("7vx8"),
             N = n("NY9D"),
-            F = n("dXGo"),
-            O = (n("APTF"), function(e) {
+            O = n("dXGo"),
+            F = (n("APTF"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -1041,6 +1042,7 @@ webpackJsonp([53], {
                             }, i.createElement(_.a, {
                                 adSize: k.c.anonFront.rect,
                                 adUnit: k.d.frontpage,
+                                "data-a-target": "featured-games-ad-slot",
                                 slotID: k.b.anonFront.rect,
                                 targeting: {
                                     pagetype: k.a.frontpage
@@ -1111,7 +1113,7 @@ webpackJsonp([53], {
                     }, e, i.createElement(u.W, null, this.getItems()), t)
                 }, t.prototype.postRender = function() {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
-                }, t = r.__decorate([Object(C.a)(F), Object(d.d)("FeaturedGames")], t)
+                }, t = r.__decorate([Object(C.a)(O), Object(d.d)("FeaturedGames")], t)
             }(i.Component)),
             x = n("+GT7"),
             T = n("SZoP");
@@ -1317,10 +1319,10 @@ webpackJsonp([53], {
                 }), Object(d.d)("TopChannels")], t)
             }(i.Component)),
             I = (n("9zTP"), p.a.wrap(function() {
-                return n.e(75).then(n.bind(null, "yEZg"))
+                return n.e(76).then(n.bind(null, "yEZg"))
             }, "FeaturedGenres")),
             R = p.a.wrap(function() {
-                return n.e(74).then(n.bind(null, "2hMh"))
+                return n.e(75).then(n.bind(null, "2hMh"))
             }, "TopCreative"),
             A = function(e) {
                 function t() {
@@ -1341,7 +1343,7 @@ webpackJsonp([53], {
                                     withStreams: e
                                 })
                             }
-                            return i.createElement(O, null)
+                            return i.createElement(F, null)
                         }
                     }, t.renderTopCreative = function() {
                         if (t.state.categoriesExperimentAssignment) {
@@ -1448,10 +1450,10 @@ webpackJsonp([53], {
                         return r.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return [4, o.o.experiments.getAssignment(b.e)];
+                                    return [4, o.o.experiments.getAssignment(b.f)];
                                 case 1:
                                     return e = t.sent(), this.setState({
-                                        categoriesExperimentAssignment: Object(b.k)(e) ? e : null
+                                        categoriesExperimentAssignment: Object(b.m)(e) ? e : null
                                     }), this.props.latencyTracking.reportInteractive(), o.o.setPageTitle(), [2]
                             }
                         })
@@ -1471,6 +1473,7 @@ webpackJsonp([53], {
                     }, i.createElement(_.a, {
                         adSize: k.c.anonFront.takeover,
                         adUnit: k.d.frontpage,
+                        "data-a-target": "site-skin-ad-slot",
                         slotID: k.b.anonFront.takeover,
                         targeting: {
                             pagetype: k.a.frontpage
@@ -1487,6 +1490,7 @@ webpackJsonp([53], {
                     }, i.createElement(_.a, {
                         adSize: k.c.anonFront.banner,
                         adUnit: k.d.frontpage,
+                        "data-a-target": "anon-front-banner-ad-slot",
                         slotID: k.b.anonFront.banner,
                         targeting: {
                             pagetype: k.a.frontpage
@@ -1507,6 +1511,7 @@ webpackJsonp([53], {
                     }, i.createElement(_.a, {
                         adSize: k.c.anonFront.sizzle,
                         adUnit: k.d.sizzle,
+                        "data-a-target": "anon-front-sizzle-strip-ad-slot",
                         slotID: k.b.anonFront.sizzle,
                         targeting: {
                             pagetype: k.a.frontpage
@@ -1544,6 +1549,7 @@ webpackJsonp([53], {
                     }, i.createElement(_.a, {
                         adSize: k.c.anonFront.bottom,
                         adUnit: k.d.frontpage,
+                        "data-a-target": "anon-front-footer-ad-slot",
                         slotID: k.b.anonFront.bottom,
                         targeting: {
                             pagetype: k.a.frontpage
@@ -2240,7 +2246,7 @@ webpackJsonp([53], {
                     return a.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(88).then(n.bind(null, "tk3B"))];
+                                return [4, n.e(89).then(n.bind(null, "tk3B"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -2252,7 +2258,7 @@ webpackJsonp([53], {
                     return a.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(87).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(88).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -2264,7 +2270,7 @@ webpackJsonp([53], {
                     return a.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(86).then(n.bind(null, "Dan5"))];
+                                return [4, n.e(87).then(n.bind(null, "Dan5"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -2276,7 +2282,7 @@ webpackJsonp([53], {
                     return a.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(85).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(86).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -3168,7 +3174,7 @@ webpackJsonp([53], {
                 }, t
             }(d.Component),
             N = n("hdYS"),
-            F = (n("0v28"), function(e) {
+            O = (n("0v28"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getContentRender = function() {
@@ -3311,11 +3317,11 @@ webpackJsonp([53], {
                     })
                 }, t
             }(d.Component));
-        var O = Object(s.b)(function(e) {
+        var F = Object(s.b)(function(e) {
                 return {
                     firstPageLoaded: e.session.firstPageLoaded
                 }
-            })(F),
+            })(O),
             x = n("vH/s");
 
         function T(e) {
@@ -3401,7 +3407,7 @@ webpackJsonp([53], {
                         };
                         switch (t.props.layout) {
                             case p.c.Vertical:
-                                return d.createElement(O, r.__assign({}, e));
+                                return d.createElement(F, r.__assign({}, e));
                             default:
                                 return d.createElement(C, r.__assign({}, e))
                         }
@@ -3809,4 +3815,4 @@ webpackJsonp([53], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.anon-front-0d86f85b6a99502cac0e0c95ea87f29e.js.map
+//# sourceMappingURL=pages.anon-front-c85c68d1aba6627ed922f7f22ba0448f.js.map

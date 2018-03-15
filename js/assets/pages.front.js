@@ -1,15 +1,16 @@
-webpackJsonp([49], {
+webpackJsonp([50], {
     "/+to": function(e, t, n) {
         "use strict";
         var i = n("RH2O"),
             a = n("TToO"),
             r = n("GiK3"),
             o = n("6sO2"),
-            d = n("Us7i"),
-            s = n("QG7y"),
-            l = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_0",
-            c = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_1",
-            m = function(e) {
+            d = n("5kgt"),
+            s = n("Us7i"),
+            l = n("QG7y"),
+            c = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_0",
+            m = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_1",
+            u = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.logger = o.j.withCategory("ad-slot"), n.createSlot = function(e) {
@@ -23,9 +24,9 @@ webpackJsonp([49], {
                                             slotCreated: !0
                                         }), n.label = 1;
                                     case 1:
-                                        return n.trys.push([1, 3, , 4]), [4, d.a.createSlot(e.slotID, e.adUnit, e.adSize, e.targeting, e.autoEnable)];
+                                        return n.trys.push([1, 3, , 4]), [4, s.a.createSlot(e.slotID, e.adUnit, e.adSize, e.targeting, e.autoEnable)];
                                     case 2:
-                                        return t = n.sent(), Object(s.h)(t.getSlotElementId()), this.setState({
+                                        return t = n.sent(), Object(l.h)(t.getSlotElementId()), this.setState({
                                             slot: t
                                         }), [3, 4];
                                     case 3:
@@ -55,18 +56,18 @@ webpackJsonp([49], {
                                     size: e.size
                                 }), e.isEmpty) return;
                             if (!n.slotRef) return;
-                            if (n.props.slotID === s.b.anonFront.takeover) return void(document.body.classList.contains("takeover") && n.setState({
+                            if (n.props.slotID === l.b.anonFront.takeover) return void(document.body.classList.contains("takeover") && n.setState({
                                 shouldDisplay: !0
                             }, function() {
                                 return n.slotRendered(e.slot)
                             }));
                             var i;
-                            if (n.props.slotID === s.b.directory.banner) return void((i = n.slotRef.querySelector(l)) && 1 !== i.clientWidth && n.setState({
+                            if (n.props.slotID === l.b.directory.banner) return void((i = n.slotRef.querySelector(c)) && 1 !== i.clientWidth && n.setState({
                                 shouldDisplay: !0
                             }, function() {
                                 return n.slotRendered(e.slot)
                             }));
-                            if (n.props.slotID === s.b.directory.rectangle) return void((i = n.slotRef.querySelector(c)) && 1 !== i.clientWidth && n.setState({
+                            if (n.props.slotID === l.b.directory.rectangle) return void((i = n.slotRef.querySelector(m)) && 1 !== i.clientWidth && n.setState({
                                 shouldDisplay: !0
                             }, function() {
                                 return n.slotRendered(e.slot)
@@ -84,29 +85,29 @@ webpackJsonp([49], {
                     }, n
                 }
                 return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                    s.g.addListener(s.f, this.onSlotRenderEnd), this.props.trackingSet ? (this.logger.debug("Tracking is set. Creating slot (componentDidMount)", this.props.slotID), this.createSlot(this.props)) : this.logger.debug("Tracking is not set. Skipping slot creation (componentDidMount)", this.props.slotID)
+                    l.g.addListener(l.f, this.onSlotRenderEnd), this.props.trackingSet ? (this.logger.debug("Tracking is set. Creating slot (componentDidMount)", this.props.slotID), this.createSlot(this.props)) : this.logger.debug("Tracking is not set. Skipping slot creation (componentDidMount)", this.props.slotID)
                 }, t.prototype.componentWillReceiveProps = function(e) {
                     this.state.slotCreated || (e.trackingSet && !this.props.trackingSet ? (this.logger.debug("Tracking is set. Creating slot (componentWillReceiveProps)", this.props.slotID), this.createSlot(e)) : this.logger.debug("Tracking is not set. Skipping slot creation (componentWillReceiveProps)", this.props.slotID))
                 }, t.prototype.componentWillUnmount = function() {
-                    this.logger.debug("Destroying Slot (componentWillUnmount)", this.props.slotID), s.g.removeListener(s.f, this.onSlotRenderEnd), this.state.slot && d.a.destroySlot(this.state.slot)
+                    this.logger.debug("Destroying Slot (componentWillUnmount)", this.props.slotID), l.g.removeListener(l.f, this.onSlotRenderEnd), this.state.slot && s.a.destroySlot(this.state.slot)
                 }, t.prototype.shouldComponentUpdate = function(e, t) {
                     return t.shouldDisplay !== this.state.shouldDisplay
                 }, t.prototype.render = function() {
                     var e = a.__assign({}, this.props.injectStyles);
-                    return this.state.shouldDisplay || (e.display = "none"), r.createElement("div", {
+                    return this.state.shouldDisplay || (e.display = "none"), r.createElement("div", a.__assign({
                         style: e,
                         id: this.props.slotID,
                         ref: this.setRef
-                    })
+                    }, Object(d.a)(this.props)))
                 }, t
             }(r.Component);
-        var u = Object(i.b)(function(e) {
+        var p = Object(i.b)(function(e) {
             return {
                 trackingSet: e.ads.trackingSet
             }
-        })(m);
+        })(u);
         n.d(t, "a", function() {
-            return u
+            return p
         })
     },
     "/0cZ": function(e, t, n) {
@@ -2009,7 +2010,7 @@ webpackJsonp([49], {
                     return t.state = {
                         isOnboardingDismissedCookieSet: void 0 !== k.get(R)
                     }, t.handleAutoOnboardingRedirect = function() {
-                        void 0 === k.get(I) && Object(b.n)(new Date(t.props.data.currentUser.createdAt)) && (k.set(I, "true", P), t.redirectToOnboarding(_.b.NewSignup))
+                        void 0 === k.get(I) && Object(b.q)(new Date(t.props.data.currentUser.createdAt)) && (k.set(I, "true", P), t.redirectToOnboarding(_.b.NewSignup))
                     }, t.startOnboarding = function() {
                         t.redirectToOnboarding(_.b.HomepageCTA)
                     }, t.redirectToOnboarding = function(e) {
@@ -2023,7 +2024,7 @@ webpackJsonp([49], {
                     }, t.followedGamesForUserHasLoaded = function() {
                         return t.props.data && !t.props.data.loading && !t.props.data.error && t.props.data.currentUser && t.props.data.currentUser.followedGames
                     }, t.shouldSeeOnboarding = function() {
-                        return !t.state.isOnboardingDismissedCookieSet && t.followedGamesForUserHasLoaded() && t.state.inOnboardingExperiment && t.props.data.currentUser.followedGames.nodes.length < x && Object(b.n)(new Date(t.props.data.currentUser.createdAt))
+                        return !t.state.isOnboardingDismissedCookieSet && t.followedGamesForUserHasLoaded() && t.state.inOnboardingExperiment && t.props.data.currentUser.followedGames.nodes.length < x && Object(b.q)(new Date(t.props.data.currentUser.createdAt))
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -2032,10 +2033,10 @@ webpackJsonp([49], {
                         return i.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return [4, r.o.experiments.getAssignment(b.h)];
+                                    return [4, r.o.experiments.getAssignment(b.j)];
                                 case 1:
                                     return e = t.sent(), this.setState({
-                                        inOnboardingExperiment: Object(b.m)(e)
+                                        inOnboardingExperiment: Object(b.p)(e)
                                     }), [2]
                             }
                         })
@@ -2340,6 +2341,7 @@ webpackJsonp([49], {
                     }, a.createElement(u.a, {
                         adSize: p.c.front.leaderboard,
                         adUnit: p.d.frontpage,
+                        "data-a-target": "frontpage-leaderboard-ad-slot",
                         slotID: p.b.front.leaderboard,
                         targeting: {
                             pagetype: p.a.frontpage
@@ -2390,6 +2392,7 @@ webpackJsonp([49], {
                     }, a.createElement(u.a, {
                         adSize: p.c.front.rightTop,
                         adUnit: p.d.frontpage,
+                        "data-a-target": "frontpage-right-top-ad-slot",
                         slotID: p.b.front.rightTop,
                         targeting: {
                             pagetype: p.a.frontpage
@@ -2413,6 +2416,7 @@ webpackJsonp([49], {
                     }, a.createElement(u.a, {
                         adSize: p.c.front.rightBottom,
                         adUnit: p.d.frontpage,
+                        "data-a-target": "frontpage-right-bottom-ad-slot",
                         slotID: p.b.front.rightBottom,
                         targeting: {
                             pagetype: p.a.frontpage
@@ -7602,4 +7606,4 @@ webpackJsonp([49], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.front-f4ca56a032e830d33a133381fb0b01ef.js.map
+//# sourceMappingURL=pages.front-de588cc2ffe2a2276cdff7604d3c1239.js.map

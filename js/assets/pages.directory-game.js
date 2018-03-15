@@ -1,4 +1,4 @@
-webpackJsonp([44], {
+webpackJsonp([45], {
     "+GT7": function(e, t, n) {
         "use strict";
         var i, a = n("TToO"),
@@ -424,11 +424,12 @@ webpackJsonp([44], {
             a = n("TToO"),
             r = n("GiK3"),
             o = n("6sO2"),
-            s = n("Us7i"),
-            l = n("QG7y"),
-            d = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_0",
-            c = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_1",
-            u = function(e) {
+            s = n("5kgt"),
+            l = n("Us7i"),
+            d = n("QG7y"),
+            c = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_0",
+            u = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_1",
+            m = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.logger = o.j.withCategory("ad-slot"), n.createSlot = function(e) {
@@ -442,9 +443,9 @@ webpackJsonp([44], {
                                             slotCreated: !0
                                         }), n.label = 1;
                                     case 1:
-                                        return n.trys.push([1, 3, , 4]), [4, s.a.createSlot(e.slotID, e.adUnit, e.adSize, e.targeting, e.autoEnable)];
+                                        return n.trys.push([1, 3, , 4]), [4, l.a.createSlot(e.slotID, e.adUnit, e.adSize, e.targeting, e.autoEnable)];
                                     case 2:
-                                        return t = n.sent(), Object(l.h)(t.getSlotElementId()), this.setState({
+                                        return t = n.sent(), Object(d.h)(t.getSlotElementId()), this.setState({
                                             slot: t
                                         }), [3, 4];
                                     case 3:
@@ -474,18 +475,18 @@ webpackJsonp([44], {
                                     size: e.size
                                 }), e.isEmpty) return;
                             if (!n.slotRef) return;
-                            if (n.props.slotID === l.b.anonFront.takeover) return void(document.body.classList.contains("takeover") && n.setState({
+                            if (n.props.slotID === d.b.anonFront.takeover) return void(document.body.classList.contains("takeover") && n.setState({
                                 shouldDisplay: !0
                             }, function() {
                                 return n.slotRendered(e.slot)
                             }));
                             var i;
-                            if (n.props.slotID === l.b.directory.banner) return void((i = n.slotRef.querySelector(d)) && 1 !== i.clientWidth && n.setState({
+                            if (n.props.slotID === d.b.directory.banner) return void((i = n.slotRef.querySelector(c)) && 1 !== i.clientWidth && n.setState({
                                 shouldDisplay: !0
                             }, function() {
                                 return n.slotRendered(e.slot)
                             }));
-                            if (n.props.slotID === l.b.directory.rectangle) return void((i = n.slotRef.querySelector(c)) && 1 !== i.clientWidth && n.setState({
+                            if (n.props.slotID === d.b.directory.rectangle) return void((i = n.slotRef.querySelector(u)) && 1 !== i.clientWidth && n.setState({
                                 shouldDisplay: !0
                             }, function() {
                                 return n.slotRendered(e.slot)
@@ -503,29 +504,29 @@ webpackJsonp([44], {
                     }, n
                 }
                 return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                    l.g.addListener(l.f, this.onSlotRenderEnd), this.props.trackingSet ? (this.logger.debug("Tracking is set. Creating slot (componentDidMount)", this.props.slotID), this.createSlot(this.props)) : this.logger.debug("Tracking is not set. Skipping slot creation (componentDidMount)", this.props.slotID)
+                    d.g.addListener(d.f, this.onSlotRenderEnd), this.props.trackingSet ? (this.logger.debug("Tracking is set. Creating slot (componentDidMount)", this.props.slotID), this.createSlot(this.props)) : this.logger.debug("Tracking is not set. Skipping slot creation (componentDidMount)", this.props.slotID)
                 }, t.prototype.componentWillReceiveProps = function(e) {
                     this.state.slotCreated || (e.trackingSet && !this.props.trackingSet ? (this.logger.debug("Tracking is set. Creating slot (componentWillReceiveProps)", this.props.slotID), this.createSlot(e)) : this.logger.debug("Tracking is not set. Skipping slot creation (componentWillReceiveProps)", this.props.slotID))
                 }, t.prototype.componentWillUnmount = function() {
-                    this.logger.debug("Destroying Slot (componentWillUnmount)", this.props.slotID), l.g.removeListener(l.f, this.onSlotRenderEnd), this.state.slot && s.a.destroySlot(this.state.slot)
+                    this.logger.debug("Destroying Slot (componentWillUnmount)", this.props.slotID), d.g.removeListener(d.f, this.onSlotRenderEnd), this.state.slot && l.a.destroySlot(this.state.slot)
                 }, t.prototype.shouldComponentUpdate = function(e, t) {
                     return t.shouldDisplay !== this.state.shouldDisplay
                 }, t.prototype.render = function() {
                     var e = a.__assign({}, this.props.injectStyles);
-                    return this.state.shouldDisplay || (e.display = "none"), r.createElement("div", {
+                    return this.state.shouldDisplay || (e.display = "none"), r.createElement("div", a.__assign({
                         style: e,
                         id: this.props.slotID,
                         ref: this.setRef
-                    })
+                    }, Object(s.a)(this.props)))
                 }, t
             }(r.Component);
-        var m = Object(i.b)(function(e) {
+        var p = Object(i.b)(function(e) {
             return {
                 trackingSet: e.ads.trackingSet
             }
-        })(u);
+        })(m);
         n.d(t, "a", function() {
-            return m
+            return p
         })
     },
     "/SNv": function(e, t, n) {
@@ -3240,6 +3241,7 @@ webpackJsonp([44], {
                             adUnit: Y.d.directory,
                             slotID: Y.b.directory.rectangle,
                             adSize: Y.c.directory.rectangle,
+                            "data-a-target": "directory-card-ad-slot",
                             targeting: {
                                 pagetype: Y.a.games,
                                 game: t.props.directoryName
@@ -3299,6 +3301,7 @@ webpackJsonp([44], {
                             adUnit: Y.d.directory,
                             slotID: Y.b.directory.rectangle,
                             adSize: Y.c.directory.rectangle,
+                            "data-a-target": "directory-event-ad-slot",
                             targeting: {
                                 pagetype: Y.a.games,
                                 game: t.props.directoryName
@@ -4134,6 +4137,7 @@ webpackJsonp([44], {
                         adUnit: Y.d.directory,
                         slotID: Y.b.directory.banner,
                         adSize: Y.c.directory.banner,
+                        "data-a-target": "directory-banner-ad-slot",
                         targeting: {
                             pagetype: Y.a.games,
                             game: this.props.data.directory.displayName
@@ -10418,7 +10422,7 @@ webpackJsonp([44], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(88).then(n.bind(null, "tk3B"))];
+                                return [4, n.e(89).then(n.bind(null, "tk3B"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -10430,7 +10434,7 @@ webpackJsonp([44], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(87).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(88).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -10442,7 +10446,7 @@ webpackJsonp([44], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(86).then(n.bind(null, "Dan5"))];
+                                return [4, n.e(87).then(n.bind(null, "Dan5"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -10454,7 +10458,7 @@ webpackJsonp([44], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(85).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(86).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -17732,4 +17736,4 @@ webpackJsonp([44], {
     zSAx: function(e, t) {},
     zu64: function(e, t) {}
 });
-//# sourceMappingURL=pages.directory-game-49dc8f3b6bebf79411f3ab65c4aeda99.js.map
+//# sourceMappingURL=pages.directory-game-ed2d284db877de622633ec0ec29bfb67.js.map

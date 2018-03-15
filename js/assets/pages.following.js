@@ -1,4 +1,4 @@
-webpackJsonp([47], {
+webpackJsonp([48], {
     "+GT7": function(e, t, n) {
         "use strict";
         var i, a = n("TToO"),
@@ -346,11 +346,12 @@ webpackJsonp([47], {
             a = n("TToO"),
             r = n("GiK3"),
             o = n("6sO2"),
-            l = n("Us7i"),
-            s = n("QG7y"),
-            d = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_0",
-            m = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_1",
-            c = function(e) {
+            l = n("5kgt"),
+            s = n("Us7i"),
+            d = n("QG7y"),
+            m = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_0",
+            c = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_1",
+            u = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.logger = o.j.withCategory("ad-slot"), n.createSlot = function(e) {
@@ -364,9 +365,9 @@ webpackJsonp([47], {
                                             slotCreated: !0
                                         }), n.label = 1;
                                     case 1:
-                                        return n.trys.push([1, 3, , 4]), [4, l.a.createSlot(e.slotID, e.adUnit, e.adSize, e.targeting, e.autoEnable)];
+                                        return n.trys.push([1, 3, , 4]), [4, s.a.createSlot(e.slotID, e.adUnit, e.adSize, e.targeting, e.autoEnable)];
                                     case 2:
-                                        return t = n.sent(), Object(s.h)(t.getSlotElementId()), this.setState({
+                                        return t = n.sent(), Object(d.h)(t.getSlotElementId()), this.setState({
                                             slot: t
                                         }), [3, 4];
                                     case 3:
@@ -396,18 +397,18 @@ webpackJsonp([47], {
                                     size: e.size
                                 }), e.isEmpty) return;
                             if (!n.slotRef) return;
-                            if (n.props.slotID === s.b.anonFront.takeover) return void(document.body.classList.contains("takeover") && n.setState({
+                            if (n.props.slotID === d.b.anonFront.takeover) return void(document.body.classList.contains("takeover") && n.setState({
                                 shouldDisplay: !0
                             }, function() {
                                 return n.slotRendered(e.slot)
                             }));
                             var i;
-                            if (n.props.slotID === s.b.directory.banner) return void((i = n.slotRef.querySelector(d)) && 1 !== i.clientWidth && n.setState({
+                            if (n.props.slotID === d.b.directory.banner) return void((i = n.slotRef.querySelector(m)) && 1 !== i.clientWidth && n.setState({
                                 shouldDisplay: !0
                             }, function() {
                                 return n.slotRendered(e.slot)
                             }));
-                            if (n.props.slotID === s.b.directory.rectangle) return void((i = n.slotRef.querySelector(m)) && 1 !== i.clientWidth && n.setState({
+                            if (n.props.slotID === d.b.directory.rectangle) return void((i = n.slotRef.querySelector(c)) && 1 !== i.clientWidth && n.setState({
                                 shouldDisplay: !0
                             }, function() {
                                 return n.slotRendered(e.slot)
@@ -425,29 +426,29 @@ webpackJsonp([47], {
                     }, n
                 }
                 return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                    s.g.addListener(s.f, this.onSlotRenderEnd), this.props.trackingSet ? (this.logger.debug("Tracking is set. Creating slot (componentDidMount)", this.props.slotID), this.createSlot(this.props)) : this.logger.debug("Tracking is not set. Skipping slot creation (componentDidMount)", this.props.slotID)
+                    d.g.addListener(d.f, this.onSlotRenderEnd), this.props.trackingSet ? (this.logger.debug("Tracking is set. Creating slot (componentDidMount)", this.props.slotID), this.createSlot(this.props)) : this.logger.debug("Tracking is not set. Skipping slot creation (componentDidMount)", this.props.slotID)
                 }, t.prototype.componentWillReceiveProps = function(e) {
                     this.state.slotCreated || (e.trackingSet && !this.props.trackingSet ? (this.logger.debug("Tracking is set. Creating slot (componentWillReceiveProps)", this.props.slotID), this.createSlot(e)) : this.logger.debug("Tracking is not set. Skipping slot creation (componentWillReceiveProps)", this.props.slotID))
                 }, t.prototype.componentWillUnmount = function() {
-                    this.logger.debug("Destroying Slot (componentWillUnmount)", this.props.slotID), s.g.removeListener(s.f, this.onSlotRenderEnd), this.state.slot && l.a.destroySlot(this.state.slot)
+                    this.logger.debug("Destroying Slot (componentWillUnmount)", this.props.slotID), d.g.removeListener(d.f, this.onSlotRenderEnd), this.state.slot && s.a.destroySlot(this.state.slot)
                 }, t.prototype.shouldComponentUpdate = function(e, t) {
                     return t.shouldDisplay !== this.state.shouldDisplay
                 }, t.prototype.render = function() {
                     var e = a.__assign({}, this.props.injectStyles);
-                    return this.state.shouldDisplay || (e.display = "none"), r.createElement("div", {
+                    return this.state.shouldDisplay || (e.display = "none"), r.createElement("div", a.__assign({
                         style: e,
                         id: this.props.slotID,
                         ref: this.setRef
-                    })
+                    }, Object(l.a)(this.props)))
                 }, t
             }(r.Component);
-        var u = Object(i.b)(function(e) {
+        var p = Object(i.b)(function(e) {
             return {
                 trackingSet: e.ads.trackingSet
             }
-        })(c);
+        })(u);
         n.d(t, "a", function() {
-            return u
+            return p
         })
     },
     "/SNv": function(e, t, n) {
@@ -2641,10 +2642,10 @@ webpackJsonp([47], {
                         return s.__generator(this, function(t) {
                             switch (t.label) {
                                 case 0:
-                                    return [4, c.o.experiments.getAssignment(w.h)];
+                                    return [4, c.o.experiments.getAssignment(w.j)];
                                 case 1:
                                     return e = t.sent(), this.setState({
-                                        inOnboarding: Object(w.m)(e)
+                                        inOnboarding: Object(w.p)(e)
                                     }), [2]
                             }
                         })
@@ -2681,7 +2682,7 @@ webpackJsonp([47], {
                             targetBlank: Object(y.b)(),
                             "data-a-target": "following-communities-tab"
                         }, Object(c.d)("Communities", "FollowingPage"))];
-                    if (this.state.inOnboarding && !this.props.data.error && this.props.data.currentUser && Object(w.n)(new Date(this.props.data.currentUser.createdAt))) {
+                    if (this.state.inOnboarding && !this.props.data.error && this.props.data.currentUser && Object(w.q)(new Date(this.props.data.currentUser.createdAt))) {
                         var n = d.createElement(_._28, {
                             key: "following-foryou-tab",
                             "data-test-selector": "for-you-tab",
@@ -3493,7 +3494,7 @@ webpackJsonp([47], {
                         },
                         enabled: function() {
                             return X.a.wrap(function() {
-                                return n.e(81).then(n.bind(null, "IwGL"))
+                                return n.e(82).then(n.bind(null, "IwGL"))
                             }, "LatestVideosFromFollowedCarousel")(e)
                         }
                     },
@@ -3683,7 +3684,7 @@ webpackJsonp([47], {
                 })], t)
             }(d.Component),
             se = function() {
-                return n.e(84).then(n.bind(null, "oms2"))
+                return n.e(85).then(n.bind(null, "oms2"))
             },
             de = n("wx0k"),
             me = n("F8kA"),
@@ -3930,20 +3931,20 @@ webpackJsonp([47], {
                         return s.__generator(this, function(n) {
                             switch (n.label) {
                                 case 0:
-                                    return c.o.setPageTitle(Object(c.d)("For You", "ForYouPage")), [4, c.o.experiments.getAssignment(w.h)];
+                                    return c.o.setPageTitle(Object(c.d)("For You", "ForYouPage")), [4, c.o.experiments.getAssignment(w.j)];
                                 case 1:
-                                    return e = n.sent(), Object(w.m)(e) ? [3, 2] : (this.redirectToFollowing(), [3, 4]);
+                                    return e = n.sent(), Object(w.p)(e) ? [3, 2] : (this.redirectToFollowing(), [3, 4]);
                                 case 2:
-                                    return [4, c.o.experiments.getAssignment(w.g)];
+                                    return [4, c.o.experiments.getAssignment(w.h)];
                                 case 3:
-                                    t = n.sent(), Object(w.l)(e, t) && this.loadChannelRankingsByGameData(), n.label = 4;
+                                    t = n.sent(), Object(w.n)(e, t) && this.loadChannelRankingsByGameData(), n.label = 4;
                                 case 4:
                                     return [2]
                             }
                         })
                     })
                 }, t.prototype.componentWillReceiveProps = function(e) {
-                    this.userFollowedGamesDataLoaded(e) && !Object(w.n)(new Date(e.data.currentUser.createdAt)) && this.redirectToFollowing()
+                    this.userFollowedGamesDataLoaded(e) && !Object(w.q)(new Date(e.data.currentUser.createdAt)) && this.redirectToFollowing()
                 }, t.prototype.componentDidUpdate = function() {
                     this.userFollowedGamesDataLoaded(this.props) && !this.state.loadingRankedChannelData && this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
@@ -4741,7 +4742,7 @@ webpackJsonp([47], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(88).then(n.bind(null, "tk3B"))];
+                                return [4, n.e(89).then(n.bind(null, "tk3B"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -4753,7 +4754,7 @@ webpackJsonp([47], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(87).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(88).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -4765,7 +4766,7 @@ webpackJsonp([47], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(86).then(n.bind(null, "Dan5"))];
+                                return [4, n.e(87).then(n.bind(null, "Dan5"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -4777,7 +4778,7 @@ webpackJsonp([47], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(85).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(86).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -9217,4 +9218,4 @@ webpackJsonp([47], {
     },
     "zH/G": function(e, t) {}
 });
-//# sourceMappingURL=pages.following-9da6a74308b61b275a83e026e474863c.js.map
+//# sourceMappingURL=pages.following-237ed7ed2886f9929ee9c6e75207c27b.js.map
