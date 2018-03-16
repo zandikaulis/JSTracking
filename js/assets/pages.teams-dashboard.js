@@ -7699,7 +7699,7 @@ webpackJsonp([36], {
                 return o.__generator(this, function(o) {
                     switch (o.label) {
                         case 0:
-                            return a = "/v5/channels/" + e.id + "/analytics/video_play_demographics", n = Object(d.f)(t), r = [a, s.stringify(n)].join("?"), i = {
+                            return a = "/v5/channels/" + e.id + "/analytics/video_play_demographics", n = Object(d.g)(t), r = [a, s.stringify(n)].join("?"), i = {
                                 referral: {
                                     internalChannel: function(t) {
                                         return t === e.name ? "top_nav_bar" : t
@@ -20044,7 +20044,7 @@ webpackJsonp([36], {
             return e.end.getTime() - e.start.getTime() == t.end.getTime() - t.start.getTime()
         }, t.a = function(e) {
             return Object(n.differenceInMinutes)(e.end, e.start)
-        }, t.f = function(e) {
+        }, t.g = function(e) {
             return {
                 start_time: e.start.toJSON(),
                 end_time: e.end.toJSON()
@@ -20068,6 +20068,12 @@ webpackJsonp([36], {
             return {
                 start: Object(n.subDays)(a, e),
                 end: a
+            }
+        }, t.f = function(e, t) {
+            var a = (Object(n.differenceInDays)(e.end, e.start) + 1) * t;
+            return {
+                start: Object(n.addDays)(e.start, a),
+                end: Object(n.addDays)(e.end, a)
             }
         };
         var n = a("wuJz"),
@@ -22121,4 +22127,4 @@ webpackJsonp([36], {
         }
     }
 });
-//# sourceMappingURL=pages.teams-dashboard-d6c6136b10e2e48086fc364d319562b4.js.map
+//# sourceMappingURL=pages.teams-dashboard-16f9220c3a12adf23c621ffa2674437d.js.map

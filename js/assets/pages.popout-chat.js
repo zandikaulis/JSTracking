@@ -2783,6 +2783,15 @@ webpackJsonp([34], {
                             type: _e.b.Reconnect,
                             id: Object(Re.a)("reconnect")
                         })
+                    }, this.onHostedEvent = function(e) {
+                        return r.postMessageToCurrentChannel(e, (t = e.from, n = e.isAuto, i = e.viewers, {
+                            type: _e.b.Hosted,
+                            id: Object(Re.a)("hosted-" + t),
+                            hostingChannel: t,
+                            isAutohost: n,
+                            viewerCount: i
+                        }));
+                        var t, n, i
                     }, this.onHostingEvent = function(e) {
                         return r.postMessageToCurrentChannel(e, (t = e.target, {
                             type: _e.b.Hosting,
@@ -3045,7 +3054,7 @@ webpackJsonp([34], {
                 }, e.prototype.updateBlockLinks = function(e) {
                     this.blockLinks = e
                 }, e.prototype.connectHandlers = function() {
-                    this.client.events.removeAll(), this.client.events.joined(this.onJoinedEvent), this.client.events.disconnected(this.onDisconnectedEvent), this.client.events.reconnecting(this.onReconnectingEvent), this.client.events.chat(this.onChatMessageEvent), this.client.events.usernotice(this.onChatMessageEvent), this.client.events.notice(this.onChatNoticeEvent), this.client.events.action(this.onChatActionEvent), this.client.events.badgesupdated(this.onBadgesUpdatedEvent), this.client.events.hosting(this.onHostingEvent), this.client.events.unhost(this.onUnhostEvent), this.client.events.badgesupdated(this.onBadgesUpdatedEvent), this.client.events.purchase(this.onPurchaseEvent), this.client.events.crate(this.onCrateEvent), this.client.events.ritual(this.onRitualEvent), this.client.events.subscription(this.onSubscriptionEvent), this.client.events.resub(this.onResubscriptionEvent), this.client.events.subgift(this.onSubscriptionGiftEvent), this.client.events.timeout(this.onTimeoutEvent), this.client.events.ban(this.onBanEvent), this.client.events.clearchat(this.onClearChatEvent), this.client.events.raid(this.onRaidEvent), this.client.events.unraid(this.onUnraidEvent), this.client.events.mods(this.onRoomModsEvent), this.client.events.roomstate(this.onRoomStateEvent), this.client.events.followersonly(this.onFollowerOnlyModeEvent), this.client.events.slowmode(this.onSlowModeEvent), this.client.events.subscribers(this.onSubscriberOnlyModeEvent), this.client.events.emoteonlymode(this.onEmoteOnlyModeEvent), this.client.events.charity(this.onBitsCharityEvent)
+                    this.client.events.removeAll(), this.client.events.joined(this.onJoinedEvent), this.client.events.disconnected(this.onDisconnectedEvent), this.client.events.reconnecting(this.onReconnectingEvent), this.client.events.chat(this.onChatMessageEvent), this.client.events.usernotice(this.onChatMessageEvent), this.client.events.notice(this.onChatNoticeEvent), this.client.events.action(this.onChatActionEvent), this.client.events.badgesupdated(this.onBadgesUpdatedEvent), this.client.events.hosted(this.onHostedEvent), this.client.events.hosting(this.onHostingEvent), this.client.events.unhost(this.onUnhostEvent), this.client.events.badgesupdated(this.onBadgesUpdatedEvent), this.client.events.purchase(this.onPurchaseEvent), this.client.events.crate(this.onCrateEvent), this.client.events.ritual(this.onRitualEvent), this.client.events.subscription(this.onSubscriptionEvent), this.client.events.resub(this.onResubscriptionEvent), this.client.events.subgift(this.onSubscriptionGiftEvent), this.client.events.timeout(this.onTimeoutEvent), this.client.events.ban(this.onBanEvent), this.client.events.clearchat(this.onClearChatEvent), this.client.events.raid(this.onRaidEvent), this.client.events.unraid(this.onUnraidEvent), this.client.events.mods(this.onRoomModsEvent), this.client.events.roomstate(this.onRoomStateEvent), this.client.events.followersonly(this.onFollowerOnlyModeEvent), this.client.events.slowmode(this.onSlowModeEvent), this.client.events.subscribers(this.onSubscriberOnlyModeEvent), this.client.events.emoteonlymode(this.onEmoteOnlyModeEvent), this.client.events.charity(this.onBitsCharityEvent)
                 }, e.prototype.shouldBlockLinks = function(e) {
                     return e.username !== this.channelLogin && e.userType !== Me.a.Staff && e.userType !== Me.a.GlobalMod && e.userType !== Me.a.Moderator && this.blockLinks
                 }, e.prototype.postMessageToCurrentChannel = function(e, t) {
@@ -10475,6 +10484,21 @@ webpackJsonp([34], {
                             }, a.createElement(D.O, {
                                 type: D._41.Span
                             }, Object(r.d)("Sorry, we were unable to connect to chat. Attempting to reconnect...", "ChatLine")));
+                        case y.b.Hosted:
+                            var t = null;
+                            return t = e.isAutohost ? Object(r.d)("{host} is now auto hosting you for up to {viewerCount, number} viewers.", {
+                                host: e.hostingChannel,
+                                viewerCount: e.viewerCount
+                            }, "ChatLine") : e.viewerCount <= 2 ? Object(r.d)("{host} is now hosting you.", {
+                                host: e.hostingChannel
+                            }, "ChatLine") : Object(r.d)("{host} is now hosting you for up to {viewerCount, number} viewers.", {
+                                host: e.hostingChannel,
+                                viewerCount: e.viewerCount
+                            }, "ChatLine"), a.createElement(D._4, {
+                                className: "chat-line__status"
+                            }, a.createElement(D.O, {
+                                type: D._41.Span
+                            }, t));
                         case y.b.Hosting:
                             return a.createElement(D._4, {
                                 className: "chat-line__status"
@@ -10576,12 +10600,12 @@ webpackJsonp([34], {
                                 className: "chat-line__status"
                             }, Object(v.j)(e));
                         case y.b.Purchase:
-                            var t = e.message.user.isIntl ? e.message.user.userDisplayName + " (" + e.message.user.userLogin + ")" : e.message.user.userDisplayName;
+                            var n = e.message.user.isIntl ? e.message.user.userDisplayName + " (" + e.message.user.userLogin + ")" : e.message.user.userDisplayName;
                             return a.createElement(D._4, {
                                 className: "chat-line__message--special"
                             }, a.createElement(D._4, {
                                 className: "chat-line__status"
-                            }, Object(v.n)(t, e.purchase.purchased.title, e.purchase.numCrates)), a.createElement(L, {
+                            }, Object(v.n)(n, e.purchase.purchased.title, e.purchase.numCrates)), a.createElement(L, {
                                 channelID: this.props.channelID,
                                 badgeSets: this.props.badgeSets,
                                 message: e.message,
@@ -41082,7 +41106,7 @@ webpackJsonp([34], {
                 return s.ModerationActions
             }),
             function(e) {
-                e[e.Message = 0] = "Message", e[e.Moderation = 1] = "Moderation", e[e.ModerationAction = 2] = "ModerationAction", e[e.TargetedModerationAction = 3] = "TargetedModerationAction", e[e.AutoMod = 4] = "AutoMod", e[e.Connected = 5] = "Connected", e[e.Disconnected = 6] = "Disconnected", e[e.Reconnect = 7] = "Reconnect", e[e.Hosting = 8] = "Hosting", e[e.Unhost = 9] = "Unhost", e[e.Subscription = 10] = "Subscription", e[e.Resubscription = 11] = "Resubscription", e[e.SubGift = 12] = "SubGift", e[e.Clear = 13] = "Clear", e[e.SubscriberOnlyMode = 14] = "SubscriberOnlyMode", e[e.FollowerOnlyMode = 15] = "FollowerOnlyMode", e[e.SlowMode = 16] = "SlowMode", e[e.EmoteOnlyMode = 17] = "EmoteOnlyMode", e[e.RoomMods = 18] = "RoomMods", e[e.RoomState = 19] = "RoomState", e[e.Raid = 20] = "Raid", e[e.Unraid = 21] = "Unraid", e[e.Ritual = 22] = "Ritual", e[e.Notice = 23] = "Notice", e[e.Info = 24] = "Info", e[e.BadgesUpdated = 25] = "BadgesUpdated", e[e.Purchase = 26] = "Purchase", e[e.BitsCharity = 27] = "BitsCharity", e[e.CrateGift = 28] = "CrateGift"
+                e[e.Message = 0] = "Message", e[e.Moderation = 1] = "Moderation", e[e.ModerationAction = 2] = "ModerationAction", e[e.TargetedModerationAction = 3] = "TargetedModerationAction", e[e.AutoMod = 4] = "AutoMod", e[e.Connected = 5] = "Connected", e[e.Disconnected = 6] = "Disconnected", e[e.Reconnect = 7] = "Reconnect", e[e.Hosting = 8] = "Hosting", e[e.Unhost = 9] = "Unhost", e[e.Hosted = 10] = "Hosted", e[e.Subscription = 11] = "Subscription", e[e.Resubscription = 12] = "Resubscription", e[e.SubGift = 13] = "SubGift", e[e.Clear = 14] = "Clear", e[e.SubscriberOnlyMode = 15] = "SubscriberOnlyMode", e[e.FollowerOnlyMode = 16] = "FollowerOnlyMode", e[e.SlowMode = 17] = "SlowMode", e[e.EmoteOnlyMode = 18] = "EmoteOnlyMode", e[e.RoomMods = 19] = "RoomMods", e[e.RoomState = 20] = "RoomState", e[e.Raid = 21] = "Raid", e[e.Unraid = 22] = "Unraid", e[e.Ritual = 23] = "Ritual", e[e.Notice = 24] = "Notice", e[e.Info = 25] = "Info", e[e.BadgesUpdated = 26] = "BadgesUpdated", e[e.Purchase = 27] = "Purchase", e[e.BitsCharity = 28] = "BitsCharity", e[e.CrateGift = 29] = "CrateGift"
             }(i || (i = {})),
             function(e) {
                 e[e.Post = 0] = "Post", e[e.Action = 1] = "Action", e[e.PostWithMention = 2] = "PostWithMention"
@@ -44999,4 +45023,4 @@ webpackJsonp([34], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.popout-chat-5366f73a1d9e284430d9529954f7169e.js.map
+//# sourceMappingURL=pages.popout-chat-17f5c52d4e662c161ce57026e8a4b553.js.map

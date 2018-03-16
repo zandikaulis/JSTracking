@@ -3,16 +3,50 @@ webpackJsonp([66], {
         "use strict";
         var i = n("RH2O"),
             r = n("V5M+"),
-            a = n("YmWy");
-        var o = Object(i.b)(null, function(e, t) {
+            a = n("TToO"),
+            o = n("GiK3"),
+            s = n("6sO2"),
+            l = n("ZyA2"),
+            c = n("Odds"),
+            d = (n("kNqx"), function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.handleHistoryChange = function() {
+                        t.handleClose()
+                    }, t.handleGlobalKeypress = function(e) {
+                        t.props.ignoreEscKey || 27 !== e.which || t.handleClose()
+                    }, t.handleGlobalClick = function(e) {
+                        var n = e.target;
+                        t.props.closeOnBackdropClick && n.matches("." + l.b) && t.handleClose()
+                    }, t.handleClose = function() {
+                        t.props.onClose()
+                    }, t
+                }
+                return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                    this.props.ignoreEscKey || document.addEventListener("keydown", this.handleGlobalKeypress), this.props.closeOnBackdropClick && document.addEventListener("click", this.handleGlobalClick), this.props.closeOnPageNavigation && (this.historyUnlisten = s.o.history.listen(this.handleHistoryChange))
+                }, t.prototype.componentWillUnmount = function() {
+                    document.removeEventListener("keydown", this.handleGlobalKeypress), document.removeEventListener("click", this.handleGlobalKeypress), this.historyUnlisten && this.historyUnlisten()
+                }, t.prototype.render = function() {
+                    return o.createElement("div", {
+                        className: "modal__close-button"
+                    }, o.createElement(c.v, {
+                        overlay: !0,
+                        onClick: this.handleClose,
+                        ariaLabel: Object(s.d)("Close modal", "ModalCloser"),
+                        icon: c._18.Close,
+                        "data-a-target": "modalClose"
+                    }))
+                }, t
+            }(o.PureComponent));
+        var u = Object(i.b)(null, function(e, t) {
             return {
                 onClose: function() {
                     t.onClose && t.onClose(), e(Object(r.c)())
                 }
             }
-        })(a.a);
+        })(d);
         n.d(t, "a", function() {
-            return o
+            return u
         })
     },
     "+R+X": function(e, t) {
@@ -26417,7 +26451,7 @@ webpackJsonp([66], {
                 return n.e(55).then(n.bind(null, "lTLe"))
             }, "FinishWatchingPage"),
             et = se.a.wrap(function() {
-                return n.e(50).then(n.bind(null, "IOEW"))
+                return n.e(51).then(n.bind(null, "IOEW"))
             }, "FrontPage"),
             tt = se.a.wrap(function() {
                 return n.e(57).then(n.bind(null, "DZCb"))
@@ -26429,7 +26463,7 @@ webpackJsonp([66], {
                 return n.e(61).then(n.bind(null, "DkuH"))
             }, "ReportUserPage"),
             rt = se.a.wrap(function() {
-                return n.e(51).then(n.bind(null, "K4jf"))
+                return n.e(50).then(n.bind(null, "K4jf"))
             }, "SettingsRoot"),
             at = se.a.wrap(function() {
                 return n.e(37).then(n.bind(null, "uiPj"))
@@ -31159,308 +31193,255 @@ webpackJsonp([66], {
         var l = n("FuaS"),
             c = n("rbXT");
         n.d(t, "a", function() {
-            return u
+            return d
         });
-        var d = new Set([o.SpadeEventType.Chat, o.SpadeEventType.DeprioritizeVodcastToggle, o.SpadeEventType.Follow, o.SpadeEventType.TeamHostToggle, o.SpadeEventType.Unfollow]),
-            u = function() {
-                function e(e) {
-                    var t = this;
-                    this.eventEmitter = new r.EventEmitter, this.eventQueue = new Array, this.hasCheckedInitialReferrer = !1, this.mixpanelEventQueue = new Array, this.trackingDataCache = {
-                        platform: o.SpadePlatform.Web,
-                        videoPlayerData: {
-                            followCTAVisible: !1
-                        }
-                    }, this.referrerURL = "", this.firstBatchSubmitted = !1, this.getEventQueue = function() {
-                        return t.eventQueue
-                    }, this.getEndpoint = function() {
-                        return t.endpoint
-                    }, this.getLastPageview = function() {
-                        return t.trackingDataCache.lastPageView
-                    }, this.getPlatform = function() {
-                        return t.trackingDataCache.platform
-                    }, this.getVideoPlayerTrackingData = function() {
-                        return t.trackingDataCache.videoPlayerData
-                    }, this.getOrQueryDeviceFingerprint = function() {
-                        return i.__awaiter(t, void 0, void 0, function() {
-                            var e = this;
-                            return i.__generator(this, function(t) {
-                                return this.trackingDataCache.deviceFingerprint ? (this.logger.debug("Using cached device fingerprint"), [2, this.trackingDataCache.deviceFingerprint]) : this.deviceFingerprintPromise ? (this.logger.debug("Awaiting existing device fingerprint promise"), [2, this.deviceFingerprintPromise]) : (this.deviceFingerprintPromise = new Promise(function(t) {
-                                    e.logger.debug("Querying device fingerprint");
-                                    try {
-                                        (new a.Fingerprint2).get(function(n, i) {
-                                            e.trackingDataCache.deviceFingerprint = n, e.logger.debug("Identified device fingerprint", {
-                                                fingerprint: n
-                                            }), t(n);
-                                            var r = {};
-                                            i.forEach(function(e) {
-                                                r["fp_" + e.key] = e.valueHash
-                                            }), e.track(o.SpadeEventType.BrowserFingerprint, r)
-                                        })
-                                    } catch (n) {
-                                        e.logger.debug("Error identifying fingerprint:", n), t(null)
-                                    }
-                                }), [2, this.deviceFingerprintPromise])
-                            })
-                        })
-                    }, this.getOrQueryEventData = function() {
-                        return i.__awaiter(t, void 0, void 0, function() {
-                            var e, t;
-                            return i.__generator(this, function(n) {
-                                switch (n.label) {
-                                    case 0:
-                                        return this.trackingDataCache.eventData ? (this.logger.debug("Using cached event data"), [2, this.trackingDataCache.eventData]) : [3, 1];
-                                    case 1:
-                                        return this.eventDataPromise ? (this.logger.debug("Awaiting existing promise"), [4, this.eventDataPromise]) : [3, 3];
-                                    case 2:
-                                        return [2, (t = n.sent()).data];
-                                    case 3:
-                                        return e = this.store.getState(), this.isLoggedIn(e) ? (this.logger.debug("Querying event data to submit events..."), this.eventDataPromise = this.apollo.client.query({
-                                            query: c
-                                        }), [4, this.eventDataPromise]) : [3, 5];
-                                    case 4:
-                                        (t = n.sent()).data && !t.loading && (this.logger.debug("Event data query completed."), this.trackingDataCache.eventData = t.data), n.label = 5;
-                                    case 5:
-                                        return this.trackingDataCache.eventData || (this.trackingDataCache.eventData = {
-                                            currentUser: {
-                                                id: null,
-                                                hasTurbo: !1,
-                                                hasPrime: !1,
-                                                language: null,
-                                                login: null
-                                            }
-                                        }), [2, this.trackingDataCache.eventData]
-                                }
-                            })
-                        })
-                    }, this.processEvents = function(e) {
-                        return i.__awaiter(t, void 0, void 0, function() {
-                            var t, n, r, a, s, l, c;
-                            return i.__generator(this, function(u) {
-                                switch (u.label) {
-                                    case 0:
-                                        return t = this.getOrQueryEventData(), n = this.getOrQueryDeviceFingerprint(), [4, t];
-                                    case 1:
-                                        return r = u.sent(), [4, n];
-                                    case 2:
-                                        for (a = u.sent(), s = 0, l = e; s < l.length; s++)(c = l[s]).properties.login = r.currentUser.login, c.properties.logged_in = !!r.currentUser.id, c.properties.user_id = r.currentUser.id ? +r.currentUser.id : null, c.properties.device_fingerprint = a, c.event === o.SpadeEventType.Pageview ? (c.properties.is_turbo = r.currentUser.hasTurbo, c.properties.language = r.currentUser.language || navigator.language) : c.event === o.SpadeEventType.Subscription && (c.properties.has_prime = r.currentUser.hasPrime), d.has(c.event) && this.mixpanelEventQueue.push({
-                                            event: c.event,
-                                            properties: i.__assign({
-                                                token: this.config.mixpanelToken
-                                            }, c.properties)
-                                        });
-                                        return [2]
-                                }
-                            })
-                        })
-                    }, this.onWindowUnload = function() {
-                        t.logger.debug("Unload triggered."), t.sendEvents(!0)
-                    }, this.logger = e.logger.withCategory("spade"), this.transmitLogger = this.logger.withCategory("transmitter"), this.endpoint = e.endpoint, this.session = e.session, this.apollo = e.apollo, this.config = e.config, this.store = e.store, this.adBlockDetector = e.adBlockDetector, this.logger.debug("Creating instance.", {
-                        endpoint: this.endpoint,
-                        sessionID: this.session.benchmarkID
-                    }), window.addEventListener("unload", this.onWindowUnload)
-                }
-                return e.prototype.setPlatform = function(e) {
-                    this.trackingDataCache.platform = e
-                }, e.prototype.reportFollowCTAVisibility = function(e) {
-                    this.trackingDataCache.videoPlayerData.followCTAVisible = e
-                }, e.prototype.setVideoPlayerTrackingData = function(e) {
-                    this.trackingDataCache.videoPlayerData = i.__assign({}, this.trackingDataCache.videoPlayerData, e)
-                }, e.prototype.track = function(e, t) {
-                    return this.trackEvent(e, t)
-                }, e.prototype.trackExperiment = function(e) {
-                    return this.track(o.SpadeEventType.ExperimentBranch, e)
-                }, e.prototype.trackPageview = function(e) {
-                    void 0 === e && (e = {});
-                    var t = this.store.getState(),
-                        n = i.__assign({
-                            browser: navigator.userAgent,
-                            collapse_right: t.ui && !t.ui.rightColumnExpanded,
-                            collapse_left: t.ui && !t.ui.sideNavExpanded,
-                            localstorage_device_id: this.session.localStorageDeviceID,
-                            location: e.location || o.PageviewLocation.None,
-                            page_session_id: this.session.pageviewID,
-                            referrer: this.lastLocationURL ? this.lastLocationURL.href : document.referrer,
-                            referrer_domain: this.lastLocationURL ? this.lastLocationURL.hostname : this.getCurrentReferrerURL().hostname,
-                            session_device_id: this.session.deviceID,
-                            tab_session_id: this.session.tabID,
-                            viewport_height: window.innerHeight,
-                            viewport_width: window.innerWidth
-                        }, e);
-                    this.track(o.SpadeEventType.Pageview, n), this.trackingDataCache.lastPageView = n, this.eventEmitter.emit(o.SpadeEventType.Pageview), this.lastLocationURL = new URL(location.href)
-                }, e.prototype.trackBenchmark = function(e, t) {
-                    this.track(e, i.__assign({
-                        benchmark_session_id: this.session.benchmarkID,
-                        page_session_id: this.session.pageviewID
-                    }, t))
-                }, e.prototype.trackApiQueryBenchmark = function(e) {
-                    this.track(o.SpadeEventType.APIQuery, i.__assign({
-                        benchmark_session_id: this.session.benchmarkID,
-                        page_session_id: this.session.pageviewID
-                    }, e))
-                }, e.prototype.trackCustomEventBenchmark = function(e) {
-                    this.track(o.SpadeEventType.CustomEvent, i.__assign({
-                        benchmark_session_id: this.session.benchmarkID,
-                        page_session_id: this.session.pageviewID
-                    }, e))
-                }, e.prototype.trackItemSectionLoad = function(e) {
-                    this.track(o.SpadeEventType.ItemSectionLoad, function(e) {
-                        return i.__assign({}, e, {
-                            rendered_item_list: e.rendered_item_list.join(","),
-                            rendered_item_types: e.rendered_item_types.join(","),
-                            rendered_items_viewcounts: e.rendered_items_viewcounts.join(",")
-                        })
-                    }(e))
-                }, e.prototype.trackItemSectionClick = function(e) {
-                    this.track(o.SpadeEventType.ItemSectionClick, e)
-                }, e.prototype.trackEvent = function(e, t) {
-                    this.hasCheckedInitialReferrer || this.setSpadeReferrerURL();
-                    var n = {
-                        event: e,
-                        properties: i.__assign({
-                            adblock: this.adBlockDetector.detected,
-                            app_version: this.config.buildID,
-                            client_app: "twilight",
-                            device_id: this.session.deviceID,
-                            domain: window.document.domain,
-                            host: window.location.host,
-                            platform: this.trackingDataCache.platform,
-                            preferred_language: Object(l.b)({
-                                includeChosenLanguage: !1
-                            })[0],
-                            referrer_host: this.lastLocationURL ? this.lastLocationURL.host : this.getCurrentReferrerURL().host,
-                            referrer_url: this.referrerURL || "",
-                            received_language: Object(l.a)() || "en",
-                            tab_session_id: this.session.tabID,
-                            batch_time: Math.round((new Date).getTime() / 1e3),
-                            url: window.location.href
-                        }, t)
-                    };
-                    this.logger.debug("Tracking event", n), this.eventQueue.push(n), this.scheduleEvents()
-                }, e.prototype.sendEvents = function(e) {
-                    return void 0 === e && (e = !1), i.__awaiter(this, void 0, void 0, function() {
-                        var t, n, r, a, o;
-                        return i.__generator(this, function(i) {
-                            switch (i.label) {
-                                case 0:
-                                    return 0 === this.eventQueue.length ? [2] : [4, this.processEvents(this.eventQueue)];
-                                case 1:
-                                    return i.sent(), this.sendMixpanelEvents(e), t = this.eventQueue, this.eventQueue = [], Date.now() < this.squelchUntil ? (this.logger.debug("Skipped Spade transmission. Client event tracking is squelched due to failure to sumbit to Spade service."), [2]) : (n = new Blob([Object(s.a)(t)], {
-                                        type: "application/x-www-form-urlencoded; charset=UTF-8"
-                                    }), e && navigator.sendBeacon ? (navigator.sendBeacon(this.endpoint, n) ? this.transmitLogger.debug("Events sent using beacon.", {
-                                        size: n.size,
-                                        transmitBatch: t
-                                    }) : this.transmitLogger.warn("Events failed to send using beacon.", {
-                                        size: n.size,
-                                        transmitBatch: t
-                                    }), [3, 8]) : [3, 2]);
-                                case 2:
-                                    r = 1, i.label = 3;
-                                case 3:
-                                    if (!(r <= 3)) return [3, 8];
-                                    i.label = 4;
-                                case 4:
-                                    return i.trys.push([4, 6, , 7]), [4, fetch(this.endpoint, {
-                                        method: "POST",
-                                        body: n
-                                    })];
-                                case 5:
-                                    return i.sent(), this.firstBatchSubmitted || (this.firstBatchSubmitted = !0, (a = document.getElementById("root")) && a.setAttribute("data-a-page-events-submitted", Date.now().toString())), this.transmitLogger.debug("Events sent using fetch.", {
-                                        size: n.size,
-                                        transmitBatch: t
-                                    }), [2];
-                                case 6:
-                                    return o = i.sent(), r < 3 ? this.transmitLogger.warn("Events send attempt failed with fetch.", {
-                                        attempt: r,
-                                        size: n.size,
-                                        transmitBatch: t
-                                    }, o) : (this.squelchUntil = Date.now() + 6e4, this.transmitLogger.error(o, "Events failed to send using fetch. Maximum attemps tried, so events will be discarded, and further tracking will be temporarily squelched.", {
-                                        attempt: r,
-                                        size: n.size,
-                                        maxAttempts: 3,
-                                        squelch: this.squelchUntil,
-                                        squelchDuration: 6e4
-                                    })), [3, 7];
-                                case 7:
-                                    return ++r, [3, 3];
-                                case 8:
-                                    return [2]
-                            }
-                        })
-                    })
-                }, e.prototype.scheduleEvents = function() {
-                    var e = this;
-                    this.eventQueueTimeout || (this.eventQueueTimeout = setTimeout(function() {
-                        try {
-                            if (!e.store.getState().session.firstPageLoaded) return e.eventQueueTimeout = 0, void e.scheduleEvents();
-                            e.sendEvents()
-                        } catch (t) {
-                            e.transmitLogger.error(t, "Failed to send events.")
-                        }
-                        e.eventQueueTimeout = 0
-                    }, this.config.spadeBatchWindow))
-                }, e.prototype.sendMixpanelEvents = function(e) {
-                    return i.__awaiter(this, void 0, void 0, function() {
-                        var t, n, r, a;
-                        return i.__generator(this, function(i) {
-                            switch (i.label) {
-                                case 0:
-                                    return 0 === this.mixpanelEventQueue.length ? [2] : (t = this.mixpanelEventQueue, this.mixpanelEventQueue = [], Date.now() < this.squelchUntil ? (this.logger.debug("Skipped Mixpanel transmission. Client event tracking is squelched due to failure to submit to Spade service."), [2]) : (n = new Blob([Object(s.a)(t)], {
-                                        type: "application/x-www-form-urlencoded; charset=UTF-8"
-                                    }), e && navigator.sendBeacon ? (navigator.sendBeacon(this.endpoint, n) ? this.transmitLogger.debug("Mixpanel events sent using beacon.", {
-                                        size: n.size,
-                                        transmitBatch: t
-                                    }) : this.transmitLogger.warn("Mixpanel events failed to send using beacon.", {
-                                        size: n.size,
-                                        transmitBatch: t
-                                    }), [3, 7]) : [3, 1]));
-                                case 1:
-                                    r = 1, i.label = 2;
-                                case 2:
-                                    if (!(r <= 3)) return [3, 7];
-                                    i.label = 3;
-                                case 3:
-                                    return i.trys.push([3, 5, , 6]), [4, fetch("https://api.mixpanel.com/track", {
-                                        method: "POST",
-                                        body: n
-                                    })];
-                                case 4:
-                                    return i.sent(), this.transmitLogger.debug("Mixpanel events sent using fetch.", {
-                                        size: n.size,
-                                        transmitBatch: t
-                                    }), [2];
-                                case 5:
-                                    return a = i.sent(), r < 3 ? this.transmitLogger.warn("Mixpanel events send attempt failed with fetch.", {
-                                        attempt: r,
-                                        size: n.size,
-                                        transmitBatch: t
-                                    }, a) : this.transmitLogger.error(a, "Mixpanel events failed to send using fetch. Maximum attemps tried, so events will be discarded.", {
-                                        attempt: r,
-                                        size: n.size,
-                                        maxAttempts: 3
-                                    }), [3, 6];
-                                case 6:
-                                    return ++r, [3, 2];
-                                case 7:
-                                    return [2]
-                            }
-                        })
-                    })
-                }, e.prototype.isLoggedIn = function(e) {
-                    return !(!e.session || !e.session.user)
-                }, e.prototype.getCurrentReferrerURL = function() {
-                    return document.referrer.length ? new URL(document.referrer) : {
-                        host: "",
-                        hostname: "",
-                        href: ""
+        var d = function() {
+            function e(e) {
+                var t = this;
+                this.eventEmitter = new r.EventEmitter, this.eventQueue = new Array, this.hasCheckedInitialReferrer = !1, this.trackingDataCache = {
+                    platform: o.SpadePlatform.Web,
+                    videoPlayerData: {
+                        followCTAVisible: !1
                     }
-                }, e.prototype.setSpadeReferrerURL = function() {
-                    var e;
+                }, this.referrerURL = "", this.firstBatchSubmitted = !1, this.getEventQueue = function() {
+                    return t.eventQueue
+                }, this.getEndpoint = function() {
+                    return t.endpoint
+                }, this.getLastPageview = function() {
+                    return t.trackingDataCache.lastPageView
+                }, this.getPlatform = function() {
+                    return t.trackingDataCache.platform
+                }, this.getVideoPlayerTrackingData = function() {
+                    return t.trackingDataCache.videoPlayerData
+                }, this.getOrQueryDeviceFingerprint = function() {
+                    return i.__awaiter(t, void 0, void 0, function() {
+                        var e = this;
+                        return i.__generator(this, function(t) {
+                            return this.trackingDataCache.deviceFingerprint ? (this.logger.debug("Using cached device fingerprint"), [2, this.trackingDataCache.deviceFingerprint]) : this.deviceFingerprintPromise ? (this.logger.debug("Awaiting existing device fingerprint promise"), [2, this.deviceFingerprintPromise]) : (this.deviceFingerprintPromise = new Promise(function(t) {
+                                e.logger.debug("Querying device fingerprint");
+                                try {
+                                    (new a.Fingerprint2).get(function(n, i) {
+                                        e.trackingDataCache.deviceFingerprint = n, e.logger.debug("Identified device fingerprint", {
+                                            fingerprint: n
+                                        }), t(n);
+                                        var r = {};
+                                        i.forEach(function(e) {
+                                            r["fp_" + e.key] = e.valueHash
+                                        }), e.track(o.SpadeEventType.BrowserFingerprint, r)
+                                    })
+                                } catch (n) {
+                                    e.logger.debug("Error identifying fingerprint:", n), t(null)
+                                }
+                            }), [2, this.deviceFingerprintPromise])
+                        })
+                    })
+                }, this.getOrQueryEventData = function() {
+                    return i.__awaiter(t, void 0, void 0, function() {
+                        var e, t;
+                        return i.__generator(this, function(n) {
+                            switch (n.label) {
+                                case 0:
+                                    return this.trackingDataCache.eventData ? (this.logger.debug("Using cached event data"), [2, this.trackingDataCache.eventData]) : [3, 1];
+                                case 1:
+                                    return this.eventDataPromise ? (this.logger.debug("Awaiting existing promise"), [4, this.eventDataPromise]) : [3, 3];
+                                case 2:
+                                    return [2, (t = n.sent()).data];
+                                case 3:
+                                    return e = this.store.getState(), this.isLoggedIn(e) ? (this.logger.debug("Querying event data to submit events..."), this.eventDataPromise = this.apollo.client.query({
+                                        query: c
+                                    }), [4, this.eventDataPromise]) : [3, 5];
+                                case 4:
+                                    (t = n.sent()).data && !t.loading && (this.logger.debug("Event data query completed."), this.trackingDataCache.eventData = t.data), n.label = 5;
+                                case 5:
+                                    return this.trackingDataCache.eventData || (this.trackingDataCache.eventData = {
+                                        currentUser: {
+                                            id: null,
+                                            hasTurbo: !1,
+                                            hasPrime: !1,
+                                            language: null,
+                                            login: null
+                                        }
+                                    }), [2, this.trackingDataCache.eventData]
+                            }
+                        })
+                    })
+                }, this.processEvents = function(e) {
+                    return i.__awaiter(t, void 0, void 0, function() {
+                        var t, n, r, a, s, l, c;
+                        return i.__generator(this, function(i) {
+                            switch (i.label) {
+                                case 0:
+                                    return t = this.getOrQueryEventData(), n = this.getOrQueryDeviceFingerprint(), [4, t];
+                                case 1:
+                                    return r = i.sent(), [4, n];
+                                case 2:
+                                    for (a = i.sent(), s = 0, l = e; s < l.length; s++)(c = l[s]).properties.login = r.currentUser.login, c.properties.logged_in = !!r.currentUser.id, c.properties.user_id = r.currentUser.id ? +r.currentUser.id : null, c.properties.device_fingerprint = a, c.event === o.SpadeEventType.Pageview ? (c.properties.is_turbo = r.currentUser.hasTurbo, c.properties.language = r.currentUser.language || navigator.language) : c.event === o.SpadeEventType.Subscription && (c.properties.has_prime = r.currentUser.hasPrime);
+                                    return [2]
+                            }
+                        })
+                    })
+                }, this.onWindowUnload = function() {
+                    t.logger.debug("Unload triggered."), t.sendEvents(!0)
+                }, this.logger = e.logger.withCategory("spade"), this.transmitLogger = this.logger.withCategory("transmitter"), this.endpoint = e.endpoint, this.session = e.session, this.apollo = e.apollo, this.config = e.config, this.store = e.store, this.adBlockDetector = e.adBlockDetector, this.logger.debug("Creating instance.", {
+                    endpoint: this.endpoint,
+                    sessionID: this.session.benchmarkID
+                }), window.addEventListener("unload", this.onWindowUnload)
+            }
+            return e.prototype.setPlatform = function(e) {
+                this.trackingDataCache.platform = e
+            }, e.prototype.reportFollowCTAVisibility = function(e) {
+                this.trackingDataCache.videoPlayerData.followCTAVisible = e
+            }, e.prototype.setVideoPlayerTrackingData = function(e) {
+                this.trackingDataCache.videoPlayerData = i.__assign({}, this.trackingDataCache.videoPlayerData, e)
+            }, e.prototype.track = function(e, t) {
+                return this.trackEvent(e, t)
+            }, e.prototype.trackExperiment = function(e) {
+                return this.track(o.SpadeEventType.ExperimentBranch, e)
+            }, e.prototype.trackPageview = function(e) {
+                void 0 === e && (e = {});
+                var t = this.store.getState(),
+                    n = i.__assign({
+                        browser: navigator.userAgent,
+                        collapse_right: t.ui && !t.ui.rightColumnExpanded,
+                        collapse_left: t.ui && !t.ui.sideNavExpanded,
+                        localstorage_device_id: this.session.localStorageDeviceID,
+                        location: e.location || o.PageviewLocation.None,
+                        page_session_id: this.session.pageviewID,
+                        referrer: this.lastLocationURL ? this.lastLocationURL.href : document.referrer,
+                        referrer_domain: this.lastLocationURL ? this.lastLocationURL.hostname : this.getCurrentReferrerURL().hostname,
+                        session_device_id: this.session.deviceID,
+                        tab_session_id: this.session.tabID,
+                        viewport_height: window.innerHeight,
+                        viewport_width: window.innerWidth
+                    }, e);
+                this.track(o.SpadeEventType.Pageview, n), this.trackingDataCache.lastPageView = n, this.eventEmitter.emit(o.SpadeEventType.Pageview), this.lastLocationURL = new URL(location.href)
+            }, e.prototype.trackBenchmark = function(e, t) {
+                this.track(e, i.__assign({
+                    benchmark_session_id: this.session.benchmarkID,
+                    page_session_id: this.session.pageviewID
+                }, t))
+            }, e.prototype.trackApiQueryBenchmark = function(e) {
+                this.track(o.SpadeEventType.APIQuery, i.__assign({
+                    benchmark_session_id: this.session.benchmarkID,
+                    page_session_id: this.session.pageviewID
+                }, e))
+            }, e.prototype.trackCustomEventBenchmark = function(e) {
+                this.track(o.SpadeEventType.CustomEvent, i.__assign({
+                    benchmark_session_id: this.session.benchmarkID,
+                    page_session_id: this.session.pageviewID
+                }, e))
+            }, e.prototype.trackItemSectionLoad = function(e) {
+                this.track(o.SpadeEventType.ItemSectionLoad, function(e) {
+                    return i.__assign({}, e, {
+                        rendered_item_list: e.rendered_item_list.join(","),
+                        rendered_item_types: e.rendered_item_types.join(","),
+                        rendered_items_viewcounts: e.rendered_items_viewcounts.join(",")
+                    })
+                }(e))
+            }, e.prototype.trackItemSectionClick = function(e) {
+                this.track(o.SpadeEventType.ItemSectionClick, e)
+            }, e.prototype.trackEvent = function(e, t) {
+                this.hasCheckedInitialReferrer || this.setSpadeReferrerURL();
+                var n = {
+                    event: e,
+                    properties: i.__assign({
+                        adblock: this.adBlockDetector.detected,
+                        app_version: this.config.buildID,
+                        client_app: "twilight",
+                        device_id: this.session.deviceID,
+                        domain: window.document.domain,
+                        host: window.location.host,
+                        platform: this.trackingDataCache.platform,
+                        preferred_language: Object(l.b)({
+                            includeChosenLanguage: !1
+                        })[0],
+                        referrer_host: this.lastLocationURL ? this.lastLocationURL.host : this.getCurrentReferrerURL().host,
+                        referrer_url: this.referrerURL || "",
+                        received_language: Object(l.a)() || "en",
+                        tab_session_id: this.session.tabID,
+                        batch_time: Math.round((new Date).getTime() / 1e3),
+                        url: window.location.href
+                    }, t)
+                };
+                this.logger.debug("Tracking event", n), this.eventQueue.push(n), this.scheduleEvents()
+            }, e.prototype.sendEvents = function(e) {
+                return void 0 === e && (e = !1), i.__awaiter(this, void 0, void 0, function() {
+                    var t, n, r, a, o;
+                    return i.__generator(this, function(i) {
+                        switch (i.label) {
+                            case 0:
+                                return 0 === this.eventQueue.length ? [2] : [4, this.processEvents(this.eventQueue)];
+                            case 1:
+                                return i.sent(), t = this.eventQueue, this.eventQueue = [], Date.now() < this.squelchUntil ? (this.logger.debug("Skipped Spade transmission. Client event tracking is squelched due to failure to sumbit to Spade service."), [2]) : (n = new Blob([Object(s.a)(t)], {
+                                    type: "application/x-www-form-urlencoded; charset=UTF-8"
+                                }), e && navigator.sendBeacon ? (navigator.sendBeacon(this.endpoint, n) ? this.transmitLogger.debug("Events sent using beacon.", {
+                                    size: n.size,
+                                    transmitBatch: t
+                                }) : this.transmitLogger.warn("Events failed to send using beacon.", {
+                                    size: n.size,
+                                    transmitBatch: t
+                                }), [3, 8]) : [3, 2]);
+                            case 2:
+                                r = 1, i.label = 3;
+                            case 3:
+                                if (!(r <= 3)) return [3, 8];
+                                i.label = 4;
+                            case 4:
+                                return i.trys.push([4, 6, , 7]), [4, fetch(this.endpoint, {
+                                    method: "POST",
+                                    body: n
+                                })];
+                            case 5:
+                                return i.sent(), this.firstBatchSubmitted || (this.firstBatchSubmitted = !0, (a = document.getElementById("root")) && a.setAttribute("data-a-page-events-submitted", Date.now().toString())), this.transmitLogger.debug("Events sent using fetch.", {
+                                    size: n.size,
+                                    transmitBatch: t
+                                }), [2];
+                            case 6:
+                                return o = i.sent(), r < 3 ? this.transmitLogger.warn("Events send attempt failed with fetch.", {
+                                    attempt: r,
+                                    size: n.size,
+                                    transmitBatch: t
+                                }, o) : (this.squelchUntil = Date.now() + 6e4, this.transmitLogger.error(o, "Events failed to send using fetch. Maximum attemps tried, so events will be discarded, and further tracking will be temporarily squelched.", {
+                                    attempt: r,
+                                    size: n.size,
+                                    maxAttempts: 3,
+                                    squelch: this.squelchUntil,
+                                    squelchDuration: 6e4
+                                })), [3, 7];
+                            case 7:
+                                return ++r, [3, 3];
+                            case 8:
+                                return [2]
+                        }
+                    })
+                })
+            }, e.prototype.scheduleEvents = function() {
+                var e = this;
+                this.eventQueueTimeout || (this.eventQueueTimeout = setTimeout(function() {
                     try {
-                        e = new URL(document.referrer)
-                    } catch (e) {}
-                    e && "go.twitch.tv" !== e.hostname && "www.twitch.tv" !== e.hostname && (this.referrerURL = e.href), this.hasCheckedInitialReferrer = !0
-                }, e
-            }()
+                        if (!e.store.getState().session.firstPageLoaded) return e.eventQueueTimeout = 0, void e.scheduleEvents();
+                        e.sendEvents()
+                    } catch (t) {
+                        e.transmitLogger.error(t, "Failed to send events.")
+                    }
+                    e.eventQueueTimeout = 0
+                }, this.config.spadeBatchWindow))
+            }, e.prototype.isLoggedIn = function(e) {
+                return !(!e.session || !e.session.user)
+            }, e.prototype.getCurrentReferrerURL = function() {
+                return document.referrer.length ? new URL(document.referrer) : {
+                    host: "",
+                    hostname: "",
+                    href: ""
+                }
+            }, e.prototype.setSpadeReferrerURL = function() {
+                var e;
+                try {
+                    e = new URL(document.referrer)
+                } catch (e) {}
+                e && "go.twitch.tv" !== e.hostname && "www.twitch.tv" !== e.hostname && (this.referrerURL = e.href), this.hasCheckedInitialReferrer = !0
+            }, e
+        }()
     },
     UKw0: function(e, t) {},
     UUPo: function(e, t) {
@@ -33361,48 +33342,6 @@ webpackJsonp([66], {
                 "R-?\\)": ["R-)", "R)"]
             },
             a = "0"
-    },
-    YmWy: function(e, t, n) {
-        "use strict";
-        n.d(t, "a", function() {
-            return c
-        });
-        var i = n("TToO"),
-            r = n("GiK3"),
-            a = (n.n(r), n("6sO2")),
-            o = n("ZyA2"),
-            s = n("Odds"),
-            l = n("kNqx"),
-            c = (n.n(l), function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.handleHistoryChange = function() {
-                        t.handleClose()
-                    }, t.handleGlobalKeypress = function(e) {
-                        t.props.ignoreEscKey || 27 !== e.which || t.handleClose()
-                    }, t.handleGlobalClick = function(e) {
-                        var n = e.target;
-                        t.props.closeOnBackdropClick && n.matches("." + o.b) && t.handleClose()
-                    }, t.handleClose = function() {
-                        t.props.onClose()
-                    }, t
-                }
-                return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.ignoreEscKey || document.addEventListener("keydown", this.handleGlobalKeypress), this.props.closeOnBackdropClick && document.addEventListener("click", this.handleGlobalClick), this.props.closeOnPageNavigation && (this.historyUnlisten = a.o.history.listen(this.handleHistoryChange))
-                }, t.prototype.componentWillUnmount = function() {
-                    document.removeEventListener("keydown", this.handleGlobalKeypress), document.removeEventListener("click", this.handleGlobalKeypress), this.historyUnlisten && this.historyUnlisten()
-                }, t.prototype.render = function() {
-                    return r.createElement("div", {
-                        className: "modal__close-button"
-                    }, r.createElement(s.v, {
-                        overlay: !0,
-                        onClick: this.handleClose,
-                        ariaLabel: Object(a.d)("Close modal", "ModalCloser"),
-                        icon: s._18.Close,
-                        "data-a-target": "modalClose"
-                    }))
-                }, t
-            }(r.PureComponent))
     },
     YugT: function(e, t) {
         var n = {
@@ -38476,7 +38415,7 @@ webpackJsonp([66], {
                 return i
             }),
             function(e) {
-                e.AbandonedSearch = "abandoned_search", e.AchievementSpotlightImpression = "achievement_spotlight_impression", e.AchievementQuestBannerClick = "achievement_quest_banner_click", e.APIQuery = "benchmark_api_query", e.AppBooted = "benchmark_app_booted", e.AutoHostChannelUpdate = "autohost_channel_update", e.AutohostChatImpression = "autohost_chat_impression", e.AutohostChatYes = "autohost_chat_yes", e.AutohostChatDismiss = "autohost_chat_dismiss", e.AutohostChatSettings = "autohost_chat_settings", e.BeganSearch = "began_search", e.BitsAdsAvailability = "bits_ads_availability", e.BitsAdsImpression = "bits_ads_impression", e.BitsAdsRequest = "bits_ads_request", e.BitsCardInteraction = "bits_card_interaction", e.BrowseForYou = "browse_for_you", e.BrowserFingerprint = "browser_fingerprint", e.BrowserPushNotificationPrompt = "browser_notification_prompt", e.BrowserPushNotificationDisable = "browser_notification_disable", e.BTTV = "bttv_check", e.Chat = "chat", e.ChatBadgeClick = "chat_badge_click", e.ChatMentionUsed = "chat_mention_used", e.ChatRoomJoined = "chat_room_join", e.ChatRoomWatched = "chatroom-watched", e.ChatSettingsChanged = "chat_client_setting_changed", e.ChatSettingsOpened = "chat_client_settings_open", e.ChatSuggestion = "chat-suggestions", e.ChatSuggestionComplete = "chat-completed-suggestion", e.ChommentCreated = "chomment_create", e.ChommentDeleted = "chomment_delete", e.ChommentUIAction = "chomment_ui_action", e.ClipEdit = "clip_edit", e.ClipChampHelpClick = "clip_champ_help_click", e.CollectionCreate = "collection_create", e.CollectionAddItem = "collection_add_item", e.CollectionRemoveItem = "collection_remove_item", e.CommunityEdit = "community_client_edit", e.CommunityFollow = "community_client_follow", e.CommunityModeration = "community_client_channel_moderation", e.CommunityReport = "community_client_report", e.CommunityUnfollow = "community_client_unfollow", e.CompleteTransition = "benchmark_complete_transition", e.CompletedSearch = "completed_search", e.ComponentInitializing = "benchmark_component_initializing", e.ComponentInteractive = "benchmark_component_interactive", e.CustomEvent = "benchmark_custom_event", e.CrateNotificationAction = "crate_notification_action", e.DeprioritizeVodcastToggle = "autohost_deprioritize_vodcast_toggle", e.EventFollowing = "oracle_user_notification_client", e.EventShare = "oracle_event_share", e.ExperimentBranch = "experiment_branch", e.FeaturedEventPresentation = "event_suggestions_shown", e.FeatureEducationUpdateBlock = "feature_education_update_block", e.FeatureEducationUpdateBlockImpression = "feature_education_update_block_impression", e.FeatureEducationTour = "feature_education_tour", e.FeatureEducationTourImpression = "feature_education_tour_impression", e.FeedCardImpression = "feed_client_card_impression", e.FeedCardEmbedImpression = "feed_client_card_embed_impression", e.FeedCardEmbedPlay = "feed_client_card_embed_play", e.FeedPost = "feed_client_post", e.FeedReaction = "feed_client_reaction", e.FetchStart = "benchmark_fetch_start", e.FFZ = "ffz_check", e.Follow = "follow", e.FrontPageCarouselClick = "frontpage_carousel_click", e.FrontPageCarouselDisplay = "carousel_display", e.FrontPageCarouselPromotionCardClick = "promotion_card_click", e.FrontPageCarouselPromotionCardView = "promotion_card_view", e.FrontPageCarouselNavButtonClick = "carousel_nav_button_click", e.FuelBuyButton = "fuel_buy_button", e.FuelGetGameClick = "fuel_get_game_click", e.FuelOfferView = "offer_view", e.FuelOfferInteraction = "offer_interaction", e.FuelSocialShare = "fuel_social_share", e.GameFollow = "follow-game", e.GameUnfollow = "unfollow-game", e.ItemSectionClick = "item_section_click", e.ItemSectionLoad = "item_section_load", e.OnboardingEvent = "onboarding_web", e.OnboardingSurfAction = "onboarding_surf_action", e.NetworkRequest = "network_request", e.NewChatterTokenStatus = "nca_client_token_status", e.NewChatterOnboardingInteraction = "nca_onboarding_chatbox_interaction", e.NotificationCenterInteraction = "notification_center_interaction", e.NotificationImpression = "notification_impression", e.NotificationInteraction = "notification_interaction", e.Pageview = "pageview", e.PartnerAffiliateSettings = "partner_affiliate_settings", e.PassportHide = "auth_exit", e.PassportShow = "auth_show", e.PaymentFormInteraction = "payment_form_interaction", e.PlayerRecShow = "player_rec_show", e.PlayerShowFeatured = "player_show_featured", e.PlayerRecSelect = "player_rec_select", e.PlayerRecAutoplay = "player_rec_autoplay", e.PresenceClick = "friend_presence_click", e.RaidPromptJoin = "raid_prompt_join", e.RaidPromptLeave = "raid_prompt_leave", e.RaidPromptImpression = "raid_prompt_impression", e.SearchQuery = "search_query", e.ShareItem = "share_item", e.SideNavChannelClick = "sidenav_channel_click", e.SideNavDetails = "sidenav_details", e.SideNavLoadMore = "sidenav_load_more", e.SimilarHostToggle = "autohost_similar_channels_toggle", e.SiteLayoutMod = "site_layout_mod", e.SiteToggle = "twilight_site_toggle", e.StreamSummarySpotlightImpression = "summary_spotlight_impression", e.StreamSummarySpotlightClick = "summary_spotlight_click", e.StoreMerchClick = "store_item_select", e.StoreMerchView = "store_item_view", e.Subscription = "subscribe_button", e.SubsLandingStreamerClick = "subs_landing_streamer_click", e.TeamHostToggle = "autohost_team_toggle", e.ThemeChange = "dark_mode_toggle", e.Unfollow = "unfollow", e.VerifyEmailBar = "verify_email_bar", e.VideoChatSettingChanged = "video_chat_setting_changed", e.VideoShare = "video_share", e.VODDownloadClick = "vod_download_click", e.VODExportClick = "vod_export_click", e.WhisperAllThreadsMod = "chat_convo_mod_global", e.WhisperIgnoreUser = "chat_ignore_client", e.WhisperReceived = "whisper_received", e.WhisperSearchClick = "search_click", e.WhisperSent = "whisper", e.WhisperThreadCreate = "chat_convo_create", e.WhisperThreadMod = "chat_convo_mod"
+                e.AbandonedSearch = "abandoned_search", e.AchievementSpotlightImpression = "achievement_spotlight_impression", e.AchievementQuestBannerClick = "achievement_quest_banner_click", e.APIQuery = "benchmark_api_query", e.AppBooted = "benchmark_app_booted", e.AutoHostChannelUpdate = "autohost_channel_update", e.AutohostChatImpression = "autohost_chat_impression", e.AutohostChatYes = "autohost_chat_yes", e.AutohostChatDismiss = "autohost_chat_dismiss", e.AutohostChatSettings = "autohost_chat_settings", e.BeganSearch = "began_search", e.BitsAdsAvailability = "bits_ads_availability", e.BitsAdsImpression = "bits_ads_impression", e.BitsAdsRequest = "bits_ads_request", e.BitsCardInteraction = "bits_card_interaction", e.BrowseForYou = "browse_for_you", e.BrowserFingerprint = "browser_fingerprint", e.BrowserPushNotificationPrompt = "browser_notification_prompt", e.BrowserPushNotificationDisable = "browser_notification_disable", e.BTTV = "bttv_check", e.Chat = "chat", e.ChatBadgeClick = "chat_badge_click", e.ChatMentionUsed = "chat_mention_used", e.ChatRoomJoined = "chat_room_join", e.ChatRoomWatched = "chatroom-watched", e.ChatSettingsChanged = "chat_client_setting_changed", e.ChatSettingsOpened = "chat_client_settings_open", e.ChatSuggestion = "chat-suggestions", e.ChatSuggestionComplete = "chat-completed-suggestion", e.ChommentCreated = "chomment_create", e.ChommentDeleted = "chomment_delete", e.ChommentUIAction = "chomment_ui_action", e.ClipEdit = "clip_edit", e.ClipChampHelpClick = "clip_champ_help_click", e.CollectionCreate = "collection_create", e.CollectionAddItem = "collection_add_item", e.CollectionRemoveItem = "collection_remove_item", e.CommunityEdit = "community_client_edit", e.CommunityFollow = "community_client_follow", e.CommunityModeration = "community_client_channel_moderation", e.CommunityReport = "community_client_report", e.CommunityUnfollow = "community_client_unfollow", e.CompleteTransition = "benchmark_complete_transition", e.CompletedSearch = "completed_search", e.ComponentInitializing = "benchmark_component_initializing", e.ComponentInteractive = "benchmark_component_interactive", e.CustomEvent = "benchmark_custom_event", e.CrateNotificationAction = "crate_notification_action", e.DeprioritizeVodcastToggle = "autohost_deprioritize_vodcast_toggle", e.EventFollowing = "oracle_user_notification_client", e.EventShare = "oracle_event_share", e.ExperimentBranch = "experiment_branch", e.FeaturedEventPresentation = "event_suggestions_shown", e.FeatureEducationUpdateBlock = "feature_education_update_block", e.FeatureEducationUpdateBlockImpression = "feature_education_update_block_impression", e.FeatureEducationTour = "feature_education_tour", e.FeatureEducationTourImpression = "feature_education_tour_impression", e.FeedCardImpression = "feed_client_card_impression", e.FeedCardEmbedImpression = "feed_client_card_embed_impression", e.FeedCardEmbedPlay = "feed_client_card_embed_play", e.FeedPost = "feed_client_post", e.FeedReaction = "feed_client_reaction", e.FetchStart = "benchmark_fetch_start", e.FFZ = "ffz_check", e.Follow = "follow", e.FrontPageCarouselClick = "frontpage_carousel_click", e.FrontPageCarouselDisplay = "carousel_display", e.FrontPageCarouselPromotionCardClick = "promotion_card_click", e.FrontPageCarouselPromotionCardView = "promotion_card_view", e.FrontPageCarouselNavButtonClick = "carousel_nav_button_click", e.FuelBuyButton = "fuel_buy_button", e.FuelGetGameClick = "fuel_get_game_click", e.FuelOfferView = "offer_view", e.FuelOfferInteraction = "offer_interaction", e.FuelSocialShare = "fuel_social_share", e.GameFollow = "follow-game", e.GameUnfollow = "unfollow-game", e.HearthstoneFilterAction = "hearthstone_filter_action", e.ItemSectionClick = "item_section_click", e.ItemSectionLoad = "item_section_load", e.OnboardingEvent = "onboarding_web", e.OnboardingSurfAction = "onboarding_surf_action", e.NetworkRequest = "network_request", e.NewChatterTokenStatus = "nca_client_token_status", e.NewChatterOnboardingInteraction = "nca_onboarding_chatbox_interaction", e.NotificationCenterInteraction = "notification_center_interaction", e.NotificationImpression = "notification_impression", e.NotificationInteraction = "notification_interaction", e.Pageview = "pageview", e.PartnerAffiliateSettings = "partner_affiliate_settings", e.PassportHide = "auth_exit", e.PassportShow = "auth_show", e.PaymentFormInteraction = "payment_form_interaction", e.PlayerRecShow = "player_rec_show", e.PlayerShowFeatured = "player_show_featured", e.PlayerRecSelect = "player_rec_select", e.PlayerRecAutoplay = "player_rec_autoplay", e.PresenceClick = "friend_presence_click", e.RaidPromptJoin = "raid_prompt_join", e.RaidPromptLeave = "raid_prompt_leave", e.RaidPromptImpression = "raid_prompt_impression", e.SearchQuery = "search_query", e.ShareItem = "share_item", e.SideNavChannelClick = "sidenav_channel_click", e.SideNavDetails = "sidenav_details", e.SideNavLoadMore = "sidenav_load_more", e.SimilarHostToggle = "autohost_similar_channels_toggle", e.SiteLayoutMod = "site_layout_mod", e.SiteToggle = "twilight_site_toggle", e.StreamSummarySpotlightImpression = "summary_spotlight_impression", e.StreamSummarySpotlightClick = "summary_spotlight_click", e.StoreMerchClick = "store_item_select", e.StoreMerchView = "store_item_view", e.Subscription = "subscribe_button", e.SubsLandingStreamerClick = "subs_landing_streamer_click", e.TeamHostToggle = "autohost_team_toggle", e.ThemeChange = "dark_mode_toggle", e.Unfollow = "unfollow", e.VerifyEmailBar = "verify_email_bar", e.VideoChatSettingChanged = "video_chat_setting_changed", e.VideoShare = "video_share", e.VODDownloadClick = "vod_download_click", e.VODExportClick = "vod_export_click", e.WhisperAllThreadsMod = "chat_convo_mod_global", e.WhisperIgnoreUser = "chat_ignore_client", e.WhisperReceived = "whisper_received", e.WhisperSearchClick = "search_click", e.WhisperSent = "whisper", e.WhisperThreadCreate = "chat_convo_create", e.WhisperThreadMod = "chat_convo_mod"
             }(i || (i = {}))
     },
     kIPx: function(e, t) {},
@@ -41075,7 +41014,7 @@ webpackJsonp([66], {
             u = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
-                    return t.buildType = r.a.Production, t.apiBaseURL = c, t.graphqlEndpoint = d + "/gql", t.sentinelEndpoint = "https://sentinel.twitchsvc.net/error-report", t.defaultSpadeEndpoint = "https://spade.twitch.tv/track", t.authClientID = "kimne78kx3ncx6brgo4mv6wki5h1ko", t.passportRedirectURI = "https://go.twitch.tv/passport-callback", t.pubsubTopicUploadPrefix = "pubsub.upload", t.mixpanelToken = "809576468572134f909dffa6bd0dcfcf", t
+                    return t.buildType = r.a.Production, t.apiBaseURL = c, t.graphqlEndpoint = d + "/gql", t.sentinelEndpoint = "https://sentinel.twitchsvc.net/error-report", t.defaultSpadeEndpoint = "https://spade.twitch.tv/track", t.authClientID = "kimne78kx3ncx6brgo4mv6wki5h1ko", t.passportRedirectURI = "https://go.twitch.tv/passport-callback", t.pubsubTopicUploadPrefix = "pubsub.upload", t
                 }
                 return i.__extends(t, e), t
             }(l),
@@ -41808,7 +41747,7 @@ webpackJsonp([66], {
                 return i
             }),
             function(e) {
-                e.AutohostSettings = "channel.dashboard.settings.autohost", e.BitsBuyCard = "bits-buy-card", e.BrowseCommunities = "browse.communities", e.BrowseCreative = "browse.creative", e.BrowseGames = "browse.games", e.ChannelClips = "channel.clips", e.ChannelCollections = "channel.collections", e.ChannelClipsManager = "videoManager.clips.channel", e.ChannelDashboardAchievements = "channel.dashboard.achievements", e.ChannelDashboardBounties = "channel.dashboard.bounties", e.ChannelDashboardChannelAnalytics = "channel.dashboard.channel-analytics", e.ChannelDashboardChannelAnalyticsReferrals = "channel.dashboard.channel-analytics.referrals", e.ChannelDashboardExtensions = "channel.dashboard.extensions", e.ChannelDashboardExtensionsConfigure = "channel.dashboard.extensions.configure", e.ChannelDashboardModeration = "channel.dashboard.moderation", e.ChannelDashboardStreamSummary = "channel.dashboard.stream-summary", e.ChannelEvents = "channel.events", e.ChannelFollowers = "channel.followers", e.ChannelFollows = "channel.follows", e.ChannelIndex = "channel.index.index", e.ChatPopout = "chat", e.CheermoteCarousel = "cheermote-carousel", e.DashboardSettingsIndex = "channel.dashboard.settings.index", e.DevOnly = "dev", e.DirectoryCommunityByLanguage = "directory.community.language", e.DirectoryCommunityIndex = "directory.community.index", e.DirectoryCommunityDetails = "directory.community.details", e.DirectoryFollowingCommunities = "directory.following.communities", e.DirectoryFollowingGames = "directory.following.games", e.DirectoryFollowingHosts = "directory.following.hosts", e.DirectoryFollowingIndex = "directory.following.index", e.DirectoryFollowingLiveChannels = "directory.following.channels", e.DirectoryFollowingVideos = "directory.following.videos.video-type", e.DirectoryGameClips = "directory.game.clips", e.DirectoryGameDetails = "directory.game.details", e.DirectoryGameIndex = "directory.game.index", e.DirectoryGames = "directory.games", e.DirectoryPopular = "directory.popular", e.DirectoryPopularByLanguage = "directory.popular.language", e.DirectoryGameVideos = "directory.game.videos", e.DirectoryVideosHistory = "directory.videos.history", e.EmailVerification = "emailVerification", e.EventDetails = "event.details", e.ExtensionDetails = "extensions.extension", e.ForYou = "for-you", e.Index = "index", e.Inventory = "inventory", e.MyClipsManager = "videoManager.clips", e.NotificationSettingsPage = "settings.notificationSettings", e.OnboardingIndex = "onboarding.index", e.OnboardingSurf = "onboarding.surf", e.PaymentsLandingPage = "payments.landingPage", e.ReportUserPage = "reportUser.page", e.DashboardRevenueSettings = "channel.dashboard.settings.revenue", e.SettingsConnections = "private/embed-components", e.SettingsChannel = "private/embed-components", e.SettingsNotifications = "settings.notifications", e.SettingsPrime = "settings.prime", e.SettingsProfile = "settings.profile", e.SettingsSecurity = "private/embed-components", e.SettingsTurbo = "settings.turbo", e.StoreMerchPage = "store.merch", e.SubsLandingPage = "subs.landing", e.SubsCheckoutPage = "subs.checkout", e.TeamsDashboardRevenue = "teams.dashboard.revenue", e.TeamsDashboardStats = "teams.dashboard.stats", e.TeamsDashboardMembers = "teams.dashboard.members", e.TeamsDashboardFeaturedChannels = "teams.dashboard.featured-channels", e.TeamsDashboardSettings = "teams.dashboard.settings", e.SubsBroadcasterPage = "subs.broadcaster", e.VideoManagerEditPropertiesPage = "videoManager.edit", e.VideoManagerPage = "videoManager.page", e.VideoManagerUploadListPage = "videoManager.upload-list", e.VideoManagerUploadPage = "videoManager.upload", e.VideoManagerCollectionsManager = "videoManager.collections", e.VideoManagerCollectionsEditor = "videoManager.collections.editor", e.VideoManagerHighlighter = "videoManager.highlighter", e.VideosPage = "videos", e.VideoWatchPage = "video", e.Unknown = "unknown"
+                e.AutohostSettings = "channel.dashboard.settings.autohost", e.BitsBuyCard = "bits-buy-card", e.BrowseCommunities = "browse.communities", e.BrowseCreative = "browse.creative", e.BrowseGames = "browse.games", e.ChannelClips = "channel.clips", e.ChannelCollections = "channel.collections", e.ChannelClipsManager = "videoManager.clips.channel", e.ChannelDashboardAchievements = "channel.dashboard.achievements", e.ChannelDashboardBounties = "channel.dashboard.bounties", e.ChannelDashboardChannelAnalytics = "channel.dashboard.channel-analytics", e.ChannelDashboardChannelAnalyticsReferrals = "channel.dashboard.channel-analytics.referrals", e.ChannelDashboardExtensions = "channel.dashboard.extensions", e.ChannelDashboardExtensionsConfigure = "channel.dashboard.extensions.configure", e.ChannelDashboardModeration = "channel.dashboard.moderation", e.ChannelDashboardStreamSummary = "channel.dashboard.stream-summary", e.ChannelEvents = "channel.events", e.ChannelFollowers = "channel.followers", e.ChannelFollows = "channel.follows", e.ChannelIndex = "channel.index.index", e.ChatPopout = "chat", e.CheermoteCarousel = "cheermote-carousel", e.DashboardSettingsIndex = "channel.dashboard.settings.index", e.DevOnly = "dev", e.DirectoryCommunityByLanguage = "directory.community.language", e.DirectoryCommunityIndex = "directory.community.index", e.DirectoryCommunityDetails = "directory.community.details", e.DirectoryFollowingCommunities = "directory.following.communities", e.DirectoryFollowingGames = "directory.following.games", e.DirectoryFollowingHosts = "directory.following.hosts", e.DirectoryFollowingIndex = "directory.following.index", e.DirectoryFollowingLiveChannels = "directory.following.channels", e.DirectoryFollowingVideos = "directory.following.videos.video-type", e.DirectoryGameClips = "directory.game.clips", e.DirectoryGameDetails = "directory.game.details", e.DirectoryGameIndex = "directory.game.index", e.DirectoryGames = "directory.games", e.DirectoryPopular = "directory.popular", e.DirectoryPopularByLanguage = "directory.popular.language", e.DirectoryGameVideos = "directory.game.videos", e.DirectoryVideosHistory = "directory.videos.history", e.EmailVerification = "emailVerification", e.EventDetails = "event.details", e.ExtensionDetails = "extensions.extension", e.ForYou = "for-you", e.Index = "index", e.Inventory = "inventory", e.LivePage = "live.page", e.MyClipsManager = "videoManager.clips", e.NotificationSettingsPage = "settings.notificationSettings", e.OnboardingIndex = "onboarding.index", e.OnboardingSurf = "onboarding.surf", e.PaymentsLandingPage = "payments.landingPage", e.ReportUserPage = "reportUser.page", e.DashboardRevenueSettings = "channel.dashboard.settings.revenue", e.SettingsConnections = "private/embed-components", e.SettingsChannel = "private/embed-components", e.SettingsNotifications = "settings.notifications", e.SettingsPrime = "settings.prime", e.SettingsProfile = "settings.profile", e.SettingsSecurity = "private/embed-components", e.SettingsTurbo = "settings.turbo", e.StoreMerchPage = "store.merch", e.SubsLandingPage = "subs.landing", e.SubsCheckoutPage = "subs.checkout", e.TeamsDashboardRevenue = "teams.dashboard.revenue", e.TeamsDashboardStats = "teams.dashboard.stats", e.TeamsDashboardMembers = "teams.dashboard.members", e.TeamsDashboardFeaturedChannels = "teams.dashboard.featured-channels", e.TeamsDashboardSettings = "teams.dashboard.settings", e.SubsBroadcasterPage = "subs.broadcaster", e.VideoManagerEditPropertiesPage = "videoManager.edit", e.VideoManagerPage = "videoManager.page", e.VideoManagerUploadListPage = "videoManager.upload-list", e.VideoManagerUploadPage = "videoManager.upload", e.VideoManagerCollectionsManager = "videoManager.collections", e.VideoManagerCollectionsEditor = "videoManager.collections.editor", e.VideoManagerHighlighter = "videoManager.highlighter", e.VideosPage = "videos", e.VideoWatchPage = "video", e.Unknown = "unknown"
             }(i || (i = {}))
     },
     wG4N: function(e, t) {
@@ -43116,4 +43055,4 @@ webpackJsonp([66], {
             }(r.Component))
     }
 }, [5]);
-//# sourceMappingURL=core-4ebcf0c973d249f0e9db8f8d56afb3ca.js.map
+//# sourceMappingURL=core-db63fc0f4751e151f2ea6ece463b65f1.js.map

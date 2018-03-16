@@ -16078,6 +16078,8 @@ webpackJsonp([67], {
                     this.add("joined", e)
                 }, e.prototype.parted = function(e) {
                     this.add("parted", e)
+                }, e.prototype.hosted = function(e) {
+                    this.add("hosted", e)
                 }, e.prototype.hosting = function(e) {
                     this.add("hosting", e)
                 }, e.prototype.unhost = function(e) {
@@ -34425,4 +34427,4 @@ webpackJsonp([67], {
         e.exports = n("v1RP")()
     }
 });
-//# sourceMappingURL=vendor-f42cb2e5346eabf19b40d3ac408343f4.js.map
+//# sourceMappingURL=vendor-9e06d0311ee815010b91f1c44c5ea42f.js.map

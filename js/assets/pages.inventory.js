@@ -6,8 +6,8 @@ webpackJsonp([57], {
             value: !0
         });
         var i = n("RH2O"),
-            r = n("2KeS"),
-            a = n("+xm8"),
+            a = n("2KeS"),
+            r = n("+xm8"),
             o = n("f2i/"),
             l = n("Aj/L"),
             s = n("TToO"),
@@ -84,10 +84,10 @@ webpackJsonp([57], {
                     }, t))
                 }, t
             }(c.Component),
-            y = Object(r.d)(Object(f.d)("BadgesList", {
+            b = Object(a.d)(Object(f.d)("BadgesList", {
                 autoReportInteractive: !0
             }))(k),
-            b = n("Ouuk"),
+            y = n("Ouuk"),
             E = n("jF7o");
         var _ = function(e) {
                 function t() {
@@ -116,7 +116,7 @@ webpackJsonp([57], {
                     }, t.handleOpenClick = function(e) {
                         ! function(e, t) {
                             var n = window.open(e, "Twitch", "width=1024,height=600,scrollbars=yes");
-                            n && !Object(b.a)() && (n.focus(), Object(E.a)(n, function(e) {
+                            n && !Object(y.a)() && (n.focus(), Object(E.a)(n, function(e) {
                                 t(e)
                             }))
                         }(e.currentTarget.dataset.openUrl || "", t.reload)
@@ -156,12 +156,11 @@ webpackJsonp([57], {
                     }, t))
                 }, t
             }(c.Component),
-            O = Object(r.d)(Object(f.d)("CratesList", {
+            O = Object(a.d)(Object(f.d)("CratesList", {
                 autoReportInteractive: !0
             }))(_),
             S = n("bdhb"),
-            j = (n("Jc4Y"), "drops-list_drop-award"),
-            N = function(e) {
+            N = (n("Jc4Y"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.getDropsDescription = function(e) {
@@ -173,35 +172,42 @@ webpackJsonp([57], {
                                 }, e)
                             }
                         }, "DropsList") : Object(d.d)("Drops you have received are accessed within their corresponding games. Log into the game to experience your new content.", "DropsList")
-                    }, t.renderDrop = function(e, t) {
+                    }, t.renderDrop = function(e) {
+                        var t = e.drop.node,
+                            n = t.game.name;
                         return c.createElement(h._4, {
-                            key: t,
-                            className: "drops-list__drop-award",
-                            "data-test-selector": j,
+                            key: n,
                             margin: {
-                                right: 2,
-                                bottom: 1
-                            },
-                            display: h.P.InlineFlex,
-                            flexDirection: h.R.Column
-                        }, c.createElement(h._27, {
-                            fullHeight: !0,
-                            fullWidth: !0,
-                            display: h.P.Flex,
-                            justifyContent: h._3.Center,
-                            padding: 2,
-                            border: !0
-                        }, c.createElement("img", {
-                            alt: Object(d.d)("Drop image", "DropsListPresentation"),
-                            src: e.node.imageURL
-                        })), c.createElement(h._4, {
-                            padding: {
-                                y: .5
+                                bottom: 2
                             }
+                        }, c.createElement(h._27, {
+                            display: h.P.Flex,
+                            alignItems: h.c.Center,
+                            justifyContent: h._3.Center,
+                            padding: 1,
+                            border: !0,
+                            position: h._11.Relative
+                        }, c.createElement("img", {
+                            src: t.imageURL,
+                            alt: Object(d.d)("Drop image for {gameName}", {
+                                gameName: n
+                            }, "DropsListPresentation")
+                        }), c.createElement(h._27, {
+                            position: h._11.Absolute,
+                            attachBottom: !0,
+                            attachRight: !0,
+                            className: "drops-list__count",
+                            color: h.J.Overlay,
+                            borderRadius: h.s.Small,
+                            padding: .5
                         }, c.createElement(h.O, {
-                            bold: !0,
-                            ellipsis: !0
-                        }, e.node.game.name)))
+                            fontSize: h.T.Size4,
+                            "aria-label": Object(d.d)("Count of Drops awarded for {gameName}", {
+                                gameName: n
+                            }, "DropsListPresentation")
+                        }, e.count))), c.createElement(h.O, {
+                            type: h._41.Strong
+                        }, n))
                     }, t
                 }
                 return s.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -215,8 +221,15 @@ webpackJsonp([57], {
                     });
                     if (!this.props.data || this.props.data.error || !this.props.data.currentUser || !this.props.data.currentUser.inventory.drops.nodes) return null;
                     var t = this.props.data.currentUser.inventory.drops.nodes,
-                        n = t.map(function(t, n) {
-                            return e.renderDrop(t, n)
+                        n = t.reduce(function(e, t) {
+                            var n = t.node.game.name;
+                            return e.hasOwnProperty(n) ? e[n].count++ : e[t.node.game.name] = {
+                                count: 1,
+                                drop: t
+                            }, e
+                        }, {}),
+                        i = Object.keys(n).map(function(t) {
+                            return e.renderDrop(n[t])
                         });
                     return c.createElement(h._4, {
                         "data-test-selector": "drops-list_wrapper",
@@ -238,14 +251,17 @@ webpackJsonp([57], {
                         margin: {
                             bottom: 1
                         }
-                    }, c.createElement(h.O, null, this.getDropsDescription(t))), n)
+                    }, c.createElement(h.O, null, this.getDropsDescription(t))), c.createElement(h._47, {
+                        childWidth: h._48.Small,
+                        noGrow: !0
+                    }, i))
                 }, t.prototype.postRender = function() {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
                 }, t = s.__decorate([Object(u.a)(S)], t)
-            }(c.Component),
-            F = Object(r.d)(Object(f.d)("DropsList"))(N),
+            }(c.Component)),
+            j = Object(a.d)(Object(f.d)("DropsList"))(N),
             C = n("Tzcg"),
-            L = function(e) {
+            F = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderEmote = function(e) {
@@ -323,16 +339,16 @@ webpackJsonp([57], {
                     }, t))
                 }, t
             }(c.Component),
-            x = Object(r.d)(Object(f.d)("EmoticonsList", {
+            L = Object(a.d)(Object(f.d)("EmoticonsList", {
                 autoReportInteractive: !0
-            }))(L),
-            w = n("+Znq"),
-            D = n("iMOk"),
-            U = n("CFVp"),
+            }))(F),
+            x = n("+Znq"),
+            w = n("iMOk"),
+            D = n("CFVp"),
             R = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
-                    return t.bitsConfig = Object(U.a)(), t
+                    return t.bitsConfig = Object(D.a)(), t
                 }
                 return s.__extends(t, e), t.prototype.render = function() {
                     var e = Object(d.d)("Inventory", "InventoryTitleBar");
@@ -370,7 +386,7 @@ webpackJsonp([57], {
                             }, e.displayText)
                         }),
                         n = Object(d.d)("You have {bitsComponent}", {
-                            bitsComponent: c.createElement(D.a, {
+                            bitsComponent: c.createElement(w.a, {
                                 count: this.props.bitsBalance,
                                 bitsConfig: this.bitsConfig,
                                 withImage: !0,
@@ -396,18 +412,18 @@ webpackJsonp([57], {
                         alignItems: h.c.Center
                     }, c.createElement(h.O, null, n)), c.createElement(h._4, {
                         alignSelf: h.d.Baseline
-                    }, c.createElement(w.a, null, c.createElement(h.u, {
+                    }, c.createElement(x.a, null, c.createElement(h.u, {
                         type: h.A.Hollow
                     }, Object(d.d)("View your Twitch Order History", "InventoryTitleBar")), c.createElement(h.p, null, c.createElement(h._4, {
                         padding: 1
                     }, t)))))
                 }, t
             }(c.Component),
-            I = Object(r.d)(Object(f.d)("TitleBar", {
+            U = Object(a.d)(Object(f.d)("TitleBar", {
                 autoReportInteractive: !0
             }))(R),
-            A = n("xpYL"),
-            T = function(e) {
+            I = n("xpYL"),
+            A = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.refetchData = function() {
@@ -424,47 +440,47 @@ webpackJsonp([57], {
                         t = [],
                         n = 0,
                         i = [],
-                        r = [],
-                        a = [];
-                    return this.props.data.loading || this.props.data.error || (e = !1, t = this.props.data.currentUser.amazonMarketplaces, n = this.props.data.currentUser.bitsBalance, i = this.props.data.currentUser.availableBadges, r = this.props.data.currentUser.crates, a = this.props.data.currentUser.emoteSets), c.createElement(h._4, {
+                        a = [],
+                        r = [];
+                    return this.props.data.loading || this.props.data.error || (e = !1, t = this.props.data.currentUser.amazonMarketplaces, n = this.props.data.currentUser.bitsBalance, i = this.props.data.currentUser.availableBadges, a = this.props.data.currentUser.crates, r = this.props.data.currentUser.emoteSets), c.createElement(h._4, {
                         className: "inventory",
                         padding: 3
-                    }, c.createElement(I, {
+                    }, c.createElement(U, {
                         bitsBalance: n,
                         loading: e,
                         amazonMarketplaces: t
                     }), c.createElement(O, {
                         refetchData: this.refetchData,
-                        crates: r,
+                        crates: a,
                         loading: e
-                    }), c.createElement(x, {
-                        emoteSets: a,
+                    }), c.createElement(L, {
+                        emoteSets: r,
                         loading: e
-                    }), c.createElement(y, {
+                    }), c.createElement(b, {
                         badges: i,
                         loading: e
-                    }), c.createElement(F, null))
-                }, t = s.__decorate([Object(u.a)(A)], t)
+                    }), c.createElement(j, null))
+                }, t = s.__decorate([Object(u.a)(I)], t)
             }(c.Component),
-            P = Object(r.d)(Object(f.d)("InventoryPage", {
+            T = Object(a.d)(Object(f.d)("InventoryPage", {
                 autoReportInteractive: !0,
                 destination: g.a.Inventory
             }), Object(p.a)({
                 location: v.PageviewLocation.Inventory
-            }))(T);
-        var B = Object(i.b)(function(e) {
+            }))(A);
+        var P = Object(i.b)(function(e) {
             return {
                 isLoggedIn: Object(l.d)(e)
             }
         }, function(e) {
-            return Object(r.b)({
+            return Object(a.b)({
                 onAnonymousVisit: function() {
-                    return Object(o.f)(a.a.InventoryPage)
+                    return Object(o.f)(r.a.InventoryPage)
                 }
             }, e)
-        })(P);
+        })(T);
         n.d(t, "InventoryPage", function() {
-            return B
+            return P
         })
     },
     Jc4Y: function(e, t) {},
@@ -668,8 +684,8 @@ webpackJsonp([57], {
     iMOk: function(e, t, n) {
         "use strict";
         var i = n("GiK3"),
-            r = n("6sO2"),
-            a = n("NXs7"),
+            a = n("6sO2"),
+            r = n("NXs7"),
             o = n("3iBR"),
             l = n("iydZ"),
             s = n("CFVp"),
@@ -677,7 +693,7 @@ webpackJsonp([57], {
         n("1pvm");
 
         function d(e) {
-            var t, n = Object(r.d)("{bitsAmount} Bits", {
+            var t, n = Object(a.d)("{bitsAmount} Bits", {
                 bitsAmount: e.count.toString()
             }, "Bits--BitsCount");
             if (e.withImage) {
@@ -688,7 +704,7 @@ webpackJsonp([57], {
                 });
                 if (m) {
                     var u = Object(l.b)(m);
-                    return void 0 !== e.themeOverride && (e.themeOverride === a.a.Light ? u.dark = u.light : u.light = u.dark), t = i.createElement(c.a, {
+                    return void 0 !== e.themeOverride && (e.themeOverride === r.a.Light ? u.dark = u.light : u.light = u.dark), t = i.createElement(c.a, {
                         className: "bits-count--img",
                         sources: u
                     }), i.createElement("strong", {
@@ -712,12 +728,12 @@ webpackJsonp([57], {
             if (!e) return void i.j.warn("[onPopupClose] Attempted to observe a window that failed to open.");
             var n = setInterval(function() {
                 var i = !1,
-                    r = !1;
+                    a = !1;
                 try {
-                    i = e.closed, r = !!e.success
+                    i = e.closed, a = !!e.success
                 } catch (e) {}
-                if (i || r) {
-                    t(r);
+                if (i || a) {
+                    t(a);
                     try {
                         e.close()
                     } catch (e) {}
@@ -1014,16 +1030,16 @@ webpackJsonp([57], {
                 column: 1
             }
         };
-        var r = {};
+        var a = {};
 
-        function a(e) {
+        function r(e) {
             return e.filter(function(e) {
                 if ("FragmentDefinition" !== e.kind) return !0;
                 var t = e.name.value;
-                return !r[t] && (r[t] = !0, !0)
+                return !a[t] && (a[t] = !0, !0)
             })
         }
-        i.definitions = i.definitions.concat(a(n("UP6l").definitions)), i.definitions = i.definitions.concat(a(n("l83l").definitions)), e.exports = i
+        i.definitions = i.definitions.concat(r(n("UP6l").definitions)), i.definitions = i.definitions.concat(r(n("l83l").definitions)), e.exports = i
     }
 });
-//# sourceMappingURL=pages.inventory-b902ccf26d497eb64363e77cd62c9b23.js.map
+//# sourceMappingURL=pages.inventory-06990071533be8b5bf05714dbbe5b570.js.map
