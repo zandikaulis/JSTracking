@@ -1974,17 +1974,20 @@ window.SiteOptions = {
         },
         "5192d294-a807-4eb6-aeef-141023684b88": {
             "name": "android_reward_exp",
-            "v": 3097,
+            "v": 3291,
             "t": 1,
             "groups": [{
-                "weight": 30,
+                "weight": 0,
                 "value": "a"
             }, {
-                "weight": 40,
+                "weight": 0,
                 "value": "b"
             }, {
-                "weight": 30,
+                "weight": 0,
                 "value": "c"
+            }, {
+                "weight": 100,
+                "value": "control"
             }]
         },
         "51e3d33c-157b-422d-9a15-b0f9e9c055b2": {
@@ -2236,17 +2239,20 @@ window.SiteOptions = {
         },
         "5e532f0e-a835-44bf-9349-bd5cd2b6a416": {
             "name": "ios_reward_exp",
-            "v": 3095,
+            "v": 3290,
             "t": 1,
             "groups": [{
-                "weight": 30,
+                "weight": 0,
                 "value": "a"
             }, {
-                "weight": 40,
+                "weight": 0,
                 "value": "b"
             }, {
-                "weight": 30,
+                "weight": 0,
                 "value": "c"
+            }, {
+                "weight": 100,
+                "value": "control"
             }]
         },
         "5e739dab-ded8-4722-b9ee-6053bb34b48b": {
