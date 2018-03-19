@@ -72,11 +72,12 @@ webpackJsonp([60], {
                 return s.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
                     this.state.publishState === a.Error && e.title.length > 0 && this.props.title !== e.title && this.setState(g)
                 }, t.prototype.render = function() {
-                    var e = this.props.title.length < 1 || this.state.publishState === a.Error;
+                    var e = this.props.title.length < 1 || this.state.publishState === a.Error,
+                        t = !this.props.isClipResolved || this.state.publishState === a.Sending;
                     return r.createElement(h._4, null, this.props.slug, r.createElement(h.u, {
                         onClick: this.onPublish,
                         disabled: e,
-                        state: this.state.publishState === a.Sending ? h.z.Loading : h.z.Default,
+                        state: t ? h.z.Loading : h.z.Default,
                         size: h.y.Large,
                         blurAfterClick: !0
                     }, Object(d.d)("Publish", "ClipsPublishButton")))
@@ -89,7 +90,7 @@ webpackJsonp([60], {
             e.creating = "creating", e.created = "created", e.failed = "failed"
         }(c || (c = {}));
         var b = i("f8OD"),
-            O = function(e) {
+            C = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -127,6 +128,7 @@ webpackJsonp([60], {
                         endOffset: t + i
                     });
                     return r.createElement(h._4, null, r.createElement(S, {
+                        isClipResolved: this.getIsClipResolved(this.props),
                         slug: this.props.slug,
                         title: "Hi!!",
                         startOffset: n.startOffset,
@@ -134,7 +136,7 @@ webpackJsonp([60], {
                     }))
                 }, t
             }(r.Component),
-            N = Object(o.compose)(Object(u.a)(b, {
+            O = Object(o.compose)(Object(u.a)(b, {
                 options: function(e) {
                     return {
                         pollInterval: 1e3,
@@ -144,8 +146,8 @@ webpackJsonp([60], {
                         }
                     }
                 }
-            }))(O),
-            C = function(e) {
+            }))(C),
+            N = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -158,7 +160,7 @@ webpackJsonp([60], {
                                 slug: e
                             }
                         }
-                    })) : this.props.location.state && this.props.location.state.slug ? (e = this.props.location.state.slug, r.createElement(h._4, null, r.createElement(N, {
+                    })) : this.props.location.state && this.props.location.state.slug ? (e = this.props.location.state.slug, r.createElement(h._4, null, r.createElement(O, {
                         slug: e
                     }))) : r.createElement(l.a, {
                         to: "/"
@@ -166,7 +168,7 @@ webpackJsonp([60], {
                 }, t
             }(r.Component);
         i.d(t, "ClipsCreate", function() {
-            return C
+            return N
         })
     },
     f8OD: function(e, t) {
@@ -454,4 +456,4 @@ webpackJsonp([60], {
         e.exports = i
     }
 });
-//# sourceMappingURL=sites.clips.pages.create-efbb44f54f7bb05441ac994f58e037db.js.map
+//# sourceMappingURL=sites.clips.pages.create-6421f4b1b933b63a0096cb10c134e965.js.map

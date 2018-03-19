@@ -7326,7 +7326,7 @@ webpackJsonp([73], {
                                     var a = Object(v.a)(Object(w.a)(t.props.message.user.userLogin, n.error.code));
                                     t.props.onPushMessage(a)
                                 } else {
-                                    a = Object(v.a)(Object(r.d)("{bannedUserLogin} is no longer banned from this room.", {
+                                    a = Object(v.a)(Object(r.d)("{bannedUserLogin} is no longer banned from this channel.", {
                                         bannedUserLogin: t.props.message.user.userLogin
                                     }, "ChatMessageEvent"));
                                     t.props.onPushMessage(a)
@@ -18084,7 +18084,7 @@ webpackJsonp([73], {
                 reason: e.reason
             }, "ChatLine")) : a.createElement("span", {
                 className: "chat-line__moderation--ban"
-            }, Object(i.d)("{userLogin}  is now banned from this room.", {
+            }, Object(i.d)("{userLogin} is now banned from this channel.", {
                 userLogin: e.userLogin
             }, "ChatLine"));
             if (e.reason && e.duration) {
@@ -18165,10 +18165,10 @@ webpackJsonp([73], {
             var t;
             if (e.length > 0) {
                 var n = e.join(", ");
-                t = Object(i.d)("The moderators of this room are: {moderatorList}", {
+                t = Object(i.d)("The moderators of this channel are: {moderatorList}", {
                     moderatorList: n
                 }, "ChatLine")
-            } else t = Object(i.d)("There are no moderators of this room.", "ChatLine");
+            } else t = Object(i.d)("There are no moderators of this channel.", "ChatLine");
             return a.createElement("span", null, t)
         }, t.i = function(e) {
             if (e.enabled) {
@@ -23289,4 +23289,4 @@ webpackJsonp([73], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-surfing-58b90ff9534d3b78d0cc3d04b06fcc5c.js.map
+//# sourceMappingURL=pages.channel-surfing-f0bd8c69091c6bf5a71a28fc956d56a7.js.map

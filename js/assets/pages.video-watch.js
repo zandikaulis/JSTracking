@@ -354,30 +354,32 @@ webpackJsonp([37, 82], {
     "/nNw": function(e, t, n) {
         "use strict";
         var i = n("3Ybq");
-        n.d(t, "ExportDestination", function() {
+        n.d(t, "DownloadStatus", function() {
             return i.a
-        }), n.d(t, "ExtraFilterType", function() {
+        }), n.d(t, "ExportDestination", function() {
             return i.b
-        }), n.d(t, "THUMBNAIL_TYPE_CUSTOM", function() {
+        }), n.d(t, "ExtraFilterType", function() {
             return i.c
+        }), n.d(t, "THUMBNAIL_TYPE_CUSTOM", function() {
+            return i.d
         }), n.d(t, "VIDEO_STATUS_FAILED", function() {
-            return i.h
-        }), n.d(t, "VIDEO_STATUS_PENDING_TRANSCODE", function() {
             return i.i
-        }), n.d(t, "VIDEO_STATUS_RECORDED", function() {
+        }), n.d(t, "VIDEO_STATUS_PENDING_TRANSCODE", function() {
             return i.j
-        }), n.d(t, "VIDEO_STATUS_TRANSCODING", function() {
+        }), n.d(t, "VIDEO_STATUS_RECORDED", function() {
             return i.k
-        }), n.d(t, "VIDEO_STATUS_UPLOADING", function() {
+        }), n.d(t, "VIDEO_STATUS_TRANSCODING", function() {
             return i.l
-        }), n.d(t, "VideoPremiereStatus", function() {
+        }), n.d(t, "VIDEO_STATUS_UPLOADING", function() {
             return i.m
-        }), n.d(t, "VideoScope", function() {
+        }), n.d(t, "VideoPremiereStatus", function() {
             return i.n
-        }), n.d(t, "availableVideoStatuses", function() {
+        }), n.d(t, "VideoScope", function() {
             return i.o
-        }), n.d(t, "pendingVideoStatuses", function() {
+        }), n.d(t, "availableVideoStatuses", function() {
             return i.p
+        }), n.d(t, "pendingVideoStatuses", function() {
+            return i.q
         });
         n("NfL5");
         var r = n("Rv0e");
@@ -1202,56 +1204,59 @@ webpackJsonp([37, 82], {
     },
     "3Ybq": function(e, t, n) {
         "use strict";
-        n.d(t, "d", function() {
-            return r
-        }), n.d(t, "c", function() {
+        n.d(t, "e", function() {
             return a
-        }), n.d(t, "n", function() {
-            return i
-        }), n.d(t, "l", function() {
-            return l
-        }), n.d(t, "i", function() {
-            return c
-        }), n.d(t, "k", function() {
-            return d
-        }), n.d(t, "h", function() {
-            return u
-        }), n.d(t, "j", function() {
-            return m
+        }), n.d(t, "d", function() {
+            return o
         }), n.d(t, "o", function() {
+            return r
+        }), n.d(t, "m", function() {
+            return c
+        }), n.d(t, "j", function() {
+            return d
+        }), n.d(t, "l", function() {
+            return u
+        }), n.d(t, "i", function() {
+            return m
+        }), n.d(t, "k", function() {
             return p
         }), n.d(t, "p", function() {
             return h
-        }), n.d(t, "f", function() {
+        }), n.d(t, "q", function() {
             return f
-        }), n.d(t, "e", function() {
-            return g
         }), n.d(t, "g", function() {
+            return g
+        }), n.d(t, "f", function() {
             return v
-        }), n.d(t, "m", function() {
+        }), n.d(t, "h", function() {
             return b
-        }), n.d(t, "a", function() {
-            return o
+        }), n.d(t, "n", function() {
+            return k
         }), n.d(t, "b", function() {
             return s
+        }), n.d(t, "c", function() {
+            return l
         });
-        n("zGmo");
-        var i, r = "generated",
-            a = "custom";
+        var i = n("zGmo");
+        n.d(t, "a", function() {
+            return i.a
+        });
+        var r, a = "generated",
+            o = "custom";
         ! function(e) {
             e.Private = "PRIVATE", e.Public = "PUBLIC"
-        }(i || (i = {}));
-        var o, s, l = "uploading",
-            c = "pending_transcode",
-            d = "transcoding",
-            u = "failed",
-            m = "recorded",
-            p = [m, "recording"],
-            h = [d, c, u],
-            f = "FORMAT_NOT_SUPPORTED",
-            g = "BAD_ASSET",
-            v = "INTERNAL_ERROR",
-            b = {
+        }(r || (r = {}));
+        var s, l, c = "uploading",
+            d = "pending_transcode",
+            u = "transcoding",
+            m = "failed",
+            p = "recorded",
+            h = [p, "recording"],
+            f = [u, d, m],
+            g = "FORMAT_NOT_SUPPORTED",
+            v = "BAD_ASSET",
+            b = "INTERNAL_ERROR",
+            k = {
                 VIDEO_PREMIERE_STATUS_UNSCHEDULED: "unscheduled",
                 VIDEO_PREMIERE_STATUS_SCHEDULED: "scheduled",
                 VIDEO_PREMIERE_STATUS_STARTED: "started",
@@ -1259,10 +1264,10 @@ webpackJsonp([37, 82], {
             };
         ! function(e) {
             e.Youtube = "youtube"
-        }(o || (o = {})),
+        }(s || (s = {})),
         function(e) {
             e.None = "NONE", e.Expiring = "EXPIRING"
-        }(s || (s = {}))
+        }(l || (l = {}))
     },
     "3g9B": function(e, t, n) {
         var i = n("xA5w");
@@ -11317,7 +11322,7 @@ webpackJsonp([37, 82], {
                 reason: e.reason
             }, "ChatLine")) : i.createElement("span", {
                 className: "chat-line__moderation--ban"
-            }, Object(r.d)("{userLogin}  is now banned from this room.", {
+            }, Object(r.d)("{userLogin} is now banned from this channel.", {
                 userLogin: e.userLogin
             }, "ChatLine"));
             if (e.reason && e.duration) {
@@ -11398,10 +11403,10 @@ webpackJsonp([37, 82], {
             var t;
             if (e.length > 0) {
                 var n = e.join(", ");
-                t = Object(r.d)("The moderators of this room are: {moderatorList}", {
+                t = Object(r.d)("The moderators of this channel are: {moderatorList}", {
                     moderatorList: n
                 }, "ChatLine")
-            } else t = Object(r.d)("There are no moderators of this room.", "ChatLine");
+            } else t = Object(r.d)("There are no moderators of this channel.", "ChatLine");
             return i.createElement("span", null, t)
         }, t.i = function(e) {
             if (e.enabled) {
@@ -20554,4 +20559,4 @@ webpackJsonp([37, 82], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.video-watch-64c7f0ae96a0a7148ea9d1e7f47f2801.js.map
+//# sourceMappingURL=pages.video-watch-327a220a9138e6f5f6ed2bded2f0a657.js.map

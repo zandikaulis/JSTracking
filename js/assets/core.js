@@ -7396,7 +7396,7 @@ webpackJsonp([66], {
                             onClick: this.props.claimCallback,
                             "data-a-target": "prime-claim-button"
                         }, t);
-                    return e.offerType === y.a.EXTERNAL_OFFER ? o.createElement(m.u, {
+                    return e.offerType === y.b.EXTERNAL_OFFER ? o.createElement(m.u, {
                         fullWidth: !0,
                         linkTo: e.offerLinkUri,
                         targetBlank: !0
@@ -7404,7 +7404,7 @@ webpackJsonp([66], {
                         position: m._11.Relative
                     }, n)
                 }, t.prototype.getButtonText = function() {
-                    return this.props.offerType === y.a.CLAIM_CODE ? Object(s.d)("Get Code", "PrimeClaimButton") : this.props.offerType === y.a.EXTERNAL_OFFER ? Object(s.d)("Learn More", "PrimeClaimButton") : Object(s.d)("Claim Offer", "PrimeClaimButton")
+                    return this.props.offerType === y.b.CLAIM_CODE ? Object(s.d)("Get Code", "PrimeClaimButton") : this.props.offerType === y.b.EXTERNAL_OFFER ? Object(s.d)("Learn More", "PrimeClaimButton") : Object(s.d)("Claim Offer", "PrimeClaimButton")
                 }, t = r.__decorate([Object(c.a)(k), Object(p.d)("PrimeClaimButton")], t)
             }(o.Component),
             S = function(e) {
@@ -7499,19 +7499,27 @@ webpackJsonp([66], {
                         externalUri: this.props.externalUri
                     })
                 }, t.prototype.getClaimDescriptionSection = function() {
-                    return this.props.offerType === y.a.EXTERNAL_OFFER ? null : o.createElement(S, {
+                    return this.props.offerType === y.b.EXTERNAL_OFFER ? null : o.createElement(S, {
                         description: this.props.offerDescription
                     })
                 }, t = r.__decorate([Object(c.a)(C), Object(p.d)("PrimeInstructions")], t)
             }(o.Component),
             T = function(e) {
                 function t() {
-                    return null !== e && e.apply(this, arguments) || this
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.getErrorMessage = function() {
+                        switch (t.props.errorType || y.a.UNKNOWN_ERROR) {
+                            case y.a.OFFER_ALREADY_CLAIMED:
+                                return Object(s.d)("Oh no! Unable to claim. Another linked Twitch account may have already claimed this content. Please check accounts and try again.", "PrimeError");
+                            default:
+                                return Object(s.d)("Something has gone wrong. Please try again later.", "PrimeError")
+                        }
+                    }, t
                 }
                 return r.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    var e = this.props.message || Object(s.d)("Something has gone wrong. Please try again later.", "PrimeError");
+                    var e = this.getErrorMessage();
                     return o.createElement(m._27, {
                         background: m.m.Alt2,
                         display: m.P.Flex,
@@ -7672,7 +7680,7 @@ webpackJsonp([66], {
                         }
                     }, this.getCodeOrConfirmation(), this.getPrimeClaimInstructions())
                 }, t.prototype.getCodeOrConfirmation = function() {
-                    return this.props.code && this.props.deliveryMethod === y.a.CLAIM_CODE ? o.createElement(m._4, null, o.createElement(D, {
+                    return this.props.code && this.props.deliveryMethod === y.b.CLAIM_CODE ? o.createElement(m._4, null, o.createElement(D, {
                         initialText: this.props.code,
                         readOnly: !0,
                         textCenter: !0
@@ -7724,7 +7732,7 @@ webpackJsonp([66], {
                     return t.state = {
                         claimed: !1,
                         claiming: !1,
-                        error: !1,
+                        error: "",
                         claimData: ""
                     }, t.renderRedeemUpsellOrClaimSection = function(e) {
                         var n = e.content || {},
@@ -7733,18 +7741,18 @@ webpackJsonp([66], {
                             },
                             r = (t.props.data || {}).currentUser || {};
                         if (t.state.error) {
-                            var a = Object(s.d)("Oh no! Unable to claim. Another linked Twitch account may have already claimed this content. Please check accounts and try again.", "PrimeOffer");
+                            var a = t.getErrorType();
                             return o.createElement(T, {
                                 fontSize: m.T.Size6,
                                 testTarget: "prime-offer-error",
-                                message: a
+                                errorType: a
                             })
                         }
                         if ((t.isCurrentOfferClaimed(e) || t.state.claimed) && r && r.hasPrime) {
-                            var l = t.state.claimData || i.claimData;
+                            var s = t.state.claimData || i.claimData;
                             return o.createElement(P, {
                                 claimInstructions: e.claimInstructions,
-                                code: l,
+                                code: s,
                                 deliveryMethod: e.deliveryMethod
                             })
                         }
@@ -7756,6 +7764,8 @@ webpackJsonp([66], {
                             claimCallback: t.claimOffer,
                             claiming: t.state.claiming
                         })
+                    }, t.getErrorType = function() {
+                        return t.state.error || y.a.UNKNOWN_ERROR
                     }, t.claimOffer = function(e) {
                         e.nativeEvent.stopImmediatePropagation(), t.setState({
                             claiming: !0
@@ -7768,26 +7778,35 @@ webpackJsonp([66], {
                                     offerID: r.id
                                 });
                             t.props.claimPrimeOffer(a).then(function(e) {
-                                var n = ((e.data || {}).claimPrimeOffer || {}).self || {};
-                                n && r && t.setState({
-                                    claimData: n.claimData
-                                }), t.markAsClaimedInLocalStorage(i)
+                                var n = (e.data || {}).claimPrimeOffer || {},
+                                    a = n.self || {},
+                                    o = n.error || {};
+                                if (a && r && t.setState({
+                                        claimData: a.claimData
+                                    }), t.markAsClaimedInLocalStorage(i), o && o.code) {
+                                    var s = y.a[o.code];
+                                    t.setState({
+                                        claiming: !1,
+                                        claimed: !1,
+                                        error: s || y.a.UNKNOWN_ERROR
+                                    })
+                                }
                             }).catch(function() {
                                 t.setState({
                                     claiming: !1,
                                     claimed: !1,
-                                    error: !0
+                                    error: y.a.UNKNOWN_ERROR
                                 })
                             })
                         }
                     }, t.markAsClaimedInLocalStorage = function(e) {
                         var n = t.props.offer,
-                            i = y.b(n.id, e),
-                            r = y.c();
-                        r.push(i), y.f(r), t.setState({
+                            i = y.c(n.id, e),
+                            r = y.d();
+                        r.push(i), y.g(r), t.setState({
                             claiming: !1,
                             claimed: !0,
-                            error: !1
+                            error: ""
                         })
                     }, t
                 }
@@ -7845,8 +7864,8 @@ webpackJsonp([66], {
                         t = this.props.offer;
                     if (!e.loading && !e.error && e.currentUser) {
                         var n = e.currentUser.id,
-                            i = y.b(t.id, n);
-                        return y.c().includes(i)
+                            i = y.c(t.id, n);
+                        return y.d().includes(i)
                     }
                 }, t = r.__decorate([Object(c.a)(L, {
                     name: "data"
@@ -7992,16 +8011,16 @@ webpackJsonp([66], {
                     if (!this.props.offersData || !this.props.offersData.primeOffers) return [];
                     var t = this.props.offersData.primeOffers;
                     if (e) {
-                        var n = Object(y.c)(),
+                        var n = Object(y.d)(),
                             i = t.filter(function(t) {
-                                return !n.includes(Object(y.b)(t.id, e))
-                            }).sort(y.i),
+                                return !n.includes(Object(y.c)(t.id, e))
+                            }).sort(y.j),
                             r = t.filter(function(e) {
                                 return !i.includes(e)
-                            }).sort(y.i);
+                            }).sort(y.j);
                         return i.concat(r)
                     }
-                    return t.slice().sort(y.i)
+                    return t.slice().sort(y.j)
                 }, t.prototype.getUserId = function() {
                     var e = this.props.userData;
                     return e && !e.loading && !e.error && e.currentUser && e.currentUser.id ? e.currentUser.id : ""
@@ -8013,7 +8032,7 @@ webpackJsonp([66], {
                     options: function() {
                         return {
                             variables: {
-                                dateOverride: Object(y.d)()
+                                dateOverride: Object(y.e)()
                             }
                         }
                     },
@@ -8063,7 +8082,7 @@ webpackJsonp([66], {
                         var n = e.offersData;
                         if (n && !n.loading && !n.error) {
                             var i = n.primeOffers || [],
-                                r = y.e();
+                                r = y.f();
                             t.setState({
                                 numOfUnseenOffers: i.filter(function(e) {
                                     return !(r.includes(e.id) || t.offerIsClaimed(e))
@@ -8078,7 +8097,7 @@ webpackJsonp([66], {
                             var n = (e.primeOffers || []).map(function(e) {
                                 return "" + e.id
                             });
-                            y.g(n)
+                            y.h(n)
                         }
                     }, t.renderOfferList = function() {
                         var e = t.props.offersData,
@@ -8146,7 +8165,7 @@ webpackJsonp([66], {
                     options: function() {
                         return {
                             variables: {
-                                dateOverride: Object(y.d)()
+                                dateOverride: Object(y.e)()
                             }
                         }
                     }
@@ -8171,7 +8190,7 @@ webpackJsonp([66], {
                 }, t.prototype.render = function() {
                     var e = this.props.data.currentUser && this.props.data.currentUser.hasPrime,
                         t = this.props.data.requestInfo && this.props.data.requestInfo.countryCode;
-                    if (!Object(y.h)(e, t)) return null;
+                    if (!Object(y.i)(e, t)) return null;
                     if (this.props.data.loading) return null;
                     var n = Object(w.d)(w.a, ""),
                         i = Object(s.d)("Twitch Prime", "BlueBar"),
@@ -8275,7 +8294,7 @@ webpackJsonp([66], {
                         return {
                             variables: {
                                 stringIds: ["twitch.prime.bluebar.left1", "twitch.prime.bluebar.center1", "twitch.prime.bluebar.right1"],
-                                dateOverride: Object(y.d)()
+                                dateOverride: Object(y.e)()
                             }
                         }
                     }
@@ -8288,7 +8307,7 @@ webpackJsonp([66], {
         }), n.d(t, "b", function() {
             return T
         }), n.d(t, "d", function() {
-            return y.d
+            return y.e
         })
     },
     "8RKZ": function(e, t, n) {
@@ -24189,24 +24208,26 @@ webpackJsonp([66], {
     },
     R0Kh: function(e, t, n) {
         "use strict";
-        n.d(t, "a", function() {
+        n.d(t, "b", function() {
             return o
-        }), n.d(t, "b", function() {
+        }), n.d(t, "a", function() {
             return s
         }), n.d(t, "c", function() {
             return l
-        }), n.d(t, "f", function() {
-            return c
-        }), n.d(t, "e", function() {
-            return d
-        }), n.d(t, "g", function() {
-            return u
-        }), n.d(t, "i", function() {
-            return p
-        }), n.d(t, "h", function() {
-            return h
         }), n.d(t, "d", function() {
+            return c
+        }), n.d(t, "g", function() {
+            return d
+        }), n.d(t, "f", function() {
+            return u
+        }), n.d(t, "h", function() {
+            return p
+        }), n.d(t, "j", function() {
+            return m
+        }), n.d(t, "i", function() {
             return g
+        }), n.d(t, "e", function() {
+            return f
         });
         var i = n("OAwv"),
             r = (n.n(i), n("6sO2")),
@@ -24216,31 +24237,35 @@ webpackJsonp([66], {
                 CLAIM_CODE: "CLAIM_CODE",
                 EXTERNAL_OFFER: "EXTERNAL_OFFER"
             },
-            s = function(e, t) {
+            s = {
+                UNKNOWN_ERROR: "UNKNOWN_ERROR",
+                OFFER_ALREADY_CLAIMED: "OFFER_ALREADY_CLAIMED"
+            },
+            l = function(e, t) {
                 return e + "-" + t
             },
-            l = function() {
-                return m("claimedOffers")
+            c = function() {
+                return h("claimedOffers")
             },
-            c = function(e) {
+            d = function(e) {
                 r.l.set("claimedOffers", e)
             },
-            d = function() {
-                return m("seenOffers")
+            u = function() {
+                return h("seenOffers")
             },
-            u = function(e) {
+            p = function(e) {
                 r.l.set("seenOffers", e)
             },
-            p = function(e, t) {
+            m = function(e, t) {
                 return (e && (e.priority || 0 === e.priority) ? e.priority : 99999) - (t && (t.priority || 0 === t.priority) ? t.priority : 99999)
             },
-            m = function(e) {
+            h = function(e) {
                 return r.l.get(e, [])
             },
-            h = function(e, t) {
+            g = function(e, t) {
                 return void 0 !== e && void 0 !== t && (!e && Object(a.a)(t))
             },
-            g = function() {
+            f = function() {
                 var e = location.search,
                     t = i.parse(e);
                 return t && t.dateOverride || void 0
@@ -35498,6 +35523,26 @@ webpackJsonp([66], {
                                         directives: []
                                     }]
                                 }
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "error"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "code"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }]
+                                }
                             }]
                         }
                     }]
@@ -35505,11 +35550,11 @@ webpackJsonp([66], {
             }],
             loc: {
                 start: 0,
-                end: 128
+                end: 143
             }
         };
         n.loc.source = {
-            body: "mutation claimPrimeOffer($input: ClaimPrimeOfferInput!) {\nclaimPrimeOffer(input: $input) {\nself {\nclaimData\nhasEntitlement\n}\n}\n}",
+            body: "mutation claimPrimeOffer($input: ClaimPrimeOfferInput!) {\nclaimPrimeOffer(input: $input) {\nself {\nclaimData\nhasEntitlement\n}\nerror {\ncode\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -38415,7 +38460,7 @@ webpackJsonp([66], {
                 return i
             }),
             function(e) {
-                e.AbandonedSearch = "abandoned_search", e.AchievementSpotlightImpression = "achievement_spotlight_impression", e.AchievementQuestBannerClick = "achievement_quest_banner_click", e.APIQuery = "benchmark_api_query", e.AppBooted = "benchmark_app_booted", e.AutoHostChannelUpdate = "autohost_channel_update", e.AutohostChatImpression = "autohost_chat_impression", e.AutohostChatYes = "autohost_chat_yes", e.AutohostChatDismiss = "autohost_chat_dismiss", e.AutohostChatSettings = "autohost_chat_settings", e.BeganSearch = "began_search", e.BitsAdsAvailability = "bits_ads_availability", e.BitsAdsImpression = "bits_ads_impression", e.BitsAdsRequest = "bits_ads_request", e.BitsCardInteraction = "bits_card_interaction", e.BrowseForYou = "browse_for_you", e.BrowserFingerprint = "browser_fingerprint", e.BrowserPushNotificationPrompt = "browser_notification_prompt", e.BrowserPushNotificationDisable = "browser_notification_disable", e.BTTV = "bttv_check", e.Chat = "chat", e.ChatBadgeClick = "chat_badge_click", e.ChatMentionUsed = "chat_mention_used", e.ChatRoomJoined = "chat_room_join", e.ChatRoomWatched = "chatroom-watched", e.ChatSettingsChanged = "chat_client_setting_changed", e.ChatSettingsOpened = "chat_client_settings_open", e.ChatSuggestion = "chat-suggestions", e.ChatSuggestionComplete = "chat-completed-suggestion", e.ChommentCreated = "chomment_create", e.ChommentDeleted = "chomment_delete", e.ChommentUIAction = "chomment_ui_action", e.ClipEdit = "clip_edit", e.ClipChampHelpClick = "clip_champ_help_click", e.CollectionCreate = "collection_create", e.CollectionAddItem = "collection_add_item", e.CollectionRemoveItem = "collection_remove_item", e.CommunityEdit = "community_client_edit", e.CommunityFollow = "community_client_follow", e.CommunityModeration = "community_client_channel_moderation", e.CommunityReport = "community_client_report", e.CommunityUnfollow = "community_client_unfollow", e.CompleteTransition = "benchmark_complete_transition", e.CompletedSearch = "completed_search", e.ComponentInitializing = "benchmark_component_initializing", e.ComponentInteractive = "benchmark_component_interactive", e.CustomEvent = "benchmark_custom_event", e.CrateNotificationAction = "crate_notification_action", e.DeprioritizeVodcastToggle = "autohost_deprioritize_vodcast_toggle", e.EventFollowing = "oracle_user_notification_client", e.EventShare = "oracle_event_share", e.ExperimentBranch = "experiment_branch", e.FeaturedEventPresentation = "event_suggestions_shown", e.FeatureEducationUpdateBlock = "feature_education_update_block", e.FeatureEducationUpdateBlockImpression = "feature_education_update_block_impression", e.FeatureEducationTour = "feature_education_tour", e.FeatureEducationTourImpression = "feature_education_tour_impression", e.FeedCardImpression = "feed_client_card_impression", e.FeedCardEmbedImpression = "feed_client_card_embed_impression", e.FeedCardEmbedPlay = "feed_client_card_embed_play", e.FeedPost = "feed_client_post", e.FeedReaction = "feed_client_reaction", e.FetchStart = "benchmark_fetch_start", e.FFZ = "ffz_check", e.Follow = "follow", e.FrontPageCarouselClick = "frontpage_carousel_click", e.FrontPageCarouselDisplay = "carousel_display", e.FrontPageCarouselPromotionCardClick = "promotion_card_click", e.FrontPageCarouselPromotionCardView = "promotion_card_view", e.FrontPageCarouselNavButtonClick = "carousel_nav_button_click", e.FuelBuyButton = "fuel_buy_button", e.FuelGetGameClick = "fuel_get_game_click", e.FuelOfferView = "offer_view", e.FuelOfferInteraction = "offer_interaction", e.FuelSocialShare = "fuel_social_share", e.GameFollow = "follow-game", e.GameUnfollow = "unfollow-game", e.HearthstoneFilterAction = "hearthstone_filter_action", e.ItemSectionClick = "item_section_click", e.ItemSectionLoad = "item_section_load", e.OnboardingEvent = "onboarding_web", e.OnboardingSurfAction = "onboarding_surf_action", e.NetworkRequest = "network_request", e.NewChatterTokenStatus = "nca_client_token_status", e.NewChatterOnboardingInteraction = "nca_onboarding_chatbox_interaction", e.NotificationCenterInteraction = "notification_center_interaction", e.NotificationImpression = "notification_impression", e.NotificationInteraction = "notification_interaction", e.Pageview = "pageview", e.PartnerAffiliateSettings = "partner_affiliate_settings", e.PassportHide = "auth_exit", e.PassportShow = "auth_show", e.PaymentFormInteraction = "payment_form_interaction", e.PlayerRecShow = "player_rec_show", e.PlayerShowFeatured = "player_show_featured", e.PlayerRecSelect = "player_rec_select", e.PlayerRecAutoplay = "player_rec_autoplay", e.PresenceClick = "friend_presence_click", e.RaidPromptJoin = "raid_prompt_join", e.RaidPromptLeave = "raid_prompt_leave", e.RaidPromptImpression = "raid_prompt_impression", e.SearchQuery = "search_query", e.ShareItem = "share_item", e.SideNavChannelClick = "sidenav_channel_click", e.SideNavDetails = "sidenav_details", e.SideNavLoadMore = "sidenav_load_more", e.SimilarHostToggle = "autohost_similar_channels_toggle", e.SiteLayoutMod = "site_layout_mod", e.SiteToggle = "twilight_site_toggle", e.StreamSummarySpotlightImpression = "summary_spotlight_impression", e.StreamSummarySpotlightClick = "summary_spotlight_click", e.StoreMerchClick = "store_item_select", e.StoreMerchView = "store_item_view", e.Subscription = "subscribe_button", e.SubsLandingStreamerClick = "subs_landing_streamer_click", e.TeamHostToggle = "autohost_team_toggle", e.ThemeChange = "dark_mode_toggle", e.Unfollow = "unfollow", e.VerifyEmailBar = "verify_email_bar", e.VideoChatSettingChanged = "video_chat_setting_changed", e.VideoShare = "video_share", e.VODDownloadClick = "vod_download_click", e.VODExportClick = "vod_export_click", e.WhisperAllThreadsMod = "chat_convo_mod_global", e.WhisperIgnoreUser = "chat_ignore_client", e.WhisperReceived = "whisper_received", e.WhisperSearchClick = "search_click", e.WhisperSent = "whisper", e.WhisperThreadCreate = "chat_convo_create", e.WhisperThreadMod = "chat_convo_mod"
+                e.AbandonedSearch = "abandoned_search", e.AchievementSpotlightImpression = "achievement_spotlight_impression", e.AchievementQuestBannerClick = "achievement_quest_banner_click", e.APIQuery = "benchmark_api_query", e.AppBooted = "benchmark_app_booted", e.AutoHostChannelUpdate = "autohost_channel_update", e.AutohostChatImpression = "autohost_chat_impression", e.AutohostChatYes = "autohost_chat_yes", e.AutohostChatDismiss = "autohost_chat_dismiss", e.AutohostChatSettings = "autohost_chat_settings", e.BeganSearch = "began_search", e.BitsAdsAvailability = "bits_ads_availability", e.BitsAdsImpression = "bits_ads_impression", e.BitsAdsRequest = "bits_ads_request", e.BitsCardInteraction = "bits_card_interaction", e.BrowseForYou = "browse_for_you", e.BrowserFingerprint = "browser_fingerprint", e.BrowserPushNotificationPrompt = "browser_notification_prompt", e.BrowserPushNotificationDisable = "browser_notification_disable", e.BTTV = "bttv_check", e.Chat = "chat", e.ChatBadgeClick = "chat_badge_click", e.ChatMentionUsed = "chat_mention_used", e.ChatRoomJoined = "chat_room_join", e.ChatRoomWatched = "chatroom-watched", e.ChatSettingsChanged = "chat_client_setting_changed", e.ChatSettingsOpened = "chat_client_settings_open", e.ChatSuggestion = "chat-suggestions", e.ChatSuggestionComplete = "chat-completed-suggestion", e.ChommentCreated = "chomment_create", e.ChommentDeleted = "chomment_delete", e.ChommentUIAction = "chomment_ui_action", e.ClipEdit = "clip_edit", e.ClipChampHelpClick = "clip_champ_help_click", e.CollectionCreate = "collection_create", e.CollectionAddItem = "collection_add_item", e.CollectionRemoveItem = "collection_remove_item", e.CommunityEdit = "community_client_edit", e.CommunityFollow = "community_client_follow", e.CommunityModeration = "community_client_channel_moderation", e.CommunityReport = "community_client_report", e.CommunityUnfollow = "community_client_unfollow", e.CompleteTransition = "benchmark_complete_transition", e.CompletedSearch = "completed_search", e.ComponentInitializing = "benchmark_component_initializing", e.ComponentInteractive = "benchmark_component_interactive", e.CustomEvent = "benchmark_custom_event", e.CrateNotificationAction = "crate_notification_action", e.DeprioritizeVodcastToggle = "autohost_deprioritize_vodcast_toggle", e.EventFollowing = "oracle_user_notification_client", e.EventShare = "oracle_event_share", e.ExperimentBranch = "experiment_branch", e.FeaturedEventPresentation = "event_suggestions_shown", e.FeatureEducationUpdateBlock = "feature_education_update_block", e.FeatureEducationUpdateBlockImpression = "feature_education_update_block_impression", e.FeatureEducationTour = "feature_education_tour", e.FeatureEducationTourImpression = "feature_education_tour_impression", e.FeedCardImpression = "feed_client_card_impression", e.FeedCardEmbedImpression = "feed_client_card_embed_impression", e.FeedCardEmbedPlay = "feed_client_card_embed_play", e.FeedPost = "feed_client_post", e.FeedReaction = "feed_client_reaction", e.FetchStart = "benchmark_fetch_start", e.FFZ = "ffz_check", e.Follow = "follow", e.FrontPageCarouselClick = "frontpage_carousel_click", e.FrontPageCarouselDisplay = "carousel_display", e.FrontPageCarouselPromotionCardClick = "promotion_card_click", e.FrontPageCarouselPromotionCardView = "promotion_card_view", e.FrontPageCarouselNavButtonClick = "carousel_nav_button_click", e.FuelBuyButton = "fuel_buy_button", e.FuelGetGameClick = "fuel_get_game_click", e.FuelOfferView = "offer_view", e.FuelOfferInteraction = "offer_interaction", e.FuelSocialShare = "fuel_social_share", e.GameFollow = "follow-game", e.GameUnfollow = "unfollow-game", e.HearthstoneFilterAction = "hearthstone_filter_action", e.ItemSectionClick = "item_section_click", e.ItemSectionLoad = "item_section_load", e.OnboardingEvent = "onboarding_web", e.OnboardingSurfAction = "onboarding_surf_action", e.OverwatchFilterAction = "overwatch_filter_action", e.NetworkRequest = "network_request", e.NewChatterTokenStatus = "nca_client_token_status", e.NewChatterOnboardingInteraction = "nca_onboarding_chatbox_interaction", e.NotificationCenterInteraction = "notification_center_interaction", e.NotificationImpression = "notification_impression", e.NotificationInteraction = "notification_interaction", e.Pageview = "pageview", e.PartnerAffiliateSettings = "partner_affiliate_settings", e.PassportHide = "auth_exit", e.PassportShow = "auth_show", e.PaymentFormInteraction = "payment_form_interaction", e.PlayerRecShow = "player_rec_show", e.PlayerShowFeatured = "player_show_featured", e.PlayerRecSelect = "player_rec_select", e.PlayerRecAutoplay = "player_rec_autoplay", e.PresenceClick = "friend_presence_click", e.RaidPromptJoin = "raid_prompt_join", e.RaidPromptLeave = "raid_prompt_leave", e.RaidPromptImpression = "raid_prompt_impression", e.SearchQuery = "search_query", e.ShareItem = "share_item", e.SideNavChannelClick = "sidenav_channel_click", e.SideNavDetails = "sidenav_details", e.SideNavLoadMore = "sidenav_load_more", e.SimilarHostToggle = "autohost_similar_channels_toggle", e.SiteLayoutMod = "site_layout_mod", e.SiteToggle = "twilight_site_toggle", e.StreamSummarySpotlightImpression = "summary_spotlight_impression", e.StreamSummarySpotlightClick = "summary_spotlight_click", e.StoreMerchClick = "store_item_select", e.StoreMerchView = "store_item_view", e.Subscription = "subscribe_button", e.SubsLandingStreamerClick = "subs_landing_streamer_click", e.TeamHostToggle = "autohost_team_toggle", e.ThemeChange = "dark_mode_toggle", e.Unfollow = "unfollow", e.VerifyEmailBar = "verify_email_bar", e.VideoChatSettingChanged = "video_chat_setting_changed", e.VideoShare = "video_share", e.VODDownloadClick = "vod_download_click", e.VODExportClick = "vod_export_click", e.WhisperAllThreadsMod = "chat_convo_mod_global", e.WhisperIgnoreUser = "chat_ignore_client", e.WhisperReceived = "whisper_received", e.WhisperSearchClick = "search_click", e.WhisperSent = "whisper", e.WhisperThreadCreate = "chat_convo_create", e.WhisperThreadMod = "chat_convo_mod"
             }(i || (i = {}))
     },
     kIPx: function(e, t) {},
@@ -43055,4 +43100,4 @@ webpackJsonp([66], {
             }(r.Component))
     }
 }, [5]);
-//# sourceMappingURL=core-db63fc0f4751e151f2ea6ece463b65f1.js.map
+//# sourceMappingURL=core-cbe05ec24227566756e83382c6780788.js.map

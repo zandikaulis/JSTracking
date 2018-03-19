@@ -6955,7 +6955,7 @@ webpackJsonp([39], {
                             onClick: this.props.claimCallback,
                             "data-a-target": "prime-claim-button"
                         }, t);
-                    return e.offerType === k.a.EXTERNAL_OFFER ? s.createElement(m.u, {
+                    return e.offerType === k.b.EXTERNAL_OFFER ? s.createElement(m.u, {
                         fullWidth: !0,
                         linkTo: e.offerLinkUri,
                         targetBlank: !0
@@ -6963,7 +6963,7 @@ webpackJsonp([39], {
                         position: m._11.Relative
                     }, n)
                 }, t.prototype.getButtonText = function() {
-                    return this.props.offerType === k.a.CLAIM_CODE ? Object(o.d)("Get Code", "PrimeClaimButton") : this.props.offerType === k.a.EXTERNAL_OFFER ? Object(o.d)("Learn More", "PrimeClaimButton") : Object(o.d)("Claim Offer", "PrimeClaimButton")
+                    return this.props.offerType === k.b.CLAIM_CODE ? Object(o.d)("Get Code", "PrimeClaimButton") : this.props.offerType === k.b.EXTERNAL_OFFER ? Object(o.d)("Learn More", "PrimeClaimButton") : Object(o.d)("Claim Offer", "PrimeClaimButton")
                 }, t = r.__decorate([Object(c.a)(y), Object(p.d)("PrimeClaimButton")], t)
             }(s.Component),
             S = function(e) {
@@ -7058,19 +7058,27 @@ webpackJsonp([39], {
                         externalUri: this.props.externalUri
                     })
                 }, t.prototype.getClaimDescriptionSection = function() {
-                    return this.props.offerType === k.a.EXTERNAL_OFFER ? null : s.createElement(S, {
+                    return this.props.offerType === k.b.EXTERNAL_OFFER ? null : s.createElement(S, {
                         description: this.props.offerDescription
                     })
                 }, t = r.__decorate([Object(c.a)(C), Object(p.d)("PrimeInstructions")], t)
             }(s.Component),
             O = function(e) {
                 function t() {
-                    return null !== e && e.apply(this, arguments) || this
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.getErrorMessage = function() {
+                        switch (t.props.errorType || k.a.UNKNOWN_ERROR) {
+                            case k.a.OFFER_ALREADY_CLAIMED:
+                                return Object(o.d)("Oh no! Unable to claim. Another linked Twitch account may have already claimed this content. Please check accounts and try again.", "PrimeError");
+                            default:
+                                return Object(o.d)("Something has gone wrong. Please try again later.", "PrimeError")
+                        }
+                    }, t
                 }
                 return r.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
-                    var e = this.props.message || Object(o.d)("Something has gone wrong. Please try again later.", "PrimeError");
+                    var e = this.getErrorMessage();
                     return s.createElement(m._27, {
                         background: m.m.Alt2,
                         display: m.P.Flex,
@@ -7231,7 +7239,7 @@ webpackJsonp([39], {
                         }
                     }, this.getCodeOrConfirmation(), this.getPrimeClaimInstructions())
                 }, t.prototype.getCodeOrConfirmation = function() {
-                    return this.props.code && this.props.deliveryMethod === k.a.CLAIM_CODE ? s.createElement(m._4, null, s.createElement(D, {
+                    return this.props.code && this.props.deliveryMethod === k.b.CLAIM_CODE ? s.createElement(m._4, null, s.createElement(D, {
                         initialText: this.props.code,
                         readOnly: !0,
                         textCenter: !0
@@ -7283,7 +7291,7 @@ webpackJsonp([39], {
                     return t.state = {
                         claimed: !1,
                         claiming: !1,
-                        error: !1,
+                        error: "",
                         claimData: ""
                     }, t.renderRedeemUpsellOrClaimSection = function(e) {
                         var n = e.content || {},
@@ -7292,18 +7300,18 @@ webpackJsonp([39], {
                             },
                             r = (t.props.data || {}).currentUser || {};
                         if (t.state.error) {
-                            var a = Object(o.d)("Oh no! Unable to claim. Another linked Twitch account may have already claimed this content. Please check accounts and try again.", "PrimeOffer");
+                            var a = t.getErrorType();
                             return s.createElement(O, {
                                 fontSize: m.T.Size6,
                                 testTarget: "prime-offer-error",
-                                message: a
+                                errorType: a
                             })
                         }
                         if ((t.isCurrentOfferClaimed(e) || t.state.claimed) && r && r.hasPrime) {
-                            var l = t.state.claimData || i.claimData;
+                            var o = t.state.claimData || i.claimData;
                             return s.createElement(I, {
                                 claimInstructions: e.claimInstructions,
-                                code: l,
+                                code: o,
                                 deliveryMethod: e.deliveryMethod
                             })
                         }
@@ -7315,6 +7323,8 @@ webpackJsonp([39], {
                             claimCallback: t.claimOffer,
                             claiming: t.state.claiming
                         })
+                    }, t.getErrorType = function() {
+                        return t.state.error || k.a.UNKNOWN_ERROR
                     }, t.claimOffer = function(e) {
                         e.nativeEvent.stopImmediatePropagation(), t.setState({
                             claiming: !0
@@ -7327,26 +7337,35 @@ webpackJsonp([39], {
                                     offerID: r.id
                                 });
                             t.props.claimPrimeOffer(a).then(function(e) {
-                                var n = ((e.data || {}).claimPrimeOffer || {}).self || {};
-                                n && r && t.setState({
-                                    claimData: n.claimData
-                                }), t.markAsClaimedInLocalStorage(i)
+                                var n = (e.data || {}).claimPrimeOffer || {},
+                                    a = n.self || {},
+                                    s = n.error || {};
+                                if (a && r && t.setState({
+                                        claimData: a.claimData
+                                    }), t.markAsClaimedInLocalStorage(i), s && s.code) {
+                                    var o = k.a[s.code];
+                                    t.setState({
+                                        claiming: !1,
+                                        claimed: !1,
+                                        error: o || k.a.UNKNOWN_ERROR
+                                    })
+                                }
                             }).catch(function() {
                                 t.setState({
                                     claiming: !1,
                                     claimed: !1,
-                                    error: !0
+                                    error: k.a.UNKNOWN_ERROR
                                 })
                             })
                         }
                     }, t.markAsClaimedInLocalStorage = function(e) {
                         var n = t.props.offer,
-                            i = k.b(n.id, e),
-                            r = k.c();
-                        r.push(i), k.f(r), t.setState({
+                            i = k.c(n.id, e),
+                            r = k.d();
+                        r.push(i), k.g(r), t.setState({
                             claiming: !1,
                             claimed: !0,
-                            error: !1
+                            error: ""
                         })
                     }, t
                 }
@@ -7404,8 +7423,8 @@ webpackJsonp([39], {
                         t = this.props.offer;
                     if (!e.loading && !e.error && e.currentUser) {
                         var n = e.currentUser.id,
-                            i = k.b(t.id, n);
-                        return k.c().includes(i)
+                            i = k.c(t.id, n);
+                        return k.d().includes(i)
                     }
                 }, t = r.__decorate([Object(c.a)(F, {
                     name: "data"
@@ -7551,16 +7570,16 @@ webpackJsonp([39], {
                     if (!this.props.offersData || !this.props.offersData.primeOffers) return [];
                     var t = this.props.offersData.primeOffers;
                     if (e) {
-                        var n = Object(k.c)(),
+                        var n = Object(k.d)(),
                             i = t.filter(function(t) {
-                                return !n.includes(Object(k.b)(t.id, e))
-                            }).sort(k.i),
+                                return !n.includes(Object(k.c)(t.id, e))
+                            }).sort(k.j),
                             r = t.filter(function(e) {
                                 return !i.includes(e)
-                            }).sort(k.i);
+                            }).sort(k.j);
                         return i.concat(r)
                     }
-                    return t.slice().sort(k.i)
+                    return t.slice().sort(k.j)
                 }, t.prototype.getUserId = function() {
                     var e = this.props.userData;
                     return e && !e.loading && !e.error && e.currentUser && e.currentUser.id ? e.currentUser.id : ""
@@ -7572,7 +7591,7 @@ webpackJsonp([39], {
                     options: function() {
                         return {
                             variables: {
-                                dateOverride: Object(k.d)()
+                                dateOverride: Object(k.e)()
                             }
                         }
                     },
@@ -7622,7 +7641,7 @@ webpackJsonp([39], {
                         var n = e.offersData;
                         if (n && !n.loading && !n.error) {
                             var i = n.primeOffers || [],
-                                r = k.e();
+                                r = k.f();
                             t.setState({
                                 numOfUnseenOffers: i.filter(function(e) {
                                     return !(r.includes(e.id) || t.offerIsClaimed(e))
@@ -7637,7 +7656,7 @@ webpackJsonp([39], {
                             var n = (e.primeOffers || []).map(function(e) {
                                 return "" + e.id
                             });
-                            k.g(n)
+                            k.h(n)
                         }
                     }, t.renderOfferList = function() {
                         var e = t.props.offersData,
@@ -7705,7 +7724,7 @@ webpackJsonp([39], {
                     options: function() {
                         return {
                             variables: {
-                                dateOverride: Object(k.d)()
+                                dateOverride: Object(k.e)()
                             }
                         }
                     }
@@ -7730,7 +7749,7 @@ webpackJsonp([39], {
                 }, t.prototype.render = function() {
                     var e = this.props.data.currentUser && this.props.data.currentUser.hasPrime,
                         t = this.props.data.requestInfo && this.props.data.requestInfo.countryCode;
-                    if (!Object(k.h)(e, t)) return null;
+                    if (!Object(k.i)(e, t)) return null;
                     if (this.props.data.loading) return null;
                     var n = Object(E.d)(E.a, ""),
                         i = Object(o.d)("Twitch Prime", "BlueBar"),
@@ -7834,7 +7853,7 @@ webpackJsonp([39], {
                         return {
                             variables: {
                                 stringIds: ["twitch.prime.bluebar.left1", "twitch.prime.bluebar.center1", "twitch.prime.bluebar.right1"],
-                                dateOverride: Object(k.d)()
+                                dateOverride: Object(k.e)()
                             }
                         }
                     }
@@ -7847,7 +7866,7 @@ webpackJsonp([39], {
         }), n.d(t, "b", function() {
             return O
         }), n.d(t, "d", function() {
-            return k.d
+            return k.e
         })
     },
     "8RKZ": function(e, t, n) {
@@ -17121,24 +17140,26 @@ webpackJsonp([39], {
     },
     R0Kh: function(e, t, n) {
         "use strict";
-        n.d(t, "a", function() {
+        n.d(t, "b", function() {
             return s
-        }), n.d(t, "b", function() {
+        }), n.d(t, "a", function() {
             return o
         }), n.d(t, "c", function() {
             return l
-        }), n.d(t, "f", function() {
-            return c
-        }), n.d(t, "e", function() {
-            return d
-        }), n.d(t, "g", function() {
-            return u
-        }), n.d(t, "i", function() {
-            return p
-        }), n.d(t, "h", function() {
-            return h
         }), n.d(t, "d", function() {
+            return c
+        }), n.d(t, "g", function() {
+            return d
+        }), n.d(t, "f", function() {
+            return u
+        }), n.d(t, "h", function() {
+            return p
+        }), n.d(t, "j", function() {
+            return m
+        }), n.d(t, "i", function() {
             return f
+        }), n.d(t, "e", function() {
+            return g
         });
         var i = n("OAwv"),
             r = (n.n(i), n("6sO2")),
@@ -17148,31 +17169,35 @@ webpackJsonp([39], {
                 CLAIM_CODE: "CLAIM_CODE",
                 EXTERNAL_OFFER: "EXTERNAL_OFFER"
             },
-            o = function(e, t) {
+            o = {
+                UNKNOWN_ERROR: "UNKNOWN_ERROR",
+                OFFER_ALREADY_CLAIMED: "OFFER_ALREADY_CLAIMED"
+            },
+            l = function(e, t) {
                 return e + "-" + t
             },
-            l = function() {
-                return m("claimedOffers")
+            c = function() {
+                return h("claimedOffers")
             },
-            c = function(e) {
+            d = function(e) {
                 r.l.set("claimedOffers", e)
             },
-            d = function() {
-                return m("seenOffers")
+            u = function() {
+                return h("seenOffers")
             },
-            u = function(e) {
+            p = function(e) {
                 r.l.set("seenOffers", e)
             },
-            p = function(e, t) {
+            m = function(e, t) {
                 return (e && (e.priority || 0 === e.priority) ? e.priority : 99999) - (t && (t.priority || 0 === t.priority) ? t.priority : 99999)
             },
-            m = function(e) {
+            h = function(e) {
                 return r.l.get(e, [])
             },
-            h = function(e, t) {
+            f = function(e, t) {
                 return void 0 !== e && void 0 !== t && (!e && Object(a.a)(t))
             },
-            f = function() {
+            g = function() {
                 var e = location.search,
                     t = i.parse(e);
                 return t && t.dateOverride || void 0
@@ -27228,6 +27253,26 @@ webpackJsonp([39], {
                                         directives: []
                                     }]
                                 }
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "error"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "code"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }]
+                                }
                             }]
                         }
                     }]
@@ -27235,11 +27280,11 @@ webpackJsonp([39], {
             }],
             loc: {
                 start: 0,
-                end: 128
+                end: 143
             }
         };
         n.loc.source = {
-            body: "mutation claimPrimeOffer($input: ClaimPrimeOfferInput!) {\nclaimPrimeOffer(input: $input) {\nself {\nclaimData\nhasEntitlement\n}\n}\n}",
+            body: "mutation claimPrimeOffer($input: ClaimPrimeOfferInput!) {\nclaimPrimeOffer(input: $input) {\nself {\nclaimData\nhasEntitlement\n}\nerror {\ncode\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -32877,4 +32922,4 @@ webpackJsonp([39], {
             }(r.Component))
     }
 });
-//# sourceMappingURL=pages.subs-d590d470e7bc70a87264cbf942a88a3e.js.map
+//# sourceMappingURL=pages.subs-ed3e51ecbeebfb3835b189cf7a3d8c40.js.map
