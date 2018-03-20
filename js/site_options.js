@@ -4996,6 +4996,18 @@ window.SiteOptions = {
                 "value": "yes_100"
             }]
         },
+        "e875da19-becb-450a-84f9-6267b4e529bd": {
+            "name": "tst",
+            "v": 3301,
+            "t": 1,
+            "groups": [{
+                "weight": 1,
+                "value": "a"
+            }, {
+                "weight": 2,
+                "value": "b"
+            }]
+        },
         "e8c5cf6c-5259-446b-aef1-4e33747b3b93": {
             "name": "Game Changes",
             "v": 842,
@@ -5055,13 +5067,13 @@ window.SiteOptions = {
         },
         "ec70bd08-dbc8-4f48-9f60-d035fec3eb20": {
             "name": "CVP Player Core 2.0 Mediaplayer Experiment Aug 2017",
-            "v": 3296,
+            "v": 3300,
             "t": 1,
             "groups": [{
-                "weight": 50,
+                "weight": 5,
                 "value": "2.2.404"
             }, {
-                "weight": 50,
+                "weight": 95,
                 "value": "2.3.3"
             }]
         },

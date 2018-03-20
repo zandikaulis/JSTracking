@@ -7732,21 +7732,22 @@ webpackJsonp([36], {
             }) || e
         }
         var v, b = a("6w0d"),
-            L = a("b9IH");
+            L = a("yiqh"),
+            D = a("b9IH");
 
-        function D(e, t, a) {
+        function k(e, t, a) {
             return e.sort(function(e, n) {
                 for (var r = 0; r < t.length; r++) {
                     var i = t[r],
                         o = a[r] || v.Ascending,
-                        s = k(i(e), i(n)) * o;
+                        s = Y(i(e), i(n)) * o;
                     if (0 !== s) return s
                 }
                 return 0
             })
         }
 
-        function k(e, t) {
+        function Y(e, t) {
             var a = null != e,
                 n = null != t;
             return a && n ? e > t ? 1 : e < t ? -1 : 0 : a ? -1 : n ? 1 : 0
@@ -7761,13 +7762,15 @@ webpackJsonp([36], {
         }), a.d(t, "e", function() {
             return b.a
         }), a.d(t, !1, function() {}), a.d(t, !1, function() {
+            return L.a
+        }), a.d(t, !1, function() {
             return l
         }), a.d(t, !1, function() {
-            return L.a
+            return D.a
         }), a.d(t, "a", function() {
             return v
         }), a.d(t, "f", function() {
-            return D
+            return k
         })
     },
     PJh5: function(e, t, a) {
@@ -17605,7 +17608,7 @@ webpackJsonp([36], {
             e.Ads = "Ads", e.Audience = "Audience", e.Chat = "Chat"
         }(ht || (ht = {}));
         var ft, pt, gt = ((ft = {})[mt.AverageViewers] = "concurrent_viewers", ft[mt.MinutesWatched] = "concurrent_viewers", ft[mt.NewFollowers] = "follows", ft[mt.AverageChatters] = "chat_activities", ft[mt.ChatMessages] = "chat_activities", ft[mt.AdBreakDuration] = "commercials", ft),
-            yt = ((pt = {})[mt.AverageViewers] = "line", pt[mt.MinutesWatched] = "line", pt[mt.NewFollowers] = "line", pt[mt.AverageChatters] = "bar", pt[mt.ChatMessages] = "bar", pt[mt.AdBreakDuration] = "bar", pt),
+            yt = ((pt = {})[mt.AverageViewers] = "bar", pt[mt.MinutesWatched] = "bar", pt[mt.NewFollowers] = "line", pt[mt.AverageChatters] = "bar", pt[mt.ChatMessages] = "bar", pt[mt.AdBreakDuration] = "bar", pt),
             Mt = function(e) {
                 switch (e) {
                     case ht.Ads:
@@ -17836,7 +17839,7 @@ webpackJsonp([36], {
                             n.data = n.timeLabels.map(function(e) {
                                 return t[e].count
                             }), n.dataLabels = n.data.map(function(e) {
-                                return "" + Math.floor(e)
+                                return String(e)
                             }), n.dataFooters = Array(n.data.length).fill("");
                             break;
                         case mt.AdBreakDuration:
@@ -17854,7 +17857,7 @@ webpackJsonp([36], {
                             n.data = n.timeLabels.reduce(function(e, a) {
                                 return e.push(t[a].count + (e.length ? e[e.length - 1] : 0)), e
                             }, []), n.dataLabels = n.data.map(function(e) {
-                                return "" + Math.floor(e)
+                                return String(e)
                             }), n.dataFooters = Array(n.data.length).fill("");
                             break;
                         default:
@@ -18268,9 +18271,10 @@ webpackJsonp([36], {
             },
             Qt = function(e, t, a) {
                 return ea(e, t, a).map(function(e) {
+                    var t = e.count / 48;
                     return {
                         timestamp: e.timestamp,
-                        count: e.sampleSize ? Math.floor(e.count / e.sampleSize) : 0,
+                        count: t,
                         numberOfDatapoints: 0
                     }
                 })
@@ -18279,21 +18283,17 @@ webpackJsonp([36], {
                 return ea(e, t, a).map(function(e) {
                     return {
                         timestamp: e.timestamp,
-                        count: e.sampleSize ? Math.floor(e.count) : 0,
+                        count: e.count,
                         numberOfDatapoints: 0
                     }
                 })
             },
             ea = function(e, t, a) {
-                for (var n = ia(e, t).map(function(e) {
-                        return l.__assign({}, e, {
-                            sampleSize: 0
-                        })
-                    }), r = function(e, t) {
+                for (var n = ia(e, t), r = function(e, t) {
                         var a = n.find(function(t) {
                             return t.timestamp === oa(e)
                         });
-                        a && 0 !== t && (a.count += t, a.sampleSize += 1)
+                        a && (a.count += t)
                     }, i = 0, o = a; i < o.length; i++) {
                     var s = o[i];
                     r(s.timestamp, s.count)
@@ -20050,18 +20050,8 @@ webpackJsonp([36], {
                 end_time: e.end.toJSON()
             }
         }, t.b = function(e) {
-            var t, a = Object(n.differenceInMinutes)(e.end, e.start),
-                i = Math.floor(a / 60),
-                o = a % 60;
-            t = i && o ? Object(r.d)("{hours, number}h{minutes, number}m", {
-                hours: i,
-                minutes: o
-            }, "StreamSummaryDuration") : i ? Object(r.d)("{hours, number}h", {
-                hours: i
-            }, "StreamSummaryDuration") : Object(r.d)("{minutes, number}m", {
-                minutes: o
-            }, "StreamSummaryDuration");
-            return t
+            var t = Object(n.differenceInMinutes)(e.end, e.start);
+            return Object(r.a)(t)
         }, t.e = function(e, t) {
             void 0 === t && (t = new Date);
             var a = Object(n.endOfDay)(t);
@@ -20077,7 +20067,7 @@ webpackJsonp([36], {
             }
         };
         var n = a("wuJz"),
-            r = (a.n(n), a("6sO2"))
+            r = (a.n(n), a("yiqh"))
     },
     uSe8: function(e, t, a) {
         (function(e) {
@@ -21992,6 +21982,23 @@ webpackJsonp([36], {
         })(a("PJh5"))
     },
     yU6t: function(e, t) {},
+    yiqh: function(e, t, a) {
+        "use strict";
+        t.a = function(e) {
+            var t, a = Math.floor(e / 60),
+                r = e % 60;
+            t = a && r ? Object(n.d)("{hours, number}h{minutes, number}m", {
+                hours: a,
+                minutes: r
+            }, "StreamSummaryDuration") : a ? Object(n.d)("{hours, number}h", {
+                hours: a
+            }, "StreamSummaryDuration") : Object(n.d)("{minutes, number}m", {
+                minutes: r
+            }, "StreamSummaryDuration");
+            return t
+        };
+        var n = a("6sO2")
+    },
     ymQ7: function(e, t, a) {
         var n = a("xA5w"),
             r = a("JURy"),
@@ -22127,4 +22134,4 @@ webpackJsonp([36], {
         }
     }
 });
-//# sourceMappingURL=pages.teams-dashboard-16f9220c3a12adf23c621ffa2674437d.js.map
+//# sourceMappingURL=pages.teams-dashboard-0f89aeae2d2d9ceff61957d5f7114813.js.map
