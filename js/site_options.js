@@ -2474,6 +2474,18 @@ window.SiteOptions = {
                 "value": "control"
             }]
         },
+        "697896b3-a4b9-4c00-a1a2-7fa35ec9a8e4": {
+            "name": "notifications_disable",
+            "v": 3303,
+            "t": 2,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "treatment"
+            }]
+        },
         "6a2630a4-edc7-4f2a-8cfe-e4de75eb0d98": {
             "name": "rtqos",
             "v": 3293,
