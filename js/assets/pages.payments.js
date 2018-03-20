@@ -10827,7 +10827,7 @@ webpackJsonp([38], {
                         onClick: this.toggleButton,
                         type: g.A.Text,
                         "data-test-selector": be.CLOSE_BUTTON
-                    }, Object(m.d)("Cancel", "PaymentMethodCard")))), this.state.viewType === we.UpdateSuccess && _.createElement(De, {
+                    }, Object(m.d)("Close", "PaymentMethodCard")))), this.state.viewType === we.UpdateSuccess && _.createElement(De, {
                         onDoneClick: this.onDoneClick,
                         onStartOverClick: this.onStartOverClick
                     }), this.state.viewType === we.UpdatePayment && _.createElement("div", null, _.createElement(g._4, {
@@ -11100,7 +11100,7 @@ webpackJsonp([38], {
                                 case xe.Tier3:
                                     return Object(m.d)("Channel Subscription - Tier 3", "TransactionHistoryTab");
                                 default:
-                                    return Object(m.d)("Channel Subscription - One Time", "TransactionHistoryTab")
+                                    return "-"
                             }
                         }
                     }
@@ -11555,7 +11555,7 @@ webpackJsonp([38], {
                     }, Object(m.d)("Payment Methods", "PaymentsLandingPagePresentationComponent")), _.createElement(g._28, {
                         active: this.state.txnHistoryTabActive,
                         onClick: this.switchToTxnTab
-                    }, Object(m.d)("Purchase History", "PaymentsLandingPagePresentationComponent"))), _.createElement(g._4, {
+                    }, Object(m.d)("Transaction History", "PaymentsLandingPagePresentationComponent"))), _.createElement(g._4, {
                         fullHeight: !0,
                         fullWidth: !0,
                         margin: {
@@ -15060,4 +15060,4 @@ webpackJsonp([38], {
         }
     }
 });
-//# sourceMappingURL=pages.payments-e9f8768d8ad5cc61e6f42ddb3807425a.js.map
+//# sourceMappingURL=pages.payments-86a484c9294587222aef22ac3e6ecfe4.js.map

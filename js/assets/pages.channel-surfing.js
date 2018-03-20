@@ -1453,7 +1453,7 @@ webpackJsonp([73], {
                     }
                 }), Object(T.a)([{
                     topic: function(e) {
-                        return Object(L.u)(e.currentUserID)
+                        return Object(L.t)(e.currentUserID)
                     },
                     mapMessageTypesToProps: (_ = {}, _[I.PubsubMessageType.ChatNotification] = "userCommerceUpdateEvent", _)
                 }])], t)
@@ -2138,7 +2138,7 @@ webpackJsonp([73], {
                     variables: {
                         id: e.channelID
                     },
-                    topic: Object(L.o)(e.channelID),
+                    topic: Object(L.n)(e.channelID),
                     type: I.PubsubMessageType.UpdatedChannelChatProperty,
                     mutator: function(e, t) {
                         return t.channel.settings.isRitualsEnabled = e.data.is_rituals_enabled, t
@@ -6384,7 +6384,7 @@ webpackJsonp([73], {
                     variables: {
                         channelLogin: e.channelLogin
                     },
-                    topic: Object(L.s)(e.userID),
+                    topic: Object(L.r)(e.userID),
                     type: I.PubsubMessageType.UserBitsBadgeUpdate,
                     skip: !e.userID,
                     mutator: function(t, n) {
@@ -10199,7 +10199,7 @@ webpackJsonp([73], {
                     }))
                 }, t.prototype.subscribe = function(e) {
                     this.unsubscribe = l.o.pubsub.subscribe({
-                        topic: Object(d.n)(e),
+                        topic: Object(d.m)(e),
                         onMessage: this.handlePubsubMessage
                     })
                 }, t.prototype.renderCTAButton = function() {
@@ -13762,7 +13762,7 @@ webpackJsonp([73], {
             l = o;
         n.d(t, "a", function() {
             return a
-        }), n.d(t, "c", function() {
+        }), n.d(t, !1, function() {
             return o
         }), n.d(t, "b", function() {
             return l
@@ -19056,7 +19056,7 @@ webpackJsonp([73], {
                         variables: {
                             login: e.login
                         },
-                        topic: e.data.user ? Object(c.x)(e.data.user.id) : "",
+                        topic: e.data.user ? Object(c.w)(e.data.user.id) : "",
                         type: l.PubsubMessageType.ViewCount,
                         mutator: function(e, t) {
                             return t.user && t.user.stream ? (t.user.stream.viewersCount = e.viewers, t) : t
@@ -19509,7 +19509,7 @@ webpackJsonp([73], {
                 return !e.channelID
             },
             topic: function(e) {
-                return e.channelID ? Object(d.o)(e.channelID) : ""
+                return e.channelID ? Object(d.n)(e.channelID) : ""
             },
             mapMessageTypesToProps: (_ = {}, _[c.PubsubMessageType.StreamChatRoomChatRichEmbed] = "chatRichEmbedInfo", _)
         }]))(C);
@@ -22084,7 +22084,7 @@ webpackJsonp([73], {
                     variables: {
                         id: t.channelID
                     },
-                    topic: Object(p.o)(t.channelID),
+                    topic: Object(p.n)(t.channelID),
                     type: u.PubsubMessageType.UpdatedChannelChatProperty,
                     mutator: function(n, a) {
                         return n.data.is_rituals_enabled ? e(function() {
@@ -22095,7 +22095,7 @@ webpackJsonp([73], {
                 }
             }), Object(c.a)([{
                 topic: function(e) {
-                    return Object(p.x)(e.channelID)
+                    return Object(p.w)(e.channelID)
                 },
                 mapMessageTypesToProps: (T = {}, T[u.PubsubMessageType.ChannelStreamUp] = "streamUp", T[u.PubsubMessageType.ChannelStreamDown] = "streamDown", T),
                 skip: D
@@ -23289,4 +23289,4 @@ webpackJsonp([73], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-surfing-d4a91ea31d90f5f3cc97ecf535516a1f.js.map
+//# sourceMappingURL=pages.channel-surfing-f0bd8c69091c6bf5a71a28fc956d56a7.js.map
