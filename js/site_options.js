@@ -593,10 +593,10 @@ window.SiteOptions = {
         },
         "19cc1327-9436-4019-b71c-e2a1e41d3cb3": {
             "name": "test",
-            "v": 3271,
+            "v": 3304,
             "t": 1,
             "groups": [{
-                "weight": 8,
+                "weight": 9,
                 "value": "a"
             }, {
                 "weight": 3,
