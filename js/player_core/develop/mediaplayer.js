@@ -70,16 +70,16 @@ var MediaPlayer =
 
 var EventEmiter = __webpack_require__(1);
 var MediaSink = __webpack_require__(2).MediaSink;
-var Browser = __webpack_require__(7).browser;
-var WorkerMessage = __webpack_require__(10);
-var ClientMessage = __webpack_require__(11);
+var Browser = __webpack_require__(10).browser;
+var WorkerMessage = __webpack_require__(13);
+var ClientMessage = __webpack_require__(14);
 
 // Export events and states to public consumers
-var PlayerEvent = exports.PlayerEvent = __webpack_require__(12);
-var PlayerState = exports.PlayerState = __webpack_require__(13);
-var MetadataEvent = exports.MetadataEvent = __webpack_require__(14);
-var ErrorType = exports.ErrorType = __webpack_require__(15);
-var ErrorSource = exports.ErrorSource = __webpack_require__(16);
+var PlayerEvent = exports.PlayerEvent = __webpack_require__(15);
+var PlayerState = exports.PlayerState = __webpack_require__(16);
+var MetadataEvent = exports.MetadataEvent = __webpack_require__(17);
+var ErrorType = exports.ErrorType = __webpack_require__(18);
+var ErrorSource = exports.ErrorSource = __webpack_require__(19);
 
 // Chrome 63 and Opera have an issue (crbug.com/779962) that heavily throttle video in a
 // background tab while silent. So, we need to stop playback in that circumstance.
@@ -657,7 +657,7 @@ function getLocalStorage(prefix) {
 // If the setting doesn't exits, we return empty (default) settings
 function loadSettings(settings) {
     try {
-        return __webpack_require__(17)("./" + settings + '.json');
+        return __webpack_require__(20)("./" + settings + '.json');
     } catch(e) {
         return {};
     }
@@ -996,8 +996,8 @@ function isUndefined(arg) {
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var DRMManager = __webpack_require__(4);
-var Queue = __webpack_require__(5);
-var Promise = global.Promise ? global.Promise : __webpack_require__(6);
+var Queue = __webpack_require__(8);
+var Promise = global.Promise ? global.Promise : __webpack_require__(9);
 var VTTCue = global.VTTCue ? global.VTTCue : global.TextTrackCue;
 
 // constants
@@ -1578,147 +1578,74 @@ module.exports = g;
 
 /***/ }),
 /* 4 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
+var Constants = __webpack_require__(5);
+var Utils = __webpack_require__(6);
+var PlayReady = __webpack_require__(7);
 
-// This is a temporary variable between using ClearKey, or Production.
-// ENV variable/test setup will be a better indicator in future
-var MODES = {
-    DEVELOPMENT: 'DEVELOPMENT',
-    PRODUCTION: 'PRODUCTION',
-};
+//setup constants/utils
+var MODES = Constants.MODES;
+var KEY_SYSTEMS = Constants.KEY_SYSTEMS;
+var KEY_SYSTEMS_BY_STRING = Constants.KEY_SYSTEMS_BY_STRING;
+var TEST_LICENSE = Constants.TEST_LICENSE;
+var ENCRYPTION_TYPES = Constants.ENCRYPTION_TYPES;
+var SUPPORTED_DRM_MAP = Constants.SUPPORTED_DRM_MAP;
+var DRM_SUPPORT_BY_BROWSER = Constants.DRM_SUPPORT_BY_BROWSER;
+var DRM_SUPPORT_VALUES = Constants.DRM_SUPPORT_VALUES;
+var DEVELOPMENT_CDMS = Constants.DEVELOPMENT_CDMS;
+var STANDARD_CDMS = Constants.STANDARD_CDMS;
+var SUPPORTED_BROWSERS = Constants.SUPPORTED_BROWSERS;
+var DEFAULT_AUDIO_CAPABILITIES = Constants.DEFAULT_AUDIO_CAPABILITIES;
+var DEFAULT_VIDEO_CAPABILITIES = Constants.DEFAULT_VIDEO_CAPABILITIES;
+var arrayBuffersEqual = Utils.arrayBuffersEqual;
+var getHostnameFromUri = Utils.getHostnameFromUri;
+var arrayBufferFrom = Utils.arrayBufferFrom;
+var uintArrayToString = Utils.uintArrayToString;
+var fetchArrayBuffer = Utils.fetchArrayBuffer;
 
-// TODO Robustness levels, but only for widevine
-// https://storage.googleapis.com/wvdocs/Chrome_EME_Changes_and_Best_Practices.pdf
-// Definition           EME Level     Widevine Device Security Level
-// SW_SECURE_CRYPTO     1             3
-// SW_SECURE_DECODE     2             3
-// HW_SECURE_CRYPTO     3             2
-// HW_SECURE_DECODE     4             1
-// HW_SECURE_ALL        5             1
-var KEY_SYSTEMS = {
-    CLEAR_KEY: {
-        title: 'ClearKey',
-        keySystem: 'org.w3.clearkey'
-    },
-    FAIRPLAY: {
-        title: 'Fairplay',
-        keySystem: 'com.apple.fps.1_0'
-    },
-    PLAYREADY: {
-        title: 'PlayReady',
-        keySystem: 'com.microsoft.playready'
-    },
-    WIDEVINE: {
-        title: 'Widevine',
-        keySystem: 'com.widevine.alpha'
-    },
-};
+var ERRORS = Constants.ERRORS;
 
-var ENCRYPTION_TYPES = {
-    CENC: 'cenc',
-    CBCS: 'cbcs',
-};
+// When using this fetch shim, FF loses support for response.arrayBuffer();
+// not sure if I should use a different shim like `github/fetch` for this instead
+// current browser support: https://caniuse.com/#feat=fetch
+// var fetch = require('./fetch'); // get fetch or fetchShim
 
-var SUPPORTED_DRM_MAP = {
-    ClearKey_CENC: {
-        cdm: KEY_SYSTEMS.CLEAR_KEY,
-        type: ENCRYPTION_TYPES.CENC,
-        value: 1,
-    },
-    ClearKey_CBCS: {
-        cdm: KEY_SYSTEMS.CLEAR_KEY,
-        type: ENCRYPTION_TYPES.CBCS,
-        value: 2,
-    },
-    Widevine_CENC: {
-        cdm: KEY_SYSTEMS.WIDEVINE,
-        type: ENCRYPTION_TYPES.CENC,
-        value: 4,
-    },
-    Widevine_CBCS: {
-        cdm: KEY_SYSTEMS.WIDEVINE,
-        type: ENCRYPTION_TYPES.CBCS,
-        value: 8,
-    },
-    PlayReady_CENC: {
-        cdm: KEY_SYSTEMS.PLAYREADY,
-        type: ENCRYPTION_TYPES.CENC,
-        value: 16,
-    },
-    PlayReady_CBCS: {
-        cdm: KEY_SYSTEMS.PLAYREADY,
-        type: ENCRYPTION_TYPES.CBCS,
-        value: 32,
-    },
-    FairPlay_CENC: {
-        cdm: KEY_SYSTEMS.FAIRPLAY,
-        type: ENCRYPTION_TYPES.CENC,
-        value: 64,
-    },
-    FairPlay_CBCS: {
-        cdm: KEY_SYSTEMS.FAIRPLAY,
-        type: ENCRYPTION_TYPES.CBCS,
-        value: 128,
-    },
-};
+/* TODO Robustness levels for Chrome best practices
+    Spec notes that:
+        robustness of type DOMString, defaulting to ""
+        The robustness level associated with the content type.
+        The empty string indicates that any ability to decrypt
+        and decode the content type is acceptable.
 
-var DRM_SUPPORT_BY_BROWSER = {
-    'chrome': [SUPPORTED_DRM_MAP.ClearKey_CENC, SUPPORTED_DRM_MAP.Widevine_CENC],
-    'firefox': [SUPPORTED_DRM_MAP.ClearKey_CENC, SUPPORTED_DRM_MAP.Widevine_CENC],
-    'edge': [SUPPORTED_DRM_MAP.ClearKey_CENC, SUPPORTED_DRM_MAP.PlayReady_CENC],
-    'safari': [SUPPORTED_DRM_MAP.FairPlay_CBCS]
-};
-var SUPPORTED_BROWSERS = ['chrome', 'firefox', 'edge', 'safari'];
+    If we get requirements, we can set it to one of the settings below:
+    https://storage.googleapis.com/wvdocs/Chrome_EME_Changes_and_Best_Practices.pdf
+    Definition           EME Level     Widevine Device Security Level
+    SW_SECURE_CRYPTO     1             3
+    SW_SECURE_DECODE     2             3
+    HW_SECURE_CRYPTO     3             2
+    HW_SECURE_DECODE     4             1
+    HW_SECURE_ALL        5             1
+*/
 
-// Turns mapping above into an iterable array (usually would use lodash or Object.values)
-var DRM_SUPPORT_VALUES = [
-    SUPPORTED_DRM_MAP.ClearKey_CENC,
-    SUPPORTED_DRM_MAP.ClearKey_CBCS,
-    SUPPORTED_DRM_MAP.Widevine_CENC,
-    SUPPORTED_DRM_MAP.Widevine_CBCS,
-    SUPPORTED_DRM_MAP.PlayReady_CENC,
-    SUPPORTED_DRM_MAP.PlayReady_CBCS,
-    SUPPORTED_DRM_MAP.FairPlay_CENC,
-    SUPPORTED_DRM_MAP.FairPlay_CBCS,
-];
-
-// Testing constant for order to check, this will eventually come from video?
-// This is also just for browsers that support W3C standards, Safari is handled alone
-// and does not allow clearkey testing at the moment.
-var DEVELOPMENT_CDMS = [
-    KEY_SYSTEMS.CLEAR_KEY
-];
-
-var STANDARD_CDMS = [
-    KEY_SYSTEMS.PLAYREADY,
-    KEY_SYSTEMS.WIDEVINE,
-];
-
-var DEFAULT_AUDIO_CAPABILITIES = [{
-    "contentType": "audio/mp4;codecs=\"mp4a.40.2\""
-}];
-var DEFAULT_VIDEO_CAPABILITIES = [{
-    "contentType": "video/mp4;codecs=\"avc1.42E01E\""
-}];
-
+// this is only used for W3C spec following EME feature check
 var supportedConfig = [{
   "initDataTypes": [ENCRYPTION_TYPES.CENC],
   "audioCapabilities": DEFAULT_AUDIO_CAPABILITIES,
   "videoCapabilities": DEFAULT_VIDEO_CAPABILITIES,
 }];
 
-
 /**
  * DRMManager sets up and handles media that contains DRM encryption
- * @param {Object} config 
+ * @param {Object} config
  * @param {HTMLElement} config.video - video element
  * @param {function(MediaError)} config.onerror - video error with error code
  */
-var DRMManager = function DRMManager(config) {
+var DRMManager = function(config) {
     this.video = config.video;
     this.config = {
         env: MODES.DEVELOPMENT
+        // env: MODES.PRODUCTION
     };
     this.selectedCDM = null;
     this.mediaKeys = undefined; // we will reserve null
@@ -1726,21 +1653,21 @@ var DRMManager = function DRMManager(config) {
     this._handleError = config.onerror;
     this._certificate = null;
     this._currentSrc = null;
-    this._pendingSessions = null;
+    this._pendingSessions = [];
     this._sessions = [];
 
     this._init();
 };
 
-/** 
- * Check Browser CDM Capabilities 
- * Based on the recommendations of MDN, a feature check could result in 
+/**
+ * Check Browser CDM Capabilities
+ * Based on the recommendations of MDN, a feature check could result in
  * 'user-visible effects such as asking for permission to access one or more
  * system resources.' It also would need to be an async check.
  * @param {string} browserName - browser name
  */
 DRMManager.CDMCapabilitiesByBrowser = function(browserName) {
-    if (DRM_SUPPORT_BY_BROWSER[browserName]) { 
+    if (DRM_SUPPORT_BY_BROWSER[browserName]) {
         return DRM_SUPPORT_BY_BROWSER[browserName].reduce(function(total, drm) {
             var value = drm ? drm.value : 0;
             return total + value;
@@ -1755,7 +1682,7 @@ DRMManager.CDMCapabilitiesByBrowser = function(browserName) {
  * Used to create the hardcoded bitmask map in 'capability.js'
  * This helper saves workers from importing this entire file to
  * use constants relevant to only DRM.
- * @param {Array} browsers 
+ * @param {Array} browsers
  */
 DRMManager.DRMBrowserSupportMapping = function(browsers) {
     var browserMapping = {};
@@ -1768,10 +1695,10 @@ DRMManager.DRMBrowserSupportMapping = function(browsers) {
 /*  Feature check of browsers capabilities
     Notes: This is more accurate than checking by browser, but currently not used because:
         1. It has to be async, navigator.requestMediaKeySystemAccess returns a promise, which makes it hard to make a constant.
-        2. MDN web docs don't seem to be very keen on using except when necessary: 
+        2. MDN web docs don't seem to be very keen on using except when necessary:
             From: https://developer.mozilla.org/en-US/docs/Web/API/Navigator/requestMediaKeySystemAccess
             "This method may have user-visible effects such as asking for permission to access one or more system resources. Consider that when deciding when to call requestMediaKeySystemAccess(); you don't want those requests to happen at inconvenient times. As a general rule, this function should be called only when it's about time to create and use a MediaKeys object by calling the returned MediaKeySystemAccess object's createMediaKeys() method."
-*/  
+*/
 DRMManager.CDMCapabilitiesFeatureCheck = function() {
     var checkSupported = function(settings) {
         var config = [{
@@ -1837,7 +1764,7 @@ DRMManager.prototype._init = function() {
 /**
  * Checks to see if system is already handling
  * a session that matches initData
- * @param {ArrayBuffer} initData 
+ * @param {ArrayBuffer} initData
  */
 DRMManager.prototype._hasSession = function(initData) {
     for (var i = 0; i < this._sessions.length; i++) {
@@ -1879,12 +1806,13 @@ DRMManager.prototype._createKeySystemSupportChain = function() {
         } else {
             promise = promise.catch(function(e) {
                 return navigator.requestMediaKeySystemAccess(cdm.keySystem, supportedConfig); 
-            }.bind(this));
+            });
         }
     });
-    // probably good to attach one more catch that sends a more descriptive error that it broke on this step
-    // promise.catch(function(e) {
-    // });
+
+    promise = promise.catch(function() {
+        return Promise.reject(ERRORS.NO_CDM_SUPPORT);
+    });
 
     return promise;
 }
@@ -1894,6 +1822,7 @@ DRMManager.prototype._createKeySystemSupportChain = function() {
  * @param {Object} event - EncryptedMediaEvent [https://www.w3.org/TR/encrypted-media/#dom-mediaencryptedevent]
  */
 DRMManager.prototype._handleEncrypted = function(event){
+    console.log('handling encrypted');
     this._checkSrcSessions();
     // if we already have this same session setup, ignore this event;
     if (this._hasSession(event.initData)) {
@@ -1902,6 +1831,7 @@ DRMManager.prototype._handleEncrypted = function(event){
     }
     this._sessions.push({ initData: event.initData });
 
+    var keySystemPromise;
     // if mediakeys have not started
     if (typeof this.mediaKeys === 'undefined') {
         // TODO there is a better way to check/manage state instead of using undefined -> null as loading
@@ -1910,19 +1840,19 @@ DRMManager.prototype._handleEncrypted = function(event){
         this._pendingSessions = [];
 
         // create a promise chain of keySystem support
-        var keySystemPromise = this._createKeySystemSupportChain();
-        keySystemPromise
+        keySystemPromise = this._createKeySystemSupportChain()
             .then(this._getCertificate.bind(this))
             .then(function(keySystemAccess){
                 return keySystemAccess.createMediaKeys();
-            }.bind(this))
+            })
             .then(this._setMediaKeys.bind(this))
             .catch(function(err) {
-                console.error('error setting up keys', err);
-            });
+                this._handleError(err);
+            }.bind(this));
     }
 
     this._addSession(event.initDataType, event.initData);
+    return keySystemPromise;
 };
 
 /**
@@ -1991,7 +1921,7 @@ DRMManager.prototype._createSessionRequest = function(initDataType, initData){
  */
 DRMManager.prototype._handleKeyStatusesChange = function(keySession, event, initData) {
     var expired = false;
-    
+
     // based on https://www.w3.org/TR/encrypted-media/#example-using-all-events
     keySession.keyStatuses.forEach(function(status, keyId){
         switch (status) {
@@ -2031,20 +1961,12 @@ DRMManager.prototype._removeSession = function(initData) {
 
 /**
  * Requests a certificate
- * TODO: Still needs implementation for providers
+ * TODO: Still needs implementation for FairPlay Cert
  * @param {Object} keySystemAccess - [https://www.w3.org/TR/encrypted-media/#dom-mediakeysystemaccess]
  */
 DRMManager.prototype._getCertificate = function(keySystemAccess) {
-    this.selectedCDM = keySystemAccess.keySystem;
-
-    // clearkey for testing doesn't need to get a cert
-    if (this.config.env === MODES.DEVELOPMENT) {
-        return Promise.resolve(keySystemAccess);
-    }
-
-    console.warn('certificates not yet implemented');
-    // query certificate
-    // set or reject
+    this.selectedCDM = KEY_SYSTEMS_BY_STRING[keySystemAccess.keySystem];
+    return Promise.resolve(keySystemAccess);
 }
 
 /**
@@ -2055,10 +1977,16 @@ DRMManager.prototype._getCertificate = function(keySystemAccess) {
 DRMManager.prototype._handleMessage = function(event) {
     // grabs relevant session
     var keySession = event.target;
-    var license = this._generateLicense(event.message);
-    keySession.update(license).catch(function(error) {
-        console.error('Failed to update the session', error);
-    });
+    this._generateLicense(event.message)
+        .then(function(license){
+            return keySession.update(license)
+                .catch(function(error) {
+                    return Promise.reject(ERRORS.SESSION_UPDATE);
+                });
+        })
+        .catch(function(error) {
+            this._handleError(error);
+        }.bind(this));
 };
 
 /**
@@ -2066,19 +1994,57 @@ DRMManager.prototype._handleMessage = function(event) {
  * @param {Object} message - Message returned from CDM message event
  */
 DRMManager.prototype._generateLicense = function(message) {
-    var request = JSON.parse(new TextDecoder().decode(message));
-    console.assert(request.kids.length === 1);
-
-    var keyObj = {
-        kty: 'oct',
-        alg: 'A128KW',
-        kid: request.kids[0],
-        k: request.kids[0]
-    };
-    return new TextEncoder().encode(JSON.stringify({
-        keys: [keyObj]
-    }));
+    if (this.config.env === MODES.DEVELOPMENT) {
+        // clearkey implementation where KID is key
+        var request = JSON.parse(new TextDecoder().decode(message));
+        var keyObj = {
+            kty: 'oct',
+            alg: 'A128KW',
+            kid: request.kids[0],
+            k: request.kids[0]
+        };
+        var result = new TextEncoder().encode(JSON.stringify({
+            keys: [keyObj]
+        }));
+        return Promise.resolve(result);
+    } else {
+        var requestData = this._prepareLicenseRequest(message);
+        return fetchArrayBuffer(requestData.url, requestData.options)
+            .catch(function(error) {
+                return Promise.reject(ERRORS.LICENSE_REQUEST);
+            });
+    }
 };
+
+DRMManager.prototype._prepareLicenseRequest = function(message) {
+    var body = message;
+    var headers = {
+        customdata: TEST_LICENSE
+    };
+
+    // get additional data for specifics CDM license request calls
+    var additionalData = {};
+    if (this.selectedCDM === KEY_SYSTEMS.PLAYREADY) {
+        additionalData = PlayReady.licenseRequestData(message);
+    }
+
+    if (additionalData.body) {
+        body = additionalData.body;
+    }
+    if (additionalData.headers) {
+        headers = Object.assign(headers, additionalData.headers);
+    }
+
+    return {
+        url: this.selectedCDM.licenseUrl,
+        options: {
+            method: 'POST',
+            body: body,
+            headers: headers,
+        }
+    };
+}
+
 
 // SAFARI FAIRPLAY SUPPORT
 // untested since it does not allow for clearkey testing
@@ -2097,14 +2063,14 @@ DRMManager.prototype._getSafariCertificate = function(){
 };
 
 DRMManager.prototype._getSafariContentId = function(initData){
-    return getHostnameFromUri(uint8ArrayToString(initData));
+    return getHostnameFromUri(uintArrayToString(initData));
 };
 
 /*
     Safari Events for Fairplay [https://developer.apple.com/library/content/technotes/tn2454/_index.html]
 
     Notes:
-    - Depending on the Fairplay key version we plan on targetting, 
+    - Depending on the Fairplay key version we plan on targetting,
     'com.apple.fps.1_0' will need to concat initData and Certificate, where may not be necessary with 'com.apple.fps.2_0'
 
     3 year old clearkey test, doesn't seem to work:
@@ -2115,7 +2081,7 @@ DRMManager.prototype._getSafariContentId = function(initData){
 */
 
 /**
- * Safari's 'encrypted' initialization event. This works to  
+ * Safari's 'encrypted' initialization event. This works to
  * start initialization
  * TODO: needs some work to be split up a bit more
  * @param {Object} needKeyEvent - Similar to 'encrypted' event
@@ -2139,11 +2105,11 @@ DRMManager.prototype._setupSafariMediaKeys = function(needKeyEvent){
         var keySession = this.video.webkitKeys.createSession(
             'video/mp4',
             needKeyEvent.initData);
-      
+
         if (!keySession) {
             return reject('Could not create key session');
         }
-      
+
         keySession.contentId = contentId;
         keySession.addEventListener('webkitkeymessage', function(keyMessageEvent){
             console.log('got webkit key message');
@@ -2156,11 +2122,11 @@ DRMManager.prototype._setupSafariMediaKeys = function(needKeyEvent){
                     reject(err);
                 });
         });
-    
+
         keySession.addEventListener('webkitkeyadded', function(event){
             resolve(event);
         });
-    
+
         keySession.addEventListener('webkitkeyerror', function(event){
             reject(event);
         });
@@ -2181,20 +2147,195 @@ DRMManager.prototype._getWebkitLicense = function(keyMessageEvent) {
 
 module.exports = DRMManager;
 
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports) {
+
+// This is a temporary variable between using ClearKey, or Production.
+// ENV variable/test setup will be a better indicator in future
+var MODES = {
+    DEVELOPMENT: 'DEVELOPMENT',
+    PRODUCTION: 'PRODUCTION',
+};
+
+var KEY_SYSTEMS = {
+    CLEAR_KEY: {
+        title: 'ClearKey',
+        keySystem: 'org.w3.clearkey'
+    },
+    FAIRPLAY: {
+        title: 'Fairplay',
+        keySystem: 'com.apple.fps.1_0'
+    },
+    PLAYREADY: {
+        title: 'PlayReady',
+        keySystem: 'com.microsoft.playready',
+        licenseUrl: 'https://pr-keyos.licensekeyserver.com/core/rightsmanager.asmx',
+        // licenseUrl: 'https://pr-keyos.licensekeyserver.net/core/rightsmanager.asmx'
+    },
+    WIDEVINE: {
+        title: 'Widevine',
+        keySystem: 'com.widevine.alpha',
+        licenseUrl: 'https://wv-keyos.licensekeyserver.com',
+    },
+};
+
+var KEY_SYSTEMS_BY_STRING = {
+    'com.widevine.alpha': KEY_SYSTEMS.WIDEVINE,
+    'com.microsoft.playready': KEY_SYSTEMS.PLAYREADY,
+    'com.apple.fps.1_0': KEY_SYSTEMS.FAIRPLAY,
+    'org.w3.clearkey': KEY_SYSTEMS.CLEAR_KEY,
+};
+
+// var TEST_LICENSE = 'PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxLZXlPU0F1dGhlbnRpY2F0aW9uWE1MPjxEYXRhPjxXaWRldmluZVBvbGljeSBmbF9DYW5QZXJzaXN0PSJmYWxzZSIgZmxfQ2FuUGxheT0idHJ1ZSIvPjxXaWRldmluZUNvbnRlbnRLZXlTcGVjIFRyYWNrVHlwZT0iSEQiPjxTZWN1cml0eUxldmVsPjE8L1NlY3VyaXR5TGV2ZWw+PC9XaWRldmluZUNvbnRlbnRLZXlTcGVjPjxGYWlyUGxheVBvbGljeSBwZXJzaXN0ZW50PSJmYWxzZSIvPjxMaWNlbnNlIHR5cGU9InNpbXBsZSIvPjxHZW5lcmF0aW9uVGltZT4yMDE4LTAyLTIyIDIwOjU2OjI5LjAwMDwvR2VuZXJhdGlvblRpbWU+PEV4cGlyYXRpb25UaW1lPjIwMTgtMDQtMjIgMjA6NTY6MjkuMDAwPC9FeHBpcmF0aW9uVGltZT48VW5pcXVlSWQ+MmQ2ZGVjZjRmOTJkNmNhNDRkMjA5MTE4NmI0YzM3YWY8L1VuaXF1ZUlkPjxSU0FQdWJLZXlJZD5hMTdmZDMzZDM4NDNkZjliMTc2NzljY2Y1MGE0MTliMjwvUlNBUHViS2V5SWQ+PC9EYXRhPjxTaWduYXR1cmU+Q3hxUTFwOUtRVi9rSlRCdXdsK2QwTnVEa25uWnBqdktHY08zOEZ6MFh5RXBtajlPV0h0eCtvdVJPT3pUWDdEdkU1elU5SG50MXlWZEc4UUZYc043WSsvUHRWVDZuV1NFdWNwL1gzdit3MWFadG1leFpCa1BDc3g4VXhxZ1IvT1JlWmJmM1VXNUxMYXZSVkZXdzUzeWJGUUhsK2I3S2lxVTBpaHFTd3BCZ3ROenJIVnRKYXFXeHRmR2xRRXdtZ0ZZcG5aM3NUdHAvVDNCeCtRMjRKTHhOSjFhb3p3elhwdGlNaTE0alhLU2c1MXdOWWh6cm84YTJrVml2UzdRbTE0SEFCUnRGb1lCbjhGUldmanhHNTlXVk1IUlhUTGRJUlR6dDJmVFR5dUhTSS9xRkpjYmZ5VmpaSmRTeVlFOEJmTDZvUlNXdkdRMkVTYlJHbFZGTysyMXJRPT08L1NpZ25hdHVyZT48L0tleU9TQXV0aGVudGljYXRpb25YTUw+Cg==';
+
+var TEST_LICENSE = 'PEtleU9TQXV0aGVudGljYXRpb25YTUw+PERhdGE+PEdlbmVyYXRpb25UaW1lPjIwMTgtMDMtMDEgMTk6MjE6NTQuMTEzPC9HZW5lcmF0aW9uVGltZT48RXhwaXJhdGlvblRpbWU+MjAxOC0wNS0wMSAxOToyMTo1NC4xMTQ8L0V4cGlyYXRpb25UaW1lPjxVbmlxdWVJZD5iZDc4OTk2YzU5NTg0OTNmYmQ2YTcwMzI3YzVlNWI1NzwvVW5pcXVlSWQ+PFJTQVB1YktleUlkPmExN2ZkMzNkMzg0M2RmOWIxNzY3OWNjZjUwYTQxOWIyPC9SU0FQdWJLZXlJZD48V2lkZXZpbmVQb2xpY3kgZmxfQ2FuUGxheT0idHJ1ZSIgZmxfQ2FuUGVyc2lzdD0iZmFsc2UiIC8+PFdpZGV2aW5lQ29udGVudEtleVNwZWMgVHJhY2tUeXBlPSJIRCI+PFNlY3VyaXR5TGV2ZWw+MTwvU2VjdXJpdHlMZXZlbD48L1dpZGV2aW5lQ29udGVudEtleVNwZWM+PEZhaXJQbGF5UG9saWN5IC8+PExpY2Vuc2UgdHlwZT0ic2ltcGxlIj48UGxheT48SWQ+YTU0NWRiNTUtNDQ3Ny00ODhhLTlhNzEtMWNkZGUyMzNkZGUxPC9JZD48L1BsYXk+PC9MaWNlbnNlPjxQbGF5IGlkPSJhNTQ1ZGI1NS00NDc3LTQ4OGEtOWE3MS0xY2RkZTIzM2RkZTEiPjxFbmFibGVycz48SWQ+Nzg2NjI3ZDgtYzJhNi00NGJlLThmODgtMDhhZTI1NWIwMWE3PC9JZD48L0VuYWJsZXJzPjwvUGxheT48L0RhdGE+PFNpZ25hdHVyZT5HTVEzbFF2Q0I3SVo5ekY3b3U4eVJmMHdYTmttZXV0NitEdXVBY0pwMnJ3L3ZaTSt6ZllnOU1GbkpJa0N6cTdWb1p3a3hTdUQ1K0FSV2lvMm9wMTVRVHBlVHVubHZ2MktJYTRHM3p5Ukc5MmkzZk5qbmlFSTVROFVJeXcwMmxIVjEyZkU1eFdSTlJhc255azlISlFHSUlqWkIxazFad2RUMmpNVTNoK1JSNjFXdUpRcjlHVzgxSXdHYld3dGtlOSs3aXRxZ2Qxa2JmbGR4aHRnK2RnQW5YM3pnVzlDOFRoNm8vdnVBVUI3dVdBSFlGVWc2WEQrYTBteHpPQ29DZnh2aFg3VlQ3YzhWa1RKQzE1dCtTUmgyTUlpUUdidzNtRlNZWHpvaUljc2tFbnBtakVmWFJnazZxMFQxR1VJQTN4MXM4US8rS2RsMXg2WWpmV2UvOUltM3c9PTwvU2lnbmF0dXJlPjwvS2V5T1NBdXRoZW50aWNhdGlvblhNTD4=';
+
+var ENCRYPTION_TYPES = {
+    CENC: 'cenc',
+    CBCS: 'cbcs',
+};
+
+var SUPPORTED_DRM_MAP = {
+    ClearKey_CENC: {
+        cdm: KEY_SYSTEMS.CLEAR_KEY,
+        type: ENCRYPTION_TYPES.CENC,
+        value: 1,
+    },
+    ClearKey_CBCS: {
+        cdm: KEY_SYSTEMS.CLEAR_KEY,
+        type: ENCRYPTION_TYPES.CBCS,
+        value: 2,
+    },
+    Widevine_CENC: {
+        cdm: KEY_SYSTEMS.WIDEVINE,
+        type: ENCRYPTION_TYPES.CENC,
+        value: 4,
+    },
+    Widevine_CBCS: {
+        cdm: KEY_SYSTEMS.WIDEVINE,
+        type: ENCRYPTION_TYPES.CBCS,
+        value: 8,
+    },
+    PlayReady_CENC: {
+        cdm: KEY_SYSTEMS.PLAYREADY,
+        type: ENCRYPTION_TYPES.CENC,
+        value: 16,
+    },
+    PlayReady_CBCS: {
+        cdm: KEY_SYSTEMS.PLAYREADY,
+        type: ENCRYPTION_TYPES.CBCS,
+        value: 32,
+    },
+    FairPlay_CENC: {
+        cdm: KEY_SYSTEMS.FAIRPLAY,
+        type: ENCRYPTION_TYPES.CENC,
+        value: 64,
+    },
+    FairPlay_CBCS: {
+        cdm: KEY_SYSTEMS.FAIRPLAY,
+        type: ENCRYPTION_TYPES.CBCS,
+        value: 128,
+    },
+};
+
+var DRM_SUPPORT_BY_BROWSER = {
+    'chrome': [SUPPORTED_DRM_MAP.ClearKey_CENC, SUPPORTED_DRM_MAP.Widevine_CENC],
+    'firefox': [SUPPORTED_DRM_MAP.ClearKey_CENC, SUPPORTED_DRM_MAP.Widevine_CENC],
+    'edge': [SUPPORTED_DRM_MAP.PlayReady_CENC],
+    'safari': [SUPPORTED_DRM_MAP.FairPlay_CBCS]
+};
+var SUPPORTED_BROWSERS = ['chrome', 'firefox', 'edge', 'safari'];
+
+// Turns mapping above into an iterable array (usually would use lodash or Object.values)
+var DRM_SUPPORT_VALUES = [
+    SUPPORTED_DRM_MAP.ClearKey_CENC,
+    SUPPORTED_DRM_MAP.ClearKey_CBCS,
+    SUPPORTED_DRM_MAP.Widevine_CENC,
+    SUPPORTED_DRM_MAP.Widevine_CBCS,
+    SUPPORTED_DRM_MAP.PlayReady_CENC,
+    SUPPORTED_DRM_MAP.PlayReady_CBCS,
+    SUPPORTED_DRM_MAP.FairPlay_CENC,
+    SUPPORTED_DRM_MAP.FairPlay_CBCS,
+];
+
+// Testing constant for order to check, this will eventually come from video?
+// This is also just for browsers that support W3C standards, Safari is handled alone
+// and does not allow clearkey testing at the moment.
+var DEVELOPMENT_CDMS = [
+    KEY_SYSTEMS.CLEAR_KEY
+];
+
+var STANDARD_CDMS = [
+    KEY_SYSTEMS.PLAYREADY,
+    KEY_SYSTEMS.WIDEVINE,
+];
+
+var DEFAULT_AUDIO_CAPABILITIES = [{
+    "contentType": 'audio/mp4;codecs="mp4a.40.2"'
+}];
+var DEFAULT_VIDEO_CAPABILITIES = [{
+    "contentType": 'video/mp4;codecs="avc1.42E01E"'
+}];
+
+var NO_CDM_SUPPORT_ERROR = {
+    code: 4,
+    message: 'Your browser does not support any DRM Content Decryption Modules',
+};
+
+var SESSION_UPDATE_ERROR = {
+    code: 4,
+    message: 'There was an issue while updating DRM License',
+};
+
+var LICENSE_REQUEST_ERROR = {
+    code: 4,
+    message: 'Error while requesting DRM license',
+};
+
+var ERRORS = {
+    NO_CDM_SUPPORT: NO_CDM_SUPPORT_ERROR,
+    SESSION_UPDATE: SESSION_UPDATE_ERROR,
+    LICENSE_REQUEST: LICENSE_REQUEST_ERROR,
+};
+
+module.exports = {
+    MODES: MODES,
+    KEY_SYSTEMS: KEY_SYSTEMS,
+    KEY_SYSTEMS_BY_STRING: KEY_SYSTEMS_BY_STRING,
+    TEST_LICENSE: TEST_LICENSE,
+    ENCRYPTION_TYPES: ENCRYPTION_TYPES,
+    SUPPORTED_DRM_MAP: SUPPORTED_DRM_MAP,
+    DRM_SUPPORT_BY_BROWSER: DRM_SUPPORT_BY_BROWSER,
+    DRM_SUPPORT_VALUES: DRM_SUPPORT_VALUES,
+    DEVELOPMENT_CDMS: DEVELOPMENT_CDMS,
+    STANDARD_CDMS: STANDARD_CDMS,
+    SUPPORTED_BROWSERS: SUPPORTED_BROWSERS,
+    DEFAULT_VIDEO_CAPABILITIES: DEFAULT_VIDEO_CAPABILITIES,
+    DEFAULT_AUDIO_CAPABILITIES: DEFAULT_AUDIO_CAPABILITIES,
+    ERRORS: ERRORS,
+};
+
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports) {
+
 // some utils from https://github.com/videojs/videojs-contrib-eme/
 // should probably revise these if our needs differ
 var arrayBuffersEqual = function(arrayBuffer1, arrayBuffer2) {
     if (arrayBuffer1 === arrayBuffer2) {
         return true;
     }
-  
+
     if (arrayBuffer1.byteLength !== arrayBuffer2.byteLength) {
         return false;
     }
-  
+
     var dataView1 = new DataView(arrayBuffer1);
     var dataView2 = new DataView(arrayBuffer2);
-  
+
     for (var i = 0; i < dataView1.byteLength; i++) {
         if (dataView1.getUint8(i) !== dataView2.getUint8(i)) {
             return false;
@@ -2203,7 +2344,7 @@ var arrayBuffersEqual = function(arrayBuffer1, arrayBuffer2) {
     return true;
 };
 
-var arrayBufferFrom = function(bufferOrTypedArray) {
+var arrayBufferFrom = function (bufferOrTypedArray) {
     if (bufferOrTypedArray instanceof Uint8Array ||
         bufferOrTypedArray instanceof Uint16Array) {
         return bufferOrTypedArray.buffer;
@@ -2211,58 +2352,108 @@ var arrayBufferFrom = function(bufferOrTypedArray) {
     return bufferOrTypedArray;
 };
 
-var concatInitDataIdAndCertificate = function(contendId, initData, cert) {
-    if (typeof id === 'string') {
-      id = stringToUint16Array(id);
-    }
-  
-    // layout:
-    //   [initData]
-    //   [4 byte: idLength]
-    //   [idLength byte: id]
-    //   [4 byte:certLength]
-    //   [certLength byte: cert]
-    var offset = 0;
-    var buffer = new ArrayBuffer(
-      initData.byteLength + 4 + id.byteLength + 4 + cert.byteLength);
-    var dataView = new DataView(buffer);
-    var initDataArray = new Uint8Array(buffer, offset, initData.byteLength);
-  
-    initDataArray.set(initData);
-    offset += initData.byteLength;
-  
-    dataView.setUint32(offset, id.byteLength, true);
-    offset += 4;
-  
-    var idArray = new Uint16Array(buffer, offset, id.length);
-  
-    idArray.set(id);
-    offset += idArray.byteLength;
-  
-    dataView.setUint32(offset, cert.byteLength, true);
-    offset += 4;
-  
-    var certArray = new Uint8Array(buffer, offset, cert.byteLength);
-  
-    certArray.set(cert);
-  
-    return new Uint8Array(buffer, 0, buffer.byteLength);
+var uintArrayToString = function (array) {
+    return array instanceof Uint8Array
+        ? String.fromCharCode.apply(null, new Uint8Array(array))
+        : String.fromCharCode.apply(null, new Uint16Array(array));
 };
-  
 
-var uint8ArrayToString = function(array){
-    return String.fromCharCode.apply(null, new Uint16Array(array.buffer));
-};
-  
-var getHostnameFromUri = function(uri){
+var getHostnameFromUri = function (uri) {
     var link = document.createElement('a');
     link.href = uri;
     return link.hostname;
 };
 
+var fetchArrayBuffer = function (url, options) {
+    return new Promise(function (resolve, reject) {
+        var xhr = new XMLHttpRequest();
+        xhr.open(options.method, url, true);
+
+        for (var h in options.headers) {
+            if (options.headers.hasOwnProperty(h)) {
+                xhr.setRequestHeader(h, options.headers[h]);
+            }
+        }
+        xhr.responseType = "arraybuffer";
+
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200){
+                    resolve(xhr.response);
+                } else {
+                    var simpleErrorResponse = 'Request Error: Status ' + xhr.status;
+                    console.warn(simpleErrorResponse)
+                    reject(simpleErrorResponse);
+                }
+            }
+        }
+        xhr.send(options.body);
+    });
+};
+
+module.exports = {
+    arrayBuffersEqual: arrayBuffersEqual,
+    arrayBufferFrom: arrayBufferFrom,
+    uintArrayToString: uintArrayToString,
+    getHostnameFromUri: getHostnameFromUri,
+    fetchArrayBuffer: fetchArrayBuffer,
+};
+
 
 /***/ }),
-/* 5 */
+/* 7 */
+/***/ (function(module, exports) {
+
+var getBody = function(xmlDoc) {
+    var licenseRequest = null;
+    if (xmlDoc.getElementsByTagName('Challenge').length > 0 && xmlDoc.getElementsByTagName('Challenge')[0]) {
+        var Challenge = xmlDoc.getElementsByTagName('Challenge')[0].childNodes[0].nodeValue;
+        if (Challenge) {
+            licenseRequest = atob(Challenge);
+        }
+    }
+    return licenseRequest; 
+};
+
+var getHeaders = function(xmlDoc) {
+    var headers = {};
+    var headerNameList = xmlDoc.getElementsByTagName('name');
+    var headerValueList = xmlDoc.getElementsByTagName('value');
+    for (var i = 0; i < headerNameList.length; i++) {
+        headers[headerNameList[i].childNodes[0].nodeValue] = headerValueList[i].childNodes[0].nodeValue;
+    }
+    return headers;
+};
+
+/**
+ * PlayReady License Request requires transforming the ArrayBuffer into XML format
+ * and adding headers included inside the message created by CDM
+ * Based on Window's Docs/Dash implementation: https://docs.microsoft.com/en-us/previous-versions/windows/apps/dn457474(v%3dieb.10)
+ * @param {ArrayBuffer} message - https://www.w3.org/TR/2014/WD-encrypted-media-20140828/encrypted-media.html#dom-mediakeymessageevent
+ */
+var licenseRequestData = function(message) {
+    var messageFormat = 'utf16';
+    var msg;
+    var xmlDoc;
+    var parser = new DOMParser();
+    var dataview = (messageFormat === 'utf16') ? new Uint16Array(message) : new Uint8Array(message);
+
+    msg = String.fromCharCode.apply(null, dataview);
+    xmlDoc = parser.parseFromString(msg, 'application/xml');
+    
+    return {
+        headers: getHeaders(xmlDoc),
+        body: getBody(xmlDoc),
+    };
+};
+
+module.exports = {
+  licenseRequestData: licenseRequestData,
+};
+
+
+/***/ }),
+/* 8 */
 /***/ (function(module, exports) {
 
 // This queue will only "garbage collect"
@@ -2308,7 +2499,7 @@ Queue.prototype.empty = function () {
 
 
 /***/ }),
-/* 6 */
+/* 9 */
 /***/ (function(module, exports) {
 
 (function (root) {
@@ -2547,10 +2738,10 @@ Queue.prototype.empty = function () {
 
 
 /***/ }),
-/* 7 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var detect = __webpack_require__(8).detect;
+var detect = __webpack_require__(11).detect;
 
 var BROWSER = (function(){
     var browser = detect() || {name:'', version:'', os:''};
@@ -2582,7 +2773,7 @@ function CDMSupportByBrowserBitmask (browser) {
     var DRM_CAPABILITIES_BY_BROWSER_BITMASK = {
         chrome: 5,
         firefox: 5,
-        edge: 17,
+        edge: 16,
         safari: 128
     };
 
@@ -2599,7 +2790,7 @@ module.exports = {
 
 
 /***/ }),
-/* 8 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -2674,7 +2865,7 @@ function getNodeVersion() {
   return isNode ? {
     name: 'node',
     version: process.version.slice(1),
-    os: __webpack_require__(9).type().toLowerCase()
+    os: __webpack_require__(12).type().toLowerCase()
   } : null;
 }
 
@@ -2776,7 +2967,7 @@ module.exports = {
 
 
 /***/ }),
-/* 9 */
+/* 12 */
 /***/ (function(module, exports) {
 
 exports.endianness = function () { return 'LE' };
@@ -2831,7 +3022,7 @@ exports.homedir = function () {
 
 
 /***/ }),
-/* 10 */
+/* 13 */
 /***/ (function(module, exports) {
 
 /**
@@ -2938,7 +3129,7 @@ module.exports = {
 
 
 /***/ }),
-/* 11 */
+/* 14 */
 /***/ (function(module, exports) {
 
 /**
@@ -3022,7 +3213,7 @@ module.exports = {
 
 
 /***/ }),
-/* 12 */
+/* 15 */
 /***/ (function(module, exports) {
 
 /**
@@ -3113,7 +3304,7 @@ module.exports = {
 
 
 /***/ }),
-/* 13 */
+/* 16 */
 /***/ (function(module, exports) {
 
 /**
@@ -3160,7 +3351,7 @@ module.exports = {
 
 
 /***/ }),
-/* 14 */
+/* 17 */
 /***/ (function(module, exports) {
 
 /**
@@ -3192,7 +3383,7 @@ module.exports = {
 
 
 /***/ }),
-/* 15 */
+/* 18 */
 /***/ (function(module, exports) {
 
 /**
@@ -3246,7 +3437,7 @@ module.exports = {
 
 
 /***/ }),
-/* 16 */
+/* 19 */
 /***/ (function(module, exports) {
 
 /**
@@ -3266,11 +3457,11 @@ module.exports = {
 
 
 /***/ }),
-/* 17 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./sjorge.json": 18
+	"./sjorge.json": 21
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -3286,10 +3477,10 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 17;
+webpackContext.id = 20;
 
 /***/ }),
-/* 18 */
+/* 21 */
 /***/ (function(module, exports) {
 
 module.exports = {"buffercontrol":{"liveSpeedUpBuffer":7,"liveSpeedUpReset":4,"liveSpeedUpRate":1.03},"lowLatency":{"minBuffer":1,"rebufferPenalty":1,"maxRebufferDuration":6,"prefetchOffset":2}}

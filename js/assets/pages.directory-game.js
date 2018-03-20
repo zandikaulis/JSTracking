@@ -4414,7 +4414,7 @@ webpackJsonp([45], {
                                             })];
                                         case 2:
                                             return (l = i.sent()).status > 300 && r(new Error(Object(zt.e)(l.status))), this.unsubscribe = a.k.subscribe({
-                                                topic: Object(Wt.q)(s),
+                                                topic: Object(Wt.r)(s),
                                                 success: function() {
                                                     c.timeoutID = setTimeout(function() {
                                                         c.unsubscribe(), r(new Error(Object(zt.d)()))
@@ -17766,4 +17766,4 @@ webpackJsonp([45], {
     zSAx: function(e, t) {},
     zu64: function(e, t) {}
 });
-//# sourceMappingURL=pages.directory-game-62a03577a208f1c11f7d8f0f50b688f2.js.map
+//# sourceMappingURL=pages.directory-game-04e5abb8950b7e5a415b3728a33d2821.js.map
