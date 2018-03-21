@@ -1200,7 +1200,7 @@ MediaSink.prototype.seekTo = function (playhead) {
     Promise.all(scheduled).then(function () {
         this._video.currentTime = playhead;
         this._onbufferupdate()
-    }.bind(this));
+    }.bind(this)).catch(noop);
 };
 
 /**
@@ -1758,7 +1758,7 @@ DRMManager.CDMCapabilitiesFeatureCheck = function() {
 DRMManager.prototype._init = function() {
     this._checkSrcSessions();
     this.video.addEventListener('encrypted', this._handleEncrypted.bind(this), false);
-    this.video.addEventListener('webkitneedkey', this._handleSafariEncrypted.bind(this), false); 
+    this.video.addEventListener('webkitneedkey', this._handleSafariEncrypted.bind(this), false);
 };
 
 /**
@@ -1805,7 +1805,7 @@ DRMManager.prototype._createKeySystemSupportChain = function() {
             promise = navigator.requestMediaKeySystemAccess(cdm.keySystem, supportedConfig);
         } else {
             promise = promise.catch(function(e) {
-                return navigator.requestMediaKeySystemAccess(cdm.keySystem, supportedConfig); 
+                return navigator.requestMediaKeySystemAccess(cdm.keySystem, supportedConfig);
             });
         }
     });
@@ -1941,7 +1941,7 @@ DRMManager.prototype._handleKeyStatusesChange = function(keySession, event, init
         console.log('found expired keySession, removing');
         keySession.close().then(function(){
             this._removeSession(initData);
-        });
+        }.bind(this));
     }
 }
 
