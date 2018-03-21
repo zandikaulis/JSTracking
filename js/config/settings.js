@@ -294,21 +294,6 @@ window.__twilightSettings = {
                 "value": "yes"
             }]
         },
-        "4723fff0-7f41-43c7-88b3-246b014dfaf1": {
-            "name": "TWILIGHT_CHANNEL_LOGIN_UPSELL_V1",
-            "v": 2523,
-            "t": 1,
-            "groups": [{
-                "weight": 60,
-                "value": "control"
-            }, {
-                "weight": 20,
-                "value": "thin"
-            }, {
-                "weight": 20,
-                "value": "none"
-            }]
-        },
         "47597570-dd4e-4996-85eb-86db164cae9c": {
             "name": "TWILIGHT_AML_RANKING_FOLLOWS",
             "v": 2637,
@@ -574,6 +559,18 @@ window.__twilightSettings = {
             }, {
                 "weight": 1,
                 "value": "last"
+            }]
+        },
+        "d54399a7-7956-4a20-b46b-47af282d7f66": {
+            "name": "twilight_theatre_fullscreen",
+            "v": 3316,
+            "t": 1,
+            "groups": [{
+                "weight": 90,
+                "value": "control"
+            }, {
+                "weight": 10,
+                "value": "theatre"
             }]
         },
         "d6bb4aa4-efae-4031-96be-f08950d6c8f4": {
