@@ -2118,7 +2118,7 @@ window.SiteOptions = {
         },
         "560f30f8-b4fc-4a9d-96ac-9143dc1f4110": {
             "name": "recommended_clips_live_recs",
-            "v": 2578,
+            "v": 3322,
             "t": 2,
             "groups": [{
                 "weight": 100,
