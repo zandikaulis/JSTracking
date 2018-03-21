@@ -815,6 +815,43 @@ webpackJsonp([39], {
                 e.Games = "game", e.Videos = "vod", e.VideosNewest = "vod_by_created_at", e.Users = "user", e.Channels = "live_channel", e.Communities = "community"
             }(i || (i = {}))
     },
+    "5k8C": function(e, t, n) {
+        "use strict";
+        var i = n("TToO"),
+            r = n("GiK3"),
+            a = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return i.__extends(t, e), Object.defineProperty(t.prototype, "kaptchaIframeSrc", {
+                    get: function() {
+                        return "https://secure" + (this.props.isProduction ? "" : "var") + ".paymentech.com/kount/LogoHtm?m=300532&s=" + this.props.sessionId
+                    },
+                    enumerable: !0,
+                    configurable: !0
+                }), Object.defineProperty(t.prototype, "kaptchaImgSrc", {
+                    get: function() {
+                        return "https://secure" + (this.props.isProduction ? "" : "var") + ".paymentech.com/kount/LogoGif?m=300532&s=" + this.props.sessionId
+                    },
+                    enumerable: !0,
+                    configurable: !0
+                }), t.prototype.render = function() {
+                    return r.createElement("iframe", {
+                        width: "1",
+                        height: "1",
+                        scrolling: "no",
+                        src: this.kaptchaIframeSrc
+                    }, r.createElement("img", {
+                        width: "137",
+                        height: "33",
+                        src: this.kaptchaImgSrc
+                    }))
+                }, t
+            }(r.Component);
+        n.d(t, "a", function() {
+            return a
+        })
+    },
     "5qwL": function(e, t, n) {
         var i = n("VaeB");
         e.exports = function(e, t) {
@@ -1944,9 +1981,9 @@ webpackJsonp([39], {
                                 var n = (e.data || {}).claimPrimeOffer || {},
                                     a = n.self || {},
                                     o = n.error || {};
-                                if (a && r && t.setState({
+                                if (a && a.hasEntitlement && r && (t.setState({
                                         claimData: a.claimData
-                                    }), t.markAsClaimedInLocalStorage(i), o && o.code) {
+                                    }), t.markAsClaimedInLocalStorage(i)), o && o.code) {
                                     var s = b.a[o.code];
                                     t.setState({
                                         claiming: !1,
@@ -2390,7 +2427,8 @@ webpackJsonp([39], {
                         color: m.J.Base,
                         className: "blue-bar",
                         position: m._11.Relative,
-                        fullWidth: !0
+                        fullWidth: !0,
+                        zIndex: m._53.Above
                     }, o.createElement(m._4, {
                         className: "blue-bar__bar",
                         display: m.P.Flex,
@@ -5544,180 +5582,204 @@ webpackJsonp([39], {
                         height: "650px"
                     })))
                 }, t = s.__decorate([Object(_.d)("XsollaMoreMethods")], t)
-            }(l.Component);
+            }(l.Component),
+            A = n("HM6l"),
+            U = n("5k8C");
         n("7gLH");
         ! function(e) {
             e.ZUORA_PARENT_LAYOUT = "zuora-payment-method__zuora-parent-layout", e.UPDATE_PAYMENT_BUTTON = "zuora-payment-method__update-payment-button"
         }(D || (D = {}));
-        var A, U = function(e) {
-                function t() {
-                    var t = null !== e && e.apply(this, arguments) || this;
-                    return t.state = {
-                        zuoraConfigured: !1,
-                        awaitingResponse: !1,
+        var M = function(e) {
+            function t() {
+                var t = null !== e && e.apply(this, arguments) || this;
+                return t.state = {
+                    zuoraConfigured: !1,
+                    awaitingResponse: !1,
+                    errorMessage: "",
+                    nullValueErrors: [],
+                    sessionId: Object(A.b)()
+                }, t.handleSubmit = function() {
+                    t.setState({
+                        awaitingResponse: !0,
                         errorMessage: "",
                         nullValueErrors: []
-                    }, t.handleSubmit = function() {
-                        t.setState({
-                            awaitingResponse: !0,
-                            errorMessage: "",
-                            nullValueErrors: []
-                        }), window.Z.submit()
-                    }, t.renderErrorMessage = function() {
-                        if (t.state.nullValueErrors.length) {
-                            var e = t.state.nullValueErrors.map(function(e, t) {
-                                return l.createElement(S._4, {
-                                    key: t,
-                                    margin: {
-                                        left: 2
-                                    }
-                                }, l.createElement(S.O, {
-                                    color: S.J.Error
-                                }, "• ", e))
-                            });
-                            return l.createElement("div", null, l.createElement(S._4, {
+                    }), window.Z.submit()
+                }, t.renderErrorMessage = function() {
+                    if (t.state.nullValueErrors.length) {
+                        var e = t.state.nullValueErrors.map(function(e, t) {
+                            return l.createElement(S._4, {
+                                key: t,
                                 margin: {
-                                    top: 1,
-                                    left: 1,
-                                    bottom: .5
+                                    left: 2
                                 }
                             }, l.createElement(S.O, {
                                 color: S.J.Error
-                            }, Object(u.d)("We are sorry but your credit card payment could not be processed. Please correct the fields below.", "ZuoraCreditCard"))), e)
-                        }
-                        if (t.state.errorMessage) return l.createElement(S._4, {
+                            }, "• ", e))
+                        });
+                        return l.createElement("div", null, l.createElement(S._4, {
                             margin: {
                                 top: 1,
-                                left: 1
+                                left: 1,
+                                bottom: .5
                             }
                         }, l.createElement(S.O, {
                             color: S.J.Error
-                        }, t.state.errorMessage))
-                    }, t.successCallback = function(e) {
-                        return s.__awaiter(t, void 0, void 0, function() {
-                            return s.__generator(this, function(t) {
-                                switch (t.label) {
-                                    case 0:
-                                        if (!e.success) return [2];
-                                        t.label = 1;
-                                    case 1:
-                                        return t.trys.push([1, 3, , 4]), [4, this.props.onSuccess({
-                                            payment_flow: a.ZuoraCreditCard,
-                                            payment_provider: "zuora",
-                                            payment_info: {
-                                                token: e.refId,
-                                                gateway: "cc"
-                                            }
-                                        })];
-                                    case 2:
-                                        return t.sent(), [3, 4];
-                                    case 3:
-                                        return t.sent(), this.setState({
-                                            awaitingResponse: !1
-                                        }), [3, 4];
-                                    case 4:
-                                        return [2]
-                                }
-                            })
-                        })
-                    }, t.errorCallback = function(e, n, i) {
-                        if (t.setState({
-                                awaitingResponse: !1
-                            }), "unknown" === n) return t.parseGatewayErrorMessage(i);
-                        window.Z.sendErrorMessageToHpm(e, i)
-                    }, t.parseGatewayErrorMessage = function(e) {
-                        return e.includes("NullValue") ? t.parseNullValueErrorMessage(e) : e.includes("Invalid CC Number") ? t.setState({
-                            errorMessage: Object(u.d)("You entered an invalid card number. Please update your card and try again.", "ZuoraCreditCard")
-                        }) : t.setState({
-                            errorMessage: Object(u.d)("We couldn't process your payment. Please try again.", "ZuoraCreditCard")
-                        })
-                    }, t.parseNullValueErrorMessage = function(e) {
-                        var n = e.replace("[HostedPageFieldValidationError]&nbsp; ", "").replace(/\s/g, "").split(":NullValue,"),
-                            i = {
-                                creditCardHolderName: Object(u.d)("Name on Card", "ZuoraCreditCard"),
-                                creditCardAddress1: Object(u.d)("Billing Address", "ZuoraCreditCard"),
-                                creditCardCity: Object(u.d)("City", "ZuoraCreditCard"),
-                                creditCardPostalCode: Object(u.d)("Zip Code", "ZuoraCreditCard")
-                            },
-                            r = n.map(function(e) {
-                                var t = i[e];
-                                return t || ""
-                            }).filter(function(e) {
-                                return "" !== e
-                            });
-                        t.setState({
-                            nullValueErrors: r
-                        })
-                    }, t
-                }
-                return s.__extends(t, e), t.prototype.componentDidMount = function() {
-                    var e = this;
-                    if (document.querySelector("#zuora-script")) this.initZuoraIFrame();
-                    else {
-                        var t = document.createElement("script");
-                        t.src = "https://static.zuora.com/Resources/libs/hosted/1.3.0/zuora-min.js", t.async = !0, t.id = "zuora-script", document.body.appendChild(t), t.onload = function() {
-                            e.props.latencyTracking.reportInteractive(), e.initZuoraIFrame()
-                        }
+                        }, Object(u.d)("We are sorry but your credit card payment could not be processed. Please correct the fields below.", "ZuoraCreditCard"))), e)
                     }
-                }, t.prototype.render = function() {
-                    return l.createElement("div", null, !this.state.zuoraConfigured && l.createElement(S._4, {
-                        padding: {
-                            y: 5
-                        }
-                    }, l.createElement(S._6, {
-                        fillContent: !0
-                    })), l.createElement(S._4, {
-                        display: this.state.zuoraConfigured ? S.P.Block : S.P.Hide,
-                        "data-test-selector": D.ZUORA_PARENT_LAYOUT
-                    }, this.renderErrorMessage(), l.createElement("div", {
-                        id: "zuora_payment",
-                        className: this.state.awaitingResponse ? "zuora-disabled" : ""
-                    }), l.createElement(S._4, {
+                    if (t.state.errorMessage) return l.createElement(S._4, {
                         margin: {
-                            left: .5,
-                            top: 2,
-                            bottom: 1
+                            top: 1,
+                            left: 1
                         }
-                    }, l.createElement(S.u, {
-                        onClick: this.handleSubmit,
-                        state: this.state.awaitingResponse ? S.z.Loading : S.z.Default,
-                        disabled: this.state.awaitingResponse,
-                        "data-test-selector": D.UPDATE_PAYMENT_BUTTON
-                    }, this.props.submitButtonCopy))))
-                }, t.prototype.initZuoraIFrame = function() {
-                    var e = this,
-                        t = {
-                            id: this.props.hostedPageID,
-                            url: this.props.hostedPageURL,
-                            style: "inline",
-                            submitEnabled: "true",
-                            field_accountId: this.props.externalAccountID,
-                            tenantId: this.props.tenantID,
-                            token: this.props.token,
-                            key: this.props.publicKey,
-                            signature: this.props.signature
-                        };
-                    window.Z.renderWithErrorHandler(t, {
-                        creditCardCountry: "USA"
-                    }, this.successCallback, this.errorCallback);
-                    var n = document.getElementById("z_hppm_iframe");
-                    n && n.addEventListener("load", function() {
-                        e.setState({
-                            zuoraConfigured: !0
+                    }, l.createElement(S.O, {
+                        color: S.J.Error
+                    }, t.state.errorMessage))
+                }, t.successCallback = function(e) {
+                    return s.__awaiter(t, void 0, void 0, function() {
+                        return s.__generator(this, function(t) {
+                            switch (t.label) {
+                                case 0:
+                                    if (!e.success) return [2];
+                                    t.label = 1;
+                                case 1:
+                                    return t.trys.push([1, 3, , 4]), [4, this.props.onSuccess({
+                                        payment_flow: a.ZuoraCreditCard,
+                                        payment_provider: "zuora",
+                                        payment_info: {
+                                            token: e.refId,
+                                            gateway: "cc"
+                                        }
+                                    })];
+                                case 2:
+                                    return t.sent(), [3, 4];
+                                case 3:
+                                    return t.sent(), this.setState({
+                                        awaitingResponse: !1
+                                    }), [3, 4];
+                                case 4:
+                                    return [2]
+                            }
                         })
                     })
-                }, t = s.__decorate([Object(_.d)("ZuoraCreditCard")], t)
-            }(l.Component),
-            M = function(e) {
+                }, t.errorCallback = function(e, n, i) {
+                    if (t.setState({
+                            awaitingResponse: !1
+                        }), "unknown" === n) return t.parseGatewayErrorMessage(i);
+                    window.Z.sendErrorMessageToHpm(e, i)
+                }, t.parseGatewayErrorMessage = function(e) {
+                    return e.includes("NullValue") ? t.parseNullValueErrorMessage(e) : e.includes("Invalid CC Number") ? t.setState({
+                        errorMessage: Object(u.d)("You entered an invalid card number. Please update your card and try again.", "ZuoraCreditCard")
+                    }) : t.setState({
+                        errorMessage: Object(u.d)("We couldn't process your payment. Please try again.", "ZuoraCreditCard")
+                    })
+                }, t.parseNullValueErrorMessage = function(e) {
+                    var n = e.replace("[HostedPageFieldValidationError]&nbsp; ", "").replace(/\s/g, "").split(":NullValue,"),
+                        i = {
+                            creditCardHolderName: Object(u.d)("Name on Card", "ZuoraCreditCard"),
+                            creditCardAddress1: Object(u.d)("Billing Address", "ZuoraCreditCard"),
+                            creditCardCity: Object(u.d)("City", "ZuoraCreditCard"),
+                            creditCardPostalCode: Object(u.d)("Zip Code", "ZuoraCreditCard")
+                        },
+                        r = n.map(function(e) {
+                            var t = i[e];
+                            return t || ""
+                        }).filter(function(e) {
+                            return "" !== e
+                        });
+                    t.setState({
+                        nullValueErrors: r
+                    })
+                }, t
+            }
+            return s.__extends(t, e), t.prototype.componentDidMount = function() {
+                var e = this;
+                if (document.querySelector("#zuora-script")) this.initZuoraIFrame();
+                else {
+                    var t = document.createElement("script");
+                    t.src = "https://static.zuora.com/Resources/libs/hosted/1.3.0/zuora-min.js", t.async = !0, t.id = "zuora-script", document.body.appendChild(t), t.onload = function() {
+                        e.props.latencyTracking.reportInteractive(), e.initZuoraIFrame()
+                    }
+                }
+            }, t.prototype.render = function() {
+                return l.createElement("div", null, !this.state.zuoraConfigured && l.createElement(S._4, {
+                    padding: {
+                        y: 5
+                    }
+                }, l.createElement(S._6, {
+                    fillContent: !0
+                })), l.createElement(S._4, {
+                    display: this.state.zuoraConfigured ? S.P.Block : S.P.Hide,
+                    "data-test-selector": D.ZUORA_PARENT_LAYOUT
+                }, this.renderErrorMessage(), l.createElement("div", {
+                    id: "zuora_payment",
+                    className: this.state.awaitingResponse ? "zuora-disabled" : ""
+                }), l.createElement(S._4, {
+                    margin: {
+                        left: .5,
+                        top: 2,
+                        bottom: 1
+                    }
+                }, l.createElement(S.u, {
+                    onClick: this.handleSubmit,
+                    state: this.state.awaitingResponse ? S.z.Loading : S.z.Default,
+                    disabled: this.state.awaitingResponse,
+                    "data-test-selector": D.UPDATE_PAYMENT_BUTTON
+                }, this.props.submitButtonCopy)), l.createElement(U.a, {
+                    isProduction: this.props.isProductionConfig,
+                    sessionId: this.state.sessionId
+                })))
+            }, t.prototype.initZuoraIFrame = function() {
+                var e = this,
+                    t = {
+                        id: this.props.hostedPageID,
+                        url: this.props.hostedPageURL,
+                        style: "inline",
+                        submitEnabled: "true",
+                        field_accountId: this.props.externalAccountID,
+                        tenantId: this.props.tenantID,
+                        token: this.props.token,
+                        key: this.props.publicKey,
+                        signature: this.props.signature,
+                        locale: this.formattedLocale
+                    };
+                window.Z.renderWithErrorHandler(t, {
+                    creditCardCountry: "USA"
+                }, this.successCallback, this.errorCallback);
+                var n = document.getElementById("z_hppm_iframe");
+                n && n.addEventListener("load", function() {
+                    e.setState({
+                        zuoraConfigured: !0
+                    })
+                })
+            }, Object.defineProperty(t.prototype, "formattedLocale", {
+                get: function() {
+                    var e = this.props.languageCode || "en";
+                    if (e.includes("-")) {
+                        var t = e.split("-");
+                        e = t[0] + "_" + t[1].toUpperCase()
+                    }
+                    return e
+                },
+                enumerable: !0,
+                configurable: !0
+            }), t = s.__decorate([Object(_.d)("ZuoraCreditCard")], t)
+        }(l.Component);
+        var j, L = Object(g.b)(function(e) {
+                return {
+                    languageCode: e.session.languageCode
+                }
+            })(M),
+            H = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
                         selectedProvider: a.ZuoraCreditCard
                     }, t.submitButtonCopy = Object(u.d)("Complete Purchase", "PaymentMethods"), t.paymentProviders = [{
                         name: a.ZuoraCreditCard,
-                        component: l.createElement(U, s.__assign({
+                        component: l.createElement(L, s.__assign({
                             submitButtonCopy: t.submitButtonCopy,
-                            onSuccess: t.props.onSuccess
+                            onSuccess: t.props.onSuccess,
+                            isProductionConfig: t.props.configs.recurly.payWithAmazonConfigs.isProduction
                         }, t.props.configs.zuora))
                     }, {
                         name: a.RecurlyCreditCard,
@@ -5786,28 +5848,28 @@ webpackJsonp([39], {
                     }, "ZuoraCreditCard"), this.paymentProviders.map(this.renderProvider))
                 }, t = s.__decorate([Object(_.d)("PaymentMethods")], t)
             }(l.Component),
-            j = n("3T7g"),
-            L = n("7LIQ"),
-            H = n("Tzcg"),
-            B = (n("VH0v"), function(e) {
+            B = n("3T7g"),
+            W = n("7LIQ"),
+            G = n("Tzcg"),
+            V = (n("VH0v"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderPrice = function() {
                         var e;
                         switch (t.props.product.interval.unit) {
-                            case A.OneTime:
-                                e = z["One Time"]();
+                            case j.OneTime:
+                                e = Q["One Time"]();
                                 break;
-                            case A.Year:
-                                e = z.Year();
+                            case j.Year:
+                                e = Q.Year();
                                 break;
-                            case A.Month:
+                            case j.Month:
                             default:
-                                e = z.Month()
+                                e = Q.Month()
                         }
                         return l.createElement(S.O, {
                             type: S._41.H4
-                        }, Y(t.props.product.price, e))
+                        }, Z(t.props.product.price, e))
                     }, t.renderSubBadges = function() {
                         if (t.props.owner) {
                             var e = t.props.owner.broadcastBadges.filter(function(e) {
@@ -5820,13 +5882,13 @@ webpackJsonp([39], {
                                     return l.createElement(S._4, {
                                         key: e.setID + "/" + e.version,
                                         margin: .5
-                                    }, l.createElement(j.a, {
+                                    }, l.createElement(B.a, {
                                         badge: e
                                     }))
                                 });
                                 return l.createElement(l.Fragment, null, l.createElement(S.O, {
                                     className: "ticket-description__description__line-item"
-                                }, q["Subscriber Badges:"]()), l.createElement(S._4, {
+                                }, K["Subscriber Badges:"]()), l.createElement(S._4, {
                                     display: S.P.Flex,
                                     flexWrap: S.S.Wrap,
                                     justifyContent: S._3.Center
@@ -5844,10 +5906,10 @@ webpackJsonp([39], {
                             }, []);
                             if (0 !== e.length) return l.createElement("div", null, l.createElement(S.O, {
                                 className: "ticket-description__description__line-item"
-                            }, e.length, " ", q["Subscriber Emotes:"]()), l.createElement(L.a, {
+                            }, e.length, " ", K["Subscriber Emotes:"]()), l.createElement(W.a, {
                                 emoteSet: {
                                     id: "",
-                                    emotes: Object(H.b)(e)
+                                    emotes: Object(G.b)(e)
                                 },
                                 onClickEmote: void 0,
                                 locked: !1
@@ -5933,20 +5995,20 @@ webpackJsonp([39], {
                     }, l.createElement(S.O, {
                         className: "ticket-description__description__line-item",
                         bold: !0
-                    }, q["Subscription benefits"]())), l.createElement(S.O, {
+                    }, K["Subscription benefits"]())), l.createElement(S.O, {
                         className: "ticket-description__description__line-item"
-                    }, q["Directly support the broadcaster"]()), e.hasAdFree && l.createElement(S.O, {
+                    }, K["Directly support the broadcaster"]()), e.hasAdFree && l.createElement(S.O, {
                         className: "ticket-description__description__line-item"
-                    }, q["Ad-free (with limited exceptions)"]()), l.createElement(S.O, {
+                    }, K["Ad-free (with limited exceptions)"]()), l.createElement(S.O, {
                         className: "ticket-description__description__line-item"
-                    }, q["Chat during subscriber-only mode"]()), e.hasFastChat && l.createElement(S.O, {
+                    }, K["Chat during subscriber-only mode"]()), e.hasFastChat && l.createElement(S.O, {
                         className: "ticket-description__description__line-item"
-                    }, q["Not affected by chat slow mode"]()), e.hasSubonlyVideoArchive && l.createElement(S.O, {
+                    }, K["Not affected by chat slow mode"]()), e.hasSubonlyVideoArchive && l.createElement(S.O, {
                         className: "ticket-description__description__line-item"
-                    }, q["Access to VODs"]()), this.renderSubBadges(), this.renderSubEmotes()))))
+                    }, K["Access to VODs"]()), this.renderSubBadges(), this.renderSubEmotes()))))
                 }, t = s.__decorate([Object(_.d)("TicketDescription")], t)
             }(l.Component)),
-            W = (n("kgE+"), function(e) {
+            q = (n("kgE+"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderTurboBenefit = function(e) {
@@ -6016,19 +6078,19 @@ webpackJsonp([39], {
                     }, t.renderPrice = function() {
                         var e;
                         switch (t.props.product.interval.unit) {
-                            case A.OneTime:
-                                e = z["One Time"]();
+                            case j.OneTime:
+                                e = Q["One Time"]();
                                 break;
-                            case A.Year:
-                                e = z.Year();
+                            case j.Year:
+                                e = Q.Year();
                                 break;
-                            case A.Month:
+                            case j.Month:
                             default:
-                                e = z.Month()
+                                e = Q.Month()
                         }
                         return l.createElement(S.O, {
                             type: S._41.H4
-                        }, Y(t.props.product.price, e))
+                        }, Z(t.props.product.price, e))
                     }, t.renderSubBadges = function() {
                         if (t.props.owner) {
                             var e = t.props.owner.broadcastBadges.filter(function(e) {
@@ -6041,13 +6103,13 @@ webpackJsonp([39], {
                                     return l.createElement(S._4, {
                                         key: e.setID + "/" + e.version,
                                         margin: .5
-                                    }, l.createElement(j.a, {
+                                    }, l.createElement(B.a, {
                                         badge: e
                                     }))
                                 });
                                 return l.createElement(l.Fragment, null, l.createElement(S.O, {
                                     className: "ticket-description__description__line-item"
-                                }, q["Subscriber Badges:"]()), l.createElement(S._4, {
+                                }, K["Subscriber Badges:"]()), l.createElement(S._4, {
                                     display: S.P.Flex,
                                     flexWrap: S.S.Wrap,
                                     justifyContent: S._3.Center
@@ -6065,10 +6127,10 @@ webpackJsonp([39], {
                             }, []);
                             if (0 !== e.length) return l.createElement("div", null, l.createElement(S.O, {
                                 className: "ticket-description__description__line-item"
-                            }, e.length, " ", q["Subscriber Emotes:"]()), l.createElement(L.a, {
+                            }, e.length, " ", K["Subscriber Emotes:"]()), l.createElement(W.a, {
                                 emoteSet: {
                                     id: "",
-                                    emotes: Object(H.b)(e)
+                                    emotes: Object(G.b)(e)
                                 },
                                 onClickEmote: void 0,
                                 locked: !1
@@ -6154,20 +6216,20 @@ webpackJsonp([39], {
                     }, l.createElement(S.O, {
                         className: "ticket-description__description__line-item",
                         bold: !0
-                    }, q["Subscription benefits"]())), l.createElement(S.O, {
+                    }, K["Subscription benefits"]())), l.createElement(S.O, {
                         className: "ticket-description__description__line-item"
-                    }, q["Directly support the broadcaster"]()), e.hasAdFree && l.createElement(S.O, {
+                    }, K["Directly support the broadcaster"]()), e.hasAdFree && l.createElement(S.O, {
                         className: "ticket-description__description__line-item"
-                    }, q["Ad-free (with limited exceptions)"]()), l.createElement(S.O, {
+                    }, K["Ad-free (with limited exceptions)"]()), l.createElement(S.O, {
                         className: "ticket-description__description__line-item"
-                    }, q["Chat during subscriber-only mode"]()), e.hasFastChat && l.createElement(S.O, {
+                    }, K["Chat during subscriber-only mode"]()), e.hasFastChat && l.createElement(S.O, {
                         className: "ticket-description__description__line-item"
-                    }, q["Not affected by chat slow mode"]()), e.hasSubonlyVideoArchive && l.createElement(S.O, {
+                    }, K["Not affected by chat slow mode"]()), e.hasSubonlyVideoArchive && l.createElement(S.O, {
                         className: "ticket-description__description__line-item"
-                    }, q["Access to VODs"]()), this.renderSubBadges(), this.renderSubEmotes())))) : l.createElement("div", null) : this.renderTurbo()
+                    }, K["Access to VODs"]()), this.renderSubBadges(), this.renderSubEmotes())))) : l.createElement("div", null) : this.renderTurbo()
                 }, t = s.__decorate([Object(_.d)("TicketDescription")], t)
             }(l.Component)),
-            G = (n("40wk"), function(e) {
+            z = (n("40wk"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.turboBenefitsList = [{
@@ -6214,19 +6276,19 @@ webpackJsonp([39], {
                     }, t.renderPrice = function() {
                         var e;
                         switch (t.props.product.interval.unit) {
-                            case A.OneTime:
-                                e = z["One Time"]();
+                            case j.OneTime:
+                                e = Q["One Time"]();
                                 break;
-                            case A.Year:
-                                e = z.Year();
+                            case j.Year:
+                                e = Q.Year();
                                 break;
-                            case A.Month:
+                            case j.Month:
                             default:
-                                e = z.Month()
+                                e = Q.Month()
                         }
                         return l.createElement(S.O, {
                             type: S._41.H4
-                        }, Y(t.props.product.price, e))
+                        }, Z(t.props.product.price, e))
                     }, t
                 }
                 return s.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -6266,7 +6328,7 @@ webpackJsonp([39], {
                     }, this.renderPrice()))))
                 }, t = s.__decorate([Object(_.d)("TicketDescription")], t)
             }(l.Component)),
-            V = (n("Mn81"), function(e) {
+            Y = (n("Mn81"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.turboBenefitsList = [{
@@ -6313,19 +6375,19 @@ webpackJsonp([39], {
                     }, t.renderPrice = function() {
                         var e;
                         switch (t.props.product.interval.unit) {
-                            case A.OneTime:
-                                e = z["One Time"]();
+                            case j.OneTime:
+                                e = Q["One Time"]();
                                 break;
-                            case A.Year:
-                                e = z.Year();
+                            case j.Year:
+                                e = Q.Year();
                                 break;
-                            case A.Month:
+                            case j.Month:
                             default:
-                                e = z.Month()
+                                e = Q.Month()
                         }
                         return l.createElement(S.O, {
                             type: S._41.H4
-                        }, Y(t.props.product.price, e))
+                        }, Z(t.props.product.price, e))
                     }, t
                 }
                 return s.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -6365,7 +6427,7 @@ webpackJsonp([39], {
                     }, this.renderPrice()))))
                 }, t = s.__decorate([Object(_.d)("TicketDescription")], t)
             }(l.Component)),
-            q = (n("2dVl"), {
+            K = (n("2dVl"), {
                 "Subscription benefits": function() {
                     return Object(u.d)("Subscription benefits", "TicketDescription")
                 },
@@ -6391,7 +6453,7 @@ webpackJsonp([39], {
                     return Object(u.d)("Subscriber Emotes:", "TicketDescription")
                 }
             }),
-            z = {
+            Q = {
                 "One Time": function() {
                     return Object(u.d)("One Time", "TicketDescription")
                 },
@@ -6402,7 +6464,7 @@ webpackJsonp([39], {
                     return Object(u.d)("Month", "TicketDescription")
                 }
             },
-            Y = function(e, t) {
+            Z = function(e, t) {
                 return Object(u.d)("{price} / {interval}", {
                     price: l.createElement(S.O, {
                         type: S._41.Span,
@@ -6411,7 +6473,7 @@ webpackJsonp([39], {
                     interval: t
                 }, "TicketDescription")
             },
-            K = function(e) {
+            J = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -6419,11 +6481,11 @@ webpackJsonp([39], {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     var e = !this.props.owner && "turbo" === this.props.product.type;
-                    return this.props.mobile && e ? l.createElement(G, s.__assign({}, this.props)) : e ? l.createElement(V, s.__assign({}, this.props)) : this.props.owner && this.props.mobile ? l.createElement(W, s.__assign({}, this.props)) : this.props.owner ? l.createElement(B, s.__assign({}, this.props)) : void 0
+                    return this.props.mobile && e ? l.createElement(z, s.__assign({}, this.props)) : e ? l.createElement(Y, s.__assign({}, this.props)) : this.props.owner && this.props.mobile ? l.createElement(q, s.__assign({}, this.props)) : this.props.owner ? l.createElement(V, s.__assign({}, this.props)) : void 0
                 }, t = s.__decorate([Object(_.d)("TicketDescription")], t)
             }(l.Component),
-            Q = n("Heyg"),
-            Z = function(e) {
+            $ = n("Heyg"),
+            X = function(e) {
                 var t;
                 return t = e.canGift ? l.createElement(S.O, null, Object(u.d)("You are buying a single month {price} Gift Subscription for {recipientName}.", {
                     price: e.price,
@@ -6446,8 +6508,8 @@ webpackJsonp([39], {
                     }
                 }, t)
             },
-            J = n("CIox"),
-            $ = (n("pOYM"), function(e) {
+            ee = n("CIox"),
+            te = (n("pOYM"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.goBackToChannel = function() {
@@ -6522,9 +6584,9 @@ webpackJsonp([39], {
                     }, "GiftSubReceipt"))))
                 }, t
             }(l.Component)),
-            X = Object(J.e)($),
-            ee = n("j6Ui"),
-            te = function(e) {
+            ne = Object(ee.e)(te),
+            ie = n("j6Ui"),
+            re = function(e) {
                 return l.createElement(S._27, {
                     background: S.m.Base,
                     borderMarked: !0,
@@ -6547,7 +6609,7 @@ webpackJsonp([39], {
                     }
                 }, l.createElement(S.O, null, Object(u.d)("You'll be able to subscribe to another channel for free with Twitch Prime 30-days after you last used your free subscription.", "UpgradePrimeWarning"))), l.createElement(S.O, null, Object(u.d)("If you upgrade your subscription, your sub anniversary, sub streaks, and badge tenure will be maintained.", "UpgradePrimeWarning")))
             },
-            ne = function(e) {
+            ae = function(e) {
                 return l.createElement(S._27, {
                     background: S.m.Base,
                     borderMarked: !0,
@@ -6579,12 +6641,12 @@ webpackJsonp([39], {
                     })
                 }, "UpgradeTierWarning"))), l.createElement(S.O, null, Object(u.d)("If you upgrade your subscription, your sub anniversary, sub streaks, and badge tenure will be maintained.", "UpgradeTierWarning")))
             },
-            ie = function(e) {
+            oe = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderOneMonthFree = function() {
                         var e = new Date;
-                        null !== t.props.endsAt && (e = Object(ee.c)(t.props.endsAt));
+                        null !== t.props.endsAt && (e = Object(ie.c)(t.props.endsAt));
                         var n = new Date(e);
                         return n.setMonth(e.getMonth() + 1), l.createElement(S._27, {
                             background: S.m.Base,
@@ -6605,12 +6667,12 @@ webpackJsonp([39], {
                     }, t
                 }
                 return s.__extends(t, e), t.prototype.render = function() {
-                    return l.createElement(S._4, null, this.props.isOneMonthFreeEligible && this.renderOneMonthFree(), this.tierUpgrade && l.createElement(ne, {
+                    return l.createElement(S._4, null, this.props.isOneMonthFreeEligible && this.renderOneMonthFree(), this.tierUpgrade && l.createElement(ae, {
                         originalPrice: this.originalPrice,
                         originalCurrency: "USD",
                         newPrice: this.newPrice,
                         newCurrency: "USD"
-                    }), this.primeUpgrade && l.createElement(te, {
+                    }), this.primeUpgrade && l.createElement(re, {
                         newPrice: this.newPrice,
                         newCurrency: "USD"
                     }), this.props.hasGift && this.props.endsAt && l.createElement(S._27, {
@@ -6621,7 +6683,7 @@ webpackJsonp([39], {
                             y: 1
                         }
                     }, l.createElement(S.O, null, Object(u.d)("You will be charged when your Gift Subscription ends on <x:strong>{date}</x:strong>.", {
-                        date: Object(u.c)(Object(ee.c)(this.props.endsAt), "short"),
+                        date: Object(u.c)(Object(ie.c)(this.props.endsAt), "short"),
                         "x:strong": function(e) {
                             return l.createElement(S.O, {
                                 type: S._41.Span,
@@ -6659,7 +6721,7 @@ webpackJsonp([39], {
                     configurable: !0
                 }), t
             }(l.Component),
-            re = (n("McJK"), function(e) {
+            se = (n("McJK"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.goBackToChannel = function() {
@@ -6742,12 +6804,12 @@ webpackJsonp([39], {
                     }, "PersonalSubReceipt"))))
                 }, t
             }(l.Component)),
-            ae = Object(J.e)(re);
+            ce = Object(ee.e)(se);
         n("gKy9");
         ! function(e) {
             e.Week = "WEEK", e.Month = "MONTH", e.Year = "YEAR", e.OneTime = "ONE_TIME"
-        }(A || (A = {}));
-        var oe = function(e) {
+        }(j || (j = {}));
+        var le = function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
                 return t.state = {
@@ -6811,13 +6873,13 @@ webpackJsonp([39], {
                     })
                 }, t.renderPurchaseInfo = function() {
                     if (!t.purchased) {
-                        if (t.props.isGift) return l.createElement(Z, {
+                        if (t.props.isGift) return l.createElement(X, {
                             canGift: t.props.data.subscriptionProduct.self.checkoutConfigs.canGift,
                             recipientDisplayName: t.props.recipientDisplayName,
                             price: t.props.data.subscriptionProduct.price
                         });
                         var e = t.props.data.subscriptionProduct.self.benefit;
-                        return l.createElement(ie, {
+                        return l.createElement(oe, {
                             price: t.props.data.subscriptionProduct.price,
                             hasGift: e && e.gift.isGift,
                             purchase: t.props.data.subscriptionProduct.self.purchase,
@@ -6828,13 +6890,13 @@ webpackJsonp([39], {
                 }, t.renderReceipt = function() {
                     var e = t.props.data.subscriptionProduct.self.benefit,
                         n = t.props.data.subscriptionProduct.self.purchase.details;
-                    return t.props.data.subscriptionProduct.owner && n && t.state.giftSubPurchased ? l.createElement(X, {
+                    return t.props.data.subscriptionProduct.owner && n && t.state.giftSubPurchased ? l.createElement(ne, {
                         recipientDisplayName: t.props.recipientDisplayName,
                         productOwnerDisplayName: t.props.data.subscriptionProduct.owner.displayName,
                         productOwnerLogin: t.props.data.subscriptionProduct.owner.login,
                         invoicePrice: n.price,
                         invoiceCurrency: "USD"
-                    }) : t.props.data.subscriptionProduct.owner && n && t.purchased ? l.createElement(ae, {
+                    }) : t.props.data.subscriptionProduct.owner && n && t.purchased ? l.createElement(ce, {
                         purchaserDisplayName: t.props.data.currentUser.displayName,
                         productOwnerDisplayName: t.props.data.subscriptionProduct.owner.displayName,
                         productOwnerLogin: t.props.data.subscriptionProduct.owner.login,
@@ -6892,7 +6954,7 @@ webpackJsonp([39], {
                     breakpointMedium: {
                         display: S.P.Flex
                     }
-                }, l.createElement(K, {
+                }, l.createElement(J, {
                     owner: e,
                     product: t
                 })), l.createElement(S._4, {
@@ -6915,11 +6977,11 @@ webpackJsonp([39], {
                     breakpointMedium: {
                         display: S.P.Hide
                     }
-                }, l.createElement(K, {
+                }, l.createElement(J, {
                     owner: e,
                     product: t,
                     mobile: !0
-                })), this.purchased && this.renderReceipt(), !this.purchased && l.createElement(l.Fragment, null, this.renderPurchaseInfo(), l.createElement(M, {
+                })), this.purchased && this.renderReceipt(), !this.purchased && l.createElement(l.Fragment, null, this.renderPurchaseInfo(), l.createElement(H, {
                     onSuccess: this.completePurchase,
                     configs: n,
                     trackPaymentFormInteraction: this.trackPaymentFormInteraction
@@ -6940,7 +7002,7 @@ webpackJsonp([39], {
                 },
                 enumerable: !0,
                 configurable: !0
-            }), t = s.__decorate([Object(_.d)("CheckoutPayments"), Object(d.a)(Q, {
+            }), t = s.__decorate([Object(_.d)("CheckoutPayments"), Object(d.a)($, {
                 options: function(e) {
                     return {
                         fetchPolicy: "network-only",
@@ -6954,7 +7016,7 @@ webpackJsonp([39], {
                 }
             })], t)
         }(l.Component);
-        var se = Object(g.b)(function(e) {
+        var ue = Object(g.b)(function(e) {
                 return {
                     isLoggedIn: Object(b.d)(e)
                 }
@@ -6964,11 +7026,11 @@ webpackJsonp([39], {
                         return Object(y.f)(v.a.DashboardPage)
                     }
                 }, e)
-            })(oe),
-            ce = n("tnNl"),
-            le = n("TP6L"),
-            ue = n("EaWz"),
-            de = function(e) {
+            })(le),
+            de = n("tnNl"),
+            pe = n("TP6L"),
+            me = n("EaWz"),
+            fe = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {}, t
@@ -6996,19 +7058,19 @@ webpackJsonp([39], {
                         position: S._11.Relative,
                         fullWidth: !0,
                         fullHeight: !0
-                    }, l.createElement(le.a, null), l.createElement(S._4, {
+                    }, l.createElement(pe.a, null), l.createElement(S._4, {
                         breakpointExtraSmall: {
                             display: S.P.Inline
                         },
                         breakpointMedium: {
                             display: S.P.Hide
                         }
-                    }, l.createElement(ce.a, null)), l.createElement(S._4, {
+                    }, l.createElement(de.a, null)), l.createElement(S._4, {
                         display: S.P.Flex,
                         flexWrap: S.S.NoWrap,
                         position: S._11.Relative,
                         fullHeight: !0
-                    }, l.createElement(se, {
+                    }, l.createElement(ue, {
                         productShortName: e,
                         isGift: !(!t || !t.id),
                         recipientID: t && t.id,
@@ -7018,7 +7080,7 @@ webpackJsonp([39], {
                     destination: m.a.SubsCheckoutPage
                 }), Object(p.a)({
                     location: f.PageviewLocation.SubsCheckoutPage
-                }), Object(d.a)(ue, {
+                }), Object(d.a)(me, {
                     options: function(e) {
                         return {
                             fetchPolicy: "cache-first",
@@ -7033,7 +7095,7 @@ webpackJsonp([39], {
                 })], t)
             }(l.Component);
         n.d(t, "SubsCheckoutPage", function() {
-            return de
+            return fe
         })
     },
     I7cV: function(e, t, n) {
@@ -16046,4 +16108,4 @@ webpackJsonp([39], {
             }(r.Component))
     }
 });
-//# sourceMappingURL=pages.subs-checkout.components.subs-checkout-page-f987514b252307b67ccfe5cc9d6debaa.js.map
+//# sourceMappingURL=pages.subs-checkout.components.subs-checkout-page-f30319719d64451b8802e3b2a43b3c01.js.map

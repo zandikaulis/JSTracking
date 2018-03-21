@@ -3386,11 +3386,11 @@ webpackJsonp([48], {
                             }
                         }, t[q.FOLLOWING_BASIC] = function() {
                             return X.a.wrap(function() {
-                                return n.e(72).then(n.bind(null, "BmWY"))
+                                return n.e(73).then(n.bind(null, "BmWY"))
                             }, "FinishWatchingTower")(i)
                         }, t[q.FOLLOWING_ADVANCED] = function() {
                             return X.a.wrap(function() {
-                                return n.e(72).then(n.bind(null, "BmWY"))
+                                return n.e(73).then(n.bind(null, "BmWY"))
                             }, "FinishWatchingTower")(a)
                         }, t),
                         loader: function() {
@@ -3494,7 +3494,7 @@ webpackJsonp([48], {
                         },
                         enabled: function() {
                             return X.a.wrap(function() {
-                                return n.e(82).then(n.bind(null, "IwGL"))
+                                return n.e(83).then(n.bind(null, "IwGL"))
                             }, "LatestVideosFromFollowedCarousel")(e)
                         }
                     },
@@ -3684,7 +3684,7 @@ webpackJsonp([48], {
                 })], t)
             }(d.Component),
             se = function() {
-                return n.e(85).then(n.bind(null, "oms2"))
+                return n.e(86).then(n.bind(null, "oms2"))
             },
             de = function(e) {
                 function t() {
@@ -4807,7 +4807,7 @@ webpackJsonp([48], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(89).then(n.bind(null, "tk3B"))];
+                                return [4, n.e(90).then(n.bind(null, "tk3B"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -4819,7 +4819,7 @@ webpackJsonp([48], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(88).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(89).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -4831,7 +4831,7 @@ webpackJsonp([48], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(87).then(n.bind(null, "Dan5"))];
+                                return [4, n.e(88).then(n.bind(null, "Dan5"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -4843,7 +4843,7 @@ webpackJsonp([48], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(86).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(87).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -9283,4 +9283,4 @@ webpackJsonp([48], {
     },
     "zH/G": function(e, t) {}
 });
-//# sourceMappingURL=pages.following-d0c8beb11157d6bb50c6d9fc9215e769.js.map
+//# sourceMappingURL=pages.following-78d5aa029636bc95836f554647b26f06.js.map

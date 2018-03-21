@@ -6288,13 +6288,19 @@ webpackJsonp([51], {
                                 login: c.createElement("span", {
                                     onClick: t.promotionCardClick.bind(t, "display_name")
                                 }, c.createElement(_.a, {
-                                    to: "/" + t.props.item.broadcaster.login,
+                                    to: {
+                                        pathname: "/" + t.props.item.broadcaster.login,
+                                        state: N
+                                    },
                                     "data-a-target": "carousel-broadcaster-displayname"
                                 }, Object(y.a)(t.props.item.broadcaster.login, t.props.item.broadcaster.displayName))),
                                 game: c.createElement("span", {
                                     onClick: t.promotionCardClick.bind(t, "game_name")
                                 }, c.createElement(_.a, {
-                                    to: "/directory/game/" + t.props.item.content.gameName,
+                                    to: {
+                                        pathname: "/directory/game/" + t.props.item.content.gameName,
+                                        state: N
+                                    },
                                     "data-a-target": "carousel-broadcaster-game-name"
                                 }, t.props.item.content.gameName))
                             }, "VerticalCarouselPlayer"),
@@ -7606,4 +7612,4 @@ webpackJsonp([51], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.front-d1d8efc1f13df1235e9725cac568fa38.js.map
+//# sourceMappingURL=pages.front-415f803b42aac10856c2d95f6b856e9d.js.map

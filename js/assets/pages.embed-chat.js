@@ -10579,10 +10579,12 @@ webpackJsonp([35], {
                             }, Object(v.l)(e)) : null;
                         case y.b.Subscription:
                             return a.createElement(D._4, {
+                                "data-a-target": "chat-subscription-message",
                                 className: "chat-line__subscribe"
                             }, Object(v.s)(e));
                         case y.b.SubGift:
                             return a.createElement(D._4, {
+                                "data-a-target": "chat-gift-subscription-message",
                                 className: "chat-line__subscribe"
                             }, Object(v.r)(e));
                         case y.b.BitsCharity:
@@ -17282,9 +17284,9 @@ webpackJsonp([35], {
                                 var n = (e.data || {}).claimPrimeOffer || {},
                                     r = n.self || {},
                                     o = n.error || {};
-                                if (r && a && t.setState({
+                                if (r && r.hasEntitlement && a && (t.setState({
                                         claimData: r.claimData
-                                    }), t.markAsClaimedInLocalStorage(i), o && o.code) {
+                                    }), t.markAsClaimedInLocalStorage(i)), o && o.code) {
                                     var s = k.a[o.code];
                                     t.setState({
                                         claiming: !1,
@@ -17728,7 +17730,8 @@ webpackJsonp([35], {
                         color: p.J.Base,
                         className: "blue-bar",
                         position: p._11.Relative,
-                        fullWidth: !0
+                        fullWidth: !0,
+                        zIndex: p._53.Above
                     }, o.createElement(p._4, {
                         className: "blue-bar__bar",
                         display: p.P.Flex,
@@ -44867,4 +44870,4 @@ webpackJsonp([35], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.embed-chat-6f1c90780d109ec8ffca9c97a0310cd8.js.map
+//# sourceMappingURL=pages.embed-chat-76b3d1ee96403c2a543747a69f8ed163.js.map

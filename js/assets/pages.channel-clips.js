@@ -8692,10 +8692,12 @@ webpackJsonp([41], {
                             }, Object(v.l)(e)) : null;
                         case y.b.Subscription:
                             return a.createElement(w._4, {
+                                "data-a-target": "chat-subscription-message",
                                 className: "chat-line__subscribe"
                             }, Object(v.s)(e));
                         case y.b.SubGift:
                             return a.createElement(w._4, {
+                                "data-a-target": "chat-gift-subscription-message",
                                 className: "chat-line__subscribe"
                             }, Object(v.r)(e));
                         case y.b.BitsCharity:
@@ -37615,4 +37617,4 @@ webpackJsonp([41], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-clips-09822977b30bc51afaed513c5718b81f.js.map
+//# sourceMappingURL=pages.channel-clips-65ac82ec8419f71fc848157f44dfd151.js.map

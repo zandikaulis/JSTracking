@@ -1805,15 +1805,15 @@ webpackJsonp([40], {
             M = n("82Ta"),
             B = n("yTC+"),
             W = "whispers-report-harassment-button",
-            V = "whispers-report-spam-button",
-            H = function(e) {
+            H = "whispers-report-spam-button",
+            V = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderReportSpamButton = function() {
                         if (t.isBlocked) return null;
                         var e = Object(p.d)("Report Spam", "ThreadSettings");
                         return r.createElement(A._2, {
-                            "data-test-selector": V,
+                            "data-test-selector": H,
                             ariaLabel: e,
                             onClick: t.reportUserSpam
                         }, r.createElement(A._4, {
@@ -1980,7 +1980,7 @@ webpackJsonp([40], {
                 name: "setMuteThread"
             }), Object(f.a)(M, {
                 name: "reportWhisperThread"
-            }), Object(P.a)(), Object(j.a)())(H),
+            }), Object(P.a)(), Object(j.a)())(V),
             q = n("GxF8");
         var z = n("N5sm");
         var K = n("l4QG");
@@ -5471,8 +5471,8 @@ webpackJsonp([40], {
                     }
                 }, t, n))
             },
-            V = n("YH6m"),
-            H = function(e) {
+            H = n("YH6m"),
+            V = function(e) {
                 return a.createElement(y._4, {
                     padding: 2
                 }, a.createElement(y._4, null, a.createElement(y._4, {
@@ -5492,7 +5492,7 @@ webpackJsonp([40], {
                 }, a.createElement(y._4, {
                     alignItems: y.c.Center,
                     display: y.P.InlineFlex
-                }, a.createElement(y.O, null, Object(c.d)("Back", "PaidSubOptions"))))), a.createElement(V.a, {
+                }, a.createElement(y.O, null, Object(c.d)("Back", "PaidSubOptions"))))), a.createElement(H.a, {
                     canPrimeSubscribe: !1,
                     channelDisplayName: e.channelDisplayName,
                     isSubscribed: e.isSubscribed,
@@ -5524,7 +5524,7 @@ webpackJsonp([40], {
                     return a.createElement(y._4, null, a.createElement(y.O, {
                         type: y._41.H4,
                         bold: !0
-                    }, e), a.createElement(V.a, {
+                    }, e), a.createElement(H.a, {
                         authToken: this.props.authToken,
                         onSubscribedWithPrime: this.props.onSubscribedWithPrime,
                         subLogin: this.props.channelLogin,
@@ -5807,7 +5807,7 @@ webpackJsonp([40], {
                     }, t.onSelectTierTab = function(e) {
                         if (!t.props.data.user || !t.props.data.user.subscriptionProducts) return null;
                         var n, i;
-                        t.tabToSubProduct || (t.tabToSubProduct = (n = t.props.data.user.subscriptionProducts, (i = new Map).set(V.b.Prime, null), n.forEach(function(e, t) {
+                        t.tabToSubProduct || (t.tabToSubProduct = (n = t.props.data.user.subscriptionProducts, (i = new Map).set(H.b.Prime, null), n.forEach(function(e, t) {
                             i.set(t + 1, e)
                         }), i));
                         var r = t.tabToSubProduct.get(e);
@@ -5919,7 +5919,7 @@ webpackJsonp([40], {
                         reportSubMenuAction: this.props.reportSubMenuAction
                     }) : null
                 }, t.prototype.getGiftOptionsPage = function() {
-                    return this.props.data.user && this.props.data.user.subscriptionProducts ? a.createElement(H, {
+                    return this.props.data.user && this.props.data.user.subscriptionProducts ? a.createElement(V, {
                         onBack: this.goToPreviousPage,
                         channelDisplayName: this.props.data.user.displayName,
                         onSelectTierTab: this.onSelectTierTab,
@@ -5931,7 +5931,7 @@ webpackJsonp([40], {
                         header: Object(c.d)("Choose A Gift Subscription", "SubscribeBalloon")
                     }) : null
                 }, t.prototype.getPaidOptionsPage = function(e) {
-                    return this.props.data.user && this.props.data.user.subscriptionProducts ? a.createElement(H, {
+                    return this.props.data.user && this.props.data.user.subscriptionProducts ? a.createElement(V, {
                         onBack: this.goToPreviousPage,
                         channelDisplayName: this.props.data.user.displayName,
                         onSelectTierTab: this.onSelectTierTab,
@@ -7432,9 +7432,9 @@ webpackJsonp([40], {
                                 var n = (e.data || {}).claimPrimeOffer || {},
                                     a = n.self || {},
                                     s = n.error || {};
-                                if (a && r && t.setState({
+                                if (a && a.hasEntitlement && r && (t.setState({
                                         claimData: a.claimData
-                                    }), t.markAsClaimedInLocalStorage(i), s && s.code) {
+                                    }), t.markAsClaimedInLocalStorage(i)), s && s.code) {
                                     var o = k.a[s.code];
                                     t.setState({
                                         claiming: !1,
@@ -7705,8 +7705,8 @@ webpackJsonp([40], {
                 }
             })(M),
             W = n("tTbW"),
-            V = (n("9856"), n("wjhu")),
-            H = function(e) {
+            H = (n("9856"), n("wjhu")),
+            V = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -7820,7 +7820,7 @@ webpackJsonp([40], {
                             }
                         }
                     }
-                }), Object(c.a)(V, {
+                }), Object(c.a)(H, {
                     name: "userData"
                 }), Object(p.d)("PrimeOffers", {
                     autoReportInteractive: !0
@@ -7830,7 +7830,7 @@ webpackJsonp([40], {
                 return {
                     firstPageLoaded: !!e.session.firstPageLoaded
                 }
-            })(H),
+            })(V),
             q = (n("ukY1"), n("F1v6")),
             z = function(e) {
                 function t() {
@@ -7878,7 +7878,8 @@ webpackJsonp([40], {
                         color: m.J.Base,
                         className: "blue-bar",
                         position: m._11.Relative,
-                        fullWidth: !0
+                        fullWidth: !0,
+                        zIndex: m._53.Above
                     }, s.createElement(m._4, {
                         className: "blue-bar__bar",
                         display: m.P.Flex,
@@ -11610,60 +11611,53 @@ webpackJsonp([40], {
     FroJ: function(e, t) {},
     G8hb: function(e, t, n) {
         "use strict";
-        var i, r, a, s;
-
-        function o(e) {
-            return {
-                id: e.id,
-                authorName: e.authorName,
-                clientID: e.clientID,
-                description: e.description,
-                iconURL: e.iconURL,
-                name: e.name,
-                privacyPolicyURL: e.privacyPolicyURL,
-                requiredBroadcasterAbilities: e.requiredBroadcasterAbilities,
-                screenshotURLs: e.screenshotURLs,
-                self: e.self,
-                SKU: e.SKU,
-                state: e.state,
-                summary: e.summary,
-                supportedAnchorTypes: new Set([e.anchor]),
-                supportEmail: e.supportEmail,
-                termsURL: e.termsURL,
-                vendorCode: e.vendorCode,
-                version: e.version
-            }
-        }
         n.d(t, "a", function() {
-                return i
-            }), n.d(t, "c", function() {
-                return r
-            }), n.d(t, "b", function() {
-                return a
-            }), n.d(t, "d", function() {
-                return s
-            }), t.f = o, t.e = function(e) {
-                return {
-                    id: e.id,
-                    activationConfig: e.activationConfig,
-                    extension: o(e.extension),
-                    self: e.self
+            return i
+        }), n.d(t, "c", function() {
+            return r
+        }), n.d(t, "b", function() {
+            return a
+        }), n.d(t, "d", function() {
+            return s
+        }), t.g = function(e) {
+            return !(!e.vendorCode || !e.SKU)
+        }, t.e = function(e) {
+            return Object.keys(e.views).reduce(function(t, n) {
+                if (!e.views[n]) return t;
+                switch (n) {
+                    case "component":
+                        t.push(a.Component);
+                        break;
+                    case "panel":
+                        t.push(a.Panel);
+                        break;
+                    case "videoOverlay":
+                        t.push(a.VideoOverlay);
+                        break;
+                    default:
+                        return t
                 }
-            }, t.g = function(e) {
-                return !(!e.vendorCode || !e.SKU)
-            },
-            function(e) {
-                e.Active = "ACTIVE", e.Inactive = "INACTIVE", e.RejectedPermissions = "REJECTED_PERMISSIONS"
-            }(i || (i = {})),
-            function(e) {
-                e.InTest = "IN_TEST", e.ReadyForReview = "READY_FOR_REVIEW", e.InReview = "IN_REVIEW", e.Rejected = "REJECTED", e.Approved = "APPROVED", e.Released = "RELEASED", e.Deprecated = "DEPRECATED", e.PendingAction = "PENDING_ACTION", e.Uploading = "UPLOADING", e.AssetsUploaded = "ASSETS_UPLOADED", e.Deleted = "DELETED"
-            }(r || (r = {})),
-            function(e) {
-                e.Hidden = "HIDDEN", e.Panel = "PANEL", e.VideoOverlay = "VIDEO_OVERLAY"
-            }(a || (a = {})),
-            function(e) {
-                e.None = "NONE", e.PromptForPermissions = "PROMPT_FOR_PERMISSIONS"
-            }(s || (s = {}))
+                return t
+            }, [])
+        }, t.f = function(e) {
+            var t = [o.ExtensionPlatform.Web];
+            e.views.mobile && e.views.mobile.viewerURL && t.push(o.ExtensionPlatform.Mobile);
+            return t
+        };
+        var i, r, a, s, o = n("BwgW");
+        n.n(o);
+        ! function(e) {
+            e.Active = "ACTIVE", e.Inactive = "INACTIVE", e.RejectedPermissions = "REJECTED_PERMISSIONS"
+        }(i || (i = {})),
+        function(e) {
+            e.InTest = "IN_TEST", e.ReadyForReview = "READY_FOR_REVIEW", e.InReview = "IN_REVIEW", e.Rejected = "REJECTED", e.Approved = "APPROVED", e.Released = "RELEASED", e.Deprecated = "DEPRECATED", e.PendingAction = "PENDING_ACTION", e.Uploading = "UPLOADING", e.AssetsUploaded = "ASSETS_UPLOADED", e.Deleted = "DELETED"
+        }(r || (r = {})),
+        function(e) {
+            e.Component = "COMPONENT", e.Hidden = "HIDDEN", e.Panel = "PANEL", e.VideoOverlay = "VIDEO_OVERLAY"
+        }(a || (a = {})),
+        function(e) {
+            e.None = "NONE", e.PromptForPermissions = "PROMPT_FOR_PERMISSIONS"
+        }(s || (s = {}))
     },
     GHQc: function(e, t) {},
     GazO: function(e, t) {},
@@ -12038,7 +12032,7 @@ webpackJsonp([40], {
                     }
                 }, e[i.ENABLED] = function() {
                     return l.a.wrap(function() {
-                        return n.e(59).then(n.bind(null, "CNsG"))
+                        return n.e(60).then(n.bind(null, "CNsG"))
                     }, "VerifyEmailBar", {
                         failSilently: !0,
                         placeholder: null
@@ -14561,15 +14555,15 @@ webpackJsonp([40], {
                     if (e.activity.type !== A.a.Playing && t.activity.type === A.a.Playing) return 1;
                     if (e.activity.type === A.a.Playing && t.activity.type === A.a.Playing) return W(e, t)
                 }
-                return H(e, t)
+                return V(e, t)
             }) : []
         }
 
         function W(e, t) {
-            return e.availability || t.availability ? e.availability && !t.availability ? -1 : !e.availability && t.availability ? 1 : e.availability === M.a.Online && t.availability !== M.a.Online ? -1 : e.availability !== M.a.Online && t.availability === M.a.Online ? 1 : e.availability === M.a.Online && t.availability === M.a.Online ? H(e, t) : e.availability === M.a.Idle && t.availability !== M.a.Idle ? -1 : e.availability !== M.a.Idle && t.availability === M.a.Idle ? 1 : e.availability === M.a.Idle && t.availability === M.a.Idle ? H(e, t) : e.availability === M.a.Busy && t.availability !== M.a.Busy ? -1 : e.availability !== M.a.Busy && t.availability === M.a.Busy ? 1 : (e.availability === M.a.Busy && (t.availability, M.a.Busy), H(e, t)) : -1
+            return e.availability || t.availability ? e.availability && !t.availability ? -1 : !e.availability && t.availability ? 1 : e.availability === M.a.Online && t.availability !== M.a.Online ? -1 : e.availability !== M.a.Online && t.availability === M.a.Online ? 1 : e.availability === M.a.Online && t.availability === M.a.Online ? V(e, t) : e.availability === M.a.Idle && t.availability !== M.a.Idle ? -1 : e.availability !== M.a.Idle && t.availability === M.a.Idle ? 1 : e.availability === M.a.Idle && t.availability === M.a.Idle ? V(e, t) : e.availability === M.a.Busy && t.availability !== M.a.Busy ? -1 : e.availability !== M.a.Busy && t.availability === M.a.Busy ? 1 : (e.availability === M.a.Busy && (t.availability, M.a.Busy), V(e, t)) : -1
         }
 
-        function V(e, t, n, i) {
+        function H(e, t, n, i) {
             var r = e.slice(),
                 a = new Set,
                 s = r.filter(function(e) {
@@ -14626,7 +14620,7 @@ webpackJsonp([40], {
             return o.concat(c)
         }
 
-        function H(e, t) {
+        function V(e, t) {
             if (!e.node && !t.node) return 0;
             if (e.node && !t.node) return -1;
             if (t.node && !e.node) return 1;
@@ -14678,7 +14672,7 @@ webpackJsonp([40], {
                                     }
                             }), t
                         }(r);
-                        var a = V(n, i, t.followedVideoDict, e.sortByRelevance);
+                        var a = H(n, i, t.followedVideoDict, e.sortByRelevance);
                         t.setState({
                             sortedFollows: a
                         })
@@ -17314,10 +17308,10 @@ webpackJsonp([40], {
             p = n("T8ns"),
             m = n("Odds"),
             h = (n("w+Qa"), l.a.wrap(function() {
-                return n.e(80).then(n.bind(null, "kd/b"))
+                return n.e(81).then(n.bind(null, "kd/b"))
             }, "SubsLandingPage")),
             f = l.a.wrap(function() {
-                return n.e(81).then(n.bind(null, "uy5s"))
+                return n.e(82).then(n.bind(null, "uy5s"))
             }, "SubsBroadcasterPage"),
             g = function(e) {
                 function t() {
@@ -17482,14 +17476,6 @@ webpackJsonp([40], {
                                 kind: "Field",
                                 name: {
                                     kind: "Name",
-                                    value: "anchor"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
                                     value: "authorName"
                                 },
                                 arguments: [],
@@ -17626,6 +17612,118 @@ webpackJsonp([40], {
                                 },
                                 arguments: [],
                                 directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "views"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "component"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "viewerURL"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }]
+                                        }
+                                    }, {
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "hidden"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "viewerURL"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }]
+                                        }
+                                    }, {
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "mobile"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "viewerURL"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }]
+                                        }
+                                    }, {
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "panel"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "viewerURL"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }]
+                                        }
+                                    }, {
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "videoOverlay"
+                                        },
+                                        arguments: [],
+                                        directives: [],
+                                        selectionSet: {
+                                            kind: "SelectionSet",
+                                            selections: [{
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "viewerURL"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }]
+                                        }
+                                    }]
+                                }
                             }]
                         }
                     }, {
@@ -17713,11 +17811,11 @@ webpackJsonp([40], {
             }],
             loc: {
                 start: 0,
-                end: 450
+                end: 566
             }
         };
         n.loc.source = {
-            body: "query ExtensionPage_ExtensionDetails($extensionID: ID! $extensionVersion: String $isLoggedIn: Boolean!) {\nextension(id: $extensionID version: $extensionVersion) {\nid\nanchor\nauthorName\nclientID\ndescription\niconURL\nname\nprivacyPolicyURL\nrequiredBroadcasterAbilities\nscreenshotURLs\nself {\ncanInstall\n}\nSKU\nstate\nsummary\nsupportEmail\ntermsURL\nvendorCode\nversion\n}\ncurrentUser @include(if: $isLoggedIn) {\nid\ninstalledExtensions {\nid\nextension {\nid\n}\n}\n}\n}",
+            body: "query ExtensionPage_ExtensionDetails($extensionID: ID! $extensionVersion: String $isLoggedIn: Boolean!) {\nextension(id: $extensionID version: $extensionVersion) {\nid\nauthorName\nclientID\ndescription\niconURL\nname\nprivacyPolicyURL\nrequiredBroadcasterAbilities\nscreenshotURLs\nself {\ncanInstall\n}\nSKU\nstate\nsummary\nsupportEmail\ntermsURL\nvendorCode\nversion\nviews {\ncomponent {\nviewerURL\n}\nhidden {\nviewerURL\n}\nmobile {\nviewerURL\n}\npanel {\nviewerURL\n}\nvideoOverlay {\nviewerURL\n}\n}\n}\ncurrentUser @include(if: $isLoggedIn) {\nid\ninstalledExtensions {\nid\nextension {\nid\n}\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -18284,8 +18382,8 @@ webpackJsonp([40], {
                     return r.createElement(g._4, null, r.createElement("p", null, Object(f.d)("Sorry, something went wrong fetching this conversation.", "WhisperThreadListItem")))
                 }, t
             }(r.Component)),
-            V = n("7miU"),
-            H = n("n9f8"),
+            H = n("7miU"),
+            V = n("n9f8"),
             G = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
@@ -18293,11 +18391,11 @@ webpackJsonp([40], {
                         var e = Object(P.a)({
                             markAllAsRead: !0
                         });
-                        n.props.markAllWhispersAsRead && (Object(V.i)(), n.props.markAllWhispersAsRead(e)), n.props.onMarkAllMessagesRead && n.props.onMarkAllMessagesRead()
+                        n.props.markAllWhispersAsRead && (Object(H.i)(), n.props.markAllWhispersAsRead(e)), n.props.onMarkAllMessagesRead && n.props.onMarkAllMessagesRead()
                     }, n.toggleDoNotDisturb = function() {
-                        n.state.doNotDisturb ? (f.m.set("whisperDoNotDisturb", !1), Object(V.f)(), n.setState({
+                        n.state.doNotDisturb ? (f.m.set("whisperDoNotDisturb", !1), Object(H.f)(), n.setState({
                             doNotDisturb: !1
-                        })) : (f.m.set("whisperDoNotDisturb", !0), Object(V.g)(), n.setState({
+                        })) : (f.m.set("whisperDoNotDisturb", !0), Object(H.g)(), n.setState({
                             doNotDisturb: !0
                         }))
                     }, n.state = {
@@ -18329,7 +18427,7 @@ webpackJsonp([40], {
                             x: 1
                         }
                     }, t)))
-                }, t = i.__decorate([Object(O.a)(H, {
+                }, t = i.__decorate([Object(O.a)(V, {
                     name: "markAllWhispersAsRead"
                 })], t)
             }(r.Component),
@@ -18417,11 +18515,11 @@ webpackJsonp([40], {
                             if (null !== n.props.currentUserID && i !== n.props.currentUserID) {
                                 n.handleClose(), n.clearSearchText();
                                 var r = Object(q.a)(n.props.currentUserID, i);
-                                Object(V.e)({
+                                Object(H.e)({
                                     threadID: r,
                                     targetUserlogin: e.login,
                                     searchResultRank: t
-                                }), Object(V.b)({
+                                }), Object(H.b)({
                                     searchResultRank: t,
                                     searchQuery: n.state.searchText,
                                     isConversation: !1
@@ -18732,7 +18830,7 @@ webpackJsonp([40], {
                                     }
                                 }
                             });
-                            n.props.archiveThread && (n.props.closeThread(e), n.props.data.currentUser && Object(V.a)(e), n.props.archiveThread(t))
+                            n.props.archiveThread && (n.props.closeThread(e), n.props.data.currentUser && Object(H.a)(e), n.props.archiveThread(t))
                         }
                     }, n.selectThread = function(e) {
                         n.props.openThread({
@@ -18901,7 +18999,7 @@ webpackJsonp([40], {
                                         var r = i.node.participants.find(function(e) {
                                             return !!e && e.id === "" + t.data_object.from_id
                                         });
-                                        r && Object(V.l)({
+                                        r && Object(H.l)({
                                             targetUserLogin: r.login,
                                             threadID: t.data_object.thread_id
                                         })
@@ -19067,9 +19165,18 @@ webpackJsonp([40], {
                     onClick: s
                 }, Object(f.d)("Install", "ExtensionPage")))
             },
-            Pe = n("nP5L"),
-            De = function(e) {
-                var t = e.extension;
+            Pe = n("BwgW"),
+            De = n("nP5L"),
+            Ie = n("VHHT"),
+            xe = function(e) {
+                var t = e.extension,
+                    n = Object(Ee.e)(t).map(function(e) {
+                        return Object(De.a)(e, !1)
+                    }).concat(Object(Ee.f)(t).filter(function(e) {
+                        return e !== Pe.ExtensionPlatform.Web
+                    }).map(function(e) {
+                        return Object(Ie.a)(e, !1)
+                    }));
                 return r.createElement(g._27, {
                     background: g.m.Base,
                     border: !0,
@@ -19111,8 +19218,9 @@ webpackJsonp([40], {
                     }, t.supportEmail)
                 }, "ExtensionDetails")), r.createElement(g.O, {
                     type: g._41.P
-                }, Object(f.d)("Type: {extensionType}", {
-                    extensionType: Object(Pe.a)(Array.from(t.supportedAnchorTypes)[0], !1)
+                }, Object(f.d)("{typesCount, plural, one {Type: {types}} other {Types: {types}}}", {
+                    types: n.join(", "),
+                    typesCount: n.length
                 }, "ExtensionDetails")), "" !== t.privacyPolicyURL && r.createElement(g.O, {
                     type: g._41.P
                 }, Object(f.d)("Privacy Policy: {privacyPolicyURL}", {
@@ -19163,8 +19271,8 @@ webpackJsonp([40], {
                     }, Object(f.d)("Amazon's Twitch Customer Service", "ExtensionDetails"))
                 }, "ExtensionDetails"))))
             },
-            Ie = n("Rb5r"),
-            xe = (n("GazO"), function(e) {
+            Fe = n("Rb5r"),
+            Re = (n("GazO"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -19279,9 +19387,9 @@ webpackJsonp([40], {
                                                     id: c.extension.id
                                                 }
                                             }), e
-                                        }, Object(P.d)(Ie, i.__assign({}, Fe(this.props)), d), a({
+                                        }, Object(P.d)(Fe, i.__assign({}, Ue(this.props)), d), a({
                                             login: r,
-                                            extension: Object(Ee.f)(c.extension)
+                                            extension: c.extension
                                         })), [3, 4];
                                     case 3:
                                         return u.sent(), s(), [3, 4];
@@ -19300,7 +19408,7 @@ webpackJsonp([40], {
                             if (i) {
                                 t.props.showUninstallModal({
                                     extensionName: n.name,
-                                    isExtensionMonetized: Object(Ee.g)(Object(Ee.f)(n)),
+                                    isExtensionMonetized: Object(Ee.g)(n),
                                     onConfirm: function() {
                                         return t.uninstallExtension(i.id)
                                     }
@@ -19323,7 +19431,7 @@ webpackJsonp([40], {
                                             return e.currentUser && (e.currentUser.installedExtensions = e.currentUser.installedExtensions.filter(function(e) {
                                                 return e.id !== r
                                             })), e
-                                        }, Object(P.d)(Ie, i.__assign({}, Fe(this.props)), a)), [3, 4];
+                                        }, Object(P.d)(Fe, i.__assign({}, Ue(this.props)), a)), [3, 4];
                                     case 3:
                                         return s.sent(), t(), [3, 4];
                                     case 4:
@@ -19368,7 +19476,7 @@ webpackJsonp([40], {
                         padding: 4
                     }, a, this.renderPlaceholders());
                     if (!t.extension) return r.createElement(be.a, null);
-                    var s = Object(Ee.f)(t.extension);
+                    var s = t.extension;
                     return r.createElement(g._4, {
                         padding: 4
                     }, a, r.createElement(g._27, {
@@ -19419,13 +19527,13 @@ webpackJsonp([40], {
                         items: this.renderScreenshots(s)
                     }))), r.createElement(g.K, {
                         cols: 5
-                    }, r.createElement(De, {
+                    }, r.createElement(xe, {
                         extension: s
                     })))))
                 }, t
             }(r.Component));
 
-        function Fe(e) {
+        function Ue(e) {
             var t = e.match,
                 n = e.isLoggedIn,
                 i = t.params.extensionID.split("-");
@@ -19435,22 +19543,22 @@ webpackJsonp([40], {
                 isLoggedIn: n
             }
         }
-        var Re = Object(ve.compose)(Object(L.d)("ExtensionDetailsPage", {
+        var je = Object(ve.compose)(Object(L.d)("ExtensionDetailsPage", {
             destination: ye.a.ExtensionDetails
         }), Object(ke.a)({
             location: _e.PageviewLocation.ExtensionDetails
-        }), Object(O.a)(Ie, {
+        }), Object(O.a)(Fe, {
             options: function(e) {
                 return {
-                    variables: i.__assign({}, Fe(e))
+                    variables: i.__assign({}, Ue(e))
                 }
             }
         }), Object(O.a)(Ne, {
             name: "installExtension"
         }), Object(O.a)(Ce, {
             name: "uninstallExtension"
-        }))(xe);
-        var Ue = Object(c.b)(function(e) {
+        }))(Re);
+        var Le = Object(c.b)(function(e) {
                 var t = Object(p.d)(e),
                     n = Object(p.c)(e);
                 return {
@@ -19475,131 +19583,134 @@ webpackJsonp([40], {
                         return Object(pe.d)(ge.a, t)
                     }
                 }, e)
-            })(Re),
-            je = oe.a.wrap(function() {
+            })(je),
+            Ae = oe.a.wrap(function() {
                 return n.e(54).then(n.bind(null, "8U1+"))
             }, "AnonFrontPage"),
-            Le = oe.a.wrap(function() {
+            Me = oe.a.wrap(function() {
                 return n.e(53).then(n.bind(null, "Dd84"))
             }, "BrowseRootPage"),
-            Ae = oe.a.wrap(function() {
+            Be = oe.a.wrap(function() {
                 return n.e(41).then(n.bind(null, "gZGZ"))
             }, "ChannelClipsPage"),
-            Me = oe.a.wrap(function() {
-                return n.e(49).then(n.bind(null, "zfLI"))
+            We = oe.a.wrap(function() {
+                return n.e(50).then(n.bind(null, "zfLI"))
             }, "ChannelCollectionsPage"),
-            Be = oe.a.wrap(function() {
+            He = oe.a.wrap(function() {
                 return n.e(42).then(n.bind(null, "lW0T"))
             }, "ChannelEventsPage"),
-            We = oe.a.wrap(function() {
+            Ve = oe.a.wrap(function() {
                 return n.e(44).then(n.bind(null, "35Zp"))
             }, "ChannelFollowersPage"),
-            Ve = oe.a.wrap(function() {
+            Ge = oe.a.wrap(function() {
                 return n.e(43).then(n.bind(null, "ztSx"))
             }, "ChannelFollowingPage"),
-            He = oe.a.wrap(function() {
+            qe = oe.a.wrap(function() {
                 return n.e(32).then(n.bind(null, "oFVJ"))
             }, "ChannelPage"),
-            Ge = oe.a.wrap(function() {
+            ze = oe.a.wrap(function() {
                 return n.e(33).then(n.bind(null, "g8mI"))
             }, "ChannelVideosPage"),
-            qe = oe.a.wrap(function() {
-                return n.e(62).then(n.bind(null, "yMnN"))
+            Ke = oe.a.wrap(function() {
+                return n.e(63).then(n.bind(null, "yMnN"))
             }, "DevOnlyRoot"),
-            ze = oe.a.wrap(function() {
+            Qe = oe.a.wrap(function() {
                 return n.e(45).then(n.bind(null, "7yeK"))
             }, "DirectoryRootPage"),
-            Ke = oe.a.wrap(function() {
-                return n.e(63).then(n.bind(null, "IzAE"))
-            }, "DevOnlyTestingCarouselPage"),
-            Qe = oe.a.wrap(function() {
-                return n.e(64).then(n.bind(null, "Tj44"))
-            }, "EmailVerificationPage"),
             $e = oe.a.wrap(function() {
+                return n.e(64).then(n.bind(null, "IzAE"))
+            }, "DevOnlyTestingCarouselPage"),
+            Ye = oe.a.wrap(function() {
+                return n.e(62).then(n.bind(null, "mqYJ"))
+            }, "EmailUnsubscribePage"),
+            Je = oe.a.wrap(function() {
+                return n.e(65).then(n.bind(null, "Tj44"))
+            }, "EmailVerificationPage"),
+            Ze = oe.a.wrap(function() {
                 return n.e(47).then(n.bind(null, "NTi8"))
             }, "EventLandingPage"),
-            Ye = oe.a.wrap(function() {
+            Xe = oe.a.wrap(function() {
                 return n.e(48).then(n.bind(null, "IpE8"))
             }, "FollowingRootPage"),
-            Je = oe.a.wrap(function() {
+            et = oe.a.wrap(function() {
                 return n.e(55).then(n.bind(null, "lTLe"))
             }, "FinishWatchingPage"),
-            Ze = oe.a.wrap(function() {
+            tt = oe.a.wrap(function() {
                 return n.e(51).then(n.bind(null, "IOEW"))
             }, "FrontPage"),
-            Xe = oe.a.wrap(function() {
+            nt = oe.a.wrap(function() {
                 return n.e(57).then(n.bind(null, "DZCb"))
             }, "InventoryPage"),
-            et = oe.a.wrap(function() {
-                return n.e(65).then(n.bind(null, "o8EG"))
+            it = oe.a.wrap(function() {
+                return n.e(66).then(n.bind(null, "o8EG"))
             }, "ManagerRedirectPage"),
-            tt = oe.a.wrap(function() {
+            rt = oe.a.wrap(function() {
                 return n.e(38).then(n.bind(null, "gZLf"))
             }, "PaymentsLandingPage"),
-            nt = oe.a.wrap(function() {
+            at = oe.a.wrap(function() {
                 return n.e(61).then(n.bind(null, "DkuH"))
             }, "ReportUserPage"),
-            it = oe.a.wrap(function() {
-                return n.e(50).then(n.bind(null, "K4jf"))
+            st = oe.a.wrap(function() {
+                return n.e(49).then(n.bind(null, "K4jf"))
             }, "SettingsRoot"),
-            rt = oe.a.wrap(function() {
+            ot = oe.a.wrap(function() {
                 return n.e(37).then(n.bind(null, "uiPj"))
             }, "VideoWatchPage"),
-            at = oe.a.wrap(function() {
+            lt = oe.a.wrap(function() {
                 return n.e(58).then(n.bind(null, "6Vx1"))
             }, "DevOnlyTestingAmazonOffersPage"),
-            st = function() {
+            ct = function() {
                 return r.createElement(se.c, {
                     path: "/",
                     to: "/directory/following"
                 })
             },
-            ot = function() {
+            dt = function() {
                 return window.location.reload(), null
             },
-            lt = function(e) {
+            ut = function(e) {
                 var t = Object(de.a)(e.match.params.videoID);
                 return r.createElement(se.c, {
                     to: "/videos/" + t
                 })
             },
-            ct = function(e) {
+            pt = function(e) {
                 return r.createElement(se.c, {
                     to: "/popout/" + e.match.params.channelLogin + "/chat"
                 })
             },
-            dt = function(e) {
+            mt = function(e) {
                 return r.createElement(se.c, {
                     to: "/" + e.match.params.channelLogin + "/videos/all"
                 })
             },
-            ut = function(e) {
+            ht = function(e) {
                 return r.createElement(se.c, {
                     to: "/" + e.match.params.channelLogin + "/videos/archive"
                 })
             },
-            pt = function(e) {
+            ft = function(e) {
                 return r.createElement(se.c, {
                     to: "/teams/" + e.match.params.teamName + "/dashboard"
                 })
             },
-            mt = function(e) {
+            gt = function(e) {
                 return r.createElement(se.c, {
                     to: "/directory/game/" + e.match.params.encodedCommunityName + "/videos/all"
                 })
             },
-            ht = function() {
+            vt = function() {
                 return r.createElement(se.c, {
                     to: "/directory/all/xbox"
                 })
             },
-            ft = function() {
+            bt = function() {
                 return window.location.replace(ue.a), null
             },
-            gt = function(e) {
+            kt = function(e) {
                 return window.location.replace("https://player.twitch.tv/?channel=" + e.match.params.channelName), null
             },
-            vt = function(e) {
+            yt = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -19620,186 +19731,189 @@ webpackJsonp([40], {
                         message: Object(f.d)("An error occurred on this page", "DefaultRootRouter")
                     }) : r.createElement(se.e, null, f.a.buildType !== ce.a.Production && r.createElement(se.d, {
                         path: "/_dev/testing/carousel",
-                        component: Ke
+                        component: $e
                     }), f.a.buildType !== ce.a.Production && r.createElement(se.d, {
                         path: "/_dev/testing/amazon-offers/:channelName",
-                        component: at
+                        component: lt
                     }), f.a.buildType !== ce.a.Production && r.createElement(se.d, {
                         path: "/_dev",
-                        component: qe
+                        component: Ke
                     }), r.createElement(se.d, {
                         exact: !0,
                         path: "/",
-                        component: this.props.isLoggedIn ? Ze : je
+                        component: this.props.isLoggedIn ? tt : Ae
                     }), r.createElement(se.d, {
                         path: "/bits",
-                        render: ot
+                        render: dt
                     }), r.createElement(se.d, {
                         path: "/collections/:collectionID",
-                        component: rt
+                        component: ot
                     }), r.createElement(se.d, {
                         path: "/communities/:encodedCommunityName/details",
-                        component: ze
-                    }), r.createElement(se.d, {
-                        path: "/communities/:encodedCommunityName/:encodedLanguage",
-                        component: ze
-                    }), r.createElement(se.d, {
-                        path: "/communities/:encodedCommunityName",
-                        component: ze
-                    }), r.createElement(se.d, {
-                        path: "/directory/communities",
-                        component: Le
-                    }), r.createElement(se.d, {
-                        path: "/directory/creative",
-                        component: Le
-                    }), r.createElement(se.d, {
-                        path: "/directory/following/:category?",
-                        component: Ye
-                    }), r.createElement(se.d, {
-                        path: "/directory/game/:encodedCommunityName/clips",
-                        component: ze
-                    }), r.createElement(se.d, {
-                        path: "/directory/game/:encodedCommunityName/details",
-                        component: ze
-                    }), r.createElement(se.d, {
-                        path: "/directory/game/:encodedCommunityName/videos/:filter",
-                        component: ze
-                    }), r.createElement(se.d, {
-                        path: "/directory/game/:encodedCommunityName/videos",
-                        render: mt
-                    }), r.createElement(se.d, {
-                        path: "/directory/game/:encodedCommunityName/:encodedLanguage",
-                        component: ze
-                    }), r.createElement(se.d, {
-                        path: "/directory/game/:encodedCommunityName",
-                        component: ze
-                    }), r.createElement(se.d, {
-                        path: "/directory/all/ps4",
-                        component: Le
-                    }), r.createElement(se.d, {
-                        path: "/directory/all/xb1",
-                        component: ht
-                    }), r.createElement(se.d, {
-                        path: "/directory/all/xbox",
-                        component: Le
-                    }), r.createElement(se.d, {
-                        path: "/directory/all/:encodedLanguage",
-                        component: Le
-                    }), r.createElement(se.d, {
-                        path: "/directory/all",
-                        component: Le
-                    }), r.createElement(se.d, {
-                        path: "/directory/videos/history",
-                        component: Je
-                    }), r.createElement(se.d, {
-                        path: "/directory/:category?",
-                        component: Le
-                    }), r.createElement(se.d, {
-                        path: "/events/:eventName",
-                        render: $e
-                    }), r.createElement(se.d, {
-                        path: "/email-verification/:emailOpaqueId",
                         component: Qe
                     }), r.createElement(se.d, {
-                        path: "/ext/:extensionID",
-                        component: Ue
+                        path: "/communities/:encodedCommunityName/:encodedLanguage",
+                        component: Qe
                     }), r.createElement(se.d, {
-                        path: "/payments",
-                        component: tt
+                        path: "/communities/:encodedCommunityName",
+                        component: Qe
                     }), r.createElement(se.d, {
-                        path: "/following",
-                        component: st
-                    }), r.createElement(se.d, {
-                        path: "/inventory",
-                        component: Xe
-                    }), r.createElement(se.d, {
-                        path: "/popout/:channelName/chat",
-                        render: ot
-                    }), r.createElement(se.d, {
-                        path: "/videos/v:videoID",
-                        render: lt
-                    }), r.createElement(se.d, {
-                        path: "/videos/:videoID",
-                        component: rt
-                    }), r.createElement(se.d, {
-                        path: "/store",
-                        render: ft
-                    }), r.createElement(se.d, {
-                        path: "/store/merch",
-                        render: ft
-                    }), r.createElement(se.d, {
-                        path: "/subs",
-                        render: ot
-                    }), r.createElement(se.d, {
-                        path: "/settings/:tab?",
-                        component: it
-                    }), r.createElement(se.d, {
-                        path: "/team/:teamName/edit",
-                        render: pt
-                    }), r.createElement(se.d, {
-                        path: "/manager/:pageName?",
-                        component: et
-                    }), r.createElement(se.d, {
-                        path: "/:channelName/report",
-                        component: nt
-                    }), r.createElement(se.d, {
-                        path: "/:channelLogin/profile",
-                        render: dt
-                    }), r.createElement(se.d, {
-                        path: "/:channelLogin/videos/(past_broadcasts?)",
-                        render: ut
-                    }), r.createElement(se.d, {
-                        path: "/:channelLogin/videos/:filter(all|archive|upload|highlight|past_premiere)",
-                        component: Ge
-                    }), r.createElement(se.d, {
-                        path: "/:channelLogin/videos/:unknownFilter?",
-                        render: dt
-                    }), r.createElement(se.d, {
-                        path: "/:channelName/clips",
-                        component: Ae
-                    }), r.createElement(se.d, {
-                        path: "/:channelLogin/chat",
-                        render: ct
-                    }), r.createElement(se.d, {
-                        path: "/:channelLogin/collections",
+                        path: "/directory/communities",
                         component: Me
                     }), r.createElement(se.d, {
-                        path: "/:channelLogin/events",
+                        path: "/directory/creative",
+                        component: Me
+                    }), r.createElement(se.d, {
+                        path: "/directory/following/:category?",
+                        component: Xe
+                    }), r.createElement(se.d, {
+                        path: "/directory/game/:encodedCommunityName/clips",
+                        component: Qe
+                    }), r.createElement(se.d, {
+                        path: "/directory/game/:encodedCommunityName/details",
+                        component: Qe
+                    }), r.createElement(se.d, {
+                        path: "/directory/game/:encodedCommunityName/videos/:filter",
+                        component: Qe
+                    }), r.createElement(se.d, {
+                        path: "/directory/game/:encodedCommunityName/videos",
+                        render: gt
+                    }), r.createElement(se.d, {
+                        path: "/directory/game/:encodedCommunityName/:encodedLanguage",
+                        component: Qe
+                    }), r.createElement(se.d, {
+                        path: "/directory/game/:encodedCommunityName",
+                        component: Qe
+                    }), r.createElement(se.d, {
+                        path: "/directory/all/ps4",
+                        component: Me
+                    }), r.createElement(se.d, {
+                        path: "/directory/all/xb1",
+                        component: vt
+                    }), r.createElement(se.d, {
+                        path: "/directory/all/xbox",
+                        component: Me
+                    }), r.createElement(se.d, {
+                        path: "/directory/all/:encodedLanguage",
+                        component: Me
+                    }), r.createElement(se.d, {
+                        path: "/directory/all",
+                        component: Me
+                    }), r.createElement(se.d, {
+                        path: "/directory/videos/history",
+                        component: et
+                    }), r.createElement(se.d, {
+                        path: "/directory/:category?",
+                        component: Me
+                    }), r.createElement(se.d, {
+                        path: "/events/:eventName",
+                        render: Ze
+                    }), r.createElement(se.d, {
+                        path: "/email-unsubscribe",
+                        component: Ye
+                    }), r.createElement(se.d, {
+                        path: "/email-verification/:emailOpaqueId",
+                        component: Je
+                    }), r.createElement(se.d, {
+                        path: "/ext/:extensionID",
+                        component: Le
+                    }), r.createElement(se.d, {
+                        path: "/payments",
+                        component: rt
+                    }), r.createElement(se.d, {
+                        path: "/following",
+                        component: ct
+                    }), r.createElement(se.d, {
+                        path: "/inventory",
+                        component: nt
+                    }), r.createElement(se.d, {
+                        path: "/popout/:channelName/chat",
+                        render: dt
+                    }), r.createElement(se.d, {
+                        path: "/videos/v:videoID",
+                        render: ut
+                    }), r.createElement(se.d, {
+                        path: "/videos/:videoID",
+                        component: ot
+                    }), r.createElement(se.d, {
+                        path: "/store",
+                        render: bt
+                    }), r.createElement(se.d, {
+                        path: "/store/merch",
+                        render: bt
+                    }), r.createElement(se.d, {
+                        path: "/subs",
+                        render: dt
+                    }), r.createElement(se.d, {
+                        path: "/settings/:tab?",
+                        component: st
+                    }), r.createElement(se.d, {
+                        path: "/team/:teamName/edit",
+                        render: ft
+                    }), r.createElement(se.d, {
+                        path: "/manager/:pageName?",
+                        component: it
+                    }), r.createElement(se.d, {
+                        path: "/:channelName/report",
+                        component: at
+                    }), r.createElement(se.d, {
+                        path: "/:channelLogin/profile",
+                        render: mt
+                    }), r.createElement(se.d, {
+                        path: "/:channelLogin/videos/(past_broadcasts?)",
+                        render: ht
+                    }), r.createElement(se.d, {
+                        path: "/:channelLogin/videos/:filter(all|archive|upload|highlight|past_premiere)",
+                        component: ze
+                    }), r.createElement(se.d, {
+                        path: "/:channelLogin/videos/:unknownFilter?",
+                        render: mt
+                    }), r.createElement(se.d, {
+                        path: "/:channelName/clips",
                         component: Be
                     }), r.createElement(se.d, {
-                        path: "/:channelLogin/followers",
+                        path: "/:channelLogin/chat",
+                        render: pt
+                    }), r.createElement(se.d, {
+                        path: "/:channelLogin/collections",
                         component: We
                     }), r.createElement(se.d, {
-                        path: "/:channelLogin/following",
+                        path: "/:channelLogin/events",
+                        component: He
+                    }), r.createElement(se.d, {
+                        path: "/:channelLogin/followers",
                         component: Ve
                     }), r.createElement(se.d, {
+                        path: "/:channelLogin/following",
+                        component: Ge
+                    }), r.createElement(se.d, {
                         path: "/:channelName/p/:entityID",
-                        component: He
+                        component: qe
                     }), r.createElement(se.d, {
                         path: "/:channelName/rooms/:roomName",
-                        component: He
+                        component: qe
                     }), r.createElement(se.d, {
                         path: "/:channelName/embed",
-                        render: gt
+                        render: kt
                     }), r.createElement(se.d, {
                         path: "/:channelName/popout",
-                        render: gt
+                        render: kt
                     }), r.createElement(se.d, {
                         path: "/:channelName",
-                        component: He
+                        component: qe
                     }))
                 }, t
             }(r.Component),
-            bt = Object(L.d)("DefaultRootRouter", {
+            _t = Object(L.d)("DefaultRootRouter", {
                 autoReportInteractive: !0
-            })(vt);
+            })(yt);
         n.d(t, "b", function() {
-            return kt
+            return St
         }), n.d(t, "a", function() {
-            return yt
+            return Et
         });
-        var kt = "twilight-main",
-            yt = function(e) {
+        var St = "twilight-main",
+            Et = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {}, t.setRootScrollableContentRef = function(e) {
@@ -19827,12 +19941,13 @@ webpackJsonp([40], {
                         fullHeight: !0,
                         fullWidth: !0,
                         display: g.P.Flex,
-                        flexDirection: g.R.Column
+                        flexDirection: g.R.Column,
+                        zIndex: this.props.theatreModeEnabled ? void 0 : g._53.Default
                     }, r.createElement("main", {
-                        className: kt
+                        className: St
                     }, r.createElement(k.b, null), r.createElement(o.a, {
                         contentRefDelegate: this.setRootScrollableContentRef
-                    }, r.createElement(bt, {
+                    }, r.createElement(_t, {
                         isLoggedIn: this.props.isLoggedIn
                     }), r.createElement(a.b, {
                         mainRef: this.state.rootScrollableContentRef
@@ -20272,7 +20387,7 @@ webpackJsonp([40], {
             M = n("5kgt"),
             B = n("Odds"),
             W = (n("afun"), n("y+bN")),
-            V = function(e) {
+            H = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -20352,7 +20467,7 @@ webpackJsonp([40], {
                     }
                 })], t)
             }(d.Component),
-            H = (n("H9qc"), function(e) {
+            V = (n("H9qc"), function(e) {
                 var t, n, i, r;
                 return e.title && (e.hitsCount && e.hitsCount > 0 ? t = Object(u.d)("more", "SearchResultSection") : e.totalHitsCount && e.totalHitsCount > 0 && (t = Object(u.d)("Show", "SearchResultSection")), void 0 !== e.totalHitsCount && (i = d.createElement(B._8, {
                     type: B._9.Brand,
@@ -20600,7 +20715,7 @@ webpackJsonp([40], {
                         }
                     }, d.createElement(B.W, null, o))), this.getResultSection("games-section", T.a.Games, this.gameHeaderSelect, this.props.gameResults, i.length, i, n, t), this.getResultSection("live-section", T.a.Channels, this.liveHeaderSelect, this.props.liveResults, o.length, e, n, t), this.getResultSection("channels-section", T.a.Users, this.userHeaderSelect, this.props.userResults, r.length, r, n, t), this.getResultSection("videos-section", T.a.Videos, this.videoHeaderSelect, this.props.videoResults, s.length, s, n, t), this.getResultSection("communities-section", T.a.Communities, this.communityHeaderSelect, this.props.communityResults, a.length, a, n, t), t.concat(n)
                 }, t.prototype.getResultSection = function(e, t, n, i, r, a, s, o) {
-                    var l = d.createElement(H, {
+                    var l = d.createElement(V, {
                         key: e,
                         totalHitsCount: i ? i.totalHits : 0,
                         hitsCount: r,
@@ -20634,7 +20749,7 @@ webpackJsonp([40], {
                             margin: {
                                 bottom: 1
                             }
-                        }, d.createElement(V, {
+                        }, d.createElement(H, {
                             onClick: e.onClick,
                             id: "live_" + t.id,
                             imageAlt: t.thumbnailAltText,
@@ -20805,7 +20920,7 @@ webpackJsonp([40], {
                         default:
                             return this.getNoResultsMessage()
                     }
-                    return d.createElement(H, null, t)
+                    return d.createElement(V, null, t)
                 }, t.prototype.getCategoryTitle = function(e) {
                     switch (e) {
                         case T.a.Games:
@@ -23117,8 +23232,8 @@ webpackJsonp([40], {
             M = (n("cLQP"), "center-window__empty"),
             B = "center-window__content-footer",
             W = "center-window__footer__text",
-            V = "center-window__read-all",
-            H = s.j.withCategory("onsite-notifications-center-window"),
+            H = "center-window__read-all",
+            V = s.j.withCategory("onsite-notifications-center-window"),
             G = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -23187,7 +23302,7 @@ webpackJsonp([40], {
                         }, Object(s.d)("Hooray! You're in the clear!", "OnsiteNotifications"))))
                     }, t.renderMarkAsRead = function() {
                         return 0 !== t.props.data.length || t.props.friendRequestsData ? a.createElement(x.u, {
-                            "data-test-selector": V,
+                            "data-test-selector": H,
                             type: x.A.Text,
                             size: x.y.Small,
                             disabled: 0 === t.props.data.length && !t.props.friendRequestsData,
@@ -23241,7 +23356,7 @@ webpackJsonp([40], {
                                     case 2:
                                         return t.sent(), [3, 4];
                                     case 3:
-                                        return e = t.sent(), H.error(e, "unexpected loadMore failure"), [3, 4];
+                                        return e = t.sent(), V.error(e, "unexpected loadMore failure"), [3, 4];
                                     case 4:
                                         this.setState({
                                             isLoadingMore: !1
@@ -24559,6 +24674,28 @@ webpackJsonp([40], {
         e.exports = n
     },
     "V1E/": function(e, t) {},
+    VHHT: function(e, t, n) {
+        "use strict";
+        n.d(t, "a", function() {
+            return a
+        });
+        var i = n("BwgW"),
+            r = (n.n(i), n("6sO2")),
+            a = function(e, t) {
+                var n;
+                switch (e) {
+                    case i.ExtensionPlatform.Web:
+                        n = t ? Object(r.d)("WEB", "LocalizeExtensionPlatform") : Object(r.d)("Web", "LocalizeExtensionPlatform");
+                        break;
+                    case i.ExtensionPlatform.Mobile:
+                        n = t ? Object(r.d)("MOBILE", "LocalizeExtensionPlatform") : Object(r.d)("Mobile", "LocalizeExtensionPlatform");
+                        break;
+                    default:
+                        n = ""
+                }
+                return n
+            }
+    },
     VNvG: function(e, t) {
         var n = {
             kind: "Document",
@@ -25142,14 +25279,6 @@ webpackJsonp([40], {
                                                 kind: "Field",
                                                 name: {
                                                     kind: "Name",
-                                                    value: "anchor"
-                                                },
-                                                arguments: [],
-                                                directives: []
-                                            }, {
-                                                kind: "Field",
-                                                name: {
-                                                    kind: "Name",
                                                     value: "authorName"
                                                 },
                                                 arguments: [],
@@ -25266,6 +25395,118 @@ webpackJsonp([40], {
                                                 },
                                                 arguments: [],
                                                 directives: []
+                                            }, {
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "views"
+                                                },
+                                                arguments: [],
+                                                directives: [],
+                                                selectionSet: {
+                                                    kind: "SelectionSet",
+                                                    selections: [{
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "component"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: {
+                                                            kind: "SelectionSet",
+                                                            selections: [{
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "viewerURL"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }]
+                                                        }
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "hidden"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: {
+                                                            kind: "SelectionSet",
+                                                            selections: [{
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "viewerURL"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }]
+                                                        }
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "mobile"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: {
+                                                            kind: "SelectionSet",
+                                                            selections: [{
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "viewerURL"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }]
+                                                        }
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "panel"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: {
+                                                            kind: "SelectionSet",
+                                                            selections: [{
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "viewerURL"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }]
+                                                        }
+                                                    }, {
+                                                        kind: "Field",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "videoOverlay"
+                                                        },
+                                                        arguments: [],
+                                                        directives: [],
+                                                        selectionSet: {
+                                                            kind: "SelectionSet",
+                                                            selections: [{
+                                                                kind: "Field",
+                                                                name: {
+                                                                    kind: "Name",
+                                                                    value: "viewerURL"
+                                                                },
+                                                                arguments: [],
+                                                                directives: []
+                                                            }]
+                                                        }
+                                                    }]
+                                                }
                                             }]
                                         }
                                     }, {
@@ -25297,11 +25538,11 @@ webpackJsonp([40], {
             }],
             loc: {
                 start: 0,
-                end: 390
+                end: 506
             }
         };
         n.loc.source = {
-            body: "mutation ExtensionManager_InstallExtension ($input: InstallExtensionInput!) {\ninstallExtension(input: $input) {\ninstalledExtension {\nid\nactivationConfig {\nslot\nstate\nanchor\n}\nextension {\nid\nanchor\nauthorName\nclientID\ndescription\niconURL\nname\nprivacyPolicyURL\nrequiredBroadcasterAbilities\nscreenshotURLs\nSKU\nstate\nsummary\nsupportEmail\ntermsURL\nvendorCode\nversion\n}\nself {\ncanActivate\n}\n}\n}\n}",
+            body: "mutation ExtensionManager_InstallExtension ($input: InstallExtensionInput!) {\ninstallExtension(input: $input) {\ninstalledExtension {\nid\nactivationConfig {\nslot\nstate\nanchor\n}\nextension {\nid\nauthorName\nclientID\ndescription\niconURL\nname\nprivacyPolicyURL\nrequiredBroadcasterAbilities\nscreenshotURLs\nSKU\nstate\nsummary\nsupportEmail\ntermsURL\nvendorCode\nversion\nviews {\ncomponent {\nviewerURL\n}\nhidden {\nviewerURL\n}\nmobile {\nviewerURL\n}\npanel {\nviewerURL\n}\nvideoOverlay {\nviewerURL\n}\n}\n}\nself {\ncanActivate\n}\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -27814,7 +28055,7 @@ webpackJsonp([40], {
             }, e)
         })(B);
 
-        function V(e, t, n) {
+        function H(e, t, n) {
             if (e.collectionID || !e.videoID)
                 if (e.collectionID && e.videoID) {
                     if (n && n.currentVideoID && n.currentCollectionID && n.currentVideoID === e.videoID && n.currentCollectionID === e.collectionID) return;
@@ -27843,7 +28084,7 @@ webpackJsonp([40], {
         }), n.d(t, !1, function() {}), n.d(t, "c", function() {
             return W
         }), n.d(t, "d", function() {
-            return V
+            return H
         })
     },
     gIPD: function(e, t, n) {
@@ -30582,6 +30823,9 @@ webpackJsonp([40], {
             a = function(e, t) {
                 var n;
                 switch (e) {
+                    case r.b.Component:
+                        n = t ? Object(i.d)("COMPONENT", "ExtensionAnchorType") : Object(i.d)("Component", "ExtensionAnchorType");
+                        break;
                     case r.b.Panel:
                         n = t ? Object(i.d)("PANEL", "ExtensionAnchorType") : Object(i.d)("Panel", "ExtensionAnchorType");
                         break;
@@ -32986,4 +33230,4 @@ webpackJsonp([40], {
             }(r.Component))
     }
 });
-//# sourceMappingURL=pages.subs-5b5482b652bc91f6aa597cd9b875c3dc.js.map
+//# sourceMappingURL=pages.subs-4dc441b849f2afb8f43955d0154bca8f.js.map

@@ -1319,10 +1319,10 @@ webpackJsonp([54], {
                 }), Object(d.d)("TopChannels")], t)
             }(i.Component)),
             I = (n("9zTP"), p.a.wrap(function() {
-                return n.e(76).then(n.bind(null, "yEZg"))
+                return n.e(77).then(n.bind(null, "yEZg"))
             }, "FeaturedGenres")),
             R = p.a.wrap(function() {
-                return n.e(75).then(n.bind(null, "2hMh"))
+                return n.e(76).then(n.bind(null, "2hMh"))
             }, "TopCreative"),
             A = function(e) {
                 function t() {
@@ -2246,7 +2246,7 @@ webpackJsonp([54], {
                     return a.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(89).then(n.bind(null, "tk3B"))];
+                                return [4, n.e(90).then(n.bind(null, "tk3B"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -2258,7 +2258,7 @@ webpackJsonp([54], {
                     return a.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(88).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(89).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -2270,7 +2270,7 @@ webpackJsonp([54], {
                     return a.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(87).then(n.bind(null, "Dan5"))];
+                                return [4, n.e(88).then(n.bind(null, "Dan5"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -2282,7 +2282,7 @@ webpackJsonp([54], {
                     return a.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(86).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(87).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent()]
                         }
@@ -3185,13 +3185,19 @@ webpackJsonp([54], {
                                 login: d.createElement("span", {
                                     onClick: t.promotionCardClick.bind(t, "display_name")
                                 }, d.createElement(y.a, {
-                                    to: "/" + t.props.item.broadcaster.login,
+                                    to: {
+                                        pathname: "/" + t.props.item.broadcaster.login,
+                                        state: w
+                                    },
                                     "data-a-target": "carousel-broadcaster-displayname"
                                 }, Object(b.a)(t.props.item.broadcaster.login, t.props.item.broadcaster.displayName))),
                                 game: d.createElement("span", {
                                     onClick: t.promotionCardClick.bind(t, "game_name")
                                 }, d.createElement(y.a, {
-                                    to: "/directory/game/" + t.props.item.content.gameName,
+                                    to: {
+                                        pathname: "/directory/game/" + t.props.item.content.gameName,
+                                        state: w
+                                    },
                                     "data-a-target": "carousel-broadcaster-game-name"
                                 }, t.props.item.content.gameName))
                             }, "VerticalCarouselPlayer"),
@@ -3815,4 +3821,4 @@ webpackJsonp([54], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.anon-front-c85c68d1aba6627ed922f7f22ba0448f.js.map
+//# sourceMappingURL=pages.anon-front-ebd30765c1ef1904a986541d759b6bfb.js.map

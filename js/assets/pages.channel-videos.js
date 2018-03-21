@@ -1,4 +1,4 @@
-webpackJsonp([33, 82], {
+webpackJsonp([33, 83], {
     "+/J2": function(e, t, n) {
         var i = n("xA5w");
         e.exports = function(e, t) {
@@ -8546,10 +8546,12 @@ webpackJsonp([33, 82], {
                             }, Object(v.l)(e)) : null;
                         case y.b.Subscription:
                             return a.createElement(w._4, {
+                                "data-a-target": "chat-subscription-message",
                                 className: "chat-line__subscribe"
                             }, Object(v.s)(e));
                         case y.b.SubGift:
                             return a.createElement(w._4, {
+                                "data-a-target": "chat-gift-subscription-message",
                                 className: "chat-line__subscribe"
                             }, Object(v.r)(e));
                         case y.b.BitsCharity:
@@ -39714,4 +39716,4 @@ webpackJsonp([33, 82], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-videos-7e82e7fcac244501d5426028a3594d9b.js.map
+//# sourceMappingURL=pages.channel-videos-e55ed7155eda2ac3f9fd65e9f038b7ac.js.map
