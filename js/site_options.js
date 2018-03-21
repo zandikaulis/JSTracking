@@ -3810,18 +3810,6 @@ window.SiteOptions = {
                 "value": "yes"
             }]
         },
-        "adac3887-6bd4-4fea-bfda-8e019f894dbe": {
-            "name": "CUSTOM_LIVE_UP",
-            "v": 2477,
-            "t": 2,
-            "groups": [{
-                "weight": 100,
-                "value": "yes"
-            }, {
-                "weight": 0,
-                "value": "no"
-            }]
-        },
         "adff30ad-0ef3-4b61-9892-1c6b10500bd4": {
             "name": "ios_extensions",
             "v": 3318,
@@ -4966,18 +4954,6 @@ window.SiteOptions = {
                 "value": "opt_in"
             }]
         },
-        "e3fbd5de-c36b-4f0b-a495-3e40de2667df": {
-            "name": "PAYMENTS_MANAGEMENT_PAGE_V2",
-            "v": 3037,
-            "t": 2,
-            "groups": [{
-                "weight": 0,
-                "value": "yes"
-            }, {
-                "weight": 100,
-                "value": "no"
-            }]
-        },
         "e51aab46-7708-49cb-a7a3-57e2c95c7570": {
             "name": "EXTENSIONS_MAINTENANCE",
             "v": 3096,
@@ -5416,16 +5392,16 @@ window.SiteOptions = {
         },
         "ff8e8dba-1168-459f-b131-7be5b5e7ba4d": {
             "name": "clips_champagne_supernova",
-            "v": 2899,
+            "v": 3323,
             "t": 1,
             "groups": [{
-                "weight": 33,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 33,
+                "weight": 0,
                 "value": "variant1"
             }, {
-                "weight": 33,
+                "weight": 100,
                 "value": "variant2"
             }]
         },
