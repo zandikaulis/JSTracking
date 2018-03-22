@@ -2398,13 +2398,13 @@ window.SiteOptions = {
         },
         "66018bed-5b79-4d2c-9773-29295e4f89f6": {
             "name": "ios_wateb",
-            "v": 3308,
+            "v": 3334,
             "t": 1,
             "groups": [{
-                "weight": 80,
+                "weight": 70,
                 "value": "control"
             }, {
-                "weight": 20,
+                "weight": 30,
                 "value": "active"
             }]
         },
@@ -4148,13 +4148,13 @@ window.SiteOptions = {
         },
         "bf7566f3-241b-4ade-95d4-381a7e7dd390": {
             "name": "android_wateb_6.0_release",
-            "v": 3309,
+            "v": 3335,
             "t": 1,
             "groups": [{
-                "weight": 80,
+                "weight": 70,
                 "value": "control"
             }, {
-                "weight": 20,
+                "weight": 30,
                 "value": "active"
             }]
         },
