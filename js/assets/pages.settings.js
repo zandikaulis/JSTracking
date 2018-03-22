@@ -1201,7 +1201,16 @@ webpackJsonp([49], {
                 }))(t)
             }
         }
-        var U = n("gLfK"),
+        var U = function(e) {
+                return u.createElement(_._4, {
+                    margin: {
+                        top: 1
+                    }
+                }, u.createElement(_.O, {
+                    color: _.J.Alt,
+                    "data-a-target": e.dataTarget
+                }, e.text))
+            },
             D = n("Jo6h"),
             F = function(e) {
                 function t() {
@@ -1213,7 +1222,7 @@ webpackJsonp([49], {
                             disabled: t.props.disabled,
                             onChange: t.onChange,
                             id: t.props.id
-                        }), u.createElement(U.a, {
+                        }), u.createElement(U, {
                             text: t.props.description
                         }))
                     }, t.onChange = function(e) {
@@ -1372,7 +1381,7 @@ webpackJsonp([49], {
                             disabled: t,
                             "data-test-selector": "chat-delay-radio:" + n.delay
                         }))
-                    })), u.createElement(U.a, {
+                    })), u.createElement(U, {
                         text: Object(p.d)("Adds a short delay before non-mods see messages. Any message that is timed out or banned during the delay is removed from chat completely.", "ChatDelayRadioButtons")
                     }))
                 }, t
@@ -1478,7 +1487,7 @@ webpackJsonp([49], {
                         value: this.props.rules,
                         onChange: this.props.onChange,
                         rows: 5
-                    }), u.createElement(U.a, {
+                    }), u.createElement(U, {
                         text: Object(p.d)("Require first-time viewers to agree to your rules before chatting. One rule per line.", "ChatRulesTextArea")
                     }), e)
                 }, t
@@ -2469,7 +2478,7 @@ webpackJsonp([49], {
                     }, u.createElement(_.u, {
                         "data-test-selector": "test-upload-video-player-banner-selector",
                         onClick: this.showModal
-                    }, "Update"), t), u.createElement(U.a, {
+                    }, "Update"), t), u.createElement(U, {
                         text: Object(Ne.d)("Max 10mb GIF, JPG, or PNG", "UploadVideoPlayerBanner")
                     }))))))
                 }, t = c.__decorate([Object(j.a)(je, {
@@ -2666,9 +2675,7 @@ webpackJsonp([49], {
                     configurable: !0
                 }), t
             }(u.Component)),
-            Fe = Object(g.d)("ExtensionConnection", {
-                autoReportInteractive: !0
-            })(De),
+            Fe = Object(g.d)("ExtensionConnection")(De),
             Le = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -4073,7 +4080,7 @@ webpackJsonp([49], {
                         required: !0,
                         value: this.props.email,
                         "data-a-target": "profile-email-input"
-                    })), this.renderVerifyButton(t)), u.createElement(U.a, {
+                    })), this.renderVerifyButton(t)), u.createElement(U, {
                         text: this.renderVerificationMessage(),
                         dataTarget: "profile-email-description"
                     })))
@@ -4161,7 +4168,7 @@ webpackJsonp([49], {
                         icon: _._18.Edit,
                         linkTo: "https://www.twitch.tv/logins/new",
                         "data-a-target": "profile-edit-username-button"
-                    })), u.createElement(U.a, {
+                    })), u.createElement(U, {
                         dataTarget: "profile-username-description",
                         text: this.renderChangeEligibilityMessage()
                     })))
@@ -4243,7 +4250,7 @@ webpackJsonp([49], {
                         disabled: this.props.controlsDisabled,
                         onChange: this.props.onDisplayNameChange,
                         value: this.props.displayName
-                    }), u.createElement(U.a, {
+                    }), u.createElement(U, {
                         dataTarget: "profile-displayname-description",
                         text: this.renderDisplayNameDescription()
                     })), u.createElement(D.a, {
@@ -4259,7 +4266,7 @@ webpackJsonp([49], {
                         noResize: !0,
                         value: this.props.bio,
                         "data-a-target": "profile-bio-input"
-                    }), u.createElement(U.a, {
+                    }), u.createElement(U, {
                         dataTarget: "profile-bio-description",
                         text: Object(p.d)("Who you are in fewer than 300 characters", "ProfileAccountInfo")
                     })))
@@ -4352,7 +4359,7 @@ webpackJsonp([49], {
                         padding: {
                             x: 1
                         }
-                    }, Object(p.d)("Update", "ProfileBannerSetting"))), u.createElement(U.a, {
+                    }, Object(p.d)("Update", "ProfileBannerSetting"))), u.createElement(U, {
                         text: Object(p.d)("File format: JPEG, PNG, GIF (recommended 1200x380, max 10MB)", "ProfileBannerSetting")
                     }))))
                 }, t
@@ -4417,7 +4424,7 @@ webpackJsonp([49], {
                         padding: {
                             x: 1
                         }
-                    }, Object(p.d)("Update", "ProfileImageSetting"))), u.createElement(U.a, {
+                    }, Object(p.d)("Update", "ProfileImageSetting"))), u.createElement(U, {
                         text: Object(p.d)("File format: JPEG, PNG, GIF (max size 256x256, 10MB)", "ProfileImageSetting")
                     }))))
                 }, t
@@ -4651,7 +4658,7 @@ webpackJsonp([49], {
                 }, t.prototype.render = function() {
                     return u.createElement(F, {
                         id: "settings-security-page-block-whispers",
-                        label: Object(p.d)("Block Whispers from Strangers", "SettingsSecurityPage"),
+                        label: Object(p.d)("Block Whispers from Stangers", "SettingsSecurityPage"),
                         description: Object(p.d)("Block whispers from people you don't follow", "SettingsSecurityPage"),
                         checked: this.state.enabled,
                         showPlaceholder: this.state.loading,
@@ -4805,7 +4812,7 @@ webpackJsonp([49], {
                     return u.createElement(_._4, null, u.createElement(_.u, {
                         linkTo: "https://passport.twitch.tv/register_2fa/new",
                         "data-a-target": "tfa-enable-button"
-                    }, Object(p.d)("Set Up Two-Factor Authentication", "TwoFactorAuthenticationSetting")), u.createElement(U.a, {
+                    }, Object(p.d)("Set Up Two-Factor Authentication", "TwoFactorAuthenticationSetting")), u.createElement(U, {
                         dataTarget: "tfa-pitch-message",
                         text: Object(p.d)("It's dangerous to go alone. <x:link>Two-factor authentication</x:link> adds an extra layer of security to your Twitch account by requiring both a password and your mobile phone to login.", {
                             "x:link": function(e) {
@@ -4828,7 +4835,7 @@ webpackJsonp([49], {
                         "data-a-target": "tfa-required-message"
                     }, Object(p.d)("You must have two-factor authentication enabled.", "TwoFactorAuthenticationSetting")), this.renderEnabledMessage())
                 }, t.prototype.renderEnabledMessage = function() {
-                    return u.createElement(U.a, {
+                    return u.createElement(U, {
                         dataTarget: "tfa-successful-message",
                         text: Object(p.d)("Woohoo! Two-factor authentication is enabled! To reset or change your phone, visit the Authy <x:link>phone reset form</x:link>.", {
                             "x:link": function(e) {
@@ -6476,24 +6483,6 @@ webpackJsonp([49], {
         };
         e.exports = n
     },
-    gLfK: function(e, t, n) {
-        "use strict";
-        var i = n("GiK3"),
-            r = n("Odds"),
-            a = function(e) {
-                return i.createElement(r._4, {
-                    margin: {
-                        top: 1
-                    }
-                }, i.createElement(r.O, {
-                    color: r.J.Alt,
-                    "data-a-target": e.dataTarget
-                }, e.text))
-            };
-        n.d(t, "a", function() {
-            return a
-        })
-    },
     goep: function(e, t) {
         var n = {
             kind: "Document",
@@ -7533,4 +7522,4 @@ webpackJsonp([49], {
     yU6t: function(e, t) {},
     zpQV: function(e, t) {}
 });
-//# sourceMappingURL=pages.settings-2288da4bb1b38ef1d6f2eb7640546ac4.js.map
+//# sourceMappingURL=pages.settings-eeeeb89be3e6f66db143f7ab92b2637a.js.map
