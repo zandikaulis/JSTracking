@@ -7481,6 +7481,7 @@ webpackJsonp([40], {
                             }
                         }, s.createElement(m._4, {
                             className: "prime-offer__title",
+                            "data-a-target": e.id,
                             padding: {
                                 y: .5
                             }
@@ -17508,6 +17509,14 @@ webpackJsonp([40], {
                                 kind: "Field",
                                 name: {
                                     kind: "Name",
+                                    value: "isBitsEnabled"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
                                     value: "name"
                                 },
                                 arguments: [],
@@ -17768,6 +17777,26 @@ webpackJsonp([40], {
                                 kind: "Field",
                                 name: {
                                     kind: "Name",
+                                    value: "cheer"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "id"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }]
+                                }
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
                                     value: "installedExtensions"
                                 },
                                 arguments: [],
@@ -17811,11 +17840,11 @@ webpackJsonp([40], {
             }],
             loc: {
                 start: 0,
-                end: 566
+                end: 593
             }
         };
         n.loc.source = {
-            body: "query ExtensionPage_ExtensionDetails($extensionID: ID! $extensionVersion: String $isLoggedIn: Boolean!) {\nextension(id: $extensionID version: $extensionVersion) {\nid\nauthorName\nclientID\ndescription\niconURL\nname\nprivacyPolicyURL\nrequiredBroadcasterAbilities\nscreenshotURLs\nself {\ncanInstall\n}\nSKU\nstate\nsummary\nsupportEmail\ntermsURL\nvendorCode\nversion\nviews {\ncomponent {\nviewerURL\n}\nhidden {\nviewerURL\n}\nmobile {\nviewerURL\n}\npanel {\nviewerURL\n}\nvideoOverlay {\nviewerURL\n}\n}\n}\ncurrentUser @include(if: $isLoggedIn) {\nid\ninstalledExtensions {\nid\nextension {\nid\n}\n}\n}\n}",
+            body: "query ExtensionPage_ExtensionDetails($extensionID: ID! $extensionVersion: String $isLoggedIn: Boolean!) {\nextension(id: $extensionID version: $extensionVersion) {\nid\nauthorName\nclientID\ndescription\niconURL\nisBitsEnabled\nname\nprivacyPolicyURL\nrequiredBroadcasterAbilities\nscreenshotURLs\nself {\ncanInstall\n}\nSKU\nstate\nsummary\nsupportEmail\ntermsURL\nvendorCode\nversion\nviews {\ncomponent {\nviewerURL\n}\nhidden {\nviewerURL\n}\nmobile {\nviewerURL\n}\npanel {\nviewerURL\n}\nvideoOverlay {\nviewerURL\n}\n}\n}\ncurrentUser @include(if: $isLoggedIn) {\nid\ncheer {\nid\n}\ninstalledExtensions {\nid\nextension {\nid\n}\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -18143,17 +18172,16 @@ webpackJsonp([40], {
             o = n("+8VM"),
             l = n("V5M+"),
             c = n("sfWM"),
-            d = n("F8kA"),
-            u = n("6sO2"),
-            p = n("q7Ag"),
-            m = n("Odds"),
-            h = function(e) {
+            d = n("6sO2"),
+            u = n("q7Ag"),
+            p = n("Odds"),
+            m = function(e) {
                 var t = e.extension,
                     n = e.login,
                     i = e.onContinue;
-                return r.createElement(m._4, null, r.createElement(m.O, {
-                    type: m._41.H5
-                }, Object(u.d)("Extension Installed Successfully!", "ExtensionInstalledModal")), r.createElement(m._27, {
+                return r.createElement(p._4, null, r.createElement(p.O, {
+                    type: p._41.H5
+                }, Object(d.d)("Extension Installed Successfully!", "ExtensionInstalledModal")), r.createElement(p._27, {
                     borderTop: !0,
                     borderBottom: !0,
                     padding: {
@@ -18162,31 +18190,31 @@ webpackJsonp([40], {
                     margin: {
                         y: 1
                     }
-                }, r.createElement(m.O, null, Object(u.d)("Your extension will not display on your page until it is activated on the Extensions page.", "ExtensionInstalledModal")), r.createElement(m._4, {
+                }, r.createElement(p.O, null, Object(d.d)("Your extension will not display on your page until it is activated on the Extensions page.", "ExtensionInstalledModal")), r.createElement(p._4, {
                     margin: {
                         y: 1
                     }
-                }, r.createElement(m.O, null, Object(u.d)("Your extension may require additional configuration before it can be activated.", "ExtensionInstalledModal"))), r.createElement(m.O, null, Object(u.d)("Would you like to configure this extension now?", "ExtensionInstalledModal"))), r.createElement(m._4, {
-                    display: m.P.Flex,
-                    justifyContent: m._3.Center
-                }, r.createElement(m._4, {
+                }, r.createElement(p.O, null, Object(d.d)("Your extension may require additional configuration before it can be activated.", "ExtensionInstalledModal"))), r.createElement(p.O, null, Object(d.d)("Would you like to configure this extension now?", "ExtensionInstalledModal"))), r.createElement(p._4, {
+                    display: p.P.Flex,
+                    justifyContent: p._3.Center
+                }, r.createElement(p._4, {
                     padding: {
                         right: 1
                     }
-                }, r.createElement(m.u, {
-                    type: m.A.Hollow,
+                }, r.createElement(p.u, {
+                    type: p.A.Hollow,
                     onClick: i
-                }, Object(u.d)("Continue Browsing", "ExtensionInstalledModal"))), r.createElement(d.a, {
-                    to: Object(p.a)(n, t),
+                }, Object(d.d)("Continue Browsing", "ExtensionInstalledModal"))), r.createElement(p.u, {
+                    linkTo: Object(u.a)(n, t),
                     onClick: i
-                }, r.createElement(m.u, null, Object(u.d)("Configure", "ExtensionInstalledModal")))))
+                }, Object(d.d)("Configure", "ExtensionInstalledModal"))))
             },
-            f = function(e) {
+            h = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(c.a, null, r.createElement(h, {
+                    return r.createElement(c.a, null, r.createElement(m, {
                         login: this.props.login,
                         extension: this.props.extension,
                         onContinue: this.props.closeModal
@@ -18195,15 +18223,15 @@ webpackJsonp([40], {
                     }))
                 }, t
             }(r.Component);
-        var g = Object(a.b)(null, function(e) {
+        var f = Object(a.b)(null, function(e) {
             return Object(s.b)({
                 closeModal: l.c
             }, e)
-        })(f);
+        })(h);
         n.d(t, !1, function() {
-            return f
+            return h
         }), n.d(t, "a", function() {
-            return g
+            return f
         })
     },
     T8ns: function(e, t, n) {
@@ -19132,10 +19160,11 @@ webpackJsonp([40], {
             we = function(e) {
                 var t = e.loginName,
                     n = e.extension,
-                    i = e.isExtensionInstalled,
-                    a = e.onUninstall,
-                    s = e.onInstall;
-                return i ? r.createElement(g._4, {
+                    i = e.isChannelCheeringEnabled,
+                    a = e.isExtensionInstalled,
+                    s = e.onUninstall,
+                    o = e.onInstall;
+                if (a) return r.createElement(g._4, {
                     display: g.P.Flex,
                     alignItems: g.c.Center,
                     justifyContent: g._3.Center,
@@ -19145,25 +19174,38 @@ webpackJsonp([40], {
                     padding: {
                         right: 1
                     }
-                }, r.createElement(se.a, {
-                    to: Object(Oe.a)(t, n)
                 }, r.createElement(g.u, {
+                    linkTo: Object(Oe.a)(t, n),
                     type: g.A.Text,
                     size: g.y.Large
-                }, Object(f.d)("Configure", "ExtensionPageButton")))), r.createElement(g.u, {
+                }, Object(f.d)("Configure", "ExtensionPage"))), r.createElement(g.u, {
                     type: g.A.Hollow,
-                    onClick: a
-                }, Object(f.d)("Uninstall", "ExtensionPage"))) : r.createElement(g._4, {
+                    onClick: s
+                }, Object(f.d)("Uninstall", "ExtensionPage")));
+                var l = void 0,
+                    c = Object(f.d)("Install", "ExtensionPage");
+                if (n.state === Ee.c.Released && n.isBitsEnabled && !i) {
+                    var d = Object(f.d)("This extension can only be used by Partner or Affiliate channels that have Bits enabled.", "ExtensionPage");
+                    l = r.createElement(g._44, {
+                        label: d,
+                        direction: g._46.Left
+                    }, r.createElement(g.u, {
+                        size: g.y.Large,
+                        icon: g._18.Plus,
+                        disabled: !0
+                    }, c))
+                } else l = r.createElement(g.u, {
+                    size: g.y.Large,
+                    icon: g._18.Plus,
+                    onClick: o
+                }, c);
+                return r.createElement(g._4, {
                     display: g.P.Flex,
                     alignItems: g.c.Center,
                     justifyContent: g._3.Center,
                     flexGrow: 0,
                     flexShrink: 0
-                }, r.createElement(g.u, {
-                    size: g.y.Large,
-                    icon: g._18.Plus,
-                    onClick: s
-                }, Object(f.d)("Install", "ExtensionPage")))
+                }, l)
             },
             Pe = n("BwgW"),
             De = n("nP5L"),
@@ -19181,16 +19223,15 @@ webpackJsonp([40], {
                     background: g.m.Base,
                     border: !0,
                     padding: 1
-                }, r.createElement(g._4, null, r.createElement(g.O, {
-                    type: g._41.Strong
-                }, Object(f.d)("Details", "ExtensionDetails")), r.createElement(g._4, {
+                }, r.createElement(g._4, null, r.createElement(g._4, {
                     padding: {
-                        top: .5,
                         bottom: 1
                     }
                 }, r.createElement(g.O, {
+                    type: g._41.Strong
+                }, Object(f.d)("Details", "ExtensionDetails"))), r.createElement(g.O, {
                     type: g._41.P
-                }, e.extension.description))), r.createElement(g._27, {
+                }, e.extension.description)), r.createElement(g._27, {
                     borderTop: !0,
                     padding: {
                         top: 1
@@ -19269,7 +19310,36 @@ webpackJsonp([40], {
                         target: "_blank",
                         rel: "noopener"
                     }, Object(f.d)("Amazon's Twitch Customer Service", "ExtensionDetails"))
-                }, "ExtensionDetails"))))
+                }, "ExtensionDetailsPurchases"))), t.isBitsEnabled && r.createElement(g._27, {
+                    borderTop: !0,
+                    padding: {
+                        top: 1
+                    },
+                    margin: {
+                        top: 1
+                    }
+                }, r.createElement(g._4, {
+                    display: g.P.Flex,
+                    alignItems: g.c.Center,
+                    padding: {
+                        bottom: 1
+                    }
+                }, r.createElement(g._17, {
+                    asset: g._18.Bits
+                }), r.createElement(g._4, {
+                    display: g.P.InlineBlock,
+                    padding: {
+                        left: .5
+                    }
+                }, r.createElement(g.O, {
+                    type: g._41.Strong
+                }, Object(f.d)("In-Extension Bits", "ExtensionDetails")))), r.createElement(g.O, {
+                    type: g._41.P
+                }, Object(f.d)("This extension enables the use of Bits. For each eligible use of Bits in this extension, subject to Twitch’s legal terms and policies, the extension developer and the streamer will receive 20% and 80%, respectively, of 1 U.S. cent per Bit. You as a streamer may be eligible for a revenue share if you are a partner or an affiliate.", "ExtensionDetails"), r.createElement(g._4, null, r.createElement("a", {
+                    target: "_blank",
+                    rel: "noopener",
+                    href: "https://help.twitch.tv/customer/portal/articles/2927987-earning-revenue-from-in-extension-bits-beta"
+                }, Object(f.d)("Learn More.", "ExtensionDetailsBits"))))))
             },
             Fe = n("Rb5r"),
             Re = (n("GazO"), function(e) {
@@ -19472,13 +19542,16 @@ webpackJsonp([40], {
                         dashboardURL: Object(Oe.b)(i),
                         title: Object(f.d)("Details", "ExtensionPageTitle")
                     });
-                    if (t.loading) return r.createElement(g._4, {
-                        padding: 4
+                    if (t.loading) return r.createElement(g._27, {
+                        padding: 4,
+                        background: g.m.Alt
                     }, a, this.renderPlaceholders());
                     if (!t.extension) return r.createElement(be.a, null);
-                    var s = t.extension;
-                    return r.createElement(g._4, {
-                        padding: 4
+                    var s = t.extension,
+                        o = !(!t.currentUser || !t.currentUser.cheer);
+                    return r.createElement(g._27, {
+                        padding: 4,
+                        background: g.m.Alt
                     }, a, r.createElement(g._27, {
                         borderRight: !0,
                         borderLeft: !0,
@@ -19514,6 +19587,7 @@ webpackJsonp([40], {
                         loginName: i,
                         extension: s,
                         isExtensionInstalled: this.state.isExtensionInstalled,
+                        isChannelCheeringEnabled: o,
                         onInstall: this.onInstallExtension,
                         onUninstall: this.confirmExtensionUninstallation
                     })), r.createElement(g.W, null, r.createElement(g.K, {
@@ -25311,6 +25385,14 @@ webpackJsonp([40], {
                                                 kind: "Field",
                                                 name: {
                                                     kind: "Name",
+                                                    value: "isBitsEnabled"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }, {
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
                                                     value: "name"
                                                 },
                                                 arguments: [],
@@ -25538,11 +25620,11 @@ webpackJsonp([40], {
             }],
             loc: {
                 start: 0,
-                end: 506
+                end: 520
             }
         };
         n.loc.source = {
-            body: "mutation ExtensionManager_InstallExtension ($input: InstallExtensionInput!) {\ninstallExtension(input: $input) {\ninstalledExtension {\nid\nactivationConfig {\nslot\nstate\nanchor\n}\nextension {\nid\nauthorName\nclientID\ndescription\niconURL\nname\nprivacyPolicyURL\nrequiredBroadcasterAbilities\nscreenshotURLs\nSKU\nstate\nsummary\nsupportEmail\ntermsURL\nvendorCode\nversion\nviews {\ncomponent {\nviewerURL\n}\nhidden {\nviewerURL\n}\nmobile {\nviewerURL\n}\npanel {\nviewerURL\n}\nvideoOverlay {\nviewerURL\n}\n}\n}\nself {\ncanActivate\n}\n}\n}\n}",
+            body: "mutation ExtensionManager_InstallExtension ($input: InstallExtensionInput!) {\ninstallExtension(input: $input) {\ninstalledExtension {\nid\nactivationConfig {\nslot\nstate\nanchor\n}\nextension {\nid\nauthorName\nclientID\ndescription\niconURL\nisBitsEnabled\nname\nprivacyPolicyURL\nrequiredBroadcasterAbilities\nscreenshotURLs\nSKU\nstate\nsummary\nsupportEmail\ntermsURL\nvendorCode\nversion\nviews {\ncomponent {\nviewerURL\n}\nhidden {\nviewerURL\n}\nmobile {\nviewerURL\n}\npanel {\nviewerURL\n}\nvideoOverlay {\nviewerURL\n}\n}\n}\nself {\ncanActivate\n}\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -33230,4 +33312,4 @@ webpackJsonp([40], {
             }(r.Component))
     }
 });
-//# sourceMappingURL=pages.subs-4dc441b849f2afb8f43955d0154bca8f.js.map
+//# sourceMappingURL=pages.subs-0d7458c473416a6b5d31631c066fdc40.js.map

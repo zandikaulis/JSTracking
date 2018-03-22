@@ -17602,13 +17602,13 @@ webpackJsonp([36], {
             })], t)
         }(c.Component);
         ! function(e) {
-            e.AverageViewers = "AverageViewers", e.MinutesWatched = "MinutesWatched", e.NewFollowers = "NewFollowers", e.AverageChatters = "AverageChatters", e.ChatMessages = "ChatMessages", e.AdBreakDuration = "AdBreakDuration", e.AdBreaks = "AdBreaks"
+            e.AdBreakDuration = "AdBreakDuration", e.AdBreaks = "AdBreaks", e.AverageChatters = "AverageChatters", e.AverageViewers = "AverageViewers", e.ChatMessages = "ChatMessages", e.MinutesWatched = "MinutesWatched", e.NewFollowers = "NewFollowers", e.StreamDuration = "StreamDuration"
         }(mt || (mt = {})),
         function(e) {
             e.Ads = "Ads", e.Audience = "Audience", e.Chat = "Chat"
         }(ht || (ht = {}));
-        var ft, pt, gt = ((ft = {})[mt.AverageViewers] = "concurrent_viewers", ft[mt.MinutesWatched] = "concurrent_viewers", ft[mt.NewFollowers] = "follows", ft[mt.AverageChatters] = "chat_activities", ft[mt.ChatMessages] = "chat_activities", ft[mt.AdBreakDuration] = "commercials", ft),
-            yt = ((pt = {})[mt.AverageViewers] = "bar", pt[mt.MinutesWatched] = "bar", pt[mt.NewFollowers] = "line", pt[mt.AverageChatters] = "bar", pt[mt.ChatMessages] = "bar", pt[mt.AdBreakDuration] = "bar", pt),
+        var ft, pt, gt = ((ft = {})[mt.AdBreakDuration] = "commercials", ft[mt.AverageChatters] = "chat_activities", ft[mt.AverageViewers] = "concurrent_viewers", ft[mt.ChatMessages] = "chat_activities", ft[mt.MinutesWatched] = "concurrent_viewers", ft[mt.NewFollowers] = "follows", ft),
+            yt = ((pt = {})[mt.AdBreakDuration] = "bar", pt[mt.AverageChatters] = "bar", pt[mt.AverageViewers] = "bar", pt[mt.ChatMessages] = "bar", pt[mt.MinutesWatched] = "bar", pt[mt.NewFollowers] = "line", pt),
             Mt = function(e) {
                 switch (e) {
                     case ht.Ads:
@@ -17623,20 +17623,22 @@ webpackJsonp([36], {
             },
             vt = function(e) {
                 switch (e) {
-                    case mt.AverageViewers:
-                        return Object(h.d)("Avg. Viewers", "TeamsDashboard");
-                    case mt.MinutesWatched:
-                        return Object(h.d)("Minutes Watched", "TeamsDashboard");
-                    case mt.NewFollowers:
-                        return Object(h.d)("New Followers", "TeamsDashboard");
-                    case mt.AverageChatters:
-                        return Object(h.d)("Avg. Chatters", "TeamsDashboard");
-                    case mt.ChatMessages:
-                        return Object(h.d)("Chat Messages", "TeamsDashboard");
                     case mt.AdBreakDuration:
                         return Object(h.d)("Ad Break Duration", "TeamsDashboard");
                     case mt.AdBreaks:
                         return Object(h.d)("Ad Breaks", "TeamsDashboard");
+                    case mt.AverageChatters:
+                        return Object(h.d)("Avg. Chatters", "TeamsDashboard");
+                    case mt.AverageViewers:
+                        return Object(h.d)("Avg. Viewers", "TeamsDashboard");
+                    case mt.ChatMessages:
+                        return Object(h.d)("Chat Messages", "TeamsDashboard");
+                    case mt.MinutesWatched:
+                        return Object(h.d)("Minutes Watched", "TeamsDashboard");
+                    case mt.NewFollowers:
+                        return Object(h.d)("New Followers", "TeamsDashboard");
+                    case mt.StreamDuration:
+                        return Object(h.d)("Stream Duration", "TeamsDashboard");
                     default:
                         return ""
                 }
@@ -22134,4 +22136,4 @@ webpackJsonp([36], {
         }
     }
 });
-//# sourceMappingURL=pages.teams-dashboard-0f89aeae2d2d9ceff61957d5f7114813.js.map
+//# sourceMappingURL=pages.teams-dashboard-4ff5796aa27c8890812b28a6bc9a6797.js.map

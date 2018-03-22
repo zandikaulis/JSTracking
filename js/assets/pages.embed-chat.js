@@ -17333,6 +17333,7 @@ webpackJsonp([35], {
                             }
                         }, o.createElement(p._4, {
                             className: "prime-offer__title",
+                            "data-a-target": e.id,
                             padding: {
                                 y: .5
                             }
@@ -44870,4 +44871,4 @@ webpackJsonp([35], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.embed-chat-76b3d1ee96403c2a543747a69f8ed163.js.map
+//# sourceMappingURL=pages.embed-chat-81b162230c80ec8acdb77bd21d6aabcb.js.map

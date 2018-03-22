@@ -7922,6 +7922,7 @@ webpackJsonp([67], {
                             }
                         }, o.createElement(m._4, {
                             className: "prime-offer__title",
+                            "data-a-target": e.id,
                             padding: {
                                 y: .5
                             }
@@ -11719,7 +11720,7 @@ webpackJsonp([67], {
                 return s
             }),
             function(e) {
-                e.AutohostSettings = "autohost_settings", e.BitsLandingPage = "bits_landing", e.Browse = "browse", e.BrowseCommunities = "browse_communities", e.BrowseCreative = "browse_creative", e.BrowseForYou = "browse_for_you", e.Channel = "channel", e.ChannelClips = "channel_clips", e.ChannelClipsManager = "my_clips_channel", e.ChannelEvents = "channel_events", e.ChannelVideos = "channel_vods", e.ChannelCollections = "channel_collections", e.Chat = "chat", e.ClipsGame = "clips_game", e.ClipsViewing = "clips_viewing", e.Dashboard = "dashboard", e.DashboardAchievements = "dashboard/achievements", e.DashboardBounties = "dashboard/bounties", e.DashboardChannelAnalytics = "dashboard/channel-analytics", e.DashboardChannelAnalyticsReferrals = "dashboard/channel-analytics-referrals", e.DashboardExtensions = "dashboard/extensions", e.DashboardExtensionsConfigure = "dashboard/extensions/configure", e.DashboardSettingsIndex = "dashboard/settings", e.DashboardStreamSummary = "dashboard/stream-summary", e.Directory = "directory", e.DirectoryPopular = "directory.popular", e.EmailUnsubscribe = "email_unsubscribe", e.EmailVerification = "email_verification", e.EventDetails = "event_details", e.ExtensionDetails = "extension_details", e.Followers = "followers", e.Follows = "follows", e.FrontPage = "home", e.GameDetail = "game_detail", e.Inventory = "inventory", e.MyClipsManager = "my_clips", e.None = "", e.OnboardingCommunitySelection = "onboarding/community-selection", e.OnboardingChannelSurfing = "onboarding/channel-surfing", e.PaymentsLandingPage = "payments_landing_page", e.DashboardRevenueSettings = "dashboard/settings/revenue", e.StoreMerch = "store-merch", e.SubsLandingPage = "subs-landing", e.SubsCheckoutPage = "subs_checkout", e.SettingsPage = "settings", e.SubsBroadcasterPage = "subs-broadcaster", e.VideoManager = "video_manager", e.VideoManagerCollectionManager = "video_manager_collections", e.VideoManagerCollectionEditor = "video_manager_collection_editor", e.VideoManagerHighlighter = "video_manager_highlighter", e.VideoWatchPage = "vod"
+                e.AutohostSettings = "autohost_settings", e.BitsLandingPage = "bits_landing", e.Browse = "browse", e.BrowseCommunities = "browse_communities", e.BrowseCreative = "browse_creative", e.BrowseForYou = "browse_for_you", e.Channel = "channel", e.ChannelClips = "channel_clips", e.ChannelClipsManager = "my_clips_channel", e.ChannelEvents = "channel_events", e.ChannelVideos = "channel_vods", e.ChannelCollections = "channel_collections", e.Chat = "chat", e.ClipsGame = "clips_game", e.ClipsViewing = "clips_viewing", e.Dashboard = "dashboard", e.DashboardAchievements = "dashboard/achievements", e.DashboardBounties = "dashboard/bounties", e.DashboardChannelAnalytics = "dashboard/channel-analytics", e.DashboardChannelAnalyticsReferrals = "dashboard/channel-analytics-referrals", e.DashboardExtensions = "dashboard/extensions", e.DashboardExtensionsConfigure = "dashboard/extensions/configure", e.DashboardRevenueSettings = "dashboard/settings/revenue", e.DashboardSettingsIndex = "dashboard/settings", e.DashboardSettingsRevenueGameCommerce = "dashboard/settings/revenue/game-commerce", e.DashboardSettingsRevenueGameCommerceV2 = "dashboard/settings/revenue/game-commerce-v2", e.DashboardSettingsRevenueMerchByAmazon = "dashboard/settings/revenue/merch-by-amazon", e.DashboardStreamSummary = "dashboard/stream-summary", e.Directory = "directory", e.DirectoryPopular = "directory.popular", e.EmailUnsubscribe = "email_unsubscribe", e.EmailVerification = "email_verification", e.EventDetails = "event_details", e.ExtensionDetails = "extension_details", e.Followers = "followers", e.Follows = "follows", e.FrontPage = "home", e.GameDetail = "game_detail", e.Inventory = "inventory", e.MyClipsManager = "my_clips", e.None = "", e.OnboardingCommunitySelection = "onboarding/community-selection", e.OnboardingChannelSurfing = "onboarding/channel-surfing", e.PaymentsLandingPage = "payments_landing_page", e.SubsLandingPage = "subs-landing", e.SubsCheckoutPage = "subs_checkout", e.SettingsPage = "settings", e.SubsBroadcasterPage = "subs-broadcaster", e.VideoManager = "video_manager", e.VideoManagerCollectionManager = "video_manager_collections", e.VideoManagerCollectionEditor = "video_manager_collection_editor", e.VideoManagerHighlighter = "video_manager_highlighter", e.VideoWatchPage = "vod"
             }(i || (i = {})),
             function(e) {
                 e.Channels = "channels", e.Communities = "communities", e.Games = "games", e.Hosts = "hosts", e.Mixed = "mixed", e.Videos = "vods"
@@ -22197,7 +22198,7 @@ webpackJsonp([67], {
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
                     var e = this.getColumnSizeClasses(this.props.cols),
-                        t = "number" == typeof this.props.offset ? this.getColumnOffsetClasses(this.props.offset) : "";
+                        t = this.props.offset ? this.getColumnOffsetClasses(this.props.offset) : "";
                     return a.createElement("div", i.__assign({
                         className: r([e, t])
                     }, o(this.props)), this.props.children)
@@ -22213,7 +22214,7 @@ webpackJsonp([67], {
             }(a.Component));
         n("WjKA");
         ! function(e) {
-            e[e.Text = 0] = "Text", e[e.Email = 1] = "Email", e[e.Password = 2] = "Password", e[e.Search = 3] = "Search"
+            e[e.Text = 0] = "Text", e[e.Number = 1] = "Number", e[e.Email = 2] = "Email", e[e.Password = 3] = "Password", e[e.Search = 4] = "Search"
         }(Le || (Le = {}));
         var Me, Ue = function(e) {
                 var t, n;
@@ -22264,11 +22265,14 @@ webpackJsonp([67], {
                     onClick: e.onClick,
                     onFocus: e.onFocus,
                     onKeyDown: e.onKeyDown,
+                    max: e.max,
                     maxLength: e.maxLength,
+                    min: e.min,
                     readOnly: e.readOnly,
                     ref: e.refDelegate,
                     required: e.required,
                     spellCheck: e.spellCheck,
+                    step: e.step,
                     tabIndex: n,
                     value: e.value
                 })))
@@ -24539,6 +24543,14 @@ webpackJsonp([67], {
                                 kind: "Field",
                                 name: {
                                     kind: "Name",
+                                    value: "isBitsEnabled"
+                                },
+                                arguments: [],
+                                directives: []
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
                                     value: "name"
                                 },
                                 arguments: [],
@@ -24799,6 +24811,26 @@ webpackJsonp([67], {
                                 kind: "Field",
                                 name: {
                                     kind: "Name",
+                                    value: "cheer"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "id"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }]
+                                }
+                            }, {
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
                                     value: "installedExtensions"
                                 },
                                 arguments: [],
@@ -24842,11 +24874,11 @@ webpackJsonp([67], {
             }],
             loc: {
                 start: 0,
-                end: 566
+                end: 593
             }
         };
         n.loc.source = {
-            body: "query ExtensionPage_ExtensionDetails($extensionID: ID! $extensionVersion: String $isLoggedIn: Boolean!) {\nextension(id: $extensionID version: $extensionVersion) {\nid\nauthorName\nclientID\ndescription\niconURL\nname\nprivacyPolicyURL\nrequiredBroadcasterAbilities\nscreenshotURLs\nself {\ncanInstall\n}\nSKU\nstate\nsummary\nsupportEmail\ntermsURL\nvendorCode\nversion\nviews {\ncomponent {\nviewerURL\n}\nhidden {\nviewerURL\n}\nmobile {\nviewerURL\n}\npanel {\nviewerURL\n}\nvideoOverlay {\nviewerURL\n}\n}\n}\ncurrentUser @include(if: $isLoggedIn) {\nid\ninstalledExtensions {\nid\nextension {\nid\n}\n}\n}\n}",
+            body: "query ExtensionPage_ExtensionDetails($extensionID: ID! $extensionVersion: String $isLoggedIn: Boolean!) {\nextension(id: $extensionID version: $extensionVersion) {\nid\nauthorName\nclientID\ndescription\niconURL\nisBitsEnabled\nname\nprivacyPolicyURL\nrequiredBroadcasterAbilities\nscreenshotURLs\nself {\ncanInstall\n}\nSKU\nstate\nsummary\nsupportEmail\ntermsURL\nvendorCode\nversion\nviews {\ncomponent {\nviewerURL\n}\nhidden {\nviewerURL\n}\nmobile {\nviewerURL\n}\npanel {\nviewerURL\n}\nvideoOverlay {\nviewerURL\n}\n}\n}\ncurrentUser @include(if: $isLoggedIn) {\nid\ncheer {\nid\n}\ninstalledExtensions {\nid\nextension {\nid\n}\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -25174,17 +25206,16 @@ webpackJsonp([67], {
             s = n("+8VM"),
             l = n("V5M+"),
             c = n("sfWM"),
-            d = n("F8kA"),
-            u = n("6sO2"),
-            p = n("q7Ag"),
-            m = n("Odds"),
-            h = function(e) {
+            d = n("6sO2"),
+            u = n("q7Ag"),
+            p = n("Odds"),
+            m = function(e) {
                 var t = e.extension,
                     n = e.login,
                     i = e.onContinue;
-                return r.createElement(m._4, null, r.createElement(m.O, {
-                    type: m._41.H5
-                }, Object(u.d)("Extension Installed Successfully!", "ExtensionInstalledModal")), r.createElement(m._27, {
+                return r.createElement(p._4, null, r.createElement(p.O, {
+                    type: p._41.H5
+                }, Object(d.d)("Extension Installed Successfully!", "ExtensionInstalledModal")), r.createElement(p._27, {
                     borderTop: !0,
                     borderBottom: !0,
                     padding: {
@@ -25193,31 +25224,31 @@ webpackJsonp([67], {
                     margin: {
                         y: 1
                     }
-                }, r.createElement(m.O, null, Object(u.d)("Your extension will not display on your page until it is activated on the Extensions page.", "ExtensionInstalledModal")), r.createElement(m._4, {
+                }, r.createElement(p.O, null, Object(d.d)("Your extension will not display on your page until it is activated on the Extensions page.", "ExtensionInstalledModal")), r.createElement(p._4, {
                     margin: {
                         y: 1
                     }
-                }, r.createElement(m.O, null, Object(u.d)("Your extension may require additional configuration before it can be activated.", "ExtensionInstalledModal"))), r.createElement(m.O, null, Object(u.d)("Would you like to configure this extension now?", "ExtensionInstalledModal"))), r.createElement(m._4, {
-                    display: m.P.Flex,
-                    justifyContent: m._3.Center
-                }, r.createElement(m._4, {
+                }, r.createElement(p.O, null, Object(d.d)("Your extension may require additional configuration before it can be activated.", "ExtensionInstalledModal"))), r.createElement(p.O, null, Object(d.d)("Would you like to configure this extension now?", "ExtensionInstalledModal"))), r.createElement(p._4, {
+                    display: p.P.Flex,
+                    justifyContent: p._3.Center
+                }, r.createElement(p._4, {
                     padding: {
                         right: 1
                     }
-                }, r.createElement(m.u, {
-                    type: m.A.Hollow,
+                }, r.createElement(p.u, {
+                    type: p.A.Hollow,
                     onClick: i
-                }, Object(u.d)("Continue Browsing", "ExtensionInstalledModal"))), r.createElement(d.a, {
-                    to: Object(p.a)(n, t),
+                }, Object(d.d)("Continue Browsing", "ExtensionInstalledModal"))), r.createElement(p.u, {
+                    linkTo: Object(u.a)(n, t),
                     onClick: i
-                }, r.createElement(m.u, null, Object(u.d)("Configure", "ExtensionInstalledModal")))))
+                }, Object(d.d)("Configure", "ExtensionInstalledModal"))))
             },
-            g = function(e) {
+            h = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(c.a, null, r.createElement(h, {
+                    return r.createElement(c.a, null, r.createElement(m, {
                         login: this.props.login,
                         extension: this.props.extension,
                         onContinue: this.props.closeModal
@@ -25226,15 +25257,15 @@ webpackJsonp([67], {
                     }))
                 }, t
             }(r.Component);
-        var f = Object(a.b)(null, function(e) {
+        var g = Object(a.b)(null, function(e) {
             return Object(o.b)({
                 closeModal: l.c
             }, e)
-        })(g);
+        })(h);
         n.d(t, !1, function() {
-            return g
+            return h
         }), n.d(t, "a", function() {
-            return f
+            return g
         })
     },
     T8ns: function(e, t, n) {
@@ -26163,10 +26194,11 @@ webpackJsonp([67], {
             Oe = function(e) {
                 var t = e.loginName,
                     n = e.extension,
-                    i = e.isExtensionInstalled,
-                    a = e.onUninstall,
-                    o = e.onInstall;
-                return i ? r.createElement(f._4, {
+                    i = e.isChannelCheeringEnabled,
+                    a = e.isExtensionInstalled,
+                    o = e.onUninstall,
+                    s = e.onInstall;
+                if (a) return r.createElement(f._4, {
                     display: f.P.Flex,
                     alignItems: f.c.Center,
                     justifyContent: f._3.Center,
@@ -26176,25 +26208,38 @@ webpackJsonp([67], {
                     padding: {
                         right: 1
                     }
-                }, r.createElement(oe.a, {
-                    to: Object(Ne.a)(t, n)
                 }, r.createElement(f.u, {
+                    linkTo: Object(Ne.a)(t, n),
                     type: f.A.Text,
                     size: f.y.Large
-                }, Object(g.d)("Configure", "ExtensionPageButton")))), r.createElement(f.u, {
+                }, Object(g.d)("Configure", "ExtensionPage"))), r.createElement(f.u, {
                     type: f.A.Hollow,
-                    onClick: a
-                }, Object(g.d)("Uninstall", "ExtensionPage"))) : r.createElement(f._4, {
+                    onClick: o
+                }, Object(g.d)("Uninstall", "ExtensionPage")));
+                var l = void 0,
+                    c = Object(g.d)("Install", "ExtensionPage");
+                if (n.state === we.c.Released && n.isBitsEnabled && !i) {
+                    var d = Object(g.d)("This extension can only be used by Partner or Affiliate channels that have Bits enabled.", "ExtensionPage");
+                    l = r.createElement(f._44, {
+                        label: d,
+                        direction: f._46.Left
+                    }, r.createElement(f.u, {
+                        size: f.y.Large,
+                        icon: f._18.Plus,
+                        disabled: !0
+                    }, c))
+                } else l = r.createElement(f.u, {
+                    size: f.y.Large,
+                    icon: f._18.Plus,
+                    onClick: s
+                }, c);
+                return r.createElement(f._4, {
                     display: f.P.Flex,
                     alignItems: f.c.Center,
                     justifyContent: f._3.Center,
                     flexGrow: 0,
                     flexShrink: 0
-                }, r.createElement(f.u, {
-                    size: f.y.Large,
-                    icon: f._18.Plus,
-                    onClick: o
-                }, Object(g.d)("Install", "ExtensionPage")))
+                }, l)
             },
             De = n("BwgW"),
             Ie = n("nP5L"),
@@ -26212,16 +26257,15 @@ webpackJsonp([67], {
                     background: f.m.Base,
                     border: !0,
                     padding: 1
-                }, r.createElement(f._4, null, r.createElement(f.O, {
-                    type: f._41.Strong
-                }, Object(g.d)("Details", "ExtensionDetails")), r.createElement(f._4, {
+                }, r.createElement(f._4, null, r.createElement(f._4, {
                     padding: {
-                        top: .5,
                         bottom: 1
                     }
                 }, r.createElement(f.O, {
+                    type: f._41.Strong
+                }, Object(g.d)("Details", "ExtensionDetails"))), r.createElement(f.O, {
                     type: f._41.P
-                }, e.extension.description))), r.createElement(f._27, {
+                }, e.extension.description)), r.createElement(f._27, {
                     borderTop: !0,
                     padding: {
                         top: 1
@@ -26300,7 +26344,36 @@ webpackJsonp([67], {
                         target: "_blank",
                         rel: "noopener"
                     }, Object(g.d)("Amazon's Twitch Customer Service", "ExtensionDetails"))
-                }, "ExtensionDetails"))))
+                }, "ExtensionDetailsPurchases"))), t.isBitsEnabled && r.createElement(f._27, {
+                    borderTop: !0,
+                    padding: {
+                        top: 1
+                    },
+                    margin: {
+                        top: 1
+                    }
+                }, r.createElement(f._4, {
+                    display: f.P.Flex,
+                    alignItems: f.c.Center,
+                    padding: {
+                        bottom: 1
+                    }
+                }, r.createElement(f._17, {
+                    asset: f._18.Bits
+                }), r.createElement(f._4, {
+                    display: f.P.InlineBlock,
+                    padding: {
+                        left: .5
+                    }
+                }, r.createElement(f.O, {
+                    type: f._41.Strong
+                }, Object(g.d)("In-Extension Bits", "ExtensionDetails")))), r.createElement(f.O, {
+                    type: f._41.P
+                }, Object(g.d)("This extension enables the use of Bits. For each eligible use of Bits in this extension, subject to Twitch’s legal terms and policies, the extension developer and the streamer will receive 20% and 80%, respectively, of 1 U.S. cent per Bit. You as a streamer may be eligible for a revenue share if you are a partner or an affiliate.", "ExtensionDetails"), r.createElement(f._4, null, r.createElement("a", {
+                    target: "_blank",
+                    rel: "noopener",
+                    href: "https://help.twitch.tv/customer/portal/articles/2927987-earning-revenue-from-in-extension-bits-beta"
+                }, Object(g.d)("Learn More.", "ExtensionDetailsBits"))))))
             },
             Le = n("Rb5r"),
             Re = (n("GazO"), function(e) {
@@ -26503,13 +26576,16 @@ webpackJsonp([67], {
                         dashboardURL: Object(Ne.b)(i),
                         title: Object(g.d)("Details", "ExtensionPageTitle")
                     });
-                    if (t.loading) return r.createElement(f._4, {
-                        padding: 4
+                    if (t.loading) return r.createElement(f._27, {
+                        padding: 4,
+                        background: f.m.Alt
                     }, a, this.renderPlaceholders());
                     if (!t.extension) return r.createElement(be.a, null);
-                    var o = t.extension;
-                    return r.createElement(f._4, {
-                        padding: 4
+                    var o = t.extension,
+                        s = !(!t.currentUser || !t.currentUser.cheer);
+                    return r.createElement(f._27, {
+                        padding: 4,
+                        background: f.m.Alt
                     }, a, r.createElement(f._27, {
                         borderRight: !0,
                         borderLeft: !0,
@@ -26545,6 +26621,7 @@ webpackJsonp([67], {
                         loginName: i,
                         extension: o,
                         isExtensionInstalled: this.state.isExtensionInstalled,
+                        isChannelCheeringEnabled: s,
                         onInstall: this.onInstallExtension,
                         onUninstall: this.confirmExtensionUninstallation
                     })), r.createElement(f.W, null, r.createElement(f.K, {
@@ -33035,6 +33112,14 @@ webpackJsonp([67], {
                                                 kind: "Field",
                                                 name: {
                                                     kind: "Name",
+                                                    value: "isBitsEnabled"
+                                                },
+                                                arguments: [],
+                                                directives: []
+                                            }, {
+                                                kind: "Field",
+                                                name: {
+                                                    kind: "Name",
                                                     value: "name"
                                                 },
                                                 arguments: [],
@@ -33262,11 +33347,11 @@ webpackJsonp([67], {
             }],
             loc: {
                 start: 0,
-                end: 506
+                end: 520
             }
         };
         n.loc.source = {
-            body: "mutation ExtensionManager_InstallExtension ($input: InstallExtensionInput!) {\ninstallExtension(input: $input) {\ninstalledExtension {\nid\nactivationConfig {\nslot\nstate\nanchor\n}\nextension {\nid\nauthorName\nclientID\ndescription\niconURL\nname\nprivacyPolicyURL\nrequiredBroadcasterAbilities\nscreenshotURLs\nSKU\nstate\nsummary\nsupportEmail\ntermsURL\nvendorCode\nversion\nviews {\ncomponent {\nviewerURL\n}\nhidden {\nviewerURL\n}\nmobile {\nviewerURL\n}\npanel {\nviewerURL\n}\nvideoOverlay {\nviewerURL\n}\n}\n}\nself {\ncanActivate\n}\n}\n}\n}",
+            body: "mutation ExtensionManager_InstallExtension ($input: InstallExtensionInput!) {\ninstallExtension(input: $input) {\ninstalledExtension {\nid\nactivationConfig {\nslot\nstate\nanchor\n}\nextension {\nid\nauthorName\nclientID\ndescription\niconURL\nisBitsEnabled\nname\nprivacyPolicyURL\nrequiredBroadcasterAbilities\nscreenshotURLs\nSKU\nstate\nsummary\nsupportEmail\ntermsURL\nvendorCode\nversion\nviews {\ncomponent {\nviewerURL\n}\nhidden {\nviewerURL\n}\nmobile {\nviewerURL\n}\npanel {\nviewerURL\n}\nvideoOverlay {\nviewerURL\n}\n}\n}\nself {\ncanActivate\n}\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
                 line: 1,
@@ -43450,4 +43535,4 @@ webpackJsonp([67], {
             }(r.Component))
     }
 }, [5]);
-//# sourceMappingURL=core-db70b9bf632489f26e2108aa3f8a498d.js.map
+//# sourceMappingURL=core-f0b6ef4c49617e9b587d4da96cd1e962.js.map
