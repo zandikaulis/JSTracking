@@ -301,6 +301,10 @@ MediaPlayer.prototype.setAutoSwitchQuality = function (enable) {
     this._postMessage(WorkerMessage.SET_AUTO_SWITCH_QUALITY, enable);
 }
 
+MediaPlayer.prototype.setAutoMaxVideoSize = function (width, height) {
+    this._postMessage(WorkerMessage.SET_AUTO_MAX_VIDEO_SIZE, {width:width, height:height});
+}
+
 MediaPlayer.prototype.getPlaybackRate = function () {
     return this._mediaSink.videoElement().playbackRate;
 }
@@ -3101,6 +3105,12 @@ module.exports = {
      * @param {bool} enable - use abs?
      */
     SET_AUTO_SWITCH_QUALITY: 'WorkerSetAutoSwitchQuality',
+    /**
+     * Set ABR max video size
+     * @param {width} width
+     * @param {height} height
+     */
+    SET_AUTO_MAX_VIDEO_SIZE: 'WorkerSetAutoMaxVideoSize',
     /**
      * Set volume between 0-1
      */
