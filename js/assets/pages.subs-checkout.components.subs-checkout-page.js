@@ -2030,6 +2030,7 @@ webpackJsonp([39], {
                             }
                         }, o.createElement(m._4, {
                             className: "prime-offer__title",
+                            "data-a-target": e.id,
                             padding: {
                                 y: .5
                             }
@@ -16108,4 +16109,4 @@ webpackJsonp([39], {
             }(r.Component))
     }
 });
-//# sourceMappingURL=pages.subs-checkout.components.subs-checkout-page-f30319719d64451b8802e3b2a43b3c01.js.map
+//# sourceMappingURL=pages.subs-checkout.components.subs-checkout-page-fa7eec4a9874ee44b162ecce8325a668.js.map

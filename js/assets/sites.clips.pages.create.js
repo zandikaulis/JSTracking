@@ -1,27 +1,27 @@
 webpackJsonp([59], {
-    "7WFF": function(e, t, i) {
+    "7WFF": function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var n, s, a = i("TToO"),
-            r = i("GiK3"),
-            o = i("CIox"),
-            l = i("3zLD"),
-            d = i("7vx8"),
-            u = i("rqhk"),
-            p = i("6sO2"),
-            c = i("oIkB");
+        var i, s, a = n("TToO"),
+            r = n("GiK3"),
+            o = n("CIox"),
+            l = n("3zLD"),
+            d = n("7vx8"),
+            u = n("rqhk"),
+            p = n("6sO2"),
+            c = n("oIkB");
         ! function(e) {
             e.AlreadyPublished = "already_published", e.EditingWindowExpired = "editing_window_expired", e.InvalidSpeedDuration = "invalid_speed_duration", e.InvalidDuration = "invalid_duration"
-        }(n || (n = {})),
+        }(i || (i = {})),
         function(e) {
             e.Unsent = "unsent", e.Sending = "sending", e.Error = "error", e.Successful = "successful"
         }(s || (s = {}));
         var f, m = 5,
             h = 60,
-            g = i("Odds"),
-            v = i("isxN"),
+            g = n("Odds"),
+            v = n("isxN"),
             y = {
                 publishState: s.Unsent,
                 errorMessage: ""
@@ -31,7 +31,7 @@ webpackJsonp([59], {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = y, t.onPublish = function() {
                         return a.__awaiter(t, void 0, void 0, function() {
-                            var e, t, i;
+                            var e, t, n;
                             return a.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
@@ -39,7 +39,7 @@ webpackJsonp([59], {
                                                 publishState: s.Sending
                                             }), e = this.props.endOffset - this.props.startOffset, this.props.startOffset > this.props.endOffset || e < m || e > h) return this.setState({
                                             publishState: s.Error,
-                                            errorMessage: n.InvalidDuration
+                                            errorMessage: i.InvalidDuration
                                         }), [2];
                                         a.label = 1;
                                     case 1:
@@ -53,9 +53,9 @@ webpackJsonp([59], {
                                             title: this.props.title
                                         }))];
                                     case 2:
-                                        return (t = a.sent()).data.publishClip && t.data.publishClip.error && t.data.publishClip.error.message ? (i = t.data.publishClip.error.message.toLocaleLowerCase(), this.setState({
+                                        return (t = a.sent()).data.publishClip && t.data.publishClip.error && t.data.publishClip.error.message ? (n = t.data.publishClip.error.message.toLocaleLowerCase(), this.setState({
                                             publishState: s.Error,
-                                            errorMessage: i
+                                            errorMessage: n
                                         })) : (this.setState({
                                             publishState: s.Successful
                                         }), this.props.history.push("/" + this.props.slug)), [3, 4];
@@ -90,8 +90,8 @@ webpackJsonp([59], {
         ! function(e) {
             e.creating = "creating", e.created = "created", e.failed = "failed"
         }(f || (f = {}));
-        var b = i("vwd7"),
-            P = i("f8OD"),
+        var b = n("vwd7"),
+            P = n("f8OD"),
             C = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -103,8 +103,8 @@ webpackJsonp([59], {
                             isPlayerIframeLoaded: !0
                         })
                     }, t.getIsClipResolved = function(e) {
-                        var i = t.getRawMediaStatus(e);
-                        return t.getRawMediaExists(e) && (i === f.created || i === f.failed)
+                        var n = t.getRawMediaStatus(e);
+                        return t.getRawMediaExists(e) && (n === f.created || n === f.failed)
                     }, t.getIsCreationFailed = function(e) {
                         return t.getRawMediaExists(e) && t.getRawMediaStatus(e) === f.failed
                     }, t.getRawMediaStatus = function(e) {
@@ -126,16 +126,16 @@ webpackJsonp([59], {
                     this.timeoutID && clearTimeout(this.timeoutID), this.props.data.stopPolling()
                 }, t.prototype.componentDidUpdate = function() {
                     var e = this.getIsClipResolved(this.props) && !this.getIsCreationFailed(this.props);
-                    !this.hasSentEditClip && e && this.state.isPlayerIframeLoaded && this.props.data.clip && this.props.data.clip.rawMedia && (this.props.playerConnection.sendMessage(Object(u.p)(this.props.data.clip.rawMedia)), this.hasSentEditClip = !0)
+                    !this.hasSentEditClip && e && this.state.isPlayerIframeLoaded && this.props.data.clip && this.props.data.clip.rawMedia && (this.props.playerConnection.sendMessage(Object(u.r)(this.props.data.clip.rawMedia)), this.hasSentEditClip = !0)
                 }, t.prototype.render = function() {
                     if (this.state.isPollingTimedOut || this.getIsCreationFailed(this.props)) return r.createElement(o.a, {
                         to: "/500"
                     });
                     var e = this.props.data.clip;
                     if (!e || !e.rawMedia) return r.createElement(g._4, null);
-                    var t, i, n = (t = e.rawMedia.defaultClipInitialOffset, i = e.rawMedia.duration - e.rawMedia.defaultClipInitialOffset, {
+                    var t, n, i = (t = e.rawMedia.defaultClipInitialOffset, n = e.rawMedia.duration - e.rawMedia.defaultClipInitialOffset, {
                         startOffset: t,
-                        endOffset: t + i
+                        endOffset: t + n
                     });
                     return r.createElement(g._4, null, r.createElement(b.b, {
                         slug: this.props.slug,
@@ -145,12 +145,12 @@ webpackJsonp([59], {
                         isClipResolved: this.getIsClipResolved(this.props),
                         slug: this.props.slug,
                         title: "Hi!!",
-                        startOffset: n.startOffset,
-                        endOffset: n.endOffset
+                        startOffset: i.startOffset,
+                        endOffset: i.endOffset
                     }))
                 }, t
             }(r.Component),
-            O = Object(l.compose)(Object(u.r)({
+            O = Object(l.compose)(Object(u.t)({
                 playerId: function(e) {
                     return e.slug
                 }
@@ -185,12 +185,12 @@ webpackJsonp([59], {
                     })
                 }, t
             }(r.Component);
-        i.d(t, "ClipsCreate", function() {
+        n.d(t, "ClipsCreate", function() {
             return E
         })
     },
     f8OD: function(e, t) {
-        var i = {
+        var n = {
             kind: "Document",
             definitions: [{
                 kind: "OperationDefinition",
@@ -339,7 +339,7 @@ webpackJsonp([59], {
                 end: 199
             }
         };
-        i.loc.source = {
+        n.loc.source = {
             body: "query ClipsRawMedia($slug: ID!) {\nclip(slug: $slug) {\nrawMedia {\ndefaultClipInitialOffset\nduration\nfilmStripFrames\nfilmStripSecondsPerFrame\nframeHeight\nframeWidth\nspritesheetURL\nstatus\nvideoURL\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
@@ -347,25 +347,25 @@ webpackJsonp([59], {
                 column: 1
             }
         };
-        e.exports = i
+        e.exports = n
     },
-    icZh: function(e, t, i) {
+    icZh: function(e, t, n) {
         "use strict";
         t.a = r, t.b = function(e) {
             var t = r();
             t && t.length >= a && (t = t.slice(1, a));
-            n.l.set(s, JSON.stringify(t.concat([e])))
+            i.l.set(s, JSON.stringify(t.concat([e])))
         };
-        var n = i("6sO2"),
+        var i = n("6sO2"),
             s = "MOST_RECENT_CLIPS_WATCHED_STORAGE_KEY",
             a = 10;
 
         function r() {
-            return JSON.parse(n.l.get(s, "[]"))
+            return JSON.parse(i.l.get(s, "[]"))
         }
     },
     isxN: function(e, t) {
-        var i = {
+        var n = {
             kind: "Document",
             definitions: [{
                 kind: "OperationDefinition",
@@ -478,7 +478,7 @@ webpackJsonp([59], {
                 end: 120
             }
         };
-        i.loc.source = {
+        n.loc.source = {
             body: "mutation PublishClip($input: PublishClipInput!) {\npublishClip(input: $input) {\nclip {\ntitle\nslug\n}\nerror {\nmessage\n}\n}\n}",
             name: "GraphQL request",
             locationOffset: {
@@ -486,19 +486,19 @@ webpackJsonp([59], {
                 column: 1
             }
         };
-        e.exports = i
+        e.exports = n
     },
-    rqhk: function(e, t, i) {
+    rqhk: function(e, t, n) {
         "use strict";
-        var n = i("TToO"),
-            s = i("GiK3"),
-            a = i("kJau");
+        var i = n("TToO"),
+            s = n("GiK3"),
+            a = n("kJau");
 
         function r(e) {
             return function(t) {
-                return function(i) {
+                return function(n) {
                     function o(t) {
-                        var s = i.call(this, t) || this;
+                        var s = n.call(this, t) || this;
                         return s.messageHandlers = [], s.handlePlayerAdded = function() {
                             s.getPlayer() && !s.isConnected && (s.isConnected = !0, p.off(d, s.handlePlayerAdded), p.on(u, s.handlePlayerRemoved), window.addEventListener("message", s.onIncomingPlayerMessage))
                         }, s.handlePlayerRemoved = function() {
@@ -507,25 +507,25 @@ webpackJsonp([59], {
                             var t = s.getPlayer();
                             t && t.postMessage(e, a.a)
                         }, s.onIncomingPlayerMessage = function(e) {
-                            e.origin === a.a && e.data.namespace === I && s.messageHandlers.forEach(function(t) {
+                            e.origin === a.a && e.data.namespace === M && s.messageHandlers.forEach(function(t) {
                                 t(e.data)
                             })
                         }, s.updatePlayerProps = function(t) {
-                            if (e.requestedPlayerProps && (t.method === O || t.method === E)) {
-                                var i = t.args[0],
+                            if (e.requestedPlayerProps && (t.method === _ || t.method === I)) {
+                                var n = t.args[0],
                                     a = e.requestedPlayerProps.reduce(function(e, t) {
-                                        var n = i[t];
-                                        return void 0 !== n && s.state.playerProps[t] !== n && (e[t] = n), e
+                                        var i = n[t];
+                                        return void 0 !== i && s.state.playerProps[t] !== i && (e[t] = i), e
                                     }, {});
                                 Object.keys(a).length && s.setState({
-                                    playerProps: n.__assign({}, s.state.playerProps, a)
+                                    playerProps: i.__assign({}, s.state.playerProps, a)
                                 })
                             }
                         }, e.requestedPlayerProps && s.messageHandlers.push(s.updatePlayerProps), s.state = {
                             playerProps: {}
                         }, s
                     }
-                    return n.__extends(o, i), o.prototype.componentWillMount = function() {
+                    return i.__extends(o, n), o.prototype.componentWillMount = function() {
                         p.on(d, this.handlePlayerAdded)
                     }, o.prototype.componentWillUnmount = function() {
                         p.off(d, this.handlePlayerAdded), p.off(u, this.handlePlayerRemoved)
@@ -537,7 +537,7 @@ webpackJsonp([59], {
                                 playerProps: this.state.playerProps
                             }
                         };
-                        return s.createElement(t, n.__assign({}, this.props, e))
+                        return s.createElement(t, i.__assign({}, this.props, e))
                     }, o.prototype.getPlayer = function() {
                         return l[e.playerId(this.props)]
                     }, o.prototype.registerMessageHandler = function(e) {
@@ -546,7 +546,7 @@ webpackJsonp([59], {
                 }(s.Component)
             }
         }
-        var o = i("BzvE"),
+        var o = n("BzvE"),
             l = {},
             d = "player-storage-added",
             u = "player-storage-removed",
@@ -564,7 +564,7 @@ webpackJsonp([59], {
             return {
                 args: [void 0 === e.arg ? {} : e.arg],
                 method: e.method,
-                namespace: void 0 === e.namespace ? _ : e.namespace
+                namespace: void 0 === e.namespace ? w : e.namespace
             }
         }
 
@@ -589,128 +589,140 @@ webpackJsonp([59], {
 
         function y() {
             return m({
-                method: P
+                method: C
             })
         }
 
         function k(e) {
             return m({
-                method: C,
+                method: E,
                 arg: e
             })
         }
 
-        function S() {
+        function S(e) {
+            return m({
+                method: O,
+                arg: e
+            })
+        }
+
+        function b() {
             return m({
                 method: "fullscreen",
                 arg: !1
             })
         }
 
-        function b(e) {
+        function P(e) {
             return m({
                 method: "setEditClip",
                 arg: e
             })
         }
-        var P = "subscribe",
-            C = "setclip",
-            O = "bridgestateupdate",
-            E = "bridgestorestateupdate",
-            _ = "player.embed.host",
-            I = "player.embed.client";
-        i.d(t, "r", function() {
+        var C = "subscribe",
+            O = "setclip",
+            E = "setAutoplay",
+            _ = "bridgestateupdate",
+            I = "bridgestorestateupdate",
+            w = "player.embed.host",
+            M = "player.embed.client";
+        n.d(t, "t", function() {
             return r
-        }), i.d(t, "n", function() {
+        }), n.d(t, "p", function() {
             return l
-        }), i.d(t, "l", function() {
+        }), n.d(t, "n", function() {
             return d
-        }), i.d(t, "m", function() {
+        }), n.d(t, "o", function() {
             return u
-        }), i.d(t, "h", function() {
+        }), n.d(t, "i", function() {
             return p
-        }), i.d(t, "q", function() {
+        }), n.d(t, "s", function() {
             return c
-        }), i.d(t, "o", function() {
+        }), n.d(t, "q", function() {
             return f
-        }), i.d(t, !1, function() {
+        }), n.d(t, !1, function() {
             return m
-        }), i.d(t, !1, function() {
+        }), n.d(t, !1, function() {
             return h
-        }), i.d(t, !1, function() {
+        }), n.d(t, !1, function() {
             return g
-        }), i.d(t, "g", function() {
+        }), n.d(t, "h", function() {
             return v
-        }), i.d(t, "k", function() {
+        }), n.d(t, "m", function() {
             return y
-        }), i.d(t, "j", function() {
+        }), n.d(t, "k", function() {
             return k
-        }), i.d(t, "i", function() {
+        }), n.d(t, "l", function() {
             return S
-        }), i.d(t, "p", function() {
+        }), n.d(t, "j", function() {
             return b
-        }), i.d(t, "f", function() {
+        }), n.d(t, "r", function() {
             return P
-        }), i.d(t, "e", function() {
+        }), n.d(t, "g", function() {
             return C
-        }), i.d(t, "c", function() {
+        }), n.d(t, "f", function() {
             return O
-        }), i.d(t, "d", function() {
+        }), n.d(t, "e", function() {
             return E
-        }), i.d(t, "b", function() {
+        }), n.d(t, "c", function() {
             return _
-        }), i.d(t, "a", function() {
+        }), n.d(t, "d", function() {
             return I
-        }), i.d(t, !1, function() {
+        }), n.d(t, "b", function() {
+            return w
+        }), n.d(t, "a", function() {
+            return M
+        }), n.d(t, !1, function() {
             return "report"
-        }), i.d(t, !1, function() {
+        }), n.d(t, !1, function() {
             return "delete"
-        }), i.d(t, !1, function() {
+        }), n.d(t, !1, function() {
             return "deleteAll"
         })
     },
     vtXo: function(e, t) {},
-    vwd7: function(e, t, i) {
+    vwd7: function(e, t, n) {
         "use strict";
-        var n, s = i("TToO"),
-            a = i("GiK3"),
-            r = i("CSlQ"),
-            o = i("rqhk"),
-            l = i("kJau"),
-            d = i("icZh"),
-            u = i("Odds");
-        i("vtXo");
+        var i, s = n("TToO"),
+            a = n("GiK3"),
+            r = n("CSlQ"),
+            o = n("rqhk"),
+            l = n("kJau"),
+            d = n("icZh"),
+            u = n("Odds");
+        n("vtXo");
         ! function(e) {
             e.Viewing = "clips-viewing", e.Editing = "clips-editing"
-        }(n || (n = {}));
+        }(i || (i = {}));
         var p = function(e) {
             function t(t) {
-                var i = e.call(this, t) || this;
-                i.hasSetPlayerRef = !1, i.setInitialSlug = function(e) {
-                    i.state.initialSlug || (i.setState({
+                var n = e.call(this, t) || this;
+                n.hasSetPlayerRef = !1, n.setInitialSlug = function(e) {
+                    n.state.initialSlug || (n.setState({
                         initialSlug: e
                     }), Object(d.b)(e))
-                }, i.setPlayerRef = function(e) {
-                    i.playerRef = e
-                }, i.setIsLoaded = function() {
-                    i.setState({
+                }, n.setPlayerRef = function(e) {
+                    n.playerRef = e
+                }, n.setIsLoaded = function() {
+                    n.setState({
                         isLoaded: !0
-                    }), i.props.onLoaded && i.props.onLoaded()
+                    }), n.props.onLoaded && n.props.onLoaded()
                 };
-                var n = i.props.slug;
-                return i.state = {
-                    initialSlug: n,
+                var i = n.props.slug;
+                return n.state = {
+                    initialSlug: i,
                     isLoaded: !1
-                }, n && Object(d.b)(n), i
+                }, i && Object(d.b)(i), n
             }
             return s.__extends(t, e), t.prototype.componentDidMount = function() {
                 this.setInitialSlug(this.props.slug)
             }, t.prototype.componentWillReceiveProps = function(e) {
                 this.state.initialSlug || this.setInitialSlug(e.slug), this.props.slug !== e.slug && e.slug && this.setClip(e.slug)
             }, t.prototype.componentWillUnmount = function() {
-                Object(o.o)(this.props.slug)
+                Object(o.q)(this.props.slug)
             }, t.prototype.componentDidUpdate = function() {
-                !this.hasSetPlayerRef && this.playerRef && (this.hasSetPlayerRef = !0, Object(o.q)(this.props.slug, this.playerRef.contentWindow), this.playerRef.contentWindow.postMessage(Object(o.k)(), l.a))
+                !this.hasSetPlayerRef && this.playerRef && (this.hasSetPlayerRef = !0, Object(o.s)(this.props.slug, this.playerRef.contentWindow), this.playerRef.contentWindow.postMessage(Object(o.m)(), l.a))
             }, t.prototype.render = function() {
                 return this.state.initialSlug ? a.createElement(u._27, {
                     className: "clips-video-iframe",
@@ -737,16 +749,16 @@ webpackJsonp([59], {
                     onLoad: this.setIsLoaded
                 })))) : null
             }, t.prototype.setClip = function(e) {
-                this.playerRef && (this.playerRef.contentWindow.postMessage(Object(o.j)(e), l.a), Object(d.b)(e))
+                this.playerRef && (this.playerRef.contentWindow.postMessage(Object(o.l)(e), l.a), Object(d.b)(e))
             }, t = s.__decorate([Object(r.d)("ClipsVideoIframe", {
                 autoReportInteractive: !0
             })], t)
         }(a.Component);
-        i.d(t, "a", function() {
-            return n
-        }), i.d(t, "b", function() {
+        n.d(t, "a", function() {
+            return i
+        }), n.d(t, "b", function() {
             return p
         })
     }
 });
-//# sourceMappingURL=sites.clips.pages.create-8efadec04b0ab65c2c535af3d5d89350.js.map
+//# sourceMappingURL=sites.clips.pages.create-fde535a0d588964e35041ae16c041241.js.map

@@ -814,6 +814,7 @@ webpackJsonp([54], {
                     display: u.P.Flex,
                     alignItems: u.c.Center,
                     justifyContent: u._3.Center,
+                    flexWrap: u.S.Wrap,
                     margin: "auto",
                     padding: {
                         y: 3
@@ -3821,4 +3822,4 @@ webpackJsonp([54], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.anon-front-ebd30765c1ef1904a986541d759b6bfb.js.map
+//# sourceMappingURL=pages.anon-front-011efd7a6332b4385308bf181c0f34bc.js.map
