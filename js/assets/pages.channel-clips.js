@@ -4332,8 +4332,7 @@ webpackJsonp([41], {
                     });
                     n && (t = n.name + " - " + e.prefix)
                 }
-                var i = e.tier;
-                return e.event && !e.tier && (i = 1), d.createElement(x._4, {
+                return d.createElement(x._4, {
                     display: x.P.Flex,
                     flexDirection: x.R.Column,
                     alignItems: x.c.Center,
@@ -4343,10 +4342,10 @@ webpackJsonp([41], {
                     bold: !0
                 }, t), d.createElement(it.a, {
                     prefix: e.prefix,
-                    amount: i,
+                    amount: e.tier,
                     bitsConfig: e.bitsConfig,
                     showImage: !0,
-                    showAmount: !(e.event && !e.tier)
+                    showAmount: e.tier > 0
                 }))
             },
             Gt = (n("DVR9"), function(e) {
@@ -5084,15 +5083,14 @@ webpackJsonp([41], {
                         })
                     }
                 }, t.prototype.render = function() {
-                    var e = this;
                     if (!this.props.visible && !this.props.currentCheers.length) return null;
-                    var t, n = {
+                    var e, t = {
                         border: !0,
                         background: x.m.Base,
                         elevation: 3,
                         fullWidth: !0
                     };
-                    if (this.props.currentCheers.length || (t = d.createElement("button", {
+                    if (this.props.currentCheers.length || (e = d.createElement("button", {
                             className: "t-bits-card__close t-bits-card__top-controls",
                             onClick: this.props.onUserClose,
                             "data-test-selector": "cancel-button",
@@ -5107,7 +5105,7 @@ webpackJsonp([41], {
                         flexDirection: x.R.Column,
                         alignItems: x.c.Center,
                         justifyContent: x._3.Center
-                    }, n), d.createElement(x._6, {
+                    }, t), d.createElement(x._6, {
                         delay: 0
                     }), d.createElement(x._4, {
                         padding: {
@@ -5129,7 +5127,7 @@ webpackJsonp([41], {
                             x: 1,
                             bottom: 1
                         }
-                    }, n), t, d.createElement(x.O, {
+                    }, t), e, d.createElement(x.O, {
                         color: x.J.Error,
                         italic: !0
                     }, Object(a.d)("You cannot Cheer in your own channel.", "BitsCard")));
@@ -5141,27 +5139,27 @@ webpackJsonp([41], {
                         trackBitsCardInteraction: this.props.trackBitsCardInteraction,
                         location: kn.b.ChatTooltip
                     });
-                    var r = null,
-                        o = this.state.helpRequested && !this.props.currentCheers.length,
-                        s = null;
-                    if (this.props.data.user.cheer.settings.event && (s = this.props.data.user.cheer.settings.event.toLowerCase().replace("_", "-")), this.state.chosenCheermote) {
-                        var l = this.props.bitsConfig.indexedActions[this.state.chosenCheermote.toLowerCase()];
-                        if (l) {
-                            var c = l.orderedTiers.filter(function(e) {
+                    var n = null,
+                        r = this.state.helpRequested && !this.props.currentCheers.length,
+                        o = null;
+                    if (this.props.data.user.cheer.settings.event && (o = this.props.data.user.cheer.settings.event.toLowerCase().replace("_", "-")), this.state.chosenCheermote) {
+                        var s = this.props.bitsConfig.indexedActions[this.state.chosenCheermote.toLowerCase()];
+                        if (s) {
+                            var l = s.orderedTiers.filter(function(e) {
                                 return e.bits <= jt.k
                             }).map(function(e) {
                                 return {
                                     imgSrc: e.indexedImages.LIGHT.static.get(2),
                                     imgSrcDark: e.indexedImages.DARK.static.get(2),
-                                    key: l.prefix + ":" + e.bits
+                                    key: s.prefix + ":" + e.bits
                                 }
                             }).reverse();
-                            r = d.createElement(gn, {
+                            n = d.createElement(gn, {
                                 bitsConfig: this.props.bitsConfig,
-                                hide: o,
-                                cheermotes: c,
+                                hide: r,
+                                cheermotes: l,
                                 showCheermoteAmount: !0,
-                                event: s,
+                                event: o,
                                 onHover: this.handleTierHover,
                                 onHoverLeave: this.handleUnhover,
                                 onClick: this.handleTierClick,
@@ -5169,35 +5167,33 @@ webpackJsonp([41], {
                             })
                         }
                     }
-                    if (!r) {
-                        c = this.props.bitsConfig.orderedActions.filter(function(e) {
+                    if (!n) {
+                        l = this.props.bitsConfig.orderedActions.filter(function(e) {
                             return e.type !== jt.e
-                        }).map(function(t) {
-                            var n = jt.h;
-                            e.props.data && e.props.data.user.cheer.settings.event && (n = 1);
-                            var i = t.indexedTiers.get(n);
-                            return i ? {
-                                imgSrc: i.indexedImages.LIGHT.static.get(2),
-                                imgSrcDark: i.indexedImages.DARK.static.get(2),
-                                key: t.prefix
+                        }).map(function(e) {
+                            var t = e.indexedTiers.get(jt.h);
+                            return t ? {
+                                imgSrc: t.indexedImages.LIGHT.static.get(2),
+                                imgSrcDark: t.indexedImages.DARK.static.get(2),
+                                key: e.prefix
                             } : null
                         });
-                        r = d.createElement(gn, {
+                        n = d.createElement(gn, {
                             bitsConfig: this.props.bitsConfig,
-                            hide: o,
-                            cheermotes: c,
-                            event: s,
+                            hide: r,
+                            cheermotes: l,
+                            event: o,
                             onHover: this.handleCheermoteHover,
                             onHoverLeave: this.handleUnhover,
                             onClick: this.handleCheermoteClick
                         })
                     }
-                    var u, m = null;
-                    this.props.isSending ? this.state.totalBits >= jt.l && (m = d.createElement(vn, {
+                    var c, u = null;
+                    this.props.isSending ? this.state.totalBits >= jt.l && (u = d.createElement(vn, {
                         onCancel: this.props.onCancelSend,
                         onConfirm: this.props.onConfirmSend
-                    })) : m = s ? d.createElement(fn, {
-                        event: s,
+                    })) : u = o ? d.createElement(fn, {
+                        event: o,
                         selfBitsBadge: this.props.data.user.self && this.props.data.user.self.bitsBadge,
                         bitsConfig: this.props.bitsConfig,
                         onClickGetBits: this.handleClickBuy,
@@ -5207,7 +5203,7 @@ webpackJsonp([41], {
                         bitsConfig: this.props.bitsConfig,
                         onClickGetBits: this.handleClickBuy,
                         balance: this.props.data.currentUser && this.props.data.currentUser.bitsBalance
-                    }), o && (u = d.createElement("button", {
+                    }), r && (c = d.createElement("button", {
                         className: "t-bits-card__go-back t-bits-card__top-controls",
                         onClick: this.closeHelp,
                         "data-a-target": "bits-card-back-button"
@@ -5215,15 +5211,15 @@ webpackJsonp([41], {
                         asset: x._18.Play,
                         height: 8
                     }), " ", Object(a.d)("Back", "BitsCard")));
-                    var p = D("t-bits-card", {
+                    var m = D("t-bits-card", {
                         "t-bits-card--tall": !this.props.isSending
                     });
                     return d.createElement(x._27, i.__assign({
-                        className: p,
+                        className: m,
                         display: x.P.Flex,
                         flexDirection: x.R.Column,
                         "data-a-target": "bits-card"
-                    }, n), !this.props.isSending && u, t, d.createElement(x._27, {
+                    }, t), !this.props.isSending && c, e, d.createElement(x._27, {
                         className: "t-bits-card__contents",
                         display: x.P.Flex,
                         flexGrow: 0,
@@ -5239,7 +5235,7 @@ webpackJsonp([41], {
                         currentCheers: this.props.currentCheers,
                         displayName: this.props.data.user.displayName,
                         emoteMinimumBits: this.props.data.user.cheer.settings.emoteMinimumBits,
-                        event: s,
+                        event: o,
                         helpRequested: this.state.helpRequested,
                         hoveredCheermote: this.state.hoveredCheermote,
                         hoveredTier: this.state.hoveredTier,
@@ -5252,10 +5248,10 @@ webpackJsonp([41], {
                         channelID: this.props.channelID,
                         showHelp: this.showHelp,
                         isStaff: this.props.isStaff
-                    })), !this.props.isSending && r, m && d.createElement(x._4, {
+                    })), !this.props.isSending && n, u && d.createElement(x._4, {
                         className: "t-bits-card__footer",
                         display: x.P.Flex
-                    }, m))
+                    }, u))
                 }, t = i.__decorate([Object(c.a)(yn, {
                     name: "data",
                     skip: function(e) {
@@ -10377,7 +10373,7 @@ webpackJsonp([41], {
                 }
             },
             Ue = Object(d.compose)(Object(Me.b)(Be), Object(Re.b)(Be))(je),
-            Pe = n("vSU7"),
+            Pe = n("XdSf"),
             Ve = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -10386,13 +10382,7 @@ webpackJsonp([41], {
                         if (n && n.color) {
                             var i = n.color;
                             return {
-                                deferred: t.props.updateChatColor({
-                                    variables: {
-                                        input: {
-                                            color: i
-                                        }
-                                    }
-                                }).then(function() {
+                                deferred: t.props.updateChatColorMutation(i).then(function() {
                                     return {
                                         notice: Object(c.d)("Your color has been changed.", "ColorCommandHandler")
                                     }
@@ -10419,10 +10409,7 @@ webpackJsonp([41], {
                     }))
                 }, t
             }(l.Component),
-            He = Object(m.a)(Pe, {
-                name: "updateChatColor",
-                options: {}
-            })(Ve),
+            He = Object(Pe.a)()(Ve),
             We = n("TCxx"),
             Ge = function(e) {
                 function t() {
@@ -23033,6 +23020,102 @@ webpackJsonp([41], {
             return i.a
         })
     },
+    ScRf: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "mutation",
+                name: {
+                    kind: "Name",
+                    value: "Chat_UpdateChatColor"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "input"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "UpdateChatColorInput"
+                            }
+                        }
+                    }
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "updateChatColor"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "input"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "input"
+                                }
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "user"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "chatColor"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 117
+            }
+        };
+        n.loc.source = {
+            body: "mutation Chat_UpdateChatColor($input: UpdateChatColorInput!){\nupdateChatColor(input: $input) {\nuser {\nchatColor\n}\n}\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
     TCxx: function(e, t) {
         var n = {
             kind: "Document",
@@ -26371,6 +26454,42 @@ webpackJsonp([41], {
         var i = n("aMxy"),
             a = n("HZww"),
             r = n("bkpq")
+    },
+    XdSf: function(e, t, n) {
+        "use strict";
+        t.a = function() {
+            var e = this;
+            return Object(a.a)(r, {
+                props: function(t) {
+                    return {
+                        updateChatColorMutation: function(n) {
+                            return i.__awaiter(e, void 0, void 0, function() {
+                                return i.__generator(this, function(e) {
+                                    switch (e.label) {
+                                        case 0:
+                                            return t.mutate ? [4, t.mutate({
+                                                variables: {
+                                                    input: {
+                                                        color: n
+                                                    }
+                                                }
+                                            })] : [3, 2];
+                                        case 1:
+                                            return [2, e.sent().data];
+                                        case 2:
+                                            throw new Error("Update chat color mutation is not ready")
+                                    }
+                                })
+                            })
+                        }
+                    }
+                }
+            })
+        };
+        var i = n("TToO"),
+            a = n("7vx8"),
+            r = n("ScRf");
+        n.n(r)
     },
     Y5T0: function(e, t) {
         var n = {
@@ -29778,7 +29897,7 @@ webpackJsonp([41], {
                         })
                     }, t.canLoadMore = function() {
                         var e = t.props.data;
-                        return !(e.loading || e.error || !e.user || !e.user.clips.pageInfo.hasNextPage)
+                        return !(e.loading || e.error || !e.user || !e.user.clips || !e.user.clips.pageInfo.hasNextPage)
                     }, t.handleHostingChange = function(e) {
                         var n = e === (t.props.data.user && t.props.data.user.hosting && t.props.data.user.hosting.login);
                         null === e ? t.setState({
@@ -29800,12 +29919,13 @@ webpackJsonp([41], {
                     var e = a.createElement(S._6, {
                             fillContent: !0
                         }),
-                        t = [];
-                    return this.props.data.loading || this.props.data.error || !this.props.data.user || (t = this.props.data.user.clips.edges.map(function(e) {
+                        t = [],
+                        n = this.props.data.user;
+                    return !this.props.data.loading && !this.props.data.error && n && n.clips && (t = n.clips.edges.map(function(e) {
                         return e.node
                     })), e = this.props.data.error ? a.createElement(m.a, {
                         message: Object(o.d)("Error loading data.", "ChannelClipsContent")
-                    }) : this.props.data.user || this.props.data.loading ? a.createElement(C.a, {
+                    }) : this.props.data.loading || n && (!n || n.clips) ? a.createElement(C.a, {
                         clips: t,
                         isLoading: this.props.data.loading,
                         pageType: _.b.Channel,
@@ -29874,10 +29994,10 @@ webpackJsonp([41], {
                                     }),
                                     updateQuery: function(e, t) {
                                         var n = t.fetchMoreResult,
-                                            a = e.user && n.user ? Object(g.b)(e.user.clips.edges, n.user.clips.edges) : [];
+                                            a = e.user && e.user.clips && n.user && n.user.clips ? Object(g.b)(e.user.clips.edges, n.user.clips.edges) : [];
                                         return {
                                             user: i.__assign({}, n.user, {
-                                                clips: i.__assign({}, n.user ? n.user.clips : {}, {
+                                                clips: i.__assign({}, n.user && n.user.clips ? n.user.clips : {}, {
                                                     edges: a
                                                 })
                                             })
@@ -32764,7 +32884,7 @@ webpackJsonp([41], {
                 }, {
                     "cheermote-for-amount__cheer-amount--extremely-small": e.size === i.ExtremelySmall
                 });
-            if (e.amount && e.showAmount) {
+            if (void 0 !== e.amount && e.showAmount) {
                 var h = e.formattedNumber ? Object(o.e)(e.amount) : e.amount;
                 m = r.createElement(c.Y, {
                     padding: e.size === i.Small ? 0 : void 0,
@@ -35870,102 +35990,6 @@ webpackJsonp([41], {
         })), e.exports = i
     },
     vQzq: function(e, t) {},
-    vSU7: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "mutation",
-                name: {
-                    kind: "Name",
-                    value: "UpdateChatColor"
-                },
-                variableDefinitions: [{
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "input"
-                        }
-                    },
-                    type: {
-                        kind: "NonNullType",
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "UpdateChatColorInput"
-                            }
-                        }
-                    }
-                }],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "updateChatColor"
-                        },
-                        arguments: [{
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "input"
-                            },
-                            value: {
-                                kind: "Variable",
-                                name: {
-                                    kind: "Name",
-                                    value: "input"
-                                }
-                            }
-                        }],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "user"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "chatColor"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }]
-                                }
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 112
-            }
-        };
-        n.loc.source = {
-            body: "mutation UpdateChatColor($input: UpdateChatColorInput!){\nupdateChatColor(input: $input) {\nuser {\nchatColor\n}\n}\n}",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
     vh75: function(e, t, n) {
         "use strict";
         n.d(t, "d", function() {
@@ -37617,4 +37641,4 @@ webpackJsonp([41], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-clips-65ac82ec8419f71fc848157f44dfd151.js.map
+//# sourceMappingURL=pages.channel-clips-f247da0e99e9783bc077705f728238bd.js.map

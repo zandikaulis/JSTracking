@@ -1064,7 +1064,7 @@ webpackJsonp([67], {
             a = 30,
             o = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
         ! function(e) {
-            e.BitsLandingPage = "bits_landing_page", e.ChatLoginButton = "chat_login_button", e.ChatSignupButton = "chat_signup_button", e.Chat = "chat", e.ChannelUpsellLogin = "channel_upsell_login", e.ChannelUpsellSignup = "channel_upsell_signup", e.ClipsManager = "clips_manager", e.DashboardPage = "dashboard_page", e.DirectoryFollowButton = "directory-follow-button", e.DropsLoginButton = "drops-login-button", e.EsportsCampaignTabsFTUE = "esports_campaign_tabs_ftue", e.EsportsCampaignTabsMilestoneBalloon = "esports_campaign_tabs_milestone_balloon", e.EventFollowButton = "event_follow_button", e.FeedReactionToggle = "feed_reaction_toggle", e.FollowButton = "follow-button", e.FollowGameButton = "follow-game-button", e.FollowingPage = "following_page", e.FriendAdd = "friend_add", e.InventoryPage = "inventory_page", e.ManagerRedirect = "manager_redirect", e.PaymentsLandingPage = "payments_landing_page", e.RaidJoin = "raid_join", e.ReportHoster = "report_hoster", e.ReportChannel = "report_channel", e.SettingsPage = "settings_page", e.SubsLandingPage = "subs_landing_Page", e.TopNavLoginButton = "topnav_login_button", e.TopNavSignupButton = "topnav_signup_button", e.TrendingEmotesLogin = "trending-emotes-login", e.TrendingEmotesSignup = "trending-emotes-signup", e.VODComment = "vod_comment", e.VODOptions = "vod_options", e.WhisperButton = "whisper_button"
+            e.BitsLandingPage = "bits_landing_page", e.ChatLoginButton = "chat_login_button", e.ChatSignupButton = "chat_signup_button", e.Chat = "chat", e.ChannelUpsellLogin = "channel_upsell_login", e.ChannelUpsellSignup = "channel_upsell_signup", e.ClipsManager = "clips_manager", e.DashboardPage = "dashboard_page", e.DirectoryFollowButton = "directory-follow-button", e.DropsLoginButton = "drops-login-button", e.EsportsCampaignTabsFTUE = "esports_campaign_tabs_ftue", e.EsportsCampaignTabsMilestoneBalloon = "esports_campaign_tabs_milestone_balloon", e.EventFollowButton = "event_follow_button", e.FeedReactionToggle = "feed_reaction_toggle", e.FollowButton = "follow-button", e.FollowGameButton = "follow-game-button", e.FollowingPage = "following_page", e.FriendAdd = "friend_add", e.InventoryPage = "inventory_page", e.ManagerRedirect = "manager_redirect", e.PaymentsLandingPage = "payments_landing_page", e.RaidJoin = "raid_join", e.ReportHoster = "report_hoster", e.ReportChannel = "report_channel", e.SettingsPage = "settings_page", e.SubsLandingPage = "subs_landing_Page", e.SubsCheckoutPage = "subs_checkout_page", e.TopNavLoginButton = "topnav_login_button", e.TopNavSignupButton = "topnav_signup_button", e.TrendingEmotesLogin = "trending-emotes-login", e.TrendingEmotesSignup = "trending-emotes-signup", e.VODComment = "vod_comment", e.VODOptions = "vod_options", e.WhisperButton = "whisper_button"
         }(i || (i = {}))
     },
     "+xsx": function(e, t) {},
@@ -11720,7 +11720,7 @@ webpackJsonp([67], {
                 return s
             }),
             function(e) {
-                e.AutohostSettings = "autohost_settings", e.BitsLandingPage = "bits_landing", e.Browse = "browse", e.BrowseCommunities = "browse_communities", e.BrowseCreative = "browse_creative", e.BrowseForYou = "browse_for_you", e.Channel = "channel", e.ChannelClips = "channel_clips", e.ChannelClipsManager = "my_clips_channel", e.ChannelEvents = "channel_events", e.ChannelVideos = "channel_vods", e.ChannelCollections = "channel_collections", e.Chat = "chat", e.ClipsGame = "clips_game", e.ClipsViewing = "clips_viewing", e.Dashboard = "dashboard", e.DashboardAchievements = "dashboard/achievements", e.DashboardBounties = "dashboard/bounties", e.DashboardChannelAnalytics = "dashboard/channel-analytics", e.DashboardChannelAnalyticsReferrals = "dashboard/channel-analytics-referrals", e.DashboardExtensions = "dashboard/extensions", e.DashboardExtensionsConfigure = "dashboard/extensions/configure", e.DashboardRevenueSettings = "dashboard/settings/revenue", e.DashboardSettingsIndex = "dashboard/settings", e.DashboardSettingsRevenueGameCommerce = "dashboard/settings/revenue/game-commerce", e.DashboardSettingsRevenueGameCommerceV2 = "dashboard/settings/revenue/game-commerce-v2", e.DashboardSettingsRevenueMerchByAmazon = "dashboard/settings/revenue/merch-by-amazon", e.DashboardStreamSummary = "dashboard/stream-summary", e.Directory = "directory", e.DirectoryPopular = "directory.popular", e.EmailUnsubscribe = "email_unsubscribe", e.EmailVerification = "email_verification", e.EventDetails = "event_details", e.ExtensionDetails = "extension_details", e.Followers = "followers", e.Follows = "follows", e.FrontPage = "home", e.GameDetail = "game_detail", e.Inventory = "inventory", e.MyClipsManager = "my_clips", e.None = "", e.OnboardingCommunitySelection = "onboarding/community-selection", e.OnboardingChannelSurfing = "onboarding/channel-surfing", e.PaymentsLandingPage = "payments_landing_page", e.SubsLandingPage = "subs-landing", e.SubsCheckoutPage = "subs_checkout", e.SettingsPage = "settings", e.SubsBroadcasterPage = "subs-broadcaster", e.VideoManager = "video_manager", e.VideoManagerCollectionManager = "video_manager_collections", e.VideoManagerCollectionEditor = "video_manager_collection_editor", e.VideoManagerHighlighter = "video_manager_highlighter", e.VideoWatchPage = "vod"
+                e.AutohostSettings = "autohost_settings", e.BitsLandingPage = "bits_landing", e.Browse = "browse", e.BrowseCommunities = "browse_communities", e.BrowseCreative = "browse_creative", e.BrowseForYou = "browse_for_you", e.Channel = "channel", e.ChannelClips = "channel_clips", e.ChannelClipsManager = "my_clips_channel", e.ChannelEvents = "channel_events", e.ChannelVideos = "channel_vods", e.ChannelCollections = "channel_collections", e.Chat = "chat", e.ClipsGame = "clips_game", e.ClipsEditing = "clips_edit", e.ClipsViewing = "clips_viewing", e.Dashboard = "dashboard", e.DashboardAchievements = "dashboard/achievements", e.DashboardBounties = "dashboard/bounties", e.DashboardChannelAnalytics = "dashboard/channel-analytics", e.DashboardChannelAnalyticsReferrals = "dashboard/channel-analytics-referrals", e.DashboardExtensions = "dashboard/extensions", e.DashboardExtensionsConfigure = "dashboard/extensions/configure", e.DashboardRevenueSettings = "dashboard/settings/revenue", e.DashboardSettingsIndex = "dashboard/settings", e.DashboardSettingsRevenueGameCommerce = "dashboard/settings/revenue/game-commerce", e.DashboardSettingsRevenueGameCommerceV2 = "dashboard/settings/revenue/game-commerce-v2", e.DashboardSettingsRevenueMerchByAmazon = "dashboard/settings/revenue/merch-by-amazon", e.DashboardStreamSummary = "dashboard/stream-summary", e.Directory = "directory", e.DirectoryPopular = "directory.popular", e.EmailUnsubscribe = "email_unsubscribe", e.EmailVerification = "email_verification", e.EventDetails = "event_details", e.ExtensionDetails = "extension_details", e.Followers = "followers", e.Follows = "follows", e.FrontPage = "home", e.GameDetail = "game_detail", e.Inventory = "inventory", e.MyClipsManager = "my_clips", e.None = "", e.OnboardingCommunitySelection = "onboarding/community-selection", e.OnboardingChannelSurfing = "onboarding/channel-surfing", e.PaymentsLandingPage = "payments_landing_page", e.SubsLandingPage = "subs-landing", e.SubsCheckoutPage = "subs_checkout", e.SettingsPage = "settings", e.SubsBroadcasterPage = "subs-broadcaster", e.VideoManager = "video_manager", e.VideoManagerCollectionManager = "video_manager_collections", e.VideoManagerCollectionEditor = "video_manager_collection_editor", e.VideoManagerHighlighter = "video_manager_highlighter", e.VideoWatchPage = "vod"
             }(i || (i = {})),
             function(e) {
                 e.Channels = "channels", e.Communities = "communities", e.Games = "games", e.Hosts = "hosts", e.Mixed = "mixed", e.Videos = "vods"
@@ -14417,6 +14417,7 @@ webpackJsonp([67], {
                 "5c8e4a59-8c63-4000-9c4e-6224f34b7c21": "control",
                 "72c14aa9-d78d-4095-8f27-d97b9aac4233": "no",
                 "1f57c754-ceb2-40e4-8d49-c51cfc007f14": "no",
+                "3fa31c3d-1477-40a5-9433-0b64b398c86a": "recurly",
                 "afc307f3-4011-40ba-9406-56c474b5922b": "control",
                 "3763f4e7-c786-4000-a6c3-b91b9c774302": "control",
                 "d6bb4aa4-efae-4031-96be-f08950d6c8f4": "shown",
@@ -14442,6 +14443,7 @@ webpackJsonp([67], {
                 TWILIGHT_WEB_ONBOARDING_CHANNEL_SURFING: "5c8e4a59-8c63-4000-9c4e-6224f34b7c21",
                 TWILIGHT_SUB_CHECKOUT_POPUP: "72c14aa9-d78d-4095-8f27-d97b9aac4233",
                 TWILIGHT_SUB_CHECKOUT: "1f57c754-ceb2-40e4-8d49-c51cfc007f14",
+                TWILIGHT_SUB_CHECKOUT_VARIANT: "3fa31c3d-1477-40a5-9433-0b64b398c86a",
                 TWILIGHT_VIDEO_FEATURO_EN: "afc307f3-4011-40ba-9406-56c474b5922b",
                 TWILIGHT_FENIX_DOWN: "3763f4e7-c786-4000-a6c3-b91b9c774302",
                 TWILIGHT_EVENT_GAME_DIRECTORY: "d6bb4aa4-efae-4031-96be-f08950d6c8f4",
@@ -25376,12 +25378,11 @@ webpackJsonp([67], {
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    var e = this.props.user;
-                    if (!e) return this.renderError();
-                    var t = this.props.lastMessage ? Object(B.a)(this.props.lastMessage.content.content, this.props.lastMessage.content.emotes, this.props.lastMessage.editedAt) : null,
-                        n = this.props.unreadMessageCount,
-                        i = e.displayName || e.login;
-                    return r.createElement("div", {
+                    var e, t, n, i = this.props.user,
+                        a = this.props.lastMessage ? Object(B.a)(this.props.lastMessage.content.content, this.props.lastMessage.content.emotes, this.props.lastMessage.editedAt) : null,
+                        o = this.props.unreadMessageCount,
+                        s = Object(g.d)("Unknown", "ThreadListItem");
+                    return i ? ((e = i.displayName || i.login) || (e = s), t = i.login, n = i.profileImageURL) : (e = s, t = s, n = null), r.createElement("div", {
                         onClick: this.handleThreadClick
                     }, r.createElement(f._27, {
                         className: "whispers-list-item",
@@ -25392,7 +25393,7 @@ webpackJsonp([67], {
                         flexWrap: f.S.NoWrap,
                         fullWidth: !0,
                         alignItems: f.c.Center,
-                        "data-a-target": "whisper-with-" + e.login
+                        "data-a-target": "whisper-with-" + t
                     }, r.createElement(f._4, {
                         className: "whispers-list-item__avatar",
                         margin: {
@@ -25402,20 +25403,21 @@ webpackJsonp([67], {
                     }, r.createElement(f.l, {
                         size: 30,
                         alt: Object(g.d)("{interlocutorName}'s Avatar", {
-                            interlocutorName: i
+                            interlocutorName: e
                         }, "WhisperThreadListItem"),
-                        src: e.profileImageURL,
+                        src: n,
                         onLoad: this.props.avatarOnLoadCallback
                     })), r.createElement(f._4, {
                         fullWidth: !0,
                         display: f.P.Inline
                     }, r.createElement(f.O, {
                         fontSize: f.T.Size5,
-                        bold: !0
-                    }, i), r.createElement(f._4, {
+                        bold: !0,
+                        italic: e === s
+                    }, e), r.createElement(f._4, {
                         className: "whispers-list-item__last-message",
                         ellipsis: !0
-                    }, t)), r.createElement(f._4, {
+                    }, a)), r.createElement(f._4, {
                         className: "whispers-list-item__unread-count",
                         margin: {
                             right: 1
@@ -25423,7 +25425,7 @@ webpackJsonp([67], {
                         textAlign: f._37.Right
                     }, r.createElement(f.O, {
                         bold: !0
-                    }, n > 0 && !this.props.muted ? n : null), this.props.muted && r.createElement(f._4, {
+                    }, o > 0 && !this.props.muted ? o : null), this.props.muted && r.createElement(f._4, {
                         display: f.P.Flex,
                         alignItems: f.c.Center,
                         justifyContent: f._3.Center
@@ -25440,8 +25442,6 @@ webpackJsonp([67], {
                         onClick: this.handleArchiveClick,
                         "data-click-out-id": "whispers-list-item__archive-button"
                     }))))
-                }, t.prototype.renderError = function() {
-                    return r.createElement(f._4, null, r.createElement("p", null, Object(g.d)("Sorry, something went wrong fetching this conversation.", "WhisperThreadListItem")))
                 }, t
             }(r.Component)),
             H = n("7miU"),
@@ -26735,10 +26735,10 @@ webpackJsonp([67], {
                 return n.e(65).then(n.bind(null, "Tj44"))
             }, "EmailVerificationPage"),
             Ze = se.a.wrap(function() {
-                return n.e(47).then(n.bind(null, "NTi8"))
+                return n.e(48).then(n.bind(null, "NTi8"))
             }, "EventLandingPage"),
             Xe = se.a.wrap(function() {
-                return n.e(48).then(n.bind(null, "IpE8"))
+                return n.e(49).then(n.bind(null, "IpE8"))
             }, "FollowingRootPage"),
             et = se.a.wrap(function() {
                 return n.e(55).then(n.bind(null, "lTLe"))
@@ -26759,7 +26759,7 @@ webpackJsonp([67], {
                 return n.e(61).then(n.bind(null, "DkuH"))
             }, "ReportUserPage"),
             ot = se.a.wrap(function() {
-                return n.e(49).then(n.bind(null, "K4jf"))
+                return n.e(47).then(n.bind(null, "K4jf"))
             }, "SettingsRoot"),
             st = se.a.wrap(function() {
                 return n.e(37).then(n.bind(null, "uiPj"))
@@ -28579,16 +28579,16 @@ webpackJsonp([67], {
                     autoReportInteractive: !0
                 })], t)
             }(d.Component);
-        var re = Object(i.b)(function(e) {
+        var re, ae = Object(i.b)(function(e) {
                 return {
                     isLoggedIn: Object(l.d)(e)
                 }
             })(ie),
-            ae = n("S1vB"),
-            oe = n("Hs3O"),
-            se = n("iGr2"),
-            le = Object(F.a)("/products/turbo?ref=top_nav"),
-            ce = function(e) {
+            oe = n("S1vB"),
+            se = n("Hs3O"),
+            le = n("iGr2"),
+            ce = Object(F.a)("/products/turbo?ref=top_nav"),
+            de = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -28596,16 +28596,16 @@ webpackJsonp([67], {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     if (this.props.data.loading || this.props.data.error) return null;
-                    var e = this.props.data.requestInfo && !Object(ae.a)(this.props.data.requestInfo.countryCode),
+                    var e = this.props.data.requestInfo && !Object(oe.a)(this.props.data.requestInfo.countryCode),
                         t = !this.props.data.currentUser || !this.props.data.currentUser.hasTurbo;
                     if (e && t) return d.createElement("a", {
-                        href: le,
+                        href: ce,
                         target: "_blank",
                         className: "top-nav__nav-link",
                         "data-a-target": "try-prime-link"
                     }, Object(u.d)("Go Turbo", "TopNavUpsell"));
                     if (!this.props.data.currentUser || !this.props.data.currentUser.hasPrime) {
-                        var n = Object(oe.d)(oe.b, window.location.pathname.substring(1));
+                        var n = Object(se.d)(se.b, window.location.pathname.substring(1));
                         return d.createElement("a", {
                             href: n,
                             target: "_blank",
@@ -28614,21 +28614,25 @@ webpackJsonp([67], {
                         }, Object(u.d)("Try Prime", "TopNavUpsell"))
                     }
                     return null
-                }, t = c.__decorate([Object(h.a)(se), Object(v.d)("TopNavUpsellComponent")], t)
+                }, t = c.__decorate([Object(h.a)(le), Object(v.d)("TopNavUpsellComponent")], t)
             }(d.Component),
-            de = n("RweG"),
-            ue = n("WIs4"),
-            pe = n("l4QG"),
-            me = n("aMxy"),
-            he = n("NXs7"),
-            ge = n("HZww"),
-            fe = n("FLwB"),
-            ve = n("VAT8"),
-            be = n("ZaD5"),
-            ye = n("NikC"),
-            ke = n("0nzt"),
-            _e = n("oIkB"),
-            Se = (n("/Urv"), function(e) {
+            ue = n("RweG"),
+            pe = n("WIs4"),
+            me = n("l4QG"),
+            he = n("aMxy"),
+            ge = n("NXs7"),
+            fe = n("HZww"),
+            ve = n("FLwB"),
+            be = n("VAT8"),
+            ye = n("ZaD5"),
+            ke = n("NikC"),
+            _e = n("0nzt"),
+            Se = n("oIkB");
+        ! function(e) {
+            e.Disable = "disable", e.Enable = "enable"
+        }(re || (re = {}));
+        n("/Urv");
+        var we = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onLogoutClick = function(e) {
@@ -28636,12 +28640,12 @@ webpackJsonp([67], {
                     }, t.onShareCheckboxClick = function() {
                         t.props.data && !t.props.data.error && t.props.data.currentUser && t.props.toggleShareActivity()
                     }, t.onDarkModeCheckboxClick = function() {
-                        var e = t.props.theme === he.a.Dark ? he.a.Light : he.a.Dark;
-                        t.props.changeTheme(e, ye.a.UserMenu)
+                        var e = t.props.theme === ge.a.Dark ? ge.a.Light : ge.a.Dark;
+                        t.props.changeTheme(e, ke.a.UserMenu)
                     }, t.onOnlineClick = function(e) {
-                        t.props.data && !t.props.data.error && t.props.data.currentUser && (e && e.stopPropagation(), t.props.toggleVisibility(pe.a.Online))
+                        t.props.data && !t.props.data.error && t.props.data.currentUser && (e && e.stopPropagation(), t.props.toggleVisibility(me.a.Online))
                     }, t.onInvisibleClick = function(e) {
-                        t.props.data && !t.props.data.error && t.props.data.currentUser && (e && e.stopPropagation(), t.props.toggleVisibility(pe.a.Offline))
+                        t.props.data && !t.props.data.error && t.props.data.currentUser && (e && e.stopPropagation(), t.props.toggleVisibility(me.a.Offline))
                     }, t
                 }
                 return c.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -28662,13 +28666,13 @@ webpackJsonp([67], {
                         p = void 0,
                         m = void 0,
                         h = void 0;
-                    return this.props.data && !this.props.data.error && this.props.data.currentUser && (i = !0, r = this.props.data.currentUser.availability === pe.a.Offline ? B.J.Base : B.J.Alt2, a = this.props.data.currentUser.availability === pe.a.Online ? B.J.Base : B.J.Alt2, o = !!this.props.data.currentUser.settings && this.props.data.currentUser.settings.isSharingActivity, s = this.props.data.currentUser.availability === pe.a.Offline, l = this.props.data.currentUser.availability === pe.a.Online, c = this.props.data.currentUser.availability === pe.a.Offline, p = {
+                    return this.props.data && !this.props.data.error && this.props.data.currentUser && (i = !0, r = this.props.data.currentUser.availability === me.a.Offline ? B.J.Base : B.J.Alt2, a = this.props.data.currentUser.availability === me.a.Online ? B.J.Base : B.J.Alt2, o = !!this.props.data.currentUser.settings && this.props.data.currentUser.settings.isSharingActivity, s = this.props.data.currentUser.availability === me.a.Offline, l = this.props.data.currentUser.availability === me.a.Online, c = this.props.data.currentUser.availability === me.a.Offline, p = {
                         pathname: "/" + this.props.data.currentUser.login,
                         state: {
                             content: g.PageviewContent.SelfChannel,
                             medium: g.PageviewMedium.TopNav
                         }
-                    }, m = Object(F.a)("/" + this.props.data.currentUser.login + "/manager/past_broadcasts"), h = Object(F.a)("/" + this.props.data.currentUser.login + "/dashboard")), d.createElement(B._27, {
+                    }, m = Object(F.a)("/" + this.props.data.currentUser.login + "/manager"), h = Object(F.a)("/" + this.props.data.currentUser.login + "/dashboard")), d.createElement(B._27, {
                         overflow: B._7.Hidden,
                         position: B._11.Absolute,
                         className: e,
@@ -28767,7 +28771,7 @@ webpackJsonp([67], {
                         "data-a-target": "dark-mode-toggle",
                         "data-test-selector": "dark-mode-toggle",
                         "data-a-value": this.props.theme,
-                        checked: this.props.theme === he.a.Dark,
+                        checked: this.props.theme === ge.a.Dark,
                         onChange: this.onDarkModeCheckboxClick
                     }))), d.createElement(B._4, {
                         margin: {
@@ -29004,17 +29008,17 @@ webpackJsonp([67], {
                         width: 18
                     })), d.createElement(B.O, null, Object(u.d)("Log Out", "UserMenuDropdown"))))))))
                 }, t = c.__decorate([Object(v.d)("UserMenuDropdown")], t)
-            }(d.Component)),
-            we = n("jAYy"),
-            Ee = n("94wQ"),
-            Ce = function(e) {
+            }(d.Component),
+            Ee = n("jAYy"),
+            Ce = n("94wQ"),
+            Ne = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.toggleShareActivity = function() {
                         if (t.props.data && !t.props.data.error && t.props.data.currentUser) {
-                            var e = !!t.props.data.currentUser.settings && !t.props.data.currentUser.settings.isSharingActivity,
-                                n = c.__assign({}, Object(_e.a)({
-                                    isSharingActivity: e
+                            var e, n, i = !!t.props.data.currentUser.settings && !t.props.data.currentUser.settings.isSharingActivity,
+                                r = c.__assign({}, Object(Se.a)({
+                                    isSharingActivity: i
                                 }), {
                                     optimisticResponse: {
                                         updateIsSharingActivity: {
@@ -29023,21 +29027,27 @@ webpackJsonp([67], {
                                                 __typename: "User",
                                                 id: t.props.data.currentUser.id,
                                                 settings: {
-                                                    isSharingActivity: e,
+                                                    isSharingActivity: i,
                                                     __typename: "UserSettings"
                                                 }
                                             }
                                         }
                                     }
                                 });
-                            t.props.updateIsSharingActivity(n)
+                            t.props.updateIsSharingActivity(r), e = {
+                                login: t.props.data.currentUser.login,
+                                isSharingEnabled: i
+                            }, n = {
+                                login: e.login,
+                                action: e.isSharingEnabled ? re.Enable : re.Disable
+                            }, u.n.track(g.SpadeEventType.PresenceToggle, n)
                         }
                     }, t.toggleVisibility = function(e) {
-                        t.props.data && !t.props.data.error && t.props.data.currentUser && Object(fe.e)(e)
+                        t.props.data && !t.props.data.error && t.props.data.currentUser && Object(ve.e)(e)
                     }, t
                 }
                 return c.__extends(t, e), t.prototype.render = function() {
-                    return d.createElement(Se, {
+                    return d.createElement(we, {
                         data: this.props.data,
                         dropdownOpen: this.props.dropdownOpen,
                         toggleShareActivity: this.toggleShareActivity,
@@ -29046,43 +29056,43 @@ webpackJsonp([67], {
                         logout: this.props.logout,
                         theme: this.props.theme
                     })
-                }, t = c.__decorate([Object(h.a)(we, {
+                }, t = c.__decorate([Object(h.a)(Ee, {
                     skip: function(e) {
                         return !e.firstPageLoaded
                     }
-                }), Object(h.a)(Ee, {
+                }), Object(h.a)(Ce, {
                     name: "updateIsSharingActivity"
-                }), Object(ue.a)(function(e) {
+                }), Object(pe.a)(function(e) {
                     return {
-                        query: we,
-                        topic: e.data && e.data.currentUser ? Object(ge.m)(e.data.currentUser.id) : "",
+                        query: Ee,
+                        topic: e.data && e.data.currentUser ? Object(fe.m)(e.data.currentUser.id) : "",
                         skip: !(e.data && !e.data.loading && !e.data.error && e.data.currentUser),
-                        type: me.PubsubMessageType.PresenceSettings,
+                        type: he.PubsubMessageType.PresenceSettings,
                         mutator: function(e, t) {
                             return t.currentUser && t.currentUser.settings && (t.currentUser.settings.visibility = e.data.availability_override.toUpperCase(), t.currentUser.settings.isSharingActivity = e.data.share_activity), t
                         }
                     }
                 })], t)
             }(d.Component);
-        var Ne = Object(i.b)(function(e) {
+        var Te = Object(i.b)(function(e) {
                 return {
                     firstPageLoaded: e.session.firstPageLoaded,
-                    theme: Object(ke.a)(e)
+                    theme: Object(_e.a)(e)
                 }
             }, function(e) {
                 return Object(a.b)({
-                    changeTheme: ye.b,
+                    changeTheme: ke.b,
                     logout: s.g
                 }, e)
-            })(Ce),
-            Te = (n("Q8Dy"), function(e) {
+            })(Ne),
+            Oe = (n("Q8Dy"), function(e) {
                 return d.createElement(B._4, {
                     position: B._11.Relative,
                     display: B.P.Flex,
                     flexGrow: 1,
                     alignItems: B.c.Stretch,
                     fullHeight: !0,
-                    className: Object(ve.c)(he.a.Dark)
+                    className: Object(be.c)(ge.a.Dark)
                 }, d.createElement(B._4, {
                     display: B.P.Flex,
                     flexGrow: 1,
@@ -29161,8 +29171,8 @@ webpackJsonp([67], {
                     asset: B._18.GlyphArrDown
                 })))))))
             }),
-            Oe = n("2Hj/"),
-            De = (n("nist"), function(e) {
+            De = n("2Hj/"),
+            Ie = (n("nist"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onCardClick = function() {
@@ -29173,7 +29183,7 @@ webpackJsonp([67], {
                     var e = this.props.data.currentUser,
                         t = e && e.profileImageURL || u.a.defaultAvatarURL,
                         n = e && e.displayName || "",
-                        i = pe.a.Offline;
+                        i = me.a.Offline;
                     return e && (e.availability ? i = e.availability : e.settings && e.settings.visibility && (i = e.settings.visibility)), d.createElement(B._4, {
                         position: B._11.Relative,
                         display: B.P.Flex,
@@ -29237,7 +29247,7 @@ webpackJsonp([67], {
                         margin: {
                             right: .5
                         }
-                    }, d.createElement(Oe.a, {
+                    }, d.createElement(De.a, {
                         availability: i
                     })), d.createElement(B._27, {
                         ellipsis: !0,
@@ -29247,9 +29257,9 @@ webpackJsonp([67], {
                         noWrap: !0,
                         "data-a-target": "online-status",
                         lineHeight: B._5.Heading
-                    }, this.props.data.currentUser && d.createElement(Oe.b, {
+                    }, this.props.data.currentUser && d.createElement(De.b, {
                         activity: this.props.data.currentUser.activity,
-                        availability: i === pe.a.Offline ? pe.a.Invisible : i
+                        availability: i === me.a.Offline ? me.a.Invisible : i
                     }))))), d.createElement(B._27, {
                         display: B.P.Flex,
                         flexShrink: 0,
@@ -29261,8 +29271,8 @@ webpackJsonp([67], {
                     }))))))
                 }, t
             }(d.Component)),
-            Ie = n("9q8M"),
-            Pe = function(e) {
+            Pe = n("9q8M"),
+            xe = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.isSettingNewSession = !1, n.onMenuCardClick = function() {
@@ -29276,7 +29286,7 @@ webpackJsonp([67], {
                     }, n.dataIsReady = function(e) {
                         return e.data && !e.data.loading && !e.data.error && e.data.currentUser
                     }, n.setUserToOffline = function() {
-                        Object(fe.c)(pe.a.Offline), Object(fe.a)()
+                        Object(ve.c)(me.a.Offline), Object(ve.a)()
                     }, n.setNewSession = function() {
                         return c.__awaiter(n, void 0, void 0, function() {
                             var e;
@@ -29286,7 +29296,7 @@ webpackJsonp([67], {
                                         if (this.isSettingNewSession) return [2];
                                         this.isSettingNewSession = !0, t.label = 1;
                                     case 1:
-                                        return t.trys.push([1, 3, 4, 5]), [4, Object(fe.g)()];
+                                        return t.trys.push([1, 3, 4, 5]), [4, Object(ve.g)()];
                                     case 2:
                                         return t.sent(), this.props.initialUserAvailabilitySet(), [3, 5];
                                     case 3:
@@ -29318,13 +29328,13 @@ webpackJsonp([67], {
                 }, t.prototype.componentWillUnmount = function() {
                     this.unsubscribeFromHistory(), this.setUserToOffline()
                 }, t.prototype.render = function() {
-                    var e = L(Object(ve.c)(he.a.Dark), {
+                    var e = L(Object(be.c)(ge.a.Dark), {
                             "top-nav-user-menu--dropdown-open": this.state.dropdownOpen
                         }),
                         t = null;
-                    return t = this.props.data.loading && !this.props.data.currentUser || this.props.data.error ? d.createElement(Te, {
+                    return t = this.props.data.loading && !this.props.data.currentUser || this.props.data.error ? d.createElement(Oe, {
                         onMenuCardClick: this.onMenuCardClick
-                    }) : d.createElement(De, {
+                    }) : d.createElement(Ie, {
                         data: this.props.data,
                         onMenuCardClick: this.onMenuCardClick,
                         theme: this.props.theme
@@ -29337,46 +29347,46 @@ webpackJsonp([67], {
                     }, d.createElement(x.a, {
                         onClickOut: this.onClickOut,
                         className: e
-                    }, t, d.createElement(Ne, {
+                    }, t, d.createElement(Te, {
                         dropdownOpen: this.state.dropdownOpen
                     })))
                 }, t.prototype.reportInteractive = function() {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
-                }, t = c.__decorate([Object(h.a)(Ie), Object(ue.a)(function(e) {
+                }, t = c.__decorate([Object(h.a)(Pe), Object(pe.a)(function(e) {
                     return {
-                        query: Ie,
-                        topic: e.data.currentUser ? Object(ge.m)(e.data.currentUser.id) : "",
+                        query: Pe,
+                        topic: e.data.currentUser ? Object(fe.m)(e.data.currentUser.id) : "",
                         skip: !(e.data && !e.data.loading && !e.data.error && e.data.currentUser),
-                        type: me.PubsubMessageType.PresenceSettings,
+                        type: he.PubsubMessageType.PresenceSettings,
                         mutator: function(e, t) {
                             return t.currentUser && t.currentUser.settings && (t.currentUser.settings.visibility = e.data.availability_override.toUpperCase(), t.currentUser.settings.isSharingActivity = e.data.share_activity), t
                         }
                     }
-                }), Object(de.a)([{
+                }), Object(ue.a)([{
                     topic: function(e) {
-                        return e.data.currentUser ? Object(ge.m)(e.data.currentUser.id) : ""
+                        return e.data.currentUser ? Object(fe.m)(e.data.currentUser.id) : ""
                     },
-                    mapMessageTypesToProps: (xe = {}, xe[me.PubsubMessageType.Presence] = "presence", xe),
+                    mapMessageTypesToProps: (Le = {}, Le[he.PubsubMessageType.Presence] = "presence", Le),
                     skip: function(e) {
                         return !(e.data && !e.data.loading && !e.data.error && e.data.currentUser)
                     }
                 }]), Object(v.d)("User")], t)
             }(d.Component);
-        var xe, Le = Object(i.b)(function(e) {
+        var Le, Re = Object(i.b)(function(e) {
                 return {
-                    theme: Object(ke.a)(e),
+                    theme: Object(_e.a)(e),
                     firstPageLoaded: e.session.firstPageLoaded,
                     initialUserAvailabilityIsSet: e.session.initialUserAvailabilityIsSet
                 }
             }, function(e) {
                 return Object(a.b)({
-                    changeTheme: ye.b,
-                    initialUserAvailabilitySet: be.g
+                    changeTheme: ke.b,
+                    initialUserAvailabilitySet: ye.g
                 }, e)
-            })(Object(r.f)(Pe)),
-            Re = n("8PKe"),
-            Fe = n("p+06"),
-            Me = (n("HTB+"), function(e) {
+            })(Object(r.f)(xe)),
+            Fe = n("8PKe"),
+            Me = n("p+06"),
+            Ue = (n("HTB+"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -29402,7 +29412,7 @@ webpackJsonp([67], {
                             },
                             alignSelf: B.d.Center,
                             flexWrap: B.S.NoWrap
-                        }, !e && d.createElement(Re.c, null))
+                        }, !e && d.createElement(Fe.c, null))
                     }, t.renderStoreLink = function() {
                         var e = !1;
                         if (t.props.data) {
@@ -29531,7 +29541,7 @@ webpackJsonp([67], {
                         href: "https://app.twitch.tv/download",
                         "data-a-target": "get-desktop-link",
                         className: "top-nav__nav-link"
-                    }, Object(u.d)("Get Desktop", "TopNav")), d.createElement(ce, null), d.createElement(re, null), d.createElement(B._4, {
+                    }, Object(u.d)("Get Desktop", "TopNav")), d.createElement(de, null), d.createElement(ae, null), d.createElement(B._4, {
                         className: "top-nav__ellipsis-button",
                         display: B.P.Flex,
                         alignItems: B.c.Center
@@ -29704,17 +29714,17 @@ webpackJsonp([67], {
                         flexWrap: B.S.NoWrap,
                         flexGrow: 0,
                         flexShrink: 0
-                    }, this.props.isLoggedIn ? d.createElement(Le, null) : d.createElement(te.a, {
+                    }, this.props.isLoggedIn ? d.createElement(Re, null) : d.createElement(te.a, {
                         login: this.props.login,
                         signup: this.props.signup
                     })))))
-                }, t = c.__decorate([Object(h.a)(Fe, {
+                }, t = c.__decorate([Object(h.a)(Me, {
                     skip: function(e) {
                         return !e.isLoggedIn
                     }
                 }), Object(v.d)("TopNav")], t)
             }(d.Component));
-        var Ue = Object(r.f)(Object(i.b)(function(e) {
+        var Ae = Object(r.f)(Object(i.b)(function(e) {
             return {
                 isLoggedIn: Object(l.d)(e)
             }
@@ -29728,13 +29738,13 @@ webpackJsonp([67], {
                     return Object(s.h)(o.a.TopNavSignupButton)
                 }
             }, e)
-        })(Me));
+        })(Ue));
         n.d(t, !1, function() {
             return "5rem"
         }), n.d(t, !1, function() {
             return "9.5rem"
         }), n.d(t, "a", function() {
-            return Ue
+            return Ae
         })
     },
     TVUY: function(e, t) {
@@ -37407,28 +37417,29 @@ webpackJsonp([67], {
     },
     hvzu: function(e, t, n) {
         "use strict";
-        var i, r = n("GiK3"),
-            a = n("6sO2"),
-            o = n("8RKZ"),
-            s = n("l21v");
+        var i, r = n("TToO"),
+            a = n("GiK3"),
+            o = n("6sO2"),
+            s = n("8RKZ"),
+            l = n("l21v");
         ! function(e) {
             e[e.Text = 0] = "Text", e[e.Link = 1] = "Link"
         }(i || (i = {}));
-        var l = n("Odds");
-        t.a = u, n.d(t, "f", function() {
-            return p
-        }), n.d(t, "e", function() {
+        var c = n("Odds");
+        t.a = p, n.d(t, "f", function() {
             return m
-        }), n.d(t, "d", function() {
+        }), n.d(t, "e", function() {
             return h
-        }), n.d(t, "c", function() {
+        }), n.d(t, "d", function() {
             return g
-        }), n.d(t, "b", function() {
+        }), n.d(t, "c", function() {
             return f
+        }), n.d(t, "b", function() {
+            return v
         });
-        var c = "whisper-message-part";
+        var d = "whisper-message-part";
 
-        function d(e) {
+        function u(e) {
             var t = function(e) {
                 var t = e.split(/\s+/),
                     n = [];
@@ -37486,11 +37497,11 @@ webpackJsonp([67], {
                     }
                 }), n
             }(e);
-            return t.reduce(function(e, n, a) {
+            return t.reduce(function(e, n, r) {
                 if (n.type === i.Text) e.push(n.content);
                 else if (n.type === i.Link) {
-                    t[a - 1] && t[a - 1].type === i.Link && e.push(" "), e.push(r.createElement("a", {
-                        key: a,
+                    t[r - 1] && t[r - 1].type === i.Link && e.push(" "), e.push(a.createElement("a", {
+                        key: r,
                         href: n.content.url,
                         target: "__blank"
                     }, n.content.displayText))
@@ -37499,128 +37510,142 @@ webpackJsonp([67], {
             }, [])
         }
 
-        function u(e, t, n) {
+        function p(e, t, n) {
             var i = [],
-                u = 0,
-                p = Object(s.d)(e);
+                r = 0,
+                p = Object(l.d)(e);
             if (t.forEach(function(t) {
                     var n = t.from,
-                        a = t.to,
+                        o = t.to,
                         m = {
                             themed: !1,
                             sources: {
-                                "1x": Object(s.e)("" + t.emoteID, 1),
-                                "2x": Object(s.e)("" + t.emoteID, 2),
-                                "4x": Object(s.e)("" + t.emoteID, 4)
+                                "1x": Object(l.e)("" + t.emoteID, 1),
+                                "2x": Object(l.e)("" + t.emoteID, 2),
+                                "4x": Object(l.e)("" + t.emoteID, 4)
                             }
                         };
-                    if (n > u) {
-                        var h = p ? p.slice(u, n).join("") : e.slice(u, n);
-                        i.push(r.createElement("span", {
-                            key: "str-" + u,
-                            "data-a-target": c,
+                    if (n > r) {
+                        var h = p ? p.slice(r, n).join("") : e.slice(r, n);
+                        i.push(a.createElement("span", {
+                            key: "str-" + r,
+                            "data-a-target": d,
                             className: "thread-message__message--part"
-                        }, d(h)))
+                        }, u(h)))
                     }
-                    var g = p ? p.slice(n, a + 1).join("") : e.slice(n, a + 1);
-                    i.push(r.createElement(o.a, {
-                        key: "emote-" + u,
-                        tooltipDirection: l._46.Top,
+                    var g = p ? p.slice(n, o + 1).join("") : e.slice(n, o + 1);
+                    i.push(a.createElement(s.a, {
+                        key: "emote-" + r,
+                        tooltipDirection: c._46.Top,
                         className: "thread-message__message--emote",
                         srcSet: m,
                         srcKey: "1x",
                         alt: g
-                    })), u = a + 1
-                }), u < e.length) {
-                var m = p ? p.slice(u, p.length).join("") : e.slice(u, e.length);
-                i.push(r.createElement("span", {
-                    key: "str-" + u,
-                    "data-a-target": c,
+                    })), r = o + 1
+                }), r < e.length) {
+                var m = p ? p.slice(r, p.length).join("") : e.slice(r, e.length);
+                i.push(a.createElement("span", {
+                    key: "str-" + r,
+                    "data-a-target": d,
                     className: "thread-message__message--part"
-                }, d(m)))
+                }, u(m)))
             }
             if (n) {
-                var h = Object(a.d)("edited", "ThreadMessage"),
-                    g = Object(a.d)("{timestamp, date, full} {timestamp, time, long}", {
+                var h = Object(o.d)("edited", "ThreadMessage"),
+                    g = Object(o.d)("{timestamp, date, full} {timestamp, time, long}", {
                         timestamp: new Date(n)
                     }, "ThreadMessage");
-                i.push(r.createElement(l.Y, {
+                i.push(a.createElement(c.Y, {
                     key: "editedAt",
                     margin: {
                         left: 1
                     }
-                }, r.createElement(l.O, {
-                    type: l._41.Span,
+                }, a.createElement(c.O, {
+                    type: c._41.Span,
                     className: "thread-message__message--edited",
                     title: g,
-                    color: l.J.Alt2
+                    color: c.J.Alt2
                 }, "(" + h + ")")))
             }
             return i
         }
-        var p = function(e) {
-                var t = u(e.content, e.emotes, e.editedAt);
-                if (e.deletedAt) return null;
-                var n = e.from && e.from.chatColor || "",
-                    i = e.from && e.from.displayName || r.createElement(l.O, {
-                        type: l._41.Span,
+        var m = function(e) {
+                var t = "/me " === e.content.substr(0, 4);
+                t && (e.content = e.content.substr(4), e.emotes = e.emotes.map(function(e) {
+                    return r.__assign({}, e, {
+                        from: e.from - 4,
+                        to: e.to - 4
+                    })
+                }));
+                var n = p(e.content, e.emotes, e.editedAt);
+                if (n.unshift(a.createElement("span", {
+                        key: "str-separator"
+                    }, t ? " " : ": ")), e.deletedAt) return null;
+                var i = e.from && e.from.chatColor || "",
+                    s = e.from && e.from.displayName || a.createElement(c.O, {
+                        type: c._41.Span,
                         italic: !0
-                    }, Object(a.d)("Unknown", "ThreadMessage"));
-                return r.createElement(l._4, {
+                    }, Object(o.d)("Unknown", "ThreadMessage")),
+                    l = t ? i : "";
+                return a.createElement(c._4, {
                     padding: {
                         x: 1,
                         y: .5
                     }
-                }, r.createElement("span", {
+                }, a.createElement("span", {
                     className: "thread-message__message--user-name",
                     "data-a-target": "whisper-message-name",
                     style: {
-                        color: n
+                        color: i
                     }
-                }, i), r.createElement("span", null, ": "), t)
+                }, s), a.createElement("span", {
+                    style: {
+                        color: l
+                    }
+                }, n))
             },
-            m = function() {
-                return r.createElement(l._4, {
+            h = function() {
+                return a.createElement(c._4, {
                     padding: {
                         y: .5,
                         x: 1
                     }
-                }, Object(a.d)("Please don't share passwords or personal information.", "whispers"))
+                }, Object(o.d)("Please don't share passwords or personal information.", "whispers"))
             },
-            h = function(e) {
+            g = function(e) {
                 var t = new Date,
-                    n = Object(a.d)("Today, {timestamp, time, medium}", {
+                    n = Object(o.d)("Today, {timestamp, time, medium}", {
                         timestamp: e.timestamp
                     }, "ThreadMessage"),
-                    i = Object(a.d)("{timestamp, time, medium}", {
+                    i = Object(o.d)("{timestamp, time, medium}", {
                         timestamp: e.timestamp
                     }, "ThreadMessage"),
-                    o = e.timestamp.toDateString() === t.toDateString() ? n : i;
-                return r.createElement(l._4, {
+                    r = e.timestamp.toDateString() === t.toDateString() ? n : i;
+                return a.createElement(c._4, {
                     padding: {
                         y: 1
                     },
-                    textAlign: l._37.Center
-                }, "" + o)
+                    textAlign: c._37.Center
+                }, "" + r)
             },
-            g = function(e) {
-                return r.createElement(l._4, {
+            f = function(e) {
+                return a.createElement(c._4, {
                     padding: {
                         y: .5,
                         x: 1
                     }
-                }, r.createElement(l.O, {
-                    type: l._41.Span,
-                    color: l.J.Alt2
+                }, a.createElement(c.O, {
+                    type: c._41.Span,
+                    color: c.J.Alt2
                 }, e.content))
             },
-            f = function() {
-                return r.createElement(l._4, {
-                    textAlign: l._37.Center,
+            v = function() {
+                return a.createElement(c._4, {
+                    textAlign: c._37.Center,
                     padding: {
                         y: .5
                     }
-                }, Object(a.d)("New Whispers", "whispers"))
+                }, Object(o.d)("New Whispers", "whispers"))
             }
     },
     iGr2: function(e, t) {
@@ -37818,7 +37843,8 @@ webpackJsonp([67], {
                         };
                         e = a.createElement(s.Y, {
                             className: "user-card-layer",
-                            position: s._11.Fixed
+                            position: s._11.Fixed,
+                            zIndex: s._53.Above
                         }, a.createElement("div", {
                             style: t,
                             ref: this.setRef
@@ -38891,7 +38917,7 @@ webpackJsonp([67], {
                 return i
             }),
             function(e) {
-                e.AbandonedSearch = "abandoned_search", e.AdSlotRenderEnded = "ad_slot_render_ended", e.AdImpressionViewableEvent = "ad_impression_viewable", e.AchievementSpotlightImpression = "achievement_spotlight_impression", e.AchievementQuestBannerClick = "achievement_quest_banner_click", e.APIQuery = "benchmark_api_query", e.AppBooted = "benchmark_app_booted", e.AutoHostChannelUpdate = "autohost_channel_update", e.AutohostChatImpression = "autohost_chat_impression", e.AutohostChatYes = "autohost_chat_yes", e.AutohostChatDismiss = "autohost_chat_dismiss", e.AutohostChatSettings = "autohost_chat_settings", e.BeganSearch = "began_search", e.BitsAdsAvailability = "bits_ads_availability", e.BitsAdsImpression = "bits_ads_impression", e.BitsAdsRequest = "bits_ads_request", e.BitsCardInteraction = "bits_card_interaction", e.BrowseForYou = "browse_for_you", e.BrowserFingerprint = "browser_fingerprint", e.BrowserPushNotificationPrompt = "browser_notification_prompt", e.BrowserPushNotificationDisable = "browser_notification_disable", e.BTTV = "bttv_check", e.Chat = "chat", e.ChatBadgeClick = "chat_badge_click", e.ChatMentionUsed = "chat_mention_used", e.ChatRoomJoined = "chat_room_join", e.ChatRoomWatched = "chatroom-watched", e.ChatSettingsChanged = "chat_client_setting_changed", e.ChatSettingsOpened = "chat_client_settings_open", e.ChatSuggestion = "chat-suggestions", e.ChatSuggestionComplete = "chat-completed-suggestion", e.ChommentCreated = "chomment_create", e.ChommentDeleted = "chomment_delete", e.ChommentUIAction = "chomment_ui_action", e.ClipEdit = "clip_edit", e.ClipChampHelpClick = "clip_champ_help_click", e.CollectionCreate = "collection_create", e.CollectionAddItem = "collection_add_item", e.CollectionRemoveItem = "collection_remove_item", e.CommunityEdit = "community_client_edit", e.CommunityFollow = "community_client_follow", e.CommunityModeration = "community_client_channel_moderation", e.CommunityReport = "community_client_report", e.CommunityUnfollow = "community_client_unfollow", e.CompleteTransition = "benchmark_complete_transition", e.CompletedSearch = "completed_search", e.ComponentInitializing = "benchmark_component_initializing", e.ComponentInteractive = "benchmark_component_interactive", e.CustomEvent = "benchmark_custom_event", e.CrateNotificationAction = "crate_notification_action", e.DeprioritizeVodcastToggle = "autohost_deprioritize_vodcast_toggle", e.EventFollowing = "oracle_user_notification_client", e.EventShare = "oracle_event_share", e.ExperimentBranch = "experiment_branch", e.FeaturedEventPresentation = "event_suggestions_shown", e.FeatureEducationUpdateBlock = "feature_education_update_block", e.FeatureEducationUpdateBlockImpression = "feature_education_update_block_impression", e.FeatureEducationTour = "feature_education_tour", e.FeatureEducationTourImpression = "feature_education_tour_impression", e.FeedCardImpression = "feed_client_card_impression", e.FeedCardEmbedImpression = "feed_client_card_embed_impression", e.FeedCardEmbedPlay = "feed_client_card_embed_play", e.FeedPost = "feed_client_post", e.FeedReaction = "feed_client_reaction", e.FetchStart = "benchmark_fetch_start", e.FFZ = "ffz_check", e.Follow = "follow", e.FrontPageCarouselClick = "frontpage_carousel_click", e.FrontPageCarouselDisplay = "carousel_display", e.FrontPageCarouselPromotionCardClick = "promotion_card_click", e.FrontPageCarouselPromotionCardView = "promotion_card_view", e.FrontPageCarouselNavButtonClick = "carousel_nav_button_click", e.FuelBuyButton = "fuel_buy_button", e.FuelGetGameClick = "fuel_get_game_click", e.FuelOfferView = "offer_view", e.FuelOfferInteraction = "offer_interaction", e.FuelSocialShare = "fuel_social_share", e.GameFollow = "follow-game", e.GameUnfollow = "unfollow-game", e.HearthstoneFilterAction = "hearthstone_filter_action", e.ItemSectionClick = "item_section_click", e.ItemSectionLoad = "item_section_load", e.OnboardingEvent = "onboarding_web", e.OnboardingSurfAction = "onboarding_surf_action", e.OverwatchFilterAction = "overwatch_filter_action", e.NetworkRequest = "network_request", e.NewChatterTokenStatus = "nca_client_token_status", e.NewChatterOnboardingInteraction = "nca_onboarding_chatbox_interaction", e.NotificationCenterInteraction = "notification_center_interaction", e.NotificationImpression = "notification_impression", e.NotificationInteraction = "notification_interaction", e.Pageview = "pageview", e.PartnerAffiliateSettings = "partner_affiliate_settings", e.PassportHide = "auth_exit", e.PassportShow = "auth_show", e.PaymentFormInteraction = "payment_form_interaction", e.PlayerRecShow = "player_rec_show", e.PlayerShowFeatured = "player_show_featured", e.PlayerRecSelect = "player_rec_select", e.PlayerRecAutoplay = "player_rec_autoplay", e.PresenceClick = "friend_presence_click", e.RaidPromptJoin = "raid_prompt_join", e.RaidPromptLeave = "raid_prompt_leave", e.RaidPromptImpression = "raid_prompt_impression", e.SearchQuery = "search_query", e.ShareItem = "share_item", e.SideNavChannelClick = "sidenav_channel_click", e.SideNavDetails = "sidenav_details", e.SideNavLoadMore = "sidenav_load_more", e.SimilarHostToggle = "autohost_similar_channels_toggle", e.SiteLayoutMod = "site_layout_mod", e.SiteToggle = "twilight_site_toggle", e.StreamSummarySpotlightImpression = "summary_spotlight_impression", e.StreamSummarySpotlightClick = "summary_spotlight_click", e.StoreMerchClick = "store_item_select", e.StoreMerchView = "store_item_view", e.Subscription = "subscribe_button", e.SubsLandingStreamerClick = "subs_landing_streamer_click", e.TeamHostToggle = "autohost_team_toggle", e.ThemeChange = "dark_mode_toggle", e.Unfollow = "unfollow", e.VerifyEmailBar = "verify_email_bar", e.VideoChatSettingChanged = "video_chat_setting_changed", e.VideoShare = "video_share", e.VODDownloadClick = "vod_download_click", e.VODExportClick = "vod_export_click", e.WhisperAllThreadsMod = "chat_convo_mod_global", e.WhisperIgnoreUser = "chat_ignore_client", e.WhisperReceived = "whisper_received", e.WhisperSearchClick = "search_click", e.WhisperSent = "whisper", e.WhisperThreadCreate = "chat_convo_create", e.WhisperThreadMod = "chat_convo_mod"
+                e.AbandonedSearch = "abandoned_search", e.AdSlotRenderEnded = "ad_slot_render_ended", e.AdImpressionViewableEvent = "ad_impression_viewable", e.AchievementSpotlightImpression = "achievement_spotlight_impression", e.AchievementQuestBannerClick = "achievement_quest_banner_click", e.APIQuery = "benchmark_api_query", e.AppBooted = "benchmark_app_booted", e.AutoHostChannelUpdate = "autohost_channel_update", e.AutohostChatImpression = "autohost_chat_impression", e.AutohostChatYes = "autohost_chat_yes", e.AutohostChatDismiss = "autohost_chat_dismiss", e.AutohostChatSettings = "autohost_chat_settings", e.BeganSearch = "began_search", e.BitsAdsAvailability = "bits_ads_availability", e.BitsAdsImpression = "bits_ads_impression", e.BitsAdsRequest = "bits_ads_request", e.BitsCardInteraction = "bits_card_interaction", e.BrowseForYou = "browse_for_you", e.BrowserFingerprint = "browser_fingerprint", e.BrowserPushNotificationPrompt = "browser_notification_prompt", e.BrowserPushNotificationDisable = "browser_notification_disable", e.BTTV = "bttv_check", e.Chat = "chat", e.ChatBadgeClick = "chat_badge_click", e.ChatMentionUsed = "chat_mention_used", e.ChatRoomJoined = "chat_room_join", e.ChatRoomWatched = "chatroom-watched", e.ChatSettingsChanged = "chat_client_setting_changed", e.ChatSettingsOpened = "chat_client_settings_open", e.ChatSuggestion = "chat-suggestions", e.ChatSuggestionComplete = "chat-completed-suggestion", e.ChommentCreated = "chomment_create", e.ChommentDeleted = "chomment_delete", e.ChommentUIAction = "chomment_ui_action", e.ClipEdit = "clip_edit", e.ClipChampHelpClick = "clip_champ_help_click", e.CollectionCreate = "collection_create", e.CollectionAddItem = "collection_add_item", e.CollectionRemoveItem = "collection_remove_item", e.CommunityEdit = "community_client_edit", e.CommunityFollow = "community_client_follow", e.CommunityModeration = "community_client_channel_moderation", e.CommunityReport = "community_client_report", e.CommunityUnfollow = "community_client_unfollow", e.CompleteTransition = "benchmark_complete_transition", e.CompletedSearch = "completed_search", e.ComponentInitializing = "benchmark_component_initializing", e.ComponentInteractive = "benchmark_component_interactive", e.CustomEvent = "benchmark_custom_event", e.CrateNotificationAction = "crate_notification_action", e.DeprioritizeVodcastToggle = "autohost_deprioritize_vodcast_toggle", e.EventFollowing = "oracle_user_notification_client", e.EventShare = "oracle_event_share", e.ExperimentBranch = "experiment_branch", e.FeaturedEventPresentation = "event_suggestions_shown", e.FeatureEducationUpdateBlock = "feature_education_update_block", e.FeatureEducationUpdateBlockImpression = "feature_education_update_block_impression", e.FeatureEducationTour = "feature_education_tour", e.FeatureEducationTourImpression = "feature_education_tour_impression", e.FeedCardImpression = "feed_client_card_impression", e.FeedCardEmbedImpression = "feed_client_card_embed_impression", e.FeedCardEmbedPlay = "feed_client_card_embed_play", e.FeedPost = "feed_client_post", e.FeedReaction = "feed_client_reaction", e.FetchStart = "benchmark_fetch_start", e.FFZ = "ffz_check", e.Follow = "follow", e.FrontPageCarouselClick = "frontpage_carousel_click", e.FrontPageCarouselDisplay = "carousel_display", e.FrontPageCarouselPromotionCardClick = "promotion_card_click", e.FrontPageCarouselPromotionCardView = "promotion_card_view", e.FrontPageCarouselNavButtonClick = "carousel_nav_button_click", e.FuelBuyButton = "fuel_buy_button", e.FuelGetGameClick = "fuel_get_game_click", e.FuelOfferView = "offer_view", e.FuelOfferInteraction = "offer_interaction", e.FuelSocialShare = "fuel_social_share", e.GameFollow = "follow-game", e.GameUnfollow = "unfollow-game", e.HearthstoneFilterAction = "hearthstone_filter_action", e.ItemSectionClick = "item_section_click", e.ItemSectionLoad = "item_section_load", e.OnboardingEvent = "onboarding_web", e.OnboardingSurfAction = "onboarding_surf_action", e.OverwatchFilterAction = "overwatch_filter_action", e.NetworkRequest = "network_request", e.NewChatterTokenStatus = "nca_client_token_status", e.NewChatterOnboardingInteraction = "nca_onboarding_chatbox_interaction", e.NotificationCenterInteraction = "notification_center_interaction", e.NotificationImpression = "notification_impression", e.NotificationInteraction = "notification_interaction", e.Pageview = "pageview", e.PartnerAffiliateSettings = "partner_affiliate_settings", e.PassportHide = "auth_exit", e.PassportShow = "auth_show", e.PaymentFormInteraction = "payment_form_interaction", e.PlayerRecShow = "player_rec_show", e.PlayerShowFeatured = "player_show_featured", e.PlayerRecSelect = "player_rec_select", e.PlayerRecAutoplay = "player_rec_autoplay", e.PresenceClick = "friend_presence_click", e.PresenceToggle = "rich_presence_toggle", e.RaidPromptJoin = "raid_prompt_join", e.RaidPromptLeave = "raid_prompt_leave", e.RaidPromptImpression = "raid_prompt_impression", e.SearchQuery = "search_query", e.ShareItem = "share_item", e.SideNavChannelClick = "sidenav_channel_click", e.SideNavDetails = "sidenav_details", e.SideNavLoadMore = "sidenav_load_more", e.SimilarHostToggle = "autohost_similar_channels_toggle", e.SiteLayoutMod = "site_layout_mod", e.SiteToggle = "twilight_site_toggle", e.StreamSummarySpotlightImpression = "summary_spotlight_impression", e.StreamSummarySpotlightClick = "summary_spotlight_click", e.StoreMerchClick = "store_item_select", e.StoreMerchView = "store_item_view", e.Subscription = "subscribe_button", e.SubsLandingStreamerClick = "subs_landing_streamer_click", e.TeamHostToggle = "autohost_team_toggle", e.ThemeChange = "dark_mode_toggle", e.Unfollow = "unfollow", e.VerifyEmailBar = "verify_email_bar", e.VideoChatSettingChanged = "video_chat_setting_changed", e.VideoShare = "video_share", e.VODDownloadClick = "vod_download_click", e.VODExportClick = "vod_export_click", e.WhisperAllThreadsMod = "chat_convo_mod_global", e.WhisperIgnoreUser = "chat_ignore_client", e.WhisperReceived = "whisper_received", e.WhisperSearchClick = "search_click", e.WhisperSent = "whisper", e.WhisperThreadCreate = "chat_convo_create", e.WhisperThreadMod = "chat_convo_mod"
             }(i || (i = {}))
     },
     kIPx: function(e, t) {},
@@ -42227,7 +42253,7 @@ webpackJsonp([67], {
                 return i
             }),
             function(e) {
-                e.AutohostSettings = "channel.dashboard.settings.autohost", e.BitsBuyCard = "bits-buy-card", e.BrowseCommunities = "browse.communities", e.BrowseCreative = "browse.creative", e.BrowseGames = "browse.games", e.ChannelClips = "channel.clips", e.ChannelCollections = "channel.collections", e.ChannelClipsManager = "videoManager.clips.channel", e.ChannelDashboardAchievements = "channel.dashboard.achievements", e.ChannelDashboardBounties = "channel.dashboard.bounties", e.ChannelDashboardChannelAnalytics = "channel.dashboard.channel-analytics", e.ChannelDashboardChannelAnalyticsReferrals = "channel.dashboard.channel-analytics.referrals", e.ChannelDashboardExtensions = "channel.dashboard.extensions", e.ChannelDashboardExtensionsConfigure = "channel.dashboard.extensions.configure", e.ChannelDashboardModeration = "channel.dashboard.moderation", e.ChannelDashboardStreamSummary = "channel.dashboard.stream-summary", e.ChannelEvents = "channel.events", e.ChannelFollowers = "channel.followers", e.ChannelFollows = "channel.follows", e.ChannelIndex = "channel.index.index", e.ChatPopout = "chat", e.CheermoteCarousel = "cheermote-carousel", e.ClipsViewing = "clips.view", e.DashboardSettingsIndex = "channel.dashboard.settings.index", e.DevOnly = "dev", e.DirectoryCommunityByLanguage = "directory.community.language", e.DirectoryCommunityIndex = "directory.community.index", e.DirectoryCommunityDetails = "directory.community.details", e.DirectoryFollowingCommunities = "directory.following.communities", e.DirectoryFollowingGames = "directory.following.games", e.DirectoryFollowingHosts = "directory.following.hosts", e.DirectoryFollowingIndex = "directory.following.index", e.DirectoryFollowingLiveChannels = "directory.following.channels", e.DirectoryFollowingVideos = "directory.following.videos.video-type", e.DirectoryGameClips = "directory.game.clips", e.DirectoryGameDetails = "directory.game.details", e.DirectoryGameIndex = "directory.game.index", e.DirectoryGames = "directory.games", e.DirectoryPopular = "directory.popular", e.DirectoryPopularByLanguage = "directory.popular.language", e.DirectoryGameVideos = "directory.game.videos", e.DirectoryVideosHistory = "directory.videos.history", e.EmailUnsubscribe = "emailUnsubscribe", e.EmailVerification = "emailVerification", e.EventDetails = "event.details", e.ExtensionDetails = "extensions.extension", e.ForYou = "for-you", e.Index = "index", e.Inventory = "inventory", e.LivePage = "live.page", e.MyClipsManager = "videoManager.clips", e.NotificationSettingsPage = "settings.notificationSettings", e.OnboardingIndex = "onboarding.index", e.OnboardingSurf = "onboarding.surf", e.PaymentsLandingPage = "payments.landingPage", e.ReportUserPage = "reportUser.page", e.DashboardRevenueSettings = "channel.dashboard.settings.revenue", e.SettingsConnections = "private/embed-components", e.SettingsChannel = "private/embed-components", e.SettingsNotifications = "settings.notifications", e.SettingsPrime = "settings.prime", e.SettingsProfile = "settings.profile", e.SettingsSecurity = "private/embed-components", e.SettingsTurbo = "settings.turbo", e.StoreMerchPage = "store.merch", e.SubsLandingPage = "subs.landing", e.SubsCheckoutPage = "subs.checkout", e.TeamsDashboardRevenue = "teams.dashboard.revenue", e.TeamsDashboardStats = "teams.dashboard.stats", e.TeamsDashboardMembers = "teams.dashboard.members", e.TeamsDashboardFeaturedChannels = "teams.dashboard.featured-channels", e.TeamsDashboardSettings = "teams.dashboard.settings", e.SubsBroadcasterPage = "subs.broadcaster", e.VideoManagerEditPropertiesPage = "videoManager.edit", e.VideoManagerPage = "videoManager.page", e.VideoManagerUploadListPage = "videoManager.upload-list", e.VideoManagerUploadPage = "videoManager.upload", e.VideoManagerCollectionsManager = "videoManager.collections", e.VideoManagerCollectionsEditor = "videoManager.collections.editor", e.VideoManagerHighlighter = "videoManager.highlighter", e.VideosPage = "videos", e.VideoWatchPage = "video", e.Unknown = "unknown"
+                e.AutohostSettings = "channel.dashboard.settings.autohost", e.BitsBuyCard = "bits-buy-card", e.BrowseCommunities = "browse.communities", e.BrowseCreative = "browse.creative", e.BrowseGames = "browse.games", e.ChannelClips = "channel.clips", e.ChannelCollections = "channel.collections", e.ChannelClipsManager = "videoManager.clips.channel", e.ChannelDashboardAchievements = "channel.dashboard.achievements", e.ChannelDashboardBounties = "channel.dashboard.bounties", e.ChannelDashboardChannelAnalytics = "channel.dashboard.channel-analytics", e.ChannelDashboardChannelAnalyticsReferrals = "channel.dashboard.channel-analytics.referrals", e.ChannelDashboardExtensions = "channel.dashboard.extensions", e.ChannelDashboardExtensionsConfigure = "channel.dashboard.extensions.configure", e.ChannelDashboardModeration = "channel.dashboard.moderation", e.ChannelDashboardStreamSummary = "channel.dashboard.stream-summary", e.ChannelEvents = "channel.events", e.ChannelFollowers = "channel.followers", e.ChannelFollows = "channel.follows", e.ChannelIndex = "channel.index.index", e.ChatPopout = "chat", e.CheermoteCarousel = "cheermote-carousel", e.ClipsViewing = "clips.view", e.DashboardSettingsIndex = "channel.dashboard.settings.index", e.DashboardSettingsRevenue = "channel.dashboard.settings.revenue", e.DashboardSettingsRevenueGameCommerce = "channel.dashboard.settings.revenue.game-commerce", e.DashboardSettingsRevenueGameCommerceV2 = "channel.dashboard.settings.revenue.game-commerce-v2", e.DashboardSettingsRevenueMerchByAmazon = "channel.dashboard.settings.revenue.merch-by-amazon", e.DevOnly = "dev", e.DirectoryCommunityByLanguage = "directory.community.language", e.DirectoryCommunityIndex = "directory.community.index", e.DirectoryCommunityDetails = "directory.community.details", e.DirectoryFollowingCommunities = "directory.following.communities", e.DirectoryFollowingGames = "directory.following.games", e.DirectoryFollowingHosts = "directory.following.hosts", e.DirectoryFollowingIndex = "directory.following.index", e.DirectoryFollowingLiveChannels = "directory.following.channels", e.DirectoryFollowingVideos = "directory.following.videos.video-type", e.DirectoryGameClips = "directory.game.clips", e.DirectoryGameDetails = "directory.game.details", e.DirectoryGameIndex = "directory.game.index", e.DirectoryGames = "directory.games", e.DirectoryPopular = "directory.popular", e.DirectoryPopularByLanguage = "directory.popular.language", e.DirectoryGameVideos = "directory.game.videos", e.DirectoryVideosHistory = "directory.videos.history", e.EmailUnsubscribe = "emailUnsubscribe", e.EmailVerification = "emailVerification", e.EventDetails = "event.details", e.ExtensionDetails = "extensions.extension", e.ForYou = "for-you", e.Index = "index", e.Inventory = "inventory", e.LivePage = "live.page", e.MyClipsManager = "videoManager.clips", e.NotificationSettingsPage = "settings.notificationSettings", e.OnboardingIndex = "onboarding.index", e.OnboardingSurf = "onboarding.surf", e.PaymentsLandingPage = "payments.landingPage", e.ReportUserPage = "reportUser.page", e.SettingsConnections = "private/embed-components", e.SettingsChannel = "private/embed-components", e.SettingsNotifications = "settings.notifications", e.SettingsPrime = "settings.prime", e.SettingsProfile = "settings.profile", e.SettingsSecurity = "private/embed-components", e.SettingsTurbo = "settings.turbo", e.StoreMerchPage = "store.merch", e.SubsLandingPage = "subs.landing", e.SubsCheckoutPage = "subs.checkout", e.TeamsDashboardRevenue = "teams.dashboard.revenue", e.TeamsDashboardStats = "teams.dashboard.stats", e.TeamsDashboardMembers = "teams.dashboard.members", e.TeamsDashboardFeaturedChannels = "teams.dashboard.featured-channels", e.TeamsDashboardSettings = "teams.dashboard.settings", e.SubsBroadcasterPage = "subs.broadcaster", e.VideoManagerEditPropertiesPage = "videoManager.edit", e.VideoManagerPage = "videoManager.page", e.VideoManagerUploadListPage = "videoManager.upload-list", e.VideoManagerUploadPage = "videoManager.upload", e.VideoManagerCollectionsManager = "videoManager.collections", e.VideoManagerCollectionsEditor = "videoManager.collections.editor", e.VideoManagerHighlighter = "videoManager.highlighter", e.VideosPage = "videos", e.VideoWatchPage = "video", e.Unknown = "unknown"
             }(i || (i = {}))
     },
     wG4N: function(e, t) {
@@ -43535,4 +43561,4 @@ webpackJsonp([67], {
             }(r.Component))
     }
 }, [5]);
-//# sourceMappingURL=core-89469099983a5524bb9e794954a9379d.js.map
+//# sourceMappingURL=core-7e32155204ef2bf1b78db0907be016e1.js.map

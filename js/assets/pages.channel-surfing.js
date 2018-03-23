@@ -4421,8 +4421,7 @@ webpackJsonp([74], {
                     });
                     n && (t = n.name + " - " + e.prefix)
                 }
-                var a = e.tier;
-                return e.event && !e.tier && (a = 1), c.createElement(A._4, {
+                return c.createElement(A._4, {
                     display: A.P.Flex,
                     flexDirection: A.R.Column,
                     alignItems: A.c.Center,
@@ -4432,10 +4431,10 @@ webpackJsonp([74], {
                     bold: !0
                 }, t), c.createElement(at.a, {
                     prefix: e.prefix,
-                    amount: a,
+                    amount: e.tier,
                     bitsConfig: e.bitsConfig,
                     showImage: !0,
-                    showAmount: !(e.event && !e.tier)
+                    showAmount: e.tier > 0
                 }))
             },
             Gt = (n("DVR9"), function(e) {
@@ -5173,15 +5172,14 @@ webpackJsonp([74], {
                         })
                     }
                 }, t.prototype.render = function() {
-                    var e = this;
                     if (!this.props.visible && !this.props.currentCheers.length) return null;
-                    var t, n = {
+                    var e, t = {
                         border: !0,
                         background: A.m.Base,
                         elevation: 3,
                         fullWidth: !0
                     };
-                    if (this.props.currentCheers.length || (t = c.createElement("button", {
+                    if (this.props.currentCheers.length || (e = c.createElement("button", {
                             className: "t-bits-card__close t-bits-card__top-controls",
                             onClick: this.props.onUserClose,
                             "data-test-selector": "cancel-button",
@@ -5196,7 +5194,7 @@ webpackJsonp([74], {
                         flexDirection: A.R.Column,
                         alignItems: A.c.Center,
                         justifyContent: A._3.Center
-                    }, n), c.createElement(A._6, {
+                    }, t), c.createElement(A._6, {
                         delay: 0
                     }), c.createElement(A._4, {
                         padding: {
@@ -5218,7 +5216,7 @@ webpackJsonp([74], {
                             x: 1,
                             bottom: 1
                         }
-                    }, n), t, c.createElement(A.O, {
+                    }, t), e, c.createElement(A.O, {
                         color: A.J.Error,
                         italic: !0
                     }, Object(i.d)("You cannot Cheer in your own channel.", "BitsCard")));
@@ -5230,27 +5228,27 @@ webpackJsonp([74], {
                         trackBitsCardInteraction: this.props.trackBitsCardInteraction,
                         location: kn.b.ChatTooltip
                     });
-                    var r = null,
-                        s = this.state.helpRequested && !this.props.currentCheers.length,
-                        o = null;
-                    if (this.props.data.user.cheer.settings.event && (o = this.props.data.user.cheer.settings.event.toLowerCase().replace("_", "-")), this.state.chosenCheermote) {
-                        var l = this.props.bitsConfig.indexedActions[this.state.chosenCheermote.toLowerCase()];
-                        if (l) {
-                            var d = l.orderedTiers.filter(function(e) {
+                    var n = null,
+                        r = this.state.helpRequested && !this.props.currentCheers.length,
+                        s = null;
+                    if (this.props.data.user.cheer.settings.event && (s = this.props.data.user.cheer.settings.event.toLowerCase().replace("_", "-")), this.state.chosenCheermote) {
+                        var o = this.props.bitsConfig.indexedActions[this.state.chosenCheermote.toLowerCase()];
+                        if (o) {
+                            var l = o.orderedTiers.filter(function(e) {
                                 return e.bits <= jt.k
                             }).map(function(e) {
                                 return {
                                     imgSrc: e.indexedImages.LIGHT.static.get(2),
                                     imgSrcDark: e.indexedImages.DARK.static.get(2),
-                                    key: l.prefix + ":" + e.bits
+                                    key: o.prefix + ":" + e.bits
                                 }
                             }).reverse();
-                            r = c.createElement(gn, {
+                            n = c.createElement(gn, {
                                 bitsConfig: this.props.bitsConfig,
-                                hide: s,
-                                cheermotes: d,
+                                hide: r,
+                                cheermotes: l,
                                 showCheermoteAmount: !0,
-                                event: o,
+                                event: s,
                                 onHover: this.handleTierHover,
                                 onHoverLeave: this.handleUnhover,
                                 onClick: this.handleTierClick,
@@ -5258,35 +5256,33 @@ webpackJsonp([74], {
                             })
                         }
                     }
-                    if (!r) {
-                        d = this.props.bitsConfig.orderedActions.filter(function(e) {
+                    if (!n) {
+                        l = this.props.bitsConfig.orderedActions.filter(function(e) {
                             return e.type !== jt.e
-                        }).map(function(t) {
-                            var n = jt.h;
-                            e.props.data && e.props.data.user.cheer.settings.event && (n = 1);
-                            var a = t.indexedTiers.get(n);
-                            return a ? {
-                                imgSrc: a.indexedImages.LIGHT.static.get(2),
-                                imgSrcDark: a.indexedImages.DARK.static.get(2),
-                                key: t.prefix
+                        }).map(function(e) {
+                            var t = e.indexedTiers.get(jt.h);
+                            return t ? {
+                                imgSrc: t.indexedImages.LIGHT.static.get(2),
+                                imgSrcDark: t.indexedImages.DARK.static.get(2),
+                                key: e.prefix
                             } : null
                         });
-                        r = c.createElement(gn, {
+                        n = c.createElement(gn, {
                             bitsConfig: this.props.bitsConfig,
-                            hide: s,
-                            cheermotes: d,
-                            event: o,
+                            hide: r,
+                            cheermotes: l,
+                            event: s,
                             onHover: this.handleCheermoteHover,
                             onHoverLeave: this.handleUnhover,
                             onClick: this.handleCheermoteClick
                         })
                     }
-                    var u, m = null;
-                    this.props.isSending ? this.state.totalBits >= jt.l && (m = c.createElement(bn, {
+                    var d, u = null;
+                    this.props.isSending ? this.state.totalBits >= jt.l && (u = c.createElement(bn, {
                         onCancel: this.props.onCancelSend,
                         onConfirm: this.props.onConfirmSend
-                    })) : m = o ? c.createElement(fn, {
-                        event: o,
+                    })) : u = s ? c.createElement(fn, {
+                        event: s,
                         selfBitsBadge: this.props.data.user.self && this.props.data.user.self.bitsBadge,
                         bitsConfig: this.props.bitsConfig,
                         onClickGetBits: this.handleClickBuy,
@@ -5296,7 +5292,7 @@ webpackJsonp([74], {
                         bitsConfig: this.props.bitsConfig,
                         onClickGetBits: this.handleClickBuy,
                         balance: this.props.data.currentUser && this.props.data.currentUser.bitsBalance
-                    }), s && (u = c.createElement("button", {
+                    }), r && (d = c.createElement("button", {
                         className: "t-bits-card__go-back t-bits-card__top-controls",
                         onClick: this.closeHelp,
                         "data-a-target": "bits-card-back-button"
@@ -5304,15 +5300,15 @@ webpackJsonp([74], {
                         asset: A._18.Play,
                         height: 8
                     }), " ", Object(i.d)("Back", "BitsCard")));
-                    var p = D("t-bits-card", {
+                    var m = D("t-bits-card", {
                         "t-bits-card--tall": !this.props.isSending
                     });
                     return c.createElement(A._27, a.__assign({
-                        className: p,
+                        className: m,
                         display: A.P.Flex,
                         flexDirection: A.R.Column,
                         "data-a-target": "bits-card"
-                    }, n), !this.props.isSending && u, t, c.createElement(A._27, {
+                    }, t), !this.props.isSending && d, e, c.createElement(A._27, {
                         className: "t-bits-card__contents",
                         display: A.P.Flex,
                         flexGrow: 0,
@@ -5328,7 +5324,7 @@ webpackJsonp([74], {
                         currentCheers: this.props.currentCheers,
                         displayName: this.props.data.user.displayName,
                         emoteMinimumBits: this.props.data.user.cheer.settings.emoteMinimumBits,
-                        event: o,
+                        event: s,
                         helpRequested: this.state.helpRequested,
                         hoveredCheermote: this.state.hoveredCheermote,
                         hoveredTier: this.state.hoveredTier,
@@ -5341,10 +5337,10 @@ webpackJsonp([74], {
                         channelID: this.props.channelID,
                         showHelp: this.showHelp,
                         isStaff: this.props.isStaff
-                    })), !this.props.isSending && r, m && c.createElement(A._4, {
+                    })), !this.props.isSending && n, u && c.createElement(A._4, {
                         className: "t-bits-card__footer",
                         display: A.P.Flex
-                    }, m))
+                    }, u))
                 }, t = a.__decorate([Object(d.a)(yn, {
                     name: "data",
                     skip: function(e) {
@@ -19871,7 +19867,7 @@ webpackJsonp([74], {
                 }, {
                     "cheermote-for-amount__cheer-amount--extremely-small": e.size === a.ExtremelySmall
                 });
-            if (e.amount && e.showAmount) {
+            if (void 0 !== e.amount && e.showAmount) {
                 var h = e.formattedNumber ? Object(s.e)(e.amount) : e.amount;
                 m = r.createElement(d.Y, {
                     padding: e.size === a.Small ? 0 : void 0,
@@ -23291,4 +23287,4 @@ webpackJsonp([74], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-surfing-3ed91cf73994cee00d205a0877f72c61.js.map
+//# sourceMappingURL=pages.channel-surfing-e04b4f132f73f844e910268d8263973c.js.map

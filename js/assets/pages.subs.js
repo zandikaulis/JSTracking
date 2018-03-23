@@ -18342,12 +18342,11 @@ webpackJsonp([40], {
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    var e = this.props.user;
-                    if (!e) return this.renderError();
-                    var t = this.props.lastMessage ? Object(B.a)(this.props.lastMessage.content.content, this.props.lastMessage.content.emotes, this.props.lastMessage.editedAt) : null,
-                        n = this.props.unreadMessageCount,
-                        i = e.displayName || e.login;
-                    return r.createElement("div", {
+                    var e, t, n, i = this.props.user,
+                        a = this.props.lastMessage ? Object(B.a)(this.props.lastMessage.content.content, this.props.lastMessage.content.emotes, this.props.lastMessage.editedAt) : null,
+                        s = this.props.unreadMessageCount,
+                        o = Object(f.d)("Unknown", "ThreadListItem");
+                    return i ? ((e = i.displayName || i.login) || (e = o), t = i.login, n = i.profileImageURL) : (e = o, t = o, n = null), r.createElement("div", {
                         onClick: this.handleThreadClick
                     }, r.createElement(g._27, {
                         className: "whispers-list-item",
@@ -18358,7 +18357,7 @@ webpackJsonp([40], {
                         flexWrap: g.S.NoWrap,
                         fullWidth: !0,
                         alignItems: g.c.Center,
-                        "data-a-target": "whisper-with-" + e.login
+                        "data-a-target": "whisper-with-" + t
                     }, r.createElement(g._4, {
                         className: "whispers-list-item__avatar",
                         margin: {
@@ -18368,20 +18367,21 @@ webpackJsonp([40], {
                     }, r.createElement(g.l, {
                         size: 30,
                         alt: Object(f.d)("{interlocutorName}'s Avatar", {
-                            interlocutorName: i
+                            interlocutorName: e
                         }, "WhisperThreadListItem"),
-                        src: e.profileImageURL,
+                        src: n,
                         onLoad: this.props.avatarOnLoadCallback
                     })), r.createElement(g._4, {
                         fullWidth: !0,
                         display: g.P.Inline
                     }, r.createElement(g.O, {
                         fontSize: g.T.Size5,
-                        bold: !0
-                    }, i), r.createElement(g._4, {
+                        bold: !0,
+                        italic: e === o
+                    }, e), r.createElement(g._4, {
                         className: "whispers-list-item__last-message",
                         ellipsis: !0
-                    }, t)), r.createElement(g._4, {
+                    }, a)), r.createElement(g._4, {
                         className: "whispers-list-item__unread-count",
                         margin: {
                             right: 1
@@ -18389,7 +18389,7 @@ webpackJsonp([40], {
                         textAlign: g._37.Right
                     }, r.createElement(g.O, {
                         bold: !0
-                    }, n > 0 && !this.props.muted ? n : null), this.props.muted && r.createElement(g._4, {
+                    }, s > 0 && !this.props.muted ? s : null), this.props.muted && r.createElement(g._4, {
                         display: g.P.Flex,
                         alignItems: g.c.Center,
                         justifyContent: g._3.Center
@@ -18406,8 +18406,6 @@ webpackJsonp([40], {
                         onClick: this.handleArchiveClick,
                         "data-click-out-id": "whispers-list-item__archive-button"
                     }))))
-                }, t.prototype.renderError = function() {
-                    return r.createElement(g._4, null, r.createElement("p", null, Object(f.d)("Sorry, something went wrong fetching this conversation.", "WhisperThreadListItem")))
                 }, t
             }(r.Component)),
             H = n("7miU"),
@@ -19701,10 +19699,10 @@ webpackJsonp([40], {
                 return n.e(65).then(n.bind(null, "Tj44"))
             }, "EmailVerificationPage"),
             Ze = oe.a.wrap(function() {
-                return n.e(47).then(n.bind(null, "NTi8"))
+                return n.e(48).then(n.bind(null, "NTi8"))
             }, "EventLandingPage"),
             Xe = oe.a.wrap(function() {
-                return n.e(48).then(n.bind(null, "IpE8"))
+                return n.e(49).then(n.bind(null, "IpE8"))
             }, "FollowingRootPage"),
             et = oe.a.wrap(function() {
                 return n.e(55).then(n.bind(null, "lTLe"))
@@ -19725,7 +19723,7 @@ webpackJsonp([40], {
                 return n.e(61).then(n.bind(null, "DkuH"))
             }, "ReportUserPage"),
             st = oe.a.wrap(function() {
-                return n.e(49).then(n.bind(null, "K4jf"))
+                return n.e(47).then(n.bind(null, "K4jf"))
             }, "SettingsRoot"),
             ot = oe.a.wrap(function() {
                 return n.e(37).then(n.bind(null, "uiPj"))
@@ -21545,16 +21543,16 @@ webpackJsonp([40], {
                     autoReportInteractive: !0
                 })], t)
             }(d.Component);
-        var re = Object(i.b)(function(e) {
+        var re, ae = Object(i.b)(function(e) {
                 return {
                     isLoggedIn: Object(l.d)(e)
                 }
             })(ie),
-            ae = n("S1vB"),
-            se = n("Hs3O"),
-            oe = n("iGr2"),
-            le = Object(U.a)("/products/turbo?ref=top_nav"),
-            ce = function(e) {
+            se = n("S1vB"),
+            oe = n("Hs3O"),
+            le = n("iGr2"),
+            ce = Object(U.a)("/products/turbo?ref=top_nav"),
+            de = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -21562,16 +21560,16 @@ webpackJsonp([40], {
                     this.props.latencyTracking.reportInteractive()
                 }, t.prototype.render = function() {
                     if (this.props.data.loading || this.props.data.error) return null;
-                    var e = this.props.data.requestInfo && !Object(ae.a)(this.props.data.requestInfo.countryCode),
+                    var e = this.props.data.requestInfo && !Object(se.a)(this.props.data.requestInfo.countryCode),
                         t = !this.props.data.currentUser || !this.props.data.currentUser.hasTurbo;
                     if (e && t) return d.createElement("a", {
-                        href: le,
+                        href: ce,
                         target: "_blank",
                         className: "top-nav__nav-link",
                         "data-a-target": "try-prime-link"
                     }, Object(u.d)("Go Turbo", "TopNavUpsell"));
                     if (!this.props.data.currentUser || !this.props.data.currentUser.hasPrime) {
-                        var n = Object(se.d)(se.b, window.location.pathname.substring(1));
+                        var n = Object(oe.d)(oe.b, window.location.pathname.substring(1));
                         return d.createElement("a", {
                             href: n,
                             target: "_blank",
@@ -21580,21 +21578,25 @@ webpackJsonp([40], {
                         }, Object(u.d)("Try Prime", "TopNavUpsell"))
                     }
                     return null
-                }, t = c.__decorate([Object(h.a)(oe), Object(v.d)("TopNavUpsellComponent")], t)
+                }, t = c.__decorate([Object(h.a)(le), Object(v.d)("TopNavUpsellComponent")], t)
             }(d.Component),
-            de = n("RweG"),
-            ue = n("WIs4"),
-            pe = n("l4QG"),
-            me = n("aMxy"),
-            he = n("NXs7"),
-            fe = n("HZww"),
-            ge = n("FLwB"),
-            ve = n("VAT8"),
-            be = n("ZaD5"),
-            ke = n("NikC"),
-            ye = n("0nzt"),
-            _e = n("oIkB"),
-            Se = (n("/Urv"), function(e) {
+            ue = n("RweG"),
+            pe = n("WIs4"),
+            me = n("l4QG"),
+            he = n("aMxy"),
+            fe = n("NXs7"),
+            ge = n("HZww"),
+            ve = n("FLwB"),
+            be = n("VAT8"),
+            ke = n("ZaD5"),
+            ye = n("NikC"),
+            _e = n("0nzt"),
+            Se = n("oIkB");
+        ! function(e) {
+            e.Disable = "disable", e.Enable = "enable"
+        }(re || (re = {}));
+        n("/Urv");
+        var Ee = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onLogoutClick = function(e) {
@@ -21602,12 +21604,12 @@ webpackJsonp([40], {
                     }, t.onShareCheckboxClick = function() {
                         t.props.data && !t.props.data.error && t.props.data.currentUser && t.props.toggleShareActivity()
                     }, t.onDarkModeCheckboxClick = function() {
-                        var e = t.props.theme === he.a.Dark ? he.a.Light : he.a.Dark;
-                        t.props.changeTheme(e, ke.a.UserMenu)
+                        var e = t.props.theme === fe.a.Dark ? fe.a.Light : fe.a.Dark;
+                        t.props.changeTheme(e, ye.a.UserMenu)
                     }, t.onOnlineClick = function(e) {
-                        t.props.data && !t.props.data.error && t.props.data.currentUser && (e && e.stopPropagation(), t.props.toggleVisibility(pe.a.Online))
+                        t.props.data && !t.props.data.error && t.props.data.currentUser && (e && e.stopPropagation(), t.props.toggleVisibility(me.a.Online))
                     }, t.onInvisibleClick = function(e) {
-                        t.props.data && !t.props.data.error && t.props.data.currentUser && (e && e.stopPropagation(), t.props.toggleVisibility(pe.a.Offline))
+                        t.props.data && !t.props.data.error && t.props.data.currentUser && (e && e.stopPropagation(), t.props.toggleVisibility(me.a.Offline))
                     }, t
                 }
                 return c.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -21628,13 +21630,13 @@ webpackJsonp([40], {
                         p = void 0,
                         m = void 0,
                         h = void 0;
-                    return this.props.data && !this.props.data.error && this.props.data.currentUser && (i = !0, r = this.props.data.currentUser.availability === pe.a.Offline ? B.J.Base : B.J.Alt2, a = this.props.data.currentUser.availability === pe.a.Online ? B.J.Base : B.J.Alt2, s = !!this.props.data.currentUser.settings && this.props.data.currentUser.settings.isSharingActivity, o = this.props.data.currentUser.availability === pe.a.Offline, l = this.props.data.currentUser.availability === pe.a.Online, c = this.props.data.currentUser.availability === pe.a.Offline, p = {
+                    return this.props.data && !this.props.data.error && this.props.data.currentUser && (i = !0, r = this.props.data.currentUser.availability === me.a.Offline ? B.J.Base : B.J.Alt2, a = this.props.data.currentUser.availability === me.a.Online ? B.J.Base : B.J.Alt2, s = !!this.props.data.currentUser.settings && this.props.data.currentUser.settings.isSharingActivity, o = this.props.data.currentUser.availability === me.a.Offline, l = this.props.data.currentUser.availability === me.a.Online, c = this.props.data.currentUser.availability === me.a.Offline, p = {
                         pathname: "/" + this.props.data.currentUser.login,
                         state: {
                             content: f.PageviewContent.SelfChannel,
                             medium: f.PageviewMedium.TopNav
                         }
-                    }, m = Object(U.a)("/" + this.props.data.currentUser.login + "/manager/past_broadcasts"), h = Object(U.a)("/" + this.props.data.currentUser.login + "/dashboard")), d.createElement(B._27, {
+                    }, m = Object(U.a)("/" + this.props.data.currentUser.login + "/manager"), h = Object(U.a)("/" + this.props.data.currentUser.login + "/dashboard")), d.createElement(B._27, {
                         overflow: B._7.Hidden,
                         position: B._11.Absolute,
                         className: e,
@@ -21733,7 +21735,7 @@ webpackJsonp([40], {
                         "data-a-target": "dark-mode-toggle",
                         "data-test-selector": "dark-mode-toggle",
                         "data-a-value": this.props.theme,
-                        checked: this.props.theme === he.a.Dark,
+                        checked: this.props.theme === fe.a.Dark,
                         onChange: this.onDarkModeCheckboxClick
                     }))), d.createElement(B._4, {
                         margin: {
@@ -21970,17 +21972,17 @@ webpackJsonp([40], {
                         width: 18
                     })), d.createElement(B.O, null, Object(u.d)("Log Out", "UserMenuDropdown"))))))))
                 }, t = c.__decorate([Object(v.d)("UserMenuDropdown")], t)
-            }(d.Component)),
-            Ee = n("jAYy"),
-            Ne = n("94wQ"),
-            Ce = function(e) {
+            }(d.Component),
+            Ne = n("jAYy"),
+            Ce = n("94wQ"),
+            Oe = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.toggleShareActivity = function() {
                         if (t.props.data && !t.props.data.error && t.props.data.currentUser) {
-                            var e = !!t.props.data.currentUser.settings && !t.props.data.currentUser.settings.isSharingActivity,
-                                n = c.__assign({}, Object(_e.a)({
-                                    isSharingActivity: e
+                            var e, n, i = !!t.props.data.currentUser.settings && !t.props.data.currentUser.settings.isSharingActivity,
+                                r = c.__assign({}, Object(Se.a)({
+                                    isSharingActivity: i
                                 }), {
                                     optimisticResponse: {
                                         updateIsSharingActivity: {
@@ -21989,21 +21991,27 @@ webpackJsonp([40], {
                                                 __typename: "User",
                                                 id: t.props.data.currentUser.id,
                                                 settings: {
-                                                    isSharingActivity: e,
+                                                    isSharingActivity: i,
                                                     __typename: "UserSettings"
                                                 }
                                             }
                                         }
                                     }
                                 });
-                            t.props.updateIsSharingActivity(n)
+                            t.props.updateIsSharingActivity(r), e = {
+                                login: t.props.data.currentUser.login,
+                                isSharingEnabled: i
+                            }, n = {
+                                login: e.login,
+                                action: e.isSharingEnabled ? re.Enable : re.Disable
+                            }, u.n.track(f.SpadeEventType.PresenceToggle, n)
                         }
                     }, t.toggleVisibility = function(e) {
-                        t.props.data && !t.props.data.error && t.props.data.currentUser && Object(ge.e)(e)
+                        t.props.data && !t.props.data.error && t.props.data.currentUser && Object(ve.e)(e)
                     }, t
                 }
                 return c.__extends(t, e), t.prototype.render = function() {
-                    return d.createElement(Se, {
+                    return d.createElement(Ee, {
                         data: this.props.data,
                         dropdownOpen: this.props.dropdownOpen,
                         toggleShareActivity: this.toggleShareActivity,
@@ -22012,43 +22020,43 @@ webpackJsonp([40], {
                         logout: this.props.logout,
                         theme: this.props.theme
                     })
-                }, t = c.__decorate([Object(h.a)(Ee, {
+                }, t = c.__decorate([Object(h.a)(Ne, {
                     skip: function(e) {
                         return !e.firstPageLoaded
                     }
-                }), Object(h.a)(Ne, {
+                }), Object(h.a)(Ce, {
                     name: "updateIsSharingActivity"
-                }), Object(ue.a)(function(e) {
+                }), Object(pe.a)(function(e) {
                     return {
-                        query: Ee,
-                        topic: e.data && e.data.currentUser ? Object(fe.m)(e.data.currentUser.id) : "",
+                        query: Ne,
+                        topic: e.data && e.data.currentUser ? Object(ge.m)(e.data.currentUser.id) : "",
                         skip: !(e.data && !e.data.loading && !e.data.error && e.data.currentUser),
-                        type: me.PubsubMessageType.PresenceSettings,
+                        type: he.PubsubMessageType.PresenceSettings,
                         mutator: function(e, t) {
                             return t.currentUser && t.currentUser.settings && (t.currentUser.settings.visibility = e.data.availability_override.toUpperCase(), t.currentUser.settings.isSharingActivity = e.data.share_activity), t
                         }
                     }
                 })], t)
             }(d.Component);
-        var Oe = Object(i.b)(function(e) {
+        var Te = Object(i.b)(function(e) {
                 return {
                     firstPageLoaded: e.session.firstPageLoaded,
-                    theme: Object(ye.a)(e)
+                    theme: Object(_e.a)(e)
                 }
             }, function(e) {
                 return Object(a.b)({
-                    changeTheme: ke.b,
+                    changeTheme: ye.b,
                     logout: o.g
                 }, e)
-            })(Ce),
-            Te = (n("Q8Dy"), function(e) {
+            })(Oe),
+            we = (n("Q8Dy"), function(e) {
                 return d.createElement(B._4, {
                     position: B._11.Relative,
                     display: B.P.Flex,
                     flexGrow: 1,
                     alignItems: B.c.Stretch,
                     fullHeight: !0,
-                    className: Object(ve.c)(he.a.Dark)
+                    className: Object(be.c)(fe.a.Dark)
                 }, d.createElement(B._4, {
                     display: B.P.Flex,
                     flexGrow: 1,
@@ -22127,8 +22135,8 @@ webpackJsonp([40], {
                     asset: B._18.GlyphArrDown
                 })))))))
             }),
-            we = n("2Hj/"),
-            Pe = (n("nist"), function(e) {
+            Pe = n("2Hj/"),
+            De = (n("nist"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onCardClick = function() {
@@ -22139,7 +22147,7 @@ webpackJsonp([40], {
                     var e = this.props.data.currentUser,
                         t = e && e.profileImageURL || u.a.defaultAvatarURL,
                         n = e && e.displayName || "",
-                        i = pe.a.Offline;
+                        i = me.a.Offline;
                     return e && (e.availability ? i = e.availability : e.settings && e.settings.visibility && (i = e.settings.visibility)), d.createElement(B._4, {
                         position: B._11.Relative,
                         display: B.P.Flex,
@@ -22203,7 +22211,7 @@ webpackJsonp([40], {
                         margin: {
                             right: .5
                         }
-                    }, d.createElement(we.a, {
+                    }, d.createElement(Pe.a, {
                         availability: i
                     })), d.createElement(B._27, {
                         ellipsis: !0,
@@ -22213,9 +22221,9 @@ webpackJsonp([40], {
                         noWrap: !0,
                         "data-a-target": "online-status",
                         lineHeight: B._5.Heading
-                    }, this.props.data.currentUser && d.createElement(we.b, {
+                    }, this.props.data.currentUser && d.createElement(Pe.b, {
                         activity: this.props.data.currentUser.activity,
-                        availability: i === pe.a.Offline ? pe.a.Invisible : i
+                        availability: i === me.a.Offline ? me.a.Invisible : i
                     }))))), d.createElement(B._27, {
                         display: B.P.Flex,
                         flexShrink: 0,
@@ -22227,8 +22235,8 @@ webpackJsonp([40], {
                     }))))))
                 }, t
             }(d.Component)),
-            De = n("9q8M"),
-            Ie = function(e) {
+            Ie = n("9q8M"),
+            xe = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.isSettingNewSession = !1, n.onMenuCardClick = function() {
@@ -22242,7 +22250,7 @@ webpackJsonp([40], {
                     }, n.dataIsReady = function(e) {
                         return e.data && !e.data.loading && !e.data.error && e.data.currentUser
                     }, n.setUserToOffline = function() {
-                        Object(ge.c)(pe.a.Offline), Object(ge.a)()
+                        Object(ve.c)(me.a.Offline), Object(ve.a)()
                     }, n.setNewSession = function() {
                         return c.__awaiter(n, void 0, void 0, function() {
                             var e;
@@ -22252,7 +22260,7 @@ webpackJsonp([40], {
                                         if (this.isSettingNewSession) return [2];
                                         this.isSettingNewSession = !0, t.label = 1;
                                     case 1:
-                                        return t.trys.push([1, 3, 4, 5]), [4, Object(ge.g)()];
+                                        return t.trys.push([1, 3, 4, 5]), [4, Object(ve.g)()];
                                     case 2:
                                         return t.sent(), this.props.initialUserAvailabilitySet(), [3, 5];
                                     case 3:
@@ -22284,13 +22292,13 @@ webpackJsonp([40], {
                 }, t.prototype.componentWillUnmount = function() {
                     this.unsubscribeFromHistory(), this.setUserToOffline()
                 }, t.prototype.render = function() {
-                    var e = F(Object(ve.c)(he.a.Dark), {
+                    var e = F(Object(be.c)(fe.a.Dark), {
                             "top-nav-user-menu--dropdown-open": this.state.dropdownOpen
                         }),
                         t = null;
-                    return t = this.props.data.loading && !this.props.data.currentUser || this.props.data.error ? d.createElement(Te, {
+                    return t = this.props.data.loading && !this.props.data.currentUser || this.props.data.error ? d.createElement(we, {
                         onMenuCardClick: this.onMenuCardClick
-                    }) : d.createElement(Pe, {
+                    }) : d.createElement(De, {
                         data: this.props.data,
                         onMenuCardClick: this.onMenuCardClick,
                         theme: this.props.theme
@@ -22303,46 +22311,46 @@ webpackJsonp([40], {
                     }, d.createElement(x.a, {
                         onClickOut: this.onClickOut,
                         className: e
-                    }, t, d.createElement(Oe, {
+                    }, t, d.createElement(Te, {
                         dropdownOpen: this.state.dropdownOpen
                     })))
                 }, t.prototype.reportInteractive = function() {
                     this.props.data.loading || this.props.latencyTracking.reportInteractive()
-                }, t = c.__decorate([Object(h.a)(De), Object(ue.a)(function(e) {
+                }, t = c.__decorate([Object(h.a)(Ie), Object(pe.a)(function(e) {
                     return {
-                        query: De,
-                        topic: e.data.currentUser ? Object(fe.m)(e.data.currentUser.id) : "",
+                        query: Ie,
+                        topic: e.data.currentUser ? Object(ge.m)(e.data.currentUser.id) : "",
                         skip: !(e.data && !e.data.loading && !e.data.error && e.data.currentUser),
-                        type: me.PubsubMessageType.PresenceSettings,
+                        type: he.PubsubMessageType.PresenceSettings,
                         mutator: function(e, t) {
                             return t.currentUser && t.currentUser.settings && (t.currentUser.settings.visibility = e.data.availability_override.toUpperCase(), t.currentUser.settings.isSharingActivity = e.data.share_activity), t
                         }
                     }
-                }), Object(de.a)([{
+                }), Object(ue.a)([{
                     topic: function(e) {
-                        return e.data.currentUser ? Object(fe.m)(e.data.currentUser.id) : ""
+                        return e.data.currentUser ? Object(ge.m)(e.data.currentUser.id) : ""
                     },
-                    mapMessageTypesToProps: (xe = {}, xe[me.PubsubMessageType.Presence] = "presence", xe),
+                    mapMessageTypesToProps: (Fe = {}, Fe[he.PubsubMessageType.Presence] = "presence", Fe),
                     skip: function(e) {
                         return !(e.data && !e.data.loading && !e.data.error && e.data.currentUser)
                     }
                 }]), Object(v.d)("User")], t)
             }(d.Component);
-        var xe, Fe = Object(i.b)(function(e) {
+        var Fe, Re = Object(i.b)(function(e) {
                 return {
-                    theme: Object(ye.a)(e),
+                    theme: Object(_e.a)(e),
                     firstPageLoaded: e.session.firstPageLoaded,
                     initialUserAvailabilityIsSet: e.session.initialUserAvailabilityIsSet
                 }
             }, function(e) {
                 return Object(a.b)({
-                    changeTheme: ke.b,
-                    initialUserAvailabilitySet: be.g
+                    changeTheme: ye.b,
+                    initialUserAvailabilitySet: ke.g
                 }, e)
-            })(Object(r.f)(Ie)),
-            Re = n("8PKe"),
-            Ue = n("p+06"),
-            je = (n("HTB+"), function(e) {
+            })(Object(r.f)(xe)),
+            Ue = n("8PKe"),
+            je = n("p+06"),
+            Le = (n("HTB+"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -22368,7 +22376,7 @@ webpackJsonp([40], {
                             },
                             alignSelf: B.d.Center,
                             flexWrap: B.S.NoWrap
-                        }, !e && d.createElement(Re.c, null))
+                        }, !e && d.createElement(Ue.c, null))
                     }, t.renderStoreLink = function() {
                         var e = !1;
                         if (t.props.data) {
@@ -22497,7 +22505,7 @@ webpackJsonp([40], {
                         href: "https://app.twitch.tv/download",
                         "data-a-target": "get-desktop-link",
                         className: "top-nav__nav-link"
-                    }, Object(u.d)("Get Desktop", "TopNav")), d.createElement(ce, null), d.createElement(re, null), d.createElement(B._4, {
+                    }, Object(u.d)("Get Desktop", "TopNav")), d.createElement(de, null), d.createElement(ae, null), d.createElement(B._4, {
                         className: "top-nav__ellipsis-button",
                         display: B.P.Flex,
                         alignItems: B.c.Center
@@ -22670,17 +22678,17 @@ webpackJsonp([40], {
                         flexWrap: B.S.NoWrap,
                         flexGrow: 0,
                         flexShrink: 0
-                    }, this.props.isLoggedIn ? d.createElement(Fe, null) : d.createElement(te.a, {
+                    }, this.props.isLoggedIn ? d.createElement(Re, null) : d.createElement(te.a, {
                         login: this.props.login,
                         signup: this.props.signup
                     })))))
-                }, t = c.__decorate([Object(h.a)(Ue, {
+                }, t = c.__decorate([Object(h.a)(je, {
                     skip: function(e) {
                         return !e.isLoggedIn
                     }
                 }), Object(v.d)("TopNav")], t)
             }(d.Component));
-        var Le = Object(r.f)(Object(i.b)(function(e) {
+        var Ae = Object(r.f)(Object(i.b)(function(e) {
             return {
                 isLoggedIn: Object(l.d)(e)
             }
@@ -22694,13 +22702,13 @@ webpackJsonp([40], {
                     return Object(o.h)(s.a.TopNavSignupButton)
                 }
             }, e)
-        })(je));
+        })(Le));
         n.d(t, !1, function() {
             return "5rem"
         }), n.d(t, !1, function() {
             return "9.5rem"
         }), n.d(t, "a", function() {
-            return Le
+            return Ae
         })
     },
     TVUY: function(e, t) {
@@ -28632,28 +28640,29 @@ webpackJsonp([40], {
     },
     hvzu: function(e, t, n) {
         "use strict";
-        var i, r = n("GiK3"),
-            a = n("6sO2"),
-            s = n("8RKZ"),
-            o = n("l21v");
+        var i, r = n("TToO"),
+            a = n("GiK3"),
+            s = n("6sO2"),
+            o = n("8RKZ"),
+            l = n("l21v");
         ! function(e) {
             e[e.Text = 0] = "Text", e[e.Link = 1] = "Link"
         }(i || (i = {}));
-        var l = n("Odds");
-        t.a = u, n.d(t, "f", function() {
-            return p
-        }), n.d(t, "e", function() {
+        var c = n("Odds");
+        t.a = p, n.d(t, "f", function() {
             return m
-        }), n.d(t, "d", function() {
+        }), n.d(t, "e", function() {
             return h
-        }), n.d(t, "c", function() {
+        }), n.d(t, "d", function() {
             return f
-        }), n.d(t, "b", function() {
+        }), n.d(t, "c", function() {
             return g
+        }), n.d(t, "b", function() {
+            return v
         });
-        var c = "whisper-message-part";
+        var d = "whisper-message-part";
 
-        function d(e) {
+        function u(e) {
             var t = function(e) {
                 var t = e.split(/\s+/),
                     n = [];
@@ -28711,11 +28720,11 @@ webpackJsonp([40], {
                     }
                 }), n
             }(e);
-            return t.reduce(function(e, n, a) {
+            return t.reduce(function(e, n, r) {
                 if (n.type === i.Text) e.push(n.content);
                 else if (n.type === i.Link) {
-                    t[a - 1] && t[a - 1].type === i.Link && e.push(" "), e.push(r.createElement("a", {
-                        key: a,
+                    t[r - 1] && t[r - 1].type === i.Link && e.push(" "), e.push(a.createElement("a", {
+                        key: r,
                         href: n.content.url,
                         target: "__blank"
                     }, n.content.displayText))
@@ -28724,128 +28733,142 @@ webpackJsonp([40], {
             }, [])
         }
 
-        function u(e, t, n) {
+        function p(e, t, n) {
             var i = [],
-                u = 0,
-                p = Object(o.d)(e);
+                r = 0,
+                p = Object(l.d)(e);
             if (t.forEach(function(t) {
                     var n = t.from,
-                        a = t.to,
+                        s = t.to,
                         m = {
                             themed: !1,
                             sources: {
-                                "1x": Object(o.e)("" + t.emoteID, 1),
-                                "2x": Object(o.e)("" + t.emoteID, 2),
-                                "4x": Object(o.e)("" + t.emoteID, 4)
+                                "1x": Object(l.e)("" + t.emoteID, 1),
+                                "2x": Object(l.e)("" + t.emoteID, 2),
+                                "4x": Object(l.e)("" + t.emoteID, 4)
                             }
                         };
-                    if (n > u) {
-                        var h = p ? p.slice(u, n).join("") : e.slice(u, n);
-                        i.push(r.createElement("span", {
-                            key: "str-" + u,
-                            "data-a-target": c,
+                    if (n > r) {
+                        var h = p ? p.slice(r, n).join("") : e.slice(r, n);
+                        i.push(a.createElement("span", {
+                            key: "str-" + r,
+                            "data-a-target": d,
                             className: "thread-message__message--part"
-                        }, d(h)))
+                        }, u(h)))
                     }
-                    var f = p ? p.slice(n, a + 1).join("") : e.slice(n, a + 1);
-                    i.push(r.createElement(s.a, {
-                        key: "emote-" + u,
-                        tooltipDirection: l._46.Top,
+                    var f = p ? p.slice(n, s + 1).join("") : e.slice(n, s + 1);
+                    i.push(a.createElement(o.a, {
+                        key: "emote-" + r,
+                        tooltipDirection: c._46.Top,
                         className: "thread-message__message--emote",
                         srcSet: m,
                         srcKey: "1x",
                         alt: f
-                    })), u = a + 1
-                }), u < e.length) {
-                var m = p ? p.slice(u, p.length).join("") : e.slice(u, e.length);
-                i.push(r.createElement("span", {
-                    key: "str-" + u,
-                    "data-a-target": c,
+                    })), r = s + 1
+                }), r < e.length) {
+                var m = p ? p.slice(r, p.length).join("") : e.slice(r, e.length);
+                i.push(a.createElement("span", {
+                    key: "str-" + r,
+                    "data-a-target": d,
                     className: "thread-message__message--part"
-                }, d(m)))
+                }, u(m)))
             }
             if (n) {
-                var h = Object(a.d)("edited", "ThreadMessage"),
-                    f = Object(a.d)("{timestamp, date, full} {timestamp, time, long}", {
+                var h = Object(s.d)("edited", "ThreadMessage"),
+                    f = Object(s.d)("{timestamp, date, full} {timestamp, time, long}", {
                         timestamp: new Date(n)
                     }, "ThreadMessage");
-                i.push(r.createElement(l.Y, {
+                i.push(a.createElement(c.Y, {
                     key: "editedAt",
                     margin: {
                         left: 1
                     }
-                }, r.createElement(l.O, {
-                    type: l._41.Span,
+                }, a.createElement(c.O, {
+                    type: c._41.Span,
                     className: "thread-message__message--edited",
                     title: f,
-                    color: l.J.Alt2
+                    color: c.J.Alt2
                 }, "(" + h + ")")))
             }
             return i
         }
-        var p = function(e) {
-                var t = u(e.content, e.emotes, e.editedAt);
-                if (e.deletedAt) return null;
-                var n = e.from && e.from.chatColor || "",
-                    i = e.from && e.from.displayName || r.createElement(l.O, {
-                        type: l._41.Span,
+        var m = function(e) {
+                var t = "/me " === e.content.substr(0, 4);
+                t && (e.content = e.content.substr(4), e.emotes = e.emotes.map(function(e) {
+                    return r.__assign({}, e, {
+                        from: e.from - 4,
+                        to: e.to - 4
+                    })
+                }));
+                var n = p(e.content, e.emotes, e.editedAt);
+                if (n.unshift(a.createElement("span", {
+                        key: "str-separator"
+                    }, t ? " " : ": ")), e.deletedAt) return null;
+                var i = e.from && e.from.chatColor || "",
+                    o = e.from && e.from.displayName || a.createElement(c.O, {
+                        type: c._41.Span,
                         italic: !0
-                    }, Object(a.d)("Unknown", "ThreadMessage"));
-                return r.createElement(l._4, {
+                    }, Object(s.d)("Unknown", "ThreadMessage")),
+                    l = t ? i : "";
+                return a.createElement(c._4, {
                     padding: {
                         x: 1,
                         y: .5
                     }
-                }, r.createElement("span", {
+                }, a.createElement("span", {
                     className: "thread-message__message--user-name",
                     "data-a-target": "whisper-message-name",
                     style: {
-                        color: n
+                        color: i
                     }
-                }, i), r.createElement("span", null, ": "), t)
+                }, o), a.createElement("span", {
+                    style: {
+                        color: l
+                    }
+                }, n))
             },
-            m = function() {
-                return r.createElement(l._4, {
+            h = function() {
+                return a.createElement(c._4, {
                     padding: {
                         y: .5,
                         x: 1
                     }
-                }, Object(a.d)("Please don't share passwords or personal information.", "whispers"))
+                }, Object(s.d)("Please don't share passwords or personal information.", "whispers"))
             },
-            h = function(e) {
+            f = function(e) {
                 var t = new Date,
-                    n = Object(a.d)("Today, {timestamp, time, medium}", {
+                    n = Object(s.d)("Today, {timestamp, time, medium}", {
                         timestamp: e.timestamp
                     }, "ThreadMessage"),
-                    i = Object(a.d)("{timestamp, time, medium}", {
+                    i = Object(s.d)("{timestamp, time, medium}", {
                         timestamp: e.timestamp
                     }, "ThreadMessage"),
-                    s = e.timestamp.toDateString() === t.toDateString() ? n : i;
-                return r.createElement(l._4, {
+                    r = e.timestamp.toDateString() === t.toDateString() ? n : i;
+                return a.createElement(c._4, {
                     padding: {
                         y: 1
                     },
-                    textAlign: l._37.Center
-                }, "" + s)
+                    textAlign: c._37.Center
+                }, "" + r)
             },
-            f = function(e) {
-                return r.createElement(l._4, {
+            g = function(e) {
+                return a.createElement(c._4, {
                     padding: {
                         y: .5,
                         x: 1
                     }
-                }, r.createElement(l.O, {
-                    type: l._41.Span,
-                    color: l.J.Alt2
+                }, a.createElement(c.O, {
+                    type: c._41.Span,
+                    color: c.J.Alt2
                 }, e.content))
             },
-            g = function() {
-                return r.createElement(l._4, {
-                    textAlign: l._37.Center,
+            v = function() {
+                return a.createElement(c._4, {
+                    textAlign: c._37.Center,
                     padding: {
                         y: .5
                     }
-                }, Object(a.d)("New Whispers", "whispers"))
+                }, Object(s.d)("New Whispers", "whispers"))
             }
     },
     iGr2: function(e, t) {
@@ -29043,7 +29066,8 @@ webpackJsonp([40], {
                         };
                         e = a.createElement(o.Y, {
                             className: "user-card-layer",
-                            position: o._11.Fixed
+                            position: o._11.Fixed,
+                            zIndex: o._53.Above
                         }, a.createElement("div", {
                             style: t,
                             ref: this.setRef
@@ -33312,4 +33336,4 @@ webpackJsonp([40], {
             }(r.Component))
     }
 });
-//# sourceMappingURL=pages.subs-0a4aeea19e494cc664e34502efdaa134.js.map
+//# sourceMappingURL=pages.subs-3b2163dc4cc3277f0cb9b8febcb2f679.js.map
