@@ -3302,13 +3302,13 @@ window.SiteOptions = {
         },
         "95e8b0f0-ec63-4660-ba5b-859ac1adc5f8": {
             "name": "clips_bluebird_story",
-            "v": 3226,
+            "v": 3359,
             "t": 2,
             "groups": [{
-                "weight": 100,
+                "weight": 80,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 20,
                 "value": "variant1"
             }]
         },
