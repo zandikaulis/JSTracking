@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".abd303eb5ad2f7f00206.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".9747f6e44db276da624a.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -30341,7 +30341,7 @@
                     h = d.os_name,
                     m = d.os_version;
                 return {
-                    app_version: "2018.03.23-203026+70302d09d8be9e15e3ec94e38b909662ceb73b23",
+                    app_version: "2018.03.23-213322+2458867a10978f1e87320d11e5ecfee4265347c5",
                     flash_version: r,
                     referrer_url: i,
                     referrer_host: s.host,
@@ -37534,7 +37534,7 @@
                 }
             }(),
             Jc = Object.freeze((Gs = {}, ie(Gs, Pa.a.MINUTE_WATCHED, "minuteWatched"), ie(Gs, Pa.a.VIDEO_PLAY, "videoPlay"), ie(Gs, Pa.a.BUFFER_EMPTY, "bufferEmpty"), ie(Gs, Pa.b, "videoError"), Gs)),
-            Xc = Object.freeze((Qs = {}, ie(Qs, "ended", !0), ie(Qs, "pause", !0), ie(Qs, "play", !0), ie(Qs, "offline", !0), ie(Qs, "online", !0), ie(Qs, Fc, !0), ie(Qs, "minuteWatched", !0), ie(Qs, "videoPlay", !0), ie(Qs, "bufferEmpty", !0), ie(Qs, "videoError", !0), Qs)),
+            Xc = Object.freeze((Qs = {}, ie(Qs, "ended", !0), ie(Qs, "pause", !0), ie(Qs, "play", !0), ie(Qs, "playing", !0), ie(Qs, "offline", !0), ie(Qs, "online", !0), ie(Qs, Fc, !0), ie(Qs, "minuteWatched", !0), ie(Qs, "videoPlay", !0), ie(Qs, "bufferEmpty", !0), ie(Qs, "videoError", !0), Qs)),
             Zc = Object.freeze({
                 origin: ""
             }),
