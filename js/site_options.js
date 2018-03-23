@@ -3945,6 +3945,18 @@ window.SiteOptions = {
                 "value": "active"
             }]
         },
+        "b24e5cd6-c649-4cab-b768-03ad6cf488be": {
+            "name": "TWILIGHT_EXTENDED_PRESENCE",
+            "v": 3361,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant_a"
+            }]
+        },
         "b2925d54-cebb-4e1d-a50d-9dd2b1ea850e": {
             "name": "onsite_notifications",
             "v": 1016,

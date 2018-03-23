@@ -561,6 +561,18 @@ window.__twilightSettings = {
                 "value": "last"
             }]
         },
+        "b24e5cd6-c649-4cab-b768-03ad6cf488be": {
+            "name": "TWILIGHT_EXTENDED_PRESENCE",
+            "v": 3361,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant_a"
+            }]
+        },
         "d54399a7-7956-4a20-b46b-47af282d7f66": {
             "name": "twilight_theatre_fullscreen",
             "v": 3316,
