@@ -2473,7 +2473,7 @@ window.SiteOptions = {
         },
         "697896b3-a4b9-4c00-a1a2-7fa35ec9a8e4": {
             "name": "pushy_notifications_disable",
-            "v": 3345,
+            "v": 3353,
             "t": 2,
             "groups": [{
                 "weight": 100,
