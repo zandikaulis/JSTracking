@@ -6076,8 +6076,7 @@ webpackJsonp([51], {
                         disableTheatreButton: !0,
                         playerTypeOverride: S.b.Frontpage,
                         onInit: e.onPlayerInit,
-                        onDestroy: e.onPlayerDestroy,
-                        willAutoplay: !0
+                        onDestroy: e.onPlayerDestroy
                     });
                 case p.b.Vod:
                     return c.createElement(S.c, {
@@ -6087,8 +6086,7 @@ webpackJsonp([51], {
                         playerTypeOverride: S.b.Frontpage,
                         onInit: e.onPlayerInit,
                         onDestroy: e.onPlayerDestroy,
-                        onVideoTimeChange: e.onVideoTimeChange,
-                        willAutoplay: !0
+                        onVideoTimeChange: e.onVideoTimeChange
                     });
                 default:
                     return null
@@ -7614,4 +7612,4 @@ webpackJsonp([51], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.front-017e07bc001e1c5014baea6652ce71a7.js.map
+//# sourceMappingURL=pages.front-415f803b42aac10856c2d95f6b856e9d.js.map

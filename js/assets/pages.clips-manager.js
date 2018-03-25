@@ -2290,6 +2290,7 @@ webpackJsonp([72], {
                 }, t
             }(i.Component),
             we = Object(l.compose)(Object(C.d)("MyClipsManagerPage", {
+                autoReportInteractive: !0,
                 destination: c.a.MyClipsManager
             }), Object(o.a)({
                 location: d.PageviewLocation.MyClipsManager,
@@ -3733,4 +3734,4 @@ webpackJsonp([72], {
         })), e.exports = a
     }
 });
-//# sourceMappingURL=pages.clips-manager-b98ec99c23d13604cf87f9f2f5764c5a.js.map
+//# sourceMappingURL=pages.clips-manager-e24ab984ea4f2e98f44ae3c19bbc1c88.js.map

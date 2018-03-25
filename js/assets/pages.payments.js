@@ -9628,7 +9628,7 @@ webpackJsonp([38], {
             y = n("7vx8"),
             L = "xsolla_v3";
         ! function(e) {
-            e.Recurly = "recurly", e.Xsolla = "xsolla", e.Zuora = "zuora"
+            e.Recurly = "recurly", e.Xsolla = "xsolla", e.Zuora = "zuora", e.Paypal = "paypal", e.LegacyPaypal = "paypal_rt"
         }(a || (a = {}));
         var Y, g = n("Odds"),
             D = n("2nfn"),
@@ -11154,12 +11154,27 @@ webpackJsonp([38], {
                 }, _.createElement(g._4, {
                     textAlign: g._37.Center
                 }, function(e, t) {
+                    var n = Object(m.d)("PayPal", "TransactionHistoryTab");
                     if (e === L) return _.createElement(g.L, {
                         src: R.a,
                         alt: "xsolla icon",
                         srcSet: {
                             "1x": R.a,
                             "2x": G.a
+                        }
+                    });
+                    if (e === a.Paypal || e === a.LegacyPaypal) return _.createElement(V.a, {
+                        alt: n,
+                        sources: {
+                            themed: !0,
+                            light: {
+                                "1x": A.a,
+                                "2x": W.a
+                            },
+                            dark: {
+                                "1x": N.a,
+                                "2x": I.a
+                            }
                         }
                     });
                     switch (t) {
@@ -11180,7 +11195,7 @@ webpackJsonp([38], {
                             });
                         case Y.Paypal:
                             return _.createElement(V.a, {
-                                alt: Object(m.d)("PayPal", "TransactionHistoryTab"),
+                                alt: n,
                                 sources: {
                                     themed: !0,
                                     light: {
@@ -15086,4 +15101,4 @@ webpackJsonp([38], {
         }
     }
 });
-//# sourceMappingURL=pages.payments-2dba7e9793acd68fa2ce7163545f29e9.js.map
+//# sourceMappingURL=pages.payments-ba5f1089b879d5650ba76d3977e7973a.js.map
