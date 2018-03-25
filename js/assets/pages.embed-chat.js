@@ -4828,7 +4828,8 @@ webpackJsonp([35], {
                     });
                     n && (t = n.name + " - " + e.prefix)
                 }
-                return d.createElement(A._4, {
+                var i = e.tier;
+                return e.event && !e.tier && (i = 1), d.createElement(A._4, {
                     display: A.P.Flex,
                     flexDirection: A.R.Column,
                     alignItems: A.c.Center,
@@ -4838,10 +4839,10 @@ webpackJsonp([35], {
                     bold: !0
                 }, t), d.createElement(it.a, {
                     prefix: e.prefix,
-                    amount: e.tier,
+                    amount: i,
                     bitsConfig: e.bitsConfig,
                     showImage: !0,
-                    showAmount: e.tier > 0
+                    showAmount: !(e.event && !e.tier)
                 }))
             },
             Gt = (n("DVR9"), function(e) {
@@ -5579,14 +5580,15 @@ webpackJsonp([35], {
                         })
                     }
                 }, t.prototype.render = function() {
+                    var e = this;
                     if (!this.props.visible && !this.props.currentCheers.length) return null;
-                    var e, t = {
+                    var t, n = {
                         border: !0,
                         background: A.m.Base,
                         elevation: 3,
                         fullWidth: !0
                     };
-                    if (this.props.currentCheers.length || (e = d.createElement("button", {
+                    if (this.props.currentCheers.length || (t = d.createElement("button", {
                             className: "t-bits-card__close t-bits-card__top-controls",
                             onClick: this.props.onUserClose,
                             "data-test-selector": "cancel-button",
@@ -5601,7 +5603,7 @@ webpackJsonp([35], {
                         flexDirection: A.R.Column,
                         alignItems: A.c.Center,
                         justifyContent: A._3.Center
-                    }, t), d.createElement(A._6, {
+                    }, n), d.createElement(A._6, {
                         delay: 0
                     }), d.createElement(A._4, {
                         padding: {
@@ -5623,7 +5625,7 @@ webpackJsonp([35], {
                             x: 1,
                             bottom: 1
                         }
-                    }, t), e, d.createElement(A.O, {
+                    }, n), t, d.createElement(A.O, {
                         color: A.J.Error,
                         italic: !0
                     }, Object(a.d)("You cannot Cheer in your own channel.", "BitsCard")));
@@ -5635,27 +5637,27 @@ webpackJsonp([35], {
                         trackBitsCardInteraction: this.props.trackBitsCardInteraction,
                         location: kn.b.ChatTooltip
                     });
-                    var n = null,
-                        r = this.state.helpRequested && !this.props.currentCheers.length,
-                        o = null;
-                    if (this.props.data.user.cheer.settings.event && (o = this.props.data.user.cheer.settings.event.toLowerCase().replace("_", "-")), this.state.chosenCheermote) {
-                        var s = this.props.bitsConfig.indexedActions[this.state.chosenCheermote.toLowerCase()];
-                        if (s) {
-                            var l = s.orderedTiers.filter(function(e) {
+                    var r = null,
+                        o = this.state.helpRequested && !this.props.currentCheers.length,
+                        s = null;
+                    if (this.props.data.user.cheer.settings.event && (s = this.props.data.user.cheer.settings.event.toLowerCase().replace("_", "-")), this.state.chosenCheermote) {
+                        var l = this.props.bitsConfig.indexedActions[this.state.chosenCheermote.toLowerCase()];
+                        if (l) {
+                            var c = l.orderedTiers.filter(function(e) {
                                 return e.bits <= jt.k
                             }).map(function(e) {
                                 return {
                                     imgSrc: e.indexedImages.LIGHT.static.get(2),
                                     imgSrcDark: e.indexedImages.DARK.static.get(2),
-                                    key: s.prefix + ":" + e.bits
+                                    key: l.prefix + ":" + e.bits
                                 }
                             }).reverse();
-                            n = d.createElement(gn, {
+                            r = d.createElement(gn, {
                                 bitsConfig: this.props.bitsConfig,
-                                hide: r,
-                                cheermotes: l,
+                                hide: o,
+                                cheermotes: c,
                                 showCheermoteAmount: !0,
-                                event: o,
+                                event: s,
                                 onHover: this.handleTierHover,
                                 onHoverLeave: this.handleUnhover,
                                 onClick: this.handleTierClick,
@@ -5663,33 +5665,35 @@ webpackJsonp([35], {
                             })
                         }
                     }
-                    if (!n) {
-                        l = this.props.bitsConfig.orderedActions.filter(function(e) {
+                    if (!r) {
+                        c = this.props.bitsConfig.orderedActions.filter(function(e) {
                             return e.type !== jt.e
-                        }).map(function(e) {
-                            var t = e.indexedTiers.get(jt.h);
-                            return t ? {
-                                imgSrc: t.indexedImages.LIGHT.static.get(2),
-                                imgSrcDark: t.indexedImages.DARK.static.get(2),
-                                key: e.prefix
+                        }).map(function(t) {
+                            var n = jt.h;
+                            e.props.data && e.props.data.user.cheer.settings.event && (n = 1);
+                            var i = t.indexedTiers.get(n);
+                            return i ? {
+                                imgSrc: i.indexedImages.LIGHT.static.get(2),
+                                imgSrcDark: i.indexedImages.DARK.static.get(2),
+                                key: t.prefix
                             } : null
                         });
-                        n = d.createElement(gn, {
+                        r = d.createElement(gn, {
                             bitsConfig: this.props.bitsConfig,
-                            hide: r,
-                            cheermotes: l,
-                            event: o,
+                            hide: o,
+                            cheermotes: c,
+                            event: s,
                             onHover: this.handleCheermoteHover,
                             onHoverLeave: this.handleUnhover,
                             onClick: this.handleCheermoteClick
                         })
                     }
-                    var c, u = null;
-                    this.props.isSending ? this.state.totalBits >= jt.l && (u = d.createElement(vn, {
+                    var u, m = null;
+                    this.props.isSending ? this.state.totalBits >= jt.l && (m = d.createElement(vn, {
                         onCancel: this.props.onCancelSend,
                         onConfirm: this.props.onConfirmSend
-                    })) : u = o ? d.createElement(fn, {
-                        event: o,
+                    })) : m = s ? d.createElement(fn, {
+                        event: s,
                         selfBitsBadge: this.props.data.user.self && this.props.data.user.self.bitsBadge,
                         bitsConfig: this.props.bitsConfig,
                         onClickGetBits: this.handleClickBuy,
@@ -5699,7 +5703,7 @@ webpackJsonp([35], {
                         bitsConfig: this.props.bitsConfig,
                         onClickGetBits: this.handleClickBuy,
                         balance: this.props.data.currentUser && this.props.data.currentUser.bitsBalance
-                    }), r && (c = d.createElement("button", {
+                    }), o && (u = d.createElement("button", {
                         className: "t-bits-card__go-back t-bits-card__top-controls",
                         onClick: this.closeHelp,
                         "data-a-target": "bits-card-back-button"
@@ -5707,15 +5711,15 @@ webpackJsonp([35], {
                         asset: A._18.Play,
                         height: 8
                     }), " ", Object(a.d)("Back", "BitsCard")));
-                    var m = w("t-bits-card", {
+                    var p = w("t-bits-card", {
                         "t-bits-card--tall": !this.props.isSending
                     });
                     return d.createElement(A._27, i.__assign({
-                        className: m,
+                        className: p,
                         display: A.P.Flex,
                         flexDirection: A.R.Column,
                         "data-a-target": "bits-card"
-                    }, t), !this.props.isSending && c, e, d.createElement(A._27, {
+                    }, n), !this.props.isSending && u, t, d.createElement(A._27, {
                         className: "t-bits-card__contents",
                         display: A.P.Flex,
                         flexGrow: 0,
@@ -5731,7 +5735,7 @@ webpackJsonp([35], {
                         currentCheers: this.props.currentCheers,
                         displayName: this.props.data.user.displayName,
                         emoteMinimumBits: this.props.data.user.cheer.settings.emoteMinimumBits,
-                        event: o,
+                        event: s,
                         helpRequested: this.state.helpRequested,
                         hoveredCheermote: this.state.hoveredCheermote,
                         hoveredTier: this.state.hoveredTier,
@@ -5744,10 +5748,10 @@ webpackJsonp([35], {
                         channelID: this.props.channelID,
                         showHelp: this.showHelp,
                         isStaff: this.props.isStaff
-                    })), !this.props.isSending && n, u && d.createElement(A._4, {
+                    })), !this.props.isSending && r, m && d.createElement(A._4, {
                         className: "t-bits-card__footer",
                         display: A.P.Flex
-                    }, u))
+                    }, m))
                 }, t = i.__decorate([Object(c.a)(yn, {
                     name: "data",
                     skip: function(e) {
@@ -12250,7 +12254,7 @@ webpackJsonp([35], {
                 }
             },
             Ue = Object(d.compose)(Object(Me.b)(Pe), Object(Re.b)(Pe))(je),
-            Be = n("XdSf"),
+            Be = n("vSU7"),
             Ve = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -12259,7 +12263,13 @@ webpackJsonp([35], {
                         if (n && n.color) {
                             var i = n.color;
                             return {
-                                deferred: t.props.updateChatColorMutation(i).then(function() {
+                                deferred: t.props.updateChatColor({
+                                    variables: {
+                                        input: {
+                                            color: i
+                                        }
+                                    }
+                                }).then(function() {
                                     return {
                                         notice: Object(c.d)("Your color has been changed.", "ColorCommandHandler")
                                     }
@@ -12286,7 +12296,10 @@ webpackJsonp([35], {
                     }))
                 }, t
             }(l.Component),
-            He = Object(Be.a)()(Ve),
+            He = Object(m.a)(Be, {
+                name: "updateChatColor",
+                options: {}
+            })(Ve),
             We = n("TCxx"),
             Ge = function(e) {
                 function t() {
@@ -17320,7 +17333,6 @@ webpackJsonp([35], {
                             }
                         }, o.createElement(p._4, {
                             className: "prime-offer__title",
-                            "data-a-target": e.id,
                             padding: {
                                 y: .5
                             }
@@ -28726,102 +28738,6 @@ webpackJsonp([35], {
             return a.test(e)
         }
     },
-    ScRf: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "mutation",
-                name: {
-                    kind: "Name",
-                    value: "Chat_UpdateChatColor"
-                },
-                variableDefinitions: [{
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "input"
-                        }
-                    },
-                    type: {
-                        kind: "NonNullType",
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "UpdateChatColorInput"
-                            }
-                        }
-                    }
-                }],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "updateChatColor"
-                        },
-                        arguments: [{
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "input"
-                            },
-                            value: {
-                                kind: "Variable",
-                                name: {
-                                    kind: "Name",
-                                    value: "input"
-                                }
-                            }
-                        }],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "user"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "chatColor"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }]
-                                }
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 117
-            }
-        };
-        n.loc.source = {
-            body: "mutation Chat_UpdateChatColor($input: UpdateChatColorInput!){\nupdateChatColor(input: $input) {\nuser {\nchatColor\n}\n}\n}",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
     TCxx: function(e, t) {
         var n = {
             kind: "Document",
@@ -31547,42 +31463,6 @@ webpackJsonp([35], {
         var i = n("aMxy"),
             a = n("HZww"),
             r = n("bkpq")
-    },
-    XdSf: function(e, t, n) {
-        "use strict";
-        t.a = function() {
-            var e = this;
-            return Object(a.a)(r, {
-                props: function(t) {
-                    return {
-                        updateChatColorMutation: function(n) {
-                            return i.__awaiter(e, void 0, void 0, function() {
-                                return i.__generator(this, function(e) {
-                                    switch (e.label) {
-                                        case 0:
-                                            return t.mutate ? [4, t.mutate({
-                                                variables: {
-                                                    input: {
-                                                        color: n
-                                                    }
-                                                }
-                                            })] : [3, 2];
-                                        case 1:
-                                            return [2, e.sent().data];
-                                        case 2:
-                                            throw new Error("Update chat color mutation is not ready")
-                                    }
-                                })
-                            })
-                        }
-                    }
-                }
-            })
-        };
-        var i = n("TToO"),
-            a = n("7vx8"),
-            r = n("ScRf");
-        n.n(r)
     },
     Xo53: function(e, t) {},
     Y5T0: function(e, t) {
@@ -37152,29 +37032,28 @@ webpackJsonp([35], {
     },
     hvzu: function(e, t, n) {
         "use strict";
-        var i, a = n("TToO"),
-            r = n("GiK3"),
-            o = n("6sO2"),
-            s = n("8RKZ"),
-            l = n("l21v");
+        var i, a = n("GiK3"),
+            r = n("6sO2"),
+            o = n("8RKZ"),
+            s = n("l21v");
         ! function(e) {
             e[e.Text = 0] = "Text", e[e.Link = 1] = "Link"
         }(i || (i = {}));
-        var d = n("Odds");
-        t.a = m, n.d(t, "f", function() {
-            return p
+        var l = n("Odds");
+        t.a = u, n.d(t, "f", function() {
+            return m
         }), n.d(t, "e", function() {
-            return h
+            return p
         }), n.d(t, "d", function() {
-            return g
+            return h
         }), n.d(t, "c", function() {
-            return f
+            return g
         }), n.d(t, "b", function() {
-            return v
+            return f
         });
-        var c = "whisper-message-part";
+        var d = "whisper-message-part";
 
-        function u(e) {
+        function c(e) {
             var t = function(e) {
                 var t = e.split(/\s+/),
                     n = [];
@@ -37232,11 +37111,11 @@ webpackJsonp([35], {
                     }
                 }), n
             }(e);
-            return t.reduce(function(e, n, a) {
+            return t.reduce(function(e, n, r) {
                 if (n.type === i.Text) e.push(n.content);
                 else if (n.type === i.Link) {
-                    t[a - 1] && t[a - 1].type === i.Link && e.push(" "), e.push(r.createElement("a", {
-                        key: a,
+                    t[r - 1] && t[r - 1].type === i.Link && e.push(" "), e.push(a.createElement("a", {
+                        key: r,
                         href: n.content.url,
                         target: "__blank"
                     }, n.content.displayText))
@@ -37245,142 +37124,128 @@ webpackJsonp([35], {
             }, [])
         }
 
-        function m(e, t, n) {
+        function u(e, t, n) {
             var i = [],
-                a = 0,
-                m = Object(l.d)(e);
+                u = 0,
+                m = Object(s.d)(e);
             if (t.forEach(function(t) {
                     var n = t.from,
-                        o = t.to,
+                        r = t.to,
                         p = {
                             themed: !1,
                             sources: {
-                                "1x": Object(l.e)("" + t.emoteID, 1),
-                                "2x": Object(l.e)("" + t.emoteID, 2),
-                                "4x": Object(l.e)("" + t.emoteID, 4)
+                                "1x": Object(s.e)("" + t.emoteID, 1),
+                                "2x": Object(s.e)("" + t.emoteID, 2),
+                                "4x": Object(s.e)("" + t.emoteID, 4)
                             }
                         };
-                    if (n > a) {
-                        var h = m ? m.slice(a, n).join("") : e.slice(a, n);
-                        i.push(r.createElement("span", {
-                            key: "str-" + a,
-                            "data-a-target": c,
+                    if (n > u) {
+                        var h = m ? m.slice(u, n).join("") : e.slice(u, n);
+                        i.push(a.createElement("span", {
+                            key: "str-" + u,
+                            "data-a-target": d,
                             className: "thread-message__message--part"
-                        }, u(h)))
+                        }, c(h)))
                     }
-                    var g = m ? m.slice(n, o + 1).join("") : e.slice(n, o + 1);
-                    i.push(r.createElement(s.a, {
-                        key: "emote-" + a,
-                        tooltipDirection: d._46.Top,
+                    var g = m ? m.slice(n, r + 1).join("") : e.slice(n, r + 1);
+                    i.push(a.createElement(o.a, {
+                        key: "emote-" + u,
+                        tooltipDirection: l._46.Top,
                         className: "thread-message__message--emote",
                         srcSet: p,
                         srcKey: "1x",
                         alt: g
-                    })), a = o + 1
-                }), a < e.length) {
-                var p = m ? m.slice(a, m.length).join("") : e.slice(a, e.length);
-                i.push(r.createElement("span", {
-                    key: "str-" + a,
-                    "data-a-target": c,
+                    })), u = r + 1
+                }), u < e.length) {
+                var p = m ? m.slice(u, m.length).join("") : e.slice(u, e.length);
+                i.push(a.createElement("span", {
+                    key: "str-" + u,
+                    "data-a-target": d,
                     className: "thread-message__message--part"
-                }, u(p)))
+                }, c(p)))
             }
             if (n) {
-                var h = Object(o.d)("edited", "ThreadMessage"),
-                    g = Object(o.d)("{timestamp, date, full} {timestamp, time, long}", {
+                var h = Object(r.d)("edited", "ThreadMessage"),
+                    g = Object(r.d)("{timestamp, date, full} {timestamp, time, long}", {
                         timestamp: new Date(n)
                     }, "ThreadMessage");
-                i.push(r.createElement(d.Y, {
+                i.push(a.createElement(l.Y, {
                     key: "editedAt",
                     margin: {
                         left: 1
                     }
-                }, r.createElement(d.O, {
-                    type: d._41.Span,
+                }, a.createElement(l.O, {
+                    type: l._41.Span,
                     className: "thread-message__message--edited",
                     title: g,
-                    color: d.J.Alt2
+                    color: l.J.Alt2
                 }, "(" + h + ")")))
             }
             return i
         }
-        var p = function(e) {
-                var t = "/me " === e.content.substr(0, 4);
-                t && (e.content = e.content.substr(4), e.emotes = e.emotes.map(function(e) {
-                    return a.__assign({}, e, {
-                        from: e.from - 4,
-                        to: e.to - 4
-                    })
-                }));
-                var n = m(e.content, e.emotes, e.editedAt);
-                if (n.unshift(r.createElement("span", {
-                        key: "str-separator"
-                    }, t ? " " : ": ")), e.deletedAt) return null;
-                var i = e.from && e.from.chatColor || "",
-                    s = e.from && e.from.displayName || r.createElement(d.O, {
-                        type: d._41.Span,
+        var m = function(e) {
+                var t = u(e.content, e.emotes, e.editedAt);
+                if (e.deletedAt) return null;
+                var n = e.from && e.from.chatColor || "",
+                    i = e.from && e.from.displayName || a.createElement(l.O, {
+                        type: l._41.Span,
                         italic: !0
-                    }, Object(o.d)("Unknown", "ThreadMessage")),
-                    l = t ? i : "";
-                return r.createElement(d._4, {
+                    }, Object(r.d)("Unknown", "ThreadMessage"));
+                return a.createElement(l._4, {
                     padding: {
                         x: 1,
                         y: .5
                     }
-                }, r.createElement("span", {
+                }, a.createElement("span", {
                     className: "thread-message__message--user-name",
                     "data-a-target": "whisper-message-name",
                     style: {
-                        color: i
+                        color: n
                     }
-                }, s), r.createElement("span", {
-                    style: {
-                        color: l
-                    }
-                }, n))
+                }, i), a.createElement("span", null, ": "), t)
             },
-            h = function() {
-                return r.createElement(d._4, {
+            p = function() {
+                return a.createElement(l._4, {
                     padding: {
                         y: .5,
                         x: 1
                     }
-                }, Object(o.d)("Please don't share passwords or personal information.", "whispers"))
+                }, Object(r.d)("Please don't share passwords or personal information.", "whispers"))
             },
-            g = function(e) {
+            h = function(e) {
                 var t = new Date,
-                    n = Object(o.d)("Today, {timestamp, time, medium}", {
+                    n = Object(r.d)("Today, {timestamp, time, medium}", {
                         timestamp: e.timestamp
                     }, "ThreadMessage"),
-                    i = Object(o.d)("{timestamp, time, medium}", {
+                    i = Object(r.d)("{timestamp, time, medium}", {
                         timestamp: e.timestamp
                     }, "ThreadMessage"),
-                    a = e.timestamp.toDateString() === t.toDateString() ? n : i;
-                return r.createElement(d._4, {
+                    o = e.timestamp.toDateString() === t.toDateString() ? n : i;
+                return a.createElement(l._4, {
                     padding: {
                         y: 1
                     },
-                    textAlign: d._37.Center
-                }, "" + a)
+                    textAlign: l._37.Center
+                }, "" + o)
             },
-            f = function(e) {
-                return r.createElement(d._4, {
+            g = function(e) {
+                return a.createElement(l._4, {
                     padding: {
                         y: .5,
                         x: 1
                     }
-                }, r.createElement(d.O, {
-                    type: d._41.Span,
-                    color: d.J.Alt2
+                }, a.createElement(l.O, {
+                    type: l._41.Span,
+                    color: l.J.Alt2
                 }, e.content))
             },
-            v = function() {
-                return r.createElement(d._4, {
-                    textAlign: d._37.Center,
+            f = function() {
+                return a.createElement(l._4, {
+                    textAlign: l._37.Center,
                     padding: {
                         y: .5
                     }
-                }, Object(o.d)("New Whispers", "whispers"))
+                }, Object(r.d)("New Whispers", "whispers"))
             }
     },
     iMOk: function(e, t, n) {
@@ -40243,7 +40108,7 @@ webpackJsonp([35], {
                 }, {
                     "cheermote-for-amount__cheer-amount--extremely-small": e.size === i.ExtremelySmall
                 });
-            if (void 0 !== e.amount && e.showAmount) {
+            if (e.amount && e.showAmount) {
                 var h = e.formattedNumber ? Object(o.e)(e.amount) : e.amount;
                 m = r.createElement(c.Y, {
                     padding: e.size === i.Small ? 0 : void 0,
@@ -43442,6 +43307,102 @@ webpackJsonp([35], {
         })), e.exports = i
     },
     vRhQ: function(e, t) {},
+    vSU7: function(e, t) {
+        var n = {
+            kind: "Document",
+            definitions: [{
+                kind: "OperationDefinition",
+                operation: "mutation",
+                name: {
+                    kind: "Name",
+                    value: "UpdateChatColor"
+                },
+                variableDefinitions: [{
+                    kind: "VariableDefinition",
+                    variable: {
+                        kind: "Variable",
+                        name: {
+                            kind: "Name",
+                            value: "input"
+                        }
+                    },
+                    type: {
+                        kind: "NonNullType",
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "UpdateChatColorInput"
+                            }
+                        }
+                    }
+                }],
+                directives: [],
+                selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [{
+                        kind: "Field",
+                        name: {
+                            kind: "Name",
+                            value: "updateChatColor"
+                        },
+                        arguments: [{
+                            kind: "Argument",
+                            name: {
+                                kind: "Name",
+                                value: "input"
+                            },
+                            value: {
+                                kind: "Variable",
+                                name: {
+                                    kind: "Name",
+                                    value: "input"
+                                }
+                            }
+                        }],
+                        directives: [],
+                        selectionSet: {
+                            kind: "SelectionSet",
+                            selections: [{
+                                kind: "Field",
+                                name: {
+                                    kind: "Name",
+                                    value: "user"
+                                },
+                                arguments: [],
+                                directives: [],
+                                selectionSet: {
+                                    kind: "SelectionSet",
+                                    selections: [{
+                                        kind: "Field",
+                                        name: {
+                                            kind: "Name",
+                                            value: "chatColor"
+                                        },
+                                        arguments: [],
+                                        directives: []
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }],
+            loc: {
+                start: 0,
+                end: 112
+            }
+        };
+        n.loc.source = {
+            body: "mutation UpdateChatColor($input: UpdateChatColorInput!){\nupdateChatColor(input: $input) {\nuser {\nchatColor\n}\n}\n}",
+            name: "GraphQL request",
+            locationOffset: {
+                line: 1,
+                column: 1
+            }
+        };
+        e.exports = n
+    },
     vh75: function(e, t, n) {
         "use strict";
         n.d(t, "d", function() {
@@ -44909,4 +44870,4 @@ webpackJsonp([35], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.embed-chat-139608907fdf7ac0d29fad949063547d.js.map
+//# sourceMappingURL=pages.embed-chat-76b3d1ee96403c2a543747a69f8ed163.js.map

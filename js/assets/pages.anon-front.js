@@ -814,7 +814,6 @@ webpackJsonp([54], {
                     display: u.P.Flex,
                     alignItems: u.c.Center,
                     justifyContent: u._3.Center,
-                    flexWrap: u.S.Wrap,
                     margin: "auto",
                     padding: {
                         y: 3
@@ -2974,7 +2973,8 @@ webpackJsonp([54], {
                         disableTheatreButton: !0,
                         playerTypeOverride: E.b.Frontpage,
                         onInit: e.onPlayerInit,
-                        onDestroy: e.onPlayerDestroy
+                        onDestroy: e.onPlayerDestroy,
+                        willAutoplay: !0
                     });
                 case p.b.Vod:
                     return d.createElement(E.c, {
@@ -2984,7 +2984,8 @@ webpackJsonp([54], {
                         playerTypeOverride: E.b.Frontpage,
                         onInit: e.onPlayerInit,
                         onDestroy: e.onPlayerDestroy,
-                        onVideoTimeChange: e.onVideoTimeChange
+                        onVideoTimeChange: e.onVideoTimeChange,
+                        willAutoplay: !0
                     });
                 default:
                     return null
@@ -3822,4 +3823,4 @@ webpackJsonp([54], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.anon-front-011efd7a6332b4385308bf181c0f34bc.js.map
+//# sourceMappingURL=pages.anon-front-cb7ed531269f7ad827e3be8d5db3169b.js.map

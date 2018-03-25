@@ -1,4 +1,4 @@
-webpackJsonp([48], {
+webpackJsonp([47], {
     "+Aaf": function(e, t) {},
     "/LBW": function(e, t, n) {
         "use strict";
@@ -8961,7 +8961,7 @@ webpackJsonp([48], {
                 }, {
                     "cheermote-for-amount__cheer-amount--extremely-small": e.size === i.ExtremelySmall
                 });
-            if (void 0 !== e.amount && e.showAmount) {
+            if (e.amount && e.showAmount) {
                 var v = e.formattedNumber ? Object(o.e)(e.amount) : e.amount;
                 m = r.createElement(c.Y, {
                     padding: e.size === i.Small ? 0 : void 0,
@@ -9820,4 +9820,4 @@ webpackJsonp([48], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.event-landing-2267f1f4e874be6aaacf003e8247d295.js.map
+//# sourceMappingURL=pages.event-landing-b20e6c5f0cd8dddd3b18339c13f7887b.js.map

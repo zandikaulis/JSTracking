@@ -4272,7 +4272,7 @@ webpackJsonp([36], {
                     google: Object(n.d)("Google", "DemographicsData"),
                     reddit: Object(n.d)("Reddit", "DemographicsData"),
                     youtube: Object(n.d)("Youtube", "DemographicsData")
-                })["t.co"] = Object(n.d)("Twitter", "DemographicsData"), t.unknown = Object(n.d)("Direct", "DemographicsData"), t.twitch_aggregate = Object(n.d)("Twitch", "DemographicsData"), t.external_aggregate = Object(n.d)("External", "DemographicsData"), t)[e] || e
+                })["t.co"] = Object(n.d)("Twitter", "DemographicsData"), t.unknown = Object(n.d)("Direct/Unknown", "DemographicsData"), t.twitch_aggregate = Object(n.d)("Twitch", "DemographicsData"), t.external_aggregate = Object(n.d)("External", "DemographicsData"), t)[e] || e
             }
     },
     Bp2f: function(e, t, a) {
@@ -17602,13 +17602,13 @@ webpackJsonp([36], {
             })], t)
         }(c.Component);
         ! function(e) {
-            e.AdBreakDuration = "AdBreakDuration", e.AdBreaks = "AdBreaks", e.AverageChatters = "AverageChatters", e.AverageViewers = "AverageViewers", e.ChatMessages = "ChatMessages", e.MinutesWatched = "MinutesWatched", e.NewFollowers = "NewFollowers", e.StreamDuration = "StreamDuration"
+            e.AverageViewers = "AverageViewers", e.MinutesWatched = "MinutesWatched", e.NewFollowers = "NewFollowers", e.AverageChatters = "AverageChatters", e.ChatMessages = "ChatMessages", e.AdBreakDuration = "AdBreakDuration", e.AdBreaks = "AdBreaks"
         }(mt || (mt = {})),
         function(e) {
             e.Ads = "Ads", e.Audience = "Audience", e.Chat = "Chat"
         }(ht || (ht = {}));
-        var ft, pt, gt = ((ft = {})[mt.AdBreakDuration] = "commercials", ft[mt.AverageChatters] = "chat_activities", ft[mt.AverageViewers] = "concurrent_viewers", ft[mt.ChatMessages] = "chat_activities", ft[mt.MinutesWatched] = "concurrent_viewers", ft[mt.NewFollowers] = "follows", ft),
-            yt = ((pt = {})[mt.AdBreakDuration] = "bar", pt[mt.AverageChatters] = "bar", pt[mt.AverageViewers] = "bar", pt[mt.ChatMessages] = "bar", pt[mt.MinutesWatched] = "bar", pt[mt.NewFollowers] = "line", pt),
+        var ft, pt, gt = ((ft = {})[mt.AverageViewers] = "concurrent_viewers", ft[mt.MinutesWatched] = "concurrent_viewers", ft[mt.NewFollowers] = "follows", ft[mt.AverageChatters] = "chat_activities", ft[mt.ChatMessages] = "chat_activities", ft[mt.AdBreakDuration] = "commercials", ft),
+            yt = ((pt = {})[mt.AverageViewers] = "bar", pt[mt.MinutesWatched] = "bar", pt[mt.NewFollowers] = "line", pt[mt.AverageChatters] = "bar", pt[mt.ChatMessages] = "bar", pt[mt.AdBreakDuration] = "bar", pt),
             Mt = function(e) {
                 switch (e) {
                     case ht.Ads:
@@ -17623,22 +17623,20 @@ webpackJsonp([36], {
             },
             vt = function(e) {
                 switch (e) {
-                    case mt.AdBreakDuration:
-                        return Object(h.d)("Ad Break Duration", "TeamsDashboard");
-                    case mt.AdBreaks:
-                        return Object(h.d)("Ad Breaks", "TeamsDashboard");
-                    case mt.AverageChatters:
-                        return Object(h.d)("Avg. Chatters", "TeamsDashboard");
                     case mt.AverageViewers:
                         return Object(h.d)("Avg. Viewers", "TeamsDashboard");
-                    case mt.ChatMessages:
-                        return Object(h.d)("Chat Messages", "TeamsDashboard");
                     case mt.MinutesWatched:
                         return Object(h.d)("Minutes Watched", "TeamsDashboard");
                     case mt.NewFollowers:
                         return Object(h.d)("New Followers", "TeamsDashboard");
-                    case mt.StreamDuration:
-                        return Object(h.d)("Stream Duration", "TeamsDashboard");
+                    case mt.AverageChatters:
+                        return Object(h.d)("Avg. Chatters", "TeamsDashboard");
+                    case mt.ChatMessages:
+                        return Object(h.d)("Chat Messages", "TeamsDashboard");
+                    case mt.AdBreakDuration:
+                        return Object(h.d)("Ad Break Duration", "TeamsDashboard");
+                    case mt.AdBreaks:
+                        return Object(h.d)("Ad Breaks", "TeamsDashboard");
                     default:
                         return ""
                 }
@@ -22136,4 +22134,4 @@ webpackJsonp([36], {
         }
     }
 });
-//# sourceMappingURL=pages.teams-dashboard-7226d714c99a4cefff74a9b9f4e382c3.js.map
+//# sourceMappingURL=pages.teams-dashboard-0f89aeae2d2d9ceff61957d5f7114813.js.map

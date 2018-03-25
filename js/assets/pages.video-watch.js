@@ -14981,7 +14981,7 @@ webpackJsonp([37, 83], {
                         display: Mt.P.Flex
                     }, At.createElement(Mt._17, {
                         asset: Mt._18.GlyphLength
-                    })), At.createElement("span", null, Object(Sn.b)(this.props.currentVideoTime))))))
+                    })), At.createElement("span", null, Object(Sn.a)(this.props.currentVideoTime))))))
                 }, t
             }(At.Component);
         var Zn = Object(Rn.d)("MessageInput", {
@@ -15004,7 +15004,7 @@ webpackJsonp([37, 83], {
                     }
                 }, At.createElement("button", {
                     onClick: n
-                }, Object(Sn.b)(t))))
+                }, Object(Sn.a)(t))))
             }),
             ei = n("+V/3"),
             ti = n("5Nu7"),
@@ -16132,7 +16132,7 @@ webpackJsonp([37, 83], {
         }), n.d(t, !1, function() {}), n.d(t, "h", function() {
             return Cn
         }), n.d(t, "t", function() {
-            return Sn.b
+            return Sn.a
         }), n.d(t, "u", function() {
             return ot
         }), n.d(t, "s", function() {
@@ -16600,7 +16600,7 @@ webpackJsonp([37, 83], {
                 }, {
                     "cheermote-for-amount__cheer-amount--extremely-small": e.size === i.ExtremelySmall
                 });
-            if (void 0 !== e.amount && e.showAmount) {
+            if (e.amount && e.showAmount) {
                 var h = e.formattedNumber ? Object(o.e)(e.amount) : e.amount;
                 m = a.createElement(d.Y, {
                     padding: e.size === i.Small ? 0 : void 0,
@@ -16641,10 +16641,8 @@ webpackJsonp([37, 83], {
     },
     oA5c: function(e, t, n) {
         "use strict";
-        n.d(t, "b", function() {
+        n.d(t, "a", function() {
             return i
-        }), n.d(t, "a", function() {
-            return r
         });
         var i = function(e) {
                 var t = e,
@@ -16652,13 +16650,10 @@ webpackJsonp([37, 83], {
                 t -= 3600 * n;
                 var i = Math.floor(t / 60);
                 t -= 60 * i;
-                var r = Math.floor(t);
-                return n > 0 ? n + ":" + a(i) + ":" + a(r) : i + ":" + a(r)
+                var a = Math.floor(t);
+                return n > 0 ? n + ":" + r(i) + ":" + r(a) : i + ":" + r(a)
             },
             r = function(e) {
-                return e.getMonth() + 1 + "/" + e.getDate()
-            },
-            a = function(e) {
                 return e < 10 ? "0" + e : "" + e
             }
     },
@@ -19023,7 +19018,8 @@ webpackJsonp([37, 83], {
                             onNavigationRequest: this.onPlayerNavigationEvent,
                             onSeek: this.onVideoTimeChange,
                             onVideoTimeChange: this.onVideoTimeChange,
-                            attachToWindow: !0
+                            attachToWindow: !0,
+                            willAutoplay: !0
                         }, a),
                         miniPlayerTitle: this.getMiniPlayerTitle(),
                         miniPlayerContentRoute: this.state.miniPlayerRouteLink
@@ -20564,4 +20560,4 @@ webpackJsonp([37, 83], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.video-watch-a976a02635e818677b083494fb497b16.js.map
+//# sourceMappingURL=pages.video-watch-5841c2f02a6919716c4e2655e8ccd912.js.map

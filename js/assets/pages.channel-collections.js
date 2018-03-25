@@ -5050,7 +5050,7 @@ webpackJsonp([50], {
                 }, {
                     "cheermote-for-amount__cheer-amount--extremely-small": e.size === i.ExtremelySmall
                 });
-            if (void 0 !== e.amount && e.showAmount) {
+            if (e.amount && e.showAmount) {
                 var h = e.formattedNumber ? Object(o.e)(e.amount) : e.amount;
                 m = r.createElement(d.Y, {
                     padding: e.size === i.Small ? 0 : void 0,
@@ -5917,4 +5917,4 @@ webpackJsonp([50], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.channel-collections-b08025f7e8d71cdf19e8be293e8d144e.js.map
+//# sourceMappingURL=pages.channel-collections-637ae75f65c3827b98200de2d6928a21.js.map
