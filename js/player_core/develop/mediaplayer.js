@@ -80,6 +80,7 @@ var PlayerState = exports.PlayerState = __webpack_require__(16);
 var MetadataEvent = exports.MetadataEvent = __webpack_require__(17);
 var ErrorType = exports.ErrorType = __webpack_require__(18);
 var ErrorSource = exports.ErrorSource = __webpack_require__(19);
+var Profile = exports.Profile = __webpack_require__(20);
 
 // Chrome 63 and Opera have an issue (crbug.com/779962) that heavily throttle video in a
 // background tab while silent. So, we need to stop playback in that circumstance.
@@ -157,6 +158,7 @@ MediaPlayer.prototype.getHTMLVideoElement = function () {
 
 MediaPlayer.prototype.load = function (url) {
     this._srcUrl = url;
+    this._emitter.emit(Profile.MANIFEST_REQUEST);
     this._postMessage(WorkerMessage.LOAD, url);
     this._resetState();
 }
@@ -433,6 +435,7 @@ MediaPlayer.prototype._attachHandlers = function () {
     em.on(PlayerEvent.QUALITY_CHANGED, updateState);
     em.on(PlayerEvent.AUTO_SWITCH_QUALITY_CHANGED, updateState);
     em.on(PlayerEvent.DURATION_CHANGED, updateState);
+    em.on(PlayerEvent.DURATION_CHANGED, this._onDurationChanged.bind(this));
     em.on(PlayerEvent.VOLUME_CHANGED, this._onVolumeChanged.bind(this));
     em.on(PlayerEvent.MUTED_CHANGED, this._onMutedChanged.bind(this));
     em.on(PlayerEvent.SEEK_COMPLETED, this._onSeekCompleted.bind(this));
@@ -458,6 +461,12 @@ MediaPlayer.prototype._attachHandlers = function () {
     em.on(MetadataEvent.ID3, this._onID3.bind(this));
 };
 
+MediaPlayer.prototype._onDurationChanged = function () {
+    if (this._state.duration > 0) {
+        this._emitter.emit(Profile.VARIANT_READY);
+    }
+};
+
 MediaPlayer.prototype._onVolumeChanged = function () {
     if (PAUSE_HIDDEN_SILENT_TAB && document.hidden && this.getVolume() === 0) {
         this._postMessage(WorkerMessage.PAUSE);
@@ -481,6 +490,7 @@ MediaPlayer.prototype._onSeekCompleted = function () {
 };
 
 MediaPlayer.prototype._onReady = function (state) {
+    this._emitter.emit(Profile.MANIFEST_READY);
     // Filter unsupported qualities
     var supported = [];
 
@@ -499,6 +509,7 @@ MediaPlayer.prototype._onReady = function (state) {
     // We cant now send 'PLAY' since we've removed any unplayable qualities
     this._isLoaded = true;
 
+    this._emitter.emit(Profile.VARIANT_REQUEST);
     // Start playback if we've already tried
     if (!this._isPaused) {
         this._attemptPlay();
@@ -661,7 +672,7 @@ function getLocalStorage(prefix) {
 // If the setting doesn't exits, we return empty (default) settings
 function loadSettings(settings) {
     try {
-        return __webpack_require__(20)("./" + settings + '.json');
+        return __webpack_require__(21)("./" + settings + '.json');
     } catch(e) {
         return {};
     }
@@ -3468,10 +3479,22 @@ module.exports = {
 
 /***/ }),
 /* 20 */
+/***/ (function(module, exports) {
+
+module.exports = {
+    MANIFEST_REQUEST: 'master_manifest_request',
+    MANIFEST_READY: 'master_manifest_ready',
+    VARIANT_REQUEST: 'variant_request',
+    VARIANT_READY: 'variant_ready'
+};
+
+
+/***/ }),
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./sjorge.json": 21
+	"./sjorge.json": 22
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -3487,10 +3510,10 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 20;
+webpackContext.id = 21;
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports) {
 
 module.exports = {"buffercontrol":{"liveSpeedUpBuffer":7,"liveSpeedUpReset":4,"liveSpeedUpRate":1.03},"lowLatency":{"minBuffer":1,"rebufferPenalty":1,"maxRebufferDuration":6,"prefetchOffset":2}}
